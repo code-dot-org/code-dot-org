@@ -8,12 +8,15 @@
 import {describe, expect, it} from 'vitest';
 
 import {keyName, KEY_CHOICES} from '../../engine/core/keys';
+import {lessonChannel} from '../../progression/lessonRoute';
+import {LESSONS} from '../../progression/lessons';
 import {VIEWPORT_TILES} from '../../runtime/viewport';
 import {
   WORLD_SCENARIOS,
   WORLD_SCENARIO_TAGS,
   WorldFixtures,
   DEFAULT_SCENARIO_TAG,
+  isFixtureTag,
   isScenarioTag,
   type WorldScenarioTag,
 } from '../index';
@@ -22,12 +25,26 @@ describe('the scenario catalogue', () => {
   it('has a fixture for every tag, and no tag without one', () => {
     // The switcher walks the tag list and the mock API is keyed by tag, so a
     // scenario in one and not the other is an option that loads nothing.
-    expect(Object.keys(WorldFixtures).sort()).toEqual(
-      [...WORLD_SCENARIO_TAGS].sort(),
-    );
+    //
+    // The fixture record holds MORE than the tags now: a lesson has a channel
+    // here too (`progression/lessonRoute`), served by the same mock through the
+    // same `fixtureFor`, and it is deliberately not in the switcher's list —
+    // lessons are reached from the progression map, not from the dropdown.
     expect(Object.keys(WORLD_SCENARIOS).sort()).toEqual(
       [...WORLD_SCENARIO_TAGS].sort(),
     );
+    for (const tag of WORLD_SCENARIO_TAGS) {
+      expect(WorldFixtures[tag], tag).toBeDefined();
+    }
+  });
+
+  it('serves every lesson as a channel of its own', () => {
+    // A lesson whose channel the mock does not answer is a Start button that
+    // opens an empty project, and nothing says so (specs/PROGRESSION_UI.md).
+    for (const id of Object.keys(LESSONS)) {
+      expect(WorldFixtures[lessonChannel(id)], id).toBeDefined();
+      expect(isFixtureTag(lessonChannel(id)), id).toBe(true);
+    }
   });
 
   it('offers a default that exists', () => {

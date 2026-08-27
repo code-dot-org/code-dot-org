@@ -1,0 +1,219 @@
+// The modal, its opener, and the detail pane.
+//
+// The claims worth pinning are the ones specs/PROGRESSION_UI.md makes: that
+// there is exactly ONE map however many things open it, that a tile's detail is
+// its level properties rendered by the real instructions renderer rather than a
+// second description written by hand, and that a shut tile refuses.
+
+import {render, screen, within} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import {beforeEach, describe, expect, it} from 'vitest';
+
+import {tile} from '../index';
+import {useProgression} from '../progressionContext';
+import {ProgressionProvider} from '../ProgressionProvider';
+import type {TileId} from '../types';
+
+/** A stand-in for the button in the resource panel strip. */
+const Opener = ({focus}: {focus?: TileId}) => {
+  const {openTree, closeTree} = useProgression();
+  return (
+    <>
+      <button type="button" onClick={() => openTree(focus)}>
+        open
+      </button>
+      <button type="button" onClick={closeTree}>
+        close
+      </button>
+    </>
+  );
+};
+
+const lab = (props: {focus?: TileId; done?: TileId[]} = {}) =>
+  render(
+    <ProgressionProvider initiallyCompleted={props.done ?? []}>
+      <Opener focus={props.focus} />
+    </ProgressionProvider>,
+  );
+
+const dialog = () => screen.getByRole('dialog');
+const detail = () => within(dialog()).getByRole('complementary');
+
+beforeEach(() => {
+  window.history.replaceState({}, '', '/');
+});
+
+describe('the opener', () => {
+  it('shows no map until something asks for one', () => {
+    lab();
+    expect(screen.queryByRole('dialog')).toBeNull();
+  });
+
+  it('opens the map', async () => {
+    lab();
+    await userEvent.click(screen.getByRole('button', {name: 'open'}));
+    expect(dialog()).toBeInTheDocument();
+  });
+
+  // The reason the provider owns the modal rather than each opener: two maps
+  // on screen, each with its own scroll position and its own close button, is
+  // the failure this shape rules out rather than manages.
+  it('opens one map however many times it is asked', async () => {
+    lab();
+    const open = screen.getByRole('button', {name: 'open'});
+    await userEvent.click(open);
+    await userEvent.click(open);
+    expect(screen.getAllByRole('dialog')).toHaveLength(1);
+  });
+
+  it('closes it again', async () => {
+    lab();
+    await userEvent.click(screen.getByRole('button', {name: 'open'}));
+    await userEvent.click(screen.getByRole('button', {name: 'close'}));
+    expect(screen.queryByRole('dialog')).toBeNull();
+  });
+
+  it('opens on the tile it was given', async () => {
+    lab({focus: 'puzzle/push'});
+    await userEvent.click(screen.getByRole('button', {name: 'open'}));
+    expect(
+      within(detail()).getByRole('heading', {name: tile('puzzle/push').title}),
+    ).toBeInTheDocument();
+  });
+
+  // The focus may have come off a URL somebody typed or a link that outlived a
+  // catalogue change, and neither is a reason to fail to open the map.
+  it('opens on nothing when the tile is not one it has', async () => {
+    lab({focus: 'nowhere/at-all'});
+    await userEvent.click(screen.getByRole('button', {name: 'open'}));
+    expect(within(detail()).getByText(/Pick a tile/)).toBeInTheDocument();
+  });
+});
+
+describe('the detail pane', () => {
+  const openOn = async (id: TileId, done: TileId[] = []) => {
+    lab({focus: id, done});
+    await userEvent.click(screen.getByRole('button', {name: 'open'}));
+  };
+
+  it('renders the lesson through the instructions renderer', async () => {
+    await openOn('logic/if');
+    const pane = detail();
+    // Rendered markdown, not a string: `**What you do.**` has become bold.
+    expect(within(pane).getByText('What you do.').tagName).toBe('STRONG');
+    expect(
+      within(pane).getByText(/past the middle of the screen/),
+    ).toBeInTheDocument();
+  });
+
+  it('says when a lesson is designed but not written', async () => {
+    await openOn('logic/if');
+    expect(within(detail()).getByText(/not written yet/)).toBeInTheDocument();
+  });
+
+  it('lists what the tile unlocks', async () => {
+    await openOn('platformer/jump');
+    expect(within(detail()).getByText('the jump rule')).toBeInTheDocument();
+  });
+
+  it('refuses a shut tile and says what it is waiting for', async () => {
+    await openOn('platformer/jump');
+    const pane = detail();
+    expect(
+      within(pane).getByRole('button', {name: 'Mark as done'}),
+    ).toBeDisabled();
+    expect(
+      within(pane).getByRole('button', {name: tile('motion/gravity').title}),
+    ).toBeInTheDocument();
+  });
+
+  it('moves to a prerequisite when its name is clicked', async () => {
+    await openOn('platformer/jump');
+    await userEvent.click(
+      within(detail()).getByRole('button', {
+        name: tile('motion/gravity').title,
+      }),
+    );
+    expect(
+      within(detail()).getByRole('heading', {
+        name: tile('motion/gravity').title,
+      }),
+    ).toBeInTheDocument();
+  });
+
+  // A written lesson brings its own heading, so the pane does not add a second.
+  it('shows one title for a written lesson, not two', async () => {
+    await openOn('motion/gravity');
+    expect(
+      within(detail()).getAllByRole('heading', {
+        name: tile('motion/gravity').title,
+      }),
+    ).toHaveLength(1);
+  });
+
+  it('offers Start only where there is a lesson to start', async () => {
+    await openOn('logic/if');
+    expect(within(detail()).queryByRole('link', {name: 'Start'})).toBeNull();
+  });
+
+  it('sends Start to a channel of the lesson’s own', async () => {
+    // Origin, because it is the one tile that is open from nothing — and a
+    // channel of its own is the whole point: starting a lesson must never
+    // replace the sources of the project you came from.
+    await openOn('origin/first-world');
+    expect(
+      within(detail()).getByRole('link', {name: 'Start'}).getAttribute('href'),
+    ).toBe('/app/projects/world/lesson-origin-first-world/edit');
+  });
+
+  it('does not offer to start a shut lesson', async () => {
+    await openOn('motion/gravity');
+    expect(within(detail()).queryByRole('link')).toBeNull();
+  });
+
+  it('offers a done lesson again rather than nothing', async () => {
+    await openOn('origin/first-world', ['origin/first-world']);
+    expect(
+      within(detail()).getByRole('link', {name: 'Do it again'}),
+    ).toBeInTheDocument();
+  });
+
+  it('completes an open tile, and the header counts it', async () => {
+    await openOn('origin/first-world');
+    expect(within(dialog()).getByText('0 of 67 done')).toBeInTheDocument();
+    await userEvent.click(
+      within(detail()).getByRole('button', {name: 'Mark as done'}),
+    );
+    expect(within(dialog()).getByText('1 of 67 done')).toBeInTheDocument();
+  });
+
+  it('opens what completing a tile unlocked', async () => {
+    await openOn('origin/first-world');
+    await userEvent.click(
+      within(detail()).getByRole('button', {name: 'Mark as done'}),
+    );
+    // Motion's first tile was shut a moment ago and is now ready.
+    expect(
+      screen.getByRole('button', {
+        name: /Speed is not a place\. Motion\. Ready to start\./,
+      }),
+    ).toBeInTheDocument();
+  });
+});
+
+describe('the URL', () => {
+  it('carries the selected tile, so the map can be linked to', async () => {
+    lab({focus: 'story/choice'});
+    await userEvent.click(screen.getByRole('button', {name: 'open'}));
+    expect(new URL(window.location.href).searchParams.get('tree')).toBe(
+      'story/choice',
+    );
+  });
+
+  it('lets go of it when the map closes', async () => {
+    lab({focus: 'story/choice'});
+    await userEvent.click(screen.getByRole('button', {name: 'open'}));
+    await userEvent.click(screen.getByRole('button', {name: 'close'}));
+    expect(new URL(window.location.href).searchParams.has('tree')).toBe(false);
+  });
+});

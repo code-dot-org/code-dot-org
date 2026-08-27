@@ -1,0 +1,257 @@
+/* The map. Colour here is a function of one number per region: every element
+   that belongs to a region carries `--hue` (see ProgressionMap), and everything
+   else is derived from it, so fourteen regions cost fourteen numbers rather
+   than fourteen palettes.
+
+   Dark mode follows the lab's other CSS modules: a `prefers-color-scheme`
+   block that redefines only what has to change. */
+
+.map {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #fbfbfc;
+  touch-action: none; /* the map handles its own drag */
+  user-select: none;
+}
+
+.dragging {
+  cursor: grabbing;
+}
+
+/* ── Regions ─────────────────────────────────────────────────────────────── */
+
+/* Drawn at full cell size, so neighbouring cells' fills meet and the region
+   reads as one field with tiles sitting on it. */
+.regionFill {
+  fill: hsl(var(--hue) 58% 91%);
+}
+
+.regionOutline {
+  fill: none;
+  stroke: hsl(var(--hue) 45% 52%);
+  stroke-width: 2;
+  stroke-linecap: round;
+  opacity: 0.5;
+}
+
+.regionName {
+  fill: hsl(var(--hue) 48% 34%);
+  dominant-baseline: middle;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  opacity: 0.9;
+  text-transform: uppercase;
+}
+
+/* ── Edges ───────────────────────────────────────────────────────────────── */
+
+/* Coloured by the region the edge leads INTO, not out of: the two edges into a
+   genre's gate then both wear the genre's colour, which is what makes them read
+   as the ways in rather than as two unrelated marks. */
+.edge {
+  stroke: hsl(var(--hue) 45% 45%);
+  stroke-linecap: round;
+}
+
+.edgeUnmet {
+  stroke: #9a9aa4;
+  stroke-dasharray: 3 4;
+}
+
+/* ── Tiles ───────────────────────────────────────────────────────────────── */
+
+.tile {
+  cursor: pointer;
+}
+
+.tile:focus {
+  outline: none;
+}
+
+.tileShape {
+  stroke-width: 2;
+  transition:
+    fill 120ms ease,
+    stroke 120ms ease;
+}
+
+.done .tileShape {
+  fill: hsl(var(--hue) 52% 62%);
+  stroke: hsl(var(--hue) 48% 44%);
+}
+
+.open .tileShape {
+  fill: #fff;
+  stroke: hsl(var(--hue) 48% 50%);
+}
+
+.shut .tileShape {
+  fill: #ececf0;
+  stroke: #bcbcc6;
+  stroke-dasharray: 4 3;
+}
+
+.tile:hover .tileShape {
+  stroke-width: 3;
+}
+
+.label {
+  fill: #26262c;
+  font-weight: 600;
+  pointer-events: none;
+  text-anchor: middle;
+}
+
+.done .label {
+  fill: #fff;
+}
+
+.shut .label {
+  fill: #77777f;
+}
+
+.glyph {
+  fill: none;
+  pointer-events: none;
+  stroke: #26262c;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.done .glyph {
+  stroke: #fff;
+}
+
+.shut .glyph {
+  stroke: #85858e;
+}
+
+/* The selection ring sits outside the tile rather than on it, so it does not
+   argue with the state stroke it would otherwise replace. */
+.ring {
+  fill: none;
+  stroke: #1b1b20;
+  stroke-width: 2.5;
+}
+
+/* Focus is the same ring in the accent colour, and is drawn as well as the
+   selection ring rather than instead of it — they mean different things, and a
+   keyboard user moving focus over the map needs to see both. */
+.focusRing {
+  display: none;
+  fill: none;
+  stroke: #2c6ef2;
+  stroke-dasharray: 6 4;
+  stroke-width: 3;
+}
+
+.tile:focus-visible .focusRing {
+  display: block;
+}
+
+/* ── Controls ────────────────────────────────────────────────────────────── */
+
+.controls {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.controls button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #c9c9d2;
+  border-radius: 6px;
+  background: #fff;
+  color: #26262c;
+  cursor: pointer;
+  font:
+    600 13px/1 system-ui,
+    sans-serif;
+}
+
+.controls button:hover {
+  background: #f0f0f4;
+}
+
+.frame {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  .map {
+    background: #131317;
+  }
+
+  .regionFill {
+    fill: hsl(var(--hue) 32% 19%);
+  }
+
+  .regionOutline {
+    stroke: hsl(var(--hue) 40% 58%);
+  }
+
+  .regionName {
+    fill: hsl(var(--hue) 40% 72%);
+  }
+
+  .edge {
+    stroke: hsl(var(--hue) 40% 60%);
+  }
+
+  .edgeUnmet {
+    stroke: #5b5b66;
+  }
+
+  .done .tileShape {
+    fill: hsl(var(--hue) 42% 46%);
+    stroke: hsl(var(--hue) 45% 66%);
+  }
+
+  .open .tileShape {
+    fill: #22222a;
+    stroke: hsl(var(--hue) 42% 58%);
+  }
+
+  .shut .tileShape {
+    fill: #1c1c22;
+    stroke: #45454f;
+  }
+
+  .label {
+    fill: #e6e6ec;
+  }
+
+  .shut .label {
+    fill: #7d7d88;
+  }
+
+  .glyph {
+    stroke: #e6e6ec;
+  }
+
+  .shut .glyph {
+    stroke: #7d7d88;
+  }
+
+  .ring {
+    stroke: #f2f2f6;
+  }
+
+  .controls button {
+    border-color: #45454f;
+    background: #22222a;
+    color: #e6e6ec;
+  }
+
+  .controls button:hover {
+    background: #2e2e38;
+  }
+}

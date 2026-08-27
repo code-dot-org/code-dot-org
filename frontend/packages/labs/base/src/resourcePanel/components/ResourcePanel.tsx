@@ -133,6 +133,20 @@ export type ResourcePanelProps = InstructionsProps & {
   //aiTutorSystemPromptName?: string;
   //aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   documentationUrl?: string;
+  /**
+   * Buttons a LAB contributes to the bottom icon strip, rendered ahead of the
+   * shared ones.
+   *
+   * The strip holds what is about the session rather than about the code —
+   * extra links, documentation, copyright, settings — and a lab occasionally
+   * has one of its own to put there. World Lab's is the button that opens its
+   * progression map (`labs/world/specs/PROGRESSION_UI.md`).
+   *
+   * A node rather than a list of descriptors, because what belongs here is
+   * whatever the lab already knows how to render, and `ButtonWithDialog` beside
+   * this file is the shape to copy.
+   */
+  extraLinks?: ReactNode;
   /** Only display the sidebar and hide all tabs. */
   sidebarOnly?: boolean;
 };
@@ -158,6 +172,7 @@ const ResourcePanel: FunctionComponent<ResourcePanelProps> = ({
   //aiTutorSystemPromptName,
   //aiTutorResponseSchemaSettings,
   documentationUrl,
+  extraLinks,
   sidebarOnly = false,
   ...instructionsProps
 }) => {
@@ -540,6 +555,7 @@ const ResourcePanel: FunctionComponent<ResourcePanelProps> = ({
             id={resourcePanelLinksElementId}
             className={classNames(styles.bottomTabs)}
           >
+            {extraLinks}
             <ResourcePanelExtraLinks levelId={levelId} theme={theme} />
             {documentationUrl && (
               <IconButtonWithTooltip

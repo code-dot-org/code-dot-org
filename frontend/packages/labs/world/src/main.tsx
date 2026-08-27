@@ -37,13 +37,15 @@ import App from './App';
 import {mountBootBadge} from './demoBootBadge';
 import {
   DEFAULT_SCENARIO_TAG,
+  fixtureLabel,
+  isFixtureTag,
   isScenarioTag,
   WORLD_LAB_KEY,
   WORLD_SCENARIOS,
   WORLD_SCENARIO_TAGS,
-  type WorldScenarioTag,
 } from './fixtures';
 import {freeIconShimCss, reportMissingIcons} from './freeIconShims';
+import {lessonChannel, setLessonHref} from './progression/lessonRoute';
 import {
   getSandboxUrl,
   setAssetBaseUrl,
@@ -150,20 +152,46 @@ if (!getSandboxUrl()) {
 // The query wins because it is the thing a person just clicked. A tag that
 // names no scenario falls through rather than loading an empty mock: a typo in
 // a URL should show the starter, not a lab with no project in it.
+/** What the switcher shows while a LESSON is loaded, which it cannot switch to. */
+const LESSON_OPTION = '__lesson__';
+
 const scenarioFromPath = window.location.pathname.match(
   /^\/frontend-studio\/projects\/world\/([^/]+)\/edit$/,
 )?.[1];
 const scenarioFromQuery = new URLSearchParams(window.location.search).get(
   'scenario',
 );
-const channelId = isScenarioTag(scenarioFromQuery)
-  ? scenarioFromQuery
-  : isScenarioTag(scenarioFromPath ?? null)
-    ? (scenarioFromPath as WorldScenarioTag)
+// `isFixtureTag`, not `isScenarioTag`: a LESSON has a channel here too
+// (progression/lessonRoute), served by the same mock through the same
+// `fixtureFor`, and `?scenario=lesson-motion-speed` should open it.
+const channelId = isFixtureTag(scenarioFromQuery)
+  ? (scenarioFromQuery as string)
+  : isFixtureTag(scenarioFromPath ?? null)
+    ? (scenarioFromPath as string)
     : DEFAULT_SCENARIO_TAG;
+
+// Where a lesson opens, in this host. The default is the studio's project route
+// (`progression/lessonRoute`); the demo has no router and answers the query
+// parameter its mock API is keyed by. `cdoMockReset` because the store is
+// written through and survives a reload, so a lesson started twice would
+// otherwise open the copy the last attempt left behind.
+setLessonHref(
+  tile =>
+    `${import.meta.env.BASE_URL}?scenario=${lessonChannel(tile.id)}&cdoMockReset=1`,
+);
 
 // Start the mock API and register World Lab's fixtures before rendering, so the
 // host's level_properties / app_options / channel / sources requests are served.
+// The progression map, on its own: `?map` (specs/PROGRESSION_UI.md, milestone
+// 2). It has no project, no host and no API behind it, so everything below that
+// exists to serve one — the mock worker, the tutor transport — is skipped.
+//
+// `?map` AND NOT `?tree`, which is what it was until the loop was walked end to
+// end. `?tree=<tileId>` is what the MODAL writes to the URL so a region can be
+// linked to, so a reload after opening the map swapped the whole lab for this
+// harness — one parameter with two meanings, and the second one silently wins.
+const showTree = new URLSearchParams(window.location.search).has('map');
+
 async function enableMocks() {
   const {
     startMockWorker,
@@ -199,7 +227,9 @@ async function enableMocks() {
   });
 }
 
-await enableMocks();
+if (!showTree) {
+  await enableMocks();
+}
 
 // No Rails behind the mock API, so the AI Tutor answers from a real model when
 // this harness was started with a key —
@@ -207,13 +237,15 @@ await enableMocks();
 //     ANTHROPIC_API_KEY=sk-... yarn dev
 //
 // — and from a recording otherwise (`aiTutor/transport`).
-const {chooseHarnessTutor} = await import('./aiTutor/transport');
-const tutor = await chooseHarnessTutor();
-console.log(
-  tutor.kind === 'live'
-    ? `🤖 AI Tutor: live, ${tutor.model}`
-    : `🤖 AI Tutor: recorded (${tutor.reason ?? 'no ANTHROPIC_API_KEY'})`,
-);
+if (!showTree) {
+  const {chooseHarnessTutor} = await import('./aiTutor/transport');
+  const tutor = await chooseHarnessTutor();
+  console.log(
+    tutor.kind === 'live'
+      ? `🤖 AI Tutor: live, ${tutor.model}`
+      : `🤖 AI Tutor: recorded (${tutor.reason ?? 'no ANTHROPIC_API_KEY'})`,
+  );
+}
 
 // Global tweaks for the standalone harness:
 // - The base `<Lab>` wraps content in the component-library ThemeProvider's
@@ -250,7 +282,7 @@ const fullHeight = (
  * mean tearing down a loaded project mid-edit, which is a bigger promise than a
  * dev switch should make.
  */
-function ScenarioSwitcher({value}: {value: WorldScenarioTag}) {
+function ScenarioSwitcher({value}: {value: string}) {
   if (new URLSearchParams(window.location.search).get('devChrome') === 'off') {
     return null;
   }
@@ -271,7 +303,7 @@ function ScenarioSwitcher({value}: {value: WorldScenarioTag}) {
     >
       project{' '}
       <select
-        value={value}
+        value={isScenarioTag(value) ? value : LESSON_OPTION}
         onChange={event => {
           const params = new URLSearchParams(window.location.search);
           params.set('scenario', event.target.value);
@@ -281,6 +313,15 @@ function ScenarioSwitcher({value}: {value: WorldScenarioTag}) {
           window.location.search = params.toString();
         }}
       >
+        {/* A lesson is a channel here too, and it is not in this list: the
+            list is the demo's projects, and the lessons are reached from the
+            progression map. Shown as one disabled row so the select is not
+            claiming to be on a project the harness is not showing. */}
+        {!isScenarioTag(value) && (
+          <option value={LESSON_OPTION} disabled>
+            {fixtureLabel(value)?.name ?? value}
+          </option>
+        )}
         {WORLD_SCENARIO_TAGS.map(tag => (
           <option key={tag} value={tag}>
             {WORLD_SCENARIOS[tag].name}
@@ -288,14 +329,22 @@ function ScenarioSwitcher({value}: {value: WorldScenarioTag}) {
         ))}
       </select>
       <div style={{marginTop: 4, opacity: 0.75}}>
-        {WORLD_SCENARIOS[value].description}
+        {fixtureLabel(value)?.description}
       </div>
     </label>
   );
 }
 
 const rootElement = document.getElementById('root');
-if (rootElement) {
+if (rootElement && showTree) {
+  const {ProgressionMapDemo, PROGRESSION_DEMO_CSS} = await import(
+    './progression/ProgressionMapDemo'
+  );
+  const sheet = document.createElement('style');
+  sheet.textContent = PROGRESSION_DEMO_CSS;
+  document.head.appendChild(sheet);
+  createRoot(rootElement).render(<ProgressionMapDemo />);
+} else if (rootElement) {
   // No <StrictMode>: it double-invokes effects in dev, which races xterm's
   // async render against the console's dispose/remount (a benign 'dimensions'
   // error). The lab's own tests still run under React's strict behavior.

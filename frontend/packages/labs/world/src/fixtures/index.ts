@@ -16,6 +16,9 @@ import {
   type LabFixtures,
 } from '@code-dot-org/core/api/mocks';
 
+import {lessonChannel} from '../progression/lessonRoute';
+import {LESSONS} from '../progression/lessons';
+
 import {
   WORLD_SCENARIOS,
   WORLD_SCENARIO_TAGS,
@@ -72,6 +75,47 @@ function fixtureFor(scenario: WorldScenario): LabFixture {
   };
 }
 
-export const WorldFixtures: LabFixtures = Object.fromEntries(
-  WORLD_SCENARIO_TAGS.map(tag => [tag, fixtureFor(WORLD_SCENARIOS[tag])]),
-);
+/**
+ * The scenarios, plus one channel per LESSON.
+ *
+ * A lesson opens in a channel of its own (`progression/lessonRoute`), so the
+ * mock API has to answer for it exactly as it does for a scenario — and it can,
+ * because a lesson IS a scenario: the same three fields, through the same
+ * `fixtureFor`. That equivalence is the reason the progression could be built
+ * on top of the demo harness rather than beside it.
+ */
+export const WorldFixtures: LabFixtures = Object.fromEntries([
+  ...WORLD_SCENARIO_TAGS.map(tag => [tag, fixtureFor(WORLD_SCENARIOS[tag])]),
+  ...Object.entries(LESSONS).map(([id, lesson]) => [
+    lessonChannel(id),
+    fixtureFor(lesson),
+  ]),
+]);
+
+/** Whether a channel id is one this harness can serve. */
+export const isFixtureTag = (tag: string | null): boolean =>
+  tag !== null && tag in WorldFixtures;
+
+/**
+ * What the dev switcher calls a channel — a scenario or a lesson.
+ *
+ * Its own function because the switcher can now be showing either, and a lesson
+ * is not in the scenario record it used to index straight into.
+ */
+export const fixtureLabel = (
+  tag: string,
+): {name: string; description: string} | undefined => {
+  const scenario = WORLD_SCENARIOS[tag as keyof typeof WORLD_SCENARIOS];
+  if (scenario) {
+    return {name: scenario.name, description: scenario.description};
+  }
+  const lesson = Object.entries(LESSONS).find(
+    ([id]) => lessonChannel(id) === tag,
+  )?.[1];
+  return (
+    lesson && {
+      name: `Lesson: ${lesson.name}`,
+      description: lesson.description,
+    }
+  );
+};

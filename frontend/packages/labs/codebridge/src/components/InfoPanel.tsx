@@ -1,4 +1,4 @@
-import {useEffect} from 'react';
+import {useEffect, type ReactNode} from 'react';
 
 import type {TutorConfig} from '@code-dot-org/aitutor';
 import type {Theme} from '@code-dot-org/component-library/common/contexts';
@@ -44,6 +44,12 @@ export interface InfoPanelProps {
    * the prop on the base `ResourcePanel`.
    */
   aiTutor?: TutorConfig;
+  /**
+   * Buttons this lab adds to the resource panel's bottom icon strip, passed
+   * straight through to the base panel — the same seam `extraSettings` uses,
+   * and for the same reason: what belongs there is the lab's to know.
+   */
+  extraLinks?: ReactNode;
 }
 
 /**
@@ -63,6 +69,7 @@ export const InfoPanel = ({
   hasConsole = true,
   extraSettings = [],
   aiTutor,
+  extraLinks,
 }: InfoPanelProps) => {
   const levelProperties = useMaybeLevelProperties();
   const isRunning = useAppSelector(state => state.labSystem.isRunning);
@@ -155,6 +162,7 @@ export const InfoPanel = ({
     <ResourcePanel
       className={className}
       aiTutor={aiTutor}
+      extraLinks={extraLinks}
       levelProperties={levelProperties}
       isRunning={isRunning}
       hasRun={hasRun}

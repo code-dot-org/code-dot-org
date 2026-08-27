@@ -6,6 +6,7 @@ import {WorldBlocklyThemeProvider} from './blockly/worldBlocklyTheme';
 import {worldConfig} from './config';
 import {DEFAULT_PROJECT} from './constants';
 import WorldLayout from './layout/WorldLayout';
+import {ProgressionProvider} from './progression/ProgressionProvider';
 import {WorldRuntimeProvider} from './runtime/WorldRuntimeContext';
 import {LevelKindSchema} from './schema';
 
@@ -27,7 +28,12 @@ const WorldLab = () => (
     <CodebridgeLab config={worldConfig} defaultSources={DEFAULT_PROJECT}>
       <WorldRuntimeProvider>
         <WorldBlocklyThemeProvider>
-          <WorldLayout />
+          {/* Holds what the learner has unlocked, and the one progression
+              modal — see specs/PROGRESSION_UI.md. Outside the layout because
+              the map is opened from several places inside it. */}
+          <ProgressionProvider>
+            <WorldLayout />
+          </ProgressionProvider>
         </WorldBlocklyThemeProvider>
       </WorldRuntimeProvider>
     </CodebridgeLab>

@@ -1,0 +1,191 @@
+/* The modal around the map: a header, the map, and a reading pane beside it.
+   The map's own colours are `progressionMap.module.css`; this file is the
+   furniture. */
+
+.dialog {
+  display: flex;
+  width: min(1200px, 92vw);
+  height: min(800px, 88vh);
+  max-width: none;
+  padding: 0;
+}
+
+.layout {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-areas:
+    'header header'
+    'map detail';
+  grid-template-columns: 1fr 360px;
+  grid-template-rows: auto 1fr;
+  min-height: 0;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  padding: 14px 56px 10px 20px; /* room for the dialog's own close button */
+  border-bottom: 1px solid #e2e2e8;
+  gap: 14px;
+  grid-area: header;
+}
+
+.heading {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.count {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.65;
+}
+
+.mapPane {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  grid-area: map;
+}
+
+.detailPane {
+  min-height: 0;
+  border-left: 1px solid #e2e2e8;
+  grid-area: detail;
+  overflow-y: auto;
+}
+
+.detail {
+  padding: 16px 18px 24px;
+}
+
+.breadcrumb {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  opacity: 0.65;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 2px 0 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.detail h3.heading {
+  margin: 18px 0 4px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+  text-transform: uppercase;
+}
+
+.list {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 14px;
+}
+
+.list li {
+  margin-bottom: 2px;
+}
+
+.muted {
+  font-size: 13px;
+  opacity: 0.65;
+}
+
+.pending {
+  margin: 10px 0 0;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: rgb(0 0 0 / 5%);
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.link {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  text-decoration: underline;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  margin-top: 22px;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.secondary {
+  padding: 7px 12px;
+  border: 1px solid #c2c2cc;
+  border-radius: 6px;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+  font: 600 14px/1.2 inherit;
+}
+
+.secondary:disabled {
+  color: #77777f;
+  cursor: default;
+}
+
+.primary {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  border: 1px solid #2c6ef2;
+  border-radius: 6px;
+  background: #2c6ef2;
+  color: #fff;
+  cursor: pointer;
+  font: 600 14px/1.2 inherit;
+}
+
+.primary:disabled {
+  border-color: #c2c2cc;
+  background: #e6e6ec;
+  color: #77777f;
+  cursor: default;
+}
+
+.empty {
+  padding: 20px 18px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+@media (prefers-color-scheme: dark) {
+  .header,
+  .detailPane {
+    border-color: #34343e;
+  }
+
+  .pending {
+    background: rgb(255 255 255 / 8%);
+  }
+
+  .primary:disabled {
+    border-color: #45454f;
+    background: #2a2a33;
+    color: #85858e;
+  }
+
+  .secondary {
+    border-color: #45454f;
+  }
+
+  .secondary:disabled {
+    color: #85858e;
+  }
+}

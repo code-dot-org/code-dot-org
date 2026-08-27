@@ -1,0 +1,433 @@
+# The progression, on screen
+
+[PROGRESSION.md](./PROGRESSION.md) designs the catalogue: what the tiles are,
+what they unlock, and what counts as having learned one. It is data, and this
+document is where a learner touches it.
+
+Two questions, and the second is the interesting one.
+
+- **Where does a map of sixty-seven hexagons live** in a page that is already an
+  instructions panel, a file tree, a block editor, a game and a console?
+- **What happens when a tile is chosen?** The answer this design commits to is
+  that a tile carries LEVEL PROPERTIES — the same shape a level has — and every
+  surface that shows a lesson shows those properties rather than a second copy
+  of them written by hand.
+
+## Where it opens from
+
+The page has four places a new affordance could go, and three of them are
+wrong.
+
+**Not a resource-panel tab.** The panel is about 320px wide and collapses to an
+icon strip; a hex map needs the width of the page. `Tabs` is also a base
+concept every lab shares (`resourcePanel/types.ts`), so a world-only tab would
+be a world-only entry in a shared enum.
+
+**Not the workspace header.** That header belongs to the file being edited —
+the view-mode buttons and the Blockly controls. A skill tree is not a fact
+about the current file.
+
+**Not the preview header.** That belongs to the running game.
+
+**A modal, opened from the resource panel's bottom icon strip.** The strip
+(`resourcePanelLinksElementId`) already holds Extra Links, Documentation,
+Disclaimer, Copyright and Settings — the things that are about the SESSION
+rather than about the code. The progression belongs with those, and
+`ButtonWithDialog` is the pattern already used there.
+
+That strip is a fixed list today with no slot for a lab, so this costs **one
+new prop on the base `ResourcePanel`**:
+
+```ts
+/** Lab-contributed buttons for the bottom icon strip, rendered first. */
+extraLinks?: ReactNode;
+```
+
+Passed through `InfoPanel` (Codebridge) the way `extraSettings` and `aiTutor`
+already are. Generic enough to be worth having in base regardless of this
+feature: every lab eventually wants one of these.
+
+### One opener, many callers
+
+The modal is not opened only from that button. [PROGRESSION.md's revisit
+section](./PROGRESSION.md#revisiting-a-lesson) puts a link back to a lesson on
+the rule import dialog's rows, on a rule's toolbox category, and beside the
+`use trait` eye. All of them open the SAME modal, focused on a tile.
+
+So the opener is a context, not a `useState` in the layout:
+
+```ts
+interface Progression {
+  catalogue: Catalogue; // tiles, regions, edges
+  completed: ReadonlySet<TileId>; // what this learner has done
+  stateOf(id: TileId): TileState; // done | open | shut
+  openTree(focus?: TileId): void;
+  closeTree(): void;
+}
+```
+
+`ProgressionProvider` sits at the lab root beside `WorldRuntimeProvider`, and
+renders exactly one modal. Rendering a dialog per opener is the bug this
+prevents: two maps on screen, each with its own scroll position, and a close
+button that closes only one of them.
+
+### It should have a URL
+
+A modal cannot be linked to, and "look at the Puzzle region" is a thing a
+teacher will want to say in a sentence. That does not need a route: reflect the
+open tile in a query parameter, `?tree=<tileId>` (`?tree` alone opens it with
+nothing selected), read on mount and written on change. Cheap now, and it
+removes the only real argument for making the tree a page instead of a modal.
+
+## The modal
+
+`CustomDialog` from `@code-dot-org/component-library/dialog` — arbitrary
+children, focus trap, `Esc` to close, body scroll lock, a close button. Sized
+by class to near the viewport: `min(1200px, 92vw) × min(800px, 88vh)`. The
+`Dialog` sibling is the wrong one; it is a title, a body and two buttons.
+
+```
+┌───────────────────────────────────────────────────────┬───────────────┐
+│  Progression            [ Map | List ]         [ × ]  │               │
+├───────────────────────────────────────────────────────┤   detail      │
+│                                                       │               │
+│                    the map (SVG)                      │   the tile's  │
+│                                                       │   level       │
+│                                                       │   properties  │
+│                                                       │               │
+│                                                       │  [ Start ]    │
+├───────────────────────────────────────────────────────┴───────────────┤
+│  14 of 67 done · Motion complete · Puzzle needs Logic                 │
+└───────────────────────────────────────────────────────────────────────┘
+```
+
+Two panes: the map, and a detail pane of about 360px. Below 900px wide they
+stack, map above; below 600px the map is a scroller and the detail pane becomes
+a sheet over it.
+
+### The map pane
+
+One SVG. Nothing here is canvas: sixty-seven polygons is not a rendering
+problem, and an SVG is inspectable, styleable, printable and — the part that
+matters — focusable element by element.
+
+**Coordinates.** Pointy-top axial to pixels:
+
+```
+x = size * √3 * (q + r / 2)
+y = size * 3/2 * r
+```
+
+The `viewBox` is computed from the extent of the placed tiles plus one tile of
+padding. Adding a tile to the catalogue must never require editing a layout
+constant, and this is the whole of how that is arranged.
+
+**Layers, back to front:** region fills, region outlines, tiles, edges, region
+names. Grouping by layer rather than by tile is what lets a region's fill sit
+under every tile of that region, and an edge sit over the two tiles it joins,
+without any z-index games.
+
+**A region outline is the union boundary of its tiles.** Emit only the hex sides
+not shared with a same-region neighbour. An outline drawn per tile gives a
+honeycomb; a convex hull gives a shape the tiles do not fill. The survivors are
+NOT walked into a joined path: one `<path>` of unjoined segments draws the same
+picture at these stroke widths, and joining would only begin to matter for a
+dash pattern or a gradient running along the outline.
+
+**An edge is a bar across the shared side**, drawn only where a `requires`
+exists — solid when the prerequisite is done, dashed when it is not — and drawn
+ON TOP of the two tiles it joins. Not a line between centres: at any tile size
+that fits a title, a centre-to-centre line is entirely hidden under the two
+tiles. Under them, even the BAR shows only the sliver in the gap between two
+tiles — four or five pixels carrying a whole relation. Over them, it reads as
+the staple it is.
+
+**Region names go outside the map, in a ring.** A region's centroid is by
+definition covered in that region's own tiles, so a name written there is under
+them; drawn above them instead, it lies across two titles. Pushing it out along
+its own bearing until it clears its own region is not enough either — whatever
+lies further out on the same line is what it collides with next, which for a
+genre is its Making tile and for a foundation is the genre beside it. Push it
+clear of the WHOLE map, and let the words run outward rather than centred, and
+the twelve names sit in a ring around the picture, which is where a legend
+belongs anyway.
+
+**Zoom and pan.** The whole map fits by default and that is the intended way to
+read it. Wheel/pinch zoom clamped to [0.5, 2.5], drag to pan, a "fit" control,
+and `+`/`-`/`0` on the keyboard. Labels are hidden below a zoom where they stop
+fitting — the detail pane and the list view carry the names, so nothing is lost.
+
+**Three states**, as [PROGRESSION.md](./PROGRESSION.md#three-states-none-of-them-hidden)
+specifies: done is filled with a stamp, open is outlined in the region colour,
+shut is grey with a padlock. A fourth mark, not a state: the tile whose lesson
+is currently loaded gets a ring, so somebody who opened the map mid-lesson can
+see where they are.
+
+### The detail pane: level properties, presented
+
+This is the part of the design worth being strict about.
+
+When a tile is selected the detail pane renders **the tile's level properties**
+— not a summary of them written a second time:
+
+| Shown             | From                                                                  |
+| ----------------- | --------------------------------------------------------------------- |
+| the lesson itself | `levelProperties.longInstructions`, through `MainInstructionsContent` |
+| what it unlocks   | the `Unlock[]`, each rendered as the row it will become               |
+| what it needs     | `requires`, each with its state and a link to that tile               |
+| the action        | `Start` / `Continue` / `Do it again`, by state                        |
+| for a done tile   | "Open the finished example", read-only                                |
+
+`MainInstructionsContent` (base, `instructions/components/`) is the component
+the Instructions tab and the bubble preview already share; using it here is how
+a lesson reads identically in the modal and in the panel. It is not exported
+from `@code-dot-org/lab/instructions` today — **one line in
+`instructions/components/index.ts`**, the second and last base change this
+design asks for.
+
+Rendering the real properties rather than a précis is not tidiness. It is the
+only arrangement in which a curriculum author's edit to a lesson shows up
+everywhere it is quoted, and it removes the second copy that would otherwise
+drift within a month.
+
+An unlock row should look like the thing it unlocks: a rule renders as its
+import-dialog row (name, ability, the traits it provides), a block renders as
+the block. A learner deciding whether to spend twenty minutes on `puzzle/push`
+is deciding about `Can Be Pushed`, and a bullet point saying "Can Be Pushed"
+tells them less than the trait row does.
+
+### The list view is not a fallback
+
+A toggle in the modal header, `[ Map | List ]`, and both are first-class. The
+list groups by region and states in words everything the map encodes: title,
+state, what it unlocks, what it needs. A learner scanning for "which lessons
+teach me about text" is better served by the list, and a learner using a screen
+reader is served by nothing else.
+
+### Keyboard and screen reader
+
+The map is a **grid of tiles with roving tabindex**: one tab stop for the whole
+map, arrows to move within it, `Enter`/`Space` to select.
+
+**Arrow keys move to the nearest tile in that screen direction**, not to a
+named neighbour. Six neighbours do not map onto four arrow keys, and every
+scheme that tries (modifier keys, `Q`/`E` for the diagonals) is a scheme
+nobody discovers. Nearest-in-direction works with four keys, never gets stuck
+at a region boundary, and crosses gaps in the map — which a strict-neighbour
+walk cannot do at all.
+
+- Each tile's accessible name says everything colour says: **"Jumping.
+  Platformer. Locked — needs Gravity."**
+- Selection moves focus to nothing; the detail pane is `role="region"`,
+  labelled by the selected tile, and updates in place. Movement announces the
+  tile through its own accessible name, which is what a roving-tabindex grid
+  gives for free — no `aria-live` on the map.
+- Colour is never the only carrier: stamp, padlock, and the words in the name.
+- The dialog traps focus, `Esc` closes, and focus returns to the button that
+  opened it — `CustomDialog` does all three.
+- Contrast: region fills are backgrounds for text and must clear 4.5:1 against
+  the label, in both themes. A shut tile is grey and low-contrast BY INTENT,
+  which means its label must not be the only place its name appears — it is in
+  the list view and in the detail pane.
+
+See the `accessibility` skill for the standard (WCAG 2.2 AA).
+
+## What happens on Start
+
+A tile's lesson is `{source, instructions, levelData?}` — which is exactly
+`WorldScenario` (`src/fixtures/scenarios.ts`). And `fixtureFor`
+(`src/fixtures/index.ts`) already turns one of those into `LevelProperties`,
+filling in everything a scenario does not vary.
+
+So the shape this design needs mostly exists, and the honest description of the
+work is: **a tile is a scenario with a tree around it.** Generalize
+`fixtureFor` into `levelPropertiesFor(tile)`, and one function then serves the
+detail pane, the dev-host mock, and any future level generator.
+
+```ts
+interface Tile {
+  // …everything in PROGRESSION.md, plus:
+  /** The lesson: a starting project, its instructions, its level settings. */
+  lesson: WorldScenario;
+  /** The studio level, when one exists. Absent until they do. */
+  level?: {name: string; url: string};
+}
+```
+
+### Three transports, and only one of them is for starting
+
+**1. A studio level** — the eventual answer. The tile names a level; Start
+navigates to it. Progress, teacher visibility and a per-level channel all come
+free, because it is a real level and the machinery already exists.
+
+It is blocked today, and the spec should say so plainly rather than assume it:
+there is **no `World` level type in `dashboard/app/models/levels/`** (Python Lab
+and Web Lab 2 have one; World does not), and no `.level` files. World Lab
+reaches studio only as a project route,
+`/app/projects/world/:channelId/edit`. Making the tiles into levels is a
+dashboard-side piece of work — a `World < Level` model with `start_sources`,
+and a generator that writes one `.level` file per tile from the catalogue.
+
+**2. A project channel** — what works now. Each tile is a channel id; Start
+navigates to `/projects/world/<tile-id>/edit`. This is the shape the dev host
+and the mock API already serve: `WorldFixtures` maps a scenario tag to level
+properties and the route's channel id picks the tag. Every tile authored this
+way is playable and demonstrable the day it is written, before any dashboard
+work exists.
+
+**3. In place** — dispatch `onLevelChange({levelProperties, appOptions,
+initialSources})`, the base action that `loadLab` itself ends with
+(`redux/labSlice.ts`), swapping the level under the running lab with no
+navigation.
+
+**Transport 3 is not for starting a lesson.** The project that is open is the
+learner's own game, and replacing its sources under it is how somebody loses a
+week of work. It is for two things and nothing else:
+
+- the **reader** — opening a finished example from a rule's back-link, in a
+  read-only view that is thrown away on close;
+- **catalogue authoring** — an author flipping between tiles without a page
+  load.
+
+**Start never touches what is open.** Whatever the transport, a lesson gets its
+own channel. If the current project has unsaved edits, force a save before
+navigating; `hasEdited` is already in the store and `ProjectManager` already
+knows how to flush.
+
+## Where progress is stored
+
+**First, `localStorage`**, keyed by user id and catalogue version. It is enough
+to build every screen here, enough to run the thing in a classroom for a week,
+and honest about being temporary — a learner who switches machines loses their
+tree, which is a sentence the first version can afford to say out loud.
+
+**Then, derived.** If tiles become studio levels, tile completion is level
+progress, and there is no second store to keep in step and no way for the two
+to disagree. Prefer deriving it to storing it. A tile with no level yet — and
+there will be a period where most have none — falls back to the local set, and
+the merge is a union: anything done either way is done.
+
+The catalogue carries a **version**, and a learner's stored set carries the
+version it was written against. That is what makes the tile-id migration rules
+in [PROGRESSION.md](./PROGRESSION.md#what-a-tile-is) enforceable rather than
+aspirational.
+
+## Milestones
+
+Ordered so each is worth having alone, and so the map is proved to read before
+anything depends on it.
+
+1. ~~**Catalogue module.**~~ **Done** — `src/progression/`. Tiles, regions,
+   coordinates, `levelPropertiesFor`, and the validator tests. Meeting real
+   coordinates changed three things in PROGRESSION.md: Making cannot be a rim
+   (no small region touches six capstones five steps apart), a genre's entrance
+   is a two-edge gate rather than the single edge the first draft asked for,
+   and the catalogue is sixty-seven tiles rather than fifty-five. The block
+   unlocks are checked against the real palette
+   (`__tests__/unlockedBlocks.test.ts`), which is what confirmed the generated
+   types nobody can guess — `world_do_Physics_ApplyForceAction` and its
+   relatives.
+2. ~~**The map, standalone.**~~ **Done** — `src/progression/ProgressionMap.tsx`,
+   at `yarn dev` then `?map`. The SVG, region fills, outlines and names, the
+   edges, the three states, zoom, pan and fit — and the keyboard model, a roving
+   tabindex with nearest-tile-in-direction on the arrows, brought forward from
+   milestone 5 because a map built for the mouse first is a map shaped around
+   the mouse. The list view is still milestone 5.
+
+   "The layout will be wrong in ways only a picture shows" was right three
+   times: where a region's name can go, and where an edge bar has to be drawn
+   (both above) — and a bug worth the milestone on its own. **Capturing the
+   pointer on `pointerdown` made every tile unclickable.** The `pointerup` then
+   goes to the `<svg>`, so the browser resolves the click against their common
+   ancestor and no tile's `onClick` ever runs, while the map pans perfectly.
+   Capture is taken on the first real movement instead. jsdom can see none of
+   this — it has no pointer capture — so the test that pins it spies on
+   `setPointerCapture`, and has to dispatch a `MouseEvent` of the right type:
+   `fireEvent.pointerDown` under jsdom delivers `button` and `clientX` as
+   `undefined`, and a handler that checks either returns early without ever
+   running.
+
+3. ~~**The modal and the opener.**~~ **Done** — `ProgressionProvider`,
+   `ProgressionDialog`, `TileDetail`, `ProgressionButton`, and the two base
+   changes this document asked for: `extraLinks` on `ResourcePanel` (passed
+   through Codebridge's `InfoPanel`) and `MainInstructionsContent` exported from
+   `@code-dot-org/lab/instructions`. `?tree=<tileId>` is written with
+   `replaceState` — moving around a map is not navigation, and a Back button
+   that walks back through forty tiles is worse than useless.
+
+   Three things came out differently from the sketch above. The **count went in
+   the header** rather than a footer strip: a whole band of chrome for one
+   number, in a dialog already divided in two, was not worth the row. The
+   **`[ Map | List ]` toggle is not there**, because the list is milestone 5 and
+   a toggle with one setting is furniture. And the detail pane renders
+   `MainInstructionsContent` for every tile, written or not — a tile with no
+   lesson yet has the markdown a lesson WOULD open with composed from its own
+   `teaches` and `task`, and says so in as many words. The alternative was a
+   rendering path that nothing exercised until the first lesson was authored.
+
+   The provider and the dialog are two modules because they cannot be one: the
+   provider renders the modal, the modal reads the context, and the lint rule
+   for import cycles is what noticed. The context and the hook live in
+   `progressionContext.ts`, which both import.
+
+4. ~~**Start, by project channel.**~~ **Done** — six lessons
+   (`src/progression/lessons/`), `Start` as a link to a channel of the lesson's
+   own (`lessonRoute.ts`), `localStorage` behind the completion
+   (`progressStore.ts`), and the mock API serving a channel per lesson. The loop
+   is walkable: open the map, pick a tile, Start, land in the lesson, come back,
+   and the tile stays done through a reload.
+
+   **A lesson is authored the way a learner's project GETS things** — by running
+   the same `importStockRule` / `importStockSprite` / `importStockActor` the
+   dropdowns run (`lessons/support.ts`). So Gravity's dependencies arrive
+   because the importer brings them, not because a lesson remembered to list
+   them, and nothing here can drift from what importing actually does.
+
+   Each lesson is built and TICKED in `__tests__/lessonsPlay.test.tsx`, the
+   bargain `scenariosPlay` already makes for the demo scenarios: a wrong block
+   type or a mistyped socket compiles perfectly and does nothing, so nothing
+   short of running a project says whether it works. Two of the six also assert
+   what their own first line CLAIMS — that the speed lesson crosses the screen
+   by hand, and that the gravity lesson hangs in the air — because a starter
+   that gives the lesson away is a lesson that has quietly stopped being one.
+
+   Two things the loop found that nothing else would have. A tile's title and a
+   written lesson's own opening heading were both shown, one under the other, so
+   the pane supplies a title only when the lesson does not. And **`?tree` meant
+   two things**: the modal writes `?tree=<tileId>` to the URL, and the dev host
+   read `?tree` as "show the standalone map harness" — so reloading after
+   opening the map replaced the whole lab with the harness. The harness is
+   `?map` now.
+
+5. **The list view, the keyboard model, the a11y pass.** Not last because it is
+   least — last because it is the pass that wants the real thing to be shaped
+   already, and it is a gate on shipping rather than a nice-to-have.
+6. **The back-links** from the rule import dialog, the actor shelf, the toolbox
+   category headers, and the `use trait` eye.
+7. **Real completion** — the checks (PROGRESSION.md), and then the studio-level
+   transport and the dashboard work under it.
+
+## Open questions
+
+- **Whose component is the map?** The renderer is generic (hexes, regions,
+  edges, states); the catalogue is not. Recommendation: build it in
+  `src/progression/` inside World Lab, with the renderer importing nothing
+  world-specific, so the day a second lab wants a tree it moves without a
+  rewrite. Do not put it in base speculatively.
+- **Does the tree open by itself** for a learner who has never seen it? Once,
+  probably, on a project with no history. Nobody finds an icon in a strip of
+  five.
+- **What does a teacher see?** A class's progress over the same map is an
+  obvious and separate feature; the catalogue and the renderer should not need
+  to change to allow it, which is an argument for keeping `completed` a prop of
+  the renderer rather than something it reads from a store.
+- **What does the modal do while a lesson is loaded?** Showing the current tile
+  with a ring is the minimum. Whether the check's result appears here, in the
+  instructions panel, or both, is a question for whoever builds the first
+  check.
+- **Is `Start` on a shut tile really refused?** The alternative is letting
+  anybody start anything and using the tree only as advice. That is a
+  pedagogical decision, not a UI one, and it belongs in
+  [PROGRESSION.md](./PROGRESSION.md#opening-a-tile) — but the modal should read
+  the answer from the catalogue rather than hard-coding it, so the decision can
+  change without a rewrite.

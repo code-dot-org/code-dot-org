@@ -18,6 +18,7 @@ import {ENTRY_FILE, ViewMode, type ViewModeType} from '../constants';
 import {ConsolePanel} from '../debug/ConsolePanel';
 import {showsFileBrowser, type WorldLevelProperties} from '../levelData';
 import {WorldPreview} from '../preview/WorldPreview';
+import {ProgressionButton} from '../progression/ProgressionButton';
 import {fileIdAt} from '../runtime/projectFiles';
 
 import styles from './worldLayout.module.css';
@@ -118,6 +119,9 @@ const WorldLayout = () => {
         // Blockly workspace safely (`aiTutor/useWorldTutor`).
         aiTutor={aiTutor}
         extraSettings={[blocklyThemeSetting]}
+        // The way into the progression map, in the panel's bottom icon strip
+        // (specs/PROGRESSION_UI.md).
+        extraLinks={<ProgressionButton />}
       />
       {!isInstructionsCollapsed && (
         <ResizeHandle
