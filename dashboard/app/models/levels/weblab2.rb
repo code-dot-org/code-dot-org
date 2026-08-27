@@ -26,8 +26,19 @@
 #
 class Weblab2 < Level
   include Widget2Helper
+
+  # How much this level's curriculum depends on its AI Tutor. Web Lab 2 always
+  # offers the tutor, so an unset property means the tutor is essential and a
+  # section that permits AI chat tools only where they are essential still gets
+  # it here. 'available' says the curriculum does not ask students to use it.
+  AI_TUTOR_DEPENDENCIES = [
+    SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:ESSENTIAL],
+    SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:AVAILABLE],
+  ].freeze
+
   validate :validate_ai_tutor_prompt_settings
   validate :validate_widget2
+  validates :ai_tutor_dependency, inclusion: {in: AI_TUTOR_DEPENDENCIES}, allow_blank: true
 
   serialized_attrs %w(
     start_sources
@@ -45,7 +56,7 @@ class Weblab2 < Level
     ai_tutor_prompt_settings
     widget2
     require_edit_to_continue
-    ai_tutor_optional
+    ai_tutor_dependency
   )
 
   after_initialize do
@@ -66,6 +77,11 @@ class Weblab2 < Level
 
   def self.view_modes
     [['Code + Preview (default)', 'split'], ['Preview only', 'preview'], ['Code only', 'code']]
+  end
+
+  def self.ai_tutor_dependencies
+    [['Essential - the curriculum requires AI Tutor (default)', SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:ESSENTIAL]],
+     ['Available - AI Tutor is offered but not required', SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:AVAILABLE]]]
   end
 
   def self.ai_tutor_modes

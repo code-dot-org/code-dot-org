@@ -6,13 +6,16 @@
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :require_edit_to_continue, description: "Require student to edit code before continuing"}
 
   .field
-    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :ai_tutor_optional, description: "AI Tutor is optional on this level"}
-    %p
-      Check this when the curriculum does not ask students to use AI Tutor on
-      this level. The tutor is still available, but a course containing only
-      such Web Lab 2 levels no longer reports that it requires AI chat tools
-      to complete, and students whose section allows AI chat tools only where
-      they are essential will not be able to use the tutor here.
+    = f.label :ai_tutor_dependency, 'AI Tutor Dependency'
+    = f.select :ai_tutor_dependency, options_for_select(@level.class.ai_tutor_dependencies, @level.ai_tutor_dependency || SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:ESSENTIAL])
+    %p How much this level's curriculum depends on AI Tutor. Web Lab 2 always shows the tutor; this says whether the curriculum requires it.
+    %ul
+      %li
+        %strong Essential (default):
+        the tutor stays available to a section that permits AI chat tools only where they are essential, and a course containing this level tells teachers it requires AI chat tools to complete.
+      %li
+        %strong Available:
+        the curriculum does not ask students to use the tutor here. A section set to essential-only turns the tutor off on this level, and a course whose Web Lab 2 levels are all 'available' no longer tells teachers it requires AI chat tools.
 
   .field
     = f.label :initial_view_mode, 'Initial View Mode'

@@ -48,11 +48,11 @@ class LevelTest < ActiveSupport::TestCase
 
   test 'with_ai_tutor_available returns Weblab2 levels' do
     weblab2_level = Level.create(name: 'weblab2', type: 'Weblab2')
-    weblab2_optional_level = Level.create(name: 'weblab2_optional', type: 'Weblab2', properties: {'ai_tutor_optional' => 'true'})
+    weblab2_available_level = Level.create(name: 'weblab2_available', type: 'Weblab2', properties: {'ai_tutor_dependency' => 'available'})
 
     result = Level.with_ai_tutor_available
     assert_includes result, weblab2_level
-    assert_includes result, weblab2_optional_level
+    assert_includes result, weblab2_available_level
   end
 
   test 'with_essential_ai_chat_tools returns levels with type Aichat or Weblab2' do
@@ -66,26 +66,28 @@ class LevelTest < ActiveSupport::TestCase
     refute_includes result, maze_level
   end
 
-  test 'with_essential_ai_chat_tools excludes Weblab2 levels whose AI Tutor is optional' do
-    optional_str_true = Level.create(name: 'weblab2_optional_str_true', type: 'Weblab2', properties: {'ai_tutor_optional' => 'true'})
-    optional_true = Level.create(name: 'weblab2_optional_true', type: 'Weblab2', properties: {'ai_tutor_optional' => true})
-    optional_false = Level.create(name: 'weblab2_optional_false', type: 'Weblab2', properties: {'ai_tutor_optional' => 'false'})
-    optional_unset = Level.create(name: 'weblab2_optional_unset', type: 'Weblab2', properties: {})
+  test 'with_essential_ai_chat_tools excludes Weblab2 levels whose AI Tutor is only available' do
+    available = Level.create(name: 'weblab2_available', type: 'Weblab2', properties: {'ai_tutor_dependency' => 'available'})
+    essential = Level.create(name: 'weblab2_essential', type: 'Weblab2', properties: {'ai_tutor_dependency' => 'essential'})
+    unset = Level.create(name: 'weblab2_unset', type: 'Weblab2', properties: {})
+    # Only the explicit 'available' opts a level out, so a level holding
+    # anything else stays essential rather than silently losing the tutor.
+    junk = Level.create(name: 'weblab2_junk', type: 'Weblab2', properties: {'ai_tutor_dependency' => 'availabe'})
     # The property is only meaningful for Web Lab 2 levels.
-    aichat_optional = Level.create(name: 'aichat_optional', type: 'Aichat', properties: {'ai_tutor_optional' => 'true'})
+    aichat = Level.create(name: 'aichat_available', type: 'Aichat', properties: {'ai_tutor_dependency' => 'available'})
 
     result = Level.with_essential_ai_chat_tools
-    refute_includes result, optional_str_true
-    refute_includes result, optional_true
-    assert_includes result, optional_false
-    assert_includes result, optional_unset
-    assert_includes result, aichat_optional
+    refute_includes result, available
+    assert_includes result, essential
+    assert_includes result, unset
+    assert_includes result, junk
+    assert_includes result, aichat
   end
 
-  test 'with_any_ai_chat_tools returns Weblab2 levels whose AI Tutor is optional' do
-    optional_level = Level.create(name: 'weblab2_optional', type: 'Weblab2', properties: {'ai_tutor_optional' => 'true'})
+  test 'with_any_ai_chat_tools returns Weblab2 levels whose AI Tutor is only available' do
+    available = Level.create(name: 'weblab2_available', type: 'Weblab2', properties: {'ai_tutor_dependency' => 'available'})
 
-    assert_includes Level.with_any_ai_chat_tools, optional_level
+    assert_includes Level.with_any_ai_chat_tools, available
   end
 
   test 'with_any_ai_chat_tools returns levels with type Aichat, Weblab2, or ai_tutor_available true' do

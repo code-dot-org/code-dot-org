@@ -15,6 +15,7 @@ import {
   isUsOnlyModelId,
 } from '@cdo/apps/aichat/helpers/aiChatAccess';
 import type {AiChatDisabledState} from '@cdo/apps/aichat/types';
+import type {AiChatToolsDependencyValue} from '@cdo/apps/aichat/types/accessControls';
 import type {AiChatClientType} from '@cdo/apps/aichat/types/context';
 import type {ModelParameters} from '@cdo/apps/aichat/types/model';
 import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
@@ -42,6 +43,10 @@ interface UseAiChatDisabledStateParams {
   selectedModelId?: ModelParameters['selectedModelId'];
   isPredictLevel?: boolean;
   hasSubmittedPredictResponse?: boolean;
+  // Whether this level's curriculum requires its AI Tutor. Web Lab 2 levels
+  // marked AVAILABLE need the section's AI chat tools fully enabled, not just
+  // essential-only; see areAiChatToolsEnabled.
+  aiTutorDependency?: AiChatToolsDependencyValue;
 }
 
 /**
@@ -58,6 +63,7 @@ export function useAiChatDisabledState({
   selectedModelId,
   isPredictLevel = false,
   hasSubmittedPredictResponse = false,
+  aiTutorDependency,
 }: UseAiChatDisabledStateParams): AiChatDisabledState {
   const isTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const sectionAccessLevel = useAppSelector(
@@ -74,7 +80,11 @@ export function useAiChatDisabledState({
   );
 
   const enabledForUser = appName
-    ? areAiChatToolsEnabled({appName, aiChatAccessLevel: userAccessLevel})
+    ? areAiChatToolsEnabled({
+        appName,
+        aiChatAccessLevel: userAccessLevel,
+        aiTutorDependency,
+      })
     : false;
 
   const disabledState: AiChatDisabledState = useMemo(() => {
@@ -128,7 +138,11 @@ export function useAiChatDisabledState({
       if (
         enabledForUser &&
         sectionAccessLevel &&
-        !areAiChatToolsEnabled({appName, aiChatAccessLevel: sectionAccessLevel})
+        !areAiChatToolsEnabled({
+          appName,
+          aiChatAccessLevel: sectionAccessLevel,
+          aiTutorDependency,
+        })
       ) {
         return {
           disabled: true,
@@ -173,6 +187,7 @@ export function useAiChatDisabledState({
     sectionAccessLevel,
     isLevelbuilder,
     usOnlyAichatModelsDisabled,
+    aiTutorDependency,
   ]);
 
   return disabledState;

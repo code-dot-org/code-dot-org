@@ -73,11 +73,13 @@ class Level < ApplicationRecord
   end)
 
   # scope for levels that require ai chat tools to reasonably function.
-  # A Web Lab 2 level ships with AI Tutor, so it requires AI chat tools unless a
-  # levelbuilder has marked the tutor optional; see Weblab2#ai_tutor_optional.
+  # A Web Lab 2 level ships with AI Tutor, so its tutor is essential unless a
+  # levelbuilder marked it merely available; see Weblab2#ai_tutor_dependency.
+  # Only the explicit 'available' opts a level out: an unset property, or one
+  # holding anything else, leaves the level essential as it was before.
   scope :with_essential_ai_chat_tools, (lambda do
     where(type: 'Aichat').or(
-      where(type: 'Weblab2').where("COALESCE(levels.properties->>'$.ai_tutor_optional', 'false') != 'true'")
+      where(type: 'Weblab2').where("COALESCE(levels.properties->>'$.ai_tutor_dependency', '') != ?", SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:AVAILABLE])
     )
   end)
 
