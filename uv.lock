@@ -955,7 +955,7 @@ wheels = [
 
 [[package]]
 name = "theater"
-version = "0.5.0"
+version = "0.6.0"
 source = { editable = "python/pythonlab/theater" }
 
 [package.dev-dependencies]
