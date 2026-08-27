@@ -6,11 +6,11 @@ import ChallengeBox from '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivi
 import {
   Challenge,
   ChallengeResponse,
-  challengeValidator,
 } from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
 import {ReactFlowSketchLabSources} from '@cdo/apps/sketchlab/reactFlow/types';
 import {createSketchSnapshotBlob} from '@cdo/apps/sketchlab/reactFlow/utils/createSketchSnapshotBlob';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {ChallengeTypes} from '@cdo/generated-scripts/sharedConstants';
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   __esModule: true,
@@ -122,82 +122,21 @@ describe('ChallengeBox', () => {
     snapshot.mockReset();
   });
 
-  it('fetches the challenge for the lesson and shows its question', async () => {
-    fetchJson.mockResolvedValue({value: [fakeChallenge]});
-
-    render(<ChallengeBox lessonId={42} />);
-
-    expect(fetchJson).toHaveBeenCalledWith(
-      '/challenges?lesson_id=42',
-      {},
-      challengeValidator
-    );
-    await waitFor(() =>
-      expect(
-        screen.getByText('Draw a flowchart of the algorithm.')
-      ).toBeInTheDocument()
-    );
-  });
-
-  it('shows a fallback message when no challenge exists', async () => {
-    fetchJson.mockResolvedValue({value: []});
-
-    render(<ChallengeBox lessonId={42} />);
-
-    await waitFor(() =>
-      expect(
-        screen.getByText("We couldn't load a challenge for this lesson.")
-      ).toBeInTheDocument()
-    );
-  });
-
-  it('shows a fallback message when the fetch fails', async () => {
-    fetchJson.mockRejectedValue(new Error('network'));
-
-    render(<ChallengeBox lessonId={42} />);
-
-    await waitFor(() =>
-      expect(
-        screen.getByText("We couldn't load a challenge for this lesson.")
-      ).toBeInTheDocument()
-    );
-  });
-
-  it('toggles between whiteboard and video challenges', async () => {
-    fetchJson.mockResolvedValue({value: [fakeChallenge]});
-
-    render(<ChallengeBox lessonId={42} />);
-
-    // Whiteboard is the default modality.
-    expect(screen.getByText('Whiteboard canvas stub')).toBeInTheDocument();
-
-    fireEvent.click(screen.getByRole('button', {name: 'Video'}));
-
-    // jsdom has no navigator.mediaDevices, so the video challenge settles
-    // into its camera-unavailable error state.
-    expect(
-      screen.queryByText('Whiteboard canvas stub')
-    ).not.toBeInTheDocument();
-    await waitFor(() =>
-      expect(
-        screen.getByText(/Camera recording is not available/)
-      ).toBeInTheDocument()
-    );
-  });
-
   it('shows the waiting-for-feedback text and image once the response is submitted', async () => {
-    fetchJson.mockImplementation((url: string) =>
-      url.startsWith('/challenges')
-        ? Promise.resolve({value: [fakeChallenge]})
-        : Promise.resolve({value: fakeChallengeResponse()})
-    );
+    fetchJson.mockResolvedValue({value: fakeChallengeResponse()});
     snapshot.mockResolvedValue({
       blob: new Blob(['png-bytes'], {type: 'image/png'}),
     });
     post.mockResolvedValue({ok: true, json: async () => createdResponse});
     put.mockResolvedValue({});
 
-    render(<ChallengeBox lessonId={42} />);
+    render(
+      <ChallengeBox
+        lessonId={42}
+        challenge={fakeChallenge}
+        challengeType={ChallengeTypes.WHITEBOARD}
+      />
+    );
     await submitWhiteboardChallenge();
 
     await waitFor(() =>
@@ -210,23 +149,25 @@ describe('ChallengeBox', () => {
 
   it('displays the feedback once evaluation succeeds', async () => {
     jest.useFakeTimers();
-    fetchJson.mockImplementation((url: string) =>
-      url.startsWith('/challenges')
-        ? Promise.resolve({value: [fakeChallenge]})
-        : Promise.resolve({
-            value: fakeChallengeResponse({
-              evaluation_status: 'success',
-              student_feedback: 'Great job explaining the flowchart!',
-            }),
-          })
-    );
+    fetchJson.mockResolvedValue({
+      value: fakeChallengeResponse({
+        evaluation_status: 'success',
+        student_feedback: 'Great job explaining the flowchart!',
+      }),
+    });
     snapshot.mockResolvedValue({
       blob: new Blob(['png-bytes'], {type: 'image/png'}),
     });
     post.mockResolvedValue({ok: true, json: async () => createdResponse});
     put.mockResolvedValue({});
 
-    render(<ChallengeBox lessonId={42} />);
+    render(
+      <ChallengeBox
+        lessonId={42}
+        challenge={fakeChallenge}
+        challengeType={ChallengeTypes.WHITEBOARD}
+      />
+    );
     await submitWhiteboardChallenge();
 
     await waitFor(() =>
@@ -262,9 +203,6 @@ describe('ChallengeBox', () => {
       }),
     ];
     fetchJson.mockImplementation((url: string) => {
-      if (url.startsWith('/challenges')) {
-        return Promise.resolve({value: [fakeChallenge]});
-      }
       expect(url).toBe('/challenge_responses/7');
       const next =
         pollResponses.length > 1 ? pollResponses.shift()! : pollResponses[0];
@@ -276,7 +214,13 @@ describe('ChallengeBox', () => {
     post.mockResolvedValue({ok: true, json: async () => createdResponse});
     put.mockResolvedValue({});
 
-    render(<ChallengeBox lessonId={42} />);
+    render(
+      <ChallengeBox
+        lessonId={42}
+        challenge={fakeChallenge}
+        challengeType={ChallengeTypes.WHITEBOARD}
+      />
+    );
     await submitWhiteboardChallenge();
 
     await waitFor(() =>
@@ -287,8 +231,7 @@ describe('ChallengeBox', () => {
     const pollCallsSoFar = () =>
       fetchJson.mock.calls.filter(([url]) => url === '/challenge_responses/7')
         .length;
-    // Only the initial challenge fetch has happened so far; polling hasn't
-    // ticked yet.
+    // No polling has happened yet.
     expect(pollCallsSoFar()).toBe(0);
 
     // First tick: status is 'queued', so the widget keeps waiting.
@@ -323,9 +266,13 @@ describe('ChallengeBox', () => {
   });
 
   it('shows the audio and text buttons in whiteboard mode', async () => {
-    fetchJson.mockResolvedValue({value: [fakeChallenge]});
-
-    render(<ChallengeBox lessonId={42} />);
+    render(
+      <ChallengeBox
+        lessonId={42}
+        challenge={fakeChallenge}
+        challengeType={ChallengeTypes.WHITEBOARD}
+      />
+    );
 
     await waitFor(() =>
       expect(
@@ -338,9 +285,13 @@ describe('ChallengeBox', () => {
   });
 
   it('shows a textarea that can be typed in when the Text button is clicked', async () => {
-    fetchJson.mockResolvedValue({value: [fakeChallenge]});
-
-    render(<ChallengeBox lessonId={42} />);
+    render(
+      <ChallengeBox
+        lessonId={42}
+        challenge={fakeChallenge}
+        challengeType={ChallengeTypes.WHITEBOARD}
+      />
+    );
 
     await waitFor(() =>
       expect(
@@ -360,9 +311,13 @@ describe('ChallengeBox', () => {
   });
 
   it('shows a Start Recording button when the Audio button is selected', async () => {
-    fetchJson.mockResolvedValue({value: [fakeChallenge]});
-
-    render(<ChallengeBox lessonId={42} />);
+    render(
+      <ChallengeBox
+        lessonId={42}
+        challenge={fakeChallenge}
+        challengeType={ChallengeTypes.WHITEBOARD}
+      />
+    );
 
     await waitFor(() =>
       expect(
