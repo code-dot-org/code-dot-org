@@ -132,6 +132,14 @@ export interface LabStep extends StepBase {
   // "note which planted bugs got fixed and how targeted the prompts
   // were".  Stored on the progress snapshot; teacher-facing.
   rubric?: string;
+  // A slice of the target lab's level configuration, merged into the
+  // levelProperties the player synthesizes when the lab mounts.  Keys
+  // follow the lab's own LevelProperties schema — for weblab2, e.g.
+  // `initialViewMode: 'split' | 'code' | 'preview'`.  Identity and
+  // project fields the player owns (id, name, appName, isProjectLevel,
+  // usesProjects) cannot be overridden.  See labLevelProperties.ts for
+  // the per-lab slice the content generators may emit.
+  levelProperties?: {[key: string]: unknown};
 }
 
 export interface PanelSlide {

@@ -24,11 +24,19 @@ import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
 import {initAiLessonsGatewayContext} from './aiGatewaySetup';
 import {loggedGenerateText} from './aiLog';
+import {
+  coerceGeneratedLevelProperties,
+  generatedLevelPropertyFields,
+} from './labLevelProperties';
 import {StudentInputs} from './studentInputs';
 import {ArcSpec, LessonPlan, Step} from './types';
 
 const MODEL_ID = AiChatModelIds.GEMINI_2_5_PRO;
 const MAX_ARC_STEPS = 14;
+// The lab every generated arc step targets.  The step schema and the
+// levelProperties coercion both key off this; multi-lab arcs would make
+// it a parameter.
+const ARC_LAB_TYPE = 'weblab2' as const;
 
 // One flat step shape instead of a discriminated union — structured
 // output handles optional fields far more reliably than unions.  The
@@ -89,6 +97,10 @@ const arcSchema = Output.object({
             .describe(
               'lab steps: literal starting files — plant bugs to fix or structure to extend. Wins over starterPrompt.'
             ),
+          // Per-lab level-config fields (flat, coerced into
+          // LabStep.levelProperties).  Keyed by the lab the arc builds
+          // for — weblab2 today.
+          ...generatedLevelPropertyFields(ARC_LAB_TYPE),
           questions: z
             .array(
               z.object({
@@ -189,6 +201,7 @@ interface RawArcStep {
   aiPrompting?: string;
   starterPrompt?: string;
   starterFiles?: {filename?: string; contents?: string}[];
+  initialViewMode?: string;
   questions?: unknown[];
   paths?: {
     id?: string;
@@ -285,10 +298,14 @@ export function coerceArc(
       const name = String(f.filename || '').trim();
       if (name) starterFiles[name] = String(f.contents ?? '');
     });
+    const genProps = coerceGeneratedLevelProperties(
+      ARC_LAB_TYPE,
+      raw as {[key: string]: unknown}
+    );
     return {
       ...base,
       kind: 'lab',
-      labType: 'weblab2',
+      labType: ARC_LAB_TYPE,
       role: 'skillBuilding',
       sourceMode: raw.sourceMode === 'project' ? 'project' : 'sandbox',
       validation: (raw.successCriteria || '').trim() ? 'tutor' : 'none',
@@ -301,6 +318,7 @@ export function coerceArc(
           : 'free',
       starterPrompt: raw.starterPrompt ? String(raw.starterPrompt) : undefined,
       ...(Object.keys(starterFiles).length > 0 ? {starterFiles} : {}),
+      ...(genProps ? {levelProperties: genProps} : {}),
     } as Step;
   });
 

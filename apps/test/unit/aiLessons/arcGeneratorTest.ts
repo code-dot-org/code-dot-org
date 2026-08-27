@@ -131,6 +131,19 @@ describe('coerceArc', () => {
     });
   });
 
+  it('passes a valid initialViewMode into levelProperties, drops junk', () => {
+    const steps = coerceArc(lesson, spec, [
+      {kind: 'lab', id: 'a', title: 'A', initialViewMode: 'preview'},
+      {kind: 'lab', id: 'b', title: 'B', initialViewMode: 'fullscreen'},
+      {kind: 'lab', id: 'c', title: 'C'},
+    ]);
+    expect((steps[0] as LabStep).levelProperties).toEqual({
+      initialViewMode: 'preview',
+    });
+    expect((steps[1] as LabStep).levelProperties).toBeUndefined();
+    expect((steps[2] as LabStep).levelProperties).toBeUndefined();
+  });
+
   it('returns empty for unusable output', () => {
     expect(coerceArc(lesson, spec, [])).toEqual([]);
   });

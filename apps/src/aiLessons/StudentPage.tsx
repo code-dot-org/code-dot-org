@@ -259,6 +259,10 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
   const [evaluating, setEvaluating] = useState(false);
   const [error, setError] = useState<string | undefined>();
   const [settingsOpen, setSettingsOpen] = useState(false);
+  // True while EmbeddedLab generates AI starter code for this step —
+  // Continue is gated on it, so a step can't complete before the work
+  // it's about exists.
+  const [starterGenerating, setStarterGenerating] = useState(false);
   const transcriptRef = useRef<HTMLDivElement>(null);
   const pageRef = useRef<HTMLDivElement>(null);
   const [pageHeight, setPageHeight] = useState<string>('100vh');
@@ -1099,7 +1103,7 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
                         type="button"
                         size="small"
                         onClick={handleCheck}
-                        disabled={busy}
+                        disabled={busy || starterGenerating}
                       >
                         Check my work
                       </MuiButton>
@@ -1110,10 +1114,12 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
                       type="button"
                       size="small"
                       onClick={() => completeStep()}
-                      disabled={busy || resolving}
+                      disabled={busy || resolving || starterGenerating}
                       className={styles.continueButton}
                     >
-                      {resolving
+                      {starterGenerating
+                        ? 'Preparing your code…'
+                        : resolving
                         ? "Deciding what's next…"
                         : endsLesson
                         ? 'Finish lesson →'
@@ -1127,11 +1133,13 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
                     type="button"
                     size="small"
                     onClick={() => completeStep()}
-                    disabled={busy || resolving}
+                    disabled={busy || resolving || starterGenerating}
                     className={styles.continueButton}
                   >
                     <span className={styles.shimmerText}>
-                      {resolving
+                      {starterGenerating
+                        ? 'Preparing your code…'
+                        : resolving
                         ? "Deciding what's next…"
                         : pendingAdvance === 'celebrate'
                         ? 'Finish lesson →'
@@ -1145,7 +1153,7 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
                     type="button"
                     size="small"
                     onClick={handleCheck}
-                    disabled={busy}
+                    disabled={busy || starterGenerating}
                   >
                     Check my work
                   </MuiButton>
@@ -1302,6 +1310,7 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
             inputs={inputs}
             onLabComplete={() => completeStep()}
             onRun={handleLabRun}
+            onGeneratingChange={setStarterGenerating}
           />
         )}
       </main>

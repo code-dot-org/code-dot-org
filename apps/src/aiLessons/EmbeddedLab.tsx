@@ -34,7 +34,14 @@ import {
 } from './aiLessonsProjectManager';
 import {generateProjectFiles} from './buildPartner';
 import {StudentInputs} from './studentInputs';
-import {LabStep, LessonPlan, PanelsStep, ProjectLabType, Step} from './types';
+import {
+  isLabStep,
+  LabStep,
+  LessonPlan,
+  PanelsStep,
+  ProjectLabType,
+  Step,
+} from './types';
 
 import styles from './aiLessons.module.scss';
 
@@ -59,6 +66,9 @@ interface EmbeddedLabProps {
   // Fires when the student presses Run/Play inside the embedded lab.
   // Forwarded to the lab view via ExtraLabProps.
   onRun?: () => void;
+  // Reports whether the slow AI starter-code generation is running, so
+  // the page can gate Continue on the work actually existing.
+  onGeneratingChange?: (generating: boolean) => void;
 }
 
 // Stable synthetic level IDs per (lesson, lab type).  All checkpoints in
@@ -335,6 +345,7 @@ const EmbeddedLab: React.FunctionComponent<EmbeddedLabProps> = ({
   inputs,
   onLabComplete,
   onRun,
+  onGeneratingChange,
 }) => {
   const labType = step.kind === 'lab' ? step.labType : undefined;
   // One saved source per scope: the lab type for the shared project,
@@ -362,6 +373,17 @@ const EmbeddedLab: React.FunctionComponent<EmbeddedLabProps> = ({
   inputsRef.current = inputs;
   const stepRef = useRef(step);
   stepRef.current = step;
+
+  // Mirror `generating` up through a ref-read callback: the parent's
+  // handler must not join the sources effect's dependencies (a refire
+  // would clobber the live editor).  Cleanup reports false so a step
+  // switch mid-generation doesn't leave the page gated forever.
+  const onGeneratingChangeRef = useRef(onGeneratingChange);
+  onGeneratingChangeRef.current = onGeneratingChange;
+  useEffect(() => {
+    onGeneratingChangeRef.current?.(generating);
+    return () => onGeneratingChangeRef.current?.(false);
+  }, [generating]);
 
   useEffect(() => {
     let cancelled = false;
@@ -420,9 +442,24 @@ const EmbeddedLab: React.FunctionComponent<EmbeddedLabProps> = ({
   // effect would dispatch Redux state on every render and we'd loop.
   // Note: we deliberately omit `longInstructions` — the AI Tutor is the
   // sole voice on this surface; the lab's own instruction UI is hidden.
+  //
+  // The step's authored levelProperties (a slice of the lab's own
+  // LevelProperties schema — e.g. weblab2's initialViewMode) spreads
+  // first, so the identity and project fields the player owns can't be
+  // overridden by lesson content.  Stabilized by content, not object
+  // identity: overlay merges rebuild step objects mid-step, and a
+  // levelProperties identity change would re-dispatch the lab setup.
+  const authoredPropsJson = JSON.stringify(
+    (isLabStep(step) ? step.levelProperties : undefined) ?? null
+  );
+  const authoredProps = useMemo(
+    () => JSON.parse(authoredPropsJson) ?? undefined,
+    [authoredPropsJson]
+  );
   const levelProperties = useMemo(() => {
     if (labType === 'weblab2') {
       return {
+        ...authoredProps,
         id,
         name: `ai-lesson-${lessonId}-${scope}`,
         appName: 'weblab2' as AppName,
@@ -432,6 +469,7 @@ const EmbeddedLab: React.FunctionComponent<EmbeddedLabProps> = ({
     }
     if (labType === 'music') {
       return {
+        ...authoredProps,
         id,
         name: `ai-lesson-${lessonId}-${scope}`,
         appName: 'music' as AppName,
@@ -444,7 +482,7 @@ const EmbeddedLab: React.FunctionComponent<EmbeddedLabProps> = ({
       };
     }
     return undefined;
-  }, [labType, id, lessonId, scope]);
+  }, [labType, id, lessonId, scope, authoredProps]);
 
   // Prefer the server's saved sources if present; otherwise fall back to
   // the lab-type-specific defaults for first-time mount.

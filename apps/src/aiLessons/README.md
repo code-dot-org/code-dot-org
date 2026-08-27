@@ -154,6 +154,14 @@ Cross-cutting fields:
   prompting; personalization comes from recorded answers regardless).
 - `readOnly` — the lab mounts frozen (look, don't touch): showcase
   steps where the AI generates something aspirational to react to.
+- `levelProperties` — a slice of the target lab's own LevelProperties
+  schema, merged into the levelProperties EmbeddedLab synthesizes at
+  mount.  Today's use: weblab2's `initialViewMode: 'split' | 'code' |
+  'preview'` (prompt-driven steps open on the rendered page;
+  code-reading steps open split).  Identity/project fields the player
+  owns can't be overridden.  The arc and remediation generators emit it
+  too — labLevelProperties.ts owns the per-lab schema fields and the
+  allowlist coercion both generators compose in.
 - Lesson-level `checklist` — project rubric the tutor reports against.
 
 ### Adaptivity: one lesson, a slider of experiences

@@ -17,6 +17,10 @@ import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
 import {initAiLessonsGatewayContext} from './aiGatewaySetup';
 import {loggedGenerateText} from './aiLog';
+import {
+  coerceGeneratedLevelProperties,
+  generatedLevelPropertyFields,
+} from './labLevelProperties';
 import {StudentInputs} from './studentInputs';
 import {PathMastery, StepObservation} from './studentProgress';
 import {
@@ -172,6 +176,10 @@ const remediationSchema = Output.object({
             .describe(
               'The starting files that ARE the exercise — plant the bug to find or the structure to extend here. Include index.html.'
             ),
+          // Per-lab level-config fields (flat, coerced into
+          // LabStep.levelProperties).  Remediation always builds
+          // weblab2 exercises today.
+          ...generatedLevelPropertyFields('weblab2'),
         })
       )
       .min(1)
@@ -264,6 +272,7 @@ ${
       description?: string;
       successCriteria?: string;
       starterFiles?: {filename?: string; contents?: string}[];
+      initialViewMode?: string;
     }[];
   };
 
@@ -273,6 +282,10 @@ ${
       const name = String(f.filename || '').trim();
       if (name) starterFiles[name] = String(f.contents ?? '');
     });
+    const genProps = coerceGeneratedLevelProperties(
+      'weblab2',
+      s as {[key: string]: unknown}
+    );
     return {
       id: `gen-${path.id}-${round}-${i + 1}`,
       kind: 'lab',
@@ -286,6 +299,7 @@ ${
       description: String(s.description || ''),
       successCriteria: String(s.successCriteria || ''),
       ...(Object.keys(starterFiles).length > 0 ? {starterFiles} : {}),
+      ...(genProps ? {levelProperties: genProps} : {}),
     };
   });
 }

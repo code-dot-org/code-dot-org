@@ -55,7 +55,10 @@
       "readOnly": true,
       "validation": "none",
       "description": "The AI has generated a polished, professional version of the site the student said they want to make. The workspace is read-only — this step is about looking, not editing. Point out what makes it feel professional. By the end of this lesson they'll have the skills to direct AI to build things like this.",
-      "starterPrompt": "Generate a genuinely impressive, professional-quality website for what this student said they want to make — the kind of site a design studio would ship. Multiple clearly distinct sections, strong visual hierarchy, a cohesive color palette, thoughtful spacing, and realistic placeholder content that fits their idea. This is a showcase meant to inspire, so aim high."
+      "starterPrompt": "Generate a genuinely impressive, professional-quality website for what this student said they want to make — the kind of site a design studio would ship. Multiple clearly distinct sections, strong visual hierarchy, a cohesive color palette, thoughtful spacing, and realistic placeholder content that fits their idea. This is a showcase meant to inspire, so aim high.",
+      "levelProperties": {
+        "initialViewMode": "preview"
+      }
     },
     {
       "id": "architect-mindset",
@@ -81,7 +84,10 @@
       "validation": "none",
       "aiPrompting": "free",
       "promptPrefill": "Build me a website based on my idea.",
-      "description": "The student's first build. The prompt box is pre-filled with a simple working prompt — fire it as-is or tweak it. The AI already knows their idea from the questionnaire. Encourage a second prompt to change something; the point is to feel the loop: direct, look, direct again."
+      "description": "The student's first build. The prompt box is pre-filled with a simple working prompt — fire it as-is or tweak it. The AI already knows their idea from the questionnaire. Encourage a second prompt to change something; the point is to feel the loop: direct, look, direct again.",
+      "levelProperties": {
+        "initialViewMode": "preview"
+      }
     },
     {
       "id": "how-did-it-do",
@@ -266,7 +272,10 @@
       "validation": "tutor",
       "aiPrompting": "free",
       "description": "First prompting exercise. The student writes a layout-only prompt for a fictional brand: Nimbus, a weather app startup. Structural geometry only — sections, columns, placement — deliberately no colors or fonts. If their prompt drifts into styling, remind them: structure first.",
-      "successCriteria": "The generated page contains at least three visually distinct sections (for example a header, a main content area, and a footer)."
+      "successCriteria": "The generated page contains at least three visually distinct sections (for example a header, a main content area, and a footer).",
+      "levelProperties": {
+        "initialViewMode": "preview"
+      }
     },
     {
       "id": "prompt-refine",
@@ -282,7 +291,10 @@
       "validation": "tutor",
       "aiPrompting": "free",
       "description": "Second prompting exercise, continuing the Nimbus page from the previous step. Take something vague the student wants ('make it nicer') and rebuild it as a structural instruction using the word bank: header, hero, section, card, column, grid, navigation, footer, spacing, alignment. Each precise prompt gets fired so they see specificity pay off.",
-      "successCriteria": "The student has issued at least one specific, structural prompt (naming a section or element and what should change about it), and the page reflects the change."
+      "successCriteria": "The student has issued at least one specific, structural prompt (naming a section or element and what should change about it), and the page reflects the change.",
+      "levelProperties": {
+        "initialViewMode": "preview"
+      }
     },
     {
       "id": "debug-fixit",
@@ -300,6 +312,9 @@
         "index.html": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Fix me</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n    <script src=\"script.js\" defer></script>\n  </head>\n  <body>\n    <h1>This heading should be blue</h1>\n    <p>This paragraph is fine.</p>\n    <p>This paragraph never ends…\n    <p>…and this one got swallowed by it.</p>\n    <button id=\"button\">This button should change the heading</button>\n  </body>\n</html>\n",
         "style.css": "h1 {\n  colr: blue;\n}\n",
         "script.js": "document.getElementById('buton').addEventListener('click', function () {\n  document.querySelector('h1').textContent = 'Fixed it!';\n});\n"
+      },
+      "levelProperties": {
+        "initialViewMode": "split"
       }
     },
     {
@@ -334,6 +349,9 @@
       "starterFiles": {
         "index.html": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Motion</title>\n    <script src=\"script.js\" defer></script>\n  </head>\n  <body>\n    <h1 id=\"headline\">Nothing has happened yet</h1>\n    <button id=\"go\">Make something happen</button>\n  </body>\n</html>\n",
         "script.js": "document.getElementById('go').addEventListener('click', function () {\n  document.getElementById('headline').textContent = 'Something happened!';\n});\n"
+      },
+      "levelProperties": {
+        "initialViewMode": "split"
       }
     },
     {
@@ -350,7 +368,10 @@
       "validation": "tutor",
       "aiPrompting": "free",
       "description": "Second JavaScript exercise, continuing the same sandbox: add a NEW interaction of the student's own — a second button, a hover effect driven by JS, a counter, anything that reacts to the user. Directing the AI to write it is fine; understanding what it wired up is the point — ask them to explain what their new code listens for and what it changes.",
-      "successCriteria": "The page has a second, working interaction beyond the starter button, and the student can say what event it listens for and what it changes."
+      "successCriteria": "The page has a second, working interaction beyond the starter button, and the student can say what event it listens for and what it changes.",
+      "levelProperties": {
+        "initialViewMode": "split"
+      }
     },
     {
       "id": "bridge",
@@ -375,7 +396,10 @@
       "validation": "none",
       "aiPrompting": "free",
       "description": "The real project: using the prompting skills from the hub, the student generates and shapes the UI shell of THEIR site — the one from the questionnaire. Coach toward detailed structural prompts; debugging and JS skills come into play as things break or need behavior.",
-      "next": "polish-hub"
+      "next": "polish-hub",
+      "levelProperties": {
+        "initialViewMode": "preview"
+      }
     },
     {
       "id": "polish-hub",
@@ -417,7 +441,10 @@
       "validation": "tutor",
       "aiPrompting": "free",
       "description": "A deliberate styling pass on the student's own site: pick a palette that fits the topic, make the typography readable, even out the spacing. Prompts or hand edits both count.",
-      "successCriteria": "The site has a deliberate, cohesive color scheme (not browser defaults) applied via CSS."
+      "successCriteria": "The site has a deliberate, cohesive color scheme (not browser defaults) applied via CSS.",
+      "levelProperties": {
+        "initialViewMode": "preview"
+      }
     },
     {
       "id": "motion-pass",
@@ -432,7 +459,10 @@
       "presetPrompts": [
         "Make the cards scale up by 5% when you hover over them, with a smooth transition.",
         "Add a soft glow effect to the main call-to-action button."
-      ]
+      ],
+      "levelProperties": {
+        "initialViewMode": "preview"
+      }
     },
     {
       "id": "finalize",
@@ -443,7 +473,10 @@
       "validation": "none",
       "aiPrompting": "free",
       "next": "end",
-      "description": "Free finishing time. The student rounds out their site with everything they've learned. Celebrate what they built and how: skills chosen and practiced on their own terms, then applied."
+      "description": "Free finishing time. The student rounds out their site with everything they've learned. Celebrate what they built and how: skills chosen and practiced on their own terms, then applied.",
+      "levelProperties": {
+        "initialViewMode": "split"
+      }
     }
   ],
   "adaptivity": {
