@@ -247,6 +247,42 @@
   flex: 1;
 }
 
+/* Publish status chip + Undo/Redo + Publish (AuthoringTopBar.tsx) — one
+   segment dropped into both the lesson header and the course-overview
+   header, so it isn't duplicated per page. */
+
+.authoringTopBar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.unsavedMarker {
+  color: var(--text-warning-primary, #b25400);
+
+  &::before {
+    content: '●';
+    margin-right: 4px;
+    font-size: 8px;
+    vertical-align: middle;
+  }
+}
+
+.undoRedoGroup {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.publishConfirm {
+  padding: 16px;
+  width: 320px;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .progressDots {
   display: flex;
   align-items: center;
@@ -980,6 +1016,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
+}
+
+.coursePageActions {
+  display: flex;
+  align-items: center;
   gap: 12px;
 }
 

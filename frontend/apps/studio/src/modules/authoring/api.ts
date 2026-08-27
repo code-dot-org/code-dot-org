@@ -20,11 +20,20 @@ export interface AuthoringScope {
   insertPosition?: number;
 }
 
+/** The newest `publish-*.json` artifact's own stamp, or undefined if
+ * `/api/publish` has never run this session — see SessionStore's
+ * getLatestPublishInfo. Backs the top-bar status chip (publishStatus.ts). */
+export interface LastPublishInfo {
+  generatedAt: string;
+  changeCount: number;
+}
+
 export interface AuthoringStateResponse {
   version: number;
   courses: CourseModel[];
   widgets: WidgetDescriptor[];
   changes: CurriculumChange[];
+  lastPublish?: LastPublishInfo;
 }
 
 export interface ChatMessage {
@@ -69,6 +78,20 @@ export type TutorEvent = {
   text?: string;
   data?: unknown;
 };
+
+/** Subset of the server's LevelbuilderChangeSet the top-bar publish flow
+ * needs — the full artifact (widgets, offline reports, ...) is written to
+ * disk but not otherwise consumed client-side. */
+export interface PublishResult {
+  generatedAt: string;
+  changes: unknown[];
+  newObjects: {
+    courses: unknown[];
+    units: unknown[];
+    lessons: unknown[];
+    experiences: unknown[];
+  };
+}
 
 export type TutorAction =
   | {type: 'hint'; text: string}
@@ -129,10 +152,20 @@ async function post<T>(path: string, body: unknown): Promise<T> {
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify(body),
   });
+  // Every error response the server sends is `{error: string}` (see
+  // server.ts's `c.json({error: ...}, 4xx)` handlers) — surface that message
+  // rather than just the status code, so a caller (e.g. Undo, on the
+  // moved-experience edge) can show the author something more useful than
+  // "POST /changes: 400".
+  const data: unknown = await res.json().catch(() => undefined);
   if (!res.ok) {
-    throw new Error(`authoring-service POST ${path}: ${res.status}`);
+    const message =
+      data && typeof data === 'object' && typeof (data as {error?: unknown}).error === 'string'
+        ? (data as {error: string}).error
+        : `authoring-service POST ${path}: ${res.status}`;
+    throw new Error(message);
   }
-  return (await res.json()) as T;
+  return data as T;
 }
 
 export const authoringApi = {
@@ -153,9 +186,9 @@ export const authoringApi = {
     post<LevelCheckResponse>(`/levels/${numericId}/check`, {}),
   tutorTurn: (lessonId: string, transcript: TutorEvent[]) =>
     post<TutorAction>('/tutor', {lessonId, transcript}),
-  publish: () => post<Record<string, unknown>>('/publish', {}),
+  publish: () => post<PublishResult>('/publish', {}),
   applyChange: (change: CurriculumChangeInput) =>
-    post<{version: number}>('/changes', {change}),
+    post<{version: number; change: CurriculumChange}>('/changes', {change}),
 };
 
 export type {CourseModel, CurriculumChange, WidgetDescriptor};

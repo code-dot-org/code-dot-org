@@ -205,6 +205,49 @@ export class SessionStore {
     fs.writeFileSync(file, `${JSON.stringify(artifact, null, 2)}\n`);
     return file;
   }
+
+  /**
+   * The most recent `publish-*.json` artifact's own {@link
+   * LevelbuilderChangeSet.generatedAt} and change count, or undefined if
+   * `/api/publish` has never run this session. Scanned from disk rather than
+   * tracked as separate state, so it survives a service restart the same way
+   * `changes.jsonl` does. Filenames sort chronologically as written
+   * (`writePublishArtifact`'s stamp is an ISO timestamp with `:`/`.` swapped
+   * for `-`, which preserves lexical = chronological order), so the last
+   * name after a sort is the newest.
+   */
+  getLatestPublishInfo(): {generatedAt: string; changeCount: number} | undefined {
+    let names: string[];
+    try {
+      names = fs
+        .readdirSync(this.root)
+        .filter(name => name.startsWith('publish-') && name.endsWith('.json'));
+    } catch {
+      return undefined;
+    }
+    if (names.length === 0) {
+      return undefined;
+    }
+    names.sort();
+    const raw = readFileIfPresent(
+      path.join(this.root, names[names.length - 1]),
+    );
+    if (raw === undefined) {
+      return undefined;
+    }
+    try {
+      const parsed = JSON.parse(raw) as {
+        generatedAt?: string;
+        changes?: unknown[];
+      };
+      return {
+        generatedAt: parsed.generatedAt ?? '',
+        changeCount: Array.isArray(parsed.changes) ? parsed.changes.length : 0,
+      };
+    } catch {
+      return undefined;
+    }
+  }
 }
 
 function readFileIfPresent(file: string): string | undefined {

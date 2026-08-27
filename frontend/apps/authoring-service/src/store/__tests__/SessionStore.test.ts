@@ -124,4 +124,39 @@ describe('SessionStore', () => {
     state.registerLevelProperties({'40': {}, '7': {}});
     expect(state.nextLevelNumericId()).toBe(41);
   });
+
+  describe('getLatestPublishInfo', () => {
+    it('is undefined before any publish artifact exists', () => {
+      const store = new SessionStore(root);
+      expect(store.getLatestPublishInfo()).toBeUndefined();
+    });
+
+    it('reads generatedAt and change count off the one artifact', () => {
+      const store = new SessionStore(root);
+      store.writePublishArtifact(
+        {generatedAt: '2026-08-27T10-00-00.000Z', changes: [{}, {}]},
+        new Date('2026-08-27T10:00:00.000Z'),
+      );
+      expect(store.getLatestPublishInfo()).toEqual({
+        generatedAt: '2026-08-27T10-00-00.000Z',
+        changeCount: 2,
+      });
+    });
+
+    it('picks the newest of several artifacts by filename, not write order', () => {
+      const store = new SessionStore(root);
+      store.writePublishArtifact(
+        {generatedAt: 'first', changes: [{}]},
+        new Date('2026-08-27T09:00:00.000Z'),
+      );
+      store.writePublishArtifact(
+        {generatedAt: 'second', changes: [{}, {}, {}]},
+        new Date('2026-08-27T11:00:00.000Z'),
+      );
+      expect(store.getLatestPublishInfo()).toEqual({
+        generatedAt: 'second',
+        changeCount: 3,
+      });
+    });
+  });
 });

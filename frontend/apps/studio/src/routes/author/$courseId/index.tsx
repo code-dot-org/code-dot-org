@@ -7,6 +7,7 @@ import {Loading} from '@code-dot-org/lab/host';
 
 import {useAuthoringState, useCanAuthor} from '@/modules/authoring';
 import {authoringApi, draftLessonId, draftUnitId} from '@/modules/authoring/api';
+import AuthoringTopBar from '@/modules/authoring/components/AuthoringTopBar';
 import AuthorRouteError from '@/modules/authoring/components/AuthorRouteError';
 import AuthorSidebar from '@/modules/authoring/components/AuthorSidebar';
 import ChangeHistory from '@/modules/authoring/components/ChangeHistory';
@@ -58,11 +59,18 @@ function CourseOverview() {
             )}
           </div>
           {canAuthor && data && (
-            <ChangeHistory
-              courseId={course.id}
-              courses={data.courses}
-              changes={data.changes}
-            />
+            <div className={styles.coursePageActions}>
+              <AuthoringTopBar
+                changes={data.changes}
+                courses={data.courses}
+                lastPublish={data.lastPublish}
+              />
+              <ChangeHistory
+                courseId={course.id}
+                courses={data.courses}
+                changes={data.changes}
+              />
+            </div>
           )}
         </div>
         {course.units.map(unit => (

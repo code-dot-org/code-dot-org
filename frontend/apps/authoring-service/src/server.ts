@@ -18,7 +18,7 @@ import {
 } from './agent/TutorRunner.js';
 import {loadAuthoringBridge} from './authoring/bridge.js';
 import {CurriculumChangeBodySchema} from './authoring/changeSchema.js';
-import type {ResolveLevel} from './authoring/model.js';
+import type {CurriculumChange, ResolveLevel} from './authoring/model.js';
 import {importCourseIfMissing} from './boot/importCourse.js';
 import {LevelCatalog, repairLevelProperties} from './boot/levelCatalog.js';
 import {FRONTEND_ROOT, resolveRepoRoot} from './boot/paths.js';
@@ -151,6 +151,7 @@ app.get('/api/state', c =>
     courses: state.getSnapshot().courses,
     widgets: state.getSnapshot().widgets,
     changes: state.getChanges(),
+    lastPublish: store.getLatestPublishInfo(),
   }),
 );
 
@@ -282,12 +283,18 @@ app.post('/api/changes', async c => {
   if (!parsed.success) {
     return c.json({error: parsed.error.message}, 400);
   }
+  let change: CurriculumChange;
   try {
-    state.applyCurriculumChange(parsed.data, 'author');
+    change = state.applyCurriculumChange(parsed.data, 'author');
   } catch (error) {
     return c.json({error: errorMessage(error)}, 400);
   }
-  return c.json({version: state.version});
+  // The applied change (not just the body the caller sent) carries whatever
+  // the server itself filled in — seq/at/actor, and for override* ops the
+  // captured `previous` — which is what a client-side Undo/Redo needs to
+  // build an exact compensating change without re-deriving it (see
+  // studio's useUndoRedo.ts).
+  return c.json({version: state.version, change});
 });
 
 app.post('/api/tutor', async c => {

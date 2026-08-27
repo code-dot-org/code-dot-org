@@ -18,7 +18,9 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {authoringApi} from '../api';
 import {useCanAuthor} from '../authorGate';
 import {useCompletion, type CompletionStatus} from '../completion';
+import {useAuthoringState} from '../hooks';
 
+import AuthoringTopBar from './AuthoringTopBar';
 import AuthorSidebar from './AuthorSidebar';
 import ContentComposer from './ContentComposer';
 import ExperienceStage, {
@@ -97,6 +99,12 @@ export default function LessonPlayer({
   lesson,
 }: LessonPlayerProps) {
   const canAuthor = useCanAuthor();
+  // Re-fetching here (rather than threading course/unit/lesson's own
+  // ancestor query down as new props) piggybacks on the same react-query
+  // cache entry the route already populated — no extra network round trip,
+  // and the top bar stays in sync with the same 'state' SSE invalidation
+  // every other author-mode view already relies on.
+  const {data: authoringState} = useAuthoringState();
   const [studentView, setStudentView] = useState(readStudentViewFlag);
   const [tutorOn, setTutorOn] = useState(false);
   // Tracked by id, not position: `experiences` is a server-owned array that
@@ -392,6 +400,14 @@ export default function LessonPlayer({
           })}
         </nav>
         <div className={styles.lessonHeaderSpacer} />
+        {canAuthor && authoringState && (
+          <AuthoringTopBar
+            changes={authoringState.changes}
+            courses={authoringState.courses}
+            lastPublish={authoringState.lastPublish}
+            dirty={panelDirty || levelRailDirty}
+          />
+        )}
         <Button
           size="small"
           variant={tutorOn ? 'contained' : 'outlined'}
