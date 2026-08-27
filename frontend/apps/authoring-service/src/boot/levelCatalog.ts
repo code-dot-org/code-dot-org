@@ -22,6 +22,19 @@ export interface LevelCatalogEntry {
   levelType: string;
 }
 
+/**
+ * One row of grouped search results: every catalog entry that shares a
+ * family base name (see parseLevelFamilyKey), collapsed to a single default
+ * variant plus the full variant list for a disclosure UI.
+ */
+export interface LevelFamily {
+  familyKey: string;
+  defaultVariant: LevelCatalogEntry;
+  variantCount: number;
+  /** Default variant first, remaining variants in catalog scan order. */
+  variants: LevelCatalogEntry[];
+}
+
 /** What `resolveLevel` needs from the state it is attaching a level to. */
 export interface LevelCatalogContext {
   nextLevelNumericId(): number;
@@ -95,21 +108,23 @@ export class LevelCatalog {
     return this.entries.length;
   }
 
-  searchLevels(query: string, limit = 20): LevelCatalogEntry[] {
+  /**
+   * Grouped by family (see parseLevelFamilyKey) so year/pilot/copy variants
+   * of the same puzzle collapse to one row — the catalog holds ~4900 files
+   * and an author searching "bee" or "ifStatement" would otherwise see a
+   * dozen near-duplicates per real puzzle. Matching runs over the whole
+   * catalog before the `limit` cut so a family isn't split across the page
+   * boundary (`limit` bounds family rows, not raw entries).
+   */
+  searchLevels(query: string, limit = 20): LevelFamily[] {
     const needle = query.trim().toLowerCase();
-    if (needle.length === 0) {
-      return this.entries.slice(0, limit);
-    }
-    const matches: LevelCatalogEntry[] = [];
-    for (const entry of this.entries) {
-      if (entry.levelKey.toLowerCase().includes(needle)) {
-        matches.push(entry);
-        if (matches.length >= limit) {
-          break;
-        }
-      }
-    }
-    return matches;
+    const matches =
+      needle.length === 0
+        ? this.entries
+        : this.entries.filter(entry =>
+            entry.levelKey.toLowerCase().includes(needle),
+          );
+    return groupLevelFamilies(matches).slice(0, limit);
   }
 
   resolveLevel(
@@ -161,6 +176,124 @@ export class LevelCatalog {
     this.resolved.set(levelKey, experience);
     return experience;
   }
+}
+
+// Suffix inventory below is measured off the real catalog (9057 names across
+// fish/music/standalone_video/maze as of this writing), not guessed:
+//   - " (copy N)" / "_copy": 25 + 25 hits, always trailing.
+//   - a trailing 4-digit year, underscore- or hyphen-delimited: 4001 + 152
+//     hits, range 2018-2026 observed; Levelbuilder's copy-for-new-year-cycle
+//     convention makes future years routine, so the match window is widened
+//     to 2017-2029.
+//   - explicit pilot/variant tags: _pilot (37), _v1/_v2/_v3 (213), _test (4),
+//     _dev (1), _beta (1), plus _prod (seen stacked after a year, e.g.
+//     "..._2023MB_prod"); _devtest doesn't occur yet but Levelbuilder uses it
+//     elsewhere, so it's matched pre-emptively.
+// Deliberately NOT stripped: bare trailing digits (`_1`, `_2`, "Params 3" vs
+// "Params 4") are sibling exercises in a sequence, not variants of the same
+// puzzle — collapsing those would merge distinct curriculum into one row.
+// Ad hoc author tags like "_grade3", "_2023MB", "_k5-maker-2024" are left
+// alone too: they're real but too idiosyncratic to generalize safely.
+const COPY_PAREN_SUFFIX = /\s*\(copy\s*\d*\)$/i;
+const COPY_BARE_SUFFIX = /[-_]copy$/i;
+const YEAR_SUFFIX = /[-_](20(?:1[7-9]|2[0-9]))$/;
+const VARIANT_SUFFIX = /[-_](pilot|devtest|dev|test|beta|prod|v\d+)$/i;
+
+interface LevelKeyAnalysis {
+  familyKey: string;
+  /** Newest year suffix stripped while deriving familyKey, if any. */
+  year?: number;
+}
+
+/**
+ * Strips known trailing suffixes (copy markers, year stamps, pilot/variant
+ * tags) off a level key to find the family it belongs to. Suffixes can
+ * stack (e.g. "..._v2_2026_dev"), so this repeats until nothing more
+ * matches; the year suffix, if any is found, is reported separately so the
+ * caller can rank variants by recency.
+ */
+export function parseLevelFamilyKey(levelKey: string): LevelKeyAnalysis {
+  let key = levelKey;
+  let year: number | undefined;
+  let stripped = true;
+  while (stripped) {
+    stripped = false;
+    for (const pattern of [
+      COPY_PAREN_SUFFIX,
+      COPY_BARE_SUFFIX,
+      YEAR_SUFFIX,
+      VARIANT_SUFFIX,
+    ]) {
+      const match = key.match(pattern);
+      if (!match || match[0].length >= key.length) {
+        continue;
+      }
+      if (pattern === YEAR_SUFFIX) {
+        const parsedYear = Number(match[1]);
+        year = year === undefined ? parsedYear : Math.max(year, parsedYear);
+      }
+      key = key.slice(0, key.length - match[0].length);
+      stripped = true;
+      break;
+    }
+  }
+  return {familyKey: key, year};
+}
+
+function pickDefaultVariant(
+  familyKey: string,
+  bucket: {entry: LevelCatalogEntry; year?: number}[],
+): LevelCatalogEntry {
+  let newest: {entry: LevelCatalogEntry; year: number} | undefined;
+  for (const item of bucket) {
+    if (item.year !== undefined && (!newest || item.year > newest.year)) {
+      newest = {entry: item.entry, year: item.year};
+    }
+  }
+  if (newest) {
+    return newest.entry;
+  }
+  const bare = bucket.find(item => item.entry.levelKey === familyKey);
+  return (bare ?? bucket[0]).entry;
+}
+
+/** Groups catalog entries by family, preserving first-seen family order. */
+export function groupLevelFamilies(
+  entries: LevelCatalogEntry[],
+): LevelFamily[] {
+  const familyOrder: string[] = [];
+  const buckets = new Map<string, {entry: LevelCatalogEntry; year?: number}[]>();
+
+  for (const entry of entries) {
+    const {familyKey, year} = parseLevelFamilyKey(entry.levelKey);
+    let bucket = buckets.get(familyKey);
+    if (!bucket) {
+      bucket = [];
+      buckets.set(familyKey, bucket);
+      familyOrder.push(familyKey);
+    }
+    bucket.push({entry, year});
+  }
+
+  return familyOrder.map(familyKey => {
+    const bucket = buckets.get(familyKey) as {
+      entry: LevelCatalogEntry;
+      year?: number;
+    }[];
+    const defaultVariant = pickDefaultVariant(familyKey, bucket);
+    const variants = [
+      defaultVariant,
+      ...bucket
+        .map(item => item.entry)
+        .filter(entry => entry !== defaultVariant),
+    ];
+    return {
+      familyKey,
+      defaultVariant,
+      variantCount: bucket.length,
+      variants,
+    };
+  });
 }
 
 /**

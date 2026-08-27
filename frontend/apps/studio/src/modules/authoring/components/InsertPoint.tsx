@@ -5,6 +5,7 @@ import {useEscapeKeyHandler} from '@code-dot-org/component-library/common/hooks'
 import Tags from '@code-dot-org/component-library/tags';
 
 import {authoringApi, draftExperienceId} from '../api';
+import type {LevelCatalogEntry, LevelFamily} from '../api';
 
 import ContentComposer from './ContentComposer';
 
@@ -118,15 +119,17 @@ function LevelSearch({
   onPick,
 }: {
   onCancel: () => void;
-  onPick: (level: {levelKey: string; levelType: string}) => Promise<void>;
+  onPick: (level: LevelCatalogEntry) => Promise<void>;
 }) {
   const [query, setQuery] = useState('');
-  const [results, setResults] = useState<
-    {levelKey: string; levelType: string}[]
-  >([]);
+  const [results, setResults] = useState<LevelFamily[]>([]);
   const [searching, setSearching] = useState(false);
   const [picking, setPicking] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [variantsMenu, setVariantsMenu] = useState<{
+    familyKey: string;
+    anchorEl: HTMLElement;
+  } | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEscapeKeyHandler(onCancel);
@@ -151,10 +154,11 @@ function LevelSearch({
     return () => clearTimeout(timer);
   }, [query]);
 
-  const pick = async (level: {levelKey: string; levelType: string}) => {
+  const pick = async (level: LevelCatalogEntry) => {
     if (picking) {
       return;
     }
+    setVariantsMenu(null);
     setPicking(true);
     setError(null);
     try {
@@ -179,19 +183,61 @@ function LevelSearch({
         <Typography variant="body4">No levels match “{query}”.</Typography>
       )}
       <ul className={styles.levelSearchResults}>
-        {results.map(level => (
-          <li key={level.levelKey}>
+        {results.map(family => (
+          <li key={family.familyKey} className={styles.levelSearchResultRow}>
             <button
               type="button"
               className={styles.levelSearchResult}
               disabled={picking}
-              onClick={() => void pick(level)}
+              onClick={() => void pick(family.defaultVariant)}
             >
               <Typography variant="body4" component="span">
-                {level.levelKey}
+                {family.defaultVariant.levelKey}
               </Typography>
-              <Tags tagsList={[{label: level.levelType}]} size="s" />
+              <Tags
+                tagsList={[{label: family.defaultVariant.levelType}]}
+                size="s"
+              />
             </button>
+            {family.variantCount > 1 && (
+              <button
+                type="button"
+                className={styles.levelSearchVariantsToggle}
+                aria-label={`${family.variantCount} versions of ${family.familyKey}`}
+                aria-haspopup="menu"
+                aria-expanded={variantsMenu?.familyKey === family.familyKey}
+                disabled={picking}
+                onClick={e =>
+                  setVariantsMenu({
+                    familyKey: family.familyKey,
+                    anchorEl: e.currentTarget,
+                  })
+                }
+              >
+                <Typography variant="body4" component="span">
+                  {family.variantCount} versions
+                </Typography>
+              </button>
+            )}
+            {family.variantCount > 1 && (
+              <Menu
+                anchorEl={variantsMenu?.anchorEl}
+                open={variantsMenu?.familyKey === family.familyKey}
+                onClose={() => setVariantsMenu(null)}
+              >
+                {family.variants.map(variant => (
+                  <MenuItem
+                    key={variant.levelKey}
+                    disabled={picking}
+                    onClick={() => void pick(variant)}
+                  >
+                    <Typography variant="body4" component="span">
+                      {variant.levelKey}
+                    </Typography>
+                  </MenuItem>
+                ))}
+              </Menu>
+            )}
           </li>
         ))}
       </ul>

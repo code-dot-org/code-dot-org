@@ -429,12 +429,19 @@
   overflow-y: auto;
 }
 
+.levelSearchResultRow {
+  display: flex;
+  align-items: stretch;
+  gap: 4px;
+}
+
 .levelSearchResult {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 8px;
-  width: 100%;
+  flex: 1;
+  min-width: 0;
   text-align: left;
   border: 1px solid var(--borders-neutral-light, #d5d8dc);
   border-radius: 6px;
@@ -442,6 +449,24 @@
   padding: 8px 10px;
   cursor: pointer;
   font: inherit;
+
+  &:hover,
+  &:focus-visible {
+    border-color: var(--borders-brand-purple-primary, #4d24a8);
+    background: var(--background-brand-purple-light, #ece6f6);
+  }
+}
+
+.levelSearchVariantsToggle {
+  flex-shrink: 0;
+  white-space: nowrap;
+  border: 1px solid var(--borders-neutral-light, #d5d8dc);
+  border-radius: 6px;
+  background: var(--background-neutral-secondary, #f4f5f6);
+  padding: 8px 10px;
+  cursor: pointer;
+  font: inherit;
+  color: var(--text-neutral-secondary, #444);
 
   &:hover,
   &:focus-visible {

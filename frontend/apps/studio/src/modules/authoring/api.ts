@@ -34,6 +34,19 @@ export interface ChatMessage {
   scope?: AuthoringScope;
 }
 
+export interface LevelCatalogEntry {
+  levelKey: string;
+  levelType: string;
+}
+
+/** One grouped search-result row; see authoring-service's levelCatalog.ts. */
+export interface LevelFamily {
+  familyKey: string;
+  defaultVariant: LevelCatalogEntry;
+  variantCount: number;
+  variants: LevelCatalogEntry[];
+}
+
 export interface WidgetResponse {
   // The server can return html before the descriptor is ready.
   descriptor?: WidgetDescriptor;
@@ -105,7 +118,7 @@ export const authoringApi = {
   sendChat: (scope: AuthoringScope, message: string) =>
     post<{turnId: string}>('/chat', {scope, message}),
   searchLevels: (q: string) =>
-    get<{levels: {levelKey: string; levelType: string}[]}>(
+    get<{levels: LevelFamily[]}>(
       `/levels/search?q=${encodeURIComponent(q)}`,
     ).then(r => r.levels),
   fetchLevelProperties: (numericId: number) =>
