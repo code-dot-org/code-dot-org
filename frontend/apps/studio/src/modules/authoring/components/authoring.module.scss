@@ -80,9 +80,17 @@
   }
 }
 
+// Completion color and "this is where you are" are independent signals, so
+// they're independent visual treatments: fill/border carries completion,
+// a ring (box-shadow, not border/background) marks the active dot without
+// masking its completion color.
 .progressDotActive::before {
-  background: var(--background-brand-purple-primary, #4d24a8);
-  border-color: var(--background-brand-purple-primary, #4d24a8);
+  box-shadow: 0 0 0 2px var(--background-brand-purple-primary, #4d24a8);
+}
+
+.progressDotAttempted::before {
+  background: var(--background-warning-light, #fef8c3);
+  border-color: var(--borders-warning-primary, #f9cb28);
 }
 
 .progressDotDone::before {
@@ -765,4 +773,54 @@
   display: flex;
   justify-content: flex-end;
   gap: 8px;
+}
+
+/* Lesson-end card (learner-facing, both modes) */
+
+.lessonEndCard {
+  @extend %authoring-card;
+  width: 100%;
+  max-width: 880px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.lessonEndActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.lessonEndLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid var(--borders-brand-purple-primary, #4d24a8);
+  color: var(--text-brand-purple-primary, #4d24a8);
+
+  &:hover,
+  &:focus-visible {
+    background: var(--background-brand-purple-light, #ece6f6);
+  }
+}
+
+.lessonEndLinkPrimary {
+  background: var(--background-brand-purple-primary, #4d24a8);
+  color: var(--text-neutral-white-fixed, #fff);
+
+  &:hover,
+  &:focus-visible {
+    background: var(--background-brand-purple-primary, #4d24a8);
+    opacity: 0.9;
+  }
 }
