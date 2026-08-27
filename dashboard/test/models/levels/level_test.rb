@@ -47,8 +47,8 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'with_ai_tutor_available returns Weblab2 levels' do
-    weblab2_level = Level.create(name: 'weblab2', type: 'Weblab2')
-    weblab2_available_level = Level.create(name: 'weblab2_available', type: 'Weblab2', properties: {'ai_tutor_dependency' => 'available'})
+    weblab2_level = Level.create!(name: 'weblab2', type: 'Weblab2')
+    weblab2_available_level = Level.create!(name: 'weblab2_available', type: 'Weblab2', properties: {'ai_tutor_dependency' => 'available'})
 
     result = Level.with_ai_tutor_available
     assert_includes result, weblab2_level
@@ -67,14 +67,18 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'with_essential_ai_chat_tools excludes Weblab2 levels whose AI Tutor is only available' do
-    available = Level.create(name: 'weblab2_available', type: 'Weblab2', properties: {'ai_tutor_dependency' => 'available'})
-    essential = Level.create(name: 'weblab2_essential', type: 'Weblab2', properties: {'ai_tutor_dependency' => 'essential'})
-    unset = Level.create(name: 'weblab2_unset', type: 'Weblab2', properties: {})
+    available = Level.create!(name: 'weblab2_available', type: 'Weblab2', properties: {'ai_tutor_dependency' => 'available'})
+    essential = Level.create!(name: 'weblab2_essential', type: 'Weblab2', properties: {'ai_tutor_dependency' => 'essential'})
+    unset = Level.create!(name: 'weblab2_unset', type: 'Weblab2', properties: {})
     # Only the explicit 'available' opts a level out, so a level holding
-    # anything else stays essential rather than silently losing the tutor.
-    junk = Level.create(name: 'weblab2_junk', type: 'Weblab2', properties: {'ai_tutor_dependency' => 'availabe'})
+    # anything else stays essential rather than silently losing the tutor. The
+    # editor cannot store such a value -- see weblab2_test.rb -- so this row has
+    # to go in without validation, standing in for hand-edited or legacy data.
+    junk = Level.create!(name: 'weblab2_junk', type: 'Weblab2')
+    junk.ai_tutor_dependency = 'availabe'
+    junk.save!(validate: false)
     # The property is only meaningful for Web Lab 2 levels.
-    aichat = Level.create(name: 'aichat_available', type: 'Aichat', properties: {'ai_tutor_dependency' => 'available'})
+    aichat = Level.create!(name: 'aichat_available', type: 'Aichat', properties: {'ai_tutor_dependency' => 'available'})
 
     result = Level.with_essential_ai_chat_tools
     refute_includes result, available
@@ -85,7 +89,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'with_any_ai_chat_tools returns Weblab2 levels whose AI Tutor is only available' do
-    available = Level.create(name: 'weblab2_available', type: 'Weblab2', properties: {'ai_tutor_dependency' => 'available'})
+    available = Level.create!(name: 'weblab2_available', type: 'Weblab2', properties: {'ai_tutor_dependency' => 'available'})
 
     assert_includes Level.with_any_ai_chat_tools, available
   end
