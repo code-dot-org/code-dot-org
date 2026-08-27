@@ -41,6 +41,8 @@ interface ExperienceStageProps {
   /** Shows the "Edit instructions" affordance on existingLevel experiences.
    * Everything else this component renders is identical in both modes. */
   authorMode?: boolean;
+  /** Advance to the next experience — a lab's terminal "Continue" calls this. */
+  onContinue?: () => void;
 }
 
 /**
@@ -53,6 +55,7 @@ export default function ExperienceStage({
   experience,
   onStageEvent,
   authorMode = false,
+  onContinue,
 }: ExperienceStageProps) {
   switch (experience.kind) {
     case 'content':
@@ -67,6 +70,7 @@ export default function ExperienceStage({
           experience={experience}
           onStageEvent={onStageEvent}
           authorMode={authorMode}
+          onContinue={onContinue}
         />
       );
     case 'widget':
@@ -83,10 +87,12 @@ function ExistingLevelStage({
   experience,
   onStageEvent,
   authorMode,
+  onContinue,
 }: {
   experience: ExistingLevelExperience;
   onStageEvent?: (event: StageEvent) => void;
   authorMode: boolean;
+  onContinue?: () => void;
 }) {
   if (experience.runtime === 'labhost') {
     if (!experience.levelNumericId) {
@@ -106,6 +112,7 @@ function ExistingLevelStage({
         levelKey={experience.levelKey}
         levelType={experience.levelType}
         authorMode={authorMode}
+        onContinue={onContinue}
       />
     );
   }
@@ -147,12 +154,14 @@ function LabHostStage({
   levelKey,
   levelType,
   authorMode,
+  onContinue,
 }: {
   experienceId: string;
   levelNumericId: number;
   levelKey: string;
   levelType: string;
   authorMode: boolean;
+  onContinue?: () => void;
 }) {
   const {data: properties, isLoading} = useLevelProperties(levelNumericId);
 
@@ -200,7 +209,7 @@ function LabHostStage({
       <div className={styles.labStage}>
         <Suspense fallback={<Loading />}>
           <Lab levelId={levelNumericId} levelPropertiesMap={properties}>
-            <LabEntrypoint />
+            <LabEntrypoint onContinue={onContinue} />
           </Lab>
         </Suspense>
       </div>

@@ -94,6 +94,14 @@ export default function LessonPlayer({
     }
   };
 
+  // A lab's terminal "Continue" reuses the same next-navigation as the
+  // stage's own Next button, including staying put on the last experience.
+  const goToNext = () => {
+    if (activeIndex < experiences.length - 1) {
+      selectIndex(activeIndex + 1);
+    }
+  };
+
   const onTutorSelect = (
     experienceId: string,
     input?: Record<string, unknown>,
@@ -246,6 +254,7 @@ export default function LessonPlayer({
                   }
                   onStageEvent={onStageEvent}
                   authorMode={authorMode}
+                  onContinue={goToNext}
                 />
               )
             ) : (
