@@ -13,6 +13,21 @@ class CdoTest < Minitest::Test
     assert_includes CDO.curriculum_languages, "zh-tw"
   end
 
+  def test_session_cookie_name
+    # No suffix in production; environment name appended elsewhere.
+    assert_equal '_learn_session', CDO.session_cookie_name('production')
+    assert_equal '_learn_session_test', CDO.session_cookie_name('test')
+    assert_equal '_learn_session_adhoc', CDO.session_cookie_name('adhoc')
+
+    # Accepts a symbol env.
+    assert_equal '_learn_session_development', CDO.session_cookie_name(:development)
+  end
+
+  def test_session_cookie_name_defaults_to_rack_env
+    CDO.stubs(:rack_env).returns('levelbuilder')
+    assert_equal '_learn_session_levelbuilder', CDO.session_cookie_name
+  end
+
   def test_curriculum_url
     CDO.stubs(:curriculum_languages).returns(["es-mx"])
 

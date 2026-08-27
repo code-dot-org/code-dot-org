@@ -106,10 +106,7 @@ module Cdo
     # Fetch the user ID directly from the underlying Rails session store. This
     # is a bit of a hack, but is necessary to preserve backwards compatibility.
     def user_id_from_session_store
-      session_cookie_key = "_learn_session"
-      session_cookie_key += "_#{rack_env}" unless rack_env?(:production)
-
-      message = CGI.unescape(cookies[session_cookie_key].to_s)
+      message = CGI.unescape(cookies[CDO.session_cookie_name].to_s)
       session_id = Rack::Session::SessionId.new(message)
 
       # Fetch session data from the session store; this is essentially a manual

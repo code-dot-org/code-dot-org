@@ -1,5 +1,4 @@
 require 'connection_pool'
-require 'cdo/cookie_helpers'
 
 # In the interests of reducing Redis traffic in general, we would like to
 # reduce the number of unnecessary write operations we execute. To do so, we
@@ -100,7 +99,7 @@ class RedisSessionStore < ActionDispatch::Session::RedisStore
 end
 
 Dashboard::Application.config.session_store RedisSessionStore,
-  key: environment_specific_cookie_name('_learn_session'),
+  key: CDO.session_cookie_name,
   servers: ["#{CDO.redis_url}/session"],
   secure: !CDO.no_https_store && (!Rails.env.development? || CDO.https_development),
   domain: :all,

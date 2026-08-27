@@ -109,7 +109,7 @@ class HttpCache
   # cookies based on the request path.
   def self.config(env)
     env_suffix = env.to_s == 'production' ? '' : "_#{env}"
-    session_key = "_learn_session#{env_suffix}"
+    session_key = CDO.session_cookie_name(env)
     storage_id = "storage_id#{env_suffix}"
 
     # Signed-in user type (student/teacher), or signed-out if cookie is not present.
