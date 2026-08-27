@@ -239,6 +239,7 @@ function makeSplitChunks(appsEntries) {
     ...Object.keys(PROFESSIONAL_DEVELOPMENT_ENTRIES),
     ...Object.keys(SHARED_ENTRIES),
   ]);
+  const studioRoutesPath = p('generated-scripts/studioRoutes.js');
   return {
     // Override the default limit of 3 concurrent downloads on page load,
     // which only makes sense for HTTP 1.1 servers. HTTP 2 performance has
@@ -299,6 +300,15 @@ function makeSplitChunks(appsEntries) {
         minChunks: 2,
         chunks: chunk => p5EntryNames.has(chunk.name),
         test: module => /p5/.test(module.resource),
+      },
+      // Keep the generated Rails routes out of the shared bundles.
+      // This file is large and changes whenever the Rails routes change.
+      studioRoutes: {
+        name: 'studioRoutes',
+        test: module => module.resource === studioRoutesPath,
+        chunks: 'initial',
+        enforce: true,
+        priority: 40,
       },
     },
   };

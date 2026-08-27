@@ -1,0 +1,41 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-08-21T18:38:31.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "How much pizza does a 20-person party need? Each guest will want 1, 2, or 3 slices. You're building a simulation to see if 42 slices will be enough.\r\n\r\n**Do This:**\r\n\r\n1. In the `simulate_party` function, define a variable to keep track of the total slices needed.\r\n2. For each guest, use `get_random_slices` to simulate how many slices they want. Add their slices to the total.\r\n3. Return the total.\r\n4. If you need more than 42 slices, print a message saying you ran out. Otherwise, print a message that says you have enough.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import random\n\n\ndef get_random_slices():\n    return random.randint(1, 3)\n\n\ndef simulate_party():\n    # TODO 1: Define a variable to store the total number of slices needed\n\n    # TODO 2: For each of the 20 guests, add a random number of slices to the total\n\n    # TODO 3: Return the total\n    return\n\n\nslices = simulate_party()\nprint(f\"Slices needed: {slices}\")\n\n# TODO 4: Print a message that says whether there were enough slices for everyone",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMrCzBpGL8ICztWP\nn+VU+L94NNfVxvoFKfd9JCy4rvdBTYxm4kp/cIB5qQSSdJ/6zHsKhaF760NB\ngD//LPrQfZwoiDcYDLSfBw3o2EYHqHGI4eZpySFf1rAy0q7rN27HMEzVKPht\n3jjgmvI+DAzACb8rpa0k4sujVntXk87loPGLJHReWa/z15I7t/Rd2x066CLs\nZxNLE90nGCQ8tEbhSpmSTVZ+7v4f7y70UekFIpqFIjvIAHb4BYF3tdIXdmjc\nDEZ92bKVLVrVOB7fPu1BaYx5x/VXSLE3W9UrLwdWI9tEnVMc0Dkm2tKgHyoq\n/XuhmmO2osyUcwbFQEGeTodGOAbmrLobayw0P5CgyopAhG/DwRR0u4M7SYHM\nNH/hk0BAY2KjdVU7BCQ2e35+QzkiVImfevKQP6IrXo6GUBWqKehYSeWkbnkW\nx/GlHZZko0Xyu/wizcjC4t0gj7X9l3MxOMjtFBzs+sbpxWbWHEQX+AN+9Rxz\nrbqLSh40eYdxsqDjhaI4zqdwXBDySgVt6g9Y8kKXeff+y3RoJ2AwXdLuZLkZ\nBFUhcQTbQY5DyrFqOd/mwUmnrJJ0CWVBLfi0wJ68uQfX82vt1g8HPbrbUOpN\npAFQ5Za8UTPfFVdKnuMDeldql20=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-21 18:38:57 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-21 18:39:34 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

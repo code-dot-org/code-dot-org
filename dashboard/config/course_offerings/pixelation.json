@@ -3,7 +3,7 @@
   "display_name": "Pixelation",
   "is_featured": false,
   "assignable": true,
-  "curriculum_type": "Course",
+  "curriculum_type": "Standalone Unit",
   "marketing_initiative": "HOC",
   "grade_levels": "6,7,8,9,10,11,12",
   "header": "self_paced",
@@ -17,5 +17,7 @@
   "published_date": "2015-10-02 09:00:00 UTC",
   "self_paced_pl_course_offering_key": null,
   "ai_teaching_assistant_available": false,
-  "facilitator_course_permissions": null
+  "facilitator_course_permissions": [
+
+  ]
 }

@@ -37,7 +37,11 @@ EventEmitter-based singleton that integrates with the LocalizeJS third-party lib
 **`consent`** ([`src/plugins/consent/store.ts`](../src/plugins/consent/store.ts))
 
 Module-level store holding the current cookie-consent state, starting at the
-strictly-necessary-only default (deny-until-known). `consentPlugin` connects
+strictly-necessary-only default (deny-until-known). Settlement — "the consent
+source has finished reporting, whatever it said" — is tracked separately in
+[`src/plugins/consent/settled.ts`](../src/plugins/consent/settled.ts) for
+consumers that must not act before consent is known.
+`consentPlugin` connects
 the host page's OneTrust globals to it at `onCoreReady`; `useConsent()`
 subscribes via `useSyncExternalStore`. Unlike the config/api/localization
 singletons it does not read `window` at import time. Available via the

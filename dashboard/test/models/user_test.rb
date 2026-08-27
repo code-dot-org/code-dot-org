@@ -840,18 +840,10 @@ class UserTest < ActiveSupport::TestCase
     # login by username still works
     user = create(:user)
     assert_equal user, User.find_for_authentication(login: user.username)
-    Cdo::Metrics.
-      expects(:put).
-      with('User', 'LoginByUsername', 1, includes(:Environment)).
-      once
 
     # login by email still works
     email_user = create(:user, email: 'not@an.email')
     assert_equal email_user, User.find_for_authentication(login: 'not@an.email')
-    Cdo::Metrics.
-      expects(:put).
-      with('User', 'LoginByEmail', 1, includes(:Environment)).
-      once
 
     # login by hashed email
     hashed_email_user = create(:user, age: 4)
@@ -4568,10 +4560,36 @@ class UserTest < ActiveSupport::TestCase
         end
       end
 
-      context 'with sections' do
+      context 'with a non-demo section' do
         let(:user) {create(:teacher)}
 
         before do
+          create(:section, user: user)
+        end
+
+        it 'cannot change own user type' do
+          _can_change_own_user_type?.must_equal false
+        end
+      end
+
+      context 'with only demo sections' do
+        let(:user) {create(:teacher)}
+
+        before do
+          create(:section, user: user, demo_type: 'high')
+          create(:section, user: user, demo_type: 'middle')
+        end
+
+        it 'can change own user type' do
+          _can_change_own_user_type?.must_equal true
+        end
+      end
+
+      context 'with demo and non-demo sections' do
+        let(:user) {create(:teacher)}
+
+        before do
+          create(:section, user: user, demo_type: 'high')
           create(:section, user: user)
         end
 

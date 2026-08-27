@@ -1,0 +1,51 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-08-21T20:19:40.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Ride Share",
+    "long_instructions": "You are a machine learning engineer designing a program that predicts how much a ride share will cost. From the data, you’ve learned that rides usually have a base price of **$4.00** and riders usually pay an additional price of **$2.00** per mile.\r\n\r\n**☑️ Do This:**\r\n\r\n1. Complete the `predict_cost` function. It should use the y-intercept and slope you’ve learned to predict the cost of the ride share.\r\n2. Print a message to let the user know the distance they are traveling and the predicted cost.\r\n",
+    "bubble_choice_description": "Design a program that predicts how much a ride share will cost.",
+    "thumbnail_url": "https://images.code.org/675c67ca544eaba6e53e734b8bf0702d-inspection.png",
+    "offer_browser_tts": "false",
+    "submittable": "true",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "def predict_cost(miles):\n    # TODO 1: Return the predicted cost to travel the given number of miles\n    return\n\nmiles = 5\ncost = predict_cost(miles)\n\n# TODO 2: Print a message letting the user know the distance and predicted cost",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqUYV1JFPuoSv9O\n0ncrgAir3NHcYFThkffMNgWc/nG+BN6sw8XbFubw0SPXbltAj6WO0sQN/0tI\nb58R0B+18XrEANKx2VBF7vkU9AMpzuFm99xy3zyeTN9eYGuLVJEK1kNZHpz0\niKwGmppQIoGCNTWCxLAJttX5NIGwLr/rgUqd0+nWrMEWFpW7mbhhT2y6hdeX\nCbLP7q7Z5NlQH6b4a+exqJCe642LwZrUxgzXgVqOINOrJs4qYQiPepGUfmn+\naZvxjVXhzyPeOHgscRIVFQSPyrSgCc7L8p7hSCfJ5sJwnm4vFEYqlknnzBgx\n+wTyDYXYCvvVSuWLBGc6ac+Piaee\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-08-21 20:20:01 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-21 20:20:17 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-21 21:10:05 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

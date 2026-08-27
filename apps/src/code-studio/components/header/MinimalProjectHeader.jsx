@@ -12,19 +12,28 @@ class MinimalProjectHeader extends React.Component {
     legacyProjectName: PropTypes.string,
     lab2ProjectName: PropTypes.string,
     inRestrictedShareMode: PropTypes.bool,
+    isBlockedAbuse: PropTypes.bool,
+    exceedsAbuseThreshold: PropTypes.bool,
   };
 
   render() {
-    const {inRestrictedShareMode, legacyProjectName, lab2ProjectName} =
-      this.props;
+    const {
+      inRestrictedShareMode,
+      isBlockedAbuse,
+      exceedsAbuseThreshold,
+      legacyProjectName,
+      lab2ProjectName,
+    } = this.props;
     // Only one of legacyProjectName and lab2ProjectName will be defined.
     const projectName = legacyProjectName || lab2ProjectName;
+    const remixBlocked =
+      inRestrictedShareMode || isBlockedAbuse || exceedsAbuseThreshold;
 
     return (
       <div style={{display: 'flex'}}>
         <div className="project_name_wrapper header_text">
           <div className="project_name header_text">{projectName}</div>
-          {!inRestrictedShareMode && (
+          {!remixBlocked && (
             <div className="project_updated_at header_text">
               {i18n.clickToRemix()}
             </div>
@@ -40,4 +49,8 @@ export default connect(state => ({
   legacyProjectName: state.project.projectName,
   lab2ProjectName: state.lab.channel && state.lab.channel.name,
   inRestrictedShareMode: state.project && state.project.inRestrictedShareMode,
+  isBlockedAbuse: !!(state.lab && state.lab.isBlockedAbuse),
+  exceedsAbuseThreshold: !!(
+    state.project && state.project.exceedsAbuseThreshold
+  ),
 }))(MinimalProjectHeader);

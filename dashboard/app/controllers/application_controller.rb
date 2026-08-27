@@ -65,7 +65,7 @@ class ApplicationController < ActionController::Base
   end
 
   # Persist brand selection as a cookie so the brand sticks across page navigations.
-  # Set brand:   ?brand=codeai
+  # Set brand:   ?brand=codeai-audit
   # Clear brand: ?brand-reset=1
   def persist_brand_params
     return unless DCDO.get('brand-router-enabled', false)
@@ -384,7 +384,10 @@ class ApplicationController < ActionController::Base
     # Locks out the user if they are not compliant with CAP, otherwise, do nothing.
     return unless Services::ChildAccount::LockoutHandler.call(user: current_user)
 
-    # URLs we should not redirect.
+    # URLs we should not redirect. Global Edition prefixes generated paths with
+    # the active region, even when the incoming API request is unprefixed.
+    # Compare the underlying paths so both forms match.
+    request_path = Cdo::GlobalEdition.unprefixed_path(request.path)
     return if Set[
       # Allow retrieval of current user data for event reporting
       api_v1_users_current_path,
@@ -404,7 +407,10 @@ class ApplicationController < ActionController::Base
       student_user_new_path,
       student_register_path,
       reset_session_path,
-    ].any? {|path| request.path.include?(path)}
+    ].any? do |path|
+      path = Cdo::GlobalEdition.unprefixed_path(path)
+      request_path.start_with?(path)
+    end
 
     redirect_to lockout_path
   rescue StandardError => exception

@@ -4,11 +4,12 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "has_unnumbered_lessons": true,
       "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-04 18:26:50 UTC",
+    "serialized_at": "2026-08-26 21:01:14 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -34,7 +35,7 @@
   "lessons": [
     {
       "key": "lesson-1",
-      "name": "Lesson 1",
+      "name": "Lesson 19: Intro to Programming - Day 1",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -49,7 +50,7 @@
     },
     {
       "key": "lesson-2",
-      "name": "Lesson 2",
+      "name": "Lesson 20: Intro to Programming - Day 2",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -63,27 +64,12 @@
       }
     },
     {
-      "key": "lesson-3",
-      "name": "Lesson 3",
+      "key": "lesson-4",
+      "name": "Lesson 21: Variables - Day 1",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "csp-unit1-dev-27-28"
-      }
-    },
-    {
-      "key": "lesson-4",
-      "name": "Lesson 4",
-      "absolute_position": 4,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -94,11 +80,11 @@
     },
     {
       "key": "lesson-5",
-      "name": "Lesson 5",
-      "absolute_position": 5,
+      "name": "Lesson 22: Variables - Day 2",
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 5,
+      "relative_position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -109,11 +95,11 @@
     },
     {
       "key": "lesson-6",
-      "name": "Lesson 6",
-      "absolute_position": 6,
+      "name": "Lesson 23: Variables - Day 3",
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -121,77 +107,77 @@
         "lesson_group.key": "",
         "script.name": "csp-unit1-dev-27-28"
       }
-    },
-    {
-      "key": "lesson-7",
-      "name": "Lesson 7",
-      "absolute_position": 7,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 7,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-7",
-        "lesson_group.key": "",
-        "script.name": "csp-unit1-dev-27-28"
-      }
-    },
-    {
-      "key": "lesson-8",
-      "name": "Lesson 8",
-      "absolute_position": 8,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 8,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "",
-        "script.name": "csp-unit1-dev-27-28"
-      }
-    },
-    {
-      "key": "lesson-9",
-      "name": "Lesson 9",
-      "absolute_position": 9,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 9,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-9",
-        "lesson_group.key": "",
-        "script.name": "csp-unit1-dev-27-28"
-      }
-    },
-    {
-      "key": "lesson-10",
-      "name": "Lesson 10",
-      "absolute_position": 10,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 10,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "lesson_group.key": "",
-        "script.name": "csp-unit1-dev-27-28"
-      }
     }
   ],
   "lesson_activities": [
     {
-      "key": "87d4f414-1b52-476f-b8ea-8d098339b54c",
+      "key": "4b6e9a0b-a503-4fd6-a23b-65c1ba20a68d",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "lesson_activity.key": "87d4f414-1b52-476f-b8ea-8d098339b54c",
-        "lesson.key": "lesson-3",
+        "lesson_activity.key": "4b6e9a0b-a503-4fd6-a23b-65c1ba20a68d",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28"
+      }
+    },
+    {
+      "key": "f3df3b22-fd61-4a89-bc2e-b4e21fb7a108",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f3df3b22-fd61-4a89-bc2e-b4e21fb7a108",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28"
+      }
+    },
+    {
+      "key": "eefa3fd9-5021-4925-a37c-9c8a2ae85aa3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "eefa3fd9-5021-4925-a37c-9c8a2ae85aa3",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28"
+      }
+    },
+    {
+      "key": "d45f40d8-3b16-4660-9a37-f2668be3f43d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d45f40d8-3b16-4660-9a37-f2668be3f43d",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28"
+      }
+    },
+    {
+      "key": "4297009a-8034-4a89-9bd5-67092dc34e66",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4297009a-8034-4a89-9bd5-67092dc34e66",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28"
+      }
+    },
+    {
+      "key": "eee36d3c-daa2-4a55-ade5-2b86c6b2a9c8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "eee36d3c-daa2-4a55-ade5-2b86c6b2a9c8",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "csp-unit1-dev-27-28"
       }
@@ -199,21 +185,361 @@
   ],
   "activity_sections": [
     {
-      "key": "adfd0bb5-04e8-40cf-abfa-746b30babdaa",
+      "key": "6ac61f3b-24ec-42b4-a70c-dd43768ed77e",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "activity_section.key": "adfd0bb5-04e8-40cf-abfa-746b30babdaa",
-        "lesson_activity.key": "87d4f414-1b52-476f-b8ea-8d098339b54c"
+        "activity_section.key": "6ac61f3b-24ec-42b4-a70c-dd43768ed77e",
+        "lesson_activity.key": "4b6e9a0b-a503-4fd6-a23b-65c1ba20a68d"
+      }
+    },
+    {
+      "key": "0a523e84-e370-45f6-bd68-a8906b6454f1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0a523e84-e370-45f6-bd68-a8906b6454f1",
+        "lesson_activity.key": "f3df3b22-fd61-4a89-bc2e-b4e21fb7a108"
+      }
+    },
+    {
+      "key": "4101fba2-fc6e-4a2e-a385-85c4193fa1b8",
+      "position": 2,
+      "properties": {
+        "progression_name": "Predict and Run"
+      },
+      "seeding_key": {
+        "activity_section.key": "4101fba2-fc6e-4a2e-a385-85c4193fa1b8",
+        "lesson_activity.key": "f3df3b22-fd61-4a89-bc2e-b4e21fb7a108"
+      }
+    },
+    {
+      "key": "581c964c-b3fe-4a11-959d-b104eaa8f6f0",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "581c964c-b3fe-4a11-959d-b104eaa8f6f0",
+        "lesson_activity.key": "f3df3b22-fd61-4a89-bc2e-b4e21fb7a108"
+      }
+    },
+    {
+      "key": "f0aba203-f18e-422d-ae65-80e4342011cb",
+      "position": 4,
+      "properties": {
+        "progression_name": "Investigate"
+      },
+      "seeding_key": {
+        "activity_section.key": "f0aba203-f18e-422d-ae65-80e4342011cb",
+        "lesson_activity.key": "f3df3b22-fd61-4a89-bc2e-b4e21fb7a108"
+      }
+    },
+    {
+      "key": "6d7a1819-bb8d-4aa6-9c96-22a1149a0319",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6d7a1819-bb8d-4aa6-9c96-22a1149a0319",
+        "lesson_activity.key": "f3df3b22-fd61-4a89-bc2e-b4e21fb7a108"
+      }
+    },
+    {
+      "key": "581d4afe-3a78-47b3-a413-961d7ea7bfff",
+      "position": 6,
+      "properties": {
+        "progression_name": "Modify: Extend and Debug"
+      },
+      "seeding_key": {
+        "activity_section.key": "581d4afe-3a78-47b3-a413-961d7ea7bfff",
+        "lesson_activity.key": "f3df3b22-fd61-4a89-bc2e-b4e21fb7a108"
+      }
+    },
+    {
+      "key": "1d48697b-3265-4cb9-9c21-e3544b0fb1f6",
+      "position": 1,
+      "properties": {
+        "progression_name": "Make: Program Your Sketch"
+      },
+      "seeding_key": {
+        "activity_section.key": "1d48697b-3265-4cb9-9c21-e3544b0fb1f6",
+        "lesson_activity.key": "eefa3fd9-5021-4925-a37c-9c8a2ae85aa3"
+      }
+    },
+    {
+      "key": "24241478-2872-44b0-9127-7d94ce61b4ae",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "24241478-2872-44b0-9127-7d94ce61b4ae",
+        "lesson_activity.key": "d45f40d8-3b16-4660-9a37-f2668be3f43d"
+      }
+    },
+    {
+      "key": "b376f1c9-fc10-467b-8856-dc04749372f5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b376f1c9-fc10-467b-8856-dc04749372f5",
+        "lesson_activity.key": "4297009a-8034-4a89-9bd5-67092dc34e66"
+      }
+    },
+    {
+      "key": "09b63571-cfa1-463d-8789-b30911a09546",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "09b63571-cfa1-463d-8789-b30911a09546",
+        "lesson_activity.key": "eee36d3c-daa2-4a55-ade5-2b86c6b2a9c8"
       }
     }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict and Run"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-unit1-lesson19-predict_27_28"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "4101fba2-fc6e-4a2e-a385-85c4193fa1b8"
+      },
+      "level_keys": [
+        "csp-unit1-lesson19-predict_27_28"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-unit1-lesson19-investigate_27_28"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "f0aba203-f18e-422d-ae65-80e4342011cb"
+      },
+      "level_keys": [
+        "csp-unit1-lesson19-investigate_27_28"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Modify: Extend and Debug"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-unit1-lesson19-modify1_27_28"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "581d4afe-3a78-47b3-a413-961d7ea7bfff"
+      },
+      "level_keys": [
+        "csp-unit1-lesson19-modify1_27_28"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Modify: Extend and Debug"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-unit1-lesson19-modify-debug_27_28"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "581d4afe-3a78-47b3-a413-961d7ea7bfff"
+      },
+      "level_keys": [
+        "csp-unit1-lesson19-modify-debug_27_28"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Modify: Extend and Debug"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-unit1-lesson19-debug_27_28"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "581d4afe-3a78-47b3-a413-961d7ea7bfff"
+      },
+      "level_keys": [
+        "csp-unit1-lesson19-debug_27_28"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": true,
+      "properties": {
+        "progression": "Modify: Extend and Debug"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-unit1-lesson19-cfu_27_28"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "581d4afe-3a78-47b3-a413-961d7ea7bfff"
+      },
+      "level_keys": [
+        "csp-unit1-lesson19-cfu_27_28"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Make: Program Your Sketch"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_unit1_lesson20_level1_dev_27_28"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "1d48697b-3265-4cb9-9c21-e3544b0fb1f6"
+      },
+      "level_keys": [
+        "csp_unit1_lesson20_level1_dev_27_28"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "csp-unit1-lesson19-predict_27_28",
+        "script_level.level_keys": [
+          "csp-unit1-lesson19-predict_27_28"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "4101fba2-fc6e-4a2e-a385-85c4193fa1b8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-unit1-lesson19-investigate_27_28",
+        "script_level.level_keys": [
+          "csp-unit1-lesson19-investigate_27_28"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "f0aba203-f18e-422d-ae65-80e4342011cb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-unit1-lesson19-modify1_27_28",
+        "script_level.level_keys": [
+          "csp-unit1-lesson19-modify1_27_28"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "581d4afe-3a78-47b3-a413-961d7ea7bfff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-unit1-lesson19-modify-debug_27_28",
+        "script_level.level_keys": [
+          "csp-unit1-lesson19-modify-debug_27_28"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "581d4afe-3a78-47b3-a413-961d7ea7bfff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-unit1-lesson19-debug_27_28",
+        "script_level.level_keys": [
+          "csp-unit1-lesson19-debug_27_28"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "581d4afe-3a78-47b3-a413-961d7ea7bfff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-unit1-lesson19-cfu_27_28",
+        "script_level.level_keys": [
+          "csp-unit1-lesson19-cfu_27_28"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "581d4afe-3a78-47b3-a413-961d7ea7bfff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_unit1_lesson20_level1_dev_27_28",
+        "script_level.level_keys": [
+          "csp_unit1_lesson20_level1_dev_27_28"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "1d48697b-3265-4cb9-9c21-e3544b0fb1f6"
+      }
+    }
   ],
   "resources": [
 

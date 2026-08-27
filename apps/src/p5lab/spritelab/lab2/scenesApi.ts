@@ -4,7 +4,7 @@
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {ExternalSceneOption} from './redux/spriteLab2Redux';
-import {SerializedAnimationList, SpriteLab2Scene} from './types';
+import {SerializedAnimationList, Scene} from './types';
 
 // One scene in a section-mate's project, as listed by the dropdown.
 export interface ExternalSceneRef {
@@ -16,7 +16,7 @@ export interface ExternalSceneRef {
 
 // A fetched external project: everything needed to run its scenes.
 export interface ExternalProject {
-  scenes: SpriteLab2Scene[];
+  scenes: Scene[];
   animations: SerializedAnimationList;
   ownerName: string;
 }
@@ -48,20 +48,30 @@ export function toExternalSceneOptions(
   }));
 }
 
+// Scenes are shared within a script; outside one there is nothing to ask.
 export async function fetchSectionScenes(
-  levelId: number | string
+  levelId: number | string,
+  scriptId?: number | null
 ): Promise<ExternalSceneRef[]> {
+  if (!scriptId) {
+    return [];
+  }
   const {value} = await HttpClient.fetchJson<{scenes?: ExternalSceneRef[]}>(
-    `/sprite_lab2/section_scenes?level_id=${levelId}`
+    `/sprite_lab2/section_scenes?level_id=${levelId}&script_id=${scriptId}`
   );
   return value.scenes || [];
 }
 
+// The server serves only the owner's channel for this level and script.
 export async function fetchExternalProject(
-  channel: string
+  channel: string,
+  levelId: number | string,
+  scriptId?: number | null
 ): Promise<ExternalProject> {
   const {value} = await HttpClient.fetchJson<ExternalProject>(
-    `/sprite_lab2/external_scenes?channel=${encodeURIComponent(channel)}`
+    `/sprite_lab2/external_scenes?channel=${encodeURIComponent(
+      channel
+    )}&level_id=${levelId}&script_id=${scriptId ?? ''}`
   );
   return value;
 }
@@ -71,7 +81,7 @@ export async function fetchExternalProject(
  * dropdown values survive block-load validation (as placeholder options) even
  * when the listing API fails or an entry has vanished from it.
  */
-export function collectSavedExternalKeys(scenes: SpriteLab2Scene[]): string[] {
+export function collectSavedExternalKeys(scenes: Scene[]): string[] {
   const keys = new Set<string>();
   const walkBlock = (block: {
     type?: string;

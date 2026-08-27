@@ -45,6 +45,7 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
 }) => {
   const {levelProperties} = useCodebridgeContext();
   const [isResetButtonDisabled, setIsResetButtonDisabled] = useState(true);
+  const [isTheaterOutputVisible, setIsTheaterOutputVisible] = useState(false);
   const isRunning = useAppSelector(state => state.lab2System.isRunning);
 
   useEffect(() => {
@@ -59,15 +60,31 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
     state => state.lab2Project.projectSources?.labConfig?.miniApp?.name
   );
 
-  const miniAppComponent = useMemo(() => {
+  const {miniAppComponent, miniAppTitle} = useMemo(() => {
     if (miniApp === MiniApps.Neighborhood) {
-      return <NeighborhoodPreview handleScaling={handleScaling} />;
+      return {
+        miniAppComponent: <NeighborhoodPreview handleScaling={handleScaling} />,
+        miniAppTitle: 'Neighborhood',
+      };
     }
     if (miniApp === MiniApps.Theater) {
-      return <TheaterPreview />;
+      return {
+        miniAppComponent: (
+          <TheaterPreview
+            isOutputVisible={isTheaterOutputVisible}
+            setIsOutputVisible={setIsTheaterOutputVisible}
+          />
+        ),
+        miniAppTitle: 'Theater',
+      };
     }
-    return null;
-  }, [handleScaling, miniApp]);
+    return {miniAppComponent: null, miniAppTitle: codebridgeI18n.preview()};
+  }, [handleScaling, miniApp, isTheaterOutputVisible]);
+
+  // Stopping clears the theater's stage, so there is nothing left to reset.
+  const isResetDisabled =
+    isResetButtonDisabled ||
+    (miniApp === MiniApps.Theater && !isTheaterOutputVisible);
 
   const resetMiniApp = () => {
     setIsResetButtonDisabled(true);
@@ -82,7 +99,7 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
   return (
     <PanelContainer
       id="codebridge-preview"
-      headerContent={codebridgeI18n.preview()}
+      headerContent={miniAppTitle}
       leftHeaderContent={<ControlButtons />}
       className={moduleStyles.previewContainer}
       headerClassName={moduleStyles.previewHeader}
@@ -91,9 +108,9 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
           <WithTooltip tooltipProps={tooltipProps}>
             <MuiIconButton
               variant="text"
-              color="primary"
+              color="tertiary"
               size="extraSmall"
-              disabled={isResetButtonDisabled}
+              disabled={isResetDisabled}
               onClick={resetMiniApp}
               aria-label={codebridgeI18n.resetPreview()}
               type="button"
@@ -104,7 +121,7 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
           {showMaximizeButton && (
             <MuiIconButton
               variant="text"
-              color="primary"
+              color="tertiary"
               size="extraSmall"
               onClick={isMaximized ? minimizeMiniApp : maximizeMiniApp}
               aria-label={

@@ -1,0 +1,16 @@
+name 'aif-y2-machine-learning-fundamentals-postassessment-q9-2026'
+
+wrong 'The data has more rows than the model needs'
+wrong 'The data was collected more than a year ago'
+wrong 'The data includes categorical labels instead of numerical values'
+right 'The data is missing at least one relevant subgroup'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Which of the following is a sign that a dataset is not representative?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 7: Selecting Data
+MARKDOWN

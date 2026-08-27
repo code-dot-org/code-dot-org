@@ -75,6 +75,13 @@ class RequestTest
         'test.code.org': 'code.org',
         'localhost.hourofcode.com': 'hourofcode.com',
 
+        # The codeprojects domains (legacy Web Lab shares, and the sandboxed
+        # preview origins for Web Lab 2 / Python Lab) are recognized by their
+        # last two host parts.
+        'codeprojects.org': 'codeprojects.org',
+        'foo.preview.codeprojects.org': 'codeprojects.org',
+        'foo.preview.codeaiprojects.org': 'codeaiprojects.org',
+
         # Entirely unrecognized domains are normalized to just code.org
         'example.com': 'code.org',
       }

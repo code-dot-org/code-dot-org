@@ -21,6 +21,9 @@ Dashboard::Application.configure do
   config.hosts << "localhost.hourofcode.com"
   config.hosts << "localhost.codeprojects.org"
   config.hosts << /[^.]+\.preview\.localhost\.codeprojects\.org/
+  # Web Lab 2 / pyodide preview origin (migrated off codeprojects.org).
+  config.hosts << "localhost.codeaiprojects.org"
+  config.hosts << /[^.]+\.preview\.localhost\.codeaiprojects\.org/
 
   # Do not eager load code on boot.
   config.eager_load = false

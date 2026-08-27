@@ -1,5 +1,6 @@
 import {refreshCsrfToken} from '../../csrfToken';
 import type {Transport} from '../../transports/types';
+import {buildSchoolData} from './buildSchoolData';
 import {
   ContactDetailsSchema,
   CurrentPermissionsSchema,
@@ -21,6 +22,7 @@ import type {
   UpdateParentEmailParams,
   UpdatePasswordParams,
   UpdateProfileParams,
+  UpdateSchoolInfoParams,
   UpdateUserTypeParams,
   UserSettings,
 } from './users.types';
@@ -402,8 +404,26 @@ export function createUsersApi(transport: Transport) {
             ...(params.gender !== undefined && {
               gender_student_input: params.gender,
             }),
+            ...(params.educatorRole !== undefined && {
+              educator_role: params.educatorRole,
+            }),
           },
         },
+      });
+    },
+
+    /** PATCH /api/v1/user_school_infos — a no-op when the form state builds no school data. */
+    async updateSchoolInfo(params: UpdateSchoolInfoParams): Promise<void> {
+      const schoolData = buildSchoolData(params);
+      if (!schoolData) {
+        return;
+      }
+
+      await transport.request<unknown>({
+        method: 'PATCH',
+        url: '/api/v1/user_school_infos',
+        headers: JSON_ACCEPT,
+        body: {user: {school_info_attributes: schoolData}},
       });
     },
 

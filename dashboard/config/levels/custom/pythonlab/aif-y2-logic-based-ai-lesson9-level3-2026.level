@@ -1,5 +1,6 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2026-07-28T03:10:13.000Z",
   "level_num": "custom",
@@ -8,7 +9,7 @@
     "encrypted": "false",
     "long_instructions": "You’re a QA engineer testing a program for a smart lightbulb. The lightbulb has a time limit of 30 minutes: the bulb should stay on for 30 minutes and then turn off automatically. The program runs, but there’s a bug.\r\n\r\n**Do This**\r\n\r\n1. Run the program and notice what the program is doing wrong.\r\n2. Read through the code and identify the bug that causes the program to do the wrong thing.\r\n3. Fix the bug and run the program again.\r\n\r\n**💻 Coding Tip**\r\n\r\nWhen a program has an `if` statement inside another `if` statement, the code inside both if statements will only run if both conditions are true. If the code inside the `if` statements is running when you don’t expect it to, check whether either condition is true when it shouldn’t be!\r\n\r\n```python\r\nif condition1:\r\n    if condition2:\r\n        # This code only runs if condition1 and condition2 are both true\r\n```",
     "offer_browser_tts": "false",
-    "submittable": "false",
+    "submittable": "true",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",
@@ -32,9 +33,16 @@
       "openFiles": [
         "0"
       ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMpY2yv5DeyuGvnI\nPyotBXH1eQk8hEz3zaNjsf/d0YZsqL3F3TS86Yl+H0GaEo8X1hNOn6cdzNXI\npLtQK0AndcDQr17aGS+ZHFpmLcDvqlCIajyHisuFDkYBynUwXFcYGzjLyHbZ\nW29mzY+I5o5nrebd+NHIvYye7pSsQ/5p93eyLZQ9MNAACBATMmwdSy9T8aNP\n0Fue8UTOsw2bm1MZgL/Pndt/NDBA44hXH3SXCWaIAV/Xud0kiiOQdebmYZZp\n91FGPKZ3dJdi5X8iDjTA5+/LVK0gN0WT4PbRNdUfRyPizw69zdiBX6G7G0nX\nAtbccBPiZJeEO14KXo5AuVY39D8Q9TRp2cGM8K6r0Gvu2aQEPUbimfho4f4y\niL3JgPFIbDNtdjVSLa7O6XG8cnxGn4YYFvpywbg8JVINrjQaUh/TNZceyW4o\nSC07XjsRBUhRZLkm7/PkGasZANoJejJGcLfIp0TJfOSDuAUl2p7qG7qqOCHd\nUYJMqmHxu5rfkmwNqDFW30mD+wOmAFCMSE3qIaFv\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
     }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-28 03:10:18 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-28 03:10:18 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 15:25:48 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 16:39:41 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

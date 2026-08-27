@@ -1,7 +1,9 @@
 import {expect, type Locator, type Page} from '@playwright/test';
 
+import {IntroVideoModalComponent} from '../components/intro-video-modal';
 import {progressBubbleShows} from '../shared/progress';
 import {labLevelUrl, type LabLevelUrlParams} from '../shared/routes';
+import {waitUntilStable} from '../shared/stability';
 
 import {BasePage} from './base-page';
 
@@ -44,8 +46,12 @@ export class LessonLevelPage extends BasePage {
    */
   readonly progressLessons: Locator;
 
+  /** Intro video-tutorial overlay — any level type can autoplay it on first load. */
+  readonly introVideoModal: IntroVideoModalComponent;
+
   constructor(page: Page) {
     super(page);
+    this.introVideoModal = new IntroVideoModalComponent(page);
     this.lessonProgress = page.locator(this.progressSelector);
     this.lessonHeaderInfo = page.locator('.header_level');
     this.headerPopupButton = page.locator('button.header_popup_link');
@@ -55,6 +61,17 @@ export class LessonLevelPage extends BasePage {
   /** Navigate to a lab level. */
   async gotoLevel(params: LabLevelUrlParams): Promise<void> {
     await this.page.goto(labLevelUrl(params), {waitUntil: 'domcontentloaded'});
+  }
+
+  /**
+   * The server sends .header_level empty and a separate React mount fills it
+   * about 800ms after domcontentloaded. waitForHeaderSettled() reports settled
+   * before that, because the shared header sets its flags earlier, so a
+   * screenshot taken then shows a blank lesson header.
+   */
+  async waitForLessonHeaderRendered(): Promise<void> {
+    await expect(this.lessonProgress).toBeVisible();
+    await waitUntilStable(this.lessonProgress);
   }
 
   /** Open the header popup and wait for its progress cards to render. */

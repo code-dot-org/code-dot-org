@@ -8,7 +8,7 @@ markdown <<MARKDOWN
 <div style="width: 100%; margin-top: 20px; border-radius: 10px; background: #4C42CF; padding: 40px 30px; display: flex; align-items: center; justify-content: center; gap: 24px;">
    
     <div style="color: #FFFFFF; font-size: 32px; font-weight: bold; line-height: 1.1;">
-        Teaching Programming with AI [JavaSript]
+        Teaching Foundations of AI Programming [JavaScript]
     </div>
 </div>
 
@@ -16,7 +16,7 @@ markdown <<MARKDOWN
 
 ## Welcome
     
-This professional learning module is designed to help you prepare to teach CodeAI's        **Programming with AI** from the <a href="https://studio.code.org/courses/artificial-intelligence-foundations-2026" target="blank" rel="noopener noreferrer">AI Foundations Curriculum</a>.
+This professional learning module is designed to help you prepare to teach CodeAI's        **Foundations of AI Programming [JavaScript]** from the <a href="https://studio.code.org/courses/artificial-intelligence-foundations-2026" target="blank" rel="noopener noreferrer">AI Foundations Curriculum</a>.
 
 The Programming with AI content is designed for 9th - 12th grade students.
     
@@ -30,7 +30,8 @@ The Programming with AI content is designed for 9th - 12th grade students.
         <li>Guide students through structured planning documents (prompt.md, spec.md) as the bridge between an idea and a working prompt.</li><br>
         <li>Explain the HTML/CSS split and the DOM as separate, teachable mental models, not implementation details.</li><br>
         <li>Apply the POUR accessibility framework to audit real sites and recognize how AI reproduces existing accessibility failures.</li><br>
-        <li>Support students through the core JavaScript progression: events, variables/state, functions, conditionals, and loops as a connected sequence, not isolated topics.</li>
+        <li>Support students through the core JavaScript progression as a connected sequence, not isolated topics. This includes events, variables/state, functions, conditionals, and loops.
+</li>
     </ul>
 </div>
 

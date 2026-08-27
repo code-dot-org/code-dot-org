@@ -1,3 +1,5 @@
+@use '../nodes/node-mixins';
+
 // The :global(.react-flow__*) selectors below target class names that
 // @xyflow/react owns; they can't import the reactFlowSelectors.ts constants.
 // reactFlowSelectorsTest.tsx renders a live flow to catch a rename, which
@@ -80,23 +82,12 @@ $handle-grab-buffer: 10px;
     cursor: grabbing;
   }
 
-  // Focus outline for keyboard navigation, matching the component library
-  // pattern. Shape/text/image nodes draw their own focus ring on the rotated
-  // wrapper so it turns with the node; group nodes and line anchors provide their own indicators.
+  // The selection ring for an edge is drawn by EdgeSelectionOutlines, which
+  // rotates it onto the line. React Flow's own wrapper outline would box the
+  // endpoints instead, so suppress it.
+  :global(.react-flow__edge:focus),
   :global(.react-flow__edge:focus-visible) {
-    outline: 2px solid var(--borders-brand-teal-primary);
-    outline-offset: 2px;
-    border-radius: 4px;
-  }
-
-  // Focus or selection outline for standalone line edges.
-  // :focus covers click/programmatic focus; :global(.selected) covers
-  // multi-selection where the edge has selected=true but no DOM focus.
-  :global(.react-flow__edge).lineEdge:focus,
-  :global(.react-flow__edge.selected).lineEdge {
-    outline: 2px solid var(--borders-brand-teal-primary);
-    outline-offset: 2px;
-    border-radius: 4px;
+    outline: none;
   }
 
   // Show anchor dots when a lineAnchor node is part of a multi-selection.
@@ -212,6 +203,16 @@ $handle-grab-buffer: 10px;
   z-index: 5;
   border: 1px solid var(--borders-brand-teal-primary);
   background: color-mix(in srgb, var(--borders-brand-teal-primary) 10%, transparent);
+}
+
+// Selection ring for an edge, sized to its clickable band and rotated onto the
+// line. Lives in the viewport so it zooms and pans with the canvas, the same
+// way a node's ring does. Positioned by EdgeSelectionOutlines.
+.edgeSelectionOutline {
+  @include node-mixins.node-focus-ring;
+
+  position: absolute;
+  pointer-events: none;
 }
 
 // Visually hidden but announced by screen readers.

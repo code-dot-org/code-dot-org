@@ -9,6 +9,15 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 jest.mock('@cdo/apps/util/HttpClient');
 
+jest.mock('@cdo/apps/util/reduxHooks', () => ({
+  useAppDispatch: () => jest.fn(),
+  useAppSelector: jest.fn(),
+}));
+
+jest.mock('@cdo/apps/aiTeacherDrawer/redux', () => ({
+  fetchThreadMessages: jest.fn(args => ({type: 'fetchThreadMessages', args})),
+}));
+
 jest.mock('@cdo/apps/templates/teacherDashboard/teacherSectionsRedux', () => ({
   asyncLoadSectionData: () => () => Promise.resolve(),
 }));
@@ -20,11 +29,6 @@ jest.mock(
     default: () => <span role="img" aria-label="section-avatar" />,
   })
 );
-
-jest.mock('@cdo/apps/util/reduxHooks', () => ({
-  useAppDispatch: () => jest.fn(),
-  useAppSelector: jest.fn(),
-}));
 
 const SECTION_STATE_EMPTY = {sectionIds: [], sections: {}};
 
@@ -266,5 +270,88 @@ describe('PrepareList', () => {
 
     await renderAndSettle(<PrepareList />);
     expect(screen.getByRole('option', {name: /July 15/})).toBeInTheDocument();
+  });
+
+  describe('section card navigation', () => {
+    function setupSectionWithLesson() {
+      (useAppSelector as jest.Mock).mockReturnValue(
+        makeSectionsState([{id: 1, name: 'Period 1: Intro to CS'}])
+      );
+      (HttpClient.fetchJson as jest.Mock).mockImplementation((url: string) => {
+        if (url.includes('ai_lesson_summaries')) {
+          return Promise.resolve({
+            response: {ok: true},
+            value: {
+              lesson_summary: JSON.stringify({
+                learning_objective: 'Students learn variables.',
+                lesson_beats: ['Beat one'],
+                tips: ['Tip one'],
+                misconceptions: ['Misc one'],
+              }),
+            },
+          });
+        }
+        return Promise.resolve({
+          value: {1: makeLessonData({lesson_id: 10, name: 'Lesson 5: Loops'})},
+        });
+      });
+    }
+
+    it('navigates to lesson summary screen when section card is clicked', async () => {
+      setupSectionWithLesson();
+      const user = userEvent.setup();
+      await renderAndSettle(<PrepareList />);
+
+      await waitFor(() =>
+        expect(
+          screen.getByRole('button', {name: /Period 1/i})
+        ).toBeInTheDocument()
+      );
+      await user.click(screen.getByRole('button', {name: /Period 1/i}));
+
+      await waitFor(() =>
+        expect(screen.getByRole('button', {name: /back/i})).toBeInTheDocument()
+      );
+      expect(screen.queryByText('Prepare')).not.toBeInTheDocument();
+    });
+
+    it('returns to list when back button is clicked on detail screen', async () => {
+      setupSectionWithLesson();
+      const user = userEvent.setup();
+      await renderAndSettle(<PrepareList />);
+
+      await waitFor(() =>
+        expect(
+          screen.getByRole('button', {name: /Period 1/i})
+        ).toBeInTheDocument()
+      );
+      await user.click(screen.getByRole('button', {name: /Period 1/i}));
+      await waitFor(() =>
+        expect(screen.getByRole('button', {name: /back/i})).toBeInTheDocument()
+      );
+
+      await user.click(screen.getByRole('button', {name: /back/i}));
+      await waitFor(() =>
+        expect(screen.getByText('Prepare')).toBeInTheDocument()
+      );
+    });
+
+    it('does not render section card as button when lesson is null', async () => {
+      (useAppSelector as jest.Mock).mockReturnValue(
+        makeSectionsState([{id: 1, name: 'Period 1: Intro to CS'}])
+      );
+      // API returns null for this section (no lesson for today)
+      (HttpClient.fetchJson as jest.Mock).mockResolvedValue({
+        value: {1: null},
+      });
+      await renderAndSettle(<PrepareList />);
+
+      await waitFor(() =>
+        expect(screen.getByText('Period 1: Intro to CS')).toBeInTheDocument()
+      );
+      expect(
+        screen.queryByRole('button', {name: /Period 1/i})
+      ).not.toBeInTheDocument();
+    });
   });
 });

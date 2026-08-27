@@ -10,6 +10,7 @@ import {
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {setAndSaveSource} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {
+  setCodeEnvironmentError,
   setHasError,
   setLoadedCodeEnvironment,
 } from '@cdo/apps/lab2/redux/systemRedux';
@@ -19,13 +20,16 @@ import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
 import pythonlabI18n from '@cdo/apps/pythonlab/locale';
 import {getStore} from '@cdo/apps/redux';
 import {getInnerEnvironment} from '@cdo/apps/util/codeprojectsPreviewOrigin';
+import {getPreviewDomain} from '@cdo/apps/util/sandboxedPreviewDomain';
 import {createUuid} from '@cdo/apps/utils';
 
+import type {ExternalFileContents} from './pythonHelpers/externalFileContents';
 import {
   parseMessageToNeighborhoodSignal,
   parseErrorMessage,
 } from './pythonHelpers/messageHelpers';
 import {MessageTag} from './pythonHelpers/patches';
+import {handleTheaterMedia} from './pythonHelpers/theaterMedia';
 import {
   FromPyodideSandboxMessage,
   ToPyodideSandboxMessage,
@@ -39,6 +43,7 @@ let outputToNeighborhood = false;
 let directLogsToDevConsole = false;
 let loadedMessageHandlers = false;
 let sandboxServiceWorkerUnavailable = false;
+let isValidationRun = false;
 
 const getMessageHandlers = (
   consoleManager: ConsoleManager | null,
@@ -81,20 +86,37 @@ let {writeConsoleMessage, writePartialLine} = getMessageHandlers(
   false
 );
 
-// The pyodide worker runs inside a hidden iframe on a dedicated codeprojects.org
-// subdomain (a wholly separate registrable domain from code.org), so student Python
-// execution never has access to studio.code.org's cookies/session. See
-// apps/src/pythonlab/sandbox/pyodideSandboxWorkerManager.ts, which owns the actual worker, and
-// apps/src/pythonlab/README.md for the full architecture.
+// The pyodide worker runs inside a hidden iframe on our dedicated "preview"
+// subdomain, shared with Web Lab. This is a separate base domain to ensure
+// the worker never has access to the user's `studio.code.org` cookies/session.
+// See "apps/src/pythonlab/sandbox/pyodideSandboxWorkerManager.ts"
+// and "apps/src/pythonlab/README.md" for the full architecture.
 const getSandboxOrigin = () => {
   const {subdomain, port} = getInnerEnvironment();
-  return `${location.protocol}//pyodide-sandbox.preview.${subdomain}codeprojects.org${port}`;
+  return `${
+    location.protocol
+  }//pyodide-sandbox.preview.${subdomain}${getPreviewDomain()}${port}`;
 };
 
-const sandboxOrigin = getSandboxOrigin();
+// Resolved on first use rather than at module load, then pinned so the iframe
+// src and the postMessage origin checks can't diverge if the DCDO-driven
+// preview domain changes mid-session.
+let cachedSandboxOrigin: string | undefined;
+const sandboxOrigin = () => (cachedSandboxOrigin ??= getSandboxOrigin());
+
+// How long to wait for the sandbox iframe to report ready before telling the user
+// their network is blocking it. A slow but working sandbox will clear the message if
+// the sandbox eventually reports ready.
+const SANDBOX_READY_TIMEOUT_MS = 15000;
+
+const SANDBOX_UNREACHABLE_MESSAGE =
+  'Your browser may be blocking the setup of Python Lab. You may need to ' +
+  'adjust your firewall settings. See the technical requirements page ' +
+  '(https://code.org/educate/it) for which site(s) you need ' +
+  'to unblock. If you need assistance, please reach out to support@code.org.';
 
 const handlePyodideMessage = (data: PyodideMessage) => {
-  const {type, id, message} = data;
+  const {type, id, message, gif, wav, gifDurationMs} = data;
   const onSuccess = callbacks[id];
 
   const neighborhood = CodebridgeRegistry.getInstance().getNeighborhood();
@@ -200,6 +222,12 @@ const handlePyodideMessage = (data: PyodideMessage) => {
     case 'loaded_packages':
       directLogsToDevConsole = false;
       break;
+    case 'theater_media':
+      // Only show theater output if this is not a validation run.
+      if (gif && !isValidationRun) {
+        handleTheaterMedia(gif, wav, gifDurationMs);
+      }
+      break;
     default:
       console.warn(
         `Unknown message type ${type} with message ${message} from pyodideWorker.`
@@ -211,14 +239,25 @@ const handlePyodideMessage = (data: PyodideMessage) => {
 const setUpPyodideSandbox = () => {
   callbacks = {};
 
+  const unreachableTimeout = setTimeout(() => {
+    getStore().dispatch(setCodeEnvironmentError(SANDBOX_UNREACHABLE_MESSAGE));
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logWarning(
+        `Pyodide sandbox at ${sandboxOrigin()} did not report ready within ${SANDBOX_READY_TIMEOUT_MS}ms`
+      );
+  }, SANDBOX_READY_TIMEOUT_MS);
+
   const readyPromise = new Promise<void>(resolve => {
     window.addEventListener('message', event => {
       // The sandbox iframe is the only origin we should ever trust messages from.
-      if (event.origin !== sandboxOrigin) {
+      if (event.origin !== sandboxOrigin()) {
         return;
       }
       switch (event.data?.type) {
         case FromPyodideSandboxMessage.READY:
+          clearTimeout(unreachableTimeout);
+          getStore().dispatch(setCodeEnvironmentError(null));
           resolve();
           break;
         case FromPyodideSandboxMessage.SERVICE_WORKER_UNAVAILABLE:
@@ -247,7 +286,7 @@ const setUpPyodideSandbox = () => {
 
   const iframe = document.createElement('iframe');
   iframe.style.display = 'none';
-  iframe.src = sandboxOrigin;
+  iframe.src = sandboxOrigin();
   document.body.appendChild(iframe);
 
   return {iframe, readyPromise};
@@ -266,7 +305,8 @@ const asyncRun = (() => {
     script: string,
     source: MultiFileSource,
     validationFile?: ProjectFile,
-    shouldOutputToNeighborhood?: boolean
+    shouldOutputToNeighborhood?: boolean,
+    externalFiles?: ExternalFileContents
   ) => {
     id = createUuid();
 
@@ -275,6 +315,7 @@ const asyncRun = (() => {
     // Reset error state
     getStore().dispatch(setHasError(false));
     outputToNeighborhood = !!shouldOutputToNeighborhood;
+    isValidationRun = !!validationFile;
     const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
     const neighborhood = CodebridgeRegistry.getInstance().getNeighborhood();
     const messageHandlers = getMessageHandlers(
@@ -294,24 +335,27 @@ const asyncRun = (() => {
           id,
           source,
           validationFile,
+          externalFiles,
         },
-        sandboxOrigin
+        sandboxOrigin()
       );
     });
   };
 })();
 
 const restartPyodideIfProgramIsRunning = () => {
-  // Always send a stop message, as some programs will still
-  // look like they are "running" to the user even if they aren't truly running
-  // (for example, the neighborhood). We send via the console manager rather than
-  // the message handler because the neighborhood stops processing messages on stop,
-  // and we want to always show this to the user.
-  const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
-  consoleManager?.writeConsoleMessage(
-    getSystemMessage(pythonlabI18n.programStopped(), appName)
-  );
-  consoleManager?.writeConsoleMessage('');
+  // Only report stopping if the user was shown a running program. That outlasts
+  // the run itself for some programs -- the neighborhood keeps animating after
+  // its callbacks resolve -- so isRunning decides whether there was anything to stop.
+  // We send via the console manager rather than the message handler because the neighborhood
+  // stops processing messages on stop, and we want to always show this to the user.
+  if (getStore().getState().lab2System.isRunning) {
+    const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
+    consoleManager?.writeConsoleMessage(
+      getSystemMessage(pythonlabI18n.programStopped(), appName)
+    );
+    consoleManager?.writeConsoleMessage('');
+  }
 
   // Only restart if there are pending callbacks, as that means the sandbox is currently
   // running a program.
@@ -319,7 +363,7 @@ const restartPyodideIfProgramIsRunning = () => {
     callbacks = {};
     pyodideSandboxIframe.contentWindow?.postMessage(
       {type: ToPyodideSandboxMessage.RESTART_WEB_WORKER},
-      sandboxOrigin
+      sandboxOrigin()
     );
     Lab2Registry.getInstance()
       .getMetricsReporter()
@@ -344,7 +388,7 @@ const sendInput = (value: string): void => {
       value,
       id: lastInputId,
     },
-    sandboxOrigin
+    sandboxOrigin()
   );
   lastInputId = '';
 };

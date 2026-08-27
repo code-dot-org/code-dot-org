@@ -189,10 +189,14 @@ export const commands = {
   hasSupportAt(spriteArg, offsetX, targetArg) {
     let sprites = this.getSpriteArray(spriteArg);
     let targets = this.getSpriteArray(targetArg);
+    // Resting contact is an exact equality in classic Sprite Lab; a lab
+    // whose physics leaves sub-pixel float noise on landings sets a
+    // tolerance (see CoreLibrary contactEpsilon).
+    const epsilon = this.contactEpsilon || 0;
     let supported = false;
     sprites.forEach(sprite => {
       const spriteCollider = createSpriteCollider(sprite);
-      if (spriteCollider.bottom >= APP_HEIGHT) {
+      if (spriteCollider.bottom >= APP_HEIGHT - epsilon) {
         supported = true;
         return;
       }
@@ -200,7 +204,7 @@ export const commands = {
       for (const target of targets) {
         const targetCollider = createSpriteCollider(target);
         if (
-          spriteCollider.bottom === targetCollider.top &&
+          Math.abs(spriteCollider.bottom - targetCollider.top) <= epsilon &&
           probeX >= targetCollider.left &&
           probeX <= targetCollider.right
         ) {
@@ -215,17 +219,19 @@ export const commands = {
   isDirectlyAbove(spriteArg, targetArg) {
     let sprites = this.getSpriteArray(spriteArg);
     let targets = this.getSpriteArray(targetArg);
+    // Same contact tolerance as hasSupportAt.
+    const epsilon = this.contactEpsilon || 0;
     let touching = false;
     sprites.forEach(sprite => {
       const spriteCollider = createSpriteCollider(sprite);
-      if (spriteCollider.bottom >= APP_HEIGHT) {
+      if (spriteCollider.bottom >= APP_HEIGHT - epsilon) {
         touching = true;
       } else {
         for (const target of targets) {
           const targetCollider = createSpriteCollider(target);
 
           if (
-            spriteCollider.bottom === targetCollider.top &&
+            Math.abs(spriteCollider.bottom - targetCollider.top) <= epsilon &&
             spriteCollider.left <= targetCollider.right &&
             spriteCollider.right >= targetCollider.left
           ) {

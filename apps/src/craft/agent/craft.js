@@ -22,8 +22,6 @@ import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
-import lessButtonImg from '../../../static/craft/CDO_MC_Less.png';
-import moreButtonImg from '../../../static/craft/CDO_MC_More.png';
 import downButtonImg from '../../../static/craft/CDO_MC_ScrollDown.png';
 import upButtonImg from '../../../static/craft/CDO_MC_ScrollUp.png';
 import {TestResults} from '../../constants';
@@ -410,15 +408,9 @@ export default class Craft {
         <div>
           <ThemeProvider theme={minecraftMuiTheme}>
             <AppView
-              collapseIcon={
-                <img style={{width: '1rem'}} src={lessButtonImg} alt="" />
-              }
-              expandIcon={
-                <img style={{width: '1rem'}} src={moreButtonImg} alt="" />
-              }
-              upIcon={<img style={{width: '1rem'}} src={upButtonImg} alt="" />}
+              upIcon={<img style={{width: '15px'}} src={upButtonImg} alt="" />}
               downIcon={
-                <img style={{width: '1rem'}} src={downButtonImg} alt="" />
+                <img style={{width: '15px'}} src={downButtonImg} alt="" />
               }
               visualizationColumn={
                 <CraftVisualizationColumn

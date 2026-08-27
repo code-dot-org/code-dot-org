@@ -122,7 +122,12 @@ class TeacherPanel extends React.Component {
       // has already been dispatched on those pages with data specific to which
       // sections are assigned to the script for the TeacherSectionSeletor.
       if (this.props.pageType !== 'script_overview') {
-        this.props.setSections(teacherSections);
+        // Skip setSections if sections are already loaded (e.g. by
+        // asyncLoadSectionData in the TA drawer). The data from queryLockStatus
+        // is a sparser subset and would trip the SET_SECTIONS guard.
+        if (!this.props.sectionsAreLoaded) {
+          this.props.setSections(teacherSections);
+        }
 
         const sectionId = queryParams('section_id');
         sectionId && this.props.selectSection(sectionId);

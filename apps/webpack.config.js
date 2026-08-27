@@ -558,6 +558,8 @@ function createWebpackConfig({
             'localhost.hourofcode.com',
             '.preview.localhost.codeprojects.org',
             'localhost.codeprojects.org',
+            '.preview.localhost.codeaiprojects.org',
+            'localhost.codeaiprojects.org',
           ],
           client: {overlay: false},
           port: WEBPACK_DEV_SERVER_PORT,

@@ -1,4 +1,5 @@
 @single_session
+@playwright
 Feature: Maze, Frozen, and Minecraft:Agent tutorials in various languages
 
 Scenario: Maze tutorial in Spanish

@@ -182,6 +182,8 @@ Javalab.prototype.init = function (config) {
     container.className = container.className + ' pin_bottom';
     this.studioApp_.initTimeSpent();
     this.studioApp_.initProjectTemplateWorkspaceIconCallout();
+    // studioApp.init() normally does this; we skip init so call it here.
+    this.studioApp_.alertIfAbusiveProject();
 
     initializeSubmitHelper({
       studioApp: this.studioApp_,
@@ -382,6 +384,10 @@ Javalab.prototype.onRun = function () {
 Javalab.prototype.onTest = function () {
   const validation = this.level.validation;
   const validated = !!validation && Object.keys(validation).length !== 0;
+
+  // Clear any leftover mini app signal queue state (e.g. Neighborhood's
+  // processSignals index) from a prior Run.
+  this.miniApp?.reset?.();
   logUserLevelInteraction({
     levelId: this.levelIdForAnalytics,
     scriptId: this.scriptIdForAnalytics,
