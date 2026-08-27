@@ -1,6 +1,15 @@
 import {describe, expect, it} from 'vitest';
 
-import {convertBlocklyXmlToJson, convertBlocklyXmlToToolbox} from '../index';
+import type {
+  ToolboxDynamicCategory,
+  ToolboxFlyout,
+  ToolboxStaticCategory,
+} from '../../toolbox/types';
+import {
+  convertBlocklyXmlToCategories,
+  convertBlocklyXmlToJson,
+  convertBlocklyXmlToToolbox,
+} from '../index';
 
 // jsdom supplies DOMParser; the production caller (BlocklyMarkdown) injects the
 // same `new DOMParser()`, so the tests exercise the real parse path.
@@ -236,7 +245,7 @@ describe('convertBlocklyXmlToToolbox', () => {
     const flyout = convertBlocklyXmlToToolbox(
       parser,
       '<xml><block type="a"/><block type="b"/></xml>',
-    );
+    ) as ToolboxFlyout;
     expect(flyout.name).toBe('flyout');
     expect(flyout.blocks).toEqual([
       {kind: 'block', type: 'a'},
@@ -249,7 +258,85 @@ describe('convertBlocklyXmlToToolbox', () => {
       parser,
       '<xml><block type="a"/></xml>',
       'Loops',
-    );
+    ) as ToolboxFlyout;
     expect(flyout.name).toBe('Loops');
+  });
+
+  it('delegates to categories when the root has a <category> child', () => {
+    const categories = convertBlocklyXmlToToolbox(
+      parser,
+      '<xml><category name="Actions"><block type="a"/></category></xml>',
+    ) as ToolboxStaticCategory[];
+    expect(categories).toEqual([{name: 'Actions', blocks: [{kind: 'block', type: 'a'}]}]);
+  });
+});
+
+describe('convertBlocklyXmlToCategories', () => {
+  it('parses a real category-using level fixture (course3_bee_functions_challenge1)', () => {
+    const categories = convertBlocklyXmlToCategories(
+      parser,
+      `<xml>
+        <category name="Actions">
+          <block type="maze_move"><title name="DIR">moveForward</title></block>
+          <block type="maze_turn"><title name="DIR">turnRight</title></block>
+          <block type="maze_turn"><title name="DIR">turnLeft</title></block>
+          <block type="maze_nectar"/>
+          <block type="maze_honey"/>
+        </category>
+        <category name="Loops">
+          <block type="controls_repeat"><title name="TIMES">???</title></block>
+        </category>
+        <category name="Conditionals">
+          <block type="bee_ifElseFlower"><title name="LOC">atFlower</title></block>
+          <block type="bee_ifFlower"><title name="LOC">atFlower</title></block>
+        </category>
+        <category name="Functions" custom="PROCEDURE"/>
+      </xml>`,
+    );
+
+    expect(categories).toHaveLength(4);
+    expect((categories[0] as ToolboxStaticCategory).name).toBe('Actions');
+    expect((categories[0] as ToolboxStaticCategory).blocks).toEqual([
+      {kind: 'block', type: 'maze_move', fields: {DIR: 'moveForward'}},
+      {kind: 'block', type: 'maze_turn', fields: {DIR: 'turnRight'}},
+      {kind: 'block', type: 'maze_turn', fields: {DIR: 'turnLeft'}},
+      {kind: 'block', type: 'maze_nectar'},
+      {kind: 'block', type: 'maze_honey'},
+    ]);
+
+    const functions = categories[3] as ToolboxDynamicCategory;
+    expect(functions.name).toBe('Functions');
+    expect(functions.key).toBe('PROCEDURE');
+    expect(functions.onLoad).toBeInstanceOf(Function);
+  });
+
+  it('preserves limit as extraState on a category block (course3_bee_functions_challenge3)', () => {
+    const categories = convertBlocklyXmlToCategories(
+      parser,
+      `<xml>
+        <category name="Default"/>
+        <category name="Actions">
+          <block type="maze_moveForward"/>
+          <block type="maze_nectar" limit="2"/>
+        </category>
+      </xml>`,
+    );
+
+    expect(categories).toHaveLength(2);
+    expect((categories[0] as ToolboxStaticCategory).blocks).toEqual([]);
+    expect((categories[1] as ToolboxStaticCategory).blocks).toEqual([
+      {kind: 'block', type: 'maze_moveForward'},
+      {kind: 'block', type: 'maze_nectar', extraState: {limit: 2}},
+    ]);
+  });
+
+  it('leaves an unrecognised custom category dynamic but loader-less', () => {
+    const categories = convertBlocklyXmlToCategories(
+      parser,
+      '<xml><category name="Mystery" custom="SOMETHING_ELSE"/></xml>',
+    );
+    const category = categories[0] as ToolboxDynamicCategory;
+    expect(category.key).toBe('SOMETHING_ELSE');
+    expect(category.onLoad).toBeUndefined();
   });
 });

@@ -6,6 +6,7 @@ import {Markdown} from '@code-dot-org/markdown';
 import type {MarkdownExtension, MarkdownProps} from '@code-dot-org/markdown';
 
 import type {Plugin} from '../../plugins';
+import type {ToolboxFlyout} from '../../toolbox/types';
 import type {Theme, Renderer, BlockDefinitions} from '../../types';
 import {convertBlocklyXmlToJson, convertBlocklyXmlToToolbox} from '../../xml';
 import BlocklyFlyout from '../BlocklyFlyout';
@@ -81,7 +82,9 @@ const workspaceExtension = ({
           containerRole="group"
           inline
           blocks={
-            convertBlocklyXmlToToolbox(parser, xml)
+            // Embedded markdown snippets are always a flat block list, never
+            // a <category>-wrapped toolbox.
+            (convertBlocklyXmlToToolbox(parser, xml) as ToolboxFlyout)
               .blocks as BlocklyFlyoutProps['blocks']
           }
         />

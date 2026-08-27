@@ -4,9 +4,9 @@
  * JSON offline for the purposes of compiling a cached version of a level file.
  */
 
-import type * as Blockly from 'blockly';
+import * as Blockly from 'blockly/core';
 
-import type {ToolboxFlyout} from '../toolbox/types';
+import type {Toolbox, ToolboxCategory} from '../toolbox/types';
 import type {BlocklySerialization} from '../types';
 
 type BlockState = Blockly.serialization.blocks.State;
@@ -38,7 +38,12 @@ export function convertBlocklyXmlToToolbox(
   parser: DOMParser,
   xmlString: string,
   categoryName?: string,
-): ToolboxFlyout {
+): Toolbox {
+  const xml = parser.parseFromString(xmlString, 'text/xml');
+  if (Array.from(xml.documentElement.children).some(isCategoryElement)) {
+    return convertBlocklyXmlToCategories(parser, xmlString);
+  }
+
   const blocksArray = parseTopLevelBlocks(parser, xmlString).map(block => ({
     ...block,
     kind: 'block',
@@ -48,6 +53,54 @@ export function convertBlocklyXmlToToolbox(
     name: categoryName || 'flyout',
     blocks: blocksArray,
   };
+}
+
+function isCategoryElement(el: Element): boolean {
+  return el.tagName === 'category';
+}
+
+/**
+ * Converts a `<category>`-wrapped toolbox (the real-world `toolbox_blocks`
+ * shape used by ~515 maze .level files, e.g. course3_bee_functions_challenge1)
+ * into the categories our Toolbox understands. `convertBlocklyXmlToToolbox`
+ * delegates here whenever the root has any `<category>` child; the
+ * single-flyout shape stays its default for everything else.
+ */
+export function convertBlocklyXmlToCategories(
+  parser: DOMParser,
+  xmlString: string,
+): ToolboxCategory[] {
+  const xml = parser.parseFromString(xmlString, 'text/xml');
+  return Array.from(xml.documentElement.children)
+    .filter(isCategoryElement)
+    .map(parseCategoryXml);
+}
+
+// Blockly's built-in "give me the live procedure/variable blocks" flyouts.
+// `custom="PROCEDURE"` / `custom="VARIABLE"` are the only values seen in
+// dashboard/config/levels/custom/maze (grepped), so those are the only two
+// wired up; an unrecognised custom value renders as an empty category rather
+// than throwing.
+const DYNAMIC_CATEGORY_LOADERS: Record<
+  string,
+  (workspace: Blockly.WorkspaceSvg) => Blockly.utils.toolbox.FlyoutItemInfoArray
+> = {
+  PROCEDURE: workspace => Blockly.Procedures.flyoutCategory(workspace),
+  VARIABLE: workspace => Blockly.Variables.flyoutCategory(workspace),
+};
+
+function parseCategoryXml(categoryEl: Element): ToolboxCategory {
+  const name = categoryEl.getAttribute('name') || '';
+  const custom = categoryEl.getAttribute('custom');
+  if (custom) {
+    return {name, key: custom, onLoad: DYNAMIC_CATEGORY_LOADERS[custom]};
+  }
+
+  const blocks = Array.from(categoryEl.children)
+    .filter(el => el.tagName === 'block')
+    .map(el => ({...parseBlockXml(el), kind: 'block' as const}));
+
+  return {name, blocks};
 }
 
 function parseBlockXml(blockEl: Element): BlockState {
