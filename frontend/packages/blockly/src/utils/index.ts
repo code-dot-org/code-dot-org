@@ -195,6 +195,27 @@ export function domToBlockSpace(
   return blocks;
 }
 
+/**
+ * Serializes a live workspace back to the legacy Blockly XML dialect our
+ * reader (`xml/index.ts`'s `convertBlocklyXmlToJson`) understands — the
+ * capture side of the visual level editor's start/solution-block gestures.
+ *
+ * Strips every block's `id` attribute, mirroring production's
+ * `getProjectXml`/`removeIdsFromBlocks`
+ * (`apps/src/blockly/addons/cdoXml.ts`): the reader carries `id` straight
+ * through into serialization state, so a retained id collides when this
+ * output is captured from, and later loaded back into, the same workspace
+ * (e.g. capturing both `startBlocksXml` and `solutionBlocksXml` from one
+ * canvas).
+ */
+export function workspaceToXmlString(workspace: Blockly.Workspace): string {
+  const dom = Blockly.Xml.workspaceToDom(workspace);
+  dom
+    .querySelectorAll('block')
+    .forEach(block => block.removeAttribute('id'));
+  return Blockly.Xml.domToText(dom);
+}
+
 // Returns the student's executable code based on blockXml. Blocks are loaded onto
 // a single unrendered workspace. Used for Artist solution blocks in the student view
 // and Artist level predraw blocks.

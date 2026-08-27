@@ -22,9 +22,16 @@ import styles from './app.module.scss';
 
 // The package's build entry is App.tsx alone (vite.config's `lib.entry`) —
 // a named export not reachable from here never makes it into dist/App.d.ts,
-// so the host's map-painting palette UI (studio's PropertiesPanel) needs
-// these re-exported here, not just from editing.ts.
+// so the host's map-painting/toolbox-tray palette UI (studio's
+// PropertiesPanel) needs these re-exported here, not just from editing.ts.
 export {getPaintTools, type PaintTool} from './editing';
+export {
+  getToolboxPalette,
+  trayFromToolboxXml,
+  toolboxXmlFromTray,
+  type ToolboxPaletteEntry,
+  type ToolboxTrayEntry,
+} from './editing';
 
 registerLevelKindSchema('maze', LevelKindSchema);
 

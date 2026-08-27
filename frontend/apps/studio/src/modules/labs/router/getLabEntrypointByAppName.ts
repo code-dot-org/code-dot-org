@@ -1,6 +1,8 @@
 import {lazy} from 'react';
 import type {ComponentType, LazyExoticComponent} from 'react';
 
+import type {Toolbox} from '@code-dot-org/blockly';
+
 /**
  * A lab run's pass/fail verdict, reported via `LabEntrypointProps.onLevelResult`.
  * `result`/`testStatus` mirror a lab's own result codes (e.g. maze-lab's
@@ -38,6 +40,17 @@ export interface LabEditingProps {
   /** Fires after a stage paint with the freshly updated wire-format patch
    * — the panel folds it into its Save draft. */
   onMapDraftChange: (patch: {serialized_maze: string; maze: string}) => void;
+  /** The panel's toolbox-tray draft, live — supersedes the served toolbox
+   * on maze so a chip add/remove is visible in the real flyout before Save
+   * (maze only; other entrypoints ignore it). */
+  toolboxOverride?: Toolbox;
+  /** True while the panel is in "Student start" editing mode — the
+   * workspace itself becomes the editing surface (maze only). */
+  startBlocksEditingActive: boolean;
+  /** Fires on every workspace mutation while startBlocksEditingActive,
+   * carrying the freshly captured legacy XML — the panel folds it into its
+   * Save draft, mirroring onMapDraftChange. */
+  onStartBlocksChange: (startBlocksXml: string) => void;
 }
 
 /** Props the course route passes to a lab entrypoint. */

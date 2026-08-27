@@ -1,6 +1,6 @@
 import {z} from 'zod';
 
-import type {Environment} from '@code-dot-org/blockly';
+import type {Environment, Toolbox} from '@code-dot-org/blockly';
 import type {LevelProperties} from '@code-dot-org/core/api';
 
 import type {MazeData} from './MazeController';
@@ -68,6 +68,17 @@ export interface MazeLabEditingProps {
    * the panel accumulates these into its Save draft. Never called except
    * as a direct result of a stage click. */
   onMapDraftChange: (patch: {serialized_maze: string; maze: string}) => void;
+  /** The tray's live toolbox, whenever the panel's toolbox tray has an
+   * in-progress edit — supersedes levelProperties.toolboxBlocks so the real
+   * flyout reflects a chip add/remove immediately, before Save. undefined
+   * outside toolbox-tray editing (the served toolbox applies as normal). */
+  toolboxOverride?: Toolbox;
+  /** True while the properties panel is in "Student start" editing mode —
+   * the workspace IS the editing surface (drag/place blocks directly); every
+   * mutation while this is true reports the freshly captured legacy XML via
+   * onStartBlocksChange, mirroring onMapDraftChange's per-paint reporting. */
+  startBlocksEditingActive: boolean;
+  onStartBlocksChange: (startBlocksXml: string) => void;
 }
 
 export type {MazeData};

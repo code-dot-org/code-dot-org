@@ -1,3 +1,8 @@
+// @vitest-environment jsdom
+//
+// This package's default vitest environment has no DOM (the map-draft tests
+// above don't need one); trayFromToolboxXml below parses XML via DOMParser,
+// so this file alone opts into jsdom rather than changing the shared config.
 import {describe, expect, it} from 'vitest';
 
 import {FeatureType as BeeFeatureType} from '../BeeCell';
@@ -5,9 +10,12 @@ import {SquareType} from '../tiles';
 
 import {
   getPaintTools,
+  getToolboxPalette,
   mapDraftFromLevelProperties,
   paintCell,
   serializeMapDraft,
+  toolboxXmlFromTray,
+  trayFromToolboxXml,
   type MapDraft,
 } from '../editing';
 
@@ -141,5 +149,69 @@ describe('paintCell', () => {
 
     expect(next[0][0].tileType).toBe(SquareType.FINISH);
     expect(next[1][1].tileType).toBe(SquareType.START);
+  });
+});
+
+describe('toolbox tray (trayFromToolboxXml / toolboxXmlFromTray)', () => {
+  it('matches maze_turn entries by their DIR field, not just block type', () => {
+    // Lifted from dashboard/config/levels/custom/maze/courseD_maze_until3_2024.level's
+    // toolbox_blocks.
+    const tray = trayFromToolboxXml(
+      '<xml>' +
+        '<block type="maze_move" limit="2"><title name="DIR">moveForward</title></block>' +
+        '<block type="maze_turn"><title name="DIR">turnRight</title></block>' +
+        '<block type="maze_turn"><title name="DIR">turnLeft</title></block>' +
+        '<block type="maze_forever"/>' +
+        '<block type="comment"><title name="TEXT"/></block>' +
+        '</xml>',
+      'birds',
+    );
+
+    expect(tray.map(t => t.id)).toEqual([
+      // maze_move DIR=moveForward isn't in the palette (only maze_moveForward
+      // and maze_move DIR=moveBackward are) — a pass-through chip, not lost.
+      expect.stringContaining('custom-maze_move-'),
+      'turnRight',
+      'turnLeft',
+      'forever',
+      expect.stringContaining('custom-comment-'),
+    ]);
+    // The served fragment's limit="2" survives verbatim on the pass-through
+    // chip — Pass C0's "carry limit through" applies here too.
+    expect(tray[0].xml).toContain('limit="2"');
+  });
+
+  it('round-trips a real limit=-bearing fixture (courseD_maze_ramp1_2024) unchanged', () => {
+    const xml = '<xml><block type="maze_moveForward" limit="2"/></xml>';
+    const tray = trayFromToolboxXml(xml, 'birds');
+    expect(tray).toHaveLength(1);
+    expect(tray[0].id).toBe('moveForward');
+    expect(tray[0].xml).toContain('limit="2"');
+    expect(toolboxXmlFromTray(tray)).toBe(
+      '<xml><block type="maze_moveForward" limit="2"/></xml>',
+    );
+  });
+
+  it('composing the tray back to XML preserves chip order', () => {
+    const palette = getToolboxPalette('birds');
+    const turnLeft = palette.find(p => p.id === 'turnLeft')!;
+    const moveForward = palette.find(p => p.id === 'moveForward')!;
+    const xml = toolboxXmlFromTray([
+      {...turnLeft},
+      {...moveForward},
+    ]);
+    expect(xml).toBe(
+      '<xml><block type="maze_turn"><field name="DIR">turnLeft</field></block>' +
+        '<block type="maze_moveForward"/></xml>',
+    );
+  });
+
+  it('offers skin-specific actions only for their skin', () => {
+    const beePalette = getToolboxPalette('bee');
+    const farmerPalette = getToolboxPalette('farmer');
+    expect(beePalette.some(p => p.id === 'getNectar')).toBe(true);
+    expect(farmerPalette.some(p => p.id === 'getNectar')).toBe(false);
+    expect(farmerPalette.some(p => p.id === 'fill')).toBe(true);
+    expect(beePalette.some(p => p.id === 'fill')).toBe(false);
   });
 });

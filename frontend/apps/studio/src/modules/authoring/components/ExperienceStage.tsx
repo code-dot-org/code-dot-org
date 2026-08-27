@@ -1,5 +1,4 @@
 import {Button, Typography} from '@mui/material';
-import classNames from 'classnames';
 import {Suspense, useCallback, useState} from 'react';
 
 import type {
@@ -7,6 +6,7 @@ import type {
   ExistingLevelExperience,
   GenericLevelData,
 } from '@code-dot-org/authoring';
+import type {Toolbox} from '@code-dot-org/blockly';
 import Alert from '@code-dot-org/component-library/alert';
 import {Lab, Loading} from '@code-dot-org/lab/host';
 import {Markdown} from '@code-dot-org/markdown';
@@ -17,7 +17,7 @@ import {Markdown} from '@code-dot-org/markdown';
 // placed on the canvas.
 import '@code-dot-org/oceans-lab/styles.css';
 
-import {authoringApi, useLevelProperties} from '@/modules/authoring';
+import {useLevelProperties} from '@/modules/authoring';
 import type {LevelCheckResponse} from '@/modules/authoring';
 import {getLabEntrypointByAppName} from '@/modules/labs/router/getLabEntrypointByAppName';
 import type {LevelResultDetail} from '@/modules/labs/router/getLabEntrypointByAppName';
@@ -45,12 +45,15 @@ export interface StageEvent {
 }
 
 /**
- * The two sections LessonPlayer's properties panel currently supports (see
- * docs/prototypes/author-mode-properties-panel.md §5.2 for the full design;
- * this is its first slice). Scoped to the active experience — only one is
- * ever on screen, so the section alone disambiguates.
+ * The one section LessonPlayer's right properties panel supports (see
+ * docs/prototypes/author-mode-properties-panel.md §5.2). Level-wide settings
+ * used to be a second section here ('level') but moved to the left rail
+ * (LevelRail.tsx, product decision 8/27) — level settings are page settings,
+ * not a stage click-target. Kept as a one-member union rather than a bare
+ * boolean so the selection plumbing (selectedSection/onSectionClick) needs
+ * no further changes if a second right-panel section returns.
  */
-export type PanelSection = 'instructions' | 'level';
+export type PanelSection = 'instructions';
 
 interface ExperienceStageProps {
   experience: Experience;
@@ -70,9 +73,15 @@ interface ExperienceStageProps {
   onSectionClick?: (section: PanelSection) => void;
   /** Map-painting selection — see LessonPlayer's `selectedPaintToolId`
    * state comment for why this crosses through here rather than living in
-   * PropertiesPanel or the mounted lab directly. Maze-family only. */
+   * LevelRail or the mounted lab directly. Maze-family only. */
   selectedPaintToolId?: string;
   onMapDraftChange?: (patch: {serialized_maze: string; maze: string}) => void;
+  /** The left rail's toolbox-tray draft, live — see LessonPlayer's
+   * `toolboxDraftXml` state comment. Maze-family only. */
+  toolboxOverride?: Toolbox;
+  /** True while LevelRail's Student-start toggle is on. Maze-family only. */
+  startBlocksEditingActive?: boolean;
+  onStartBlocksChange?: (startBlocksXml: string) => void;
 }
 
 /**
@@ -90,6 +99,9 @@ export default function ExperienceStage({
   onSectionClick,
   selectedPaintToolId,
   onMapDraftChange,
+  toolboxOverride,
+  startBlocksEditingActive,
+  onStartBlocksChange,
 }: ExperienceStageProps) {
   switch (experience.kind) {
     case 'content':
@@ -109,6 +121,9 @@ export default function ExperienceStage({
           onSectionClick={onSectionClick}
           selectedPaintToolId={selectedPaintToolId}
           onMapDraftChange={onMapDraftChange}
+          toolboxOverride={toolboxOverride}
+          startBlocksEditingActive={startBlocksEditingActive}
+          onStartBlocksChange={onStartBlocksChange}
         />
       );
     case 'widget':
@@ -130,6 +145,9 @@ function ExistingLevelStage({
   onSectionClick,
   selectedPaintToolId,
   onMapDraftChange,
+  toolboxOverride,
+  startBlocksEditingActive,
+  onStartBlocksChange,
 }: {
   experience: ExistingLevelExperience;
   onStageEvent?: (event: StageEvent) => void;
@@ -139,6 +157,9 @@ function ExistingLevelStage({
   onSectionClick?: (section: PanelSection) => void;
   selectedPaintToolId?: string;
   onMapDraftChange?: (patch: {serialized_maze: string; maze: string}) => void;
+  toolboxOverride?: Toolbox;
+  startBlocksEditingActive?: boolean;
+  onStartBlocksChange?: (startBlocksXml: string) => void;
 }) {
   if (experience.runtime === 'labhost') {
     if (!experience.levelNumericId) {
@@ -164,6 +185,9 @@ function ExistingLevelStage({
         onSectionClick={onSectionClick}
         selectedPaintToolId={selectedPaintToolId}
         onMapDraftChange={onMapDraftChange}
+        toolboxOverride={toolboxOverride}
+        startBlocksEditingActive={startBlocksEditingActive}
+        onStartBlocksChange={onStartBlocksChange}
       />
     );
   }
@@ -211,6 +235,9 @@ function LabHostStage({
   onSectionClick,
   selectedPaintToolId,
   onMapDraftChange,
+  toolboxOverride,
+  startBlocksEditingActive,
+  onStartBlocksChange,
 }: {
   experienceId: string;
   levelNumericId: number;
@@ -223,30 +250,14 @@ function LabHostStage({
   onSectionClick?: (section: PanelSection) => void;
   selectedPaintToolId?: string;
   onMapDraftChange?: (patch: {serialized_maze: string; maze: string}) => void;
+  toolboxOverride?: Toolbox;
+  startBlocksEditingActive?: boolean;
+  onStartBlocksChange?: (startBlocksXml: string) => void;
 }) {
   const {data: properties, isLoading} = useLevelProperties(levelNumericId);
   const [levelResult, setLevelResult] = useState<LevelResultDetail | null>(
     null,
   );
-  const [checkResult, setCheckResult] = useState<LevelCheckResponse | null>(
-    null,
-  );
-  const [checking, setChecking] = useState(false);
-
-  const handleCheckLevel = useCallback(async () => {
-    setChecking(true);
-    try {
-      setCheckResult(await authoringApi.checkLevel(levelNumericId));
-    } catch (error) {
-      setCheckResult({
-        ok: false,
-        mode: 'palette',
-        reasons: [error instanceof Error ? error.message : 'check failed'],
-      });
-    } finally {
-      setChecking(false);
-    }
-  }, [levelNumericId]);
 
   const handleLevelResult = useCallback(
     (detail: LevelResultDetail) => {
@@ -308,26 +319,30 @@ function LabHostStage({
   const selfDisplayedByLab = appName === 'music';
   const hostRendersInstructions = appName !== 'maze';
 
-  // Maze-family only (grid + block-solution levels) — checks the served
-  // solution against the served grid/toolbox the same way create_level's
-  // gate does. Author mode only: it's an authoring lint, not something a
-  // learner needs to see.
-  const showCheckLevel = authorMode && appName === 'maze';
-  // The properties panel's "level" section only has a maze field
-  // (startDirection) so far — same scope as showCheckLevel.
-  const levelSelectable = showCheckLevel;
+  // Maze-family only (grid + block-solution levels): the left rail
+  // (LevelRail.tsx) replaces the outline with that level's settings, and the
+  // map/toolbox/start-blocks editing surfaces below light up accordingly.
+  // Product decision, 8/27 — level-wide settings are page settings, not a
+  // stage click-target, so there is no more "Level" button/section here to
+  // gate on; a maze level's editing surfaces are simply live whenever the
+  // rail is showing them (authorMode && appName === 'maze').
+  const levelEditable = authorMode && appName === 'maze';
 
   // Threaded into every lab entrypoint (harmless for the three that ignore
   // it); maze-lab uses it to make its own instructions bubble the
   // hover/click target for the panel's 'instructions' section, and (while
-  // the 'level' section is pinned) to offer the map painter on the stage.
+  // levelEditable) to offer the map painter, toolbox tray, and student-start
+  // capture on the stage.
   const editing = {
     authorMode,
     instructionsSelected: selectedSection === 'instructions',
     onInstructionsClick: () => onSectionClick?.('instructions'),
-    mapEditingActive: levelSelectable && selectedSection === 'level',
+    mapEditingActive: levelEditable,
     selectedPaintToolId,
     onMapDraftChange: onMapDraftChange ?? (() => {}),
+    toolboxOverride,
+    startBlocksEditingActive: levelEditable && !!startBlocksEditingActive,
+    onStartBlocksChange: onStartBlocksChange ?? (() => {}),
   };
 
   return (
@@ -342,43 +357,7 @@ function LabHostStage({
           onClick={() => onSectionClick?.('instructions')}
         />
       )}
-      {(showCheckLevel || levelSelectable) && (
-        <div className={styles.levelCheckBar}>
-          {levelSelectable && (
-            <Button
-              size="small"
-              variant={selectedSection === 'level' ? 'contained' : 'outlined'}
-              aria-pressed={selectedSection === 'level'}
-              onClick={() => onSectionClick?.('level')}
-            >
-              Level
-            </Button>
-          )}
-          {showCheckLevel && (
-            <Button
-              size="small"
-              variant="outlined"
-              onClick={handleCheckLevel}
-              disabled={checking}
-            >
-              {checking ? 'Checking…' : 'Check level'}
-            </Button>
-          )}
-        </div>
-      )}
-      {showCheckLevel && checkResult && (
-        <LevelCheckCard
-          result={checkResult}
-          onDismiss={() => setCheckResult(null)}
-        />
-      )}
-      <div
-        className={classNames(
-          styles.labStage,
-          levelSelectable && styles.labStageEditable,
-          levelSelectable && selectedSection === 'level' && styles.labStageSelected,
-        )}
-      >
+      <div className={styles.labStage}>
         <Suspense fallback={<Loading />}>
           <Lab levelId={levelNumericId} levelPropertiesMap={properties}>
             <LabEntrypoint

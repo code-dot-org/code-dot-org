@@ -22,14 +22,17 @@
   min-height: 0;
 }
 
+// Second column widened from 240px (outline-only) to 280px: it now also
+// hosts LevelRail's toolbox chip tray (two side-by-side columns) whenever a
+// maze-family level is active — see LevelRail.tsx.
 .playerLayoutAuthor {
-  grid-template-columns: 440px 240px minmax(0, 1fr);
+  grid-template-columns: 440px 280px minmax(0, 1fr);
 }
 
 // Fourth column, only while a stage section is selected — see
 // docs/prototypes/author-mode-properties-panel.md §5.1.
 .playerLayoutPanelOpen {
-  grid-template-columns: 440px 240px minmax(0, 1fr) 340px;
+  grid-template-columns: 440px 280px minmax(0, 1fr) 340px;
 }
 
 .propertiesPanel {
@@ -60,8 +63,128 @@
   }
 }
 
-/* Map-painting palette (properties panel's 'level' section) — the tool
-   picker lives here; painting itself happens on the stage. */
+/* Left rail (LevelRail.tsx) — "Outline" | "Level" sibling tabs in the same
+   grid column that used to be OutlineRail alone. The container owns the
+   shared border/background; .rail (OutlineRail's own class) and .levelRail
+   below are nested inside it and no longer duplicate either. */
+
+.levelRailContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  border-right: 1px solid var(--borders-neutral-light, #d5d8dc);
+  background: var(--background-neutral-primary, #fff);
+}
+
+.railTabs {
+  display: flex;
+  border-bottom: 1px solid var(--borders-neutral-light, #d5d8dc);
+}
+
+.railTab,
+.railTabActive {
+  flex: 1;
+  border: 0;
+  background: transparent;
+  padding: 8px;
+  font: inherit;
+  cursor: pointer;
+  color: var(--text-neutral-secondary, #6f747c);
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.5;
+  }
+}
+
+.railTabActive {
+  color: var(--text-brand-purple-primary, #4d24a8);
+  border-bottom: 2px solid var(--borders-brand-purple-primary, #4d24a8);
+}
+
+.railTabBody {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  flex: 1;
+  overflow: auto;
+}
+
+.railTabBodyHidden {
+  display: none;
+}
+
+.levelRail {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 0;
+  overflow: auto;
+  padding: 12px;
+
+  select {
+    width: 100%;
+  }
+}
+
+/* Toolbox chip tray (LevelRail's toolbox composition) — two columns so an
+   add/remove is a single click each way, no drag required (keyboard-
+   reachable, per the visual-editor plan's Pass C gesture decision). */
+
+.toolboxTray {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.toolboxTrayColumns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.toolboxTrayColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.toolboxChipList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.toolboxChip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  width: 100%;
+  border: 1px solid var(--borders-neutral-light, #d5d8dc);
+  border-radius: 4px;
+  background: var(--background-neutral-secondary, #f3f4f5);
+  padding: 4px 8px;
+  font-size: 12px;
+  text-align: left;
+  cursor: pointer;
+
+  button {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    color: var(--text-neutral-secondary, #6f747c);
+    font-size: 14px;
+    line-height: 1;
+  }
+}
+
+/* Map-painting palette (LevelRail) — the tool picker lives here; painting
+   itself happens on the stage. */
 
 .paintPalette {
   display: flex;
@@ -201,36 +324,6 @@
   }
 }
 
-// Click-to-select affordance (properties panel) — a visible but subtle
-// outline, distinct from the active-experience highlighting elsewhere on
-// the page (progress dots, outline rail).
-.labStageSelected {
-  outline: 2px solid var(--borders-brand-purple-primary, #4d24a8);
-  outline-offset: -2px;
-}
-
-// Hover is discoverability only — it highlights, it never opens the panel
-// (product decision, 8/27). Dashed, so "this is editable" (hover) reads
-// distinctly from "this is open" (.labStageSelected's solid outline);
-// :not(.labStageSelected) keeps the solid outline winning once the section
-// is pinned, since both classes can be on the element at once and a
-// pseudo-class selector otherwise outranks a plain one regardless of
-// source order.
-.labStageEditable:hover:not(.labStageSelected) {
-  outline: 2px dashed var(--borders-brand-purple-primary, #4d24a8);
-  outline-offset: -2px;
-}
-
-/* Author-mode "Check level" affordance (maze-family existingLevel only) */
-
-.levelCheckBar {
-  width: 100%;
-  max-width: 880px;
-  margin-top: 12px;
-  display: flex;
-  justify-content: flex-end;
-}
-
 /* Lab run feedback (success/failure card below the lab stage) */
 
 .levelResultCard {
@@ -264,11 +357,10 @@
   background: var(--background-neutral-primary, #fff);
 }
 
-/* Outline rail (author affordance) */
+/* Outline rail (author affordance) — nested inside .levelRailContainer's
+   Outline tab body now, which owns the border-right/background. */
 
 .rail {
-  border-right: 1px solid var(--borders-neutral-light, #d5d8dc);
-  background: var(--background-neutral-primary, #fff);
   overflow-y: auto;
   padding: 12px 8px;
   display: flex;

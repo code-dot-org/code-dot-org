@@ -8,6 +8,7 @@ import classNames from 'classnames';
 import {
   getToolboxWidth,
   getAllGeneratedCode,
+  workspaceToXmlString,
 } from '@code-dot-org/blockly/utils';
 import {BlocklyWorkspace} from '@code-dot-org/blockly';
 import SettingsDialog from '../SettingsDialog';
@@ -158,6 +159,18 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
         if (environment) {
           environment.usedBlockCount = blockCount.current;
         }
+
+        // Author-mode "Student start" editing (Pass C): every workspace
+        // mutation is a fresh capture of the canvas as it stands, mirroring
+        // handlePaintCell's per-click reporting below. Fires on every
+        // Blockly event, not just block moves/creates — same granularity
+        // countBlocks above already accepts; a re-report of unchanged XML on
+        // a UI-only event (selection, scroll) is harmless.
+        if (editing?.startBlocksEditingActive) {
+          editing.onStartBlocksChange(
+            workspaceToXmlString(workspaceRef.current),
+          );
+        }
       }
 
       // Determine the used/ideal block counts
@@ -179,7 +192,7 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
         }
       }
     },
-    [levelProperties, setToolboxHeaderWidth],
+    [levelProperties, setToolboxHeaderWidth, editing],
   );
 
   // Map-painting draft (Author Mode Pass B) — local to the mounted lab so
@@ -190,7 +203,12 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
   // post-Save refetch lands the same data the author already painted, so
   // there's nothing to reconcile.
   const [mapDraft, setMapDraft] = useState<MapDraft | undefined>(undefined);
-  const mapEditingActiveRef = useRef(editing?.mapEditingActive);
+  // Starts undefined, not editing?.mapEditingActive: author mode now offers
+  // map editing on mount for any maze level (no more "Level" click-target to
+  // open first, see LevelRail.tsx), so mapEditingActive can already be true
+  // on the very first render. Seeding the ref from that same true would make
+  // the effect below see no change and skip initializing mapDraft.
+  const mapEditingActiveRef = useRef<boolean | undefined>(undefined);
   useEffect(() => {
     if (mapEditingActiveRef.current === editing?.mapEditingActive) {
       return;
@@ -524,7 +542,7 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
                 }}
                 blocks={skinBlocks}
                 startBlocks={levelProperties.startBlocks || DefaultStartBlocks}
-                toolbox={levelProperties.toolboxBlocks}
+                toolbox={editing?.toolboxOverride ?? levelProperties.toolboxBlocks}
                 onInject={onInject}
                 onChange={onChange}
                 workspaceRef={workspaceRef}

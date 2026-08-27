@@ -8,6 +8,8 @@ import type {
   Lesson,
   Unit,
 } from '@code-dot-org/authoring';
+import type {Toolbox} from '@code-dot-org/blockly';
+import {convertBlocklyXmlToToolbox} from '@code-dot-org/blockly/xml';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import {authoringApi} from '../api';
@@ -20,7 +22,7 @@ import ExperienceStage, {
   type PanelSection,
   type StageEvent,
 } from './ExperienceStage';
-import OutlineRail from './OutlineRail';
+import LevelRail from './LevelRail';
 import PropertiesPanel from './PropertiesPanel';
 import TutorDock, {type TutorDockHandle} from './TutorDock';
 
@@ -112,19 +114,38 @@ export default function LessonPlayer({
   // rather than risk the panel showing a stale experience's fields.
   const [panelSection, setPanelSection] = useState<PanelSection | undefined>();
   const [panelDirty, setPanelDirty] = useState(false);
-  // Map-painting selection lives here, not in PropertiesPanel or
-  // ExperienceStage: the palette (in the panel) and the stage overlay (in
-  // the mounted lab) are sibling subtrees under this component, so the
-  // selected tool and each paint's resulting patch have to cross through a
-  // shared ancestor. `mapDraftPatch` is undefined until the author paints
-  // at least once; PropertiesPanel folds it into its own Save draft via an
-  // effect, the same way it already syncs from served levelProperties.
+  // Level-editing state lives here, not in LevelRail or ExperienceStage: the
+  // rail (author-facing controls) and the stage overlay/workspace (in the
+  // mounted lab) are sibling subtrees under this component, so a tool
+  // selection or a stage-side capture has to cross through a shared
+  // ancestor — the same reasoning for all four states below.
+  //
+  // Map-painting: `mapDraftPatch` is undefined until the author paints at
+  // least once; LevelRail folds it into its own Save draft via an effect,
+  // the same way it already syncs from served levelProperties.
   const [selectedPaintToolId, setSelectedPaintToolId] = useState<
     string | undefined
   >();
   const [mapDraftPatch, setMapDraftPatch] = useState<
     {serialized_maze: string; maze: string} | undefined
   >();
+  // Toolbox tray: LevelRail reports the composed XML on every chip
+  // add/remove; converted below into the live Toolbox object the stage's
+  // flyout actually renders (editing.toolboxOverride) — see
+  // packages/blockly/src/toolbox/index.ts's buildToolbox for why the JSON
+  // shape, not the XML string, is what a live workspace prop swap wants.
+  const [toolboxDraftXml, setToolboxDraftXml] = useState<string | undefined>();
+  // Student-start editing: LevelRail's toggle drives whether the stage
+  // workspace is reporting captures; `startBlocksDraftXml` is the freshest
+  // capture, reported the other direction (stage -> here -> LevelRail).
+  const [startBlocksEditingActive, setStartBlocksEditingActive] =
+    useState(false);
+  const [startBlocksDraftXml, setStartBlocksDraftXml] = useState<
+    string | undefined
+  >();
+  // Mirrors `panelDirty` for the left rail: navigating away (selectIndex)
+  // while a level edit is in progress would silently discard it.
+  const [levelRailDirty, setLevelRailDirty] = useState(false);
   const [inputOverrides, setInputOverrides] = useState<
     Record<string, Record<string, unknown>>
   >({});
@@ -143,6 +164,16 @@ export default function LessonPlayer({
   const active = experiences[activeIndex];
   const showPropertiesPanel =
     authorMode && !!panelSection && active?.kind === 'existingLevel';
+  // The tray reports XML (the Save-patch shape); the stage's flyout wants
+  // the JSON Toolbox shape (see toolbox/index.ts's buildToolbox) — convert
+  // once here rather than in both LevelRail and ExperienceStage.
+  const toolboxOverride: Toolbox | undefined = useMemo(
+    () =>
+      toolboxDraftXml === undefined
+        ? undefined
+        : convertBlocklyXmlToToolbox(new DOMParser(), toolboxDraftXml),
+    [toolboxDraftXml],
+  );
   const nextLesson = useMemo(() => {
     const lessonIndex = unit.lessons.findIndex(l => l.id === lesson.id);
     return lessonIndex >= 0 ? unit.lessons[lessonIndex + 1] : undefined;
@@ -185,7 +216,13 @@ export default function LessonPlayer({
     }
   };
 
+  // Never silently discards an in-progress LevelRail edit — same rule
+  // handleSectionClick already applies to the right panel. The author has
+  // to Save or Discard first (LevelRail's own buttons).
   const selectIndex = (index: number) => {
+    if (levelRailDirty) {
+      return;
+    }
     markLeaving();
     const experience = experiences[index];
     setActiveExperienceId(experience?.id);
@@ -196,6 +233,10 @@ export default function LessonPlayer({
     setPanelDirty(false);
     setSelectedPaintToolId(undefined);
     setMapDraftPatch(undefined);
+    setToolboxDraftXml(undefined);
+    setStartBlocksEditingActive(false);
+    setStartBlocksDraftXml(undefined);
+    setLevelRailDirty(false);
     if (tutorOn && experience) {
       void tutorRef.current?.push({
         kind: 'experience_shown',
@@ -230,8 +271,6 @@ export default function LessonPlayer({
     if (panelSection === section) {
       setPanelDirty(false);
       setPanelSection(undefined);
-      setSelectedPaintToolId(undefined);
-      setMapDraftPatch(undefined);
       return;
     }
     setPanelDirty(false);
@@ -241,8 +280,17 @@ export default function LessonPlayer({
   const handlePanelClose = () => {
     setPanelDirty(false);
     setPanelSection(undefined);
+  };
+
+  // LevelRail's Discard button — resets every lifted level-editing state,
+  // mirroring handlePanelClose for the right panel.
+  const handleLevelRailDiscard = () => {
+    setLevelRailDirty(false);
     setSelectedPaintToolId(undefined);
     setMapDraftPatch(undefined);
+    setToolboxDraftXml(undefined);
+    setStartBlocksEditingActive(false);
+    setStartBlocksDraftXml(undefined);
   };
 
   const onTutorSelect = (
@@ -370,12 +418,22 @@ export default function LessonPlayer({
         )}
 
         {authorMode && (
-          <OutlineRail
+          <LevelRail
             lessonId={lesson.id}
             experiences={experiences}
             activeIndex={activeIndex}
             onSelect={selectIndex}
             onAskAiAt={setInsertPosition}
+            active={active}
+            selectedPaintToolId={selectedPaintToolId}
+            onSelectPaintTool={setSelectedPaintToolId}
+            mapDraftPatch={mapDraftPatch}
+            onToolboxDraftChange={setToolboxDraftXml}
+            startBlocksEditingActive={startBlocksEditingActive}
+            onToggleStartBlocksEditing={setStartBlocksEditingActive}
+            startBlocksDraftXml={startBlocksDraftXml}
+            onDirtyChange={setLevelRailDirty}
+            onDiscard={handleLevelRailDiscard}
           />
         )}
 
@@ -439,6 +497,9 @@ export default function LessonPlayer({
                       onSectionClick={handleSectionClick}
                       selectedPaintToolId={selectedPaintToolId}
                       onMapDraftChange={setMapDraftPatch}
+                      toolboxOverride={toolboxOverride}
+                      startBlocksEditingActive={startBlocksEditingActive}
+                      onStartBlocksChange={setStartBlocksDraftXml}
                     />
                   )
                 ) : (
@@ -492,13 +553,9 @@ export default function LessonPlayer({
           active?.kind === 'existingLevel' && (
             <PropertiesPanel
               key={`${active.id}-${panelSection}`}
-              section={panelSection}
               experience={active}
               onClose={handlePanelClose}
               onDirtyChange={setPanelDirty}
-              selectedPaintToolId={selectedPaintToolId}
-              onSelectPaintTool={setSelectedPaintToolId}
-              mapDraftPatch={mapDraftPatch}
             />
           )}
       </div>

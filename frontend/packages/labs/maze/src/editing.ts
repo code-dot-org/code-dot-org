@@ -22,7 +22,13 @@ import {
   FeatureType as PlanterFeatureType,
   type PlanterCellSerialization,
 } from './PlanterCell';
-import {isBeeSkin, isHarvesterSkin, isPlanterSkin} from './skin';
+import {
+  isBeeSkin,
+  isCollectorSkin,
+  isFarmerSkin,
+  isHarvesterSkin,
+  isPlanterSkin,
+} from './skin';
 import {SquareType} from './tiles';
 
 /** The draft map, `grid[row][col]`. Never a `MazeMap` — painting is plain
@@ -267,4 +273,195 @@ export function paintCell(
 
   next[row][col] = newCell;
   return next;
+}
+
+/**
+ * Toolbox composition (Author Mode Pass C) — the chip-tray palette and the
+ * wire-format XML it composes/decomposes. A palette entry is a full seeded
+ * `<block>` fragment, not a bare type: `blocks.ts`'s field_dropdown blocks
+ * (maze_turn, maze_move, ...) render only their first option when the field
+ * is unspecified, so turnLeft/turnRight (etc.) are distinct entries, mirroring
+ * `TOOLBOX_BLOCK_XML` (apps/authoring-service/src/levels/mazeLevel.ts).
+ *
+ * Scope: this table covers the structural/loop/conditional primitives every
+ * skin shares, plus each skin's own action block(s) (the
+ * `SKIN_ACTION_BLOCKS` set mazeLevel.ts already curates for the AI tool).
+ * It does not enumerate every skin-specific predicate variant the block
+ * library defines (bee_ifOnlyFlower, harvester's per-crop/any-crop
+ * conditionals, collector_ifCollectible/whileCollectible, planter's
+ * at-soil/at-sprout conditionals) — those stay reachable only on levels that
+ * already have them (trayFromToolboxXml below keeps an unrecognised served
+ * block as a pass-through chip, never drops it), just not offered as
+ * "available blocks" to add fresh. A real gap for a later pass, not a
+ * silent one: nothing already in a level's toolbox is lost.
+ */
+export interface ToolboxPaletteEntry {
+  id: string;
+  label: string;
+  xml: string;
+}
+
+const STRUCTURAL_PALETTE: ToolboxPaletteEntry[] = [
+  {id: 'moveForward', label: 'Move forward', xml: '<block type="maze_moveForward"/>'},
+  {
+    id: 'moveBackward',
+    label: 'Move backward',
+    xml: '<block type="maze_move"><field name="DIR">moveBackward</field></block>',
+  },
+  {
+    id: 'turnLeft',
+    label: 'Turn left',
+    xml: '<block type="maze_turn"><field name="DIR">turnLeft</field></block>',
+  },
+  {
+    id: 'turnRight',
+    label: 'Turn right',
+    xml: '<block type="maze_turn"><field name="DIR">turnRight</field></block>',
+  },
+  {id: 'moveNorth', label: 'Move north', xml: '<block type="maze_moveNorth"/>'},
+  {id: 'moveSouth', label: 'Move south', xml: '<block type="maze_moveSouth"/>'},
+  {id: 'moveEast', label: 'Move east', xml: '<block type="maze_moveEast"/>'},
+  {id: 'moveWest', label: 'Move west', xml: '<block type="maze_moveWest"/>'},
+  {
+    id: 'repeat',
+    label: 'Repeat N times',
+    xml: '<block type="controls_repeat_dropdown"><field name="TIMES" config="1-20">3</field></block>',
+  },
+  {id: 'forever', label: 'Repeat until finish', xml: '<block type="maze_forever"/>'},
+  {id: 'untilBlocked', label: 'While path ahead', xml: '<block type="maze_untilBlocked"/>'},
+  {
+    id: 'ifPathAhead',
+    label: 'If path ahead',
+    xml: '<block type="maze_if"><field name="DIR">isPathForward</field></block>',
+  },
+  {
+    id: 'ifElsePathAhead',
+    label: 'If/else path ahead',
+    xml: '<block type="maze_ifElse"><field name="DIR">isPathForward</field></block>',
+  },
+];
+
+// Farmer's pile/hole predicates are a distinct block family (karel_if/
+// karel_ifElse) from the generic path predicates above.
+const FARMER_PALETTE: ToolboxPaletteEntry[] = [
+  {id: 'fill', label: 'Fill hole', xml: '<block type="maze_fill"/>'},
+  {id: 'dig', label: 'Dig pile', xml: '<block type="maze_dig"/>'},
+  {
+    id: 'ifPilePresent',
+    label: 'If there is a pile',
+    xml: '<block type="karel_if"><field name="DIR">pilePresent</field></block>',
+  },
+  {
+    id: 'ifElsePilePresent',
+    label: 'If/else there is a pile',
+    xml: '<block type="karel_ifElse"><field name="DIR">pilePresent</field></block>',
+  },
+];
+
+const BEE_PALETTE: ToolboxPaletteEntry[] = [
+  {id: 'getNectar', label: 'Get nectar', xml: '<block type="maze_nectar"/>'},
+  {id: 'makeHoney', label: 'Make honey', xml: '<block type="maze_honey"/>'},
+];
+
+const COLLECTOR_PALETTE: ToolboxPaletteEntry[] = [
+  {id: 'collect', label: 'Collect', xml: '<block type="collector_collect"/>'},
+];
+
+const HARVESTER_PALETTE: ToolboxPaletteEntry[] = [
+  {id: 'harvestCorn', label: 'Pick corn', xml: '<block type="harvester_corn"/>'},
+  {id: 'harvestPumpkin', label: 'Pick pumpkin', xml: '<block type="harvester_pumpkin"/>'},
+  {id: 'harvestLettuce', label: 'Pick lettuce', xml: '<block type="harvester_lettuce"/>'},
+];
+
+const PLANTER_PALETTE: ToolboxPaletteEntry[] = [
+  {id: 'plant', label: 'Plant', xml: '<block type="planter_plant"/>'},
+];
+
+/** The blocks this skin's author can add to the student toolbox. */
+export function getToolboxPalette(skinId: string): ToolboxPaletteEntry[] {
+  if (isFarmerSkin(skinId)) {
+    return [...STRUCTURAL_PALETTE, ...FARMER_PALETTE];
+  }
+  if (isBeeSkin(skinId)) {
+    return [...STRUCTURAL_PALETTE, ...BEE_PALETTE];
+  }
+  if (isCollectorSkin(skinId)) {
+    return [...STRUCTURAL_PALETTE, ...COLLECTOR_PALETTE];
+  }
+  if (isHarvesterSkin(skinId)) {
+    return [...STRUCTURAL_PALETTE, ...HARVESTER_PALETTE];
+  }
+  if (isPlanterSkin(skinId)) {
+    return [...STRUCTURAL_PALETTE, ...PLANTER_PALETTE];
+  }
+  return STRUCTURAL_PALETTE;
+}
+
+/** One chip in the student-toolbox tray. `xml` is the block fragment as it
+ * will be written to `toolboxBlocksXml` — for a palette match this is the
+ * palette's canonical seed; for a block already on the level that the
+ * palette does not recognise, it is that block's own served fragment
+ * (verbatim, `limit=` and all), so nothing already authored is lost. */
+export interface ToolboxTrayEntry {
+  id: string;
+  label: string;
+  xml: string;
+}
+
+let trayEntrySeq = 0;
+
+// Match a served `<block>` element against the palette by type, and by DIR
+// field value when the palette disambiguates on it (turnLeft vs turnRight,
+// etc.) — the same field the palette itself seeds.
+function matchPaletteEntry(
+  blockEl: Element,
+  palette: ToolboxPaletteEntry[],
+): ToolboxPaletteEntry | undefined {
+  const type = blockEl.getAttribute('type');
+  const dirField = Array.from(blockEl.children).find(
+    el => (el.tagName === 'field' || el.tagName === 'title') &&
+      el.getAttribute('name') === 'DIR',
+  )?.textContent;
+  return palette.find(entry => {
+    const entryDoc = new DOMParser().parseFromString(entry.xml, 'text/xml');
+    const entryEl = entryDoc.documentElement;
+    if (entryEl.getAttribute('type') !== type) {
+      return false;
+    }
+    const entryDir = Array.from(entryEl.children).find(
+      el => el.tagName === 'field' && el.getAttribute('name') === 'DIR',
+    )?.textContent;
+    return entryDir === undefined ? dirField === undefined : entryDir === dirField;
+  });
+}
+
+/** Parses a served `toolboxBlocksXml` into the tray's ordered chip list,
+ * seeding the panel with the level's current student toolbox. Blocks the
+ * palette does not recognise become pass-through chips (see
+ * ToolboxTrayEntry) rather than being silently dropped. */
+export function trayFromToolboxXml(
+  xmlString: string,
+  skinId: string,
+): ToolboxTrayEntry[] {
+  const parser = new DOMParser();
+  const xml = parser.parseFromString(xmlString, 'text/xml');
+  const palette = getToolboxPalette(skinId);
+  const serializer = new XMLSerializer();
+  return Array.from(xml.documentElement.children)
+    .filter(el => el.tagName === 'block')
+    .map(el => {
+      const match = matchPaletteEntry(el, palette);
+      return {
+        id: match?.id ?? `custom-${el.getAttribute('type')}-${trayEntrySeq++}`,
+        label: match?.label ?? el.getAttribute('type') ?? 'block',
+        xml: serializer.serializeToString(el),
+      };
+    });
+}
+
+/** Composes the tray's ordered chip list back into `toolboxBlocksXml` — the
+ * inverse of trayFromToolboxXml, and what drives both the Save patch and
+ * (via convertBlocklyXmlToToolbox) the live flyout during editing. */
+export function toolboxXmlFromTray(entries: ToolboxTrayEntry[]): string {
+  return `<xml>${entries.map(entry => entry.xml).join('')}</xml>`;
 }
