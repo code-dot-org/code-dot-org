@@ -194,3 +194,43 @@ align-items: flex-start;
 gap: 8px;
 align-self: stretch;
 }
+
+.challengePickerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  min-height: 0;
+}
+
+.challengeCarousel {
+  display:flex;
+  flex-direction: row;
+  min-height: 300px;
+  gap: 20px;
+}
+
+.challengePickerText {
+  display: flex;
+  width: 600px;
+}
+
+.challengePickerButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.challengeTypeButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-basis: 0;
+  flex-grow: 1;
+
+  &.Selected {
+    border-color: var(--borders-brand-purple-strong) !important;
+  }
+}
