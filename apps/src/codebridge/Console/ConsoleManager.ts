@@ -85,14 +85,14 @@ export default class ConsoleManager {
     this.terminalFitAddon = terminalFitAddon;
   }
 
-  // xterm ships .live-region as assertive, so writes interrupt the screen
-  // reader. Its parent also holds the browsable row list.
   // Writing focuses the terminal for programs asking for input. Validation
   // never asks, so it should leave focus alone.
   public setFocusOnWrite(focusOnWrite: boolean) {
     this.focusOnWrite = focusOnWrite;
   }
 
+  // xterm ships .live-region as assertive, so writes interrupt the screen
+  // reader. Its parent also holds the browsable row list.
   public setPoliteScreenReaderAnnouncements() {
     this.terminal.element
       ?.querySelector('.xterm-accessibility .live-region')

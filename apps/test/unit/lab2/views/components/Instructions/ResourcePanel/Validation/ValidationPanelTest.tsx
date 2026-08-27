@@ -63,8 +63,6 @@ describe('ValidationPanel', () => {
     </Provider>
   );
 
-  const buttonAnnouncer = () =>
-    screen.getByRole('button').closest('[role="status"]');
   const resultsTable = () =>
     screen.getByRole('table', {name: 'Validation Results'});
 
@@ -74,16 +72,23 @@ describe('ValidationPanel', () => {
     });
   }
 
-  it('announces a run starting by swapping the button', async () => {
+  it('announces that a run has started', async () => {
     setResults();
     const {rerender} = render(panel(false));
-    expect(buttonAnnouncer()).toHaveTextContent('Validate');
+    expect(screen.queryByText('Validating')).toBeNull();
 
     rerender(panel(true));
 
-    await waitFor(() =>
-      expect(buttonAnnouncer()).toHaveTextContent('Stop validation')
-    );
+    expect(await screen.findByText('Validating')).toBeInTheDocument();
+  });
+
+  // The button swaps back to "Validate" at the end of a run. Announcing that
+  // would talk over the results, so the button must not be a live region.
+  it('does not announce the button label', () => {
+    setResults();
+    render(panel(false));
+
+    expect(screen.getByRole('button').closest('[role="status"]')).toBeNull();
   });
 
   // Nothing else moves focus, so losing the button drops the user on the body.
@@ -101,12 +106,31 @@ describe('ValidationPanel', () => {
     expect(screen.getByRole('button')).toHaveFocus();
   });
 
-  it('reads the results out once a run finishes', () => {
+  it('reads the results out once a run finishes', async () => {
     setResults([SKIPPED]);
     render(panel());
 
     expect(
-      screen.getByText('Painter should end at (3, 3): Skip')
+      await screen.findByText('Painter should end at (3, 3): Skip')
+    ).toBeInTheDocument();
+  });
+
+  // A rerun on unchanged code produces the same text, so it only announces
+  // because the pending pass empties the region in between.
+  it('reads the results out again when a rerun gives the same answer', async () => {
+    setResults([SKIPPED]);
+    render(panel());
+    await screen.findByText('Painter should end at (3, 3): Skip');
+
+    setResults([PENDING]);
+    await waitFor(() =>
+      expect(screen.queryByText(/Painter should end at \(3, 3\):/)).toBeNull()
+    );
+
+    setResults([SKIPPED]);
+
+    expect(
+      await screen.findByText('Painter should end at (3, 3): Skip')
     ).toBeInTheDocument();
   });
 

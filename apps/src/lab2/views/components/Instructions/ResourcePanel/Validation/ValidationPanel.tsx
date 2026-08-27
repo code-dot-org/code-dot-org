@@ -1,3 +1,4 @@
+import {ToastAnnouncer} from '@code-dot-org/component-library/toast';
 import React from 'react';
 
 import ValidationButton from '@cdo/apps/lab2/views/components/Instructions/ValidationButton';
@@ -34,11 +35,16 @@ const ValidationPanel: React.FC<ValidationSettings> = ({
   // Tests read PENDING while a run is in flight, so wait for the last one.
   const hasFinished =
     results.length > 0 && results.every(result => result.result !== 'PENDING');
-  const spokenResults = hasFinished
-    ? results
-        .map(result => `${result.message}: ${getTranslatedResult(result)}`)
-        .join('. ')
-    : '';
+
+  // One region covers the whole run: the start, then the outcome.
+  let announcement: string | null = null;
+  if (isValidating) {
+    announcement = 'Validating';
+  } else if (hasFinished) {
+    announcement = results
+      .map(result => `${result.message}: ${getTranslatedResult(result)}`)
+      .join('. ');
+  }
 
   return (
     <div className={validationStyles.validationPanel}>
@@ -46,8 +52,7 @@ const ValidationPanel: React.FC<ValidationSettings> = ({
         <div id={resourcePanelValidationTableElementId}>
           <ValidationTable />
         </div>
-        {/* The button swaps to "Stop validation", which announces the run. */}
-        <div id={resourcePanelValidateButtonElementId} role="status">
+        <div id={resourcePanelValidateButtonElementId}>
           <ValidationButton
             onValidate={onValidate}
             onStopValidation={onStopValidation}
@@ -56,10 +61,8 @@ const ValidationPanel: React.FC<ValidationSettings> = ({
           />
         </div>
       </div>
-      {/* Speaks the outcome; the table is there to be navigated. */}
-      <div role="status" className={validationStyles.srOnly}>
-        {spokenResults}
-      </div>
+      {/* Speaks the run; the table is there to be navigated. */}
+      <ToastAnnouncer message={announcement} />
     </div>
   );
 };
