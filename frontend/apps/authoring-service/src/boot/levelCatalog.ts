@@ -1,11 +1,21 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
+import {
+  buildFishLevelProperties,
+  buildMazeLevelProperties,
+  buildMusicLevelProperties,
+} from '@code-dot-org/authoring';
+
 import type {
   ExistingLevelExperience,
   ParsedLevel,
   ParseLevelXml,
 } from '../authoring/model.js';
+
+// mazeLevel.ts's draft-level path attaches through this same builder — see
+// its import of buildMazeLevelProperties from this module.
+export {buildMazeLevelProperties};
 
 export interface LevelCatalogEntry {
   levelKey: string;
@@ -157,13 +167,10 @@ export class LevelCatalog {
  * LevelProperties wire shape for a lazily-attached level. Fish and Music
  * reach the real LabHost, whose client-side zod schema requires
  * `appName: z.enum(ProjectTypes)` — so those two types get the full shape
- * the importer builds at course-import time, not a raw properties passthrough.
- *
- * Mirrors buildFishLevelProperties/buildMusicLevelProperties in
- * frontend/packages/authoring/src/importer/buildCourse.ts, the source of
- * truth for this shape. Not imported from there because that package doesn't
- * export those two helpers (only the whole-course `buildCourse`); duplicated
- * here rather than changing authoring's public API for this fix.
+ * `@code-dot-org/authoring`'s shared builders produce, not a raw properties
+ * passthrough. Those builders are also what buildCourse.ts's eager
+ * whole-course import uses, so a level attached lazily here and one imported
+ * up front get byte-identical LevelProperties.
  */
 function buildLevelProperties(
   levelType: string,
@@ -189,106 +196,6 @@ function buildLevelProperties(
         type: levelType,
       };
   }
-}
-
-function buildFishLevelProperties(
-  id: number,
-  levelKey: string,
-  properties: Record<string, unknown>,
-): Record<string, unknown> {
-  return {
-    id,
-    appName: 'fish',
-    type: 'Oceans',
-    name: levelKey,
-    appMode: properties.mode,
-    isProjectLevel: false,
-    usesProjects: false,
-    hideShareAndRemix: true,
-    offerBrowserTts: false,
-    showExemplarLink: false,
-    parentLevelLink: null,
-    exemplarSources: null,
-    longInstructions: properties.long_instructions,
-    shortInstructions: properties.short_instructions,
-  };
-}
-
-// Mirrors the comment on buildMusicLevelProperties in
-// frontend/packages/authoring/src/importer/buildCourse.ts — the mounted
-// music-lab self-renders longInstructions whenever it's set, so the studio
-// host skips its own readonly preview but still needs these wired through.
-function buildMusicLevelProperties(
-  id: number,
-  levelKey: string,
-  properties: Record<string, unknown>,
-): Record<string, unknown> {
-  return {
-    id,
-    appName: 'music',
-    type: 'Music',
-    name: levelKey,
-    isProjectLevel: false,
-    usesProjects: false,
-    encrypted: false,
-    levelData: properties.level_data ?? null,
-    hideShareAndRemix: true,
-    longInstructions: properties.long_instructions,
-    shortInstructions: properties.short_instructions,
-    instructionsImportant: false,
-    offerBrowserTts: false,
-    useSecondaryFinishButton: false,
-    preloadAssetList: false,
-    containedLevelNames: [],
-    helpVideos: [],
-    useRestrictedSongs: true,
-    baseAssetUrl: '/blockly/',
-    isAssessment: false,
-    enableBlocklyKeyboardNavigation: false,
-    showExemplarLink: false,
-    parentLevelLink: null,
-    exemplarSources: null,
-    sharedBlocks: [],
-  };
-}
-
-/**
- * LevelProperties for a Maze/Karel-family level. Mirrors
- * buildMazeLevelProperties in
- * frontend/packages/authoring/src/importer/buildCourse.ts — see that
- * function's comment for why blocks stay raw XML here (converted client-side
- * by the maze-lab studio adapter, which has a browser DOMParser).
- */
-export function buildMazeLevelProperties(
-  id: number,
-  levelKey: string,
-  levelType: string,
-  parsed: ParsedLevel,
-): Record<string, unknown> {
-  const properties = parsed.properties ?? {};
-  return {
-    ...properties,
-    id,
-    appName: 'maze',
-    type: levelType,
-    name: levelKey,
-    isProjectLevel: false,
-    usesProjects: false,
-    hideShareAndRemix: true,
-    offerBrowserTts: false,
-    showExemplarLink: false,
-    parentLevelLink: null,
-    exemplarSources: null,
-    longInstructions: properties.long_instructions,
-    shortInstructions: properties.short_instructions,
-    skin: properties.skin,
-    ideal: properties.ideal,
-    startDirection: properties.start_direction,
-    startBlocksXml: parsed.startBlocksXml,
-    toolboxBlocksXml: parsed.toolboxBlocksXml,
-    solutionBlocksXml: parsed.solutionBlocksXml,
-    recommendedBlocksXml: parsed.recommendedBlocksXml,
-  };
 }
 
 /**
