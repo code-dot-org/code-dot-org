@@ -10,7 +10,6 @@ import {
   poseFrameDelay,
   poseKey,
   posesByImageName,
-  teeterFrame,
   teeterTicks,
 } from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 
@@ -65,7 +64,7 @@ describe('SpriteLab2 characterAnimations', () => {
     expect(pick(true, true, 'right')).toMatchObject({key: 'jump-right'});
   });
 
-  it('holds back in the jump frames when stopped at an edge, once through', () => {
+  it('holds back in the jump pose when stopped at an edge, for one play of it', () => {
     const still = {moving: false, airborne: false, facing: 'left' as const};
     expect(pickPose(fullSet, {...still, teetering: true})).toMatchObject({
       key: 'jump-left',
@@ -76,11 +75,7 @@ describe('SpriteLab2 characterAnimations', () => {
     ).toMatchObject({
       key: 'walk-left',
     });
-    const range = fullSet['jump-right']!;
-    expect(teeterTicks(range)).toBe(16);
-    expect([0, 7, 8, 15, 40].map(tick => teeterFrame(range, tick))).toEqual([
-      10, 10, 11, 11, 11,
-    ]);
+    expect(teeterTicks(fullSet['jump-right']!)).toBe(16);
   });
 
   it('falls back to standing the same way before anything facing the other way', () => {

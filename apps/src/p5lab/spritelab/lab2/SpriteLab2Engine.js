@@ -23,7 +23,6 @@ import {
   pickPose,
   poseFrame,
   posesByImageName,
-  teeterFrame,
   teeterTicks,
 } from './characterAnimations';
 import {trimAnimationListImages} from './imageTrim';
@@ -776,8 +775,8 @@ export default class SpriteLab2Engine extends SpriteLab {
    * moved. The sheet holds every pose, so this drives the frame index
    * itself (p5.play would run the whole sheet end to end) and the sprite
    * never changes costume. A player that stops with its toes over a drop
-   * holds back from the edge: the jump frames once through, then standing;
-   * moving again re-arms it. Only players can be airborne: patrollers and
+   * holds back from the edge: the jump pose's first frame for a moment,
+   * then standing; moving again re-arms it. Only players can be airborne: patrollers and
    * props ride the stock resolver and would read as jumping at every seam.
    */
   updateCharacterAnimations_() {
@@ -863,7 +862,7 @@ export default class SpriteLab2Engine extends SpriteLab {
             pick.range.count - 1
           );
       } else if (pick.pose === 'jump') {
-        frame = teeterFrame(pick.range, state.tick);
+        frame = pick.range.start;
         if (state.tick + 1 >= teeterTicks(pick.range)) {
           state.teetering = false;
         }
