@@ -86,7 +86,7 @@ export const TILES: readonly Tile[] = [
         trace: [{seconds: 0.1}],
       },
       passes: ({samples}) =>
-        last(samples.actors) >= 2 && last(samples.drawn) >= 2,
+        lastNumber(samples.actors) >= 2 && lastNumber(samples.drawn) >= 2,
     },
   },
 
@@ -187,9 +187,30 @@ export const TILES: readonly Tile[] = [
     unlocks: [{kind: 'rule', id: 'motion'}],
     check: {
       kind: 'outcome',
-      says: 'The actor’s position changes over time with no per-frame block in the workspace.',
+      says: 'The actor’s position changes over time, and nothing is setting its position by hand.',
       falsePass:
         'None worth the name — the shape half of this check is what the lesson is.',
+      run: {
+        probes: {hero: {kind: 'positions', of: 'Hero'}},
+        trace: [{seconds: 1}],
+      },
+      // BOTH halves, and the second is why this one has an `inspect` at all:
+      // the project the lesson starts with already moves. What makes the lesson
+      // done is that it moves with the hand-written `each frame` gone.
+      passes: ({samples}) => {
+        const [start, after] = samples.hero as Point[][];
+        return Boolean(start?.[0]) && Math.abs(after[0].x - start[0].x) > 20;
+      },
+      // NOT "no `each frame`". Setting a velocity every frame in `decide` is
+      // how the Arrow Keys rule itself moves an actor, and a learner who does
+      // the lesson that way has done the lesson. What the lesson replaces is
+      // moving by PLACE — so that is what the shape half looks for.
+      inspect: files =>
+        !Object.entries(files).some(
+          ([path, contents]) =>
+            path.startsWith('actors/') &&
+            contents.includes('world_set_position'),
+        ),
     },
   },
   {
@@ -495,7 +516,9 @@ export const TILES: readonly Tile[] = [
       kind: 'outcome',
       says: 'The actor draws a sprite the project holds, and the file was edited after it was imported.',
       falsePass:
-        'Importing and not painting. The edit is the second half and is checked separately.',
+        'Importing and not painting — which this check cannot see, because nothing records when a picture was last touched. The check is weaker than the lesson, and this is where that is written down.',
+      run: {probes: {drawn: {kind: 'sprites'}}, trace: [{seconds: 0.1}]},
+      passes: ({samples}) => lastList<string>(samples.drawn).length > 0,
     },
   },
   {
@@ -598,6 +621,21 @@ export const TILES: readonly Tile[] = [
       says: 'All three land within tolerance of where they were asked to be.',
       falsePass:
         'Dragging them into place in the map editor. The lesson has no map file.',
+      run: {
+        probes: {markers: {kind: 'positions', of: 'Marker'}},
+        trace: [{seconds: 0.1}],
+      },
+      // The world is 12 by 9 tiles of 32 — 384 across, 288 down. "Top left" and
+      // "bottom right" are quadrants rather than points: the lesson names two
+      // corners and a middle, and where exactly is the learner's business.
+      passes: ({samples}) => {
+        const markers = lastList<Point>(samples.markers);
+        return (
+          markers.length >= 3 &&
+          markers.some(at => at.x < 128 && at.y < 96) &&
+          markers.some(at => at.x > 256 && at.y > 192)
+        );
+      },
     },
   },
   {
@@ -1377,8 +1415,20 @@ interface Point {
   y: number;
 }
 
-/** The last sample a probe took — where the world ended up. */
-const last = (samples: unknown[] | undefined): number =>
-  typeof samples?.[samples.length - 1] === 'number'
-    ? (samples[samples.length - 1] as number)
-    : -1;
+/**
+ * The last sample a probe took — where the world ended up.
+ *
+ * Two, not one with an overload: a probe answers with a count or with a list,
+ * and a caller always knows which it asked for. An absent sample reads as -1 or
+ * as nothing rather than as `undefined`, so a comparison against it is false
+ * instead of a thrown error inside somebody's lesson.
+ */
+const lastNumber = (samples: unknown[] | undefined): number => {
+  const value = samples?.[samples.length - 1];
+  return typeof value === 'number' ? value : -1;
+};
+
+const lastList = <T>(samples: unknown[] | undefined): T[] => {
+  const value = samples?.[samples.length - 1];
+  return Array.isArray(value) ? (value as T[]) : [];
+};

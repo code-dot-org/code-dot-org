@@ -508,13 +508,23 @@ anything depends on it.
    its own module. A check tested against a different runner from the one that
    judges a learner is a check nobody has tested.
 
-   **Three lessons have real checks so far** (`origin/first-world`,
-   `input/arrows`, `motion/gravity`), and two are tested in both directions:
-   they refuse the starter the lesson ships with AND accept a project where the
-   lesson has been done, which no amount of refusing proves on its own. Gravity
-   also has a third case — the Hero elected and the Ground not, so it falls
-   forever — because "falls" and "lands" are two claims and one sample at the
-   end cannot tell them apart.
+   **All six authored lessons have checks**, and every one is tested in both
+   directions: it refuses the starter the lesson ships with AND accepts a
+   project where the lesson has been done, which no amount of refusing proves on
+   its own. Three also have a HALFWAY case, because a check that stops at the
+   first thing the lesson asks for calls it done halfway — gravity with the Hero
+   elected and the Ground not, so it falls forever; the arrow keys with only
+   "Moves Across"; speed with a velocity added and the hand-written handler
+   still there.
+
+   One check has a **workspace half** as well as a played one, and it is the
+   case that shows why `shape` evidence has a use: `motion/speed`'s starter
+   ALREADY crosses the screen, so "it moves" is true before the lesson begins.
+   What the lesson changes is HOW, and that is a fact about the file. The first
+   version of that half banned `each frame` outright and was wrong — setting a
+   velocity every frame is how the Arrow Keys rule itself moves an actor, and a
+   learner who does it that way has done the lesson. What it looks for now is
+   moving by PLACE, which is the thing being replaced.
 
    Writing that test found **a bug in the lesson**: the Hero was placed at x 160
    and the floor at 192, and two 32-pixel sprites at those positions overlap by
@@ -528,10 +538,23 @@ anything depends on it.
    beside it: a check is evidence, not a gate, and a learner who has plainly
    done the lesson should not be argued with by a probe.
 
-   Still to do: checks for the other three authored lessons, the trace kind (the
-   channel carries the project's console output and no check reads it yet), and
-   the studio-level transport — which is blocked outside this package entirely,
-   on there being no `World < Level` model in `dashboard/app/models/levels/`.
+   The project's own `console.log` is captured by the shared runner and travels
+   back with the samples, so the `trace` kind is available; no check reads it
+   yet, and the first one that wants to (gravity's "print something when it
+   lands") can.
+
+   Still to do: **the studio-level transport**, which is blocked outside this
+   package entirely — there is no `World < Level` model in
+   `dashboard/app/models/levels/` and no `.level` files, so a tile cannot be a
+   studio level until somebody writes the model and a generator that emits one
+   per tile from the catalogue.
+
+   And one behaviour that wants a decision rather than a default: a tile that is
+   SHUT can still be checked and completed, because a lesson's URL opens
+   directly and refusing to check a learner who is plainly doing the lesson
+   would be perverse. It leaves the tree able to hold a tile that is done whose
+   prerequisite is not, which is consistent with "an edge means readiness, not
+   possession" and is still worth somebody saying out loud.
 
 ## Open questions
 

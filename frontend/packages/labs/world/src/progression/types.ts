@@ -135,6 +135,18 @@ export interface Check {
    * the side that holds the catalogue decides what they mean.
    */
   passes?: (result: CheckResult) => boolean;
+  /**
+   * Whether the WORKSPACE passes, alongside what the world did.
+   *
+   * The `shape` evidence specs/PROGRESSION.md ranks lowest, used here as a
+   * RIDER on an outcome rather than instead of one — "it moves" is true of the
+   * project `motion/speed` starts with, and what makes the lesson done is that
+   * it moves with the hand-written handler gone. Reading the workspace needs no
+   * sandbox at all: the lab has the files.
+   *
+   * Keyed by path (`actors/hero.actor`), holding each file's contents as saved.
+   */
+  inspect?: (files: Record<string, string>) => boolean;
 }
 
 export interface Tile {

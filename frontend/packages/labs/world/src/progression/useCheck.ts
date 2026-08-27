@@ -7,6 +7,10 @@
 
 import {useCallback, useState} from 'react';
 
+import type {MultiFileSource} from '@code-dot-org/core/api';
+import {useSources} from '@code-dot-org/lab/contexts';
+
+import {projectFiles} from '../runtime/projectFiles';
 import {useMaybeWorldRuntime} from '../runtime/WorldRuntimeContext';
 
 import {useProgression} from './progressionContext';
@@ -32,6 +36,7 @@ export interface Checker {
 
 export const useCheck = (): Checker => {
   const runtime = useMaybeWorldRuntime();
+  const {currentSources} = useSources<MultiFileSource>();
   const {complete} = useProgression();
   const [state, setState] = useState<CheckState>({status: 'idle'});
 
@@ -47,6 +52,16 @@ export const useCheck = (): Checker => {
         return;
       }
       setState({status: 'running'});
+      // The workspace half first, if there is one: it needs no sandbox, and a
+      // learner who has not made the change yet should not wait two seconds of
+      // simulated world to be told so.
+      if (
+        check.inspect &&
+        !check.inspect(projectFiles(currentSources.source))
+      ) {
+        setState({status: 'failed'});
+        return;
+      }
       const result = await runtime.runCheck(check.run);
       if (result.error) {
         // A project that throws has failed, and the message is the most useful
@@ -61,7 +76,7 @@ export const useCheck = (): Checker => {
         setState({status: 'failed'});
       }
     },
-    [runtime, complete],
+    [runtime, complete, currentSources],
   );
 
   return {state, canCheck, run, reset: () => setState({status: 'idle'})};

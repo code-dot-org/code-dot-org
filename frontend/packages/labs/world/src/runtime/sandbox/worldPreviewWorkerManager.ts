@@ -234,17 +234,7 @@ export async function start(): Promise<void> {
    * else's code, as small as it can be.
    */
   async function runCheck({id, moduleUrl, assets, run}: CheckMessage) {
-    const said: string[] = [];
     let result: CheckResult = {samples: {}, console: []};
-
-    // The project's own `console.log` is evidence — several checks watch for a
-    // word (specs/PROGRESSION.md) — and it must not also reach the lab's
-    // console panel, where it would read as output from the game the learner is
-    // looking at.
-    const realLog = console.log;
-    console.log = (...args: unknown[]) => {
-      said.push(args.map(String).join(' '));
-    };
     try {
       lastAssets = assets ?? lastAssets;
       const mod: {default?: WorldBuilder} = await import(
@@ -265,16 +255,9 @@ export async function start(): Promise<void> {
         console: [],
         error: thrown instanceof Error ? thrown.message : String(thrown),
       };
-    } finally {
-      console.log = realLog;
     }
 
-    post({
-      type: FromPreviewMessage.CHECK_RESULT,
-      id,
-      ...result,
-      console: said,
-    });
+    post({type: FromPreviewMessage.CHECK_RESULT, id, ...result});
   }
 
   /**

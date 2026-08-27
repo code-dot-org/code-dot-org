@@ -63,6 +63,16 @@ export function readProbe(world: World, probe: Probe): unknown {
  * crashes has failed its check, and the message is usually the actual mistake.
  */
 export function playCheck(world: World, run: CheckRun): CheckResult {
+  // The project's own `console.log` is evidence: a lesson that asks for a
+  // message printed is checked by reading it (specs/PROGRESSION.md, the `trace`
+  // kind). Captured HERE rather than only in the sandbox, or the runner the
+  // tests use would report a silence the real one does not.
+  const said: string[] = [];
+  const realLog = console.log;
+  console.log = (...args: unknown[]) => {
+    said.push(args.map(String).join(' '));
+  };
+
   const samples: Record<string, unknown[]> = {};
   for (const name of Object.keys(run.probes)) {
     samples[name] = [];
@@ -86,9 +96,11 @@ export function playCheck(world: World, run: CheckRun): CheckResult {
   } catch (thrown) {
     return {
       samples,
-      console: [],
+      console: said,
       error: thrown instanceof Error ? thrown.message : String(thrown),
     };
+  } finally {
+    console.log = realLog;
   }
-  return {samples, console: []};
+  return {samples, console: said};
 }
