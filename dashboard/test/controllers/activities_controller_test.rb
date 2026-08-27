@@ -605,108 +605,124 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response 503
   end
 
-  test "anonymous milestone starting with empty session saves progress in section" do
-    sign_out @user
-
-    assert_creates(LevelSource) do
-      assert_does_not_create(Activity, UserLevel) do
-        post :milestone, params: @milestone_params.merge(user_id: 0)
+  describe '#milestone' do
+    context 'when there is no current user' do
+      before do
+        sign_out @user
+        session[:statsig_stable_id] = 'anonymous-stable-id'
       end
-    end
 
-    assert_response :success
-
-    expected_response = build_expected_response(
-      {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
-    )
-    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
-  end
-
-  test "anonymous milestone with existing session adds progress in session" do
-    sign_out @user
-
-    # set up existing session
-    client_state.set_level_progress(@script_level_prev, 50)
-
-    assert_creates(LevelSource) do
-      assert_does_not_create(Activity, UserLevel) do
-        post :milestone, params: @milestone_params.merge(user_id: 0)
-      end
-    end
-
-    assert_response :success
-
-    expected_response = build_expected_response(
-      {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
-    )
-    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
-  end
-
-  test "anonymous milestone not passing" do
-    sign_out @user
-
-    assert_creates(LevelSource) do
-      assert_does_not_create(Activity, UserLevel) do
-        post :milestone,
-          params: @milestone_params.merge(
-            user_id: 0, result: "false",
-            testResult: "0"
+      def expect_anonymous_level_progress_tracking(new_result:)
+        Services::AnonymousLevelProgress::Tracker.expects(:call).with(
+          has_entries(
+            stable_id: 'anonymous-stable-id',
+            script_id: @script.id,
+            level_id: @level.id,
+            unit_group_id: @script.original_unit_group_id,
+            level_source_id: kind_of(Integer),
+            submitted: false,
+            new_result: new_result,
+            time_spent: 20,
+            locale: I18n.locale,
           )
+        ).once
+      end
+
+      it 'saves progress from an empty session' do
+        expect_anonymous_level_progress_tracking(new_result: 100)
+
+        assert_creates(LevelSource) do
+          assert_does_not_create(Activity, UserLevel) do
+            post :milestone, params: @milestone_params.merge(user_id: 0)
+          end
+        end
+
+        _(@response).must_be :successful?
+
+        expected_response = build_expected_response(
+          {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
+        )
+        assert_equal_expected_keys expected_response, JSON.parse(@response.body)
+      end
+
+      it 'adds progress to an existing session' do
+        client_state.set_level_progress(@script_level_prev, 50)
+        expect_anonymous_level_progress_tracking(new_result: 100)
+
+        assert_creates(LevelSource) do
+          assert_does_not_create(Activity, UserLevel) do
+            post :milestone, params: @milestone_params.merge(user_id: 0)
+          end
+        end
+
+        _(@response).must_be :successful?
+
+        expected_response = build_expected_response(
+          {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
+        )
+        assert_equal_expected_keys expected_response, JSON.parse(@response.body)
+      end
+
+      it 'saves a failed attempt' do
+        expect_anonymous_level_progress_tracking(new_result: 0)
+
+        assert_creates(LevelSource) do
+          assert_does_not_create(Activity, UserLevel) do
+            post :milestone,
+              params: @milestone_params.merge(
+                user_id: 0, result: "false",
+                testResult: "0"
+              )
+          end
+        end
+
+        _(client_state.level_progress(@script_level)).must_equal 0
+
+        _(@response).must_be :successful?
+        assert_equal_expected_keys build_try_again_response, JSON.parse(@response.body)
+      end
+
+      it 'saves an image' do
+        client_state.set_level_progress(@script_level_prev, 50)
+        expect_anonymous_level_progress_tracking(new_result: 100)
+        expect_s3_upload
+
+        assert_creates(LevelSource, LevelSourceImage) do
+          assert_does_not_create(Activity, UserLevel) do
+            post :milestone,
+              params: @milestone_params.merge(
+                user_id: 0,
+                image: Base64.encode64(@good_image)
+              )
+          end
+        end
+
+        _(@response).must_be :successful?
+
+        expected_response = build_expected_response(
+          {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
+        )
+        assert_equal_expected_keys expected_response, JSON.parse(@response.body)
+      end
+
+      it 'does not save an image when its upload fails' do
+        client_state.set_level_progress(@script_level_prev, 50)
+        expect_anonymous_level_progress_tracking(new_result: 100)
+        expect_s3_upload_failure
+
+        assert_creates(LevelSource) do
+          assert_does_not_create(Activity, UserLevel, LevelSourceImage) do
+            post :milestone,
+              params: @milestone_params.merge(
+                user_id: 0,
+                image: Base64.encode64(@good_image)
+              )
+          end
+        end
+
+        _(assigns(:level_source_image)).must_be_nil
       end
     end
-
-    # record activity in session
-    assert_equal 0, client_state.level_progress(@script_level)
-
-    assert_response :success
-    assert_equal_expected_keys build_try_again_response, JSON.parse(@response.body)
-  end
-
-  test "anonymous milestone with image saves image" do
-    sign_out @user
-
-    # set up existing session
-    client_state.set_level_progress(@script_level_prev, 50)
-
-    expect_s3_upload
-
-    assert_creates(LevelSource, LevelSourceImage) do
-      assert_does_not_create(Activity, UserLevel) do
-        post :milestone,
-          params: @milestone_params.merge(
-            user_id: 0,
-            image: Base64.encode64(@good_image)
-          )
-      end
-    end
-
-    assert_response :success
-
-    expected_response = build_expected_response(
-      {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
-    )
-    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
-  end
-
-  test "does not save image when s3 upload fails" do
-    sign_out @user
-
-    # set up existing session
-    client_state.set_level_progress(@script_level_prev, 50)
-
-    expect_s3_upload_failure
-
-    assert_creates(LevelSource) do
-      assert_does_not_create(Activity, UserLevel, LevelSourceImage) do
-        post :milestone,
-          params: @milestone_params.merge(
-            user_id: 0,
-            image: Base64.encode64(@good_image)
-          )
-      end
-    end
-
-    assert_nil assigns(:level_source_image)
   end
 
   test 'sharing program with swear word returns error' do

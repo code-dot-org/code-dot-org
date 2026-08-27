@@ -122,11 +122,7 @@ class ActivitiesController < ApplicationController
       @level_source_image = find_or_create_level_source_image(params[:image], @level_source)
 
       @new_level_completed = false
-      if current_user
-        track_progress_for_user if @script_level
-      else
-        track_progress_in_session
-      end
+      track_progress
 
       # If a student is submitting work on an AI-enabled level, and their teachers haven't opted-out, trigger the AI evaluation job.
       is_ai_enabled = current_user && Policies::Ai.ai_rubrics_enabled_for_script_level?(current_user, @script_level)
@@ -159,27 +155,48 @@ class ActivitiesController < ApplicationController
     )
   end
 
-  private def track_progress_for_user
-    authorize! :create, Activity
-    authorize! :create, UserLevel
+  private def track_progress
+    if current_user
+      authorize! :create, Activity
+      authorize! :create, UserLevel
+    end
 
     test_result = params[:testResult].to_i
 
-    if @script_level
+    if @script_level && @level
+      stable_id = session[:statsig_stable_id]
+      submitted = params[:submitted] == 'true'
       # convert milliseconds to seconds
       time_since_last_milestone = [(params[:timeSinceLastMilestone].to_f / 1000).ceil.to_i, MAX_INT_TIME_SPENT].min
-      @user_level, @new_level_completed = User.track_level_progress(
-        user_id: current_user.id,
-        level_id: @level.id,
-        script_id: @script_level.script_id,
-        new_result: test_result,
-        submitted: params[:submitted] == 'true',
-        level_source_id: @level_source.try(:id),
-        pairing_user_ids: pairing_user_ids,
-        locale: I18n.locale,
-        time_spent: time_since_last_milestone,
-        unit_group: @unit_group
-      )
+
+      if current_user
+        @user_level, @new_level_completed = User.track_level_progress(
+          user_id: current_user.id,
+          level_id: @level.id,
+          script_id: @script_level.script_id,
+          new_result: test_result,
+          submitted:,
+          level_source_id: @level_source.try(:id),
+          pairing_user_ids: pairing_user_ids,
+          locale: I18n.locale,
+          time_spent: time_since_last_milestone,
+          unit_group: @unit_group
+        )
+      else
+        Services::AnonymousLevelProgress::Tracker.call(
+          stable_id:,
+          script_id: @script_level.script_id,
+          level_id: @level.id,
+          unit_group_id: @unit_group&.id,
+          level_source_id: @level_source&.id,
+          submitted:,
+          new_result: test_result,
+          time_spent: time_since_last_milestone,
+          locale: I18n.locale,
+        )
+
+        track_progress_in_session
+      end
 
       is_sublevel = @script_level.levels.exclude?(@level)
 
@@ -189,23 +206,37 @@ class ActivitiesController < ApplicationController
         level.is_a?(BubbleChoice) && level.sublevels.include?(@level)
       end
       if bubble_choice_parent_level
-        User.track_level_progress(
-          user_id: current_user.id,
-          level_id: bubble_choice_parent_level.id,
-          script_id: @script_level.script_id,
-          new_result: test_result,
-          submitted: false,
-          level_source_id: nil,
-          pairing_user_ids: pairing_user_ids,
-          locale: I18n.locale,
-          time_spent: time_since_last_milestone,
-          unit_group: @unit_group
-        )
+        if current_user
+          User.track_level_progress(
+            user_id: current_user.id,
+            level_id: bubble_choice_parent_level.id,
+            script_id: @script_level.script_id,
+            new_result: test_result,
+            submitted: false,
+            level_source_id: nil,
+            pairing_user_ids: pairing_user_ids,
+            locale: I18n.locale,
+            time_spent: time_since_last_milestone,
+            unit_group: @unit_group
+          )
+        else
+          Services::AnonymousLevelProgress::Tracker.call(
+            stable_id:,
+            script_id: @script_level.script_id,
+            level_id: bubble_choice_parent_level.id,
+            unit_group_id: @unit_group&.id,
+            level_source_id: nil,
+            submitted: false,
+            new_result: test_result,
+            time_spent: time_since_last_milestone,
+            locale: I18n.locale,
+          )
+        end
       end
 
       # Make sure we don't log when @script_level is a multi-page assessment
       # and @level is a multi level.
-      if @script_level.assessment && @level.is_a?(Multi) && !is_sublevel
+      if current_user && @script_level.assessment && @level.is_a?(Multi) && !is_sublevel
         AssessmentActivity.create(
           user_id: current_user.id,
           level_id: @level.id,

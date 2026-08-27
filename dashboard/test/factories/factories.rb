@@ -1660,6 +1660,13 @@ FactoryBot.define do
     level {create(:applab)}
   end
 
+  factory :anonymous_level_progress do
+    association :script
+    association :level, factory: :applab
+
+    stable_id {SecureRandom.uuid}
+  end
+
   factory :user_script do
     user {create(:student)}
     script {create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable).first_unit}
