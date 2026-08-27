@@ -19,7 +19,7 @@
             {
               "type": "radiogroup",
               "name": "unit_name",
-              "defaultValueExpression": "{unit_number}",
+              "defaultValueExpression": "{unit}",
               "startWithNewLine": false,
               "readOnly": true,
               "visible": false,

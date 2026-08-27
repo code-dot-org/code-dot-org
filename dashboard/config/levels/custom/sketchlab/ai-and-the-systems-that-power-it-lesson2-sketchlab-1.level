@@ -1,0 +1,294 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2026-08-26T18:19:54.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "teacher_markdown": "##Input-Storage-Processing-Output",
+    "hide_share_and_remix": "false",
+    "require_edit_to_continue": "true",
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "6a248b92-1c5c-4857-aead-63238afc41d5",
+            "type": "group",
+            "position": {
+              "x": -100.4340816310351,
+              "y": -173.05487774034034
+            },
+            "width": 1256.8527528164798,
+            "height": 857.4961524233403,
+            "zIndex": -1,
+            "data": {
+            },
+            "measured": {
+              "width": 1257,
+              "height": 857
+            }
+          },
+          {
+            "id": "dbceeb71-156f-4280-a5c3-c9d1a204ea90",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson2-sketchlab-1/uuid/105e31bb-2551-4f4b-8829-4c23919d730e.png",
+              "altText": "Input"
+            },
+            "position": {
+              "x": -57.16061710533418,
+              "y": 208.3866727253114
+            },
+            "width": 133.8968235936573,
+            "height": 115.65333181867214,
+            "measured": {
+              "width": 134,
+              "height": 116
+            },
+            "dragging": false
+          },
+          {
+            "id": "df70b959-2f77-40c8-ad77-7b479dfb6237",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson2-sketchlab-1/uuid/47d24acb-66f2-4ad1-bd00-ec0e9521d512.png",
+              "altText": "Output"
+            },
+            "position": {
+              "x": 970.9784253088237,
+              "y": 217.4839201089112
+            },
+            "width": 142.76952467504452,
+            "height": 101.33365173129823,
+            "measured": {
+              "width": 143,
+              "height": 101
+            },
+            "dragging": false
+          },
+          {
+            "id": "0cfe68d9-ed51-435c-a660-09336d4e5e15",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson2-sketchlab-1/uuid/ece6470f-91bc-40d6-aee1-cd87f626c4a7.png",
+              "altText": "Processing"
+            },
+            "position": {
+              "x": 470.00411501373,
+              "y": -300.45847618367725
+            },
+            "width": 125.53904935008896,
+            "height": 102.76952467504447,
+            "measured": {
+              "width": 126,
+              "height": 103
+            },
+            "dragging": false
+          },
+          {
+            "id": "7f490fa1-cd25-409f-bf21-1083672510a9",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson2-sketchlab-1/uuid/8dcd86f2-bf5c-489c-a3a5-d74ded0a5a3e.png",
+              "altText": "Storage"
+            },
+            "position": {
+              "x": 464.8657247475135,
+              "y": 736.0949115961362
+            },
+            "width": 129.84666818132786,
+            "height": 97.02603290005925,
+            "measured": {
+              "width": 130,
+              "height": 97
+            },
+            "dragging": false
+          },
+          {
+            "id": "ba7e24f1-7476-4c1f-8b79-b8f71ba18aee",
+            "type": "text",
+            "data": {
+              "text": "Input",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": -41.71667536684035,
+              "y": 177.1201692443605
+            },
+            "width": 119.79555757510381,
+            "height": 40,
+            "measured": {
+              "width": 120,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "bef4a680-4947-4174-a37a-3c5b47f3f68b",
+            "type": "text",
+            "data": {
+              "text": "Storage",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 469.791446822914,
+              "y": 827.7863375710028
+            },
+            "width": 119.79555757510381,
+            "height": 40,
+            "measured": {
+              "width": 120,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "424a9775-deb9-476d-966b-97b9a4489c13",
+            "type": "text",
+            "data": {
+              "text": "Processing",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 454.0098461770976,
+              "y": -342.3032339772159
+            },
+            "width": 157.12825411250742,
+            "height": 40,
+            "measured": {
+              "width": 157,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "9ae6834d-fe28-4279-950f-23ca699be6c8",
+            "type": "text",
+            "data": {
+              "text": "Output",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 980.0120997600397,
+              "y": 181.38265409035768
+            },
+            "width": 119.79555757510381,
+            "height": 40,
+            "measured": {
+              "width": 120,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "58f64545-0132-4bb9-b126-f410aa6dc93d",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": ""
+            },
+            "position": {
+              "x": 10,
+              "y": 262.4596633558757
+            },
+            "width": 788.1837362509839,
+            "height": 328.2240728951082,
+            "measured": {
+              "width": 788,
+              "height": 328
+            },
+            "dragging": false,
+            "parentId": "6a248b92-1c5c-4857-aead-63238afc41d5",
+            "expandParent": true
+          },
+          {
+            "id": "54346477-19b8-41e2-852d-e562f2db3cb2",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": ""
+            },
+            "position": {
+              "x": 458.66901656549595,
+              "y": 264.63603976411605
+            },
+            "width": 788.1837362509839,
+            "height": 328.2240728951082,
+            "measured": {
+              "width": 788,
+              "height": 328
+            },
+            "dragging": false,
+            "parentId": "6a248b92-1c5c-4857-aead-63238afc41d5",
+            "expandParent": true
+          },
+          {
+            "id": "46bdcb30-7455-4b3e-b0e4-3e1d64830b9f",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "rotation": 90
+            },
+            "position": {
+              "x": 234.83772298473644,
+              "y": 519.2720795282321
+            },
+            "width": 788.1837362509839,
+            "height": 328.2240728951082,
+            "measured": {
+              "width": 788,
+              "height": 328
+            },
+            "dragging": false,
+            "parentId": "6a248b92-1c5c-4857-aead-63238afc41d5",
+            "expandParent": true
+          },
+          {
+            "id": "fb731980-641a-4548-a13a-d8d2f73468b8",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "rotation": 90
+            },
+            "position": {
+              "x": 232.9968230444885,
+              "y": 10
+            },
+            "width": 788.1837362509839,
+            "height": 328.2240728951082,
+            "measured": {
+              "width": 788,
+              "height": 328
+            },
+            "dragging": false,
+            "parentId": "6a248b92-1c5c-4857-aead-63238afc41d5",
+            "expandParent": true
+          }
+        ],
+        "edges": [
+
+        ],
+        "viewport": {
+          "x": 295.56509002467135,
+          "y": 312.38715141256455,
+          "zoom": 0.4594793419988145
+        }
+      }
+    },
+    "long_instructions": "##Input-Storage-Processing-Output"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-08-26 18:19:59 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-26 19:01:28 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-26 19:04:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-26 19:09:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-26 19:09:22 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>
