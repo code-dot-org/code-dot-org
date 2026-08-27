@@ -29,6 +29,14 @@ class QuizQuestion < ApplicationRecord
   has_many :placements, class_name: 'QuizQuestionPlacement', dependent: :destroy
   has_many :levels, through: :placements
 
+  # Neither cascade-deletes on its own - a deleted question must never
+  # silently take historical student responses or an independently-forked
+  # question down with it. See QuizQuestionsController#destroy, which
+  # checks both (along with :placements/:levels) before allowing a hard
+  # delete, falling back to a plain detach if either is still present.
+  has_many :quiz_question_responses, dependent: nil
+  has_many :forks, class_name: 'QuizQuestion', foreign_key: :parent_id, inverse_of: :parent, dependent: nil
+
   validates :key, presence: true
   validates :name, presence: true
   validates :content, presence: true

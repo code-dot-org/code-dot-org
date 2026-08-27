@@ -186,24 +186,36 @@ class QuizQuestionsController < ApplicationController
   # DELETE /levels/:level_id/quiz_questions/:id
   #
   # Removes the question from this quiz AND destroys the QuizQuestion
-  # itself, provided it's not attached to any other quiz once detached.
-  # "unused elsewhere" is re-checked here rather than trusted from the
-  # client's earlier attachedToOtherQuizzes read (see quiz_question_json) -
-  # a stale read can't accidentally delete a question another quiz picked up
-  # in the meantime, so this falls back to a plain detach in that case.
+  # itself, provided nothing else still references it once detached: no
+  # other quiz's placement, no QuizQuestionResponse (a past graded
+  # attempt), and no other question forked from this one (parent_id).
+  # Checked here rather than trusted from the client's earlier
+  # attachedToOtherQuizzes read (see quiz_question_json) - a stale read
+  # can't accidentally delete a question something else grabbed a
+  # reference to in the meantime, so this falls back to a plain detach
+  # instead. The whole sequence shares one transaction, so the placement's
+  # own removal can't commit ahead of a destroy that then fails - without
+  # that, an unanticipated fourth kind of reference would 500 after
+  # already detaching, rather than cleanly falling back like the three
+  # kinds above.
   def destroy
     placement = @level.placements.find_by!(quiz_question_id: params[:id])
     question = placement.quiz_question
-    placement.destroy!
 
-    destroyed = !question.levels.exists?
-    question.destroy! if destroyed
+    destroyed = false
+    ActiveRecord::Base.transaction do
+      placement.destroy!
+      still_referenced = question.levels.exists? || question.quiz_question_responses.exists? || question.forks.exists?
+      unless still_referenced
+        question.destroy!
+        destroyed = true
+      end
+    end
 
-    # destroyed tells the caller whether this fell back to a plain detach
-    # (another quiz grabbed the question between the frontend's last
-    # attachedToOtherQuizzes read and this request) - QuizQuestionBank needs
-    # to know that to decide whether the question should disappear from its
-    # results or just remain there, still attachable.
+    # destroyed tells the caller whether this fell back to a plain detach -
+    # QuizQuestionBank needs to know that to decide whether the question
+    # should disappear from its results or just remain there, still
+    # attachable.
     render json: {destroyed: destroyed}
   rescue ActiveRecord::RecordNotFound
     head :not_found
