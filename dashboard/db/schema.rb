@@ -198,9 +198,9 @@ ActiveRecord::Schema[7.0].define(version: 2026_08_27_094239) do
 
   create_table "anonymous_level_progresses", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "stable_id", limit: 36, null: false
-    t.bigint "script_id"
-    t.bigint "level_id", null: false
-    t.bigint "unit_group_id"
+    t.integer "script_id", null: false
+    t.integer "level_id", null: false
+    t.integer "unit_group_id"
     t.bigint "level_source_id"
     t.integer "attempts", default: 0, null: false
     t.integer "best_result"
