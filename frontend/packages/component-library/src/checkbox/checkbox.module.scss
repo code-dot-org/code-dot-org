@@ -34,7 +34,13 @@
 
       &::before {
         display: inline-block;
-        box-sizing: content-box;
+
+        // The per-size width/height below are the box's outer size, border
+        // included. Declare the box model rather than inheriting whatever
+        // reset the host page happens to ship: dashboard's Bootstrap 3 sets
+        // border-box on *:before, Storybook sets nothing, and the two render
+        // the box 4px apart.
+        box-sizing: border-box;
         content: ' ';
         text-align: center;
         border: 2px solid var(--borders-neutral-solid);
