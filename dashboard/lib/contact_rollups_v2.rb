@@ -11,30 +11,12 @@ class ContactRollupsV2
     query_timeout: MAX_EXECUTION_TIME_SEC
   )
 
-  # The reporting endpoint is the read replica database instance, optimized
-  # for executing large SELECT statements without impacting the database
-  # cluster's performance. It is only configured in environments with the
-  # new db client settings (CDO.db_*); elsewhere fall back to the legacy
-  # reader URI, which points at the writer in development.
-  REPORTING_DB_URI =
-    if CDO.db_endpoint_proxy_reporting
-      Cdo::Sequel.mysql2_uri(
-        host: CDO.db_endpoint_proxy_reporting,
-        port: CDO.db_endpoint_proxy_reporting_port,
-        username: CDO.db_credential_reader['username'],
-        password: CDO.db_credential_reader['password'],
-        database: CDO.dashboard_db_name
-      )
-    else
-      CDO.dashboard_db_reader
-    end
-
   # Reporting database connection pool. Use this to execute the pipeline's
   # large SELECT statements instead of loading the writer, which otherwise
   # carries the entire nightly job.
   DASHBOARD_REPORTING_DB = Cdo::Sequel.database_connection_pool(
-    REPORTING_DB_URI,
-    REPORTING_DB_URI,
+    CDO.db_endpoint_proxy_reporting,
+    CDO.db_endpoint_proxy_reporting,
     query_timeout: MAX_EXECUTION_TIME_SEC
   )
 
