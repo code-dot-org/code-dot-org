@@ -191,6 +191,19 @@ describe('ProjectView', () => {
     expect(screen.queryByText('Feedback')).not.toBeInTheDocument();
     expect(screen.queryByText('AI Assessment')).not.toBeInTheDocument();
     expect(screen.queryByText('Respond again')).not.toBeInTheDocument();
+    // A peer cannot page through the owner's earlier submissions, so the
+    // version switcher is absent and its list is never fetched.
+    expect(
+      screen.queryByRole('button', {name: 'Previous response'})
+    ).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole('button', {name: 'Next response'})
+    ).not.toBeInTheDocument();
+    expect(fetchJson).not.toHaveBeenCalledWith(
+      expect.stringContaining('/challenge_responses?'),
+      expect.anything(),
+      expect.anything()
+    );
   });
 
   it('shows an error message when the fetch fails', async () => {

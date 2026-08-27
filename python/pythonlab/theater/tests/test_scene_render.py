@@ -22,6 +22,7 @@ from theater.support.constants import (
   THEATER_HEIGHT,
   THEATER_WIDTH,
 )
+from theater.support import renderer as renderer_module
 from theater.support.renderer import (
   AudioTooLongError,
   PauseTooLongError,
@@ -29,6 +30,19 @@ from theater.support.renderer import (
   gif_duration_ms,
   render,
 )
+
+
+def _explode_on_drawing(monkeypatch):
+  """Make the drawing pass fail, to prove a ceiling was checked before it ran.
+
+  Patched rather than provoked with malformed input, which Scene now turns away
+  at the call.
+  """
+
+  def boom(*_args):
+    raise AssertionError("drawing ran before the ceiling was checked")
+
+  monkeypatch.setattr(renderer_module, "_draw_rectangle", boom)
 
 
 def _render_gif(actions):
@@ -145,11 +159,10 @@ def test_too_many_pauses_raises():
     render(_paused_scene(MAX_FRAMES).get_actions())
 
 
-def test_frame_ceiling_is_checked_before_drawing():
-  # A malformed shape raises from the drawing pass, so getting the frame-count
-  # error instead proves nothing was drawn first.
+def test_frame_ceiling_is_checked_before_drawing(monkeypatch):
+  _explode_on_drawing(monkeypatch)
   scene = _paused_scene(MAX_FRAMES)
-  scene.draw_shape([0, 0, 10], True)
+  scene.draw_rectangle(0, 0, 10, 10)
   with pytest.raises(TooManyFramesError):
     render(scene.get_actions())
 
@@ -190,10 +203,14 @@ def _single_frame_scene(build_pauses):
   return PILImage.open(io.BytesIO(_render_gif(scene.get_actions())))
 
 
-@pytest.mark.parametrize("seconds", [0.01, 0, -1, MAX_PAUSE_SECONDS + 1, 1000])
+@pytest.mark.parametrize(
+  "seconds",
+  [0.01, 0, -1, MAX_PAUSE_SECONDS + 1, 1000, float("nan"), float("inf")],
+)
 def test_out_of_range_pause_raises_at_the_call(seconds):
   # A gif delay is 16 bits of centiseconds, so a student who meant milliseconds
-  # would otherwise overflow that field inside Pillow.
+  # would otherwise overflow that field inside Pillow. A nan compares false
+  # against both bounds, so it used to reach the frame delay and raise there.
   scene = Scene()
   with pytest.raises(ValueError):
     scene.pause(seconds)
@@ -201,7 +218,10 @@ def test_out_of_range_pause_raises_at_the_call(seconds):
   assert scene.get_actions() == []
 
 
-@pytest.mark.parametrize("seconds", [0.01, 0, -1, MAX_PAUSE_SECONDS + 1, 1000])
+@pytest.mark.parametrize(
+  "seconds",
+  [0.01, 0, -1, MAX_PAUSE_SECONDS + 1, 1000, float("nan"), float("inf")],
+)
 def test_out_of_range_note_duration_raises_at_the_call(seconds):
   # An unbounded duration reaches truncate_samples, where a negative once
   # trimmed the note's tail and played nearly all of it.
@@ -323,11 +343,10 @@ def test_too_long_audio_raises():
     render(_scene_sounding_after(MAX_AUDIO_SECONDS + 1).get_actions())
 
 
-def test_audio_ceiling_is_checked_before_drawing():
-  # A malformed shape raises from the drawing pass, so getting the audio-length
-  # error instead proves nothing was drawn first.
+def test_audio_ceiling_is_checked_before_drawing(monkeypatch):
+  _explode_on_drawing(monkeypatch)
   scene = _scene_sounding_after(MAX_AUDIO_SECONDS + 1)
-  scene.draw_shape([0, 0, 10], True)
+  scene.draw_rectangle(0, 0, 10, 10)
   with pytest.raises(AudioTooLongError):
     render(scene.get_actions())
 
@@ -348,6 +367,35 @@ def test_pauses_after_the_last_sound_do_not_count():
   scene.pause(MAX_AUDIO_SECONDS)
   _gif, wav = render(scene.get_actions())
   assert len(read_samples_from_wav_bytes(wav)) / SAMPLE_RATE == pytest.approx(0.5, abs=0.01)
+
+
+@pytest.mark.parametrize("points", [[], [0], [0, 0], [0, 0, 10], [0, 0, 10, 10, 20]])
+def test_unusable_shape_points_raise_at_the_call(points):
+  scene = Scene()
+  with pytest.raises(ValueError):
+    scene.draw_shape(points, True)
+  # Nothing was recorded, so render() never sees the bad value.
+  assert scene.get_actions() == []
+
+
+@pytest.mark.parametrize(
+  "points", [[(0, 0), (10, 10)], [[0, 0], [10, 10], [20, 0]], ((0, 0), (1, 1))]
+)
+def test_a_list_of_points_says_what_the_flat_form_is(points):
+  # The flat run of coordinates reads easily as a list of points, and counting
+  # the numbers that arrived is no help to a student who wrote pairs.
+  scene = Scene()
+  with pytest.raises(ValueError, match="flat list of coordinates"):
+    scene.draw_shape(points, True)
+
+
+def test_draw_shape_accepts_the_flat_form():
+  scene = Scene()
+  scene.draw_shape([0, 0, 10, 10], False)
+  scene.draw_shape((0, 0, 10, 10, 20, 0), True)
+  scene.draw_shape(iter([0, 0, 10, 10, 20, 0]), True)
+  scene.pause(0.1)
+  assert _render_gif(scene.get_actions())
 
 
 @pytest.mark.parametrize(
@@ -477,6 +525,34 @@ def test_draw_image_accepts_float_geometry():
   scene.draw_image(image, 300 / 2, 50.5, size=40.5, rotation=45)
   gif_bytes = _render_gif(scene.get_actions())
   assert len(gif_bytes) > 0
+
+
+@pytest.mark.parametrize("size", [-1, 0, 0.4, -100, float("nan")])
+def test_unusable_draw_image_size_raises_at_the_call(size):
+  scene = Scene()
+  with pytest.raises(ValueError):
+    scene.draw_image(Image(10, 10), 0, 0, size=size)
+  # Nothing was recorded, so render() never sees the bad value.
+  assert scene.get_actions() == []
+
+
+@pytest.mark.parametrize("width,height", [(-1, 10), (10, -1), (0, 0), (0.4, 0.4)])
+def test_unusable_draw_image_extent_raises_at_the_call(width, height):
+  scene = Scene()
+  with pytest.raises(ValueError):
+    scene.draw_image(Image(10, 10), 0, 0, width=width, height=height)
+  assert scene.get_actions() == []
+
+
+def test_draw_image_records_one_dimension_and_leaves_the_other_unset():
+  # The renderer picks its branch on which one is None, so a size and an
+  # extent must never both be recorded.
+  scene = Scene()
+  scene.draw_image(Image(10, 10), 0, 0, size=50)
+  scene.draw_image(Image(10, 10), 0, 0, width=20, height=30)
+  by_size, by_extent = scene.get_actions()
+  assert (by_size.size, by_size.width, by_size.height) == (50, None, None)
+  assert (by_extent.size, by_extent.width, by_extent.height) == (None, 20, 30)
 
 
 @pytest.mark.parametrize(

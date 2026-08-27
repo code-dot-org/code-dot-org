@@ -136,7 +136,7 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
   };
 
   return (
-    <div>
+    <div className={styles.videoContainer}>
       <div className={styles.questionText}>
         {challenge ? challenge.question : 'DUMMY PROBLEM TEXT HERE'}
       </div>
