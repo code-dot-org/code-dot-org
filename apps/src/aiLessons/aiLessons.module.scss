@@ -376,20 +376,134 @@ textarea {
   border-radius: 6px;
   border: 1px solid var(--borders-neutral-primary);
 
-  a {
+  // Title link only — the action buttons below are MUI-styled anchors and
+  // must not inherit this color.
+  > a {
     color: var(--text-brand-teal-primary);
     text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    line-height: 1.3;
+    margin-bottom: 4px;
   }
 }
 
 .lessonRowActions {
-  margin-top: 8px;
-  font-size: 13px;
-  color: var(--text-neutral-tertiary);
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
 
-  a {
+.lessonStandards {
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--text-neutral-secondary);
+
+  > strong {
+    color: var(--text-neutral-primary);
+  }
+
+  ul {
+    list-style: none;
+    margin: 6px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  li {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+
+  li strong {
+    color: var(--text-neutral-primary);
+  }
+}
+
+.standardCheck {
+  flex: none;
+  align-self: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--background-success-primary, #2e7d32);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+}
+
+.lessonAdaptivity {
+  margin-top: 10px;
+  font-size: 13px;
+
+  > strong {
+    color: var(--text-neutral-primary);
+  }
+}
+
+.adaptivityPills {
+  margin-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+%adaptivity-pill-base {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  line-height: 18px;
+  text-decoration: none;
+}
+
+.adaptivityPill {
+  @extend %adaptivity-pill-base;
+
+  border: 1px solid var(--borders-neutral-primary);
+  color: var(--text-neutral-secondary);
+  background: transparent;
+
+  &:hover {
+    border-color: var(--borders-brand-teal-primary);
     color: var(--text-brand-teal-primary);
   }
+}
+
+.adaptivityPillDefault {
+  @extend %adaptivity-pill-base;
+
+  border: 1px solid var(--borders-brand-teal-primary);
+  color: var(--text-brand-teal-primary);
+  background: var(--background-brand-teal-extra-light, transparent);
+  font-weight: 600;
+}
+
+.adaptivityDefaultTag {
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-neutral-tertiary);
+}
+
+.adaptivityPillDisabled {
+  @extend %adaptivity-pill-base;
+
+  border: 1px dashed var(--borders-neutral-primary);
+  color: var(--text-neutral-tertiary);
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 // ---- Teacher progress page ----

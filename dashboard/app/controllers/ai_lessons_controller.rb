@@ -379,12 +379,46 @@ class AiLessonsController < ApplicationController
           'title' => parsed['title'],
           'updated_at' => File.mtime(path).iso8601,
           'builtin' => builtin,
+          'standards' => lesson_standards(parsed),
+          'adaptivity' => parsed['adaptivity'],
+          'order' => parsed['order'].is_a?(Numeric) ? parsed['order'] : nil,
         }
       rescue JSON::ParserError
         next
       end
     end
-    entries.values
+    # Lessons with an authored `order` sort first (ascending); the rest
+    # keep the filename-alphabetical order from the globs above.
+    entries.values.sort_by.with_index do |e, i|
+      [e['order'] || Float::INFINITY, i]
+    end
+  end
+
+  # Standards a lesson covers, for the list view.  Two sources: hub-path
+  # `standard` strings ("Engage with AI 3: Evaluate...") and arcSpec's
+  # standards contract (whose `text` uses the same "ID: text" form).  Split
+  # on the first colon to separate the identifier from the description; a
+  # string without one becomes text-only.
+  private def lesson_standards(parsed)
+    raw = []
+    (parsed['steps'] || []).each do |step|
+      next unless step.is_a?(Hash)
+      (step['paths'] || []).each do |p|
+        raw << p['standard'] if p.is_a?(Hash) && p['standard'].is_a?(String)
+      end
+    end
+    arc_standards = parsed.dig('arcSpec', 'standards')
+    (arc_standards || []).each do |s|
+      raw << s['text'] if s.is_a?(Hash) && s['text'].is_a?(String)
+    end
+    raw.map do |full|
+      id, text = full.split(':', 2)
+      if text
+        {'id' => id.strip, 'text' => text.strip}
+      else
+        {'id' => nil, 'text' => full.strip}
+      end
+    end.uniq
   end
 
   private def lesson_payload

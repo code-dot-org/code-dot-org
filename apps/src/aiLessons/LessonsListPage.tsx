@@ -2,15 +2,82 @@
 // (we're in a client-routed SPA — the Rails action just renders the
 // shell).
 
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import React, {useEffect, useState} from 'react';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {deleteLesson, resetLessonProgress} from './api';
 import {Link} from './router';
-import {LessonIndexEntry} from './types';
+import {ADAPTIVITY_ORDER, AdaptivityMode, LessonIndexEntry} from './types';
 
 import styles from './aiLessons.module.scss';
+
+// Demo-facing copy for the adaptivity dial.  Mirrors resolveAdaptivity's
+// semantics: absent adaptivity means augment as both default and max.
+const ADAPTIVITY_INFO: {
+  [mode in AdaptivityMode]: {label: string; blurb: string};
+} = {
+  static: {
+    label: 'Static',
+    blurb: 'Authored steps only — no AI adaptation.',
+  },
+  augment: {
+    label: 'Adaptive practice',
+    blurb:
+      'AI adds targeted practice steps for skills a student has not mastered yet.',
+  },
+  full: {
+    label: 'Fully adaptive',
+    blurb: 'AI generates a personalized lesson arc after the diagnostic.',
+  },
+};
+
+const AdaptivityPills: React.FunctionComponent<{lesson: LessonIndexEntry}> = ({
+  lesson,
+}) => {
+  const authoredDefault = lesson.adaptivity?.default ?? 'augment';
+  const max = lesson.adaptivity?.max ?? authoredDefault;
+  const maxIndex = ADAPTIVITY_ORDER.indexOf(max);
+  return (
+    <div className={styles.lessonAdaptivity}>
+      <strong>Adaptivity</strong>
+      <div className={styles.adaptivityPills}>
+        {ADAPTIVITY_ORDER.map((mode, i) => {
+          const info = ADAPTIVITY_INFO[mode];
+          const isDefault = mode === authoredDefault;
+          if (i > maxIndex) {
+            return (
+              <span
+                key={mode}
+                className={styles.adaptivityPillDisabled}
+                title={`${info.blurb} Not enabled for this lesson.`}
+              >
+                {info.label}
+              </span>
+            );
+          }
+          return (
+            <Link
+              key={mode}
+              className={
+                isDefault ? styles.adaptivityPillDefault : styles.adaptivityPill
+              }
+              href={`/ai_lessons/${lesson.id}?adaptivity=${mode}`}
+              title={`${info.blurb} Click to open the lesson in this mode.`}
+            >
+              {info.label}
+              {isDefault && (
+                <span className={styles.adaptivityDefaultTag}>default</span>
+              )}
+            </Link>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
 
 const LessonsListPage: React.FunctionComponent = () => {
   const [lessons, setLessons] = useState<LessonIndexEntry[] | undefined>();
@@ -99,31 +166,85 @@ const LessonsListPage: React.FunctionComponent = () => {
                 <strong>{l.title || '(untitled)'}</strong>
               </Link>
               <div className={styles.muted}>{l.objective}</div>
+              {l.standards && l.standards.length > 0 && (
+                <div className={styles.lessonStandards}>
+                  <strong>Standards</strong>
+                  <ul>
+                    {l.standards.map(s => (
+                      <li key={s.id || s.text}>
+                        <span className={styles.standardCheck} aria-hidden>
+                          ✓
+                        </span>
+                        <span>
+                          {s.id && <strong>{s.id}: </strong>}
+                          {s.text}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              <AdaptivityPills lesson={l} />
               <div className={styles.lessonRowActions}>
-                <Link href={`/ai_lessons/${l.id}`}>Open as student</Link>
-                {' · '}
-                <Link href={`/ai_lessons/${l.id}/edit`}>Edit</Link>
-                {' · '}
-                <button
+                <MuiButton
+                  component={Link}
+                  href={`/ai_lessons/${l.id}`}
+                  variant="contained"
+                  color="primary"
+                  size="small"
+                  startIcon={
+                    <FontAwesomeV6Icon
+                      iconName="arrow-up-right-from-square"
+                      iconStyle="solid"
+                    />
+                  }
+                >
+                  Open as student
+                </MuiButton>
+                <MuiButton
+                  component={Link}
+                  href={`/ai_lessons/${l.id}/edit`}
+                  variant="outlined"
+                  color="primary"
+                  size="small"
+                  startIcon={
+                    <FontAwesomeV6Icon iconName="pencil" iconStyle="solid" />
+                  }
+                >
+                  Edit
+                </MuiButton>
+                <MuiButton
                   type="button"
-                  className={styles.linkButton}
+                  variant="outlined"
+                  color="secondary"
+                  size="small"
+                  startIcon={
+                    <FontAwesomeV6Icon
+                      iconName="arrows-rotate"
+                      iconStyle="solid"
+                    />
+                  }
                   onClick={() => handleReset(l)}
                   disabled={resettingId === l.id}
                   aria-label={`Reset progress for ${l.title || 'lesson'}`}
                   title="Wipe saved code + progress for this lesson (demo)"
                 >
                   {resettingId === l.id ? 'Resetting…' : 'Reset progress'}
-                </button>
-                {' · '}
-                <button
+                </MuiButton>
+                <MuiButton
                   type="button"
-                  className={styles.linkButton}
+                  variant="outlined"
+                  color="error"
+                  size="small"
+                  startIcon={
+                    <FontAwesomeV6Icon iconName="trash-can" iconStyle="solid" />
+                  }
                   onClick={() => handleDelete(l)}
                   disabled={deletingId === l.id}
                   aria-label={`Delete ${l.title || 'lesson'}`}
                 >
                   {deletingId === l.id ? 'Deleting…' : 'Delete'}
-                </button>
+                </MuiButton>
               </div>
             </li>
           ))}

@@ -260,7 +260,7 @@ export interface ChecklistItem {
 //            remediation stays active inside generated hubs.
 export type AdaptivityMode = 'static' | 'augment' | 'full';
 
-const ADAPTIVITY_ORDER: AdaptivityMode[] = ['static', 'augment', 'full'];
+export const ADAPTIVITY_ORDER: AdaptivityMode[] = ['static', 'augment', 'full'];
 
 export interface ArcStandard {
   // Short id generated content references (e.g. "engage-ai-3").
@@ -334,6 +334,12 @@ export interface LessonIndexEntry {
   objective?: string;
   updated_at?: string;
   builtin?: boolean;
+  // Standards the lesson covers, collected server-side from hub paths and
+  // the arcSpec contract. id is the human identifier ("Engage with AI 3");
+  // null when the authored string had no "ID: text" shape.
+  standards?: {id: string | null; text: string}[];
+  // The lesson's authored adaptivity dial, verbatim (see LessonPlan).
+  adaptivity?: {default?: AdaptivityMode; max?: AdaptivityMode};
 }
 
 export function isLabStep(step: Step): step is LabStep {

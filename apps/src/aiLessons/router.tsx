@@ -79,9 +79,14 @@ export const RouterProvider: React.FC<{children: ReactNode}> = ({children}) => {
   }, []);
 
   const navigate = useCallback((path: string) => {
-    if (path === window.location.pathname) return;
+    // `path` may carry a query string (e.g. ?adaptivity=full) — route
+    // matching is on the pathname alone, but the query still matters for
+    // both the pushed URL and the are-we-already-here check.
+    const url = new URL(path, window.location.origin);
+    const here = window.location.pathname + window.location.search;
+    if (url.pathname + url.search === here) return;
     window.history.pushState({}, '', path);
-    setRoute(matchRoute(path));
+    setRoute(matchRoute(url.pathname));
     window.scrollTo(0, 0);
   }, []);
 

@@ -1,6 +1,7 @@
 {
   "formatVersion": 2,
   "id": "website-skill-tree",
+  "order": 1,
   "title": "Website Skill Tree",
   "objective": "Build a website with AI by developing three real skills — prompting, debugging, and JavaScript — chosen and sequenced by the student from a skill hub, then applied to their own project.",
   "authorInputs": {
