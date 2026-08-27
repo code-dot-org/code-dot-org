@@ -288,8 +288,9 @@ export function poseFigureSvgDataURI(
 }
 
 // A row of figures stands this many times the cell width tall: a figure's
-// body is about half its square wide, so at this scale the strides fill the
-// cells without touching their neighbours.
+// body is under half its square wide, so at this scale the strides fill the
+// cells. Each figure is clipped to its cell, since its square (white to the
+// edges) is wider than the cell and would paint over its neighbour.
 const ROW_FIGURE_SCALE = 1.9;
 const ROW_HEIGHT = 1080;
 
@@ -320,6 +321,10 @@ export function poseFigureRowDataURI(
   return Promise.all(frames).then(images => {
     images.forEach((img, frame) => {
       // Centred in its cell, feet on the canvas floor.
+      ctx.save();
+      ctx.beginPath();
+      ctx.rect(Math.round(cell * frame), 0, Math.round(cell), canvas.height);
+      ctx.clip();
       ctx.drawImage(
         img,
         Math.round(cell * frame + (cell - size) / 2),
@@ -327,6 +332,7 @@ export function poseFigureRowDataURI(
         size,
         size
       );
+      ctx.restore();
     });
     return canvas.toDataURL('image/png');
   });
