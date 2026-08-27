@@ -1947,6 +1947,32 @@ class SectionTest < ActiveSupport::TestCase
     assert entry.dig('coming_up', 'completed_unit')
   end
 
+  # Bandaid: 'csd-2026' and 'csd2-2026' are in
+  # SharedConstants::AI_CHAT_TOOLS_ALERT_EXEMPT_CURRICULUM_NAMES. These tests go
+  # away with the exemption.
+  test 'assigned_curriculum_exempt_from_ai_chat_tools_alerts? is true for an exempt course' do
+    unit_group = create(:unit_group, name: 'csd-2026')
+    section = create(:section, teacher: @teacher, course_id: unit_group.id)
+
+    assert section.assigned_curriculum_exempt_from_ai_chat_tools_alerts?
+  end
+
+  test 'assigned_curriculum_exempt_from_ai_chat_tools_alerts? is true for an exempt unit assigned on its own' do
+    unit = create(:script, name: 'csd2-2026')
+    section = create(:section, teacher: @teacher, script: unit)
+
+    assert section.assigned_curriculum_exempt_from_ai_chat_tools_alerts?
+  end
+
+  test 'assigned_curriculum_exempt_from_ai_chat_tools_alerts? is false for other curriculum' do
+    unit_group = create(:unit_group)
+    unit = create(:script)
+
+    refute create(:section, teacher: @teacher, course_id: unit_group.id).assigned_curriculum_exempt_from_ai_chat_tools_alerts?
+    refute create(:section, teacher: @teacher, script: unit).assigned_curriculum_exempt_from_ai_chat_tools_alerts?
+    refute create(:section, teacher: @teacher).assigned_curriculum_exempt_from_ai_chat_tools_alerts?
+  end
+
   private def build_suggested_lesson_section
     unit = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: unit)

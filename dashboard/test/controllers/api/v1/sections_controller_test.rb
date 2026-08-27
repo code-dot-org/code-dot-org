@@ -1359,6 +1359,42 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     Section.find returned_json['id']
   end
 
+  test "assigned_essential_ai_dependency: returns forbidden if no user" do
+    get :assigned_essential_ai_dependency
+    assert_response :forbidden
+  end
+
+  test "assigned_essential_ai_dependency: true when a section is assigned a course requiring ai chat tools" do
+    teacher = create(:teacher)
+    unit_group = create_unit_group_with_essential_ai_chat_tools
+    create(:section, user: teacher, course_id: unit_group.id)
+    sign_in teacher
+
+    get :assigned_essential_ai_dependency
+
+    assert_response :success
+    assert returned_json['has_assigned_essential_ai_dependency']
+  end
+
+  # Bandaid: 'csd-2026' is one of
+  # SharedConstants::AI_CHAT_TOOLS_ALERT_EXEMPT_CURRICULUM_NAMES, so although it
+  # reports an essential dependency, the homepage alert it would raise is wrong.
+  # This test goes away with the exemption.
+  test "assigned_essential_ai_dependency: false when the assigned course is exempt from the ai chat tools alerts" do
+    teacher = create(:teacher)
+    unit_group = create_unit_group_with_essential_ai_chat_tools(name: 'csd-2026')
+    section = create(:section, user: teacher, course_id: unit_group.id)
+    sign_in teacher
+
+    get :assigned_essential_ai_dependency
+
+    assert_response :success
+    # The exemption is in the answer this endpoint gives, not in what the
+    # section reports: that still says the course requires AI chat tools.
+    assert_equal SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:ESSENTIAL], section.assigned_ai_chat_tools_dependency
+    refute returned_json['has_assigned_essential_ai_dependency']
+  end
+
   test "available_participant_types: returns forbidden if no user" do
     get :available_participant_types
     assert_response :forbidden
@@ -2313,12 +2349,12 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     create(:code_review_group_member, follower: @followers[2], code_review_group: @group2)
   end
 
-  private def create_unit_group_with_essential_ai_chat_tools
+  private def create_unit_group_with_essential_ai_chat_tools(name: nil)
     unit = create(:unit, :with_lessons, lessons_count: 1)
     lesson = unit.lessons.first
     activity_section = lesson.activity_sections.first
     create(:script_level, levels: [create(:aichat)], activity_section: activity_section)
-    unit_group = create(:unit_group, :stable)
+    unit_group = name ? create(:unit_group, :stable, name: name) : create(:unit_group, :stable)
     create(:unit_group_unit, unit_group: unit_group, script: unit, position: 1)
     CourseOffering.add_course_offering(unit_group)
     unit_group.reload

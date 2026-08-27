@@ -152,7 +152,8 @@ describe('shouldShowAiChatEssentialAlert', () => {
     ).toBe(true);
   });
 
-  // 'csd-2026' and 'csd2-2026' come from aiChatToolsAlertExemptions.
+  // 'csd-2026' and 'csd2-2026' come from the exempt-curriculum list in
+  // lib/cdo/shared_constants.rb.
   it('returns false when the assigned course is exempt', () => {
     expect(
       shouldShowAiChatEssentialAlert({

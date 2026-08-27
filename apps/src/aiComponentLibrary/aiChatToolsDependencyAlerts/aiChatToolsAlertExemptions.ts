@@ -1,23 +1,16 @@
+import {AiChatToolsAlertExemptCurriculumNames} from '@cdo/generated-scripts/sharedConstants';
+
 /**
  * Temporary exemptions from the "this course requires AI chat tools" alerts.
  *
- * A course or unit is reported as requiring AI chat tools when it contains any
- * Aichat or Weblab2 level; see Level.with_essential_ai_chat_tools in
- * dashboard/app/models/levels/level.rb. CS Discoveries 2026 trips that rule
- * because Unit 2 was rebuilt in Web Lab 2, but the CSD curriculum never asks
- * students to use AI Tutor, so teachers should not be told the course requires
- * AI chat tools to complete.
+ * The list itself lives in lib/cdo/shared_constants.rb, since the alert that
+ * fires on the teacher homepage is decided on the server, which has to read the
+ * same names; see AI_CHAT_TOOLS_ALERT_EXEMPT_CURRICULUM_NAMES there for why any
+ * name is on it.
  *
- * This is a bandaid. The fix is for a level to be able to declare that its AI
- * Tutor is optional, so the dependency the backend reports is correct for every
- * consumer, not just these two alerts.
- *
- * To revert: delete this file and the two conditions that call it, in
- * CourseOverview and UnitOverview.
+ * To revert: empty that list, then delete this file and the conditions that
+ * call it, in CourseOverview, UnitOverview, and shouldShowAiChatEssentialAlert.
  */
-
-/** Unit group and unit names, as they appear in a /courses or /s URL. */
-const EXEMPT_COURSE_AND_UNIT_NAMES = ['csd-2026', 'csd2-2026'];
 
 /**
  * True when any of the given unit group or unit names is exempt. Undefined
@@ -26,7 +19,6 @@ const EXEMPT_COURSE_AND_UNIT_NAMES = ['csd-2026', 'csd2-2026'];
 export default function isExemptFromAiChatToolsAlert(
   ...names: (string | undefined | null)[]
 ): boolean {
-  return names.some(
-    name => !!name && EXEMPT_COURSE_AND_UNIT_NAMES.includes(name)
-  );
+  const exempt = AiChatToolsAlertExemptCurriculumNames as readonly string[];
+  return names.some(name => !!name && exempt.includes(name));
 }

@@ -923,6 +923,22 @@ module SharedConstants
     NONE: 'none',
   }.freeze
 
+  # Bandaid. Unit group and unit names whose reported AI chat tools dependency
+  # is wrong, and which are therefore left out of the alerts that tell teachers
+  # a course requires AI chat tools to complete.
+  #
+  # Level.with_essential_ai_chat_tools counts every Weblab2 level as requiring
+  # AI chat tools, so a course is reported ESSENTIAL as soon as one of its units
+  # is built in Web Lab 2 -- true of CS Discoveries 2026 Unit 2, whose
+  # curriculum never asks students to use AI Tutor.
+  #
+  # Only the alerts consult this list; what students and teachers may actually
+  # do with AI chat tools is unchanged. Emptying the list restores the alerts.
+  AI_CHAT_TOOLS_ALERT_EXEMPT_CURRICULUM_NAMES = %w(
+    csd-2026
+    csd2-2026
+  ).freeze
+
   US_STATES = STATE_ABBR_WITH_DC_HASH.merge(DC: 'Washington, D.C.').sort_by(&:last).to_h.freeze
 
   PROJECT_SUBMISSION_STATUS = {
