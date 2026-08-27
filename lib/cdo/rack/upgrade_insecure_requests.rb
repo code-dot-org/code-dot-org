@@ -40,7 +40,7 @@ module Rack
         # http://www.w3.org/TR/upgrade-insecure-requests/#reporting-upgrades
 
         policies = []
-        if ssl?(env)
+        if true
           # headers['Content-Security-Policy'] = 'upgrade-insecure-requests'
           policies += [
             "default-src 'self' https:",
@@ -52,7 +52,7 @@ module Rack
             "img-src 'self' https: data: blob: https://*.code.org",
             "font-src 'self' https: data:",
             "connect-src 'self' https: https://api.pusherapp.com wss://ws.pusherapp.com http://localhost:8080 https://curriculum.code.org/ wss://*.code.org",
-            "media-src 'self' https: data: https://*.code.org http://vaas.acapela-group.com"
+            "media-src 'self' https: data: https://*.code.org http://vaas.acapela-group.com blob:"
           ]
         end
 
