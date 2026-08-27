@@ -33,9 +33,14 @@
       box-sizing: content-box;
 
       &::before {
-        // Block, not inline-block: as an inline-block the box sat on the
-        // wrapper's baseline and painted 3-4px below its own height.
-        display: block;
+        // Centre the check/dash glyph on the box itself. line-height
+        // centres the line box instead, which sits below the border, and
+        // left the glyph 1-2.5px low. Flex also keeps this out of the
+        // wrapper's inline formatting context, where an inline-block would
+        // sit on the baseline and paint 3-4px past its own height.
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         // The per-size width/height below are the box's outer size, border
         // included. Declare the box model rather than inheriting whatever
