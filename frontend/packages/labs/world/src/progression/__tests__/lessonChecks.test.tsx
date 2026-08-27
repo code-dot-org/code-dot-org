@@ -365,3 +365,114 @@ describe('every lesson that has a check', () => {
     expect(without).toEqual([]);
   });
 });
+
+/** A handler root to drop beside a `define actor`, with a `print` inside it. */
+const saying = (contents: string, hat: Row): string => {
+  const workspace = JSON.parse(contents) as {
+    blocks: {blocks: Row[]};
+  };
+  workspace.blocks.blocks.push({
+    ...hat,
+    x: 20,
+    y: 300,
+    next: {block: {type: 'world_log', fields: {TEXT: 'yes'}}},
+  } as Row);
+  return JSON.stringify(workspace);
+};
+
+describe('the key-press lesson’s check', () => {
+  const lesson = LESSONS['input/press'];
+
+  it('refuses a Hero that hears nothing', async () => {
+    const {passes} = await check('input/press', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts one that says a thing per press', async () => {
+    const solved = editing(lesson.source, 'hero.actor', contents =>
+      saying(electing(contents, 'Input#TakesKeyboardInputTrait'), {
+        type: 'world_on_Input_PressesEvent',
+        fields: {FILTER0: 'space'},
+        inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
+      }),
+    );
+    const {passes, result} = await check('input/press', solved);
+    expect(result.error).toBeUndefined();
+    expect(result.console).toHaveLength(2);
+    expect(passes).toBe(true);
+  });
+
+  // The lesson's whole point: a handler that ran while the key was HELD would
+  // say ninety things during the first stretch rather than one.
+  it('refuses something that speaks every frame', async () => {
+    const chatty = editing(lesson.source, 'hero.actor', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      workspace.blocks.blocks.push({
+        type: 'world_trait_step',
+        x: 20,
+        y: 300,
+        fields: {PHASE: 'decide', NAME: 'shout'},
+        inputs: {
+          DO: {block: {type: 'world_log', fields: {TEXT: 'yes'}}},
+        },
+      } as Row);
+      return JSON.stringify(workspace);
+    });
+    const {passes, result} = await check('input/press', chatty);
+    expect(result.console.length).toBeGreaterThan(50);
+    expect(passes).toBe(false);
+  });
+});
+
+describe('the click lesson’s check', () => {
+  const lesson = LESSONS['input/mouse'];
+
+  it('refuses a Target that does not know it was clicked', async () => {
+    const {passes} = await check('input/mouse', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts one that answers its own clicks and no others', async () => {
+    const solved = editing(lesson.source, 'target.actor', contents =>
+      saying(electing(contents, 'Mouse#CanBeClickedTrait'), {
+        // `IsClickedWith`, and the empty filter means "any button" — the block
+        // is "when ⟨Target⟩ is clicked with ⟨any⟩".
+        type: 'world_on_Mouse_IsClickedWithEvent',
+        fields: {FILTER0: ''},
+        inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
+      }),
+    );
+    const {passes, result} = await check('input/mouse', solved);
+    expect(result.error).toBeUndefined();
+    // One, not two: the script clicks the empty space as well, and a handler
+    // that answered any click anywhere would say two things.
+    expect(result.console).toHaveLength(1);
+    expect(passes).toBe(true);
+  });
+});
+
+describe('the two-hands lesson’s check', () => {
+  const lesson = LESSONS['input/two-hands'];
+
+  it('refuses a Ship that walks sideways', async () => {
+    const {passes} = await check('input/two-hands', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts one that turns and thrusts', async () => {
+    const solved = editing(lesson.source, 'ship.actor', contents =>
+      electing(
+        // Take the walking off first: two rules over four keys is the mistake
+        // the lesson warns about, and the check has to notice it.
+        contents.replace(
+          'Arrow Keys#MovesAcrossTrait',
+          'Arrow Drive#DrivenByArrowKeysTrait',
+        ),
+        'Physics#CanMoveTrait',
+      ),
+    );
+    const {passes, result} = await check('input/two-hands', solved);
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+});

@@ -87,6 +87,9 @@ export function playCheck(world: World, run: CheckRun): CheckResult {
     take();
     for (const step of run.trace) {
       world.setInput((step.hold ?? []).map(keyName));
+      if (step.pointer) {
+        world.setPointer(step.pointer, step.pointer.buttons ?? []);
+      }
       const frames = Math.max(0, Math.round(step.seconds * CHECK_FPS));
       for (let frame = 0; frame < frames; frame++) {
         world.tick(1 / CHECK_FPS);

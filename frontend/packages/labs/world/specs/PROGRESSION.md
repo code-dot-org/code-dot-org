@@ -596,6 +596,16 @@ property teaches the rest.
 **Number formatting.** A score drawn as `00042`, a timer as `1:07`. `join` and
 `length` are there; nothing pads or formats.
 
+**`mouse position`, somewhere an actor can find it.** The block exists and works
+anywhere — it is REGISTERED globally and only LISTED in the Engine drawer, which
+a `.rule` file gets and an `.actor` does not. So "the pointer is a place you can
+ask for" is a true sentence a learner cannot act on: they can be told a click
+landed on them (the Mouse rule's `Can Be Clicked`) and they cannot ask where the
+pointer is. `input/mouse` was written to teach both and now teaches the half
+that is reachable. The fix is small — the Mouse rule's category should list the
+block, the way Steering's category lists `distance from ⟨a⟩ to ⟨b⟩` — and it is
+a decision about that rule rather than something a lesson may do for itself.
+
 ## Milestones
 
 Ordered so that each one is worth having on its own, and so that the expensive

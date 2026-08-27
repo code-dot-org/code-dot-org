@@ -135,10 +135,22 @@ export const TILES: readonly Tile[] = [
     requires: ['input/arrows'],
     unlocks: [{kind: 'rule', id: 'input'}],
     check: {
-      kind: 'outcome',
-      says: 'A one-second hold toggles the lamp exactly once.',
+      kind: 'trace',
+      says: 'One hold of the space bar says one thing, and a second press says a second.',
       falsePass:
-        'A cooldown that happens to be longer than the scripted hold. Run a two-second hold as well and require one toggle from that too.',
+        'A handler on the wrong key, which says nothing at all and so also says nothing twice. The first hold has to produce exactly one line, not at most one.',
+      run: {
+        probes: {},
+        // Held, released, held again. Both halves matter: a handler that ran
+        // every frame would say ninety things during the first stretch, and one
+        // that ran once ever would say nothing during the third.
+        trace: [
+          {hold: [' '], seconds: 1},
+          {hold: [], seconds: 0.2},
+          {hold: [' '], seconds: 0.5},
+        ],
+      },
+      passes: ({console: said}) => said.length === 2,
     },
   },
   {
@@ -146,15 +158,28 @@ export const TILES: readonly Tile[] = [
     region: 'input',
     at: at('input', 2, 0),
     title: 'Point and click',
-    teaches: 'The pointer is a place you can ask for; a click is an event.',
-    task: 'Move a crosshair to the pointer, then make an actor react to being clicked on.',
+    teaches:
+      'A click is an event, and it happens somewhere — so an actor can be told about its own.',
+    task: 'Make an actor react to being clicked on, and to being clicked NEXT to.',
     requires: ['input/arrows'],
     unlocks: [{kind: 'rule', id: 'mouse'}],
     check: {
-      kind: 'outcome',
-      says: 'The crosshair tracks a scripted pointer path, and a click on the actor changes it.',
+      kind: 'trace',
+      says: 'A click on the actor says something; a click beside it says nothing.',
       falsePass:
-        'Reacting to a click anywhere rather than on the actor. The trace has a click on empty space that must change nothing.',
+        'Reacting to a click anywhere rather than on the actor — which is why the script clicks the empty space as well, and requires silence for it.',
+      run: {
+        probes: {},
+        // Down and up in the same place is a click. Two of them: one on the
+        // Target at the middle of the world, one well clear of it.
+        trace: [
+          {pointer: {x: 192, y: 144, buttons: ['left']}, seconds: 0.1},
+          {pointer: {x: 192, y: 144, buttons: []}, seconds: 0.1},
+          {pointer: {x: 40, y: 40, buttons: ['left']}, seconds: 0.1},
+          {pointer: {x: 40, y: 40, buttons: []}, seconds: 0.1},
+        ],
+      },
+      passes: ({console: said}) => said.length === 1,
     },
   },
   {
@@ -169,9 +194,34 @@ export const TILES: readonly Tile[] = [
     unlocks: [{kind: 'rule', id: 'drive'}],
     check: {
       kind: 'outcome',
-      says: 'Holding left turns the ship rather than moving it, and letting go leaves it coasting.',
+      says: 'Holding left turns the ship rather than moving it, and thrust afterwards moves it.',
       falsePass:
-        'Electing both rules at once, which fights itself. Assert the actor does not also slide sideways.',
+        'Electing both rules at once, which turns AND slides. The first stretch requires the ship to have stayed put, which walking cannot do.',
+      run: {
+        probes: {ship: {kind: 'positions', of: 'Ship'}},
+        trace: [
+          {hold: ['ArrowLeft'], seconds: 0.5},
+          {hold: ['ArrowUp'], seconds: 1},
+        ],
+      },
+      passes: ({samples}) => {
+        const [start, turned, thrust] = samples.ship as Point[][];
+        if (!start?.[0]) {
+          return false;
+        }
+        const stayed = Math.hypot(
+          turned[0].x - start[0].x,
+          turned[0].y - start[0].y,
+        );
+        const moved = Math.hypot(
+          thrust[0].x - turned[0].x,
+          thrust[0].y - turned[0].y,
+        );
+        // Turning moves nothing; thrusting moves it a long way. Walking would
+        // fail the first and do nothing about the second (there is no "Moves
+        // Down" on this Ship).
+        return stayed < 5 && moved > 40;
+      },
     },
   },
 

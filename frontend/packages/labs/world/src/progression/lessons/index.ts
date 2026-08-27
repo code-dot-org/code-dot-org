@@ -23,6 +23,7 @@ import {
   rectangle,
   setSprite,
   swatch,
+  useTrait,
 } from '../../actors/stock/workspace';
 import type {WorldScenario} from '../../fixtures/scenarios';
 import type {LessonProperties, TileId} from '../types';
@@ -295,10 +296,129 @@ The world is 12 tiles by 9, and a tile is 32 pixels: 384 across, 288 down.
 `.trim(),
 };
 
+// ── input/press ──────────────────────────────────────────────────────────────
+
+const press: WorldScenario = {
+  name: 'A key is an event',
+  description:
+    'Walking is a key HELD. A jump is a key PRESSED. They are not the same reading.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      tiles: SCREEN,
+      rows: [addActor('hero', [placeAt(192, 144)])],
+    }),
+    actors: {
+      hero: actorFile('Hero', [
+        useTrait('Arrow Keys#MovesAcrossTrait'),
+        setSprite('player.png'),
+      ]),
+    },
+    sprites: ['player'],
+    rules: ['arrows', 'input'],
+  }),
+  instructions: `
+## A key is an event
+
+Hold the left and right arrows. The Hero walks for as long as you hold them —
+the trait reads the keys sixty times a second and moves a little each time.
+
+Some things should not work that way. A jump should happen ONCE however long
+you lean on the button.
+
+### What you do
+
+1. Give the Hero **use trait ⟨Takes Keyboard Input⟩**. On its own it does
+   nothing: it is the Hero electing to be told about keys at all.
+2. Add a **when ⟨Hero⟩ hears ⟨space⟩ pressed** handler, and put a **print**
+   inside it.
+3. Run it and hold space down for a few seconds. One line, not two hundred.
+4. Let go and press again. Now there are two.
+`.trim(),
+};
+
+// ── input/mouse ──────────────────────────────────────────────────────────────
+
+const mouse: WorldScenario = {
+  name: 'Point and click',
+  description:
+    'A button that does not know it has been pressed, and the trait that tells it.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      tiles: SCREEN,
+      rows: [addActor('target', [placeAt(192, 144)])],
+    }),
+    actors: {target: actorFile('Target', [setSprite('coin.png')])},
+    sprites: ['coin'],
+    rules: ['mouse'],
+  }),
+  instructions: `
+## Point and click
+
+Click the Target. Nothing happens — it does not know the click landed on it,
+and it has no way to find out until it says so.
+
+A click is an **event**, like a key going down. What is different is that a
+click happens somewhere: the world can say WHICH actor was under the pointer,
+so an actor can be told about its own clicks and nobody else's.
+
+### What you do
+
+1. Give the Target **use trait ⟨Can Be Clicked⟩**.
+2. Add a **when ⟨Target⟩ is clicked** handler and **print** something in it.
+3. Click the Target, then click the empty space beside it. Only one of those
+   says anything.
+`.trim(),
+};
+
+// ── input/two-hands ──────────────────────────────────────────────────────────
+
+const twoHands: WorldScenario = {
+  name: 'Two readings of four keys',
+  description:
+    'The same four keys as a walk, and as a ship. Elect one or the other, never both.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      tiles: SCREEN,
+      rows: [addActor('ship', [placeAt(192, 144)])],
+    }),
+    actors: {
+      ship: actorFile('Ship', [
+        useTrait('Arrow Keys#MovesAcrossTrait'),
+        setSprite('ship.png'),
+      ]),
+    },
+    sprites: ['ship'],
+    rules: ['arrows', 'drive', 'drag'],
+  }),
+  instructions: `
+## Two readings of four keys
+
+Left and right walk the Ship sideways. That is one reading of the arrow keys,
+and it is the one a platformer wants.
+
+A ship is not a platformer. Left and right should TURN it, and up should push it
+the way it is pointing.
+
+### What you do
+
+1. Take **⟨Moves Across⟩** off the Ship and give it **⟨Driven by Arrow Keys⟩**
+   instead. Both at once is two rules fighting over the same four keys.
+2. Run it. Left and right turn; up thrusts; letting go leaves it coasting,
+   because nothing in space slows down.
+3. Add **⟨Slows Down⟩** and watch it become a car instead.
+`.trim(),
+};
+
 /** Every lesson written so far, by the tile it belongs to. */
 export const LESSONS: Readonly<Record<TileId, WorldScenario>> = {
   'origin/first-world': firstWorld,
   'input/arrows': arrows,
+  'input/press': press,
+  'input/mouse': mouse,
+  'input/two-hands': twoHands,
   'motion/speed': speed,
   'motion/gravity': gravity,
   'look/sprite': sprite,

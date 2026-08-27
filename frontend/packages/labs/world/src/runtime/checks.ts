@@ -26,6 +26,15 @@ export interface TraceStep {
    * translated the same way the driver translates them.
    */
   hold?: readonly string[];
+  /**
+   * Where the pointer is for this stretch, and which of its buttons are down
+   * ('left', 'middle', 'right' — `engine/core/pointer`).
+   *
+   * A stretch that says nothing leaves the pointer where the last one put it,
+   * which is what a hand does. Two stretches at one place with the button down
+   * and then up are a CLICK, and that is how a check scripts one.
+   */
+  pointer?: {x: number; y: number; buttons?: readonly string[]};
   /** How long to hold them, in seconds, at a fixed sixty frames a second. */
   seconds: number;
 }
