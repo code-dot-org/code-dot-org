@@ -25,6 +25,13 @@ export function useAuthoringState() {
       clearTimeout(debounceRef.current);
       debounceRef.current = setTimeout(() => {
         queryClient.invalidateQueries({queryKey: STATE_KEY});
+        // A 'state' event also covers levelProperties changes (e.g. an
+        // agent/author instructions edit, or update_level's Maze grid
+        // patch) — those live in their own per-level query, so refresh the
+        // whole family rather than tracking which numericId changed.
+        queryClient.invalidateQueries({
+          queryKey: ['authoring', 'levelProperties'],
+        });
       }, STATE_INVALIDATE_DEBOUNCE_MS);
     };
 

@@ -437,6 +437,52 @@
   justify-content: flex-end;
 }
 
+/* Level instructions (learner-facing block above a mounted lab, plus the
+   author's edit affordance) */
+
+.levelInstructions {
+  @extend %authoring-card;
+  width: 100%;
+  max-width: 880px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.levelInstructionsEditBar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.levelInstructionsCollapsed {
+  max-height: 4.2em; // ~3 lines
+  overflow: hidden;
+  mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+}
+
+.levelInstructionsToggle {
+  align-self: flex-start;
+  border: none;
+  background: transparent;
+  color: var(--text-brand-purple-primary, #4d24a8);
+  cursor: pointer;
+  padding: 2px 0;
+  font: inherit;
+  font-weight: 600;
+
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+  }
+}
+
+.levelInstructionsNote {
+  color: var(--text-neutral-secondary, #6f747c);
+  font-style: italic;
+}
+
 /* Generic level renderers */
 
 .videoFrameWrap {

@@ -2,6 +2,7 @@ import {randomUUID} from 'node:crypto';
 
 import type {
   ApplyChange,
+  CourseModel,
   CurriculumChange,
   CurriculumChangeBody,
   ResolveLevel,
@@ -103,10 +104,26 @@ export class AuthoringState {
       this.resolveLevel,
     );
 
+    // overrideLevelInstructions has no separate LevelProperties write path
+    // (unlike update_level's Maze-only tool, which rewrites the whole
+    // wire-shape entry itself) — fold the just-applied override onto the
+    // served entry here so GET .../level_properties reflects it immediately,
+    // in the same version bump as the change itself.
+    const levelProperties =
+      change.op === 'overrideLevelInstructions'
+        ? mergeInstructionsOverride(
+            this.snapshot.levelProperties,
+            next.courses,
+            change.experienceId,
+            change.patch,
+          )
+        : this.snapshot.levelProperties;
+
     this.snapshot = {
       ...this.snapshot,
       courses: next.courses,
       widgets: next.widgets,
+      levelProperties,
       version: this.snapshot.version + 1,
     };
     this.store.writeSnapshot(this.snapshot);
@@ -214,6 +231,45 @@ export class AuthoringState {
       this.changes.reduce((max, change) => Math.max(max, change.seq), 0) + 1
     );
   }
+}
+
+/** Depth-first search for one experience by id, across every course/unit/lesson. */
+function findExistingLevelExperience(
+  courses: CourseModel[],
+  experienceId: string,
+) {
+  for (const course of courses) {
+    for (const unit of course.units) {
+      for (const lesson of unit.lessons) {
+        for (const experience of lesson.experiences) {
+          if (
+            experience.id === experienceId &&
+            experience.kind === 'existingLevel'
+          ) {
+            return experience;
+          }
+        }
+      }
+    }
+  }
+  return undefined;
+}
+
+function mergeInstructionsOverride(
+  levelProperties: Record<string, Record<string, unknown>>,
+  courses: CourseModel[],
+  experienceId: string,
+  patch: {shortInstructions?: string; longInstructions?: string},
+): Record<string, Record<string, unknown>> {
+  const experience = findExistingLevelExperience(courses, experienceId);
+  if (experience?.levelNumericId === undefined) {
+    return levelProperties;
+  }
+  const numericId = String(experience.levelNumericId);
+  return {
+    ...levelProperties,
+    [numericId]: {...levelProperties[numericId], ...patch},
+  };
 }
 
 function descriptorFor(

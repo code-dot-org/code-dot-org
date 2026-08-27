@@ -330,6 +330,76 @@ describe('applyChange', () => {
     expect(experience.levelKey).toBe('draft-level-1');
   });
 
+  it('overrides an imported level instructions without rewriting its identity', () => {
+    const state = frozenBaseState();
+    const level: ExistingLevelExperience = {
+      id: 'lb:20hr_maze_stage2_13',
+      origin: 'levelbuilder',
+      kind: 'existingLevel',
+      levelKey: '20hr_maze_stage2_13',
+      levelType: 'Maze',
+      runtime: 'labhost',
+      labKey: 'maze',
+      levelNumericId: 42,
+    };
+    const withLevel = applyChange(state, {
+      seq: 1,
+      at: 'now',
+      actor: 'author',
+      op: 'createLevel',
+      lessonId: 'lesson-2',
+      level,
+      position: 0,
+    });
+    const next = applyChange(deepFreeze(withLevel), {
+      seq: 2,
+      at: 'now',
+      actor: 'author',
+      op: 'overrideLevelInstructions',
+      experienceId: 'lb:20hr_maze_stage2_13',
+      patch: {shortInstructions: 'Reworded for 2nd grade.'},
+    });
+    const experience = next.courses[0].units[0].lessons[1]
+      .experiences[0] as ExistingLevelExperience;
+    expect(experience.instructionsOverride).toEqual({
+      shortInstructions: 'Reworded for 2nd grade.',
+    });
+    expect(experience.levelKey).toBe('20hr_maze_stage2_13');
+    expect(experience.origin).toBe('levelbuilder');
+
+    // A second patch merges onto the existing override rather than
+    // replacing it.
+    const withLong = applyChange(deepFreeze(next), {
+      seq: 3,
+      at: 'now',
+      actor: 'author',
+      op: 'overrideLevelInstructions',
+      experienceId: 'lb:20hr_maze_stage2_13',
+      patch: {longInstructions: 'Longer version, still simple.'},
+    });
+    const merged = withLong.courses[0].units[0].lessons[1]
+      .experiences[0] as ExistingLevelExperience;
+    expect(merged.instructionsOverride).toEqual({
+      shortInstructions: 'Reworded for 2nd grade.',
+      longInstructions: 'Longer version, still simple.',
+    });
+  });
+
+  it('leaves a non-level experience untouched by an instructions override', () => {
+    const state = frozenBaseState();
+    const next = applyChange(state, {
+      seq: 1,
+      at: 'now',
+      actor: 'author',
+      op: 'overrideLevelInstructions',
+      experienceId: 'exp-1',
+      patch: {shortInstructions: 'does not apply'},
+    });
+    expect(next.courses[0].units[0].lessons[0].experiences[0]).toEqual(
+      content('exp-1'),
+    );
+  });
+
   it('throws a clear error for an unknown lesson id', () => {
     const state = frozenBaseState();
     expect(() =>

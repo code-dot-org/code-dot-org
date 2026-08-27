@@ -64,6 +64,12 @@ export interface ExistingLevelExperience extends ExperienceBase {
   labKey?: 'oceans' | 'music' | 'maze';
   levelNumericId?: number;
   data?: GenericLevelData;
+  instructionsOverride?: InstructionsPatch;
+}
+
+export interface InstructionsPatch {
+  shortInstructions?: string;
+  longInstructions?: string;
 }
 
 export interface WidgetExperience extends ExperienceBase {
@@ -199,7 +205,12 @@ export type CurriculumChangeBody =
       level: ExistingLevelExperience;
       position: number;
     }
-  | {op: 'updateLevel'; experienceId: string; patch: LevelPatch};
+  | {op: 'updateLevel'; experienceId: string; patch: LevelPatch}
+  | {
+      op: 'overrideLevelInstructions';
+      experienceId: string;
+      patch: InstructionsPatch;
+    };
 
 export type CurriculumChangeOp = CurriculumChangeBody['op'];
 
@@ -219,6 +230,7 @@ export const CURRICULUM_CHANGE_OPS: readonly CurriculumChangeOp[] = [
   'updateWidgetMetadata',
   'createLevel',
   'updateLevel',
+  'overrideLevelInstructions',
 ];
 
 export type CurriculumChange = {

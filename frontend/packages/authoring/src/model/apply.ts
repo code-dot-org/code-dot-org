@@ -317,5 +317,21 @@ export function applyChange(
         ),
       }));
     }
+
+    case 'overrideLevelInstructions': {
+      const lessonId = findLessonIdForExperience(state, change.experienceId);
+      return replaceLesson(state, lessonId, lesson => ({
+        ...lesson,
+        experiences: lesson.experiences.map(e => {
+          if (e.id !== change.experienceId || e.kind !== 'existingLevel') {
+            return e;
+          }
+          return {
+            ...e,
+            instructionsOverride: {...e.instructionsOverride, ...change.patch},
+          };
+        }),
+      }));
+    }
   }
 }

@@ -2,6 +2,7 @@ import type {
   CourseModel,
   Experience,
   ExistingLevelExperience,
+  InstructionsPatch,
   Lesson,
   Unit,
 } from './types';
@@ -89,4 +90,15 @@ export type CurriculumChange = {
       position: number;
     }
   | {op: 'updateLevel'; experienceId: string; patch: LevelPatch}
+  // Applies to any existingLevel experience — imported (lb:) or draft alike.
+  // Draft Maze levels also accept instructions through update_level's
+  // MazeLevelDefinitionPatchSchema (grid/blocks/instructions together, gated
+  // by the solvability check); this op is the lighter, type-agnostic path
+  // used uniformly by the manual UI and the agent tool, and the one the two
+  // coexist rather than one delegating to the other.
+  | {
+      op: 'overrideLevelInstructions';
+      experienceId: string;
+      patch: InstructionsPatch;
+    }
 );

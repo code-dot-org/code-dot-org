@@ -130,6 +130,11 @@ const GenericLevelDataSchema: z.ZodType<GenericLevelData> = z.lazy(() =>
   ]),
 );
 
+const InstructionsPatchSchema = z.object({
+  shortInstructions: z.string().optional(),
+  longInstructions: z.string().optional(),
+});
+
 const ExistingLevelExperienceSchema = z.object({
   ...experienceBase,
   kind: z.literal('existingLevel'),
@@ -139,6 +144,7 @@ const ExistingLevelExperienceSchema = z.object({
   labKey: z.enum(['oceans', 'music', 'maze']).optional(),
   levelNumericId: z.number().optional(),
   data: GenericLevelDataSchema.optional(),
+  instructionsOverride: InstructionsPatchSchema.optional(),
 });
 
 const WidgetExperienceSchema = z.object({
@@ -250,5 +256,10 @@ export const CurriculumChangeBodySchema = z.discriminatedUnion('op', [
     op: z.literal('updateLevel'),
     experienceId: z.string().min(1),
     patch: LevelPatchSchema,
+  }),
+  z.object({
+    op: z.literal('overrideLevelInstructions'),
+    experienceId: z.string().min(1),
+    patch: InstructionsPatchSchema,
   }),
 ]);

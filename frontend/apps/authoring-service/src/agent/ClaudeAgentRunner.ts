@@ -730,6 +730,38 @@ function buildCurriculumServer(
         },
       ),
       tool(
+        'update_level_instructions',
+        "Reword or add the short_instructions/long_instructions shown to the learner on any attached level — imported (lb:) or draft, Maze/Music/Fish alike. Layers an override on top of the level's own source; never rewrites the imported file or the draft definition. Use the selected experience's id from [author context] unless the author names a different one.",
+        {
+          experienceId: z.string(),
+          shortInstructions: z.string().optional(),
+          longInstructions: z.string().optional(),
+        },
+        async ({experienceId, shortInstructions, longInstructions}) => {
+          if (shortInstructions === undefined && longInstructions === undefined) {
+            return fail('provide shortInstructions and/or longInstructions');
+          }
+          const experience = findExperienceById(state, experienceId);
+          if (!experience) {
+            return fail(`no experience ${experienceId}`);
+          }
+          if (experience.kind !== 'existingLevel') {
+            return fail(
+              `experience ${experienceId} is not a level (kind: ${experience.kind})`,
+            );
+          }
+          apply({
+            op: 'overrideLevelInstructions',
+            experienceId,
+            patch: {
+              ...(shortInstructions !== undefined ? {shortInstructions} : {}),
+              ...(longInstructions !== undefined ? {longInstructions} : {}),
+            },
+          });
+          return ok({experienceId});
+        },
+      ),
+      tool(
         'set_adaptive_policy',
         'Set author-defined constraints for the optional learner-time tutor on a lesson.',
         {
@@ -816,6 +848,23 @@ function findLevel(
               levelNumericId: experience.levelNumericId,
             };
           }
+        }
+      }
+    }
+  }
+  return undefined;
+}
+
+function findExperienceById(
+  state: AuthoringState,
+  experienceId: string,
+): Experience | undefined {
+  for (const course of state.getSnapshot().courses) {
+    for (const unit of course.units) {
+      for (const lesson of unit.lessons) {
+        const experience = lesson.experiences.find(e => e.id === experienceId);
+        if (experience) {
+          return experience;
         }
       }
     }

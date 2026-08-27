@@ -383,9 +383,19 @@ function buildFishLevelProperties(
     showExemplarLink: false,
     parentLevelLink: null,
     exemplarSources: null,
+    longInstructions: properties.long_instructions,
+    shortInstructions: properties.short_instructions,
   };
 }
 
+// Music's long_instructions/short_instructions live in the same top-level
+// properties as Maze's — dropped here until now because this whitelist never
+// carried them through. The mounted music-lab self-renders longInstructions
+// whenever it's set (an auto-opened ResourcePanel "Instructions" tab, or the
+// GuideInstructions overlay when level_data sets guideMode: 'instructions') —
+// the studio host (ExperienceStage/LevelInstructions) skips its own readonly
+// preview accordingly, but still needs the raw values wired through here for
+// the edit affordance to have something to pre-fill and patch.
 function buildMusicLevelProperties(
   id: number,
   levelKey: string,
@@ -401,6 +411,8 @@ function buildMusicLevelProperties(
     encrypted: false,
     levelData: properties.level_data ?? null,
     hideShareAndRemix: true,
+    longInstructions: properties.long_instructions,
+    shortInstructions: properties.short_instructions,
     instructionsImportant: false,
     offerBrowserTts: false,
     useSecondaryFinishButton: false,

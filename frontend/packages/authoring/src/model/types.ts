@@ -56,6 +56,17 @@ export interface ExistingLevelExperience extends ExperienceBase {
   labKey?: 'oceans' | 'music' | 'maze'; // LAB_REGISTRY key when runtime is labhost
   levelNumericId?: number; // synthetic id for the LevelProperties wire shape
   data?: GenericLevelData; // structured payload for generic renderers
+  // Author-edited instructions layered on top of whatever the imported
+  // source (or draft definition) carries — never a rewrite of that source.
+  // The authoring service also folds this onto the served LevelProperties
+  // entry for levelNumericId, so a mounted lab sees it exactly like it would
+  // see the original short_instructions/long_instructions.
+  instructionsOverride?: InstructionsPatch;
+}
+
+export interface InstructionsPatch {
+  shortInstructions?: string;
+  longInstructions?: string;
 }
 
 /** Agent-created executable learner content, sandboxed. */

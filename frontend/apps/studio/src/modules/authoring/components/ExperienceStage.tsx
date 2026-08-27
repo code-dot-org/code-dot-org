@@ -18,6 +18,7 @@ import '@code-dot-org/oceans-lab/styles.css';
 import {useLevelProperties} from '@/modules/authoring';
 import {getLabEntrypointByAppName} from '@/modules/labs/router/getLabEntrypointByAppName';
 
+import LevelInstructions from './LevelInstructions';
 import BubbleChoiceLevel from './renderers/BubbleChoiceLevel';
 import LevelGroupLevel from './renderers/LevelGroupLevel';
 import MatchLevel from './renderers/MatchLevel';
@@ -37,6 +38,9 @@ interface ExperienceStageProps {
   experience: Experience;
   /** Learner interactions bubbling up (widget events, answers). */
   onStageEvent?: (event: StageEvent) => void;
+  /** Shows the "Edit instructions" affordance on existingLevel experiences.
+   * Everything else this component renders is identical in both modes. */
+  authorMode?: boolean;
 }
 
 /**
@@ -48,6 +52,7 @@ interface ExperienceStageProps {
 export default function ExperienceStage({
   experience,
   onStageEvent,
+  authorMode = false,
 }: ExperienceStageProps) {
   switch (experience.kind) {
     case 'content':
@@ -61,6 +66,7 @@ export default function ExperienceStage({
         <ExistingLevelStage
           experience={experience}
           onStageEvent={onStageEvent}
+          authorMode={authorMode}
         />
       );
     case 'widget':
@@ -76,9 +82,11 @@ export default function ExperienceStage({
 function ExistingLevelStage({
   experience,
   onStageEvent,
+  authorMode,
 }: {
   experience: ExistingLevelExperience;
   onStageEvent?: (event: StageEvent) => void;
+  authorMode: boolean;
 }) {
   if (experience.runtime === 'labhost') {
     if (!experience.levelNumericId) {
@@ -93,9 +101,11 @@ function ExistingLevelStage({
     return (
       <LabHostStage
         key={experience.id}
+        experienceId={experience.id}
         levelNumericId={experience.levelNumericId}
         levelKey={experience.levelKey}
         levelType={experience.levelType}
+        authorMode={authorMode}
       />
     );
   }
@@ -132,13 +142,17 @@ function ExistingLevelStage({
  * blocking the whole lesson.
  */
 function LabHostStage({
+  experienceId,
   levelNumericId,
   levelKey,
   levelType,
+  authorMode,
 }: {
+  experienceId: string;
   levelNumericId: number;
   levelKey: string;
   levelType: string;
+  authorMode: boolean;
 }) {
   const {data: properties, isLoading} = useLevelProperties(levelNumericId);
 
@@ -146,9 +160,8 @@ function LabHostStage({
     return <Loading />;
   }
 
-  const appName = properties?.[String(levelNumericId)]?.appName as
-    | string
-    | undefined;
+  const levelProps = properties?.[String(levelNumericId)];
+  const appName = levelProps?.appName as string | undefined;
   const LabEntrypoint = appName
     ? getLabEntrypointByAppName(appName)
     : undefined;
@@ -163,14 +176,35 @@ function LabHostStage({
     );
   }
 
+  // maze-lab always renders longInstructions itself (the character-avatar
+  // bubble above the play area). music-lab does too, whenever
+  // levelProperties.longInstructions is set — normally as an auto-opened
+  // "Instructions" tab in its ResourcePanel sidebar, or (when the level's
+  // level_data sets guideMode: 'instructions') as the GuideInstructions
+  // overlay instead, with the ResourcePanel tab suppressed
+  // (lab-classic/resourcePanel/components/ResourcePanel.tsx, sidebarOnly).
+  // Either way it's already on screen — showing the host block on top would
+  // put the same text on the page twice.
+  const selfDisplayedByLab = appName === 'maze' || appName === 'music';
+
   return (
-    <div className={styles.labStage}>
-      <Suspense fallback={<Loading />}>
-        <Lab levelId={levelNumericId} levelPropertiesMap={properties}>
-          <LabEntrypoint />
-        </Lab>
-      </Suspense>
-    </div>
+    <>
+      <LevelInstructions
+        experienceId={experienceId}
+        levelNumericId={levelNumericId}
+        shortInstructions={levelProps?.shortInstructions}
+        longInstructions={levelProps?.longInstructions}
+        selfDisplayedByLab={selfDisplayedByLab}
+        authorMode={authorMode}
+      />
+      <div className={styles.labStage}>
+        <Suspense fallback={<Loading />}>
+          <Lab levelId={levelNumericId} levelPropertiesMap={properties}>
+            <LabEntrypoint />
+          </Lab>
+        </Suspense>
+      </div>
+    </>
   );
 }
 

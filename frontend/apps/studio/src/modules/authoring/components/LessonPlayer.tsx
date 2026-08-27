@@ -245,6 +245,7 @@ export default function LessonPlayer({
                       : active
                   }
                   onStageEvent={onStageEvent}
+                  authorMode={authorMode}
                 />
               )
             ) : (

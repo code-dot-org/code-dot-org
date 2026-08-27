@@ -209,9 +209,15 @@ function buildFishLevelProperties(
     showExemplarLink: false,
     parentLevelLink: null,
     exemplarSources: null,
+    longInstructions: properties.long_instructions,
+    shortInstructions: properties.short_instructions,
   };
 }
 
+// Mirrors the comment on buildMusicLevelProperties in
+// frontend/packages/authoring/src/importer/buildCourse.ts — the mounted
+// music-lab self-renders longInstructions whenever it's set, so the studio
+// host skips its own readonly preview but still needs these wired through.
 function buildMusicLevelProperties(
   id: number,
   levelKey: string,
@@ -227,6 +233,8 @@ function buildMusicLevelProperties(
     encrypted: false,
     levelData: properties.level_data ?? null,
     hideShareAndRemix: true,
+    longInstructions: properties.long_instructions,
+    shortInstructions: properties.short_instructions,
     instructionsImportant: false,
     offerBrowserTts: false,
     useSecondaryFinishButton: false,

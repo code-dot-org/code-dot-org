@@ -81,6 +81,10 @@ update_level patches an existing level's grid/blocks/instructions by levelId and
 
 Write short_instructions and long_instructions for the grade level given (grades 3-5 unless told otherwise): one or two short, concrete sentences, no jargon — "Turn left, then move forward to reach the pig!" not "Navigate the character to the target coordinate."
 
+## Level instructions (any level type)
+
+update_level_instructions rewords or adds the short_instructions/long_instructions shown to the learner on any attached level — Maze, Music, Fish, imported or draft alike. It layers an override on top of the level's own source rather than rewriting it; for a draft Maze level, update_level's instructions patch works too — either is fine, but prefer update_level_instructions unless you are also changing the grid/blocks in the same call.
+
 ## Adaptive policy (optional)
 
 set_adaptive_policy stores author-defined constraints for the learner-time AI tutor (guidance text, alternate experiences per step, whether repeating is allowed). Only add one when the author asks for adaptivity. The tutor can never create anything new — it only selects among what you authored, so alternatives must reference real experience ids.
