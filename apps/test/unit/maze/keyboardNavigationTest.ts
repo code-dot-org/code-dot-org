@@ -802,13 +802,16 @@ describe('MazeKeyboardNavigation interaction', () => {
 
   // Painter keeps its scenery on wall tiles, so the cursor must reach them.
   describe('neighborhood walls are walkable', () => {
-    const neighborhoodController = (tiles: Record<string, number>) =>
+    const neighborhoodController = (
+      tiles: Record<string, number>,
+      spriteMap: Record<string, {name: string}> = {'48': {name: 'grass'}}
+    ) =>
       makeController({
         tiles,
         pegman: {x: 1, y: 1},
         subtype: {
           isNeighborhood: () => true,
-          getSpriteMap: () => ({'48': {name: 'grass'}}),
+          getSpriteMap: () => spriteMap,
           getCell: () => ({
             getCurrentValue: () => 0,
             getColor: () => undefined,
@@ -817,14 +820,39 @@ describe('MazeKeyboardNavigation interaction', () => {
         },
       });
 
-    it('moves onto a wall and names the scenery', () => {
+    it('stays put at an obstacle', () => {
+      renderPegman();
+      (window as unknown as {Maze: {controller: Controller}}).Maze.controller =
+        neighborhoodController({'1,2': SquareType.OBSTACLE});
+      press('Enter');
+      press('ArrowRight');
+      expect(liveRegionText()).toBe('Blocked. Grass.');
+    });
+
+    // Scenery the sprite list does not name still has to say what stopped you.
+    it('falls back to the tile when the scenery has no name', () => {
+      renderPegman();
+      (window as unknown as {Maze: {controller: Controller}}).Maze.controller =
+        neighborhoodController(
+          {'1,2': SquareType.WALL, '2,1': SquareType.OBSTACLE},
+          {}
+        );
+      press('Enter');
+      press('ArrowRight');
+      expect(liveRegionText()).toBe('Blocked. Wall.');
+      press('ArrowDown');
+      expect(liveRegionText()).toBe('Blocked. Obstacle.');
+    });
+
+    it('stays put at a wall and names what blocks it', () => {
       renderPegman();
       (window as unknown as {Maze: {controller: Controller}}).Maze.controller =
         neighborhoodController({'1,2': SquareType.WALL});
       press('Enter');
       press('ArrowRight');
+      expect(liveRegionText()).toBe('Blocked. Grass.');
       expect(focusableCursor()?.getAttribute('aria-label')).toBe(
-        'Grass. Row 2, column 3.'
+        'Grass. Painter is here. Row 2, column 2.'
       );
     });
 
