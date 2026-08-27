@@ -42,6 +42,16 @@ class QuizQuestionsControllerTest < ActionController::TestCase
 
     assert_response :success
     body = JSON.parse(response.body)
+    # TEMPORARY debug output - remove once the drone-only flakiness here is
+    # diagnosed. Prints enough to see whether @question/other_question are
+    # even in the returned set, and how much ambient MultipleChoiceQuestion
+    # data exists at the time this runs.
+    unless body.any? {|q| q['id'] == @question.id}
+      warn "DEBUG index-attached: MultipleChoiceQuestion.count=#{MultipleChoiceQuestion.count}"
+      warn "DEBUG index-attached: @question.id=#{@question.id}, other_question.id=#{other_question.id}"
+      warn "DEBUG index-attached: returned ids=#{body.map {|q| q['id']}.inspect}"
+      warn "DEBUG index-attached: most recent 15 MultipleChoiceQuestion (id, created_at)=#{MultipleChoiceQuestion.order(created_at: :desc).limit(15).pluck(:id, :created_at).inspect}"
+    end
     attached_flags = body.index_by {|q| q['id']}.transform_values {|q| q['attached']}
     assert_equal true, attached_flags[@question.id]
     assert_equal false, attached_flags[other_question.id]
@@ -59,7 +69,15 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     get :index, params: {level_id: @quiz.id, limit: 10}
 
     assert_response :success
-    by_id = JSON.parse(response.body).index_by {|q| q['id']}
+    body = JSON.parse(response.body)
+    by_id = body.index_by {|q| q['id']}
+    # TEMPORARY debug output - remove once the drone-only flakiness here is
+    # diagnosed.
+    unless by_id[shared_and_published.id] && by_id[@question.id]
+      warn "DEBUG index-bulk: MultipleChoiceQuestion.count=#{MultipleChoiceQuestion.count}"
+      warn "DEBUG index-bulk: shared_and_published.id=#{shared_and_published.id}, @question.id=#{@question.id}"
+      warn "DEBUG index-bulk: returned ids=#{body.map {|q| q['id']}.inspect}"
+    end
     assert_equal true, by_id[shared_and_published.id]['attachedToOtherQuizzes']
     assert_equal true, by_id[shared_and_published.id]['usedInPublishedUnit']
     assert_equal false, by_id[@question.id]['attachedToOtherQuizzes']
@@ -81,15 +99,18 @@ class QuizQuestionsControllerTest < ActionController::TestCase
       end
     end
 
+    # TEMPORARY: collects the actual SQL alongside the count, so a failure
+    # can print exactly which queries differ between the two runs, not just
+    # the totals - remove once the drone-only flakiness here is diagnosed.
     count_queries = lambda do
-      count = 0
+      queries = []
       subscriber = ActiveSupport::Notifications.subscribe('sql.active_record') do |*, payload|
-        count += 1 unless payload[:name].to_s.match?(/SCHEMA|TRANSACTION/)
+        queries << payload[:sql] unless payload[:name].to_s.match?(/SCHEMA|TRANSACTION/)
       end
       get :index, params: {level_id: @quiz.id, limit: 30}
       assert_response :success
       ActiveSupport::Notifications.unsubscribe(subscriber)
-      count
+      queries
     end
 
     build_questions.call(2)
@@ -98,7 +119,13 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     build_questions.call(8)
     large_page_queries = count_queries.call
 
-    assert_equal small_page_queries, large_page_queries
+    unless small_page_queries.length == large_page_queries.length
+      warn "DEBUG query-count: small (#{small_page_queries.length}):"
+      small_page_queries.each {|q| warn "  #{q}"}
+      warn "DEBUG query-count: large (#{large_page_queries.length}):"
+      large_page_queries.each {|q| warn "  #{q}"}
+    end
+    assert_equal small_page_queries.length, large_page_queries.length
   end
 
   test "index narrows by standard when both standardFrameworkShortcode and standardShortcode are given" do
