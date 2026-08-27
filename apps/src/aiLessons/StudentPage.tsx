@@ -169,14 +169,20 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
   // The adaptivity dial: ?adaptivity=static|augment|full, clamped to
   // what the author allows.  `static` disables the mastery machinery
   // entirely — no evaluation, no generation, a classic lesson.
-  const adaptivityMode = useMemo(
-    () =>
-      resolveAdaptivity(
-        authoredLesson,
-        new URLSearchParams(window.location.search).get('adaptivity')
-      ),
-    [authoredLesson]
+  //
+  // An explicit URL override wins.  Without one, the mode the run
+  // STARTED in (stored on the progress snapshot) is restored once
+  // saved progress loads — see the load effect — so resuming a
+  // full-mode run doesn't silently degrade to the authored default.
+  const requestedMode = useMemo(
+    () => new URLSearchParams(window.location.search).get('adaptivity'),
+    []
   );
+  const [adaptivityMode, setAdaptivityMode] = useState(() =>
+    resolveAdaptivity(authoredLesson, requestedMode)
+  );
+  const adaptivityModeRef = useRef(adaptivityMode);
+  adaptivityModeRef.current = adaptivityMode;
   // True while the arc generator is designing the personalized lesson
   // arc — the main area shows the generation screen instead of a step.
   const [generatingArc, setGeneratingArc] = useState(false);
@@ -319,6 +325,13 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
       // resolve them against the merged plan, not the authored one.
       const merged = applyOverlay(authoredLesson, savedOverlay);
       progressRef.current = snapshot;
+      // No explicit ?adaptivity= override → resume in the mode the run
+      // started in.  Clamped, in case the authored max shrank since.
+      if (!requestedMode && snapshot?.adaptivityMode) {
+        setAdaptivityMode(
+          resolveAdaptivity(authoredLesson, snapshot.adaptivityMode)
+        );
+      }
       const savedChecklist = snapshot?.checklist || {};
       setChecklistState(savedChecklist);
       checklistRef.current = savedChecklist;
@@ -345,7 +358,8 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
     return () => {
       cancelled = true;
     };
-  }, [authoredLesson]);
+    // requestedMode is a mount-stable memo of the URL param.
+  }, [authoredLesson, requestedMode]);
 
   // Persist a single progress event (run or checkpoint completion) and
   // hold on to the returned snapshot so subsequent events can append to
@@ -373,6 +387,9 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
           // every event so updates between events aren't lost for long.
           checklist: checklistRef.current,
           completedStepIds: completedRef.current,
+          // Stamp the run's mode so the very first snapshot carries it —
+          // resume restores it (see the load effect).
+          adaptivityMode: adaptivityModeRef.current,
           ...position,
         });
         progressRef.current = snapshot;

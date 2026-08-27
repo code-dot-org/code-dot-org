@@ -23,7 +23,7 @@ import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
 import {initAiLessonsGatewayContext} from './aiGatewaySetup';
 import {loggedGenerateText} from './aiLog';
-import {LessonPlan, pathStepsFor} from './types';
+import {AdaptivityMode, LessonPlan, pathStepsFor} from './types';
 
 const MODEL_ID = AiChatModelIds.GEMINI_2_5_FLASH;
 const MAX_EVENTS_TO_KEEP = 200;
@@ -65,6 +65,10 @@ export interface ProgressSnapshot {
   // "lesson finished" marker — step counts can't stand in for it because
   // generated steps change the denominator.
   completed?: boolean;
+  // The adaptivity mode this run started in.  Resuming without an
+  // explicit ?adaptivity= override restores it, so a full-mode run
+  // doesn't silently degrade to the authored default.
+  adaptivityMode?: AdaptivityMode;
   // Latest tutor verdict per lesson-checklist item id.
   checklist?: {[itemId: string]: boolean};
   // Rubric-scored observations of HOW the student worked, keyed by the
@@ -256,6 +260,9 @@ interface RecordOptions {
   // Latest checklist verdicts, carried on every event so tutor updates
   // between events aren't lost for long.
   checklist?: {[itemId: string]: boolean};
+  // The mode this run is playing in, stamped on every event so the very
+  // first snapshot already carries it.
+  adaptivityMode?: AdaptivityMode;
 }
 
 // Merge extra fields (observations, checklist) into the latest snapshot
@@ -347,6 +354,10 @@ export async function recordProgressEvent(
     checklist: options.checklist ?? options.previous?.checklist,
     observations: options.previous?.observations,
     mastery: options.previous?.mastery,
+    // Sticky flags: a revisit after finishing must not un-complete the
+    // lesson, and the run's mode survives events that don't restate it.
+    completed: options.previous?.completed,
+    adaptivityMode: options.adaptivityMode ?? options.previous?.adaptivityMode,
   };
 
   try {

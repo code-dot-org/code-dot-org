@@ -344,6 +344,9 @@ export interface LessonIndexEntry {
   // is the snapshot's explicit `completed` flag, never a step count —
   // generated steps make counts meaningless.
   status?: 'not_started' | 'in_progress' | 'completed';
+  // The adaptivity mode the current user's run started in, when known.
+  // The list resumes the lesson in this mode unless a pill overrides it.
+  active_mode?: AdaptivityMode | null;
 }
 
 export function isLabStep(step: Step): step is LabStep {

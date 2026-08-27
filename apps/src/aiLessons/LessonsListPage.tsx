@@ -98,6 +98,13 @@ const AdaptivityPills: React.FunctionComponent<{lesson: LessonIndexEntry}> = ({
   );
 };
 
+// Resume in the mode the student's run started in; the adaptivity pills
+// are the explicit way to open in a different mode.
+const openHref = (lesson: LessonIndexEntry): string =>
+  `/ai_lessons/${lesson.id}${
+    lesson.active_mode ? `?adaptivity=${lesson.active_mode}` : ''
+  }`;
+
 const LessonsListPage: React.FunctionComponent = () => {
   const [lessons, setLessons] = useState<LessonIndexEntry[] | undefined>();
   const [deletingId, setDeletingId] = useState<string | undefined>();
@@ -184,7 +191,7 @@ const LessonsListPage: React.FunctionComponent = () => {
           {lessons.map(l => (
             <li key={l.id} className={styles.lessonRow}>
               <div className={styles.lessonTitleLine}>
-                <Link href={`/ai_lessons/${l.id}`}>
+                <Link href={openHref(l)}>
                   <strong>{l.title || '(untitled)'}</strong>
                 </Link>
                 {l.status && (
@@ -220,7 +227,7 @@ const LessonsListPage: React.FunctionComponent = () => {
               <div className={styles.lessonRowActions}>
                 <MuiButton
                   component={Link}
-                  href={`/ai_lessons/${l.id}`}
+                  href={openHref(l)}
                   variant="contained"
                   color="primary"
                   size="small"

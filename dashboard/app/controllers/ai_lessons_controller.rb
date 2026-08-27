@@ -373,6 +373,7 @@ class AiLessonsController < ApplicationController
       Dir.glob(File.join(dir, '*.json')).sort.each do |path|
         parsed = JSON.parse(File.read(path))
         id = parsed['id'] || File.basename(path, '.json')
+        status, active_mode = lesson_user_state(id)
         entries[id] = {
           'id' => id,
           'objective' => parsed['objective'],
@@ -382,7 +383,8 @@ class AiLessonsController < ApplicationController
           'standards' => lesson_standards(parsed),
           'adaptivity' => parsed['adaptivity'],
           'order' => parsed['order'].is_a?(Numeric) ? parsed['order'] : nil,
-          'status' => lesson_status(id),
+          'status' => status,
+          'active_mode' => active_mode,
         }
       rescue JSON::ParserError
         next
@@ -395,20 +397,24 @@ class AiLessonsController < ApplicationController
     end
   end
 
-  # The current user's status for a lesson, for the list view badge.
-  # Completion is the snapshot's explicit `completed` flag — deliberately
-  # not inferred from step counts, which generated steps invalidate.
-  # "In progress" is any saved progress or recorded answer.
-  private def lesson_status(id)
-    return 'not_started' unless current_user
+  # The current user's status and active adaptivity mode for a lesson,
+  # for the list view.  Completion is the snapshot's explicit `completed`
+  # flag — deliberately not inferred from step counts, which generated
+  # steps invalidate.  "In progress" is any saved progress or recorded
+  # answer.  The mode is what the run started in, so the list can resume
+  # a lesson in that mode rather than the authored default.
+  private def lesson_user_state(id)
+    return ['not_started', nil] unless current_user
     snapshot_path = progress_path(id, current_user.id)
     if File.exist?(snapshot_path)
       snapshot = JSON.parse(File.read(snapshot_path))
-      return snapshot['completed'] ? 'completed' : 'in_progress'
+      status = snapshot['completed'] ? 'completed' : 'in_progress'
+      return [status, snapshot['adaptivityMode']]
     end
-    File.exist?(inputs_path(id, current_user.id)) ? 'in_progress' : 'not_started'
+    started = File.exist?(inputs_path(id, current_user.id))
+    [started ? 'in_progress' : 'not_started', nil]
   rescue JSON::ParserError, ArgumentError
-    'not_started'
+    ['not_started', nil]
   end
 
   # Standards a lesson covers, for the list view.  Two sources: hub-path
