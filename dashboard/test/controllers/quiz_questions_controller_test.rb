@@ -145,6 +145,26 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     assert_includes results, {'type' => 'course', 'id' => course.id, 'name' => course.name}
   end
 
+  # % and _ are SQL LIKE wildcards, so an unescaped query character can
+  # match things it never asked for.
+  # Unit/UnitGroup names can only contain lowercase letters, digits, and
+  # dashes - never a literal % or _ - so a query containing either should
+  # never match anything for a *correct* implementation. This is why a
+  # query built around "%" is the cleanest reproduction: unescaped,
+  # "%zzzalgo%rithm%" (query "zzzalgo%rithm") means "anything, then
+  # zzzalgo, then anything, then rithm, then anything" - broad enough to
+  # wrongly match a name that merely has those two substrings, in order,
+  # anywhere in it - not the literal (nonexistent) substring
+  # "zzzalgo%rithm".
+  test "course_unit_search escapes % and _ so they match literally, not as wildcards" do
+    create(:unit, name: 'zzzalgorithms-and-rhythms')
+
+    get :course_unit_search, params: {level_id: @quiz.id, query: 'zzzalgo%rithm'}
+
+    assert_response :success
+    assert_equal [], JSON.parse(response.body)
+  end
+
   # --- create ---
 
   test "create makes a new bank question and attaches it as the next position" do

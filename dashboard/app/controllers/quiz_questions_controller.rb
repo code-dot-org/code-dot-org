@@ -59,8 +59,13 @@ class QuizQuestionsController < ApplicationController
     query = params[:query].to_s.strip
     return render json: [] if query.length < AutocompleteHelper::MIN_WORD_LENGTH
 
-    units = Unit.where('name LIKE ?', "%#{query}%").order(:name).limit(10)
-    courses = UnitGroup.where('name LIKE ?', "%#{query}%").order(:name).limit(10)
+    # sanitize_sql_like escapes % and _ - unescaped, either would keep its
+    # SQL wildcard meaning even though query itself is parameterized, so
+    # e.g. "_" would match any single character instead of a literal
+    # underscore.
+    sanitized = ActiveRecord::Base.sanitize_sql_like(query)
+    units = Unit.where('name LIKE ?', "%#{sanitized}%").order(:name).limit(10)
+    courses = UnitGroup.where('name LIKE ?', "%#{sanitized}%").order(:name).limit(10)
 
     render json:
       units.map {|u| {type: 'unit', id: u.id, name: u.name}} +
