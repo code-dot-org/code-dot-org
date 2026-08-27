@@ -801,7 +801,7 @@ describe('MazeKeyboardNavigation interaction', () => {
   });
 
   // Painter keeps its scenery on wall tiles, so the cursor must reach them.
-  describe('neighborhood walls are walkable', () => {
+  describe('neighborhood walls and obstacles stop the cursor', () => {
     const neighborhoodController = (
       tiles: Record<string, number>,
       spriteMap: Record<string, {name: string}> = {'48': {name: 'grass'}}
@@ -827,6 +827,9 @@ describe('MazeKeyboardNavigation interaction', () => {
       press('Enter');
       press('ArrowRight');
       expect(liveRegionText()).toBe('Blocked. Grass.');
+      expect(focusableCursor()?.getAttribute('aria-label')).toBe(
+        'Grass. Painter is here. Row 2, column 2.'
+      );
     });
 
     // Scenery the sprite list does not name still has to say what stopped you.
