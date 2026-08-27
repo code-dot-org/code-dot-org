@@ -105,10 +105,6 @@ class JavabuilderSessionsController < ApplicationController
     # expire token in 1 minute
     expiration_time = (Time.now + 1.minute).to_i
 
-    # Note: the attribute name "verified_teachers" is now a misnomer,
-    # as we need to include any logged in teacher's user ID in this list
-    # in order to support javabuilder "eval" mode,
-    # which gives limited access to teachers testing out Javalab.
     payload = {
       iat: issued_at_time,
       iss: CDO.dashboard_hostname,
@@ -127,7 +123,7 @@ class JavabuilderSessionsController < ApplicationController
   end
 
   private def get_teacher_list
-    if current_user.teacher?
+    if current_user.verified_instructor?
       return [current_user.id]
     end
     teachers = []
