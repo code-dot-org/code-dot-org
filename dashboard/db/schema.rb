@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_08_24_120000) do
+ActiveRecord::Schema[7.0].define(version: 2026_08_27_094239) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -194,6 +194,22 @@ ActiveRecord::Schema[7.0].define(version: 2026_08_24_120000) do
     t.integer "level_id"
     t.string "context_type"
     t.index ["user_id"], name: "index_aidiff_threads_on_user_id"
+  end
+
+  create_table "anonymous_level_progresses", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "stable_id", limit: 36, null: false
+    t.bigint "script_id"
+    t.bigint "level_id", null: false
+    t.bigint "unit_group_id"
+    t.bigint "level_source_id"
+    t.integer "attempts", default: 0, null: false
+    t.integer "best_result"
+    t.boolean "submitted"
+    t.integer "time_spent"
+    t.text "properties"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["stable_id", "script_id", "level_id"], name: "index_anonymous_level_progresses_on_unique_stable_script_level", unique: true
   end
 
   create_table "assessment_activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
