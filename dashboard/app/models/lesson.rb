@@ -1074,6 +1074,8 @@ class Lesson < ApplicationRecord
 
     copied_lesson.save! if copied_lesson.changed?
 
+    copied_level_by_original_id = {}
+
     # Copy lesson activities, activity sections, and script levels
     copied_lesson.lesson_activities = lesson_activities.map do |original_lesson_activity|
       copied_lesson_activity = original_lesson_activity.dup
@@ -1105,6 +1107,7 @@ class Lesson < ApplicationRecord
           # Only include active level and discard variants
           original_active_level = original_script_level.oldest_active_level
           copied_level = new_level_suffix.blank? ? original_active_level : original_active_level.clone_with_suffix(new_level_suffix)
+          copied_level_by_original_id[original_active_level.id] = copied_level
           {
             "activitySectionPosition" => pos,
             "assessment" => original_script_level.assessment,
@@ -1117,6 +1120,28 @@ class Lesson < ApplicationRecord
         copied_activity_section
       end
       copied_lesson_activity
+    end
+
+    if rubric
+      copied_rubric_level = copied_level_by_original_id[rubric.level_id]
+      raise "Could not find copied level for rubric level #{rubric.level.name.inspect}" unless copied_rubric_level
+
+      copied_rubric = rubric.dup
+      copied_rubric.lesson = copied_lesson
+      copied_rubric.level = copied_rubric_level
+      copied_rubric.save!
+
+      rubric.learning_goals.each do |original_learning_goal|
+        copied_learning_goal = original_learning_goal.dup
+        copied_learning_goal.rubric = copied_rubric
+        copied_learning_goal.save!
+
+        original_learning_goal.learning_goal_evidence_levels.each do |original_evidence_level|
+          copied_evidence_level = original_evidence_level.dup
+          copied_evidence_level.learning_goal = copied_learning_goal
+          copied_evidence_level.save!
+        end
+      end
     end
 
     # Copy objectives

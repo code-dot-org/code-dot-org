@@ -2154,6 +2154,44 @@ class UnitTest < ActiveSupport::TestCase
       refute_equal [level1, level2], cloned_unit.levels
     end
 
+    test 'can copy unit with lesson rubrics' do
+      lesson_group = create(:lesson_group, script: @single_unit)
+      lesson = create(:lesson, lesson_group: lesson_group, script: @single_unit)
+      lesson_activity = create(:lesson_activity, lesson: lesson)
+      activity_section = create(:activity_section, lesson_activity: lesson_activity)
+
+      level = create(:level, name: 'rubric-level-2021')
+      create(:script_level, levels: [level], script: @single_unit, lesson: lesson, activity_section: activity_section, activity_section_position: 1)
+
+      rubric = create(:rubric, lesson: lesson, level: level, s3_config_dir: 'rubric-config')
+      learning_goal = create(:learning_goal, rubric: rubric, position: 1, learning_goal: 'Use sequencing')
+      create(:learning_goal_evidence_level, learning_goal: learning_goal, understanding: 0, teacher_description: 'No evidence', ai_prompt: '')
+      create(:learning_goal_evidence_level, learning_goal: learning_goal, understanding: 1, teacher_description: 'Some evidence', ai_prompt: '')
+
+      single_unit_course_2022 = create(:unit_group, name: 'single-unit-course-2022')
+      create(:course_version, course_offering: @single_unit_course_offering, content_root: single_unit_course_2022, key: "2022", display_name: "2022")
+
+      cloned_unit = @single_unit.clone_migrated_unit('single-unit-2022', destination_unit_group_name: 'single-unit-course-2022', new_level_suffix: '2022')
+      cloned_lesson = cloned_unit.lessons.first
+      cloned_rubric = cloned_lesson.rubric
+
+      refute_nil cloned_rubric
+      refute_equal rubric, cloned_rubric
+      assert_equal cloned_lesson, cloned_rubric.lesson
+      assert_equal 'rubric-level_2022', cloned_rubric.level.name
+      assert_equal 'rubric-config', cloned_rubric.s3_config_dir
+
+      assert_equal 1, cloned_rubric.learning_goals.count
+      cloned_learning_goal = cloned_rubric.learning_goals.first
+      refute_equal learning_goal, cloned_learning_goal
+      assert_equal 'Use sequencing', cloned_learning_goal.learning_goal
+      assert_equal 1, cloned_learning_goal.position
+
+      evidence_levels = cloned_learning_goal.learning_goal_evidence_levels.sort_by(&:understanding)
+      assert_equal [0, 1], evidence_levels.map(&:understanding)
+      assert_equal ['No evidence', 'Some evidence'], evidence_levels.map(&:teacher_description)
+    end
+
     test 'can copy teacher and student resources' do
       @single_unit.resources = [create(:resource)]
       @single_unit.student_resources = [create(:resource)]
