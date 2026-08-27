@@ -10,7 +10,7 @@ class QuizzesController < ApplicationController
   def update
     @level.update!(
       display_name: quiz_configuration_params[:displayName],
-      intro_text: quiz_configuration_params[:introText],
+      custom_intro_text: quiz_configuration_params[:customIntroText],
       # serialized_attrs getters don't coerce - cast here at the one write path
       # rather than trust the client sent a real Integer.
       time_limit_minutes: quiz_configuration_params[:timeLimitMinutes].presence&.to_i,
@@ -19,6 +19,7 @@ class QuizzesController < ApplicationController
       # always write a real true/false/nil here to avoid ambiguity.
       show_correctness: cast_boolean(quiz_configuration_params[:showCorrectness]),
       reveal_answer_explanation: cast_boolean(quiz_configuration_params[:revealAnswerExplanation]),
+      show_intro_screen: cast_boolean(quiz_configuration_params[:showIntroScreen]),
       purpose: quiz_configuration_params[:purpose],
       allow_multiple_attempts: cast_boolean(quiz_configuration_params[:allowMultipleAttempts])
     )
@@ -37,18 +38,19 @@ class QuizzesController < ApplicationController
 
   private def quiz_configuration_params
     params.permit(
-      :displayName, :introText, :timeLimitMinutes, :showCorrectness,
-      :revealAnswerExplanation, :purpose, :allowMultipleAttempts
+      :displayName, :customIntroText, :timeLimitMinutes, :showCorrectness,
+      :revealAnswerExplanation, :showIntroScreen, :purpose, :allowMultipleAttempts
     )
   end
 
   private def quiz_configuration_json(quiz)
     {
       displayName: quiz.display_name,
-      introText: quiz.intro_text,
+      customIntroText: quiz.custom_intro_text,
       timeLimitMinutes: quiz.time_limit_minutes,
       showCorrectness: quiz.show_correctness?,
       revealAnswerExplanation: quiz.reveal_answer_explanation?,
+      showIntroScreen: quiz.show_intro_screen?,
       purpose: quiz.purpose,
       allowMultipleAttempts: quiz.allow_multiple_attempts?
     }

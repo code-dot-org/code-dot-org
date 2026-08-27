@@ -33,10 +33,11 @@ class QuizzesControllerTest < ActionController::TestCase
     put :update, params: {
       level_id: @quiz.id,
       displayName: 'Unit 3 Check for Understanding',
-      introText: 'You have 20 minutes.',
+      customIntroText: 'You have 20 minutes.',
       timeLimitMinutes: 20,
       showCorrectness: true,
       revealAnswerExplanation: true,
+      showIntroScreen: true,
       purpose: 'check_for_understanding',
       allowMultipleAttempts: false
     }, as: :json
@@ -44,10 +45,11 @@ class QuizzesControllerTest < ActionController::TestCase
     assert_response :success
     body = JSON.parse(response.body)
     assert_equal 'Unit 3 Check for Understanding', body['displayName']
-    assert_equal 'You have 20 minutes.', body['introText']
+    assert_equal 'You have 20 minutes.', body['customIntroText']
     assert_equal 20, body['timeLimitMinutes']
     assert_equal true, body['showCorrectness']
     assert_equal true, body['revealAnswerExplanation']
+    assert_equal true, body['showIntroScreen']
     assert_equal 'check_for_understanding', body['purpose']
     assert_equal false, body['allowMultipleAttempts']
 
@@ -55,6 +57,19 @@ class QuizzesControllerTest < ActionController::TestCase
     assert_equal 'Unit 3 Check for Understanding', @quiz.display_name
     assert_equal 20, @quiz.time_limit_minutes
     assert_equal 'check_for_understanding', @quiz.purpose
+  end
+
+  test "update returns bad_request when a time limit is set without show_intro_screen" do
+    put :update, params: {level_id: @quiz.id, timeLimitMinutes: 20, showIntroScreen: false}, as: :json
+
+    assert_response :bad_request
+  end
+
+  test "update allows show_intro_screen: false with no time limit" do
+    put :update, params: {level_id: @quiz.id, customIntroText: 'Welcome!', showIntroScreen: false}, as: :json
+
+    assert_response :success
+    refute @quiz.reload.show_intro_screen?
   end
 
   test "update coerces an ambiguous boolean-ish value like the string '0' to real false, not truthy" do
