@@ -29,7 +29,11 @@ import blocks from '../../blocks';
 import skins, {skinFor} from '../../skins';
 import Instructions from '../Instructions';
 
-import type {MazeLevelProperties, MazeEnvironment} from '../../types';
+import type {
+  MazeLevelProperties,
+  MazeEnvironment,
+  MazeDoneEventDetail,
+} from '../../types';
 
 import moduleStyles from './mazeLab.module.scss';
 
@@ -68,7 +72,12 @@ const countBlocks = (workspace: Blockly.Workspace, uncounted: string[]) =>
     return true;
   }).length;
 
-const MazeLab = () => {
+interface MazeLabProps {
+  /** Fires when a run finishes — surfaces the pass/fail verdict to the host. */
+  onLevelResult?: (detail: MazeDoneEventDetail) => void;
+}
+
+const MazeLab = ({onLevelResult}: MazeLabProps = {}) => {
   const levelProperties = useLevelProperties<MazeLevelProperties>();
   const workspaceRef = useRef<Blockly.WorkspaceSvg | null>(null);
   const mazeRef = useRef<Maze | null>(null);
@@ -77,6 +86,13 @@ const MazeLab = () => {
   const blockCountRef = useRef<HTMLElement | null>(null);
   const blockCount = useRef<number>(0);
   const skin = skinFor(skins, levelProperties?.skin || 'birds');
+
+  // Stable ref so onLevelResult identity changes never require re-wiring the
+  // 'done' listener registered once in onInject.
+  const onLevelResultRef = useRef(onLevelResult);
+  useEffect(() => {
+    onLevelResultRef.current = onLevelResult;
+  }, [onLevelResult]);
 
   const [running, setRunning] = useState<boolean>(false);
   const [stepping, setStepping] = useState<boolean>(false);
@@ -179,7 +195,12 @@ const MazeLab = () => {
         setStepping(false);
       });
       mazeRef.current.addEventListener('stepped', () => setRunning(false));
-      mazeRef.current.addEventListener('done', () => setRunning(false));
+      mazeRef.current.addEventListener('done', event => {
+        setRunning(false);
+        onLevelResultRef.current?.(
+          (event as CustomEvent<MazeDoneEventDetail>).detail,
+        );
+      });
 
       // Get the initial width of the flyout / toolbox
       setToolboxHeaderWidth();

@@ -144,6 +144,22 @@
   }
 }
 
+/* Lab run feedback (success/failure card below the lab stage) */
+
+.levelResultCard {
+  width: 100%;
+  max-width: 880px;
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.levelResultActions {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .widgetStage {
   @extend %authoring-card;
   width: 100%;

@@ -6,6 +6,7 @@ import type {LevelProperties} from '@code-dot-org/core/api';
 import type {MazeData} from './MazeController';
 import {LevelKindSchema, AuthoredHintSchema} from './schema';
 import type {SkinData} from './skin';
+import type {Status} from './TestResults';
 
 /**
  * Represents a set of skins for a particular level set.
@@ -40,3 +41,29 @@ export interface MazeEnvironment extends Environment {
 export type AuthoredHint = z.infer<typeof AuthoredHintSchema>;
 
 export type {MazeData};
+
+/**
+ * Enumeration of user program execution outcomes. Mirrors
+ * apps/src/constants.js's `ResultType` — kept as a standalone copy here
+ * rather than a shared import, since porting constants.js wholesale is out
+ * of scope for this lab.
+ */
+export const ResultType = {
+  UNSET: 0, // The result has not yet been computed.
+  SUCCESS: 1, // The program completed successfully, achieving the goal.
+  FAILURE: -1, // The program ran without error but did not achieve goal.
+  TIMEOUT: 2, // The program did not complete (likely infinite loop).
+  ERROR: -2, // The program generated an error.
+} as const;
+
+export type ResultTypeValue = (typeof ResultType)[keyof typeof ResultType];
+
+/** Detail payload of Maze's `'done'` CustomEvent — the run's verdict. */
+export interface MazeDoneEventDetail {
+  result: ResultTypeValue;
+  testStatus?: Status;
+  /** Blocks the learner used, when the workspace has been tracking it. */
+  blocksUsed?: number;
+  /** The level's ideal block count, when authored. */
+  idealBlocks?: number;
+}

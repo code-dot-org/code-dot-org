@@ -7,6 +7,7 @@ import type {LevelPropertiesMap} from '@code-dot-org/lab/contexts';
 import MazeLabApp from '@code-dot-org/maze-lab';
 
 import LabProviders from '@/modules/labs/LabProviders';
+import type {LabEntrypointProps} from '@/modules/labs/router/getLabEntrypointByAppName';
 
 type LevelProperties = NonNullable<ReturnType<typeof useLevelProperties>>;
 
@@ -82,7 +83,7 @@ function toMazeLevelProperties(properties: LevelProperties): LevelProperties {
  * {levelId, levelPropertiesMap} shape, same as modules/labs/music/index.tsx,
  * plus the XML->JSON block conversion above.
  */
-export default function MazeContainer() {
+export default function MazeContainer({onLevelResult}: LabEntrypointProps) {
   const properties = useLevelProperties();
   if (!properties) {
     return null;
@@ -96,6 +97,7 @@ export default function MazeContainer() {
         levelPropertiesMap={
           {[levelId]: toMazeLevelProperties(properties)} as LevelPropertiesMap
         }
+        onLevelResult={onLevelResult}
       />
     </LabProviders>
   );

@@ -12,7 +12,7 @@ import skins, {skinFor} from './skins';
 import MazeLab from './components/MazeLab';
 
 import {LevelKindSchema} from './schema';
-import type {MazeLevelProperties} from './types';
+import type {MazeDoneEventDetail, MazeLevelProperties} from './types';
 
 import styles from './app.module.scss';
 
@@ -22,11 +22,15 @@ registerLevelKindSchema('maze', LevelKindSchema);
 // (/app/projects/maze/:id/edit); the host now supplies it — matching
 // music-lab's App, which takes the same host-driven shape.
 function App({
+  onLevelResult,
   ...props
 }: Omit<
   BlocklyLabProps<MazeLevelProperties>,
   'defaultSources' | 'blocklyProps'
->) {
+> & {
+  /** Fires when a run finishes — surfaces the pass/fail verdict to the host. */
+  onLevelResult?: (detail: MazeDoneEventDetail) => void;
+}) {
   return (
     <>
       <div className={styles.app}>
@@ -60,7 +64,7 @@ function App({
             ],
           }}
         >
-          <MazeLab />
+          <MazeLab onLevelResult={onLevelResult} />
         </BlocklyLab>
       </div>
     </>

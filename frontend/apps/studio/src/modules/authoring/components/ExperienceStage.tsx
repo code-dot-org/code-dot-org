@@ -1,11 +1,12 @@
-import {Typography} from '@mui/material';
-import {Suspense} from 'react';
+import {Button, Typography} from '@mui/material';
+import {Suspense, useCallback, useState} from 'react';
 
 import type {
   Experience,
   ExistingLevelExperience,
   GenericLevelData,
 } from '@code-dot-org/authoring';
+import Alert from '@code-dot-org/component-library/alert';
 import {Lab, Loading} from '@code-dot-org/lab/host';
 import {Markdown} from '@code-dot-org/markdown';
 // oceans-lab ships its shell/guide-overlay CSS as a separate stylesheet
@@ -17,6 +18,7 @@ import '@code-dot-org/oceans-lab/styles.css';
 
 import {useLevelProperties} from '@/modules/authoring';
 import {getLabEntrypointByAppName} from '@/modules/labs/router/getLabEntrypointByAppName';
+import type {LevelResultDetail} from '@/modules/labs/router/getLabEntrypointByAppName';
 
 import LevelInstructions from './LevelInstructions';
 import BubbleChoiceLevel from './renderers/BubbleChoiceLevel';
@@ -31,6 +33,12 @@ import styles from './authoring.module.scss';
 
 export interface StageEvent {
   experienceId: string;
+  /**
+   * Widget/lab-specific payload. A lab's completion signal uses the shape
+   * `{type: 'levelResult', result: number, testStatus?: number}` — see
+   * `LabHostStage`'s `handleLevelResult` below. Pass C will consume this to
+   * drive lesson progress dots.
+   */
   data: unknown;
 }
 
@@ -113,6 +121,7 @@ function ExistingLevelStage({
         levelType={experience.levelType}
         authorMode={authorMode}
         onContinue={onContinue}
+        onStageEvent={onStageEvent}
       />
     );
   }
@@ -155,6 +164,7 @@ function LabHostStage({
   levelType,
   authorMode,
   onContinue,
+  onStageEvent,
 }: {
   experienceId: string;
   levelNumericId: number;
@@ -162,8 +172,29 @@ function LabHostStage({
   levelType: string;
   authorMode: boolean;
   onContinue?: () => void;
+  onStageEvent?: (event: StageEvent) => void;
 }) {
   const {data: properties, isLoading} = useLevelProperties(levelNumericId);
+  const [levelResult, setLevelResult] = useState<LevelResultDetail | null>(
+    null,
+  );
+
+  const handleLevelResult = useCallback(
+    (detail: LevelResultDetail) => {
+      setLevelResult(detail);
+      if (detail.result === RESULT_SUCCESS) {
+        onStageEvent?.({
+          experienceId,
+          data: {
+            type: 'levelResult',
+            result: detail.result,
+            testStatus: detail.testStatus,
+          },
+        });
+      }
+    },
+    [experienceId, onStageEvent],
+  );
 
   if (isLoading) {
     return <Loading />;
@@ -209,11 +240,80 @@ function LabHostStage({
       <div className={styles.labStage}>
         <Suspense fallback={<Loading />}>
           <Lab levelId={levelNumericId} levelPropertiesMap={properties}>
-            <LabEntrypoint onContinue={onContinue} />
+            <LabEntrypoint
+              onContinue={onContinue}
+              onLevelResult={handleLevelResult}
+            />
           </Lab>
         </Suspense>
       </div>
+      {levelResult && (
+        <LevelResultCard
+          detail={levelResult}
+          onDismiss={() => setLevelResult(null)}
+          onContinue={onContinue}
+        />
+      )}
     </>
+  );
+}
+
+/** Mirrors a lab's `ResultType.SUCCESS` (e.g. maze-lab's Maze.ts). */
+const RESULT_SUCCESS = 1;
+
+/**
+ * Success/failure feedback for a lab run, driven by `onLevelResult`. Renders
+ * inline below the lab stage (not an overlay), so it never blocks the
+ * workspace; the close button dismisses it without affecting the lab.
+ */
+function LevelResultCard({
+  detail,
+  onDismiss,
+  onContinue,
+}: {
+  detail: LevelResultDetail;
+  onDismiss: () => void;
+  onContinue?: () => void;
+}) {
+  const passed = detail.result === RESULT_SUCCESS;
+  const showBlockCount =
+    passed &&
+    detail.blocksUsed !== undefined &&
+    detail.idealBlocks !== undefined;
+
+  return (
+    <div className={styles.levelResultCard}>
+      <Alert
+        type={passed ? 'success' : 'warning'}
+        isImmediateImportance={false}
+        onClose={onDismiss}
+        closeLabel="Dismiss feedback"
+        text={
+          <>
+            {passed ? 'You did it!' : 'Not quite — give it another try!'}
+            {showBlockCount && (
+              <>
+                <br />
+                {`You used ${detail.blocksUsed} blocks — this can be solved in ${detail.idealBlocks}.`}
+              </>
+            )}
+            {!passed && (
+              <>
+                <br />
+                Click Reset to clear the workspace and try again.
+              </>
+            )}
+          </>
+        }
+      />
+      {passed && onContinue && (
+        <div className={styles.levelResultActions}>
+          <Button size="small" variant="contained" onClick={onContinue}>
+            Continue
+          </Button>
+        </div>
+      )}
+    </div>
   );
 }
 

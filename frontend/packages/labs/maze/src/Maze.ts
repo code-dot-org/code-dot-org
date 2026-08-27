@@ -16,7 +16,13 @@ import Planter from './Planter';
 import type {Skin} from './skin';
 import TestResults, {MINIMUM_PASS_RESULT, type Status} from './TestResults';
 import * as tiles from './tiles';
-import type {API, MazeEnvironment} from './types';
+import {
+  ResultType,
+  type API,
+  type MazeDoneEventDetail,
+  type MazeEnvironment,
+  type ResultTypeValue,
+} from './types';
 import Validator from './Validator';
 
 /**
@@ -47,6 +53,8 @@ class Maze extends EventTarget {
   private testResults?: TestResults;
   /* The test status */
   private testStatus?: Status;
+  /* The last execution result */
+  private result: ResultTypeValue = ResultType.UNSET;
   /* The Blockly environment data */
   private environment: MazeEnvironment;
   /* The validator to decide if the level goal has been met. */
@@ -262,23 +270,19 @@ class Maze extends EventTarget {
         // didn't terminate
         this.executionInfo.queueAction('finish');
         this.testStatus = Math.min(99, this.testStatus || 0) as Status;
-        //this.result = ResultType.FAILURE;
-        //this.stepSpeed = 150;
+        this.result = ResultType.FAILURE;
         break;
       case Infinity:
         // Detected an infinite loop.  Animate what we have as quickly as
         // possible
-        //this.result = ResultType.TIMEOUT;
+        this.result = ResultType.TIMEOUT;
         this.executionInfo.queueAction('finish');
-        //this.stepSpeed = this.shouldSpeedUpInfiniteLoops ? 0 : 100;
         break;
       case true:
-        //this.result = ResultType.SUCCESS;
-        //this.stepSpeed = 100;
+        this.result = ResultType.SUCCESS;
         break;
       case false:
-        //this.result = ResultType.ERROR;
-        //this.stepSpeed = 150;
+        this.result = ResultType.ERROR;
         break;
       default:
         // App-specific failure.
@@ -286,10 +290,10 @@ class Maze extends EventTarget {
           this.validator?.getTestResults(
             this.executionInfo.terminationValue(),
           ) || 0;
-        //this.result =
-        //  this.testStatus >= MINIMUM_PASS_RESULT
-        //    ? ResultType.SUCCESS
-        //    : ResultType.ERROR;
+        this.result =
+          this.testStatus >= MINIMUM_PASS_RESULT
+            ? ResultType.SUCCESS
+            : ResultType.ERROR;
         this.executionInfo.queueAction('finish');
         break;
     }
@@ -407,11 +411,13 @@ class Maze extends EventTarget {
         this.controller.animatedTurn(tiles.TurnDirection.RIGHT);
         break;
       case 'finish':
-        // Only schedule victory animation for certain conditions:
-        if (
-          this.checkSuccess() &&
-          (this.testStatus || 0) >= MINIMUM_PASS_RESULT
-        ) {
+        // Only schedule victory animation for certain conditions. checkSuccess()
+        // was already called once in execute() (pre-switch) — calling it again
+        // here would re-queue a 'finish' action onto executionInfo (queueAction
+        // is not idempotent), corrupting stepsRemaining() and silently
+        // preventing displayFeedback() from ever firing. Legacy maze.js's
+        // finish_() reads the already-computed result instead of re-checking.
+        if ((this.testStatus || 0) >= MINIMUM_PASS_RESULT) {
           this.soundBoard.play('winGoal', {volume: 0.5});
           this.controller.animatedFinish(timePerStep);
         } else {
@@ -505,7 +511,16 @@ class Maze extends EventTarget {
    * Emit an event for the particular result.
    */
   displayFeedback() {
-    this.dispatchEvent(new CustomEvent('done'));
+    this.dispatchEvent(
+      new CustomEvent<MazeDoneEventDetail>('done', {
+        detail: {
+          result: this.result,
+          testStatus: this.testStatus,
+          blocksUsed: this.environment.usedBlockCount,
+          idealBlocks: this.environment.idealBlockCount,
+        },
+      }),
+    );
   }
 
   /**
