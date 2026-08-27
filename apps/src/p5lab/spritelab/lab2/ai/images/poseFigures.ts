@@ -57,9 +57,11 @@ const NECK_WIDTH = 30;
 
 // The four keys of one half of a side-view walk cycle for the front and
 // back leg; a second half, were one generated, swaps which leg is in front
-// (walkKey handles frames past the fourth that way). Arm swings are
-// drawn well past life size, elbows bent: two runs kept the arms hanging
-// while the legs followed the figure, so the arms have to shout.
+// (walkKey handles frames past the fourth that way). Arm swings are a
+// little past life size, elbows bent. They were drawn far past it when
+// figures went one frame at a time and the arms hung anyway; drawn to a row
+// of figures the model follows the arms, and the shouting swing came back
+// as arms reaching out level.
 const WALK_HALF: Array<{
   front: Limb;
   back: Limb;
@@ -72,8 +74,8 @@ const WALK_HALF: Array<{
   {
     front: {upper: 28, lower: 28, foot: 0},
     back: {upper: -28, lower: -6, foot: 60},
-    frontArm: {upper: -58, lower: -44},
-    backArm: {upper: 58, lower: 100},
+    frontArm: {upper: -34, lower: -26},
+    backArm: {upper: 34, lower: 62},
     hipDrop: 4,
     lean: 4,
   },
@@ -81,8 +83,8 @@ const WALK_HALF: Array<{
   {
     front: {upper: 12, lower: -6, foot: 0},
     back: {upper: -24, lower: -42, foot: 70},
-    frontArm: {upper: -36, lower: -28},
-    backArm: {upper: 36, lower: 74},
+    frontArm: {upper: -22, lower: -16},
+    backArm: {upper: 22, lower: 46},
     hipDrop: 10,
     lean: 5,
   },
@@ -90,8 +92,8 @@ const WALK_HALF: Array<{
   {
     front: {upper: 0, lower: 0, foot: 0},
     back: {upper: 24, lower: -16, foot: 60},
-    frontArm: {upper: 12, lower: 30},
-    backArm: {upper: -12, lower: -18},
+    frontArm: {upper: 8, lower: 18},
+    backArm: {upper: -8, lower: -10},
     hipDrop: 2,
     lean: 3,
   },
@@ -99,8 +101,8 @@ const WALK_HALF: Array<{
   {
     front: {upper: -22, lower: -22, foot: 70},
     back: {upper: 32, lower: 8, foot: -10},
-    frontArm: {upper: 48, lower: 90},
-    backArm: {upper: -48, lower: -40},
+    frontArm: {upper: 28, lower: 56},
+    backArm: {upper: -28, lower: -24},
     hipDrop: -6,
     lean: 5,
   },

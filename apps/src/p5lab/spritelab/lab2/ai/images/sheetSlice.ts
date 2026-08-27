@@ -78,6 +78,14 @@ export function frameBoxes(
   // six when asked for six — and every frame it drew is a frame of the pose,
   // so all are kept. Only a run far longer than asked for is thinned to the
   // frames spread evenly through it, in case it was not one cycle.
+  // Several rows, one of them exactly the count asked for: that row was
+  // drawn to the figures sent, one frame each, and the others are the
+  // model's extras — a second pass at the cycle, out of step with the first.
+  const rows = groupRows(boxes);
+  const drawnToCount = rows.find(row => row.length === expected);
+  if (rows.length > 1 && drawnToCount) {
+    return rowMajor(drawnToCount);
+  }
   const ordered = rowMajor(boxes);
   if (ordered.length <= expected * KEPT_CYCLE_FACTOR) {
     return ordered;

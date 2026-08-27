@@ -186,6 +186,37 @@ describe('sheet slicing', () => {
     expect(found.map(column)).toEqual([...Array(12).keys()]);
   });
 
+  it('keeps only the row drawn to the count asked for when there are more', () => {
+    // Two rows of eight where eight were asked for: the first row is the
+    // one drawn to the figures.
+    const boxes: [number, number, number, number][] = [];
+    for (let i = 0; i < 8; i++) {
+      boxes.push(
+        [2 + i * 25, 22 + i * 25, 2, 42],
+        [2 + i * 25, 22 + i * 25, 52, 92]
+      );
+    }
+    const data = image(200, 100, boxes);
+    const found = frameBoxes(data, 200, 100, 8, 127, ASPECT);
+    expect(found).toHaveLength(8);
+    expect(found.every(b => b.top === 2)).toBe(true);
+    // Two rows of six for eight asked keep every frame, as before.
+    expect(
+      frameBoxes(
+        image(
+          200,
+          100,
+          boxes.filter(b => b[0] < 150)
+        ),
+        200,
+        100,
+        8,
+        127,
+        ASPECT
+      )
+    ).toHaveLength(12);
+  });
+
   it('keeps a shorter cycle than asked for', () => {
     const {data, width} = rowOf(6);
     expect(frameBoxes(data, width, 44, 8, 127, ASPECT).map(column)).toEqual([
