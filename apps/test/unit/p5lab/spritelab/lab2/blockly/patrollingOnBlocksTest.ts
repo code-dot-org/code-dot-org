@@ -1,4 +1,6 @@
-import patrollingOnBlocks from '@cdo/apps/p5lab/spritelab/lab2/blockly/blockDefinitions/patrollingOnBlocks';
+import patrollingOnBlocks, {
+  TURN_PAUSE_TICKS,
+} from '@cdo/apps/p5lab/spritelab/lab2/blockly/blockDefinitions/patrollingOnBlocks';
 
 // The behavior's runtime half is interpreted ES5 source, so the test runs the
 // shipped string with stubbed lab commands. The stubs mirror the real ones:
@@ -135,6 +137,32 @@ describe('patrollingOnBlocks', () => {
       startCol: 2,
     });
     expect(walk.positions).toBeGreaterThan(50);
+  });
+
+  it('stands for a moment at each turn', () => {
+    const walk = patrol({
+      size: 40,
+      costumeWidth: 1024,
+      blockCols: [2, 3, 4],
+      startCol: 3,
+    });
+    // Runs of unchanged x: each turn is one stand — the pause, plus the
+    // turn's own tick (an edge is found by stepping and stepping back) — and
+    // the walk between turns never stands.
+    const stands: number[] = [];
+    let run = 1;
+    for (let i = 1; i < walk.seen.length; i++) {
+      if (walk.seen[i] === walk.seen[i - 1]) {
+        run++;
+      } else {
+        if (run > 1) stands.push(run);
+        run = 1;
+      }
+    }
+    expect(stands.length).toBeGreaterThan(4);
+    expect(
+      stands.every(s => s >= TURN_PAUSE_TICKS && s <= TURN_PAUSE_TICKS + 2)
+    ).toBe(true);
   });
 
   it('turns back at a gap rather than walking off the blocks', () => {
