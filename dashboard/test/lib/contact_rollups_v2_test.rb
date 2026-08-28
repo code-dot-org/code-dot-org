@@ -89,6 +89,29 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     assert_equal 0, contact_record.data['opt_in']
   end
 
+  test 'execute_query_in_transaction returns the number of affected rows' do
+    query = <<~SQL.squish
+      INSERT INTO contact_rollups_raw (email, sources, data_updated_at, created_at, updated_at)
+      VALUES ('one@example.domain', 'test', NOW(), NOW(), NOW()),
+             ('two@example.domain', 'test', NOW(), NOW(), NOW())
+    SQL
+
+    assert_equal 2, ContactRollupsV2.execute_query_in_transaction(query)
+  end
+
+  test 'collect_contacts records a rows-extracted metric per source' do
+    create(:email_preference, email: 'test@domain.com', opt_in: true)
+
+    pipeline = ContactRollupsV2.new
+    pipeline.collect_contacts
+
+    metrics = pipeline.instance_variable_get(:@log_collector).metrics
+    assert_equal 1, metrics[:RowsExtracted_email_preferences]
+    # Every extraction source reports a count, even when it is zero.
+    assert_equal 0, metrics[:RowsExtracted_pd_enrollments]
+    assert_equal 0, metrics[:RowsExtracted_school_geos]
+  end
+
   test 'use_reporting_db_for_selects? follows the DCDO flag' do
     DCDO.stubs(:get).with(ContactRollupsV2::USE_REPORTING_DCDO_KEY, false).returns(false)
     refute ContactRollupsV2.use_reporting_db_for_selects?
