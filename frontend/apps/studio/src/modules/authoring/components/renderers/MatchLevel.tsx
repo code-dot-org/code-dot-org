@@ -9,6 +9,18 @@ import styles from '../authoring.module.scss';
 
 type MatchData = Extract<GenericLevelData, {type: 'match'}>;
 
+// Accessible-name fallback for a markdown answer: an image contributes its
+// alt text, everything else is stripped to its visible text. Regex-based,
+// not a markdown parse — the accname only needs to read sanely, not
+// round-trip every CommonMark construct.
+export function stripMarkdownToText(markdown: string): string {
+  return markdown
+    .replace(/!\[([^\]]*)\]\([^)]*\)/g, '$1')
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
+    .replace(/(\*\*\*|\*\*|\*|___|__|_|`)/g, '')
+    .trim();
+}
+
 function shuffled<T>(items: T[]): T[] {
   const copy = [...items];
   for (let i = copy.length - 1; i > 0; i--) {
@@ -86,7 +98,14 @@ export default function MatchLevel({
                     value={answer}
                     checked={selections[i] === answer}
                     onChange={() => handleSelect(i, answer)}
-                    ariaLabel={answer}
+                    // Falls back to the raw markdown when stripping yields
+                    // nothing (e.g. an image with no alt text — the live
+                    // all-image level has this) — RadioButton treats a falsy
+                    // ariaLabel as "no override" and renders no aria-label at
+                    // all, which is a harder accessibility failure (no name)
+                    // than the pre-fix raw-markdown announcement it had
+                    // before.
+                    ariaLabel={stripMarkdownToText(answer) || answer}
                     className={styles.answerOption}
                   >
                     <Markdown>{answer}</Markdown>

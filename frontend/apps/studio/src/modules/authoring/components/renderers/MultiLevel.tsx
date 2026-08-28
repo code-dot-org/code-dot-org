@@ -66,7 +66,7 @@ export default function MultiLevel({
   return (
     <div>
       {data.markdown && <Markdown>{data.markdown}</Markdown>}
-      <Typography variant="h5">{data.question}</Typography>
+      <Markdown>{data.question}</Markdown>
       <div className={styles.answerList}>
         {data.answers.map((answer, i) => {
           const isSelected = selected.includes(i);
@@ -86,7 +86,7 @@ export default function MultiLevel({
               disabled={locked}
               onClick={() => toggleSelect(i)}
             >
-              {answer.text}
+              <Markdown>{answer.text}</Markdown>
               {graded && answer.correct && (
                 <span className={styles.visuallyHidden}> (Correct)</span>
               )}
