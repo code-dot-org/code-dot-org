@@ -202,7 +202,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_08_27_094239) do
     t.integer "level_id", null: false
     t.integer "unit_group_id"
     t.bigint "level_source_id", unsigned: true
-    t.integer "user_id"
     t.integer "attempts", default: 0, null: false
     t.integer "best_result"
     t.boolean "submitted"
