@@ -29,7 +29,9 @@ class AiGatewayAuthController < ApplicationController
 
     token_id = SecureRandom.uuid
     hostname = CDO.dashboard_hostname
-    user_id = current_user.id
+
+    # Send the log token, not the raw id.
+    user_log_token = current_user.log_token(destination: User::LogToken::SENTRY)
 
     # Set a little in the past to account for time drift
     issued_at_time = (Time.now - 5.seconds).to_i
@@ -42,7 +44,7 @@ class AiGatewayAuthController < ApplicationController
         expiration_time: expiration_time,
         token_id: token_id,
         hostname: hostname,
-        user_id: user_id,
+        user_log_token: user_log_token,
         aichat_client_type: aichat_context[:clientType],
         level_id: aichat_context[:currentLevelId],
         script_id: aichat_context[:scriptId],
