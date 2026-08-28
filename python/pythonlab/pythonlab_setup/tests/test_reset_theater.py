@@ -1,5 +1,7 @@
 import subprocess
 import sys
+import types
+from unittest import mock
 
 from pythonlab_setup.reset_theater import reset_theater
 
@@ -27,3 +29,11 @@ def test_leaves_theater_unimported():
     [sys.executable, '-c', program], capture_output=True, text=True)
   assert result.returncode == 0, result.stderr
   assert result.stdout == 'theater untouched\n'
+
+def test_tolerates_a_student_file_named_theater():
+  # Pyodide runs student code with the working directory on sys.path, so a file
+  # named theater.py takes the name in sys.modules. Teardown must still finish:
+  # it runs before the stdout flush and the module-cache purge.
+  shadow = types.ModuleType('theater')
+  with mock.patch.dict(sys.modules, {'theater': shadow}):
+    reset_theater()

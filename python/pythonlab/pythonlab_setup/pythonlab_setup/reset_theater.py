@@ -13,6 +13,9 @@ def reset_theater():
   An explicit Scene needs no reset -- student code that built one drops it with
   the rest of the program's globals.
   """
+  # A student file named theater.py takes this name in sys.modules, so check for
+  # the function rather than assuming the real package is what we found.
   theater = sys.modules.get('theater')
-  if theater is not None:
-    theater.reset_default_scene()
+  reset_default_scene = getattr(theater, 'reset_default_scene', None)
+  if reset_default_scene is not None:
+    reset_default_scene()

@@ -32,10 +32,12 @@ scene.draw_text('hello', 20, 380)
 scene.play()
 ```
 
-The package exports eight names: `Scene`, `scene`, `play_scenes`, `Color`,
-`Image`, `Font`, `FontStyle`, and `Instrument`. Everything under
-`theater.support` — the renderer, the audio timeline, the action records — is
-machinery those eight are built from, not something student code calls.
+The package exports `Scene`, `play_scenes`, the types their arguments use —
+`Color`, `Image`, `Font`, `FontStyle`, `Instrument` — and the `scene` module
+together with the default-scene functions shown above (see
+[The default scene](#the-default-scene)). Everything under `theater.support` —
+the renderer, the audio timeline, the action records — is machinery those are
+built from, not something student code calls.
 
 ## Basic architecture
 
