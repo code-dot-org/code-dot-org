@@ -80,12 +80,14 @@ export const TILES: readonly Tile[] = [
       {kind: 'block', type: 'world_add_actor'},
       {kind: 'block', type: 'world_set_position'},
       {kind: 'block', type: 'world_set_sprite'},
-      // A number, because a socket without a shadow needs one, and the Console
-      // whole — printing is how anything invisible is seen, and both the Input
-      // and the Motion branches ask for a print within two lessons. Origin is
-      // the only tile every path goes through, so it is the only place a thing
-      // both branches need can be granted (specs/PROGRESSION.md).
-      {kind: 'block', type: 'math_number'},
+      // The Console whole: printing is how anything invisible is seen, and both
+      // the Input and the Motion branches ask for a print within two lessons.
+      // Origin is the only tile every path goes through, so it is the only
+      // place a thing both branches need can be granted (specs/PROGRESSION.md).
+      //
+      // NOT a bare number. Every socket in this lesson arrives with a shadow
+      // already in it, so a Math drawer here would hold one block nothing
+      // needed — a drawer that exists to be empty-handed.
       {kind: 'category', name: 'Console'},
       {kind: 'template', id: 'empty'},
     ],
@@ -543,12 +545,21 @@ export const TILES: readonly Tile[] = [
     unlocks: [
       {kind: 'block', type: 'world_is_a'},
       {kind: 'block', type: 'world_has_trait'},
+      // …and the one the question is asked ABOUT: the other actor, inside a
+      // handler for an event that carries one.
+      {kind: 'block', type: 'world_event_actor'},
     ],
     check: {
-      kind: 'outcome',
-      says: 'A coin and a spike reaching the same handler produce different results.',
+      kind: 'trace',
+      says: 'Touching the Coin and touching the Spike say different things.',
       falsePass:
-        'Two handlers, one per kind. Assert the workspace has one, or run a third kind that must be ignored.',
+        'Two handlers, one per kind, which also says two different things — and this check cannot tell that from one handler that asks. What it does catch is the state the lesson starts in, where both say the same.',
+      run: {
+        probes: {},
+        // Long enough to roll past both of them.
+        trace: [{seconds: 3}],
+      },
+      passes: ({console: said}) => said.length === 2 && said[0] !== said[1],
     },
   },
   {
@@ -812,7 +823,9 @@ export const TILES: readonly Tile[] = [
     requires: ['origin/first-world'],
     unlocks: [
       // `set position` came with the first lesson; what this one adds is the
-      // pair of numbers as a THING, and the shorthand for a whole place.
+      // number itself, the pair of them as a THING, and the shorthand for a
+      // whole place.
+      {kind: 'block', type: 'math_number'},
       {kind: 'block', type: 'world_vector'},
       {kind: 'block', type: 'world_random_place'},
       {kind: 'block', type: 'math_arithmetic'},

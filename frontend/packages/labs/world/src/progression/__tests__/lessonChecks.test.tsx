@@ -794,3 +794,77 @@ describe('the and-or lesson’s check', () => {
     expect(passes).toBe(false);
   });
 });
+
+describe('the kinds lesson’s check', () => {
+  const lesson = LESSONS['logic/kinds'];
+
+  it('refuses a Ball that says the same about everything', async () => {
+    const {passes, result} = await check('logic/kinds', lesson.source);
+    // Two touches, one sentence: the starter's whole problem.
+    expect(result.console).toHaveLength(2);
+    expect(result.console[0]).toBe(result.console[1]);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts one handler that asks what it touched', async () => {
+    const solved = editing(lesson.source, 'ball.actor', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const handler = workspace.blocks.blocks.find(
+        block => block.type === 'world_on_Collisions_StartsTouchingEvent',
+      )!;
+      const says = (kind: string, words: string): Row => ({
+        type: 'controls_if',
+        inputs: {
+          IF0: {
+            block: {
+              type: 'world_is_a',
+              fields: {TYPE: `actors/${kind}`},
+              inputs: {ACTOR: {block: {type: 'world_event_actor'}}},
+            },
+          },
+          DO0: {block: {type: 'world_log', fields: {TEXT: words}}},
+        },
+      });
+      // ONE handler, two questions — which is the shape the lesson is about.
+      handler.next = {
+        block: {...says('coin', 'money'), next: {block: says('spike', 'ouch')}},
+      };
+      return JSON.stringify(workspace);
+    });
+    const {passes, result} = await check('logic/kinds', solved);
+    expect(result.error).toBeUndefined();
+    expect(result.console).toEqual(['money', 'ouch']);
+    expect(passes).toBe(true);
+  });
+
+  // Asking the wrong question: `is a Coin` twice says "money" for the Spike as
+  // well, so both lines match and the check refuses it.
+  it('refuses a handler that asks the same question twice', async () => {
+    const wrong = editing(lesson.source, 'ball.actor', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const handler = workspace.blocks.blocks.find(
+        block => block.type === 'world_on_Collisions_StartsTouchingEvent',
+      )!;
+      handler.next = {
+        block: {
+          type: 'controls_if',
+          inputs: {
+            IF0: {
+              block: {
+                type: 'world_is_a',
+                fields: {TYPE: 'actors/coin'},
+                inputs: {ACTOR: {block: {type: 'world_event_actor'}}},
+              },
+            },
+            DO0: {block: {type: 'world_log', fields: {TEXT: 'money'}}},
+          },
+        },
+      };
+      return JSON.stringify(workspace);
+    });
+    const {passes, result} = await check('logic/kinds', wrong);
+    // One line, not two: the Spike says nothing at all.
+    expect(result.console).toHaveLength(1);
+    expect(passes).toBe(false);
+  });
+});

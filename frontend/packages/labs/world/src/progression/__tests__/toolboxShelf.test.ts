@@ -58,7 +58,13 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   'logic/collision': ['world_use_trait', 'world_log'],
   'logic/and-or': ['logic_operation', 'world_get_Space_PositionProperty'],
   'look/sprite': ['world_set_sprite'],
-  'place/position': ['world_set_position', 'world_random_place'],
+  'place/position': ['world_set_position', 'world_random_place', 'math_number'],
+  'logic/kinds': [
+    'controls_if',
+    'world_is_a',
+    'world_event_actor',
+    'world_log',
+  ],
 };
 
 /** Every tile on the shortest way to this one, itself excluded. */

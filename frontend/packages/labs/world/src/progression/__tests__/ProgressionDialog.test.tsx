@@ -11,7 +11,9 @@ import {beforeEach, describe, expect, it} from 'vitest';
 
 import {RootStateProvider} from '@code-dot-org/core/redux';
 
+import {TILES} from '../catalogue';
 import {tile} from '../index';
+import {LESSONS} from '../lessons';
 import {useProgression} from '../progressionContext';
 import {ProgressionProvider} from '../ProgressionProvider';
 import type {TileId} from '../types';
@@ -47,6 +49,10 @@ const lab = (props: {focus?: TileId; done?: TileId[]} = {}) =>
       </ProgressionProvider>
     </RootStateProvider>,
   );
+
+/** A literal string, as a pattern — a task is prose and holds `(`, `.` and `?`. */
+const escapeForRegExp = (text: string) =>
+  text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
 const dialog = () => screen.getByRole('dialog');
 const detail = () => within(dialog()).getByRole('complementary');
@@ -109,21 +115,24 @@ describe('the detail pane', () => {
   };
 
   // A tile whose lesson NOBODY HAS WRITTEN, which is what these two are about.
-  // They named `logic/if` until somebody wrote that one — so if this starts
-  // failing, the fix is to pick another unwritten tile, not to change the
-  // assertion.
+  // FOUND rather than named: these tests named `logic/if`, then `logic/kinds`,
+  // and each time somebody wrote that lesson the tests broke for a reason that
+  // had nothing to do with them. The catalogue always has one left.
+  const unwritten = TILES.find(candidate => !LESSONS[candidate.id])!;
+
   it('renders the lesson through the instructions renderer', async () => {
-    await openOn('logic/kinds');
+    await openOn(unwritten.id);
     const pane = detail();
-    // Rendered markdown, not a string: `**What you do.**` has become bold.
+    // Rendered markdown, not a string: `**What you do.**` has become bold, and
+    // the tile's own task is what follows it.
     expect(within(pane).getByText('What you do.').tagName).toBe('STRONG');
     expect(
-      within(pane).getByText(/treats a coin and a spike differently/),
+      within(pane).getByText(new RegExp(escapeForRegExp(unwritten.task))),
     ).toBeInTheDocument();
   });
 
   it('says when a lesson is designed but not written', async () => {
-    await openOn('logic/kinds');
+    await openOn(unwritten.id);
     expect(within(detail()).getByText(/not written yet/)).toBeInTheDocument();
   });
 

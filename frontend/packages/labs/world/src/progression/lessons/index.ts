@@ -779,6 +779,84 @@ The world is 320 pixels down, so halfway down is 160.
 `.trim(),
 };
 
+// ── logic/kinds ──────────────────────────────────────────────────────────────
+
+/** `when ⟨this actor⟩ starts touching ⟨any⟩`, as a root beside a `define actor`. */
+const onTouching = (body: object) => ({
+  type: 'world_on_Collisions_StartsTouchingEvent',
+  fields: {FILTER0: ''},
+  x: 20,
+  y: 300,
+  inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
+  next: {block: body},
+});
+
+const kinds: WorldScenario = {
+  name: 'What a thing is',
+  description:
+    'One handler, two kinds of thing, and no way yet to tell them apart.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        addActor('ball', [placeAt(24, 160), setVelocity(1.6, 0)]),
+        addActor('coin', [placeAt(120, 160)]),
+        addActor('spike', [placeAt(230, 160)]),
+      ],
+    }),
+    actors: {
+      ball: actorFile(
+        'Ball',
+        [
+          useTrait('Physics#CanMoveTrait'),
+          useTrait('Collisions#CanCollideTrait'),
+          setSprite('ball.png'),
+        ],
+        {
+          handlers: [
+            onTouching({
+              type: 'world_log',
+              fields: {TEXT: 'I touched something'},
+            }),
+          ],
+        },
+      ),
+      coin: actorFile('Coin', [
+        useTrait('Collisions#CanCollideTrait'),
+        setSprite('coin.png'),
+      ]),
+      spike: actorFile('Spike', [
+        useTrait('Collisions#CanCollideTrait'),
+        setSprite('box.png'),
+      ]),
+    },
+    sprites: ['ball', 'coin', 'box'],
+    rules: ['motion', 'collisions'],
+  }),
+  instructions: `
+## What a thing is
+
+The Ball rolls past a Coin and a Spike and says the same thing about both:
+**I touched something**. Which is true, and useless — a coin is worth having and
+a spike is not.
+
+The handler is told WHICH actor it touched. What it has no way to say yet is
+what sort of thing that actor is, and that is a question you can ask at any
+moment: **⟨event actor⟩ is a ⟨Coin⟩**.
+
+### What you do
+
+1. Open \`actors/ball.actor\` and find the **when ⟨Ball⟩ starts touching**
+   handler. The **event actor** block inside it is the thing that was touched.
+2. Wrap the print in an **if**, and ask whether the event actor **is a Coin**.
+   Say something about coins there.
+3. Add a second **if** for the Spike, and say something else.
+4. Note what you did NOT do: two handlers. One handler that asks is a handler
+   that works for a third kind you add later; two handlers is a third handler
+   waiting to be written.
+`.trim(),
+};
+
 /** Every lesson written so far, by the tile it belongs to. */
 export const LESSONS: Readonly<Record<TileId, WorldScenario>> = {
   'origin/first-world': firstWorld,
@@ -795,6 +873,7 @@ export const LESSONS: Readonly<Record<TileId, WorldScenario>> = {
   'logic/if': conditional,
   'logic/collision': collision,
   'logic/and-or': andOr,
+  'logic/kinds': kinds,
   'look/sprite': sprite,
   'place/position': position,
 };
