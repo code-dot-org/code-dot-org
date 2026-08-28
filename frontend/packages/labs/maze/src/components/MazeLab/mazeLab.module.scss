@@ -140,6 +140,17 @@
   background: transparent;
   cursor: pointer;
 
+  // `.blocklyPanelWrap`'s Blockly-rendered child (.blockly-workspace) is
+  // itself position:static, so it forms no stacking context of its own --
+  // but ITS descendants (blocklyFlyout, blocklyBlockDragSurface,
+  // blocklyAnimationLayer, ...) are position:absolute with explicit z-index
+  // up to 80, escaping straight into blocklyPanelWrap's stacking context.
+  // There they outrank a z-index:auto overlay regardless of DOM order (an
+  // auto/positioned box only wins ties by tree order among EQUAL z-index
+  // peers), so real pointer events hit Blockly's canvas/flyout even though
+  // the overlay's rect is pixel-correct on top of it. 100 clears that.
+  z-index: 100;
+
   // Visible-but-not-hover focus ring: the maze click targets have no
   // visible hover state of their own until :hover fires (that's
   // .region-editable above) — a keyboard user tabbing to this button needs

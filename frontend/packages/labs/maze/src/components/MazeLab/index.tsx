@@ -789,7 +789,7 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
  * `.region-selected` pair those callers also pass in, so this component owns
  * no visual opinion of its own.
  */
-function RegionOverlay({
+export function RegionOverlay({
   label,
   selected,
   onSelect,
