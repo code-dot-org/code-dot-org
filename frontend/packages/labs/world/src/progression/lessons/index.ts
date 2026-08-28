@@ -857,6 +857,85 @@ moment: **⟨event actor⟩ is a ⟨Coin⟩**.
 `.trim(),
 };
 
+// ── memory/variable ──────────────────────────────────────────────────────────
+
+const variable: WorldScenario = {
+  name: 'A box for a number',
+  description:
+    'Three posts in a row, and the same two numbers written six times.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        addActor('post', [placeAt(60, 160)]),
+        addActor('post', [placeAt(160, 160)]),
+        addActor('post', [placeAt(260, 160)]),
+      ],
+    }),
+    actors: {post: actorFile('Post', [setSprite('box.png')])},
+    sprites: ['box'],
+  }),
+  instructions: `
+## A box for a number
+
+Three Posts in a row. Look at what the world says: **60**, **160**, **260** —
+and **160** again, three times, for the height.
+
+Change your mind about where the row sits and you have six numbers to find and
+edit, and any one of them can be missed. The row is really two facts — where it
+starts and how far apart they are — written out six times over.
+
+### What you do
+
+1. At the top of \`main.world\`, **set ⟨gap⟩ to 100**.
+2. Put the second Post at **⟨gap⟩ + 60** and the third at **⟨gap⟩ + ⟨gap⟩ + 60**.
+   Run it: nothing has changed, and that is the point.
+3. Now change **gap** to 40 and run it again. One number, one edit.
+4. Do the same for the height, which is the same number three times.
+`.trim(),
+};
+
+// ── memory/many ──────────────────────────────────────────────────────────────
+
+const many: WorldScenario = {
+  name: 'All of them at once',
+  description: 'Six coins and six blocks that do the same thing to them.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        addActor('coin', [placeAt(60, 80)]),
+        addActor('coin', [placeAt(160, 80)]),
+        addActor('coin', [placeAt(260, 80)]),
+        addActor('coin', [placeAt(60, 240)]),
+        addActor('coin', [placeAt(160, 240)]),
+        addActor('coin', [placeAt(260, 240)]),
+      ],
+    }),
+    actors: {coin: actorFile('Coin', [setSprite('box.png')])},
+    sprites: ['box', 'coin'],
+  }),
+  instructions: `
+## All of them at once
+
+Six Coins, and every one of them is drawn as a plain box. To give them their
+real picture you could add six \`set sprite\` blocks — one each, all identical,
+and a seventh the day you add a seventh Coin.
+
+A **loop** is one instruction that reaches all of them. It walks a LIST, and
+"every actor in the world" is a list you already have.
+
+### What you do
+
+1. Add **for each actor ⟨coin⟩ in ⟨all actors⟩** to the end of \`main.world\`.
+2. Inside it, **set sprite of ⟨coin⟩** to the coin picture.
+3. Run it. All six change, from one block.
+4. Add a seventh Coin to the world, above the loop, and run it again. You did
+   not have to touch the loop — which is the difference between six blocks and
+   one.
+`.trim(),
+};
+
 /** Every lesson written so far, by the tile it belongs to. */
 export const LESSONS: Readonly<Record<TileId, WorldScenario>> = {
   'origin/first-world': firstWorld,
@@ -874,6 +953,8 @@ export const LESSONS: Readonly<Record<TileId, WorldScenario>> = {
   'logic/collision': collision,
   'logic/and-or': andOr,
   'logic/kinds': kinds,
+  'memory/variable': variable,
+  'memory/many': many,
   'look/sprite': sprite,
   'place/position': position,
 };

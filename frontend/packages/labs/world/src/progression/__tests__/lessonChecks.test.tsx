@@ -868,3 +868,160 @@ describe('the kinds lesson’s check', () => {
     expect(passes).toBe(false);
   });
 });
+
+/** A world's rows, walked from the `define world` block. */
+const rowsOf = (workspace: {blocks: {blocks: Row[]}}): Row[] => {
+  const rows: Row[] = [];
+  let row = workspace.blocks.blocks[0].next?.block;
+  while (row) {
+    rows.push(row);
+    row = row.next?.block;
+  }
+  return rows;
+};
+
+describe('the variable lesson’s check', () => {
+  const lesson = LESSONS['memory/variable'];
+
+  it('refuses a world with the numbers written out', async () => {
+    const {passes} = await check('memory/variable', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts a gap that has been given a name', async () => {
+    const solved = editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const gap = {id: 'gap', name: 'gap', type: 'Number'};
+      const read = () => ({
+        block: {type: 'variables_get_Number', fields: {VAR: gap}},
+      });
+      const rows = rowsOf(workspace);
+      // Second Post at gap + 60, third at gap + gap + 60.
+      const at = (n: number): Row => ({
+        type: 'math_arithmetic',
+        fields: {OP: 'ADD'},
+        inputs:
+          n === 1
+            ? {A: read(), B: {shadow: {type: 'math_number', fields: {NUM: 60}}}}
+            : {
+                A: read(),
+                B: {
+                  block: {
+                    type: 'math_arithmetic',
+                    fields: {OP: 'ADD'},
+                    inputs: {
+                      A: read(),
+                      B: {shadow: {type: 'math_number', fields: {NUM: 60}}},
+                    },
+                  },
+                },
+              },
+      });
+      inSocket(rows[1], 'DO')!.inputs!.X = {block: at(1)};
+      inSocket(rows[2], 'DO')!.inputs!.X = {block: at(2)};
+      // …and the name itself, set before anything reads it.
+      workspace.blocks.blocks[0].next = {
+        block: {
+          type: 'variables_set_Number',
+          fields: {VAR: gap},
+          inputs: {VALUE: {shadow: {type: 'math_number', fields: {NUM: 100}}}},
+          next: {block: rows[0]},
+        },
+      };
+      return JSON.stringify(workspace);
+    });
+    const {passes, result} = await check('memory/variable', solved);
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  // Naming a value and reading it once is a longer way of writing the number,
+  // which is exactly the false pass this check was written down against.
+  it('refuses a name that is only read once', async () => {
+    const once = editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const gap = {id: 'gap', name: 'gap', type: 'Number'};
+      const rows = rowsOf(workspace);
+      inSocket(rows[1], 'DO')!.inputs!.X = {
+        block: {type: 'variables_get_Number', fields: {VAR: gap}},
+      };
+      workspace.blocks.blocks[0].next = {
+        block: {
+          type: 'variables_set_Number',
+          fields: {VAR: gap},
+          inputs: {VALUE: {shadow: {type: 'math_number', fields: {NUM: 160}}}},
+          next: {block: rows[0]},
+        },
+      };
+      return JSON.stringify(workspace);
+    });
+    const {passes} = await check('memory/variable', once);
+    expect(passes).toBe(false);
+  });
+});
+
+describe('the loop lesson’s check', () => {
+  const lesson = LESSONS['memory/many'];
+
+  it('refuses six Coins drawn as boxes', async () => {
+    const {passes} = await check('memory/many', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts one loop over all of them', async () => {
+    const solved = editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const coin = {id: 'c', name: 'coin', type: 'Actor'};
+      const rows = rowsOf(workspace);
+      rows[rows.length - 1].next = {
+        block: {
+          type: 'world_for_each',
+          fields: {VAR: coin},
+          inputs: {
+            SOURCE: {block: {type: 'world_all_actors'}},
+            DO: {
+              block: {
+                type: 'world_set_sprite',
+                fields: {SPRITE: 'coin.png'},
+                inputs: {
+                  ACTOR: {
+                    block: {type: 'variables_get_Actor', fields: {VAR: coin}},
+                  },
+                },
+              },
+            },
+          },
+        },
+      };
+      return JSON.stringify(workspace);
+    });
+    const {passes, result} = await check('memory/many', solved);
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  // Six blocks change all six Coins too. The shape half is what asks for the
+  // loop, and it is the lesson — the outcome is identical either way.
+  it('refuses six blocks that do the same thing', async () => {
+    const byHand = editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      for (const row of rowsOf(workspace)) {
+        const place = inSocket(row, 'DO');
+        if (place) {
+          place.next = {
+            block: {
+              type: 'world_set_sprite',
+              fields: {SPRITE: 'coin.png'},
+              inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
+            },
+          };
+        }
+      }
+      return JSON.stringify(workspace);
+    });
+    const {passes, result} = await check('memory/many', byHand);
+    // It worked — and it is still not the lesson.
+    expect(result.samples).toBeDefined();
+    expect(passes).toBe(false);
+  });
+});

@@ -167,6 +167,22 @@ export interface Tile {
   requires: readonly TileId[];
   /** What completing it adds to the shelf. */
   unlocks: readonly Unlock[];
+  /**
+   * Blocks this lesson needs on the bench without teaching them.
+   *
+   * `memory/variable` is about naming a value, and to name one you need a
+   * number to type — but numbers are Place's lesson, and Memory's branch never
+   * passes through Place. Only Origin is on every path (specs/PROGRESSION.md),
+   * so a branch-local grant cannot serve another branch, and moving everything
+   * general to Origin puts fourteen Math blocks in front of somebody who has
+   * met three blocks in total.
+   *
+   * So: a lesson may OFFER what it needs and GRANT only what it teaches. An
+   * offer is visible while the lesson is open and is not kept, does not appear
+   * in "Unlocks", and is not in the reverse index — so two lessons may offer
+   * the same block, where only one may ever grant it.
+   */
+  offers?: readonly UnlockTarget[];
   check: Check;
   /** The studio level, once one exists (specs/PROGRESSION_UI.md). */
   level?: {name: string; url: string};

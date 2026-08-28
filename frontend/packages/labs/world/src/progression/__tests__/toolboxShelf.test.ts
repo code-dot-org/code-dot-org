@@ -65,6 +65,16 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
     'world_event_actor',
     'world_log',
   ],
+  // The two Memory lessons need numbers and arithmetic, which are Place's
+  // lesson on a branch they never touch — so those tiles OFFER them, and these
+  // two rows are what says an offer reaches the toolbox as a grant does.
+  'memory/variable': [
+    'variables_set_Number',
+    'variables_get_Number',
+    'math_number',
+    'math_arithmetic',
+  ],
+  'memory/many': ['world_for_each', 'world_all_actors', 'world_set_sprite'],
 };
 
 /** Every tile on the shortest way to this one, itself excluded. */

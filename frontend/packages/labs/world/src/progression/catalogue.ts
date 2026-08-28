@@ -611,11 +611,42 @@ export const TILES: readonly Tile[] = [
     task: 'A handler that computes the same distance twice. Give it a name and use it.',
     requires: ['origin/first-world'],
     unlocks: [{kind: 'category', name: 'Variables'}],
+    // Numbers are `place/position`'s lesson, and Memory's branch never passes
+    // through Place. Offered rather than granted: you need one to type, and
+    // being handed one is not being taught about them (./types, `offers`).
+    offers: [
+      {kind: 'block', type: 'math_number'},
+      {kind: 'block', type: 'math_arithmetic'},
+    ],
     check: {
       kind: 'shape',
-      says: 'A variable is written once and read at least twice, and the behaviour is unchanged.',
+      says: 'A name is set once and read at least twice, and the Posts are still in a row.',
       falsePass:
-        'Naming something and using it once. The count is the check, and it is why this one is a `shape`.',
+        'Naming something and using it once, which is a longer way of writing a number. The COUNT is the check, and it is the whole reason this one reads the workspace at all.',
+      run: {
+        probes: {posts: {kind: 'positions', of: 'Post'}},
+        trace: [{seconds: 0.1}],
+      },
+      // The shape half is the lesson; the played half is what stops somebody
+      // naming a value and then quietly breaking the row with it.
+      inspect: files =>
+        Object.entries(files).some(
+          ([path, contents]) =>
+            path.startsWith('worlds/') &&
+            (contents.match(/variables_get_/g) ?? []).length >= 2 &&
+            contents.includes('variables_set_'),
+        ),
+      passes: ({samples}) => {
+        const posts = lastList<Point>(samples.posts);
+        if (posts.length !== 3) {
+          return false;
+        }
+        const across = posts.map(at => at.x).sort((a, b) => a - b);
+        const level = posts.every(at => at.y === posts[0].y);
+        // Still a row, and still evenly spaced — whatever the gap turned out
+        // to be once it had a name.
+        return level && across[1] - across[0] === across[2] - across[1];
+      },
     },
   },
   {
@@ -629,14 +660,27 @@ export const TILES: readonly Tile[] = [
     unlocks: [
       {kind: 'category', name: 'Loops'},
       {kind: 'block', type: 'world_for_each'},
+      // …and the list it walks. A loop with nothing to walk is not a lesson.
+      {kind: 'block', type: 'world_all_actors'},
       {kind: 'block', type: 'world_actors_with_trait'},
       {kind: 'block', type: 'world_count_of_kind'},
     ],
     check: {
       kind: 'outcome',
-      says: 'All six coins changed, from a workspace holding one loop.',
+      says: 'All six Coins are drawn as coins, from a workspace holding one loop.',
       falsePass:
-        'Six blocks, one per coin. Add a seventh coin at runtime and require it to change too.',
+        'Six `set sprite` blocks, one per Coin, which also changes all six. The shape half is what asks for the loop — and it is the lesson, since the outcome is the same either way.',
+      run: {
+        probes: {drawn: {kind: 'sprites'}},
+        trace: [{seconds: 0.1}],
+      },
+      inspect: files =>
+        Object.values(files).some(contents =>
+          contents.includes('world_for_each'),
+        ),
+      passes: ({samples}) =>
+        lastList<string>(samples.drawn).filter(name => name.includes('coin'))
+          .length === 6,
     },
   },
   {
@@ -1435,11 +1479,12 @@ export const TILES: readonly Tile[] = [
     task: 'Spawn a hundred wanderers on a click, watch the frame time, and find where it breaks.',
     requires: ['place/edges', 'input/mouse'],
     unlocks: [
-      // `add actor` came with the first lesson; a hundred of them is the same
-      // block in a loop. What this one adds is asking about a crowd.
-      {kind: 'block', type: 'world_all_actors'},
+      // `add actor` came with the first lesson and `all actors` with the loop
+      // that walks them; what this one adds is asking about a crowd, and taking
+      // one back out.
       {kind: 'block', type: 'world_count_actors'},
       {kind: 'block', type: 'world_remove_actor'},
+      {kind: 'block', type: 'world_first_actor'},
     ],
     check: {
       kind: 'outcome',

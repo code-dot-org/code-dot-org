@@ -110,17 +110,19 @@ export function shelvedToolbox(toolbox: Toolbox, view: ShelfView): Toolbox {
   if (!Array.isArray(toolbox)) {
     return toolbox;
   }
+  const lesson = view.offering
+    ? TILES.find(tile => tile.id === view.offering)
+    : undefined;
+  // What the lesson TEACHES, and what it merely needs on the bench (`offers`).
+  // Both are on hand while it is open; only the first is kept afterwards.
   const offered = new Set(
-    (view.offering
-      ? TILES.find(tile => tile.id === view.offering)
-      : undefined
-    )?.unlocks.map(unlock =>
+    [...(lesson?.unlocks ?? []), ...(lesson?.offers ?? [])].map(unlock =>
       unlock.kind === 'block'
         ? `block:${unlock.type}`
         : unlock.kind === 'category'
           ? `category:${unlock.name}`
           : '',
-    ) ?? [],
+    ),
   );
   const has = (unlock: UnlockTarget, key: string): boolean =>
     offered.has(key) || view.holds(unlock);

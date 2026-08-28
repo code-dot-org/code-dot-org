@@ -664,10 +664,21 @@ idea works.
 
    **Only Origin is on every path.** The map is a DAG, and a drawer earned
    mid-branch strands the branches that do not pass through it — Variables
-   behind Memory would leave a Simulation learner without it. So the general
-   vocabulary is granted early on the spine: Origin gives the Console whole and
-   a number, and Math, Text, Colour and Sound are granted by the first tile of
-   the region that teaches each.
+   behind Memory would leave a Simulation learner without it.
+
+   The answer is not to move everything general to Origin, which puts fourteen
+   Math blocks in front of somebody who has met three blocks in total. It is to
+   separate the two things a lesson does with a block: a tile **grants** what it
+   TEACHES and **offers** what it merely needs on the bench. `memory/variable`
+   is about naming a value, and naming one needs a number to type — so it offers
+   `math number` and grants Variables. An offer is on hand while the lesson is
+   open and is not kept, does not appear under "Unlocks", and is not in the
+   reverse index, so two lessons may offer the same block where only one may
+   ever grant it.
+
+   That is what lets the general vocabulary stay branch-local without stranding
+   anybody: Console is Origin's (both early branches print within two lessons),
+   and Math, Text, Colour and Sound belong to the region that teaches each.
 
    **A locked row is shown, not removed**, with the lesson that grants it named
    beside it: "Unlocked by: Down". A row that has been taken away teaches
