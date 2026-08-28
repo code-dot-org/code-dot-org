@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-26 19:59:43 UTC",
+    "serialized_at": "2026-08-27 18:37:51 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -1500,7 +1500,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "pl-aif1-js-funcitons-panel"
+          "pl-aif1-js-functions-repeating problems"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
@@ -1508,13 +1508,79 @@
         "activity_section.key": "225c26d2-f5e8-4500-a20b-548d880cbb19"
       },
       "level_keys": [
-        "pl-aif1-js-funcitons-panel"
+        "pl-aif1-js-functions-repeating problems"
       ]
     },
     {
       "chapter": 53,
       "position": 4,
       "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-introduce-functions"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "225c26d2-f5e8-4500-a20b-548d880cbb19"
+      },
+      "level_keys": [
+        "pl-aif1-js-introduce-functions"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-building-functions"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "225c26d2-f5e8-4500-a20b-548d880cbb19"
+      },
+      "level_keys": [
+        "pl-aif1-js-building-functions"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-functions-name-weblab"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "225c26d2-f5e8-4500-a20b-548d880cbb19"
+      },
+      "level_keys": [
+        "pl-aif1-js-functions-name-weblab"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 7,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "progression": "Functions"
@@ -1534,31 +1600,9 @@
       ]
     },
     {
-      "chapter": 54,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "progression": "Functions"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "pl-aif1-js-abstractions-spec"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "pl-aif-intro-programming-js",
-        "activity_section.key": "225c26d2-f5e8-4500-a20b-548d880cbb19"
-      },
-      "level_keys": [
-        "pl-aif1-js-abstractions-spec"
-      ]
-    },
-    {
-      "chapter": 55,
-      "position": 6,
-      "activity_section_position": 6,
+      "chapter": 57,
+      "position": 8,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "progression": "Functions"
@@ -1578,8 +1622,30 @@
       ]
     },
     {
-      "chapter": 56,
-      "position": 7,
+      "chapter": 58,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-abstractions-spec"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "225c26d2-f5e8-4500-a20b-548d880cbb19"
+      },
+      "level_keys": [
+        "pl-aif1-js-abstractions-spec"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1600,8 +1666,8 @@
       ]
     },
     {
-      "chapter": 57,
-      "position": 8,
+      "chapter": 60,
+      "position": 11,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1622,8 +1688,8 @@
       ]
     },
     {
-      "chapter": 58,
-      "position": 9,
+      "chapter": 61,
+      "position": 12,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -1644,8 +1710,8 @@
       ]
     },
     {
-      "chapter": 59,
-      "position": 10,
+      "chapter": 62,
+      "position": 13,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -1666,8 +1732,8 @@
       ]
     },
     {
-      "chapter": 60,
-      "position": 11,
+      "chapter": 63,
+      "position": 14,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -1688,8 +1754,8 @@
       ]
     },
     {
-      "chapter": 61,
-      "position": 12,
+      "chapter": 64,
+      "position": 15,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
@@ -1710,8 +1776,8 @@
       ]
     },
     {
-      "chapter": 62,
-      "position": 13,
+      "chapter": 65,
+      "position": 16,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1732,8 +1798,8 @@
       ]
     },
     {
-      "chapter": 63,
-      "position": 14,
+      "chapter": 66,
+      "position": 17,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1754,8 +1820,8 @@
       ]
     },
     {
-      "chapter": 64,
-      "position": 15,
+      "chapter": 67,
+      "position": 18,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -1776,8 +1842,8 @@
       ]
     },
     {
-      "chapter": 65,
-      "position": 16,
+      "chapter": 68,
+      "position": 19,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -1798,8 +1864,8 @@
       ]
     },
     {
-      "chapter": 66,
-      "position": 17,
+      "chapter": 69,
+      "position": 20,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -1820,7 +1886,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 70,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1842,7 +1908,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 71,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1864,7 +1930,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 72,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1886,7 +1952,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 73,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -1908,7 +1974,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 74,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -1930,7 +1996,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 75,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -2567,9 +2633,45 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-aif1-js-funcitons-panel",
+        "level.key": "pl-aif1-js-functions-repeating problems",
         "script_level.level_keys": [
-          "pl-aif1-js-funcitons-panel"
+          "pl-aif1-js-functions-repeating problems"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "225c26d2-f5e8-4500-a20b-548d880cbb19"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif1-js-introduce-functions",
+        "script_level.level_keys": [
+          "pl-aif1-js-introduce-functions"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "225c26d2-f5e8-4500-a20b-548d880cbb19"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif1-js-building-functions",
+        "script_level.level_keys": [
+          "pl-aif1-js-building-functions"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "225c26d2-f5e8-4500-a20b-548d880cbb19"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif1-js-functions-name-weblab",
+        "script_level.level_keys": [
+          "pl-aif1-js-functions-name-weblab"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
@@ -2591,9 +2693,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-aif1-js-abstractions-spec",
+        "level.key": "pl-aif1-js-functions-notification-weblab",
         "script_level.level_keys": [
-          "pl-aif1-js-abstractions-spec"
+          "pl-aif1-js-functions-notification-weblab"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
@@ -2603,9 +2705,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-aif1-js-functions-notification-weblab",
+        "level.key": "pl-aif1-js-abstractions-spec",
         "script_level.level_keys": [
-          "pl-aif1-js-functions-notification-weblab"
+          "pl-aif1-js-abstractions-spec"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
