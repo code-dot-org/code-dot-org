@@ -17,6 +17,7 @@ import {
   compileProject,
   type CompiledProject,
 } from '../../__tests__/support/compileProject';
+import {STOCK_ACTORS} from '../../actors/stock';
 import {PositionProperty} from '../../engine';
 import {projectFiles} from '../../runtime/projectFiles';
 import {TILES_BY_ID} from '../index';
@@ -102,5 +103,63 @@ describe('what a lesson starts out doing', () => {
     // Nothing has elected `Affected by Gravity` yet, so nothing falls. If this
     // starts failing, the lesson has been given away in its own starter.
     expect(after).toEqual(before);
+  });
+});
+
+// ── One file, until a lesson is about two ───────────────────────────────────
+//
+// The claim `ONE_FILE` makes (lessons/index): an early lesson says everything
+// in `main.world`, and the sidebar that lists the rest of the project is off
+// while it does. What the tests below hold it to is the pair of ways that can
+// rot — a lesson that hides the browser and then tells the learner to open a
+// file, and a lesson that quietly stops hiding it.
+
+/** A path a learner would have to use the file browser to reach. */
+const PATHS = /`(actors|rules|sprites|worlds|backgrounds|maps|effects)\//;
+
+describe('a lesson with no file browser', () => {
+  const oneFile = ids.filter(
+    id => LESSONS[id].levelData?.showFileBrowser === false,
+  );
+
+  it('is what a lesson is unless it says otherwise', () => {
+    // Every lesson but the two whose subject is a file.
+    expect(oneFile).toHaveLength(ids.length - 2);
+  });
+
+  it.each(oneFile)('%s does not send the learner to a file', id => {
+    expect(LESSONS[id].instructions).not.toMatch(PATHS);
+  });
+
+  it.each(oneFile)('%s keeps no actor of its own in a file', id => {
+    // Not "has no other files": a lesson holds the rules and pictures it needs
+    // and nobody has to open those. What it may not do is put an actor the
+    // learner is meant to CHANGE somewhere they cannot see — so an `.actor`
+    // file in a one-file lesson has to be one of the library's, untouched.
+    const stock = new Set(STOCK_ACTORS.map(actor => actor.contents));
+    for (const [path, contents] of Object.entries(
+      projectFiles(LESSONS[id].source),
+    )) {
+      if (path.endsWith('.actor')) {
+        expect(stock.has(contents), `${id} holds ${path}`).toBe(true);
+      }
+    }
+  });
+});
+
+describe('a lesson that shows the file browser', () => {
+  it('says why, in the lesson', () => {
+    const shown = ids.filter(
+      id => LESSONS[id].levelData?.showFileBrowser !== false,
+    );
+    expect(shown.sort()).toEqual(['look/sprite', 'memory/actor-state']);
+    // Each says so where the learner reads it, rather than a sidebar simply
+    // appearing one day.
+    expect(LESSONS['memory/actor-state'].instructions).toContain(
+      'first lesson with a second file',
+    );
+    expect(LESSONS['look/sprite'].instructions).toContain(
+      'first lesson with a file browser',
+    );
   });
 });

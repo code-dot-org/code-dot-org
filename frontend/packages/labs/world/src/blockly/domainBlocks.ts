@@ -1751,6 +1751,23 @@ const dropPropertyBlockType = (exportName: string): string =>
 
 // The `output` check for a value kind. A `vector` reports a whole `Vector`; a
 // `point` getter reports one axis (a Number, chosen by a dropdown).
+/**
+ * The rule a property block belongs to, for the "your project does not have
+ * ⟨rule⟩ any more" warning — and NOTHING for a property that belongs to no rule.
+ *
+ * A file's own property (`blockly/ownProperties`) carries the declaring file's
+ * name in `ruleName` because that is what its block type is keyed from. It is
+ * not a rule, so looking it up finds nothing, and the block wore a warning
+ * saying the project no longer had "My World" — on a world that was open at the
+ * time. Every project with world or actor state showed it, the two fixtures
+ * that keep a score included.
+ *
+ * Deleting the declaration still says so: the block type stops being minted,
+ * and a stand-in takes its place (`blockly/standInBlocks`).
+ */
+const memberRule = (ref: MemberRef): string | undefined =>
+  ref.own ? undefined : ref.ruleName;
+
 const outputForType = (type: PropertyType): string =>
   type === 'boolean'
     ? 'Boolean'
@@ -1813,7 +1830,7 @@ const defineSetPropertyBlock = (property: PropertyMeta) => {
   const type = setPropertyBlockType(memberKey(property.ref));
   // Seed the value sockets with their default shadow blocks (attached on init).
   registerValueShadows(type, value.shadows);
-  registerMemberBlockType(type, property.ref.ruleName);
+  registerMemberBlockType(type, memberRule(property.ref));
   return defineBlock({
     type,
     message0,
@@ -1907,7 +1924,7 @@ const defineListPropertyBlocks = (property: PropertyMeta) => {
       verb === 'push'
         ? pushPropertyBlockType(memberKey(property.ref))
         : dropPropertyBlockType(memberKey(property.ref));
-    registerMemberBlockType(type, property.ref.ruleName);
+    registerMemberBlockType(type, memberRule(property.ref));
     return defineBlock({
       type,
       message0,
@@ -2015,7 +2032,7 @@ const defineGetPropertyBlock = (property: PropertyMeta) => {
     // not go through the store.
     registerManyActorBlock(type);
   }
-  registerMemberBlockType(type, property.ref.ruleName);
+  registerMemberBlockType(type, memberRule(property.ref));
 
   return defineBlock({
     type,

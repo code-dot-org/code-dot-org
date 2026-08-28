@@ -34,7 +34,14 @@ import type {WorldScenario} from '../../fixtures/scenarios';
 import type {LessonProperties, TileId} from '../types';
 
 import {lessonSource} from './support';
-import {addActor, declareProperty, placeAt, worldFile} from './worlds';
+import {
+  addActor,
+  anyKind,
+  declareProperty,
+  local,
+  placeAt,
+  worldFile,
+} from './worlds';
 
 // No `tiles` on any of these worlds: a world that says nothing is one screen,
 // ten tiles each way, 320 by 320 (`VIEWPORT_TILES`). Saying so out loud is an
@@ -48,9 +55,9 @@ const firstWorld: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      rows: [addActor('hero', [placeAt(160, 160)])],
+      rows: [addActor(local('hero'), [placeAt(160, 160)])],
+      actors: [{id: 'hero', name: 'Hero', rows: [setSprite('player.png')]}],
     }),
-    actors: {hero: actorFile('Hero', [setSprite('player.png')])},
     sprites: ['player'],
   }),
   instructions: `
@@ -58,15 +65,17 @@ const firstWorld: WorldScenario = {
 
 Press **Run**. There is a world, and there is one thing in it.
 
-A project is a folder of files. \`worlds/main.world\` says what the world is and
-what is in it; \`actors/hero.actor\` says what a Hero *is*. Nothing is built in —
-the picture the Hero draws is a file too, in \`sprites/\`.
+Two blocks say all of it. **define world** is the world, and what is listed
+under it is what gets put in it. **define actor ⟨Hero⟩** says what a Hero *is* —
+here, one picture and nothing else.
+
+Read them in that order and you have read the whole project.
 
 ### What you do
 
-1. Open \`actors/hero.actor\` and read it. It is two blocks.
-2. Back in \`main.world\`, add a **second** actor to the world.
-3. Give it a picture, and put it somewhere the Hero is not.
+1. Add a **second** \`define actor\`, and give it a name of its own.
+2. Give it a picture with **set sprite**.
+3. **add actor** it to the world, somewhere the Hero is not.
 `.trim(),
 };
 
@@ -78,9 +87,9 @@ const arrows: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      rows: [addActor('hero', [placeAt(160, 160)])],
+      rows: [addActor(local('hero'), [placeAt(160, 160)])],
+      actors: [{id: 'hero', name: 'Hero', rows: [setSprite('player.png')]}],
     }),
-    actors: {hero: actorFile('Hero', [setSprite('player.png')])},
     sprites: ['player'],
     rules: ['arrows'],
   }),
@@ -89,12 +98,13 @@ const arrows: WorldScenario = {
 
 Press the arrow keys. Nothing happens — the Hero does not know about them.
 
-This project holds the **Arrow Keys** rule (\`rules/arrows.rule\`). A rule sitting
-in a project does nothing by itself: an actor has to *elect* what it offers.
+This project holds the **Arrow Keys** rule. A rule a project holds does nothing
+by itself: an actor has to *elect* what it offers. (The count on \`define world\`
+says how many rules are in play; click it to see them.)
 
 ### What you do
 
-1. In \`actors/hero.actor\`, add **use trait ⟨Moves Across⟩** under the Hero.
+1. Add **use trait ⟨Moves Across⟩** under \`define actor ⟨Hero⟩\`.
 2. Run it. Left and right work; up and down do not.
 3. Add **Moves Down** as well, and now it walks in every direction — which is
    what a top-down game wants and a platformer does not.
@@ -110,56 +120,59 @@ const speed: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      rows: [addActor('hero', [placeAt(40, 160)])],
-    }),
-    actors: {
-      hero: actorFile('Hero', [setSprite('player.png')], {
-        handlers: [
-          {
-            // In `move`, the moment of the frame when things go somewhere —
-            // which is exactly the moment the Physics rule would have done this
-            // for it, and is the point of the lesson.
-            type: 'world_trait_step',
-            fields: {PHASE: 'move', NAME: 'shuffle right'},
-            inputs: {
-              DO: {
-                block: {
-                  type: 'world_set_position',
-                  inputs: {
-                    ACTOR: {block: {type: 'world_this_actor'}},
-                    X: {
-                      block: {
-                        type: 'math_arithmetic',
-                        fields: {OP: 'ADD'},
-                        inputs: {
-                          A: {
-                            block: {
-                              type: 'world_get_Space_PositionProperty',
-                              fields: {COMPONENT: 'x'},
-                              inputs: {
-                                ACTOR: {block: {type: 'world_this_actor'}},
+      rows: [addActor(local('hero'), [placeAt(40, 160)])],
+      actors: [
+        {
+          id: 'hero',
+          name: 'Hero',
+          rows: [
+            setSprite('player.png'),
+            {
+              // In `move`, the moment of the frame when things go somewhere —
+              // which is exactly the moment the Physics rule would have done this
+              // for it, and is the point of the lesson.
+              type: 'world_trait_step',
+              fields: {PHASE: 'move', NAME: 'shuffle right'},
+              inputs: {
+                DO: {
+                  block: {
+                    type: 'world_set_position',
+                    inputs: {
+                      ACTOR: {block: {type: 'world_this_actor'}},
+                      X: {
+                        block: {
+                          type: 'math_arithmetic',
+                          fields: {OP: 'ADD'},
+                          inputs: {
+                            A: {
+                              block: {
+                                type: 'world_get_Space_PositionProperty',
+                                fields: {COMPONENT: 'x'},
+                                inputs: {
+                                  ACTOR: {block: {type: 'world_this_actor'}},
+                                },
                               },
                             },
+                            B: num(2),
                           },
-                          B: num(2),
                         },
                       },
-                    },
-                    Y: {
-                      block: {
-                        type: 'world_get_Space_PositionProperty',
-                        fields: {COMPONENT: 'y'},
-                        inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
+                      Y: {
+                        block: {
+                          type: 'world_get_Space_PositionProperty',
+                          fields: {COMPONENT: 'y'},
+                          inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
+                        },
                       },
                     },
                   },
                 },
               },
             },
-          },
-        ],
-      }),
-    },
+          ],
+        },
+      ],
+    }),
     sprites: ['player'],
     rules: ['motion'],
   }),
@@ -167,8 +180,8 @@ const speed: WorldScenario = {
 ## Speed is not a place
 
 The Hero crosses the screen, and it does it the way everybody writes first:
-**every frame, put it two pixels further right**. Open \`actors/hero.actor\` and
-read the handler that does it.
+**every frame, put it two pixels further right**. Read the \`each frame\` under
+\`define actor ⟨Hero⟩\`, which is the whole of how it does it.
 
 That works, and it is not how things move. It ties the speed to the frame rate,
 it cannot be pushed, and nothing else can affect it.
@@ -195,14 +208,14 @@ const gravity: WorldScenario = {
         // Directly above the ground, and that is not decoration: at x 160 and
         // 192 the two 32-pixel sprites overlap by nothing at all, and the Hero
         // falls past the corner of the floor. The lesson's check found it.
-        addActor('hero', [placeAt(160, 40)]),
-        addActor('ground', [placeAt(160, 272)]),
+        addActor(local('hero'), [placeAt(160, 40)]),
+        addActor(local('ground'), [placeAt(160, 272)]),
+      ],
+      actors: [
+        {id: 'hero', name: 'Hero', rows: [setSprite('player.png')]},
+        {id: 'ground', name: 'Ground', rows: [setSprite('ground.png')]},
       ],
     }),
-    actors: {
-      hero: actorFile('Hero', [setSprite('player.png')]),
-      ground: actorFile('Ground', [setSprite('ground.png')]),
-    },
     sprites: ['player', 'ground'],
     rules: ['gravity'],
   }),
@@ -210,7 +223,7 @@ const gravity: WorldScenario = {
 ## Down
 
 The Hero is in the air and stays there. The **Gravity** rule is in this project
-(\`rules/gravity.rule\`) and nothing has elected it.
+— the count on \`define world\` says so — and nothing has elected it.
 
 ### What you do
 
@@ -219,41 +232,56 @@ The Hero is in the air and stays there. The **Gravity** rule is in this project
 2. Give the Ground **use trait ⟨Acts as Ground⟩**. Now it lands.
 3. Add a **when ⟨Hero⟩ stops falling** handler and print something, so you can
    see the moment happen.
-4. Open \`rules/gravity.rule\` and find the number that says how hard it pulls.
-   Change it and run again.
+4. Click the **eye** on \`use trait ⟨Affected by Gravity⟩\` to open the rule
+   itself, and find the number that says how hard it pulls. Change it and run
+   again — it is your copy.
 `.trim(),
 };
 
 // ── look/sprite ──────────────────────────────────────────────────────────────
 
 const sprite: WorldScenario = {
+  // THE FILE BROWSER IS ON, for the same reason `memory/actor-state` has it:
+  // the lesson's subject is the file. Step three opens the picture and paints
+  // on it, and a `.png` opens by being opened — there is no eye on `set sprite`
+  // the way there is on `use trait`, and no other way in.
+  levelData: {showFileBrowser: true},
   name: 'A picture is a file',
   description: 'An actor drawing a grey box, and the picture it could have.',
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      rows: [addActor('hero', [placeAt(160, 160)])],
-    }),
-    actors: {
-      hero: actorFile('Hero', [], {
-        drawing: {
-          width: 24,
-          height: 24,
-          commands: [fill(swatch('#8d8d99')), rectangle(0, 0, 24, 24)],
+      rows: [addActor(local('hero'), [placeAt(160, 160)])],
+      actors: [
+        {
+          id: 'hero',
+          name: 'Hero',
+          rows: [],
+          drawing: {
+            width: 24,
+            height: 24,
+            commands: [fill(swatch('#8d8d99')), rectangle(0, 0, 24, 24)],
+          },
         },
-      }),
-    },
+      ],
+    }),
   }),
   instructions: `
 ## A picture is a file
 
-The Hero is a grey box, and it is a grey box because \`actors/hero.actor\` draws
-one. Nothing in this lab is built in: a picture is a **file** the project holds.
+The Hero is a grey box because that is what \`define actor ⟨Hero⟩\` says to
+draw. Nothing in this lab is built in: a picture is a **file** the project
+holds, and until it holds one there is nothing to draw but shapes.
+
+This is the first lesson with a file browser down the left, and that is the
+lesson: the pictures are files like everything else, so they are in the list
+like everything else.
 
 ### What you do
 
 1. Add **set sprite** to the Hero, and use the \`(import…)\` row on its dropdown
-   to bring a picture in. Look at \`sprites/\` afterwards — it is really there.
+   to bring a picture in. Look at \`sprites/\` on the left afterwards — it is
+   really there, and it is yours, not a link to the library's.
 2. Run it. The sprite wins; the drawing underneath is what an actor does when it
    has no picture.
 3. Open the picture you imported and **paint on it**. It is yours now — the copy
@@ -270,12 +298,12 @@ const position: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        addActor('marker', [placeAt(160, 160)]),
-        addActor('marker', [placeAt(160, 160)]),
-        addActor('marker', [placeAt(160, 160)]),
+        addActor(local('marker'), [placeAt(160, 160)]),
+        addActor(local('marker'), [placeAt(160, 160)]),
+        addActor(local('marker'), [placeAt(160, 160)]),
       ],
+      actors: [{id: 'marker', name: 'Marker', rows: [setSprite('coin.png')]}],
     }),
-    actors: {marker: actorFile('Marker', [setSprite('coin.png')])},
     sprites: ['coin'],
   }),
   instructions: `
@@ -306,14 +334,18 @@ const press: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      rows: [addActor('hero', [placeAt(160, 160)])],
+      rows: [addActor(local('hero'), [placeAt(160, 160)])],
+      actors: [
+        {
+          id: 'hero',
+          name: 'Hero',
+          rows: [
+            useTrait('Arrow Keys#MovesAcrossTrait'),
+            setSprite('player.png'),
+          ],
+        },
+      ],
     }),
-    actors: {
-      hero: actorFile('Hero', [
-        useTrait('Arrow Keys#MovesAcrossTrait'),
-        setSprite('player.png'),
-      ]),
-    },
     sprites: ['player'],
     rules: ['arrows', 'input'],
   }),
@@ -346,9 +378,9 @@ const mouse: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      rows: [addActor('target', [placeAt(160, 160)])],
+      rows: [addActor(local('target'), [placeAt(160, 160)])],
+      actors: [{id: 'target', name: 'Target', rows: [setSprite('coin.png')]}],
     }),
-    actors: {target: actorFile('Target', [setSprite('coin.png')])},
     sprites: ['coin'],
     rules: ['mouse'],
   }),
@@ -380,14 +412,18 @@ const twoHands: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      rows: [addActor('ship', [placeAt(160, 160)])],
+      rows: [addActor(local('ship'), [placeAt(160, 160)])],
+      actors: [
+        {
+          id: 'ship',
+          name: 'Ship',
+          rows: [
+            useTrait('Arrow Keys#MovesAcrossTrait'),
+            setSprite('ship.png'),
+          ],
+        },
+      ],
     }),
-    actors: {
-      ship: actorFile('Ship', [
-        useTrait('Arrow Keys#MovesAcrossTrait'),
-        setSprite('ship.png'),
-      ]),
-    },
     sprites: ['ship'],
     rules: ['arrows', 'drive', 'drag'],
   }),
@@ -413,6 +449,9 @@ the way it is pointing.
 // ── motion/force ─────────────────────────────────────────────────────────────
 
 /** `set velocity of ⟨this actor⟩ to ⟨x, y⟩`, for a world's `add actor` body. */
+/** The Ball three lessons start from: it can move, and it has a picture. */
+const BALL = [useTrait('Physics#CanMoveTrait'), setSprite('ball.png')];
+
 const setVelocity = (x: number, y: number) => ({
   type: 'world_set_Physics_VelocityProperty',
   inputs: {
@@ -421,13 +460,18 @@ const setVelocity = (x: number, y: number) => ({
   },
 });
 
-/** `when ⟨this actor⟩ hears ⟨key⟩ pressed`, as a root beside a `define actor`. */
-const onPressed = (key: string, body: object, y = 260) => ({
+/**
+ * `when ⟨any Ball⟩ hears ⟨key⟩ pressed`, as a root beside the `define world`.
+ *
+ * The subject is the KIND rather than `this actor`: a handler written beside a
+ * definition is about that definition, and one written in the world has to say
+ * which actor it is about (`anyKind`). Inside it, `this actor` is still the
+ * actor the key was pressed for.
+ */
+const onPressed = (actor: string, key: string, body: object) => ({
   type: 'world_on_Input_PressesEvent',
   fields: {FILTER0: key},
-  x: 20,
-  y,
-  inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
+  inputs: {ACTOR: anyKind(actor)},
   next: {block: body},
 });
 
@@ -438,26 +482,25 @@ const force: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      rows: [addActor('ball', [placeAt(64, 160)])],
-    }),
-    actors: {
-      ball: actorFile(
-        'Ball',
-        [
-          useTrait('Physics#CanMoveTrait'),
-          useTrait('Input#TakesKeyboardInputTrait'),
-          setSprite('ball.png'),
-        ],
+      rows: [addActor(local('ball'), [placeAt(64, 160)])],
+      actors: [
         {
-          handlers: [
-            onPressed('space', {
-              type: 'world_log',
-              fields: {TEXT: 'bang'},
-            }),
+          id: 'ball',
+          name: 'Ball',
+          rows: [
+            useTrait('Physics#CanMoveTrait'),
+            useTrait('Input#TakesKeyboardInputTrait'),
+            setSprite('ball.png'),
           ],
         },
-      ),
-    },
+      ],
+      handlers: [
+        onPressed('ball', 'space', {
+          type: 'world_log',
+          fields: {TEXT: 'bang'},
+        }),
+      ],
+    }),
     sprites: ['ball'],
     rules: ['motion', 'input'],
   }),
@@ -472,7 +515,8 @@ after you have let go.
 
 ### What you do
 
-1. In \`actors/ball.actor\`, swap the **print** for **apply force**, and give it
+1. In the **when ⟨any Ball⟩ hears space** handler, swap the **print** for
+   **apply force**, and give it
    a shove to the right.
 2. Press space once. It moves, and it goes on moving: nothing is stopping it.
 3. Press space again while it is still going, and watch the shove ADD to the
@@ -489,14 +533,9 @@ const units: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      rows: [addActor('ball', [placeAt(16, 160), setVelocity(60, 0)])],
+      rows: [addActor(local('ball'), [placeAt(16, 160), setVelocity(60, 0)])],
+      actors: [{id: 'ball', name: 'Ball', rows: BALL}],
     }),
-    actors: {
-      ball: actorFile('Ball', [
-        useTrait('Physics#CanMoveTrait'),
-        setSprite('ball.png'),
-      ]),
-    },
     sprites: ['ball'],
     rules: ['motion'],
   }),
@@ -514,7 +553,7 @@ The world is 10 tiles each way, and a tile is 32 pixels: **320 across**.
 ### What you do
 
 1. Work out the speed that crosses 384 pixels in **two seconds**, in units.
-2. Put it in the \`set speed\` block in \`worlds/main.world\`.
+2. Put it in the \`set speed\` block, in the world's \`add actor\`.
 3. Run it and count. If it arrives early, the number is too big.
 `.trim(),
 };
@@ -528,14 +567,9 @@ const drag: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      rows: [addActor('ball', [placeAt(24, 160), setVelocity(2.5, 0)])],
+      rows: [addActor(local('ball'), [placeAt(24, 160), setVelocity(2.5, 0)])],
+      actors: [{id: 'ball', name: 'Ball', rows: BALL}],
     }),
-    actors: {
-      ball: actorFile('Ball', [
-        useTrait('Physics#CanMoveTrait'),
-        setSprite('ball.png'),
-      ]),
-    },
     sprites: ['ball'],
     rules: ['motion', 'drag', 'wrap'],
   }),
@@ -566,14 +600,14 @@ const tween: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        addActor('door', [placeAt(64, 160)]),
-        addActor('post', [placeAt(256, 160)]),
+        addActor(local('door'), [placeAt(64, 160)]),
+        addActor(local('post'), [placeAt(256, 160)]),
+      ],
+      actors: [
+        {id: 'door', name: 'Door', rows: [setSprite('box.png')]},
+        {id: 'post', name: 'Post', rows: [setSprite('ground.png')]},
       ],
     }),
-    actors: {
-      door: actorFile('Door', [setSprite('box.png')]),
-      post: actorFile('Post', [setSprite('ground.png')]),
-    },
     sprites: ['box', 'ground'],
   }),
   instructions: `
@@ -588,7 +622,7 @@ until something plays it.
 
 ### What you do
 
-1. In \`worlds/main.world\`, add **play a tween on ⟨any Door⟩ over 1 second**.
+1. Under \`define world\`, add **play a tween on ⟨any Door⟩ over 1 second**.
 2. Inside its **move** slot, put **set position of ⟨this actor⟩** and give it
    the Post's place. Run it: the Door travels there.
 3. Change the curve from **steadily** to **slow at both ends** and watch the
@@ -618,14 +652,9 @@ const conditional: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      rows: [addActor('ball', [placeAt(24, 160), setVelocity(1.6, 0)])],
+      rows: [addActor(local('ball'), [placeAt(24, 160), setVelocity(1.6, 0)])],
+      actors: [{id: 'ball', name: 'Ball', rows: BALL}],
     }),
-    actors: {
-      ball: actorFile('Ball', [
-        useTrait('Physics#CanMoveTrait'),
-        setSprite('ball.png'),
-      ]),
-    },
     sprites: ['ball'],
     rules: ['motion'],
   }),
@@ -659,18 +688,22 @@ const collision: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        addActor('ball', [placeAt(24, 160), setVelocity(1.6, 0)]),
-        addActor('wall', [placeAt(272, 160)]),
+        addActor(local('ball'), [placeAt(24, 160), setVelocity(1.6, 0)]),
+        addActor(local('wall'), [placeAt(272, 160)]),
+      ],
+      actors: [
+        {
+          id: 'ball',
+          name: 'Ball',
+          rows: [
+            useTrait('Physics#CanMoveTrait'),
+            useTrait('Collisions#CanCollideTrait'),
+            setSprite('ball.png'),
+          ],
+        },
+        {id: 'wall', name: 'Wall', rows: [setSprite('ground.png')]},
       ],
     }),
-    actors: {
-      ball: actorFile('Ball', [
-        useTrait('Physics#CanMoveTrait'),
-        useTrait('Collisions#CanCollideTrait'),
-        setSprite('ball.png'),
-      ]),
-      wall: actorFile('Wall', [setSprite('ground.png')]),
-    },
     sprites: ['ball', 'ground'],
     rules: ['motion', 'collisions', 'solid'],
   }),
@@ -705,16 +738,15 @@ const andOr: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        addActor('ball', [placeAt(24, 64), setVelocity(1.6, 0)]),
-        addActor('ball', [placeAt(24, 240), setVelocity(1.6, 0)]),
+        addActor(local('ball'), [placeAt(24, 64), setVelocity(1.6, 0)]),
+        addActor(local('ball'), [placeAt(24, 240), setVelocity(1.6, 0)]),
       ],
-    }),
-    actors: {
-      ball: actorFile(
-        'Ball',
-        [useTrait('Physics#CanMoveTrait'), setSprite('ball.png')],
+      actors: [
         {
-          handlers: [
+          id: 'ball',
+          name: 'Ball',
+          rows: [
+            ...BALL,
             {
               type: 'world_trait_step',
               fields: {PHASE: 'decide', NAME: 'stop in the middle'},
@@ -756,8 +788,8 @@ const andOr: WorldScenario = {
             },
           ],
         },
-      ),
-    },
+      ],
+    }),
     sprites: ['ball'],
     rules: ['motion'],
   }),
@@ -775,7 +807,7 @@ The world is 320 pixels down, so halfway down is 160.
 
 ### What you do
 
-1. Open \`actors/ball.actor\` and find the **if**.
+1. Find the **if**, in the \`each frame\` under \`define actor ⟨Ball⟩\`.
 2. Wrap its question in an **and**, and add a second question: is
    **⟨get position y of this actor⟩** greater than **160**?
 3. Run it. The low Ball stops in the middle; the high one carries on and leaves.
@@ -787,12 +819,10 @@ The world is 320 pixels down, so halfway down is 160.
 // ── logic/kinds ──────────────────────────────────────────────────────────────
 
 /** `when ⟨this actor⟩ starts touching ⟨any⟩`, as a root beside a `define actor`. */
-const onTouching = (body: object) => ({
+const onTouching = (actor: string, body: object) => ({
   type: 'world_on_Collisions_StartsTouchingEvent',
   fields: {FILTER0: ''},
-  x: 20,
-  y: 300,
-  inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
+  inputs: {ACTOR: anyKind(actor)},
   next: {block: body},
 });
 
@@ -804,37 +834,38 @@ const kinds: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        addActor('ball', [placeAt(24, 160), setVelocity(1.6, 0)]),
-        addActor('coin', [placeAt(120, 160)]),
-        addActor('spike', [placeAt(230, 160)]),
+        addActor(local('ball'), [placeAt(24, 160), setVelocity(1.6, 0)]),
+        addActor(local('coin'), [placeAt(120, 160)]),
+        addActor(local('spike'), [placeAt(230, 160)]),
       ],
-    }),
-    actors: {
-      ball: actorFile(
-        'Ball',
-        [
-          useTrait('Physics#CanMoveTrait'),
-          useTrait('Collisions#CanCollideTrait'),
-          setSprite('ball.png'),
-        ],
+      actors: [
         {
-          handlers: [
-            onTouching({
-              type: 'world_log',
-              fields: {TEXT: 'I touched something'},
-            }),
+          id: 'ball',
+          name: 'Ball',
+          rows: [
+            useTrait('Physics#CanMoveTrait'),
+            useTrait('Collisions#CanCollideTrait'),
+            setSprite('ball.png'),
           ],
         },
-      ),
-      coin: actorFile('Coin', [
-        useTrait('Collisions#CanCollideTrait'),
-        setSprite('coin.png'),
-      ]),
-      spike: actorFile('Spike', [
-        useTrait('Collisions#CanCollideTrait'),
-        setSprite('box.png'),
-      ]),
-    },
+        {
+          id: 'coin',
+          name: 'Coin',
+          rows: [useTrait('Collisions#CanCollideTrait'), setSprite('coin.png')],
+        },
+        {
+          id: 'spike',
+          name: 'Spike',
+          rows: [useTrait('Collisions#CanCollideTrait'), setSprite('box.png')],
+        },
+      ],
+      handlers: [
+        onTouching('ball', {
+          type: 'world_log',
+          fields: {TEXT: 'I touched something'},
+        }),
+      ],
+    }),
     sprites: ['ball', 'coin', 'box'],
     rules: ['motion', 'collisions'],
   }),
@@ -851,7 +882,7 @@ moment: **⟨event actor⟩ is a ⟨Coin⟩**.
 
 ### What you do
 
-1. Open \`actors/ball.actor\` and find the **when ⟨Ball⟩ starts touching**
+1. Find the **when ⟨any Ball⟩ starts touching**
    handler. The **event actor** block inside it is the thing that was touched.
 2. Wrap the print in an **if**, and ask whether the event actor **is a Coin**.
    Say something about coins there.
@@ -872,12 +903,12 @@ const variable: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        addActor('post', [placeAt(60, 160)]),
-        addActor('post', [placeAt(160, 160)]),
-        addActor('post', [placeAt(260, 160)]),
+        addActor(local('post'), [placeAt(60, 160)]),
+        addActor(local('post'), [placeAt(160, 160)]),
+        addActor(local('post'), [placeAt(260, 160)]),
       ],
+      actors: [{id: 'post', name: 'Post', rows: [setSprite('box.png')]}],
     }),
-    actors: {post: actorFile('Post', [setSprite('box.png')])},
     sprites: ['box'],
   }),
   instructions: `
@@ -909,15 +940,15 @@ const many: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        addActor('coin', [placeAt(60, 80)]),
-        addActor('coin', [placeAt(160, 80)]),
-        addActor('coin', [placeAt(260, 80)]),
-        addActor('coin', [placeAt(60, 240)]),
-        addActor('coin', [placeAt(160, 240)]),
-        addActor('coin', [placeAt(260, 240)]),
+        addActor(local('coin'), [placeAt(60, 80)]),
+        addActor(local('coin'), [placeAt(160, 80)]),
+        addActor(local('coin'), [placeAt(260, 80)]),
+        addActor(local('coin'), [placeAt(60, 240)]),
+        addActor(local('coin'), [placeAt(160, 240)]),
+        addActor(local('coin'), [placeAt(260, 240)]),
       ],
+      actors: [{id: 'coin', name: 'Coin', rows: [setSprite('box.png')]}],
     }),
-    actors: {coin: actorFile('Coin', [setSprite('box.png')])},
     sprites: ['box', 'coin'],
   }),
   instructions: `
@@ -950,11 +981,11 @@ const worldState: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        addActor('label', [
+        addActor('actors/label', [
           placeAt(90, 110),
           setText('TextProperty', words('Lives: 3')),
         ]),
-        addActor('label', [
+        addActor('actors/label', [
           placeAt(230, 210),
           setText('TextProperty', words('Lives: 2')),
         ]),
@@ -999,6 +1030,12 @@ const lampName = (number: object) => ({
 const worldsId = () => ({block: {type: 'world_get_WorldsMain_IdProperty'}});
 
 const actorState: WorldScenario = {
+  // THE FIRST LESSON WITH TWO FILES, and it is not a preference. A property a
+  // world's own `define actor` declares is a `const` inside that definition's
+  // block scope (`domainBlocks`, `world_actor`), so the actor's drawing can
+  // read it and the world's body cannot — which is the one thing this lesson
+  // has to do. The Lamp is a file here for the same reason the lesson exists.
+  levelData: {showFileBrowser: true},
   name: 'State an actor carries',
   description: 'Two Lamps that cannot tell each other apart.',
   source: lessonSource({
@@ -1006,11 +1043,11 @@ const actorState: WorldScenario = {
       name: 'My World',
       rows: [
         declareProperty('number', 'id', '1'),
-        addActor('lamp', [
+        addActor('actors/lamp', [
           placeAt(110, 160),
           setText('TextProperty', lampName(worldsId())),
         ]),
-        addActor('lamp', [
+        addActor('actors/lamp', [
           placeAt(230, 160),
           setText('TextProperty', lampName(worldsId())),
         ]),
@@ -1043,9 +1080,14 @@ An actor's is the opposite on purpose: declared in the **actor's own file**,
 every Lamp gets its own copy, and that is what makes two of a kind two things
 rather than one thing drawn twice.
 
+So this is also the first lesson with a second file. Every one before it said
+everything it had to say in \`main.world\`; a Lamp that remembers something has
+to be a file, because that is where a kind of actor keeps what is its own.
+
 ### What you do
 
-1. In \`actors/lamp.actor\`, under \`define actor\`, add
+1. Open \`actors/lamp.actor\` — the file browser is on the left, and this is the
+   first lesson that has needed it. Under \`define actor\`, add
    **define number id with default 1**.
 2. In \`main.world\`, in each \`add actor\` body, **set id of ⟨this actor⟩** —
    1 for the first, 2 for the second — before the text is set.
@@ -1071,8 +1113,9 @@ const scoreLesson: WorldScenario = {
       name: 'My World',
       rows: [
         declareProperty('number', 'counted', '0'),
-        addActor('target', [placeAt(160, 160)]),
+        addActor(local('target'), [placeAt(160, 160)]),
       ],
+      actors: [{id: 'target', name: 'Target', rows: [setSprite('coin.png')]}],
       handlers: [
         {
           // The WORLD's telling: a press happened, and it is about nobody. The
@@ -1097,7 +1140,6 @@ const scoreLesson: WorldScenario = {
         },
       ],
     }),
-    actors: {target: actorFile('Target', [setSprite('coin.png')])},
     sprites: ['coin'],
     rules: ['mouse'],
   }),
@@ -1127,8 +1169,28 @@ already in it.
 `.trim(),
 };
 
-/** Every lesson written so far, by the tile it belongs to. */
-export const LESSONS: Readonly<Record<TileId, WorldScenario>> = {
+/**
+ * A lesson is ONE FILE unless it says otherwise.
+ *
+ * Every lesson written so far says everything it has to say in `main.world`:
+ * the actors it asks the learner to change are defined there
+ * (`worlds/defineActor`), and the rules and pictures it holds are files nobody
+ * has to open. A sidebar listing eleven of them argues with that, and the first
+ * thing it invites is the click that leaves the one file the lesson is about.
+ *
+ * The files are still THERE and still compiled — what is gone is the list. The
+ * ways in that belong to a lesson are still on the blocks: the eye beside `use
+ * trait` opens the rule behind it, and the rule count on `define world` opens
+ * what the project holds.
+ *
+ * FILES ARE A LESSON OF THEIR OWN, and it is `making/read` — "the rules are
+ * blocks, and you can read all of them". A lesson that is about files turns the
+ * browser back on by saying so in its own `levelData`, which is what the spread
+ * below leaves room for.
+ */
+const ONE_FILE: WorldScenario['levelData'] = {showFileBrowser: false};
+
+const written: Readonly<Record<TileId, WorldScenario>> = {
   'origin/first-world': firstWorld,
   'input/arrows': arrows,
   'input/press': press,
@@ -1152,6 +1214,15 @@ export const LESSONS: Readonly<Record<TileId, WorldScenario>> = {
   'look/sprite': sprite,
   'place/position': position,
 };
+
+/** Every lesson written so far, by the tile it belongs to. */
+export const LESSONS: Readonly<Record<TileId, WorldScenario>> =
+  Object.fromEntries(
+    Object.entries(written).map(([id, lesson]) => [
+      id,
+      {...lesson, levelData: {...ONE_FILE, ...lesson.levelData}},
+    ]),
+  ) as Readonly<Record<TileId, WorldScenario>>;
 
 /** The lesson for a tile, if anybody has written it. */
 export const lessonFor = (id: TileId): WorldScenario | undefined => LESSONS[id];

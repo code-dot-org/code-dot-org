@@ -604,6 +604,47 @@ anything depends on it.
    That table is what turns "the gate hid something" from a bug report into a
    failing test.
 
+9. **One file.** A lesson says everything it has to say in `main.world`, and
+   the file browser is off while it does (`lessons/index`, `ONE_FILE`). The
+   actors a lesson asks the learner to change are defined IN the world — a
+   `define actor` root beside the `define world`, which is a shape the engine
+   already had and `fixtures/platformerSingle` already proved at full size.
+
+   The reason is the one the single-world scenarios give: a sidebar listing
+   eleven files argues with a lesson that is about one of them, and the first
+   thing it invites is the click that leaves it. The files are still there and
+   still compiled — a lesson holds the rules and pictures it needs — and what
+   is gone is the list.
+
+   **Nothing became unreachable**, which is the test of it. The eye on `use
+trait` opens the rule behind the trait; the rule count on `define world`
+   opens what the project holds, and is where `memory/score` goes to find
+   Scoring; a sprite's `(import…)` row is on the block that names it. Those
+   ways in were built for a level that hides the browser, and this is the first
+   thing that has used them at scale.
+
+   **Two lessons keep the browser, and both earn it.**
+
+   `look/sprite` is "a picture is a file", and its third step opens the picture
+   and paints on it. A `.png` opens by being opened: there is no eye on `set
+sprite` the way there is on `use trait`, so with no list there is no way in.
+   The lesson's subject is the sidebar, so the lesson has one.
+
+   `memory/actor-state` is the other, and it is forced rather than chosen. A
+   property declared in a world's own `define actor` is a `const` in that
+   definition's block scope, so the actor's drawing can read it and the world's
+   body cannot — which is precisely what a lesson about per-instance state has
+   to do. The engine gap is written down as
+   [own-property scope](PROGRESSION.md#own-property-scope); if it is ever
+   closed, that lesson can be one file like the rest.
+
+   Both say so where the learner reads it, in the lesson itself. A sidebar that
+   simply appears one day is a change nobody explained.
+
+   Two tests hold the line: a lesson with no browser may not name a path in its
+   instructions, and any `.actor` file it does hold must be the library's own,
+   untouched.
+
 ## Open questions
 
 - **Whose component is the map?** The renderer is generic (hexes, regions,

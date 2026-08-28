@@ -272,12 +272,14 @@ export const TILES: readonly Tile[] = [
       // how the Arrow Keys rule itself moves an actor, and a learner who does
       // the lesson that way has done the lesson. What the lesson replaces is
       // moving by PLACE — so that is what the shape half looks for.
+      //
+      // NOT "no `set position` anywhere", either, which is what this said while
+      // a lesson had a file per actor: placing the Hero to begin with is a
+      // `set position`, and it lives in the same file now that a lesson is one
+      // file. What the lesson replaces is a `set position` INSIDE an `each
+      // frame`, and saying exactly that is what stays true either way.
       inspect: files =>
-        !Object.entries(files).some(
-          ([path, contents]) =>
-            path.startsWith('actors/') &&
-            contents.includes('world_set_position'),
-        ),
+        !nestedIn(files, 'world_trait_step', 'world_set_position'),
     },
   },
   {
@@ -1743,6 +1745,44 @@ interface Point {
  * as nothing rather than as `undefined`, so a comparison against it is false
  * instead of a thrown error inside somebody's lesson.
  */
+/**
+ * Whether any block of one type holds a block of another, anywhere below it.
+ *
+ * A shape half often means "this, inside that" — a `set position` inside an
+ * `each frame` — and a file read as one string cannot tell the two apart. So
+ * this walks the workspace: find the outer block, then look for the inner one
+ * in everything hanging off it.
+ *
+ * An unparseable file is skipped rather than thrown on: a check runs against
+ * whatever the learner has, and a file mid-edit is not a failed lesson.
+ */
+function nestedIn(
+  files: Record<string, string>,
+  outer: string,
+  inner: string,
+): boolean {
+  const holds = (node: unknown): boolean => {
+    if (Array.isArray(node)) {
+      return node.some(holds);
+    }
+    if (typeof node !== 'object' || node === null) {
+      return false;
+    }
+    const block = node as {type?: unknown};
+    if (block.type === outer && JSON.stringify(node).includes(`"${inner}"`)) {
+      return true;
+    }
+    return Object.values(node).some(holds);
+  };
+  return Object.values(files).some(contents => {
+    try {
+      return holds(JSON.parse(contents));
+    } catch {
+      return false;
+    }
+  });
+}
+
 const lastNumber = (samples: unknown[] | undefined): number => {
   const value = samples?.[samples.length - 1];
   return typeof value === 'number' ? value : -1;

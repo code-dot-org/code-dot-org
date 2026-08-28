@@ -552,11 +552,23 @@ point of the exercise. Here is what it asks for and the lab has not got.
    whether `world` is bound, and it is bound, to the wrong thing. Found by
    writing `memory/score`, which now counts clicks in a handler for this
    reason and not for a teaching one.
-9. <a id="free-play"></a>**Free play.** A project type that starts with
-   everything, for teachers, for experienced makers, and for the learner who
-   has had enough of the tree. The gating is a teaching device and it must be
-   possible to say no to it — per account and per course. Without this, the
-   design makes the lab worse for everybody who did not need it.
+9. <a id="own-property-scope"></a>**A world-defined actor's own property, from
+   the world.** An actor a world defines for itself may declare a property, and
+   its declaration is a `const` inside the definition's own block scope
+   (`domainBlocks`, `world_actor`: "a declaration written anywhere else is a
+   name its own drawing cannot reach"). The get and set blocks are offered
+   project-wide all the same, so `set ⟨id⟩ of ⟨this actor⟩` written in the
+   world's body is a block the palette hands over and the module throws on:
+   `ReferenceError: IdProperty is not defined`, as the project loads. Either the
+   declaration is hoisted where the whole file can see it, or the blocks stop
+   being offered outside the definition. Found by trying to make
+   `memory/actor-state` a one-file lesson, which is why it is the one lesson
+   with two files.
+10. <a id="free-play"></a>**Free play.** A project type that starts with
+    everything, for teachers, for experienced makers, and for the learner who
+    has had enough of the tree. The gating is a teaching device and it must be
+    possible to say no to it — per account and per course. Without this, the
+    design makes the lab worse for everybody who did not need it.
 
 ### Rules the catalogue wants and the library lacks
 

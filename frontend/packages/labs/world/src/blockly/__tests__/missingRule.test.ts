@@ -15,8 +15,15 @@ import {beforeEach, describe, expect, it} from 'vitest';
 // reaches the registry through `domainBlocks`, which imports this — but a test
 // that skipped it would be testing a registry the app never has.
 import '../builtinMeta';
+import {buildDomainPalette} from '../domainBlocks';
+import {parseWorldOwnMeta} from '../ownProperties';
 import {parseRuleMeta} from '../ruleMeta';
-import {refFromValue, refResolves, registerProjectRules} from '../ruleRegistry';
+import {
+  missingRuleOfBlockType,
+  refFromValue,
+  refResolves,
+  registerProjectRules,
+} from '../ruleRegistry';
 
 /** A parsed `.rule` declaring one trait, as the project would hold it. */
 const wind = parseRuleMeta(
@@ -57,5 +64,86 @@ describe('refResolves', () => {
     // than to any module.
     expect(refResolves(refFromValue('Space#PositionalTrait'))).toBe(true);
     expect(refResolves(refFromValue('CollidableTrait'))).toBe(true);
+  });
+});
+
+// ── A property that belongs to no rule ──────────────────────────────────────
+//
+// A file's own property (`blockly/ownProperties`) carries the DECLARING FILE's
+// name where a rule member carries its rule's, because that is what its block
+// type is keyed from. Read as a rule name it resolves to nothing, and the block
+// wore "your project does not have “My World” any more" — on a world that was
+// open at the time, and on every project that keeps a score.
+
+describe('a world’s own property', () => {
+  const world = JSON.stringify({
+    blocks: {
+      blocks: [
+        {
+          type: 'world_world',
+          fields: {NAME: 'My World'},
+          next: {
+            block: {
+              type: 'world_rule_property',
+              fields: {
+                TYPE: 'number',
+                ACCESS: 'writable',
+                NAME: 'score',
+                DEFAULT: '0',
+              },
+            },
+          },
+        },
+      ],
+    },
+  });
+
+  it('claims no rule, so nothing says the rule is missing', () => {
+    const meta = parseWorldOwnMeta('worlds/main', world)!;
+    buildDomainPalette([], {ownProperties: [meta]});
+    expect(
+      missingRuleOfBlockType('world_get_WorldsMain_ScoreProperty'),
+    ).toBeUndefined();
+    expect(
+      missingRuleOfBlockType('world_set_WorldsMain_ScoreProperty'),
+    ).toBeUndefined();
+  });
+
+  // …and the case it must not stop reporting: a RULE's property still says so
+  // once the rule is gone, which is the whole of what the warning is for.
+  it('does not stop a rule’s own property from warning', () => {
+    const gusty = parseRuleMeta(
+      'rules/wind',
+      JSON.stringify({
+        blocks: {
+          blocks: [
+            {
+              type: 'world_rule',
+              fields: {NAME: 'Wind', ABILITY: 'Has Wind'},
+              next: {
+                block: {
+                  type: 'world_rule_property',
+                  fields: {
+                    TYPE: 'number',
+                    ACCESS: 'writable',
+                    NAME: 'strength',
+                    DEFAULT: '1',
+                  },
+                },
+              },
+            },
+          ],
+        },
+      }),
+    )!;
+    buildDomainPalette([gusty]);
+    registerProjectRules([gusty]);
+    expect(
+      missingRuleOfBlockType('world_get_Wind_StrengthProperty'),
+    ).toBeUndefined();
+    registerProjectRules([]);
+    expect(missingRuleOfBlockType('world_get_Wind_StrengthProperty')).toBe(
+      'Wind',
+    );
   });
 });
