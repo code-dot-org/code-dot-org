@@ -1,4 +1,7 @@
 from .instrument import Instrument, as_instrument
+# scene.py records actions and playback.py renders them, so this is not a
+# cycle: playback.py reaches only into support/.
+from .playback import play_scenes
 from .support import actions
 from .support.audio import as_samples, read_samples_from_file
 from .support.color import Color, as_color
@@ -124,6 +127,14 @@ class Scene:
 
   def get_actions(self):
     return self._actions
+
+  def play(self):
+    """Render this scene alone and play it on the stage.
+
+    The same as play_scenes(self); use play_scenes() to run several scenes
+    together as one animation.
+    """
+    return play_scenes(self)
 
   def get_width(self):
     return THEATER_WIDTH
@@ -273,3 +284,133 @@ class Scene:
 
   def remove_fill_color(self):
     self._fill_color = None
+
+
+# The functions below let student code skip constructing a Scene:
+#
+#   from theater import scene   ->  scene.draw_ellipse(...); scene.play()
+#
+# They all act on one implicit scene, and play() renders it. The scene records
+# every call it is given, so the default scene must be dropped between runs --
+# see reset_default_scene() and pythonlab_setup's teardown.
+
+_default_scene = None
+
+
+def _get_default_scene():
+  """Return the implicit scene the functions below act on, building it lazily.
+
+  Nothing is built at import: a program that imports theater without drawing
+  anything should not be holding a scene.
+  """
+  global _default_scene
+  if _default_scene is None:
+    _default_scene = Scene()
+  return _default_scene
+
+
+def reset_default_scene():
+  """Drop the implicit scene, so the next call starts a fresh one.
+
+  Python Lab keeps one interpreter for the lifetime of the tab, so a scene left
+  over from the previous run would replay that run's drawing and sound.
+  """
+  global _default_scene
+  _default_scene = None
+
+
+def play():
+  """Render everything recorded so far and play it on the stage."""
+  return play_scenes(_get_default_scene())
+
+
+def get_actions():
+  return _get_default_scene().get_actions()
+
+
+def get_width():
+  return _get_default_scene().get_width()
+
+
+def get_height():
+  return _get_default_scene().get_height()
+
+
+def clear(color):
+  _get_default_scene().clear(color)
+
+
+def play_sound(sound):
+  _get_default_scene().play_sound(sound)
+
+
+def play_note(note, seconds, instrument=Instrument.PIANO):
+  _get_default_scene().play_note(note, seconds, instrument)
+
+
+def play_note_and_pause(note, seconds, instrument=Instrument.PIANO):
+  _get_default_scene().play_note_and_pause(note, seconds, instrument)
+
+
+def pause(seconds):
+  _get_default_scene().pause(seconds)
+
+
+def draw_image(image, x, y, size=None, width=None, height=None, rotation=0.0):
+  _get_default_scene().draw_image(image, x, y, size, width, height, rotation)
+
+
+def set_text_style(font, style):
+  _get_default_scene().set_text_style(font, style)
+
+
+def set_text_height(height):
+  _get_default_scene().set_text_height(height)
+
+
+def set_text_color(color):
+  _get_default_scene().set_text_color(color)
+
+
+def draw_text(text, x, y, rotation=0.0):
+  _get_default_scene().draw_text(text, x, y, rotation)
+
+
+def draw_line(start_x, start_y, end_x, end_y):
+  _get_default_scene().draw_line(start_x, start_y, end_x, end_y)
+
+
+def draw_regular_polygon(x, y, sides, radius):
+  _get_default_scene().draw_regular_polygon(x, y, sides, radius)
+
+
+def draw_shape(points, close):
+  _get_default_scene().draw_shape(points, close)
+
+
+def draw_ellipse(x, y, width, height):
+  _get_default_scene().draw_ellipse(x, y, width, height)
+
+
+def draw_rectangle(x, y, width, height):
+  _get_default_scene().draw_rectangle(x, y, width, height)
+
+
+def set_stroke_width(width):
+  _get_default_scene().set_stroke_width(width)
+
+
+def set_fill_color(color):
+  _get_default_scene().set_fill_color(color)
+
+
+def set_stroke_color(color):
+  _get_default_scene().set_stroke_color(color)
+
+
+def remove_stroke_color():
+  _get_default_scene().remove_stroke_color()
+
+
+def remove_fill_color():
+  _get_default_scene().remove_fill_color()

@@ -17,15 +17,30 @@ scene.draw_text('hello', 20, 380)
 play_scenes(scene)
 ```
 
-The package exports seven names: `Scene`, `play_scenes`, `Color`, `Image`,
-`Font`, `FontStyle`, and `Instrument`. Everything under `theater.support` —
-the renderer, the audio timeline, the action records — is machinery those seven
-are built from, not something student code calls.
+The same program can be written without constructing a `Scene`, by calling the
+functions on the `scene` module. They all act on one implicit scene, and
+`scene.play()` renders it:
+
+```python
+from theater import scene
+
+scene.set_fill_color('blue')
+scene.draw_ellipse(150, 150, 100, 100)
+scene.play_note(60, 0.5)
+scene.pause(0.5)
+scene.draw_text('hello', 20, 380)
+scene.play()
+```
+
+The package exports eight names: `Scene`, `scene`, `play_scenes`, `Color`,
+`Image`, `Font`, `FontStyle`, and `Instrument`. Everything under
+`theater.support` — the renderer, the audio timeline, the action records — is
+machinery those eight are built from, not something student code calls.
 
 ## Basic architecture
 
-A `Scene` method call records an action, but draws nothing. `play_scenes()`
-replays the recorded actions to produce two things:
+A `Scene` method call records an action, but draws nothing. `play_scenes()` —
+or `play()`, on one scene — replays the recorded actions to produce two things:
 
 - an **animated gif**, by drawing onto one 400x400 canvas, and
 - a **WAV track**, by blending sounds onto one timeline.
@@ -88,6 +103,37 @@ should start fresh.
 
 Drawing style, on the other hand, is per-`Scene`. A fill color set in the first
 scene does not apply to the second, which starts back at the defaults.
+
+### `Scene.play()`
+
+`scene.play()` is `play_scenes(scene)` for one scene, so a program with only one
+need not name `play_scenes` at all. Both return `(gif_bytes, wav_bytes)`.
+
+Calling it a second time renders the same recording again: `play()` shows what
+has been recorded, it does not consume it.
+
+### The default scene
+
+Every `Scene` method is also a function on the `theater.scene` module, with the
+same name and the same arguments:
+
+```python
+from theater import scene            # scene.draw_ellipse(...), scene.play()
+from theater import draw_ellipse     # draw_ellipse(...), play()
+```
+
+The functions act on one scene, built on the first call. It is the same object
+throughout the program — a color set through one function applies to the next
+shape drawn through another — and `scene.play()` renders it.
+
+An explicit `Scene` is still the way to build an animation from several parts,
+since `play_scenes()` needs scenes to name. The two can be mixed: a program can
+draw through the functions and construct its own `Scene` as well, and the two
+recordings stay separate.
+
+`from theater import *` reaches the functions too. Note that `scene` is the
+module, so a program using the functions through it must not also use `scene` as
+a variable name.
 
 ## Image
 

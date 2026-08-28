@@ -1,9 +1,11 @@
 import os
 import sys
 from .reset_neighborhood import reset_neighborhood
+from .reset_theater import reset_theater
 
 def teardown_pythonlab(home_folder):
   reset_neighborhood()
+  reset_theater()
   flush_sysout()
   go_home(home_folder)
 
