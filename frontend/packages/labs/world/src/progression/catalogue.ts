@@ -689,7 +689,7 @@ export const TILES: readonly Tile[] = [
     at: at('memory', 1, 1),
     title: 'State the world shares',
     teaches: 'A value that belongs to the game rather than to anything in it.',
-    task: 'Count something by hand, and draw the number where a player can see it.',
+    task: 'Two Labels disagree about how many lives are left. Make it one number they both read.',
     requires: ['memory/variable'],
     unlocks: [
       {kind: 'block', type: 'world_rule_property'},
@@ -700,9 +700,24 @@ export const TILES: readonly Tile[] = [
     ],
     check: {
       kind: 'outcome',
-      says: 'The drawn text reads the right number after three scripted pickups.',
+      says: 'Both Labels say the same thing, and each reads it from the world.',
       falsePass:
-        'Drawing a fixed string that happens to be right at the end. Sample it after two pickups as well.',
+        'Typing the same words into both, which also makes them agree. So the shape half asks for the declaration AND for a read of it — the getter block is keyed by the file (`world_get_WorldsMain_…`), not by the name, so it holds whatever the property ends up called.',
+      run: {
+        probes: {said: {kind: 'property', of: 'Label', name: 'text'}},
+        trace: [{seconds: 0.1}],
+      },
+      inspect: files => {
+        const world = files['worlds/main.world'] ?? '';
+        return (
+          world.includes('world_rule_property') &&
+          world.includes('world_get_WorldsMain_')
+        );
+      },
+      passes: ({samples}) => {
+        const said = lastList<string>(samples.said);
+        return said.length === 2 && said[0] === said[1] && said[0].length > 0;
+      },
     },
   },
   {
@@ -712,20 +727,32 @@ export const TILES: readonly Tile[] = [
     title: 'State an actor carries',
     teaches:
       'The same property on many actors, each with its own value — which is what an instance is.',
-    task: 'Two lamps. Make each remember whether it is lit, without the world keeping a list.',
+    task: 'Two Lamps read one number and so cannot differ. Give each its own.',
     requires: ['memory/world-state'],
-    // `this actor` came with the first lesson. What THIS one adds is reading
-    // and writing a property on one — the pair of blocks that make a value
-    // belong to an instance rather than to the world.
+    // `this actor` came with the first lesson. What THIS one adds is a property
+    // declared in an actor's own file — the thing that makes a value belong to
+    // an instance rather than to the world.
     unlocks: [
       {kind: 'block', type: 'world_get_boolean_property'},
       {kind: 'block', type: 'world_set_boolean_property'},
     ],
+    offers: [{kind: 'block', type: 'world_rule_property'}],
     check: {
       kind: 'outcome',
-      says: 'The two lamps hold different values at the same moment.',
+      says: 'The two Lamps say different things, from a number the Lamp itself holds.',
       falsePass:
-        'One world-level flag driving both. Two lamps in different states is precisely what that cannot do.',
+        "Typing the two texts out, which also makes them differ — and so does setting the world's number twice, once before each Lamp, since the text is built as the Lamp is added. That one is worth naming because it WORKS: what it does not do is leave the Lamps holding anything, so nothing can ask a Lamp its number afterwards. The shape half is what says so — the Lamp declares the property, and the world reads it back.",
+      run: {
+        probes: {said: {kind: 'property', of: 'Lamp', name: 'text'}},
+        trace: [{seconds: 0.1}],
+      },
+      inspect: files =>
+        (files['actors/lamp.actor'] ?? '').includes('world_rule_property') &&
+        (files['worlds/main.world'] ?? '').includes('world_get_ActorsLamp_'),
+      passes: ({samples}) => {
+        const said = lastList<string>(samples.said);
+        return said.length === 2 && said[0] !== said[1];
+      },
     },
   },
   {
@@ -735,14 +762,36 @@ export const TILES: readonly Tile[] = [
     title: 'Somebody already counted',
     teaches:
       'Recognising your own hand-rolled thing in a library, and what you get for swapping.',
-    task: 'Replace the counter you wrote with Scoring, and get "reached the target" for nothing.',
+    task: 'Replace the counter you wrote with Scoring, and get "the target is reached" for nothing.',
     requires: ['memory/many'],
     unlocks: [{kind: 'rule', id: 'score'}],
+    // The rule's own blocks arrive with the rule and are never gated. What the
+    // learner reaches into the toolbox for is the number to type into `set
+    // target score`, which belongs to Place's lesson on a branch this one never
+    // touches.
+    offers: [{kind: 'block', type: 'math_number'}],
     check: {
       kind: 'trace',
-      says: 'The "reaches the target" event fires once, at five, and not again.',
+      says: 'One line on the console, and it says five — the moment the target was reached, not the tally at the end.',
       falsePass:
-        'Firing it by hand from the pickup handler. Assert the score property is what the event carries.',
+        'Printing a bare 5 from inside the handler, which says the same thing and knows nothing. The shape half asks that the printed value be the score, and the run half that the line arrive once: a project that counts to six and prints at the end says 6, and one that prints in the loop says six lines.',
+      run: {
+        probes: {},
+        // Six clicks, and the target is five: the fifth is the one that says
+        // anything, and the sixth is what proves it says nothing twice.
+        trace: Array.from({length: 6}, () => [
+          {pointer: {x: 160, y: 160, buttons: ['left']}, seconds: 0.1},
+          {pointer: {x: 160, y: 160, buttons: []}, seconds: 0.1},
+        ]).flat(),
+      },
+      inspect: files => {
+        const world = files['worlds/main.world'] ?? '';
+        return (
+          world.includes('world_on_Scoring_TheTargetIsReachedEvent') &&
+          world.includes('world_get_Scoring_ScoreProperty')
+        );
+      },
+      passes: ({console: said}) => said.length === 1 && said[0] === '5',
     },
   },
 

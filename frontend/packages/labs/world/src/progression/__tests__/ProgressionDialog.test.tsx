@@ -50,10 +50,6 @@ const lab = (props: {focus?: TileId; done?: TileId[]} = {}) =>
     </RootStateProvider>,
   );
 
-/** A literal string, as a pattern — a task is prose and holds `(`, `.` and `?`. */
-const escapeForRegExp = (text: string) =>
-  text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-
 const dialog = () => screen.getByRole('dialog');
 const detail = () => within(dialog()).getByRole('complementary');
 
@@ -126,9 +122,11 @@ describe('the detail pane', () => {
     // Rendered markdown, not a string: `**What you do.**` has become bold, and
     // the tile's own task is what follows it.
     expect(within(pane).getByText('What you do.').tagName).toBe('STRONG');
-    expect(
-      within(pane).getByText(new RegExp(escapeForRegExp(unwritten.task))),
-    ).toBeInTheDocument();
+    // Read off the whole pane rather than matched against one node, and with
+    // the backticks taken out: a task with `code` in it is several nodes once
+    // markdown has had it, and the marks themselves are gone — neither of
+    // which is a thing this test has an opinion about.
+    expect(pane.textContent).toContain(unwritten.task.replace(/`/g, ''));
   });
 
   it('says when a lesson is designed but not written', async () => {

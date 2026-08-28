@@ -498,18 +498,26 @@ anything depends on it.
    latter memoizes, so a check would otherwise be handed the world the learner
    has been playing, with their own keypresses in its history.
 
-   Five probes — an actor count, the positions of a kind, how many actors draw
-   anything, which sprites are on screen, a world property — and every one of
-   them is something an existing play-test already asks. A check that needs a
-   sixth is a check to think about again before it is a probe to add: the
-   vocabulary is what keeps the untrusted side small enough to trust.
+   Six probes — an actor count, the positions of a kind, how many actors draw
+   anything, which sprites are on screen, a world property, and a named property
+   read off every actor of a kind — and every one of them is something an
+   existing play-test already asks. A check that needs a seventh is a check to
+   think about again before it is a probe to add: the vocabulary is what keeps
+   the untrusted side small enough to trust.
+
+   The sixth was added for the two Memory lessons about state, and it is the
+   one that shows where the line is. A lesson about state is a lesson about a
+   value an actor carries, and nothing could read one: the probe matches on a
+   property's id OR its name, across the actor's traits and its own
+   declarations, so a check can ask what a Label SAYS without knowing which
+   rule the text belongs to.
 
    **The runner is shared with the tests**, and that is the point of it being
    its own module. A check tested against a different runner from the one that
    judges a learner is a check nobody has tested.
 
-   **All six authored lessons have checks**, and every one is tested in both
-   directions: it refuses the starter the lesson ships with AND accepts a
+   **Every authored lesson has a check** — twenty-two of the sixty-seven tiles
+   at the time of writing — and every one is tested in both directions: it refuses the starter the lesson ships with AND accepts a
    project where the lesson has been done, which no amount of refusing proves on
    its own. Three also have a HALFWAY case, because a check that stops at the
    first thing the lesson asks for calls it done halfway — gravity with the Hero
@@ -555,6 +563,46 @@ anything depends on it.
    would be perverse. It leaves the tree able to hold a tile that is done whose
    prerequisite is not, which is consistent with "an edge means readiness, not
    possession" and is still worth somebody saying out loud.
+
+8. **The gate.** Hiding what a learner has not been given, in the two places
+   they reach for something: the import libraries (`progression/shelf.ts`) and
+   the toolbox (`progression/toolboxShelf.ts`). Off unless a level asks for it
+   (`levelData.gateShelf`), because the gating is a teaching device and it must
+   be possible to say no to it.
+
+   **Per block, not per drawer.** A drawer becomes EARNED the moment the
+   catalogue grants anything in it, and inside an earned drawer a block nobody
+   grants is hidden. Nothing is listed as gated: the set is derived from what
+   the tiles say they unlock, so a drawer no lesson has been written for stays
+   open and the gate grows with the curriculum. The first lesson went from
+   twelve drawers and a hundred and fifty-seven blocks to under twenty, while
+   its own detail pane says it unlocks the Actor drawer — which is what the
+   number was for.
+
+   **A lesson lends what it teaches, and what it merely needs.** Finishing
+   `logic/if` is what grants Logic, so while the lesson is open the learner has
+   not earned the `if` its instructions tell them to add; and a lesson on one
+   branch may need a block another branch teaches, which is `Tile.offers` —
+   grant what you teach, offer what you need. Both are in `shelfKeys`, keyed off
+   the open channel, and they are there rather than in the toolbox because the
+   toolbox asked the question alone at first: the import dialogs asked a
+   narrower one, so `memory/score` — whose whole task is to go and find the
+   Scoring rule in the library — was a door locked behind itself.
+
+   **What the project mints is never gated.** A rule's blocks come with the
+   rule, and an edge on the map means readiness rather than possession, so a
+   project that HOLDS Gravity has Gravity's blocks. That is easy while a rule
+   has a drawer of its own; it is not easy for a property the learner just
+   declared, whose get and set land in the Actor drawer, which is earned. Their
+   types are minted from a file path and a name nobody knew in advance, so no
+   tile can grant them — they pass the gate by being project-minted, and the
+   lessons that declare properties are what found it.
+
+   **A test per lesson says what its instructions send the learner to find.**
+   Written by hand from the instructions, because nothing else knows: a
+   lesson's starting project does not contain the blocks the lesson asks for.
+   That table is what turns "the gate hid something" from a bug report into a
+   failing test.
 
 ## Open questions
 

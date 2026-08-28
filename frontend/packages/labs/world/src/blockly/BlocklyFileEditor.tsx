@@ -17,7 +17,6 @@ import {activateFile} from '@code-dot-org/codebridge';
 import type {CustomEditorProps} from '@code-dot-org/codebridge';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useMaybeLevelProperties, useSources} from '@code-dot-org/lab/contexts';
-import {useAppSelector} from '@code-dot-org/lab/redux';
 
 import {setActorImportHandler} from '../actors/actorImport';
 import {ImportActorDialog} from '../actors/ImportActorDialog';
@@ -55,8 +54,6 @@ import {
   showsRuleSource,
   type WorldLevelProperties,
 } from '../levelData';
-import {TILES} from '../progression/catalogue';
-import {tileForChannel} from '../progression/lessonRoute';
 import {useMaybeProgression} from '../progression/progressionContext';
 import {shelvedToolbox} from '../progression/toolboxShelf';
 import {ImportRuleDialog} from '../rules/ImportRuleDialog';
@@ -824,19 +821,9 @@ export const BlocklyFileEditor = ({
   // learner has unlocked plus what the lesson they are doing teaches
   // (progression/toolboxShelf). Off by default, and identity when off.
   const progression = useMaybeProgression();
-  const channel = useAppSelector(state => state.lab.channel?.id);
   const shelf = useMemo(
-    () =>
-      progression?.gated
-        ? {
-            holds: progression.holds,
-            offering: tileForChannel(
-              channel ?? '',
-              TILES.map(tile => tile.id),
-            ),
-          }
-        : undefined,
-    [progression?.gated, progression?.holds, channel],
+    () => (progression?.gated ? {holds: progression.holds} : undefined),
+    [progression?.gated, progression?.holds],
   );
   const {blocks, toolbox} = useMemo(() => {
     const palette = buildDomainPalette(projectRuleMetas(files), {

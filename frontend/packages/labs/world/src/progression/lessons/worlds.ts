@@ -22,6 +22,23 @@ export const addActor = (stem: string, body: object[]) => ({
   ...(body.length ? {inputs: {DO: {block: chain(body)}}} : {}),
 });
 
+/**
+ * `define ⟨type⟩ property ⟨name⟩ with default ⟨…⟩`.
+ *
+ * One block in four homes (`blockly/ownProperties`): at a rule's top level it
+ * is the world's, inside a `define trait` it is the trait's, and chained under
+ * a `define world` or a `define actor` it belongs to that file. The homes are
+ * what these lessons are about, so they place it themselves.
+ */
+export const declareProperty = (
+  type: 'number' | 'text' | 'boolean' | 'color' | 'vector' | 'actor',
+  name: string,
+  value: string,
+) => ({
+  type: 'world_rule_property',
+  fields: {TYPE: type, ACCESS: 'writable', NAME: name, DEFAULT: value},
+});
+
 export interface WorldSpec {
   name: string;
   /**
@@ -41,10 +58,24 @@ export interface WorldSpec {
   tiles?: [x: number, y: number];
   /** What is placed in it, in order. */
   rows: object[];
+  /**
+   * Event handlers the world itself answers, each a ROOT of its own.
+   *
+   * A hat takes no previous connection, and `DisableOrphansPlugin` disables a
+   * top-level block that has one along with everything below it — so a handler
+   * sits beside the `define world` rather than in it, exactly as `actorFile`
+   * places an actor's (specs/DRAWING.md).
+   *
+   * It also runs somewhere else, which is the part that matters when writing a
+   * lesson: a `define world` body is handed a BUILDER, and a handler is handed
+   * the world. A rule's action — `world.act(…)` — is a line only the second can
+   * run, so a lesson that wants one wants a handler.
+   */
+  handlers?: object[];
 }
 
 /** A `.world` file. */
-export const worldFile = ({name, tiles, rows}: WorldSpec): string =>
+export const worldFile = ({name, tiles, rows, handlers}: WorldSpec): string =>
   JSON.stringify(
     {
       blocks: {
@@ -68,6 +99,11 @@ export const worldFile = ({name, tiles, rows}: WorldSpec): string =>
               ]),
             },
           },
+          ...(handlers ?? []).map((handler, index) => ({
+            ...handler,
+            x: 340,
+            y: 20 + index * 160,
+          })),
         ],
       },
     },

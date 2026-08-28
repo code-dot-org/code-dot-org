@@ -28,6 +28,8 @@ export interface Progression {
    * (./shelf). Off unless the level says otherwise.
    */
   gated: boolean;
+  /** The lesson this project IS, when it is one (./lessonRoute). */
+  openLesson: TileId | undefined;
   /**
    * Whether the shelf holds a thing — which is only a question worth asking
    * when `gated`. Answers true for everything otherwise, so a caller can ask

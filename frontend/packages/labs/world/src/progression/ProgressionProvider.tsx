@@ -16,9 +16,11 @@
 import {useEffect, useMemo, useState, type PropsWithChildren} from 'react';
 
 import {useMaybeLevelProperties} from '@code-dot-org/lab/contexts';
+import {useAppSelector} from '@code-dot-org/lab/redux';
 
 import {gatesShelf, type WorldLevelProperties} from '../levelData';
 
+import {tileForChannel} from './lessonRoute';
 import {setLessonOpener} from './lessonSeam';
 import {ProgressionContext, type Progression} from './progressionContext';
 import {ProgressionDialog} from './ProgressionDialog';
@@ -26,7 +28,7 @@ import {loadProgress, saveProgress} from './progressStore';
 import {holds, shelfKeys} from './shelf';
 import type {TileId} from './types';
 
-import {grantedBy, GRANTED_BY, TILES_BY_ID, tileState} from './index';
+import {grantedBy, GRANTED_BY, TILES, TILES_BY_ID, tileState} from './index';
 
 export interface ProgressionProviderProps {
   /**
@@ -50,6 +52,20 @@ export const ProgressionProvider = ({
   const level = useMaybeLevelProperties() as WorldLevelProperties | undefined;
   const gated = gatesShelf(level);
 
+  // The lesson being done, if this project is one — a lesson lives at a channel
+  // of its own (./lessonRoute), so the open channel is the whole of the
+  // question. What it buys is in `shelfKeys`: a lesson lends what it teaches
+  // while it is open, or its own task would be locked behind itself.
+  const channel = useAppSelector(state => state.lab.channel?.id);
+  const openLesson = useMemo(
+    () =>
+      tileForChannel(
+        channel ?? '',
+        TILES.map(tile => tile.id),
+      ),
+    [channel],
+  );
+
   // Written on every change rather than on close: a learner who finishes a tile
   // and then closes the tab has finished it (./progressStore).
   useEffect(() => {
@@ -71,11 +87,16 @@ export const ProgressionProvider = ({
         ),
       grantedBy: unlock => grantedBy(unlock)?.id,
       gated,
+      openLesson,
       holds: unlock =>
         !gated ||
-        holds(shelfKeys(completed), new Set(GRANTED_BY.keys()), unlock),
+        holds(
+          shelfKeys(completed, openLesson),
+          new Set(GRANTED_BY.keys()),
+          unlock,
+        ),
     }),
-    [completed, open, gated],
+    [completed, open, gated, openLesson],
   );
 
   // …and the same door for callers that cannot use a hook: a Blockly field, a

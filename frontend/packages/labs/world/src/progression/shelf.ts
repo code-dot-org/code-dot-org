@@ -14,13 +14,34 @@
 
 import type {TileId, UnlockTarget} from './types';
 
-import {shelf, unlockKey} from './index';
+import {shelf, TILES_BY_ID, unlockKey} from './index';
 
-/** Everything the completed tiles have granted, as keys. */
+/**
+ * Everything the completed tiles have granted, plus what the OPEN lesson lends.
+ *
+ * The second half is what stops a gate from becoming a trap. A lesson grants
+ * what it teaches, so at the moment a learner is doing it they have not earned
+ * it yet — and a lesson whose task is "add the Scoring rule" would be a lesson
+ * whose library refuses to add it. So while a lesson is open, its own `unlocks`
+ * and `offers` are held, and they stop being held when the learner leaves it
+ * without finishing.
+ *
+ * One rule in one place, deliberately: the toolbox asked this question
+ * separately once (`./toolboxShelf`), which left the two import dialogs asking
+ * a different one, and a block a lesson could offer was a rule it could not.
+ */
 export const shelfKeys = (
   completed: ReadonlySet<TileId>,
-): ReadonlySet<string> =>
-  new Set(shelf(completed).map(unlock => unlockKey(unlock)));
+  open?: TileId,
+): ReadonlySet<string> => {
+  const lesson = open ? TILES_BY_ID.get(open) : undefined;
+  return new Set([
+    ...shelf(completed).map(unlock => unlockKey(unlock)),
+    ...[...(lesson?.unlocks ?? []), ...(lesson?.offers ?? [])].map(unlock =>
+      unlockKey(unlock),
+    ),
+  ]);
+};
 
 /**
  * Whether the shelf holds a thing.

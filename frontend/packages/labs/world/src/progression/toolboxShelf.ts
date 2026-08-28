@@ -25,7 +25,9 @@
 // `logic/if` asks the learner to add an `if`, and finishing it is what grants
 // Logic. So a lesson's toolbox is the shelf PLUS that tile's own unlocks —
 // otherwise no gated lesson could ever be done, which is a trap rather than a
-// gate.
+// gate. That lending is in `shelfKeys` rather than here: it was here first,
+// which left the import dialogs asking a narrower question, so a rule a lesson
+// needed was one its own library refused to hand over.
 //
 // ── Rules are not gated here ────────────────────────────────────────────────
 //
@@ -38,7 +40,7 @@
 import type {Toolbox, ToolboxCategory} from '@code-dot-org/blockly';
 
 import {TILES} from './catalogue';
-import type {TileId, UnlockTarget} from './types';
+import type {UnlockTarget} from './types';
 
 /** A flyout entry's block type, when it names one. */
 const typeOf = (item: unknown): string | undefined => {
@@ -94,10 +96,12 @@ const isEarned = (category: ToolboxCategory): boolean =>
   });
 
 export interface ShelfView {
-  /** Whether the learner holds a thing (progression context). */
+  /**
+   * Whether the learner holds a thing (progression context).
+   *
+   * Which already accounts for the lesson being done — see `shelfKeys`.
+   */
   holds: (unlock: UnlockTarget) => boolean;
-  /** The lesson being done, whose own unlocks it must offer. */
-  offering?: TileId;
 }
 
 /**
@@ -110,33 +114,11 @@ export function shelvedToolbox(toolbox: Toolbox, view: ShelfView): Toolbox {
   if (!Array.isArray(toolbox)) {
     return toolbox;
   }
-  const lesson = view.offering
-    ? TILES.find(tile => tile.id === view.offering)
-    : undefined;
-  // What the lesson TEACHES, and what it merely needs on the bench (`offers`).
-  // Both are on hand while it is open; only the first is kept afterwards.
-  const offered = new Set(
-    [...(lesson?.unlocks ?? []), ...(lesson?.offers ?? [])].map(unlock =>
-      unlock.kind === 'block'
-        ? `block:${unlock.type}`
-        : unlock.kind === 'category'
-          ? `category:${unlock.name}`
-          : '',
-    ),
-  );
-  const has = (unlock: UnlockTarget, key: string): boolean =>
-    offered.has(key) || view.holds(unlock);
-
   const kept: ToolboxCategory[] = [];
   let changed = false;
   for (const category of toolbox as ToolboxCategory[]) {
     if (EARNED_CATEGORIES.has(category.name)) {
-      if (
-        has(
-          {kind: 'category', name: category.name},
-          `category:${category.name}`,
-        )
-      ) {
+      if (view.holds({kind: 'category', name: category.name})) {
         kept.push(category);
       } else {
         changed = true;
@@ -164,9 +146,18 @@ export function shelvedToolbox(toolbox: Toolbox, view: ShelfView): Toolbox {
       // where the catalogue is not a whitelist, and the wrong one here, where
       // it is. Delegating to it left the first lesson offering ninety-seven
       // blocks and looking, from the numbers, exactly like no gating at all.
-      return (
-        EARNED_BLOCKS.has(type) && has({kind: 'block', type}, `block:${type}`)
-      );
+      //
+      // EXCEPT a block the project itself mints. A rule's blocks are safe
+      // because a rule has a drawer of its own and no drawer of a rule's is
+      // ever earned — but an own property's get and set land in the ACTOR
+      // drawer (`blockly/ownProperties`), which is earned, and hiding those
+      // would hide the very block a learner just brought into existence by
+      // declaring it. Nothing here can grant them: their types are minted from
+      // a file path and a name nobody knew in advance.
+      if (generatedElsewhere(type)) {
+        return true;
+      }
+      return EARNED_BLOCKS.has(type) && view.holds({kind: 'block', type});
     });
     if (blocks.length === (category.blocks ?? []).length) {
       kept.push(category);

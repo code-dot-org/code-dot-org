@@ -17,8 +17,10 @@ import {describe, expect, it, vi} from 'vitest';
 import {createLevelPropertyFixture} from '@code-dot-org/core/api/mocks';
 import {RootStateProvider} from '@code-dot-org/core/redux';
 import {LevelPropertiesProvider} from '@code-dot-org/lab/contexts';
+import labStore, {labActions} from '@code-dot-org/lab/redux';
 
 import {ImportRuleDialog} from '../../rules/ImportRuleDialog';
+import {lessonChannel} from '../lessonRoute';
 import {ProgressionProvider} from '../ProgressionProvider';
 import type {TileId} from '../types';
 
@@ -40,8 +42,16 @@ const level = (gateShelf: boolean) =>
     levelData: {gateShelf},
   });
 
-const dialog = (options: {gated: boolean; done?: TileId[]}) =>
-  render(
+const dialog = (options: {gated: boolean; done?: TileId[]; open?: TileId}) => {
+  // Which project is open, as the lab states it: a lesson is a channel
+  // (../lessonRoute), and the provider reads the channel to know whether the
+  // learner is doing a lesson right now.
+  labStore.dispatch(
+    labActions.setChannel(
+      options.open ? ({id: lessonChannel(options.open)} as never) : undefined,
+    ),
+  );
+  return render(
     <RootStateProvider>
       <LevelPropertiesProvider
         levelId={1}
@@ -53,6 +63,7 @@ const dialog = (options: {gated: boolean; done?: TileId[]}) =>
       </LevelPropertiesProvider>
     </RootStateProvider>,
   );
+};
 
 /** The row for a rule, by the ability it leads with. */
 const row = (ability: string) =>
@@ -100,5 +111,21 @@ describe('a gated lab', () => {
     // the belt; `onImport` refusing is the braces. A dialog that let a locked
     // rule through would undo the whole of this.
     expect(screen.getByRole('button', {name: 'Import'})).toBeDisabled();
+  });
+});
+
+describe('the lesson being done', () => {
+  // A lesson grants what it teaches, so while it is open the learner has not
+  // earned it — and `memory/score`'s whole task is to go and find the Scoring
+  // rule in this dialog. Locked, the lesson would be a door locked behind
+  // itself, which is why `shelfKeys` lends a lesson its own unlocks.
+  it('lends the rule its own task asks for', () => {
+    dialog({gated: true, open: 'memory/score'});
+    expect(row('Keeps Score')).toBeEnabled();
+  });
+
+  it('takes it back when the lesson is not the project', () => {
+    dialog({gated: true});
+    expect(row('Keeps Score')).toBeDisabled();
   });
 });

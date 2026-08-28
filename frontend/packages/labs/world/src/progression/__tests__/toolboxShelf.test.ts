@@ -12,7 +12,7 @@
 import {describe, expect, it} from 'vitest';
 
 import {buildDomainPalette} from '../../blockly/domainBlocks';
-import {projectRuleMetas} from '../../blockly/projectModules';
+import {projectOwnMetas, projectRuleMetas} from '../../blockly/projectModules';
 import {projectFiles} from '../../runtime/projectFiles';
 import {TILES} from '../catalogue';
 import {GRANTED_BY, tile} from '../index';
@@ -75,6 +75,9 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
     'math_arithmetic',
   ],
   'memory/many': ['world_for_each', 'world_all_actors', 'world_set_sprite'],
+  'memory/world-state': ['world_rule_property', 'text_join', 'text'],
+  'memory/actor-state': ['world_rule_property'],
+  'memory/score': ['world_print', 'math_number'],
 };
 
 /** Every tile on the shortest way to this one, itself excluded. */
@@ -98,11 +101,12 @@ const offeredAt = (id: TileId): Set<string> => {
   const {toolbox} = buildDomainPalette(projectRuleMetas(files), {
     fileKind: 'world',
   });
-  const keys = shelfKeys(new Set(before(id)));
+  // The run-up done, and this lesson open — which is what lends a learner the
+  // block their own instructions send them to find (`shelfKeys`).
+  const keys = shelfKeys(new Set(before(id)), id);
   const granted = new Set(GRANTED_BY.keys());
   const shown = shelvedToolbox(toolbox, {
     holds: unlock => heldBy(keys, granted, unlock),
-    offering: id,
   }) as {blocks?: unknown[]}[];
   return new Set(
     shown.flatMap(category =>
@@ -174,5 +178,72 @@ describe('the earned set', () => {
     expect(EARNED_BLOCKS.has('world_set_SolidBodies_BouncinessProperty')).toBe(
       false,
     );
+  });
+});
+
+describe('a property the learner just declared', () => {
+  // Its get and set are minted from the declaring file's path and the name
+  // typed into the block, so no tile can grant them and nothing knows them
+  // ahead of time — and they land in the Actor drawer, which IS earned. Gated
+  // by the ordinary rule they would be hidden the moment they appeared, which
+  // is the one thing a lesson about declaring properties cannot survive.
+  const declaring = (id: TileId, path: string, root: string): Set<string> => {
+    const files = {...projectFiles(LESSONS[id]!.source)};
+    const workspace = JSON.parse(files[path]) as {
+      blocks: {blocks: {type?: string; next?: unknown}[]};
+    };
+    const at = workspace.blocks.blocks.find(block => block.type === root)!;
+    at.next = {
+      block: {
+        type: 'world_rule_property',
+        fields: {
+          TYPE: 'number',
+          ACCESS: 'writable',
+          NAME: 'lives',
+          DEFAULT: '3',
+        },
+        next: at.next,
+      },
+    };
+    files[path] = JSON.stringify(workspace);
+    const {toolbox} = buildDomainPalette(projectRuleMetas(files), {
+      fileKind: 'world',
+      ownProperties: projectOwnMetas(files),
+    });
+    // The run-up done, and this lesson open — which is what lends a learner
+    // the block their own instructions send them to find (`shelfKeys`).
+    const keys = shelfKeys(new Set(before(id)), id);
+    const granted = new Set(GRANTED_BY.keys());
+    const shown = shelvedToolbox(toolbox, {
+      holds: unlock => heldBy(keys, granted, unlock),
+    }) as {blocks?: unknown[]}[];
+    return new Set(
+      shown.flatMap(category =>
+        (category.blocks ?? [])
+          .map(item =>
+            typeof item === 'string' ? item : (item as {type?: string}).type,
+          )
+          .filter((type): type is string => typeof type === 'string'),
+      ),
+    );
+  };
+
+  it('is offered by the world that declares it', () => {
+    const offered = declaring(
+      'memory/world-state',
+      'worlds/main.world',
+      'world_world',
+    );
+    expect(offered.has('world_get_WorldsMain_LivesProperty')).toBe(true);
+    expect(offered.has('world_set_WorldsMain_LivesProperty')).toBe(true);
+  });
+
+  it('is offered by the actor that declares it', () => {
+    const offered = declaring(
+      'memory/actor-state',
+      'actors/lamp.actor',
+      'world_actor',
+    );
+    expect(offered.has('world_get_ActorsLamp_LivesProperty')).toBe(true);
   });
 });

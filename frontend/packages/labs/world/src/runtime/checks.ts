@@ -57,7 +57,23 @@ export type Probe =
   /** Which pictures are on screen, by the name the frame names. */
   | {kind: 'sprites'}
   /** A world-scoped property, by `${ruleId}.${propId}`. */
-  | {kind: 'worldProperty'; path: string};
+  | {kind: 'worldProperty'; path: string}
+  /**
+   * A named property on every actor of a kind, in the order the world holds
+   * them — `{of: 'Label', name: 'text'}`.
+   *
+   * The sixth probe, and the note above says a check wanting one is a check to
+   * think about twice first. This is the second thought: a lesson about state
+   * is a lesson about a value an actor carries, and until now nothing could
+   * read one. Memory, Story and every lesson that draws a word are unprovable
+   * without it — "the label says the right thing" is not a position, a count or
+   * a picture.
+   *
+   * Matched on the property's id OR its name, for the reason `of` accepts
+   * either: a check is written by somebody reading the lesson, who knows what
+   * the block calls it.
+   */
+  | {kind: 'property'; of: string; name: string};
 
 export interface CheckRun {
   /** The probes, by the name their samples come back under. */

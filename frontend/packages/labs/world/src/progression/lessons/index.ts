@@ -12,24 +12,29 @@
 // Blockly JSON behind them. So `catalogue.ts` stays data about tiles, and the
 // projects live here, looked up by tile id.
 //
-// Six of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md: enough
-// to walk the first hour of the progression end to end and find out whether any
-// of this works.
+// Twenty-two of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md and
+// then some: Origin, Input, Motion, Logic and Memory are written whole, which
+// is enough to walk the first hours of the progression end to end and find out
+// whether any of this works.
 
 import {
   actorFile,
+  drawText,
   fill,
   num,
   rectangle,
   setSprite,
+  setText,
+  showAs,
   swatch,
   useTrait,
+  words,
 } from '../../actors/stock/workspace';
 import type {WorldScenario} from '../../fixtures/scenarios';
 import type {LessonProperties, TileId} from '../types';
 
 import {lessonSource} from './support';
-import {addActor, placeAt, worldFile} from './worlds';
+import {addActor, declareProperty, placeAt, worldFile} from './worlds';
 
 // No `tiles` on any of these worlds: a world that says nothing is one screen,
 // ten tiles each way, 320 by 320 (`VIEWPORT_TILES`). Saying so out loud is an
@@ -936,6 +941,192 @@ A **loop** is one instruction that reaches all of them. It walks a LIST, and
 `.trim(),
 };
 
+// ── memory/world-state ───────────────────────────────────────────────────────
+
+const worldState: WorldScenario = {
+  name: 'State the world shares',
+  description: 'Two Labels that disagree about how many lives are left.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        addActor('label', [
+          placeAt(90, 110),
+          setText('TextProperty', words('Lives: 3')),
+        ]),
+        addActor('label', [
+          placeAt(230, 210),
+          setText('TextProperty', words('Lives: 2')),
+        ]),
+      ],
+    }),
+    stockActors: ['label'],
+  }),
+  instructions: `
+## State the world shares
+
+Two Labels, and they disagree. One says **Lives: 3** and the other says
+**Lives: 2**, and neither is wrong, because the number of lives is not written
+down anywhere — it is typed out twice, and the two copies have drifted apart.
+
+The last lesson gave a name to a value inside one stack of blocks. This is the
+other kind of name: one the **world** holds, that anything in the world can
+read. There is then one number, and a Label showing the wrong one is not a
+thing that can happen.
+
+### What you do
+
+1. At the top of \`main.world\`, under \`define world\`, add
+   **define number lives with default 3**.
+2. Set each Label's text to **join ⟨"Lives: "⟩ ⟨lives⟩** — the *lives* block
+   is in the Actor drawer, and it appeared the moment you declared it.
+3. Run it. Both say the same thing.
+4. Change the default to **5**. Both change, because there is one number now.
+`.trim(),
+};
+
+// ── memory/actor-state ───────────────────────────────────────────────────────
+
+/** `join ⟨"lamp "⟩ ⟨…⟩` — the Lamp's name, built from a number. */
+const lampName = (number: object) => ({
+  block: {
+    type: 'text_join',
+    inputs: {ADD0: words('lamp '), ADD1: number},
+  },
+});
+
+/** `id` — the number the world keeps, which both Lamps read. */
+const worldsId = () => ({block: {type: 'world_get_WorldsMain_IdProperty'}});
+
+const actorState: WorldScenario = {
+  name: 'State an actor carries',
+  description: 'Two Lamps that cannot tell each other apart.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        declareProperty('number', 'id', '1'),
+        addActor('lamp', [
+          placeAt(110, 160),
+          setText('TextProperty', lampName(worldsId())),
+        ]),
+        addActor('lamp', [
+          placeAt(230, 160),
+          setText('TextProperty', lampName(worldsId())),
+        ]),
+      ],
+    }),
+    actors: {
+      lamp: actorFile(
+        'Lamp',
+        [useTrait('Writing#ShowsTextTrait'), showAs('text')],
+        {
+          drawing: {
+            width: 96,
+            height: 24,
+            commands: [fill(swatch('#ffcc66')), drawText(48, 12)],
+          },
+        },
+      ),
+    },
+    rules: ['writing'],
+  }),
+  instructions: `
+## State an actor carries
+
+Two Lamps, and both say **lamp 1**. The number they read is the world's, and
+the world has exactly one of it — so however you set it, you set it for both.
+There is nowhere for one Lamp to remember something the other does not.
+
+A world's state is shared on purpose, and that is what the last lesson was for.
+An actor's is the opposite on purpose: declared in the **actor's own file**,
+every Lamp gets its own copy, and that is what makes two of a kind two things
+rather than one thing drawn twice.
+
+### What you do
+
+1. In \`actors/lamp.actor\`, under \`define actor\`, add
+   **define number id with default 1**.
+2. In \`main.world\`, in each \`add actor\` body, **set id of ⟨this actor⟩** —
+   1 for the first, 2 for the second — before the text is set.
+3. Change both Labels to read **join ⟨"lamp "⟩ ⟨id of this actor⟩**, the Lamp's
+   own \`id\` rather than the world's.
+4. Delete the world's \`define number id\`. Nothing breaks: nothing needed it.
+`.trim(),
+};
+
+// ── memory/score ─────────────────────────────────────────────────────────────
+
+/** `counted`, the world's own tally — the thing this lesson throws away. */
+const counted = () => ({
+  block: {type: 'world_get_WorldsMain_CountedProperty'},
+});
+
+const scoreLesson: WorldScenario = {
+  name: 'Somebody already counted',
+  description:
+    'A hand-rolled tally, and a rule that has one with an ending in it.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        declareProperty('number', 'counted', '0'),
+        addActor('target', [placeAt(160, 160)]),
+      ],
+      handlers: [
+        {
+          // The WORLD's telling: a press happened, and it is about nobody. The
+          // world hears every click, which is all a tally needs.
+          type: 'world_on_Mouse_IsPressedEvent',
+          fields: {FILTER0: 'left'},
+          next: {
+            block: {
+              type: 'world_set_WorldsMain_CountedProperty',
+              inputs: {
+                VALUE: {
+                  block: {
+                    type: 'math_arithmetic',
+                    fields: {OP: 'ADD'},
+                    inputs: {A: counted(), B: num(1)},
+                  },
+                },
+              },
+              next: {block: {type: 'world_print', inputs: {VALUE: counted()}}},
+            },
+          },
+        },
+      ],
+    }),
+    actors: {target: actorFile('Target', [setSprite('coin.png')])},
+    sprites: ['coin'],
+    rules: ['mouse'],
+  }),
+  instructions: `
+## Somebody already counted
+
+Click the Target. A number called \`counted\` goes up by one and prints itself,
+and it is correct: it counts.
+
+What it cannot do is say when the count is **enough**. A tally is a number; a
+game wants the moment — the click that wins — and that moment is not in the
+number. You would have to test for it everywhere you counted.
+
+The **Scoring** rule is this counter, written by somebody else, with the moment
+already in it.
+
+### What you do
+
+1. Add a rule, and pick **Scoring**. Read the row before you take it.
+2. In the handler, use **add ⟨1⟩ to the score** instead of setting
+   \`counted\`, and delete the \`print\` under it.
+3. Delete \`define number counted\` — nothing needs it now.
+4. In the world, **set target score to 5**, and add the handler
+   **when the target is reached**, with **print ⟨get score⟩** in it.
+5. Click six times. One line, saying 5: the click that was enough, and nothing
+   about the sixth.
+`.trim(),
+};
+
 /** Every lesson written so far, by the tile it belongs to. */
 export const LESSONS: Readonly<Record<TileId, WorldScenario>> = {
   'origin/first-world': firstWorld,
@@ -955,6 +1146,9 @@ export const LESSONS: Readonly<Record<TileId, WorldScenario>> = {
   'logic/kinds': kinds,
   'memory/variable': variable,
   'memory/many': many,
+  'memory/world-state': worldState,
+  'memory/actor-state': actorState,
+  'memory/score': scoreLesson,
   'look/sprite': sprite,
   'place/position': position,
 };

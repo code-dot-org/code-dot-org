@@ -18,6 +18,8 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 import {compileProject} from '../../__tests__/support/compileProject';
 import {importStockSprite} from '../../appearance/importStock';
 import {stockSprite} from '../../appearance/stock';
+import {importStockRule} from '../../rules/importStockRule';
+import {stockRule} from '../../rules/stock';
 import {playCheck} from '../../runtime/playCheck';
 import {projectFiles} from '../../runtime/projectFiles';
 import {tile} from '../index';
@@ -1023,5 +1025,254 @@ describe('the loop lesson’s check', () => {
     // It worked — and it is still not the lesson.
     expect(result.samples).toBeDefined();
     expect(passes).toBe(false);
+  });
+});
+
+/** The chain under an `add actor`'s DO — `[set position, set text]`. */
+const bodyOf = (row: Row): Row[] => {
+  const body: Row[] = [];
+  for (let at = inSocket(row, 'DO'); at; at = at.next?.block) {
+    body.push(at);
+  }
+  return body;
+};
+
+/** `join ⟨"…"⟩ ⟨value⟩`, which is what both these lessons draw. */
+const joined = (first: string, second: object) => ({
+  block: {
+    type: 'text_join',
+    inputs: {
+      ADD0: {shadow: {type: 'text', fields: {TEXT: first}}},
+      ADD1: second,
+    },
+  },
+});
+
+const THIS_ACTOR = {block: {type: 'world_this_actor'}};
+
+/**
+ * The SCRIPT half alone, with the workspace half skipped.
+ *
+ * For the two false passes below, which are false passes precisely because the
+ * world does what was asked: the Labels agree, or they differ, and it is the
+ * shape half that refuses. Asserting through `check` would prove only that
+ * something said no.
+ */
+const playedOf = async (id: TileId, source: MultiFileSource) => {
+  const {check: spec} = tile(id);
+  const {world} = await compileProject(projectFiles(source));
+  return playCheck(world, spec.run!);
+};
+
+const outcomeOf = async (id: TileId, source: MultiFileSource) =>
+  tile(id).check.passes!(await playedOf(id, source));
+
+describe('the world-state lesson’s check', () => {
+  const lesson = LESSONS['memory/world-state'];
+
+  it('refuses two Labels that disagree', async () => {
+    const {passes} = await check('memory/world-state', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts one number both of them read', async () => {
+    const solved = editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const lives = () => ({
+        block: {type: 'world_get_WorldsMain_LivesProperty'},
+      });
+      for (const row of rowsOf(workspace)) {
+        const text = bodyOf(row).find(
+          block => block.type === 'world_set_Writing_TextProperty',
+        );
+        if (text) {
+          text.inputs!.VALUE = joined('Lives: ', lives());
+        }
+      }
+      // …and the declaration itself, above everything that reads it.
+      workspace.blocks.blocks[0].next = {
+        block: {
+          type: 'world_rule_property',
+          fields: {
+            TYPE: 'number',
+            ACCESS: 'writable',
+            NAME: 'lives',
+            DEFAULT: '3',
+          },
+          next: workspace.blocks.blocks[0].next,
+        },
+      };
+      return JSON.stringify(workspace);
+    });
+    const {passes, result} = await check('memory/world-state', solved);
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  // Two Labels agree the moment you type the same words into both, and that is
+  // not one number — it is two copies that have not drifted apart YET.
+  it('refuses the same words typed into both', async () => {
+    const byHand = editing(lesson.source, 'main.world', contents =>
+      contents.replace('Lives: 2', 'Lives: 3'),
+    );
+    // The world really does agree with itself…
+    expect(await outcomeOf('memory/world-state', byHand)).toBe(true);
+    // …and it is still two strings.
+    const {passes} = await check('memory/world-state', byHand);
+    expect(passes).toBe(false);
+  });
+});
+
+describe('the actor-state lesson’s check', () => {
+  const lesson = LESSONS['memory/actor-state'];
+
+  /** `id of ⟨this actor⟩`, the property the solved lesson declares. */
+  const ownId = () => ({
+    block: {
+      type: 'world_get_ActorsLamp_IdProperty',
+      inputs: {ACTOR: THIS_ACTOR},
+    },
+  });
+
+  /** The world with each Lamp given its own number, as the lesson says. */
+  const worldWithOwnIds = (contents: string): string => {
+    const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+    // The world's own `id` goes: step 4 of the lesson, and nothing needs it.
+    const declaration = workspace.blocks.blocks[0].next!.block!;
+    workspace.blocks.blocks[0].next = declaration.next;
+    rowsOf(workspace).forEach((row, index) => {
+      const [place, text] = bodyOf(row);
+      place.next = {
+        block: {
+          type: 'world_set_ActorsLamp_IdProperty',
+          inputs: {
+            ACTOR: THIS_ACTOR,
+            VALUE: {shadow: {type: 'math_number', fields: {NUM: index + 1}}},
+          },
+          next: {block: text},
+        },
+      };
+      text.inputs!.VALUE = joined('lamp ', ownId());
+    });
+    return JSON.stringify(workspace);
+  };
+
+  it('refuses two Lamps reading the world’s one number', async () => {
+    const {passes} = await check('memory/actor-state', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts a number each Lamp holds for itself', async () => {
+    const declared = editing(lesson.source, 'lamp.actor', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const actor = workspace.blocks.blocks.find(
+        block => block.type === 'world_actor',
+      )!;
+      actor.next = {
+        block: {
+          type: 'world_rule_property',
+          fields: {
+            TYPE: 'number',
+            ACCESS: 'writable',
+            NAME: 'id',
+            DEFAULT: '1',
+          },
+          next: actor.next,
+        },
+      };
+      return JSON.stringify(workspace);
+    });
+    const solved = editing(declared, 'main.world', worldWithOwnIds);
+    const {passes, result} = await check('memory/actor-state', solved);
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  // The one that works and is still not the lesson: the text is built as each
+  // Lamp is added, so setting the world's number in between makes the two
+  // Labels differ. What it leaves behind is nothing — no Lamp holds a number,
+  // and nothing can ask one afterwards.
+  it('refuses the world’s number set twice', async () => {
+    const twice = editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      // Between the two `add actor` rows: the first Lamp is built while the
+      // number is 1, the second while it is 2. rows[0] is the declaration.
+      const rows = rowsOf(workspace);
+      rows[1].next = {
+        block: {
+          type: 'world_set_WorldsMain_IdProperty',
+          inputs: {
+            VALUE: {shadow: {type: 'math_number', fields: {NUM: 2}}},
+          },
+          next: {block: rows[2]},
+        },
+      };
+      return JSON.stringify(workspace);
+    });
+    // It worked: the two Labels really do say different things…
+    expect(await outcomeOf('memory/actor-state', twice)).toBe(true);
+    // …and no Lamp knows which one it is.
+    const {passes} = await check('memory/actor-state', twice);
+    expect(passes).toBe(false);
+  });
+});
+
+describe('the score lesson’s check', () => {
+  const lesson = LESSONS['memory/score'];
+
+  it('refuses the tally the lesson starts with', async () => {
+    // It counts perfectly — six clicks, six lines, one to six — and that is
+    // the lesson: a tally is right and still cannot say when it is enough.
+    const played = await playedOf('memory/score', lesson.source);
+    expect(played.console).toEqual(['1', '2', '3', '4', '5', '6']);
+    const {passes} = await check('memory/score', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  /** The world with Scoring doing the counting, as the instructions say. */
+  const swapped = (contents: string): string => {
+    const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+    // `define number counted` goes, and `set target score` takes its place.
+    const declaration = workspace.blocks.blocks[0].next!.block!;
+    workspace.blocks.blocks[0].next = {
+      block: {
+        type: 'world_set_Scoring_TargetScoreProperty',
+        inputs: {VALUE: {shadow: {type: 'math_number', fields: {NUM: 5}}}},
+        next: declaration.next,
+      },
+    };
+    // The click handler adds to the score and says nothing…
+    const clicks = workspace.blocks.blocks.find(
+      block => block.type === 'world_on_Mouse_IsPressedEvent',
+    )!;
+    clicks.next = {
+      block: {
+        type: 'world_do_Scoring_AddToTheScoreAction',
+        inputs: {VALUE: {shadow: {type: 'math_number', fields: {NUM: 1}}}},
+      },
+    };
+    // …and a second handler says the one thing worth saying.
+    workspace.blocks.blocks.push({
+      type: 'world_on_Scoring_TheTargetIsReachedEvent',
+      x: 660,
+      y: 20,
+      next: {
+        block: {
+          type: 'world_print',
+          inputs: {VALUE: {block: {type: 'world_get_Scoring_ScoreProperty'}}},
+        },
+      },
+    } as unknown as Row);
+    return JSON.stringify(workspace);
+  };
+
+  it('accepts the swap for the rule that already had it', async () => {
+    const scored = importStockRule(lesson.source, stockRule('score')!).source;
+    const solved = editing(scored, 'main.world', swapped);
+    const {passes, result} = await check('memory/score', solved);
+    expect(result.error).toBeUndefined();
+    // Once, at five — not six times, and not at six.
+    expect(result.console).toEqual(['5']);
+    expect(passes).toBe(true);
   });
 });

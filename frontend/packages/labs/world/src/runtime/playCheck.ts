@@ -25,6 +25,35 @@ import {CHECK_FPS, type CheckResult, type CheckRun, type Probe} from './checks';
 const isKind = (actor: Actor, kind: string): boolean =>
   actor.type === kind || actor.name === kind;
 
+/**
+ * A named property's value on one actor, or nothing if it has no such property.
+ *
+ * Every property the actor carries: the ones its traits declare, and the ones
+ * its own file declares, which belong to no trait — the same two places the map
+ * editor's inspector looks. Nothing rather than a throw when there is no match:
+ * an actor without the property is a project that has not done the lesson, and
+ * that is a check's answer rather than its error.
+ */
+function readNamed(actor: Actor, name: string): unknown {
+  const wanted = name.toLowerCase();
+  const matches = (property: {id: string; name?: string}) =>
+    property.id.toLowerCase() === wanted ||
+    property.name?.toLowerCase() === wanted;
+  for (const trait of actor.traits()) {
+    for (const property of Object.values(trait.properties)) {
+      if (matches(property)) {
+        return actor.get(property);
+      }
+    }
+  }
+  for (const property of actor.ownProperties()) {
+    if (matches(property)) {
+      return actor.get(property);
+    }
+  }
+  return undefined;
+}
+
 /** Answer one probe about a world. */
 export function readProbe(world: World, probe: Probe): unknown {
   switch (probe.kind) {
@@ -46,6 +75,10 @@ export function readProbe(world: World, probe: Probe): unknown {
         .renderSnapshot()
         .map(state => state.frame?.sprite)
         .filter((name): name is string => typeof name === 'string');
+    case 'property':
+      return [...world.actors]
+        .filter(actor => isKind(actor, probe.of))
+        .map(actor => readNamed(actor, probe.name));
     case 'worldProperty':
       // The same map a hot-reload compares against (`WorldSnapshot.world`),
       // keyed the same way: `${ruleId}.${propId}`.

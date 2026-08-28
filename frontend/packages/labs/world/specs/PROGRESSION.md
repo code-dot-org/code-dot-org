@@ -403,13 +403,13 @@ The first thing anybody wants is for something to move when they press a key.
 
 ### Foundation: Memory
 
-| Tile                 | The lesson                                                                                                  | Unlocks                                             | Check                                                                 |
-| -------------------- | ----------------------------------------------------------------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------------------------- |
-| `memory/variable`    | A box that holds a number while a handler runs. Work out a distance once and use it twice.                  | Variables                                           | `[s]` a variable is read at least twice; `[o]` the behaviour is right |
-| `memory/actor-state` | State that belongs to an actor, not to the world: a lamp that remembers it is lit.                          | `define property` in an `.actor`                    | `[o]` two lamps hold different values at the same moment              |
-| `memory/world-state` | State the whole world shares. Count something by hand and draw the number.                                  | a world property; Writing rule; Label actor; `join` | `[o]` the drawn text changes to the right number                      |
-| `memory/score`       | Somebody already wrote the counter. Swap the hand-rolled one for Scoring and get "reached the target" free. | Scoring rule                                        | `[t]` "reaches the target" fired once at 5                            |
-| `memory/many`        | All of them at once: `for each actor`, and the lists you make by filtering. Turn every coin gold.           | `for each`, actor-list blocks, `count of kind`      | `[o]` all six coins changed, with one loop in the workspace           |
+| Tile                 | The lesson                                                                                                           | Unlocks                                             | Check                                                                       |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------------------------------- |
+| `memory/variable`    | A box that holds a number while a handler runs. Work out a distance once and use it twice.                           | Variables                                           | `[s]` a variable is read at least twice; `[o]` the behaviour is right       |
+| `memory/world-state` | State the whole world shares: two Labels that disagree about how many lives are left, and one number they both read. | a world property; Writing rule; Label actor; `join` | `[o]` both Labels say the same thing; `[s]` a declaration, and a read of it |
+| `memory/actor-state` | State that belongs to an actor and not to the world: two Lamps reading the world's one number, each given its own.   | `define property` in an `.actor`                    | `[o]` the two Lamps say different things; `[s]` the Lamp declares it        |
+| `memory/score`       | Somebody already wrote the counter. Swap the hand-rolled one for Scoring and get "the target is reached" free.       | Scoring rule                                        | `[t]` one console line, saying 5, after six clicks                          |
+| `memory/many`        | All of them at once: `for each actor`, and the lists you make by filtering. Turn every coin gold.                    | `for each`, actor-list blocks, `count of kind`      | `[o]` all six coins changed, with one loop in the workspace                 |
 
 ### Foundation: Look
 
@@ -542,7 +542,17 @@ point of the exercise. Here is what it asks for and the lab has not got.
 7. **A personal shelf.** Somewhere a learner's OWN rules go, so a rule they
    wrote is offered by their next New Project the way a stock one is. This was
    a tile (`making/shelf`) until it was noticed that it is not a lesson.
-8. <a id="free-play"></a>**Free play.** A project type that starts with
+8. <a id="world-actions-in-setup"></a>**World actions in a world's setup.** A
+   `define world` body is handed a **builder**; a handler is handed the world.
+   They share enough vocabulary to look interchangeable — a world property's
+   `set` compiles to `world.set(…)` and the builder has one — but a rule's
+   world action compiles to `world.act(…)` and the builder has not, so
+   `add ⟨1⟩ to the score` written in a world's setup dies at run time with
+   `world.act is not a function`. Nothing warns: `worldContextExtension` asks
+   whether `world` is bound, and it is bound, to the wrong thing. Found by
+   writing `memory/score`, which now counts clicks in a handler for this
+   reason and not for a teaching one.
+9. <a id="free-play"></a>**Free play.** A project type that starts with
    everything, for teachers, for experienced makers, and for the learner who
    has had enough of the tree. The gating is a teaching device and it must be
    possible to say no to it — per account and per course. Without this, the
