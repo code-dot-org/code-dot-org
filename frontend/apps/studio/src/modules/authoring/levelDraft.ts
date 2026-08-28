@@ -54,6 +54,9 @@ export interface LevelDraftPatch {
   nectar_goal?: string;
   honey_goal?: string;
   min_collected?: string;
+  // Bee only (Gap #3) — redWithNectar shows flower nectar counts,
+  // purpleNectarHidden hides them (Bee.ts's defaultFlowerColor_).
+  flower_type?: string;
 }
 
 export interface UseLevelDraftArgs {
@@ -81,6 +84,9 @@ export interface UseLevelDraftArgs {
   nectarGoal?: string;
   honeyGoal?: string;
   minCollected?: string;
+  /** Served value for Bee's flower_type (redWithNectar/purpleNectarHidden) —
+   * undefined on a non-bee skin or an absent field. */
+  flowerType?: string;
   /** Every stage paint reports a fresh patch here — folded into the draft
    * the same way a startDirection edit is. */
   mapDraftPatch?: {serialized_maze: string; maze: string; initial_dirt: string};
@@ -123,9 +129,11 @@ export interface UseLevelDraftResult {
   effectiveNectarGoal?: string;
   effectiveHoneyGoal?: string;
   effectiveMinCollected?: string;
+  effectiveFlowerType?: string;
   setNectarGoal: (value: string) => void;
   setHoneyGoal: (value: string) => void;
   setMinCollected: (value: string) => void;
+  setFlowerType: (value: string) => void;
   /** 'toolbox' section fields. */
   tray: ToolboxTrayEntry[];
   availableBlocks: ToolboxPaletteEntry[];
@@ -187,6 +195,7 @@ export function useLevelDraft({
   nectarGoal,
   honeyGoal,
   minCollected,
+  flowerType,
   mapDraftPatch,
   workspaceMode,
   onWorkspaceModeChange,
@@ -227,6 +236,7 @@ export function useLevelDraft({
   const effectiveNectarGoal = draft.nectar_goal ?? nectarGoal;
   const effectiveHoneyGoal = draft.honey_goal ?? honeyGoal;
   const effectiveMinCollected = draft.min_collected ?? minCollected;
+  const effectiveFlowerType = draft.flower_type ?? flowerType;
   const effectiveVerified =
     draft.solutionVerified === 'true' || solutionVerified;
 
@@ -465,12 +475,15 @@ export function useLevelDraft({
     effectiveNectarGoal,
     effectiveHoneyGoal,
     effectiveMinCollected,
+    effectiveFlowerType,
     setNectarGoal: (value: string) =>
       setDraft(prev => ({...prev, nectar_goal: value})),
     setHoneyGoal: (value: string) =>
       setDraft(prev => ({...prev, honey_goal: value})),
     setMinCollected: (value: string) =>
       setDraft(prev => ({...prev, min_collected: value})),
+    setFlowerType: (value: string) =>
+      setDraft(prev => ({...prev, flower_type: value})),
     tray,
     availableBlocks,
     addChip,

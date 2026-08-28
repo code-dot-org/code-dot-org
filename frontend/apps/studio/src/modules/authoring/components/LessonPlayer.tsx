@@ -243,6 +243,7 @@ export default function LessonPlayer({
     nectarGoal: activeLevelProps?.nectar_goal as string | undefined,
     honeyGoal: activeLevelProps?.honey_goal as string | undefined,
     minCollected: activeLevelProps?.min_collected as string | undefined,
+    flowerType: activeLevelProps?.flower_type as string | undefined,
     mapDraftPatch,
     workspaceMode,
     onWorkspaceModeChange: setWorkspaceMode,

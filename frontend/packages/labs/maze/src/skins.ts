@@ -285,12 +285,24 @@ export const skinFor: (skins: SkinsData, id: string) => Skin = (skins, id) => {
 
   skin.obstacleSound = soundAssetUrls(skin, 'obstacle.mp3');
   skin.wallSound = soundAssetUrls(skin, 'wall.mp3');
-  skin.winGoalSound = soundAssetUrls(skin, 'win_goal.mp3');
-  skin.wall0Sound = soundAssetUrls(skin, 'wall0.mp3');
-  skin.wall1Sound = soundAssetUrls(skin, 'wall1.mp3');
-  skin.wall2Sound = soundAssetUrls(skin, 'wall2.mp3');
-  skin.wall3Sound = soundAssetUrls(skin, 'wall3.mp3');
-  skin.wall4Sound = soundAssetUrls(skin, 'wall4.mp3');
+
+  // Graduated wall-hit severity sounds (wall0..wall4) plus a distinct
+  // win-at-goal sound only exist as real asset files for birds/scrat
+  // (grepped) — every other skin's assets/skins/<id>/ has no wall0..4.mp3
+  // or win_goal.mp3 at all, so unconditionally requesting them 404s twelve
+  // times a load (6 files x mp3+ogg) for bee and the rest. `additionalSound`
+  // is exactly the flag birds/scrat already set for this and no other skin
+  // sets — legacy (apps/src/maze/skins.js) declares the same flag on the
+  // same two skins but never actually reads it either, so this isn't new
+  // behavior, just the first thing to honor it.
+  if (config.additionalSound) {
+    skin.winGoalSound = soundAssetUrls(skin, 'win_goal.mp3');
+    skin.wall0Sound = soundAssetUrls(skin, 'wall0.mp3');
+    skin.wall1Sound = soundAssetUrls(skin, 'wall1.mp3');
+    skin.wall2Sound = soundAssetUrls(skin, 'wall2.mp3');
+    skin.wall3Sound = soundAssetUrls(skin, 'wall3.mp3');
+    skin.wall4Sound = soundAssetUrls(skin, 'wall4.mp3');
+  }
 
   // (3) Get properties from config
   const isAsset = /\.\S{3}$/; // ends in dot followed by three non-whitespace chars

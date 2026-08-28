@@ -10,6 +10,7 @@ import type {
 } from '@code-dot-org/authoring';
 import {useEscapeKeyHandler} from '@code-dot-org/component-library/common/hooks';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {isBeeSkin} from '@code-dot-org/maze-lab';
 
 import {
   authoringApi,
@@ -41,6 +42,14 @@ const START_DIRECTION_OPTIONS = [
   {value: '1', label: 'East'},
   {value: '2', label: 'South'},
   {value: '3', label: 'West'},
+] as const;
+
+// Bee only (Gap #3) — the two real values dashboard/config/levels/custom/
+// maze .level files set (grepped); purpleNectarHidden hides each flower's
+// nectar count from the player, changing the puzzle.
+const FLOWER_TYPE_OPTIONS = [
+  {value: 'redWithNectar', label: 'Red — nectar counts visible'},
+  {value: 'purpleNectarHidden', label: 'Purple — nectar counts hidden'},
 ] as const;
 
 interface PropertiesPanelProps {
@@ -366,9 +375,11 @@ function VisualizationFields({
     effectiveNectarGoal,
     effectiveHoneyGoal,
     effectiveMinCollected,
+    effectiveFlowerType,
     setNectarGoal,
     setHoneyGoal,
     setMinCollected,
+    setFlowerType,
   } = levelDraft;
 
   useEffect(() => {
@@ -432,12 +443,29 @@ function VisualizationFields({
         </div>
       )}
 
+      {isBeeSkin(skin ?? '') && (
+        <label htmlFor="panel-flower-type">
+          Flower type
+          <select
+            id="panel-flower-type"
+            value={effectiveFlowerType ?? 'redWithNectar'}
+            onChange={e => setFlowerType(e.target.value)}
+          >
+            {FLOWER_TYPE_OPTIONS.map(option => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+        </label>
+      )}
+
       {goalFields.length > 0 && (
         <div className={styles.paintPalette}>
           <Typography variant="body4" component="span">
-            Goals — not enforced by this prototype's engine (win still checks
-            the finish tile); used only to keep the map's item counts
-            consistent with what the level claims to require.
+            Goals — a level with no finish tile on the grid wins by meeting
+            these instead of reaching a spot on the map (Bee's nectar/honey,
+            every Karel skin's minimum to collect).
           </Typography>
           {goalFields.map(field => {
             const value =
@@ -568,6 +596,7 @@ function WorkspaceFields({
     switchWorkspaceMode,
     clearWorkspace,
     blockPalette,
+    tray,
     addBlockToWorkspace,
     effectiveSolutionXml,
     effectiveIdeal,
@@ -578,6 +607,19 @@ function WorkspaceFields({
   useEffect(() => {
     onDirtyChange(dirty);
   }, [dirty, onDirtyChange]);
+
+  // Default to the level's CURRENT toolbox composition — a block built
+  // here that the student toolbox doesn't offer makes solutionBlocksXml
+  // unbuildable by a student, and fails checkImportedMazeLevel's own
+  // palette check (missing = solution block types the toolbox doesn't
+  // offer). "Show all blocks" is an explicit author opt-in for the rarer
+  // case (e.g. authoring a start_blocks scaffold pinned outside the
+  // toolbox) — never the default.
+  const [showAllBlocks, setShowAllBlocks] = useState(false);
+  const toolboxBlockIds = new Set(tray.map(entry => entry.id));
+  const visiblePalette = showAllBlocks
+    ? blockPalette
+    : blockPalette.filter(entry => toolboxBlockIds.has(entry.id));
 
   return (
     <div className={styles.propertiesPanelForm}>
@@ -621,8 +663,17 @@ function WorkspaceFields({
           <Typography variant="body4" component="span">
             Click a block to add it to the canvas — no drag required.
           </Typography>
+          <label htmlFor="panel-show-all-blocks">
+            <input
+              id="panel-show-all-blocks"
+              type="checkbox"
+              checked={showAllBlocks}
+              onChange={e => setShowAllBlocks(e.target.checked)}
+            />
+            Show all blocks (not just this level&apos;s toolbox)
+          </label>
           <ul className={styles.toolboxChipList}>
-            {blockPalette.map(entry => (
+            {visiblePalette.map(entry => (
               <li key={entry.id}>
                 <button
                   type="button"
@@ -645,6 +696,15 @@ function WorkspaceFields({
             : 'Solution: saved, not verified since the last change'
           : 'No verified solution'}
       </Typography>
+
+      {workspaceMode === 'mySolution' && (
+        <Typography variant="body4" component="span">
+          Editing here is a scratch attempt — it is not saved. Run it; a
+          passing run offers to save it as the solution below. Save saves
+          any other pending edits (visualization, toolbox, student start),
+          never an unverified &quot;My solution&quot; attempt.
+        </Typography>
+      )}
 
       {solutionOffer && (
         <div className={styles.solutionOfferCard}>

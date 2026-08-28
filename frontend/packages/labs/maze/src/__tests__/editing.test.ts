@@ -5,12 +5,16 @@
 // so this file alone opts into jsdom rather than changing the shared config.
 import {describe, expect, it} from 'vitest';
 
-import {FeatureType as BeeFeatureType} from '../BeeCell';
+import {
+  FeatureType as BeeFeatureType,
+  type BeeCellSerialization,
+} from '../BeeCell';
 import {SquareType} from '../tiles';
 
 import {
   addBlockToProgramXml,
   applyPaint,
+  describeCellState,
   getPaintTools,
   getToolboxPalette,
   mapDraftFromLevelProperties,
@@ -111,6 +115,53 @@ describe('getPaintTools', () => {
     const tools = getPaintTools('farmer').map(t => t.id);
     expect(tools).not.toContain('flower');
     expect(tools).not.toContain('hive');
+  });
+});
+
+describe('describeCellState', () => {
+  // Pins the fix for the acceptance run's noise item: the paint grid's
+  // aria-labels used to announce only the selected tool, never what the
+  // cell under it already held.
+  it('names each structural tile type', () => {
+    expect(describeCellState({tileType: SquareType.WALL}, 'birds')).toBe(
+      'wall',
+    );
+    expect(describeCellState({tileType: SquareType.OPEN}, 'birds')).toBe(
+      'open',
+    );
+    expect(describeCellState({tileType: SquareType.START}, 'birds')).toBe(
+      'start',
+    );
+    expect(describeCellState({tileType: SquareType.FINISH}, 'birds')).toBe(
+      'finish',
+    );
+    expect(describeCellState({tileType: SquareType.OBSTACLE}, 'birds')).toBe(
+      'obstacle',
+    );
+  });
+
+  it('names a bee flower/hive with its current count, distinct from a plain open cell', () => {
+    expect(
+      describeCellState(
+        {
+          tileType: SquareType.OPEN,
+          featureType: BeeFeatureType.FLOWER,
+          value: 3,
+        } as BeeCellSerialization,
+        'bee',
+      ),
+    ).toBe('flower (nectar) (3)');
+    expect(
+      describeCellState(
+        {
+          tileType: SquareType.OPEN,
+          featureType: BeeFeatureType.HIVE,
+          value: 2,
+        } as BeeCellSerialization,
+        'bee',
+      ),
+    ).toBe('hive (honey) (2)');
+    expect(describeCellState({tileType: SquareType.OPEN}, 'bee')).toBe('open');
   });
 });
 

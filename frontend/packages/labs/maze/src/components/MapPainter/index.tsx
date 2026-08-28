@@ -1,8 +1,18 @@
+import {describeCellState} from '../../editing';
+import type {MapDraft} from '../../editing';
+
 import moduleStyles from './mapPainter.module.scss';
 
 export interface MapPainterProps {
   rows: number;
   cols: number;
+  /** The current map draft — read only for each cell's aria-label
+   * (`describeCellState`), never mutated here. Undefined skips the
+   * cell-state part of the label (dimensions alone still render the grid). */
+  grid?: MapDraft;
+  /** For `describeCellState` — which paint-tool labels apply to this
+   * level's skin (a bee flower reads differently than a farmer's soil). */
+  skinId?: string;
   /** Label of the currently selected paint tool (from the panel's
    * palette), for the cell buttons' accessible names — undefined means no
    * tool is selected, so a click is a no-op the label should say so. */
@@ -27,12 +37,17 @@ export interface MapPainterProps {
 export default function MapPainter({
   rows,
   cols,
+  grid,
+  skinId,
   selectedToolLabel,
   onPaintCell,
 }: MapPainterProps) {
   const cells = [];
   for (let row = 0; row < rows; row++) {
     for (let col = 0; col < cols; col++) {
+      const cell = grid?.[row]?.[col];
+      const stateLabel =
+        cell && skinId ? `${describeCellState(cell, skinId)}, ` : '';
       cells.push(
         <button
           key={`${row}-${col}`}
@@ -40,8 +55,8 @@ export default function MapPainter({
           className={moduleStyles.cell}
           aria-label={
             selectedToolLabel
-              ? `Row ${row + 1}, column ${col + 1}: paint ${selectedToolLabel}`
-              : `Row ${row + 1}, column ${col + 1}: no tool selected`
+              ? `Row ${row + 1}, column ${col + 1}, ${stateLabel}paint ${selectedToolLabel}`
+              : `Row ${row + 1}, column ${col + 1}, ${stateLabel}no tool selected`
           }
           onClick={() => onPaintCell(row, col)}
         />,

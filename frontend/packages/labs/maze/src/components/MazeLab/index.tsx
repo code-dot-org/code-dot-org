@@ -540,6 +540,8 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
                   <MapPainter
                     rows={mapDraft.length}
                     cols={mapDraft[0]?.length ?? 0}
+                    grid={mapDraft}
+                    skinId={skin.id}
                     selectedToolLabel={
                       getPaintTools(skin.id).find(
                         t => t.id === editing.selectedPaintToolId,

@@ -267,6 +267,37 @@ export function getPaintTools(skinId: string): PaintTool[] {
   return STRUCTURAL_TOOLS;
 }
 
+/**
+ * A short human-readable name for a painted cell's current state — "wall",
+ * "flower (nectar) (3)", etc. Matches the cell against `getPaintTools`'
+ * palette (the same tileType/featureType shapes `paintCell` writes), so a
+ * grid cell's aria-label always agrees with the tool that would paint it.
+ * Read by the stage's paint-grid buttons (MapPainter), which otherwise only
+ * announce the SELECTED tool — never what a cell already holds.
+ */
+export function describeCellState(
+  cell: CellSerialization,
+  skinId: string,
+): string {
+  const featureTypeOf = (c: CellSerialization): number | undefined =>
+    (c as {featureType?: number}).featureType;
+
+  for (const tool of getPaintTools(skinId)) {
+    const sample = tool.makeCell();
+    if (sample.tileType !== cell.tileType) {
+      continue;
+    }
+    if (featureTypeOf(sample) !== featureTypeOf(cell)) {
+      continue;
+    }
+    const value = cell.value;
+    return value !== undefined
+      ? `${tool.label.toLowerCase()} (${value})`
+      : tool.label.toLowerCase();
+  }
+  return 'empty';
+}
+
 function isStartLike(tileType: number): boolean {
   return tileType === SquareType.START || tileType === SquareType.STARTANDFINISH;
 }

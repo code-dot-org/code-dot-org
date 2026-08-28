@@ -251,7 +251,14 @@ class Sound {
     buffer: AudioBuffer,
     options?: PlaybackOptions,
   ): AudioBufferSourceNode | null {
-    if (!this.audioContext) {
+    // A Sound outlives its SoundBoard's audioContext when something async
+    // (a decode callback, a queued animation) still holds this Sound and
+    // calls play() after the host that made this SoundBoard tore down and
+    // closed the context (SoundBoard#close). Starting a buffer source node
+    // on a closed context throws (AudioBufferSourceNode's `start` requires
+    // a running/suspended context) — the same no-op as the missing-context
+    // case above.
+    if (!this.audioContext || this.audioContext.state === 'closed') {
       return null;
     }
 

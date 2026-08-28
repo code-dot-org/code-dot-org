@@ -341,7 +341,11 @@ class SoundBoard {
    * https://paulbakaus.com/tutorials/html5/web-audio-on-ios/
    */
   private async unlockAudio() {
-    if (this.isAudioUnlocked() || !this.audioContext) {
+    if (
+      this.isAudioUnlocked() ||
+      !this.audioContext ||
+      this.audioContext.state === 'closed'
+    ) {
       return;
     }
 

@@ -8,6 +8,7 @@ import GrayOutUndeletableBlocksPlugin from '@code-dot-org/blockly/plugins/grayOu
 import ThrasosRenderer from '@code-dot-org/blockly/renderers/thrasos';
 import blocks from './blocks';
 import skins, {skinFor} from './skins';
+import {isBeeSkin} from './skin';
 
 import MazeLab from './components/MazeLab';
 
@@ -34,6 +35,10 @@ export {
 } from './editing';
 export {getGoalFields, type GoalField} from './editing';
 export {addBlockToProgramXml} from './editing';
+// Gap #3: flower_type only makes sense on a bee-skinned level (it toggles
+// whether flower nectar counts are visible) — the panel needs the same
+// bee check getGoalFields already makes internally.
+export {isBeeSkin};
 
 registerLevelKindSchema('maze', LevelKindSchema);
 
