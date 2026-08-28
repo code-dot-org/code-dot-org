@@ -153,10 +153,6 @@ const ChallengePicker: FC<ChallengePickerProps> = ({
         </MuiButton>
       </div>
       <MuiButton
-        className={classNames([
-          styles.challengeTypeButton,
-          challengeType === ChallengeTypes.VIDEO ? styles.Selected : null,
-        ])}
         size="medium"
         color="primary"
         endIcon={

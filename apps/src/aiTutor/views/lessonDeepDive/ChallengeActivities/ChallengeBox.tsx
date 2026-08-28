@@ -170,7 +170,10 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
                   </div>
                 </div>
                 <div className={styles.feedbackText}>
-                  <Typography variant="body3" className={styles.sidebarHeading}>
+                  <Typography
+                    variant="body3"
+                    className={styles.instructionsText}
+                  >
                     {evaluationText}
                   </Typography>
                 </div>
@@ -179,8 +182,12 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
           ) : (
             <div className={styles.sidebarContent}>
               <div>
-                <h3 className={styles.sidebarHeading}>Instructions</h3>
-                <p className={styles.instructionsText}>{challenge.question}</p>
+                <Typography variant="h6" className={styles.sidebarHeading}>
+                  Instructions
+                </Typography>
+                <Typography variant="body3" className={styles.instructionsText}>
+                  {challenge.question}
+                </Typography>
               </div>
               {challengeType === ChallengeTypes.WHITEBOARD && (
                 <div className={styles.whiteboardButtonContainer}>

@@ -28,9 +28,9 @@
 }
 
 .sidebarHeading {
-  margin: 0 0 8px;
-  font-size: 1rem;
-  font-weight: 600;
+  margin: 0 0 8px !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
   color: var(--text-neutral-primary);
 }
 
@@ -202,6 +202,7 @@ align-self: stretch;
   align-items: center;
   gap: 32px;
   min-height: 0;
+  width: stretch;
 }
 
 .challengeCarousel {
