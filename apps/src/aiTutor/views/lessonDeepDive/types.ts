@@ -128,6 +128,31 @@ type ServerChallengeResponseAsset = {
   download_url?: string;
 };
 
+// An emoji reaction tally on a response: the emoji name (mapped to a glyph
+// in the gallery), how many viewers left it, and whether the signed-in
+// viewer is one of them.
+export type Reaction = {
+  emoji: string;
+  count: number;
+  reacted: boolean;
+};
+
+// Normalizes the server's reaction array. A missing or malformed list is
+// treated as no reactions rather than throwing, so an older payload without
+// the field still renders.
+export const parseReactions = (raw: unknown): Reaction[] => {
+  if (!Array.isArray(raw)) {
+    return [];
+  }
+  return (raw as Record<string, unknown>[])
+    .filter(r => typeof r.emoji === 'string')
+    .map(r => ({
+      emoji: r.emoji as string,
+      count: typeof r.count === 'number' ? r.count : 0,
+      reacted: r.reacted === true,
+    }));
+};
+
 // The student-facing shape of a response. student_feedback carries the
 // constructive AI feedback (null until evaluation completes) and is private
 // to the author: the server omits it on rows belonging to section peers.
@@ -147,6 +172,7 @@ export type ChallengeResponse = {
   is_final: boolean;
   created_at: string;
   assets: ChallengeResponseAsset[];
+  reactions: Reaction[];
 };
 
 type ServerChallengeResponse = {
@@ -163,6 +189,7 @@ type ServerChallengeResponse = {
   is_final: boolean;
   created_at: string;
   assets: ServerChallengeResponseAsset[];
+  reactions?: unknown;
 };
 
 export const challengeResponseValidator: ResponseValidator<
@@ -190,6 +217,7 @@ export const challengeResponseValidator: ResponseValidator<
       asset_type: a.asset_type as ChallengeResponseAsset['asset_type'],
       download_url: a.download_url ?? null,
     })),
+    reactions: parseReactions(r.reactions),
   };
 };
 

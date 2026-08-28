@@ -4,6 +4,10 @@ import {
   challengeResponseValidator,
 } from '../lessonDeepDive/types';
 
+// Reactions travel embedded in each ChallengeResponse; re-exported here so
+// the gallery's own modules can keep importing the type from './types'.
+export type {Reaction} from '../lessonDeepDive/types';
+
 // Bootstrap data embedded by LessonsController#tutor_gallery.
 export type GalleryUnit = {
   id: number;
@@ -25,12 +29,6 @@ export type TutorGalleryData = {
 };
 
 export type GallerySort = 'recent' | 'oldest';
-
-// An emoji reaction on a project and how many classmates left it.
-export type Reaction = {
-  emoji: string;
-  count: number;
-};
 
 // This viewer's relationship to a response, decided server-side. It picks
 // the project page layout: teachers get the AI assessment panel, owners the

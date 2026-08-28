@@ -83,7 +83,7 @@ const ProjectDetailsCard: FC<ProjectDetailsCardProps> = ({
           Project Prompt: {detail.question}
         </Typography>
       )}
-      <ReactionChips reactions={[]} />
+      <ReactionChips responseId={detail.id} reactions={detail.reactions} />
     </div>
   </div>
 );
