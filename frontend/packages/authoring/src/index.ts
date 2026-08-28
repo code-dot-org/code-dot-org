@@ -44,3 +44,10 @@ export {
   type ParsedScriptLevel,
   parseScriptJson,
 } from './importer';
+export {
+  type LevelFileBlocksPatch,
+  type LevelFilePatch,
+  type LevelFilePropertiesPatch,
+  patchLevelFile,
+  serializeLevelXml,
+} from './writeback/levelFile';

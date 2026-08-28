@@ -6,6 +6,13 @@
 
 export interface ParsedLevelXml {
   levelType: string;
+  // The full parsed <config> JSON object — game_id, created_at, properties,
+  // published, notes, audit_log, level_concept_difficulty, and whatever else
+  // a given level carries. writeback/levelFile.ts needs every field, not
+  // just `properties`, to leave the rest untouched across a
+  // parse→patch→serialize cycle; every other caller keeps using `properties`
+  // below, unchanged.
+  config: Record<string, unknown>;
   properties: Record<string, unknown>;
   blocks?: string;
   // The `<xml>...</xml>` payload of each named child of <blocks>, verbatim —
@@ -17,11 +24,15 @@ export interface ParsedLevelXml {
   recommendedBlocksXml?: string;
 }
 
-const ROOT_TAG_PATTERN = /^\s*<([A-Za-z][\w-]*)>/;
-const CONFIG_PATTERN = /<config>\s*<!\[CDATA\[([\s\S]*?)\]\]>\s*<\/config>/;
-const BLOCKS_PATTERN = /<blocks(?:\s[^>]*)?(?:\/>|>[\s\S]*?<\/blocks>)/;
+export const ROOT_TAG_PATTERN = /^\s*<([A-Za-z][\w-]*)>/;
+// Exported for writeback/levelFile.ts, which locates these same spans in the
+// original bytes to splice rather than reparse-and-reprint — see that
+// module's doc comment for why.
+export const CONFIG_PATTERN =
+  /<config>\s*<!\[CDATA\[([\s\S]*?)\]\]>\s*<\/config>/;
+export const BLOCKS_PATTERN = /<blocks(?:\s[^>]*)?(?:\/>|>[\s\S]*?<\/blocks>)/;
 
-function namedBlocksPattern(tagName: string): RegExp {
+export function namedBlocksPattern(tagName: string): RegExp {
   return new RegExp(
     `<${tagName}>\\s*(<xml[\\s\\S]*?<\\/xml>|<xml[^>]*\\/>)\\s*<\\/${tagName}>`,
   );
@@ -49,13 +60,14 @@ export function parseLevelXml(xml: string): ParsedLevelXml {
   }
   const config = JSON.parse(configMatch[1]) as {
     properties?: Record<string, unknown>;
-  };
+  } & Record<string, unknown>;
 
   const blocksMatch = xml.match(BLOCKS_PATTERN);
   const blocks = blocksMatch?.[0];
 
   return {
     levelType,
+    config,
     properties: config.properties ?? {},
     blocks,
     startBlocksXml: extractInnerXml(blocks, 'start_blocks'),
