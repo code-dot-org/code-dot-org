@@ -208,19 +208,21 @@ class ContactRollupsProcessed < ApplicationRecord
       roles.add 'Teacher' if submitter_roles.include? Census::CensusSubmission::ROLES[:teacher]
     end
 
+    # Sections data arrives pre-aggregated, one row per teacher, with
+    # comma-joined distinct values. @see ContactRollupsRaw.extract_sections_taught
     # TODO: extract course family_name (in properties column) instead of course name.
-    courses = extract_field contact_data, 'dashboard.sections', 'course_name'
-    roles.add 'CSD Teacher' if courses.any? {|course| course&.start_with? 'csd'}
-    roles.add 'CSP Teacher' if courses.any? {|course| course&.start_with? 'csp'}
-    roles.add 'CSA Teacher' if courses.any? {|course| course&.start_with? 'csa'}
+    course_prefixes = extract_comma_joined_values contact_data, 'dashboard.sections', 'course_name_prefixes'
+    roles.add 'CSD Teacher' if course_prefixes.include? 'csd'
+    roles.add 'CSP Teacher' if course_prefixes.include? 'csp'
+    roles.add 'CSA Teacher' if course_prefixes.include? 'csa'
 
     # @see Unit model, csf?, csd? and csp? methods
-    curricula = extract_field contact_data, 'dashboard.sections', 'curriculum_umbrella'
-    roles.add 'CSF Teacher' if curricula.any?('CSF')
-    roles.add 'CSD Teacher' if roles.exclude?('CSD Teacher') && curricula.any?('CSD')
-    roles.add 'CSP Teacher' if roles.exclude?('CSP Teacher') && curricula.any?('CSP')
-    roles.add 'CSA Teacher' if roles.exclude?('CSA Teacher') && curricula.any?('CSA')
-    roles.add 'AIF Teacher' if roles.exclude?('AIF Teacher') && curricula.any?('AIF')
+    curricula = extract_comma_joined_values contact_data, 'dashboard.sections', 'curriculum_umbrellas'
+    roles.add 'CSF Teacher' if curricula.include?('CSF')
+    roles.add 'CSD Teacher' if roles.exclude?('CSD Teacher') && curricula.include?('CSD')
+    roles.add 'CSP Teacher' if roles.exclude?('CSP Teacher') && curricula.include?('CSP')
+    roles.add 'CSA Teacher' if roles.exclude?('CSA Teacher') && curricula.include?('CSA')
+    roles.add 'AIF Teacher' if roles.exclude?('AIF Teacher') && curricula.include?('AIF')
 
     roles.add 'Form Submitter' if contact_data.key?('dashboard.census_submissions')
 
@@ -305,6 +307,20 @@ class ContactRollupsProcessed < ApplicationRecord
   def self.extract_field(contact_data, table, field)
     return [] unless contact_data.key?(table) && contact_data[table].key?(field)
     contact_data.dig(table, field).map {|item| item['value']}
+  end
+
+  # Extracts a field whose values are comma-joined lists (e.g. the output of
+  # a GROUP_CONCAT extraction) and splits them into individual values.
+  #
+  # @param contact_data [Hash] @see output of +parse_contact_data+ method
+  # @param table [String]
+  # @param field [String]
+  # @return [Array<String>] flattened values; empty if the field is absent
+  #   or all of its values are nil
+  def self.extract_comma_joined_values(contact_data, table, field)
+    extract_field(contact_data, table, field).
+      compact.
+      flat_map {|value| value.split(',')}
   end
 
   # Extracts the latest data_updated_at value.

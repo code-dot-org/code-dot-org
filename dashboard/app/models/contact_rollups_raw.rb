@@ -37,39 +37,57 @@ class ContactRollupsRaw < ApplicationRecord
     ContactRollupsV2.execute_query_in_transaction(query)
   end
 
-  def self.extract_scripts_taught(limit = nil)
-    source_sql = <<~SQL.squish
-      SELECT
-        u.email,
-        sc.properties->'$.curriculum_umbrella' AS curriculum_umbrella,
+  def self.extract_sections_taught(limit = nil)
+    # One pre-aggregated row per teacher email. Sections data only feeds the
+    # curriculum-teacher roles (CSF/CSD/CSP/CSA/AIF Teacher), which need just
+    # the distinct curriculum umbrellas and the distinct csd/csp/csa
+    # course-name prefixes — so aggregate to those here instead of emitting
+    # one raw row per (teacher, unit, course) combination.
+    #
+    # A section carries curriculum through one of two paths: via its script
+    # (script's umbrella, plus the script's parent unit group) or via a
+    # direct course assignment (unit group). The UNION ALL covers both.
+    #
+    # LIKE BINARY preserves the case-sensitive prefix match of the previous
+    # Ruby implementation (course&.start_with? 'csd').
+    #
+    # The GROUP_CONCAT results are bounded (a handful of short values), far
+    # below any group_concat_max_len concern.
+    sections_taught_query = <<~SQL.squish
+      SELECT u.email,
+        sc.properties->>'$.curriculum_umbrella' AS curriculum_umbrella,
         ug.name AS course_name,
-        MAX(se.updated_at) AS updated_at
+        se.updated_at
       FROM sections AS se
       JOIN users AS u ON se.user_id = u.id
       JOIN scripts AS sc ON sc.id = se.script_id
       LEFT JOIN course_scripts AS cs ON cs.script_id = se.script_id
       LEFT JOIN unit_groups AS ug ON ug.id = cs.course_id
       WHERE u.email > ''
-      GROUP BY u.email, sc.name, ug.name
-    SQL
-    source_sql += "LIMIT #{limit}" unless limit.nil?
-
-    query = get_extraction_query('dashboard.sections', source_sql, 'curriculum_umbrella', 'course_name')
-    ContactRollupsV2.execute_query_in_transaction(query)
-  end
-
-  def self.extract_courses_taught(limit = nil)
-    source_sql = <<~SQL.squish
-      SELECT u.email, unit_groups.name AS course_name, MAX(se.updated_at) AS updated_at
+      UNION ALL
+      SELECT u.email, NULL, unit_groups.name, se.updated_at
       FROM users AS u
       JOIN sections AS se ON se.user_id = u.id
       JOIN unit_groups ON unit_groups.id = se.course_id
       WHERE u.email > ''
-      GROUP BY u.email, unit_groups.name
+    SQL
+
+    source_sql = <<~SQL.squish
+      SELECT
+        email,
+        GROUP_CONCAT(DISTINCT curriculum_umbrella) AS curriculum_umbrellas,
+        GROUP_CONCAT(DISTINCT CASE
+          WHEN course_name LIKE BINARY 'csd%' THEN 'csd'
+          WHEN course_name LIKE BINARY 'csp%' THEN 'csp'
+          WHEN course_name LIKE BINARY 'csa%' THEN 'csa'
+        END) AS course_name_prefixes,
+        MAX(updated_at) AS updated_at
+      FROM (#{sections_taught_query}) AS sections_taught
+      GROUP BY email
     SQL
     source_sql += "LIMIT #{limit}" unless limit.nil?
 
-    query = get_extraction_query('dashboard.sections', source_sql, 'course_name')
+    query = get_extraction_query('dashboard.sections', source_sql, 'curriculum_umbrellas', 'course_name_prefixes')
     ContactRollupsV2.execute_query_in_transaction(query)
   end
 
