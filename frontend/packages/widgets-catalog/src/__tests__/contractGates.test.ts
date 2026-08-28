@@ -1,13 +1,7 @@
-import fs from 'node:fs';
-import path from 'node:path';
 import {describe, expect, it} from 'vitest';
 
-import {
-  buildWidgetDocument,
-  injectWidgetChrome,
-} from '@code-dot-org/widget-runtime/chrome';
+import {buildWidgetDocument} from '@code-dot-org/widget-runtime/chrome';
 
-import {FRONTEND_ROOT} from '../../boot/paths.js';
 import {checkWidgetDocument, MAX_WIDGET_DOC_BYTES} from '../contractGates.js';
 
 /** A document that passes every gate — the baseline every failure test mutates. */
@@ -215,38 +209,7 @@ describe('checkWidgetDocument', () => {
   });
 });
 
-// Applies the same gates to every widget currently on disk in the default
-// dev session — built and legacy alike, since the check is document-shaped,
-// not source-shaped. Skipped (not failed) when no session exists: this repo
-// checkout has no .authoring/ data, and CI never will either.
-const widgetsDir = path.join(
-  FRONTEND_ROOT,
-  '.authoring',
-  'sessions',
-  'default',
-  'widgets',
-);
-const widgetIds = fs.existsSync(widgetsDir)
-  ? fs.readdirSync(widgetsDir).filter(id => {
-      const html = path.join(widgetsDir, id, 'widget.html');
-      return fs.existsSync(html) && fs.statSync(html).size > 0;
-    })
-  : [];
-
-describe.skipIf(widgetIds.length === 0)(
-  'checkWidgetDocument against the live dev session',
-  () => {
-    it.each(widgetIds)('%s serves a document that passes every gate', id => {
-      // injectWidgetChrome, same as GET /api/widgets/:id and publish: a
-      // legacy widget's on-disk source may not embed the shim/CSP itself
-      // (serve-time injection supplies it), so the gate must check what a
-      // learner's iframe actually receives, not the raw file.
-      const rawSource = fs.readFileSync(
-        path.join(widgetsDir, id, 'widget.html'),
-        'utf8',
-      );
-      const served = injectWidgetChrome(rawSource);
-      expect(checkWidgetDocument(served)).toEqual([]);
-    });
-  },
-);
+// A regression check against the live authoring-service dev session (scanning
+// frontend/.authoring/sessions/*/widgets for real widget.html files) lives in
+// authoring-service's own test suite, not here — this package has no notion
+// of a session store, and CI never has .authoring/ data either.

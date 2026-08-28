@@ -9,6 +9,7 @@ import path from 'node:path';
 import {z} from 'zod';
 
 import {injectWidgetChrome} from '@code-dot-org/widget-runtime/chrome';
+import {checkWidgetDocument} from '@code-dot-org/widgets-catalog';
 
 import {EchoAgentRunner, type AgentRunner} from './agent/AgentRunner.js';
 import {ClaudeAgentRunner} from './agent/ClaudeAgentRunner.js';
@@ -38,7 +39,6 @@ import {
   type ChatScope,
 } from './store/SessionStore.js';
 import {rebuildWidgetSource} from './widgets/buildWidget.js';
-import {checkWidgetDocument} from './widgets/contractGates.js';
 import {applyWritebackPlan, computePlanHash} from './writeback/apply.js';
 import {listAllLevelFileNames} from './writeback/levelNames.js';
 import {buildWritebackPlan, type WritebackPlan, type WritebackPlanEdit} from './writeback/plan.js';

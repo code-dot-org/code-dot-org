@@ -33,9 +33,9 @@
     "@anthropic-ai/claude-agent-sdk": "^0.3.246",
     "@code-dot-org/authoring": "workspace:*",
     "@code-dot-org/widget-runtime": "workspace:*",
+    "@code-dot-org/widgets-catalog": "workspace:*",
     "@hono/node-server": "^1.14.0",
     "diff": "^8.0.2",
-    "esbuild": "^0.25.8",
     "hono": "^4.7.0",
     "tsx": "catalog:",
     "zod": "^4.3.6"

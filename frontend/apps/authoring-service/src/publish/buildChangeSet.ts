@@ -1,4 +1,5 @@
 import {injectWidgetChrome} from '@code-dot-org/widget-runtime/chrome';
+import {checkWidgetDocument} from '@code-dot-org/widgets-catalog';
 
 import type {
   AdaptivePolicy,
@@ -10,7 +11,6 @@ import type {
   WidgetDescriptor,
 } from '../authoring/model.js';
 import type {CurriculumSnapshot} from '../store/SessionStore.js';
-import {checkWidgetDocument} from '../widgets/contractGates.js';
 
 export interface PublishedWidget {
   id: string;

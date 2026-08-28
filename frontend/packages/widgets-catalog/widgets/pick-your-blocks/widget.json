@@ -1,0 +1,33 @@
+{
+  "slug": "pick-your-blocks",
+  "version": "1.0.0",
+  "toolName": "pick_your_blocks",
+  "title": "Pick Your Blocks",
+  "description": "Closing synthesis: 4 scenarios where students choose which programming tool fits best - sequence, loop, conditional, or function. Kind feedback either way, ending on one line about choosing the right tool for the job.",
+  "inputSchema": {
+    "title": {
+      "type": "string"
+    }
+  },
+  "visibility": [
+    "model",
+    "app"
+  ],
+  "network": "none",
+  "eventTypes": [
+    "answered",
+    "completed"
+  ],
+  "sourceHash": "sha256:db277e8276a585d9541a5d924206eb4a618abb6afbfc9ac529756aa74b4093d6",
+  "docHash": "sha256:9604bd043ab9a5999b69a78ddd40fadaf3d96a3b879618552c59692b99b972d3",
+  "toolchain": {
+    "esbuild": "0.25.12",
+    "componentLibrary": "0.1.0-alpha.1",
+    "widgetRuntime": "0.1.0"
+  },
+  "gates": {
+    "checkedAt": "2026-08-28T13:18:39.188Z",
+    "violations": [],
+    "docBytes": 360787
+  }
+}

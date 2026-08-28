@@ -1,0 +1,9 @@
+{
+  "extends": "@code-dot-org/lint-config/typescript/tsconfig.node22.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
+  },
+  "include": ["src", "scripts"]
+}
