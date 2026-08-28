@@ -52,6 +52,7 @@ const MSG = {
   edge: () => t('mazeNavEdge'),
   exited: () => t('mazeNavExited'),
   running: () => PROGRAM_RUNNING,
+  blocked: (what: string) => `Blocked. ${what}`,
   edgeOfNeighborhood: () => 'Edge of the neighborhood.',
   noPainter: () => 'No painter on the grid yet. Press Run to place one.',
   noCharacter: () => 'Character is not on the grid.',
@@ -388,6 +389,14 @@ function describeCharacterHere(
     .join(' ');
 }
 
+function describeBlocked(ctrl: MazeController, col: number, row: number) {
+  const scenery = describeObject(ctrl, col, row);
+  const tile = tileAt(ctrl, col, row);
+  return MSG.blocked(
+    scenery ?? (tile === SquareType.OBSTACLE ? MSG.obstacle() : MSG.wall())
+  );
+}
+
 export function describeCell(
   ctrl: MazeController,
   col: number,
@@ -586,17 +595,21 @@ export default class MazeKeyboardNavigation {
       this.announce(isPainter ? MSG.edgeOfNeighborhood() : MSG.edge());
       return;
     }
-    // Painter keeps its scenery on wall tiles and the cursor only reads, so it
-    // walks onto them. A student who cannot enter a wall cannot survey the map.
-    if (!isPainter && tileAt(ctrl, nx, ny) === SquareType.WALL) {
-      this.announce(MSG.wall());
+    // Walls stop the cursor in every lab; obstacles stop it in the
+    // neighborhood, where tracing the road by feel is the point.
+    const tile = tileAt(ctrl, nx, ny);
+    if (
+      tile === SquareType.WALL ||
+      (isPainter && tile === SquareType.OBSTACLE)
+    ) {
+      this.announce(isPainter ? describeBlocked(ctrl, nx, ny) : MSG.wall());
       return;
     }
     this.cursorPos = {col: nx, row: ny};
     this.placeCursor();
   }
 
-  // Every cell is walkable in Painter, so a student can wander a long way off.
+  // A student can wander a long way down the road, so P brings them back.
   private jumpToCharacter(): void {
     const ctrl = getMazeController();
     if (!ctrl || !this.cursorPos) return;

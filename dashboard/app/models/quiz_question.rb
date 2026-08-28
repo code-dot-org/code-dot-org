@@ -1,0 +1,77 @@
+# == Schema Information
+#
+# Table name: quiz_questions
+#
+#  id          :bigint           not null, primary key
+#  type        :string(255)      not null
+#  key         :string(36)       not null
+#  parent_id   :bigint
+#  name        :string(255)      not null
+#  content     :json             not null
+#  explanation :text(65535)
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+# Indexes
+#
+#  index_quiz_questions_on_key        (key)
+#  index_quiz_questions_on_name       (name)
+#  index_quiz_questions_on_parent_id  (parent_id)
+#
+class QuizQuestion < ApplicationRecord
+  after_initialize {self.type ||= self.class.sti_name}
+
+  belongs_to :parent, class_name: 'QuizQuestion', optional: true
+
+  has_many :quiz_question_standards, dependent: :destroy
+  has_many :standards, through: :quiz_question_standards
+
+  has_many :placements, class_name: 'QuizQuestionPlacement', dependent: :destroy
+  has_many :levels, through: :placements
+
+  validates :key, presence: true
+  validates :name, presence: true
+  validates :content, presence: true
+
+  # preview/stable/sunsetting units
+  def used_in_published_unit?
+    levels.any? do |quiz|
+      quiz.script_levels.any? do |sl|
+        unit = sl.script
+        unit && (unit.launched? || unit.get_published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.sunsetting)
+      end
+    end
+  end
+
+  # Overridden by subtypes that can grade themselves server-side
+  # Auto-ungradable types are stored with grading_status "ungraded"
+  # until manual/AI grading is built.
+  def auto_gradable?
+    false
+  end
+
+  # Shared by subtypes whose `content` includes a "choices" array. Returns
+  # the set of choice ids, or nil (after recording an error on `content`) if
+  # the shape is invalid.
+  protected def validate_choices(choices)
+    unless choices.is_a?(Array) && choices.length >= 2
+      errors.add(:content, 'must have at least 2 "choices"')
+      return nil
+    end
+
+    # id and text must both be non-blank, not just Strings - a blank text
+    # would render as an answer choice with no visible label.
+    unless choices.all? {|c| c.is_a?(Hash) && c['id'].is_a?(String) && c['id'].present? && c['text'].is_a?(String) && c['text'].present?}
+      errors.add(:content, 'each choice must have a non-blank "id" and "text"')
+      return nil
+    end
+
+    choice_ids = choices.map {|c| c['id']}
+    unless choice_ids.uniq.length == choice_ids.length
+      errors.add(:content, '"choices" ids must be unique')
+      return nil
+    end
+
+    choice_ids
+  end
+end

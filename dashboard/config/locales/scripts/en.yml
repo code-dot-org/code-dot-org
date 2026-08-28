@@ -416,6 +416,8 @@ en:
               name: Java Lab2
             lesson-60:
               name: AI Lab Lab2
+            lesson-61:
+              name: Choice Progression
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1951,6 +1953,15 @@ en:
           lessons: {}
           name: allthettsthings
           title: All The TTS Things
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        ui-test-tts:
+          lesson_groups: {}
+          lessons: {}
+          name: ui-test-tts
+          title: UI Test Text-to-Speech
           description_audience: ''
           description_short: ''
           description: ''
@@ -25029,6 +25040,26 @@ en:
               display_name: UI/Eyes Test Content
           name: allthelessonplans
           title: All The Lesson Plans
+          description_audience: ''
+          description_short: ''
+          description: Teacher overview of the unit.
+          student_description: Student overview of the unit.
+        ui-test-lesson-plans:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lesson Group 1
+              big_questions: |-
+                * Who?
+                * What?
+                * Where?
+              description: Lesson group 1 description
+            lessonGroup-3:
+              display_name: Lesson Group 2
+            lessonGroup-4:
+              display_name: UI/Eyes Test Content
+          name: ui-test-lesson-plans
+          title: UI Test Lesson Plans
           description_audience: ''
           description_short: ''
           description: Teacher overview of the unit.
