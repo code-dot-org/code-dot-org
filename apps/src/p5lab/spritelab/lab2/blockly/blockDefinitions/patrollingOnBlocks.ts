@@ -16,8 +16,8 @@ const generator: GeneratorFunction = () => [
 ];
 
 // Ticks a patroller stands at each turn before setting off the other way:
-// a third of a second, enough to read as looking around.
-export const TURN_PAUSE_TICKS = 10;
+// about a quarter of a second, enough to read as looking around.
+export const TURN_PAUSE_TICKS = 8;
 
 // Walk left/right along the blocks, turning at gaps, edges, the playspace
 // bounds, or when blocked (x differs from where last tick left it), with a
