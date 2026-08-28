@@ -32,6 +32,14 @@ export interface WritebackFileEdit {
   unifiedDiff: string;
   beforeHash: string;
   afterHash: string;
+  /**
+   * The full patched file content. apply.ts writes this verbatim once its
+   * own re-read confirms `beforeHash` still matches; GET /api/writeback/plan
+   * (server.ts) strips it before returning the plan to a client — a diff is
+   * what the dialog renders, and there's no reason to ship the whole file
+   * twice over the wire.
+   */
+  after: string;
 }
 
 export interface WritebackSkip {
@@ -229,6 +237,7 @@ export function buildWritebackPlan(input: WritebackPlanInput): WritebackPlan {
       unifiedDiff: buildUnifiedDiff(displayPath, before, after),
       beforeHash: sha256(before),
       afterHash: sha256(after),
+      after,
     });
   }
 

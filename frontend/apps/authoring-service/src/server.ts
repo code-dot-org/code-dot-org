@@ -38,7 +38,8 @@ import {
   type ChatScope,
 } from './store/SessionStore.js';
 import {rebuildWidgetSource} from './widgets/buildWidget.js';
-import {buildWritebackPlan} from './writeback/plan.js';
+import {applyWritebackPlan, computePlanHash} from './writeback/apply.js';
+import {buildWritebackPlan, type WritebackPlan} from './writeback/plan.js';
 
 const PORT = Number(process.env.PORT) || 3737;
 const SESSION_ID = 'default';
@@ -153,6 +154,7 @@ app.use('/api/tutor', rejectCrossSite);
 app.use('/api/publish', rejectCrossSite);
 app.use('/api/levels/:numericId/check', rejectCrossSite);
 app.use('/api/levels/create-maze', rejectCrossSite);
+app.use('/api/writeback/apply', rejectCrossSite);
 
 app.get('/api/state', c =>
   c.json({
@@ -363,24 +365,88 @@ app.post('/api/tutor', async c => {
   return c.json(action);
 });
 
+// Shared by both writeback endpoints so plan and apply build the identical
+// input buildWritebackPlan/applyWritebackPlan compute over — see
+// writeback/plan.ts's doc comment on why planning and applying must share
+// one computation.
+function writebackPlanInput() {
+  if (!bridge.parseLevelXml || !bridge.patchLevelFile || !repoRoot) {
+    return undefined;
+  }
+  return {
+    courses: state.getSnapshot().courses,
+    changes: state.getChanges(),
+    resolveLevelFilePath: (levelKey: string) => catalog.filePath(levelKey),
+    readFile: (filePath: string) => fs.readFileSync(filePath, 'utf8'),
+    parseLevelXml: bridge.parseLevelXml,
+    patchLevelFile: bridge.patchLevelFile,
+    repoRoot,
+  };
+}
+
+/** The plan's public shape: the full patched `after` text never leaves the
+ * process — a diff is what the write-back dialog renders, and there is no
+ * reason to ship the whole file twice over the wire. */
+function publicPlan(plan: WritebackPlan) {
+  return {
+    planHash: computePlanHash(plan),
+    edits: plan.edits.map(edit => ({
+      path: edit.path,
+      levelKey: edit.levelKey,
+      unifiedDiff: edit.unifiedDiff,
+      beforeHash: edit.beforeHash,
+      afterHash: edit.afterHash,
+    })),
+    skipped: plan.skipped,
+  };
+}
+
 // Dry-run only — see writeback/plan.ts's doc comment. Requires
 // @code-dot-org/authoring's dist (parseLevelXml/patchLevelFile) and a
 // resolved repoRoot; both are also required for the level catalog and
 // course import, so their absence already means a degraded service.
 app.get('/api/writeback/plan', c => {
-  if (!bridge.parseLevelXml || !bridge.patchLevelFile || !repoRoot) {
+  const input = writebackPlanInput();
+  if (!input) {
     return c.json({error: '@code-dot-org/authoring writeback is not available'}, 503);
   }
-  const plan = buildWritebackPlan({
-    courses: state.getSnapshot().courses,
-    changes: state.getChanges(),
-    resolveLevelFilePath: levelKey => catalog.filePath(levelKey),
-    readFile: filePath => fs.readFileSync(filePath, 'utf8'),
-    parseLevelXml: bridge.parseLevelXml,
-    patchLevelFile: bridge.patchLevelFile,
-    repoRoot,
-  });
-  return c.json(plan);
+  return c.json(publicPlan(buildWritebackPlan(input)));
+});
+
+const WritebackApplyBodySchema = z.object({planHash: z.string().optional()});
+
+// Recomputes the plan from scratch (never trusts a client-cached one), then
+// writes each edit whose beforeHash still matches what's on disk right now.
+// Never git add/commit/push — the user reviews dashboard/config themselves.
+app.post('/api/writeback/apply', async c => {
+  const input = writebackPlanInput();
+  if (!input) {
+    return c.json({error: '@code-dot-org/authoring writeback is not available'}, 503);
+  }
+  let body: unknown;
+  try {
+    body = await c.req.json();
+  } catch {
+    body = {};
+  }
+  const parsed = WritebackApplyBodySchema.safeParse(body);
+  if (!parsed.success) {
+    return c.json({error: parsed.error.message}, 400);
+  }
+
+  const outcome = applyWritebackPlan(input, parsed.data.planHash);
+  if (!outcome.ok) {
+    return c.json(
+      {
+        error: 'plan-changed',
+        message:
+          'the write-back plan changed since it was last computed — review the refreshed plan before applying it',
+        ...publicPlan(outcome.plan),
+      },
+      409,
+    );
+  }
+  return c.json({planHash: outcome.planHash, ...outcome.result});
 });
 
 app.post('/api/publish', c => {
