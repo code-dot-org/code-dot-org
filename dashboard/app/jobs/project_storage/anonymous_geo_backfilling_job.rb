@@ -8,10 +8,6 @@ class ProjectStorage::AnonymousGeoBackfillingJob < ApplicationJob
 
   STORAGE_ID_CURSOR_CACHE_KEY = 'project_storage/anonymous_geo_backfill/storage_id_cursor'
 
-  # The last successful production run ended at this ID on 2026-08-16,
-  # before growing table scans caused later runs to time out.
-  DEFAULT_STORAGE_ID_CURSOR = CDO.rack_env?(:production) ? 220_585_735 : nil
-
   DEFAULT_BATCH_SIZE = 1000
   DEFAULT_SCAN_SIZE = 1_000_000
   DEFAULT_LIMIT = 100_000
@@ -44,7 +40,7 @@ class ProjectStorage::AnonymousGeoBackfillingJob < ApplicationJob
   end
 
   def self.storage_id_cursor
-    CDO.shared_cache.read(STORAGE_ID_CURSOR_CACHE_KEY) || DEFAULT_STORAGE_ID_CURSOR
+    CDO.shared_cache.read(STORAGE_ID_CURSOR_CACHE_KEY) || ProjectStorage::Geo.maximum(:storage_id)
   end
 
   def self.storage_id_cursor=(storage_id)
