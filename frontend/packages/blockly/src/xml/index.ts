@@ -263,17 +263,23 @@ function lastBlockInChain(block: Element): Element {
 }
 
 /** Where the next click-to-add block attaches: inside `attachTo`'s named
- * `<statement>` (a freshly-added container whose body is still empty), or
- * after `attachTo` via a new `<next>` (anything else, including a
- * container whose body already has content — additions there descend
- * INTO the body rather than chaining after the container itself, since a
- * click stream has no way to signal "step back out"). */
+ * `<statement>` (a freshly-added container whose body is still empty, or
+ * a container type with no `<statement>` element at all — see
+ * `appendBlockToProgram`'s doc comment for why the element can be
+ * missing), or after `attachTo` via a new `<next>` (anything else,
+ * including a container whose body already has content — additions there
+ * descend INTO the body rather than chaining after the container itself,
+ * since a click stream has no way to signal "step back out"). */
 interface InsertionPoint {
   attachTo: Element;
   via: 'statement' | 'next';
+  statementName?: string;
 }
 
-function findInsertionPoint(block: Element): InsertionPoint {
+function findInsertionPoint(
+  block: Element,
+  containerStatementName: (blockType: string) => string | undefined,
+): InsertionPoint {
   const last = lastBlockInChain(block);
   const statement = Array.from(last.children).find(
     el => el.tagName === 'statement',
@@ -281,9 +287,17 @@ function findInsertionPoint(block: Element): InsertionPoint {
   if (statement) {
     const bodyHead = directChildBlock(statement);
     if (bodyHead) {
-      return findInsertionPoint(bodyHead);
+      return findInsertionPoint(bodyHead, containerStatementName);
     }
-    return {attachTo: last, via: 'statement'};
+    return {
+      attachTo: last,
+      via: 'statement',
+      statementName: statement.getAttribute('name') ?? undefined,
+    };
+  }
+  const autoName = containerStatementName(last.getAttribute('type') ?? '');
+  if (autoName) {
+    return {attachTo: last, via: 'statement', statementName: autoName};
   }
   return {attachTo: last, via: 'next'};
 }
@@ -294,16 +308,28 @@ function findInsertionPoint(block: Element): InsertionPoint {
  * program, without any drag gesture — real-mouse-only drags from a
  * Blockly flyout can't be proven to work under synthetic pointer events,
  * so an editing mode needs a working non-drag path regardless. Descends
- * into the deepest open container (a block with an empty named
- * `<statement>`, e.g. a freshly-added `repeat`) so a run of clicks builds
- * a nested program (`repeat(5) { A; B; C }`) rather than a flat chain
- * after it; there's no way to "step back out" of a container from a click
- * stream alone; a real drag is still how a body gets closed off early.
+ * into the deepest open container so a run of clicks builds a nested
+ * program (`repeat(5) { A; B; C }`) rather than a flat chain after it;
+ * there's no way to "step back out" of a container from a click stream
+ * alone; a real drag is still how a body gets closed off early.
  * `programXml` with no top-level block yet gets `blockXml` as its first.
+ *
+ * `containerStatementName`, given a block type, names the statement input
+ * a FRESH instance of that container should open into (e.g. `'DO'` for
+ * `controls_repeat_dropdown`) — undefined for anything that isn't a
+ * container this feature nests into. This can't be inferred from an
+ * empty `<statement>` element in `programXml` alone: a real Blockly
+ * workspace's own serializer (`workspaceToXmlString`) never emits a
+ * `<statement>` for an input with nothing connected, so a container added
+ * on one click, round-tripped through the live workspace, and read back
+ * on the NEXT click has already lost that element by the time this
+ * function sees it again — only the block's `type` survives round-trips.
  */
 export function appendBlockToProgram(
   programXml: string,
   blockXml: string,
+  containerStatementName: (blockType: string) => string | undefined = () =>
+    undefined,
 ): string {
   const parser = new DOMParser();
   const programDoc = parser.parseFromString(programXml, 'text/xml');
@@ -317,11 +343,21 @@ export function appendBlockToProgram(
     return new XMLSerializer().serializeToString(root);
   }
 
-  const {attachTo, via} = findInsertionPoint(topBlock);
+  const {attachTo, via, statementName} = findInsertionPoint(
+    topBlock,
+    containerStatementName,
+  );
   if (via === 'statement') {
-    const statementEl = Array.from(attachTo.children).find(
-      el => el.tagName === 'statement',
-    )!;
+    const statementEl =
+      Array.from(attachTo.children).find(
+        el => el.tagName === 'statement' && el.getAttribute('name') === statementName,
+      ) ??
+      (() => {
+        const created = programDoc.createElement('statement');
+        created.setAttribute('name', statementName ?? 'DO');
+        attachTo.appendChild(created);
+        return created;
+      })();
     statementEl.appendChild(newBlockEl);
   } else {
     const nextEl = programDoc.createElement('next');

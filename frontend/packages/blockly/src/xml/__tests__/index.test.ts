@@ -426,4 +426,70 @@ describe('appendBlockToProgram (Author Mode click-to-add, gap #7)', () => {
     );
     expect(blocksOf(result)).toEqual([{type: 'maze_moveForward'}]);
   });
+
+  // Regression: a real Blockly workspace's own serializer (workspaceToXmlString)
+  // never emits a <statement> element for an input with nothing connected —
+  // so a container added on one click, round-tripped through the live
+  // workspace, and read back on the NEXT click has already lost the empty
+  // <statement> tag by the time appendBlockToProgram sees it again. Without
+  // containerStatementName, the next block chains onto the container via
+  // <next> instead of nesting into its (now-invisible) body — exactly the
+  // bug this callback exists to prevent.
+  describe('containerStatementName — re-opening a container after its empty <statement> tag is gone', () => {
+    const hatOnly =
+      '<xml><block type="when_run" deletable="false" movable="false"></block></xml>';
+    const repeatIsContainer = (type: string) =>
+      type === 'controls_repeat_dropdown' ? 'DO' : undefined;
+
+    it('chains onto <next> (not nested) when no callback is given and the tag is gone', () => {
+      const withRepeat = appendBlockToProgram(
+        hatOnly,
+        '<block type="controls_repeat_dropdown"/>',
+      );
+      expect(withRepeat).not.toContain('<statement');
+      const result = appendBlockToProgram(
+        withRepeat,
+        '<block type="maze_nectar"/>',
+      );
+      const repeatBlock = blocksOf(result)[0].next?.block;
+      expect(repeatBlock?.next?.block).toEqual({type: 'maze_nectar'});
+      expect(repeatBlock?.inputs).toBeUndefined();
+    });
+
+    it('nests into a fresh DO statement, keyed on block type alone, when the tag is absent', () => {
+      const withRepeat = appendBlockToProgram(
+        hatOnly,
+        '<block type="controls_repeat_dropdown"/>',
+        repeatIsContainer,
+      );
+      expect(withRepeat).not.toContain('<statement');
+      const result = appendBlockToProgram(
+        withRepeat,
+        '<block type="maze_nectar"/>',
+        repeatIsContainer,
+      );
+      const repeatBlock = blocksOf(result)[0].next?.block;
+      expect(repeatBlock?.type).toBe('controls_repeat_dropdown');
+      expect(repeatBlock?.inputs?.DO?.block).toEqual({type: 'maze_nectar'});
+      expect(repeatBlock?.next).toBeUndefined();
+    });
+
+    it('a non-container type is never auto-opened, tag or no tag', () => {
+      const withMove = appendBlockToProgram(
+        hatOnly,
+        '<block type="maze_moveForward"/>',
+        repeatIsContainer,
+      );
+      const result = appendBlockToProgram(
+        withMove,
+        '<block type="maze_nectar"/>',
+        repeatIsContainer,
+      );
+      const moveBlock = blocksOf(result)[0].next?.block;
+      expect(moveBlock).toEqual({
+        type: 'maze_moveForward',
+        next: {block: {type: 'maze_nectar'}},
+      });
+    });
+  });
 });

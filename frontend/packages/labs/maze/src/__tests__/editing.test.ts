@@ -261,6 +261,38 @@ describe('addBlockToProgramXml (Author Mode click-to-add, gap #7)', () => {
   const hatOnly =
     '<xml><block type="when_run" deletable="false" movable="false"></block></xml>';
 
+  // Regression: a real Blockly workspace's own serializer never emits a
+  // <statement> for an empty input, so a freshly-added repeat's body tag
+  // is already gone by the time the NEXT click reads the workspace's
+  // (by-then round-tripped) XML back — the exact shape a live click-to-add
+  // session produces between clicks. Only the block's type survives that
+  // round trip, which is what CONTAINER_BLOCK_STATEMENTS keys on.
+  it('still nests into a repeat block after its empty DO tag is stripped, as a real Blockly round-trip would', () => {
+    const repeatEntry = getToolboxPalette('birds').find(
+      p => p.id === 'repeat',
+    )!;
+    const withRepeat = addBlockToProgramXml(hatOnly, repeatEntry);
+    expect(withRepeat).not.toContain('<statement');
+
+    const withNectar = addBlockToProgramXml(
+      withRepeat,
+      getToolboxPalette('bee').find(p => p.id === 'getNectar')!,
+    );
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(withNectar, 'text/xml');
+    const repeatBlock = Array.from(doc.documentElement.children[0].children)
+      .find(el => el.tagName === 'next')?.children[0];
+    expect(repeatBlock?.getAttribute('type')).toBe('controls_repeat_dropdown');
+    const statementEl = Array.from(repeatBlock!.children).find(
+      el => el.tagName === 'statement',
+    );
+    expect(statementEl?.children[0]?.getAttribute('type')).toBe('maze_nectar');
+    // Never chained onto the repeat itself via <next>.
+    expect(
+      Array.from(repeatBlock!.children).some(el => el.tagName === 'next'),
+    ).toBe(false);
+  });
+
   it('gives a fresh repeat block an empty DO body so the next click nests into it', () => {
     const repeatEntry = getToolboxPalette('birds').find(
       p => p.id === 'repeat',

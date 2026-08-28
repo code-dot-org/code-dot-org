@@ -439,43 +439,42 @@ const PLANTER_PALETTE: ToolboxPaletteEntry[] = [
 ];
 
 // Block types that open a body (a `<statement name="DO">`) a click-to-add
-// stream should be able to nest INTO — the toolbox palette's own seed XML
-// (below) never includes the empty statement tag itself (a bare seed is
-// also what the served toolboxBlocksXml/flyout wants), so addBlockToProgram
-// injects one only on the copy it composes onto the workspace program.
+// stream should be able to nest INTO, and the name of that statement slot.
 // `maze_ifElse`/`karel_ifElse` are deliberately excluded: they need both a
 // DO and an ELSE body, and a click stream has no way to pick which one —
 // full two-branch support is a real gap, not a silent one (a click after
 // one lands as a `<next>` sibling instead of nesting into either branch).
-const CONTAINER_BLOCK_TYPES = new Set([
-  'controls_repeat_dropdown',
-  'maze_forever',
-  'maze_untilBlocked',
-  'maze_if',
-  'karel_if',
-]);
-
-function withEmptyBody(blockXml: string): string {
-  const type = /<block type="([^"]+)"/.exec(blockXml)?.[1];
-  if (!type || !CONTAINER_BLOCK_TYPES.has(type) || blockXml.includes('<statement')) {
-    return blockXml;
-  }
-  return blockXml.replace('</block>', '<statement name="DO"></statement></block>');
-}
+//
+// Passed to blockly/xml's appendBlockToProgram as a callback rather than
+// baked into the palette's seed XML (a bare seed with no statement tag is
+// also what the served toolboxBlocksXml/flyout wants): a real Blockly
+// workspace's own serializer never emits a `<statement>` for an empty
+// input, so a freshly-added container's tag is already gone by the time
+// the NEXT click reads the workspace's (by-then round-tripped) XML back —
+// only the block's `type` survives that round trip, which is exactly what
+// this map keys on.
+const CONTAINER_BLOCK_STATEMENTS: Partial<Record<string, string>> = {
+  controls_repeat_dropdown: 'DO',
+  maze_forever: 'DO',
+  maze_untilBlocked: 'DO',
+  maze_if: 'DO',
+  karel_if: 'DO',
+};
 
 /**
  * The maze-aware half of click-to-add (Author Mode gap #7): composes the
  * new program XML for a click on `entry` against `programXml` (the
- * workspace's current content, from resolveWorkspaceOverrideXml), giving
- * a fresh container block (see CONTAINER_BLOCK_TYPES) an empty body first
- * so blockly/xml's appendBlockToProgram can detect it as "open" and nest
- * the next click inside it.
+ * workspace's current content, from resolveWorkspaceOverrideXml).
  */
 export function addBlockToProgramXml(
   programXml: string,
   entry: ToolboxPaletteEntry | ToolboxTrayEntry,
 ): string {
-  return appendBlockToProgram(programXml, withEmptyBody(entry.xml));
+  return appendBlockToProgram(
+    programXml,
+    entry.xml,
+    type => CONTAINER_BLOCK_STATEMENTS[type],
+  );
 }
 
 /** The blocks this skin's author can add to the student toolbox. */
