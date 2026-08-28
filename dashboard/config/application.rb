@@ -53,6 +53,13 @@ module Dashboard
       end
     end
 
+    # Hotfix: recover users left with two `_learn_session` cookies after the
+    # brief `domain: nil` deploy. Runs outermost so its HTTP_COOKIE rewrite is
+    # seen by every downstream cookie reader. Remove once duplicate cookies have
+    # aged out (~40 days; dashboard_session_ttl_days).
+    require 'cdo/rack/session_cookie_scope_migration'
+    config.middleware.insert_before 0, Rack::SessionCookieScopeMigration
+
     if CDO.use_cookie_dcdo
       # Enables the setting of DCDO via cookies for testing purposes.
       require 'cdo/rack/cookie_dcdo'

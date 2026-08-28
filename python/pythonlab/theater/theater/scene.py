@@ -14,7 +14,7 @@ from .support.constants import (
   THEATER_HEIGHT,
   THEATER_WIDTH,
 )
-from .support.font import Font, FontStyle
+from .support.font import Font, FontStyle, as_font, as_font_style
 from .support.image import Image, fit_to_width
 
 _DEFAULT_FONT = Font.SANS
@@ -198,6 +198,9 @@ class Scene:
       raise ValueError("draw_image needs either size, or both width and height")
 
   def set_text_style(self, font, style):
+    # Coerce both before assigning either, so a call that throws leaves the
+    # text style as it was rather than half-applied.
+    font, style = as_font(font), as_font_style(style)
     self._font = font
     self._font_style = style
 

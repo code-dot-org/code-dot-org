@@ -89,6 +89,65 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     assert_equal 0, contact_record.data['opt_in']
   end
 
+  test 'execute_query_in_transaction returns the number of affected rows' do
+    query = <<~SQL.squish
+      INSERT INTO contact_rollups_raw (email, sources, data_updated_at, created_at, updated_at)
+      VALUES ('one@example.domain', 'test', NOW(), NOW(), NOW()),
+             ('two@example.domain', 'test', NOW(), NOW(), NOW())
+    SQL
+
+    assert_equal 2, ContactRollupsV2.execute_query_in_transaction(query)
+  end
+
+  test 'collect_contacts records a rows-extracted metric per source' do
+    create(:email_preference, email: 'test@domain.com', opt_in: true)
+
+    pipeline = ContactRollupsV2.new
+    pipeline.collect_contacts
+
+    metrics = pipeline.instance_variable_get(:@log_collector).metrics
+    assert_equal 1, metrics[:RowsExtracted_email_preferences]
+    # Every extraction source reports a count, even when it is zero.
+    assert_equal 0, metrics[:RowsExtracted_pd_enrollments]
+    assert_equal 0, metrics[:RowsExtracted_school_geos]
+  end
+
+  test 'use_reporting_db_for_selects? follows the DCDO flag' do
+    DCDO.stubs(:get).with(ContactRollupsV2::USE_REPORTING_DCDO_KEY, false).returns(false)
+    refute ContactRollupsV2.use_reporting_db_for_selects?
+
+    DCDO.stubs(:get).with(ContactRollupsV2::USE_REPORTING_DCDO_KEY, false).returns(true)
+    assert ContactRollupsV2.use_reporting_db_for_selects?
+  end
+
+  test 'retrieve_query_results routes to the reporting pool when enabled' do
+    Rails.env.stubs(:test?).returns(false)
+    ContactRollupsV2.stubs(:use_reporting_db_for_selects?).returns(true)
+    # Sleeps to let replicas catch up before reading tables written earlier in the run.
+    ContactRollupsV2.expects(:sleep).with(ContactRollupsV2::SAFE_AURORA_REPLICA_LAG_SEC)
+    ContactRollupsV2::DASHBOARD_REPORTING_DB.expects(:[]).with('SELECT 1').returns(:reporting_dataset)
+
+    assert_equal :reporting_dataset, ContactRollupsV2.retrieve_query_results('SELECT 1')
+  end
+
+  test 'retrieve_query_results routes to the writer pool when reporting is disabled' do
+    Rails.env.stubs(:test?).returns(false)
+    ContactRollupsV2.stubs(:use_reporting_db_for_selects?).returns(false)
+    ContactRollupsV2.expects(:sleep).never
+    ContactRollupsV2::DASHBOARD_DB_WRITER.expects(:[]).with('SELECT 1').returns(:writer_dataset)
+
+    assert_equal :writer_dataset, ContactRollupsV2.retrieve_query_results('SELECT 1')
+  end
+
+  test 'set_db_variables does not open Sequel connections in the test environment' do
+    # CI cannot serve the Sequel URIs, and the test environment runs every
+    # pipeline query on the ActiveRecord connection anyway.
+    ContactRollupsV2::DASHBOARD_DB_WRITER.expects(:run).never
+    ContactRollupsV2::DASHBOARD_REPORTING_DB.expects(:run).never
+
+    ContactRollupsV2.set_db_variables
+  end
+
   test 'dry run makes no Pardot API calls' do
     # Called when creating and updating Pardot prospects
     PardotV2.expects(:submit_batch_request).never
