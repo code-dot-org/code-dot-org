@@ -453,7 +453,9 @@ class RegistrationsControllerTest < ActionController::TestCase
 
   test "create causes SignIn creation" do
     frozen_time = Date.parse('1985-10-26 01:20:00')
+    stable_id = SecureRandom.uuid
     DateTime.stubs(:now).returns(frozen_time)
+    session[:statsig_stable_id] = stable_id
     user_params = set_up_partial_registration(@default_params)
     assert_creates(SignIn) do
       post :create, params: {user: user_params}
@@ -462,6 +464,7 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert sign_in
     assert_equal 1, sign_in.sign_in_count
     assert_equal frozen_time, sign_in.sign_in_at
+    assert_equal stable_id, sign_in.stable_id
   end
 
   test "student can add a parent email without opt in" do

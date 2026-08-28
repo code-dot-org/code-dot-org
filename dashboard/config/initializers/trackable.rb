@@ -1,9 +1,12 @@
+require 'uuid'
+
 module OverrideUpdateTrackedFields
   def update_tracked_fields(request)
     super
     if persisted? && id
       SignIn.create(
         user_id: id,
+        stable_id: UUID.parse(request.session[:statsig_stable_id]),
         sign_in_at: DateTime.now,
         sign_in_count: sign_in_count
       )
