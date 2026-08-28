@@ -55,7 +55,7 @@ const arcSchema = Output.object({
             .string()
             .optional()
             .describe(
-              "The AI tutor's brief: what the student should do and why. Required for lab and hub steps."
+              "The AI tutor's brief: what the student should do and why. Required for lab and hub steps. 2-3 sentences, never more."
             ),
           next: z
             .string()
@@ -71,7 +71,7 @@ const arcSchema = Output.object({
             .string()
             .optional()
             .describe(
-              'lab steps: what must verifiably be true of the work to pass. Omit for free-explore steps.'
+              'lab steps: what must verifiably be true of the work to pass, in at most 2 sentences. Omit for free-explore steps.'
             ),
           sourceMode: z
             .enum(['project', 'sandbox'])
@@ -95,7 +95,7 @@ const arcSchema = Output.object({
             .array(z.object({filename: z.string(), contents: z.string()}))
             .optional()
             .describe(
-              'lab steps: literal starting files — plant bugs to fix or structure to extend. Wins over starterPrompt.'
+              'lab steps: ONLY for planted-content exercises (bugs to find, broken code to fix) where successCriteria must reference exact planted content. At most 2 short files, ~30 lines total. Every other step describes its starting point in starterPrompt instead — that code is generated later, so do not write it here. Wins over starterPrompt.'
             ),
           // Per-lab level-config fields (flat, coerced into
           // LabStep.levelProperties).  Keyed by the lab the arc builds
@@ -376,11 +376,22 @@ STRUCTURE RULES
 - Steps inside a path: leave "next" unset (path order routes them).
 - Lab steps: sandbox for skill practice, project for applying to the
   student's own site; write real successCriteria for anything gated.
-- Meet the student where the diagnostics place them.`,
+- Meet the student where the diagnostics place them.
+- Keep every text field tight — no field needs more than 2-3 sentences,
+  and never repeat yourself.  Scaffolded starting code is GENERATED
+  LATER from starterPrompt; do not write code here except tiny
+  planted-bug files.`,
     prompt: `THE STUDENT (diagnostic answers, oldest first — first-try
 correctness is the strongest signal):
 ${formatInputs(inputs)}`,
     temperature: 0.6,
+    // A healthy arc is ~2k output tokens; a few small planted-bug files
+    // stretch that, but nothing legitimate approaches this cap.  Bounds
+    // the known failure mode — degenerate repetition inside a JSON
+    // string field — to a fast failure that falls through to the
+    // authored span, instead of minutes of streaming into the JWT
+    // expiry.
+    maxOutputTokens: 10_000,
     output: arcSchema,
   });
 

@@ -157,12 +157,12 @@ const remediationSchema = Output.object({
           description: z
             .string()
             .describe(
-              "The AI tutor's brief for this step: what the student should do, what the exercise plants (bugs, structure), and which gap it targets. The tutor paraphrases this — never shown verbatim."
+              "The AI tutor's brief for this step: what the student should do, what the exercise plants (bugs, structure), and which gap it targets. 2-3 sentences. The tutor paraphrases this — never shown verbatim."
             ),
           successCriteria: z
             .string()
             .describe(
-              'What must verifiably be true of the work to pass. Concrete and checkable from the code.'
+              'What must verifiably be true of the work to pass, in at most 2 sentences. Concrete and checkable from the code.'
             ),
           starterFiles: z
             .array(
@@ -253,7 +253,9 @@ RULES
 - Beginner-readable code: small files, no frameworks, no build tools.
 - The starting files ARE the exercise: plant exactly what the gap needs
   practiced (a bug to find, a structure to extend, a behavior to wire).
-- Success criteria must be checkable from the code alone.`,
+  Keep them minimal — roughly 40 lines across all files.
+- Success criteria must be checkable from the code alone.
+- Keep every text field to a sentence or two; never repeat yourself.`,
     prompt: `THE JUDGE'S VERDICT (why mastery wasn't demonstrated):
 ${verdict.reasoning}
 
@@ -263,6 +265,11 @@ ${
   '  - (none named — design one exercise for the weakest part of the objective)'
 }`,
     temperature: 0.5,
+    // Two small exercises with planted files fit in ~2-3k tokens; the
+    // cap bounds degenerate repetition inside a JSON string to a fast
+    // failure instead of minutes of streaming (same failure mode as the
+    // arc generator).
+    maxOutputTokens: 6_000,
     output: remediationSchema,
   });
 
