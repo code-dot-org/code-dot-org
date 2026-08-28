@@ -42,14 +42,18 @@ import {
 // DOMParser), so pulling in a DOM/XML dependency for this alone would be
 // overkill.
 
-interface XmlNode {
+// Exported for levelView.ts's get_level assembly (Author Mode WOW plan §3):
+// this module already contains every DOM-free decoder a compact,
+// token-conscious level view needs, so building that view is assembly over
+// these rather than a second parser.
+export interface XmlNode {
   tag: string;
   attrs: Record<string, string>;
   children: XmlNode[];
   text: string;
 }
 
-function parseXml(source: string): XmlNode {
+export function parseXml(source: string): XmlNode {
   let i = 0;
 
   function skipWs() {
@@ -115,15 +119,15 @@ function parseXml(source: string): XmlNode {
   return parseElement();
 }
 
-function child(node: XmlNode, tag: string): XmlNode | undefined {
+export function child(node: XmlNode, tag: string): XmlNode | undefined {
   return node.children.find(c => c.tag === tag);
 }
 
-function childBlock(node: XmlNode): XmlNode | undefined {
+export function childBlock(node: XmlNode): XmlNode | undefined {
   return child(node, 'block');
 }
 
-function fieldText(node: XmlNode, name: string): string | undefined {
+export function fieldText(node: XmlNode, name: string): string | undefined {
   const field = node.children.find(
     c => (c.tag === 'title' || c.tag === 'field') && c.attrs.name === name,
   );
@@ -154,7 +158,7 @@ function collectAllBlockTypes(
 
 /** Top-level block types offered in a toolbox `<xml>` payload — a flat
  * palette listing, not a program chain. */
-function collectToolboxTypes(toolboxXml: string): Set<string> {
+export function collectToolboxTypes(toolboxXml: string): Set<string> {
   const root = parseXml(toolboxXml);
   return new Set(
     root.children
@@ -165,7 +169,7 @@ function collectToolboxTypes(toolboxXml: string): Set<string> {
 
 // Real Blockly block type -> mazeLevel.ts's MazeBlockType, for the leaf
 // blocks with no argument fields (mirrors TOOLBOX_BLOCK_XML/blockXml there).
-const LEAF_BLOCK_TYPES: Partial<Record<string, MazeBlockType>> = {
+export const LEAF_BLOCK_TYPES: Partial<Record<string, MazeBlockType>> = {
   maze_moveForward: 'moveForward',
   maze_fill: 'fill',
   maze_dig: 'dig',
@@ -175,11 +179,22 @@ const LEAF_BLOCK_TYPES: Partial<Record<string, MazeBlockType>> = {
 };
 
 /** Every block type simulateMazeProgram (via mazeLevel.ts's runProgram) can
- * execute — mirrors LEAF_BLOCK_TYPES plus the two blocks with fields. */
+ * execute — mirrors LEAF_BLOCK_TYPES plus the blocks with fields.
+ * `maze_move`/`controls_repeat` are a second real spelling for
+ * `maze_turn`-shaped move/`controls_repeat_dropdown` — grepping
+ * dashboard/config/levels/custom/maze/*.level shows both pairs in near-even
+ * use across real curriculum (maze_moveForward: 1866 files, maze_move: 1471;
+ * controls_repeat_dropdown: 544, controls_repeat: 1601), so treating only
+ * one spelling as simulatable would leave roughly half of real levels
+ * palette-only for no structural reason — toMazeBlockNode below confirms
+ * both are literally the same shape (a DIR field / a TIMES field plus an
+ * optional DO statement). */
 const SIMULATABLE_REAL_TYPES = new Set<string>([
   ...Object.keys(LEAF_BLOCK_TYPES),
   'maze_turn',
+  'maze_move',
   'controls_repeat_dropdown',
+  'controls_repeat',
 ]);
 
 /**
@@ -200,7 +215,16 @@ function toMazeBlockNode(xml: XmlNode): MazeBlockNode | undefined {
       ? {type: dir}
       : undefined;
   }
-  if (xml.attrs.type === 'controls_repeat_dropdown') {
+  if (xml.attrs.type === 'maze_move') {
+    // Real curriculum's DIR values are 'moveForward' or 'moveBackward'
+    // (dashboard/config/levels/custom/maze/*.level) — only the former is
+    // one of MazeBlockType's literals; 'moveBackward' falls through to the
+    // same "couldn't decode" fallback every other unmodeled block does.
+    return fieldText(xml, 'DIR') === 'moveForward'
+      ? {type: 'moveForward'}
+      : undefined;
+  }
+  if (xml.attrs.type === 'controls_repeat_dropdown' || xml.attrs.type === 'controls_repeat') {
     const times = parseInt(fieldText(xml, 'TIMES') ?? '', 10);
     const doStatement = child(xml, 'statement');
     if (!Number.isFinite(times) || !doStatement) return undefined;
@@ -213,7 +237,7 @@ function toMazeBlockNode(xml: XmlNode): MazeBlockNode | undefined {
   return undefined;
 }
 
-function toMazeBlockChain(first: XmlNode): MazeBlockNode[] | undefined {
+export function toMazeBlockChain(first: XmlNode): MazeBlockNode[] | undefined {
   const nodes: MazeBlockNode[] = [];
   let current: XmlNode | undefined = first;
   while (current) {
@@ -242,7 +266,7 @@ export interface ImportedLevelCheckResult {
   note?: string;
 }
 
-function extractGrid(
+export function extractGrid(
   properties: Record<string, unknown>,
 ): number[][] | undefined {
   if (typeof properties.maze === 'string') {
@@ -287,7 +311,7 @@ function hasStartTile(grid: number[][]): boolean {
   );
 }
 
-interface GoalTotals {
+export interface GoalTotals {
   nectar: number;
   honey: number;
   total: number;
@@ -357,7 +381,7 @@ function hasPurpleFlower(
  * editing.ts's serializeMapDraft); a level with neither has nothing to
  * check goals against.
  */
-function extractGoalTotals(
+export function extractGoalTotals(
   properties: Record<string, unknown>,
 ): GoalTotals | undefined {
   if (typeof properties.serialized_maze === 'string') {

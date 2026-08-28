@@ -11,9 +11,16 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {z} from 'zod';
 
-import type {Experience, Lesson, WidgetDescriptor} from '../authoring/model.js';
+import type {
+  Experience,
+  ExistingLevelExperience,
+  Lesson,
+  WidgetDescriptor,
+} from '../authoring/model.js';
 import type {LevelCatalog} from '../boot/levelCatalog.js';
 import {createMazeLevel} from '../levels/createMazeLevel.js';
+import {checkImportedMazeLevel} from '../levels/importedLevelCheck.js';
+import {buildLevelView, isMazeFamilyLevel} from '../levels/levelView.js';
 import {
   buildMazeLevelWireProperties,
   MazeLevelDefinitionPatchSchema,
@@ -25,6 +32,7 @@ import type {SessionStore} from '../store/SessionStore.js';
 import {rebuildWidgetSource} from '../widgets/buildWidget.js';
 
 import type {AgentRunner, AgentTurnInput} from './AgentRunner.js';
+import {oneLineCheckVerdict} from './checkNarration.js';
 import {AUTHORING_SYSTEM_PROMPT, describeScope} from './systemPrompt.js';
 
 const MODEL = 'sonnet';
@@ -66,8 +74,12 @@ export class ClaudeAgentRunner implements AgentRunner {
     const {state, turnId, scope, message} = input;
     state.emit({type: 'agent-status', turnId, status: 'started'});
 
-    const curriculum = buildCurriculumServer(state, this.store, this.catalog);
-    const prompt = `${describeScope(enrichScope(scope, state))}${message}`;
+    const {server: curriculum, toolNames} = buildCurriculumServer(
+      state,
+      this.store,
+      this.catalog,
+    );
+    const prompt = `${describeScope(enrichScope(scope, state, this.store))}${message}`;
 
     const stream = query({
       prompt,
@@ -78,9 +90,10 @@ export class ClaudeAgentRunner implements AgentRunner {
         mcpServers: {curriculum},
         // The semantic ops are pre-approved; everything else funnels through
         // canUseTool, which confines file tools to the session workspace.
-        allowedTools: CURRICULUM_TOOL_NAMES.map(
-          name => `mcp__curriculum__${name}`,
-        ),
+        // Derived from the actual tool array (not a hand-maintained parallel
+        // list) so a name can never silently drift out of sync — see
+        // buildCurriculumServer's return.
+        allowedTools: toolNames.map(name => `mcp__curriculum__${name}`),
         disallowedTools: [
           'Bash',
           'WebFetch',
@@ -341,25 +354,6 @@ function nearestExistingAncestor(target: string): string {
   return candidate;
 }
 
-const CURRICULUM_TOOL_NAMES = [
-  'get_curriculum',
-  'get_lesson',
-  'create_course',
-  'create_unit',
-  'create_lesson',
-  'update_lesson',
-  'insert_content',
-  'update_content',
-  'move_experience',
-  'remove_experience',
-  'search_existing_levels',
-  'attach_existing_level',
-  'create_widget',
-  'create_level',
-  'update_level',
-  'set_adaptive_policy',
-];
-
 function ok(payload: unknown) {
   return {
     content: [
@@ -386,20 +380,45 @@ function fail(error: unknown) {
 const draftId = (prefix: string) =>
   `draft-${prefix}-${randomUUID().slice(0, 8)}`;
 
-/** The semantic curriculum ops, closed over one turn's state. */
+/**
+ * The semantic curriculum ops, closed over one turn's state. Returns the
+ * MCP server alongside the tool names actually registered on it — the
+ * caller's `allowedTools` derives from `toolNames` rather than a
+ * hand-maintained parallel list, which is what a prior version of this file
+ * got wrong (`update_level_instructions` was defined here but absent from
+ * that list; harmless only because canUseTool's guardFileTool waves through
+ * every mcp__curriculum__* name regardless, which is also why the drift
+ * went unnoticed).
+ */
 function buildCurriculumServer(
   state: AuthoringState,
   store: SessionStore,
   catalog: LevelCatalog,
-) {
+): {server: ReturnType<typeof createSdkMcpServer>; toolNames: string[]} {
   const apply = (
     body: Parameters<AuthoringState['applyCurriculumChange']>[0],
   ) => state.applyCurriculumChange(body, 'agent');
 
-  return createSdkMcpServer({
-    name: 'curriculum',
-    version: '1.0.0',
-    tools: [
+  /** Appends the auto-narrated one-line check verdict (WOW plan §5 item 2)
+   * to a level-mutating tool's normal result, when the level's current
+   * wire properties can be checked. `properties` undefined (e.g. the level
+   * isn't registered yet) is a silent no-op — never a tool error over a
+   * narration nicety. */
+  const okWithCheck = (
+    payload: Record<string, unknown>,
+    properties: Record<string, unknown> | undefined,
+  ) => {
+    const base = ok(payload);
+    if (!properties || !isMazeFamilyLevel(properties)) {
+      return base;
+    }
+    const verdict = checkImportedMazeLevel({properties});
+    return {
+      content: [...base.content, {type: 'text' as const, text: oneLineCheckVerdict(verdict)}],
+    };
+  };
+
+  const tools = [
       tool(
         'get_curriculum',
         'Current curriculum outline: courses, units, lessons (with goals and experience counts).',
@@ -664,11 +683,14 @@ function buildCurriculumServer(
           if (!result.ok) {
             return fail(`level not created — ${result.reason}`);
           }
-          return ok({
-            levelId: result.levelId,
-            experienceId: result.experienceId,
-            levelNumericId: result.levelNumericId,
-          });
+          return okWithCheck(
+            {
+              levelId: result.levelId,
+              experienceId: result.experienceId,
+              levelNumericId: result.levelNumericId,
+            },
+            state.getLevelProperties(String(result.levelNumericId)),
+          );
         },
       ),
       tool(
@@ -702,19 +724,18 @@ function buildCurriculumServer(
           }
           const {experienceId, levelNumericId} = found;
           store.writeLevelDefinition(levelId, next);
-          state.registerLevelProperties({
-            [String(levelNumericId)]: buildMazeLevelWireProperties(
-              levelNumericId,
-              `draft:${levelId}`,
-              next,
-            ),
-          });
+          const wireProperties = buildMazeLevelWireProperties(
+            levelNumericId,
+            `draft:${levelId}`,
+            next,
+          );
+          state.registerLevelProperties({[String(levelNumericId)]: wireProperties});
           if (title !== undefined) {
             apply({op: 'updateLevel', experienceId, patch: {title}});
           } else {
             state.notifyLevelPropertiesChanged();
           }
-          return ok({levelId, levelNumericId});
+          return okWithCheck({levelId, levelNumericId}, wireProperties);
         },
       ),
       tool(
@@ -746,7 +767,12 @@ function buildCurriculumServer(
               ...(longInstructions !== undefined ? {longInstructions} : {}),
             },
           });
-          return ok({experienceId});
+          return okWithCheck(
+            {experienceId},
+            experience.levelNumericId === undefined
+              ? undefined
+              : state.getLevelProperties(String(experience.levelNumericId)),
+          );
         },
       ),
       tool(
@@ -767,8 +793,72 @@ function buildCurriculumServer(
           return ok({lessonId});
         },
       ),
-    ].map(withErrors),
-  });
+      tool(
+        'get_level',
+        "See a level's real contents: grid, toolbox, start/solution block programs (decoded to the same JSON shape create_level accepts), instructions, skin, goals, flower type, and the current check verdict. Works on any attached Maze/Karel-family level, imported or draft. Give experienceId (the selected experience, or one from get_lesson) or levelKey.",
+        {
+          experienceId: z.string().optional(),
+          levelKey: z.string().optional(),
+        },
+        async ({experienceId, levelKey}) => {
+          const experience = experienceId
+            ? findExperienceById(state, experienceId)
+            : levelKey
+              ? findExperienceByLevelKey(state, levelKey)
+              : undefined;
+          if (!experience) {
+            return fail('provide experienceId or levelKey identifying an attached level');
+          }
+          if (experience.kind !== 'existingLevel') {
+            return fail(
+              `experience ${experience.id} is not a level (kind: ${experience.kind})`,
+            );
+          }
+          if (experience.levelNumericId === undefined) {
+            return fail(`level ${experience.id} has no numeric id registered yet`);
+          }
+          const properties = state.getLevelProperties(String(experience.levelNumericId));
+          if (!properties) {
+            return fail(
+              `no level_properties registered for numeric id ${experience.levelNumericId}`,
+            );
+          }
+          return ok(
+            buildLevelView({
+              experience,
+              properties,
+              visuallyEdited: readVisuallyEdited(store, experience),
+            }),
+          );
+        },
+      ),
+      tool(
+        'check_level',
+        'Run the machine check on an attached Maze/Karel-family level: does the toolbox offer every block the solution uses, and — when the block set is fully simulatable — does the solution actually solve the grid/goal. Returns ok, mode (simulated = full run, palette = toolbox coverage only), and the reason when not ok.',
+        {experienceId: z.string()},
+        async ({experienceId}) => {
+          const experience = findExperienceById(state, experienceId);
+          if (!experience) {
+            return fail(`no experience ${experienceId}`);
+          }
+          if (experience.kind !== 'existingLevel' || experience.levelNumericId === undefined) {
+            return fail(`experience ${experienceId} is not a checkable level`);
+          }
+          const properties = state.getLevelProperties(String(experience.levelNumericId));
+          if (!properties) {
+            return fail(
+              `no level_properties registered for numeric id ${experience.levelNumericId}`,
+            );
+          }
+          return ok(checkImportedMazeLevel({properties}));
+        },
+      ),
+    ].map(withErrors);
+
+  return {
+    server: createSdkMcpServer({name: 'curriculum', version: '1.0.0', tools}),
+    toolNames: tools.map(t => t.name),
+  };
 }
 
 // tool() has no built-in error envelope; a thrown reducer error (bad id, bad
@@ -909,6 +999,10 @@ function experienceSummary(
       levelKey: experience.levelKey,
       levelType: experience.levelType,
       runtime: experience.runtime,
+      // Was missing entirely (WOW plan §1.3) — an agent reading get_lesson
+      // had no way to even know a level was worth a get_level call, let
+      // alone which numeric id to give it.
+      levelNumericId: experience.levelNumericId,
     };
   }
   const descriptor = state.findWidget(experience.widgetId);
@@ -944,6 +1038,7 @@ function truncate(text: string, max: number): string {
 function enrichScope(
   scope: AgentTurnInput['scope'],
   state: AuthoringState,
+  store: SessionStore,
 ): Parameters<typeof describeScope>[0] {
   const snapshot = state.getSnapshot();
   const course = snapshot.courses.find(c => c.id === scope.courseId);
@@ -956,5 +1051,77 @@ function enrichScope(
     unitName: unit?.displayName,
     lessonName: lesson?.displayName,
     experienceTitle: experience?.title,
+    experienceLevelDetail: experience && describeLevelDetail(experience, store),
   };
+}
+
+/**
+ * One line naming what kind of level is selected and whether get_level/
+ * update_level can actually edit it (WOW plan §3 item 1): a draft level's
+ * editability hinges on its on-disk typed definition surviving untouched by
+ * the visual editor (AuthoringState.ts's markDraftLevelVisuallyEdited), and
+ * an imported level has no such definition at all — the agent otherwise has
+ * no way to know which of "this level" it's looking at.
+ */
+function describeLevelDetail(
+  experience: Experience,
+  store: SessionStore,
+): string | undefined {
+  if (experience.kind !== 'existingLevel') {
+    return undefined;
+  }
+  const parts = [`${experience.levelType} level`];
+  if (experience.origin === 'draft') {
+    const levelId = experience.levelKey.startsWith('draft:')
+      ? experience.levelKey.slice('draft:'.length)
+      : undefined;
+    const definition = levelId ? store.readLevelDefinition(levelId) : undefined;
+    if (definition) {
+      parts.push(
+        definition.visuallyEdited
+          ? `draft (typed definition ${levelId}, visually edited — edit via the level editor, not update_level)`
+          : `draft (typed definition ${levelId}, editable via update_level)`,
+      );
+    } else {
+      parts.push('draft');
+    }
+  } else {
+    parts.push('imported (levelbuilder)');
+  }
+  if (experience.levelNumericId !== undefined) {
+    parts.push(`numericId ${experience.levelNumericId}`);
+  }
+  return parts.join(', ');
+}
+
+function findExperienceByLevelKey(
+  state: AuthoringState,
+  levelKey: string,
+): ExistingLevelExperience | undefined {
+  for (const course of state.getSnapshot().courses) {
+    for (const unit of course.units) {
+      for (const lesson of unit.lessons) {
+        for (const experience of lesson.experiences) {
+          if (experience.kind === 'existingLevel' && experience.levelKey === levelKey) {
+            return experience;
+          }
+        }
+      }
+    }
+  }
+  return undefined;
+}
+
+/** A draft Maze level's on-disk MazeLevelDefinition carries this flag once
+ * the visual level editor has touched it (AuthoringState.ts); an imported
+ * level never has such a definition, so it's always false there. */
+function readVisuallyEdited(
+  store: SessionStore,
+  experience: ExistingLevelExperience,
+): boolean {
+  if (experience.origin !== 'draft' || !experience.levelKey.startsWith('draft:')) {
+    return false;
+  }
+  const levelId = experience.levelKey.slice('draft:'.length);
+  return store.readLevelDefinition(levelId)?.visuallyEdited ?? false;
 }

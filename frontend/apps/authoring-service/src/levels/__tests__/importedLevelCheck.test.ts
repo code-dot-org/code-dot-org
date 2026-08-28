@@ -292,6 +292,27 @@ describe.skipIf(!repoRoot)('checkImportedMazeLevel against real .level files', (
     expect(result.note).toMatch(/no finish tile/);
     expect(result.note).toMatch(/not attempted/);
   });
+
+  // Real Course D Bee content — a goal-based (no finish tile) level using
+  // the maze_move/controls_repeat spelling rather than
+  // maze_moveForward/controls_repeat_dropdown. Pins the SIMULATABLE_REAL_TYPES
+  // extension: before it, this level's whole solution ("maze_move,
+  // controls_repeat not simulated") fell to a palette-only "not attempted"
+  // note despite being fully modelable — and it's exactly the shape get_level
+  // needs to decode to describe a real level's solution accurately.
+  it('fully simulates courseD_bee_nestedLoops1a_2024 (maze_move/controls_repeat spelling)', () => {
+    const result = checkImportedMazeLevel({
+      properties: readLevel(
+        'dashboard/config/levels/custom/maze/courseD_bee_nestedLoops1a_2024.level',
+      ),
+    });
+    expect(result).toEqual({
+      ok: true,
+      mode: 'simulated',
+      reasons: [],
+      note: expect.stringMatching(/no finish tile.*nectar_goal.*meets them/s),
+    });
+  });
 });
 
 describe('checkImportedMazeLevel — goal-based levels with no finish tile', () => {

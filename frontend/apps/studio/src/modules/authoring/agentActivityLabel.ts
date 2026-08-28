@@ -22,6 +22,8 @@ const TOOL_LABELS: Record<string, string> = {
   update_level: 'Updating level',
   update_level_instructions: 'Updating instructions',
   set_adaptive_policy: 'Setting tutor guidance',
+  get_level: 'Reading level',
+  check_level: 'Checking level',
 };
 
 /**

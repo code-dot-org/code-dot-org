@@ -16,7 +16,7 @@ Curriculum is Course -> Unit -> Lesson -> Experience. An Experience is one of:
 
 ## How to work
 
-- ALWAYS call get_curriculum first to see current state, and get_lesson before editing a lesson.
+- ALWAYS call get_curriculum first to see current state, get_lesson before editing a lesson, and get_level before editing or describing a level.
 - Whole-course requests: OUTLINE FIRST. Create the course, units, and lessons with goal/durationMinutes/outline/expectedOutcome on each lesson — but NO experiences. Stop there and tell the author to review the outline; they will open a lesson and say "build this lesson" when ready. Never realize all lessons of a course in one turn.
 - "Build this lesson": realize that one lesson into 3-6 experiences following its outline. Mix modalities: brief content, then hands-on (widget or existing level), then a check for understanding.
 - Small requests ("add a quick check here", "this is too hard for 4th graders"): make the minimal targeted change. Respect the scope and insert position the author selected, given in the message context.
@@ -57,6 +57,14 @@ Prefer real component-library components (above) over hand-rolled markup for any
 - \`.w-button .w-button--primary\` or \`.w-button--secondary\` for a plain \`<button>\`; \`.w-tag\` for a pill label; \`.w-card\` for a bordered panel; \`.w-feedback\` with \`.w-feedback--success\` / \`--error\` / \`--neutral\` for answer feedback.
 - Colors come from the injected tokens (e.g. \`var(--text-neutral-primary)\`, \`var(--background-brand-purple-primary)\`, \`var(--background-success-light)\`). No raw hex colors except inside an SVG asset.
 - Body text and headings already inherit the design-system font stack (\`var(--w-font-family)\`) and type scale — don't redeclare font-family on body/h1-h6 unless deviating on purpose.
+
+## Reading a level
+
+Before changing or describing "this level" (or any level named to you), call get_level(experienceId) — never guess or reconstruct a level's grid/toolbox/blocks from its title or instructions alone. It returns the grid (one digit string per row, legend included), toolbox, decoded start/solution programs, instructions, skin, goals, and the current check verdict. Works on any attached Maze/Karel-family level, imported or draft alike — not just ones you created. A level get_level can't decode a grid/program for (Fish, Music, a video, ...) still returns its instructions; say so rather than inventing puzzle content for it.
+
+check_level(experienceId) re-runs the same machine check on demand (e.g. "is this level solvable?", "check this level"). Report the verdict honestly: mode 'simulated' means the whole run was proven; mode 'palette' only proved the toolbox offers every block used — say "palette-only, full solvability not attempted" rather than implying you verified it plays correctly.
+
+After create_level, update_level, or update_level_instructions succeeds, the tool result carries one extra line: "check: OK (simulated)", "check: OK (palette only — ...)", or "check: FAILED (mode) — reason". Relay this in your reply — "verified solvable in N blocks" beats "done" — and never claim more certainty than the mode supports.
 
 ## Levels (Maze)
 
@@ -107,6 +115,7 @@ export function describeScope(scope: {
   unitName?: string;
   lessonName?: string;
   experienceTitle?: string;
+  experienceLevelDetail?: string;
 }): string {
   const lines: string[] = [];
   if (scope.courseId) {
@@ -119,8 +128,9 @@ export function describeScope(scope: {
     lines.push(`lesson: ${scope.lessonId} (${scope.lessonName ?? ''})`);
   }
   if (scope.experienceId) {
+    const detail = scope.experienceLevelDetail ? ` — ${scope.experienceLevelDetail}` : '';
     lines.push(
-      `selected experience: ${scope.experienceId} (${scope.experienceTitle ?? ''})`,
+      `selected experience: ${scope.experienceId} (${scope.experienceTitle ?? ''})${detail}`,
     );
   }
   if (scope.insertPosition !== undefined) {
