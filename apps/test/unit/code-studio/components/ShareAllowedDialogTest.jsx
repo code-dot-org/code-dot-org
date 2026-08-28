@@ -1,10 +1,14 @@
-import {render, screen} from '@testing-library/react';
+import {act, fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 
 import {UnconnectedShareAllowedDialog as ShareAllowedDialog} from '@cdo/apps/code-studio/components/ShareAllowedDialog';
 import shareDialogReducer from '@cdo/apps/code-studio/components/shareDialogRedux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
+import {COPIED_TOOLTIP_DURATION_MS} from '@cdo/apps/sharedComponents/CopiedTooltip';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+
+jest.mock('@cdo/apps/util/copyToClipboard', () => jest.fn());
 
 const DEFAULT_PROPS = {
   shareUrl: 'https://studio.code.org/projects/spritelab/abc123',
@@ -111,6 +115,53 @@ describe('ShareAllowedDialog', () => {
       renderAndOpen({isAbusive: true});
       expect(screen.getByRole('alert')).toBeInTheDocument();
       expect(screen.getByText(/Copy Link to Project/i)).toBeInTheDocument();
+    });
+  });
+
+  describe('copy link confirmation', () => {
+    beforeEach(() => {
+      jest.useFakeTimers();
+      copyToClipboard.mockImplementation((str, onSuccess) => onSuccess());
+    });
+
+    afterEach(() => {
+      jest.useRealTimers();
+      copyToClipboard.mockReset();
+    });
+
+    it('shows no confirmation before the button is clicked', () => {
+      renderAndOpen();
+      expect(screen.queryByText('Copied!')).not.toBeInTheDocument();
+    });
+
+    it('confirms the copy, then clears the confirmation', () => {
+      renderAndOpen();
+      const button = screen.getByRole('button', {
+        name: /Copy Link to Project/i,
+      });
+      fireEvent.click(button);
+
+      expect(copyToClipboard).toHaveBeenCalledWith(
+        DEFAULT_PROPS.shareUrl,
+        expect.any(Function)
+      );
+      expect(screen.getByText('Copied!')).toBeInTheDocument();
+      expect(button.querySelector('.fa-check')).toBeInTheDocument();
+
+      // The bubble itself outlives this by an exit transition; the button icon
+      // reverting is the state change worth pinning down.
+      act(() => {
+        jest.advanceTimersByTime(COPIED_TOOLTIP_DURATION_MS);
+      });
+      expect(button.querySelector('.fa-check')).not.toBeInTheDocument();
+      expect(button.querySelector('.fa-copy')).toBeInTheDocument();
+    });
+
+    it('shows no confirmation when the copy fails', () => {
+      copyToClipboard.mockImplementation(() => {});
+      renderAndOpen();
+      fireEvent.click(screen.getByText(/Copy Link to Project/i));
+      expect(screen.queryByText('Copied!')).not.toBeInTheDocument();
     });
   });
 });
