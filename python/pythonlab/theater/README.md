@@ -121,7 +121,7 @@ same name and the same arguments:
 
 ```python
 from theater import scene            # scene.draw_ellipse(...), scene.play()
-from theater import draw_ellipse     # draw_ellipse(...), play()
+from theater import draw_ellipse, play     # draw_ellipse(...), play()
 ```
 
 The functions act on one scene, built on the first call. It is the same object

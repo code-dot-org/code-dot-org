@@ -155,7 +155,7 @@ def test_scene_name_refers_to_the_submodule():
 
 
 def test_no_exported_name_shadows_a_submodule():
-  # Only `scene` may be both and export and a submodule, and there it
+  # Only `scene` may be both an export and a submodule, and there it
   # is the module that wins.
   package_dir = pathlib.Path(theater.__file__).parent
   submodules = {path.stem for path in package_dir.glob('*.py')} - {'__init__'}
