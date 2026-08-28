@@ -478,6 +478,31 @@ describe('AuthoringState overrideLevelDefinition previous capture', () => {
     expect(second).toMatchObject({previous: {startDirection: '1'}});
   });
 
+  // G1: flower_type needed no special-cased capture logic once it was added
+  // to LevelDefinitionPatch — capturePreviousDefinition's generic
+  // Object.keys(patch) loop (AuthoringState.ts) already covers any key the
+  // schema accepts.
+  it('captures the prior flower_type as `previous` on a second override, same as any other field', () => {
+    const state = stateWithLevel();
+    state.applyCurriculumChange(
+      {
+        op: 'overrideLevelDefinition',
+        experienceId: 'lb:some_maze_level',
+        patch: {flower_type: 'redWithNectar'},
+      },
+      'author',
+    );
+    const second = state.applyCurriculumChange(
+      {
+        op: 'overrideLevelDefinition',
+        experienceId: 'lb:some_maze_level',
+        patch: {flower_type: 'purpleNectarHidden'},
+      },
+      'author',
+    );
+    expect(second).toMatchObject({previous: {flower_type: 'redWithNectar'}});
+  });
+
   it('ignores a client-supplied `previous` and recomputes it authoritatively', () => {
     const state = stateWithLevel();
     const change = state.applyCurriculumChange(
