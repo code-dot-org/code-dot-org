@@ -574,7 +574,13 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
                 )}
                 <WithTooltip
                   tooltipProps={{
-                    text: 'Settings',
+                    // In author mode this sits right next to the new
+                    // authoring chrome (Level tab, panel Save/Discard) —
+                    // "Settings" alone reads as level settings. It's the
+                    // same player dialog (block/site theme) either way;
+                    // only the label changes, and only in author mode, so
+                    // the student runtime is untouched.
+                    text: editing?.authorMode ? 'Player settings' : 'Settings',
                     tooltipId: 'settings-tooltip',
                     size: 'xs',
                     direction: 'onTop',
@@ -585,7 +591,9 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
                     type="secondary"
                     color="gray"
                     onClick={() => setSettingsOpen(true)}
-                    ariaLabel="Settings"
+                    ariaLabel={
+                      editing?.authorMode ? 'Player settings' : 'Settings'
+                    }
                     isIconOnly={true}
                     icon={{
                       iconName: 'gear',

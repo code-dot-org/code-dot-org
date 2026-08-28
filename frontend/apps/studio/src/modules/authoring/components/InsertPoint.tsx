@@ -1,5 +1,5 @@
 import {Button, Menu, MenuItem, Popover, Typography} from '@mui/material';
-import {useEffect, useRef, useState} from 'react';
+import {useCallback, useEffect, useRef, useState} from 'react';
 
 import {useEscapeKeyHandler} from '@code-dot-org/component-library/common/hooks';
 import Tags from '@code-dot-org/component-library/tags';
@@ -272,6 +272,12 @@ function LevelSearch({
   const [searching, setSearching] = useState(false);
   const [picking, setPicking] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  // Separate from `error` (the attach-existing-level failure below): a
+  // search failure needs its own retry affordance, not just a message —
+  // see the effect's comment for why "intermittent, until reload" made
+  // this worth a dedicated retry rather than "type again to re-trigger
+  // the debounce".
+  const [searchError, setSearchError] = useState<string | null>(null);
   const [variantsMenu, setVariantsMenu] = useState<{
     familyKey: string;
     anchorEl: HTMLElement;
@@ -283,22 +289,30 @@ function LevelSearch({
     inputRef.current?.focus();
   }, []);
 
+  // Extracted so the "Retry" button can re-run exactly this attempt
+  // without the author having to retype the query — the underlying
+  // failure (see server.ts's keepAliveTimeout comment) was intermittent
+  // and unrelated to what was typed, so retyping was never what fixed it.
+  const runSearch = useCallback((q: string) => {
+    setSearching(true);
+    setSearchError(null);
+    authoringApi
+      .searchLevels(q)
+      .then(setResults)
+      .catch(() => setSearchError('Level search failed.'))
+      .finally(() => setSearching(false));
+  }, []);
+
   useEffect(() => {
     const q = query.trim();
     if (!q) {
       setResults([]);
+      setSearchError(null);
       return;
     }
-    setSearching(true);
-    const timer = setTimeout(() => {
-      authoringApi
-        .searchLevels(q)
-        .then(setResults)
-        .catch(() => setError('Level search failed.'))
-        .finally(() => setSearching(false));
-    }, SEARCH_DEBOUNCE_MS);
+    const timer = setTimeout(() => runSearch(q), SEARCH_DEBOUNCE_MS);
     return () => clearTimeout(timer);
-  }, [query]);
+  }, [query, runSearch]);
 
   const pick = async (level: LevelCatalogEntry) => {
     if (picking) {
@@ -325,7 +339,26 @@ function LevelSearch({
         onChange={e => setQuery(e.target.value)}
       />
       {searching && <Typography variant="body4">Searching…</Typography>}
-      {!searching && query.trim() && results.length === 0 && (
+      {searchError && (
+        <div className={styles.levelSearchError}>
+          <Typography
+            variant="body4"
+            role="status"
+            className={styles.inlineError}
+          >
+            {searchError}
+          </Typography>
+          <Button
+            type="button"
+            size="small"
+            variant="outlined"
+            onClick={() => runSearch(query.trim())}
+          >
+            Retry
+          </Button>
+        </div>
+      )}
+      {!searching && !searchError && query.trim() && results.length === 0 && (
         <Typography variant="body4">No levels match “{query}”.</Typography>
       )}
       <ul className={styles.levelSearchResults}>

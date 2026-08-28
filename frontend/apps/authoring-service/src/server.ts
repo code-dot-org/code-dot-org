@@ -4,6 +4,7 @@ import {cors} from 'hono/cors';
 import {streamSSE} from 'hono/streaming';
 import {randomUUID} from 'node:crypto';
 import fs from 'node:fs';
+import type {Server as HttpServer} from 'node:http';
 import path from 'node:path';
 import {z} from 'zod';
 
@@ -432,10 +433,32 @@ function watchWidgetSources(
   }
 }
 
-serve({fetch: app.fetch, port: PORT, hostname: '127.0.0.1'}, info => {
-  console.log(
-    `[authoring-service] session ${SESSION_ID} at ${store.root}\n` +
-      `[authoring-service] ${catalog.size} attachable level(s) indexed\n` +
-      `[authoring-service] listening on http://localhost:${info.port}`,
-  );
-});
+const httpServer = serve(
+  {fetch: app.fetch, port: PORT, hostname: '127.0.0.1'},
+  info => {
+    console.log(
+      `[authoring-service] session ${SESSION_ID} at ${store.root}\n` +
+        `[authoring-service] ${catalog.size} attachable level(s) indexed\n` +
+        `[authoring-service] listening on http://localhost:${info.port}`,
+    );
+  },
+);
+
+// Gap #10 of the parity challenge: "Add existing level" search intermittently
+// got net::ERR_FAILED across every /authoring-api/* route until a page
+// reload. Node's http.Server defaults keepAliveTimeout to 5s (headersTimeout
+// to 6s) — well inside how long Vite's dev proxy agent (apps/studio/vite.
+// config.ts) can hold an idle keep-alive socket open before reusing it for
+// the next request. When the server closes that socket first, the proxy's
+// next reuse attempt races it and the browser sees an opaque ERR_FAILED,
+// indistinguishable from every other request on the same connection pool —
+// which is why it looked like ALL routes had gone down at once rather than
+// one request failing. Raising both well above any realistic idle window is
+// the standard mitigation (Node's own docs recommend keepAliveTimeout above
+// whatever's in front of it); headersTimeout must stay above
+// keepAliveTimeout or Node's own assertion trips.
+// serve()'s return type is a union with the http2 server classes (for
+// callers that pass http2 serverOptions); this call passes none, so it's
+// always the plain node:http Server these two properties live on.
+(httpServer as HttpServer).keepAliveTimeout = 65_000;
+(httpServer as HttpServer).headersTimeout = 66_000;

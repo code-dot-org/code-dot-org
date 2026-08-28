@@ -260,6 +260,23 @@ export function useLevelDraft({
     }
   }, [mapDraftPatch]);
 
+  // A validator banner (checkResult) describes the state at the moment it
+  // was produced. Any further edit — another cell painted, a toolbox chip
+  // added, a new start direction — makes it stale immediately, not just
+  // "possibly wrong until the next Save/Check": left alone, a failure
+  // banner would keep naming a problem the author already fixed, or a
+  // success banner would keep claiming a state they've since broken.
+  // Clearing it here (not re-running the check — that's a network
+  // round-trip, not something to fire on every keystroke) is the honest
+  // middle ground: no stale verdict, without silently re-verifying.
+  useEffect(() => {
+    if (dirty) {
+      setCheckResult(null);
+    }
+    // `dirty` is derived from `draft` every render, so listing only `draft`
+    // here is exhaustive in substance, not just in the linter's ledger.
+  }, [draft]);
+
   // Every workspace mutation while a mode is active reports a fresh
   // capture here. Student-start's capture IS the Save draft (whatever's on
   // the canvas at Save time becomes startBlocksXml); my-solution's capture
