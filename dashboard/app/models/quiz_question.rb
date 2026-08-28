@@ -57,14 +57,25 @@ class QuizQuestion < ApplicationRecord
     placements = QuizQuestionPlacement.where(quiz_question_id: question_ids).
       includes(level: {script_levels: {script: :unit_group_units}})
 
-    usage = question_ids.index_with {false}
-    placements.each do |placement|
-      next if usage[placement.quiz_question_id]
-      published = placement.level.script_levels.any? do |sl|
+    # Grouped by level (not iterated per placement) because the check below
+    # isn't fully covered by the includes above: Unit#launched? goes
+    # through get_original_unit_group -> UnitGroup.get_from_cache, a
+    # separate lookup by id, not a preloaded association - so two
+    # placements on the same level would otherwise repeat the same
+    # UnitGroup query once each, scaling with placement count instead of
+    # unique-level count.
+    question_ids_by_level = placements.group_by(&:level).transform_values {|ps| ps.map(&:quiz_question_id)}
+    published_level_ids = question_ids_by_level.each_key.select do |level|
+      level.script_levels.any? do |sl|
         unit = sl.script
         unit && (unit.launched? || unit.get_published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.sunsetting)
       end
-      usage[placement.quiz_question_id] = true if published
+    end.to_set(&:id)
+
+    usage = question_ids.index_with {false}
+    question_ids_by_level.each do |level, ids|
+      next unless published_level_ids.include?(level.id)
+      ids.each {|id| usage[id] = true}
     end
     usage
   end

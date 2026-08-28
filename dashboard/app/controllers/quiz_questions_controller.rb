@@ -37,7 +37,7 @@ class QuizQuestionsController < ApplicationController
     published_usage = QuizQuestion.published_unit_usage(question_ids)
     pages_by_question_id = @level.placements.where(quiz_question_id: question_ids).pluck(:quiz_question_id, :page).to_h
 
-    render json: questions.map do |question|
+    result = questions.map do |question|
       quiz_question_json(
         question,
         attached_to_other_quizzes: other_quiz_ids.include?(question.id),
@@ -45,6 +45,7 @@ class QuizQuestionsController < ApplicationController
         page: pages_by_question_id[question.id]
       ).merge(attached: attached_ids.include?(question.id))
     end
+    render json: result
   rescue ActiveRecord::RecordNotFound
     render json: []
   end
