@@ -1,7 +1,4 @@
 from .instrument import Instrument as Instrument
-# The module is playback.py rather than play.py because this package exports a
-# play() function: binding it here would shadow a `play` submodule for
-# `import theater.play`, leaving the attribute and sys.modules disagreeing.
 from .playback import play_scenes as play_scenes
 from .scene import Scene as Scene
 # The functions below act on an implicit default scene, so student code can call

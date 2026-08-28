@@ -134,9 +134,6 @@ def test_reset_drops_the_recording():
 
 
 def test_reset_drops_the_drawing_style():
-  # Style lives on the scene, so the reset that clears the actions has to clear
-  # the colors with them; a run starting on the previous run's fill color would
-  # be a subtler bug than one starting on its drawing.
   scene.set_fill_color('blue')
   scene.reset_default_scene()
   scene.draw_rectangle(0, 0, 10, 10)
@@ -158,9 +155,7 @@ def test_scene_name_refers_to_the_submodule():
 
 
 def test_no_exported_name_shadows_a_submodule():
-  # theater exports a play() function, so a submodule named play.py would end up
-  # with theater.play the function and sys.modules['theater.play'] the module --
-  # two different `play`s in one program. Only `scene` may be both, and there it
+  # Only `scene` may be both and export and a submodule, and there it
   # is the module that wins.
   package_dir = pathlib.Path(theater.__file__).parent
   submodules = {path.stem for path in package_dir.glob('*.py')} - {'__init__'}

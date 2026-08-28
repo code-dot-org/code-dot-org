@@ -1,6 +1,4 @@
 from .instrument import Instrument, as_instrument
-# scene.py records actions and playback.py renders them, so this is not a
-# cycle: playback.py reaches only into support/.
 from .playback import play_scenes
 from .support import actions
 from .support.audio import as_samples, read_samples_from_file
@@ -299,9 +297,6 @@ _default_scene = None
 
 def _get_default_scene():
   """Return the implicit scene the functions below act on, building it lazily.
-
-  Nothing is built at import: a program that imports theater without drawing
-  anything should not be holding a scene.
   """
   global _default_scene
   if _default_scene is None:
@@ -311,9 +306,6 @@ def _get_default_scene():
 
 def reset_default_scene():
   """Drop the implicit scene, so the next call starts a fresh one.
-
-  Python Lab keeps one interpreter for the lifetime of the tab, so a scene left
-  over from the previous run would replay that run's drawing and sound.
   """
   global _default_scene
   _default_scene = None
