@@ -55,12 +55,12 @@ prerequisite for rostering — but running it before PR 3 reaches teachers is wh
 
 ### 2. Phase 1 — Bulk Migration Script (optional operational tool)
 
-- [ ] 2.1 Write `bin/oneoff/classlink/classlink_v2_migration.rb` modeled on `bin/oneoff/clever/clever_v3_migration.rb`, with dry-run (default) and commit modes
-- [ ] 2.2 Iterate ClassLink users lacking a v2 auth option; for each, call ClassLink `v2/my/info` with the stored `oauth_token`, extract `SourcedId` and `TenantId`, and create the v2 option via `Services::Classlink::V2AuthOptionBuilder`. **Do not attempt to pre-filter on token validity** — every stored ClassLink credential has `expires: false`, a null expiration, and no refresh token, so there is no detectable expiry condition to filter on. Attempt the call and treat failure as a skip
-- [ ] 2.3 Log skipped records (call failed, already-migrated) and report counts. A high failure rate is informational, not a blocker: login-time migration (task 1.8) converges every remaining user on their next sign-in, which is why this script is an accelerator rather than a requirement
+- [x] 2.1 Write `bin/oneoff/classlink/classlink_v2_migration.rb` modeled on `bin/oneoff/clever/clever_v3_migration.rb`, with dry-run (default) and commit modes
+- [x] 2.2 Iterate ClassLink users lacking a v2 auth option; for each, call ClassLink `v2/my/info` with the stored `oauth_token`, extract `SourcedId` and `TenantId`, and create the v2 option via `Services::Classlink::V2AuthOptionBuilder`. **Do not attempt to pre-filter on token validity** — every stored ClassLink credential has `expires: false`, a null expiration, and no refresh token, so there is no detectable expiry condition to filter on. Attempt the call and treat failure as a skip
+- [x] 2.3 Log skipped records (call failed, already-migrated) and report counts. A high failure rate is informational, not a blocker: login-time migration (task 1.8) converges every remaining user on their next sign-in, which is why this script is an accelerator rather than a requirement
 - [ ] 2.4 Operational (recommended before Phase 2 ships): dry-run in production, review output, then run in commit mode; verify v2 record counts
 - [ ] 2.5 Monitor count of users lacking v2 records over subsequent weeks (login-time migration converges the remainder)
-- [ ] 2.6 Document the rollback procedure: delete ClassLink v2 auth options for users who also retain a v1 record (never for v2-only users)
+- [x] 2.6 Document the rollback procedure: delete ClassLink v2 auth options for users who also retain a v1 record (never for v2-only users)
 
 ## PR 3 — Rostering: One Roster client, section model, endpoints, and frontend
 
