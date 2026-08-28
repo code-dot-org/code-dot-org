@@ -353,4 +353,19 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
       authentication_id: ''
     )
   end
+
+  test 'Classlink.parse splits on the first pipe only' do
+    # SourcedId may itself contain a pipe; AuthIdGenerator guarantees TenantId cannot.
+    assert_equal ['2222', 'a|b'], AuthenticationOption::Classlink.parse('2222|a|b')
+  end
+
+  test 'Classlink.version_for returns v2 for a pipe-joined id' do
+    assert_equal AuthenticationOption::Classlink::VERSION[:v2],
+      AuthenticationOption::Classlink.version_for('2222|5678_T5678-0005')
+  end
+
+  test 'Classlink.version_for returns nil for a legacy UserId' do
+    assert_nil AuthenticationOption::Classlink.version_for('59777133')
+    assert_nil AuthenticationOption::Classlink.version_for(59_777_133)
+  end
 end
