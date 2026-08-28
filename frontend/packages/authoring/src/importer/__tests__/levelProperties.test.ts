@@ -2,6 +2,7 @@ import {describe, expect, it} from 'vitest';
 
 import {
   buildFishLevelProperties,
+  buildMazeLevelProperties,
   buildMusicLevelProperties,
 } from '../levelProperties';
 import {parseLevelXml} from '../levelXml';
@@ -100,5 +101,42 @@ describe('buildMusicLevelProperties', () => {
       parsed.properties,
     );
     expect(properties.offerBrowserTts).toBe(true);
+  });
+});
+
+describe('buildMazeLevelProperties', () => {
+  // Pins the fix for Author Mode gate #2/#3: packages/labs/maze/src/Bee.ts
+  // reads level.flowerType/nectarGoal/honeyGoal — camelCase — but a real
+  // .level file's config sets flower_type/nectar_goal/honey_goal in
+  // snake_case. The raw `...properties` spread this function does for
+  // everything else leaves those keys snake_case, so the engine's own
+  // `level.flowerType` read always saw undefined; each needs its own
+  // camelCase assignment.
+  it('camelizes flower_type/nectar_goal/honey_goal/min_collected for the engine to read', () => {
+    const properties = buildMazeLevelProperties(1, 'level-key', 'Maze', {
+      properties: {
+        flower_type: 'purpleNectarHidden',
+        nectar_goal: '3',
+        honey_goal: '1',
+        min_collected: '4',
+      },
+    });
+    expect(properties.flowerType).toBe('purpleNectarHidden');
+    expect(properties.nectarGoal).toBe('3');
+    expect(properties.honeyGoal).toBe('1');
+    expect(properties.minCollected).toBe('4');
+    // The raw snake_case keys still ride along (harmless passthrough) —
+    // this only pins that the camelCase names the engine reads exist too.
+    expect(properties.flower_type).toBe('purpleNectarHidden');
+  });
+
+  it('leaves the camelCase goal fields undefined when the level sets none', () => {
+    const properties = buildMazeLevelProperties(1, 'level-key', 'Maze', {
+      properties: {},
+    });
+    expect(properties.flowerType).toBeUndefined();
+    expect(properties.nectarGoal).toBeUndefined();
+    expect(properties.honeyGoal).toBeUndefined();
+    expect(properties.minCollected).toBeUndefined();
   });
 });

@@ -112,8 +112,11 @@ export function buildMusicLevelProperties(
  * carried through raw — the maze-lab studio adapter converts them to the
  * modern JSON block-state Blockly needs at mount time (Blockly's XML->JSON
  * converter needs a browser `DOMParser`; the importer runs in Node). Raw
- * properties are spread first so game-specific config the engine reads
- * directly (`flower_type`, `start_direction`, …) survives untouched.
+ * properties are spread first for anything with no engine reader at all
+ * (harmless passthrough), but every field the engine actually reads
+ * (`packages/labs/maze/src/{Bee,MazeController}.ts`) needs the camelCase
+ * name explicitly set below — the engine never reads the snake_case wire
+ * name, so leaving it to the spread serves a key nothing looks at.
  */
 export function buildMazeLevelProperties(
   id: number,
@@ -140,6 +143,14 @@ export function buildMazeLevelProperties(
     skin: properties.skin,
     ideal: properties.ideal,
     startDirection: properties.start_direction,
+    // Bee's flower-count visibility and the Karel-family goal-based win
+    // condition (packages/labs/maze/src/{Bee,Farmer}.ts) — see this
+    // function's doc comment; the raw spread above serves `flower_type` etc.
+    // verbatim, but nothing reads that snake_case key.
+    flowerType: properties.flower_type,
+    nectarGoal: properties.nectar_goal,
+    honeyGoal: properties.honey_goal,
+    minCollected: properties.min_collected,
     startBlocksXml: parsed.startBlocksXml,
     toolboxBlocksXml: parsed.toolboxBlocksXml,
     solutionBlocksXml: parsed.solutionBlocksXml,

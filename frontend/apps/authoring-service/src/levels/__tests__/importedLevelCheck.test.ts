@@ -301,9 +301,28 @@ describe('checkImportedMazeLevel — goal-based levels with no finish tile', () 
     [0, 1, 1, 0],
     [0, 0, 0, 0],
   ];
-  // A bee solution using nectar/honey collection blocks — both are
-  // SIMULATABLE_REAL_TYPES no-ops, so this reaches the grid/finish check
-  // rather than the "unsupported block type" palette-only branch.
+  // Start (1,1) faces east onto the flower at (2,1); back west to (1,1),
+  // then south to the hive at (1,2) — see simulateGoalBasedMazeProgram's
+  // doc comment for the coordinate convention. Three getNectar plus two
+  // makeHoney actually meets nectar_goal:'3'/honey_goal:'2' below, not just
+  // the map's static capacity — this pins the fix for Author Mode gate #2:
+  // a solution that only visited the map without collecting anything used
+  // to still pass this check (it only ever verified the MAP could satisfy
+  // the goal, never that the SOLUTION did).
+  const beeSolution = [
+    {type: 'moveForward'},
+    {type: 'getNectar'},
+    {type: 'getNectar'},
+    {type: 'getNectar'},
+    {type: 'turnRight'},
+    {type: 'turnRight'},
+    {type: 'moveForward'},
+    {type: 'turnLeft'},
+    {type: 'moveForward'},
+    {type: 'makeHoney'},
+    {type: 'makeHoney'},
+  ] as const;
+
   const beeInput = (
     overrides: Partial<ImportedLevelCheckInput['properties']> = {},
   ): ImportedLevelCheckInput =>
@@ -325,18 +344,33 @@ describe('checkImportedMazeLevel — goal-based levels with no finish tile', () 
         ],
         [{tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}],
       ]),
-      toolboxBlocksXml: buildToolboxBlocksXml(['moveForward', 'turnRight']),
-      solutionBlocksXml: buildSolutionBlocksXml([{type: 'moveForward'}]),
+      toolboxBlocksXml: buildToolboxBlocksXml([
+        'moveForward',
+        'turnLeft',
+        'turnRight',
+        'getNectar',
+        'makeHoney',
+      ]),
+      solutionBlocksXml: buildSolutionBlocksXml([...beeSolution]),
       nectar_goal: '3',
       honey_goal: '2',
       ...overrides,
     });
 
-  it('passes (not simulated) when the map has at least as much nectar/honey as the declared goals', () => {
+  it('simulates the solution once the map can satisfy the declared goals, and passes when it actually collects enough', () => {
     const result = checkImportedMazeLevel(beeInput());
     expect(result.ok).toBe(true);
-    expect(result.mode).toBe('palette');
-    expect(result.note).toMatch(/goal-based Karel level/);
+    expect(result.mode).toBe('simulated');
+    expect(result.note).toMatch(/nectar_goal.*honey_goal.*min_collected/);
+  });
+
+  it('fails when the map is consistent but the solution never collects enough', () => {
+    const result = checkImportedMazeLevel(
+      beeInput({solutionBlocksXml: buildSolutionBlocksXml([{type: 'moveForward'}])}),
+    );
+    expect(result.ok).toBe(false);
+    expect(result.mode).toBe('simulated');
+    expect(result.reasons[0]).toMatch(/nectar_goal is 3.*collects 0 nectar/);
   });
 
   it('fails when the map has less nectar than nectar_goal declares', () => {

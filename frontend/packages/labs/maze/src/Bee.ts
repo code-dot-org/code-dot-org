@@ -30,6 +30,8 @@ class Bee extends Gatherer<BeeCell, BeeItemDrawer> {
   }[];
   overrideStepSpeed: number;
   defaultFlowerColor_: string;
+  private nectarGoal_: number;
+  private honeyGoal_: number;
 
   constructor(maze: MazeController, config: SubtypeConfiguration) {
     super(maze, config);
@@ -38,6 +40,8 @@ class Bee extends Gatherer<BeeCell, BeeItemDrawer> {
 
     this.defaultFlowerColor_ =
       level.flowerType === 'redWithNectar' ? 'red' : 'purple';
+    this.nectarGoal_ = Number(level.nectarGoal) || 0;
+    this.honeyGoal_ = Number(level.honeyGoal) || 0;
 
     // at each location, tracks whether user checked to see if it was a flower or
     // honeycomb using an if block
@@ -46,6 +50,37 @@ class Bee extends Gatherer<BeeCell, BeeItemDrawer> {
     this.overrideStepSpeed = 2;
     this.honey_ = 0;
     this.nectars_ = [];
+  }
+
+  /**
+   * Goal-based win check (no finish tile — see Validator.succeeded()):
+   * met the nectar/honey goals and, for any cloud/purple flower a real level
+   * paints, checked it via user code before collecting.
+   * @override
+   */
+  succeeded(): boolean {
+    if (this.getHoneyCount() < this.honeyGoal_ ||
+        this.getNectarCount() < this.nectarGoal_) {
+      return false;
+    }
+    if (!this.checkedAllClouded() || !this.checkedAllPurple()) {
+      return false;
+    }
+    return super.succeeded();
+  }
+
+  /**
+   * @override
+   * Quantum maps (multiple possible grids, from a variable-range flower or
+   * cloud) implicitly require every dirt cell drained; a fixed single-grid
+   * level only cares about the nectar/honey goal checked in succeeded()
+   * above.
+   */
+  collectedEverything(): boolean {
+    if (!this.getMap()?.hasMultiplePossibleGrids()) {
+      return true;
+    }
+    return super.collectedEverything();
   }
 
   private getMap(): MazeMap<BeeCell> | undefined {

@@ -22,7 +22,11 @@ class Validator {
       );
     }
 
-    return false;
+    // No finish tile — a real Karel-family level (Bee especially) wins by
+    // meeting a goal (nectar/honey collected, dirt cleared, ...) instead of
+    // reaching a spot on the grid. Subtype.succeeded() is the per-skin goal
+    // check (Subtype's own default: no goal-based win condition).
+    return this.controller.subtype.succeeded();
   }
 
   shouldCheckSuccessOnMove() {

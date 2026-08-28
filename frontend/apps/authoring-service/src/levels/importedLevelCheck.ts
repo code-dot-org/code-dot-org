@@ -1,4 +1,5 @@
 import {
+  simulateGoalBasedMazeProgram,
   simulateMazeProgram,
   type MazeBlockNode,
   type MazeBlockType,
@@ -360,16 +361,20 @@ function parseGoal(value: unknown): number | undefined {
 
 /**
  * Real Karel levels (Bee especially) legitimately have no finish tile —
- * completion is judged by collected-item goals, not position. The ported
- * engine doesn't model that (`Validator.succeeded` only ever compares
- * position to the grid's finish tile — see mazeLevel.ts's module header),
- * so there's no run to simulate toward. The honest check this checker CAN
- * make instead: the map actually contains at least as much of each
- * declared goal item as the level claims to require — a static
- * grid-consistency check, exactly what production's own save-time gate
- * does (dashboard/app/models/levels/karel.rb#parse_maze, checked against
- * `min_collected`). No goal fields declared at all means nothing to check
- * — reported as an honest "not attempted", not a failure.
+ * completion is judged by collected-item goals, not position (the ported
+ * engine's `Bee.succeeded()`/`Farmer.succeeded()` model this at runtime;
+ * this checker's job is a build-time lint, separate from that). The check
+ * here is a static grid-consistency check: the map actually contains at
+ * least as much of each declared goal item as the level claims to require
+ * — exactly what production's own save-time gate does
+ * (dashboard/app/models/levels/karel.rb#parse_maze, checked against
+ * `min_collected`). `checkImportedMazeLevel`'s caller runs this FIRST, then
+ * (once the map itself can satisfy the goal) simulates the solution
+ * program's actual nectar/honey collection against the same goal via
+ * `simulateGoalBasedMazeProgram` — the two are complementary, not
+ * redundant: a map with enough total nectar can still have a solution that
+ * never visits the right flowers. No goal fields declared at all means
+ * nothing to check — reported as an honest "not attempted", not a failure.
  */
 function checkGoalConsistency(
   properties: Record<string, unknown>,
@@ -505,9 +510,21 @@ export function checkImportedMazeLevel(
     };
   }
 
+  const programRoot =
+    solutionHead.attrs.type === 'when_run'
+      ? (() => {
+          const next = child(solutionHead, 'next');
+          return next ? childBlock(next) : undefined;
+        })()
+      : solutionHead;
+  const program = programRoot ? toMazeBlockChain(programRoot) : [];
+  const startDirection =
+    parseInt(String(properties.startDirection ?? properties.start_direction ?? '0'), 10) ||
+    0;
+
   // Real Bee (and other Karel-skin) levels legitimately have no finish
-  // tile — see checkGoalConsistency's doc comment. Route those to a
-  // grid-consistency check instead of simulateMazeProgram, which would
+  // tile — see checkGoalConsistency's doc comment. Route those to the
+  // goal-based checks instead of simulateMazeProgram, which would
   // otherwise reject every one of them for the missing finish tile
   // (inspectGrid's requirement — correct for the AI-generation gate that
   // function also serves, where a finish tile is the only win condition
@@ -523,17 +540,45 @@ export function checkImportedMazeLevel(
         ],
       };
     }
-    return checkGoalConsistency(properties);
+    // The map's static item totals must already cover the declared
+    // goal(s) — a level whose map can't possibly satisfy nectar_goal/
+    // honey_goal/min_collected fails here regardless of what the solution
+    // does.
+    const consistency = checkGoalConsistency(properties);
+    if (!consistency.ok || !program) {
+      return consistency;
+    }
+    const nectarGoal = parseGoal(properties.nectar_goal);
+    const honeyGoal = parseGoal(properties.honey_goal);
+    const minCollected = parseGoal(properties.min_collected);
+    if (
+      nectarGoal === undefined &&
+      honeyGoal === undefined &&
+      minCollected === undefined
+    ) {
+      // Nothing declared to simulate the solution against either —
+      // checkGoalConsistency's own "not attempted" note already covers
+      // this.
+      return consistency;
+    }
+    const simmed = simulateGoalBasedMazeProgram(grid, startDirection, program, {
+      nectarGoal,
+      honeyGoal,
+      minCollected,
+    });
+    if (!simmed.ok) {
+      return {ok: false, mode: 'simulated', reasons: [simmed.reason]};
+    }
+    return {
+      ok: true,
+      mode: 'simulated',
+      reasons: [],
+      note:
+        'no finish tile on this grid; the solution was simulated against ' +
+        "the declared nectar_goal/honey_goal/min_collected and meets them.",
+    };
   }
 
-  const programRoot =
-    solutionHead.attrs.type === 'when_run'
-      ? (() => {
-          const next = child(solutionHead, 'next');
-          return next ? childBlock(next) : undefined;
-        })()
-      : solutionHead;
-  const program = programRoot ? toMazeBlockChain(programRoot) : [];
   if (!program) {
     return {
       ok: true,
@@ -545,9 +590,6 @@ export function checkImportedMazeLevel(
     };
   }
 
-  const startDirection =
-    parseInt(String(properties.startDirection ?? properties.start_direction ?? '0'), 10) ||
-    0;
   const result = simulateMazeProgram(grid, startDirection, program);
   if (!result.ok) {
     return {ok: false, mode: 'simulated', reasons: [result.reason]};

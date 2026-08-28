@@ -8,7 +8,9 @@ import {
   buildToolboxBlocksXml,
   CREATABLE_MAZE_SKINS,
   MazeLevelDefinitionSchema,
+  simulateGoalBasedMazeProgram,
   verifyMazeLevelSolvable,
+  type MazeBlockNode,
   type MazeLevelDefinition,
 } from '../mazeLevel.js';
 
@@ -457,5 +459,85 @@ describe('buildBlankMazeLevelDefinition', () => {
     const definition = buildBlankMazeLevelDefinition({rows: 1, cols: 999});
     const parsed = MazeLevelDefinitionSchema.safeParse(definition);
     expect(parsed.success).toBe(true);
+  });
+});
+
+describe('simulateGoalBasedMazeProgram', () => {
+  // No finish tile (value 3) anywhere — a real Bee level's ordinary shape,
+  // Author Mode gate #2. Start (1,1) faces east onto an open cell (2,1);
+  // there's nothing to collect there, so the goal check is what actually
+  // gates success, independent of position.
+  const grid = [
+    [0, 0, 0, 0],
+    [0, 2, 1, 0],
+    [0, 0, 0, 0],
+  ];
+
+  it('succeeds once the program collects at least the declared goal(s)', () => {
+    const program: MazeBlockNode[] = [
+      {type: 'getNectar'},
+      {type: 'getNectar'},
+    ];
+    expect(
+      simulateGoalBasedMazeProgram(grid, 1, program, {nectarGoal: 2}),
+    ).toEqual({ok: true});
+  });
+
+  it('fails when the program collects less than the declared goal', () => {
+    const program: MazeBlockNode[] = [{type: 'getNectar'}];
+    const result = simulateGoalBasedMazeProgram(grid, 1, program, {
+      nectarGoal: 2,
+    });
+    expect(result.ok).toBe(false);
+    expect(!result.ok && result.reason).toMatch(
+      /nectar_goal is 2 but the solution only collects 1 nectar/,
+    );
+  });
+
+  it('checks honeyGoal and minCollected independently of nectarGoal', () => {
+    const program: MazeBlockNode[] = [
+      {type: 'getNectar'},
+      {type: 'makeHoney'},
+    ];
+    expect(
+      simulateGoalBasedMazeProgram(grid, 1, program, {
+        nectarGoal: 1,
+        honeyGoal: 1,
+        minCollected: 2,
+      }),
+    ).toEqual({ok: true});
+    expect(
+      simulateGoalBasedMazeProgram(grid, 1, program, {honeyGoal: 2}).ok,
+    ).toBe(false);
+    expect(
+      simulateGoalBasedMazeProgram(grid, 1, program, {minCollected: 3}).ok,
+    ).toBe(false);
+  });
+
+  it('fails on a wall hit, same as the finish-tile simulator', () => {
+    const program: MazeBlockNode[] = [
+      {type: 'moveForward'},
+      {type: 'moveForward'},
+      {type: 'moveForward'},
+    ];
+    const result = simulateGoalBasedMazeProgram(grid, 1, program, {
+      nectarGoal: 0,
+    });
+    expect(result.ok).toBe(false);
+    expect(!result.ok && result.reason).toMatch(/hits a wall/);
+  });
+
+  it('rejects a grid with no start tile', () => {
+    const result = simulateGoalBasedMazeProgram(
+      [
+        [0, 0],
+        [0, 0],
+      ],
+      1,
+      [],
+      {nectarGoal: 0},
+    );
+    expect(result.ok).toBe(false);
+    expect(!result.ok && result.reason).toMatch(/must contain a start tile/);
   });
 });

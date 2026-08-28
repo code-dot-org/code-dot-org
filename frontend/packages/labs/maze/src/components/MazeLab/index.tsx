@@ -409,8 +409,17 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
     // levelProperties itself is unsafely typed as always-defined (see
     // useLevelProperties) but can be undefined before the host resolves the
     // current level — optional-chain the read so this effect's dependency
-    // array never throws during that window.
-  }, [levelProperties?.startDirection, mapDraft]);
+    // array never throws during that window. flowerType/nectarGoal/
+    // honeyGoal join startDirection here for the same reason: Bee's
+    // constructor reads all three once (defaultFlowerColor_, nectarGoal_,
+    // honeyGoal_) — there's no live prop path for any of them either.
+  }, [
+    levelProperties?.startDirection,
+    levelProperties?.flowerType,
+    levelProperties?.nectarGoal,
+    levelProperties?.honeyGoal,
+    mapDraft,
+  ]);
 
   const skinBlocks = blocks(skinFor(skins, levelProperties?.skin || 'birds'));
 

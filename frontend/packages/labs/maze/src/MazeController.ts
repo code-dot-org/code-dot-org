@@ -83,6 +83,12 @@ export interface MazeData extends MazeLevelSubProperties {
   /** Bee */
   flowerType?: string;
   fastGetNectarAnimation?: boolean;
+  /** Bee's honey/nectar goals, and every Karel-family skin's generic
+   * min-collected goal (dashboard/app/models/levels/karel.rb) — wire values
+   * arrive as strings, coerced with Number() at the point of use. */
+  nectarGoal?: number | string;
+  honeyGoal?: number | string;
+  minCollected?: number | string;
 }
 
 /** Maze controller configuration */

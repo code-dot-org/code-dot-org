@@ -291,6 +291,16 @@ class Subtype<T extends Cell, U extends Drawer<T>> extends EventEmitter {
   }
 
   /**
+   * Goal-based win check, for a level with no finish tile — Validator.
+   * succeeded() only calls this when `this.finish` is unset (a level WITH a
+   * finish tile wins by position alone, checked there). No goal-based win
+   * condition by default; Gatherer and Farmer override this.
+   */
+  succeeded(): boolean {
+    return false;
+  }
+
+  /**
    * When this returns true, this reset all tiles already. When this returns
    * false, the controller is meant to do it themselves.
    */

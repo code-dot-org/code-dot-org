@@ -26,16 +26,19 @@ import {buildMazeLevelProperties} from '../boot/levelCatalog.js';
  * movement (forward, left/right turns, counted repeats) plus a subset of the
  * Karel-family skins' action blocks.
  *
- * Win condition, all skins alike: `Validator.succeeded()` only ever checks
- * Pegman's position against `subtype.finish` — every Karel skin
- * (Bee/Farmer/Harvester/Collector/Planter) shares the single `Validator`
- * class, none overrides it. So a generated level's grid must carry an
- * explicit finish tile (as today), and any skin-specific action block
- * (fill/dig/nectar/honey/collect) is provably a simulation no-op for
- * *reaching the finish*: read packages/labs/maze/src/api.ts — none of them
- * moves Pegman, turns Pegman, or calls `executionInfo.terminateWithValue`.
- * That's what makes it sound to add them to the palette without modeling
- * dirt/nectar/gem state at all.
+ * Win condition, for a GENERATED level (this module's own gate): a finish
+ * tile is still required here, even though the ported engine's `Bee`/
+ * `Farmer` now also win by goal (nectar/honey collected, dirt cleared —
+ * `Subtype.succeeded()`, called from `Validator.succeeded()` whenever
+ * `subtype.finish` is unset). Requiring one keeps this gate simple: any
+ * skin-specific action block (fill/dig/nectar/honey/collect) is provably a
+ * simulation no-op for *reaching the finish*: read
+ * packages/labs/maze/src/api.ts — none of them moves Pegman, turns Pegman,
+ * or calls `executionInfo.terminateWithValue`. That's what makes it sound
+ * to add them to the palette without modeling dirt/nectar/gem state at
+ * all. `simulateGoalBasedMazeProgram` below is the counterpart for a
+ * goal-based grid — used only by `checkImportedMazeLevel`, gating a real,
+ * already-authored level, never this module's own generation gate.
  *
  * Karel skins actually enabled here — moveForward/turnLeft/turnRight/repeat
  * plus:
@@ -316,6 +319,12 @@ interface SimState {
   terminated: boolean;
   succeeded: boolean;
   wallHitAt?: {x: number; y: number; direction: number};
+  // Execution counts for the two Bee action blocks — a goal-based level
+  // (checkGoalConsistency's no-finish-tile branch) checks these against
+  // nectar_goal/honey_goal/min_collected. Zero for the finish-tile path,
+  // which never reads them.
+  nectarCollected: number;
+  honeyMade: number;
 }
 
 // Mirrors api.ts's move(): fails (and freezes further movement, matching
@@ -371,14 +380,20 @@ function runProgram(
           runProgram(grid, finish, node.children, state);
         }
         break;
+      case 'getNectar':
+        // Verified against api.ts to never move/turn/terminate — a sound
+        // no-op for the reach-the-finish win condition (finish-tile path);
+        // counted for the goal-based path (simulateGoalBasedMazeProgram).
+        state.nectarCollected++;
+        break;
+      case 'makeHoney':
+        state.honeyMade++;
+        break;
       case 'fill':
       case 'dig':
-      case 'getNectar':
-      case 'makeHoney':
       case 'collect':
-        // Skin action blocks: verified against api.ts to never move Pegman,
-        // turn Pegman, or terminate execution — a sound no-op for the
-        // reach-the-finish win condition (see the module header).
+        // Same no-op guarantee as above; no goal-based win condition reads
+        // these yet (Farmer/Collector are out of this gate's scope).
         break;
     }
   }
@@ -427,6 +442,8 @@ export function simulateMazeProgram(
     d: startDirection,
     terminated: false,
     succeeded: false,
+    nectarCollected: 0,
+    honeyMade: 0,
   };
   runProgram(grid, finish, program, state);
   if (!state.terminated) {
@@ -457,6 +474,117 @@ export function simulateMazeProgram(
   }
 
   return {ok: true};
+}
+
+/**
+ * Goal declared for a goal-based (no finish tile) Karel level —
+ * nectar_goal/honey_goal/min_collected, dashboard/app/models/levels/
+ * karel.rb — checked against `simulateGoalBasedMazeProgram`'s counted
+ * getNectar/makeHoney executions, not the map's static item totals (that's
+ * `checkGoalConsistency`'s separate, complementary check in
+ * importedLevelCheck.ts).
+ */
+export interface MazeGoalRequirements {
+  nectarGoal?: number;
+  honeyGoal?: number;
+  minCollected?: number;
+}
+
+/**
+ * Simulates `program` against a goal-based grid (no finish tile — a real
+ * Bee level's ordinary shape; see mazeLevel.ts's module header for why the
+ * finish-tile-only `simulateMazeProgram` above can't gate these) and checks
+ * the resulting nectar/honey/total counts against `goals`. Reuses
+ * `runProgram`'s move/turn/repeat/getNectar/makeHoney walk verbatim — the
+ * only difference from `simulateMazeProgram` is the win check itself: no
+ * finish tile to reach, so `finish` is a coordinate the grid can never
+ * contain (position never doubles as a win condition here), and success is
+ * judged from `state.nectarCollected`/`honeyMade` once the walk completes
+ * cleanly (no wall hit).
+ */
+export function simulateGoalBasedMazeProgram(
+  grid: number[][],
+  startDirection: number,
+  program: MazeBlockNode[],
+  goals: MazeGoalRequirements,
+): GateResult {
+  const width = grid[0]?.length ?? 0;
+  if (width < MIN_GRID_DIMENSION || grid.some(row => row.length !== width)) {
+    return {
+      ok: false,
+      reason: 'grid rows must all be the same length (a rectangular grid).',
+    };
+  }
+
+  let start: {x: number; y: number} | undefined;
+  for (let y = 0; y < grid.length; y++) {
+    for (let x = 0; x < width; x++) {
+      if (grid[y][x] === SquareType.START) {
+        if (start) {
+          return {
+            ok: false,
+            reason: 'grid has more than one start tile (value 2).',
+          };
+        }
+        start = {x, y};
+      }
+    }
+  }
+  if (!start) {
+    return {
+      ok: false,
+      reason:
+        'grid must contain a start tile (value 2) for a goal-based level.',
+    };
+  }
+
+  // No cell on a MIN_GRID_DIMENSION-or-larger grid can be (-1, -1) — a
+  // sentinel `finish` runProgram's shared move logic will never reach, so
+  // this walk's only way to end is running off the program or hitting a
+  // wall, never an early "reached the goal" position check.
+  const UNREACHABLE = {x: -1, y: -1};
+  const state: SimState = {
+    x: start.x,
+    y: start.y,
+    d: startDirection,
+    terminated: false,
+    succeeded: false,
+    nectarCollected: 0,
+    honeyMade: 0,
+  };
+  runProgram(grid, UNREACHABLE, program, state);
+
+  if (state.wallHitAt) {
+    return {
+      ok: false,
+      reason:
+        `running the solution program: the character hits a wall at row ` +
+        `${state.wallHitAt.y} col ${state.wallHitAt.x} while facing ` +
+        `${DIRECTION_NAME[state.wallHitAt.direction]} and stops there.`,
+    };
+  }
+
+  const reasons: string[] = [];
+  if (goals.nectarGoal !== undefined && state.nectarCollected < goals.nectarGoal) {
+    reasons.push(
+      `nectar_goal is ${goals.nectarGoal} but the solution only collects ` +
+        `${state.nectarCollected} nectar.`,
+    );
+  }
+  if (goals.honeyGoal !== undefined && state.honeyMade < goals.honeyGoal) {
+    reasons.push(
+      `honey_goal is ${goals.honeyGoal} but the solution only makes ` +
+        `${state.honeyMade} honey.`,
+    );
+  }
+  const totalCollected = state.nectarCollected + state.honeyMade;
+  if (goals.minCollected !== undefined && totalCollected < goals.minCollected) {
+    reasons.push(
+      `min_collected is ${goals.minCollected} but the solution only ` +
+        `collects ${totalCollected} total.`,
+    );
+  }
+  return reasons.length > 0 ? {ok: false, reason: reasons.join(' ')} : {ok: true};
 }
 
 /**
