@@ -25,6 +25,8 @@ import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
+import {recordStepMarker} from './aiLog';
+import AiLogDialog from './AiLogDialog';
 import {loadLesson, resetLessonProgress} from './api';
 import {generateLessonArc} from './arcGenerator';
 import {judgeBranchCondition} from './branchJudge';
@@ -259,6 +261,7 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
   const [evaluating, setEvaluating] = useState(false);
   const [error, setError] = useState<string | undefined>();
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const [aiLogOpen, setAiLogOpen] = useState(false);
   // True while EmbeddedLab generates AI starter code for this step —
   // Continue is gated on it, so a step can't complete before the work
   // it's about exists.
@@ -417,6 +420,14 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
     },
     [lesson]
   );
+
+  // Mark step arrivals in the AI log, so the log dialog can group the
+  // calls by the step the student was on.
+  useEffect(() => {
+    if (progressLoading) return;
+    const arrived = lessonRef.current.steps[currentIndex];
+    if (arrived) recordStepMarker(arrived.title);
+  }, [currentIndex, progressLoading]);
 
   // Seed an opening message whenever the active checkpoint changes.
   // Wait for the saved-progress load to land first, so we don't fire an
@@ -950,24 +961,44 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
         <header className={styles.tutorHeader}>
           <div className={styles.lessonTitleRow}>
             <div className={styles.lessonTitle}>{lesson.title}</div>
-            <WithTooltip
-              tooltipProps={{
-                text: 'Controls',
-                tooltipId: 'tt-controls-gear',
-                size: 'xs',
-                direction: 'onBottom',
-              }}
-            >
-              <button
-                type="button"
-                className={styles.demoNavArrow}
-                onClick={() => setSettingsOpen(true)}
-                aria-label="Open controls"
-                aria-describedby="tt-controls-gear"
+            <div className={styles.headerIconRow}>
+              <WithTooltip
+                tooltipProps={{
+                  text: 'Controls',
+                  tooltipId: 'tt-controls-gear',
+                  size: 'xs',
+                  direction: 'onBottom',
+                }}
               >
-                <FontAwesomeV6Icon iconName="gear" iconStyle="solid" />
-              </button>
-            </WithTooltip>
+                <button
+                  type="button"
+                  className={styles.demoNavArrow}
+                  onClick={() => setSettingsOpen(true)}
+                  aria-label="Open controls"
+                  aria-describedby="tt-controls-gear"
+                >
+                  <FontAwesomeV6Icon iconName="gear" iconStyle="solid" />
+                </button>
+              </WithTooltip>
+              <WithTooltip
+                tooltipProps={{
+                  text: 'AI Log — see what goes to and from the AI',
+                  tooltipId: 'tt-ai-log',
+                  size: 'xs',
+                  direction: 'onBottom',
+                }}
+              >
+                <button
+                  type="button"
+                  className={styles.demoNavArrow}
+                  onClick={() => setAiLogOpen(true)}
+                  aria-label="Open the AI Log"
+                  aria-describedby="tt-ai-log"
+                >
+                  <FontAwesomeV6Icon iconFamily="kit" iconName="ai-bot-solid" />
+                </button>
+              </WithTooltip>
+            </div>
           </div>
           <div className={styles.checkpointMeta}>
             <span>
@@ -1204,6 +1235,8 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
           </div>
         )}
       </aside>
+
+      {aiLogOpen && <AiLogDialog onClose={() => setAiLogOpen(false)} />}
 
       {settingsOpen && (
         <DemoSettingsDialog

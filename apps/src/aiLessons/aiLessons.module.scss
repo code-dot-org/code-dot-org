@@ -685,6 +685,173 @@ textarea {
   border-top: 1px solid var(--borders-neutral-primary);
 }
 
+// ---- AI log dialog ----
+
+.headerIconRow {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.aiLogDialog {
+  padding: 20px 24px;
+  width: min(860px, 92vw);
+  max-width: none;
+}
+
+.aiLogList {
+  margin-top: 12px;
+  max-height: 62vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-right: 4px;
+}
+
+.aiLogStepMarker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-neutral-tertiary);
+
+  // Rule line filling the rest of the row.
+  &::after {
+    content: '';
+    flex: 1;
+    border-top: 1px solid var(--borders-neutral-primary);
+  }
+}
+
+.aiLogRow {
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 6px;
+  background: var(--background-neutral-primary);
+}
+
+.aiLogRowHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  color: var(--text-neutral-primary);
+  text-align: left;
+}
+
+.aiLogChevron {
+  font-size: 11px;
+  color: var(--text-neutral-tertiary);
+  width: 12px;
+}
+
+.aiLogAgentIcon {
+  color: var(--text-brand-teal-primary);
+  width: 16px;
+  text-align: center;
+}
+
+.aiLogLabel {
+  font-weight: 600;
+}
+
+.aiLogModel {
+  flex: 1;
+  font-size: 11px;
+  color: var(--text-neutral-tertiary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.aiLogStatus {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  flex: none;
+}
+
+.aiLogStatusPending {
+  color: var(--text-neutral-tertiary);
+}
+
+.aiLogStatusSuccess {
+  color: var(--text-success-primary);
+}
+
+.aiLogStatusError {
+  color: var(--text-error-primary);
+}
+
+.aiLogDetail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 4px 12px 12px 34px;
+  border-top: 1px solid var(--borders-neutral-light);
+}
+
+.aiLogColumnTitle {
+  margin: 8px 0 6px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-neutral-secondary);
+}
+
+.aiLogFieldTitle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 8px 0 2px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-neutral-tertiary);
+}
+
+// Expand/collapse caret next to a truncating section title.
+.aiLogCaret {
+  background: none;
+  border: none;
+  padding: 0 4px;
+  cursor: pointer;
+  font-size: 10px;
+  line-height: 1;
+  color: var(--text-neutral-tertiary);
+
+  &:hover {
+    color: var(--text-neutral-primary);
+  }
+}
+
+.aiLogText {
+  margin: 0;
+  padding: 8px 10px;
+  border-radius: 4px;
+  background: var(--background-neutral-secondary);
+  color: var(--text-neutral-primary);
+  font-size: 12px;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.aiLogTextError {
+  color: var(--text-error-primary);
+}
+
 .demoSettingsStepRow {
   display: flex;
   align-items: center;

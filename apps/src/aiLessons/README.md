@@ -380,8 +380,13 @@ They're validated (JSON shape, unique ids, resolvable branch targets) by
 - "Check my work" button + auto-check on lab Run/Play. The tutor
   receives the live source snapshot and returns `stay` (with feedback)
   or `advance` (which navigates to the next checkpoint).
-- Demo nav arrows in the tutor sidebar (Back / Skip to next) bypass
-  tutor approval for presentations.
+- Demo step navigation lives in the Controls dialog (gear in the
+  header) and bypasses tutor approval for presentations.
+- AI log dialog (terminal icon next to the gear): every LLM call the
+  page makes, tagged by agent, grouped by step-arrival markers, with
+  status (in progress / success / failed) and expandable request +
+  response.  `aiLog.ts` keeps the in-memory store; the same tap feeds
+  the browser-console groups.
 - Tutor turns are structured via `Output.object` + zod; the model
   cannot emit free-form prose that confuses the navigation logic.
 
