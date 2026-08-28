@@ -52,7 +52,7 @@ import {
 } from './overlay';
 import ProgressRing from './ProgressRing';
 import QuestionFlow from './QuestionFlow';
-import {Link} from './router';
+import {Link, useNavigate} from './router';
 import SkillHub, {pathProgress} from './SkillHub';
 import {
   AnswerRecord,
@@ -263,6 +263,13 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
   // Continue is gated on it, so a step can't complete before the work
   // it's about exists.
   const [starterGenerating, setStarterGenerating] = useState(false);
+  // Snapshot writes still in flight — the final event persist runs an
+  // LLM summary and is deliberately unawaited.  The celebrate page's
+  // Back link waits on these so the lesson list reads finished state,
+  // not the pre-completion snapshot.
+  const pendingSavesRef = useRef<Promise<unknown>[]>([]);
+  const [leavingCelebrate, setLeavingCelebrate] = useState(false);
+  const navigate = useNavigate();
   const transcriptRef = useRef<HTMLDivElement>(null);
   const pageRef = useRef<HTMLDivElement>(null);
   const [pageHeight, setPageHeight] = useState<string>('100vh');
@@ -369,7 +376,7 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
   // hold on to the returned snapshot so subsequent events can append to
   // its history rather than start fresh.
   const persistProgressEvent = useCallback(
-    async (
+    (
       type: 'run' | 'checkpoint-completed',
       checkpointIndex: number,
       work?: string,
@@ -377,32 +384,36 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
         path?: string[];
         currentStepId?: string;
         branchOptionId?: string;
+        completed?: boolean;
       }
     ) => {
       if (!lesson.id) return;
-      try {
-        const snapshot = await recordProgressEvent(lesson.id, {
-          type,
-          checkpointIndex,
-          lesson,
-          work,
-          previous: progressRef.current,
-          // Ride the latest checklist verdicts and completion set on
-          // every event so updates between events aren't lost for long.
-          checklist: checklistRef.current,
-          completedStepIds: completedRef.current,
-          // Stamp the run's mode so the very first snapshot carries it —
-          // resume restores it (see the load effect).
-          adaptivityMode: adaptivityModeRef.current,
-          ...position,
-        });
-        progressRef.current = snapshot;
-      } catch (e) {
-        // Already logged inside recordProgressEvent; swallow here so we
-        // don't surface progress-save failures to the student.
+      const save = (async () => {
+        try {
+          const snapshot = await recordProgressEvent(lesson.id!, {
+            type,
+            checkpointIndex,
+            lesson,
+            work,
+            previous: progressRef.current,
+            // Ride the latest checklist verdicts and completion set on
+            // every event so updates between events aren't lost for long.
+            checklist: checklistRef.current,
+            completedStepIds: completedRef.current,
+            // Stamp the run's mode so the very first snapshot carries
+            // it — resume restores it (see the load effect).
+            adaptivityMode: adaptivityModeRef.current,
+            ...position,
+          });
+          progressRef.current = snapshot;
+        } catch (e) {
+          // Already logged inside recordProgressEvent; swallow here so
+          // we don't surface progress-save failures to the student.
 
-        console.warn('Progress persist failed', e);
-      }
+          console.warn('Progress persist failed', e);
+        }
+      })();
+      pendingSavesRef.current.push(save);
     },
     [lesson]
   );
@@ -498,11 +509,13 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
   const finishLesson = useCallback(() => {
     setPhase('celebrate');
     if (lessonRef.current.id) {
-      saveSnapshotExtras(lessonRef.current.id, progressRef.current, {
-        completed: true,
-      }).then(saved => {
-        if (saved) progressRef.current = saved;
-      });
+      pendingSavesRef.current.push(
+        saveSnapshotExtras(lessonRef.current.id, progressRef.current, {
+          completed: true,
+        }).then(saved => {
+          if (saved) progressRef.current = saved;
+        })
+      );
     }
   }, []);
 
@@ -656,6 +669,10 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
         path: destinationId ? [...path, destinationId] : path,
         currentStepId: destinationId ?? step.id,
         branchOptionId: selectedOptionId,
+        // The completed flag must ride THIS write: it's slow (LLM
+        // summary) and unawaited, so finishLesson's separate quick write
+        // races it and would be clobbered by this one's stale snapshot.
+        completed: decision.kind === 'end' ? true : undefined,
       });
 
       // Rubric steps get a process observation on completion.  Fire and
@@ -892,7 +909,32 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
         <h1>You did it!</h1>
         <p>{lesson.title}</p>
         <p>
-          <Link href="/ai_lessons">Back to lessons</Link>
+          <Link
+            href="/ai_lessons"
+            onClick={e => {
+              // Plain clicks wait for in-flight snapshot writes (the
+              // final event persist runs an LLM summary) so the lesson
+              // list reads the completed status, not the old one.
+              // Modifier/middle clicks keep native new-tab behavior.
+              if (
+                e.metaKey ||
+                e.ctrlKey ||
+                e.shiftKey ||
+                e.altKey ||
+                e.button !== 0
+              ) {
+                return;
+              }
+              e.preventDefault();
+              if (leavingCelebrate) return;
+              setLeavingCelebrate(true);
+              Promise.allSettled(pendingSavesRef.current).then(() =>
+                navigate('/ai_lessons')
+              );
+            }}
+          >
+            {leavingCelebrate ? 'Saving your progress…' : 'Back to lessons'}
+          </Link>
         </p>
       </div>
     );

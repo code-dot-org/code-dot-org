@@ -136,6 +136,14 @@ const LessonsListPage: React.FunctionComponent = () => {
     setError(undefined);
     try {
       await resetLessonProgress(lesson.id);
+      // Reflect the wipe in place: back to not-started, no active mode.
+      setLessons(prev =>
+        (prev || []).map(l =>
+          l.id === lesson.id
+            ? {...l, status: 'not_started' as const, active_mode: null}
+            : l
+        )
+      );
     } catch (e) {
       setError(`Could not reset ${label}: ${(e as Error).message}`);
     } finally {

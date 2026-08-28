@@ -263,6 +263,11 @@ interface RecordOptions {
   // The mode this run is playing in, stamped on every event so the very
   // first snapshot already carries it.
   adaptivityMode?: AdaptivityMode;
+  // True when the lesson ends with this event.  Riding the event rather
+  // than a separate extras write matters: this write is slow (LLM
+  // summary) and unawaited, so a separate completed write would race it
+  // and lose.
+  completed?: boolean;
 }
 
 // Merge extra fields (observations, checklist) into the latest snapshot
@@ -356,7 +361,7 @@ export async function recordProgressEvent(
     mastery: options.previous?.mastery,
     // Sticky flags: a revisit after finishing must not un-complete the
     // lesson, and the run's mode survives events that don't restate it.
-    completed: options.previous?.completed,
+    completed: options.completed ?? options.previous?.completed,
     adaptivityMode: options.adaptivityMode ?? options.previous?.adaptivityMode,
   };
 
