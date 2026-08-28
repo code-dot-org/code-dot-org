@@ -1,0 +1,97 @@
+# Common workflow for execution of continuous integration for the widgets
+# catalog package. Three jobs: build (turbo build + lint + typecheck + unit
+# test), gates (rebuild each widget through the shared buildWidget and
+# assert its recorded hashes, contract-gate results, and version bump still
+# hold), and artifacts (upload the built documents so a reviewer can open
+# the real thing without running the authoring service).
+#
+# No Playwright job yet: reviewer screenshots and a real a11y gate against
+# the rendered iframe are deferred to a later pass (widget PR flow plan,
+# pass 7), so this lane doesn't yet claim anything beyond the static gates
+# in contractGates.ts.
+name: Widgets-Catalog-CI
+
+on:
+  workflow_call:
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            frontend
+            .github
+
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+
+      - name: Build, Lint, Typecheck, Test
+        run: yarn turbo run release:dryrun --filter=@code-dot-org/widgets-catalog
+        working-directory: ./frontend
+
+  gates:
+    # Sequence after build so the turbo cache is warm.
+    needs: build
+    runs-on: ubuntu-24.04
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            frontend
+            .github
+
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+
+      - name: Fetch staging tip for the version-bump check
+        # Depth 1 is enough: checkVersionBumps (widgets-catalog/src/versionBump.ts)
+        # diffs straight against origin/staging's tree, not a merge-base, so
+        # it never needs shared ancestry with this (also shallow) checkout.
+        run: git fetch --depth=1 origin staging
+        working-directory: ./frontend
+
+      - name: Reproducibility, contract, and version-bump gates
+        # KNOWN WATCH ITEM (widget PR flow plan, risk #2): docHash
+        # reproducibility across machines is unproven until this step has
+        # actually run on a GitHub-hosted runner. A sourceHash match with a
+        # docHash mismatch points at the build output itself — an esbuild
+        # platform binary or a workspace dependency resolving to something
+        # other than what `toolchain` in widget.json claims — rather than
+        # at a forgotten `widgets:rehash`; the failure message reports both
+        # hashes and the built document's byte count for that comparison.
+        run: yarn workspace @code-dot-org/widgets-catalog test:gates
+        working-directory: ./frontend
+
+  artifacts:
+    needs: [build, gates]
+    # Build and upload even if `gates` failed: a hash mismatch or contract
+    # violation is exactly when a reviewer most wants to open the built
+    # document, not only when everything already passed.
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-24.04
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            frontend
+            .github
+
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+
+      - name: Build catalog documents
+        run: yarn turbo run build --filter=@code-dot-org/widgets-catalog
+        working-directory: ./frontend
+
+      - name: Upload built widget documents
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: widgets-catalog-dist
+          path: frontend/packages/widgets-catalog/dist/
+          retention-days: 7

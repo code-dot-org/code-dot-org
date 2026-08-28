@@ -7,9 +7,15 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-import {computeWidgetArtifact, listWidgetSlugs} from '../src/buildCatalog.js';
+import {
+  computeWidgetArtifact,
+  listWidgetSlugs,
+  PACKAGE_ROOT,
+} from '../src/buildCatalog.js';
+import {checkVersionBumps} from '../src/versionBump.js';
 
 let failureCount = 0;
+const currentVersions: Record<string, string> = {};
 
 function fail(slug: string, message: string): void {
   failureCount += 1;
@@ -24,6 +30,7 @@ async function checkWidget(slug: string): Promise<void> {
     fail(slug, error instanceof Error ? error.message : String(error));
     return;
   }
+  currentVersions[slug] = artifact.manifest.version;
 
   if (artifact.sourceHash !== artifact.manifest.sourceHash) {
     fail(
@@ -63,6 +70,23 @@ async function checkWidget(slug: string): Promise<void> {
 const slugs = listWidgetSlugs();
 for (const slug of slugs) {
   await checkWidget(slug);
+}
+
+const versionBumpResult = checkVersionBumps(
+  PACKAGE_ROOT,
+  slugs,
+  currentVersions,
+  {baseRef: process.env.WIDGET_VERSION_BASE_REF},
+);
+if (versionBumpResult.skipped) {
+  console.log(
+    `[test:gates] version-bump check skipped: ${versionBumpResult.skipReason}`,
+  );
+} else {
+  for (const message of versionBumpResult.failures) {
+    failureCount += 1;
+    console.error(`[test:gates] ${message}`);
+  }
 }
 
 if (failureCount > 0) {
