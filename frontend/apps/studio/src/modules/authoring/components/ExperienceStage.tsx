@@ -83,7 +83,7 @@ interface ExperienceStageProps {
    * state comment for why this crosses through here rather than living in
    * LevelRail or the mounted lab directly. Maze-family only. */
   selectedPaintToolId?: string;
-  onMapDraftChange?: (patch: {serialized_maze: string; maze: string}) => void;
+  onMapDraftChange?: (patch: {serialized_maze: string; maze: string; initial_dirt: string}) => void;
   /** The left rail's toolbox-tray draft, live — see LessonPlayer's
    * `toolboxDraftXml` state comment. Maze-family only. */
   toolboxOverride?: Toolbox;
@@ -181,7 +181,7 @@ function ExistingLevelStage({
   selectedSection?: PanelSection;
   onSectionClick?: (section: PanelSection) => void;
   selectedPaintToolId?: string;
-  onMapDraftChange?: (patch: {serialized_maze: string; maze: string}) => void;
+  onMapDraftChange?: (patch: {serialized_maze: string; maze: string; initial_dirt: string}) => void;
   toolboxOverride?: Toolbox;
   workspaceMode?: 'studentStart' | 'mySolution';
   workspaceOverride?: BlocklySerialization;
@@ -283,7 +283,7 @@ function LabHostStage({
   selectedSection?: PanelSection;
   onSectionClick?: (section: PanelSection) => void;
   selectedPaintToolId?: string;
-  onMapDraftChange?: (patch: {serialized_maze: string; maze: string}) => void;
+  onMapDraftChange?: (patch: {serialized_maze: string; maze: string; initial_dirt: string}) => void;
   toolboxOverride?: Toolbox;
   workspaceMode?: 'studentStart' | 'mySolution';
   workspaceOverride?: BlocklySerialization;

@@ -273,17 +273,108 @@ describe.skipIf(!repoRoot)('checkImportedMazeLevel against real .level files', (
   // maze-lab engine's single Validator class only ever checks position
   // against subtype.finish (see mazeLevel.ts's module header) — so this
   // level is, today, unwinnable through the ported runtime regardless of
-  // what the solution does. The palette check still passes (every solution
-  // block is offered by the toolbox); full simulation correctly reports the
-  // missing finish tile rather than silently declaring victory.
-  it('flags 20hr_farmer_stage9_2 (dirt-fill win condition) as unsolvable by position, not a false pass', () => {
+  // what the solution does. Real bee/farmer/etc. levels routinely have no
+  // finish tile at all — completion is goal-driven, not position-driven —
+  // so a missing finish tile must not be treated as a hard rejection (that
+  // was this test's original assertion; see git history). It's routed to
+  // the goal-consistency check instead: this particular level declares no
+  // nectar_goal/honey_goal/min_collected, so there's nothing to check it
+  // against either, and the honest report is "not attempted" (ok: true,
+  // with a note saying so) — never a silent, unverified pass.
+  it("reports 20hr_farmer_stage9_2 (dirt-fill win condition, no goal field declared) as not attempted, not rejected", () => {
     const result = checkImportedMazeLevel({
       properties: readLevel(
         'dashboard/config/levels/custom/maze/20hr_farmer_stage9_2.level',
       ),
     });
+    expect(result.ok).toBe(true);
+    expect(result.mode).toBe('palette');
+    expect(result.note).toMatch(/no finish tile/);
+    expect(result.note).toMatch(/not attempted/);
+  });
+});
+
+describe('checkImportedMazeLevel — goal-based levels with no finish tile', () => {
+  const grid = [
+    [0, 0, 0, 0],
+    [0, 2, 1, 0],
+    [0, 1, 1, 0],
+    [0, 0, 0, 0],
+  ];
+  // A bee solution using nectar/honey collection blocks — both are
+  // SIMULATABLE_REAL_TYPES no-ops, so this reaches the grid/finish check
+  // rather than the "unsupported block type" palette-only branch.
+  const beeInput = (
+    overrides: Partial<ImportedLevelCheckInput['properties']> = {},
+  ): ImportedLevelCheckInput =>
+    input({
+      maze: JSON.stringify(grid),
+      serialized_maze: JSON.stringify([
+        [{tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}],
+        [
+          {tileType: 0},
+          {tileType: 2},
+          {tileType: 1, featureType: 1, value: 3},
+          {tileType: 0},
+        ],
+        [
+          {tileType: 0},
+          {tileType: 1, featureType: 0, value: 2},
+          {tileType: 1},
+          {tileType: 0},
+        ],
+        [{tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}],
+      ]),
+      toolboxBlocksXml: buildToolboxBlocksXml(['moveForward', 'turnRight']),
+      solutionBlocksXml: buildSolutionBlocksXml([{type: 'moveForward'}]),
+      nectar_goal: '3',
+      honey_goal: '2',
+      ...overrides,
+    });
+
+  it('passes (not simulated) when the map has at least as much nectar/honey as the declared goals', () => {
+    const result = checkImportedMazeLevel(beeInput());
+    expect(result.ok).toBe(true);
+    expect(result.mode).toBe('palette');
+    expect(result.note).toMatch(/goal-based Karel level/);
+  });
+
+  it('fails when the map has less nectar than nectar_goal declares', () => {
+    const result = checkImportedMazeLevel(beeInput({nectar_goal: '10'}));
     expect(result.ok).toBe(false);
-    expect(result.mode).toBe('simulated');
-    expect(result.reasons[0]).toMatch(/finish tile/);
+    expect(result.mode).toBe('palette');
+    expect(result.reasons[0]).toMatch(/nectar_goal is 10.*only has 3 nectar/);
+  });
+
+  it('fails when the map has less honey than honey_goal declares', () => {
+    const result = checkImportedMazeLevel(beeInput({honey_goal: '10'}));
+    expect(result.ok).toBe(false);
+    expect(result.reasons[0]).toMatch(/honey_goal is 10.*only has 2 honey/);
+  });
+
+  it('fails when the map has less total value than min_collected declares', () => {
+    const result = checkImportedMazeLevel(
+      beeInput({
+        nectar_goal: undefined,
+        honey_goal: undefined,
+        min_collected: '100',
+      }),
+    );
+    expect(result.ok).toBe(false);
+    expect(result.reasons[0]).toMatch(/min_collected is 100/);
+  });
+
+  it('rejects a goal-based grid with no start tile at all', () => {
+    const result = checkImportedMazeLevel(
+      beeInput({
+        maze: JSON.stringify([
+          [0, 0],
+          [0, 0],
+        ]),
+        serialized_maze: undefined,
+      }),
+    );
+    expect(result.ok).toBe(false);
+    expect(result.reasons[0]).toMatch(/no start tile/);
   });
 });

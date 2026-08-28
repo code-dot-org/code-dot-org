@@ -75,7 +75,7 @@ export interface MazeLabEditingProps {
   /** Fires after every paint with the freshly updated wire-format patch —
    * the panel accumulates these into its Save draft. Never called except
    * as a direct result of a stage click. */
-  onMapDraftChange: (patch: {serialized_maze: string; maze: string}) => void;
+  onMapDraftChange: (patch: {serialized_maze: string; maze: string; initial_dirt: string}) => void;
   /** True while the properties panel is pinned open on the 'toolbox'
    * section — drives the selected outline on the Blocks header. */
   toolboxSelected: boolean;

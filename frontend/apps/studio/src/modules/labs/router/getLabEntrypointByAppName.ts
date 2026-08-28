@@ -41,7 +41,7 @@ export interface LabEditingProps {
   selectedPaintToolId?: string;
   /** Fires after a stage paint with the freshly updated wire-format patch
    * — the panel folds it into its Save draft. */
-  onMapDraftChange: (patch: {serialized_maze: string; maze: string}) => void;
+  onMapDraftChange: (patch: {serialized_maze: string; maze: string; initial_dirt: string}) => void;
   /** True while the properties panel is pinned on the 'toolbox' section
    * (maze only; other entrypoints ignore it). */
   toolboxSelected: boolean;

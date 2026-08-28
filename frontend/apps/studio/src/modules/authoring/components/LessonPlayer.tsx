@@ -139,7 +139,7 @@ export default function LessonPlayer({
     string | undefined
   >();
   const [mapDraftPatch, setMapDraftPatch] = useState<
-    {serialized_maze: string; maze: string} | undefined
+    {serialized_maze: string; maze: string; initial_dirt: string} | undefined
   >();
   // Toolbox tray: LevelRail reports the composed XML on every chip
   // add/remove; converted below into the live Toolbox object the stage's
@@ -214,6 +214,9 @@ export default function LessonPlayer({
       | undefined,
     ideal: activeLevelProps?.ideal as string | undefined,
     solutionVerified: activeLevelProps?.solutionVerified === 'true',
+    nectarGoal: activeLevelProps?.nectar_goal as string | undefined,
+    honeyGoal: activeLevelProps?.honey_goal as string | undefined,
+    minCollected: activeLevelProps?.min_collected as string | undefined,
     mapDraftPatch,
     workspaceMode,
     onWorkspaceModeChange: setWorkspaceMode,

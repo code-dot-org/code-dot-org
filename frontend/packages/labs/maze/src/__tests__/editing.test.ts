@@ -9,6 +9,7 @@ import {FeatureType as BeeFeatureType} from '../BeeCell';
 import {SquareType} from '../tiles';
 
 import {
+  applyPaint,
   getPaintTools,
   getToolboxPalette,
   mapDraftFromLevelProperties,
@@ -35,7 +36,10 @@ describe('mapDraftFromLevelProperties / serializeMapDraft round-trip', () => {
     );
     expect(draft).toEqual(REAL_BEE_SERIALIZED_MAZE);
 
-    const {serialized_maze, maze} = serializeMapDraft(draft!);
+    const {serialized_maze, maze, initial_dirt} = serializeMapDraft(
+      draft!,
+      'bee',
+    );
     expect(JSON.parse(serialized_maze)).toEqual(REAL_BEE_SERIALIZED_MAZE);
 
     // The maze projection is the plain tileType matrix — what
@@ -43,6 +47,15 @@ describe('mapDraftFromLevelProperties / serializeMapDraft round-trip', () => {
     expect(JSON.parse(maze)).toEqual(
       REAL_BEE_SERIALIZED_MAZE.map(row => row.map(cell => cell.tileType)),
     );
+
+    // initial_dirt is the legacy signed per-cell value grid — it has no way
+    // to express a VARIABLE-range cell (the legacy format predates ranges
+    // entirely), so the fixture's variable flower cell round-trips as 0,
+    // same as any cell with no resolved item.
+    const dirt = JSON.parse(initial_dirt) as number[][];
+    expect(dirt[4][4]).toBe(0);
+    expect(dirt[5][4]).toBe(0);
+    expect(dirt[0][0]).toBe(0);
 
     // The variable cell's featureType/cloudType/range survive untouched —
     // painting never touches a cell it didn't paint.
@@ -149,6 +162,97 @@ describe('paintCell', () => {
 
     expect(next[0][0].tileType).toBe(SquareType.FINISH);
     expect(next[1][1].tileType).toBe(SquareType.START);
+  });
+});
+
+describe('serializeMapDraft initial_dirt sign encoding', () => {
+  function blankGrid(rows: number, cols: number): MapDraft {
+    return Array.from({length: rows}, () =>
+      Array.from({length: cols}, () => ({tileType: SquareType.OPEN})),
+    );
+  }
+
+  it('encodes a painted hive as negative and a flower as positive', () => {
+    const draft = blankGrid(1, 2);
+    const flowerTool = getPaintTools('bee').find(t => t.id === 'flower')!;
+    const hiveTool = getPaintTools('bee').find(t => t.id === 'hive')!;
+    const withFlower = paintCell(draft, 0, 0, flowerTool);
+    const withBoth = paintCell(withFlower, 0, 1, hiveTool);
+
+    const {initial_dirt} = serializeMapDraft(withBoth, 'bee');
+    const dirt = JSON.parse(initial_dirt) as number[][];
+    expect(dirt[0][0]).toBeGreaterThan(0);
+    expect(dirt[0][1]).toBeLessThan(0);
+  });
+
+  it('never signs a non-bee skin (farmer dirt stays a plain positive count)', () => {
+    const draft = blankGrid(1, 1);
+    const fillTool = {
+      id: 'pile',
+      label: 'Pile',
+      makeCell: () => ({tileType: SquareType.OPEN, value: 3}),
+    };
+    const painted = paintCell(draft, 0, 0, fillTool);
+    const {initial_dirt} = serializeMapDraft(painted, 'farmer');
+    expect((JSON.parse(initial_dirt) as number[][])[0][0]).toBe(3);
+  });
+});
+
+describe('applyPaint — burst-painting regression (Author Mode gap #4)', () => {
+  // Reproduces, at the pure draft layer, the exact composition a rapid
+  // click burst needs: each call's return value threaded back in as the
+  // next call's `current`, with no intervening React render to "catch up"
+  // a stale closure. Before the fix, MazeLab's handlePaintCell read a
+  // `mapDraft` STATE variable that only advances on commit — a burst of
+  // synchronous calls sharing one stale base each computed their own
+  // single-cell diff from it, and only the last call's diff survived.
+  // applyPaint has no such state to go stale: threading its own return
+  // value forward is the entire contract, so this test only proves the
+  // contract, not the React fix itself — see MazeLab/index.tsx's
+  // mapDraftRef for where that contract is actually honoured against real
+  // (possibly-batched) React renders.
+  it('every cell in a rapid burst of paints survives, none overwritten by a stale base', () => {
+    const rows = 5;
+    const cols = 6;
+    const base: MapDraft = Array.from({length: rows}, () =>
+      Array.from({length: cols}, () => ({tileType: SquareType.OPEN})),
+    );
+    const wallTool = getPaintTools('birds').find(t => t.id === 'wall')!;
+    const fallback = () => base;
+
+    let draft: MapDraft | undefined = undefined;
+    const paintedCells: [number, number][] = [];
+    for (let i = 0; i < 26; i++) {
+      const row = i % rows;
+      const col = Math.floor(i / rows) % cols;
+      paintedCells.push([row, col]);
+      draft = applyPaint(draft, fallback, row, col, wallTool);
+    }
+
+    expect(draft).toBeDefined();
+    for (const [row, col] of paintedCells) {
+      expect(draft![row][col].tileType).toBe(SquareType.WALL);
+    }
+  });
+
+  it('falls back to the served base only for the first call in the burst', () => {
+    const base: MapDraft = [
+      [{tileType: SquareType.OPEN}, {tileType: SquareType.OPEN}],
+    ];
+    const wallTool = getPaintTools('birds').find(t => t.id === 'wall')!;
+    let fallbackCalls = 0;
+    const fallback = () => {
+      fallbackCalls++;
+      return base;
+    };
+
+    let draft: MapDraft | undefined = undefined;
+    draft = applyPaint(draft, fallback, 0, 0, wallTool);
+    draft = applyPaint(draft, fallback, 0, 1, wallTool);
+
+    expect(fallbackCalls).toBe(1);
+    expect(draft![0][0].tileType).toBe(SquareType.WALL);
+    expect(draft![0][1].tileType).toBe(SquareType.WALL);
   });
 });
 

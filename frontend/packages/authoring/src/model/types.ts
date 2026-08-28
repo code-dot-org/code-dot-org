@@ -84,6 +84,10 @@ export interface InstructionsPatch {
 export interface LevelDefinitionPatch {
   serialized_maze?: string | null;
   maze?: string | null;
+  // Legacy per-cell value grid (see editing.ts's serializeMapDraft) —
+  // written alongside serialized_maze/maze so any consumer that still
+  // reads the pre-serialized_maze wire shape sees the same paint.
+  initial_dirt?: string | null;
   startBlocksXml?: string | null;
   toolboxBlocksXml?: string | null;
   solutionBlocksXml?: string | null;
@@ -99,6 +103,13 @@ export interface LevelDefinitionPatch {
   // a stale solution from reading as proven after the puzzle changed
   // underneath it.
   solutionVerified?: string | null;
+  // Karel-family goal fields (editing.ts's getGoalFields) — not read by
+  // this prototype's ported engine (win is still position-only), but real
+  // production fields and what checkImportedMazeLevel's goal-consistency
+  // check validates a finish-less grid against.
+  nectar_goal?: string | null;
+  honey_goal?: string | null;
+  min_collected?: string | null;
 }
 
 /** Agent-created executable learner content, sandboxed. */

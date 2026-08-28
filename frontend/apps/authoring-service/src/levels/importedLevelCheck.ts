@@ -267,6 +267,169 @@ function extractGrid(
   return undefined;
 }
 
+// Mirrors tiles.ts's SquareType (a private copy, same reasoning as
+// mazeLevel.ts's own copy at the top of this module's sibling file: pulling
+// in @code-dot-org/maze-lab for two integers isn't worth it).
+const FINISH_TILE = 3;
+const START_TILE = 2;
+const START_AND_FINISH_TILE = 5;
+
+function hasFinishTile(grid: number[][]): boolean {
+  return grid.some(row =>
+    row.some(tile => tile === FINISH_TILE || tile === START_AND_FINISH_TILE),
+  );
+}
+
+function hasStartTile(grid: number[][]): boolean {
+  return grid.some(row =>
+    row.some(tile => tile === START_TILE || tile === START_AND_FINISH_TILE),
+  );
+}
+
+interface GoalTotals {
+  nectar: number;
+  honey: number;
+  total: number;
+}
+
+// BeeCell's FeatureType (BeeCell.ts): HIVE = 0, FLOWER = 1. A cell without
+// a featureType (farmer's dirt piles, harvester's crops, ...) counts only
+// toward `total`, min_collected's currency — bee is the only skin with a
+// nectar/honey split.
+const BEE_HIVE = 0;
+const BEE_FLOWER = 1;
+
+/**
+ * Sums the map's painted item values, keyed the same way editing.ts's
+ * getGoalFields groups them — nectar/honey for bee's split goals,
+ * everything (bee included) toward the generic min_collected total every
+ * Karel skin shares. Reads `serialized_maze` (unambiguous featureType) when
+ * present, else `initial_dirt` (its sign-encoded legacy projection — see
+ * editing.ts's serializeMapDraft); a level with neither has nothing to
+ * check goals against.
+ */
+function extractGoalTotals(
+  properties: Record<string, unknown>,
+): GoalTotals | undefined {
+  if (typeof properties.serialized_maze === 'string') {
+    try {
+      const cells: unknown = JSON.parse(properties.serialized_maze);
+      if (Array.isArray(cells)) {
+        const totals: GoalTotals = {nectar: 0, honey: 0, total: 0};
+        for (const row of cells as {value?: number; featureType?: number}[][]) {
+          for (const cell of row) {
+            const value = cell.value ?? 0;
+            totals.total += Math.abs(value);
+            if (cell.featureType === BEE_FLOWER) totals.nectar += value;
+            else if (cell.featureType === BEE_HIVE) totals.honey += value;
+          }
+        }
+        return totals;
+      }
+    } catch {
+      // fall through to initial_dirt
+    }
+  }
+  if (typeof properties.initial_dirt === 'string') {
+    try {
+      const dirt: unknown = JSON.parse(properties.initial_dirt);
+      if (Array.isArray(dirt)) {
+        const totals: GoalTotals = {nectar: 0, honey: 0, total: 0};
+        for (const row of dirt as number[][]) {
+          for (const value of row) {
+            totals.total += Math.abs(value);
+            if (value > 0) totals.nectar += value;
+            else if (value < 0) totals.honey += -value;
+          }
+        }
+        return totals;
+      }
+    } catch {
+      // fall through
+    }
+  }
+  return undefined;
+}
+
+function parseGoal(value: unknown): number | undefined {
+  const parsed = typeof value === 'string' || typeof value === 'number'
+    ? Number(value)
+    : NaN;
+  return Number.isFinite(parsed) && parsed > 0 ? parsed : undefined;
+}
+
+/**
+ * Real Karel levels (Bee especially) legitimately have no finish tile —
+ * completion is judged by collected-item goals, not position. The ported
+ * engine doesn't model that (`Validator.succeeded` only ever compares
+ * position to the grid's finish tile — see mazeLevel.ts's module header),
+ * so there's no run to simulate toward. The honest check this checker CAN
+ * make instead: the map actually contains at least as much of each
+ * declared goal item as the level claims to require — a static
+ * grid-consistency check, exactly what production's own save-time gate
+ * does (dashboard/app/models/levels/karel.rb#parse_maze, checked against
+ * `min_collected`). No goal fields declared at all means nothing to check
+ * — reported as an honest "not attempted", not a failure.
+ */
+function checkGoalConsistency(
+  properties: Record<string, unknown>,
+): ImportedLevelCheckResult {
+  const nectarGoal = parseGoal(properties.nectar_goal);
+  const honeyGoal = parseGoal(properties.honey_goal);
+  const minCollected = parseGoal(properties.min_collected);
+  if (nectarGoal === undefined && honeyGoal === undefined && minCollected === undefined) {
+    return {
+      ok: true,
+      mode: 'palette',
+      reasons: [],
+      note:
+        'no finish tile on this grid; treated as a goal-based Karel level, ' +
+        'but no nectar_goal/honey_goal/min_collected is set to check the ' +
+        'map against, so goal-consistency was not attempted either.',
+    };
+  }
+
+  const totals = extractGoalTotals(properties);
+  if (!totals) {
+    return {
+      ok: true,
+      mode: 'palette',
+      reasons: [],
+      note:
+        'no finish tile on this grid, and no serialized_maze/initial_dirt ' +
+        'to check the declared goal(s) against.',
+    };
+  }
+
+  const reasons: string[] = [];
+  if (nectarGoal !== undefined && totals.nectar < nectarGoal) {
+    reasons.push(
+      `nectar_goal is ${nectarGoal} but the map only has ${totals.nectar} nectar.`,
+    );
+  }
+  if (honeyGoal !== undefined && totals.honey < honeyGoal) {
+    reasons.push(
+      `honey_goal is ${honeyGoal} but the map only has ${totals.honey} honey.`,
+    );
+  }
+  if (minCollected !== undefined && totals.total < minCollected) {
+    reasons.push(
+      `min_collected is ${minCollected} but the map only has ${totals.total} to collect.`,
+    );
+  }
+  return reasons.length > 0
+    ? {ok: false, mode: 'palette', reasons}
+    : {
+        ok: true,
+        mode: 'palette',
+        reasons: [],
+        note:
+          'no finish tile on this grid; checked as a goal-based Karel ' +
+          "level instead — the map's item totals meet the declared goal(s). " +
+          'Full simulation not attempted (there is no finish to run toward).',
+      };
+}
+
 export function checkImportedMazeLevel(
   input: ImportedLevelCheckInput,
 ): ImportedLevelCheckResult {
@@ -340,6 +503,27 @@ export function checkImportedMazeLevel(
         'palette check passed; full solvability not attempted (no maze or ' +
         'serialized_maze grid on this level).',
     };
+  }
+
+  // Real Bee (and other Karel-skin) levels legitimately have no finish
+  // tile — see checkGoalConsistency's doc comment. Route those to a
+  // grid-consistency check instead of simulateMazeProgram, which would
+  // otherwise reject every one of them for the missing finish tile
+  // (inspectGrid's requirement — correct for the AI-generation gate that
+  // function also serves, where a finish tile is the only win condition
+  // this checker models, and left untouched here for exactly that reason).
+  if (!hasFinishTile(grid)) {
+    if (!hasStartTile(grid)) {
+      return {
+        ok: false,
+        mode: 'palette',
+        reasons: [
+          'grid has no start tile (value 2) and no finish tile either — ' +
+            'nothing for a goal-based level to start from.',
+        ],
+      };
+    }
+    return checkGoalConsistency(properties);
   }
 
   const programRoot =

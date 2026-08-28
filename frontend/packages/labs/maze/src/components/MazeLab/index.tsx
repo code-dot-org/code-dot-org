@@ -17,9 +17,9 @@ import Visualization from '../Visualization';
 import type {BlocklySerialization} from '@code-dot-org/blockly';
 import * as api from '../../api';
 import {
+  applyPaint,
   getPaintTools,
   mapDraftFromLevelProperties,
-  paintCell,
   serializeMapDraft,
   type MapDraft,
 } from '../../editing';
@@ -219,26 +219,29 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
   // post-Save refetch lands the same data the author already painted, so
   // there's nothing to reconcile.
   const [mapDraft, setMapDraft] = useState<MapDraft | undefined>(undefined);
-  // Starts undefined, not editing?.visualizationSelected: switching to the
+  // Mirrors mapDraft, mutated SYNCHRONOUSLY (not through React's render
+  // cycle) by every paint — see handlePaintCell's comment for why. Starts
+  // undefined, not editing?.visualizationSelected: switching to the
   // 'visualization' panel section can already be true on the very first
   // render (e.g. the panel restores a prior selection). Seeding the ref from
   // that same true would make the effect below see no change and skip
   // initializing mapDraft.
+  const mapDraftRef = useRef<MapDraft | undefined>(undefined);
   const mapEditingActiveRef = useRef<boolean | undefined>(undefined);
   useEffect(() => {
     if (mapEditingActiveRef.current === editing?.visualizationSelected) {
       return;
     }
     mapEditingActiveRef.current = editing?.visualizationSelected;
-    setMapDraft(
-      editing?.visualizationSelected
-        ? mapDraftFromLevelProperties(
-            levelProperties?.map,
-            levelProperties?.serializedMaze,
-            skin.id,
-          )
-        : undefined,
-    );
+    const nextMapDraft = editing?.visualizationSelected
+      ? mapDraftFromLevelProperties(
+          levelProperties?.map,
+          levelProperties?.serializedMaze,
+          skin.id,
+        )
+      : undefined;
+    mapDraftRef.current = nextMapDraft;
+    setMapDraft(nextMapDraft);
     // levelProperties/skin intentionally excluded: this effect's job is
     // reacting to the active/inactive EDGE, not to every served-data
     // change while active (see comment above) — including them would
@@ -246,6 +249,18 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [editing?.visualizationSelected]);
 
+  // A burst of clicks can arrive faster than React commits the re-render
+  // that would give this callback a fresh `mapDraft` closure — several
+  // click handlers then read the SAME stale base and each compute their own
+  // single-cell diff from it, so only the last one's setMapDraft call
+  // "wins" and every other paint in the burst is silently lost. Reading and
+  // writing `mapDraftRef` here instead of the `mapDraft` state variable
+  // fixes it: the ref is updated synchronously, in this same function, so
+  // the very next call — however soon after — sees what the previous call
+  // just painted, regardless of whether React has re-rendered yet.
+  // `setMapDraft` still runs alongside it purely to trigger the re-render;
+  // its value always converges on the ref's, so no paint is lost even if
+  // React coalesces several of those state updates into one commit.
   const handlePaintCell = useCallback(
     (row: number, col: number) => {
       const toolId = editing?.selectedPaintToolId;
@@ -253,21 +268,29 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
         return;
       }
       const tool = getPaintTools(skin.id).find(t => t.id === toolId);
-      const baseDraft =
-        mapDraft ??
-        mapDraftFromLevelProperties(
-          levelProperties?.map,
-          levelProperties?.serializedMaze,
-          skin.id,
-        );
-      if (!tool || !baseDraft) {
+      if (!tool) {
         return;
       }
-      const nextDraft = paintCell(baseDraft, row, col, tool);
+      const nextDraft = applyPaint(
+        mapDraftRef.current,
+        () =>
+          mapDraftFromLevelProperties(
+            levelProperties?.map,
+            levelProperties?.serializedMaze,
+            skin.id,
+          ),
+        row,
+        col,
+        tool,
+      );
+      if (!nextDraft || nextDraft === mapDraftRef.current) {
+        return;
+      }
+      mapDraftRef.current = nextDraft;
       setMapDraft(nextDraft);
-      editing?.onMapDraftChange(serializeMapDraft(nextDraft));
+      editing?.onMapDraftChange(serializeMapDraft(nextDraft, skin.id));
     },
-    [editing, mapDraft, levelProperties, skin],
+    [editing, levelProperties, skin],
   );
 
   // Extracted from onInject so a levelProperties change that only

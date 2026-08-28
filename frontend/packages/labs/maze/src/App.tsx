@@ -32,6 +32,7 @@ export {
   type ToolboxPaletteEntry,
   type ToolboxTrayEntry,
 } from './editing';
+export {getGoalFields, type GoalField} from './editing';
 
 registerLevelKindSchema('maze', LevelKindSchema);
 

@@ -146,12 +146,16 @@ const InstructionsPatchSchema = z.object({
 const LevelDefinitionPatchSchema = z.object({
   serialized_maze: z.string().nullable().optional(),
   maze: z.string().nullable().optional(),
+  initial_dirt: z.string().nullable().optional(),
   startBlocksXml: z.string().nullable().optional(),
   toolboxBlocksXml: z.string().nullable().optional(),
   solutionBlocksXml: z.string().nullable().optional(),
   startDirection: z.string().nullable().optional(),
   ideal: z.string().nullable().optional(),
   solutionVerified: z.string().nullable().optional(),
+  nectar_goal: z.string().nullable().optional(),
+  honey_goal: z.string().nullable().optional(),
+  min_collected: z.string().nullable().optional(),
 });
 
 const ExistingLevelExperienceSchema = z.object({

@@ -75,19 +75,78 @@ export function mapDraftFromLevelProperties(
   return mazeMap.currentStaticGrid.map(row => row.map(cell => cell.serialize()));
 }
 
-/** `serialized_maze` (rich) and `maze` (its tileType projection), both as
- * JSON strings — the exact key pair `overrideLevelDefinition`'s patch
- * wants (see docs/prototypes/author-mode-level-editor.md §1.2): writing
- * only one lets `checkImportedMazeLevel`'s `extractGrid` see a stale grid,
- * since it tries `maze` first. */
-export function serializeMapDraft(draft: MapDraft): {
+// The legacy per-cell value grid `MazeMap.parseFromOldValues`/
+// `Cell.parseFromOldValues` read as their `initialDirt` argument before
+// `serialized_maze` existed — a single signed number per cell, bee's sign
+// distinguishing flower (positive) from hive (negative) the same way
+// `BeeCell.parseFromOldValues` decodes it back. Our own runtime never reads
+// this once `serialized_maze` is written (it's preferred whenever present —
+// MazeController.loadLevel_), but production's Karel model
+// (dashboard/app/models/levels/karel.rb) still serializes it, and nothing
+// else in this prototype (or a future publish adapter) should have to
+// reverse-derive it from `serialized_maze` itself.
+function initialDirtValue(cell: CellSerialization, skinId: string): number {
+  const value = cell.value ?? 0;
+  if (isBeeSkin(skinId)) {
+    const bee = cell as BeeCellSerialization;
+    if (bee.featureType === BeeFeatureType.HIVE) {
+      return -value;
+    }
+    if (bee.featureType === BeeFeatureType.FLOWER) {
+      return value;
+    }
+    return 0;
+  }
+  return value;
+}
+
+/** `serialized_maze` (rich), `maze` (its tileType projection), and
+ * `initial_dirt` (its legacy per-cell value projection), all as JSON
+ * strings — the key set `overrideLevelDefinition`'s patch wants (see
+ * docs/prototypes/author-mode-level-editor.md §1.2): writing only
+ * `serialized_maze`/`maze` lets `checkImportedMazeLevel`'s `extractGrid` see
+ * a stale grid, since it tries `maze` first, and leaves `initial_dirt`
+ * — the field other Karel consumers key on — stale behind a painted map. */
+export function serializeMapDraft(
+  draft: MapDraft,
+  skinId: string,
+): {
   serialized_maze: string;
   maze: string;
+  initial_dirt: string;
 } {
   return {
     serialized_maze: JSON.stringify(draft),
     maze: JSON.stringify(draft.map(row => row.map(cell => cell.tileType))),
+    initial_dirt: JSON.stringify(
+      draft.map(row => row.map(cell => initialDirtValue(cell, skinId))),
+    ),
   };
+}
+
+/**
+ * Applies one paint action to `current` (or, when painting hasn't started
+ * yet this editing session, to a fresh draft `fallback` derives from the
+ * served levelProperties) and returns the new draft. Pure, so a caller that
+ * threads each call's return value back in as the next call's `current`
+ * composes correctly across any burst of calls, however tightly spaced —
+ * this is the entire state-update MazeLab's paint handler needs, kept here
+ * (not inline in the component) so the COMPOSITION itself, not just
+ * `paintCell`, is unit-testable without a browser or a React render cycle
+ * to race against.
+ */
+export function applyPaint(
+  current: MapDraft | undefined,
+  fallback: () => MapDraft | undefined,
+  row: number,
+  col: number,
+  tool: PaintTool,
+): MapDraft | undefined {
+  const base = current ?? fallback();
+  if (!base) {
+    return current;
+  }
+  return paintCell(base, row, col, tool);
 }
 
 export interface PaintTool {
@@ -464,4 +523,41 @@ export function trayFromToolboxXml(
  * (via convertBlocklyXmlToToolbox) the live flyout during editing. */
 export function toolboxXmlFromTray(entries: ToolboxTrayEntry[]): string {
   return `<xml>${entries.map(entry => entry.xml).join('')}</xml>`;
+}
+
+export interface GoalField {
+  key: 'nectar_goal' | 'honey_goal' | 'min_collected';
+  label: string;
+}
+
+/**
+ * Karel-family goal fields this skin's author can set. Read-only as far as
+ * the ported engine goes — `Validator.succeeded` only ever compares
+ * Pegman's position to the grid's finish tile; no skin's win condition
+ * reads these (see apps/authoring-service/src/levels/mazeLevel.ts's module
+ * header) — but they're real fields production Karel serializes
+ * (dashboard/app/models/levels/karel.rb: nectar_goal/honey_goal;
+ * grid.rb#update_maze: min_collected, checked against every skin's total
+ * painted item value on save) and the one thing `checkImportedMazeLevel`
+ * can validate a goal-based grid against once it has no finish tile to
+ * simulate a run toward.
+ */
+export function getGoalFields(skinId: string): GoalField[] {
+  const fields: GoalField[] = [];
+  if (isBeeSkin(skinId)) {
+    fields.push(
+      {key: 'nectar_goal', label: 'Nectar goal'},
+      {key: 'honey_goal', label: 'Honey goal'},
+    );
+  }
+  if (
+    isFarmerSkin(skinId) ||
+    isBeeSkin(skinId) ||
+    isCollectorSkin(skinId) ||
+    isHarvesterSkin(skinId) ||
+    isPlanterSkin(skinId)
+  ) {
+    fields.push({key: 'min_collected', label: 'Minimum to collect'});
+  }
+  return fields;
 }

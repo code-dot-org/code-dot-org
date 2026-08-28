@@ -76,12 +76,16 @@ export interface InstructionsPatch {
 export interface LevelDefinitionPatch {
   serialized_maze?: string | null;
   maze?: string | null;
+  initial_dirt?: string | null;
   startBlocksXml?: string | null;
   toolboxBlocksXml?: string | null;
   solutionBlocksXml?: string | null;
   startDirection?: string | null;
   ideal?: string | null;
   solutionVerified?: string | null;
+  nectar_goal?: string | null;
+  honey_goal?: string | null;
+  min_collected?: string | null;
 }
 
 export interface WidgetExperience extends ExperienceBase {

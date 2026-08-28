@@ -2,10 +2,12 @@ import {useQueryClient} from '@tanstack/react-query';
 import {useEffect, useState} from 'react';
 
 import {
+  getGoalFields,
   getPaintTools,
   getToolboxPalette,
   toolboxXmlFromTray,
   trayFromToolboxXml,
+  type GoalField,
   type PaintTool,
   type ToolboxPaletteEntry,
   type ToolboxTrayEntry,
@@ -27,6 +29,7 @@ export interface LevelDraftPatch {
   startDirection?: string;
   serialized_maze?: string;
   maze?: string;
+  initial_dirt?: string;
   toolboxBlocksXml?: string;
   startBlocksXml?: string;
   solutionBlocksXml?: string;
@@ -35,6 +38,15 @@ export interface LevelDraftPatch {
   // LevelDefinitionPatch's doc comment (authoring package) for why the
   // client never sends 'false' itself.
   solutionVerified?: string;
+  // Karel-family goal fields (editing.ts's getGoalFields) — read-only as
+  // far as the ported engine's win condition goes, but real production
+  // fields (karel.rb/grid.rb) and what checkImportedMazeLevel's
+  // goal-consistency check validates against when a grid has no finish
+  // tile. All three optional and independent of the map/toolbox/workspace
+  // keys above.
+  nectar_goal?: string;
+  honey_goal?: string;
+  min_collected?: string;
 }
 
 export interface UseLevelDraftArgs {
@@ -56,9 +68,15 @@ export interface UseLevelDraftArgs {
   solutionBlocksXml?: string;
   ideal?: string;
   solutionVerified: boolean;
+  /** Served values for editing.ts's getGoalFields (bee's nectar_goal/
+   * honey_goal, every Karel skin's min_collected) — undefined when absent
+   * on the wire, exactly like `ideal`. */
+  nectarGoal?: string;
+  honeyGoal?: string;
+  minCollected?: string;
   /** Every stage paint reports a fresh patch here — folded into the draft
    * the same way a startDirection edit is. */
-  mapDraftPatch?: {serialized_maze: string; maze: string};
+  mapDraftPatch?: {serialized_maze: string; maze: string; initial_dirt: string};
   workspaceMode: WorkspaceMode | undefined;
   onWorkspaceModeChange: (mode: WorkspaceMode | undefined) => void;
   onWorkspaceOverrideChange: (xml: string | undefined) => void;
@@ -94,6 +112,13 @@ export interface UseLevelDraftResult {
   currentStartDirection: string;
   setStartDirection: (value: string) => void;
   paintTools: PaintTool[];
+  goalFields: GoalField[];
+  effectiveNectarGoal?: string;
+  effectiveHoneyGoal?: string;
+  effectiveMinCollected?: string;
+  setNectarGoal: (value: string) => void;
+  setHoneyGoal: (value: string) => void;
+  setMinCollected: (value: string) => void;
   /** 'toolbox' section fields. */
   tray: ToolboxTrayEntry[];
   availableBlocks: ToolboxPaletteEntry[];
@@ -142,6 +167,9 @@ export function useLevelDraft({
   solutionBlocksXml,
   ideal,
   solutionVerified,
+  nectarGoal,
+  honeyGoal,
+  minCollected,
   mapDraftPatch,
   workspaceMode,
   onWorkspaceModeChange,
@@ -173,11 +201,15 @@ export function useLevelDraft({
   const currentStartDirection = draft.startDirection ?? startDirection ?? '1';
   const dirty = Object.keys(draft).length > 0;
   const paintTools = skin ? getPaintTools(skin) : [];
+  const goalFields = skin ? getGoalFields(skin) : [];
   const palette = skin ? getToolboxPalette(skin) : [];
   const trayIds = new Set(tray.map(t => t.id));
   const availableBlocks = palette.filter(entry => !trayIds.has(entry.id));
   const effectiveSolutionXml = draft.solutionBlocksXml ?? solutionBlocksXml;
   const effectiveIdeal = draft.ideal ?? ideal;
+  const effectiveNectarGoal = draft.nectar_goal ?? nectarGoal;
+  const effectiveHoneyGoal = draft.honey_goal ?? honeyGoal;
+  const effectiveMinCollected = draft.min_collected ?? minCollected;
   const effectiveVerified =
     draft.solutionVerified === 'true' || solutionVerified;
 
@@ -355,6 +387,16 @@ export function useLevelDraft({
     setStartDirection: (value: string) =>
       setDraft(prev => ({...prev, startDirection: value})),
     paintTools,
+    goalFields,
+    effectiveNectarGoal,
+    effectiveHoneyGoal,
+    effectiveMinCollected,
+    setNectarGoal: (value: string) =>
+      setDraft(prev => ({...prev, nectar_goal: value})),
+    setHoneyGoal: (value: string) =>
+      setDraft(prev => ({...prev, honey_goal: value})),
+    setMinCollected: (value: string) =>
+      setDraft(prev => ({...prev, min_collected: value})),
     tray,
     availableBlocks,
     addChip,

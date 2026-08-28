@@ -313,8 +313,19 @@ function VisualizationFields({
   onClose: () => void;
   onDirtyChange: (dirty: boolean) => void;
 }) {
-  const {dirty, currentStartDirection, setStartDirection, paintTools} =
-    levelDraft;
+  const {
+    dirty,
+    currentStartDirection,
+    setStartDirection,
+    paintTools,
+    goalFields,
+    effectiveNectarGoal,
+    effectiveHoneyGoal,
+    effectiveMinCollected,
+    setNectarGoal,
+    setHoneyGoal,
+    setMinCollected,
+  } = levelDraft;
 
   useEffect(() => {
     onDirtyChange(dirty);
@@ -374,6 +385,42 @@ function VisualizationFields({
               </Button>
             ))}
           </div>
+        </div>
+      )}
+
+      {goalFields.length > 0 && (
+        <div className={styles.paintPalette}>
+          <Typography variant="body4" component="span">
+            Goals — not enforced by this prototype's engine (win still checks
+            the finish tile); used only to keep the map's item counts
+            consistent with what the level claims to require.
+          </Typography>
+          {goalFields.map(field => {
+            const value =
+              field.key === 'nectar_goal'
+                ? effectiveNectarGoal
+                : field.key === 'honey_goal'
+                  ? effectiveHoneyGoal
+                  : effectiveMinCollected;
+            const onChange =
+              field.key === 'nectar_goal'
+                ? setNectarGoal
+                : field.key === 'honey_goal'
+                  ? setHoneyGoal
+                  : setMinCollected;
+            return (
+              <label key={field.key} htmlFor={`panel-goal-${field.key}`}>
+                {field.label}
+                <input
+                  id={`panel-goal-${field.key}`}
+                  type="number"
+                  min={0}
+                  value={value ?? ''}
+                  onChange={e => onChange(e.target.value)}
+                />
+              </label>
+            );
+          })}
         </div>
       )}
 
