@@ -24,19 +24,26 @@ export const addActor = (stem: string, body: object[]) => ({
 
 export interface WorldSpec {
   name: string;
-  /** Map size in TILES. A world with no `.map` file has no size until it says. */
-  tiles: [x: number, y: number];
+  /**
+   * Map size in TILES, for a world that wants one — and most do not.
+   *
+   * A world says nothing and gets one screen (`VIEWPORT_TILES`, ten tiles each
+   * way, 320 by 320). That is the right answer for every lesson that has no
+   * camera and no boundary rule, which is all the early ones: `set size of map`
+   * matters when the world is BIGGER than the view, and putting it in a first
+   * lesson is an advanced idea sitting in the way of a simple one.
+   *
+   * It was in all of them at first, out of a half-remembered warning
+   * (AGENTS.md) about a world that arranges its own actors having no bounds. It
+   * has bounds — the viewport's. What it lacks is bounds of its own, which only
+   * something looking past the edge would notice.
+   */
+  tiles?: [x: number, y: number];
   /** What is placed in it, in order. */
   rows: object[];
 }
 
-/**
- * A `.world` file.
- *
- * `set size of map` is always written, and that is not padding: a world that
- * arranges its own actors has no bounds unless it says so, and a camera or a
- * boundary rule then clamps to the one screen it fits (AGENTS.md).
- */
+/** A `.world` file. */
 export const worldFile = ({name, tiles, rows}: WorldSpec): string =>
   JSON.stringify(
     {
@@ -49,10 +56,14 @@ export const worldFile = ({name, tiles, rows}: WorldSpec): string =>
             fields: {NAME: name},
             next: {
               block: chain([
-                {
-                  type: 'world_set_map_size',
-                  inputs: {X: num(tiles[0]), Y: num(tiles[1])},
-                },
+                ...(tiles
+                  ? [
+                      {
+                        type: 'world_set_map_size',
+                        inputs: {X: num(tiles[0]), Y: num(tiles[1])},
+                      },
+                    ]
+                  : []),
                 ...rows,
               ]),
             },

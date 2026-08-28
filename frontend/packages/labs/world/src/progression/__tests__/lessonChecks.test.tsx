@@ -254,8 +254,8 @@ describe('the position lesson’s check', () => {
     const solved = editing(lesson.source, 'main.world', contents => {
       const places = [
         {x: 48, y: 48},
-        {x: 336, y: 240},
-        {x: 192, y: 144},
+        {x: 272, y: 272},
+        {x: 160, y: 160},
       ];
       // Walk the chain of rows under the world and move each `set position`
       // to the next place. By walking rather than by regex: three actors are
@@ -538,7 +538,7 @@ describe('the shove lesson’s check', () => {
         inputs: {
           ACTOR: {block: {type: 'world_this_actor'}},
           X: {shadow: {type: 'math_number', fields: {NUM: 200}}},
-          Y: {shadow: {type: 'math_number', fields: {NUM: 144}}},
+          Y: {shadow: {type: 'math_number', fields: {NUM: 160}}},
         },
       }),
     );
@@ -556,10 +556,10 @@ describe('the units lesson’s check', () => {
   });
 
   it('accepts the speed that crosses the world in two seconds', async () => {
-    // 384 pixels in two seconds is 192 pixels a second, and a unit is a
-    // hundred pixels: 1.92.
+    // 320 pixels in two seconds is 160 pixels a second, and a unit is a
+    // hundred pixels: 1.6.
     const solved = editing(lesson.source, 'main.world', contents =>
-      contents.replace('"x": 60', '"x": 1.92'),
+      contents.replace('"x": 60', '"x": 1.6'),
     );
     const {passes, result} = await check('motion/units', solved);
     expect(result.error).toBeUndefined();
@@ -570,7 +570,7 @@ describe('the units lesson’s check', () => {
     // The mistake the lesson exists to prevent: pixels per second, written
     // into a field that is counting units.
     const inPixels = editing(lesson.source, 'main.world', contents =>
-      contents.replace('"x": 60', '"x": 192'),
+      contents.replace('"x": 60', '"x": 160'),
     );
     const {passes} = await check('motion/units', inPixels);
     expect(passes).toBe(false);
@@ -625,8 +625,8 @@ describe('the tween lesson’s check', () => {
                 type: 'world_set_position',
                 inputs: {
                   ACTOR: {block: {type: 'world_this_actor'}},
-                  X: {shadow: {type: 'math_number', fields: {NUM: 320}}},
-                  Y: {shadow: {type: 'math_number', fields: {NUM: 144}}},
+                  X: {shadow: {type: 'math_number', fields: {NUM: 256}}},
+                  Y: {shadow: {type: 'math_number', fields: {NUM: 160}}},
                 },
               },
             },
@@ -645,7 +645,7 @@ describe('the tween lesson’s check', () => {
   // an opening.
   it('refuses a Door that is simply put in the other place', async () => {
     const jumped = editing(lesson.source, 'main.world', contents =>
-      contents.replace('"NUM": 96', '"NUM": 320'),
+      contents.replace('"NUM": 64', '"NUM": 256'),
     );
     const {passes} = await check('motion/tween', jumped);
     expect(passes).toBe(false);
@@ -707,7 +707,7 @@ describe('the if lesson’s check', () => {
     const solved = editing(lesson.source, 'ball.actor', contents =>
       eachFrame(contents, {
         type: 'controls_if',
-        inputs: {IF0: past('x', 192), DO0: {block: HALT}},
+        inputs: {IF0: past('x', 160), DO0: {block: HALT}},
       }),
     );
     const {passes, result} = await check('logic/if', solved);
@@ -763,7 +763,7 @@ describe('the and-or lesson’s check', () => {
         block: {
           type: 'logic_operation',
           fields: {OP: 'AND'},
-          inputs: {A: past('x', 192), B: past('y', 144)},
+          inputs: {A: past('x', 160), B: past('y', 160)},
         },
       };
       return JSON.stringify(workspace);
@@ -785,7 +785,7 @@ describe('the and-or lesson’s check', () => {
         block: {
           type: 'logic_operation',
           fields: {OP: 'OR'},
-          inputs: {A: past('x', 192), B: past('y', 144)},
+          inputs: {A: past('x', 160), B: past('y', 160)},
         },
       };
       return JSON.stringify(workspace);

@@ -17,6 +17,7 @@ import {activateFile} from '@code-dot-org/codebridge';
 import type {CustomEditorProps} from '@code-dot-org/codebridge';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useMaybeLevelProperties, useSources} from '@code-dot-org/lab/contexts';
+import {useAppSelector} from '@code-dot-org/lab/redux';
 
 import {setActorImportHandler} from '../actors/actorImport';
 import {ImportActorDialog} from '../actors/ImportActorDialog';
@@ -54,6 +55,10 @@ import {
   showsRuleSource,
   type WorldLevelProperties,
 } from '../levelData';
+import {TILES} from '../progression/catalogue';
+import {tileForChannel} from '../progression/lessonRoute';
+import {useMaybeProgression} from '../progression/progressionContext';
+import {shelvedToolbox} from '../progression/toolboxShelf';
 import {ImportRuleDialog} from '../rules/ImportRuleDialog';
 import {importStockRule} from '../rules/importStockRule';
 import {removeRule, type HeldRule} from '../rules/removeRule';
@@ -815,6 +820,24 @@ export const BlocklyFileEditor = ({
   // The level may leave categories out of the toolbox. Only the toolbox: the
   // blocks stay defined, so a workspace that already holds one still renders.
   const hiddenCategories = hiddenToolboxCategories(levelProperties);
+  // …and, when the level gates the shelf, the toolbox offers only what this
+  // learner has unlocked plus what the lesson they are doing teaches
+  // (progression/toolboxShelf). Off by default, and identity when off.
+  const progression = useMaybeProgression();
+  const channel = useAppSelector(state => state.lab.channel?.id);
+  const shelf = useMemo(
+    () =>
+      progression?.gated
+        ? {
+            holds: progression.holds,
+            offering: tileForChannel(
+              channel ?? '',
+              TILES.map(tile => tile.id),
+            ),
+          }
+        : undefined,
+    [progression?.gated, progression?.holds, channel],
+  );
   const {blocks, toolbox} = useMemo(() => {
     const palette = buildDomainPalette(projectRuleMetas(files), {
       ownRuleModule,
@@ -831,9 +854,21 @@ export const BlocklyFileEditor = ({
         ...palette.blocks,
         ...standInBlocks(Object.values(files), known),
       ],
-      toolbox: withoutCategories(palette.toolbox, hiddenCategories),
+      toolbox: shelf
+        ? shelvedToolbox(
+            withoutCategories(palette.toolbox, hiddenCategories),
+            shelf,
+          )
+        : withoutCategories(palette.toolbox, hiddenCategories),
     };
-  }, [files, ownRuleModule, fileKind, hiddenCategories, ownActorProperties]);
+  }, [
+    files,
+    ownRuleModule,
+    fileKind,
+    hiddenCategories,
+    ownActorProperties,
+    shelf,
+  ]);
 
   // Parsed once: Codebridge keys this component by file id, so it remounts (and
   // re-reads `initialContents`) when the active file changes.

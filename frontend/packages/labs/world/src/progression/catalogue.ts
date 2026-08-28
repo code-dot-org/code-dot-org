@@ -70,8 +70,23 @@ export const TILES: readonly Tile[] = [
     task: 'A world with one actor in it, and a Run button. Add a second actor, give it a picture, and put it somewhere.',
     requires: [],
     unlocks: [
-      {kind: 'category', name: 'Actor'},
-      {kind: 'category', name: 'World'},
+      // The seven blocks this lesson is done with, and not the drawers they
+      // live in: a first lesson that opened the whole Actor drawer would offer
+      // forty-two blocks to somebody who has met three (progression/toolboxShelf).
+      {kind: 'block', type: 'world_actor'},
+      {kind: 'block', type: 'world_use_trait'},
+      {kind: 'block', type: 'world_this_actor'},
+      {kind: 'block', type: 'world_world'},
+      {kind: 'block', type: 'world_add_actor'},
+      {kind: 'block', type: 'world_set_position'},
+      {kind: 'block', type: 'world_set_sprite'},
+      // A number, because a socket without a shadow needs one, and the Console
+      // whole — printing is how anything invisible is seen, and both the Input
+      // and the Motion branches ask for a print within two lessons. Origin is
+      // the only tile every path goes through, so it is the only place a thing
+      // both branches need can be granted (specs/PROGRESSION.md).
+      {kind: 'block', type: 'math_number'},
+      {kind: 'category', name: 'Console'},
       {kind: 'template', id: 'empty'},
     ],
     check: {
@@ -173,8 +188,8 @@ export const TILES: readonly Tile[] = [
         // Down and up in the same place is a click. Two of them: one on the
         // Target at the middle of the world, one well clear of it.
         trace: [
-          {pointer: {x: 192, y: 144, buttons: ['left']}, seconds: 0.1},
-          {pointer: {x: 192, y: 144, buttons: []}, seconds: 0.1},
+          {pointer: {x: 160, y: 160, buttons: ['left']}, seconds: 0.1},
+          {pointer: {x: 160, y: 160, buttons: []}, seconds: 0.1},
           {pointer: {x: 40, y: 40, buttons: ['left']}, seconds: 0.1},
           {pointer: {x: 40, y: 40, buttons: []}, seconds: 0.1},
         ],
@@ -307,7 +322,7 @@ export const TILES: readonly Tile[] = [
       'A force changes a speed; a speed changes a place. Two steps, not one.',
     task: 'Push the actor once and watch what happens after the push is over.',
     requires: ['motion/speed'],
-    unlocks: [{kind: 'block', type: 'world_do_Physics_ApplyForceAction'}],
+    unlocks: [{kind: 'block', type: 'world_vector_math'}],
     check: {
       kind: 'outcome',
       says: 'Nothing moves before the press; after it the Ball moves, and goes on moving once the key is let go.',
@@ -345,12 +360,15 @@ export const TILES: readonly Tile[] = [
     task: 'Make an actor cross the screen in exactly two seconds.',
     requires: ['motion/gravity'],
     unlocks: [
+      // How long a vector is — which is what a speed IS, once you know a speed
+      // is a vector — and the arithmetic to work one out. `size of map`
+      // belongs to the lesson that paints one.
       {kind: 'block', type: 'world_vector_length'},
-      {kind: 'block', type: 'world_map_size'},
+      {kind: 'block', type: 'math_single'},
     ],
     check: {
       kind: 'outcome',
-      says: 'After two seconds the Ball has crossed the world — 384 pixels, give or take a tile.',
+      says: 'After two seconds the Ball has crossed the world — 320 pixels, give or take a tile.',
       falsePass:
         'Guessing a number that happens to fit this screen. It is the right answer FOR this screen, which is what the lesson asked for; a second world of another width would tell arithmetic from luck, and this check does not have one.',
       run: {
@@ -363,7 +381,7 @@ export const TILES: readonly Tile[] = [
           return false;
         }
         const travelled = arrived[0].x - start[0].x;
-        return travelled > 344 && travelled < 424;
+        return travelled > 280 && travelled < 360;
       },
     },
   },
@@ -419,6 +437,7 @@ export const TILES: readonly Tile[] = [
     task: 'A door that opens and a platform that slides, both from one description.',
     requires: ['motion/units'],
     unlocks: [
+      {kind: 'block', type: 'world_play_tween_here'},
       {kind: 'block', type: 'world_define_tween'},
       {kind: 'block', type: 'world_play_tween'},
     ],
@@ -456,9 +475,12 @@ export const TILES: readonly Tile[] = [
     task: 'Make an actor change colour only once it is past the middle of the screen.',
     requires: ['origin/first-world'],
     unlocks: [
-      {kind: 'category', name: 'Logic'},
       {kind: 'block', type: 'controls_if'},
       {kind: 'block', type: 'logic_compare'},
+      // …and the two blocks the question is asked from and inside: an actor's
+      // own per-frame work, and reading where it is.
+      {kind: 'block', type: 'world_trait_step'},
+      {kind: 'block', type: 'world_get_Space_PositionProperty'},
     ],
     check: {
       kind: 'outcome',
@@ -474,7 +496,7 @@ export const TILES: readonly Tile[] = [
         if (!start?.[0]) {
           return false;
         }
-        return ended[0].x > 180 && ended[0].x < 240;
+        return ended[0].x > 145 && ended[0].x < 205;
       },
     },
   },
@@ -506,7 +528,7 @@ export const TILES: readonly Tile[] = [
         }
         // The Wall is at 288 and both are 32 wide, so a Ball resting against it
         // sits near 256. Well short of the far edge either way.
-        return ended[0].x > 200 && ended[0].x < 280;
+        return ended[0].x > 190 && ended[0].x < 265;
       },
     },
   },
@@ -555,14 +577,14 @@ export const TILES: readonly Tile[] = [
         if (balls.length !== 2) {
           return false;
         }
-        const low = balls.find(at => at.y > 144);
-        const high = balls.find(at => at.y <= 144);
+        const low = balls.find(at => at.y > 160);
+        const high = balls.find(at => at.y <= 160);
         return (
           low !== undefined &&
           high !== undefined &&
-          low.x > 180 &&
-          low.x < 240 &&
-          high.x > 400
+          low.x > 145 &&
+          low.x < 205 &&
+          high.x > 340
         );
       },
     },
@@ -618,6 +640,7 @@ export const TILES: readonly Tile[] = [
       {kind: 'block', type: 'world_rule_property'},
       {kind: 'rule', id: 'writing'},
       {kind: 'actor', id: 'label'},
+      {kind: 'block', type: 'text'},
       {kind: 'block', type: 'text_join'},
     ],
     check: {
@@ -636,7 +659,13 @@ export const TILES: readonly Tile[] = [
       'The same property on many actors, each with its own value — which is what an instance is.',
     task: 'Two lamps. Make each remember whether it is lit, without the world keeping a list.',
     requires: ['memory/world-state'],
-    unlocks: [{kind: 'block', type: 'world_this_actor'}],
+    // `this actor` came with the first lesson. What THIS one adds is reading
+    // and writing a property on one — the pair of blocks that make a value
+    // belong to an instance rather than to the world.
+    unlocks: [
+      {kind: 'block', type: 'world_get_boolean_property'},
+      {kind: 'block', type: 'world_set_boolean_property'},
+    ],
     check: {
       kind: 'outcome',
       says: 'The two lamps hold different values at the same moment.',
@@ -673,8 +702,10 @@ export const TILES: readonly Tile[] = [
     task: 'Import a sprite from the library, then paint your own and use that instead.',
     requires: ['origin/first-world'],
     unlocks: [
+      // `set sprite` came with the first lesson — a Hero without a picture is
+      // not much of a first lesson. What this one adds is the EDITOR, and the
+      // library to copy from.
       {kind: 'editor', id: 'image'},
-      {kind: 'block', type: 'world_set_sprite'},
       {kind: 'asset', id: 'player'},
       {kind: 'asset', id: 'coin'},
     ],
@@ -699,6 +730,8 @@ export const TILES: readonly Tile[] = [
     unlocks: [
       {kind: 'category', name: 'Drawing'},
       {kind: 'actor', id: 'progressBar'},
+      // A pen needs a colour, and this is the first lesson that holds one.
+      {kind: 'block', type: 'colour_picker'},
     ],
     check: {
       kind: 'outcome',
@@ -778,9 +811,11 @@ export const TILES: readonly Tile[] = [
     task: 'Put three actors in three named places, then put one of them somewhere random.',
     requires: ['origin/first-world'],
     unlocks: [
-      {kind: 'block', type: 'world_set_position'},
+      // `set position` came with the first lesson; what this one adds is the
+      // pair of numbers as a THING, and the shorthand for a whole place.
       {kind: 'block', type: 'world_vector'},
       {kind: 'block', type: 'world_random_place'},
+      {kind: 'block', type: 'math_arithmetic'},
     ],
     check: {
       kind: 'outcome',
@@ -798,8 +833,8 @@ export const TILES: readonly Tile[] = [
         const markers = lastList<Point>(samples.markers);
         return (
           markers.length >= 3 &&
-          markers.some(at => at.x < 128 && at.y < 96) &&
-          markers.some(at => at.x > 256 && at.y > 192)
+          markers.some(at => at.x < 107 && at.y < 107) &&
+          markers.some(at => at.x > 213 && at.y > 213)
         );
       },
     },
@@ -814,9 +849,16 @@ export const TILES: readonly Tile[] = [
     task: 'Paint a floor and some walls in the map editor, load them, and say how big the world is.',
     requires: ['place/position'],
     unlocks: [
+      // `set size of map` came with the first lesson: a world that arranges its
+      // own actors has no bounds until it says so, so it cannot be withheld
+      // from the lesson that arranges the first two.
       {kind: 'editor', id: 'map'},
       {kind: 'block', type: 'world_load_map'},
+      // How big the level is, and how a world with no `.map` says so. Both are
+      // ideas about a world BIGGER than the view, which is what this lesson
+      // paints — a first lesson has one screen and needs no opinion about it.
       {kind: 'block', type: 'world_set_map_size'},
+      {kind: 'block', type: 'world_map_size'},
     ],
     check: {
       kind: 'outcome',
@@ -1072,7 +1114,7 @@ export const TILES: readonly Tile[] = [
     teaches: 'Counting what is left is how a game knows it is over.',
     task: 'A wall of bricks that go one at a time, and an end when the last one does.',
     requires: ['arcade/paddle'],
-    unlocks: [{kind: 'block', type: 'world_remove_actor'}],
+    unlocks: [{kind: 'block', type: 'world_clear_world'}],
     check: {
       kind: 'outcome',
       says: 'The game ends on the last brick and not on the second to last.',
@@ -1273,6 +1315,7 @@ export const TILES: readonly Tile[] = [
     requires: ['story/reveal', 'story/choice'],
     unlocks: [
       {kind: 'actor', id: 'portrait'},
+      {kind: 'block', type: 'world_play_sound'},
       {kind: 'block', type: 'world_set_music'},
       {kind: 'template', id: 'story'},
     ],
@@ -1379,9 +1422,11 @@ export const TILES: readonly Tile[] = [
     task: 'Spawn a hundred wanderers on a click, watch the frame time, and find where it breaks.',
     requires: ['place/edges', 'input/mouse'],
     unlocks: [
-      {kind: 'block', type: 'world_add_actor'},
+      // `add actor` came with the first lesson; a hundred of them is the same
+      // block in a loop. What this one adds is asking about a crowd.
       {kind: 'block', type: 'world_all_actors'},
       {kind: 'block', type: 'world_count_actors'},
+      {kind: 'block', type: 'world_remove_actor'},
     ],
     check: {
       kind: 'outcome',
@@ -1435,7 +1480,7 @@ export const TILES: readonly Tile[] = [
       'Local rules make global behaviour, and neither one explains the other.',
     task: 'Keep apart, go the same way, stay together. Then take one away and watch what breaks.',
     requires: ['simulation/steering'],
-    unlocks: [{kind: 'block', type: 'world_trait_step'}],
+    unlocks: [{kind: 'block', type: 'world_count_with'}],
     check: {
       kind: 'outcome',
       says: 'The spread of headings narrows over the run, and widens again with alignment removed.',
@@ -1563,8 +1608,10 @@ export const TILES: readonly Tile[] = [
     task: 'One rule, two traits, and two kinds of agent that take one each.',
     requires: ['simulation/dials'],
     unlocks: [
+      // `use trait` is how an actor ELECTS one and came with the first lesson.
+      // What this teaches is declaring one, which is a rule's own business.
       {kind: 'block', type: 'world_rule_trait'},
-      {kind: 'block', type: 'world_use_trait'},
+      {kind: 'block', type: 'world_rule_enum'},
     ],
     check: {
       kind: 'outcome',

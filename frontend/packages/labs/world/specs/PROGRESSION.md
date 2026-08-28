@@ -623,12 +623,51 @@ idea works.
    and the two import libraries. A learner cannot take Gravity into their own
    game until they have done the Gravity lesson.
 
-   **What it governs is what a project may TAKE, not what a project HAS.** A
-   lesson's own starting project is free to contain anything — an edge means
-   readiness, not possession — and a rule already in a project keeps its toolbox
-   category whether or not the learner earned it. Gating the libraries is the
-   whole of it, and it is the whole of it because that is the one place somebody
-   reaches for a mechanic nobody has taught them.
+   **The libraries gate what a project may TAKE. The toolbox gates what its
+   editor OFFERS**, and the second was missing for a while: the first lesson
+   opened with twelve drawers and a hundred and fifty-seven blocks while its own
+   detail pane said it unlocked the Actor drawer. Gated, it opens with six
+   drawers and twelve blocks.
+
+   **Per block, not per drawer.** A drawer becomes EARNED the moment the
+   catalogue grants anything in it, and then shows only what has been granted —
+   so Origin's Actor drawer holds `define actor`, `use trait` and `this actor`
+   rather than all forty-two. Nothing is listed anywhere as gated: the set is
+   derived from what the tiles say they unlock, so a drawer no lesson has been
+   written for stays open, and gating grows as the curriculum does rather than
+   having to be complete on the first day.
+
+   **A lesson offers what it teaches.** `logic/if` tells the learner to add an
+   `if`, and finishing it is what grants Logic — so a lesson's toolbox is the
+   shelf PLUS that tile's own unlocks. Without that a gated lesson is a trap
+   rather than a gate, and `__tests__/toolboxShelf.test.ts` holds a table of the
+   blocks each lesson's instructions send somebody to find and insists every one
+   is there.
+
+   **A rule's blocks are never gated.** A project that holds Gravity has
+   Gravity's blocks whether or not the learner earned them — an edge means
+   readiness, not possession, and a lesson may hand you anything. A tile may
+   still SAY it unlocks one (`arcade/bounce` unlocks "the bounciness property",
+   which reads well and is true); it simply does not make that drawer earned.
+   Space and Appearance are the exception: they are the engine's own two rules,
+   in every project there has ever been, and `set position` is core vocabulary
+   rather than a mechanic somebody opted into.
+
+   **A lesson's world says as little as it can.** The early lessons all carried
+   `set size of map to x 12 y 9 tiles`, put there out of a half-remembered
+   warning that a world arranging its own actors has no bounds. It has bounds —
+   the viewport's, ten tiles each way. What it lacks is bounds OF ITS OWN, which
+   only a camera or a boundary rule would notice, and no early lesson has one.
+   So the block is gone from every lesson and granted by `place/map`, where a
+   world bigger than the view is the actual subject. The first lesson's world is
+   now three blocks: a world, an actor, a place to put it.
+
+   **Only Origin is on every path.** The map is a DAG, and a drawer earned
+   mid-branch strands the branches that do not pass through it — Variables
+   behind Memory would leave a Simulation learner without it. So the general
+   vocabulary is granted early on the spine: Origin gives the Console whole and
+   a number, and Math, Text, Colour and Sound are granted by the first tile of
+   the region that teaches each.
 
    **A locked row is shown, not removed**, with the lesson that grants it named
    beside it: "Unlocked by: Down". A row that has been taken away teaches

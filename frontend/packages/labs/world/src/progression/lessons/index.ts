@@ -31,8 +31,9 @@ import type {LessonProperties, TileId} from '../types';
 import {lessonSource} from './support';
 import {addActor, placeAt, worldFile} from './worlds';
 
-/** A screen's worth of world, in tiles (32px each). */
-const SCREEN: [number, number] = [12, 9];
+// No `tiles` on any of these worlds: a world that says nothing is one screen,
+// ten tiles each way, 320 by 320 (`VIEWPORT_TILES`). Saying so out loud is an
+// idea about maps bigger than the view, and none of these lessons has one.
 
 // ── origin/first-world ───────────────────────────────────────────────────────
 
@@ -42,8 +43,7 @@ const firstWorld: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      tiles: SCREEN,
-      rows: [addActor('hero', [placeAt(192, 144)])],
+      rows: [addActor('hero', [placeAt(160, 160)])],
     }),
     actors: {hero: actorFile('Hero', [setSprite('player.png')])},
     sprites: ['player'],
@@ -73,8 +73,7 @@ const arrows: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      tiles: SCREEN,
-      rows: [addActor('hero', [placeAt(192, 144)])],
+      rows: [addActor('hero', [placeAt(160, 160)])],
     }),
     actors: {hero: actorFile('Hero', [setSprite('player.png')])},
     sprites: ['player'],
@@ -106,8 +105,7 @@ const speed: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      tiles: SCREEN,
-      rows: [addActor('hero', [placeAt(40, 144)])],
+      rows: [addActor('hero', [placeAt(40, 160)])],
     }),
     actors: {
       hero: actorFile('Hero', [setSprite('player.png')], {
@@ -188,13 +186,12 @@ const gravity: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      tiles: SCREEN,
       rows: [
         // Directly above the ground, and that is not decoration: at x 160 and
         // 192 the two 32-pixel sprites overlap by nothing at all, and the Hero
         // falls past the corner of the floor. The lesson's check found it.
-        addActor('hero', [placeAt(192, 40)]),
-        addActor('ground', [placeAt(192, 260)]),
+        addActor('hero', [placeAt(160, 40)]),
+        addActor('ground', [placeAt(160, 272)]),
       ],
     }),
     actors: {
@@ -230,8 +227,7 @@ const sprite: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      tiles: SCREEN,
-      rows: [addActor('hero', [placeAt(192, 144)])],
+      rows: [addActor('hero', [placeAt(160, 160)])],
     }),
     actors: {
       hero: actorFile('Hero', [], {
@@ -268,11 +264,10 @@ const position: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      tiles: SCREEN,
       rows: [
-        addActor('marker', [placeAt(192, 144)]),
-        addActor('marker', [placeAt(192, 144)]),
-        addActor('marker', [placeAt(192, 144)]),
+        addActor('marker', [placeAt(160, 160)]),
+        addActor('marker', [placeAt(160, 160)]),
+        addActor('marker', [placeAt(160, 160)]),
       ],
     }),
     actors: {marker: actorFile('Marker', [setSprite('coin.png')])},
@@ -285,7 +280,8 @@ Three Markers, all in the same place, so it looks like one. A position is two
 numbers: **x** across, and **y** DOWN — which is the one that catches everybody,
 because a bigger \`y\` is further down the screen, not further up.
 
-The world is 12 tiles by 9, and a tile is 32 pixels: 384 across, 288 down.
+The world is 10 tiles each way, and a tile is 32 pixels: 320 across and 320
+down.
 
 ### What you do
 
@@ -305,8 +301,7 @@ const press: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      tiles: SCREEN,
-      rows: [addActor('hero', [placeAt(192, 144)])],
+      rows: [addActor('hero', [placeAt(160, 160)])],
     }),
     actors: {
       hero: actorFile('Hero', [
@@ -346,8 +341,7 @@ const mouse: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      tiles: SCREEN,
-      rows: [addActor('target', [placeAt(192, 144)])],
+      rows: [addActor('target', [placeAt(160, 160)])],
     }),
     actors: {target: actorFile('Target', [setSprite('coin.png')])},
     sprites: ['coin'],
@@ -381,8 +375,7 @@ const twoHands: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      tiles: SCREEN,
-      rows: [addActor('ship', [placeAt(192, 144)])],
+      rows: [addActor('ship', [placeAt(160, 160)])],
     }),
     actors: {
       ship: actorFile('Ship', [
@@ -440,8 +433,7 @@ const force: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      tiles: SCREEN,
-      rows: [addActor('ball', [placeAt(64, 144)])],
+      rows: [addActor('ball', [placeAt(64, 160)])],
     }),
     actors: {
       ball: actorFile(
@@ -492,8 +484,7 @@ const units: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      tiles: SCREEN,
-      rows: [addActor('ball', [placeAt(16, 144), setVelocity(60, 0)])],
+      rows: [addActor('ball', [placeAt(16, 160), setVelocity(60, 0)])],
     }),
     actors: {
       ball: actorFile('Ball', [
@@ -513,7 +504,7 @@ enormous number here.
 A speed is in **units per second**, and one unit is **100 pixels**. So 60 means
 six thousand pixels every second, and this world is only 384 across.
 
-The world is 12 tiles by 9, and a tile is 32 pixels: **384 across**.
+The world is 10 tiles each way, and a tile is 32 pixels: **320 across**.
 
 ### What you do
 
@@ -532,8 +523,7 @@ const drag: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      tiles: SCREEN,
-      rows: [addActor('ball', [placeAt(24, 144), setVelocity(2.5, 0)])],
+      rows: [addActor('ball', [placeAt(24, 160), setVelocity(2.5, 0)])],
     }),
     actors: {
       ball: actorFile('Ball', [
@@ -570,10 +560,9 @@ const tween: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      tiles: SCREEN,
       rows: [
-        addActor('door', [placeAt(96, 144)]),
-        addActor('post', [placeAt(320, 144)]),
+        addActor('door', [placeAt(64, 160)]),
+        addActor('post', [placeAt(256, 160)]),
       ],
     }),
     actors: {
@@ -624,8 +613,7 @@ const conditional: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      tiles: SCREEN,
-      rows: [addActor('ball', [placeAt(24, 144), setVelocity(1.6, 0)])],
+      rows: [addActor('ball', [placeAt(24, 160), setVelocity(1.6, 0)])],
     }),
     actors: {
       ball: actorFile('Ball', [
@@ -644,13 +632,13 @@ to notice where it is, because nothing has asked.
 
 An **if** is a question with two answers, and a program that does one thing or
 the other. The question here is "am I past the middle?" — the middle of a world
-12 tiles across is 192.
+10 tiles across is 160.
 
 ### What you do
 
 1. Give the Ball an **each frame** handler.
 2. Inside it, put an **if**, and ask whether **⟨get position x of this actor⟩**
-   is greater than **192**.
+   is greater than **160**.
 3. When it is, **set its speed to 0**. The Ball rolls to the middle and waits
    there.
 `.trim(),
@@ -665,10 +653,9 @@ const collision: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      tiles: SCREEN,
       rows: [
-        addActor('ball', [placeAt(24, 144), setVelocity(1.6, 0)]),
-        addActor('wall', [placeAt(288, 144)]),
+        addActor('ball', [placeAt(24, 160), setVelocity(1.6, 0)]),
+        addActor('wall', [placeAt(272, 160)]),
       ],
     }),
     actors: {
@@ -712,10 +699,9 @@ const andOr: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      tiles: SCREEN,
       rows: [
-        addActor('ball', [placeAt(24, 60), setVelocity(1.6, 0)]),
-        addActor('ball', [placeAt(24, 220), setVelocity(1.6, 0)]),
+        addActor('ball', [placeAt(24, 64), setVelocity(1.6, 0)]),
+        addActor('ball', [placeAt(24, 240), setVelocity(1.6, 0)]),
       ],
     }),
     actors: {
@@ -780,13 +766,13 @@ are.
 Say you want only the LOW one to stop — past the middle **and** below the
 halfway line. That is two questions, and the answer is yes only when both are.
 
-The world is 288 pixels down, so halfway down is 144.
+The world is 320 pixels down, so halfway down is 160.
 
 ### What you do
 
 1. Open \`actors/ball.actor\` and find the **if**.
 2. Wrap its question in an **and**, and add a second question: is
-   **⟨get position y of this actor⟩** greater than **144**?
+   **⟨get position y of this actor⟩** greater than **160**?
 3. Run it. The low Ball stops in the middle; the high one carries on and leaves.
 4. Change the **and** to an **or** and watch both stop again — which is the
    thing to be able to tell apart.

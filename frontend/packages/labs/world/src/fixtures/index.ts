@@ -88,7 +88,13 @@ export const WorldFixtures: LabFixtures = Object.fromEntries([
   ...WORLD_SCENARIO_TAGS.map(tag => [tag, fixtureFor(WORLD_SCENARIOS[tag])]),
   ...Object.entries(LESSONS).map(([id, lesson]) => [
     lessonChannel(id),
-    fixtureFor(lesson),
+    // A LESSON IS GATED in the harness, so the toolbox a lesson opens with can
+    // be looked at. Whether a real level gates is the level's to say and its
+    // default is off (`levelData.gateShelf`, specs/PROGRESSION.md).
+    fixtureFor({
+      ...lesson,
+      levelData: {...(lesson.levelData ?? {}), gateShelf: true},
+    }),
   ]),
 ]);
 
