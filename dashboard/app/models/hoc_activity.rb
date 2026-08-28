@@ -4,9 +4,10 @@
 #  Sequel via `PEGASUS_DB`, in `HocLegacy::SessionManageable` (insert) and `HocLegacy::CertificatesController`
 # (name update).
 #
-# `table_name` is qualified with the Pegasus database so ActiveRecord resolves it across databases on
-# the same cluster; `CDO.pegasus_db_name` because that name is environment-specific (`pegasus` in
-# production, `pegasus_test`, `pegasus_development`).
+# The marker below makes annotaterb skip this file entirely rather than rewrite it. This ensures that
+# CI builds don't generate a new annotation and don't get blocked by `check_for_new_file_changes`.
+#
+# -*- SkipSchemaAnnotations -*-
 # == Schema Information
 #
 # Table name: pegasus_development.hoc_activity
