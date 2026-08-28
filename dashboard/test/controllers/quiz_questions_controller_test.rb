@@ -35,10 +35,28 @@ class QuizQuestionsControllerTest < ActionController::TestCase
 
   # --- index ---
 
+  # index's default (blank search) mode browses the N most recent
+  # MultipleChoiceQuestion rows system-wide, not scoped to this test's own
+  # data - so asserting on specific rows this way is only reliable if
+  # nothing else in the table can outrank them within the limit. Tagging
+  # this test's own questions with a Standard created fresh here, then
+  # filtering by it (same mechanism "index narrows by standard..." already
+  # relies on, via a real JOIN/WHERE - not fulltext, so it isn't subject to
+  # MySQL's separate "fulltext can't see same-transaction inserts"
+  # limitation) guarantees the result set is only ever this test's own
+  # rows, regardless of what else exists.
   test "index marks bank questions attached: true/false relative to this quiz" do
+    standard = create(:standard)
+    @question.standards << standard
     other_question = create(:multiple_choice_question)
+    other_question.standards << standard
 
-    get :index, params: {level_id: @quiz.id, limit: 10}
+    get :index, params: {
+      level_id: @quiz.id,
+      standardFrameworkShortcode: standard.framework.shortcode,
+      standardShortcode: standard.shortcode,
+      limit: 10
+    }
 
     assert_response :success
     body = JSON.parse(response.body)
@@ -48,18 +66,27 @@ class QuizQuestionsControllerTest < ActionController::TestCase
   end
 
   test "index reports attachedToOtherQuizzes and usedInPublishedUnit correctly, computed in bulk" do
+    standard = create(:standard)
     other_quiz = create(:quiz)
     unit = create(:unit, :in_single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     create(:script_level, script: unit, levels: [other_quiz])
 
     shared_and_published = create(:multiple_choice_question)
+    shared_and_published.standards << standard
     create(:quiz_question_placement, level: @quiz, quiz_question: shared_and_published, page: 1, position: 2)
     create(:quiz_question_placement, level: other_quiz, quiz_question: shared_and_published, page: 1, position: 1)
+    @question.standards << standard
 
-    get :index, params: {level_id: @quiz.id, limit: 10}
+    get :index, params: {
+      level_id: @quiz.id,
+      standardFrameworkShortcode: standard.framework.shortcode,
+      standardShortcode: standard.shortcode,
+      limit: 10
+    }
 
     assert_response :success
-    by_id = JSON.parse(response.body).index_by {|q| q['id']}
+    body = JSON.parse(response.body)
+    by_id = body.index_by {|q| q['id']}
     assert_equal true, by_id[shared_and_published.id]['attachedToOtherQuizzes']
     assert_equal true, by_id[shared_and_published.id]['usedInPublishedUnit']
     assert_equal false, by_id[@question.id]['attachedToOtherQuizzes']
@@ -91,6 +118,15 @@ class QuizQuestionsControllerTest < ActionController::TestCase
       ActiveSupport::Notifications.unsubscribe(subscriber)
       count
     end
+
+    # Warms up the session before either measurement - the very first
+    # request in a signed-in test does one-time auth/session queries
+    # (users, experiments, lti_user_identities, user_permissions) that a
+    # later request in the same session doesn't repeat. Without this, the
+    # "small" measurement below would include that overhead and the "large"
+    # one wouldn't, comparing cold-request cost against the index
+    # optimization itself.
+    count_queries.call
 
     build_questions.call(2)
     small_page_queries = count_queries.call
