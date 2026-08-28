@@ -45,6 +45,7 @@ export {
   parseScriptJson,
 } from './importer';
 export {
+  buildNewLevelFile,
   type LevelFileBlocksPatch,
   type LevelFilePatch,
   type LevelFilePropertiesPatch,

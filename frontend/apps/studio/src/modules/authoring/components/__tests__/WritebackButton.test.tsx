@@ -35,6 +35,7 @@ const ONE_EDIT_PLAN: WritebackPlan = {
   planHash: 'hash-1',
   edits: [
     {
+      kind: 'edit',
       path: 'dashboard/config/levels/custom/maze/some_level.level',
       levelKey: 'some_level',
       unifiedDiff:
@@ -121,5 +122,65 @@ describe('WritebackButton', () => {
 
     await userEvent.click(screen.getByRole('button', {name: /review again/i}));
     expect(await screen.findByText('a fresh diff after a further edit')).toBeInTheDocument();
+  });
+
+  const ONE_CREATE_PLAN: WritebackPlan = {
+    planHash: 'hash-create-1',
+    edits: [
+      {
+        kind: 'create',
+        path: 'dashboard/config/levels/custom/maze/My New Maze Level.level',
+        levelKey: 'draft:draft-level-abc123',
+        experienceId: 'draft-exp-1',
+        name: 'My New Maze Level',
+        unifiedDiff: '--- /dev/null\n+++ My New Maze Level.level\n@@ ... @@\n+<Maze>...',
+        afterHash: 'after-create-1',
+      },
+    ],
+    skipped: [],
+  };
+
+  it('renders a pending create distinctly, with an editable name, and sends the edited name on apply', async () => {
+    fetchWritebackPlan.mockResolvedValue(ONE_CREATE_PLAN);
+    applyWriteback.mockResolvedValue({
+      ok: true,
+      result: {
+        planHash: 'hash-create-1',
+        applied: [
+          {
+            path: 'dashboard/config/levels/custom/maze/A Renamed Level.level',
+            afterHash: 'after-create-1',
+          },
+        ],
+        skipped: [],
+      },
+    });
+
+    render(<WritebackButton />, {wrapper: wrapper()});
+    const button = await screen.findByRole('button', {name: /write to dashboard\/config/i});
+    await waitFor(() => expect(button).toBeEnabled());
+    await userEvent.click(button);
+
+    expect(
+      await screen.findByText(
+        /new file: dashboard\/config\/levels\/custom\/maze\/My New Maze Level\.level/i,
+      ),
+    ).toBeInTheDocument();
+
+    const nameInput = screen.getByRole('textbox', {name: /level name/i});
+    expect(nameInput).toHaveValue('My New Maze Level');
+    await userEvent.clear(nameInput);
+    await userEvent.type(nameInput, 'A Renamed Level');
+    expect(
+      await screen.findByText(
+        /new file: dashboard\/config\/levels\/custom\/maze\/A Renamed Level\.level/i,
+      ),
+    ).toBeInTheDocument();
+
+    await userEvent.click(screen.getByRole('button', {name: /^write 1 file$/i}));
+    expect(applyWriteback).toHaveBeenCalledWith('hash-create-1', {
+      'draft-exp-1': 'A Renamed Level',
+    });
+    expect(await screen.findByText(/wrote 1 file:/i)).toBeInTheDocument();
   });
 });

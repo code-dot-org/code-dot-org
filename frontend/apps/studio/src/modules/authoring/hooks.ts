@@ -84,11 +84,18 @@ export function useChatLog() {
  * has nothing to write) and the dialog's diff/skip listing. Refetches
  * whenever the change log does (see the 'state' event handling above), so
  * the button's disabled state never lags a curriculum edit.
+ *
+ * A pending create's name is edited and previewed client-side only (the
+ * dialog shows `dashboard/config/.../<edited name>.level` from local state,
+ * not a re-fetched plan) and sent to the server only at apply time — see
+ * WritebackButton's `nameDrafts`. That keeps this query on one stable key
+ * regardless of what's mid-edit in the dialog, rather than firing a plan
+ * request per keystroke.
  */
 export function useWritebackPlan() {
   return useQuery({
     queryKey: WRITEBACK_KEY,
-    queryFn: authoringApi.fetchWritebackPlan,
+    queryFn: () => authoringApi.fetchWritebackPlan(),
   });
 }
 

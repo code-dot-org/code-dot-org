@@ -39,7 +39,8 @@ import {
 } from './store/SessionStore.js';
 import {rebuildWidgetSource} from './widgets/buildWidget.js';
 import {applyWritebackPlan, computePlanHash} from './writeback/apply.js';
-import {buildWritebackPlan, type WritebackPlan} from './writeback/plan.js';
+import {listAllLevelFileNames} from './writeback/levelNames.js';
+import {buildWritebackPlan, type WritebackPlan, type WritebackPlanEdit} from './writeback/plan.js';
 
 const PORT = Number(process.env.PORT) || 3737;
 const SESSION_ID = 'default';
@@ -369,10 +370,11 @@ app.post('/api/tutor', async c => {
 // input buildWritebackPlan/applyWritebackPlan compute over — see
 // writeback/plan.ts's doc comment on why planning and applying must share
 // one computation.
-function writebackPlanInput() {
+function writebackPlanInput(nameOverrides?: Record<string, string>) {
   if (!bridge.parseLevelXml || !bridge.patchLevelFile || !repoRoot) {
     return undefined;
   }
+  const root = repoRoot;
   return {
     courses: state.getSnapshot().courses,
     changes: state.getChanges(),
@@ -380,7 +382,14 @@ function writebackPlanInput() {
     readFile: (filePath: string) => fs.readFileSync(filePath, 'utf8'),
     parseLevelXml: bridge.parseLevelXml,
     patchLevelFile: bridge.patchLevelFile,
-    repoRoot,
+    buildNewLevelFile: bridge.buildNewLevelFile,
+    repoRoot: root,
+    levelProperties: state.getSnapshot().levelProperties,
+    nameOverrides,
+    // A directory walk, so it's a closure that only runs when a pending
+    // create actually calls it (buildCreateEdits's own lazy `??=`) — never
+    // on an overrides-only plan.
+    listAllLevelFileNames: () => listAllLevelFileNames(root),
   };
 }
 
@@ -390,21 +399,42 @@ function writebackPlanInput() {
 function publicPlan(plan: WritebackPlan) {
   return {
     planHash: computePlanHash(plan),
-    edits: plan.edits.map(edit => ({
-      path: edit.path,
-      levelKey: edit.levelKey,
-      unifiedDiff: edit.unifiedDiff,
-      beforeHash: edit.beforeHash,
-      afterHash: edit.afterHash,
-    })),
+    edits: plan.edits.map(publicEdit),
     skipped: plan.skipped,
   };
+}
+
+function publicEdit(edit: WritebackPlanEdit) {
+  return edit.kind === 'create'
+    ? {
+        kind: 'create' as const,
+        path: edit.path,
+        levelKey: edit.levelKey,
+        experienceId: edit.experienceId,
+        name: edit.name,
+        unifiedDiff: edit.unifiedDiff,
+        afterHash: edit.afterHash,
+      }
+    : {
+        kind: 'edit' as const,
+        path: edit.path,
+        levelKey: edit.levelKey,
+        unifiedDiff: edit.unifiedDiff,
+        beforeHash: edit.beforeHash,
+        afterHash: edit.afterHash,
+      };
 }
 
 // Dry-run only — see writeback/plan.ts's doc comment. Requires
 // @code-dot-org/authoring's dist (parseLevelXml/patchLevelFile) and a
 // resolved repoRoot; both are also required for the level catalog and
 // course import, so their absence already means a degraded service.
+//
+// Never takes a name override: a pending create's edited name is previewed
+// client-side (WritebackButton's `nameDrafts` — the path is a plain string
+// interpolation, and a create's file content never depends on its name) and
+// only reaches the server on apply, below, whose plan-changed/skipped
+// machinery is what actually validates it.
 app.get('/api/writeback/plan', c => {
   const input = writebackPlanInput();
   if (!input) {
@@ -413,16 +443,15 @@ app.get('/api/writeback/plan', c => {
   return c.json(publicPlan(buildWritebackPlan(input)));
 });
 
-const WritebackApplyBodySchema = z.object({planHash: z.string().optional()});
+const WritebackApplyBodySchema = z.object({
+  planHash: z.string().optional(),
+  nameOverrides: z.record(z.string(), z.string()).optional(),
+});
 
 // Recomputes the plan from scratch (never trusts a client-cached one), then
 // writes each edit whose beforeHash still matches what's on disk right now.
 // Never git add/commit/push — the user reviews dashboard/config themselves.
 app.post('/api/writeback/apply', async c => {
-  const input = writebackPlanInput();
-  if (!input) {
-    return c.json({error: '@code-dot-org/authoring writeback is not available'}, 503);
-  }
   let body: unknown;
   try {
     body = await c.req.json();
@@ -432,6 +461,10 @@ app.post('/api/writeback/apply', async c => {
   const parsed = WritebackApplyBodySchema.safeParse(body);
   if (!parsed.success) {
     return c.json({error: parsed.error.message}, 400);
+  }
+  const input = writebackPlanInput(parsed.data.nameOverrides);
+  if (!input) {
+    return c.json({error: '@code-dot-org/authoring writeback is not available'}, 503);
   }
 
   const outcome = applyWritebackPlan(input, parsed.data.planHash);

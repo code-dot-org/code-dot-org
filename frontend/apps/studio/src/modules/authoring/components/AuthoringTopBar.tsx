@@ -6,12 +6,14 @@ import type {CourseModel, CurriculumChange} from '@code-dot-org/authoring';
 import {useDocumentKeydown} from '@code-dot-org/component-library/common/hooks';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tags from '@code-dot-org/component-library/tags';
+import TextField from '@code-dot-org/component-library/textField';
 
 import {
   authoringApi,
   type LastPublishInfo,
   type PublishResult,
   type WritebackApplyResult,
+  type WritebackCreate,
   type WritebackEdit,
   type WritebackPlan,
 } from '../api';
@@ -339,6 +341,12 @@ export function WritebackButton() {
   const [phase, setPhase] = useState<WritebackPhase>('review');
   const [result, setResult] = useState<WritebackApplyResult | undefined>();
   const [error, setError] = useState<string | undefined>();
+  // A pending create's author-edited name, keyed by experienceId — kept
+  // client-side only until apply, never trusted back verbatim: the server
+  // recomputes the whole plan from these before writing anything (see
+  // plan.ts's validateExplicitLevelName), so a rejected name comes back as
+  // an ordinary `skipped` entry, not a silent failure.
+  const [nameDrafts, setNameDrafts] = useState<Record<string, string>>({});
   const open = Boolean(anchorEl);
   const editCount = plan?.edits.length ?? 0;
   const disabled = editCount === 0;
@@ -348,6 +356,7 @@ export function WritebackButton() {
     setPhase('review');
     setResult(undefined);
     setError(undefined);
+    setNameDrafts({});
   };
 
   const runApply = async () => {
@@ -356,7 +365,15 @@ export function WritebackButton() {
     }
     setPhase('busy');
     try {
-      const outcome = await authoringApi.applyWriteback(plan.planHash);
+      const overrides = Object.fromEntries(
+        plan.edits
+          .filter((edit): edit is WritebackCreate => edit.kind === 'create')
+          .map(edit => [edit.experienceId, nameDrafts[edit.experienceId] ?? edit.name]),
+      );
+      const outcome =
+        Object.keys(overrides).length > 0
+          ? await authoringApi.applyWriteback(plan.planHash, overrides)
+          : await authoringApi.applyWriteback(plan.planHash);
       if (!outcome.ok) {
         // The plan changed underneath the dialog (more edits landed while it
         // was open) — replace the cached plan with the fresh one the server
@@ -414,9 +431,20 @@ export function WritebackButton() {
                 {writeFileCountLabel(plan.edits.length)} to dashboard/config?
               </Typography>
               <ul className={styles.writebackEditList}>
-                {plan.edits.map(edit => (
-                  <WritebackEditRow key={edit.path} edit={edit} />
-                ))}
+                {plan.edits.map(edit =>
+                  edit.kind === 'create' ? (
+                    <WritebackCreateRow
+                      key={edit.experienceId}
+                      edit={edit}
+                      name={nameDrafts[edit.experienceId] ?? edit.name}
+                      onNameChange={name =>
+                        setNameDrafts(prev => ({...prev, [edit.experienceId]: name}))
+                      }
+                    />
+                  ) : (
+                    <WritebackEditRow key={edit.path} edit={edit} />
+                  ),
+                )}
               </ul>
               <WritebackSkippedSection skipped={plan.skipped} />
               <Typography variant="body4" className={styles.writebackNote}>
@@ -515,6 +543,51 @@ function WritebackEditRow({edit}: {edit: WritebackEdit}) {
           </div>
         ))}
       </pre>
+    </li>
+  );
+}
+
+/**
+ * A pending `createLevel` write, rendered distinctly from an ordinary edit:
+ * an editable name field (a level name is a one-way door once it ships —
+ * see writeback/newLevelName.ts — so it's never auto-applied without the
+ * author seeing it) and the whole new file's contents behind a disclosure,
+ * collapsed by default since a fresh Maze level's XML is long and the name
+ * is the one thing that needs eyes-on before every other write.
+ */
+function WritebackCreateRow({
+  edit,
+  name,
+  onNameChange,
+}: {
+  edit: WritebackCreate;
+  name: string;
+  onNameChange: (name: string) => void;
+}) {
+  return (
+    <li className={styles.writebackEditRow}>
+      <Typography variant="body4" className={styles.writebackEditPath}>
+        New file: dashboard/config/levels/custom/maze/{name || '…'}.level
+      </Typography>
+      <TextField
+        name={`writeback-create-name-${edit.experienceId}`}
+        label="Level name"
+        value={name}
+        size="s"
+        onChange={e => onNameChange(e.target.value)}
+      />
+      <details>
+        <summary>Preview file contents</summary>
+        <pre className={styles.writebackDiff}>
+          {edit.unifiedDiff.split('\n').map((line, i) => (
+            // Same reasoning as WritebackEditRow: one immutable diff string,
+            // never reordered.
+            <div key={i} style={{color: diffLineColor(line)}}>
+              {line.length === 0 ? ' ' : line}
+            </div>
+          ))}
+        </pre>
+      </details>
     </li>
   );
 }

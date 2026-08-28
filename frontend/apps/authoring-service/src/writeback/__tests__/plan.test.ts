@@ -1,11 +1,13 @@
 import {createHash} from 'node:crypto';
 import {describe, expect, it} from 'vitest';
 
-import {parseLevelXml, patchLevelFile} from '@code-dot-org/authoring';
+import {buildNewLevelFile, parseLevelXml, patchLevelFile} from '@code-dot-org/authoring';
 
 import type {
+  BuildNewLevelFile,
   CourseModel,
   CurriculumChange,
+  ExistingLevelExperience,
   ParseLevelXml,
   PatchLevelFile,
 } from '../../authoring/model.js';
@@ -19,6 +21,7 @@ import {buildWritebackPlan, type WritebackPlanInput} from '../plan.js';
 // reason.
 const parseLevelXmlBridged = parseLevelXml as unknown as ParseLevelXml;
 const patchLevelFileBridged = patchLevelFile as unknown as PatchLevelFile;
+const buildNewLevelFileBridged = buildNewLevelFile as unknown as BuildNewLevelFile;
 
 const KAREL_LEVEL = `<Karel>
   <config><![CDATA[{
@@ -109,6 +112,63 @@ function baseInput(overrides: Partial<WritebackPlanInput> = {}): WritebackPlanIn
     patchLevelFile: patchLevelFileBridged,
     repoRoot: '/repo',
     ...overrides,
+  };
+}
+
+/** A course tree with one draft-origin Maze experience — createMazeLevel.ts's
+ * own shape (levelKey `draft:...`, levelType 'Maze', a numeric id). */
+function draftCourse(
+  experienceId: string,
+  title: string,
+  levelNumericId = 1,
+  levelType = 'Maze',
+): CourseModel {
+  const experience: ExistingLevelExperience = {
+    id: experienceId,
+    origin: 'draft',
+    kind: 'existingLevel',
+    title,
+    levelKey: `draft:${experienceId}`,
+    levelType,
+    runtime: 'labhost',
+    labKey: 'maze',
+    levelNumericId,
+  };
+  return {
+    id: 'c',
+    displayName: 'Course',
+    origin: 'draft',
+    units: [
+      {
+        id: 'u',
+        displayName: 'Unit',
+        origin: 'draft',
+        lessons: [
+          {
+            id: 'l',
+            displayName: 'Lesson',
+            origin: 'draft',
+            experiences: [experience],
+          },
+        ],
+      },
+    ],
+  };
+}
+
+function createLevelChange(
+  experience: ExistingLevelExperience,
+  lessonId = 'l',
+  seq = 1,
+): CurriculumChange {
+  return {
+    seq,
+    at: new Date().toISOString(),
+    actor: 'author',
+    op: 'createLevel',
+    lessonId,
+    position: 0,
+    level: experience,
   };
 }
 
@@ -377,5 +437,189 @@ describe('buildWritebackPlan', () => {
     );
     expect(parsed.toolboxBlocksXml).toBe('<xml><block type="maze_dig"/></xml>');
     expect(parsed.properties.flower_type).toBe('purpleNectarHidden');
+  });
+});
+
+describe('buildWritebackPlan: createLevel', () => {
+  const SERVED_PROPERTIES = {
+    id: 7,
+    appName: 'maze',
+    type: 'Maze',
+    name: 'draft:draft-exp-1',
+    skin: 'birds',
+    maze: '[[2,1,3]]',
+    start_direction: '1',
+    short_instructions: 'Move forward to reach the goal.',
+    shortInstructions: 'Move forward to reach the goal.',
+    ideal: '1',
+    startBlocksXml:
+      '<xml><block type="when_run" deletable="false" movable="false"></block></xml>',
+    toolboxBlocksXml: '<xml><block type="maze_moveForward"/></xml>',
+    solutionBlocksXml:
+      '<xml><block type="when_run" deletable="false" movable="false">' +
+      '<next><block type="maze_moveForward"/></next></block></xml>',
+  };
+
+  function createInput(overrides: Partial<WritebackPlanInput> = {}): WritebackPlanInput {
+    return baseInput({
+      courses: [draftCourse('draft-exp-1', 'My New Maze Level')],
+      changes: [createLevelChange(draftCourse('draft-exp-1', 'My New Maze Level').units[0].lessons[0].experiences[0] as ExistingLevelExperience)],
+      levelProperties: {'1': SERVED_PROPERTIES},
+      buildNewLevelFile: buildNewLevelFileBridged,
+      listAllLevelFileNames: () => new Set<string>(),
+      ...overrides,
+    });
+  }
+
+  it('produces a create entry sourced from the served levelProperties, named after the title', () => {
+    const plan = buildWritebackPlan(createInput());
+    expect(plan.skipped).toEqual([]);
+    expect(plan.edits).toHaveLength(1);
+    const edit = plan.edits[0];
+    expect(edit.kind).toBe('create');
+    if (edit.kind !== 'create') throw new Error('unreachable');
+    expect(edit.name).toBe('My New Maze Level');
+    expect(edit.path).toBe('dashboard/config/levels/custom/maze/My New Maze Level.level');
+    expect(edit.experienceId).toBe('draft-exp-1');
+
+    const parsed = parseLevelXml(edit.after);
+    expect(parsed.levelType).toBe('Maze');
+    expect(parsed.properties).toEqual({
+      skin: 'birds',
+      maze: '[[2,1,3]]',
+      start_direction: '1',
+      short_instructions: 'Move forward to reach the goal.',
+      ideal: '1',
+    });
+    expect(parsed.startBlocksXml).toBe(SERVED_PROPERTIES.startBlocksXml);
+    expect(parsed.toolboxBlocksXml).toBe(SERVED_PROPERTIES.toolboxBlocksXml);
+    expect(parsed.solutionBlocksXml).toBe(SERVED_PROPERTIES.solutionBlocksXml);
+    // Wire-only fields never leak into the file.
+    expect(parsed.config).not.toHaveProperty('id');
+    expect(parsed.config).not.toHaveProperty('appName');
+    expect(parsed.properties).not.toHaveProperty('shortInstructions');
+  });
+
+  it('produces no entry, and no skip, for a createLevel op whose experience was removed (scratch level, never truly attached)', () => {
+    const plan = buildWritebackPlan(
+      createInput({courses: [{id: 'c', displayName: 'Course', origin: 'draft', units: []}]}),
+    );
+    expect(plan.edits).toHaveLength(0);
+    expect(plan.skipped).toEqual([]);
+  });
+
+  it('bumps the algorithmic default name against the on-disk corpus, not the client', () => {
+    const plan = buildWritebackPlan(
+      createInput({listAllLevelFileNames: () => new Set(['my new maze level'])}),
+    );
+    expect(plan.edits).toHaveLength(1);
+    const edit = plan.edits[0];
+    if (edit.kind !== 'create') throw new Error('unreachable');
+    expect(edit.name).toBe('My New Maze Level 2');
+  });
+
+  it('bumps two same-titled drafts against each other in one plan, not just against disk', () => {
+    const experienceA = draftCourse('draft-exp-1', 'Same Title', 1).units[0].lessons[0]
+      .experiences[0] as ExistingLevelExperience;
+    const experienceB = draftCourse('draft-exp-2', 'Same Title', 2).units[0].lessons[0]
+      .experiences[0] as ExistingLevelExperience;
+    const course: CourseModel = {
+      id: 'c',
+      displayName: 'Course',
+      origin: 'draft',
+      units: [
+        {
+          id: 'u',
+          displayName: 'Unit',
+          origin: 'draft',
+          lessons: [
+            {id: 'l', displayName: 'Lesson', origin: 'draft', experiences: [experienceA, experienceB]},
+          ],
+        },
+      ],
+    };
+    const plan = buildWritebackPlan(
+      createInput({
+        courses: [course],
+        changes: [createLevelChange(experienceA), createLevelChange(experienceB, 'l', 2)],
+        levelProperties: {'1': SERVED_PROPERTIES, '2': {...SERVED_PROPERTIES, name: 'draft:draft-exp-2'}},
+      }),
+    );
+    expect(plan.edits).toHaveLength(2);
+    const names = plan.edits.map(e => (e.kind === 'create' ? e.name : undefined)).sort();
+    expect(names).toEqual(['Same Title', 'Same Title 2']);
+  });
+
+  it('validates rather than silently rewrites an author-edited name, rejecting a collision', () => {
+    const plan = buildWritebackPlan(
+      createInput({
+        nameOverrides: {'draft-exp-1': 'Existing Level'},
+        listAllLevelFileNames: () => new Set(['existing level']),
+      }),
+    );
+    expect(plan.edits).toHaveLength(0);
+    expect(plan.skipped).toHaveLength(1);
+    expect(plan.skipped[0].field).toBe('name');
+    expect(plan.skipped[0].reason).toMatch(/already exists/);
+  });
+
+  it('rejects an author-edited name containing a slash rather than sanitizing it', () => {
+    const plan = buildWritebackPlan(
+      createInput({nameOverrides: {'draft-exp-1': '../../etc/passwd'}}),
+    );
+    expect(plan.edits).toHaveLength(0);
+    expect(plan.skipped[0].reason).toMatch(/slash/);
+  });
+
+  it('accepts a valid author-edited name verbatim', () => {
+    const plan = buildWritebackPlan(
+      createInput({nameOverrides: {'draft-exp-1': 'A Custom Name'}}),
+    );
+    expect(plan.edits).toHaveLength(1);
+    const edit = plan.edits[0];
+    if (edit.kind !== 'create') throw new Error('unreachable');
+    expect(edit.name).toBe('A Custom Name');
+    expect(edit.path).toBe('dashboard/config/levels/custom/maze/A Custom Name.level');
+  });
+
+  it('skips a non-Maze draft level type as out of this pass\'s scope', () => {
+    const plan = buildWritebackPlan(
+      createInput({
+        courses: [draftCourse('draft-exp-1', 'A Fish level', 1, 'Fish')],
+        changes: [
+          createLevelChange(
+            draftCourse('draft-exp-1', 'A Fish level', 1, 'Fish').units[0].lessons[0]
+              .experiences[0] as ExistingLevelExperience,
+          ),
+        ],
+      }),
+    );
+    expect(plan.edits).toHaveLength(0);
+    expect(plan.skipped).toHaveLength(1);
+    expect(plan.skipped[0].reason).toMatch(/Maze-family/);
+  });
+
+  it('does not also emit the generic "draft (non-lb) level" skip for a level this session created', () => {
+    const experience = draftCourse('draft-exp-1', 'My New Maze Level').units[0].lessons[0]
+      .experiences[0] as ExistingLevelExperience;
+    const plan = buildWritebackPlan(
+      createInput({
+        changes: [
+          createLevelChange(experience),
+          {
+            seq: 2,
+            at: new Date().toISOString(),
+            actor: 'author',
+            op: 'overrideLevelInstructions',
+            experienceId: 'draft-exp-1',
+            patch: {shortInstructions: 'Updated.'},
+            previous: {shortInstructions: 'Move forward to reach the goal.'},
+          },
+        ],
+      }),
+    );
+    // One create entry; no "draft (non-lb) level, out of scope" noise.
+    expect(plan.edits).toHaveLength(1);
+    expect(plan.skipped).toEqual([]);
   });
 });

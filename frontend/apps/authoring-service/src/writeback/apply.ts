@@ -20,7 +20,13 @@ import {createHash} from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 
-import {buildWritebackPlan, type WritebackPlan, type WritebackPlanInput, type WritebackSkip} from './plan.js';
+import {
+  buildWritebackPlan,
+  CREATABLE_LEVEL_DIRECTORY,
+  type WritebackPlan,
+  type WritebackPlanInput,
+  type WritebackSkip,
+} from './plan.js';
 
 export interface WritebackApplyInput extends WritebackPlanInput {
   /**
@@ -49,12 +55,11 @@ export type WritebackApplyOutcome =
  */
 export function computePlanHash(plan: Pick<WritebackPlan, 'edits' | 'skipped'>): string {
   const canonical = JSON.stringify({
-    edits: plan.edits.map(edit => ({
-      path: edit.path,
-      levelKey: edit.levelKey,
-      beforeHash: edit.beforeHash,
-      afterHash: edit.afterHash,
-    })),
+    edits: plan.edits.map(edit =>
+      edit.kind === 'create'
+        ? {kind: 'create', path: edit.path, levelKey: edit.levelKey, name: edit.name, afterHash: edit.afterHash}
+        : {kind: 'edit', path: edit.path, levelKey: edit.levelKey, beforeHash: edit.beforeHash, afterHash: edit.afterHash},
+    ),
     skipped: plan.skipped,
   });
   return sha256(canonical);
@@ -80,6 +85,51 @@ export function applyWritebackPlan(
   const skipped: WritebackSkip[] = [...plan.skipped];
 
   for (const edit of plan.edits) {
+    if (edit.kind === 'create') {
+      // A create's identity is `name`, not a catalog-resolved levelKey (a
+      // draft: key was never in the catalog to begin with) — the target
+      // path is recomputed the same deterministic way plan.ts derived it,
+      // never trusted from a stored field on the plan object across this
+      // rebuild (same discipline as an edit's own resolveLevelFilePath
+      // re-resolution just below).
+      const absolutePath = path.resolve(
+        path.join(repoRoot ?? '', ...CREATABLE_LEVEL_DIRECTORY, `${edit.name}.level`),
+      );
+      if (!isWithin(allowedRoot, absolutePath)) {
+        skipped.push({
+          experienceId: edit.experienceId,
+          field: edit.path,
+          reason: `refused: ${absolutePath} is outside the allowed root ${allowedRoot}`,
+        });
+        continue;
+      }
+      let alreadyExists = true;
+      try {
+        input.readFile(absolutePath);
+      } catch {
+        alreadyExists = false;
+      }
+      if (alreadyExists) {
+        skipped.push({
+          experienceId: edit.experienceId,
+          field: edit.path,
+          reason: `refused: ${absolutePath} already exists — a name collision since the plan was computed; re-open the write-back dialog and pick a different name`,
+        });
+        continue;
+      }
+      try {
+        writeFileAtomic(absolutePath, edit.after);
+      } catch (error) {
+        skipped.push({
+          experienceId: edit.experienceId,
+          reason: `could not write ${absolutePath}: ${String(error)}`,
+        });
+        continue;
+      }
+      applied.push({path: edit.path, afterHash: edit.afterHash});
+      continue;
+    }
+
     const resolvedPath = input.resolveLevelFilePath(edit.levelKey);
     if (!resolvedPath) {
       skipped.push({

@@ -26,6 +26,7 @@ import {afterEach, beforeEach, describe, expect, it} from 'vitest';
 import {
   applyChange,
   buildMazeLevelProperties,
+  buildNewLevelFile,
   parseLevelXml,
   patchLevelFile,
   type ParsedLevelXml,
@@ -33,10 +34,14 @@ import {
 
 import type {
   ApplyChange,
+  BuildNewLevelFile,
   CourseModel,
+  ExistingLevelExperience,
   ParseLevelXml,
   PatchLevelFile,
 } from '../../authoring/model.js';
+import {LevelCatalog} from '../../boot/levelCatalog.js';
+import {buildBlankMazeLevelDefinition, buildMazeLevelWireProperties} from '../../levels/mazeLevel.js';
 import {AuthoringState} from '../../state/AuthoringState.js';
 import {EMPTY_SNAPSHOT, SessionStore} from '../../store/SessionStore.js';
 import {applyWritebackPlan} from '../apply.js';
@@ -48,6 +53,7 @@ import {buildWritebackPlan} from '../plan.js';
 const parseLevelXmlBridged = parseLevelXml as unknown as ParseLevelXml;
 const patchLevelFileBridged = patchLevelFile as unknown as PatchLevelFile;
 const applyChangeBridged = applyChange as unknown as ApplyChange;
+const buildNewLevelFileBridged = buildNewLevelFile as unknown as BuildNewLevelFile;
 
 function findRepoRoot(startDir: string): string | undefined {
   let dir = startDir;
@@ -438,3 +444,117 @@ describe.skipIf(!repoRoot)(
     });
   },
 );
+
+// Pass 5's own ultimate test (writeback plan doc, Pass 5): a level this
+// write-back CREATES must not just parse — a fresh LevelCatalog scan (what a
+// brand-new session boot, or a real Levelbuilder-seeded environment, would
+// run) must find it by name in a directory the catalog actually scans, and
+// resolving it must reproduce the same served wire shape the draft was
+// showing before it ever touched disk.
+describe.skipIf(!repoRoot)('writeback create: new .level file round-trips through a fresh LevelCatalog scan', () => {
+  it('lands in a scanned directory and re-imports to the wire shape the draft session was serving', () => {
+    const fixtureRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'writeback-create-repo-'));
+    try {
+      fs.mkdirSync(path.join(fixtureRoot, 'dashboard/config/levels/custom/maze'), {
+        recursive: true,
+      });
+
+      const definition = buildBlankMazeLevelDefinition({skin: 'birds'});
+      const levelKey = 'draft:draft-level-abc12345';
+      const numericId = 1;
+      const servedBefore = buildMazeLevelWireProperties(numericId, levelKey, definition);
+
+      const experience: ExistingLevelExperience = {
+        id: 'draft-exp-1',
+        origin: 'draft',
+        kind: 'existingLevel',
+        title: 'My Fresh Maze Level',
+        levelKey,
+        levelType: 'Maze',
+        runtime: 'labhost',
+        labKey: 'maze',
+        levelNumericId: numericId,
+      };
+      const courses: CourseModel[] = [
+        {
+          id: 'course-1',
+          displayName: 'Course',
+          origin: 'draft',
+          units: [
+            {
+              id: 'unit-1',
+              displayName: 'Unit',
+              origin: 'draft',
+              lessons: [
+                {
+                  id: 'lesson-1',
+                  displayName: 'Lesson',
+                  origin: 'draft',
+                  experiences: [experience],
+                },
+              ],
+            },
+          ],
+        },
+      ];
+
+      const outcome = applyWritebackPlan({
+        courses,
+        changes: [
+          {
+            seq: 1,
+            at: new Date().toISOString(),
+            actor: 'author',
+            op: 'createLevel',
+            lessonId: 'lesson-1',
+            position: 0,
+            level: experience,
+          },
+        ],
+        resolveLevelFilePath: () => undefined,
+        readFile: filePath => fs.readFileSync(filePath, 'utf8'),
+        parseLevelXml: parseLevelXmlBridged,
+        patchLevelFile: patchLevelFileBridged,
+        buildNewLevelFile: buildNewLevelFileBridged,
+        levelProperties: {[String(numericId)]: servedBefore},
+        listAllLevelFileNames: () => new Set<string>(),
+        repoRoot: fixtureRoot,
+      });
+      expect(outcome.ok).toBe(true);
+      if (!outcome.ok) throw new Error('unreachable');
+      expect(outcome.result.skipped).toEqual([]);
+      expect(outcome.result.applied).toHaveLength(1);
+      expect(outcome.result.applied[0].path).toBe(
+        'dashboard/config/levels/custom/maze/My Fresh Maze Level.level',
+      );
+
+      // A brand-new LevelCatalog scan of the same tree — nothing shared with
+      // the write above except the filesystem.
+      const catalog = LevelCatalog.scan(fixtureRoot, parseLevelXmlBridged);
+      const foundPath = catalog.filePath('My Fresh Maze Level');
+      expect(foundPath).toBe(
+        path.join(fixtureRoot, 'dashboard/config/levels/custom/maze/My Fresh Maze Level.level'),
+      );
+
+      let nextId = 100;
+      const registered: Record<string, Record<string, unknown>> = {};
+      const resolved = catalog.resolveLevel('My Fresh Maze Level', {
+        nextLevelNumericId: () => nextId++,
+        registerLevelProperties: map => Object.assign(registered, map),
+      });
+      expect(resolved).toBeDefined();
+      const reimported = registered[String(resolved!.levelNumericId)];
+      expect(reimported.skin).toBe(servedBefore.skin);
+      expect(reimported.maze).toBe(servedBefore.maze);
+      expect(reimported.start_direction).toBe(servedBefore.start_direction);
+      expect(reimported.shortInstructions).toBe(servedBefore.shortInstructions);
+      expect(reimported.short_instructions).toBe(servedBefore.short_instructions);
+      expect(reimported.ideal).toBe(servedBefore.ideal);
+      expect(reimported.startBlocksXml).toBe(servedBefore.startBlocksXml);
+      expect(reimported.toolboxBlocksXml).toBe(servedBefore.toolboxBlocksXml);
+      expect(reimported.solutionBlocksXml).toBe(servedBefore.solutionBlocksXml);
+    } finally {
+      fs.rmSync(fixtureRoot, {recursive: true, force: true});
+    }
+  });
+});

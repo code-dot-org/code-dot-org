@@ -94,15 +94,30 @@ export interface PublishResult {
 }
 
 /** One file the write-back plan would (or did) touch — authoring-service's
- * writeback/plan.ts WritebackFileEdit, minus the full patched content (that
- * never leaves the server; a diff is what the dialog renders). */
+ * writeback/plan.ts WritebackPlanEdit, minus the full patched/new content
+ * (that never leaves the server; a diff is what the dialog renders). */
 export interface WritebackEdit {
+  kind: 'edit';
   path: string;
   levelKey: string;
   unifiedDiff: string;
   beforeHash: string;
   afterHash: string;
 }
+
+/** A brand-new `.level` file a `createLevel` op would (or did) add — `name`
+ * is editable in the dialog before apply (see WritebackButton's `nameOverrides`). */
+export interface WritebackCreate {
+  kind: 'create';
+  path: string;
+  levelKey: string;
+  experienceId: string;
+  name: string;
+  unifiedDiff: string;
+  afterHash: string;
+}
+
+export type WritebackPlanEdit = WritebackEdit | WritebackCreate;
 
 /** One change the plan couldn't turn into a file edit, and why — see
  * authoring-service's writeback/plan.ts doc comment for the full taxonomy
@@ -115,7 +130,7 @@ export interface WritebackSkip {
 
 export interface WritebackPlan {
   planHash: string;
-  edits: WritebackEdit[];
+  edits: WritebackPlanEdit[];
   skipped: WritebackSkip[];
 }
 
@@ -243,11 +258,14 @@ export const authoringApi = {
   // Bypasses post()'s uniform throw-on-non-2xx: a 409 here is a legitimate
   // "your plan is stale" outcome carrying the fresh plan the dialog needs to
   // re-render, not just an error string.
-  applyWriteback: async (planHash: string): Promise<WritebackApplyOutcome> => {
+  applyWriteback: async (
+    planHash: string,
+    nameOverrides?: Record<string, string>,
+  ): Promise<WritebackApplyOutcome> => {
     const res = await fetch(`${BASE}/writeback/apply`, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({planHash}),
+      body: JSON.stringify({planHash, nameOverrides}),
     });
     const data: unknown = await res.json().catch(() => undefined);
     if (res.status === 409 && data && typeof data === 'object' && (data as {code?: unknown}).code === 'plan-changed') {

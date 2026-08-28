@@ -13,6 +13,7 @@
 
 import type {
   ApplyChange,
+  BuildNewLevelFile,
   LoadedCourse,
   ParseLevelXml,
   PatchLevelFile,
@@ -25,6 +26,7 @@ export interface AuthoringBridge {
   applyChange: ApplyChange;
   parseLevelXml?: ParseLevelXml;
   patchLevelFile?: PatchLevelFile;
+  buildNewLevelFile?: BuildNewLevelFile;
   loadCourse?: (
     repoRoot: string,
     courseName: string,
@@ -70,6 +72,7 @@ export async function loadAuthoringBridge(): Promise<AuthoringBridge> {
     applyChange: applyChange ?? unavailable,
     parseLevelXml: core?.parseLevelXml as ParseLevelXml | undefined,
     patchLevelFile: core?.patchLevelFile as PatchLevelFile | undefined,
+    buildNewLevelFile: core?.buildNewLevelFile as BuildNewLevelFile | undefined,
     loadCourse: node?.loadCourse as AuthoringBridge['loadCourse'],
     available: Boolean(applyChange),
   };

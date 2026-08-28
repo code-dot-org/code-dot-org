@@ -3,11 +3,13 @@ import os from 'node:os';
 import path from 'node:path';
 import {afterEach, beforeEach, describe, expect, it} from 'vitest';
 
-import {parseLevelXml, patchLevelFile} from '@code-dot-org/authoring';
+import {buildNewLevelFile, parseLevelXml, patchLevelFile} from '@code-dot-org/authoring';
 
 import type {
+  BuildNewLevelFile,
   CourseModel,
   CurriculumChange,
+  ExistingLevelExperience,
   ParseLevelXml,
   PatchLevelFile,
 } from '../../authoring/model.js';
@@ -18,6 +20,7 @@ import {buildWritebackPlan, type WritebackPlanInput} from '../plan.js';
 // already need — see their comments.
 const parseLevelXmlBridged = parseLevelXml as unknown as ParseLevelXml;
 const patchLevelFileBridged = patchLevelFile as unknown as PatchLevelFile;
+const buildNewLevelFileBridged = buildNewLevelFile as unknown as BuildNewLevelFile;
 
 const KAREL_LEVEL = `<Karel>
   <config><![CDATA[{
@@ -274,5 +277,129 @@ describe('applyWritebackPlan', () => {
     ];
     const planC = buildWritebackPlan(input);
     expect(computePlanHash(planC)).not.toBe(computePlanHash(planA));
+  });
+});
+
+describe('applyWritebackPlan: createLevel', () => {
+  const SERVED_PROPERTIES = {
+    skin: 'birds',
+    maze: '[[2,1,3]]',
+    start_direction: '1',
+    short_instructions: 'Move forward to reach the goal.',
+    ideal: '1',
+    startBlocksXml:
+      '<xml><block type="when_run" deletable="false" movable="false"></block></xml>',
+    toolboxBlocksXml: '<xml><block type="maze_moveForward"/></xml>',
+    solutionBlocksXml:
+      '<xml><block type="when_run" deletable="false" movable="false">' +
+      '<next><block type="maze_moveForward"/></next></block></xml>',
+  };
+
+  function draftCourse(experienceId: string, title: string): CourseModel {
+    const experience: ExistingLevelExperience = {
+      id: experienceId,
+      origin: 'draft',
+      kind: 'existingLevel',
+      title,
+      levelKey: `draft:${experienceId}`,
+      levelType: 'Maze',
+      runtime: 'labhost',
+      labKey: 'maze',
+      levelNumericId: 1,
+    };
+    return {
+      id: 'c',
+      displayName: 'Course',
+      origin: 'draft',
+      units: [
+        {
+          id: 'u',
+          displayName: 'Unit',
+          origin: 'draft',
+          lessons: [{id: 'l', displayName: 'Lesson', origin: 'draft', experiences: [experience]}],
+        },
+      ],
+    };
+  }
+
+  function createInput(overrides: Partial<WritebackPlanInput> = {}): WritebackPlanInput {
+    const experience = draftCourse('draft-exp-1', 'A New Maze Level').units[0].lessons[0]
+      .experiences[0] as ExistingLevelExperience;
+    return {
+      courses: [draftCourse('draft-exp-1', 'A New Maze Level')],
+      changes: [
+        {
+          seq: 1,
+          at: new Date().toISOString(),
+          actor: 'author',
+          op: 'createLevel',
+          lessonId: 'l',
+          position: 0,
+          level: experience,
+        },
+      ],
+      resolveLevelFilePath: () => undefined,
+      readFile: filePath => fs.readFileSync(filePath, 'utf8'),
+      parseLevelXml: parseLevelXmlBridged,
+      patchLevelFile: patchLevelFileBridged,
+      buildNewLevelFile: buildNewLevelFileBridged,
+      levelProperties: {'1': SERVED_PROPERTIES},
+      listAllLevelFileNames: () => new Set<string>(),
+      repoRoot: root,
+      ...overrides,
+    };
+  }
+
+  it('writes a brand-new .level file at the expected path and reports it applied', () => {
+    const outcome = applyWritebackPlan(createInput());
+    expect(outcome.ok).toBe(true);
+    if (!outcome.ok) throw new Error('unreachable');
+    expect(outcome.result.skipped).toEqual([]);
+    expect(outcome.result.applied).toEqual([
+      {
+        path: 'dashboard/config/levels/custom/maze/A New Maze Level.level',
+        afterHash: expect.any(String),
+      },
+    ]);
+
+    const writtenPath = path.join(levelsDir, 'A New Maze Level.level');
+    const written = fs.readFileSync(writtenPath, 'utf8');
+    const parsed = parseLevelXml(written);
+    expect(parsed.levelType).toBe('Maze');
+    expect(parsed.properties.skin).toBe('birds');
+    expect(parsed.properties.maze).toBe('[[2,1,3]]');
+  });
+
+  it('refuses to overwrite a file that already exists at the target name', () => {
+    const collidingPath = path.join(levelsDir, 'A New Maze Level.level');
+    fs.writeFileSync(collidingPath, KAREL_LEVEL, 'utf8');
+
+    const outcome = applyWritebackPlan(createInput());
+    expect(outcome.ok).toBe(true);
+    if (!outcome.ok) throw new Error('unreachable');
+    expect(outcome.result.applied).toEqual([]);
+    expect(outcome.result.skipped).toHaveLength(1);
+    expect(outcome.result.skipped[0].reason).toMatch(/already exists/);
+    // The pre-existing file is untouched — never partially overwritten.
+    expect(fs.readFileSync(collidingPath, 'utf8')).toBe(KAREL_LEVEL);
+  });
+
+  it('applies a create alongside an ordinary edit in the same apply', () => {
+    const editInput = baseInput();
+    const input = createInput({
+      courses: [...editInput.courses, ...createInput().courses],
+      changes: [...editInput.changes, ...createInput().changes],
+      resolveLevelFilePath: editInput.resolveLevelFilePath,
+    });
+    const outcome = applyWritebackPlan(input);
+    expect(outcome.ok).toBe(true);
+    if (!outcome.ok) throw new Error('unreachable');
+    expect(outcome.result.skipped).toEqual([]);
+    expect(outcome.result.applied.map(a => a.path).sort()).toEqual(
+      [
+        'dashboard/config/levels/custom/maze/A New Maze Level.level',
+        'dashboard/config/levels/custom/maze/courseD_maze_ramp1_2024.level',
+      ].sort(),
+    );
   });
 });

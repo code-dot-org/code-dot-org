@@ -4,7 +4,7 @@ import {fileURLToPath} from 'node:url';
 import {describe, expect, it} from 'vitest';
 
 import {parseLevelXml} from '../../importer/levelXml';
-import {patchLevelFile, serializeLevelXml} from '../levelFile';
+import {buildNewLevelFile, patchLevelFile, serializeLevelXml} from '../levelFile';
 
 // Same convention as node/__tests__/loadCourse.test.ts: walk up looking for
 // dashboard/config (the signature of the repo root) rather than assume a
@@ -227,6 +227,97 @@ if (repoRoot === undefined) {
       expect(after.startBlocksXml).toBe(newStart);
       expect(after.toolboxBlocksXml).toBe(before.toolboxBlocksXml);
       expect(after.solutionBlocksXml).toBe(before.solutionBlocksXml);
+    });
+  });
+
+  describe('buildNewLevelFile', () => {
+    it('produces a file parseLevelXml reads back with exactly the given properties/blocks', () => {
+      const xml = buildNewLevelFile('Maze', {
+        properties: {
+          skin: 'birds',
+          maze: '[[2,3]]',
+          start_direction: '1',
+          short_instructions: 'Move forward to reach the goal.',
+          ideal: '1',
+        },
+        blocks: {
+          startBlocksXml:
+            '<xml><block type="when_run" deletable="false" movable="false"></block></xml>',
+          toolboxBlocksXml: '<xml><block type="maze_moveForward"/></xml>',
+          solutionBlocksXml:
+            '<xml><block type="when_run" deletable="false" movable="false">' +
+            '<next><block type="maze_moveForward"/></next></block></xml>',
+        },
+      });
+      const parsed = parseLevelXml(xml);
+      expect(parsed.levelType).toBe('Maze');
+      expect(parsed.properties).toEqual({
+        skin: 'birds',
+        maze: '[[2,3]]',
+        start_direction: '1',
+        short_instructions: 'Move forward to reach the goal.',
+        ideal: '1',
+      });
+      expect(parsed.startBlocksXml).toBe(
+        '<xml><block type="when_run" deletable="false" movable="false"></block></xml>',
+      );
+      expect(parsed.toolboxBlocksXml).toBe(
+        '<xml><block type="maze_moveForward"/></xml>',
+      );
+      expect(parsed.solutionBlocksXml).toBe(
+        '<xml><block type="when_run" deletable="false" movable="false">' +
+          '<next><block type="maze_moveForward"/></next></block></xml>',
+      );
+      // config's fixed sibling fields, matching a real fresh custom level
+      // (Level#filter_level_attributes, Services::LevelFiles.write_custom_level_file).
+      expect(parsed.config.level_num).toBe('custom');
+      expect(parsed.config.published).toBe(true);
+      expect(parsed.config.notes).toBe('');
+      expect(parsed.config.level_concept_difficulty).toEqual({});
+      expect(parsed.config.game_id).toBeUndefined();
+      expect(parsed.config.created_at).toBeUndefined();
+      expect(parsed.config.user_id).toBeUndefined();
+      expect(parsed.config.audit_log).toBeUndefined();
+    });
+
+    it("matches a real file's empty-object/no-trailing-newline shape", () => {
+      const xml = buildNewLevelFile('Maze', {properties: {skin: 'birds'}});
+      expect(xml).toContain('"level_concept_difficulty": {\n  }');
+      expect(xml.endsWith('</Maze>')).toBe(true);
+      expect(xml.endsWith('\n')).toBe(false);
+    });
+
+    it('inserts three new block fields with no blank line between siblings', () => {
+      // Regression: inserting start/toolbox/solution one at a time into one
+      // empty <blocks/> used to leave each prior insert's own trailing
+      // indent as a blank line before the next sibling — a real Levelbuilder
+      // save (one Nokogiri pass) never produces that gap.
+      const xml = buildNewLevelFile('Maze', {
+        properties: {skin: 'birds'},
+        blocks: {
+          startBlocksXml: '<xml><block type="when_run"></block></xml>',
+          toolboxBlocksXml: '<xml><block type="maze_moveForward"/></xml>',
+          solutionBlocksXml: '<xml><block type="when_run"></block></xml>',
+        },
+      });
+      expect(xml).not.toMatch(/<\/\w+_blocks>\n\s*\n/);
+      const parsed = parseLevelXml(xml);
+      expect(parsed.startBlocksXml).toBe('<xml><block type="when_run"></block></xml>');
+      expect(parsed.toolboxBlocksXml).toBe('<xml><block type="maze_moveForward"/></xml>');
+      expect(parsed.solutionBlocksXml).toBe('<xml><block type="when_run"></block></xml>');
+    });
+
+    it('round-trips through a second patch exactly like an edit would', () => {
+      const created = buildNewLevelFile('Maze', {
+        properties: {skin: 'birds', short_instructions: 'Original.'},
+      });
+      const edited = patchLevelFile(created, {
+        properties: {short_instructions: 'Edited after creation.'},
+      });
+      expect(parseLevelXml(edited).properties).toEqual({
+        skin: 'birds',
+        short_instructions: 'Edited after creation.',
+      });
     });
   });
 }

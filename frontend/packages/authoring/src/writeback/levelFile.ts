@@ -324,6 +324,54 @@ function patchObject(
 }
 
 // ---------------------------------------------------------------------------
+// Brand-new files: a fixed scaffold plus the same splicing patchLevelFile
+// already does for edits, so a create and an edit share one formatting rule.
+// ---------------------------------------------------------------------------
+
+/**
+ * A minimal, valid scaffold for a level type this project can create
+ * (Maze-family only, so far — see createMazeLevel.ts): root tag, an empty
+ * `properties` object, and the fixed sibling fields a fresh custom level
+ * legally carries. `game_id`, `created_at`, `user_id` and `audit_log` are
+ * left out on purpose — `Level#filter_level_attributes`'s `compact!`
+ * (dashboard/app/models/levels/level.rb) proves a real `.level` file may omit
+ * them, and this writer has no honest value for any of the four (they come
+ * from a Rails model instance/DB row that never existed here). The empty
+ * `level_concept_difficulty` object is written on two lines, matching
+ * Ruby's `JSON.pretty_generate({})` — see levelFile.ts's own module doc for
+ * why Node's one-line `JSON.stringify({})` isn't used anywhere in this file.
+ */
+function newLevelScaffold(rootTag: string): string {
+  return (
+    `<${rootTag}>\n` +
+    `  <config><![CDATA[{\n` +
+    `  "level_num": "custom",\n` +
+    `  "properties": {\n` +
+    `  },\n` +
+    `  "published": true,\n` +
+    `  "notes": "",\n` +
+    `  "level_concept_difficulty": {\n` +
+    `  }\n` +
+    `}]]></config>\n` +
+    `  <blocks/>\n` +
+    `</${rootTag}>`
+  );
+}
+
+/**
+ * Serializes a brand-new `.level` file: `rootTag` names the Level subclass
+ * (`"Maze"` for every level this project can currently create), `patch` is
+ * the same shape an edit's patchLevelFile call takes. Reuses patchLevelFile
+ * against a fixed empty scaffold rather than hand-writing a second JSON/XML
+ * formatter, so a create's `properties`/`<blocks>` formatting is provably
+ * identical to an edit's — same object-fill and same-block-insert code paths,
+ * exercised by the same tests.
+ */
+export function buildNewLevelFile(rootTag: string, patch: LevelFilePatch): string {
+  return patchLevelFile(newLevelScaffold(rootTag), patch);
+}
+
+// ---------------------------------------------------------------------------
 // <blocks> sibling: splice one named child's verbatim <xml>...</xml> payload.
 // ---------------------------------------------------------------------------
 
@@ -397,8 +445,26 @@ function insertNamedBlock(xml: string, tagName: string, newXml: string): string 
 
   const replaced = selfClosing
     ? `<blocks>${newChild}\n${indent}</blocks>`
-    : spliceBeforeClosingTag(blocksText, '</blocks>', `${newChild}\n${indent}`);
+    : spliceBeforeClosingTag(trimTrailingWhitespaceBeforeCloseTag(blocksText), '</blocks>', `${newChild}\n${indent}`);
   return xml.slice(0, blocksStart) + replaced + xml.slice(blocksStart + blocksText.length);
+}
+
+/**
+ * Drops any whitespace-only span immediately before `</blocks>` — the
+ * trailing `\n${indent}` a PRIOR insertNamedBlock call in this same
+ * patchLevelFile invocation already left there. Without this, inserting a
+ * second brand-new block (e.g. a create writing start/toolbox/solution into
+ * one empty `<blocks/>`) would leave that old trailing gap as a blank line
+ * between siblings, since splicing always lands right before the closing
+ * tag. Idempotent on a file with no such gap (nothing to trim).
+ */
+function trimTrailingWhitespaceBeforeCloseTag(blocksText: string): string {
+  const closeIdx = blocksText.lastIndexOf('</blocks>');
+  let bodyEnd = closeIdx;
+  while (bodyEnd > 0 && /\s/.test(blocksText[bodyEnd - 1])) {
+    bodyEnd--;
+  }
+  return blocksText.slice(0, bodyEnd) + blocksText.slice(closeIdx);
 }
 
 function spliceBeforeClosingTag(

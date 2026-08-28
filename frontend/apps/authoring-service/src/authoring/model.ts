@@ -318,6 +318,9 @@ export type PatchLevelFile = (
   patch: LevelFilePatch,
 ) => string;
 
+/** Mirror of @code-dot-org/authoring's buildNewLevelFile (writeback/levelFile.ts). */
+export type BuildNewLevelFile = (rootTag: string, patch: LevelFilePatch) => string;
+
 export interface LoadedCourse {
   course: CourseModel;
   levelProperties: Record<string, Record<string, unknown>>;

@@ -25,22 +25,50 @@ import type {
   PatchLevelFile,
 } from '../authoring/model.js';
 
-export interface WritebackFileEdit {
+import {
+  sanitizeDefaultLevelName,
+  uniqueDefaultLevelName,
+  validateExplicitLevelName,
+} from './newLevelName.js';
+
+/** Shared shape between an in-place edit and a brand-new file, so apply.ts
+ * and the write-back dialog can walk `plan.edits` uniformly and switch on
+ * `kind` only where the two actually differ. */
+interface WritebackEditBase {
   /** Repo-root-relative when `repoRoot` is given, else absolute. */
   path: string;
   levelKey: string;
   unifiedDiff: string;
-  beforeHash: string;
   afterHash: string;
   /**
-   * The full patched file content. apply.ts writes this verbatim once its
-   * own re-read confirms `beforeHash` still matches; GET /api/writeback/plan
-   * (server.ts) strips it before returning the plan to a client — a diff is
-   * what the dialog renders, and there's no reason to ship the whole file
-   * twice over the wire.
+   * The full file content apply.ts writes verbatim (an edit's patched
+   * result, or a create's whole new file). GET /api/writeback/plan
+   * (server.ts) strips this before returning the plan to a client — a diff
+   * is what the dialog renders, and there's no reason to ship the whole
+   * file twice over the wire.
    */
   after: string;
 }
+
+export interface WritebackFileEdit extends WritebackEditBase {
+  kind: 'edit';
+  beforeHash: string;
+}
+
+/** A `createLevel` op whose experience is still attached to a lesson — see
+ * buildWritebackPlan's doc comment on why an orphaned (removed) one produces
+ * no entry here at all. */
+export interface WritebackFileCreate extends WritebackEditBase {
+  kind: 'create';
+  experienceId: string;
+  /** The level's filename (no `.level` extension) — editable in the
+   * write-back dialog before apply; see server.ts's `names` query param and
+   * newLevelName.ts's doc comment on why an edited name is validated, never
+   * silently rewritten. */
+  name: string;
+}
+
+export type WritebackPlanEdit = WritebackFileEdit | WritebackFileCreate;
 
 export interface WritebackSkip {
   experienceId: string;
@@ -49,7 +77,7 @@ export interface WritebackSkip {
 }
 
 export interface WritebackPlan {
-  edits: WritebackFileEdit[];
+  edits: WritebackPlanEdit[];
   skipped: WritebackSkip[];
 }
 
@@ -63,6 +91,33 @@ export interface WritebackPlanInput {
   patchLevelFile: PatchLevelFile;
   /** Strips this prefix from `edits[].path` for display; omit to keep it absolute. */
   repoRoot?: string;
+  /**
+   * Wire-shape LevelProperties keyed by numeric id — AuthoringState's served
+   * snapshot. A draft level's file contents come from here, never from the
+   * change log: createLevel's own payload carries only experience metadata
+   * (id/title/levelKey/...), and AuthoringState.getLevelProperties is the
+   * one place that holds the level's actual properties, already reflecting
+   * every overrideLevelInstructions/overrideLevelDefinition applied since
+   * (see AuthoringState.ts's mergeInstructionsOverride/mergeDefinitionOverride) —
+   * so a create entry needs no separate accumulation of those ops the way
+   * an existing (lb:) level's edit entry does. Optional/defaulted to `{}` so
+   * every override-only test written before this pass keeps compiling.
+   */
+  levelProperties?: Record<string, Record<string, unknown>>;
+  /** Author-edited level names from the write-back dialog, keyed by
+   * experienceId (GET /api/writeback/plan's `names` query param). An
+   * experience with no entry here gets the algorithmic default. */
+  nameOverrides?: Record<string, string>;
+  /** Every `.level` basename under the WHOLE dashboard/config/levels tree,
+   * lowercased — see levelNames.ts's doc comment for why this can't reuse
+   * LevelCatalog's own narrower scan. Called at most once per plan, and only
+   * when a create is actually pending (it walks a real directory tree). */
+  listAllLevelFileNames?: () => Set<string>;
+  /** Bridged from @code-dot-org/authoring's buildNewLevelFile. Absent means
+   * write-back-for-creates is unavailable; server.ts gates the whole
+   * endpoint on this the same way it already does for parseLevelXml/
+   * patchLevelFile. */
+  buildNewLevelFile?: (rootTag: string, patch: LevelFilePatch) => string;
 }
 
 // Reverse of importer/levelProperties.ts's wire-shape builders — see the
@@ -123,6 +178,17 @@ export function buildWritebackPlan(input: WritebackPlanInput): WritebackPlan {
   const reportedUnmapped = new Set<string>();
   const perLevel = new Map<string, LevelAccumulator>();
 
+  // A draft level's whole file comes from a single createLevel entry further
+  // below (built from the CURRENT served levelProperties, which already
+  // reflects every override made since) — so an override on a level this
+  // session itself created must not ALSO fall through to the "draft
+  // (non-lb) level, out of scope" skip further down; that reason is only
+  // for a draft level with no createLevel op in this log at all (shouldn't
+  // happen, but the plan doesn't assume it can't).
+  const createdExperienceIds = new Set(
+    changes.filter(c => c.op === 'createLevel').map(c => c.level.id),
+  );
+
   for (const change of changes) {
     if (change.op === 'updateLevel') {
       if (change.patch.title !== undefined) {
@@ -160,7 +226,7 @@ export function buildWritebackPlan(input: WritebackPlanInput): WritebackPlan {
     }
   }
 
-  const edits: WritebackFileEdit[] = [];
+  const edits: WritebackPlanEdit[] = [];
   for (const [experienceId, acc] of perLevel) {
     const experience = findExistingLevelExperience(courses, experienceId);
     if (!experience) {
@@ -172,6 +238,9 @@ export function buildWritebackPlan(input: WritebackPlanInput): WritebackPlan {
       continue;
     }
     if (experience.origin !== 'levelbuilder') {
+      if (createdExperienceIds.has(experienceId)) {
+        continue; // covered by this same level's createLevel entry below
+      }
       skipped.push({
         experienceId,
         reason:
@@ -232,6 +301,7 @@ export function buildWritebackPlan(input: WritebackPlanInput): WritebackPlan {
 
     const displayPath = input.repoRoot ? path.relative(input.repoRoot, filePath) : filePath;
     edits.push({
+      kind: 'edit',
       path: displayPath,
       levelKey: experience.levelKey,
       unifiedDiff: buildUnifiedDiff(displayPath, before, after),
@@ -241,7 +311,187 @@ export function buildWritebackPlan(input: WritebackPlanInput): WritebackPlan {
     });
   }
 
+  buildCreateEdits(input, createdExperienceIds, edits, skipped);
+
   return {edits, skipped};
+}
+
+// The .level properties key list a NEW Maze-family file writes, sourced
+// directly from the level's served levelProperties entry (see
+// WritebackPlanInput.levelProperties's doc comment for why that's the
+// authoritative source rather than the createLevel change's own payload or
+// the on-disk MazeLevelDefinition). Every key here is one buildMazeLevelWireProperties
+// (mazeLevel.ts) or an overrideLevelDefinition patch (model.ts's
+// LevelDefinitionPatch) can set; `skin` has no override path today but is
+// still a real, load-bearing file property set once at creation.
+const NEW_MAZE_PROPERTY_KEYS = [
+  'skin',
+  'maze',
+  'serialized_maze',
+  'initial_dirt',
+  'start_direction',
+  'short_instructions',
+  'long_instructions',
+  'ideal',
+  'nectar_goal',
+  'honey_goal',
+  'min_collected',
+  'flower_type',
+] as const;
+
+/** Maze-family levels are the only ones this project can currently create
+ * (createMazeLevel.ts) — a v1 boundary, not a format limitation. */
+const CREATABLE_LEVEL_TYPES = new Set(['Maze']);
+/** Repo-root-relative segments a new Maze-family level's file lands under —
+ * one of LevelCatalog's own SCANNED_DIRECTORIES, so a level this plan
+ * creates is one a fresh session's catalog scan finds. Exported so apply.ts
+ * recomputes the identical absolute path rather than trusting one carried on
+ * the plan object across a rebuild (same "never trust a stored path"
+ * discipline as an edit's own resolveLevelFilePath re-resolution). */
+export const CREATABLE_LEVEL_DIRECTORY = ['dashboard', 'config', 'levels', 'custom', 'maze'];
+
+/**
+ * Turns each attached `createLevel` op into a WritebackFileCreate. A
+ * createLevel change whose experience is no longer found in the current
+ * course tree (removed — a scratch level the author deleted, or a course
+ * torn down) produces NOTHING here, not even a skip entry: it was never
+ * attached to begin with from write-back's point of view, and reporting a
+ * "skipped" line for every scratch level an author tried and discarded
+ * would just be noise on every plan from here on.
+ */
+function buildCreateEdits(
+  input: WritebackPlanInput,
+  createdExperienceIds: Set<string>,
+  edits: WritebackPlanEdit[],
+  skipped: WritebackSkip[],
+): void {
+  if (createdExperienceIds.size === 0) {
+    return;
+  }
+
+  const levelProperties = input.levelProperties ?? {};
+  const nameOverrides = input.nameOverrides ?? {};
+
+  // Attached first, so a corpus-wide directory walk (listAllLevelFileNames)
+  // never runs when every createLevel in the log was later discarded.
+  const attached: {experienceId: string; experience: ExistingLevelExperience}[] = [];
+  for (const experienceId of createdExperienceIds) {
+    const experience = findExistingLevelExperience(input.courses, experienceId);
+    if (experience) {
+      attached.push({experienceId, experience});
+    }
+  }
+  if (attached.length === 0) {
+    return;
+  }
+
+  if (!input.repoRoot) {
+    for (const {experienceId} of attached) {
+      skipped.push({
+        experienceId,
+        reason: 'cannot compute a target path for a new level without a resolved repo root',
+      });
+    }
+    return;
+  }
+  if (!input.buildNewLevelFile) {
+    for (const {experienceId} of attached) {
+      skipped.push({
+        experienceId,
+        reason: '@code-dot-org/authoring writeback (buildNewLevelFile) is not available',
+      });
+    }
+    return;
+  }
+
+  let existingLower: Set<string> | undefined;
+  const takenThisPlan = new Set<string>();
+
+  for (const {experienceId, experience} of attached) {
+    if (!CREATABLE_LEVEL_TYPES.has(experience.levelType)) {
+      skipped.push({
+        experienceId,
+        reason: `write-back can only create Maze-family levels in this pass; "${experience.levelType}" is not one`,
+      });
+      continue;
+    }
+    if (experience.levelNumericId === undefined) {
+      skipped.push({experienceId, reason: 'this draft level has no numeric id registered'});
+      continue;
+    }
+    const served = levelProperties[String(experience.levelNumericId)];
+    if (!served) {
+      skipped.push({
+        experienceId,
+        reason: `no served levelProperties entry for numeric id ${experience.levelNumericId}`,
+      });
+      continue;
+    }
+
+    const properties: Record<string, string> = {};
+    for (const key of NEW_MAZE_PROPERTY_KEYS) {
+      const value = served[key];
+      if (typeof value === 'string') {
+        properties[key] = value;
+      }
+    }
+    const blocks: BlocksPatch = {};
+    if (typeof served.startBlocksXml === 'string') blocks.startBlocksXml = served.startBlocksXml;
+    if (typeof served.toolboxBlocksXml === 'string') blocks.toolboxBlocksXml = served.toolboxBlocksXml;
+    if (typeof served.solutionBlocksXml === 'string') blocks.solutionBlocksXml = served.solutionBlocksXml;
+
+    existingLower ??= (input.listAllLevelFileNames ?? (() => new Set<string>()))();
+
+    const override = nameOverrides[experienceId];
+    let name: string;
+    if (override !== undefined) {
+      const validation = validateExplicitLevelName(override);
+      if (!validation.ok) {
+        skipped.push({experienceId, field: 'name', reason: validation.reason});
+        continue;
+      }
+      name = override.trim();
+      const nameLower = name.toLowerCase();
+      if (existingLower.has(nameLower) || takenThisPlan.has(nameLower)) {
+        skipped.push({
+          experienceId,
+          field: 'name',
+          reason: `a level named "${name}" already exists — choose a different name`,
+        });
+        continue;
+      }
+    } else {
+      // Bumped against BOTH the on-disk corpus and every name already
+      // claimed earlier in this same loop — two drafts sharing a title (the
+      // "New maze level" default, or two AI-authored levels with the same
+      // name) must not collide with each other, not just with disk.
+      const takenSoFar =
+        takenThisPlan.size === 0 ? existingLower : new Set([...existingLower, ...takenThisPlan]);
+      name = uniqueDefaultLevelName(sanitizeDefaultLevelName(experience.title), takenSoFar);
+    }
+    takenThisPlan.add(name.toLowerCase());
+
+    const absolutePath = path.join(input.repoRoot, ...CREATABLE_LEVEL_DIRECTORY, `${name}.level`);
+    let content: string;
+    try {
+      content = input.buildNewLevelFile(experience.levelType, {properties, blocks});
+    } catch (error) {
+      skipped.push({experienceId, reason: `could not build a new level file: ${String(error)}`});
+      continue;
+    }
+
+    const displayPath = path.relative(input.repoRoot, absolutePath);
+    edits.push({
+      kind: 'create',
+      experienceId,
+      name,
+      path: displayPath,
+      levelKey: experience.levelKey,
+      unifiedDiff: buildUnifiedDiff(displayPath, '', content),
+      afterHash: sha256(content),
+      after: content,
+    });
+  }
 }
 
 function reportUnmappedOnce(
