@@ -9,7 +9,11 @@ import path from 'node:path';
 import {z} from 'zod';
 
 import {injectWidgetChrome} from '@code-dot-org/widget-runtime/chrome';
-import {checkWidgetDocument} from '@code-dot-org/widgets-catalog';
+import {
+  checkWidgetDocument,
+  computeToolchain,
+  listWidgetSlugs,
+} from '@code-dot-org/widgets-catalog';
 
 import {EchoAgentRunner, type AgentRunner} from './agent/AgentRunner.js';
 import {ClaudeAgentRunner} from './agent/ClaudeAgentRunner.js';
@@ -32,16 +36,21 @@ import {
   CREATABLE_MAZE_SKINS,
 } from './levels/mazeLevel.js';
 import {buildChangeSet} from './publish/buildChangeSet.js';
+import {findWidgetReference, proposeWidget} from './publish/proposeWidget.js';
 import {AuthoringState} from './state/AuthoringState.js';
 import {
   EMPTY_SNAPSHOT,
   SessionStore,
   type ChatScope,
 } from './store/SessionStore.js';
-import {rebuildWidgetSource} from './widgets/buildWidget.js';
+import {hasBuiltSource, rebuildWidgetSource} from './widgets/buildWidget.js';
 import {applyWritebackPlan, computePlanHash} from './writeback/apply.js';
 import {listAllLevelFileNames} from './writeback/levelNames.js';
-import {buildWritebackPlan, type WritebackPlan, type WritebackPlanEdit} from './writeback/plan.js';
+import {
+  buildWritebackPlan,
+  type WritebackPlan,
+  type WritebackPlanEdit,
+} from './writeback/plan.js';
 
 const PORT = Number(process.env.PORT) || 3737;
 const SESSION_ID = 'default';
@@ -154,6 +163,7 @@ app.use('/api/chat', rejectCrossSite);
 app.use('/api/changes', rejectCrossSite);
 app.use('/api/tutor', rejectCrossSite);
 app.use('/api/publish', rejectCrossSite);
+app.use('/api/widgets/:id/propose', rejectCrossSite);
 app.use('/api/levels/:numericId/check', rejectCrossSite);
 app.use('/api/levels/create-maze', rejectCrossSite);
 app.use('/api/writeback/apply', rejectCrossSite);
@@ -279,6 +289,121 @@ app.get('/api/widgets/:id/gates', c => {
   }
   return c.json({violations: checkWidgetDocument(injectWidgetChrome(html))});
 });
+
+// Graduates a session widget into a real pull request onto
+// @code-dot-org/widgets-catalog (widget PR flow plan, pass 4). Refuses on
+// any contract-gate violation, on a widget with no committable src/ (a
+// legacy hand-written widget.html has no TSX source to copy), and on a
+// slug collision with the catalog's existing widgets. `mode: 'dry-run'`
+// (the default) builds the commit but moves no ref and pushes nothing;
+// `mode: 'push'` additionally pushes it to `remote` and this endpoint
+// NEVER opens a pull request itself — the human does that from the
+// returned compare URL.
+app.post('/api/widgets/:id/propose', async c => {
+  const widgetId = c.req.param('id');
+  const descriptor = state.findWidget(widgetId);
+  if (!descriptor) {
+    return c.json({error: `unknown widget ${widgetId}`}, 404);
+  }
+  const widgetDir = store.widgetDir(widgetId);
+  if (!hasBuiltSource(widgetDir)) {
+    return c.json(
+      {
+        error: `widget ${widgetId} has no src/ — only a built (TSX source) widget can be proposed to the catalog`,
+      },
+      400,
+    );
+  }
+  const rawHtml = state.readWidgetSource(widgetId);
+  if (rawHtml === undefined) {
+    return c.json(
+      {error: `widget ${widgetId} has no built widget.html yet`},
+      400,
+    );
+  }
+  if (!repoRoot) {
+    return c.json(
+      {error: 'repo root not resolved; propose is unavailable'},
+      503,
+    );
+  }
+
+  let body: {mode?: string; remote?: string; baseRef?: string};
+  try {
+    body = (await c.req.json()) as typeof body;
+  } catch {
+    body = {};
+  }
+  const mode = body.mode ?? 'dry-run';
+  if (mode !== 'dry-run' && mode !== 'push') {
+    return c.json(
+      {error: `mode must be "dry-run" or "push", got ${mode}`},
+      400,
+    );
+  }
+
+  const servedHtml = injectWidgetChrome(rawHtml);
+  const violations = checkWidgetDocument(servedHtml);
+  const sessionSrcDir = path.join(widgetDir, 'src');
+  const snapshot = state.getSnapshot();
+  const reference = findWidgetReference(snapshot, widgetId);
+  const authorshipTrail = state
+    .getChanges()
+    .filter(
+      change =>
+        (change.op === 'createWidget' && change.descriptor.id === widgetId) ||
+        (change.op === 'updateWidgetMetadata' && change.widgetId === widgetId),
+    );
+  const chatTurns = reference
+    ? state
+        .getChatLog()
+        .filter(
+          message =>
+            message.scope?.lessonId === reference.lessonId ||
+            message.scope?.experienceId === reference.experienceId,
+        )
+    : [];
+
+  const result = proposeWidget({
+    mode,
+    sessionId: SESSION_ID,
+    widgetId,
+    descriptor,
+    violations,
+    servedHtml,
+    sessionSrcDir,
+    srcFiles: readFilesRecursive(sessionSrcDir),
+    toolchain: computeToolchain(),
+    existingSlugs: listWidgetSlugs(),
+    authorshipTrail,
+    chatTurns,
+    reference,
+    repoRoot,
+    baseRef: body.baseRef,
+    remote: body.remote,
+  });
+
+  return c.json(result, result.ok ? 200 : 400);
+});
+
+/** Every file under `dir`, as repo-file-content pairs relative to `dir` itself (forward-slash joined regardless of platform). */
+function readFilesRecursive(
+  dir: string,
+  relPrefix = '',
+): {path: string; content: string}[] {
+  const entries = fs.readdirSync(dir, {withFileTypes: true});
+  const files: {path: string; content: string}[] = [];
+  for (const entry of entries) {
+    const rel = relPrefix ? `${relPrefix}/${entry.name}` : entry.name;
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      files.push(...readFilesRecursive(full, rel));
+    } else if (entry.isFile()) {
+      files.push({path: rel, content: fs.readFileSync(full, 'utf8')});
+    }
+  }
+  return files;
+}
 
 app.get('/api/events', c =>
   streamSSE(c, async stream => {
@@ -460,7 +585,10 @@ function publicEdit(edit: WritebackPlanEdit) {
 app.get('/api/writeback/plan', c => {
   const input = writebackPlanInput();
   if (!input) {
-    return c.json({error: '@code-dot-org/authoring writeback is not available'}, 503);
+    return c.json(
+      {error: '@code-dot-org/authoring writeback is not available'},
+      503,
+    );
   }
   return c.json(publicPlan(buildWritebackPlan(input)));
 });
@@ -486,7 +614,10 @@ app.post('/api/writeback/apply', async c => {
   }
   const input = writebackPlanInput(parsed.data.nameOverrides);
   if (!input) {
-    return c.json({error: '@code-dot-org/authoring writeback is not available'}, 503);
+    return c.json(
+      {error: '@code-dot-org/authoring writeback is not available'},
+      503,
+    );
   }
 
   const outcome = applyWritebackPlan(input, parsed.data.planHash);

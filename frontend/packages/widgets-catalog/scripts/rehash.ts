@@ -5,26 +5,10 @@
 // widget-runtime, esbuild) that would otherwise leave every docHash stale.
 // Does NOT touch version, title, description, inputSchema, eventTypes, or
 // visibility — those are an author's decision, not a computed one.
-import * as esbuild from 'esbuild';
 import fs from 'node:fs';
-import path from 'node:path';
 
-import {
-  computeWidgetArtifact,
-  listWidgetSlugs,
-  PACKAGE_ROOT,
-} from '../src/buildCatalog.js';
-
-function workspacePackageVersion(packageDirName: string): string {
-  const pkgJsonPath = path.join(
-    PACKAGE_ROOT,
-    '..',
-    packageDirName,
-    'package.json',
-  );
-  return (JSON.parse(fs.readFileSync(pkgJsonPath, 'utf8')) as {version: string})
-    .version;
-}
+import {computeWidgetArtifact, listWidgetSlugs} from '../src/buildCatalog.js';
+import {computeToolchain} from '../src/toolchain.js';
 
 async function rehash(slug: string): Promise<void> {
   const artifact = await computeWidgetArtifact(slug);
@@ -32,11 +16,7 @@ async function rehash(slug: string): Promise<void> {
     ...artifact.manifest,
     sourceHash: artifact.sourceHash,
     docHash: artifact.docHash,
-    toolchain: {
-      esbuild: esbuild.version,
-      componentLibrary: workspacePackageVersion('component-library'),
-      widgetRuntime: workspacePackageVersion('widget-runtime'),
-    },
+    toolchain: computeToolchain(),
     gates: {
       checkedAt: new Date().toISOString(),
       violations: artifact.violations,

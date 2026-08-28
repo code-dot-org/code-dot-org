@@ -26,3 +26,6 @@ export {
   WidgetManifestSchema,
   WidgetToolchainSchema,
 } from './manifest.js';
+export type {SlugCollisionResult} from './slug.js';
+export {checkSlugCollision, mintSlug} from './slug.js';
+export {computeToolchain} from './toolchain.js';
