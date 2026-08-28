@@ -38,6 +38,7 @@ import {
   type ChatScope,
 } from './store/SessionStore.js';
 import {rebuildWidgetSource} from './widgets/buildWidget.js';
+import {buildWritebackPlan} from './writeback/plan.js';
 
 const PORT = Number(process.env.PORT) || 3737;
 const SESSION_ID = 'default';
@@ -360,6 +361,26 @@ app.post('/api/tutor', async c => {
     state,
   });
   return c.json(action);
+});
+
+// Dry-run only — see writeback/plan.ts's doc comment. Requires
+// @code-dot-org/authoring's dist (parseLevelXml/patchLevelFile) and a
+// resolved repoRoot; both are also required for the level catalog and
+// course import, so their absence already means a degraded service.
+app.get('/api/writeback/plan', c => {
+  if (!bridge.parseLevelXml || !bridge.patchLevelFile || !repoRoot) {
+    return c.json({error: '@code-dot-org/authoring writeback is not available'}, 503);
+  }
+  const plan = buildWritebackPlan({
+    courses: state.getSnapshot().courses,
+    changes: state.getChanges(),
+    resolveLevelFilePath: levelKey => catalog.filePath(levelKey),
+    readFile: filePath => fs.readFileSync(filePath, 'utf8'),
+    parseLevelXml: bridge.parseLevelXml,
+    patchLevelFile: bridge.patchLevelFile,
+    repoRoot,
+  });
+  return c.json(plan);
 });
 
 app.post('/api/publish', c => {

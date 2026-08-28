@@ -109,6 +109,16 @@ export class LevelCatalog {
   }
 
   /**
+   * Absolute path of a level's `.level` file, by the same name→path map the
+   * catalog built at boot (one of the four SCANNED_DIRECTORIES) — the
+   * convention writeback/plan.ts resolves a levelKey against, so a level
+   * this catalog can attach is exactly one writeback can edit.
+   */
+  filePath(levelKey: string): string | undefined {
+    return this.files.get(levelKey);
+  }
+
+  /**
    * Grouped by family (see parseLevelFamilyKey) so year/pilot/copy variants
    * of the same puzzle collapse to one row — the catalog holds ~4900 files
    * and an author searching "bee" or "ifStatement" would otherwise see a

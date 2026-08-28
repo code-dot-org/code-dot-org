@@ -11,7 +11,12 @@
  * compile time. Swap these for static imports once the package has landed.
  */
 
-import type {ApplyChange, LoadedCourse, ParseLevelXml} from './model.js';
+import type {
+  ApplyChange,
+  LoadedCourse,
+  ParseLevelXml,
+  PatchLevelFile,
+} from './model.js';
 
 const AUTHORING = '@code-dot-org/authoring';
 const AUTHORING_NODE = '@code-dot-org/authoring/node';
@@ -19,6 +24,7 @@ const AUTHORING_NODE = '@code-dot-org/authoring/node';
 export interface AuthoringBridge {
   applyChange: ApplyChange;
   parseLevelXml?: ParseLevelXml;
+  patchLevelFile?: PatchLevelFile;
   loadCourse?: (
     repoRoot: string,
     courseName: string,
@@ -63,6 +69,7 @@ export async function loadAuthoringBridge(): Promise<AuthoringBridge> {
   return {
     applyChange: applyChange ?? unavailable,
     parseLevelXml: core?.parseLevelXml as ParseLevelXml | undefined,
+    patchLevelFile: core?.patchLevelFile as PatchLevelFile | undefined,
     loadCourse: node?.loadCourse as AuthoringBridge['loadCourse'],
     available: Boolean(applyChange),
   };

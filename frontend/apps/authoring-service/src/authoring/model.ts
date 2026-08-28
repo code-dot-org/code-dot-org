@@ -303,6 +303,21 @@ export interface ParsedLevel {
 
 export type ParseLevelXml = (xml: string) => ParsedLevel;
 
+/** Mirror of @code-dot-org/authoring's LevelFilePatch (writeback/levelFile.ts). */
+export interface LevelFilePatch {
+  properties?: Record<string, string | null>;
+  blocks?: {
+    startBlocksXml?: string | null;
+    toolboxBlocksXml?: string | null;
+    solutionBlocksXml?: string | null;
+  };
+}
+
+export type PatchLevelFile = (
+  originalXml: string,
+  patch: LevelFilePatch,
+) => string;
+
 export interface LoadedCourse {
   course: CourseModel;
   levelProperties: Record<string, Record<string, unknown>>;

@@ -394,7 +394,7 @@ function mergeInstructionsOverride(
     return levelProperties;
   }
   const numericId = String(experience.levelNumericId);
-  const merged = {...levelProperties[numericId], ...patch};
+  const merged: Record<string, unknown> = {...levelProperties[numericId], ...patch};
   for (const [key, value] of Object.entries(patch)) {
     const twin = CAMEL_SNAKE_TWINS[key];
     if (twin && value !== undefined) {

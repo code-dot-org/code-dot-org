@@ -1915,6 +1915,7 @@ __metadata:
     "@code-dot-org/widget-runtime": "workspace:*"
     "@hono/node-server": "npm:^1.14.0"
     "@types/node": "catalog:"
+    diff: "npm:^8.0.2"
     esbuild: "npm:^0.25.8"
     eslint: "catalog:"
     hono: "npm:^4.7.0"

@@ -99,7 +99,7 @@ describe.skipIf(!repoRoot)('LevelCatalog', () => {
   describe('Maze/Karel runtime split', () => {
     const parsingCatalog = LevelCatalog.scan(
       repoRoot as string,
-      parseLevelXml as ParseLevelXml,
+      parseLevelXml as unknown as ParseLevelXml,
     );
     let nextId = 1;
     const context = {
