@@ -30,6 +30,8 @@ export {
   getToolboxPalette,
   trayFromToolboxXml,
   toolboxXmlFromTray,
+  reorderTray,
+  chipBlockType,
   type ToolboxPaletteEntry,
   type ToolboxTrayEntry,
 } from './editing';

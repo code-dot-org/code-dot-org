@@ -633,6 +633,51 @@ export function toolboxXmlFromTray(entries: ToolboxTrayEntry[]): string {
   return `<xml>${entries.map(entry => entry.xml).join('')}</xml>`;
 }
 
+/**
+ * The Blockly block type a chip's seed XML emits — e.g. `controls_repeat` vs
+ * `controls_repeat_dropdown` for the "Repeat (free count)"/"Repeat
+ * (dropdown)" chips, which an author matching a reference toolbox can
+ * otherwise only tell apart by their friendly label. Read directly off the
+ * chip's own `xml` (every entry is a single `<block type="...">` fragment —
+ * see ToolboxTrayEntry/ToolboxPaletteEntry's doc comments) rather than
+ * re-deriving it from the palette, so it stays correct for a served
+ * pass-through chip the palette doesn't recognise too.
+ */
+export function chipBlockType(xml: string): string | undefined {
+  return xml.match(/<block\s+type="([^"]+)"/)?.[1];
+}
+
+/**
+ * Moves the chip at `index` one slot up or down, by position rather than by
+ * `id` — a chip added twice (e.g. two "Move forward"s) shares an `id`, so
+ * looking one up by id would be ambiguous about which instance moved.
+ * Returns the same array reference when the move is out of bounds (already
+ * at the top/bottom), so a caller can skip the state update entirely in
+ * that case. Previously the only way to change a chip's position was to
+ * remove it and re-add it, which always lands at the end of the tray — the
+ * panel had no way to match a reference toolbox's exact order without
+ * rebuilding the whole tail.
+ */
+export function reorderTray(
+  entries: ToolboxTrayEntry[],
+  index: number,
+  direction: 'up' | 'down',
+): ToolboxTrayEntry[] {
+  const targetIndex = direction === 'up' ? index - 1 : index + 1;
+  if (
+    index < 0 ||
+    index >= entries.length ||
+    targetIndex < 0 ||
+    targetIndex >= entries.length
+  ) {
+    return entries;
+  }
+  const next = entries.slice();
+  const [moved] = next.splice(index, 1);
+  next.splice(targetIndex, 0, moved);
+  return next;
+}
+
 export interface GoalField {
   key: 'nectar_goal' | 'honey_goal' | 'min_collected';
   label: string;

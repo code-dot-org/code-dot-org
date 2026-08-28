@@ -26,6 +26,7 @@ function makeLevelDraft(
     availableBlocks: [],
     addChip: vi.fn(),
     removeChip: vi.fn(),
+    moveChip: vi.fn(),
     effectiveSolutionXml: undefined,
     effectiveIdeal: undefined,
     effectiveVerified: false,

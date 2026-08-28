@@ -14,12 +14,14 @@ import {SquareType} from '../tiles';
 import {
   addBlockToProgramXml,
   applyPaint,
+  chipBlockType,
   describeCellState,
   fillAll,
   getPaintTools,
   getToolboxPalette,
   mapDraftFromLevelProperties,
   paintCell,
+  reorderTray,
   serializeMapDraft,
   toolboxXmlFromTray,
   trayFromToolboxXml,
@@ -560,5 +562,87 @@ describe('toolbox tray (trayFromToolboxXml / toolboxXmlFromTray)', () => {
     const tray = trayFromToolboxXml(xml, 'birds');
     expect(tray.map(t => t.id)).toEqual(['repeat', 'repeatFreeCount']);
     expect(toolboxXmlFromTray(tray)).toBe(xml);
+  });
+});
+
+describe('reorderTray', () => {
+  const palette = getToolboxPalette('birds');
+  const entryFor = (id: string) => ({...palette.find(p => p.id === id)!});
+
+  it('moves a chip up, and the new order round-trips through the wire XML', () => {
+    const tray = [
+      entryFor('moveForward'),
+      entryFor('turnLeft'),
+      entryFor('turnRight'),
+    ];
+
+    const reordered = reorderTray(tray, 2, 'up');
+    expect(reordered.map(t => t.id)).toEqual([
+      'moveForward',
+      'turnRight',
+      'turnLeft',
+    ]);
+
+    // Original array is untouched — callers rely on this to decide whether
+    // anything actually changed.
+    expect(tray.map(t => t.id)).toEqual([
+      'moveForward',
+      'turnLeft',
+      'turnRight',
+    ]);
+
+    const xml = toolboxXmlFromTray(reordered);
+    const roundTripped = trayFromToolboxXml(xml, 'birds');
+    expect(roundTripped.map(t => t.id)).toEqual([
+      'moveForward',
+      'turnRight',
+      'turnLeft',
+    ]);
+  });
+
+  it('moves a chip down', () => {
+    const tray = [entryFor('moveForward'), entryFor('turnLeft')];
+    const reordered = reorderTray(tray, 0, 'down');
+    expect(reordered.map(t => t.id)).toEqual(['turnLeft', 'moveForward']);
+  });
+
+  it('is a no-op past either end, returning the same array reference', () => {
+    const tray = [entryFor('moveForward'), entryFor('turnLeft')];
+    expect(reorderTray(tray, 0, 'up')).toBe(tray);
+    expect(reorderTray(tray, 1, 'down')).toBe(tray);
+  });
+
+  it('reorders a duplicate chip by position, not by its (shared) id', () => {
+    // Two "Move forward" chips share an id — moving the SECOND one up must
+    // not be ambiguous about which instance moved.
+    const tray = [
+      entryFor('moveForward'),
+      entryFor('moveForward'),
+      entryFor('turnLeft'),
+    ];
+    const reordered = reorderTray(tray, 2, 'up');
+    expect(reordered.map(t => t.id)).toEqual([
+      'moveForward',
+      'turnLeft',
+      'moveForward',
+    ]);
+  });
+});
+
+describe('chipBlockType', () => {
+  it('distinguishes the two repeat chips by their emitted block type', () => {
+    const palette = getToolboxPalette('birds');
+    const dropdownEntry = palette.find(p => p.id === 'repeat')!;
+    const freeCountEntry = palette.find(p => p.id === 'repeatFreeCount')!;
+    expect(chipBlockType(dropdownEntry.xml)).toBe('controls_repeat_dropdown');
+    expect(chipBlockType(freeCountEntry.xml)).toBe('controls_repeat');
+  });
+
+  it('reads the type off a served pass-through chip the palette does not recognise', () => {
+    const tray = trayFromToolboxXml(
+      '<xml><block type="maze_move" limit="2"><title name="DIR">moveForward</title></block></xml>',
+      'birds',
+    );
+    expect(chipBlockType(tray[0].xml)).toBe('maze_move');
   });
 });

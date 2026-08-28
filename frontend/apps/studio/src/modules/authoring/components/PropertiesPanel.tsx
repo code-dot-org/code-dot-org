@@ -10,7 +10,7 @@ import type {
 } from '@code-dot-org/authoring';
 import {useEscapeKeyHandler} from '@code-dot-org/component-library/common/hooks';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {isBeeSkin} from '@code-dot-org/maze-lab';
+import {chipBlockType, isBeeSkin} from '@code-dot-org/maze-lab';
 
 import {
   authoringApi,
@@ -547,7 +547,8 @@ function ToolboxFields({
   onClose: () => void;
   onDirtyChange: (dirty: boolean) => void;
 }) {
-  const {dirty, tray, availableBlocks, addChip, removeChip} = levelDraft;
+  const {dirty, tray, availableBlocks, addChip, removeChip, moveChip} =
+    levelDraft;
 
   useEffect(() => {
     onDirtyChange(dirty);
@@ -565,18 +566,29 @@ function ToolboxFields({
               Available blocks
             </Typography>
             <ul className={styles.toolboxChipList}>
-              {availableBlocks.map(entry => (
-                <li key={entry.id}>
-                  <button
-                    type="button"
-                    className={styles.toolboxChip}
-                    onClick={() => addChip({...entry})}
-                    aria-label={`Add ${entry.label} to the student toolbox`}
-                  >
-                    + {entry.label}
-                  </button>
-                </li>
-              ))}
+              {availableBlocks.map(entry => {
+                const blockType = chipBlockType(entry.xml);
+                return (
+                  <li key={entry.id}>
+                    <button
+                      type="button"
+                      className={styles.toolboxChip}
+                      onClick={() => addChip({...entry})}
+                      aria-label={`Add ${entry.label} to the student toolbox`}
+                      title={blockType}
+                    >
+                      <span className={styles.toolboxChipLabel}>
+                        <span>+ {entry.label}</span>
+                        {blockType && (
+                          <span className={styles.toolboxChipType}>
+                            {blockType}
+                          </span>
+                        )}
+                      </span>
+                    </button>
+                  </li>
+                );
+              })}
             </ul>
           </div>
           <div className={styles.toolboxTrayColumn}>
@@ -584,20 +596,48 @@ function ToolboxFields({
               In the toolbox
             </Typography>
             <ul className={styles.toolboxChipList}>
-              {tray.map(entry => (
-                <li key={entry.id}>
-                  <span className={styles.toolboxChip}>
-                    {entry.label}
-                    <button
-                      type="button"
-                      aria-label={`Remove ${entry.label} from the student toolbox`}
-                      onClick={() => removeChip(entry.id)}
-                    >
-                      ×
-                    </button>
-                  </span>
-                </li>
-              ))}
+              {tray.map((entry, index) => {
+                const blockType = chipBlockType(entry.xml);
+                return (
+                  <li key={`${entry.id}-${index}`}>
+                    <span className={styles.toolboxChip}>
+                      <span className={styles.toolboxChipLabel}>
+                        <span>{entry.label}</span>
+                        {blockType && (
+                          <span className={styles.toolboxChipType}>
+                            {blockType}
+                          </span>
+                        )}
+                      </span>
+                      <span className={styles.toolboxChipActions}>
+                        <button
+                          type="button"
+                          aria-label={`Move ${entry.label} up in the student toolbox`}
+                          disabled={index === 0}
+                          onClick={() => moveChip(index, 'up')}
+                        >
+                          ↑
+                        </button>
+                        <button
+                          type="button"
+                          aria-label={`Move ${entry.label} down in the student toolbox`}
+                          disabled={index === tray.length - 1}
+                          onClick={() => moveChip(index, 'down')}
+                        >
+                          ↓
+                        </button>
+                        <button
+                          type="button"
+                          aria-label={`Remove ${entry.label} from the student toolbox`}
+                          onClick={() => removeChip(entry.id)}
+                        >
+                          ×
+                        </button>
+                      </span>
+                    </span>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>

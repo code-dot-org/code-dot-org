@@ -396,8 +396,26 @@ export default function LessonPlayer({
   // click elsewhere — the author has to close (or save) it explicitly
   // first. Re-clicking the dirty section itself still closes/discards,
   // same as Close/Esc would.
+  //
+  // The currently-open section's dirty flag has to be read from the right
+  // place: 'visualization'/'toolbox'/'workspace' share one levelDraft, whose
+  // `dirty` is computed straight from `draft` every render (no lag). `panelDirty`
+  // mirrors it one render later, via each section's own
+  // `useEffect(() => onDirtyChange(dirty), [dirty])` — so right after a Save
+  // clears the draft, `levelRailDirty` already reads false but `panelDirty`
+  // is still the stale `true` from before Save for one more render. Gating
+  // on the stale mirror swallowed the very next click to a different
+  // section (e.g. Save the toolbox tray, then click "Select workspace" —
+  // first click no-op, second one worked, once the effect had caught up).
+  const currentSectionDirty =
+    panelSection === 'visualization' ||
+    panelSection === 'toolbox' ||
+    panelSection === 'workspace'
+      ? levelRailDirty
+      : panelDirty;
+
   const handleSectionClick = (section: PanelSection) => {
-    if (panelDirty && panelSection !== section) {
+    if (currentSectionDirty && panelSection !== section) {
       return;
     }
     if (panelSection === section) {

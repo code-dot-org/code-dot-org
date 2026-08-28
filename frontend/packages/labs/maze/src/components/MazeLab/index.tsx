@@ -124,6 +124,15 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
   const [settingsOpen, setSettingsOpen] = useState<boolean>(false);
   const [showCodeOpen, setShowCodeOpen] = useState<boolean>(false);
   const [startOverOpen, setStartOverOpen] = useState<boolean>(false);
+  // Bumped on a confirmed Start Over — keyed onto <BlocklyWorkspace> below so
+  // React remounts it, the one point in this component that already knows
+  // how to construct a fresh engine against a fresh workspace (onInject ->
+  // initEngine). A full remount, not an in-place Agent.load() call, because
+  // it reuses that existing lifecycle path exactly rather than adding a
+  // second way to (re)build the engine; the properties panel (a sibling
+  // under LessonPlayer, not a descendant of this component) never sees this
+  // remount at all.
+  const [startOverGeneration, setStartOverGeneration] = useState(0);
   const [showCode, setShowCode] = useState<string>('');
 
   useEffect(() => {
@@ -478,6 +487,7 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
           onCancel={() => setStartOverOpen(false)}
           onConfirm={() => {
             setStartOverOpen(false);
+            setStartOverGeneration(generation => generation + 1);
           }}
         />
       )}
@@ -739,6 +749,7 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
           >
             <Panel>
               <BlocklyWorkspace
+                key={startOverGeneration}
                 className={moduleStyles.blocklyWorkspace}
                 options={{
                   readOnly: levelProperties.multipleChoice ? true : undefined,

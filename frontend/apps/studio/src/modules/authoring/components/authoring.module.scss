@@ -183,6 +183,30 @@
   }
 }
 
+/* Label stacked over the chip's emitted Blockly block type (e.g.
+   controls_repeat vs controls_repeat_dropdown) — friendly name stays
+   primary, the technical type is the thing an author matching a reference
+   toolbox actually needs to disambiguate two similarly-named chips. */
+.toolboxChipLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.toolboxChipType {
+  color: var(--text-neutral-secondary, #6f747c);
+  font-size: 10px;
+  font-family: monospace;
+}
+
+.toolboxChipActions {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
 /* Map-painting palette (LevelRail) — the tool picker lives here; painting
    itself happens on the stage. */
 

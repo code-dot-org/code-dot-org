@@ -6,6 +6,7 @@ import {
   getGoalFields,
   getPaintTools,
   getToolboxPalette,
+  reorderTray,
   toolboxXmlFromTray,
   trayFromToolboxXml,
   type GoalField,
@@ -139,6 +140,9 @@ export interface UseLevelDraftResult {
   availableBlocks: ToolboxPaletteEntry[];
   addChip: (entry: ToolboxTrayEntry) => void;
   removeChip: (id: string) => void;
+  /** Moves the chip at `index` up or down one slot — by position, since a
+   * chip added twice shares an id (see reorderTray's doc comment). */
+  moveChip: (index: number, direction: 'up' | 'down') => void;
   /** 'workspace' section fields, also read by the left rail's Level tab
    * for the solution-status line. */
   effectiveSolutionXml?: string;
@@ -392,6 +396,17 @@ export function useLevelDraft({
     setDraft(prev => ({...prev, toolboxBlocksXml: xml}));
   };
 
+  const moveChip = (index: number, direction: 'up' | 'down') => {
+    const nextTray = reorderTray(tray, index, direction);
+    if (nextTray === tray) {
+      return;
+    }
+    setTray(nextTray);
+    const xml = toolboxXmlFromTray(nextTray);
+    onToolboxDraftChange(xml);
+    setDraft(prev => ({...prev, toolboxBlocksXml: xml}));
+  };
+
   const submit = async () => {
     if (busy || !dirty || levelNumericId === undefined || !experienceId) {
       return;
@@ -488,6 +503,7 @@ export function useLevelDraft({
     availableBlocks,
     addChip,
     removeChip,
+    moveChip,
     effectiveSolutionXml,
     effectiveIdeal,
     effectiveVerified,
