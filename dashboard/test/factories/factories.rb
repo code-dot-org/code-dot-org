@@ -721,6 +721,25 @@ FactoryBot.define do
       end
     end
 
+    trait :with_classlink_authentication_option do
+      after(:create) do |user, evaluator|
+        create(
+          :authentication_option,
+          user: user,
+          email: user.email,
+          hashed_email: user.hashed_email,
+          credential_type: AuthenticationOption::CLASSLINK,
+          # v1-style id: ClassLink's internal UserId, a plain integer string
+          authentication_id: rand(10_000_000..99_999_999).to_s,
+          version: evaluator.auth_option_version,
+          data: {
+            oauth_token: 'some-classlink-token'
+          }.to_json
+        )
+        user.reload
+      end
+    end
+
     trait :with_lti_authentication_option do
       after(:create) do |user|
         create(:lti_authentication_option, user: user)
@@ -1088,6 +1107,11 @@ FactoryBot.define do
 
   factory :weblab2, parent: :level, class: Weblab2 do
     game {Game.weblab2}
+    level_num {'custom'}
+  end
+
+  factory :quiz, parent: :level, class: Quiz do
+    game {Game.quiz}
     level_num {'custom'}
   end
 
@@ -2485,5 +2509,50 @@ FactoryBot.define do
     expires_at {1.day.from_now}
     read_at {nil}
     is_dismissed {false}
+  end
+
+  factory :quiz_question do
+    sequence(:key) {SecureRandom.uuid}
+    sequence(:name) {|n| "Question #{n}"}
+    content {{stem: 'What is 2 + 2?', choices: ['3', '4', '5'], correct: ['4']}}
+  end
+
+  factory :multiple_choice_question, class: MultipleChoiceQuestion do
+    sequence(:key) {SecureRandom.uuid}
+    sequence(:name) {|n| "Multiple choice question #{n}"}
+    content do
+      {
+        stem: 'What is 2 + 2?',
+        choices: [{id: 'a', text: '3'}, {id: 'b', text: '4'}, {id: 'c', text: '5'}],
+        correct_choice_id: 'b'
+      }
+    end
+  end
+
+  factory :quiz_question_standard do
+    quiz_question
+    standard
+  end
+
+  factory :quiz_question_placement do
+    level factory: :quiz
+    quiz_question
+    page {1}
+    sequence(:position)
+  end
+
+  factory :quiz_attempt do
+    user
+    level factory: :quiz
+    unit
+    attempt_number {1}
+    started_at {Time.now}
+  end
+
+  factory :quiz_question_response do
+    quiz_attempt
+    quiz_question
+    response_data {{selected: ['4']}}
+    grading_status {QuizQuestionResponse::GRADING_STATUSES.first}
   end
 end

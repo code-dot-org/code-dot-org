@@ -83,6 +83,8 @@ experiments.NEW_PREVIEW_DOMAIN = 'new-preview-domain';
 // Student scrapbook entrypoint + "My scrapbook" dropdown link.
 // Enable with ?student-scrapbook=true or ?enableExperiments=student-scrapbook.
 experiments.STUDENT_SCRAPBOOK = 'student-scrapbook';
+// Render the Teacher Panel inside the TA drawer on level pages.
+experiments.TA_TEACHER_PANEL = 'ta-teacher-panel';
 
 /**
  * Get our query string. Provided as a method so that tests can mock this.

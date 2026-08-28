@@ -998,6 +998,7 @@ module SharedConstants
   BUBBLE_CHOICE_NAVIGATION_TYPES = {
     PARENT: 'parent',
     NEXT_LEVEL: 'next_level',
+    NEXT_SUBLEVEL: 'next_sublevel',
   }
 
   # Web Lab 2 and App Lab projects use the same list of allowed hostnames.

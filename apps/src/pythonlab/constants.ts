@@ -2,6 +2,7 @@ import {MAZE_FILE_NAME} from '@codebridge/constants';
 
 import {
   MAIN_PYTHON_FILE,
+  SUPPORTED_AUDIO_EXTENSIONS,
   SUPPORTED_IMAGE_EXTENSIONS,
 } from '@cdo/apps/lab2/constants';
 import {ProjectFileType, ProjectSources} from '@cdo/apps/lab2/types';
@@ -81,4 +82,4 @@ export const PYTHONLAB_SUPPORTED_FILE_TYPES =
     SUPPORTED_IMAGE_EXTENSIONS.filter(
       extension => extension !== UNPLAYABLE_IMAGE_EXTENSION
     )
-  );
+  ).concat(SUPPORTED_AUDIO_EXTENSIONS);
