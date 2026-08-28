@@ -870,6 +870,7 @@
 
 .levelInstructions {
   @extend %authoring-card;
+  position: relative;
   width: 100%;
   max-width: 880px;
   padding: 12px 16px;
@@ -879,9 +880,27 @@
   gap: 4px;
 }
 
-.levelInstructionsEditBar {
-  display: flex;
-  justify-content: flex-end;
+// Author-mode browse-mode mechanism (REVISION 8/28): the card's own content
+// is inert (clicks/keyboard reach nothing inside it — e.g. the "Show more"
+// toggle) and .levelInstructionsOverlay, a full-card button on top, is the
+// only click/hover target — same pattern as SelectableCard below.
+.levelInstructionsInert {
+  pointer-events: none;
+}
+
+.levelInstructionsOverlay {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px solid var(--borders-brand-purple-primary, #4d24a8);
+    outline-offset: -2px;
+  }
 }
 
 .levelInstructionsSelected {
@@ -890,7 +909,7 @@
 }
 
 // Same reasoning as .labStageEditable:hover — hover highlights, click (the
-// pencil button) opens.
+// full-card overlay button) opens.
 .levelInstructionsEditable:hover:not(.levelInstructionsSelected) {
   outline: 2px dashed var(--borders-brand-purple-primary, #4d24a8);
   outline-offset: -2px;
@@ -923,13 +942,32 @@
   font-style: italic;
 }
 
-/* SelectableCard — the same click-to-edit affordance as
-   .levelInstructions*, generalized for a whole-stage single-section
-   component (generic-runtime levels, the widget iframe). */
+/* SelectableCard — the same browse-mode mechanism as .levelInstructions*
+   above, generalized for a whole-stage single-section component
+   (generic-runtime levels, the widget iframe): inert content + a full-card
+   overlay button. */
 
-.selectableCardEditBar {
-  display: flex;
-  justify-content: flex-end;
+.selectableCardEditable {
+  position: relative;
+}
+
+.selectableCardInert {
+  pointer-events: none;
+}
+
+.selectableCardOverlay {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px solid var(--borders-brand-purple-primary, #4d24a8);
+    outline-offset: -2px;
+  }
 }
 
 .selectableCardSelected {

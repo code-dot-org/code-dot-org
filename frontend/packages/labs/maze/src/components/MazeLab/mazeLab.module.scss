@@ -77,11 +77,11 @@
       position: relative;
     }
 
-    // Author-mode click-to-edit affordance on the instructions bubble
-    // (the properties panel's 'instructions' section — see MazeLab's
-    // `editing` prop). Hover only highlights (discoverability); the
-    // pen-to-square button is the click target. Dashed vs. the selected
-    // outline's solid, same convention as the host's own
+    // Author-mode browse-mode outline on the instructions bubble (the
+    // properties panel's 'instructions' section — see MazeLab's `editing`
+    // prop). REVISION 8/28: the click target is the RegionOverlay covering
+    // the whole bubble now, not a pencil button — hover/selected still
+    // follow the same dashed/solid convention as the host's own
     // .labStageEditable/.levelInstructionsEditable.
     .vis-under-box-editable:hover:not(.vis-under-box-selected) {
       outline: 2px dashed var(--borders-brand-purple-primary, #4d24a8);
@@ -91,33 +91,6 @@
     .vis-under-box-selected {
       outline: 2px solid var(--borders-brand-purple-primary, #4d24a8);
       outline-offset: -2px;
-    }
-
-    .instructions-edit-button {
-      position: absolute;
-      top: 0.25rem;
-      right: 0.25rem;
-      z-index: 1;
-    }
-
-    // WithTooltip wraps its child in its own `position: relative` div
-    // (component-library/tooltip's TooltipOverlay). That div then becomes
-    // the containing block .instructions-edit-button's `position: absolute`
-    // resolves against, instead of .vis-under-box above. Because the
-    // wrapper's only child IS that absolutely positioned button, the
-    // wrapper has no in-flow content and collapses to zero width — pinning
-    // the button at ITS (wrong) left edge rather than vis-under-box's
-    // actual top-right corner, which on a narrow stage column lands the
-    // button outside vis-under-box entirely, over whatever renders behind
-    // it (the left rail). Passed as WithTooltip's `tooltipOverlayClassName`
-    // to neutralize the wrapper's position so the button's containing-block
-    // search continues up to .vis-under-box, where it was always meant to
-    // land — a real click now lands on the button, not on the rail
-    // (regression from Pass B, masked because that pass's live verification
-    // used a direct .click() call, which fires on a JS element reference
-    // and never tests an actual cursor position).
-    .edit-button-anchor {
-      position: static;
     }
   }
 
@@ -136,11 +109,11 @@
 }
 
 // Selection outline for the visualization/toolbox/workspace regions — same
-// dashed-hover/solid-selected convention as .vis-under-box above, applied
-// to each region's non-intrusive header/label area rather than the whole
-// region: a full-region overlay would eat clicks Blockly's flyout/canvas
-// (toolbox, workspace) or the map painter (visualization) need for their
-// own gestures. See MazeLab's `editing` prop.
+// dashed-hover/solid-selected convention as .vis-under-box above. REVISION
+// 8/28 (Contentful browse-mode model): a full-region overlay is now the
+// click target ON PURPOSE — the underlying component (Blockly's flyout/
+// canvas, the map painter) is inert in browse mode precisely so the overlay
+// can safely cover it; see MazeLab's `editing` prop and its RegionOverlay.
 .region-editable:hover:not(.region-selected) {
   outline: 2px dashed var(--borders-brand-purple-primary, #4d24a8);
   outline-offset: -2px;
@@ -149,4 +122,55 @@
 .region-selected {
   outline: 2px solid var(--borders-brand-purple-primary, #4d24a8);
   outline-offset: -2px;
+}
+
+// Shared shape for every RegionOverlay `<button>` — invisible, full click/
+// hover surface. `.regionOverlayFull` covers the whole positioned ancestor
+// (instructions bubble, visualization's svg-only slot); `.toolboxOverlay`/
+// `.workspaceOverlay` instead cover the real Blockly flyout/canvas split,
+// sized by MazeLab's setToolboxHeaderWidth (left/width set inline, off
+// getToolboxWidth — see that callback's comment).
+.regionOverlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+
+  // Visible-but-not-hover focus ring: the maze click targets have no
+  // visible hover state of their own until :hover fires (that's
+  // .region-editable above) — a keyboard user tabbing to this button needs
+  // its own indicator that doesn't depend on the mouse ever having been
+  // over it.
+  &:focus-visible {
+    outline: 2px solid var(--borders-brand-purple-primary, #4d24a8);
+    outline-offset: -2px;
+  }
+}
+
+.regionOverlayFull {
+  left: 0;
+  right: 0;
+}
+
+.toolboxOverlay {
+  left: 0;
+  // width set inline (setToolboxHeaderWidth)
+}
+
+.workspaceOverlay {
+  right: 0;
+  // left set inline (setToolboxHeaderWidth)
+}
+
+// Positioning context for the toolbox/workspace RegionOverlays above —
+// BlocklyWorkspace's own mounted div fills this box exactly (flex: 1 1 auto,
+// no siblings ahead of it in normal flow), so the overlays' 0-based
+// top/bottom/left/right line up with Blockly's real rendered flyout/canvas
+// split without needing to read Blockly's internal DOM.
+.blocklyPanelWrap {
+  position: relative;
 }

@@ -1,8 +1,7 @@
-import {IconButton, Typography} from '@mui/material';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import {useState} from 'react';
 
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Markdown} from '@code-dot-org/markdown';
 
 import styles from './authoring.module.scss';
@@ -23,9 +22,9 @@ interface LevelInstructionsProps {
   authorMode: boolean;
   /** Properties-panel selection state — see ExperienceStage's PanelSection. */
   selected?: boolean;
-  /** Opens (pins) the panel on this section. Hover only highlights the card
-   * (CSS, discoverability only) — the pencil button is the click target,
-   * also the keyboard-reachable equivalent. */
+  /** Opens (pins) the panel on this section. A full-card overlay button
+   * (REVISION 8/28) is both the click target and the keyboard-reachable
+   * equivalent — see the authorMode branch below. */
   onClick?: () => void;
 }
 
@@ -76,29 +75,28 @@ export default function LevelInstructions({
         selected && styles.levelInstructionsSelected,
       )}
     >
-      <div className={styles.levelInstructionsEditBar}>
-        <IconButton
-          size="small"
-          aria-label="Select instructions"
-          aria-pressed={selected}
-          onClick={onClick}
-        >
-          <FontAwesomeV6Icon iconName="pen-to-square" iconStyle="solid" />
-        </IconButton>
+      <div className={styles.levelInstructionsInert}>
+        {text && !selfDisplayedByLab ? (
+          <InstructionsBody
+            text={text}
+            expanded={expanded}
+            onToggle={() => setExpanded(v => !v)}
+          />
+        ) : (
+          <Typography variant="body4" className={styles.levelInstructionsNote}>
+            {selfDisplayedByLab
+              ? 'Instructions are shown in the lab below.'
+              : 'No instructions yet.'}
+          </Typography>
+        )}
       </div>
-      {text && !selfDisplayedByLab ? (
-        <InstructionsBody
-          text={text}
-          expanded={expanded}
-          onToggle={() => setExpanded(v => !v)}
-        />
-      ) : (
-        <Typography variant="body4" className={styles.levelInstructionsNote}>
-          {selfDisplayedByLab
-            ? 'Instructions are shown in the lab below.'
-            : 'No instructions yet.'}
-        </Typography>
-      )}
+      <button
+        type="button"
+        aria-label="Edit instructions"
+        aria-pressed={selected}
+        className={styles.levelInstructionsOverlay}
+        onClick={onClick}
+      />
     </div>
   );
 }

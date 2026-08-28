@@ -1,8 +1,5 @@
-import {IconButton} from '@mui/material';
 import classNames from 'classnames';
 import type {ReactNode} from 'react';
-
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import styles from './authoring.module.scss';
 
@@ -16,12 +13,13 @@ interface SelectableCardProps {
 }
 
 /**
- * The click-to-edit affordance LevelInstructions established (hover
- * highlight, a pencil button that pins the properties panel open on this
- * section) — generalized for stage components that have exactly one panel
- * section: a generic-runtime level's whole render, and a widget's sandboxed
- * iframe. The wrapping card (`className`) always renders, in both audiences
- * — only the edit bar and the hover/selected outline are author-mode-only.
+ * Author Mode's browse-mode click target (Contentful model, REVISION 8/28):
+ * in browse mode the card's own content is INERT (`pointer-events: none`)
+ * and a full-region `<button>` overlay sits on top — clicking anywhere
+ * selects the whole card, hovering outlines it. This replaces the earlier
+ * per-region pencil button; the wrapping card (`className`) always renders,
+ * in both audiences — only the inert wrapper and the overlay/outline are
+ * author-mode-only, so the learner-facing render is untouched.
  */
 export default function SelectableCard({
   authorMode,
@@ -39,19 +37,18 @@ export default function SelectableCard({
         authorMode && selected && styles.selectableCardSelected,
       )}
     >
+      <div className={authorMode ? styles.selectableCardInert : undefined}>
+        {children}
+      </div>
       {authorMode && (
-        <div className={styles.selectableCardEditBar}>
-          <IconButton
-            size="small"
-            aria-label={selectLabel}
-            aria-pressed={selected}
-            onClick={onSelect}
-          >
-            <FontAwesomeV6Icon iconName="pen-to-square" iconStyle="solid" />
-          </IconButton>
-        </div>
+        <button
+          type="button"
+          aria-label={selectLabel}
+          aria-pressed={selected}
+          className={styles.selectableCardOverlay}
+          onClick={onSelect}
+        />
       )}
-      {children}
     </div>
   );
 }

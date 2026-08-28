@@ -4,6 +4,7 @@ import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import type {Blockly} from '@code-dot-org/blockly';
 import {useRef, useCallback, useEffect, useState} from 'react';
+import type {Ref, CSSProperties} from 'react';
 import classNames from 'classnames';
 import {
   getToolboxWidth,
@@ -98,6 +99,16 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
   const mazeRef = useRef<Maze | null>(null);
   const svgRef = useRef<SVGSVGElement | null>(null);
   const toolboxHeaderRef = useRef<HTMLDivElement | null>(null);
+  // The two browse-mode click targets that map onto Blockly's OWN rendered
+  // geometry rather than this file's header chrome (Author Mode's REVISION
+  // 8/28 — Contentful-style: hovering/clicking the real gray flyout bar
+  // selects the toolbox, the real canvas selects the workspace). Sized off
+  // the same getToolboxWidth() call that already positions
+  // toolboxHeaderRef's cosmetic label width, so both stay in lockstep with
+  // Blockly's actual layout (categorized vs. flyout-only, and any future
+  // toolbox width change) with no separate DOM query of Blockly's internals.
+  const toolboxOverlayRef = useRef<HTMLButtonElement | null>(null);
+  const workspaceOverlayRef = useRef<HTMLButtonElement | null>(null);
   const blockCountRef = useRef<HTMLElement | null>(null);
   const blockCount = useRef<number>(0);
   const skin = skinFor(skins, levelProperties?.skin || 'birds');
@@ -145,10 +156,19 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
   const setToolboxHeaderWidth = useCallback(() => {
     // Get the width of the flyout / toolbox
     if (toolboxHeaderRef.current && workspaceRef.current) {
-      toolboxHeaderRef.current.style.width =
-        getToolboxWidth(workspaceRef.current as Blockly.WorkspaceSvg) -
-        8 +
-        'px';
+      const width = getToolboxWidth(
+        workspaceRef.current as Blockly.WorkspaceSvg,
+      );
+      toolboxHeaderRef.current.style.width = width - 8 + 'px';
+      // Same width, applied to the real click-target overlays below
+      // (toolboxOverlayRef's own width, and where workspaceOverlayRef
+      // starts) rather than the cosmetic header label above.
+      if (toolboxOverlayRef.current) {
+        toolboxOverlayRef.current.style.width = `${width}px`;
+      }
+      if (workspaceOverlayRef.current) {
+        workspaceOverlayRef.current.style.left = `${width}px`;
+      }
     }
   }, [workspaceRef, toolboxHeaderRef]);
 
@@ -469,6 +489,15 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
     mapDraft,
   ]);
 
+  // A chip add/remove in the panel's toolbox tray changes toolboxOverride
+  // without the workspace itself dispatching a Blockly event (setToolbox is
+  // a direct API call, not a user gesture) — onChange's own
+  // setToolboxHeaderWidth() call above wouldn't otherwise see it, and the
+  // toolbox overlay's width would lag one edit behind Blockly's real flyout.
+  useEffect(() => {
+    setToolboxHeaderWidth();
+  }, [editing?.toolboxOverride, setToolboxHeaderWidth]);
+
   const skinBlocks = blocks(skinFor(skins, levelProperties?.skin || 'birds'));
 
   return (
@@ -505,66 +534,24 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
                 moduleStyles.visUnderBoxSelected,
             )}
           >
-            {editing?.authorMode && (
-              <WithTooltip
-                tooltipOverlayClassName={moduleStyles.editButtonAnchor}
-                tooltipProps={{
-                  text: 'Edit instructions',
-                  tooltipId: 'instructions-edit-tooltip',
-                  size: 'xs',
-                  direction: 'onTop',
-                }}
-              >
-                <Button
-                  className={moduleStyles.instructionsEditButton}
-                  size="xs"
-                  type="secondary"
-                  color="gray"
-                  onClick={editing.onInstructionsClick}
-                  ariaLabel="Select instructions"
-                  isIconOnly={true}
-                  icon={{
-                    iconName: 'pen-to-square',
-                    iconStyle: 'solid',
-                  }}
-                />
-              </WithTooltip>
-            )}
             <Instructions
               skin={skin}
               longInstructions={levelProperties.longInstructions || ''}
               authoredHints={levelProperties.authoredHints}
             />
+            {editing?.authorMode && (
+              <RegionOverlay
+                label="Edit instructions"
+                selected={editing.instructionsSelected}
+                onSelect={editing.onInstructionsClick}
+                className={classNames(
+                  moduleStyles.regionOverlay,
+                  moduleStyles.regionOverlayFull,
+                )}
+              />
+            )}
           </Panel>
-          <PanelContainerHeader
-            rightHeaderContent={
-              editing?.authorMode && (
-                <WithTooltip
-                  tooltipProps={{
-                    text: 'Edit visualization',
-                    tooltipId: 'visualization-edit-tooltip',
-                    size: 'xs',
-                    direction: 'onTop',
-                  }}
-                >
-                  <Button
-                    size="xs"
-                    type="secondary"
-                    color="gray"
-                    onClick={editing.onVisualizationClick}
-                    ariaLabel="Select visualization"
-                    isIconOnly={true}
-                    icon={{
-                      iconName: 'pen-to-square',
-                      iconStyle: 'solid',
-                    }}
-                  />
-                </WithTooltip>
-              )
-            }
-          >
-            Play Area
-          </PanelContainerHeader>
+          <PanelContainerHeader>Play Area</PanelContainerHeader>
           <Panel
             className={classNames(
               moduleStyles.visBox,
@@ -575,7 +562,12 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
             <Visualization
               className={moduleStyles.visualization}
               ref={svgRef}
-              disabled={false}
+              // Browse mode: the lab's own Run/Reset/Step are inert outside
+              // a 'mySolution' run (REVISION 8/28, requirement 3) — student
+              // view (editing.authorMode false) is always fully live.
+              disabled={
+                editing?.authorMode ? editing.workspaceMode !== 'mySolution' : false
+              }
               stepping={stepping}
               running={running}
               stepButton={true}
@@ -586,17 +578,43 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
               onFinish={() => {}}
               overlay={
                 editing?.visualizationSelected && mapDraft ? (
-                  <MapPainter
-                    rows={mapDraft.length}
-                    cols={mapDraft[0]?.length ?? 0}
-                    grid={mapDraft}
-                    skinId={skin.id}
-                    selectedToolLabel={
-                      getPaintTools(skin.id).find(
-                        t => t.id === editing.selectedPaintToolId,
-                      )?.label
-                    }
-                    onPaintCell={handlePaintCell}
+                  editing.selectedPaintToolId ? (
+                    <MapPainter
+                      rows={mapDraft.length}
+                      cols={mapDraft[0]?.length ?? 0}
+                      grid={mapDraft}
+                      skinId={skin.id}
+                      selectedToolLabel={
+                        getPaintTools(skin.id).find(
+                          t => t.id === editing.selectedPaintToolId,
+                        )?.label
+                      }
+                      onPaintCell={handlePaintCell}
+                    />
+                  ) : (
+                    // Selected but no paint tool chosen yet: a click here is
+                    // "select the visualization" (re-clicking toggles the
+                    // panel closed), not a paint gesture — the painter only
+                    // takes over pointer input once a tool is active.
+                    <RegionOverlay
+                      label="Edit visualization"
+                      selected={true}
+                      onSelect={editing.onVisualizationClick}
+                      className={classNames(
+                        moduleStyles.regionOverlay,
+                        moduleStyles.regionOverlayFull,
+                      )}
+                    />
+                  )
+                ) : editing?.authorMode ? (
+                  <RegionOverlay
+                    label="Edit visualization"
+                    selected={false}
+                    onSelect={editing.onVisualizationClick}
+                    className={classNames(
+                      moduleStyles.regionOverlay,
+                      moduleStyles.regionOverlayFull,
+                    )}
                   />
                 ) : undefined
               }
@@ -609,29 +627,6 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
             id="workspace-panel"
             rightHeaderContent={
               <div className={moduleStyles.buttons}>
-                {editing?.authorMode && (
-                  <WithTooltip
-                    tooltipProps={{
-                      text: 'Edit workspace',
-                      tooltipId: 'workspace-edit-tooltip',
-                      size: 'xs',
-                      direction: 'onTop',
-                    }}
-                  >
-                    <Button
-                      size="xs"
-                      type="secondary"
-                      color="gray"
-                      onClick={editing.onWorkspaceClick}
-                      ariaLabel="Select workspace"
-                      isIconOnly={true}
-                      icon={{
-                        iconName: 'pen-to-square',
-                        iconStyle: 'solid',
-                      }}
-                    />
-                  </WithTooltip>
-                )}
                 <WithTooltip
                   tooltipProps={{
                     // In author mode this sits right next to the new
@@ -698,13 +693,7 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
             }
             leftHeaderContent={
               <>
-                <div
-                  ref={toolboxHeaderRef}
-                  className={classNames(
-                    editing?.authorMode && moduleStyles.regionEditable,
-                    editing?.toolboxSelected && moduleStyles.regionSelected,
-                  )}
-                >
+                <div ref={toolboxHeaderRef}>
                   <PanelContainerHeader>Blocks</PanelContainerHeader>
                 </div>
                 <div className={moduleStyles.blockCount}>
@@ -715,39 +704,12 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
                   <span ref={blockCountRef}>0</span>
                   <span>{levelProperties.ideal}</span> Blocks
                 </div>
-                {editing?.authorMode && (
-                  <WithTooltip
-                    tooltipProps={{
-                      text: 'Edit toolbox',
-                      tooltipId: 'toolbox-edit-tooltip',
-                      size: 'xs',
-                      direction: 'onTop',
-                    }}
-                  >
-                    <Button
-                      size="xs"
-                      type="secondary"
-                      color="gray"
-                      onClick={editing.onToolboxClick}
-                      ariaLabel="Select toolbox"
-                      isIconOnly={true}
-                      icon={{
-                        iconName: 'pen-to-square',
-                        iconStyle: 'solid',
-                      }}
-                    />
-                  </WithTooltip>
-                )}
               </>
             }
             headerContent={<WorkspaceHeader />}
-            headerClassName={classNames(
-              moduleStyles.headerWithBorder,
-              editing?.authorMode && moduleStyles.regionEditable,
-              editing?.workspaceSelected && moduleStyles.regionSelected,
-            )}
+            headerClassName={moduleStyles.headerWithBorder}
           >
-            <Panel>
+            <Panel className={moduleStyles.blocklyPanelWrap}>
               <BlocklyWorkspace
                 key={startOverGeneration}
                 className={moduleStyles.blocklyWorkspace}
@@ -773,6 +735,44 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
                 onChange={onChange}
                 workspaceRef={workspaceRef}
               />
+              {editing?.authorMode && (
+                <>
+                  {/* The gray flyout/toolbox bar's real geometry (§ REVISION
+                      8/28, requirement 2) — always capturing; toolbox
+                      composition happens through the panel's chip tray, never
+                      by dragging out of this flyout, so there is no "live"
+                      state to punch a hole in this overlay for. */}
+                  <RegionOverlay
+                    overlayRef={toolboxOverlayRef}
+                    label="Edit toolbox"
+                    selected={editing.toolboxSelected}
+                    onSelect={editing.onToolboxClick}
+                    className={classNames(
+                      moduleStyles.regionOverlay,
+                      moduleStyles.toolboxOverlay,
+                      moduleStyles.regionEditable,
+                      editing.toolboxSelected && moduleStyles.regionSelected,
+                    )}
+                  />
+                  {/* The real canvas — inert unless a workspace editing mode
+                      (Student start / My solution) is active, in which case
+                      it steps out of the way (pointer-events: none) so
+                      Blockly's own drag/click-to-add gestures work. */}
+                  <RegionOverlay
+                    overlayRef={workspaceOverlayRef}
+                    label="Edit workspace"
+                    selected={editing.workspaceSelected}
+                    onSelect={editing.onWorkspaceClick}
+                    className={classNames(
+                      moduleStyles.regionOverlay,
+                      moduleStyles.workspaceOverlay,
+                      moduleStyles.regionEditable,
+                      editing.workspaceSelected && moduleStyles.regionSelected,
+                    )}
+                    style={editing.workspaceMode ? {pointerEvents: 'none'} : undefined}
+                  />
+                </>
+              )}
             </Panel>
           </PanelContainer>
         )}
@@ -780,5 +780,41 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
     </Layout>
   );
 };
+
+/**
+ * Author Mode's browse-mode click target (REVISION 8/28): a real `<button>`
+ * — not a `role="button"` div — so Enter/Space activation is native, not
+ * hand-rolled. Absolutely positioned by its caller (className carries the
+ * geometry); hover/selected outline is the shared `.region-editable`/
+ * `.region-selected` pair those callers also pass in, so this component owns
+ * no visual opinion of its own.
+ */
+function RegionOverlay({
+  label,
+  selected,
+  onSelect,
+  className,
+  overlayRef,
+  style,
+}: {
+  label: string;
+  selected: boolean;
+  onSelect: () => void;
+  className?: string;
+  overlayRef?: Ref<HTMLButtonElement>;
+  style?: CSSProperties;
+}) {
+  return (
+    <button
+      ref={overlayRef}
+      type="button"
+      aria-label={label}
+      aria-pressed={selected}
+      className={className}
+      style={style}
+      onClick={onSelect}
+    />
+  );
+}
 
 export default MazeLab;
