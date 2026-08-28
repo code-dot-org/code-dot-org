@@ -23,8 +23,7 @@ import type {CurriculumChangeInput} from './api';
  * moveExperience doesn't retain the prior position/lesson; updateUnit/
  * updateLesson/updateContent/updateLevel are Partial-patch ops like
  * overrideLevelInstructions but don't (yet) capture a `previous` the same
- * way; createWidget/updateWidgetMetadata mint or edit a widget, not a
- * curriculum placement.
+ * way; createWidget mints a widget, not a curriculum placement.
  */
 export function buildRevertChangeBody(
   change: CurriculumChange,
@@ -61,6 +60,14 @@ export function buildRevertChangeBody(
         ? {
             op: 'overrideLevelDefinition',
             experienceId: change.experienceId,
+            patch: change.previous,
+          }
+        : undefined;
+    case 'updateWidgetMetadata':
+      return change.previous
+        ? {
+            op: 'updateWidgetMetadata',
+            widgetId: change.widgetId,
             patch: change.previous,
           }
         : undefined;

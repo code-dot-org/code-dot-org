@@ -486,3 +486,80 @@ describe('AuthoringState overrideLevelDefinition draft-level guard', () => {
     ).not.toThrow();
   });
 });
+
+function stateWithWidget(): AuthoringState {
+  const store = new SessionStore(root);
+  return new AuthoringState({
+    store,
+    applyChange,
+    snapshot: {
+      ...EMPTY_SNAPSHOT,
+      widgets: [
+        {
+          id: 'widget-1',
+          toolName: 'widget_1',
+          title: 'Original title',
+          description: 'Original description',
+          inputSchema: {},
+          resourceUri: 'ui://widget-1',
+          visibility: ['model', 'app'],
+          network: 'none',
+        },
+      ],
+    },
+    changes: [],
+  });
+}
+
+describe('AuthoringState updateWidgetMetadata previous capture', () => {
+  it('captures the prior title/description as `previous`', () => {
+    const state = stateWithWidget();
+    const change = state.applyCurriculumChange(
+      {
+        op: 'updateWidgetMetadata',
+        widgetId: 'widget-1',
+        patch: {title: 'New title', description: 'New description'},
+      },
+      'author',
+    );
+
+    expect(change).toMatchObject({
+      previous: {
+        title: 'Original title',
+        description: 'Original description',
+      },
+    });
+    expect(state.getSnapshot().widgets[0]).toMatchObject({
+      title: 'New title',
+      description: 'New description',
+    });
+  });
+
+  it('captures only the patched fields, not the whole descriptor', () => {
+    const state = stateWithWidget();
+    const change = state.applyCurriculumChange(
+      {op: 'updateWidgetMetadata', widgetId: 'widget-1', patch: {title: 'New title'}},
+      'author',
+    );
+
+    expect(change).toMatchObject({previous: {title: 'Original title'}});
+    expect(
+      (change as {previous?: {description?: string}}).previous?.description,
+    ).toBeUndefined();
+  });
+
+  it('ignores a client-supplied `previous` and recomputes it authoritatively', () => {
+    const state = stateWithWidget();
+    const change = state.applyCurriculumChange(
+      {
+        op: 'updateWidgetMetadata',
+        widgetId: 'widget-1',
+        patch: {title: 'New title'},
+        previous: {title: 'Attacker-supplied lie'},
+      },
+      'author',
+    );
+
+    expect(change).toMatchObject({previous: {title: 'Original title'}});
+  });
+});

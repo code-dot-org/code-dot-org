@@ -7,6 +7,8 @@ import {WidgetFrame} from '@code-dot-org/widget-runtime';
 
 import {useWidget} from '../hooks';
 
+import SelectableCard from './SelectableCard';
+
 import styles from './authoring.module.scss';
 
 interface WidgetExperienceViewProps {
@@ -15,6 +17,10 @@ interface WidgetExperienceViewProps {
   onEvent?: (data: unknown) => void;
   /** Tutor-configured input overriding the authored default. */
   inputOverride?: Record<string, unknown>;
+  /** Click-to-edit affordance — see ExperienceStage's PanelSection. */
+  authorMode?: boolean;
+  selected?: boolean;
+  onSelect?: () => void;
 }
 
 /**
@@ -26,6 +32,9 @@ export default function WidgetExperienceView({
   experience,
   onEvent,
   inputOverride,
+  authorMode = false,
+  selected = false,
+  onSelect,
 }: WidgetExperienceViewProps) {
   const {data, isLoading, error} = useWidget(experience.widgetId);
 
@@ -59,7 +68,13 @@ export default function WidgetExperienceView({
   }
 
   return (
-    <div className={styles.widgetStage}>
+    <SelectableCard
+      authorMode={authorMode}
+      selected={selected}
+      onSelect={() => onSelect?.()}
+      selectLabel="Select widget"
+      className={styles.widgetStage}
+    >
       <WidgetFrame
         // Remount on source change so the sandbox re-runs the new document.
         key={`${experience.widgetId}:${hashSource(data.html)}`}
@@ -71,7 +86,7 @@ export default function WidgetExperienceView({
         minHeight={240}
         maxHeight={1400}
       />
-    </div>
+    </SelectableCard>
   );
 }
 

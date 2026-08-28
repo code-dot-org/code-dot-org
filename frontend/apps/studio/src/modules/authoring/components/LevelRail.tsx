@@ -52,16 +52,17 @@ export default function LevelRail({
   const [activeTab, setActiveTab] = useState<'outline' | 'level'>('outline');
   const levelNumericId =
     active?.kind === 'existingLevel' ? active.levelNumericId : undefined;
-  const {data: properties} = useLevelProperties(levelNumericId ?? -1);
+  const {data: properties} = useLevelProperties(levelNumericId);
   const levelProps =
     levelNumericId !== undefined
       ? properties?.[String(levelNumericId)]
       : undefined;
   const appName = levelProps?.appName as string | undefined;
-  const levelTabAvailable =
-    active?.kind === 'existingLevel' &&
-    appName === 'maze' &&
-    levelNumericId !== undefined;
+  // Title editing (`updateLevel`) applies to any existingLevel experience —
+  // the Level tab's maze-only richer metadata (solution status, target
+  // block count, Check level) still needs `levelDraft`, gated inside
+  // LevelMetadata itself, not here.
+  const levelTabAvailable = active?.kind === 'existingLevel';
 
   // Falls back to Outline the moment the Level tab stops applying (the
   // author navigated to a non-maze experience via the top progress bubbles
@@ -113,24 +114,22 @@ export default function LevelRail({
           onAskAiAt={onAskAiAt}
         />
       </div>
-      {levelTabAvailable &&
-        active?.kind === 'existingLevel' &&
-        levelNumericId !== undefined &&
-        levelDraft && (
-          <div
-            className={
-              activeTab === 'level'
-                ? styles.railTabBody
-                : styles.railTabBodyHidden
-            }
-          >
-            <LevelMetadata
-              key={active.id}
-              experience={active}
-              levelDraft={levelDraft}
-            />
-          </div>
-        )}
+      {levelTabAvailable && active?.kind === 'existingLevel' && (
+        <div
+          className={
+            activeTab === 'level' ? styles.railTabBody : styles.railTabBodyHidden
+          }
+        >
+          <LevelMetadata
+            key={active.id}
+            experience={active}
+            // The richer maze-only body (solution status, target block
+            // count, Check level) needs the maze-family draft; every other
+            // appName still gets the title field below.
+            levelDraft={appName === 'maze' ? levelDraft : undefined}
+          />
+        </div>
+      )}
     </div>
   );
 }
@@ -140,8 +139,25 @@ function LevelMetadata({
   levelDraft,
 }: {
   experience: ExistingLevelExperience;
-  levelDraft: UseLevelDraftResult;
+  /** Maze-family only — see LevelRail's call site. Every other appName
+   * still gets the Level tab, just without the solution/block-count/Check
+   * body below the title. */
+  levelDraft?: UseLevelDraftResult;
 }) {
+  return (
+    <div className={styles.levelRail}>
+      <Typography variant="h6" component="h2">
+        Level
+      </Typography>
+
+      <TitleField experience={experience} />
+
+      {levelDraft && <MazeLevelMetadata levelDraft={levelDraft} />}
+    </div>
+  );
+}
+
+function MazeLevelMetadata({levelDraft}: {levelDraft: UseLevelDraftResult}) {
   const {
     effectiveSolutionXml,
     effectiveIdeal,
@@ -159,13 +175,7 @@ function LevelMetadata({
   } = levelDraft;
 
   return (
-    <div className={styles.levelRail}>
-      <Typography variant="h6" component="h2">
-        Level
-      </Typography>
-
-      <TitleField experience={experience} />
-
+    <>
       <div className={styles.solutionStatus}>
         <Typography variant="body4" component="span">
           {effectiveSolutionXml
@@ -225,7 +235,7 @@ function LevelMetadata({
           Save
         </Button>
       </div>
-    </div>
+    </>
   );
 }
 

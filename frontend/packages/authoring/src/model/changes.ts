@@ -83,6 +83,10 @@ export type CurriculumChange = {
       op: 'updateWidgetMetadata';
       widgetId: string;
       patch: Partial<WidgetDescriptor>;
+      // Same capture discipline as overrideLevelInstructions/
+      // overrideLevelDefinition below — server-captured, never
+      // client-supplied.
+      previous?: Partial<WidgetDescriptor>;
     }
   | {
       op: 'createLevel';

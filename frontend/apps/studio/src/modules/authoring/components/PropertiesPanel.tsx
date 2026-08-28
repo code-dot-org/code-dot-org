@@ -2,11 +2,21 @@ import {Button, IconButton, Typography} from '@mui/material';
 import {useQueryClient} from '@tanstack/react-query';
 import {useEffect, useState} from 'react';
 
-import type {ExistingLevelExperience} from '@code-dot-org/authoring';
+import type {
+  ExistingLevelExperience,
+  GenericLevelData,
+  WidgetDescriptor,
+  WidgetExperience,
+} from '@code-dot-org/authoring';
 import {useEscapeKeyHandler} from '@code-dot-org/component-library/common/hooks';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
-import {authoringApi, useLevelProperties} from '@/modules/authoring';
+import {
+  authoringApi,
+  experienceTypeLabel,
+  useLevelProperties,
+  useWidget,
+} from '@/modules/authoring';
 
 import type {UseLevelDraftResult} from '../levelDraft';
 import type {WorkspaceMode} from '../workspaceMode';
@@ -34,7 +44,9 @@ const START_DIRECTION_OPTIONS = [
 ] as const;
 
 interface PropertiesPanelProps {
-  experience: ExistingLevelExperience;
+  /** content never reaches this panel — LessonPlayer's edit-bar pencil
+   * covers that kind, not a stage click target (see markdownEditable). */
+  experience: ExistingLevelExperience | WidgetExperience;
   section: PanelSection;
   onClose: () => void;
   /** Reports whether the panel has an unsaved edit — LessonPlayer refuses to
@@ -76,27 +88,39 @@ export default function PropertiesPanel({
   solutionOffer,
   onDismissSolutionOffer,
 }: PropertiesPanelProps) {
+  useEscapeKeyHandler(onClose);
+
+  if (experience.kind === 'widget') {
+    return (
+      <div className={styles.propertiesPanel}>
+        <PanelHeader title={sectionTitle(section, experience)} onClose={onClose} />
+        <WidgetFields
+          experience={experience}
+          onClose={onClose}
+          onDirtyChange={onDirtyChange}
+        />
+      </div>
+    );
+  }
+
   const levelNumericId = experience.levelNumericId;
-  const {data: properties} = useLevelProperties(levelNumericId ?? -1);
+  const {data: properties} = useLevelProperties(levelNumericId);
   const levelProps =
     levelNumericId !== undefined
       ? properties?.[String(levelNumericId)]
       : undefined;
   const appName = levelProps?.appName as string | undefined;
 
-  useEscapeKeyHandler(onClose);
-
   return (
     <div className={styles.propertiesPanel}>
-      <div className={styles.propertiesPanelHeader}>
-        <Typography variant="h6" component="h2">
-          {sectionTitle(section)}
-        </Typography>
-        <IconButton size="small" aria-label="Close panel" onClick={onClose}>
-          <FontAwesomeV6Icon iconName="xmark" iconStyle="solid" />
-        </IconButton>
-      </div>
-      {levelNumericId === undefined ? (
+      <PanelHeader title={sectionTitle(section, experience)} onClose={onClose} />
+      {section === 'generic' ? (
+        <GenericFields
+          experience={experience}
+          onClose={onClose}
+          onDirtyChange={onDirtyChange}
+        />
+      ) : levelNumericId === undefined ? (
         <Typography variant="body4">Nothing to edit here.</Typography>
       ) : section === 'instructions' ? (
         <InstructionsFields
@@ -140,7 +164,23 @@ export default function PropertiesPanel({
   );
 }
 
-function sectionTitle(section: PanelSection): string {
+function PanelHeader({title, onClose}: {title: string; onClose: () => void}) {
+  return (
+    <div className={styles.propertiesPanelHeader}>
+      <Typography variant="h6" component="h2">
+        {title}
+      </Typography>
+      <IconButton size="small" aria-label="Close panel" onClick={onClose}>
+        <FontAwesomeV6Icon iconName="xmark" iconStyle="solid" />
+      </IconButton>
+    </div>
+  );
+}
+
+function sectionTitle(
+  section: PanelSection,
+  experience: ExistingLevelExperience | WidgetExperience,
+): string {
   switch (section) {
     case 'instructions':
       return 'Instructions';
@@ -150,6 +190,10 @@ function sectionTitle(section: PanelSection): string {
       return 'Toolbox';
     case 'workspace':
       return 'Workspace';
+    case 'generic':
+      return experienceTypeLabel(experience);
+    case 'widget':
+      return 'Widget';
   }
 }
 
@@ -631,5 +675,258 @@ function WorkspaceFields({
 
       <DraftSectionFooter levelDraft={levelDraft} onClose={onClose} />
     </div>
+  );
+}
+
+/**
+ * Panel for a generic-runtime level (multi/match/video/bubbleChoice/
+ * levelGroup, plus content-shaped `markdown` data) — reachability is the
+ * point of this pass (author-mode-authoring-tools-map.md §4), so the only
+ * live field is the title (`updateContent`, already writes any experience's
+ * title). Everything else in `data` is real, imported content — shown as an
+ * honest read-only count rather than hidden, so an author can at least see
+ * what's there before Tier 2 wires the rest through `updateGenericLevelData`.
+ */
+function GenericFields({
+  experience,
+  onClose,
+  onDirtyChange,
+}: {
+  experience: ExistingLevelExperience;
+  onClose: () => void;
+  onDirtyChange: (dirty: boolean) => void;
+}) {
+  const [title, setTitle] = useState(experience.title ?? '');
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const dirty = title !== (experience.title ?? '');
+
+  useEffect(() => {
+    onDirtyChange(dirty);
+  }, [dirty, onDirtyChange]);
+
+  const submit = async () => {
+    if (busy || !dirty) {
+      return;
+    }
+    setBusy(true);
+    setError(null);
+    try {
+      await authoringApi.applyChange({
+        op: 'updateContent',
+        experienceId: experience.id,
+        patch: {title},
+      });
+      onClose();
+    } catch {
+      setError('That change failed to apply.');
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const notYetEditable = notYetEditableFields(experience.data);
+
+  return (
+    <form
+      className={styles.propertiesPanelForm}
+      onSubmit={e => {
+        e.preventDefault();
+        void submit();
+      }}
+    >
+      <label htmlFor="panel-generic-title">
+        Title
+        <input
+          id="panel-generic-title"
+          type="text"
+          value={title}
+          disabled={busy}
+          onChange={e => setTitle(e.target.value)}
+        />
+      </label>
+      <Typography variant="body4" component="span">
+        Type: {experienceTypeLabel(experience)}
+      </Typography>
+      {notYetEditable.length > 0 && (
+        <div className={styles.paintPalette}>
+          <Typography variant="body4" component="span">
+            Not yet editable here — shown so you can see what's authored:
+          </Typography>
+          <ul>
+            {notYetEditable.map(field => (
+              <li key={field}>
+                <Typography variant="body4">{field}</Typography>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+      {error && (
+        <Typography variant="body4" role="status" className={styles.inlineError}>
+          {error}
+        </Typography>
+      )}
+      <div className={styles.composerActions}>
+        <Button variant="outlined" size="small" onClick={onClose} disabled={busy}>
+          Cancel
+        </Button>
+        <Button
+          type="submit"
+          variant="contained"
+          size="small"
+          disabled={busy || !dirty}
+        >
+          Save
+        </Button>
+      </div>
+    </form>
+  );
+}
+
+function notYetEditableFields(data: GenericLevelData | undefined): string[] {
+  if (!data) {
+    return [];
+  }
+  switch (data.type) {
+    case 'multi':
+      return [
+        'Question',
+        `Answers (${data.answers.length})`,
+        'Allow multiple attempts',
+      ];
+    case 'match':
+      return [`Pairs (${data.pairs.length})`];
+    case 'video':
+      return ['Video', 'Caption'];
+    case 'bubbleChoice':
+      return [`Choices (${data.choices.length})`];
+    case 'levelGroup':
+      return [`Pages (${data.pages.length})`];
+    case 'markdown':
+      // Editable via the pencil icon above the stage (updateContent already
+      // writes data.markdown) — nothing else on this variant to flag.
+      return [];
+    case 'opaque':
+      return [];
+  }
+}
+
+/** Panel for a widget experience — title + description, the only fields
+ * `updateWidgetMetadata` writes today (author-mode-authoring-tools-map.md
+ * §5.1); everything else about a widget is chat-only or read-only. */
+function WidgetFields({
+  experience,
+  onClose,
+  onDirtyChange,
+}: {
+  experience: WidgetExperience;
+  onClose: () => void;
+  onDirtyChange: (dirty: boolean) => void;
+}) {
+  const {data, isLoading} = useWidget(experience.widgetId);
+
+  if (isLoading || !data?.descriptor) {
+    return <Typography variant="body4">Loading…</Typography>;
+  }
+
+  return (
+    <WidgetMetadataForm
+      widgetId={experience.widgetId}
+      descriptor={data.descriptor}
+      onClose={onClose}
+      onDirtyChange={onDirtyChange}
+    />
+  );
+}
+
+function WidgetMetadataForm({
+  widgetId,
+  descriptor,
+  onClose,
+  onDirtyChange,
+}: {
+  widgetId: string;
+  descriptor: WidgetDescriptor;
+  onClose: () => void;
+  onDirtyChange: (dirty: boolean) => void;
+}) {
+  const [title, setTitle] = useState(descriptor.title);
+  const [description, setDescription] = useState(descriptor.description);
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const dirty =
+    title !== descriptor.title || description !== descriptor.description;
+
+  useEffect(() => {
+    onDirtyChange(dirty);
+  }, [dirty, onDirtyChange]);
+
+  const submit = async () => {
+    if (busy || !dirty) {
+      return;
+    }
+    setBusy(true);
+    setError(null);
+    try {
+      await authoringApi.applyChange({
+        op: 'updateWidgetMetadata',
+        widgetId,
+        patch: {title, description},
+      });
+      onClose();
+    } catch {
+      setError('That change failed to apply.');
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  return (
+    <form
+      className={styles.propertiesPanelForm}
+      onSubmit={e => {
+        e.preventDefault();
+        void submit();
+      }}
+    >
+      <label htmlFor="panel-widget-title">
+        Title
+        <input
+          id="panel-widget-title"
+          type="text"
+          value={title}
+          disabled={busy}
+          onChange={e => setTitle(e.target.value)}
+        />
+      </label>
+      <label htmlFor="panel-widget-description">
+        Description (what the model is told this widget does)
+        <textarea
+          id="panel-widget-description"
+          value={description}
+          disabled={busy}
+          onChange={e => setDescription(e.target.value)}
+        />
+      </label>
+      {error && (
+        <Typography variant="body4" role="status" className={styles.inlineError}>
+          {error}
+        </Typography>
+      )}
+      <div className={styles.composerActions}>
+        <Button variant="outlined" size="small" onClick={onClose} disabled={busy}>
+          Cancel
+        </Button>
+        <Button
+          type="submit"
+          variant="contained"
+          size="small"
+          disabled={busy || !dirty}
+        >
+          Save
+        </Button>
+      </div>
+    </form>
   );
 }

@@ -116,6 +116,31 @@ describe('buildRevertChangeBody', () => {
     });
   });
 
+  it('reverts updateWidgetMetadata by re-applying the captured previous value', () => {
+    const change: CurriculumChange = {
+      ...stamp,
+      op: 'updateWidgetMetadata',
+      widgetId: 'widget-1',
+      patch: {title: 'New title'},
+      previous: {title: 'Original title'},
+    };
+    expect(buildRevertChangeBody(change)).toEqual({
+      op: 'updateWidgetMetadata',
+      widgetId: 'widget-1',
+      patch: {title: 'Original title'},
+    });
+  });
+
+  it('does not offer a revert for updateWidgetMetadata with no captured previous', () => {
+    const change: CurriculumChange = {
+      ...stamp,
+      op: 'updateWidgetMetadata',
+      widgetId: 'widget-1',
+      patch: {title: 'New title'},
+    };
+    expect(buildRevertChangeBody(change)).toBeUndefined();
+  });
+
   it('does not offer a revert for overrideLevelDefinition with no captured previous', () => {
     const change: CurriculumChange = {
       ...stamp,
@@ -137,7 +162,6 @@ describe('buildRevertChangeBody', () => {
     'moveExperience',
     'updateContent',
     'createWidget',
-    'updateWidgetMetadata',
     'updateLevel',
   ] as const)('does not offer a revert for %s', op => {
     const change = {...stamp, op} as unknown as CurriculumChange;

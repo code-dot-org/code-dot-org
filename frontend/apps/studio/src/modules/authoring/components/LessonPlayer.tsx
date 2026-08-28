@@ -63,6 +63,31 @@ function writeStudentViewFlag(value: boolean): void {
   }
 }
 
+/**
+ * Whether the stage's inline pencil/`ContentComposer` editor applies:
+ * authored `content` experiences, plus an `existingLevel` whose generic data
+ * is the markdown variant (External levels — `updateContent` already writes
+ * `data.markdown` for these, see apply.ts's applyContentPatch; only the UI
+ * gate excluded them).
+ */
+function markdownEditable(experience: Experience): boolean {
+  return (
+    experience.kind === 'content' ||
+    (experience.kind === 'existingLevel' && experience.data?.type === 'markdown')
+  );
+}
+
+/** The markdown text `markdownEditable` above says this experience can edit. */
+function editableMarkdown(experience: Experience): string {
+  if (experience.kind === 'content') {
+    return experience.markdown;
+  }
+  if (experience.kind === 'existingLevel' && experience.data?.type === 'markdown') {
+    return experience.data.markdown;
+  }
+  return '';
+}
+
 /** Content experiences complete on read; everything else needs an attempt. */
 function completionForLeaving(experience: Experience): CompletionStatus {
   return experience.kind === 'content' ? 'passed' : 'attempted';
@@ -190,7 +215,7 @@ export default function LessonPlayer({
   const activeLevelNumericId =
     active?.kind === 'existingLevel' ? active.levelNumericId : undefined;
   const {data: activeLevelPropertiesMap} = useLevelProperties(
-    activeLevelNumericId ?? -1,
+    activeLevelNumericId,
   );
   const activeLevelProps =
     activeLevelNumericId !== undefined
@@ -241,7 +266,9 @@ export default function LessonPlayer({
   // one gates navigation (selectIndex) and shows in the top bar.
   const levelRailDirty = levelDraft.dirty;
   const showPropertiesPanel =
-    authorMode && !!panelSection && active?.kind === 'existingLevel';
+    authorMode &&
+    !!panelSection &&
+    (active?.kind === 'existingLevel' || active?.kind === 'widget');
   // The tray reports XML (the Save-patch shape); the stage's flyout wants
   // the JSON Toolbox shape (see toolbox/index.ts's buildToolbox) — convert
   // once here rather than in both LevelRail and ExperienceStage.
@@ -535,7 +562,7 @@ export default function LessonPlayer({
               />
             ) : (
               <>
-                {active && authorMode && active.kind === 'content' && (
+                {active && authorMode && markdownEditable(active) && (
                   <div className={styles.contentEditBar}>
                     {editingContentId === active.id ? undefined : (
                       <IconButton
@@ -552,12 +579,12 @@ export default function LessonPlayer({
                   </div>
                 )}
                 {active ? (
-                  active.kind === 'content' &&
+                  markdownEditable(active) &&
                   editingContentId === active.id ? (
                     <ContentComposer
                       submitLabel="Save"
                       initialTitle={active.title}
-                      initialMarkdown={active.markdown}
+                      initialMarkdown={editableMarkdown(active)}
                       onCancel={() => setEditingContentId(undefined)}
                       onSubmit={async ({title, markdown}) => {
                         await authoringApi.applyChange({
@@ -638,7 +665,7 @@ export default function LessonPlayer({
 
         {showPropertiesPanel &&
           panelSection &&
-          active?.kind === 'existingLevel' && (
+          (active?.kind === 'existingLevel' || active?.kind === 'widget') && (
             <PropertiesPanel
               key={`${active.id}-${panelSection}`}
               experience={active}

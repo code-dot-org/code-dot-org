@@ -127,6 +127,13 @@ export class AuthoringState {
         change.patch,
       );
     }
+    if (change.op === 'updateWidgetMetadata') {
+      change.previous = capturePreviousWidgetMetadata(
+        this.snapshot.widgets,
+        change.widgetId,
+        change.patch,
+      );
+    }
 
     const next = this.applyChange(
       {courses: this.snapshot.courses, widgets: this.snapshot.widgets},
@@ -329,6 +336,26 @@ function capturePreviousInstructions(
   if ('longInstructions' in patch) {
     const value = current?.longInstructions;
     previous.longInstructions = typeof value === 'string' ? value : '';
+  }
+  return previous;
+}
+
+// Same reasoning as capturePreviousInstructions, reading the widget's
+// current descriptor (in-memory, not levelProperties) instead — a widget
+// has no served/override split, just the one array entry apply.ts's
+// updateWidgetMetadata spreads over.
+function capturePreviousWidgetMetadata(
+  widgets: WidgetDescriptor[],
+  widgetId: string,
+  patch: Partial<WidgetDescriptor>,
+): Partial<WidgetDescriptor> | undefined {
+  const widget = widgets.find(w => w.id === widgetId);
+  if (!widget) {
+    return undefined;
+  }
+  const previous: Partial<WidgetDescriptor> = {};
+  for (const key of Object.keys(patch) as (keyof WidgetDescriptor)[]) {
+    (previous as Record<string, unknown>)[key] = widget[key];
   }
   return previous;
 }

@@ -74,10 +74,17 @@ export function useChatLog() {
   return useQuery({queryKey: CHAT_KEY, queryFn: authoringApi.fetchChatLog});
 }
 
-/** Levelbuilder-shaped properties for one numeric level id, for <Lab>. */
-export function useLevelProperties(numericId: number) {
+/**
+ * Levelbuilder-shaped properties for one numeric level id, for <Lab>.
+ * `numericId` is undefined for experiences with no numeric id (a
+ * lazily-attached generic level, a widget, a draft never registered) —
+ * `enabled: false` skips the fetch rather than requesting a sentinel id
+ * that the server will only 404 on.
+ */
+export function useLevelProperties(numericId: number | undefined) {
   return useQuery({
-    queryKey: ['authoring', 'levelProperties', numericId],
-    queryFn: () => authoringApi.fetchLevelProperties(numericId),
+    queryKey: ['authoring', 'levelProperties', numericId ?? -1],
+    queryFn: () => authoringApi.fetchLevelProperties(numericId as number),
+    enabled: numericId !== undefined,
   });
 }

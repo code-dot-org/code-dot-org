@@ -214,6 +214,11 @@ export type CurriculumChangeBody =
       op: 'updateWidgetMetadata';
       widgetId: string;
       patch: Partial<WidgetDescriptor>;
+      // Same capture discipline as overrideLevelInstructions/
+      // overrideLevelDefinition below — set by
+      // AuthoringState.applyCurriculumChange from the widget's descriptor
+      // just before the merge, never client-supplied.
+      previous?: Partial<WidgetDescriptor>;
     }
   | {
       op: 'createLevel';

@@ -29,6 +29,7 @@ import MatchLevel from './renderers/MatchLevel';
 import MultiLevel from './renderers/MultiLevel';
 import UnsupportedLevel from './renderers/UnsupportedLevel';
 import VideoLevel from './renderers/VideoLevel';
+import SelectableCard from './SelectableCard';
 import WidgetExperienceView from './WidgetExperienceView';
 
 import styles from './authoring.module.scss';
@@ -45,23 +46,30 @@ export interface StageEvent {
 }
 
 /**
- * The stage's four click-selectable logical components (product owner's
- * FINAL IA REVISION, 8/27, superseding the single-section 'instructions'
- * design in docs/prototypes/author-mode-properties-panel.md §5.2): a maze
- * level on stage decomposes into an instructions bubble, the
- * animation/visualization (grid + character), the block toolbox, and the
- * blocks workspace — each hover-highlightable and click-selectable, each
- * editing ITS OWN fields in the right panel. Level-WIDE settings (title,
- * target block count, solution status, Check level) stay page settings in
- * the left rail (LevelRail.tsx) — not a stage click-target. Music/oceans/
- * generic experiences only ever use 'instructions'; the other three are
- * maze-family only (see ExperienceStage's `levelEditable`).
+ * The stage's click-selectable logical components (product owner's FINAL IA
+ * REVISION, 8/27, superseding the single-section 'instructions' design in
+ * docs/prototypes/author-mode-properties-panel.md §5.2): a maze level on
+ * stage decomposes into an instructions bubble, the animation/visualization
+ * (grid + character), the block toolbox, and the blocks workspace — each
+ * hover-highlightable and click-selectable, each editing ITS OWN fields in
+ * the right panel. Level-WIDE settings (title, target block count, solution
+ * status, Check level) stay page settings in the left rail (LevelRail.tsx)
+ * — not a stage click-target. Music/oceans experiences only ever use
+ * 'instructions'; visualization/toolbox/workspace are maze-family only (see
+ * ExperienceStage's `levelEditable`). 'generic' is the whole-stage click
+ * target for the five generic-runtime level types (video/multi/match/
+ * bubbleChoice/levelGroup, plus content-shaped `markdown` data) and
+ * 'widget' the same for a widget experience — both single-section for now
+ * (see author-mode-authoring-tools-map.md §4/§5.1 for what's editable in
+ * each vs. read-only).
  */
 export type PanelSection =
   | 'instructions'
   | 'visualization'
   | 'toolbox'
-  | 'workspace';
+  | 'workspace'
+  | 'generic'
+  | 'widget';
 
 interface ExperienceStageProps {
   experience: Experience;
@@ -154,6 +162,9 @@ export default function ExperienceStage({
         <WidgetExperienceView
           experience={experience}
           onEvent={data => onStageEvent?.({experienceId: experience.id, data})}
+          authorMode={authorMode}
+          selected={selectedSection === 'widget'}
+          onSelect={() => onSectionClick?.('widget')}
         />
       );
   }
@@ -226,12 +237,18 @@ function ExistingLevelStage({
 
   if (experience.runtime === 'generic' && experience.data) {
     return (
-      <div className={styles.contentCard}>
+      <SelectableCard
+        authorMode={authorMode}
+        selected={selectedSection === 'generic'}
+        onSelect={() => onSectionClick?.('generic')}
+        selectLabel="Select level"
+        className={styles.contentCard}
+      >
         <GenericLevel
           data={experience.data}
           onAnswer={data => onStageEvent?.({experienceId: experience.id, data})}
         />
-      </div>
+      </SelectableCard>
     );
   }
 

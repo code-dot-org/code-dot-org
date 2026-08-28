@@ -834,6 +834,25 @@
   font-style: italic;
 }
 
+/* SelectableCard — the same click-to-edit affordance as
+   .levelInstructions*, generalized for a whole-stage single-section
+   component (generic-runtime levels, the widget iframe). */
+
+.selectableCardEditBar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.selectableCardSelected {
+  outline: 2px solid var(--borders-brand-purple-primary, #4d24a8);
+  outline-offset: -2px;
+}
+
+.selectableCardEditable:hover:not(.selectableCardSelected) {
+  outline: 2px dashed var(--borders-brand-purple-primary, #4d24a8);
+  outline-offset: -2px;
+}
+
 /* Generic level renderers */
 
 .videoFrameWrap {
