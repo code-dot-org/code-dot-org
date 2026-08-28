@@ -5,6 +5,7 @@ import {streamSSE} from 'hono/streaming';
 import {randomUUID} from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
+import {z} from 'zod';
 
 import {injectWidgetChrome} from '@code-dot-org/widget-runtime/chrome';
 
@@ -22,7 +23,12 @@ import type {CurriculumChange, ResolveLevel} from './authoring/model.js';
 import {importCourseIfMissing} from './boot/importCourse.js';
 import {LevelCatalog, repairLevelProperties} from './boot/levelCatalog.js';
 import {FRONTEND_ROOT, resolveRepoRoot} from './boot/paths.js';
+import {createMazeLevel} from './levels/createMazeLevel.js';
 import {checkImportedMazeLevel} from './levels/importedLevelCheck.js';
+import {
+  buildBlankMazeLevelDefinition,
+  CREATABLE_MAZE_SKINS,
+} from './levels/mazeLevel.js';
 import {buildChangeSet} from './publish/buildChangeSet.js';
 import {AuthoringState} from './state/AuthoringState.js';
 import {
@@ -144,6 +150,7 @@ app.use('/api/changes', rejectCrossSite);
 app.use('/api/tutor', rejectCrossSite);
 app.use('/api/publish', rejectCrossSite);
 app.use('/api/levels/:numericId/check', rejectCrossSite);
+app.use('/api/levels/create-maze', rejectCrossSite);
 
 app.get('/api/state', c =>
   c.json({
@@ -180,6 +187,47 @@ app.post('/api/levels/:numericId/check', c => {
 app.get('/api/levels/search', c => {
   const query = c.req.query('q') ?? '';
   return c.json({levels: catalog.searchLevels(query)});
+});
+
+const CreateMazeLevelBodySchema = z.object({
+  lessonId: z.string().min(1),
+  position: z.number().int(),
+  title: z.string().min(1).optional(),
+  skin: z.enum(CREATABLE_MAZE_SKINS).optional(),
+  rows: z.number().int().optional(),
+  cols: z.number().int().optional(),
+});
+
+// The manual "New maze level" authoring affordance (gap #5 of the parity
+// challenge): a blank, trivially-solvable template — same orchestration as
+// the agent's create_level tool (createMazeLevel), just with an
+// author-picked skin/grid-size instead of AI-authored content. See
+// buildBlankMazeLevelDefinition's doc comment for why the template must
+// pass verifyMazeLevelSolvable honestly rather than being waved through.
+app.post('/api/levels/create-maze', async c => {
+  let body: unknown;
+  try {
+    body = await c.req.json();
+  } catch {
+    return c.json({error: 'malformed JSON body'}, 400);
+  }
+  const parsed = CreateMazeLevelBodySchema.safeParse(body);
+  if (!parsed.success) {
+    return c.json({error: parsed.error.message}, 400);
+  }
+  const {lessonId, position, title, skin, rows, cols} = parsed.data;
+  const definition = buildBlankMazeLevelDefinition({skin, rows, cols});
+  const result = createMazeLevel(state, store, {
+    lessonId,
+    position,
+    title: title ?? 'New maze level',
+    definition,
+    actor: 'author',
+  });
+  if (!result.ok) {
+    return c.json({error: result.reason}, 400);
+  }
+  return c.json({version: state.version, ...result});
 });
 
 app.get('/api/widgets/:id', c => {

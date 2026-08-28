@@ -13,6 +13,7 @@ import {z} from 'zod';
 
 import type {Experience, Lesson, WidgetDescriptor} from '../authoring/model.js';
 import type {LevelCatalog} from '../boot/levelCatalog.js';
+import {createMazeLevel} from '../levels/createMazeLevel.js';
 import {
   buildMazeLevelWireProperties,
   MazeLevelDefinitionPatchSchema,
@@ -653,39 +654,21 @@ function buildCurriculumServer(
           definition: MazeLevelDefinitionSchema,
         },
         async ({lessonId, position, title, definition}) => {
-          const gate = verifyMazeLevelSolvable(definition);
-          if (!gate.ok) {
-            return fail(`level not created — ${gate.reason}`);
-          }
-          const levelId = draftId('level');
-          const levelKey = `draft:${levelId}`;
-          const numericId = state.nextLevelNumericId();
-          store.writeLevelDefinition(levelId, definition);
-          state.registerLevelProperties({
-            [String(numericId)]: buildMazeLevelWireProperties(
-              numericId,
-              levelKey,
-              definition,
-            ),
-          });
-          const experienceId = draftId('exp');
-          apply({
-            op: 'createLevel',
+          const result = createMazeLevel(state, store, {
             lessonId,
             position,
-            level: {
-              id: experienceId,
-              kind: 'existingLevel',
-              origin: 'draft',
-              title,
-              levelKey,
-              levelType: 'Maze',
-              runtime: 'labhost',
-              labKey: 'maze',
-              levelNumericId: numericId,
-            },
+            title,
+            definition,
+            actor: 'agent',
           });
-          return ok({levelId, experienceId, levelNumericId: numericId});
+          if (!result.ok) {
+            return fail(`level not created — ${result.reason}`);
+          }
+          return ok({
+            levelId: result.levelId,
+            experienceId: result.experienceId,
+            levelNumericId: result.levelNumericId,
+          });
         },
       ),
       tool(

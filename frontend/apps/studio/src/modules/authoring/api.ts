@@ -184,6 +184,20 @@ export const authoringApi = {
     get<LevelPropertiesMap>(`/levels/${numericId}/level_properties`),
   checkLevel: (numericId: number) =>
     post<LevelCheckResponse>(`/levels/${numericId}/check`, {}),
+  createMazeLevel: (params: {
+    lessonId: string;
+    position: number;
+    title?: string;
+    skin?: string;
+    rows?: number;
+    cols?: number;
+  }) =>
+    post<{
+      version: number;
+      levelId: string;
+      experienceId: string;
+      levelNumericId: number;
+    }>('/levels/create-maze', params),
   tutorTurn: (lessonId: string, transcript: TutorEvent[]) =>
     post<TutorAction>('/tutor', {lessonId, transcript}),
   publish: () => post<PublishResult>('/publish', {}),

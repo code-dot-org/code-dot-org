@@ -1,4 +1,4 @@
-import {Menu, MenuItem, Popover, Typography} from '@mui/material';
+import {Button, Menu, MenuItem, Popover, Typography} from '@mui/material';
 import {useEffect, useRef, useState} from 'react';
 
 import {useEscapeKeyHandler} from '@code-dot-org/component-library/common/hooks';
@@ -11,7 +11,21 @@ import ContentComposer from './ContentComposer';
 
 import styles from './authoring.module.scss';
 
-type Mode = 'menu' | 'content' | 'level' | null;
+type Mode = 'menu' | 'content' | 'level' | 'newMaze' | null;
+
+// Mirrors the server's CREATABLE_MAZE_SKINS (authoring-service's
+// mazeLevel.ts) — kept as its own copy for the same reason
+// PropertiesPanel's START_DIRECTION_OPTIONS is: this package can't import
+// server-only source, and the two only need to stay structurally
+// compatible. Harvester/Planter are excluded there (and here) because
+// their Cell subclasses don't support the legacy `maze`-only grid a fresh
+// template starts with — see buildBlankMazeLevelDefinition's doc comment.
+const NEW_MAZE_SKIN_OPTIONS = [
+  {value: 'birds', label: 'Maze (plain)'},
+  {value: 'farmer', label: 'Farmer'},
+  {value: 'bee', label: 'Bee'},
+  {value: 'collector', label: 'Collector'},
+] as const;
 
 interface InsertPointProps {
   lessonId: string;
@@ -70,6 +84,7 @@ export default function InsertPoint({
         </MenuItem>
         <MenuItem onClick={() => setMode('content')}>Write content</MenuItem>
         <MenuItem onClick={() => setMode('level')}>Add existing level</MenuItem>
+        <MenuItem onClick={() => setMode('newMaze')}>New maze level</MenuItem>
       </Menu>
 
       <Popover anchorEl={anchorEl} open={mode === 'content'} onClose={close}>
@@ -108,7 +123,138 @@ export default function InsertPoint({
           }}
         />
       </Popover>
+
+      <Popover anchorEl={anchorEl} open={mode === 'newMaze'} onClose={close}>
+        <NewMazeLevelForm
+          onCancel={close}
+          onSubmit={async params => {
+            await authoringApi.createMazeLevel({
+              lessonId,
+              position,
+              ...params,
+            });
+            close();
+          }}
+        />
+      </Popover>
     </div>
+  );
+}
+
+const DEFAULT_GRID_SIZE = 8;
+
+/**
+ * "New maze level" — a manual create affordance alongside "Add existing
+ * level" (gap #5 of the parity challenge: there was no way to author a
+ * maze level from scratch through the UI, only via chat). Creates a
+ * minimal, already-solvable template (buildBlankMazeLevelDefinition,
+ * authoring-service's mazeLevel.ts) through the same createMazeLevel
+ * orchestration the AI's create_level tool uses, so the result is
+ * immediately mounted and editable by the visual editor — the author
+ * paints the real map from there.
+ */
+function NewMazeLevelForm({
+  onCancel,
+  onSubmit,
+}: {
+  onCancel: () => void;
+  onSubmit: (params: {
+    title?: string;
+    skin: string;
+    rows: number;
+    cols: number;
+  }) => Promise<void>;
+}) {
+  const [title, setTitle] = useState('');
+  const [skin, setSkin] = useState<string>(NEW_MAZE_SKIN_OPTIONS[0].value);
+  const [rows, setRows] = useState(DEFAULT_GRID_SIZE);
+  const [cols, setCols] = useState(DEFAULT_GRID_SIZE);
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  useEscapeKeyHandler(onCancel);
+
+  const submit = async () => {
+    if (busy) {
+      return;
+    }
+    setBusy(true);
+    setError(null);
+    try {
+      await onSubmit({title: title.trim() || undefined, skin, rows, cols});
+    } catch {
+      setError('That level failed to create.');
+      setBusy(false);
+    }
+  };
+
+  return (
+    <form
+      className={styles.propertiesPanelForm}
+      onSubmit={e => {
+        e.preventDefault();
+        void submit();
+      }}
+    >
+      <label htmlFor="new-maze-title">
+        Title
+        <input
+          id="new-maze-title"
+          value={title}
+          placeholder="New maze level"
+          onChange={e => setTitle(e.target.value)}
+        />
+      </label>
+      <label htmlFor="new-maze-skin">
+        Skin
+        <select
+          id="new-maze-skin"
+          value={skin}
+          onChange={e => setSkin(e.target.value)}
+        >
+          {NEW_MAZE_SKIN_OPTIONS.map(option => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
+      </label>
+      <label htmlFor="new-maze-rows">
+        Rows
+        <input
+          id="new-maze-rows"
+          type="number"
+          min={2}
+          max={20}
+          value={rows}
+          onChange={e => setRows(Number(e.target.value))}
+        />
+      </label>
+      <label htmlFor="new-maze-cols">
+        Columns
+        <input
+          id="new-maze-cols"
+          type="number"
+          min={2}
+          max={20}
+          value={cols}
+          onChange={e => setCols(Number(e.target.value))}
+        />
+      </label>
+      {error && (
+        <Typography variant="body4" role="status" className={styles.inlineError}>
+          {error}
+        </Typography>
+      )}
+      <div className={styles.composerActions}>
+        <Button variant="outlined" size="small" onClick={onCancel} disabled={busy}>
+          Cancel
+        </Button>
+        <Button type="submit" variant="contained" size="small" disabled={busy}>
+          Create
+        </Button>
+      </div>
+    </form>
   );
 }
 

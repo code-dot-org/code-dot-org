@@ -524,6 +524,57 @@ export function verifyMazeLevelSolvable(
   );
 }
 
+// The manual "New maze level" affordance's skin picker — deliberately NOT
+// the full Karel.skins() list. Harvester and Planter are excluded here for
+// the same reason the module header excludes them from the AI toolbox:
+// HarvesterCell/PlanterCell don't override Cell.parseFromOldValues, so a
+// template level with the legacy `maze`-only grid this builder emits (no
+// serialized_maze until the author's first Save) would mis-load as a plain
+// Cell and crash the moment its action block runs.
+export const CREATABLE_MAZE_SKINS = ['birds', 'farmer', 'bee', 'collector'] as const;
+export type CreatableMazeSkin = (typeof CREATABLE_MAZE_SKINS)[number];
+
+/**
+ * A minimal, trivially-solvable Maze level: start and finish adjacent, one
+ * moveForward block. The "New maze level" affordance's whole point is a
+ * blank canvas the author paints from scratch — createMazeLevel's gate
+ * (verifyMazeLevelSolvable, same as the AI's create_level tool) still runs
+ * against it, so it has to pass honestly rather than being waved through;
+ * this shape is the smallest definition that does.
+ */
+export function buildBlankMazeLevelDefinition(params: {
+  skin?: CreatableMazeSkin;
+  rows?: number;
+  cols?: number;
+}): MazeLevelDefinition {
+  const clampDimension = (value: number | undefined, fallback: number) =>
+    Math.min(
+      MAX_GRID_DIMENSION,
+      Math.max(MIN_GRID_DIMENSION, Math.trunc(value ?? fallback)),
+    );
+  const rows = clampDimension(params.rows, 8);
+  const cols = clampDimension(params.cols, 8);
+  const skin = params.skin ?? 'birds';
+
+  const grid: number[][] = Array.from({length: rows}, (_, y) =>
+    Array.from({length: cols}, (_, x) => {
+      if (y === 0 && x === 0) return SquareType.START;
+      if (y === 0 && x === 1) return SquareType.FINISH;
+      return SquareType.OPEN;
+    }),
+  );
+
+  return {
+    grid,
+    startDirection: Direction.EAST,
+    skin,
+    shortInstructions: 'Move forward to reach the goal.',
+    idealBlockCount: 1,
+    toolbox: ['moveForward'],
+    solution: [{type: 'moveForward'}],
+  };
+}
+
 // --- Legacy Blockly XML serialization -------------------------------------
 //
 // The XML dialect below was reverse-engineered from real levels, e.g.

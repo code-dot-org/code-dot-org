@@ -1,10 +1,12 @@
 import {describe, expect, it} from 'vitest';
 
 import {
+  buildBlankMazeLevelDefinition,
   buildMazeLevelWireProperties,
   buildSolutionBlocksXml,
   buildStartBlocksXml,
   buildToolboxBlocksXml,
+  CREATABLE_MAZE_SKINS,
   MazeLevelDefinitionSchema,
   verifyMazeLevelSolvable,
   type MazeLevelDefinition,
@@ -427,5 +429,33 @@ describe('buildMazeLevelWireProperties', () => {
     const props = buildMazeLevelWireProperties(42, 'draft:abc123', beeSkinned);
     expect(props).not.toHaveProperty('initial_dirt');
     expect(props).not.toHaveProperty('initialDirt');
+  });
+});
+
+describe('buildBlankMazeLevelDefinition', () => {
+  it('passes verifyMazeLevelSolvable by construction, for every creatable skin', () => {
+    for (const skin of CREATABLE_MAZE_SKINS) {
+      const definition = buildBlankMazeLevelDefinition({skin});
+      expect(verifyMazeLevelSolvable(definition)).toEqual({ok: true});
+    }
+  });
+
+  it('defaults to an 8x8 grid', () => {
+    const definition = buildBlankMazeLevelDefinition({});
+    expect(definition.grid).toHaveLength(8);
+    expect(definition.grid[0]).toHaveLength(8);
+  });
+
+  it('honours an explicit grid size', () => {
+    const definition = buildBlankMazeLevelDefinition({rows: 5, cols: 12});
+    expect(definition.grid).toHaveLength(5);
+    expect(definition.grid[0]).toHaveLength(12);
+    expect(verifyMazeLevelSolvable(definition)).toEqual({ok: true});
+  });
+
+  it('clamps an out-of-range grid size into the schema-valid window', () => {
+    const definition = buildBlankMazeLevelDefinition({rows: 1, cols: 999});
+    const parsed = MazeLevelDefinitionSchema.safeParse(definition);
+    expect(parsed.success).toBe(true);
   });
 });
