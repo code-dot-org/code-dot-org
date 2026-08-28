@@ -8,6 +8,7 @@ import {
   buildToolboxBlocksXml,
   CREATABLE_MAZE_SKINS,
   MazeLevelDefinitionSchema,
+  runMazeProgram,
   simulateGoalBasedMazeProgram,
   verifyMazeLevelSolvable,
   type MazeBlockNode,
@@ -539,5 +540,89 @@ describe('simulateGoalBasedMazeProgram', () => {
     );
     expect(result.ok).toBe(false);
     expect(!result.ok && result.reason).toMatch(/must contain a start tile/);
+  });
+
+  it('counts collect toward minCollected (the Collector debug-level unlock)', () => {
+    const program: MazeBlockNode[] = [{type: 'collect'}, {type: 'collect'}];
+    expect(
+      simulateGoalBasedMazeProgram(grid, 1, program, {minCollected: 2}),
+    ).toEqual({ok: true});
+    expect(
+      simulateGoalBasedMazeProgram(grid, 1, program, {minCollected: 3}).ok,
+    ).toBe(false);
+  });
+});
+
+describe('runMazeProgram (structured outcome)', () => {
+  const grid = [
+    [0, 0, 0, 0],
+    [0, 2, 1, 0],
+    [0, 1, 3, 0],
+    [0, 0, 0, 0],
+  ];
+
+  it('reports solved with the executed block count', () => {
+    const program: MazeBlockNode[] = [
+      {type: 'moveForward'},
+      {type: 'turnRight'},
+      {type: 'moveForward'},
+    ];
+    expect(runMazeProgram(grid, 1, program)).toEqual({
+      kind: 'solved',
+      blocksExecuted: 3,
+    });
+  });
+
+  it('reports a wall hit with position, facing, and blocks executed so far', () => {
+    const program: MazeBlockNode[] = [
+      {type: 'moveForward'},
+      {type: 'moveForward'},
+    ];
+    expect(runMazeProgram(grid, 1, program)).toEqual({
+      kind: 'wall',
+      at: {row: 1, col: 2},
+      facing: 1,
+      blocksExecuted: 2,
+    });
+  });
+
+  it('reports stopped when the program ends short of the goal with no wall hit', () => {
+    const program: MazeBlockNode[] = [{type: 'turnRight'}];
+    expect(runMazeProgram(grid, 1, program)).toEqual({
+      kind: 'stopped',
+      at: {row: 1, col: 1},
+      facing: 2,
+      goal: {row: 2, col: 2},
+      blocksExecuted: 1,
+    });
+  });
+
+  it('reports gridInvalid for a malformed grid', () => {
+    const outcome = runMazeProgram(
+      [
+        [0, 2],
+        [0, 0],
+      ],
+      1,
+      [],
+    );
+    expect(outcome.kind).toBe('gridInvalid');
+    expect(outcome.kind === 'gridInvalid' && outcome.reason).toMatch(
+      /finish tile/,
+    );
+  });
+
+  it('reports goalUnreachable when no path connects start to finish', () => {
+    const walledOff = [
+      [0, 0, 0, 0],
+      [0, 2, 0, 0],
+      [0, 0, 3, 0],
+      [0, 0, 0, 0],
+    ];
+    expect(runMazeProgram(walledOff, 1, [])).toEqual({
+      kind: 'goalUnreachable',
+      start: {row: 1, col: 1},
+      goal: {row: 2, col: 2},
+    });
   });
 });

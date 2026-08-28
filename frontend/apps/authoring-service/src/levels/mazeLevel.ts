@@ -319,12 +319,21 @@ interface SimState {
   terminated: boolean;
   succeeded: boolean;
   wallHitAt?: {x: number; y: number; direction: number};
-  // Execution counts for the two Bee action blocks — a goal-based level
-  // (checkGoalConsistency's no-finish-tile branch) checks these against
-  // nectar_goal/honey_goal/min_collected. Zero for the finish-tile path,
-  // which never reads them.
+  // Execution counts for the Bee/Collector action blocks — a goal-based
+  // level (checkGoalConsistency's no-finish-tile branch) checks these
+  // against nectar_goal/honey_goal/min_collected. Zero for the finish-tile
+  // path, which never reads them.
   nectarCollected: number;
   honeyMade: number;
+  // `collect` (Collector skin) previously fell into the shared no-op branch
+  // uncounted, so a level whose bug is "the traversal is right but the
+  // collect blocks are missing" could never be proven to fail — the most
+  // common Course D debug shape. Counted the same way as nectar/honey.
+  collected: number;
+  // Bumped once per executed leaf block (not per `repeat` container, whose
+  // children are what actually run) — turns a pass/fail verdict into a
+  // narratable "stops at block N".
+  blocksExecuted: number;
 }
 
 // Mirrors api.ts's move(): fails (and freezes further movement, matching
@@ -367,12 +376,15 @@ function runProgram(
     if (state.terminated) return;
     switch (node.type) {
       case 'moveForward':
+        state.blocksExecuted++;
         simulateMoveForward(grid, finish, state);
         break;
       case 'turnLeft':
+        state.blocksExecuted++;
         simulateTurn(state, -1);
         break;
       case 'turnRight':
+        state.blocksExecuted++;
         simulateTurn(state, 1);
         break;
       case 'repeat':
@@ -384,16 +396,25 @@ function runProgram(
         // Verified against api.ts to never move/turn/terminate — a sound
         // no-op for the reach-the-finish win condition (finish-tile path);
         // counted for the goal-based path (simulateGoalBasedMazeProgram).
+        state.blocksExecuted++;
         state.nectarCollected++;
         break;
       case 'makeHoney':
+        state.blocksExecuted++;
         state.honeyMade++;
+        break;
+      case 'collect':
+        // Same no-op guarantee as getNectar/makeHoney; counted toward
+        // min_collected the same way (see the collected field's comment).
+        state.blocksExecuted++;
+        state.collected++;
         break;
       case 'fill':
       case 'dig':
-      case 'collect':
-        // Same no-op guarantee as above; no goal-based win condition reads
-        // these yet (Farmer/Collector are out of this gate's scope).
+        // Farmer skin has no goal-based win condition in this gate's scope
+        // (§module header) — position-preserving no-op, counted only as an
+        // executed block for narration.
+        state.blocksExecuted++;
         break;
     }
   }
@@ -407,32 +428,57 @@ const DIRECTION_NAME: Record<number, string> = {
 };
 
 /**
- * The core simulation: proves `program` actually solves `grid` from
- * `startDirection`, independent of any authoring-time budget (toolbox
- * coverage, block-count, ...). Shared by `verifyMazeLevelSolvable` (AI
- * authoring, which adds those budget checks on top) and
- * `checkImportedMazeLevel` (importedLevelCheck.ts, gating a real,
- * human-authored level, which has no such budget).
+ * The structured result of running a program against a finish-tile grid —
+ * the primitive underneath `simulateMazeProgram`'s prose. Every clause of
+ * the debugging gate (planned: the inverted "the start program must NOT
+ * solve it" check, and the misconception assertion) needs the outcome as
+ * data, not a formatted sentence: which cell it stopped at, which way it
+ * was facing, how many blocks actually ran before it stopped.
  */
-export function simulateMazeProgram(
+export type MazeRunOutcome =
+  | {kind: 'solved'; blocksExecuted: number}
+  | {
+      kind: 'wall';
+      at: {row: number; col: number};
+      facing: number;
+      blocksExecuted: number;
+    }
+  | {
+      kind: 'stopped';
+      at: {row: number; col: number};
+      facing: number;
+      goal: {row: number; col: number};
+      blocksExecuted: number;
+    }
+  | {kind: 'gridInvalid'; reason: string}
+  | {
+      kind: 'goalUnreachable';
+      start: {row: number; col: number};
+      goal: {row: number; col: number};
+    };
+
+/**
+ * Runs `program` against `grid` from `startDirection` and reports what
+ * happened, independent of any authoring-time budget (toolbox coverage,
+ * block-count, ...) or prose formatting — see `simulateMazeProgram` for the
+ * sentence form every existing caller still gets.
+ */
+export function runMazeProgram(
   grid: number[][],
   startDirection: number,
   program: MazeBlockNode[],
-): GateResult {
+): MazeRunOutcome {
   const gridInfo = inspectGrid(grid);
   if (typeof gridInfo === 'string') {
-    return {ok: false, reason: gridInfo};
+    return {kind: 'gridInvalid', reason: gridInfo};
   }
   const {start, finish} = gridInfo;
 
   if (!isReachable(grid, start, finish)) {
     return {
-      ok: false,
-      reason:
-        `the goal is not reachable from the start on this grid — no ` +
-        `sequence of moves can solve it. Check for walls (0) blocking every ` +
-        `path from the start (2, at row ${start.y} col ${start.x}) to the ` +
-        `finish (3, at row ${finish.y} col ${finish.x}).`,
+      kind: 'goalUnreachable',
+      start: {row: start.y, col: start.x},
+      goal: {row: finish.y, col: finish.x},
     };
   }
 
@@ -444,6 +490,8 @@ export function simulateMazeProgram(
     succeeded: false,
     nectarCollected: 0,
     honeyMade: 0,
+    collected: 0,
+    blocksExecuted: 0,
   };
   runProgram(grid, finish, program, state);
   if (!state.terminated) {
@@ -453,35 +501,81 @@ export function simulateMazeProgram(
     state.succeeded = state.x === finish.x && state.y === finish.y;
   }
 
-  if (!state.succeeded) {
-    if (state.wallHitAt) {
+  if (state.succeeded) {
+    return {kind: 'solved', blocksExecuted: state.blocksExecuted};
+  }
+  if (state.wallHitAt) {
+    return {
+      kind: 'wall',
+      at: {row: state.wallHitAt.y, col: state.wallHitAt.x},
+      facing: state.wallHitAt.direction,
+      blocksExecuted: state.blocksExecuted,
+    };
+  }
+  return {
+    kind: 'stopped',
+    at: {row: state.y, col: state.x},
+    facing: state.d,
+    goal: {row: finish.y, col: finish.x},
+    blocksExecuted: state.blocksExecuted,
+  };
+}
+
+/**
+ * The core simulation: proves `program` actually solves `grid` from
+ * `startDirection`, independent of any authoring-time budget (toolbox
+ * coverage, block-count, ...). Shared by `verifyMazeLevelSolvable` (AI
+ * authoring, which adds those budget checks on top) and
+ * `checkImportedMazeLevel` (importedLevelCheck.ts, gating a real,
+ * human-authored level, which has no such budget). A formatter over
+ * `runMazeProgram` — unchanged public behavior/return type.
+ */
+export function simulateMazeProgram(
+  grid: number[][],
+  startDirection: number,
+  program: MazeBlockNode[],
+): GateResult {
+  const outcome = runMazeProgram(grid, startDirection, program);
+  switch (outcome.kind) {
+    case 'solved':
+      return {ok: true};
+    case 'gridInvalid':
+      return {ok: false, reason: outcome.reason};
+    case 'goalUnreachable':
+      return {
+        ok: false,
+        reason:
+          `the goal is not reachable from the start on this grid — no ` +
+          `sequence of moves can solve it. Check for walls (0) blocking every ` +
+          `path from the start (2, at row ${outcome.start.row} col ${outcome.start.col}) to the ` +
+          `finish (3, at row ${outcome.goal.row} col ${outcome.goal.col}).`,
+      };
+    case 'wall':
       return {
         ok: false,
         reason:
           `running the solution program: the character hits a wall at row ` +
-          `${state.wallHitAt.y} col ${state.wallHitAt.x} while facing ` +
-          `${DIRECTION_NAME[state.wallHitAt.direction]} and stops there — it ` +
-          `never reaches the goal at row ${finish.y} col ${finish.x}.`,
+          `${outcome.at.row} col ${outcome.at.col} while facing ` +
+          `${DIRECTION_NAME[outcome.facing]} and stops there — it never ` +
+          `reaches the goal.`,
       };
-    }
-    return {
-      ok: false,
-      reason:
-        `running the solution program lands the character at row ${state.y} ` +
-        `col ${state.x} facing ${DIRECTION_NAME[state.d]}; the goal is at ` +
-        `row ${finish.y} col ${finish.x}. It never reaches the goal.`,
-    };
+    case 'stopped':
+      return {
+        ok: false,
+        reason:
+          `running the solution program lands the character at row ${outcome.at.row} ` +
+          `col ${outcome.at.col} facing ${DIRECTION_NAME[outcome.facing]}; the goal is at ` +
+          `row ${outcome.goal.row} col ${outcome.goal.col}. It never reaches the goal.`,
+      };
   }
-
-  return {ok: true};
 }
 
 /**
  * Goal declared for a goal-based (no finish tile) Karel level —
  * nectar_goal/honey_goal/min_collected, dashboard/app/models/levels/
  * karel.rb — checked against `simulateGoalBasedMazeProgram`'s counted
- * getNectar/makeHoney executions, not the map's static item totals (that's
- * `checkGoalConsistency`'s separate, complementary check in
+ * getNectar/makeHoney/collect executions, not the map's static item totals
+ * (that's `checkGoalConsistency`'s separate, complementary check in
  * importedLevelCheck.ts).
  */
 export interface MazeGoalRequirements {
@@ -495,12 +589,12 @@ export interface MazeGoalRequirements {
  * Bee level's ordinary shape; see mazeLevel.ts's module header for why the
  * finish-tile-only `simulateMazeProgram` above can't gate these) and checks
  * the resulting nectar/honey/total counts against `goals`. Reuses
- * `runProgram`'s move/turn/repeat/getNectar/makeHoney walk verbatim — the
- * only difference from `simulateMazeProgram` is the win check itself: no
- * finish tile to reach, so `finish` is a coordinate the grid can never
- * contain (position never doubles as a win condition here), and success is
- * judged from `state.nectarCollected`/`honeyMade` once the walk completes
- * cleanly (no wall hit).
+ * `runProgram`'s move/turn/repeat/getNectar/makeHoney/collect walk
+ * verbatim — the only difference from `simulateMazeProgram` is the win
+ * check itself: no finish tile to reach, so `finish` is a coordinate the
+ * grid can never contain (position never doubles as a win condition here),
+ * and success is judged from `state.nectarCollected`/`honeyMade`/`collected`
+ * once the walk completes cleanly (no wall hit).
  */
 export function simulateGoalBasedMazeProgram(
   grid: number[][],
@@ -551,6 +645,8 @@ export function simulateGoalBasedMazeProgram(
     succeeded: false,
     nectarCollected: 0,
     honeyMade: 0,
+    collected: 0,
+    blocksExecuted: 0,
   };
   runProgram(grid, UNREACHABLE, program, state);
 
@@ -577,7 +673,7 @@ export function simulateGoalBasedMazeProgram(
         `${state.honeyMade} honey.`,
     );
   }
-  const totalCollected = state.nectarCollected + state.honeyMade;
+  const totalCollected = state.nectarCollected + state.honeyMade + state.collected;
   if (goals.minCollected !== undefined && totalCollected < goals.minCollected) {
     reasons.push(
       `min_collected is ${goals.minCollected} but the solution only ` +
