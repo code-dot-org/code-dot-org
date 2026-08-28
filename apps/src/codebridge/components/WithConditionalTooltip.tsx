@@ -1,3 +1,4 @@
+import {ComponentPlacementDirection} from '@code-dot-org/component-library/common/types';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {TooltipProps} from '@code-dot-org/component-library/tooltip';
 import {Tooltip} from '@mui/material';
@@ -10,17 +11,20 @@ interface WithConditionalTooltipProps {
   showTooltip: boolean;
 }
 
-const DIRECTION_TO_PLACEMENT = {
+// Legacy direction → MUI placement ('none' and unset → top).
+const DIRECTION_TO_PLACEMENT: Record<
+  ComponentPlacementDirection,
+  'top' | 'right' | 'bottom' | 'left'
+> = {
   onTop: 'top',
   onRight: 'right',
   onBottom: 'bottom',
   onLeft: 'left',
-} as const;
+  none: 'top',
+};
 
-// Component that wraps children with a tooltip is showTooltip is true,
-// otherwise it just renders the children wrapped in a div.
-// The wrapper div is what carries the hover handlers, so the tooltip still
-// appears for disabled children, which get no pointer events of their own.
+// Wraps children in a tooltip when showTooltip is true. The wrapping div
+// carries the hover handlers, so the tooltip still shows for disabled children.
 const WithConditionalTooltip: React.FunctionComponent<
   WithConditionalTooltipProps
 > = ({children, tooltipOverlayClassName, tooltipProps, showTooltip}) => {
@@ -28,7 +32,8 @@ const WithConditionalTooltip: React.FunctionComponent<
     return <div className={tooltipOverlayClassName}>{children}</div>;
   }
 
-  const {text, direction, hideTail, iconLeft, iconRight} = tooltipProps;
+  const {text, direction, hideTail, iconLeft, iconRight, tooltipId} =
+    tooltipProps;
   const dataTheme = tooltipProps['data-theme'];
 
   const title =
@@ -44,6 +49,7 @@ const WithConditionalTooltip: React.FunctionComponent<
 
   return (
     <Tooltip
+      id={tooltipId}
       title={title}
       placement={direction ? DIRECTION_TO_PLACEMENT[direction] : 'top'}
       arrow={hideTail ? false : undefined}

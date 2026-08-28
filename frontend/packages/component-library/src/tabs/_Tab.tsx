@@ -9,20 +9,23 @@ import {
 } from 'react';
 
 import CloseButton from '@/closeButton';
-import {ComponentSizeXSToL} from '@/common/types';
+import {ComponentPlacementDirection, ComponentSizeXSToL} from '@/common/types';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 import {TooltipProps} from '@/tooltip';
 
 import moduleStyles from './tabs.module.scss';
 
-// Legacy `direction` names → MUI `placement`. The legacy tooltip defaulted to
-// onTop, so keep that as the fallback.
-const PLACEMENT = {
+// Legacy direction → MUI placement ('none' and unset → top).
+const PLACEMENT: Record<
+  ComponentPlacementDirection,
+  'top' | 'right' | 'bottom' | 'left'
+> = {
   onTop: 'top',
   onRight: 'right',
   onBottom: 'bottom',
   onLeft: 'left',
-} as const;
+  none: 'top',
+};
 
 export interface TabModel {
   /** Unique value of the tab */
@@ -178,6 +181,7 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
     <li role="presentation">
       {preferredTooltip ? (
         <Tooltip
+          id={preferredTooltip.tooltipId}
           title={preferredTooltip.text}
           placement={
             preferredTooltip.direction

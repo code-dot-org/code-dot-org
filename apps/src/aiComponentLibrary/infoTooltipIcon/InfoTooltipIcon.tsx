@@ -11,14 +11,17 @@ interface InfoTooltipIconProps {
   direction?: ComponentPlacementDirection;
 }
 
-// Legacy `direction` names → MUI `placement`. The legacy tooltip defaulted to
-// onTop, so keep that as the fallback here.
-const PLACEMENT = {
+// Legacy direction → MUI placement ('none' and unset → top).
+const PLACEMENT: Record<
+  ComponentPlacementDirection,
+  'top' | 'right' | 'bottom' | 'left'
+> = {
   onTop: 'top',
   onRight: 'right',
   onBottom: 'bottom',
   onLeft: 'left',
-} as const;
+  none: 'top',
+};
 
 const InfoTooltipIcon: React.FunctionComponent<InfoTooltipIconProps> = ({
   id,

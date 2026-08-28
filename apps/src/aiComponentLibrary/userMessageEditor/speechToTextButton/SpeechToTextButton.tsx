@@ -136,6 +136,7 @@ const SpeechToTextButton: React.FC<SpeechToTextButtonProps> = ({
             <MuiIconButton
               variant="outlined"
               size="extraSmall"
+              aria-label={isRecording ? 'Stop recording' : 'Start recording'}
               onClick={isRecording ? () => onEndRecording() : onStartRecording}
               disabled={!canRecord || isTranscribing || disabled}
               color={isRecording ? 'white' : 'secondary'}

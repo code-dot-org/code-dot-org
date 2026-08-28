@@ -10,14 +10,17 @@ import {
 } from '@mui/material';
 import React, {memo, useCallback, useState} from 'react';
 
-// Legacy `direction` names → MUI `placement`. The legacy tooltip defaulted to
-// onTop, so keep that as the fallback.
-const PLACEMENT = {
+// Legacy direction → MUI placement ('none' and unset → top).
+const PLACEMENT: Record<
+  ComponentPlacementDirection,
+  'top' | 'right' | 'bottom' | 'left'
+> = {
   onTop: 'top',
   onRight: 'right',
   onBottom: 'bottom',
   onLeft: 'left',
-} as const;
+  none: 'top',
+};
 
 interface IconButtonWithTooltipProps {
   id: string;
@@ -56,8 +59,7 @@ const IconButtonWithTooltip: React.FunctionComponent<IconButtonWithTooltipProps>
       href,
       target = '_blank',
     }) => {
-      // Controlled so a click can force the bubble shut (was the WithTooltip
-      // ref's hideTooltip()).
+      // Controlled so a click can force the tooltip shut.
       const [open, setOpen] = useState(false);
 
       const handleClick = useCallback(

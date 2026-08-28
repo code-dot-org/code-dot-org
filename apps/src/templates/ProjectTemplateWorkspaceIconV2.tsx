@@ -13,7 +13,7 @@ interface ProjectTemplateWorkspaceIconV2Props {
   className?: string;
 }
 
-// Map the DSCO ComponentPlacementDirection enum to the MUI Tooltip placement API.
+// Legacy direction → MUI placement ('none' and unset → bottom).
 const PLACEMENT_MAP: Record<
   ComponentPlacementDirection,
   TooltipProps['placement']
@@ -22,16 +22,14 @@ const PLACEMENT_MAP: Record<
   onRight: 'right',
   onBottom: 'bottom',
   onLeft: 'left',
+  none: 'bottom',
 };
 
 /**
- * Modernized version of ProjectTemplateWorkspaceIcon, which uses DSCO for the Tooltip
- * component and a FontAwesome icon for the connected level icon.
- * This component should be used in favor of ProjectTemplateWorkspaceIcon in the workspace
- * header.
- * @param tooltipPlace - The placement of the tooltip relative to the icon. Uses
- * the DSCO ComponentPlacementDirection enum.
- * @returns
+ * Modernized ProjectTemplateWorkspaceIcon: MUI Tooltip + a FontAwesome
+ * connected-level icon. Prefer this over ProjectTemplateWorkspaceIcon in the
+ * workspace header.
+ * @param tooltipPlace - Tooltip placement, as a DSCO ComponentPlacementDirection.
  */
 const ProjectTemplateWorkspaceIconV2: React.FunctionComponent<
   ProjectTemplateWorkspaceIconV2Props

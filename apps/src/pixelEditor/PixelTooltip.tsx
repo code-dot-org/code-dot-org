@@ -4,8 +4,8 @@ import React, {useEffect, useState} from 'react';
 
 import moduleStyles from './pixel-editor.module.scss';
 
-// Tooltip preconfigured for the editor's toolbar: small bubble to the right,
-// quick hide, lifted above the modal overlay (see .pixelTooltip). fromLeftColumn
+// Tooltip preconfigured for the editor's toolbar: opens to the right, hides
+// quickly, and lifts above the modal overlay (see .pixelTooltip). fromLeftColumn
 // compensates for the trigger sitting one toolbar column further from the
 // canvas, so every bubble lands on the same x.
 const PixelTooltip: React.FunctionComponent<{
