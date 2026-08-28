@@ -25,6 +25,7 @@ import {
   buildMazeLevelWireProperties,
   MazeLevelDefinitionPatchSchema,
   MazeLevelDefinitionSchema,
+  verifyDebugMazeLevel,
   verifyMazeLevelSolvable,
 } from '../levels/mazeLevel.js';
 import type {AuthoringState} from '../state/AuthoringState.js';
@@ -665,7 +666,7 @@ function buildCurriculumServer(
       ),
       tool(
         'create_level',
-        "Create a Maze puzzle level: a grid plus a typed block solution program (never hand-written Blockly XML). Rejected with a specific, correctable reason unless the solution actually solves the grid, uses only toolbox block types valid for the level's skin, and stays within the block-count budget. skin defaults to 'birds' (plain Maze); 'farmer'/'bee'/'collector' additionally unlock fill+dig / getNectar+makeHoney / collect in the toolbox — flavor blocks that play an animation but never affect whether the goal is reached. On success, inserts it into the lesson and returns levelId.",
+        "Create a Maze puzzle level: a grid plus a typed block solution program (never hand-written Blockly XML). Rejected with a specific, correctable reason unless the solution actually solves the grid, uses only toolbox block types valid for the level's skin, and stays within the block-count budget. skin defaults to 'birds' (plain Maze); 'farmer'/'bee'/'collector' additionally unlock fill+dig / getNectar+makeHoney / collect in the toolbox — flavor blocks that play an animation but never affect whether the goal is reached. Add definition.startProgram to make it a debugging level — see the system prompt's Debugging levels section for the five-clause gate and house style. On success, inserts it into the lesson and returns levelId.",
         {
           lessonId: z.string(),
           position: z.number().int(),
@@ -688,6 +689,9 @@ function buildCurriculumServer(
               levelId: result.levelId,
               experienceId: result.experienceId,
               levelNumericId: result.levelNumericId,
+              ...(result.debugNarrative
+                ? {debugNarrative: result.debugNarrative}
+                : {}),
             },
             state.getLevelProperties(String(result.levelNumericId)),
           );
@@ -695,7 +699,7 @@ function buildCurriculumServer(
       ),
       tool(
         'update_level',
-        'Patch a level created by create_level (grid, blocks, instructions, title, ...). Re-runs the solvability gate against the merged definition before applying — a change that breaks solvability (e.g. walling off the goal) is rejected with the specific reason and nothing changes.',
+        'Patch a level created by create_level (grid, blocks, instructions, title, startProgram, ...). Re-runs the solvability gate (or, when the merged definition has a startProgram, the full five-clause debugging gate) against the merged definition before applying — a change that breaks it is rejected with the specific reason and nothing changes.',
         {
           levelId: z.string(),
           title: z.string().optional(),
@@ -714,9 +718,21 @@ function buildCurriculumServer(
             );
           }
           const next = {...existing, ...patch};
-          const gate = verifyMazeLevelSolvable(next);
-          if (!gate.ok) {
-            return fail(`level not updated — ${gate.reason}`);
+          let debugNarrative: string | undefined;
+          if (next.startProgram) {
+            const gate = verifyDebugMazeLevel({
+              ...next,
+              startProgram: next.startProgram,
+            });
+            if (!gate.ok) {
+              return fail(`level not updated — ${gate.reason}`);
+            }
+            debugNarrative = gate.narrative;
+          } else {
+            const gate = verifyMazeLevelSolvable(next);
+            if (!gate.ok) {
+              return fail(`level not updated — ${gate.reason}`);
+            }
           }
           const found = findLevel(state, `draft:${levelId}`);
           if (!found) {
@@ -735,7 +751,14 @@ function buildCurriculumServer(
           } else {
             state.notifyLevelPropertiesChanged();
           }
-          return okWithCheck({levelId, levelNumericId}, wireProperties);
+          return okWithCheck(
+            {
+              levelId,
+              levelNumericId,
+              ...(debugNarrative ? {debugNarrative} : {}),
+            },
+            wireProperties,
+          );
         },
       ),
       tool(

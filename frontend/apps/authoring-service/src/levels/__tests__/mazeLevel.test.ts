@@ -1,5 +1,6 @@
 import {describe, expect, it} from 'vitest';
 
+import {checkImportedMazeLevel} from '../importedLevelCheck.js';
 import {
   buildBlankMazeLevelDefinition,
   buildMazeLevelWireProperties,
@@ -10,6 +11,7 @@ import {
   MazeLevelDefinitionSchema,
   runMazeProgram,
   simulateGoalBasedMazeProgram,
+  verifyDebugMazeLevel,
   verifyMazeLevelSolvable,
   type MazeBlockNode,
   type MazeLevelDefinition,
@@ -623,6 +625,244 @@ describe('runMazeProgram (structured outcome)', () => {
       kind: 'goalUnreachable',
       start: {row: 1, col: 1},
       goal: {row: 2, col: 2},
+    });
+  });
+});
+
+describe('verifyDebugMazeLevel', () => {
+  // The dropdown-swap archetype (§4.3 archetype 4) on baseDefinition's own
+  // 3-block solution: turnRight -> turnLeft sends Pegman into the wall
+  // instead of the goal. Same block count as the solution (near-miss
+  // clause 4 with countDelta 0, multisetDelta 2 — turnLeft +1/turnRight -1).
+  const swappedTurn: MazeBlockNode[] = [
+    {type: 'moveForward'},
+    {type: 'turnLeft'},
+    {type: 'moveForward'},
+  ];
+
+  it('accepts a near-miss buggy start and returns both verified outcomes', () => {
+    const definition = baseDefinition({startProgram: swappedTurn});
+    const result = verifyDebugMazeLevel(
+      definition as MazeLevelDefinition & {startProgram: MazeBlockNode[]},
+    );
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    expect(result.startOutcome).toEqual({
+      kind: 'wall',
+      at: {row: 1, col: 2},
+      facing: 0,
+      blocksExecuted: 3,
+    });
+    expect(result.solutionOutcome).toEqual({kind: 'solved', blocksExecuted: 3});
+    expect(result.narrative).toMatch(/buggy start verified:.*hits the wall/);
+    expect(result.narrative).toMatch(/solution verified: solves in 3 block/);
+  });
+
+  it('clause 1: rejects when the solution itself does not solve the grid', () => {
+    const definition = baseDefinition({
+      startProgram: swappedTurn,
+      solution: [{type: 'turnLeft'}], // never reaches the goal
+    });
+    const result = verifyDebugMazeLevel(
+      definition as MazeLevelDefinition & {startProgram: MazeBlockNode[]},
+    );
+    expect(result).toMatchObject({
+      ok: false,
+      reason: expect.stringMatching(/never reaches the goal/),
+    });
+  });
+
+  it('clause 2: rejects a start program that already solves the grid', () => {
+    const definition = baseDefinition({
+      startProgram: [{type: 'moveForward'}, {type: 'turnRight'}, {type: 'moveForward'}],
+    });
+    const result = verifyDebugMazeLevel(
+      definition as MazeLevelDefinition & {startProgram: MazeBlockNode[]},
+    );
+    expect(result).toMatchObject({
+      ok: false,
+      reason: expect.stringMatching(/already reaches the goal/),
+    });
+  });
+
+  it('clause 3: rejects a start program using a block type off the toolbox', () => {
+    const definition = baseDefinition({
+      toolbox: ['moveForward', 'turnRight', 'repeat'], // no turnLeft
+      startProgram: swappedTurn,
+    });
+    const result = verifyDebugMazeLevel(
+      definition as MazeLevelDefinition & {startProgram: MazeBlockNode[]},
+    );
+    expect(result).toMatchObject({
+      ok: false,
+      reason: expect.stringMatching(/turnLeft.*not in toolbox/s),
+    });
+  });
+
+  it('clause 4: rejects a start program that is not a near-miss of the solution', () => {
+    const definition = baseDefinition({
+      startProgram: [{type: 'turnLeft'}], // unrelated to the 3-block solution
+    });
+    const result = verifyDebugMazeLevel(
+      definition as MazeLevelDefinition & {startProgram: MazeBlockNode[]},
+    );
+    expect(result).toMatchObject({
+      ok: false,
+      reason: expect.stringMatching(/isn't a near-miss/),
+    });
+  });
+
+  describe('clause 5: expectedFailure', () => {
+    it('accepts when the asserted failure matches the actual outcome', () => {
+      const definition = baseDefinition({
+        startProgram: swappedTurn,
+        expectedFailure: {kind: 'wall', at: {row: 1, col: 2}, facing: 0},
+      });
+      const result = verifyDebugMazeLevel(
+        definition as MazeLevelDefinition & {startProgram: MazeBlockNode[]},
+      );
+      expect(result.ok).toBe(true);
+    });
+
+    it('rejects when the asserted kind does not match', () => {
+      const definition = baseDefinition({
+        startProgram: swappedTurn,
+        expectedFailure: {kind: 'stopped'},
+      });
+      const result = verifyDebugMazeLevel(
+        definition as MazeLevelDefinition & {startProgram: MazeBlockNode[]},
+      );
+      expect(result).toMatchObject({
+        ok: false,
+        reason: expect.stringMatching(/expectedFailure\.kind is 'stopped'/),
+      });
+    });
+
+    it('rejects when the asserted cell does not match', () => {
+      const definition = baseDefinition({
+        startProgram: swappedTurn,
+        expectedFailure: {kind: 'wall', at: {row: 0, col: 0}},
+      });
+      const result = verifyDebugMazeLevel(
+        definition as MazeLevelDefinition & {startProgram: MazeBlockNode[]},
+      );
+      expect(result).toMatchObject({
+        ok: false,
+        reason: expect.stringMatching(/expectedFailure\.at is row 0 col 0/),
+      });
+    });
+  });
+});
+
+describe('locked blocks (XML round-trip)', () => {
+  it('emits deletable="false" for a locked block and leaves others editable', () => {
+    const xml = buildStartBlocksXml([
+      {type: 'moveForward', locked: true},
+      {type: 'moveForward'},
+    ]);
+    expect(xml).toContain('<block type="maze_moveForward" deletable="false" id="callMe">');
+    // The second, unlocked block carries no attributes at all.
+    expect(xml).toContain('<block type="maze_moveForward"></block>');
+  });
+
+  it('tags only the first locked block with id="callMe", in document order', () => {
+    const xml = buildStartBlocksXml([
+      {type: 'moveForward'},
+      {type: 'turnRight', locked: true},
+      {type: 'moveForward', locked: true},
+    ]);
+    expect(xml.match(/id="callMe"/g)).toHaveLength(1);
+    expect(xml).toContain(
+      '<block type="maze_turn" deletable="false" id="callMe"><title name="DIR">turnRight</title>',
+    );
+  });
+
+  it('locks a repeat wrapper the same way as a leaf block', () => {
+    const xml = buildStartBlocksXml([
+      {type: 'repeat', times: 2, locked: true, children: [{type: 'moveForward'}]},
+    ]);
+    expect(xml).toContain('<block type="controls_repeat_dropdown" deletable="false" id="callMe">');
+  });
+
+  it('is unchanged for a program with no locked blocks (no stray attributes)', () => {
+    const xml = buildStartBlocksXml([{type: 'moveForward'}]);
+    expect(xml).toBe(buildSolutionBlocksXml([{type: 'moveForward'}]));
+  });
+});
+
+describe('buildMazeLevelWireProperties — debug-level fields', () => {
+  const definition = baseDefinition({
+    startProgram: [
+      {type: 'moveForward', locked: true},
+      {type: 'turnLeft'},
+      {type: 'moveForward'},
+    ],
+  });
+
+  it('defaults step_mode to "1" whenever startProgram is set', () => {
+    const props = buildMazeLevelWireProperties(1, 'draft:x', definition);
+    expect(props.step_mode).toBe('1');
+  });
+
+  it('honors an explicit stepMode over the startProgram default', () => {
+    const props = buildMazeLevelWireProperties(1, 'draft:x', {
+      ...definition,
+      stepMode: '2',
+    });
+    expect(props.step_mode).toBe('2');
+  });
+
+  it('omits step_mode entirely for an ordinary (non-debug) level', () => {
+    const props = buildMazeLevelWireProperties(1, 'draft:x', baseDefinition());
+    expect(props).not.toHaveProperty('step_mode');
+  });
+
+  it('passes level_concept_difficulty through verbatim', () => {
+    const props = buildMazeLevelWireProperties(1, 'draft:x', {
+      ...definition,
+      conceptDifficulty: {sequencing: 2, debugging: 1, repeat_loops: 1},
+    });
+    expect(props.level_concept_difficulty).toEqual({
+      sequencing: 2,
+      debugging: 1,
+      repeat_loops: 1,
+    });
+  });
+
+  it('emits callout_json anchored at #callMe only when lockedBlocksCallout is set', () => {
+    const withoutCallout = buildMazeLevelWireProperties(1, 'draft:x', definition);
+    expect(withoutCallout).not.toHaveProperty('callout_json');
+
+    const withCallout = buildMazeLevelWireProperties(1, 'draft:x', {
+      ...definition,
+      lockedBlocksCallout: 'These blocks are locked and cannot be deleted!',
+    });
+    const callout = JSON.parse(withCallout.callout_json as string);
+    expect(callout).toEqual([
+      expect.objectContaining({
+        callout_text: 'These blocks are locked and cannot be deleted!',
+        element_id: '#callMe',
+      }),
+    ]);
+  });
+
+  it('omits callout_json when lockedBlocksCallout is set but nothing is locked', () => {
+    const props = buildMazeLevelWireProperties(1, 'draft:x', {
+      ...baseDefinition(),
+      startProgram: [{type: 'moveForward'}], // no locked block
+      lockedBlocksCallout: 'unused',
+    });
+    expect(props).not.toHaveProperty('callout_json');
+  });
+
+  // §8 risk 10: close the loop by running the generated level's OWN wire
+  // properties back through the real-level checker, rather than trusting
+  // the typed definition and the wire builder to agree by construction.
+  it('round-trips through checkImportedMazeLevel as a passing simulated level', () => {
+    const props = buildMazeLevelWireProperties(1, 'draft:x', definition);
+    expect(checkImportedMazeLevel({properties: props})).toMatchObject({
+      ok: true,
+      mode: 'simulated',
     });
   });
 });

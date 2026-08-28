@@ -5,6 +5,7 @@ import type {SessionStore} from '../store/SessionStore.js';
 
 import {
   buildMazeLevelWireProperties,
+  verifyDebugMazeLevel,
   verifyMazeLevelSolvable,
   type MazeLevelDefinition,
 } from './mazeLevel.js';
@@ -18,7 +19,16 @@ export interface CreateMazeLevelParams {
 }
 
 export type CreateMazeLevelResult =
-  | {ok: true; levelId: string; experienceId: string; levelNumericId: number}
+  | {
+      ok: true;
+      levelId: string;
+      experienceId: string;
+      levelNumericId: number;
+      /** Only present for a debugging level (definition.startProgram set) —
+       * the gate's one-line proof of both the buggy start and the solution
+       * (WOW plan §2.5). */
+      debugNarrative?: string;
+    }
   | {ok: false; reason: string};
 
 /**
@@ -40,9 +50,23 @@ export function createMazeLevel(
   store: SessionStore,
   params: CreateMazeLevelParams,
 ): CreateMazeLevelResult {
-  const gate = verifyMazeLevelSolvable(params.definition);
-  if (!gate.ok) {
-    return {ok: false, reason: gate.reason};
+  // A startProgram makes this a debugging level (WOW plan §2) — gated by
+  // the five-clause verifyDebugMazeLevel, which itself runs the ordinary
+  // solvability gate as its first clause. No startProgram is the ordinary
+  // puzzle path, unchanged.
+  const {startProgram} = params.definition;
+  let debugNarrative: string | undefined;
+  if (startProgram) {
+    const gate = verifyDebugMazeLevel({...params.definition, startProgram});
+    if (!gate.ok) {
+      return {ok: false, reason: gate.reason};
+    }
+    debugNarrative = gate.narrative;
+  } else {
+    const gate = verifyMazeLevelSolvable(params.definition);
+    if (!gate.ok) {
+      return {ok: false, reason: gate.reason};
+    }
   }
 
   const levelId = `draft-level-${randomUUID().slice(0, 8)}`;
@@ -78,5 +102,11 @@ export function createMazeLevel(
     params.actor,
   );
 
-  return {ok: true, levelId, experienceId, levelNumericId: numericId};
+  return {
+    ok: true,
+    levelId,
+    experienceId,
+    levelNumericId: numericId,
+    ...(debugNarrative ? {debugNarrative} : {}),
+  };
 }

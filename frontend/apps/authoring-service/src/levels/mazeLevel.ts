@@ -112,13 +112,22 @@ const SKIN_ACTION_BLOCKS: Partial<Record<MazeBlockType, string>> = {
   collect: 'collector',
 };
 
-export interface MazeMoveNode {
+// `locked` (WOW plan §4.4): the mechanic that makes a debugging level teach
+// "find and fix the bug" rather than "clear the workspace and start over" —
+// 44% of real debug levels carry it on the correct scaffold blocks of
+// startProgram. Shared across every node shape rather than added only to
+// leaf blocks: a real level locks a `repeat` wrapper as often as a leaf
+// (see the module's `blockXml` for the `deletable="false"` it emits).
+interface MazeBlockNodeBase {
+  locked?: boolean;
+}
+export interface MazeMoveNode extends MazeBlockNodeBase {
   type: 'moveForward';
 }
-export interface MazeTurnNode {
+export interface MazeTurnNode extends MazeBlockNodeBase {
   type: 'turnLeft' | 'turnRight';
 }
-export interface MazeRepeatNode {
+export interface MazeRepeatNode extends MazeBlockNodeBase {
   type: 'repeat';
   times: number;
   children: MazeBlockNode[];
@@ -126,7 +135,7 @@ export interface MazeRepeatNode {
 /** A skin action block — fires an animation/state change that never moves,
  * turns, or terminates Pegman (see the module header); simulated as a
  * position-preserving no-op. */
-export interface MazeActionNode {
+export interface MazeActionNode extends MazeBlockNodeBase {
   type: 'fill' | 'dig' | 'getNectar' | 'makeHoney' | 'collect';
 }
 export type MazeBlockNode =
@@ -137,21 +146,35 @@ export type MazeBlockNode =
 
 const MazeBlockNodeSchema: z.ZodType<MazeBlockNode> = z.lazy(() =>
   z.discriminatedUnion('type', [
-    z.object({type: z.literal('moveForward')}),
-    z.object({type: z.literal('turnLeft')}),
-    z.object({type: z.literal('turnRight')}),
-    z.object({type: z.literal('fill')}),
-    z.object({type: z.literal('dig')}),
-    z.object({type: z.literal('getNectar')}),
-    z.object({type: z.literal('makeHoney')}),
-    z.object({type: z.literal('collect')}),
+    z.object({type: z.literal('moveForward'), locked: z.boolean().optional()}),
+    z.object({type: z.literal('turnLeft'), locked: z.boolean().optional()}),
+    z.object({type: z.literal('turnRight'), locked: z.boolean().optional()}),
+    z.object({type: z.literal('fill'), locked: z.boolean().optional()}),
+    z.object({type: z.literal('dig'), locked: z.boolean().optional()}),
+    z.object({type: z.literal('getNectar'), locked: z.boolean().optional()}),
+    z.object({type: z.literal('makeHoney'), locked: z.boolean().optional()}),
+    z.object({type: z.literal('collect'), locked: z.boolean().optional()}),
     z.object({
       type: z.literal('repeat'),
       times: z.number().int().min(1).max(MAX_REPEAT_TIMES),
       children: z.array(MazeBlockNodeSchema).min(1),
+      locked: z.boolean().optional(),
     }),
   ]),
 );
+
+/**
+ * The misconception assertion (WOW plan §2.4) — deliberately small.
+ * `blocksExecuted` is reportable (MazeRunOutcome) but never assertable here:
+ * an agent can't reliably predict a step index, and an over-specific
+ * assertion turns the gate into a rejection treadmill.
+ */
+const MazeExpectedFailureSchema = z.object({
+  kind: z.enum(['wall', 'stopped']),
+  at: z.object({row: z.number().int(), col: z.number().int()}).optional(),
+  facing: z.number().int().min(0).max(3).optional(),
+});
+export type MazeExpectedFailure = z.infer<typeof MazeExpectedFailureSchema>;
 
 export const MazeLevelDefinitionSchema = z.object({
   grid: z
@@ -165,6 +188,33 @@ export const MazeLevelDefinitionSchema = z.object({
   idealBlockCount: z.number().int().min(1).max(50),
   toolbox: z.array(z.enum(MAZE_BLOCK_TYPES)).min(1),
   solution: z.array(MazeBlockNodeSchema).min(1),
+  // The learner's starting program (WOW plan §1.5/§4) — same friendly JSON
+  // shape as `solution`, compiled to `start_blocks` XML by
+  // buildMazeLevelWireProperties. Absent (the common case) means the
+  // learner starts from an empty when_run, same as before this field
+  // existed. Present, it makes this a debugging level and is gated by
+  // verifyDebugMazeLevel's five clauses rather than nodded through.
+  startProgram: z.array(MazeBlockNodeSchema).optional(),
+  // The misconception the agent asserts the buggy startProgram teaches
+  // (§2.4) — optional; verifyDebugMazeLevel checks it only when given.
+  expectedFailure: MazeExpectedFailureSchema.optional(),
+  // Levelbuilder's `step_mode` (maze.rb: 0 Run Button Only / 1 Run and Step
+  // / 2 Step Button Only) — real debug levels are "1" almost universally
+  // (§4.2). Defaults to '1' by buildMazeLevelWireProperties whenever
+  // startProgram is set; an author-given value here overrides that default.
+  stepMode: z.enum(['0', '1', '2']).optional(),
+  // `level_concept_difficulty` — analytics only, no player effect (§4.2).
+  conceptDifficulty: z
+    .object({
+      sequencing: z.number().int().min(1).max(3).optional(),
+      debugging: z.number().int().min(1).max(3).optional(),
+      repeat_loops: z.number().int().min(1).max(3).optional(),
+    })
+    .optional(),
+  // Callout text anchored to the first locked start-program block (§4.4) —
+  // real convention is `id="callMe"` plus a `callout_json` entry pointing
+  // `#callMe` at this text. No-op when startProgram has no locked block.
+  lockedBlocksCallout: z.string().optional(),
   // Set by AuthoringState when overrideLevelDefinition (the visual level
   // editor) touches a draft level. update_level refuses to write a draft
   // level once this is set — see ClaudeAgentRunner.ts's update_level: a
@@ -310,6 +360,52 @@ function usedBlockTypes(program: MazeBlockNode[], out: Set<MazeBlockType>) {
     out.add(node.type);
     if (node.type === 'repeat') usedBlockTypes(node.children, out);
   }
+}
+
+/** Per-type block counts, recursing into `repeat` bodies — the near-miss
+ * proxy of verifyDebugMazeLevel's clause 4 needs "how many of each type",
+ * not just the total countBlocks gives. */
+function blockTypeCounts(program: MazeBlockNode[]): Map<MazeBlockType, number> {
+  const counts = new Map<MazeBlockType, number>();
+  for (const node of program) {
+    counts.set(node.type, (counts.get(node.type) ?? 0) + 1);
+    if (node.type === 'repeat') {
+      for (const [type, count] of blockTypeCounts(node.children)) {
+        counts.set(type, (counts.get(type) ?? 0) + count);
+      }
+    }
+  }
+  return counts;
+}
+
+/** Sum of |count difference| over every block type either program uses —
+ * zero for identical multisets, growing with each block that would need to
+ * be added/removed/retyped to turn one program into the other. */
+function blockTypeMultisetDelta(
+  a: Map<MazeBlockType, number>,
+  b: Map<MazeBlockType, number>,
+): number {
+  let delta = 0;
+  for (const type of new Set([...a.keys(), ...b.keys()])) {
+    delta += Math.abs((a.get(type) ?? 0) - (b.get(type) ?? 0));
+  }
+  return delta;
+}
+
+/** First `locked` node in document order (depth-first, into `repeat`
+ * bodies) — the block real debug levels give `id="callMe"` so
+ * `lockedBlocksCallout`'s callout_json can anchor to it. Reference
+ * equality, not a value match, so buildStartBlocksXml's serialization pass
+ * can tag the exact node instance without a separate counting pass. */
+function findFirstLockedNode(program: MazeBlockNode[]): MazeBlockNode | undefined {
+  for (const node of program) {
+    if (node.locked) return node;
+    if (node.type === 'repeat') {
+      const found = findFirstLockedNode(node.children);
+      if (found) return found;
+    }
+  }
+  return undefined;
 }
 
 interface SimState {
@@ -748,6 +844,180 @@ export function verifyMazeLevelSolvable(
   );
 }
 
+export type DebugGateResult =
+  | {
+      ok: true;
+      /** One-line, machine-derived summary of both outcomes — WOW plan
+       * §2.5's "failure narrative": the actual WOW moment. Compact by
+       * design (§8 risk 6) — never a full reasons list, never the grid. */
+      narrative: string;
+      startOutcome: MazeRunOutcome;
+      solutionOutcome: MazeRunOutcome;
+    }
+  | {ok: false; reason: string};
+
+/**
+ * The debugging-level gate (WOW plan §2.2): five clauses, each failing with
+ * its own correctable message. Only meaningful when `definition.startProgram`
+ * is set — a level with no starting program is an ordinary puzzle and
+ * verifyMazeLevelSolvable above is the whole gate for it.
+ *
+ * 1. The solution passes the existing solvability gate (verifyMazeLevelSolvable).
+ * 2. The start program does NOT solve the grid — the honesty clause: a
+ *    "debugging level" whose start already works has no bug to find.
+ * 3. Every start-program block type is offered by the toolbox — the learner
+ *    has to be able to rebuild whatever they delete.
+ * 4. The start program is a near-miss of the solution, not an unrelated
+ *    wrong program — §2.2's cheap proxy: block-count delta and block-type
+ *    multiset delta both within BLOCK_COUNT_TOLERANCE.
+ * 5. When the agent asserts an expectedFailure, the start program's actual
+ *    outcome matches it.
+ */
+export function verifyDebugMazeLevel(
+  definition: MazeLevelDefinition & {startProgram: MazeBlockNode[]},
+): DebugGateResult {
+  const solvable = verifyMazeLevelSolvable(definition);
+  if (!solvable.ok) {
+    return {ok: false, reason: solvable.reason};
+  }
+
+  const {startProgram, toolbox, grid, startDirection, solution} = definition;
+
+  const startTypes = new Set<MazeBlockType>();
+  usedBlockTypes(startProgram, startTypes);
+  const offToolbox = [...startTypes].filter(type => !toolbox.includes(type));
+  if (offToolbox.length > 0) {
+    return {
+      ok: false,
+      reason:
+        `start program uses block type(s) ${offToolbox.join(', ')} which ` +
+        `are not in toolbox [${toolbox.join(', ')}] — the learner couldn't ` +
+        `rebuild what they'd delete. Add them to the toolbox or change the bug.`,
+    };
+  }
+
+  const startCount = countBlocks(startProgram);
+  const solutionCount = countBlocks(solution);
+  const countDelta = Math.abs(startCount - solutionCount);
+  const multisetDelta = blockTypeMultisetDelta(
+    blockTypeCounts(startProgram),
+    blockTypeCounts(solution),
+  );
+  if (countDelta > BLOCK_COUNT_TOLERANCE || multisetDelta > BLOCK_COUNT_TOLERANCE) {
+    return {
+      ok: false,
+      reason:
+        `start program (${startCount} blocks) isn't a near-miss of the ` +
+        `solution (${solutionCount} blocks): block-count delta is ` +
+        `${countDelta}, block-type-multiset delta is ${multisetDelta} — both ` +
+        `must be ≤ ${BLOCK_COUNT_TOLERANCE}. A debugging level presents an ` +
+        `almost-right program (drop/add/swap/reorder a couple of blocks), not ` +
+        `an unrelated one.`,
+    };
+  }
+
+  const startOutcome = runMazeProgram(grid, startDirection, startProgram);
+  if (startOutcome.kind === 'solved') {
+    return {
+      ok: false,
+      reason:
+        'the starting program already reaches the goal — there is no bug ' +
+        'for the learner to find. Change the start program (or plant the ' +
+        'bug more strongly) so it actually fails.',
+    };
+  }
+
+  if (definition.expectedFailure) {
+    const mismatch = matchExpectedFailure(definition.expectedFailure, startOutcome);
+    if (mismatch) {
+      return {ok: false, reason: mismatch};
+    }
+  }
+
+  // Clause 1 already proved this solves — re-running it here (rather than
+  // trusting a bare {ok:true}) is what gives the narrative its solved-in-N
+  // block count.
+  const solutionOutcome = runMazeProgram(grid, startDirection, solution);
+  return {
+    ok: true,
+    narrative: buildDebugNarrative(startOutcome, solutionOutcome),
+    startOutcome,
+    solutionOutcome,
+  };
+}
+
+/** Clause 5: does the start program's actual outcome match the agent's
+ * asserted misconception? Only 'wall'/'stopped' can reach here — clause 2
+ * already rejected 'solved', and clause 1's simulateMazeProgram already
+ * proved the grid valid and the goal reachable, so 'gridInvalid'/
+ * 'goalUnreachable' can't occur either; handled anyway for an honest
+ * message if that invariant is ever violated by a future caller. */
+function matchExpectedFailure(
+  expected: MazeExpectedFailure,
+  outcome: MazeRunOutcome,
+): string | undefined {
+  if (outcome.kind !== expected.kind) {
+    return (
+      `expectedFailure.kind is '${expected.kind}' but the start program ` +
+      `actually ${describeOutcomeKind(outcome)}.`
+    );
+  }
+  if (outcome.kind !== 'wall' && outcome.kind !== 'stopped') {
+    return `expectedFailure given but the start program ${describeOutcomeKind(outcome)}, not a position/facing this can be checked against.`;
+  }
+  if (expected.at && (outcome.at.row !== expected.at.row || outcome.at.col !== expected.at.col)) {
+    return (
+      `expectedFailure.at is row ${expected.at.row} col ${expected.at.col} but ` +
+      `the start program actually stops at row ${outcome.at.row} col ${outcome.at.col}.`
+    );
+  }
+  if (expected.facing !== undefined && outcome.facing !== expected.facing) {
+    return (
+      `expectedFailure.facing is ${DIRECTION_NAME[expected.facing]} but the ` +
+      `start program actually ends facing ${DIRECTION_NAME[outcome.facing]}.`
+    );
+  }
+  return undefined;
+}
+
+function describeOutcomeKind(outcome: MazeRunOutcome): string {
+  switch (outcome.kind) {
+    case 'solved':
+      return 'reaches the goal';
+    case 'wall':
+      return `hits a wall at row ${outcome.at.row} col ${outcome.at.col}`;
+    case 'stopped':
+      return `runs out of program at row ${outcome.at.row} col ${outcome.at.col}, short of the goal`;
+    case 'gridInvalid':
+      return `runs against an invalid grid (${outcome.reason})`;
+    case 'goalUnreachable':
+      return 'runs against a grid where the goal is unreachable';
+  }
+}
+
+/** The failure narrative (WOW plan §2.5) — one compact line the agent is
+ * expected to relay honestly in the author's language, never a reformatting
+ * the agent has to invent from raw coordinates. */
+function buildDebugNarrative(
+  startOutcome: MazeRunOutcome,
+  solutionOutcome: MazeRunOutcome,
+): string {
+  const startPart =
+    startOutcome.kind === 'wall'
+      ? `hits the wall at row ${startOutcome.at.row} col ${startOutcome.at.col} ` +
+        `facing ${DIRECTION_NAME[startOutcome.facing]} after ${startOutcome.blocksExecuted} block(s)`
+      : startOutcome.kind === 'stopped'
+        ? `runs out of program at row ${startOutcome.at.row} col ${startOutcome.at.col} ` +
+          `facing ${DIRECTION_NAME[startOutcome.facing]}, short of the goal, after ` +
+          `${startOutcome.blocksExecuted} block(s)`
+        : describeOutcomeKind(startOutcome);
+  const solutionPart =
+    solutionOutcome.kind === 'solved'
+      ? `solves in ${solutionOutcome.blocksExecuted} block(s)`
+      : describeOutcomeKind(solutionOutcome);
+  return `buggy start verified: ${startPart}; solution verified: ${solutionPart}.`;
+}
+
 // The manual "New maze level" affordance's skin picker — deliberately NOT
 // the full Karel.skins() list. Harvester and Planter are excluded here for
 // the same reason the module header excludes them from the AI toolbox:
@@ -806,30 +1076,42 @@ export function buildBlankMazeLevelDefinition(params: {
 // root (deletable="false" movable="false"), `<next>` sibling chains, and
 // `controls_repeat_dropdown`'s body in `<statement name="DO">`.
 
-function blockXml(node: MazeBlockNode, next?: string): string {
+// `firstLockedNode` (reference equality, not a value match — a program can
+// repeat identical-looking nodes) is the one node in the whole tree that
+// gets `id="callMe"`, real curriculum's anchor for `callout_json`'s
+// `element_id: "#callMe"` (§4.4). Undefined whenever the definition has no
+// lockedBlocksCallout — see buildStartBlocksXml.
+function blockXml(
+  node: MazeBlockNode,
+  next: string | undefined,
+  firstLockedNode: MazeBlockNode | undefined,
+): string {
   const nextXml = next ? `<next>${next}</next>` : '';
+  const lockedAttr = node.locked ? ' deletable="false"' : '';
+  const idAttr = node === firstLockedNode ? ' id="callMe"' : '';
+  const attrs = `${lockedAttr}${idAttr}`;
   switch (node.type) {
     case 'moveForward':
-      return `<block type="maze_moveForward">${nextXml}</block>`;
+      return `<block type="maze_moveForward"${attrs}>${nextXml}</block>`;
     case 'turnLeft':
-      return `<block type="maze_turn"><title name="DIR">turnLeft</title>${nextXml}</block>`;
+      return `<block type="maze_turn"${attrs}><title name="DIR">turnLeft</title>${nextXml}</block>`;
     case 'turnRight':
-      return `<block type="maze_turn"><title name="DIR">turnRight</title>${nextXml}</block>`;
+      return `<block type="maze_turn"${attrs}><title name="DIR">turnRight</title>${nextXml}</block>`;
     case 'fill':
-      return `<block type="maze_fill">${nextXml}</block>`;
+      return `<block type="maze_fill"${attrs}>${nextXml}</block>`;
     case 'dig':
-      return `<block type="maze_dig">${nextXml}</block>`;
+      return `<block type="maze_dig"${attrs}>${nextXml}</block>`;
     case 'getNectar':
-      return `<block type="maze_nectar">${nextXml}</block>`;
+      return `<block type="maze_nectar"${attrs}>${nextXml}</block>`;
     case 'makeHoney':
-      return `<block type="maze_honey">${nextXml}</block>`;
+      return `<block type="maze_honey"${attrs}>${nextXml}</block>`;
     case 'collect':
-      return `<block type="collector_collect">${nextXml}</block>`;
+      return `<block type="collector_collect"${attrs}>${nextXml}</block>`;
     case 'repeat': {
-      const body = chainXml(node.children);
+      const body = chainXml(node.children, firstLockedNode);
       const statement = body ? `<statement name="DO">${body}</statement>` : '';
       return (
-        `<block type="controls_repeat_dropdown">` +
+        `<block type="controls_repeat_dropdown"${attrs}>` +
         `<title name="TIMES" config="1-20">${node.times}</title>` +
         `${statement}${nextXml}</block>`
       );
@@ -838,16 +1120,36 @@ function blockXml(node: MazeBlockNode, next?: string): string {
 }
 
 /** Chains a sibling list via nested `<next>`, innermost (last) block first. */
-function chainXml(program: MazeBlockNode[]): string {
+function chainXml(
+  program: MazeBlockNode[],
+  firstLockedNode?: MazeBlockNode,
+): string {
   let xml: string | undefined;
   for (let i = program.length - 1; i >= 0; i--) {
-    xml = blockXml(program[i], xml);
+    xml = blockXml(program[i], xml, firstLockedNode);
   }
   return xml ?? '';
 }
 
-export function buildStartBlocksXml(): string {
-  return '<xml><block type="when_run" deletable="false" movable="false"></block></xml>';
+/** Every real block program is wrapped in a fixed, undeletable `when_run`
+ * root — shared by start_blocks and solution_blocks alike. */
+function wrapWhenRunXml(
+  program: MazeBlockNode[],
+  firstLockedNode?: MazeBlockNode,
+): string {
+  const body = chainXml(program, firstLockedNode);
+  const next = body ? `<next>${body}</next>` : '';
+  return `<xml><block type="when_run" deletable="false" movable="false">${next}</block></xml>`;
+}
+
+/**
+ * The learner's starting program (WOW plan §1.5) — empty by default (the
+ * behavior every existing caller relied on before this field existed). A
+ * locked block (§4.4) gets its real-curriculum `id="callMe"` anchor so a
+ * `lockedBlocksCallout` can point `callout_json` at it.
+ */
+export function buildStartBlocksXml(program: MazeBlockNode[] = []): string {
+  return wrapWhenRunXml(program, findFirstLockedNode(program));
 }
 
 const TOOLBOX_BLOCK_XML: Record<MazeBlockType, string> = {
@@ -870,12 +1172,36 @@ export function buildToolboxBlocksXml(toolbox: MazeBlockType[]): string {
 }
 
 export function buildSolutionBlocksXml(program: MazeBlockNode[]): string {
-  const body = chainXml(program);
-  const next = body ? `<next>${body}</next>` : '';
-  return (
-    `<xml><block type="when_run" deletable="false" movable="false">` +
-    `${next}</block></xml>`
-  );
+  return wrapWhenRunXml(program);
+}
+
+/**
+ * `callout_json` anchored at the first locked start-program block (§4.4) —
+ * real shape reverse-engineered from
+ * dashboard/config/levels/custom/maze/courseC_maze_debugging5_2025.level.
+ * Undefined (nothing to emit) unless the definition both asks for a callout
+ * AND actually locked a block for it to point at.
+ */
+function buildCalloutJson(
+  startProgram: MazeBlockNode[] | undefined,
+  calloutText: string | undefined,
+): string | undefined {
+  if (!calloutText || !startProgram || !findFirstLockedNode(startProgram)) {
+    return undefined;
+  }
+  return JSON.stringify([
+    {
+      localization_key: 'debug_locked_blocks',
+      callout_text: calloutText,
+      element_id: '#callMe',
+      on: '',
+      qtip_config: {
+        codeStudio: {canReappear: true, dropletPaletteCategory: ''},
+        style: {classes: ''},
+        position: {my: 'left top', at: 'left center', adjust: {x: 0, y: 0}},
+      },
+    },
+  ]);
 }
 
 /**
@@ -890,6 +1216,15 @@ export function buildMazeLevelWireProperties(
   levelKey: string,
   definition: MazeLevelDefinition,
 ): Record<string, unknown> {
+  // The Step button is the debugging affordance (§4.2: 94% of real debug
+  // levels set it) — default it on whenever there's a starting program to
+  // step through, unless the agent gave its own stepMode.
+  const stepMode =
+    definition.stepMode ?? (definition.startProgram ? '1' : undefined);
+  const calloutJson = buildCalloutJson(
+    definition.startProgram,
+    definition.lockedBlocksCallout,
+  );
   const properties = {
     maze: JSON.stringify(definition.grid),
     skin: definition.skin,
@@ -897,11 +1232,16 @@ export function buildMazeLevelWireProperties(
     long_instructions: definition.longInstructions,
     start_direction: String(definition.startDirection),
     ideal: String(definition.idealBlockCount),
+    ...(stepMode !== undefined ? {step_mode: stepMode} : {}),
+    ...(definition.conceptDifficulty
+      ? {level_concept_difficulty: definition.conceptDifficulty}
+      : {}),
+    ...(calloutJson !== undefined ? {callout_json: calloutJson} : {}),
   };
   const parsed: ParsedLevel = {
     levelType: 'Maze',
     properties,
-    startBlocksXml: buildStartBlocksXml(),
+    startBlocksXml: buildStartBlocksXml(definition.startProgram ?? []),
     toolboxBlocksXml: buildToolboxBlocksXml(definition.toolbox),
     solutionBlocksXml: buildSolutionBlocksXml(definition.solution),
   };

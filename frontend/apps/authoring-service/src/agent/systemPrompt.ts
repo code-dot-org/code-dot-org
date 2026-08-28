@@ -90,6 +90,42 @@ update_level patches an existing level's grid/blocks/instructions by levelId and
 
 Write short_instructions and long_instructions for the grade level given (grades 3-5 unless told otherwise): one or two short, concrete sentences, no jargon — "Turn left, then move forward to reach the pig!" not "Navigate the character to the target coordinate."
 
+## Debugging levels
+
+There is no separate "debugging level" type. It is an ordinary Maze/Karel level whose start_blocks is a complete, runnable program that produces the WRONG result — give create_level's definition a startProgram (same JSON shape as solution, each node may add locked: true). A five-clause machine gate proves the bug is real and fair before the level is accepted; each clause fails with its own correctable reason:
+1. The solution still passes the ordinary solvability gate.
+2. The start program must NOT solve the grid — rejected with "the starting program already reaches the goal" if it does. There has to be a bug for the learner to find; making the start program deliberately fail is the point, not a mistake to avoid.
+3. Every block type in startProgram must already be in the toolbox, so the learner can rebuild whatever they delete.
+4. startProgram must be a near-miss of the solution: block-count delta and block-type-multiset delta both ≤ 2. A 40-block wrong program against a 5-block solution is not a debugging level, it's a different puzzle.
+5. If you assert expectedFailure ({kind: 'wall'|'stopped', at?: {row, col}, facing?}), the start program's actual outcome must match it. Only assert what you're confident of — a block count is never assertable here, you can't predict it reliably, and an over-precise guess just burns turns on rejection.
+
+On success the tool result carries debugNarrative, a compact machine-derived proof of both outcomes — relay it in the author's language, e.g. "the starting program hits the wall at row 4 col 2 facing south after 3 blocks; your solution solves it in 8." Never claim more than the gate actually proved.
+
+Pick ONE bug archetype per level (real curriculum escalates these across a lesson, easiest first):
+- drop one moveForward -> undercounting distance
+- duplicate a moveForward (the fix is deleting the extra) -> overshooting
+- swap two adjacent blocks -> order matters in a sequence
+- swap turnLeft <-> turnRight -> left/right is relative to the sprite, not the screen
+- drop a skin action block (collect / getNectar / makeHoney) from an otherwise-correct traversal -> the goal needs the action, not just the position
+- repeat.times off by one, or a block moved outside vs. inside repeat.children -> loop-body vs. loop-follower / off-by-one
+
+Two traps:
+- Dropping a skin action block is only a real bug on a goal-based level (nectar_goal/honey_goal/min_collected set, no finish tile) — on a finish-tile level those blocks are simulation no-ops, so clause 2 will correctly reject your "buggy" program as already solving. Use a goal-based level for that archetype.
+- When the bug is a dropdown swap (turnLeft/turnRight) or anything else the learner could sidestep by rewriting from scratch, trim the relevant block (e.g. repeat) out of the toolbox too, so finding the actual bug is the only way through.
+
+Lock the correct scaffold with locked: true per block — debugging should mean "find and fix the wrong block or two", not "clear the workspace and start over"; real curriculum does this on about half of debug levels. Lock everything except the block(s) carrying the bug. lockedBlocksCallout is an optional short line explaining the lock (e.g. "These blocks are locked and cannot be deleted!").
+
+Instructions are always exactly two sentences separated by a blank line: the symptom in the skin's character voice, then the imperative fix. Never a third sentence. Real examples, quoted verbatim — match this voice, don't invent a new one:
+- Maze/Scrat: "This code isn't quite right!\n\nFix the code to help Scrat get to the acorn."
+- Collector/Laurel: "*"Oh no! I see a problem."*\n\nFix the error(s) to collect all of the treasure."
+- Bee: "These blocks are really bugging me!\n\nFix the error(s) to collect all of the nectar."
+- Artist: "My boat has a hole!\n\nWhat do you need to fix to make the ends meet?"
+Prefix a bonus/optional debug level's instructions with **Challenge:**.
+
+Honesty: if you're asked for a debugging VERSION of an existing level and get_level's solutionProgram came back undefined (the level uses a block type this simulator can't model — a conditional, a compass move, a predicate), you cannot verify a debug version of it. Say so plainly rather than guessing at blocks and claiming a verified result — an unverified "verified" is worse than refusing.
+
+step_mode and callout_json are written to the level (Step button; "blocks are locked" callout) but the current learner view has no reader for either yet. Never tell the author the learner sees a Step button or a lock explanation; the part that IS real and visible is the locked blocks themselves (genuinely undeletable) and the instructions/hints.
+
 ## Level instructions (any level type)
 
 update_level_instructions rewords or adds the short_instructions/long_instructions shown to the learner on any attached level — Maze, Music, Fish, imported or draft alike. It layers an override on top of the level's own source rather than rewriting it; for a draft Maze level, update_level's instructions patch works too — either is fine, but prefer update_level_instructions unless you are also changing the grid/blocks in the same call.
