@@ -2,9 +2,14 @@ import * as esbuild from 'esbuild';
 import fs from 'node:fs';
 import path from 'node:path';
 
-import {buildWidgetDocument} from '@code-dot-org/widget-runtime/chrome';
+import {
+  buildWidgetDocument,
+  injectWidgetChrome,
+} from '@code-dot-org/widget-runtime/chrome';
 
 import type {SessionStore} from '../store/SessionStore.js';
+
+import {checkWidgetDocument} from './contractGates.js';
 
 export interface BuildWidgetSuccess {
   ok: true;
@@ -133,7 +138,7 @@ export async function rebuildWidgetSource(
   if (!hasBuiltSource(dir)) {
     return undefined;
   }
-  const result = await buildWidget(dir, title);
+  const result = gateBuild(await buildWidget(dir, title));
   const errorsFile = path.join(dir, BUILD_ERRORS_FILE);
   if (result.ok) {
     store.writeWidgetSource(widgetId, result.html);
@@ -142,4 +147,31 @@ export async function rebuildWidgetSource(
     fs.writeFileSync(errorsFile, `${result.errorText}\n`);
   }
   return result;
+}
+
+/**
+ * A syntactically clean build can still violate the contract gates (a
+ * network call, no McpApp.updateModelContext report, positive tabindex, an
+ * onclick on a non-interactive tag, ...) — checked against the SERVED
+ * document (post injectWidgetChrome), same shape GET /api/widgets/:id and
+ * /publish check. Folded into BuildWidgetResult's existing failure case
+ * rather than a third outcome: a gate violation is treated exactly like an
+ * esbuild error by every caller downstream (widget.html untouched,
+ * build-errors.txt written, the PostToolUse hook feeds the reason back to
+ * the agent) — the only difference is what produced errorText.
+ */
+function gateBuild(result: BuildWidgetResult): BuildWidgetResult {
+  if (!result.ok) {
+    return result;
+  }
+  const violations = checkWidgetDocument(injectWidgetChrome(result.html));
+  if (violations.length === 0) {
+    return result;
+  }
+  return {
+    ok: false,
+    errorText: `Widget contract gate violations:\n${violations
+      .map(v => `- ${v}`)
+      .join('\n')}`,
+  };
 }

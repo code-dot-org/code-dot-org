@@ -38,6 +38,7 @@ import {
   type ChatScope,
 } from './store/SessionStore.js';
 import {rebuildWidgetSource} from './widgets/buildWidget.js';
+import {checkWidgetDocument} from './widgets/contractGates.js';
 import {applyWritebackPlan, computePlanHash} from './writeback/apply.js';
 import {listAllLevelFileNames} from './writeback/levelNames.js';
 import {buildWritebackPlan, type WritebackPlan, type WritebackPlanEdit} from './writeback/plan.js';
@@ -256,6 +257,27 @@ app.get('/api/widgets/:id', c => {
     descriptor,
     html: html ? injectWidgetChrome(html) : html,
   });
+});
+
+// The current contract-gate violation list for one widget's served document
+// (network references, McpApp usage, size cap, positive tabindex, onclick on
+// a non-interactive tag). A built widget's own rebuild path already refuses
+// to write widget.html when this list is non-empty (see rebuildWidgetSource),
+// so this route mainly matters for a legacy hand-written widget.html, which
+// is never gated at write time, and for a pre-flight check before a future
+// "Propose widget" affordance.
+app.get('/api/widgets/:id/gates', c => {
+  const id = c.req.param('id');
+  let html: string | undefined;
+  try {
+    html = state.readWidgetSource(id);
+  } catch {
+    html = undefined;
+  }
+  if (html === undefined) {
+    return c.json({error: `unknown widget ${id}`}, 404);
+  }
+  return c.json({violations: checkWidgetDocument(injectWidgetChrome(html))});
 });
 
 app.get('/api/events', c =>

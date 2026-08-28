@@ -10,6 +10,7 @@ import type {
   WidgetDescriptor,
 } from '../authoring/model.js';
 import type {CurriculumSnapshot} from '../store/SessionStore.js';
+import {checkWidgetDocument} from '../widgets/contractGates.js';
 
 export interface PublishedWidget {
   id: string;
@@ -19,6 +20,15 @@ export interface PublishedWidget {
     hasHtml: boolean;
     networkPolicy: 'none' | 'unknown';
     cspPresent: boolean;
+    /**
+     * The full contractGates.checkWidgetDocument list against the served
+     * document — network references, McpApp usage, size cap, positive
+     * tabindex, onclick-on-non-interactive. Empty means clean. The three
+     * fields above predate this and stay populated for whatever already
+     * reads them; this is the gate that actually decides whether the
+     * document is fit to publish.
+     */
+    violations: string[];
   };
 }
 
@@ -284,6 +294,10 @@ function publishWidget(
   const source =
     rawSource === undefined ? undefined : injectWidgetChrome(rawSource);
   const cspPresent = Boolean(source?.includes(OUR_DEFAULT_SRC_NONE));
+  const violations =
+    source === undefined
+      ? ['no widget source available']
+      : checkWidgetDocument(source);
   return {
     id: descriptor.id,
     descriptor,
@@ -292,6 +306,7 @@ function publishWidget(
       hasHtml: Boolean(source && source.trim().length > 0),
       networkPolicy: cspPresent ? 'none' : 'unknown',
       cspPresent,
+      violations,
     },
   };
 }

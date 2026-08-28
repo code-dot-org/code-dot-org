@@ -186,7 +186,8 @@ const changes: CurriculumChange[] = [
 ];
 
 const SOURCE =
-  '<meta http-equiv="Content-Security-Policy" content="default-src \'none\'"><p>hi</p>';
+  '<meta http-equiv="Content-Security-Policy" content="default-src \'none\'"><button id="go">Go</button>' +
+  "<script>McpApp.connect(); McpApp.updateModelContext({structuredContent: {event: 'completed'}});</script>";
 
 function build() {
   return buildChangeSet({
@@ -256,9 +257,34 @@ describe('buildChangeSet', () => {
         id: 'sorter',
         descriptor: widget,
         source: injectWidgetChrome(SOURCE),
-        validation: {hasHtml: true, networkPolicy: 'none', cspPresent: true},
+        validation: {
+          hasHtml: true,
+          networkPolicy: 'none',
+          cspPresent: true,
+          violations: [],
+        },
       },
     ]);
+  });
+
+  it('carries the full contract-gate violation list for a widget that fails it', () => {
+    // A widget that never calls McpApp — the shim is present (injected
+    // unconditionally) but unused, which is exactly what checkWidgetDocument
+    // treats as a violation rather than "no shim at all".
+    const silentSource = '<button id="go">Go</button>';
+    const result = buildChangeSet({
+      snapshot,
+      changes,
+      readWidgetSource: id => (id === widget.id ? silentSource : undefined),
+      generatedAt: new Date('2026-08-25T12:00:00.000Z'),
+    });
+    const [published] = result.widgets;
+    expect(published.validation.violations).toContain(
+      'no McpApp.<method>() call found (shim present but unused)',
+    );
+    expect(published.validation.violations).toContain(
+      'no McpApp.updateModelContext() call found',
+    );
   });
 
   it('flags external video and unsupported level types per lesson', () => {
