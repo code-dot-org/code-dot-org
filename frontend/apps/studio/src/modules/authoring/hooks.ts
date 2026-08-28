@@ -6,6 +6,7 @@ import {getLastSeenVersion, subscribeToAuthoringEvents} from './events';
 
 const STATE_KEY = ['authoring', 'state'];
 const CHAT_KEY = ['authoring', 'chat'];
+const WRITEBACK_KEY = ['authoring', 'writeback', 'plan'];
 const widgetKey = (widgetId: string) => ['authoring', 'widget', widgetId];
 
 // A generation turn is many small ops in a row; coalesce the resulting burst
@@ -32,6 +33,9 @@ export function useAuthoringState() {
         queryClient.invalidateQueries({
           queryKey: ['authoring', 'levelProperties'],
         });
+        // Same reasoning: the write-back plan is a pure function of the
+        // change log, so any curriculum edit can change what it would write.
+        queryClient.invalidateQueries({queryKey: WRITEBACK_KEY});
       }, STATE_INVALIDATE_DEBOUNCE_MS);
     };
 
@@ -72,6 +76,20 @@ export function useWidget(widgetId: string) {
 
 export function useChatLog() {
   return useQuery({queryKey: CHAT_KEY, queryFn: authoringApi.fetchChatLog});
+}
+
+/**
+ * The current write-back plan (dry run) — drives the top bar's "Write to
+ * dashboard/config" button, both its disabled/enabled state (an empty plan
+ * has nothing to write) and the dialog's diff/skip listing. Refetches
+ * whenever the change log does (see the 'state' event handling above), so
+ * the button's disabled state never lags a curriculum edit.
+ */
+export function useWritebackPlan() {
+  return useQuery({
+    queryKey: WRITEBACK_KEY,
+    queryFn: authoringApi.fetchWritebackPlan,
+  });
 }
 
 /**

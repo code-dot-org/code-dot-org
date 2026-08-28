@@ -40,6 +40,7 @@ import type {
 import {AuthoringState} from '../../state/AuthoringState.js';
 import {EMPTY_SNAPSHOT, SessionStore} from '../../store/SessionStore.js';
 import {applyWritebackPlan} from '../apply.js';
+import {buildWritebackPlan} from '../plan.js';
 
 // Same bridge-type cast every other writeback test needs — @code-dot-org/
 // authoring's real types are structurally close to, but not identical to,
@@ -233,6 +234,43 @@ describe.skipIf(!repoRoot)(
       const reimported = reimport(fixture);
       expect(reimported.nectar_goal).toBe('9');
       expect(reimported.nectar_goal).toBe(expected.nectar_goal);
+    });
+
+    it('post-apply: re-opening the write-back dialog after a successful write shows an empty plan, not a stale-import refusal', () => {
+      // This is the exact question Pass 4 of the write-back plan asks to be
+      // checked live and fixed if wrong: after a write lands, the file now
+      // matches the override the change log still describes, so a second
+      // plan computation must see "nothing left to write" — not treat its
+      // own prior output as unexplained drift. (It did, once — see plan.ts's
+      // findStaleField and this file's git history.)
+      fixture.state.applyCurriculumChange(
+        {
+          op: 'overrideLevelInstructions',
+          experienceId: `lb:${SAMPLE_LEVEL_KEY}`,
+          patch: {shortInstructions: 'Applied once already.'},
+        },
+        'author',
+      );
+      const first = planAndApply(fixture);
+      expect(first.ok).toBe(true);
+      if (!first.ok) throw new Error('unreachable');
+      expect(first.result.applied).toHaveLength(1);
+
+      // No new changes since — the plan.ts input is rebuilt fresh here to
+      // mirror the client fetching GET /api/writeback/plan again, exactly
+      // as the dialog re-fetch does after a successful apply.
+      const secondPlan = buildWritebackPlan({
+        courses: fixture.state.getSnapshot().courses,
+        changes: fixture.state.getChanges(),
+        resolveLevelFilePath: levelKey =>
+          levelKey === SAMPLE_LEVEL_KEY ? fixture.levelPath : undefined,
+        readFile: filePath => fs.readFileSync(filePath, 'utf8'),
+        parseLevelXml: parseLevelXmlBridged,
+        patchLevelFile: patchLevelFileBridged,
+        repoRoot: fixture.fixtureRoot,
+      });
+      expect(secondPlan.edits).toEqual([]);
+      expect(secondPlan.skipped).toEqual([]);
     });
 
     it('both: an instructions override and a definition override on the same level land in one write', () => {

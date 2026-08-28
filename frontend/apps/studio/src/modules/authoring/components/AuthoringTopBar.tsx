@@ -7,7 +7,15 @@ import {useDocumentKeydown} from '@code-dot-org/component-library/common/hooks';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tags from '@code-dot-org/component-library/tags';
 
-import {authoringApi, type LastPublishInfo, type PublishResult} from '../api';
+import {
+  authoringApi,
+  type LastPublishInfo,
+  type PublishResult,
+  type WritebackApplyResult,
+  type WritebackEdit,
+  type WritebackPlan,
+} from '../api';
+import {useWritebackPlan} from '../hooks';
 import {
   countNewObjects,
   derivePublishStatus,
@@ -148,6 +156,7 @@ export default function AuthoringTopBar({
         </Typography>
       )}
       <PublishButton changes={changes} status={status} />
+      <WritebackButton />
     </div>
   );
 }
@@ -309,6 +318,247 @@ function PublishButton({
         </div>
       </Popover>
     </>
+  );
+}
+
+type WritebackPhase = 'review' | 'busy' | 'success' | 'error';
+
+/**
+ * "Write to dashboard/config": takes the session's overrides on lb: levels
+ * out of memory and onto disk as real .level file edits, for the author to
+ * review with `git diff` and commit themselves — this button never commits
+ * or pushes. Same confirm|busy|success|error machine as PublishButton, with
+ * one addition: the plan (which files, which diffs, what got skipped and
+ * why) is already loaded before the dialog opens, via useWritebackPlan —
+ * that's also what drives this button's own disabled state.
+ */
+export function WritebackButton() {
+  const queryClient = useQueryClient();
+  const {data: plan} = useWritebackPlan();
+  const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
+  const [phase, setPhase] = useState<WritebackPhase>('review');
+  const [result, setResult] = useState<WritebackApplyResult | undefined>();
+  const [error, setError] = useState<string | undefined>();
+  const open = Boolean(anchorEl);
+  const editCount = plan?.edits.length ?? 0;
+  const disabled = editCount === 0;
+
+  const close = () => {
+    setAnchorEl(null);
+    setPhase('review');
+    setResult(undefined);
+    setError(undefined);
+  };
+
+  const runApply = async () => {
+    if (!plan) {
+      return;
+    }
+    setPhase('busy');
+    try {
+      const outcome = await authoringApi.applyWriteback(plan.planHash);
+      if (!outcome.ok) {
+        // The plan changed underneath the dialog (more edits landed while it
+        // was open) — replace the cached plan with the fresh one the server
+        // just computed so "Review again" shows what will actually be
+        // written, never the diff the author already confirmed.
+        queryClient.setQueryData(['authoring', 'writeback', 'plan'], outcome.plan);
+        setError(
+          'The write-back plan changed since you opened this dialog — review the refreshed diff and confirm again.',
+        );
+        setPhase('error');
+        return;
+      }
+      setResult(outcome.result);
+      setPhase('success');
+      // The files on disk now match the session's overrides, so a re-fetch
+      // here (rather than waiting on the next curriculum-change event) is
+      // what makes a re-opened dialog show "nothing left to write" instead
+      // of the diff that was just applied.
+      await queryClient.invalidateQueries({
+        queryKey: ['authoring', 'writeback', 'plan'],
+      });
+    } catch (e) {
+      setError(e instanceof Error ? e.message : 'That write failed to apply.');
+      setPhase('error');
+    }
+  };
+
+  return (
+    <>
+      <Tooltip title={plan && disabled ? 'No file-backed changes to write' : ''}>
+        <span>
+          <Button
+            variant="outlined"
+            size="small"
+            disabled={disabled}
+            aria-haspopup="dialog"
+            aria-expanded={open}
+            onClick={e => setAnchorEl(e.currentTarget)}
+          >
+            <FontAwesomeV6Icon iconName="file-export" iconStyle="solid" />
+            {' '}Write to dashboard/config
+          </Button>
+        </span>
+      </Tooltip>
+      <Popover
+        anchorEl={anchorEl}
+        open={open}
+        onClose={close}
+        anchorOrigin={{vertical: 'bottom', horizontal: 'right'}}
+      >
+        <div className={styles.writebackDialog}>
+          {phase === 'review' && plan && (
+            <>
+              <Typography variant="h6" component="h2">
+                {writeFileCountLabel(plan.edits.length)} to dashboard/config?
+              </Typography>
+              <ul className={styles.writebackEditList}>
+                {plan.edits.map(edit => (
+                  <WritebackEditRow key={edit.path} edit={edit} />
+                ))}
+              </ul>
+              <WritebackSkippedSection skipped={plan.skipped} />
+              <Typography variant="body4" className={styles.writebackNote}>
+                Nothing is committed — review the result with git diff yourself.
+              </Typography>
+              <div className={styles.courseRemoveConfirmActions}>
+                <Button variant="outlined" size="small" onClick={close}>
+                  Cancel
+                </Button>
+                <Button
+                  variant="contained"
+                  size="small"
+                  disabled={plan.edits.length === 0}
+                  onClick={() => void runApply()}
+                >
+                  {writeFileCountLabel(plan.edits.length)}
+                </Button>
+              </div>
+            </>
+          )}
+          {phase === 'busy' && <Typography variant="body2">Writing…</Typography>}
+          {phase === 'success' && result && (
+            <>
+              <Typography variant="body2">
+                {writeFileCountLabel(result.applied.length, 'Wrote')}:
+              </Typography>
+              <ul className={styles.writebackSkipList}>
+                {result.applied.map(applied => (
+                  <li key={applied.path} className={styles.writebackSkipRow}>
+                    <Typography
+                      variant="body4"
+                      className={styles.writebackEditPath}
+                    >
+                      {applied.path}
+                    </Typography>
+                  </li>
+                ))}
+              </ul>
+              <WritebackSkippedSection skipped={result.skipped} />
+              <Typography variant="body4" className={styles.writebackNote}>
+                Nothing was committed — review with git diff and commit it
+                yourself when you're ready.
+              </Typography>
+              <div className={styles.courseRemoveConfirmActions}>
+                <Button variant="outlined" size="small" onClick={close}>
+                  Close
+                </Button>
+              </div>
+            </>
+          )}
+          {phase === 'error' && (
+            <>
+              <Typography
+                variant="body4"
+                role="status"
+                className={styles.inlineError}
+              >
+                {error}
+              </Typography>
+              <div className={styles.courseRemoveConfirmActions}>
+                <Button variant="outlined" size="small" onClick={close}>
+                  Close
+                </Button>
+                <Button
+                  variant="contained"
+                  size="small"
+                  onClick={() => setPhase('review')}
+                >
+                  Review again
+                </Button>
+              </div>
+            </>
+          )}
+        </div>
+      </Popover>
+    </>
+  );
+}
+
+function writeFileCountLabel(count: number, verb: 'Write' | 'Wrote' = 'Write'): string {
+  return `${verb} ${count} file${count === 1 ? '' : 's'}`;
+}
+
+function WritebackEditRow({edit}: {edit: WritebackEdit}) {
+  return (
+    <li className={styles.writebackEditRow}>
+      <Typography variant="body4" className={styles.writebackEditPath}>
+        {edit.path}
+      </Typography>
+      <pre className={styles.writebackDiff}>
+        {edit.unifiedDiff.split('\n').map((line, i) => (
+          // Line-indexed key is safe: this list is a static render of one
+          // immutable diff string, never reordered or edited in place.
+          <div key={i} style={{color: diffLineColor(line)}}>
+            {line.length === 0 ? ' ' : line}
+          </div>
+        ))}
+      </pre>
+    </li>
+  );
+}
+
+function diffLineColor(line: string): string | undefined {
+  if (line.startsWith('+') && !line.startsWith('+++')) {
+    return 'var(--text-success-primary, #12752a)';
+  }
+  if (line.startsWith('-') && !line.startsWith('---')) {
+    return 'var(--text-error-primary, #d3281c)';
+  }
+  if (line.startsWith('@@')) {
+    return 'var(--text-neutral-secondary, #6f747c)';
+  }
+  return undefined;
+}
+
+function WritebackSkippedSection({
+  skipped,
+}: {
+  skipped: WritebackPlan['skipped'];
+}) {
+  if (skipped.length === 0) {
+    return null;
+  }
+  return (
+    <div>
+      <Typography variant="body4" component="h3">
+        Not written ({skipped.length})
+      </Typography>
+      <ul className={styles.writebackSkipList}>
+        {skipped.map((skip, i) => (
+          // seq-free entries; experienceId+field+reason isn't guaranteed
+          // unique across two distinct skips on the same field for the same
+          // reason, but the list is a static render of one plan snapshot.
+          <li key={i} className={styles.writebackSkipRow}>
+            <Typography variant="body4">
+              {skip.field ? `${skip.field}: ` : ''}
+              {skip.reason}
+            </Typography>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 

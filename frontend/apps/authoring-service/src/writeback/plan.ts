@@ -342,12 +342,19 @@ function normalizeForComparison(value: string | null | undefined): string | null
 }
 
 /**
- * The first touched field whose current on-disk value no longer matches
- * what the session captured as `previous` the first time it was overridden
- * — i.e. dashboard/config moved since this session read it, and blindly
- * patching on top would silently overwrite that unrelated change. Returns
- * undefined when every touched field's current value still matches its
- * baseline.
+ * The first touched field whose current on-disk value matches neither what
+ * the session captured as `previous` the first time it was overridden NOR
+ * what this same plan is about to write. Either match is fine: the first is
+ * "nobody's touched this since import", the second is "a previous
+ * write-back already landed this exact value" — re-running the plan right
+ * after a successful apply must see the second case and fall through to
+ * plan.ts's own after===before check (an empty edit, not a refusal), or
+ * every write-back would permanently wedge itself as stale against its own
+ * output. Only a THIRD value — neither the baseline nor this plan's target —
+ * means dashboard/config moved for a reason this session doesn't know
+ * about, which is the actual case this guard exists to catch. Returns
+ * undefined when every touched field's current value is explained one way
+ * or the other.
  */
 function findStaleField(
   parseLevelXml: ParseLevelXml,
@@ -358,7 +365,10 @@ function findStaleField(
   for (const [key, baseline] of Object.entries(acc.baselineProperties)) {
     const current = parsed.properties[key];
     const currentStr = typeof current === 'string' ? current : null;
-    if (normalizeForComparison(baseline) !== normalizeForComparison(currentStr)) {
+    if (
+      normalizeForComparison(baseline) !== normalizeForComparison(currentStr) &&
+      normalizeForComparison(acc.properties[key]) !== normalizeForComparison(currentStr)
+    ) {
       return `properties.${key}`;
     }
   }
@@ -368,7 +378,10 @@ function findStaleField(
   ][]) {
     const current = parsed[tag];
     const currentStr = typeof current === 'string' ? current : null;
-    if (normalizeForComparison(baseline) !== normalizeForComparison(currentStr)) {
+    if (
+      normalizeForComparison(baseline) !== normalizeForComparison(currentStr) &&
+      normalizeForComparison(acc.blocks[tag]) !== normalizeForComparison(currentStr)
+    ) {
       return `blocks.${tag}`;
     }
   }

@@ -318,6 +318,71 @@
   gap: 8px;
 }
 
+/* Write-back dialog ("Write to dashboard/config", AuthoringTopBar.tsx) —
+   wider than .publishConfirm/.changeHistory since a unified diff needs real
+   width to stay readable; everything else (section spacing, action row)
+   matches those siblings. */
+
+.writebackDialog {
+  padding: 16px;
+  width: 560px;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.writebackEditList,
+.writebackSkipList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+.writebackEditRow {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border: 1px solid var(--borders-neutral-light, #d5d8dc);
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.writebackEditPath {
+  font-family: monospace;
+  overflow-wrap: anywhere;
+}
+
+.writebackDiff {
+  margin: 0;
+  font-family: monospace;
+  font-size: 12px;
+  line-height: 1.4;
+  white-space: pre;
+  overflow-x: auto;
+  max-height: 240px;
+  overflow-y: auto;
+  background: var(--background-neutral-secondary, #f3f4f5);
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.writebackSkipRow {
+  border-left: 3px solid var(--borders-neutral-primary, #6f747c);
+  padding: 4px 8px;
+  color: var(--text-neutral-secondary, #6f747c);
+}
+
+.writebackNote {
+  color: var(--text-neutral-secondary, #6f747c);
+  font-style: italic;
+}
+
 .progressDots {
   display: flex;
   align-items: center;

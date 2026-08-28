@@ -436,11 +436,14 @@ app.post('/api/writeback/apply', async c => {
 
   const outcome = applyWritebackPlan(input, parsed.data.planHash);
   if (!outcome.ok) {
+    // `error` stays the generic client contract (post()'s message on any
+    // non-2xx); `code` lets the write-back dialog specifically distinguish
+    // "your plan is stale, here's the fresh one" from an ordinary failure.
     return c.json(
       {
-        error: 'plan-changed',
-        message:
+        error:
           'the write-back plan changed since it was last computed — review the refreshed plan before applying it',
+        code: 'plan-changed',
         ...publicPlan(outcome.plan),
       },
       409,

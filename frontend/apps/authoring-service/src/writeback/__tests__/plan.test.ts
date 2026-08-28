@@ -281,6 +281,55 @@ describe('buildWritebackPlan', () => {
     expect(plan.skipped[0].reason).toMatch(/stale-import/);
   });
 
+  it('does not flag stale-import when the file already carries this exact session\'s own prior write-back', () => {
+    // The write-back UI seam re-fetches the plan after a successful apply
+    // (to show "nothing left to write" rather than leaving the last diff on
+    // screen) — that re-fetch reads the SAME session's change log against a
+    // file this session itself just wrote. The file's current value is the
+    // patch's own target, not the pre-override baseline, and that must read
+    // as "already applied", never as external drift.
+    const changes = [
+      instructionsChange(
+        'lb:courseD_maze_ramp1_2024',
+        {shortInstructions: 'New text'},
+        {shortInstructions: 'Get the nectar.'},
+      ),
+    ];
+    const alreadyWritten = patchLevelFile(KAREL_LEVEL, {
+      properties: {short_instructions: 'New text'},
+    });
+    const plan = buildWritebackPlan(
+      baseInput({
+        changes,
+        readFile: () => alreadyWritten,
+      }),
+    );
+    expect(plan.edits).toHaveLength(0);
+    expect(plan.skipped).toHaveLength(0);
+  });
+
+  it('still flags stale-import when a field lands on a THIRD value — neither the baseline nor this plan\'s own target', () => {
+    const changes = [
+      instructionsChange(
+        'lb:courseD_maze_ramp1_2024',
+        {shortInstructions: 'New text'},
+        {shortInstructions: 'Get the nectar.'},
+      ),
+    ];
+    const driftedToSomethingElse = patchLevelFile(KAREL_LEVEL, {
+      properties: {short_instructions: 'Someone else\'s edit, not ours'},
+    });
+    const plan = buildWritebackPlan(
+      baseInput({
+        changes,
+        readFile: () => driftedToSomethingElse,
+      }),
+    );
+    expect(plan.edits).toHaveLength(0);
+    expect(plan.skipped).toHaveLength(1);
+    expect(plan.skipped[0].reason).toMatch(/stale-import/);
+  });
+
   it('resolves no file for an unknown level key', () => {
     const changes = [
       instructionsChange('lb:missing_level', {shortInstructions: 'x'}, {shortInstructions: ''}),

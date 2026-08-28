@@ -93,6 +93,42 @@ export interface PublishResult {
   };
 }
 
+/** One file the write-back plan would (or did) touch — authoring-service's
+ * writeback/plan.ts WritebackFileEdit, minus the full patched content (that
+ * never leaves the server; a diff is what the dialog renders). */
+export interface WritebackEdit {
+  path: string;
+  levelKey: string;
+  unifiedDiff: string;
+  beforeHash: string;
+  afterHash: string;
+}
+
+/** One change the plan couldn't turn into a file edit, and why — see
+ * authoring-service's writeback/plan.ts doc comment for the full taxonomy
+ * (unmapped fields, draft levels, stale-import, ...). */
+export interface WritebackSkip {
+  experienceId: string;
+  field?: string;
+  reason: string;
+}
+
+export interface WritebackPlan {
+  planHash: string;
+  edits: WritebackEdit[];
+  skipped: WritebackSkip[];
+}
+
+export interface WritebackApplyResult {
+  planHash: string;
+  applied: {path: string; afterHash: string}[];
+  skipped: WritebackSkip[];
+}
+
+export type WritebackApplyOutcome =
+  | {ok: true; result: WritebackApplyResult}
+  | {ok: false; reason: 'plan-changed'; plan: WritebackPlan};
+
 export type TutorAction =
   | {type: 'hint'; text: string}
   | {
@@ -203,6 +239,30 @@ export const authoringApi = {
   publish: () => post<PublishResult>('/publish', {}),
   applyChange: (change: CurriculumChangeInput) =>
     post<{version: number; change: CurriculumChange}>('/changes', {change}),
+  fetchWritebackPlan: () => get<WritebackPlan>('/writeback/plan'),
+  // Bypasses post()'s uniform throw-on-non-2xx: a 409 here is a legitimate
+  // "your plan is stale" outcome carrying the fresh plan the dialog needs to
+  // re-render, not just an error string.
+  applyWriteback: async (planHash: string): Promise<WritebackApplyOutcome> => {
+    const res = await fetch(`${BASE}/writeback/apply`, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({planHash}),
+    });
+    const data: unknown = await res.json().catch(() => undefined);
+    if (res.status === 409 && data && typeof data === 'object' && (data as {code?: unknown}).code === 'plan-changed') {
+      const {planHash: freshHash, edits, skipped} = data as WritebackPlan;
+      return {ok: false, reason: 'plan-changed', plan: {planHash: freshHash, edits, skipped}};
+    }
+    if (!res.ok) {
+      const message =
+        data && typeof data === 'object' && typeof (data as {error?: unknown}).error === 'string'
+          ? (data as {error: string}).error
+          : `authoring-service POST /writeback/apply: ${res.status}`;
+      throw new Error(message);
+    }
+    return {ok: true, result: data as WritebackApplyResult};
+  },
 };
 
 export type {CourseModel, CurriculumChange, WidgetDescriptor};
