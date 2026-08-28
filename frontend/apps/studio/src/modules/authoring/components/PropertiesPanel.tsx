@@ -522,6 +522,9 @@ function WorkspaceFields({
   const {
     dirty,
     switchWorkspaceMode,
+    clearWorkspace,
+    blockPalette,
+    addBlockToWorkspace,
     effectiveSolutionXml,
     effectiveIdeal,
     effectiveVerified,
@@ -557,8 +560,39 @@ function WorkspaceFields({
           >
             My solution
           </Button>
+          <Button
+            type="button"
+            size="small"
+            variant="outlined"
+            disabled={!workspaceMode}
+            onClick={clearWorkspace}
+          >
+            Clear workspace
+          </Button>
         </div>
       </div>
+
+      {workspaceMode && (
+        <div className={styles.toolboxTray}>
+          <Typography variant="body4" component="span">
+            Click a block to add it to the canvas — no drag required.
+          </Typography>
+          <ul className={styles.toolboxChipList}>
+            {blockPalette.map(entry => (
+              <li key={entry.id}>
+                <button
+                  type="button"
+                  className={styles.toolboxChip}
+                  onClick={() => addBlockToWorkspace(entry)}
+                  aria-label={`Add ${entry.label} to the workspace`}
+                >
+                  + {entry.label}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       <Typography variant="body4" component="span">
         {effectiveSolutionXml

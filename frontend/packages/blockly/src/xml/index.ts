@@ -255,3 +255,78 @@ function parseValue(value: string): string | number | boolean {
   if (!isNaN(Number(value))) return Number(value);
   return value;
 }
+
+function lastBlockInChain(block: Element): Element {
+  const next = Array.from(block.children).find(el => el.tagName === 'next');
+  const nextBlock = next && directChildBlock(next);
+  return nextBlock ? lastBlockInChain(nextBlock) : block;
+}
+
+/** Where the next click-to-add block attaches: inside `attachTo`'s named
+ * `<statement>` (a freshly-added container whose body is still empty), or
+ * after `attachTo` via a new `<next>` (anything else, including a
+ * container whose body already has content — additions there descend
+ * INTO the body rather than chaining after the container itself, since a
+ * click stream has no way to signal "step back out"). */
+interface InsertionPoint {
+  attachTo: Element;
+  via: 'statement' | 'next';
+}
+
+function findInsertionPoint(block: Element): InsertionPoint {
+  const last = lastBlockInChain(block);
+  const statement = Array.from(last.children).find(
+    el => el.tagName === 'statement',
+  );
+  if (statement) {
+    const bodyHead = directChildBlock(statement);
+    if (bodyHead) {
+      return findInsertionPoint(bodyHead);
+    }
+    return {attachTo: last, via: 'statement'};
+  }
+  return {attachTo: last, via: 'next'};
+}
+
+/**
+ * Click-to-add (Author Mode gap #7): appends `blockXml` (a single
+ * `<block>` fragment, e.g. a toolbox palette entry) onto `programXml`'s
+ * program, without any drag gesture — real-mouse-only drags from a
+ * Blockly flyout can't be proven to work under synthetic pointer events,
+ * so an editing mode needs a working non-drag path regardless. Descends
+ * into the deepest open container (a block with an empty named
+ * `<statement>`, e.g. a freshly-added `repeat`) so a run of clicks builds
+ * a nested program (`repeat(5) { A; B; C }`) rather than a flat chain
+ * after it; there's no way to "step back out" of a container from a click
+ * stream alone; a real drag is still how a body gets closed off early.
+ * `programXml` with no top-level block yet gets `blockXml` as its first.
+ */
+export function appendBlockToProgram(
+  programXml: string,
+  blockXml: string,
+): string {
+  const parser = new DOMParser();
+  const programDoc = parser.parseFromString(programXml, 'text/xml');
+  const root = programDoc.documentElement;
+  const blockDoc = parser.parseFromString(blockXml, 'text/xml');
+  const newBlockEl = programDoc.importNode(blockDoc.documentElement, true);
+
+  const topBlock = directChildBlock(root);
+  if (!topBlock) {
+    root.appendChild(newBlockEl);
+    return new XMLSerializer().serializeToString(root);
+  }
+
+  const {attachTo, via} = findInsertionPoint(topBlock);
+  if (via === 'statement') {
+    const statementEl = Array.from(attachTo.children).find(
+      el => el.tagName === 'statement',
+    )!;
+    statementEl.appendChild(newBlockEl);
+  } else {
+    const nextEl = programDoc.createElement('next');
+    nextEl.appendChild(newBlockEl);
+    attachTo.appendChild(nextEl);
+  }
+  return new XMLSerializer().serializeToString(root);
+}

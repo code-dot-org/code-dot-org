@@ -4,6 +4,7 @@ import type {BlockDefinitionWithoutMutator} from '../blocks/types';
 
 import {ToolboxType} from '../constants';
 import {simpleGenerator} from '../generators/simple';
+import type {BlocklySerialization} from '../types';
 
 export * from './toolboxToWorkspaceBlocks';
 
@@ -214,6 +215,58 @@ export function workspaceToXmlString(workspace: Blockly.Workspace): string {
     .querySelectorAll('block')
     .forEach(block => block.removeAttribute('id'));
   return Blockly.Xml.domToText(dom);
+}
+
+function unfreezeBlockState(
+  block: Blockly.serialization.blocks.State,
+): Blockly.serialization.blocks.State {
+  return {
+    ...block,
+    deletable: true,
+    movable: true,
+    ...(block.next?.block
+      ? {next: {...block.next, block: unfreezeBlockState(block.next.block)}}
+      : {}),
+    ...(block.inputs
+      ? {
+          inputs: Object.fromEntries(
+            Object.entries(block.inputs).map(([name, input]) => [
+              name,
+              input.block
+                ? {...input, block: unfreezeBlockState(input.block)}
+                : input,
+            ]),
+          ),
+        }
+      : {}),
+  };
+}
+
+/**
+ * Deep-clones a `BlocklySerialization` tree with every block's `deletable`/
+ * `movable` forced `true`, recursively through `next` chains and value/
+ * statement `inputs`. For the in-place level editor's "Student start"
+ * editing mode ONLY — never call this on what the student runtime loads.
+ * Real levels routinely pin starter blocks undeletable/immovable for the
+ * STUDENT (e.g. a Bee level gluing down a `maze_nectar` block, or the
+ * `when_run` hat itself); an author editing that same starting layout
+ * needs to be able to select, move, and delete any of them, or "Student
+ * start" mode could only ever add blocks, never fix or remove the ones a
+ * level already has.
+ */
+export function makeBlocksEditable(
+  serialization: BlocklySerialization,
+): BlocklySerialization {
+  if (!serialization.blocks) {
+    return serialization;
+  }
+  return {
+    ...serialization,
+    blocks: {
+      ...serialization.blocks,
+      blocks: (serialization.blocks.blocks ?? []).map(unfreezeBlockState),
+    },
+  };
 }
 
 // Returns the student's executable code based on blockXml. Blocks are loaded onto

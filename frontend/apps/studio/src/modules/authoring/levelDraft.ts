@@ -2,6 +2,7 @@ import {useQueryClient} from '@tanstack/react-query';
 import {useEffect, useState} from 'react';
 
 import {
+  addBlockToProgramXml,
   getGoalFields,
   getPaintTools,
   getToolboxPalette,
@@ -16,6 +17,12 @@ import {
 import {authoringApi} from './api';
 import type {LevelCheckResponse} from './api';
 import {resolveWorkspaceOverrideXml, type WorkspaceMode} from './workspaceMode';
+
+// Mirrors MazeLab's own DefaultStartBlocks fallback and
+// authoring-service's mazeLevel.ts buildStartBlocksXml() — the empty
+// program every workspace mode starts from.
+const EMPTY_WORKSPACE_XML =
+  '<xml><block type="when_run" deletable="false" movable="false"></block></xml>';
 
 /**
  * Accumulated edits for a maze-family level's `overrideLevelDefinition`
@@ -131,6 +138,16 @@ export interface UseLevelDraftResult {
   effectiveVerified: boolean;
   setIdeal: (value: string) => void;
   switchWorkspaceMode: (nextMode: WorkspaceMode) => void;
+  clearWorkspace: () => void;
+  /** Every block this skin's toolbox offers (editing.ts's
+   * getToolboxPalette) — the click-to-add palette (gap #7): clicking one
+   * while a workspace mode is active appends it to the shared canvas
+   * without any drag gesture. Deliberately the full palette, not
+   * `availableBlocks` (the tray's "not yet in the student toolbox" filter)
+   * — the author's own solution can use a block the student toolbox
+   * doesn't offer. */
+  blockPalette: ToolboxPaletteEntry[];
+  addBlockToWorkspace: (entry: ToolboxPaletteEntry) => void;
   acceptSolutionOffer: () => void;
   /** Shared actions. */
   submit: () => Promise<void>;
@@ -279,6 +296,46 @@ export function useLevelDraft({
     }
   };
 
+  // Gap #6's honest fallback for whatever gesture doesn't reach the
+  // workspace (a real-mouse-only drag, or just an author who wants a fresh
+  // start): reload the shared canvas down to a lone `when_run` hat.
+  // Mirrors switchWorkspaceMode's own reload mechanism — the resulting
+  // empty capture folds into whichever mode is active (studentStart's
+  // continuous draft-capture, or mySolution's scratch attempt) through the
+  // same effect every other workspace mutation already goes through.
+  const clearWorkspace = () => {
+    if (!workspaceMode) {
+      return;
+    }
+    onWorkspaceOverrideChange(EMPTY_WORKSPACE_XML);
+  };
+
+  // Click-to-add (Author Mode gap #7): a Blockly flyout is Blockly-owned
+  // DOM with no drop target, and a real-mouse drag from it can't be proven
+  // to work under the synthetic pointer events the acceptance re-run
+  // drives — so editing modes need a working non-drag path regardless of
+  // whether the drag itself is fixable. Composes the next program XML from
+  // whatever's currently on the canvas (same precedence
+  // switchWorkspaceMode reads) and reloads through the same
+  // onWorkspaceOverrideChange mechanism every other workspace mutation
+  // here already uses.
+  const addBlockToWorkspace = (entry: ToolboxPaletteEntry) => {
+    if (!workspaceMode) {
+      return;
+    }
+    const currentXml =
+      resolveWorkspaceOverrideXml(
+        workspaceMode,
+        {mySolution: solutionAttemptXml},
+        {
+          studentStart: draft.startBlocksXml,
+          mySolution: draft.solutionBlocksXml,
+        },
+        {studentStart: startBlocksXml, mySolution: solutionBlocksXml},
+      ) ?? EMPTY_WORKSPACE_XML;
+    onWorkspaceOverrideChange(addBlockToProgramXml(currentXml, entry));
+  };
+
   const acceptSolutionOffer = () => {
     if (!solutionOffer) {
       return;
@@ -406,6 +463,9 @@ export function useLevelDraft({
     effectiveVerified,
     setIdeal: (value: string) => setDraft(prev => ({...prev, ideal: value})),
     switchWorkspaceMode,
+    clearWorkspace,
+    blockPalette: palette,
+    addBlockToWorkspace,
     acceptSolutionOffer,
     submit,
     runCheck,

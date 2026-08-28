@@ -9,6 +9,7 @@ import {FeatureType as BeeFeatureType} from '../BeeCell';
 import {SquareType} from '../tiles';
 
 import {
+  addBlockToProgramXml,
   applyPaint,
   getPaintTools,
   getToolboxPalette,
@@ -253,6 +254,87 @@ describe('applyPaint — burst-painting regression (Author Mode gap #4)', () => 
     expect(fallbackCalls).toBe(1);
     expect(draft![0][0].tileType).toBe(SquareType.WALL);
     expect(draft![0][1].tileType).toBe(SquareType.WALL);
+  });
+});
+
+describe('addBlockToProgramXml (Author Mode click-to-add, gap #7)', () => {
+  const hatOnly =
+    '<xml><block type="when_run" deletable="false" movable="false"></block></xml>';
+
+  it('gives a fresh repeat block an empty DO body so the next click nests into it', () => {
+    const repeatEntry = getToolboxPalette('birds').find(
+      p => p.id === 'repeat',
+    )!;
+    const withRepeat = addBlockToProgramXml(hatOnly, repeatEntry);
+    const withMoveForward = addBlockToProgramXml(
+      withRepeat,
+      getToolboxPalette('birds').find(p => p.id === 'moveForward')!,
+    );
+
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(withMoveForward, 'text/xml');
+    const repeatEl = Array.from(
+      doc.documentElement.children[0].children,
+    ).find(el => el.tagName === 'next');
+    const statementEl = repeatEl?.children[0]
+      ? Array.from(repeatEl.children[0].children).find(
+          el => el.tagName === 'statement',
+        )
+      : undefined;
+    expect(statementEl?.children[0]?.getAttribute('type')).toBe(
+      'maze_moveForward',
+    );
+  });
+
+  it('builds the full repeat(5){moveForward,nectar,turnLeft,moveForward,honey,turnRight} program by click order alone', () => {
+    const palette = getToolboxPalette('bee');
+    const byId = (id: string) => palette.find(p => p.id === id)!;
+    const clicks = [
+      'repeat',
+      'moveForward',
+      'getNectar',
+      'turnLeft',
+      'moveForward',
+      'makeHoney',
+      'turnRight',
+    ];
+    let xml = hatOnly;
+    for (const id of clicks) {
+      xml = addBlockToProgramXml(xml, byId(id));
+    }
+
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(xml, 'text/xml');
+    const hat = doc.documentElement.children[0];
+    const repeatBlock = Array.from(hat.children)
+      .find(el => el.tagName === 'next')
+      ?.children[0];
+    expect(repeatBlock?.getAttribute('type')).toBe('controls_repeat_dropdown');
+
+    const bodyStatement = Array.from(repeatBlock!.children).find(
+      el => el.tagName === 'statement',
+    )!;
+    const bodyTypes: string[] = [];
+    let current: Element | undefined = bodyStatement.children[0];
+    while (current) {
+      bodyTypes.push(current.getAttribute('type')!);
+      const nextEl: Element | undefined = Array.from(current.children).find(
+        el => el.tagName === 'next',
+      );
+      current = nextEl?.children[0] ?? undefined;
+    }
+    expect(bodyTypes).toEqual([
+      'maze_moveForward',
+      'maze_nectar',
+      'maze_turn',
+      'maze_moveForward',
+      'maze_honey',
+      'maze_turn',
+    ]);
+    // Nothing was ever chained onto the repeat itself.
+    expect(
+      Array.from(repeatBlock!.children).some(el => el.tagName === 'next'),
+    ).toBe(false);
   });
 });
 

@@ -7,6 +7,8 @@
  * produces, never a CellSerialization.
  */
 
+import {appendBlockToProgram} from '@code-dot-org/blockly/xml';
+
 import {
   FeatureType as BeeFeatureType,
   type BeeCellSerialization,
@@ -435,6 +437,46 @@ const HARVESTER_PALETTE: ToolboxPaletteEntry[] = [
 const PLANTER_PALETTE: ToolboxPaletteEntry[] = [
   {id: 'plant', label: 'Plant', xml: '<block type="planter_plant"/>'},
 ];
+
+// Block types that open a body (a `<statement name="DO">`) a click-to-add
+// stream should be able to nest INTO — the toolbox palette's own seed XML
+// (below) never includes the empty statement tag itself (a bare seed is
+// also what the served toolboxBlocksXml/flyout wants), so addBlockToProgram
+// injects one only on the copy it composes onto the workspace program.
+// `maze_ifElse`/`karel_ifElse` are deliberately excluded: they need both a
+// DO and an ELSE body, and a click stream has no way to pick which one —
+// full two-branch support is a real gap, not a silent one (a click after
+// one lands as a `<next>` sibling instead of nesting into either branch).
+const CONTAINER_BLOCK_TYPES = new Set([
+  'controls_repeat_dropdown',
+  'maze_forever',
+  'maze_untilBlocked',
+  'maze_if',
+  'karel_if',
+]);
+
+function withEmptyBody(blockXml: string): string {
+  const type = /<block type="([^"]+)"/.exec(blockXml)?.[1];
+  if (!type || !CONTAINER_BLOCK_TYPES.has(type) || blockXml.includes('<statement')) {
+    return blockXml;
+  }
+  return blockXml.replace('</block>', '<statement name="DO"></statement></block>');
+}
+
+/**
+ * The maze-aware half of click-to-add (Author Mode gap #7): composes the
+ * new program XML for a click on `entry` against `programXml` (the
+ * workspace's current content, from resolveWorkspaceOverrideXml), giving
+ * a fresh container block (see CONTAINER_BLOCK_TYPES) an empty body first
+ * so blockly/xml's appendBlockToProgram can detect it as "open" and nest
+ * the next click inside it.
+ */
+export function addBlockToProgramXml(
+  programXml: string,
+  entry: ToolboxPaletteEntry | ToolboxTrayEntry,
+): string {
+  return appendBlockToProgram(programXml, withEmptyBody(entry.xml));
+}
 
 /** The blocks this skin's author can add to the student toolbox. */
 export function getToolboxPalette(skinId: string): ToolboxPaletteEntry[] {

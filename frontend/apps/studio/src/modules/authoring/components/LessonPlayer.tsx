@@ -9,6 +9,7 @@ import type {
   Unit,
 } from '@code-dot-org/authoring';
 import type {BlocklySerialization, Toolbox} from '@code-dot-org/blockly';
+import {makeBlocksEditable} from '@code-dot-org/blockly/utils';
 import {
   convertBlocklyXmlToJson,
   convertBlocklyXmlToToolbox,
@@ -253,14 +254,22 @@ export default function LessonPlayer({
   );
   // Mirrors toolboxOverride's XML->JSON conversion, for whichever program
   // LevelRail wants loaded on a workspace-mode switch (see
-  // workspaceOverrideXml's state comment).
-  const workspaceOverride: BlocklySerialization | undefined = useMemo(
-    () =>
-      workspaceOverrideXml === undefined
-        ? undefined
-        : convertBlocklyXmlToJson(new DOMParser(), workspaceOverrideXml),
-    [workspaceOverrideXml],
-  );
+  // workspaceOverrideXml's state comment). "Student start" additionally
+  // strips any deletable=false/movable=false a real level pins its starter
+  // blocks with (production levels do this for the STUDENT — e.g. a Bee
+  // level gluing down a maze_nectar block) — an author editing that same
+  // layout needs to select/move/delete them too, or editing could only
+  // ever add blocks. Never applied to 'mySolution' (the author's own
+  // attempt, never served frozen) or to the plain student-runtime mount,
+  // which never goes through this override at all (see
+  // MazeLabEditingProps.workspaceOverride's doc comment).
+  const workspaceOverride: BlocklySerialization | undefined = useMemo(() => {
+    if (workspaceOverrideXml === undefined) {
+      return undefined;
+    }
+    const json = convertBlocklyXmlToJson(new DOMParser(), workspaceOverrideXml);
+    return workspaceMode === 'studentStart' ? makeBlocksEditable(json) : json;
+  }, [workspaceOverrideXml, workspaceMode]);
   const nextLesson = useMemo(() => {
     const lessonIndex = unit.lessons.findIndex(l => l.id === lesson.id);
     return lessonIndex >= 0 ? unit.lessons[lessonIndex + 1] : undefined;

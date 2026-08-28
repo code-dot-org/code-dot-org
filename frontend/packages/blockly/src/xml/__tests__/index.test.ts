@@ -6,6 +6,7 @@ import type {
   ToolboxStaticCategory,
 } from '../../toolbox/types';
 import {
+  appendBlockToProgram,
   convertBlocklyXmlToCategories,
   convertBlocklyXmlToJson,
   convertBlocklyXmlToToolbox,
@@ -338,5 +339,91 @@ describe('convertBlocklyXmlToCategories', () => {
     const category = categories[0] as ToolboxDynamicCategory;
     expect(category.key).toBe('SOMETHING_ELSE');
     expect(category.onLoad).toBeUndefined();
+  });
+});
+
+describe('appendBlockToProgram (Author Mode click-to-add, gap #7)', () => {
+  const hatOnly =
+    '<xml><block type="when_run" deletable="false" movable="false"></block></xml>';
+
+  it('adds the first block after an empty when_run hat', () => {
+    const result = appendBlockToProgram(
+      hatOnly,
+      '<block type="maze_moveForward"/>',
+    );
+    expect(blocksOf(result)).toEqual([
+      {
+        type: 'when_run',
+        deletable: false,
+        movable: false,
+        next: {block: {type: 'maze_moveForward'}},
+      },
+    ]);
+  });
+
+  it('chains a second block onto the end of the top-level sequence', () => {
+    const withOneMove = appendBlockToProgram(
+      hatOnly,
+      '<block type="maze_moveForward"/>',
+    );
+    const result = appendBlockToProgram(
+      withOneMove,
+      '<block type="maze_turn"><field name="DIR">turnLeft</field></block>',
+    );
+    const hat = blocksOf(result)[0];
+    expect(hat.next?.block).toEqual({
+      type: 'maze_moveForward',
+      next: {block: {type: 'maze_turn', fields: {DIR: 'turnLeft'}}},
+    });
+  });
+
+  it('nests into a container block with an empty named statement, rather than chaining after it', () => {
+    const withRepeat = appendBlockToProgram(
+      hatOnly,
+      '<block type="controls_repeat_dropdown">' +
+        '<field name="TIMES" config="1-20">5</field>' +
+        '<statement name="DO"></statement></block>',
+    );
+    const withNectarInside = appendBlockToProgram(
+      withRepeat,
+      '<block type="maze_nectar"/>',
+    );
+    const repeatBlock = blocksOf(withNectarInside)[0].next?.block;
+    expect(repeatBlock?.type).toBe('controls_repeat_dropdown');
+    expect(repeatBlock?.inputs?.DO?.block).toEqual({type: 'maze_nectar'});
+    // Never chained onto the repeat itself via <next>.
+    expect(repeatBlock?.next).toBeUndefined();
+  });
+
+  it('keeps nesting a run of additions inside the same open container, in click order', () => {
+    let xml = appendBlockToProgram(
+      hatOnly,
+      '<block type="controls_repeat_dropdown">' +
+        '<field name="TIMES" config="1-20">5</field>' +
+        '<statement name="DO"></statement></block>',
+    );
+    for (const blockXml of [
+      '<block type="maze_moveForward"/>',
+      '<block type="maze_nectar"/>',
+      '<block type="maze_turn"><field name="DIR">turnLeft</field></block>',
+    ]) {
+      xml = appendBlockToProgram(xml, blockXml);
+    }
+    const repeatBlock = blocksOf(xml)[0].next?.block;
+    const body = repeatBlock?.inputs?.DO?.block;
+    expect(body?.type).toBe('maze_moveForward');
+    expect(body?.next?.block?.type).toBe('maze_nectar');
+    expect(body?.next?.block?.next?.block).toEqual({
+      type: 'maze_turn',
+      fields: {DIR: 'turnLeft'},
+    });
+  });
+
+  it('starts a program from scratch when there is no top-level block at all', () => {
+    const result = appendBlockToProgram(
+      '<xml></xml>',
+      '<block type="maze_moveForward"/>',
+    );
+    expect(blocksOf(result)).toEqual([{type: 'maze_moveForward'}]);
   });
 });
