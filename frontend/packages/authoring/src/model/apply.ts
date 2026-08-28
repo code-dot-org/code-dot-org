@@ -298,6 +298,18 @@ export function applyChange(
       return {...state, widgets};
     }
 
+    case 'adoptCatalogWidget': {
+      const lessonId = findLessonIdForExperience(state, change.experienceId);
+      return replaceLesson(state, lessonId, lesson => ({
+        ...lesson,
+        experiences: lesson.experiences.map(e =>
+          e.id === change.experienceId && e.kind === 'widget'
+            ? {...e, catalogRef: change.catalogRef ?? undefined}
+            : e,
+        ),
+      }));
+    }
+
     case 'createLevel':
       return replaceLesson(state, change.lessonId, lesson => ({
         ...lesson,

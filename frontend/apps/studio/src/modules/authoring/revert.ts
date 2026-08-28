@@ -16,6 +16,10 @@ import type {CurriculumChangeInput} from './api';
  * overrideLevelInstructions/overrideLevelDefinition each restore whatever
  * `previous` the server captured at apply time (see
  * AuthoringState.applyCurriculumChange) — no log replay needed.
+ * adoptCatalogWidget is the same shape, with one difference: its `previous`
+ * is legitimately `null` (the widget wasn't adopted before this change), so
+ * its case below checks `!== undefined` rather than truthiness, unlike the
+ * two ops above.
  *
  * Excluded, and why: createCourse/createUnit/createLesson may have gained
  * content since (removing the container would silently drop it too);
@@ -69,6 +73,18 @@ export function buildRevertChangeBody(
             op: 'updateWidgetMetadata',
             widgetId: change.widgetId,
             patch: change.previous,
+          }
+        : undefined;
+    case 'adoptCatalogWidget':
+      // `previous` is `null` (never adopted before) as often as it's a real
+      // ref — both are valid compensating values, unlike the `if (x)` guard
+      // the other patch-shaped ops above use, which would wrongly treat a
+      // null "detach" revert as "nothing to revert".
+      return change.previous !== undefined
+        ? {
+            op: 'adoptCatalogWidget',
+            experienceId: change.experienceId,
+            catalogRef: change.previous,
           }
         : undefined;
     default:

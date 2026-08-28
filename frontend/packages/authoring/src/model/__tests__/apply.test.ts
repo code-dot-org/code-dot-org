@@ -5,6 +5,7 @@ import type {
   ContentExperience,
   CourseModel,
   ExistingLevelExperience,
+  WidgetExperience,
 } from '../types';
 
 function deepFreeze<T>(value: T): T {
@@ -17,6 +18,10 @@ function deepFreeze<T>(value: T): T {
 
 function content(id: string, markdown = 'hello'): ContentExperience {
   return {id, origin: 'draft', kind: 'content', markdown};
+}
+
+function widget(id: string, widgetId = 'draft-widget-1'): WidgetExperience {
+  return {id, origin: 'draft', kind: 'widget', widgetId, toolName: 'thing'};
 }
 
 function baseState(): AuthoringState {
@@ -524,5 +529,73 @@ describe('applyChange', () => {
     expect(next.courses[0].units[0].lessons[1]).toBe(
       state.courses[0].units[0].lessons[1],
     );
+  });
+
+  describe('adoptCatalogWidget', () => {
+    function stateWithWidget(): AuthoringState {
+      const base = baseState();
+      const lesson = base.courses[0].units[0].lessons[0];
+      return deepFreeze({
+        ...base,
+        courses: [
+          {
+            ...base.courses[0],
+            units: [
+              {
+                ...base.courses[0].units[0],
+                lessons: [
+                  {...lesson, experiences: [widget('exp-widget')]},
+                  base.courses[0].units[0].lessons[1],
+                ],
+              },
+            ],
+          },
+        ],
+      });
+    }
+
+    it('sets catalogRef on the matching widget experience', () => {
+      const state = stateWithWidget();
+      const next = applyChange(state, {
+        seq: 1,
+        at: 'now',
+        actor: 'author',
+        op: 'adoptCatalogWidget',
+        experienceId: 'exp-widget',
+        catalogRef: {slug: 'you-be-the-sorter', version: '1.0.0'},
+      });
+      const experience = next.courses[0].units[0].lessons[0]
+        .experiences[0] as WidgetExperience;
+      expect(experience.catalogRef).toEqual({
+        slug: 'you-be-the-sorter',
+        version: '1.0.0',
+      });
+      // widgetId is unchanged — the session draft is still addressable,
+      // catalogRef is a separate, additive field (widget-pr-flow plan §3.4).
+      expect(experience.widgetId).toBe('draft-widget-1');
+    });
+
+    it('a null catalogRef reverts to no adoption (undo)', () => {
+      const state = stateWithWidget();
+      const adopted = applyChange(state, {
+        seq: 1,
+        at: 'now',
+        actor: 'author',
+        op: 'adoptCatalogWidget',
+        experienceId: 'exp-widget',
+        catalogRef: {slug: 'you-be-the-sorter', version: '1.0.0'},
+      });
+      const reverted = applyChange(deepFreeze(adopted), {
+        seq: 2,
+        at: 'now',
+        actor: 'author',
+        op: 'adoptCatalogWidget',
+        experienceId: 'exp-widget',
+        catalogRef: null,
+      });
+      const experience = reverted.courses[0].units[0].lessons[0]
+        .experiences[0] as WidgetExperience;
+      expect(experience.catalogRef).toBeUndefined();
+    });
   });
 });

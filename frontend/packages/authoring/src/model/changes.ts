@@ -7,7 +7,7 @@ import type {
   Lesson,
   Unit,
 } from './types';
-import type {WidgetDescriptor} from './widget';
+import type {CatalogRef, WidgetDescriptor} from './widget';
 
 // Creatable subsets: a stub is the parent object minus its children array —
 // the array a create op is itself populating.
@@ -87,6 +87,18 @@ export type CurriculumChange = {
       // overrideLevelDefinition below — server-captured, never
       // client-supplied.
       previous?: Partial<WidgetDescriptor>;
+    }
+  // Attaches (or, with catalogRef: null, detaches) a graduated catalog
+  // build to a widget experience — widget-pr-flow plan §3.4/Pass 6. Same
+  // capture discipline as overrideLevelInstructions: `previous` is the
+  // experience's own catalogRef (or null, for "wasn't adopted yet")
+  // just before this op's merge, captured server-side, so a revert
+  // restores the exact prior state including "not adopted at all".
+  | {
+      op: 'adoptCatalogWidget';
+      experienceId: string;
+      catalogRef: CatalogRef | null;
+      previous?: CatalogRef | null;
     }
   | {
       op: 'createLevel';

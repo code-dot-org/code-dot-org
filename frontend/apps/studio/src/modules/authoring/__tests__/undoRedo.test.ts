@@ -70,7 +70,11 @@ describe('findUndoTarget', () => {
 });
 
 describe('isRedoable', () => {
-  it.each(['overrideLevelInstructions', 'overrideLevelDefinition'] as const)(
+  it.each([
+    'overrideLevelInstructions',
+    'overrideLevelDefinition',
+    'adoptCatalogWidget',
+  ] as const)(
     '%s is redoable — the server re-captures `previous` on every apply',
     op => {
       const change = {
@@ -154,6 +158,36 @@ describe('undo/redo round-trip per op type', () => {
       op: 'overrideLevelDefinition',
       experienceId: 'lb:x',
       patch: {startDirection: '2'},
+    });
+  });
+
+  it('adoptCatalogWidget: same round-trip, including a null (never adopted) previous', () => {
+    const original: CurriculumChange = {
+      ...stamp,
+      seq: 1,
+      op: 'adoptCatalogWidget',
+      experienceId: 'exp-widget-1',
+      catalogRef: {slug: 'you-be-the-sorter', version: '1.0.0'},
+      previous: null,
+    };
+    const undoBody = buildRevertChangeBody(original);
+    if (undoBody?.op !== 'adoptCatalogWidget') {
+      throw new Error('expected an adoptCatalogWidget revert body');
+    }
+    expect(undoBody.catalogRef).toBeNull();
+
+    const revertChange: CurriculumChange = {
+      ...stamp,
+      seq: 2,
+      op: 'adoptCatalogWidget',
+      experienceId: undoBody.experienceId,
+      catalogRef: undoBody.catalogRef,
+      previous: original.catalogRef,
+    };
+    expect(buildRevertChangeBody(revertChange)).toEqual({
+      op: 'adoptCatalogWidget',
+      experienceId: 'exp-widget-1',
+      catalogRef: {slug: 'you-be-the-sorter', version: '1.0.0'},
     });
   });
 

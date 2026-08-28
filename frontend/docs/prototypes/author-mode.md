@@ -125,6 +125,11 @@ export interface WidgetExperience extends ExperienceBase {
   toolName: string; // MCP tool name, e.g. 'present_balance_the_data'
   description?: string;
   defaultInput?: Record<string, unknown>;
+  // Set once this widget graduates through the PR flow (see "Graduating a
+  // widget" below). widgetId is unchanged and still resolves the session
+  // draft, which is the fallback GET /api/widgets/:id serves if the
+  // catalog copy is ever unresolvable.
+  catalogRef?: {slug: string; version: string};
 }
 
 export type Experience =
@@ -212,6 +217,11 @@ export type CurriculumChange = {
       widgetId: string;
       patch: Partial<WidgetDescriptor>;
     }
+  | {
+      op: 'adoptCatalogWidget';
+      experienceId: string;
+      catalogRef: {slug: string; version: string} | null; // null detaches
+    }
 );
 ```
 
@@ -252,6 +262,37 @@ export interface WidgetDescriptor {
 Widget source is plain files under the authoring session
 (`widgets/<id>/widget.html` + `meta.json`), written by the embedded coding
 agent as normal code, inspectable, hot-reloaded into the mounted frame.
+
+### Graduating a widget: the catalog and catalogRef
+
+A session widget lives only in the gitignored `.authoring/` store. The
+"Propose for catalog" affordance (widget properties panel) graduates one
+into `frontend/packages/widgets-catalog/widgets/<slug>/` through a real pull
+request: `POST /api/widgets/:id/propose` pre-flights the contract gates,
+mints a slug from `toolName`, copies `src/` verbatim, writes `widget.json` /
+`CHANGELOG.md` / `PROVENANCE.md`, and commits onto a branch — `mode: 'dry-run'`
+stops there, `mode: 'push'` additionally pushes to a configured remote and
+returns a GitHub compare URL. The endpoint never opens a pull request; a
+human does that from the returned URL.
+
+`GET /api/widgets/propose-config` reports whether a push remote is
+configured (`AUTHORING_PROPOSE_REMOTE`) — the studio dialog disables the
+push step and explains why when it isn't, rather than the client or the
+service guessing a default.
+
+Once a widget merges, `catalogRef` on the referencing `WidgetExperience`
+(`adoptCatalogWidget`, above) points a lesson at the reviewed build instead
+of the session draft: `GET /api/widgets/:id` resolves catalog-first (does
+any experience referencing this `widgetId` carry a `catalogRef`? build it
+on demand through the same `buildWidget` the session's own widgets use, via
+`@code-dot-org/widgets-catalog`'s `computeWidgetArtifact`), falling back to
+the session store — with `servedFrom: 'catalog' | 'session'` and, on a
+failed catalog resolution (a stale version, a missing slug), `catalogFallback:
+true` in the response, so the UI can show what actually happened rather than
+a silent, identical-looking fallback. `adoptCatalogWidget`'s `catalogRef:
+null` detaches back to the draft; both directions go through the normal
+`CurriculumChange` apply path, so they are Undo/Redo-able like any other
+edit.
 
 ## Execution modes
 

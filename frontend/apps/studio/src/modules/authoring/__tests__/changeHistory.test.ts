@@ -218,6 +218,52 @@ describe('changesForCourse', () => {
       expect.arrayContaining(['createWidget', 'updateWidgetMetadata']),
     );
   });
+
+  it('resolves adoptCatalogWidget via its experienceId, same as overrideLevel*', () => {
+    seq = 0;
+    const changes: CurriculumChange[] = [
+      {
+        ...stamp(),
+        op: 'createCourse',
+        course: {id: 'course-a', displayName: 'A', origin: 'draft'},
+      },
+      {
+        ...stamp(),
+        op: 'createUnit',
+        courseId: 'course-a',
+        unit: {id: 'unit-a', displayName: 'Unit A', origin: 'draft'},
+      },
+      {
+        ...stamp(),
+        op: 'createLesson',
+        unitId: 'unit-a',
+        lesson: {id: 'lesson-a', displayName: 'Lesson A', origin: 'draft'},
+      },
+      {
+        ...stamp(),
+        op: 'insertExperience',
+        lessonId: 'lesson-a',
+        position: 0,
+        experience: {
+          id: 'exp-widget',
+          origin: 'draft',
+          kind: 'widget',
+          widgetId: 'draft-widget-1',
+          toolName: 'present_sorter',
+        },
+      },
+      {
+        ...stamp(),
+        op: 'adoptCatalogWidget',
+        experienceId: 'exp-widget',
+        catalogRef: {slug: 'you-be-the-sorter', version: '1.0.0'},
+      },
+    ];
+
+    expect(changesForCourse(changes, [], 'course-a').map(c => c.op)).toEqual(
+      expect.arrayContaining(['adoptCatalogWidget']),
+    );
+  });
 });
 
 describe('summarizeChange', () => {
@@ -248,5 +294,30 @@ describe('summarizeChange', () => {
       patch: {shortInstructions: 'x'},
     };
     expect(summarizeChange(change, courses)).toMatch(/instructions/i);
+  });
+
+  it('summarizes adoptCatalogWidget by slug/version', () => {
+    const change: CurriculumChange = {
+      seq: 1,
+      at: '2026-08-26T00:00:00.000Z',
+      actor: 'author',
+      op: 'adoptCatalogWidget',
+      experienceId: 'exp-widget',
+      catalogRef: {slug: 'you-be-the-sorter', version: '1.0.0'},
+    };
+    expect(summarizeChange(change, courses)).toContain('you-be-the-sorter');
+    expect(summarizeChange(change, courses)).toContain('1.0.0');
+  });
+
+  it('summarizes a null-catalogRef adoptCatalogWidget as a revert', () => {
+    const change: CurriculumChange = {
+      seq: 1,
+      at: '2026-08-26T00:00:00.000Z',
+      actor: 'author',
+      op: 'adoptCatalogWidget',
+      experienceId: 'exp-widget',
+      catalogRef: null,
+    };
+    expect(summarizeChange(change, courses)).toMatch(/session draft/i);
   });
 });

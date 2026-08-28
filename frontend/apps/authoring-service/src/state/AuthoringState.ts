@@ -2,6 +2,7 @@ import {randomUUID} from 'node:crypto';
 
 import type {
   ApplyChange,
+  CatalogRef,
   CourseModel,
   CurriculumChange,
   CurriculumChangeBody,
@@ -132,6 +133,12 @@ export class AuthoringState {
         this.snapshot.widgets,
         change.widgetId,
         change.patch,
+      );
+    }
+    if (change.op === 'adoptCatalogWidget') {
+      change.previous = capturePreviousCatalogRef(
+        this.snapshot.courses,
+        change.experienceId,
       );
     }
 
@@ -358,6 +365,31 @@ function capturePreviousWidgetMetadata(
     (previous as Record<string, unknown>)[key] = widget[key];
   }
   return previous;
+}
+
+// Same reasoning as capturePreviousWidgetMetadata: reads the WidgetExperience
+// node's own catalogRef (not the widget store — catalogRef lives on the
+// experience, since one session widget could in principle be referenced by
+// more than one experience) just before adoptCatalogWidget's merge
+// overwrites it. `null` means "wasn't adopted yet", the same sentinel
+// adoptCatalogWidget itself uses to mean "detach" — so a revert's forward
+// patch (buildRevertChangeBody, studio's revert.ts) is exactly this value.
+function capturePreviousCatalogRef(
+  courses: CourseModel[],
+  experienceId: string,
+): CatalogRef | null | undefined {
+  for (const course of courses) {
+    for (const unit of course.units) {
+      for (const lesson of unit.lessons) {
+        for (const experience of lesson.experiences) {
+          if (experience.id === experienceId && experience.kind === 'widget') {
+            return experience.catalogRef ?? null;
+          }
+        }
+      }
+    }
+  }
+  return undefined;
 }
 
 // buildMazeLevelProperties (packages/authoring/src/importer/levelProperties.ts)

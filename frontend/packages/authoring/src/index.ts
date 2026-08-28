@@ -23,7 +23,7 @@ export type {
   Unit,
   WidgetExperience,
 } from './model/types';
-export type {WidgetDescriptor} from './model/widget';
+export type {CatalogRef, WidgetDescriptor} from './model/widget';
 
 export {
   buildCourse,

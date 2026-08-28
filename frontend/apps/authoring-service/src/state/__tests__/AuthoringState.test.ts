@@ -704,3 +704,111 @@ describe('AuthoringState updateWidgetMetadata previous capture', () => {
     expect(change).toMatchObject({previous: {title: 'Original title'}});
   });
 });
+
+function stateWithWidgetExperience(): AuthoringState {
+  const store = new SessionStore(root);
+  const course: CourseModel = {
+    id: 'course-1',
+    displayName: 'Course One',
+    origin: 'draft',
+    units: [
+      {
+        id: 'unit-1',
+        displayName: 'Unit One',
+        origin: 'draft',
+        lessons: [
+          {
+            id: 'lesson-1',
+            displayName: 'Lesson One',
+            origin: 'draft',
+            experiences: [
+              {
+                id: 'exp-widget',
+                origin: 'draft',
+                kind: 'widget',
+                widgetId: 'draft-widget-1',
+                toolName: 'thing',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  };
+  return new AuthoringState({
+    store,
+    applyChange,
+    snapshot: {...EMPTY_SNAPSHOT, courses: [course]},
+    changes: [],
+  });
+}
+
+describe('AuthoringState adoptCatalogWidget previous capture', () => {
+  it('captures null as `previous` for a widget never adopted before', () => {
+    const state = stateWithWidgetExperience();
+    const change = state.applyCurriculumChange(
+      {
+        op: 'adoptCatalogWidget',
+        experienceId: 'exp-widget',
+        catalogRef: {slug: 'you-be-the-sorter', version: '1.0.0'},
+      },
+      'author',
+    );
+
+    expect(change).toMatchObject({previous: null});
+    const experience = state.getSnapshot().courses[0].units[0].lessons[0]
+      .experiences[0];
+    expect(experience).toMatchObject({
+      widgetId: 'draft-widget-1', // unchanged
+      catalogRef: {slug: 'you-be-the-sorter', version: '1.0.0'},
+    });
+  });
+
+  it('captures the prior catalogRef as `previous` on a second adoption, and a null catalogRef reverts it', () => {
+    const state = stateWithWidgetExperience();
+    state.applyCurriculumChange(
+      {
+        op: 'adoptCatalogWidget',
+        experienceId: 'exp-widget',
+        catalogRef: {slug: 'you-be-the-sorter', version: '1.0.0'},
+      },
+      'author',
+    );
+    const bump = state.applyCurriculumChange(
+      {
+        op: 'adoptCatalogWidget',
+        experienceId: 'exp-widget',
+        catalogRef: {slug: 'you-be-the-sorter', version: '1.1.0'},
+      },
+      'author',
+    );
+    expect(bump).toMatchObject({
+      previous: {slug: 'you-be-the-sorter', version: '1.0.0'},
+    });
+
+    const reverted = state.applyCurriculumChange(
+      {op: 'adoptCatalogWidget', experienceId: 'exp-widget', catalogRef: null},
+      'author',
+    );
+    expect(reverted).toMatchObject({
+      previous: {slug: 'you-be-the-sorter', version: '1.1.0'},
+    });
+    const experience = state.getSnapshot().courses[0].units[0].lessons[0]
+      .experiences[0];
+    expect((experience as {catalogRef?: unknown}).catalogRef).toBeUndefined();
+  });
+
+  it('ignores a client-supplied `previous` and recomputes it authoritatively', () => {
+    const state = stateWithWidgetExperience();
+    const change = state.applyCurriculumChange(
+      {
+        op: 'adoptCatalogWidget',
+        experienceId: 'exp-widget',
+        catalogRef: {slug: 'you-be-the-sorter', version: '1.0.0'},
+        previous: {slug: 'attacker-supplied-lie', version: '9.9.9'},
+      },
+      'author',
+    );
+    expect(change).toMatchObject({previous: null});
+  });
+});

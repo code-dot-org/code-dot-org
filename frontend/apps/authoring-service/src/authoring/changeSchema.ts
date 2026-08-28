@@ -171,6 +171,11 @@ const ExistingLevelExperienceSchema = z.object({
   instructionsOverride: InstructionsPatchSchema.optional(),
 });
 
+const CatalogRefSchema = z.object({
+  slug: z.string().min(1),
+  version: z.string().min(1),
+});
+
 const WidgetExperienceSchema = z.object({
   ...experienceBase,
   kind: z.literal('widget'),
@@ -178,6 +183,7 @@ const WidgetExperienceSchema = z.object({
   toolName: z.string(),
   description: z.string().optional(),
   defaultInput: z.record(z.string(), z.unknown()).optional(),
+  catalogRef: CatalogRefSchema.optional(),
 });
 
 const ExperienceSchema = z.discriminatedUnion('kind', [
@@ -269,6 +275,11 @@ export const CurriculumChangeBodySchema = z.discriminatedUnion('op', [
     op: z.literal('updateWidgetMetadata'),
     widgetId: z.string().regex(WIDGET_ID_PATTERN),
     patch: WidgetDescriptorSchema.partial(),
+  }),
+  z.object({
+    op: z.literal('adoptCatalogWidget'),
+    experienceId: z.string().min(1),
+    catalogRef: CatalogRefSchema.nullable(),
   }),
   z.object({
     op: z.literal('createLevel'),

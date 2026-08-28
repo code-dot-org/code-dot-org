@@ -151,6 +151,46 @@ describe('buildRevertChangeBody', () => {
     expect(buildRevertChangeBody(change)).toBeUndefined();
   });
 
+  it('reverts adoptCatalogWidget by re-applying the captured previous catalogRef', () => {
+    const change: CurriculumChange = {
+      ...stamp,
+      op: 'adoptCatalogWidget',
+      experienceId: 'exp-widget-1',
+      catalogRef: {slug: 'you-be-the-sorter', version: '1.1.0'},
+      previous: {slug: 'you-be-the-sorter', version: '1.0.0'},
+    };
+    expect(buildRevertChangeBody(change)).toEqual({
+      op: 'adoptCatalogWidget',
+      experienceId: 'exp-widget-1',
+      catalogRef: {slug: 'you-be-the-sorter', version: '1.0.0'},
+    });
+  });
+
+  it('reverts adoptCatalogWidget to null when `previous` is null (never adopted before)', () => {
+    const change: CurriculumChange = {
+      ...stamp,
+      op: 'adoptCatalogWidget',
+      experienceId: 'exp-widget-1',
+      catalogRef: {slug: 'you-be-the-sorter', version: '1.0.0'},
+      previous: null,
+    };
+    expect(buildRevertChangeBody(change)).toEqual({
+      op: 'adoptCatalogWidget',
+      experienceId: 'exp-widget-1',
+      catalogRef: null,
+    });
+  });
+
+  it('does not offer a revert for adoptCatalogWidget with no captured previous', () => {
+    const change: CurriculumChange = {
+      ...stamp,
+      op: 'adoptCatalogWidget',
+      experienceId: 'exp-widget-1',
+      catalogRef: {slug: 'you-be-the-sorter', version: '1.0.0'},
+    };
+    expect(buildRevertChangeBody(change)).toBeUndefined();
+  });
+
   it.each([
     'createCourse',
     'removeCourse',

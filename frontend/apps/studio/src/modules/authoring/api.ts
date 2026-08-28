@@ -1,4 +1,5 @@
 import type {
+  CatalogRef,
   CourseModel,
   CurriculumChange,
   WidgetDescriptor,
@@ -61,6 +62,16 @@ export interface WidgetResponse {
   // The server can return html before the descriptor is ready.
   descriptor?: WidgetDescriptor;
   html: string;
+  /** Where `html` actually came from — the catalog build (a graduated,
+   * reviewed widget) or the session's own draft store. See
+   * authoring-service's GET /api/widgets/:id (widget-pr-flow plan Pass 6). */
+  servedFrom?: 'catalog' | 'session';
+  /** Present when the experience has a catalogRef but resolving it failed
+   * (a stale version, a missing slug, a build error) — the session draft is
+   * still served, but the UI should say so rather than showing "catalog" as
+   * if nothing were wrong. */
+  catalogFallback?: boolean;
+  catalogRef?: CatalogRef;
 }
 
 /** Whether "Propose widget"'s push step is usable in this environment — see
@@ -346,4 +357,4 @@ export const authoringApi = {
   },
 };
 
-export type {CourseModel, CurriculumChange, WidgetDescriptor};
+export type {CatalogRef, CourseModel, CurriculumChange, WidgetDescriptor};

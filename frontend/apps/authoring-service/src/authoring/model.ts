@@ -95,6 +95,17 @@ export interface WidgetExperience extends ExperienceBase {
   toolName: string;
   description?: string;
   defaultInput?: Record<string, unknown>;
+  // Set by adoptCatalogWidget once this widget graduates through the PR
+  // flow (widget-pr-flow plan §3.4). widgetId is unchanged and still
+  // resolves the session draft — this is what lets GET /api/widgets/:id
+  // serve the reviewed catalog build instead, with the draft as its
+  // fallback if the catalog copy is ever unresolvable.
+  catalogRef?: CatalogRef;
+}
+
+export interface CatalogRef {
+  slug: string;
+  version: string;
 }
 
 export type Experience =
@@ -221,6 +232,18 @@ export type CurriculumChangeBody =
       // just before the merge, never client-supplied.
       previous?: Partial<WidgetDescriptor>;
     }
+  // Same capture discipline as overrideLevelInstructions: `previous` is the
+  // experience's own catalogRef (or null, for "wasn't adopted yet") just
+  // before this op's merge — server-captured, so a revert restores the
+  // exact prior state. catalogRef: null detaches (reverts to the session
+  // draft), matching the null-means-delete convention LevelDefinitionPatch
+  // already uses.
+  | {
+      op: 'adoptCatalogWidget';
+      experienceId: string;
+      catalogRef: CatalogRef | null;
+      previous?: CatalogRef | null;
+    }
   | {
       op: 'createLevel';
       lessonId: string;
@@ -262,6 +285,7 @@ export const CURRICULUM_CHANGE_OPS: readonly CurriculumChangeOp[] = [
   'attachExistingLevel',
   'createWidget',
   'updateWidgetMetadata',
+  'adoptCatalogWidget',
   'createLevel',
   'updateLevel',
   'overrideLevelInstructions',

@@ -12,7 +12,9 @@ import {injectWidgetChrome} from '@code-dot-org/widget-runtime/chrome';
 import {
   checkWidgetDocument,
   computeToolchain,
+  computeWidgetArtifact,
   listWidgetSlugs,
+  type WidgetManifest,
 } from '@code-dot-org/widgets-catalog';
 
 import {EchoAgentRunner, type AgentRunner} from './agent/AgentRunner.js';
@@ -25,7 +27,12 @@ import {
 } from './agent/TutorRunner.js';
 import {loadAuthoringBridge} from './authoring/bridge.js';
 import {CurriculumChangeBodySchema} from './authoring/changeSchema.js';
-import type {CurriculumChange, ResolveLevel} from './authoring/model.js';
+import type {
+  CatalogRef,
+  CurriculumChange,
+  ResolveLevel,
+  WidgetDescriptor,
+} from './authoring/model.js';
 import {importCourseIfMissing} from './boot/importCourse.js';
 import {LevelCatalog, repairLevelProperties} from './boot/levelCatalog.js';
 import {FRONTEND_ROOT, resolveRepoRoot} from './boot/paths.js';
@@ -42,6 +49,7 @@ import {
   EMPTY_SNAPSHOT,
   SessionStore,
   type ChatScope,
+  type CurriculumSnapshot,
 } from './store/SessionStore.js';
 import {hasBuiltSource, rebuildWidgetSource} from './widgets/buildWidget.js';
 import {applyWritebackPlan, computePlanHash} from './writeback/apply.js';
@@ -255,8 +263,43 @@ app.post('/api/levels/create-maze', async c => {
 // why rather than the service (or the client) guessing a default remote.
 app.get('/api/widgets/propose-config', c => c.json({remote: PROPOSE_REMOTE}));
 
-app.get('/api/widgets/:id', c => {
+// Catalog-first resolution (widget-pr-flow plan §3.4/Pass 6): a widgetId
+// referenced by an experience that has adopted a catalogRef serves the
+// graduated @code-dot-org/widgets-catalog build instead of the session
+// draft. Built on-demand through the same buildWidget the session's own
+// widgets rebuild through (computeWidgetArtifact), not from a boot-time
+// prebuild of the whole catalog — most catalog widgets are never
+// referenced by this session, and a stale prebuild would just be a second
+// gate implementation to keep in sync with §1.3's already-fixed one.
+// `widgetId` itself is unchanged by adoption (see model.ts's WidgetExperience
+// doc comment), so this is a reverse lookup: which experience, if any,
+// points at `id` and carries a catalogRef.
+app.get('/api/widgets/:id', async c => {
   const id = c.req.param('id');
+  const catalogRef = findCatalogRefForWidget(state.getSnapshot(), id);
+  if (catalogRef) {
+    try {
+      const artifact = await computeWidgetArtifact(catalogRef.slug);
+      if (artifact.manifest.version === catalogRef.version) {
+        return c.json({
+          descriptor: descriptorFromManifest(artifact.manifest, id),
+          html: artifact.servedHtml,
+          servedFrom: 'catalog',
+          catalogRef,
+        });
+      }
+      console.warn(
+        `[authoring-service] widget ${id}'s catalogRef ${catalogRef.slug}@${catalogRef.version} is stale ` +
+          `(catalog now has ${artifact.manifest.version}) — falling back to the session store`,
+      );
+    } catch (error) {
+      console.warn(
+        `[authoring-service] catalog resolution failed for ${catalogRef.slug} (widget ${id}): ` +
+          `${String(error)} — falling back to the session store`,
+      );
+    }
+  }
+
   const descriptor = state.findWidget(id);
   // An id that fails SessionStore's format check (e.g. a path-traversal
   // attempt) throws rather than resolving outside widgetsDir; treat it the
@@ -275,8 +318,60 @@ app.get('/api/widgets/:id', c => {
   return c.json({
     descriptor,
     html: html ? injectWidgetChrome(html) : html,
+    servedFrom: 'session',
+    // Present only when a catalogRef was attempted and fell through, so the
+    // UI can show a provenance warning distinct from "never adopted".
+    ...(catalogRef ? {catalogFallback: true} : {}),
   });
 });
+
+/** The catalogRef of the WidgetExperience (if any, anywhere in the
+ * curriculum) that references `widgetId` — a reverse lookup, since
+ * catalogRef lives on the experience, not the session widget store. */
+function findCatalogRefForWidget(
+  snapshot: CurriculumSnapshot,
+  widgetId: string,
+): CatalogRef | undefined {
+  for (const course of snapshot.courses) {
+    for (const unit of course.units) {
+      for (const lesson of unit.lessons) {
+        for (const experience of lesson.experiences) {
+          if (
+            experience.kind === 'widget' &&
+            experience.widgetId === widgetId &&
+            experience.catalogRef
+          ) {
+            return experience.catalogRef;
+          }
+        }
+      }
+    }
+  }
+  return undefined;
+}
+
+/** Projects a catalog widget.json manifest into the same WidgetDescriptor
+ * shape a session widget carries, so the client renders either identically.
+ * `resourceUri` is synthesized rather than read from the manifest (the
+ * manifest has none — see widgets-catalog's WidgetManifest) using the same
+ * `ui://widgets/<id>.html` convention ClaudeAgentRunner mints at
+ * create_widget time. */
+function descriptorFromManifest(
+  manifest: WidgetManifest,
+  widgetId: string,
+): WidgetDescriptor {
+  return {
+    id: widgetId,
+    toolName: manifest.toolName,
+    title: manifest.title,
+    description: manifest.description,
+    inputSchema: manifest.inputSchema,
+    resourceUri: `ui://widgets/${widgetId}.html`,
+    visibility: manifest.visibility,
+    network: manifest.network,
+    ...(manifest.eventTypes ? {eventTypes: manifest.eventTypes} : {}),
+  };
+}
 
 // The current contract-gate violation list for one widget's served document
 // (network references, McpApp usage, size cap, positive tabindex, onclick on

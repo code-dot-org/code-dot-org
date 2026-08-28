@@ -47,9 +47,9 @@ export function findUndoTarget(
 /**
  * Whether reverting `change` (Undo) leaves behind a change that can itself
  * be reverted (Redo). True for overrideLevelInstructions/
- * overrideLevelDefinition: the server re-captures `previous` on every apply
- * of those ops, including a revert's own apply, so the compensating entry
- * is exactly as revertible as the original. False for
+ * overrideLevelDefinition/adoptCatalogWidget: the server re-captures
+ * `previous` on every apply of those ops, including a revert's own apply,
+ * so the compensating entry is exactly as revertible as the original. False for
  * insertExperience/createLevel/attachExistingLevel: their compensating
  * change is always `removeExperience`, which buildRevertChangeBody never
  * offers a revert for (removing an experience doesn't retain what it
@@ -58,6 +58,7 @@ export function findUndoTarget(
 export function isRedoable(change: CurriculumChange): boolean {
   return (
     change.op === 'overrideLevelInstructions' ||
-    change.op === 'overrideLevelDefinition'
+    change.op === 'overrideLevelDefinition' ||
+    change.op === 'adoptCatalogWidget'
   );
 }

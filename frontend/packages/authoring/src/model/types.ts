@@ -1,6 +1,8 @@
 // Domain model contract. Transcribed from docs/prototypes/author-mode.md
 // (repo root) — that doc is authoritative; keep this file in sync with it.
 
+import type {CatalogRef} from './widget';
+
 export type Origin = 'levelbuilder' | 'draft';
 // Draft ids are `draft:<uuid>`; imported ids embed the real Levelbuilder keys.
 
@@ -125,6 +127,12 @@ export interface WidgetExperience extends ExperienceBase {
   toolName: string; // MCP tool name, e.g. 'present_balance_the_data'
   description?: string;
   defaultInput?: Record<string, unknown>;
+  // Set by adoptCatalogWidget once this widget graduates through the PR
+  // flow (widget-pr-flow plan §3.4). `widgetId` is unchanged and still
+  // resolves the session draft — this is what lets GET /api/widgets/:id
+  // serve the reviewed catalog build instead, with the draft as its
+  // fallback if the catalog copy is ever unresolvable.
+  catalogRef?: CatalogRef;
 }
 
 export type Experience =

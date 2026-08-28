@@ -971,11 +971,54 @@ function WidgetFields({
         onClose={onClose}
         onDirtyChange={onDirtyChange}
       />
+      <CatalogProvenanceNote
+        servedFrom={data.servedFrom}
+        catalogFallback={data.catalogFallback}
+        catalogRef={data.catalogRef}
+      />
       <div className={styles.propertiesPanelForm}>
         <ProposeWidgetButton widgetId={experience.widgetId} />
       </div>
     </>
   );
+}
+
+/** Surfaces GET /api/widgets/:id's servedFrom/catalogRef/catalogFallback
+ * fields (widget-pr-flow plan Pass 6) — the point of carrying them at all
+ * is so an author can tell "this is the reviewed catalog build" from "the
+ * catalog reference exists but couldn't be resolved, so you're looking at
+ * the draft" apart from a silent, identical-looking fallback. */
+function CatalogProvenanceNote({
+  servedFrom,
+  catalogFallback,
+  catalogRef,
+}: {
+  servedFrom?: 'catalog' | 'session';
+  catalogFallback?: boolean;
+  catalogRef?: {slug: string; version: string};
+}) {
+  if (servedFrom === 'catalog' && catalogRef) {
+    return (
+      <Typography variant="body4" className={styles.writebackNote}>
+        Served from the widgets catalog ({catalogRef.slug} v
+        {catalogRef.version}).
+      </Typography>
+    );
+  }
+  if (catalogFallback && catalogRef) {
+    return (
+      <Typography
+        variant="body4"
+        role="status"
+        className={styles.inlineError}
+      >
+        This widget adopted {catalogRef.slug} v{catalogRef.version}, but the
+        catalog build couldn&apos;t be resolved — serving the session draft
+        instead.
+      </Typography>
+    );
+  }
+  return null;
 }
 
 function WidgetMetadataForm({

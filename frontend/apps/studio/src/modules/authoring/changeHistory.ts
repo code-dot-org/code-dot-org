@@ -126,6 +126,8 @@ function targetId(change: CurriculumChange): string | undefined {
       return change.descriptor.id;
     case 'updateWidgetMetadata':
       return change.widgetId;
+    case 'adoptCatalogWidget':
+      return change.experienceId;
     case 'createLevel':
       return change.lessonId;
     case 'updateLevel':
@@ -259,6 +261,10 @@ export function summarizeChange(
       return `Created widget “${change.descriptor.title}”`;
     case 'updateWidgetMetadata':
       return `Updated widget “${findWidgetName(courses, change.widgetId)}”`;
+    case 'adoptCatalogWidget':
+      return change.catalogRef
+        ? `Adopted catalog widget ${change.catalogRef.slug} v${change.catalogRef.version} for “${findExperienceName(courses, change.experienceId)}”`
+        : `Reverted “${findExperienceName(courses, change.experienceId)}” to its session draft`;
     case 'createLevel':
       return `Created level “${change.level.title ?? change.level.id}” in lesson “${findLessonName(courses, change.lessonId)}”`;
     case 'updateLevel':
