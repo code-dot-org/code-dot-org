@@ -54,7 +54,6 @@ import javalab, {
   setValidationPassed,
   setHasRunOrTestedCode,
   setIsJavabuilderConnecting,
-  setIsCaptchaDialogOpen,
 } from './redux/javalabRedux';
 import javalabView, {setDisplayTheme} from './redux/viewRedux';
 import TheaterVisualizationColumn from './theater/TheaterVisualizationColumn';
@@ -213,7 +212,6 @@ Javalab.prototype.init = function (config) {
     isResponsive: true,
     isSubmittable: !!config.level.submittable,
     isSubmitted: !!config.level.submitted,
-    recaptchaSiteKey: config.level.recaptchaSiteKey,
   });
 
   registerReducers({javalab, javalabConsole, javalabView});
@@ -432,8 +430,7 @@ Javalab.prototype.executeJavabuilder = function (executionType) {
     this.csrf_token,
     () => this.onValidationPassed(this.studioApp_),
     () => this.onValidationFailed(this.studioApp_),
-    () => getStore().dispatch(setIsJavabuilderConnecting(false)),
-    () => getStore().dispatch(setIsCaptchaDialogOpen(true))
+    () => getStore().dispatch(setIsJavabuilderConnecting(false))
   );
 
   let connectToJavabuilder;
