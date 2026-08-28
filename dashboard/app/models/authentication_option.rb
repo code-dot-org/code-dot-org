@@ -100,6 +100,14 @@ class AuthenticationOption < ApplicationRecord
     MICROSOFT
   ].freeze
 
+  # Providers whose external ids are case-sensitive strings. Lookups for these
+  # types confirm matches byte-for-byte (see User.find_by_credential and
+  # find_by_exact_credential below) instead of trusting the authentication_id
+  # column's case-insensitive collation.
+  CASE_SENSITIVE_CREDENTIAL_TYPES = [
+    CLASSLINK,
+  ].freeze
+
   module Clever
     VERSION = {
       v3: 'v3',
@@ -107,6 +115,27 @@ class AuthenticationOption < ApplicationRecord
   end
 
   scope :trusted_email, -> {where(credential_type: TRUSTED_EMAIL_CREDENTIAL_TYPES)}
+
+  # The authentication_id column's collation (utf8mb3_unicode_ci) compares
+  # case-insensitively, but the external ids stored there are case-sensitive.
+  # This finder lets the index locate the candidates, then confirms the match
+  # byte-for-byte in Ruby: an id differing from the stored value only in case
+  # is no match, not a hit. Candidates are scanned rather than rechecking a
+  # single row so that ids differing only by case can coexist and still each
+  # resolve to their own record.
+  def self.find_by_exact_credential(credential_type:, authentication_id:)
+    return nil if authentication_id.blank?
+
+    candidates = where(credential_type: credential_type, authentication_id: authentication_id)
+    exact = candidates.detect {|option| option.authentication_id == authentication_id.to_s}
+    if exact.nil? && candidates.any?
+      Observability::Errors.capture_message(
+        'Authentication id matched by collation but not byte-exactly',
+        extra: {credential_type: credential_type}
+      )
+    end
+    exact
+  end
 
   def google?
     credential_type == GOOGLE

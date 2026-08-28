@@ -326,9 +326,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   private def find_user_by_credential
     return nil unless auth_hash
 
-    User.find_by_credential \
-      type: auth_hash.provider,
-      id: auth_hash.uid
+    User.find_by_credential(type: auth_hash.provider, id: auth_hash.uid)
   end
 
   # Temporary method to find existing Clever users by their legacy_id field. This

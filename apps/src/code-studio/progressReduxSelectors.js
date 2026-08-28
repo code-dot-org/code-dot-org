@@ -282,9 +282,8 @@ export const getParentLevel = state => {
 /**
  * Get a reference to the next level in the progression, if it exists.
  *
- * Bubble choice levels return the parent level in the case where the navigation
- * type is not 'NEXT_LEVEL', since that is where the progression would take them
- * when they press 'continue' in that case.
+ * Bubble choice navigation is determined by the navigationType of the current level.
+ * If no navigationType is specified, we default to the parent level.
  *
  * Returns undefined if not currently in a script level or currently
  * on the last level.
@@ -304,33 +303,36 @@ export const getNextLevel = state => {
     return;
   }
 
-  let currentLevelNumber = currentLevel.levelNumber;
+  const parentLevel = currentLevel.parentLevelId
+    ? getParentLevel(state)
+    : undefined;
 
-  // Sublevel navigation
-  if (currentLevel.parentLevelId) {
-    const parentLevel = getParentLevel(state);
-
-    if (
-      currentLevel.navigationType === BubbleChoiceNavigationTypes.NEXT_LEVEL
-    ) {
-      // If navigationType is NEXT_LEVEL, go to the next level after the parent.
-      // So, we just consider the 'current' level the current parent
-      currentLevelNumber = parentLevel.levelNumber;
-    } else {
-      // Otherwise, default to navigating directly to the parent level.
-      return parentLevel;
-    }
-  }
-
-  const currentLevelIndex = levels.findIndex(
-    level => level.levelNumber === currentLevelNumber
+  // For navigation purposes, use the index of the parent level if this is bubble choice sublevel, or the current level.
+  const navigationLevelIndex = levels.findIndex(
+    level => level.id === (parentLevel ? parentLevel.id : currentLevel.id)
   );
 
-  if (currentLevelIndex === levels.length - 1) {
-    return;
+  const isLastLevel = navigationLevelIndex === levels.length - 1;
+  const nextLevel = isLastLevel ? undefined : levels[navigationLevelIndex + 1];
+
+  if (
+    !parentLevel ||
+    currentLevel.navigationType === BubbleChoiceNavigationTypes.NEXT_LEVEL
+  ) {
+    return nextLevel;
   }
 
-  return levels[currentLevelIndex + 1];
+  if (
+    currentLevel.navigationType === BubbleChoiceNavigationTypes.NEXT_SUBLEVEL
+  ) {
+    const sublevelIndex = parentLevel.sublevels.findIndex(
+      sl => sl.id === currentLevel.id
+    );
+    const nextSublevel = nextLevel?.sublevels?.[sublevelIndex];
+    return nextSublevel || nextLevel;
+  }
+
+  return parentLevel;
 };
 
 /**
