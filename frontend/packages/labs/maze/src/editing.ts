@@ -386,7 +386,7 @@ const STRUCTURAL_PALETTE: ToolboxPaletteEntry[] = [
   {
     id: 'repeat',
     label: 'Repeat N times',
-    xml: '<block type="controls_repeat_dropdown"><field name="TIMES" config="1-20">3</field></block>',
+    xml: '<block type="controls_repeat_dropdown"><field name="TIMES" config="2-10">3</field></block>',
   },
   {id: 'forever', label: 'Repeat until finish', xml: '<block type="maze_forever"/>'},
   {id: 'untilBlocked', label: 'While path ahead', xml: '<block type="maze_untilBlocked"/>'},

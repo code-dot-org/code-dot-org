@@ -39,6 +39,7 @@
     "@code-dot-org/core": "workspace:*",
     "@code-dot-org/fonts": "workspace:*",
     "@code-dot-org/lab-classic": "workspace:*",
+    "blockly": "^13.1.0",
     "events": "^3.3.0",
     "react-focus-lock": "^2.13.6",
     "react-focus-on": "^3.10.2",
