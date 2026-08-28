@@ -2,7 +2,8 @@ import patrollingOnBlocks from '@cdo/apps/p5lab/spritelab/lab2/blockly/blockDefi
 
 // The behavior's runtime half is interpreted ES5 source, so the test runs the
 // shipped string with stubbed lab commands. The stubs mirror the real ones:
-// hasSupportAt needs resting contact AND the probe inside a block, and
+// platformSupportAhead is true when the probe point is inside a block,
+// platformGrounded says whether the resolver has the sprite on footing, and
 // getProp('scale') is the sprite's on-screen size in pixels while
 // getProp('width') is its costume's own unscaled width.
 interface PatrolCase {
@@ -15,6 +16,8 @@ interface PatrolCase {
   startCol: number;
   cell?: number;
   row?: number;
+  // Frames the sprite spends in the air before landing.
+  airborneFrames?: number;
 }
 
 function patrol({
@@ -24,6 +27,7 @@ function patrol({
   startCol,
   cell = 40,
   row = 8,
+  airborneFrames = 0,
 }: PatrolCase) {
   const centerOf = (col: number) => cell / 2 + cell * col;
   const top = cell * (row + 1);
@@ -32,24 +36,26 @@ function patrol({
     right: centerOf(col) + cell / 2,
   }));
   const sprite = {x: centerOf(startCol)};
-  const props: {[key: string]: number} = {};
+  const props: {[key: string]: number | undefined} = {};
+  let frame = 0;
+  const marked: unknown[] = [];
   const commands = {
-    getProp: (id: unknown, prop: string) => {
+    usePlatformBody: (id: unknown) => marked.push(id),
+    platformGrounded: () => frame >= airborneFrames,
+    getProp: (id: unknown, prop: string): number | undefined => {
       if (prop === 'x') return sprite.x;
       if (prop === 'scale') return size;
       if (prop === 'width') return costumeWidth;
       return props[prop];
     },
-    setProp: (id: unknown, prop: string, value: number) => {
-      if (prop === 'x') sprite.x = value;
+    setProp: (id: unknown, prop: string, value: number | undefined) => {
+      if (prop === 'x') sprite.x = value as number;
       else props[prop] = value;
     },
     changePropBy: (id: unknown, prop: string, delta: number) => {
       if (prop === 'x') sprite.x += delta;
     },
-    // Resting on the blocks throughout.
-    isDirectlyAbove: () => true,
-    hasSupportAt: (id: unknown, offset: number) =>
+    platformSupportAhead: (id: unknown, offset: number) =>
       blocks.some(
         b => sprite.x + offset >= b.left && sprite.x + offset <= b.right
       ),
@@ -58,18 +64,20 @@ function patrol({
     'getProp',
     'setProp',
     'changePropBy',
-    'isDirectlyAbove',
-    'hasSupportAt',
+    'usePlatformBody',
+    'platformGrounded',
+    'platformSupportAhead',
     `${patrollingOnBlocks.helperCode}\nreturn patrollingOnBlocks();`
   )(
     commands.getProp,
     commands.setProp,
     commands.changePropBy,
-    commands.isDirectlyAbove,
-    commands.hasSupportAt
+    commands.usePlatformBody,
+    commands.platformGrounded,
+    commands.platformSupportAhead
   );
   const seen: number[] = [];
-  for (let frame = 0; frame < 600; frame++) {
+  for (frame = 0; frame < 600; frame++) {
     behavior.func({id: 1});
     seen.push(sprite.x);
   }
@@ -79,6 +87,8 @@ function patrol({
     right: Math.max(...seen),
     positions: new Set(seen.map(Math.round)).size,
     top,
+    marked: marked.length,
+    seen,
   };
 }
 
@@ -95,6 +105,23 @@ describe('patrollingOnBlocks', () => {
     expect(walk.name).toBe('patrolling on blocks');
     expect(walk.left).toBeCloseTo(20, 0);
     expect(walk.right).toBeCloseTo(380, 0);
+    // Handed to the platform resolver every frame, so it falls and lands.
+    expect(walk.marked).toBe(600);
+  });
+
+  it('waits in the air and walks on from where it lands', () => {
+    const walk = patrol({
+      size: 40,
+      costumeWidth: 1024,
+      blockCols: FULL_FLOOR,
+      startCol: 2,
+      airborneFrames: 30,
+    });
+    const start = walk.seen[0];
+    expect(walk.seen.slice(0, 30).every(x => x === start)).toBe(true);
+    expect(walk.seen[30]).not.toBe(start);
+    // The landing frame is not read as a wall: it keeps walking the same way.
+    expect(walk.seen[31] - walk.seen[30]).toBe(walk.seen[30] - start);
   });
 
   it("sizes itself from the sprite's on-screen size, not its costume's width", () => {

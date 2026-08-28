@@ -19,6 +19,7 @@ import {
 import {trimAnimationListImages} from './imageTrim';
 import {
   CONTACT_EPSILON,
+  hasSupportAt,
   isSupported,
   PLATFORM_GRAVITY,
   resolvePlatformPhysics,
@@ -224,6 +225,34 @@ export default class SpriteLab2Engine extends SpriteLab {
         sprite.velocity.y = up * Math.abs(Number(speed) || 0);
       });
     };
+    // Sprites the platform resolver moves besides players: a behavior that
+    // wants gravity (patrolling on blocks) marks its sprite each tick. The
+    // mark lives on the sprite, so it lasts as long as the sprite does.
+    library.commands.usePlatformBody = spriteArg => {
+      library.getSpriteArray(spriteArg).forEach(sprite => {
+        sprite.__slab2Body = true;
+      });
+    };
+    // Footing in the gravity direction, for behaviors. Outside a platform
+    // scene nothing falls, so everything counts as supported and a patroller
+    // walks as it always has.
+    const footing = (spriteArg, test) => {
+      if (!this.usesPlatformPhysics_) {
+        return true;
+      }
+      const p5 = this.p5Wrapper.p5;
+      const walls = library.getSpriteArray({group: 'walls'});
+      const view = {width: p5.width, height: p5.height};
+      return library
+        .getSpriteArray(spriteArg)
+        .some(sprite => test(sprite, walls, view, this.platformGravity_));
+    };
+    library.commands.platformGrounded = spriteArg =>
+      footing(spriteArg, isSupported);
+    library.commands.platformSupportAhead = (spriteArg, offsetX) =>
+      footing(spriteArg, (sprite, walls, view, gravity) =>
+        hasSupportAt(sprite, Number(offsetX) || 0, walls, view, gravity)
+      );
     library.commands.goToScene = sceneId => {
       if (!this.onGoToScene || !this.beginSceneJump_()) {
         return;
@@ -602,31 +631,32 @@ export default class SpriteLab2Engine extends SpriteLab {
     };
   }
 
-  // Platformer physics for players (see platformPhysics.ts for the rules),
-  // run immediately before every paint — after p5's pre-phase velocity
-  // integration and after this frame's behaviors/events have moved
-  // sprites. Program-driven (non-player) sprites keep the stock resolver.
+  // Platformer physics for players and marked sprites (see
+  // platformPhysics.ts for the rules), run immediately before every paint —
+  // after p5's pre-phase velocity integration and after this frame's
+  // behaviors/events have moved sprites. Other program-driven sprites keep
+  // the stock resolver.
   resolvePlatformPhysics_() {
     if (!this.usesPlatformPhysics_ || !this.library || !this.p5Wrapper.p5) {
       return;
     }
     const p5 = this.p5Wrapper.p5;
-    // Snapshot player positions before the stock pass below: the movement
+    // Snapshot positions before the stock pass below: the movement
     // reconstruction must not see its shove.
-    const moved = this.library
-      .getSpriteArray({group: 'players'})
+    const moved = Object.values(this.library.nativeSpriteMap)
+      .filter(sprite => sprite.group === 'players' || sprite.__slab2Body)
       .map(sprite => ({
         sprite,
         x: sprite.position.x,
         y: sprite.position.y,
       }));
-    // Under upward gravity a player stands on the ceiling, so it is drawn
+    // Under upward gravity a sprite stands on the ceiling, so it is drawn
     // upside down; the facing (mirrorX, from the direction of travel) is
     // left alone. Drawing only: the body the resolver uses is unchanged.
     const upright = this.platformGravity_ < 0 ? -1 : 1;
     moved.forEach(({sprite}) => sprite.mirrorY(upright));
-    // Non-player sprites keep the stock resolver; running it pre-paint
-    // means patrollers and props draw already resolved.
+    // Other sprites keep the stock resolver; running it pre-paint means
+    // props draw already resolved.
     this.library.commands.collide.call(
       this.library,
       'collide',

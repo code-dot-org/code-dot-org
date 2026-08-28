@@ -15,17 +15,19 @@ const generator: GeneratorFunction = () => [
   Order.FUNCTION_CALL,
 ];
 
-// Walk left/right along the 'walls' group, turning at gaps, edges, the
-// playspace bounds, or when blocked (x differs from where last tick left it).
-// Gaps are found with a hasSupportAt point probe ahead of center: a point
-// sees gaps narrower than the sprite. The knife-edge recovery catches a
-// sprite dropping through a gap's zero-overlap seam (grounded last tick,
-// airborne now): nudge past the seam, back up, cancel the fall.
+// Walk left/right along the blocks, turning at gaps, edges, the playspace
+// bounds, or when blocked (x differs from where last tick left it). The
+// sprite is handed to the platform resolver (usePlatformBody), which gives it
+// gravity and landings in whichever direction gravity points; in the air the
+// behavior waits, and walks again on landing. Footing comes from the
+// resolver's own geometry: platformGrounded, and platformSupportAhead — a
+// point probe ahead of centre, which sees a gap narrower than the sprite.
 const helperCode = [
   'function patrollingOnBlocks() {',
   '  return {',
   '    func: function (spriteId) {',
   '      var speed = 2;',
+  '      usePlatformBody(spriteId);',
   // Half the sprite's on-screen size: the gap probe sits at its leading edge,
   // whatever the playfield's cell size is. 'scale' is that size in pixels;
   // 'width' is the costume's own unscaled width.
@@ -36,29 +38,24 @@ const helperCode = [
   "        setProp(spriteId, 'patrolOBDir', 1);",
   '      }',
   "      var dir = getProp(spriteId, 'patrolOBDir');",
-  "      var grounded = isDirectlyAbove(spriteId, {group: 'walls'});",
+  '      if (!platformGrounded(spriteId)) {',
+  '        // Falling: wait for the landing, and do not read where it lands',
+  '        // as having been blocked.',
+  "        setProp(spriteId, 'patrolOBExpX', undefined);",
+  '        return;',
+  '      }',
   "      var expected = getProp(spriteId, 'patrolOBExpX');",
   '      var blocked =',
   "        expected != undefined && getProp(spriteId, 'x') !== expected;",
-  "      if (!grounded && getProp(spriteId, 'patrolOBWasG')) {",
-  '        // Dropped through a bridged gap’s zero-overlap seam last tick:',
-  '        // step past it, back up to the walking line, cancel the fall.',
-  "        changePropBy(spriteId, 'x', speed * dir);",
-  "        changePropBy(spriteId, 'y', 3);",
-  "        setProp(spriteId, 'velocityY', 0);",
-  '      }',
-  '      if (grounded && blocked) {',
+  '      if (blocked) {',
   '        dir = -dir;',
   "        setProp(spriteId, 'patrolOBDir', dir);",
   '      }',
   "      changePropBy(spriteId, 'x', speed * dir);",
-  '      if (grounded) {',
-  "        var supported = hasSupportAt(spriteId, look * dir, {group: 'walls'});",
-  '        if (!supported) {',
-  "          changePropBy(spriteId, 'x', -speed * dir);",
-  '          dir = -dir;',
-  "          setProp(spriteId, 'patrolOBDir', dir);",
-  '        }',
+  '      if (!platformSupportAhead(spriteId, look * dir)) {',
+  "        changePropBy(spriteId, 'x', -speed * dir);",
+  '        dir = -dir;',
+  "        setProp(spriteId, 'patrolOBDir', dir);",
   '      }',
   "      var x = getProp(spriteId, 'x');",
   '      if (x <= half && dir < 0) {',
@@ -68,7 +65,6 @@ const helperCode = [
   "        setProp(spriteId, 'patrolOBDir', -1);",
   '      }',
   "      setProp(spriteId, 'patrolOBExpX', x);",
-  "      setProp(spriteId, 'patrolOBWasG', grounded);",
   '    },',
   "    name: 'patrolling on blocks',",
   '  };',

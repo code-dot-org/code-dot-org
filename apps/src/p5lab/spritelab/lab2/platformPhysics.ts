@@ -278,10 +278,10 @@ export function resolvePlatformPhysics(
 }
 
 /**
- * Whether a player is standing on support in the gravity direction: a wall
+ * Whether a sprite is standing on support in the gravity direction: a wall
  * face within contact slack of the body's feet (or its head, under flipped
  * gravity), or the view's floor (ceiling). Mirrors the resolver's footing
- * geometry; the jump command asks this.
+ * geometry; the jump command and the patrol behavior ask this.
  */
 export function isSupported(
   sprite: PhysicsSprite,
@@ -290,23 +290,71 @@ export function isSupported(
   gravity: number = PLATFORM_GRAVITY
 ): boolean {
   if (gravity < 0) {
-    const flipped: PhysicsSprite = {
-      ...sprite,
-      position: {x: sprite.position.x, y: view.height - sprite.position.y},
-      velocity: {x: sprite.velocity.x, y: -sprite.velocity.y},
-    };
-    return isSupported(flipped, flipWallsY(walls, view), view, -gravity);
+    return isSupported(
+      flippedSprite(sprite, view),
+      flipWallsY(walls, view),
+      view,
+      -gravity
+    );
   }
   const {halfW, halfH, drop} = playerBody(sprite);
   const feet = sprite.position.y + drop + halfH;
   if (feet >= view.height - CONTACT_EPSILON) {
     return true;
   }
-  return walls.some(wall => {
-    const top = wall.position.y - wallHalf(wall);
-    return (
-      Math.abs(feet - top) <= CONTACT_EPSILON &&
+  return wallsAtFeet(walls, feet).some(
+    wall =>
       Math.abs(sprite.position.x - wall.position.x) < halfW + wallHalf(wall)
+  );
+}
+
+/**
+ * Whether there is footing at foot level `offsetX` from the sprite's centre
+ * — a point probe, so it sees a gap narrower than the sprite — in the
+ * gravity direction. The floor (ceiling, under flipped gravity) counts. The
+ * patrol behavior looks one step ahead with this before it turns.
+ */
+export function hasSupportAt(
+  sprite: PhysicsSprite,
+  offsetX: number,
+  walls: PhysicsBox[],
+  view: View,
+  gravity: number = PLATFORM_GRAVITY
+): boolean {
+  if (gravity < 0) {
+    return hasSupportAt(
+      flippedSprite(sprite, view),
+      offsetX,
+      flipWallsY(walls, view),
+      view,
+      -gravity
     );
-  });
+  }
+  const {halfH, drop} = playerBody(sprite);
+  const feet = sprite.position.y + drop + halfH;
+  if (feet >= view.height - CONTACT_EPSILON) {
+    return true;
+  }
+  const probe = sprite.position.x + offsetX;
+  return wallsAtFeet(walls, feet).some(
+    wall => Math.abs(probe - wall.position.x) <= wallHalf(wall)
+  );
+}
+
+// The walls whose top is at foot level, within contact tolerance.
+function wallsAtFeet(walls: PhysicsBox[], feet: number): PhysicsBox[] {
+  return walls.filter(
+    wall =>
+      Math.abs(feet - (wall.position.y - wallHalf(wall))) <= CONTACT_EPSILON
+  );
+}
+
+// The sprite as it stands in a view flipped top for bottom, for reading
+// upward gravity with the downward-gravity code.
+function flippedSprite(sprite: PhysicsSprite, view: View): PhysicsSprite {
+  return {
+    ...sprite,
+    position: {x: sprite.position.x, y: view.height - sprite.position.y},
+    velocity: {x: sprite.velocity.x, y: -sprite.velocity.y},
+  };
 }

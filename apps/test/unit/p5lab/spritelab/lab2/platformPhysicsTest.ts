@@ -1,4 +1,5 @@
 import {
+  hasSupportAt,
   isSupported,
   resolvePlatformPhysics,
   PhysicsBox,
@@ -278,6 +279,26 @@ describe('platformPhysics with custom gravity', () => {
     expect(isSupported(underBlock, walls, VIEW, -PLATFORM_GRAVITY)).toBe(true);
     const nearBlock = makeSprite(75, 360);
     expect(isSupported(nearBlock, walls, VIEW, -PLATFORM_GRAVITY)).toBe(false);
+  });
+
+  it('hasSupportAt probes a point at foot level, in the gravity direction', () => {
+    // Block 50..100 at row 6; the sprite stands on it at x=75.
+    const walls = [wallAt(1, 6)];
+    const onBlock = makeSprite(75, 275);
+    expect(hasSupportAt(onBlock, 20, walls, VIEW)).toBe(true);
+    expect(hasSupportAt(onBlock, 30, walls, VIEW)).toBe(false);
+    expect(hasSupportAt(onBlock, -30, walls, VIEW)).toBe(false);
+    // The floor always counts; in the air nothing does.
+    expect(hasSupportAt(makeSprite(300, 375), 100, walls, VIEW)).toBe(true);
+    expect(hasSupportAt(makeSprite(75, 200), 0, walls, VIEW)).toBe(false);
+    // Under flipped gravity, against the block's underside.
+    const underBlock = makeSprite(75, 375);
+    expect(hasSupportAt(underBlock, 20, walls, VIEW, -PLATFORM_GRAVITY)).toBe(
+      true
+    );
+    expect(hasSupportAt(underBlock, 30, walls, VIEW, -PLATFORM_GRAVITY)).toBe(
+      false
+    );
   });
 });
 
