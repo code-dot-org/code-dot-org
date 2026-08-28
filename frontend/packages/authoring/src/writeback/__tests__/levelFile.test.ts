@@ -4,7 +4,11 @@ import {fileURLToPath} from 'node:url';
 import {describe, expect, it} from 'vitest';
 
 import {parseLevelXml} from '../../importer/levelXml';
-import {buildNewLevelFile, patchLevelFile, serializeLevelXml} from '../levelFile';
+import {
+  buildNewLevelFile,
+  patchLevelFile,
+  serializeLevelXml,
+} from '../levelFile';
 
 // Same convention as node/__tests__/loadCourse.test.ts: walk up looking for
 // dashboard/config (the signature of the repo root) rather than assume a
@@ -114,7 +118,9 @@ if (repoRoot === undefined) {
           if (!name.endsWith('.level')) continue;
           total++;
           const xml = readFileSync(path.join(full, name), 'utf8');
-          const match = xml.match(/<config>\s*<!\[CDATA\[([\s\S]*?)\]\]>\s*<\/config>/);
+          const match = xml.match(
+            /<config>\s*<!\[CDATA\[([\s\S]*?)\]\]>\s*<\/config>/,
+          );
           if (!match) continue;
           const raw = match[1];
           const reprinted = JSON.stringify(JSON.parse(raw), null, 2);
@@ -155,7 +161,9 @@ if (repoRoot === undefined) {
       const origLines = original.split('\n');
       const patchedLines = patched.split('\n');
       expect(patchedLines.length).toBe(origLines.length);
-      const changedLines = origLines.filter((line, i) => line !== patchedLines[i]);
+      const changedLines = origLines.filter(
+        (line, i) => line !== patchedLines[i],
+      );
       expect(changedLines).toHaveLength(1);
     });
 
@@ -177,7 +185,9 @@ if (repoRoot === undefined) {
         levelPath(repo, 'fish', 'Oceans_FishVTrash_2024.level'),
         'utf8',
       );
-      expect(parseLevelXml(original2).properties.short_instructions).toBeUndefined();
+      expect(
+        parseLevelXml(original2).properties.short_instructions,
+      ).toBeUndefined();
       const patched = patchLevelFile(original2, {
         properties: {short_instructions: 'New!'},
       });
@@ -302,9 +312,15 @@ if (repoRoot === undefined) {
       });
       expect(xml).not.toMatch(/<\/\w+_blocks>\n\s*\n/);
       const parsed = parseLevelXml(xml);
-      expect(parsed.startBlocksXml).toBe('<xml><block type="when_run"></block></xml>');
-      expect(parsed.toolboxBlocksXml).toBe('<xml><block type="maze_moveForward"/></xml>');
-      expect(parsed.solutionBlocksXml).toBe('<xml><block type="when_run"></block></xml>');
+      expect(parsed.startBlocksXml).toBe(
+        '<xml><block type="when_run"></block></xml>',
+      );
+      expect(parsed.toolboxBlocksXml).toBe(
+        '<xml><block type="maze_moveForward"/></xml>',
+      );
+      expect(parsed.solutionBlocksXml).toBe(
+        '<xml><block type="when_run"></block></xml>',
+      );
     });
 
     it('round-trips through a second patch exactly like an edit would', () => {

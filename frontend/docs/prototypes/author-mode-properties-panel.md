@@ -1,6 +1,6 @@
 # Author Mode: click-to-edit properties panel
 
-Feasibility probe. Can a per-type schema of editable attributes be *derived*,
+Feasibility probe. Can a per-type schema of editable attributes be _derived_,
 so one generic properties panel replaces a bespoke form per level type?
 
 Status: analysis only, on branch `ngfp/author-mode-staging` (tip 28b45baa9eb).
@@ -10,7 +10,7 @@ be re-measured.
 
 Verdict up front: **a generic panel is feasible, but the field set is not
 derivable.** Hand-maintained descriptor tables, colocated with the
-`levelProperties.ts` builders, are the right source. Option *lists* for enum
+`levelProperties.ts` builders, are the right source. Option _lists_ for enum
 fields are partly derivable from real constants the lab packages already
 export. Section 1 shows why each derivation candidate fails, with numbers.
 
@@ -39,44 +39,44 @@ ToolboxSchema declares 1 key:
 Real music levels carry 29 distinct `level_data` keys. Measured over the
 1805 files with XML root `<Music>` under `dashboard/config/levels/`:
 
-| `level_data` key | files | in `LevelDataSchema`? |
-|---|---|---|
-| `toolbox` | 1712 | yes |
-| `library` | 1704 | yes |
-| `startSources` | 1600 | yes |
-| `packId` | 1376 | **no** |
-| `allowChangeStartingPlayheadPosition` | 1100 | yes |
-| `sounds` | 997 | **no** |
-| `showSoundFilters` | 695 | yes |
-| `validationTimeout` | 409 | **no** |
-| `toolboxDefinition` | 354 | **no** |
-| `showSoundsPanelInSoundsMode` | 308 | **no** |
-| `sortUnrestrictedPacksByType` | 221 | **no** |
-| `aiCodeGenerateAdlib` | 62 | **no** |
-| `blockMode` | 49 | **no** |
-| `aiCodeGenerate` | 43 | **no** |
-| `text` | 35 | **no** |
-| `guideMode` | 34 | **no** |
-| `validations` (nested, misplaced) | 28 | **no** |
-| `aiCodeGenerateExtraPrompt` | 18 | **no** |
-| `hideAiTemperature` | 16 | **no** |
-| `showAiGenerateAgainHelp` | 13 | **no** |
-| `blocks` (legacy) | 10 | **no** |
-| `Control` / `Play` (stray dupes) | 9 / 9 | **no** |
-| `aiCodeGenerateText` | 3 | **no** |
-| `showAiTemperatureExplanation` | 2 | **no** |
-| `player`, `aiCodeGenerateAdlibId`, `triggered_at_block`, `level_data` | 1 each | **no** |
+| `level_data` key                                                      | files  | in `LevelDataSchema`? |
+| --------------------------------------------------------------------- | ------ | --------------------- |
+| `toolbox`                                                             | 1712   | yes                   |
+| `library`                                                             | 1704   | yes                   |
+| `startSources`                                                        | 1600   | yes                   |
+| `packId`                                                              | 1376   | **no**                |
+| `allowChangeStartingPlayheadPosition`                                 | 1100   | yes                   |
+| `sounds`                                                              | 997    | **no**                |
+| `showSoundFilters`                                                    | 695    | yes                   |
+| `validationTimeout`                                                   | 409    | **no**                |
+| `toolboxDefinition`                                                   | 354    | **no**                |
+| `showSoundsPanelInSoundsMode`                                         | 308    | **no**                |
+| `sortUnrestrictedPacksByType`                                         | 221    | **no**                |
+| `aiCodeGenerateAdlib`                                                 | 62     | **no**                |
+| `blockMode`                                                           | 49     | **no**                |
+| `aiCodeGenerate`                                                      | 43     | **no**                |
+| `text`                                                                | 35     | **no**                |
+| `guideMode`                                                           | 34     | **no**                |
+| `validations` (nested, misplaced)                                     | 28     | **no**                |
+| `aiCodeGenerateExtraPrompt`                                           | 18     | **no**                |
+| `hideAiTemperature`                                                   | 16     | **no**                |
+| `showAiGenerateAgainHelp`                                             | 13     | **no**                |
+| `blocks` (legacy)                                                     | 10     | **no**                |
+| `Control` / `Play` (stray dupes)                                      | 9 / 9  | **no**                |
+| `aiCodeGenerateText`                                                  | 3      | **no**                |
+| `showAiTemperatureExplanation`                                        | 2      | **no**                |
+| `player`, `aiCodeGenerateAdlibId`, `triggered_at_block`, `level_data` | 1 each | **no**                |
 
 And inside `toolbox`:
 
-| `toolbox.*` sub-key | files | in `ToolboxSchema`? |
-|---|---|---|
-| `blocks` | 1664 | **no** |
-| `type` | 1390 | **no** |
-| `addFunctionCalls` | 594 | **no** |
-| `addFunctionDefinition` | 500 | **no** |
-| `includeAi` | 32 | yes |
-| `addFunctionCallsSortByPosition` | 10 | **no** |
+| `toolbox.*` sub-key              | files | in `ToolboxSchema`? |
+| -------------------------------- | ----- | ------------------- |
+| `blocks`                         | 1664  | **no**              |
+| `type`                           | 1390  | **no**              |
+| `addFunctionCalls`               | 594   | **no**              |
+| `addFunctionDefinition`          | 500   | **no**              |
+| `includeAi`                      | 32    | yes                 |
+| `addFunctionCallsSortByPosition` | 10    | **no**              |
 
 Every attribute the product owner named by hand is in the "no" column:
 the selected song (`packId`, 1376 files), the sound allowlist (`sounds`,
@@ -85,7 +85,7 @@ the selected song (`packId`, 1376 files), the sound allowlist (`sounds`,
 offer `includeAi` (32 files) and omit `toolbox.blocks` (1664 files).
 
 This is not an oversight to be fixed by extending the schema. The schema is
-a *validation gate for a consumption path*, and it is deliberately narrow:
+a _validation gate for a consumption path_, and it is deliberately narrow:
 `z.object` strips unknown keys, so the fields it omits are the fields the
 new music package has not yet ported. Widening it to serve the panel would
 change what the lab receives at runtime — the panel's needs and the parser's
@@ -108,7 +108,7 @@ Two further reasons zod cannot drive the panel even at full coverage:
 closer to reality than the zod schema: 25 declared fields, including
 `packId`, `sounds`, `guideMode`, `toolboxDefinition`, `blockMode`. Its own
 docstring admits it is hand-written and only partly synchronised with the
-schema. So the *better* of the two candidate sources is already a
+schema. So the _better_ of the two candidate sources is already a
 hand-maintained table — the question is only where it lives and what it
 carries.
 
@@ -124,7 +124,7 @@ It still fails as a derivation source:
   `validationTimeout`, `aiCodeGenerateAdlibId`, `aiCodeGenerateAdlib`,
   `aiCodeGenerateText`, `aiCodeGenerateExtraPrompt`, `danceMove`. Generating
   a panel from the type would offer six controls that do nothing in the lab
-  this prototype mounts. (Several *are* read by the legacy
+  this prototype mounts. (Several _are_ read by the legacy
   `apps/src/music/` implementation — which is the point: the type is a union
   of two labs' needs, not a statement about either.)
 - **Under-declares.** `aiCodeGenerate` (43 files), `text` (35), nested
@@ -147,7 +147,7 @@ Across every level type it exposes exactly three editable level fields:
   for content experiences and the markdown-bearing generic variants.
 
 Deriving the panel from the ops yields a three-row panel. The ops are the
-*write* half of a descriptor and cannot supply the read half. They do,
+_write_ half of a descriptor and cannot supply the read half. They do,
 however, tell us honestly how much new write surface the panel implies —
 see section 3.
 
@@ -163,7 +163,7 @@ Why that file specifically:
   `buildMusicLevelProperties` 25, `buildMazeLevelProperties` 17 plus a
   `...properties` spread (levelProperties.ts:31-148). A field the builder
   does not emit cannot reach the client, so a descriptor for it is dead on
-  arrival. The builder is therefore the *upper bound* on the panel, and the
+  arrival. The builder is therefore the _upper bound_ on the panel, and the
   natural place to state the bound once.
 - **Drift becomes testable.** One unit test per kind: for each descriptor,
   assert the key is present in the object the builder returns for a real
@@ -182,17 +182,17 @@ Why that file specifically:
   as" column surfaces exactly this class of bug; neither zod nor the TS type
   would have.
 
-Option *lists* are the one genuinely derivable part, and should be imported
+Option _lists_ are the one genuinely derivable part, and should be imported
 rather than transcribed:
 
-| field | option source | verified at |
-|---|---|---|
-| fish `mode` | `AppMode` (5 values) | `packages/labs/oceans/src/oceans/constants.ts:17-23` |
-| maze `skin` | `Object.keys(defaultSkins)` (8) | `packages/labs/maze/src/skins.ts:5-353` |
-| music `toolbox.blocks` categories | `Categories` (10) | `packages/labs/music/src/blockly/toolbox/constants.ts` |
-| music block types | `BlockTypes` (~46) | `packages/labs/music/src/blockly/blockTypes.ts` |
-| music `blockMode` | `BlockMode` (2) | `packages/labs/music/src/constants.ts:37-40` |
-| music `guideMode` | `MusicLevelData['guideMode']` (2) | `packages/labs/music/src/types.ts:41` |
+| field                             | option source                     | verified at                                            |
+| --------------------------------- | --------------------------------- | ------------------------------------------------------ |
+| fish `mode`                       | `AppMode` (5 values)              | `packages/labs/oceans/src/oceans/constants.ts:17-23`   |
+| maze `skin`                       | `Object.keys(defaultSkins)` (8)   | `packages/labs/maze/src/skins.ts:5-353`                |
+| music `toolbox.blocks` categories | `Categories` (10)                 | `packages/labs/music/src/blockly/toolbox/constants.ts` |
+| music block types                 | `BlockTypes` (~46)                | `packages/labs/music/src/blockly/blockTypes.ts`        |
+| music `blockMode`                 | `BlockMode` (2)                   | `packages/labs/music/src/constants.ts:37-40`           |
+| music `guideMode`                 | `MusicLevelData['guideMode']` (2) | `packages/labs/music/src/types.ts:41`                  |
 
 A caution that must be designed for: **real data contains values the
 constants do not model.** `mode` in the wild includes `pondlab` (1 level),
@@ -211,8 +211,8 @@ flat: no plugin registry, no runtime schema composition. It is a table.
 ```ts
 /** Where the value lives on the served LevelProperties entry. */
 type FieldPath =
-  | {at: 'property'; key: string}          // levelProperties[key]
-  | {at: 'levelData'; key: string}         // levelProperties.levelData[key]
+  | {at: 'property'; key: string} // levelProperties[key]
+  | {at: 'levelData'; key: string} // levelProperties.levelData[key]
   | {at: 'levelDataToolbox'; key: string}; // levelProperties.levelData.toolbox[key]
 
 type Editor =
@@ -220,22 +220,29 @@ type Editor =
   | {kind: 'text'}
   | {kind: 'boolean'}
   | {kind: 'number'}
-  | {kind: 'enum'; options: readonly {value: string; label: string}[];
-     /** Real data carries values the lab's constants omit (mode=pondlab,
-      * skin=farmer_night). Render the current value regardless. */
-     allowUnknown: true}
-  | {kind: 'songPicker'}      // packId + sounds together; see section 4
-  | {kind: 'blockList'; categories: readonly string[]; blockTypes: readonly string[]}
-  | {kind: 'readonly'};       // shown for orientation, not editable
+  | {
+      kind: 'enum';
+      options: readonly {value: string; label: string}[];
+      /** Real data carries values the lab's constants omit (mode=pondlab,
+       * skin=farmer_night). Render the current value regardless. */
+      allowUnknown: true;
+    }
+  | {kind: 'songPicker'} // packId + sounds together; see section 4
+  | {
+      kind: 'blockList';
+      categories: readonly string[];
+      blockTypes: readonly string[];
+    }
+  | {kind: 'readonly'}; // shown for orientation, not editable
 
 /** Which op carries the write, and how the patch is shaped. */
 type WritePath =
-  | {op: 'overrideLevelInstructions'}                     // exists today
-  | {op: 'updateLevel'}                                   // exists today (title only)
-  | {op: 'updateContent'}                                 // exists today
-  | {op: 'updateLevelProperties'; merge: 'shallow'}       // NEW, section 3
-  | {op: 'updateLevelProperties'; merge: 'levelData'}     // NEW, nested merge
-  | {op: 'none'; reason: string};                         // readonly: say why
+  | {op: 'overrideLevelInstructions'} // exists today
+  | {op: 'updateLevel'} // exists today (title only)
+  | {op: 'updateContent'} // exists today
+  | {op: 'updateLevelProperties'; merge: 'shallow'} // NEW, section 3
+  | {op: 'updateLevelProperties'; merge: 'levelData'} // NEW, nested merge
+  | {op: 'none'; reason: string}; // readonly: say why
 
 interface LevelFieldDescriptor {
   /** Stable id for selection state and change-log readability. */
@@ -284,7 +291,7 @@ why.
 
 ## 3. Coverage map
 
-Relevance below means *the mounted lab reads it*. Verified by grep over
+Relevance below means _the mounted lab reads it_. Verified by grep over
 `frontend/packages/labs/*/src`, excluding tests and fixtures.
 
 ### 3.0 The one result that reframes the whole panel
@@ -301,9 +308,9 @@ takes only `appMode`, `guides`, `textToSpeechLocale` as props
 So the product owner's observation about music lab generalises further than
 stated:
 
-| field | music | maze | fish | generic |
-|---|---|---|---|---|
-| `longInstructions` | lab renders it | lab renders it | host renders it | host renders it |
+| field               | music                | maze                 | fish               | generic            |
+| ------------------- | -------------------- | -------------------- | ------------------ | ------------------ |
+| `longInstructions`  | lab renders it       | lab renders it       | host renders it    | host renders it    |
 | `shortInstructions` | **nothing reads it** | **nothing reads it** | host fallback only | host fallback only |
 
 The host's own fallback is `LevelInstructions.tsx:49-53` — `shortInstructions`
@@ -321,20 +328,20 @@ behaviour asked for, now with a reason attached rather than a special case.
 Top editables, by real-world frequency. "New op" means no existing op can
 carry the write.
 
-| # | attribute | path | editor | writable today | round-trip |
-|---|---|---|---|---|---|
-| 1 | `longInstructions` | property | markdown | **yes** — `overrideLevelInstructions` | field |
-| 2 | `title` | experience | text | **yes** — `updateLevel` (no UI yet) | field |
-| 3 | selected song | `levelData.packId` (+`sounds`) | songPicker | new op | **group** |
-| 4 | allowed blocks | `levelData.toolbox.blocks` | blockList | new op | field |
-| 5 | toolbox layout | `levelData.toolbox.type` | enum `category`/`flyout` | new op | field |
-| 6 | guide mode | `levelData.guideMode` | enum + none | new op | field |
-| 7 | sound library | `levelData.library` | enum, `allowUnknown` | new op | **group** (with 3) |
-| 8 | `showSoundFilters` | `levelData` | boolean | new op | field |
-| — | `shortInstructions` | property | *hidden* | n/a | n/a — nothing reads it |
-| — | `startSources` | `levelData` | readonly | no | **unsafe** |
-| — | `validations` | property | readonly | no | **unsafe** |
-| — | `toolboxDefinition` | `levelData` | readonly | no | **unsafe** |
+| #   | attribute           | path                           | editor                   | writable today                        | round-trip             |
+| --- | ------------------- | ------------------------------ | ------------------------ | ------------------------------------- | ---------------------- |
+| 1   | `longInstructions`  | property                       | markdown                 | **yes** — `overrideLevelInstructions` | field                  |
+| 2   | `title`             | experience                     | text                     | **yes** — `updateLevel` (no UI yet)   | field                  |
+| 3   | selected song       | `levelData.packId` (+`sounds`) | songPicker               | new op                                | **group**              |
+| 4   | allowed blocks      | `levelData.toolbox.blocks`     | blockList                | new op                                | field                  |
+| 5   | toolbox layout      | `levelData.toolbox.type`       | enum `category`/`flyout` | new op                                | field                  |
+| 6   | guide mode          | `levelData.guideMode`          | enum + none              | new op                                | field                  |
+| 7   | sound library       | `levelData.library`            | enum, `allowUnknown`     | new op                                | **group** (with 3)     |
+| 8   | `showSoundFilters`  | `levelData`                    | boolean                  | new op                                | field                  |
+| —   | `shortInstructions` | property                       | _hidden_                 | n/a                                   | n/a — nothing reads it |
+| —   | `startSources`      | `levelData`                    | readonly                 | no                                    | **unsafe**             |
+| —   | `validations`       | property                       | readonly                 | no                                    | **unsafe**             |
+| —   | `toolboxDefinition` | `levelData`                    | readonly                 | no                                    | **unsafe**             |
 
 Why the three unsafe ones are unsafe:
 
@@ -349,7 +356,7 @@ Why the three unsafe ones are unsafe:
   not a descriptor row.
 - **`toolboxDefinition`** is a raw Blockly `ToolboxInfo` (354 levels) and,
   when present, wins over `toolbox` entirely (Driver.ts:768). Offer it as
-  read-only *and* use its presence to hide the block-list editor, so the
+  read-only _and_ use its presence to hide the block-list editor, so the
   panel never shows an edit that cannot take effect.
 
 ### 3.2 Maze / Karel
@@ -361,19 +368,19 @@ Ground truth: 4100 `.level` files under `dashboard/config/levels/custom/maze/`
 of what is actually consumed — everything else in that spread is inert in
 this prototype.
 
-| # | attribute | path | editor | writable today | round-trip |
-|---|---|---|---|---|---|
-| 1 | `longInstructions` | property | markdown | **yes** | field |
-| 2 | `skin` | property | enum (8, `allowUnknown`) | new op | field |
-| 3 | `ideal` (block target) | property | number | new op | field |
-| 4 | `startDirection` | property | enum 0-3 | new op | field |
-| 5 | `toolboxBlocksXml` | property | blockList (XML-backed) | new op | field |
-| 6 | `title` | experience | text | **yes** (no UI) | field |
-| 7 | `maze` (the grid) | property | readonly | no | **unsafe** |
-| 8 | `startBlocksXml` / `solutionBlocksXml` | property | readonly | no | **unsafe** |
-| — | `authored_hints` | property | readonly | no | **unsafe** |
-| — | `shortInstructions` | property | *hidden* | n/a | nothing reads it |
-| — | `step_mode`, `is_k1`, `use_contract_editor`, `examples_*`, `definition_*`, `contract_*`, `disable_*`, `shape_shift`, `sequencing`, `flower_type` … | property | *hidden* | n/a | inert: no reader in `packages/labs/maze` |
+| #   | attribute                                                                                                                                          | path       | editor                   | writable today  | round-trip                               |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------ | --------------- | ---------------------------------------- |
+| 1   | `longInstructions`                                                                                                                                 | property   | markdown                 | **yes**         | field                                    |
+| 2   | `skin`                                                                                                                                             | property   | enum (8, `allowUnknown`) | new op          | field                                    |
+| 3   | `ideal` (block target)                                                                                                                             | property   | number                   | new op          | field                                    |
+| 4   | `startDirection`                                                                                                                                   | property   | enum 0-3                 | new op          | field                                    |
+| 5   | `toolboxBlocksXml`                                                                                                                                 | property   | blockList (XML-backed)   | new op          | field                                    |
+| 6   | `title`                                                                                                                                            | experience | text                     | **yes** (no UI) | field                                    |
+| 7   | `maze` (the grid)                                                                                                                                  | property   | readonly                 | no              | **unsafe**                               |
+| 8   | `startBlocksXml` / `solutionBlocksXml`                                                                                                             | property   | readonly                 | no              | **unsafe**                               |
+| —   | `authored_hints`                                                                                                                                   | property   | readonly                 | no              | **unsafe**                               |
+| —   | `shortInstructions`                                                                                                                                | property   | _hidden_                 | n/a             | nothing reads it                         |
+| —   | `step_mode`, `is_k1`, `use_contract_editor`, `examples_*`, `definition_*`, `contract_*`, `disable_*`, `shape_shift`, `sequencing`, `flower_type` … | property   | _hidden_                 | n/a             | inert: no reader in `packages/labs/maze` |
 
 That last row is 20+ properties present on nearly every real maze level
 (`step_mode` 4088, `is_k1` 4064, `disable_param_editing` 3976,
@@ -381,7 +388,7 @@ That last row is 20+ properties present on nearly every real maze level
 other legacy labs' Blockly configuration. Hiding them is most of the value
 of the relevance predicate on this type.
 
-`flower_type` (2670 levels) deserves a callout: it is *not* inert by
+`flower_type` (2670 levels) deserves a callout: it is _not_ inert by
 intent. `Bee.ts:40` wants it, as `flowerType`. The importer never camelises
 it. Either the descriptor is `{write: {op:'none', reason:'importer emits
 flower_type; Bee.ts reads flowerType'}}`, or the builder is fixed and the
@@ -411,24 +418,24 @@ Real fish levels carry only 9 distinct property keys, measured over
 `instructions_important` 52, `guides` 31, `ai_tutor_available` 20,
 `contained_level_names` 5.
 
-| # | attribute | path | editor | writable today | round-trip |
-|---|---|---|---|---|---|
-| 1 | `mode` | property | enum (5 from `AppMode`, `allowUnknown`) | new op | field |
-| 2 | `guides` | property | enum `K5` / default | new op | field |
-| 3 | `title` | experience | text | **yes** (no UI) | field |
-| 4 | `longInstructions` | property | markdown | **yes** | field |
-| 5 | `shortInstructions` | property | markdown | **yes** | field |
-| — | `offerBrowserTts` | property | readonly | no | see note |
-| — | everything else in the builder | property | *hidden* | n/a | constant, or unread |
+| #   | attribute                      | path       | editor                                  | writable today  | round-trip          |
+| --- | ------------------------------ | ---------- | --------------------------------------- | --------------- | ------------------- |
+| 1   | `mode`                         | property   | enum (5 from `AppMode`, `allowUnknown`) | new op          | field               |
+| 2   | `guides`                       | property   | enum `K5` / default                     | new op          | field               |
+| 3   | `title`                        | experience | text                                    | **yes** (no UI) | field               |
+| 4   | `longInstructions`             | property   | markdown                                | **yes**         | field               |
+| 5   | `shortInstructions`            | property   | markdown                                | **yes**         | field               |
+| —   | `offerBrowserTts`              | property   | readonly                                | no              | see note            |
+| —   | everything else in the builder | property   | _hidden_                                | n/a             | constant, or unread |
 
 Notes. `mode` must also write `appMode`: the builder sets both from the same
 `properties.mode` (levelProperties.ts:41-45) and the comment says other
 code expects `appMode`. That makes `mode` a `'group'` in practice — a good
 early test of the group mechanism on a trivial field. Zero fish levels in
 the repo set `long_instructions` or `short_instructions`, but the host
-*does* render them for fish (`selfDisplayedByLab` excludes fish), so both
+_does_ render them for fish (`selfDisplayedByLab` excludes fish), so both
 are genuinely editable and genuinely visible — offering them is authoring
-capability, not dead UI. `offerBrowserTts` round-trips as the *string*
+capability, not dead UI. `offerBrowserTts` round-trips as the _string_
 `"true"`/`"false"` through `.level` XML (levelProperties.ts:18-29); a
 boolean editor writing a real boolean would diverge from the on-disk
 convention, so leave it read-only until a publish adapter needs it.
@@ -437,20 +444,20 @@ convention, so leave it read-only until a publish adapter needs it.
 
 These have no lab. They are rendered by
 `apps/studio/src/modules/authoring/components/renderers/*` off
-`GenericLevelData` (types.ts:99-129), which is a *closed union the prototype
-itself defines*. This is the one place where derivation genuinely works: the
+`GenericLevelData` (types.ts:99-129), which is a _closed union the prototype
+itself defines_. This is the one place where derivation genuinely works: the
 zod schema at changeSchema.ts:86-131 is complete by construction, because
 the renderers and the schema are the same team's code.
 
-| variant | attributes | writable today |
-|---|---|---|
-| all | `title` | **yes** — `updateLevel` |
-| multi/match/markdown | `markdown` | **yes** — `updateContent` |
-| multi | `question`, `answers[].text`, `answers[].correct`, `allowMultipleAttempts` | new op |
-| match | `pairs[].question`, `pairs[].answer` | new op |
-| video | `videoKey`, `youtubeCode`, `displayName` | new op |
-| levelGroup | `title`; nested `pages[].levels[]` | **unsafe** (nested, self-referential) |
-| bubbleChoice | `displayName`, `choices[].displayName` | new op |
+| variant              | attributes                                                                 | writable today                        |
+| -------------------- | -------------------------------------------------------------------------- | ------------------------------------- |
+| all                  | `title`                                                                    | **yes** — `updateLevel`               |
+| multi/match/markdown | `markdown`                                                                 | **yes** — `updateContent`             |
+| multi                | `question`, `answers[].text`, `answers[].correct`, `allowMultipleAttempts` | new op                                |
+| match                | `pairs[].question`, `pairs[].answer`                                       | new op                                |
+| video                | `videoKey`, `youtubeCode`, `displayName`                                   | new op                                |
+| levelGroup           | `title`; nested `pages[].levels[]`                                         | **unsafe** (nested, self-referential) |
+| bubbleChoice         | `displayName`, `choices[].displayName`                                     | new op                                |
 
 The array-valued ones (`answers`, `pairs`, `choices`) need a list editor,
 not a field editor, and their write is a whole-array replace on
@@ -475,7 +482,7 @@ all of them, and Pass F already established its shape.
 
 `overrideLevelInstructions` is the template. At
 `apps/authoring-service/src/state/AuthoringState.ts:105-113` the server
-captures `previous` from the served properties *before* the merge —
+captures `previous` from the served properties _before_ the merge —
 never client-supplied — and at :123-131 folds the patch onto the served
 `levelProperties` entry in the same version bump. `capturePreviousInstructions`
 (:277-298) reads only the keys the patch mentions; `mergeInstructionsOverride`
@@ -483,7 +490,7 @@ never client-supplied — and at :123-131 folds the patch onto the served
 `previous` is what makes revert exact without log replay
 (`apps/studio/src/modules/authoring/revert.ts:51-58`), and it is why
 `updateUnit`/`updateLesson`/`updateContent`/`updateLevel` are currently
-*not* revertible (revert.ts:20-27).
+_not_ revertible (revert.ts:20-27).
 
 So:
 
@@ -505,7 +512,7 @@ Three properties to hold onto:
   with no descriptor for that level's `appName`. This is the same lesson
   changeSchema.ts:6-16 records about `widgetId`: a `Record<string, unknown>`
   reaching a merge is an arbitrary-write primitive. Here the descriptor
-  table *is* the allowlist, which is a second reason to keep it in one
+  table _is_ the allowlist, which is a second reason to keep it in one
   place.
 - **Shallow, not deep.** Three explicit nesting levels, matching the three
   `FieldPath` variants. A general deep merge cannot express "replace this
@@ -552,7 +559,7 @@ song titles — `sabrina_carpenter_espresso` 88,
 
 **The write semantics are the interesting part.** `sounds` is
 `{[category: string]: string[]}` (`player/types.ts:58-60`) and in practice
-its single key *is the packId*. From
+its single key _is the packId_. From
 `dashboard/config/levels/custom/music/Change_the_volume_ keyboard_navigation.level`:
 
 ```json
@@ -617,7 +624,7 @@ whole-value replace beneath). `roundTrip: 'field'` — it does not constrain
 
 Two guards. Hide the editor when `toolboxDefinition` is set (354 levels) —
 it wins. And `blockMode` (`Simple2` | `Advanced`, 49 levels) selects the
-default category→block map the allowlist filters, so the *offered* block
+default category→block map the allowlist filters, so the _offered_ block
 set depends on it; the block list's options are a function of `blockMode`,
 not a constant.
 
@@ -641,8 +648,8 @@ No field named `pointer` exists. Grep for `pointer` across
 - unset (1771 of 1805 levels) → normal ResourcePanel instructions tab.
 
 So `guideMode` is a three-option enum (`instructions`, `aiCodeGenerate`,
-unset) and it is the field that decides *where the author's markdown
-appears*. It belongs directly beside the `longInstructions` editor in the
+unset) and it is the field that decides _where the author's markdown
+appears_. It belongs directly beside the `longInstructions` editor in the
 panel, not in an advanced section — it is the single most explanatory music
 control the panel can offer, and today it is invisible to authors.
 
@@ -704,7 +711,7 @@ fetch, no new cache key. Panel writes invalidate
 `['authoring','levelProperties', levelNumericId]`, exactly as
 `LevelInstructions.tsx:83-86` does today.
 
-Selection must be visibly distinct from the *active* experience (which
+Selection must be visibly distinct from the _active_ experience (which
 drives what is mounted). Two different concepts sharing one highlight would
 be the first thing to confuse an author.
 
@@ -723,7 +730,7 @@ outright rather than coexisting:
   `editingContentId` state go. `ContentComposer` survives as the panel's
   markdown row for content experiences; its `updateContent` call
   (:356-363) moves into the panel. `ContentComposer` stays as-is for the
-  *insertion* path (`InsertPoint`), which is creation, not editing — a
+  _insertion_ path (`InsertPoint`), which is creation, not editing — a
   distinction worth keeping.
 - `InsertPoint` and `ChangeHistory` are untouched. Insertion is not
   property editing, and the change log is the panel's audit trail: every

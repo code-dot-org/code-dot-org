@@ -9,7 +9,11 @@ import * as esbuild from 'esbuild';
 import fs from 'node:fs';
 import path from 'node:path';
 
-import {computeWidgetArtifact, listWidgetSlugs, PACKAGE_ROOT} from '../src/buildCatalog.js';
+import {
+  computeWidgetArtifact,
+  listWidgetSlugs,
+  PACKAGE_ROOT,
+} from '../src/buildCatalog.js';
 
 function workspacePackageVersion(packageDirName: string): string {
   const pkgJsonPath = path.join(
@@ -18,9 +22,8 @@ function workspacePackageVersion(packageDirName: string): string {
     packageDirName,
     'package.json',
   );
-  return (
-    JSON.parse(fs.readFileSync(pkgJsonPath, 'utf8')) as {version: string}
-  ).version;
+  return (JSON.parse(fs.readFileSync(pkgJsonPath, 'utf8')) as {version: string})
+    .version;
 }
 
 async function rehash(slug: string): Promise<void> {

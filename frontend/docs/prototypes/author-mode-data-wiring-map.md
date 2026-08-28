@@ -26,20 +26,20 @@ Companion documents:
 Per type, "editable surface" means: of the fields the renderer or the mounted
 lab actually reads off the served payload, how many can an author change.
 
-| type | fields consumed | manual UI | chat (agent tool) | neither |
-|---|---|---|---|---|
-| maze / Karel | 12 | 9 (75%) | 8 (draft levels only) | 3 |
-| fish / Oceans | 5 | 2 (40%) | 2 | 3 |
-| music | 9 | 1 (11%) | 1 | 8 |
-| multi | 6 | 0 | 2 | 4 |
-| match | 4 | 0 | 2 | 2 |
-| markdown (External) | 2 | 0 | 2 | 0 |
-| video | 4 | 0 | 1 | 3 |
-| levelGroup | 3+nested | 0 | 1 | rest |
-| bubbleChoice | 4+nested | 0 | 1 | rest |
-| opaque / unsupported | 2 | 0 | 0 | 2 |
-| widget | 6 | 0 | 1 (source) | 5 |
-| content | 2 | 2 (100%) | 2 | 0 |
+| type                 | fields consumed | manual UI | chat (agent tool)     | neither |
+| -------------------- | --------------- | --------- | --------------------- | ------- |
+| maze / Karel         | 12              | 9 (75%)   | 8 (draft levels only) | 3       |
+| fish / Oceans        | 5               | 2 (40%)   | 2                     | 3       |
+| music                | 9               | 1 (11%)   | 1                     | 8       |
+| multi                | 6               | 0         | 2                     | 4       |
+| match                | 4               | 0         | 2                     | 2       |
+| markdown (External)  | 2               | 0         | 2                     | 0       |
+| video                | 4               | 0         | 1                     | 3       |
+| levelGroup           | 3+nested        | 0         | 1                     | rest    |
+| bubbleChoice         | 4+nested        | 0         | 1                     | rest    |
+| opaque / unsupported | 2               | 0         | 0                     | 2       |
+| widget               | 6               | 0         | 1 (source)            | 5       |
+| content              | 2               | 2 (100%)  | 2                     | 0       |
 
 Two write-op patterns exist (§1). Nine field groups need a write path that
 does not exist; two new ops cover all of them (§7).
@@ -60,25 +60,25 @@ then folded into the served `levelProperties` by
 `AuthoringState.applyCurriculumChange`
 (`apps/authoring-service/src/state/AuthoringState.ts:92-191`).
 
-| op | what it patches | `previous` captured? | revertible? | manual UI | agent tool |
-|---|---|---|---|---|---|
-| `createCourse` | new `CourseModel` | no | no | `routes/author/index.tsx:54` | `create_course` |
-| `removeCourse` | drops a course | no | no | `RemoveCourseButton.tsx:40` | — |
-| `createUnit` | new `Unit` | no | no | `routes/author/$courseId/index.tsx:138` | `create_unit` |
-| `createLesson` | new `Lesson` | no | no | `routes/author/$courseId/index.tsx:88` | `create_lesson` |
-| `updateUnit` | `Partial<UnitStub>` (`displayName`, `overview`, `origin`, `id`) | no | **no** | — | — |
-| `updateLesson` | `LessonPatch` (7 fields, `apply.ts:201-205`) | no | **no** | — | `update_lesson`, `set_adaptive_policy` |
-| `insertExperience` | whole `Experience` at position | n/a | yes (→`removeExperience`) | `InsertPoint.tsx:81` | `insert_content`, `create_widget` |
-| `removeExperience` | drops one experience | no | no | `OutlineRail.tsx:64` | `remove_experience` |
-| `moveExperience` | position / lesson | no | **no** (prior position not retained) | `OutlineRail.tsx:61` | `move_experience` |
-| `updateContent` | `ContentPatch{title, markdown}` | no | **no** | `LessonPlayer.tsx:552` (content-kind only) | `update_content` |
-| `attachExistingLevel` | resolves `levelKey`, inserts | n/a | yes (→`removeExperience`) | `InsertPoint.tsx:102` | `attach_existing_level` |
-| `createWidget` | `WidgetDescriptor` | no | no | — | `create_widget` |
-| `updateWidgetMetadata` | `Partial<WidgetDescriptor>` | no | no | **none** | **none** |
-| `createLevel` | whole `ExistingLevelExperience` | n/a | yes (→`removeExperience`) | — | `create_level` |
-| `updateLevel` | `LevelPatch` = `{title}` only | no | **no** | `LevelRail.tsx:246` (maze-only tab) | `update_level` (title arg) |
-| `overrideLevelInstructions` | `InstructionsPatch{short,long}` | **yes** | **yes** | `PropertiesPanel.tsx:196` | `update_level_instructions` |
-| `overrideLevelDefinition` | `LevelDefinitionPatch` (8 keys) | **yes** | **yes** | `levelDraft.ts:288` | — |
+| op                          | what it patches                                                 | `previous` captured? | revertible?                          | manual UI                                  | agent tool                             |
+| --------------------------- | --------------------------------------------------------------- | -------------------- | ------------------------------------ | ------------------------------------------ | -------------------------------------- |
+| `createCourse`              | new `CourseModel`                                               | no                   | no                                   | `routes/author/index.tsx:54`               | `create_course`                        |
+| `removeCourse`              | drops a course                                                  | no                   | no                                   | `RemoveCourseButton.tsx:40`                | —                                      |
+| `createUnit`                | new `Unit`                                                      | no                   | no                                   | `routes/author/$courseId/index.tsx:138`    | `create_unit`                          |
+| `createLesson`              | new `Lesson`                                                    | no                   | no                                   | `routes/author/$courseId/index.tsx:88`     | `create_lesson`                        |
+| `updateUnit`                | `Partial<UnitStub>` (`displayName`, `overview`, `origin`, `id`) | no                   | **no**                               | —                                          | —                                      |
+| `updateLesson`              | `LessonPatch` (7 fields, `apply.ts:201-205`)                    | no                   | **no**                               | —                                          | `update_lesson`, `set_adaptive_policy` |
+| `insertExperience`          | whole `Experience` at position                                  | n/a                  | yes (→`removeExperience`)            | `InsertPoint.tsx:81`                       | `insert_content`, `create_widget`      |
+| `removeExperience`          | drops one experience                                            | no                   | no                                   | `OutlineRail.tsx:64`                       | `remove_experience`                    |
+| `moveExperience`            | position / lesson                                               | no                   | **no** (prior position not retained) | `OutlineRail.tsx:61`                       | `move_experience`                      |
+| `updateContent`             | `ContentPatch{title, markdown}`                                 | no                   | **no**                               | `LessonPlayer.tsx:552` (content-kind only) | `update_content`                       |
+| `attachExistingLevel`       | resolves `levelKey`, inserts                                    | n/a                  | yes (→`removeExperience`)            | `InsertPoint.tsx:102`                      | `attach_existing_level`                |
+| `createWidget`              | `WidgetDescriptor`                                              | no                   | no                                   | —                                          | `create_widget`                        |
+| `updateWidgetMetadata`      | `Partial<WidgetDescriptor>`                                     | no                   | no                                   | **none**                                   | **none**                               |
+| `createLevel`               | whole `ExistingLevelExperience`                                 | n/a                  | yes (→`removeExperience`)            | —                                          | `create_level`                         |
+| `updateLevel`               | `LevelPatch` = `{title}` only                                   | no                   | **no**                               | `LevelRail.tsx:246` (maze-only tab)        | `update_level` (title arg)             |
+| `overrideLevelInstructions` | `InstructionsPatch{short,long}`                                 | **yes**              | **yes**                              | `PropertiesPanel.tsx:196`                  | `update_level_instructions`            |
+| `overrideLevelDefinition`   | `LevelDefinitionPatch` (8 keys)                                 | **yes**              | **yes**                              | `levelDraft.ts:288`                        | —                                      |
 
 `updateWidgetMetadata` has **zero production callers**. It exists in the
 model (`changes.ts:83-86`), the schema (`changeSchema.ts:263-267`), the
@@ -114,7 +114,7 @@ Two extras `overrideLevelDefinition` carries and `overrideLevelInstructions`
 does not:
 
 - **Staleness rule.** `withSolutionStalenessRule`
-  (`AuthoringState.ts:374-393`) runs *before* the capture. A patch touching
+  (`AuthoringState.ts:374-393`) runs _before_ the capture. A patch touching
   `serialized_maze`/`maze`/`toolboxBlocksXml`/`startDirection`
   (`SOLUTION_STALENESS_TRIGGERS`, `:367-372`) on a level that already has a
   stored `solutionBlocksXml`, and not itself supplying `solutionVerified`,
@@ -136,7 +136,7 @@ does not:
 and `ChangeHistory` offers no Revert control. These are **editable but not
 revertible**.
 
-`updateContent` is the only one of the five that reaches *inside* a level's
+`updateContent` is the only one of the five that reaches _inside_ a level's
 payload: `applyContentPatch` (`apply.ts:100-122`) sets `title` on any
 experience kind, and sets `markdown` on `experience.data` when the data
 variant has a `markdown` key — which is true for `multi`, `match` and
@@ -167,14 +167,14 @@ opened (many generic experiences do carry a `levelNumericId` — see §2.8).
 
 Renderer: `renderers/MultiLevel.tsx`.
 
-| field | produced at | consumed by | write op today | revertible |
-|---|---|---|---|---|
-| `question` | `buildCourse.ts:324` ← `dslLevel.ts:120-147` (`question '…'`) | `MultiLevel.tsx:69` (`<Typography variant="h5">`) | **NONE** | — |
-| `answers[].text` | `buildCourse.ts:325` ← `dslLevel.ts:123-129` (`right`/`wrong`) | `MultiLevel.tsx:89` | **NONE** | — |
-| `answers[].correct` | same (`right`→true, `wrong`→false) | `MultiLevel.tsx:34-41` (grading), `:74`, `:90` | **NONE** | — |
-| `allowMultipleAttempts` | `buildCourse.ts:326` ← `dslLevel.ts:130-133` | `MultiLevel.tsx:43` (lock), `:114` (retry copy) | **NONE** | — |
-| `markdown` | `buildCourse.ts:327` ← `dslLevel.ts:134` (heredoc) | `MultiLevel.tsx:68` | `updateContent` (`apply.ts:113-119`) | no |
-| `title` (experience) | `buildCourse.ts:261` (`display_name`/`title`, else humanized `:72-86`) | `OutlineRail`, progress-dot label (`LessonPlayer.tsx:684`) | `updateContent`/`updateLevel` | no |
+| field                   | produced at                                                            | consumed by                                                | write op today                       | revertible |
+| ----------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------ | ---------- |
+| `question`              | `buildCourse.ts:324` ← `dslLevel.ts:120-147` (`question '…'`)          | `MultiLevel.tsx:69` (`<Typography variant="h5">`)          | **NONE**                             | —          |
+| `answers[].text`        | `buildCourse.ts:325` ← `dslLevel.ts:123-129` (`right`/`wrong`)         | `MultiLevel.tsx:89`                                        | **NONE**                             | —          |
+| `answers[].correct`     | same (`right`→true, `wrong`→false)                                     | `MultiLevel.tsx:34-41` (grading), `:74`, `:90`             | **NONE**                             | —          |
+| `allowMultipleAttempts` | `buildCourse.ts:326` ← `dslLevel.ts:130-133`                           | `MultiLevel.tsx:43` (lock), `:114` (retry copy)            | **NONE**                             | —          |
+| `markdown`              | `buildCourse.ts:327` ← `dslLevel.ts:134` (heredoc)                     | `MultiLevel.tsx:68`                                        | `updateContent` (`apply.ts:113-119`) | no         |
+| `title` (experience)    | `buildCourse.ts:261` (`display_name`/`title`, else humanized `:72-86`) | `OutlineRail`, progress-dot label (`LessonPlayer.tsx:684`) | `updateContent`/`updateLevel`        | no         |
 
 Missing-op sketch: a whole-`data` replace. `answers` is an ordered array
 with per-item correctness — a field-merge cannot express reorder or delete.
@@ -184,12 +184,12 @@ See §7.1.
 
 Renderer: `renderers/MatchLevel.tsx`.
 
-| field | produced at | consumed by | write op today | revertible |
-|---|---|---|---|---|
-| `pairs[].question` | `buildCourse.ts:330` ← `dslLevel.ts:149-172` | `MatchLevel.tsx:76` (Markdown), `:79` (`aria-label`) | **NONE** | — |
-| `pairs[].answer` | same | `MatchLevel.tsx:44` (answer pool), `:52` (grading), `:92` | **NONE** | — |
-| `markdown` | `buildCourse.ts:330` | `MatchLevel.tsx:65` | `updateContent` | no |
-| `title` | `buildCourse.ts:261` | outline only | `updateContent`/`updateLevel` | no |
+| field              | produced at                                  | consumed by                                               | write op today                | revertible |
+| ------------------ | -------------------------------------------- | --------------------------------------------------------- | ----------------------------- | ---------- |
+| `pairs[].question` | `buildCourse.ts:330` ← `dslLevel.ts:149-172` | `MatchLevel.tsx:76` (Markdown), `:79` (`aria-label`)      | **NONE**                      | —          |
+| `pairs[].answer`   | same                                         | `MatchLevel.tsx:44` (answer pool), `:52` (grading), `:92` | **NONE**                      | —          |
+| `markdown`         | `buildCourse.ts:330`                         | `MatchLevel.tsx:65`                                       | `updateContent`               | no         |
+| `title`            | `buildCourse.ts:261`                         | outline only                                              | `updateContent`/`updateLevel` | no         |
 
 The answer pool is `shuffled(pairs.map(p => p.answer))`
 (`MatchLevel.tsx:44`), so every answer is an option for every prompt. Editing
@@ -202,10 +202,10 @@ alike. Any pair editor has to be a markdown editor, not a text input.
 
 ### 2.3 markdown (`External`)
 
-| field | produced at | consumed by | write op today | revertible |
-|---|---|---|---|---|
-| `markdown` | `buildCourse.ts:332` ← `dslLevel.ts:174-181` | `ExperienceStage.tsx:543` (`<Markdown>`) | `updateContent` (chat only) | no |
-| `title` | `buildCourse.ts:261` | outline only | `updateContent` | no |
+| field      | produced at                                  | consumed by                              | write op today              | revertible |
+| ---------- | -------------------------------------------- | ---------------------------------------- | --------------------------- | ---------- |
+| `markdown` | `buildCourse.ts:332` ← `dslLevel.ts:174-181` | `ExperienceStage.tsx:543` (`<Markdown>`) | `updateContent` (chat only) | no         |
+| `title`    | `buildCourse.ts:261`                         | outline only                             | `updateContent`             | no         |
 
 The one generic type that is fully writable today — and only from chat. The
 manual edit bar is gated on `active.kind === 'content'`
@@ -221,12 +221,12 @@ editor, and a WYSIWYG would destroy it.
 
 Renderer: `renderers/VideoLevel.tsx`.
 
-| field | produced at | consumed by | write op today | revertible |
-|---|---|---|---|---|
-| `videoKey` | eager: `buildCourse.ts:292,304`; lazy: `levelCatalog.ts:403-407` | `VideoLevel.tsx:22` (placeholder), `:31` (iframe title fallback) | **NONE** | — |
-| `youtubeCode` | eager only: `buildCourse.ts:298` via `parseVideosCsv` (`:414-435`) | `VideoLevel.tsx:16` (branch), `:30` (embed src) | **NONE** | — |
-| `displayName` | eager: `buildCourse.ts:306` (`display_name`); lazy: never | `VideoLevel.tsx:19`, `:31` | **NONE** | — |
-| `title` | `buildCourse.ts:187-189` | outline only | `updateContent`/`updateLevel` | no |
+| field         | produced at                                                        | consumed by                                                      | write op today                | revertible |
+| ------------- | ------------------------------------------------------------------ | ---------------------------------------------------------------- | ----------------------------- | ---------- |
+| `videoKey`    | eager: `buildCourse.ts:292,304`; lazy: `levelCatalog.ts:403-407`   | `VideoLevel.tsx:22` (placeholder), `:31` (iframe title fallback) | **NONE**                      | —          |
+| `youtubeCode` | eager only: `buildCourse.ts:298` via `parseVideosCsv` (`:414-435`) | `VideoLevel.tsx:16` (branch), `:30` (embed src)                  | **NONE**                      | —          |
+| `displayName` | eager: `buildCourse.ts:306` (`display_name`); lazy: never          | `VideoLevel.tsx:19`, `:31`                                       | **NONE**                      | —          |
+| `title`       | `buildCourse.ts:187-189`                                           | outline only                                                     | `updateContent`/`updateLevel` | no         |
 
 **Asymmetry, verified live.** The lazy attach path
 (`levelCatalog.ts:402-408`) constructs `{type:'video', videoKey}` and never
@@ -240,16 +240,16 @@ video experiences in the running session is in that state — e.g.
 
 Renderer: `renderers/LevelGroupLevel.tsx`.
 
-| field | produced at | consumed by | write op today | revertible |
-|---|---|---|---|---|
-| `title` | `buildCourse.ts:350` ← `dslLevel.ts:214` | `LevelGroupLevel.tsx:31` | **NONE** (this is `data.title`, not `experience.title`) | — |
-| `pages[]` | `buildCourse.ts:351-356` ← `dslLevel.ts:194-215` (`page` markers) | `LevelGroupLevel.tsx:32`, `:65-73` (pager) | **NONE** | — |
-| `pages[].levels[].levelKey` | `buildCourse.ts:352-355` | `LevelGroupLevel.tsx:38,44,48` (React key + fallback label) | **NONE** | — |
-| `pages[].levels[].data` | `buildGenericData` (`buildCourse.ts:373-391`) | `LevelGroupLevel.tsx:33-53` — only `multi` and `markdown` render; anything else is a one-line label | **NONE** | — |
+| field                       | produced at                                                       | consumed by                                                                                         | write op today                                          | revertible |
+| --------------------------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------- | ---------- |
+| `title`                     | `buildCourse.ts:350` ← `dslLevel.ts:214`                          | `LevelGroupLevel.tsx:31`                                                                            | **NONE** (this is `data.title`, not `experience.title`) | —          |
+| `pages[]`                   | `buildCourse.ts:351-356` ← `dslLevel.ts:194-215` (`page` markers) | `LevelGroupLevel.tsx:32`, `:65-73` (pager)                                                          | **NONE**                                                | —          |
+| `pages[].levels[].levelKey` | `buildCourse.ts:352-355`                                          | `LevelGroupLevel.tsx:38,44,48` (React key + fallback label)                                         | **NONE**                                                | —          |
+| `pages[].levels[].data`     | `buildGenericData` (`buildCourse.ts:373-391`)                     | `LevelGroupLevel.tsx:33-53` — only `multi` and `markdown` render; anything else is a one-line label | **NONE**                                                | —          |
 
 Self-referential (`GenericLevelData` inside `GenericLevelData`,
 `types.ts:151-155`; `z.lazy` at `changeSchema.ts:86`). A sub-level's data is
-a *copy* resolved at import time, not a live reference to the sub-level's own
+a _copy_ resolved at import time, not a live reference to the sub-level's own
 experience — `buildGenericData` deliberately assigns no numeric id and
 registers no `levelProperties` (`buildCourse.ts:363-372`). Editing a
 sub-level therefore means editing the parent's embedded copy; there is no
@@ -262,12 +262,12 @@ currently unexercised.
 
 Renderer: `renderers/BubbleChoiceLevel.tsx`.
 
-| field | produced at | consumed by | write op today | revertible |
-|---|---|---|---|---|
-| `displayName` | `buildCourse.ts:336` ← `dslLevel.ts:183-192` | `BubbleChoiceLevel.tsx:26-28` | **NONE** | — |
-| `choices[].levelKey` | `buildCourse.ts:342` | `:31` (key), `:33` (label fallback), `:43` | **NONE** | — |
-| `choices[].displayName` | `peekDisplayName` (`buildCourse.ts:393-410`) | `:33` | **NONE** | — |
-| `choices[].data` | `buildGenericData` (`:344`) | `:35-45` — video plays inline, everything else is an honest "not supported" line | **NONE** | — |
+| field                   | produced at                                  | consumed by                                                                      | write op today | revertible |
+| ----------------------- | -------------------------------------------- | -------------------------------------------------------------------------------- | -------------- | ---------- |
+| `displayName`           | `buildCourse.ts:336` ← `dslLevel.ts:183-192` | `BubbleChoiceLevel.tsx:26-28`                                                    | **NONE**       | —          |
+| `choices[].levelKey`    | `buildCourse.ts:342`                         | `:31` (key), `:33` (label fallback), `:43`                                       | **NONE**       | —          |
+| `choices[].displayName` | `peekDisplayName` (`buildCourse.ts:393-410`) | `:33`                                                                            | **NONE**       | —          |
+| `choices[].data`        | `buildGenericData` (`:344`)                  | `:35-45` — video plays inline, everything else is an honest "not supported" line | **NONE**       | —          |
 
 **Live-data note.** All four bubbleChoice experiences in the session have
 `choices` entries with `levelKey` + `displayName` but **no `data`** — they
@@ -278,12 +278,12 @@ at `:18-21` predicted it; the running session confirms it.
 
 ### 2.7 opaque → `UnsupportedLevel`
 
-| field | produced at | consumed by | write op today |
-|---|---|---|---|
-| `levelKey` | `buildCourse.ts:246`/`levelCatalog.ts:161` | `UnsupportedLevel.tsx:26` | **NONE** (identity) |
-| `levelType` | `buildCourse.ts:250`/`levelCatalog.ts:162` | `UnsupportedLevel.tsx:25` | **NONE** (identity) |
-| `data.properties` | `buildCourse.ts:312`/`levelCatalog.ts:420` | passed in (`ExperienceStage.tsx:242-246`) but **never rendered** — `UnsupportedLevel` destructures only `levelKey`/`levelType`/`reason` (`:18-22`) | n/a |
-| `reason` | `ExperienceStage.tsx:200`, `:334` | `UnsupportedLevel.tsx:29` | n/a |
+| field             | produced at                                | consumed by                                                                                                                                        | write op today      |
+| ----------------- | ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| `levelKey`        | `buildCourse.ts:246`/`levelCatalog.ts:161` | `UnsupportedLevel.tsx:26`                                                                                                                          | **NONE** (identity) |
+| `levelType`       | `buildCourse.ts:250`/`levelCatalog.ts:162` | `UnsupportedLevel.tsx:25`                                                                                                                          | **NONE** (identity) |
+| `data.properties` | `buildCourse.ts:312`/`levelCatalog.ts:420` | passed in (`ExperienceStage.tsx:242-246`) but **never rendered** — `UnsupportedLevel` destructures only `levelKey`/`levelType`/`reason` (`:18-22`) | n/a                 |
+| `reason`          | `ExperienceStage.tsx:200`, `:334`          | `UnsupportedLevel.tsx:29`                                                                                                                          | n/a                 |
 
 66 of 318 level experiences in the session are unsupported: `Panels` 10,
 `Dancelab` 16, `Craft` 14, `Artist` 9, `Bounce` 8, `unknown` 9. Correctly
@@ -335,16 +335,16 @@ the text, because the lab already displays it (`LevelInstructions.tsx:96-101`).
 Builder: `buildFishLevelProperties` (`levelProperties.ts:31-57`), 16 keys.
 Adapter: `apps/studio/src/modules/labs/oceans/index.tsx`.
 
-| field | produced at | consumed by | write op today | revertible |
-|---|---|---|---|---|
-| `longInstructions` | `levelProperties.ts:54` ← `long_instructions` | `LevelInstructions.tsx:50-54` (host block) | `overrideLevelInstructions` — `PropertiesPanel.tsx:196` | **yes** |
-| `shortInstructions` | `levelProperties.ts:55` | `LevelInstructions.tsx:52` (fallback only, when long is empty) | `overrideLevelInstructions` (field shown: `PropertiesPanel.tsx:174-175`, `:219-226`) | **yes** |
-| `mode` | `levelProperties.ts:43` ← `properties.mode` | `oceans/index.tsx:26-29` → `OceansLab appMode` | **NONE** | — |
-| `appMode` | `levelProperties.ts:42` (same source) | nothing in this tree reads it; kept "for whatever else expects it" (`:41-43`) | **NONE** | — |
-| `guides` | `levelProperties.ts:45` | `oceans/index.tsx:30` → `OceansLab guides` | **NONE** | — |
-| `offerBrowserTts` | `levelProperties.ts:50` via `offerBrowserTtsFrom` (`:24-29`) | nothing | — | — |
-| the other 10 constants | `levelProperties.ts:36-53` | nothing | — | — |
-| `title` (experience) | `buildCourse.ts:187-189` | outline, progress dots | `updateLevel` — but the UI is in LevelRail's Level tab, gated `appName === 'maze'` (`LevelRail.tsx:61-64`) | no |
+| field                  | produced at                                                  | consumed by                                                                   | write op today                                                                                             | revertible |
+| ---------------------- | ------------------------------------------------------------ | ----------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------- |
+| `longInstructions`     | `levelProperties.ts:54` ← `long_instructions`                | `LevelInstructions.tsx:50-54` (host block)                                    | `overrideLevelInstructions` — `PropertiesPanel.tsx:196`                                                    | **yes**    |
+| `shortInstructions`    | `levelProperties.ts:55`                                      | `LevelInstructions.tsx:52` (fallback only, when long is empty)                | `overrideLevelInstructions` (field shown: `PropertiesPanel.tsx:174-175`, `:219-226`)                       | **yes**    |
+| `mode`                 | `levelProperties.ts:43` ← `properties.mode`                  | `oceans/index.tsx:26-29` → `OceansLab appMode`                                | **NONE**                                                                                                   | —          |
+| `appMode`              | `levelProperties.ts:42` (same source)                        | nothing in this tree reads it; kept "for whatever else expects it" (`:41-43`) | **NONE**                                                                                                   | —          |
+| `guides`               | `levelProperties.ts:45`                                      | `oceans/index.tsx:30` → `OceansLab guides`                                    | **NONE**                                                                                                   | —          |
+| `offerBrowserTts`      | `levelProperties.ts:50` via `offerBrowserTtsFrom` (`:24-29`) | nothing                                                                       | —                                                                                                          | —          |
+| the other 10 constants | `levelProperties.ts:36-53`                                   | nothing                                                                       | —                                                                                                          | —          |
+| `title` (experience)   | `buildCourse.ts:187-189`                                     | outline, progress dots                                                        | `updateLevel` — but the UI is in LevelRail's Level tab, gated `appName === 'maze'` (`LevelRail.tsx:61-64`) | no         |
 
 Ground truth for the shape: `dashboard/config/levels/custom/fish/Oceans_FishVTrash_2024.level`
 carries exactly `mode`, `guides`, `background`, `parent_level_id`,
@@ -375,57 +375,57 @@ directly.
 Live census over all 45 music levels in the session (each
 `levelData` key, counted from the served entries):
 
-| `levelData` key | levels | read at |
-|---|---|---|
-| `toolbox` | 44 | `Driver.ts:115`, `MusicLab/index.tsx:210` |
-| `startSources` | 42 | `MusicLab/index.tsx:125` |
-| `library` | 38 | `MusicLab/index.tsx:175` |
-| `packId` | 32 | `Driver.ts:155`, `MusicLab/index.tsx:115,138,200` |
-| `sounds` | 31 | `Driver.ts:155` |
-| `validationTimeout` | 22 | **no reader** |
-| `toolboxDefinition` | 10 | **no reader** — §8.11 |
-| `allowChangeStartingPlayheadPosition` | 3 | `MusicLab/index.tsx:376` |
-| `Control` / `Play` (stray dupes) | 2 / 2 | no reader |
-| `blocks` (legacy) | 1 | no reader |
-| `guideMode` | **0** | `MusicLab/index.tsx:88` |
-| `blockMode` | **0** | **no reader** — `Driver.ts:119` hardcodes `BlockMode.SIMPLE2`, `MusicLab/index.tsx:210` passes it literally |
-| `showSoundFilters` | **0** | — |
+| `levelData` key                       | levels | read at                                                                                                     |
+| ------------------------------------- | ------ | ----------------------------------------------------------------------------------------------------------- |
+| `toolbox`                             | 44     | `Driver.ts:115`, `MusicLab/index.tsx:210`                                                                   |
+| `startSources`                        | 42     | `MusicLab/index.tsx:125`                                                                                    |
+| `library`                             | 38     | `MusicLab/index.tsx:175`                                                                                    |
+| `packId`                              | 32     | `Driver.ts:155`, `MusicLab/index.tsx:115,138,200`                                                           |
+| `sounds`                              | 31     | `Driver.ts:155`                                                                                             |
+| `validationTimeout`                   | 22     | **no reader**                                                                                               |
+| `toolboxDefinition`                   | 10     | **no reader** — §8.11                                                                                       |
+| `allowChangeStartingPlayheadPosition` | 3      | `MusicLab/index.tsx:376`                                                                                    |
+| `Control` / `Play` (stray dupes)      | 2 / 2  | no reader                                                                                                   |
+| `blocks` (legacy)                     | 1      | no reader                                                                                                   |
+| `guideMode`                           | **0**  | `MusicLab/index.tsx:88`                                                                                     |
+| `blockMode`                           | **0**  | **no reader** — `Driver.ts:119` hardcodes `BlockMode.SIMPLE2`, `MusicLab/index.tsx:210` passes it literally |
+| `showSoundFilters`                    | **0**  | —                                                                                                           |
 
 Inside `toolbox`: `blocks` 44, `type` 35, `addFunctionCalls` 14,
 `addFunctionDefinition` 6, `addFunctionCallsSortByPosition` 1.
 
-| field | produced at | consumed by | write op today | revertible |
-|---|---|---|---|---|
-| `longInstructions` | `levelProperties.ts:82` | music-lab renders it itself; host shows a placeholder note (`LevelInstructions.tsx:96-99`) | `overrideLevelInstructions` — `PropertiesPanel.tsx:196` | **yes** |
-| `shortInstructions` | `levelProperties.ts:83` | nothing | hidden by `SHORT_INSTRUCTIONS_RELEVANT_BY_APP_NAME` (`PropertiesPanel.tsx:21-23,174-175`) | n/a |
-| `levelData.packId` | `levelProperties.ts:80` (whole `level_data` passthrough) | `Driver.ts:155-157`, `MusicLab/index.tsx:115,138,200` | **NONE** | — |
-| `levelData.sounds` | same | `Driver.ts:155-156` (`setAllowedSounds`) | **NONE** | — |
-| `levelData.library` | same | `MusicLab/index.tsx:175` | **NONE** | — |
-| `levelData.toolbox.blocks` | same | `Driver.ts:115`, `MusicLab/index.tsx:210` | **NONE** | — |
-| `levelData.toolbox.type` | same | `Driver.ts:115` | **NONE** | — |
-| `levelData.toolboxDefinition` | same | **nothing** — `Driver.ts:768` reads `this.toolboxDefinition`, which is never assigned (§8.11) | **NONE** | — |
-| `levelData.startSources` | same | `MusicLab/index.tsx:125` | **NONE** (must stay read-only) | — |
-| `levelData.guideMode` | same | `MusicLab/index.tsx:88` | **NONE** | — |
-| `levelData.allowChangeStartingPlayheadPosition` | same | `MusicLab/index.tsx:376` | **NONE** | — |
-| `validations` | `levelProperties.ts:102` | **no reader in `packages/labs/`** — see §8.4 | **NONE** | — |
-| `exemplarSettings` | `levelProperties.ts:103` (top level) | `MusicLab/index.tsx:271` reads `levelData.exemplarSettings` — **wrong path**, §8.3 | **NONE** | — |
-| `title` | `buildCourse.ts:187-189` | outline | `updateLevel` (no UI for music) | no |
+| field                                           | produced at                                              | consumed by                                                                                   | write op today                                                                            | revertible |
+| ----------------------------------------------- | -------------------------------------------------------- | --------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ---------- |
+| `longInstructions`                              | `levelProperties.ts:82`                                  | music-lab renders it itself; host shows a placeholder note (`LevelInstructions.tsx:96-99`)    | `overrideLevelInstructions` — `PropertiesPanel.tsx:196`                                   | **yes**    |
+| `shortInstructions`                             | `levelProperties.ts:83`                                  | nothing                                                                                       | hidden by `SHORT_INSTRUCTIONS_RELEVANT_BY_APP_NAME` (`PropertiesPanel.tsx:21-23,174-175`) | n/a        |
+| `levelData.packId`                              | `levelProperties.ts:80` (whole `level_data` passthrough) | `Driver.ts:155-157`, `MusicLab/index.tsx:115,138,200`                                         | **NONE**                                                                                  | —          |
+| `levelData.sounds`                              | same                                                     | `Driver.ts:155-156` (`setAllowedSounds`)                                                      | **NONE**                                                                                  | —          |
+| `levelData.library`                             | same                                                     | `MusicLab/index.tsx:175`                                                                      | **NONE**                                                                                  | —          |
+| `levelData.toolbox.blocks`                      | same                                                     | `Driver.ts:115`, `MusicLab/index.tsx:210`                                                     | **NONE**                                                                                  | —          |
+| `levelData.toolbox.type`                        | same                                                     | `Driver.ts:115`                                                                               | **NONE**                                                                                  | —          |
+| `levelData.toolboxDefinition`                   | same                                                     | **nothing** — `Driver.ts:768` reads `this.toolboxDefinition`, which is never assigned (§8.11) | **NONE**                                                                                  | —          |
+| `levelData.startSources`                        | same                                                     | `MusicLab/index.tsx:125`                                                                      | **NONE** (must stay read-only)                                                            | —          |
+| `levelData.guideMode`                           | same                                                     | `MusicLab/index.tsx:88`                                                                       | **NONE**                                                                                  | —          |
+| `levelData.allowChangeStartingPlayheadPosition` | same                                                     | `MusicLab/index.tsx:376`                                                                      | **NONE**                                                                                  | —          |
+| `validations`                                   | `levelProperties.ts:102`                                 | **no reader in `packages/labs/`** — see §8.4                                                  | **NONE**                                                                                  | —          |
+| `exemplarSettings`                              | `levelProperties.ts:103` (top level)                     | `MusicLab/index.tsx:271` reads `levelData.exemplarSettings` — **wrong path**, §8.3            | **NONE**                                                                                  | —          |
+| `title`                                         | `buildCourse.ts:187-189`                                 | outline                                                                                       | `updateLevel` (no UI for music)                                                           | no         |
 
 **Per-field write recommendation.**
 
-| field | mechanism | why |
-|---|---|---|
-| `packId` + `sounds` | one group write, `updateLevelProperties` with `merge:'levelData'` | `sounds` is `{[category]: string[]}` whose single key *is* the packId; changing one alone leaves the allowlist keyed to the old pack, and `Driver.ts:155-157` applies both together |
-| `library` | same group (it invalidates `packId`'s option list) | valid packs are only knowable after fetching `music-library-<library>.json` |
-| `toolbox.blocks` | whole-value replace under `merge:'toolbox'` | per-category allowlist; a deep merge cannot express "remove a block" |
-| `toolbox.type` | scalar, `merge:'toolbox'` | independent |
-| `guideMode` | scalar enum + unset, `merge:'levelData'` | independent; decides where the author's markdown appears (`MusicLab/index.tsx:88`) — belongs beside the instructions editor |
-| `allowChangeStartingPlayheadPosition` | boolean, `merge:'levelData'` | independent |
-| `toolboxDefinition` | **do not offer** | 10 of 45 levels set it and nothing reads it (§8.11). The probe's "hide the block editor when this is set" rule is currently unnecessary — but reinstate both the rule and the editor gate if `Driver.toolboxDefinition` is ever wired up |
-| `startSources` | **read-only** | a Blockly workspace serialization on 42 of 45 levels, and it references sounds as `packId/soundName` — changing the song silently invalidates the authored starting program |
-| `validations` | **read-only** | inert in this prototype (§8.4); writing it would be authoring against a runtime that is not mounted |
-| `blockMode` | **do not offer** | zero levels set it and the lab hardcodes `SIMPLE2` |
-| `validationTimeout` | **do not offer** | 22 levels set it; no reader |
+| field                                 | mechanism                                                         | why                                                                                                                                                                                                                                      |
+| ------------------------------------- | ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `packId` + `sounds`                   | one group write, `updateLevelProperties` with `merge:'levelData'` | `sounds` is `{[category]: string[]}` whose single key _is_ the packId; changing one alone leaves the allowlist keyed to the old pack, and `Driver.ts:155-157` applies both together                                                      |
+| `library`                             | same group (it invalidates `packId`'s option list)                | valid packs are only knowable after fetching `music-library-<library>.json`                                                                                                                                                              |
+| `toolbox.blocks`                      | whole-value replace under `merge:'toolbox'`                       | per-category allowlist; a deep merge cannot express "remove a block"                                                                                                                                                                     |
+| `toolbox.type`                        | scalar, `merge:'toolbox'`                                         | independent                                                                                                                                                                                                                              |
+| `guideMode`                           | scalar enum + unset, `merge:'levelData'`                          | independent; decides where the author's markdown appears (`MusicLab/index.tsx:88`) — belongs beside the instructions editor                                                                                                              |
+| `allowChangeStartingPlayheadPosition` | boolean, `merge:'levelData'`                                      | independent                                                                                                                                                                                                                              |
+| `toolboxDefinition`                   | **do not offer**                                                  | 10 of 45 levels set it and nothing reads it (§8.11). The probe's "hide the block editor when this is set" rule is currently unnecessary — but reinstate both the rule and the editor gate if `Driver.toolboxDefinition` is ever wired up |
+| `startSources`                        | **read-only**                                                     | a Blockly workspace serialization on 42 of 45 levels, and it references sounds as `packId/soundName` — changing the song silently invalidates the authored starting program                                                              |
+| `validations`                         | **read-only**                                                     | inert in this prototype (§8.4); writing it would be authoring against a runtime that is not mounted                                                                                                                                      |
+| `blockMode`                           | **do not offer**                                                  | zero levels set it and the lab hardcodes `SIMPLE2`                                                                                                                                                                                       |
+| `validationTimeout`                   | **do not offer**                                                  | 22 levels set it; no reader                                                                                                                                                                                                              |
 
 ### 3.3 maze / Karel
 
@@ -439,24 +439,24 @@ This is the only type with a real editor. Its write path is `useLevelDraft`
 Save posts as a single `overrideLevelDefinition` (`:287-291`), then
 invalidates the query and runs `checkLevel` (`:292-311`).
 
-| field | produced at | consumed by | write op today | revertible |
-|---|---|---|---|---|
-| `maze` (grid JSON) | `levelProperties.ts:125` (raw spread) | `maze/index.tsx:74` → `map`; `PropertiesPanel.tsx:328` (grid-size readout) | `overrideLevelDefinition` — stage paint → `LessonPlayer.tsx:573` → `levelDraft.ts:208-212` | **yes** |
-| `serialized_maze` | raw spread | `maze/index.tsx:75` → `serializedMaze` | same paint patch (written as a pair) | **yes** |
-| `startDirection` | `levelProperties.ts:142` ← `start_direction` | `maze/index.tsx:71` | `overrideLevelDefinition` — `PropertiesPanel.tsx:339-350` | **yes** |
-| `toolboxBlocksXml` | `levelProperties.ts:144` (from `<toolbox_blocks>`) | `maze/index.tsx:65-68` → `toolboxBlocks` | `overrideLevelDefinition` — chip tray, `PropertiesPanel.tsx:416-451` → `levelDraft.ts:263-277` | **yes** |
-| `startBlocksXml` | `levelProperties.ts:143` | `maze/index.tsx:59-64` → `startBlocks` | `overrideLevelDefinition` — Workspace "Student start" capture, `levelDraft.ts:220-229` | **yes** |
-| `solutionBlocksXml` | `levelProperties.ts:145` | `maze/index.tsx:69` | `overrideLevelDefinition` — **only** by accepting a passing-run offer (`levelDraft.ts:250-261`); a bare canvas capture never enters the draft (`:214-219`) | **yes** |
-| `solutionVerified` | not produced by the importer; only ever written by an override | `levelDraft.ts:181-182`; status line `PropertiesPanel.tsx:516-522`, `LevelRail.tsx:170-176` | `overrideLevelDefinition`, `'true'` client-set only; `'false'` forced server-side (`AuthoringState.ts:374-393`) | **yes** |
-| `ideal` | `levelProperties.ts:141` | `maze/index.tsx:72` | `overrideLevelDefinition` — `LevelRail.tsx:177-186` | **yes** |
-| `longInstructions` | `levelProperties.ts:138` | maze-lab's own bubble (host skips `LevelInstructions`, `ExperienceStage.tsx:359`) | `overrideLevelInstructions` via the lab's bubble click → `PropertiesPanel.tsx:196` | **yes** |
-| `shortInstructions` | `levelProperties.ts:139` | nothing | offered anyway (`PropertiesPanel.tsx:174-175` only suppresses it for music) — §8.5 | yes, but pointless |
-| `title` | `buildCourse.ts:187-189` | outline | `updateLevel` — `LevelRail.tsx:234-274` | **no** |
-| `skin` | `levelProperties.ts:140` | maze-lab dispatch; `PropertiesPanel.tsx:380-383` shows it as a read-only fact | **NONE** | — |
-| `recommendedBlocksXml` | `levelProperties.ts:146` | `maze/index.tsx:70` | **NONE** | — |
-| `authored_hints` | raw spread (snake_case) | `maze/index.tsx:73` → `authoredHints` | **NONE** | — |
-| `flower_type` | raw spread | `Bee.ts:40` reads `level.flowerType` — **nothing produces the camelCase name** | **NONE**, and inert (§8.2) | — |
-| ~20 legacy properties (`step_mode`, `is_k1`, `use_contract_editor`, `examples_*`, `definition_*`, `contract_*`, `disable_*`, `callout_json`, …) | raw spread (`levelProperties.ts:125`) | nothing in `packages/labs/maze` | — | — |
+| field                                                                                                                                           | produced at                                                    | consumed by                                                                                 | write op today                                                                                                                                             | revertible         |
+| ----------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| `maze` (grid JSON)                                                                                                                              | `levelProperties.ts:125` (raw spread)                          | `maze/index.tsx:74` → `map`; `PropertiesPanel.tsx:328` (grid-size readout)                  | `overrideLevelDefinition` — stage paint → `LessonPlayer.tsx:573` → `levelDraft.ts:208-212`                                                                 | **yes**            |
+| `serialized_maze`                                                                                                                               | raw spread                                                     | `maze/index.tsx:75` → `serializedMaze`                                                      | same paint patch (written as a pair)                                                                                                                       | **yes**            |
+| `startDirection`                                                                                                                                | `levelProperties.ts:142` ← `start_direction`                   | `maze/index.tsx:71`                                                                         | `overrideLevelDefinition` — `PropertiesPanel.tsx:339-350`                                                                                                  | **yes**            |
+| `toolboxBlocksXml`                                                                                                                              | `levelProperties.ts:144` (from `<toolbox_blocks>`)             | `maze/index.tsx:65-68` → `toolboxBlocks`                                                    | `overrideLevelDefinition` — chip tray, `PropertiesPanel.tsx:416-451` → `levelDraft.ts:263-277`                                                             | **yes**            |
+| `startBlocksXml`                                                                                                                                | `levelProperties.ts:143`                                       | `maze/index.tsx:59-64` → `startBlocks`                                                      | `overrideLevelDefinition` — Workspace "Student start" capture, `levelDraft.ts:220-229`                                                                     | **yes**            |
+| `solutionBlocksXml`                                                                                                                             | `levelProperties.ts:145`                                       | `maze/index.tsx:69`                                                                         | `overrideLevelDefinition` — **only** by accepting a passing-run offer (`levelDraft.ts:250-261`); a bare canvas capture never enters the draft (`:214-219`) | **yes**            |
+| `solutionVerified`                                                                                                                              | not produced by the importer; only ever written by an override | `levelDraft.ts:181-182`; status line `PropertiesPanel.tsx:516-522`, `LevelRail.tsx:170-176` | `overrideLevelDefinition`, `'true'` client-set only; `'false'` forced server-side (`AuthoringState.ts:374-393`)                                            | **yes**            |
+| `ideal`                                                                                                                                         | `levelProperties.ts:141`                                       | `maze/index.tsx:72`                                                                         | `overrideLevelDefinition` — `LevelRail.tsx:177-186`                                                                                                        | **yes**            |
+| `longInstructions`                                                                                                                              | `levelProperties.ts:138`                                       | maze-lab's own bubble (host skips `LevelInstructions`, `ExperienceStage.tsx:359`)           | `overrideLevelInstructions` via the lab's bubble click → `PropertiesPanel.tsx:196`                                                                         | **yes**            |
+| `shortInstructions`                                                                                                                             | `levelProperties.ts:139`                                       | nothing                                                                                     | offered anyway (`PropertiesPanel.tsx:174-175` only suppresses it for music) — §8.5                                                                         | yes, but pointless |
+| `title`                                                                                                                                         | `buildCourse.ts:187-189`                                       | outline                                                                                     | `updateLevel` — `LevelRail.tsx:234-274`                                                                                                                    | **no**             |
+| `skin`                                                                                                                                          | `levelProperties.ts:140`                                       | maze-lab dispatch; `PropertiesPanel.tsx:380-383` shows it as a read-only fact               | **NONE**                                                                                                                                                   | —                  |
+| `recommendedBlocksXml`                                                                                                                          | `levelProperties.ts:146`                                       | `maze/index.tsx:70`                                                                         | **NONE**                                                                                                                                                   | —                  |
+| `authored_hints`                                                                                                                                | raw spread (snake_case)                                        | `maze/index.tsx:73` → `authoredHints`                                                       | **NONE**                                                                                                                                                   | —                  |
+| `flower_type`                                                                                                                                   | raw spread                                                     | `Bee.ts:40` reads `level.flowerType` — **nothing produces the camelCase name**              | **NONE**, and inert (§8.2)                                                                                                                                 | —                  |
+| ~20 legacy properties (`step_mode`, `is_k1`, `use_contract_editor`, `examples_*`, `definition_*`, `contract_*`, `disable_*`, `callout_json`, …) | raw spread (`levelProperties.ts:125`)                          | nothing in `packages/labs/maze`                                                             | —                                                                                                                                                          | —                  |
 
 Live shape of an imported maze entry (`9000058`, `grade2_maze_intro2`): 21
 raw snake_case keys plus 15 builder keys, with `start_direction` **and**
@@ -487,16 +487,16 @@ Renderer: `WidgetExperienceView.tsx:25-76` → `WidgetFrame` from
 `@code-dot-org/widget-runtime`, keyed on `widgetId` + a source hash (`:65`,
 `:80-86`) so an agent edit remounts the sandbox.
 
-| field | produced at | consumed by | write op today | revertible |
-|---|---|---|---|---|
-| `descriptor.title` | `ClaudeAgentRunner.ts:605` (`create_widget`) | `WidgetExperienceView.tsx:67` (`toolName` prop into the frame) | `updateWidgetMetadata` — **no caller** | no |
-| `descriptor.description` | `:606` | model context only | `updateWidgetMetadata` — no caller | no |
-| `descriptor.inputSchema` | `:607-610` | agent-facing contract | `updateWidgetMetadata` — no caller; should stay read-only | no |
-| `descriptor.resourceUri` | `:611` | derived from id | must not change | — |
-| `descriptor.visibility` / `network` / `eventTypes` | `:612-614` | contract gates (`widgets/contractGates.ts`) | must stay read-only | — |
-| widget **source** (`widgets/<id>/src/index.tsx`) | agent `Write`/`Edit`, confined to `store.widgetsDir` (`ClaudeAgentRunner.ts:286`) | esbuild → `buildWidget.ts` → `injectWidgetChrome` at serve (`server.ts:200-204`) | **chat only** — no op, no UI, a file write plus a watcher (`server.ts:112`) | no (not in the change log at all) |
-| `experience.defaultInput` | `ClaudeAgentRunner.ts:630` | `WidgetExperienceView.tsx:37-43` | **NONE** — no op patches a widget experience's `defaultInput` | — |
-| `experience.title` | `:626` | outline | `updateContent`/`updateLevel` (no UI) | no |
+| field                                              | produced at                                                                       | consumed by                                                                      | write op today                                                              | revertible                        |
+| -------------------------------------------------- | --------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------- |
+| `descriptor.title`                                 | `ClaudeAgentRunner.ts:605` (`create_widget`)                                      | `WidgetExperienceView.tsx:67` (`toolName` prop into the frame)                   | `updateWidgetMetadata` — **no caller**                                      | no                                |
+| `descriptor.description`                           | `:606`                                                                            | model context only                                                               | `updateWidgetMetadata` — no caller                                          | no                                |
+| `descriptor.inputSchema`                           | `:607-610`                                                                        | agent-facing contract                                                            | `updateWidgetMetadata` — no caller; should stay read-only                   | no                                |
+| `descriptor.resourceUri`                           | `:611`                                                                            | derived from id                                                                  | must not change                                                             | —                                 |
+| `descriptor.visibility` / `network` / `eventTypes` | `:612-614`                                                                        | contract gates (`widgets/contractGates.ts`)                                      | must stay read-only                                                         | —                                 |
+| widget **source** (`widgets/<id>/src/index.tsx`)   | agent `Write`/`Edit`, confined to `store.widgetsDir` (`ClaudeAgentRunner.ts:286`) | esbuild → `buildWidget.ts` → `injectWidgetChrome` at serve (`server.ts:200-204`) | **chat only** — no op, no UI, a file write plus a watcher (`server.ts:112`) | no (not in the change log at all) |
+| `experience.defaultInput`                          | `ClaudeAgentRunner.ts:630`                                                        | `WidgetExperienceView.tsx:37-43`                                                 | **NONE** — no op patches a widget experience's `defaultInput`               | —                                 |
+| `experience.title`                                 | `:626`                                                                            | outline                                                                          | `updateContent`/`updateLevel` (no UI)                                       | no                                |
 
 A manual widget-editing tool would write two different things:
 
@@ -505,7 +505,7 @@ A manual widget-editing tool would write two different things:
    (`changeSchema.ts:264-266`), and already appends to the change log. Two
    text fields, zero new server code. Cheapest real win in the map.
 2. **Source** — a `PUT /api/widgets/:id/source` that writes the TSX and runs
-   `rebuildWidgetSource`. This is *not* a `CurriculumChange` today (source
+   `rebuildWidgetSource`. This is _not_ a `CurriculumChange` today (source
    edits bump the version via `notifyWidgetSourceChanged`,
    `AuthoringState.ts:198-203`, without touching the log), so a source editor
    inherits no history, no revert, and does not mark the course touched for
@@ -515,14 +515,14 @@ A manual widget-editing tool would write two different things:
 
 ## 5. Scaffolding: course, unit, lesson, experience placement
 
-| target | fields | write op | previous? | UI | agent |
-|---|---|---|---|---|---|
-| course `displayName`, `gradeLevels`, `offeringKey` | `types.ts:7-14` | **none after create** — no `updateCourse` op exists | — | create only | `create_course` |
-| unit `displayName`, `overview` | `types.ts:16-22` | `updateUnit` (`apply.ts:195-199`) | no | **none** | **none** |
-| lesson `displayName`, `goal`, `durationMinutes`, `overview`, `outline`, `expectedOutcome`, `adaptivePolicy` | `types.ts:24-36`; patch shape `changeSchema.ts:55-63` | `updateLesson` (`apply.ts:201-205`) | no | **none** | `update_lesson`, `set_adaptive_policy` |
-| experience position | — | `moveExperience` (`apply.ts:230-266`) | no | `OutlineRail.tsx:61` | `move_experience` |
-| experience removal | — | `removeExperience` (`apply.ts:217-228`) | no | `OutlineRail.tsx:64` | `remove_experience` |
-| content `title` + `markdown` | `types.ts:45-48` | `updateContent` | no | `LessonPlayer.tsx:550-557` | `update_content` |
+| target                                                                                                      | fields                                                | write op                                            | previous? | UI                         | agent                                  |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- | --------------------------------------------------- | --------- | -------------------------- | -------------------------------------- |
+| course `displayName`, `gradeLevels`, `offeringKey`                                                          | `types.ts:7-14`                                       | **none after create** — no `updateCourse` op exists | —         | create only                | `create_course`                        |
+| unit `displayName`, `overview`                                                                              | `types.ts:16-22`                                      | `updateUnit` (`apply.ts:195-199`)                   | no        | **none**                   | **none**                               |
+| lesson `displayName`, `goal`, `durationMinutes`, `overview`, `outline`, `expectedOutcome`, `adaptivePolicy` | `types.ts:24-36`; patch shape `changeSchema.ts:55-63` | `updateLesson` (`apply.ts:201-205`)                 | no        | **none**                   | `update_lesson`, `set_adaptive_policy` |
+| experience position                                                                                         | —                                                     | `moveExperience` (`apply.ts:230-266`)               | no        | `OutlineRail.tsx:61`       | `move_experience`                      |
+| experience removal                                                                                          | —                                                     | `removeExperience` (`apply.ts:217-228`)             | no        | `OutlineRail.tsx:64`       | `remove_experience`                    |
+| content `title` + `markdown`                                                                                | `types.ts:45-48`                                      | `updateContent`                                     | no        | `LessonPlayer.tsx:550-557` | `update_content`                       |
 
 So: unit fields are **op-complete but UI-less and tool-less** — nothing can
 edit a unit overview today. Course fields have no op at all. Lesson fields are
@@ -539,26 +539,26 @@ beside it.
 Tools are defined at `ClaudeAgentRunner.ts:402-787` and exposed as an
 in-process MCP server (`:398-401`).
 
-| area | manual tool | chat tool | neither |
-|---|---|---|---|
-| course create/remove | yes | create only | — |
-| unit create | yes | yes | — |
-| unit edit | — | — | **`updateUnit` unreachable** |
-| lesson create | yes | yes | — |
-| lesson edit (goal/outline/overview/policy) | — | `update_lesson`, `set_adaptive_policy` | — |
-| insert content | yes | `insert_content` | — |
-| edit content markdown/title | yes (content-kind only) | `update_content` | — |
-| edit generic level markdown/title | — | `update_content` | — |
-| generic level `question`/`answers`/`pairs`/`videoKey`/… | — | — | **all of it** |
-| attach existing level | yes | `attach_existing_level` | — |
-| move / remove experience | yes | yes | — |
-| level title | maze only (`LevelRail.tsx:234`) | `update_level` title arg (draft maze only) | fish/music/generic titles |
-| level instructions | yes (`PropertiesPanel`) | `update_level_instructions` | — |
-| maze grid / toolbox / start blocks / solution / ideal / start direction | yes (`levelDraft`) | `update_level` — **draft levels only**, and refuses after any visual edit (`:706-710`) | imported maze levels have no chat path |
-| music/fish level data | — | — | **all of it** |
-| widget create | — | `create_widget` | — |
-| widget source | — | `Write`/`Edit` under `widgetsDir` | — |
-| widget metadata | — | — | **`updateWidgetMetadata` unreachable** |
+| area                                                                    | manual tool                     | chat tool                                                                              | neither                                |
+| ----------------------------------------------------------------------- | ------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------- |
+| course create/remove                                                    | yes                             | create only                                                                            | —                                      |
+| unit create                                                             | yes                             | yes                                                                                    | —                                      |
+| unit edit                                                               | —                               | —                                                                                      | **`updateUnit` unreachable**           |
+| lesson create                                                           | yes                             | yes                                                                                    | —                                      |
+| lesson edit (goal/outline/overview/policy)                              | —                               | `update_lesson`, `set_adaptive_policy`                                                 | —                                      |
+| insert content                                                          | yes                             | `insert_content`                                                                       | —                                      |
+| edit content markdown/title                                             | yes (content-kind only)         | `update_content`                                                                       | —                                      |
+| edit generic level markdown/title                                       | —                               | `update_content`                                                                       | —                                      |
+| generic level `question`/`answers`/`pairs`/`videoKey`/…                 | —                               | —                                                                                      | **all of it**                          |
+| attach existing level                                                   | yes                             | `attach_existing_level`                                                                | —                                      |
+| move / remove experience                                                | yes                             | yes                                                                                    | —                                      |
+| level title                                                             | maze only (`LevelRail.tsx:234`) | `update_level` title arg (draft maze only)                                             | fish/music/generic titles              |
+| level instructions                                                      | yes (`PropertiesPanel`)         | `update_level_instructions`                                                            | —                                      |
+| maze grid / toolbox / start blocks / solution / ideal / start direction | yes (`levelDraft`)              | `update_level` — **draft levels only**, and refuses after any visual edit (`:706-710`) | imported maze levels have no chat path |
+| music/fish level data                                                   | —                               | —                                                                                      | **all of it**                          |
+| widget create                                                           | —                               | `create_widget`                                                                        | —                                      |
+| widget source                                                           | —                               | `Write`/`Edit` under `widgetsDir`                                                      | —                                      |
+| widget metadata                                                         | —                               | —                                                                                      | **`updateWidgetMetadata` unreachable** |
 
 **Latent allowlist bug.** `update_level_instructions` is defined
 (`:737-768`) but is absent from `CURRICULUM_TOOL_NAMES` (`:343-360`), which
@@ -690,7 +690,7 @@ Two live consequences, both measured:
 
 `repairLevelProperties` (`levelCatalog.ts:344-361`) exists for exactly this
 class of drift but only repairs entries missing `appName`, so neither case is
-caught. Any field table derived from the builders describes what a *fresh*
+caught. Any field table derived from the builders describes what a _fresh_
 session serves, not what the running one does.
 
 ### 8.2 `flower_type` is inert — the probe's finding, still true
@@ -727,7 +727,7 @@ read-only-because-dangerous; it is read-only because nothing reads it.
 `hostRendersInstructions` is false (`ExperienceStage.tsx:359`) so
 `LevelInstructions`'s fallback (`:50-54`) never runs, and nothing in
 `packages/labs/maze` reads `shortInstructions`. An author typing into that
-box on a maze level writes a field with no consumer — and it *is* saved, so
+box on a maze level writes a field with no consumer — and it _is_ saved, so
 it also shows up as a change in the log. 3877 of 4100 real maze levels set
 `short_instructions` today, all equally inert here.
 
@@ -751,7 +751,7 @@ descriptor table has to reproduce rather than tidy up.
 
 ### 8.7 `packId` alone corrupts the sound allowlist
 
-`sounds` is `{[category]: string[]}` and in practice its single key *is* the
+`sounds` is `{[category]: string[]}` and in practice its single key _is_ the
 packId (verified against
 `dashboard/config/levels/custom/music/Change_the_volume_ keyboard_navigation.level`).
 `Driver.ts:155-157` applies `setAllowedSounds(sounds)` then
@@ -784,7 +784,7 @@ while its course is not listed as changed.
 §2.4. The lazy path (`levelCatalog.ts:402-408`) has no access to
 `videos.csv`; only `loadCourse` reads it (`node/loadCourse.ts:84`). Every
 video in the running session is a placeholder. A `videoKey` editor would
-therefore appear to do nothing, because the *code* is what the renderer
+therefore appear to do nothing, because the _code_ is what the renderer
 branches on (`VideoLevel.tsx:16`).
 
 ### 8.11 `toolboxDefinition` looks authoritative and is dead
@@ -813,7 +813,7 @@ gate that hides a block-list editor. That gate is currently a no-op.
 
 §2. Not a data problem — a wiring one, and it is the single largest reason
 the generic types read as 0% editable. 40 of 318 level experiences in the
-session are `runtime: 'generic'`, plus 16 content experiences that *do* have
+session are `runtime: 'generic'`, plus 16 content experiences that _do_ have
 an edit affordance. The op to edit generic markdown already exists and is
 already reachable from chat; only the pencil is missing.
 
@@ -824,7 +824,7 @@ already reachable from chat; only the pencil is missing.
 - Code read at branch `ngfp/author-mode-staging`, tip 8ed71504859.
 - Live session read-only via `GET /api/state` (version 314: 5 courses, 350
   experiences, 11 widgets, 228 changes) and `GET
-  /api/levels/<id>/level_properties` for every fish (9) and music (45) level
+/api/levels/<id>/level_properties` for every fish (9) and music (45) level
   plus one imported maze (`9000058`) and one draft maze (`9000108`).
   No `POST` was issued.
 - `.level` ground truth from

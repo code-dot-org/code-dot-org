@@ -180,14 +180,21 @@ describe('buildCourse bubbleChoice sublevel resolution', () => {
     });
 
     const [experience] = course.units[0].lessons[0].experiences;
-    if (experience.kind !== 'existingLevel' || experience.data?.type !== 'bubbleChoice') {
+    if (
+      experience.kind !== 'existingLevel' ||
+      experience.data?.type !== 'bubbleChoice'
+    ) {
       throw new Error('expected a bubbleChoice experience');
     }
     expect(experience.data.choices).toEqual([
       {
         levelKey: 'songwriter-video',
         displayName: 'Shakira',
-        data: {type: 'video', videoKey: 'musiclab_shakira', displayName: 'Shakira'},
+        data: {
+          type: 'video',
+          videoKey: 'musiclab_shakira',
+          displayName: 'Shakira',
+        },
       },
     ]);
   });

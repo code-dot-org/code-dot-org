@@ -290,7 +290,10 @@ function patchObject(
       }
       parts.push({leading, value: JSON.stringify(newValue)});
     } else {
-      parts.push({leading, value: text.slice(entry.valueStart, entry.valueEnd)});
+      parts.push({
+        leading,
+        value: text.slice(entry.valueStart, entry.valueEnd),
+      });
     }
   }
 
@@ -317,7 +320,8 @@ function patchObject(
 
   const interior = parts
     .map(
-      (part, i) => `${part.leading}${part.value}${i < parts.length - 1 ? ',' : ''}`,
+      (part, i) =>
+        `${part.leading}${part.value}${i < parts.length - 1 ? ',' : ''}`,
     )
     .join('');
   return `{${interior}${closingGap}}`;
@@ -367,7 +371,10 @@ function newLevelScaffold(rootTag: string): string {
  * identical to an edit's — same object-fill and same-block-insert code paths,
  * exercised by the same tests.
  */
-export function buildNewLevelFile(rootTag: string, patch: LevelFilePatch): string {
+export function buildNewLevelFile(
+  rootTag: string,
+  patch: LevelFilePatch,
+): string {
   return patchLevelFile(newLevelScaffold(rootTag), patch);
 }
 
@@ -383,7 +390,9 @@ const BLOCK_TAGS: Record<keyof LevelFileBlocksPatch, string> = {
 
 function patchBlocks(xml: string, patch: LevelFileBlocksPatch): string {
   let result = xml;
-  for (const patchKey of Object.keys(BLOCK_TAGS) as (keyof LevelFileBlocksPatch)[]) {
+  for (const patchKey of Object.keys(
+    BLOCK_TAGS,
+  ) as (keyof LevelFileBlocksPatch)[]) {
     const value = patch[patchKey];
     if (value === undefined) {
       continue;
@@ -406,7 +415,9 @@ function patchNamedBlock(
     const innerStart = xml.indexOf('<xml', match.index);
     const innerText = match[1];
     return (
-      xml.slice(0, innerStart) + newXml + xml.slice(innerStart + innerText.length)
+      xml.slice(0, innerStart) +
+      newXml +
+      xml.slice(innerStart + innerText.length)
     );
   }
   if (newXml === null) {
@@ -420,7 +431,10 @@ function patchNamedBlock(
 function deleteNamedBlock(xml: string, start: number, length: number): string {
   const end = start + length;
   let leadStart = start;
-  while (leadStart > 0 && (xml[leadStart - 1] === ' ' || xml[leadStart - 1] === '\t')) {
+  while (
+    leadStart > 0 &&
+    (xml[leadStart - 1] === ' ' || xml[leadStart - 1] === '\t')
+  ) {
     leadStart--;
   }
   if (leadStart > 0 && xml[leadStart - 1] === '\n') {
@@ -429,7 +443,11 @@ function deleteNamedBlock(xml: string, start: number, length: number): string {
   return xml.slice(0, leadStart) + xml.slice(end);
 }
 
-function insertNamedBlock(xml: string, tagName: string, newXml: string): string {
+function insertNamedBlock(
+  xml: string,
+  tagName: string,
+  newXml: string,
+): string {
   const blocksMatch = xml.match(BLOCKS_PATTERN);
   if (!blocksMatch || blocksMatch.index === undefined) {
     throw new Error(
@@ -445,8 +463,16 @@ function insertNamedBlock(xml: string, tagName: string, newXml: string): string 
 
   const replaced = selfClosing
     ? `<blocks>${newChild}\n${indent}</blocks>`
-    : spliceBeforeClosingTag(trimTrailingWhitespaceBeforeCloseTag(blocksText), '</blocks>', `${newChild}\n${indent}`);
-  return xml.slice(0, blocksStart) + replaced + xml.slice(blocksStart + blocksText.length);
+    : spliceBeforeClosingTag(
+        trimTrailingWhitespaceBeforeCloseTag(blocksText),
+        '</blocks>',
+        `${newChild}\n${indent}`,
+      );
+  return (
+    xml.slice(0, blocksStart) +
+    replaced +
+    xml.slice(blocksStart + blocksText.length)
+  );
 }
 
 /**

@@ -5,9 +5,7 @@ export type {
   BuildWidgetSuccess,
 } from './buildWidget.js';
 export {buildWidget, hasBuiltSource} from './buildWidget.js';
-export type {
-  WidgetArtifact,
-} from './buildCatalog.js';
+export type {WidgetArtifact} from './buildCatalog.js';
 export {
   buildCatalog,
   computeWidgetArtifact,

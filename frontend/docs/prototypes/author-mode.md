@@ -65,8 +65,8 @@ export type Origin = 'levelbuilder' | 'draft';
 // Draft ids are `draft:<uuid>`; imported ids embed the real Levelbuilder keys.
 
 export interface CourseModel {
-  id: string;              // course name, e.g. 'k5-ai-data-2024', or draft:<uuid>
-  offeringKey?: string;    // course_offerings key, e.g. 'k5-ai-data'
+  id: string; // course name, e.g. 'k5-ai-data-2024', or draft:<uuid>
+  offeringKey?: string; // course_offerings key, e.g. 'k5-ai-data'
   displayName: string;
   gradeLevels?: string;
   origin: Origin;
@@ -74,29 +74,29 @@ export interface CourseModel {
 }
 
 export interface Unit {
-  id: string;              // script name, e.g. 'k5-ai-data-2024', or draft:<uuid>
+  id: string; // script name, e.g. 'k5-ai-data-2024', or draft:<uuid>
   displayName: string;
   origin: Origin;
-  overview?: string;       // markdown
+  overview?: string; // markdown
   lessons: Lesson[];
 }
 
 export interface Lesson {
-  id: string;              // `lb:<script>:<lessonKey>` or draft:<uuid>
-  lessonKey?: string;      // real Levelbuilder lesson.key when imported
+  id: string; // `lb:<script>:<lessonKey>` or draft:<uuid>
+  lessonKey?: string; // real Levelbuilder lesson.key when imported
   displayName: string;
   origin: Origin;
-  goal?: string;           // pedagogical intent (outline-first authoring)
+  goal?: string; // pedagogical intent (outline-first authoring)
   durationMinutes?: number;
-  overview?: string;       // learner-facing markdown (student_overview)
-  outline?: string[];      // planned high-level sequence, pre-realization
+  overview?: string; // learner-facing markdown (student_overview)
+  outline?: string[]; // planned high-level sequence, pre-realization
   expectedOutcome?: string;
   experiences: Experience[];
   adaptivePolicy?: AdaptivePolicy;
 }
 
 interface ExperienceBase {
-  id: string;              // `lb:<levelKey>` or draft:<uuid>
+  id: string; // `lb:<levelKey>` or draft:<uuid>
   origin: Origin;
   title?: string;
 }
@@ -110,8 +110,8 @@ export interface ContentExperience extends ExperienceBase {
 /** A real Levelbuilder level, identity preserved. */
 export interface ExistingLevelExperience extends ExperienceBase {
   kind: 'existingLevel';
-  levelKey: string;        // real level name, e.g. 'Oceans_FishVTrash_2024'
-  levelType: string;       // 'Fish' | 'Music' | 'Multi' | 'Match' | 'External' | 'StandaloneVideo' | 'LevelGroup' | 'BubbleChoice' | 'GamelabJr' | ...
+  levelKey: string; // real level name, e.g. 'Oceans_FishVTrash_2024'
+  levelType: string; // 'Fish' | 'Music' | 'Multi' | 'Match' | 'External' | 'StandaloneVideo' | 'LevelGroup' | 'BubbleChoice' | 'GamelabJr' | ...
   runtime: 'labhost' | 'generic' | 'unsupported';
   labKey?: 'oceans' | 'music'; // LAB_REGISTRY key when runtime is labhost
   levelNumericId?: number; // synthetic id for the LevelProperties wire shape
@@ -121,8 +121,8 @@ export interface ExistingLevelExperience extends ExperienceBase {
 /** Agent-created executable learner content, sandboxed. */
 export interface WidgetExperience extends ExperienceBase {
   kind: 'widget';
-  widgetId: string;        // addresses source + descriptor in the widget store
-  toolName: string;        // MCP tool name, e.g. 'present_balance_the_data'
+  widgetId: string; // addresses source + descriptor in the widget store
+  toolName: string; // MCP tool name, e.g. 'present_balance_the_data'
   description?: string;
   defaultInput?: Record<string, unknown>;
 }
@@ -134,7 +134,7 @@ export type Experience =
 
 /** Author-defined constraints the learner-time tutor operates inside. */
 export interface AdaptivePolicy {
-  tutorGuidance?: string;  // author-written guidance
+  tutorGuidance?: string; // author-written guidance
   alternatives?: Record<string, string[]>; // experienceId -> authored alternates
   allowRepeat?: boolean;
 }
@@ -151,18 +151,18 @@ simple level types the prototype renders without their Rails renderers:
 
 ### Runtime mapping for imported level types
 
-| Level type | runtime | rendering |
-| --- | --- | --- |
-| Fish (Oceans) | labhost | real `@code-dot-org/oceans-lab` via `<Lab>`, `appName: 'fish'` |
-| Music | labhost | domain model says labhost, but staging has no `music` lab entrypoint registered — falls to `UnsupportedLevel` |
-| Maze | labhost | real `@code-dot-org/maze-lab` via `<Lab>`, `appName: 'maze'` — both imported and AI-authored (`create_level`) levels; Karel-family skins (Bee/Farmer/Harvester/Collector) stay unsupported (see "AI level authoring: Maze puzzles" below) |
-| External | generic | markdown renderer |
-| Multi | generic | multiple-choice renderer |
-| Match | generic | matching renderer |
-| StandaloneVideo | generic | video card (YouTube embed when key resolves) |
-| LevelGroup | generic | paged container of inlined sub-levels |
-| BubbleChoice | generic | choice chooser; unsupported sublevels fall back |
-| GamelabJr, Dancelab, … | unsupported | honest identity card; author may replace or augment with a Widget |
+| Level type             | runtime     | rendering                                                                                                                                                                                                                                 |
+| ---------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Fish (Oceans)          | labhost     | real `@code-dot-org/oceans-lab` via `<Lab>`, `appName: 'fish'`                                                                                                                                                                            |
+| Music                  | labhost     | domain model says labhost, but staging has no `music` lab entrypoint registered — falls to `UnsupportedLevel`                                                                                                                             |
+| Maze                   | labhost     | real `@code-dot-org/maze-lab` via `<Lab>`, `appName: 'maze'` — both imported and AI-authored (`create_level`) levels; Karel-family skins (Bee/Farmer/Harvester/Collector) stay unsupported (see "AI level authoring: Maze puzzles" below) |
+| External               | generic     | markdown renderer                                                                                                                                                                                                                         |
+| Multi                  | generic     | multiple-choice renderer                                                                                                                                                                                                                  |
+| Match                  | generic     | matching renderer                                                                                                                                                                                                                         |
+| StandaloneVideo        | generic     | video card (YouTube embed when key resolves)                                                                                                                                                                                              |
+| LevelGroup             | generic     | paged container of inlined sub-levels                                                                                                                                                                                                     |
+| BubbleChoice           | generic     | choice chooser; unsupported sublevels fall back                                                                                                                                                                                           |
+| GamelabJr, Dancelab, … | unsupported | honest identity card; author may replace or augment with a Widget                                                                                                                                                                         |
 
 Vibe-coding a Widget replacement for an unsupported type is an explicit,
 supported author move — not silent auto-conversion.
@@ -175,19 +175,43 @@ is the inspectable seam where a production Levelbuilder/Rails write adapter
 would attach.
 
 ```ts
-export type CurriculumChange = {seq: number; at: string; actor: 'agent' | 'author'} & (
+export type CurriculumChange = {
+  seq: number;
+  at: string;
+  actor: 'agent' | 'author';
+} & (
   | {op: 'createCourse'; course: CourseStub}
   | {op: 'createUnit'; courseId: string; unit: UnitStub; position?: number}
   | {op: 'createLesson'; unitId: string; lesson: LessonStub; position?: number}
   | {op: 'updateUnit'; unitId: string; patch: Partial<UnitStub>}
   | {op: 'updateLesson'; lessonId: string; patch: LessonPatch}
-  | {op: 'insertExperience'; lessonId: string; experience: Experience; position: number}
+  | {
+      op: 'insertExperience';
+      lessonId: string;
+      experience: Experience;
+      position: number;
+    }
   | {op: 'removeExperience'; lessonId: string; experienceId: string}
-  | {op: 'moveExperience'; lessonId: string; experienceId: string; toPosition: number; toLessonId?: string}
+  | {
+      op: 'moveExperience';
+      lessonId: string;
+      experienceId: string;
+      toPosition: number;
+      toLessonId?: string;
+    }
   | {op: 'updateContent'; experienceId: string; patch: ContentPatch}
-  | {op: 'attachExistingLevel'; lessonId: string; levelKey: string; position: number}
+  | {
+      op: 'attachExistingLevel';
+      lessonId: string;
+      levelKey: string;
+      position: number;
+    }
   | {op: 'createWidget'; descriptor: WidgetDescriptor}
-  | {op: 'updateWidgetMetadata'; widgetId: string; patch: Partial<WidgetDescriptor>}
+  | {
+      op: 'updateWidgetMetadata';
+      widgetId: string;
+      patch: Partial<WidgetDescriptor>;
+    }
 );
 ```
 
@@ -216,12 +240,12 @@ export interface WidgetDescriptor {
   id: string;
   toolName: string;
   title: string;
-  description: string;      // model-facing
+  description: string; // model-facing
   inputSchema: Record<string, unknown>; // JSON schema
-  resourceUri: string;      // ui://widgets/<id>.html
+  resourceUri: string; // ui://widgets/<id>.html
   visibility: ('model' | 'app')[];
-  network: 'none';          // offline default, explicit and validated
-  eventTypes?: string[];    // structured events the widget emits
+  network: 'none'; // offline default, explicit and validated
+  eventTypes?: string[]; // structured events the widget emits
 }
 ```
 

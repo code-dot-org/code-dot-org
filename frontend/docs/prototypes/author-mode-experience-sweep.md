@@ -33,25 +33,25 @@ screenshots, no clicks that write).
 314). `author-mode-data-wiring-map.md` §9 reports 350; the measured figure is
 339 — `[.courses[].units[].lessons[].experiences[]] | length`.
 
-| kind | levelType | runtime | count | swept live | representative |
-|---|---|---|---|---|---|
-| `existingLevel` | Karel | labhost/maze | 88 | yes | `courseD_bee_nested_loops1a` (Course D, Nested Loops in Maze) |
-| `existingLevel` | Maze | labhost/maze | 70 | yes | `grade2_maze_intro2` (Block by Block L1) |
-| `existingLevel` | Music | labhost/music | 45 | yes | `coding-with-music-play-sound` (Coding with Music L1) |
-| `existingLevel` | StandaloneVideo | generic | 25 | yes | `courseD_video_nested_loops` |
-| `content` | — | — | 16 | yes | `bbb-l1-intro` "Warm-Up: Program Your Teacher" |
-| `existingLevel` | Dancelab | unsupported | 16 | by renderer | Course D, Dance Party |
-| `existingLevel` | Craft | unsupported | 14 | by renderer | Course D, Looking Ahead with Minecraft |
-| `existingLevel` | Panels | unsupported | 10 | yes | `music-coding-intro-effects-panel_launch_standalone` |
-| `existingLevel` | Artist | unsupported | 9 | by renderer | Course D, Drawing Shapes with Loops |
-| `existingLevel` | Fish | labhost/oceans | 9 | yes | `Oceans_Long_2024` (Sort It Out L2) |
-| `existingLevel` | `unknown` | unsupported | 9 | yes | `blockly:Studio:hoc2015_blockly_7_no_video` |
-| `existingLevel` | Bounce | unsupported | 8 | by renderer | Course D, Events in Bounce |
-| `existingLevel` | External | generic | 8 | yes | `music-coding-intro-review_standalone` |
-| `widget` | — | — | 5 | yes | `you_be_the_sorter` (Sort It Out L2) |
-| `existingLevel` | BubbleChoice | generic | 4 | yes | `music-coding-intro-inspiration` |
-| `existingLevel` | Multi | generic | 2 | yes | `music-coding-intro-events-cfu_standalone` |
-| `existingLevel` | Match | generic | 1 | yes | `coding-with-music-seq-cfu-standalone` |
+| kind            | levelType       | runtime        | count | swept live  | representative                                                |
+| --------------- | --------------- | -------------- | ----- | ----------- | ------------------------------------------------------------- |
+| `existingLevel` | Karel           | labhost/maze   | 88    | yes         | `courseD_bee_nested_loops1a` (Course D, Nested Loops in Maze) |
+| `existingLevel` | Maze            | labhost/maze   | 70    | yes         | `grade2_maze_intro2` (Block by Block L1)                      |
+| `existingLevel` | Music           | labhost/music  | 45    | yes         | `coding-with-music-play-sound` (Coding with Music L1)         |
+| `existingLevel` | StandaloneVideo | generic        | 25    | yes         | `courseD_video_nested_loops`                                  |
+| `content`       | —               | —              | 16    | yes         | `bbb-l1-intro` "Warm-Up: Program Your Teacher"                |
+| `existingLevel` | Dancelab        | unsupported    | 16    | by renderer | Course D, Dance Party                                         |
+| `existingLevel` | Craft           | unsupported    | 14    | by renderer | Course D, Looking Ahead with Minecraft                        |
+| `existingLevel` | Panels          | unsupported    | 10    | yes         | `music-coding-intro-effects-panel_launch_standalone`          |
+| `existingLevel` | Artist          | unsupported    | 9     | by renderer | Course D, Drawing Shapes with Loops                           |
+| `existingLevel` | Fish            | labhost/oceans | 9     | yes         | `Oceans_Long_2024` (Sort It Out L2)                           |
+| `existingLevel` | `unknown`       | unsupported    | 9     | yes         | `blockly:Studio:hoc2015_blockly_7_no_video`                   |
+| `existingLevel` | Bounce          | unsupported    | 8     | by renderer | Course D, Events in Bounce                                    |
+| `existingLevel` | External        | generic        | 8     | yes         | `music-coding-intro-review_standalone`                        |
+| `widget`        | —               | —              | 5     | yes         | `you_be_the_sorter` (Sort It Out L2)                          |
+| `existingLevel` | BubbleChoice    | generic        | 4     | yes         | `music-coding-intro-inspiration`                              |
+| `existingLevel` | Multi           | generic        | 2     | yes         | `music-coding-intro-events-cfu_standalone`                    |
+| `existingLevel` | Match           | generic        | 1     | yes         | `coding-with-music-seq-cfu-standalone`                        |
 
 "by renderer" means the type was not individually navigated to, because
 `ExperienceStage`'s fallback branch (`ExperienceStage.tsx:238-248`) routes
@@ -75,20 +75,20 @@ courses; a Levelbuilder search-attach could pull one in, and it would land as
 
 The product owner's model (FINAL IA REVISION, 8/27): the stage decomposes into
 logical components; each is hover-highlightable and click-selectable; clicking
-one opens *its* properties in the right panel; the left rail's "Level" tab
+one opens _its_ properties in the right panel; the left rail's "Level" tab
 holds level-wide settings only.
 
 Measured against the live app, exactly one type implements it:
 
-| type | stage click targets | "Level" tab | right panel reachable |
-|---|---|---|---|
-| Maze / Karel | 4 — Instructions, Play Area, Blocks, Workspace | enabled | yes |
-| Music | 1 — Instructions (host block above the lab) | **disabled** | yes, instructions only |
-| Fish / Oceans | 1 — Instructions (host block above the lab) | **disabled** | yes, instructions only |
-| content | 0 — a pencil swaps the stage for an inline editor | **disabled** | n/a (no panel) |
-| every generic type (video, multi, match, external, bubbleChoice) | **0** | **disabled** | **no** |
-| widget | **0** | **disabled** | **no** |
-| unsupported (Panels, Dancelab, Craft, Artist, Bounce, `unknown`) | 0 | **disabled** | no |
+| type                                                             | stage click targets                               | "Level" tab  | right panel reachable  |
+| ---------------------------------------------------------------- | ------------------------------------------------- | ------------ | ---------------------- |
+| Maze / Karel                                                     | 4 — Instructions, Play Area, Blocks, Workspace    | enabled      | yes                    |
+| Music                                                            | 1 — Instructions (host block above the lab)       | **disabled** | yes, instructions only |
+| Fish / Oceans                                                    | 1 — Instructions (host block above the lab)       | **disabled** | yes, instructions only |
+| content                                                          | 0 — a pencil swaps the stage for an inline editor | **disabled** | n/a (no panel)         |
+| every generic type (video, multi, match, external, bubbleChoice) | **0**                                             | **disabled** | **no**                 |
+| widget                                                           | **0**                                             | **disabled** | **no**                 |
+| unsupported (Panels, Dancelab, Craft, Artist, Bounce, `unknown`) | 0                                                 | **disabled** | no                     |
 
 So the model is shipped for 158 of 339 experiences (47%), degraded to
 instructions-only for 54 more (16%), and absent for the remaining 127 (37%) —
@@ -99,7 +99,7 @@ Two structural notes that shape every recommendation below:
 
 - **The panel is the only place a field edit can live**, and reaching it
   requires a stage click target. For content the prototype instead put the
-  editor *in the stage* (a pencil that replaces the rendered markdown with a
+  editor _in the stage_ (a pencil that replaces the rendered markdown with a
   title input + a raw `<textarea>`). That is the one place the shipped IA
   contradicts itself, and it is also the only non-maze type an author can edit
   at all without chat.
@@ -135,29 +135,29 @@ Karel differs from Maze only in skin-derived vocabulary: the paint tray gains
 `Flower (nectar)` and `Hive (honey)`, the toolbox catalog gains `Get nectar` /
 `Make honey` / `If path ahead` etc. Same four components, same panels.
 
-| logical area | today | should be | data |
-|---|---|---|---|
-| Instructions bubble | panel: two raw `<textarea>`s (Short instructions, Instructions markdown) + Cancel/Save | keep, plus a live markdown preview; drop the Short field (nothing renders it for maze) | `longInstructions`, `shortInstructions` |
-| Instructions → Hint button | **nothing** — the button is on stage, its content is not editable anywhere | a hints list editor (add/edit/remove/reorder, markdown per hint) in the instructions panel, collapsed by default | `authored_hints` (JSON array of `{hint_class, hint_markdown, hint_id, hint_type, tts_url}`) |
-| Play Area → grid | panel: a 7-chip paint tray (Wall / Open / Start / Finish / Obstacle / Flower (nectar) / Hive (honey)); painting happens on the stage | keep — this is the one genuinely spatial gesture | `maze`, `serialized_maze` |
-| Play Area → grid **size** | **nothing** — the panel shows a grid-size readout only | rows/cols steppers in the visualization panel, with an explicit "crop/pad" warning | `maze` array dimensions |
-| Play Area → start direction | panel: `<select>` N/E/S/W | keep | `startDirection` |
-| Play Area → skin | panel: read-only text `Skin: bee` | leave read-only, but say *why* — a skin change re-bases the toolbox, tile vocabulary and stored solution | `skin` |
-| Play Area → per-cell payloads (nectar per flower, honey goal, dirt) | **nothing** | a cell inspector: click a painted cell, edit its amount in the panel | `serialized_maze[r][c]`, `initial_dirt`, `final_dirt` |
-| Blocks (toolbox) | panel: "Available blocks" catalog + "In the toolbox" chip list, add/remove | keep; add reorder, and per-block usage caps | `toolboxBlocksXml` |
-| Workspace | panel: `Student start` / `My solution` mode toggle + solution status line; arranging happens on the stage | keep | `startBlocksXml`, `solutionBlocksXml`, `solutionVerified` |
-| Level settings (left rail "Level" tab) | Title input, solution status line, Target block count, `Check level`, Save | keep; this is the right home for it | `title`, `ideal`, `solutionVerified` |
-| Run feedback | inline success/failure card with "You used N blocks — this can be solved in M" | not authorable, correctly | `ideal` |
+| logical area                                                        | today                                                                                                                                | should be                                                                                                        | data                                                                                        |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| Instructions bubble                                                 | panel: two raw `<textarea>`s (Short instructions, Instructions markdown) + Cancel/Save                                               | keep, plus a live markdown preview; drop the Short field (nothing renders it for maze)                           | `longInstructions`, `shortInstructions`                                                     |
+| Instructions → Hint button                                          | **nothing** — the button is on stage, its content is not editable anywhere                                                           | a hints list editor (add/edit/remove/reorder, markdown per hint) in the instructions panel, collapsed by default | `authored_hints` (JSON array of `{hint_class, hint_markdown, hint_id, hint_type, tts_url}`) |
+| Play Area → grid                                                    | panel: a 7-chip paint tray (Wall / Open / Start / Finish / Obstacle / Flower (nectar) / Hive (honey)); painting happens on the stage | keep — this is the one genuinely spatial gesture                                                                 | `maze`, `serialized_maze`                                                                   |
+| Play Area → grid **size**                                           | **nothing** — the panel shows a grid-size readout only                                                                               | rows/cols steppers in the visualization panel, with an explicit "crop/pad" warning                               | `maze` array dimensions                                                                     |
+| Play Area → start direction                                         | panel: `<select>` N/E/S/W                                                                                                            | keep                                                                                                             | `startDirection`                                                                            |
+| Play Area → skin                                                    | panel: read-only text `Skin: bee`                                                                                                    | leave read-only, but say _why_ — a skin change re-bases the toolbox, tile vocabulary and stored solution         | `skin`                                                                                      |
+| Play Area → per-cell payloads (nectar per flower, honey goal, dirt) | **nothing**                                                                                                                          | a cell inspector: click a painted cell, edit its amount in the panel                                             | `serialized_maze[r][c]`, `initial_dirt`, `final_dirt`                                       |
+| Blocks (toolbox)                                                    | panel: "Available blocks" catalog + "In the toolbox" chip list, add/remove                                                           | keep; add reorder, and per-block usage caps                                                                      | `toolboxBlocksXml`                                                                          |
+| Workspace                                                           | panel: `Student start` / `My solution` mode toggle + solution status line; arranging happens on the stage                            | keep                                                                                                             | `startBlocksXml`, `solutionBlocksXml`, `solutionVerified`                                   |
+| Level settings (left rail "Level" tab)                              | Title input, solution status line, Target block count, `Check level`, Save                                                           | keep; this is the right home for it                                                                              | `title`, `ideal`, `solutionVerified`                                                        |
+| Run feedback                                                        | inline success/failure card with "You used N blocks — this can be solved in M"                                                       | not authorable, correctly                                                                                        | `ideal`                                                                                     |
 
 ### 3.2 Music
 
 Live: `coding-with-music-play-sound`, Coding with Music → Songwriter's Toolbox.
 
-On screen: a host-rendered instructions block whose body reads *"Instructions
-are shown in the lab below."* with a `Select instructions` button, then the
+On screen: a host-rendered instructions block whose body reads _"Instructions
+are shown in the lab below."_ with a `Select instructions` button, then the
 music lab — a 56px icon rail (Version History, Documentation, Copyright,
-Settings), an unlabelled side panel showing *"No version history found. Have
-you started your project?"*, a `Finish` button, a **Workspace** header with
+Settings), an unlabelled side panel showing _"No version history found. Have
+you started your project?"_, a `Finish` button, a **Workspace** header with
 undo/redo over a Blockly canvas holding `when run`, a **Controls** panel with
 Run, and a **Timeline** panel with 48 numbered measures.
 
@@ -165,32 +165,32 @@ Logical areas an author would name: instructions, the sound library / song,
 the student's block palette, the starting program, the timeline, and the
 "finish" condition.
 
-| logical area | today | should be | data |
-|---|---|---|---|
-| Instructions | panel: one raw `<textarea>`; the stage shows a placeholder note, not the text | show the real text in the panel and let the note say *where* it will appear | `longInstructions` |
-| Instructions placement | **nothing** | a `guideMode` selector beside the instructions field (sidebar tab vs. canvas overlay) | `levelData.guideMode` |
-| Sound library / pack | **nothing** | a song picker in a "Sounds" panel section — one control that writes library + pack + allowed-sound list together | `levelData.library`, `levelData.packId`, `levelData.sounds` |
-| Block palette | **nothing** — the toolbox flyout is on stage but has no click target | the same two-list chip tray the maze toolbox panel uses, per category | `levelData.toolbox.blocks`, `levelData.toolbox.type` |
-| Starting program | **nothing** | read-only, with a "capture from workspace" button mirroring maze's Student start | `levelData.startSources` |
-| Timeline / playhead | **nothing** | a boolean in the panel | `levelData.allowChangeStartingPlayheadPosition` |
-| Level settings | **"Level" tab is disabled** — no title, no anything | enable the tab with the level-agnostic fields (title at minimum) | `title` |
+| logical area           | today                                                                         | should be                                                                                                        | data                                                        |
+| ---------------------- | ----------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| Instructions           | panel: one raw `<textarea>`; the stage shows a placeholder note, not the text | show the real text in the panel and let the note say _where_ it will appear                                      | `longInstructions`                                          |
+| Instructions placement | **nothing**                                                                   | a `guideMode` selector beside the instructions field (sidebar tab vs. canvas overlay)                            | `levelData.guideMode`                                       |
+| Sound library / pack   | **nothing**                                                                   | a song picker in a "Sounds" panel section — one control that writes library + pack + allowed-sound list together | `levelData.library`, `levelData.packId`, `levelData.sounds` |
+| Block palette          | **nothing** — the toolbox flyout is on stage but has no click target          | the same two-list chip tray the maze toolbox panel uses, per category                                            | `levelData.toolbox.blocks`, `levelData.toolbox.type`        |
+| Starting program       | **nothing**                                                                   | read-only, with a "capture from workspace" button mirroring maze's Student start                                 | `levelData.startSources`                                    |
+| Timeline / playhead    | **nothing**                                                                   | a boolean in the panel                                                                                           | `levelData.allowChangeStartingPlayheadPosition`             |
+| Level settings         | **"Level" tab is disabled** — no title, no anything                           | enable the tab with the level-agnostic fields (title at minimum)                                                 | `title`                                                     |
 
 ### 3.3 Fish / Oceans
 
 Live: `Oceans_Long_2024`, Sort It Out → Sorting Without a Rulebook.
 
-On screen: the host instructions block reading *"No instructions yet."* with a
-`Select instructions` button; then the oceans canvas — the prompt *"Is this a
-fish?"*, a `0` counter with an Erase button, `Not Fish` / `Fish` buttons at the
+On screen: the host instructions block reading _"No instructions yet."_ with a
+`Select instructions` button; then the oceans canvas — the prompt _"Is this a
+fish?"_, a `0` counter with an Erase button, `Not Fish` / `Fish` buttons at the
 bottom, a `Continue` button, and a guide overlay carrying the intro copy.
 
-| logical area | today | should be | data |
-|---|---|---|---|
-| Instructions | panel: short + long textareas | keep | `longInstructions`, `shortInstructions` |
-| Activity mode (what students train on: fish-vs-trash, creatures-vs-trash, the long word-choice variant) | **nothing** | a mode `<select>` in a level panel — this is the single most identity-defining field of an oceans level | `mode` / `appMode` |
-| Guide overlay copy (the "Garbage dumped in the water…" text and every subsequent coaching beat) | **nothing** | a guide-step list editor (ordered, markdown per step) | `guides` |
-| Training prompt / labels ("Is this a fish?", "Fish"/"Not Fish") | **nothing** — currently derived from `mode` | leave derived; expose only if `guides` proves insufficient | derived from `mode` |
-| Level settings | **"Level" tab disabled** | enable for title | `title` |
+| logical area                                                                                            | today                                       | should be                                                                                               | data                                    |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------- | ------------------------------------------------------------------------------------------------------- | --------------------------------------- |
+| Instructions                                                                                            | panel: short + long textareas               | keep                                                                                                    | `longInstructions`, `shortInstructions` |
+| Activity mode (what students train on: fish-vs-trash, creatures-vs-trash, the long word-choice variant) | **nothing**                                 | a mode `<select>` in a level panel — this is the single most identity-defining field of an oceans level | `mode` / `appMode`                      |
+| Guide overlay copy (the "Garbage dumped in the water…" text and every subsequent coaching beat)         | **nothing**                                 | a guide-step list editor (ordered, markdown per step)                                                   | `guides`                                |
+| Training prompt / labels ("Is this a fish?", "Fish"/"Not Fish")                                         | **nothing** — currently derived from `mode` | leave derived; expose only if `guides` proves insufficient                                              | derived from `mode`                     |
+| Level settings                                                                                          | **"Level" tab disabled**                    | enable for title                                                                                        | `title`                                 |
 
 ### 3.4 Video (StandaloneVideo)
 
@@ -201,11 +201,11 @@ no click target, no panel, "Level" tab disabled. The most-common non-lab type
 in the catalog (25 instances) has the weakest authoring surface of any type
 that renders successfully.
 
-| logical area | today | should be | data |
-|---|---|---|---|
-| The video itself | nothing | a video picker (search the `videos.csv` catalog by key, preview inline) | `data.videoKey` → `data.youtubeCode` |
-| Title / caption shown above the player | nothing; nothing is shown | a title field, and render it | `data.displayName`, `experience.title` |
-| Framing copy (why the student is watching) | nothing, and no field exists to hold it | either allow a `content` experience beside it, or add a `markdown` key to the video variant | — |
+| logical area                               | today                                   | should be                                                                                   | data                                   |
+| ------------------------------------------ | --------------------------------------- | ------------------------------------------------------------------------------------------- | -------------------------------------- |
+| The video itself                           | nothing                                 | a video picker (search the `videos.csv` catalog by key, preview inline)                     | `data.videoKey` → `data.youtubeCode`   |
+| Title / caption shown above the player     | nothing; nothing is shown               | a title field, and render it                                                                | `data.displayName`, `experience.title` |
+| Framing copy (why the student is watching) | nothing, and no field exists to hold it | either allow a `content` experience beside it, or add a `markdown` key to the video variant | —                                      |
 
 ### 3.5 Multiple choice (Multi)
 
@@ -215,13 +215,13 @@ On screen: an optional markdown lead-in, the question, four answer buttons,
 a `Check` button, and an inline correct/incorrect line. No click target, no
 panel, "Level" tab disabled.
 
-| logical area | today | should be | data |
-|---|---|---|---|
-| Lead-in markdown | chat only (`update_content`) | a markdown field in the panel | `data.markdown` |
-| Question | **nothing** | a markdown field | `data.question` |
-| Answer list | **nothing** | an ordered list editor: markdown per answer, a correct/incorrect toggle per answer, add/remove/reorder | `data.answers[].text`, `.correct` |
-| Retry behaviour | **nothing** | a checkbox | `data.allowMultipleAttempts` |
-| Feedback copy | hard-coded ("Correct!", "Not quite — try again.") | leave hard-coded for v1 | — |
+| logical area     | today                                             | should be                                                                                              | data                              |
+| ---------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | --------------------------------- |
+| Lead-in markdown | chat only (`update_content`)                      | a markdown field in the panel                                                                          | `data.markdown`                   |
+| Question         | **nothing**                                       | a markdown field                                                                                       | `data.question`                   |
+| Answer list      | **nothing**                                       | an ordered list editor: markdown per answer, a correct/incorrect toggle per answer, add/remove/reorder | `data.answers[].text`, `.correct` |
+| Retry behaviour  | **nothing**                                       | a checkbox                                                                                             | `data.allowMultipleAttempts`      |
+| Feedback copy    | hard-coded ("Correct!", "Not quite — try again.") | leave hard-coded for v1                                                                                | —                                 |
 
 ### 3.6 Matching (Match)
 
@@ -232,9 +232,9 @@ every prompt and every option is a bare image (`![](https://images.code.org/…)
 so the visible content is nine thumbnails and no words. `Check` is disabled
 until every prompt is answered. No click target, no panel.
 
-| logical area | today | should be | data |
-|---|---|---|---|
-| Lead-in markdown | chat only | markdown field | `data.markdown` |
+| logical area        | today       | should be                                                                                                                              | data                               |
+| ------------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
+| Lead-in markdown    | chat only   | markdown field                                                                                                                         | `data.markdown`                    |
 | Prompt/answer pairs | **nothing** | a pair-list editor with a markdown field on each side; note that the answer pool is shared, so it is one table, not N independent rows | `data.pairs[].question`, `.answer` |
 
 ### 3.7 Choice grid (BubbleChoice)
@@ -242,14 +242,14 @@ until every prompt is answered. No click target, no panel.
 Live: `music-coding-intro-inspiration`, `coding-with-music-career-videos-standalone`.
 
 On screen: a heading and a list of three named choices, each rendering
-*"Not supported in this prototype (unresolved) — `<levelKey>`"*. The choices
+_"Not supported in this prototype (unresolved) — `<levelKey>`"_. The choices
 are not enterable, so a student reaching this experience can do nothing.
 
-| logical area | today | should be | data |
-|---|---|---|---|
-| Grid heading | nothing | a text field | `data.displayName` |
-| Choice list | nothing | a list editor over level keys, each with a Levelbuilder search-attach picker and a display-name override | `data.choices[].levelKey`, `.displayName` |
-| Choice content | broken (unresolved) | resolve at edit time so the author can see what a student would get | `data.choices[].data` |
+| logical area   | today               | should be                                                                                                | data                                      |
+| -------------- | ------------------- | -------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
+| Grid heading   | nothing             | a text field                                                                                             | `data.displayName`                        |
+| Choice list    | nothing             | a list editor over level keys, each with a Levelbuilder search-attach picker and a display-name override | `data.choices[].levelKey`, `.displayName` |
+| Choice content | broken (unresolved) | resolve at edit time so the author can see what a student would get                                      | `data.choices[].data`                     |
 
 ### 3.8 External / markdown
 
@@ -257,14 +257,14 @@ Live: `music-coding-intro-review_standalone` (Coding with Music) and six
 unplugged pages in Course D.
 
 On screen: a fully rendered markdown page — headings, concept cards, links.
-It renders *identically* to a `content` experience. It has **no pencil**, no
+It renders _identically_ to a `content` experience. It has **no pencil**, no
 panel, and a disabled "Level" tab, purely because its `kind` is
 `existingLevel` rather than `content`.
 
-| logical area | today | should be | data |
-|---|---|---|---|
-| The page body | chat only | the same inline title + textarea editor `content` already has | `data.markdown` |
-| Title | chat only | same editor | `experience.title` |
+| logical area  | today     | should be                                                     | data               |
+| ------------- | --------- | ------------------------------------------------------------- | ------------------ |
+| The page body | chat only | the same inline title + textarea editor `content` already has | `data.markdown`    |
+| Title         | chat only | same editor                                                   | `experience.title` |
 
 This is the cheapest gap in the whole sweep: the editor exists, the write path
 exists, and only the `kind === 'content'` gate stands between them.
@@ -281,13 +281,13 @@ Around it: nothing. No click target, no panel, disabled "Level" tab. Every
 widget property — its title, its description, the `defaultInput` the host
 passes in, and its 400 KB of generated source — is chat-only.
 
-| logical area | today | should be | data |
-|---|---|---|---|
-| Widget title | nothing | a text field in a widget panel section | `descriptor.title` |
-| Widget description (what the model is told it does) | nothing | a textarea in the same section | `descriptor.description` |
-| Per-placement input | nothing | a form generated from `inputSchema` | `experience.defaultInput` |
-| Widget behaviour/source | chat only | leave to chat; surface a "what this widget does" summary and a link to re-prompt | `widgets/<id>/src/index.tsx` |
-| Contract (network, visibility, event types) | nothing | read-only display — these are safety gates | `descriptor.network`, `.visibility`, `.eventTypes` |
+| logical area                                        | today     | should be                                                                        | data                                               |
+| --------------------------------------------------- | --------- | -------------------------------------------------------------------------------- | -------------------------------------------------- |
+| Widget title                                        | nothing   | a text field in a widget panel section                                           | `descriptor.title`                                 |
+| Widget description (what the model is told it does) | nothing   | a textarea in the same section                                                   | `descriptor.description`                           |
+| Per-placement input                                 | nothing   | a form generated from `inputSchema`                                              | `experience.defaultInput`                          |
+| Widget behaviour/source                             | chat only | leave to chat; surface a "what this widget does" summary and a link to re-prompt | `widgets/<id>/src/index.tsx`                       |
+| Contract (network, visibility, event types)         | nothing   | read-only display — these are safety gates                                       | `descriptor.network`, `.visibility`, `.eventTypes` |
 
 ### 3.10 Content (draft markdown)
 
@@ -297,10 +297,10 @@ On screen: a rendered markdown card with a pencil in the corner. Clicking the
 pencil replaces the card with a Title input, a raw markdown `<textarea>`, and
 Cancel/Save.
 
-| logical area | today | should be | data |
-|---|---|---|---|
-| Title | inline input | move into the right panel, per the IA rule | `experience.title` |
-| Body | inline raw textarea | keep the raw textarea (imported pages contain hand-written HTML that a WYSIWYG would destroy), but add a side-by-side preview | `experience.markdown` |
+| logical area | today               | should be                                                                                                                     | data                  |
+| ------------ | ------------------- | ----------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| Title        | inline input        | move into the right panel, per the IA rule                                                                                    | `experience.title`    |
+| Body         | inline raw textarea | keep the raw textarea (imported pages contain hand-written HTML that a WYSIWYG would destroy), but add a side-by-side preview | `experience.markdown` |
 
 ### 3.11 Unsupported (Panels, Dancelab, Craft, Artist, Bounce, `unknown`)
 
@@ -308,21 +308,21 @@ Live: `music-coding-intro-effects-panel_launch_standalone` and
 `blockly:Studio:hoc2015_blockly_7_no_video`.
 
 On screen: a card with the level type in overline, the level key as a heading,
-and one paragraph: *"This activity type runs in the classic Studio runtime and
+and one paragraph: _"This activity type runs in the classic Studio runtime and
 isn't playable in this prototype. It keeps its place and identity in the
 lesson. Ask the AI to build an interactive version if you want it playable
-here."*
+here."_
 
 56 of these are correctly inert placeholders. **Panels is the exception**: its
 payload carries the authored panel markdown and images, and the card displays
 none of it. A Panels level is a slideshow of markdown pages — the projection
 the prototype already has for `content` would render it faithfully.
 
-| logical area | today | should be | data |
-|---|---|---|---|
-| Identity (type + key) | shown, read-only | keep | `levelKey`, `levelType` |
-| Panels payload | carried and discarded | render the panels as a pager; author each panel's markdown with the content editor | `data.properties.panels[].text` |
-| Everything else | inert | keep inert | — |
+| logical area          | today                 | should be                                                                          | data                            |
+| --------------------- | --------------------- | ---------------------------------------------------------------------------------- | ------------------------------- |
+| Identity (type + key) | shown, read-only      | keep                                                                               | `levelKey`, `levelType`         |
+| Panels payload        | carried and discarded | render the panels as a pager; author each panel's markdown with the content editor | `data.properties.panels[].text` |
+| Everything else       | inert                 | keep inert                                                                         | —                               |
 
 ---
 
@@ -373,8 +373,8 @@ Ordered by how much they hurt the demo. Each was observed live.
 1. **An entire lesson is dead.** All 12 maze levels in Block by Block →
    "Spot the Repeat" (`courseB_iceage_loops1`…`12`) crash the lab with
    `TypeError: Invalid block definition for type:
-   controls_repeat_simplified_dropdown`; the stage shows *"An error occurred
-   while loading the lab. Try reloading the page."* The ice-age skin assets are
+controls_repeat_simplified_dropdown`; the stage shows _"An error occurred
+   while loading the lab. Try reloading the page."_ The ice-age skin assets are
    also missing (`/skins/scrat/small_static_avatar.png` → 404). These are the
    only 12 levels in the catalog using that block type.
 
@@ -383,7 +383,7 @@ Ordered by how much they hurt the demo. Each was observed live.
    enter any choice.
 
 3. **A 404 retry storm on every lesson load.** `GET
-   /authoring-api/levels/-1/level_properties` fires repeatedly (react-query
+/authoring-api/levels/-1/level_properties` fires repeatedly (react-query
    retries) before any level is selected — a level id of `-1` is being
    requested for experiences that have no numeric id. Harmless to correctness,
    but it fills the console and coincided with two lesson loads that hung past
@@ -410,7 +410,7 @@ Ordered by how much they hurt the demo. Each was observed live.
    misleading.
 
 8. **Music lab noise leaks into author mode.** The lab's side panel shows
-   *"No version history found. Have you started your project?"* — a
+   _"No version history found. Have you started your project?"_ — a
    student-project error surfaced during authoring.
 
 9. **Oceans renders its guide text twice.** Two sibling elements with

@@ -3,7 +3,7 @@
 Research pass, 2026-08-27. Contentful Studio (Experiences / Experience
 Builder) as gold standard, per product-owner steer. Cross-checked against
 Webflow, Framer, Builder.io, Wix Studio, Storyblok, and — for the one thing
-none of those cover, a canvas containing a *running program* — Figma
+none of those cover, a canvas containing a _running program_ — Figma
 prototype mode, Articulate Storyline, H5P, Roblox Studio, Unity, Unreal, and
 Plasmic.
 
@@ -71,7 +71,7 @@ better-sourced throughout (docs, not snippets) — see inline citations.
   CHANGED specifically means "published, then edited, not yet
   re-published" — i.e. dirty-since-publish is itself a first-class status
   value, not just an unsaved-changes badge.
-- Publishing an *Experience* specifically is documented as a **multi-step,
+- Publishing an _Experience_ specifically is documented as a **multi-step,
   reference-selection action**, not a flat button: "In the experience
   editor, click Publish. Select checkboxes against the references you would
   like to publish in your experience, then click Publish" — [Publish an
@@ -115,7 +115,7 @@ Three tabs: **Components | Layers | Settings**. (screenshot)
   levels deep (a parent pattern plus two nested levels) — [Nested
   patterns](https://www.contentful.com/help/studio/experiences/nested-patterns/)
   (fork-A). A pattern author can also mark specific design properties as
-  the *only* ones editable when the pattern is reused elsewhere — a
+  the _only_ ones editable when the pattern is reused elsewhere — a
   documented locked/read-only mechanism, though the exact visual treatment
   (greyed out vs. hidden vs. lock icon) is UNVERIFIED.
 
@@ -171,7 +171,7 @@ literal experience output — [Contentful Studio
 blog](https://www.contentful.com/blog/contentful-studio-experiences-sdk/)
 (fork-A, WebSearch snippet).
 
-Canvas *micro-interactions* — hover-before-select outline, double-click to
+Canvas _micro-interactions_ — hover-before-select outline, double-click to
 enter a nested pattern, breadcrumb/path indicator, Esc-to-deselect,
 arrow-key sibling stepping, multi-select — were **not found** in any
 reachable Contentful source across three independent targeted searches.
@@ -204,7 +204,7 @@ other layout-owning competitor converges on the same handful of patterns.
   can return to. Access is via a "⋯" menu → "View version history," a left
   sidebar lists past versions, "Compare with current" opens a side-by-side
   diff view. A further caveat: restoring an old version re-renders it under
-  the *current* SDK version, not the SDK version active when it was
+  the _current_ SDK version, not the SDK version active when it was
   authored — a real gotcha for anyone modeling our own revert as a full
   time-machine.
 - Versioning is scoped to the "master environment" only (fork-A,
@@ -240,22 +240,22 @@ against primary due to 429s, but two independent snippets agreed closely).
 Rows = IA slot. Columns = product. "TBD" cells for Contentful are filled
 from §a where confirmed, else left as noted.
 
-| IA slot | Contentful | Webflow | Framer | Builder.io | Wix Studio | Storyblok |
-|---|---|---|---|---|---|---|
-| Left rail | Components / Layers / **Settings** tabs (screenshot) | Navigator (hierarchy tree only) | Layers (hierarchy + rename/lock/group) | Layers tab (hierarchy + binding/action indicators) | Layers panel, sectioned header/main/footer | No confirmed hierarchy tree — field/schema panel instead (unverified) |
-| Right panel split | Design / Content tabs, selection-driven; unselected state shows breakpoint context, never blank (screenshot) | Style panel (design) **and** separate Element Settings panel (structural, breakpoint-independent) — two panels, not tabs | Single unified Properties panel (style+settings, no split) | Explicit Style / Data / Animate / Comments tabs — cleanest design-vs-content split researched | Single Inspector (unified) | Schema-driven fields only — **no design/style panel at all** |
-| Canvas relationship to output | iframe rendering the real experience (unverified detail) | Design surface rendering the real site | **Canvas literally is the live site** | Design surface with breakpoint preview | Design surface | **iframe of the actual running frontend app** |
-| Hover-before-click highlight | UNVERIFIED (not found) | Yes, confirmed (blue outline) | Assumed/standard, not explicitly doc-cited | Not explicitly doc-cited | Not explicitly doc-cited | Outline appears on interaction with preview elements |
-| Enter-nested-component gesture | UNVERIFIED (not found); 3-level nesting cap is documented | Double-click instance → edit main component; Up-arrow / right-click "Select Parent" to ascend | Double-click/Enter to descend; Cmd/Ctrl+Enter = first child; double-click instance opens its own canvas | Not explicitly doc-cited | **Breadcrumb bar** (persistent, bottom-left, click any ancestor) | Click-through opt-in per component via `storyblokEditable()` bridge tagging — developer-implemented, not automatic |
-| Esc to deselect | UNVERIFIED | Yes, confirmed | Standard, not explicitly cited | Not explicitly cited | Not explicitly cited | N/A (different architecture) |
-| Multi-select | UNVERIFIED | Shift+click in Navigator; canvas multi-select limited/inconsistent (open feature request) | Not explicitly cited | Not explicitly cited | Not explicitly cited | Not applicable |
-| Inline text edit on canvas | UNVERIFIED | Assumed standard | Standard (canvas = real site) | Double-click a Text block → inline edit, "/" opens slash-command menu | Assumed standard | Not applicable — text edited via field panel |
-| Top-bar publish action | **"Change status" dropdown**, separate from a quiet secondary **Save** (screenshot); publish is a checkbox-selectable reference-publish dialog, not a flat button | Autosave continuous + 50th-snapshot backup; explicit "Create Backup"; Publish separate | Autosave continuous, decaying-resolution snapshots (5 min → hourly → daily) | **Three explicit save tiers**: All (autosave) / Checkpoints (Cmd+S) / Publishes | Autosave (armed only after first manual save — a real outlier); toggle-able | Explicit Save = draft state; separate Publish action; 3-publishes/day cap on some plans |
-| Draft vs. published states | DRAFT / **CHANGED** / PUBLISHED / ARCHIVED — dirty-since-publish is a named status, not a badge | Implicit — Designer state vs. published site | Staging environment mirrors live for pre-publish testing | Explicit Draft/Published field per entry | Implicit | Explicit draft/published API versions |
-| Approval workflow gate | UNVERIFIED | None | None | "Request to Publish" (adjacent feature) | None | **Explicit 3-stage gate** (Drafting → Reviewing → Ready to publish); only "Ready" can publish |
-| Undo/redo | **Present in top bar, beside the breakpoint switcher** (screenshot) | Not separately documented (assumed standard) | Cmd/Ctrl+Z (assumed standard) | Cmd+Z / Ctrl+Shift+Z, confirmed | Not confirmed | N/A |
-| Version history UI | "⋯" menu → version list → side-by-side compare → restore; **only published versions are restorable**, restore uses current SDK | Flat list, last 30, preview-then-restore, non-destructive (auto-backs-up before restore) | File → Version History; **copy-elements-out** model instead of blunt restore | 3-tab History (All/Publishes/Checkpoints), one-click revert | Site History log (who/when); **restore is destructive** (discards everything after) | Two-pane History (list + color-coded diff); restore replaces wholesale |
-| Presence / avatars | User avatar shown top-right (screenshot) | Not confirmed | Not confirmed | Not confirmed | Not confirmed | Not confirmed |
+| IA slot                        | Contentful                                                                                                                                                        | Webflow                                                                                                                  | Framer                                                                                                  | Builder.io                                                                                    | Wix Studio                                                                          | Storyblok                                                                                                          |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| Left rail                      | Components / Layers / **Settings** tabs (screenshot)                                                                                                              | Navigator (hierarchy tree only)                                                                                          | Layers (hierarchy + rename/lock/group)                                                                  | Layers tab (hierarchy + binding/action indicators)                                            | Layers panel, sectioned header/main/footer                                          | No confirmed hierarchy tree — field/schema panel instead (unverified)                                              |
+| Right panel split              | Design / Content tabs, selection-driven; unselected state shows breakpoint context, never blank (screenshot)                                                      | Style panel (design) **and** separate Element Settings panel (structural, breakpoint-independent) — two panels, not tabs | Single unified Properties panel (style+settings, no split)                                              | Explicit Style / Data / Animate / Comments tabs — cleanest design-vs-content split researched | Single Inspector (unified)                                                          | Schema-driven fields only — **no design/style panel at all**                                                       |
+| Canvas relationship to output  | iframe rendering the real experience (unverified detail)                                                                                                          | Design surface rendering the real site                                                                                   | **Canvas literally is the live site**                                                                   | Design surface with breakpoint preview                                                        | Design surface                                                                      | **iframe of the actual running frontend app**                                                                      |
+| Hover-before-click highlight   | UNVERIFIED (not found)                                                                                                                                            | Yes, confirmed (blue outline)                                                                                            | Assumed/standard, not explicitly doc-cited                                                              | Not explicitly doc-cited                                                                      | Not explicitly doc-cited                                                            | Outline appears on interaction with preview elements                                                               |
+| Enter-nested-component gesture | UNVERIFIED (not found); 3-level nesting cap is documented                                                                                                         | Double-click instance → edit main component; Up-arrow / right-click "Select Parent" to ascend                            | Double-click/Enter to descend; Cmd/Ctrl+Enter = first child; double-click instance opens its own canvas | Not explicitly doc-cited                                                                      | **Breadcrumb bar** (persistent, bottom-left, click any ancestor)                    | Click-through opt-in per component via `storyblokEditable()` bridge tagging — developer-implemented, not automatic |
+| Esc to deselect                | UNVERIFIED                                                                                                                                                        | Yes, confirmed                                                                                                           | Standard, not explicitly cited                                                                          | Not explicitly cited                                                                          | Not explicitly cited                                                                | N/A (different architecture)                                                                                       |
+| Multi-select                   | UNVERIFIED                                                                                                                                                        | Shift+click in Navigator; canvas multi-select limited/inconsistent (open feature request)                                | Not explicitly cited                                                                                    | Not explicitly cited                                                                          | Not explicitly cited                                                                | Not applicable                                                                                                     |
+| Inline text edit on canvas     | UNVERIFIED                                                                                                                                                        | Assumed standard                                                                                                         | Standard (canvas = real site)                                                                           | Double-click a Text block → inline edit, "/" opens slash-command menu                         | Assumed standard                                                                    | Not applicable — text edited via field panel                                                                       |
+| Top-bar publish action         | **"Change status" dropdown**, separate from a quiet secondary **Save** (screenshot); publish is a checkbox-selectable reference-publish dialog, not a flat button | Autosave continuous + 50th-snapshot backup; explicit "Create Backup"; Publish separate                                   | Autosave continuous, decaying-resolution snapshots (5 min → hourly → daily)                             | **Three explicit save tiers**: All (autosave) / Checkpoints (Cmd+S) / Publishes               | Autosave (armed only after first manual save — a real outlier); toggle-able         | Explicit Save = draft state; separate Publish action; 3-publishes/day cap on some plans                            |
+| Draft vs. published states     | DRAFT / **CHANGED** / PUBLISHED / ARCHIVED — dirty-since-publish is a named status, not a badge                                                                   | Implicit — Designer state vs. published site                                                                             | Staging environment mirrors live for pre-publish testing                                                | Explicit Draft/Published field per entry                                                      | Implicit                                                                            | Explicit draft/published API versions                                                                              |
+| Approval workflow gate         | UNVERIFIED                                                                                                                                                        | None                                                                                                                     | None                                                                                                    | "Request to Publish" (adjacent feature)                                                       | None                                                                                | **Explicit 3-stage gate** (Drafting → Reviewing → Ready to publish); only "Ready" can publish                      |
+| Undo/redo                      | **Present in top bar, beside the breakpoint switcher** (screenshot)                                                                                               | Not separately documented (assumed standard)                                                                             | Cmd/Ctrl+Z (assumed standard)                                                                           | Cmd+Z / Ctrl+Shift+Z, confirmed                                                               | Not confirmed                                                                       | N/A                                                                                                                |
+| Version history UI             | "⋯" menu → version list → side-by-side compare → restore; **only published versions are restorable**, restore uses current SDK                                    | Flat list, last 30, preview-then-restore, non-destructive (auto-backs-up before restore)                                 | File → Version History; **copy-elements-out** model instead of blunt restore                            | 3-tab History (All/Publishes/Checkpoints), one-click revert                                   | Site History log (who/when); **restore is destructive** (discards everything after) | Two-pane History (list + color-coded diff); restore replaces wholesale                                             |
+| Presence / avatars             | User avatar shown top-right (screenshot)                                                                                                                          | Not confirmed                                                                                                            | Not confirmed                                                                                           | Not confirmed                                                                                 | Not confirmed                                                                       | Not confirmed                                                                                                      |
 
 ### Where all convergence-table products agree (adopt without debate)
 
@@ -267,7 +267,7 @@ from §a where confirmed, else left as noted.
    browsed independently of selection.** No product has a competing
    "global settings" panel fighting the element-properties panel for the
    same visual slot — where page-level settings exist (Contentful), they
-   live in a *different* rail tab, not the same slot as element
+   live in a _different_ rail tab, not the same slot as element
    properties.
 3. **Autosave is baseline; publish is a separate, explicitly named action,
    without exception.** Granularity varies enormously (Wix's
@@ -287,11 +287,11 @@ from §a where confirmed, else left as noted.
   non-technical content author separately from whoever owns layout code**
   (Contentful, Builder.io). Single-persona visual builders (Webflow,
   Framer, Wix Studio) don't need the split because one person owns both
-  halves. Storyblok has *only* content because it deliberately owns zero
+  halves. Storyblok has _only_ content because it deliberately owns zero
   layout — that's the frontend integrator's job. **This maps directly onto
   our situation**: curriculum authors are not the engineers who built the
   Oceans/Maze/Music labs, so a design/content-shaped split (level-wide
-  *settings* vs. per-experience *content*) is the right-shaped convention
+  _settings_ vs. per-experience _content_) is the right-shaped convention
   to borrow, not an arbitrary choice.
 - **Approval-workflow gates exist only in headless/content-team products**
   (Storyblok's 3-stage workflow, Builder.io's Request-to-Publish);
@@ -312,16 +312,16 @@ from §a where confirmed, else left as noted.
 
 ### Top bar
 
-| Region | Recommendation | Rationale |
-|---|---|---|
-| Back / breadcrumb | Keep current back-arrow + course·unit·lesson title stack | Matches convergence row 1; no change needed |
-| Status | **Add** a status chip next to the lesson title: Draft / Changed / Published-equivalent-for-curriculum ("Live in [changeset]"), mirroring Contentful's DRAFT/CHANGED/PUBLISHED vocabulary | We have zero status surface today (see §d gap 1) |
-| Progress nav | Keep the progress-dot bubbles — they are the equivalent of Contentful's canvas-scoped context, own navigation, no change needed | Already matches; no CMS studied puts primary navigation in the top bar center the way we do, but ours is learner-navigation, not editor-navigation — a legitimately different, correctly-scoped concept |
-| Breakpoint/device switcher | **Not applicable** — our "canvas" renders one fixed learner surface per lab, not a responsive page; do not add | Would be cargo-culting a slot that has no referent in our domain |
-| Undo/redo | **Add**, scoped to the append-only CurriculumChange log we already have | We already have exact data (revert-by-entry) to back a real undo stack; today it's only reachable via a History popover deep in the course page, not the lesson-level top bar (see §d gap 2) |
-| Save | Keep explicit per-panel Save (matches Wix/Storyblok's explicit-save-as-draft model) — do not add silent autosave to level/instructions edits, since a bad edit to a live level's grid needs the solvability gate to run before anything persists | Matches convergence row 3's "autosave baseline, publish separate" *pattern*, but our "autosave" is deliberately gated per-field, not continuous — a defensible, documented divergence, not an oversight |
-| Publish | **Add** a "Publish" action distinct from Save, surfacing the existing `/api/publish` → `buildChangeSet` machinery that has zero UI today (see §d gap 1) | We already have the backend; only the top-bar affordance is missing |
-| Presence/avatar | Skip for now | No multi-author concurrent-editing story yet; premature |
+| Region                     | Recommendation                                                                                                                                                                                                                                   | Rationale                                                                                                                                                                                               |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Back / breadcrumb          | Keep current back-arrow + course·unit·lesson title stack                                                                                                                                                                                         | Matches convergence row 1; no change needed                                                                                                                                                             |
+| Status                     | **Add** a status chip next to the lesson title: Draft / Changed / Published-equivalent-for-curriculum ("Live in [changeset]"), mirroring Contentful's DRAFT/CHANGED/PUBLISHED vocabulary                                                         | We have zero status surface today (see §d gap 1)                                                                                                                                                        |
+| Progress nav               | Keep the progress-dot bubbles — they are the equivalent of Contentful's canvas-scoped context, own navigation, no change needed                                                                                                                  | Already matches; no CMS studied puts primary navigation in the top bar center the way we do, but ours is learner-navigation, not editor-navigation — a legitimately different, correctly-scoped concept |
+| Breakpoint/device switcher | **Not applicable** — our "canvas" renders one fixed learner surface per lab, not a responsive page; do not add                                                                                                                                   | Would be cargo-culting a slot that has no referent in our domain                                                                                                                                        |
+| Undo/redo                  | **Add**, scoped to the append-only CurriculumChange log we already have                                                                                                                                                                          | We already have exact data (revert-by-entry) to back a real undo stack; today it's only reachable via a History popover deep in the course page, not the lesson-level top bar (see §d gap 2)            |
+| Save                       | Keep explicit per-panel Save (matches Wix/Storyblok's explicit-save-as-draft model) — do not add silent autosave to level/instructions edits, since a bad edit to a live level's grid needs the solvability gate to run before anything persists | Matches convergence row 3's "autosave baseline, publish separate" _pattern_, but our "autosave" is deliberately gated per-field, not continuous — a defensible, documented divergence, not an oversight |
+| Publish                    | **Add** a "Publish" action distinct from Save, surfacing the existing `/api/publish` → `buildChangeSet` machinery that has zero UI today (see §d gap 1)                                                                                          | We already have the backend; only the top-bar affordance is missing                                                                                                                                     |
+| Presence/avatar            | Skip for now                                                                                                                                                                                                                                     | No multi-author concurrent-editing story yet; premature                                                                                                                                                 |
 
 ### Left rail
 
@@ -333,14 +333,14 @@ Adopt Contentful's **tabbed, always-available** model, not our current
   on the stage.
 - **Level settings** tab — what `LevelRail.tsx`'s `LevelSettings` branch
   already builds (start direction, map palette, toolbox tray, start-blocks
-  editing) for the active level. Currently this *replaces* Outline instead
+  editing) for the active level. Currently this _replaces_ Outline instead
   of living beside it as a second tab; that's the one structural fix this
   section recommends.
 - No **Components** tab equivalent is needed at the rail level — "adding a
   new element" in our world is authored through chat (agent tool calls) or
   the stage's `InsertPoint` affordance, not drag-from-a-palette. This is a
   legitimate, product-shaped divergence, not a gap: Contentful's Components
-  tab exists because *authors assemble pages from a component library*;
+  tab exists because _authors assemble pages from a component library_;
   our authors describe intent to an agent that writes levels/widgets. Do
   not force a component-palette tab to exist just for IA-parity's sake.
 
@@ -369,7 +369,7 @@ now that level-wide settings move to the left rail:
 Keep direct manipulation as-is (map tile painting, block dragging inside
 the mounted lab) — this is already the right call per §e: our canvas is a
 runnable surface, not a design surface, so CMS click-to-select conventions
-apply only to the chrome *around* the lab (`.labStage`, instructions block,
+apply only to the chrome _around_ the lab (`.labStage`, instructions block,
 content card), never to hit-testing inside the mounted Blockly workspace.
 This matches every runnable-canvas precedent in §e: none of them make the
 running surface itself individually click-selectable at the DOM-node
@@ -402,8 +402,7 @@ level; they gate a mode boundary around it instead.
   valid, arguably more honest answer given we don't autosave).
 - **Wire `/api/publish` to a top-bar Publish button** (gap 1).
 - **Promote `ChangeHistory`'s revert-per-entry into a real undo affordance**
-  reachable from the lesson header, not only the course-overview page (gap
-  2) — the data model (server-captured `previous`, exact revert) already
+  reachable from the lesson header, not only the course-overview page (gap 2) — the data model (server-captured `previous`, exact revert) already
   matches what Contentful's version-compare/restore needs; only the
   discoverability and top-bar wiring are missing.
 - Status chip: Draft (has unpublished changes) / Published (nothing pending
@@ -433,7 +432,7 @@ level; they gate a mode boundary around it instead.
    only reachable from the course-overview page's History popover
    (`routes/author/$courseId/index.tsx:61-66`), not from the lesson-level
    editing view where changes actually happen, and it presents as a
-   *list to browse and revert one entry from*, not an Undo/Redo pair a
+   _list to browse and revert one entry from_, not an Undo/Redo pair a
    keyboard shortcut or top-bar button drives. Contentful puts undo/redo
    directly in the top bar next to the breakpoint switcher (screenshot);
    every §b product treats undo/redo (or its equivalent, version restore)
@@ -444,14 +443,14 @@ level; they gate a mode boundary around it instead.
    (new file, untracked, dated today) already implements the product
    decision described in the task brief — level-wide settings move to the
    left rail, replacing the outline — but its own doc comment states the
-   cost plainly: *"the outline's type chips are not offered in that
-   state"* (`LevelRail.tsx:50-55`). Concretely: while a maze level's
+   cost plainly: _"the outline's type chips are not offered in that
+   state"_ (`LevelRail.tsx:50-55`). Concretely: while a maze level's
    settings occupy the rail, an author cannot see or jump to sibling
    experiences via the rail at all — only the top progress bubbles remain
    for navigation, and they carry no type/kind information (no icon, no
    "content" vs. "level" vs. "widget" tag) the way `OutlineRail`'s rows do.
    Every §b product with a Settings-equivalent (Contentful's own
-   Components/Layers/Settings) keeps *all three* reachable as sibling
+   Components/Layers/Settings) keeps _all three_ reachable as sibling
    tabs — you never lose the hierarchy view because you opened settings.
    §c's recommendation (tab Outline and Level-settings as siblings, not a
    toggle) is a small structural change from what's already been built,
@@ -461,8 +460,8 @@ level; they gate a mode boundary around it instead.
    per-lesson**, only per-panel-section (the `panelDirty` flag gates
    switching panels, but nothing shows an author "this lesson has 6
    unpublished edits"). Contentful's CHANGED status and every §b product's
-   draft/published distinction is scoped to the *content unit being
-   edited*, visible without opening anything. Once gap 1 lands (a
+   draft/published distinction is scoped to the _content unit being
+   edited_, visible without opening anything. Once gap 1 lands (a
    publish timestamp exists to compare against), this is a cheap
    derived-state addition, not new plumbing.
 5. **No breadcrumb/path indicator for "what am I inside of right now."**
@@ -471,7 +470,7 @@ level; they gate a mode boundary around it instead.
    the ancestor chain of my current selection" — we have no equivalent,
    though our hierarchy is shallow enough (course → unit → lesson →
    experience → field) that the lesson header's `course.displayName ·
-   unit.displayName` plus the active row's highlight in `OutlineRail`
+unit.displayName` plus the active row's highlight in `OutlineRail`
    substantially covers this already. Low priority: revisit only if the
    left-rail restructuring in gap 3 removes the outline's highlight as an
    implicit breadcrumb.
@@ -540,8 +539,8 @@ findings, folded in below):
    the majority pattern, and it's what we already do structurally: the
    mounted `<Lab>` is never a click-target for the properties system.
 2. **The one documented exception is opt-in, not default.** Unreal's
-   Simulate-in-Editor mode keeps full editor/selection access *while the
-   simulation runs*, toggled live against Play-in-Editor via Eject/Possess
+   Simulate-in-Editor mode keeps full editor/selection access _while the
+   simulation runs_, toggled live against Play-in-Editor via Eject/Possess
    (`F10`) — [In-editor
    testing](https://dev.epicgames.com/documentation/unreal-engine/ineditor-testing-play-and-simulate-in-unreal-engine).
    Plasmic's "Interactive" canvas toggle is the closest sibling-domain
@@ -559,7 +558,7 @@ findings, folded in below):
    position) must never silently become part of the level definition.
 4. **A visible, specific return-to-edit affordance, not just "stop."**
    Storyline's Preview ribbon includes "Edit Slide," which returns you to
-   the *exact slide you were previewing*, not a generic close —
+   the _exact slide you were previewing_, not a generic close —
    [Previewing a
    course](https://www.articulatesupport.com/article/Storyline-360-Previewing-a-Course).
    This is the most directly reusable precedent for us: our runnable
@@ -600,7 +599,7 @@ unlike a game engine's whole scene):
   layering a second "author test mode" on top would be the kind of
   redundant machinery §e.1's majority-pattern tools deliberately avoid.
   Reserve this pattern (if ever needed) for a hypothetical future
-  element type where editing genuinely needs to happen *while* something
+  element type where editing genuinely needs to happen _while_ something
   is running (e.g., live-tweaking a widget's input schema while watching
   it render) — not for the puzzle canvas as it exists today.
 - **Do add a Storyline-style anchored return.** When an author leaves the
@@ -617,7 +616,7 @@ unlike a game engine's whole scene):
   label changing from "Student view" to "Back to authoring" — e.g., no
   chrome-color or border change currently signals which mode is active
   once the toggle has been clicked and the button has scrolled out of
-  view. This is the one place our own product already has the *shape* of
+  view. This is the one place our own product already has the _shape_ of
   the mode-slip risk NN/g and the Roblox forum both warn about, and it's
   worth a follow-up look, not a finding this research pass can resolve
   from documentation alone.

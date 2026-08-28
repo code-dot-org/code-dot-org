@@ -86,7 +86,9 @@ export function checkWidgetDocument(html: string): string[] {
   // against a shim that (pre-connect) may not be defined yet is normal,
   // defensive widget code, not a different call.
   if (!/McpApp\??\.\w+\s*\(/.test(html)) {
-    violations.push('no McpApp.<method>() call found (shim present but unused)');
+    violations.push(
+      'no McpApp.<method>() call found (shim present but unused)',
+    );
   }
   if (!/McpApp\??\.updateModelContext\s*\(/.test(html)) {
     violations.push('no McpApp.updateModelContext() call found');

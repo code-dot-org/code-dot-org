@@ -48,7 +48,9 @@ export interface WidgetArtifact {
  * artifact (best-effort, for `yarn build`); `test:gates` (scripts/testGates.ts)
  * is the strict check that fails on one.
  */
-export async function computeWidgetArtifact(slug: string): Promise<WidgetArtifact> {
+export async function computeWidgetArtifact(
+  slug: string,
+): Promise<WidgetArtifact> {
   const widgetDir = path.join(WIDGETS_DIR, slug);
   const manifestPath = path.join(widgetDir, 'widget.json');
   const manifest = WidgetManifestSchema.parse(

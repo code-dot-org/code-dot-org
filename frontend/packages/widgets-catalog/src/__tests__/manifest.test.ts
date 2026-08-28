@@ -85,7 +85,10 @@ describe('WidgetManifestSchema', () => {
     const {toolchain, ...rest} = VALID_MANIFEST;
     const result = WidgetManifestSchema.safeParse({
       ...rest,
-      toolchain: {esbuild: toolchain.esbuild, componentLibrary: toolchain.componentLibrary},
+      toolchain: {
+        esbuild: toolchain.esbuild,
+        componentLibrary: toolchain.componentLibrary,
+      },
     });
     expect(result.success).toBe(false);
   });

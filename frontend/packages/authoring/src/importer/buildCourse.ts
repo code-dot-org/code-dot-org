@@ -77,7 +77,9 @@ function humanizeLevelKey(levelKey: string, scriptName: string): string {
   const spaced = trimmed
     .replace(/([a-z0-9])([A-Z])/g, '$1 $2')
     .replace(/[_-]+/g, ' ');
-  const words = spaced.split(' ').filter(word => word && !YEAR_TOKEN.test(word));
+  const words = spaced
+    .split(' ')
+    .filter(word => word && !YEAR_TOKEN.test(word));
   if (words.length === 0) {
     return levelKey;
   }

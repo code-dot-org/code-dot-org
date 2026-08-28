@@ -1,9 +1,9 @@
-import { describe, expect, it } from 'vitest';
-import { ITEMS } from './data';
-import { isToolCorrect } from './logic';
+import {describe, expect, it} from 'vitest';
+import {ITEMS} from './data';
+import {isToolCorrect} from './logic';
 
 describe('isToolCorrect', () => {
-  it('accepts each item\'s correct tool', () => {
+  it("accepts each item's correct tool", () => {
     expect(isToolCorrect(ITEMS[0], 'sequence')).toBe(true);
     expect(isToolCorrect(ITEMS[1], 'loop')).toBe(true);
     expect(isToolCorrect(ITEMS[2], 'conditional')).toBe(true);

@@ -32,7 +32,9 @@ describe('checkWidgetDocument', () => {
       '<button id="go">Go</button>',
       "fetch('/anything');",
     );
-    expect(checkWidgetDocument(html)).toContain('network reference found: fetch(');
+    expect(checkWidgetDocument(html)).toContain(
+      'network reference found: fetch(',
+    );
   });
 
   it('flags XMLHttpRequest', () => {
@@ -70,10 +72,7 @@ describe('checkWidgetDocument', () => {
   });
 
   it('flags a CSS url(https://…)', () => {
-    const html = cleanDocument(
-      '<div class="probe">hi</div>',
-      '',
-    ).replace(
+    const html = cleanDocument('<div class="probe">hi</div>', '').replace(
       '.probe { color: var(--text-neutral-primary); }',
       ".probe { background: url('https://example.com/bg.png'); }",
     );
@@ -107,7 +106,7 @@ describe('checkWidgetDocument', () => {
     ).toBe(false);
   });
 
-  it('does not flag the CSP meta tag\'s http-equiv attribute', () => {
+  it("does not flag the CSP meta tag's http-equiv attribute", () => {
     // http-equiv contains "http" but not "http://" or "https://" — the CSP
     // tag buildWidgetDocument always injects must never trip this gate.
     const html = cleanDocument('<button id="go">Go</button>');
@@ -128,9 +127,9 @@ describe('checkWidgetDocument', () => {
     const html = cleanDocument(
       `<div>${'x'.repeat(MAX_WIDGET_DOC_BYTES)}</div>`,
     );
-    expect(
-      checkWidgetDocument(html).some(v => v.includes('byte limit')),
-    ).toBe(true);
+    expect(checkWidgetDocument(html).some(v => v.includes('byte limit'))).toBe(
+      true,
+    );
   });
 
   it('passes a document comfortably under the size budget', () => {
@@ -189,9 +188,9 @@ describe('checkWidgetDocument', () => {
     const html = cleanDocument(
       '<div tabindex="0">ok</div><div tabindex="-1">also ok</div>',
     );
-    expect(
-      checkWidgetDocument(html).some(v => v.includes('tabindex')),
-    ).toBe(false);
+    expect(checkWidgetDocument(html).some(v => v.includes('tabindex'))).toBe(
+      false,
+    );
   });
 
   it('flags onclick on a non-interactive element', () => {
@@ -203,9 +202,9 @@ describe('checkWidgetDocument', () => {
 
   it('does not flag onclick on a real button', () => {
     const html = cleanDocument('<button onclick="doThing()">click me</button>');
-    expect(
-      checkWidgetDocument(html).some(v => v.includes('onclick')),
-    ).toBe(false);
+    expect(checkWidgetDocument(html).some(v => v.includes('onclick'))).toBe(
+      false,
+    );
   });
 });
 

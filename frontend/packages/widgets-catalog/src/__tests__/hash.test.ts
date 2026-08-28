@@ -44,7 +44,9 @@ describe('hashWidgetSource', () => {
 
   it('changes when a file changes content', () => {
     const before = hashWidgetSource(makeSrcDir({'index.tsx': 'export {};'}));
-    const after = hashWidgetSource(makeSrcDir({'index.tsx': 'export const x = 1;'}));
+    const after = hashWidgetSource(
+      makeSrcDir({'index.tsx': 'export const x = 1;'}),
+    );
     expect(before).not.toBe(after);
   });
 
@@ -56,9 +58,7 @@ describe('hashWidgetSource', () => {
 
   it('includes nested directories', () => {
     const flat = hashWidgetSource(makeSrcDir({'a.ts': 'x'}));
-    const nested = hashWidgetSource(
-      makeSrcDir({'sub/a.ts': 'x'}),
-    );
+    const nested = hashWidgetSource(makeSrcDir({'sub/a.ts': 'x'}));
     expect(flat).not.toBe(nested);
   });
 });

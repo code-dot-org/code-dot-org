@@ -38,7 +38,7 @@ the `ngfp/music-lab-updated` labs stream.
 **NO-GO as an oceans fix. CONDITIONAL GO as a rebase off a dead branch**, which
 is the real justification:
 
-- 1226 commits of drift. This branch is *behind* staging on `core` (missing
+- 1226 commits of drift. This branch is _behind_ staging on `core` (missing
   `api/dashboard/{activities,schools}`, `plugins/consent`, `constants/countries`),
   `markdown` (-619 lines), `component-library`, `turbo.json`, `.yarnrc.yml`,
   `enableMocks.ts`.
@@ -108,20 +108,20 @@ no redux and no api-client context; registers per-kind zod schemas eagerly
 (`modules/labs/oceans/levelKinds.ts`); and gates every route behind
 `beforeLoad` → `fetchAuthOutcome` + `primeCsrfToken` (`routes/__root.tsx:161-168`).
 
-*Store wiring needs no adaptation.* `git diff origin/staging HEAD --
+_Store wiring needs no adaptation._ `git diff origin/staging HEAD --
 frontend/packages/core/src/redux/` is **empty** — staging already has the
 singleton `injectSlices` store. Commit `678bfc8325a` touches only
 `labs/{base,music}/src/redux/store.ts` and `labs/oceans/src/fixtures/simple.ts`,
 none of which exist on staging. The prototype contains zero redux references.
 
-*MSW needs no host change.* The prototype never touched `enableMocks.ts`
+_MSW needs no host change._ The prototype never touched `enableMocks.ts`
 (`git diff 467377958d2e HEAD -- <that file>` is empty). Staging's
 `registerMockFixture` already supports the array argument, an async responder
 returning `undefined` to decline, and unscoped global registration
 (`origin/staging:frontend/packages/core/src/api/mocks/fixtures.ts`), so
 `mswBridge.ts` would port unchanged. §4.6 argues for deleting it anyway.
 
-*Vite.* The entire staging↔HEAD diff for `studio/vite.config.ts` is the
+_Vite._ The entire staging↔HEAD diff for `studio/vite.config.ts` is the
 `/authoring-api` → `/api` rewrite to `:3737`. Same-origin is load-bearing:
 `mswBridge.ts:38` needs `bypass()` because a fetch inside an MSW resolver is
 itself intercepted.
@@ -129,16 +129,16 @@ itself intercepted.
 **(b) labs API vs what the prototype consumes.** Every `@code-dot-org/*` import in
 `modules/authoring/**` + `routes/author/**`:
 
-| Specifier | On staging |
-| --- | --- |
-| `@code-dot-org/authoring` (10 sites), `@code-dot-org/widget-runtime` (1) | ported |
-| `@code-dot-org/markdown` → `{Markdown}` (4) | yes (`markdown/src/index.ts:2`) |
-| `@code-dot-org/component-library/{tags,fontAwesomeV6Icon}` | yes (`package.json:348`, `:210`) |
-| `@code-dot-org/core/api/mocks` → `registerMockFixture` | yes |
-| `@code-dot-org/oceans-lab/styles.css` | yes, same subpath (`package.json:22`) |
-| `@code-dot-org/lab` → `{Loading}` (4) | **root barrel empty on staging**; `Loading` is at `@code-dot-org/lab/host` and takes no `isLoading` prop |
-| `@code-dot-org/lab` → `{LabHost}` (`ExperienceStage.tsx:9`) | **absent.** `git grep -l LabHost origin/staging -- frontend/` → nothing |
-| `@code-dot-org/oceans-lab/mocks` | **absent** (used only by `LAB_REGISTRY`, which stays behind) |
+| Specifier                                                                | On staging                                                                                               |
+| ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------- |
+| `@code-dot-org/authoring` (10 sites), `@code-dot-org/widget-runtime` (1) | ported                                                                                                   |
+| `@code-dot-org/markdown` → `{Markdown}` (4)                              | yes (`markdown/src/index.ts:2`)                                                                          |
+| `@code-dot-org/component-library/{tags,fontAwesomeV6Icon}`               | yes (`package.json:348`, `:210`)                                                                         |
+| `@code-dot-org/core/api/mocks` → `registerMockFixture`                   | yes                                                                                                      |
+| `@code-dot-org/oceans-lab/styles.css`                                    | yes, same subpath (`package.json:22`)                                                                    |
+| `@code-dot-org/lab` → `{Loading}` (4)                                    | **root barrel empty on staging**; `Loading` is at `@code-dot-org/lab/host` and takes no `isLoading` prop |
+| `@code-dot-org/lab` → `{LabHost}` (`ExperienceStage.tsx:9`)              | **absent.** `git grep -l LabHost origin/staging -- frontend/` → nothing                                  |
+| `@code-dot-org/oceans-lab/mocks`                                         | **absent** (used only by `LAB_REGISTRY`, which stays behind)                                             |
 
 `authoring-service`'s only `@code-dot-org/*` import is
 `@code-dot-org/widget-runtime/chrome` (`server.ts:9`, `publish/buildChangeSet.ts:1`).
@@ -188,7 +188,7 @@ identical; all 21 `level_keys` plus the 13 recursed out of the two
 files, so `LevelCatalog.size` and `searchLevels` grow; count assertions in
 `boot/__tests__/levelCatalog.test.ts` may drift.
 
-**(f) oceans.** See §1. The migration removes the dual-engine *hazard* by
+**(f) oceans.** See §1. The migration removes the dual-engine _hazard_ by
 removing `@magenta/music` from the tree, but this branch already neutralizes it in
 its own build, oceans demonstrably rendered here, and the failure artifact is a
 Chromium coredump — outside the reach of any dependency-graph change.
@@ -229,7 +229,7 @@ Chromium coredump — outside the reach of any dependency-graph change.
      `routes/author/$courseId/index.tsx:6`, `.../$lessonId.tsx:4`: `Loading` from
      `@code-dot-org/lab/host`, drop the `isLoading` prop.
    - **Delete `mswBridge.ts`** and the three `loader: () =>
-     registerAuthoringMswBridge()` calls. Fetch level properties from
+registerAuthoringMswBridge()` calls. Fetch level properties from
      `/authoring-api/levels/:id/level_properties` through the existing
      `modules/authoring/{api,hooks}.ts` react-query layer and pass them into
      `<Lab>`. `LevelPropertiesProvider` does no zod parsing, so per-level
@@ -260,7 +260,7 @@ Chromium coredump — outside the reach of any dependency-graph change.
    `course_offerings` fields (§3e) parse.
 3. `/author` and `/author/$courseId` render course list and outline against the
    live service.
-4. **HEADLINE GATE — an oceans level mounts *and runs*.** Not "a canvas
+4. **HEADLINE GATE — an oceans level mounts _and runs_.** Not "a canvas
    appears": fish render, training accepts clicks, the KNN classifier predicts,
    no console error, no renderer crash. Compare against this branch's
    `frontend/.authoring/polish-oceans-final-viewport.png`. If this fails the
