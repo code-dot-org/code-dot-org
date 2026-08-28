@@ -63,6 +63,40 @@ export interface WidgetResponse {
   html: string;
 }
 
+/** Whether "Propose widget"'s push step is usable in this environment — see
+ * authoring-service's AUTHORING_PROPOSE_REMOTE. `remote` is undefined, never
+ * a fabricated default, when the service has none configured. */
+export interface ProposeConfig {
+  remote?: string;
+}
+
+/** One file `POST /widgets/:id/propose` would write (or wrote) onto the
+ * catalog branch — src/ copied verbatim, plus widget.json/CHANGELOG.md/
+ * PROVENANCE.md. */
+export interface ProposeWidgetFile {
+  path: string;
+  content: string;
+}
+
+/** Mirrors authoring-service's ProposeWidgetResult (publish/proposeWidget.ts)
+ * verbatim — a refusal (gate violations, a slug collision, a missing
+ * remote) and a built proposal share no fields beyond `ok`, so callers
+ * narrow on it directly rather than juggling a separate error channel. */
+export type ProposeWidgetResult =
+  | {ok: false; reason: string; violations?: string[]; suggestion?: string}
+  | {
+      ok: true;
+      mode: 'dry-run' | 'push';
+      slug: string;
+      version: string;
+      branch: string;
+      baseCommit: string;
+      commit: string;
+      files: ProposeWidgetFile[];
+      diffstat: string;
+      compareUrl?: string;
+    };
+
 /** Result of the maze-family "Check level" authoring lint — see
  * authoring-service's importedLevelCheck.ts for what each field means. */
 export interface LevelCheckResponse {
@@ -252,6 +286,35 @@ export const authoringApi = {
   tutorTurn: (lessonId: string, transcript: TutorEvent[]) =>
     post<TutorAction>('/tutor', {lessonId, transcript}),
   publish: () => post<PublishResult>('/publish', {}),
+  fetchProposeConfig: () => get<ProposeConfig>('/widgets/propose-config'),
+  // Bypasses post()'s uniform throw-on-non-2xx, same reasoning as
+  // applyWriteback: a refusal (`{ok: false, reason, violations?,
+  // suggestion?}`) is a legitimate outcome the dialog renders, not an
+  // exception. A response with no `ok` field at all (an unrelated 404/503
+  // the route also returns, e.g. "unknown widget") is normalized into the
+  // same shape so the dialog has one branch to handle either way.
+  proposeWidget: async (
+    widgetId: string,
+    body: {mode: 'dry-run' | 'push'; remote?: string; baseRef?: string},
+  ): Promise<ProposeWidgetResult> => {
+    const res = await fetch(
+      `${BASE}/widgets/${encodeURIComponent(widgetId)}/propose`,
+      {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(body),
+      },
+    );
+    const data: unknown = await res.json().catch(() => undefined);
+    if (data && typeof data === 'object' && 'ok' in data) {
+      return data as ProposeWidgetResult;
+    }
+    const message =
+      data && typeof data === 'object' && typeof (data as {error?: unknown}).error === 'string'
+        ? (data as {error: string}).error
+        : `authoring-service POST /widgets/${widgetId}/propose: ${res.status}`;
+    return {ok: false, reason: message};
+  },
   applyChange: (change: CurriculumChangeInput) =>
     post<{version: number; change: CurriculumChange}>('/changes', {change}),
   fetchWritebackPlan: () => get<WritebackPlan>('/writeback/plan'),

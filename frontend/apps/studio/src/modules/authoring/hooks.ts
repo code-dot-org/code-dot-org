@@ -100,6 +100,19 @@ export function useWritebackPlan() {
 }
 
 /**
+ * Whether "Propose widget"'s push step is usable — static for the life of
+ * the authoring-service process (set once via AUTHORING_PROPOSE_REMOTE), so
+ * a long staleTime avoids a refetch every time the dialog opens.
+ */
+export function useProposeConfig() {
+  return useQuery({
+    queryKey: ['authoring', 'proposeConfig'],
+    queryFn: () => authoringApi.fetchProposeConfig(),
+    staleTime: Infinity,
+  });
+}
+
+/**
  * Levelbuilder-shaped properties for one numeric level id, for <Lab>.
  * `numericId` is undefined for experiences with no numeric id (a
  * lazily-attached generic level, a widget, a draft never registered) —

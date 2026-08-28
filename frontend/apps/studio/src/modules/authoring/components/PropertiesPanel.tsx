@@ -23,6 +23,7 @@ import type {UseLevelDraftResult} from '../levelDraft';
 import type {WorkspaceMode} from '../workspaceMode';
 
 import {LevelCheckCard, type PanelSection} from './ExperienceStage';
+import {ProposeWidgetButton} from './ProposeWidgetButton';
 
 import styles from './authoring.module.scss';
 
@@ -963,12 +964,17 @@ function WidgetFields({
   }
 
   return (
-    <WidgetMetadataForm
-      widgetId={experience.widgetId}
-      descriptor={data.descriptor}
-      onClose={onClose}
-      onDirtyChange={onDirtyChange}
-    />
+    <>
+      <WidgetMetadataForm
+        widgetId={experience.widgetId}
+        descriptor={data.descriptor}
+        onClose={onClose}
+        onDirtyChange={onDirtyChange}
+      />
+      <div className={styles.propertiesPanelForm}>
+        <ProposeWidgetButton widgetId={experience.widgetId} />
+      </div>
+    </>
   );
 }
 

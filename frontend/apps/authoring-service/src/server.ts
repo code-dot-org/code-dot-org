@@ -56,6 +56,10 @@ const PORT = Number(process.env.PORT) || 3737;
 const SESSION_ID = 'default';
 const STUDIO_ORIGIN = process.env.STUDIO_ORIGIN || 'http://localhost:3036';
 const HEARTBEAT_MS = 25_000;
+// Studio's "Propose widget" push step reads this through /propose-config and
+// disables itself when it's unset — never defaulted here or in proposeWidget,
+// so an environment with no remote configured cannot push by accident.
+const PROPOSE_REMOTE = process.env.AUTHORING_PROPOSE_REMOTE || undefined;
 
 const bridge = await loadAuthoringBridge();
 const store = SessionStore.forSession(FRONTEND_ROOT, SESSION_ID);
@@ -245,6 +249,11 @@ app.post('/api/levels/create-maze', async c => {
   }
   return c.json({version: state.version, ...result});
 });
+
+// Tells studio's "Propose widget" dialog whether a push remote is
+// configured in this environment, so it can disable the push step and say
+// why rather than the service (or the client) guessing a default remote.
+app.get('/api/widgets/propose-config', c => c.json({remote: PROPOSE_REMOTE}));
 
 app.get('/api/widgets/:id', c => {
   const id = c.req.param('id');
