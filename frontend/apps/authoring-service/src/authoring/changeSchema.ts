@@ -156,6 +156,7 @@ const LevelDefinitionPatchSchema = z.object({
   nectar_goal: z.string().nullable().optional(),
   honey_goal: z.string().nullable().optional(),
   min_collected: z.string().nullable().optional(),
+  flower_type: z.string().nullable().optional(),
 });
 
 const ExistingLevelExperienceSchema = z.object({

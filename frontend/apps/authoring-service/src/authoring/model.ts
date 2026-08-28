@@ -86,6 +86,7 @@ export interface LevelDefinitionPatch {
   nectar_goal?: string | null;
   honey_goal?: string | null;
   min_collected?: string | null;
+  flower_type?: string | null;
 }
 
 export interface WidgetExperience extends ExperienceBase {

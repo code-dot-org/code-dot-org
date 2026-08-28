@@ -411,4 +411,66 @@ describe('checkImportedMazeLevel — goal-based levels with no finish tile', () 
     expect(result.ok).toBe(false);
     expect(result.reasons[0]).toMatch(/no start tile/);
   });
+
+  // Bee.succeeded() (Bee.ts) unconditionally requires checkedAllPurple() —
+  // every purple (or default-colored) flower must be queried via the
+  // 'nectar remaining' check block before a run counts as solved, wholly
+  // apart from whether the nectar/honey/min_collected totals are met. This
+  // is the runtime rule checkGoalConsistency/simulateGoalBasedMazeProgram
+  // don't model (they only count totals) — these three cases pin the fix:
+  // a bee level's checker result must never say "solved" when the runtime
+  // would refuse the same run.
+  describe('flower-color / nectar-remaining-check agreement (bee)', () => {
+    it('passes (simulated) for redWithNectar flowers with no check block — red never needs checking', () => {
+      const result = checkImportedMazeLevel(
+        beeInput({skin: 'bee', flowerType: 'redWithNectar'}),
+      );
+      expect(result).toEqual({
+        ok: true,
+        mode: 'simulated',
+        reasons: [],
+        note: expect.stringMatching(/nectar_goal.*honey_goal.*min_collected/),
+      });
+    });
+
+    it("fails when flowers are purple (default) and the toolbox doesn't offer the check block at all", () => {
+      // Snake key — how a real .level file's raw properties (and a served
+      // wire entry before buildMazeLevelProperties' camel copy) name it.
+      const result = checkImportedMazeLevel(
+        beeInput({skin: 'bee', flower_type: 'purpleNectarHidden'}),
+      );
+      expect(result.ok).toBe(false);
+      expect(result.mode).toBe('palette');
+      expect(result.reasons[0]).toMatch(
+        /not solvable as toolboxed.*nectar remaining.*toolbox does not offer/,
+      );
+    });
+
+    it('fails when flowers are purple and the toolbox offers the check block but the solution never uses it', () => {
+      const toolboxWithCheckBlock =
+        buildToolboxBlocksXml([
+          'moveForward',
+          'turnLeft',
+          'turnRight',
+          'getNectar',
+          'makeHoney',
+        ]).replace(
+          '</xml>',
+          '<block type="bee_ifNectarAmount"></block></xml>',
+        );
+      const result = checkImportedMazeLevel(
+        beeInput({
+          skin: 'bee',
+          // flowerType omitted — Bee.ts defaults to purple whenever it
+          // isn't exactly 'redWithNectar'.
+          toolboxBlocksXml: toolboxWithCheckBlock,
+        }),
+      );
+      expect(result.ok).toBe(false);
+      expect(result.mode).toBe('palette');
+      expect(result.reasons[0]).toMatch(
+        /solution never uses the 'nectar remaining' check block/,
+      );
+    });
+  });
 });

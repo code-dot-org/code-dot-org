@@ -110,6 +110,12 @@ export interface LevelDefinitionPatch {
   nectar_goal?: string | null;
   honey_goal?: string | null;
   min_collected?: string | null;
+  // Bee only — redWithNectar/purpleNectarHidden (Bee.ts's
+  // defaultFlowerColor_). Wire key is snake, matching the served
+  // properties' raw `flower_type`, not the engine-facing `flowerType`
+  // buildMazeLevelProperties also sets — see AuthoringState's
+  // CAMEL_SNAKE_TWINS for how a patch on this key keeps both in sync.
+  flower_type?: string | null;
 }
 
 /** Agent-created executable learner content, sandboxed. */

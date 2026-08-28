@@ -360,6 +360,29 @@ function capturePreviousWidgetMetadata(
   return previous;
 }
 
+// buildMazeLevelProperties (packages/authoring/src/importer/levelProperties.ts)
+// spreads a maze-family level's raw .level properties onto the served entry
+// AND sets an explicit camelCase copy of every field the engine reads —
+// so at import time the entry carries both `short_instructions` and
+// `shortInstructions`, both `flower_type` and `flowerType`, etc. An override
+// patch is keyed by whichever casing that field's authoring surface happens
+// to use (instructions overrides send camel; the visualization panel's
+// flower-type patch sends the raw snake key — see levelDraft.ts), and a
+// merge that writes only the patched casing leaves the OTHER casing at
+// whatever the import-time value was: stale, and — for flowerType, which is
+// all the engine ever reads (Bee.ts) — the entire reason a saved edit didn't
+// show up. Both merge functions below write through this map so a patch on
+// either casing keeps both in sync, rather than each field growing its own
+// hand-written twin.
+const CAMEL_SNAKE_TWINS: Record<string, string> = {
+  shortInstructions: 'short_instructions',
+  longInstructions: 'long_instructions',
+  flowerType: 'flower_type',
+  short_instructions: 'shortInstructions',
+  long_instructions: 'longInstructions',
+  flower_type: 'flowerType',
+};
+
 function mergeInstructionsOverride(
   levelProperties: Record<string, Record<string, unknown>>,
   courses: CourseModel[],
@@ -371,10 +394,14 @@ function mergeInstructionsOverride(
     return levelProperties;
   }
   const numericId = String(experience.levelNumericId);
-  return {
-    ...levelProperties,
-    [numericId]: {...levelProperties[numericId], ...patch},
-  };
+  const merged = {...levelProperties[numericId], ...patch};
+  for (const [key, value] of Object.entries(patch)) {
+    const twin = CAMEL_SNAKE_TWINS[key];
+    if (twin && value !== undefined) {
+      merged[twin] = value;
+    }
+  }
+  return {...levelProperties, [numericId]: merged};
 }
 
 // A stored solution (Author Mode Pass D) is proof against one specific
@@ -458,10 +485,17 @@ function mergeDefinitionOverride(
   const numericId = String(experience.levelNumericId);
   const merged = {...levelProperties[numericId]};
   for (const [key, value] of Object.entries(patch)) {
+    const twin = CAMEL_SNAKE_TWINS[key];
     if (value === null) {
       delete merged[key];
+      if (twin) {
+        delete merged[twin];
+      }
     } else if (value !== undefined) {
       merged[key] = value;
+      if (twin) {
+        merged[twin] = value;
+      }
     }
   }
   return {...levelProperties, [numericId]: merged};

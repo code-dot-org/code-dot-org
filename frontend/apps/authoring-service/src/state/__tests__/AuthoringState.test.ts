@@ -128,6 +128,75 @@ describe('AuthoringState overrideLevelInstructions', () => {
     );
     expect(state.version).toBe(versionBefore + 1);
   });
+
+  // buildMazeLevelProperties spreads a maze-family level's raw properties
+  // (short_instructions) AND sets an explicit camelCase shortInstructions —
+  // a served entry can carry both. Overriding the camel key must update the
+  // snake twin too, or a stale short_instructions survives alongside the
+  // fresh shortInstructions the author actually sees.
+  it('keeps short_instructions in sync when shortInstructions is overridden', () => {
+    const state = new AuthoringState({
+      store: new SessionStore(root),
+      applyChange,
+      snapshot: {
+        ...EMPTY_SNAPSHOT,
+        courses: [
+          {
+            id: 'course-1',
+            displayName: 'Course One',
+            origin: 'draft',
+            units: [
+              {
+                id: 'unit-1',
+                displayName: 'Unit One',
+                origin: 'draft',
+                lessons: [
+                  {
+                    id: 'lesson-1',
+                    displayName: 'Lesson One',
+                    origin: 'draft',
+                    experiences: [
+                      {
+                        id: 'lb:some_maze_level',
+                        origin: 'levelbuilder',
+                        kind: 'existingLevel',
+                        levelKey: 'some_maze_level',
+                        levelType: 'Maze',
+                        runtime: 'labhost',
+                        labKey: 'maze',
+                        levelNumericId: 7,
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+        levelProperties: {
+          '7': {
+            id: 7,
+            appName: 'maze',
+            shortInstructions: 'Original short instructions.',
+            short_instructions: 'Original short instructions.',
+          },
+        },
+      },
+      changes: [],
+    });
+    state.applyCurriculumChange(
+      {
+        op: 'overrideLevelInstructions',
+        experienceId: 'lb:some_maze_level',
+        patch: {shortInstructions: 'Reworded for 2nd grade.'},
+      },
+      'author',
+    );
+
+    const properties = state.getLevelProperties('7');
+    expect(properties?.shortInstructions).toBe('Reworded for 2nd grade.');
+    expect(properties?.short_instructions).toBe('Reworded for 2nd grade.');
+  });
 });
 
 describe('AuthoringState overrideLevelInstructions previous capture', () => {
@@ -320,6 +389,53 @@ describe('AuthoringState overrideLevelDefinition', () => {
     const experience = state.getSnapshot().courses[0].units[0].lessons[0]
       .experiences[0] as {definitionOverride?: unknown};
     expect(experience.definitionOverride).toEqual({startDirection: '3'});
+  });
+
+  // G1: buildMazeLevelProperties (packages/authoring/src/importer/
+  // levelProperties.ts) sets both the raw `flower_type` and an explicit
+  // camelCase `flowerType` on the served entry — Bee.ts (the only reader)
+  // uses `flowerType` exclusively. The visualization panel's patch is keyed
+  // `flower_type` (the raw wire name — see levelDraft.ts), so a merge that
+  // writes only that key leaves `flowerType` at its stale import-time value
+  // and the save never reaches the engine.
+  it('keeps flower_type and flowerType in sync on the served entry', () => {
+    const state = stateWithLevel();
+    state.applyCurriculumChange(
+      {
+        op: 'overrideLevelDefinition',
+        experienceId: 'lb:some_maze_level',
+        patch: {flower_type: 'redWithNectar'},
+      },
+      'author',
+    );
+
+    const properties = state.getLevelProperties('7');
+    expect(properties?.flower_type).toBe('redWithNectar');
+    expect(properties?.flowerType).toBe('redWithNectar');
+  });
+
+  it('deletes both flower_type and flowerType on a null (revert) patch', () => {
+    const state = stateWithLevel();
+    state.applyCurriculumChange(
+      {
+        op: 'overrideLevelDefinition',
+        experienceId: 'lb:some_maze_level',
+        patch: {flower_type: 'redWithNectar'},
+      },
+      'author',
+    );
+    state.applyCurriculumChange(
+      {
+        op: 'overrideLevelDefinition',
+        experienceId: 'lb:some_maze_level',
+        patch: {flower_type: null},
+      },
+      'author',
+    );
+
+    const properties = state.getLevelProperties('7');
+    expect(properties).not.toHaveProperty('flower_type');
+    expect(properties).not.toHaveProperty('flowerType');
   });
 });
 

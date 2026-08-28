@@ -300,6 +300,54 @@ interface GoalTotals {
 const BEE_HIVE = 0;
 const BEE_FLOWER = 1;
 
+// BeeCell's FlowerColor (BeeCell.ts): RED = 0, PURPLE = 1, DEFAULT = absent
+// (falls back to the level's own flowerType). A flower cell with no
+// per-cell override "is purple" exactly when the level's flowerType isn't
+// 'redWithNectar' (Bee.ts's defaultFlowerColor_) — same rule applied here.
+const FLOWER_COLOR_RED = 0;
+
+// Bee's comparisonBlock family (beeBlocks.ts) whose LOC dropdown can read
+// 'nectar remaining' — the only blocks that call Bee.nectarRemaining(true)
+// and so the only way a solution can satisfy checkedAllPurple().
+const NECTAR_CHECK_BLOCK_TYPES = [
+  'bee_ifNectarAmount',
+  'bee_ifelseNectarAmount',
+  'bee_whileNectarAmount',
+];
+
+/**
+ * True when the grid has at least one flower cell that Bee.ts would treat
+ * as purple — either an explicit per-cell override, or no override on a
+ * level whose flowerType isn't 'redWithNectar' (Bee's own default-color
+ * rule). Reads `serialized_maze` (the only shape that carries a per-cell
+ * flowerColor override); a level with no serialized_maze has nothing to
+ * check this against.
+ */
+function hasPurpleFlower(
+  properties: Record<string, unknown>,
+  defaultIsRed: boolean,
+): boolean {
+  if (typeof properties.serialized_maze !== 'string') {
+    return false;
+  }
+  try {
+    const cells: unknown = JSON.parse(properties.serialized_maze);
+    if (!Array.isArray(cells)) return false;
+    for (const row of cells as {featureType?: number; flowerColor?: number}[][]) {
+      for (const cell of row) {
+        if (cell.featureType !== BEE_FLOWER) continue;
+        const isRed =
+          cell.flowerColor === FLOWER_COLOR_RED ||
+          (cell.flowerColor === undefined && defaultIsRed);
+        if (!isRed) return true;
+      }
+    }
+  } catch {
+    // fall through — nothing to check against
+  }
+  return false;
+}
+
 /**
  * Sums the map's painted item values, keyed the same way editing.ts's
  * getGoalFields groups them — nectar/honey for bee's split goals,
@@ -540,6 +588,40 @@ export function checkImportedMazeLevel(
         ],
       };
     }
+
+    // Bee.succeeded() unconditionally requires checkedAllPurple() — every
+    // purple (or default-colored) flower on the grid must be queried via
+    // the 'nectar remaining' check block before a run counts as solved,
+    // regardless of the nectar/honey/min_collected totals. By this point
+    // `usedTypes` (checked against SIMULATABLE_REAL_TYPES above) is
+    // guaranteed to contain no check-block type — a solution that used one
+    // already returned via the 'unsupported' branch above — so a purple
+    // flower here means this solution provably never checked, and the
+    // simulation below would certify a run the runtime refuses. Report
+    // that honestly instead of running it.
+    if (properties.skin === 'bee') {
+      const flowerType = properties.flowerType ?? properties.flower_type;
+      if (hasPurpleFlower(properties, flowerType === 'redWithNectar')) {
+        const toolboxOffersCheck = NECTAR_CHECK_BLOCK_TYPES.some(type =>
+          availableTypes.has(type),
+        );
+        return {
+          ok: false,
+          mode: 'palette',
+          reasons: [
+            toolboxOffersCheck
+              ? "the solution never uses the 'nectar remaining' check " +
+                "block: this level has purple (or default-colored) " +
+                'flowers, and Bee.succeeded() requires checking each one ' +
+                'before the run counts as solved.'
+              : "not solvable as toolboxed: purple flowers require the " +
+                "'nectar remaining' check block, which the toolbox does " +
+                'not offer.',
+          ],
+        };
+      }
+    }
+
     // The map's static item totals must already cover the declared
     // goal(s) — a level whose map can't possibly satisfy nectar_goal/
     // honey_goal/min_collected fails here regardless of what the solution

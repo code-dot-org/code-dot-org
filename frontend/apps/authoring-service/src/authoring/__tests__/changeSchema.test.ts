@@ -129,4 +129,25 @@ describe('overrideLevelDefinition', () => {
     expect(data).toMatchObject({patch: {startDirection: '1'}});
     expect(data.patch.notARealField).toBeUndefined();
   });
+
+  // G1 regression: flower_type was absent from the schema, so a real save
+  // from the visualization panel got silently stripped exactly like
+  // notARealField above — the service recorded `patch: {}` while the UI
+  // claimed success.
+  it('accepts flower_type rather than stripping it', () => {
+    const result = CurriculumChangeBodySchema.safeParse({
+      op: 'overrideLevelDefinition',
+      experienceId: 'lb:some_maze_level',
+      patch: {flower_type: 'redWithNectar'},
+    });
+    expect(result.success).toBe(true);
+    if (!result.success) {
+      return;
+    }
+    const data = result.data as {
+      op: 'overrideLevelDefinition';
+      patch: Record<string, unknown>;
+    };
+    expect(data.patch.flower_type).toBe('redWithNectar');
+  });
 });
