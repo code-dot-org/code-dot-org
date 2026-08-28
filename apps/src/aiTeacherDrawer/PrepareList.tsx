@@ -1,5 +1,6 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import {asyncLoadSectionData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -206,14 +207,14 @@ const PrepareList: React.FC<PrepareListProps> = ({onNavigateToChats}) => {
   return (
     <div className={styles.container}>
       {emptyStateSection && emptyStateType && (
-        <button
-          type="button"
+        <MuiButton
+          variant="text"
           className={styles.backButton}
+          startIcon={<FontAwesomeV6Icon iconName="chevron-left" />}
           onClick={() => setEmptyStateSectionId(null)}
         >
-          <FontAwesomeV6Icon iconName="chevron-left" />
           Back
-        </button>
+        </MuiButton>
       )}
       <h2 className={styles.heading}>Prepare</h2>
       <div className={styles.datePickerSection}>

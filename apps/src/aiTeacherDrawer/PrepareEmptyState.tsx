@@ -1,4 +1,4 @@
-import {Button as MuiButton} from '@mui/material';
+import {Button as MuiButton, Typography} from '@mui/material';
 import React from 'react';
 
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
@@ -74,10 +74,19 @@ const PrepareEmptyState: React.FC<PrepareEmptyStateProps> = ({
 
   return (
     <div className={styles.sectionEmptyState}>
-      <h3 className={styles.sectionEmptyStateTitle}>{content.title}</h3>
-      <p className={styles.sectionEmptyStateDescription}>
+      <Typography
+        variant="h6"
+        component="h3"
+        className={styles.sectionEmptyStateTitle}
+      >
+        {content.title}
+      </Typography>
+      <Typography
+        variant="body2"
+        className={styles.sectionEmptyStateDescription}
+      >
         {content.description}
-      </p>
+      </Typography>
       <MuiButton
         variant="contained"
         color="primary"
