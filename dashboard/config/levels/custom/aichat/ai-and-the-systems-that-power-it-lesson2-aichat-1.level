@@ -44,8 +44,11 @@
         "gemini-2.5-flash-image"
       ],
       "multimodalEnabled": false
-    }
+    },
+    "display_name": "Image Generation",
+    "bubble_choice_description": "Craft a system prompt that creates images that support your computer hardware metaphor",
+    "thumbnail_url": "https://images.code.org/d49e7f4ca479fffada93ba1c7bee7bc5-image-generation-icon.png"
   },
-  "audit_log": "[{\"changed_at\":\"2026-08-26 18:35:40 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-26 19:10:28 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-08-26 18:35:40 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-26 19:10:28 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-27 15:18:49 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>
