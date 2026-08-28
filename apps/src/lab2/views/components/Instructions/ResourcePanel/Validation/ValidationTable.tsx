@@ -49,7 +49,10 @@ const ValidationTable: React.FunctionComponent<ValidationResultsProps> = ({
       id="resource-panel-validation-results"
       className={moduleStyles.validationResults}
     >
-      <table className={moduleStyles.validationResultsTable}>
+      <table
+        className={moduleStyles.validationResultsTable}
+        aria-label={lab2I18n.validationResults()}
+      >
         <thead>
           <tr>
             <td>
@@ -74,7 +77,10 @@ const ValidationTable: React.FunctionComponent<ValidationResultsProps> = ({
               </td>
               <td>
                 <div className={moduleStyles.resultsText}>
-                  <ValidationStatusIcon status={getStatusForResult(result)} />
+                  <ValidationStatusIcon
+                    status={getStatusForResult(result)}
+                    label={result.result === 'PENDING' ? 'Running' : undefined}
+                  />
                   <Typography variant="body3" gutterBottom>
                     <Typography variant="strong">
                       {getTranslatedResult(result)}

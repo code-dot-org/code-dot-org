@@ -1,6 +1,5 @@
 from .instrument import Instrument, as_instrument
 from .support import actions
-from .support.actions import UNSPECIFIED
 from .support.audio import as_samples, read_samples_from_file
 from .support.color import Color, as_color
 from .support.constants import (
@@ -15,7 +14,7 @@ from .support.constants import (
   THEATER_HEIGHT,
   THEATER_WIDTH,
 )
-from .support.font import Font, FontStyle
+from .support.font import Font, FontStyle, as_font, as_font_style
 from .support.image import Image, fit_to_width
 
 _DEFAULT_FONT = Font.SANS
@@ -23,6 +22,8 @@ _DEFAULT_FONT_STYLE = FontStyle.NORMAL
 _DEFAULT_TEXT_HEIGHT = 20
 _DEFAULT_STROKE_WIDTH = 1.0
 _MIN_POLYGON_SIDES = 3
+_MIN_DRAW_SIZE = 1
+_MIN_SHAPE_POINTS = 2
 
 
 def _validate_duration(method_name, seconds):
@@ -32,13 +33,13 @@ def _validate_duration(method_name, seconds):
   student's own call. Notes share the pause range: play_note_and_pause() hands
   the same value to both, and the ceiling is what a gif frame delay can hold.
   """
-  if seconds < MIN_PAUSE_SECONDS:
+  # Checking a range turns away a nan: every comparison against one is false,
+  # so a nan can clear individual checks and reach the frame delay, where rounding 
+  # it to an integer raised from the renderer.
+  if not MIN_PAUSE_SECONDS <= seconds <= MAX_PAUSE_SECONDS:
     raise ValueError(
-      f"{method_name} needs at least {MIN_PAUSE_SECONDS} seconds, got {seconds}"
-    )
-  if seconds > MAX_PAUSE_SECONDS:
-    raise ValueError(
-      f"{method_name} allows at most {MAX_PAUSE_SECONDS} seconds, got {seconds}"
+      f"{method_name} needs between {MIN_PAUSE_SECONDS} and "
+      f"{MAX_PAUSE_SECONDS} seconds, got {seconds}"
     )
 
 
@@ -46,11 +47,32 @@ def _validate_draw_size(name, value):
   """Bound one dimension draw_image() will scale to.
 
   Raise here rather than at render time so the traceback points at the
-  student's own call.
+  student's own call. A range rather than two comparisons, so a nan fails too.
   """
-  if value > MAX_DRAW_IMAGE_SIZE:
+  if not _MIN_DRAW_SIZE <= value <= MAX_DRAW_IMAGE_SIZE:
     raise ValueError(
-      f"draw_image allows a {name} of at most {MAX_DRAW_IMAGE_SIZE}, got {value}"
+      f"draw_image needs a {name} between {_MIN_DRAW_SIZE} and "
+      f"{MAX_DRAW_IMAGE_SIZE}, got {value}"
+    )
+
+
+def _validate_shape_points(points):
+  """Check a shape's coordinates at the call rather than at render time.
+
+  Coordinates are one flat run -- x1, y1, x2, y2 and so on -- which reads
+  easily as a list of points instead, so that mistake gets its own answer
+  rather than a complaint about how many numbers arrived.
+  """
+  if points and hasattr(points[0], "__len__"):
+    raise ValueError(
+      "draw_shape needs one flat list of coordinates, x1, y1, x2, y2 and so "
+      "on, rather than a list of points"
+    )
+  if len(points) < 2 * _MIN_SHAPE_POINTS or len(points) % 2 != 0:
+    raise ValueError(
+      f"draw_shape needs an even number of coordinates, at least "
+      f"{2 * _MIN_SHAPE_POINTS} of them for {_MIN_SHAPE_POINTS} points, "
+      f"got {len(points)}"
     )
 
 
@@ -164,18 +186,21 @@ class Scene:
           f"tall, and the limit is {MAX_DRAW_IMAGE_SIZE}"
         )
       self._actions.append(
-        actions.DrawImage(image_copy, x, y, size, UNSPECIFIED, UNSPECIFIED, rotation)
+        actions.DrawImage(image_copy, x, y, size, None, None, rotation)
       )
     elif width is not None and height is not None:
       _validate_draw_size("width", width)
       _validate_draw_size("height", height)
       self._actions.append(
-        actions.DrawImage(image_copy, x, y, UNSPECIFIED, width, height, rotation)
+        actions.DrawImage(image_copy, x, y, None, width, height, rotation)
       )
     else:
       raise ValueError("draw_image needs either size, or both width and height")
 
   def set_text_style(self, font, style):
+    # Coerce both before assigning either, so a call that throws leaves the
+    # text style as it was rather than half-applied.
+    font, style = as_font(font), as_font_style(style)
     self._font = font
     self._font_style = style
 
@@ -212,9 +237,11 @@ class Scene:
     )
 
   def draw_shape(self, points, close):
+    points = list(points)
+    _validate_shape_points(points)
     self._actions.append(
       actions.DrawShape(
-        list(points), close, self._stroke_color, self._fill_color, self._stroke_width
+        points, close, self._stroke_color, self._fill_color, self._stroke_width
       )
     )
 
