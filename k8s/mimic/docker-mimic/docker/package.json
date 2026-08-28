@@ -1,8 +1,0 @@
-{
-  "name": "mimic",
-  "scripts": {
-    "start": "npx http-server"
-  },
-  "dependencies": {},
-  "devDependencies": {}
-}
