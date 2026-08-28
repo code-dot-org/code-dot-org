@@ -1,8 +1,20 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import {describe, expect, it, vi} from 'vitest';
 
+import type {ExistingLevelExperience} from '@code-dot-org/authoring';
+
+import {authoringApi} from '@/modules/authoring';
+
 import type {UseLevelDraftResult} from '../../levelDraft';
-import {WorkspaceFields} from '../PropertiesPanel';
+import {VideoFields, WorkspaceFields} from '../PropertiesPanel';
+
+// PropertiesPanel.tsx imports authoringApi from the module index (not
+// '../api' directly) — mock it there, same target the component resolves.
+vi.mock('@/modules/authoring', () => ({
+  authoringApi: {applyChange: vi.fn()},
+}));
+
+const applyChange = vi.mocked(authoringApi.applyChange);
 
 function makeLevelDraft(
   overrides: Partial<UseLevelDraftResult> = {},
@@ -79,5 +91,104 @@ describe('WorkspaceFields "Show all blocks" toggle', () => {
     // `key={experience.id}` — must remount with a fresh, unchecked toggle.
     rerender(<WorkspaceFields key="level-b" {...props} />);
     expect(screen.getByLabelText(/show all blocks/i)).not.toBeChecked();
+  });
+});
+
+function videoExperience(
+  overrides: Partial<ExistingLevelExperience> = {},
+): ExistingLevelExperience {
+  return {
+    id: 'lb:some_video',
+    origin: 'levelbuilder',
+    kind: 'existingLevel',
+    levelKey: 'some_video',
+    levelType: 'Video',
+    runtime: 'generic',
+    levelNumericId: 9000007,
+    title: 'Elementary Machine Learning',
+    data: {type: 'video', videoKey: 'elementary_machine_learning'},
+    ...overrides,
+  };
+}
+
+describe('VideoFields', () => {
+  it('seeds every field from the current data, disabled Save while clean', () => {
+    render(
+      <VideoFields
+        experience={videoExperience()}
+        data={{type: 'video', videoKey: 'elementary_machine_learning'}}
+        onClose={vi.fn()}
+        onDirtyChange={vi.fn()}
+      />,
+    );
+    expect(screen.getByLabelText(/youtube video id/i)).toHaveValue('');
+    expect(screen.getByLabelText(/video key/i)).toHaveValue(
+      'elementary_machine_learning',
+    );
+    expect(screen.getByRole('button', {name: /save/i})).toBeDisabled();
+  });
+
+  it('saves the whole variant through updateGenericLevelData, fixing the placeholder code', async () => {
+    applyChange.mockReset().mockResolvedValue(undefined as never);
+    const onClose = vi.fn();
+    const onDirtyChange = vi.fn();
+    render(
+      <VideoFields
+        experience={videoExperience()}
+        data={{type: 'video', videoKey: 'elementary_machine_learning'}}
+        onClose={onClose}
+        onDirtyChange={onDirtyChange}
+      />,
+    );
+
+    fireEvent.change(screen.getByLabelText(/youtube video id/i), {
+      target: {value: 'dQw4w9WgXcQ'},
+    });
+    expect(onDirtyChange).toHaveBeenLastCalledWith(true);
+
+    fireEvent.click(screen.getByRole('button', {name: /save/i}));
+
+    await waitFor(() => expect(onClose).toHaveBeenCalled());
+    expect(applyChange).toHaveBeenCalledWith({
+      op: 'updateGenericLevelData',
+      experienceId: 'lb:some_video',
+      data: {type: 'video', videoKey: 'elementary_machine_learning', youtubeCode: 'dQw4w9WgXcQ'},
+    });
+    // Title never changed — updateContent must not fire alongside it.
+    expect(applyChange).not.toHaveBeenCalledWith(
+      expect.objectContaining({op: 'updateContent'}),
+    );
+  });
+
+  it('saves title and data as two separate ops when both changed', async () => {
+    applyChange.mockReset().mockResolvedValue(undefined as never);
+    render(
+      <VideoFields
+        experience={videoExperience()}
+        data={{type: 'video', videoKey: 'elementary_machine_learning'}}
+        onClose={vi.fn()}
+        onDirtyChange={vi.fn()}
+      />,
+    );
+
+    fireEvent.change(screen.getByLabelText(/^title$/i), {
+      target: {value: 'Renamed'},
+    });
+    fireEvent.change(screen.getByLabelText(/youtube video id/i), {
+      target: {value: 'dQw4w9WgXcQ'},
+    });
+    fireEvent.click(screen.getByRole('button', {name: /save/i}));
+
+    await waitFor(() => expect(applyChange).toHaveBeenCalledTimes(2));
+    expect(applyChange).toHaveBeenCalledWith({
+      op: 'updateContent',
+      experienceId: 'lb:some_video',
+      patch: {title: 'Renamed'},
+    });
+    expect(applyChange).toHaveBeenCalledWith({
+      op: 'updateGenericLevelData',
+      experienceId: 'lb:some_video',
+      data: {type: 'video', videoKey: 'elementary_machine_learning', youtubeCode: 'dQw4w9WgXcQ'},
+    });
   });
 });

@@ -361,5 +361,27 @@ export function applyChange(
         }),
       }));
     }
+
+    case 'updateGenericLevelData': {
+      const lessonId = findLessonIdForExperience(state, change.experienceId);
+      return replaceLesson(state, lessonId, lesson => ({
+        ...lesson,
+        experiences: lesson.experiences.map(e => {
+          if (e.id !== change.experienceId || e.kind !== 'existingLevel') {
+            return e;
+          }
+          // A video must stay a video: the discriminant is the only thing
+          // that says which renderer and which panel form apply, and a
+          // field-merge can't cross variants anyway, so a type change would
+          // only ever be an author's editor bug, not an intentional retype.
+          if (e.data && e.data.type !== change.data.type) {
+            throw new Error(
+              `updateGenericLevelData: cannot change variant type (${e.data.type} -> ${change.data.type}) for experience ${change.experienceId}`,
+            );
+          }
+          return {...e, data: change.data};
+        }),
+      }));
+    }
   }
 }

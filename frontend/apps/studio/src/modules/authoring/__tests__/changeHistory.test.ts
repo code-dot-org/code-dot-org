@@ -264,6 +264,46 @@ describe('changesForCourse', () => {
       expect.arrayContaining(['adoptCatalogWidget']),
     );
   });
+
+  it('resolves updateGenericLevelData via its experienceId, same as overrideLevel*', () => {
+    seq = 0;
+    const changes: CurriculumChange[] = [
+      {
+        ...stamp(),
+        op: 'createCourse',
+        course: {id: 'course-a', displayName: 'A', origin: 'draft'},
+      },
+      {
+        ...stamp(),
+        op: 'createUnit',
+        courseId: 'course-a',
+        unit: {id: 'unit-a', displayName: 'Unit A', origin: 'draft'},
+      },
+      {
+        ...stamp(),
+        op: 'createLesson',
+        unitId: 'unit-a',
+        lesson: {id: 'lesson-a', displayName: 'Lesson A', origin: 'draft'},
+      },
+      {
+        ...stamp(),
+        op: 'attachExistingLevel',
+        lessonId: 'lesson-a',
+        levelKey: 'some_video',
+        position: 0,
+      },
+      {
+        ...stamp(),
+        op: 'updateGenericLevelData',
+        experienceId: 'lb:some_video',
+        data: {type: 'video', videoKey: 'some_video', youtubeCode: 'x'},
+      },
+    ];
+
+    expect(changesForCourse(changes, [], 'course-a').map(c => c.op)).toEqual(
+      expect.arrayContaining(['updateGenericLevelData']),
+    );
+  });
 });
 
 describe('summarizeChange', () => {
@@ -319,5 +359,17 @@ describe('summarizeChange', () => {
       catalogRef: null,
     };
     expect(summarizeChange(change, courses)).toMatch(/session draft/i);
+  });
+
+  it('summarizes updateGenericLevelData by variant type', () => {
+    const change: CurriculumChange = {
+      seq: 1,
+      at: '2026-08-26T00:00:00.000Z',
+      actor: 'author',
+      op: 'updateGenericLevelData',
+      experienceId: 'lb:some_video',
+      data: {type: 'video', videoKey: 'x', youtubeCode: 'dQw4w9WgXcQ'},
+    };
+    expect(summarizeChange(change, courses)).toMatch(/video/i);
   });
 });

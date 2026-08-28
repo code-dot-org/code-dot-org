@@ -13,13 +13,13 @@ import type {CurriculumChangeInput} from './api';
  * attachExistingLevel the resulting experience id is `lb:<levelKey>`
  * (apply.ts's resolveLevel and its unresolved fallback both mint it that
  * way, deterministically, so no id needs recovering from the tree).
- * overrideLevelInstructions/overrideLevelDefinition each restore whatever
- * `previous` the server captured at apply time (see
+ * overrideLevelInstructions/overrideLevelDefinition/updateGenericLevelData
+ * each restore whatever `previous` the server captured at apply time (see
  * AuthoringState.applyCurriculumChange) — no log replay needed.
  * adoptCatalogWidget is the same shape, with one difference: its `previous`
  * is legitimately `null` (the widget wasn't adopted before this change), so
  * its case below checks `!== undefined` rather than truthiness, unlike the
- * two ops above.
+ * three ops above.
  *
  * Excluded, and why: createCourse/createUnit/createLesson may have gained
  * content since (removing the container would silently drop it too);
@@ -65,6 +65,14 @@ export function buildRevertChangeBody(
             op: 'overrideLevelDefinition',
             experienceId: change.experienceId,
             patch: change.previous,
+          }
+        : undefined;
+    case 'updateGenericLevelData':
+      return change.previous
+        ? {
+            op: 'updateGenericLevelData',
+            experienceId: change.experienceId,
+            data: change.previous,
           }
         : undefined;
     case 'updateWidgetMetadata':

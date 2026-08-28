@@ -2,6 +2,7 @@ import type {
   CourseModel,
   Experience,
   ExistingLevelExperience,
+  GenericLevelData,
   InstructionsPatch,
   LevelDefinitionPatch,
   Lesson,
@@ -132,5 +133,18 @@ export type CurriculumChange = {
       experienceId: string;
       patch: LevelDefinitionPatch;
       previous?: LevelDefinitionPatch;
+    }
+  // Whole-variant replace for a generic-runtime experience's structured
+  // payload (multi/match/video/levelGroup/bubbleChoice) — not a merge, since
+  // the union is discriminated on `type` and several variants carry ordered
+  // arrays (answers/pairs/choices/pages) that reorder and delete, which a
+  // field patch can't express. Same capture discipline as
+  // overrideLevelInstructions: `previous` is server-captured from
+  // experience.data just before the merge, never client-supplied.
+  | {
+      op: 'updateGenericLevelData';
+      experienceId: string;
+      data: GenericLevelData;
+      previous?: GenericLevelData;
     }
 );

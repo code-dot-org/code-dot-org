@@ -518,6 +518,138 @@ describe('AuthoringState overrideLevelDefinition previous capture', () => {
   });
 });
 
+function stateWithVideoLevel(): AuthoringState {
+  const level = {
+    id: 'lb:some_video',
+    origin: 'levelbuilder' as const,
+    kind: 'existingLevel' as const,
+    levelKey: 'some_video',
+    levelType: 'Video',
+    runtime: 'generic' as const,
+    levelNumericId: 9000007,
+    data: {
+      type: 'video' as const,
+      videoKey: 'elementary_machine_learning',
+    },
+  };
+  const course: CourseModel = {
+    id: 'course-1',
+    displayName: 'Course One',
+    origin: 'draft',
+    units: [
+      {
+        id: 'unit-1',
+        displayName: 'Unit One',
+        origin: 'draft',
+        lessons: [
+          {
+            id: 'lesson-1',
+            displayName: 'Lesson One',
+            origin: 'draft',
+            experiences: [level],
+          },
+        ],
+      },
+    ],
+  };
+  return new AuthoringState({
+    store: new SessionStore(root),
+    applyChange,
+    snapshot: {...EMPTY_SNAPSHOT, courses: [course]},
+    changes: [],
+  });
+}
+
+describe('AuthoringState updateGenericLevelData', () => {
+  it('replaces the experience\'s whole data value', () => {
+    const state = stateWithVideoLevel();
+    state.applyCurriculumChange(
+      {
+        op: 'updateGenericLevelData',
+        experienceId: 'lb:some_video',
+        data: {
+          type: 'video',
+          videoKey: 'elementary_machine_learning',
+          youtubeCode: 'dQw4w9WgXcQ',
+          displayName: 'Elementary Machine Learning',
+        },
+      },
+      'author',
+    );
+    const experience = state.getSnapshot().courses[0].units[0].lessons[0]
+      .experiences[0] as {data?: unknown};
+    expect(experience.data).toEqual({
+      type: 'video',
+      videoKey: 'elementary_machine_learning',
+      youtubeCode: 'dQw4w9WgXcQ',
+      displayName: 'Elementary Machine Learning',
+    });
+  });
+
+  it('captures the prior data as `previous`, straight from experience.data', () => {
+    const state = stateWithVideoLevel();
+    const change = state.applyCurriculumChange(
+      {
+        op: 'updateGenericLevelData',
+        experienceId: 'lb:some_video',
+        data: {
+          type: 'video',
+          videoKey: 'elementary_machine_learning',
+          youtubeCode: 'dQw4w9WgXcQ',
+        },
+      },
+      'author',
+    );
+    expect(change).toMatchObject({
+      previous: {type: 'video', videoKey: 'elementary_machine_learning'},
+    });
+  });
+
+  it('ignores a client-supplied `previous` and recomputes it authoritatively', () => {
+    const state = stateWithVideoLevel();
+    const change = state.applyCurriculumChange(
+      {
+        op: 'updateGenericLevelData',
+        experienceId: 'lb:some_video',
+        data: {type: 'video', videoKey: 'elementary_machine_learning'},
+        previous: {type: 'video', videoKey: 'attacker-supplied-lie'},
+      },
+      'author',
+    );
+    expect(change).toMatchObject({
+      previous: {type: 'video', videoKey: 'elementary_machine_learning'},
+    });
+  });
+
+  it('refuses a variant-type change', () => {
+    const state = stateWithVideoLevel();
+    expect(() =>
+      state.applyCurriculumChange(
+        {
+          op: 'updateGenericLevelData',
+          experienceId: 'lb:some_video',
+          data: {type: 'markdown', markdown: 'not a video anymore'},
+        },
+        'author',
+      ),
+    ).toThrow(/cannot change variant type/);
+  });
+
+  it('bumps the version exactly once for one change', () => {
+    const state = stateWithVideoLevel();
+    const versionBefore = state.version;
+    state.applyCurriculumChange(
+      {
+        op: 'updateGenericLevelData',
+        experienceId: 'lb:some_video',
+        data: {type: 'video', videoKey: 'elementary_machine_learning'},
+      },
+      'author',
+    );
+    expect(state.version).toBe(versionBefore + 1);
+  });
+});
+
 describe('AuthoringState overrideLevelDefinition solution staleness', () => {
   it('degrades solutionVerified to false when a map edit carries no fresh proof', () => {
     const state = stateWithLevel();

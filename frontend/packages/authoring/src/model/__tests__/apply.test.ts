@@ -473,6 +473,99 @@ describe('applyChange', () => {
     );
   });
 
+  it('replaces a video experience\'s whole data value', () => {
+    const state = frozenBaseState();
+    const level: ExistingLevelExperience = {
+      id: 'lb:some_video',
+      origin: 'levelbuilder',
+      kind: 'existingLevel',
+      levelKey: 'some_video',
+      levelType: 'Video',
+      runtime: 'generic',
+      levelNumericId: 9000007,
+      data: {type: 'video', videoKey: 'elementary_machine_learning'},
+    };
+    const withLevel = applyChange(state, {
+      seq: 1,
+      at: 'now',
+      actor: 'author',
+      op: 'createLevel',
+      lessonId: 'lesson-2',
+      level,
+      position: 0,
+    });
+    const next = applyChange(deepFreeze(withLevel), {
+      seq: 2,
+      at: 'now',
+      actor: 'author',
+      op: 'updateGenericLevelData',
+      experienceId: 'lb:some_video',
+      data: {
+        type: 'video',
+        videoKey: 'elementary_machine_learning',
+        youtubeCode: 'dQw4w9WgXcQ',
+        displayName: 'Elementary Machine Learning',
+      },
+      previous: {type: 'video', videoKey: 'elementary_machine_learning'},
+    });
+    const experience = next.courses[0].units[0].lessons[1]
+      .experiences[0] as ExistingLevelExperience;
+    expect(experience.data).toEqual({
+      type: 'video',
+      videoKey: 'elementary_machine_learning',
+      youtubeCode: 'dQw4w9WgXcQ',
+      displayName: 'Elementary Machine Learning',
+    });
+  });
+
+  it('refuses to change a generic experience\'s variant type', () => {
+    const state = frozenBaseState();
+    const level: ExistingLevelExperience = {
+      id: 'lb:some_video',
+      origin: 'levelbuilder',
+      kind: 'existingLevel',
+      levelKey: 'some_video',
+      levelType: 'Video',
+      runtime: 'generic',
+      levelNumericId: 9000007,
+      data: {type: 'video', videoKey: 'elementary_machine_learning'},
+    };
+    const withLevel = applyChange(state, {
+      seq: 1,
+      at: 'now',
+      actor: 'author',
+      op: 'createLevel',
+      lessonId: 'lesson-2',
+      level,
+      position: 0,
+    });
+    expect(() =>
+      applyChange(deepFreeze(withLevel), {
+        seq: 2,
+        at: 'now',
+        actor: 'author',
+        op: 'updateGenericLevelData',
+        experienceId: 'lb:some_video',
+        data: {type: 'markdown', markdown: 'not a video anymore'},
+      }),
+    ).toThrow(/cannot change variant type/);
+  });
+
+  it('leaves a non-level experience untouched by a generic data replace', () => {
+    const state = frozenBaseState();
+    const next = applyChange(state, {
+      seq: 1,
+      at: 'now',
+      actor: 'author',
+      op: 'updateGenericLevelData',
+      experienceId: 'exp-1',
+      data: {type: 'markdown', markdown: 'does not apply'},
+    });
+    expect(next.courses[0].units[0].lessons[0].experiences[0]).toEqual(
+      content('exp-1'),
+    );
+  });
+
   it('throws a clear error for an unknown lesson id', () => {
     const state = frozenBaseState();
     expect(() =>

@@ -277,6 +277,28 @@ describe('buildWritebackPlan', () => {
     ]);
   });
 
+  it('reports updateGenericLevelData as skipped rather than silently dropping it', () => {
+    const changes: CurriculumChange[] = [
+      {
+        seq: 1,
+        at: new Date().toISOString(),
+        actor: 'author',
+        op: 'updateGenericLevelData',
+        experienceId: 'lb:courseD_maze_ramp1_2024',
+        data: {type: 'video', videoKey: 'x', youtubeCode: 'dQw4w9WgXcQ'},
+      },
+    ];
+    const plan = buildWritebackPlan(baseInput({changes}));
+    expect(plan.edits).toHaveLength(0);
+    expect(plan.skipped).toEqual([
+      {
+        experienceId: 'lb:courseD_maze_ramp1_2024',
+        field: 'data',
+        reason: 'generic-data-not-writeback-supported',
+      },
+    ]);
+  });
+
   it('skips a draft (non-lb) level as out of scope', () => {
     const changes = [
       instructionsChange(

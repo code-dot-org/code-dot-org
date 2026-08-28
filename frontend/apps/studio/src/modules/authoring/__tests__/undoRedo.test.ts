@@ -73,6 +73,7 @@ describe('isRedoable', () => {
   it.each([
     'overrideLevelInstructions',
     'overrideLevelDefinition',
+    'updateGenericLevelData',
     'adoptCatalogWidget',
   ] as const)(
     '%s is redoable — the server re-captures `previous` on every apply',
@@ -188,6 +189,36 @@ describe('undo/redo round-trip per op type', () => {
       op: 'adoptCatalogWidget',
       experienceId: 'exp-widget-1',
       catalogRef: {slug: 'you-be-the-sorter', version: '1.0.0'},
+    });
+  });
+
+  it('updateGenericLevelData: same round-trip, whole-value replace throughout', () => {
+    const original: CurriculumChange = {
+      ...stamp,
+      seq: 1,
+      op: 'updateGenericLevelData',
+      experienceId: 'lb:some_video',
+      data: {type: 'video', videoKey: 'x', youtubeCode: 'new-code'},
+      previous: {type: 'video', videoKey: 'x', youtubeCode: 'old-code'},
+    };
+    const undoBody = buildRevertChangeBody(original);
+    if (undoBody?.op !== 'updateGenericLevelData') {
+      throw new Error('expected an updateGenericLevelData revert body');
+    }
+    expect(undoBody.data).toEqual({type: 'video', videoKey: 'x', youtubeCode: 'old-code'});
+
+    const revertChange: CurriculumChange = {
+      ...stamp,
+      seq: 2,
+      op: 'updateGenericLevelData',
+      experienceId: undoBody.experienceId,
+      data: undoBody.data,
+      previous: original.data,
+    };
+    expect(buildRevertChangeBody(revertChange)).toEqual({
+      op: 'updateGenericLevelData',
+      experienceId: 'lb:some_video',
+      data: {type: 'video', videoKey: 'x', youtubeCode: 'new-code'},
     });
   });
 

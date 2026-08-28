@@ -302,4 +302,9 @@ export const CurriculumChangeBodySchema = z.discriminatedUnion('op', [
     experienceId: z.string().min(1),
     patch: LevelDefinitionPatchSchema,
   }),
+  z.object({
+    op: z.literal('updateGenericLevelData'),
+    experienceId: z.string().min(1),
+    data: GenericLevelDataSchema,
+  }),
 ]);

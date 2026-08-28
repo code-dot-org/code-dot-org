@@ -267,6 +267,14 @@ export type CurriculumChangeBody =
       experienceId: string;
       patch: LevelDefinitionPatch;
       previous?: LevelDefinitionPatch;
+    }
+  // Whole-variant replace for a generic-runtime experience's structured
+  // payload — see the identical comment on packages/authoring's changes.ts.
+  | {
+      op: 'updateGenericLevelData';
+      experienceId: string;
+      data: GenericLevelData;
+      previous?: GenericLevelData;
     };
 
 export type CurriculumChangeOp = CurriculumChangeBody['op'];
@@ -290,6 +298,7 @@ export const CURRICULUM_CHANGE_OPS: readonly CurriculumChangeOp[] = [
   'updateLevel',
   'overrideLevelInstructions',
   'overrideLevelDefinition',
+  'updateGenericLevelData',
 ];
 
 export type CurriculumChange = {

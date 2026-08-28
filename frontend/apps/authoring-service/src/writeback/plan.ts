@@ -204,6 +204,23 @@ export function buildWritebackPlan(input: WritebackPlanInput): WritebackPlan {
       }
       continue;
     }
+    // Whole-variant generic-data replace has no .level file destination in
+    // this pass at all — not a field-mapping gap like updateLevel's title
+    // above, but a real hole (data-wiring-map §7.1's op unlocks the panel
+    // before write-back catches up). Reported explicitly, once per
+    // experience, rather than falling through the ops filter below and
+    // vanishing the same way an unrelated op like moveExperience silently
+    // does.
+    if (change.op === 'updateGenericLevelData') {
+      reportUnmappedOnce(
+        skipped,
+        reportedUnmapped,
+        change.experienceId,
+        'data',
+        'generic-data-not-writeback-supported',
+      );
+      continue;
+    }
     if (change.op !== 'overrideLevelInstructions' && change.op !== 'overrideLevelDefinition') {
       continue;
     }

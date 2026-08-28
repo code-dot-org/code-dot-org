@@ -6,6 +6,7 @@ import type {
   CourseModel,
   CurriculumChange,
   CurriculumChangeBody,
+  GenericLevelData,
   LevelDefinitionPatch,
   ResolveLevel,
   WidgetDescriptor,
@@ -137,6 +138,12 @@ export class AuthoringState {
     }
     if (change.op === 'adoptCatalogWidget') {
       change.previous = capturePreviousCatalogRef(
+        this.snapshot.courses,
+        change.experienceId,
+      );
+    }
+    if (change.op === 'updateGenericLevelData') {
+      change.previous = capturePreviousGenericData(
         this.snapshot.courses,
         change.experienceId,
       );
@@ -390,6 +397,17 @@ function capturePreviousCatalogRef(
     }
   }
   return undefined;
+}
+
+// Unlike capturePreviousInstructions/capturePreviousDefinition, a generic
+// experience's data has no levelProperties fold: it lives only on the
+// experience node itself (data-wiring-map §7.1), so the pre-merge value is
+// just whatever's there now — no served/override split to reconcile.
+function capturePreviousGenericData(
+  courses: CourseModel[],
+  experienceId: string,
+): GenericLevelData | undefined {
+  return findExistingLevelExperience(courses, experienceId)?.data;
 }
 
 // buildMazeLevelProperties (packages/authoring/src/importer/levelProperties.ts)

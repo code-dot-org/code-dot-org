@@ -814,13 +814,202 @@ export function WorkspaceFields({
 /**
  * Panel for a generic-runtime level (multi/match/video/bubbleChoice/
  * levelGroup, plus content-shaped `markdown` data) — reachability is the
- * point of this pass (author-mode-authoring-tools-map.md §4), so the only
- * live field is the title (`updateContent`, already writes any experience's
- * title). Everything else in `data` is real, imported content — shown as an
- * honest read-only count rather than hidden, so an author can at least see
- * what's there before Tier 2 wires the rest through `updateGenericLevelData`.
+ * point of this pass (author-mode-authoring-tools-map.md §4). Video is the
+ * first type with a real editing form (data-wiring-map §7.1/product owner's
+ * pick, "so easy to understand"); the rest still get the title field
+ * (`updateContent`) plus an honest read-only count of what's there, until a
+ * later pass gives each its own form the same way.
  */
 function GenericFields({
+  experience,
+  onClose,
+  onDirtyChange,
+}: {
+  experience: ExistingLevelExperience;
+  onClose: () => void;
+  onDirtyChange: (dirty: boolean) => void;
+}) {
+  if (experience.data?.type === 'video') {
+    return (
+      <VideoFields
+        experience={experience}
+        data={experience.data}
+        onClose={onClose}
+        onDirtyChange={onDirtyChange}
+      />
+    );
+  }
+  return (
+    <GenericPlaceholderFields
+      experience={experience}
+      onClose={onClose}
+      onDirtyChange={onDirtyChange}
+    />
+  );
+}
+
+type VideoData = Extract<GenericLevelData, {type: 'video'}>;
+
+/**
+ * Whole-variant editor for a video's data. updateGenericLevelData always
+ * replaces experience.data in full (data-wiring-map §7.1 — the array-typed
+ * variants need reorder/delete, so the op never does a field merge), so this
+ * form seeds every field from the current value and reposts all three
+ * together on Save, never a partial patch. Title is a separate field/op
+ * (`updateContent`) — it lives on the experience, not inside `data`.
+ */
+export function VideoFields({
+  experience,
+  data,
+  onClose,
+  onDirtyChange,
+}: {
+  experience: ExistingLevelExperience;
+  data: VideoData;
+  onClose: () => void;
+  onDirtyChange: (dirty: boolean) => void;
+}) {
+  const [title, setTitle] = useState(experience.title ?? '');
+  const [videoKey, setVideoKey] = useState(data.videoKey);
+  const [youtubeCode, setYoutubeCode] = useState(data.youtubeCode ?? '');
+  const [displayName, setDisplayName] = useState(data.displayName ?? '');
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const titleDirty = title !== (experience.title ?? '');
+  const dataDirty =
+    videoKey !== data.videoKey ||
+    youtubeCode !== (data.youtubeCode ?? '') ||
+    displayName !== (data.displayName ?? '');
+  const dirty = titleDirty || dataDirty;
+
+  useEffect(() => {
+    onDirtyChange(dirty);
+  }, [dirty, onDirtyChange]);
+
+  const submit = async () => {
+    if (busy || !dirty) {
+      return;
+    }
+    setBusy(true);
+    setError(null);
+    try {
+      if (titleDirty) {
+        await authoringApi.applyChange({
+          op: 'updateContent',
+          experienceId: experience.id,
+          patch: {title},
+        });
+      }
+      if (dataDirty) {
+        await authoringApi.applyChange({
+          op: 'updateGenericLevelData',
+          experienceId: experience.id,
+          data: {
+            type: 'video',
+            videoKey,
+            ...(youtubeCode ? {youtubeCode} : {}),
+            ...(displayName ? {displayName} : {}),
+          },
+        });
+      }
+      onClose();
+    } catch {
+      setError('That change failed to apply.');
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  return (
+    <form
+      className={styles.propertiesPanelForm}
+      onSubmit={e => {
+        e.preventDefault();
+        void submit();
+      }}
+    >
+      <label htmlFor="panel-video-title">
+        Title
+        <input
+          id="panel-video-title"
+          type="text"
+          value={title}
+          disabled={busy}
+          onChange={e => setTitle(e.target.value)}
+        />
+      </label>
+      <label htmlFor="panel-video-youtube-code">
+        YouTube video ID
+        <input
+          id="panel-video-youtube-code"
+          type="text"
+          value={youtubeCode}
+          disabled={busy}
+          onChange={e => setYoutubeCode(e.target.value)}
+        />
+      </label>
+      <Typography variant="body4" component="span">
+        The id from a youtube.com/watch?v=&lt;id&gt; URL. A video attached by
+        search never resolves this automatically (only importing a course
+        reads videos.csv) — if the player shows a placeholder, this field is
+        empty; paste the real id here to fix it.
+      </Typography>
+      <label htmlFor="panel-video-display-name">
+        Display name
+        <input
+          id="panel-video-display-name"
+          type="text"
+          value={displayName}
+          disabled={busy}
+          onChange={e => setDisplayName(e.target.value)}
+        />
+      </label>
+      <label htmlFor="panel-video-key">
+        Video key
+        <input
+          id="panel-video-key"
+          type="text"
+          value={videoKey}
+          disabled={busy}
+          onChange={e => setVideoKey(e.target.value)}
+        />
+      </label>
+      <Typography variant="body4" component="span">
+        Looked up in videos.csv at import time; editing it here does not
+        re-resolve the YouTube video ID above.
+      </Typography>
+      {error && (
+        <Typography variant="body4" role="status" className={styles.inlineError}>
+          {error}
+        </Typography>
+      )}
+      <div className={styles.composerActions}>
+        <Button variant="outlined" size="small" onClick={onClose} disabled={busy}>
+          Cancel
+        </Button>
+        <Button
+          type="submit"
+          variant="contained"
+          size="small"
+          disabled={busy || !dirty}
+        >
+          Save
+        </Button>
+      </div>
+    </form>
+  );
+}
+
+/**
+ * Placeholder panel for the generic types with no editing form yet (multi/
+ * match/bubbleChoice/levelGroup) — the only live field is the title
+ * (`updateContent`, already writes any experience's title). Everything else
+ * in `data` is real, imported content — shown as an honest read-only count
+ * rather than hidden, so an author can at least see what's there before each
+ * type gets its own form the way video just did.
+ */
+function GenericPlaceholderFields({
   experience,
   onClose,
   onDirtyChange,
@@ -931,7 +1120,10 @@ function notYetEditableFields(data: GenericLevelData | undefined): string[] {
     case 'match':
       return [`Pairs (${data.pairs.length})`];
     case 'video':
-      return ['Video', 'Caption'];
+      // Dispatched to VideoFields (GenericFields) before this function is
+      // ever called with video data — kept only for the switch's
+      // exhaustiveness over GenericLevelData['type'].
+      return [];
     case 'bubbleChoice':
       return [`Choices (${data.choices.length})`];
     case 'levelGroup':

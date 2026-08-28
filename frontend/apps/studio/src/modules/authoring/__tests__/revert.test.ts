@@ -151,6 +151,31 @@ describe('buildRevertChangeBody', () => {
     expect(buildRevertChangeBody(change)).toBeUndefined();
   });
 
+  it('reverts updateGenericLevelData by re-applying the captured previous data', () => {
+    const change: CurriculumChange = {
+      ...stamp,
+      op: 'updateGenericLevelData',
+      experienceId: 'lb:some_video',
+      data: {type: 'video', videoKey: 'x', youtubeCode: 'new-code'},
+      previous: {type: 'video', videoKey: 'x', youtubeCode: 'old-code'},
+    };
+    expect(buildRevertChangeBody(change)).toEqual({
+      op: 'updateGenericLevelData',
+      experienceId: 'lb:some_video',
+      data: {type: 'video', videoKey: 'x', youtubeCode: 'old-code'},
+    });
+  });
+
+  it('does not offer a revert for updateGenericLevelData with no captured previous', () => {
+    const change: CurriculumChange = {
+      ...stamp,
+      op: 'updateGenericLevelData',
+      experienceId: 'lb:some_video',
+      data: {type: 'video', videoKey: 'x'},
+    };
+    expect(buildRevertChangeBody(change)).toBeUndefined();
+  });
+
   it('reverts adoptCatalogWidget by re-applying the captured previous catalogRef', () => {
     const change: CurriculumChange = {
       ...stamp,
