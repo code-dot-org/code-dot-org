@@ -13,7 +13,16 @@
     display: grid;
     flex-shrink: 0;
     gap: 20px;
-    grid-template-columns: 1fr auto 1fr;
+    // The center column used to be a bare `auto` track. A grid item's
+    // "automatic minimum size" (what an `auto` track falls back to under
+    // space pressure) is zeroed out for any item with a non-`visible`
+    // `overflow` — which `&Center` below sets — so once the left/right
+    // columns' own content (e.g. maze's Blocks-header edit button plus its
+    // block-count chip, or four workspace-header buttons) claimed enough
+    // width, this column had nothing stopping it from collapsing to 0,
+    // taking its "Blocks"/"Workspace" label with it. `min-content` (unlike
+    // `auto`) isn't subject to that suppression, so it keeps a real floor.
+    grid-template-columns: 1fr minmax(min-content, auto) 1fr;
     height: 2.5rem;
     padding-inline: 0.5rem;
     position: relative;
