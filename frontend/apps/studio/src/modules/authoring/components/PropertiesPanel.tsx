@@ -68,6 +68,7 @@ interface PropertiesPanelProps {
   levelDraft?: UseLevelDraftResult;
   selectedPaintToolId?: string;
   onSelectPaintTool: (id: string | undefined) => void;
+  onFillAll: (toolId: string) => void;
   workspaceMode: WorkspaceMode | undefined;
   solutionOffer?: {solutionBlocksXml: string; blocksUsed: number};
   onDismissSolutionOffer: () => void;
@@ -93,6 +94,7 @@ export default function PropertiesPanel({
   levelDraft,
   selectedPaintToolId,
   onSelectPaintTool,
+  onFillAll,
   workspaceMode,
   solutionOffer,
   onDismissSolutionOffer,
@@ -150,6 +152,7 @@ export default function PropertiesPanel({
           map={levelProps?.maze as string | undefined}
           selectedPaintToolId={selectedPaintToolId}
           onSelectPaintTool={onSelectPaintTool}
+          onFillAll={onFillAll}
           onClose={onClose}
           onDirtyChange={onDirtyChange}
         />
@@ -161,6 +164,15 @@ export default function PropertiesPanel({
         />
       ) : (
         <WorkspaceFields
+          // LessonPlayer already keys the whole PropertiesPanel on
+          // `${active.id}-${panelSection}`, but that key lives one
+          // component up — anything that ever hoists WorkspaceFields out
+          // from under it (or renders it a second way) would silently
+          // inherit this component's own useState(false) across a
+          // different experience. Keying it here too costs nothing and
+          // removes the ambiguity: "show all blocks" always starts
+          // unchecked for a level it hasn't been explicitly checked on.
+          key={experience.id}
           levelDraft={levelDraft}
           workspaceMode={workspaceMode}
           solutionOffer={solutionOffer}
@@ -355,6 +367,7 @@ function VisualizationFields({
   map,
   selectedPaintToolId,
   onSelectPaintTool,
+  onFillAll,
   onClose,
   onDirtyChange,
 }: {
@@ -363,6 +376,7 @@ function VisualizationFields({
   map?: string;
   selectedPaintToolId?: string;
   onSelectPaintTool: (id: string | undefined) => void;
+  onFillAll: (toolId: string) => void;
   onClose: () => void;
   onDirtyChange: (dirty: boolean) => void;
 }) {
@@ -439,6 +453,24 @@ function VisualizationFields({
                 {tool.label}
               </Button>
             ))}
+          </div>
+          <div className={styles.paintPaletteTools}>
+            <Button
+              type="button"
+              size="small"
+              variant="outlined"
+              onClick={() => onFillAll('wall')}
+            >
+              Fill all walls
+            </Button>
+            <Button
+              type="button"
+              size="small"
+              variant="outlined"
+              onClick={() => onFillAll('open')}
+            >
+              Fill all open
+            </Button>
           </div>
         </div>
       )}
@@ -576,7 +608,7 @@ function ToolboxFields({
   );
 }
 
-function WorkspaceFields({
+export function WorkspaceFields({
   levelDraft,
   workspaceMode,
   solutionOffer,

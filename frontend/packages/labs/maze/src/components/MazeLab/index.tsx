@@ -18,6 +18,7 @@ import type {BlocklySerialization} from '@code-dot-org/blockly';
 import * as api from '../../api';
 import {
   applyPaint,
+  fillAll,
   getPaintTools,
   mapDraftFromLevelProperties,
   serializeMapDraft,
@@ -292,6 +293,44 @@ const MazeLab = ({onLevelResult, editing}: MazeLabProps = {}) => {
     },
     [editing, levelProperties, skin],
   );
+
+  // "Fill all walls"/"Fill all open" (the panel has no direct handle on
+  // mapDraftRef — see fillAllRequest's doc comment) — mirrors
+  // handlePaintCell's ref-then-state update, just applied to the whole
+  // grid via editing.ts's fillAll instead of one cell via applyPaint. Keyed
+  // on `nonce` (skipped when unset, or unchanged from the last request
+  // already applied) rather than firing on every render this prop happens
+  // to be passed on.
+  const fillAllRequestRef = useRef<number | undefined>(undefined);
+  useEffect(() => {
+    const request = editing?.fillAllRequest;
+    if (!request || fillAllRequestRef.current === request.nonce) {
+      return;
+    }
+    fillAllRequestRef.current = request.nonce;
+    const tool = getPaintTools(skin.id).find(t => t.id === request.toolId);
+    if (!tool) {
+      return;
+    }
+    const base =
+      mapDraftRef.current ??
+      mapDraftFromLevelProperties(
+        levelProperties?.map,
+        levelProperties?.serializedMaze,
+        skin.id,
+      );
+    if (!base) {
+      return;
+    }
+    const nextDraft = fillAll(base, tool);
+    mapDraftRef.current = nextDraft;
+    setMapDraft(nextDraft);
+    editing?.onMapDraftChange(serializeMapDraft(nextDraft, skin.id));
+    // levelProperties intentionally excluded — same reasoning as the
+    // visualizationSelected effect above: only the request itself should
+    // trigger this, not every served-data refetch while it's still set.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [editing?.fillAllRequest, skin]);
 
   // Extracted from onInject so a levelProperties change that only
   // engine-construction reads (e.g. startDirection — Subtype's constructor

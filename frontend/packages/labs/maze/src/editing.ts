@@ -151,6 +151,29 @@ export function applyPaint(
   return paintCell(base, row, col, tool);
 }
 
+/**
+ * Overwrites every cell with `tool`'s cell, except Start/Finish/
+ * Start-and-finish tiles — those survive untouched, mirroring paintCell's
+ * own singular-start/finish invariant, so a bulk background fill can never
+ * accidentally erase the puzzle's start or goal. Painting a fresh Start/
+ * Finish over one still goes through paintCell, one cell at a time, same
+ * as today.
+ *
+ * The authoring win this exists for: a sparse map (mostly wall, or mostly
+ * open, with a handful of exceptions) otherwise costs one click per cell —
+ * "Fill all walls" / "Fill all open" turns that into one click plus the
+ * exceptions.
+ */
+export function fillAll(draft: MapDraft, tool: PaintTool): MapDraft {
+  return draft.map(row =>
+    row.map(cell =>
+      isStartLike(cell.tileType) || isFinishLike(cell.tileType)
+        ? cell
+        : tool.makeCell(),
+    ),
+  );
+}
+
 export interface PaintTool {
   id: string;
   label: string;
@@ -415,9 +438,21 @@ const STRUCTURAL_PALETTE: ToolboxPaletteEntry[] = [
   {id: 'moveEast', label: 'Move east', xml: '<block type="maze_moveEast"/>'},
   {id: 'moveWest', label: 'Move west', xml: '<block type="maze_moveWest"/>'},
   {
+    // Real toolboxes (dashboard/config/levels/custom/maze/) use two
+    // distinct repeat blocks: this dropdown (a fixed 2-10 range) and
+    // `controls_repeat` below (a free numeric field the student can type
+    // any count into — its `<title name="TIMES">???</title>` in a real
+    // .level file is legacy Blockly's "unset, edit me" placeholder for
+    // that field). Offered as separate chips, named for what they actually
+    // render, so an author can match either kind exactly.
     id: 'repeat',
-    label: 'Repeat N times',
+    label: 'Repeat (dropdown)',
     xml: '<block type="controls_repeat_dropdown"><field name="TIMES" config="2-10">3</field></block>',
+  },
+  {
+    id: 'repeatFreeCount',
+    label: 'Repeat (free count)',
+    xml: '<block type="controls_repeat"><field name="TIMES">10</field></block>',
   },
   {id: 'forever', label: 'Repeat until finish', xml: '<block type="maze_forever"/>'},
   {id: 'untilBlocked', label: 'While path ahead', xml: '<block type="maze_untilBlocked"/>'},
@@ -486,6 +521,7 @@ const PLANTER_PALETTE: ToolboxPaletteEntry[] = [
 // this map keys on.
 const CONTAINER_BLOCK_STATEMENTS: Partial<Record<string, string>> = {
   controls_repeat_dropdown: 'DO',
+  controls_repeat: 'DO',
   maze_forever: 'DO',
   maze_untilBlocked: 'DO',
   maze_if: 'DO',

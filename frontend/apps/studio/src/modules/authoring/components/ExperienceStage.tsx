@@ -92,6 +92,9 @@ interface ExperienceStageProps {
    * LevelRail or the mounted lab directly. Maze-family only. */
   selectedPaintToolId?: string;
   onMapDraftChange?: (patch: {serialized_maze: string; maze: string; initial_dirt: string}) => void;
+  /** "Fill all walls"/"Fill all open" — see MazeLabEditingProps.fillAllRequest.
+   * Maze-family only. */
+  fillAllRequest?: {toolId: string; nonce: number};
   /** The left rail's toolbox-tray draft, live — see LessonPlayer's
    * `toolboxDraftXml` state comment. Maze-family only. */
   toolboxOverride?: Toolbox;
@@ -126,6 +129,7 @@ export default function ExperienceStage({
   onSectionClick,
   selectedPaintToolId,
   onMapDraftChange,
+  fillAllRequest,
   toolboxOverride,
   workspaceMode,
   workspaceOverride,
@@ -150,6 +154,7 @@ export default function ExperienceStage({
           onSectionClick={onSectionClick}
           selectedPaintToolId={selectedPaintToolId}
           onMapDraftChange={onMapDraftChange}
+          fillAllRequest={fillAllRequest}
           toolboxOverride={toolboxOverride}
           workspaceMode={workspaceMode}
           workspaceOverride={workspaceOverride}
@@ -179,6 +184,7 @@ function ExistingLevelStage({
   onSectionClick,
   selectedPaintToolId,
   onMapDraftChange,
+  fillAllRequest,
   toolboxOverride,
   workspaceMode,
   workspaceOverride,
@@ -193,6 +199,7 @@ function ExistingLevelStage({
   onSectionClick?: (section: PanelSection) => void;
   selectedPaintToolId?: string;
   onMapDraftChange?: (patch: {serialized_maze: string; maze: string; initial_dirt: string}) => void;
+  fillAllRequest?: {toolId: string; nonce: number};
   toolboxOverride?: Toolbox;
   workspaceMode?: 'studentStart' | 'mySolution';
   workspaceOverride?: BlocklySerialization;
@@ -226,6 +233,7 @@ function ExistingLevelStage({
         onSectionClick={onSectionClick}
         selectedPaintToolId={selectedPaintToolId}
         onMapDraftChange={onMapDraftChange}
+        fillAllRequest={fillAllRequest}
         toolboxOverride={toolboxOverride}
         workspaceMode={workspaceMode}
         workspaceOverride={workspaceOverride}
@@ -284,6 +292,7 @@ function LabHostStage({
   onSectionClick,
   selectedPaintToolId,
   onMapDraftChange,
+  fillAllRequest,
   toolboxOverride,
   workspaceMode,
   workspaceOverride,
@@ -301,6 +310,7 @@ function LabHostStage({
   onSectionClick?: (section: PanelSection) => void;
   selectedPaintToolId?: string;
   onMapDraftChange?: (patch: {serialized_maze: string; maze: string; initial_dirt: string}) => void;
+  fillAllRequest?: {toolId: string; nonce: number};
   toolboxOverride?: Toolbox;
   workspaceMode?: 'studentStart' | 'mySolution';
   workspaceOverride?: BlocklySerialization;
@@ -397,6 +407,7 @@ function LabHostStage({
     onVisualizationClick: () => onSectionClick?.('visualization'),
     selectedPaintToolId,
     onMapDraftChange: onMapDraftChange ?? (() => {}),
+    fillAllRequest,
     toolboxSelected: levelEditable && selectedSection === 'toolbox',
     onToolboxClick: () => onSectionClick?.('toolbox'),
     toolboxOverride,

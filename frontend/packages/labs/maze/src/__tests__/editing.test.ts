@@ -15,6 +15,7 @@ import {
   addBlockToProgramXml,
   applyPaint,
   describeCellState,
+  fillAll,
   getPaintTools,
   getToolboxPalette,
   mapDraftFromLevelProperties,
@@ -214,6 +215,60 @@ describe('paintCell', () => {
 
     expect(next[0][0].tileType).toBe(SquareType.FINISH);
     expect(next[1][1].tileType).toBe(SquareType.START);
+  });
+});
+
+// "Fill all walls" / "Fill all open" — a sparse map otherwise costs one
+// click per cell (a 53-click grid in the Author Mode acceptance run).
+describe('fillAll', () => {
+  function blankGrid(rows: number, cols: number): MapDraft {
+    return Array.from({length: rows}, () =>
+      Array.from({length: cols}, () => ({tileType: SquareType.OPEN})),
+    );
+  }
+
+  it('overwrites every cell with the given tool', () => {
+    const draft = blankGrid(2, 3);
+    const wallTool = getPaintTools('birds').find(t => t.id === 'wall')!;
+
+    const next = fillAll(draft, wallTool);
+
+    expect(next.flat().every(cell => cell.tileType === SquareType.WALL)).toBe(
+      true,
+    );
+    expect(next).not.toBe(draft);
+    // Original untouched.
+    expect(draft.flat().every(cell => cell.tileType === SquareType.OPEN)).toBe(
+      true,
+    );
+  });
+
+  it('preserves Start, Finish, and StartAndFinish tiles untouched', () => {
+    const draft = blankGrid(2, 2);
+    draft[0][0] = {tileType: SquareType.START};
+    draft[0][1] = {tileType: SquareType.FINISH};
+    draft[1][0] = {tileType: SquareType.STARTANDFINISH};
+    const wallTool = getPaintTools('birds').find(t => t.id === 'wall')!;
+
+    const next = fillAll(draft, wallTool);
+
+    expect(next[0][0].tileType).toBe(SquareType.START);
+    expect(next[0][1].tileType).toBe(SquareType.FINISH);
+    expect(next[1][0].tileType).toBe(SquareType.STARTANDFINISH);
+    expect(next[1][1].tileType).toBe(SquareType.WALL);
+  });
+
+  it('fills open just as well as walls — the inverse case', () => {
+    const draft = blankGrid(2, 2).map(row =>
+      row.map(() => ({tileType: SquareType.WALL})),
+    );
+    const openTool = getPaintTools('birds').find(t => t.id === 'open')!;
+
+    const next = fillAll(draft, openTool);
+
+    expect(next.flat().every(cell => cell.tileType === SquareType.OPEN)).toBe(
+      true,
+    );
   });
 });
 
@@ -482,5 +537,28 @@ describe('toolbox tray (trayFromToolboxXml / toolboxXmlFromTray)', () => {
     expect(farmerPalette.some(p => p.id === 'getNectar')).toBe(false);
     expect(farmerPalette.some(p => p.id === 'fill')).toBe(true);
     expect(beePalette.some(p => p.id === 'fill')).toBe(false);
+  });
+
+  // G5: real toolboxes use both controls_repeat_dropdown (fixed 2-10
+  // range) and stock controls_repeat (a free numeric field) — offered here
+  // as two distinct palette chips so an author can match either.
+  it('offers both repeat variants as distinct chips, and round-trips each', () => {
+    const palette = getToolboxPalette('birds');
+    const dropdownEntry = palette.find(p => p.id === 'repeat')!;
+    const freeCountEntry = palette.find(p => p.id === 'repeatFreeCount')!;
+    expect(dropdownEntry.xml).toContain('type="controls_repeat_dropdown"');
+    expect(freeCountEntry.xml).toContain('type="controls_repeat"');
+
+    const xml = toolboxXmlFromTray([dropdownEntry, freeCountEntry]);
+    expect(xml).toBe(
+      '<xml><block type="controls_repeat_dropdown">' +
+        '<field name="TIMES" config="2-10">3</field></block>' +
+        '<block type="controls_repeat">' +
+        '<field name="TIMES">10</field></block></xml>',
+    );
+
+    const tray = trayFromToolboxXml(xml, 'birds');
+    expect(tray.map(t => t.id)).toEqual(['repeat', 'repeatFreeCount']);
+    expect(toolboxXmlFromTray(tray)).toBe(xml);
   });
 });

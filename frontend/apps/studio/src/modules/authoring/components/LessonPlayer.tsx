@@ -167,6 +167,13 @@ export default function LessonPlayer({
   const [mapDraftPatch, setMapDraftPatch] = useState<
     {serialized_maze: string; maze: string; initial_dirt: string} | undefined
   >();
+  // "Fill all walls"/"Fill all open" (editing.ts's fillAll) — a one-shot
+  // request for the mounted lab to act on, since the map draft it applies
+  // to lives inside MazeLab, not here. A fresh nonce is what tells it to
+  // act; see MazeLabEditingProps.fillAllRequest.
+  const [fillAllRequest, setFillAllRequest] = useState<
+    {toolId: string; nonce: number} | undefined
+  >();
   // Toolbox tray: LevelRail reports the composed XML on every chip
   // add/remove; converted below into the live Toolbox object the stage's
   // flyout actually renders (editing.toolboxOverride) — see
@@ -611,6 +618,7 @@ export default function LessonPlayer({
                       onSectionClick={handleSectionClick}
                       selectedPaintToolId={selectedPaintToolId}
                       onMapDraftChange={setMapDraftPatch}
+                      fillAllRequest={fillAllRequest}
                       toolboxOverride={toolboxOverride}
                       workspaceMode={workspaceMode}
                       workspaceOverride={workspaceOverride}
@@ -676,6 +684,7 @@ export default function LessonPlayer({
               levelDraft={levelDraft}
               selectedPaintToolId={selectedPaintToolId}
               onSelectPaintTool={setSelectedPaintToolId}
+              onFillAll={toolId => setFillAllRequest({toolId, nonce: Date.now()})}
               workspaceMode={workspaceMode}
               solutionOffer={solutionOffer}
               onDismissSolutionOffer={() => setSolutionOffer(undefined)}

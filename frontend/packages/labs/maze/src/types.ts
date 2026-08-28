@@ -74,8 +74,15 @@ export interface MazeLabEditingProps {
   selectedPaintToolId?: string;
   /** Fires after every paint with the freshly updated wire-format patch —
    * the panel accumulates these into its Save draft. Never called except
-   * as a direct result of a stage click. */
+   * as a direct result of a stage click or a fillAllRequest below. */
   onMapDraftChange: (patch: {serialized_maze: string; maze: string; initial_dirt: string}) => void;
+  /** One-shot "fill every non-start/finish cell with this tool" request —
+   * the panel's "Fill all walls"/"Fill all open" buttons (editing.ts's
+   * fillAll). A fresh object (new `nonce`) is what tells MazeLab to act;
+   * the panel has no other channel to reach the draft grid MazeLab owns.
+   * `toolId` must name a getPaintTools(skin) entry — an unrecognized id is
+   * a no-op, same as selectedPaintToolId. */
+  fillAllRequest?: {toolId: string; nonce: number};
   /** True while the properties panel is pinned open on the 'toolbox'
    * section — drives the selected outline on the Blocks header. */
   toolboxSelected: boolean;

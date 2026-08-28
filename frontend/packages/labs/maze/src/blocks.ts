@@ -263,6 +263,68 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
     },
   },
   {
+    // Real toolboxes (grep dashboard/config/levels/custom/maze/) also use
+    // Blockly's stock `controls_repeat` directly — a free numeric TIMES
+    // field the student can type any count into (their `<title
+    // name="TIMES">???</title>` placeholder is legacy Blockly's way of
+    // saying "unset, edit me"), unlike the two dropdown variants above
+    // which only offer the field plugin's fixed 2-10 range. Registered
+    // separately (not merely a toolbox chip) so an author can actually
+    // drop one on the canvas rather than the flyout choking on an unknown
+    // block type.
+    //
+    // This type name collides with Blockly's own stock `controls_repeat`
+    // (blockly/blocks registers it, and BaseBlocks — packages/blockly/src/
+    // blocks/index.ts — wraps it into `javascriptGenerator.forBlock
+    // .controls_repeat`) — Driver.ts's registerBlocks overwrites that same
+    // key with a wrapper around THIS definition's own `generator`, so
+    // calling `javascriptGenerator.forBlock.controls_repeat` from here
+    // (the way controls_repeat_dropdown calls it below, safely, because
+    // its own type name is different) would call itself forever. Driver.ts
+    // captures the pre-overwrite stock function on `environment
+    // .originalGeneratorFunctions` for exactly this case (see
+    // packages/labs/music/src/blockly/blocks/simple2.ts for the same
+    // pattern) — go through that instead.
+    type: 'controls_repeat',
+    style: 'loop_blocks',
+    tooltip: En.CONTROLS_REPEAT_TOOLTIP,
+    helpUrl: En.CONTROLS_REPEAT_HELPURL,
+    message0: En.CONTROLS_REPEAT_TITLE,
+    args0: [
+      {
+        type: 'field_number',
+        name: 'TIMES',
+        value: 10,
+        min: 0,
+      },
+    ],
+    message1: En.CONTROLS_REPEAT_INPUT_DO + ' %1',
+    args1: [
+      {
+        type: 'input_statement',
+        name: 'DO',
+      },
+    ],
+    nextStatement: true,
+    previousStatement: true,
+    generator: {
+      javascript(block, javascriptGenerator, environment) {
+        return environment.originalGeneratorFunctions.javascript.controls_repeat(
+          block,
+          javascriptGenerator,
+          environment,
+        );
+      },
+      simple(block, javascriptGenerator, environment) {
+        return environment.originalGeneratorFunctions.javascript.controls_repeat(
+          block,
+          javascriptGenerator,
+          environment,
+        );
+      },
+    },
+  },
+  {
     // Simplified UI (no "times" wording, an image on the DO line instead of
     // text) — the only maze block type in Block by Block > "Spot the
     // Repeat" (courseB_iceage_loops1..12); those 12 levels crashed with
