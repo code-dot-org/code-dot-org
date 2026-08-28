@@ -620,6 +620,11 @@ export default class SpriteLab2Engine extends SpriteLab {
         x: sprite.position.x,
         y: sprite.position.y,
       }));
+    // Under upward gravity a player stands on the ceiling, so it is drawn
+    // upside down; the facing (mirrorX, from the direction of travel) is
+    // left alone. Drawing only: the body the resolver uses is unchanged.
+    const upright = this.platformGravity_ < 0 ? -1 : 1;
+    moved.forEach(({sprite}) => sprite.mirrorY(upright));
     // Non-player sprites keep the stock resolver; running it pre-paint
     // means patrollers and props draw already resolved.
     this.library.commands.collide.call(
