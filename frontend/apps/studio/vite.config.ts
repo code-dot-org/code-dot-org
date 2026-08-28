@@ -31,6 +31,24 @@ export default defineConfig(({mode}) => {
           target: process.env.AUTHORING_API_TARGET || 'http://localhost:3737',
           rewrite: p => p.replace(/^\/authoring-api/, '/api'),
         },
+        // primeCsrfToken.ts's CSRF-priming fetch calls this rails route
+        // root-relative. Same-origin via proxy for the same reason as
+        // /authoring-api above — see packages/lesson-deep-dive's
+        // vite.config.ts for the identical pattern against the same rails
+        // host. No changeOrigin: rails checks Origin against Host, and a
+        // rewritten Host makes every write a 422.
+        //
+        // fetchAuthOutcome.ts's GET /api/v1/users/current is NOT proxyable
+        // this way: it goes through DashboardApiClient, whose 'development'
+        // base URL (getDashboardApiUrl.ts) is the absolute
+        // http://localhost-studio.code.org:3000 by design, not a
+        // root-relative path — the request never touches this dev server,
+        // so no proxy entry here can intercept it. That call still CORS-
+        // fails against a local rails without :3036 in its CORS allow-list;
+        // fixing it needs a rails-side CORS change or a studio-specific
+        // environment override in @code-dot-org/core, both bigger than
+        // this pass's scope.
+        '/get_token': {target: 'http://localhost-studio.code.org:3000'},
       },
     },
     resolve: {
