@@ -106,11 +106,13 @@ const SpeechToTextButton: React.FC<SpeechToTextButtonProps> = ({
       {errorMessage && (
         <div className={styles.iconContainer}>
           <Tooltip title={errorMessage} placement="left">
-            <FontAwesomeV6Icon
-              className={styles.error}
-              iconName="exclamation-circle"
-              aria-label={errorMessage}
-            />
+            <span>
+              <FontAwesomeV6Icon
+                className={styles.error}
+                iconName="exclamation-circle"
+                aria-label={errorMessage}
+              />
+            </span>
           </Tooltip>
         </div>
       )}
@@ -126,9 +128,7 @@ const SpeechToTextButton: React.FC<SpeechToTextButtonProps> = ({
         {isRecording && <div className={styles.ping} />}
         <Tooltip
           title={
-            !canRecord
-              ? 'Audio recording is not supported on your device.'
-              : undefined
+            !canRecord ? 'Audio recording is not supported on your device.' : ''
           }
           placement="left"
         >

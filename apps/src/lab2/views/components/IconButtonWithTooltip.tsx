@@ -95,34 +95,37 @@ const IconButtonWithTooltip: React.FunctionComponent<IconButtonWithTooltipProps>
             },
           }}
         >
-          {href ? (
-            <MuiIconButton
-              id={`${id}-button`}
-              aria-label={label}
-              variant={variant}
-              color={color}
-              size={size}
-              disabled={disabled}
-              href={href}
-              target={target}
-              rel={target === '_blank' ? 'noopener noreferrer' : undefined}
-            >
-              {iconElement}
-            </MuiIconButton>
-          ) : (
-            <MuiIconButton
-              id={`${id}-button`}
-              aria-label={label}
-              variant={variant}
-              color={color}
-              size={size}
-              disabled={disabled}
-              onClick={handleClick}
-              type="button"
-            >
-              {iconElement}
-            </MuiIconButton>
-          )}
+          {/* Wrapper span so the tooltip still shows when the button is disabled. */}
+          <span style={{display: 'inline-flex'}}>
+            {href ? (
+              <MuiIconButton
+                id={`${id}-button`}
+                aria-label={label}
+                variant={variant}
+                color={color}
+                size={size}
+                disabled={disabled}
+                href={href}
+                target={target}
+                rel={target === '_blank' ? 'noopener noreferrer' : undefined}
+              >
+                {iconElement}
+              </MuiIconButton>
+            ) : (
+              <MuiIconButton
+                id={`${id}-button`}
+                aria-label={label}
+                variant={variant}
+                color={color}
+                size={size}
+                disabled={disabled}
+                onClick={handleClick}
+                type="button"
+              >
+                {iconElement}
+              </MuiIconButton>
+            )}
+          </span>
         </Tooltip>
       );
     }
