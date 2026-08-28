@@ -1951,7 +1951,9 @@ class SectionTest < ActiveSupport::TestCase
   # quiets the AI settings warning, its nav icon, and the teacher homepage alert.
   # This test goes away with the exemption.
   test 'assigned_ai_chat_tools_dependency is available, not essential, for an exempt unit' do
-    unit = create(:script, name: 'csd2-2026')
+    # The unit needs a course: Section validates that a section with a script
+    # has a course_id, and the factory takes that from the unit's course.
+    unit = create(:script, :in_single_unit_course, name: 'csd2-2026')
     lesson = create(:lesson, :with_lesson_group, script: unit)
     create(:script_level, script: unit, lesson: lesson, levels: [create(:weblab2)])
     section = create(:section, teacher: @teacher, script: unit)
