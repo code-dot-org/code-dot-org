@@ -1947,6 +1947,18 @@ class SectionTest < ActiveSupport::TestCase
     assert entry.dig('coming_up', 'completed_unit')
   end
 
+  # Bandaid: a section assigned an exempt unit reports AVAILABLE, which is what
+  # quiets the AI settings warning, its nav icon, and the teacher homepage alert.
+  # This test goes away with the exemption.
+  test 'assigned_ai_chat_tools_dependency is available, not essential, for an exempt unit' do
+    unit = create(:script, name: 'csd2-2026')
+    lesson = create(:lesson, :with_lesson_group, script: unit)
+    create(:script_level, script: unit, lesson: lesson, levels: [create(:weblab2)])
+    section = create(:section, teacher: @teacher, script: unit)
+
+    assert_equal SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:AVAILABLE], section.assigned_ai_chat_tools_dependency
+  end
+
   private def build_suggested_lesson_section
     unit = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: unit)
