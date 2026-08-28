@@ -186,6 +186,55 @@ exports["default"] = Skeleton;`;
     }
   });
 
+  it('keeps a marker the source authors by assignment', function () {
+    // babel's loose output writes the marker as `exports.__esModule = true`
+    // rather than through defineProperty; ASSIGNED_MARKER recognizes that
+    // shape as authored where MARKER would not.  Real swc output keeps
+    // the author's assignment line, so the pattern cannot change what a
+    // module exports; this fixture omits that line to make the branch
+    // observable — it pins the code path, not a runtime failure.
+    const original = `
+exports.__esModule = true;
+exports.default = function widget() { return 'authored'; };`;
+    const swcOutput = swcModule(`
+exports.default = function widget() { return 'authored'; };`);
+    const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'shim-test-'));
+    const file = path.join(dir, 'widget.js');
+    fs.writeFileSync(file, original);
+    try {
+      const exported = runShimmed(swcOutput, file);
+      assert.isTrue(exported.__esModule);
+      assert.equal(exported.default(), 'authored');
+    } finally {
+      fs.rmSync(dir, {recursive: true, force: true});
+    }
+  });
+
+  it('still strips the marker when the source merely mentions __esModule', function () {
+    // A file that uses import but exports by assignment authored no
+    // marker, even though its text contains the string __esModule — here
+    // in a comment and in code that reads the flag.  Recognizing authored
+    // markers by shape rather than by substring keeps swc's marker from
+    // surviving, which would make `import x from` resolve undefined.
+    const original = `
+// interop helper: mod.__esModule ? mod.default : mod
+import helper from './helper';
+exports.widget = helper;`;
+    const swcOutput = swcModule(`
+// interop helper: mod.__esModule ? mod.default : mod
+exports.widget = 1;`);
+    const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'shim-test-'));
+    const file = path.join(dir, 'widget.js');
+    fs.writeFileSync(file, original);
+    try {
+      const exported = runShimmed(swcOutput, file);
+      assert.isUndefined(exported.__esModule);
+      assert.equal(exported.widget, 1);
+    } finally {
+      fs.rmSync(dir, {recursive: true, force: true});
+    }
+  });
+
   it('passes plain CommonJS sources through untouched', function () {
     const src = `exports.plain = 42;`;
     let out;

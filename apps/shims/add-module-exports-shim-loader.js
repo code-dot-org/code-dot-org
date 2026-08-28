@@ -40,6 +40,12 @@ const MARKER = new RegExp(
 // remove the marker statement and test whether any defineProperty on
 // exports remains — tolerating a hoisted comment in the same gaps
 // MARKER does, so the two patterns cannot disagree about one source.
+// The other shape an author writes the marker in: babel in loose mode
+// (and older babel unconditionally) emits `exports.__esModule = true`.
+// The pass-through below keys on MARKER and this shape rather than on
+// the substring, so a comment or an interop read
+// (`mod.__esModule ? mod.default : mod`) cannot pass for a marker.
+const ASSIGNED_MARKER = /exports\.__esModule\s*=/;
 const HAS_ESM_EXPORTS = new RegExp(
   String.raw`_export\(${GAP}exports,|_export_star\(|Object\.defineProperty\(${GAP}exports,`
 );
@@ -73,7 +79,7 @@ module.exports = function addModuleExportsShim(source, map, meta) {
     } catch (e) {
       // Virtual or unreadable resource: assume the marker came from swc.
     }
-    if (original.includes('__esModule')) {
+    if (MARKER.test(original) || ASSIGNED_MARKER.test(original)) {
       this.callback(null, source, map, meta);
       return;
     }
