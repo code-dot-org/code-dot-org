@@ -220,6 +220,64 @@ describe('platformPhysics', () => {
 
 // The set-gravity block's resolver seam: a custom magnitude, and a negative
 // value flipping the world vertically.
+describe('platformPhysics at zero gravity', () => {
+  const walls = [wallAt(1, 6)];
+
+  it('does not drop a player that steps off its block', () => {
+    const player = makeSprite(75, 275);
+    step(player, walls); // settle __slab2Prev
+    for (let i = 0; i < 20; i++) {
+      player.position.x += 4;
+      resolvePlatformPhysics(
+        [{sprite: player, x: player.position.x, y: player.position.y}],
+        walls,
+        VIEW,
+        0
+      );
+    }
+    expect(player.position.x).toBeGreaterThan(120);
+    expect(player.position.y).toBe(275);
+    expect(player.velocity.y).toBe(0);
+  });
+
+  it('steers up into a block and stops under it, and stops at the top edge', () => {
+    // Under the block (top 300..350, at row 6), moving up.
+    const player = makeSprite(75, 400);
+    step(player, walls);
+    for (let i = 0; i < 40; i++) {
+      player.position.y -= 3;
+      resolvePlatformPhysics(
+        [{sprite: player, x: player.position.x, y: player.position.y}],
+        walls,
+        VIEW,
+        0
+      );
+    }
+    // Body top against the underside: body centre 370, image centre 5 above.
+    expect(player.position.y).toBeCloseTo(350 + 20 - 5, 0);
+    const free = makeSprite(300, 100);
+    step(free, walls);
+    for (let i = 0; i < 60; i++) {
+      free.position.y -= 3;
+      resolvePlatformPhysics(
+        [{sprite: free, x: free.position.x, y: free.position.y}],
+        walls,
+        VIEW,
+        0
+      );
+    }
+    expect(free.position.y).toBeGreaterThan(0);
+    expect(free.position.y).toBeLessThan(30);
+  });
+
+  it('forgets vertical speed carried in from before', () => {
+    const player = makeSprite(200, 200);
+    player.velocity.y = -12;
+    resolvePlatformPhysics([{sprite: player, x: 200, y: 200}], walls, VIEW, 0);
+    expect(player.velocity.y).toBe(0);
+  });
+});
+
 describe('platformPhysics with custom gravity', () => {
   const stepWith = (
     sprite: PhysicsSprite,

@@ -13,6 +13,10 @@ export const TERMINAL_FALL_SPEED = 10;
 // strengths behave identically here.
 export const PLATFORM_GRAVITY = 0.75;
 
+// What patrollers feel when the world's gravity is zero and the player is
+// steered about: enough to settle onto blocks, gently.
+export const PATROLLER_WEIGHTLESS_GRAVITY = 0.2;
+
 // Slack (px) for exact-contact comparisons: resting and pinned contact are
 // exact equalities, with possible sub-pixel noise on them.
 export const CONTACT_EPSILON = 0.1;
@@ -30,6 +34,10 @@ export const MIN_SOLID_OVERLAP = 8;
 // phase. Ramping from zero instead made a one-block gap a coin flip. A
 // gap is a gap: crossing one takes a jump.
 export const LEDGE_FALL_SPEED = MIN_SOLID_OVERLAP;
+
+// At zero gravity nothing falls: a player is steered in four directions and
+// only the walls and the view's edges stop it. The same resolver applies
+// with the falling rules off.
 
 // The player's solid body is the art box scaled by this factor, anchored
 // at the feet: a default-size (50px) costume gets a 40px body, so every
@@ -126,6 +134,7 @@ export function resolvePlatformPhysics(
     });
     return;
   }
+  const weightless = gravity === 0;
   const boxes = walls.map(wall => ({
     x: wall.position.x,
     y: wall.position.y,
@@ -215,6 +224,11 @@ export function resolvePlatformPhysics(
       sprite.velocity.y = 0;
       landed = true;
     }
+    // Weightless, nothing brings a player back from above the view, so the
+    // top is closed too.
+    if (weightless && y < halfH) {
+      y = halfH;
+    }
     // Final push-out: a landing or head bump declined above slides off
     // the corner sideways; other thin overlap (sideways drift through a
     // tight opening, a lip brushed on the way up) is pushed out the short
@@ -251,6 +265,15 @@ export function resolvePlatformPhysics(
         x += x < wall.x ? -penX : penX;
       }
     });
+    if (weightless) {
+      // Steered, not falling: no ledge drop, and no vertical speed carried
+      // from before gravity went to zero (a jump in flight, a fall).
+      sprite.velocity.y = 0;
+      sprite.position.x = x;
+      sprite.position.y = y - drop;
+      sprite.__slab2Prev = {x, y: y - drop};
+      return;
+    }
     // Footing lost this frame with nothing catching the fall: drop at
     // ledge speed at once (see LEDGE_FALL_SPEED).
     if (!landed && sprite.velocity.y >= 0) {
