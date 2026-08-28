@@ -27,6 +27,9 @@ class User::LogToken < ApplicationRecord
 
   belongs_to :user, -> {with_deleted}
 
+  # Reads without minting, so the admin page can list what a user already has.
+  scope :for_user, ->(user_id) {where(user_id: user_id).order(period: :desc, destination: :asc)}
+
   validates :destination, inclusion: {in: DESTINATIONS}
   validates :period, presence: true
   validates :uuid, presence: true, uniqueness: true

@@ -899,6 +899,130 @@ class AdminUsersControllerTest < ActionController::TestCase
 
   generate_admin_only_tests_for :studio_person_form
 
+  generate_admin_only_tests_for :log_token_form
+
+  test_user_gets_response_for(
+    :resolve_log_token,
+    method: :post,
+    user: :user,
+    params: {token: SecureRandom.uuid, reason: 'authorization check'},
+    response: :forbidden
+  )
+  test_redirect_to_sign_in_for :resolve_log_token, method: :post
+
+  test 'log_token_form renders without tokens when no user_id param given' do
+    sign_in @admin
+    get :log_token_form
+    assert_response :success
+    assert_select 'code', 0
+  end
+
+  test 'log_token_form lists the tokens a user already has' do
+    sign_in @admin
+    token = @not_admin.log_token(destination: User::LogToken::SENTRY)
+
+    get :log_token_form, params: {user_id: @not_admin.id}
+    assert_response :success
+    assert_select 'tbody tr', 1
+    assert_select 'code', text: token
+  end
+
+  test 'log_token_form lists a token from an earlier school year' do
+    sign_in @admin
+    superseded = User::LogToken.create!(
+      user_id: @not_admin.id,
+      destination: User::LogToken::SENTRY,
+      period: User::LogToken.current_period - 1,
+      uuid: SecureRandom.uuid,
+    )
+
+    get :log_token_form, params: {user_id: @not_admin.id}
+    assert_response :success
+    assert_select 'code', text: superseded.uuid
+  end
+
+  # A lookup must not create a token: one minted here would be absent from every
+  # log the admin is about to search.
+  test 'log_token_form mints nothing for a user with no tokens' do
+    sign_in @admin
+
+    assert_no_difference 'User::LogToken.count' do
+      get :log_token_form, params: {user_id: @not_admin.id}
+    end
+    assert_response :success
+    assert_select 'code', 0
+  end
+
+  test 'log_token_form does not render the raw user id as a token' do
+    sign_in @admin
+    get :log_token_form, params: {user_id: @not_admin.id}
+    assert_response :success
+    assert_select 'code', text: @not_admin.id.to_s, count: 0
+  end
+
+  test 'log_token_form rejects a non-numeric user id' do
+    sign_in @admin
+    get :log_token_form, params: {user_id: 'not-an-id'}
+    assert_response :success
+    assert_select 'code', 0
+    assert_select 'p.text-danger', text: /Enter a numeric user id/
+  end
+
+  test 'log_token_form rejects a user id outside the users.id range' do
+    sign_in @admin
+    get :log_token_form, params: {user_id: '99999999999'}
+    assert_response :success
+    assert_select 'code', 0
+  end
+
+  test 'log_token_form logs the lookup' do
+    sign_in @admin
+
+    log_payload = {event: 'log_token_lookup', namespace: 'admin', request_id: request.request_id, authenticated_user_id: @admin.id, affected_user_id: @not_admin.id}
+    CDO.log.expects(:warn).with(log_payload.to_json)
+
+    get :log_token_form, params: {user_id: @not_admin.id}
+  end
+
+  test 'resolve_log_token identifies the user behind a token' do
+    sign_in @admin
+    token = @not_admin.log_token(destination: User::LogToken::SENTRY)
+
+    post :resolve_log_token, params: {token: token, reason: 'zendesk 4821'}
+    assert_response :success
+    assert_select 'td', text: @not_admin.id.to_s
+  end
+
+  test 'resolve_log_token refuses without a reason' do
+    sign_in @admin
+    token = @not_admin.log_token(destination: User::LogToken::SENTRY)
+
+    post :resolve_log_token, params: {token: token, reason: ''}
+    assert_response :success
+    assert_select 'td', text: @not_admin.id.to_s, count: 0
+  end
+
+  test 'resolve_log_token reports an unreadable token without raising' do
+    sign_in @admin
+
+    post :resolve_log_token, params: {token: 'not-a-uuid', reason: 'fishing'}
+    assert_response :success
+  end
+
+  # The audit lives in User::LogToken.resolve, so it cannot be bypassed by
+  # reaching the primitive from somewhere other than this controller.
+  test 'resolve_log_token audits through the primitive with the acting admin and reason' do
+    sign_in @admin
+    token = @not_admin.log_token(destination: User::LogToken::SENTRY)
+    User::LogToken.expects(:resolve).with do |passed_token, options|
+      passed_token == token &&
+        options[:actor_id] == @admin.id &&
+        options[:reason] == 'zendesk 4821'
+    end.returns({user_id: @not_admin.id, destination: User::LogToken::SENTRY, period: User::LogToken.current_period})
+
+    post :resolve_log_token, params: {token: token, reason: 'zendesk 4821'}
+  end
+
   generate_admin_only_tests_for :lookup_by_email_form
 
   test 'lookup_by_email_form renders without results when no email param given' do
