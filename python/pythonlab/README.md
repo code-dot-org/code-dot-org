@@ -18,8 +18,9 @@ the matplotlib patch for now. We also run `teardown_pythonlab()` after each run,
 directory to the home folder, and drops the state our packages hold across runs: the neighborhood's grid and
 theater's default scene. Pyodide keeps one interpreter for the lifetime of the tab, and the module cache is only
 purged of the student's own files, so without that reset the next run would resume the previous run's world and
-replay its drawing. `reset_theater()` looks `theater` up in `sys.modules` rather than importing it, since
-importing it would fetch the 3 MB wheel on every run.
+replay its drawing. `reset_theater()` looks `theater` up in `sys.modules` rather than importing it: the wheel is
+loaded only for a program that imports `theater`, so an import in teardown would raise
+`ModuleNotFoundError` on every other run.
 
 ### unittest_runner
 This tests adds some customization to the output of unit tests, and has a function to either run validation tests

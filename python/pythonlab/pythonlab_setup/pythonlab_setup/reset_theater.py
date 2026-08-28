@@ -7,9 +7,13 @@ def reset_theater():
   cache is only purged of the student's own files, so a scene left over from the
   previous run would replay that run's drawing and sound.
 
-  We look the module up in sys.modules rather than importing it: the theater
-  wheel is fetched only for a program that imports theater (see
-  ON_DEMAND_PACKAGE_URLS), and importing it here would charge every run for it.
+  We look the module up in sys.modules rather than importing it. The theater
+  wheel is loaded only for a program that imports theater: the host reads the
+  imports out of the student's files and calls loadPackage before the run (see
+  ON_DEMAND_PACKAGE_URLS). An import from Python fetches nothing under Pyodide,
+  so importing theater here would just raise ModuleNotFoundError on every run
+  that did not ask for it.
+
   An explicit Scene needs no reset -- student code that built one drops it with
   the rest of the program's globals.
   """

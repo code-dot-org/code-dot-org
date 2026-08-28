@@ -15,9 +15,9 @@ def test_resets_the_default_scene():
   assert scene.get_actions() == []
 
 def test_leaves_theater_unimported():
-  # The theater wheel is fetched only for a program that imports theater (see
-  # ON_DEMAND_PACKAGE_URLS), so teardown must not import it on a run that never
-  # asked for it. Run in a subprocess: this file imports theater above.
+  # The theater wheel is loaded only for a program that imports theater (see
+  # ON_DEMAND_PACKAGE_URLS), so on any other run there is nothing for an import
+  # to find. Run in a subprocess: this file imports theater above.
   program = '\n'.join([
     'import sys',
     'from pythonlab_setup.reset_theater import reset_theater',
