@@ -1,3 +1,4 @@
+import repeatArrowsImage from './assets/common_images/repeat-arrows.png';
 import {resolveSkinAsset} from './assets';
 import type {Skin, SkinData} from './skin';
 import type {SkinsData} from './types';
@@ -195,7 +196,12 @@ export const skinFor: (skins: SkinsData, id: string) => Skin = (skins, id) => {
     failureAvatar: skinUrl('failure_avatar.png'),
     decorationAnimation: skinUrl('decoration_animation.png'),
     decorationAnimation_2x: skinUrl('decoration_animation_2x.png'),
-    repeatImage: assetUrl('media/common_images/repeat-arrows.png'),
+    // Bundled directly rather than through assetUrl's `/blockly/…` legacy
+    // server path (still unfixed for the other common_images fields below,
+    // none of which any ported block references — see blocks.ts's
+    // controls_repeat_simplified_dropdown, the first and only consumer of
+    // repeatImage in this port).
+    repeatImage: repeatArrowsImage,
     leftArrow: assetUrl('media/common_images/moveleft.png'),
     downArrow: assetUrl('media/common_images/movedown.png'),
     upArrow: assetUrl('media/common_images/moveup.png'),

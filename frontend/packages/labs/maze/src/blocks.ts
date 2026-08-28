@@ -5,6 +5,7 @@ import {BaseBlocks} from '@code-dot-org/blockly';
 
 import beeBlocks from './beeBlocks';
 import collectorBlocks from './collectorBlocks';
+import {repeatCountDropdownFieldPlugin} from './fields/repeatCountDropdownField';
 import harvesterBlocks from './harvesterBlocks';
 import planterBlocks from './planterBlocks';
 import type {Skin} from './skin';
@@ -233,13 +234,61 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
     message0: En.CONTROLS_REPEAT_TITLE,
     args0: [
       {
-        type: 'field_dropdown',
+        type: repeatCountDropdownFieldPlugin,
         name: 'TIMES',
-        options: [['2', '2']],
       },
     ],
     message1: En.CONTROLS_REPEAT_INPUT_DO + ' %1',
     args1: [
+      {
+        type: 'input_statement',
+        name: 'DO',
+      },
+    ],
+    nextStatement: true,
+    previousStatement: true,
+    generator: {
+      javascript(block, javascriptGenerator) {
+        return javascriptGenerator.forBlock.controls_repeat(
+          block,
+          javascriptGenerator,
+        );
+      },
+      simple(block, javascriptGenerator) {
+        return javascriptGenerator.forBlock.controls_repeat(
+          block,
+          javascriptGenerator,
+        );
+      },
+    },
+  },
+  {
+    // Simplified UI (no "times" wording, an image on the DO line instead of
+    // text) — the only maze block type in Block by Block > "Spot the
+    // Repeat" (courseB_iceage_loops1..12); those 12 levels crashed with
+    // "Invalid block definition for type: controls_repeat_simplified_dropdown"
+    // because this type was never ported.
+    type: 'controls_repeat_simplified_dropdown',
+    style: 'loop_blocks',
+    tooltip: En.CONTROLS_REPEAT_TOOLTIP,
+    helpUrl: En.CONTROLS_REPEAT_HELPURL,
+    message0: 'repeat %1',
+    args0: [
+      {
+        type: repeatCountDropdownFieldPlugin,
+        name: 'TIMES',
+      },
+    ],
+    message1: '%1 %2',
+    args1: [
+      {
+        type: 'field_image',
+        alt: 'repeat',
+        src: skin.repeatImage,
+        width: 35,
+        height: 35,
+        name: 'IMAGE',
+      },
       {
         type: 'input_statement',
         name: 'DO',
