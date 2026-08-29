@@ -25,20 +25,20 @@ export const TURN_PAUSE_TICKS = 8;
 // (usePlatformBody), which gives it gravity and landings in whichever
 // direction gravity points; in the air the behavior waits, and walks again
 // on landing. Footing comes from the resolver's own geometry:
-// platformGrounded, and platformSupportAhead — a point probe ahead of
-// centre, which sees a gap narrower than the sprite.
+// platformGrounded, and platformSupportAhead — a point probe under the
+// body's leading edge, which sees a gap narrower than the sprite and lets
+// any costume walk to the very edge of its block.
 const helperCode = [
   'function patrollingOnBlocks() {',
   '  return {',
   '    func: function (spriteId) {',
   '      var speed = 2;',
   '      usePlatformBody(spriteId);',
-  // Half the sprite's on-screen size: the gap probe sits at its leading edge,
-  // whatever the playfield's cell size is. 'scale' is that size in pixels;
-  // 'width' is the costume's own unscaled width.
+  // Half the sprite's on-screen size, for turning at the playspace bounds.
+  // 'scale' is that size in pixels; 'width' is the costume's own unscaled
+  // width.
   "      var size = getProp(spriteId, 'scale');",
   '      var half = size > 0 ? size / 2 : 20;',
-  '      var look = half;',
   "      if (getProp(spriteId, 'patrolOBDir') == undefined) {",
   "        setProp(spriteId, 'patrolOBDir', 1);",
   '      }',
@@ -63,7 +63,7 @@ const helperCode = [
   '        turn(-dir);',
   '      } else {',
   "        changePropBy(spriteId, 'x', speed * dir);",
-  '        if (!platformSupportAhead(spriteId, look * dir)) {',
+  '        if (!platformSupportAhead(spriteId, dir)) {',
   "          changePropBy(spriteId, 'x', -speed * dir);",
   '          turn(-dir);',
   '        }',

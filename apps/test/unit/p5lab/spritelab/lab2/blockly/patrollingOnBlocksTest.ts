@@ -4,7 +4,8 @@ import patrollingOnBlocks, {
 
 // The behavior's runtime half is interpreted ES5 source, so the test runs the
 // shipped string with stubbed lab commands. The stubs mirror the real ones:
-// platformSupportAhead is true when the probe point is inside a block,
+// platformSupportAhead is true when the point under the body's leading edge
+// (the body is 80% of the on-screen size) is inside a block,
 // platformGrounded says whether the resolver has the sprite on footing, and
 // getProp('scale') is the sprite's on-screen size in pixels while
 // getProp('width') is its costume's own unscaled width.
@@ -57,10 +58,10 @@ function patrol({
     changePropBy: (id: unknown, prop: string, delta: number) => {
       if (prop === 'x') sprite.x += delta;
     },
-    platformSupportAhead: (id: unknown, offset: number) =>
-      blocks.some(
-        b => sprite.x + offset >= b.left && sprite.x + offset <= b.right
-      ),
+    platformSupportAhead: (id: unknown, direction: number) => {
+      const toe = sprite.x + direction * size * 0.4;
+      return blocks.some(b => toe >= b.left && toe <= b.right);
+    },
   };
   const behavior = new Function(
     'getProp',
@@ -172,17 +173,23 @@ describe('patrollingOnBlocks', () => {
       blockCols: [2, 3, 4],
       startCol: 3,
     });
-    expect(walk.left).toBeGreaterThanOrEqual(80);
-    expect(walk.right).toBeLessThanOrEqual(200);
+    // Blocks span 80..200; the body (32 wide) stops with its edge at theirs.
+    expect(walk.left).toBeGreaterThanOrEqual(96);
+    expect(walk.left).toBeLessThan(100);
+    expect(walk.right).toBeLessThanOrEqual(184);
+    expect(walk.right).toBeGreaterThan(180);
   });
 
-  it('stands still on a single block, with nowhere to walk', () => {
+  it('paces the width of a single block and never leaves it', () => {
     const walk = patrol({
       size: 40,
       costumeWidth: 1024,
       blockCols: [5],
       startCol: 5,
     });
-    expect(walk.positions).toBeLessThanOrEqual(2);
+    // Block 200..240, body 32 wide: a few pixels of room either side.
+    expect(walk.left).toBeGreaterThanOrEqual(216);
+    expect(walk.right).toBeLessThanOrEqual(224);
+    expect(walk.positions).toBeLessThanOrEqual(6);
   });
 });

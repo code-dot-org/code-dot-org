@@ -19,7 +19,7 @@ import {
 import {trimAnimationListImages} from './imageTrim';
 import {
   CONTACT_EPSILON,
-  hasSupportAt,
+  hasSupportAhead,
   isSupported,
   PATROLLER_WEIGHTLESS_GRAVITY,
   PLATFORM_GRAVITY,
@@ -257,9 +257,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     library.commands.platformGravity = () => this.platformGravity_;
     library.commands.platformGrounded = spriteArg =>
       footing(spriteArg, isSupported);
-    library.commands.platformSupportAhead = (spriteArg, offsetX) =>
+    library.commands.platformSupportAhead = (spriteArg, direction) =>
       footing(spriteArg, (sprite, walls, view, gravity) =>
-        hasSupportAt(sprite, Number(offsetX) || 0, walls, view, gravity)
+        hasSupportAhead(sprite, direction < 0 ? -1 : 1, walls, view, gravity)
       );
     library.commands.goToScene = sceneId => {
       if (!this.onGoToScene || !this.beginSceneJump_()) {

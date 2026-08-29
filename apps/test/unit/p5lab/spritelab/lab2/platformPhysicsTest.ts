@@ -1,4 +1,5 @@
 import {
+  hasSupportAhead,
   hasSupportAt,
   isSupported,
   resolvePlatformPhysics,
@@ -337,6 +338,14 @@ describe('platformPhysics with custom gravity', () => {
     expect(isSupported(underBlock, walls, VIEW, -PLATFORM_GRAVITY)).toBe(true);
     const nearBlock = makeSprite(75, 360);
     expect(isSupported(nearBlock, walls, VIEW, -PLATFORM_GRAVITY)).toBe(false);
+  });
+
+  it('hasSupportAhead looks under the body edge on the side faced', () => {
+    // Block 50..100; the 20px body of a sprite at x=95 reaches 105.
+    const walls = [wallAt(1, 6)];
+    expect(hasSupportAhead(makeSprite(95, 275), 1, walls, VIEW)).toBe(false);
+    expect(hasSupportAhead(makeSprite(95, 275), -1, walls, VIEW)).toBe(true);
+    expect(hasSupportAhead(makeSprite(90, 275), 1, walls, VIEW)).toBe(true);
   });
 
   it('hasSupportAt probes a point at foot level, in the gravity direction', () => {

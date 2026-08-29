@@ -364,6 +364,23 @@ export function hasSupportAt(
   );
 }
 
+/**
+ * Whether there is footing under the body's leading edge, one step ahead in
+ * `direction` (1 right, -1 left): false with the toes over a drop. The patrol
+ * behavior turns on this, so a patroller walks to the very edge of its block
+ * whatever its costume's width.
+ */
+export function hasSupportAhead(
+  sprite: PhysicsSprite,
+  direction: 1 | -1,
+  walls: PhysicsBox[],
+  view: View,
+  gravity: number = PLATFORM_GRAVITY
+): boolean {
+  const {halfW} = playerBody(sprite);
+  return hasSupportAt(sprite, direction * halfW, walls, view, gravity);
+}
+
 // The walls whose top is at foot level, within contact tolerance.
 function wallsAtFeet(walls: PhysicsBox[], feet: number): PhysicsBox[] {
   return walls.filter(
