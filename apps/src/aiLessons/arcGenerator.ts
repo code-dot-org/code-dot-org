@@ -31,7 +31,11 @@ import {
 import {StudentInputs} from './studentInputs';
 import {ArcSpec, LessonPlan, Step} from './types';
 
-const MODEL_ID = AiChatModelIds.GEMINI_2_5_PRO;
+// Flash, not Pro: Pro reliably fell into repetition loops inside prose
+// fields on low-mastery diagnostics (3/3 in testing) while Flash
+// succeeded every time — and it's several times faster.  Arc quality on
+// Flash has been fine; revisit if it isn't.
+const MODEL_ID = AiChatModelIds.GEMINI_2_5_FLASH;
 const MAX_ARC_STEPS = 14;
 // The lab every generated arc step targets.  The step schema and the
 // levelProperties coercion both key off this; multi-lab arcs would make
@@ -51,8 +55,13 @@ const arcSchema = Output.object({
             .string()
             .describe('Unique kebab-case id, e.g. "arc-css-basics".'),
           title: z.string().describe('Short student-facing title.'),
+          // maxLength on the prose fields is a decoding constraint, not
+          // just a hint: low-mastery diagnostics reliably sent the model
+          // into a repetition loop inside the first successCriteria
+          // string, and a schema length cap stops that at the decoder.
           description: z
             .string()
+            .max(700)
             .optional()
             .describe(
               "The AI tutor's brief: what the student should do and why. Required for lab and hub steps. 2-3 sentences, never more."
@@ -69,6 +78,7 @@ const arcSchema = Output.object({
             .describe('panels steps only: 1-3 short slides.'),
           successCriteria: z
             .string()
+            .max(500)
             .optional()
             .describe(
               'lab steps: what must verifiably be true of the work to pass, in at most 2 sentences. Omit for free-explore steps.'
@@ -343,9 +353,10 @@ export async function generateLessonArc(options: {
   initAiLessonsGatewayContext();
 
   const exemplarIds = exemplarSpan(lesson, spec);
-  const response = await loggedGenerateText('arc generator', {
-    model: getModel(MODEL_ID),
-    system: `You are a curriculum designer generating the rest of a K-12
+  const attempt = async (temperature: number) => {
+    const response = await loggedGenerateText('arc generator', {
+      model: getModel(MODEL_ID),
+      system: `You are a curriculum designer generating the rest of a K-12
 web-development lesson for ONE specific student, from their diagnostic
 results.  An AI tutor coaches every step from your descriptions; hub
 steps present skill paths the student chooses between, and a separate
@@ -356,12 +367,12 @@ these standards, referenced by id):
 ${spec.standards.map(s => `  - ${s.id}: ${s.text}`).join('\n')}
 
 ${spec.guidance ? `AUTHOR GUIDANCE\n${spec.guidance}\n` : ''}${
-      spec.exampleProjects?.length
-        ? `EXAMPLE PROJECT DIRECTIONS (personalize with the student's own idea first)\n${spec.exampleProjects
-            .map(p => `  - ${p}`)
-            .join('\n')}\n`
-        : ''
-    }
+        spec.exampleProjects?.length
+          ? `EXAMPLE PROJECT DIRECTIONS (personalize with the student's own idea first)\n${spec.exampleProjects
+              .map(p => `  - ${p}`)
+              .join('\n')}\n`
+          : ''
+      }
 THE AUTHORED VERSION YOU ARE REPLACING (your quality bar — produce an
 arc of this caliber, tailored to this student; do not copy it):
 ${formatStepOutline(lesson, exemplarIds) || '  (none)'}
@@ -381,20 +392,36 @@ STRUCTURE RULES
   and never repeat yourself.  Scaffolded starting code is GENERATED
   LATER from starterPrompt; do not write code here except tiny
   planted-bug files.`,
-    prompt: `THE STUDENT (diagnostic answers, oldest first — first-try
+      prompt: `THE STUDENT (diagnostic answers, oldest first — first-try
 correctness is the strongest signal):
 ${formatInputs(inputs)}`,
-    temperature: 0.6,
-    // A healthy arc is ~2k output tokens; a few small planted-bug files
-    // stretch that, but nothing legitimate approaches this cap.  Bounds
-    // the known failure mode — degenerate repetition inside a JSON
-    // string field — to a fast failure that falls through to the
-    // authored span, instead of minutes of streaming into the JWT
-    // expiry.
-    maxOutputTokens: 10_000,
-    output: arcSchema,
-  });
+      temperature,
+      // Direct anti-repetition pressure at the decoder; low-mastery
+      // diagnostics have shown degenerate loops inside prose fields.
+      frequencyPenalty: 0.3,
+      // A healthy arc is ~2k output tokens; a few small planted-bug
+      // files stretch that, but nothing legitimate approaches this cap.
+      // Bounds a runaway to a fast failure instead of minutes of
+      // streaming into the JWT expiry.
+      maxOutputTokens: 10_000,
+      output: arcSchema,
+    });
+    const raw = response.output as {steps?: RawArcStep[]};
+    return coerceArc(lesson, spec, raw.steps || []);
+  };
 
-  const raw = response.output as {steps?: RawArcStep[]};
-  return coerceArc(lesson, spec, raw.steps || []);
+  // One retry at a higher temperature to decorrelate from a failed
+  // sample; a failed attempt is cheap thanks to the token cap.  Both
+  // failing → [] and the authored span takes over.
+  const temperatures = [0.6, 0.8];
+  for (const [i, temperature] of temperatures.entries()) {
+    try {
+      const steps = await attempt(temperature);
+      if (steps.length > 0) return steps;
+      console.warn(`Arc generation attempt ${i + 1} produced no usable steps`);
+    } catch (e) {
+      console.warn(`Arc generation attempt ${i + 1} failed`, e);
+    }
+  }
+  return [];
 }

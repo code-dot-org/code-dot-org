@@ -34,7 +34,10 @@ import {
 const MODEL_ID = AiChatModelIds.GEMINI_2_5_FLASH;
 // Remediation content is authored off the critical path (the student is
 // already back at the hub) — spend the bigger model on it.
-const REMEDIATION_MODEL_ID = AiChatModelIds.GEMINI_2_5_PRO;
+// Flash, matching the arc generator: Pro reliably repetition-looped in
+// structured output on low-mastery inputs, and remediation is only ever
+// invoked for low-mastery students.
+const REMEDIATION_MODEL_ID = AiChatModelIds.GEMINI_2_5_FLASH;
 // The generation loop must terminate: at the cap the honest verdict
 // stands and no more steps are added.
 export const MAX_REMEDIATION_ROUNDS = 2;
