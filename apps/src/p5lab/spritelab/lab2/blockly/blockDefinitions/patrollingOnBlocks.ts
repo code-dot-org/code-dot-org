@@ -19,24 +19,19 @@ const generator: GeneratorFunction = () => [
 // about a quarter of a second, enough to read as looking around.
 export const TURN_PAUSE_TICKS = 8;
 
-// Walk left/right along the blocks, turning at gaps, edges, the playspace
-// bounds, or when blocked (x differs from where last tick left it), with a
-// short stand at each turn. The sprite is handed to the platform resolver
-// (usePlatformBody), which gives it gravity and landings in whichever
-// direction gravity points; in the air the behavior waits, and walks again
-// on landing. Footing comes from the resolver's own geometry:
-// platformGrounded, and platformSupportAhead — a point probe under the
-// body's leading edge, which sees a gap narrower than the sprite and lets
-// any costume walk to the very edge of its block.
+// Walk left/right along the blocks, standing a moment at each turn: at a
+// gap or edge (a point probe under the leading foot, which sees a gap
+// narrower than the sprite), at the playspace bounds, or when blocked (x
+// differs from where last tick left it). Gravity and footing come from the
+// platform resolver, so the walk is the same whichever way is down.
 const helperCode = [
   'function patrollingOnBlocks() {',
   '  return {',
   '    func: function (spriteId) {',
   '      var speed = 2;',
   '      usePlatformBody(spriteId);',
-  // Half the sprite's on-screen size, for turning at the playspace bounds.
-  // 'scale' is that size in pixels; 'width' is the costume's own unscaled
-  // width.
+  // 'scale' is the on-screen size in pixels; 'width' would be the costume's
+  // own unscaled width.
   "      var size = getProp(spriteId, 'scale');",
   '      var half = size > 0 ? size / 2 : 20;',
   "      if (getProp(spriteId, 'patrolOBDir') == undefined) {",

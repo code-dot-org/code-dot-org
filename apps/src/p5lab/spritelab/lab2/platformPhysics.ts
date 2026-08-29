@@ -35,10 +35,6 @@ export const MIN_SOLID_OVERLAP = 8;
 // gap is a gap: crossing one takes a jump.
 export const LEDGE_FALL_SPEED = MIN_SOLID_OVERLAP;
 
-// At zero gravity nothing falls: a player is steered in four directions and
-// only the walls and the view's edges stop it. The same resolver applies
-// with the falling rules off.
-
 // The player's solid body is the art box scaled by this factor, anchored
 // at the feet: a default-size (50px) costume gets a 40px body, so every
 // costume shape fits a one-cell opening, and the size block scales the
@@ -134,6 +130,8 @@ export function resolvePlatformPhysics(
     });
     return;
   }
+  // Zero gravity: steered, not falling — the wall rules with the falling
+  // rules off.
   const weightless = gravity === 0;
   const boxes = walls.map(wall => ({
     x: wall.position.x,
@@ -304,7 +302,7 @@ export function resolvePlatformPhysics(
  * Whether a sprite is standing on support in the gravity direction: a wall
  * face within contact slack of the body's feet (or its head, under flipped
  * gravity), or the view's floor (ceiling). Mirrors the resolver's footing
- * geometry; the jump command and the patrol behavior ask this.
+ * geometry.
  */
 export function isSupported(
   sprite: PhysicsSprite,
@@ -334,8 +332,7 @@ export function isSupported(
 /**
  * Whether there is footing at foot level `offsetX` from the sprite's centre
  * — a point probe, so it sees a gap narrower than the sprite — in the
- * gravity direction. The floor (ceiling, under flipped gravity) counts. The
- * patrol behavior looks one step ahead with this before it turns.
+ * gravity direction. The floor (ceiling, under flipped gravity) counts.
  */
 export function hasSupportAt(
   sprite: PhysicsSprite,
@@ -365,10 +362,8 @@ export function hasSupportAt(
 }
 
 /**
- * Whether there is footing under the body's leading edge, one step ahead in
- * `direction` (1 right, -1 left): false with the toes over a drop. The patrol
- * behavior turns on this, so a patroller walks to the very edge of its block
- * whatever its costume's width.
+ * Whether there is footing under the body's leading edge in `direction`
+ * (1 right, -1 left): false with the toes over a drop.
  */
 export function hasSupportAhead(
   sprite: PhysicsSprite,

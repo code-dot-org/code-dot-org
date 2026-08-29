@@ -230,9 +230,8 @@ export default class SpriteLab2Engine extends SpriteLab {
         sprite.velocity.y = up * Math.abs(Number(speed) || 0);
       });
     };
-    // Sprites the platform resolver moves besides players: a behavior that
-    // wants gravity (patrolling on blocks) marks its sprite each tick. The
-    // mark lives on the sprite, so it lasts as long as the sprite does.
+    // A behavior that wants gravity for its sprite marks it for the platform
+    // resolver, which otherwise moves only players.
     library.commands.usePlatformBody = spriteArg => {
       library.getSpriteArray(spriteArg).forEach(sprite => {
         sprite.__slab2Body = true;
@@ -252,8 +251,6 @@ export default class SpriteLab2Engine extends SpriteLab {
         .getSpriteArray(spriteArg)
         .some(sprite => test(sprite, walls, view, this.bodyGravity_()));
     };
-    // The gravity in force, for the controls: at zero the player is steered
-    // up and down.
     library.commands.platformGravity = () => this.platformGravity_;
     library.commands.platformGrounded = spriteArg =>
       footing(spriteArg, isSupported);
@@ -664,8 +661,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       .filter(sprite => sprite.group !== 'players' && sprite.__slab2Body)
       .map(snapshot);
     // Under upward gravity a sprite stands on the ceiling, so it is drawn
-    // upside down; the facing (mirrorX, from the direction of travel) is
-    // left alone. Drawing only: the body the resolver uses is unchanged.
+    // upside down. Drawing only: the body the resolver measures is unchanged.
     const upright = gravity => (gravity < 0 ? -1 : 1);
     players.forEach(({sprite}) =>
       sprite.mirrorY(upright(this.platformGravity_))
@@ -685,9 +681,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     resolvePlatformPhysics(bodies, walls, view, this.bodyGravity_());
   }
 
-  // The gravity patrollers and other marked sprites feel: the world's, except
-  // that at zero — where the player is steered about — they keep a little
-  // downward pull, so they still settle onto blocks and patrol them.
+  // Marked sprites keep a little downward pull at zero gravity, so
+  // patrollers still settle onto blocks while the player is steered about.
   bodyGravity_() {
     return this.platformGravity_ === 0
       ? PATROLLER_WEIGHTLESS_GRAVITY
