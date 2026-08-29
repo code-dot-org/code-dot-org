@@ -8,8 +8,14 @@ jest.mock('@cdo/apps/music/ProjectPlayer', () => ({
   __esModule: true,
   default: class {},
 }));
+jest.mock('@cdo/apps/music/blockly/MusicBlocklyWorkspace', () => ({
+  __esModule: true,
+  default: class {},
+}));
 
-import SceneMusic from '@cdo/apps/p5lab/spritelab/lab2/sceneMusic';
+import SceneMusic, {
+  shareRedefinedBlocks,
+} from '@cdo/apps/p5lab/spritelab/lab2/sceneMusic';
 
 // Fakes standing in for MusicPlayer and ProjectPlayer: the wrapper only
 // needs load, metadata, play, stop and the loop settings.
@@ -94,5 +100,31 @@ describe('SpriteLab2 SceneMusic', () => {
     });
     music.stop();
     expect(created).toBe(0);
+  });
+
+  it('keeps the game blocks another lab redefined, and routes their generators by workspace', () => {
+    type Registry = Parameters<typeof shareRedefinedBlocks>[0];
+    const own: Registry = {
+      blocks: {when_run: 'game hat'},
+      generators: {when_run: () => 'game'},
+    };
+    const registry: Registry = {
+      blocks: {when_run: 'music hat', music_play: 'music only'},
+      generators: {when_run: () => 'music', music_play: () => 'play'},
+    };
+    const musicWorkspace = {} as never;
+    const gameWorkspace = {} as never;
+    const shared = shareRedefinedBlocks(
+      registry,
+      own,
+      workspace => workspace === musicWorkspace
+    );
+    expect(shared).toEqual(['when_run']);
+    expect(registry.blocks.when_run).toBe('game hat');
+    expect(registry.blocks.music_play).toBe('music only');
+    const generate = (workspace: never) =>
+      registry.generators.when_run!({workspace} as never, {} as never);
+    expect(generate(musicWorkspace)).toBe('music');
+    expect(generate(gameWorkspace)).toBe('game');
   });
 });
