@@ -624,6 +624,30 @@
         "script.name": "hoai2026-dev",
         "activity_section.key": "5f274703-fce0-44f3-ac27-9df0a8406534"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai2026-dev-panels-music",
+        "script_level.level_keys": [
+          "hoai2026-dev-panels-music"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai2026-dev",
+        "activity_section.key": "5f274703-fce0-44f3-ac27-9df0a8406534"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai2026-dev-spritelab-lab2-music",
+        "script_level.level_keys": [
+          "hoai2026-dev-spritelab-lab2-music"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai2026-dev",
+        "activity_section.key": "5f274703-fce0-44f3-ac27-9df0a8406534"
+      }
     }
   ],
   "resources": [],
