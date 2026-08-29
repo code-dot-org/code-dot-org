@@ -5,7 +5,56 @@
 // the current shape on the next save, so each migration only has to survive
 // until the projects it covers have been opened once.
 
-import {SerializedAnimationList} from './types';
+import {
+  LEGACY_WHEN_RUN_BLOCK_TYPE,
+  WHEN_RUN_BLOCK_TYPE,
+} from './blockly/blockDefinitions/whenRun';
+import {Scene, SerializedAnimationList} from './types';
+
+// when_run -> spritelab2_whenRun (2026-08-29): the lab's own hat block.
+const RENAMED_BLOCK_TYPES: {[type: string]: string} = {
+  [LEGACY_WHEN_RUN_BLOCK_TYPE]: WHEN_RUN_BLOCK_TYPE,
+};
+
+interface SerializedBlock {
+  type?: string;
+  next?: {block?: SerializedBlock};
+  inputs?: {
+    [name: string]: {block?: SerializedBlock; shadow?: SerializedBlock};
+  };
+}
+
+interface BlocklySource {
+  blocks?: {blocks?: SerializedBlock[]};
+}
+
+// Renames block types throughout a serialized workspace, in place. Returns
+// whether anything changed.
+export function migrateBlockTypes(source: unknown): boolean {
+  let changed = false;
+  const visit = (block?: SerializedBlock) => {
+    if (!block) {
+      return;
+    }
+    const renamed = block.type && RENAMED_BLOCK_TYPES[block.type];
+    if (renamed) {
+      block.type = renamed;
+      changed = true;
+    }
+    visit(block.next?.block);
+    Object.values(block.inputs || {}).forEach(input => {
+      visit(input.block);
+      visit(input.shadow);
+    });
+  };
+  ((source as BlocklySource)?.blocks?.blocks || []).forEach(visit);
+  return changed;
+}
+
+/** Applied to a project's scenes on load, in place. */
+export function migrateScenes(scenes: Scene[]): boolean {
+  return scenes.map(scene => migrateBlockTypes(scene.source)).some(Boolean);
+}
 
 // generation.itemType -> generation.imageType (2026-08-17).
 interface LegacyGenerationMetadata {

@@ -17,6 +17,7 @@ import setAsPlatformPlayer from './setAsPlatformPlayer';
 import setCameraZoom from './setCameraZoom';
 import setPlatformGravity from './setPlatformGravity';
 import thePlayer from './thePlayer';
+import whenRun from './whenRun';
 
 // Lab-owned blocks, defined client-side rather than in the DB block pool. A
 // block whose runtime half is interpreted code exports it as helperCode.
@@ -27,6 +28,7 @@ const labBlockDefinitions: {
 }[] = [
   goToScene,
   playMusic,
+  whenRun,
   goToExternalScene,
   restartScene,
   movingLeft,

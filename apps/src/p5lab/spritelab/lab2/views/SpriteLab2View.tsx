@@ -51,7 +51,11 @@ import {
   renameImageReferencesOnWorkspace,
 } from '../imageReferences';
 import {onTrimsUpdated} from '../imageTrim';
-import {migrateAnimationList} from '../migrateSources';
+import {
+  migrateAnimationList,
+  migrateBlockTypes,
+  migrateScenes,
+} from '../migrateSources';
 import {fetchMusicProjects} from '../musicProjects';
 import reseedablePageConstants, {
   RESET_PAGE_CONSTANTS,
@@ -128,11 +132,15 @@ function getWorldTabEnabledParam() {
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
 const DEFAULT_SCENE_ID = 'scene-1';
 
+// Saved sources are migrated in place as they are read (see migrateSources);
+// the next save persists the result.
 function getScenes(sources: Sources): Scene[] {
   if (sources.scenes?.length) {
+    migrateScenes(sources.scenes);
     return sources.scenes;
   }
   // Create a default scene from the project's source for projects that don't have scenes already.
+  migrateBlockTypes(sources.source);
   return [
     {
       id: DEFAULT_SCENE_ID,
@@ -861,6 +869,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           levelProperties.id,
           scriptId
         );
+        migrateScenes(project.scenes);
         externalProjectsRef.current.set(parsed.channel, project);
       } catch (e) {
         project = externalProjectsRef.current.get(parsed.channel);
