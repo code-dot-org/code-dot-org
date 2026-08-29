@@ -28,6 +28,8 @@ interface TabShellProps {
   sceneTabsExtra?: React.ReactNode;
   // Rendered immediately after the Play button (the restart controls).
   playTabExtra?: React.ReactNode;
+  // Rendered at the right, before Start Over (the music playing).
+  startOverExtra?: React.ReactNode;
   children: React.ReactNode;
   onClickStartOver?: () => void;
 }
@@ -45,6 +47,7 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
   visibleTabs = ALL_TABS,
   sceneTabsExtra,
   playTabExtra,
+  startOverExtra,
   children,
   onClickStartOver,
 }) => {
@@ -147,6 +150,7 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
           })}
         </div>
         <div className={moduleStyles.tabBar}>
+          {startOverExtra}
           {onClickStartOver && (
             <MuiButton
               variant="outlined"

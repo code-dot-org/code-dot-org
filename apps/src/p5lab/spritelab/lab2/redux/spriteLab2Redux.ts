@@ -28,12 +28,20 @@ export interface ExternalSceneOption {
   label: string;
 }
 
+// One of the user's Music Lab projects, offered by the play-music block's
+// dropdown; channel is the value the block stores.
+export interface MusicProjectOption {
+  channel: string;
+  name: string;
+}
+
 export interface SpriteLab2State {
   activeTab: Tab;
   hasRun: boolean;
   aiGenerateState: AiGenerateState;
   scenes: SceneMetadata[];
   externalScenes: ExternalSceneOption[];
+  musicProjects: MusicProjectOption[];
 }
 
 const initialState: SpriteLab2State = {
@@ -42,6 +50,7 @@ const initialState: SpriteLab2State = {
   aiGenerateState: 'none',
   scenes: [],
   externalScenes: [],
+  musicProjects: [],
 };
 
 const spriteLab2Slice = createSlice({
@@ -66,6 +75,9 @@ const spriteLab2Slice = createSlice({
     ) => {
       state.externalScenes = action.payload;
     },
+    setMusicProjects: (state, action: PayloadAction<MusicProjectOption[]>) => {
+      state.musicProjects = action.payload;
+    },
     resetSpriteLab2: () => initialState,
   },
 });
@@ -76,6 +88,7 @@ export const {
   setAiGenerateState,
   setScenes,
   setExternalScenes,
+  setMusicProjects,
   resetSpriteLab2,
 } = spriteLab2Slice.actions;
 

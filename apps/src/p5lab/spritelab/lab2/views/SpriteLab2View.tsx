@@ -52,6 +52,7 @@ import {
 } from '../imageReferences';
 import {onTrimsUpdated} from '../imageTrim';
 import {migrateAnimationList} from '../migrateSources';
+import {fetchMusicProjects} from '../musicProjects';
 import reseedablePageConstants, {
   RESET_PAGE_CONSTANTS,
 } from '../redux/reseedablePageConstants';
@@ -60,10 +61,12 @@ import spriteLab2Reducer, {
   resetSpriteLab2,
   setActiveTab,
   setExternalScenes,
+  setMusicProjects,
   setScenes,
   ALL_TABS,
   Tab,
 } from '../redux/spriteLab2Redux';
+import SceneMusic from '../sceneMusic';
 import {
   collectSavedExternalKeys,
   ExternalProject,
@@ -85,6 +88,7 @@ import {
 } from '../world';
 
 import {isPointerClick} from './blurAfterPointerClick';
+import SceneMusicBar from './components/SceneMusicBar';
 import TabShell from './components/TabShell';
 import GenerateImagePane from './GenerateImagePane';
 import GenerateSpriteLab from './GenerateSpriteLab';
@@ -898,6 +902,40 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     isPlayingRef.current = activeTab === 'Play';
   }, [activeTab]);
 
+  // The play-music block's songs: the user's Music Lab projects, fetched once
+  // per level.
+  const musicProjects = useAppSelector(state => state.spriteLab2.musicProjects);
+  useEffect(() => {
+    let cancelled = false;
+    fetchMusicProjects()
+      .then(projects => {
+        if (!cancelled) {
+          dispatch(setMusicProjects(projects));
+        }
+      })
+      .catch(e => console.warn('music projects unavailable', e));
+    return () => {
+      cancelled = true;
+    };
+  }, [levelProperties.id, dispatch]);
+
+  // Background music plays only in Play, and stops on leaving it.
+  const sceneMusicRef = useRef<SceneMusic | null>(null);
+  const [nowPlaying, setNowPlaying] = useState<{
+    channel: string;
+    loading: boolean;
+  } | null>(null);
+  useEffect(() => {
+    if (activeTab !== 'Play') {
+      sceneMusicRef.current?.stop();
+      setNowPlaying(null);
+    }
+  }, [activeTab]);
+  useEffect(() => () => sceneMusicRef.current?.stop(), []);
+  const nowPlayingTitle = nowPlaying
+    ? musicProjects.find(p => p.channel === nowPlaying.channel)?.name || 'Music'
+    : null;
+
   // The Code and Images tabs stay mounted behind a clip-path, which hides
   // them visually but leaves their contents (the whole Blockly workspace)
   // in the tab order and the accessibility tree. Inert while hidden.
@@ -1015,6 +1053,29 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       setJumpCover(false);
     };
     engine.onSceneJumpCancel = () => setJumpCover(false);
+    engine.onPlayMusic = (channel: string) => {
+      if (!isPlayingRef.current) {
+        return;
+      }
+      const music = (sceneMusicRef.current ||= new SceneMusic());
+      if (music.playing === channel) {
+        return;
+      }
+      setNowPlaying({channel, loading: true});
+      music
+        .play(channel)
+        .then(started => {
+          if (started) {
+            setNowPlaying({channel, loading: false});
+          }
+        })
+        .catch(e => {
+          console.warn('music could not play', e);
+          setNowPlaying(current =>
+            current?.channel === channel ? null : current
+          );
+        });
+    };
   }, [
     engineReady,
     scenes,
@@ -1307,6 +1368,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         enabledTabs={tabs}
         visibleTabs={tabs}
         onClickStartOver={isEditable ? () => setShowStartOver(true) : undefined}
+        startOverExtra={
+          activeTab === 'Play' && nowPlaying && nowPlayingTitle ? (
+            <SceneMusicBar
+              title={nowPlayingTitle}
+              isLoading={nowPlaying.loading}
+            />
+          ) : undefined
+        }
         sceneTabsExtra={
           animationsSeeded ? (
             <SceneSelector

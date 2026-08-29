@@ -157,6 +157,18 @@ $tab-segment-height: $tab-item-height - 2px;
 }
 
 // Action buttons beside the Play tab (shown only while playing), not tabs.
+// Music Lab's project bar, cut down to the tab bar's height.
+.musicBar {
+  height: $tab-item-height;
+  margin: 0;
+  padding: 0 8px 0 0;
+  box-sizing: border-box;
+
+  > img {
+    height: $tab-item-height - 2px;
+  }
+}
+
 .startOver {
   height: $tab-item-height;
   padding: 0 12px;

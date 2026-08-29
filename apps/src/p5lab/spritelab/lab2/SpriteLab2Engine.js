@@ -105,6 +105,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.onGoToScene = null;
     this.onGoToExternalScene = null;
     this.onRestartScene = null;
+    this.onPlayMusic = null;
     // When the last restart fired, for the quiet window above.
     this.lastRestartAt_ = 0;
     // Jump lifecycle for the view's cover/fade: start fires with the block,
@@ -223,6 +224,12 @@ export default class SpriteLab2Engine extends SpriteLab {
       players.forEach(sprite => {
         sprite.velocity.y = up * Math.abs(Number(speed) || 0);
       });
+    };
+    // Music is the view's: it owns the player and the Play tab that stops it.
+    library.commands.playMusic = channelId => {
+      if (channelId && this.onPlayMusic) {
+        this.onPlayMusic(String(channelId));
+      }
     };
     library.commands.goToScene = sceneId => {
       if (!this.onGoToScene || !this.beginSceneJump_()) {
