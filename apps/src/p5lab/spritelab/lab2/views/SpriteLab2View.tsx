@@ -636,6 +636,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     getToolboxDefinition,
     loadCode,
     subscribeToChanges,
+    refreshToolbox,
   } = useBlocklyWorkspace({
     enabled: animationsSeeded,
     toolboxDefinition: levelProperties.toolboxDefinition,
@@ -903,7 +904,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [activeTab]);
 
   // The play-music block's songs: the user's Music Lab projects, fetched once
-  // per level.
+  // per level. The flyout usually renders first, so it is redrawn with them.
   const musicProjects = useAppSelector(state => state.spriteLab2.musicProjects);
   useEffect(() => {
     let cancelled = false;
@@ -911,13 +912,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       .then(projects => {
         if (!cancelled) {
           dispatch(setMusicProjects(projects));
+          refreshToolbox();
         }
       })
       .catch(e => console.warn('music projects unavailable', e));
     return () => {
       cancelled = true;
     };
-  }, [levelProperties.id, dispatch]);
+  }, [levelProperties.id, dispatch, refreshToolbox]);
 
   // Background music plays only in Play, and stops on leaving it.
   const sceneMusicRef = useRef<SceneMusic | null>(null);
