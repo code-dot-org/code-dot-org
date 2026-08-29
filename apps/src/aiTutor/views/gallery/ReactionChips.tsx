@@ -163,7 +163,11 @@ const ReactionChips: FC<ReactionChipsProps> = ({responseId, reactions}) => {
           aria-expanded={pickerOpen}
           onClick={() => setPickerOpen(open => !open)}
         >
-          <FontAwesomeV6Icon iconName="face-smile" aria-hidden="true" />
+          <FontAwesomeV6Icon
+            iconName="thumbs-up"
+            iconStyle="regular"
+            aria-hidden="true"
+          />
         </button>
         {pickerOpen && (
           <div

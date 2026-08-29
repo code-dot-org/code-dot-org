@@ -309,17 +309,19 @@
   display: inline-flex;
 }
 
+// A ghost icon button matching the Figma: a 32px rounded square (shape-sm),
+// no border, white thumbs-up, with a state layer on hover.
 .addReaction {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   padding: 0;
-  background-color: var(--background-neutral-primary);
-  border: 1px solid var(--border-neutral-secondary);
-  border-radius: var(--shape-round);
-  font-size: 12px;
+  background: none;
+  border: none;
+  border-radius: var(--shape-sm);
+  font-size: 14px;
   color: var(--text-neutral-primary);
   cursor: pointer;
 
