@@ -174,5 +174,43 @@ module Foorm
 
       assert_equal 'Must provide a name and value for any survey variables.', JSON.parse(@response.body)['error']
     end
+
+    test 'show passes through clean survey_data URL params' do
+      anonymous_form = create(:foorm_simple_survey_form,
+        form_name: @foorm_form.name,
+        properties: {allow_signed_out: true}
+      )
+
+      get "/form/#{anonymous_form.path}", params: {survey_data: {course: 'CS Principles'}}
+      assert_response :success
+      script_data = JSON.parse(assigns(:script_data)[:props])
+      assert_equal({'course' => 'CS Principles'}, script_data['surveyData'])
+    end
+
+    test 'show strips HTML tags from survey_data URL param values' do
+      anonymous_form = create(:foorm_simple_survey_form,
+        form_name: @foorm_form.name,
+        properties: {allow_signed_out: true}
+      )
+
+      get "/form/#{anonymous_form.path}",
+        params: {survey_data: {course: "<script>alert('xss')</script>"}}
+      assert_response :success
+      script_data = JSON.parse(assigns(:script_data)[:props])
+      # strip_tags removes script tag content entirely, not just the tag markup
+      assert_equal({'course' => ''}, script_data['surveyData'])
+    end
+
+    test 'configuration strips HTML tags from survey_data URL param values' do
+      sign_in @teacher
+
+      get "/form/#{@simple_survey_form.path}/configuration",
+        params: {survey_data: {course: "<script>alert('xss')</script>"}}
+      assert_response :success
+      response_data = JSON.parse(@response.body)
+      script_data = JSON.parse(response_data['props'])
+      # strip_tags removes script tag content entirely, not just the tag markup
+      assert_equal({'course' => ''}, script_data['surveyData'])
+    end
   end
 end
