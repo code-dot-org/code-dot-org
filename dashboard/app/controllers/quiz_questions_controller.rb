@@ -10,12 +10,9 @@ class QuizQuestionsController < ApplicationController
   # GET /quiz_questions?quizLevelId=&search=&sort=&standardFrameworkShortcode=&standardShortcode=&courseOrUnitType=&courseOrUnitId=
   #
   # Question bank browsing: matches by name, marks each attached: true/false
-  # (and its page) relative to the quiz given by quizLevelId. quizLevelId is
-  # required for now - nothing yet browses the bank outside a specific
-  # quiz's builder.
-  # sort is 'name' or 'recent' (default). standardFrameworkShortCode/
-  # standardShortcode and courseOrUnitType/courseOrUnitId, if given,
-  # further narrow results (AND'd with search, not exclusive of it).
+  # (and its page) relative to quizLevelId - required, since nothing yet
+  # browses the bank standalone. sort: 'name' or 'recent' (default).
+  # Standard/course/unit params further narrow results, AND'd with search.
   def index
     level = find_quiz_level(params[:quizLevelId], required: true)
     standard = find_standard(params[:standardFrameworkShortcode], params[:standardShortcode])
@@ -74,11 +71,9 @@ class QuizQuestionsController < ApplicationController
 
   # GET /quiz_questions/:id
   #
-  # Building-only counterpart to Quiz#summarize_for_lab2_properties: that
-  # method deliberately excludes correct_choice_id, so editing an existing
-  # question's answer needs its own fetch instead of reusing
-  # levelProperties.quizQuestions. Any bank question, regardless of which
-  # quiz (if any) currently has it placed.
+  # Building-only counterpart to Quiz#summarize_for_lab2_properties, which
+  # excludes correct_choice_id. Any bank question, regardless of which quiz
+  # (if any) has it placed.
   def show
     question = QuizQuestion.find(params[:id])
     render json: quiz_question_json(question)
