@@ -41,29 +41,24 @@ class QuizQuestion < ApplicationRecord
   validates :name, presence: true
   validates :content, presence: true
 
-  # preview/stable/sunsetting units
+  # published unit means preview/stable/sunsetting
   def used_in_published_unit?
     self.class.published_unit_usage([id]).fetch(id, false)
   end
 
-  # Bulk form of #used_in_published_unit? - avoids an N+1 (levels, then
-  # script_levels, then script, per question) when serializing many
-  # questions at once, e.g. QuizQuestionsController#index. Returns
-  # {question_id => bool}; a question_id with no placements, or none in a
-  # published unit, maps to false.
+  # Computes if group of question_ids are used in a published unit (see used_in_published_unit? for one question)
+  # Returns {question_id => bool}; a question_id with no placements, or
+  # none in a published unit, maps to false.
   def self.published_unit_usage(question_ids)
     return {} if question_ids.blank?
 
     placements = QuizQuestionPlacement.where(quiz_question_id: question_ids).
       includes(level: {script_levels: {script: :unit_group_units}})
 
-    # Grouped by level (not iterated per placement) because the check below
-    # isn't fully covered by the includes above: Unit#launched? goes
-    # through get_original_unit_group -> UnitGroup.get_from_cache, a
-    # separate lookup by id, not a preloaded association - so two
-    # placements on the same level would otherwise repeat the same
-    # UnitGroup query once each, scaling with placement count instead of
-    # unique-level count.
+    # Grouped by level, not iterated per placement - Unit#launched? calls
+    # UnitGroup.get_from_cache (a separate id lookup, not covered by the
+    # includes above), so per-placement would repeat it once per placement
+    # on a shared level instead of once per unique level.
     question_ids_by_level = placements.group_by(&:level).transform_values {|ps| ps.map(&:quiz_question_id)}
     published_level_ids = question_ids_by_level.each_key.select do |level|
       level.script_levels.any? do |sl|
