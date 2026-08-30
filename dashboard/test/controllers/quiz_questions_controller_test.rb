@@ -17,20 +17,14 @@ class QuizQuestionsControllerTest < ActionController::TestCase
 
   test "index redirects to sign in when not signed in" do
     sign_out @levelbuilder
-    get :index, params: {level_id: @quiz.id}
+    get :index, params: {quizLevelId: @quiz.id}
     assert_redirected_to_sign_in
   end
 
   test "index is forbidden for a non-levelbuilder" do
     sign_in @teacher
-    get :index, params: {level_id: @quiz.id}
+    get :index, params: {quizLevelId: @quiz.id}
     assert_response :forbidden
-  end
-
-  test "show 404s on a level that is not a Quiz" do
-    level = create(:level)
-    get :show, params: {level_id: level.id, id: @question.id}
-    assert_response :not_found
   end
 
   # --- index ---
@@ -52,7 +46,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     other_question.standards << standard
 
     get :index, params: {
-      level_id: @quiz.id,
+      quizLevelId: @quiz.id,
       standardFrameworkShortcode: standard.framework.shortcode,
       standardShortcode: standard.shortcode,
       limit: 10
@@ -78,7 +72,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     @question.standards << standard
 
     get :index, params: {
-      level_id: @quiz.id,
+      quizLevelId: @quiz.id,
       standardFrameworkShortcode: standard.framework.shortcode,
       standardShortcode: standard.shortcode,
       limit: 10
@@ -113,7 +107,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
       subscriber = ActiveSupport::Notifications.subscribe('sql.active_record') do |*, payload|
         count += 1 unless payload[:name].to_s.match?(/SCHEMA|TRANSACTION/)
       end
-      get :index, params: {level_id: @quiz.id, limit: 30}
+      get :index, params: {quizLevelId: @quiz.id, limit: 30}
       assert_response :success
       ActiveSupport::Notifications.unsubscribe(subscriber)
       count
@@ -143,7 +137,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     create(:quiz_question_standard, quiz_question: tagged, standard: standard)
 
     get :index, params: {
-      level_id: @quiz.id,
+      quizLevelId: @quiz.id,
       standardFrameworkShortcode: standard.framework.shortcode,
       standardShortcode: standard.shortcode
     }
@@ -154,10 +148,20 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     refute_includes ids, @question.id
   end
 
-  # --- course_unit_search (not level-type-gated - doesn't touch @level) ---
+  # quizLevelId missing falls into the same "no results" bucket as an
+  # unresolvable course/unit id below, rather than a hard error - nothing
+  # yet browses the bank outside a specific quiz's builder, so there's no
+  # meaningful result set to return either way.
+  test "index returns [] when quizLevelId is missing - nothing yet browses the bank outside a specific quiz's builder" do
+    get :index, params: {}
+    assert_response :success
+    assert_equal [], JSON.parse(response.body)
+  end
+
+  # --- course_unit_search (level-independent - top-level route, no :level_id) ---
 
   test "course_unit_search returns [] for a query shorter than MIN_WORD_LENGTH" do
-    get :course_unit_search, params: {level_id: @quiz.id, query: 'ab'}
+    get :course_unit_search, params: {query: 'ab'}
     assert_response :success
     assert_equal [], JSON.parse(response.body)
   end
@@ -166,7 +170,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     unit = create(:unit, name: 'zzz-matching-unit')
     course = create(:unit_group, name: 'zzz-matching-course')
 
-    get :course_unit_search, params: {level_id: @quiz.id, query: 'zzz-matching'}
+    get :course_unit_search, params: {query: 'zzz-matching'}
 
     assert_response :success
     results = JSON.parse(response.body)
@@ -177,67 +181,33 @@ class QuizQuestionsControllerTest < ActionController::TestCase
   test "course_unit_search escapes % and _ so they match literally, not as wildcards" do
     create(:unit, name: 'zzzalgorithms-and-rhythms')
 
-    get :course_unit_search, params: {level_id: @quiz.id, query: 'zzzalgo%rithm'}
+    get :course_unit_search, params: {query: 'zzzalgo%rithm'}
 
     assert_response :success
     assert_equal [], JSON.parse(response.body)
   end
 
-  # --- create ---
+  # --- show ---
 
-  test "create makes a new bank question and attaches it as the next position" do
-    create(:quiz_question_placement, level: @quiz, quiz_question: create(:multiple_choice_question), page: 1, position: 2)
+  # Regression test for a review finding on the level-nested predecessor of
+  # this controller: show used to be @level.questions.find(params[:id]),
+  # 404ing for a real question that just wasn't attached to whichever quiz
+  # happened to be in the URL. show is level-independent now - any bank
+  # question is reachable by its own id, attached anywhere or not.
+  test "show works for a bank question not attached to any quiz" do
+    unattached = create(:multiple_choice_question)
 
-    assert_difference '@quiz.placements.count', 1 do
-      post :create, params: {
-        level_id: @quiz.id,
-        questionName: 'New question',
-        stem: 'What is 2 + 2?',
-        choices: [{id: 'a', text: '3'}, {id: 'b', text: '4'}],
-        correctChoiceId: 'b',
-        page: 1
-      }
-    end
+    get :show, params: {id: unattached.id}
 
-    assert_response :created
-    body = JSON.parse(response.body)
-    question = MultipleChoiceQuestion.find(body['id'])
-    assert_equal 'New question', question.name
-    assert_equal 'b', question.content['correct_choice_id']
-    placement = @quiz.placements.find_by!(quiz_question_id: question.id)
-    assert_equal 3, placement.position
-  end
-
-  test "create returns bad_request when required fields are missing" do
-    assert_no_difference 'QuizQuestion.count' do
-      post :create, params: {level_id: @quiz.id, questionName: '', stem: '', choices: [], correctChoiceId: ''}
-    end
-
-    assert_response :bad_request
-    assert JSON.parse(response.body)['error'].present?
-  end
-
-  test "create rolls back the question entirely when standard assignment fails" do
-    assert_no_difference 'QuizQuestion.count' do
-      post :create, params: {
-        level_id: @quiz.id,
-        questionName: 'Orphan risk',
-        stem: 'What is 2 + 2?',
-        choices: [{id: 'a', text: '3'}, {id: 'b', text: '4'}],
-        correctChoiceId: 'b',
-        standards: [{frameworkShortcode: 'not-a-real-framework', shortcode: 'not-a-real-standard'}]
-      }
-    end
-
-    assert_response :bad_request
-    refute QuizQuestion.exists?(name: 'Orphan risk')
+    assert_response :success
+    assert_equal unattached.id, JSON.parse(response.body)['id']
   end
 
   # --- update: in-place vs. fork ---
 
   test "update edits the question in place when it's not used in a published unit" do
     put :update, params: {
-      level_id: @quiz.id, id: @question.id,
+      id: @question.id, quizLevelId: @quiz.id,
       questionName: 'Edited name', stem: 'Edited stem',
       choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a'
     }
@@ -257,7 +227,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
 
     assert_difference 'QuizQuestion.count', 1 do
       put :update, params: {
-        level_id: @quiz.id, id: @question.id,
+        id: @question.id, quizLevelId: @quiz.id,
         questionName: 'Forked name', stem: 'Forked stem',
         choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a'
       }
@@ -280,7 +250,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
   test "update forks when the client explicitly sends editMode: fork, even if not published" do
     assert_difference 'QuizQuestion.count', 1 do
       put :update, params: {
-        level_id: @quiz.id, id: @question.id, editMode: 'fork',
+        id: @question.id, quizLevelId: @quiz.id, editMode: 'fork',
         questionName: 'Forked by request', stem: 'stem',
         choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a'
       }
@@ -297,7 +267,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
 
     assert_no_difference 'QuizQuestion.count' do
       put :update, params: {
-        level_id: @quiz.id, id: @question.id,
+        id: @question.id, quizLevelId: @quiz.id,
         questionName: 'Forked name', stem: 'Forked stem',
         choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a',
         standards: [{frameworkShortcode: 'not-a-real-framework', shortcode: 'not-a-real-standard'}]
@@ -308,80 +278,19 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     assert_equal @question.id, @quiz.reload.placements.sole.quiz_question_id
   end
 
-  # --- attach / detach / destroy: three different removal semantics ---
+  # quizLevelId is optional - editing a question with no particular quiz
+  # in view (e.g. a future standalone bank-management screen) still works,
+  # touching no placement.
+  test "update edits the question in place when no quizLevelId is given" do
+    unattached = create(:multiple_choice_question)
 
-  test "attach is idempotent - attaching an already-attached question does not duplicate the placement" do
-    assert_no_difference '@quiz.placements.count' do
-      post :attach, params: {level_id: @quiz.id, id: @question.id}
-    end
-    assert_response :created
-  end
-
-  test "attach adds an existing bank question without creating a new QuizQuestion row" do
-    other_question = create(:multiple_choice_question)
-
-    assert_no_difference 'QuizQuestion.count' do
-      post :attach, params: {level_id: @quiz.id, id: other_question.id}
-    end
-
-    assert_response :created
-    assert @quiz.placements.exists?(quiz_question_id: other_question.id)
-  end
-
-  test "detach removes the placement but leaves the question itself intact" do
-    delete :detach, params: {level_id: @quiz.id, id: @question.id}
-
-    assert_response :no_content
-    refute @quiz.placements.exists?(quiz_question_id: @question.id)
-    assert QuizQuestion.exists?(@question.id)
-  end
-
-  test "destroy removes the question outright when it's not attached to any other quiz" do
-    delete :destroy, params: {level_id: @quiz.id, id: @question.id}
+    put :update, params: {
+      id: unattached.id,
+      questionName: 'Edited name', stem: 'Edited stem',
+      choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a'
+    }
 
     assert_response :success
-    assert_equal true, JSON.parse(response.body)['destroyed']
-    refute QuizQuestion.exists?(@question.id)
-  end
-
-  test "destroy falls back to a plain detach when the question is still attached elsewhere" do
-    other_quiz = create(:quiz)
-    create(:quiz_question_placement, level: other_quiz, quiz_question: @question, page: 1, position: 1)
-
-    delete :destroy, params: {level_id: @quiz.id, id: @question.id}
-
-    assert_response :success
-    assert_equal false, JSON.parse(response.body)['destroyed']
-    assert QuizQuestion.exists?(@question.id)
-    refute @quiz.placements.exists?(quiz_question_id: @question.id)
-    assert other_quiz.placements.exists?(quiz_question_id: @question.id)
-  end
-
-  # Regression tests for a Copilot review finding: the deletion check only
-  # looked at other placements, not QuizQuestionResponse or forked
-  # questions' parent_id - both are also FKs to this row, so destroy!
-  # would raise (a 500) after the placement was already gone, rather than
-  # falling back to a plain detach the way an other-quiz placement does.
-  test "destroy falls back to a plain detach when the question has a QuizQuestionResponse" do
-    attempt = create(:quiz_attempt, level: @quiz)
-    create(:quiz_question_response, quiz_attempt: attempt, quiz_question: @question)
-
-    delete :destroy, params: {level_id: @quiz.id, id: @question.id}
-
-    assert_response :success
-    assert_equal false, JSON.parse(response.body)['destroyed']
-    assert QuizQuestion.exists?(@question.id)
-    refute @quiz.placements.exists?(quiz_question_id: @question.id)
-  end
-
-  test "destroy falls back to a plain detach when another question was forked from this one" do
-    create(:multiple_choice_question, parent: @question)
-
-    delete :destroy, params: {level_id: @quiz.id, id: @question.id}
-
-    assert_response :success
-    assert_equal false, JSON.parse(response.body)['destroyed']
-    assert QuizQuestion.exists?(@question.id)
-    refute @quiz.placements.exists?(quiz_question_id: @question.id)
+    assert_equal 'Edited name', unattached.reload.name
   end
 end
