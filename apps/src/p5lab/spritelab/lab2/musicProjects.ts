@@ -16,7 +16,7 @@ interface PersonalProject {
 
 const MUSIC_PROJECT_TYPE = 'music';
 
-/** The user's Music Lab songs on the default sound pack, newest first. */
+/** The user's Music Lab songs kept on the default sound pack, newest first. */
 export async function fetchMusicProjects(): Promise<MusicProjectOption[]> {
   const {value} = await HttpClient.fetchJson<PersonalProject[]>(
     '/api/v1/projects/personal'
@@ -57,11 +57,10 @@ export function withUnavailableSongs(
   ];
 }
 
-// Only songs on the default sound pack are offered; a song with no pack
-// recorded is on the default one.
+// Only songs whose sound pack was left as the default are offered. A song
+// with no pack recorded never settled the choice, so it is not offered.
 function onDefaultPack(project: PersonalProject): boolean {
-  const packId = project.labConfig?.music?.packId;
-  return !packId || packId === DEFAULT_PACK;
+  return project.labConfig?.music?.packId === DEFAULT_PACK;
 }
 
 // Music Lab names most songs alike, so the day it was last saved tells them
