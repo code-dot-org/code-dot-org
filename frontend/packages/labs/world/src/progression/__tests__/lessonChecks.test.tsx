@@ -1840,3 +1840,138 @@ describe('the layers lesson’s check', () => {
     expect(passes).toBe(false);
   });
 });
+
+describe('the jump lesson’s check', () => {
+  const lesson = LESSONS['platformer/jump'];
+
+  /** The Hero given the trait, the action, and however many jumps. */
+  const jumping = (allowed?: number) =>
+    editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      under(actorIn(workspace, 'Hero'), {
+        type: 'world_use_trait',
+        fields: {TRAIT: 'Jumping#JumpsTrait'},
+      });
+      // The handler's body becomes the action — `make ⟨…⟩ jump`, whose subject
+      // socket is VALUE rather than ACTOR.
+      const hat = workspace.blocks.blocks.find(
+        block => block.type === 'world_on_Input_PressesEvent',
+      )!;
+      hat.next = {
+        block: {
+          type: 'world_do_Jumping_MakeJumpAction',
+          inputs: {VALUE: {block: {type: 'world_this_actor'}}},
+        },
+      };
+      if (allowed !== undefined) {
+        const placement = rowsOf(workspace).find(
+          row => row.fields?.ACTOR === local('hero'),
+        )!;
+        let last = inSocket(placement, 'DO')!;
+        while (last.next?.block) {
+          last = last.next.block;
+        }
+        last.next = {
+          block: {
+            type: 'world_set_Jumping_JumpsAllowedProperty',
+            inputs: {
+              ACTOR: {block: {type: 'world_this_actor'}},
+              VALUE: {shadow: {type: 'math_number', fields: {NUM: allowed}}},
+            },
+          },
+        };
+      }
+      return JSON.stringify(workspace);
+    });
+
+  it('refuses the hand-written jump it starts from', async () => {
+    const {passes, result} = await check('platformer/jump', lesson.source);
+    // It goes up, and up, and up: three presses and it is off the top.
+    expect(
+      Math.min(...(result.samples.hero as {y: number}[][]).map(at => at[0].y)),
+    ).toBeLessThan(0);
+    expect(passes).toBe(false);
+  });
+
+  it('refuses one jump, which is the lesson half done', async () => {
+    const {passes} = await check('platformer/jump', jumping());
+    expect(passes).toBe(false);
+  });
+
+  it('accepts two, spent and no more', async () => {
+    const {passes, result} = await check('platformer/jump', jumping(2));
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  // The other end of the same mistake: a jump with no limit answers the third
+  // press too, and the Hero climbs out of the world.
+  it('refuses a jump with no limit', async () => {
+    const {passes} = await check('platformer/jump', jumping(99));
+    expect(passes).toBe(false);
+  });
+});
+
+describe('the pickups lesson’s check', () => {
+  const lesson = LESSONS['platformer/pickups'];
+
+  it('refuses a Hero that walks through them', async () => {
+    const {passes} = await check('platformer/pickups', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts the two abilities, one on each side', async () => {
+    const solved = editing(lesson.source, 'main.world', contents =>
+      electing(
+        electing(contents, 'Collection#CollectsTrait', 'Hero'),
+        'Collection#CanBeCollectedTrait',
+        'Coin',
+      ),
+    );
+    const {passes, result} = await check('platformer/pickups', solved);
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  // One side is not a pair: a Hero that collects and coins that cannot be
+  // collected walks through them exactly as before.
+  it('refuses only the Hero electing', async () => {
+    const half = editing(lesson.source, 'main.world', contents =>
+      electing(contents, 'Collection#CollectsTrait', 'Hero'),
+    );
+    const {passes} = await check('platformer/pickups', half);
+    expect(passes).toBe(false);
+  });
+});
+
+describe('the hazards lesson’s check', () => {
+  const lesson = LESSONS['platformer/hazards'];
+
+  it('refuses a spike that does not mind', async () => {
+    const {passes} = await check('platformer/hazards', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts the two abilities, one on each side', async () => {
+    const solved = editing(lesson.source, 'main.world', contents =>
+      electing(
+        electing(contents, 'Health#HasHealthTrait', 'Hero'),
+        'Health#DealsDamageTrait',
+        'Spike',
+      ),
+    );
+    const {passes, result} = await check('platformer/hazards', solved);
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  // A Hero that can be hurt and a Spike that hurts nobody: the pair is what
+  // does it, and one half of a pair does nothing at all.
+  it('refuses a Hero with health and a harmless spike', async () => {
+    const half = editing(lesson.source, 'main.world', contents =>
+      electing(contents, 'Health#HasHealthTrait', 'Hero'),
+    );
+    const {passes} = await check('platformer/hazards', half);
+    expect(passes).toBe(false);
+  });
+});

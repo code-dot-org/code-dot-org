@@ -12,10 +12,12 @@
 // Blockly JSON behind them. So `catalogue.ts` stays data about tiles, and the
 // projects live here, looked up by tile id.
 //
-// Thirty-one of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md
-// and then some: ALL SIX FOUNDATIONS are written — Origin, Input, Motion,
+// Thirty-four of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md
+// and then some. ALL SIX FOUNDATIONS are written — Origin, Input, Motion,
 // Logic, Memory, Look and Place — so every genre gate on the map is open, and
-// the first hours of the progression can be walked end to end.
+// the first hours of the progression can be walked end to end. Three of
+// Platformer's five are written after them; `platformer/ground` waits on the
+// engine (specs/PROGRESSION.md, "Carrying").
 
 import {
   actorFile,
@@ -1379,6 +1381,210 @@ so far has moved together.
 `.trim(),
 };
 
+// ── platformer/jump ──────────────────────────────────────────────────────────
+
+const jump: WorldScenario = {
+  name: 'Up, properly',
+  description:
+    'A jump written by hand, which works in mid-air and works forever.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        createInMap(local('ground'), floorAcross(10)),
+        addActor(local('hero'), [placeAt(160, 272)]),
+      ],
+      actors: [
+        {
+          id: 'hero',
+          name: 'Hero',
+          rows: [
+            useTrait('Gravity#AffectedByGravityTrait'),
+            useTrait('Input#TakesKeyboardInputTrait'),
+            useTrait('Arrow Keys#MovesAcrossTrait'),
+            setSprite('player.png'),
+          ],
+        },
+        {
+          id: 'ground',
+          name: 'Ground',
+          rows: [
+            useTrait('Gravity#ActsAsGroundTrait'),
+            setSprite('ground.png'),
+          ],
+        },
+      ],
+      handlers: [
+        onPressed('hero', 'space', {
+          type: 'world_set_Physics_VelocityProperty',
+          inputs: {
+            ACTOR: {block: {type: 'world_this_actor'}},
+            VALUE: {
+              block: {type: 'world_vector', fields: {VECTOR: {x: 0, y: -5}}},
+            },
+          },
+        }),
+      ],
+    }),
+    sprites: ['player', 'ground'],
+    rules: ['gravity', 'input', 'arrows', 'motion', 'jump'],
+  }),
+  instructions: `
+## Up
+
+Press space. The Hero jumps, and it is a jump in the sense that it goes up:
+**when ⟨any Hero⟩ presses ⟨space⟩ → set velocity to ⟨0, -5⟩**. Hold space and
+you fly. Press it falling down a hole and you climb back out.
+
+Nothing there knows what a jump IS — that it starts from the ground, that you
+get one, that walking off a ledge and pressing a frame later should still
+count. That is what the **Jumping** rule holds.
+
+### What you do
+
+1. Give the Hero **use trait ⟨Jumps⟩**, and swap the \`set velocity\` in the
+   handler for **make ⟨this actor⟩ jump**.
+2. Run it. It jumps once, from the ground, and pressing again in the air does
+   nothing — asking is separate from jumping, and the answer is sometimes no.
+3. Walk off the edge of the floor and press space a moment later. It still
+   jumps: that grace is **coyote time**, and it is the difference between a
+   platformer that feels fair and one that does not.
+4. Set **jumps allowed** to 2. Now there is a second jump, in the air, and
+   still not a third.
+`.trim(),
+};
+
+// ── platformer/pickups ───────────────────────────────────────────────────────
+
+const pickups: WorldScenario = {
+  name: 'Things worth having',
+  description: 'Three coins a Hero walks straight through.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        createInMap(local('ground'), floorAcross(10)),
+        addActor(local('coin'), [placeAt(100, 272)]),
+        addActor(local('coin'), [placeAt(180, 272)]),
+        addActor(local('coin'), [placeAt(260, 272)]),
+        addActor(local('hero'), [placeAt(30, 272), setVelocity(3, 0)]),
+      ],
+      actors: [
+        {
+          id: 'hero',
+          name: 'Hero',
+          rows: [
+            useTrait('Physics#CanMoveTrait'),
+            useTrait('Collisions#CanCollideTrait'),
+            setSprite('player.png'),
+          ],
+        },
+        {
+          id: 'coin',
+          name: 'Coin',
+          rows: [useTrait('Collisions#CanCollideTrait'), setSprite('coin.png')],
+        },
+        {
+          id: 'ground',
+          name: 'Ground',
+          rows: [setSprite('ground.png')],
+        },
+      ],
+    }),
+    sprites: ['player', 'coin', 'ground'],
+    rules: ['motion', 'collisions', 'collect'],
+  }),
+  instructions: `
+## Things worth having
+
+The Hero walks along the floor and straight through three Coins. They touch —
+the Collisions rule says so — and touching is all that happens.
+
+Taking a thing is TWO abilities, not one, and that is what makes it work for
+any pair of actors: something that **Collects**, and something that **Can Be
+Collected**. Neither knows about the other.
+
+### What you do
+
+1. Give the Hero **use trait ⟨Collects⟩** and each Coin
+   **use trait ⟨Can Be Collected⟩**.
+2. Run it. Each Coin vanishes as the Hero reaches it — taken out of the world,
+   and into the Hero's \`collected\`.
+3. Add **when ⟨any Hero⟩ collects** and **print ⟨count of ⟨Coin⟩ in ⟨collected
+   of ⟨this actor⟩⟩⟩**, so you can watch it go up.
+4. Nothing you wrote says what a Coin is worth, or what a Hero does with one.
+   Both of those are the project's, and this is the moment they hang from.
+`.trim(),
+};
+
+// ── platformer/hazards ───────────────────────────────────────────────────────
+
+const hazards: WorldScenario = {
+  name: 'Something that can hurt you',
+  description: 'A Hero walking into a spike, and a spike that does not mind.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        createInMap(local('ground'), floorAcross(10)),
+        addActor(local('spike'), [placeAt(200, 272)]),
+        addActor(local('hero'), [placeAt(60, 272)]),
+      ],
+      actors: [
+        {
+          id: 'hero',
+          name: 'Hero',
+          rows: [
+            useTrait('Arrow Keys#MovesAcrossTrait'),
+            useTrait('Collisions#CanCollideTrait'),
+            // Solid, so walking into the Spike is LEANING on it rather than
+            // passing through it.
+            useTrait('Solid Bodies#SolidTrait'),
+            setSprite('player.png'),
+          ],
+        },
+        {
+          id: 'spike',
+          name: 'Spike',
+          rows: [
+            useTrait('Collisions#CanCollideTrait'),
+            useTrait('Solid Bodies#SolidTrait'),
+            setSprite('box.png'),
+          ],
+        },
+        {id: 'ground', name: 'Ground', rows: [setSprite('ground.png')]},
+      ],
+    }),
+    sprites: ['player', 'box', 'ground'],
+    rules: ['arrows', 'motion', 'collisions', 'solid', 'health'],
+  }),
+  instructions: `
+## Something that can hurt you
+
+Walk the Hero into the Spike. It stops, and that is all: nothing here has said
+that a Spike is dangerous, or that a Hero is the sort of thing that can be
+hurt.
+
+Those are the two halves, and they are separate on purpose. **Has Health** says
+what can be damaged. **Deals Damage** says what damages. Neither names the
+other, which is why the same Spike hurts anything and the same Hero is hurt by
+anything.
+
+### What you do
+
+1. Give the Hero **use trait ⟨Has Health⟩** and the Spike
+   **use trait ⟨Deals Damage⟩**.
+2. Add **when ⟨any Hero⟩ is hurt → print ⟨health of ⟨this actor⟩⟩**, and walk
+   into the Spike. One line. Lean on it as long as you like: still one line,
+   because being hurt happens when the touch STARTS.
+3. Back off and walk in again. A second hit — unless you were quick, and then
+   nothing, because of **mercy time**: half a second in which the Hero cannot
+   be hurt again. Set it to 2 and try to be hit twice.
+4. Give the Spike **use trait ⟨Patrols Across⟩**. Now it walks about hurting
+   whatever it meets, and nothing about it mentions the Hero.
+`.trim(),
+};
+
 // ── place/edges ──────────────────────────────────────────────────────────────
 
 const edges: WorldScenario = {
@@ -1746,6 +1952,9 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'place/camera': camera,
   'place/camera-feel': cameraFeel,
   'place/layers': layers,
+  'platformer/jump': jump,
+  'platformer/pickups': pickups,
+  'platformer/hazards': hazards,
 };
 
 /** Every lesson written so far, by the tile it belongs to. */

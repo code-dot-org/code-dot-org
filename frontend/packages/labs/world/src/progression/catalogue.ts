@@ -1240,14 +1240,40 @@ export const TILES: readonly Tile[] = [
     title: 'Up',
     teaches:
       'An impulse against a force, and the two small lies that make a jump feel right.',
-    task: 'Jump. Then add a moment of grace after walking off a ledge, and a second jump in the air.',
+    task: 'A jump that works in mid-air and works forever. Make it a jump that knows what it is.',
     requires: ['input/press', 'motion/gravity'],
     unlocks: [{kind: 'rule', id: 'jump'}],
     check: {
       kind: 'outcome',
-      says: 'A press from the ground raises y; a press in mid-air does nothing until double jump is on.',
+      says: 'Three presses spend exactly two jumps, and the Hero leaves the ground and comes back.',
       falsePass:
-        'An unlimited jump, which passes the first half. The mid-air press is the check.',
+        'The hand-written jump the lesson starts from, which answers every press: it passes "it went up" on the first press and every press after it. Counting the jumps SPENT is what tells a jump from an upward push — one is not enough either, since the lesson asks for the second.',
+      run: {
+        probes: {
+          hero: {kind: 'positions', of: 'Hero'},
+          used: {kind: 'property', of: 'Hero', name: 'jumps used'},
+        },
+        // Three presses with a coast between each: one from the ground, one in
+        // the air, and one that must be refused.
+        trace: [
+          {hold: ['space'], seconds: 0.1},
+          {seconds: 0.25},
+          {hold: ['space'], seconds: 0.1},
+          {seconds: 0.25},
+          {hold: ['space'], seconds: 0.1},
+          {seconds: 0.6},
+        ],
+      },
+      passes: ({samples}) => {
+        const spent = (samples.used ?? []).map(
+          sample => (sample as (number | undefined)[])[0],
+        );
+        const height = (samples.hero ?? []).map(
+          sample => (sample as {y: number}[])[0]?.y ?? 0,
+        );
+        const most = Math.max(...spent.map(used => used ?? -1));
+        return most === 2 && Math.min(...height) < 200;
+      },
     },
   },
   {
@@ -1272,7 +1298,7 @@ export const TILES: readonly Tile[] = [
     at: at('platformer', 1, 3),
     title: 'Things worth having',
     teaches: 'A rule that raises an event on both sides of a moment.',
-    task: 'Coins that vanish when you touch them, and a count of how many you hold.',
+    task: 'A Hero that walks through three coins. Make it take them, and count what it holds.',
     requires: ['platformer/jump'],
     unlocks: [
       {kind: 'rule', id: 'collect'},
@@ -1283,7 +1309,22 @@ export const TILES: readonly Tile[] = [
       kind: 'outcome',
       says: 'Three coins taken leaves three counted and none in the world.',
       falsePass:
-        'Removing the coin in the collision handler and counting separately — which is the lesson done the long way, so accept it and say so.',
+        'Removing the Coin in a collision handler and counting separately, which is the lesson done the long way — so this check accepts it, and says so here rather than pretending it cannot happen. What it will not accept is a world where the coins are gone and nothing holds them.',
+      run: {
+        probes: {
+          coins: {kind: 'actorCount', of: 'Coin'},
+          got: {kind: 'property', of: 'Hero', name: 'collected'},
+        },
+        trace: Array.from({length: 6}, () => ({seconds: 0.5})),
+      },
+      passes: ({samples}) => {
+        const left = lastNumber(samples.coins);
+        const held = (samples.got ?? []).map(sample => {
+          const first = (sample as unknown[])[0];
+          return Array.isArray(first) ? first.length : -1;
+        });
+        return left === 0 && Math.max(...held) === 3;
+      },
     },
   },
   {
@@ -1293,7 +1334,7 @@ export const TILES: readonly Tile[] = [
     title: 'Something that can hurt you',
     teaches:
       'A rule that does not know who it is hurting: one ability says what can be damaged, another says what damages.',
-    task: 'A spike, and then a patrolling enemy that is dangerous without being told about the player.',
+    task: 'A Hero that walks into a spike and stops. Make the spike dangerous, and the Hero the sort of thing it can hurt.',
     requires: ['platformer/ground'],
     unlocks: [
       {kind: 'rule', id: 'health'},
@@ -1301,9 +1342,41 @@ export const TILES: readonly Tile[] = [
     ],
     check: {
       kind: 'trace',
-      says: 'Health falls once per touch, not once per frame of contact.',
+      says: 'Leaning on the Spike costs health more than once, and never more than once in a fifth of a second.',
       falsePass:
-        'A mercy time longer than the scripted contact. Hold the contact for three seconds and require several hits.',
+        'Hurting on every frame of contact, which also empties the bar and is the thing mercy time exists to prevent: the samples are a fifth of a second apart and mercy is half of one, so a legitimate hit costs at most one health per sample. Three at once is a hazard nobody could walk past.',
+      run: {
+        probes: {health: {kind: 'property', of: 'Hero', name: 'health'}},
+        // Into the Spike, off it, and into it again — because being hurt
+        // happens when a touch STARTS, and one long lean is one touch.
+        trace: [
+          ...Array.from({length: 8}, () => ({
+            hold: ['ArrowRight'],
+            seconds: 0.2,
+          })),
+          ...Array.from({length: 4}, () => ({
+            hold: ['ArrowLeft'],
+            seconds: 0.2,
+          })),
+          ...Array.from({length: 8}, () => ({
+            hold: ['ArrowRight'],
+            seconds: 0.2,
+          })),
+        ],
+      },
+      passes: ({samples}) => {
+        const health = (samples.health ?? []).map(
+          sample => (sample as (number | undefined)[])[0],
+        );
+        if (health.some(value => typeof value !== 'number')) {
+          return false;
+        }
+        const values = health as number[];
+        const hurtAtOnce = values.some(
+          (value, index) => index > 0 && values[index - 1] - value > 1,
+        );
+        return values[0] === 3 && Math.min(...values) <= 1 && !hurtAtOnce;
+      },
     },
   },
   {
