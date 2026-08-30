@@ -831,7 +831,7 @@ export const TILES: readonly Tile[] = [
     title: 'Draw it yourself',
     teaches:
       'A pen and five shapes — which is what every meter, bar and box in this lab is made of.',
-    task: 'Give an actor a `define drawing` and build a health bar out of two rectangles.',
+    task: 'Two progress bars are both drawn full. Make the drawing read the number each one holds.',
     requires: ['look/sprite'],
     unlocks: [
       {kind: 'category', name: 'Drawing'},
@@ -839,11 +839,25 @@ export const TILES: readonly Tile[] = [
       // A pen needs a colour, and this is the first lesson that holds one.
       {kind: 'block', type: 'colour_picker'},
     ],
+    // The width wants arithmetic, which is Memory's lesson on a branch this one
+    // never touches.
+    offers: [
+      {kind: 'block', type: 'math_arithmetic'},
+      {kind: 'block', type: 'math_number'},
+    ],
     check: {
       kind: 'outcome',
-      says: 'The drawing renders, and its width follows a property rather than a constant.',
+      says: 'The two Bars draw different pictures.',
       falsePass:
-        'Two fixed rectangles that look right at full health. Set the property to a third and look again.',
+        'There is not one worth naming, which is unusual and is the lesson: ONE drawing is run for BOTH Bars, so the only way they can differ at all is by reading something the Bar itself holds. A drawing that draws two different pictures has been made to read.',
+      run: {
+        probes: {bars: {kind: 'drawings', of: 'Bar'}},
+        trace: [{seconds: 0.1}],
+      },
+      passes: ({samples}) => {
+        const bars = lastList<{key: string}>(samples.bars);
+        return bars.length === 2 && bars[0].key !== bars[1].key;
+      },
     },
   },
   {
@@ -852,18 +866,35 @@ export const TILES: readonly Tile[] = [
     at: at('look', 1, 1),
     title: 'Behind everything',
     teaches: 'The backdrop is not an actor, and neither is what sits in front.',
-    task: 'Add a backdrop, then a repeating one, then move it as the world moves.',
+    task: 'Add a backdrop, tile it, and slide it — and watch the actors stay where they are.',
     requires: ['look/sprite'],
     unlocks: [
       {kind: 'block', type: 'world_set_background'},
       {kind: 'block', type: 'world_set_background_repeat'},
       {kind: 'block', type: 'world_set_background_color'},
+      {kind: 'block', type: 'world_set_background_offset'},
     ],
+    // Sliding it takes a vector, which is Motion's lesson on another branch.
+    offers: [{kind: 'block', type: 'world_vector'}],
     check: {
       kind: 'outcome',
-      says: 'The background is set, repeats, and its offset changes as the view moves.',
+      says: 'The world draws a backdrop, it tiles, and it has been slid off the origin.',
       falsePass:
-        'A very large actor placed behind everything. Assert the world’s background property, not the picture.',
+        "A very large actor placed behind everything, which looks the same and is not one — so the probe reads the WORLD's backdrop rather than counting pictures on screen. An actor cannot appear there however big it is.",
+      run: {probes: {sky: {kind: 'backdrop'}}, trace: [{seconds: 0.1}]},
+      passes: ({samples}) => {
+        const sky = lastList<{
+          sprite?: string;
+          repeat: boolean;
+          offset: {x: number; y: number};
+        }>(samples.sky);
+        const behind = sky[0];
+        return Boolean(
+          behind?.sprite &&
+            behind.repeat &&
+            (behind.offset.x !== 0 || behind.offset.y !== 0),
+        );
+      },
     },
   },
   {
@@ -872,7 +903,7 @@ export const TILES: readonly Tile[] = [
     at: at('look', 3, 0),
     title: 'Pictures in a row',
     teaches: 'An animation is a file that reads rectangles out of one image.',
-    task: 'Import a walk cycle, then cut your own out of a sheet you painted.',
+    task: 'A Hero that slides without moving its legs. Give it a walk cycle.',
     requires: ['look/drawing'],
     unlocks: [
       {kind: 'editor', id: 'animation'},
@@ -881,9 +912,23 @@ export const TILES: readonly Tile[] = [
     ],
     check: {
       kind: 'outcome',
-      says: 'The actor’s frame advances while it is moving and holds while it is still.',
+      says: 'The Hero’s frame changes as the game runs.',
       falsePass:
-        'Playing the animation always. The still half is the half that needs a condition.',
+        'Setting a sprite that happens to be one frame of the walk, which looks like walking in a screenshot and never moves. The check samples the frame twice and asks that it CHANGED, which no still picture does.',
+      run: {
+        probes: {frame: {kind: 'property', of: 'Hero', name: 'frame'}},
+        // Sampled ACROSS half a second rather than at each end of it. A walk
+        // cycle is four frames at eight a second, so half a second is exactly
+        // one loop and the two ends agree — the first version of this check
+        // read frame 0 twice and refused a Hero that was walking perfectly.
+        trace: Array.from({length: 6}, () => ({seconds: 0.08})),
+      },
+      passes: ({samples}) => {
+        const frames = ((samples.frame ?? []) as unknown[][])
+          .map(actors => actors[0])
+          .filter(frame => frame !== undefined);
+        return new Set(frames).size > 1;
+      },
     },
   },
   {
@@ -892,7 +937,7 @@ export const TILES: readonly Tile[] = [
     at: at('look', 2, 1),
     title: 'An effect is a recipe',
     teaches: 'A shader is a description of how to paint, not a picture.',
-    task: 'Import an effect, put it on an actor, then on the whole world, and change one of its knobs.',
+    task: 'Put an effect on one actor, then over the whole view, from one file.',
     requires: ['look/background'],
     unlocks: [
       {kind: 'editor', id: 'effect'},
@@ -901,9 +946,27 @@ export const TILES: readonly Tile[] = [
     ],
     check: {
       kind: 'outcome',
-      says: 'The actor carries the effect at runtime, with a parameter differing from the imported default.',
+      says: 'One actor is painted through an effect, and so is the whole view.',
       falsePass:
-        'Importing the effect and never adding it. Read the running actor, not the project.',
+        'Importing the effect and never adding it, which puts a file in the project and changes nothing. The probe reads the RUNNING actor and the running world, so an effect nobody played is not there to find.',
+      run: {
+        probes: {
+          coin: {kind: 'effects', of: 'Coin'},
+          hero: {kind: 'effects', of: 'Hero'},
+          view: {kind: 'effects'},
+        },
+        trace: [{seconds: 0.1}],
+      },
+      passes: ({samples}) => {
+        const on = (sample: unknown[] | undefined) =>
+          lastList<{path: string}[]>(sample);
+        const coin = on(samples.coin)[0] ?? [];
+        const hero = on(samples.hero)[0] ?? [];
+        const view = on(samples.view)[0] ?? [];
+        // The Hero is in it because "on one actor" is half the lesson: an
+        // effect on every actor is a world effect written out longhand.
+        return coin.length > 0 && hero.length === 0 && view.length > 0;
+      },
     },
   },
 
@@ -953,26 +1016,45 @@ export const TILES: readonly Tile[] = [
     at: at('place', 2, 0),
     title: 'A room drawn, not typed',
     teaches:
-      'A level is data: a file that says what is where, separate from the code that runs it.',
-    task: 'Paint a floor and some walls in the map editor, load them, and say how big the world is.',
+      'A level is data: an arrangement that says what is where, separate from the code that says what each one is.',
+    task: 'A floor of three tiles that stops short. Paint the rest of the room on the grid.',
     requires: ['place/position'],
     unlocks: [
-      // `set size of map` came with the first lesson: a world that arranges its
-      // own actors has no bounds until it says so, so it cannot be withheld
-      // from the lesson that arranges the first two.
       {kind: 'editor', id: 'map'},
+      {kind: 'block', type: 'world_create_in_map'},
+      // …and the same arrangement in a FILE, which is what a level shared
+      // between worlds is. The lesson keeps its own in the block, where the
+      // grid opens from the block that holds it.
       {kind: 'block', type: 'world_load_map'},
-      // How big the level is, and how a world with no `.map` says so. Both are
-      // ideas about a world BIGGER than the view, which is what this lesson
-      // paints — a first lesson has one screen and needs no opinion about it.
+      // How big the level is, and how a world with no map says so. Both are
+      // ideas about a world BIGGER than the view, which is `place/camera`.
       {kind: 'block', type: 'world_set_map_size'},
       {kind: 'block', type: 'world_map_size'},
     ],
     check: {
       kind: 'outcome',
-      says: 'The world holds the actors the map names, at the places it names.',
+      says: 'The room is painted: a dozen Grounds, in more than one row.',
       falsePass:
-        'Placing them with `add actor` and keeping an empty map. Count what the map declares.',
+        'Placing them with `add actor` instead, one block each — which is the thing the lesson replaces, and which the check refuses by counting only what the ARRANGEMENT placed.',
+      run: {
+        probes: {ground: {kind: 'positions', of: 'Ground'}},
+        trace: [{seconds: 0.1}],
+      },
+      // What the ARRANGEMENT holds, rather than what the world ended up with:
+      // twenty `add actor ⟨Ground⟩` rows reach the same world and are the thing
+      // the lesson replaces.
+      inspect: files => {
+        const grid = blockIn(files, 'world_create_in_map');
+        const placements = (
+          grid?.fields as {PLACEMENTS?: unknown[]} | undefined
+        )?.PLACEMENTS;
+        return Array.isArray(placements) && placements.length >= 12;
+      },
+      passes: ({samples}) => {
+        const tiles = lastList<{x: number; y: number}>(samples.ground);
+        const rows = new Set(tiles.map(tile => tile.y));
+        return tiles.length >= 12 && rows.size >= 2;
+      },
     },
   },
   {
@@ -982,7 +1064,7 @@ export const TILES: readonly Tile[] = [
     title: 'The end of the world',
     teaches:
       'What happens at a boundary is a choice, and there are two of them.',
-    task: 'Stop an actor at the edge on one axis, and bring it back on the other side on the other.',
+    task: 'A ball leaves and never comes back. Stop it at one edge and bring it round at the other.',
     requires: ['place/position'],
     unlocks: [
       {kind: 'rule', id: 'bounds'},
@@ -990,9 +1072,30 @@ export const TILES: readonly Tile[] = [
     ],
     check: {
       kind: 'outcome',
-      says: 'The actor stays inside on one axis and reappears opposite on the other.',
+      says: 'The Ball never leaves across, and comes back round downwards.',
       falsePass:
-        'Electing both on both axes, which looks fine until you watch which edge it left by.',
+        'Electing all four traits, which keeps the Ball on screen and is not the lesson: bounds acts first on each axis, so the Ball simply stops in the corner and nothing ever wraps. The check asks for a wrap as well as for staying in.',
+      run: {
+        probes: {ball: {kind: 'positions', of: 'Ball'}},
+        trace: Array.from({length: 10}, () => ({seconds: 0.5})),
+      },
+      passes: ({samples}) => {
+        const path = (samples.ball ?? []).map(
+          sample => (sample as {x: number; y: number}[])[0],
+        );
+        if (path.some(at => !at)) {
+          return false;
+        }
+        // Inside across, all the way through — a Ball that left and came back
+        // is not one that stayed.
+        const inside = path.every(at => at.x >= 0 && at.x <= 320);
+        // …and round downwards: it is going down the whole time, so the only
+        // way `y` can fall is that it left the bottom and came back at the top.
+        const wrapped = path.some(
+          (at, index) => index > 0 && at.y < path[index - 1].y,
+        );
+        return inside && wrapped;
+      },
     },
   },
   {
@@ -1002,7 +1105,7 @@ export const TILES: readonly Tile[] = [
     title: 'What is in front',
     teaches:
       'Drawing order is a thing you declare, and some things should not move with the view at all.',
-    task: 'Put the score in a layer that ignores the camera, and the hills in one that lags behind it.',
+    task: 'The score scrolls away with the scenery. Give it a layer that ignores the camera, and the hills one that lags.',
     requires: ['place/map'],
     unlocks: [
       {kind: 'block', type: 'world_define_layer'},
@@ -1011,10 +1114,25 @@ export const TILES: readonly Tile[] = [
       {kind: 'block', type: 'world_layer_parallax'},
     ],
     check: {
-      kind: 'outcome',
-      says: 'The score’s screen position is unchanged after the view has travelled; the hills have moved less than the ground.',
+      kind: 'shape',
+      says: 'The Score is in a layer fixed to the screen, and the Hills are in one that moves less than the camera.',
       falsePass:
-        'Moving the score every frame to follow the camera. Assert the layer is fixed, not the position.',
+        'Moving the Score every frame to wherever the camera is, which looks identical and is a thing to keep in step by hand for the rest of the project. The check reads the LAYER, which is the declaration that makes it true once.',
+      run: {probes: {view: {kind: 'cameras'}}, trace: [{seconds: 0.1}]},
+      inspect: files => {
+        const declared = blocksIn(files, 'world_define_layer').map(layer =>
+          JSON.stringify(layer),
+        );
+        const holds = (what: string, who: string) =>
+          declared.some(layer => layer.includes(what) && layer.includes(who));
+        return (
+          holds('world_layer_fixed', 'local:score') &&
+          holds('world_layer_parallax', 'local:hill')
+        );
+      },
+      // The world is still a world: the shape half is what this lesson can be
+      // judged on, and a project that no longer runs has not done it.
+      passes: ({samples}) => (samples.view?.length ?? 0) > 0,
     },
   },
   {
@@ -1023,19 +1141,38 @@ export const TILES: readonly Tile[] = [
     at: at('place', 3, 0),
     title: 'A window on a bigger world',
     teaches: 'What is drawn and where things are are two different questions.',
-    task: 'Follow the player around a map three screens wide, and stop the view at the edges.',
+    task: 'A room three screens wide and a view showing the first. Follow the Hero, and stop at the walls.',
     requires: ['place/map'],
     unlocks: [
       {kind: 'rule', id: 'camera'},
       {kind: 'rule', id: 'cameraFollow'},
       {kind: 'rule', id: 'cameraConfined'},
       {kind: 'block', type: 'world_define_camera'},
+      {kind: 'block', type: 'world_use_camera'},
     ],
     check: {
       kind: 'outcome',
-      says: 'The view tracks the player and never shows past the end of the map.',
+      says: 'The view travels with the Hero, and stops where the room stops.',
       falsePass:
-        'A map exactly one screen wide, where a confined camera cannot move and so is never wrong.',
+        'Following without confining, which tracks the Hero perfectly and then leaves the room behind it — three screens of nothing. Both halves are read: the view has to have MOVED, and it has to have STOPPED.',
+      run: {
+        probes: {view: {kind: 'cameras'}},
+        trace: Array.from({length: 8}, () => ({seconds: 0.5})),
+      },
+      passes: ({samples}) => {
+        const path = (samples.view ?? []).map(sample => {
+          const cameras = sample as {x: number; active: boolean}[];
+          return cameras.find(camera => camera.active)?.x;
+        });
+        if (path.some(x => x === undefined)) {
+          return false;
+        }
+        const seen = path as number[];
+        // Thirty tiles across is 960, and the view is 320 — so a camera that
+        // stops where the room does never gets past 800, and one that followed
+        // at all got well past where it started.
+        return Math.max(...seen) > 300 && Math.max(...seen) <= 801;
+      },
     },
   },
   {
@@ -1045,7 +1182,7 @@ export const TILES: readonly Tile[] = [
     title: 'Correct, and pleasant',
     teaches:
       'The difference between a camera that is right and a camera that is comfortable.',
-    task: 'Add easing so the view catches up, and a deadzone so small movements do not move it at all.',
+    task: 'The view is welded to the Hero. Give it slack for small movements and a moment to catch up on big ones.',
     requires: ['place/camera'],
     unlocks: [
       {kind: 'rule', id: 'cameraEase'},
@@ -1053,9 +1190,45 @@ export const TILES: readonly Tile[] = [
     ],
     check: {
       kind: 'outcome',
-      says: 'A small scripted movement moves the player and not the view; a large one moves the view over several frames.',
+      says: 'A short step moves the Hero and not the view; a long walk moves the view, and it is still catching up after the keys are let go.',
       falsePass:
-        'A deadzone so large the camera never moves. The large movement is what rules that out.',
+        'A deadzone so wide the view never moves at all, which passes the first half and fails the second — and easing alone, which lags beautifully and still lurches on the first step. The two are read separately because they are two different complaints.',
+      run: {
+        probes: {
+          view: {kind: 'cameras'},
+          hero: {kind: 'positions', of: 'Hero'},
+        },
+        // A short step, a pause, a long walk, and two stretches of nothing —
+        // which is where easing shows: the keys are up and the view is still
+        // moving.
+        trace: [
+          {hold: ['ArrowRight'], seconds: 0.15},
+          {seconds: 0.4},
+          {hold: ['ArrowRight'], seconds: 2},
+          {seconds: 0.3},
+          {seconds: 0.3},
+        ],
+      },
+      passes: ({samples}) => {
+        const view = (samples.view ?? []).map(sample => {
+          const cameras = sample as {x: number; active: boolean}[];
+          return cameras.find(camera => camera.active)?.x ?? 0;
+        });
+        const hero = (samples.hero ?? []).map(
+          sample => (sample as {x: number}[])[0]?.x ?? 0,
+        );
+        if (view.length < 6 || hero.length < 6) {
+          return false;
+        }
+        // Slack: the short step moved the Hero and left the view alone.
+        const stillThere =
+          Math.abs(view[1] - view[0]) < 1 && hero[1] > hero[0] + 1;
+        // …and the long walk moved it, and it was STILL moving afterwards,
+        // which is the whole of what easing looks like from outside.
+        const travelled = view[3] > view[1] + 1;
+        const catchingUp = view[4] > view[3] + 0.5;
+        return stillThere && travelled && catchingUp;
+      },
     },
   },
 
@@ -1781,6 +1954,81 @@ function nestedIn(
       return false;
     }
   });
+}
+
+/**
+ * The first block of a type in any of the project's files.
+ *
+ * `nestedIn`'s sibling, for a check that wants to READ a block rather than ask
+ * whether one is inside another — the arrangement a `create in map` holds is a
+ * field on the block, so counting what a learner painted means finding it.
+ */
+function blocksIn(files: Record<string, string>, type: string): unknown[] {
+  const found: unknown[] = [];
+  const walk = (node: unknown): void => {
+    if (Array.isArray(node)) {
+      node.forEach(walk);
+      return;
+    }
+    if (typeof node !== 'object' || node === null) {
+      return;
+    }
+    if ((node as {type?: unknown}).type === type) {
+      found.push(node);
+    }
+    Object.values(node).forEach(walk);
+  };
+  for (const contents of Object.values(files)) {
+    try {
+      walk(JSON.parse(contents));
+    } catch {
+      // A file mid-edit is not a failed lesson (see `nestedIn`).
+    }
+  }
+  return found;
+}
+
+function blockIn(
+  files: Record<string, string>,
+  type: string,
+): {fields?: Record<string, unknown>} | undefined {
+  const find = (
+    node: unknown,
+  ): {fields?: Record<string, unknown>} | undefined => {
+    if (Array.isArray(node)) {
+      for (const item of node) {
+        const found = find(item);
+        if (found) {
+          return found;
+        }
+      }
+      return undefined;
+    }
+    if (typeof node !== 'object' || node === null) {
+      return undefined;
+    }
+    if ((node as {type?: unknown}).type === type) {
+      return node as {fields?: Record<string, unknown>};
+    }
+    for (const value of Object.values(node)) {
+      const found = find(value);
+      if (found) {
+        return found;
+      }
+    }
+    return undefined;
+  };
+  for (const contents of Object.values(files)) {
+    try {
+      const found = find(JSON.parse(contents));
+      if (found) {
+        return found;
+      }
+    } catch {
+      // A file mid-edit is not a failed lesson (see `nestedIn`).
+    }
+  }
+  return undefined;
 }
 
 const lastNumber = (samples: unknown[] | undefined): number => {

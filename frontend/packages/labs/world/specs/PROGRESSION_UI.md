@@ -498,12 +498,13 @@ anything depends on it.
    latter memoizes, so a check would otherwise be handed the world the learner
    has been playing, with their own keypresses in its history.
 
-   Six probes — an actor count, the positions of a kind, how many actors draw
-   anything, which sprites are on screen, a world property, and a named property
-   read off every actor of a kind — and every one of them is something an
-   existing play-test already asks. A check that needs a seventh is a check to
-   think about again before it is a probe to add: the vocabulary is what keeps
-   the untrusted side small enough to trust.
+   Ten probes — an actor count, the positions of a kind, how many actors draw
+   anything, which sprites are on screen, a world property, a named property
+   read off every actor of a kind, what a kind draws for itself, the backdrop,
+   the effects on an actor or on the view, and where the cameras are. Every one is something an
+   existing play-test already asks, and each addition is argued for where it is
+   declared: the vocabulary is what keeps the untrusted side small enough to
+   trust, so a check that wants a tenth is a check to think about again first.
 
    The sixth was added for the two Memory lessons about state, and it is the
    one that shows where the line is. A lesson about state is a lesson about a
@@ -512,11 +513,26 @@ anything depends on it.
    declarations, so a check can ask what a Label SAYS without knowing which
    rule the text belongs to.
 
+   The last three arrived together with the Look region, and for the same
+   reason one level up: nothing in the first six can see a PICTURE. `sprites`
+   answers which file is on screen, which was the whole of what a picture was
+   until an actor could describe one — a drawing has no file, so what identifies
+   it is the key the driver already computes to decide whether it has rasterized
+   that exact picture before. A backdrop is not an actor and no actor probe can
+   find one. An effect is on something rather than in it. None of the three
+   hands back a document or a command list: a probe that did would be sending a
+   shader across the sandbox boundary to answer "is it on".
+
+   The tenth is Place's, and it is the region's subject stated as a question:
+   what is DRAWN and where things ARE are two different things, and every probe
+   before it answered the second. A camera that follows, stops at the edge of
+   the map, eases, or ignores a small movement is right or wrong in the first.
+
    **The runner is shared with the tests**, and that is the point of it being
    its own module. A check tested against a different runner from the one that
    judges a learner is a check nobody has tested.
 
-   **Every authored lesson has a check** — twenty-two of the sixty-seven tiles
+   **Every authored lesson has a check** — thirty-one of the sixty-seven tiles
    at the time of writing — and every one is tested in both directions: it refuses the starter the lesson ships with AND accepts a
    project where the lesson has been done, which no amount of refusing proves on
    its own. Three also have a HALFWAY case, because a check that stops at the

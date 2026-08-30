@@ -43,9 +43,14 @@ export interface TraceStep {
  * One question about the world, asked at each sample point.
  *
  * Deliberately few. Every probe here is something an existing play-test already
- * asks (`sokobanPlays`, `lessonsPlay`), and a check that needs a sixth is a
+ * asks (`sokobanPlays`, `lessonsPlay`), and a check that needs a new one is a
  * check to think about again before it is a probe to add — the vocabulary is
  * what keeps the sandbox side small enough to trust.
+ *
+ * They have been added in twos and threes as a region needed them, and each
+ * addition says why below. What none of them does is hand back the world: a
+ * probe answers one question in one shape, so the sandbox stays a thing that
+ * measures rather than a thing that reports.
  */
 export type Probe =
   /** How many actors are in the world; `of` narrows to one kind. */
@@ -73,7 +78,54 @@ export type Probe =
    * either: a check is written by somebody reading the lesson, who knows what
    * the block calls it.
    */
-  | {kind: 'property'; of: string; name: string};
+  | {kind: 'property'; of: string; name: string}
+  /**
+   * What a kind of actor DRAWS FOR ITSELF: the identity of its commands, and
+   * the size it draws at.
+   *
+   * Three more probes arrive together here, and they are the Look region's:
+   * nothing in the five above can see a picture. `sprites` answers which file
+   * is on screen, which is the whole of what a picture was until an actor could
+   * describe one. A drawing has no file — it is commands — so what identifies
+   * it is `key`, which the driver already computes to decide whether it has
+   * rasterized this exact picture before. Two health bars at different
+   * fractions have different keys, and that is the only way to say from outside
+   * that a bar's width follows anything.
+   *
+   * The commands themselves are NOT here. They are a tree with colours and
+   * numbers in it, and a check that read one would be reading the workspace
+   * back out of the running world — which is what `inspect` is for.
+   */
+  | {kind: 'drawings'; of?: string}
+  /**
+   * What is drawn BEHIND everything, per layer: the picture, whether it tiles,
+   * and where it has been slid to.
+   *
+   * A backdrop is not an actor (specs/BACKGROUNDS.md), so no actor probe can
+   * find one — and "the backdrop is set" is the whole of what its lesson asks.
+   */
+  | {kind: 'backdrop'}
+  /**
+   * The effects on every actor of a kind, or on the world and its backdrops,
+   * by module path and knob settings.
+   *
+   * `of` names a kind; without it the answer is the world's own and each
+   * backdrop's. The DOCUMENT is dropped — an effect's source is a file the
+   * project holds, and a probe that carried one would send a shader across the
+   * sandbox boundary to answer "is it on".
+   */
+  | {kind: 'effects'; of?: string}
+  /**
+   * Where the view is: each camera's position, and which one is being looked
+   * through.
+   *
+   * WHAT IS DRAWN and WHERE THINGS ARE are two different questions, which is
+   * the Place region's whole subject — and a probe that reads positions is
+   * answering the second one. A camera that follows, stops at the edge of the
+   * map, eases, or ignores a small movement is right or wrong in the FIRST,
+   * and nothing else here can see it.
+   */
+  | {kind: 'cameras'};
 
 export interface CheckRun {
   /** The probes, by the name their samples come back under. */

@@ -254,11 +254,20 @@ describe('what a tile promises', () => {
   });
 
   // A `shape` check passes for a program that has never run, so it is only the
-  // right answer when the lesson's product is a FILE. Anywhere else it is the
-  // easy way out, and the catalogue should not drift into taking it.
-  it('leans on shape checks only where the product is a file', () => {
+  // right answer when what the lesson produces is not a STATE — a file, or a
+  // declaration whose effect nothing can observe from inside the world. Anywhere
+  // else it is the easy way out, and the catalogue should not drift into taking
+  // it, so the list is written down and this test is the argument.
+  //
+  //   memory/variable — a name for a value, which is a fact about the workspace
+  //     and nothing else: the same program runs the same either way.
+  //   place/layers    — fixed and parallax are applied by the DRIVER as it
+  //     draws, so an actor in a fixed layer is at the same world position as one
+  //     that is not. What the lesson makes is the declaration.
+  //   making/read     — the product is having opened a file.
+  it('leans on shape checks only where there is no state to read', () => {
     const shapes = TILES.filter(t => t.check.kind === 'shape').map(t => t.id);
-    expect(shapes).toEqual(['memory/variable', 'making/read']);
+    expect(shapes).toEqual(['memory/variable', 'place/layers', 'making/read']);
   });
 });
 

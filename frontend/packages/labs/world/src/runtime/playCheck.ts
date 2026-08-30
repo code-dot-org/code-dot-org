@@ -79,6 +79,51 @@ export function readProbe(world: World, probe: Probe): unknown {
       return [...world.actors]
         .filter(actor => isKind(actor, probe.of))
         .map(actor => readNamed(actor, probe.name));
+    case 'drawings':
+      return world
+        .renderSnapshot()
+        .filter(
+          state =>
+            (!probe.of || isKind(state.actor, probe.of)) && state.drawing,
+        )
+        .map(state => ({
+          key: state.drawing!.key,
+          width: state.drawing!.width,
+          height: state.drawing!.height,
+        }));
+    case 'backdrop':
+      return world.backdropSnapshot().map(backdrop => ({
+        sprite: backdrop.sprite,
+        repeat: backdrop.repeat,
+        offset: {x: backdrop.offset.x, y: backdrop.offset.y},
+      }));
+    case 'effects': {
+      // The document goes no further than the engine: a probe says WHICH
+      // effect and how it is tuned, and the shader stays where it is.
+      const named = (effects: readonly {path: string; values?: object}[]) =>
+        effects.map(effect => ({
+          path: effect.path,
+          values: effect.values ?? {},
+        }));
+      return probe.of
+        ? world
+            .renderSnapshot()
+            .filter(state => isKind(state.actor, probe.of!))
+            .map(state => named(state.effects))
+        : [
+            named(world.effects()),
+            ...world
+              .backdropSnapshot()
+              .map(backdrop => named(backdrop.effects)),
+          ];
+    }
+    case 'cameras':
+      return world.cameraSnapshot().map(camera => ({
+        id: camera.id,
+        x: camera.position.x,
+        y: camera.position.y,
+        active: camera.active,
+      }));
     case 'worldProperty':
       // The same map a hot-reload compares against (`WorldSnapshot.world`),
       // keyed the same way: `${ruleId}.${propId}`.

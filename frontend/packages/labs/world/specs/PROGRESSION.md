@@ -413,24 +413,24 @@ The first thing anybody wants is for something to move when they press a key.
 
 ### Foundation: Look
 
-| Tile              | The lesson                                                                                               | Unlocks                                      | Check                                                               |
-| ----------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------- |
-| `look/sprite`     | A picture is a file. Import one, then paint your own.                                                    | the image editor; the sprite shelf           | `[o]` the actor draws a sprite the project holds                    |
-| `look/animation`  | Pictures in a row, played on a clock. Walk a walk cycle.                                                 | the animation editor; stock animations       | `[o]` the actor's frame advances while it moves                     |
-| `look/drawing`    | Or draw it yourself, with a pen and five shapes — which is what every meter, bar and box in this lab is. | the Drawing category                         | `[s]` a `define drawing` with at least two shapes; `[o]` it renders |
-| `look/background` | What is behind everything, and what is in front of it. Add a backdrop, then a repeating one that moves.  | background/foreground blocks; backdrop shelf | `[o]` the background is set and offset                              |
-| `look/effect`     | An effect is a recipe, not a picture. Import one, put it on an actor, then on the world.                 | the effect editor; stock effects             | `[o]` the actor carries the effect at runtime                       |
+| Tile              | The lesson                                                                                      | Unlocks                                   | Check                                                            |
+| ----------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------- | ---------------------------------------------------------------- |
+| `look/sprite`     | A picture is a file. Import one from the library, then paint your own and use that.             | image editor; the sprite library          | `[o]` the actor draws a sprite the project holds                 |
+| `look/drawing`    | An actor with no picture paints itself: two bars, both full, and one that should not be.        | Drawing drawer; Progress Bar; a colour    | `[o]` the two Bars draw different pictures                       |
+| `look/background` | The backdrop is not an actor. Add one, tile it, slide it, and watch the actors stay put.        | `set background`, repeat, offset, colour  | `[o]` the world's backdrop is set, tiles, and has been slid      |
+| `look/animation`  | An animation is a file of rectangles cut out of one image. Give a sliding Hero a walk cycle.    | animation editor; `play animation`        | `[o]` the frame changes across half a second                     |
+| `look/effect`     | A shader is a description of how to paint. One file, on one actor and then over the whole view. | effect editor; `add effect` (actor/world) | `[o]` the Coin carries one, the Hero does not, and the view does |
 
 ### Foundation: Place
 
-| Tile                | The lesson                                                                                             | Unlocks                                       | Check                                                         |
-| ------------------- | ------------------------------------------------------------------------------------------------------ | --------------------------------------------- | ------------------------------------------------------------- |
-| `place/position`    | x and y, and the vector that holds both. Put three actors in named places.                             | `set position`, vectors                       | `[o]` all three land within tolerance                         |
-| `place/map`         | A room drawn, not typed. Paint a floor and some walls in the map editor and load it.                   | the map editor; `load map`; `set map size`    | `[o]` the world holds the actors the map names                |
-| `place/layers`      | What is in front of what, and what does not move with the camera.                                      | `define layer`, `within layer`, `layer fixed` | `[o]` the score stays put while the world scrolls             |
-| `place/camera`      | A window on a world bigger than the screen. Follow the player; stop at the edges.                      | Camera, Camera Follow, Camera Confined rules  | `[o]` the view tracks the player and never shows past the map |
-| `place/camera-feel` | The difference between a camera that is correct and a camera that is pleasant: easing, and a deadzone. | Camera Ease, Camera Deadzone rules            | `[o]` a small movement moves the player and not the view      |
-| `place/edges`       | What happens at the end of the world: stop, or come back on the other side.                            | Boundaries, Screen Wrap rules                 | `[o]` the actor stays in on one axis and wraps on the other   |
+| Tile                | The lesson                                                                                 | Unlocks                                 | Check                                                                      |
+| ------------------- | ------------------------------------------------------------------------------------------ | --------------------------------------- | -------------------------------------------------------------------------- |
+| `place/position`    | Where things are: three markers in a heap, and the numbers that separate them.             | `set position`, random place, a number  | `[o]` the three are apart, one of them in the middle                       |
+| `place/edges`       | What happens at a boundary is a choice. Stop across, come round downwards.                 | Boundaries; Screen Wrap                 | `[o]` never leaves across, and wraps down                                  |
+| `place/map`         | A level is data: an arrangement painted on a grid, held by the block that places it.       | map editor; `create in map`; `load map` | `[o]`+`[s]` a dozen tiles, in two rows, and the ARRANGEMENT holds them     |
+| `place/camera`      | A room three screens wide and a view showing the first. Follow, and stop at the walls.     | Camera, Camera Follow, Camera Confined  | `[o]` the view travels and never passes the end of the room                |
+| `place/camera-feel` | Correct and unpleasant: slack for small movements, and a moment to catch up on large ones. | Camera Ease; Camera Deadzone            | `[o]` a short step moves nothing; a long walk is still settling afterwards |
+| `place/layers`      | Drawing order is declared, and some things should not move with the view at all.           | `define layer`, within, fixed, parallax | `[s]` the Score's layer is fixed, the Hills' moves less than the camera    |
 
 ### Genre: Platformer — entered from Input and Motion
 

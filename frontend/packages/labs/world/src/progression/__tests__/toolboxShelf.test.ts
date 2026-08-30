@@ -78,6 +78,28 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   'memory/world-state': ['world_rule_property', 'text_join', 'text'],
   'memory/actor-state': ['world_rule_property'],
   'memory/score': ['world_print', 'math_number'],
+  'look/drawing': ['math_arithmetic'],
+  'look/background': [
+    'world_set_background',
+    'world_set_background_repeat',
+    'world_set_background_offset',
+    'world_vector',
+  ],
+  'look/animation': ['world_play_animation'],
+  'look/effect': ['world_add_effect', 'world_add_world_effect'],
+  'place/edges': ['world_use_trait'],
+  'place/map': [],
+  'place/camera': [
+    'world_define_camera',
+    'world_use_camera',
+    'world_use_trait',
+  ],
+  'place/camera-feel': ['world_use_trait'],
+  'place/layers': [
+    'world_define_layer',
+    'world_layer_fixed',
+    'world_layer_parallax',
+  ],
 };
 
 /** Every tile on the shortest way to this one, itself excluded. */

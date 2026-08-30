@@ -16,8 +16,13 @@ import {describe, expect, it} from 'vitest';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {compileProject} from '../../__tests__/support/compileProject';
-import {importStockSprite} from '../../appearance/importStock';
-import {stockSprite} from '../../appearance/stock';
+import {
+  importStockAnimation,
+  importStockSprite,
+} from '../../appearance/importStock';
+import {stockAnimation, stockSprite} from '../../appearance/stock';
+import {importStockEffect} from '../../effect/importStockEffect';
+import {stockEffect} from '../../effect/stock';
 import {importStockRule} from '../../rules/importStockRule';
 import {stockRule} from '../../rules/stock';
 import {playCheck} from '../../runtime/playCheck';
@@ -80,6 +85,8 @@ const editing = (
  */
 interface Row {
   type?: string;
+  /** A block's own id, which a local actor and a camera are named by. */
+  id?: string;
   fields?: Record<string, unknown>;
   inputs?: Record<string, {block?: Row; shadow?: Row} | undefined>;
   next?: {block?: Row};
@@ -1312,5 +1319,524 @@ describe('the score lesson’s check', () => {
     // Once, at five — not six times, and not at six.
     expect(result.console).toEqual(['5']);
     expect(passes).toBe(true);
+  });
+});
+
+describe('the drawing lesson’s check', () => {
+  const lesson = LESSONS['look/drawing'];
+
+  it('refuses two Bars drawn the same', async () => {
+    const {passes} = await check('look/drawing', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts a width that reads the Bar', async () => {
+    const solved = editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      // The green rectangle is the second `draw rectangle` in the drawing,
+      // and its width is the number the lesson replaces.
+      const drawing = rowOf(actorIn(workspace, 'Bar'), 'world_define_drawing');
+      let row = inSocket(drawing, 'DO');
+      const widths: Row[] = [];
+      for (; row; row = row.next?.block) {
+        if (row.type === 'world_draw_rectangle') {
+          widths.push(row);
+        }
+      }
+      widths[1].inputs!.WIDTH = {
+        block: {
+          type: 'math_arithmetic',
+          fields: {OP: 'MULTIPLY'},
+          inputs: {
+            A: {shadow: {type: 'math_number', fields: {NUM: 96}}},
+            B: {
+              block: {
+                type: 'world_get_Progress_FractionProperty',
+                inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
+              },
+            },
+          },
+        },
+      };
+      return JSON.stringify(workspace);
+    });
+    const {passes, result} = await check('look/drawing', solved);
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+});
+
+describe('the backdrop lesson’s check', () => {
+  const lesson = LESSONS['look/background'];
+
+  it('refuses a world with a colour and no picture', async () => {
+    const {passes} = await check('look/background', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts one that is set, tiled and slid', async () => {
+    const solved = editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const world = workspace.blocks.blocks[0];
+      // Above the actor, which is where a learner drops them: the three blocks
+      // the lesson asks for, in the order it asks for them.
+      world.next = {
+        block: {
+          type: 'world_set_background',
+          fields: {BACKGROUND: 'meadow.png'},
+          next: {
+            block: {
+              type: 'world_set_background_repeat',
+              // 'true' rather than 'tiled': the label is what a learner reads and the
+              // value is what the block carries.
+              fields: {REPEAT: 'true'},
+              next: {
+                block: {
+                  type: 'world_set_background_offset',
+                  inputs: {
+                    OFFSET: {
+                      block: {
+                        type: 'world_vector',
+                        fields: {VECTOR: {x: 40, y: 0}},
+                      },
+                    },
+                  },
+                  next: world.next,
+                },
+              },
+            },
+          },
+        },
+      };
+      return JSON.stringify(workspace);
+    });
+    const {passes, result} = await check('look/background', solved);
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  // Each of the three on its own is not the lesson, and the check says so: a
+  // backdrop that is set but not tiled is step two of four.
+  it('refuses a backdrop that is only set', async () => {
+    const half = editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const world = workspace.blocks.blocks[0];
+      world.next = {
+        block: {
+          type: 'world_set_background',
+          fields: {BACKGROUND: 'meadow.png'},
+          next: world.next,
+        },
+      };
+      return JSON.stringify(workspace);
+    });
+    const {passes} = await check('look/background', half);
+    expect(passes).toBe(false);
+  });
+});
+
+describe('the animation lesson’s check', () => {
+  const lesson = LESSONS['look/animation'];
+
+  it('refuses a Hero wearing one picture', async () => {
+    const {passes} = await check('look/animation', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts one playing a walk cycle', async () => {
+    // What importing does, in its two moves: the animation lands in the
+    // project with the image it reads, and the actor names it.
+    const imported = importStockAnimation(
+      lesson.source,
+      stockAnimation('playerWalk')!,
+    );
+    const solved = editing(imported.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      under(actorIn(workspace, 'Hero'), {
+        type: 'world_play_animation',
+        fields: {ANIMATION: imported.value},
+        inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
+      });
+      return JSON.stringify(workspace);
+    });
+    const {passes, result} = await check('look/animation', solved);
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+});
+
+describe('the effect lesson’s check', () => {
+  const lesson = LESSONS['look/effect'];
+
+  it('refuses a world painted plainly', async () => {
+    const {passes} = await check('look/effect', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  /** What importing an effect and playing it comes to. */
+  const playing = (where: 'coin' | 'both') => {
+    const imported = importStockEffect(lesson.source, stockEffect('tint')!);
+    return editing(imported.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      under(actorIn(workspace, 'Coin'), {
+        type: 'world_add_effect',
+        fields: {EFFECT: imported.path},
+        inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
+      });
+      if (where === 'both') {
+        const world = workspace.blocks.blocks[0];
+        world.next = {
+          block: {
+            type: 'world_add_world_effect',
+            fields: {EFFECT: imported.path},
+            next: world.next,
+          },
+        };
+      }
+      return JSON.stringify(workspace);
+    });
+  };
+
+  it('accepts one on an actor and one on the view', async () => {
+    const {passes, result} = await check('look/effect', playing('both'));
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  // Half the lesson: the actor is painted through it and the view is not.
+  it('refuses an effect that is only on the actor', async () => {
+    const {passes} = await check('look/effect', playing('coin'));
+    expect(passes).toBe(false);
+  });
+});
+
+describe('the edges lesson’s check', () => {
+  const lesson = LESSONS['place/edges'];
+
+  /** The Ball, with the traits a learner elected. */
+  const electing2 = (traits: readonly string[]) =>
+    editing(lesson.source, 'main.world', contents =>
+      traits.reduce(
+        (workspace, trait) => electing(workspace, trait, 'Ball'),
+        contents,
+      ),
+    );
+
+  it('refuses a Ball that leaves and keeps going', async () => {
+    const {passes} = await check('place/edges', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts one stopped across and wrapped down', async () => {
+    const {passes, result} = await check(
+      'place/edges',
+      electing2(['Boundaries#StaysAcrossTrait', 'Screen Wrap#WrapsDownTrait']),
+    );
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  // The false pass, and the reason the check reads two things: all four traits
+  // keeps the Ball on screen, and it never wraps — it stops in the corner,
+  // because on each axis the first answer to act is the only one seen.
+  it('refuses all four traits at once', async () => {
+    const {passes} = await check(
+      'place/edges',
+      electing2([
+        'Boundaries#StaysAcrossTrait',
+        'Boundaries#StaysDownTrait',
+        'Screen Wrap#WrapsAcrossTrait',
+        'Screen Wrap#WrapsDownTrait',
+      ]),
+    );
+    expect(passes).toBe(false);
+  });
+});
+
+describe('the map lesson’s check', () => {
+  const lesson = LESSONS['place/map'];
+
+  it('refuses a floor of three tiles', async () => {
+    const {passes} = await check('place/map', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  /** The room, painted — which is an edit to the block's own grid field. */
+  const painted = (rows: number) =>
+    editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const grid = rowsOf(workspace).find(
+        row => row.type === 'world_create_in_map',
+      )!;
+      const tiles = [];
+      for (let row = 0; row < rows; row++) {
+        for (let column = 0; column < 10; column++) {
+          tiles.push({
+            id: `floor${row}_${column}`,
+            properties: {
+              positional: {
+                position: {x: column * 32 + 16, y: 304 - row * 32},
+              },
+            },
+          });
+        }
+      }
+      grid.fields!.PLACEMENTS = tiles;
+      return JSON.stringify(workspace);
+    });
+
+  it('accepts a room painted on the grid', async () => {
+    const {passes, result} = await check('place/map', painted(2));
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  // One row is a floor and not a room, and it is also what the starter nearly
+  // has: the check asks for a second row so that "paint the walls" is part of
+  // the lesson rather than an afterthought.
+  it('refuses a single row', async () => {
+    const {passes} = await check('place/map', painted(1));
+    expect(passes).toBe(false);
+  });
+});
+
+describe('the camera lesson’s check', () => {
+  const lesson = LESSONS['place/camera'];
+
+  /** `define camera ⟨Chase⟩ …` and the block that looks through it. */
+  const chasing = (confined: boolean) =>
+    editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const rows = rowsOf(workspace);
+      const traits: Row[] = [
+        {
+          type: 'world_use_trait',
+          fields: {TRAIT: 'Camera Follow#FollowsTrait'},
+        },
+        ...(confined
+          ? [
+              {
+                type: 'world_use_trait',
+                fields: {TRAIT: 'Camera Confined#ConfinedToTheMapTrait'},
+              },
+            ]
+          : []),
+        {
+          type: 'world_set_CameraFollow_ActorToFollowProperty',
+          inputs: {
+            ACTOR: {block: {type: 'world_this_camera'}},
+            VALUE: {
+              block: {type: 'world_actor_kind', fields: {ACTOR: local('hero')}},
+            },
+          },
+        },
+      ];
+      // The camera goes LAST, after the Hero exists: `any ⟨Hero⟩` is read where
+      // it is written, and read too early it is a view that never moves.
+      rows[rows.length - 1].next = {
+        block: {
+          type: 'world_define_camera',
+          id: 'chase',
+          fields: {NAME: 'Chase'},
+          inputs: {
+            DO: {
+              block: traits.reduceRight((next, block) => ({
+                ...block,
+                next: {block: next},
+              })),
+            },
+          },
+          next: {
+            block: {type: 'world_use_camera', fields: {CAMERA: 'camera:chase'}},
+          },
+        },
+      };
+      return JSON.stringify(workspace);
+    });
+
+  it('refuses a view that never moves', async () => {
+    const {passes} = await check('place/camera', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts one that follows and stops at the wall', async () => {
+    const {passes, result} = await check('place/camera', chasing(true));
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  // Following is the easy half and looks perfect for a second: the view leaves
+  // the room behind the Hero and shows three screens of nothing.
+  it('refuses following without confining', async () => {
+    const {passes} = await check('place/camera', chasing(false));
+    expect(passes).toBe(false);
+  });
+});
+
+describe('the camera-feel lesson’s check', () => {
+  const lesson = LESSONS['place/camera-feel'];
+
+  /** The camera, with the traits a learner elected and the numbers they set. */
+  const tuned = (options: {ease?: boolean; deadzone?: boolean}) =>
+    editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const camera = rowsOf(workspace).find(
+        row => row.type === 'world_define_camera',
+      )!;
+      const rows: Row[] = [
+        ...(options.ease
+          ? [
+              {
+                type: 'world_use_trait',
+                fields: {TRAIT: 'Camera Ease#EasesTrait'},
+              },
+              {
+                type: 'world_set_CameraEase_SmoothnessProperty',
+                inputs: {
+                  ACTOR: {block: {type: 'world_this_camera'}},
+                  VALUE: {shadow: {type: 'math_number', fields: {NUM: 0.25}}},
+                },
+              },
+            ]
+          : []),
+        ...(options.deadzone
+          ? [
+              {
+                type: 'world_use_trait',
+                fields: {TRAIT: 'Camera Deadzone#HasADeadzoneTrait'},
+              },
+              {
+                type: 'world_set_CameraDeadzone_SlackProperty',
+                inputs: {
+                  ACTOR: {block: {type: 'world_this_camera'}},
+                  X: {shadow: {type: 'math_number', fields: {NUM: 64}}},
+                  Y: {shadow: {type: 'math_number', fields: {NUM: 32}}},
+                },
+              },
+            ]
+          : []),
+      ];
+      if (rows.length) {
+        let last = inSocket(camera, 'DO')!;
+        while (last.next?.block) {
+          last = last.next.block;
+        }
+        last.next = {
+          block: rows.reduceRight((next, row) => ({
+            ...row,
+            next: {block: next},
+          })),
+        };
+      }
+      return JSON.stringify(workspace);
+    });
+
+  it('refuses a view welded to the Hero', async () => {
+    const {passes} = await check('place/camera-feel', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts one with slack and a moment to catch up', async () => {
+    const {passes, result} = await check(
+      'place/camera-feel',
+      tuned({ease: true, deadzone: true}),
+    );
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  // Each on its own answers one of the two complaints. Easing still lurches on
+  // the first step; a deadzone alone still arrives with a bang.
+  it('refuses easing alone', async () => {
+    const {passes} = await check('place/camera-feel', tuned({ease: true}));
+    expect(passes).toBe(false);
+  });
+
+  it('refuses a deadzone alone', async () => {
+    const {passes} = await check('place/camera-feel', tuned({deadzone: true}));
+    expect(passes).toBe(false);
+  });
+});
+
+describe('the layers lesson’s check', () => {
+  const lesson = LESSONS['place/layers'];
+
+  it('refuses a score that scrolls away with the scenery', async () => {
+    const {passes} = await check('place/layers', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  /** The world with the two layers declared and the actors moved into them. */
+  const layered = (options: {fixed?: boolean; parallax?: boolean}) =>
+    editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const rows = rowsOf(workspace);
+      const named = (actor: string) =>
+        rows.filter(row => row.fields?.ACTOR === local(actor));
+      // The rows that move into a layer come OUT of the world's own chain, the
+      // way dragging them in would take them out.
+      const kept = rows.filter(
+        row =>
+          row.fields?.ACTOR !== local('score') &&
+          row.fields?.ACTOR !== local('hill'),
+      );
+      const inside = (rowsIn: Row[], settings: Row[], name: string): Row => ({
+        type: 'world_define_layer',
+        fields: {NAME: name},
+        inputs: {
+          DO: {
+            block: [...settings, ...rowsIn].reduceRight((next, row) => ({
+              ...row,
+              next: {block: next},
+            })),
+          },
+        },
+      });
+      const declared: Row[] = [
+        ...(options.parallax
+          ? [
+              inside(
+                named('hill'),
+                [
+                  {
+                    type: 'world_layer_parallax',
+                    fields: {PARALLAX: {x: 0.4, y: 1}},
+                  },
+                ],
+                'Hills',
+              ),
+            ]
+          : []),
+        ...(options.fixed
+          ? [
+              inside(
+                named('score'),
+                [{type: 'world_layer_fixed', fields: {FIXED: 'fixed'}}],
+                'Interface',
+              ),
+            ]
+          : []),
+      ];
+      workspace.blocks.blocks[0].next = {
+        block: [...declared, ...kept].reduceRight((next, row) => ({
+          ...row,
+          next: {block: next},
+        })),
+      };
+      return JSON.stringify(workspace);
+    });
+
+  it('accepts a fixed interface and hills that lag', async () => {
+    const {passes, result} = await check(
+      'place/layers',
+      layered({fixed: true, parallax: true}),
+    );
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  it('refuses a fixed score with the hills left behind', async () => {
+    const {passes} = await check('place/layers', layered({fixed: true}));
+    expect(passes).toBe(false);
   });
 });

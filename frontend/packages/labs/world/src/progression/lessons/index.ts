@@ -12,15 +12,17 @@
 // Blockly JSON behind them. So `catalogue.ts` stays data about tiles, and the
 // projects live here, looked up by tile id.
 //
-// Twenty-two of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md and
-// then some: Origin, Input, Motion, Logic and Memory are written whole, which
-// is enough to walk the first hours of the progression end to end and find out
-// whether any of this works.
+// Thirty-one of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md
+// and then some: ALL SIX FOUNDATIONS are written — Origin, Input, Motion,
+// Logic, Memory, Look and Place — so every genre gate on the map is open, and
+// the first hours of the progression can be walked end to end.
 
 import {
   actorFile,
+  chain as chainRows,
   drawText,
   fill,
+  me,
   num,
   rectangle,
   setSprite,
@@ -286,6 +288,208 @@ like everything else.
    has no picture.
 3. Open the picture you imported and **paint on it**. It is yours now — the copy
    in the library is untouched.
+`.trim(),
+};
+
+// ── look/drawing ─────────────────────────────────────────────────────────────
+
+/** `set fraction of ⟨this actor⟩ to ⟨n⟩` — the Progress rule's one number. */
+const setFraction = (value: number) => ({
+  type: 'world_set_Progress_FractionProperty',
+  inputs: {ACTOR: me(), VALUE: num(value)},
+});
+
+/** `draw rectangle at x ⟨⟩ y ⟨⟩ size ⟨width⟩ by ⟨⟩`, with any width block. */
+const bar = (width: object) => ({
+  type: 'world_draw_rectangle',
+  inputs: {X: num(0), Y: num(0), WIDTH: width, HEIGHT: num(12)},
+});
+
+const drawing: WorldScenario = {
+  name: 'Draw it yourself',
+  description:
+    'Two progress bars that are both full, and one of them should not be.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        addActor(local('bar'), [placeAt(160, 110), setFraction(1)]),
+        addActor(local('bar'), [placeAt(160, 210), setFraction(0.35)]),
+      ],
+      actors: [
+        {
+          id: 'bar',
+          name: 'Bar',
+          rows: [useTrait('Progress#ShowsProgressTrait')],
+          drawing: {
+            width: 96,
+            height: 12,
+            commands: [
+              fill(swatch('#3d3d47')),
+              bar(num(96)),
+              fill(swatch('#4caf50')),
+              // The number this lesson is about: the green bar is as wide as
+              // the track, whatever the Bar it is drawn for happens to hold.
+              bar(num(96)),
+            ],
+          },
+        },
+      ],
+    }),
+    rules: ['progress'],
+  }),
+  instructions: `
+## Draw it yourself
+
+Two Bars. One is set to **1** and one to **0.35**, and both are drawn full,
+because the green rectangle is 96 wide — a number somebody typed.
+
+An actor with no picture paints itself. \`define drawing\` is a pen and a few
+shapes, and it is what every meter, bar and box in this lab is made of. It runs
+**for each actor of that kind**, so anything it reads off the actor is that
+actor's own.
+
+### What you do
+
+1. Find the second **draw rectangle** — the green one — under
+   \`define actor ⟨Bar⟩\`.
+2. Put **96 × ⟨fraction of ⟨this actor⟩⟩** in its **size** where the 96 is.
+3. Run it. One Bar is full and one is a third full, from one drawing.
+4. Change the track colour, or add an outline. It is your picture.
+`.trim(),
+};
+
+// ── look/background ──────────────────────────────────────────────────────────
+
+const background: WorldScenario = {
+  name: 'Behind everything',
+  description:
+    'A world on a flat colour, and the picture that belongs behind it.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        {
+          type: 'world_set_background_color',
+          inputs: {COLOR: swatch('#7ec8e3')},
+        },
+        addActor(local('hero'), [placeAt(160, 200)]),
+      ],
+      actors: [{id: 'hero', name: 'Hero', rows: [setSprite('player.png')]}],
+    }),
+    sprites: ['player'],
+  }),
+  instructions: `
+## Behind everything
+
+A flat blue sky, and a Hero standing on nothing. The blue is the world's
+**background colour** — one colour behind everything, which is what a world
+draws when nobody has given it a picture.
+
+A **backdrop** is that picture. It is not an actor: it has no position, nothing
+can touch it, and no rule can reach it. It is what is behind the game.
+
+### What you do
+
+1. Add **set background to ⟨…⟩**, and use the \`(import…)\` row on its dropdown
+   to bring a backdrop in from the library.
+2. Run it. It is stretched to fill the view — one copy, whatever shape it is.
+3. Add **draw background ⟨tiled⟩**. Now it repeats instead of stretching, which
+   is what a picture of grass or bricks wants.
+4. Add **slide background to ⟨x 40 y 0⟩** and run it again. The backdrop moved
+   and the Hero did not: they are not in the same world at all.
+`.trim(),
+};
+
+// ── look/animation ───────────────────────────────────────────────────────────
+
+const animation: WorldScenario = {
+  name: 'Pictures in a row',
+  description: 'A Hero that slides along without ever moving its legs.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [addActor(local('hero'), [placeAt(160, 160)])],
+      actors: [
+        {
+          id: 'hero',
+          name: 'Hero',
+          rows: [
+            useTrait('Arrow Keys#MovesAcrossTrait'),
+            setSprite('player.png'),
+          ],
+        },
+      ],
+    }),
+    sprites: ['player'],
+    rules: ['arrows'],
+  }),
+  instructions: `
+## Pictures in a row
+
+Walk the Hero left and right. It slides: the picture never changes, because a
+sprite is one picture and that is all it can be.
+
+An **animation** is a file too, and what is in it is not pictures — it is a
+list of RECTANGLES cut out of one image, and how long to hold each one. The
+image is a strip of frames; the animation says which part is which frame.
+
+### What you do
+
+1. Add **play animation ⟨…⟩ on ⟨this actor⟩** under \`define actor ⟨Hero⟩\`, and
+   use the \`(import…)\` row on its dropdown to bring a walk cycle in.
+2. Run it. The legs move.
+3. Open the animation and look at the frames — the image is one picture with
+   the walk laid out across it, and the file is where each frame's rectangle
+   is written down.
+4. Change how long a frame is held, and run it again.
+`.trim(),
+};
+
+// ── look/effect ──────────────────────────────────────────────────────────────
+
+const effect: WorldScenario = {
+  name: 'An effect is a recipe',
+  description:
+    'A world drawn plainly, and the filters that change how it is painted.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        {
+          type: 'world_set_background_color',
+          inputs: {COLOR: swatch('#1b2530')},
+        },
+        addActor(local('hero'), [placeAt(120, 160)]),
+        addActor(local('coin'), [placeAt(220, 160)]),
+      ],
+      actors: [
+        {id: 'hero', name: 'Hero', rows: [setSprite('player.png')]},
+        {id: 'coin', name: 'Coin', rows: [setSprite('coin.png')]},
+      ],
+    }),
+    sprites: ['player', 'coin'],
+  }),
+  instructions: `
+## An effect is a recipe
+
+A Hero and a Coin, drawn exactly as their pictures are.
+
+An **effect** is not a picture and not an actor: it is a description of how to
+paint one — the same picture, put through a recipe. It is a file like everything
+else, and the same file can be played on one actor, on a whole layer, or over
+the entire view.
+
+### What you do
+
+1. Add **add effect ⟨…⟩ to ⟨this actor⟩** in \`define actor ⟨Coin⟩\`, and use the
+   \`(import…)\` row to bring one in from the library.
+2. Run it. The Coin is painted through the recipe and the Hero is not — one
+   effect, on one actor.
+3. Now add **add effect ⟨…⟩ to the world**. Everything goes through it, the
+   backdrop included, because that one is over the whole view rather than on
+   anything in it.
+4. The effect's numbers are knobs on the block. Turn one and run it again.
 `.trim(),
 };
 
@@ -893,6 +1097,326 @@ moment: **⟨event actor⟩ is a ⟨Coin⟩**.
 `.trim(),
 };
 
+// ── place/map ────────────────────────────────────────────────────────────────
+
+/** A placement, as the grid field stores one: an id and where it sits. */
+const placed = (id: string, x: number, y: number) => ({
+  id,
+  properties: {positional: {position: {x, y}}},
+});
+
+/** `create ⟨kind⟩ in map ⟨grid⟩` — one block, however many tiles. */
+const createInMap = (actor: string, placements: object[]) => ({
+  type: 'world_create_in_map',
+  fields: {ACTOR: actor, PLACEMENTS: placements},
+});
+
+const map: WorldScenario = {
+  name: 'A room drawn, not typed',
+  description:
+    'A floor made of twenty blocks, and the grid that replaces them.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        addActor(local('hero'), [placeAt(48, 240)]),
+        // Three tiles, painted by hand and stopping short: the floor the Hero
+        // is standing on runs out, and the lesson is the rest of it.
+        createInMap(local('ground'), [
+          placed('floor0', 16, 304),
+          placed('floor1', 48, 304),
+          placed('floor2', 80, 304),
+        ]),
+      ],
+      actors: [
+        {id: 'hero', name: 'Hero', rows: [setSprite('player.png')]},
+        {id: 'ground', name: 'Ground', rows: [setSprite('ground.png')]},
+      ],
+    }),
+    sprites: ['player', 'ground'],
+  }),
+  instructions: `
+## A room drawn, not typed
+
+Three floor tiles, and then nothing. You could add the rest with \`add actor\`,
+one block each, all the same — and the day you want the floor a tile lower you
+would edit twenty of them.
+
+**create ⟨Ground⟩ in map** is one block that places as many as you like. What
+it holds is not code: it is an ARRANGEMENT — a list of places, painted on a
+grid, kept with the block. The kind says what a Ground *is*, once; the
+arrangement says where they are.
+
+### What you do
+
+1. Click the grid on the **create ⟨Ground⟩ in map** block. The map editor opens.
+2. Paint a floor along the bottom of the room, and walls up both sides.
+3. Run it. Every tile you painted is a Ground, and there is still one block.
+4. Paint some more, and run it again. You never touched \`define actor ⟨Ground⟩\`
+   — what a Ground is and where the Grounds are are two different questions.
+`.trim(),
+};
+
+// ── place/camera ─────────────────────────────────────────────────────────────
+
+/** A floor of Ground tiles across a room that is wider than the view. */
+const floorAcross = (columns: number) =>
+  Array.from({length: columns}, (_unused, column) =>
+    placed(`floor${column}`, column * 32 + 16, 304),
+  );
+
+const camera: WorldScenario = {
+  name: 'A window on a bigger world',
+  description:
+    'A room three screens wide, and a view that only ever shows the first.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      // Three screens across and one down. A world that arranges its own
+      // actors is one screen until it says otherwise, and a camera in a
+      // one-screen world is a camera that cannot move.
+      tiles: [30, 10],
+      rows: [
+        createInMap(local('ground'), floorAcross(30)),
+        addActor(local('hero'), [placeAt(48, 272), setVelocity(6, 0)]),
+      ],
+      actors: [
+        {
+          id: 'hero',
+          name: 'Hero',
+          rows: [useTrait('Physics#CanMoveTrait'), setSprite('player.png')],
+        },
+        {id: 'ground', name: 'Ground', rows: [setSprite('ground.png')]},
+      ],
+    }),
+    sprites: ['player', 'ground'],
+    rules: ['motion', 'camera', 'cameraFollow', 'cameraConfined'],
+  }),
+  instructions: `
+## A window on a bigger world
+
+The Hero walks off the right of the screen and is gone. It has not stopped
+existing: the room is **three screens wide**, and the view is showing the first
+of them and nothing else.
+
+Where things ARE and what is DRAWN are two different questions. A **camera** is
+the answer to the second one, and until now every world has had the default
+one, sitting still.
+
+### What you do
+
+1. Add **define camera ⟨Chase⟩** at the end of the world, with
+   **use trait ⟨Follows⟩** in it, and
+   **set actor to follow of ⟨this camera⟩ to ⟨any Hero⟩**.
+2. Add **look through camera ⟨Chase⟩** under it, and run. The view goes with
+   the Hero — off the end of the room, showing nothing.
+3. Add **use trait ⟨Confined to the Map⟩** to the camera. The view stops where
+   the room stops, and the Hero walks on out of shot.
+4. The camera is defined AFTER the actors, and it has to be: it is told to
+   follow \`any ⟨Hero⟩\`, and reading that before there is a Hero is a view
+   that never moves and never says why.
+`.trim(),
+};
+
+// ── place/camera-feel ────────────────────────────────────────────────────────
+
+/** `define camera ⟨Chase⟩` following a kind, with whatever else it elects. */
+const chaseCamera = (follow: string, extra: object[] = []) => ({
+  type: 'world_define_camera',
+  id: 'chase',
+  fields: {NAME: 'Chase'},
+  inputs: {
+    DO: {
+      block: chainRows([
+        useTrait('Camera Follow#FollowsTrait'),
+        useTrait('Camera Confined#ConfinedToTheMapTrait'),
+        ...extra,
+        {
+          type: 'world_set_CameraFollow_ActorToFollowProperty',
+          inputs: {
+            ACTOR: {block: {type: 'world_this_camera'}},
+            VALUE: anyKind(follow),
+          },
+        },
+      ]),
+    },
+  },
+});
+
+const cameraFeel: WorldScenario = {
+  name: 'Correct, and pleasant',
+  description:
+    'A camera that is right, welded to the player, and slightly horrible.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      tiles: [30, 10],
+      rows: [
+        createInMap(local('ground'), floorAcross(30)),
+        addActor(local('hero'), [placeAt(160, 272)]),
+        chaseCamera('hero'),
+        {type: 'world_use_camera', fields: {CAMERA: 'camera:chase'}},
+      ],
+      actors: [
+        {
+          id: 'hero',
+          name: 'Hero',
+          rows: [
+            useTrait('Arrow Keys#MovesAcrossTrait'),
+            setSprite('player.png'),
+          ],
+        },
+        {id: 'ground', name: 'Ground', rows: [setSprite('ground.png')]},
+      ],
+    }),
+    sprites: ['player', 'ground'],
+    rules: [
+      'arrows',
+      'camera',
+      'cameraFollow',
+      'cameraConfined',
+      'cameraEase',
+      'cameraDeadzone',
+    ],
+  }),
+  instructions: `
+## Correct, and pleasant
+
+Walk left and right. The camera follows, it stops at the walls, and it is
+**correct** — every frame the view is exactly where the Hero is.
+
+Which is why it feels the way it does. The world lurches with every step, and
+a small nudge shakes the whole screen. Nothing here is a bug; the camera is
+doing precisely what it was told.
+
+Two traits change how it FEELS, and neither changes where it ends up.
+
+### What you do
+
+1. Add **use trait ⟨Eases⟩** to the camera and
+   **set smoothness of ⟨this camera⟩ to ⟨0.25⟩**. The view now catches up over
+   a few frames instead of arriving with you.
+2. Add **use trait ⟨Has a Deadzone⟩** and
+   **set slack of ⟨this camera⟩ to x ⟨64⟩ y ⟨32⟩**. Small movements no longer
+   move the view at all — you walk about inside the box, and only leaving it
+   pulls the camera along.
+3. Turn the smoothness up until it feels like treacle, then back. There is no
+   right number, which is the point: this is the part you tune by playing.
+`.trim(),
+};
+
+// ── place/layers ─────────────────────────────────────────────────────────────
+
+const layers: WorldScenario = {
+  name: 'What is in front',
+  description:
+    'A score that scrolls away with the scenery, and the hills that do not lag.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      tiles: [30, 10],
+      rows: [
+        createInMap(local('ground'), floorAcross(30)),
+        // Three hills, far apart, so the eye can see whether they keep up.
+        addActor(local('hill'), [placeAt(80, 240)]),
+        addActor(local('hill'), [placeAt(400, 240)]),
+        addActor(local('hill'), [placeAt(720, 240)]),
+        addActor(local('score'), [
+          placeAt(60, 30),
+          setText('TextProperty', words('SCORE 0')),
+        ]),
+        addActor(local('hero'), [placeAt(160, 272)]),
+        chaseCamera('hero'),
+        {type: 'world_use_camera', fields: {CAMERA: 'camera:chase'}},
+      ],
+      actors: [
+        {
+          id: 'hero',
+          name: 'Hero',
+          rows: [
+            useTrait('Arrow Keys#MovesAcrossTrait'),
+            setSprite('player.png'),
+          ],
+        },
+        {id: 'ground', name: 'Ground', rows: [setSprite('ground.png')]},
+        {id: 'hill', name: 'Hill', rows: [setSprite('box.png')]},
+        {
+          id: 'score',
+          name: 'Score',
+          rows: [useTrait('Writing#ShowsTextTrait'), showAs('text')],
+          drawing: {
+            width: 96,
+            height: 24,
+            commands: [fill(swatch('#f2f2f7')), drawText(0, 12)],
+          },
+        },
+      ],
+    }),
+    sprites: ['player', 'ground', 'box'],
+    rules: ['arrows', 'writing', 'camera', 'cameraFollow', 'cameraConfined'],
+  }),
+  instructions: `
+## What is in front
+
+Walk right. The score goes with the scenery and off the side of the screen,
+because it is a thing in the world like the hills and the floor — and nothing
+has ever said otherwise.
+
+A **layer** is a declared group with a drawing order and its own relationship
+to the camera. Everything so far has been in one layer, which is why everything
+so far has moved together.
+
+### What you do
+
+1. Add **define layer ⟨Interface⟩** at the end of the world, put
+   **this layer ⟨is fixed to the screen⟩** in it, and move the Score's
+   \`add actor\` inside it. Now it stays where it is drawn, whatever the camera
+   does.
+2. Add **define layer ⟨Hills⟩** BEFORE the others — declaration order is
+   drawing order, so it is behind them — and move the three Hills into it.
+3. Put **this layer moves ⟨0.4, 1⟩ with the camera** in it. The hills now drift
+   slower than the floor, which is what makes them look far away.
+`.trim(),
+};
+
+// ── place/edges ──────────────────────────────────────────────────────────────
+
+const edges: WorldScenario = {
+  name: 'The end of the world',
+  description:
+    'A ball that leaves and never comes back, and the two ways to keep it.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [addActor(local('ball'), [placeAt(160, 160), setVelocity(3, 3)])],
+      actors: [{id: 'ball', name: 'Ball', rows: BALL}],
+    }),
+    sprites: ['ball'],
+    rules: ['motion', 'bounds', 'wrap'],
+  }),
+  instructions: `
+## The end of the world
+
+The Ball goes down and to the right, off the edge, and keeps going forever.
+Nothing is wrong: the world has an edge, and nothing said what should happen
+there.
+
+There are two answers, and a game usually wants both — one per axis. **Stays
+in the Map** stops an actor at the edge. **Wraps at the Edges** brings it back
+on the opposite side. Each comes as two traits, across and down, because which
+axis you want them on is the whole question.
+
+### What you do
+
+1. Give the Ball **use trait ⟨Stays Across⟩**. It stops at the right-hand wall
+   and slides down it.
+2. Give it **use trait ⟨Wraps Down⟩**. When it leaves the bottom it comes back
+   at the top.
+3. Try **Stays Down** as well, and watch what happens: the two answers on one
+   axis are not both — the first one to act is the only one you see.
+`.trim(),
+};
+
 // ── memory/variable ──────────────────────────────────────────────────────────
 
 const variable: WorldScenario = {
@@ -1212,7 +1736,16 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'memory/actor-state': actorState,
   'memory/score': scoreLesson,
   'look/sprite': sprite,
+  'look/drawing': drawing,
+  'look/background': background,
+  'look/animation': animation,
+  'look/effect': effect,
   'place/position': position,
+  'place/edges': edges,
+  'place/map': map,
+  'place/camera': camera,
+  'place/camera-feel': cameraFeel,
+  'place/layers': layers,
 };
 
 /** Every lesson written so far, by the tile it belongs to. */
