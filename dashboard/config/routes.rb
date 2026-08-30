@@ -467,14 +467,17 @@ Dashboard::Application.routes.draw do
       end
 
       resource :quiz_configuration, only: [:update], controller: 'quizzes'
-      resources :quiz_questions, only: [:index, :show, :create, :update, :destroy] do
-        collection do
-          get 'course_unit_search'
-        end
+      resources :quiz_question_placements, only: [:create, :destroy] do
         member do
           post 'attach'
           delete 'detach'
         end
+      end
+    end
+
+    resources :quiz_questions, only: [:index, :show, :update] do
+      collection do
+        get 'course_unit_search'
       end
     end
 

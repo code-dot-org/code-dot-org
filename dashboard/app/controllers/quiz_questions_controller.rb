@@ -1,30 +1,28 @@
-# Levelbuilder-only CRUD for a Quiz's question bank
+# Levelbuilder-only management of the QuizQuestion bank itself, addressed
+# by the question's own stable id - independent of any one quiz.
 class QuizQuestionsController < ApplicationController
+  include QuizQuestionSerialization
+
   before_action :authenticate_user!
   before_action :require_levelbuilder_mode_or_test_env
-  before_action {@level = Level.find(params[:level_id])}
-  before_action {authorize! :manage, @level}
-  before_action :require_quiz_level, except: [:course_unit_search]
+  before_action {authorize! :manage, QuizQuestion}
 
-  # Placeholder default for quiz_question_json's precomputed-value keyword
-  # args, distinguishing "not given, compute it for this one question"
-  # from a real value that happens to be false/nil (e.g. an unattached
-  # question's page, or a question not used anywhere else).
-  UNSET = Object.new.freeze
-
-  # GET /levels/:level_id/quiz_questions?search=&sort=&standardFrameworkShortcode=&standardShortcode=&courseOrUnitType=&courseOrUnitId=
+  # GET /quiz_questions?quizLevelId=&search=&sort=&standardFrameworkShortcode=&standardShortcode=&courseOrUnitType=&courseOrUnitId=
   #
   # Question bank browsing: matches by name, marks each attached: true/false
-  # for this quiz. sort is 'name' or 'recent' (default) - see
-  # QuizQuestionAutocomplete::SORT_ORDERS). standardFrameworkShortCode/
+  # (and its page) relative to the quiz given by quizLevelId. quizLevelId is
+  # required for now - nothing yet browses the bank outside a specific
+  # quiz's builder.
+  # sort is 'name' or 'recent' (default). standardFrameworkShortCode/
   # standardShortcode and courseOrUnitType/courseOrUnitId, if given,
   # further narrow results (AND'd with search, not exclusive of it).
   def index
+    level = find_quiz_level(params[:quizLevelId], required: true)
     standard = find_standard(params[:standardFrameworkShortcode], params[:standardShortcode])
     course_or_unit = find_course_or_unit(params[:courseOrUnitType], params[:courseOrUnitId])
     questions = QuizQuestionAutocomplete.get_search_matches(params[:search], params[:limit], params[:sort], standard&.id, course_or_unit).
       includes(standards: [:framework, {category: :parent_category}])
-    attached_ids = @level.questions.pluck(:id).to_set
+    attached_ids = level.questions.pluck(:id).to_set
 
     # Precomputed once for the whole page, rather than per row.
     question_ids = questions.map(&:id)
@@ -32,14 +30,15 @@ class QuizQuestionsController < ApplicationController
     # (page, position) - MySQL rejects DISTINCT combined with an ORDER BY
     # on columns outside the SELECT list, and page/position are irrelevant
     # to a plain distinct id list anyway.
-    other_quiz_ids = QuizQuestionPlacement.where(quiz_question_id: question_ids).where.not(level_id: @level.id).
+    other_quiz_ids = QuizQuestionPlacement.where(quiz_question_id: question_ids).where.not(level_id: level.id).
       reorder(nil).distinct.pluck(:quiz_question_id).to_set
     published_usage = QuizQuestion.published_unit_usage(question_ids)
-    pages_by_question_id = @level.placements.where(quiz_question_id: question_ids).pluck(:quiz_question_id, :page).to_h
+    pages_by_question_id = level.placements.where(quiz_question_id: question_ids).pluck(:quiz_question_id, :page).to_h
 
     result = questions.map do |question|
       quiz_question_json(
         question,
+        level: level,
         attached_to_other_quizzes: other_quiz_ids.include?(question.id),
         used_in_published_unit: published_usage.fetch(question.id, false),
         page: pages_by_question_id[question.id]
@@ -50,7 +49,7 @@ class QuizQuestionsController < ApplicationController
     render json: []
   end
 
-  # GET /levels/:level_id/quiz_questions/course_unit_search?query=
+  # GET /quiz_questions/course_unit_search?query=
   #
   # Combined course/unit typeahead backing the question bank's course/unit
   # filter. A plain name substring match, not the
@@ -73,67 +72,37 @@ class QuizQuestionsController < ApplicationController
         courses.map {|c| {type: 'course', id: c.id, name: c.name}}
   end
 
-  # GET /levels/:level_id/quiz_questions/:id
+  # GET /quiz_questions/:id
   #
   # Building-only counterpart to Quiz#summarize_for_lab2_properties: that
-  # method deliberately excludes correct_choice_id, so editing an existing question's
-  # answer needs its own fetch instead of reusing levelProperties.quizQuestions.
+  # method deliberately excludes correct_choice_id, so editing an existing
+  # question's answer needs its own fetch instead of reusing
+  # levelProperties.quizQuestions. Any bank question, regardless of which
+  # quiz (if any) currently has it placed.
   def show
-    question = @level.questions.find(params[:id])
+    question = QuizQuestion.find(params[:id])
     render json: quiz_question_json(question)
   end
 
-  # POST /levels/:level_id/quiz_questions
+  # PUT /quiz_questions/:id?quizLevelId=
   #
-  # Creates a MultipleChoiceQuestion and attaches it to this Quiz level.
-  # TODO: Implement other question types.
+  # Assumes MultipleChoiceQuestion-shaped params, same as
+  # QuizQuestionPlacementsController#create. only MultipleChoiceQuestion
+  # rows exist for now. TODO: Implement other question types.
   #
-  # All three writes (question, standards, placement) share one transaction.
-  # requires_new: true - without this, nesting inside an open transaction (e.g., a test's)
-  # just joins it, so a rescued exception here wouldn't actually roll back.
-  def create
-    question = ActiveRecord::Base.transaction(requires_new: true) do
-      question = MultipleChoiceQuestion.create!(
-        key: SecureRandom.uuid,
-        name: quiz_question_params[:questionName],
-        content: {
-          stem: quiz_question_params[:stem],
-          choices: (quiz_question_params[:choices] || []).map(&:to_h),
-          correct_choice_id: quiz_question_params[:correctChoiceId],
-        },
-        explanation: quiz_question_params[:explanation]
-      )
-      question.standards = fetch_quiz_question_standards(quiz_question_params[:standards])
-      next_position = (@level.placements.maximum(:position) || 0) + 1
-      QuizQuestionPlacement.create!(
-        level: @level, quiz_question: question,
-        page: quiz_question_params[:page].presence || 1, position: next_position
-      )
-      question
-    end
-
-    render status: :created, json: quiz_question_json(question)
-  rescue StandardError => exception
-    render status: :bad_request, json: {error: exception.message}
-  end
-
-  # PUT /levels/:level_id/quiz_questions/:id
-  #
-  # Assumes MultipleChoiceQuestion-shaped params, same as create.
-  # only MultipleChoiceQuestion rows exist for now.
-  # TODO: Implement other question types.
-  #
+  # quizLevelId, if given, is the quiz whose placement of this question
+  # should be repointed at the fork when should_fork is true.
   # editMode: 'fork' requests a fork explicitly (offered by the frontend
   # only when the question is attached to some other quiz too, with nothing
   # forcing the choice) - never trusted alone though. used_in_published_unit?
   # forces a fork. Forking never touches the original row or any other
-  # quiz's placement of it - it only repoints this quiz's own
-  # QuizQuestionPlacement at a brand new question carrying the edited content.
-  #
-  # All three writes (target, standards, placement) share one transaction.
+  # quiz's placement of it - it only repoints quizLevelId's own
+  # QuizQuestionPlacement (if any) at a brand new question carrying the
+  # edited content.
   def update
-    question = @level.questions.find(params[:id])
-    placement = @level.placements.find_by!(quiz_question_id: question.id)
+    question = QuizQuestion.find(params[:id])
+    level = find_quiz_level(params[:quizLevelId])
+    placement = level&.placements&.find_by!(quiz_question_id: question.id)
     should_fork = question.used_in_published_unit? || quiz_question_params[:editMode] == 'fork'
     target = should_fork ? MultipleChoiceQuestion.new(key: SecureRandom.uuid, parent: question) : question
 
@@ -149,157 +118,29 @@ class QuizQuestionsController < ApplicationController
       )
       target.standards = fetch_quiz_question_standards(quiz_question_params[:standards])
 
-      placement.quiz_question = target if should_fork
-      placement.page = quiz_question_params[:page] if quiz_question_params[:page].present?
-      placement.save!
-    end
-
-    render json: quiz_question_json(target)
-  rescue StandardError => exception
-    render status: :bad_request, json: {error: exception.message}
-  end
-
-  # POST /levels/:level_id/quiz_questions/:id/attach
-  #
-  # Attaches an existing bank question to this quiz - unlike create, this
-  # never creates a new QuizQuestion row, only a new QuizQuestionPlacement.
-  # find_or_create_by! makes this idempotent against a double click (adding
-  # twice would otherwise be a silent no-op anyway, but this avoids a
-  # spurious duplicate row/error).
-  def attach
-    question = MultipleChoiceQuestion.find(params[:id])
-    next_position = (@level.placements.maximum(:position) || 0) + 1
-    QuizQuestionPlacement.find_or_create_by!(level: @level, quiz_question: question) do |placement|
-      placement.page = 1
-      placement.position = next_position
-    end
-
-    render status: :created, json: quiz_question_json(question)
-  rescue StandardError => exception
-    render status: :bad_request, json: {error: exception.message}
-  end
-
-  # DELETE /levels/:level_id/quiz_questions/:id/detach
-  #
-  # Removes the question from this quiz only - destroys the
-  # QuizQuestionPlacement, leaves the QuizQuestion itself untouched.
-  def detach
-    @level.placements.find_by!(quiz_question_id: params[:id]).destroy!
-
-    head :no_content
-  rescue ActiveRecord::RecordNotFound
-    head :not_found
-  end
-
-  # DELETE /levels/:level_id/quiz_questions/:id
-  #
-  # Removes the question from this quiz AND destroys the QuizQuestion
-  # itself, provided nothing else still references it once detached: no
-  # other quiz's placement, no QuizQuestionResponse (a past graded
-  # attempt), and no other question forked from this one (parent_id).
-  # Checked here rather than trusted from the client's earlier
-  # attachedToOtherQuizzes read (see quiz_question_json) - a stale read
-  # can't accidentally delete a question something else grabbed a
-  # reference to in the meantime, so this falls back to a plain detach
-  # instead. The whole sequence shares one transaction, so the placement's
-  # own removal can't commit ahead of a destroy that then fails - without
-  # that, an unanticipated fourth kind of reference would 500 after
-  # already detaching, rather than cleanly falling back like the three
-  # kinds above.
-  def destroy
-    placement = @level.placements.find_by!(quiz_question_id: params[:id])
-    question = placement.quiz_question
-
-    destroyed = false
-    ActiveRecord::Base.transaction(requires_new: true) do
-      placement.destroy!
-      still_referenced = question.levels.exists? || question.quiz_question_responses.exists? || question.forks.exists?
-      unless still_referenced
-        question.destroy!
-        destroyed = true
+      if placement
+        placement.quiz_question = target if should_fork
+        placement.page = quiz_question_params[:page] if quiz_question_params[:page].present?
+        placement.save!
       end
     end
 
-    # destroyed tells the caller whether this fell back to a plain detach -
-    # QuizQuestionBank needs to know that to decide whether the question
-    # should disappear from its results or just remain there, still
-    # attachable.
-    render json: {destroyed: destroyed}
-  rescue ActiveRecord::RecordNotFound
-    head :not_found
+    render json: quiz_question_json(target, level: level)
+  rescue StandardError => exception
+    render status: :bad_request, json: {error: exception.message}
   end
 
-  private def require_quiz_level
-    head :not_found unless @level.is_a?(Quiz)
-  end
-
-  # Only allow the allow-list through.
-  private def quiz_question_params
-    params.permit(
-      :questionName, :stem, :correctChoiceId, :explanation, :page, :editMode,
-      choices: [:id, :text],
-      standards: [:frameworkShortcode, :shortcode]
-    )
-  end
-
-  # (frameworkShortcode, shortcode) is how a Standard is identified across
-  # this codebase's request/response boundary - see LessonsController's own
-  # fetch_standards and Standard#summarize_for_lesson_edit.
-  private def fetch_quiz_question_standards(standards_data)
-    (standards_data || []).map {|s| find_standard(s['frameworkShortcode'], s['shortcode'])}
-  end
-
-  # Returns nil, rather than raising, when framework_shortcode is blank -
-  # both callers treat "no standard specified" as a legitimate, common case
-  # (index with no standard filter; a question tagged with nothing). A
-  # present but unresolvable shortcode still raises
+  # Resolves a quizLevelId param into its Quiz, or nil when the param is
+  # blank. A present but unresolvable, or non-Quiz, id still raises
   # ActiveRecord::RecordNotFound.
-  private def find_standard(framework_shortcode, shortcode)
-    return nil if framework_shortcode.blank?
-
-    framework = Framework.find_by!(shortcode: framework_shortcode)
-    Standard.find_by!(framework: framework, shortcode: shortcode)
-  end
-
-  # Resolves index's courseOrUnitType/courseOrUnitId params (as picked from
-  # course_unit_search's results) into the {type, id} shape
-  # QuizQuestionAutocomplete.get_search_matches expects. nil, not raising,
-  # when type is blank - "no course/unit filter" is the common case, same
-  # as find_standard above. A present but unresolvable id still raises
-  # ActiveRecord::RecordNotFound, caught by index's rescue.
-  private def find_course_or_unit(type, id)
-    return nil if type.blank?
-
-    case type
-    when 'unit'
-      {type: 'unit', id: Unit.find(id).id}
-    when 'course'
-      {type: 'course', id: UnitGroup.find(id).id}
-    else
-      raise ActiveRecord::RecordNotFound, "unrecognized courseOrUnitType #{type}"
+  private def find_quiz_level(id, required: false)
+    if id.blank?
+      raise ActiveRecord::RecordNotFound if required
+      return nil
     end
-  end
 
-  # Shared by create/show/update/attach/index. The three keyword args let
-  # index pass in values it already computed for the whole page in bulk
-  # (see there) instead of this running a fresh query per question -
-  # create/show/update/attach only ever serialize one question, so the
-  # per-question query each falls back to here is fine.
-  private def quiz_question_json(question, attached_to_other_quizzes: UNSET, used_in_published_unit: UNSET, page: UNSET)
-    {
-      id: question.id,
-      type: question.type,
-      questionName: question.name,
-      stem: question.content['stem'],
-      choices: question.content['choices'],
-      correctChoiceId: question.content['correct_choice_id'],
-      explanation: question.explanation,
-      standards: question.standards.map(&:summarize_for_lesson_edit),
-      attachedToOtherQuizzes: attached_to_other_quizzes.equal?(UNSET) ? question.levels.where.not(id: @level.id).exists? : attached_to_other_quizzes,
-      usedInPublishedUnit: used_in_published_unit.equal?(UNSET) ? question.used_in_published_unit? : used_in_published_unit,
-      # nil for a bank question not (yet) attached to @level - page only
-      # means something in the context of a specific quiz's own placement.
-      page: page.equal?(UNSET) ? @level.placements.find_by(quiz_question_id: question.id)&.page : page,
-    }
+    level = Level.find(id)
+    raise ActiveRecord::RecordNotFound unless level.is_a?(Quiz)
+    level
   end
 end
