@@ -7,7 +7,8 @@ import {
 describe('SpriteLab2 musicProjects', () => {
   const today = new Date('2026-08-29T12:00:00Z');
 
-  it('offers only music projects on the default pack, newest first, dated', () => {
+  it('offers only music projects kept on the default pack, newest first, dated', () => {
+    const onDefault = {labConfig: {music: {packId: 'default'}}};
     const options = musicProjectOptions(
       [
         {
@@ -15,21 +16,38 @@ describe('SpriteLab2 musicProjects', () => {
           name: 'Old song',
           type: 'music',
           updatedAt: '2025-01-05T12:00:00Z',
+          ...onDefault,
         },
         {
           channel: 'b',
           name: 'A game',
           type: 'spritelab',
           updatedAt: '2026-03-01T12:00:00Z',
+          ...onDefault,
         },
         {
           channel: 'c',
           name: 'New song',
           type: 'music',
           updatedAt: '2026-08-25T12:00:00Z',
+          ...onDefault,
         },
-        {channel: 'd', type: 'music'},
-        {channel: '', name: 'No channel', type: 'music'},
+        {channel: 'd', type: 'music', ...onDefault},
+        {channel: '', name: 'No channel', type: 'music', ...onDefault},
+        // No pack recorded: the choice was never made.
+        {
+          channel: 'g',
+          name: 'Undecided',
+          type: 'music',
+          updatedAt: '2026-08-28T12:00:00Z',
+        },
+        {
+          channel: 'h',
+          name: 'Undecided too',
+          type: 'music',
+          updatedAt: '2026-08-28T12:00:00Z',
+          labConfig: {music: {}},
+        },
         {
           channel: 'e',
           name: 'Packed',
