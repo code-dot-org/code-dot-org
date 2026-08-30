@@ -491,6 +491,7 @@ class Ability
         Game,
         Level,
         Lesson,
+        QuizQuestion,
         ProgrammingClass,
         ProgrammingEnvironment,
         ProgrammingExpression,

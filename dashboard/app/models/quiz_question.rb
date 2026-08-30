@@ -31,7 +31,7 @@ class QuizQuestion < ApplicationRecord
 
   # Neither cascade-deletes on its own - a deleted question must never
   # silently take historical student responses or an independently-forked
-  # question down with it. See QuizQuestionsController#destroy, which
+  # question down with it. See QuizQuestionPlacementsController#destroy, which
   # checks both (along with :placements/:levels) before allowing a hard
   # delete, falling back to a plain detach if either is still present.
   has_many :quiz_question_responses, dependent: nil
