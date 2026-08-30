@@ -2,9 +2,8 @@ import {BlockStyles} from '@cdo/apps/blockly/constants';
 import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 import {commonI18n} from '@cdo/apps/types/locale';
 
-// This lab's own "when run" hat. The shared `when_run` type is defined by
-// other labs too — Music Lab redefines it when its player is set up — so
-// sharing the type name meant sharing whichever generator installed last.
+// This lab's own "when run" hat: the shared `when_run` type belongs to every
+// lab that defines it, Music Lab included.
 export const WHEN_RUN_BLOCK_TYPE = 'spritelab2_whenRun';
 
 // The type this lab's projects saved before they had their own.

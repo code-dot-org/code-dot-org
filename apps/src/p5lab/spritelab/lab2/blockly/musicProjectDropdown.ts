@@ -7,9 +7,8 @@ import {MusicProjectOption} from '../redux/spriteLab2Redux';
 export const FIELD_MUSIC_PROJECT_DROPDOWN_TYPE =
   'field_spritelab2_music_project';
 
-// Options: [song name, channel]. The list is fetched once when the level
-// opens (see SpriteLab2View); a song made while the lab is open shows up on
-// the next visit.
+// Options: [song name, channel]. The list is fetched once per level; a song
+// made while the lab is open shows up on the next visit.
 function musicProjectMenuOptions(): [string, string][] {
   const projects: MusicProjectOption[] =
     getStore().getState().spriteLab2?.musicProjects || [];

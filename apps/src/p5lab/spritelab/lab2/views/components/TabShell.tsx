@@ -28,7 +28,7 @@ interface TabShellProps {
   sceneTabsExtra?: React.ReactNode;
   // Rendered immediately after the Play button (the restart controls).
   playTabExtra?: React.ReactNode;
-  // Rendered at the right, before Start Over (the music playing).
+  // Rendered at the right, before Start Over.
   startOverExtra?: React.ReactNode;
   children: React.ReactNode;
   onClickStartOver?: () => void;

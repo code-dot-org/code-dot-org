@@ -44,11 +44,7 @@ interface UseBlocklyWorkspaceResult {
   getCurrentBlocks: () => WorkspaceSerialization | null;
   /** Serialize the workspace blocks into a toolbox definition; null before inject. */
   getToolboxDefinition: () => BlocklyCore.utils.toolbox.ToolboxInfo | null;
-  /**
-   * Re-render the toolbox from its definition, so flyout blocks whose
-   * dropdowns read live data (the play-music songs) show what has since
-   * arrived.
-   */
+  /** Re-render the toolbox, so flyout dropdowns show data fetched since. */
   refreshToolbox: () => void;
   /** Load code into the workspace. */
   loadCode: (source: WorkspaceSerialization) => void;

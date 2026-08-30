@@ -76,7 +76,6 @@ import spriteLab2Reducer, {
   ALL_TABS,
   Tab,
 } from '../redux/spriteLab2Redux';
-import SceneMusic from '../sceneMusic';
 import {
   collectSavedExternalKeys,
   ExternalProject,
@@ -105,6 +104,7 @@ import GenerateSpriteLab from './GenerateSpriteLab';
 import Playspace, {PlayspaceMode} from './Playspace';
 import SceneSelector from './SceneSelector';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
+import useSceneMusic from './useSceneMusic';
 import WorldTab from './WorldTab';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
@@ -519,8 +519,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           }
         })
         .catch(e => console.warn('section scenes unavailable', e));
-      // The songs arrive after the workspace: see the effect that redraws
-      // the flyout with them.
     } else {
       musicSeededRef.current = true;
       Promise.all([externalOptions(), musicOptions()]).then(
@@ -945,15 +943,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     isPlayingRef.current = activeTab === 'Play';
   }, [activeTab]);
 
-  // The play-music block's songs: the user's Music Lab projects, fetched once
-  // per level. The flyout usually renders first, so it is redrawn with them,
-  // and a block placed meanwhile — holding no song, reading "no songs yet" —
-  // is given the newest.
+  // The play-music block's songs, fetched once per level. The flyout
+  // usually renders first: it is redrawn with them, and a block placed
+  // meanwhile, holding no song, is given the newest.
   const musicProjects = useAppSelector(state => state.spriteLab2.musicProjects);
-  const musicProjectsRef = useRef(musicProjects);
-  useEffect(() => {
-    musicProjectsRef.current = musicProjects;
-  }, [musicProjects]);
   useEffect(() => {
     if (musicSeededRef.current) {
       return;
@@ -984,22 +977,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     };
   }, [levelProperties.id, dispatch, refreshToolbox]);
 
-  // Background music plays only in Play, and stops on leaving it.
-  const sceneMusicRef = useRef<SceneMusic | null>(null);
-  const [nowPlaying, setNowPlaying] = useState<{
-    channel: string;
-    loading: boolean;
-  } | null>(null);
-  useEffect(() => {
-    if (activeTab !== 'Play') {
-      sceneMusicRef.current?.stop();
-      setNowPlaying(null);
-    }
-  }, [activeTab]);
-  useEffect(() => () => sceneMusicRef.current?.stop(), []);
-  const nowPlayingTitle = nowPlaying
-    ? musicProjects.find(p => p.channel === nowPlaying.channel)?.name || 'Music'
-    : null;
+  const {
+    nowPlaying,
+    title: nowPlayingTitle,
+    playMusic,
+  } = useSceneMusic(activeTab === 'Play', musicProjects);
 
   // The Code and Images tabs stay mounted behind a clip-path, which hides
   // them visually but leaves their contents (the whole Blockly workspace)
@@ -1118,34 +1100,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       setJumpCover(false);
     };
     engine.onSceneJumpCancel = () => setJumpCover(false);
-    engine.onPlayMusic = (channel: string) => {
-      // Only a listed song plays: not a placeholder for one the list no
-      // longer offers, and nothing when the list never arrived.
-      const song = musicProjectsRef.current.find(p => p.channel === channel);
-      if (!isPlayingRef.current || !song || song.unavailable) {
-        return;
-      }
-      const music = (sceneMusicRef.current ||= new SceneMusic());
-      if (music.playing === channel) {
-        return;
-      }
-      setNowPlaying({channel, loading: true});
-      music
-        .play(channel)
-        .then(started => {
-          if (started) {
-            setNowPlaying({channel, loading: false});
-          }
-        })
-        .catch(e => {
-          console.warn('music could not play', e);
-          setNowPlaying(current =>
-            current?.channel === channel ? null : current
-          );
-        });
-    };
+    engine.onPlayMusic = playMusic;
   }, [
     engineReady,
+    playMusic,
     scenes,
     runScene,
     runExternalScene,

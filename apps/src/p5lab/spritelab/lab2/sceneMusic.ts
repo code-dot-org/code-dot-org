@@ -15,10 +15,9 @@ export function createMusicPlayers(): {
 
 /**
  * Background music for a game: one Music Lab project at a time, repeating
- * from its first measure to its last. Asking for the song already playing
- * changes nothing, so a scene jump within the same music carries on
- * uninterrupted. The player and the Music Lab Blockly setup behind it are
- * created on the first song, since most games have none.
+ * from its first measure to its last; asking for the song already playing
+ * changes nothing. The players are created on the first song, since most
+ * games have none.
  */
 export default class SceneMusic {
   private musicPlayer: MusicPlayer | null = null;
