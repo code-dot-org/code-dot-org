@@ -1,3 +1,4 @@
+import {DEFAULT_PACK} from '@cdo/apps/music/constants';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {MusicProjectOption} from './redux/spriteLab2Redux';
@@ -7,11 +8,12 @@ interface PersonalProject {
   name?: string;
   type?: string;
   updatedAt?: string;
+  labConfig?: {music?: {packId?: string}};
 }
 
 const MUSIC_PROJECT_TYPE = 'music';
 
-/** The user's Music Lab projects, newest first. */
+/** The user's Music Lab songs on the default sound pack, newest first. */
 export async function fetchMusicProjects(): Promise<MusicProjectOption[]> {
   const {value} = await HttpClient.fetchJson<PersonalProject[]>(
     '/api/v1/projects/personal'
@@ -20,10 +22,34 @@ export async function fetchMusicProjects(): Promise<MusicProjectOption[]> {
 }
 
 export function musicProjectOptions(
-  projects: PersonalProject[]
+  projects: PersonalProject[],
+  today = new Date()
 ): MusicProjectOption[] {
   return projects
-    .filter(p => p.type === MUSIC_PROJECT_TYPE && p.channel)
+    .filter(p => p.type === MUSIC_PROJECT_TYPE && p.channel && onDefaultPack(p))
     .sort((a, b) => (b.updatedAt || '').localeCompare(a.updatedAt || ''))
-    .map(p => ({channel: p.channel, name: p.name || 'Untitled song'}));
+    .map(p => ({channel: p.channel, name: songLabel(p, today)}));
+}
+
+// Only songs on the default sound pack are offered; a song with no pack
+// recorded is on the default one.
+function onDefaultPack(project: PersonalProject): boolean {
+  const packId = project.labConfig?.music?.packId;
+  return !packId || packId === DEFAULT_PACK;
+}
+
+// Music Lab names most songs alike, so the day it was last saved tells them
+// apart: "Untitled Project · Aug 25", with the year when it isn't this one.
+function songLabel(project: PersonalProject, today: Date): string {
+  const name = project.name || 'Untitled song';
+  const saved = project.updatedAt ? new Date(project.updatedAt) : null;
+  if (!saved || isNaN(saved.getTime())) {
+    return name;
+  }
+  const date = saved.toLocaleDateString(undefined, {
+    month: 'short',
+    day: 'numeric',
+    ...(saved.getFullYear() !== today.getFullYear() && {year: 'numeric'}),
+  });
+  return `${name} · ${date}`;
 }
