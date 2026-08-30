@@ -1,4 +1,4 @@
-require 'uuid'
+require 'cdo/uuid'
 
 module OverrideUpdateTrackedFields
   def update_tracked_fields(request)
@@ -6,7 +6,7 @@ module OverrideUpdateTrackedFields
     if persisted? && id
       SignIn.create(
         user_id: id,
-        stable_id: UUID.parse(request.session[:statsig_stable_id]),
+        stable_id: Cdo::UUID.valid_value(request.session[:statsig_stable_id]),
         sign_in_at: DateTime.now,
         sign_in_count: sign_in_count
       )
