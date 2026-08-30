@@ -1,7 +1,10 @@
 import {DEFAULT_PACK} from '@cdo/apps/music/constants';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
+import {PLAY_MUSIC_BLOCK_TYPE} from './blockly/blockDefinitions/playMusic';
 import {MusicProjectOption} from './redux/spriteLab2Redux';
+import {collectSavedFieldValues} from './scenesApi';
+import {Scene} from './types';
 
 interface PersonalProject {
   channel: string;
@@ -29,6 +32,29 @@ export function musicProjectOptions(
     .filter(p => p.type === MUSIC_PROJECT_TYPE && p.channel && onDefaultPack(p))
     .sort((a, b) => (b.updatedAt || '').localeCompare(a.updatedAt || ''))
     .map(p => ({channel: p.channel, name: songLabel(p, today)}));
+}
+
+/** The songs saved play-music blocks refer to. */
+export function collectSavedSongs(scenes: Scene[]): string[] {
+  return collectSavedFieldValues(scenes, PLAY_MUSIC_BLOCK_TYPE, 'SONG');
+}
+
+/**
+ * The list with a placeholder for each saved song it lacks, so the saved
+ * block keeps its value through Blockly's option check instead of falling
+ * back to another song.
+ */
+export function withUnavailableSongs(
+  options: MusicProjectOption[],
+  savedSongs: string[]
+): MusicProjectOption[] {
+  const known = new Set(options.map(o => o.channel));
+  return [
+    ...options,
+    ...savedSongs
+      .filter(channel => !known.has(channel))
+      .map(channel => ({channel, name: '(unavailable)', unavailable: true})),
+  ];
 }
 
 // Only songs on the default sound pack are offered; a song with no pack

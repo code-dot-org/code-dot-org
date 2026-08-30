@@ -82,7 +82,20 @@ export async function fetchExternalProject(
  * when the listing API fails or an entry has vanished from it.
  */
 export function collectSavedExternalKeys(scenes: Scene[]): string[] {
-  const keys = new Set<string>();
+  return collectSavedFieldValues(
+    scenes,
+    'spritelab2_goToExternalScene',
+    'SCENE'
+  );
+}
+
+/** Every non-empty value of `fieldName` on saved blocks of `blockType`. */
+export function collectSavedFieldValues(
+  scenes: Scene[],
+  blockType: string,
+  fieldName: string
+): string[] {
+  const values = new Set<string>();
   const walkBlock = (block: {
     type?: string;
     fields?: {[name: string]: unknown};
@@ -92,10 +105,10 @@ export function collectSavedExternalKeys(scenes: Scene[]): string[] {
     if (!block) {
       return;
     }
-    if (block.type === 'spritelab2_goToExternalScene') {
-      const value = block.fields?.SCENE;
+    if (block.type === blockType) {
+      const value = block.fields?.[fieldName];
       if (typeof value === 'string' && value) {
-        keys.add(value);
+        values.add(value);
       }
     }
     Object.values(block.inputs || {}).forEach(input => {
@@ -104,7 +117,10 @@ export function collectSavedExternalKeys(scenes: Scene[]): string[] {
     walkBlock(block.next?.block as typeof block);
   };
   scenes.forEach(scene =>
-    (scene.source?.blocks?.blocks || []).forEach(walkBlock)
+    (
+      (scene.source as {blocks?: {blocks?: object[]}} | undefined)?.blocks
+        ?.blocks || []
+    ).forEach(block => walkBlock(block as Parameters<typeof walkBlock>[0]))
   );
-  return [...keys];
+  return [...values];
 }

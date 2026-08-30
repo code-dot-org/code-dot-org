@@ -42,6 +42,7 @@ import {
   uploadAssetToProject,
   UploadImageFunction,
 } from '../ai/images/imageGeneration';
+import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import defaultSources from '../defaultSources.json';
@@ -56,12 +57,17 @@ import {
   migrateBlockTypes,
   migrateScenes,
 } from '../migrateSources';
-import {fetchMusicProjects} from '../musicProjects';
+import {
+  collectSavedSongs,
+  fetchMusicProjects,
+  withUnavailableSongs,
+} from '../musicProjects';
 import reseedablePageConstants, {
   RESET_PAGE_CONSTANTS,
 } from '../redux/reseedablePageConstants';
 import spriteLab2Reducer, {
   ExternalSceneOption,
+  MusicProjectOption,
   resetSpriteLab2,
   setActiveTab,
   setExternalScenes,
@@ -461,19 +467,50 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [dispatch]
   );
 
+  // Set when the seeding effect fetched the songs itself (saved blocks
+  // needed them before the workspace), so they are not fetched twice.
+  const musicSeededRef = useRef(false);
+
   // Seed the animation list BEFORE the workspace injects: dropdown fields
   // validate saved values against the store at block-load time — hence the
   // animationsSeeded gate on useBlocklyWorkspace, not just dispatch ordering.
   useEffect(() => {
     let cancelled = false;
     seedAnimationList(initialSources.animations);
-    // Workspace injection only waits on the section-scenes fetch when saved
-    // blocks reference external scenes; the gated path times out into
-    // placeholder options so a hung API can't blank the lab.
+    // Workspace injection only waits on a fetched list (section scenes, the
+    // user's songs) when saved blocks hold values from it; the gated path
+    // times out into placeholder options so a hung API can't blank the lab.
     const savedExternalKeys = collectSavedExternalKeys(
       getScenes(initialSources)
     );
-    if (savedExternalKeys.length === 0) {
+    const savedSongs = collectSavedSongs(getScenes(initialSources));
+    const withTimeout = <T,>(fetching: Promise<T>): Promise<T> =>
+      Promise.race([
+        fetching,
+        new Promise<never>((_, reject) =>
+          setTimeout(() => reject(new Error('timeout')), 5000)
+        ),
+      ]);
+    const externalOptions = async (): Promise<ExternalSceneOption[]> => {
+      try {
+        const refs = await withTimeout(
+          fetchSectionScenes(levelProperties.id, scriptId)
+        );
+        return toExternalSceneOptions(refs);
+      } catch (e) {
+        console.warn('section scenes unavailable', e);
+        return [];
+      }
+    };
+    const musicOptions = async (): Promise<MusicProjectOption[]> => {
+      try {
+        return await withTimeout(fetchMusicProjects());
+      } catch (e) {
+        console.warn('music projects unavailable', e);
+        return [];
+      }
+    };
+    if (savedExternalKeys.length === 0 && savedSongs.length === 0) {
       setAnimationsSeeded(true);
       fetchSectionScenes(levelProperties.id, scriptId)
         .then(refs => {
@@ -482,33 +519,29 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           }
         })
         .catch(e => console.warn('section scenes unavailable', e));
+      // The songs arrive after the workspace: see the effect that redraws
+      // the flyout with them.
     } else {
-      const seedExternalScenes = async () => {
-        let options: ExternalSceneOption[] = [];
-        try {
-          const timeout = new Promise<never>((_, reject) =>
-            setTimeout(() => reject(new Error('timeout')), 5000)
-          );
-          const refs = await Promise.race([
-            fetchSectionScenes(levelProperties.id, scriptId),
-            timeout,
-          ]);
-          options = toExternalSceneOptions(refs);
-        } catch (e) {
-          console.warn('section scenes unavailable', e);
-        }
-        const known = new Set(options.map(o => o.key));
-        savedExternalKeys.forEach(key => {
-          if (!known.has(key)) {
-            options.push({key, label: `(unavailable) #${key.slice(0, 10)}`});
+      musicSeededRef.current = true;
+      Promise.all([externalOptions(), musicOptions()]).then(
+        ([external, music]) => {
+          if (cancelled) {
+            return;
           }
-        });
-        if (!cancelled) {
-          dispatch(setExternalScenes(options));
+          const known = new Set(external.map(o => o.key));
+          savedExternalKeys.forEach(key => {
+            if (!known.has(key)) {
+              external.push({
+                key,
+                label: `(unavailable) #${key.slice(0, 10)}`,
+              });
+            }
+          });
+          dispatch(setExternalScenes(external));
+          dispatch(setMusicProjects(withUnavailableSongs(music, savedSongs)));
           setAnimationsSeeded(true);
         }
-      };
-      seedExternalScenes();
+      );
     }
     return () => {
       cancelled = true;
@@ -913,15 +946,36 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [activeTab]);
 
   // The play-music block's songs: the user's Music Lab projects, fetched once
-  // per level. The flyout usually renders first, so it is redrawn with them.
+  // per level. The flyout usually renders first, so it is redrawn with them,
+  // and a block placed meanwhile — holding no song, reading "no songs yet" —
+  // is given the newest.
   const musicProjects = useAppSelector(state => state.spriteLab2.musicProjects);
+  const musicProjectsRef = useRef(musicProjects);
   useEffect(() => {
+    musicProjectsRef.current = musicProjects;
+  }, [musicProjects]);
+  useEffect(() => {
+    if (musicSeededRef.current) {
+      return;
+    }
     let cancelled = false;
     fetchMusicProjects()
       .then(projects => {
-        if (!cancelled) {
-          dispatch(setMusicProjects(projects));
-          refreshToolbox();
+        if (cancelled) {
+          return;
+        }
+        dispatch(setMusicProjects(projects));
+        refreshToolbox();
+        const newest = projects.find(p => !p.unavailable);
+        const workspace = Blockly.getMainWorkspace();
+        if (newest && workspace) {
+          workspace
+            .getBlocksByType(PLAY_MUSIC_BLOCK_TYPE, false)
+            .forEach(block => {
+              if (!block.getFieldValue('SONG')) {
+                block.setFieldValue(newest.channel, 'SONG');
+              }
+            });
         }
       })
       .catch(e => console.warn('music projects unavailable', e));
@@ -1065,7 +1119,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     };
     engine.onSceneJumpCancel = () => setJumpCover(false);
     engine.onPlayMusic = (channel: string) => {
-      if (!isPlayingRef.current) {
+      // Only a listed song plays: not a placeholder for one the list no
+      // longer offers, and nothing when the list never arrived.
+      const song = musicProjectsRef.current.find(p => p.channel === channel);
+      if (!isPlayingRef.current || !song || song.unavailable) {
         return;
       }
       const music = (sceneMusicRef.current ||= new SceneMusic());

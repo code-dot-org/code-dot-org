@@ -33,6 +33,8 @@ export interface ExternalSceneOption {
 export interface MusicProjectOption {
   channel: string;
   name: string;
+  /** A saved block's song the list no longer offers; it will not play. */
+  unavailable?: boolean;
 }
 
 export interface SpriteLab2State {

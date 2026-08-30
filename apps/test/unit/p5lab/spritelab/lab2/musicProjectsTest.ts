@@ -1,4 +1,8 @@
-import {musicProjectOptions} from '@cdo/apps/p5lab/spritelab/lab2/musicProjects';
+import {
+  collectSavedSongs,
+  musicProjectOptions,
+  withUnavailableSongs,
+} from '@cdo/apps/p5lab/spritelab/lab2/musicProjects';
 
 describe('SpriteLab2 musicProjects', () => {
   const today = new Date('2026-08-29T12:00:00Z');
@@ -50,5 +54,48 @@ describe('SpriteLab2 musicProjects', () => {
     expect(options[2].name).toMatch(/^Old song · Jan 5, 2025$/);
     // No date recorded: the name alone.
     expect(options[3].name).toBe('Untitled song');
+  });
+
+  it('finds the songs saved play-music blocks refer to, and keeps them as placeholders', () => {
+    const scenes = [
+      {
+        id: 'a',
+        name: 'A',
+        source: {
+          blocks: {
+            blocks: [
+              {
+                type: 'spritelab2_whenRun',
+                next: {
+                  block: {type: 'spritelab2_playMusic', fields: {SONG: 'kept'}},
+                },
+              },
+              {
+                type: 'gamelab_spriteClicked',
+                inputs: {
+                  DO: {
+                    block: {
+                      type: 'spritelab2_playMusic',
+                      fields: {SONG: 'gone'},
+                    },
+                  },
+                },
+              },
+              {type: 'spritelab2_playMusic', fields: {SONG: ''}},
+            ],
+          },
+        },
+      },
+    ];
+    const saved = collectSavedSongs(scenes as never);
+    expect(saved.sort()).toEqual(['gone', 'kept']);
+    const options = withUnavailableSongs(
+      [{channel: 'kept', name: 'Kept'}],
+      saved
+    );
+    expect(options).toEqual([
+      {channel: 'kept', name: 'Kept'},
+      {channel: 'gone', name: '(unavailable)', unavailable: true},
+    ]);
   });
 });
