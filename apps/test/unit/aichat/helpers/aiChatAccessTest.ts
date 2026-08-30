@@ -1,6 +1,7 @@
 import {
   shouldShowAiTutor,
   areAiChatToolsEnabled,
+  shouldShowUsOnlyModelsAlert,
   APPS_WITH_ESSENTIAL_AI_CHAT,
 } from '@cdo/apps/aichat/helpers/aiChatAccess';
 
@@ -105,5 +106,44 @@ describe('areAiChatToolsEnabled', () => {
         })
       ).toBe(false);
     });
+  });
+});
+
+describe('shouldShowUsOnlyModelsAlert', () => {
+  it('returns true when the course requires AI chat and uses unreachable models', () => {
+    expect(
+      shouldShowUsOnlyModelsAlert({
+        assignedAiChatToolsDependency: 'essential',
+        assignedInaccessibleAiModels: true,
+      })
+    ).toBe(true);
+  });
+
+  it('returns false when the course requires AI chat but its models are reachable', () => {
+    expect(
+      shouldShowUsOnlyModelsAlert({
+        assignedAiChatToolsDependency: 'essential',
+        assignedInaccessibleAiModels: false,
+      })
+    ).toBe(false);
+  });
+
+  // Optional AI chat is not worth warning about: the course is still completable.
+  it('returns false when AI chat is only available, not essential', () => {
+    expect(
+      shouldShowUsOnlyModelsAlert({
+        assignedAiChatToolsDependency: 'available',
+        assignedInaccessibleAiModels: true,
+      })
+    ).toBe(false);
+  });
+
+  it('returns false when the section has no assigned course', () => {
+    expect(
+      shouldShowUsOnlyModelsAlert({
+        assignedAiChatToolsDependency: undefined,
+        assignedInaccessibleAiModels: undefined,
+      })
+    ).toBe(false);
   });
 });
