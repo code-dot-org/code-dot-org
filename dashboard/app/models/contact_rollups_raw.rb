@@ -106,14 +106,23 @@ class ContactRollupsRaw < ApplicationRecord
   def self.extract_users_and_geos(limit = nil)
     # An user can have many user_geos records. user_geos records starts with only NULL
     # values until a cronjob runs, does IP-to-address lookup, and update them later.
+    #
+    # Only the most recently updated geo row matters: processing takes the
+    # latest value per field anyway, so emitting one row per historical geo
+    # tuple (the previous behavior) only inflated contact_rollups_raw and
+    # every downstream step. The LEFT JOIN keeps users with no geo record,
+    # whose user_id alone drives the Teacher role and db_Has_Teacher_Account.
     teacher_and_geo_query = <<~SQL.squish
       SELECT
         t.email, t.id AS user_id,
         ug.city, ug.state, ug.postal_code, ug.country,
-        MAX(GREATEST(t.updated_at, IFNULL(ug.updated_at, t.updated_at))) AS updated_at
+        GREATEST(t.updated_at, IFNULL(ug.updated_at, t.updated_at)) AS updated_at
       FROM (#{teacher_query('id, email, updated_at')}) AS t
-      LEFT OUTER JOIN user_geos AS ug ON t.id = ug.user_id
-      GROUP BY email, t.id, city, state, postal_code, country
+      LEFT OUTER JOIN (
+        SELECT user_id, city, state, postal_code, country, updated_at,
+          ROW_NUMBER() OVER (PARTITION BY user_id ORDER BY updated_at DESC, id DESC) AS geo_recency
+        FROM user_geos
+      ) AS ug ON t.id = ug.user_id AND ug.geo_recency = 1
     SQL
     teacher_and_geo_query += "LIMIT #{limit}" unless limit.nil?
 
