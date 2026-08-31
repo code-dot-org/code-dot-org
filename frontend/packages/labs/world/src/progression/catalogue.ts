@@ -1745,8 +1745,9 @@ export const TILES: readonly Tile[] = [
     region: 'story',
     at: at('story', 1, 2),
     title: 'Words on a screen',
-    teaches: 'Text is state an actor carries; drawing it is a separate job.',
-    task: 'A speech box with a line in it, wrapped to fit, anchored where you want it.',
+    teaches:
+      'Drawn text is one line of canvas; a paragraph is a column and a wrap.',
+    task: 'A sentence longer than the world, drawn as one line. Put it in something that can hold it.',
     requires: ['memory/world-state', 'look/drawing'],
     unlocks: [
       {kind: 'actor', id: 'speechBox'},
@@ -1754,9 +1755,24 @@ export const TILES: readonly Tile[] = [
     ],
     check: {
       kind: 'outcome',
-      says: 'The text drawn is the text set, and changing the property changes what is drawn.',
+      says: 'A Speech Box is in the world saying the line, and the Label is not.',
       falsePass:
-        'A fixed string in the drawing. Setting the property is what has to move it.',
+        'Shortening the line until it fits the Label, which is a real answer to "it does not fit" and not to this — the check reads the whole sentence back off the Speech Box, so the words have to have moved rather than been trimmed.',
+      run: {
+        probes: {
+          said: {kind: 'property', of: 'Speech Box', name: 'text'},
+          labels: {kind: 'actorCount', of: 'Label'},
+        },
+        trace: [{seconds: 0.1}],
+      },
+      passes: ({samples}) => {
+        const said = lastList<string>(samples.said);
+        return (
+          lastNumber(samples.labels) === 0 &&
+          said.length === 1 &&
+          said[0].length > 60
+        );
+      },
     },
   },
   {
@@ -1782,15 +1798,39 @@ export const TILES: readonly Tile[] = [
     at: at('story', 1, 3),
     title: 'At reading pace',
     teaches:
-      'Something that happens over time, and the click that says "all of it, now".',
-    task: 'Show a line a few letters at a time, and let an impatient reader skip to the end.',
+      'One rule writes a property a few letters at a time; another draws whatever it says.',
+    task: 'A line that is simply there before anybody has read it. Type it out, and let a reader skip.',
     requires: ['story/text'],
-    unlocks: [{kind: 'rule', id: 'reveals'}],
+    unlocks: [
+      {kind: 'rule', id: 'reveals'},
+      // Electing a trait on ONE placed actor rather than on a kind: `add trait`
+      // is the runtime half of `use trait`, and this is where it is met. A
+      // GRANT rather than an offer, because an offer cannot reach a block no
+      // tile grants — inside an earned drawer, unassigned means hidden.
+      {kind: 'block', type: 'world_add_trait'},
+    ],
     check: {
       kind: 'outcome',
-      says: 'The line is partial at 0.2s, whole immediately after the skip click, and reports finishing once.',
+      says: 'A third of a second in, only part of the line is showing; a click later, all of it is.',
       falsePass:
-        'Revealing so fast it is whole at 0.2s. The partial sample is the point.',
+        'Typing it out and no way past it, which is the first half and leaves a reader who has finished waiting for the machine — and setting `text` to a shorter line, which is showing all of a line rather than some of a long one. The check reads the length at two moments, before the click and after it.',
+      run: {
+        probes: {said: {kind: 'property', of: 'Speech Box', name: 'text'}},
+        trace: [
+          {seconds: 0.3},
+          {pointer: {x: 60, y: 220, buttons: ['left']}, seconds: 0.1},
+          {pointer: {x: 60, y: 220, buttons: []}, seconds: 0.1},
+          {seconds: 0.2},
+        ],
+      },
+      passes: ({samples}) => {
+        const said = (samples.said ?? []).map(sample => {
+          const first = (sample as unknown[])[0];
+          return typeof first === 'string' ? first : '';
+        });
+        // Sample 1 is a third of a second in and sample 4 is after the click.
+        return said.length >= 5 && said[1].length < 40 && said[4].length >= 70;
+      },
     },
   },
   {

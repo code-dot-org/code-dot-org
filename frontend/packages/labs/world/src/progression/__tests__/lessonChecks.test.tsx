@@ -16,6 +16,8 @@ import {describe, expect, it} from 'vitest';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {compileProject} from '../../__tests__/support/compileProject';
+import {importStockActor} from '../../actors/importStockActor';
+import {stockActorById} from '../../actors/stock';
 import {
   importStockAnimation,
   importStockSprite,
@@ -2326,5 +2328,129 @@ describe('the waves lesson’s check', () => {
   it('refuses more Rocks at the same interval', async () => {
     const {passes} = await check('arcade/waves', harder('more'));
     expect(passes).toBe(false);
+  });
+});
+
+describe('the words lesson’s check', () => {
+  const lesson = LESSONS['story/text'];
+
+  it('refuses a line drawn off both edges', async () => {
+    const {passes} = await check('story/text', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts the line moved into a Speech Box', async () => {
+    // What importing does: the stock actor lands in the project, and the world
+    // places it — which is the lesson's two moves.
+    const withBox = importStockActor(
+      lesson.source,
+      stockActorById('speechBox')!,
+    ).source;
+    const solved = editing(withBox, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const label = rowsOf(workspace).find(
+        row => row.fields?.ACTOR === 'actors/label',
+      )!;
+      const said = inSocket(inSocket(label, 'DO')!.next!.block!, 'VALUE')!;
+      workspace.blocks.blocks[0].next = {
+        block: {
+          type: 'world_add_actor',
+          fields: {ACTOR: 'actors/speechBox'},
+          inputs: {
+            DO: {
+              block: {
+                type: 'world_set_position',
+                inputs: {
+                  ACTOR: {block: {type: 'world_this_actor'}},
+                  X: {shadow: {type: 'math_number', fields: {NUM: 20}}},
+                  Y: {shadow: {type: 'math_number', fields: {NUM: 200}}},
+                },
+                next: {
+                  block: {
+                    type: 'world_set_Writing_TextProperty',
+                    inputs: {
+                      ACTOR: {block: {type: 'world_this_actor'}},
+                      VALUE: {shadow: said},
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      };
+      return JSON.stringify(workspace);
+    });
+    const {passes, result} = await check('story/text', solved);
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+});
+
+describe('the reveal lesson’s check', () => {
+  const lesson = LESSONS['story/reveal'];
+
+  /** The Box told to reveal, and optionally to answer a click. */
+  const revealing = (skip: boolean) =>
+    editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const add = workspace.blocks.blocks[0].next!.block!;
+      const body = inSocket(add, 'DO')!;
+      // `set text` becomes `set the whole line`: the rule writes `text` from
+      // it, and the Box draws whatever `text` says at the time.
+      for (let at: Row | undefined = body; at; at = at.next?.block) {
+        if (at.type === 'world_set_Writing_TextProperty') {
+          at.type = 'world_set_RevealsText_TheWholeLineProperty';
+          break;
+        }
+      }
+      const electing2 = (trait: string, rest: Row): Row => ({
+        type: 'world_add_trait',
+        fields: {TRAIT: trait},
+        inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
+        next: {block: rest},
+      });
+      let placed: Row = electing2('Reveals Text#RevealsTextTrait', body);
+      if (skip) {
+        placed = electing2('Mouse#CanBeClickedTrait', placed);
+        workspace.blocks.blocks.push({
+          type: 'world_on_Mouse_IsClickedWithEvent',
+          x: 700,
+          y: 20,
+          fields: {FILTER0: ''},
+          inputs: {
+            ACTOR: {
+              block: {
+                type: 'world_actor_kind',
+                fields: {ACTOR: 'actors/speechBox'},
+              },
+            },
+          },
+          next: {
+            block: {
+              type: 'world_do_RevealsText_ShowAllOfItAction',
+              inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
+            },
+          },
+        } as unknown as Row);
+      }
+      add.inputs!.DO = {block: placed};
+      return JSON.stringify(workspace);
+    });
+
+  it('refuses a line that is simply there', async () => {
+    const {passes} = await check('story/reveal', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('refuses a reveal a reader cannot get past', async () => {
+    const {passes} = await check('story/reveal', revealing(false));
+    expect(passes).toBe(false);
+  });
+
+  it('accepts one that types and can be skipped', async () => {
+    const {passes, result} = await check('story/reveal', revealing(true));
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
   });
 });

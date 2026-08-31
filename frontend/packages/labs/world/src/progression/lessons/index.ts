@@ -12,12 +12,12 @@
 // Blockly JSON behind them. So `catalogue.ts` stays data about tiles, and the
 // projects live here, looked up by tile id.
 //
-// Forty of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md and
-// then some. ALL SIX FOUNDATIONS are written — Origin, Input, Motion, Logic,
+// Forty-two of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md
+// and then some. ALL SIX FOUNDATIONS are written — Origin, Input, Motion, Logic,
 // Memory, Look and Place — so every genre gate on the map is open, and the
 // first hours of the progression can be walked end to end. ARCADE is written
-// whole after them, and Platformer but for one tile: `platformer/ground` waits
-// on the engine (specs/PROGRESSION.md, "Carrying").
+// whole after them, Platformer but for one tile (`platformer/ground` waits on
+// the engine: specs/PROGRESSION.md, "Carrying"), and Story is started.
 
 import {
   actorFile,
@@ -2091,6 +2091,94 @@ changed a little each time it is used — and a period is a value like any other
 `.trim(),
 };
 
+// ── story/text ───────────────────────────────────────────────────────────────
+
+/** The line the lesson moves from one actor to another. */
+const LINE =
+  'The rain had not stopped for three days, and the road out of town was gone.';
+
+const storyText: WorldScenario = {
+  name: 'Words on a screen',
+  description:
+    'A sentence drawn as one line, running off both edges of the world.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        addActor('actors/label', [
+          placeAt(160, 160),
+          setText('TextProperty', words(LINE)),
+        ]),
+      ],
+    }),
+    stockActors: ['label'],
+  }),
+  instructions: `
+## Words on a screen
+
+A Label says the line, and the line is longer than the world. Drawn text is
+**one line of canvas**: it does not wrap, it does not know how wide the screen
+is, and it ignores every newline you put in it.
+
+A sentence needs a **paragraph** — words laid out in a column of a given width
+— and the stock **Speech Box** is an actor that draws one, with a panel behind
+it so the words can be read against anything.
+
+### What you do
+
+1. Add an actor, and use the \`(import…)\` row on its dropdown to bring in the
+   **Speech Box**.
+2. Put it near the bottom of the screen and **set its text** to the line.
+3. Run it. The same sentence, wrapped into the panel — and the box grows
+   DOWNWARD as it fills, because it is anchored at its top left.
+4. Delete the Label. Open the Speech Box and read its drawing: a rectangle, an
+   outline, and \`draw paragraph\` in a column the width of the panel.
+`.trim(),
+};
+
+// ── story/reveal ─────────────────────────────────────────────────────────────
+
+const reveal: WorldScenario = {
+  name: 'At reading pace',
+  description:
+    'A line that is simply there, all at once, before anybody has read a word.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        addActor('actors/speechBox', [
+          placeAt(20, 200),
+          setText('TextProperty', words(LINE)),
+        ]),
+      ],
+    }),
+    stockActors: ['speechBox'],
+    rules: ['reveals', 'mouse'],
+  }),
+  instructions: `
+## At reading pace
+
+The whole line is on screen before the player has looked at it. That is what
+setting **text** does: it is the words the box is showing, and it shows them
+the moment they are set.
+
+**Reveals Text** writes that property for you, a few letters a second. The box
+draws whatever \`text\` says right now — it knows nothing about revealing — and
+the rule knows nothing about boxes. Between them you get a typewriter.
+
+### What you do
+
+1. Give the Speech Box **use trait ⟨Reveals Text⟩**.
+2. Set **the whole line** to the sentence instead of setting \`text\`, and run
+   it. The words arrive at reading pace.
+3. Change **letters a second** and run it again.
+4. A reader who has read it faster than you are typing it wants to skip. Give
+   the Box **use trait ⟨Can Be Clicked⟩**, and in a
+   **when ⟨any Speech Box⟩ is clicked** handler put
+   **show all of it on ⟨this actor⟩**.
+`.trim(),
+};
+
 // ── place/edges ──────────────────────────────────────────────────────────────
 
 const edges: WorldScenario = {
@@ -2467,6 +2555,8 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'arcade/shoot': shoot,
   'arcade/bricks': bricks,
   'arcade/waves': waves,
+  'story/text': storyText,
+  'story/reveal': reveal,
 };
 
 /** Every lesson written so far, by the tile it belongs to. */

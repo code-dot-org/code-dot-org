@@ -114,6 +114,8 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
     'world_all_actors',
   ],
   'arcade/waves': ['math_arithmetic'],
+  'story/text': ['world_add_actor', 'world_set_position'],
+  'story/reveal': ['world_add_trait'],
   'platformer/level': [
     'controls_if',
     'world_is_a',
