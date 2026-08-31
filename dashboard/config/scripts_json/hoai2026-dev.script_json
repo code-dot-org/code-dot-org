@@ -366,54 +366,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "hoai2026-dev-panels-music"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "hoai2026-dev-panels-music"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "hoai2026-dev",
-        "activity_section.key": "5f274703-fce0-44f3-ac27-9df0a8406534"
-      },
-      "level_keys": [
-        "hoai2026-dev-panels-music"
-      ]
-    },
-    {
-      "chapter": 14,
-      "position": 14,
-      "activity_section_position": 14,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "hoai2026-dev-spritelab-lab2-music"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "hoai2026-dev-spritelab-lab2-music"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "hoai2026-dev",
-        "activity_section.key": "5f274703-fce0-44f3-ac27-9df0a8406534"
-      },
-      "level_keys": [
-        "hoai2026-dev-spritelab-lab2-music"
-      ]
-    },
-    {
-      "chapter": 15,
-      "position": 15,
-      "activity_section_position": 15,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "hoai2026-dev-panels-freeplay"
         ]
       },
@@ -432,9 +384,9 @@
       ]
     },
     {
-      "chapter": 16,
-      "position": 16,
-      "activity_section_position": 16,
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -618,30 +570,6 @@
         "level.key": "hoai2026-dev-panels-goal",
         "script_level.level_keys": [
           "hoai2026-dev-panels-goal"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "hoai2026-dev",
-        "activity_section.key": "5f274703-fce0-44f3-ac27-9df0a8406534"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "hoai2026-dev-panels-music",
-        "script_level.level_keys": [
-          "hoai2026-dev-panels-music"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "hoai2026-dev",
-        "activity_section.key": "5f274703-fce0-44f3-ac27-9df0a8406534"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "hoai2026-dev-spritelab-lab2-music",
-        "script_level.level_keys": [
-          "hoai2026-dev-spritelab-lab2-music"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
