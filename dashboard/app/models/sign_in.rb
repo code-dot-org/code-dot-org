@@ -20,7 +20,7 @@ class SignIn < ApplicationRecord
   data_classification(
     id: :confidential,
     user_id: :confidential,
-    stable_id: :confidential,
+    anon_user_id: :confidential,
     sign_in_at: :confidential,
     sign_in_count: :confidential,
   )

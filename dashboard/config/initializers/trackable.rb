@@ -6,7 +6,7 @@ module OverrideUpdateTrackedFields
     if persisted? && id
       SignIn.create(
         user_id: id,
-        stable_id: Cdo::UUID.valid_value(request.session[:statsig_stable_id]),
+        anon_user_id: Cdo::UUID.valid_value(request.session[:statsig_stable_id]),
         sign_in_at: DateTime.now,
         sign_in_count: sign_in_count
       )
