@@ -1,3 +1,4 @@
+@playwright
 Feature: Checking the footer appearance
 
   @eyes
@@ -64,7 +65,6 @@ Feature: Checking the footer appearance
 
     Then I close my eyes
 
-  # TODO: Fix and re-enable (find #sharing-dialog-copy-button element)
   @eyes @skip
   Scenario: Desktop Minecraft share small footer
     When I open my eyes to test "Desktop Minecraft share small footer"
@@ -149,7 +149,6 @@ Feature: Checking the footer appearance
 
     Then I close my eyes
 
-  # TODO: Fix and re-enable (find #sharing-dialog-copy-button element)
   @eyes_mobile @skip
   Scenario: Mobile Minecraft share small footer
     When I open my eyes to test "Mobile Minecraft share small footer"
