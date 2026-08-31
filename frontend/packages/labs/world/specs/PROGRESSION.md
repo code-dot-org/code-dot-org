@@ -454,13 +454,13 @@ The first thing anybody wants is for something to move when they press a key.
 
 ### Genre: Puzzle — entered from Logic and Memory
 
-| Tile           | The lesson                                                          | Unlocks                                     | Check                                                             |
-| -------------- | ------------------------------------------------------------------- | ------------------------------------------- | ----------------------------------------------------------------- |
-| `puzzle/grid`  | A player that slides between the tiles and walks through the walls. | Grid rule; `Fills a Tile`                   | `[o]` four scripted presses land the player exactly four tiles on |
-| `puzzle/push`  | A crate that stops you dead. Change one word and push it.           | `Can Be Pushed`                             | `[o]` a crate moves one tile and stops at a wall                  |
-| `puzzle/goal`  | Counting what is not yet done, and saying so.                       | **Goals rule (new)**                        | `[o]` the win fires on the last crate and not before              |
-| `puzzle/turns` | Everybody moves, then the world moves.                              | **Turns rule (new)**                        | `[o]` an enemy steps exactly once per player step                 |
-| `puzzle/undo`  | Taking it back — which means the world has a history.               | **History rule (new)**; the puzzle template | `[o]` undo restores the previous positions exactly                |
+| Tile           | The lesson                                                                 | Unlocks                                     | Check                                                                        |
+| -------------- | -------------------------------------------------------------------------- | ------------------------------------------- | ---------------------------------------------------------------------------- |
+| `puzzle/grid`  | A player that slides between the tiles and walks through the walls.        | Grid rule; `Fills a Tile`                   | `[o]` four scripted presses land the player exactly four tiles on            |
+| `puzzle/push`  | A crate that stops you dead. Change one word and push it.                  | `Can Be Pushed`                             | `[o]` a crate moves one tile and stops at a wall                             |
+| `puzzle/goal`  | Two crates, two marks, and a puzzle that can be solved and never finishes. | Goals rule                                  | `[o]`+`[s]` the win fires on the second crate, and leaving a mark counts too |
+| `puzzle/turns` | Everybody moves, then the world moves.                                     | **Turns rule (new)**                        | `[o]` an enemy steps exactly once per player step                            |
+| `puzzle/undo`  | Taking it back — which means the world has a history.                      | **History rule (new)**; the puzzle template | `[o]` undo restores the previous positions exactly                           |
 
 ### Genre: Story — entered from Memory and Look
 
@@ -575,16 +575,15 @@ point of the exercise. Here is what it asks for and the lab has not got.
 The stock library is thirty rules (`src/rules/stock/index.ts`) and it covers
 most of this. These are the holes, each named by the tile that found it.
 
-| Rule                  | Wanted by             | What it is                                                                                                                                                                                                             |
-| --------------------- | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Goals**             | every genre capstone  | Won, lost, over, restart. Every fixture writes its own end state, and the phrase "what winning looks like is the project's to say" appears in Scoring's own description. There is still a shape common to all of them. |
-| **Scenes**            | `adventure/rooms`     | Advance to another map, carrying what should carry. `clear world` + `load map` are the pieces; nothing holds the idea.                                                                                                 |
-| **Turns**             | `puzzle/turns`        | A turn order: the player acts, then everybody else acts once.                                                                                                                                                          |
-| **History**           | `puzzle/undo`         | A stack of world states and a step back. The hardest of these, and the most valuable — undo is what makes a puzzle game forgiving.                                                                                     |
-| **Inventory**         | `adventure/keys`      | Carrying a named thing, spending it. Collection counts what was picked up; this is about consuming one.                                                                                                                |
-| **Path**              | adventure/sim enemies | Step toward a target around walls. Steering is continuous and walks into corners.                                                                                                                                      |
-| **Spawner**           | `arcade/waves`        | Time + `add actor` expresses it; a named rule makes it one unlock and one lesson instead of five blocks.                                                                                                               |
-| **One-way platforms** | `platformer/ground`   | Solid from above, passable from below. A trait on Solid Bodies, probably, not a rule.                                                                                                                                  |
+| Rule                  | Wanted by             | What it is                                                                                                                         |
+| --------------------- | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| **Scenes**            | `adventure/rooms`     | Advance to another map, carrying what should carry. `clear world` + `load map` are the pieces; nothing holds the idea.             |
+| **Turns**             | `puzzle/turns`        | A turn order: the player acts, then everybody else acts once.                                                                      |
+| **History**           | `puzzle/undo`         | A stack of world states and a step back. The hardest of these, and the most valuable — undo is what makes a puzzle game forgiving. |
+| **Inventory**         | `adventure/keys`      | Carrying a named thing, spending it. Collection counts what was picked up; this is about consuming one.                            |
+| **Path**              | adventure/sim enemies | Step toward a target around walls. Steering is continuous and walks into corners.                                                  |
+| **Spawner**           | `arcade/waves`        | Time + `add actor` expresses it; a named rule makes it one unlock and one lesson instead of five blocks.                           |
+| **One-way platforms** | `platformer/ground`   | Solid from above, passable from below. A trait on Solid Bodies, probably, not a rule.                                              |
 
 ### Blocks the concept half wants and the vocabulary lacks
 

@@ -12,13 +12,12 @@
 // Blockly JSON behind them. So `catalogue.ts` stays data about tiles, and the
 // projects live here, looked up by tile id.
 //
-// Fifty-nine of sixty-seven, and the eight that are left are all waiting on
-// the same thing: a rule or a block the library has not got. Every other tile
+// Sixty of sixty-seven, and the seven that are left are all waiting on the
+// same thing: a rule or a block the library has not got. Every other tile
 // on the map has a lesson, a starting project and a check tested in both
 // directions.
 //
 //   puzzle/turns           a Turns rule
-//   puzzle/goal            a Goals rule
 //   puzzle/undo            a History rule
 //   adventure/rooms        a Scenes rule
 //   adventure/keys         an Inventory rule
@@ -3632,6 +3631,114 @@ lift rides every lift.
 `.trim(),
 };
 
+// ── puzzle/goal ──────────────────────────────────────────────────────────────
+
+const goal: WorldScenario = {
+  name: 'Counted, not declared',
+  description: 'Two crates, two marks, and a puzzle that cannot be finished.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        createInMap(local('wall'), wallsRound()),
+        // Two tiles apart, not one: boxes are a tile square, so marks in
+        // touching tiles are both touched by one crate — and a count that
+        // reached two from one crate would win the puzzle on its own.
+        addActor(local('mark'), [placeAt(240, 144)]),
+        addActor(local('mark'), [placeAt(240, 208)]),
+        addActor(local('crate'), [placeAt(144, 144)]),
+        addActor(local('crate'), [placeAt(144, 208)]),
+        addActor(local('player'), [placeAt(80, 144)]),
+        {
+          type: 'world_set_Scoring_TargetScoreProperty',
+          inputs: {VALUE: num(2)},
+        },
+      ],
+      actors: [
+        {
+          id: 'player',
+          name: 'Player',
+          rows: [
+            useTrait('Grid#StepsOnTheGridTrait'),
+            useTrait('Input#TakesKeyboardInputTrait'),
+            setSprite('player.png'),
+          ],
+        },
+        {
+          id: 'crate',
+          name: 'Crate',
+          rows: [
+            useTrait('Grid#FillsATileTrait'),
+            useTrait('Grid#CanBePushedTrait'),
+            useTrait('Collisions#CanCollideTrait'),
+            setSprite('box.png'),
+          ],
+        },
+        {
+          // A mark is paint on the floor: it collides, so a Crate arriving on
+          // one is a thing that can be noticed, and it does NOT fill its tile,
+          // or nothing could ever be pushed onto it.
+          id: 'mark',
+          name: 'Mark',
+          rows: [
+            useTrait('Collisions#CanCollideTrait'),
+            // A SMALL box, deliberately. A tile-sized one is touched by a
+            // crate in the next tile along — boxes a tile wide meet at the
+            // edge — so a crate one push short of the mark would already
+            // count as being on it.
+            {
+              type: 'world_set_Collisions_SizeProperty',
+              inputs: {ACTOR: me(), X: num(8), Y: num(8)},
+            },
+            setSprite('coin.png'),
+          ],
+        },
+        {
+          id: 'wall',
+          name: 'Wall',
+          rows: [useTrait('Grid#FillsATileTrait'), setSprite('ground.png')],
+        },
+      ],
+      handlers: [
+        stepOn('left arrow', 'StepLeft'),
+        stepOn('right arrow', 'StepRight'),
+        stepOn('up arrow', 'StepUp'),
+        stepOn('down arrow', 'StepDown'),
+      ],
+    }),
+    sprites: ['player', 'box', 'coin', 'ground'],
+    rules: ['input', 'grid', 'collisions', 'score', 'goals'],
+  }),
+  instructions: `
+## Counted, not declared
+
+Push both Crates onto the Marks. It works, and then nothing happens, because
+nothing in this world has an opinion about being finished.
+
+You could count the moves — a solution is twelve steps, so win on the twelfth —
+and
+it would pass the first time and fail every other way of solving it. **A win
+condition is a question about the world**: how many Crates are where they
+should be, asked at the moment that could have changed.
+
+Arriving and leaving are both such moments. A Crate pushed off a Mark is a
+puzzle that is no longer solved, and a count that only ever went up would have
+won anyway.
+
+### What you do
+
+1. Add **when ⟨any Crate⟩ starts touching**, and in it ask
+   **if ⟨event actor⟩ is a ⟨Mark⟩ → add ⟨1⟩ to the score**.
+2. Add **when ⟨any Crate⟩ stops touching** with the same question and
+   **add ⟨-1⟩**. The count now says how many are on marks right now, rather
+   than how many ever have been.
+3. The world already sets **target score** to 2 — one per Mark. Add
+   **when the target is reached → win the game**.
+4. Solve it. Nothing is said until the second Crate lands, and pushing one off
+   and back on does not win it twice: an ending happens once.
+`.trim(),
+};
+
 // ── place/edges ──────────────────────────────────────────────────────────────
 
 const edges: WorldScenario = {
@@ -4018,6 +4125,7 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'making/property': ruleProperty,
   'puzzle/grid': grid,
   'puzzle/push': push,
+  'puzzle/goal': goal,
   'adventure/people': people,
   'adventure/errand': errand,
   'making/change': changeRule,

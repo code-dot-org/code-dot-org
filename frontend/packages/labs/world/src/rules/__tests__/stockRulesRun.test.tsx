@@ -1262,3 +1262,80 @@ describe('Carrying', () => {
     expect(spot(rider).x).toBeCloseTo(160, 0);
   });
 });
+
+describe('Goals', () => {
+  /** A world with an ending, and a banner listening for one. */
+  const game = () => {
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([rule('rules/goals')])
+      .instantiate();
+    const heard: string[] = [];
+    const banner = new ActorBuilder({id: 'banner', name: 'banner'})
+      .useTraits([of('rules/goals', 'WatchesTheEndingTrait')])
+      .instantiate('banner');
+    banner.on(of('rules/goals', 'SeesTheGameWonEvent'), () => {
+      heard.push('won');
+    });
+    banner.on(of('rules/goals', 'SeesTheGameLostEvent'), () => {
+      heard.push('lost');
+    });
+    banner.on(of('rules/goals', 'SeesANewGameEvent'), () => {
+      heard.push('again');
+    });
+    world.addActor(banner);
+    /**
+     * Perform one of the rule's world actions, and let the frame deliver what
+     * it raised — an event goes on a queue the tick drains.
+     */
+    const say = (name: string) => {
+      world.act(of('rules/goals', name));
+      world.tick(1 / 60);
+    };
+    const flag = (name: string) =>
+      world.get(of('rules/goals', name)) as unknown as boolean;
+    return {world, heard, say, flag};
+  };
+
+  it('remembers which ending happened, and tells the actors watching', () => {
+    const {heard, say, flag} = game();
+
+    say('WinTheGameAction');
+
+    expect(flag('WonProperty')).toBe(true);
+    expect(flag('LostProperty')).toBe(false);
+    expect(heard).toEqual(['won']);
+  });
+
+  it('lets the first ending stand', () => {
+    // The thing every project got slightly wrong on its own: a player who
+    // reaches the flag as the last spike touches them sees ONE ending, and
+    // which one is decided by which happened first.
+    const {heard, say, flag} = game();
+
+    say('WinTheGameAction');
+    say('LoseTheGameAction');
+    say('WinTheGameAction');
+
+    expect(flag('LostProperty')).toBe(false);
+    expect(heard).toEqual(['won']);
+  });
+
+  it('goes back to neither, and says so', () => {
+    // Both flags, and the event where a project puts the level back — this
+    // rule has never seen the level and cannot rebuild it.
+    const {heard, say, flag} = game();
+
+    say('LoseTheGameAction');
+    say('StartAgainAction');
+
+    expect(flag('WonProperty')).toBe(false);
+    expect(flag('LostProperty')).toBe(false);
+    expect(heard).toEqual(['lost', 'again']);
+
+    // …and a game that has started again can end again, which is the half a
+    // reset that only cleared `won` would have got wrong.
+    say('WinTheGameAction');
+
+    expect(heard).toEqual(['lost', 'again', 'won']);
+  });
+});

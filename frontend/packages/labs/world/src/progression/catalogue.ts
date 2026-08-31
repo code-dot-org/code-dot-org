@@ -1781,14 +1781,60 @@ export const TILES: readonly Tile[] = [
     title: 'Counted, not declared',
     teaches:
       'A win condition is a question about the world, asked at the right moment.',
-    task: 'Marks on the floor. Win when no crate is left off one — and not a move earlier.',
+    task: 'Two crates, two marks, and a puzzle that can be solved and never finishes.',
     requires: ['puzzle/push'],
-    unlocks: [{kind: 'rule', id: 'goals', proposed: true}],
+    unlocks: [{kind: 'rule', id: 'goals'}],
+    offers: [
+      {kind: 'block', type: 'controls_if'},
+      {kind: 'block', type: 'world_is_a'},
+      {kind: 'block', type: 'world_event_actor'},
+      {kind: 'block', type: 'math_number'},
+    ],
     check: {
       kind: 'outcome',
-      says: 'The win fires on the last crate and not before, over a scripted solution.',
+      says: 'A scripted solution wins on the second crate and not on the first.',
       falsePass:
-        'Winning on a move count. Solve it a longer way in a second trace.',
+        'Counting arrivals only, which reaches two at the same moment here and is wrong the first time a crate is pushed OFF a mark — one trace cannot tell them apart, so the shape half asks for the leaving handler as well as the arriving one. Winning on a move count is refused by the same half: it has no handlers at all.',
+      run: {
+        probes: {
+          won: {kind: 'worldProperty', path: 'Goals.won'},
+          crates: {kind: 'positions', of: 'Crate'},
+        },
+        // Four pushes right to land the first crate, three steps back, two
+        // down, and three more to land the second.
+        trace: [
+          'ArrowRight',
+          'ArrowRight',
+          'ArrowRight',
+          'ArrowRight',
+          'ArrowLeft',
+          'ArrowLeft',
+          'ArrowLeft',
+          'ArrowDown',
+          'ArrowDown',
+          'ArrowRight',
+          'ArrowRight',
+          'ArrowRight',
+        ].flatMap(key => [{hold: [key], seconds: 0.1}, {seconds: 0.2}]),
+      },
+      inspect: files => {
+        const world = files['worlds/main.world'] ?? '';
+        return (
+          world.includes('world_on_Collisions_StartsTouchingEvent') &&
+          world.includes('world_on_Collisions_StopsTouchingEvent')
+        );
+      },
+      passes: ({samples}) => {
+        const won = (samples.won ?? []).map(value => value === true);
+        // How many crates are on a mark at each moment: the marks are at 240,
+        // and a crate committed to that tile is within a few pixels of it.
+        const placed = (samples.crates ?? []).map(
+          sample =>
+            (sample as {x: number}[]).filter(crate => crate.x >= 232).length,
+        );
+        const early = won.every((yes, at) => !yes || placed[at] === 2);
+        return early && won[won.length - 1] === true;
+      },
     },
   },
   {

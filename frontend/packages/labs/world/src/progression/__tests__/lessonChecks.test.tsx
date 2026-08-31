@@ -3704,3 +3704,96 @@ describe('the moving-ground lesson’s check', () => {
     expect(passes).toBe(false);
   });
 });
+
+describe('the goal lesson’s check', () => {
+  const lesson = LESSONS['puzzle/goal'];
+
+  /** Counting the crates on marks, with or without the leaving half. */
+  const counting = (options: {down: boolean; win: boolean}) =>
+    editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const onAMark = (by: number): Row => ({
+        type: 'controls_if',
+        inputs: {
+          IF0: {
+            block: {
+              type: 'world_is_a',
+              fields: {TYPE: local('mark')},
+              inputs: {ACTOR: {block: {type: 'world_event_actor'}}},
+            },
+          },
+          DO0: {
+            block: {
+              type: 'world_do_Scoring_AddToTheScoreAction',
+              inputs: {
+                VALUE: {shadow: {type: 'math_number', fields: {NUM: by}}},
+              },
+            },
+          },
+        },
+      });
+      const crate = () => ({
+        block: {type: 'world_actor_kind', fields: {ACTOR: local('crate')}},
+      });
+      workspace.blocks.blocks.push({
+        type: 'world_on_Collisions_StartsTouchingEvent',
+        x: 1400,
+        y: 20,
+        fields: {FILTER0: ''},
+        inputs: {ACTOR: crate()},
+        next: {block: onAMark(1)},
+      } as unknown as Row);
+      if (options.down) {
+        workspace.blocks.blocks.push({
+          type: 'world_on_Collisions_StopsTouchingEvent',
+          x: 1400,
+          y: 220,
+          fields: {FILTER0: ''},
+          inputs: {ACTOR: crate()},
+          next: {block: onAMark(-1)},
+        } as unknown as Row);
+      }
+      if (options.win) {
+        workspace.blocks.blocks.push({
+          type: 'world_on_Scoring_TheTargetIsReachedEvent',
+          x: 1400,
+          y: 420,
+          next: {block: {type: 'world_do_Goals_WinTheGameAction'}},
+        } as unknown as Row);
+      }
+      return JSON.stringify(workspace);
+    });
+
+  it('refuses a puzzle that can be solved and never finishes', async () => {
+    const {passes} = await check('puzzle/goal', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts a count that goes both ways, ending the game', async () => {
+    const {passes, result} = await check(
+      'puzzle/goal',
+      counting({down: true, win: true}),
+    );
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  // Counting arrivals only reaches two at the same moment in THIS solution, so
+  // the run cannot tell it apart — the shape half is what does, and it is the
+  // half the lesson is about: leaving is a moment too.
+  it('refuses a count that only ever goes up', async () => {
+    const {passes} = await check(
+      'puzzle/goal',
+      counting({down: false, win: true}),
+    );
+    expect(passes).toBe(false);
+  });
+
+  it('refuses a count that ends nothing', async () => {
+    const {passes} = await check(
+      'puzzle/goal',
+      counting({down: true, win: false}),
+    );
+    expect(passes).toBe(false);
+  });
+});

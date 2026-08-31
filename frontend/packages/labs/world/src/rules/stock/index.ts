@@ -25,6 +25,7 @@ import {conversationRule} from './conversation';
 import {dragRule} from './drag';
 import {driveRule} from './drive';
 import {expiresRule} from './expires';
+import {goalsRule} from './goals';
 import {gravityRule} from './gravity';
 import {gridRule} from './grid';
 import {healthRule} from './health';
@@ -225,6 +226,15 @@ export const STOCK_RULES: readonly StockRule[] = [
     contents: scoreRule,
   },
   {
+    id: 'goals',
+    name: 'Goals',
+    ability: 'Has an Ending',
+    description:
+      'Won, lost, and the way back to neither \u2014 the two moments every game has, in one place that guards them. The first ending is the one that counts; what winning LOOKS like is still the project\u2019s.',
+    provides: ['Watches the Ending'],
+    contents: goalsRule,
+  },
+  {
     id: 'input',
     name: 'Input',
     ability: 'Responds to Input',
@@ -423,6 +433,7 @@ export {
   scoreRule,
   patrolRule,
   carryRule,
+  goalsRule,
   attachmentRule,
   progressRule,
 };

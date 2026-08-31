@@ -48,6 +48,7 @@ const RULES = [
   'cameraDeadzone',
   'grid',
   'carry',
+  'goals',
 ];
 
 const check = process.argv.includes('--check');
