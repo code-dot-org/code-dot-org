@@ -164,7 +164,7 @@ class ActivitiesController < ApplicationController
     test_result = params[:testResult].to_i
 
     if @script_level && @level
-      stable_id = session[:statsig_stable_id]
+      anon_user_id = session[:statsig_stable_id]
       submitted = params[:submitted] == 'true'
       # convert milliseconds to seconds
       time_since_last_milestone = [(params[:timeSinceLastMilestone].to_f / 1000).ceil.to_i, MAX_INT_TIME_SPENT].min
@@ -184,7 +184,7 @@ class ActivitiesController < ApplicationController
         )
       else
         Services::AnonymousLevelProgress::Tracker.call(
-          stable_id:,
+          anon_user_id:,
           script_id: @script_level.script_id,
           level_id: @level.id,
           unit_group_id: @unit_group&.id,
@@ -221,7 +221,7 @@ class ActivitiesController < ApplicationController
           )
         else
           Services::AnonymousLevelProgress::Tracker.call(
-            stable_id:,
+            anon_user_id:,
             script_id: @script_level.script_id,
             level_id: bubble_choice_parent_level.id,
             unit_group_id: @unit_group&.id,

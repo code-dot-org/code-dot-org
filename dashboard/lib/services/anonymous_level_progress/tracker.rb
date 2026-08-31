@@ -3,11 +3,11 @@
 module Services
   module AnonymousLevelProgress
     class Tracker < Services::Base
-      attr_reader :stable_id, :script_id, :level_id, :new_result, :submitted, :unit_group_id, :level_source_id,
+      attr_reader :anon_user_id, :script_id, :level_id, :new_result, :submitted, :unit_group_id, :level_source_id,
                   :is_navigator, :time_spent, :locale
 
       def initialize(
-        stable_id:,
+        anon_user_id:,
         script_id:,
         level_id:,
         submitted:,
@@ -18,9 +18,9 @@ module Services
         time_spent: nil,
         locale: nil
       )
-        @stable_id = stable_id
-        @script_id = script_id
-        @level_id  = level_id
+        @anon_user_id = anon_user_id
+        @script_id    = script_id
+        @level_id     = level_id
 
         @level_source_id = level_source_id
         @unit_group_id   = unit_group_id
@@ -34,7 +34,7 @@ module Services
       def call
         if DCDO.get('anonymous_level_progress_tracking_enabled', false)
           Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-            anonymous_level_progress = ::AnonymousLevelProgress.find_or_initialize_by(stable_id:, script_id:, level_id:)
+            anonymous_level_progress = ::AnonymousLevelProgress.find_or_initialize_by(anon_user_id:, script_id:, level_id:)
 
             anonymous_level_progress.update_progress!(
               new_result:,
@@ -50,7 +50,7 @@ module Services
           CDO.log.info JSON.dump(
             namespace: 'anonymous_level_progress',
             event: 'tracking',
-            stable_id:,
+            anon_user_id:,
             script_id:,
             level_id:,
             unit_group_id:,

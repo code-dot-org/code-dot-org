@@ -5,7 +5,7 @@
 # Table name: anonymous_level_progresses
 #
 #  id              :bigint           not null, primary key
-#  stable_id       :string(36)       not null
+#  anon_user_id    :string(36)       not null
 #  script_id       :integer          not null
 #  level_id        :integer          not null
 #  unit_group_id   :integer
@@ -20,7 +20,7 @@
 #
 # Indexes
 #
-#  index_anonymous_level_progresses_on_unique_stable_script_level  (stable_id,script_id,level_id) UNIQUE
+#  index_anonymous_level_progresses_on_unique_anon_script_level  (anon_user_id,script_id,level_id) UNIQUE
 #
 class AnonymousLevelProgress < ApplicationRecord
   include LevelProgressable
@@ -29,7 +29,7 @@ class AnonymousLevelProgress < ApplicationRecord
 
   data_classification(
     id: :confidential,
-    stable_id: :confidential,
+    anon_user_id: :confidential,
     script_id: :confidential,
     level_id: :confidential,
     unit_group_id: :confidential,
@@ -43,7 +43,7 @@ class AnonymousLevelProgress < ApplicationRecord
     updated_at: :confidential,
   )
 
-  validates :stable_id, presence: true, uniqueness: {scope: %i[script_id level_id]}
+  validates :anon_user_id, presence: true, uniqueness: {scope: %i[script_id level_id]}
   validates :script_id, presence: true
   validates :level_id, presence: true
 end
