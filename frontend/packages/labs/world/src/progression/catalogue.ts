@@ -2457,8 +2457,8 @@ export const TILES: readonly Tile[] = [
     at: at('story', 3, 3),
     title: 'Your own vocabulary',
     teaches:
-      'A function: one name for something you had written out three times, with the parts that vary as parameters.',
-    task: 'Find the three places your script says the same thing, and give them a block of their own.',
+      'A function: one name for something you had written out twice, with the parts that vary as parameters.',
+    task: 'The same sum in two steps with one number different. Give it a name.',
     requires: ['story/scene'],
     unlocks: [
       {kind: 'block', type: 'world_rule_block'},
@@ -2466,9 +2466,38 @@ export const TILES: readonly Tile[] = [
     ],
     check: {
       kind: 'outcome',
-      says: 'The block is called from two places with different arguments, and both do the right thing.',
+      says: 'One block, called from both steps, and the two still bob by different amounts.',
       falsePass:
-        'A block with no parameters called twice, which is a shortcut and not an abstraction.',
+        'A block with no parameters called twice, which is a shortcut rather than an abstraction — and makes both of them bob the same, since the number that differed has nowhere to go. The shape half asks for a parameter and for two call sites; the run half asks that the two still differ.',
+      run: {
+        probes: {
+          cork: {kind: 'positions', of: 'Cork'},
+          buoy: {kind: 'positions', of: 'Buoy'},
+        },
+        trace: Array.from({length: 8}, () => ({seconds: 0.15})),
+      },
+      inspect: files => {
+        const rule = files['rules/bobbing.rule'] ?? '';
+        const defined = blockIn({rule}, 'world_rule_block');
+        const parts = (
+          defined as {extraState?: {parts?: {kind: string}[]}} | undefined
+        )?.extraState?.parts;
+        const takesOne = (parts ?? []).some(part => part.kind === 'param');
+        // Called from both steps: the generated query, twice in the file.
+        const calls = rule.split('world_query_Bobbing_').length - 1;
+        return takesOne && calls >= 2;
+      },
+      passes: ({samples}) => {
+        const bob = (name: string) => {
+          const path = (samples[name] ?? []).map(
+            sample => (sample as {y: number}[])[0]?.y ?? 0,
+          );
+          return Math.max(...path) - Math.min(...path);
+        };
+        const gentle = bob('cork');
+        const wild = bob('buoy');
+        return gentle > 5 && wild > gentle * 2;
+      },
     },
   },
   {

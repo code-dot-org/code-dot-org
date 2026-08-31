@@ -12,7 +12,7 @@
 // Blockly JSON behind them. So `catalogue.ts` stays data about tiles, and the
 // projects live here, looked up by tile id.
 //
-// Fifty-seven of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md
+// Fifty-eight of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md
 // and then some. ALL SIX FOUNDATIONS are written — Origin, Input, Motion, Logic,
 // Memory, Look and Place — so every genre gate on the map is open, and the
 // first hours of the progression can be walked end to end. ARCADE is written
@@ -3399,6 +3399,147 @@ them.
 `.trim(),
 };
 
+// ── making/block ─────────────────────────────────────────────────────────────
+
+/** `⟨sin of ⟨time × 6⟩⟩ × ⟨amount⟩` — the sum this lesson gives a name to. */
+const bobBy = (amount: number) => ({
+  type: 'math_arithmetic',
+  fields: {OP: 'MULTIPLY'},
+  inputs: {
+    A: {
+      block: {
+        type: 'math_single',
+        fields: {OP: 'SIN'},
+        inputs: {
+          NUM: {
+            block: {
+              type: 'math_arithmetic',
+              fields: {OP: 'MULTIPLY'},
+              inputs: {A: {block: {type: 'world_time'}}, B: num(6)},
+            },
+          },
+        },
+      },
+    },
+    B: num(amount),
+  },
+});
+
+/** One trait of the Bobbing rule: a step that moves y by the sum above. */
+const bobTrait = (name: string, step: string, amount: number, y: number) => ({
+  type: 'world_rule_trait',
+  x: 20,
+  y,
+  fields: {NAME: name},
+  next: {
+    block: {
+      type: 'world_use_trait',
+      fields: {TRAIT: 'Space#PositionalTrait'},
+      next: {
+        block: {
+          type: 'world_trait_step',
+          // The step's name has to be its own: a rule's steps become named
+          // constants in one module, so two called `bob` are one identifier
+          // declared twice and a rule that will not load.
+          fields: {PHASE: 'move', NAME: step},
+          inputs: {
+            DO: {
+              block: {
+                type: 'world_set_position',
+                inputs: {
+                  ACTOR: me(),
+                  X: heldPosition('x'),
+                  Y: {
+                    block: {
+                      type: 'math_arithmetic',
+                      fields: {OP: 'ADD'},
+                      inputs: {A: heldPosition('y'), B: {block: bobBy(amount)}},
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+});
+
+const BOBBING_RULE = JSON.stringify(
+  {
+    blocks: {
+      blocks: [
+        {
+          type: 'world_rule',
+          x: 20,
+          y: 20,
+          fields: {NAME: 'Bobbing', ABILITY: 'Bobs'},
+          next: {block: {type: 'world_use_rule', fields: {RULE: 'Space'}}},
+        },
+        bobTrait('Bobs Gently', 'bob gently', 1, 160),
+        bobTrait('Bobs Wildly', 'bob wildly', 4, 420),
+      ],
+    },
+  },
+  null,
+  2,
+);
+
+const ownBlock: WorldScenario = {
+  levelData: {showFileBrowser: true},
+  name: 'Your own vocabulary',
+  description: 'The same sum written out twice, with one number different.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        addActor(local('cork'), [placeAt(100, 160)]),
+        addActor(local('buoy'), [placeAt(220, 160)]),
+      ],
+      actors: [
+        {
+          id: 'cork',
+          name: 'Cork',
+          rows: [useTrait('Bobbing#BobsGentlyTrait'), setSprite('coin.png')],
+        },
+        {
+          id: 'buoy',
+          name: 'Buoy',
+          rows: [useTrait('Bobbing#BobsWildlyTrait'), setSprite('ball.png')],
+        },
+      ],
+    }),
+    sprites: ['coin', 'ball'],
+    ruleFiles: {bobbing: BOBBING_RULE},
+  }),
+  instructions: `
+## Your own vocabulary
+
+Open \`rules/bobbing.rule\`. Two traits, two steps, and inside them the same sum
+written out twice: **sin of ⟨time × 6⟩ × ⟨a number⟩**. One says 1 and the other
+says 4, and everything else about them is identical.
+
+Reading it, you have to work out twice that it is a wave. Changing how the
+bobbing feels means changing it in both places and hoping you did the same
+thing to each.
+
+A **define block** is a name for a sum, with the parts that vary as
+**parameters** — which is what makes it different from copying.
+
+### What you do
+
+1. Add **define block** to the rule, phrased **bob by ⟨amount⟩**, returning a
+   number.
+2. Put **return ⟨sin of ⟨time × 6⟩ × ⟨amount⟩⟩** in it — the sum, with the
+   number replaced by the parameter.
+3. In both steps, use **bob by ⟨1⟩** and **bob by ⟨4⟩**. The sum is written
+   once and said twice.
+4. Now change the 6 to a 2. One edit, and both of them slow down — which is
+   the difference between a name and a copy.
+`.trim(),
+};
+
 // ── place/edges ──────────────────────────────────────────────────────────────
 
 const edges: WorldScenario = {
@@ -3792,6 +3933,7 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'making/behavior': behaviour,
   'adventure/world': bigWorld,
   'making/read': readRule,
+  'making/block': ownBlock,
 };
 
 /** Every lesson written so far, by the tile it belongs to. */

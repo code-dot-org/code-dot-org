@@ -145,6 +145,7 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   'making/trait': [],
   'making/behavior': [],
   'making/read': [],
+  'making/block': [],
   'puzzle/grid': ['world_use_trait'],
   'puzzle/push': ['world_use_trait'],
   'adventure/world': [

@@ -3546,3 +3546,123 @@ describe('the read lesson’s check', () => {
     expect(passes).toBe(true);
   });
 });
+
+describe('the own-block lesson’s check', () => {
+  const lesson = LESSONS['making/block'];
+
+  /** The sum given a name, with a parameter or without one. */
+  const named = (withParameter: boolean) =>
+    editing(lesson.source, 'bobbing.rule', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const wave = (amount: Row): Row => ({
+        type: 'math_arithmetic',
+        fields: {OP: 'MULTIPLY'},
+        inputs: {
+          A: {
+            block: {
+              type: 'math_single',
+              fields: {OP: 'SIN'},
+              inputs: {
+                NUM: {
+                  block: {
+                    type: 'math_arithmetic',
+                    fields: {OP: 'MULTIPLY'},
+                    inputs: {
+                      A: {block: {type: 'world_time'}},
+                      B: {shadow: {type: 'math_number', fields: {NUM: 6}}},
+                    },
+                  },
+                },
+              },
+            },
+          },
+          B: {block: amount},
+        },
+      });
+      const parameter: Row = {
+        type: 'variables_get_Number',
+        fields: {VAR: {id: 'Bobbing_amount', name: 'amount'}},
+      };
+      let last = workspace.blocks.blocks[0];
+      while (last.next?.block) {
+        last = last.next.block;
+      }
+      last.next = {
+        block: {
+          type: 'world_rule_block',
+          fields: {RETURNS: 'number', DESCRIPTION: 'A wave, by however much.'},
+          extraState: {
+            parts: [
+              {kind: 'label', text: withParameter ? 'bob by' : 'a bob'},
+              ...(withParameter
+                ? [
+                    {
+                      kind: 'param',
+                      type: 'number',
+                      var: 'Bobbing_amount',
+                      name: 'amount',
+                    },
+                  ]
+                : []),
+            ],
+          },
+          inputs: {
+            DO: {
+              block: {
+                type: 'world_return',
+                inputs: {
+                  VALUE: {
+                    block: wave(
+                      withParameter
+                        ? parameter
+                        : {type: 'math_number', fields: {NUM: 1}},
+                    ),
+                  },
+                },
+              },
+            },
+          },
+        } as unknown as Row,
+      };
+      // …and both steps say it instead of spelling it out.
+      const call = (amount: number): Row => ({
+        type: withParameter
+          ? 'world_query_Bobbing_BobByQuery'
+          : 'world_query_Bobbing_ABobQuery',
+        ...(withParameter
+          ? {
+              inputs: {
+                VALUE: {shadow: {type: 'math_number', fields: {NUM: amount}}},
+              },
+            }
+          : {}),
+      });
+      workspace.blocks.blocks
+        .filter(block => block.type === 'world_rule_trait')
+        .forEach((trait, index) => {
+          const step = trait.next!.block!.next!.block!;
+          inSocket(inSocket(step, 'DO')!, 'Y')!.inputs!.B = {
+            block: call(index === 0 ? 1 : 4),
+          };
+        });
+      return JSON.stringify(workspace);
+    });
+
+  it('refuses the same sum written out twice', async () => {
+    const {passes} = await check('making/block', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts a name with the part that varies as a parameter', async () => {
+    const {passes, result} = await check('making/block', named(true));
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  // The tile's false pass: a name with nothing to say, which makes both of
+  // them bob identically because the number that differed has nowhere to go.
+  it('refuses a block with no parameters', async () => {
+    const {passes} = await check('making/block', named(false));
+    expect(passes).toBe(false);
+  });
+});
