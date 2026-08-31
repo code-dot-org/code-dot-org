@@ -2181,3 +2181,150 @@ describe('the shooting lesson’s check', () => {
     expect(passes).toBe(true);
   });
 });
+
+describe('the bricks lesson’s check', () => {
+  const lesson = LESSONS['arcade/bricks'];
+
+  /** The ending, asked where the lesson says to ask it — or on any Brick. */
+  const ending = (options: {counting: boolean; where: 'frame' | 'handler'}) =>
+    editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const done: Row = {
+        type: 'controls_if',
+        inputs: {
+          IF0: {
+            block: options.counting
+              ? {
+                  type: 'logic_compare',
+                  fields: {OP: 'EQ'},
+                  inputs: {
+                    A: {
+                      block: {
+                        type: 'world_count_of_kind',
+                        fields: {TYPE: local('brick')},
+                        inputs: {LIST: {block: {type: 'world_all_actors'}}},
+                      },
+                    },
+                    B: {shadow: {type: 'math_number', fields: {NUM: 0}}},
+                  },
+                }
+              : {type: 'logic_boolean', fields: {BOOL: 'TRUE'}},
+          },
+          DO0: {
+            block: {
+              type: 'world_set_WorldsMain_ClearedProperty',
+              inputs: {
+                VALUE: {block: {type: 'logic_boolean', fields: {BOOL: 'TRUE'}}},
+              },
+            },
+          },
+        },
+      };
+      if (options.where === 'frame') {
+        under(actorIn(workspace, 'Ball'), {
+          type: 'world_trait_step',
+          fields: {PHASE: 'decide', NAME: 'is it over'},
+          inputs: {DO: {block: done}},
+        });
+      } else {
+        const hat = workspace.blocks.blocks.find(
+          block => block.type === 'world_on_Collisions_StartsTouchingEvent',
+        )!;
+        hat.next!.block!.next = {block: done};
+      }
+      return JSON.stringify(workspace);
+    });
+
+  it('refuses a game that never ends', async () => {
+    const {passes} = await check('arcade/bricks', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts the question asked each frame', async () => {
+    const {passes, result} = await check(
+      'arcade/bricks',
+      ending({counting: true, where: 'frame'}),
+    );
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  it('refuses an ending on any Brick going', async () => {
+    const {passes} = await check(
+      'arcade/bricks',
+      ending({counting: false, where: 'frame'}),
+    );
+    expect(passes).toBe(false);
+  });
+
+  // Step 4 of the lesson, as a test: the same question in the touch handler
+  // never fires, because `remove actor` takes effect at the END of the frame
+  // and the Brick just removed is still in `all actors` while it is counted.
+  it('refuses the count taken in the handler that removes', async () => {
+    const {passes} = await check(
+      'arcade/bricks',
+      ending({counting: true, where: 'handler'}),
+    );
+    expect(passes).toBe(false);
+  });
+});
+
+describe('the waves lesson’s check', () => {
+  const lesson = LESSONS['arcade/waves'];
+
+  /** The timer handler, told to shrink its own period — or to send two. */
+  const harder = (how: 'sooner' | 'more') =>
+    editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const hat = workspace.blocks.blocks.find(
+        block => block.type === 'world_on_Time_TimerFiresEvent',
+      )!;
+      const spawn = hat.next!.block!;
+      spawn.next = {
+        block:
+          how === 'sooner'
+            ? {
+                type: 'world_set_Time_TimerPeriodProperty',
+                inputs: {
+                  ACTOR: {block: {type: 'world_this_actor'}},
+                  VALUE: {
+                    block: {
+                      type: 'math_arithmetic',
+                      fields: {OP: 'MULTIPLY'},
+                      inputs: {
+                        A: {
+                          block: {
+                            type: 'world_get_Time_TimerPeriodProperty',
+                            inputs: {
+                              ACTOR: {block: {type: 'world_this_actor'}},
+                            },
+                          },
+                        },
+                        B: {shadow: {type: 'math_number', fields: {NUM: 0.8}}},
+                      },
+                    },
+                  },
+                },
+              }
+            : // A second Rock every time, which is harder and is not this.
+              (JSON.parse(JSON.stringify(spawn)) as Row),
+      };
+      return JSON.stringify(workspace);
+    });
+
+  it('refuses a Rock a second, forever', async () => {
+    const {passes} = await check('arcade/waves', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts a period that closes on itself', async () => {
+    const {passes, result} = await check('arcade/waves', harder('sooner'));
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  it('refuses more Rocks at the same interval', async () => {
+    const {passes} = await check('arcade/waves', harder('more'));
+    expect(passes).toBe(false);
+  });
+});

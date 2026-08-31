@@ -12,12 +12,12 @@
 // Blockly JSON behind them. So `catalogue.ts` stays data about tiles, and the
 // projects live here, looked up by tile id.
 //
-// Thirty-eight of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md
-// and then some. ALL SIX FOUNDATIONS are written — Origin, Input, Motion,
-// Logic, Memory, Look and Place — so every genre gate on the map is open, and
-// the first hours of the progression can be walked end to end. Platformer is
-// written after them but for one tile (`platformer/ground` waits on the
-// engine: specs/PROGRESSION.md, "Carrying"), and Arcade is started.
+// Forty of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md and
+// then some. ALL SIX FOUNDATIONS are written — Origin, Input, Motion, Logic,
+// Memory, Look and Place — so every genre gate on the map is open, and the
+// first hours of the progression can be walked end to end. ARCADE is written
+// whole after them, and Platformer but for one tile: `platformer/ground` waits
+// on the engine (specs/PROGRESSION.md, "Carrying").
 
 import {
   actorFile,
@@ -1931,6 +1931,166 @@ Two halves are missing, and the second is the one everybody forgets.
 `.trim(),
 };
 
+// ── arcade/bricks ────────────────────────────────────────────────────────────
+
+const bricks: WorldScenario = {
+  name: 'Many, and then none',
+  description:
+    'Three bricks that go one at a time, and a game that never ends.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        declareProperty('boolean', 'cleared', 'false'),
+        addActor(local('brick'), [placeAt(120, 160)]),
+        addActor(local('brick'), [placeAt(200, 160)]),
+        addActor(local('brick'), [placeAt(280, 160)]),
+        addActor(local('ball'), [placeAt(30, 160), setVelocity(4, 0)]),
+      ],
+      actors: [
+        {
+          id: 'ball',
+          name: 'Ball',
+          rows: [
+            useTrait('Physics#CanMoveTrait'),
+            useTrait('Collisions#CanCollideTrait'),
+            setSprite('ball.png'),
+          ],
+        },
+        {
+          id: 'brick',
+          name: 'Brick',
+          rows: [useTrait('Collisions#CanCollideTrait'), setSprite('box.png')],
+        },
+      ],
+      handlers: [
+        {
+          type: 'world_on_Collisions_StartsTouchingEvent',
+          fields: {FILTER0: ''},
+          inputs: {ACTOR: anyKind('ball')},
+          next: {
+            block: {
+              type: 'world_remove_actor',
+              inputs: {ACTOR: {block: {type: 'world_event_actor'}}},
+            },
+          },
+        },
+      ],
+    }),
+    sprites: ['ball', 'box'],
+    rules: ['motion', 'collisions'],
+  }),
+  instructions: `
+## Many, and then none
+
+The Ball rolls through the Bricks and each one goes as it is touched. Three
+bricks, three hits, and then a world with nothing in it and a game still
+running.
+
+A game ends when there is nothing left to do, and "nothing left" is a question
+about the world rather than about the player: **how many Bricks are in all
+actors**. Ask it after each one goes, and the answer is eventually zero.
+
+### What you do
+
+1. Give the Ball an **each frame during ⟨decide⟩**, and ask in it
+   **if ⟨how many ⟨Brick⟩ in ⟨all actors⟩⟩ = ⟨0⟩**.
+2. Inside that, set **cleared** to true and print something.
+3. Run it. Nothing is said for the first two Bricks, and one thing is said
+   after the third.
+4. Now try asking the same question in the touch handler instead, right under
+   \`remove actor\`. It never fires — **removing an actor takes effect at the
+   end of the frame**, so the Brick you have just removed is still in
+   \`all actors\` when you count. Ask where the answer has settled.
+5. Add a fourth Brick and run it again. You changed nothing else and the game
+   still ends in the right place, which is what asking the world buys over
+   counting the hits.
+`.trim(),
+};
+
+// ── arcade/waves ─────────────────────────────────────────────────────────────
+
+/** `set timer period of ⟨this actor⟩ to ⟨…⟩`. */
+const setPeriod = (value: object) => ({
+  type: 'world_set_Time_TimerPeriodProperty',
+  inputs: {ACTOR: me(), VALUE: value},
+});
+
+const waves: WorldScenario = {
+  name: 'It gets harder',
+  description:
+    'A spawner on a timer that sends the same thing at the same rate forever.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [addActor(local('spawner'), [placeAt(160, 20), setPeriod(num(1))])],
+      actors: [
+        {
+          id: 'spawner',
+          name: 'Spawner',
+          rows: [useTrait('Time#HasATimerTrait'), showAs('text')],
+          drawing: {
+            width: 32,
+            height: 16,
+            commands: [fill(swatch('#8d8d99')), rectangle(0, 0, 32, 16)],
+          },
+        },
+        {
+          id: 'rock',
+          name: 'Rock',
+          rows: [useTrait('Physics#CanMoveTrait'), setSprite('asteroid.png')],
+        },
+      ],
+      handlers: [
+        {
+          type: 'world_on_Time_TimerFiresEvent',
+          inputs: {ACTOR: anyKind('spawner')},
+          next: {
+            block: addActor(local('rock'), [
+              placeAt(160, 40),
+              {
+                type: 'world_set_Physics_VelocityProperty',
+                inputs: {
+                  ACTOR: me(),
+                  VALUE: {
+                    block: {
+                      type: 'world_vector',
+                      fields: {VECTOR: {x: 0, y: 4}},
+                    },
+                  },
+                },
+              },
+            ]),
+          },
+        },
+      ],
+    }),
+    sprites: ['asteroid'],
+    rules: ['time', 'motion'],
+  }),
+  instructions: `
+## It gets harder
+
+A Rock every second, forever. The Spawner has a **timer**, the timer has a
+**period**, and \`when ⟨any Spawner⟩ timer fires\` is where the Rock comes from.
+
+A game that sends the same thing at the same rate is one you get bored of
+rather than lose. What makes an arcade game get harder is usually one number,
+changed a little each time it is used — and a period is a value like any other.
+
+### What you do
+
+1. In the timer handler, under the \`add actor\`, add
+   **set timer period of ⟨this actor⟩ to ⟨⟨timer period of ⟨this actor⟩⟩ ×
+   ⟨0.8⟩⟩**.
+2. Run it and watch. The first few Rocks are a second apart and the later ones
+   are not, and nothing anywhere holds a list of waves.
+3. Try 0.95, and 0.5. One of them is a game and one is a wall.
+4. Note what you did NOT do: send more Rocks each time. That gets harder too,
+   and it gets harder in a way the player can see coming.
+`.trim(),
+};
+
 // ── place/edges ──────────────────────────────────────────────────────────────
 
 const edges: WorldScenario = {
@@ -2305,6 +2465,8 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'arcade/bounce': bounce,
   'arcade/paddle': paddle,
   'arcade/shoot': shoot,
+  'arcade/bricks': bricks,
+  'arcade/waves': waves,
 };
 
 /** Every lesson written so far, by the tile it belongs to. */

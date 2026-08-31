@@ -1567,14 +1567,42 @@ export const TILES: readonly Tile[] = [
     at: at('arcade', 3, 2),
     title: 'Many, and then none',
     teaches: 'Counting what is left is how a game knows it is over.',
-    task: 'A wall of bricks that go one at a time, and an end when the last one does.',
+    task: 'Three bricks that go one at a time, and a game that never ends. End it on the last one.',
     requires: ['arcade/paddle'],
+    // NOT `how many … in …`, nor `remove actor`: `memory/many` grants the
+    // first and another tile the second, and this lesson is handed both. What
+    // it adds is the way a world sheds EVERYTHING.
     unlocks: [{kind: 'block', type: 'world_clear_world'}],
+    // The question it turns on belongs to Memory, one region away, and Arcade
+    // is entered from Motion and Logic.
+    offers: [
+      {kind: 'block', type: 'world_count_of_kind'},
+      {kind: 'block', type: 'world_all_actors'},
+      {kind: 'block', type: 'world_trait_step'},
+      {kind: 'block', type: 'controls_if'},
+      {kind: 'block', type: 'logic_compare'},
+      {kind: 'block', type: 'math_number'},
+    ],
     check: {
       kind: 'outcome',
-      says: 'The game ends on the last brick and not on the second to last.',
+      says: 'The world is cleared on the last Brick, and not while any Brick is left.',
       falsePass:
-        'Counting the hits rather than the bricks, which is the same number until a brick is added.',
+        'Ending on any Brick going, which is true from the first one — and counting the HITS, which is the same number as the bricks until somebody adds a brick. The run catches the first; the second is why the lesson asks the world rather than keeping a tally, and this check cannot tell them apart on three bricks.',
+      run: {
+        probes: {
+          bricks: {kind: 'actorCount', of: 'Brick'},
+          cleared: {kind: 'worldProperty', path: 'My_World.cleared'},
+        },
+        trace: Array.from({length: 10}, () => ({seconds: 0.3})),
+      },
+      passes: ({samples}) => {
+        const left = (samples.bricks ?? []).map(count =>
+          typeof count === 'number' ? count : -1,
+        );
+        const cleared = (samples.cleared ?? []).map(value => value === true);
+        const early = cleared.every((yes, index) => !yes || left[index] === 0);
+        return early && cleared[cleared.length - 1] === true;
+      },
     },
   },
   {
@@ -1584,17 +1612,43 @@ export const TILES: readonly Tile[] = [
     title: 'It gets harder',
     teaches:
       'A timer belongs to an actor, and the interval can be a value like any other.',
-    task: 'A spawner that sends more of them, faster, the longer you last.',
+    task: 'A Rock a second, forever. Make the gap between them close as the game goes on.',
     requires: ['arcade/shoot', 'arcade/bricks'],
     unlocks: [
       {kind: 'rule', id: 'time'},
       {kind: 'template', id: 'arcade'},
     ],
+    // The arithmetic is Memory's, one region away — Arcade is entered from
+    // Motion and Logic, so a learner can arrive here without it.
+    offers: [
+      {kind: 'block', type: 'math_arithmetic'},
+      {kind: 'block', type: 'math_number'},
+    ],
     check: {
       kind: 'outcome',
-      says: 'The gap between spawns is shorter at the end of the scripted run than at the start.',
+      says: 'The gap between the last two Rocks is shorter than the gap between the first two.',
       falsePass:
-        'A fixed interval with more spawned each time. Measure the interval, not the count.',
+        'Sending two Rocks per fire, which is harder and is not this: the gaps are exactly where they were. What is measured is WHEN the world gained a Rock, so any number arriving together counts once.',
+      run: {
+        probes: {rocks: {kind: 'actorCount', of: 'Rock'}},
+        trace: Array.from({length: 60}, () => ({seconds: 0.1})),
+      },
+      passes: ({samples}) => {
+        const counts = (samples.rocks ?? []).map(count =>
+          typeof count === 'number' ? count : -1,
+        );
+        // The samples at which the world gained a Rock — one per arrival,
+        // however many arrived.
+        const arrivals = counts
+          .map((count, index) => ({count, index}))
+          .filter(({count, index}) => index > 0 && count > counts[index - 1])
+          .map(({index}) => index);
+        if (arrivals.length < 4) {
+          return false;
+        }
+        const gaps = arrivals.slice(1).map((at, index) => at - arrivals[index]);
+        return gaps[gaps.length - 1] < gaps[0];
+      },
     },
   },
 
