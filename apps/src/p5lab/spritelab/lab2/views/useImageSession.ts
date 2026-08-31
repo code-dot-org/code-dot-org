@@ -2,7 +2,7 @@
 // URLs that must survive until the session ends (any of them may yet be
 // chosen). Ending the session reclaims whichever are left unreferenced.
 
-import {useCallback, useMemo, useRef, useState} from 'react';
+import {useCallback, useRef, useState} from 'react';
 
 import {createUuid} from '@cdo/apps/utils';
 
@@ -49,9 +49,23 @@ export function alternativeFromAnimation(props?: {
 export function useImageSession(reclaimAsset: (url?: string) => void) {
   const [alternatives, setAlternatives] = useState<Alternative[]>([]);
   const urls = useRef<Set<string>>(new Set());
+  // The strip entry for the image the dialog opened on; it is the one entry
+  // that never ages out (losing it would delete the original irreversibly
+  // when the session ends).
+  const seedId = useRef<string | null>(null);
 
   const push = useCallback((alt: Alternative) => {
-    setAlternatives(prev => [...prev, alt].slice(-MAX_ALTERNATIVES));
+    setAlternatives(prev => {
+      const next = [...prev, alt];
+      if (next.length <= MAX_ALTERNATIVES) {
+        return next;
+      }
+      // Age out the oldest entry that isn't the seed (the seed, when
+      // present, is always first).
+      return next[0].id === seedId.current
+        ? [next[0], ...next.slice(2)]
+        : next.slice(1);
+    });
   }, []);
 
   // An asset this session made or superseded; kept until the session ends.
@@ -65,6 +79,7 @@ export function useImageSession(reclaimAsset: (url?: string) => void) {
   // it stays choosable after a generation replaces it.
   const reset = useCallback((seed?: Alternative | null) => {
     urls.current = new Set();
+    seedId.current = seed?.id || null;
     setAlternatives(seed ? [seed] : []);
   }, []);
 
@@ -73,13 +88,11 @@ export function useImageSession(reclaimAsset: (url?: string) => void) {
   const end = useCallback(() => {
     urls.current.forEach(url => reclaimAsset(url));
     urls.current = new Set();
+    seedId.current = null;
     setAlternatives([]);
   }, [reclaimAsset]);
 
-  // One stable object per alternatives-change, so consumers can put the
-  // session in dependency lists without re-creating on every render.
-  return useMemo(
-    () => ({alternatives, push, noteAsset, reset, end}),
-    [alternatives, push, noteAsset, reset, end]
-  );
+  // The callbacks are stable; `alternatives` changes per push/reset/end.
+  // Consumers should depend on the individual pieces, not the object.
+  return {alternatives, push, noteAsset, reset, end};
 }

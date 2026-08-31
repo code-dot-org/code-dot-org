@@ -55,29 +55,3 @@ export function blankPaintImage(
     pixelGridSize: spec.pixelGridSize,
   };
 }
-
-/**
- * Composite a data URI over opaque black. Backgrounds must be fully opaque;
- * the editor's eraser can leave holes in one.
- */
-export async function flattenDataURIOverBlack(
-  dataURI: string
-): Promise<string> {
-  const img = new Image();
-  await new Promise<void>((resolve, reject) => {
-    img.onload = () => resolve();
-    img.onerror = reject;
-    img.src = dataURI;
-  });
-  const canvas = document.createElement('canvas');
-  canvas.width = img.naturalWidth;
-  canvas.height = img.naturalHeight;
-  const ctx = canvas.getContext('2d');
-  if (!ctx) {
-    return dataURI;
-  }
-  ctx.fillStyle = BACKGROUND_GROUND_COLOR;
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-  ctx.drawImage(img, 0, 0);
-  return canvas.toDataURL('image/png');
-}

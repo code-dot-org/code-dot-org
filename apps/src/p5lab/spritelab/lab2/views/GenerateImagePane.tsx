@@ -29,11 +29,12 @@ import {
   imageTypeFromCategories,
 } from '../imageGallery';
 import {
+  forgetTrimmedThumbnail,
   getTrimmedThumbnail,
   onTrimsUpdated,
   trimAnimationListImages,
 } from '../imageTrim';
-import {blankPaintImage, flattenDataURIOverBlack} from '../paintBlank';
+import {BACKGROUND_GROUND_COLOR, blankPaintImage} from '../paintBlank';
 
 import type {NewImageDraft} from './GenerateImageView';
 import ImageDetailsDialog, {AlternativeImage} from './ImageDetailsDialog';
@@ -48,6 +49,64 @@ function bytesToDataURI(bytes: Uint8Array, mediaType: string): string {
     binary += String.fromCharCode(...bytes.subarray(i, i + 32768));
   }
   return `data:${mediaType};base64,${btoa(binary)}`;
+}
+
+type Dispatch = ReturnType<typeof useAppDispatch>;
+
+// Create an animation under a validated name and return its key. The
+// classic addAnimation thunk unconditionally renames to name_N;
+// setAnimationName takes the plain name back (callers validate it free
+// before getting here).
+function createNamedAnimation(
+  dispatch: Dispatch,
+  name: string,
+  props: Record<string, unknown>
+): string {
+  const key = createUuid();
+  dispatch(
+    // addAnimation is an untyped JS thunk; cast for dispatch.
+    addAnimation(key, {
+      name,
+      frameCount: 1,
+      frameDelay: 2,
+      looping: true,
+      ...props,
+    }) as unknown as AnyAction
+  );
+  if (isNameUnique(name, getStore().getState().animationList.propsByKey)) {
+    dispatch(setAnimationName(key, name) as unknown as AnyAction);
+  }
+  return key;
+}
+
+// Point an existing animation at new pixels, via the raw list-replace
+// action rather than editAnimation: the classic EDIT_ANIMATION reducer
+// forces sourceUrl to null (it expects the legacy animation-save service to
+// upload later), which would strand the change in memory — Lab2 sources
+// persist sourceUrl, not dataURI. Recomputes the trimmed thumbnail (cached
+// by source; fires onTrimsUpdated, refreshing the gallery and block
+// dropdowns). Returns the sourceUrl the change replaced.
+function repointAnimation(
+  dispatch: Dispatch,
+  key: string,
+  changes: Record<string, unknown>
+): string | undefined {
+  const current = getStore().getState().animationList;
+  const updated = {
+    orderedKeys: current.orderedKeys,
+    propsByKey: {
+      ...current.propsByKey,
+      [key]: {
+        ...current.propsByKey[key],
+        ...changes,
+        loadedFromSource: true,
+        saved: false,
+      },
+    },
+  };
+  dispatch({type: SET_INITIAL_ANIMATION_LIST, animationList: updated});
+  trimAnimationListImages(updated);
+  return current.propsByKey[key]?.sourceUrl;
 }
 
 interface GalleryCardProps {
@@ -100,15 +159,20 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   const dispatch = useAppDispatch();
 
   // The project's images live in the animation list (AI-generated images are
-  // bridged in there); this view is also how you manage them.
-  const images = useAppSelector(state =>
-    galleryOrder(
-      state.animationList.orderedKeys.map(key => ({
-        key,
-        props: state.animationList.propsByKey[key],
-      })),
-      image => imageTypeFromCategories(image.props?.categories)
-    )
+  // bridged in there); this view is also how you manage them. Sorted under
+  // useMemo, not in the selector: a selector's fresh array would count as a
+  // change on every store dispatch.
+  const animationList = useAppSelector(state => state.animationList);
+  const images = useMemo(
+    () =>
+      galleryOrder(
+        animationList.orderedKeys.map((key: string) => ({
+          key,
+          props: animationList.propsByKey[key],
+        })),
+        image => imageTypeFromCategories(image.props?.categories)
+      ),
+    [animationList]
   );
 
   // Gallery thumbnails prefer the border-trimmed image (backgrounds aren't
@@ -120,7 +184,6 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   // Compute trims for images added after the initial load (a fresh
   // generation lands here before any engine preload runs). The pass is
   // source-cached, so only new images do work.
-  const animationList = useAppSelector(state => state.animationList);
   useEffect(() => {
     trimAnimationListImages(animationList);
   }, [animationList]);
@@ -184,40 +247,65 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   }, []);
 
   const session = useImageSession(deleteUnreferencedAsset);
+  const {
+    reset: resetSession,
+    end: endSession,
+    push: pushAlternative,
+    noteAsset,
+  } = session;
   // The gallery card that opened the dialog; focus returns to it on close.
   const triggerRef = useRef<HTMLElement | null>(null);
 
+  // Which dialog session async work belongs to. The persist paths await
+  // uploads; by the time one resolves the dialog may be closed, on another
+  // image, or its paint cancelled — a stale result must not land. Bumped by
+  // everything that changes the subject.
+  const sessionEpochRef = useRef(0);
+
   const openDialog = useCallback(
     (key: string, trigger: HTMLElement) => {
+      sessionEpochRef.current++;
       triggerRef.current = trigger;
       setDialogTarget(key);
       setPaintNewDraft(null);
-      session.reset(
+      resetSession(
         alternativeFromAnimation(
           getStore().getState().animationList.propsByKey[key]
         )
       );
     },
-    [session]
+    [resetSession]
   );
 
   const openNewDialog = useCallback(
     (event: React.MouseEvent<HTMLElement>) => {
+      sessionEpochRef.current++;
       triggerRef.current = event.currentTarget;
       setDialogTarget('new');
       setPaintNewDraft(null);
-      session.reset();
+      resetSession();
     },
-    [session]
+    [resetSession]
   );
 
   const closeDialog = useCallback(() => {
+    sessionEpochRef.current++;
     setDialogTarget(null);
     setPainting('no');
     setPaintNewDraft(null);
-    session.end();
+    endSession();
     triggerRef.current?.focus();
-  }, [session]);
+  }, [endSession]);
+
+  // Leaving the tab mid-session must still reclaim the session's leftover
+  // assets (and orphan any in-flight persist), exactly as closing would.
+  useEffect(
+    () => () => {
+      sessionEpochRef.current++;
+      endSession();
+    },
+    [endSession]
+  );
 
   const targetProps =
     dialogTarget && dialogTarget !== 'new'
@@ -286,6 +374,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   // image) or repoint the existing one, with the generation metadata.
   const handleAcceptGenerated = useCallback(
     async (result: GeneratedImageResult, newName?: string) => {
+      const epoch = sessionEpochRef.current;
       const dataURI = bytesToDataURI(result.uint8Array, result.mediaType);
       let sourceUrl = dataURI;
       if (uploadImage) {
@@ -301,8 +390,14 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       }
       const frameSize: {x: number; y: number} | null =
         await dataURIToSourceSize(dataURI).catch(() => null);
+      if (epoch !== sessionEpochRef.current) {
+        // The dialog moved on while the upload was out; nothing references
+        // the fresh asset.
+        deleteUnreferencedAsset(sourceUrl);
+        return;
+      }
 
-      session.push({
+      pushAlternative({
         id: createUuid(),
         thumb: dataURI,
         sourceUrl,
@@ -311,31 +406,16 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         pixelGridSize: result.pixelGridSize,
         generation: result.generation,
       });
-      session.noteAsset(sourceUrl);
+      noteAsset(sourceUrl);
 
       if (dialogTarget === 'new' && newName) {
-        const key = createUuid();
-        dispatch(
-          // addAnimation is an untyped JS thunk; cast for dispatch.
-          addAnimation(key, {
-            name: newName,
-            sourceUrl,
-            frameSize: frameSize || {x: MODEL_OUTPUT_PX, y: MODEL_OUTPUT_PX},
-            frameCount: 1,
-            frameDelay: 2,
-            looping: true,
-            categories: categoriesForType(result.generation.imageType),
-            pixelGridSize: result.pixelGridSize,
-            generation: result.generation,
-          }) as unknown as AnyAction
-        );
-        // The classic thunk unconditionally renames to name_N; take the
-        // plain name back (validated free before entering the view).
-        if (
-          isNameUnique(newName, getStore().getState().animationList.propsByKey)
-        ) {
-          dispatch(setAnimationName(key, newName) as unknown as AnyAction);
-        }
+        const key = createNamedAnimation(dispatch, newName, {
+          sourceUrl,
+          frameSize: frameSize || {x: MODEL_OUTPUT_PX, y: MODEL_OUTPUT_PX},
+          categories: categoriesForType(result.generation.imageType),
+          pixelGridSize: result.pixelGridSize,
+          generation: result.generation,
+        });
         setDialogTarget(key);
         return;
       }
@@ -344,33 +424,26 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       if (!key || key === 'new' || !targetProps) {
         return;
       }
-      const current = getStore().getState().animationList;
-      // The asset this generation replaces; cleaned up once the new one is
-      // in place.
-      const previousUrl = current.propsByKey[key]?.sourceUrl;
-      const updated = {
-        orderedKeys: current.orderedKeys,
-        propsByKey: {
-          ...current.propsByKey,
-          [key]: {
-            ...current.propsByKey[key],
-            sourceUrl,
-            dataURI,
-            ...(frameSize ? {frameSize, sourceSize: frameSize} : {}),
-            pixelGridSize: result.pixelGridSize,
-            generation: result.generation,
-            loadedFromSource: true,
-            saved: false,
-          },
-        },
-      };
-      dispatch({type: SET_INITIAL_ANIMATION_LIST, animationList: updated});
-      trimAnimationListImages(updated);
+      const previousUrl = repointAnimation(dispatch, key, {
+        sourceUrl,
+        dataURI,
+        ...(frameSize ? {frameSize, sourceSize: frameSize} : {}),
+        pixelGridSize: result.pixelGridSize,
+        generation: result.generation,
+      });
       // The superseded asset stays until the dialog closes: it's in the
       // Alternatives strip and may become the image again.
-      session.noteAsset(previousUrl);
+      noteAsset(previousUrl);
     },
-    [dialogTarget, targetProps, uploadImage, dispatch, session]
+    [
+      dialogTarget,
+      targetProps,
+      uploadImage,
+      dispatch,
+      pushAlternative,
+      noteAsset,
+      deleteUnreferencedAsset,
+    ]
   );
 
   // Make a strip entry the image again. The same repoint an accepted
@@ -382,31 +455,26 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       if (!alt || !key || key === 'new') {
         return;
       }
-      const current = getStore().getState().animationList;
-      const previousUrl = current.propsByKey[key]?.sourceUrl;
-      const updated = {
-        orderedKeys: current.orderedKeys,
-        propsByKey: {
-          ...current.propsByKey,
-          [key]: {
-            ...current.propsByKey[key],
-            sourceUrl: alt.sourceUrl,
-            dataURI: alt.dataURI,
-            ...(alt.frameSize
-              ? {frameSize: alt.frameSize, sourceSize: alt.frameSize}
-              : {}),
-            pixelGridSize: alt.pixelGridSize,
-            generation: alt.generation,
-            loadedFromSource: true,
-            saved: false,
-          },
-        },
-      };
-      dispatch({type: SET_INITIAL_ANIMATION_LIST, animationList: updated});
-      trimAnimationListImages(updated);
-      session.noteAsset(previousUrl);
+      // An entry with no pixel data in hand (the seed of an image loaded
+      // from its URL) can't be re-trimmed until the data arrives; drop the
+      // superseded image's cached trim so thumbnails don't keep showing it.
+      if (!alt.dataURI) {
+        forgetTrimmedThumbnail(
+          getStore().getState().animationList.propsByKey[key]?.name
+        );
+      }
+      const previousUrl = repointAnimation(dispatch, key, {
+        sourceUrl: alt.sourceUrl,
+        dataURI: alt.dataURI,
+        ...(alt.frameSize
+          ? {frameSize: alt.frameSize, sourceSize: alt.frameSize}
+          : {}),
+        pixelGridSize: alt.pixelGridSize,
+        generation: alt.generation,
+      });
+      noteAsset(previousUrl);
     },
-    [session, dialogTarget, dispatch]
+    [session.alternatives, dialogTarget, dispatch, noteAsset]
   );
 
   // Persist an edited (or first-painted) image: upload the PNG as a fresh
@@ -438,43 +506,27 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
 
   const applyEditorSave = useCallback(
     async (dataURI: string, meta: PixelEditorSaveMeta) => {
-      // Backgrounds must be fully opaque; the eraser can leave holes.
-      const paintedType =
-        dialogTarget === 'new' && paintNewDraft
-          ? paintNewDraft.imageType
-          : imageTypeFromCategories(targetProps?.categories);
-      if (paintedType === 'background') {
-        dataURI = await flattenDataURIOverBlack(dataURI).catch(() => dataURI);
-      }
+      const epoch = sessionEpochRef.current;
       const frameSize: {x: number; y: number} | null =
         await dataURIToSourceSize(dataURI).catch(() => null);
 
       if (dialogTarget === 'new' && paintNewDraft) {
         const {name, imageType} = paintNewDraft;
         const sourceUrl = await uploadEdited(name, dataURI);
-        const key = createUuid();
-        dispatch(
-          // addAnimation is an untyped JS thunk; cast for dispatch.
-          addAnimation(key, {
-            name,
-            sourceUrl,
-            frameSize: frameSize || {x: MODEL_OUTPUT_PX, y: MODEL_OUTPUT_PX},
-            frameCount: 1,
-            frameDelay: 2,
-            looping: true,
-            categories: categoriesForType(imageType),
-            pixelGridSize: meta.pixelGridSize,
-            recentColors: meta.recentColors,
-          }) as unknown as AnyAction
-        );
-        // The classic thunk unconditionally renames to name_N; take the
-        // plain name back (validated free before entering the view).
-        if (
-          isNameUnique(name, getStore().getState().animationList.propsByKey)
-        ) {
-          dispatch(setAnimationName(key, name) as unknown as AnyAction);
+        if (epoch !== sessionEpochRef.current) {
+          // The paint was cancelled (or the dialog moved on) while the
+          // upload was out; nothing references the fresh asset.
+          deleteUnreferencedAsset(sourceUrl);
+          return;
         }
-        session.push({
+        const key = createNamedAnimation(dispatch, name, {
+          sourceUrl,
+          frameSize: frameSize || {x: MODEL_OUTPUT_PX, y: MODEL_OUTPUT_PX},
+          categories: categoriesForType(imageType),
+          pixelGridSize: meta.pixelGridSize,
+          recentColors: meta.recentColors,
+        });
+        pushAlternative({
           id: createUuid(),
           thumb: dataURI,
           sourceUrl,
@@ -482,7 +534,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           frameSize,
           pixelGridSize: meta.pixelGridSize,
         });
-        session.noteAsset(sourceUrl);
+        noteAsset(sourceUrl);
         setPaintNewDraft(null);
         setDialogTarget(key);
         return;
@@ -493,38 +545,21 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       if (!key || key === 'new' || !props) {
         return;
       }
-      // The asset this edit replaces; cleaned up once the new one is in place.
-      const previousUrl = props.sourceUrl;
       const sourceUrl = await uploadEdited(props.name || 'image', dataURI);
-      // Update via the raw list-replace action rather than editAnimation:
-      // the classic EDIT_ANIMATION reducer forces sourceUrl to null (it
-      // expects the legacy animation-save service to upload later), which
-      // would strand the edit in memory — Lab2 sources persist sourceUrl,
-      // not dataURI.
-      const current = getStore().getState().animationList;
-      const updated = {
-        orderedKeys: current.orderedKeys,
-        propsByKey: {
-          ...current.propsByKey,
-          [key]: {
-            ...current.propsByKey[key],
-            sourceUrl,
-            dataURI,
-            ...(frameSize ? {frameSize, sourceSize: frameSize} : {}),
-            pixelGridSize: meta.pixelGridSize,
-            // Serialized with the animation, so the editor's recent-colors
-            // row follows the project.
-            recentColors: meta.recentColors,
-            loadedFromSource: true,
-            saved: false,
-          },
-        },
-      };
-      dispatch({type: SET_INITIAL_ANIMATION_LIST, animationList: updated});
-      // Recompute this image's trimmed thumbnail (cached by source; fires
-      // onTrimsUpdated, refreshing the gallery and block dropdowns).
-      trimAnimationListImages(updated);
-      session.push({
+      if (epoch !== sessionEpochRef.current) {
+        deleteUnreferencedAsset(sourceUrl);
+        return;
+      }
+      const previousUrl = repointAnimation(dispatch, key, {
+        sourceUrl,
+        dataURI,
+        ...(frameSize ? {frameSize, sourceSize: frameSize} : {}),
+        pixelGridSize: meta.pixelGridSize,
+        // Serialized with the animation, so the editor's recent-colors row
+        // follows the project.
+        recentColors: meta.recentColors,
+      });
+      pushAlternative({
         id: createUuid(),
         thumb: dataURI,
         sourceUrl,
@@ -532,11 +567,20 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         frameSize,
         pixelGridSize: meta.pixelGridSize,
       });
-      session.noteAsset(sourceUrl);
+      noteAsset(sourceUrl);
       // Reclaimed at dialog close, with the rest of the session's leftovers.
-      session.noteAsset(previousUrl);
+      noteAsset(previousUrl);
     },
-    [dialogTarget, targetProps, paintNewDraft, uploadEdited, dispatch, session]
+    [
+      dialogTarget,
+      targetProps,
+      paintNewDraft,
+      uploadEdited,
+      dispatch,
+      pushAlternative,
+      noteAsset,
+      deleteUnreferencedAsset,
+    ]
   );
 
   const handleEditorSave = useCallback(
@@ -558,6 +602,13 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   );
 
   const creating = dialogTarget === 'new';
+  // What kind of image the paint editor is on; backgrounds paint over the
+  // stage's opaque ground instead of transparency (they must stay fully
+  // opaque, and the editor saves exactly what it shows).
+  const paintedType =
+    creating && paintNewDraft
+      ? paintNewDraft.imageType
+      : imageTypeFromCategories(targetProps?.categories);
   return (
     <div className={moduleStyles.imagesManager}>
       <div className={moduleStyles.imageGallery}>
@@ -652,9 +703,16 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
               : targetProps?.pixelGridSize
           }
           initialRecentColors={creating ? undefined : targetProps?.recentColors}
+          opaqueGround={
+            paintedType === 'background' ? BACKGROUND_GROUND_COLOR : undefined
+          }
           onReady={() => setPainting('active')}
           onSave={handleEditorSave}
-          onCancel={() => setPainting('no')}
+          onCancel={() => {
+            // Orphan a save still uploading: cancelled means not applied.
+            sessionEpochRef.current++;
+            setPainting('no');
+          }}
         />
       )}
     </div>

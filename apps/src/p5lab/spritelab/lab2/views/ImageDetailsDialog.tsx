@@ -302,7 +302,6 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                           type="button"
                           className={classNames(
                             moduleStyles.alternativeThumb,
-                            moduleStyles.imagePaneChecker,
                             alt.selected && moduleStyles.alternativeSelected
                           )}
                           aria-label="Use this image"
