@@ -156,9 +156,9 @@ class AuthenticationOption < ApplicationRecord
     candidates = where(credential_type: credential_type, authentication_id: authentication_id)
     exact = candidates.detect {|option| option.authentication_id == authentication_id.to_s}
     if exact.nil? && candidates.any?
-      Observability::Errors.capture_message(
+      Observability::Errors.report(
         'Authentication id matched by collation but not byte-exactly',
-        extra: {credential_type: credential_type}
+        context: {credential_type: credential_type}
       )
     end
     exact

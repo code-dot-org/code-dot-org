@@ -278,7 +278,7 @@ class ContactRollupsV2
       upload_metrics
       url = upload_to_s3
       report_to_slack log_url: url
-      @log_collector.exceptions.each {|e| Honeybadger.notify(e)}
+      @log_collector.exceptions.each {|e| Observability::Errors.report(e)}
     end
 
     print_logs

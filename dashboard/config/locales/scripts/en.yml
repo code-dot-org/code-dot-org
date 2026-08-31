@@ -1156,6 +1156,19 @@ en:
             practice:
               display_name: Teaching Practices
           student_description: This is a sample course that has all of the plc special things. Enrollment in this course does nothing. Right now, it's just a copy of TeacherCon
+        ui-test-plc:
+          title: UI Test course for PLC things
+          description: This is a sample course that has all of the plc special things. Enrollment in this course does nothing. Right now, it's just a copy of TeacherCon
+          description_short: This is a sample course that has all of the plc special things
+          description_audience: ''
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+            practice:
+              display_name: Teaching Practices
+          student_description: This is a sample course that has all of the plc special things. Enrollment in this course does nothing. Right now, it's just a copy of TeacherCon
         csd3-2017:
           title: CSD Unit 3 - Animations and Games ('17-'18)
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
@@ -28093,6 +28106,8 @@ en:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
+            lessonGroup-3:
+              display_name: End of Unit Survey
           title: Web Apps with AI Capstone Project
           description: |-
             This unit is the capstone of AI Foundations Semester 2, where students synthesize their learning to design and build a complete web app with a clear purpose and audience. They integrate technical fluency, human-centered design, and AI literacy, making choices that are transparent, ethical, and aligned with their values. The focus is not only on producing a finished app but on documenting and reflecting on the process, demonstrating the habits of intentional designers who create technology with clarity, confidence, and care.
@@ -30333,7 +30348,7 @@ en:
           description: ''
           student_description: ''
         self-paced-pl-teaching-aiml-unit1-2026:
-          title: Teaching AI and Machine Learning
+          title: CSD - Teaching AI and Machine Learning
           description: |-
             **In this professional learning module, you will:**
 
@@ -30356,6 +30371,9 @@ en:
             **Suggested Time:** 100 minutes
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-aiml-unit1-2026
         self-paced-pl-teaching-csd-unit2-2026:
           title: Preparing to Teach Web Development
           description: |-

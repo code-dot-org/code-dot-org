@@ -12,7 +12,7 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import ChallengeBox from '../ChallengeActivities/ChallengeBox';
+import Challenges from '../ChallengeActivities/Challenges';
 
 import Chat from './Chat';
 import PodcastsBox from './PodcastsBox';
@@ -178,7 +178,7 @@ const InterventionBox: FC<InterventionBoxProps> = ({
             reflectionData={reflectionData}
           />
         )}
-        {selected === 'challenge' && <ChallengeBox lessonId={lessonId} />}
+        {selected === 'challenge' && <Challenges lessonId={lessonId} />}
         {selected === 'videos' && <VideosBox jsonVideos={jsonVideos} />}
         {selected === 'podcasts' && (
           <PodcastsBox
