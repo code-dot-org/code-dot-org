@@ -12,13 +12,23 @@
 // Blockly JSON behind them. So `catalogue.ts` stays data about tiles, and the
 // projects live here, looked up by tile id.
 //
-// Fifty-eight of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md
-// and then some. ALL SIX FOUNDATIONS are written — Origin, Input, Motion, Logic,
-// Memory, Look and Place — so every genre gate on the map is open, and the
-// first hours of the progression can be walked end to end. ARCADE is written
-// whole after them, Platformer but for one tile (`platformer/ground` waits on
-// the engine: specs/PROGRESSION.md, "Carrying"), STORY is written whole, and
-// Simulation, Puzzle, Adventure and Making are started.
+// Fifty-eight of sixty-seven, and the nine that are left are all waiting on
+// the same thing: a rule or a block the library has not got. Every other tile
+// on the map has a lesson, a starting project and a check tested in both
+// directions.
+//
+//   platformer/ground      Carrying — an actor standing on a moving solid
+//   puzzle/turns           a Turns rule
+//   puzzle/goal            a Goals rule
+//   puzzle/undo            a History rule
+//   adventure/rooms        a Scenes rule
+//   adventure/keys         an Inventory rule
+//   simulation/neighbours  `actors within`, a neighbourhood query
+//   simulation/emergent    the same query — see specs/PROGRESSION.md
+//   simulation/dials       reached through `neighbours`
+//
+// What is written is milestone 4 of specs/PROGRESSION_UI.md and then some: all
+// six FOUNDATIONS, and Arcade, Story and Making whole after them.
 
 import {
   actorFile,

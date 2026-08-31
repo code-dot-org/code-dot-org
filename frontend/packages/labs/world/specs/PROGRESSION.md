@@ -604,6 +604,16 @@ in the progression and the one to decide about first.**
 **A grid, or a list of lists.** `sim/emergent` and any tile-state puzzle wants
 a 2D store. Follows the list decision.
 
+**A neighbourhood query.** `simulation/neighbours` proposes `world_actors_within`
+— every actor within so many pixels of this one — and `simulation/emergent`
+cannot be written without it. That tile's whole claim is that LOCAL rules make
+global behaviour: keep apart from the ones near you, go the way they are going,
+move toward where they are. Written over `all actors` instead it is not local
+and teaches the opposite; written with `filter actors` and a hand-rolled
+distance test it is thirty blocks of arithmetic in front of a lesson that is
+about none of it. So `simulation/emergent` waits on the block, the way
+`platformer/ground` waits on Carrying.
+
 **Own blocks outside a rule.** `define block` lives in the Rule category and a
 `.behavior` file (`domainBlocks.ts`, `TOOLBOX_HEAD`). A learner's first
 function should not require authoring a rule. Proposal: allow `define block` in
