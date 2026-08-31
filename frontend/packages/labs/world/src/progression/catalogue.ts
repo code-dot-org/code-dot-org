@@ -46,6 +46,8 @@
 // `requires` names a neighbour, that no two tiles share a cell, that every tile
 // is reachable from Origin, and that a region's tiles touch each other.
 
+import {stockRule} from '../rules/stock';
+
 import {sectorCell, type Axial} from './hex';
 import {FOUNDATIONS, GENRES} from './regions';
 import type {RegionId, Tile} from './types';
@@ -2338,14 +2340,36 @@ export const TILES: readonly Tile[] = [
     title: 'Change it',
     teaches:
       'Your project has its own COPY of every rule it uses, and changing it changes nothing anywhere else.',
-    task: 'Alter a number inside a rule, watch the game change, then start a new project and find it unchanged.',
+    task: 'A guard on a long slow beat, and the number that says how long — which is not in your world.',
     requires: ['arcade/waves'],
     unlocks: [{kind: 'block', type: 'world_rule_step_tick'}],
     check: {
       kind: 'outcome',
-      says: 'The project’s behaviour differs from the stock rule’s in the way the edit predicts.',
+      says: "The Guard turns far more often than the stock rule turns him, and the rule file is not the library's any more.",
       falsePass:
-        'Getting the same effect from a property instead. Compare the rule file, not only the behaviour.',
+        "Setting `across time` on the Guard from the world, which is a property and works and is not this lesson — so the file itself is compared against the library's copy. What a project can set from outside was always settable; what this teaches is that the inside is yours too.",
+      run: {
+        probes: {guard: {kind: 'positions', of: 'Guard'}},
+        trace: Array.from({length: 24}, () => ({seconds: 0.25})),
+      },
+      inspect: files =>
+        (files['rules/patrol.rule'] ?? '') !== stockRule('patrol')?.contents,
+      passes: ({samples}) => {
+        const path = (samples.guard ?? []).map(
+          sample => (sample as {x: number}[])[0]?.x ?? 0,
+        );
+        // How many times he changed his mind. The stock beat gives three in
+        // six seconds; a beat a third as long gives about eleven.
+        let turns = 0;
+        for (let at = 2; at < path.length; at++) {
+          const before = Math.sign(path[at - 1] - path[at - 2]);
+          const after = Math.sign(path[at] - path[at - 1]);
+          if (before && after && before !== after) {
+            turns++;
+          }
+        }
+        return turns >= 6;
+      },
     },
   },
   {
@@ -2419,7 +2443,7 @@ export const TILES: readonly Tile[] = [
     title: 'A trait of your own',
     teaches:
       'Election: a rule that offers something, and the actors that choose to be it.',
-    task: 'One rule, two traits, and two kinds of agent that take one each.',
+    task: 'One weather and two kinds of thing, drifting the same way because the rule offers one ability.',
     requires: ['simulation/dials'],
     unlocks: [
       // `use trait` is how an actor ELECTS one and came with the first lesson.
@@ -2429,9 +2453,37 @@ export const TILES: readonly Tile[] = [
     ],
     check: {
       kind: 'outcome',
-      says: 'Two kinds of actor carry different traits from one rule, and behave differently because of it.',
+      says: 'The Leaf goes sideways and the Stone goes down, from one rule.',
       falsePass:
-        'Two traits both elected by everything, which is one trait with two names.',
+        'Two rules with a trait each, which also works and is a file more than it needs to be — and one trait with the Stone left out, which leaves it standing still rather than doing something else. The check reads both actors going DIFFERENT ways, not one of them moving.',
+      run: {
+        probes: {
+          leaf: {kind: 'positions', of: 'Leaf'},
+          stone: {kind: 'positions', of: 'Stone'},
+        },
+        trace: Array.from({length: 4}, () => ({seconds: 0.3})),
+      },
+      passes: ({samples}) => {
+        const drift = (name: string) => {
+          const path = (samples[name] ?? []) as {x: number; y: number}[][];
+          const first = path[0]?.[0];
+          const last = path[path.length - 1]?.[0];
+          return first && last
+            ? {x: last.x - first.x, y: last.y - first.y}
+            : undefined;
+        };
+        const leaf = drift('leaf');
+        const stone = drift('stone');
+        if (!leaf || !stone) {
+          return false;
+        }
+        return (
+          Math.abs(leaf.x) > 40 &&
+          Math.abs(leaf.y) < 10 &&
+          Math.abs(stone.y) > 40 &&
+          Math.abs(stone.x) < 10
+        );
+      },
     },
   },
 ];

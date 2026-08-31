@@ -139,6 +139,10 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   // world's, and what the learner reaches for there is the generated setter,
   // which no gate can hide (`toolboxShelf`, "what the project mints").
   'making/property': [],
+  // Both Making lessons so far are spent in a `.rule`, whose palette is the
+  // rule author's rather than the world's.
+  'making/change': [],
+  'making/trait': [],
   'puzzle/grid': ['world_use_trait'],
   'puzzle/push': ['world_use_trait'],
   'adventure/people': ['world_add_trait'],

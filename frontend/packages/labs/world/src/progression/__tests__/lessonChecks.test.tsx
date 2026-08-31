@@ -3212,3 +3212,125 @@ describe('the errand lesson’s check', () => {
     expect(passes).toBe(false);
   });
 });
+
+describe('the change lesson’s check', () => {
+  const lesson = LESSONS['making/change'];
+
+  it('refuses the beat the rule shipped with', async () => {
+    const {passes} = await check('making/change', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts the number changed in the file', async () => {
+    const solved = editing(lesson.source, 'patrol.rule', contents =>
+      contents.replace('"DEFAULT": "1.5"', '"DEFAULT": "0.5"'),
+    );
+    const {passes, result} = await check('making/change', solved);
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  // The false pass the tile names: the same beat, set from outside. It works,
+  // and it leaves the library's rule exactly as it was — which is what the
+  // shape half reads.
+  it('refuses the same beat set from the world', async () => {
+    const fromOutside = editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const placed = rowsOf(workspace)[0];
+      let last = inSocket(placed, 'DO')!;
+      while (last.next?.block) {
+        last = last.next.block;
+      }
+      last.next = {
+        block: {
+          type: 'world_set_Patrol_AcrossTimeProperty',
+          inputs: {
+            ACTOR: {block: {type: 'world_this_actor'}},
+            VALUE: {shadow: {type: 'math_number', fields: {NUM: 0.5}}},
+          },
+        },
+      };
+      return JSON.stringify(workspace);
+    });
+    const {passes} = await check('making/change', fromOutside);
+    expect(passes).toBe(false);
+  });
+});
+
+describe('the own-trait lesson’s check', () => {
+  const lesson = LESSONS['making/trait'];
+
+  it('refuses one ability on both of them', async () => {
+    const {passes} = await check('making/trait', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts a second trait in the same rule', async () => {
+    const me = () => ({block: {type: 'world_this_actor'}});
+    const position = (component: 'x' | 'y') => ({
+      block: {
+        type: 'world_get_Space_PositionProperty',
+        fields: {COMPONENT: component},
+        inputs: {ACTOR: me()},
+      },
+    });
+    const declared = editing(lesson.source, 'weather.rule', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      workspace.blocks.blocks.push({
+        type: 'world_rule_trait',
+        x: 420,
+        y: 160,
+        fields: {NAME: 'Sinks'},
+        next: {
+          block: {
+            type: 'world_use_trait',
+            fields: {TRAIT: 'Space#PositionalTrait'},
+            next: {
+              block: {
+                type: 'world_trait_step',
+                fields: {PHASE: 'move', NAME: 'sink'},
+                inputs: {
+                  DO: {
+                    block: {
+                      type: 'world_set_position',
+                      inputs: {
+                        ACTOR: me(),
+                        X: position('x'),
+                        Y: {
+                          block: {
+                            type: 'math_arithmetic',
+                            fields: {OP: 'ADD'},
+                            inputs: {
+                              A: position('y'),
+                              B: {
+                                shadow: {
+                                  type: 'math_number',
+                                  fields: {NUM: 2},
+                                },
+                              },
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      } as unknown as Row);
+      return JSON.stringify(workspace);
+    });
+    const solved = editing(declared, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      // The Stone elects the OTHER one, which is the whole of the change.
+      actorIn(workspace, 'Stone').next!.block!.fields!.TRAIT =
+        'Weather#SinksTrait';
+      return JSON.stringify(workspace);
+    });
+    const {passes, result} = await check('making/trait', solved);
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+});

@@ -12,13 +12,13 @@
 // Blockly JSON behind them. So `catalogue.ts` stays data about tiles, and the
 // projects live here, looked up by tile id.
 //
-// Fifty-two of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md
+// Fifty-four of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md
 // and then some. ALL SIX FOUNDATIONS are written — Origin, Input, Motion, Logic,
 // Memory, Look and Place — so every genre gate on the map is open, and the
 // first hours of the progression can be walked end to end. ARCADE is written
 // whole after them, Platformer but for one tile (`platformer/ground` waits on
 // the engine: specs/PROGRESSION.md, "Carrying"), STORY is written whole, and
-// Simulation, Puzzle and Adventure are started, and Making has its first.
+// Simulation, Puzzle, Adventure and Making are started.
 
 import {
   actorFile,
@@ -3019,6 +3019,166 @@ tokens.
 `.trim(),
 };
 
+// ── making/change ────────────────────────────────────────────────────────────
+
+const changeRule: WorldScenario = {
+  // A lesson about a rule FILE, so the browser is on — and the point of it is
+  // that the file is the project's own copy.
+  levelData: {showFileBrowser: true},
+  name: 'Change it',
+  description:
+    'A guard on a long, slow beat, and the number that says how long.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [addActor(local('guard'), [placeAt(160, 160)])],
+      actors: [
+        {
+          id: 'guard',
+          name: 'Guard',
+          rows: [
+            useTrait('Patrol#PatrolsAcrossTrait'),
+            setSprite('player.png'),
+          ],
+        },
+      ],
+    }),
+    sprites: ['player'],
+    rules: ['patrol'],
+  }),
+  instructions: `
+## Change it
+
+The Guard walks a beat: a second and a half one way, a second and a half back.
+That number is not in your world — it is in \`rules/patrol.rule\`, which arrived
+when you took the rule.
+
+**That file is yours.** Not a link to a library, not a copy the lab keeps in
+step: your project's own, sitting in \`rules/\` with everything else, and
+nothing anywhere else changes when you change it.
+
+### What you do
+
+1. Open \`rules/patrol.rule\` — from the file browser, or the eye on
+   \`use trait ⟨Patrols Across⟩\`.
+2. Find **define number across time with default 1.5** and make it 0.5. The
+   Guard turns three times as often.
+3. Start a new project, take the Patrol rule again, and look: 1.5. You changed
+   your copy and nothing else.
+4. Now think about what you could NOT have done from outside. \`across time\` is
+   a property, so a project can set it — but the SHAPE of the beat, the fact
+   that it turns at all, is a step in this file, and only opening it lets you
+   argue with that.
+`.trim(),
+};
+
+// ── making/trait ─────────────────────────────────────────────────────────────
+
+/** A rule with ONE trait in it, which is the shape this lesson doubles. */
+const WEATHER_RULE = JSON.stringify(
+  {
+    blocks: {
+      blocks: [
+        {
+          type: 'world_rule',
+          x: 20,
+          y: 20,
+          fields: {NAME: 'Weather', ABILITY: 'Has Weather'},
+          next: {block: {type: 'world_use_rule', fields: {RULE: 'Space'}}},
+        },
+        {
+          type: 'world_rule_trait',
+          x: 20,
+          y: 160,
+          fields: {NAME: 'Blown'},
+          next: {
+            block: {
+              type: 'world_use_trait',
+              fields: {TRAIT: 'Space#PositionalTrait'},
+              next: {
+                block: {
+                  type: 'world_trait_step',
+                  fields: {PHASE: 'move', NAME: 'drift'},
+                  inputs: {
+                    DO: {
+                      block: {
+                        type: 'world_set_position',
+                        inputs: {
+                          ACTOR: me(),
+                          X: {
+                            block: {
+                              type: 'math_arithmetic',
+                              fields: {OP: 'ADD'},
+                              inputs: {A: heldPosition('x'), B: num(2)},
+                            },
+                          },
+                          Y: heldPosition('y'),
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      ],
+    },
+  },
+  null,
+  2,
+);
+
+const ownTrait: WorldScenario = {
+  levelData: {showFileBrowser: true},
+  name: 'A trait of your own',
+  description: 'One weather, two kinds of thing, and the same wind on both.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        addActor(local('leaf'), [placeAt(60, 100)]),
+        addActor(local('stone'), [placeAt(60, 220)]),
+      ],
+      actors: [
+        {
+          id: 'leaf',
+          name: 'Leaf',
+          rows: [useTrait('Weather#BlownTrait'), setSprite('coin.png')],
+        },
+        {
+          id: 'stone',
+          name: 'Stone',
+          rows: [useTrait('Weather#BlownTrait'), setSprite('box.png')],
+        },
+      ],
+    }),
+    sprites: ['coin', 'box'],
+    ruleFiles: {weather: WEATHER_RULE},
+  }),
+  instructions: `
+## A trait of your own
+
+A Leaf and a Stone, and the same weather on both: they drift right together,
+because \`rules/weather.rule\` offers one thing — **Blown** — and both of them
+elected it.
+
+A rule is not one ability. It is a place where several live, and an actor takes
+the ones it wants: that is what election means, and it is why Gravity can offer
+"Affected by Gravity" and "Acts as Ground" without either being about the
+other.
+
+### What you do
+
+1. In \`rules/weather.rule\`, add a second **define trait**, called **Sinks**.
+2. Give it \`use trait ⟨Positional⟩\` and an **each frame** that adds to the
+   position's **y** rather than its **x**.
+3. In \`main.world\`, give the Stone **Sinks** instead of **Blown**.
+4. Run it. One rule, two abilities, two kinds of thing — and neither trait
+   mentions the other or the actors that took it.
+`.trim(),
+};
+
 // ── place/edges ──────────────────────────────────────────────────────────────
 
 const edges: WorldScenario = {
@@ -3407,6 +3567,8 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'puzzle/push': push,
   'adventure/people': people,
   'adventure/errand': errand,
+  'making/change': changeRule,
+  'making/trait': ownTrait,
 };
 
 /** Every lesson written so far, by the tile it belongs to. */
