@@ -1,3 +1,4 @@
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ResponseValidator} from '@cdo/apps/util/HttpClient';
 
 import {isChatMessage, ServerChatEvent} from '../types';
@@ -28,6 +29,30 @@ const chatHistoryValidator: ResponseValidator<ServerChatEvent[]> = bodyJson => {
       for (const field of ['chatMessageText', 'role', 'status'] as const) {
         if (event[field] === undefined) {
           throw fieldError(field);
+        }
+      }
+
+      // Chat events are stored as JSON blobs exactly as the client posted
+      // them, so an event written by an older or buggy client can hold any
+      // shape. Every consumer of the message text needs a string: markdown
+      // rendering, clipboard copy, the history sent to the model, and the
+      // markdownToTxt() calls behind the live region and text-to-speech.
+      // markdownToTxt() (marked) throws outright on a non-string, and it is
+      // called from an effect, so one bad event would otherwise fail the whole
+      // level rather than just one message. Coerce here, where history enters
+      // the app, and report it so bad writers can be tracked down.
+      const textFields = ['chatMessageText', 'chatMessageDisplayText'] as const;
+      for (const field of textFields) {
+        const value: unknown = event[field];
+        if (value !== undefined && typeof value !== 'string') {
+          Lab2Registry.getInstance()
+            .getMetricsReporter()
+            .logWarning(
+              `Chat event ${event.id}: ${field} is of type ` +
+                `${Object.prototype.toString.call(value)}, string expected. ` +
+                'Coercing to a string.'
+            );
+          event[field] = JSON.stringify(value);
         }
       }
 

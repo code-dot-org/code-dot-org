@@ -302,7 +302,14 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
     useEffect(() => {
       if (hasChatHistory) {
         const last = chatEvents[chatEvents.length - 1];
-        if ('chatMessageText' in last && last.chatMessageText) {
+        // markdownToTxt() throws on anything but a string. Check the type as
+        // well as the value so that a stored message with an unexpected shape
+        // costs us one live-region announcement rather than the whole level.
+        if (
+          'chatMessageText' in last &&
+          typeof last.chatMessageText === 'string' &&
+          last.chatMessageText
+        ) {
           setLiveAnnouncement(markdownToTxt(last.chatMessageText));
         }
       }
