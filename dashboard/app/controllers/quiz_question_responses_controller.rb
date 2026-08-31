@@ -7,8 +7,7 @@ class QuizQuestionResponsesController < ApplicationController
     attempt = QuizAttempt.find(params[:quizAttemptId])
     raise ActiveRecord::RecordNotFound unless attempt.user_id == current_user.id
 
-    # The question must be on this attempt's quiz. Doesn't touch attempt
-    # state, so no need to hold it up inside the lock below.
+    # The question must be on this attempt's quiz.
     question = QuizQuestion.find(params[:quizQuestionId])
     raise ActiveRecord::RecordNotFound unless QuizQuestionPlacement.exists?(
       level_id: attempt.level_id,
@@ -22,8 +21,7 @@ class QuizQuestionResponsesController < ApplicationController
       # Once submitted, this attempt is immutable - a retake (see
       # Quiz#retakeable?) mints a new attempt row rather than reopening it.
       raise 'attempt already submitted' if attempt.submitted_at.present?
-      # response_deadline_passed? adds a grace period on top of expires_at
-      # to take into account network/server latency.
+      # response_deadline_passed? adds a grace period on top of expires_at.
       raise 'time limit exceeded' if attempt.response_deadline_passed?
 
       if question.auto_gradable?

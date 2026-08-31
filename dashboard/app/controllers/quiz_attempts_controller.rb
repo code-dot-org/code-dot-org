@@ -19,7 +19,6 @@ class QuizAttemptsController < ApplicationController
   # Starts, resumes, or retakes this user's attempt at a quiz level within a
   # unit, depending on the latest existing attempt (if any).
   def create
-    # The level must be a Quiz, and that Quiz must actually appear in the given unit.
     # Uniqueness is (user, level, unit, attempt_number).
     level = Quiz.find(params[:levelId])
     unit = Unit.find(params[:unitId])
@@ -55,15 +54,10 @@ class QuizAttemptsController < ApplicationController
     attempt = QuizAttempt.find(params[:id])
     raise ActiveRecord::RecordNotFound unless attempt.user_id == current_user.id
 
-    # Locks the same quiz_attempts row QuizQuestionResponsesController#create
-    # locks - without this, a response write racing this finalize could sum
-    # into score/max_score here without actually being reflected consistently,
-    # or land after submitted_at is set despite that being meant as the
-    # point of immutability.
+    # Locks the same quiz_attempts row QuizQuestionResponsesController#create locks.
     attempt.with_lock do
       if attempt.submitted_at.nil?
-        # Only questions on this quiz count; a response for some other
-        # QuizQuestion must not inflate score/max_score.
+        # Only questions on this quiz count.
         in_quiz_question_ids = QuizQuestionPlacement.where(level_id: attempt.level_id).select(:quiz_question_id)
         auto_graded = attempt.quiz_question_responses.
           where(grading_status: 'auto_graded', quiz_question_id: in_quiz_question_ids)
@@ -93,15 +87,11 @@ class QuizAttemptsController < ApplicationController
       score: attempt.score,
       maxScore: attempt.max_score,
       # nil when the quiz has no time limit - see QuizAttempt#expires_at.
-      # The client computes its own countdown/auto-submit.
       expiresAt: attempt.expires_at,
       # Whether POSTing to #create again would start a new attempt rather
-      # than just returning this one - see QuizAttempt#retakeable?.
+      # than just returning this one.
       canRetake: attempt.retakeable?,
-      # nil unless this attempt is submitted - always carries
-      # selectedChoiceId once it does, so the client can restore/highlight
-      # past answers on reload; correct/explanation are further gated by
-      # the quiz's own settings - see QuizAttempt#question_results.
+      # nil unless this attempt is submitted.
       questionResults: attempt.question_results&.map do |result|
         {
           quizQuestionId: result[:quiz_question_id],
