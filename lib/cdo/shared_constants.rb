@@ -875,9 +875,7 @@ module SharedConstants
     AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH_IMAGE],
   ].freeze
 
-  # Models only available to users in the US
-  # (see User::AiAccessible#can_use_aichat_model?). Kept separate from the list
-  # above, which is about which provider serves a model.
+  # We currently block usage of gemini models for users outside the US, per our google agreement.
   AI_CHAT_US_ONLY_MODEL_IDS = AI_CHAT_GEMINI_MODEL_IDS
 
   AI_CHAT_CLIENT_TYPES = {

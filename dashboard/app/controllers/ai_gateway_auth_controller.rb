@@ -19,11 +19,10 @@ class AiGatewayAuthController < ApplicationController
       return render status: :forbidden, json: {user_type: current_user.user_type}
     end
 
-    # The gateway serves Gemini for generation (see shouldUseAiGateway), and the
-    # token it mints is not bound to a model, so a token issued for one model can
-    # be replayed against another. Refuse to mint at all when Gemini is blocked
-    # rather than trusting a client-supplied model id we cannot enforce later.
-    if current_user.us_only_aichat_models_disabled?
+    blocked_model_ids = current_user.blocked_aichat_model_ids
+
+    # Until the gateway rejects blocked models itself, we keep blocking token minting entirely.
+    if blocked_model_ids.any? && !DCDO.get('ai_gateway_enforces_blocked_models', false)
       return render status: :forbidden, json: {user_type: current_user.user_type, error: AichatRequestsController::MODEL_REGION_BLOCKED_ERROR}
     end
 
@@ -48,6 +47,10 @@ class AiGatewayAuthController < ApplicationController
         script_id: aichat_context[:scriptId],
         channel_id: aichat_context[:channelId],
         lesson_id: aichat_context[:lessonId],
+        # Omitted when nothing is blocked, which is nearly every token. Absent
+        # and empty both mean "unrestricted", so the gateway can treat a missing
+        # claim as no restriction and tokens minted by older dashboards stay valid.
+        **(blocked_model_ids.any? ? {blocked_model_ids: blocked_model_ids} : {}),
       },
       OpenSSL::PKey::RSA.new(PRIVATE_KEY, PASSPHRASE),
       'RS256'
