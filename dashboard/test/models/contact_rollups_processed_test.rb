@@ -18,6 +18,26 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
     assert_equal 3, ContactRollupsProcessed.count
   end
 
+  test 'import_from_raw_table handles a contact whose aggregated data exceeds 64KB' do
+    # The GROUP_CONCAT-based aggregation this pipeline previously used
+    # silently truncated at group_concat_max_len (65535 in production, 1024
+    # default elsewhere), corrupting the JSON mid-string and dropping the
+    # contact as invalid. JSON_ARRAYAGG has no such ceiling.
+    email = 'prolific@example.domain'
+    filler = 'x' * 1000
+    70.times do |i|
+      create(:contact_rollups_raw, email: email,
+        sources: "dashboard.source_#{i}", data: {filler: filler}
+)
+    end
+
+    results = ContactRollupsProcessed.import_from_raw_table
+
+    assert_equal 1, results[:valid_contacts]
+    assert_equal 0, results[:invalid_contacts]
+    refute_nil ContactRollupsProcessed.find_by_email(email)
+  end
+
   test 'import_from_raw_table inserts records by batch' do
     unique_email_count = 15
     batch_sizes = [1, 5, 7, 11, 20]

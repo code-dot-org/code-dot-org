@@ -100,13 +100,14 @@ class ContactRollupsProcessed < ApplicationRecord
     SQL
 
     # Groups records by emails. Aggregates all data and metadata belong to an email into one JSON field.
-    # Note: use GROUP_CONCAT instead of JSON_OBJECT_AGG because the current Aurora Mysql version in
-    # production is 5.7.12, while JSON_OBJECT_AGG is only available from 5.7.22.
-    # Because GROUP_CONCAT returns a string, we add a parser function to convert the result to a hash.
+    # JSON_ARRAYAGG builds the array server-side with no length ceiling. Its
+    # predecessor, CONCAT('[', GROUP_CONCAT(...), ']'), silently truncated at
+    # group_concat_max_len, corrupting the JSON of any contact whose
+    # aggregated data exceeded it and dropping that contact from the sync.
     <<-SQL.squish
       SELECT
         email,
-        CONCAT('[', GROUP_CONCAT(data_and_metadata), ']') AS all_data_and_metadata
+        JSON_ARRAYAGG(data_and_metadata) AS all_data_and_metadata
       FROM (#{data_transformation_query}) AS subquery
       GROUP BY email
     SQL
