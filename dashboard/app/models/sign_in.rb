@@ -6,7 +6,7 @@
 #  user_id       :integer          not null
 #  sign_in_at    :datetime         not null
 #  sign_in_count :integer          not null
-#  anon_user_id  :string(255)
+#  anon_user_id  :string(36)
 #
 # Indexes
 #

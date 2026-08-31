@@ -2502,7 +2502,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_08_28_120001) do
     t.integer "user_id", null: false
     t.datetime "sign_in_at", precision: nil, null: false
     t.integer "sign_in_count", null: false
-    t.string "anon_user_id"
+    t.string "anon_user_id", limit: 36
     t.index ["sign_in_at"], name: "index_sign_ins_on_sign_in_at"
     t.index ["user_id"], name: "index_sign_ins_on_user_id"
   end
