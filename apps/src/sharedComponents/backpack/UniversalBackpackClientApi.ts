@@ -1,6 +1,6 @@
 import HttpClient from '@cdo/apps/util/HttpClient';
 
-import {FileMetadata} from './BackpackClientApi';
+import {FileMetadata} from './types';
 
 // App type the backend uses for the backpack that belongs to no lab.
 export const UNIVERSAL_APP_TYPE = 'universal';

@@ -1,18 +1,14 @@
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
 
+import {FileMetadata} from './types';
+
 const REQUEST_RETRY_COUNT = 1;
 
 interface FilesObject {
   [filename: string]: {
     text: string;
   };
-}
-export interface FileMetadata {
-  filename: string;
-  category?: string;
-  size: number;
-  timestamp: string;
 }
 
 type ErrorCallback = (error?: Error, failedFiles?: string[]) => void;
