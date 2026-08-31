@@ -1,5 +1,6 @@
 # We skip because the test server and drone won't localize for some reason right now
 @skip
+@playwright
 @no_mobile
 Feature: Global Edition - Farsi Headers when Signed Out
   Background:
