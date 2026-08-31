@@ -1,5 +1,6 @@
 import * as Observability from '@code-dot-org/core/plugins/observability';
 
+import {type TurnstileEnforcementMode} from './enforcementMode';
 import {
   isTurnstileChallengeError,
   type TokenAcquisitionMode,
@@ -16,13 +17,17 @@ export const classifyTurnstileFailure = (
   isTurnstileChallengeError(error) ? error.reason : 'unknown';
 
 interface TurnstileOutcome {
-  mode: TokenAcquisitionMode;
+  /** Whether a caller was waiting on this challenge. */
+  acquisitionMode: TokenAcquisitionMode;
+  /** Enforcement policy in force when the challenge started. */
+  enforcementMode: TurnstileEnforcementMode;
   durationMs: number;
   error?: unknown;
 }
 
 export function recordTurnstileOutcome({
-  mode,
+  acquisitionMode,
+  enforcementMode,
   durationMs,
   error,
 }: TurnstileOutcome): void {
@@ -30,21 +35,41 @@ export function recordTurnstileOutcome({
   const result = failed ? 'error' : 'ok';
   const reason = failed ? classifyTurnstileFailure(error) : undefined;
 
+  // Both axes are named for what they are. Neither is called `mode`: the
+  // acquisition mode and the enforcement mode are both legitimately "the
+  // turnstile mode", so the bare word cannot identify either one.
+  //
+  // Enforcement has to be on the series because without it a failure is
+  // ambiguous: under `monitor` the request still succeeds and the count is the
+  // measurement the rollout depends on, while under `enforce` the same failure
+  // is a broken request.
   Observability.metrics.count(OUTCOME_METRIC, 1, {
-    mode,
+    acquisition_mode: acquisitionMode,
+    enforcement_mode: enforcementMode,
     result,
     ...(reason && {reason}),
   });
 
   Observability.metrics.distribution(DURATION_METRIC, Math.round(durationMs), {
-    mode,
+    acquisition_mode: acquisitionMode,
+    enforcement_mode: enforcementMode,
     result,
   });
 
   if (failed) {
-    Observability.logger.error('turnstile challenge failed', {
+    // Under `monitor` a failed challenge is tolerated by design -- the request
+    // proceeds without a token and the worker accepts it. Logging that at
+    // error level would fill the error stream during exactly the phase we are
+    // deliberately measuring.
+    const log =
+      enforcementMode === 'monitor'
+        ? Observability.logger.warn
+        : Observability.logger.error;
+
+    log('turnstile challenge failed', {
       feature: 'ai-gateway',
-      mode,
+      acquisition_mode: acquisitionMode,
+      enforcement_mode: enforcementMode,
       reason,
       durationMs: Math.round(durationMs),
       errorName: error instanceof Error ? error.name : typeof error,

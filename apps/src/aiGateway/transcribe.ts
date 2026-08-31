@@ -16,7 +16,7 @@ import {
 import {reportGatewayError} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
 import {
-  fetchTurnstileTokenIfEnabled,
+  fetchTurnstileToken,
   turnstileErrorTags,
   turnstileHeaders,
 } from './turnstile';
@@ -36,10 +36,12 @@ async function transcribeThroughGateway(
   let schemaErrorReported = false;
   const execute = async (): Promise<TranscriptionResult> => {
     try {
-      const [token, turnstileToken] = await Promise.all([
-        fetchAccessToken(),
-        fetchTurnstileTokenIfEnabled(),
-      ]);
+      // Serialized, not parallel: the access token response carries the
+      // Turnstile mode that decides whether a challenge is needed at all.
+      const {token, turnstileEnforcementMode} = await fetchAccessToken();
+      const turnstileToken = await fetchTurnstileToken(
+        turnstileEnforcementMode
+      );
 
       const formData = new FormData();
       formData.append('token', token);
