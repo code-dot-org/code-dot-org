@@ -3386,12 +3386,12 @@ __metadata:
   linkType: hard
 
 "@babel/runtime-corejs2@npm:^7.0.0":
-  version: 7.5.5
-  resolution: "@babel/runtime-corejs2@npm:7.5.5"
+  version: 7.26.10
+  resolution: "@babel/runtime-corejs2@npm:7.26.10"
   dependencies:
-    core-js: "npm:^2.6.5"
-    regenerator-runtime: "npm:^0.13.2"
-  checksum: 10/3b54873ed41a4a6f83b9b1c752cca619ecc6358cf9e62ab99af5bf7d9100ea8aaa18631f687562636e43e012d8644adbcdebe82263aead57fbd7962f57dd6b80
+    core-js: "npm:^2.6.12"
+    regenerator-runtime: "npm:^0.14.0"
+  checksum: 10/82a3aaf3933470c00a666b030fdcb7d3a965b8fdeaf56a6f031ab1eacf1b29a82236ef6722bfb07a49d73e764bc6153262a52b9528dc52bb630b7a646eea09f8
   languageName: node
   linkType: hard
 
@@ -13781,6 +13781,13 @@ canvg@gabelerner/canvg:
   version: 2.6.3
   resolution: "core-js@npm:2.6.3"
   checksum: 10/d8e7bd8fd834094378844968429b0de609c54096117ba2c652823422a476c23ab779a46d37c52086844aabf8147544463367526716b907c22a93e5b2f9e27c0c
+  languageName: node
+  linkType: hard
+
+"core-js@npm:^2.6.12":
+  version: 2.6.12
+  resolution: "core-js@npm:2.6.12"
+  checksum: 10/7c624eb00a59c74c769d5d80f751f3bf1fc6201205b6562f27286ad5e00bbca1483f2f7eb0c2854b86f526ef5c7dc958b45f2ff536f8a31b8e9cb1a13a96efca
   languageName: node
   linkType: hard
 
