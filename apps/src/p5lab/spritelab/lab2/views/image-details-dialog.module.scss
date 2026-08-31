@@ -380,19 +380,35 @@
   gap: 10px;
 }
 
+// Without a width the design system wrapper stretches to the whole pane,
+// leaving the error no room.
+.nameRow .nameField {
+  width: 240px;
+  min-width: 0;
+  flex-shrink: 0;
+
+  input {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+
+// Wraps within its row's leftover width instead of overflowing the panel;
+// the field beside it is taller than a few wrapped lines, so the dialog's
+// height still never changes.
 .inlineFieldError {
   margin-bottom: 10px;
   color: var(--dialog-danger-text);
   font-size: 13px;
-  white-space: nowrap;
+  flex: 1;
+  min-width: 0;
 }
 
-// The beside-the-field layout means the fields can't take TextField's
-// errorMessage prop (it renders the message below); restore the red border
-// it would have drawn, keyed on the aria-invalid the views set. Weighted to
-// outrank the design system's resting border (.textField.textField-color-*
-// input).
-.dialogHost .detailsPane .nameRow input[aria-invalid='true'],
+// The fields can't take TextField's errorMessage prop (it renders its own
+// message below); restore the red border it would have drawn, keyed on the
+// aria-invalid the views set. Weighted to outrank the design system's
+// resting border (.textField.textField-color-* input).
+.dialogHost .nameRow .nameField input[aria-invalid='true'],
 .dialogHost .header .headerNameField input[aria-invalid='true'] {
   border-color: var(--borders-error-primary);
 }
