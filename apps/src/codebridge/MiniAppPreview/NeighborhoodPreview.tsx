@@ -67,24 +67,35 @@ const NeighborhoodPreview: React.FunctionComponent<
   const neighborhood = useMemo(() => {
     // We can't store consoleManager in a variable for reuse because
     // it may not exist on neighborhood creation.
+    // Neither of these writes is something the student asked for, so neither
+    // takes focus: pulling focus to the console mid-run makes the screen
+    // reader abandon the run narration and start reading the terminal. An
+    // input() prompt is a partial line and still focuses, so typing still
+    // lands in the right place.
     const onOutputMessage = (message: string) =>
       CodebridgeRegistry.getInstance()
         .getConsoleManager()
-        ?.writeConsoleMessage(message);
+        ?.writeConsoleMessage(message, false);
     const onNewlineMessage = () =>
       CodebridgeRegistry.getInstance()
         .getConsoleManager()
-        ?.writeConsoleMessage('');
+        ?.writeConsoleMessage('', false);
     const onPartialLineMessage = (message: string) =>
       CodebridgeRegistry.getInstance()
         .getConsoleManager()
         ?.writePartialLine(message);
 
+    const setConsoleAnnouncements = (enabled: boolean) =>
+      CodebridgeRegistry.getInstance()
+        .getConsoleManager()
+        ?.setScreenReaderAnnouncements(enabled);
+
     const neighborhoodRef = new Neighborhood(
       onOutputMessage,
       onNewlineMessage,
       isRunning => dispatch(setIsRunning(isRunning)),
-      onPartialLineMessage
+      onPartialLineMessage,
+      setConsoleAnnouncements
     );
     CodebridgeRegistry.getInstance().setNeighborhood(neighborhoodRef);
     return neighborhoodRef;

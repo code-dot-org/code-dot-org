@@ -372,6 +372,25 @@ describe('ConsoleManager', () => {
     expect(terminal.focus).not.toHaveBeenCalled();
   });
 
+  // A remount redraws old lines. Taking focus for them moves the user, and a
+  // screen reader then reads the console over whatever else was speaking.
+  it('does not pull focus when replaying the previous console', () => {
+    const {terminal, consoleManager} = stalledTerminal();
+
+    consoleManager.replayTerminalLines(['an earlier line']);
+
+    expect(terminal.focus).not.toHaveBeenCalled();
+  });
+
+  it('still takes focus for a write the student asked for', () => {
+    const {terminal, consoleManager, acknowledgeWrites} = stalledTerminal();
+
+    consoleManager.writeConsoleMessage('program output');
+    acknowledgeWrites();
+
+    expect(terminal.focus).toHaveBeenCalled();
+  });
+
   it('does nothing when the terminal has not been opened yet', () => {
     const consoleManager = newConsoleManager();
 

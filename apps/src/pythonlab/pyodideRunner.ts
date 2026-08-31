@@ -40,7 +40,10 @@ export async function handleRunClick(
         : RunType.TEST
       : RunType.RUN;
 
-    consoleManager?.writeConsoleMessage(getTimestampMessage(runType));
+    consoleManager?.writeConsoleMessage(
+      getTimestampMessage(runType),
+      statusTakesFocus()
+    );
     handleRunEndedUnexpectedly(consoleManager, pythonlabI18n.noCode());
     return;
   }
@@ -48,7 +51,10 @@ export async function handleRunClick(
     await runAllTests(source, dispatch, progressManager, validationFile);
   } else {
     // Run main.py
-    consoleManager?.writeConsoleMessage(getTimestampMessage(RunType.RUN));
+    consoleManager?.writeConsoleMessage(
+      getTimestampMessage(RunType.RUN),
+      statusTakesFocus()
+    );
     const code = getFileByName(source.files, MAIN_PYTHON_FILE)?.contents;
     if (code === undefined) {
       handleRunEndedUnexpectedly(
@@ -181,6 +187,14 @@ function isNeighborhoodLevel() {
   return getMiniApp() === MiniApps.Neighborhood;
 }
 
+// Status lines are not output the student asked for. On neighborhood levels
+// taking focus for one is actively harmful: focus lands in the terminal and the
+// screen reader abandons the run narration to read the console instead. An
+// input() prompt is a partial line and still focuses, so typing is unaffected.
+function statusTakesFocus() {
+  return !isNeighborhoodLevel();
+}
+
 function isTheaterLevel() {
   return getMiniApp() === MiniApps.Theater;
 }
@@ -189,7 +203,10 @@ function handleRunEndedUnexpectedly(
   consoleManager: ConsoleManager | null,
   message: string
 ) {
-  consoleManager?.writeConsoleMessage(getSystemMessage(message, appName));
+  consoleManager?.writeConsoleMessage(
+    getSystemMessage(message, appName),
+    statusTakesFocus()
+  );
   if (isNeighborhoodLevel()) {
     // We reset, run, and close the neighborhood to ensure that the neighborhood
     // properly resets the run button back to run (from stop), and to reset the

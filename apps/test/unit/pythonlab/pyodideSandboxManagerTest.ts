@@ -8,6 +8,9 @@ const mockDispatch = jest.fn();
 const mockLogWarning = jest.fn();
 const mockWriteConsoleMessage = jest.fn();
 let mockIsRunning = false;
+// Non-null only on neighborhood levels, which is what decides whether a status
+// line is allowed to take focus.
+let mockNeighborhood: object | null = null;
 
 jest.mock('@cdo/apps/redux', () => ({
   getStore: () => ({
@@ -33,7 +36,7 @@ jest.mock('@codebridge/CodebridgeRegistry', () => ({
       writeConsoleMessage: mockWriteConsoleMessage,
       writePartialLine: jest.fn(),
     }),
-    getNeighborhood: () => null,
+    getNeighborhood: () => mockNeighborhood,
   }),
 }));
 
@@ -70,6 +73,7 @@ describe('pyodideSandboxManager', () => {
     jest.clearAllMocks();
     jest.useFakeTimers();
     mockIsRunning = false;
+    mockNeighborhood = null;
     document.body.innerHTML = '';
   });
 
@@ -129,7 +133,23 @@ describe('pyodideSandboxManager', () => {
     manager.restartPyodideIfProgramIsRunning();
 
     expect(mockWriteConsoleMessage).toHaveBeenCalledWith(
-      expect.stringContaining('stopped')
+      expect.stringContaining('stopped'),
+      true
+    );
+  });
+
+  // The neighborhood narrates its run to a screen reader, and focus landing in
+  // the console makes the reader read the terminal over that narration.
+  it('does not take focus to report stopping on a neighborhood level', () => {
+    const manager = loadManager();
+    mockIsRunning = true;
+    mockNeighborhood = {};
+
+    manager.restartPyodideIfProgramIsRunning();
+
+    expect(mockWriteConsoleMessage).toHaveBeenCalledWith(
+      expect.stringContaining('stopped'),
+      false
     );
   });
 });

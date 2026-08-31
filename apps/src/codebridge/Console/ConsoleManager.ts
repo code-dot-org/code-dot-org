@@ -94,9 +94,16 @@ export default class ConsoleManager {
   // xterm ships .live-region as assertive, so writes interrupt the screen
   // reader. Its parent also holds the browsable row list.
   public setPoliteScreenReaderAnnouncements() {
+    this.setScreenReaderAnnouncements(true);
+  }
+
+  // Silences the console's own announcements without touching what it displays.
+  // A lab that narrates its run reads the console's output itself once the
+  // narration is done, so the two do not talk over each other.
+  public setScreenReaderAnnouncements(enabled: boolean) {
     this.terminal.element
       ?.querySelector('.xterm-accessibility .live-region')
-      ?.setAttribute('aria-live', 'polite');
+      ?.setAttribute('aria-live', enabled ? 'polite' : 'off');
   }
 
   public clearTerminalLines() {
@@ -181,7 +188,8 @@ export default class ConsoleManager {
     this.lastLineIsPartial = false;
     this.writeToTerminal(this.drawnTerminalLines());
     this.terminal.scrollToBottom();
-    this.focusTerminal();
+    // No focus: this is history being redrawn after a remount, not output
+    // arriving now, so it must not pull the user out of whatever they are in.
     this.executeTerminalLinesListeners();
   }
 

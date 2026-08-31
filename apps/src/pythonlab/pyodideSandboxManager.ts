@@ -351,10 +351,14 @@ const restartPyodideIfProgramIsRunning = () => {
   // stops processing messages on stop, and we want to always show this to the user.
   if (getStore().getState().lab2System.isRunning) {
     const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
+    // Stopping is not a request to type, and on a neighborhood level taking
+    // focus here interrupts the run narration.
+    const takeFocus = !CodebridgeRegistry.getInstance().getNeighborhood();
     consoleManager?.writeConsoleMessage(
-      getSystemMessage(pythonlabI18n.programStopped(), appName)
+      getSystemMessage(pythonlabI18n.programStopped(), appName),
+      takeFocus
     );
-    consoleManager?.writeConsoleMessage('');
+    consoleManager?.writeConsoleMessage('', takeFocus);
   }
 
   // Only restart if there are pending callbacks, as that means the sandbox is currently

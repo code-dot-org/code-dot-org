@@ -26,6 +26,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 
 import {getSystemMessage} from './MessageHelpers';
+import useControlFocusHandoff from './useControlFocusHandoff';
 
 import moduleStyles from './console.module.scss';
 
@@ -149,53 +150,69 @@ const ControlButtons: React.FunctionComponent = () => {
     return tooltip;
   };
 
+  // Only a safety net now that Run and Stop share one element: it acts solely
+  // when focus has actually landed on <body>, which the tooltip appearing or
+  // disappearing can still cause.
+  const {
+    ref: controlsRef,
+    onFocus: handleFocus,
+    onBlur: handleBlur,
+  } = useControlFocusHandoff<HTMLDivElement>(isRunning);
+
   const disabledCodeActionsTooltip = getDisabledCodeActionsTooltip();
   const disableCodeActions =
     !!codeEnvironmentError || !!disabledCodeActionsTooltip;
   const isEnvironmentLoading = !hasLoadedEnvironment && !codeEnvironmentError;
 
   return (
-    <div className={moduleStyles.controlButtons}>
-      {isRunning ? (
+    <div
+      className={moduleStyles.controlButtons}
+      ref={controlsRef}
+      onFocus={handleFocus}
+      onBlur={handleBlur}
+    >
+      {/*
+        Run and Stop are one element, not two branches of a ternary. Rendering
+        them separately unmounted whichever button had focus when a run started
+        or ended, dropping focus to <body>, which a screen reader reads out as
+        the page title. Sharing the element keeps the node -- and the focus --
+        across the swap. The tooltip wrapper is always rendered, and renders a
+        plain div when it has nothing to say, so the two states stay structurally
+        identical and React reuses the button rather than replacing it.
+      */}
+      <WithConditionalTooltip
+        showTooltip={!isRunning && !!disabledCodeActionsTooltip}
+        tooltipProps={{
+          direction: 'onRight',
+          text: disabledCodeActionsTooltip || '',
+          size: 's',
+          tooltipId: 'code-actions-tooltip',
+        }}
+      >
         <MuiButton
           variant="contained"
-          color="error"
+          color={isRunning ? 'error' : 'primary'}
           size="extraSmall"
+          disabled={!isRunning && disableCodeActions}
+          loading={!isRunning && isEnvironmentLoading}
+          loadingPosition="start"
           className={moduleStyles.controlButton}
-          onClick={handleStop}
+          // Ctrl+2 and the UI tests target the run button; while a program is
+          // running there is no run button to target.
+          id={isRunning ? undefined : 'uitest-codebridge-run'}
+          onClick={isRunning ? handleStop : handleRun}
           type="button"
-          startIcon={<FontAwesomeV6Icon iconStyle="solid" iconName="square" />}
+          sx={isRunning ? undefined : getRunButtonSx()}
+          startIcon={
+            <FontAwesomeV6Icon
+              iconStyle="solid"
+              iconName={isRunning ? 'square' : 'play'}
+            />
+          }
         >
-          {codebridgeI18n.stop()}
+          {isRunning ? codebridgeI18n.stop() : codebridgeI18n.run()}
         </MuiButton>
-      ) : (
-        <WithConditionalTooltip
-          showTooltip={!!disabledCodeActionsTooltip}
-          tooltipProps={{
-            direction: 'onRight',
-            text: disabledCodeActionsTooltip || '',
-            size: 's',
-            tooltipId: 'code-actions-tooltip',
-          }}
-        >
-          <MuiButton
-            variant="contained"
-            color="primary"
-            size="extraSmall"
-            disabled={disableCodeActions}
-            loading={isEnvironmentLoading}
-            loadingPosition="start"
-            className={moduleStyles.controlButton}
-            id="uitest-codebridge-run"
-            onClick={handleRun}
-            type="button"
-            sx={getRunButtonSx()}
-            startIcon={<FontAwesomeV6Icon iconStyle="solid" iconName="play" />}
-          >
-            {codebridgeI18n.run()}
-          </MuiButton>
-        </WithConditionalTooltip>
-      )}
+      </WithConditionalTooltip>
     </div>
   );
 };
