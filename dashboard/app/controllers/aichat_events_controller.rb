@@ -26,6 +26,13 @@ class AichatEventsController < ApplicationController
     end
 
     event = params[:newChatEvent]
+    return render status: :bad_request, json: {} unless event.respond_to?(:to_unsafe_h)
+
+    # Convert to a plain hash so the coercion below sees real Arrays and Hashes
+    # rather than nested ActionController::Parameters. No permit() was applied
+    # before, so this grants no access that the previous code did not have.
+    event = event.to_unsafe_h
+    coerce_chat_message_text!(event, context[:currentLevelId])
 
     project_id = nil
     if context[:channelId]
@@ -129,6 +136,31 @@ class AichatEventsController < ApplicationController
     chat_event.save!
 
     render status: :ok, json: {}
+  end
+
+  # Everything that reads a chat message's text requires a string: the chat UI,
+  # the markdown-to-text conversions behind the level's live region and
+  # text-to-speech, the history sent to the model, and the analytics export of
+  # this table. Chat events are stored as whatever the client posted, so a
+  # client bug would otherwise leave a row that fails the level on every later
+  # load, for as long as the row exists. Store a string, and report the
+  # coercion so the offending client can be found.
+  private def coerce_chat_message_text!(event, level_id)
+    %w(chatMessageText chatMessageDisplayText).each do |field|
+      value = event[field]
+      next if value.nil? || value.is_a?(String)
+
+      Honeybadger.notify(
+        "Aichat event #{field} is of type #{value.class}, string expected; coercing to a string",
+        context: {
+          user_id: current_user.id,
+          level_id: level_id,
+          field: field,
+          value_class: value.class.name,
+        }
+      )
+      event[field] = value.to_json
+    end
   end
 
   private def can_log_aichat_events?(level_id, client_type)

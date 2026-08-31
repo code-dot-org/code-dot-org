@@ -124,6 +124,35 @@ class AichatEventsControllerTest < ActionController::TestCase
     assert_equal request.id, stored_aichat_event['requestId']
   end
 
+  # A chat message text that is not a string used to be stored verbatim, and
+  # then failed the level on every later load, since the client hands the text
+  # to a markdown converter that raises on a non-string.
+  test 'log_chat_event coerces a non-string chatMessageText to a string' do
+    sign_in(@authorized_student1)
+    Honeybadger.expects(:notify).once
+    message = @valid_student1_chat_message1.merge(chatMessageText: [{type: 'text', text: 'hello'}])
+    params = @valid_params_log_chat_event.merge(newChatEvent: message)
+
+    post :log_chat_event, params: params, as: :json
+
+    assert_response :success
+    stored_aichat_event = AichatEvent.find(json_response['id']).aichat_event
+    assert_equal '[{"type":"text","text":"hello"}]', stored_aichat_event['chatMessageText']
+  end
+
+  test 'log_chat_event coerces a non-string chatMessageDisplayText to a string' do
+    sign_in(@authorized_student1)
+    Honeybadger.expects(:notify).once
+    message = @valid_student1_chat_message1.merge(chatMessageDisplayText: {text: 'hello'})
+    params = @valid_params_log_chat_event.merge(newChatEvent: message)
+
+    post :log_chat_event, params: params, as: :json
+
+    assert_response :success
+    stored_aichat_event = AichatEvent.find(json_response['id']).aichat_event
+    assert_equal '{"text":"hello"}', stored_aichat_event['chatMessageDisplayText']
+  end
+
   # *****
   # chat_history tests
   # *****
