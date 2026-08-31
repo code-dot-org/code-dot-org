@@ -62,8 +62,13 @@ export default function useSceneMusic(
       });
   }, []);
 
+  // A placeholder's label is not a name; a playing song the list cannot
+  // name is simply "Music".
+  const listed = nowPlaying
+    ? songs.find(p => p.channel === nowPlaying.channel)
+    : undefined;
   const title = nowPlaying
-    ? songs.find(p => p.channel === nowPlaying.channel)?.name || 'Music'
+    ? (!listed?.unavailable && listed?.name) || 'Music'
     : null;
   return {nowPlaying, title, playMusic};
 }
