@@ -48,7 +48,7 @@ import type {
   WorldEventHandler,
 } from '../core/types';
 import type {Vector} from '../core/Vector';
-import {World} from '../core/World';
+import {World, type WorldMap} from '../core/World';
 import {AnimationRule} from '../rules/animation';
 import {SpatialRule} from '../rules/spatial';
 
@@ -62,34 +62,9 @@ import type {ActorBuilder} from './ActorBuilder';
  */
 const FOUNDATION_RULES: readonly Rule[] = [SpatialRule, AnimationRule];
 
-/**
- * A Map: initial actor instances as data (GLOSSARY.md), loaded into a World.
- *
- * The only way a project expresses an arrangement of actors — a level, a menu,
- * a HUD. A world may load several.
- */
-export interface WorldMap {
-  /**
-   * How big the map is, in tiles, and how big one tile is.
-   *
-   * Already in every `.map` file the editor writes — it is what the map
-   * editor's Width/Height set — and it used to stop there: `loadMap` took the
-   * whole object and read only `actors`, so nothing downstream could ask how
-   * big the level was. A camera that keeps the view inside the level is the
-   * first thing that needs to (`World.mapBounds`).
-   *
-   * Optional, because a map block synthesises its placements without one.
-   */
-  size?: {width: number; height: number};
-  tile?: {width: number; height: number};
-  actors: Array<{
-    type: string;
-    /** Stable instance id; a random unique one is assigned when omitted. */
-    id?: string;
-    /** Overrides keyed by owner id (rule or trait), then property id. */
-    properties?: Record<string, Record<string, unknown>>;
-  }>;
-}
+// A Map — the data a level is — is the World's now, because loading one is
+// (`World.loadMap`). Re-exported because every caller here named it here.
+export type {WorldMap};
 
 /** Any method name on World — what a recorded call may name. */
 type WorldOp = {
@@ -633,149 +608,19 @@ export class WorldBuilder {
   }
 
   /**
-   * Place the actors a Map describes.
+   * Place the actors a Map describes. See {@link World.loadMap}.
    *
-   * A world may load several — a level and a HUD, say. Loading is additive, so
-   * they stack in call order; `clear()` first to replace rather than add.
-   *
-   * `layer` puts every actor the map describes into one layer, which is what
-   * makes a HUD a HUD: the map is an ordinary map, and the layer it is loaded
-   * into is the whole of what makes it an interface (specs/VIEWPORT.md).
+   * Deferred like `clear world`'s, and for the same reason: one block calls
+   * whichever object it lands on. What this adds is the REGISTRY — a builder's
+   * `define` records templates before there is a world to record them in, so
+   * they are handed over here, on the way past.
    */
   loadMap(map: WorldMap, layer?: string): Actor[] {
     const world = this.getWorld();
-    world.growToFit(map);
-    const lookup = this.propertyLookup(world);
-    const added: Actor[] = [];
-    /**
-     * Placements by the id the MAP gave them, and the actor-typed values
-     * waiting on one.
-     *
-     * A map is JSON and JSON holds no actors, so a placement names another by
-     * its entry id and this resolves it — in a SECOND PASS, once every entry
-     * exists, which is what lets a reference point forwards or in a circle.
-     *
-     * Ordering the entries so references came first would have done for the
-     * forward case and cost two things it should not: placement order is DRAW
-     * order within a layer (`renderSnapshot` walks `actorList` as it was
-     * filled), and a cycle has no order at all.
-     *
-     * By ENTRY id, not by the actor's. `resolveInstanceId` disambiguates a
-     * taken id to `base#2`, and maps stack — a level and a HUD — so looking a
-     * name up in the world could find an actor from another map or the wrong
-     * one of two. What a placement means by "Player" is the Player in THIS
-     * map.
-     */
-    const placed = new Map<string, Actor>();
-    const deferred: Array<[Actor, Property, string]> = [];
-    for (const entry of map.actors) {
-      const builder = this.types.get(entry.type);
-      if (!builder) {
-        throw new Error(
-          `World '${this.id}': map references unregistered actor type ` +
-            `'${entry.type}' (register it with define())`,
-        );
-      }
-      // Stamp the actor's kind with the map's registered type (the module), so
-      // "actors of a type" lookups match it regardless of the template's id/name.
-      const actor = builder.instantiate(
-        this.resolveInstanceId(world, builder, entry.id),
-        entry.type,
-      );
-      // The world's rules and traits, plus THIS actor's own — which belong to
-      // no rule and so are in no world-wide lookup. A placement carrying one
-      // used to be dropped here in silence: the inspector could not offer it
-      // either, so nothing ever wrote one and nothing noticed.
-      const own = new Map<string, Property>(
-        actor
-          .ownProperties()
-          .map(property => [`${property.ownerId}.${property.id}`, property]),
-      );
-      if (entry.id) {
-        placed.set(entry.id, actor);
-      }
-      for (const [ownerId, props] of Object.entries(entry.properties ?? {})) {
-        for (const [propId, value] of Object.entries(props)) {
-          const key = `${ownerId}.${propId}`;
-          const property = own.get(key) ?? lookup.get(key);
-          if (!property || !actor.hasProperty(property)) {
-            continue;
-          }
-          // An actor-typed value is the id of another entry, and the actor it
-          // names may not exist yet. Held over rather than resolved here.
-          if (property.type === 'actor' && typeof value === 'string') {
-            deferred.push([actor, property, value]);
-            continue;
-          }
-          actor.set(property, value);
-        }
-      }
-      // The kind's own per-frame steps (`World.useActorKind`). Here rather
-      // than inside `addActor` because this path builds the actor itself, so
-      // the World never sees the template it came from.
-      world.useActorKind(entry.type, builder);
-      world.addActor(actor, layer);
-      added.push(actor);
+    for (const [type, builder] of this.types) {
+      world.define(type, builder);
     }
-    // Every entry exists now, so the references can be followed.
-    //
-    // One that names nothing is LEFT UNSET, which is what a map already does
-    // with a property it cannot resolve. A placement may point at one that has
-    // since been deleted, and refusing to load the map over it would take a
-    // whole level away for a bar pointed at a missing enemy.
-    for (const [actor, property, id] of deferred) {
-      const target = placed.get(id);
-      if (target) {
-        actor.set(property, target as never);
-      }
-    }
-    return added;
-  }
-
-  /**
-   * Choose a unique instance id. The requested id (an explicit one, else the
-   * builder's) is used verbatim when free. On collision we keep as much of the
-   * caller's stability as they gave us: an explicit *base* (e.g. a Blockly
-   * block's id, which repeats when its `add` block runs in a loop) is kept and
-   * disambiguated with an ordinal (`base`, `base#2`, …), stable as long as the
-   * loop is; a bare template id (an anonymous repeat with no stable identity)
-   * falls back to a random `type-uuid`.
-   */
-  private resolveInstanceId(
-    world: World,
-    builder: ActorBuilder,
-    explicitId?: string,
-  ): string {
-    const base = explicitId ?? builder.id;
-    if (!world.hasActor(base)) {
-      return base;
-    }
-    if (explicitId === undefined) {
-      return `${builder.id}-${crypto.randomUUID()}`;
-    }
-    let ordinal = 2;
-    while (world.hasActor(`${base}#${ordinal}`)) {
-      ordinal += 1;
-    }
-    return `${base}#${ordinal}`;
-  }
-
-  /** Map `${ownerId}.${propId}` -> Property across the world's rules + traits. */
-  private propertyLookup(world: World): Map<string, Property> {
-    const lookup = new Map<string, Property>();
-    const add = (property: Property) =>
-      lookup.set(`${property.ownerId}.${property.id}`, property);
-    for (const rule of world.activeRules()) {
-      for (const property of Object.values(rule.properties)) {
-        add(property);
-      }
-      for (const trait of Object.values(rule.traits)) {
-        for (const property of Object.values(trait.properties)) {
-          add(property);
-        }
-      }
-    }
-    return lookup;
+    return world.loadMap(map, layer);
   }
 
   /**

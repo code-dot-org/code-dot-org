@@ -111,27 +111,46 @@ describe('the detail pane', () => {
   };
 
   // A tile whose lesson NOBODY HAS WRITTEN, which is what these two are about.
-  // FOUND rather than named: these tests named `logic/if`, then `logic/kinds`,
-  // and each time somebody wrote that lesson the tests broke for a reason that
-  // had nothing to do with them. The catalogue always has one left.
-  const unwritten = TILES.find(candidate => !LESSONS[candidate.id])!;
+  //
+  // It used to be FOUND — these tests named `logic/if`, then `logic/kinds`, and
+  // each time somebody wrote that lesson the tests broke for a reason that had
+  // nothing to do with them, so they took whichever the catalogue had left. The
+  // catalogue has none left: sixty-seven tiles, sixty-seven lessons. The pane
+  // still has to answer for a tile without one — a lesson can be removed, and a
+  // new tile is designed before it is written — so one is taken away here and
+  // put back, which is the same thing happening on purpose.
+  const unwritten = TILES[TILES.length - 1];
+  const withoutItsLesson = async (body: () => Promise<void>) => {
+    const lessons = LESSONS as Record<string, unknown>;
+    const saved = lessons[unwritten.id];
+    delete lessons[unwritten.id];
+    try {
+      await body();
+    } finally {
+      lessons[unwritten.id] = saved;
+    }
+  };
 
   it('renders the lesson through the instructions renderer', async () => {
-    await openOn(unwritten.id);
-    const pane = detail();
-    // Rendered markdown, not a string: `**What you do.**` has become bold, and
-    // the tile's own task is what follows it.
-    expect(within(pane).getByText('What you do.').tagName).toBe('STRONG');
-    // Read off the whole pane rather than matched against one node, and with
-    // the backticks taken out: a task with `code` in it is several nodes once
-    // markdown has had it, and the marks themselves are gone — neither of
-    // which is a thing this test has an opinion about.
-    expect(pane.textContent).toContain(unwritten.task.replace(/`/g, ''));
+    await withoutItsLesson(async () => {
+      await openOn(unwritten.id);
+      const pane = detail();
+      // Rendered markdown, not a string: `**What you do.**` has become bold, and
+      // the tile's own task is what follows it.
+      expect(within(pane).getByText('What you do.').tagName).toBe('STRONG');
+      // Read off the whole pane rather than matched against one node, and with
+      // the backticks taken out: a task with `code` in it is several nodes once
+      // markdown has had it, and the marks themselves are gone — neither of
+      // which is a thing this test has an opinion about.
+      expect(pane.textContent).toContain(unwritten.task.replace(/`/g, ''));
+    });
   });
 
   it('says when a lesson is designed but not written', async () => {
-    await openOn(unwritten.id);
-    expect(within(detail()).getByText(/not written yet/)).toBeInTheDocument();
+    await withoutItsLesson(async () => {
+      await openOn(unwritten.id);
+      expect(within(detail()).getByText(/not written yet/)).toBeInTheDocument();
+    });
   });
 
   it('lists what the tile unlocks', async () => {

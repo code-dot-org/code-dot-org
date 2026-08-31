@@ -124,7 +124,7 @@ describe('a lesson with no file browser', () => {
 
   it('is what a lesson is unless it says otherwise', () => {
     // Every lesson but the ones whose subject IS a file.
-    expect(oneFile).toHaveLength(ids.length - 8);
+    expect(oneFile).toHaveLength(ids.length - 9);
   });
 
   it.each(oneFile)('%s does not send the learner to a file', id => {
@@ -153,6 +153,7 @@ describe('a lesson that shows the file browser', () => {
       id => LESSONS[id].levelData?.showFileBrowser !== false,
     );
     expect(shown.sort()).toEqual([
+      'adventure/rooms',
       'look/sprite',
       'making/behavior',
       'making/block',

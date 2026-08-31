@@ -70,6 +70,35 @@ export interface ActorTemplate {
   readonly ownDrawing?: ActorDrawing;
 }
 
+/**
+ * A Map: initial actor instances as data (GLOSSARY.md), loaded into a World.
+ *
+ * The only way a project expresses an arrangement of actors — a level, a menu,
+ * a HUD. A world may load several.
+ */
+export interface WorldMap {
+  /**
+   * How big the map is, in tiles, and how big one tile is.
+   *
+   * Already in every `.map` file the editor writes — it is what the map
+   * editor's Width/Height set — and it used to stop there: `loadMap` took the
+   * whole object and read only `actors`, so nothing downstream could ask how
+   * big the level was. A camera that keeps the view inside the level is the
+   * first thing that needs to (`World.mapBounds`).
+   *
+   * Optional, because a map block synthesises its placements without one.
+   */
+  size?: {width: number; height: number};
+  tile?: {width: number; height: number};
+  actors: Array<{
+    type: string;
+    /** Stable instance id; a random unique one is assigned when omitted. */
+    id?: string;
+    /** Overrides keyed by owner id (rule or trait), then property id. */
+    properties?: Record<string, Record<string, unknown>>;
+  }>;
+}
+
 /** One per-frame body an actor kind declares, before it is bound to a kind. */
 export interface ActorStep {
   readonly id: string;
@@ -510,6 +539,8 @@ export class World {
   // Rule steps read it through `isKeyDown`; keys carry OUR names — 'left arrow',
   // 'a', 'space' — which the driver translates the DOM's into (core/keys).
   private keys: ReadonlySet<string> = new Set();
+  /** Actor templates by the module path a map names them with (`define`). */
+  private readonly types = new Map<string, ActorTemplate>();
   // The previous tick's pressed set, so a rule step can detect rising/falling
   // edges (a key *just* pressed or released) rather than only the held state.
   // Advanced at the end of each `tick`.
@@ -1144,6 +1175,140 @@ export class World {
       Math.max(this.bounds.x, map.size.width * map.tile.width),
       Math.max(this.bounds.y, map.size.height * map.tile.height),
     );
+  }
+
+  /**
+   * Place the actors a Map describes.
+   *
+   * A world may load several — a level and a HUD, say. Loading is additive, so
+   * they stack in call order; `clearActors()` first to replace rather than add.
+   *
+   * IT WORKS WHILE THE GAME RUNS, which is what makes a second room possible:
+   * `clear world` then `load map ⟨Room 2⟩` in a handler is a door. It lived on
+   * `WorldBuilder` alone until then, and a project could describe as many maps
+   * as it liked so long as it never wanted to be in a different one.
+   *
+   * `layer` puts every actor the map describes into one layer, which is what
+   * makes a HUD a HUD: the map is an ordinary map, and the layer it is loaded
+   * into is the whole of what makes it an interface (specs/VIEWPORT.md).
+   */
+  loadMap(map: WorldMap, layer?: string): Actor[] {
+    this.growToFit(map);
+    const lookup = this.propertyLookup();
+    const added: Actor[] = [];
+    /**
+     * Placements by the id the MAP gave them, and the actor-typed values
+     * waiting on one.
+     *
+     * A map is JSON and JSON holds no actors, so a placement names another by
+     * its entry id and this resolves it — in a SECOND PASS, once every entry
+     * exists, which is what lets a reference point forwards or in a circle.
+     *
+     * Ordering the entries so references came first would have done for the
+     * forward case and cost two things it should not: placement order is DRAW
+     * order within a layer (`renderSnapshot` walks `actorList` as it was
+     * filled), and a cycle has no order at all.
+     *
+     * By ENTRY id, not by the actor's. `resolveInstanceId` disambiguates a
+     * taken id to `base#2`, and maps stack — a level and a HUD — so looking a
+     * name up in the world could find an actor from another map or the wrong
+     * one of two. What a placement means by "Player" is the Player in THIS
+     * map.
+     */
+    const placed = new Map<string, Actor>();
+    const deferred: Array<[Actor, Property, string]> = [];
+    for (const entry of map.actors) {
+      const builder = this.types.get(entry.type);
+      if (!builder) {
+        throw new Error(
+          `World '${this.id}': map references unregistered actor type ` +
+            `'${entry.type}' (register it with define())`,
+        );
+      }
+      // Stamp the actor's kind with the map's registered type (the module), so
+      // "actors of a type" lookups match it regardless of the template's id/name.
+      const actor = builder.instantiate(
+        this.resolveInstanceId(builder, entry.id),
+        entry.type,
+      );
+      // The world's rules and traits, plus THIS actor's own — which belong to
+      // no rule and so are in no world-wide lookup. A placement carrying one
+      // used to be dropped here in silence: the inspector could not offer it
+      // either, so nothing ever wrote one and nothing noticed.
+      const own = new Map<string, Property>(
+        actor
+          .ownProperties()
+          .map(property => [`${property.ownerId}.${property.id}`, property]),
+      );
+      if (entry.id) {
+        placed.set(entry.id, actor);
+      }
+      for (const [ownerId, props] of Object.entries(entry.properties ?? {})) {
+        for (const [propId, value] of Object.entries(props)) {
+          const key = `${ownerId}.${propId}`;
+          const property = own.get(key) ?? lookup.get(key);
+          if (!property || !actor.hasProperty(property)) {
+            continue;
+          }
+          // An actor-typed value is the id of another entry, and the actor it
+          // names may not exist yet. Held over rather than resolved here.
+          if (property.type === 'actor' && typeof value === 'string') {
+            deferred.push([actor, property, value]);
+            continue;
+          }
+          actor.set(property, value);
+        }
+      }
+      // The kind's own per-frame steps (`World.useActorKind`). Here rather
+      // than inside `addActor` because this path builds the actor itself, so
+      // the World never sees the template it came from.
+      this.useActorKind(entry.type, builder);
+      this.addActor(actor, layer);
+      added.push(actor);
+    }
+    // Every entry exists now, so the references can be followed.
+    //
+    // One that names nothing is LEFT UNSET, which is what a map already does
+    // with a property it cannot resolve. A placement may point at one that has
+    // since been deleted, and refusing to load the map over it would take a
+    // whole level away for a bar pointed at a missing enemy.
+    for (const [actor, property, id] of deferred) {
+      const target = placed.get(id);
+      if (target) {
+        actor.set(property, target as never);
+      }
+    }
+    return added;
+  }
+
+  /** Map `${ownerId}.${propId}` -> Property across the world's rules + traits. */
+  private propertyLookup(): Map<string, Property> {
+    const lookup = new Map<string, Property>();
+    const add = (property: Property) =>
+      lookup.set(`${property.ownerId}.${property.id}`, property);
+    for (const rule of this.activeRules()) {
+      for (const property of Object.values(rule.properties)) {
+        add(property);
+      }
+      for (const trait of Object.values(rule.traits)) {
+        for (const property of Object.values(trait.properties)) {
+          add(property);
+        }
+      }
+    }
+    return lookup;
+  }
+
+  /**
+   * Register an actor template under the name a Map refers to it by.
+   *
+   * A map is JSON: it names a kind by its module path and nothing more, so
+   * something has to hold the templates those names mean. `WorldBuilder.define`
+   * is the same call one level up, and hands its own over before it loads.
+   */
+  define(type: string, template: ActorTemplate): this {
+    this.types.set(type, template);
+    return this;
   }
 
   /** Replace the pressed-key set (driver calls this each frame before `tick`). */

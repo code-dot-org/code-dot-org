@@ -384,6 +384,46 @@ describe('an actor’s own properties, enumerated', () => {
   });
 });
 
+describe('World.loadMap (a second room, while the game runs)', () => {
+  // Loading a map was the builder's alone, so a project could describe as many
+  // maps as it liked so long as it never wanted to be in a different one. A
+  // door is `clear world` then `load map ⟨Room 2⟩` in a handler, and both calls
+  // had to be ones a live World could answer.
+  const room = (type: string) => ({actors: [{type}]});
+  const template = (id: string) =>
+    new ActorBuilder({id, name: id}).useTraits([AffectedByGravityTrait]);
+
+  it('replaces one room with another while it runs', () => {
+    const builder = new WorldBuilder({id: 'w', name: 'W'}).useRules([
+      GravityRule,
+    ]);
+    builder.define('actors/tree', template('tree'));
+    // `getWorld`, not `instantiate`: placing is not part of the description,
+    // so a fresh world replayed from the log would have nothing in it.
+    const world = builder.getWorld();
+    builder.loadMap(room('actors/tree'));
+    expect([...world.actors].map(actor => actor.type)).toEqual(['actors/tree']);
+
+    // What the door does: everything goes, and the other room's actors arrive.
+    world.define('actors/throne', template('throne'));
+    world.clearActors();
+    world.loadMap(room('actors/throne'));
+
+    expect([...world.actors].map(actor => actor.type)).toEqual([
+      'actors/throne',
+    ]);
+  });
+
+  it('says which type it has never heard of', () => {
+    // The builder's own message, from the World now: a map naming a type
+    // nobody registered is a project that has lost a file, and the name of the
+    // missing one is the whole of what a learner needs.
+    const world = new WorldBuilder({id: 'w', name: 'W'}).instantiate();
+
+    expect(() => world.loadMap(room('actors/ghost'))).toThrow(/actors\/ghost/);
+  });
+});
+
 describe('WorldBuilder.loadMap (Map data)', () => {
   it('instantiates registered actor types and applies property overrides', () => {
     const builder = new WorldBuilder({

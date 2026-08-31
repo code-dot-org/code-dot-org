@@ -4660,13 +4660,13 @@ const worldCreateInMap = defineBlock({
   ],
   previousStatement: true,
   nextStatement: true,
-  // `builderWorld` rather than `worldContext`: it subsumes it here. Anywhere
-  // `world` is unbound this also warns, and it additionally catches `world`
-  // being bound to the LIVE world, which has no `define` or `loadMap` at all.
-  // Both would be two warnings saying one thing.
+  // Was `builderWorld`, on the grounds that the live world had no `define` or
+  // `loadMap`. It has both now (`World.loadMap`), and this block generates the
+  // same two calls wherever it lands — so what is left to check is the ordinary
+  // question of whether `world` is bound to anything.
   extensions: [
     actorImportOptionsExtension,
-    builderWorldExtension,
+    worldContextExtension,
     actorImportFieldExtension,
     openSourceButtonExtension,
   ],
@@ -4723,15 +4723,20 @@ const worldLoadMap = defineBlock({
   args0: [{type: 'field_dropdown', name: 'MAP', options: mapOptions}],
   previousStatement: true,
   nextStatement: true,
-  // Builder-only for the same reason as its siblings: `define` and `loadMap`
-  // are `WorldBuilder`'s and the live `World` has neither.
+  // NOT builder-only, though it was: `define` and `loadMap` are the live
+  // World's as well now, so this block means the same thing in a handler as
+  // under `define world` — which is what a door to a second room is made of
+  // (`clear world`, then this).
   extensions: [
     mapOptionsExtension,
-    builderWorldExtension,
+    worldContextExtension,
     openSourceButtonExtension,
   ],
   style: 'setup_blocks',
-  tooltip: 'Place all the actors a map file describes into the world.',
+  tooltip:
+    'Place all the actors a map file describes into the world. In a handler ' +
+    'it loads a map while the game runs — with "clear world" first, that is ' +
+    'how a game goes from one room to another.',
   generator: {
     javascript(block, generator) {
       const map = block.getFieldValue('MAP');

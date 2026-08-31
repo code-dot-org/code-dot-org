@@ -12,12 +12,8 @@
 // Blockly JSON behind them. So `catalogue.ts` stays data about tiles, and the
 // projects live here, looked up by tile id.
 //
-// Sixty-six of sixty-seven. The one that is left waits on a way to load a
-// second map, which is a block rather than a rule (specs/PROGRESSION.md). Every other tile
-// on the map has a lesson, a starting project and a check tested in both
-// directions.
-//
-//   adventure/rooms        a way to load a second map
+// SIXTY-SEVEN OF SIXTY-SEVEN: every tile on the map has a lesson, a starting
+// project, and a check tested in both directions.
 //
 // What is written is milestone 4 of specs/PROGRESSION_UI.md and then some: all
 // six FOUNDATIONS, and Arcade, Story and Making whole after them.
@@ -3733,6 +3729,89 @@ won anyway.
 `.trim(),
 };
 
+// ── adventure/rooms ──────────────────────────────────────────────────────────
+
+/** One actor in a `.map` file, at a tile's middle. */
+const inMap = (type: string, id: string, x: number, y: number) => ({
+  type,
+  id,
+  properties: {positional: {position: {x, y}}},
+});
+
+/** A `.map` file: ten tiles square, and what is in it. */
+const mapFile = (actors: object[]) =>
+  JSON.stringify(
+    {
+      type: 'map',
+      size: {width: 10, height: 10},
+      tile: {width: 32, height: 32},
+      actors,
+    },
+    null,
+    2,
+  );
+
+const rooms: WorldScenario = {
+  // THE FILE BROWSER IS ON, because the lesson is about there being two files:
+  // a room is a `.map`, and "somewhere else" is another one.
+  levelData: {showFileBrowser: true},
+  name: 'A door to somewhere else',
+  description: 'Two rooms in two files, and a door that does nothing.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [{type: 'world_load_map', fields: {MAP: 'maps/room1'}}],
+    }),
+    actors: {
+      player: actorFile('Player', [
+        useTrait('Arrow Keys#MovesAcrossTrait'),
+        useTrait('Collisions#CanCollideTrait'),
+        setSprite('player.png'),
+      ]),
+      door: actorFile('Door', [
+        useTrait('Collisions#CanCollideTrait'),
+        setSprite('ground.png'),
+      ]),
+      chest: actorFile('Chest', [setSprite('coin.png')]),
+    },
+    maps: {
+      room1: mapFile([
+        inMap('actors/player', 'Player', 48, 176),
+        inMap('actors/door', 'Door', 272, 176),
+      ]),
+      // The same Player, at the same doorway: arriving somewhere is being put
+      // where its entrance is, and a map is where that is written down.
+      room2: mapFile([
+        inMap('actors/player', 'Player', 48, 176),
+        inMap('actors/chest', 'Chest', 272, 176),
+      ]),
+    },
+    rules: ['motion', 'arrows', 'collisions'],
+  }),
+  instructions: `
+## A door to somewhere else
+
+Two rooms, in two files. **maps/room1.map** is the one you are in — a Player
+and a Door — and **maps/room2.map** is the other one, which nothing has ever
+loaded. Walk into the Door and nothing happens.
+
+A room is a map, and going somewhere else is **taking this one away and loading
+that one**. Both blocks are ones you have: the world already loads a map, and
+**clear world** is how a world sheds everything.
+
+### What you do
+
+1. Add **when ⟨any Door⟩ starts touching**.
+2. In it, **clear world**, and then **load map ⟨maps/room2⟩**.
+3. Walk into the Door. The Chest is a room-two thing, so if you can see one you
+   are somewhere else.
+
+Open **room2.map** and look at where the Player is. That is why you arrive at
+the doorway rather than wherever you happened to be standing: **a map says
+where everything starts**, and the Player is one of the things in it.
+`.trim(),
+};
+
 // ── adventure/keys ───────────────────────────────────────────────────────────
 
 /** A short string in a socket. */
@@ -4783,6 +4862,7 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'puzzle/grid': grid,
   'puzzle/push': push,
   'simulation/neighbours': neighbours,
+  'adventure/rooms': rooms,
   'adventure/keys': keys,
   'simulation/emergent': emergent,
   'simulation/dials': dials,

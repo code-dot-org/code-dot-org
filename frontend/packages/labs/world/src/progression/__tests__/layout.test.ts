@@ -235,8 +235,22 @@ describe('what a tile unlocks', () => {
     expect(missing).toEqual([]);
   });
 
-  it('gives every tile something to give', () => {
+  it('gives every tile something to give, bar the one that is an assembly', () => {
+    // `adventure/rooms` grants nothing, and it is the only one. A door is
+    // `clear world` and `load map` in a handler, and both blocks are already
+    // somebody's to give (`arcade/bricks`, `place/map`); what the lesson adds
+    // is that the two together are a way out of the room, which is not a thing
+    // that can be put on a shelf. Inventing a block to have something to unlock
+    // would be a worse map.
+    //
+    // Named rather than counted, so the second tile that gives nothing has to
+    // come here and argue for itself.
     for (const t of TILES) {
+      if (t.id === 'adventure/rooms') {
+        expect(t.unlocks).toEqual([]);
+        expect(t.offers?.length ?? 0).toBeGreaterThan(0);
+        continue;
+      }
       expect(t.unlocks.length, `${t.id} unlocks nothing`).toBeGreaterThan(0);
     }
   });

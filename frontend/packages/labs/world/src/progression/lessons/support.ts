@@ -52,6 +52,13 @@ export interface LessonSpec {
    * anybody opens.
    */
   ruleFiles?: Record<string, string>;
+  /**
+   * Map files, by stem: `room1` becomes `maps/room1.map`.
+   *
+   * The data a level is (`WorldMap` as JSON). One lesson has two of them, and
+   * it is the lesson about there being two (`adventure/rooms`).
+   */
+  maps?: Record<string, string>;
   /** Stock rules to import, by id. Their dependencies come with them. */
   rules?: readonly string[];
   /** Stock sprites to import, by id. */
@@ -86,6 +93,14 @@ export const lessonSource = (spec: LessonSpec): MultiFileSource => {
       language: 'actor',
       contents,
       folderId: 'actors',
+    };
+  }
+  for (const [stem, contents] of Object.entries(spec.maps ?? {})) {
+    files[stem] = {
+      name: `${stem}.map`,
+      language: 'map',
+      contents,
+      folderId: 'maps',
     };
   }
   for (const [stem, contents] of Object.entries(spec.ruleFiles ?? {})) {

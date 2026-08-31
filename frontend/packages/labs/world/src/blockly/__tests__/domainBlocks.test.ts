@@ -3045,13 +3045,20 @@ describe('builder-context warnings', () => {
     );
   });
 
-  it('guards the two blocks that load a map, which need the builder', () => {
-    // Neither has a live equivalent: `loadMap` instantiates templates against a
-    // type registry the builder owns, and a World has no `define` at all
-    // (`builderSurface.test`). Unguarded, one of these in a handler calls a
-    // method that is not there.
+  it('does NOT guard the two blocks that load a map, which the World does now', () => {
+    // They were guarded, and for a true reason: `loadMap` instantiated
+    // templates against a type registry the builder owned, and a World had no
+    // `define` at all. Both moved to the World the day a door had to lead to a
+    // second room — `clear world` then `load map ⟨Room 2⟩` in a handler — and
+    // the guard would now warn a learner off the thing the lesson asks for.
+    //
+    // The same move `add actor` made below, for the same reason. What is left
+    // on them is `worldContext` alone — the ordinary question of whether
+    // `world` is bound — where `builderWorld` used to subsume it, so neither
+    // block carries two warnings that say one thing.
     for (const type of ['world_load_map', 'world_create_in_map']) {
-      expect(extensionsOf(type), type).toContain(BUILDER_WORLD_EXTENSION);
+      expect(extensionsOf(type), type).not.toContain(BUILDER_WORLD_EXTENSION);
+      expect(extensionsOf(type), type).toContain(WORLD_CONTEXT_EXTENSION);
     }
   });
 
@@ -3067,15 +3074,6 @@ describe('builder-context warnings', () => {
     // a learner off something that works.
     expect(extensionsOf('world_add_actor')).not.toContain(
       BUILDER_WORLD_EXTENSION,
-    );
-  });
-
-  it('does not double-warn on `create ⟨x⟩ in map`', () => {
-    // It carried `worldContext` before. `builderWorld` subsumes it — anywhere
-    // `world` is unbound this warns too — so keeping both would put two
-    // warnings on one block saying one thing.
-    expect(extensionsOf('world_create_in_map')).not.toContain(
-      WORLD_CONTEXT_EXTENSION,
     );
   });
 

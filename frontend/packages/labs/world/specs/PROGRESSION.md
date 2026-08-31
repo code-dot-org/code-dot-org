@@ -474,13 +474,13 @@ The first thing anybody wants is for something to move when they press a key.
 
 ### Genre: Adventure — entered from Look and Place
 
-| Tile               | The lesson                                                         | Unlocks                               | Check                                                                  |
-| ------------------ | ------------------------------------------------------------------ | ------------------------------------- | ---------------------------------------------------------------------- |
-| `adventure/world`  | A room three screens wide, seen through a window that never moves. | (Camera family, if not held)          | `[o]` the player leaves the first screen and the view follows          |
-| `adventure/rooms`  | More than one map, and the door between them.                      | **Scenes rule (new)**                 | `[o]` walking into the door loads the second map and places the player |
-| `adventure/keys`   | Two locked doors, one key, and no way through either of them.      | Inventory rule                        | `[o]` the first door opens, the second stays shut                      |
-| `adventure/people` | A villager who walks her beat and leaves her own name behind.      | Patrol, Attachment rules              | `[o]` the NPC patrols and its conversation starts on contact           |
-| `adventure/errand` | Four things to find, and a bar that has no idea how it is going.   | Progress rule; the adventure template | `[o]` progress reaches 1 exactly when the last item is found           |
+| Tile               | The lesson                                                         | Unlocks                                | Check                                                                         |
+| ------------------ | ------------------------------------------------------------------ | -------------------------------------- | ----------------------------------------------------------------------------- |
+| `adventure/world`  | A room three screens wide, seen through a window that never moves. | (Camera family, if not held)           | `[o]` the player leaves the first screen and the view follows                 |
+| `adventure/rooms`  | Two rooms in two files, and a door that does nothing.              | `clear world`; `load map` in a handler | `[o]` the Door is gone, a Chest has arrived, and the Player is at the doorway |
+| `adventure/keys`   | Two locked doors, one key, and no way through either of them.      | Inventory rule                         | `[o]` the first door opens, the second stays shut                             |
+| `adventure/people` | A villager who walks her beat and leaves her own name behind.      | Patrol, Attachment rules               | `[o]` the NPC patrols and its conversation starts on contact                  |
+| `adventure/errand` | Four things to find, and a bar that has no idea how it is going.   | Progress rule; the adventure template  | `[o]` progress reaches 1 exactly when the last item is found                  |
 
 ### Genre: Simulation — entered from Place and Input
 
@@ -575,12 +575,11 @@ point of the exercise. Here is what it asks for and the lab has not got.
 The stock library is thirty rules (`src/rules/stock/index.ts`) and it covers
 most of this. These are the holes, each named by the tile that found it.
 
-| Rule                  | Wanted by             | What it is                                                                                                             |
-| --------------------- | --------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| **Scenes**            | `adventure/rooms`     | Advance to another map, carrying what should carry. `clear world` + `load map` are the pieces; nothing holds the idea. |
-| **Path**              | adventure/sim enemies | Step toward a target around walls. Steering is continuous and walks into corners.                                      |
-| **Spawner**           | `arcade/waves`        | Time + `add actor` expresses it; a named rule makes it one unlock and one lesson instead of five blocks.               |
-| **One-way platforms** | `platformer/ground`   | Solid from above, passable from below. A trait on Solid Bodies, probably, not a rule.                                  |
+| Rule                  | Wanted by             | What it is                                                                                               |
+| --------------------- | --------------------- | -------------------------------------------------------------------------------------------------------- |
+| **Path**              | adventure/sim enemies | Step toward a target around walls. Steering is continuous and walks into corners.                        |
+| **Spawner**           | `arcade/waves`        | Time + `add actor` expresses it; a named rule makes it one unlock and one lesson instead of five blocks. |
+| **One-way platforms** | `platformer/ground`   | Solid from above, passable from below. A trait on Solid Bodies, probably, not a rule.                    |
 
 ### Blocks the concept half wants and the vocabulary lacks
 

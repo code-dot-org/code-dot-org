@@ -2197,14 +2197,57 @@ export const TILES: readonly Tile[] = [
     at: at('adventure', 2, 2),
     title: 'A door to somewhere else',
     teaches: 'More than one map, and what should survive going between them.',
-    task: 'Two rooms and the door between them. Arrive in the right place on the other side.',
+    task: 'Two rooms in two files, and a door that does nothing.',
     requires: ['adventure/world'],
-    unlocks: [{kind: 'rule', id: 'scenes', proposed: true}],
+    // NOT a Scenes rule, which is what this tile asked for while `load map`
+    // was a thing only a world being BUILT could do. Loading one while the game
+    // runs is the whole of going somewhere else (`World.loadMap`), and it is a
+    // block the world file already has — so what was a missing rule turned out
+    // to be a missing half of a block.
+    // IT GRANTS NOTHING, and it is the only tile that does not. Both blocks a
+    // door is made of are already somebody's to give — `load map` is
+    // `place/map`'s and `clear world` is `arcade/bricks`' — and what this
+    // lesson adds is that the two of them together, in a handler rather than
+    // under `define world`, are a way out of the room. There is no third block
+    // to hand over for that, and inventing one to have something to unlock
+    // would be a worse map.
+    unlocks: [],
+    // Lent, because the way here comes up through Look and Place and passes
+    // through neither of the tiles that grant them. Half a door is no door.
+    offers: [
+      {kind: 'block', type: 'world_load_map'},
+      {kind: 'block', type: 'world_clear_world'},
+    ],
     check: {
       kind: 'outcome',
-      says: 'Walking into the door loads the second map and places the player at its entrance.',
+      says: 'Walking into the Door leaves room one behind and arrives at room two’s doorway.',
       falsePass:
-        'Teleporting within one big map. Assert which map is loaded, not where the player is.',
+        'Teleporting within one big map, which moves the Player and leaves the Door standing — so the check reads WHICH map is loaded (a Chest that was not there, and a Door that is gone) rather than where the Player is. Loading room two without clearing room one is refused by the same reading: both rooms would be in the world at once.',
+      run: {
+        probes: {
+          chests: {kind: 'actorCount', of: 'Chest'},
+          doors: {kind: 'actorCount', of: 'Door'},
+          player: {kind: 'positions', of: 'Player'},
+        },
+        trace: Array.from({length: 10}, () => ({
+          hold: ['ArrowRight'],
+          seconds: 0.3,
+        })),
+      },
+      passes: ({samples}) => {
+        const chests = (samples.chests ?? []) as number[];
+        const doors = (samples.doors ?? []) as number[];
+        const arrived = chests.findIndex(count => count === 1);
+        if (chests[0] !== 0 || arrived < 1 || doors[doors.length - 1] !== 0) {
+          return false;
+        }
+        // Arriving is being where the other room's map says: the Player was at
+        // the far side of room one a moment ago and is at room two's doorway
+        // now, which is a jump no walking could do.
+        const at = (index: number) =>
+          ((samples.player ?? [])[index] as Array<{x: number}>)?.[0]?.x;
+        return at(arrived - 1) > 200 && at(arrived) < 120;
+      },
     },
   },
   {

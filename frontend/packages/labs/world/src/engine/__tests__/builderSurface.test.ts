@@ -36,10 +36,14 @@ import {World, WorldBuilder} from '../index';
  * ignores it still reaches the missing method — which is why these are written
  * down rather than merely tolerated.
  */
+// `define` and `loadMap` were here — "registering a template is part of
+// describing a world", "placement instantiates templates" — and both moved to
+// the World the day a door had to lead to a second room: `clear world` then
+// `load map ⟨Room 2⟩` in a handler is that door, and neither call could be made
+// from one. The builder keeps its own registry and hands it over on the way
+// past, so a description still says `define` before it says `load map`.
 const BUILDER_ONLY: Record<string, string> = {
-  define: 'registering a template is part of describing a world',
   defineLayer: 'a layer cannot be spliced into a scene graph that exists',
-  loadMap: 'placement instantiates templates; World.addActor takes made Actors',
   useAnimations: 'the animation registry is seeded once, at construction',
   useRules: 'rules decide trait membership for every actor, at construction',
 };

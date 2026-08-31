@@ -4277,3 +4277,72 @@ describe('the key lesson’s check', () => {
     expect(passes).toBe(false);
   });
 });
+
+describe('the two-rooms lesson’s check', () => {
+  const lesson = LESSONS['adventure/rooms'];
+
+  /** The door's handler, with knobs for the two ways to get it wrong. */
+  const doorway = (body: Row) =>
+    editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      workspace.blocks.blocks.push({
+        type: 'world_on_Collisions_StartsTouchingEvent',
+        x: 1400,
+        y: 20,
+        fields: {FILTER0: ''},
+        inputs: {
+          ACTOR: {
+            block: {
+              type: 'world_actor_kind',
+              fields: {ACTOR: 'actors/door'},
+            },
+          },
+        },
+        next: {block: body},
+      } as unknown as Row);
+      return JSON.stringify(workspace);
+    });
+  const loadRoomTwo = (): Row => ({
+    type: 'world_load_map',
+    fields: {MAP: 'maps/room2'},
+  });
+
+  it('refuses a door that does nothing', async () => {
+    const {passes} = await check('adventure/rooms', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts clearing the world and loading the other room', async () => {
+    const {passes, result} = await check(
+      'adventure/rooms',
+      doorway({type: 'world_clear_world', next: {block: loadRoomTwo()}}),
+    );
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  it('refuses a teleport within one room', async () => {
+    // The near-miss the tile has always named: the Player is suddenly at the
+    // doorway and the world is the same world. What the check reads is which
+    // map is loaded, so a Door still standing is the answer.
+    const {passes} = await check(
+      'adventure/rooms',
+      doorway({
+        type: 'world_set_position',
+        inputs: {
+          ACTOR: {block: {type: 'world_event_actor'}},
+          X: {shadow: {type: 'math_number', fields: {NUM: 48}}},
+          Y: {shadow: {type: 'math_number', fields: {NUM: 176}}},
+        },
+      }),
+    );
+    expect(passes).toBe(false);
+  });
+
+  it('refuses loading the second room on top of the first', async () => {
+    // Both rooms in the world at once, with two Players in it — which looks
+    // right for a moment, because a Chest really has arrived.
+    const {passes} = await check('adventure/rooms', doorway(loadRoomTwo()));
+    expect(passes).toBe(false);
+  });
+});
