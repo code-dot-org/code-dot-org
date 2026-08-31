@@ -14,9 +14,10 @@
 #
 # Indexes
 #
-#  index_quiz_questions_on_key        (key)
-#  index_quiz_questions_on_name       (name)
-#  index_quiz_questions_on_parent_id  (parent_id)
+#  index_quiz_questions_on_created_at  (created_at)
+#  index_quiz_questions_on_key         (key)
+#  index_quiz_questions_on_name        (name)
+#  index_quiz_questions_on_parent_id   (parent_id)
 #
 class QuizQuestion < ApplicationRecord
   after_initialize {self.type ||= self.class.sti_name}
