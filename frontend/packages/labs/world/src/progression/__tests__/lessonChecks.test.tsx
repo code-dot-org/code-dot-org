@@ -3076,3 +3076,139 @@ describe('the push lesson’s check', () => {
     expect(passes).toBe(false);
   });
 });
+
+describe('the people lesson’s check', () => {
+  const lesson = LESSONS['adventure/people'];
+
+  it('refuses a name placed once', async () => {
+    const {passes} = await check('adventure/people', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts a name that is a relationship', async () => {
+    const solved = editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const label = rowsOf(workspace).find(
+        row => row.fields?.ACTOR === 'actors/label',
+      )!;
+      const body = inSocket(label, 'DO')!;
+      const me = () => ({block: {type: 'world_this_actor'}});
+      label.inputs!.DO = {
+        block: {
+          type: 'world_add_trait',
+          fields: {TRAIT: 'Attachment#AttachedTrait'},
+          inputs: {ACTOR: me()},
+          next: {
+            block: {
+              type: 'world_set_Attachment_AttachedToProperty',
+              inputs: {
+                ACTOR: me(),
+                VALUE: {
+                  block: {
+                    type: 'world_actor_kind',
+                    fields: {ACTOR: local('villager')},
+                  },
+                },
+              },
+              next: {
+                block: {
+                  type: 'world_set_Attachment_OffsetProperty',
+                  inputs: {
+                    ACTOR: me(),
+                    X: {shadow: {type: 'math_number', fields: {NUM: 0}}},
+                    Y: {shadow: {type: 'math_number', fields: {NUM: -24}}},
+                  },
+                  next: {block: body},
+                },
+              },
+            },
+          },
+        },
+      };
+      return JSON.stringify(workspace);
+    });
+    const {passes, result} = await check('adventure/people', solved);
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+});
+
+describe('the errand lesson’s check', () => {
+  const lesson = LESSONS['adventure/errand'];
+
+  it('refuses a bar nobody tells anything', async () => {
+    const {passes} = await check('adventure/errand', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  /** The fraction worked out on each pickup — divided, or counted up. */
+  const reporting = (dividing: boolean) =>
+    editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const me = () => ({block: {type: 'world_this_actor'}});
+      const held: Row = {
+        type: 'world_count_of_kind',
+        fields: {TYPE: local('token')},
+        inputs: {
+          LIST: {
+            block: {
+              type: 'world_get_Collection_CollectedProperty',
+              inputs: {ACTOR: me()},
+            },
+          },
+        },
+      };
+      workspace.blocks.blocks.push({
+        type: 'world_on_Collection_CollectsEvent',
+        x: 900,
+        y: 20,
+        inputs: {
+          ACTOR: {
+            block: {
+              type: 'world_actor_kind',
+              fields: {ACTOR: local('hero')},
+            },
+          },
+        },
+        next: {
+          block: {
+            type: 'world_set_Progress_FractionProperty',
+            inputs: {
+              ACTOR: {
+                block: {
+                  type: 'world_actor_kind',
+                  fields: {ACTOR: 'actors/progressBar'},
+                },
+              },
+              VALUE: dividing
+                ? {
+                    block: {
+                      type: 'math_arithmetic',
+                      fields: {OP: 'DIVIDE'},
+                      inputs: {
+                        A: {block: held},
+                        B: {shadow: {type: 'math_number', fields: {NUM: 4}}},
+                      },
+                    },
+                  }
+                : // A quarter added each time, which is the same for four
+                  // things and wrong for any other number.
+                  {block: held},
+            },
+          },
+        },
+      } as unknown as Row);
+      return JSON.stringify(workspace);
+    });
+
+  it('accepts a fraction worked out from what is held', async () => {
+    const {passes, result} = await check('adventure/errand', reporting(true));
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  it('refuses a count where a fraction was wanted', async () => {
+    const {passes} = await check('adventure/errand', reporting(false));
+    expect(passes).toBe(false);
+  });
+});

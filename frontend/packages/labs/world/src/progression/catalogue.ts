@@ -2049,14 +2049,38 @@ export const TILES: readonly Tile[] = [
     title: 'Somebody who is there',
     teaches:
       'An actor with a life of its own, and a label that travels with it.',
-    task: 'An NPC that walks about, has a name over its head, and says something when you reach it.',
+    task: 'A villager who walks her beat and leaves her own name behind.',
     requires: ['adventure/world'],
     unlocks: [{kind: 'rule', id: 'attachment'}],
+    // Electing on ONE placed actor is `story/reveal`'s block, a region away.
+    offers: [{kind: 'block', type: 'world_add_trait'}],
     check: {
       kind: 'outcome',
-      says: 'The label stays over the NPC as it patrols, and the conversation starts on contact.',
+      says: 'The name is the same distance from the Villager at the end of her beat as at the start of it.',
       falsePass:
-        'A label placed once at the start. Sample its position after the NPC has moved.',
+        'A label placed once over her head, which is right until she moves — so the check samples the gap while she is walking, and the Villager has to have walked for it to mean anything.',
+      run: {
+        probes: {
+          who: {kind: 'positions', of: 'Villager'},
+          name: {kind: 'positions', of: 'Label'},
+        },
+        trace: Array.from({length: 6}, () => ({seconds: 0.4})),
+      },
+      passes: ({samples}) => {
+        const gaps = (samples.who ?? []).map((sample, at) => {
+          const her = (sample as {x: number; y: number}[])[0];
+          const name = (
+            (samples.name ?? [])[at] as {x: number; y: number}[]
+          )[0];
+          return her && name ? Math.hypot(her.x - name.x, her.y - name.y) : NaN;
+        });
+        const walk = (samples.who ?? []).map(
+          sample => (sample as {x: number}[])[0]?.x ?? 0,
+        );
+        const moved = Math.max(...walk) - Math.min(...walk) > 40;
+        const held = gaps.every(gap => Math.abs(gap - gaps[0]) < 2);
+        return moved && held;
+      },
     },
   },
   {
@@ -2083,14 +2107,39 @@ export const TILES: readonly Tile[] = [
     title: 'Something to be doing',
     teaches:
       'A task the game keeps track of, and a way to see how far along it is.',
-    task: 'Find four of something across two rooms, with a bar that fills as you do.',
+    task: 'Four things to find, and a bar that has no idea how it is going.',
     requires: ['adventure/people', 'adventure/keys'],
     unlocks: [{kind: 'rule', id: 'progress'}],
+    // The arithmetic is Memory's and the counting is `memory/many`'s; Adventure
+    // is entered from Look and Place.
+    offers: [
+      {kind: 'block', type: 'math_arithmetic'},
+      {kind: 'block', type: 'math_number'},
+      {kind: 'block', type: 'world_count_of_kind'},
+    ],
     check: {
       kind: 'outcome',
-      says: 'Progress reaches exactly 1 when the fourth is found, and 0.5 at the second.',
+      says: 'The bar is exactly half full when two of the four are left, and full at the last.',
       falsePass:
-        'A bar driven by the room number. The midpoint sample is what separates them.',
+        'Filling it a step at a time on each pickup without dividing, which is right for four things and wrong for any other number — and setting it full on the first, which the halfway sample refuses. The check reads the fraction AT the halfway point rather than at the end.',
+      run: {
+        probes: {
+          done: {kind: 'property', of: 'Progress Bar', name: 'fraction'},
+          left: {kind: 'actorCount', of: 'Token'},
+        },
+        trace: Array.from({length: 10}, () => ({seconds: 0.3})),
+      },
+      passes: ({samples}) => {
+        const done = (samples.done ?? []).map(sample =>
+          Number((sample as unknown[])[0]),
+        );
+        const left = (samples.left ?? []).map(count => Number(count));
+        const halfway = done[left.indexOf(2)];
+        return (
+          Math.abs(halfway - 0.5) < 0.01 &&
+          Math.abs(done[done.length - 1] - 1) < 0.01
+        );
+      },
     },
   },
 

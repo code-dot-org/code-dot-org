@@ -12,13 +12,13 @@
 // Blockly JSON behind them. So `catalogue.ts` stays data about tiles, and the
 // projects live here, looked up by tile id.
 //
-// Fifty of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md and
-// then some. ALL SIX FOUNDATIONS are written — Origin, Input, Motion, Logic,
+// Fifty-two of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md
+// and then some. ALL SIX FOUNDATIONS are written — Origin, Input, Motion, Logic,
 // Memory, Look and Place — so every genre gate on the map is open, and the
 // first hours of the progression can be walked end to end. ARCADE is written
 // whole after them, Platformer but for one tile (`platformer/ground` waits on
 // the engine: specs/PROGRESSION.md, "Carrying"), STORY is written whole, and
-// Simulation and Puzzle are started, and Making has its first.
+// Simulation, Puzzle and Adventure are started, and Making has its first.
 
 import {
   actorFile,
@@ -2893,6 +2893,132 @@ A sokoban is that with one word changed.
 `.trim(),
 };
 
+// ── adventure/people ─────────────────────────────────────────────────────────
+
+const people: WorldScenario = {
+  name: 'Somebody who is there',
+  description: 'A villager who walks off and leaves their own name behind.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        addActor(local('villager'), [placeAt(80, 160)]),
+        addActor('actors/label', [
+          placeAt(80, 136),
+          setText('TextProperty', words('Mara')),
+        ]),
+      ],
+      actors: [
+        {
+          id: 'villager',
+          name: 'Villager',
+          rows: [
+            useTrait('Patrol#PatrolsAcrossTrait'),
+            setSprite('player.png'),
+          ],
+        },
+      ],
+    }),
+    stockActors: ['label'],
+    sprites: ['player'],
+    rules: ['patrol', 'attachment'],
+  }),
+  instructions: `
+## Somebody who is there
+
+Mara walks her beat, and her name stays where it was put. It was put there
+once, at the start, by a \`set position\` that has long since finished running.
+
+A name over somebody's head is not a place — it is a RELATIONSHIP: this thing,
+that thing, and how far apart they are. **Attachment** is that relationship,
+and it is the same sentence as a camera following a player, one level down.
+
+### What you do
+
+1. Give the Label **use trait ⟨Attached⟩**.
+2. **set attached to of ⟨the Label⟩ to ⟨any Villager⟩**, and **set offset** to
+   x 0, y -24 — over her head rather than on it.
+3. Run it. The name goes with her, and nothing copies a position every frame
+   in anything you wrote.
+4. Give the Villager a second beat with **patrols down** as well. The name
+   still follows, because the relationship never said anything about walking.
+`.trim(),
+};
+
+// ── adventure/errand ─────────────────────────────────────────────────────────
+
+const errand: WorldScenario = {
+  name: 'Something to be doing',
+  description:
+    'Four things to find, and a bar that has no idea how it is going.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        addActor('actors/progressBar', [
+          placeAt(160, 30),
+          // Empty to begin with, which is what "nothing done yet" looks like.
+          {
+            type: 'world_set_Progress_FractionProperty',
+            inputs: {ACTOR: me(), VALUE: num(0)},
+          },
+        ]),
+        addActor(local('token'), [placeAt(80, 200)]),
+        addActor(local('token'), [placeAt(140, 200)]),
+        addActor(local('token'), [placeAt(200, 200)]),
+        addActor(local('token'), [placeAt(260, 200)]),
+        addActor(local('hero'), [placeAt(30, 200), setVelocity(2, 0)]),
+      ],
+      actors: [
+        {
+          id: 'hero',
+          name: 'Hero',
+          rows: [
+            useTrait('Physics#CanMoveTrait'),
+            useTrait('Collisions#CanCollideTrait'),
+            useTrait('Collection#CollectsTrait'),
+            setSprite('player.png'),
+          ],
+        },
+        {
+          id: 'token',
+          name: 'Token',
+          rows: [
+            useTrait('Collisions#CanCollideTrait'),
+            useTrait('Collection#CanBeCollectedTrait'),
+            setSprite('coin.png'),
+          ],
+        },
+      ],
+    }),
+    stockActors: ['progressBar'],
+    sprites: ['player', 'coin'],
+    rules: ['motion', 'collisions', 'collect'],
+  }),
+  instructions: `
+## Something to be doing
+
+Four Tokens, a Hero who takes them, and a bar along the top that stays empty
+however many are gone. The bar is not broken: nothing has told it anything.
+
+An errand is a **fraction** — how much of it is done — and that is a number the
+game can work out at any moment rather than a tally to keep in step. The
+Progress Bar draws whatever fraction it is given and knows nothing about
+tokens.
+
+### What you do
+
+1. Add **when ⟨any Hero⟩ collects**.
+2. In it, set the Progress Bar's **fraction** to
+   **⟨how many ⟨Token⟩ in ⟨collected of ⟨this actor⟩⟩⟩ ÷ ⟨4⟩**.
+3. Run it. Halfway along the row the bar is half full, and it is exactly full
+   at the last one.
+4. Add a fifth Token and run it again. The bar is wrong now — 4 was typed in —
+   which is the moment to ask the world how many Tokens there ARE rather than
+   how many you meant to put in.
+`.trim(),
+};
+
 // ── place/edges ──────────────────────────────────────────────────────────────
 
 const edges: WorldScenario = {
@@ -3279,6 +3405,8 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'making/property': ruleProperty,
   'puzzle/grid': grid,
   'puzzle/push': push,
+  'adventure/people': people,
+  'adventure/errand': errand,
 };
 
 /** Every lesson written so far, by the tile it belongs to. */

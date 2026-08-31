@@ -141,6 +141,8 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   'making/property': [],
   'puzzle/grid': ['world_use_trait'],
   'puzzle/push': ['world_use_trait'],
+  'adventure/people': ['world_add_trait'],
+  'adventure/errand': ['math_arithmetic', 'world_count_of_kind'],
   'platformer/level': [
     'controls_if',
     'world_is_a',

@@ -474,13 +474,13 @@ The first thing anybody wants is for something to move when they press a key.
 
 ### Genre: Adventure — entered from Look and Place
 
-| Tile               | The lesson                                                | Unlocks                               | Check                                                                  |
-| ------------------ | --------------------------------------------------------- | ------------------------------------- | ---------------------------------------------------------------------- |
-| `adventure/world`  | A map bigger than the screen, and a camera that keeps up. | (Camera family, if not held)          | `[o]` the player leaves the first screen and the view follows          |
-| `adventure/rooms`  | More than one map, and the door between them.             | **Scenes rule (new)**                 | `[o]` walking into the door loads the second map and places the player |
-| `adventure/keys`   | A door that needs something you are carrying.             | Collection; **Inventory rule (new)**  | `[o]` the door refuses without the key and opens with it               |
-| `adventure/people` | Somebody who walks about and has something to say.        | Patrol, Attachment rules              | `[o]` the NPC patrols and its conversation starts on contact           |
-| `adventure/errand` | A thing to be doing: a task, its progress, and its end.   | Progress rule; the adventure template | `[o]` progress reaches 1 exactly when the last item is found           |
+| Tile               | The lesson                                                       | Unlocks                               | Check                                                                  |
+| ------------------ | ---------------------------------------------------------------- | ------------------------------------- | ---------------------------------------------------------------------- |
+| `adventure/world`  | A map bigger than the screen, and a camera that keeps up.        | (Camera family, if not held)          | `[o]` the player leaves the first screen and the view follows          |
+| `adventure/rooms`  | More than one map, and the door between them.                    | **Scenes rule (new)**                 | `[o]` walking into the door loads the second map and places the player |
+| `adventure/keys`   | A door that needs something you are carrying.                    | Collection; **Inventory rule (new)**  | `[o]` the door refuses without the key and opens with it               |
+| `adventure/people` | A villager who walks her beat and leaves her own name behind.    | Patrol, Attachment rules              | `[o]` the NPC patrols and its conversation starts on contact           |
+| `adventure/errand` | Four things to find, and a bar that has no idea how it is going. | Progress rule; the adventure template | `[o]` progress reaches 1 exactly when the last item is found           |
 
 ### Genre: Simulation — entered from Place and Input
 
