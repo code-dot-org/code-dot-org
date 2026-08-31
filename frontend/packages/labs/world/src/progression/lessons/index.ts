@@ -12,12 +12,11 @@
 // Blockly JSON behind them. So `catalogue.ts` stays data about tiles, and the
 // projects live here, looked up by tile id.
 //
-// Sixty-one of sixty-seven, and the six that are left are all waiting on the
+// Sixty-two of sixty-seven, and the five that are left are all waiting on the
 // same thing: a rule or a block the library has not got. Every other tile
 // on the map has a lesson, a starting project and a check tested in both
 // directions.
 //
-//   puzzle/turns           a Turns rule
 //   adventure/rooms        a Scenes rule
 //   adventure/keys         an Inventory rule
 //   simulation/neighbours  `actors within`, a neighbourhood query
@@ -3738,6 +3737,96 @@ won anyway.
 `.trim(),
 };
 
+// ── puzzle/turns ─────────────────────────────────────────────────────────────
+
+const turns: WorldScenario = {
+  name: 'Everybody moves, then the world moves',
+  description: 'An enemy on a timer, in a game where nothing else has a clock.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        createInMap(local('wall'), wallsRound()),
+        addActor(local('enemy'), [placeAt(48, 240)]),
+        addActor(local('player'), [placeAt(80, 144)]),
+      ],
+      actors: [
+        {
+          id: 'player',
+          name: 'Player',
+          rows: [
+            useTrait('Grid#StepsOnTheGridTrait'),
+            useTrait('Input#TakesKeyboardInputTrait'),
+            setSprite('player.png'),
+          ],
+        },
+        {
+          id: 'enemy',
+          name: 'Enemy',
+          rows: [
+            useTrait('Grid#StepsOnTheGridTrait'),
+            useTrait('Time#HasATimerTrait'),
+            // Close enough to a person pressing a key that it looks right for
+            // a second or two, which is what makes it worth taking away.
+            {
+              type: 'world_set_Time_TimerPeriodProperty',
+              inputs: {ACTOR: me(), VALUE: num(0.4)},
+            },
+            setSprite('asteroid.png'),
+          ],
+        },
+        {
+          id: 'wall',
+          name: 'Wall',
+          rows: [useTrait('Grid#FillsATileTrait'), setSprite('ground.png')],
+        },
+      ],
+      handlers: [
+        stepOn('left arrow', 'StepLeft'),
+        stepOn('right arrow', 'StepRight'),
+        stepOn('up arrow', 'StepUp'),
+        stepOn('down arrow', 'StepDown'),
+        {
+          type: 'world_on_Time_TimerFiresEvent',
+          inputs: {ACTOR: anyKind('enemy')},
+          next: {
+            block: {
+              type: 'world_do_Grid_StepRightAction',
+              inputs: {ACTOR: me()},
+            },
+          },
+        },
+      ],
+    }),
+    sprites: ['player', 'asteroid', 'ground'],
+    rules: ['input', 'grid', 'time', 'turns'],
+  }),
+  instructions: `
+## Everybody moves, then the world moves
+
+The Enemy walks every four tenths of a second. Press the arrow keys at about
+that speed and it looks like a game where you each take a step; press slower
+and it walks away without you, press faster and you leave it behind. It is not
+taking turns — it is racing you.
+
+**A turn is a sequence, not a rate.** Nothing should happen until you move, and
+then everything should happen at once. The Turns rule keeps that clock, and it
+cannot wind itself: only your game knows what counts as a move.
+
+### What you do
+
+1. Give the **Enemy** the ability **takes a turn**, and take away **has a
+   timer**.
+2. Change its handler's hat from **timer fires** to **takes its turn**. The
+   Enemy still steps right; it no longer decides when.
+3. Add **when ⟨any Player⟩ finishes a step → end the turn**.
+
+Finishes a step, not hears a key pressed: walk into a wall and the step is
+refused, no move happened, and nothing should have moved but you — which is
+nothing.
+`.trim(),
+};
+
 // ── puzzle/undo ──────────────────────────────────────────────────────────────
 
 const undo: WorldScenario = {
@@ -4207,6 +4296,7 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'making/property': ruleProperty,
   'puzzle/grid': grid,
   'puzzle/push': push,
+  'puzzle/turns': turns,
   'puzzle/goal': goal,
   'puzzle/undo': undo,
   'adventure/people': people,

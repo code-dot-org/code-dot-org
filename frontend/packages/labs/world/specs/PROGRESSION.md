@@ -459,7 +459,7 @@ The first thing anybody wants is for something to move when they press a key.
 | `puzzle/grid`  | A player that slides between the tiles and walks through the walls.        | Grid rule; `Fills a Tile`         | `[o]` four scripted presses land the player exactly four tiles on            |
 | `puzzle/push`  | A crate that stops you dead. Change one word and push it.                  | `Can Be Pushed`                   | `[o]` a crate moves one tile and stops at a wall                             |
 | `puzzle/goal`  | Two crates, two marks, and a puzzle that can be solved and never finishes. | Goals rule                        | `[o]`+`[s]` the win fires on the second crate, and leaving a mark counts too |
-| `puzzle/turns` | Everybody moves, then the world moves.                                     | **Turns rule (new)**              | `[o]` an enemy steps exactly once per player step                            |
+| `puzzle/turns` | An enemy on a timer, in a game where nothing else has a clock.             | Turns rule                        | `[o]` the Enemy takes one step per step the Player finished                  |
 | `puzzle/undo`  | A crate that can be pushed one square too far, and never pulled.           | History rule; the puzzle template | `[o]` three pushes and three undos put the Player and the Crate back         |
 
 ### Genre: Story — entered from Memory and Look
@@ -578,7 +578,6 @@ most of this. These are the holes, each named by the tile that found it.
 | Rule                  | Wanted by             | What it is                                                                                                             |
 | --------------------- | --------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | **Scenes**            | `adventure/rooms`     | Advance to another map, carrying what should carry. `clear world` + `load map` are the pieces; nothing holds the idea. |
-| **Turns**             | `puzzle/turns`        | A turn order: the player acts, then everybody else acts once.                                                          |
 | **Inventory**         | `adventure/keys`      | Carrying a named thing, spending it. Collection counts what was picked up; this is about consuming one.                |
 | **Path**              | adventure/sim enemies | Step toward a target around walls. Steering is continuous and walks into corners.                                      |
 | **Spawner**           | `arcade/waves`        | Time + `add actor` expresses it; a named rule makes it one unlock and one lesson instead of five blocks.               |

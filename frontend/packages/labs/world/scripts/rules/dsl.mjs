@@ -83,6 +83,17 @@ export const times = (a, b) => arith('MULTIPLY', a, b);
 export const over = (a, b) => arith('DIVIDE', a, b);
 export const power = (a, b) => arith('POWER', a, b);
 
+/**
+ * `remainder of <a> ÷ <b>` — Blockly's own modulo block.
+ *
+ * Not one of `math_arithmetic`'s operators, which is why it is separate: it is
+ * a block of its own with its own two sockets.
+ */
+export const remainder = (a, b) => ({
+  type: 'math_modulo',
+  inputs: {DIVIDEND: value(a), DIVISOR: value(b)},
+});
+
 const compare = (op, a, b) => ({
   type: 'logic_compare',
   fields: {OP: op},

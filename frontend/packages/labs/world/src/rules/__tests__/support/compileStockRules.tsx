@@ -64,6 +64,7 @@ import {
   solidRule,
   steeringRule,
   timeRule,
+  turnsRule,
   wrapRule,
   writingRule,
 } from '../../stock';
@@ -185,6 +186,7 @@ export const ALL_STOCK_SOURCES: Record<string, string> = {
   'rules/score': scoreRule,
   'rules/goals': goalsRule,
   'rules/history': historyRule,
+  'rules/turns': turnsRule,
   'rules/camera': cameraRule,
   'rules/cameraFollow': cameraFollowRule,
   'rules/cameraEase': cameraEaseRule,

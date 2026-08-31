@@ -50,6 +50,7 @@ const RULES = [
   'carry',
   'goals',
   'history',
+  'turns',
 ];
 
 const check = process.argv.includes('--check');

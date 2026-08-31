@@ -1463,3 +1463,99 @@ describe('History', () => {
     expect(spot().x).toBe(96);
   });
 });
+
+describe('Turns', () => {
+  /** A board with two takers on it: one every turn, one as told. */
+  const game = (perMove: number) => {
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([rule('rules/turns')])
+      .instantiate();
+    const acted: string[] = [];
+    const passed: number[] = [];
+    const taker = (name: string, every: number) => {
+      const actor = new ActorBuilder({id: name, name})
+        .useTraits([of('rules/turns', 'TakesATurnTrait')])
+        .set(of('rules/turns', 'TurnsPerMoveProperty'), every)
+        .instantiate(name);
+      actor.on(of('rules/turns', 'TakesItsTurnEvent'), () => {
+        acted.push(name);
+      });
+      world.addActor(actor);
+      return actor;
+    };
+    world.on(of('rules/turns', 'ATurnPassesEvent'), () => {
+      passed.push(turns());
+    });
+    const turns = () =>
+      world.get(of('rules/turns', 'TurnsTakenProperty')) as unknown as number;
+    taker('quick', 1);
+    taker('slow', perMove);
+    /** End a turn, and let the frame deliver what it raised. */
+    const endTurn = () => {
+      world.act(of('rules/turns', 'EndTheTurnAction'));
+      world.tick(1 / 60);
+    };
+    return {world, acted, passed, turns, endTurn};
+  };
+
+  it('tells everything that takes turns, once each turn', () => {
+    // The claim the lesson is about: an actor acts once per turn, however the
+    // turn was decided and whatever else is on the board.
+    const {acted, turns, endTurn} = game(1);
+
+    endTurn();
+    endTurn();
+    endTurn();
+
+    expect(turns()).toBe(3);
+    expect(acted.filter(name => name === 'quick')).toHaveLength(3);
+    expect(acted.filter(name => name === 'slow')).toHaveLength(3);
+  });
+
+  it('lets a slow one miss turns', () => {
+    // How a board game says slow: a snail is not an enemy at half speed, it is
+    // an enemy that misses turns.
+    const {acted, endTurn} = game(2);
+
+    for (let turn = 0; turn < 4; turn++) {
+      endTurn();
+    }
+
+    expect(acted.filter(name => name === 'quick')).toHaveLength(4);
+    expect(acted.filter(name => name === 'slow')).toHaveLength(2);
+  });
+
+  it('freezes one that moves every no turns', () => {
+    const {acted, endTurn} = game(0);
+
+    endTurn();
+    endTurn();
+
+    expect(acted).toEqual(['quick', 'quick']);
+  });
+
+  it('says a turn has passed once everybody has been told', () => {
+    // Raised last and carrying the new count, so a project keeping its own
+    // books sees the turn already dealt out.
+    const {passed, endTurn} = game(1);
+
+    endTurn();
+    endTurn();
+
+    expect(passed).toEqual([1, 2]);
+  });
+
+  it('answers every so many turns', () => {
+    const {world, endTurn} = game(1);
+    const every = (many: number) =>
+      world.query(of('rules/turns', 'EveryTurnsQuery'), many) as boolean;
+
+    endTurn();
+    endTurn();
+    endTurn();
+
+    expect(every(3)).toBe(true);
+    expect(every(2)).toBe(false);
+    expect(every(1)).toBe(true);
+  });
+});

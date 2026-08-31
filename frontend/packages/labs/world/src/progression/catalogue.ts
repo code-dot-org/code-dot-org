@@ -1764,14 +1764,39 @@ export const TILES: readonly Tile[] = [
     at: at('puzzle', 1, 3),
     title: 'Everybody moves, then the world moves',
     teaches: 'Turn order: a game where time is a sequence rather than a rate.',
-    task: 'An enemy that takes exactly one step for each step you take.',
+    task: 'An enemy on a timer, in a game where nothing else has a clock.',
     requires: ['puzzle/grid'],
-    unlocks: [{kind: 'rule', id: 'turns', proposed: true}],
+    unlocks: [{kind: 'rule', id: 'turns'}],
     check: {
       kind: 'outcome',
-      says: 'The enemy has taken exactly as many steps as the player after ten presses.',
+      says: 'The Enemy has taken exactly one step for each step the Player finished.',
       falsePass:
-        'An enemy on a timer that happens to match. Vary the press rate in the trace.',
+        'An enemy on a timer that happens to match, which the varied press rate breaks. Ending the turn on the key press rather than on the finished step is caught by the last press of all: it is into a wall, so the Player does not move and neither should anything else.',
+      run: {
+        probes: {
+          player: {kind: 'positions', of: 'Player'},
+          enemy: {kind: 'positions', of: 'Enemy'},
+        },
+        // Seven presses at seven different rates: nothing on a clock of its
+        // own can keep step with this, and the seventh is into the wall.
+        trace: [0.15, 0.55, 0.25, 0.75, 0.3, 0.5, 0.35].flatMap(gap => [
+          {hold: ['ArrowRight'], seconds: 0.1},
+          {seconds: gap},
+        ]),
+      },
+      passes: ({samples}) => {
+        const player = lastList<Point>(samples.player)[0];
+        const enemy = lastList<Point>(samples.enemy)[0];
+        if (!player || !enemy) {
+          return false;
+        }
+        // Six, not seven: the last press is refused by the wall, and a step
+        // that did not happen is not a turn.
+        return (
+          Math.round((player.x - 80) / 32) === 6 &&
+          Math.round((enemy.x - 48) / 32) === 6
+        );
+      },
     },
   },
   {

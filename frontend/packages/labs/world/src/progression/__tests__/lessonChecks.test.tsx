@@ -3881,3 +3881,72 @@ describe('the undo lesson’s check', () => {
     expect(passes).toBe(true);
   });
 });
+
+describe('the turns lesson’s check', () => {
+  const lesson = LESSONS['puzzle/turns'];
+
+  /**
+   * The lesson done: the Enemy takes turns instead of keeping time, and the
+   * project says a turn happened — on the move given, or on the key asked for.
+   */
+  const takingTurns = (options: {onTheStep: boolean}) =>
+    editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const enemy = actorIn(workspace, 'Enemy');
+      // Both `use trait` rows go — Grid's is put back below, Time's is what
+      // the lesson takes away — along with the period nothing reads any more.
+      without(enemy, 'world_use_trait');
+      without(enemy, 'world_use_trait');
+      without(enemy, 'world_set_Time_TimerPeriodProperty');
+      under(enemy, {
+        type: 'world_use_trait',
+        fields: {TRAIT: 'Grid#StepsOnTheGridTrait'},
+      });
+      under(enemy, {
+        type: 'world_use_trait',
+        fields: {TRAIT: 'Turns#TakesATurnTrait'},
+      });
+      // The same handler, on a different hat: the Enemy still steps right, it
+      // no longer decides when.
+      const timer = workspace.blocks.blocks.find(
+        block => block.type === 'world_on_Time_TimerFiresEvent',
+      )!;
+      timer.type = 'world_on_Turns_TakesItsTurnEvent';
+      workspace.blocks.blocks.push({
+        type: options.onTheStep
+          ? 'world_on_Grid_FinishesAStepEvent'
+          : 'world_on_Input_PressesEvent',
+        x: 1400,
+        y: 20,
+        ...(options.onTheStep ? {} : {fields: {FILTER0: 'right arrow'}}),
+        inputs: {ACTOR: anyKind('player')},
+        next: {block: {type: 'world_do_Turns_EndTheTurnAction'}},
+      } as unknown as Row);
+      return JSON.stringify(workspace);
+    });
+
+  it('refuses an enemy that keeps its own time', async () => {
+    const {passes} = await check('puzzle/turns', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts an enemy that moves when the player has moved', async () => {
+    const {passes, result} = await check(
+      'puzzle/turns',
+      takingTurns({onTheStep: true}),
+    );
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  it('refuses a turn ended by the key rather than by the move', async () => {
+    // The last press is into a wall. Grid refuses the step, the Player does
+    // not move, and a game that counted the press has let the Enemy have a
+    // turn nobody paid for.
+    const {passes} = await check(
+      'puzzle/turns',
+      takingTurns({onTheStep: false}),
+    );
+    expect(passes).toBe(false);
+  });
+});

@@ -42,6 +42,7 @@ import {shootsRule} from './shoots';
 import {solidRule} from './solid';
 import {steeringRule} from './steering';
 import {timeRule} from './time';
+import {turnsRule} from './turns';
 import {wrapRule} from './wrap';
 import {writingRule} from './writing';
 
@@ -281,6 +282,15 @@ export const STOCK_RULES: readonly StockRule[] = [
     contents: historyRule,
   },
   {
+    id: 'turns',
+    name: 'Turns',
+    ability: 'Takes Turns',
+    description:
+      'A clock only the player can wind: the project says when a turn has happened, and everything that takes turns is told to act. A number on each actor says how often \u2014 every turn, every other one, never.',
+    provides: ['Takes a Turn'],
+    contents: turnsRule,
+  },
+  {
     id: 'gravity',
     name: 'Gravity',
     ability: 'Has Gravity',
@@ -445,6 +455,7 @@ export {
   carryRule,
   goalsRule,
   historyRule,
+  turnsRule,
   attachmentRule,
   progressRule,
 };
