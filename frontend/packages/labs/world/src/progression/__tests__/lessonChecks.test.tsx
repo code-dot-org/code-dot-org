@@ -2860,3 +2860,118 @@ describe('the steering lesson’s check', () => {
     expect(passes).toBe(false);
   });
 });
+
+describe('the rule-property lesson’s check', () => {
+  const lesson = LESSONS['making/property'];
+
+  /** Editing the RULE, which is what this lesson is: a file, not a world. */
+  const declaring = (options: {reading: boolean; setting: boolean}) => {
+    const declared = editing(lesson.source, 'wind.rule', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const trait = workspace.blocks.blocks.find(
+        block => block.type === 'world_rule_trait',
+      )!;
+      // Declared INSIDE the trait, which is what makes it each actor's own.
+      trait.next = {
+        block: {
+          type: 'world_rule_property',
+          fields: {
+            TYPE: 'number',
+            ACCESS: 'writable',
+            NAME: 'strength',
+            DEFAULT: '1',
+          },
+          next: trait.next,
+        },
+      };
+      if (options.reading) {
+        const find = (node: unknown): Row | undefined => {
+          if (Array.isArray(node)) {
+            for (const item of node) {
+              const found = find(item);
+              if (found) {
+                return found;
+              }
+            }
+            return undefined;
+          }
+          if (typeof node !== 'object' || node === null) {
+            return undefined;
+          }
+          if ((node as Row).type === 'world_set_position') {
+            return node as Row;
+          }
+          for (const value of Object.values(node)) {
+            const found = find(value);
+            if (found) {
+              return found;
+            }
+          }
+          return undefined;
+        };
+        const drift = inSocket(find(workspace)!, 'X')!;
+        drift.inputs!.B = {
+          block: {
+            type: 'math_arithmetic',
+            fields: {OP: 'MULTIPLY'},
+            inputs: {
+              A: {shadow: {type: 'math_number', fields: {NUM: 2}}},
+              B: {
+                block: {
+                  type: 'world_get_Wind_StrengthProperty',
+                  inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
+                },
+              },
+            },
+          },
+        };
+      }
+      return JSON.stringify(workspace);
+    });
+    if (!options.setting) {
+      return declared;
+    }
+    return editing(declared, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const first = rowsOf(workspace)[0];
+      let last = inSocket(first, 'DO')!;
+      while (last.next?.block) {
+        last = last.next.block;
+      }
+      last.next = {
+        block: {
+          type: 'world_set_Wind_StrengthProperty',
+          inputs: {
+            ACTOR: {block: {type: 'world_this_actor'}},
+            VALUE: {shadow: {type: 'math_number', fields: {NUM: 3}}},
+          },
+        },
+      };
+      return JSON.stringify(workspace);
+    });
+  };
+
+  it('refuses a wind with one speed in it', async () => {
+    const {passes} = await check('making/property', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  // The false pass written on the tile: two new blocks in the toolbox and a
+  // step still using the number that was typed there.
+  it('refuses a property declared and never read', async () => {
+    const {passes} = await check(
+      'making/property',
+      declaring({reading: false, setting: true}),
+    );
+    expect(passes).toBe(false);
+  });
+
+  it('accepts one wind at two speeds', async () => {
+    const {passes, result} = await check(
+      'making/property',
+      declaring({reading: true, setting: true}),
+    );
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+});

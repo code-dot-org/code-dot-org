@@ -2259,14 +2259,25 @@ export const TILES: readonly Tile[] = [
     at: at('puzzle', 3, 3),
     title: 'A property is a block',
     teaches: 'What you declare in a rule becomes vocabulary in the toolbox.',
-    task: 'Add a property to a rule. Find the two blocks that appear in its category, and use them.',
+    task: 'A wind that blows everything at the same speed, because the speed is a number typed into the rule.',
     requires: ['puzzle/undo'],
+    // NOT `define property`: `memory/world-state` grants that, and this lesson
+    // is handed it. What it adds is the OTHER declaration a rule makes.
     unlocks: [{kind: 'block', type: 'world_rule_event'}],
+    offers: [{kind: 'block', type: 'world_rule_property'}],
     check: {
       kind: 'outcome',
-      says: 'The declared property exists on the built actor, and its generated blocks are used and work.',
+      says: 'The two Leaves end up in different places, which one number in the rule cannot do.',
       falsePass:
-        'Declaring it and never reading it. The generated getter has to appear in the workspace.',
+        'Declaring the property and never reading it, which adds two blocks to the toolbox and changes nothing — the Leaves still drift together, because the step is still using the 2 that was typed there.',
+      run: {
+        probes: {leaves: {kind: 'positions', of: 'Leaf'}},
+        trace: Array.from({length: 4}, () => ({seconds: 0.3})),
+      },
+      passes: ({samples}) => {
+        const leaves = lastList<{x: number}>(samples.leaves);
+        return leaves.length === 2 && Math.abs(leaves[0].x - leaves[1].x) > 40;
+      },
     },
   },
   {

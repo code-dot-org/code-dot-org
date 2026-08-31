@@ -134,6 +134,11 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
     'world_count_actors',
   ],
   'simulation/steering': ['world_use_trait'],
+  // A Making lesson is spent in a `.rule` file, whose palette is the rule
+  // author's rather than the world's — the toolbox this table checks is the
+  // world's, and what the learner reaches for there is the generated setter,
+  // which no gate can hide (`toolboxShelf`, "what the project mints").
+  'making/property': [],
   'platformer/level': [
     'controls_if',
     'world_is_a',

@@ -12,13 +12,13 @@
 // Blockly JSON behind them. So `catalogue.ts` stays data about tiles, and the
 // projects live here, looked up by tile id.
 //
-// Forty-seven of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md
+// Forty-eight of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md
 // and then some. ALL SIX FOUNDATIONS are written — Origin, Input, Motion, Logic,
 // Memory, Look and Place — so every genre gate on the map is open, and the
 // first hours of the progression can be walked end to end. ARCADE is written
 // whole after them, Platformer but for one tile (`platformer/ground` waits on
 // the engine: specs/PROGRESSION.md, "Carrying"), STORY is written whole, and
-// Simulation is started.
+// Simulation is started, and Making has its first.
 
 import {
   actorFile,
@@ -2644,6 +2644,121 @@ is happy at.
 `.trim(),
 };
 
+// ── making/property ──────────────────────────────────────────────────────────
+
+/** `position ⟨x|y⟩ of ⟨this actor⟩`, inside a rule's own step. */
+const heldPosition = (component: 'x' | 'y') => ({
+  block: {
+    type: 'world_get_Space_PositionProperty',
+    fields: {COMPONENT: component},
+    inputs: {ACTOR: me()},
+  },
+});
+
+/** A rule a learner can read in a sitting: one trait, one step, one number. */
+const WIND_RULE = JSON.stringify(
+  {
+    blocks: {
+      blocks: [
+        {
+          type: 'world_rule',
+          x: 20,
+          y: 20,
+          fields: {NAME: 'Wind', ABILITY: 'Has Wind'},
+          next: {block: {type: 'world_use_rule', fields: {RULE: 'Space'}}},
+        },
+        {
+          type: 'world_rule_trait',
+          x: 20,
+          y: 160,
+          fields: {NAME: 'Blown'},
+          next: {
+            block: {
+              type: 'world_use_trait',
+              fields: {TRAIT: 'Space#PositionalTrait'},
+              next: {
+                block: {
+                  type: 'world_trait_step',
+                  fields: {PHASE: 'move', NAME: 'drift'},
+                  inputs: {
+                    DO: {
+                      block: {
+                        type: 'world_set_position',
+                        inputs: {
+                          ACTOR: me(),
+                          X: {
+                            block: {
+                              type: 'math_arithmetic',
+                              fields: {OP: 'ADD'},
+                              inputs: {A: heldPosition('x'), B: num(2)},
+                            },
+                          },
+                          Y: heldPosition('y'),
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      ],
+    },
+  },
+  null,
+  2,
+);
+
+const ruleProperty: WorldScenario = {
+  // A lesson about a RULE FILE, so the file browser is on: this is one of the
+  // three that are about files rather than about a world (`ONE_FILE`).
+  levelData: {showFileBrowser: true},
+  name: 'A property is a block',
+  description: 'A wind that blows everything at exactly the same speed.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        addActor(local('leaf'), [placeAt(40, 100)]),
+        addActor(local('leaf'), [placeAt(40, 220)]),
+      ],
+      actors: [
+        {
+          id: 'leaf',
+          name: 'Leaf',
+          rows: [useTrait('Wind#BlownTrait'), setSprite('coin.png')],
+        },
+      ],
+    }),
+    sprites: ['coin'],
+    ruleFiles: {wind: WIND_RULE},
+  }),
+  instructions: `
+## A property is a block
+
+Two Leaves in the wind, drifting right at exactly the same speed — and they
+always will, because the speed is the number **2**, typed into
+\`rules/wind.rule\` where nothing else can reach it.
+
+Open that file. It is nine blocks: a rule, a trait, and a step that moves
+whatever elected the trait. Nothing in it is hidden from you, and nothing in it
+is different in kind from what you write in a world.
+
+### What you do
+
+1. Inside \`define trait ⟨Blown⟩\`, add
+   **define number strength with default 1**. Declared in a trait, it belongs
+   to each ACTOR that elects it.
+2. Look in the Wind category in \`main.world\`. Two blocks are there that were
+   not before: **get strength of ⟨…⟩** and **set strength of ⟨…⟩**. What you
+   declared became vocabulary.
+3. In the step, multiply the 2 by **strength of ⟨this actor⟩**.
+4. In the world, **set strength** of one Leaf to 3 and leave the other. One
+   wind, two speeds, and the rule did not have to know there would be two.
+`.trim(),
+};
+
 // ── place/edges ──────────────────────────────────────────────────────────────
 
 const edges: WorldScenario = {
@@ -3027,6 +3142,7 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'story/scene': scene,
   'simulation/many': crowd,
   'simulation/steering': steering,
+  'making/property': ruleProperty,
 };
 
 /** Every lesson written so far, by the tile it belongs to. */

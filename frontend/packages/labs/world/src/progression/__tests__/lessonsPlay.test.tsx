@@ -123,8 +123,8 @@ describe('a lesson with no file browser', () => {
   );
 
   it('is what a lesson is unless it says otherwise', () => {
-    // Every lesson but the two whose subject is a file.
-    expect(oneFile).toHaveLength(ids.length - 2);
+    // Every lesson but the ones whose subject IS a file.
+    expect(oneFile).toHaveLength(ids.length - 3);
   });
 
   it.each(oneFile)('%s does not send the learner to a file', id => {
@@ -152,7 +152,11 @@ describe('a lesson that shows the file browser', () => {
     const shown = ids.filter(
       id => LESSONS[id].levelData?.showFileBrowser !== false,
     );
-    expect(shown.sort()).toEqual(['look/sprite', 'memory/actor-state']);
+    expect(shown.sort()).toEqual([
+      'look/sprite',
+      'making/property',
+      'memory/actor-state',
+    ]);
     // Each says so where the learner reads it, rather than a sidebar simply
     // appearing one day.
     expect(LESSONS['memory/actor-state'].instructions).toContain(
@@ -160,6 +164,10 @@ describe('a lesson that shows the file browser', () => {
     );
     expect(LESSONS['look/sprite'].instructions).toContain(
       'first lesson with a file browser',
+    );
+    // A Making lesson is spent inside a rule, which is a file by definition.
+    expect(LESSONS['making/property'].instructions).toContain(
+      'rules/wind.rule',
     );
   });
 });

@@ -43,6 +43,15 @@ export interface LessonSpec {
   world: string;
   /** Actor files, by stem: `hero` becomes `actors/hero.actor`. */
   actors?: Record<string, string>;
+  /**
+   * Rule files a lesson WRITES, by stem: `wind` becomes `rules/wind.rule`.
+   *
+   * Not `rules`, which imports one from the stock library. A Making lesson is
+   * about a rule small enough to read in a sitting, and no stock rule is: they
+   * are the library's, written to be used rather than to be a first thing
+   * anybody opens.
+   */
+  ruleFiles?: Record<string, string>;
   /** Stock rules to import, by id. Their dependencies come with them. */
   rules?: readonly string[];
   /** Stock sprites to import, by id. */
@@ -77,6 +86,14 @@ export const lessonSource = (spec: LessonSpec): MultiFileSource => {
       language: 'actor',
       contents,
       folderId: 'actors',
+    };
+  }
+  for (const [stem, contents] of Object.entries(spec.ruleFiles ?? {})) {
+    files[stem] = {
+      name: `${stem}.rule`,
+      language: 'rule',
+      contents,
+      folderId: 'rules',
     };
   }
 
