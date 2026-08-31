@@ -1404,12 +1404,22 @@ const actorTarget = (
  * `define drawing` and `each frame` rely on is the opposite case: there the
  * body IS about the subject, and here it is about whoever asked.
  */
+/*
+ * THE BODY IS A BLOCK, not an expression, and that is the second bug fix here.
+ * Most callers hand back one expression, and an arrow without braces carried it
+ * perfectly well — until `set sprite`, whose body is THREE statements joined by
+ * semicolons (a sprite, a cell origin, a cell size). Spliced into an
+ * expression-bodied arrow, the first statement became the whole lambda and the
+ * other two became garbage in the middle of the call: `set sprite of ⟨any
+ * ⟨Portrait⟩⟩` generated a module that would not parse, and the project died as
+ * it loaded with "missing ) after argument list" naming nothing in particular.
+ */
 export const forEachActor = (
   target: ActorTarget,
   body: (actor: string) => string,
 ): string =>
   target.many
-    ? `WorldLab.each(${target.code}, subject => ${body('subject')});\n`
+    ? `WorldLab.each(${target.code}, subject => {\n${body('subject')};\n});\n`
     : `${body(target.code)};\n`;
 
 /**

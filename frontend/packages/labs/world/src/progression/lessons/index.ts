@@ -12,12 +12,12 @@
 // Blockly JSON behind them. So `catalogue.ts` stays data about tiles, and the
 // projects live here, looked up by tile id.
 //
-// Forty-four of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md
+// Forty-five of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md
 // and then some. ALL SIX FOUNDATIONS are written — Origin, Input, Motion, Logic,
 // Memory, Look and Place — so every genre gate on the map is open, and the
 // first hours of the progression can be walked end to end. ARCADE is written
 // whole after them, Platformer but for one tile (`platformer/ground` waits on
-// the engine: specs/PROGRESSION.md, "Carrying"), and Story is started.
+// the engine: specs/PROGRESSION.md, "Carrying"), and STORY is written whole.
 
 import {
   actorFile,
@@ -2374,6 +2374,107 @@ branching — no new machinery, just a jump.
 `.trim(),
 };
 
+// ── story/scene ──────────────────────────────────────────────────────────────
+
+const scene: WorldScenario = {
+  name: 'Staged',
+  description:
+    'Two people talking in an empty grey room, with nobody to look at.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        {
+          type: 'world_set_background_color',
+          inputs: {COLOR: swatch('#2b2b33')},
+        },
+        addActor('actors/portrait', [placeAt(80, 120)]),
+        addActor('actors/speechBox', [
+          placeAt(20, 200),
+          {
+            type: 'world_add_trait',
+            fields: {TRAIT: 'Mouse#CanBeClickedTrait'},
+            inputs: {ACTOR: me()},
+          },
+          {
+            type: 'world_add_trait',
+            fields: {TRAIT: 'Conversation#HasAConversationTrait'},
+            inputs: {ACTOR: me()},
+          },
+          {
+            type: 'world_set_Conversation_HowManyLinesProperty',
+            inputs: {ACTOR: me(), VALUE: num(3)},
+          },
+        ]),
+      ],
+      handlers: [
+        {
+          type: 'world_on_Mouse_IsClickedWithEvent',
+          fields: {FILTER0: ''},
+          inputs: {
+            ACTOR: {
+              block: {
+                type: 'world_actor_kind',
+                fields: {ACTOR: 'actors/speechBox'},
+              },
+            },
+          },
+          next: {
+            block: {
+              type: 'world_do_Conversation_MakeSayTheNextThingAction',
+              inputs: {VALUE: me()},
+            },
+          },
+        },
+        {
+          type: 'world_on_Conversation_MovesToALineEvent',
+          inputs: {
+            ACTOR: {
+              block: {
+                type: 'world_actor_kind',
+                fields: {ACTOR: 'actors/speechBox'},
+              },
+            },
+          },
+          next: {
+            block: chainRows([
+              lineIs(1, 'You are late.'),
+              lineIs(2, 'The road was gone. I walked.'),
+              lineIs(3, 'Then you had better come in.'),
+            ]),
+          },
+        },
+      ],
+    }),
+    stockActors: ['speechBox', 'portrait'],
+    rules: ['conversation', 'mouse'],
+  }),
+  instructions: `
+## Staged
+
+Three lines, two speakers, and no way to tell which of them is talking. There
+is a Portrait on the stage and it is invisible — that is what a Portrait starts
+as, so that its entrance is something you can see happen — and behind
+everything there is a flat grey.
+
+A scene is those three things moving with the script: **who is speaking**,
+**where it is happening**, and **what it sounds like**. All of them hang off
+the same event as the words.
+
+### What you do
+
+1. In the \`moves to a line\` handler, **set sprite** and **set opacity** on the
+   Portrait so that a face appears with line one, and a different one with
+   line two.
+2. Add **set background to ⟨…⟩** with the \`(import…)\` row, and change it at
+   line three so the story moves indoors.
+3. Add **set music** at the top of the world, and **play sound** on the line
+   where somebody knocks.
+4. Read what you have written. Every one of those is the same shape — a line
+   moved, so something changed — and none of them is about dialogue.
+`.trim(),
+};
+
 // ── place/edges ──────────────────────────────────────────────────────────────
 
 const edges: WorldScenario = {
@@ -2754,6 +2855,7 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'story/reveal': reveal,
   'story/script': script,
   'story/choice': choice,
+  'story/scene': scene,
 };
 
 /** Every lesson written so far, by the tile it belongs to. */

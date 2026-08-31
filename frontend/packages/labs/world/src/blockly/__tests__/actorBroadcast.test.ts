@@ -54,9 +54,27 @@ describe('a statement over an actor value', () => {
     });
 
     expect(code).toBe(
-      'WorldLab.each(world.actors.ofType("actors/coin"), subject => ' +
-        'subject.set(WorldLab.PositionProperty, new WorldLab.Vector(1, 2)));\n',
+      'WorldLab.each(world.actors.ofType("actors/coin"), subject => {\n' +
+        'subject.set(WorldLab.PositionProperty, new WorldLab.Vector(1, 2));\n});\n',
     );
+  });
+
+  // A body of SEVERAL statements, which is the case that broke. `set sprite`
+  // writes three properties — the picture, the cell origin and the cell size —
+  // and an arrow function without braces takes only the first: the other two
+  // landed in the middle of the `each` call's arguments, and the module would
+  // not parse. `set sprite of ⟨any ⟨Portrait⟩⟩` is a sentence a story lesson
+  // says in passing, and it killed the project as it loaded.
+  it('wraps a body of several statements in a block', () => {
+    const code = emit('world_set_sprite', {SPRITE: 'player.png'}, KIND, {
+      ACTOR: 'world.actorKind("Portrait")',
+    });
+    expect(code).toContain('subject => {');
+    expect(code.trimEnd().endsWith('});')).toBe(true);
+    // Parseable, which is the whole of what the braces are for.
+    expect(
+      () => new Function(`const world = {}, WorldLab = {};\n${code}`),
+    ).not.toThrow();
   });
 
   it('says nothing extra when it holds one', () => {
@@ -82,8 +100,8 @@ describe('a statement over an actor value', () => {
     });
 
     expect(code).toBe(
-      'WorldLab.each(world.actors.ofType("actors/coin"), subject => ' +
-        'world.removeActor(subject));\n',
+      'WorldLab.each(world.actors.ofType("actors/coin"), subject => {\n' +
+        'world.removeActor(subject);\n});\n',
     );
   });
 
@@ -98,7 +116,7 @@ describe('a statement over an actor value', () => {
 
     expect(code).toBe(
       'WorldLab.each(WorldLab.firstOf(world.actors), ' +
-        'subject => world.removeActor(subject));\n',
+        'subject => {\nworld.removeActor(subject);\n});\n',
     );
   });
 
@@ -261,7 +279,7 @@ describe('all actors', () => {
     });
 
     expect(code).toBe(
-      'WorldLab.each([...world.actors], subject => world.removeActor(subject));\n',
+      'WorldLab.each([...world.actors], subject => {\nworld.removeActor(subject);\n});\n',
     );
   });
 });
@@ -377,7 +395,7 @@ describe('building a group', () => {
     );
 
     expect(code).toBe(
-      'WorldLab.each(coins, subject => world.removeActor(subject));\n',
+      'WorldLab.each(coins, subject => {\nworld.removeActor(subject);\n});\n',
     );
   });
 });

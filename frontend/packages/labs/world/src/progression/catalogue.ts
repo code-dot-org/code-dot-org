@@ -1912,8 +1912,8 @@ export const TILES: readonly Tile[] = [
     at: at('story', 2, 3),
     title: 'Staged',
     teaches:
-      'The same script, dressed: who is speaking, where, and to what music.',
-    task: 'Portraits that change with the speaker, backdrops that change with the place, and a track under it.',
+      'Who is speaking, where it is happening and what it sounds like all hang off the line that moved.',
+    task: 'Three lines in an empty grey room. Bring somebody on, and move the story indoors.',
     requires: ['story/reveal', 'story/choice'],
     unlocks: [
       {kind: 'actor', id: 'portrait'},
@@ -1921,11 +1921,45 @@ export const TILES: readonly Tile[] = [
       {kind: 'block', type: 'world_set_music'},
       {kind: 'template', id: 'story'},
     ],
+    offers: [
+      {kind: 'block', type: 'world_add_trait'},
+      {kind: 'block', type: 'controls_if'},
+      {kind: 'block', type: 'logic_compare'},
+      {kind: 'block', type: 'math_number'},
+      {kind: 'block', type: 'world_set_background'},
+    ],
     check: {
       kind: 'outcome',
-      says: 'The portrait and the backdrop are the right ones on lines two and four.',
+      says: 'A face is visible and changes with the speaker, and the backdrop changes with the place.',
       falsePass:
-        'Changing them on a timer that matches the scripted clicks. Click at an irregular rate.',
+        'Bringing the Portrait on and leaving it there wearing one face, which is a character rather than a scene — the check reads the face at each line as well as the opacity, and the backdrop as well as the face.',
+      run: {
+        probes: {
+          face: {kind: 'property', of: 'Portrait', name: 'sprite'},
+          seen: {kind: 'property', of: 'Portrait', name: 'opacity'},
+          sky: {kind: 'backdrop'},
+        },
+        trace: [1, 2, 3].flatMap(() => [
+          {pointer: {x: 60, y: 220, buttons: ['left']}, seconds: 0.1},
+          {pointer: {x: 60, y: 220, buttons: []}, seconds: 0.1},
+        ]),
+      },
+      passes: ({samples}) => {
+        const faces = (samples.face ?? []).map(sample =>
+          String((sample as unknown[])[0]),
+        );
+        const seen = (samples.seen ?? []).map(sample =>
+          Number((sample as unknown[])[0]),
+        );
+        const skies = (samples.sky ?? []).map(sample =>
+          String((sample as {sprite?: string}[])[0]?.sprite),
+        );
+        return (
+          new Set(faces).size >= 2 &&
+          Math.max(...seen) > 0 &&
+          new Set(skies.filter(name => name !== 'undefined')).size >= 2
+        );
+      },
     },
   },
 

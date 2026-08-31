@@ -123,6 +123,11 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
     'math_number',
   ],
   'story/choice': ['controls_if', 'logic_compare', 'world_event_actor'],
+  'story/scene': [
+    'world_set_sprite',
+    'world_set_background',
+    'world_set_music',
+  ],
   'platformer/level': [
     'controls_if',
     'world_is_a',

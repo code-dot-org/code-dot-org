@@ -2643,3 +2643,88 @@ describe('the choice lesson’s check', () => {
     expect(passes).toBe(false);
   });
 });
+
+describe('the scene lesson’s check', () => {
+  const lesson = LESSONS['story/scene'];
+
+  /** Staging hung off each line of the script. */
+  const staged = (options: {faces: boolean; places: boolean}) =>
+    editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const portrait = () => ({
+        block: {
+          type: 'world_actor_kind',
+          fields: {ACTOR: 'actors/portrait'},
+        },
+      });
+      const lines: [string, string | undefined][] = [
+        ['player.png', 'meadow.png'],
+        [options.faces ? 'coin.png' : 'player.png', undefined],
+        ['player.png', options.places ? 'kitchen.png' : undefined],
+      ];
+      const hat = workspace.blocks.blocks.find(
+        block => block.type === 'world_on_Conversation_MovesToALineEvent',
+      )!;
+      let branch: Row | undefined = hat.next!.block!;
+      for (const [sprite, backdrop] of lines) {
+        const rows: Row[] = [
+          {
+            type: 'world_set_sprite',
+            fields: {SPRITE: sprite},
+            inputs: {ACTOR: portrait()},
+          },
+          {
+            type: 'world_set_Appearance_OpacityProperty',
+            inputs: {
+              ACTOR: portrait(),
+              VALUE: {shadow: {type: 'math_number', fields: {NUM: 1}}},
+            },
+          },
+          ...(backdrop
+            ? [
+                {
+                  type: 'world_set_background',
+                  fields: {BACKGROUND: backdrop},
+                },
+              ]
+            : []),
+        ];
+        let last = inSocket(branch!, 'DO0')!;
+        while (last.next?.block) {
+          last = last.next.block;
+        }
+        last.next = {
+          block: rows.reduceRight((next, row) => ({
+            ...row,
+            next: {block: next},
+          })),
+        };
+        branch = branch!.next?.block;
+      }
+      return JSON.stringify(workspace);
+    });
+
+  it('refuses two people talking in a grey room', async () => {
+    const {passes} = await check('story/scene', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts a face that changes and a place that does', async () => {
+    const {passes, result} = await check(
+      'story/scene',
+      staged({faces: true, places: true}),
+    );
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  // On stage wearing one face for the whole conversation is a character, not a
+  // scene: both speakers look the same and the room never changes.
+  it('refuses one face for every line', async () => {
+    const {passes} = await check(
+      'story/scene',
+      staged({faces: false, places: true}),
+    );
+    expect(passes).toBe(false);
+  });
+});
