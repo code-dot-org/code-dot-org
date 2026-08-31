@@ -1156,6 +1156,19 @@ en:
             practice:
               display_name: Teaching Practices
           student_description: This is a sample course that has all of the plc special things. Enrollment in this course does nothing. Right now, it's just a copy of TeacherCon
+        ui-test-plc:
+          title: UI Test course for PLC things
+          description: This is a sample course that has all of the plc special things. Enrollment in this course does nothing. Right now, it's just a copy of TeacherCon
+          description_short: This is a sample course that has all of the plc special things
+          description_audience: ''
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+            practice:
+              display_name: Teaching Practices
+          student_description: This is a sample course that has all of the plc special things. Enrollment in this course does nothing. Right now, it's just a copy of TeacherCon
         csd3-2017:
           title: CSD Unit 3 - Animations and Games ('17-'18)
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
