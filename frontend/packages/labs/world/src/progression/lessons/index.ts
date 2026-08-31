@@ -12,7 +12,7 @@
 // Blockly JSON behind them. So `catalogue.ts` stays data about tiles, and the
 // projects live here, looked up by tile id.
 //
-// Fifty-five of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md
+// Fifty-six of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md
 // and then some. ALL SIX FOUNDATIONS are written — Origin, Input, Motion, Logic,
 // Memory, Look and Place — so every genre gate on the map is open, and the
 // first hours of the progression can be walked end to end. ARCADE is written
@@ -3282,6 +3282,66 @@ file, one hat, and what follows the hat is what runs.
 `.trim(),
 };
 
+// ── adventure/world ──────────────────────────────────────────────────────────
+
+const bigWorld: WorldScenario = {
+  name: 'Bigger than the screen',
+  description:
+    'A room three screens wide, seen through a window that never moves.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      tiles: [30, 10],
+      rows: [
+        {
+          type: 'world_set_background_color',
+          inputs: {COLOR: swatch('#101822')},
+        },
+        createInMap(local('ground'), floorAcross(30)),
+        addActor(local('walker'), [placeAt(60, 272)]),
+      ],
+      actors: [
+        {
+          id: 'walker',
+          name: 'Walker',
+          rows: [
+            useTrait('Arrow Keys#MovesAcrossTrait'),
+            useTrait('Boundaries#StaysAcrossTrait'),
+            setSprite('player.png'),
+          ],
+        },
+        {id: 'ground', name: 'Ground', rows: [setSprite('ground.png')]},
+      ],
+    }),
+    sprites: ['player', 'ground'],
+    rules: ['arrows', 'bounds', 'camera', 'cameraFollow', 'cameraConfined'],
+  }),
+  instructions: `
+## Bigger than the screen
+
+Walk right. The Walker keeps going — the room is thirty tiles across, three
+screens of it — and the view stays where it was, so most of the walk happens
+somewhere you cannot see.
+
+Everything needed to fix that is a lesson you have already done. This one is
+putting them together, which is what a genre is.
+
+### What you do
+
+1. Add **define camera ⟨Follow⟩** at the end of the world, with
+   **use trait ⟨Follows⟩**, **use trait ⟨Confined to the Map⟩**, and
+   **set actor to follow of ⟨this camera⟩ to ⟨any Walker⟩** — then
+   **look through camera ⟨Follow⟩**.
+2. Add a **backdrop**, and **draw background ⟨tiled⟩** so it covers a room
+   three screens wide rather than being stretched across one.
+3. Walk to the far end. The view goes with you and stops at the wall, and there
+   is something behind the floor the whole way.
+4. Look at what you did NOT have to change: the map, the Walker, the floor. A
+   world bigger than the screen is a camera and a backdrop, not a different
+   kind of world.
+`.trim(),
+};
+
 // ── place/edges ──────────────────────────────────────────────────────────────
 
 const edges: WorldScenario = {
@@ -3673,6 +3733,7 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'making/change': changeRule,
   'making/trait': ownTrait,
   'making/behavior': behaviour,
+  'adventure/world': bigWorld,
 };
 
 /** Every lesson written so far, by the tile it belongs to. */

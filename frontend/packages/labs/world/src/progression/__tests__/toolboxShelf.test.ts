@@ -146,6 +146,13 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   'making/behavior': [],
   'puzzle/grid': ['world_use_trait'],
   'puzzle/push': ['world_use_trait'],
+  'adventure/world': [
+    'world_define_camera',
+    'world_use_camera',
+    'world_use_trait',
+    'world_set_background',
+    'world_set_background_repeat',
+  ],
   'adventure/people': ['world_add_trait'],
   'adventure/errand': ['math_arithmetic', 'world_count_of_kind'],
   'platformer/level': [

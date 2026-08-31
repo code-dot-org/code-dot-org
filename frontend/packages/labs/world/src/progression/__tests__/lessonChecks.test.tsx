@@ -3405,3 +3405,102 @@ describe('the behavior lesson’s check', () => {
     expect(passes).toBe(false);
   });
 });
+
+describe('the big-world lesson’s check', () => {
+  const lesson = LESSONS['adventure/world'];
+
+  /** The camera, the backdrop, or both — which is the lesson. */
+  const assembled = (options: {camera: boolean; sky: boolean}) =>
+    editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const rows = rowsOf(workspace);
+      let last = rows[rows.length - 1];
+      if (options.sky) {
+        last.next = {
+          block: {
+            type: 'world_set_background',
+            fields: {BACKGROUND: 'meadow.png'},
+            next: {
+              block: {
+                type: 'world_set_background_repeat',
+                fields: {REPEAT: 'true'},
+              },
+            },
+          },
+        };
+        while (last.next?.block) {
+          last = last.next.block;
+        }
+      }
+      if (options.camera) {
+        last.next = {
+          block: {
+            type: 'world_define_camera',
+            id: 'follow',
+            fields: {NAME: 'Follow'},
+            inputs: {
+              DO: {
+                block: {
+                  type: 'world_use_trait',
+                  fields: {TRAIT: 'Camera Follow#FollowsTrait'},
+                  next: {
+                    block: {
+                      type: 'world_use_trait',
+                      fields: {
+                        TRAIT: 'Camera Confined#ConfinedToTheMapTrait',
+                      },
+                      next: {
+                        block: {
+                          type: 'world_set_CameraFollow_ActorToFollowProperty',
+                          inputs: {
+                            ACTOR: {block: {type: 'world_this_camera'}},
+                            VALUE: {
+                              block: {
+                                type: 'world_actor_kind',
+                                fields: {ACTOR: local('walker')},
+                              },
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+            next: {
+              block: {
+                type: 'world_use_camera',
+                fields: {CAMERA: 'camera:follow'},
+              },
+            },
+          },
+        };
+      }
+      return JSON.stringify(workspace);
+    });
+
+  it('refuses a window that never moves', async () => {
+    const {passes} = await check('adventure/world', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts a camera and something behind it', async () => {
+    const {passes, result} = await check(
+      'adventure/world',
+      assembled({camera: true, sky: true}),
+    );
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  // The camera alone is the Place lesson over again: a strip of floor, seen
+  // from a window that moves.
+  it('refuses a camera with nothing behind it', async () => {
+    const {passes} = await check(
+      'adventure/world',
+      assembled({camera: true, sky: false}),
+    );
+    expect(passes).toBe(false);
+  });
+});

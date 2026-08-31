@@ -2019,13 +2019,51 @@ export const TILES: readonly Tile[] = [
     title: 'Bigger than the screen',
     teaches:
       'A world you cannot see all of, and a view that decides what you can.',
-    task: 'Walk out of the first screen. Bring the camera, the layers and the backdrop with you.',
+    task: 'A room three screens wide, seen through a window that never moves.',
     requires: ['look/background', 'place/map'],
     unlocks: [{kind: 'template', id: 'adventure'}],
+    // Every piece of this belongs to a Place or Look tile, and the two edges
+    // into Adventure are `look/background` and `place/map` — so a learner can
+    // arrive having done neither `place/camera` nor `place/layers`. The lesson
+    // is the assembly; it grants none of the parts.
+    offers: [
+      {kind: 'block', type: 'world_define_camera'},
+      {kind: 'block', type: 'world_use_camera'},
+      {kind: 'block', type: 'world_set_background'},
+      {kind: 'block', type: 'world_set_background_repeat'},
+    ],
     check: {
       kind: 'outcome',
-      says: 'The player leaves the first screen and the view follows without showing past the map.',
-      falsePass: 'A map one screen wide. The check reads the map size first.',
+      says: 'The Walker leaves the first screen, the view goes with him and stops at the wall, and there is a backdrop behind it all.',
+      falsePass:
+        'A camera that follows and nothing behind it, which is the Place lesson over again — the backdrop is the half that makes a room somewhere rather than a strip of floor. Both are read, and so is the view stopping: a camera that runs off the end of the map shows three screens of nothing.',
+      run: {
+        probes: {
+          walker: {kind: 'positions', of: 'Walker'},
+          view: {kind: 'cameras'},
+          sky: {kind: 'backdrop'},
+        },
+        trace: Array.from({length: 10}, () => ({
+          hold: ['ArrowRight'],
+          seconds: 0.4,
+        })),
+      },
+      passes: ({samples}) => {
+        const walked = lastList<{x: number}>(samples.walker)[0]?.x ?? 0;
+        const seen = (samples.view ?? []).map(sample => {
+          const cameras = sample as {x: number; active: boolean}[];
+          return cameras.find(camera => camera.active)?.x ?? 0;
+        });
+        const behind = lastList<{sprite?: string}>(samples.sky)[0]?.sprite;
+        // Thirty tiles is 960 and the view is 320, so a confined camera stops
+        // at 800 — and one that never moved is still at 160.
+        return (
+          walked > 320 &&
+          Math.max(...seen) > 300 &&
+          Math.max(...seen) <= 801 &&
+          Boolean(behind)
+        );
+      },
     },
   },
   {
