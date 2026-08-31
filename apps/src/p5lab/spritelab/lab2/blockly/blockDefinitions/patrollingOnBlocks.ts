@@ -2,6 +2,7 @@ import {Order} from 'blockly/javascript';
 
 import {BlockStyles} from '@cdo/apps/blockly/constants';
 import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
+import {APP_WIDTH} from '@cdo/apps/p5lab/constants';
 
 const definition: BlockJson = {
   type: 'spritelab2_patrollingOnBlocks',
@@ -44,14 +45,17 @@ const helperCode = [
   '      };',
   '      if (!platformGrounded(spriteId)) {',
   '        // Falling: wait for the landing, and do not read where it lands',
-  '        // as having been blocked.',
-  "        setProp(spriteId, 'patrolOBExpX', undefined);",
+  '        // as having been blocked. -1 marks the expected x unknown; the',
+  '        // real setProp ignores undefined.',
+  "        setProp(spriteId, 'patrolOBExpX', -1);",
   '        return;',
   '      }',
   "      var pause = getProp(spriteId, 'patrolOBPause') || 0;",
   "      var expected = getProp(spriteId, 'patrolOBExpX');",
   '      var blocked =',
-  "        expected != undefined && getProp(spriteId, 'x') !== expected;",
+  '        expected != undefined &&',
+  '        expected >= 0 &&',
+  "        getProp(spriteId, 'x') !== expected;",
   '      if (pause > 0) {',
   "        setProp(spriteId, 'patrolOBPause', pause - 1);",
   '      } else if (blocked) {',
@@ -66,7 +70,7 @@ const helperCode = [
   '        if (x <= half && dir < 0) {',
   '          turn(1);',
   '        }',
-  '        if (x >= 400 - half && dir > 0) {',
+  `        if (x >= ${APP_WIDTH} - half && dir > 0) {`,
   '          turn(-1);',
   '        }',
   '      }',

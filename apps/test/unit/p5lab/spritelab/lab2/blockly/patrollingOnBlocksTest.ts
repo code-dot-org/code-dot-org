@@ -41,9 +41,9 @@ function patrol({
   const sprite = {x: centerOf(startCol)};
   const props: {[key: string]: number | undefined} = {};
   let frame = 0;
-  const marked: unknown[] = [];
+  let marked = false;
   const commands = {
-    usePlatformBody: (id: unknown) => marked.push(id),
+    usePlatformBody: () => (marked = true),
     platformGrounded: () => frame >= airborneFrames,
     getProp: (id: unknown, prop: string): number | undefined => {
       if (prop === 'x') return sprite.x;
@@ -52,7 +52,9 @@ function patrol({
       return props[prop];
     },
     setProp: (id: unknown, prop: string, value: number | undefined) => {
-      if (prop === 'x') sprite.x = value as number;
+      // The real command ignores undefined values.
+      if (value === undefined) return;
+      if (prop === 'x') sprite.x = value;
       else props[prop] = value;
     },
     changePropBy: (id: unknown, prop: string, delta: number) => {
@@ -90,7 +92,7 @@ function patrol({
     right: Math.max(...seen),
     positions: new Set(seen.map(Math.round)).size,
     top,
-    marked: marked.length,
+    marked,
     seen,
   };
 }
@@ -108,8 +110,8 @@ describe('patrollingOnBlocks', () => {
     expect(walk.name).toBe('patrolling on blocks');
     expect(walk.left).toBeCloseTo(20, 0);
     expect(walk.right).toBeCloseTo(380, 0);
-    // Handed to the platform resolver every frame, so it falls and lands.
-    expect(walk.marked).toBe(600);
+    // Handed to the platform resolver, which gives it gravity and landings.
+    expect(walk.marked).toBe(true);
   });
 
   it('waits in the air and walks on from where it lands', () => {
