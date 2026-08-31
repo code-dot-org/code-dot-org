@@ -49,6 +49,11 @@ const Console: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
   const {theme} = useTheme();
 
+  // Re-runs when the console is re-created, which rebuilds its live region.
+  useEffect(() => {
+    consoleManager?.setPoliteScreenReaderAnnouncements();
+  }, [consoleManager]);
+
   const clearOutput = useCallback((sendAnalytics: boolean) => {
     CodebridgeRegistry.getInstance().getConsoleManager()?.clearTerminalLines();
     if (sendAnalytics) {

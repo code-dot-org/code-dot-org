@@ -86,9 +86,6 @@ profiles:
 # overlays/skaffold (backend + dashboard). Explicit opt-in:
 # `skaffold dev -p dashboard`.
 #
-# NOTE: the mimic profile patches build artifacts by index assuming this
-# profile's additions are in place, so keep it defined first and always
-# combine mimic with it (`-p dashboard,mimic`).
 - name: dashboard
   patches:
     # Development-flavored full image; see the `release` profile for the
@@ -107,9 +104,6 @@ profiles:
           --build-arg CODE_DOT_ORG_PEGASUS="$CODE_DOT_ORG_PEGASUS" \
           --build-arg CODE_DOT_ORG_STATIC="$CODE_DOT_ORG_STATIC" \
           --build-arg BUNDLE_WITHOUT=test:production:staging:levelbuilder
-    # Keep the requires order (core, db-seed, pegasus, static) and the
-    # artifact order (pegasus, static, db-seed) stable: mimic patches both
-    # by index.
     - op: add
       path: /build/artifacts/0/requires/-
       value:
@@ -303,95 +297,6 @@ profiles:
         path: /manifests/kustomize/paths/-
         value: overlays/setup-s3
 
-# Mimic allows us to run a light-weight stubbed version of our huge repo. Its great for
-# fast iterative development of our k8s docker files and helm charts.
-#
-# To use:
-# 1. First-time: cd k8s/kustomize && skaffold dev -p dashboard,mimic --cache-artifacts=false
-# 2. Run: cd k8s/kustomize && skaffold dev -p dashboard,mimic
-#
-# NOTE: mimic patches build artifacts by index and requires the dashboard
-# profile's artifact additions — always combine with -p dashboard (a bare
-# -p mimic fails on an invalid patch path).
-#
-# For details, see: ../mimic/README.md
-- name: mimic
-  patches:
-    - op: replace
-      path: /build/artifacts/0/custom/buildCommand
-      value: |
-        K8S_DIR="$BUILD_CONTEXT/k8s"
-        if [ ! -x "$K8S_DIR/bin/docker-buildx" ]; then
-          K8S_DIR="$(cd "$BUILD_CONTEXT/../.." && pwd)"
-        fi
-        "$K8S_DIR/bin/docker-buildx" -f "$K8S_DIR/docker/code-dot-org.dockerfile" \
-          --target runtime \
-          --build-arg CODE_DOT_ORG_CORE="$CODE_DOT_ORG_CORE" \
-          --build-arg CODE_DOT_ORG_DB_SEED="$CODE_DOT_ORG_DB_SEED" \
-          --build-arg CODE_DOT_ORG_PEGASUS="$CODE_DOT_ORG_PEGASUS" \
-          --build-arg CODE_DOT_ORG_STATIC="$CODE_DOT_ORG_STATIC" \
-          --build-arg SKIP_FRONTEND_BUILD=1
-    # Create the k8s/mimic/cdo-no-symlinks dir to serve as the build context for the
-    # mimic docker build. This is just a copy of k8s/mimic/code-dot-org, but symlinks
-    # have been replaced by copies of the real files, because docker doesn't follow
-    # symlinks outside its root build context.
-    - op: add
-      path: /build/hooks/before/-
-      value:
-        command: ["../mimic/bin/update-cdo-no-symlinks.sh"]
-    # Artifact 0 (code-dot-org)
-    - op: replace
-      path: /build/artifacts/0/context
-      value: ../mimic/cdo-no-symlinks
-    - op: replace
-      path: /build/artifacts/0/image
-      value: mimic
-    # Artifact 1 (code-dot-org-core)
-    - op: replace
-      path: /build/artifacts/1/context
-      value: ../mimic/cdo-no-symlinks
-    - op: replace
-      path: /build/artifacts/1/image
-      value: mimic-core
-    # Artifact 2 (code-dot-org-pegasus, added by the dashboard profile)
-    - op: replace
-      path: /build/artifacts/2/context
-      value: ../mimic/cdo-no-symlinks
-    - op: replace
-      path: /build/artifacts/2/image
-      value: mimic-pegasus
-    # Artifact 3 (code-dot-org-static, added by the dashboard profile)
-    - op: replace
-      path: /build/artifacts/3/context
-      value: ../mimic/cdo-no-symlinks
-    - op: replace
-      path: /build/artifacts/3/image
-      value: mimic-static
-    # Artifact 4 (code-dot-org-db-seed, added by the dashboard profile)
-    - op: replace
-      path: /build/artifacts/4/context
-      value: ../mimic/cdo-no-symlinks
-    - op: replace
-      path: /build/artifacts/4/image
-      value: mimic-db-seed
-    # Update required images in artifact 0 (order: core, db-seed, pegasus, static)
-    - op: replace
-      path: /build/artifacts/0/requires/0/image
-      value: mimic-core
-    - op: replace
-      path: /build/artifacts/0/requires/1/image
-      value: mimic-db-seed
-    - op: replace
-      path: /build/artifacts/0/requires/2/image
-      value: mimic-pegasus
-    - op: replace
-      path: /build/artifacts/0/requires/3/image
-      value: mimic-static
-    # Update the deployment image name so Skaffold can rewrite it to mimic.
-    - op: replace
-      path: /manifests/kustomize/paths/0
-      value: overlays/skaffold-mimic
-
 portForward:
 - resourceType: Service
   resourceName: cdo-mysql
@@ -414,4 +319,3 @@ portForward:
 # - The old Helm `local-dev` profile injected dynamic host paths and AWS_PROFILE via Skaffold templating.
 #   I did not find a clean Kustomize-native equivalent without introducing generated local overlay files, so
 #   `overlays/skaffold-local-dev` is intentionally not implemented yet.
-# - `mimic` + `setup-db` / `setup-s3` would still use the non-mimic job image unless we add dedicated mimic job overlays.

@@ -376,6 +376,17 @@ ActiveRecord::Schema[7.0].define(version: 2026_08_31_000001) do
     t.index ["challenge_response_id"], name: "index_challenge_response_assets_on_challenge_response_id"
   end
 
+  create_table "challenge_response_reactions", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "challenge_response_id", null: false
+    t.integer "user_id", null: false
+    t.string "emoji", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["challenge_response_id", "user_id", "emoji"], name: "index_challenge_response_reactions_on_response_user_emoji", unique: true
+    t.index ["challenge_response_id"], name: "index_challenge_response_reactions_on_challenge_response_id"
+    t.index ["user_id"], name: "index_challenge_response_reactions_on_user_id"
+  end
+
   create_table "challenge_responses", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.bigint "challenge_id", null: false
     t.integer "user_id", null: false
@@ -3046,6 +3057,8 @@ ActiveRecord::Schema[7.0].define(version: 2026_08_31_000001) do
   add_foreign_key "census_submission_form_maps", "census_submissions"
   add_foreign_key "census_summaries", "schools"
   add_foreign_key "challenge_response_assets", "challenge_responses"
+  add_foreign_key "challenge_response_reactions", "challenge_responses"
+  add_foreign_key "challenge_response_reactions", "users"
   add_foreign_key "challenge_responses", "challenges"
   add_foreign_key "challenge_responses", "users"
   add_foreign_key "challenges", "stages", column: "lesson_id"
