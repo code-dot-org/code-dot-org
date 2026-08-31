@@ -128,6 +128,12 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
     'world_set_background',
     'world_set_music',
   ],
+  'simulation/many': [
+    'controls_repeat_ext',
+    'world_print',
+    'world_count_actors',
+  ],
+  'simulation/steering': ['world_use_trait'],
   'platformer/level': [
     'controls_if',
     'world_is_a',

@@ -2055,21 +2055,56 @@ export const TILES: readonly Tile[] = [
     at: at('simulation', 1, 2),
     title: 'A hundred of something',
     teaches: 'What scale costs, and finding out rather than guessing.',
-    task: 'Spawn a hundred wanderers on a click, watch the frame time, and find where it breaks.',
+    task: 'One wanderer per click. Make it a hundred, and find where your machine stops liking it.',
     requires: ['place/edges', 'input/mouse'],
     unlocks: [
       // `add actor` came with the first lesson and `all actors` with the loop
       // that walks them; what this one adds is asking about a crowd, and taking
       // one back out.
       {kind: 'block', type: 'world_count_actors'},
-      {kind: 'block', type: 'world_remove_actor'},
       {kind: 'block', type: 'world_first_actor'},
+      // `repeat ⟨n⟩ times`, which is the loop this lesson is: `memory/many`
+      // walks a list that exists, and this makes a hundred that do not. A
+      // GRANT rather than an offer, for the reason `story/reveal` grants
+      // `add trait` — an offer cannot reach a block no tile grants.
+      {kind: 'block', type: 'controls_repeat_ext'},
+    ],
+    // The Loops DRAWER is `memory/many`'s, and Simulation is entered from Place
+    // and Input — so a learner can arrive here with no Loops drawer at all, and
+    // a block granted inside a drawer they have not got is a block they cannot
+    // see. The drawer is borrowed for the lesson; the block in it is granted.
+    offers: [
+      {kind: 'category', name: 'Loops'},
+      {kind: 'block', type: 'math_number'},
     ],
     check: {
       kind: 'outcome',
-      says: 'The world holds a hundred, all of them moving, with the frame time under budget.',
+      says: 'One click leaves a hundred in the world, and they are going somewhere.',
       falsePass:
-        'A hundred that do not move. The check reads positions before and after.',
+        'A hundred that stand still, which is a hundred of nothing: the check reads every position twice and asks that most of them changed. A crowd that does not move costs nothing to draw and answers no question.',
+      run: {
+        probes: {
+          crowd: {kind: 'actorCount', of: 'Wanderer'},
+          where: {kind: 'positions', of: 'Wanderer'},
+        },
+        trace: [
+          {pointer: {x: 160, y: 160, buttons: ['left']}, seconds: 0.1},
+          {pointer: {x: 160, y: 160, buttons: []}, seconds: 0.1},
+          {seconds: 0.4},
+        ],
+      },
+      passes: ({samples}) => {
+        const crowd = lastNumber(samples.crowd);
+        const trail = (samples.where ?? []) as {x: number; y: number}[][];
+        const before = trail[trail.length - 2] ?? [];
+        const after = trail[trail.length - 1] ?? [];
+        const moved = before.filter(
+          (at, index) =>
+            after[index] &&
+            (after[index].x !== at.x || after[index].y !== at.y),
+        ).length;
+        return crowd >= 100 && moved > before.length / 2;
+      },
     },
   },
   {
@@ -2079,14 +2114,50 @@ export const TILES: readonly Tile[] = [
     title: 'Toward, and away',
     teaches:
       'A direction worked out from two positions, and the distance question behind it.',
-    task: 'One that chases you and one that runs, and the block that answers "which is nearest".',
+    task: 'Two actors with no opinion about where the player is. Make one close in and one keep away.',
     requires: ['simulation/many'],
     unlocks: [{kind: 'rule', id: 'steering'}],
     check: {
       kind: 'outcome',
-      says: 'The chaser’s distance to the player falls over the run; the fleer’s rises.',
+      says: 'The Chaser is closer to the Player at the end than at the start, and the Fleer is further.',
       falsePass:
-        'A chaser that simply moves right, toward where the player happens to be. Move the player mid-trace.',
+        'A Chaser that simply walks toward the corner the Player started in, which closes the gap until the Player moves — so the script walks right and then up, and a direction that was worked out once is a direction that is wrong by the end.',
+      run: {
+        probes: {
+          player: {kind: 'positions', of: 'Player'},
+          chaser: {kind: 'positions', of: 'Chaser'},
+          fleer: {kind: 'positions', of: 'Fleer'},
+        },
+        // Right, then DOWN — toward the corner the Fleer is standing in and
+        // away from the Chaser's. A Fleer that does nothing gets closer, and a
+        // Chaser that does nothing gets further, so neither half can be passed
+        // by standing still.
+        trace: [
+          ...Array.from({length: 4}, () => ({
+            hold: ['ArrowRight'],
+            seconds: 0.4,
+          })),
+          ...Array.from({length: 4}, () => ({
+            hold: ['ArrowDown'],
+            seconds: 0.4,
+          })),
+        ],
+      },
+      passes: ({samples}) => {
+        const spot = (name: string, at: number) =>
+          ((samples[name] ?? [])[at] as {x: number; y: number}[])?.[0];
+        const last = (samples.player ?? []).length - 1;
+        const gap = (name: string, at: number) => {
+          const them = spot(name, at);
+          const player = spot('player', at);
+          return them && player
+            ? Math.hypot(them.x - player.x, them.y - player.y)
+            : NaN;
+        };
+        const chased = gap('chaser', last) < gap('chaser', 0);
+        const fled = gap('fleer', last) > gap('fleer', 0);
+        return chased && fled;
+      },
     },
   },
   {

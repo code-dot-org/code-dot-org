@@ -2728,3 +2728,135 @@ describe('the scene lesson’s check', () => {
     expect(passes).toBe(false);
   });
 });
+
+describe('the crowd lesson’s check', () => {
+  const lesson = LESSONS['simulation/many'];
+
+  /** The click, made a hundred times over — moving, or standing still. */
+  const hundred = (moving: boolean) =>
+    editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const hat = workspace.blocks.blocks.find(
+        block => block.type === 'world_on_Mouse_IsPressedEvent',
+      )!;
+      const add = hat.next!.block!;
+      if (!moving) {
+        for (
+          let at = inSocket(add, 'DO');
+          at?.next?.block;
+          at = at.next.block
+        ) {
+          if (at.next.block.type === 'world_set_Physics_VelocityProperty') {
+            at.next = at.next.block.next;
+            break;
+          }
+        }
+      }
+      hat.next = {
+        block: {
+          type: 'controls_repeat_ext',
+          inputs: {
+            TIMES: {shadow: {type: 'math_number', fields: {NUM: 100}}},
+            DO: {block: add},
+          },
+        },
+      };
+      return JSON.stringify(workspace);
+    });
+
+  it('refuses one wanderer per click', async () => {
+    const {passes} = await check('simulation/many', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts a hundred that are going somewhere', async () => {
+    const {passes, result} = await check('simulation/many', hundred(true));
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  it('refuses a hundred standing still', async () => {
+    const {passes} = await check('simulation/many', hundred(false));
+    expect(passes).toBe(false);
+  });
+});
+
+describe('the steering lesson’s check', () => {
+  const lesson = LESSONS['simulation/steering'];
+
+  const kindOf = (id: string) => ({
+    block: {type: 'world_actor_kind', fields: {ACTOR: local(id)}},
+  });
+
+  /** Both traits elected and pointed at the Player — or a hand-aimed walk. */
+  const aimed = (how: 'both' | 'chase' | 'byhand') =>
+    editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const rows: Row[] = [];
+      if (how === 'byhand') {
+        under(actorIn(workspace, 'Chaser'), {
+          type: 'world_set_Physics_VelocityProperty',
+          inputs: {
+            ACTOR: {block: {type: 'world_this_actor'}},
+            VALUE: {
+              block: {type: 'world_vector', fields: {VECTOR: {x: 2, y: 2}}},
+            },
+          },
+        });
+      } else {
+        under(actorIn(workspace, 'Chaser'), {
+          type: 'world_use_trait',
+          fields: {TRAIT: 'Steering#ChasesTrait'},
+        });
+        rows.push({
+          type: 'world_set_Steering_ActorToChaseProperty',
+          inputs: {ACTOR: kindOf('chaser'), VALUE: kindOf('player')},
+        });
+        if (how === 'both') {
+          under(actorIn(workspace, 'Fleer'), {
+            type: 'world_use_trait',
+            fields: {TRAIT: 'Steering#FleesTrait'},
+          });
+          rows.push({
+            type: 'world_set_Steering_ActorToAvoidProperty',
+            inputs: {ACTOR: kindOf('fleer'), VALUE: kindOf('player')},
+          });
+        }
+      }
+      if (rows.length) {
+        const placed = rowsOf(workspace);
+        placed[placed.length - 1].next = {
+          block: rows.reduceRight((next, row) => ({
+            ...row,
+            next: {block: next},
+          })),
+        };
+      }
+      return JSON.stringify(workspace);
+    });
+
+  it('refuses two actors with no opinion', async () => {
+    const {passes} = await check('simulation/steering', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts one that closes in and one that keeps away', async () => {
+    const {passes, result} = await check('simulation/steering', aimed('both'));
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  // Chasing without fleeing is half of it, and the Fleer sitting still is
+  // "further away" only by accident — here the Player walks toward it.
+  it('refuses a chaser alone', async () => {
+    const {passes} = await check('simulation/steering', aimed('chase'));
+    expect(passes).toBe(false);
+  });
+
+  // The false pass the tile names: a direction worked out once, which closes
+  // the gap until the Player turns.
+  it('refuses a chaser aimed by hand', async () => {
+    const {passes} = await check('simulation/steering', aimed('byhand'));
+    expect(passes).toBe(false);
+  });
+});

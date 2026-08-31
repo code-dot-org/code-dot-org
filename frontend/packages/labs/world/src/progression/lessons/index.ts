@@ -12,12 +12,13 @@
 // Blockly JSON behind them. So `catalogue.ts` stays data about tiles, and the
 // projects live here, looked up by tile id.
 //
-// Forty-five of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md
+// Forty-seven of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md
 // and then some. ALL SIX FOUNDATIONS are written — Origin, Input, Motion, Logic,
 // Memory, Look and Place — so every genre gate on the map is open, and the
 // first hours of the progression can be walked end to end. ARCADE is written
 // whole after them, Platformer but for one tile (`platformer/ground` waits on
-// the engine: specs/PROGRESSION.md, "Carrying"), and STORY is written whole.
+// the engine: specs/PROGRESSION.md, "Carrying"), STORY is written whole, and
+// Simulation is started.
 
 import {
   actorFile,
@@ -2475,6 +2476,174 @@ the same event as the words.
 `.trim(),
 };
 
+// ── simulation/many ──────────────────────────────────────────────────────────
+
+/** `set speed of ⟨this actor⟩ to ⟨vector x ⟨…⟩ y ⟨…⟩⟩`, from two randoms. */
+const wander = () => ({
+  type: 'world_set_Physics_VelocityProperty',
+  inputs: {
+    ACTOR: me(),
+    VALUE: {
+      block: {
+        type: 'world_vector_of',
+        inputs: {
+          X: {
+            block: {
+              type: 'math_random_int',
+              inputs: {FROM: num(-3), TO: num(3)},
+            },
+          },
+          Y: {
+            block: {
+              type: 'math_random_int',
+              inputs: {FROM: num(-3), TO: num(3)},
+            },
+          },
+        },
+      },
+    },
+  },
+});
+
+const crowd: WorldScenario = {
+  name: 'A hundred of something',
+  description: 'One wanderer per click, and no idea what a hundred would cost.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      // One to look at before anybody clicks. The rest arrive by the handful.
+      rows: [addActor(local('wanderer'), [placeAt(160, 160), wander()])],
+      actors: [
+        {
+          id: 'wanderer',
+          name: 'Wanderer',
+          rows: [
+            useTrait('Physics#CanMoveTrait'),
+            useTrait('Screen Wrap#WrapsAcrossTrait'),
+            useTrait('Screen Wrap#WrapsDownTrait'),
+            setSprite('coin.png'),
+          ],
+        },
+      ],
+      handlers: [
+        {
+          type: 'world_on_Mouse_IsPressedEvent',
+          fields: {FILTER0: 'left'},
+          next: {
+            block: addActor(local('wanderer'), [
+              {
+                type: 'world_set_position',
+                inputs: {
+                  ACTOR: me(),
+                  X: {
+                    block: {
+                      type: 'math_random_int',
+                      inputs: {FROM: num(0), TO: num(320)},
+                    },
+                  },
+                  Y: {
+                    block: {
+                      type: 'math_random_int',
+                      inputs: {FROM: num(0), TO: num(320)},
+                    },
+                  },
+                },
+              },
+              wander(),
+            ]),
+          },
+        },
+      ],
+    }),
+    sprites: ['coin'],
+    rules: ['motion', 'mouse', 'wrap'],
+  }),
+  instructions: `
+## A hundred of something
+
+One Wanderer, going somewhere, wrapping round the edges when it gets there.
+Click and there are two. Click again for three.
+
+A simulation is not one of something — it is a crowd, and a crowd is where the
+questions start. How many can this hold? What does the frame time do at fifty,
+at five hundred? Nobody can tell you: it depends on this machine, this browser,
+this actor. **You find out by running it.**
+
+### What you do
+
+1. Wrap the \`add actor\` in **repeat ⟨100⟩ times**. One click, a hundred
+   Wanderers.
+2. Run it and watch. Click again for two hundred, again for three.
+3. Print **how many actors in ⟨all actors⟩** on each click, so you know what
+   you are looking at.
+4. Find where it stops being smooth on YOUR machine, and write the number
+   down. That number is a fact about the machine and the drawing, not about
+   the lab.
+`.trim(),
+};
+
+// ── simulation/steering ──────────────────────────────────────────────────────
+
+const steering: WorldScenario = {
+  name: 'Toward, and away',
+  description: 'Two actors that ought to care where the player is, and do not.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        addActor(local('player'), [placeAt(160, 160)]),
+        addActor(local('chaser'), [placeAt(40, 40)]),
+        addActor(local('fleer'), [placeAt(280, 280)]),
+      ],
+      actors: [
+        {
+          id: 'player',
+          name: 'Player',
+          rows: [
+            useTrait('Arrow Keys#MovesAcrossTrait'),
+            useTrait('Arrow Keys#MovesDownTrait'),
+            setSprite('player.png'),
+          ],
+        },
+        {
+          id: 'chaser',
+          name: 'Chaser',
+          rows: [useTrait('Physics#CanMoveTrait'), setSprite('box.png')],
+        },
+        {
+          id: 'fleer',
+          name: 'Fleer',
+          rows: [useTrait('Physics#CanMoveTrait'), setSprite('coin.png')],
+        },
+      ],
+    }),
+    sprites: ['player', 'box', 'coin'],
+    rules: ['arrows', 'motion', 'steering'],
+  }),
+  instructions: `
+## Toward, and away
+
+Walk about. The Chaser sits in its corner and the Fleer sits in its own, and
+neither has any opinion about where you are.
+
+"Toward" is a direction worked out from two positions — where I am, where you
+are, the difference between them — and "away" is the same sum with the sign
+turned round. **Steering** is those two, with a speed each and a distance each
+is happy at.
+
+### What you do
+
+1. Give the Chaser **use trait ⟨Chases⟩** and
+   **set actor to chase of ⟨any Chaser⟩ to ⟨any Player⟩**.
+2. Give the Fleer **use trait ⟨Flees⟩** and
+   **set actor to avoid of ⟨any Fleer⟩ to ⟨any Player⟩**.
+3. Run it and walk. One closes in, one keeps away — and neither of them was
+   told which way that is, because which way depends on where you are standing.
+4. Set **keep distance** on the Chaser to 60. It now follows without ever
+   arriving, which is most of what a companion in a game does.
+`.trim(),
+};
+
 // ── place/edges ──────────────────────────────────────────────────────────────
 
 const edges: WorldScenario = {
@@ -2856,6 +3025,8 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'story/script': script,
   'story/choice': choice,
   'story/scene': scene,
+  'simulation/many': crowd,
+  'simulation/steering': steering,
 };
 
 /** Every lesson written so far, by the tile it belongs to. */

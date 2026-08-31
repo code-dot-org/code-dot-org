@@ -199,7 +199,7 @@ export const worldFile = ({
   actors,
   handlers,
 }: WorldSpec): string => {
-  const placed = chain([
+  const inside = [
     ...(tiles
       ? [
           {
@@ -209,13 +209,17 @@ export const worldFile = ({
         ]
       : []),
     ...rows,
-  ]);
+  ];
+  // A world that puts nothing in itself is a real thing to start a lesson
+  // from — everything it holds arrives while it runs — and `chain` of nothing
+  // has no first block to hand back.
+  const placed = inside.length ? chain(inside) : undefined;
   const world = {
     type: 'world_world',
     x: 20,
     y: 20,
     fields: {NAME: name},
-    next: {block: placed},
+    ...(placed ? {next: {block: placed}} : {}),
   };
   // Laid out down the left, in the order a reader wants them: the world, then
   // what is in it, then what it does. Stacked by an ESTIMATE of each one's
