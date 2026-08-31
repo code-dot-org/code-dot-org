@@ -45,15 +45,16 @@ async function normalizeIfPixelArt(
   {requireSquare = false} = {}
 ): Promise<{blob: Blob; pixelGridSize?: number}> {
   try {
-    const normalized = await normalizePixelArtBlob(blob, ASSUMED_BLOCK);
-    if (!normalized) {
-      return {blob};
-    }
-    // A grid detected at an offset adds a partial cell on that axis, making
-    // the logical output non-square. A background must stay square and
-    // full-frame (it letterboxes over the stage otherwise), so it keeps the
-    // raw square output instead and simply edits at native resolution.
-    if (requireSquare && normalized.logicalWidth !== normalized.logicalHeight) {
+    // A background must stay square and full-frame (it letterboxes over the
+    // stage otherwise), so its grid is pinned square to the frame instead of
+    // following a detected offset.
+    const normalized = await normalizePixelArtBlob(blob, ASSUMED_BLOCK, {
+      squareGrid: requireSquare,
+    });
+    if (
+      !normalized ||
+      (requireSquare && normalized.logicalWidth !== normalized.logicalHeight)
+    ) {
       return {blob};
     }
     return {
@@ -151,8 +152,14 @@ export async function generateImage(
   // Sprites and blocks get the key-color background removed the same way
   // (both prompts keep the corner as background); blocks are then cropped to
   // content so grid-placed copies tile seamlessly. Pixel style gets
-  // grid-normalized; a smooth background passes through as-is.
-  if (imageType !== 'background' || style === 'pixel') {
+  // grid-normalized; backgrounds are flattened opaque. A smooth background
+  // delivered as JPEG passes through as-is — JPEG has no alpha to flatten,
+  // and re-encoding a photographic image to PNG would balloon it.
+  if (
+    imageType !== 'background' ||
+    style === 'pixel' ||
+    imageFile.mediaType === 'image/png'
+  ) {
     let blob = new Blob(
       [new Uint8Array(imageFile.uint8Array).buffer as ArrayBuffer],
       {type: imageFile.mediaType}
