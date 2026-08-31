@@ -19,7 +19,7 @@ class QuizQuestionResponsesController < ApplicationController
     # Locks the same quiz_attempts row QuizAttemptsController#update locks.
     attempt.with_lock do
       # Once submitted, this attempt is immutable - a retake (see
-      # Quiz#retakeable?) mints a new attempt row rather than reopening it.
+      # QuizAttempt#retakeable?) mints a new attempt row rather than reopening it.
       raise 'attempt already submitted' if attempt.submitted_at.present?
       # response_deadline_passed? adds a grace period on top of expires_at.
       raise 'time limit exceeded' if attempt.response_deadline_passed?

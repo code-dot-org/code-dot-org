@@ -42,7 +42,7 @@ class QuizQuestionResponsesControllerTest < ActionController::TestCase
     assert_equal 1, created.max_score
   end
 
-  # A response can be resubmitted freely before final submit so returnin
+  # A response can be resubmitted freely before final submit so returning
   # score/maxScore here would let a student try each choice and watch score flip
   # to max_score - bypassing show_correctness: false.
   test "create's response body never exposes score - correctness is revealed only via the submitted attempt" do
@@ -140,7 +140,7 @@ class QuizQuestionResponsesControllerTest < ActionController::TestCase
   end
 
   test "create rejects a response once the time limit has passed" do
-    @quiz.update!(time_limit_minutes: 10)
+    @quiz.update!(time_limit_minutes: 10, show_intro_screen: true)
     @attempt.update!(started_at: 1.hour.ago)
     sign_in @student
 
