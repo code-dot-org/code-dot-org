@@ -108,6 +108,12 @@ interface PixelEditorModalProps {
   knownPixelGrid?: number;
   // Seed for the recently-used-colors row (see PixelEditorSaveMeta).
   initialRecentColors?: RGBA[];
+  // Ground color for an image that must stay fully opaque (e.g. a stage
+  // background). Drawn under the artwork in place of the transparency
+  // checker, and Save flattens onto it — the editor shows exactly what is
+  // saved. Tools are unchanged: the eraser still clears to transparency,
+  // which reads as painting the ground.
+  opaqueGround?: string;
   // Fires when the editor first renders content (the image loaded or
   // failed). Until then the modal renders nothing; a caller swapping
   // another dialog for this one can wait for it to avoid a scrim gap.
@@ -130,6 +136,7 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
   imageUrl,
   knownPixelGrid,
   initialRecentColors,
+  opaqueGround,
   onReady,
   onSave,
   onCancel,
@@ -308,24 +315,30 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
       return;
     }
     ctx.imageSmoothingEnabled = false;
-    const checker = CHECKER_COLORS[themeModeRef.current];
-    ctx.fillStyle = checker.base;
-    ctx.fillRect(0, 0, display.width, display.height);
-    const scale = scaleRef.current;
-    const cell = pixelModeRef.current
-      ? scale * Math.max(1, Math.ceil(MIN_CHECKER_CELL_PX / scale))
-      : CHECKER_CELL_PX;
-    ctx.fillStyle = checker.tint;
-    for (let y = 0; y * cell < display.height; y++) {
-      for (let x = y % 2; x * cell < display.width; x += 2) {
-        ctx.fillRect(x * cell, y * cell, cell, cell);
+    if (opaqueGround) {
+      // Opaque images sit on their ground color, not the checker.
+      ctx.fillStyle = opaqueGround;
+      ctx.fillRect(0, 0, display.width, display.height);
+    } else {
+      const checker = CHECKER_COLORS[themeModeRef.current];
+      ctx.fillStyle = checker.base;
+      ctx.fillRect(0, 0, display.width, display.height);
+      const scale = scaleRef.current;
+      const cell = pixelModeRef.current
+        ? scale * Math.max(1, Math.ceil(MIN_CHECKER_CELL_PX / scale))
+        : CHECKER_CELL_PX;
+      ctx.fillStyle = checker.tint;
+      for (let y = 0; y * cell < display.height; y++) {
+        for (let x = y % 2; x * cell < display.width; x += 2) {
+          ctx.fillRect(x * cell, y * cell, cell, cell);
+        }
       }
     }
     ctx.drawImage(backing, 0, 0, display.width, display.height);
     if (previewRef.current) {
       ctx.drawImage(previewRef.current, 0, 0, display.width, display.height);
     }
-  }, []);
+  }, [opaqueGround]);
 
   // The checkerboard is baked into the canvas; redraw it if the page theme
   // flips while the editor is open.
@@ -1201,6 +1214,23 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
     if (!backing) {
       return;
     }
+    // What the display showed: the artwork over its opaque ground, if any.
+    const finish = (source: HTMLCanvasElement, meta: PixelEditorSaveMeta) => {
+      if (opaqueGround) {
+        const out = document.createElement('canvas');
+        out.width = source.width;
+        out.height = source.height;
+        const ctx = out.getContext('2d');
+        if (ctx) {
+          ctx.fillStyle = opaqueGround;
+          ctx.fillRect(0, 0, out.width, out.height);
+          ctx.drawImage(source, 0, 0);
+          onSave(out.toDataURL('image/png'), meta);
+          return;
+        }
+      }
+      onSave(source.toDataURL('image/png'), meta);
+    };
     if (pixelMode) {
       // Store crisp: nearest-neighbor upscale of the logical pixels, so the
       // runtime renders sharply without engine smoothing changes.
@@ -1223,15 +1253,12 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
             0,
             0
           );
-        onSave(out.toDataURL('image/png'), {
-          pixelGridSize: crispScale,
-          recentColors,
-        });
+        finish(out, {pixelGridSize: crispScale, recentColors});
         return;
       }
     }
-    onSave(backing.toDataURL('image/png'), {recentColors});
-  }, [onSave, pixelMode, recentColors]);
+    finish(backing, {recentColors});
+  }, [onSave, pixelMode, recentColors, opaqueGround]);
 
   // historyVersion re-renders this component whenever the stacks change; the
   // stacks themselves live in refs.

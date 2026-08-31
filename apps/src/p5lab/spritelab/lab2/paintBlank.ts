@@ -9,6 +9,11 @@ import {ImageStyle, ImageType} from './ai/images/types';
 // Pixel style draws on the same logical grid the pixel prompt asks for.
 const PIXEL_LOGICAL = MODEL_OUTPUT_PX / ASSUMED_BLOCK;
 
+// The stage's ground color, which backgrounds must cover fully: blank
+// background canvases start on it, generated backgrounds are flattened onto
+// it, and the paint editor grounds a background on it.
+export const BACKGROUND_GROUND_COLOR = '#000000';
+
 export interface BlankPaintSpec {
   /** Canvas edge, physical px. */
   size: number;
@@ -42,7 +47,7 @@ export function blankPaintImage(
   canvas.height = spec.size;
   const ctx = canvas.getContext('2d');
   if (ctx && spec.fill === 'black') {
-    ctx.fillStyle = '#000000';
+    ctx.fillStyle = BACKGROUND_GROUND_COLOR;
     ctx.fillRect(0, 0, spec.size, spec.size);
   }
   return {
@@ -71,7 +76,7 @@ export async function flattenDataURIOverBlack(
   if (!ctx) {
     return dataURI;
   }
-  ctx.fillStyle = '#000000';
+  ctx.fillStyle = BACKGROUND_GROUND_COLOR;
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   ctx.drawImage(img, 0, 0);
   return canvas.toDataURL('image/png');

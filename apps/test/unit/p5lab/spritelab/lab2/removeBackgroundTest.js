@@ -100,23 +100,3 @@ describe('SpriteLab2 keyOutBackground', () => {
     expect(alpha(data, 2)).toBe(255); // not connected to corner -> kept
   });
 });
-
-describe('flattenPixelsOverBlack', () => {
-  const {
-    flattenPixelsOverBlack,
-  } = require('@cdo/apps/p5lab/spritelab/lab2/ai/images/removeBackground');
-
-  it('turns transparent pixels opaque black and keeps opaque ones', () => {
-    // One transparent pixel, one opaque red, one half-transparent green.
-    const data = new Uint8ClampedArray([
-      0, 0, 0, 0, 200, 0, 0, 255, 0, 200, 0, 128,
-    ]);
-    flattenPixelsOverBlack(data);
-    expect([...data.slice(0, 4)]).toEqual([0, 0, 0, 255]);
-    expect([...data.slice(4, 8)]).toEqual([200, 0, 0, 255]);
-    // Half-alpha green darkens toward black and becomes opaque.
-    expect(data[11]).toBe(255);
-    expect(data[9]).toBeLessThan(200);
-    expect(data[9]).toBeGreaterThan(90);
-  });
-});

@@ -8,6 +8,7 @@
  */
 
 import {findOpaqueBounds} from '@cdo/apps/p5lab/spritelab/lab2/imageTrim';
+import {BACKGROUND_GROUND_COLOR} from '@cdo/apps/p5lab/spritelab/lab2/paintBlank';
 
 export interface MatteOptions {
   // Soft matte feathers the edge (partial alpha + spill suppression). When
@@ -246,37 +247,24 @@ function loadImage(blob: Blob): Promise<HTMLImageElement> {
 }
 
 /**
- * Composite pixels over opaque black in place — the stage's ground color.
- * Backgrounds must be fully opaque: pixel-style model output sometimes
- * carries a transparent frame at the edges, which would show the stage
- * through the artwork.
+ * Composite a PNG blob over the stage's ground color. Backgrounds must be
+ * fully opaque: pixel-style model output sometimes carries a transparent
+ * frame at the edges, which would show the stage through the artwork.
  */
-export function flattenPixelsOverBlack(data: Uint8ClampedArray): void {
-  for (let i = 0; i < data.length; i += 4) {
-    const alpha = data[i + 3] / 255;
-    data[i] *= alpha;
-    data[i + 1] *= alpha;
-    data[i + 2] *= alpha;
-    data[i + 3] = 255;
-  }
-}
-
-/** flattenPixelsOverBlack on a PNG blob. */
 export async function flattenOverBlack(blob: Blob): Promise<Blob> {
   const bitmap = await createImageBitmap(blob);
   const canvas = document.createElement('canvas');
   canvas.width = bitmap.width;
   canvas.height = bitmap.height;
-  const ctx = canvas.getContext('2d', {willReadFrequently: true});
+  const ctx = canvas.getContext('2d');
   if (!ctx) {
     bitmap.close();
     return blob;
   }
+  ctx.fillStyle = BACKGROUND_GROUND_COLOR;
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
   ctx.drawImage(bitmap, 0, 0);
   bitmap.close();
-  const image = ctx.getImageData(0, 0, canvas.width, canvas.height);
-  flattenPixelsOverBlack(image.data);
-  ctx.putImageData(image, 0, 0);
   const out = await new Promise<Blob | null>(resolve =>
     canvas.toBlob(resolve, 'image/png')
   );
