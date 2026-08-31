@@ -1,4 +1,6 @@
 class QuizQuestionResponsesController < ApplicationController
+  include QuizResponseGrading
+
   before_action :authenticate_user!
 
   # Grades server-side so the correct answer is never sent to the client.
@@ -24,24 +26,7 @@ class QuizQuestionResponsesController < ApplicationController
       # response_deadline_passed? adds a grace period on top of expires_at.
       raise 'time limit exceeded' if attempt.response_deadline_passed?
 
-      if question.auto_gradable?
-        grade = question.grade(response_data)
-        grading_status = 'auto_graded'
-      else
-        grade = {score: nil, max_score: nil}
-        grading_status = 'ungraded'
-      end
-
-      # A student can change their answer before final submission, so
-      # resubmitting the same question updates its existing response rather
-      # than colliding with the (quiz_attempt_id, quiz_question_id) unique index.
-      response = QuizQuestionResponse.find_or_initialize_by(quiz_attempt: attempt, quiz_question: question)
-      response.update!(
-        response_data: response_data,
-        score: grade[:score],
-        max_score: grade[:max_score],
-        grading_status: grading_status
-      )
+      response = grade_and_save_response!(attempt, question, response_data)
     end
 
     render status: :ok, json: {
