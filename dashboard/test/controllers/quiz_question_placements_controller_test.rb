@@ -134,7 +134,7 @@ class QuizQuestionPlacementsControllerTest < ActionController::TestCase
 
   # Regression tests for a Copilot review finding: the deletion check only
   # looked at other placements, not QuizQuestionResponse or forked
-  # questions' parent_id - both are also FKs to this row, so destroy!
+  # questions' fork_parent_id - both are also FKs to this row, so destroy!
   # would raise (a 500) after the placement was already gone, rather than
   # falling back to a plain detach the way an other-quiz placement does.
   test "destroy falls back to a plain detach when the question has a QuizQuestionResponse" do
@@ -150,7 +150,7 @@ class QuizQuestionPlacementsControllerTest < ActionController::TestCase
   end
 
   test "destroy falls back to a plain detach when another question was forked from this one" do
-    create(:multiple_choice_question, parent: @question)
+    create(:multiple_choice_question, fork_parent: @question)
 
     delete :destroy, params: {level_id: @quiz.id, id: @question.id}
 

@@ -81,7 +81,7 @@ class QuizQuestionPlacementsController < ApplicationController
   # Removes the question from this quiz AND destroys the QuizQuestion
   # itself, provided nothing else still references it once detached: no
   # other quiz's placement, no QuizQuestionResponse (a past graded
-  # attempt), and no other question forked from this one (parent_id).
+  # attempt), and no other question forked from this one (fork_parent_id).
   # Checked here rather than trusted from the client's earlier
   # attachedToOtherQuizzes read (see quiz_question_json) - a stale read
   # can't accidentally delete a question something else grabbed a
