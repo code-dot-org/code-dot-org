@@ -215,8 +215,8 @@ export function resolvePlatformPhysics(
         sprite.velocity.y = 0;
       }
     });
-    // The bottom clamp sits the feet exactly on the floor line, so
-    // hasSupportAt's floor branch holds and the player can jump from pits.
+    // The bottom clamp sits the feet exactly on the floor line, so the
+    // footing probes' floor branch holds and the player can jump from pits.
     if (y > view.height - halfH) {
       y = view.height - halfH;
       sprite.velocity.y = 0;
@@ -224,8 +224,10 @@ export function resolvePlatformPhysics(
     }
     // Weightless, nothing brings a player back from above the view, so the
     // top is closed too — at the art box, like the sides, so no head is cut.
-    if (weightless && y < halfH + 2 * drop) {
-      y = halfH + 2 * drop;
+    // This is the body-center y that puts the art top at 0.
+    const artBoxTopY = halfH + 2 * drop;
+    if (weightless && y < artBoxTopY) {
+      y = artBoxTopY;
     }
     // Final push-out: a landing or head bump declined above slides off
     // the corner sideways; other thin overlap (sideways drift through a

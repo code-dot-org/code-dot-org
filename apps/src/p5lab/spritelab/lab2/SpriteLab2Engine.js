@@ -18,6 +18,7 @@ import {
 } from './camera';
 import {trimAnimationListImages} from './imageTrim';
 import {
+  CONTACT_EPSILON,
   hasSupportAhead,
   isSupported,
   PATROLLER_WEIGHTLESS_GRAVITY,
@@ -125,6 +126,11 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.sceneJumpInFlight_ = false;
     // Set when the zoomed draw loop has already resolved this frame.
     this.physicsResolvedThisFrame_ = false;
+    // The walls, gathered once per frame (see wallsThisFrame_).
+    this.wallsCache_ = null;
+    // Last frame's platform bodies, so a sprite whose mark stops arriving
+    // is restored to an ordinary sprite (see resolvePlatformPhysics_).
+    this.prevBodies_ = [];
   }
 
   /**
@@ -175,6 +181,10 @@ export default class SpriteLab2Engine extends SpriteLab {
       library.defaultSpriteSize = this.sceneLooksLikePlatformer_()
         ? cellSize(DEFAULT_SCENE_GRID_SIZE)
         : STORY_SCENE_SPRITE_SIZE;
+      // Landings carry sub-pixel float noise, so the classic footing
+      // command (isDirectlyAbove — the pool jump block's gate) must not
+      // compare contact exactly.
+      library.contactEpsilon = CONTACT_EPSILON;
     }
     // Fresh library = fresh run; gravity returns to the default until a
     // set-gravity block says otherwise. Negative flips the world: players
@@ -206,24 +216,13 @@ export default class SpriteLab2Engine extends SpriteLab {
     // Footing in the gravity direction — the resolver's own geometry, so it
     // agrees with where sprites actually rest. Wherever nothing can fall
     // (outside a platform scene, or under the gravity in force for this
-    // sprite being zero) everything counts as supported. The walls are
-    // gathered once per frame; behaviors ask several times a frame.
+    // sprite being zero) everything counts as supported.
     const footing = (spriteArg, test) => {
       if (!this.usesPlatformPhysics_) {
         return true;
       }
       const p5 = this.p5Wrapper.p5;
-      if (
-        this.wallsCache_?.frame !== p5.frameCount ||
-        this.wallsCache_.library !== library
-      ) {
-        this.wallsCache_ = {
-          frame: p5.frameCount,
-          library,
-          walls: library.getSpriteArray({group: 'walls'}),
-        };
-      }
-      const {walls} = this.wallsCache_;
+      const walls = this.wallsThisFrame_(library);
       const view = {width: p5.width, height: p5.height};
       return library.getSpriteArray(spriteArg).some(sprite => {
         const gravity =
@@ -661,21 +660,37 @@ export default class SpriteLab2Engine extends SpriteLab {
     const players = [];
     const bodies = [];
     Object.values(this.library.nativeSpriteMap).forEach(sprite => {
+      // Consuming the one-frame mark: see usePlatformBody.
+      const marked = sprite.__slab2Body;
+      sprite.__slab2Body = false;
       if (sprite.group === 'players') {
         players.push(snapshot(sprite));
-      } else if (sprite.__slab2Body) {
-        // Consuming the one-frame mark: see usePlatformBody.
-        sprite.__slab2Body = false;
+      } else if (marked) {
         bodies.push(snapshot(sprite));
       }
     });
+    // A sprite whose mark stopped arriving (its behavior was removed) is an
+    // ordinary sprite again: upright, and not carrying the resolver's last
+    // fall speed.
+    this.prevBodies_.forEach(sprite => {
+      if (
+        !sprite.removed &&
+        sprite.group !== 'players' &&
+        !bodies.some(b => b.sprite === sprite)
+      ) {
+        sprite.mirrorY(1);
+        sprite.velocity.y = 0;
+      }
+    });
+    this.prevBodies_ = bodies.map(b => b.sprite);
     // Under upward gravity a sprite stands on the ceiling, so it is drawn
-    // upside down; the body pull shares the world's sign, so one value
-    // serves both lists. Drawing only: the body the resolver measures is
-    // unchanged.
-    const upright = this.platformGravity_ < 0 ? -1 : 1;
-    players.forEach(({sprite}) => sprite.mirrorY(upright));
-    bodies.forEach(({sprite}) => sprite.mirrorY(upright));
+    // upside down — each list under its own gravity's sign. Drawing only:
+    // the body the resolver measures is unchanged.
+    players.forEach(({sprite}) =>
+      sprite.mirrorY(this.platformGravity_ < 0 ? -1 : 1)
+    );
+    const bodyUpright = this.bodyGravity_() < 0 ? -1 : 1;
+    bodies.forEach(({sprite}) => sprite.mirrorY(bodyUpright));
     // Other sprites keep the stock resolver; running it pre-paint means
     // props draw already resolved.
     this.library.commands.collide.call(
@@ -690,6 +705,24 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (bodies.length) {
       resolvePlatformPhysics(bodies, walls, view, this.bodyGravity_());
     }
+  }
+
+  // The walls, gathered once per frame — the footing commands ask several
+  // times a frame (behaviors run per sprite). Keyed on the library too, so
+  // a re-run's fresh library never reads the old scene's walls.
+  wallsThisFrame_(library) {
+    const p5 = this.p5Wrapper.p5;
+    if (
+      this.wallsCache_?.frame !== p5.frameCount ||
+      this.wallsCache_.library !== library
+    ) {
+      this.wallsCache_ = {
+        frame: p5.frameCount,
+        library,
+        walls: library.getSpriteArray({group: 'walls'}),
+      };
+    }
+    return this.wallsCache_.walls;
   }
 
   // Marked sprites keep a little downward pull at zero gravity, so

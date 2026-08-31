@@ -20,6 +20,10 @@ const generator: GeneratorFunction = () => [
 // about a quarter of a second, enough to read as looking around.
 export const TURN_PAUSE_TICKS = 8;
 
+// patrolOBExpX value meaning "no expected x": positions are always positive
+// (the resolver clamps sprites inside the view), so -1 can't be one.
+export const PATROL_X_UNKNOWN = -1;
+
 // Walk left/right along the blocks, standing a moment at each turn: at a
 // gap or edge (a point probe under the leading foot, which sees a gap
 // narrower than the sprite), at the playspace bounds, or when blocked (x
@@ -37,6 +41,7 @@ const helperCode = [
   '      var half = size > 0 ? size / 2 : 20;',
   "      if (getProp(spriteId, 'patrolOBDir') == undefined) {",
   "        setProp(spriteId, 'patrolOBDir', 1);",
+  `        setProp(spriteId, 'patrolOBExpX', ${PATROL_X_UNKNOWN});`,
   '      }',
   "      var dir = getProp(spriteId, 'patrolOBDir');",
   '      var turn = function (newDir) {',
@@ -45,16 +50,14 @@ const helperCode = [
   '      };',
   '      if (!platformGrounded(spriteId)) {',
   '        // Falling: wait for the landing, and do not read where it lands',
-  '        // as having been blocked. -1 marks the expected x unknown; the',
-  '        // real setProp ignores undefined.',
-  "        setProp(spriteId, 'patrolOBExpX', -1);",
+  '        // as having been blocked.',
+  `        setProp(spriteId, 'patrolOBExpX', ${PATROL_X_UNKNOWN});`,
   '        return;',
   '      }',
   "      var pause = getProp(spriteId, 'patrolOBPause') || 0;",
   "      var expected = getProp(spriteId, 'patrolOBExpX');",
   '      var blocked =',
-  '        expected != undefined &&',
-  '        expected >= 0 &&',
+  `        expected !== ${PATROL_X_UNKNOWN} &&`,
   "        getProp(spriteId, 'x') !== expected;",
   '      if (pause > 0) {',
   "        setProp(spriteId, 'patrolOBPause', pause - 1);",
