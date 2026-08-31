@@ -21,6 +21,7 @@ import {
 } from '../../constants';
 import {shouldShowAiChatEssentialAlert} from '../../helpers/aiChatAccess';
 import {AiChatAccessLevel} from '../../types';
+import {getUsOnlyAiCurriculumWarning} from '../../usOnlyAiCurriculum';
 
 import style from './ai-chat-access-controls.module.scss';
 
@@ -65,6 +66,16 @@ const AiChatAccessControls: React.FC = () => {
   const isLoadingSectionData = useAppSelector(
     state => state.teacherSections.isLoadingSectionData
   );
+  const usOnlyAichatModelsDisabled = useAppSelector(
+    state => state.currentUser.usOnlyAichatModelsDisabled
+  );
+  // Only a teacher who cannot use the models needs telling which units use them.
+  const usOnlyCurriculumWarning = usOnlyAichatModelsDisabled
+    ? getUsOnlyAiCurriculumWarning({
+        courseVersionName: section.courseVersionName,
+        unitName: section.unitName,
+      })
+    : undefined;
 
   const [accessToggle, setAccessToggle] = useState(
     accessToggleState(section.aiChatAccessLevel)
@@ -132,6 +143,13 @@ const AiChatAccessControls: React.FC = () => {
 
   return (
     <div className={style.container}>
+      {usOnlyCurriculumWarning && (
+        <Alert
+          text={usOnlyCurriculumWarning}
+          type={alertTypes.warning}
+          icon={{iconName: 'triangle-exclamation', iconStyle: 'solid'}}
+        />
+      )}
       {isCurrentUserAccessDisabled && (
         <Alert
           text="You cannot enable AI Chat Tools. These settings will not take
