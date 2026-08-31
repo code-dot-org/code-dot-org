@@ -67,13 +67,6 @@ and cluster services, no frontend. See "Backend-only mode" below.)
 
 Then open: http://localhost-studio.code.org:13000
 
-<details>
-  <summary>Why does it take 3+ minutes to start `skaffold dev`?</summary>
-
-  Our giant repo size takes that long for docker+skaffold to checksum to make sure no files changed.
-  If this is affecting development of docker+k8s features, check out the mimic feature below.
-</details>
-
 ## Debugging and monitoring dashboard
 
 We create a number of kubernetes resources in a stock dashboard dev setup, including mysql and redis
@@ -152,11 +145,3 @@ amount of stuff, including pegasus, i18n locales, etc.
 Dockerfiles are found in `k8s/docker/*.dockerfile`, note the .dockerignore files that are used to shape
 what's included in each image. The key issue is not to be sending 20GBs to the docker daemon when
 you build, that takes foooooorever and then each `skaffold dev` suddenly takes 2minutes.
-
-## Mimic: fast iteration for k8s development
-
-To work on our k8s system, including dockerfiles, skaffold and helm charts, it can be a challenge because
-of our 10GB+ docker image size. Mimic allows you to deploy our full chart and test dockerfiles without
-including the actual contents of our app. Everything is stubbed.
-
-For details, see: [k8s/mimic/README.md](./mimic/README.md)

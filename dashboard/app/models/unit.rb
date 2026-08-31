@@ -152,7 +152,36 @@ class Unit < ApplicationRecord
 
   scope :with_ai_chat_tools, -> {joins(:levels).merge(Level.with_any_ai_chat_tools)}
 
-  scope :with_essential_ai_chat_tools, -> {joins(:levels).merge(Level.with_essential_ai_chat_tools)}
+  # Bandaid. Units that do not count as requiring AI chat tools, even though
+  # Level.with_essential_ai_chat_tools says every Weblab2 level does.
+  #
+  # Web Lab 2 builds an AI Tutor panel into the lab, so a unit built in Web Lab 2
+  # is reported as requiring AI chat tools, and so is any course containing it.
+  # That is right for AI Foundations and wrong for CS Discoveries 2026, whose
+  # Unit 2 was rebuilt in Web Lab 2 but whose curriculum never asks students to
+  # use the tutor: teachers were being told the course cannot be completed
+  # without AI chat tools.
+  #
+  # A unit named here reports AVAILABLE rather than ESSENTIAL, which quiets the
+  # alerts that state the stronger claim. It does not change what students and
+  # teachers may do -- level-by-level access is decided by
+  # Level.with_essential_ai_chat_tools, which this does not touch -- nor whether
+  # assigning the course turns AI chat tools on, which follows has_ai_chat_tools?.
+  #
+  # Emptying the list restores the previous reporting. The real fix, which lets a
+  # Web Lab 2 level say whether its tutor is essential, makes the list unnecessary.
+  NAMES_EXEMPT_FROM_ESSENTIAL_AI_CHAT_TOOLS = %w(
+    csd2-2026
+  ).freeze
+
+  # Every caller reaches this through Unit#requires_ai_chat_tools? or
+  # UnitGroup#requires_ai_chat_tools?, so excluding the exempt units here reaches
+  # the course, unit, and section dependencies together. An empty exempt list is
+  # a no-op.
+  scope :with_essential_ai_chat_tools, (lambda do
+    joins(:levels).merge(Level.with_essential_ai_chat_tools).
+      where.not(scripts: {name: NAMES_EXEMPT_FROM_ESSENTIAL_AI_CHAT_TOOLS})
+  end)
 
   attr_accessor :skip_name_format_validation
 

@@ -86,12 +86,86 @@ module OmniauthCallbacksControllerTests
       assert_credentials auth_hash, student
     end
 
-    private def mock_oauth(role: 'Teacher')
-      auth_hash = generate_auth_hash(
-        provider: AuthenticationOption::CLASSLINK,
-        user_type: nil,
-        email: "#{role.downcase}@school.test"
+    test "sign-in via v2 authentication id" do
+      teacher = create(:teacher, :classlink_sso_provider, uid: '2222|T5678-0005')
+      mock_oauth uid: 59_777_133, tenant_id: 2222, sourced_id: 'T5678-0005'
+
+      assert_does_not_create(AuthenticationOption) {sign_in_through_classlink}
+
+      assert_equal teacher.id, signed_in_user_id
+    end
+
+    test "sign-in via legacy id creates v2 auth option and leaves v1 untouched" do
+      teacher = create(:teacher, :classlink_sso_provider, uid: '59777133')
+      v1_auth_option = teacher.authentication_options.find_by(credential_type: AuthenticationOption::CLASSLINK)
+      v1_attributes = v1_auth_option.attributes
+      mock_oauth uid: 59_777_133, tenant_id: 2222, sourced_id: 'T5678-0005'
+
+      assert_creates(AuthenticationOption) {sign_in_through_classlink}
+
+      assert_equal teacher.id, signed_in_user_id
+      v2_auth_option = teacher.reload.authentication_options.find_by(
+        credential_type: AuthenticationOption::CLASSLINK,
+        authentication_id: '2222|T5678-0005'
       )
+      refute_nil v2_auth_option
+      assert_equal AuthenticationOption::Classlink::VERSION[:v2], v2_auth_option.version
+      assert_equal v1_attributes, v1_auth_option.reload.attributes
+    end
+
+    test "sign-in with both v1 and v2 records creates nothing" do
+      teacher = create(:teacher, :classlink_sso_provider, uid: '59777133')
+      create(
+        :authentication_option,
+        user: teacher,
+        credential_type: AuthenticationOption::CLASSLINK,
+        authentication_id: '2222|T5678-0005',
+        version: AuthenticationOption::Classlink::VERSION[:v2]
+      )
+      mock_oauth uid: 59_777_133, tenant_id: 2222, sourced_id: 'T5678-0005'
+
+      assert_does_not_create(User, AuthenticationOption) {sign_in_through_classlink}
+
+      assert_equal teacher.id, signed_in_user_id
+    end
+
+    test "sign-up creates the auth option with the v2 id and version" do
+      auth_hash = mock_oauth uid: 59_777_133, tenant_id: 2222, sourced_id: 'T5678-0005'
+
+      post user_classlink_omniauth_authorize_path
+      get user_classlink_omniauth_callback_path
+      assert_creates(User) {finish_sign_up auth_hash, User::TYPE_TEACHER}
+
+      created_user = User.find signed_in_user_id
+      auth_option = created_user.authentication_options.find_by(credential_type: AuthenticationOption::CLASSLINK)
+      assert_equal '2222|T5678-0005', auth_option.authentication_id
+      assert_equal AuthenticationOption::Classlink::VERSION[:v2], auth_option.version
+    ensure
+      created_user&.destroy!
+    end
+
+    test "sign-in falls back to the v1 path when the v2 id cannot be built" do
+      teacher = create(:teacher, :classlink_sso_provider, uid: '59777133')
+      mock_oauth uid: 59_777_133, tenant_id: 2222, sourced_id: ''
+
+      assert_does_not_create(User, AuthenticationOption) {sign_in_through_classlink}
+
+      assert_equal teacher.id, signed_in_user_id
+    end
+
+    private def mock_oauth(role: 'Teacher', uid: nil, tenant_id: nil, sourced_id: nil)
+      auth_hash = generate_auth_hash(
+        {
+          provider: AuthenticationOption::CLASSLINK,
+          user_type: nil,
+          email: "#{role.downcase}@school.test",
+          uid: uid,
+        }.compact
+      )
+      # district_id and external_id mirror what omniauth-classlink derives from
+      # the TenantId and SourcedId fields of ClassLink's v2/my/info response.
+      auth_hash.info.district_id = tenant_id
+      auth_hash.info.external_id = sourced_id
       auth_hash.extra = OmniAuth::AuthHash.new(
         raw_info: {
           email: auth_hash.info.email,

@@ -17,7 +17,15 @@ end
 csv_file_path = ARGV[1]
 
 teacher_id = ARGV[0]
-teacher_user = User.find_by(id: teacher_id)
+teacher_user = nil
+if teacher_id.include?('@')
+  teacher_user = User.find_by_email(teacher_id)
+elsif teacher_id.to_i.to_s == teacher_id
+  teacher_user = User.find_by_id(teacher_id)
+else
+  raise "teacher id must be an id or email: #{teacher_id.inspect}"
+end
+raise "Teacher with id or email " + teacher_id.to_s.dump + " not found" if teacher_user.nil?
 
 rows = CSV.read(csv_file_path, headers: true)
 
@@ -44,14 +52,19 @@ student_ids.each do |student_id|
     if do_dry_run
       puts "can remove student data with id " + student_id.to_s
     else
-      # Retrieve storage ID for the user
-      user_storage_id = storage_id_for_user_id(student_id)
-      # inspired from: https://github.com/code-dot-org/code-dot-org/blob/375e794083094cf128e9fac67ba09ec5adcd436b/dashboard/app/controllers/admin_users_controller.rb#L193
-      UserScript.where(user_id: student_id).destroy_all
-      UserLevel.where(user_id: student_id).destroy_all
-      ChannelToken.where(storage_id: user_storage_id).destroy_all unless user_storage_id.nil?
-      TeacherFeedback.where(student_id: student_id).destroy_all
-      CodeReview.where(user_id: student_id).destroy_all
+      begin
+        # Retrieve storage ID for the user
+        user_storage_id = storage_id_for_user_id(student_id)
+        # inspired from: https://github.com/code-dot-org/code-dot-org/blob/375e794083094cf128e9fac67ba09ec5adcd436b/dashboard/app/controllers/admin_users_controller.rb#L193
+        User.paranoid_destroy_all_with_retry(UserScript.where(user_id: student_id))
+        User.paranoid_destroy_all_with_retry(UserLevel.where(user_id: student_id))
+        User.paranoid_destroy_all_with_retry(ChannelToken.where(storage_id: user_storage_id)) unless user_storage_id.nil?
+        TeacherFeedback.where(student_id: student_id).destroy_all
+        CodeReview.where(user_id: student_id).destroy_all
+        puts "Removed student data with id " + student_id.to_s
+      rescue => exception
+        puts "Error deleting progress for student " + student_id.to_s + ": " + exception.message
+      end
     end
   else
     puts "Student with id " + student_id.to_s + " is not in teacher " + teacher_id.to_s +

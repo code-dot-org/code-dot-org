@@ -491,7 +491,8 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     all_lesson_ids = section_data.flat_map do |_, current, history|
       [
         current&.dig('lesson_id'),
-        *history.flat_map {|e| [e['lesson_id'], e.dig('coming_up', 'lesson_id')]}
+        current&.dig('coming_up', 'lesson_id'),
+        *history.map {|e| e['lesson_id']}
       ]
     end.uniq.compact
 
@@ -518,12 +519,16 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       next hash[section.id] = nil unless data
       enriched = enrich.call(data)
       enriched_history = history.map {|e| enrich.call(e)}
-      raw_coming_up = history.find {|e| e['date'] == today}&.dig('coming_up')
+      raw_coming_up = data['coming_up']
       coming_up = raw_coming_up ? enrich.call(raw_coming_up) : nil
       hash[section.id] = enriched.merge('history' => enriched_history, 'coming_up' => coming_up)
     end
 
-    render json: result
+    # history dates are stamped in server time (config.time_zone, UTC), which
+    # can be a different calendar date than the browser's local "today" -
+    # returning our own idea of today lets the frontend match history entries
+    # against the same clock that wrote them, instead of guessing locally.
+    render json: {today: today, sections: result}
   end
 
   private def find_follower
