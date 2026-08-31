@@ -2454,3 +2454,192 @@ describe('the reveal lesson’s check', () => {
     expect(passes).toBe(true);
   });
 });
+
+describe('the script lesson’s check', () => {
+  const lesson = LESSONS['story/script'];
+  const LINES = [
+    'The rain had not stopped for three days.',
+    'The road out of town was gone.',
+    'Somebody was knocking.',
+  ];
+
+  it('refuses one line and a click that prints', async () => {
+    const {passes} = await check('story/script', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts a cursor with three lines under it', async () => {
+    const solved = editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const add = workspace.blocks.blocks[0].next!.block!;
+      const body = inSocket(add, 'DO')!;
+      add.inputs!.DO = {
+        block: {
+          type: 'world_add_trait',
+          fields: {TRAIT: 'Conversation#HasAConversationTrait'},
+          inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
+          next: {
+            block: {
+              type: 'world_set_Conversation_HowManyLinesProperty',
+              inputs: {
+                ACTOR: {block: {type: 'world_this_actor'}},
+                VALUE: {shadow: {type: 'math_number', fields: {NUM: 3}}},
+              },
+              next: {block: body},
+            },
+          },
+        },
+      };
+      // The click moves the cursor; the cursor's event decides what a line is.
+      const hat = workspace.blocks.blocks.find(
+        block => block.type === 'world_on_Mouse_IsClickedWithEvent',
+      )!;
+      hat.next = {
+        block: {
+          type: 'world_do_Conversation_MakeSayTheNextThingAction',
+          inputs: {VALUE: {block: {type: 'world_this_actor'}}},
+        },
+      };
+      const line = (n: number): Row => ({
+        type: 'controls_if',
+        inputs: {
+          IF0: {
+            block: {
+              type: 'logic_compare',
+              fields: {OP: 'EQ'},
+              inputs: {
+                A: {
+                  block: {
+                    type: 'world_get_Conversation_LineProperty',
+                    inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
+                  },
+                },
+                B: {shadow: {type: 'math_number', fields: {NUM: n}}},
+              },
+            },
+          },
+          DO0: {
+            block: {
+              type: 'world_set_Writing_TextProperty',
+              inputs: {
+                ACTOR: {block: {type: 'world_this_actor'}},
+                VALUE: {shadow: {type: 'text', fields: {TEXT: LINES[n - 1]}}},
+              },
+            },
+          },
+        },
+      });
+      workspace.blocks.blocks.push({
+        type: 'world_on_Conversation_MovesToALineEvent',
+        x: 900,
+        y: 20,
+        inputs: {
+          ACTOR: {
+            block: {
+              type: 'world_actor_kind',
+              fields: {ACTOR: 'actors/speechBox'},
+            },
+          },
+        },
+        next: {
+          block: [line(1), line(2), line(3)].reduceRight((next, row) => ({
+            ...row,
+            next: {block: next},
+          })),
+        },
+      } as unknown as Row);
+      return JSON.stringify(workspace);
+    });
+    const {passes, result} = await check('story/script', solved);
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+});
+
+describe('the choice lesson’s check', () => {
+  const lesson = LESSONS['story/choice'];
+
+  /** The Buttons wired to the cursor, with or without a memory. */
+  const branching = (remembering: boolean) =>
+    editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const box = () => ({
+        block: {
+          type: 'world_actor_kind',
+          fields: {ACTOR: 'actors/speechBox'},
+        },
+      });
+      const sendTo = (which: number): Row => ({
+        type: 'world_do_Conversation_SendToLineAction',
+        inputs: {
+          WHO: box(),
+          WHICH: {shadow: {type: 'math_number', fields: {NUM: which}}},
+        },
+      });
+      const opened: Row = {
+        type: 'world_set_WorldsMain_OpenedTheDoorProperty',
+        inputs: {
+          VALUE: {block: {type: 'logic_boolean', fields: {BOOL: 'TRUE'}}},
+        },
+      };
+      workspace.blocks.blocks.push({
+        type: 'world_on_Mouse_IsClickedWithEvent',
+        x: 1200,
+        y: 20,
+        fields: {FILTER0: ''},
+        inputs: {
+          ACTOR: {
+            block: {type: 'world_actor_kind', fields: {ACTOR: 'actors/button'}},
+          },
+        },
+        next: {
+          block: {
+            type: 'controls_if',
+            extraState: {elseIfCount: 0, hasElse: true},
+            inputs: {
+              IF0: {
+                block: {
+                  type: 'logic_compare',
+                  fields: {OP: 'EQ'},
+                  inputs: {
+                    A: {
+                      block: {
+                        type: 'world_get_Writing_TextProperty',
+                        inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
+                      },
+                    },
+                    B: {shadow: {type: 'text', fields: {TEXT: 'Open it'}}},
+                  },
+                },
+              },
+              DO0: {
+                block: remembering
+                  ? {...sendTo(3), next: {block: opened}}
+                  : sendTo(3),
+              },
+              ELSE: {block: sendTo(4)},
+            },
+          },
+        },
+      } as unknown as Row);
+      return JSON.stringify(workspace);
+    });
+
+  it('refuses buttons that do nothing', async () => {
+    const {passes} = await check('story/choice', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts an answer the world remembers', async () => {
+    const {passes, result} = await check('story/choice', branching(true));
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  // Moving the story on and recording nothing reads correctly for one line and
+  // has forgotten by the next scene.
+  it('refuses a branch the world forgets', async () => {
+    const {passes} = await check('story/choice', branching(false));
+    expect(passes).toBe(false);
+  });
+});

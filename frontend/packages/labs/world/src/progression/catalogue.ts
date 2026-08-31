@@ -1781,15 +1781,38 @@ export const TILES: readonly Tile[] = [
     at: at('story', 2, 2),
     title: 'A place in a list',
     teaches:
-      'A conversation is a state machine: it knows where it is and what moves it on.',
-    task: 'Five lines, advanced by a click. Each line raises an event; you decide what a line means.',
+      'Nothing waits, so a script is a cursor and an event rather than a sequence of blocks.',
+    task: 'One line and a click that does nothing. Give it three lines and a place in them.',
     requires: ['story/text'],
     unlocks: [{kind: 'rule', id: 'conversation'}],
+    // `add trait` is `story/reveal`'s, which is a SIBLING rather than a step on
+    // the way here; the question and the comparison are Logic's, and Story is
+    // entered from Memory and Look.
+    offers: [
+      {kind: 'block', type: 'world_add_trait'},
+      {kind: 'block', type: 'controls_if'},
+      {kind: 'block', type: 'logic_compare'},
+      {kind: 'block', type: 'math_number'},
+    ],
     check: {
-      kind: 'trace',
-      says: 'The line event fires once per advance, in order, five times.',
+      kind: 'outcome',
+      says: 'Clicking through says three different things.',
       falsePass:
-        'Firing on every frame while a line shows. The count over a scripted five clicks is the check.',
+        'Setting the text twice from the click handler itself, which says two things and cannot say a third without another flag — the count is what asks for the cursor. Three distinct lines is what a place in a list buys.',
+      run: {
+        probes: {said: {kind: 'property', of: 'Speech Box', name: 'text'}},
+        trace: [1, 2, 3, 4].flatMap(() => [
+          {pointer: {x: 60, y: 220, buttons: ['left']}, seconds: 0.1},
+          {pointer: {x: 60, y: 220, buttons: []}, seconds: 0.1},
+        ]),
+      },
+      passes: ({samples}) => {
+        const said = (samples.said ?? []).map(sample => {
+          const first = (sample as unknown[])[0];
+          return typeof first === 'string' ? first : '';
+        });
+        return new Set(said.filter(line => line.length > 0)).size >= 3;
+      },
     },
   },
   {
@@ -1838,19 +1861,49 @@ export const TILES: readonly Tile[] = [
     region: 'story',
     at: at('story', 3, 2),
     title: 'A question that matters',
-    teaches: 'Branching, and a variable that remembers which way you went.',
-    task: 'Ask something. Send the talk somewhere else, and have it remembered two scenes later.',
+    teaches: 'Branching is the cursor moving somewhere it would not have gone.',
+    task: 'A story that asks whether you open the door and then tells you what you did anyway.',
     requires: ['story/script'],
     unlocks: [
       {kind: 'block', type: 'world_do_Conversation_SendToLineAction'},
       // Something to click an answer with.
       {kind: 'actor', id: 'button'},
     ],
+    offers: [
+      {kind: 'block', type: 'controls_if'},
+      {kind: 'block', type: 'logic_compare'},
+      {kind: 'block', type: 'world_event_actor'},
+      {kind: 'block', type: 'math_number'},
+      {kind: 'block', type: 'logic_boolean'},
+    ],
     check: {
       kind: 'outcome',
-      says: 'Two scripted runs, differing only in the answer, reach two different endings.',
+      says: 'Answering "Open it" moves the story off the question, and the world remembers that it was opened.',
       falsePass:
-        'A branch that rejoins immediately. The endings are compared, not the branch.',
+        'A button that moves the story on without recording anything, which reads correctly for one line and has forgotten by the next scene — so the check reads the world property as well as the cursor. A choice the story forgets is not a choice.',
+      run: {
+        probes: {
+          line: {kind: 'property', of: 'Speech Box', name: 'line'},
+          opened: {kind: 'worldProperty', path: 'My_World.opened_the_door'},
+        },
+        // Two clicks on the box to reach the question, then the left Button.
+        trace: [
+          {pointer: {x: 60, y: 220, buttons: ['left']}, seconds: 0.1},
+          {pointer: {x: 60, y: 220, buttons: []}, seconds: 0.1},
+          {pointer: {x: 60, y: 220, buttons: ['left']}, seconds: 0.1},
+          {pointer: {x: 60, y: 220, buttons: []}, seconds: 0.1},
+          {pointer: {x: 80, y: 120, buttons: ['left']}, seconds: 0.1},
+          {pointer: {x: 80, y: 120, buttons: []}, seconds: 0.1},
+          {seconds: 0.2},
+        ],
+      },
+      passes: ({samples}) => {
+        const line = lastList<number>(samples.line)[0];
+        const opened = (samples.opened ?? [])[
+          (samples.opened ?? []).length - 1
+        ];
+        return line === 3 && opened === true;
+      },
     },
   },
   {

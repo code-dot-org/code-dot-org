@@ -12,7 +12,7 @@
 // Blockly JSON behind them. So `catalogue.ts` stays data about tiles, and the
 // projects live here, looked up by tile id.
 //
-// Forty-two of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md
+// Forty-four of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md
 // and then some. ALL SIX FOUNDATIONS are written — Origin, Input, Motion, Logic,
 // Memory, Look and Place — so every genre gate on the map is open, and the
 // first hours of the progression can be walked end to end. ARCADE is written
@@ -2179,6 +2179,201 @@ the rule knows nothing about boxes. Between them you get a typewriter.
 `.trim(),
 };
 
+// ── story/script ─────────────────────────────────────────────────────────────
+
+/** `set text of ⟨this actor⟩ to ⟨words⟩`, for a line of the script. */
+const says = (line: string) => setText('TextProperty', words(line));
+
+const script: WorldScenario = {
+  name: 'A place in a list',
+  description: 'One line of dialogue and a click that does nothing.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        addActor('actors/speechBox', [
+          placeAt(20, 200),
+          {
+            type: 'world_add_trait',
+            fields: {TRAIT: 'Mouse#CanBeClickedTrait'},
+            inputs: {ACTOR: me()},
+          },
+          says('The rain had not stopped for three days.'),
+        ]),
+      ],
+      handlers: [
+        {
+          type: 'world_on_Mouse_IsClickedWithEvent',
+          fields: {FILTER0: ''},
+          inputs: {
+            ACTOR: {
+              block: {
+                type: 'world_actor_kind',
+                fields: {ACTOR: 'actors/speechBox'},
+              },
+            },
+          },
+          next: {block: {type: 'world_log', fields: {TEXT: 'click'}}},
+        },
+      ],
+    }),
+    stockActors: ['speechBox'],
+    rules: ['conversation', 'mouse'],
+  }),
+  instructions: `
+## A place in a list
+
+One line, and a click that prints "click". To say a second line you would set
+the text again — and to say five you would need somewhere to keep the place you
+are up to, because **nothing in this engine waits**. A handler runs to the end
+of its frame; "say this, pause, say that" is not something you can write in a
+row of blocks.
+
+A **conversation** is that place: a cursor, a number saying which line you are
+on, and an event when it moves. What a line MEANS is yours — text, a picture, a
+sound, a question — because it is blocks rather than a string in a table.
+
+### What you do
+
+1. Give the Speech Box **use trait ⟨Has a Conversation⟩** and
+   **set how many lines of ⟨this actor⟩ to ⟨3⟩**.
+2. Swap the \`print\` in the click handler for
+   **make ⟨this actor⟩ say the next thing**.
+3. Add **when ⟨any Speech Box⟩ moves to a line**, and in it ask
+   **if ⟨line of ⟨this actor⟩⟩ = ⟨1⟩** and set the text to the first line;
+   then the same for 2 and 3.
+4. Click through it. The cursor starts at zero — nobody talking — and the
+   first click moves it to line one.
+`.trim(),
+};
+
+// ── story/choice ─────────────────────────────────────────────────────────────
+
+/** One line of the script: `if line = n then set the text`. */
+const lineIs = (n: number, words_: string) => ({
+  type: 'controls_if',
+  inputs: {
+    IF0: {
+      block: {
+        type: 'logic_compare',
+        fields: {OP: 'EQ'},
+        inputs: {
+          A: {
+            block: {
+              type: 'world_get_Conversation_LineProperty',
+              inputs: {ACTOR: me()},
+            },
+          },
+          B: num(n),
+        },
+      },
+    },
+    DO0: {block: says(words_)},
+  },
+});
+
+const choice: WorldScenario = {
+  name: 'A question that matters',
+  description: 'A story that asks you something and carries on regardless.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        declareProperty('boolean', 'opened the door', 'false'),
+        addActor('actors/speechBox', [
+          placeAt(20, 200),
+          {
+            type: 'world_add_trait',
+            fields: {TRAIT: 'Mouse#CanBeClickedTrait'},
+            inputs: {ACTOR: me()},
+          },
+          {
+            type: 'world_add_trait',
+            fields: {TRAIT: 'Conversation#HasAConversationTrait'},
+            inputs: {ACTOR: me()},
+          },
+          {
+            type: 'world_set_Conversation_HowManyLinesProperty',
+            inputs: {ACTOR: me(), VALUE: num(4)},
+          },
+        ]),
+        addActor('actors/button', [
+          placeAt(80, 120),
+          setText('TextProperty', words('Open it')),
+        ]),
+        addActor('actors/button', [
+          placeAt(240, 120),
+          setText('TextProperty', words('Walk away')),
+        ]),
+      ],
+      handlers: [
+        {
+          type: 'world_on_Mouse_IsClickedWithEvent',
+          fields: {FILTER0: ''},
+          inputs: {
+            ACTOR: {
+              block: {
+                type: 'world_actor_kind',
+                fields: {ACTOR: 'actors/speechBox'},
+              },
+            },
+          },
+          next: {
+            block: {
+              type: 'world_do_Conversation_MakeSayTheNextThingAction',
+              inputs: {VALUE: me()},
+            },
+          },
+        },
+        {
+          type: 'world_on_Conversation_MovesToALineEvent',
+          inputs: {
+            ACTOR: {
+              block: {
+                type: 'world_actor_kind',
+                fields: {ACTOR: 'actors/speechBox'},
+              },
+            },
+          },
+          next: {
+            block: chainRows([
+              lineIs(1, 'Somebody was knocking.'),
+              lineIs(2, 'Do you open the door?'),
+              lineIs(3, 'You opened it. The rain came in with them.'),
+              lineIs(4, 'You went back to bed, and slept badly.'),
+            ]),
+          },
+        },
+      ],
+    }),
+    stockActors: ['speechBox', 'button'],
+    rules: ['conversation', 'mouse'],
+  }),
+  instructions: `
+## A question that matters
+
+The story asks whether you open the door, and then tells you what you did
+anyway: clicking the box moves to the next line, and the next line is line
+three whatever you think about it. The two Buttons do nothing at all.
+
+A choice is the cursor moving somewhere it would not have gone. **send ⟨the
+box⟩ to line ⟨n⟩** puts it wherever you like, and that is the whole of
+branching — no new machinery, just a jump.
+
+### What you do
+
+1. Add **when ⟨any Button⟩ is clicked**. In it ask which Button was clicked —
+   \`text of ⟨event actor⟩\` says which — and **send ⟨the Speech Box⟩ to line**
+   3 for "Open it" and 4 for "Walk away".
+2. Run it, click through to the question, and answer. The two answers go to
+   two different lines.
+3. A choice the story forgets is not a choice. In the same handler, set the
+   world's **opened the door** to true or false.
+4. Use it later: in a fifth line, say something different depending on what is
+   remembered. That is what makes the question matter.
+`.trim(),
+};
+
 // ── place/edges ──────────────────────────────────────────────────────────────
 
 const edges: WorldScenario = {
@@ -2557,6 +2752,8 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'arcade/waves': waves,
   'story/text': storyText,
   'story/reveal': reveal,
+  'story/script': script,
+  'story/choice': choice,
 };
 
 /** Every lesson written so far, by the tile it belongs to. */
