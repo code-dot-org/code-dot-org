@@ -3797,3 +3797,87 @@ describe('the goal lesson’s check', () => {
     expect(passes).toBe(false);
   });
 });
+
+describe('the undo lesson’s check', () => {
+  const lesson = LESSONS['puzzle/undo'];
+  const REMEMBERS = 'History#RemembersWhereItWasTrait';
+
+  /** The lesson done, with a knob for each of the two ways to half-do it. */
+  const undoing = (options: {crate: boolean; before: boolean}) =>
+    editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const remembers = (name: string) =>
+        under(actorIn(workspace, name), {
+          type: 'world_use_trait',
+          fields: {TRAIT: REMEMBERS},
+        });
+      remembers('Player');
+      if (options.crate) {
+        remembers('Crate');
+      }
+      // `remember this move` goes into both key handlers — above the step if
+      // the lesson was read, below it if it was not.
+      for (const hat of workspace.blocks.blocks) {
+        if (hat.type !== 'world_on_Input_PressesEvent') {
+          continue;
+        }
+        const remember: Row = {type: 'world_do_History_RememberThisMoveAction'};
+        const step = hat.next!.block;
+        hat.next = options.before
+          ? {block: {...remember, next: {block: step}}}
+          : {block: {...step, next: {block: remember}}};
+      }
+      workspace.blocks.blocks.push({
+        type: 'world_on_Input_PressesEvent',
+        x: 1400,
+        y: 20,
+        fields: {FILTER0: 'z'},
+        inputs: {ACTOR: anyKind('player')},
+        next: {block: {type: 'world_do_History_TakeBackAMoveAction'}},
+      } as unknown as Row);
+      return JSON.stringify(workspace);
+    });
+
+  it('refuses a puzzle nothing can be taken back in', async () => {
+    const {passes} = await check('puzzle/undo', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts a history that puts everything back', async () => {
+    const {passes, result} = await check(
+      'puzzle/undo',
+      undoing({crate: true, before: true}),
+    );
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  it('refuses an undo that only moves the player', async () => {
+    // The Crate is the puzzle. A player who walks home alone has undone
+    // nothing, and this is the near-miss the check reads both actors for.
+    const {passes} = await check(
+      'puzzle/undo',
+      undoing({crate: false, before: true}),
+    );
+    expect(passes).toBe(false);
+  });
+
+  it('is not fooled either way by a Grid step, which is booked and not taken', async () => {
+    // Remembering BELOW the step ought to be the classic mistake — the tape
+    // would hold where things are rather than where they were, and every undo
+    // would land a move short. It is not a mistake here, and the reason is
+    // worth writing down: `step right` books a step and returns, and the
+    // actor's position does not change until the `move` phase later in the
+    // frame. So the handler sees the same board either way.
+    //
+    // The lesson still says above, because a game whose moves happen the
+    // instant they are asked for would be broken by below — and because the
+    // tape is a record of where things WERE, which is what reading it in that
+    // order says.
+    const {passes} = await check(
+      'puzzle/undo',
+      undoing({crate: true, before: false}),
+    );
+    expect(passes).toBe(true);
+  });
+});

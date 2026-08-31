@@ -1339,3 +1339,127 @@ describe('Goals', () => {
     expect(heard).toEqual(['lost', 'again', 'won']);
   });
 });
+
+describe('History', () => {
+  /** A crate on a board, and a tape that may or may not be watching it. */
+  const board = (remembering: boolean) => {
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([rule('rules/history')])
+      .instantiate();
+    const crate = new ActorBuilder({id: 'crate', name: 'crate'})
+      .useTraits(
+        remembering ? [of('rules/history', 'RemembersWhereItWasTrait')] : [],
+      )
+      .set(PositionProperty, at(64, 64))
+      .instantiate('crate');
+    const putBack: number[] = [];
+    crate.on(of('rules/history', 'IsPutBackEvent'), () => {
+      putBack.push(spot().x);
+    });
+    world.addActor(crate);
+
+    /** A world action, and the tick that delivers what it raised. */
+    const say = (name: string) => {
+      world.act(of('rules/history', name));
+      world.tick(1 / 60);
+    };
+    const spot = () =>
+      (crate as unknown as {get(p: unknown): Vector}).get(PositionProperty);
+    /** Move the crate the way a game would: one square across. */
+    const step = () => {
+      (crate as unknown as {set(p: unknown, v: Vector): void}).set(
+        PositionProperty,
+        at(spot().x + 32, 64),
+      );
+    };
+    const remembered = () =>
+      world.get(
+        of('rules/history', 'MovesRememberedProperty'),
+      ) as unknown as number;
+    const slot = (name: string) =>
+      (crate as unknown as {get(p: unknown): Vector}).get(
+        of('rules/history', name),
+      );
+    return {world, say, spot, step, remembered, slot, putBack};
+  };
+
+  it('puts a crate back where it was, and says which crate moved', () => {
+    const {say, spot, step, remembered, putBack} = board(true);
+
+    say('RememberThisMoveAction');
+    step();
+    expect(spot().x).toBe(96);
+
+    say('TakeBackAMoveAction');
+
+    expect(spot().x).toBe(64);
+    expect(remembered()).toBe(0);
+    // The event carries the actor and is raised after it has moved: a handler
+    // that flashes a crate should see it where it now is.
+    expect(putBack).toEqual([64]);
+  });
+
+  it('remembers eight moves and drops the ninth-oldest', () => {
+    // The tape is eight properties deep because a rule cannot hold a list of
+    // places. Ten moves therefore go back to the third, not the first, and the
+    // eleventh undo is not an error — it is a player pressing undo at the
+    // start of a level.
+    const {say, spot, step, remembered} = board(true);
+
+    for (let move = 0; move < 10; move++) {
+      say('RememberThisMoveAction');
+      step();
+    }
+    expect(spot().x).toBe(64 + 10 * 32);
+    expect(remembered()).toBe(8);
+
+    for (let back = 0; back < 9; back++) {
+      say('TakeBackAMoveAction');
+    }
+
+    expect(spot().x).toBe(64 + 2 * 32);
+    expect(remembered()).toBe(0);
+  });
+
+  it('answers where something was, several moves ago', () => {
+    // The consolation for a tape written out as properties: the slots are
+    // readable, so a project can draw the ghost of a move.
+    const {say, step, slot} = board(true);
+
+    for (let move = 0; move < 3; move++) {
+      say('RememberThisMoveAction');
+      step();
+    }
+
+    expect(slot('OneMoveAgoProperty').x).toBe(128);
+    expect(slot('TwoMovesAgoProperty').x).toBe(96);
+    expect(slot('ThreeMovesAgoProperty').x).toBe(64);
+  });
+
+  it('leaves alone what did not ask to be remembered', () => {
+    // A wall does not elect the trait, and undo must not move it — which is
+    // also what stops a project paying for every actor on the board.
+    const {say, spot, step, remembered} = board(false);
+
+    say('RememberThisMoveAction');
+    step();
+    say('TakeBackAMoveAction');
+
+    expect(spot().x).toBe(96);
+    // The tape still counted the move: what a move IS belongs to the project,
+    // and an empty board is a board with nothing to put back.
+    expect(remembered()).toBe(0);
+  });
+
+  it('throws the tape away when a level is built again', () => {
+    const {say, spot, step, remembered} = board(true);
+
+    say('RememberThisMoveAction');
+    step();
+    say('ForgetEverythingAction');
+    say('TakeBackAMoveAction');
+
+    expect(remembered()).toBe(0);
+    expect(spot().x).toBe(96);
+  });
+});

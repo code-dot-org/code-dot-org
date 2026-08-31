@@ -49,6 +49,7 @@ const RULES = [
   'grid',
   'carry',
   'goals',
+  'history',
 ];
 
 const check = process.argv.includes('--check');

@@ -12,13 +12,12 @@
 // Blockly JSON behind them. So `catalogue.ts` stays data about tiles, and the
 // projects live here, looked up by tile id.
 //
-// Sixty of sixty-seven, and the seven that are left are all waiting on the
+// Sixty-one of sixty-seven, and the six that are left are all waiting on the
 // same thing: a rule or a block the library has not got. Every other tile
 // on the map has a lesson, a starting project and a check tested in both
 // directions.
 //
 //   puzzle/turns           a Turns rule
-//   puzzle/undo            a History rule
 //   adventure/rooms        a Scenes rule
 //   adventure/keys         an Inventory rule
 //   simulation/neighbours  `actors within`, a neighbourhood query
@@ -3739,6 +3738,89 @@ won anyway.
 `.trim(),
 };
 
+// ── puzzle/undo ──────────────────────────────────────────────────────────────
+
+const undo: WorldScenario = {
+  name: 'Taking it back',
+  description:
+    'A crate that can be pushed one square too far, and never pulled.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        createInMap(local('wall'), wallsRound()),
+        // One row, and that is the whole puzzle: a crate is pushed and never
+        // pulled, so a player on the left of it can only ever send it further
+        // right. Past the Mark there is no way back except this lesson.
+        addActor(local('mark'), [placeAt(240, 176)]),
+        addActor(local('crate'), [placeAt(144, 176)]),
+        addActor(local('player'), [placeAt(80, 176)]),
+      ],
+      actors: [
+        {
+          id: 'player',
+          name: 'Player',
+          rows: [
+            useTrait('Grid#StepsOnTheGridTrait'),
+            useTrait('Input#TakesKeyboardInputTrait'),
+            setSprite('player.png'),
+          ],
+        },
+        {
+          id: 'crate',
+          name: 'Crate',
+          rows: [
+            useTrait('Grid#FillsATileTrait'),
+            useTrait('Grid#CanBePushedTrait'),
+            setSprite('box.png'),
+          ],
+        },
+        {
+          // Paint on the floor: where the Crate is meant to end up, and
+          // nothing else. Counting whether it is there is `puzzle/goal`.
+          id: 'mark',
+          name: 'Mark',
+          rows: [setSprite('coin.png')],
+        },
+        {
+          id: 'wall',
+          name: 'Wall',
+          rows: [useTrait('Grid#FillsATileTrait'), setSprite('ground.png')],
+        },
+      ],
+      handlers: [
+        stepOn('left arrow', 'StepLeft'),
+        stepOn('right arrow', 'StepRight'),
+      ],
+    }),
+    sprites: ['player', 'box', 'coin', 'ground'],
+    rules: ['input', 'grid', 'history'],
+  }),
+  instructions: `
+## Taking it back
+
+Push the Crate onto the Mark. You can push it and you can never pull it, so
+one press too many puts it somewhere no amount of playing will fix — and the
+only thing left is to build the level again.
+
+**A history is a stack**: the places everything was, most recent first. Undo is
+popping one off and putting everything back. The History rule keeps eight of
+them, and the two things it needs from you are which actors count and when a
+move happens — it cannot guess either. A move is not a frame.
+
+### What you do
+
+1. Give the **Player** and the **Crate** the ability **remembers where it was**.
+   Undo puts back what remembers; a Crate that forgets stays where it was
+   pushed while the Player walks back without it.
+2. In BOTH key handlers, put **remember this move** above the step. The tape is
+   a record of where things WERE, and it is written before the move it is
+   about.
+3. Add **when ⟨any Player⟩ hears ⟨Z⟩ pressed → take back a move**.
+4. Push the Crate one square past the Mark, then press Z until it is back.
+`.trim(),
+};
+
 // ── place/edges ──────────────────────────────────────────────────────────────
 
 const edges: WorldScenario = {
@@ -4126,6 +4208,7 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'puzzle/grid': grid,
   'puzzle/push': push,
   'puzzle/goal': goal,
+  'puzzle/undo': undo,
   'adventure/people': people,
   'adventure/errand': errand,
   'making/change': changeRule,

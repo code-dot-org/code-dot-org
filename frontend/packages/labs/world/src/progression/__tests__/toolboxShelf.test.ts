@@ -150,6 +150,7 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   'puzzle/grid': ['world_use_trait'],
   'puzzle/push': ['world_use_trait'],
   'puzzle/goal': ['controls_if', 'world_is_a', 'world_event_actor'],
+  'puzzle/undo': ['world_use_trait', 'world_on_Input_PressesEvent'],
   'adventure/world': [
     'world_define_camera',
     'world_use_camera',

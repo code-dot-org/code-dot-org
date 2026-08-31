@@ -29,6 +29,7 @@ import {goalsRule} from './goals';
 import {gravityRule} from './gravity';
 import {gridRule} from './grid';
 import {healthRule} from './health';
+import {historyRule} from './history';
 import {inputRule} from './input';
 import {jumpRule} from './jump';
 import {motionRule} from './motion';
@@ -271,6 +272,15 @@ export const STOCK_RULES: readonly StockRule[] = [
     contents: gridRule,
   },
   {
+    id: 'history',
+    name: 'History',
+    ability: 'Can Be Taken Back',
+    description:
+      'Writes down where everything is when the project says a move is happening, and puts it all back when the project says to undo one. Eight moves deep, and it remembers places rather than everything.',
+    provides: ['Remembers Where It Was'],
+    contents: historyRule,
+  },
+  {
     id: 'gravity',
     name: 'Gravity',
     ability: 'Has Gravity',
@@ -434,6 +444,7 @@ export {
   patrolRule,
   carryRule,
   goalsRule,
+  historyRule,
   attachmentRule,
   progressRule,
 };

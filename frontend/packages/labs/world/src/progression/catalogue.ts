@@ -1843,17 +1843,47 @@ export const TILES: readonly Tile[] = [
     at: at('puzzle', 2, 3),
     title: 'Taking it back',
     teaches: 'A history is a stack, and undo is what makes a puzzle forgiving.',
-    task: 'Record each move, and step back through them.',
+    task: 'A crate that can be pushed one square too far, and never pulled.',
     requires: ['puzzle/turns', 'puzzle/goal'],
     unlocks: [
-      {kind: 'rule', id: 'history', proposed: true},
+      {kind: 'rule', id: 'history'},
       {kind: 'template', id: 'puzzle'},
     ],
     check: {
       kind: 'outcome',
-      says: 'Three moves then three undos restores every actor to where it started.',
+      says: 'Three pushes and three undos put the Player and the Crate back where they started.',
       falsePass:
-        'Undoing only the player. The crates are why the check reads every actor.',
+        'Undoing only the Player — the Crate is why the check reads both. A world with the handlers deleted also ends where it started, so the check asks that the Crate went somewhere first. Remembering after the step rather than before is NOT caught, and cannot be: a Grid step is booked and taken later in the frame, so both orders record the same board (`lessonChecks`).',
+      run: {
+        probes: {
+          player: {kind: 'positions', of: 'Player'},
+          crate: {kind: 'positions', of: 'Crate'},
+        },
+        trace: [
+          'ArrowRight',
+          'ArrowRight',
+          'ArrowRight',
+          'z',
+          'z',
+          'z',
+        ].flatMap(key => [{hold: [key], seconds: 0.1}, {seconds: 0.2}]),
+      },
+      passes: ({samples}) => {
+        // It has to have gone out before it can have come back: a project that
+        // does nothing at all ends at the start too.
+        const pushed = (samples.crate ?? []).some(
+          sample => ((sample as Point[])[0]?.x ?? 0) > 200,
+        );
+        const crate = lastList<Point>(samples.crate)[0];
+        const player = lastList<Point>(samples.player)[0];
+        return (
+          pushed &&
+          !!crate &&
+          Math.abs(crate.x - 144) < 1 &&
+          !!player &&
+          Math.abs(player.x - 80) < 1
+        );
+      },
     },
   },
 

@@ -532,8 +532,8 @@ anything depends on it.
    its own module. A check tested against a different runner from the one that
    judges a learner is a check nobody has tested.
 
-   **Every authored lesson has a check** — sixty of the sixty-seven tiles, and
-   the seven that are left are each waiting on a rule or a block the
+   **Every authored lesson has a check** — sixty-one of the sixty-seven tiles,
+   and the six that are left are each waiting on a rule or a block the
    library has not got (`lessons/index` lists them) — and every one is tested in both directions: it refuses the starter the lesson ships with AND accepts a
    project where the lesson has been done, which no amount of refusing proves on
    its own. Three also have a HALFWAY case, because a check that stops at the
