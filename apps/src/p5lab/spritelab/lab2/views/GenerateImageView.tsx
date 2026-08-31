@@ -87,6 +87,9 @@ interface GenerateImageViewProps {
   onPaintManually?: (draft: NewImageDraft) => void;
   /** Level-imposed type for new images; the Type choice is locked to it. */
   lockedImageType?: ImageType;
+  /** A generation request is leaving; fires before the model call, so the
+      caller can stamp what the eventual result belongs to. */
+  onGenerateStart?: () => void;
   /** Persist a finished result (name set when creating). */
   onAccept: (
     result: GeneratedImageResult,
@@ -113,6 +116,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   create,
   lockedImageType,
   onPaintManually,
+  onGenerateStart,
   onAccept,
   onCancel,
   onDelete,
@@ -156,6 +160,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   const canUsePrevious = !!existing;
 
   const generate = useCallback(async () => {
+    onGenerateStart?.();
     setMode('generating');
     setError(null);
     try {
@@ -191,6 +196,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
     canUseSeed,
     create,
     trimmedName,
+    onGenerateStart,
     onAccept,
   ]);
 

@@ -44,6 +44,8 @@ interface ImageDetailsDialogProps {
   getDataURI: () => Promise<string | null>;
   /** Whether another image already uses this name. */
   isNameTaken: (name: string) => boolean;
+  /** A generation request is leaving (see GenerateImageView). */
+  onGenerateStart?: () => void;
   /** Persist an accepted generation (newName set when creating). */
   onAcceptGenerated: (
     result: GeneratedImageResult,
@@ -84,6 +86,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   lockedImageType,
   getDataURI,
   isNameTaken,
+  onGenerateStart,
   onAcceptGenerated,
   alternatives,
   onSelectAlternative,
@@ -240,6 +243,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
             create={isNew ? {isNameTaken, initial: newImageDraft} : undefined}
             lockedImageType={lockedImageType}
             onPaintManually={isNew ? onPaintNew : undefined}
+            onGenerateStart={onGenerateStart}
             onAccept={async (result, newName) => {
               await onAcceptGenerated(result, newName);
               setView('details');

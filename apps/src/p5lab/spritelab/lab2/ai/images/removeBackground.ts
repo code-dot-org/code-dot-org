@@ -248,10 +248,10 @@ function loadImage(blob: Blob): Promise<HTMLImageElement> {
 
 /**
  * Composite a PNG blob over the stage's ground color. Backgrounds must be
- * fully opaque: pixel-style model output sometimes carries a transparent
- * frame at the edges, which would show the stage through the artwork.
+ * fully opaque: model output sometimes carries transparent pixels, which
+ * would show the stage through the artwork.
  */
-export async function flattenOverBlack(blob: Blob): Promise<Blob> {
+export async function flattenOntoGround(blob: Blob): Promise<Blob> {
   const bitmap = await createImageBitmap(blob);
   const canvas = document.createElement('canvas');
   canvas.width = bitmap.width;

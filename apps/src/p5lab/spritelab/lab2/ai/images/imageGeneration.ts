@@ -9,7 +9,7 @@ import {createUuid} from '@cdo/apps/utils';
 import {ASSUMED_BLOCK, getImageModel, MODEL_OUTPUT_PX} from './modelHelpers';
 import {
   cropToContent,
-  flattenOverBlack,
+  flattenOntoGround,
   removeBackground,
 } from './removeBackground';
 import {ImageGenerationMetadata, ImageStyle} from './types';
@@ -42,18 +42,18 @@ const STYLE_PROMPT: Record<ImageStyle, string> = {
  */
 async function normalizeIfPixelArt(
   blob: Blob,
-  {requireSquare = false} = {}
+  {squareGrid = false} = {}
 ): Promise<{blob: Blob; pixelGridSize?: number}> {
   try {
     // A background must stay square and full-frame (it letterboxes over the
     // stage otherwise), so its grid is pinned square to the frame instead of
     // following a detected offset.
     const normalized = await normalizePixelArtBlob(blob, ASSUMED_BLOCK, {
-      squareGrid: requireSquare,
+      squareGrid,
     });
     if (
       !normalized ||
-      (requireSquare && normalized.logicalWidth !== normalized.logicalHeight)
+      (squareGrid && normalized.logicalWidth !== normalized.logicalHeight)
     ) {
       return {blob};
     }
@@ -149,52 +149,52 @@ export async function generateImage(
     throw new Error('No image was generated');
   }
 
-  // Sprites and blocks get the key-color background removed the same way
-  // (both prompts keep the corner as background); blocks are then cropped to
-  // content so grid-placed copies tile seamlessly. Pixel style gets
-  // grid-normalized; backgrounds are flattened opaque. A smooth background
-  // delivered as JPEG passes through as-is — JPEG has no alpha to flatten,
-  // and re-encoding a photographic image to PNG would balloon it.
+  // A smooth background delivered as JPEG passes through as-is — JPEG has
+  // no alpha to flatten, and re-encoding a photographic image to PNG would
+  // balloon it. Every other output goes through the canvas pipeline below.
   if (
-    imageType !== 'background' ||
-    style === 'pixel' ||
-    imageFile.mediaType === 'image/png'
+    imageType === 'background' &&
+    style !== 'pixel' &&
+    imageFile.mediaType === 'image/jpeg'
   ) {
-    let blob = new Blob(
-      [new Uint8Array(imageFile.uint8Array).buffer as ArrayBuffer],
-      {type: imageFile.mediaType}
-    );
-    if (imageType === 'sprite' || imageType === 'block') {
-      blob = await removeBackground(blob, {soft: style === 'smooth'});
-    }
-    if (imageType === 'block') {
-      blob = await cropToContent(blob);
-    }
-    if (imageType === 'background') {
-      blob = await flattenOverBlack(blob);
-    }
-    let pixelGridSize: number | undefined;
-    if (style === 'pixel') {
-      const normalized = await normalizeIfPixelArt(blob, {
-        requireSquare: imageType === 'background',
-      });
-      blob = normalized.blob;
-      pixelGridSize = normalized.pixelGridSize;
-    }
     return {
-      filename: `generated-${createUuid()}.png`,
-      uint8Array: new Uint8Array(await blob.arrayBuffer()),
-      mediaType: 'image/png',
-      pixelGridSize,
+      filename: `generated-${createUuid()}.jpg`,
+      uint8Array: imageFile.uint8Array,
+      mediaType: imageFile.mediaType,
       generation,
     };
   }
 
-  const ext = imageFile.mediaType === 'image/png' ? 'png' : 'jpg';
+  // Sprites and blocks get the key-color background removed the same way
+  // (both prompts keep the corner as background); blocks are then cropped to
+  // content so grid-placed copies tile seamlessly. Backgrounds are flattened
+  // opaque; pixel style gets grid-normalized.
+  let blob = new Blob(
+    [new Uint8Array(imageFile.uint8Array).buffer as ArrayBuffer],
+    {type: imageFile.mediaType}
+  );
+  if (imageType === 'sprite' || imageType === 'block') {
+    blob = await removeBackground(blob, {soft: style === 'smooth'});
+  }
+  if (imageType === 'block') {
+    blob = await cropToContent(blob);
+  }
+  if (imageType === 'background') {
+    blob = await flattenOntoGround(blob);
+  }
+  let pixelGridSize: number | undefined;
+  if (style === 'pixel') {
+    const normalized = await normalizeIfPixelArt(blob, {
+      squareGrid: imageType === 'background',
+    });
+    blob = normalized.blob;
+    pixelGridSize = normalized.pixelGridSize;
+  }
   return {
-    filename: `generated-${createUuid()}.${ext}`,
-    uint8Array: imageFile.uint8Array,
-    mediaType: imageFile.mediaType,
+    filename: `generated-${createUuid()}.png`,
+    uint8Array: new Uint8Array(await blob.arrayBuffer()),
+    mediaType: 'image/png',
+    pixelGridSize,
     generation,
   };
 }

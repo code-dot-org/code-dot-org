@@ -400,6 +400,12 @@ export async function normalizePixelArtBlob(
   const raster = rasterFromCanvas(canvas);
   let grid = assumePixelGrid(raster, fallbackBlockSize);
   if (squareGrid) {
+    // Pinning to one size only makes sense when the axes roughly agree; a
+    // size matching neither axis samples out of phase across the frame,
+    // scrambling blocks — worse than leaving the image un-normalized.
+    if (Math.abs(grid.sizeX - grid.sizeY) > 1) {
+      return null;
+    }
     const size = Math.round((grid.sizeX + grid.sizeY) / 2);
     grid = {
       sizeX: size,

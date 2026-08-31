@@ -75,22 +75,31 @@ export function useImageSession(reclaimAsset: (url?: string) => void) {
     }
   }, []);
 
-  // Start a session, seeded with the image the dialog opened on (if any) so
-  // it stays choosable after a generation replaces it.
-  const reset = useCallback((seed?: Alternative | null) => {
-    urls.current = new Set();
-    seedId.current = seed?.id || null;
-    setAlternatives(seed ? [seed] : []);
-  }, []);
-
-  // End the session: the chosen image is referenced and survives; the
-  // also-rans are reclaimed.
-  const end = useCallback(() => {
+  // Reclaim whatever the session holds: the chosen image is referenced and
+  // survives; the also-rans are deleted.
+  const sweep = useCallback(() => {
     urls.current.forEach(url => reclaimAsset(url));
     urls.current = new Set();
+  }, [reclaimAsset]);
+
+  // Start a session, seeded with the image the dialog opened on (if any) so
+  // it stays choosable after a generation replaces it. Sweeps first, so an
+  // asset noted between sessions is reclaimed rather than stranded.
+  const reset = useCallback(
+    (seed?: Alternative | null) => {
+      sweep();
+      seedId.current = seed?.id || null;
+      setAlternatives(seed ? [seed] : []);
+    },
+    [sweep]
+  );
+
+  // End the session.
+  const end = useCallback(() => {
+    sweep();
     seedId.current = null;
     setAlternatives([]);
-  }, [reclaimAsset]);
+  }, [sweep]);
 
   // The callbacks are stable; `alternatives` changes per push/reset/end.
   // Consumers should depend on the individual pieces, not the object.

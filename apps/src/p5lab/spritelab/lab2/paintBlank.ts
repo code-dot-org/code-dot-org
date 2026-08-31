@@ -1,5 +1,6 @@
 // The blank canvas "Paint manually" opens on, sized the way an AI generation
-// of the same style would come out.
+// of the same style would come out — and the stage ground color that
+// background handling everywhere composites onto.
 
 import {crispScaleFor} from '@cdo/apps/pixelEditor/pixelArt';
 

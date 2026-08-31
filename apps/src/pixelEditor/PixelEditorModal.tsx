@@ -89,6 +89,17 @@ const brushDotPx = (size: number) => 3 + size * 1.6;
 // Keyboard painting: Shift+arrow moves the cursor this many art pixels.
 const KB_SHIFT_STEP = 10;
 
+// A #rrggbb color as the editor's RGBA (the opaqueGround prop is a hex
+// string; tools work in RGBA).
+function hexToRGBA(hex: string): RGBA {
+  return [
+    parseInt(hex.slice(1, 3), 16),
+    parseInt(hex.slice(3, 5), 16),
+    parseInt(hex.slice(5, 7), 16),
+    255,
+  ];
+}
+
 export interface PixelEditorSaveMeta {
   pixelGridSize?: number;
   // Recently used colors after this session, in first-seen order; the caller
@@ -716,14 +727,25 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
   // Read the backing pixel under the pointer into the active color. The
   // spectrum picker has no alpha axis, so partial alpha snaps to opaque;
   // fully transparent picks the transparent color.
-  const pickColorAt = useCallback((p: {x: number; y: number}) => {
-    const ctx = backingRef.current?.getContext('2d');
-    if (!ctx) {
-      return;
-    }
-    const [r, g, b, a] = ctx.getImageData(p.x, p.y, 1, 1).data;
-    setColor(a === 0 ? TRANSPARENT : [r, g, b, 255]);
-  }, []);
+  const pickColorAt = useCallback(
+    (p: {x: number; y: number}) => {
+      const ctx = backingRef.current?.getContext('2d');
+      if (!ctx) {
+        return;
+      }
+      const [r, g, b, a] = ctx.getImageData(p.x, p.y, 1, 1).data;
+      // Over an opaque ground a transparent pixel displays as the ground
+      // color, so that's what the eyedropper picks.
+      setColor(
+        a === 0
+          ? opaqueGround
+            ? hexToRGBA(opaqueGround)
+            : TRANSPARENT
+          : [r, g, b, 255]
+      );
+    },
+    [opaqueGround]
+  );
 
   const handlePointerDown = useCallback(
     (e: React.PointerEvent<HTMLCanvasElement>) => {

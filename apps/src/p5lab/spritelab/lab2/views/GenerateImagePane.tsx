@@ -22,7 +22,7 @@ import {
   UploadImageFunction,
 } from '../ai/images/imageGeneration';
 import {MODEL_OUTPUT_PX} from '../ai/images/modelHelpers';
-import {ImageType} from '../ai/images/types';
+import {ImageGenerationMetadata, ImageType} from '../ai/images/types';
 import {
   categoriesForType,
   galleryOrder,
@@ -53,14 +53,29 @@ function bytesToDataURI(bytes: Uint8Array, mediaType: string): string {
 
 type Dispatch = ReturnType<typeof useAppDispatch>;
 
-// Create an animation under a validated name and return its key. The
-// classic addAnimation thunk unconditionally renames to name_N;
-// setAnimationName takes the plain name back (callers validate it free
-// before getting here).
+// The animation fields the dialog's persist paths write. An explicit
+// `undefined` clears the field (the spread keeps the key).
+interface AnimationPatch {
+  sourceUrl?: string;
+  dataURI?: string;
+  frameSize?: {x: number; y: number};
+  sourceSize?: {x: number; y: number};
+  categories?: string[];
+  pixelGridSize?: number;
+  generation?: ImageGenerationMetadata;
+  recentColors?: PixelEditorSaveMeta['recentColors'];
+}
+
+/**
+ * Create an animation under a validated name and return its key. The
+ * classic addAnimation thunk unconditionally renames to name_N;
+ * setAnimationName takes the plain name back (callers validate it free
+ * before getting here).
+ */
 function createNamedAnimation(
   dispatch: Dispatch,
   name: string,
-  props: Record<string, unknown>
+  props: AnimationPatch
 ): string {
   const key = createUuid();
   dispatch(
@@ -79,17 +94,19 @@ function createNamedAnimation(
   return key;
 }
 
-// Point an existing animation at new pixels, via the raw list-replace
-// action rather than editAnimation: the classic EDIT_ANIMATION reducer
-// forces sourceUrl to null (it expects the legacy animation-save service to
-// upload later), which would strand the change in memory — Lab2 sources
-// persist sourceUrl, not dataURI. Recomputes the trimmed thumbnail (cached
-// by source; fires onTrimsUpdated, refreshing the gallery and block
-// dropdowns). Returns the sourceUrl the change replaced.
+/**
+ * Point an existing animation at new pixels, via the raw list-replace
+ * action rather than editAnimation: the classic EDIT_ANIMATION reducer
+ * forces sourceUrl to null (it expects the legacy animation-save service to
+ * upload later), which would strand the change in memory — Lab2 sources
+ * persist sourceUrl, not dataURI. Recomputes the trimmed thumbnail (cached
+ * by source; fires onTrimsUpdated, refreshing the gallery and block
+ * dropdowns). Returns the sourceUrl the change replaced.
+ */
 function repointAnimation(
   dispatch: Dispatch,
   key: string,
-  changes: Record<string, unknown>
+  changes: AnimationPatch
 ): string | undefined {
   const current = getStore().getState().animationList;
   const updated = {
@@ -246,21 +263,42 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     setPainting('loading');
   }, []);
 
-  const session = useImageSession(deleteUnreferencedAsset);
   const {
+    alternatives,
     reset: resetSession,
     end: endSession,
     push: pushAlternative,
     noteAsset,
-  } = session;
+  } = useImageSession(deleteUnreferencedAsset);
   // The gallery card that opened the dialog; focus returns to it on close.
   const triggerRef = useRef<HTMLElement | null>(null);
 
-  // Which dialog session async work belongs to. The persist paths await
-  // uploads; by the time one resolves the dialog may be closed, on another
-  // image, or its paint cancelled — a stale result must not land. Bumped by
-  // everything that changes the subject.
+  // Which dialog subject async work belongs to. The persist paths span a
+  // model call and an upload; by the time one resolves the dialog may be
+  // closed, on another image, or its paint cancelled — a stale result must
+  // not land. Bumped by everything that changes the subject.
   const sessionEpochRef = useRef(0);
+  // The epoch when the in-flight generation left (one at a time: the view
+  // disables Generate while a request is out). Stamped at request time so
+  // the model-call window is covered, not just the upload after it.
+  const generationEpochRef = useRef(0);
+  const handleGenerateStart = useCallback(() => {
+    generationEpochRef.current = sessionEpochRef.current;
+  }, []);
+
+  // Whether async work stamped with `epoch` still belongs to the open
+  // subject; a stale persist's freshly-uploaded asset is reclaimed (nothing
+  // references it).
+  const persistIsStale = useCallback(
+    (epoch: number, uploadedUrl?: string) => {
+      if (epoch === sessionEpochRef.current) {
+        return false;
+      }
+      deleteUnreferencedAsset(uploadedUrl);
+      return true;
+    },
+    [deleteUnreferencedAsset]
+  );
 
   const openDialog = useCallback(
     (key: string, trigger: HTMLElement) => {
@@ -374,7 +412,12 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   // image) or repoint the existing one, with the generation metadata.
   const handleAcceptGenerated = useCallback(
     async (result: GeneratedImageResult, newName?: string) => {
-      const epoch = sessionEpochRef.current;
+      // Stamped when the generation left, so a dialog closed or moved
+      // during the model call orphans its result here.
+      const epoch = generationEpochRef.current;
+      if (persistIsStale(epoch)) {
+        return;
+      }
       const dataURI = bytesToDataURI(result.uint8Array, result.mediaType);
       let sourceUrl = dataURI;
       if (uploadImage) {
@@ -390,10 +433,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       }
       const frameSize: {x: number; y: number} | null =
         await dataURIToSourceSize(dataURI).catch(() => null);
-      if (epoch !== sessionEpochRef.current) {
-        // The dialog moved on while the upload was out; nothing references
-        // the fresh asset.
-        deleteUnreferencedAsset(sourceUrl);
+      if (persistIsStale(epoch, sourceUrl)) {
         return;
       }
 
@@ -416,6 +456,8 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           pixelGridSize: result.pixelGridSize,
           generation: result.generation,
         });
+        // A new subject, even though the session continues.
+        sessionEpochRef.current++;
         setDialogTarget(key);
         return;
       }
@@ -442,7 +484,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       dispatch,
       pushAlternative,
       noteAsset,
-      deleteUnreferencedAsset,
+      persistIsStale,
     ]
   );
 
@@ -450,7 +492,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   // generation does, minus the upload — the asset already exists.
   const handleSelectAlternative = useCallback(
     (id: string) => {
-      const alt = session.alternatives.find(a => a.id === id);
+      const alt = alternatives.find(a => a.id === id);
       const key = dialogTarget;
       if (!alt || !key || key === 'new') {
         return;
@@ -474,7 +516,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       });
       noteAsset(previousUrl);
     },
-    [session.alternatives, dialogTarget, dispatch, noteAsset]
+    [alternatives, dialogTarget, dispatch, noteAsset]
   );
 
   // Persist an edited (or first-painted) image: upload the PNG as a fresh
@@ -513,10 +555,9 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       if (dialogTarget === 'new' && paintNewDraft) {
         const {name, imageType} = paintNewDraft;
         const sourceUrl = await uploadEdited(name, dataURI);
-        if (epoch !== sessionEpochRef.current) {
-          // The paint was cancelled (or the dialog moved on) while the
-          // upload was out; nothing references the fresh asset.
-          deleteUnreferencedAsset(sourceUrl);
+        // The paint may have been cancelled (or the dialog moved on) while
+        // the upload was out.
+        if (persistIsStale(epoch, sourceUrl)) {
           return;
         }
         const key = createNamedAnimation(dispatch, name, {
@@ -536,6 +577,8 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         });
         noteAsset(sourceUrl);
         setPaintNewDraft(null);
+        // A new subject, even though the session continues.
+        sessionEpochRef.current++;
         setDialogTarget(key);
         return;
       }
@@ -546,8 +589,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         return;
       }
       const sourceUrl = await uploadEdited(props.name || 'image', dataURI);
-      if (epoch !== sessionEpochRef.current) {
-        deleteUnreferencedAsset(sourceUrl);
+      if (persistIsStale(epoch, sourceUrl)) {
         return;
       }
       const previousUrl = repointAnimation(dispatch, key, {
@@ -555,6 +597,9 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         dataURI,
         ...(frameSize ? {frameSize, sourceSize: frameSize} : {}),
         pixelGridSize: meta.pixelGridSize,
+        // Hand-edited pixels are no longer any generation's output; a kept
+        // prompt/seed would describe (and replay over) the wrong image.
+        generation: undefined,
         // Serialized with the animation, so the editor's recent-colors row
         // follows the project.
         recentColors: meta.recentColors,
@@ -579,7 +624,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       dispatch,
       pushAlternative,
       noteAsset,
-      deleteUnreferencedAsset,
+      persistIsStale,
     ]
   );
 
@@ -668,8 +713,9 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           lockedImageType={lockedImageType}
           getDataURI={getTargetDataURI}
           isNameTaken={isNameTaken}
+          onGenerateStart={handleGenerateStart}
           onAcceptGenerated={handleAcceptGenerated}
-          alternatives={session.alternatives.map(
+          alternatives={alternatives.map(
             (alt): AlternativeImage => ({
               id: alt.id,
               thumb: alt.thumb,
