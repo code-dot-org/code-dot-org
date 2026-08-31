@@ -1,6 +1,5 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React from 'react';
-
-import MusicProjectBar from '@cdo/apps/music/views/MusicProjectBar';
 
 import moduleStyles from '../sprite-lab2-view.module.scss';
 
@@ -14,11 +13,14 @@ const SceneMusicBar: React.FunctionComponent<SceneMusicBarProps> = ({
   title,
   isLoading,
 }) => (
-  <MusicProjectBar
-    title={title}
-    isLoading={isLoading}
-    className={moduleStyles.musicBar}
-  />
+  <div className={moduleStyles.musicBar}>
+    <FontAwesomeV6Icon
+      iconStyle="solid"
+      iconName={isLoading ? 'spinner' : 'music'}
+      animationType={isLoading ? 'spin' : undefined}
+    />
+    <span className={moduleStyles.musicBarTitle}>{title}</span>
+  </div>
 );
 
 export default SceneMusicBar;

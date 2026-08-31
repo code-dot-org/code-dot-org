@@ -157,16 +157,26 @@ $tab-segment-height: $tab-item-height - 2px;
 }
 
 // Action buttons beside the Play tab (shown only while playing), not tabs.
-// Music Lab's project bar, cut down to the tab bar's height.
+// The song a playing game is using, sized to sit among the tab controls.
 .musicBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   height: $tab-item-height;
-  margin: 0;
-  padding: 0 8px 0 0;
   box-sizing: border-box;
+  padding: 0 10px;
+  border: 1px solid var(--borders-neutral-strong);
+  border-radius: 4px;
+  color: var(--text-neutral-primary);
+  font-size: 12px;
+  line-height: 1.2;
+  max-width: 220px;
+}
 
-  > img {
-    height: $tab-item-height - 2px;
-  }
+.musicBarTitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .startOver {
