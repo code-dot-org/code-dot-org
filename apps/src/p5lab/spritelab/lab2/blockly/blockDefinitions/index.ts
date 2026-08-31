@@ -2,20 +2,25 @@ import category from '@cdo/apps/blockly/blockDefinitions/category';
 import custom_category from '@cdo/apps/blockly/blockDefinitions/custom_category';
 import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 
+import distanceBetween from './distanceBetween';
 import goToExternalScene from './goToExternalScene';
 import goToScene from './goToScene';
 import makePlatformBlocks from './makePlatformBlocks';
 import makePlatformPlayer from './makePlatformPlayer';
 import makeSpriteAtGrid from './makeSpriteAtGrid';
+import makeSpriteWithBehavior from './makeSpriteWithBehavior';
 import movingLeft from './movingLeft';
 import movingWithArrowKeys from './movingWithArrowKeys';
 import patrollingLeftRight from './patrollingLeftRight';
 import patrollingOnBlocks from './patrollingOnBlocks';
+import predict from './predict';
 import restartScene from './restartScene';
 import setAsPlatformPlayer from './setAsPlatformPlayer';
 import setCameraZoom from './setCameraZoom';
+import setImageTo from './setImageTo';
 import setPlatformGravity from './setPlatformGravity';
 import thePlayer from './thePlayer';
+import whenSpriteDropped from './whenSpriteDropped';
 
 // Lab-owned blocks, defined client-side rather than in the DB block pool. A
 // block whose runtime half is interpreted code exports it as helperCode.
@@ -38,6 +43,11 @@ const labBlockDefinitions: {
   setAsPlatformPlayer,
   setCameraZoom,
   thePlayer,
+  predict,
+  setImageTo,
+  whenSpriteDropped,
+  distanceBetween,
+  makeSpriteWithBehavior,
   // Toolbox edit mode's category marker blocks.
   category,
   custom_category,

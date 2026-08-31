@@ -117,6 +117,8 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   pinnedSceneId?: string;
   // Name given to the pinned scene at creation.
   pinnedSceneName?: string;
+  // An AI Lab model this level's predict block uses, fetched at run start.
+  aiModelId?: string;
   /** Legacy stringified XML toolbox. */
   toolboxBlocks?: string;
 }

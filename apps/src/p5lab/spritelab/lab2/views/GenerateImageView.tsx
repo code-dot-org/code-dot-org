@@ -1,9 +1,10 @@
+import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import RadioButton from '@code-dot-org/component-library/radioButton';
 import Slider from '@code-dot-org/component-library/slider';
 import TextField from '@code-dot-org/component-library/textField';
 import classNames from 'classnames';
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
 import aiBot0 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-0.png';
 import aiBot1 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-1.png';
@@ -57,6 +58,12 @@ const PROMPT_PLACEHOLDERS: Record<ImageType, string> = {
 type GenerateMode = 'prompt' | 'generating';
 type RandomnessSource = 'new' | 'seed' | 'previous';
 
+/** Existing images a new one can start from; the prompt then modifies one. */
+export interface StartFromImages {
+  images: {key: string; name: string; type: ImageType; style?: ImageStyle}[];
+  getDataURI: (key: string) => Promise<string | null>;
+}
+
 interface GenerateImageViewProps {
   /** Set for an existing image; absent when generating a brand-new one. */
   existing?: {
@@ -72,6 +79,7 @@ interface GenerateImageViewProps {
   create?: {
     /** Whether another image already uses this name. */
     isNameTaken: (name: string) => boolean;
+    startFrom: StartFromImages;
   };
   /** Level-imposed type for new images; the Type choice is locked to it. */
   lockedImageType?: ImageType;
@@ -117,6 +125,19 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
     TEMPERATURE_LEVEL_DEFAULT
   );
   const [source, setSource] = useState<RandomnessSource>('new');
+  // Key of the existing image a new one starts from; empty for a fresh roll.
+  const [startFromKey, setStartFromKey] = useState('');
+  const startFromImages = useMemo(
+    () =>
+      create?.startFrom.images.filter(image => image.type === imageType) || [],
+    [create, imageType]
+  );
+  // A change of type drops a start-from image of the old type.
+  useEffect(() => {
+    if (startFromKey && !startFromImages.some(i => i.key === startFromKey)) {
+      setStartFromKey('');
+    }
+  }, [startFromImages, startFromKey]);
   const [error, setError] = useState<string | null>(null);
 
   // Flag a duplicate as it's typed and hold the buttons until it's unique.
@@ -158,6 +179,13 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
         }
         options.inputImageDataURI = dataURI;
       }
+      if (create && startFromKey) {
+        const dataURI = await create.startFrom.getDataURI(startFromKey);
+        if (!dataURI) {
+          throw new Error("Couldn't read the image to start from.");
+        }
+        options.inputImageDataURI = dataURI;
+      }
       const result = await generateImage(prompt.trim(), options);
       // Apply immediately; the caller flips back to the summary view.
       await onAccept(result, create ? trimmedName : undefined);
@@ -173,6 +201,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
     source,
     existing,
     canUseSeed,
+    startFromKey,
     create,
     trimmedName,
     onAccept,
@@ -280,38 +309,68 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
           </div>
 
           <div className={moduleStyles.formRow}>
-            <fieldset
-              className={classNames(moduleStyles.radioGroup, moduleStyles.wide)}
-              disabled={generating}
-            >
-              <legend>Start from</legend>
-              <RadioButton
-                name="generation-source"
-                value="new"
-                label="Create new image"
+            {create ? (
+              <SimpleDropdown
+                name="start-from"
+                labelText="Start from"
                 size="s"
-                checked={source === 'new'}
-                onChange={() => setSource('new')}
+                className={moduleStyles.wide}
+                disabled={generating || startFromImages.length === 0}
+                selectedValue={startFromKey}
+                onChange={e => {
+                  const key = e.target.value;
+                  setStartFromKey(key);
+                  // The new image keeps the look of the one it starts from.
+                  const from = startFromImages.find(i => i.key === key);
+                  if (from?.style) {
+                    setStyle(from.style);
+                  }
+                }}
+                items={[
+                  {value: '', text: 'A new image'},
+                  ...startFromImages.map(image => ({
+                    value: image.key,
+                    text: image.name,
+                  })),
+                ]}
               />
-              <RadioButton
-                name="generation-source"
-                value="seed"
-                label="Use same seed (small prompt changes keep the picture similar)"
-                size="s"
-                checked={source === 'seed'}
-                disabled={!canUseSeed}
-                onChange={() => setSource('seed')}
-              />
-              <RadioButton
-                name="generation-source"
-                value="previous"
-                label="Use previous image (the prompt modifies it)"
-                size="s"
-                checked={source === 'previous'}
-                disabled={!canUsePrevious}
-                onChange={() => setSource('previous')}
-              />
-            </fieldset>
+            ) : (
+              <fieldset
+                className={classNames(
+                  moduleStyles.radioGroup,
+                  moduleStyles.wide
+                )}
+                disabled={generating}
+              >
+                <legend>Start from</legend>
+                <RadioButton
+                  name="generation-source"
+                  value="new"
+                  label="Create new image"
+                  size="s"
+                  checked={source === 'new'}
+                  onChange={() => setSource('new')}
+                />
+                <RadioButton
+                  name="generation-source"
+                  value="seed"
+                  label="Use same seed (small prompt changes keep the picture similar)"
+                  size="s"
+                  checked={source === 'seed'}
+                  disabled={!canUseSeed}
+                  onChange={() => setSource('seed')}
+                />
+                <RadioButton
+                  name="generation-source"
+                  value="previous"
+                  label="Use previous image (the prompt modifies it)"
+                  size="s"
+                  checked={source === 'previous'}
+                  disabled={!canUsePrevious}
+                  onChange={() => setSource('previous')}
+                />
+              </fieldset>
+            )}
             <fieldset
               className={classNames(
                 moduleStyles.radioGroup,

@@ -445,10 +445,28 @@ export interface BlockJson<BlockType extends string = string> {
   output?: string | string[] | null;
   tooltip?: string;
   helpUrl?: string;
+  extensions?: string[];
+  mutator?: string;
 }
 
 // Add more field/input definitions as needed
-type ArgumentJson = FieldJson | FieldInput | FieldDropdown | FieldNumber;
+type ArgumentJson =
+  | FieldJson
+  | FieldInput
+  | FieldDropdown
+  | FieldNumber
+  | FieldLabel
+  | InputValue;
+
+interface FieldLabel extends FieldJson {
+  type: 'field_label';
+  text?: string;
+}
+
+interface InputValue extends FieldJson {
+  type: 'input_value';
+  check?: string | string[] | null;
+}
 
 interface FieldJson {
   type: string;

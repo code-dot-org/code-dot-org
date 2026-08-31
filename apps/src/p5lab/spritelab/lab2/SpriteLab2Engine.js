@@ -8,6 +8,12 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 import SpriteLab from '../SpriteLab';
 
+import {
+  getAiModel,
+  getLevelAiModel,
+  loadAiModel,
+  predictLabel,
+} from './aiModel';
 import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
 import {
   backgroundFrame,
@@ -31,6 +37,13 @@ const NOOP = () => {};
 // platformer scenes use CELL_SIZE (one grid cell). A later World-tab UI may
 // let the user pick these per scene.
 const STORY_SCENE_SPRITE_SIZE = 300;
+
+// Granularity of the distance reporter, in playfield units.
+const DISTANCE_STEP = 10;
+
+// Props made by the make-sprite-with-behavior block, relative to the scene's
+// default sprite size: things a character reacts to, not characters.
+const PROP_SPRITE_FRACTION = 0.25;
 
 // Extra canvas density beyond the device pixel ratio: the canvas is 400
 // logical px and the Playspace transform-scales it to ~900 CSS px on the
@@ -195,6 +208,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     library.commands.setCameraZoom = value => {
       this.cameraZoomTarget_ = clampZoom(Number(value));
     };
+    this.installAiModelCommands_(library);
+    this.installSpriteIdentity_(library);
+    this.installSceneCommands_(library);
     if (this.usesPlatformPhysics_) {
       this.installZoomedDrawLoop_(library);
     }
@@ -315,6 +331,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     // The zGameDev name is only the level's opt-in to platformer physics,
     // which is engine-owned (platformPhysics.ts); no library loads for it.
     this.usesPlatformPhysics_ = helperLibraries.includes('zGameDev');
+    this.aiModelId_ = levelProperties.aiModelId;
     this.level = {
       helperLibraries: helperLibraries.filter(name => name !== 'zGameDev'),
       softButtons: [],
@@ -530,9 +547,140 @@ export default class SpriteLab2Engine extends SpriteLab {
         );
       }
     }, 8000);
-    return this.preloadTrimmedSpriteImages_().finally(() =>
-      clearTimeout(watchdog)
-    );
+    return Promise.all([
+      this.preloadAiModel_(),
+      this.preloadTrimmedSpriteImages_(),
+    ]).finally(() => clearTimeout(watchdog));
+  }
+
+  // The level's model, fetched alongside the images so the predict block is
+  // synchronous by the time a run can reach it.
+  preloadAiModel_() {
+    if (!this.aiModelId_) {
+      return Promise.resolve();
+    }
+    return loadAiModel(this.aiModelId_).catch(error => {
+      console.warn(
+        `SpriteLab2: model ${this.aiModelId_} did not load; predict returns nothing.`,
+        error
+      );
+    });
+  }
+
+  // The predict block asks a loaded model; set image names an image by value.
+  installAiModelCommands_(library) {
+    const warned = new Set();
+    const warnOnce = message => {
+      if (!warned.has(message)) {
+        warned.add(message);
+        console.warn(`SpriteLab2: ${message}`);
+      }
+    };
+    // A block saved against a model the level no longer names asks the
+    // level's model instead.
+    library.commands.predictWith = (modelId, inputs) => {
+      const model = getAiModel(modelId) || getLevelAiModel();
+      if (!model) {
+        warnOnce(`model ${modelId} is not loaded; predict returns nothing.`);
+        return '';
+      }
+      return predictLabel(model, inputs || {});
+    };
+    library.commands.setImage = (spriteArg, name) => {
+      const label = this.imageNamed_(library, name);
+      if (!label) {
+        warnOnce(
+          `no image named ${JSON.stringify(
+            name
+          )} in this project; set image does nothing.`
+        );
+        return;
+      }
+      library.commands.setAnimation.call(library, spriteArg, label);
+    };
+  }
+
+  // A sprite stays addressable by the image it was made with after set image
+  // changes its picture: "the dog" is still the dog when it looks sad.
+  installSpriteIdentity_(library) {
+    const addSprite = library.addSprite.bind(library);
+    library.addSprite = opts => {
+      const id = addSprite(opts);
+      const sprite = library.nativeSpriteMap[id];
+      if (sprite && opts && opts.animation) {
+        sprite.madeAs = opts.animation;
+      }
+      return id;
+    };
+    const getSpriteArray = library.getSpriteArray.bind(library);
+    library.getSpriteArray = spriteArg => {
+      const found = getSpriteArray(spriteArg);
+      const costume = spriteArg && spriteArg.costume;
+      if (!costume || costume === 'all') {
+        return found;
+      }
+      const madeAs = Object.values(library.nativeSpriteMap).filter(
+        sprite => sprite.madeAs === costume && !found.includes(sprite)
+      );
+      return madeAs.length ? found.concat(madeAs) : found;
+    };
+  }
+
+  // The drop event, the distance reporter and the small prop sprite.
+  installSceneCommands_(library) {
+    library.commands.whenSpriteDropped = callback => {
+      library.addEvent('whendrop', {}, callback);
+    };
+    const dispatch = library.getCallbackArgListForEvent.bind(library);
+    library.getCallbackArgListForEvent = inputEvent =>
+      inputEvent.type === 'whendrop'
+        ? this.whenDropEvent_()
+        : dispatch(inputEvent);
+    // Centre-to-centre, rounded to tens so a model's table stays legible; a
+    // sprite that isn't there counts as the far side of the playfield.
+    library.commands.distanceBetween = (fromArg, toArg) => {
+      const from = library.getSpriteArray(fromArg)[0];
+      const to = library.getSpriteArray(toArg)[0];
+      if (!from || !to) {
+        return APP_WIDTH;
+      }
+      const distance = Math.hypot(
+        from.position.x - to.position.x,
+        from.position.y - to.position.y
+      );
+      return Math.round(distance / DISTANCE_STEP) * DISTANCE_STEP;
+    };
+    library.commands.makeSpriteWithBehavior = (
+      spriteArg,
+      location,
+      behavior
+    ) => {
+      const id = library.addSprite({
+        animation: spriteArg && spriteArg.costume,
+        location,
+        scale: library.defaultSpriteSize * PROP_SPRITE_FRACTION,
+      });
+      if (behavior) {
+        library.addBehavior(library.nativeSpriteMap[id], behavior);
+      }
+      return id;
+    };
+  }
+
+  // The loaded image whose name matches, exactly or ignoring case.
+  imageNamed_(library, name) {
+    const labels = Object.keys(library.p5._predefinedSpriteAnimations || {});
+    if (labels.includes(name)) {
+      return name;
+    }
+    const lower = String(name).toLowerCase();
+    return labels.find(label => label.toLowerCase() === lower);
+  }
+
+  whenDropEvent_() {
+    return this.draggingBeforeFrame_ && this.p5Wrapper.p5.mouseWentUp()
+      ? [{}]
+      : [];
   }
 
   // Base preloadSpriteImages_ with costume border-trimming (imageTrim.ts).
@@ -661,6 +809,11 @@ export default class SpriteLab2Engine extends SpriteLab {
 
   onP5Draw() {
     this.wrapDrawSpritesOnce_();
+    // The draggable behavior clears its dragging flag on mouse-up during
+    // runBehaviors, before events run; note this frame's dragged sprites first.
+    this.draggingBeforeFrame_ = Object.values(
+      this.library?.nativeSpriteMap || {}
+    ).some(sprite => sprite.dragging);
     super.onP5Draw();
   }
 

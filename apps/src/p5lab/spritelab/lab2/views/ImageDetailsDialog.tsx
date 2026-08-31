@@ -15,7 +15,7 @@ import {
 import {IMAGE_NAME_MAX_LENGTH, sanitizeImageName} from '../imageReferences';
 
 import DeleteImageButton from './DeleteImageButton';
-import GenerateImageView from './GenerateImageView';
+import GenerateImageView, {StartFromImages} from './GenerateImageView';
 
 import moduleStyles from './image-details-dialog.module.scss';
 
@@ -40,6 +40,8 @@ interface ImageDetailsDialogProps {
   getDataURI: () => Promise<string | null>;
   /** Whether another image already uses this name. */
   isNameTaken: (name: string) => boolean;
+  /** Images a new one can start from, and how to read their pixels. */
+  startFrom: StartFromImages;
   /** Persist an accepted generation (newName set when creating). */
   onAcceptGenerated: (
     result: GeneratedImageResult,
@@ -67,6 +69,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   lockedImageType,
   getDataURI,
   isNameTaken,
+  startFrom,
   onAcceptGenerated,
 }) => {
   const isNew = animKey === null;
@@ -204,7 +207,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                   }
             }
             thumb={isNew ? undefined : thumb}
-            create={isNew ? {isNameTaken} : undefined}
+            create={isNew ? {isNameTaken, startFrom} : undefined}
             lockedImageType={lockedImageType}
             onAccept={async (result, newName) => {
               await onAcceptGenerated(result, newName);
