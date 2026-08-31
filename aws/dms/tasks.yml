@@ -37,31 +37,9 @@
 # All tables in this section are exported to the Redshift `dashboard_production_pii` schema. Sensitive data may be
 # exported to this schema, but should be limited to only columns that have an identified analytics purpose.
 cron-pii:
-- pegasus.contacts
-- pegasus.forms
-- pegasus.form_geos
-- pegasus.hoc_activity:
-    remove_column:
-        - started_ip
-        - pixel_finished_ip
-        - pixel_started_ip
-        - finished_ip
-        - name
-        - session
-- pegasus.poste_deliveries
-- dashboard.pd_%
 - dashboard.course_offerings_pd_workshops
-- dashboard.peer_reviews
 
 # All tables in this section are exported to the Redshift `dashboard_production` schema. Do NOT export columns containing
 # sensitive data to this schema.
 cron:
-- dashboard.contained_level_answers
-- dashboard.contained_levels
-- dashboard.level_sources_multi_types
-- dashboard.schools
 - dashboard.school_infos
-- dashboard.levels_script_levels
-- dashboard.courses
-- dashboard.user_permissions
-- dashboard.census_summaries
