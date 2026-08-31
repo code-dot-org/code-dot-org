@@ -12,12 +12,11 @@
 // Blockly JSON behind them. So `catalogue.ts` stays data about tiles, and the
 // projects live here, looked up by tile id.
 //
-// Fifty-eight of sixty-seven, and the nine that are left are all waiting on
+// Fifty-nine of sixty-seven, and the eight that are left are all waiting on
 // the same thing: a rule or a block the library has not got. Every other tile
 // on the map has a lesson, a starting project and a check tested in both
 // directions.
 //
-//   platformer/ground      Carrying — an actor standing on a moving solid
 //   puzzle/turns           a Turns rule
 //   puzzle/goal            a Goals rule
 //   puzzle/undo            a History rule
@@ -3550,6 +3549,89 @@ A **define block** is a name for a sum, with the parts that vary as
 `.trim(),
 };
 
+// ── platformer/ground ────────────────────────────────────────────────────────
+
+const movingGround: WorldScenario = {
+  name: 'Floors that move',
+  description:
+    'A platform that goes somewhere, and a player left standing where it was.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        createInMap(local('ground'), floorAcross(10)),
+        addActor(local('platform'), [placeAt(120, 200)]),
+        addActor(local('hero'), [placeAt(120, 168)]),
+      ],
+      actors: [
+        {
+          id: 'hero',
+          name: 'Hero',
+          rows: [
+            useTrait('Gravity#AffectedByGravityTrait'),
+            useTrait('Collisions#CanCollideTrait'),
+            useTrait('Arrow Keys#MovesAcrossTrait'),
+            setSprite('player.png'),
+          ],
+        },
+        {
+          id: 'platform',
+          name: 'Platform',
+          rows: [
+            useTrait('Patrol#PatrolsAcrossTrait'),
+            useTrait('Gravity#ActsAsGroundTrait'),
+            useTrait('Solid Bodies#SolidTrait'),
+            useTrait('Collisions#CanCollideTrait'),
+            setSprite('ground.png'),
+          ],
+        },
+        {
+          id: 'ground',
+          name: 'Ground',
+          rows: [
+            useTrait('Gravity#ActsAsGroundTrait'),
+            setSprite('ground.png'),
+          ],
+        },
+      ],
+    }),
+    sprites: ['player', 'ground'],
+    rules: [
+      'gravity',
+      'arrows',
+      'collisions',
+      'solid',
+      'motion',
+      'patrol',
+      'carry',
+    ],
+  }),
+  instructions: `
+## Floors that move
+
+The Hero is standing on a Platform, and the Platform is walking its beat. It
+holds the Hero up the whole way and slides out from under them, because
+"solid" and "going somewhere" are two different facts and only one of them has
+been said.
+
+Nothing so far can say the other. Solid Bodies stops a body ending up inside a
+solid one; Gravity rests a faller on whatever it landed on. Neither has any
+opinion about a floor that MOVES.
+
+**Carrying** is the pair that does: one ability for the thing that carries, and
+one for the thing that rides. Neither names the other, so a Hero that rides one
+lift rides every lift.
+
+### What you do
+
+1. Give the Platform **use trait ⟨Carries⟩**.
+2. Give the Hero **use trait ⟨Rides⟩**.
+3. Run it, and do not touch the keys. The Hero goes with the Platform.
+4. Now walk while it moves. You are steering on a moving floor, which is two
+   things happening to one actor and neither of them written by you.
+`.trim(),
+};
+
 // ── place/edges ──────────────────────────────────────────────────────────────
 
 const edges: WorldScenario = {
@@ -3944,6 +4026,7 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'adventure/world': bigWorld,
   'making/read': readRule,
   'making/block': ownBlock,
+  'platformer/ground': movingGround,
 };
 
 /** Every lesson written so far, by the tile it belongs to. */

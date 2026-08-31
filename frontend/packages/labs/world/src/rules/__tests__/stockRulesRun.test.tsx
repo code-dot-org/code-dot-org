@@ -1162,3 +1162,103 @@ describe('what the newer demos show', () => {
     expect(past).toBeLessThan(DEMO_SIZE.width);
   });
 });
+
+describe('Carrying', () => {
+  /**
+   * A platform on a beat with somebody standing on it.
+   *
+   * The rider is given gravity as well, because that is the arrangement the
+   * rule exists for: without it a "rider" is an actor floating at a height
+   * nothing is holding, and the test would pass on a world that could not
+   * happen.
+   */
+  const lift = (riding: boolean) => {
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([
+        rule('rules/motion'),
+        rule('rules/collisions'),
+        rule('rules/solid'),
+        rule('rules/gravity'),
+        rule('rules/patrol'),
+        rule('rules/carry'),
+      ])
+      .instantiate();
+    const platform = new ActorBuilder({id: 'platform', name: 'platform'})
+      .useTraits([
+        of('rules/motion', 'CanMoveTrait'),
+        of('rules/collisions', 'CanCollideTrait'),
+        of('rules/solid', 'SolidTrait'),
+        of('rules/gravity', 'ActsAsGroundTrait'),
+        of('rules/patrol', 'PatrolsAcrossTrait'),
+        of('rules/carry', 'CarriesTrait'),
+      ])
+      .set(PositionProperty, at(160, 200))
+      .instantiate('platform');
+    const rider = new ActorBuilder({id: 'rider', name: 'rider'})
+      .useTraits([
+        of('rules/motion', 'CanMoveTrait'),
+        of('rules/collisions', 'CanCollideTrait'),
+        of('rules/gravity', 'AffectedByGravityTrait'),
+        ...(riding ? [of('rules/carry', 'RidesTrait')] : []),
+      ])
+      // Already resting on it: both boxes default to 32 square, so the rider's
+      // middle sits 32 above the platform's. Dropping it from higher up would
+      // measure the fall as well as the ride — the platform walks on while the
+      // rider is in the air, which is correct and is not what this asserts.
+      .set(PositionProperty, at(160, 168))
+      .instantiate('rider');
+    world.addActor(platform);
+    world.addActor(rider);
+    return {world, platform, rider};
+  };
+  const spot = (actor: unknown) =>
+    (actor as {get(p: unknown): Vector}).get(PositionProperty);
+
+  it('takes the rider with the platform', () => {
+    const {world, platform, rider} = lift(true);
+
+    run(world, 1);
+
+    // The platform has walked its beat and the rider went with it. The gap is
+    // one frame of the platform's travel — a pixel at this speed — because the
+    // carry is measured a frame behind on purpose (see the rule's header). What
+    // matters is that it does not GROW: a second of it is still one frame.
+    expect(spot(platform).x).toBeGreaterThan(180);
+    expect(Math.abs(spot(rider).x - spot(platform).x)).toBeLessThanOrEqual(
+      1.01,
+    );
+  });
+
+  it('does not fall further behind over a longer ride', () => {
+    // The failure a one-frame lag would have if it accumulated: five seconds is
+    // three turns of the beat, and a rider that lost a pixel a frame would be
+    // three hundred behind by the end and off the platform entirely.
+    const {world, platform, rider} = lift(true);
+
+    run(world, 5);
+
+    expect(Math.abs(spot(rider).x - spot(platform).x)).toBeLessThanOrEqual(
+      1.01,
+    );
+  });
+
+  it('leaves it behind without the trait, which is the bug it fixes', () => {
+    const {world, platform, rider} = lift(false);
+
+    run(world, 1);
+
+    expect(spot(platform).x).toBeGreaterThan(180);
+    expect(spot(rider).x).toBeCloseTo(160, 0);
+  });
+
+  it('reports no movement on its first frame', () => {
+    // A carrier that has never measured has nowhere it "was", and the naive
+    // answer — subtracting a zero it was never at — throws every rider the
+    // whole distance from the origin on frame one.
+    const {world, rider} = lift(true);
+
+    world.tick(1 / 60);
+
+    expect(spot(rider).x).toBeCloseTo(160, 0);
+  });
+});

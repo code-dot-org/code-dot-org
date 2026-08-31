@@ -18,6 +18,7 @@ import {cameraConfinedRule} from './cameraConfined';
 import {cameraDeadzoneRule} from './cameraDeadzone';
 import {cameraEaseRule} from './cameraEase';
 import {cameraFollowRule} from './cameraFollow';
+import {carryRule} from './carry';
 import {collectRule} from './collect';
 import {collisionsRule} from './collisions';
 import {conversationRule} from './conversation';
@@ -150,6 +151,15 @@ export const STOCK_RULES: readonly StockRule[] = [
       'Walks an actor out and back on a beat of its own, across or down or both. What an enemy does when the player is not there, and what a moving platform does always.',
     provides: ['Patrols Across', 'Patrols Down'],
     contents: patrolRule,
+  },
+  {
+    id: 'carry',
+    name: 'Carrying',
+    ability: 'Carries What Stands On It',
+    description:
+      'Moves whatever is standing on an actor along with it, however that actor is being moved \u2014 a lift, a raft, a platform on a track. Two abilities: what carries, and what rides.',
+    provides: ['Carries', 'Rides'],
+    contents: carryRule,
   },
   {
     id: 'attachment',
@@ -412,6 +422,7 @@ export {
   jumpRule,
   scoreRule,
   patrolRule,
+  carryRule,
   attachmentRule,
   progressRule,
 };

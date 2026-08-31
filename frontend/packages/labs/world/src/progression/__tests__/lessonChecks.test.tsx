@@ -3666,3 +3666,41 @@ describe('the own-block lesson’s check', () => {
     expect(passes).toBe(false);
   });
 });
+
+describe('the moving-ground lesson’s check', () => {
+  const lesson = LESSONS['platformer/ground'];
+
+  /** The pair, or half of it — which is the lesson. */
+  const carrying = (who: 'both' | 'platform' | 'hero') =>
+    editing(lesson.source, 'main.world', contents => {
+      let workspace = contents;
+      if (who !== 'hero') {
+        workspace = electing(workspace, 'Carrying#CarriesTrait', 'Platform');
+      }
+      if (who !== 'platform') {
+        workspace = electing(workspace, 'Carrying#RidesTrait', 'Hero');
+      }
+      return workspace;
+    });
+
+  it('refuses a platform that slides out from under them', async () => {
+    const {passes} = await check('platformer/ground', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts the pair, one on each side', async () => {
+    const {passes, result} = await check('platformer/ground', carrying('both'));
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  it('refuses a platform that carries nobody', async () => {
+    const {passes} = await check('platformer/ground', carrying('platform'));
+    expect(passes).toBe(false);
+  });
+
+  it('refuses a rider standing on a floor that never said it moves', async () => {
+    const {passes} = await check('platformer/ground', carrying('hero'));
+    expect(passes).toBe(false);
+  });
+});

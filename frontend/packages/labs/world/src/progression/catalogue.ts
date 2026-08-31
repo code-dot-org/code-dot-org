@@ -1284,14 +1284,38 @@ export const TILES: readonly Tile[] = [
     at: at('platformer', 2, 2),
     title: 'Floors that move',
     teaches: 'Something can be solid and still be going somewhere.',
-    task: 'A platform that patrols back and forth, and a player that rides it.',
+    task: 'A platform that walks its beat and leaves the player standing where it was.',
     requires: ['platformer/jump'],
-    unlocks: [{kind: 'rule', id: 'patrol'}],
+    unlocks: [
+      {kind: 'rule', id: 'patrol'},
+      {kind: 'rule', id: 'carry'},
+    ],
     check: {
       kind: 'outcome',
-      says: 'The player standing still travels with the platform.',
+      says: 'The Hero, touching nothing and pressing nothing, ends up where the Platform went.',
       falsePass:
-        'A platform that moves under a player who stays put — the difference is the player’s x, so measure that.',
+        'One half of the pair, which does nothing at all — a platform that carries nobody, or a rider standing on a floor that never said it was going anywhere. The check reads the Hero against the PLATFORM rather than against where it started, so a Hero that moved for some other reason is not a Hero that was carried.',
+      run: {
+        probes: {
+          hero: {kind: 'positions', of: 'Hero'},
+          platform: {kind: 'positions', of: 'Platform'},
+        },
+        trace: Array.from({length: 6}, () => ({seconds: 0.25})),
+      },
+      passes: ({samples}) => {
+        const hero = lastList<{x: number}>(samples.hero)[0]?.x;
+        const platform = lastList<{x: number}>(samples.platform)[0]?.x;
+        const started = 120;
+        return (
+          typeof hero === 'number' &&
+          typeof platform === 'number' &&
+          // It went somewhere…
+          Math.abs(platform - started) > 40 &&
+          // …and the Hero went with it, give or take the frame the carry is
+          // measured behind (`rules/carry`).
+          Math.abs(hero - platform) <= 2
+        );
+      },
     },
   },
   {
