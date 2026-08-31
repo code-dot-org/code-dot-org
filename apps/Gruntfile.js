@@ -9,6 +9,10 @@ var sass = require('sass');
 var envConstants = require('./envConstants');
 const {VALID_KARMA_CLI_FLAGS} = require('./karma.conf');
 var checkEntryPoints = require('./script/checkEntryPoints');
+const {
+  pruneStaleHashedOutput,
+  formatBytes,
+} = require('./script/pruneStaleHashedOutput');
 const {createWebpackConfig} = require('./webpack.config');
 const {ALL_APPS, appsEntriesFor} = require('./webpackEntryPoints');
 
@@ -620,9 +624,28 @@ module.exports = function (grunt) {
     }
   });
 
+  // Deletes bundles and assets left behind by earlier builds, which
+  // otherwise accumulate indefinitely.  See script/pruneStaleHashedOutput.js
+  // for why the two kinds of output are treated differently, and why
+  // subdirectories are only safe to prune ahead of a full production build.
+  grunt.registerTask('prune-stale-hashed-output', function () {
+    const {count, bytes} = pruneStaleHashedOutput(
+      path.resolve(__dirname, 'build/package/js'),
+      {pruneSubdirs: !envConstants.DEV && !SINGLE_APP}
+    );
+    if (count > 0) {
+      grunt.log.writeln(
+        `Pruned ${count} stale hashed build ${
+          count === 1 ? 'file' : 'files'
+        } ` + `(${formatBytes(bytes)}) from build/package/js`
+      );
+    }
+  });
+
   grunt.registerTask('postbuild', ['newer:copy:static', 'newer:sass']);
 
   grunt.registerTask('build', [
+    'prune-stale-hashed-output',
     'prebuild',
     // For any minifiable libs, generate minified sources if they do not already
     // exist in our repo. Skip minification in development environment.
