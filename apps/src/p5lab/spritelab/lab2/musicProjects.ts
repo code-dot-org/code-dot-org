@@ -1,4 +1,4 @@
-import {DEFAULT_PACK} from '@cdo/apps/music/constants';
+import {isOnDefaultPack} from '@cdo/apps/music/utils/pack';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {PLAY_MUSIC_BLOCK_TYPE} from './blockly/blockDefinitions/playMusic';
@@ -29,7 +29,12 @@ export function musicProjectOptions(
   today = new Date()
 ): MusicProjectOption[] {
   return projects
-    .filter(p => p.type === MUSIC_PROJECT_TYPE && p.channel && onDefaultPack(p))
+    .filter(
+      p =>
+        p.type === MUSIC_PROJECT_TYPE &&
+        p.channel &&
+        isOnDefaultPack(p.labConfig)
+    )
     .sort((a, b) => (b.updatedAt || '').localeCompare(a.updatedAt || ''))
     .map(p => ({channel: p.channel, name: songLabel(p, today)}));
 }
@@ -55,12 +60,6 @@ export function withUnavailableSongs(
       .filter(channel => !known.has(channel))
       .map(channel => ({channel, name: '(unavailable)', unavailable: true})),
   ];
-}
-
-// Only songs whose sound pack was left as the default are offered. A song
-// with no pack recorded never settled the choice, so it is not offered.
-function onDefaultPack(project: PersonalProject): boolean {
-  return project.labConfig?.music?.packId === DEFAULT_PACK;
 }
 
 // Music Lab names most songs alike, so the day it was last saved tells them

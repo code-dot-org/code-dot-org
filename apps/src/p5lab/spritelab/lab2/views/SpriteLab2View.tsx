@@ -138,6 +138,9 @@ function getWorldTabEnabledParam() {
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
 const DEFAULT_SCENE_ID = 'scene-1';
 
+// How long workspace injection may wait on a fetched dropdown list.
+const LIST_FETCH_TIMEOUT_MS = 5000;
+
 // Saved sources are migrated in place as they are read (see migrateSources);
 // the next save persists the result.
 function getScenes(sources: Sources): Scene[] {
@@ -488,7 +491,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       Promise.race([
         fetching,
         new Promise<never>((_, reject) =>
-          setTimeout(() => reject(new Error('timeout')), 5000)
+          setTimeout(() => reject(new Error('timeout')), LIST_FETCH_TIMEOUT_MS)
         ),
       ]);
     const externalOptions = async (): Promise<ExternalSceneOption[]> => {
@@ -512,13 +515,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     };
     if (savedExternalKeys.length === 0 && savedSongs.length === 0) {
       setAnimationsSeeded(true);
-      fetchSectionScenes(levelProperties.id, scriptId)
-        .then(refs => {
-          if (!cancelled) {
-            dispatch(setExternalScenes(toExternalSceneOptions(refs)));
-          }
-        })
-        .catch(e => console.warn('section scenes unavailable', e));
+      externalOptions().then(options => {
+        if (!cancelled) {
+          dispatch(setExternalScenes(options));
+        }
+      });
     } else {
       musicSeededRef.current = true;
       Promise.all([externalOptions(), musicOptions()]).then(

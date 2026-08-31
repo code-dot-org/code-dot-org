@@ -1,6 +1,7 @@
 // Client for the experimental cross-project scene APIs (scenes UI variant).
 // See dashboard SpriteLab2Controller.
 
+import {JsonBlockConfig} from '@cdo/apps/blockly/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {ExternalSceneOption} from './redux/spriteLab2Redux';
@@ -89,6 +90,31 @@ export function collectSavedExternalKeys(scenes: Scene[]): string[] {
   );
 }
 
+/** Every block of a serialized workspace: shadows and next chains included. */
+export function forEachSavedBlock(
+  source: unknown,
+  visit: (block: JsonBlockConfig) => void
+): void {
+  const walk = (block?: JsonBlockConfig) => {
+    if (!block) {
+      return;
+    }
+    visit(block);
+    Object.values(block.inputs || {}).forEach(input => {
+      walk(input.block);
+      walk(input.shadow);
+    });
+    if (block.next) {
+      walk(block.next.block);
+      walk(block.next.shadow);
+    }
+  };
+  (
+    (source as {blocks?: {blocks?: JsonBlockConfig[]}} | undefined)?.blocks
+      ?.blocks || []
+  ).forEach(walk);
+}
+
 /** Every non-empty value of `fieldName` on saved blocks of `blockType`. */
 export function collectSavedFieldValues(
   scenes: Scene[],
@@ -96,31 +122,16 @@ export function collectSavedFieldValues(
   fieldName: string
 ): string[] {
   const values = new Set<string>();
-  const walkBlock = (block: {
-    type?: string;
-    fields?: {[name: string]: unknown};
-    inputs?: {[name: string]: {block?: object; shadow?: object}};
-    next?: {block?: object};
-  }) => {
-    if (!block) {
-      return;
-    }
-    if (block.type === blockType) {
+  scenes.forEach(scene =>
+    forEachSavedBlock(scene.source, block => {
+      if (block.type !== blockType) {
+        return;
+      }
       const value = block.fields?.[fieldName];
       if (typeof value === 'string' && value) {
         values.add(value);
       }
-    }
-    Object.values(block.inputs || {}).forEach(input => {
-      walkBlock((input.block || input.shadow) as typeof block);
-    });
-    walkBlock(block.next?.block as typeof block);
-  };
-  scenes.forEach(scene =>
-    (
-      (scene.source as {blocks?: {blocks?: object[]}} | undefined)?.blocks
-        ?.blocks || []
-    ).forEach(block => walkBlock(block as Parameters<typeof walkBlock>[0]))
+    })
   );
   return [...values];
 }
