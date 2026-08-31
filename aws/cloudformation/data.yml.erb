@@ -1,6 +1,4 @@
 <%
-require 'cdo/aws/dms'
-require 'active_support/core_ext/numeric/bytes'
 require 'active_support/core_ext/numeric/time'
 require 'active_support/inflector'
 require 'cdo/redshift'
@@ -13,30 +11,9 @@ Description: Data layer including RedShift cluster configuration and synchroniza
 # redshift_password: abcdef
 # Parameters are only required for initial stack creation, and reused if not provided on stack update.
 Parameters:
-  RDSIdentifier:
-    Type: String
-  # MySQL user must have granted REPLICATION CLIENT and REPLICATION SLAVE
-  # permissions, and must have SELECT permissions on all tables and must have
-  # permissions to connect to the Production Reporting RDS Proxy.
-  # Ref: http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MySQL.html#CHAP_Source.MySQL.Security
-  RDSUsername:
-    Type: String
-  RDSPassword:
-    Type: String
-    NoEcho: true
-  # Typically set to the reader endpoint of the production Aurora MySQL cluster because exports from the production
-  # Reporting RDS Proxy are often interrupted with database connection errors.
-  RDSHost:
-    Type: String
-    Description: Production MySQL database servername to use for exporting data to Redshift.
-  # Typically in the form: `cluster-[random-AWS-assigned-string].[region].rds.amazonaws.com` without leading dot.
-  RDSClusterEndpointRootDomain:
-    Type: String
   ProductionAuroraClusterARN:
     Type: String
     Description: The ARN of the production Aurora cluster so we can authorize it as a Redshift source for Zero-ETL.
-  ReportingCluster:
-    Type: String
   RedshiftDatabase:
     Type: String
     Default: dashboard
@@ -44,13 +21,6 @@ Parameters:
     Type: String
   RedshiftAdminPassword:
     Type: String
-    NoEcho: true
-  RedshiftEtlClientUsername:
-    Type: String
-    Description: Redshift SQL user to execute Extract Transform Load (ETL) processes.
-  RedshiftEtlClientPassword:
-    Type: String
-    Description: Redshift SQL user to execute Extract Transform Load (ETL) processes.
     NoEcho: true
   RDSBackupAccount:
     Type: String
@@ -103,21 +73,6 @@ Resources:
 #            Condition:
 #              ArnEquals:
 #                "redshift:SourceArn": !Ref ProductionAuroraClusterARN
-  DMSReplicationInstance:
-    Type: AWS::DMS::ReplicationInstance
-    Properties:
-      ReplicationInstanceIdentifier: export-mysql-to-redshift
-      AllowMajorVersionUpgrade: true
-      AllocatedStorage: 250
-      EngineVersion: 3.6.1
-      MultiAZ: true
-      PubliclyAccessible: false
-      ReplicationInstanceClass: dms.r5.4xlarge
-      ReplicationSubnetGroupIdentifier: !ImportValue VPC-DMSSubnetGroup
-      VpcSecurityGroupIds: [!ImportValue VPC-DMSSecurityGroup]
-      # This maintenance can interfere with the daily export from MySQL to Redshift which starts at 02:00 UTC, so set it
-      # to start at least 1 hour before the export begins.
-      PreferredMaintenanceWindow: 'Tue:01:00-Tue:01:30'
   # Note that this is an incomplete set of Policies attached to the
   # redshift-s3 Role. The Role itself and other Policies were generated manually
   # in the AWS Console, and we should continue to move these Resources here over time.
@@ -135,131 +90,6 @@ Resources:
             Resource:
               - 'arn:aws:s3:::cdo-data-sharing-internal/*'
               - 'arn:aws:s3:::cdo-data-sharing-internal'
-  MySQLDatabaseSourceEndpoint:
-    Type: AWS::DMS::Endpoint
-    Properties:
-      EndpointIdentifier: !Sub "MySQL-${AWS::StackName}"
-      EndpointType: source
-      EngineName: aurora
-      ServerName: !Ref RDSHost
-      Port: 3306
-      Username: !Ref RDSUsername
-      Password: !Ref RDSPassword
-      MySqlSettings:
-        # Initialize MySQL client to execute SELECT statements without negatively impacting transaction isolation on the
-        # cluster and increase several client connection timeouts to ensure that pauses during the export don't result
-        # in prematurely terminated connections. The first three settings are the same as what the Reporting RDS Proxy uses:
-        # https://github.com/code-dot-org/code-dot-org/blob/5ffbfc6909a6d1b4e97497db247aeb5f1eba0847/aws/cloudformation/components/database.yml.erb#L265
-        # Use extended timeouts (86400s / 24h) to prevent server-side disconnects because the DMS ODBC driver reconnects
-        # without executing the AfterConnectScript.
-        AfterConnectScript:  >-
-          SET SESSION aurora_read_replica_read_committed=ON;
-          SET SESSION transaction_isolation="READ-COMMITTED";
-          SET SESSION max_execution_time = 0;
-          SET SESSION autocommit=1;
-          SET SESSION net_read_timeout=86400;
-          SET SESSION net_write_timeout=86400;
-          SET SESSION wait_timeout = 86400;
-          SET SESSION interactive_timeout = 86400;
-      ExtraConnectionAttributes: ResumeFetchForXRows=0;UnloadTimeout=86400
-  RedshiftEndpoint:
-    Type: AWS::DMS::Endpoint
-    Properties:
-      EndpointIdentifier: !Sub "Redshift-${AWS::StackName}"
-      EndpointType: target
-      EngineName: redshift
-      ServerName: !GetAtt Tableau.Endpoint.Address
-      Port: !GetAtt Tableau.Endpoint.Port
-      Username: !Ref RedshiftEtlClientUsername
-      Password: !Ref RedshiftEtlClientPassword
-      DatabaseName: !Ref RedshiftDatabase
-      # Extra Connection Attributes:
-      # https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html#CHAP_Introduction.ConnectionAttributes.Redshift
-      ExtraConnectionAttributes: <%={
-         # maxFileSize - Specifies the maximum size (in KB) of any CSV file used to transfer data to Amazon Redshift.
-         # Default value: 32768 KB (32 MB)
-         # Valid values: 1 - 1048576
-         # Note: Redshift limit is currently 5 GB according to AWS Support.
-         maxFileSize: 5.gigabytes / 1.kilobyte,
-         # fileTransferUploadStreams - Specifies the number of threads used to upload a single file.
-         # Default value: 10
-         # Valid values: 1 - 64
-         fileTransferUploadStreams: 20,
-         # writeBufferSize - Specifies the size (in KB) of the LOB write buffer.
-         # Giving extra memory can speed up the data load process when you have
-         # large varchar / text / LOB data to be moved to the destination.
-         # Default value: 1000 KB (1 MB)
-         writeBufferSize: 8.megabytes / 1.kilobyte
-      }.map{|x|x.join('=')}.join(';')%>
-<% Cdo::DMS.tasks(aws_dir('dms/tasks.yml')).each do |task_name, table_mappings, schedule| -%>
-  DMS<%=task_name.underscore.camelize%>:
-    Type: AWS::DMS::ReplicationTask
-    Properties:
-      MigrationType: full-load
-      ReplicationInstanceArn: !Ref DMSReplicationInstance
-      ReplicationTaskIdentifier: task-<%= task_name %>
-      SourceEndpointArn: !Ref MySQLDatabaseSourceEndpoint
-      TargetEndpointArn: !Ref RedshiftEndpoint
-      ReplicationTaskSettings: !Sub |
-        <%= YAML.load(erb_file(aws_dir('dms/replication-task-settings.yml.erb'))).to_json %>
-      TableMappings: !Sub |
-          <%= table_mappings.to_json %>
-      Tags:
-        -
-          Key: schedule
-          Value: <%=schedule%>
-<% end -%>
-  DMSS3Role:
-    Type: AWS::IAM::Role
-    Properties:
-      RoleName: DMSS3Role
-      AssumeRolePolicyDocument:
-        Statement:
-          - Effect: Allow
-            Principal: {Service: [dms.amazonaws.com]}
-            Action: 'sts:AssumeRole'
-      Policies:
-        - PolicyName: DMSRolePolicy
-          PolicyDocument:
-            Version: "2012-10-17"
-            Statement:
-              - Effect: Allow
-                Action:
-                  - 's3:PutObject'
-                  - 's3:DeleteObject'
-                  - 's3:PutObjectTagging'
-                  - 's3:ListBucket'
-                Resource: 'arn:aws:s3:::cdo-activities-archive*'
-      PermissionsBoundary: !ImportValue IAM-DevPermissions
-  AuroraS3Role:
-    Type: AWS::IAM::Role
-    Properties:
-      RoleName: AuroraS3Role
-      AssumeRolePolicyDocument:
-        Statement:
-          - Effect: Allow
-            Principal: {Service: [rds.amazonaws.com]}
-            Action: 'sts:AssumeRole'
-      Policies:
-        # SELECT INTO OUTFILE S3 permissions:
-        # https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Integrating.Authorizing.IAM.S3CreatePolicy.html
-        - PolicyName: SelectIntoOutfileS3
-          PolicyDocument:
-            Version: "2012-10-17"
-            Statement:
-              - Effect: Allow
-                Action:
-                  - 's3:AbortMultipartUpload'
-                  - 's3:DeleteObject'
-                  - 's3:GetObject'
-                  - 's3:ListMultipartUploadParts'
-                  - 's3:PutObject'
-                Resource: 'arn:aws:s3:::cdo-activities-archive/*'
-              - Effect: Allow
-                Action:
-                  - 's3:ListBucket'
-                Resource: 'arn:aws:s3:::cdo-activities-archive'
-      PermissionsBoundary: !ImportValue IAM-DevPermissions
 <%
   # Add CloudWatch Logs Metric Filters for RDS Enhanced Monitoring metrics.
   # Ref: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html#w2ab1c20c23c17b7b5
