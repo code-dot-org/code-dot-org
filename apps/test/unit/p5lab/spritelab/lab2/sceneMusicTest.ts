@@ -15,6 +15,8 @@ import SceneMusic from '@cdo/apps/p5lab/spritelab/lab2/sceneMusic';
 function fakes(lastMeasure = 8) {
   const calls: string[] = [];
   let loaded: string | null = null;
+  let failNext: Error | null = null;
+  let metadataChannel: string | null = null;
   const musicPlayer = {
     setLoopStart: (m: number) => calls.push(`loopStart ${m}`),
     setLoopEnd: (m: number) => calls.push(`loopEnd ${m}`),
@@ -25,10 +27,15 @@ function fakes(lastMeasure = 8) {
   const projectPlayer = {
     loadProject: async (channel: string) => {
       calls.push(`load ${channel}`);
+      if (failNext) {
+        const error = failNext;
+        failNext = null;
+        throw error;
+      }
       loaded = channel;
     },
     getMetadata: () => ({
-      channelId: loaded,
+      channelId: metadataChannel ?? loaded,
       playbackEvents: [{}, {}, {}],
       lastMeasure,
     }),
@@ -39,7 +46,12 @@ function fakes(lastMeasure = 8) {
         NonNullable<ConstructorParameters<typeof SceneMusic>[0]>
       >)
   );
-  return {music, calls};
+  return {
+    music,
+    calls,
+    failNextLoad: (error: Error) => (failNext = error),
+    serveMetadataFor: (channel: string) => (metadataChannel = channel),
+  };
 }
 
 describe('SpriteLab2 SceneMusic', () => {
@@ -72,9 +84,31 @@ describe('SpriteLab2 SceneMusic', () => {
     expect(await first).toBe(false);
     expect(await second).toBe(true);
     expect(music.playing).toBe('song-c');
-    // Only the winner plays; the loser was stopped and never started.
-    expect(calls.filter(c => c.startsWith('play')).length).toBe(2);
+    // Loads run one at a time; the superseded request never loads at all.
+    expect(calls.filter(c => c.startsWith('load'))).toEqual([
+      'load song-a',
+      'load song-c',
+    ]);
     expect(calls[calls.length - 1]).toBe('play 3');
+  });
+
+  it('forgets a song whose load failed, so it can be tried again', async () => {
+    const {music, calls, failNextLoad} = fakes();
+    failNextLoad(new Error('sources unavailable'));
+    await expect(music.play('song-a')).rejects.toThrow('sources unavailable');
+    expect(music.playing).toBeNull();
+    expect(await music.play('song-a')).toBe(true);
+    expect(calls.filter(c => c === 'load song-a')).toHaveLength(2);
+  });
+
+  it('plays nothing for a project that would not load', async () => {
+    // Music Lab's loader falls back to its built-in metadata; the mismatched
+    // channel id is how that shows.
+    const {music, calls, serveMetadataFor} = fakes();
+    serveMetadataFor('default-music');
+    expect(await music.play('song-a')).toBe(false);
+    expect(music.playing).toBeNull();
+    expect(calls.some(c => c.startsWith('play'))).toBe(false);
   });
 
   it('stops and forgets the song', async () => {

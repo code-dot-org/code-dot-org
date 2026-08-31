@@ -10,8 +10,10 @@ interface NowPlaying {
 }
 
 /**
- * The game's background music: plays only while `playing`, stops when that
- * ends or the lab unmounts, and plays only a song on the list.
+ * The game's background music: plays only while `playing`, and stops when
+ * that ends or the lab unmounts. Any song a block names may play — a saved
+ * project's music works for whoever can view it, not only its author — and
+ * one that will not load clears quietly.
  */
 export default function useSceneMusic(
   playing: boolean,
@@ -19,14 +21,11 @@ export default function useSceneMusic(
 ) {
   const musicRef = useRef<SceneMusic | null>(null);
   const [nowPlaying, setNowPlaying] = useState<NowPlaying | null>(null);
-  // The engine calls playMusic from a handler wired once; it reads the live
-  // values through refs.
+  // Read through a ref so the callback identity stays stable.
   const playingRef = useRef(playing);
-  const songsRef = useRef(songs);
   useEffect(() => {
     playingRef.current = playing;
-    songsRef.current = songs;
-  }, [playing, songs]);
+  }, [playing]);
 
   useEffect(() => {
     if (!playing) {
@@ -37,9 +36,7 @@ export default function useSceneMusic(
   useEffect(() => () => musicRef.current?.stop(), []);
 
   const playMusic = useCallback((channel: string) => {
-    // An unavailable placeholder, or a song the list never had, plays nothing.
-    const song = songsRef.current.find(p => p.channel === channel);
-    if (!playingRef.current || !song || song.unavailable) {
+    if (!playingRef.current || !channel) {
       return;
     }
     const music = (musicRef.current ||= new SceneMusic());
@@ -50,9 +47,12 @@ export default function useSceneMusic(
     music
       .play(channel)
       .then(started => {
-        if (started) {
-          setNowPlaying({channel, loading: false});
-        }
+        setNowPlaying(current => {
+          if (current?.channel !== channel) {
+            return current;
+          }
+          return started ? {channel, loading: false} : null;
+        });
       })
       .catch(e => {
         console.warn('music could not play', e);

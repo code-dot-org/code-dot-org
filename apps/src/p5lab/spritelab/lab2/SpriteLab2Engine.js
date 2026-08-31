@@ -225,7 +225,6 @@ export default class SpriteLab2Engine extends SpriteLab {
         sprite.velocity.y = up * Math.abs(Number(speed) || 0);
       });
     };
-    // Music is the view's: it owns the player and the Play tab that stops it.
     library.commands.playMusic = channelId => {
       if (channelId && this.onPlayMusic) {
         this.onPlayMusic(String(channelId));
