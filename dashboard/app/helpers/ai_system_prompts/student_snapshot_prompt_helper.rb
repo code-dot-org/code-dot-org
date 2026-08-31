@@ -3,6 +3,10 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
 
   ALPHABET = ('a'..'z').to_a
 
+  # Extensions allowed into the AI prompt for student/exemplar source code.
+  # Images excluded
+  ALLOWED_SOURCE_FILE_EXTENSIONS = %w[.md .txt .py .html .htm .css .scss .js .jsx .ts .tsx .json .java .xml].freeze
+
   LEVEL_TYPE_PROMPTS =
     {
       "LevelGroup" => "Level Group: students interact with a group of levels that all display on a single page",
@@ -354,17 +358,29 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
     end.join("; ")
   end
 
+  def self.allowlist_source_files(source)
+    return nil unless source.is_a?(Hash)
+
+    filtered = source.select do |filename, _contents|
+      filename.is_a?(String) && ALLOWED_SOURCE_FILE_EXTENSIONS.include?(File.extname(filename).downcase)
+    end
+
+    filtered.empty? ? nil : filtered
+  end
+
   def self.get_code_level_info(level, student_id, unit_id)
     exemplar = level.respond_to?(:exemplar_sources) && level.exemplar_sources ? level.exemplar_sources : nil
-    student_code = ApplicationController.helpers.get_student_code(student_id, level, unit_id).to_json
+    student_code_data = ApplicationController.helpers.get_student_code(student_id, level, unit_id) || {}
+    student_code_data[:student_code] = allowlist_source_files(student_code_data[:student_code])
 
     code_data = {
       "Level Long Instructions" => "{#{ActionController::Base.helpers.strip_tags(level.long_instructions)&.gsub(/\s+/, ' ')&.strip || 'No long instructions'}}",
       "Level Short Instructions" => level.short_instructions,
-      "Student Response" => student_code
+      "Student Response" => student_code_data.to_json
     }
 
-    code_data["Level Example Perfect Response"] = exemplar if exemplar
+    filtered_exemplar = allowlist_source_files(exemplar)
+    code_data["Level Example Perfect Response"] = filtered_exemplar if filtered_exemplar
     code_data
   end
 
@@ -375,7 +391,8 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
     return {} unless user_level_interactions.any?
 
     return user_level_interactions.map do |interaction|
-      version_code = ApplicationController.helpers.get_student_code(student_id, level, unit_id, interaction.code_version)
+      version_code = ApplicationController.helpers.get_student_code(student_id, level, unit_id, interaction.code_version) || {}
+      version_code[:student_code] = allowlist_source_files(version_code[:student_code])
 
       "#{interaction.created_at.strftime('%Y-%m-%d %H:%M:%S')} - #{interaction.interaction}: #{version_code.to_json}"
     end
