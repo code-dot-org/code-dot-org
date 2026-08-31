@@ -27,11 +27,50 @@ export function sanitizeImageName(raw: string): string {
     .slice(0, IMAGE_NAME_MAX_LENGTH);
 }
 
+// The field names that hold image references, across both block-definition
+// systems: the costumePicker/backgroundPicker args of the GamelabJr and
+// GameDev pool blocks, and the lab's own JSON definitions
+// (imagePickerFields.ts). Only these fields are cascaded through — a
+// dropdown elsewhere can hold a keyword (a key name, a comparison) that
+// happens to collide with an image's name.
+const IMAGE_FIELD_NAMES = new Set([
+  'ANIMATION',
+  'ANIMATION_NAME',
+  'COSTUME',
+  'GROUP',
+  'IMG',
+  'SPRITE1COSTUME',
+  'SPRITE2COSTUME',
+  'SPRITE3COSTUME',
+  'TARGET',
+]);
+
 // A picker field's saved value is its XML element, `<field name="X">"cat"
 // </field>`, once the scene has been through a workspace; a value written
 // straight to JSON is the bare quoted name. Compare and rewrite the text
 // inside, whichever form it is in.
 const FIELD_ELEMENT = /^(<field\b[^>]*>)([\s\S]*)(<\/field>)$/;
+
+// The XML form escapes the element's text, so comparisons and rewrites work
+// on the unescaped name: "cats & dogs" is stored as `"cats &amp; dogs"`.
+// The serializer escapes only & < > in text; quotes never occur in names
+// (sanitizeImageName drops them).
+const XML_ENTITIES: Record<string, string> = {
+  amp: '&',
+  lt: '<',
+  gt: '>',
+  quot: '"',
+  apos: "'",
+};
+
+const decodeXmlText = (text: string): string =>
+  text.replace(
+    /&(amp|lt|gt|quot|apos);/g,
+    (_, entity: string) => XML_ENTITIES[entity]
+  );
+
+const encodeXmlText = (text: string): string =>
+  text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 // Fields also hold numbers and variable descriptors; only strings can name
 // an image.
@@ -40,12 +79,12 @@ function fieldValueText(value: unknown): unknown {
     return value;
   }
   const match = FIELD_ELEMENT.exec(value);
-  return match ? match[2] : value;
+  return match ? decodeXmlText(match[2]) : value;
 }
 
 function withFieldValueText(value: string, text: string): string {
   const match = FIELD_ELEMENT.exec(value);
-  return match ? `${match[1]}${text}${match[3]}` : text;
+  return match ? `${match[1]}${encodeXmlText(text)}${match[3]}` : text;
 }
 
 // Visit a block and every block nested in its inputs, shadows and next chain.
@@ -77,11 +116,8 @@ function renameInBlock(
 ): void {
   forEachBlock(block, ({fields}) => {
     for (const [name, value] of Object.entries(fields || {})) {
-      // The quoted form identifies image references; plain text fields are
-      // unquoted. TEXT is skipped anyway in case a student typed a quoted
-      // name verbatim.
       if (
-        name !== 'TEXT' &&
+        IMAGE_FIELD_NAMES.has(name) &&
         typeof value === 'string' &&
         fieldValueText(value) === oldQuoted
       ) {
@@ -164,7 +200,7 @@ export function renameImageReferencesOnWorkspace(
 function removeInBlock(block: JsonBlockConfig, quoted: string): void {
   forEachBlock(block, ({fields}) => {
     for (const [name, value] of Object.entries(fields || {})) {
-      if (name !== 'TEXT' && fieldValueText(value) === quoted) {
+      if (IMAGE_FIELD_NAMES.has(name) && fieldValueText(value) === quoted) {
         // With no stored value the picker loads its first option, so the
         // block visibly points at another image rather than a ghost.
         delete fields![name];

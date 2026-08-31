@@ -30,7 +30,7 @@ describe('renameImageReferences', () => {
           inputs: {
             LOCATION: {block: {type: 'x', fields: {COSTUME: '"cat"'}}},
           },
-          next: {block: {type: 'y', fields: {BACKGROUND: '"cat"'}}},
+          next: {block: {type: 'y', fields: {IMG: '"cat"'}}},
         },
       ]),
       scenes: [
@@ -45,25 +45,29 @@ describe('renameImageReferences', () => {
     const top = blocksOf(out.source)[0];
     expect(top.fields).toEqual({ANIMATION: '"tiger"'});
     expect(top.inputs!.LOCATION.block.fields).toEqual({COSTUME: '"tiger"'});
-    expect(top.next!.block.fields).toEqual({BACKGROUND: '"tiger"'});
+    expect(top.next!.block.fields).toEqual({IMG: '"tiger"'});
     const scene = blocksOf(out.scenes![0].source)[0];
     expect(scene.fields).toEqual({ANIMATION: '"tiger"'});
   });
 
-  it('leaves TEXT fields and other names alone', () => {
+  it('leaves non-picker fields and other names alone', () => {
     const sources: Sources = {
       source: workspaceWith([
-        {type: 'text', fields: {TEXT: '"cat"'}},
-        {type: 'a', fields: {ANIMATION: '"catalog"'}},
-        {type: 'b', fields: {ANIMATION: 'cat'}},
+        {type: 'text', fields: {TEXT: '"up"'}},
+        // Dropdowns elsewhere store quoted keywords too; an image named
+        // after one must not rewrite them.
+        {type: 'k', fields: {DIRECTION: '"up"', KEY: 'up'}},
+        {type: 'a', fields: {ANIMATION: '"upland"'}},
+        {type: 'b', fields: {ANIMATION: 'up'}},
       ]),
     };
-    const out = renameImageReferences(sources, 'cat', 'tiger');
+    const out = renameImageReferences(sources, 'up', 'down');
     const blocks = blocksOf(out.source);
-    expect(blocks[0].fields).toEqual({TEXT: '"cat"'});
-    expect(blocks[1].fields).toEqual({ANIMATION: '"catalog"'});
+    expect(blocks[0].fields).toEqual({TEXT: '"up"'});
+    expect(blocks[1].fields).toEqual({DIRECTION: '"up"', KEY: 'up'});
+    expect(blocks[2].fields).toEqual({ANIMATION: '"upland"'});
     // Unquoted values are not image references.
-    expect(blocks[2].fields).toEqual({ANIMATION: 'cat'});
+    expect(blocks[3].fields).toEqual({ANIMATION: 'up'});
   });
 
   it('renames world grid cells and does not mutate the input', () => {
@@ -213,5 +217,31 @@ describe('SpriteLab2 removeImageReferences', () => {
     expect(
       blocksOf(renameImageReferences(src, 'wizard', 'mage'))[1].fields
     ).toEqual({ANIMATION_NAME: '<field name="ANIMATION_NAME">"mage"</field>'});
+  });
+
+  it('matches and writes XML-escaped names', () => {
+    const wrapped = '<field name="ANIMATION_NAME">"cats &amp; dogs"</field>';
+    const src = {
+      source: {
+        blocks: {
+          blocks: [
+            {type: 'a', fields: {ANIMATION_NAME: wrapped}},
+            {type: 'b', fields: {ANIMATION_NAME: wrapped}},
+          ],
+        },
+      },
+    } as unknown as Parameters<typeof removeImageReferences>[0];
+    type Loose = {fields?: Record<string, string>};
+    const blocksOf = (out: typeof src) =>
+      (out.source as unknown as {blocks: {blocks: Loose[]}}).blocks.blocks;
+    expect(
+      blocksOf(removeImageReferences(src, 'cats & dogs'))[0].fields
+    ).toEqual({});
+    expect(
+      blocksOf(renameImageReferences(src, 'cats & dogs', 'cats < dogs'))[1]
+        .fields
+    ).toEqual({
+      ANIMATION_NAME: '<field name="ANIMATION_NAME">"cats &lt; dogs"</field>',
+    });
   });
 });
