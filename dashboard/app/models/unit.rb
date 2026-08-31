@@ -161,6 +161,7 @@ class Unit < ApplicationRecord
   # Unit 2 was rebuilt in Web Lab 2 but whose curriculum never asks students to
   # use the tutor: teachers were being told the course cannot be completed
   # without AI chat tools.
+  # web-development-2026 is the standalone version of the same unit.
   #
   # A unit named here reports AVAILABLE rather than ESSENTIAL, which quiets the
   # alerts that state the stronger claim. It does not change what students and
@@ -172,6 +173,7 @@ class Unit < ApplicationRecord
   # Web Lab 2 level say whether its tutor is essential, makes the list unnecessary.
   NAMES_EXEMPT_FROM_ESSENTIAL_AI_CHAT_TOOLS = %w(
     csd2-2026
+    web-development-2026
   ).freeze
 
   # Every caller reaches this through Unit#requires_ai_chat_tools? or
