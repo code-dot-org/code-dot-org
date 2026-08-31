@@ -3,12 +3,7 @@ class QuizAttemptsController < ApplicationController
 
   # GET /quiz_attempts?levelId=&unitId=&userId=
   #
-  # Read-only check for an existing attempt - unlike #create, this never
-  # creates one. Quiz.tsx needs this to decide whether to show the intro
-  # screen (no attempt yet) or resume/show results (one already exists)
-  # without the side effect of stamping started_at just from loading the
-  # page - that timestamp should reflect clicking "Begin Quiz", not
-  # whenever the intro screen happened to render.
+  # Read-only check for an existing attempt.
   def index
     viewed_user = current_user
     if params[:userId].present?
@@ -22,14 +17,7 @@ class QuizAttemptsController < ApplicationController
   end
 
   # Starts, resumes, or retakes this user's attempt at a quiz level within a
-  # unit, depending on the latest existing attempt (if any):
-  #   - none yet, or the latest is submitted and Quiz#retakeable? allows
-  #     another one -> create a new attempt (attempt_number + 1)
-  #   - latest is still in progress, or retakes aren't allowed/exhausted ->
-  #     return that same attempt unchanged
-  # Reports submittedAt/score/canRetake so the frontend can restore a
-  # completed quiz's result (and offer a retake, if any are left) on reload
-  # instead of re-showing an editable form.
+  # unit, depending on the latest existing attempt (if any).
   def create
     # The level must be a Quiz, and that Quiz must actually appear in the given unit.
     # Uniqueness is (user, level, unit, attempt_number).
@@ -37,19 +25,24 @@ class QuizAttemptsController < ApplicationController
     unit = Unit.find(params[:unitId])
     raise ActiveRecord::RecordNotFound unless level.script_levels.exists?(script_id: unit.id)
 
-    latest = latest_attempt(level.id, unit.id)
-    attempt =
-      if latest.nil? || latest.retakeable?
-        QuizAttempt.create!(
-          user: current_user,
-          level: level,
-          unit: unit,
-          attempt_number: (latest&.attempt_number || 0) + 1,
-          started_at: Time.now
-        )
-      else
-        latest
-      end
+    # Locks on current_user, not the attempt - there's no QuizAttempt row to
+    # lock the first time through.
+    attempt = nil
+    current_user.with_lock do
+      latest = latest_attempt(level.id, unit.id)
+      attempt =
+        if latest.nil? || latest.retakeable?
+          QuizAttempt.create!(
+            user: current_user,
+            level: level,
+            unit: unit,
+            attempt_number: (latest&.attempt_number || 0) + 1,
+            started_at: Time.now
+          )
+        else
+          latest
+        end
+    end
 
     render status: :created, json: quiz_attempt_json(attempt)
   rescue StandardError => exception
@@ -57,12 +50,7 @@ class QuizAttemptsController < ApplicationController
   end
 
   # P0: finalizes the attempt - one submit for the whole quiz, not per
-  # question. score/max_score only sum auto-graded responses; ungraded
-  # responses (e.g. free response) don't count until manual/AI grading
-  # exists. Once submitted, an attempt is immutable - this returns its
-  # existing result rather than re-scoring. A retake (see Quiz#retakeable?)
-  # mints a brand new attempt row (attempt_number + 1) instead of reopening
-  # this one, so allow_multiple_attempts doesn't conflict with that.
+  # question. score/max_score only sum auto-graded responses.
   def update
     attempt = QuizAttempt.find(params[:id])
     raise ActiveRecord::RecordNotFound unless attempt.user_id == current_user.id
