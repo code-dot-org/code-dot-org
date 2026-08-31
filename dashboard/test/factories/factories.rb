@@ -721,6 +721,25 @@ FactoryBot.define do
       end
     end
 
+    trait :with_classlink_authentication_option do
+      after(:create) do |user, evaluator|
+        create(
+          :authentication_option,
+          user: user,
+          email: user.email,
+          hashed_email: user.hashed_email,
+          credential_type: AuthenticationOption::CLASSLINK,
+          # v1-style id: ClassLink's internal UserId, a plain integer string
+          authentication_id: rand(10_000_000..99_999_999).to_s,
+          version: evaluator.auth_option_version,
+          data: {
+            oauth_token: 'some-classlink-token'
+          }.to_json
+        )
+        user.reload
+      end
+    end
+
     trait :with_lti_authentication_option do
       after(:create) do |user|
         create(:lti_authentication_option, user: user)
