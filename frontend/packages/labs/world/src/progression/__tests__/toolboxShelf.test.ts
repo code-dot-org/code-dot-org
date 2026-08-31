@@ -103,6 +103,12 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   'platformer/jump': ['world_use_trait'],
   'platformer/pickups': ['world_use_trait', 'world_print'],
   'platformer/hazards': ['world_use_trait', 'world_print'],
+  'platformer/level': [
+    'controls_if',
+    'world_is_a',
+    'world_event_actor',
+    'world_print',
+  ],
 };
 
 /** Every tile on the shortest way to this one, itself excluded. */

@@ -12,12 +12,12 @@
 // Blockly JSON behind them. So `catalogue.ts` stays data about tiles, and the
 // projects live here, looked up by tile id.
 //
-// Thirty-four of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md
+// Thirty-five of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md
 // and then some. ALL SIX FOUNDATIONS are written — Origin, Input, Motion,
 // Logic, Memory, Look and Place — so every genre gate on the map is open, and
-// the first hours of the progression can be walked end to end. Three of
-// Platformer's five are written after them; `platformer/ground` waits on the
-// engine (specs/PROGRESSION.md, "Carrying").
+// the first hours of the progression can be walked end to end. Platformer is
+// written after them but for one tile: `platformer/ground` waits on the engine
+// (specs/PROGRESSION.md, "Carrying").
 
 import {
   actorFile,
@@ -1585,6 +1585,125 @@ anything.
 `.trim(),
 };
 
+// ── platformer/level ─────────────────────────────────────────────────────────
+
+const level: WorldScenario = {
+  name: 'A level',
+  description:
+    'Everything from the last four lessons in one world, and nothing to reach.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      tiles: [20, 10],
+      rows: [
+        declareProperty('boolean', 'won', 'false'),
+        createInMap(local('ground'), floorAcross(20)),
+        addActor(local('coin'), [placeAt(150, 272)]),
+        addActor(local('coin'), [placeAt(250, 272)]),
+        addActor(local('spike'), [placeAt(360, 272)]),
+        addActor(local('flag'), [placeAt(560, 272)]),
+        addActor(local('hero'), [
+          placeAt(40, 272),
+          {
+            type: 'world_set_ArrowKeys_AcrossSpeedProperty',
+            inputs: {ACTOR: me(), VALUE: num(6)},
+          },
+        ]),
+        chaseCamera('hero'),
+        {type: 'world_use_camera', fields: {CAMERA: 'camera:chase'}},
+      ],
+      actors: [
+        {
+          id: 'hero',
+          name: 'Hero',
+          rows: [
+            useTrait('Gravity#AffectedByGravityTrait'),
+            useTrait('Arrow Keys#MovesAcrossTrait'),
+            useTrait('Collisions#CanCollideTrait'),
+            useTrait('Collection#CollectsTrait'),
+            useTrait('Health#HasHealthTrait'),
+            // …and it stays in the room, which `place/edges` is for.
+            useTrait('Boundaries#StaysAcrossTrait'),
+            setSprite('player.png'),
+          ],
+        },
+        {
+          id: 'coin',
+          name: 'Coin',
+          rows: [
+            useTrait('Collisions#CanCollideTrait'),
+            useTrait('Collection#CanBeCollectedTrait'),
+            setSprite('coin.png'),
+          ],
+        },
+        {
+          id: 'spike',
+          name: 'Spike',
+          rows: [
+            useTrait('Collisions#CanCollideTrait'),
+            useTrait('Health#DealsDamageTrait'),
+            setSprite('box.png'),
+          ],
+        },
+        {
+          id: 'flag',
+          name: 'Flag',
+          rows: [useTrait('Collisions#CanCollideTrait'), setSprite('ball.png')],
+        },
+        {
+          id: 'ground',
+          name: 'Ground',
+          rows: [
+            useTrait('Gravity#ActsAsGroundTrait'),
+            setSprite('ground.png'),
+          ],
+        },
+      ],
+    }),
+    sprites: ['player', 'coin', 'box', 'ball', 'ground'],
+    rules: [
+      'gravity',
+      'arrows',
+      'collisions',
+      'solid',
+      'collect',
+      'health',
+      'bounds',
+      'camera',
+      'cameraFollow',
+      'cameraConfined',
+    ],
+  }),
+  instructions: `
+## A level
+
+A room two screens wide with a floor, a camera that follows, two coins to take,
+a Spike that hurts, and a Flag at the far end. Every piece of it is a lesson you
+have already done.
+
+Walk to the Flag. Nothing happens — and nothing should, because a Flag is an
+actor like the Coins and the Spike, and nothing has said what reaching it
+MEANS.
+
+That is the last thing a level needs: a **state** that says which part of the
+game you are in. It belongs to the world rather than to the Hero or the Flag,
+because it is not a fact about either of them.
+
+### What you do
+
+1. At the top of \`main.world\` there is **define boolean won with default
+   false**, and nothing sets it.
+2. Add **when ⟨any Hero⟩ starts touching**, and inside it ask
+   **if ⟨event actor⟩ is a ⟨Flag⟩** — the same question the Ball asked about
+   Coins and Spikes.
+3. Set **won** to true in there, and print something.
+4. Run it and walk the whole level. Take the coins: nothing. Walk into the
+   Spike: nothing but hurt. Reach the Flag: won.
+5. Add **when ⟨any Hero⟩ dies → print ⟨"game over"⟩**. A level has two ends
+   now, and the world knows which one it reached.
+`.trim(),
+};
+
 // ── place/edges ──────────────────────────────────────────────────────────────
 
 const edges: WorldScenario = {
@@ -1955,6 +2074,7 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'platformer/jump': jump,
   'platformer/pickups': pickups,
   'platformer/hazards': hazards,
+  'platformer/level': level,
 };
 
 /** Every lesson written so far, by the tile it belongs to. */

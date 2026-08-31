@@ -1386,7 +1386,7 @@ export const TILES: readonly Tile[] = [
     title: 'A level',
     teaches:
       'A start, a route, an end — and the state that says which you are in.',
-    task: 'Put it together: a map, a camera, hazards, coins, and somewhere to be trying to get to.',
+    task: 'Everything from the last four lessons in one room, and a Flag that means nothing. Make reaching it mean something.',
     requires: ['platformer/pickups', 'platformer/hazards'],
     unlocks: [
       {kind: 'template', id: 'platformer'},
@@ -1396,11 +1396,40 @@ export const TILES: readonly Tile[] = [
       // before this one were for.
       {kind: 'actor', id: 'player'},
     ],
+    // The question this lesson turns on is Logic's, and Platformer is entered
+    // from Input and Motion — so a learner can arrive here without ever having
+    // been told what `if` is. The lesson teaches none of it; it borrows it, and
+    // says where it came from.
+    offers: [
+      {kind: 'block', type: 'controls_if'},
+      {kind: 'block', type: 'world_is_a'},
+      {kind: 'block', type: 'world_event_actor'},
+      {kind: 'block', type: 'logic_boolean'},
+    ],
     check: {
       kind: 'outcome',
-      says: 'A scripted run reaches the goal and enters the win state; a run into a spike does not.',
+      says: 'One run right: the coins go, the Spike hurts, and the world is won only once the Flag is reached.',
       falsePass:
-        'A win that fires on any collision. The losing run is what tells them apart.',
+        'A win that fires on any touch, which is true the moment the first Coin is taken — so the check reads `won` all the way along rather than at the end. The run takes two coins and a hit before it reaches the Flag, and every one of those has to leave the world unwon.',
+      run: {
+        probes: {
+          won: {kind: 'worldProperty', path: 'My_World.won'},
+          hero: {kind: 'positions', of: 'Hero'},
+        },
+        trace: Array.from({length: 12}, () => ({
+          hold: ['ArrowRight'],
+          seconds: 0.3,
+        })),
+      },
+      passes: ({samples}) => {
+        const won = (samples.won ?? []).map(value => value === true);
+        const x = (samples.hero ?? []).map(
+          sample => (sample as {x: number}[])[0]?.x ?? 0,
+        );
+        // Unwon everywhere short of the Flag, and won by the end of the run.
+        const early = won.every((yes, index) => !yes || x[index] > 500);
+        return early && won[won.length - 1] === true;
+      },
     },
   },
 

@@ -1975,3 +1975,66 @@ describe('the hazards lesson’s check', () => {
     expect(passes).toBe(false);
   });
 });
+
+describe('the level lesson’s check', () => {
+  const lesson = LESSONS['platformer/level'];
+
+  /** `when ⟨any Hero⟩ starts touching → …`, with or without the question. */
+  const winning = (asking: boolean) =>
+    editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const win: Row = {
+        type: 'world_set_WorldsMain_WonProperty',
+        inputs: {
+          VALUE: {block: {type: 'logic_boolean', fields: {BOOL: 'TRUE'}}},
+        },
+      };
+      workspace.blocks.blocks.push({
+        type: 'world_on_Collisions_StartsTouchingEvent',
+        x: 700,
+        y: 20,
+        fields: {FILTER0: ''},
+        inputs: {
+          ACTOR: {
+            block: {type: 'world_actor_kind', fields: {ACTOR: local('hero')}},
+          },
+        },
+        next: {
+          block: asking
+            ? {
+                type: 'controls_if',
+                inputs: {
+                  IF0: {
+                    block: {
+                      type: 'world_is_a',
+                      fields: {TYPE: local('flag')},
+                      inputs: {ACTOR: {block: {type: 'world_event_actor'}}},
+                    },
+                  },
+                  DO0: {block: win},
+                },
+              }
+            : win,
+        },
+      } as unknown as Row);
+      return JSON.stringify(workspace);
+    });
+
+  it('refuses a Flag that means nothing', async () => {
+    const {passes} = await check('platformer/level', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts a win that asks what it touched', async () => {
+    const {passes, result} = await check('platformer/level', winning(true));
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  // The false pass the tile was written against: a win on any touch is true
+  // from the first Coin, which is a level you cannot lose and cannot play.
+  it('refuses a win that fires on any touch', async () => {
+    const {passes} = await check('platformer/level', winning(false));
+    expect(passes).toBe(false);
+  });
+});
