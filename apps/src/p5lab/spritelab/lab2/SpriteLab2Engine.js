@@ -504,12 +504,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     // Preload images added since the initial execute() — the costume/
     // background commands silently no-op on unknown names. Already-loaded
     // entries are skipped and trims are cached, so re-runs are cheap.
-    await this.p5Wrapper.preloadSpriteImages(
-      await trimAnimationListImages(
-        loadedAnimations(
-          this.preloadAnimationsOverride || getStore().getState().animationList
-        )
-      )
+    await this.preloadTrimmedImages_(
+      this.preloadAnimationsOverride || getStore().getState().animationList
     );
     p5.allSprites.removeSprites();
     // removeSprites destroyed the edge sprites too; clear the handle so the
@@ -548,6 +544,8 @@ export default class SpriteLab2Engine extends SpriteLab {
   destroy() {
     this.reset();
     this.stopTickTimer();
+    this.lateImagesUnsubscribe_?.();
+    this.lateImagesUnsubscribe_ = null;
   }
 
   // Backgrounds come from the Items tab, not backgrounds.json — and the base
@@ -560,39 +558,77 @@ export default class SpriteLab2Engine extends SpriteLab {
   /**
    * Wait for the project's images, but not forever: the store never marks an
    * image whose fetch failed, so after the grace period the run goes ahead
-   * with what has loaded.
+   * with what has loaded. The costume commands will have no-op'd on the
+   * missing names by then, so if the stragglers do arrive later, one re-run
+   * picks them up.
    */
-  async whenAnimationsAreReadyOrGivenUp_() {
-    let timer;
-    const gaveUp = await Promise.race([
-      this.whenAnimationsAreReady().then(() => false),
-      new Promise(resolve => {
-        timer = setTimeout(() => resolve(true), IMAGE_LOAD_GRACE_MS);
-      }),
-    ]);
-    clearTimeout(timer);
-    if (gaveUp) {
-      const list = getStore().getState().animationList;
-      const pending = list.orderedKeys
-        .filter(key => !list.propsByKey[key]?.loadedFromSource)
-        .map(key => list.propsByKey[key]?.name || key);
-      console.warn(
-        `SpriteLab2: ${pending.join(', ')} did not load within ` +
-          `${IMAGE_LOAD_GRACE_MS / 1000}s; running without ` +
-          `${pending.length === 1 ? 'it' : 'them'}. Check the Network tab ` +
-          'for failing asset requests.'
-      );
+  whenAnimationsAreReadyOrGivenUp_() {
+    if (this.areAnimationsReady_()) {
+      return Promise.resolve();
     }
+    return new Promise(resolve => {
+      const finish = () => {
+        clearTimeout(timer);
+        unsubscribe();
+        resolve();
+      };
+      const unsubscribe = getStore().subscribe(() => {
+        if (this.areAnimationsReady_()) {
+          finish();
+        }
+      });
+      const timer = setTimeout(() => {
+        finish();
+        this.onImageLoadGiveUp_();
+      }, IMAGE_LOAD_GRACE_MS);
+    });
   }
 
-  // Base preloadSpriteImages_ with costume border-trimming (imageTrim.ts);
-  // an image with no data would only make p5 log an error.
+  // After a give-up: say what is still missing, and re-run once if it ever
+  // arrives (the images loaded then, so the re-run is clean).
+  onImageLoadGiveUp_() {
+    if (this.areAnimationsReady_()) {
+      // Ready and timed out in the same tick; nothing is missing.
+      return;
+    }
+    const list = getStore().getState().animationList;
+    const pending = list.orderedKeys
+      .filter(key => !list.propsByKey[key]?.loadedFromSource)
+      .map(key => list.propsByKey[key]?.name || key);
+    console.warn(
+      `SpriteLab2: ${pending.join(', ')} did not load within ` +
+        `${IMAGE_LOAD_GRACE_MS / 1000}s; running without ` +
+        `${pending.length === 1 ? 'it' : 'them'}. Check the Network tab ` +
+        'for failing asset requests.'
+    );
+    this.lateImagesUnsubscribe_?.();
+    this.lateImagesUnsubscribe_ = getStore().subscribe(() => {
+      if (!this.areAnimationsReady_()) {
+        return;
+      }
+      this.lateImagesUnsubscribe_();
+      this.lateImagesUnsubscribe_ = null;
+      // Only a live run restarts itself; a stopped one preloads the images
+      // on its next run anyway.
+      if (this.isTickTimerRunning()) {
+        this.rerun();
+      }
+    });
+  }
+
+  // Base preloadSpriteImages_ with costume border-trimming (imageTrim.ts).
   async preloadTrimmedSpriteImages_() {
     await this.whenAnimationsAreReadyOrGivenUp_();
+    return this.preloadTrimmedImages_(getStore().getState().animationList);
+  }
+
+  // Trim, then preload. The trimmer sees the full list — it also purges
+  // cached trims for names absent from it, and a name whose data merely has
+  // not arrived is not absent. Only images with data are preloaded; one
+  // without would just make p5 log an error.
+  async preloadTrimmedImages_(animationList) {
     return this.p5Wrapper.preloadSpriteImages(
-      await trimAnimationListImages(
-        loadedAnimations(getStore().getState().animationList)
-      )
+      loadedAnimations(await trimAnimationListImages(animationList))
     );
   }
 
