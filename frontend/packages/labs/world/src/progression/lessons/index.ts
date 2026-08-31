@@ -12,7 +12,7 @@
 // Blockly JSON behind them. So `catalogue.ts` stays data about tiles, and the
 // projects live here, looked up by tile id.
 //
-// Fifty-four of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md
+// Fifty-five of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md
 // and then some. ALL SIX FOUNDATIONS are written — Origin, Input, Motion, Logic,
 // Memory, Look and Place — so every genre gate on the map is open, and the
 // first hours of the progression can be walked end to end. ARCADE is written
@@ -3179,6 +3179,109 @@ other.
 `.trim(),
 };
 
+// ── making/behavior ──────────────────────────────────────────────────────────
+
+/** The bob written out by hand, which both actors have a copy of. */
+const bobStep = () => ({
+  type: 'world_trait_step',
+  fields: {PHASE: 'move', NAME: 'bob'},
+  inputs: {
+    DO: {
+      block: {
+        type: 'world_set_position',
+        inputs: {
+          ACTOR: me(),
+          X: heldPosition('x'),
+          Y: {
+            block: {
+              type: 'math_arithmetic',
+              fields: {OP: 'ADD'},
+              inputs: {
+                A: heldPosition('y'),
+                B: {
+                  block: {
+                    type: 'math_single',
+                    fields: {OP: 'SIN'},
+                    inputs: {
+                      NUM: {
+                        block: {
+                          type: 'math_arithmetic',
+                          fields: {OP: 'MULTIPLY'},
+                          inputs: {
+                            A: {block: {type: 'world_time'}},
+                            // Radians a second: a whole cycle every second or
+                            // so, which makes the sum of the steps a bob
+                            // rather than a walk.
+                            B: num(6),
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+});
+
+const behaviour: WorldScenario = {
+  levelData: {showFileBrowser: true},
+  name: 'Shared, without the ceremony',
+  description: 'Two actors doing the same thing, written out twice.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        addActor(local('fish'), [placeAt(100, 160)]),
+        addActor(local('bird'), [placeAt(220, 160)]),
+      ],
+      actors: [
+        {
+          id: 'fish',
+          name: 'Fish',
+          rows: [setSprite('coin.png'), bobStep()],
+        },
+        {
+          id: 'bird',
+          name: 'Bird',
+          rows: [setSprite('ball.png'), bobStep()],
+        },
+      ],
+    }),
+    sprites: ['coin', 'ball'],
+  }),
+  instructions: `
+## Shared, without the ceremony
+
+A Fish and a Bird, both bobbing, and the bob is written twice — once in each
+\`define actor\`. Change your mind about how it should feel and you have two
+places to change, and a third the day something else bobs.
+
+You could make it a rule: a file, a \`define rule\`, a \`define trait\` inside it,
+and then elect the trait. For gravity that ceremony is worth it — several kinds
+share it, other rules depend on it, a world can be asked about it. For "bob up
+and down" it is a lot.
+
+A **behavior** is the middle: shared, without being a rule about it. It is one
+file, one hat, and what follows the hat is what runs.
+
+### What you do
+
+1. Make a new file, \`rules/bob.behavior\`, with **define behavior named ⟨Bob⟩**
+   at the top.
+2. Move the bobbing under it — the hat IS the step, so there is no
+   \`each frame\` inside it.
+3. Take the \`each frame\` out of both actors and give each
+   **use trait ⟨Bob⟩** instead. They take it exactly the way they would take a
+   rule's, because underneath it IS one, with a single trait of the same name.
+4. Change the bob once. Both change.
+`.trim(),
+};
+
 // ── place/edges ──────────────────────────────────────────────────────────────
 
 const edges: WorldScenario = {
@@ -3569,6 +3672,7 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'adventure/errand': errand,
   'making/change': changeRule,
   'making/trait': ownTrait,
+  'making/behavior': behaviour,
 };
 
 /** Every lesson written so far, by the tile it belongs to. */

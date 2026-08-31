@@ -532,7 +532,7 @@ anything depends on it.
    its own module. A check tested against a different runner from the one that
    judges a learner is a check nobody has tested.
 
-   **Every authored lesson has a check** — fifty-four of the sixty-seven tiles
+   **Every authored lesson has a check** — fifty-five of the sixty-seven tiles
    at the time of writing — and every one is tested in both directions: it refuses the starter the lesson ships with AND accepts a
    project where the lesson has been done, which no amount of refusing proves on
    its own. Three also have a HALFWAY case, because a check that stops at the
@@ -639,7 +639,7 @@ trait` opens the rule behind the trait; the rule count on `define world`
    ways in were built for a level that hides the browser, and this is the first
    thing that has used them at scale.
 
-   **Five lessons keep the browser, and each earns it.**
+   **Six lessons keep the browser, and each earns it.**
 
    `look/sprite` is "a picture is a file", and its third step opens the picture
    and paints on it. A `.png` opens by being opened: there is no eye on `set
@@ -654,7 +654,7 @@ sprite` the way there is on `use trait`, so with no list there is no way in.
    [own-property scope](PROGRESSION.md#own-property-scope); if it is ever
    closed, that lesson can be one file like the rest.
 
-   The three Making lessons need no argument: a Making lesson is spent inside a
+   The four Making lessons need no argument: a Making lesson is spent inside a
    `.rule`, and a rule is a file.
 
    Each says so where the learner reads it, in the lesson itself. A sidebar

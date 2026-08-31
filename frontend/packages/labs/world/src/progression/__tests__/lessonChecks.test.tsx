@@ -3334,3 +3334,74 @@ describe('the own-trait lesson’s check', () => {
     expect(passes).toBe(true);
   });
 });
+
+describe('the behavior lesson’s check', () => {
+  const lesson = LESSONS['making/behavior'];
+
+  it('refuses the bob written out twice', async () => {
+    const {passes} = await check('making/behavior', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  /** The bob moved into a `.behavior`, for one actor or for both. */
+  const shared = (both: boolean) => {
+    let step: Row | undefined;
+    const world = editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      for (const name of both ? ['Fish', 'Bird'] : ['Fish']) {
+        const actor = actorIn(workspace, name);
+        step ??= rowOf(actor, 'world_trait_step');
+        without(actor, 'world_trait_step');
+        under(actor, {
+          type: 'world_use_trait',
+          fields: {TRAIT: 'Bob#BobTrait'},
+        });
+      }
+      return JSON.stringify(workspace);
+    });
+    // The hat IS the step: what follows it is what runs, so the step's own
+    // body chains below the `define behavior` rather than sitting in a mouth.
+    const behaviour = JSON.stringify({
+      blocks: {
+        blocks: [
+          {
+            type: 'world_behavior',
+            x: 20,
+            y: 20,
+            fields: {NAME: 'Bob'},
+            next: {block: inSocket(step!, 'DO')},
+          },
+        ],
+      },
+    });
+    return {
+      ...world,
+      files: {
+        ...world.files,
+        behaviour: {
+          id: 'behaviour',
+          name: 'bob.behavior',
+          language: 'behavior',
+          contents: behaviour,
+          // The FOLDER's id, which lives in `source.folders` — a folder is
+          // not a file, and a `.behavior` filed anywhere else is a file the
+          // project holds and the generator never reads as a rule.
+          folderId: Object.values(world.folders).find(
+            folder => folder.name === 'rules',
+          )?.id,
+        },
+      },
+    } as typeof world;
+  };
+
+  it('accepts one behavior on both of them', async () => {
+    const {passes, result} = await check('making/behavior', shared(true));
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  it('refuses one copy left behind', async () => {
+    const {passes} = await check('making/behavior', shared(false));
+    expect(passes).toBe(false);
+  });
+});

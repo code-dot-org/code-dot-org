@@ -2426,14 +2426,41 @@ export const TILES: readonly Tile[] = [
     title: 'Shared, without the ceremony',
     teaches:
       'The middle of the space: work several kinds of actor share, without being a rule about it.',
-    task: 'Two kinds of NPC doing the same thing twice. Write it once as a behavior.',
+    task: 'A Fish and a Bird, both bobbing, and the bob written out twice.',
     requires: ['adventure/errand'],
     unlocks: [{kind: 'block', type: 'world_behavior'}],
     check: {
       kind: 'outcome',
-      says: 'Two kinds of actor run one behavior, and removing it stops both.',
+      says: 'Both still bob, and neither of them carries a copy of the bobbing any more.',
       falsePass:
-        'One behavior used by one kind. The second kind is the whole point.',
+        'A behavior written and used by one of them, with the other left as it was — which bobs, and is the duplication the lesson is about. The shape half asks that NO actor holds an `each frame` of its own, so one copy left behind is one too many.',
+      run: {
+        probes: {
+          fish: {kind: 'positions', of: 'Fish'},
+          bird: {kind: 'positions', of: 'Bird'},
+        },
+        trace: Array.from({length: 8}, () => ({seconds: 0.15})),
+      },
+      inspect: files => {
+        const behaviour = Object.keys(files).some(path =>
+          path.endsWith('.behavior'),
+        );
+        // The world is where both `define actor`s live, so a copy left in
+        // either of them is a `world_trait_step` still sitting in this file.
+        const copies = (files['worlds/main.world'] ?? '').includes(
+          'world_trait_step',
+        );
+        return behaviour && !copies;
+      },
+      passes: ({samples}) => {
+        const bobbed = (name: string) => {
+          const path = (samples[name] ?? []).map(
+            sample => (sample as {y: number}[])[0]?.y ?? 0,
+          );
+          return Math.max(...path) - Math.min(...path) > 20;
+        };
+        return bobbed('fish') && bobbed('bird');
+      },
     },
   },
   {
