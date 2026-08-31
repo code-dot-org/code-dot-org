@@ -18,7 +18,6 @@ import {
 } from './camera';
 import {trimAnimationListImages} from './imageTrim';
 import {
-  CONTACT_EPSILON,
   hasSupportAhead,
   isSupported,
   PATROLLER_WEIGHTLESS_GRAVITY,
@@ -176,9 +175,6 @@ export default class SpriteLab2Engine extends SpriteLab {
       library.defaultSpriteSize = this.sceneLooksLikePlatformer_()
         ? cellSize(DEFAULT_SCENE_GRID_SIZE)
         : STORY_SCENE_SPRITE_SIZE;
-      // Landings carry sub-pixel float noise; footing checks must not
-      // compare contact exactly.
-      library.contactEpsilon = CONTACT_EPSILON;
     }
     // Fresh library = fresh run; gravity returns to the default until a
     // set-gravity block says otherwise. Negative flips the world: players
@@ -207,49 +203,58 @@ export default class SpriteLab2Engine extends SpriteLab {
         sprite.group = 'players';
       });
     };
-    // Jump against gravity if any player has support in the gravity
-    // direction (the resolver's own footing geometry, so it agrees with
-    // where players actually rest).
-    library.commands.platformJump = speed => {
-      // Weightless, the player is steered up and down instead.
-      if (this.platformGravity_ === 0) {
-        return;
-      }
-      const p5 = this.p5Wrapper.p5;
-      const players = library.getSpriteArray({group: 'players'});
-      const walls = library.getSpriteArray({group: 'walls'});
-      const view = {width: p5.width, height: p5.height};
-      const grounded = players.some(sprite =>
-        isSupported(sprite, walls, view, this.platformGravity_)
-      );
-      if (!grounded) {
-        return;
-      }
-      const up = this.platformGravity_ < 0 ? 1 : -1;
-      players.forEach(sprite => {
-        sprite.velocity.y = up * Math.abs(Number(speed) || 0);
-      });
-    };
-    // A behavior that wants gravity for its sprite marks it for the platform
-    // resolver, which otherwise moves only players.
-    library.commands.usePlatformBody = spriteArg => {
-      library.getSpriteArray(spriteArg).forEach(sprite => {
-        sprite.__slab2Body = true;
-      });
-    };
-    // Footing in the gravity direction, for behaviors. Outside a platform
-    // scene nothing falls, so everything counts as supported and a patroller
-    // walks as it always has.
+    // Footing in the gravity direction — the resolver's own geometry, so it
+    // agrees with where sprites actually rest. Wherever nothing can fall
+    // (outside a platform scene, or under the gravity in force for this
+    // sprite being zero) everything counts as supported. The walls are
+    // gathered once per frame; behaviors ask several times a frame.
     const footing = (spriteArg, test) => {
       if (!this.usesPlatformPhysics_) {
         return true;
       }
       const p5 = this.p5Wrapper.p5;
-      const walls = library.getSpriteArray({group: 'walls'});
+      if (
+        this.wallsCache_?.frame !== p5.frameCount ||
+        this.wallsCache_.library !== library
+      ) {
+        this.wallsCache_ = {
+          frame: p5.frameCount,
+          library,
+          walls: library.getSpriteArray({group: 'walls'}),
+        };
+      }
+      const {walls} = this.wallsCache_;
       const view = {width: p5.width, height: p5.height};
-      return library
-        .getSpriteArray(spriteArg)
-        .some(sprite => test(sprite, walls, view, this.bodyGravity_()));
+      return library.getSpriteArray(spriteArg).some(sprite => {
+        const gravity =
+          sprite.group === 'players'
+            ? this.platformGravity_
+            : this.bodyGravity_();
+        return gravity === 0 || test(sprite, walls, view, gravity);
+      });
+    };
+    // Jump against gravity if any player has footing.
+    library.commands.platformJump = speed => {
+      // Weightless, the player is steered up and down instead.
+      if (this.platformGravity_ === 0) {
+        return;
+      }
+      if (!footing({group: 'players'}, isSupported)) {
+        return;
+      }
+      const up = this.platformGravity_ < 0 ? 1 : -1;
+      library.getSpriteArray({group: 'players'}).forEach(sprite => {
+        sprite.velocity.y = up * Math.abs(Number(speed) || 0);
+      });
+    };
+    // A behavior that wants gravity for its sprite marks it for the platform
+    // resolver, which otherwise moves only players. The mark lasts one frame
+    // — the resolver consumes it — so a removed behavior stops marking and
+    // its sprite is an ordinary sprite again.
+    library.commands.usePlatformBody = spriteArg => {
+      library.getSpriteArray(spriteArg).forEach(sprite => {
+        sprite.__slab2Body = true;
+      });
     };
     library.commands.platformGravity = () => this.platformGravity_;
     library.commands.platformGrounded = spriteArg =>
@@ -653,20 +658,24 @@ export default class SpriteLab2Engine extends SpriteLab {
       x: sprite.position.x,
       y: sprite.position.y,
     });
-    const sprites = Object.values(this.library.nativeSpriteMap);
-    const players = sprites
-      .filter(sprite => sprite.group === 'players')
-      .map(snapshot);
-    const bodies = sprites
-      .filter(sprite => sprite.group !== 'players' && sprite.__slab2Body)
-      .map(snapshot);
+    const players = [];
+    const bodies = [];
+    Object.values(this.library.nativeSpriteMap).forEach(sprite => {
+      if (sprite.group === 'players') {
+        players.push(snapshot(sprite));
+      } else if (sprite.__slab2Body) {
+        // Consuming the one-frame mark: see usePlatformBody.
+        sprite.__slab2Body = false;
+        bodies.push(snapshot(sprite));
+      }
+    });
     // Under upward gravity a sprite stands on the ceiling, so it is drawn
-    // upside down. Drawing only: the body the resolver measures is unchanged.
-    const upright = gravity => (gravity < 0 ? -1 : 1);
-    players.forEach(({sprite}) =>
-      sprite.mirrorY(upright(this.platformGravity_))
-    );
-    bodies.forEach(({sprite}) => sprite.mirrorY(upright(this.bodyGravity_())));
+    // upside down; the body pull shares the world's sign, so one value
+    // serves both lists. Drawing only: the body the resolver measures is
+    // unchanged.
+    const upright = this.platformGravity_ < 0 ? -1 : 1;
+    players.forEach(({sprite}) => sprite.mirrorY(upright));
+    bodies.forEach(({sprite}) => sprite.mirrorY(upright));
     // Other sprites keep the stock resolver; running it pre-paint means
     // props draw already resolved.
     this.library.commands.collide.call(
@@ -678,7 +687,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     const walls = this.library.getSpriteArray({group: 'walls'});
     const view = {width: p5.width, height: p5.height};
     resolvePlatformPhysics(players, walls, view, this.platformGravity_);
-    resolvePlatformPhysics(bodies, walls, view, this.bodyGravity_());
+    if (bodies.length) {
+      resolvePlatformPhysics(bodies, walls, view, this.bodyGravity_());
+    }
   }
 
   // Marked sprites keep a little downward pull at zero gravity, so
