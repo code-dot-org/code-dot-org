@@ -1,6 +1,6 @@
 import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
-import React, {FC, useState} from 'react';
+import React, {FC, useRef, useState} from 'react';
 
 import WhiteboardChallenge from '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/WhiteboardChallenge';
 import {ExplanationTypes} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
@@ -158,23 +158,40 @@ const Harness: FC<{
   const [hasRecording, setHasRecording] = useState(false);
   const [, setEvaluationStatus] = useState('');
   const [, setChallengeResponseId] = useState(0);
+  // Submit now lives in ChallengeBox's top bar; the harness stands in for it,
+  // holding the submit ref and reflecting submittability on a "Submit" button.
+  const submitRef = useRef<(() => void | Promise<void>) | null>(null);
+  const resetRef = useRef<(() => void) | null>(null);
+  const [canSubmit, setCanSubmit] = useState(false);
   return (
-    <WhiteboardChallenge
-      challengeId={challengeId}
-      starterImageUrl={starterImageUrl}
-      starterImageAltText={starterImageAltText}
-      submitted={submitted}
-      submitCallback={submitCallback}
-      isRecording={isRecording}
-      setIsRecording={setIsRecording}
-      hasRecording={hasRecording}
-      setHasRecording={setHasRecording}
-      explanationType={explanationType}
-      lessonId={1}
-      textExplanation={textExplanation}
-      setEvaluationStatus={setEvaluationStatus}
-      setChallengeResponseId={setChallengeResponseId}
-    />
+    <>
+      <WhiteboardChallenge
+        challengeId={challengeId}
+        starterImageUrl={starterImageUrl}
+        starterImageAltText={starterImageAltText}
+        submitted={submitted}
+        submitCallback={submitCallback}
+        isRecording={isRecording}
+        setIsRecording={setIsRecording}
+        hasRecording={hasRecording}
+        setHasRecording={setHasRecording}
+        explanationType={explanationType}
+        lessonId={1}
+        textExplanation={textExplanation}
+        setEvaluationStatus={setEvaluationStatus}
+        setChallengeResponseId={setChallengeResponseId}
+        onSubmittableChange={setCanSubmit}
+        submitRef={submitRef}
+        resetRef={resetRef}
+      />
+      <button
+        type="button"
+        disabled={!canSubmit}
+        onClick={() => submitRef.current?.()}
+      >
+        Submit
+      </button>
+    </>
   );
 };
 

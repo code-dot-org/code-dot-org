@@ -1,6 +1,6 @@
-import {fireEvent, render, screen, waitFor} from '@testing-library/react';
+import {act, fireEvent, render, screen, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
-import React from 'react';
+import React, {FC, useRef, useState} from 'react';
 
 import VideoChallenge from '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/VideoChallenge';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -95,6 +95,40 @@ const recordVideo = () => {
   fireEvent.click(screen.getByRole('button', {name: 'Stop Recording'}));
 };
 
+// Submit now lives in ChallengeBox's top bar rather than in VideoChallenge.
+// This harness plays that role: it holds the submit ref and reflects the
+// reported submittability on a stand-in "Submit" button, exactly as the top
+// bar does.
+const VideoHarness: FC<{
+  submitCallback: React.Dispatch<React.SetStateAction<boolean>>;
+}> = ({submitCallback}) => {
+  const submitRef = useRef<(() => void | Promise<void>) | null>(null);
+  const resetRef = useRef<(() => void) | null>(null);
+  const [canSubmit, setCanSubmit] = useState(false);
+  return (
+    <>
+      <VideoChallenge
+        challenge={fakeChallenge}
+        submitted={false}
+        submitCallback={submitCallback}
+        lessonId={1}
+        setEvaluationStatus={jest.fn()}
+        setChallengeResponseId={jest.fn()}
+        onSubmittableChange={setCanSubmit}
+        submitRef={submitRef}
+        resetRef={resetRef}
+      />
+      <button
+        type="button"
+        disabled={!canSubmit}
+        onClick={() => submitRef.current?.()}
+      >
+        Submit
+      </button>
+    </>
+  );
+};
+
 describe('VideoChallenge', () => {
   let originalFetch: typeof globalThis.fetch | undefined;
   let fetchMock: jest.Mock;
@@ -114,16 +148,7 @@ describe('VideoChallenge', () => {
   });
 
   it('disables submit until a video is recorded', () => {
-    render(
-      <VideoChallenge
-        challenge={fakeChallenge}
-        submitted={false}
-        submitCallback={jest.fn()}
-        lessonId={1}
-        setEvaluationStatus={jest.fn()}
-        setChallengeResponseId={jest.fn()}
-      />
-    );
+    render(<VideoHarness submitCallback={jest.fn()} />);
 
     expect(screen.getByRole('button', {name: 'Submit'})).toBeDisabled();
 
@@ -132,16 +157,7 @@ describe('VideoChallenge', () => {
   });
 
   it('disables submit while recording is in progress', () => {
-    render(
-      <VideoChallenge
-        challenge={fakeChallenge}
-        submitted={false}
-        submitCallback={jest.fn()}
-        lessonId={1}
-        setEvaluationStatus={jest.fn()}
-        setChallengeResponseId={jest.fn()}
-      />
-    );
+    render(<VideoHarness submitCallback={jest.fn()} />);
 
     fireEvent.click(screen.getByRole('button', {name: 'Start Recording'}));
     expect(screen.getByRole('button', {name: 'Submit'})).toBeDisabled();
@@ -155,16 +171,7 @@ describe('VideoChallenge', () => {
     put.mockResolvedValue({});
     const submitCallback = jest.fn();
 
-    render(
-      <VideoChallenge
-        challenge={fakeChallenge}
-        submitted={false}
-        submitCallback={submitCallback}
-        lessonId={1}
-        setEvaluationStatus={jest.fn()}
-        setChallengeResponseId={jest.fn()}
-      />
-    );
+    render(<VideoHarness submitCallback={submitCallback} />);
 
     recordVideo();
     fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
@@ -208,16 +215,7 @@ describe('VideoChallenge', () => {
     );
     put.mockResolvedValue({});
 
-    render(
-      <VideoChallenge
-        challenge={fakeChallenge}
-        submitted={false}
-        submitCallback={jest.fn()}
-        lessonId={1}
-        setEvaluationStatus={jest.fn()}
-        setChallengeResponseId={jest.fn()}
-      />
-    );
+    render(<VideoHarness submitCallback={jest.fn()} />);
 
     recordVideo();
     fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
@@ -226,34 +224,29 @@ describe('VideoChallenge', () => {
       expect(screen.getByRole('button', {name: 'Submit'})).toBeDisabled()
     );
 
-    // Unblock the upload so the component settles cleanly.
-    resolvePost({json: async () => createdResponse});
-    await waitFor(() =>
-      expect(screen.getByRole('button', {name: 'Submit'})).toBeEnabled()
-    );
+    // Unblock the upload so the component settles cleanly. Wrapping the
+    // resolution in act() flushes the effect that reports submittability
+    // back up to the (stand-in) top bar.
+    await act(async () => {
+      resolvePost({json: async () => createdResponse});
+    });
+    expect(screen.getByRole('button', {name: 'Submit'})).toBeEnabled();
   });
 
   it('re-enables submit after an upload error so the user can retry', async () => {
     post.mockRejectedValue(new Error('Network error'));
     const submitCallback = jest.fn();
 
-    render(
-      <VideoChallenge
-        challenge={fakeChallenge}
-        submitted={false}
-        submitCallback={submitCallback}
-        lessonId={1}
-        setEvaluationStatus={jest.fn()}
-        setChallengeResponseId={jest.fn()}
-      />
-    );
+    render(<VideoHarness submitCallback={submitCallback} />);
 
     recordVideo();
-    fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
+    // act() lets the async submit settle and the submittability report
+    // propagate to the stand-in top bar before we assert.
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
+    });
 
-    await waitFor(() =>
-      expect(screen.getByRole('button', {name: 'Submit'})).toBeEnabled()
-    );
+    expect(screen.getByRole('button', {name: 'Submit'})).toBeEnabled();
     // A failed upload must not be confirmed as submitted.
     expect(submitCallback).not.toHaveBeenCalled();
   });

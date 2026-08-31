@@ -104,7 +104,7 @@ const submitWhiteboardChallenge = async () => {
     ).toBeInTheDocument()
   );
   fireEvent.click(screen.getByRole('button', {name: 'Draw something'}));
-  fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
+  fireEvent.click(screen.getByRole('button', {name: 'Submit for feedback'}));
 };
 
 // Advances fake timers by `ms` and flushes the resulting state updates,
@@ -188,6 +188,17 @@ describe('ChallengeBox', () => {
     // The waiting screen gives way to the feedback panel.
     expect(
       screen.queryByText('Tutor is writing feedback...')
+    ).not.toBeInTheDocument();
+
+    // The top bar switches to its review state: gallery in, compose actions out.
+    expect(
+      screen.getByRole('button', {name: 'View project gallery'})
+    ).toBeInTheDocument();
+    expect(
+      screen.queryByRole('button', {name: 'Start over'})
+    ).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole('button', {name: 'Submit for feedback'})
     ).not.toBeInTheDocument();
 
     jest.useRealTimers();
@@ -283,6 +294,19 @@ describe('ChallengeBox', () => {
 
     expect(screen.getByRole('button', {name: 'Audio'})).toBeInTheDocument();
     expect(screen.getByRole('button', {name: 'Text'})).toBeInTheDocument();
+
+    // Compose state: "Start over" is always present, and "Submit for feedback"
+    // stays visible but is disabled until there is something drawn to submit.
+    expect(
+      screen.getByRole('button', {name: 'Start over'})
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', {name: 'Submit for feedback'})
+    ).toBeDisabled();
+    fireEvent.click(screen.getByRole('button', {name: 'Draw something'}));
+    expect(
+      screen.getByRole('button', {name: 'Submit for feedback'})
+    ).toBeEnabled();
   });
 
   it('shows a textarea that can be typed in when the Text button is clicked', async () => {

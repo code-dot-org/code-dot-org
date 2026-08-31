@@ -15,9 +15,6 @@ import {
 
 import {requestEvaluation} from './requestEvaluation';
 
-// import freeResponseStyles from './free-response.module.scss';
-import styles from './video-challenge.module.scss';
-
 interface VideoChallengeProps {
   submitted: boolean;
   submitCallback: React.Dispatch<React.SetStateAction<boolean>>;
@@ -25,6 +22,12 @@ interface VideoChallengeProps {
   lessonId: number;
   setEvaluationStatus: React.Dispatch<React.SetStateAction<string>>;
   setChallengeResponseId: React.Dispatch<React.SetStateAction<number>>;
+  // Reports whether the current recording can be submitted, and hands the
+  // top-bar "Submit for feedback" / "Start over" buttons this modality's
+  // submit and reset handlers.
+  onSubmittableChange: (canSubmit: boolean) => void;
+  submitRef: React.MutableRefObject<(() => void | Promise<void>) | null>;
+  resetRef: React.MutableRefObject<(() => void) | null>;
 }
 
 const VideoChallenge: FC<VideoChallengeProps> = ({
@@ -34,6 +37,9 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
   challenge = null,
   setEvaluationStatus,
   setChallengeResponseId,
+  onSubmittableChange,
+  submitRef,
+  resetRef,
 }) => {
   const [hasRecording, setHasRecording] = useState(false);
   const [isRecording, setIsRecording] = useState(false);
@@ -42,6 +48,8 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
   const timeoutRef = useRef<NodeJS.Timeout>();
 
   const [isUploading, setIsUploading] = useState(false);
+  // Bumped to remount the recorder with a clean slate on "Start over".
+  const [resetKey, setResetKey] = useState(0);
   const canSubmit = !submitted && !isUploading && hasRecording && !isRecording;
   const clientType = AiChatClientTypes.LESSON_DEEP_DIVE;
 
@@ -135,9 +143,37 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
     }
   };
 
+  // Discard the recording (by remounting the recorder) so the student can
+  // record again from scratch.
+  const handleReset = () => {
+    setRecordedUrl(null);
+    setRecordedAudioUrl(null);
+    setHasRecording(false);
+    setIsRecording(false);
+    setResetKey(key => key + 1);
+  };
+
+  // Keep the top bar's "Submit for feedback" enabled state in sync.
+  useEffect(() => {
+    onSubmittableChange(canSubmit);
+  }, [canSubmit, onSubmittableChange]);
+
+  // Register this modality's handlers for the top-bar buttons. Runs every
+  // render so the refs hold the latest closures, and clears them on unmount
+  // (e.g. switching to the whiteboard modality).
+  useEffect(() => {
+    submitRef.current = handleSubmit;
+    resetRef.current = handleReset;
+    return () => {
+      submitRef.current = null;
+      resetRef.current = null;
+    };
+  });
+
   return (
     <div>
       <VideoRecorder
+        key={resetKey}
         onRecordingChange={setHasRecording}
         onIsRecordingChange={setIsRecording}
         disabled={submitted || isUploading}
@@ -147,16 +183,6 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
         setRecordedAudioUrl={setRecordedAudioUrl}
       />
       {isUploading && <WaitingAnimation shouldDisplay={isUploading} />}
-      {!submitted && (
-        <button
-          type="button"
-          className={styles.submitButton}
-          disabled={!canSubmit}
-          onClick={handleSubmit}
-        >
-          Submit
-        </button>
-      )}
     </div>
   );
 };
