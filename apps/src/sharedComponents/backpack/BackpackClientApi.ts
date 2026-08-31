@@ -1,7 +1,7 @@
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
 
-import {FileMetadata} from './types';
+import {BackpackEvent, FileMetadata} from './types';
 
 const REQUEST_RETRY_COUNT = 1;
 
@@ -15,14 +15,6 @@ type ErrorCallback = (error?: Error, failedFiles?: string[]) => void;
 const rootUrl = (channelId: string) => `/v3/libraries/${channelId}`;
 // Cache bust suffix ensures we always get the latest version of the file.
 const getCacheBustSuffix = () => `?t=${Date.now()}`;
-
-// Events that can a listener can subscribe to.
-export enum BackpackEvent {
-  FileAdded = 'fileAdded',
-  FileDeleted = 'fileDeleted',
-  UploadStarted = 'uploadStarted',
-  UploadFailed = 'uploadFailed',
-}
 
 type BackpackEventListener = (event: BackpackEvent, filename: string) => void;
 
