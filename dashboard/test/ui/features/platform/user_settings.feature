@@ -1,7 +1,17 @@
 @single_session
 @skip
+@playwright
 Feature: Updating account settings
 
+  # NOT PORTED: the #user_ai_rubrics_disabled checkbox and #edit-ai-settings
+  # button were removed from /users/edit in 08a9aef1d0b (Sep 2024,
+  # "Removes dead code in the settings page related to the AI rubrics
+  # experiment"). The ai_rubrics_disabled field still exists on the User
+  # model and is toggled via POST /api/v1/users/ai_rubrics_disabled from
+  # in-app rubric components, but there is no UI on the settings page to
+  # test. This feature should be deleted or replaced with an API-level test.
+  #
+  # Original comments preserved below:
   # Ensure that the checkbox persists when saved
   # We can, in the future, also peek at the level and see if the AI
   # components are there.
