@@ -2975,3 +2975,104 @@ describe('the rule-property lesson’s check', () => {
     expect(passes).toBe(true);
   });
 });
+
+describe('the grid lesson’s check', () => {
+  const lesson = LESSONS['puzzle/grid'];
+
+  /** Stepping instead of sliding, with or without walls that fill a tile. */
+  const stepping = (walls: boolean) =>
+    editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const player = actorIn(workspace, 'Player');
+      without(player, 'world_use_trait');
+      without(player, 'world_use_trait');
+      under(player, {
+        type: 'world_use_trait',
+        fields: {TRAIT: 'Grid#StepsOnTheGridTrait'},
+      });
+      if (walls) {
+        under(actorIn(workspace, 'Wall'), {
+          type: 'world_use_trait',
+          fields: {TRAIT: 'Grid#FillsATileTrait'},
+        });
+      }
+      // A hat per arrow, each asking the rule for one step.
+      const keys: [string, string][] = [
+        ['left arrow', 'StepLeft'],
+        ['right arrow', 'StepRight'],
+        ['up arrow', 'StepUp'],
+        ['down arrow', 'StepDown'],
+      ];
+      for (const [key, action] of keys) {
+        workspace.blocks.blocks.push({
+          type: 'world_on_Input_PressesEvent',
+          x: 900,
+          y: 20,
+          fields: {FILTER0: key},
+          inputs: {
+            ACTOR: {
+              block: {
+                type: 'world_actor_kind',
+                fields: {ACTOR: local('player')},
+              },
+            },
+          },
+          next: {
+            block: {
+              type: `world_do_Grid_${action}Action`,
+              inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
+            },
+          },
+        } as unknown as Row);
+      }
+      return JSON.stringify(workspace);
+    });
+
+  it('refuses a player that slides', async () => {
+    const {passes} = await check('puzzle/grid', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  // Stepping without walls that fill a tile: neat squares, straight through
+  // the wall and out of the world.
+  it('refuses steps that go through the wall', async () => {
+    const {passes} = await check('puzzle/grid', stepping(false));
+    expect(passes).toBe(false);
+  });
+
+  it('accepts steps that stop at one', async () => {
+    const {passes, result} = await check('puzzle/grid', stepping(true));
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+});
+
+describe('the push lesson’s check', () => {
+  const lesson = LESSONS['puzzle/push'];
+
+  it('refuses a crate that stops you dead', async () => {
+    const {passes} = await check('puzzle/push', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts one word added to the Crate', async () => {
+    const solved = editing(lesson.source, 'main.world', contents =>
+      electing(contents, 'Grid#CanBePushedTrait', 'Crate'),
+    );
+    const {passes, result} = await check('puzzle/push', solved);
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  // The other way to make the Player move: take the Crate out of the way
+  // entirely, which walks over it and pushes nothing.
+  it('refuses a crate that no longer fills its tile', async () => {
+    const walkedOver = editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      without(actorIn(workspace, 'Crate'), 'world_use_trait');
+      return JSON.stringify(workspace);
+    });
+    const {passes} = await check('puzzle/push', walkedOver);
+    expect(passes).toBe(false);
+  });
+});

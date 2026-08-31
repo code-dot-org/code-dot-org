@@ -454,13 +454,13 @@ The first thing anybody wants is for something to move when they press a key.
 
 ### Genre: Puzzle — entered from Logic and Memory
 
-| Tile           | The lesson                                                              | Unlocks                                     | Check                                                             |
-| -------------- | ----------------------------------------------------------------------- | ------------------------------------------- | ----------------------------------------------------------------- |
-| `puzzle/grid`  | Not a speed: a step. One square at a time, and a wall that refuses one. | Grid rule; `Fills a Tile`                   | `[o]` four scripted presses land the player exactly four tiles on |
-| `puzzle/push`  | Pushing falls out of two facts you already have. Nobody writes it.      | `Can Be Pushed`                             | `[o]` a crate moves one tile and stops at a wall                  |
-| `puzzle/goal`  | Counting what is not yet done, and saying so.                           | **Goals rule (new)**                        | `[o]` the win fires on the last crate and not before              |
-| `puzzle/turns` | Everybody moves, then the world moves.                                  | **Turns rule (new)**                        | `[o]` an enemy steps exactly once per player step                 |
-| `puzzle/undo`  | Taking it back — which means the world has a history.                   | **History rule (new)**; the puzzle template | `[o]` undo restores the previous positions exactly                |
+| Tile           | The lesson                                                          | Unlocks                                     | Check                                                             |
+| -------------- | ------------------------------------------------------------------- | ------------------------------------------- | ----------------------------------------------------------------- |
+| `puzzle/grid`  | A player that slides between the tiles and walks through the walls. | Grid rule; `Fills a Tile`                   | `[o]` four scripted presses land the player exactly four tiles on |
+| `puzzle/push`  | A crate that stops you dead. Change one word and push it.           | `Can Be Pushed`                             | `[o]` a crate moves one tile and stops at a wall                  |
+| `puzzle/goal`  | Counting what is not yet done, and saying so.                       | **Goals rule (new)**                        | `[o]` the win fires on the last crate and not before              |
+| `puzzle/turns` | Everybody moves, then the world moves.                              | **Turns rule (new)**                        | `[o]` an enemy steps exactly once per player step                 |
+| `puzzle/undo`  | Taking it back — which means the world has a history.               | **History rule (new)**; the puzzle template | `[o]` undo restores the previous positions exactly                |
 
 ### Genre: Story — entered from Memory and Look
 

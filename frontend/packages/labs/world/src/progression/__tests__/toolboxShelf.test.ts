@@ -139,6 +139,8 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   // world's, and what the learner reaches for there is the generated setter,
   // which no gate can hide (`toolboxShelf`, "what the project mints").
   'making/property': [],
+  'puzzle/grid': ['world_use_trait'],
+  'puzzle/push': ['world_use_trait'],
   'platformer/level': [
     'controls_if',
     'world_is_a',

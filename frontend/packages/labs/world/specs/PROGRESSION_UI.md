@@ -532,7 +532,7 @@ anything depends on it.
    its own module. A check tested against a different runner from the one that
    judges a learner is a check nobody has tested.
 
-   **Every authored lesson has a check** — forty-eight of the sixty-seven tiles
+   **Every authored lesson has a check** — fifty of the sixty-seven tiles
    at the time of writing — and every one is tested in both directions: it refuses the starter the lesson ships with AND accepts a
    project where the lesson has been done, which no amount of refusing proves on
    its own. Three also have a HALFWAY case, because a check that stops at the

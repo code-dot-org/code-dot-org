@@ -12,13 +12,13 @@
 // Blockly JSON behind them. So `catalogue.ts` stays data about tiles, and the
 // projects live here, looked up by tile id.
 //
-// Forty-eight of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md
-// and then some. ALL SIX FOUNDATIONS are written — Origin, Input, Motion, Logic,
+// Fifty of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md and
+// then some. ALL SIX FOUNDATIONS are written — Origin, Input, Motion, Logic,
 // Memory, Look and Place — so every genre gate on the map is open, and the
 // first hours of the progression can be walked end to end. ARCADE is written
 // whole after them, Platformer but for one tile (`platformer/ground` waits on
 // the engine: specs/PROGRESSION.md, "Carrying"), STORY is written whole, and
-// Simulation is started, and Making has its first.
+// Simulation and Puzzle are started, and Making has its first.
 
 import {
   actorFile,
@@ -2759,6 +2759,140 @@ is different in kind from what you write in a world.
 `.trim(),
 };
 
+// ── puzzle/grid ──────────────────────────────────────────────────────────────
+
+const grid: WorldScenario = {
+  name: 'A step, not a speed',
+  description: 'A player that slides about a grid world like a bar of soap.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        createInMap(local('wall'), wallsRound()),
+        addActor(local('player'), [placeAt(144, 144)]),
+      ],
+      actors: [
+        {
+          id: 'player',
+          name: 'Player',
+          rows: [
+            useTrait('Arrow Keys#MovesAcrossTrait'),
+            useTrait('Arrow Keys#MovesDownTrait'),
+            useTrait('Input#TakesKeyboardInputTrait'),
+            setSprite('player.png'),
+          ],
+        },
+        {
+          id: 'wall',
+          name: 'Wall',
+          rows: [setSprite('ground.png')],
+        },
+      ],
+    }),
+    sprites: ['player', 'ground'],
+    rules: ['arrows', 'input', 'grid'],
+  }),
+  instructions: `
+## A step, not a speed
+
+Walk about. The Player slides — it is somewhere between two tiles most of the
+time, it stops wherever you let go, and it walks straight through the Walls.
+
+A puzzle is not made of speeds. It is made of **tiles and steps**: you are on
+one square or another, a move takes you to the next one, and a move into a wall
+does not happen at all. The **Grid** rule is that idea, and it is a different
+idea from moving.
+
+### What you do
+
+1. Take **Moves Across** and **Moves Down** off the Player — that is the
+   sliding — and give it **use trait ⟨Steps on the Grid⟩**.
+2. Add a handler per arrow key: **when ⟨any Player⟩ presses ⟨left⟩ → step left
+   ⟨this actor⟩**, and the same for the other three.
+3. Run it. One tile per press, and it lands on the square rather than between
+   two.
+4. Give the Walls **use trait ⟨Fills a Tile⟩** and walk into one. Nothing
+   happens — a step into an occupied tile is not a step that fails halfway, it
+   is a step that never starts.
+`.trim(),
+};
+
+// ── puzzle/push ──────────────────────────────────────────────────────────────
+
+/** `when ⟨any Player⟩ presses ⟨arrow⟩ → step ⟨…⟩ on ⟨this actor⟩`. */
+const stepOn = (key: string, action: string) =>
+  onPressed('player', key, {
+    type: `world_do_Grid_${action}Action`,
+    inputs: {ACTOR: me()},
+  });
+
+const push: WorldScenario = {
+  name: 'Nobody wrote pushing',
+  description:
+    'A crate that stops you dead, and a rule that already knows what to do.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        createInMap(local('wall'), wallsRound()),
+        addActor(local('crate'), [placeAt(144, 144)]),
+        addActor(local('player'), [placeAt(240, 144)]),
+      ],
+      actors: [
+        {
+          id: 'player',
+          name: 'Player',
+          rows: [
+            useTrait('Grid#StepsOnTheGridTrait'),
+            useTrait('Input#TakesKeyboardInputTrait'),
+            setSprite('player.png'),
+          ],
+        },
+        {
+          id: 'crate',
+          name: 'Crate',
+          rows: [useTrait('Grid#FillsATileTrait'), setSprite('box.png')],
+        },
+        {
+          id: 'wall',
+          name: 'Wall',
+          rows: [useTrait('Grid#FillsATileTrait'), setSprite('ground.png')],
+        },
+      ],
+      handlers: [
+        stepOn('left arrow', 'StepLeft'),
+        stepOn('right arrow', 'StepRight'),
+        stepOn('up arrow', 'StepUp'),
+        stepOn('down arrow', 'StepDown'),
+      ],
+    }),
+    sprites: ['player', 'box', 'ground'],
+    rules: ['input', 'grid'],
+  }),
+  instructions: `
+## Nobody wrote pushing
+
+Walk left into the Crate. Nothing happens, and nothing should: the Crate
+**fills a tile**, and a step into a filled tile does not happen. That is the
+same sentence that makes the walls work, and the Crate is a wall you can walk
+round.
+
+A sokoban is that with one word changed.
+
+### What you do
+
+1. Give the Crate **use trait ⟨Can Be Pushed⟩** as well.
+2. Walk into it. It moves one tile, you take the tile it left, and neither of
+   those is something you wrote.
+3. Push it into a Wall and try again. It stops, and so do you — a push that
+   cannot happen is a step that does not.
+4. Click the **eye** on \`use trait ⟨Can Be Pushed⟩\` and find out why one word
+   was enough. The stepping trait asks what is in the tile it is going to; if
+   that thing can be pushed, the step becomes two steps, and both of them have
+   to be possible.
+`.trim(),
+};
+
 // ── place/edges ──────────────────────────────────────────────────────────────
 
 const edges: WorldScenario = {
@@ -3143,6 +3277,8 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'simulation/many': crowd,
   'simulation/steering': steering,
   'making/property': ruleProperty,
+  'puzzle/grid': grid,
+  'puzzle/push': push,
 };
 
 /** Every lesson written so far, by the tile it belongs to. */

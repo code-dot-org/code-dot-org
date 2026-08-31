@@ -1658,15 +1658,40 @@ export const TILES: readonly Tile[] = [
     region: 'puzzle',
     at: at('puzzle', 1, 2),
     title: 'A step, not a speed',
-    teaches: 'Discrete movement: one whole square, or none at all.',
-    task: 'Move one tile at a time, and put up a wall that refuses a step.',
+    teaches:
+      'A tile is a place, and a move is a step into one — or not at all.',
+    task: 'A player that slides about between the tiles and walks through the walls.',
     requires: ['logic/kinds', 'memory/many'],
     unlocks: [{kind: 'rule', id: 'grid'}],
     check: {
       kind: 'outcome',
-      says: 'Four presses land the player exactly four tiles on, and a fifth into a wall lands nowhere.',
+      says: 'Every press lands the Player on a tile, and the fifth press into the wall does not happen.',
       falsePass:
-        'A speed tuned to look like a tile per press. Assert the position is a whole multiple of the tile size.',
+        'Sliding neatly, which looks like stepping until you let go between two tiles — so the check reads the position after every step has settled and asks that it is on a square. Walking through the wall is the other half: a step into a filled tile is not a slow stop, it never starts.',
+      run: {
+        probes: {player: {kind: 'positions', of: 'Player'}},
+        trace: [1, 2, 3, 4, 5].flatMap(() => [
+          {hold: ['ArrowLeft'], seconds: 0.1},
+          {seconds: 0.2},
+        ]),
+      },
+      passes: ({samples}) => {
+        const path = (samples.player ?? []).map(
+          sample => (sample as {x: number}[])[0]?.x,
+        );
+        if (path.some(x => typeof x !== 'number')) {
+          return false;
+        }
+        // The samples after each rest: a step takes 0.12s and the rest is 0.2s,
+        // so these are the places it came to a stop.
+        const settled = (path as number[]).filter(
+          (_x, index) => index > 0 && index % 2 === 0,
+        );
+        const onTiles = settled.every(x => Math.abs((x - 16) % 32) < 0.001);
+        // Four steps left from the middle reaches the tile beside the wall,
+        // and the fifth press does nothing at all.
+        return onTiles && settled[settled.length - 1] === 48;
+      },
     },
   },
   {
@@ -1675,15 +1700,36 @@ export const TILES: readonly Tile[] = [
     at: at('puzzle', 2, 2),
     title: 'Nobody wrote pushing',
     teaches:
-      'A mechanic that falls out of two facts you already have — which is what composition buys.',
-    task: 'Give a crate `Can Be Pushed` and read the rule to find out why that was enough.',
+      'A rule that already knows what to do, if the thing it meets says it can be pushed.',
+    task: 'A crate that stops you dead. Change one word and push it.',
     requires: ['puzzle/grid'],
     unlocks: [{kind: 'asset', id: 'box'}],
     check: {
       kind: 'outcome',
-      says: 'A crate moves one tile when walked into, and refuses when there is a wall behind it.',
+      says: 'The Crate is two tiles further along than it started, and the Player is where it was.',
       falsePass:
-        'Moving the crate from the player’s own handler. The wall case is what catches it.',
+        'Taking `Fills a Tile` off the Crate, which also lets the Player through — and walks straight over it, leaving the Crate where it was. The check reads the CRATE, so a Player that passed through has moved nothing.',
+      run: {
+        probes: {
+          player: {kind: 'positions', of: 'Player'},
+          crate: {kind: 'positions', of: 'Crate'},
+        },
+        trace: [1, 2, 3, 4, 5].flatMap(() => [
+          {hold: ['ArrowLeft'], seconds: 0.1},
+          {seconds: 0.2},
+        ]),
+      },
+      passes: ({samples}) => {
+        const started = 144;
+        const crate = lastList<{x: number}>(samples.crate)[0]?.x;
+        const player = lastList<{x: number}>(samples.player)[0]?.x;
+        return (
+          typeof crate === 'number' &&
+          typeof player === 'number' &&
+          crate <= started - 64 &&
+          player < started + 32
+        );
+      },
     },
   },
   {
