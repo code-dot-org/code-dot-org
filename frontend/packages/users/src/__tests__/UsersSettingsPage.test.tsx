@@ -48,7 +48,7 @@ describe('UsersSettingsPage', () => {
     const tabs = within(tablist).getAllByRole('tab');
     expect(tabs).toHaveLength(4);
     expect(tabs[0]).toHaveAttribute('aria-selected', 'true');
-    expect(tabs[1]).toBeDisabled();
+    expect(tabs[1]).toHaveAttribute('aria-disabled', 'true');
 
     for (const name of [
       'My Information',
