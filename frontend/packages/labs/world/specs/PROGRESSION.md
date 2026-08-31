@@ -444,13 +444,13 @@ The first thing anybody wants is for something to move when they press a key.
 
 ### Genre: Arcade — entered from Motion and Logic
 
-| Tile            | The lesson                                                                          | Unlocks                                     | Check                                                                      |
-| --------------- | ----------------------------------------------------------------------------------- | ------------------------------------------- | -------------------------------------------------------------------------- |
-| `arcade/bounce` | A ball off a wall, and the property that decides how much of its speed survives.    | Solid Bodies' `bounciness`                  | `[o]` after a wall hit the velocity component is reversed within tolerance |
-| `arcade/paddle` | A thing you steer that cannot leave.                                                | Boundaries (if not held)                    | `[o]` the paddle stops at both ends                                        |
-| `arcade/bricks` | Many of one kind, removed one at a time, counted down to none.                      | `count of kind`, `remove actor` over a kind | `[o]` all bricks gone ends the game                                        |
-| `arcade/shoot`  | A bullet is spawned, not owned. Fire on a key, with a cooldown, and clean up after. | Shooting, Expiry rules                      | `[o]` holding fire for 2s produces the cooldown's count, not 120           |
-| `arcade/waves`  | A timer that makes things, getting faster.                                          | Time rule; the arcade template              | `[o]` the spawn interval shortens over the scripted run                    |
+| Tile            | The lesson                                                                                      | Unlocks                    | Check                                                             |
+| --------------- | ----------------------------------------------------------------------------------------------- | -------------------------- | ----------------------------------------------------------------- |
+| `arcade/bounce` | A ball that stops dead at the wall. What a collision does to a speed is the surface's business. | `bounciness`               | `[o]` as fast at the end of a long run as at the start            |
+| `arcade/paddle` | A paddle kept on screen by hand, with half of it hanging off.                                   | `view size`                | `[o]` stops half its own width from the wall, whatever that is    |
+| `arcade/shoot`  | A bullet per press, and none of them ever leaves.                                               | Shooting; Expires          | `[o]` ten presses make fewer than ten, and the world empties      |
+| `arcade/bricks` | Counting what is left is how a game knows it is over.                                           | `clear world`              | `[o]` ends on the last brick and not the second to last           |
+| `arcade/waves`  | A timer belongs to an actor, and the interval can be a value like any other.                    | Time rule; arcade template | `[o]` the gap between spawns is shorter at the end than the start |
 
 ### Genre: Puzzle — entered from Logic and Memory
 

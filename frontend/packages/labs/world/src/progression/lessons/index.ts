@@ -12,12 +12,12 @@
 // Blockly JSON behind them. So `catalogue.ts` stays data about tiles, and the
 // projects live here, looked up by tile id.
 //
-// Thirty-five of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md
+// Thirty-eight of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md
 // and then some. ALL SIX FOUNDATIONS are written — Origin, Input, Motion,
 // Logic, Memory, Look and Place — so every genre gate on the map is open, and
 // the first hours of the progression can be walked end to end. Platformer is
-// written after them but for one tile: `platformer/ground` waits on the engine
-// (specs/PROGRESSION.md, "Carrying").
+// written after them but for one tile (`platformer/ground` waits on the
+// engine: specs/PROGRESSION.md, "Carrying"), and Arcade is started.
 
 import {
   actorFile,
@@ -1704,6 +1704,233 @@ because it is not a fact about either of them.
 `.trim(),
 };
 
+// ── arcade/bounce ────────────────────────────────────────────────────────────
+
+/** The border of a ten-by-ten room, as placements on the grid. */
+const wallsRound = () => {
+  const at = (column: number, row: number) =>
+    placed(`wall${column}_${row}`, column * 32 + 16, row * 32 + 16);
+  const tiles = [];
+  for (let column = 0; column < 10; column++) {
+    tiles.push(at(column, 0), at(column, 9));
+  }
+  for (let row = 1; row < 9; row++) {
+    tiles.push(at(0, row), at(9, row));
+  }
+  return tiles;
+};
+
+const bounce: WorldScenario = {
+  name: 'Off the wall',
+  description: 'A ball in a box that stops the moment it arrives at one.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        createInMap(local('wall'), wallsRound()),
+        addActor(local('ball'), [placeAt(160, 160), setVelocity(4, 3)]),
+      ],
+      actors: [
+        {
+          id: 'ball',
+          name: 'Ball',
+          rows: [
+            useTrait('Physics#CanMoveTrait'),
+            useTrait('Collisions#CanCollideTrait'),
+            useTrait('Solid Bodies#SolidTrait'),
+            setSprite('ball.png'),
+          ],
+        },
+        {
+          id: 'wall',
+          name: 'Wall',
+          rows: [
+            useTrait('Collisions#CanCollideTrait'),
+            useTrait('Solid Bodies#SolidTrait'),
+            setSprite('ground.png'),
+          ],
+        },
+      ],
+    }),
+    sprites: ['ball', 'ground'],
+    rules: ['motion', 'collisions', 'solid'],
+  }),
+  instructions: `
+## Off the wall
+
+The Ball crosses the room, reaches a Wall, and stops. Solid Bodies did its job
+— a moving body cannot end up inside a solid one — and stopping is what
+"pushed apart" comes to when nothing has said otherwise.
+
+What a collision does to a SPEED is a property of the surface, not a thing the
+Ball decides. **Bounciness** is how much of the speed into a wall comes back
+out of it: 0 keeps none, 1 keeps all of it.
+
+### What you do
+
+1. Add **set bounciness of ⟨any Wall⟩ to ⟨0.5⟩** at the top of the world. Run
+   it: the Ball comes off the wall at half the speed, and each bounce is
+   smaller than the last.
+2. Turn it up until the Ball never slows down. There is exactly one value that
+   does that, and it is the one that gives all the speed back.
+3. Try 1.2 and watch it get faster every time it touches anything. Nothing
+   stops you; a wall that returns more than it was given is a perfectly good
+   thing to build a game out of.
+`.trim(),
+};
+
+// ── arcade/paddle ────────────────────────────────────────────────────────────
+
+/** `get position ⟨x⟩ of ⟨this actor⟩`. */
+const myX = () => ({
+  block: {
+    type: 'world_get_Space_PositionProperty',
+    fields: {COMPONENT: 'x'},
+    inputs: {ACTOR: me()},
+  },
+});
+
+const paddle: WorldScenario = {
+  name: 'A thing you steer',
+  description: 'A paddle kept on screen by hand, with half of it hanging off.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [addActor(local('paddle'), [placeAt(160, 280)])],
+      actors: [
+        {
+          id: 'paddle',
+          name: 'Paddle',
+          rows: [
+            useTrait('Arrow Keys#MovesAcrossTrait'),
+            // The hand-written fence: keep the paddle's POSITION on screen,
+            // which is not the same as keeping the paddle on screen.
+            {
+              type: 'world_trait_step',
+              fields: {PHASE: 'decide', NAME: 'keep it on screen'},
+              inputs: {
+                DO: {
+                  block: {
+                    type: 'controls_if',
+                    inputs: {
+                      IF0: {
+                        block: {
+                          type: 'logic_compare',
+                          fields: {OP: 'LT'},
+                          inputs: {A: myX(), B: num(0)},
+                        },
+                      },
+                      DO0: {
+                        block: {
+                          type: 'world_set_position',
+                          inputs: {ACTOR: me(), X: num(0), Y: num(280)},
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          ],
+          drawing: {
+            width: 96,
+            height: 16,
+            commands: [fill(swatch('#5b8def')), rectangle(0, 0, 96, 16)],
+          },
+        },
+      ],
+    }),
+    rules: ['arrows', 'bounds'],
+  }),
+  instructions: `
+## A thing you steer
+
+Hold the left arrow. The Paddle stops — and it stops with half of itself off
+the side of the screen, because what was kept on screen is its POSITION, and a
+position is a point in the middle of a thing that is ninety-six wide.
+
+You could fix that by hand: subtract half the width, and remember to change the
+number if the Paddle ever changes size. Or you could say what you actually mean.
+
+### What you do
+
+1. Delete the whole \`each frame\` handler. The Paddle now walks off the screen
+   entirely, which is honest.
+2. Give it **use trait ⟨Stays Across⟩**. Hold left again: it stops with its
+   EDGE against the side, and nothing anywhere says 48.
+3. Make the drawing wider and run it again. It still stops at the edge — the
+   rule reads the size the Paddle actually is.
+`.trim(),
+};
+
+// ── arcade/shoot ─────────────────────────────────────────────────────────────
+
+/** `add actor ⟨Bullet⟩ do ⟨put it above the Ship and send it up⟩`. */
+const fireOne = () =>
+  addActor(local('bullet'), [
+    placeAt(160, 240),
+    {
+      type: 'world_set_Physics_VelocityProperty',
+      inputs: {
+        ACTOR: me(),
+        VALUE: {block: {type: 'world_vector', fields: {VECTOR: {x: 0, y: -8}}}},
+      },
+    },
+  ]);
+
+const shoot: WorldScenario = {
+  name: 'A bullet is spawned',
+  description: 'A ship that fires sixty times a second and never tidies up.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [addActor(local('ship'), [placeAt(160, 280)])],
+      actors: [
+        {
+          id: 'ship',
+          name: 'Ship',
+          rows: [
+            useTrait('Input#TakesKeyboardInputTrait'),
+            setSprite('ship.png'),
+          ],
+        },
+        {
+          id: 'bullet',
+          name: 'Bullet',
+          rows: [useTrait('Physics#CanMoveTrait'), setSprite('shot.png')],
+        },
+      ],
+      handlers: [onPressed('ship', 'space', fireOne())],
+    }),
+    sprites: ['ship', 'shot'],
+    rules: ['input', 'motion', 'shoots', 'expires'],
+  }),
+  instructions: `
+## A bullet is spawned
+
+Hit space a few times. Each press adds a Bullet to the world, and each Bullet
+flies up out of the view and keeps going — forever, because nothing ever takes
+one away. Mash the key and you get a bullet per press, as fast as you can hit
+it.
+
+Two halves are missing, and the second is the one everybody forgets.
+**Shooting** holds a reload time, so asking to fire is sometimes answered no.
+**Expires** gives an actor a lifetime, so a thing that is made can also stop.
+
+### What you do
+
+1. Give the Ship **use trait ⟨Shoots⟩**, and change the press handler to
+   **make ⟨this actor⟩ fire**.
+2. Add **when ⟨any Ship⟩ fires**, and move the \`add actor ⟨Bullet⟩\` into it.
+   Mash the key now: a bullet every quarter second however fast you hit it,
+   because that is the reload time and the answer to the rest was no.
+3. Give the Bullet **use trait ⟨Expires⟩** and **set lifetime of ⟨this actor⟩
+   to ⟨1⟩**. Fire for a while and then stop: the world empties itself.
+4. Set the reload time to a tenth and fire again. More bullets, and still a
+   count rather than a stream.
+`.trim(),
+};
+
 // ── place/edges ──────────────────────────────────────────────────────────────
 
 const edges: WorldScenario = {
@@ -2075,6 +2302,9 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'platformer/pickups': pickups,
   'platformer/hazards': hazards,
   'platformer/level': level,
+  'arcade/bounce': bounce,
+  'arcade/paddle': paddle,
+  'arcade/shoot': shoot,
 };
 
 /** Every lesson written so far, by the tile it belongs to. */

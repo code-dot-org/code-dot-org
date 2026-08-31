@@ -1441,16 +1441,44 @@ export const TILES: readonly Tile[] = [
     title: 'Off the wall',
     teaches:
       'A property on a surface decides what a collision does to a speed.',
-    task: 'A ball in a box. Set the walls’ bounciness and find the value where it never slows down.',
+    task: 'A ball that stops dead at the wall. Find the bounciness where it never slows down.',
     requires: ['motion/force', 'logic/collision'],
     unlocks: [
       {kind: 'block', type: 'world_set_SolidBodies_BouncinessProperty'},
     ],
     check: {
       kind: 'outcome',
-      says: 'After a wall hit the velocity component across that wall is reversed within tolerance.',
+      says: 'The Ball is moving as fast at the end of a long run as it was at the start.',
       falsePass:
-        'Flipping the velocity by hand in a collision handler. Assert the handler is not there.',
+        'Reversing the velocity by hand in a collision handler, which bounces and is not what the lesson is about — so the shape half asks that there is no handler. A wall that gives the speed back is a fact about the wall.',
+      run: {
+        probes: {ball: {kind: 'positions', of: 'Ball'}},
+        trace: Array.from({length: 14}, () => ({seconds: 0.4})),
+      },
+      inspect: files =>
+        !Object.values(files).some(contents =>
+          contents.includes('world_on_Collisions_StartsTouchingEvent'),
+        ),
+      passes: ({samples}) => {
+        const path = (samples.ball ?? []).map(
+          sample => (sample as {x: number; y: number}[])[0],
+        );
+        if (path.some(at => !at)) {
+          return false;
+        }
+        // How far it travels between samples. A bounce inside a sample makes
+        // one step short, so the comparison is between the BIGGEST steps at
+        // each end of the run rather than the last against the first.
+        const steps = path
+          .slice(1)
+          .map((at, index) =>
+            Math.hypot(at.x - path[index].x, at.y - path[index].y),
+          );
+        const fastest = (of: number[]) => Math.max(...of);
+        const early = fastest(steps.slice(0, 4));
+        const late = fastest(steps.slice(-4));
+        return early > 20 && late >= early * 0.7;
+      },
     },
   },
   {
@@ -1459,14 +1487,39 @@ export const TILES: readonly Tile[] = [
     at: at('arcade', 2, 2),
     title: 'A thing you steer',
     teaches: 'Constraining a player is a rule, not a check you write.',
-    task: 'A paddle on the arrow keys that cannot leave the screen — the whole paddle, not its middle.',
+    task: 'A paddle kept on screen by hand, with half of it hanging off. Keep the whole paddle instead.',
     requires: ['arcade/bounce'],
+    // NOT the Boundaries rule: `place/edges` grants that, and this lesson is
+    // handed it rather than granting it a second time. What it adds is the
+    // block that asks how big the view is, for a fence somebody still wants to
+    // write by hand.
     unlocks: [{kind: 'block', type: 'world_view_size'}],
     check: {
       kind: 'outcome',
-      says: 'Holding left for two seconds stops the paddle with its edge at the wall, not its centre.',
+      says: 'Holding left stops the Paddle with its EDGE at the wall — half its own width from the side, whatever that width is.',
       falsePass:
-        'Clamping the centre, which looks right until half the paddle is outside. Measure the edge.',
+        'Clamping the position to zero, which is what the lesson starts from: it stops, and it stops with half the Paddle off the screen. The check measures the Paddle rather than trusting a number, so making it wider cannot break the answer.',
+      run: {
+        probes: {
+          paddle: {kind: 'positions', of: 'Paddle'},
+          drawn: {kind: 'drawings', of: 'Paddle'},
+        },
+        trace: Array.from({length: 8}, () => ({
+          hold: ['ArrowLeft'],
+          seconds: 0.4,
+        })),
+      },
+      passes: ({samples}) => {
+        const path = lastList<{x: number}>(samples.paddle);
+        const drawn = lastList<{width: number}>(samples.drawn);
+        const at = path[0]?.x;
+        const width = drawn[0]?.width;
+        return (
+          typeof at === 'number' &&
+          typeof width === 'number' &&
+          Math.abs(at - width / 2) <= 4
+        );
+      },
     },
   },
   {
@@ -1476,7 +1529,7 @@ export const TILES: readonly Tile[] = [
     title: 'A bullet is spawned',
     teaches:
       'Making things while the game runs, and the other half nobody remembers: taking them away again.',
-    task: 'Fire on a key with a cooldown, and make the bullets clean up after themselves.',
+    task: 'A bullet per press, and none of them ever leaves. Put a reload time in front and a lifetime behind.',
     requires: ['arcade/bounce'],
     unlocks: [
       {kind: 'rule', id: 'shoots'},
@@ -1484,9 +1537,28 @@ export const TILES: readonly Tile[] = [
     ],
     check: {
       kind: 'outcome',
-      says: 'Two seconds of held fire produces the cooldown’s count of bullets, and none of them survives its lifetime.',
+      says: 'Ten presses make fewer than ten bullets, and the world empties itself afterwards.',
       falsePass:
-        'A cooldown that is really the frame rate. Assert the count, not that it is fewer than 120.',
+        'A lifetime and no reload, which also empties the world and fires as fast as a finger can move — and a reload with no lifetime, which is a tidy stream that never ends. Both halves are read, because the lesson is that making and unmaking are two jobs.',
+      run: {
+        probes: {bullets: {kind: 'actorCount', of: 'Bullet'}},
+        // Ten presses in two seconds, then long enough for a lifetime to run
+        // out. Held keys make ONE press: the event is the rising edge.
+        trace: [
+          ...Array.from({length: 10}, () => [
+            {hold: ['space'], seconds: 0.1},
+            {seconds: 0.1},
+          ]).flat(),
+          ...Array.from({length: 4}, () => ({seconds: 0.5})),
+        ],
+      },
+      passes: ({samples}) => {
+        const alive = (samples.bullets ?? []).map(count =>
+          typeof count === 'number' ? count : -1,
+        );
+        const most = Math.max(...alive);
+        return most > 0 && most <= 6 && alive[alive.length - 1] === 0;
+      },
     },
   },
   {

@@ -1115,6 +1115,14 @@ const playedOf = async (id: TileId, source: MultiFileSource) => {
   return playCheck(world, spec.run!);
 };
 
+/** The last sample of a count probe. */
+const lastNumberOf = (samples: unknown[] | undefined): number =>
+  (samples?.[samples.length - 1] ?? -1) as number;
+
+/** The last sample of a probe, for a test that wants to read the number. */
+const lastOf = (samples: unknown[] | undefined): {x: number}[] =>
+  (samples?.[samples.length - 1] ?? []) as {x: number}[];
+
 const outcomeOf = async (id: TileId, source: MultiFileSource) =>
   tile(id).check.passes!(await playedOf(id, source));
 
@@ -2036,5 +2044,140 @@ describe('the level lesson’s check', () => {
   it('refuses a win that fires on any touch', async () => {
     const {passes} = await check('platformer/level', winning(false));
     expect(passes).toBe(false);
+  });
+});
+
+describe('the bounce lesson’s check', () => {
+  const lesson = LESSONS['arcade/bounce'];
+
+  /** The Wall given a bounciness, where a kind's properties are set. */
+  const bouncy = (amount: number) =>
+    editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      under(actorIn(workspace, 'Wall'), {
+        type: 'world_set_SolidBodies_BouncinessProperty',
+        inputs: {
+          ACTOR: {block: {type: 'world_this_actor'}},
+          VALUE: {shadow: {type: 'math_number', fields: {NUM: amount}}},
+        },
+      });
+      return JSON.stringify(workspace);
+    });
+
+  it('refuses a Ball that stops at the wall', async () => {
+    const {passes} = await check('arcade/bounce', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts a wall that gives all the speed back', async () => {
+    const {passes, result} = await check('arcade/bounce', bouncy(1));
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  // Half is a bounce and is not the lesson: every bounce is smaller than the
+  // last, which is what the check measures at the two ends of the run.
+  it('refuses a bounce that decays', async () => {
+    const {passes} = await check('arcade/bounce', bouncy(0.5));
+    expect(passes).toBe(false);
+  });
+});
+
+describe('the paddle lesson’s check', () => {
+  const lesson = LESSONS['arcade/paddle'];
+
+  it('refuses a fence around the position', async () => {
+    const {passes, result} = await check('arcade/paddle', lesson.source);
+    // It does stop — with its middle at the wall, so half of it is outside.
+    expect(lastOf(result.samples.paddle)[0].x).toBeLessThan(4);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts the rule that knows how wide it is', async () => {
+    const solved = editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const paddle = actorIn(workspace, 'Paddle');
+      without(paddle, 'world_trait_step');
+      under(paddle, {
+        type: 'world_use_trait',
+        fields: {TRAIT: 'Boundaries#StaysAcrossTrait'},
+      });
+      return JSON.stringify(workspace);
+    });
+    const {passes, result} = await check('arcade/paddle', solved);
+    expect(result.error).toBeUndefined();
+    // Forty-eight, which is half of ninety-six, and nowhere written down.
+    expect(lastOf(result.samples.paddle)[0].x).toBeCloseTo(48, 0);
+    expect(passes).toBe(true);
+  });
+});
+
+describe('the shooting lesson’s check', () => {
+  const lesson = LESSONS['arcade/shoot'];
+
+  /** The reload in front of the spawn, and optionally a lifetime behind it. */
+  const armed = (lifetime?: number) =>
+    editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      under(actorIn(workspace, 'Ship'), {
+        type: 'world_use_trait',
+        fields: {TRAIT: 'Shooting#ShootsTrait'},
+      });
+      // The press asks to fire; the spawn moves to the `fires` event, which is
+      // the moment the rule answers yes.
+      const hat = workspace.blocks.blocks.find(
+        block => block.type === 'world_on_Input_PressesEvent',
+      )!;
+      const spawn = hat.next!.block!;
+      hat.next = {
+        block: {
+          type: 'world_do_Shooting_MakeFireAction',
+          inputs: {VALUE: {block: {type: 'world_this_actor'}}},
+        },
+      };
+      workspace.blocks.blocks.push({
+        type: 'world_on_Shooting_FiresEvent',
+        x: 900,
+        y: 20,
+        inputs: {
+          ACTOR: {
+            block: {type: 'world_actor_kind', fields: {ACTOR: local('ship')}},
+          },
+        },
+        next: {block: spawn},
+      } as unknown as Row);
+      if (lifetime !== undefined) {
+        const bullet = actorIn(workspace, 'Bullet');
+        under(bullet, {
+          type: 'world_set_Expiry_LifetimeProperty',
+          inputs: {
+            ACTOR: {block: {type: 'world_this_actor'}},
+            VALUE: {shadow: {type: 'math_number', fields: {NUM: lifetime}}},
+          },
+        });
+        under(bullet, {
+          type: 'world_use_trait',
+          fields: {TRAIT: 'Expiry#ExpiresTrait'},
+        });
+      }
+      return JSON.stringify(workspace);
+    });
+
+  it('refuses a bullet per press that never leaves', async () => {
+    const {passes, result} = await check('arcade/shoot', lesson.source);
+    // Ten presses, ten bullets, and all ten still there at the end.
+    expect(lastNumberOf(result.samples.bullets)).toBe(10);
+    expect(passes).toBe(false);
+  });
+
+  it('refuses a reload with nothing to clean up', async () => {
+    const {passes} = await check('arcade/shoot', armed());
+    expect(passes).toBe(false);
+  });
+
+  it('accepts a reload in front and a lifetime behind', async () => {
+    const {passes, result} = await check('arcade/shoot', armed(1));
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
   });
 });
