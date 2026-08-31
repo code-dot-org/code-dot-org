@@ -153,6 +153,13 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   // Not `any ⟨Dot⟩`: the new block's source socket wears one already, so the
   // one trip to the toolbox is for the block itself.
   'simulation/neighbours': ['world_actors_within'],
+  'simulation/emergent': [
+    'world_set_Physics_VelocityProperty',
+    'world_get_Physics_VelocityProperty',
+    'world_vector_math',
+    'world_query_Steering_FromTowardOverQuery',
+    'world_query_Steering_DistanceFromToQuery',
+  ],
   'puzzle/goal': ['controls_if', 'world_is_a', 'world_event_actor'],
   'puzzle/undo': ['world_use_trait', 'world_on_Input_PressesEvent'],
   'adventure/world': [

@@ -12,14 +12,13 @@
 // Blockly JSON behind them. So `catalogue.ts` stays data about tiles, and the
 // projects live here, looked up by tile id.
 //
-// Sixty-three of sixty-seven, and the four that are left are all waiting on
+// Sixty-four of sixty-seven, and the three that are left are all waiting on
 // the same thing: a rule or a block the library has not got. Every other tile
 // on the map has a lesson, a starting project and a check tested in both
 // directions.
 //
 //   adventure/rooms        a Scenes rule
 //   adventure/keys         an Inventory rule
-//   simulation/emergent    the same query — see specs/PROGRESSION.md
 //   simulation/dials       reached through `neighbours`
 //
 // What is written is milestone 4 of specs/PROGRESSION_UI.md and then some: all
@@ -3736,6 +3735,202 @@ won anyway.
 `.trim(),
 };
 
+// ── simulation/emergent ──────────────────────────────────────────────────────
+
+/** `velocity of ⟨who⟩`, and the setter that writes this actor's. */
+const velocityOf = (who: object) => ({
+  type: 'world_get_Physics_VelocityProperty',
+  inputs: {ACTOR: {block: who}},
+});
+const setVelocityTo = (value: object) => ({
+  type: 'world_set_Physics_VelocityProperty',
+  inputs: {ACTOR: me(), VALUE: {block: value}},
+});
+
+/** `⟨a⟩ ⟨op⟩ ⟨b⟩` on vectors, and Steering's `from ⟨a⟩ to ⟨b⟩`. */
+const vectorMath = (op: string, a: object, b: object) => ({
+  type: 'world_vector_math',
+  fields: {OP: op},
+  inputs: {A: {block: a}, B: {block: b}},
+});
+/**
+ * `from ⟨here⟩ toward ⟨there⟩ over ⟨distance from ⟨here⟩ to ⟨there⟩⟩`.
+ *
+ * Steering's own pair, and a UNIT step rather than the whole gap: the gap is
+ * in pixels and a velocity is not, so multiplying a gap by anything a learner
+ * would type sends a Boid across the world. A step of one, times a weight, is
+ * a number that means what it looks like.
+ */
+const toward = (here: object, there: object) => ({
+  type: 'world_query_Steering_FromTowardOverQuery',
+  inputs: {
+    HERE: {block: here},
+    THERE: {block: there},
+    GAPBETWEEN: {
+      block: {
+        type: 'world_query_Steering_DistanceFromToQuery',
+        inputs: {A: {block: here}, B: {block: there}},
+      },
+    },
+  },
+});
+
+/** A nudge to this actor's velocity: `velocity + ⟨pull⟩ × ⟨weight⟩`. */
+const nudge = (pull: object, weight: number) =>
+  setVelocityTo(
+    vectorMath(
+      'ADD',
+      velocityOf({type: 'world_this_actor'}),
+      vectorMath('MULTIPLY', pull, {
+        type: 'math_number',
+        fields: {NUM: weight},
+      }),
+    ),
+  );
+
+/** `for each actor ⟨name⟩ in ⟨the actors in ⟨any Boid⟩ within ⟨reach⟩ …⟩`. */
+const forEachNear = (name: string, reach: number, body: object[]) => {
+  const variable = {id: name, name, type: 'Actor'};
+  return {
+    type: 'world_for_each',
+    fields: {VAR: variable},
+    inputs: {
+      SOURCE: {
+        block: {
+          type: 'world_actors_within',
+          inputs: {
+            SOURCE: anyKind('boid'),
+            DISTANCE: {shadow: {type: 'math_number', fields: {NUM: reach}}},
+            OF: {block: {type: 'world_this_actor'}},
+          },
+        },
+      },
+      ...(body.length ? {DO: {block: chainRows(body)}} : {}),
+    },
+  };
+};
+const held = (name: string) => ({
+  type: 'variables_get_Actor',
+  fields: {VAR: {id: name, name, type: 'Actor'}},
+});
+
+/** Twelve Boids on a grid, each flying off in a different direction. */
+const flock = () =>
+  Array.from({length: 12}, (_unused, index) => {
+    const angle = (index * 30 * Math.PI) / 180;
+    return addActor(local('boid'), [
+      placeAt(60 + (index % 4) * 70, 60 + Math.floor(index / 4) * 90),
+      setVelocity(
+        Number((0.6 * Math.cos(angle)).toFixed(3)),
+        Number((0.6 * Math.sin(angle)).toFixed(3)),
+      ),
+    ]);
+  });
+
+const emergent: WorldScenario = {
+  name: 'Three rules, and behaviour nobody wrote',
+  description:
+    'Twelve Boids going twelve ways, and two of the three rules that make a flock.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: flock(),
+      actors: [
+        {
+          id: 'boid',
+          name: 'Boid',
+          rows: [
+            useTrait('Physics#CanMoveTrait'),
+            useTrait('Screen Wrap#WrapsAcrossTrait'),
+            useTrait('Screen Wrap#WrapsDownTrait'),
+            setSprite('ball.png'),
+            // Keep apart: the one of the three that is written for you.
+            {
+              type: 'world_trait_step',
+              fields: {PHASE: 'decide', NAME: 'flock'},
+              inputs: {
+                DO: {
+                  block: chainRows([
+                    forEachNear('crowding', 30, [
+                      nudge(
+                        toward(held('crowding'), {type: 'world_this_actor'}),
+                        0.05,
+                      ),
+                    ]),
+                    forEachNear('other', 80, []),
+                  ]),
+                },
+              },
+            },
+            // Always the same speed, so the only thing that can differ between
+            // two Boids is which way they are pointing. Given, not written: it
+            // is what keeps the sums from running away, and it is not what the
+            // lesson is about.
+            {
+              type: 'world_trait_step',
+              fields: {PHASE: 'push', NAME: 'keep flying'},
+              inputs: {
+                DO: {
+                  block: setVelocityTo({
+                    type: 'world_vector_from_angle',
+                    inputs: {
+                      LENGTH: {
+                        shadow: {type: 'math_number', fields: {NUM: 0.6}},
+                      },
+                      DEGREES: {
+                        block: {
+                          type: 'world_vector_direction',
+                          inputs: {
+                            VECTOR: {
+                              block: velocityOf({type: 'world_this_actor'}),
+                            },
+                          },
+                        },
+                      },
+                    },
+                  }),
+                },
+              },
+            },
+          ],
+        },
+      ],
+    }),
+    sprites: ['ball'],
+    rules: ['motion', 'wrap', 'steering'],
+  }),
+  instructions: `
+## Three rules, and behaviour nobody wrote
+
+Twelve Boids, each flying off in its own direction and nothing anywhere saying
+"flock". The first of the three rules is written: **keep apart** — for every
+Boid crowding you, steer a little away from it.
+
+The other two go in the second loop, which asks for the Boids within 80 rather
+than the ones on top of you:
+
+- **go the same way**: steer toward the difference between its velocity and
+  yours, a little.
+- **stay together**: steer toward it, a very little.
+
+Each of them is one **set velocity** block, the same shape as the one already
+there.
+
+### What you do
+
+1. In the second loop, add **set velocity of ⟨this actor⟩ to ⟨velocity⟩ +
+   ⟨(⟨velocity of ⟨other⟩⟩ − ⟨velocity of ⟨this actor⟩⟩) × ⟨0.05⟩⟩**.
+2. Under it, add **set velocity of ⟨this actor⟩ to ⟨velocity⟩ + ⟨⟨from ⟨this
+   actor⟩ to ⟨other⟩⟩ × ⟨0.002⟩⟩** — the same block as "keep apart", with the
+   two actors the other way round and a much smaller number.
+3. Run it. Nothing in what you wrote mentions a flock, a leader or a direction
+   for everybody to go in, and one turns up anyway.
+4. Take the first one out and run it again. **Local rules make global
+   behaviour, and neither one explains the other** — which is why nobody can
+   look at three lines like these and say what they will do.
+`.trim(),
+};
+
 // ── simulation/neighbours ────────────────────────────────────────────────────
 
 /** Twenty-five Dots on a grid, sixty apart, in a world three hundred wide. */
@@ -4402,6 +4597,7 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'puzzle/grid': grid,
   'puzzle/push': push,
   'simulation/neighbours': neighbours,
+  'simulation/emergent': emergent,
   'puzzle/turns': turns,
   'puzzle/goal': goal,
   'puzzle/undo': undo,

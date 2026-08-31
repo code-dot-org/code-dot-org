@@ -3959,7 +3959,7 @@ describe('the neighbourhood lesson’s check', () => {
     editing(lesson.source, 'main.world', contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const step = rowOf(actorIn(workspace, 'Walker'), 'world_trait_step');
-      const second = step.inputs!.DO.block!.next!.block;
+      const second = step.inputs!.DO!.block!.next!.block!;
       second.inputs!.SOURCE = {
         block: {
           type: 'world_actors_within',
@@ -3998,6 +3998,146 @@ describe('the neighbourhood lesson’s check', () => {
 
   it('refuses a neighbourhood too small to hold anything', async () => {
     const {passes} = await check('simulation/neighbours', looking(5));
+    expect(passes).toBe(false);
+  });
+});
+
+describe('the flocking lesson’s check', () => {
+  const lesson = LESSONS['simulation/emergent'];
+  /** Statements, one under the next. */
+  const chained = (rows: Row[]): Row =>
+    rows.reduceRight(
+      (next: Row | undefined, row) =>
+        next ? {...row, next: {block: next}} : row,
+      undefined as Row | undefined,
+    )!;
+  const boid = (name: string) => ({
+    type: 'variables_get_Actor',
+    fields: {VAR: {id: name, name, type: 'Actor'}},
+  });
+  const me = () => ({type: 'world_this_actor'});
+  const velocity = (who: object) => ({
+    type: 'world_get_Physics_VelocityProperty',
+    inputs: {ACTOR: {block: who}},
+  });
+  const times = (pull: object, weight: number) => ({
+    type: 'world_vector_math',
+    fields: {OP: 'MULTIPLY'},
+    inputs: {
+      A: {block: pull},
+      B: {block: {type: 'math_number', fields: {NUM: weight}}},
+    },
+  });
+  /** `set velocity of ⟨this actor⟩ to ⟨velocity⟩ + ⟨pull⟩ × ⟨weight⟩`. */
+  const nudge = (pull: object, weight: number): Row => ({
+    type: 'world_set_Physics_VelocityProperty',
+    inputs: {
+      ACTOR: {block: me()},
+      VALUE: {
+        block: {
+          type: 'world_vector_math',
+          fields: {OP: 'ADD'},
+          inputs: {A: {block: velocity(me())}, B: {block: times(pull, weight)}},
+        },
+      },
+    },
+  });
+  /** Go the same way as it: steer toward the difference in velocities. */
+  const alignment = () =>
+    nudge(
+      {
+        type: 'world_vector_math',
+        fields: {OP: 'SUBTRACT'},
+        inputs: {
+          A: {block: velocity(boid('other'))},
+          B: {block: velocity(me())},
+        },
+      },
+      0.05,
+    );
+  /** Stay with it: a one-pixel step toward it, a hundredth at a time. */
+  const cohesion = () =>
+    nudge(
+      {
+        type: 'world_query_Steering_FromTowardOverQuery',
+        inputs: {
+          HERE: {block: me()},
+          THERE: {block: boid('other')},
+          GAPBETWEEN: {
+            block: {
+              type: 'world_query_Steering_DistanceFromToQuery',
+              inputs: {A: {block: me()}, B: {block: boid('other')}},
+            },
+          },
+        },
+      },
+      0.01,
+    );
+
+  /**
+   * The lesson done, with knobs for the two ways to be wrong: leaving one of
+   * the three rules out, and starting the Boids off already agreeing.
+   */
+  const flocking = (options: {rules: Row[]; aligned?: boolean}) =>
+    editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const step = rowOf(actorIn(workspace, 'Boid'), 'world_trait_step');
+      const second = step.inputs!.DO!.block!.next!.block!;
+      if (options.rules.length) {
+        second.inputs!.DO = {block: chained(options.rules)};
+      }
+      if (options.aligned) {
+        // Every launch velocity in the file, wherever it is nested: the twelve
+        // `add actor` rows each hold one.
+        const sameWay = (node: unknown): void => {
+          if (!node || typeof node !== 'object') {
+            return;
+          }
+          const row = node as Row;
+          if (row.type === 'world_vector') {
+            row.fields = {VECTOR: {x: 0.6, y: 0}};
+          }
+          for (const held of Object.values(node as Record<string, unknown>)) {
+            sameWay(held);
+          }
+        };
+        sameWay(workspace);
+      }
+      return JSON.stringify(workspace);
+    });
+
+  it('refuses twelve Boids that only keep apart', async () => {
+    const {passes} = await check('simulation/emergent', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts all three rules', async () => {
+    const {passes, result} = await check(
+      'simulation/emergent',
+      flocking({rules: [alignment(), cohesion()]}),
+    );
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  it('refuses keeping apart and staying together without going the same way', async () => {
+    // The one the lesson ends on: take alignment out and the flock half-forms
+    // and comes apart again. It is also the closest thing to a false pass here
+    // — cohesion alone pulls headings together for a while.
+    const {passes} = await check(
+      'simulation/emergent',
+      flocking({rules: [cohesion()]}),
+    );
+    expect(passes).toBe(false);
+  });
+
+  it('refuses a flock that was one to begin with', async () => {
+    // Twelve Boids all launched the same way agree at every sample and were
+    // never made to. The check reads the change, not the value.
+    const {passes} = await check(
+      'simulation/emergent',
+      flocking({rules: [alignment(), cohesion()], aligned: true}),
+    );
     expect(passes).toBe(false);
   });
 });

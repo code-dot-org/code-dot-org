@@ -18,7 +18,11 @@ const open = (
   render(<ImportRuleDialog onImport={vi.fn()} onCancel={vi.fn()} {...props} />);
 
 describe('ImportRuleDialog', () => {
-  it('lists every stock rule by the ability it adds', () => {
+  // Longer than the default five seconds: this renders a row per stock rule
+  // and asks the accessibility tree about each, and the library keeps growing
+  // — it went over the default the week Turns and History were added, on a
+  // machine running the rest of the suite beside it.
+  it('lists every stock rule by the ability it adds', {timeout: 20000}, () => {
     open();
 
     // `getAllBy`: a rule that needs another names it, so "Has Physics" is on

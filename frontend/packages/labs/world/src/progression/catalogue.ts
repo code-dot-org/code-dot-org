@@ -2469,14 +2469,31 @@ export const TILES: readonly Tile[] = [
     title: 'Three rules, and behaviour nobody wrote',
     teaches:
       'Local rules make global behaviour, and neither one explains the other.',
-    task: 'Keep apart, go the same way, stay together. Then take one away and watch what breaks.',
+    task: 'Twelve Boids going twelve ways, and two of the three rules that make a flock.',
     requires: ['simulation/steering'],
     unlocks: [{kind: 'block', type: 'world_count_with'}],
+    // Vector arithmetic is `motion/force`'s to grant, and the way here does not
+    // pass through it: a learner who came up the Place and Input side has never
+    // been offered one. Lent for this lesson, which cannot be done without it.
+    offers: [{kind: 'block', type: 'world_vector_math'}],
     check: {
       kind: 'outcome',
-      says: 'The spread of headings narrows over the run, and widens again with alignment removed.',
+      says: 'The Boids begin pointing twelve ways and end pointing one, and nothing in the world says which.',
       falsePass:
-        'Everything given the same heading at the start. The check reads the change, not the value.',
+        'Giving them all the same heading to start with, which the first sample refuses: the check reads the CHANGE. Keeping apart and staying together without going the same way is refused too — it half-aligns a flock and never holds it (`lessonChecks`).',
+      run: {
+        probes: {velocity: {kind: 'property', of: 'Boid', name: 'velocity'}},
+        trace: Array.from({length: 12}, () => ({seconds: 0.5})),
+      },
+      passes: ({samples}) => {
+        const order = (samples.velocity ?? []).map(sample =>
+          headingOrder(sample as Array<{x: number; y: number}>),
+        );
+        const last = order[order.length - 1] ?? 0;
+        // Spread to begin with — twelve headings thirty degrees apart cancel
+        // exactly — and one heading by the end.
+        return order.length === 13 && (order[0] ?? 1) <= 0.3 && last >= 0.9;
+      },
     },
   },
   {
@@ -2874,6 +2891,24 @@ function blockIn(
 const lastNumber = (samples: unknown[] | undefined): number => {
   const value = samples?.[samples.length - 1];
   return typeof value === 'number' ? value : -1;
+};
+
+/**
+ * How much a set of headings agree: 1 is one direction, 0 is every direction.
+ *
+ * The mean of the unit vectors, which is the ordinary way to average angles —
+ * averaging the numbers themselves says that north and slightly-west-of-north
+ * average to south.
+ */
+const headingOrder = (velocities: Array<{x: number; y: number}>): number => {
+  let x = 0;
+  let y = 0;
+  for (const velocity of velocities) {
+    const speed = Math.hypot(velocity.x, velocity.y) || 1;
+    x += velocity.x / speed;
+    y += velocity.y / speed;
+  }
+  return velocities.length ? Math.hypot(x, y) / velocities.length : 0;
 };
 
 const lastList = <T>(samples: unknown[] | undefined): T[] => {

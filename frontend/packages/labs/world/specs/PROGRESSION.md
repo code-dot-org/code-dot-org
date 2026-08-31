@@ -484,13 +484,13 @@ The first thing anybody wants is for something to move when they press a key.
 
 ### Genre: Simulation — entered from Place and Input
 
-| Tile             | The lesson                                                                        | Unlocks                                | Check                                                                    |
-| ---------------- | --------------------------------------------------------------------------------- | -------------------------------------- | ------------------------------------------------------------------------ |
-| `sim/many`       | A hundred of something. Spawn them, walk them, and find out what a hundred costs. | `add actor` at runtime; `random place` | `[o]` the world holds 100 and the frame time stays under budget          |
-| `sim/steering`   | Chase, and flee, and the distance question both are asked with.                   | Steering rule                          | `[o]` the chaser closes the distance; the fleer opens it                 |
-| `sim/neighbours` | Twenty-five Dots, all of them lit, and a question that lights a few.              | `actors within ⟨d⟩ of ⟨a⟩`             | `[o]` four lit at the start, a count that changes, and never all of them |
-| `sim/emergent`   | Three small rules and behaviour nobody wrote.                                     | `define behavior`                      | `[o]` the flock's average heading converges over the scripted run        |
-| `sim/dials`      | The properties are the experiment. Change one while it runs and watch.            | the simulation template                | `[o]` the live-apply path fires without a restart                        |
+| Tile             | The lesson                                                                        | Unlocks                                | Check                                                                        |
+| ---------------- | --------------------------------------------------------------------------------- | -------------------------------------- | ---------------------------------------------------------------------------- |
+| `sim/many`       | A hundred of something. Spawn them, walk them, and find out what a hundred costs. | `add actor` at runtime; `random place` | `[o]` the world holds 100 and the frame time stays under budget              |
+| `sim/steering`   | Chase, and flee, and the distance question both are asked with.                   | Steering rule                          | `[o]` the chaser closes the distance; the fleer opens it                     |
+| `sim/neighbours` | Twenty-five Dots, all of them lit, and a question that lights a few.              | `actors within ⟨d⟩ of ⟨a⟩`             | `[o]` four lit at the start, a count that changes, and never all of them     |
+| `sim/emergent`   | Twelve Boids going twelve ways, and two of the three rules that make a flock.     | `count of ⟨…⟩ with ⟨…⟩`                | `[o]` twelve headings at the start, one at the end, and nothing saying which |
+| `sim/dials`      | The properties are the experiment. Change one while it runs and watch.            | the simulation template                | `[o]` the live-apply path fires without a restart                            |
 
 ### The rim: Making
 
