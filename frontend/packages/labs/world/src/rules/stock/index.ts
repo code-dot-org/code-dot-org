@@ -31,6 +31,7 @@ import {gridRule} from './grid';
 import {healthRule} from './health';
 import {historyRule} from './history';
 import {inputRule} from './input';
+import {inventoryRule} from './inventory';
 import {jumpRule} from './jump';
 import {motionRule} from './motion';
 import {mouseRule} from './mouse';
@@ -127,6 +128,15 @@ export const STOCK_RULES: readonly StockRule[] = [
       'Lets an actor pick up the things it walks into, and says which kinds can be picked up. It keeps what each collector has taken, so a game can ask how many of a kind somebody holds, and raises an event on both sides of the moment.',
     provides: ['Collects', 'Can Be Collected'],
     contents: collectRule,
+  },
+  {
+    id: 'inventory',
+    name: 'Inventory',
+    ability: 'Carries Things',
+    description:
+      'A bag: what an actor is holding by name, and the way to spend one. Collection keeps a record of everything picked up, which only grows; this is the half that can go down, for a key that is gone once the door is open.',
+    provides: ['Carries', 'Can Be Carried'],
+    contents: inventoryRule,
   },
   {
     id: 'health',
@@ -456,6 +466,7 @@ export {
   goalsRule,
   historyRule,
   turnsRule,
+  inventoryRule,
   attachmentRule,
   progressRule,
 };

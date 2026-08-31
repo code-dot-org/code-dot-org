@@ -121,6 +121,12 @@ export const anyOf = list => ({
   inputs: {LIST: value(list)},
 });
 
+/** `how many actors in <list>`. */
+export const countOf = list => ({
+  type: 'world_count_actors',
+  inputs: {ACTOR: value(list)},
+});
+
 export const give = v => ({type: 'world_return', inputs: {VALUE: value(v)}});
 
 /** How many characters `words` has. */

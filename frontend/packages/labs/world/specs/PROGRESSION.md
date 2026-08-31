@@ -478,7 +478,7 @@ The first thing anybody wants is for something to move when they press a key.
 | ------------------ | ------------------------------------------------------------------ | ------------------------------------- | ---------------------------------------------------------------------- |
 | `adventure/world`  | A room three screens wide, seen through a window that never moves. | (Camera family, if not held)          | `[o]` the player leaves the first screen and the view follows          |
 | `adventure/rooms`  | More than one map, and the door between them.                      | **Scenes rule (new)**                 | `[o]` walking into the door loads the second map and places the player |
-| `adventure/keys`   | A door that needs something you are carrying.                      | Collection; **Inventory rule (new)**  | `[o]` the door refuses without the key and opens with it               |
+| `adventure/keys`   | Two locked doors, one key, and no way through either of them.      | Inventory rule                        | `[o]` the first door opens, the second stays shut                      |
 | `adventure/people` | A villager who walks her beat and leaves her own name behind.      | Patrol, Attachment rules              | `[o]` the NPC patrols and its conversation starts on contact           |
 | `adventure/errand` | Four things to find, and a bar that has no idea how it is going.   | Progress rule; the adventure template | `[o]` progress reaches 1 exactly when the last item is found           |
 
@@ -578,7 +578,6 @@ most of this. These are the holes, each named by the tile that found it.
 | Rule                  | Wanted by             | What it is                                                                                                             |
 | --------------------- | --------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | **Scenes**            | `adventure/rooms`     | Advance to another map, carrying what should carry. `clear world` + `load map` are the pieces; nothing holds the idea. |
-| **Inventory**         | `adventure/keys`      | Carrying a named thing, spending it. Collection counts what was picked up; this is about consuming one.                |
 | **Path**              | adventure/sim enemies | Step toward a target around walls. Steering is continuous and walks into corners.                                      |
 | **Spawner**           | `arcade/waves`        | Time + `add actor` expresses it; a named rule makes it one unlock and one lesson instead of five blocks.               |
 | **One-way platforms** | `platformer/ground`   | Solid from above, passable from below. A trait on Solid Bodies, probably, not a rule.                                  |

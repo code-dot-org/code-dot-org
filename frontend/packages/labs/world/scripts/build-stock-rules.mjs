@@ -51,6 +51,7 @@ const RULES = [
   'goals',
   'history',
   'turns',
+  'inventory',
 ];
 
 const check = process.argv.includes('--check');

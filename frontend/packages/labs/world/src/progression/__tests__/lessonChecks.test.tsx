@@ -4189,3 +4189,91 @@ describe('the dials lesson’s check', () => {
     expect(passes).toBe(false);
   });
 });
+
+describe('the key lesson’s check', () => {
+  const lesson = LESSONS['adventure/keys'];
+  const eventActor = () => ({block: {type: 'world_event_actor'}});
+  const thisActor = () => ({block: {type: 'world_this_actor'}});
+  const word = (words: string) => ({
+    shadow: {type: 'text', fields: {TEXT: words}},
+  });
+
+  /** The lesson done, with a knob for the key that is never spent. */
+  const carrying = (options: {spend: boolean}) =>
+    editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const open: Row = {
+        type: 'world_remove_actor',
+        inputs: {ACTOR: thisActor()},
+      };
+      workspace.blocks.blocks.push(
+        {
+          // Collecting is picking it up off the floor; taking is having it.
+          type: 'world_on_Collection_CollectsEvent',
+          x: 1400,
+          y: 20,
+          inputs: {ACTOR: anyKind('player')},
+          next: {
+            block: {
+              type: 'world_do_Inventory_TakesAction',
+              inputs: {
+                ACTOR: thisActor(),
+                VALUE: {block: {type: 'world_event_value'}},
+              },
+            },
+          },
+        } as unknown as Row,
+        {
+          type: 'world_on_Collisions_StartsTouchingEvent',
+          x: 1400,
+          y: 220,
+          fields: {FILTER0: ''},
+          inputs: {ACTOR: anyKind('door')},
+          next: {
+            block: {
+              type: 'controls_if',
+              inputs: {
+                IF0: {
+                  block: {
+                    type: 'world_query_Inventory_HasAQuery',
+                    inputs: {ACTOR: eventActor(), WHAT: word('key')},
+                  },
+                },
+                DO0: {
+                  block: options.spend
+                    ? {
+                        type: 'world_do_Inventory_SpendsAAction',
+                        inputs: {ACTOR: eventActor(), VALUE: word('key')},
+                        next: {block: open},
+                      }
+                    : open,
+                },
+              },
+            },
+          },
+        } as unknown as Row,
+      );
+      return JSON.stringify(workspace);
+    });
+
+  it('refuses two doors that never open', async () => {
+    const {passes} = await check('adventure/keys', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts a key that opens one door and is gone', async () => {
+    const {passes, result} = await check(
+      'adventure/keys',
+      carrying({spend: true}),
+    );
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  it('refuses a key that is never spent', async () => {
+    // It opens both doors, which is the whole reason there are two: a bag that
+    // only fills up is Collection's record under another name.
+    const {passes} = await check('adventure/keys', carrying({spend: false}));
+    expect(passes).toBe(false);
+  });
+});

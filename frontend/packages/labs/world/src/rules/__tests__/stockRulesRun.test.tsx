@@ -1559,3 +1559,99 @@ describe('Turns', () => {
     expect(every(1)).toBe(true);
   });
 });
+
+describe('Inventory', () => {
+  /** A player with a bag, and three things to put in it. */
+  const bag = () => {
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([rule('rules/collect'), rule('rules/inventory')])
+      .instantiate();
+    const player = new ActorBuilder({id: 'player', name: 'player'})
+      .useTraits([of('rules/inventory', 'CarriesTrait')])
+      .instantiate('player');
+    const used: string[] = [];
+    player.on(
+      of('rules/inventory', 'UsesAEvent'),
+      (_world: unknown, _actor: unknown, what: unknown) => {
+        used.push(what as string);
+      },
+    );
+    world.addActor(player);
+
+    const thing = (id: string, name: string) => {
+      const made = new ActorBuilder({id, name: id})
+        .useTraits([of('rules/inventory', 'CanBeCarriedTrait')])
+        .set(of('rules/inventory', 'WhatItIsProperty'), name)
+        .instantiate(id);
+      world.addActor(made);
+      return made;
+    };
+    /** Perform one of the trait's actions on the player, and drain the queue. */
+    const say = (name: string, ...args: unknown[]) => {
+      (player as unknown as {act(action: never, ...rest: unknown[]): void}).act(
+        of('rules/inventory', name),
+        ...args,
+      );
+      world.tick(1 / 60);
+    };
+    const ask = (name: string, what: string) =>
+      (
+        player as unknown as {query(q: never, ...rest: unknown[]): unknown}
+      ).query(of('rules/inventory', name), what);
+    return {world, player, thing, say, ask, used};
+  };
+
+  it('holds what it is given, by the name the thing carries', () => {
+    const {thing, say, ask} = bag();
+
+    say('TakesAction', thing('key1', 'key'));
+    say('TakesAction', thing('apple', 'food'));
+
+    expect(ask('HasAQuery', 'key')).toBe(true);
+    expect(ask('HasAQuery', 'rope')).toBe(false);
+    expect(ask('HasHowManyQuery', 'food')).toBe(1);
+  });
+
+  it('spends one, and only one, and says so', () => {
+    // The whole difference from Collection: a bag that can go down. Two keys
+    // in, one spent, one left — and a door that opened is told which.
+    const {thing, say, ask, used} = bag();
+    say('TakesAction', thing('key1', 'key'));
+    say('TakesAction', thing('key2', 'key'));
+
+    say('SpendsAAction', 'key');
+
+    expect(ask('HasHowManyQuery', 'key')).toBe(1);
+    expect(ask('HasAQuery', 'key')).toBe(true);
+    expect(used).toEqual(['key']);
+  });
+
+  it('spends nothing it has not got, and says nothing either', () => {
+    // A second locked door with no second key: the ask is what a project does
+    // about it, and this doing nothing quietly is what makes the ask optional
+    // rather than compulsory.
+    const {thing, say, ask, used} = bag();
+    say('TakesAction', thing('key1', 'key'));
+    say('SpendsAAction', 'key');
+
+    say('SpendsAAction', 'key');
+
+    expect(ask('HasAQuery', 'key')).toBe(false);
+    expect(ask('HasHowManyQuery', 'key')).toBe(0);
+    expect(used).toEqual(['key']);
+  });
+
+  it('will not carry a thing with no name', () => {
+    // Nameless things could never be spent, so a bag full of them is a bag
+    // that only fills up. `takes` refuses one rather than storing it.
+    const {world, say, ask} = bag();
+    const rock = new ActorBuilder({id: 'rock', name: 'rock'}).instantiate(
+      'rock',
+    );
+    world.addActor(rock);
+
+    say('TakesAction', rock);
+
+    expect(ask('HasHowManyQuery', 'thing')).toBe(0);
+  });
+});

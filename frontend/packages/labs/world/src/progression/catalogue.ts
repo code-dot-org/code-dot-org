@@ -1596,8 +1596,8 @@ export const TILES: readonly Tile[] = [
     task: 'Three bricks that go one at a time, and a game that never ends. End it on the last one.',
     requires: ['arcade/paddle'],
     // NOT `how many … in …`, nor `remove actor`: `memory/many` grants the
-    // first and another tile the second, and this lesson is handed both. What
-    // it adds is the way a world sheds EVERYTHING.
+    // first and `adventure/keys` the second, and this lesson is handed both.
+    // What it adds is the way a world sheds EVERYTHING.
     unlocks: [{kind: 'block', type: 'world_clear_world'}],
     // The question it turns on belongs to Memory, one region away, and Arcade
     // is entered from Motion and Logic.
@@ -2255,14 +2255,66 @@ export const TILES: readonly Tile[] = [
     title: 'A door that wants something',
     teaches:
       'Carrying a thing, and spending it — which is not the same as counting it.',
-    task: 'A locked door, a key somewhere else, and a key that is gone once it is used.',
+    task: 'Two locked doors, one key, and no way through either of them.',
     requires: ['adventure/rooms'],
-    unlocks: [{kind: 'rule', id: 'inventory', proposed: true}],
+    // `remove actor` is granted HERE, and nowhere before it — which was a hole
+    // rather than a decision: every tile that used one was handed it in its
+    // own starting project, so a gated learner could reach the end of the map
+    // without ever being offered the block. A door that opens by ceasing to
+    // exist is as good a place to hand it over as the catalogue has.
+    unlocks: [
+      {kind: 'rule', id: 'inventory'},
+      {kind: 'block', type: 'world_remove_actor'},
+    ],
+    // Three lent blocks, all for the same reason `adventure/world` lends the
+    // camera's: Adventure is entered from Look and Place, so a learner can
+    // arrive here having done neither Logic (`if`) nor the Story tiles that
+    // grant the two ways of reading what an event carried.
+    offers: [
+      {kind: 'block', type: 'controls_if'},
+      {kind: 'block', type: 'world_event_actor'},
+      {kind: 'block', type: 'text'},
+    ],
     check: {
       kind: 'outcome',
-      says: 'The door refuses without the key, opens with it, and a second locked door still refuses.',
+      says: 'The first door refuses, opens once the Key is fetched, and the second one stays shut.',
       falsePass:
-        'A key that is never spent. The second door is what asks about that.',
+        'A key that is never spent, which opens both doors — the second door is the whole of what the check asks about. A door that opens on any touch is refused by the first bump, which happens before the Key has been anywhere near the Player.',
+      run: {
+        probes: {
+          doors: {kind: 'actorCount', of: 'Door'},
+          player: {kind: 'positions', of: 'Player'},
+        },
+        // Right into the first door, back over the Key, and right again.
+        trace: [
+          ...Array.from({length: 3}, () => ({
+            hold: ['ArrowRight'],
+            seconds: 0.3,
+          })),
+          ...Array.from({length: 4}, () => ({
+            hold: ['ArrowLeft'],
+            seconds: 0.3,
+          })),
+          ...Array.from({length: 8}, () => ({
+            hold: ['ArrowRight'],
+            seconds: 0.3,
+          })),
+        ],
+      },
+      passes: ({samples}) => {
+        const doors = (samples.doors ?? []) as number[];
+        const player = lastList<Point>(samples.player)[0];
+        // Both shut for the first half: the Player bumps the first door before
+        // it has been anywhere near the Key.
+        const refused = doors.slice(0, 8).every(count => count === 2);
+        // One opened, and only one — a key that was never spent opens both.
+        const opened = doors[doors.length - 1] === 1;
+        // …and the Player is through the first door and stopped at the second,
+        // which is what makes the count above about a door rather than about
+        // an actor removed some other way.
+        const through = !!player && player.x > 216 && player.x < 288;
+        return doors.length === 16 && refused && opened && through;
+      },
     },
   },
   {

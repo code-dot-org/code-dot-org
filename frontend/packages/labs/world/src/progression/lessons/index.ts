@@ -12,13 +12,12 @@
 // Blockly JSON behind them. So `catalogue.ts` stays data about tiles, and the
 // projects live here, looked up by tile id.
 //
-// Sixty-five of sixty-seven, and the two that are left are all waiting on the
-// same thing: a rule the library has not got. Every other tile
+// Sixty-six of sixty-seven. The one that is left waits on a way to load a
+// second map, which is a block rather than a rule (specs/PROGRESSION.md). Every other tile
 // on the map has a lesson, a starting project and a check tested in both
 // directions.
 //
-//   adventure/rooms        a Scenes rule
-//   adventure/keys         an Inventory rule
+//   adventure/rooms        a way to load a second map
 //
 // What is written is milestone 4 of specs/PROGRESSION_UI.md and then some: all
 // six FOUNDATIONS, and Arcade, Story and Making whole after them.
@@ -3734,6 +3733,86 @@ won anyway.
 `.trim(),
 };
 
+// ── adventure/keys ───────────────────────────────────────────────────────────
+
+/** A short string in a socket. */
+const text = (words: string) => ({
+  shadow: {type: 'text', fields: {TEXT: words}},
+});
+
+const keys: WorldScenario = {
+  name: 'A door that wants something',
+  description: 'Two locked doors, one key, and no way through either of them.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        addActor(local('key'), [placeAt(40, 160)]),
+        addActor(local('player'), [placeAt(120, 160)]),
+        addActor(local('door'), [placeAt(216, 160)]),
+        addActor(local('door'), [placeAt(288, 160)]),
+      ],
+      actors: [
+        {
+          id: 'player',
+          name: 'Player',
+          rows: [
+            useTrait('Arrow Keys#MovesAcrossTrait'),
+            useTrait('Collisions#CanCollideTrait'),
+            useTrait('Collection#CollectsTrait'),
+            useTrait('Inventory#CarriesTrait'),
+            setSprite('player.png'),
+          ],
+        },
+        {
+          id: 'key',
+          name: 'Key',
+          rows: [
+            useTrait('Collection#CanBeCollectedTrait'),
+            useTrait('Inventory#CanBeCarriedTrait'),
+            // What it IS, in the game's own word — which is what a door asks
+            // for, and what "spend a key" spends.
+            {
+              type: 'world_set_Inventory_WhatItIsProperty',
+              inputs: {ACTOR: me(), VALUE: text('key')},
+            },
+            setSprite('coin.png'),
+          ],
+        },
+        {
+          id: 'door',
+          name: 'Door',
+          rows: [useTrait('Solid Bodies#SolidTrait'), setSprite('ground.png')],
+        },
+      ],
+    }),
+    sprites: ['player', 'coin', 'ground'],
+    rules: ['motion', 'arrows', 'collisions', 'solid', 'collect', 'inventory'],
+  }),
+  instructions: `
+## A door that wants something
+
+Two doors, both shut, and a Key lying on the floor behind you. Walk over the
+Key and it disappears — the Collection rule takes it off the floor and writes
+it down. Then walk into a door, and nothing happens, because a record of what
+you have picked up is not the same as a **bag**.
+
+**Counting is not carrying.** A score only ever goes up; a key is gone once the
+door is open. That is the whole of what the Inventory rule adds, and the second
+door is how you will know you got it right.
+
+### What you do
+
+1. Add **when ⟨any Player⟩ collects ⟨item⟩ → ⟨this actor⟩ takes ⟨the value⟩**.
+   Collecting is picking it up off the floor; taking is having it.
+2. Add **when ⟨any Door⟩ starts touching**, and in it:
+   **if ⟨the actor⟩ has a ⟨"key"⟩ → ⟨the actor⟩ spends a ⟨"key"⟩**, then
+   **remove ⟨this actor⟩**.
+3. Fetch the Key, open the first door, and walk into the second one. It stays
+   shut, and it should: you had one key and you spent it.
+`.trim(),
+};
+
 // ── simulation/emergent ──────────────────────────────────────────────────────
 
 /** `velocity of ⟨who⟩`, and the setter that writes this actor's. */
@@ -4704,6 +4783,7 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'puzzle/grid': grid,
   'puzzle/push': push,
   'simulation/neighbours': neighbours,
+  'adventure/keys': keys,
   'simulation/emergent': emergent,
   'simulation/dials': dials,
   'puzzle/turns': turns,
