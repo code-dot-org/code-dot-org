@@ -484,13 +484,13 @@ The first thing anybody wants is for something to move when they press a key.
 
 ### Genre: Simulation — entered from Place and Input
 
-| Tile             | The lesson                                                                         | Unlocks                                | Check                                                             |
-| ---------------- | ---------------------------------------------------------------------------------- | -------------------------------------- | ----------------------------------------------------------------- |
-| `sim/many`       | A hundred of something. Spawn them, walk them, and find out what a hundred costs.  | `add actor` at runtime; `random place` | `[o]` the world holds 100 and the frame time stays under budget   |
-| `sim/steering`   | Chase, and flee, and the distance question both are asked with.                    | Steering rule                          | `[o]` the chaser closes the distance; the fleer opens it          |
-| `sim/neighbours` | Everything near me — the filter that every flock, swarm and crowd is written with. | **`actors within ⟨d⟩ of ⟨a⟩` (new)**   | `[o]` the count matches a hand-computed one for a fixed layout    |
-| `sim/emergent`   | Three small rules and behaviour nobody wrote.                                      | `define behavior`                      | `[o]` the flock's average heading converges over the scripted run |
-| `sim/dials`      | The properties are the experiment. Change one while it runs and watch.             | the simulation template                | `[o]` the live-apply path fires without a restart                 |
+| Tile             | The lesson                                                                        | Unlocks                                | Check                                                                    |
+| ---------------- | --------------------------------------------------------------------------------- | -------------------------------------- | ------------------------------------------------------------------------ |
+| `sim/many`       | A hundred of something. Spawn them, walk them, and find out what a hundred costs. | `add actor` at runtime; `random place` | `[o]` the world holds 100 and the frame time stays under budget          |
+| `sim/steering`   | Chase, and flee, and the distance question both are asked with.                   | Steering rule                          | `[o]` the chaser closes the distance; the fleer opens it                 |
+| `sim/neighbours` | Twenty-five Dots, all of them lit, and a question that lights a few.              | `actors within ⟨d⟩ of ⟨a⟩`             | `[o]` four lit at the start, a count that changes, and never all of them |
+| `sim/emergent`   | Three small rules and behaviour nobody wrote.                                     | `define behavior`                      | `[o]` the flock's average heading converges over the scripted run        |
+| `sim/dials`      | The properties are the experiment. Change one while it runs and watch.            | the simulation template                | `[o]` the live-apply path fires without a restart                        |
 
 ### The rim: Making
 
@@ -600,16 +600,11 @@ in the progression and the one to decide about first.**
 **A grid, or a list of lists.** `sim/emergent` and any tile-state puzzle wants
 a 2D store. Follows the list decision.
 
-**A neighbourhood query.** `simulation/neighbours` proposes `world_actors_within`
-— every actor within so many pixels of this one — and `simulation/emergent`
-cannot be written without it. That tile's whole claim is that LOCAL rules make
-global behaviour: keep apart from the ones near you, go the way they are going,
-move toward where they are. Written over `all actors` instead it is not local
-and teaches the opposite; written with `filter actors` and a hand-rolled
-distance test it is thirty blocks of arithmetic in front of a lesson that is
-about none of it. So `simulation/emergent` waits on the block, the way
-`platformer/ground` waited on Carrying — which now exists (`rules/carry`), so
-that one is written.
+**A neighbourhood query.** WRITTEN: `the actors in ⟨…⟩ within ⟨80⟩ of ⟨this
+actor⟩` (`world_actors_within`, `WorldLab.within`), which is what
+`simulation/neighbours` proposed and what `simulation/emergent` cannot be
+written without. Middles rather than edges, near any of several, and never the
+actor measured from — the three decisions are in `engine/rules/spatial`.
 
 **Own blocks outside a rule.** `define block` lives in the Rule category and a
 `.behavior` file (`domainBlocks.ts`, `TOOLBOX_HEAD`). A learner's first

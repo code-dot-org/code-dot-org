@@ -3950,3 +3950,54 @@ describe('the turns lesson’s check', () => {
     expect(passes).toBe(false);
   });
 });
+
+describe('the neighbourhood lesson’s check', () => {
+  const lesson = LESSONS['simulation/neighbours'];
+
+  /** The lesson done: the second loop asks for the Dots near the Walker. */
+  const looking = (reach: number) =>
+    editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const step = rowOf(actorIn(workspace, 'Walker'), 'world_trait_step');
+      const second = step.inputs!.DO.block!.next!.block;
+      second.inputs!.SOURCE = {
+        block: {
+          type: 'world_actors_within',
+          inputs: {
+            SOURCE: {
+              block: {
+                type: 'world_actor_kind',
+                fields: {ACTOR: local('dot')},
+              },
+            },
+            DISTANCE: {shadow: {type: 'math_number', fields: {NUM: reach}}},
+            OF: {block: {type: 'world_this_actor'}},
+          },
+        },
+      };
+      return JSON.stringify(workspace);
+    });
+
+  it('refuses a world where every Dot is lit', async () => {
+    const {passes} = await check('simulation/neighbours', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts the ones within eighty', async () => {
+    const {passes, result} = await check('simulation/neighbours', looking(80));
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  it('refuses a neighbourhood the size of the world', async () => {
+    // The block, used, and still wrong: a radius that reaches the far corner
+    // lights all twenty-five. The radius is what the check reads.
+    const {passes} = await check('simulation/neighbours', looking(400));
+    expect(passes).toBe(false);
+  });
+
+  it('refuses a neighbourhood too small to hold anything', async () => {
+    const {passes} = await check('simulation/neighbours', looking(5));
+    expect(passes).toBe(false);
+  });
+});

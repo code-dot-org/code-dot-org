@@ -12,14 +12,13 @@
 // Blockly JSON behind them. So `catalogue.ts` stays data about tiles, and the
 // projects live here, looked up by tile id.
 //
-// Sixty-two of sixty-seven, and the five that are left are all waiting on the
-// same thing: a rule or a block the library has not got. Every other tile
+// Sixty-three of sixty-seven, and the four that are left are all waiting on
+// the same thing: a rule or a block the library has not got. Every other tile
 // on the map has a lesson, a starting project and a check tested in both
 // directions.
 //
 //   adventure/rooms        a Scenes rule
 //   adventure/keys         an Inventory rule
-//   simulation/neighbours  `actors within`, a neighbourhood query
 //   simulation/emergent    the same query — see specs/PROGRESSION.md
 //   simulation/dials       reached through `neighbours`
 //
@@ -3737,6 +3736,112 @@ won anyway.
 `.trim(),
 };
 
+// ── simulation/neighbours ────────────────────────────────────────────────────
+
+/** Twenty-five Dots on a grid, sixty apart, in a world three hundred wide. */
+const dotGrid = () => {
+  const tiles = [];
+  for (let column = 0; column < 5; column++) {
+    for (let row = 0; row < 5; row++) {
+      tiles.push(
+        placed(`dot${column}_${row}`, 40 + column * 60, 40 + row * 60),
+      );
+    }
+  }
+  return tiles;
+};
+
+/** `for each actor ⟨name⟩ in ⟨source⟩ do set sprite of ⟨name⟩ to ⟨file⟩`. */
+const paint = (name: string, source: object, sprite: string) => {
+  const variable = {id: name, name, type: 'Actor'};
+  return {
+    type: 'world_for_each',
+    fields: {VAR: variable},
+    inputs: {
+      SOURCE: {block: source},
+      DO: {
+        block: {
+          type: 'world_set_sprite',
+          fields: {SPRITE: sprite},
+          inputs: {
+            ACTOR: {
+              block: {type: 'variables_get_Actor', fields: {VAR: variable}},
+            },
+          },
+        },
+      },
+    },
+  };
+};
+
+const neighbours: WorldScenario = {
+  name: 'Everything near me',
+  description:
+    'Twenty-five Dots, all of them lit, and a question that lights a few.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        createInMap(local('dot'), dotGrid()),
+        addActor(local('walker'), [placeAt(10, 160), setVelocity(1, 0)]),
+      ],
+      actors: [
+        {
+          id: 'dot',
+          name: 'Dot',
+          rows: [setSprite('box.png')],
+        },
+        {
+          id: 'walker',
+          name: 'Walker',
+          rows: [
+            useTrait('Physics#CanMoveTrait'),
+            setSprite('player.png'),
+            {
+              type: 'world_trait_step',
+              fields: {PHASE: 'decide', NAME: 'look around'},
+              inputs: {
+                DO: {
+                  block: chainRows([
+                    // Every frame, all of them dim and then some light up.
+                    // Without the first loop a Dot walked past stays lit, and
+                    // the picture is a trail rather than a neighbourhood.
+                    paint('dot', anyKind('dot').block, 'box.png'),
+                    paint('near', anyKind('dot').block, 'coin.png'),
+                  ]),
+                },
+              },
+            },
+          ],
+        },
+      ],
+    }),
+    sprites: ['player', 'box', 'coin'],
+    rules: ['motion'],
+  }),
+  instructions: `
+## Everything near me
+
+The Walker drifts across twenty-five Dots and every one of them is lit, because
+the second loop asks for **every Dot**. What it should ask for is the ones near
+it — and "near" is a question about distance, which nothing you have met can
+ask.
+
+**A neighbourhood is a filter over a list.** Every flock, swarm and crowd in
+every simulation ever written is that shape: not "what is everything doing" but
+"what are the ones near me doing".
+
+### What you do
+
+1. Drop **the actors in ⟨any Dot⟩ within ⟨80⟩ of ⟨this actor⟩** into the second
+   loop's list socket, in place of **any Dot**.
+2. Watch the lit patch travel with the Walker. Change the 80 and watch it grow.
+
+The first loop is not spare. It dims every Dot before the second lights a few,
+so what you see is where the Walker IS rather than everywhere it has been.
+`.trim(),
+};
+
 // ── puzzle/turns ─────────────────────────────────────────────────────────────
 
 const turns: WorldScenario = {
@@ -4296,6 +4401,7 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'making/property': ruleProperty,
   'puzzle/grid': grid,
   'puzzle/push': push,
+  'simulation/neighbours': neighbours,
   'puzzle/turns': turns,
   'puzzle/goal': goal,
   'puzzle/undo': undo,

@@ -4019,6 +4019,52 @@ registerValueShadows('world_filter_actors', [
 ]);
 
 /**
+ * `the actors in ⟨…⟩ within ⟨100⟩ of ⟨this actor⟩` — the neighbourhood.
+ *
+ * The filter every flock, swarm and crowd is written with, and the one shape of
+ * `filter actors` worth a block of its own: said with the general filter it is
+ * a distance formula spelled out in arithmetic — a square root and two
+ * subtractions — in front of a lesson that is about none of it.
+ *
+ * Middles, not edges, and never the actor measured from; near ANY of several,
+ * when several are given. `WorldLab.within` holds those three decisions and
+ * says why (`engine/rules/spatial`).
+ */
+const worldActorsWithin = defineBlock({
+  type: 'world_actors_within',
+  message0: 'the actors in %1 within %2 of %3',
+  args0: [
+    {type: 'input_value', name: 'SOURCE', check: 'Actor'},
+    {type: 'input_value', name: 'DISTANCE', check: 'Number'},
+    {type: 'input_value', name: 'OF', check: 'Actor'},
+  ],
+  inputsInline: true,
+  output: 'Actor',
+  extensions: [worldContextExtension, valueShadowExtension],
+  style: 'sprite_blocks',
+  tooltip:
+    'The actors near something: the ones whose middle is within so many ' +
+    'pixels of it. What it is measured from is never in the answer — a thing ' +
+    'is not near itself — and when several are given it means near any of them.',
+  generator: {
+    javascript(block, generator) {
+      const distance =
+        generator.valueToCode(block, 'DISTANCE', Order.NONE) || '0';
+      const of = generator.valueToCode(block, 'OF', Order.NONE) || '[]';
+      return [
+        `WorldLab.within(${actorSource(block, generator)}, ${of}, ${distance})`,
+        Order.FUNCTION_CALL,
+      ] as [string, number];
+    },
+  },
+});
+registerValueShadows('world_actors_within', [
+  {name: 'SOURCE', shadow: actorListShadow},
+  {name: 'DISTANCE', shadow: {type: 'math_number', fields: {NUM: 100}}},
+  {name: 'OF', shadow: {type: 'world_this_actor'}},
+]);
+
+/**
  * `first actor in ⟨…⟩` — one actor, by position.
  *
  * What every value socket already does silently. `ACTOR_LISTS.md` calls that
@@ -7243,6 +7289,7 @@ export const DOMAIN_BLOCKS = [
   worldPlaySound,
   worldSetMusic,
   worldFilterActors,
+  worldActorsWithin,
   worldFirstActor,
   worldActorsWithTrait,
   worldExtremeActor,
@@ -7343,6 +7390,9 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // Making a list out of a list: filtered, ordered, shortened, and the two
       // ways of taking one actor out of one.
       'world_filter_actors',
+      // …and the one shape of it worth its own block: what is near something
+      // (specs/PROGRESSION.md, `simulation/neighbours`).
+      'world_actors_within',
       'world_ordered_actors',
       'world_take_actors',
       'world_first_actor',

@@ -4,6 +4,13 @@
 
 import {RuleBuilder} from '../builders/RuleBuilder';
 import type {Actor} from '../core/Actor';
+import {
+  all,
+  filtered,
+  type ActorSource,
+  type ActorValue,
+  type LazyActors,
+} from '../core/actorValue';
 import {SPATIAL} from '../core/spatialKeys';
 import {advanceTween} from '../core/tween';
 import {Vector, type VectorLike} from '../core/Vector';
@@ -163,6 +170,58 @@ function outsideMapAt(actor: Actor, at: Vector): boolean {
     at.x - half.x > bounds.x ||
     at.y - half.y > bounds.y
   );
+}
+
+/**
+ * The actors within `distance` of any of `of` — the neighbourhood query.
+ *
+ * `the actors in ⟨…⟩ within ⟨60⟩ of ⟨this actor⟩`, and the block that makes a
+ * flock, a swarm or a crowd sayable. Written with `filter actors` instead it is
+ * a distance formula spelled out in arithmetic in front of a lesson that is
+ * about none of it; written over `all actors` it is not a neighbourhood at all.
+ *
+ * IT LIVES HERE because a distance is a question about POSITIONS, which is what
+ * this rule owns. The other list operations are in `core/actorValue` and know
+ * nothing about where an actor is — measuring one would mean core importing the
+ * rule layer, which is the dependency `core/spatialKeys` exists to avoid.
+ *
+ * FROM MIDDLE TO MIDDLE, not edge to edge. Two things a hundred pixels apart
+ * are a hundred apart whatever size they are drawn, which is what a learner
+ * measuring a neighbourhood means; overlapping is Collisions' question and it
+ * answers that one properly.
+ *
+ * NEAR ANY OF THEM, when several are given: `within ⟨80⟩ of ⟨any Guard⟩` is
+ * every actor near a guard, which is what those words say.
+ *
+ * IT LEAVES OUT WHAT IT MEASURES FROM. A thing is not near itself, and a boid
+ * asking how many neighbours it has should not count one for being present. A
+ * game that wants the whole group has the group already.
+ *
+ * Lazy, like every other list operation, so `take ⟨3⟩ of` stops at three.
+ */
+export function within(
+  value: ActorSource,
+  of: ActorValue,
+  distance: number,
+): LazyActors {
+  const centres = all(of);
+  // A negative or unfinished distance is a neighbourhood nothing is in, rather
+  // than an error a learner has to guard: an empty socket reads as 0 and a
+  // radius of nothing should find nothing.
+  const reach = Number.isFinite(distance) ? distance : -1;
+  return filtered(
+    value,
+    actor =>
+      !centres.includes(actor) &&
+      centres.some(centre => gap(actor, centre) <= reach),
+  );
+}
+
+/** How far apart two actors' middles are. */
+function gap(one: Actor, other: Actor): number {
+  const here = one.get(PositionProperty);
+  const there = other.get(PositionProperty);
+  return Math.hypot(here.x - there.x, here.y - there.y);
 }
 
 /** Asked of an actor: `⟨this actor⟩ is outside the map`. */

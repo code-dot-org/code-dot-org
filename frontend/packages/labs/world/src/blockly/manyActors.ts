@@ -39,6 +39,7 @@ const MANY_BY_TYPE = new Set([
   // wrapper a many-valued one does — a statement over no actors must do
   // nothing rather than fail.
   'world_filter_actors',
+  'world_actors_within',
   'world_ordered_actors',
   'world_take_actors',
   'world_actors_with_trait',

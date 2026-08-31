@@ -695,6 +695,27 @@ describe('domain block generators', () => {
     );
   });
 
+  it('world_actors_within asks the engine, rather than spelling out a distance', () => {
+    // The whole reason it is a block: written with `filter actors` this is a
+    // square root and two subtractions in front of the lesson.
+    const block = {
+      getFieldValue: () => '',
+      getInputTargetBlock: () => null,
+    };
+    const generator = {
+      valueToCode: (_b: unknown, name: string) =>
+        name === 'DISTANCE' ? '60' : 'actor',
+    };
+
+    const [code] = generatorFor('world_actors_within')(
+      block as never,
+      generator as never,
+      {} as never,
+    ) as unknown as [string, number];
+
+    expect(code).toBe('WorldLab.within(world.actors, actor, 60)');
+  });
+
   it('world_first_actor takes the first of whatever it is given', () => {
     const [code] = generatorFor('world_first_actor')(
       {getFieldValue: () => '', getInputTargetBlock: () => null} as never,
@@ -3118,6 +3139,7 @@ describe('what an actor list’s source socket wears', () => {
   const LIST_BLOCKS = [
     'world_for_each',
     'world_filter_actors',
+    'world_actors_within',
     'world_ordered_actors',
     'world_extreme_actor',
   ];

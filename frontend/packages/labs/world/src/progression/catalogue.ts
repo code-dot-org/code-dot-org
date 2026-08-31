@@ -2427,16 +2427,39 @@ export const TILES: readonly Tile[] = [
     title: 'Everything near me',
     teaches:
       'A filter over a list — the shape every flock, swarm and crowd is written with.',
-    task: 'Ask which actors are within a distance, and colour them.',
+    task: 'Twenty-five Dots, all of them lit, and a question that lights a few.',
     requires: ['simulation/many'],
     unlocks: [
-      {kind: 'block', type: 'world_actors_within', proposed: true},
+      {kind: 'block', type: 'world_actors_within'},
       {kind: 'block', type: 'world_filter_actors'},
     ],
     check: {
       kind: 'outcome',
-      says: 'For a fixed layout the count matches a hand-computed one, and changes when the radius does.',
-      falsePass: 'Counting everything. The radius change is the check.',
+      says: 'The lit Dots are the ones near the Walker: four to begin with, and a number that changes as it moves.',
+      falsePass:
+        'Lighting everything, which is what the starter does — and what a radius big enough to reach the far corner does too. The check reads the count, not the block.',
+      run: {
+        probes: {sprites: {kind: 'sprites'}},
+        trace: Array.from({length: 8}, () => ({seconds: 0.3})),
+      },
+      passes: ({samples}) => {
+        const lit = (samples.sprites ?? []).map(
+          names =>
+            (names as string[]).filter(name => name.includes('coin')).length,
+        );
+        // The first sample is read before the first frame's step has run, so
+        // nothing is lit yet and nothing should be made of it.
+        const seen = lit.slice(1);
+        // Four is hand-computed: the Walker starts at (40, 160) after one
+        // frame, the Dots are sixty apart, and eighty reaches one along the
+        // row and one up and one down the column.
+        return (
+          seen.length === 8 &&
+          seen[0] === 4 &&
+          new Set(seen).size > 1 &&
+          seen.every(count => count > 0 && count < 25)
+        );
+      },
     },
   },
   {
