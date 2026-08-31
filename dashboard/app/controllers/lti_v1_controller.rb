@@ -278,9 +278,9 @@ class LtiV1Controller < ApplicationController
   end
 
   def capture_sync_course_error_id(reason, message)
-    event = Observability::Errors.capture_message(
+    event = Observability::Errors.report(
       'LTI roster sync error',
-      extra: {
+      context: {
         reason:,
         details: message,
       }

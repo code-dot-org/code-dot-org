@@ -313,7 +313,7 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
     )
 
     # The collation-backed lookup would match this id; the byte-exact confirm must not.
-    Observability::Errors.expects(:capture_message).once
+    Observability::Errors.expects(:report).once
     assert_nil AuthenticationOption.find_by_exact_credential(
       credential_type: AuthenticationOption::CLASSLINK,
       authentication_id: '2222|ABC-01'
