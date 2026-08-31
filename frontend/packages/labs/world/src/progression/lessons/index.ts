@@ -12,7 +12,7 @@
 // Blockly JSON behind them. So `catalogue.ts` stays data about tiles, and the
 // projects live here, looked up by tile id.
 //
-// Fifty-six of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md
+// Fifty-seven of sixty-seven, which is milestone 4 of specs/PROGRESSION_UI.md
 // and then some. ALL SIX FOUNDATIONS are written — Origin, Input, Motion, Logic,
 // Memory, Look and Place — so every genre gate on the map is open, and the
 // first hours of the progression can be walked end to end. ARCADE is written
@@ -3342,6 +3342,63 @@ putting them together, which is what a genre is.
 `.trim(),
 };
 
+// ── making/read ──────────────────────────────────────────────────────────────
+
+const readRule: WorldScenario = {
+  levelData: {showFileBrowser: true},
+  name: 'Open it up',
+  description: 'A rule you have used twenty times and never looked inside.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        declareProperty('number', 'how hard it pulls', '0'),
+        createInMap(local('ground'), floorAcross(10)),
+        addActor(local('hero'), [placeAt(160, 40)]),
+      ],
+      actors: [
+        {
+          id: 'hero',
+          name: 'Hero',
+          rows: [
+            useTrait('Gravity#AffectedByGravityTrait'),
+            setSprite('player.png'),
+          ],
+        },
+        {
+          id: 'ground',
+          name: 'Ground',
+          rows: [
+            useTrait('Gravity#ActsAsGroundTrait'),
+            setSprite('ground.png'),
+          ],
+        },
+      ],
+    }),
+    sprites: ['player', 'ground'],
+    rules: ['gravity'],
+  }),
+  instructions: `
+## Open it up
+
+The Hero falls, lands, and stays there. You have used gravity in half a dozen
+lessons and never once looked at it — and it is not a black box, it is not
+built into the lab, and it is not written in a language you have not been
+taught. **It is blocks**, in a file in your project, and you can read all of
+them.
+
+### What you do
+
+1. Click the **eye** on \`use trait ⟨Affected by Gravity⟩\`. The rule opens.
+2. Read the top of it. There are two numbers there that belong to the WORLD
+   rather than to any actor, and one of them says how hard gravity pulls.
+3. Put that number in **how hard it pulls** at the top of \`main.world\`, so
+   the world says what you found.
+4. Now change it in the rule and run again. You are editing gravity, which
+   half an hour ago was a thing that happened to you.
+`.trim(),
+};
+
 // ── place/edges ──────────────────────────────────────────────────────────────
 
 const edges: WorldScenario = {
@@ -3734,6 +3791,7 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'making/trait': ownTrait,
   'making/behavior': behaviour,
   'adventure/world': bigWorld,
+  'making/read': readRule,
 };
 
 /** Every lesson written so far, by the tile it belongs to. */

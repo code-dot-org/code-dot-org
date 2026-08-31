@@ -124,7 +124,7 @@ describe('a lesson with no file browser', () => {
 
   it('is what a lesson is unless it says otherwise', () => {
     // Every lesson but the ones whose subject IS a file.
-    expect(oneFile).toHaveLength(ids.length - 6);
+    expect(oneFile).toHaveLength(ids.length - 7);
   });
 
   it.each(oneFile)('%s does not send the learner to a file', id => {
@@ -157,6 +157,7 @@ describe('a lesson that shows the file browser', () => {
       'making/behavior',
       'making/change',
       'making/property',
+      'making/read',
       'making/trait',
       'memory/actor-state',
     ]);

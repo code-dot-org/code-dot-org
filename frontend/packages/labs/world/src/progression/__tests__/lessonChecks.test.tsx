@@ -3504,3 +3504,45 @@ describe('the big-world lesson’s check', () => {
     expect(passes).toBe(false);
   });
 });
+
+describe('the read lesson’s check', () => {
+  const lesson = LESSONS['making/read'];
+
+  /** The answer written into the world's own property. */
+  const answering = (answer: string) =>
+    editing(lesson.source, 'main.world', contents =>
+      contents.replace(
+        /("NAME": "how hard it pulls",\s*"DEFAULT": ")[^"]*/,
+        `$1${answer}`,
+      ),
+    );
+
+  it('refuses a world that has not looked', async () => {
+    const {passes} = await check('making/read', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts the number the rule actually holds', async () => {
+    const {passes, result} = await check('making/read', answering('9'));
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  it('refuses a plausible guess', async () => {
+    const {passes} = await check('making/read', answering('10'));
+    expect(passes).toBe(false);
+  });
+
+  // The answer is read out of the rule, so editing the rule — which is step
+  // four of the lesson — moves the right answer with it.
+  it('follows the rule when the rule is changed', async () => {
+    const changed = editing(answering('4'), 'gravity.rule', contents =>
+      contents.replace(
+        /("NAME": "amount of gravity",\s*"DEFAULT": ")[^"]*/,
+        '$14',
+      ),
+    );
+    const {passes} = await check('making/read', changed);
+    expect(passes).toBe(true);
+  });
+});

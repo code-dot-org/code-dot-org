@@ -2361,14 +2361,28 @@ export const TILES: readonly Tile[] = [
     at: at('platformer', 3, 3),
     title: 'Open it up',
     teaches: 'The rules are blocks, and you can read all of them.',
-    task: 'Open the file behind a trait you have used twenty times. Find the line that makes you fall.',
+    task: 'A rule you have used half a dozen times and never looked inside.',
     requires: ['platformer/level'],
     unlocks: [{kind: 'category', name: 'Rule'}],
     check: {
       kind: 'shape',
-      says: 'The rule file behind an elected trait was opened, and the lesson’s question about it answered.',
+      says: 'The world says how hard gravity pulls, and it is the number the rule actually holds.',
       falsePass:
-        'Opening it and reading nothing — which no check can see. This is why the tile also asks a question.',
+        'Opening it and reading nothing, which no check can see — so the tile asks a question instead, and the check reads the ANSWER out of the rule file rather than knowing it. Change the number in the rule and the right answer changes with it.',
+      run: {probes: {}, trace: [{seconds: 0.1}]},
+      inspect: files => {
+        // What the rule says, read at check time: the answer is whatever is in
+        // the file, so editing the file cannot make a right answer wrong.
+        const rule = files['rules/gravity.rule'] ?? '';
+        const declared = rule.match(
+          /"NAME":\s*"amount of gravity",\s*"DEFAULT":\s*"([^"]*)"/,
+        )?.[1];
+        const said = (files['worlds/main.world'] ?? '').match(
+          /"NAME":\s*"how hard it pulls",\s*"DEFAULT":\s*"([^"]*)"/,
+        )?.[1];
+        return Boolean(declared) && said === declared;
+      },
+      passes: () => true,
     },
   },
   {
