@@ -35,6 +35,24 @@ export interface TraceStep {
    * and then up are a CLICK, and that is how a check scripts one.
    */
   pointer?: {x: number; y: number; buttons?: readonly string[]};
+  /**
+   * A world property turned to a new value BEFORE this stretch runs, by the
+   * path a snapshot names it with (`${ruleId}.${propId}`).
+   *
+   * The one thing in a script that is not a pair of hands. It exists for the
+   * one lesson that is about the editor rather than about a game: turning a
+   * number while the world runs, and seeing the difference without starting
+   * again (`simulation/dials`). This is the same call the reconciler makes when
+   * it decides a change can be patched (`driver/reconcile`) — a check that
+   * rebuilt the module instead would need a compiler in the sandbox, and would
+   * be testing the build rather than the dial.
+   *
+   * A path nothing answers to is left alone and reported by the probes as the
+   * absence it is: a project that never declared the property is a project that
+   * has not done the lesson, and that is the check's answer rather than its
+   * error.
+   */
+  set?: {path: string; value: unknown};
   /** How long to hold them, in seconds, at a fixed sixty frames a second. */
   seconds: number;
 }

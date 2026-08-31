@@ -2503,14 +2503,43 @@ export const TILES: readonly Tile[] = [
     title: 'The properties are the experiment',
     teaches:
       'A parameter you can turn while it runs, and a question you can answer by turning it.',
-    task: 'Expose the numbers, change one without restarting, and write down what happened.',
+    task: 'A flock that works, and five numbers typed where nobody can turn them.',
     requires: ['simulation/neighbours', 'simulation/emergent'],
     unlocks: [{kind: 'template', id: 'simulation'}],
+    // `define property` is `memory/world-state`'s to grant, and the Simulation
+    // side of the map does not pass through Memory. Lent for the one lesson
+    // that is entirely about declaring one.
+    offers: [{kind: 'block', type: 'world_rule_property'}],
     check: {
       kind: 'outcome',
-      says: 'A property change is applied live, with no restart reported, and the behaviour differs afterwards.',
+      says: 'The flock forms, the dial is turned while it runs, and it comes apart — with nothing restarted.',
       falsePass:
-        'A change that restarts the world, which also works and is not the lesson. The reload mode is read.',
+        'Declaring the property and leaving the 30 typed where it was, which turns a dial nothing reads: the flock goes on flocking and the check refuses it. Nothing here can be passed by restarting, because the check never rebuilds — it patches the running world exactly as the reconciler does (`runtime/checks`, TraceStep.set).',
+      run: {
+        probes: {
+          velocity: {kind: 'property', of: 'Boid', name: 'velocity'},
+          dial: {kind: 'worldProperty', path: 'My_World.too_close'},
+        },
+        trace: [
+          // Four seconds for the flock to form...
+          ...Array.from({length: 8}, () => ({seconds: 0.5})),
+          // ...then the dial is turned, mid-flight, and nothing is rebuilt.
+          {set: {path: 'My_World.too_close', value: 200}, seconds: 0.5},
+          ...Array.from({length: 6}, () => ({seconds: 0.5})),
+        ],
+      },
+      passes: ({samples}) => {
+        const dial = samples.dial ?? [];
+        const order = (samples.velocity ?? []).map(sample =>
+          headingOrder(sample as Array<{x: number; y: number}>),
+        );
+        // The property exists and reads what the lesson asked for, before and
+        // after: a project that never declared one answers with nothing.
+        const declared = dial[0] === 30 && dial[dial.length - 1] === 200;
+        const flocked = (order[8] ?? 0) >= 0.9;
+        const scattered = Math.min(...order.slice(9)) <= 0.5;
+        return declared && flocked && scattered;
+      },
     },
   },
 

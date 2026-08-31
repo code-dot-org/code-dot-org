@@ -153,6 +153,9 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   // Not `any ⟨Dot⟩`: the new block's source socket wears one already, so the
   // one trip to the toolbox is for the block itself.
   'simulation/neighbours': ['world_actors_within'],
+  // Only the declaration: the getter it mints does not exist until the
+  // property does, so it cannot be in a toolbox built from the starter.
+  'simulation/dials': ['world_rule_property'],
   'simulation/emergent': [
     'world_set_Physics_VelocityProperty',
     'world_get_Physics_VelocityProperty',

@@ -164,6 +164,9 @@ export function playCheck(world: World, run: CheckRun): CheckResult {
   try {
     take();
     for (const step of run.trace) {
+      if (step.set) {
+        world.setWorldProperty(step.set.path, step.set.value);
+      }
       world.setInput((step.hold ?? []).map(keyName));
       if (step.pointer) {
         world.setPointer(step.pointer, step.pointer.buttons ?? []);

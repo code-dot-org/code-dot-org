@@ -12,14 +12,13 @@
 // Blockly JSON behind them. So `catalogue.ts` stays data about tiles, and the
 // projects live here, looked up by tile id.
 //
-// Sixty-four of sixty-seven, and the three that are left are all waiting on
-// the same thing: a rule or a block the library has not got. Every other tile
+// Sixty-five of sixty-seven, and the two that are left are all waiting on the
+// same thing: a rule the library has not got. Every other tile
 // on the map has a lesson, a starting project and a check tested in both
 // directions.
 //
 //   adventure/rooms        a Scenes rule
 //   adventure/keys         an Inventory rule
-//   simulation/dials       reached through `neighbours`
 //
 // What is written is milestone 4 of specs/PROGRESSION_UI.md and then some: all
 // six FOUNDATIONS, and Arcade, Story and Making whole after them.
@@ -3931,6 +3930,114 @@ there.
 `.trim(),
 };
 
+// ── simulation/dials ─────────────────────────────────────────────────────────
+
+/** Go the same way as it: steer toward the difference in velocities. */
+const alignmentRule = () =>
+  nudge(
+    vectorMath(
+      'SUBTRACT',
+      velocityOf(held('other')),
+      velocityOf({type: 'world_this_actor'}),
+    ),
+    0.05,
+  );
+
+/** Stay with it: a step toward it, a hundredth at a time. */
+const cohesionRule = () =>
+  nudge(toward({type: 'world_this_actor'}, held('other')), 0.01);
+
+const dials: WorldScenario = {
+  name: 'The properties are the experiment',
+  description:
+    'A flock that works, and five numbers typed where nobody can turn them.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: flock(),
+      actors: [
+        {
+          id: 'boid',
+          name: 'Boid',
+          rows: [
+            useTrait('Physics#CanMoveTrait'),
+            useTrait('Screen Wrap#WrapsAcrossTrait'),
+            useTrait('Screen Wrap#WrapsDownTrait'),
+            setSprite('ball.png'),
+            {
+              type: 'world_trait_step',
+              fields: {PHASE: 'decide', NAME: 'flock'},
+              inputs: {
+                DO: {
+                  block: chainRows([
+                    forEachNear('crowding', 30, [
+                      nudge(
+                        toward(held('crowding'), {type: 'world_this_actor'}),
+                        0.05,
+                      ),
+                    ]),
+                    forEachNear('other', 80, [alignmentRule(), cohesionRule()]),
+                  ]),
+                },
+              },
+            },
+            {
+              type: 'world_trait_step',
+              fields: {PHASE: 'push', NAME: 'keep flying'},
+              inputs: {
+                DO: {
+                  block: setVelocityTo({
+                    type: 'world_vector_from_angle',
+                    inputs: {
+                      LENGTH: {
+                        shadow: {type: 'math_number', fields: {NUM: 0.6}},
+                      },
+                      DEGREES: {
+                        block: {
+                          type: 'world_vector_direction',
+                          inputs: {
+                            VECTOR: {
+                              block: velocityOf({type: 'world_this_actor'}),
+                            },
+                          },
+                        },
+                      },
+                    },
+                  }),
+                },
+              },
+            },
+          ],
+        },
+      ],
+    }),
+    sprites: ['ball'],
+    rules: ['motion', 'wrap', 'steering'],
+  }),
+  instructions: `
+## The properties are the experiment
+
+The flock works. Now try to answer a question about it: **how close is too
+close?** Thirty is typed into the first loop, and the only way to try forty is
+to stop, edit, and start again — by which time the flock you were watching is
+gone and you are comparing two things you never saw together.
+
+A number in a **property** is a number you can turn while it runs. Nothing
+restarts, the Boids stay where they are, and what changes is what happens next.
+
+### What you do
+
+1. In the world, add **define number property ⟨too close⟩ with default ⟨30⟩**.
+2. Put **get too close** into the first loop's **within** socket, where the 30
+   is now.
+3. Run it, wait for the flock to form, and then change the default to 200 while
+   it is running. It comes apart at once, and nothing started again.
+4. Put it back. Try 5, and 60. **A number you can turn is a question you can
+   answer** — and the answer to this one is not a number you would have
+   guessed.
+`.trim(),
+};
+
 // ── simulation/neighbours ────────────────────────────────────────────────────
 
 /** Twenty-five Dots on a grid, sixty apart, in a world three hundred wide. */
@@ -4598,6 +4705,7 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'puzzle/push': push,
   'simulation/neighbours': neighbours,
   'simulation/emergent': emergent,
+  'simulation/dials': dials,
   'puzzle/turns': turns,
   'puzzle/goal': goal,
   'puzzle/undo': undo,

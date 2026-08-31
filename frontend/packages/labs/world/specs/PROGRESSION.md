@@ -490,7 +490,7 @@ The first thing anybody wants is for something to move when they press a key.
 | `sim/steering`   | Chase, and flee, and the distance question both are asked with.                   | Steering rule                          | `[o]` the chaser closes the distance; the fleer opens it                     |
 | `sim/neighbours` | Twenty-five Dots, all of them lit, and a question that lights a few.              | `actors within ⟨d⟩ of ⟨a⟩`             | `[o]` four lit at the start, a count that changes, and never all of them     |
 | `sim/emergent`   | Twelve Boids going twelve ways, and two of the three rules that make a flock.     | `count of ⟨…⟩ with ⟨…⟩`                | `[o]` twelve headings at the start, one at the end, and nothing saying which |
-| `sim/dials`      | The properties are the experiment. Change one while it runs and watch.            | the simulation template                | `[o]` the live-apply path fires without a restart                            |
+| `sim/dials`      | A flock that works, and five numbers typed where nobody can turn them.            | the simulation template                | `[o]` the dial is turned mid-flight and the flock comes apart                |
 
 ### The rim: Making
 

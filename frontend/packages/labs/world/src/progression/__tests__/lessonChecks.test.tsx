@@ -4141,3 +4141,51 @@ describe('the flocking lesson’s check', () => {
     expect(passes).toBe(false);
   });
 });
+
+describe('the dials lesson’s check', () => {
+  const lesson = LESSONS['simulation/dials'];
+
+  /** The lesson done: a dial declared, and — if `read` — the 30 replaced. */
+  const dialled = (read: boolean) =>
+    editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const world = workspace.blocks.blocks.find(
+        block => block.type === 'world_world',
+      )!;
+      under(world, {
+        type: 'world_rule_property',
+        fields: {
+          TYPE: 'number',
+          ACCESS: 'writable',
+          NAME: 'too close',
+          DEFAULT: '30',
+        },
+      });
+      if (read) {
+        const step = rowOf(actorIn(workspace, 'Boid'), 'world_trait_step');
+        const crowding = step.inputs!.DO!.block!;
+        crowding.inputs!.SOURCE!.block!.inputs!.DISTANCE = {
+          block: {type: 'world_get_WorldsMain_TooCloseProperty'},
+        };
+      }
+      return JSON.stringify(workspace);
+    });
+
+  it('refuses a flock with its numbers typed in', async () => {
+    const {passes} = await check('simulation/dials', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts a dial that is read where the number was', async () => {
+    const {passes, result} = await check('simulation/dials', dialled(true));
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  it('refuses a dial nothing reads', async () => {
+    // The near-miss the lesson is about: the property is there, the editor
+    // shows it, turning it does nothing at all, and the flock flocks on.
+    const {passes} = await check('simulation/dials', dialled(false));
+    expect(passes).toBe(false);
+  });
+});
