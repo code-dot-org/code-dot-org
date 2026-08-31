@@ -55,7 +55,10 @@ const WithConditionalTooltip: React.FunctionComponent<
       arrow={hideTail ? false : undefined}
       slotProps={dataTheme ? {tooltip: {'data-theme': dataTheme}} : undefined}
     >
-      <div className={tooltipOverlayClassName}>{children}</div>
+      {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- callers show this tooltip only while the control inside is disabled, so the wrapper is the only way to reach the reason */}
+      <div className={tooltipOverlayClassName} tabIndex={0}>
+        {children}
+      </div>
     </Tooltip>
   );
 };

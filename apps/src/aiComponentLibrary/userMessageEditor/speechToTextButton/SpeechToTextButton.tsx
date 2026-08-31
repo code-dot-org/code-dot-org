@@ -102,7 +102,7 @@ const SpeechToTextButton: React.FC<SpeechToTextButtonProps> = ({
   const canRecord = recorderRef.current?.canRecord();
 
   const micButton = (
-    <div className={styles.flexContainer}>
+    <div className={styles.flexContainer} tabIndex={canRecord ? undefined : 0}>
       <MuiIconButton
         variant="outlined"
         size="extraSmall"
