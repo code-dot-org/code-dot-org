@@ -33,7 +33,8 @@ export interface ExternalSceneOption {
 export interface MusicProjectOption {
   channel: string;
   name: string;
-  /** A saved block's song the list no longer offers; shown, not offered. */
+  /** A saved block's song the list cannot offer: it keeps its place on
+      that block, but is never offered as a new choice. */
   unavailable?: boolean;
 }
 

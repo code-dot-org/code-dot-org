@@ -494,11 +494,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           setTimeout(() => reject(new Error('timeout')), LIST_FETCH_TIMEOUT_MS)
         ),
       ]);
-    const externalOptions = async (): Promise<ExternalSceneOption[]> => {
+    const externalOptions = async (
+      timed: boolean
+    ): Promise<ExternalSceneOption[]> => {
       try {
-        const refs = await withTimeout(
-          fetchSectionScenes(levelProperties.id, scriptId)
-        );
+        const fetching = fetchSectionScenes(levelProperties.id, scriptId);
+        const refs = await (timed ? withTimeout(fetching) : fetching);
         return toExternalSceneOptions(refs);
       } catch (e) {
         console.warn('section scenes unavailable', e);
@@ -515,14 +516,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     };
     if (savedExternalKeys.length === 0 && savedSongs.length === 0) {
       setAnimationsSeeded(true);
-      externalOptions().then(options => {
+      // Nothing waits on this list, so a slow response is simply used
+      // whenever it lands instead of being discarded at the timeout.
+      externalOptions(false).then(options => {
         if (!cancelled) {
           dispatch(setExternalScenes(options));
         }
       });
     } else {
       musicSeededRef.current = true;
-      Promise.all([externalOptions(), musicOptions()]).then(
+      Promise.all([externalOptions(true), musicOptions()]).then(
         ([external, music]) => {
           if (cancelled) {
             return;
@@ -978,11 +981,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     };
   }, [levelProperties.id, dispatch, refreshToolbox]);
 
-  const {
-    nowPlaying,
-    title: nowPlayingTitle,
-    playMusic,
-  } = useSceneMusic(activeTab === 'Play', musicProjects);
+  const {nowPlaying, playMusic} = useSceneMusic(
+    activeTab === 'Play',
+    musicProjects
+  );
 
   // The Code and Images tabs stay mounted behind a clip-path, which hides
   // them visually but leaves their contents (the whole Blockly workspace)
@@ -1396,10 +1398,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         visibleTabs={tabs}
         onClickStartOver={isEditable ? () => setShowStartOver(true) : undefined}
         startOverExtra={
-          activeTab === 'Play' && nowPlaying && nowPlayingTitle ? (
+          activeTab === 'Play' && nowPlaying ? (
             <SceneMusicBar
-              title={nowPlayingTitle}
-              isLoading={nowPlaying.loading}
+              title={nowPlaying.title}
+              loading={nowPlaying.loading}
             />
           ) : undefined
         }

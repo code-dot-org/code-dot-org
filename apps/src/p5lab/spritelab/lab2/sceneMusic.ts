@@ -22,6 +22,11 @@ export default class SceneMusic {
   private musicPlayer: MusicPlayer | null = null;
   private projectPlayer: ProjectPlayer | null = null;
   private current: string | null = null;
+  // The channel of the last load that failed: a repeating event asking for
+  // a broken song must not fetch it once per firing. stop() (a run
+  // boundary) or asking for a different song clears it, so the next run
+  // retries.
+  private failed: string | null = null;
   private request = 0;
   // Loads run one at a time: the players are shared and stateful, so a
   // second load must not start until the first has settled.
@@ -42,13 +47,17 @@ export default class SceneMusic {
   /**
    * Play a project's song, repeating, until stop() or another song. Resolves
    * true when the song is playing; false when it could not be (superseded by
-   * a later request, or the project would not load). A failed song may be
-   * asked for again.
+   * a later request, or the project would not load). A failed song is
+   * refused without another fetch until the next run.
    */
   play(channelId: string): Promise<boolean> {
     if (channelId === this.current) {
       return Promise.resolve(true);
     }
+    if (channelId === this.failed) {
+      return Promise.resolve(false);
+    }
+    this.failed = null;
     const request = ++this.request;
     this.stopPlayback();
     this.current = channelId;
@@ -93,11 +102,12 @@ export default class SceneMusic {
     return true;
   }
 
-  // Nothing is playing after a failed load; forgetting the channel lets a
-  // later request try it again.
+  // Nothing is playing after a failed load; the channel is remembered as
+  // failed so repeat requests stay quiet until the next run.
   private forget(channelId: string, request: number): void {
     if (request === this.request && this.current === channelId) {
       this.current = null;
+      this.failed = channelId;
     }
   }
 
@@ -105,6 +115,7 @@ export default class SceneMusic {
     this.request++;
     this.stopPlayback();
     this.current = null;
+    this.failed = null;
   }
 
   private stopPlayback(): void {

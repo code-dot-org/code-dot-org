@@ -92,11 +92,16 @@ describe('SpriteLab2 SceneMusic', () => {
     expect(calls[calls.length - 1]).toBe('play 3');
   });
 
-  it('forgets a song whose load failed, so it can be tried again', async () => {
+  it('refuses a failed song without another fetch until the next run', async () => {
     const {music, calls, failNextLoad} = fakes();
     failNextLoad(new Error('sources unavailable'));
     await expect(music.play('song-a')).rejects.toThrow('sources unavailable');
     expect(music.playing).toBeNull();
+    // A repeating event re-asking for the broken song stays quiet...
+    expect(await music.play('song-a')).toBe(false);
+    expect(calls.filter(c => c === 'load song-a')).toHaveLength(1);
+    // ...and the next run (stop() marks its end) tries again.
+    music.stop();
     expect(await music.play('song-a')).toBe(true);
     expect(calls.filter(c => c === 'load song-a')).toHaveLength(2);
   });

@@ -9,6 +9,11 @@ interface NowPlaying {
   loading: boolean;
 }
 
+interface NamedNowPlaying extends NowPlaying {
+  /** Display name; "Music" when the list cannot name the song. */
+  title: string;
+}
+
 /**
  * The game's background music: plays only while `playing`, and stops when
  * that ends or the lab unmounts. Any song a block names may play — a saved
@@ -64,11 +69,11 @@ export default function useSceneMusic(
 
   // A placeholder's label is not a name; a playing song the list cannot
   // name is simply "Music".
-  const listed = nowPlaying
-    ? songs.find(p => p.channel === nowPlaying.channel)
-    : undefined;
-  const title = nowPlaying
-    ? (!listed?.unavailable && listed?.name) || 'Music'
-    : null;
-  return {nowPlaying, title, playMusic};
+  let named: NamedNowPlaying | null = null;
+  if (nowPlaying) {
+    const listed = songs.find(p => p.channel === nowPlaying.channel);
+    const name = listed && !listed.unavailable ? listed.name : null;
+    named = {...nowPlaying, title: name || 'Music'};
+  }
+  return {nowPlaying: named, playMusic};
 }

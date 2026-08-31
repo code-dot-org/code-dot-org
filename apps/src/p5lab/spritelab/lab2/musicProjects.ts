@@ -1,4 +1,4 @@
-import {isOnDefaultPack} from '@cdo/apps/music/utils/pack';
+import {isOnDefaultPack, MusicPackConfig} from '@cdo/apps/music/utils/pack';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {PLAY_MUSIC_BLOCK_TYPE} from './blockly/blockDefinitions/playMusic';
@@ -11,7 +11,7 @@ interface PersonalProject {
   name?: string;
   type?: string;
   updatedAt?: string;
-  labConfig?: {music?: {packId?: string}};
+  labConfig?: MusicPackConfig;
 }
 
 const MUSIC_PROJECT_TYPE = 'music';
