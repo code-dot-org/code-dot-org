@@ -15,7 +15,11 @@ import {
 } from './contract/gatewaySchemas';
 import {reportGatewayError} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
-import {fetchTurnstileTokenIfEnabled, turnstileHeaders} from './turnstile';
+import {
+  fetchTurnstileTokenIfEnabled,
+  turnstileErrorTags,
+  turnstileHeaders,
+} from './turnstile';
 
 type TranscribeOptions = Parameters<typeof transcribe>[0];
 
@@ -86,7 +90,8 @@ async function transcribeThroughGateway(
         await reportGatewayError(
           error,
           'transcribeThroughGateway',
-          modelString
+          modelString,
+          turnstileErrorTags(error)
         );
       }
       throw error;

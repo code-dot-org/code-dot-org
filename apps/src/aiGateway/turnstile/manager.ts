@@ -9,18 +9,21 @@ import {
 } from './constants';
 import {debuggerWillPauseInAnonymousScope} from './debuggerProbe';
 import {loadTurnstileScript} from './loadScript';
-import {TurnstileDevToolsError} from './types';
-
-/**
- * Where the delivered token came from: 'pre-fetch' when a challenge started in
- * the background after the previous delivery had already produced it,
- * 'on-demand' when the caller had to wait for a challenge started for it.
- */
-type TokenAcquisitionMode = 'pre-fetch' | 'on-demand';
+import {recordTurnstileOutcome} from './outcome';
+import {
+  TokenAcquisitionMode,
+  TurnstileChallengeError,
+  TurnstileDevToolsError,
+} from './types';
 
 interface TokenAcquisition {
   mode: TokenAcquisitionMode;
   token: Promise<string>;
+}
+
+// Mutable so a caller adopting a pre-fetch can relabel it before it settles.
+interface ChallengeOutcomeMode {
+  mode: TokenAcquisitionMode;
 }
 
 /**
@@ -57,6 +60,8 @@ export class TurnstileManager {
   // Timestamp (Date.now()) recorded when nextTokenPromise resolved. Used to
   // detect tokens older than TOKEN_MAX_AGE_MS before they are consumed.
   private nextTokenResolvedAt: number | null = null;
+
+  private nextTokenOutcomeMode: ChallengeOutcomeMode | null = null;
 
   private widgetId: string | null = null;
 
@@ -183,6 +188,7 @@ export class TurnstileManager {
         );
         this.nextTokenPromise = null;
         this.nextTokenResolvedAt = null;
+        this.nextTokenOutcomeMode = null;
       } else {
         console.log(
           `${LOG} Pre-fetch hit — returning in-progress token${
@@ -190,15 +196,20 @@ export class TurnstileManager {
           }`
         );
         const p = this.nextTokenPromise;
+        // This caller now awaits it, so a failure here is user-visible.
+        if (age === null && this.nextTokenOutcomeMode) {
+          this.nextTokenOutcomeMode.mode = 'on-demand';
+        }
         this.nextTokenPromise = null;
         this.nextTokenResolvedAt = null;
+        this.nextTokenOutcomeMode = null;
         this.schedulePrefetch();
         return {mode: 'pre-fetch', token: p};
       }
     }
 
     console.log(`${LOG} Pre-fetch miss — enqueueing fresh challenge`);
-    const result = this.runSerializedChallenge();
+    const result = this.runSerializedChallenge({mode: 'on-demand'});
     result.then(
       () => this.schedulePrefetch(),
       () => {}
@@ -212,8 +223,10 @@ export class TurnstileManager {
       return;
     }
     console.log(`${LOG} Scheduling pre-fetch challenge`);
-    const p = this.runSerializedChallenge();
+    const outcomeMode: ChallengeOutcomeMode = {mode: 'pre-fetch'};
+    const p = this.runSerializedChallenge(outcomeMode);
     this.nextTokenPromise = p;
+    this.nextTokenOutcomeMode = outcomeMode;
     p.then(
       token => {
         this.nextTokenResolvedAt = Date.now();
@@ -231,23 +244,51 @@ export class TurnstileManager {
         if (this.nextTokenPromise === p) {
           this.nextTokenPromise = null;
           this.nextTokenResolvedAt = null;
+          this.nextTokenOutcomeMode = null;
         }
       }
     );
   }
 
-  private runSerializedChallenge(): Promise<string> {
+  private runSerializedChallenge(
+    outcomeMode: ChallengeOutcomeMode
+  ): Promise<string> {
     console.log(`${LOG} Challenge enqueued on chain`);
+
+    // Timed from chain release, not enqueue, to match CHALLENGE_TIMEOUT_MS.
+    const startChallenge = () => {
+      const start = performance.now();
+      return loadTurnstileScript()
+        .then(() => this.runChallenge())
+        .then(
+          token => {
+            recordTurnstileOutcome({
+              mode: outcomeMode.mode,
+              durationMs: performance.now() - start,
+            });
+            return token;
+          },
+          error => {
+            recordTurnstileOutcome({
+              mode: outcomeMode.mode,
+              durationMs: performance.now() - start,
+              error,
+            });
+            throw error;
+          }
+        );
+    };
+
     const result = this.chain.then(
       () => {
         console.log(`${LOG} Challenge starting (chain released)`);
-        return loadTurnstileScript().then(() => this.runChallenge());
+        return startChallenge();
       },
       () => {
         console.log(
           `${LOG} Challenge starting after previous chain error (chain released)`
         );
-        return loadTurnstileScript().then(() => this.runChallenge());
+        return startChallenge();
       }
     );
     // Absorb so the chain always advances for subsequent callers.
@@ -280,7 +321,11 @@ export class TurnstileManager {
         } catch (err) {
           console.error(`${LOG} remove(${this.widgetId}) threw:`, err);
           this.widgetId = null;
-          throw err;
+          throw new TurnstileChallengeError(
+            'remove_failed',
+            'Turnstile failed to remove the previous widget',
+            {cause: err}
+          );
         }
         this.widgetId = null;
 
@@ -323,7 +368,12 @@ export class TurnstileManager {
             }
             this.widgetId = null;
           }
-          reject(new Error('Turnstile challenge timed out'));
+          reject(
+            new TurnstileChallengeError(
+              'timeout',
+              'Turnstile challenge timed out'
+            )
+          );
         });
       }, CHALLENGE_TIMEOUT_MS);
 
@@ -358,7 +408,11 @@ export class TurnstileManager {
       } catch (err) {
         console.error(`${LOG} render() threw:`, err);
         clearTimeout(timeout);
-        throw err;
+        throw new TurnstileChallengeError(
+          'render_threw',
+          'Turnstile render() threw',
+          {cause: err}
+        );
       }
 
       renderTime = performance.now();
@@ -371,7 +425,12 @@ export class TurnstileManager {
         console.error(`${LOG} render() returned falsy widgetId — rejecting`);
         settle(() => {
           clearTimeout(timeout);
-          reject(new Error('Turnstile failed to render widget'));
+          reject(
+            new TurnstileChallengeError(
+              'render_failed',
+              'Turnstile failed to render widget'
+            )
+          );
         });
       } else {
         this.widgetId = widgetId;
