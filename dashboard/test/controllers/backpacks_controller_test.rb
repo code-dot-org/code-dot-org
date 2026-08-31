@@ -8,6 +8,7 @@ class BackpacksControllerTest < ActionController::TestCase
   end
 
   test_redirect_to_sign_in_for :get_channel, params: {app_type: "javalab"}
+  test_redirect_to_sign_in_for :get_channels
 
   test 'get_channel creates backpack if one does not exist' do
     sign_in @user
@@ -24,40 +25,69 @@ class BackpacksControllerTest < ActionController::TestCase
     assert storage_id > 0 && project_id > 0
   end
 
-  test 'get_channel with no app_type lists the channels of existing backpacks' do
+  test 'get_channel with no app_type creates a backpack with no game' do
+    sign_in @user
+    Backpack.stubs(:storage_id_for_user_id).with(@user.id).returns(@storage_id)
+    Backpack.any_instance.stubs(:storage_id_for_user_id).with(@user.id).returns(@storage_id)
+
+    assert_nil Backpack.find_by(user_id: @user.id, game_id: nil)
+    get :get_channel
+    assert_response :success
+
+    backpack = Backpack.find_by(user_id: @user.id, game_id: nil)
+    refute_nil backpack
+    assert_equal backpack.channel, JSON.parse(response.body)['channel']
+  end
+
+  test 'get_channel with no app_type reuses the backpack with no game' do
+    sign_in @user
+    Backpack.stubs(:storage_id_for_user_id).with(@user.id).returns(@storage_id)
+    Backpack.any_instance.stubs(:storage_id_for_user_id).with(@user.id).returns(@storage_id)
+
+    get :get_channel
+    first_channel = JSON.parse(response.body)['channel']
+    get :get_channel
+    assert_response :success
+    assert_equal first_channel, JSON.parse(response.body)['channel']
+    assert_equal 1, Backpack.where(user_id: @user.id).count
+  end
+
+  test 'get_channels lists the channels of existing backpacks' do
     sign_in @user
     Backpack.stubs(:storage_id_for_user_id).with(@user.id).returns(@storage_id)
     Backpack.any_instance.stubs(:storage_id_for_user_id).with(@user.id).returns(@storage_id)
 
     javalab_backpack = Backpack.find_or_create(@user.id, @game_id, '1.2.3.4')
-    weblab2_backpack = Backpack.find_or_create(@user.id, Game.by_name('Weblab2'), '1.2.3.4')
+    unified_backpack = Backpack.find_or_create(@user.id, nil, '1.2.3.4')
 
-    get :get_channel
+    get :get_channels
     assert_response :success
-    channels = JSON.parse(response.body)['channels']
     assert_equal(
-      {'javalab' => javalab_backpack.channel, 'weblab2' => weblab2_backpack.channel},
-      channels
+      {
+        'javalab' => javalab_backpack.channel,
+        BackpacksController::UNIFIED_APP_TYPE => unified_backpack.channel,
+      },
+      JSON.parse(response.body)['channels']
     )
   end
 
-  test 'get_channel with no app_type does not create a backpack' do
+  test 'get_channels does not create a backpack' do
     sign_in @user
 
-    get :get_channel
+    get :get_channels
     assert_response :success
     assert_empty JSON.parse(response.body)['channels']
     assert_empty Backpack.where(user_id: @user.id)
   end
 
-  test 'get_channel with no app_type only lists the current user backpacks' do
+  test 'get_channels only lists the current user backpacks' do
     other_user = create(:user)
     Backpack.stubs(:storage_id_for_user_id).with(other_user.id).returns(fake_storage_id_for_user_id(other_user.id))
     Backpack.any_instance.stubs(:storage_id_for_user_id).with(other_user.id).returns(fake_storage_id_for_user_id(other_user.id))
     Backpack.find_or_create(other_user.id, @game_id, '1.2.3.4')
 
     sign_in @user
-    get :get_channel
+    get :get_channels
     assert_response :success
     assert_empty JSON.parse(response.body)['channels']
   end

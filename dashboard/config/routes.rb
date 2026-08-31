@@ -1449,6 +1449,7 @@ Dashboard::Application.routes.draw do
     end
 
     get '/backpacks/channel(/:app_type)', to: 'backpacks#get_channel'
+    get '/backpacks/channels', to: 'backpacks#get_channels'
 
     resources :project_commits, only: [:create]
     get 'project_commits/get_token', to: 'project_commits#get_token'
