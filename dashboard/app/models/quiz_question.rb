@@ -29,18 +29,50 @@ class QuizQuestion < ApplicationRecord
   has_many :placements, class_name: 'QuizQuestionPlacement', dependent: :destroy
   has_many :levels, through: :placements
 
+  # Neither cascade-deletes on its own - a deleted question must never
+  # silently take historical student responses or an independently-forked
+  # question down with it. See QuizQuestionPlacementsController#destroy, which
+  # checks both (along with :placements/:levels) before allowing a hard
+  # delete, falling back to a plain detach if either is still present.
+  has_many :quiz_question_responses, dependent: nil
+  has_many :forks, class_name: 'QuizQuestion', foreign_key: :parent_id, inverse_of: :parent, dependent: nil
+
   validates :key, presence: true
   validates :name, presence: true
   validates :content, presence: true
 
-  # preview/stable/sunsetting units
+  # published unit means preview/stable/sunsetting
   def used_in_published_unit?
-    levels.any? do |quiz|
-      quiz.script_levels.any? do |sl|
+    self.class.published_unit_usage([id]).fetch(id, false)
+  end
+
+  # Computes if group of question_ids are used in a published unit (see used_in_published_unit? for one question)
+  # Returns {question_id => bool}; a question_id with no placements, or
+  # none in a published unit, maps to false.
+  def self.published_unit_usage(question_ids)
+    return {} if question_ids.blank?
+
+    placements = QuizQuestionPlacement.where(quiz_question_id: question_ids).
+      includes(level: {script_levels: {script: :unit_group_units}})
+
+    # Grouped by level, not iterated per placement - Unit#launched? calls
+    # UnitGroup.get_from_cache (a separate id lookup, not covered by the
+    # includes above), so per-placement would repeat it once per placement
+    # on a shared level instead of once per unique level.
+    question_ids_by_level = placements.group_by(&:level).transform_values {|ps| ps.map(&:quiz_question_id)}
+    published_level_ids = question_ids_by_level.each_key.select do |level|
+      level.script_levels.any? do |sl|
         unit = sl.script
         unit && (unit.launched? || unit.get_published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.sunsetting)
       end
+    end.to_set(&:id)
+
+    usage = question_ids.index_with {false}
+    question_ids_by_level.each do |level, ids|
+      next unless published_level_ids.include?(level.id)
+      ids.each {|id| usage[id] = true}
     end
+    usage
   end
 
   # Overridden by subtypes that can grade themselves server-side
