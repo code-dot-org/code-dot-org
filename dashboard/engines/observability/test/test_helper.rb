@@ -21,7 +21,7 @@ require 'sentry-ruby'
 # Individual tests set the values they need in before blocks.
 module CDO
   class << self
-    attr_accessor :enable_opentelemetry, :enable_sentry, :dashboard_sentry_dsn, :unit_test
+    attr_accessor :enable_opentelemetry, :enable_sentry, :dashboard_sentry_dsn, :unit_test, :rack_env
 
     def log
       @log ||= Logger.new(IO::NULL)

@@ -33,7 +33,12 @@ module Observability
     end
 
     private_class_method def self.capture_with_sentry(error_or_message, options)
-      return unless Sentry.enabled? && defined?(::Sentry)
+      return unless Sentry.enabled?
+
+      # In Rails processes the engine loads and initializes Sentry; anywhere
+      # else the constant stays absent until the standalone setup runs.
+      Sentry.setup_standalone unless defined?(::Sentry)
+      return unless defined?(::Sentry)
 
       extra = options.fetch(:context, {}).merge(options.slice(*HONEYBADGER_NOTICE_KEYS))
       return ::Sentry.capture_exception(error_or_message, extra: extra) if error_or_message.is_a?(Exception)
