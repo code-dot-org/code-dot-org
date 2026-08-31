@@ -58,14 +58,14 @@ class BackpacksControllerTest < ActionController::TestCase
     Backpack.any_instance.stubs(:storage_id_for_user_id).with(@user.id).returns(@storage_id)
 
     javalab_backpack = Backpack.find_or_create(@user.id, @game_id, '1.2.3.4')
-    unified_backpack = Backpack.find_or_create(@user.id, nil, '1.2.3.4')
+    universal_backpack = Backpack.find_or_create(@user.id, nil, '1.2.3.4')
 
     get :get_channels
     assert_response :success
     assert_equal(
       {
         'javalab' => javalab_backpack.channel,
-        BackpacksController::UNIFIED_APP_TYPE => unified_backpack.channel,
+        BackpacksController::UNIVERSAL_APP_TYPE => universal_backpack.channel,
       },
       JSON.parse(response.body)['channels']
     )
