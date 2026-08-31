@@ -722,6 +722,7 @@ module LevelsHelper
       app_options[:is_viewing_exemplar] = level_options[:is_viewing_exemplar] || false
     end
     app_options[:share] = level_options[:share] if level_options[:share]
+    app_options[:is_building_quiz_questions] = level_options[:is_building_quiz_questions] if level_options[:is_building_quiz_questions]
     app_options[:public_caching] = @public_caching
     if @script_level&.lesson
       app_options[:theme] = @script_level.lesson.get_background_for_user(current_user)
