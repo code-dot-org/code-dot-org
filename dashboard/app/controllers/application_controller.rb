@@ -1,5 +1,4 @@
 require 'cdo/date'
-require 'cdo/uuid'
 require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
 require 'dynamic_config/page_mode'
@@ -453,7 +452,7 @@ class ApplicationController < ActionController::Base
   protected def initialize_statsig_stable_id
     existing_stable_id = cookies[:statsig_stable_id]
     session[:statsig_stable_id] = existing_stable_id if existing_stable_id.present?
-    session[:statsig_stable_id] ||= Cdo::UUID.generate
+    session[:statsig_stable_id] ||= AnonUserId.generate
   end
 
   private def pairing_still_enabled
