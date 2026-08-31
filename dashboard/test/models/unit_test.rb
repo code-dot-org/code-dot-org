@@ -2393,18 +2393,20 @@ class UnitTest < ActiveSupport::TestCase
     refute unit_without_ai.has_ai_chat_tools?
   end
 
-  # Bandaid: 'csd2-2026' is in
-  # Unit::NAMES_EXEMPT_FROM_ESSENTIAL_AI_CHAT_TOOLS. This test goes
-  # away with the exemption.
-  test 'with_essential_ai_chat_tools excludes an exempt unit' do
-    unit = create(:script, name: 'csd2-2026')
-    lesson = create(:lesson, :with_lesson_group, script: unit)
-    create(:script_level, script: unit, lesson: lesson, levels: [create(:weblab2)])
+  # Bandaid: covers every name in
+  # Unit::NAMES_EXEMPT_FROM_ESSENTIAL_AI_CHAT_TOOLS, so adding a unit to that
+  # list needs no test edit. This test goes away with the exemption.
+  test 'with_essential_ai_chat_tools excludes every exempt unit' do
+    Unit::NAMES_EXEMPT_FROM_ESSENTIAL_AI_CHAT_TOOLS.each do |name|
+      unit = create(:script, name: name)
+      lesson = create(:lesson, :with_lesson_group, script: unit)
+      create(:script_level, script: unit, lesson: lesson, levels: [create(:weblab2)])
 
-    refute_includes Unit.with_essential_ai_chat_tools, unit
-    refute unit.requires_ai_chat_tools?
-    # The tutor is still there, so the unit still reports it as available.
-    assert unit.has_ai_chat_tools?
+      refute_includes Unit.with_essential_ai_chat_tools, unit, name
+      refute unit.requires_ai_chat_tools?, name
+      # The tutor is still there, so the unit still reports it as available.
+      assert unit.has_ai_chat_tools?, name
+    end
   end
 
   describe '#title_for_display' do
