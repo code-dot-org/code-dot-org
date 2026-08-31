@@ -15,22 +15,31 @@ import {
   cameraEaseDemo,
   cameraFollowDemo,
 } from './cameras';
+import {carryDemo} from './carry';
 import {collectDemo} from './collect';
+import {conversationDemo} from './conversation';
 import {dragDemo} from './drag';
 import {driveDemo} from './drive';
 import {expiresDemo} from './expires';
+import {goalsDemo} from './goals';
 import {gravityDemo} from './gravity';
+import {gridDemo} from './grid';
 import {healthDemo} from './health';
+import {historyDemo} from './history';
 import {inputDemo} from './input';
+import {inventoryDemo} from './inventory';
 import {jumpDemo} from './jump';
 import {mouseDemo} from './mouse';
 import {patrolDemo} from './patrol';
 import {physicsDemo} from './physics';
+import {progressDemo} from './progress';
+import {revealsDemo} from './reveals';
 import {scoreDemo} from './score';
 import {shootsDemo} from './shoots';
 import {solidDemo} from './solid';
 import {steeringDemo} from './steering';
 import {timeDemo} from './time';
+import {turnsDemo} from './turns';
 import {DEMO_FPS, type RuleDemo} from './types';
 import {wrapDemo} from './wrap';
 import {writingDemo} from './writing';
@@ -41,13 +50,22 @@ export const RULE_DEMOS: Readonly<Record<string, RuleDemo>> = {
   motion: physicsDemo,
   solid: solidDemo,
   collect: collectDemo,
+  inventory: inventoryDemo,
   health: healthDemo,
   steering: steeringDemo,
   patrol: patrolDemo,
+  carry: carryDemo,
+  grid: gridDemo,
   attachment: attachmentDemo,
   time: timeDemo,
   writing: writingDemo,
+  reveals: revealsDemo,
+  conversation: conversationDemo,
+  progress: progressDemo,
   score: scoreDemo,
+  goals: goalsDemo,
+  history: historyDemo,
+  turns: turnsDemo,
   input: inputDemo,
   mouse: mouseDemo,
   arrows: arrowsDemo,

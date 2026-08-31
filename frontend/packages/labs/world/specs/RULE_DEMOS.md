@@ -298,3 +298,36 @@ comfortable with anyway (see above).
    sideways only, so its demo recorded a box standing still with the down
    arrow lit; the rule now has a trait per direction, like Screen Wrap and
    Boundaries (specs/RULES.md).
+
+7. ✅ **The last nine**: Carrying, Goals, History, Turns, Inventory, Grid,
+   Reveals, Conversation and Progress — which is every rule on the shelf but
+   the two bases. Five of them were written the same week as the rules they
+   show, which is the arrangement this document argued for and had not yet had:
+   a rule and its demonstration authored together, so the claim and the code
+   are the same person's.
+
+   **Three of the nine needed nothing new**, and two needed a second actor to
+   be legible at all. Carrying is a rider and a BYSTANDER: one box going along
+   with a platform looks exactly like a box with a velocity, and the identical
+   box left behind is what says the platform is doing it. Turns is a player and
+   two takers, one of them at `turns per move` of two — because two boxes
+   moving together read as two boxes with one speed, which is the rate this
+   rule is not, and a box that moves on every OTHER turn cannot be explained by
+   a speed at all.
+
+   **Goals is the one whose demonstration is invisible.** The walker reaches
+   the flag and wins; it then walks into a spike and nothing happens, and those
+   frames — a banner not changing — are the rule's whole claim that the first
+   ending is the one that counts. No still could carry it and no single frame
+   of the strip does either.
+
+   **Conversation found something about the first cell.** A demo whose first
+   frame is empty is a rule with no picture in the dialog, because frame one is
+   what an unselected row shows. Its opening line is therefore written by the
+   demo as well as by the handler that writes it a tick later — an event is
+   delivered by a tick, and the first cell is drawn before any tick has run.
+
+   **Two demos are scripted through `input` with no keyboard in them**
+   (Reveals' skip, Conversation's next line). Both stand for a player who has
+   read enough and wants the rest, which is a hand rather than a rule, so they
+   go where the hands go.

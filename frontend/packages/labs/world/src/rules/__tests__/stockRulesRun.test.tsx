@@ -923,6 +923,123 @@ describe('what the newer demos show', () => {
     expect(Number(shown(cast.counter))).toBeGreaterThan(100);
   });
 
+  it('carry: the rider goes with the platform and the bystander does not', () => {
+    // Two identical boxes and one trait between them — which is what makes the
+    // strip a demonstration rather than a box with a velocity.
+    const {cast} = play(RULE_DEMOS.carry);
+    const spot = (who: unknown) =>
+      (who as {get(p: unknown): Vector}).get(PositionProperty).x;
+
+    // The platform went right; the rider went with it, and the one that does
+    // not ride is exactly where it was put.
+    expect(spot(cast.platform)).toBeGreaterThan(110);
+    expect(spot(cast.rider)).toBeGreaterThan(140);
+    expect(spot(cast.bystander)).toBe(30);
+  });
+
+  it('goals: the flag wins it and the spike afterwards changes nothing', () => {
+    // The rule's one real claim, and the only thing in the strip that is
+    // invisible: the frames after the spike look like nothing happening, and
+    // that IS the demonstration.
+    const {world} = play(RULE_DEMOS.goals);
+
+    expect(world.get(of('rules/goals', 'WonProperty'))).toBe(true);
+    expect(world.get(of('rules/goals', 'LostProperty'))).toBe(false);
+  });
+
+  it('history: the box ends on the first of its own footprints', () => {
+    // Four moves out and four taken back. A box walked home would land near
+    // where it started; one PUT back lands exactly on it, and exactly is what
+    // this asserts.
+    const {world, cast} = play(RULE_DEMOS.history);
+    const box = cast.box as {get(p: unknown): Vector};
+    const steps = [...world.actors].filter(actor =>
+      actor.id.startsWith('step'),
+    );
+
+    expect(steps).toHaveLength(4);
+    expect(box.get(PositionProperty).x).toBe(steps[0].get(PositionProperty).x);
+  });
+
+  it('turns: the slow one moves on half the turns', () => {
+    // Two boxes in step read as two boxes with one speed; the third is what
+    // says these are turns. It must be BEHIND, and behind by whole strides.
+    const {cast} = play(RULE_DEMOS.turns);
+    const spot = (who: unknown) =>
+      (who as {get(p: unknown): Vector}).get(PositionProperty).x;
+
+    expect(spot(cast.quick)).toBe(spot(cast.player));
+    expect(spot(cast.slow)).toBeLessThan(spot(cast.quick));
+    expect((spot(cast.quick) - spot(cast.slow)) % 26).toBe(0);
+  });
+
+  it('inventory: the key is taken, spent, and gone from the bag', () => {
+    // Both halves in one run: a record would show the first and could not show
+    // the second, which is the whole reason this rule exists.
+    const {world, cast} = play(RULE_DEMOS.inventory);
+    const walker = cast.walker as {query(q: unknown, ...a: unknown[]): unknown};
+
+    expect(walker.query(of('rules/inventory', 'HasAQuery'), 'key')).toBe(false);
+    // …and the door it was spent on is not in the world any more.
+    expect([...world.actors].some(actor => actor.id === 'door')).toBe(false);
+  });
+
+  it('grid: the crate is pushed one square and both stop at the wall', () => {
+    // Pushing is part of stepping, and the refusal is the rule working: a
+    // strip that ended with the player standing on the crate would be a strip
+    // of a rule that had run out of frames.
+    const {world} = play(RULE_DEMOS.grid);
+    const spot = (id: string) =>
+      [...world.actors].find(actor => actor.id === id)!.get(PositionProperty).x;
+
+    // The wall never moves, the crate is one square along from where it was,
+    // and the player is one square behind the crate.
+    expect(spot('wall')).toBe(5 * 32 + 16);
+    expect(spot('crate')).toBe(4 * 32 + 16);
+    expect(spot('player')).toBe(3 * 32 + 16);
+  });
+
+  it('reveals: one line waits its turn and the other is hurried', () => {
+    // Both halves in one strip: the letters arriving, and the way past them.
+    const {cast} = play(RULE_DEMOS.reveals);
+    const shown = (who: unknown) =>
+      (who as {get(p: unknown): string}).get(
+        of('rules/writing', 'TextProperty'),
+      );
+
+    expect(shown(cast.patient)).toBe('HELLO WORLD');
+    expect(shown(cast.impatient)).toBe('HELLO WORLD');
+    // …and the impatient one got there first, which is the only thing that
+    // makes the two rows different. Ten letters at five a second is two
+    // seconds; the skip is at one.
+    expect(
+      (cast.impatient as {get(p: unknown): number}).get(
+        of('rules/reveals', 'LettersShownProperty'),
+      ),
+    ).toBeGreaterThan(
+      (cast.patient as {get(p: unknown): number}).get(
+        of('rules/reveals', 'LettersShownProperty'),
+      ),
+    );
+  });
+
+  it('conversation: it says three things and then stops', () => {
+    // The ending is what makes it a conversation rather than a sign: the
+    // cursor is back at nobody talking, and the box is empty.
+    const {cast} = play(RULE_DEMOS.conversation);
+    const speaker = cast.speaker as {get(p: unknown): unknown};
+
+    expect(speaker.get(of('rules/conversation', 'LineProperty'))).toBe(0);
+    expect(speaker.get(of('rules/writing', 'TextProperty'))).toBe('');
+  });
+
+  it('progress: the bar fills in steps and stops full', () => {
+    const {cast} = play(RULE_DEMOS.progress);
+    const bar = cast.bar as {get(p: unknown): number};
+
+    expect(bar.get(cast.fraction as never)).toBe(1);
+  });
+
   it('every demo asks only for letters the font can draw', () => {
     // A character with no glyph draws as a GAP, silently — the strip is still
     // a strip, and the word is missing a letter. This is the only place that
