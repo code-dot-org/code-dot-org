@@ -33,13 +33,29 @@ class QuizQuestionResponsesControllerTest < ActionController::TestCase
 
     assert_response :success
     body = JSON.parse(response.body)
-    assert_equal 1, body['score']
-    assert_equal 1, body['maxScore']
     assert_equal 'auto_graded', body['gradingStatus']
 
     created = QuizQuestionResponse.find(body['id'])
     assert_equal @attempt.id, created.quiz_attempt_id
     assert_equal @question.id, created.quiz_question_id
+    assert_equal 1, created.score
+    assert_equal 1, created.max_score
+  end
+
+  # A response can be resubmitted freely before final submit so returnin
+  # score/maxScore here would let a student try each choice and watch score flip
+  # to max_score - bypassing show_correctness: false.
+  test "create's response body never exposes score - correctness is revealed only via the submitted attempt" do
+    sign_in @student
+    post :create, params: {
+      quizAttemptId: @attempt.id, quizQuestionId: @question.id,
+      responseData: {selectedChoiceId: 'b'}
+    }
+
+    assert_response :success
+    body = JSON.parse(response.body)
+    refute body.key?('score')
+    refute body.key?('maxScore')
   end
 
   test "create updates the existing response instead of duplicating it on resubmission" do
@@ -58,7 +74,7 @@ class QuizQuestionResponsesControllerTest < ActionController::TestCase
 
     assert_response :success
     body = JSON.parse(response.body)
-    assert_equal 1, body['score']
+    assert_equal 1, QuizQuestionResponse.find(body['id']).score
   end
 
   test "create rejects a question that is not on the attempt's quiz" do

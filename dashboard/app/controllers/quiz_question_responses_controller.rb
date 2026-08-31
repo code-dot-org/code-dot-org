@@ -1,9 +1,7 @@
 class QuizQuestionResponsesController < ApplicationController
   before_action :authenticate_user!
 
-  # Grades server-side so the correct answer is never sent to the
-  # client; see QuizQuestion#auto_gradable?/#grade. Question types that
-  # can't grade themselves are stored ungraded.
+  # Grades server-side so the correct answer is never sent to the client.
   # TODO: support manual/AI grading.
   def create
     attempt = QuizAttempt.find(params[:quizAttemptId])
@@ -19,14 +17,7 @@ class QuizQuestionResponsesController < ApplicationController
     response_data = params[:responseData].is_a?(ActionController::Parameters) ? params[:responseData].permit!.to_h : {}
 
     response = nil
-    # Locks the same quiz_attempts row QuizAttemptsController#update locks
-    # (see its with_lock) - without this, a response write and a concurrent
-    # finalize can interleave: this action reads submitted_at as blank,
-    # #update reads/sums responses/marks submitted/commits, then this
-    # action's write lands after all that, adding a response to a
-    # supposedly-immutable attempt that was never counted in its score.
-    # with_lock reloads `attempt` under the row lock, so submitted_at below
-    # reflects any commit that just happened while this was waiting.
+    # Locks the same quiz_attempts row QuizAttemptsController#update locks.
     attempt.with_lock do
       # Once submitted, this attempt is immutable - a retake (see
       # Quiz#retakeable?) mints a new attempt row rather than reopening it.
@@ -57,8 +48,6 @@ class QuizQuestionResponsesController < ApplicationController
 
     render status: :ok, json: {
       id: response.id,
-      score: response.score,
-      maxScore: response.max_score,
       gradingStatus: response.grading_status
     }
   rescue StandardError => exception
