@@ -8,7 +8,7 @@ interface FilesObject {
     text: string;
   };
 }
-interface FileMetadata {
+export interface FileMetadata {
   filename: string;
   category?: string;
   size: number;
