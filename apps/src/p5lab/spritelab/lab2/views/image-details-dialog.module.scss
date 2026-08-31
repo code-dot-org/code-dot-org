@@ -389,8 +389,10 @@
 
 // The beside-the-field layout means the fields can't take TextField's
 // errorMessage prop (it renders the message below); restore the red border
-// it would have drawn, keyed on the aria-invalid the views set.
-.nameRow input[aria-invalid='true'],
-.header .headerNameField input[aria-invalid='true'] {
+// it would have drawn, keyed on the aria-invalid the views set. Weighted to
+// outrank the design system's resting border (.textField.textField-color-*
+// input).
+.dialogHost .detailsPane .nameRow input[aria-invalid='true'],
+.dialogHost .header .headerNameField input[aria-invalid='true'] {
   border-color: var(--borders-error-primary);
 }
