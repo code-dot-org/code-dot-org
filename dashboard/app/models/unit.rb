@@ -183,7 +183,10 @@ class Unit < ApplicationRecord
       where.not(scripts: {name: NAMES_EXEMPT_FROM_ESSENTIAL_AI_CHAT_TOOLS})
   end)
 
-  scope :with_us_only_ai_models, -> {joins(:levels).merge(Level.with_us_only_ai_models)}
+  # AI Tutor has no per-level model, so any unit offering it loses it outside
+  # the US. This is a type/property match, cheap enough to run per request --
+  # unlike the Aichat model check, which is a snapshot (see UsOnlyAiCurriculum).
+  scope :with_us_only_ai_tutor, -> {joins(:levels).merge(Level.with_any_ai_chat_tools)}
 
   attr_accessor :skip_name_format_validation
 
@@ -2092,8 +2095,14 @@ class Unit < ApplicationRecord
     self.class.where(id: id).with_essential_ai_chat_tools.exists?
   end
 
-  def uses_us_only_ai_models?
-    self.class.where(id: id).with_us_only_ai_models.exists?
+  # Whether this unit's Aichat levels use a model available only in the US.
+  def uses_us_only_aichat_models?
+    UsOnlyAiCurriculum.include?(name)
+  end
+
+  # Whether this unit offers AI Tutor, which is unavailable outside the US.
+  def uses_us_only_ai_tutor?
+    self.class.where(id: id).with_us_only_ai_tutor.exists?
   end
 
   private def teacher_feedback_enabled?

@@ -48,8 +48,25 @@ export const AI_TUTOR_NOT_AVAILABLE_INTERNATIONAL =
   'AI Tutor is not available in your region.';
 // Shown in Teacher Dashboard AI Settings when the teacher's region blocks
 // Gemini models. Settings still apply to levels using other models.
-export const US_ONLY_MODELS_TEACHER_SETTINGS =
-  'Some AI models are not available in your region. Levels that use them will be disabled for you and your students.';
+// A course with unaffected units left: name the affected ones so the teacher
+// knows the rest of the course is still usable.
+export const usOnlyModelsCourseUnits = (
+  unitTitles: string[],
+  // Only reassure them about the rest of the course when there is a rest.
+  hasUnaffectedUnits: boolean
+) =>
+  `The following units in this course use AI models not available in your region: ${unitTitles.join(
+    ', '
+  )}.${hasUnaffectedUnits ? ' Other units are unaffected.' : ''}`;
+
+// A single unit is assigned, so there are no sibling units to reassure about.
+export const US_ONLY_MODELS_UNIT =
+  'This unit includes levels that use AI models not available in your region. Those levels will be disabled for you and your students.';
+
+// AI Tutor has no per-level model, so it is gone everywhere it appears rather
+// than in particular units, and no levels are disabled by its absence.
+export const US_ONLY_MODELS_AI_TUTOR =
+  'AI Tutor is not available in your region. Levels that offer it remain usable without it.';
 
 export const MODEL_PARAMETER_LABELS: {
   [key in keyof ModelParameters]: string;

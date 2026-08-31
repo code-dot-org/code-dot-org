@@ -1,0 +1,35 @@
+# Units whose Aichat levels are configured with a model that is only available
+# in the US (SharedConstants::AI_CHAT_US_ONLY_MODEL_IDS). A teacher outside the
+# US cannot run these levels, so we name the units in the warning they see.
+#
+# This is a hand-maintained snapshot, not a live query. Finding these units for
+# real means a JSON extract over every level's properties, which is not
+# indexable and too slow to run while building a section summary. The set is
+# small and changes rarely, so a snapshot buys accuracy of naming without the
+# scan.
+#
+# TEMPORARY. It goes away once models fall back to an available provider
+# instead of the level being blocked outright, at which point there is nothing
+# to warn about. Until then, refresh it with:
+#
+#     bundle exec rake us_only_ai_curriculum:snapshot
+#
+# which prints the current list and diffs it against this file. Drone runs the
+# same check, so a curriculum change that adds a unit here fails the build
+# rather than silently under-reporting to teachers.
+#
+# AI Tutor is deliberately absent. It has no per-level model, so it is
+# unavailable in every unit that offers it -- naming those units would list
+# most of the catalog. Section computes tutor impact directly instead.
+#
+# Snapshot taken: 2026-08-31
+units:
+  # Student-facing
+  - thinking-critically-about-ai-2026
+  - ai-and-algorithmic-decisions-2026
+  - ai-powered-threats-and-defenses-2026
+  - aif5-v3
+  # Self-paced PL
+  - self-paced-pl-thinking-critically-about-ai-2026
+  - self-paced-pl-teaching-thinking-critically-about-ai-2026
+  - self-paced-pl-teaching-ai-powered-threats-and-defenses-2026

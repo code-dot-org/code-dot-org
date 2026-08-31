@@ -715,8 +715,14 @@ class UnitGroup < ApplicationRecord
     default_units.with_essential_ai_chat_tools.exists?
   end
 
-  def uses_us_only_ai_models?
-    default_units.with_us_only_ai_models.exists?
+  # Units in this course whose Aichat levels use a US only model. Named in the
+  # teacher warning, so the order follows the course's own unit order.
+  def us_only_aichat_units
+    default_units.select(&:uses_us_only_aichat_models?)
+  end
+
+  def uses_us_only_ai_tutor?
+    default_units.with_us_only_ai_tutor.exists?
   end
 
   def ai_chat_tools_dependency

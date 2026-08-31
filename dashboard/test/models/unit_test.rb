@@ -2407,26 +2407,28 @@ class UnitTest < ActiveSupport::TestCase
     assert unit.has_ai_chat_tools?
   end
 
-  test 'with_us_only_ai_models returns only units whose levels use US only models' do
-    us_only_level = create(:aichat, properties: {'aichat_settings' => {'initialCustomizations' => {'selectedModelId' => SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH]}}})
-    openai_level = create(:aichat, properties: {'aichat_settings' => {'initialCustomizations' => {'selectedModelId' => SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT]}}})
+  test 'uses_us_only_aichat_models? follows the curriculum snapshot' do
+    unit = create(:script, name: 'unit-in-snapshot')
+    other = create(:script, name: 'unit-not-in-snapshot')
 
-    unit_with_us_only = create(:script, name: 'unit-with-us-only')
-    us_only_lesson = create(:lesson, :with_lesson_group, script: unit_with_us_only)
-    create(:script_level, script: unit_with_us_only, lesson: us_only_lesson, levels: [us_only_level])
+    UsOnlyAiCurriculum.stubs(:include?).returns(false)
+    UsOnlyAiCurriculum.stubs(:include?).with('unit-in-snapshot').returns(true)
 
-    unit_without_us_only = create(:script, name: 'unit-without-us-only')
-    openai_lesson = create(:lesson, :with_lesson_group, script: unit_without_us_only)
-    create(:script_level, script: unit_without_us_only, lesson: openai_lesson, levels: [openai_level])
+    assert unit.uses_us_only_aichat_models?
+    refute other.uses_us_only_aichat_models?
+  end
 
-    result = Unit.with_us_only_ai_models
-    assert_includes result, unit_with_us_only
-    refute_includes result, unit_without_us_only
+  test 'uses_us_only_ai_tutor? is true for units offering AI Tutor' do
+    tutor_unit = create(:script, name: 'unit-with-tutor')
+    tutor_lesson = create(:lesson, :with_lesson_group, script: tutor_unit)
+    create(:script_level, script: tutor_unit, lesson: tutor_lesson, levels: [create(:weblab2)])
 
-    assert unit_with_us_only.uses_us_only_ai_models?
-    refute unit_without_us_only.uses_us_only_ai_models?
-    # Both still count as AI chat units; only the model differs.
-    assert unit_without_us_only.has_ai_chat_tools?
+    plain_unit = create(:script, name: 'unit-without-tutor')
+    plain_lesson = create(:lesson, :with_lesson_group, script: plain_unit)
+    create(:script_level, script: plain_unit, lesson: plain_lesson, levels: [create(:maze)])
+
+    assert tutor_unit.uses_us_only_ai_tutor?
+    refute plain_unit.uses_us_only_ai_tutor?
   end
 
   describe '#title_for_display' do

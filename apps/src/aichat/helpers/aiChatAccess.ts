@@ -2,6 +2,7 @@ import {
   AiChatAccessLevel,
   AiChatToolsDependencyValue,
 } from '@cdo/apps/aichat/types/accessControls';
+import {UsOnlyAiModels} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import {
   AiChatAccessLevels,
   AiChatToolsDependency,
@@ -94,16 +95,20 @@ export const shouldShowAiChatEssentialAlert = ({
  * the instructor cannot reach because the models are only available in the US.
  * Distinct from shouldShowAiChatEssentialAlert, which covers tools turned off
  * by an access level and is fixable from the AI settings page; this one is not.
+ *
+ * Only blocked Aichat levels raise it. A missing AI Tutor leaves every level
+ * completable, so warning about it here would put a permanent badge on most
+ * sections and teach teachers to ignore the one that matters.
  */
 export const shouldShowUsOnlyModelsAlert = ({
   assignedAiChatToolsDependency,
-  assignedInaccessibleAiModels,
+  assignedUsOnlyAiModels,
 }: {
   assignedAiChatToolsDependency: AiChatToolsDependencyValue | undefined;
-  assignedInaccessibleAiModels: boolean | undefined;
+  assignedUsOnlyAiModels: UsOnlyAiModels | undefined;
 }): boolean => {
   return (
     assignedAiChatToolsDependency === AiChatToolsDependency.ESSENTIAL &&
-    !!assignedInaccessibleAiModels
+    !!assignedUsOnlyAiModels?.aichatUnitTitles.length
   );
 };

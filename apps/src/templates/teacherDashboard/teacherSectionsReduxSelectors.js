@@ -223,7 +223,7 @@ export const sectionFromServerSection = serverSection => ({
   avatar_emoji: serverSection.avatar_emoji,
   assignedAiChatToolsDependency:
     serverSection.assigned_ai_chat_tools_dependency,
-  assignedInaccessibleAiModels: serverSection.assigned_inaccessible_ai_models,
+  assignedUsOnlyAiModels: serverSection.assigned_us_only_ai_models,
   aiChatAccessLevel: serverSection.ai_chat_access_level,
 });
 
