@@ -226,7 +226,10 @@ class Section < ApplicationRecord
 
     last_completed_lesson = nil
     finished_unit = true
-    numbered_lessons = unit.lessons.select(&:numbered_lesson?)
+    # A lesson with no lesson plan has nothing for a teacher to prep, so it's
+    # never something this feature can suggest - drop it from the sequence
+    # entirely rather than let it turn up as next_lesson/coming_up.
+    numbered_lessons = unit.lessons.select {|lesson| lesson.numbered_lesson? && lesson.has_lesson_plan}
     checked_last_lesson = false
     threshold = [section_students.size / 2.0, 3].min
 
@@ -273,7 +276,9 @@ class Section < ApplicationRecord
                 end
 
     coming_up = if finished_unit
-                  {'completed_unit' => true}
+                  # derived from new_value, not a separate literal, so this can never
+                  # disagree with what suggested_lesson itself says for today.
+                  new_value.except('timestamp')
                 else
                   idx = numbered_lessons.index(next_lesson)
                   next_next = numbered_lessons[idx + 1]
@@ -284,9 +289,12 @@ class Section < ApplicationRecord
     cutoff = (Time.zone.today - SUGGESTED_LESSON_HISTORY_MAX_DAYS).iso8601
     history = (suggested_lesson_history || []).
       reject {|entry| entry['date'] == today || entry['date'] < cutoff}
-    history << new_value.merge('date' => today, 'coming_up' => coming_up)
+    # coming_up is only ever read for the current day (see suggested_lessons
+    # in SectionsController), so it's stored on suggested_lesson itself
+    # rather than duplicated into every history entry.
+    history << new_value.merge('date' => today)
 
-    update!(suggested_lesson: new_value, suggested_lesson_history: history)
+    update!(suggested_lesson: new_value.merge('coming_up' => coming_up), suggested_lesson_history: history)
   end
 
   # This list is duplicated as SECTION_LOGIN_TYPE in shared_constants.rb and should be kept in sync.

@@ -10,7 +10,6 @@ import {
   Challenge,
   ChallengeResponse,
   challengeResponseValidator,
-  challengeValidator,
   EvaluationStatus,
   ExplanationTypes,
 } from '../types';
@@ -22,6 +21,8 @@ import styles from './challenge-box.module.scss';
 
 interface ChallengeBoxProps {
   lessonId: number;
+  challenge: Challenge;
+  challengeType: string;
 }
 
 // Terminal evaluation_status values that map to a student-facing error
@@ -33,14 +34,13 @@ const EVALUATION_ERROR_MESSAGES: Record<string, string> = {
   failure: 'An error occured during evaluation',
 };
 
-const ChallengeBox: FC<ChallengeBoxProps> = ({lessonId}) => {
+const ChallengeBox: FC<ChallengeBoxProps> = ({
+  lessonId,
+  challenge,
+  challengeType,
+}) => {
   const [submitted, setSubmitted] = useState(false);
   const [showConfirmation, setShowConfirmation] = useState(false);
-  const [challenge, setChallenge] = useState<Challenge | null>(null);
-  const [loadFailed, setLoadFailed] = useState(false);
-  const [challengeType, setChallengeType] = useState<string>(
-    ChallengeTypes.WHITEBOARD
-  );
   const [explanationType, setExplanationType] = useState<string | null>(null);
   const [hasRecording, setHasRecording] = useState(false);
   const [isRecording, setIsRecording] = useState(false);
@@ -136,62 +136,9 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({lessonId}) => {
     }
   }, [polling, evaluationStatus, challengeResponseId]);
 
-  useEffect(() => {
-    let cancelled = false;
-    const params = new URLSearchParams();
-    params.append('lesson_id', lessonId.toString());
-    const query = params.toString();
-    HttpClient.fetchJson<Challenge[]>(
-      `/challenges?${query}`,
-      {},
-      challengeValidator
-    )
-      .then(({value}) => {
-        if (cancelled) {
-          return;
-        }
-        const first = value?.[0];
-        if (!first) {
-          setLoadFailed(true);
-          return;
-        }
-        setChallenge(first);
-        if (first.default_modality) {
-          setChallengeType(first.default_modality);
-        }
-      })
-      .catch(() => {
-        if (!cancelled) {
-          setLoadFailed(true);
-        }
-      });
-    return () => {
-      cancelled = true;
-    };
-  }, [lessonId]);
-
-  const switchTo = (type: string) => {
-    setChallengeType(type);
-    setSubmitted(false);
-  };
-
   const switchExplanationType = (type: string) => {
     setIsRecording(false);
     setExplanationType(type);
-  };
-
-  const renderInstructions = () => {
-    if (challenge) {
-      return <p className={styles.instructionsText}>{challenge.question}</p>;
-    }
-    if (loadFailed) {
-      return (
-        <p className={styles.instructionsText}>
-          We couldn&apos;t load a challenge for this lesson.
-        </p>
-      );
-    }
-    return <p className={styles.instructionsText}>Loading challenge…</p>;
   };
 
   return (
@@ -223,7 +170,10 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({lessonId}) => {
                   </div>
                 </div>
                 <div className={styles.feedbackText}>
-                  <Typography variant="body3" className={styles.sidebarHeading}>
+                  <Typography
+                    variant="body3"
+                    className={styles.instructionsText}
+                  >
                     {evaluationText}
                   </Typography>
                 </div>
@@ -232,10 +182,14 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({lessonId}) => {
           ) : (
             <div className={styles.sidebarContent}>
               <div>
-                <h3 className={styles.sidebarHeading}>Instructions</h3>
-                {renderInstructions()}
+                <Typography variant="h6" className={styles.sidebarHeading}>
+                  Instructions
+                </Typography>
+                <Typography variant="body3" className={styles.instructionsText}>
+                  {challenge.question}
+                </Typography>
               </div>
-              {challenge && challengeType === ChallengeTypes.WHITEBOARD && (
+              {challengeType === ChallengeTypes.WHITEBOARD && (
                 <div className={styles.whiteboardButtonContainer}>
                   <div className={styles.explanationContainer}>
                     <MuiButton
@@ -362,30 +316,6 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({lessonId}) => {
               setChallengeResponseId={setChallengeResponseId}
             />
           )}
-          <div className={styles.challengeToggle}>
-            <button
-              type="button"
-              className={
-                challengeType === ChallengeTypes.WHITEBOARD
-                  ? styles.active
-                  : undefined
-              }
-              onClick={() => switchTo(ChallengeTypes.WHITEBOARD)}
-            >
-              Whiteboard
-            </button>
-            <button
-              type="button"
-              className={
-                challengeType === ChallengeTypes.VIDEO
-                  ? styles.active
-                  : undefined
-              }
-              onClick={() => switchTo(ChallengeTypes.VIDEO)}
-            >
-              Video
-            </button>
-          </div>
         </div>
       </div>
       {showConfirmation && (
