@@ -17,7 +17,9 @@ import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
 import {handleUpdateSectionAiChatAccessLevel} from '../../accessControlsApi';
 import {
   AI_SETTINGS_SUPPORT_LINK,
-  US_ONLY_MODELS_TEACHER_SETTINGS,
+  US_ONLY_MODELS_AI_TUTOR,
+  US_ONLY_MODELS_UNIT,
+  usOnlyModelsCourseUnits,
   VERIFIED_TEACHER_SUPPORT_LINK,
 } from '../../constants';
 import {shouldShowAiChatEssentialAlert} from '../../helpers/aiChatAccess';
@@ -134,15 +136,37 @@ const AiChatAccessControls: React.FC = () => {
     setAccessToggle(accessToggleState(accessLevel));
   }, [section]);
 
+  // Aichat and AI Tutor get their own alert: one names units and disables
+  // levels, the other does neither, so merging them would misstate both.
+  const usOnly = usOnlyAichatModelsDisabled
+    ? section.assignedUsOnlyAiModels
+    : undefined;
+  const usOnlyAiModelsText: string[] = [];
+  if (usOnly?.aichatUnitTitles.length) {
+    const blocked = usOnly.aichatUnitTitles;
+    usOnlyAiModelsText.push(
+      usOnly.assignedUnitCount <= 1
+        ? US_ONLY_MODELS_UNIT
+        : usOnlyModelsCourseUnits(
+            blocked,
+            blocked.length < usOnly.assignedUnitCount
+          )
+    );
+  }
+  if (usOnly?.aiTutor) {
+    usOnlyAiModelsText.push(US_ONLY_MODELS_AI_TUTOR);
+  }
+
   return (
     <div className={style.container}>
-      {usOnlyAichatModelsDisabled && section.assignedInaccessibleAiModels && (
+      {usOnlyAiModelsText.map(text => (
         <Alert
-          text={US_ONLY_MODELS_TEACHER_SETTINGS}
+          key={text}
+          text={text}
           type={alertTypes.warning}
           icon={{iconName: 'triangle-exclamation', iconStyle: 'solid'}}
         />
-      )}
+      ))}
       {isCurrentUserAccessDisabled && (
         <Alert
           text="You cannot enable AI Chat Tools. These settings will not take

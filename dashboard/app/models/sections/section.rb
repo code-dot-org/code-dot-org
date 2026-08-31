@@ -654,7 +654,7 @@ class Section < ApplicationRecord
         avatar_emoji: avatar_emoji,
         demo_type: demo_type,
         assigned_ai_chat_tools_dependency: assigned_ai_chat_tools_dependency,
-        assigned_inaccessible_ai_models: assigned_inaccessible_ai_models?,
+        assigned_us_only_ai_models: assigned_us_only_ai_models,
         ai_chat_access_level: ai_chat_access_level,
       }
     end
@@ -747,7 +747,7 @@ class Section < ApplicationRecord
           avatar_emoji: avatar_emoji,
           demo_type: demo_type,
           assigned_ai_chat_tools_dependency: assigned_ai_chat_tools_dependency,
-          assigned_inaccessible_ai_models: assigned_inaccessible_ai_models?,
+          assigned_us_only_ai_models: assigned_us_only_ai_models,
           ai_chat_access_level: ai_chat_access_level,
         }
       )
@@ -884,13 +884,36 @@ class Section < ApplicationRecord
     SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE]
   end
 
-  # Whether the assigned curriculum uses AI models this section's instructor
-  # cannot reach, because they are unavailable outside the US.
-  # False whenever nothing is inaccessible, which for instructors with no
-  # restrictions also lets us skip scanning the curriculum's levels.
-  def assigned_inaccessible_ai_models?
-    return false unless user&.us_only_aichat_models_disabled?
-    !!(script&.uses_us_only_ai_models? || unit_group&.uses_us_only_ai_models?)
+  # What the assigned curriculum loses because its AI models are only available
+  # in the US, or nil when it loses nothing. nil for any instructor without the
+  # restriction, which also skips the work below.
+  #
+  # The two impacts are reported separately because they differ in shape: the
+  # Aichat one hits a handful of named units, while AI Tutor is unavailable
+  # everywhere it appears, so listing units for it would name most of a course.
+  def assigned_us_only_ai_models
+    return nil unless user&.us_only_aichat_models_disabled?
+
+    aichat_units =
+      if unit_group
+        unit_group.us_only_aichat_units
+      elsif script&.uses_us_only_aichat_models?
+        [script]
+      else
+        []
+      end
+    ai_tutor = !!(script&.uses_us_only_ai_tutor? || unit_group&.uses_us_only_ai_tutor?)
+    return nil if aichat_units.empty? && !ai_tutor
+
+    {
+      # Named so the teacher can tell which part of the course is affected.
+      aichat_unit_titles: aichat_units.map(&:localized_title),
+      ai_tutor: ai_tutor,
+      # Lets the client say whether anything is left unaffected. A section
+      # assigned a single unit still belongs to a course, so the structure
+      # cannot answer that -- only the counts can.
+      assigned_unit_count: unit_group ? unit_group.default_units.size : 1,
+    }
   end
 
   # A section can be assigned a course (aka unit_group) without being assigned a script,

@@ -110,20 +110,40 @@ describe('areAiChatToolsEnabled', () => {
 });
 
 describe('shouldShowUsOnlyModelsAlert', () => {
-  it('returns true when the course requires AI chat and uses unreachable models', () => {
+  const blockedUnits = {
+    aichatUnitTitles: ['Thinking Critically About AI'],
+    aiTutor: false,
+    assignedUnitCount: 9,
+  };
+
+  it('returns true when the course requires AI chat and a unit is blocked', () => {
     expect(
       shouldShowUsOnlyModelsAlert({
         assignedAiChatToolsDependency: 'essential',
-        assignedInaccessibleAiModels: true,
+        assignedUsOnlyAiModels: blockedUnits,
       })
     ).toBe(true);
   });
 
-  it('returns false when the course requires AI chat but its models are reachable', () => {
+  it('returns false when the course requires AI chat but nothing is blocked', () => {
     expect(
       shouldShowUsOnlyModelsAlert({
         assignedAiChatToolsDependency: 'essential',
-        assignedInaccessibleAiModels: false,
+        assignedUsOnlyAiModels: undefined,
+      })
+    ).toBe(false);
+  });
+
+  // Losing the tutor leaves every level completable, so it is not badge-worthy.
+  it('returns false when only AI Tutor is unavailable', () => {
+    expect(
+      shouldShowUsOnlyModelsAlert({
+        assignedAiChatToolsDependency: 'essential',
+        assignedUsOnlyAiModels: {
+          aichatUnitTitles: [],
+          aiTutor: true,
+          assignedUnitCount: 9,
+        },
       })
     ).toBe(false);
   });
@@ -133,7 +153,7 @@ describe('shouldShowUsOnlyModelsAlert', () => {
     expect(
       shouldShowUsOnlyModelsAlert({
         assignedAiChatToolsDependency: 'available',
-        assignedInaccessibleAiModels: true,
+        assignedUsOnlyAiModels: blockedUnits,
       })
     ).toBe(false);
   });
@@ -142,7 +162,7 @@ describe('shouldShowUsOnlyModelsAlert', () => {
     expect(
       shouldShowUsOnlyModelsAlert({
         assignedAiChatToolsDependency: undefined,
-        assignedInaccessibleAiModels: undefined,
+        assignedUsOnlyAiModels: undefined,
       })
     ).toBe(false);
   });

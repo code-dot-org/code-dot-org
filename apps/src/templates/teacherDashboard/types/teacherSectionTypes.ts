@@ -13,6 +13,20 @@ import {
 // these using PropTypes for usage in Javascript React components. As we move towards
 // typescript we can deprecate the PropTypes definitions and use these instead.
 
+/**
+ * The AI a section's assigned curriculum cannot use outside the US. Aichat and
+ * AI Tutor are reported apart because they differ in shape: Aichat blocks a few
+ * named units, while AI Tutor is gone wherever it appears.
+ */
+export interface UsOnlyAiModels {
+  /** Units whose Aichat levels are blocked, in course order. May be empty. */
+  aichatUnitTitles: string[];
+  /** Whether the curriculum offers AI Tutor, which is unavailable. */
+  aiTutor: boolean;
+  /** Units in the assignment, for deciding whether any are left unaffected. */
+  assignedUnitCount: number;
+}
+
 export interface Section {
   atRiskAgeGatedDate?: Date;
   atRiskAgeGatedUsState?: string;
@@ -52,11 +66,11 @@ export interface Section {
   avatar_emoji?: number | null;
   assignedAiChatToolsDependency?: AiChatToolsDependencyValue;
   /**
-   * Whether the assigned curriculum uses AI models this section's instructor
-   * cannot reach. Only computed for instructors who have US only models
-   * disabled; false otherwise.
+   * What the assigned curriculum loses because its AI models are only
+   * available in the US. Undefined when it loses nothing, and for every
+   * instructor without the restriction.
    */
-  assignedInaccessibleAiModels?: boolean;
+  assignedUsOnlyAiModels?: UsOnlyAiModels;
   aiChatAccessLevel?: AiChatAccessLevel;
 }
 

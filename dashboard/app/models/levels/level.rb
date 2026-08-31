@@ -82,16 +82,6 @@ class Level < ApplicationRecord
     )
   end)
 
-  # scope for levels whose AI features use a model that is only available in
-  # the US. AI Tutor has no per-level model (see
-  # apps/src/lab2/ai/ai-tutor-model-id.ts) and Weblab2 makes the tutor
-  # essential, so any of those levels counts.
-  scope :with_us_only_ai_models, (lambda do
-    with_us_only_aichat_model.
-      or(where(type: 'Weblab2')).
-      or(with_ai_tutor_available)
-  end)
-
   before_validation :strip_name
   before_destroy :remove_empty_script_levels
 

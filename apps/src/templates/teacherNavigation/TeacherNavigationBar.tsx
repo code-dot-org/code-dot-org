@@ -229,7 +229,7 @@ const TeacherNavigationBar: React.FC<{
       ) {
         return false;
       }
-      const {assignedAiChatToolsDependency, assignedInaccessibleAiModels} =
+      const {assignedAiChatToolsDependency, assignedUsOnlyAiModels} =
         selectedSection;
       return (
         shouldShowAiChatEssentialAlert({
@@ -239,7 +239,7 @@ const TeacherNavigationBar: React.FC<{
         }) ||
         shouldShowUsOnlyModelsAlert({
           assignedAiChatToolsDependency,
-          assignedInaccessibleAiModels,
+          assignedUsOnlyAiModels,
         })
       );
     },
