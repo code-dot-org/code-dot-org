@@ -128,6 +128,12 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.sceneJumpInFlight_ = false;
     // Set when the zoomed draw loop has already resolved this frame.
     this.physicsResolvedThisFrame_ = false;
+    // Settles a pending image-grace wait (see
+    // whenAnimationsAreReadyOrGivenUp_).
+    this.imageWaitCancel_ = null;
+    // Unsubscribes the watch that re-runs when images arrive after a
+    // give-up (see onImageLoadGiveUp_).
+    this.lateImagesUnsubscribe_ = null;
   }
 
   /**
@@ -544,8 +550,8 @@ export default class SpriteLab2Engine extends SpriteLab {
   destroy() {
     this.reset();
     this.stopTickTimer();
-    this.lateImagesUnsubscribe_?.();
-    this.lateImagesUnsubscribe_ = null;
+    this.imageWaitCancel_?.();
+    this.clearLateImagesWatch_();
   }
 
   // Backgrounds come from the Items tab, not backgrounds.json — and the base
@@ -570,8 +576,12 @@ export default class SpriteLab2Engine extends SpriteLab {
       const finish = () => {
         clearTimeout(timer);
         unsubscribe();
+        this.imageWaitCancel_ = null;
         resolve();
       };
+      // destroy() settles a pending wait, so a torn-down engine can't warn
+      // or arm a watch afterwards.
+      this.imageWaitCancel_ = finish;
       const unsubscribe = getStore().subscribe(() => {
         if (this.areAnimationsReady_()) {
           finish();
@@ -601,19 +611,24 @@ export default class SpriteLab2Engine extends SpriteLab {
         `${pending.length === 1 ? 'it' : 'them'}. Check the Network tab ` +
         'for failing asset requests.'
     );
-    this.lateImagesUnsubscribe_?.();
+    this.clearLateImagesWatch_();
     this.lateImagesUnsubscribe_ = getStore().subscribe(() => {
       if (!this.areAnimationsReady_()) {
         return;
       }
-      this.lateImagesUnsubscribe_();
-      this.lateImagesUnsubscribe_ = null;
-      // Only a live run restarts itself; a stopped one preloads the images
-      // on its next run anyway.
+      // A stopped tick timer may just be mid-start (an execute or scene
+      // jump in progress), so the watch declines without consuming itself;
+      // a run whose preload sees everything clears it below.
       if (this.isTickTimerRunning()) {
+        this.clearLateImagesWatch_();
         this.rerun();
       }
     });
+  }
+
+  clearLateImagesWatch_() {
+    this.lateImagesUnsubscribe_?.();
+    this.lateImagesUnsubscribe_ = null;
   }
 
   // Base preloadSpriteImages_ with costume border-trimming (imageTrim.ts).
@@ -622,11 +637,15 @@ export default class SpriteLab2Engine extends SpriteLab {
     return this.preloadTrimmedImages_(getStore().getState().animationList);
   }
 
-  // Trim, then preload. The trimmer sees the full list — it also purges
-  // cached trims for names absent from it, and a name whose data merely has
-  // not arrived is not absent. Only images with data are preloaded; one
-  // without would just make p5 log an error.
+  // Trim the full list (the trimmer prunes its own caches from it), then
+  // preload only the images whose data has arrived; one without would just
+  // make p5 log an error.
   async preloadTrimmedImages_(animationList) {
+    // This preload sees everything there is; a late-images watch has
+    // nothing left to recover.
+    if (this.areAnimationsReady_()) {
+      this.clearLateImagesWatch_();
+    }
     return this.p5Wrapper.preloadSpriteImages(
       loadedAnimations(await trimAnimationListImages(animationList))
     );

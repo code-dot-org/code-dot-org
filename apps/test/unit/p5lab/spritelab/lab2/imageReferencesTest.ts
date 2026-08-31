@@ -25,26 +25,41 @@ describe('renameImageReferences', () => {
     const sources: Sources = {
       source: workspaceWith([
         {
-          type: 'gamelab_makeNewSpriteAnon',
+          type: 'gamelab_setAnimation',
           fields: {ANIMATION: '"cat"'},
           inputs: {
-            LOCATION: {block: {type: 'x', fields: {COSTUME: '"cat"'}}},
+            SPRITE: {
+              block: {
+                type: 'gamelab_isCostumeEqual',
+                fields: {COSTUME: '"cat"'},
+              },
+            },
           },
-          next: {block: {type: 'y', fields: {IMG: '"cat"'}}},
+          next: {
+            block: {
+              type: 'gamelab_setBackgroundImageAs',
+              fields: {IMG: '"cat"'},
+            },
+          },
         },
       ]),
       scenes: [
         {
           id: 's1',
           name: 'Scene 1',
-          source: workspaceWith([{type: 'z', fields: {ANIMATION: '"cat"'}}]),
+          source: workspaceWith([
+            {
+              type: 'gamelab_allSpritesWithAnimation',
+              fields: {ANIMATION: '"cat"'},
+            },
+          ]),
         },
       ],
     };
     const out = renameImageReferences(sources, 'cat', 'tiger');
     const top = blocksOf(out.source)[0];
     expect(top.fields).toEqual({ANIMATION: '"tiger"'});
-    expect(top.inputs!.LOCATION.block.fields).toEqual({COSTUME: '"tiger"'});
+    expect(top.inputs!.SPRITE.block.fields).toEqual({COSTUME: '"tiger"'});
     expect(top.next!.block.fields).toEqual({IMG: '"tiger"'});
     const scene = blocksOf(out.scenes![0].source)[0];
     expect(scene.fields).toEqual({ANIMATION: '"tiger"'});
@@ -53,21 +68,26 @@ describe('renameImageReferences', () => {
   it('leaves non-picker fields and other names alone', () => {
     const sources: Sources = {
       source: workspaceWith([
-        {type: 'text', fields: {TEXT: '"up"'}},
-        // Dropdowns elsewhere store quoted keywords too; an image named
-        // after one must not rewrite them.
-        {type: 'k', fields: {DIRECTION: '"up"', KEY: 'up'}},
-        {type: 'a', fields: {ANIMATION: '"upland"'}},
-        {type: 'b', fields: {ANIMATION: 'up'}},
+        {type: 'text', fields: {TEXT: '"walls"'}},
+        // Dropdowns elsewhere store quoted keywords too. GROUP is the acid
+        // test: a costume picker on the make-group block, but the
+        // players/walls keyword dropdown on the GameDev group blocks.
+        {type: 'GameDev_setGroup', fields: {GROUP: '"walls"'}},
+        {type: 'gamelab_keyPressed', fields: {DIRECTION: '"walls"'}},
+        {type: 'gamelab_makeNewSpriteGroup', fields: {GROUP: '"walls"'}},
+        {type: 'gamelab_setAnimation', fields: {ANIMATION: '"wallsend"'}},
+        {type: 'gamelab_setAnimation', fields: {ANIMATION: 'walls'}},
       ]),
     };
-    const out = renameImageReferences(sources, 'up', 'down');
+    const out = renameImageReferences(sources, 'walls', 'bricks');
     const blocks = blocksOf(out.source);
-    expect(blocks[0].fields).toEqual({TEXT: '"up"'});
-    expect(blocks[1].fields).toEqual({DIRECTION: '"up"', KEY: 'up'});
-    expect(blocks[2].fields).toEqual({ANIMATION: '"upland"'});
+    expect(blocks[0].fields).toEqual({TEXT: '"walls"'});
+    expect(blocks[1].fields).toEqual({GROUP: '"walls"'});
+    expect(blocks[2].fields).toEqual({DIRECTION: '"walls"'});
+    expect(blocks[3].fields).toEqual({GROUP: '"bricks"'});
+    expect(blocks[4].fields).toEqual({ANIMATION: '"wallsend"'});
     // Unquoted values are not image references.
-    expect(blocks[3].fields).toEqual({ANIMATION: 'up'});
+    expect(blocks[5].fields).toEqual({ANIMATION: 'walls'});
   });
 
   it('renames world grid cells and does not mutate the input', () => {
@@ -103,8 +123,9 @@ describe('renameImageReferences', () => {
 });
 
 describe('sanitizeImageName', () => {
-  it('drops quotes, collapses whitespace, keeps a trailing space', () => {
+  it('drops quotes and backslashes, collapses whitespace, keeps a trailing space', () => {
     expect(sanitizeImageName('say "hi"')).toBe('say hi');
+    expect(sanitizeImageName('cat\\dog')).toBe('catdog');
     expect(sanitizeImageName('  big   cat ')).toBe('big cat ');
   });
 
@@ -145,7 +166,7 @@ describe('SpriteLab2 removeImageReferences', () => {
               },
               {
                 type: 'gamelab_setBackgroundImageAs',
-                fields: {IMAGE: '"forest"'},
+                fields: {IMG: '"forest"'},
               },
             ],
           },
@@ -176,7 +197,8 @@ describe('SpriteLab2 removeImageReferences', () => {
     expect(blocks[0].fields).toEqual({});
     expect(blocks[0].next!.block.fields).toEqual({SPEECH: 'wizard'});
     expect(blocks[0].next!.block.inputs!.SPRITE.shadow!.fields).toEqual({});
-    expect(blocks[1].fields).toEqual({IMAGE: '"forest"'});
+    // A picker field naming a different image is untouched.
+    expect(blocks[1].fields).toEqual({IMG: '"forest"'});
     expect(out.scenes![0].world!.grid).toEqual([
       [null, {image: 'stone', kind: 'block'}],
       [null, null],
@@ -199,8 +221,14 @@ describe('SpriteLab2 removeImageReferences', () => {
           source: {
             blocks: {
               blocks: [
-                {type: 'a', fields: {ANIMATION_NAME: wrapped}},
-                {type: 'b', fields: {ANIMATION_NAME: wrapped}},
+                {
+                  type: 'spritelab2_makePlatformPlayer',
+                  fields: {ANIMATION_NAME: wrapped},
+                },
+                {
+                  type: 'spritelab2_setAsPlatformPlayer',
+                  fields: {ANIMATION_NAME: wrapped},
+                },
               ],
             },
           },
@@ -225,8 +253,14 @@ describe('SpriteLab2 removeImageReferences', () => {
       source: {
         blocks: {
           blocks: [
-            {type: 'a', fields: {ANIMATION_NAME: wrapped}},
-            {type: 'b', fields: {ANIMATION_NAME: wrapped}},
+            {
+              type: 'spritelab2_makePlatformPlayer',
+              fields: {ANIMATION_NAME: wrapped},
+            },
+            {
+              type: 'spritelab2_setAsPlatformPlayer',
+              fields: {ANIMATION_NAME: wrapped},
+            },
           ],
         },
       },
