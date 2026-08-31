@@ -12,3 +12,17 @@ export enum BackpackEvent {
   UploadStarted = 'uploadStarted',
   UploadFailed = 'uploadFailed',
 }
+
+export type BackpackEventListener = (
+  event: BackpackEvent,
+  filename: string
+) => void;
+
+// All file sources in a project, e.g. {"Foo.java": {"text": "..."}}.
+export interface FilesObject {
+  [filename: string]: {
+    text: string;
+  };
+}
+
+export type ErrorCallback = (error?: Error, failedFiles?: string[]) => void;

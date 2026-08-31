@@ -1,6 +1,14 @@
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {createUuid} from '@cdo/apps/utils';
 
-import {FileMetadata} from './types';
+import BackpackClientApi from './BackpackClientApi';
+import {
+  BackpackEvent,
+  BackpackEventListener,
+  ErrorCallback,
+  FileMetadata,
+  FilesObject,
+} from './types';
 
 // App type the backend uses for the backpack that belongs to no lab.
 export const UNIVERSAL_APP_TYPE = 'universal';
@@ -16,8 +24,12 @@ type FileListsByChannelId = {[channelId: string]: FileMetadata[] | null};
 
 /**
  * Client for the universal backpack: the user's backpack that belongs to no lab.
- * Reads cover every backpack the user has, so files saved from a lab's own
- * backpack stay visible while labs move over to the universal one.
+ * Writes go to the universal backpack. Reads and deletes name the backpack they
+ * mean by app type, so files saved from a lab's own backpack stay usable while
+ * labs move over to the universal one.
+ *
+ * Each backpack is driven by a BackpackClientApi built from an already-known
+ * channel, which is why those never fetch a channel of their own.
  */
 export default class UniversalBackpackClientApi {
   // Channel of the universal backpack.
@@ -25,9 +37,14 @@ export default class UniversalBackpackClientApi {
   // Every backpack the user has, including the universal one.
   channelIdsByAppType: ChannelIdsByAppType;
 
+  private clientsByAppType: {[appType: string]: BackpackClientApi};
+  private eventListeners: {[id: string]: BackpackEventListener};
+
   constructor() {
     this.channelId = null;
     this.channelIdsByAppType = {};
+    this.clientsByAppType = {};
+    this.eventListeners = {};
   }
 
   hasBackpack() {
@@ -47,6 +64,15 @@ export default class UniversalBackpackClientApi {
       channels: ChannelIdsByAppType;
     }>(ALL_CHANNELS_URL);
     this.channelIdsByAppType = allChannelsResponse.value.channels;
+
+    this.clientsByAppType = {};
+    Object.entries(this.channelIdsByAppType).forEach(([appType, channelId]) => {
+      const client = new BackpackClientApi(appType, channelId);
+      client.addEventListener((event, filename) =>
+        this.notifyListeners(event, filename)
+      );
+      this.clientsByAppType[appType] = client;
+    });
   }
 
   // List the filenames in every backpack the user has, indexed by app type. An app
@@ -73,5 +99,154 @@ export default class UniversalBackpackClientApi {
       }
     });
     return filenamesByAppType;
+  }
+
+  // Fetch a file from the given backpack, and return the file contents via callback
+  // (or call onError on failure).
+  async fetchFile(
+    appType: string,
+    filename: string,
+    onError: ErrorCallback,
+    onSuccess: (data: string) => void
+  ) {
+    const client = await this.clientForAppType(appType);
+    if (!client) {
+      onError();
+      return;
+    }
+    client.fetchFile(filename, onError, onSuccess);
+  }
+
+  // Fetch a file from the given backpack, and return the full response object, or
+  // false/Error if the fetch fails.
+  async fetchFileResponse(appType: string, filename: string) {
+    const client = await this.clientForAppType(appType);
+    if (!client) {
+      return false;
+    }
+    return client.fetchFileResponse(filename);
+  }
+
+  // Url of a file in the given backpack, or undefined if we have no such backpack.
+  // Unlike the other reads this does not fetch channels first, so it is only useful
+  // once they are loaded.
+  getFileFetchUrl(appType: string, filename: string) {
+    return this.clientsByAppType[appType]?.getFileFetchUrl(filename);
+  }
+
+  /**
+   * Save files to the universal backpack.
+   * @param files all file sources in the project
+   * @param filenames files to save. Filenames must exist in files.
+   * @param onError called if any file fails to save
+   * @param onSuccess called if all files save
+   */
+  async saveFiles(
+    files: FilesObject,
+    filenames: string[],
+    onError: ErrorCallback,
+    onSuccess: () => void
+  ) {
+    const client = await this.universalClient(onError);
+    client?.saveFiles(files, filenames, onError, onSuccess);
+  }
+
+  /**
+   * Save a single file to the universal backpack.
+   * Used in Codebridge labs to save a file.
+   */
+  async saveCodebridgeFile(
+    filename: string,
+    fileContents: string,
+    onError: ErrorCallback,
+    onSuccess: () => void
+  ) {
+    const client = await this.universalClient(onError);
+    client?.saveCodebridgeFile(filename, fileContents, onError, onSuccess);
+  }
+
+  /**
+   * Save a file to the universal backpack from the given URL.
+   */
+  async saveCodebridgeFileFromUrl(
+    filename: string,
+    fileUrl: string,
+    onError?: ErrorCallback,
+    onSuccess?: () => void
+  ) {
+    const client = await this.universalClient(onError);
+    await client?.saveCodebridgeFileFromUrl(
+      filename,
+      fileUrl,
+      onError,
+      onSuccess
+    );
+  }
+
+  async saveBlobFile(
+    filename: string,
+    contents: Blob,
+    onError: ErrorCallback,
+    onSuccess: () => void
+  ) {
+    const client = await this.universalClient(onError);
+    await client?.saveBlobFile(filename, contents, onError, onSuccess);
+  }
+
+  /**
+   * Delete files from the given backpack.
+   * @param appType backpack to delete from
+   * @param filenames files to delete
+   * @param onError called if any file fails to delete
+   * @param onSuccess called if all files are deleted
+   */
+  async deleteFiles(
+    appType: string,
+    filenames: string[],
+    onError: ErrorCallback,
+    onSuccess: () => void
+  ) {
+    const client = await this.clientForAppType(appType);
+    if (!client) {
+      onError();
+      return;
+    }
+    client.deleteFiles(filenames, onError, onSuccess);
+  }
+
+  addEventListener(listener: BackpackEventListener) {
+    const id = createUuid();
+    this.eventListeners[id] = listener;
+    return id;
+  }
+
+  removeEventListener(id: string) {
+    if (this.eventListeners[id]) {
+      delete this.eventListeners[id];
+    }
+  }
+
+  // Client for the universal backpack, or undefined if we could not load it.
+  private async universalClient(onError?: ErrorCallback) {
+    const client = await this.clientForAppType(UNIVERSAL_APP_TYPE);
+    if (!client) {
+      onError?.();
+    }
+    return client;
+  }
+
+  // Client for one of the user's backpacks, fetching their channels if we have not
+  // yet. Undefined when the user has no backpack for that app type.
+  private async clientForAppType(appType: string) {
+    if (!this.channelId) {
+      await this.fetchChannels();
+    }
+    return this.clientsByAppType[appType];
+  }
+
+  private notifyListeners(event: BackpackEvent, filename: string) {
+    Object.values(this.eventListeners).forEach(listener =>
+      listener(event, filename)
+    );
   }
 }

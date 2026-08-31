@@ -1,22 +1,19 @@
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
 
-import {BackpackEvent, FileMetadata} from './types';
+import {
+  BackpackEvent,
+  BackpackEventListener,
+  ErrorCallback,
+  FileMetadata,
+  FilesObject,
+} from './types';
 
 const REQUEST_RETRY_COUNT = 1;
 
-interface FilesObject {
-  [filename: string]: {
-    text: string;
-  };
-}
-
-type ErrorCallback = (error?: Error, failedFiles?: string[]) => void;
 const rootUrl = (channelId: string) => `/v3/libraries/${channelId}`;
 // Cache bust suffix ensures we always get the latest version of the file.
 const getCacheBustSuffix = () => `?t=${Date.now()}`;
-
-type BackpackEventListener = (event: BackpackEvent, filename: string) => void;
 
 export default class BackpackClientApi {
   appType: string;
