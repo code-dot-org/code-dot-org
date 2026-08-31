@@ -169,6 +169,37 @@ describe('Design System - Tabs', () => {
     expect(tooltip).toBeInTheDocument();
   });
 
+  it('marks a disabled tab with aria-disabled and keeps it focusable', async () => {
+    const user = userEvent.setup();
+    const spyOnChange = vi.fn();
+
+    renderTabs({
+      defaultSelectedTabValue: 'tab1',
+      tabs: [
+        {text: 'tab1', value: 'tab1', tabContent: <div>tab1 content</div>},
+        {
+          text: 'tab2',
+          value: 'tab2',
+          tabContent: <div>tab2 content</div>,
+          disabled: true,
+        },
+      ],
+      onChange: spyOnChange,
+      name: 'test-disabled',
+    });
+
+    const tab2 = screen.getByRole('tab', {name: 'tab2'});
+
+    expect(tab2).toHaveAttribute('aria-disabled', 'true');
+    expect(tab2).not.toHaveAttribute('disabled');
+
+    tab2.focus();
+    expect(tab2).toHaveFocus();
+
+    await user.click(tab2);
+    expect(spyOnChange).not.toHaveBeenCalled();
+  });
+
   it('hides tab panels when hidePanels is true', async () => {
     renderTabs({
       defaultSelectedTabValue: 'tab1',

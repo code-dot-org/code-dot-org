@@ -118,7 +118,8 @@ const RegionalWorkshopCatalogCard = ({
               );
             })}
           >
-            <span className={style.infoLine}>
+            {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- the tooltip lists every session, the visible text only the first */}
+            <span className={style.infoLine} tabIndex={0}>
               <div className={style.infoLineIconContainer}>
                 <FontAwesomeV6Icon iconName={'calendar'} />
               </div>

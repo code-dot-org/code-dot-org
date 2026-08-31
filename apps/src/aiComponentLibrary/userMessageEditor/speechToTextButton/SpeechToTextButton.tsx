@@ -101,16 +101,31 @@ const SpeechToTextButton: React.FC<SpeechToTextButtonProps> = ({
 
   const canRecord = recorderRef.current?.canRecord();
 
+  const micButton = (
+    <div className={styles.flexContainer}>
+      <MuiIconButton
+        variant="outlined"
+        size="extraSmall"
+        aria-label={isRecording ? 'Stop recording' : 'Start recording'}
+        onClick={isRecording ? () => onEndRecording() : onStartRecording}
+        disabled={!canRecord || isTranscribing || disabled}
+        color={isRecording ? 'white' : 'secondary'}
+        className={classNames(isRecording && styles.recording)}
+      >
+        <FontAwesomeV6Icon {...iconProps} />
+      </MuiIconButton>
+    </div>
+  );
+
   return (
     <div className={styles.row}>
       {errorMessage && (
         <div className={styles.iconContainer}>
           <Tooltip title={errorMessage} placement="left">
-            <span>
+            <span role="img" aria-label={errorMessage}>
               <FontAwesomeV6Icon
                 className={styles.error}
                 iconName="exclamation-circle"
-                aria-label={errorMessage}
               />
             </span>
           </Tooltip>
@@ -126,26 +141,16 @@ const SpeechToTextButton: React.FC<SpeechToTextButtonProps> = ({
       )}
       <div className={styles.buttonContainer}>
         {isRecording && <div className={styles.ping} />}
-        <Tooltip
-          title={
-            !canRecord ? 'Audio recording is not supported on your device.' : ''
-          }
-          placement="left"
-        >
-          <div className={styles.flexContainer}>
-            <MuiIconButton
-              variant="outlined"
-              size="extraSmall"
-              aria-label={isRecording ? 'Stop recording' : 'Start recording'}
-              onClick={isRecording ? () => onEndRecording() : onStartRecording}
-              disabled={!canRecord || isTranscribing || disabled}
-              color={isRecording ? 'white' : 'secondary'}
-              className={classNames(isRecording && styles.recording)}
-            >
-              <FontAwesomeV6Icon {...iconProps} />
-            </MuiIconButton>
-          </div>
-        </Tooltip>
+        {canRecord ? (
+          micButton
+        ) : (
+          <Tooltip
+            title="Audio recording is not supported on your device."
+            placement="left"
+          >
+            {micButton}
+          </Tooltip>
+        )}
       </div>
     </div>
   );

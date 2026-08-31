@@ -128,7 +128,7 @@ const VersionHistoryRow: React.FunctionComponent<
           )}
           {aiSavedComment && !showRestoreButton && (
             <Tooltip title="AI Version Save" placement="bottom">
-              <span>
+              <span role="img" aria-label="AI Version Save">
                 <FontAwesomeV6Icon
                   iconFamily="kit"
                   iconName="ai-head-solid"
@@ -139,7 +139,7 @@ const VersionHistoryRow: React.FunctionComponent<
           )}
           {showAutoSavedIcon && !showRestoreButton && (
             <Tooltip title={lab2I18n.autosavedVersion()} placement="bottom">
-              <span>
+              <span role="img" aria-label={lab2I18n.autosavedVersion()}>
                 <FontAwesomeV6Icon
                   iconName={'cloud-check'}
                   className={moduleStyles.autoSavedIcon}

@@ -181,18 +181,21 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
         </MuiIconButton>
       </div>
       <Tooltip placement="bottom" title="Stop preview">
-        <MuiIconButton
-          variant="outlined"
-          color="error"
-          size="extraSmall"
-          disabled={!isStopEnabled}
-          className={moduleStyles.iconButton}
-          onClick={onStopPreview}
-          aria-label="Stop Preview"
-          type="button"
-        >
-          <FontAwesomeV6Icon iconName="circle-stop" />
-        </MuiIconButton>
+        {/* Wrapper span so the tooltip still shows when the button is disabled. */}
+        <span>
+          <MuiIconButton
+            variant="outlined"
+            color="error"
+            size="extraSmall"
+            disabled={!isStopEnabled}
+            className={moduleStyles.iconButton}
+            onClick={onStopPreview}
+            aria-label="Stop Preview"
+            type="button"
+          >
+            <FontAwesomeV6Icon iconName="circle-stop" />
+          </MuiIconButton>
+        </span>
       </Tooltip>
       <SegmentedButtons
         className={moduleStyles.previewViewModeButtons}

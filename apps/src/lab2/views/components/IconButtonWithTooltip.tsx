@@ -96,7 +96,7 @@ const IconButtonWithTooltip: React.FunctionComponent<IconButtonWithTooltipProps>
           }}
         >
           {/* Wrapper span so the tooltip still shows when the button is disabled. */}
-          <span style={{display: 'inline-flex'}}>
+          <span>
             {href ? (
               <MuiIconButton
                 id={`${id}-button`}

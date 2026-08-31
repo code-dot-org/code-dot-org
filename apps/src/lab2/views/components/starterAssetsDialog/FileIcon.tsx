@@ -170,11 +170,10 @@ function getSizeText(size: number) {
 
 const WarningIcon: React.FC<{text: string}> = ({text}) => (
   <Tooltip title={text} placement="top">
-    <span>
+    <span role="img" aria-label={text}>
       <FontAwesomeV6Icon
         className={styles.warningIcon}
         iconName="triangle-exclamation"
-        aria-label={text}
       />
     </span>
   </Tooltip>

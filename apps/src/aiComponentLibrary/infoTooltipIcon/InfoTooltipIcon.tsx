@@ -34,7 +34,7 @@ const InfoTooltipIcon: React.FunctionComponent<InfoTooltipIconProps> = ({
       placement={direction ? PLACEMENT[direction] : 'top'}
     >
       <button
-        id={id}
+        id={`${id}-info`}
         type="button"
         className={styles.iconButton}
         aria-label={tooltipText}

@@ -7,6 +7,7 @@ import {
   HTMLAttributes,
   memo,
   useCallback,
+  ReactElement,
   ReactNode,
 } from 'react';
 
@@ -74,7 +75,7 @@ const Tag: FunctionComponent<TagProps> = props => {
     type = 'default',
   } = props;
   const tooltipWrapper = useCallback(
-    (children: ReactNode) =>
+    (children: ReactElement) =>
       tooltipContent && tooltipId ? (
         <Tooltip id={tooltipId} title={tooltipContent} placement="top">
           {children}
@@ -89,7 +90,6 @@ const Tag: FunctionComponent<TagProps> = props => {
     className: moduleStyles.tag,
     tabIndex: 0,
     'aria-label': ariaLabel,
-    'aria-describedby': tooltipContent && tooltipId ? tooltipId : undefined,
   };
 
   if (type === 'closable') {

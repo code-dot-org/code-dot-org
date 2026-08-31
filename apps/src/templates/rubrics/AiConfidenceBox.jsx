@@ -39,7 +39,7 @@ export default function AiConfidenceBox({aiConfidence}) {
           {aiConfidenceText}
         </Typography>
         <Tooltip title={i18n.aiConfidenceTooltip()} placement="top">
-          <span aria-label={i18n.aiConfidenceTooltip()}>
+          <span role="img" aria-label={i18n.aiConfidenceTooltip()}>
             <FontAwesomeV6Icon
               iconName="circle-info"
               className={style.infoTipIcon}
