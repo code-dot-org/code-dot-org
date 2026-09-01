@@ -303,6 +303,78 @@ describe('Attachment', () => {
   });
 });
 
+describe('Spawner', () => {
+  // The two facts it has that a timer does not. Both are counted rather than
+  // timed, because what is being asserted is the arithmetic and not the clock.
+
+  it('stops after the number it was told to send', () => {
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([rule('rules/spawner')])
+      .instantiate();
+    let sent = 0;
+    world.addActor(
+      new ActorBuilder({id: 'waves', name: 'waves'})
+        .useTraits([of('rules/spawner', 'SendsThingsTrait')])
+        .set(of('rules/spawner', 'SecondsApartProperty'), 0.1)
+        .set(of('rules/spawner', 'HowManyToSendProperty'), 3)
+        .on(of('rules/spawner', 'SendsSomethingEvent'), () => {
+          sent++;
+        })
+        .instantiate('waves'),
+    );
+
+    // Long enough for thirty at that gap, which is what makes three an answer
+    // about the limit rather than about the length of the run.
+    run(world, 3);
+
+    expect(sent).toBe(3);
+  });
+
+  it('closes the gap by the factor, and keeps the number where it can be read', () => {
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([rule('rules/spawner')])
+      .instantiate();
+    const waves = world.addActor(
+      new ActorBuilder({id: 'waves', name: 'waves'})
+        .useTraits([of('rules/spawner', 'SendsThingsTrait')])
+        .set(of('rules/spawner', 'SecondsApartProperty'), 1)
+        .set(of('rules/spawner', 'CloserEachTimeProperty'), 0.5)
+        .instantiate('waves'),
+    );
+
+    // Four sent: one on the first frame, then at +1, +0.5 and +0.25 — 1.75s of
+    // beats inside a two-second run, and the fifth would fall at 1.875 + a
+    // frame. The gap is halved once per send, so four sends leave 1/16.
+    run(world, 1.9);
+
+    const gap = of('rules/spawner', 'SecondsApartProperty') as never;
+    const count = of('rules/spawner', 'HowManySentProperty') as never;
+    expect(waves.get(count)).toBe(4);
+    expect(waves.get(gap)).toBeCloseTo(1 / 16, 5);
+  });
+
+  it('sends nothing while it is switched off', () => {
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([rule('rules/spawner')])
+      .instantiate();
+    let sent = 0;
+    world.addActor(
+      new ActorBuilder({id: 'waves', name: 'waves'})
+        .useTraits([of('rules/spawner', 'SendsThingsTrait')])
+        .set(of('rules/spawner', 'SecondsApartProperty'), 0.1)
+        .set(of('rules/spawner', 'SendingProperty'), false)
+        .on(of('rules/spawner', 'SendsSomethingEvent'), () => {
+          sent++;
+        })
+        .instantiate('waves'),
+    );
+
+    run(world, 1);
+
+    expect(sent).toBe(0);
+  });
+});
+
 describe('Time', () => {
   it('fires once per period, not once per frame', () => {
     // What a long period is FOR, and the thing that looked broken in the

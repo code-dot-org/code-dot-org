@@ -41,6 +41,7 @@ import {revealsRule} from './reveals';
 import {scoreRule} from './score';
 import {shootsRule} from './shoots';
 import {solidRule} from './solid';
+import {spawnerRule} from './spawner';
 import {steeringRule} from './steering';
 import {timeRule} from './time';
 import {turnsRule} from './turns';
@@ -191,6 +192,15 @@ export const STOCK_RULES: readonly StockRule[] = [
       'Lets things happen every so often, and lets things be done only every so often. A timer belongs to an actor and raises an event on its own beat \u2014 a spawner, a blinking lamp, a bomb \u2014 and each one starts, stops and restarts on its own. A cooldown is the same idea with the sides swapped: ask whether it is ready, and start the wait when it is used.',
     provides: ['Has a Timer', 'Has a Cooldown'],
     contents: timeRule,
+  },
+  {
+    id: 'spawner',
+    name: 'Spawner',
+    ability: 'Sends Things',
+    description:
+      'Sends something on a beat that closes as the game goes on \u2014 which is what makes a wave a wave rather than a metronome. It says WHEN and how many, and never what: the handler for "sends something" places whatever the wave is made of. Set how many to send to stop after a number of them, and closer each time to under one to make each gap shorter than the last.',
+    provides: ['Sends Things'],
+    contents: spawnerRule,
   },
   {
     id: 'writing',
@@ -444,6 +454,7 @@ export {
   healthRule,
   steeringRule,
   timeRule,
+  spawnerRule,
   dragRule,
   driveRule,
   expiresRule,

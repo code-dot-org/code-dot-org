@@ -1693,6 +1693,10 @@ export const TILES: readonly Tile[] = [
     requires: ['arcade/shoot', 'arcade/bricks'],
     unlocks: [
       {kind: 'rule', id: 'time'},
+      // …and the rule that holds what this lesson writes by hand, which is the
+      // shape `memory/score` uses: write the thing, then meet the named
+      // version. The lesson's last step is where a learner is told.
+      {kind: 'rule', id: 'spawner'},
       {kind: 'template', id: 'arcade'},
     ],
     // The arithmetic is Memory's, one region away — Arcade is entered from

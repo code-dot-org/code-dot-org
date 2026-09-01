@@ -34,6 +34,7 @@ const RULES = [
   'health',
   'steering',
   'time',
+  'spawner',
   'score',
   'patrol',
   'attachment',

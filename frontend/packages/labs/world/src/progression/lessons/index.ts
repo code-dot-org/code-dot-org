@@ -2121,6 +2121,11 @@ changed a little each time it is used — and a period is a value like any other
 3. Try 0.95, and 0.5. One of them is a game and one is a wall.
 4. Note what you did NOT do: send more Rocks each time. That gets harder too,
    and it gets harder in a way the player can see coming.
+5. What you have just written is what the **Spawner** rule holds:
+   **seconds apart**, **closer each time**, and **how many to send** for a wave
+   that ends rather than going on for ever. Import it and the timer, the
+   arithmetic and the handler become three numbers — and what a wave is made of
+   stays yours, because a rule has no way to know what a Rock is.
 `.trim(),
 };
 

@@ -37,6 +37,7 @@ import {revealsDemo} from './reveals';
 import {scoreDemo} from './score';
 import {shootsDemo} from './shoots';
 import {solidDemo} from './solid';
+import {spawnerDemo} from './spawner';
 import {steeringDemo} from './steering';
 import {timeDemo} from './time';
 import {turnsDemo} from './turns';
@@ -58,6 +59,7 @@ export const RULE_DEMOS: Readonly<Record<string, RuleDemo>> = {
   grid: gridDemo,
   attachment: attachmentDemo,
   time: timeDemo,
+  spawner: spawnerDemo,
   writing: writingDemo,
   reveals: revealsDemo,
   conversation: conversationDemo,
