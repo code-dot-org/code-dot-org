@@ -92,8 +92,9 @@ interface WorldTabProps {
  *
  * Keyboard model: the palette and the grid are one tab stop each. In the
  * palette, arrow keys move and choose (radio-style); in the grid, arrow
- * keys move a cursor and Enter or Space places or removes the chosen item.
- * Number keys choose an item from anywhere in the tab.
+ * keys move a cursor, Enter or Space places or removes the chosen item,
+ * and holding either while moving keeps painting. Number keys choose an
+ * item from anywhere in the tab.
  */
 const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   world,
@@ -196,26 +197,20 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     const col = Math.min(Math.max(cursorCol + colDelta, 0), sceneSize - 1);
     setCursor({row, col});
     cellRefs.current.get(`${row}-${col}`)?.focus();
+    return {row, col};
   };
 
-  const handleGridKeyDown = (event: React.KeyboardEvent) => {
-    if (handleShortcutKey(event)) {
-      return;
-    }
-    const step = ARROW_STEPS[event.key];
-    if (step) {
-      event.preventDefault();
-      moveCursor(step[0], step[1]);
-      return;
-    }
-    if (event.key === 'Delete' || event.key === 'Backspace') {
-      event.preventDefault();
-      onPaintCell(cursorRow, cursorCol, null);
-      announce('Removed.');
-    }
-    // Enter and Space activate the focused cell button natively; the
-    // click handler below narrates.
-  };
+  // Keyboard drag-paint, the paint editor's model: while Enter or Space is
+  // held, arrow moves paint the cell they land on, like dragging with the
+  // button down. The press decides paint-or-remove the way a pointer press
+  // does, and the whole stroke keeps that mode. A swallowed keyup (window
+  // blur mid-hold) must not leave the key stuck down.
+  const paintKeyHeld = useRef(false);
+  useEffect(() => {
+    const release = () => (paintKeyHeld.current = false);
+    window.addEventListener('blur', release);
+    return () => window.removeEventListener('blur', release);
+  }, []);
 
   const activateCellByKeyboard = (row: number, col: number) => {
     if (!selected) {
@@ -227,6 +222,47 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
       announce(`${selected.image} placed.`);
     } else if (did === 'removed') {
       announce('Removed.');
+    }
+  };
+
+  const handleGridKeyDown = (event: React.KeyboardEvent) => {
+    if (handleShortcutKey(event)) {
+      // The stroke's mode belongs to the old choice; end it.
+      paintKeyHeld.current = false;
+      return;
+    }
+    if (event.key === 'Enter' || event.key === ' ') {
+      // Handled here, not by the button: native activation would auto-repeat
+      // while held, toggling the cell on and off.
+      event.preventDefault();
+      if (!event.repeat) {
+        activateCellByKeyboard(cursorRow, cursorCol);
+        paintKeyHeld.current = true;
+      }
+      return;
+    }
+    const step = ARROW_STEPS[event.key];
+    if (step) {
+      event.preventDefault();
+      const {row, col} = moveCursor(step[0], step[1]);
+      if (paintKeyHeld.current && selected) {
+        paintCell(row, col, strokeErase.current);
+      }
+      return;
+    }
+    if (event.key === 'Delete' || event.key === 'Backspace') {
+      event.preventDefault();
+      paintKeyHeld.current = false;
+      onPaintCell(cursorRow, cursorCol, null);
+      announce('Removed.');
+      return;
+    }
+    paintKeyHeld.current = false;
+  };
+
+  const handleGridKeyUp = (event: React.KeyboardEvent) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      paintKeyHeld.current = false;
     }
   };
 
@@ -395,8 +431,9 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
       </div>
       <p id="world-grid-help" className={moduleStyles.srOnly}>
         Arrow keys move around the grid. Enter or Space places the chosen item,
-        or removes it if the cell already holds it. Delete clears the cell.
-        Number keys 1 to 9 choose an item; 0 chooses Erase.
+        or removes it if the cell already holds it; hold the key down and move
+        to keep painting. Delete clears the cell. Number keys 1 to 9 choose an
+        item; 0 chooses Erase.
       </p>
       <div ref={gridAreaRef} className={moduleStyles.worldGridArea}>
         <div
@@ -407,6 +444,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
           tabIndex={-1}
           className={moduleStyles.worldGrid}
           onKeyDown={handleGridKeyDown}
+          onKeyUp={handleGridKeyUp}
         >
           {Array.from({length: sceneSize}, (_, row) => (
             <div key={row} role="row" className={moduleStyles.worldRow}>
