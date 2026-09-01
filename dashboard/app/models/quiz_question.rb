@@ -21,7 +21,7 @@
 class QuizQuestion < ApplicationRecord
   after_initialize {self.type ||= self.class.sti_name}
 
-  # Like Project#remix_parent_id. No FK; parent delete leaves a dangling id.
+  # No FK; parent delete leaves a dangling id.
   belongs_to :fork_parent, class_name: 'QuizQuestion', optional: true
 
   has_many :quiz_question_standards, dependent: :destroy
