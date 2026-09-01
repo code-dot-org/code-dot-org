@@ -79,6 +79,31 @@ export type PropertyType =
    */
   | 'actors'
   /**
+   * A list of plain values: numbers, words, or vectors (specs/LISTS.md).
+   *
+   * The types that let the language hold TWO of something. Everything above is
+   * one of a thing, and `actors` is the one list there was — so a high score
+   * table, a script's lines, and a stack of places each had to be spelled as a
+   * fixed set of named slots, which is what `rules/history` is.
+   *
+   * THREE TYPES RATHER THAN ONE, and the difference is what a stored one holds
+   * rather than what a socket takes: a socket says `List` and no more, because
+   * a check cannot say "list of numbers" without generics and a lab that
+   * promised it would be spending its complexity on a lie. What the type is for
+   * is the two places a stored list has to say what it is — its default (an
+   * empty list of the right shape) and the map editor's inspector, which draws
+   * a number differently from a word.
+   *
+   * SNAPSHOTTED, unlike `actors`, and that is the whole reason this is worth
+   * having as state rather than only as a value. A list of plain data has no
+   * cycle in it: it stringifies, so a hot reload carries it; it compares, so a
+   * reload PATCHES it live; and it is authorable as data. An actor list can be
+   * none of those (see `'actors'` above).
+   */
+  | 'numbers'
+  | 'words'
+  | 'vectors'
+  /**
    * ONE actor, or none.
    *
    * Stored exactly as `'actors'` is, a list, and different only in what it SAYS

@@ -3007,6 +3007,10 @@ describe('builder-context warnings', () => {
       'variables_set_Vector',
       'variables_get_Actor',
       'variables_set_Actor',
+      // …and a list, which is the flavour that arrived last and is last in the
+      // drawer for it (specs/LISTS.md).
+      'variables_get_List',
+      'variables_set_List',
     ]);
   });
 

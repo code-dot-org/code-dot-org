@@ -45,6 +45,23 @@ const stringVariable = createTypedVariable({
   defaultName: 'text',
   tooltip: 'Text passed to this action or query.',
 });
+/**
+ * A list of plain values — a loop's source, a rule's own scratch, a parameter.
+ *
+ * Its own flavour rather than a shape of another, because a list is the one
+ * thing in the language that a socket of another type must refuse: `⟨x⟩ + ⟨the
+ * high scores⟩` means nothing, where `⟨x⟩ + ⟨a number variable⟩` is the whole
+ * point of one (specs/LISTS.md).
+ */
+export const ListVariable: TypedVariable = createTypedVariable({
+  type: 'List',
+  // The colour of the blocks that make and read one, which are the list blocks
+  // rather than any existing family.
+  style: 'sprite_blocks',
+  defaultName: 'items',
+  tooltip: 'A list of values — numbers, words or vectors.',
+});
+
 const vectorVariable = createTypedVariable({
   type: 'Vector',
   style: 'location_blocks',
@@ -66,6 +83,7 @@ export const PARAM_FLAVOURS: ReadonlyArray<{
   {type: 'string', variable: stringVariable},
   {type: 'vector', variable: vectorVariable},
   {type: 'actor', variable: ActorVariable},
+  {type: 'list', variable: ListVariable},
 ];
 
 /**

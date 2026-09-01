@@ -10,6 +10,7 @@
 // is a special case of the other; this is a piece they both hold.
 
 import {all, LazyActors} from './actorValue';
+import {asList, isListType} from './lists';
 import type {Trait} from './Trait';
 import {DependencySet} from './traits';
 import type {Property} from './types';
@@ -26,6 +27,9 @@ import {Vector} from './Vector';
 const coerce = <T>(property: Property<T>, value: unknown): T => {
   if (property.type === 'vector' || property.type === 'point') {
     return Vector.from(value as Vector) as unknown as T;
+  }
+  if (isListType(property.type)) {
+    return asList(property.type, value) as unknown as T;
   }
   if (property.type === 'actors' || property.type === 'actor') {
     // An Actor without importing one: a circular import for a type guard would

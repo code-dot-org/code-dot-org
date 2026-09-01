@@ -29,6 +29,7 @@ import {
   type LayerSlot,
   type SlotName,
 } from './Layer';
+import {asList, isListType} from './lists';
 import {ruleContentHash} from './ruleIds';
 import {Scheduler} from './Scheduler';
 import {APPEARANCE, SPATIAL} from './spatialKeys';
@@ -357,11 +358,18 @@ export interface WorldInit {
   ownProperties?: readonly Property<unknown>[];
 }
 
-// `vector` and `point` are both stored as a `Vector` (see Actor's coerce).
-const coerce = <T>(property: Property<T>, value: unknown): T =>
-  property.type === 'vector' || property.type === 'point'
-    ? (Vector.from(value as Vector) as unknown as T)
-    : (value as T);
+// `vector` and `point` are both stored as a `Vector` (see Actor's coerce), and
+// a list is copied on the way in for the reason `core/lists` gives: a default
+// held by reference is one array behind every holder of it.
+const coerce = <T>(property: Property<T>, value: unknown): T => {
+  if (property.type === 'vector' || property.type === 'point') {
+    return Vector.from(value as Vector) as unknown as T;
+  }
+  if (isListType(property.type)) {
+    return asList(property.type, value) as unknown as T;
+  }
+  return value as T;
+};
 
 /**
  * `world.cameras` — iterable, with the same trait filter the actors have.

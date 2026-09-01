@@ -162,9 +162,19 @@ of` gave it a reason.
 
 ## Plan
 
-1. **The type.** `List` as a socket check, a `list` variable flavour
+1. ✅ **The type.** `List` as a socket check, a `list` variable flavour
    (`typedVariables`), and the engine's `PropertyType` gaining `numbers`,
-   `words` and `vectors`. Snapshot and reconcile fall out — they are plain data.
+   `words` and `vectors`. Snapshot and reconcile fall out — they are plain data,
+   and a test says so rather than the sentence alone.
+
+   **A list is copied on the way in** (`core/lists`), which is the one thing
+   this step had to get right. A property's default is one value held by the
+   trait that declared it, so a list stored by reference is one array behind
+   every actor that elected the trait: two players, one bag, and every coin
+   either of them picked up in both. `Traited` and `World` coerce through the
+   same door, and a `vectors` list holds Vectors however its items were written
+   — a `.map` file has `{x, y}` in it and a block hands over the real thing.
+
 2. **The blocks.** The six above, in `domainBlocks`, generating plain JS arrays;
    `WorldLab` helpers only where a shape needs normalising (`item of` past the
    end, `add` to a variable holding nothing).

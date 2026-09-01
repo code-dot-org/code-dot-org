@@ -1869,7 +1869,12 @@ const outputForType = (type: PropertyType): string =>
             // source, `is in`, `how many actors in` — every actor socket there is.
             type === 'actors' || type === 'actor'
             ? 'Actor'
-            : 'Number';
+            : // A list of plain values reports `List`, and a socket says no
+              // more than that: what it HOLDS is the property's business
+              // (specs/LISTS.md).
+              type === 'numbers' || type === 'words' || type === 'vectors'
+              ? 'List'
+              : 'Number';
 
 // A value block's style by the kind it reports: a boolean is logic, a whole
 // vector is a location, everything else (numbers, point axes) is math.
@@ -5711,6 +5716,12 @@ const PROPERTY_TYPE_OPTIONS: Array<[string, string]> = [
   // simpler thing and the one a learner reaches for more often.
   ['actor', 'actor'],
   ['actors', 'actors'],
+  // Lists of plain values, which the actor list above is not: these are
+  // carried across a hot reload and patched live, because a number has no
+  // world inside it (specs/LISTS.md).
+  ['numbers', 'numbers'],
+  ['words', 'words'],
+  ['vectors', 'vectors'],
 ];
 
 // A query reports one value; `point` (two scalars) isn't a single report, so it
