@@ -812,11 +812,11 @@ const tween: WorldScenario = {
         addActor(local('post'), [placeAt(256, 160)]),
       ],
       actors: [
-        {id: 'door', name: 'Door', rows: [setSprite('box.png')]},
+        {id: 'door', name: 'Door', rows: [setSprite('door.png')]},
         {id: 'post', name: 'Post', rows: [setSprite('ground.png')]},
       ],
     }),
-    sprites: ['box', 'ground'],
+    sprites: ['door', 'ground'],
   }),
   instructions: `
 ## A described movement
@@ -3805,7 +3805,7 @@ const rooms: WorldScenario = {
       ]),
       door: actorFile('Door', [
         useTrait('Collisions#CanCollideTrait'),
-        setSprite('ground.png'),
+        setSprite('door.png'),
       ]),
       chest: actorFile('Chest', [setSprite('coin.png')]),
     },
@@ -3825,7 +3825,7 @@ const rooms: WorldScenario = {
     // The Chest's too, though nothing places one until the lesson is done: an
     // import is a file the project holds, and room2 is loaded by the learner
     // rather than by the starter.
-    sprites: ['player', 'ground', 'coin'],
+    sprites: ['player', 'door', 'coin'],
   }),
   instructions: `
 ## A door to somewhere else
@@ -3891,11 +3891,11 @@ const keys: WorldScenario = {
         {
           id: 'door',
           name: 'Door',
-          rows: [useTrait('Solid Bodies#SolidTrait'), setSprite('ground.png')],
+          rows: [useTrait('Solid Bodies#SolidTrait'), setSprite('door.png')],
         },
       ],
     }),
-    sprites: ['player', 'coin', 'ground'],
+    sprites: ['player', 'coin', 'door'],
     rules: ['motion', 'arrows', 'collisions', 'solid', 'collect', 'inventory'],
   }),
   instructions: `

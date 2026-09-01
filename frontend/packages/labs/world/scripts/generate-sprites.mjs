@@ -33,6 +33,9 @@ export const SPRITE_NAMES = [
   'ship',
   'asteroid',
   'shot',
+  // A way out of the room. Fills the tile's height like `ground` does, so a
+  // door stands on the floor rather than hovering over it.
+  'door',
 ];
 export const ANIMATION_SPECS = {
   coinSpin: {frames: 6, frameRate: 12},
@@ -250,6 +253,16 @@ const STATIC = {
     // so it still points the way it was fired once rotation is applied.
     c.roundRect(14, 10, 5, 13, 2.5, [255, 196, 84]);
     c.roundRect(15, 12, 3, 9, 1.5, [255, 248, 214]);
+  },
+  door(c) {
+    // Frame, slab, two panels and a handle — the fewest marks that read as a
+    // door at 32 pixels. The wood is `box`'s, because a crate and a door in the
+    // same room should look like they were cut from the same tree.
+    c.rect(2, 0, 28, 32, [92, 60, 30]); // the frame, floor to lintel
+    c.rect(5, 3, 22, 29, [176, 116, 56]); // the door itself
+    c.rect(8, 6, 16, 9, [140, 90, 42]); // upper panel
+    c.rect(8, 19, 16, 9, [140, 90, 42]); // lower panel
+    c.disc(22, 17, 2, [244, 196, 48]); // the handle, which is what says DOOR
   },
 };
 
