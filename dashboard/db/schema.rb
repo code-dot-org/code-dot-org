@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_09_01_170000) do
+ActiveRecord::Schema[7.0].define(version: 2026_09_01_200000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -2071,7 +2071,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_09_01_170000) do
 
   create_table "quiz_attempts", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
-    t.integer "level_id", null: false
+    t.integer "level_id"
     t.integer "unit_id", null: false
     t.integer "attempt_number", null: false
     t.datetime "started_at", null: false
@@ -3099,7 +3099,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_09_01_170000) do
   add_foreign_key "plc_learning_modules", "stages"
   add_foreign_key "project_storage_geos", "user_project_storage_ids", column: "storage_id"
   add_foreign_key "queued_account_purges", "users"
-  add_foreign_key "quiz_attempts", "levels"
+  add_foreign_key "quiz_attempts", "levels", on_delete: :nullify
   add_foreign_key "quiz_attempts", "scripts", column: "unit_id"
   add_foreign_key "quiz_attempts", "users"
   add_foreign_key "quiz_question_placements", "levels"
