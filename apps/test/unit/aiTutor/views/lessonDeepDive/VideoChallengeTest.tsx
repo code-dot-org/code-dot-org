@@ -17,50 +17,39 @@ jest.mock('@cdo/apps/aichat/api/client', () => ({
   getClientApi: jest.fn(async () => ({transcribeAudio: mockTranscribeAudio})),
 }));
 
-// VideoRecorder relies on MediaRecorder and getUserMedia, unavailable in jsdom.
-// The stub exposes two buttons mirroring the real recorder's state machine:
-// - "Start Recording" signals recording-in-progress via onIsRecordingChange(true)
-// - "Stop Recording" fires the same sequence as the real onstop handlers:
-//   setRecordedUrl, setRecordedAudioUrl, onRecordingChange(true),
-//   onIsRecordingChange(false)
+// VideoRecorder relies on MediaRecorder and getUserMedia, unavailable in
+// jsdom. The stub honors the real component's caller-controlled contract:
+// it reacts to the `isRecording` prop instead of owning any buttons itself.
+// Flipping `isRecording` back to false (a "stop", caller-driven) fires the
+// same side effects as the real recorder's onstop handler.
 jest.mock('@code-dot-org/lesson-deep-dive', () => {
   const React = require('react');
   return {
     ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
     VideoRecorder: (props: {
+      isRecording: boolean;
       onRecordingChange: (hasRecording: boolean) => void;
-      onIsRecordingChange?: (isRecording: boolean) => void;
       setRecordedUrl: (url: string | null) => void;
       setRecordedAudioUrl: (url: string | null) => void;
       disabled?: boolean;
-    }) =>
-      React.createElement(
-        'div',
-        null,
-        React.createElement(
-          'button',
-          {
-            type: 'button',
-            disabled: props.disabled,
-            onClick: () => props.onIsRecordingChange?.(true),
-          },
-          'Start Recording'
-        ),
-        React.createElement(
-          'button',
-          {
-            type: 'button',
-            disabled: props.disabled,
-            onClick: () => {
-              props.setRecordedUrl('blob:fake-recording');
-              props.setRecordedAudioUrl('blob:fake-audio-recording');
-              props.onRecordingChange(true);
-              props.onIsRecordingChange?.(false);
-            },
-          },
-          'Stop Recording'
-        )
-      ),
+    }) => {
+      const {
+        isRecording,
+        onRecordingChange,
+        setRecordedUrl,
+        setRecordedAudioUrl,
+      } = props;
+      const wasRecording = React.useRef(isRecording);
+      React.useEffect(() => {
+        if (wasRecording.current && !isRecording) {
+          setRecordedUrl('blob:fake-recording');
+          setRecordedAudioUrl('blob:fake-audio-recording');
+          onRecordingChange(true);
+        }
+        wasRecording.current = isRecording;
+      }, [isRecording, onRecordingChange, setRecordedUrl, setRecordedAudioUrl]);
+      return null;
+    },
   };
 });
 
@@ -89,28 +78,36 @@ const fakeChallenge = {
   whiteboard_starter_image_url: null,
 };
 
-// Helper: simulate the full record → stop sequence.
+// Helper: simulate the full record → stop sequence, same as clicking
+// ChallengeBox's bottom-bar record button twice.
 const recordVideo = () => {
   fireEvent.click(screen.getByRole('button', {name: 'Start Recording'}));
   fireEvent.click(screen.getByRole('button', {name: 'Stop Recording'}));
 };
 
-// Submit now lives in ChallengeBox's top bar rather than in VideoChallenge.
-// This harness plays that role: it holds the submit ref and reflects the
-// reported submittability on a stand-in "Submit" button, exactly as the top
-// bar does.
+// The record button and "Submit" live in ChallengeBox's bars rather than in
+// VideoChallenge. This harness plays that role: it owns isRecording /
+// hasRecording, renders the record toggle exactly as ChallengeBox's bottom
+// bar does, holds the submit ref, and reflects the reported submittability
+// on a stand-in "Submit" button.
 const VideoHarness: FC<{
   submitCallback: React.Dispatch<React.SetStateAction<boolean>>;
 }> = ({submitCallback}) => {
   const submitRef = useRef<(() => void | Promise<void>) | null>(null);
   const resetRef = useRef<(() => void) | null>(null);
   const [canSubmit, setCanSubmit] = useState(false);
+  const [isRecording, setIsRecording] = useState(false);
+  const [hasRecording, setHasRecording] = useState(false);
   return (
     <>
       <VideoChallenge
         challenge={fakeChallenge}
         submitted={false}
         submitCallback={submitCallback}
+        isRecording={isRecording}
+        setIsRecording={setIsRecording}
+        hasRecording={hasRecording}
+        setHasRecording={setHasRecording}
         lessonId={1}
         setEvaluationStatus={jest.fn()}
         setChallengeResponseId={jest.fn()}
@@ -118,6 +115,13 @@ const VideoHarness: FC<{
         submitRef={submitRef}
         resetRef={resetRef}
       />
+      <button type="button" onClick={() => setIsRecording(!isRecording)}>
+        {isRecording
+          ? 'Stop Recording'
+          : hasRecording
+          ? 'Record Again'
+          : 'Start Recording'}
+      </button>
       <button
         type="button"
         disabled={!canSubmit}

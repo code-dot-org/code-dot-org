@@ -15,9 +15,18 @@ import {
 
 import {requestEvaluation} from './requestEvaluation';
 
+import styles from './video-challenge.module.scss';
+
 interface VideoChallengeProps {
   submitted: boolean;
   submitCallback: React.Dispatch<React.SetStateAction<boolean>>;
+  // Owned by ChallengeBox, which drives the "Start Recording" / "Stop
+  // Recording" button in the bottom bar (the same button used to record a
+  // whiteboard challenge's audio explanation).
+  isRecording: boolean;
+  setIsRecording: React.Dispatch<React.SetStateAction<boolean>>;
+  hasRecording: boolean;
+  setHasRecording: React.Dispatch<React.SetStateAction<boolean>>;
   challenge: Challenge | null;
   lessonId: number;
   setEvaluationStatus: React.Dispatch<React.SetStateAction<string>>;
@@ -33,6 +42,10 @@ interface VideoChallengeProps {
 const VideoChallenge: FC<VideoChallengeProps> = ({
   submitted,
   submitCallback,
+  isRecording,
+  setIsRecording,
+  hasRecording,
+  setHasRecording,
   lessonId,
   challenge = null,
   setEvaluationStatus,
@@ -41,8 +54,6 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
   submitRef,
   resetRef,
 }) => {
-  const [hasRecording, setHasRecording] = useState(false);
-  const [isRecording, setIsRecording] = useState(false);
   const [recordedUrl, setRecordedUrl] = useState<string | null>(null);
   const [recordedAudioUrl, setRecordedAudioUrl] = useState<string | null>(null);
   const timeoutRef = useRef<NodeJS.Timeout>();
@@ -171,9 +182,10 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
   });
 
   return (
-    <div>
+    <div className={styles.videoContainer}>
       <VideoRecorder
         key={resetKey}
+        isRecording={isRecording}
         onRecordingChange={setHasRecording}
         onIsRecordingChange={setIsRecording}
         disabled={submitted || isUploading}
