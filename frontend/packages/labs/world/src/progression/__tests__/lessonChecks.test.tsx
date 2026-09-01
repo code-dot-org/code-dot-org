@@ -4293,6 +4293,56 @@ describe('the key lesson’s check', () => {
     expect(passes).toBe(true);
   });
 
+  it('lets the bag be counted with the blocks everything else counts with', async () => {
+    // Why Inventory has no `has how many`: `how many ⟨Key⟩ in ⟨things of
+    // ⟨Player⟩⟩` says it already, in the block a learner meets counting bricks.
+    // A rule that answered it again would be a private vocabulary beside the
+    // public one — and a claim like that is exactly the sort that rots quietly,
+    // so it is run rather than asserted.
+    const counting = editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      workspace.blocks.blocks.push({
+        type: 'world_on_Collection_CollectsEvent',
+        x: 1400,
+        y: 20,
+        inputs: {ACTOR: anyKind('player')},
+        next: {
+          block: {
+            type: 'world_do_Inventory_TakesAction',
+            inputs: {ACTOR: thisActor(), VALUE: eventActor()},
+            next: {
+              block: {
+                type: 'world_print',
+                inputs: {
+                  VALUE: {
+                    block: {
+                      type: 'world_count_of_kind',
+                      fields: {TYPE: KEY},
+                      inputs: {
+                        LIST: {
+                          block: {
+                            type: 'world_get_Inventory_ThingsProperty',
+                            inputs: {ACTOR: thisActor()},
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      } as unknown as Row);
+      return JSON.stringify(workspace);
+    });
+
+    const {result} = await check('adventure/keys', counting);
+
+    expect(result.error).toBeUndefined();
+    expect(result.console).toEqual(['1']);
+  });
+
   it('refuses a key that is never spent', async () => {
     // It opens both doors, which is the whole reason there are two: a bag that
     // only fills up is Collection's record under another name.
