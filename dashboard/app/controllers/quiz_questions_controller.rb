@@ -1,5 +1,5 @@
-# Levelbuilder-only management of the QuizQuestion bank itself, addressed
-# by the question's own stable id - independent of any one quiz.
+# Levelbuilder-only CRUD for the QuizQuestion bank, addressed by the
+# question's own id.
 class QuizQuestionsController < ApplicationController
   include QuizQuestionSerialization
 
@@ -9,10 +9,8 @@ class QuizQuestionsController < ApplicationController
 
   # GET /quiz_questions?quizLevelId=&search=&sort=&standardFrameworkShortcode=&standardShortcode=&courseOrUnitType=&courseOrUnitId=
   #
-  # Question bank browsing: matches by name, marks each attached: true/false
-  # (and its page) relative to quizLevelId - required, since nothing yet
-  # browses the bank standalone. sort: 'name' or 'recent' (default).
-  # Standard/course/unit params further narrow results, AND'd with search.
+  # Question bank browsing, scoped to quizLevelId (required). sort: 'name'
+  # or 'recent' (default).
   def index
     level = find_quiz_level(params[:quizLevelId], required: true)
     standard = find_standard(params[:standardFrameworkShortcode], params[:standardShortcode])
@@ -23,10 +21,7 @@ class QuizQuestionsController < ApplicationController
 
     # Precomputed once for the whole page, rather than per row.
     question_ids = questions.map(&:id)
-    # reorder(nil) drops QuizQuestionPlacement's own default_scope order
-    # (page, position) - MySQL rejects DISTINCT combined with an ORDER BY
-    # on columns outside the SELECT list, and page/position are irrelevant
-    # to a plain distinct id list anyway.
+    # reorder(nil) - MySQL rejects DISTINCT with ORDER BY on unselected columns.
     other_quiz_ids = QuizQuestionPlacement.where(quiz_question_id: question_ids).where.not(level_id: level.id).
       reorder(nil).distinct.pluck(:quiz_question_id).to_set
     published_usage = QuizQuestion.published_unit_usage(question_ids)
@@ -48,18 +43,13 @@ class QuizQuestionsController < ApplicationController
 
   # GET /quiz_questions/course_unit_search?query=
   #
-  # Combined course/unit typeahead backing the question bank's course/unit
-  # filter. A plain name substring match, not the
-  # MATCH/AGAINST fulltext convention used elsewhere in this file - course
-  # and unit names are short, and neither table carries a FULLTEXT index.
+  # Course/unit typeahead. Plain substring match, not fulltext - no
+  # FULLTEXT index on these tables.
   def course_unit_search
     query = params[:query].to_s.strip
     return render json: [] if query.length < AutocompleteHelper::MIN_WORD_LENGTH
 
-    # sanitize_sql_like escapes % and _ - unescaped, either would keep its
-    # SQL wildcard meaning even though query itself is parameterized, so
-    # e.g. "_" would match any single character instead of a literal
-    # underscore.
+    # Escapes % and _ so they match literally, not as SQL wildcards.
     sanitized = ActiveRecord::Base.sanitize_sql_like(query)
     units = Unit.where('name LIKE ?', "%#{sanitized}%").order(:name).limit(10)
     courses = UnitGroup.where('name LIKE ?', "%#{sanitized}%").order(:name).limit(10)
@@ -71,9 +61,7 @@ class QuizQuestionsController < ApplicationController
 
   # GET /quiz_questions/:id
   #
-  # Building-only counterpart to Quiz#summarize_for_lab2_properties, which
-  # excludes correct_choice_id. Any bank question, regardless of which quiz
-  # (if any) has it placed.
+  # Any bank question, regardless of which quiz (if any) has it placed.
   def show
     question = QuizQuestion.find(params[:id])
     render json: quiz_question_json(question)
@@ -81,19 +69,10 @@ class QuizQuestionsController < ApplicationController
 
   # PUT /quiz_questions/:id?quizLevelId=
   #
-  # Assumes MultipleChoiceQuestion-shaped params, same as
-  # QuizQuestionPlacementsController#create. only MultipleChoiceQuestion
-  # rows exist for now. TODO: Implement other question types.
+  # MultipleChoiceQuestion-shaped params. TODO: other question types.
   #
-  # quizLevelId, if given, is the quiz whose placement of this question
-  # should be repointed at the fork when should_fork is true.
-  # editMode: 'fork' requests a fork explicitly (offered by the frontend
-  # only when the question is attached to some other quiz too, with nothing
-  # forcing the choice) - never trusted alone though. used_in_published_unit?
-  # forces a fork. Forking never touches the original row or any other
-  # quiz's placement of it - it only repoints quizLevelId's own
-  # QuizQuestionPlacement (if any) at a brand new question carrying the
-  # edited content.
+  # quizLevelId's placement gets repointed at the fork, if any. editMode:
+  # 'fork' forces a fork explicitly; used_in_published_unit? also forces one.
   def update
     question = QuizQuestion.find(params[:id])
     level = find_quiz_level(params[:quizLevelId])
@@ -125,9 +104,7 @@ class QuizQuestionsController < ApplicationController
     render status: :bad_request, json: {error: exception.message}
   end
 
-  # Resolves a quizLevelId param into its Quiz, or nil when the param is
-  # blank. A present but unresolvable, or non-Quiz, id still raises
-  # ActiveRecord::RecordNotFound.
+  # Resolves quizLevelId into its Quiz, or nil if blank.
   private def find_quiz_level(id, required: false)
     if id.blank?
       raise ActiveRecord::RecordNotFound if required
