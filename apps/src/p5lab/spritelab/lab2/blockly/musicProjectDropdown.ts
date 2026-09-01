@@ -7,11 +7,10 @@ import {MusicProjectOption} from '../redux/spriteLab2Redux';
 export const FIELD_MUSIC_PROJECT_DROPDOWN_TYPE =
   'field_spritelab2_music_project';
 
-// Options: [song name, channel]. The list is fetched once per level; a song
-// made while the lab is open shows up on the next visit. A placeholder for
-// a saved song the list cannot offer exists to validate that block's value,
-// so it is listed only on the field already holding it — never offered as a
-// new choice. Blockly binds the generator to the field.
+// Options: [song name, channel], from the once-per-level list. A
+// placeholder for a saved song the list cannot offer keeps that block's
+// value valid, so it is listed only on the field already holding it, never
+// offered as a new choice. Blockly binds the generator to the field.
 function musicProjectMenuOptions(
   this: BlocklyCore.Field | undefined
 ): [string, string][] {

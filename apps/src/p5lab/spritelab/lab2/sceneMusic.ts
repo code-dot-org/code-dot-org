@@ -22,10 +22,9 @@ export default class SceneMusic {
   private musicPlayer: MusicPlayer | null = null;
   private projectPlayer: ProjectPlayer | null = null;
   private current: string | null = null;
-  // The channel of the last load that failed: a repeating event asking for
-  // a broken song must not fetch it once per firing. stop() (a run
-  // boundary) or asking for a different song clears it, so the next run
-  // retries.
+  // The last channel whose load failed, so a repeating event can't fetch
+  // a broken song once per firing. stop() or a different song clears it;
+  // the next run retries.
   private failed: string | null = null;
   private request = 0;
   // Loads run one at a time: the players are shared and stateful, so a
