@@ -7,7 +7,6 @@ import {
   BackpackEventListener,
   ErrorCallback,
   FileMetadata,
-  FilesObject,
 } from './types';
 
 // App type the backend uses for the backpack that belongs to no lab.
@@ -133,23 +132,6 @@ export default class UnifiedBackpackClientApi {
   // once they are loaded.
   getFileFetchUrl(appType: string, filename: string) {
     return this.clientsByAppType[appType]?.getFileFetchUrl(filename);
-  }
-
-  /**
-   * Save files to the universal backpack.
-   * @param files all file sources in the project
-   * @param filenames files to save. Filenames must exist in files.
-   * @param onError called if any file fails to save
-   * @param onSuccess called if all files save
-   */
-  async saveFiles(
-    files: FilesObject,
-    filenames: string[],
-    onError: ErrorCallback,
-    onSuccess: () => void
-  ) {
-    const client = await this.universalClient(onError);
-    client?.saveFiles(files, filenames, onError, onSuccess);
   }
 
   /**

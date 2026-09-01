@@ -99,16 +99,16 @@ describe('UnifiedBackpackClientApi (jest)', () => {
     expect(HttpClient.fetchJson).toHaveBeenCalledTimes(3);
   });
 
-  it('saveFiles writes to the universal backpack', async () => {
+  it('saveFile writes to the universal backpack', async () => {
     setChannelResponses({
       universal: universalChannelId,
       javalab: javalabChannelId,
     });
     const onSuccess = jest.fn();
 
-    await unifiedBackpackClientApi.saveFiles(
-      {'shared.java': {text: 'hello'}},
-      ['shared.java'],
+    await unifiedBackpackClientApi.saveFile(
+      'shared.java',
+      'hello',
       jest.fn(),
       onSuccess
     );
