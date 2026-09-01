@@ -1650,7 +1650,7 @@ const level: WorldScenario = {
         {
           id: 'flag',
           name: 'Flag',
-          rows: [useTrait('Collisions#CanCollideTrait'), setSprite('ball.png')],
+          rows: [useTrait('Collisions#CanCollideTrait'), setSprite('flag.png')],
         },
         {
           id: 'ground',
@@ -1662,7 +1662,7 @@ const level: WorldScenario = {
         },
       ],
     }),
-    sprites: ['player', 'coin', 'box', 'ball', 'ground'],
+    sprites: ['player', 'coin', 'box', 'flag', 'ground'],
     rules: [
       'gravity',
       'arrows',

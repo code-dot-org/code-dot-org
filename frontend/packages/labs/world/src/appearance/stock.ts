@@ -179,6 +179,12 @@ export const STOCK_SPRITES: readonly StockSprite[] = [
     dataUrl: image('post'),
   },
   {
+    id: 'flag',
+    name: 'Flag',
+    description: 'A chequered flag on a pole, for the end of the level.',
+    dataUrl: image('flag'),
+  },
+  {
     id: 'playerWalk',
     name: 'Player Walking',
     description: 'Four frames of the player mid-stride, side by side.',

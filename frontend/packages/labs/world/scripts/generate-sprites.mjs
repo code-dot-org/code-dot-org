@@ -40,6 +40,9 @@ export const SPRITE_NAMES = [
   // thing in a row. Borrowed sprites read as what they are — a marker drawn as
   // a floor tile is a floor tile hanging in the air.
   'post',
+  // …and the end of the level, which is a different thing from a landmark: a
+  // post says HERE and a flag says FINISHED.
+  'flag',
 ];
 export const ANIMATION_SPECS = {
   coinSpin: {frames: 6, frameRate: 12},
@@ -277,6 +280,25 @@ const STATIC = {
     c.rect(16, 5, 4, 26, [140, 90, 42]); // the shaded half
     c.rect(10, 14, 12, 3, [216, 76, 66]); // the painted band
     c.rect(9, 29, 14, 3, [72, 48, 26]); // the ground it stands in
+  },
+  flag(c) {
+    // A chequered flag: the one picture that says FINISH without a word, and
+    // the reason it is chequered rather than a coloured pennant is that every
+    // colour in this library already means something else.
+    c.rect(8, 2, 3, 30, [150, 154, 166]); // the pole
+    c.rect(8, 2, 1, 30, [96, 100, 112]); // its shaded edge
+    for (let row = 0; row < 3; row++) {
+      for (let column = 0; column < 4; column++) {
+        c.rect(
+          11 + column * 4,
+          5 + row * 4,
+          4,
+          4,
+          (row + column) % 2 === 0 ? [240, 242, 246] : [40, 44, 52],
+        );
+      }
+    }
+    c.rect(6, 29, 7, 3, [72, 48, 26]); // the ground it stands in
   },
 };
 
