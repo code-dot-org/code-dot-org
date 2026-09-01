@@ -75,6 +75,7 @@ import {setSoundImportHandler} from '../sound/soundImport';
 import {SoundLibraryDialog} from '../sound/SoundLibraryDialog';
 import type {StockSound} from '../sound/stock';
 
+import {refreshActorPictures} from './actorAbout';
 import {projectActorIcons} from './actorIconMeta';
 import {
   addActorThumbnails,
@@ -83,7 +84,7 @@ import {
 } from './actorThumbnails';
 import styles from './blocklyFileEditor.module.css';
 import {buildDomainPalette} from './domainBlocks';
-import {setEditingRule} from './editingRule';
+import {setEditingActor, setEditingRule} from './editingRule';
 import {setEffectImportHandler} from './effectImport';
 import {refreshMissingRuleWarnings} from './extensions/missingRule';
 import {fileKindOf} from './fileKind';
@@ -761,6 +762,9 @@ export const BlocklyFileEditor = ({
           // them were drawn before they did (moduleOptions.redrawLiveDropdowns).
           if (workspaceRef.current) {
             redrawLiveDropdowns(workspaceRef.current);
+            // …and the pictures ON blocks, which arrive by the same post
+            // (`actorAbout`): `this actor` shows the kind it is about.
+            refreshActorPictures(workspaceRef.current);
           }
         }
       });
@@ -786,6 +790,14 @@ export const BlocklyFileEditor = ({
   const ownRuleModule = useMemo(() => {
     const path = filePath(currentSources.source, fileId);
     return path?.endsWith('.rule') ? path.replace(/\.rule$/, '') : undefined;
+  }, [currentSources.source, fileId]);
+
+  // …and which `.actor` it is, for the same reason one step over: `this actor`
+  // in an actor file is that actor, and the workspace is the only thing that
+  // knows which file it is in (`actorAbout`).
+  const ownActorModule = useMemo(() => {
+    const path = filePath(currentSources.source, fileId);
+    return path?.endsWith('.actor') ? path.replace(/\.actor$/, '') : undefined;
   }, [currentSources.source, fileId]);
 
   // The properties this actor declares for itself, if it is one. Parsed from
@@ -1147,8 +1159,15 @@ export const BlocklyFileEditor = ({
   useEffect(() => {
     if (workspaceRef.current) {
       setEditingRule(workspaceRef.current, ownRuleModule);
+      setEditingActor(workspaceRef.current, ownActorModule);
+      // …and now that the workspace knows which file it is, the blocks that
+      // draw the actor they are about can say so. HERE rather than only on
+      // creation, because a block is created before it is connected and a
+      // SHADOW is created without announcing itself at all — so the first ask
+      // of "what am I about" can come before there is anything to answer with.
+      refreshActorPictures(workspaceRef.current);
     }
-  }, [ownRuleModule]);
+  }, [ownRuleModule, ownActorModule]);
 
   // Reload after a rename, once `blocks` carries the renamed member types —
   // BlocklyProvider registers them in its own effect, which runs before this one
@@ -1169,6 +1188,7 @@ export const BlocklyFileEditor = ({
     } finally {
       Blockly.Events.enable();
     }
+    refreshActorPictures(workspace);
     workspace.scroll(scrollX, scrollY);
   }, [blocks]);
 
@@ -1198,6 +1218,7 @@ export const BlocklyFileEditor = ({
     } finally {
       Blockly.Events.enable();
     }
+    refreshActorPictures(workspace);
     workspace.scroll(scrollX, scrollY);
   }, [sourcesEpoch, initialContents]);
 

@@ -405,6 +405,48 @@ dark one, black text needs a light one. That is a further argument for the icon
 being the author's choice rather than something derived — the author is the one
 who knows what they drew.
 
+## The blocks that name an actor without a dropdown
+
+Every actor dropdown draws a picture where the project has one. The two blocks
+that name an actor and have no dropdown — `this actor` and `event actor` — were
+the exception, and they are the two a learner most often has to hold in their
+head: "which actor is `this actor` here?" is the question a handler asks and
+does not answer.
+
+They answer it now, from where the block SITS (`blockly/actorAbout`):
+
+| where it is                                   | what it shows |
+| --------------------------------------------- | ------------- |
+| anywhere in an `.actor` file                  | that actor    |
+| in a world hat whose subject is `any ⟨Crate⟩` | a Crate       |
+| in a world's own `define actor`               | that actor    |
+| `event actor` under a hat filtered on ⟨Mark⟩  | a Mark        |
+| a rule's trait step, or the toolbox           | the word      |
+
+**The last row is what makes the rest legible.** A block that shows a picture
+sometimes is only worth having if the rule for when is plain, and this one is:
+you get a picture exactly when something above the block says which kind. In a
+rule, `this actor` is whatever elects the trait — a different answer per project
+— and a picture there would be a guess.
+
+It also gives the hat's kind filter a second job: pick ⟨Mark⟩ on the hat and the
+`event actor` below it starts showing a Mark, which says what the filter did
+better than a sentence about it can.
+
+**The picture does not replace the name.** The word beside it stays — `this
+⟨picture⟩` — and the picture's `alt` is the kind, so it is read aloud as "this
+Crate". The dropdowns could not do that (an option is an image or text, never
+both); a block's message has room for the pair.
+
+**Two traps, both paid for once.** A world's own `define actor` and an `.actor`
+file's root are the same block, and telling them apart is what decides whether
+the kind is the block's stamped id or the file's module path — asked the wrong
+way round in an actor file, the answer is a name no thumbnail is filed under.
+And a block is created before it is connected, while a SHADOW is created and
+never announced, so the first ask of "what am I about" can come before there is
+anything to answer with: the editor refreshes them after a load, beside the
+dropdown redraw it already did for thumbnails arriving late.
+
 ## What this does not solve
 
 The score still has nowhere to live. A Label can be told what to say, and the

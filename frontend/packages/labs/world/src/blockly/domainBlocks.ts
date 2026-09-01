@@ -34,6 +34,7 @@ import {DEFAULT_LAYER_ID, type SlotName} from '../engine/core/Layer';
 import {VIEWPORT_TILES} from '../runtime/viewport';
 import {IMPORT_SOUND_VALUE} from '../sound/soundImport';
 
+import {actorPictureExtension, registerKindFilter} from './actorAbout';
 import {SHOW_AS} from './actorIconMeta';
 import {ACTOR_ICON_OPTIONS} from './actorIcons';
 import {
@@ -1059,6 +1060,10 @@ const defineEventBlock = (event: EventMeta) => {
         liveDropdown(`world_event_kind_${field}`, field, options),
       );
       kinds.push(field);
+      // So `event actor` under this hat can draw the kind it was filtered to
+      // (`actorAbout`): from here, an enum filter and a kind filter are two
+      // dropdowns with numbered names, and only this side knows which is which.
+      registerKindFilter(eventBlockType(event), field);
       message0 += ` %${args0.length}`;
       // The hat carries an actor, so offer the block that names it — a flyout
       // inside the block, opened by a `+` (extensions/eventActorToolbox).
@@ -2775,9 +2780,11 @@ registerValueShadows('world_kind_of', [
  */
 const worldEventActor = defineBlock({
   type: 'world_event_actor',
-  message0: 'event actor',
+  message0: '%1',
+  args0: [{type: 'field_label', name: 'WORD', text: 'event actor'}],
   output: 'Actor',
   style: 'sprite_blocks',
+  extensions: [actorPictureExtension],
   tooltip:
     'The actor this event is about — the one that was just touched. Only ' +
     'meaningful inside a “when” block for an event that carries an actor.',
@@ -3202,10 +3209,14 @@ registerValueShadows('world_vector_component', [
 
 const worldThisActor = defineBlock({
   type: 'world_this_actor',
-  message0: 'this actor',
+  // The word is a FIELD so the picture beside it can replace "actor" with the
+  // kind, where the block's surroundings say which (`actorAbout`).
+  message0: '%1',
+  args0: [{type: 'field_label', name: 'WORD', text: 'this actor'}],
   output: 'Actor',
   // Actor values share the sprite style — the color that groups the actors.
   style: 'sprite_blocks',
+  extensions: [actorPictureExtension],
   tooltip: 'This actor — the one these blocks belong to.',
   generator: {
     javascript() {
