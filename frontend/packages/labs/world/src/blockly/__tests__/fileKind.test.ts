@@ -258,6 +258,10 @@ describe('an actor a world defines for itself', () => {
     const mine = metas.find(meta => meta.modulePath.includes('#'));
 
     expect(mine?.modulePath).toBe('worlds/main#barDef');
+    // The NAME is the plain one: a block type is minted from it, and that type
+    // is read back into words for a dead block's face. What the generator
+    // WRITES is a hoisted const named apart per actor
+    // (`ownPropertyCodeName`), which is a different question.
     expect(mine?.properties[0].ref.exportName).toBe('SubjectProperty');
     expect(mine?.properties[0].scope).toBe('actor');
   });

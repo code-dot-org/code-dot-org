@@ -45,6 +45,7 @@ import type {
   Property,
   PropertyType,
   Rule,
+  WorldAction,
   WorldEventHandler,
 } from '../core/types';
 import type {Vector} from '../core/Vector';
@@ -250,6 +251,33 @@ export class WorldBuilder {
    */
   on(event: GameEvent, handler: WorldEventHandler): this {
     return this.defer('on', event, handler);
+  }
+
+  /**
+   * Perform a world action. See {@link World.act}.
+   *
+   * THE METHOD THAT WAS NOT HERE, and the reason `add ⟨1⟩ to the score` under
+   * `define world` died at run time with `world.act is not a function`: a world
+   * action generates `world.act(…)`, `world` is this builder in a `.world`
+   * file's setup, and `worldContextExtension` saw a bound `world` and said
+   * nothing. The palette offered a block that could not run where it offered it
+   * (specs/PROGRESSION.md, "World actions in a world's setup").
+   *
+   * LOGGED ONLY WHEN THE WORLD IS NOT IN A FRAME, which is the same line `set`
+   * draws by another route. A `.world` file's handler closes over this builder
+   * too, so a score bumped on every click would otherwise append an entry per
+   * click for the life of the game, and replay every one of them into the next
+   * world made from this description. An action taken during a frame is a thing
+   * that HAPPENED; one taken while the description is still being written is
+   * part of what the world IS, and that is the one a fresh `instantiate()` — a
+   * check run — has to see again.
+   */
+  act(action: WorldAction, ...args: unknown[]): this {
+    if (this.built?.ticking) {
+      this.built.act(action, ...args);
+      return this;
+    }
+    return this.defer('act', action, ...args);
   }
 
   /**

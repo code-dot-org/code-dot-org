@@ -4819,8 +4819,10 @@ every Lamp gets its own copy, and that is what makes two of a kind two things
 rather than one thing drawn twice.
 
 So this is also the first lesson with a second file. Every one before it said
-everything it had to say in \`main.world\`; a Lamp that remembers something has
-to be a file, because that is where a kind of actor keeps what is its own.
+everything it had to say in \`main.world\`. A world can describe an actor that
+remembers something — the same \`define property\` works there — but what it
+remembers belongs to the KIND rather than to this world's copy of it, and a
+kind written in a file of its own is one another world can use.
 
 ### What you do
 

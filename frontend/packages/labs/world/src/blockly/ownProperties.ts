@@ -36,6 +36,7 @@
 
 import type {PropertyType} from '../engine/core/types';
 
+import {localActorVar} from './localActors';
 import {
   parseDefault,
   pascal,
@@ -154,6 +155,29 @@ export function parseWorldActorOwnMetas(
     return meta ? [meta] : [];
   });
 }
+
+/**
+ * What generated code calls a property a WORLD-DEFINED actor declares.
+ *
+ * TWO NAMES, because they answer two questions. The `exportName` is what the
+ * property is CALLED, and a block type is minted from it (`memberKey`) — which
+ * is a name people read: `standInBlocks` splits that segment back into words to
+ * put on a dead block's face, so `Worlds Main Bar Def Subject Property` is a
+ * sentence and the generator's identifier would not be. This is the other
+ * question: what the generator WRITES. It needs a name of its own because the
+ * declaration is hoisted to the world module's top level (`domainBlocks`,
+ * `world_actor`), and two local actors both declaring `subject` would otherwise
+ * be one const declared twice, which is a project that does not compile.
+ *
+ * Both sides call this: the `const` the definition emits, and the reference a
+ * `get`/`set` block generates (`refCode`). They have to agree, and there is one
+ * place where they do.
+ */
+export const ownPropertyCodeName = (
+  exportName: string,
+  worldLocal: {actorName: string; blockId: string},
+): string =>
+  `${localActorVar(worldLocal.actorName, worldLocal.blockId)}_${exportName}`;
 
 /** The walk both share: a root's chain, and every declaration in it. */
 function declarationsIn(
@@ -332,12 +356,20 @@ function declarationLine(
  * actor's own property; the MAP still can, because `loadMap` resolves against
  * the actor's live properties rather than by name (`Actor.ownProperties`).
  */
-export function ownPropertyDeclarationFor(fields: {
-  name: string;
-  type: string;
-  default: string;
-  access: string;
-}): string {
+export function ownPropertyDeclarationFor(
+  fields: {
+    name: string;
+    type: string;
+    default: string;
+    access: string;
+  },
+  /**
+   * The actor being defined: what to call `defineProperty` on, and what to
+   * name the const after. Both because the declaration is HOISTED out of the
+   * block the body generates into — see the note above.
+   */
+  on: {variable: string; actorName: string; blockId: string},
+): string {
   const declared = fields.name;
   if (!declared) {
     return ''; // an unnamed declaration declares nothing
@@ -346,8 +378,11 @@ export function ownPropertyDeclarationFor(fields: {
     PROPERTY_TYPES.has(fields.type) ? fields.type : 'number'
   ) as PropertyType;
   return declarationLine(
-    'actor',
-    `${pascal(declared)}Property`,
+    on.variable,
+    ownPropertyCodeName(`${pascal(declared)}Property`, {
+      actorName: on.actorName,
+      blockId: on.blockId,
+    }),
     slug(declared),
     false,
     {

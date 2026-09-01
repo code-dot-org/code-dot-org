@@ -542,7 +542,15 @@ point of the exercise. Here is what it asks for and the lab has not got.
 7. **A personal shelf.** Somewhere a learner's OWN rules go, so a rule they
    wrote is offered by their next New Project the way a stock one is. This was
    a tile (`making/shelf`) until it was noticed that it is not a lesson.
-8. <a id="world-actions-in-setup"></a>**World actions in a world's setup.** A
+8. <a id="world-actions-in-setup"></a>**World actions in a world's setup.**
+   FIXED (`WorldBuilder.act`, `engine/__tests__/builderAct`). The description
+   forwards an action to the world it describes, and logs it only when the world
+   is not inside a frame — a handler in a `.world` file closes over the same
+   builder, and an action taken while the game runs is a thing that happened
+   rather than part of what the world is. `builderSurface` now covers `act`,
+   which it could not before: the action generator writes `${subject}.act(…)`
+   and the scan looks for the literal `world.act(`, so the factory declares its
+   call the way the slot factories do. What follows is the original diagnosis. A
    `define world` body is handed a **builder**; a handler is handed the world.
    They share enough vocabulary to look interchangeable — a world property's
    `set` compiles to `world.set(…)` and the builder has one — but a rule's
@@ -553,7 +561,15 @@ point of the exercise. Here is what it asks for and the lab has not got.
    writing `memory/score`, which now counts clicks in a handler for this
    reason and not for a teaching one.
 9. <a id="own-property-scope"></a>**A world-defined actor's own property, from
-   the world.** An actor a world defines for itself may declare a property, and
+   the world.** FIXED (`ownPropertyCodeName`,
+   `src/__tests__/worldActorOwnProperty`). The declaration is hoisted out of the
+   block a `define actor` opens to the world module's top level, under a name of
+   its own per declaring actor, so the whole file can reach it and two local
+   actors may both declare `subject`. The block TYPE is unchanged — it is minted
+   from what the property is CALLED, which is a name read back into words on a
+   dead block's face. `memory/actor-state` keeps its second file, now as a
+   choice rather than a workaround. What follows is the original diagnosis. An
+   actor a world defines for itself may declare a property, and
    its declaration is a `const` inside the definition's own block scope
    (`domainBlocks`, `world_actor`: "a declaration written anywhere else is a
    name its own drawing cannot reach"). The get and set blocks are offered

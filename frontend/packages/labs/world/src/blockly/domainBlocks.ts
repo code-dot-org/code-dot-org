@@ -154,7 +154,11 @@ import {
   soundOptionsExtension,
   spriteOptions,
 } from './moduleOptions';
-import {ownPropertyDeclarationFor, type OwnMeta} from './ownProperties';
+import {
+  ownPropertyCodeName,
+  ownPropertyDeclarationFor,
+  type OwnMeta,
+} from './ownProperties';
 import {phaseOptions, phaseOptionsExtension} from './phaseOptions';
 import {
   propertyByKey,
@@ -272,7 +276,18 @@ const refCode = (ref: MemberRef, generator?: JavascriptGenerator): string => {
     // the same module with the declaring block on the end (`ownProperties`).
     // Compared whole it never matches, so the world imported a property it
     // declares itself, from a path nothing resolves.
-    const owning = modulePath.split('#')[0];
+    const [owning, definingBlock] = modulePath.split('#');
+    // …and when there IS a block on the end, the name is the hoisted one the
+    // definition emitted: a world-defined actor's property is a `const` at the
+    // world module's top level, named apart from every other local actor's
+    // (`ownPropertyCodeName`). Its block TYPE still carries the plain name,
+    // which is the one a reader sees.
+    if (definingBlock && ref.own) {
+      return ownPropertyCodeName(ref.exportName, {
+        actorName: ref.ruleName ?? '',
+        blockId: definingBlock,
+      });
+    }
     if (generator && owning !== selfModule) {
       addImport(
         generator,
@@ -418,18 +433,31 @@ const hasActorInScope = (block: Block): boolean => {
   return false;
 };
 
-const ownDeclarationsIn = (block: Block): string => {
+/**
+ * The `const`s for everything a world-defined actor declares.
+ *
+ * `on` is the actor's own variable, because these are emitted at the world
+ * MODULE's top level rather than inside the block its body generates into —
+ * see `world_actor` below for why.
+ */
+const ownDeclarationsIn = (
+  block: Block,
+  on: {variable: string; actorName: string},
+): string => {
   let out = '';
   for (let at = block.getNextBlock?.(); at; at = at.getNextBlock?.()) {
     if (at.type !== 'world_rule_property') {
       continue;
     }
-    out += ownPropertyDeclarationFor({
-      name: at.getFieldValue('NAME') ?? '',
-      type: at.getFieldValue('TYPE') ?? '',
-      default: at.getFieldValue('DEFAULT') ?? '',
-      access: at.getFieldValue('ACCESS') ?? '',
-    });
+    out += ownPropertyDeclarationFor(
+      {
+        name: at.getFieldValue('NAME') ?? '',
+        type: at.getFieldValue('TYPE') ?? '',
+        default: at.getFieldValue('DEFAULT') ?? '',
+        access: at.getFieldValue('ACCESS') ?? '',
+      },
+      {...on, blockId: block.id},
+    );
   }
   return out;
 };
@@ -540,13 +568,21 @@ const worldActor = defineBlock({
         const variable = localActorVar(name, block.id);
         return (
           `const ${variable} = ${built};\n` +
+          // Its own properties, declared BESIDE the actor rather than inside
+          // the block its body opens. They were inside it, which is where its
+          // own drawing reads them from — and nowhere else in the file could:
+          // `set ⟨id⟩ of ⟨this actor⟩` in the world's own body, or in a
+          // handler, is a block the palette offers and the module threw on as
+          // it loaded, `ReferenceError: IdProperty is not defined`. That is
+          // what made `memory/actor-state` the one lesson with two files
+          // (specs/PROGRESSION.md).
+          //
+          // At the module's top level the name is unique per declaring actor
+          // (`ownPropertyName`), so two local actors may both declare
+          // `subject`; the body still sees it, because a block scope can read
+          // what encloses it.
+          `${ownDeclarationsIn(block, {variable, actorName: name})}` +
           `{\nconst actor = ${variable};\n` +
-          // Its own properties, declared HERE rather than by the assembler.
-          // An `.actor` file's go at the top of the module, where the whole
-          // file can see them; this actor's body is a block, so a declaration
-          // written anywhere else is a name its own drawing cannot reach
-          // (blockly/ownProperties).
-          `${ownDeclarationsIn(block)}` +
           `${nextChainCode(block, generator)}}\n` +
           // Registered under the type a placed one carries, so the module can
           // hand its own templates out (`export {localActors}`) — which is how
@@ -2621,6 +2657,7 @@ const defineActionBlock = (action: ActionMeta) => {
 
 // Generate a block for every rule action (world actions first, then each trait's
 // actor actions), recording which belong to each rule's toolbox category.
+
 const ACTION_BLOCKS: ReturnType<typeof defineActionBlock>[] = [];
 const ACTION_BLOCK_TYPES_BY_RULE = new Map<RuleMeta, string[]>();
 for (const rule of AUTHORING_RULES) {
@@ -5483,7 +5520,14 @@ const backgroundOptionsExtension = liveDropdown(
  * survived the guard that exists to catch exactly that (`builderSurface.test`).
  * The factory is the only thing that knows, so the factory says.
  */
-export const GENERATED_WORLD_CALLS: string[] = [];
+export const GENERATED_WORLD_CALLS: string[] = [
+  // A world ACTION, declared here because `defineActionBlock` writes
+  // `${subject}.act(…)` and the scan looks for the literal `world.act(`. The
+  // same blind spot the slot factories below have — and the one that let every
+  // rule's world actions be offered under `define world` for as long as
+  // `WorldBuilder` had no `act` for them to land on.
+  'act',
+];
 
 const defineSlotBlocks = (slot: {
   /** The slot's name, in the block type and in the engine method. */

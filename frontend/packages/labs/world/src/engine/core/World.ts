@@ -709,7 +709,18 @@ export class World {
    */
   private readonly leaving = new Set<Actor>();
   /** Whether a tick is running, which is what makes removal deferred. */
-  private ticking = false;
+  private inTick = false;
+
+  /**
+   * Whether the world is inside a frame right now.
+   *
+   * Which is the same as "a handler is running": handlers are flushed inside
+   * `tick`. `WorldBuilder.act` asks, to tell an action that is part of what the
+   * world IS from one that merely happened while it ran.
+   */
+  get ticking(): boolean {
+    return this.inTick;
+  }
   /** Sounds raised since the driver last drained, in the order raised. */
   private readonly queuedSounds: string[] = [];
   /** The track playing, or undefined for silence (specs/SOUND.md). */
@@ -1016,7 +1027,7 @@ export class World {
     if (!target || !this.actorList.includes(target)) {
       return false;
     }
-    if (this.ticking) {
+    if (this.inTick) {
       this.leaving.add(target);
       return true;
     }
@@ -1463,7 +1474,7 @@ export class World {
 
   /** Advance the simulation by `delta` seconds. */
   tick(delta: number): void {
-    this.ticking = true;
+    this.inTick = true;
     // Before the steps, so every step in this frame reads one value, and that
     // value is the time the positions they compute belong to (see `time`).
     this.elapsed += delta;
@@ -1473,7 +1484,7 @@ export class World {
       // from — so the sweep below is after them, not before.
       this.events.flush(this);
     } finally {
-      this.ticking = false;
+      this.inTick = false;
       for (const actor of this.leaving) {
         this.detach(actor);
       }
@@ -2147,7 +2158,7 @@ export class World {
    * is ticking and it takes effect at once.
    */
   clearActors(): void {
-    if (this.ticking) {
+    if (this.inTick) {
       for (const actor of this.actorList) {
         this.leaving.add(actor);
       }
