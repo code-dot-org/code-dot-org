@@ -89,7 +89,7 @@ function load(id, features) {
   chosen.forEach(column => store.dispatch(addSelectedFeature(column)));
 
   train.init(store);
-  train.onClickTrain(store);
+  train.onClickTrain();
   return store.getState();
 }
 
