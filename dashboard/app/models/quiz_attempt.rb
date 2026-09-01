@@ -23,8 +23,9 @@
 #
 class QuizAttempt < ApplicationRecord
   belongs_to :user
-  # Optional: deleting the quiz SET NULLs level_id (FK on_delete: :nullify).
-  # New attempts still set a level; only a deleted quiz leaves this blank.
+  # optional: true is only so an existing attempt survives its quiz being
+  # deleted (FK on_delete: :nullify sets level_id to null). New attempts
+  # still require one - see the on: :create presence validation below.
   belongs_to :level, optional: true
   belongs_to :unit
 
@@ -32,6 +33,9 @@ class QuizAttempt < ApplicationRecord
 
   validates :attempt_number, presence: true
   validates :started_at, presence: true
+  # A new attempt always needs a level - only a later quiz deletion may
+  # leave one blank (see the belongs_to :level comment above).
+  validates :level, presence: true, on: :create
 
   # nil when the quiz has no time limit, or the quiz has been deleted.
   def expires_at
