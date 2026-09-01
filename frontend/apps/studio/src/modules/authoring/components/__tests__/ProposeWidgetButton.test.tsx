@@ -29,11 +29,16 @@ function wrapper() {
   };
 }
 
-const NO_REMOTE: ProposeConfig = {};
-const WITH_REMOTE: ProposeConfig = {remote: 'stephen'};
+const NO_REMOTES: ProposeConfig = {};
+const WITH_CATALOG_REMOTE: ProposeConfig = {remote: 'stephen'};
+const WITH_BOTH_REMOTES: ProposeConfig = {
+  remote: 'stephen',
+  staffAppsRemote: 'git@github.com:codeai-staff-apps/widgets.git',
+};
 
-const OK_DRY_RUN: ProposeWidgetResult = {
+const OK_CATALOG_DRY_RUN: ProposeWidgetResult = {
   ok: true,
+  target: 'catalog',
   mode: 'dry-run',
   slug: 'pick-your-blocks',
   version: '1.0.0',
@@ -59,22 +64,22 @@ describe('ProposeWidgetButton', () => {
     proposeWidget.mockReset();
   });
 
-  it('runs a dry-run on open and disables Push when no remote is configured', async () => {
-    fetchProposeConfig.mockResolvedValue(NO_REMOTE);
-    proposeWidget.mockResolvedValue(OK_DRY_RUN);
+  it('runs a catalog dry-run on open and disables Push when no remote is configured', async () => {
+    fetchProposeConfig.mockResolvedValue(NO_REMOTES);
+    proposeWidget.mockResolvedValue(OK_CATALOG_DRY_RUN);
 
     render(<ProposeWidgetButton widgetId="draft-widget-abc" />, {
       wrapper: wrapper(),
     });
-    await userEvent.click(
-      screen.getByRole('button', {name: /propose for catalog/i}),
-    );
+    await userEvent.click(screen.getByRole('button', {name: /propose widget/i}));
 
     expect(proposeWidget).toHaveBeenCalledWith('draft-widget-abc', {
+      target: 'catalog',
       mode: 'dry-run',
+      remote: undefined,
     });
     expect(
-      await screen.findByText(/propose pick-your-blocks v1\.0\.0\?/i),
+      await screen.findByText(/propose pick-your-blocks v1\.0\.0 to the catalog\?/i),
     ).toBeInTheDocument();
     expect(
       screen.getByText(
@@ -91,8 +96,56 @@ describe('ProposeWidgetButton', () => {
     ).toBeInTheDocument();
   });
 
+  it('disables the Staff Apps toggle when no staff-apps remote is configured', async () => {
+    fetchProposeConfig.mockResolvedValue(WITH_CATALOG_REMOTE);
+    proposeWidget.mockResolvedValue(OK_CATALOG_DRY_RUN);
+
+    render(<ProposeWidgetButton widgetId="draft-widget-abc" />, {
+      wrapper: wrapper(),
+    });
+    await userEvent.click(screen.getByRole('button', {name: /propose widget/i}));
+    await screen.findByText(/propose pick-your-blocks/i);
+
+    expect(
+      screen.getByRole('button', {name: 'Staff Apps'}),
+    ).toBeDisabled();
+  });
+
+  it('switches to staff-apps and re-runs the dry-run against that target', async () => {
+    fetchProposeConfig.mockResolvedValue(WITH_BOTH_REMOTES);
+    proposeWidget
+      .mockResolvedValueOnce(OK_CATALOG_DRY_RUN)
+      .mockResolvedValueOnce({
+        ...OK_CATALOG_DRY_RUN,
+        target: 'staff-apps',
+        branch: 'widget/pick-your-blocks-v1.0.0',
+        files: [
+          {path: 'widgets/pick-your-blocks/widget.html', content: '<html></html>'},
+          {path: 'widgets/pick-your-blocks/widget.json', content: '{}'},
+        ],
+      });
+
+    render(<ProposeWidgetButton widgetId="draft-widget-abc" />, {
+      wrapper: wrapper(),
+    });
+    await userEvent.click(screen.getByRole('button', {name: /propose widget/i}));
+    await screen.findByText(/propose pick-your-blocks v1\.0\.0 to the catalog\?/i);
+
+    await userEvent.click(screen.getByRole('button', {name: 'Staff Apps'}));
+
+    expect(proposeWidget).toHaveBeenLastCalledWith('draft-widget-abc', {
+      target: 'staff-apps',
+      mode: 'dry-run',
+      remote: 'git@github.com:codeai-staff-apps/widgets.git',
+    });
+    expect(
+      await screen.findByText(/propose pick-your-blocks v1\.0\.0 to Staff Apps\?/i),
+    ).toBeInTheDocument();
+    expect(screen.getByText(/widgets\/pick-your-blocks\/widget\.html/)).toBeInTheDocument();
+  });
+
   it('shows the refusal reason and violations when the dry-run refuses', async () => {
-    fetchProposeConfig.mockResolvedValue(WITH_REMOTE);
+    fetchProposeConfig.mockResolvedValue(WITH_CATALOG_REMOTE);
     proposeWidget.mockResolvedValue({
       ok: false,
       reason: 'widget document fails one or more contract gates',
@@ -102,9 +155,7 @@ describe('ProposeWidgetButton', () => {
     render(<ProposeWidgetButton widgetId="draft-widget-bad" />, {
       wrapper: wrapper(),
     });
-    await userEvent.click(
-      screen.getByRole('button', {name: /propose for catalog/i}),
-    );
+    await userEvent.click(screen.getByRole('button', {name: /propose widget/i}));
 
     expect(
       await screen.findByText(/can't propose this widget yet/i),
@@ -119,7 +170,7 @@ describe('ProposeWidgetButton', () => {
   });
 
   it('a slug collision refusal shows the suggestion — the session\'s own seeded pick-your-blocks source widget', async () => {
-    fetchProposeConfig.mockResolvedValue(WITH_REMOTE);
+    fetchProposeConfig.mockResolvedValue(WITH_CATALOG_REMOTE);
     proposeWidget.mockResolvedValue({
       ok: false,
       reason: 'slug "pick-your-blocks" already exists in the catalog',
@@ -129,9 +180,7 @@ describe('ProposeWidgetButton', () => {
     render(<ProposeWidgetButton widgetId="draft-widget-c7917dd5" />, {
       wrapper: wrapper(),
     });
-    await userEvent.click(
-      screen.getByRole('button', {name: /propose for catalog/i}),
-    );
+    await userEvent.click(screen.getByRole('button', {name: /propose widget/i}));
 
     expect(
       await screen.findByText(/already exists in the catalog/i),
@@ -139,10 +188,10 @@ describe('ProposeWidgetButton', () => {
     expect(screen.getByText(/pick-your-blocks-2/)).toBeInTheDocument();
   });
 
-  it('pushes to the configured remote and renders the compare URL', async () => {
-    fetchProposeConfig.mockResolvedValue(WITH_REMOTE);
-    proposeWidget.mockResolvedValueOnce(OK_DRY_RUN).mockResolvedValueOnce({
-      ...OK_DRY_RUN,
+  it('pushes the catalog target and renders the compare URL (no PR opened)', async () => {
+    fetchProposeConfig.mockResolvedValue(WITH_CATALOG_REMOTE);
+    proposeWidget.mockResolvedValueOnce(OK_CATALOG_DRY_RUN).mockResolvedValueOnce({
+      ...OK_CATALOG_DRY_RUN,
       mode: 'push',
       compareUrl:
         'https://github.com/code-dot-org/code-dot-org/compare/staging...stephenliang:widget-catalog/pick-your-blocks-v1.0.0?expand=1',
@@ -151,9 +200,7 @@ describe('ProposeWidgetButton', () => {
     render(<ProposeWidgetButton widgetId="draft-widget-abc" />, {
       wrapper: wrapper(),
     });
-    await userEvent.click(
-      screen.getByRole('button', {name: /propose for catalog/i}),
-    );
+    await userEvent.click(screen.getByRole('button', {name: /propose widget/i}));
     const pushButton = await screen.findByRole('button', {
       name: /push to stephen/i,
     });
@@ -161,6 +208,7 @@ describe('ProposeWidgetButton', () => {
     await userEvent.click(pushButton);
 
     expect(proposeWidget).toHaveBeenLastCalledWith('draft-widget-abc', {
+      target: 'catalog',
       mode: 'push',
       remote: 'stephen',
     });
@@ -169,6 +217,47 @@ describe('ProposeWidgetButton', () => {
       screen.getByRole('link', {
         name: /compare\/staging\.\.\.stephenliang:widget-catalog/i,
       }),
+    ).toBeInTheDocument();
+  });
+
+  it('pushes the staff-apps target and renders the opened pull request URL', async () => {
+    fetchProposeConfig.mockResolvedValue(WITH_BOTH_REMOTES);
+    const staffAppsDryRun: ProposeWidgetResult = {
+      ...OK_CATALOG_DRY_RUN,
+      target: 'staff-apps',
+      branch: 'widget/pick-your-blocks-v1.0.0',
+    };
+    proposeWidget
+      .mockResolvedValueOnce(OK_CATALOG_DRY_RUN)
+      .mockResolvedValueOnce(staffAppsDryRun)
+      .mockResolvedValueOnce({
+        ...staffAppsDryRun,
+        mode: 'push',
+        compareUrl:
+          'https://github.com/codeai-staff-apps/widgets/compare/main...widget/pick-your-blocks-v1.0.0?expand=1',
+        prUrl: 'https://github.com/codeai-staff-apps/widgets/pull/42',
+      });
+
+    render(<ProposeWidgetButton widgetId="draft-widget-abc" />, {
+      wrapper: wrapper(),
+    });
+    await userEvent.click(screen.getByRole('button', {name: /propose widget/i}));
+    await screen.findByText(/propose pick-your-blocks/i);
+    await userEvent.click(screen.getByRole('button', {name: 'Staff Apps'}));
+    const pushButton = await screen.findByRole('button', {
+      name: /push to git@github\.com/i,
+    });
+    await waitFor(() => expect(pushButton).toBeEnabled());
+    await userEvent.click(pushButton);
+
+    expect(proposeWidget).toHaveBeenLastCalledWith('draft-widget-abc', {
+      target: 'staff-apps',
+      mode: 'push',
+      remote: 'git@github.com:codeai-staff-apps/widgets.git',
+    });
+    expect(await screen.findByText(/pull request opened/i)).toBeInTheDocument();
+    expect(
+      screen.getByRole('link', {name: /codeai-staff-apps\/widgets\/pull\/42/i}),
     ).toBeInTheDocument();
   });
 });

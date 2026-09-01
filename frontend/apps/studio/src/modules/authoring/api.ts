@@ -74,11 +74,17 @@ export interface WidgetResponse {
   catalogRef?: CatalogRef;
 }
 
-/** Whether "Propose widget"'s push step is usable in this environment — see
- * authoring-service's AUTHORING_PROPOSE_REMOTE. `remote` is undefined, never
- * a fabricated default, when the service has none configured. */
+export type ProposeTarget = 'catalog' | 'staff-apps';
+
+/** Whether "Propose widget"'s push step is usable in this environment, per
+ * target — see authoring-service's AUTHORING_PROPOSE_REMOTE (catalog) and
+ * AUTHORING_PROPOSE_STAFF_APPS_REMOTE (staff-apps). A remote is undefined,
+ * never a fabricated default, when the service has none configured for
+ * that target — the dialog disables that target's push step rather than
+ * guessing. */
 export interface ProposeConfig {
   remote?: string;
+  staffAppsRemote?: string;
 }
 
 /** One file `POST /widgets/:id/propose` would write (or wrote) onto the
@@ -89,14 +95,17 @@ export interface ProposeWidgetFile {
   content: string;
 }
 
-/** Mirrors authoring-service's ProposeWidgetResult (publish/proposeWidget.ts)
+/** Mirrors @code-dot-org/widgets-catalog/propose's ProposeWidgetResult
  * verbatim — a refusal (gate violations, a slug collision, a missing
  * remote) and a built proposal share no fields beyond `ok`, so callers
- * narrow on it directly rather than juggling a separate error channel. */
+ * narrow on it directly rather than juggling a separate error channel.
+ * `prUrl`/`prError` only ever appear on a staff-apps result: the catalog
+ * target never attempts to open a pull request. */
 export type ProposeWidgetResult =
   | {ok: false; reason: string; violations?: string[]; suggestion?: string}
   | {
       ok: true;
+      target: ProposeTarget;
       mode: 'dry-run' | 'push';
       slug: string;
       version: string;
@@ -106,6 +115,8 @@ export type ProposeWidgetResult =
       files: ProposeWidgetFile[];
       diffstat: string;
       compareUrl?: string;
+      prUrl?: string;
+      prError?: string;
     };
 
 /** Result of the maze-family "Check level" authoring lint — see
@@ -306,7 +317,13 @@ export const authoringApi = {
   // same shape so the dialog has one branch to handle either way.
   proposeWidget: async (
     widgetId: string,
-    body: {mode: 'dry-run' | 'push'; remote?: string; baseRef?: string},
+    body: {
+      target: ProposeTarget;
+      mode: 'dry-run' | 'push';
+      remote?: string;
+      baseRef?: string;
+      openPr?: boolean;
+    },
   ): Promise<ProposeWidgetResult> => {
     const res = await fetch(
       `${BASE}/widgets/${encodeURIComponent(widgetId)}/propose`,

@@ -1,7 +1,7 @@
-import {Button, Popover, Typography} from '@mui/material';
+import {Button, Popover, ToggleButton, ToggleButtonGroup, Typography} from '@mui/material';
 import {useState} from 'react';
 
-import {authoringApi, type ProposeWidgetResult} from '../api';
+import {authoringApi, type ProposeTarget, type ProposeWidgetResult} from '../api';
 import {useProposeConfig} from '../hooks';
 
 import styles from './authoring.module.scss';
@@ -10,26 +10,33 @@ type ProposePhase = 'idle' | 'preview' | 'pushing' | 'pushed' | 'error';
 
 /**
  * "Propose for catalog" — graduates a session widget into a real pull
- * request onto @code-dot-org/widgets-catalog (widget PR flow plan, Pass 5).
- * Same confirm/busy/success/error shape as PublishButton and
- * WritebackButton (AuthoringTopBar.tsx), with one difference: opening the
- * popover runs a `dry-run` propose immediately, so the dialog always shows
- * the server's real file list, slug, version and gate results rather than a
- * client-side guess — including a refusal (gate violations, a slug
- * collision), which renders in this same phase rather than as a separate
- * error state. Pushing is a distinct second step, disabled unless a remote
- * is configured server-side (useProposeConfig) — this component never
- * fabricates one.
+ * request, onto @code-dot-org/widgets-catalog (this monorepo) or
+ * codeai-staff-apps/widgets, picked with the target toggle. Same
+ * confirm/busy/success/error shape as PublishButton and WritebackButton
+ * (AuthoringTopBar.tsx), with one difference: opening the popover — and
+ * switching the target toggle — runs a `dry-run` propose immediately, so
+ * the dialog always shows the server's real file list, slug, version and
+ * gate results for the CURRENTLY SELECTED target rather than a client-side
+ * guess — including a refusal (gate violations, a slug collision), which
+ * renders in this same phase rather than as a separate error state.
+ * Pushing is a distinct second step, disabled unless that target's remote is
+ * configured server-side (useProposeConfig) — this component never
+ * fabricates one. A staff-apps push additionally attempts to open a real
+ * pull request; the catalog target never does (a human opens that one from
+ * the returned compare URL — the success phase says so either way).
  */
 export function ProposeWidgetButton({widgetId}: {widgetId: string}) {
   const {data: config} = useProposeConfig();
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
+  const [target, setTarget] = useState<ProposeTarget>('catalog');
   const [phase, setPhase] = useState<ProposePhase>('idle');
   const [dryRun, setDryRun] = useState<ProposeWidgetResult | undefined>();
   const [pushResult, setPushResult] = useState<ProposeWidgetResult | undefined>();
   const [error, setError] = useState<string | undefined>();
   const open = Boolean(anchorEl);
-  const remote = config?.remote;
+  const remoteFor = (t: ProposeTarget) =>
+    t === 'catalog' ? config?.remote : config?.staffAppsRemote;
+  const remote = remoteFor(target);
 
   const close = () => {
     setAnchorEl(null);
@@ -39,18 +46,35 @@ export function ProposeWidgetButton({widgetId}: {widgetId: string}) {
     setError(undefined);
   };
 
-  const openDialog = async (target: HTMLButtonElement) => {
-    setAnchorEl(target);
+  const runPreview = async (previewTarget: ProposeTarget) => {
     setPhase('preview');
+    setDryRun(undefined);
     try {
       const result = await authoringApi.proposeWidget(widgetId, {
+        target: previewTarget,
         mode: 'dry-run',
+        // The catalog target's dry-run needs no remote (it parents onto
+        // this checkout's own origin/staging); the staff-apps target's
+        // dry-run does — it fetches the real repo's tip to parent onto and
+        // to check for a slug collision, so a preview is only ever as real
+        // as a push would be.
+        remote: remoteFor(previewTarget),
       });
       setDryRun(result);
     } catch (e) {
       setError(e instanceof Error ? e.message : 'That check failed to run.');
       setPhase('error');
     }
+  };
+
+  const openDialog = (anchor: HTMLButtonElement) => {
+    setAnchorEl(anchor);
+    void runPreview(target);
+  };
+
+  const selectTarget = (nextTarget: ProposeTarget) => {
+    setTarget(nextTarget);
+    void runPreview(nextTarget);
   };
 
   const runPush = async () => {
@@ -60,6 +84,7 @@ export function ProposeWidgetButton({widgetId}: {widgetId: string}) {
     setPhase('pushing');
     try {
       const result = await authoringApi.proposeWidget(widgetId, {
+        target,
         mode: 'push',
         remote,
       });
@@ -83,9 +108,9 @@ export function ProposeWidgetButton({widgetId}: {widgetId: string}) {
         size="small"
         aria-haspopup="dialog"
         aria-expanded={open}
-        onClick={e => void openDialog(e.currentTarget)}
+        onClick={e => openDialog(e.currentTarget)}
       >
-        Propose for catalog
+        Propose widget
       </Button>
       <Popover
         anchorEl={anchorEl}
@@ -94,12 +119,35 @@ export function ProposeWidgetButton({widgetId}: {widgetId: string}) {
         anchorOrigin={{vertical: 'bottom', horizontal: 'right'}}
       >
         <div className={styles.writebackDialog}>
+          {phase !== 'pushed' && (
+            <ToggleButtonGroup
+              value={target}
+              exclusive
+              size="small"
+              aria-label="Propose target"
+              onChange={(_e, next: ProposeTarget | null) => {
+                if (next && next !== target) selectTarget(next);
+              }}
+            >
+              <ToggleButton value="catalog" aria-label="Catalog">
+                Catalog
+              </ToggleButton>
+              <ToggleButton
+                value="staff-apps"
+                aria-label="Staff Apps"
+                disabled={!config?.staffAppsRemote}
+              >
+                Staff Apps
+              </ToggleButton>
+            </ToggleButtonGroup>
+          )}
           {phase === 'preview' && !dryRun && (
             <Typography variant="body2">Checking the widget's gates…</Typography>
           )}
           {phase === 'preview' && dryRun && (
             <ProposePreview
               dryRun={dryRun}
+              target={target}
               remote={remote}
               onPush={() => void runPush()}
               onClose={close}
@@ -107,22 +155,7 @@ export function ProposeWidgetButton({widgetId}: {widgetId: string}) {
           )}
           {phase === 'pushing' && <Typography variant="body2">Pushing…</Typography>}
           {phase === 'pushed' && pushResult?.ok && (
-            <>
-              <Typography variant="body2">
-                Pushed <code>{pushResult.branch}</code> to {remote}. No pull
-                request was opened — open one yourself from the compare page:
-              </Typography>
-              {pushResult.compareUrl && (
-                <a href={pushResult.compareUrl} target="_blank" rel="noreferrer">
-                  {pushResult.compareUrl}
-                </a>
-              )}
-              <div className={styles.courseRemoveConfirmActions}>
-                <Button variant="outlined" size="small" onClick={close}>
-                  Close
-                </Button>
-              </div>
-            </>
+            <PushedOutcome result={pushResult} target={target} onClose={close} />
           )}
           {phase === 'error' && (
             <>
@@ -146,13 +179,61 @@ export function ProposeWidgetButton({widgetId}: {widgetId: string}) {
   );
 }
 
+function PushedOutcome({
+  result,
+  target,
+  onClose,
+}: {
+  result: Extract<ProposeWidgetResult, {ok: true}>;
+  target: ProposeTarget;
+  onClose: () => void;
+}) {
+  return (
+    <>
+      <Typography variant="body2">Pushed <code>{result.branch}</code>.</Typography>
+      {result.prUrl && (
+        <>
+          <Typography variant="body2">Pull request opened:</Typography>
+          <a href={result.prUrl} target="_blank" rel="noreferrer">
+            {result.prUrl}
+          </a>
+        </>
+      )}
+      {!result.prUrl && result.compareUrl && (
+        <>
+          <Typography variant="body2">
+            {target === 'staff-apps'
+              ? 'No pull request was opened (no gh/token available) — open one yourself from the compare page:'
+              : 'No pull request was opened — open one yourself from the compare page:'}
+          </Typography>
+          <a href={result.compareUrl} target="_blank" rel="noreferrer">
+            {result.compareUrl}
+          </a>
+        </>
+      )}
+      {result.prError && (
+        <Typography variant="body4" className={styles.writebackNote}>
+          PR creation failed: {result.prError}
+        </Typography>
+      )}
+      <div className={styles.courseRemoveConfirmActions}>
+        <Button variant="outlined" size="small" onClick={onClose}>
+          Close
+        </Button>
+      </div>
+    </>
+  );
+}
+
 function ProposePreview({
   dryRun,
+  target,
   remote,
   onPush,
   onClose,
 }: {
   dryRun: ProposeWidgetResult;
+  target: ProposeTarget;
   remote: string | undefined;
   onPush: () => void;
   onClose: () => void;
@@ -196,11 +277,12 @@ function ProposePreview({
   }
 
   const provenance = dryRun.files.find(f => f.path.endsWith('PROVENANCE.md'));
+  const targetLabel = target === 'catalog' ? 'the catalog' : 'Staff Apps';
 
   return (
     <>
       <Typography variant="h6" component="h2">
-        Propose {dryRun.slug} v{dryRun.version}?
+        Propose {dryRun.slug} v{dryRun.version} to {targetLabel}?
       </Typography>
       <Typography variant="body2">
         Branch <code>{dryRun.branch}</code>, {dryRun.files.length} file
@@ -239,9 +321,13 @@ function ProposePreview({
       </div>
       {!remote && (
         <Typography variant="body4" className={styles.writebackNote}>
-          Pushing needs AUTHORING_PROPOSE_REMOTE set on the authoring
-          service. Even then, this only pushes a branch — a human opens the
-          pull request from the compare URL themselves.
+          {target === 'catalog'
+            ? 'Pushing needs AUTHORING_PROPOSE_REMOTE set on the authoring service.'
+            : 'Pushing needs AUTHORING_PROPOSE_STAFF_APPS_REMOTE set on the authoring service.'}
+          {' '}
+          {target === 'catalog'
+            ? 'Even then, this only pushes a branch — a human opens the pull request from the compare URL themselves.'
+            : 'Even then, a pull request is only opened when gh or a GitHub token is available server-side — otherwise this falls back to the same compare-URL link.'}
         </Typography>
       )}
     </>
