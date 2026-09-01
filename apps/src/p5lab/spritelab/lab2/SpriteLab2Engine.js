@@ -19,7 +19,9 @@ import {
 import {loadedAnimations, trimAnimationListImages} from './imageTrim';
 import {
   CONTACT_EPSILON,
+  hasSupportAhead,
   isSupported,
+  PATROLLER_WEIGHTLESS_GRAVITY,
   PLATFORM_GRAVITY,
   resolvePlatformPhysics,
 } from './platformPhysics';
@@ -129,6 +131,11 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.sceneJumpInFlight_ = false;
     // Set when the zoomed draw loop has already resolved this frame.
     this.physicsResolvedThisFrame_ = false;
+    // The walls, gathered once per frame (see wallsThisFrame_).
+    this.wallsCache_ = null;
+    // Last frame's platform bodies, so a sprite whose mark stops arriving
+    // is restored to an ordinary sprite (see resolvePlatformPhysics_).
+    this.prevBodies_ = [];
     // Settles a pending image-grace wait (see
     // whenAnimationsAreReadyOrGivenUp_).
     this.imageWaitCancel_ = null;
@@ -185,8 +192,8 @@ export default class SpriteLab2Engine extends SpriteLab {
       library.defaultSpriteSize = this.sceneLooksLikePlatformer_()
         ? cellSize(DEFAULT_SCENE_GRID_SIZE)
         : STORY_SCENE_SPRITE_SIZE;
-      // Landings carry sub-pixel float noise; footing checks must not
-      // compare contact exactly.
+      // Landings carry sub-pixel float noise; the classic footing command
+      // must not compare contact exactly.
       library.contactEpsilon = CONTACT_EPSILON;
     }
     // Fresh library = fresh run; gravity returns to the default until a
@@ -216,25 +223,55 @@ export default class SpriteLab2Engine extends SpriteLab {
         sprite.group = 'players';
       });
     };
-    // Jump against gravity if any player has support in the gravity
-    // direction (the resolver's own footing geometry, so it agrees with
-    // where players actually rest).
-    library.commands.platformJump = speed => {
+    // Footing in the gravity direction — the resolver's own geometry, so it
+    // agrees with where sprites actually rest. Wherever nothing can fall
+    // (outside a platform scene, or at zero gravity for this sprite)
+    // everything counts as supported.
+    const footing = (spriteArg, test) => {
+      if (!this.usesPlatformPhysics_) {
+        return true;
+      }
       const p5 = this.p5Wrapper.p5;
-      const players = library.getSpriteArray({group: 'players'});
-      const walls = library.getSpriteArray({group: 'walls'});
+      const walls = this.wallsThisFrame_(library);
       const view = {width: p5.width, height: p5.height};
-      const grounded = players.some(sprite =>
-        isSupported(sprite, walls, view, this.platformGravity_)
-      );
-      if (!grounded) {
+      return library.getSpriteArray(spriteArg).some(sprite => {
+        const gravity =
+          sprite.group === 'players'
+            ? this.platformGravity_
+            : this.bodyGravity_();
+        return gravity === 0 || test(sprite, walls, view, gravity);
+      });
+    };
+    // Jump against gravity if any player has footing.
+    library.commands.platformJump = speed => {
+      // Weightless, the player is steered up and down instead.
+      if (this.platformGravity_ === 0) {
+        return;
+      }
+      if (!footing({group: 'players'}, isSupported)) {
         return;
       }
       const up = this.platformGravity_ < 0 ? 1 : -1;
-      players.forEach(sprite => {
+      library.getSpriteArray({group: 'players'}).forEach(sprite => {
         sprite.velocity.y = up * Math.abs(Number(speed) || 0);
       });
     };
+    // A behavior that wants gravity for its sprite marks it for the platform
+    // resolver, which otherwise moves only players. The mark lasts one frame
+    // — the resolver consumes it — so a removed behavior stops marking and
+    // its sprite is an ordinary sprite again.
+    library.commands.usePlatformBody = spriteArg => {
+      library.getSpriteArray(spriteArg).forEach(sprite => {
+        sprite.__slab2Body = true;
+      });
+    };
+    library.commands.platformGravity = () => this.platformGravity_;
+    library.commands.platformGrounded = spriteArg =>
+      footing(spriteArg, isSupported);
+    library.commands.platformSupportAhead = (spriteArg, direction) =>
+      footing(spriteArg, (sprite, walls, view, gravity) =>
+        hasSupportAhead(sprite, direction < 0 ? -1 : 1, walls, view, gravity)
+      );
     library.commands.playMusic = channelId => {
       if (channelId && this.onPlayMusic) {
         this.onPlayMusic(String(channelId));
@@ -713,41 +750,96 @@ export default class SpriteLab2Engine extends SpriteLab {
     };
   }
 
-  // Platformer physics for players (see platformPhysics.ts for the rules),
-  // run immediately before every paint — after p5's pre-phase velocity
-  // integration and after this frame's behaviors/events have moved
-  // sprites. Program-driven (non-player) sprites keep the stock resolver.
+  // Platformer physics for players and marked sprites (see
+  // platformPhysics.ts for the rules), run immediately before every paint —
+  // after p5's pre-phase velocity integration and after this frame's
+  // behaviors/events have moved sprites.
   resolvePlatformPhysics_() {
     if (!this.usesPlatformPhysics_ || !this.library || !this.p5Wrapper.p5) {
       return;
     }
     const p5 = this.p5Wrapper.p5;
-    // Snapshot player positions before the stock pass below: the movement
+    // Snapshot positions before the stock pass below: the movement
     // reconstruction must not see its shove.
-    const moved = this.library
-      .getSpriteArray({group: 'players'})
-      .map(sprite => ({
-        sprite,
-        x: sprite.position.x,
-        y: sprite.position.y,
-      }));
-    // Non-player sprites keep the stock resolver; running it pre-paint
-    // means patrollers and props draw already resolved.
+    const snapshot = sprite => ({
+      sprite,
+      x: sprite.position.x,
+      y: sprite.position.y,
+    });
+    const players = [];
+    const bodies = [];
+    Object.values(this.library.nativeSpriteMap).forEach(sprite => {
+      // Consuming the one-frame mark: see usePlatformBody.
+      const marked = sprite.__slab2Body;
+      sprite.__slab2Body = false;
+      if (sprite.group === 'players') {
+        players.push(snapshot(sprite));
+      } else if (marked) {
+        bodies.push(snapshot(sprite));
+      }
+    });
+    // A sprite whose mark stopped arriving (its behavior was removed) is an
+    // ordinary sprite again: upright, and not carrying the resolver's last
+    // fall speed.
+    this.prevBodies_.forEach(sprite => {
+      if (
+        !sprite.removed &&
+        sprite.group !== 'players' &&
+        !bodies.some(b => b.sprite === sprite)
+      ) {
+        sprite.mirrorY(1);
+        sprite.velocity.y = 0;
+      }
+    });
+    this.prevBodies_ = bodies.map(b => b.sprite);
+    // Under upward gravity a sprite stands on the ceiling, so it is drawn
+    // upside down — each list under its own gravity's sign. Drawing only:
+    // the body the resolver measures is unchanged.
+    players.forEach(({sprite}) =>
+      sprite.mirrorY(this.platformGravity_ < 0 ? -1 : 1)
+    );
+    const bodyUpright = this.bodyGravity_() < 0 ? -1 : 1;
+    bodies.forEach(({sprite}) => sprite.mirrorY(bodyUpright));
+    // Other sprites keep the stock resolver; running it pre-paint means
+    // props draw already resolved.
     this.library.commands.collide.call(
       this.library,
       'collide',
       {group: ''},
       {group: 'walls'}
     );
-    resolvePlatformPhysics(
-      moved,
-      this.library.getSpriteArray({group: 'walls'}),
-      {
-        width: p5.width,
-        height: p5.height,
-      },
-      this.platformGravity_
-    );
+    const walls = this.library.getSpriteArray({group: 'walls'});
+    const view = {width: p5.width, height: p5.height};
+    resolvePlatformPhysics(players, walls, view, this.platformGravity_);
+    if (bodies.length) {
+      resolvePlatformPhysics(bodies, walls, view, this.bodyGravity_());
+    }
+  }
+
+  // The walls, gathered once per frame — the footing commands ask several
+  // times a frame (behaviors run per sprite). Keyed on the library too, so
+  // a re-run's fresh library never reads the old scene's walls.
+  wallsThisFrame_(library) {
+    const p5 = this.p5Wrapper.p5;
+    if (
+      this.wallsCache_?.frame !== p5.frameCount ||
+      this.wallsCache_.library !== library
+    ) {
+      this.wallsCache_ = {
+        frame: p5.frameCount,
+        library,
+        walls: library.getSpriteArray({group: 'walls'}),
+      };
+    }
+    return this.wallsCache_.walls;
+  }
+
+  // Marked sprites keep a little downward pull at zero gravity, so
+  // patrollers still settle onto blocks while the player is steered about.
+  bodyGravity_() {
+    return this.platformGravity_ === 0
+      ? PATROLLER_WEIGHTLESS_GRAVITY
+      : this.platformGravity_;
   }
 
   // The resolution must run after this frame's behaviors/events but before
