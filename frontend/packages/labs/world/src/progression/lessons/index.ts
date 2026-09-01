@@ -2785,11 +2785,20 @@ const ruleProperty: WorldScenario = {
         {
           id: 'leaf',
           name: 'Leaf',
-          rows: [useTrait('Wind#BlownTrait'), setSprite('coin.png')],
+          // Wrapping, for the reason `making/trait` gives: the wind carries
+          // both Leaves off a 320-pixel world in under three seconds, and the
+          // lesson's last step — one Leaf at strength 3, the other left alone —
+          // is a comparison you have to be able to keep watching.
+          rows: [
+            useTrait('Wind#BlownTrait'),
+            useTrait('Screen Wrap#WrapsAcrossTrait'),
+            setSprite('coin.png'),
+          ],
         },
       ],
     }),
     sprites: ['coin'],
+    rules: ['wrap'],
     ruleFiles: {wind: WIND_RULE},
   }),
   instructions: `
@@ -3025,14 +3034,21 @@ const errand: WorldScenario = {
         addActor(local('token'), [placeAt(140, 200)]),
         addActor(local('token'), [placeAt(200, 200)]),
         addActor(local('token'), [placeAt(260, 200)]),
-        addActor(local('hero'), [placeAt(30, 200), setVelocity(2, 0)]),
+        addActor(local('hero'), [placeAt(30, 200)]),
       ],
       actors: [
         {
+          // WALKED, not shoved. A shove of two units is two hundred pixels a
+          // second, so the errand was over in a second and a quarter: by the
+          // time anybody looked up from the instructions the Tokens were gone,
+          // the Hero had left the world and the only thing on screen was the
+          // empty bar. An errand you do yourself is one you can watch the bar
+          // fail to notice — which is the whole lesson — and arrow keys are
+          // how every other Adventure lesson moves.
           id: 'hero',
           name: 'Hero',
           rows: [
-            useTrait('Physics#CanMoveTrait'),
+            useTrait('Arrow Keys#MovesAcrossTrait'),
             useTrait('Collisions#CanCollideTrait'),
             useTrait('Collection#CollectsTrait'),
             setSprite('player.png'),
@@ -3051,13 +3067,13 @@ const errand: WorldScenario = {
     }),
     stockActors: ['progressBar'],
     sprites: ['player', 'coin'],
-    rules: ['motion', 'collisions', 'collect'],
+    rules: ['motion', 'arrows', 'collisions', 'collect'],
   }),
   instructions: `
 ## Something to be doing
 
-Four Tokens, a Hero who takes them, and a bar along the top that stays empty
-however many are gone. The bar is not broken: nothing has told it anything.
+Four Tokens, a Hero who walks right into them, and a bar along the top that
+stays empty however many are gone. The bar is not broken: nothing has told it anything.
 
 An errand is a **fraction** — how much of it is done — and that is a number the
 game can work out at any moment rather than a tally to keep in step. The
@@ -3069,8 +3085,8 @@ tokens.
 1. Add **when ⟨any Hero⟩ collects**.
 2. In it, set the Progress Bar's **fraction** to
    **⟨how many ⟨Token⟩ in ⟨collected of ⟨this actor⟩⟩⟩ ÷ ⟨4⟩**.
-3. Run it. Halfway along the row the bar is half full, and it is exactly full
-   at the last one.
+3. Run it and walk the row. Halfway along it the bar is half full, and it is
+   exactly full at the last one.
 4. Add a fifth Token and run it again. The bar is wrong now — 4 was typed in —
    which is the moment to ask the world how many Tokens there ARE rather than
    how many you meant to put in.
@@ -3198,20 +3214,37 @@ const ownTrait: WorldScenario = {
         addActor(local('leaf'), [placeAt(60, 100)]),
         addActor(local('stone'), [placeAt(60, 220)]),
       ],
+      // Both wraps on both of them, so the weather is something a learner can
+      // watch rather than something that has already happened. The drift is
+      // two pixels a frame, which crosses a 320-pixel world in under three
+      // seconds — long before anybody has finished reading why it drifts — and
+      // an empty world is a lesson that looks broken. The Stone sinks by the
+      // end of the lesson, so it needs the other axis for the same reason.
       actors: [
         {
           id: 'leaf',
           name: 'Leaf',
-          rows: [useTrait('Weather#BlownTrait'), setSprite('coin.png')],
+          rows: [
+            useTrait('Weather#BlownTrait'),
+            useTrait('Screen Wrap#WrapsAcrossTrait'),
+            useTrait('Screen Wrap#WrapsDownTrait'),
+            setSprite('coin.png'),
+          ],
         },
         {
           id: 'stone',
           name: 'Stone',
-          rows: [useTrait('Weather#BlownTrait'), setSprite('box.png')],
+          rows: [
+            useTrait('Weather#BlownTrait'),
+            useTrait('Screen Wrap#WrapsAcrossTrait'),
+            useTrait('Screen Wrap#WrapsDownTrait'),
+            setSprite('box.png'),
+          ],
         },
       ],
     }),
     sprites: ['coin', 'box'],
+    rules: ['wrap'],
     ruleFiles: {weather: WEATHER_RULE},
   }),
   instructions: `
@@ -4331,6 +4364,11 @@ const neighbours: WorldScenario = {
           name: 'Walker',
           rows: [
             useTrait('Physics#CanMoveTrait'),
+            // …and round again, so "watch the lit patch travel with the
+            // Walker" is something a learner can do more than once. At one
+            // unit a second the Walker is off a 320-pixel world in three, and
+            // a patch that has already gone past is a patch nobody saw.
+            useTrait('Screen Wrap#WrapsAcrossTrait'),
             setSprite('player.png'),
             {
               type: 'world_trait_step',
@@ -4352,7 +4390,7 @@ const neighbours: WorldScenario = {
       ],
     }),
     sprites: ['player', 'box', 'coin'],
-    rules: ['motion'],
+    rules: ['motion', 'wrap'],
   }),
   instructions: `
 ## Everything near me

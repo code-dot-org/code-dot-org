@@ -2437,7 +2437,14 @@ export const TILES: readonly Tile[] = [
           done: {kind: 'property', of: 'Progress Bar', name: 'fraction'},
           left: {kind: 'actorCount', of: 'Token'},
         },
-        trace: Array.from({length: 10}, () => ({seconds: 0.3})),
+        // Holding right, because the Hero walks now rather than being shoved
+        // (`lessons/index`): the errand is something the player does, so the
+        // script has to do it. Ten samples over three seconds covers a walk of
+        // 1.5 units a second from x=30 past the last Token at 260.
+        trace: Array.from({length: 10}, () => ({
+          hold: ['ArrowRight'],
+          seconds: 0.3,
+        })),
       },
       passes: ({samples}) => {
         const done = (samples.done ?? []).map(sample =>
@@ -2784,9 +2791,25 @@ export const TILES: readonly Tile[] = [
         probes: {leaves: {kind: 'positions', of: 'Leaf'}},
         trace: Array.from({length: 4}, () => ({seconds: 0.3})),
       },
+      // HOW FAR EACH ONE TRAVELS, not where the two of them ended up. The
+      // Leaves wrap now (the wind carries them off a 320-pixel world in under
+      // three seconds, and a lesson whose subject is a comparison has to stay
+      // watchable), and once a position is modular "they are 40 apart" is a
+      // claim that comes and goes as they lap each other. Distance over one
+      // interval does not: it is the speed, which is the thing the lesson
+      // changed.
       passes: ({samples}) => {
-        const leaves = lastList<{x: number}>(samples.leaves);
-        return leaves.length === 2 && Math.abs(leaves[0].x - leaves[1].x) > 40;
+        const at = (index: number) =>
+          (samples.leaves?.[index] ?? []) as {x: number}[];
+        const [before, after] = [at(0), at(1)];
+        if (before.length !== 2 || after.length !== 2) {
+          return false;
+        }
+        // Forward only, and less than a lap: the wind blows one way, so a
+        // position that went backwards went round the edge.
+        const travelled = (which: number) =>
+          (after[which].x - before[which].x + 320) % 320;
+        return Math.abs(travelled(0) - travelled(1)) > 40;
       },
     },
   },
@@ -2910,13 +2933,25 @@ export const TILES: readonly Tile[] = [
         },
         trace: Array.from({length: 4}, () => ({seconds: 0.3})),
       },
+      // Distances taken FORWARD ROUND THE EDGE, because both actors wrap now
+      // (`lessons/index`: the wind carries them off the world in under three
+      // seconds and the lesson stops being watchable). The weather only ever
+      // adds — the Leaf drifts right, the Stone sinks — so a coordinate that
+      // went backwards went round, and `% 320` is the distance it actually
+      // travelled. It also makes the "and not the other way" halves stricter
+      // rather than weaker: a small drift backwards reads as a large one
+      // forwards, and is refused.
       passes: ({samples}) => {
+        const forward = (from: number, to: number) => (to - from + 320) % 320;
         const drift = (name: string) => {
           const path = (samples[name] ?? []) as {x: number; y: number}[][];
           const first = path[0]?.[0];
           const last = path[path.length - 1]?.[0];
           return first && last
-            ? {x: last.x - first.x, y: last.y - first.y}
+            ? {
+                x: forward(first.x, last.x),
+                y: forward(first.y, last.y),
+              }
             : undefined;
         };
         const leaf = drift('leaf');
