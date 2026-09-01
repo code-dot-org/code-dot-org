@@ -33,6 +33,14 @@ const rule = defineRule({
 // later for the common case; it could not have come first, because nothing yet
 // knows what a line needs to be able to do.
 //
+// THE LANGUAGE HAS LISTS NOW (specs/LISTS.md), and this rule is deliberately
+// unchanged by them. A project whose lines are only words may keep them in a
+// \`words\` property and say the one it is on, which is shorter than an \`if\`
+// per line — and the rule still holds none of it, because the moment a line
+// wants a portrait or a sound it stops being a word and the blocks answering
+// \`moves to a line\` are where that is said. History was the rule the missing
+// list had bent out of shape; this was not one.
+//
 // THE CURSOR IS ONE-BASED and starts at zero. Line one is the first thing said,
 // and zero means nobody is talking — which is a state a conversation is in
 // before it starts and after it ends, and one a handler can ask about without a

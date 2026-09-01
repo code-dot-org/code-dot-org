@@ -196,13 +196,25 @@ of` gave it a reason.
    grants the category — eleven blocks that are one idea, where the Actor drawer
    is forty-two that are not — and its lesson is the next step.
 
-3. **The index.** `item ⟨n⟩ of ⟨list⟩`, one-based — held back until something
-   asks for it, which is the discipline the actor lists kept: `ordered by`
-   arrived only when `take ⟨3⟩ of` gave it a reason. The question it has to
-   answer first is what "past the end" is, and the honest options (nothing, the
-   last one, a zero of a type the block cannot know) are easier to choose
-   between with a real use in front of them — which is the Conversation
-   rewrite, step 5.
+3. **The index.** `item ⟨n⟩ of ⟨list⟩`, one-based — STILL held back, and now
+   for a better reason than caution. It was expected to be forced by step 5, and
+   step 5 came and went: History wanted a stack, which is `add … to` and `take
+the last off` and `last of`, and Conversation wants no list at all.
+
+   So nothing in the library indexes a list, and the discipline the actor lists
+   kept applies — `ordered by` arrived only when `take ⟨3⟩ of` gave it a reason.
+   What would give this one a reason is a LESSON: a script addressed by its
+   cursor (`say ⟨item ⟨line⟩ of ⟨lines⟩⟩` in place of an `if` per line) would
+   force it, and that is a teaching decision rather than a code one — `story/
+script` is about the cursor today, and Story does not pass through the tile
+   that grants the Lists drawer.
+
+   When it is built, the question to answer first is what "past the end" is.
+   The candidates are nothing (an empty word: quiet, and quietly odd in a
+   number socket), the nearest one there is (never wrong-looking, silently
+   wrong), and a zero of a type the block cannot know. The motivating use will
+   decide it, which is why it has not been decided here.
+
 4. ✅ **A lesson.** `memory/lists` — three notes made by three stacks of blocks
    that know nothing about each other, and one list and one loop that make the
    same three. Step three adds a fourth thing and nothing else changes, which is
@@ -219,7 +231,7 @@ of` gave it a reason.
    goes. That is the first place the missing index is felt, and it is left felt
    rather than answered.
 
-5. **The rules that were written around it.** History ✅; Conversation to come.
+5. ✅ **The rules that were written around it.** One, and it was History.
 
    **History's eight slots are one list**, and three things went with them: the
    depth, the paragraph explaining why the depth was eight, and the shifting —
