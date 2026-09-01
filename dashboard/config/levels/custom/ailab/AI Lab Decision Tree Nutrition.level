@@ -1,0 +1,17 @@
+<Ailab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 67,
+  "created_at": "2026-09-01T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "uses_lab2": "true",
+    "long_instructions": "Predict the calories in a food from its fat, carbohydrate, protein and water. The label is a number, so the tree predicts the average of the foods that reach the same leaf, not one of the values it was trained on.",
+    "hide_share_and_remix": "false",
+    "mode": "{\"trainer\":\"decisionTree\",\"datasets\":[\"nutrition\"],\"randomizeTestData\":true}"
+  }
+}]]></config>
+</Ailab>

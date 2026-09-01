@@ -1,0 +1,628 @@
+"Summary","Issue Type","Epic Name","Epic Link","Description","Component","Labels","Labels","Labels","Labels"
+"AI Lab: decision tree model","Epic","AI Lab: decision tree model","","h3. Why
+AI Lab has one machine learning algorithm: k-nearest neighbors. A student cannot compare two algorithms. A student also cannot read the model. A kd-tree is not legible. A shallow decision tree is legible, and a student can draw one by hand.
+
+AI Lab also has no interface that lets you add a second algorithm. This epic adds the interface. It then adds the first algorithm that uses the interface.
+
+h3. Terms
+* A {{sweep}} is a search over candidate hyperparameter values. The trainer trains one model for each candidate, then keeps the most accurate model.
+* A {{characterization test}} records the current behavior of the code, so that a later change cannot alter that behavior without a test failure.
+
+h3. How this epic is split
+* One ticket is one PR. Each ticket gives its branch and its merge order.
+* Four tickets produce no PR: two decisions and two manual QA passes. Each of these tickets says so at the top of its description.
+* Three tickets depend on nothing else in the epic. You can start them immediately: the App Lab hyperparameters reader, the {{ml-cart}} dependency, and the {{parseInt}} bug fix.
+* Phases 1 to 3 are the first release. Phases 4 to 6 come after it: a student-set depth, removal of the legacy {{kValue}} write, and the tree visualization panel.
+
+h3. Scope
+* Lab2 only. Lab1 AI Lab uses a different copy of the machine learning code ({{@code-dot-org/ml-playground}}, in a different repository). That copy keeps KNN only.
+* You do not need new localization strings.
+
+h3. Writing convention
+These tickets and the openspec documents use ASD-STE100. The specification files keep the RFC-2119 verb {{SHALL}}, because the openspec schema and the other openspec change in the repository use it.
+
+h3. Reference
+Full spec: {{openspec/changes/ailab-decision-tree/}} (proposal.md, design.md, tasks.md, specs/)","AI Lab","ailab","ailab-decision-tree","",""
+"Retire the legacy kValue write","Task","","AI Lab: decision tree model","*Delivers:* one PR — {{ailab/retire-kvalue-write}}
+*Merge order:* 18
+*Blocked by:* Add the hyperparameters field to the saved model
+
+h3. Why
+A KNN model currently writes both `hyperparameters.k` and the top-level `kValue`. Once the reader has been deployed for a release, you can remove the duplicate write.
+
+This ticket removes the WRITE only. The reader's fallback stays, permanently. Stored models stay in S3 forever. Every model saved before `hyperparameters` existed carries only `kValue`. App Lab projects refer to those models by id for years. If you remove the fallback read, a student's working project stops working.
+
+h3. Scope
+* Remove the `kValue` write from `getTrainedModelDataToSave`, and the field from `ModelDataToSave`.
+* Leave the fallback read in `apps/src/MLTrainers.js`. Add a comment stating why it cannot be removed: stored models are permanent.
+* Update the characterization test for the `kValue` field on a saved model.
+* Out of scope: a backfill that rewrites stored models to add `hyperparameters`. A backfill would let you remove the fallback. It also rewrites student work in S3, and no user sees a result.
+
+h3. Files
+* {{frontend/packages/labs/ailab/src/redux.ts}}
+* {{frontend/packages/labs/ailab/src/types.ts}}
+* {{apps/src/MLTrainers.js (comment only)}}
+* {{frontend/packages/labs/ailab/test/unit/}}
+
+h3. Acceptance criteria
+* A newly saved KNN model carries `hyperparameters` and no `kValue`.
+* A model saved before the field still predicts correctly in App Lab.
+* The fallback read is still present, with a comment explaining why.
+
+h3. Reference
+Spec: {{openspec/changes/ailab-decision-tree/}} (openspec tasks.md follow-ups; design.md Decision 5)","AI Lab","ailab","ailab-decision-tree","ailab-cleanup",""
+"Add ml-cart and its hand-written types","Task","","AI Lab: decision tree model","*Delivers:* one PR — {{ailab/add-ml-cart}}
+*Merge order:* 10 (independent — you can start now)
+*Blocked by:* nothing
+
+h3. Why
+`ml-cart` is the mljs CART implementation, from the same family as `ml-knn`. It ships no TypeScript types.
+
+This lands as its own PR so the dependency and the hand-written types are reviewed and installed on their own. It depends on nothing. You can do it early, at the same time as other work.
+
+h3. Scope
+* Add `ml-cart` at the exact version 2.1.1 to `frontend/packages/labs/ailab/package.json` and to `apps/package.json`.
+* Use the exact version, not a caret range. This departs from the neighboring `ml-knn` entries, which both use `^3.0.0`. The types are hand-written here, and a minor bump can silently invalidate them.
+* Add an `ml-cart` declaration block to `src/declarations.d.ts`, patterned on the existing `ml-knn` block. Declare `DecisionTreeClassifier` and `DecisionTreeRegression`, each with `train`, `predict`, `toJSON` and a static `load`.
+* Type `predict` as taking `number[][]` and returning `number[]`. A flat array throws at runtime, so the type must not allow one.
+
+h3. Files
+* {{frontend/packages/labs/ailab/package.json}}
+* {{apps/package.json}}
+* {{frontend/packages/labs/ailab/src/declarations.d.ts}}
+
+h3. Acceptance criteria
+* `typecheck` passes with the new types.
+* The declared options are `gainFunction`, `splitFunction`, `minNumSamples`, `maxDepth` and `gainThreshold`.
+* The lock file updates in the same PR.
+
+h3. Reference
+Spec: {{openspec/changes/ailab-decision-tree/}} (openspec tasks 3.1-3.2a)","AI Lab","ailab","ailab-decision-tree","ailab-decision-tree-impl",""
+"Implement DecisionTreeTrainer with a maxDepth sweep","Task","","AI Lab: decision tree model","*Delivers:* one PR — {{ailab/decision-tree-trainer}}
+*Merge order:* 11
+*Blocked by:* Add ml-cart and its hand-written types; Remove the Redux round-trip from the k sweep
+
+h3. Why
+This is the feature. A student can read a shallow decision tree. A student cannot read a kd-tree.
+
+This PR includes the tests. Do not put them in a later PR. A reviewer cannot approve a trainer that has no tests.
+
+h3. Scope
+* Add `src/trainers/DecisionTreeTrainer.ts` implementing `Trainer`.
+* Pick `DecisionTreeClassifier` or `DecisionTreeRegression` from `isRegression(state)`.
+* Sweep `maxDepth` over [1, 2, 3, 5, 8]. Grade each tree with `gradeAccuracy`, and keep the most accurate.
+* On equal accuracy keep the LOWER depth. This differs from the `k` sweep, which keeps the first highest scorer. A shallow tree is the reason to offer a tree at all.
+* Pass `minNumSamples: 1`, not the library default of 3. Measured on a 9-row training set, the default misclassifies training rows that 1 classifies correctly. AI Lab datasets are small. A large minimum leaf size makes a tree that has only one leaf.
+* Record `{maxDepth, minNumSamples}` in `hyperparameters`. Write no `kValue`.
+* Register the trainer under the `decisionTree` family, mapping to `treeClassify` and `treeRegress` by label column type.
+* Test the full flow with the `train.test.js` pattern.
+* Test the tie-break: equal accuracy at two depths stores the shallower tree.
+* Test that a regression prediction can fall between observed label values.
+* Test the JSON round-trip for both tree kinds.
+
+h3. Files
+* {{frontend/packages/labs/ailab/src/trainers/DecisionTreeTrainer.ts (new)}}
+* {{frontend/packages/labs/ailab/src/trainers/ (registry)}}
+* {{frontend/packages/labs/ailab/test/unit/}}
+
+h3. Acceptance criteria
+* Two depths with equal accuracy store the shallower tree.
+* A regression prediction is asserted to be a value present in no training label.
+* The round-trip test asserts identical predictions before and after serialization.
+* The trainer is unreachable from any level until the next ticket lands. That is expected.
+
+h3. Reference
+Spec: {{openspec/changes/ailab-decision-tree/}} (openspec tasks 4.1-4.8)","AI Lab","ailab","ailab-decision-tree","ailab-decision-tree-impl",""
+"Select the trainer from the level mode JSON","Task","","AI Lab: decision tree model","*Delivers:* one PR — {{ailab/mode-trainer-field}}
+*Merge order:* 12
+*Blocked by:* Implement DecisionTreeTrainer with a maxDepth sweep
+
+h3. Why
+A level chooses the algorithm. This is the PR that makes the tree reachable. You do not need a new level editor control. `_ailab.html.haml` already shows a free-form Mode JSON text area and the Lab2 checkbox.
+
+h3. Scope
+* Add `trainer?: 'knn' | 'decisionTree'` to the `Mode` interface.
+* Read `mode.trainer` in `train.ts` when building the trainer. An absent value gives `knn`.
+* An unrecognized value logs a warning and falls back to `knn`. A typo in hand-edited level JSON must not give a student a blank lab. Test it.
+
+h3. Files
+* {{frontend/packages/labs/ailab/src/types.ts}}
+* {{frontend/packages/labs/ailab/src/train.ts}}
+
+h3. Acceptance criteria
+* All 189 existing levels, none of which set the field, behave as before.
+* A level with `""trainer"": ""decisionTree""` trains a tree.
+* A test covers the unknown-value fallback.
+
+h3. Reference
+Spec: {{openspec/changes/ailab-decision-tree/}} (openspec tasks 5.1-5.2a)","AI Lab","ailab","ailab-decision-tree","ailab-decision-tree-impl",""
+"Add the decision tree branch to MLTrainers.predict","Task","","AI Lab: decision tree model","*Delivers:* one PR — {{ailab/mltrainers-decision-tree}}
+*Merge order:* 13
+*Blocked by:* Add ml-cart and its hand-written types
+
+h3. Why
+A student trains a tree in a Lab2 AI Lab level, then predicts from it in App Lab. Every App Lab prediction routes through this file, so the feature is incomplete without the branch. The change is additive, so no Lab1 behavior changes.
+
+h3. Scope
+* Add the `treeClassify` and `treeRegress` branch. Reload with the matching static `load`.
+* Wrap the feature row in an array for `predict`, and unwrap the single result. The existing KNN call passes a flat array, which `ml-cart` rejects with `TypeError: Data must be a 2D array with at least one element`.
+* Catch the `RangeError` that `load` raises when `model.name` does not match the algorithm. Return the existing prediction error string. A corrupt blob must not break a running App Lab program.
+
+h3. Files
+* {{apps/src/MLTrainers.js}}
+
+h3. Acceptance criteria
+* A saved KNN blob and a saved tree blob both predict correctly.
+* An unknown trainer id still returns 'Error: unknown trainer'.
+* A mismatched blob returns the error string and throws nothing.
+
+h3. Reference
+Spec: {{openspec/changes/ailab-decision-tree/}} (openspec tasks 5.3-5.3b, 5.5)","AI Lab","ailab","ailab-decision-tree","ailab-decision-tree-impl",""
+"Fix the parseInt truncation in convertTestValue","Bug","","AI Lab: decision tree model","*Delivers:* one PR — {{ailab/fix-parseint-truncation}}
+*Merge order:* 14 (independent — you can start now)
+*Blocked by:* nothing
+
+h3. Why
+`convertTestValue` in `apps/src/MLTrainers.js` ends with `parseInt(convertedValue)`. The lab trains on the result of `parseFloat`. So every continuous feature value is truncated at prediction time: a temperature of 72.8 trains as 72.8 and predicts as 72.
+
+This is a live defect in KNN prediction today, not a decision tree problem. It depends on nothing in this epic and can ship at any point. A tree makes the result worse. If a threshold is between two integers, the truncated value goes down the other branch.
+
+h3. Scope
+* Change `parseInt` to `parseFloat`.
+* A categorical value still resolves through `featureNumberKey` first, so its integer is unaffected.
+* Call the fix out in the PR description. It changes prediction results on existing levels.
+
+h3. Files
+* {{apps/src/MLTrainers.js}}
+
+h3. Acceptance criteria
+* A feature value of 72.8 reaches the model as 72.8.
+* A categorical feature value still resolves to its integer.
+* Tests cover both cases.
+
+h3. Reference
+Spec: {{openspec/changes/ailab-decision-tree/}} (openspec tasks 5.4, 5.4a)","AI Lab","ailab","ailab-decision-tree","ailab-decision-tree-impl",""
+"Accept an externally set tree depth","Task","","AI Lab: decision tree model","*Delivers:* one PR — {{ailab/external-tree-depth}}
+*Merge order:* 16
+*Blocked by:* Implement DecisionTreeTrainer with a maxDepth sweep
+
+h3. Why
+The sweep picks the depth today. A level-set depth and a student-set depth both need the trainer to accept one and skip the sweep. Add this behavior once, before either caller exists. The student control is then only a user interface change.
+
+h3. Scope
+* Add `maxDepth?: number` to the `Mode` interface.
+* When a depth is supplied, train one tree at that depth and skip the sweep.
+* When none is supplied, sweep exactly as now.
+* Widen `hyperparameters` to `Record<string, number | string>` and record where the depth came from: `sweep`, `level`, or later `student`. A number-only map cannot hold it, and the model card needs to say which.
+* Reject a non-integer or a depth below 1: log a warning and fall back to the sweep. Level JSON is hand-edited.
+
+h3. Files
+* {{frontend/packages/labs/ailab/src/types.ts}}
+* {{frontend/packages/labs/ailab/src/train.ts}}
+* {{frontend/packages/labs/ailab/src/trainers/DecisionTreeTrainer.ts}}
+* {{frontend/packages/labs/ailab/src/redux.ts}}
+
+h3. Acceptance criteria
+* A level with `mode.maxDepth` trains exactly one tree, at that depth.
+* A level without it sweeps, and its saved model is unchanged.
+* An invalid value warns and sweeps.
+* The saved model records the depth source.
+
+h3. Reference
+Spec: {{openspec/changes/ailab-decision-tree/}} (openspec design.md Decision 4)","AI Lab","ailab","ailab-decision-tree","ailab-depth-control",""
+"Let a student choose the tree depth","Task","","AI Lab: decision tree model","*Delivers:* one PR — {{ailab/student-depth-control}}
+*Merge order:* 17
+*Blocked by:* Accept an externally set tree depth
+
+h3. Why
+Depth is the control that teaches the lesson. A student who moves it and watches accuracy change sees overfitting happen. The sweep prevents this, because it selects the depth for the student.
+
+h3. Scope
+* Agree three points with curriculum before you build. The design records them as an open question.
+* Point 1: where the control sits in the flow.
+* Point 2: the range of depths a student can choose.
+* Point 3: whether accuracy updates on each change, or only on an explicit retrain.
+* Add a `mode` opt-in, so only levels that ask for the control show it.
+* Add the control to the train step, and retrain on change.
+* Record the depth in `hyperparameters` with source `student`.
+* Keep the sweep as the default for every level that does not opt in.
+
+h3. Files
+* {{frontend/packages/labs/ailab/src/types.ts}}
+* {{frontend/packages/labs/ailab/src/UIComponents/TrainModel.tsx}}
+* {{frontend/packages/labs/ailab/src/redux.ts}}
+
+h3. Acceptance criteria
+* Levels without the opt-in are unchanged.
+* Changing the depth retrains, and the reported accuracy moves.
+* The saved model records the student's depth and marks it student-set.
+* The control is keyboard reachable and labelled.
+
+h3. Reference
+Spec: {{openspec/changes/ailab-decision-tree/}} (openspec design.md Open Questions)","AI Lab","ailab","ailab-decision-tree","ailab-depth-control",""
+"Author the Lab2 decision tree levels","Task","","AI Lab: decision tree model","*Delivers:* one PR — {{ailab/decision-tree-levels}}
+*Merge order:* 15
+*Blocked by:* Select the trainer from the level mode JSON; Confirm the sweep depths and choose a dataset with curriculum
+
+h3. Why
+No student sees the feature until Lab2 levels exist. Only 3 of 189 AI Lab levels currently set `uses_lab2`, and all three are internal test levels.
+
+h3. Scope
+* Set `uses_lab2` on each new level.
+* Put `""trainer"": ""decisionTree""` in the level's Mode JSON.
+* The level editor already has both controls. You do not need to change the editor.
+
+h3. Files
+* {{dashboard/config/levels/custom/ailab/}}
+
+h3. Acceptance criteria
+* Each new level loads the Lab2 AI Lab view.
+* Each new level trains a decision tree.
+
+h3. Reference
+Spec: {{openspec/changes/ailab-decision-tree/}} (openspec task 6.3)","AI Lab","ailab","ailab-decision-tree","ailab-levels-qa",""
+"Confirm the sweep depths and choose a dataset with curriculum","Task","","AI Lab: decision tree model","*Delivers:* no PR
+*Blocked by:* Implement DecisionTreeTrainer with a maxDepth sweep
+
+h3. Why
+No PR. This is a decision that has to be made before the levels can be authored.
+
+The candidate depths [1, 2, 3, 5, 8] are an engineering starting point, not a considered pedagogy. A depth-limited tree on small noisy data can also score below KNN, which would teach the wrong lesson.
+
+h3. Scope
+* Agree the candidate depths with curriculum.
+* Choose or build a dataset where a shallow tree splits meaningfully.
+* Decide whether any level should fix the depth instead of sweeping. `mode` is an open object, so `mode.maxDepth` needs no schema change.
+
+h3. Files
+* {{openspec/changes/ailab-decision-tree/design.md (Open Questions)}}
+
+h3. Acceptance criteria
+* The depth list is agreed and recorded.
+* A named dataset is chosen, and a tree on it beats or matches KNN.
+* If the agreed depths differ from the shipped list, file a follow-up ticket for the change.
+
+h3. Reference
+Spec: {{openspec/changes/ailab-decision-tree/}} (openspec tasks 6.1, 6.2)","AI Lab","ailab","ailab-decision-tree","ailab-levels-qa","no-pr"
+"QA the Lab2 AI Lab path end to end","Task","","AI Lab: decision tree model","*Delivers:* no PR
+*Blocked by:* Author the Lab2 decision tree levels
+
+h3. Why
+No PR. This is a manual pass.
+
+Lab2 AI Lab has only ever been exercised by three internal test levels. Curriculum levels are about to depend on it, so the path itself needs a pass, not only the new algorithm.
+
+h3. Scope
+* Walk the full panel flow on a real level.
+* Check the accuracy gate. `mode.requireAccuracy` is enforced inside the package's own `navigationValidation.ts`, not through Lab2 validation.
+* Save a model.
+* Confirm progress is reported on continue.
+* File a ticket per defect found. Do not fix in place.
+
+h3. Files
+* {{apps/src/ailab/lab2/views/AilabView.tsx}}
+
+h3. Acceptance criteria
+* Every panel renders and navigates.
+* The accuracy gate blocks continue below the threshold.
+* The level is marked complete after continue.
+
+h3. Reference
+Spec: {{openspec/changes/ailab-decision-tree/}} (openspec task 6.4)","AI Lab","ailab","ailab-decision-tree","ailab-levels-qa","no-pr"
+"QA the cross-stack model save and predict loop","Task","","AI Lab: decision tree model","*Delivers:* no PR
+*Blocked by:* Add the decision tree branch to MLTrainers.predict; Author the Lab2 decision tree levels
+
+h3. Why
+No PR. This is a manual pass.
+
+AI Lab and App Lab are on different stacks but share one prediction path. A tree saved in Lab2 is consumed by Lab1 code, and models saved before this epic must keep working.
+
+h3. Scope
+* Train a tree in a Lab2 level, save it, then predict from it in App Lab.
+* Confirm a KNN model saved before the first ticket still predicts correctly after every ticket deploys.
+
+h3. Files
+* {{apps/src/MLTrainers.js}}
+* {{apps/src/applab/ai.js}}
+
+h3. Acceptance criteria
+* A tree model predicts correctly from an App Lab program.
+* A pre-epic KNN model predicts correctly.
+
+h3. Reference
+Spec: {{openspec/changes/ailab-decision-tree/}} (openspec tasks 6.5, 6.6)","AI Lab","ailab","ailab-decision-tree","ailab-levels-qa","no-pr"
+"Record current KNN behavior in characterization tests","Task","","AI Lab: decision tree model","*Delivers:* one PR — {{ailab/knn-characterization-tests}}
+*Merge order:* 1
+*Blocked by:* nothing
+
+h3. Why
+Every ticket in this phase claims to change no behavior. That claim needs a test that exists BEFORE the refactor. A parity test that you write afterwards records the behavior of the changed code. It does not record the behavior of the code before the change.
+
+The save-and-reload path also has no test today, for either algorithm.
+
+h3. Scope
+* Add tests over two seeded datasets. One dataset has a categorical label. The other has a numerical label.
+* Record these values for each dataset: the chosen `k`, the reported accuracy, the `selectedTrainer` string, `kValue`, and the predictions.
+* Add the missing round-trip test: train, `toJSON`, `load`, predict, compare.
+* Put the recorded values into the tests as the expected values. Any later ticket that moves one has to say why in its PR description.
+
+h3. Files
+* {{frontend/packages/labs/ailab/test/unit/}}
+
+h3. Acceptance criteria
+* The suite fails if a refactor changes a chosen `k`, an accuracy, a saved string, or a prediction.
+* The round-trip test passes for both label column types.
+
+h3. Reference
+Spec: {{openspec/changes/ailab-decision-tree/}} (openspec tasks 1.8, 2.7)","AI Lab","ailab","ailab-decision-tree","ailab-trainer-seam",""
+"Define the Trainer interface and the trainer registry","Task","","AI Lab: decision tree model","*Delivers:* one PR — {{ailab/trainer-interface}}
+*Merge order:* 2
+*Blocked by:* Record current KNN behavior in characterization tests
+
+h3. Why
+AI Lab has one algorithm. There is no interface that lets you add a second one. `train.ts` constructs `KNNTrainer` directly.
+
+h3. Scope
+* Add `src/trainers/types.ts` with a `Trainer` interface: `startTraining`, `predict`, `batchPredict`.
+* Add a `TrainerId` union covering `knnClassify`, `knnRegress`, `treeClassify` and `treeRegress`.
+* Add a registry that maps a trainer family to a constructor. Give it one entry: `knn`.
+* Change `train.ts` to build the trainer from the registry. Do not read `mode` yet. Default to `knn`.
+
+h3. Files
+* {{frontend/packages/labs/ailab/src/trainers/types.ts (new)}}
+* {{frontend/packages/labs/ailab/src/train.ts}}
+
+h3. Acceptance criteria
+* The characterization suite passes unchanged.
+* The registry has exactly one entry.
+* `typecheck` passes.
+
+h3. Reference
+Spec: {{openspec/changes/ailab-decision-tree/}} (openspec tasks 1.1-1.3)","AI Lab","ailab","ailab-decision-tree","ailab-trainer-seam",""
+"Make KNNTrainer implement Trainer, and keep the winning model","Task","","AI Lab: decision tree model","*Delivers:* one PR — {{ailab/knn-trainer-interface}}
+*Merge order:* 3
+*Blocked by:* Define the Trainer interface and the trainer registry
+
+h3. Why
+`getOptimalModelDetails` leaves `this.knn` set to the model for the last candidate `k`, not the best one. Nothing depends on it today, because `predict()` reads `state.trainedModel`. Fix it before a second trainer copies the pattern.
+
+h3. Scope
+* Make `KNNTrainer` implement the `Trainer` interface.
+* Keep every existing method and every existing `k` candidate rule unchanged.
+* Set the trainer's own model to the winner of the sweep.
+* Add a test that a `batchPredict` call after training uses the winning model.
+
+h3. Files
+* {{frontend/packages/labs/ailab/src/trainers/KNNTrainer.ts}}
+
+h3. Acceptance criteria
+* The characterization suite passes unchanged.
+* A `batchPredict` call after training uses the winning model.
+
+h3. Reference
+Spec: {{openspec/changes/ailab-decision-tree/}} (openspec tasks 1.4, 1.7)","AI Lab","ailab","ailab-decision-tree","ailab-trainer-seam",""
+"Remove the ml-knn type from Redux, types and the store","Task","","AI Lab: decision tree model","*Delivers:* one PR — {{ailab/drop-knn-type-from-redux}}
+*Merge order:* 4
+*Blocked by:* Make KNNTrainer implement Trainer, and keep the winning model
+
+h3. Why
+Redux types the trained model as `KNN`. That type is what makes a second algorithm impossible to add without touching the store.
+
+h3. Scope
+* Remove the `ml-knn` type import from `redux.ts` and from `types.ts`.
+* Type `trainedModel` through the `Trainer` interface instead.
+* Keep the `serializableCheck` exception in `store.ts`. Update its comment: the model is no longer specifically a KNN instance.
+
+h3. Files
+* {{frontend/packages/labs/ailab/src/redux.ts}}
+* {{frontend/packages/labs/ailab/src/types.ts}}
+* {{frontend/packages/labs/ailab/src/store.ts}}
+
+h3. Acceptance criteria
+* No file outside `src/trainers/` imports from `ml-knn`.
+* No Redux serializable-check warning appears in the console.
+* The characterization suite passes unchanged.
+
+h3. Reference
+Spec: {{openspec/changes/ailab-decision-tree/}} (openspec task 1.5)","AI Lab","ailab","ailab-decision-tree","ailab-trainer-seam",""
+"Take selectedTrainer from the trainer id","Task","","AI Lab: decision tree model","*Delivers:* one PR — {{ailab/selected-trainer-from-id}}
+*Merge order:* 5
+*Blocked by:* Define the Trainer interface and the trainer registry
+
+h3. Why
+`getTrainedModelDataToSave` derives `selectedTrainer` from `isRegression(state)`. The trainer id must become the source of truth, because a second algorithm makes the label column type insufficient on its own.
+
+h3. Scope
+* Set `selectedTrainer` from the trainer id.
+* Keep the label column type as the choice between classification and regression.
+
+h3. Files
+* {{frontend/packages/labs/ailab/src/redux.ts}}
+
+h3. Acceptance criteria
+* A KNN model saves `knnClassify` or `knnRegress`, byte-identical to today. `apps/src/MLTrainers.js` and every stored model depend on these strings.
+* The characterization test for the saved string passes unchanged.
+
+h3. Reference
+Spec: {{openspec/changes/ailab-decision-tree/}} (openspec task 1.6)","AI Lab","ailab","ailab-decision-tree","ailab-trainer-seam",""
+"Extract gradeAccuracy as a pure function","Task","","AI Lab: decision tree model","*Delivers:* one PR — {{ailab/pure-grade-accuracy}}
+*Merge order:* 6
+*Blocked by:* Record current KNN behavior in characterization tests
+
+h3. Why
+Grading only exists as selectors over store state. A hyperparameter sweep cannot grade a candidate without writing it to the store first.
+
+h3. Scope
+* Add `gradeAccuracy(predictedLabels, expectedLabels, options)` to `src/helpers/accuracy.ts`. Return the grades and the percentage.
+* Carry the regression tolerance and the label range in the options.
+* Reimplement `getAccuracyClassification` and `getAccuracyRegression` over it. Keep their signatures, so no user interface component changes.
+* Unit-test an exact match for a categorical label, the 5%-of-range tolerance for a numerical label, and an empty prediction list.
+
+h3. Files
+* {{frontend/packages/labs/ailab/src/helpers/accuracy.ts}}
+
+h3. Acceptance criteria
+* Reported accuracy is unchanged; the characterization suite passes.
+* The new unit tests cover all three cases.
+
+h3. Reference
+Spec: {{openspec/changes/ailab-decision-tree/}} (openspec tasks 2.1, 2.2, 2.6)","AI Lab","ailab","ailab-decision-tree","ailab-trainer-seam",""
+"Remove the Redux round-trip from the k sweep","Task","","AI Lab: decision tree model","*Delivers:* one PR — {{ailab/knn-sweep-no-redux}}
+*Merge order:* 7
+*Blocked by:* Extract gradeAccuracy as a pure function
+
+h3. Why
+The sweep dispatches `setAccuracyCheckPredictedLabels`, then reads its own accuracy back out of the store through `getAccuracyPercent`. The two calls must stay in that order, or each candidate is graded against the previous candidate's predictions.
+
+h3. Scope
+* Call `gradeAccuracy` directly for each candidate `k`.
+* Remove the dispatch-then-read-back pair.
+* Dispatch the winning predictions once, after the sweep finishes.
+
+h3. Files
+* {{frontend/packages/labs/ailab/src/trainers/KNNTrainer.ts}}
+
+h3. Acceptance criteria
+* No trainer reads accuracy back out of the store.
+* The chosen `k` is unchanged; the characterization suite passes.
+
+h3. Reference
+Spec: {{openspec/changes/ailab-decision-tree/}} (openspec task 2.3)","AI Lab","ailab","ailab-decision-tree","ailab-trainer-seam",""
+"Read hyperparameters before kValue in MLTrainers.predict","Task","","AI Lab: decision tree model","*Delivers:* one PR — {{ailab/mltrainers-read-hyperparameters}}
+*Merge order:* 8 (independent — you can start now)
+*Blocked by:* nothing
+
+h3. Why
+You must deploy this reader before anything writes the new field. It touches no lab code, so it can be worked at any time and merged first among the App Lab tickets.
+
+`apps/src/MLTrainers.js` is Lab1 code, but Lab2 levels save the models that reach it.
+
+h3. Scope
+* Take the value from `hyperparameters` when it is present.
+* Fall back to the top-level `kValue`.
+
+h3. Files
+* {{apps/src/MLTrainers.js}}
+
+h3. Acceptance criteria
+* A model with only `kValue` still predicts correctly.
+* A model with both fields takes the value from `hyperparameters`.
+* Tests cover both shapes.
+
+h3. Reference
+Spec: {{openspec/changes/ailab-decision-tree/}} (openspec task 2.5)","AI Lab","ailab","ailab-decision-tree","ailab-trainer-seam",""
+"Add the hyperparameters field to the saved model","Task","","AI Lab: decision tree model","*Delivers:* one PR — {{ailab/saved-model-hyperparameters}}
+*Merge order:* 9
+*Blocked by:* Read hyperparameters before kValue in MLTrainers.predict
+
+h3. Why
+`ModelDataToSave.kValue` is a top-level nullable number with no meaning for any trainer other than KNN. The reader must be deployed before this writer, so a rollback of either side stays safe.
+
+h3. Scope
+* Add `hyperparameters: Record<string, number>` to `ModelDataToSave`.
+* Populate it with `{k}` for a KNN model.
+* Keep writing the legacy top-level `kValue` for one release.
+
+h3. Files
+* {{frontend/packages/labs/ailab/src/types.ts}}
+* {{frontend/packages/labs/ailab/src/redux.ts}}
+
+h3. Acceptance criteria
+* A saved KNN model carries both `hyperparameters.k` and `kValue`, with the same value.
+* No stored model is rewritten. There is no data migration.
+
+h3. Reference
+Spec: {{openspec/changes/ailab-decision-tree/}} (openspec task 2.4)","AI Lab","ailab","ailab-decision-tree","ailab-trainer-seam",""
+"Expose the trained tree as a labeled node model","Task","","AI Lab: decision tree model","*Delivers:* one PR — {{ailab/tree-node-model}}
+*Merge order:* 19
+*Blocked by:* Implement DecisionTreeTrainer with a maxDepth sweep
+
+h3. Why
+The serialized tree contains feature indices and encoded values. A view needs names and readable conditions. A pure translation is testable without any user interface. This matters here, because the package has no storybook.
+
+This ticket does not depend on the design decision. It is a faithful translation of what the model holds, whatever the panel later chooses to draw.
+
+h3. Scope
+* Add a pure function that walks `model.toJSON().root` and returns a node tree.
+* For an internal node, give the feature name from `state.selectedFeatures[splitColumn]`, the threshold, the gain, and `numberSamples`.
+* For a leaf, give the predicted label in display form and the class proportions.
+* Resolve a leaf label with the same argmax the library uses. `distribution` is a ragged proportional row: `[[0,0,1]]` is class 2 at 100%, and its length is NOT the class count.
+* Branch on `name`: a `DTClassifier` leaf carries a matrix, a `DTRegression` leaf carries a plain number, which is the leaf mean.
+* Convert a label and a categorical feature value back to a string through `featureNumberKey`, as the rest of the lab does.
+* Flag a tie leaf, such as `[[0, 0.5, 0.5]]`. The library resolves it to the first class; a view may want to say so.
+* Report tree depth and node count, so a view can decide what it can draw.
+
+h3. Files
+* {{frontend/packages/labs/ailab/src/helpers/treeModel.ts (new)}}
+* {{frontend/packages/labs/ailab/test/unit/}}
+
+h3. Acceptance criteria
+* A fixture tree translates to the expected node tree.
+* A ragged distribution resolves to the correct label.
+* A regression leaf yields its mean.
+* A tie leaf is flagged.
+* A categorical feature's name and its label both appear in display form.
+
+h3. Reference
+Spec: {{openspec/changes/ailab-decision-tree/}} (openspec design.md Open Questions)","AI Lab","ailab","ailab-decision-tree","ailab-tree-viz",""
+"Add the tree panel","Task","","AI Lab: decision tree model","*Delivers:* one PR — {{ailab/tree-panel}}
+*Merge order:* 20
+*Blocked by:* Expose the trained tree as a labeled node model; Decide what the tree panel shows and where it lives
+
+h3. Why
+This is the visualization. It is also the reason to prefer a tree over KNN.
+
+This is one PR, not a component PR and a separate wiring PR. The package has no storybook. A component that the lab does not show gives a reviewer nothing to look at.
+
+h3. Scope
+* Build the view over the node model from the previous ticket. Draw with SVG. The package already has chart.js through react-chartjs-2 for the bar and scatter charts, and neither fits a tree, so do not add a charting dependency.
+* Wire the panel: `ContentPanel` and `Panel` in `types.ts`, the render branch in `App.tsx`, `currentPanel` handling, the prev and next buttons, `navigationValidation.ts`, and an `InstructionsKey` entry.
+* Show the panel only for a tree model. A KNN level must not gain an empty panel.
+* Handle the large-tree behavior agreed in the decision ticket.
+* Wide content scrolls inside its own container. The page must not scroll sideways.
+* Keyboard reachable, with a text alternative for the structure.
+
+h3. Files
+* {{frontend/packages/labs/ailab/src/UIComponents/TreePanel.tsx (new)}}
+* {{frontend/packages/labs/ailab/src/App.tsx}}
+* {{frontend/packages/labs/ailab/src/types.ts}}
+* {{frontend/packages/labs/ailab/src/redux.ts}}
+* {{frontend/packages/labs/ailab/src/helpers/navigationValidation.ts}}
+
+h3. Acceptance criteria
+* A tree level shows the panel, and the drawing matches the trained model.
+* A KNN level shows no panel.
+* The flow navigates in both directions through the new panel.
+* The panel is keyboard reachable and has a text alternative.
+* A deep tree degrades as agreed rather than overflowing.
+
+h3. Reference
+Spec: {{openspec/changes/ailab-decision-tree/}} (openspec design.md Open Questions)","AI Lab","ailab","ailab-decision-tree","ailab-tree-viz",""
+"Decide what the tree panel shows and where it lives","Task","","AI Lab: decision tree model","*Delivers:* no PR
+*Blocked by:* Implement DecisionTreeTrainer with a maxDepth sweep
+
+h3. Why
+No PR. A design and curriculum decision that gates the panel.
+
+The lab shows no model structure for any algorithm today, so there is no precedent to follow. Two measured facts about ml-cart 2.1.1 constrain the answer.
+
+First, a leaf carries no sample count. Only internal nodes have `numberSamples`. A leaf has a proportional `distribution` such as `[[0, 0.5, 0.5]]`, so ""18 of 25 examples"" is not available from the model. To show counts, the lab must send the training rows down the tree. This is extra work, and it is a separate decision.
+
+Second, CART splits an ordinal-encoded categorical feature on a numeric threshold. A split renders as `shape < 1.5`, which means nothing to a student. The panel needs a rule for a categorical split, or the levels need to avoid categorical features.
+
+h3. Scope
+* Decide: its own panel in the flow, or a section of the existing results or model summary panel.
+* Decide what a node shows: feature, threshold, gain, sample count, class mix.
+* Decide the rule for rendering a categorical split.
+* Decide the behavior for a tree too large to draw, and whether depth is capped for readability.
+* Decide whether leaf sample counts justify recomputing them from the training rows.
+
+h3. Files
+* {{openspec/changes/ailab-decision-tree/design.md (Open Questions)}}
+
+h3. Acceptance criteria
+* The answers are recorded in the design.
+* A sketch or mock exists that the panel ticket can be built against.
+
+h3. Reference
+Spec: {{openspec/changes/ailab-decision-tree/}} (openspec design.md Open Questions)","AI Lab","ailab","ailab-decision-tree","ailab-tree-viz","no-pr"

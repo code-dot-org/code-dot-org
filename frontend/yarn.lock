@@ -1705,6 +1705,7 @@ __metadata:
     eslint: "catalog:"
     jsdom: "catalog:"
     messageformat: "npm:^2.3.0"
+    ml-cart: "npm:2.1.1"
     ml-knn: "npm:^3.0.0"
     papaparse: "npm:^5.4.1"
     prettier: "catalog:"
@@ -14614,6 +14615,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"is-any-array@npm:^2.0.0":
+  version: 2.0.1
+  resolution: "is-any-array@npm:2.0.1"
+  checksum: 10c0/f9807458a51e63ca1ac27fd6f3a3ace8200f077094e00d9b05b24cfbc9d5594d586d6ecf3416271f26939d5cb93fc52ca869cb5744e77318c3f53ec70b08d61f
+  languageName: node
+  linkType: hard
+
+"is-any-array@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "is-any-array@npm:3.0.0"
+  checksum: 10c0/dce09df1dd5688053282dd9929052aaba45529f5122a87afe6d66cfe3a96b69dece808f2abb7509614cc36e78db2b744cef0aea1bee6f84e6b7e4b04ccf8747e
+  languageName: node
+  linkType: hard
+
 "is-array-buffer@npm:^3.0.4":
   version: 3.0.4
   resolution: "is-array-buffer@npm:3.0.4"
@@ -17649,6 +17664,63 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ml-array-max@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "ml-array-max@npm:2.0.0"
+  dependencies:
+    is-any-array: "npm:^3.0.0"
+  checksum: 10c0/1d8ab7af4c2b0525e52786a99ecfd025e784170ec264c8482013911b986d8eb0e3cdf7d7a36174e3187189ebd761140133bccfa8033317b3579266282e18f9ca
+  languageName: node
+  linkType: hard
+
+"ml-array-mean@npm:^1.1.5":
+  version: 1.1.6
+  resolution: "ml-array-mean@npm:1.1.6"
+  dependencies:
+    ml-array-sum: "npm:^1.1.6"
+  checksum: 10c0/41ab68308e3472702f775a49c8ab9ee1e678e01cd59dbc59424c0f1017a37df1bb638e702831305f0e6366300eca48353f526773ab8f4d8d142a64d0461f9944
+  languageName: node
+  linkType: hard
+
+"ml-array-min@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "ml-array-min@npm:2.0.0"
+  dependencies:
+    is-any-array: "npm:^3.0.0"
+  checksum: 10c0/651d1a45a846e35daec080cc666ef71be1b9cf15cca5a3a995b4c2edcf4c77d9b473e704d2efe6a71f216fa9f1e44ab47f0aa12b1e7aeb3a0a6f0b4ae86956a0
+  languageName: node
+  linkType: hard
+
+"ml-array-rescale@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "ml-array-rescale@npm:2.0.0"
+  dependencies:
+    is-any-array: "npm:^3.0.0"
+    ml-array-max: "npm:^2.0.0"
+    ml-array-min: "npm:^2.0.0"
+  checksum: 10c0/81b1f6befafcdcf2ff8db3b7b60055c1f0ae2e1b69ba216dd5cc184f5437ac89c03a8463dd3cdea4552b53a480a0c6cc40cf1681e9bd2d94e253184ca3539590
+  languageName: node
+  linkType: hard
+
+"ml-array-sum@npm:^1.1.6":
+  version: 1.1.6
+  resolution: "ml-array-sum@npm:1.1.6"
+  dependencies:
+    is-any-array: "npm:^2.0.0"
+  checksum: 10c0/fb3973ce2bfa19ab4f5e657f722494425b57025547657d332bf5bafe3e4e7e4bd1e082dfb970bcc0bfa87efa345b80a20a596dbb204be7b4802b52c35fd6cf77
+  languageName: node
+  linkType: hard
+
+"ml-cart@npm:2.1.1":
+  version: 2.1.1
+  resolution: "ml-cart@npm:2.1.1"
+  dependencies:
+    ml-array-mean: "npm:^1.1.5"
+    ml-matrix: "npm:^6.8.2"
+  checksum: 10c0/5ed8571993cbf9da0035dfbbe04c27b9a30c8ccf5769064e36250111a9992220d137c3491f43f5f0098d691e4c9f1d1f561b3701df59ce8b9cbf90c8f515109a
+  languageName: node
+  linkType: hard
+
 "ml-distance-euclidean@npm:^2.0.0":
   version: 2.0.0
   resolution: "ml-distance-euclidean@npm:2.0.0"
@@ -17662,6 +17734,16 @@ __metadata:
   dependencies:
     ml-distance-euclidean: "npm:^2.0.0"
   checksum: 10c0/bacf9973310bab619f01aae25348bdd5b9ca8b7e0e2e47efae9cb004dd58f05e2055b2b89b3d2bbb6b77f114b962aa652c01dc0228e1e7767d107c6d4aa8580b
+  languageName: node
+  linkType: hard
+
+"ml-matrix@npm:^6.8.2":
+  version: 6.15.0
+  resolution: "ml-matrix@npm:6.15.0"
+  dependencies:
+    is-any-array: "npm:^3.0.0"
+    ml-array-rescale: "npm:^2.0.0"
+  checksum: 10c0/a29633587364043b58052f67ee68b2f47b5277ff73681aee827d20e87ddef5ca9e779cbea8a18acc06c152069cecaedc5db772fb720890091f6344cccaa3443e
   languageName: node
   linkType: hard
 

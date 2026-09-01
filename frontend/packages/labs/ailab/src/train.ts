@@ -15,7 +15,8 @@ import {
   setAccuracyCheckLabels,
 } from './redux';
 import {getSelectedCategoricalColumns} from './selectors';
-import KNNTrainer from './trainers/KNNTrainer';
+import {buildTrainer} from './trainers';
+import type {Trainer} from './trainers/types';
 import type {DataRow} from './types';
 
 /* Builds a hash that maps selected categorical features to their option-
@@ -132,9 +133,9 @@ const prepareTestData = (store: Store<RootState>): number[] => {
   return testValues;
 };
 
-const trainingState: {trainer?: KNNTrainer} = {};
+const trainingState: {trainer?: Trainer} = {};
 const init = (store: Store<RootState>): void => {
-  trainingState.trainer = new KNNTrainer(store);
+  trainingState.trainer = buildTrainer(store);
   buildOptionNumberKeysByFeature(store);
   prepareTrainingData(store);
 };

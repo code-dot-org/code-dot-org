@@ -1,5 +1,6 @@
 import {ResultsGrades, MLTypes} from '../../src/constants';
 import {
+  gradeAccuracy,
   getAccuracyRegression,
   getAccuracyClassification,
   getAccuracyGrades,
@@ -139,6 +140,76 @@ const classificationDataForTable = [
   {temp: 'hot', weather: 'overcast', play: 'no'},
   {temp: 'hot', weather: 'sunny', play: 'yes'},
 ];
+
+const classificationOptions = {isRegression: false, labelRange: 0};
+
+describe('grade accuracy', () => {
+  test('a categorical label must match exactly', () => {
+    const {percentCorrect, grades} = gradeAccuracy(
+      [0, 1, 2, 0],
+      [0, 1, 1, 2],
+      classificationOptions,
+    );
+
+    expect(grades).toEqual([
+      ResultsGrades.CORRECT,
+      ResultsGrades.CORRECT,
+      ResultsGrades.INCORRECT,
+      ResultsGrades.INCORRECT,
+    ]);
+    expect(percentCorrect).toBe(50);
+  });
+
+  test('a categorical label compares as a string', () => {
+    const {percentCorrect} = gradeAccuracy(
+      ['1', 2],
+      [1, '2'],
+      classificationOptions,
+    );
+
+    expect(percentCorrect).toBe(100);
+  });
+
+  // A range of 100 gives a tolerance of 5.
+  test('a numerical label is correct within 5% of the label range', () => {
+    const {percentCorrect, grades} = gradeAccuracy(
+      [50, 54, 55, 56],
+      [50, 50, 50, 50],
+      {isRegression: true, labelRange: 100},
+    );
+
+    expect(grades).toEqual([
+      ResultsGrades.CORRECT,
+      ResultsGrades.CORRECT,
+      ResultsGrades.CORRECT,
+      ResultsGrades.INCORRECT,
+    ]);
+    expect(percentCorrect).toBe(75);
+  });
+
+  test('an empty prediction list has no grades and no percentage', () => {
+    const {percentCorrect, grades} = gradeAccuracy(
+      [],
+      [1, 2],
+      classificationOptions,
+    );
+
+    expect(grades).toEqual([]);
+    expect(percentCorrect).toBeNaN();
+  });
+
+  test('grading is independent of the call order', () => {
+    const expected = [0, 1, 0, 1];
+    const first = gradeAccuracy(expected, expected, classificationOptions);
+    const second = gradeAccuracy([1, 1, 1, 1], expected, classificationOptions);
+
+    expect(first.percentCorrect).toBe(100);
+    expect(second.percentCorrect).toBe(50);
+    expect(
+      gradeAccuracy(expected, expected, classificationOptions).percentCorrect,
+    ).toBe(100);
+  });
+});
 
 describe('get accuracy', () => {
   classificationTestCases.forEach(testCase => {

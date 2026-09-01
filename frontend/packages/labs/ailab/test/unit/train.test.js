@@ -1,4 +1,7 @@
+import {DecisionTreeClassifier} from 'ml-cart';
+import KNN from 'ml-knn';
 import {createStore} from 'redux';
+import {vi} from 'vitest';
 
 import {ColumnTypes} from '../../src/constants';
 import {getConvertedPredictedLabel} from '../../src/helpers/valueConversion';
@@ -8,6 +11,7 @@ import rootReducer, {
   addSelectedFeature,
   setColumnsByDataType,
   setTestData,
+  setMode,
 } from '../../src/redux';
 import train from '../../src/train';
 
@@ -73,5 +77,56 @@ describe('train functions', () => {
     const predictedLabel = getConvertedPredictedLabel(store.getState());
 
     expect(predictedLabel).toBe('green');
+  });
+});
+
+describe('trainer selection from the level mode', () => {
+  const data = [
+    {sun: '1', water: '1', grew: 'no'},
+    {sun: '2', water: '2', grew: 'no'},
+    {sun: '3', water: '3', grew: 'no'},
+    {sun: '8', water: '8', grew: 'yes'},
+    {sun: '9', water: '9', grew: 'yes'},
+    {sun: '9', water: '8', grew: 'yes'},
+  ];
+
+  const trainWithMode = mode => {
+    const store = createStore(rootReducer);
+    store.dispatch(setMode(mode));
+    store.dispatch(setImportedData(data, false));
+    store.dispatch(setColumnsByDataType('grew', ColumnTypes.CATEGORICAL));
+    store.dispatch(setColumnsByDataType('sun', ColumnTypes.NUMERICAL));
+    store.dispatch(setColumnsByDataType('water', ColumnTypes.NUMERICAL));
+    store.dispatch(setLabelColumn('grew'));
+    store.dispatch(addSelectedFeature('sun'));
+    store.dispatch(addSelectedFeature('water'));
+
+    train.init(store);
+    train.onClickTrain(store);
+    return store.getState();
+  };
+
+  test('"decisionTree" builds a decision tree trainer', () => {
+    expect(trainWithMode({trainer: 'decisionTree'}).trainedModel).toBeInstanceOf(
+      DecisionTreeClassifier,
+    );
+  });
+
+  test('an absent trainer field builds a KNN trainer', () => {
+    expect(trainWithMode({}).trainedModel).toBeInstanceOf(KNN);
+    expect(trainWithMode(undefined).trainedModel).toBeInstanceOf(KNN);
+  });
+
+  test('an unknown trainer warns and falls back to KNN', () => {
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+    const state = trainWithMode({trainer: 'desicionTree'});
+
+    expect(state.trainedModel).toBeInstanceOf(KNN);
+    expect(warn).toHaveBeenCalledWith(
+      expect.stringContaining('desicionTree'),
+    );
+
+    warn.mockRestore();
   });
 });

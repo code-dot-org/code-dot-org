@@ -324,6 +324,7 @@
     "merge": "^2.1.1",
     "messageformat": "2.3.0",
     "mime-types": "^3.0.2",
+    "ml-cart": "2.1.1",
     "ml-knn": "^3.0.0",
     "moment": "^2.29.4",
     "moment-timezone": "^0.5.47",

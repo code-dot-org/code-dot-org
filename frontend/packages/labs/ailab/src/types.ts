@@ -1,6 +1,16 @@
-import type KNN from 'ml-knn';
+import type {TrainerFamily} from './trainers/types';
 
 export type DataRow = Record<string, string | number>;
+
+/*
+  What both machine learning libraries offer, and all that AI Lab asks of a
+  trained model. `predict` takes a matrix of examples; `ml-cart` rejects a
+  flat array.
+*/
+export interface TrainedModel {
+  predict(examples: number[][]): (number | string)[];
+  toJSON(): object;
+}
 
 export interface Mode {
   datasets?: string[];
@@ -10,6 +20,7 @@ export interface Mode {
   hideInstructionsOverlay?: boolean;
   randomizeTestData?: boolean;
   hideColumnClicking?: boolean;
+  trainer?: TrainerFamily;
 }
 
 export interface ResultsData {
@@ -88,12 +99,6 @@ export interface Metadata {
   fields?: MetadataField[];
 }
 
-export interface KNNTrainedModelDetails {
-  model: KNN;
-  predictedLabels: (number | string)[];
-  kValue: number;
-}
-
 export interface TrainedModelDetails {
   name?: string;
   potentialMisuses?: string;
@@ -154,7 +159,10 @@ export interface ModelDataToSave {
   features: ModelCardColumn[];
   summaryStat: {type: string; stat: string};
   trainedModel: object | null;
-  kValue: number | null;
+  hyperparameters: Record<string, number>;
+  // Superseded by `hyperparameters.k`. Written for one release so a rollback
+  // of a reader stays safe.
+  kValue?: number;
 }
 
 export type SaveTrainedModel = (

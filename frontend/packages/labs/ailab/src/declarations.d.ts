@@ -26,6 +26,36 @@ declare module 'ml-knn' {
   }
 }
 
+// `ml-cart` ships no types. These are hand-written against 2.1.1, which is
+// why package.json pins that exact version.
+declare module 'ml-cart' {
+  interface DecisionTreeOptions {
+    gainFunction?: 'gini' | 'regression';
+    splitFunction?: 'mean' | 'median';
+    minNumSamples?: number;
+    maxDepth?: number;
+    gainThreshold?: number;
+  }
+
+  // `predict` rejects a flat array at runtime — "Data must be a 2D array with
+  // at least one element" — so the type must not accept one.
+  export class DecisionTreeClassifier {
+    constructor(options?: DecisionTreeOptions);
+    train(dataset: number[][], labels: number[]): void;
+    predict(dataset: number[][]): number[];
+    toJSON(): object;
+    static load(model: object): DecisionTreeClassifier;
+  }
+
+  export class DecisionTreeRegression {
+    constructor(options?: DecisionTreeOptions);
+    train(dataset: number[][], labels: number[]): void;
+    predict(dataset: number[][]): number[];
+    toJSON(): object;
+    static load(model: object): DecisionTreeRegression;
+  }
+}
+
 declare module 'query-string' {
   export function parse(
     query: string,

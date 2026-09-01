@@ -10,8 +10,9 @@ export const store = configureStore({
   reducer: rootReducer,
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
-      // state.trainedModel is a live KNN class instance used for predictions,
-      // so it (and the action that sets it) are intentionally non-serializable.
+      // state.trainedModel is a live model instance from the selected
+      // trainer's library, used for predictions, so it (and the action that
+      // sets it) are intentionally non-serializable.
       // TODO: hoist the model out of Redux into a module singleton, as was done
       // for the metrics/instructions callbacks, then drop this exception.
       serializableCheck: {

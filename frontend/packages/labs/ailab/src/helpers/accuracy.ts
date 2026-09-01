@@ -100,55 +100,80 @@ export function getPercentCorrect(state: RootState): string {
   return percentCorrect;
 }
 
-export function getAccuracyClassification(state: RootState): {
-  percentCorrect: string;
-  grades: string[];
-} {
+export interface GradeAccuracyOptions {
+  isRegression: boolean;
+  labelRange: number;
+}
+
+/*
+  Grade predictions against expected labels. Pure: it reads no store, so a
+  hyperparameter sweep can grade each candidate from that candidate's own
+  predictions.
+
+  percentCorrect is NaN for an empty prediction list, which is what the
+  callers have always seen from the 0/0 division.
+*/
+export function gradeAccuracy(
+  predictedLabels: (number | string)[],
+  expectedLabels: (number | string)[],
+  options: GradeAccuracyOptions,
+): {percentCorrect: number; grades: string[]} {
+  const errorTolerance =
+    (options.labelRange * REGRESSION_ERROR_TOLERANCE) / 100;
+  const numPredictedLabels = predictedLabels ? predictedLabels.length : 0;
+
   let numCorrect = 0;
-  const grades = [];
-  const numPredictedLabels = state.accuracyCheckPredictedLabels
-    ? state.accuracyCheckPredictedLabels.length
-    : 0;
+  const grades: string[] = [];
   for (let i = 0; i < numPredictedLabels; i++) {
-    if (
-      state.accuracyCheckLabels[i].toString() ===
-      state.accuracyCheckPredictedLabels[i].toString()
-    ) {
+    const correct = options.isRegression
+      ? Math.abs(Number(expectedLabels[i]) - Number(predictedLabels[i])) <=
+        errorTolerance
+      : expectedLabels[i].toString() === predictedLabels[i].toString();
+    if (correct) {
       numCorrect++;
       grades.push(ResultsGrades.CORRECT);
     } else {
       grades.push(ResultsGrades.INCORRECT);
     }
   }
-  return {
-    percentCorrect: ((numCorrect / numPredictedLabels) * 100).toFixed(2),
-    grades,
-  };
+
+  return {percentCorrect: (numCorrect / numPredictedLabels) * 100, grades};
+}
+
+export function getGradeAccuracyOptions(
+  state: RootState,
+): GradeAccuracyOptions {
+  return isRegression(state)
+    ? {
+        isRegression: true,
+        labelRange: getExtrema(state.data, state.labelColumn!).range,
+      }
+    : {isRegression: false, labelRange: 0};
+}
+
+export function getAccuracyClassification(state: RootState): {
+  percentCorrect: string;
+  grades: string[];
+} {
+  const {percentCorrect, grades} = gradeAccuracy(
+    state.accuracyCheckPredictedLabels,
+    state.accuracyCheckLabels,
+    {isRegression: false, labelRange: 0},
+  );
+  return {percentCorrect: percentCorrect.toFixed(2), grades};
 }
 
 export function getAccuracyRegression(state: RootState): {
   percentCorrect: string;
   grades: string[];
 } {
-  let numCorrect = 0;
-  const grades: string[] = [];
-  const range = getExtrema(state.data, state.labelColumn!).range;
-  const errorTolerance = (range * REGRESSION_ERROR_TOLERANCE) / 100;
-  const numPredictedLabels = state.accuracyCheckPredictedLabels.length;
-  for (let i = 0; i < numPredictedLabels; i++) {
-    const diff = Math.abs(
-      Number(state.accuracyCheckLabels[i]) -
-        Number(state.accuracyCheckPredictedLabels[i]),
-    );
-    if (diff <= errorTolerance) {
-      numCorrect++;
-      grades.push(ResultsGrades.CORRECT);
-    } else {
-      grades.push(ResultsGrades.INCORRECT);
-    }
-  }
-  return {
-    percentCorrect: ((numCorrect / numPredictedLabels) * 100).toFixed(2),
-    grades,
-  };
+  const {percentCorrect, grades} = gradeAccuracy(
+    state.accuracyCheckPredictedLabels,
+    state.accuracyCheckLabels,
+    {
+      isRegression: true,
+      labelRange: getExtrema(state.data, state.labelColumn!).range,
+    },
+  );
+  return {percentCorrect: percentCorrect.toFixed(2), grades};
 }
