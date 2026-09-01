@@ -92,4 +92,29 @@ class QuizTest < ActiveSupport::TestCase
     assert QuizQuestionPlacement.exists?(level: other_quiz, quiz_question: question)
     assert QuizQuestion.exists?(question.id)
   end
+
+  test "cloning a quiz clones its placements without cloning the questions themselves" do
+    quiz = create(:quiz)
+    question = create(:quiz_question)
+    create(:quiz_question_placement, level: quiz, quiz_question: question, page: 2, position: 1)
+
+    cloned = quiz.clone_with_suffix("copy")
+
+    refute_equal quiz.id, cloned.id
+    assert_equal [question], cloned.questions
+    placement = cloned.placements.sole
+    assert_equal 2, placement.page
+    assert_equal 1, placement.position
+  end
+
+  test "cloning a quiz twice with the same suffix returns the existing clone without duplicating placements" do
+    quiz = create(:quiz)
+    create(:quiz_question_placement, level: quiz, quiz_question: create(:quiz_question))
+
+    first = quiz.clone_with_suffix("copy")
+    second = quiz.clone_with_suffix("copy")
+
+    assert_equal first.id, second.id
+    assert_equal 1, second.reload.placements.count
+  end
 end
