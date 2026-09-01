@@ -16,7 +16,7 @@ import {
   stepZoom,
   worldPoint,
 } from './camera';
-import {trimAnimationListImages} from './imageTrim';
+import {loadedAnimations, trimAnimationListImages} from './imageTrim';
 import {
   CONTACT_EPSILON,
   isSupported,
@@ -26,6 +26,10 @@ import {
 import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
 
 const NOOP = () => {};
+
+// How long a run waits for the project's images before going ahead without
+// the stragglers.
+const IMAGE_LOAD_GRACE_MS = 10000;
 
 // Default sprite size for non-platformer scenes on platform-pool levels;
 // platformer scenes use CELL_SIZE (one grid cell). A later World-tab UI may
@@ -124,6 +128,12 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.sceneJumpInFlight_ = false;
     // Set when the zoomed draw loop has already resolved this frame.
     this.physicsResolvedThisFrame_ = false;
+    // Settles a pending image-grace wait (see
+    // whenAnimationsAreReadyOrGivenUp_).
+    this.imageWaitCancel_ = null;
+    // Unsubscribes the watch that re-runs when images arrive after a
+    // give-up (see onImageLoadGiveUp_).
+    this.lateImagesUnsubscribe_ = null;
   }
 
   /**
@@ -223,6 +233,39 @@ export default class SpriteLab2Engine extends SpriteLab {
       players.forEach(sprite => {
         sprite.velocity.y = up * Math.abs(Number(speed) || 0);
       });
+    };
+    // p5.play throws on an unknown costume name and the interpreter stops
+    // there; skip the block instead and say so once.
+    const knownCostume = name =>
+      !!(library.p5._predefinedSpriteAnimations || {})[name];
+    const missing = new Set();
+    const warnMissing = name => {
+      if (!missing.has(name)) {
+        missing.add(name);
+        console.warn(
+          name
+            ? `SpriteLab2: no image named ${JSON.stringify(
+                name
+              )} in this project; the block asking for it does nothing.`
+            : 'SpriteLab2: a block has no image chosen; it does nothing.'
+        );
+      }
+    };
+    const addSprite = library.addSprite.bind(library);
+    library.addSprite = opts => {
+      if (opts && opts.animation && !knownCostume(opts.animation)) {
+        warnMissing(opts.animation);
+        return null;
+      }
+      return addSprite(opts);
+    };
+    const setAnimation = library.commands.setAnimation;
+    library.commands.setAnimation = function (spriteArg, animation) {
+      if (!knownCostume(animation)) {
+        warnMissing(animation);
+        return;
+      }
+      return setAnimation.call(this, spriteArg, animation);
     };
     library.commands.goToScene = sceneId => {
       if (!this.onGoToScene || !this.beginSceneJump_()) {
@@ -467,10 +510,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     // Preload images added since the initial execute() — the costume/
     // background commands silently no-op on unknown names. Already-loaded
     // entries are skipped and trims are cached, so re-runs are cheap.
-    await this.p5Wrapper.preloadSpriteImages(
-      await trimAnimationListImages(
-        this.preloadAnimationsOverride || getStore().getState().animationList
-      )
+    await this.preloadTrimmedImages_(
+      this.preloadAnimationsOverride || getStore().getState().animationList
     );
     p5.allSprites.removeSprites();
     // removeSprites destroyed the edge sprites too; clear the handle so the
@@ -509,37 +550,101 @@ export default class SpriteLab2Engine extends SpriteLab {
   destroy() {
     this.reset();
     this.stopTickTimer();
+    this.imageWaitCancel_?.();
+    this.clearLateImagesWatch_();
   }
 
   // Backgrounds come from the Items tab, not backgrounds.json — and the base
   // preloadBackgrounds() wedges p5 forever on a failed loadImage (the preload
   // count never decrements).
   preloadLabAssets() {
-    // A single failed image never resolves whenAnimationsAreReady, and the
-    // wedge is invisible; surface what it's stuck on.
-    const watchdog = setTimeout(() => {
-      const list = getStore().getState().animationList;
-      const pending = list.orderedKeys
-        .filter(key => !list.propsByKey[key]?.loadedFromSource)
-        .map(key => list.propsByKey[key]?.name || key);
-      if (pending.length) {
-        console.warn(
-          'SpriteLab2: still waiting on animation image loads after 8s:',
-          pending.join(', '),
-          '— check the Network tab for failing asset requests.'
-        );
-      }
-    }, 8000);
-    return this.preloadTrimmedSpriteImages_().finally(() =>
-      clearTimeout(watchdog)
+    return this.preloadTrimmedSpriteImages_();
+  }
+
+  /**
+   * Wait for the project's images, but not forever: the store never marks
+   * an image whose fetch failed, so after the grace period the run goes
+   * ahead with what has loaded.
+   */
+  whenAnimationsAreReadyOrGivenUp_() {
+    if (this.areAnimationsReady_()) {
+      return Promise.resolve();
+    }
+    return new Promise(resolve => {
+      const finish = () => {
+        clearTimeout(timer);
+        unsubscribe();
+        this.imageWaitCancel_ = null;
+        resolve();
+      };
+      // destroy() settles a pending wait, so a torn-down engine can't warn
+      // or arm a watch afterwards.
+      this.imageWaitCancel_ = finish;
+      const unsubscribe = getStore().subscribe(() => {
+        if (this.areAnimationsReady_()) {
+          finish();
+        }
+      });
+      const timer = setTimeout(() => {
+        finish();
+        this.onImageLoadGiveUp_();
+      }, IMAGE_LOAD_GRACE_MS);
+    });
+  }
+
+  // After a give-up: say what is still missing, and re-run once if it
+  // ever arrives.
+  onImageLoadGiveUp_() {
+    if (this.areAnimationsReady_()) {
+      // Ready and timed out in the same tick; nothing is missing.
+      return;
+    }
+    const list = getStore().getState().animationList;
+    const pending = list.orderedKeys
+      .filter(key => !list.propsByKey[key]?.loadedFromSource)
+      .map(key => list.propsByKey[key]?.name || key);
+    console.warn(
+      `SpriteLab2: ${pending.join(', ')} did not load within ` +
+        `${IMAGE_LOAD_GRACE_MS / 1000}s; running without ` +
+        `${pending.length === 1 ? 'it' : 'them'}. Check the Network tab ` +
+        'for failing asset requests.'
     );
+    this.clearLateImagesWatch_();
+    this.lateImagesUnsubscribe_ = getStore().subscribe(() => {
+      if (!this.areAnimationsReady_()) {
+        return;
+      }
+      // A stopped tick timer may just be mid-start (a run or scene jump
+      // in progress): stay subscribed, and let a preload that sees every
+      // image clear this instead.
+      if (this.isTickTimerRunning()) {
+        this.clearLateImagesWatch_();
+        this.rerun();
+      }
+    });
+  }
+
+  clearLateImagesWatch_() {
+    this.lateImagesUnsubscribe_?.();
+    this.lateImagesUnsubscribe_ = null;
   }
 
   // Base preloadSpriteImages_ with costume border-trimming (imageTrim.ts).
   async preloadTrimmedSpriteImages_() {
-    await this.whenAnimationsAreReady();
+    await this.whenAnimationsAreReadyOrGivenUp_();
+    return this.preloadTrimmedImages_(getStore().getState().animationList);
+  }
+
+  // Trim the full list (the trimmer prunes its own caches from it), then
+  // preload only the images whose data has arrived; one without would just
+  // make p5 log an error.
+  async preloadTrimmedImages_(animationList) {
+    // This preload sees every image; the watch has nothing to recover.
+    if (this.areAnimationsReady_()) {
+      this.clearLateImagesWatch_();
+    }
     return this.p5Wrapper.preloadSpriteImages(
-      await trimAnimationListImages(getStore().getState().animationList)
+      loadedAnimations(await trimAnimationListImages(animationList))
     );
   }
 
