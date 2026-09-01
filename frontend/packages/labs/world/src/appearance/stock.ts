@@ -191,6 +191,18 @@ export const STOCK_SPRITES: readonly StockSprite[] = [
     dataUrl: image('spike'),
   },
   {
+    id: 'hill',
+    name: 'Hill',
+    description: 'A dim green mound, for scenery a long way behind the floor.',
+    dataUrl: image('hill'),
+  },
+  {
+    id: 'pipe',
+    name: 'Pipe',
+    description: 'One segment of a green pipe, for stacking into a column.',
+    dataUrl: image('pipe'),
+  },
+  {
     id: 'playerWalk',
     name: 'Player Walking',
     description: 'Four frames of the player mid-stride, side by side.',

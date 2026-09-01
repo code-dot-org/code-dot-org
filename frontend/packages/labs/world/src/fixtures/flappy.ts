@@ -323,7 +323,10 @@ const PIPE_ACTOR = JSON.stringify({
         next: {
           block: stack([
             useTrait('Collisions#CanCollideTrait'),
-            {type: 'world_set_sprite', fields: {SPRITE: 'ground.png'}},
+            // A pipe SEGMENT, which is what this is: `pipe` above stacks one
+            // per tile in the column, and the drawing has nothing horizontal
+            // in it so no seam shows where two meet.
+            {type: 'world_set_sprite', fields: {SPRITE: 'pipe.png'}},
           ]),
         },
       },
@@ -485,7 +488,7 @@ export const FLAPPY_SUPPORT_FILES: ProjectSpec['files'] = {
     contents: cameraConfinedRule,
     folderId: 'rules',
   },
-  ...starterSprites(['ship', 'ground', 'coin']),
+  ...starterSprites(['ship', 'ground', 'pipe', 'coin']),
 };
 
 export const FLAPPY_SPEC: ProjectSpec = {

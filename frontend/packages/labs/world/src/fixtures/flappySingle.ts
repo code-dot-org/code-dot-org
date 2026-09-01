@@ -183,7 +183,7 @@ const SINGLE_WORLD = JSON.stringify({
       ]),
       defineActor(PIPE, 'Pipe', 420, [
         useTrait('Collisions#CanCollideTrait'),
-        {type: 'world_set_sprite', fields: {SPRITE: 'ground.png'}},
+        {type: 'world_set_sprite', fields: {SPRITE: 'pipe.png'}},
       ]),
       defineActor(COIN, 'Coin', 800, [
         useTrait('Collection#CanBeCollectedTrait'),

@@ -1345,10 +1345,12 @@ const layers: WorldScenario = {
       tiles: [30, 10],
       rows: [
         createInMap(local('ground'), floorAcross(30)),
-        // Three hills, far apart, so the eye can see whether they keep up.
-        addActor(local('hill'), [placeAt(80, 240)]),
-        addActor(local('hill'), [placeAt(400, 240)]),
-        addActor(local('hill'), [placeAt(720, 240)]),
+        // Three hills, far apart, so the eye can see whether they keep up —
+        // and standing ON the floor rather than above it: the tiles are centred
+        // at 304 and are 32 tall, so 272 puts a hill's foot on the grass.
+        addActor(local('hill'), [placeAt(80, 272)]),
+        addActor(local('hill'), [placeAt(400, 272)]),
+        addActor(local('hill'), [placeAt(720, 272)]),
         addActor(local('score'), [
           placeAt(60, 30),
           setText('TextProperty', words('SCORE 0')),
@@ -1367,7 +1369,7 @@ const layers: WorldScenario = {
           ],
         },
         {id: 'ground', name: 'Ground', rows: [setSprite('ground.png')]},
-        {id: 'hill', name: 'Hill', rows: [setSprite('box.png')]},
+        {id: 'hill', name: 'Hill', rows: [setSprite('hill.png')]},
         {
           id: 'score',
           name: 'Score',
@@ -1385,7 +1387,7 @@ const layers: WorldScenario = {
         },
       ],
     }),
-    sprites: ['player', 'ground', 'box'],
+    sprites: ['player', 'ground', 'hill'],
     rules: ['arrows', 'writing', 'camera', 'cameraFollow', 'cameraConfined'],
   }),
   instructions: `

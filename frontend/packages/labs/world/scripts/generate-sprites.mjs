@@ -46,6 +46,11 @@ export const SPRITE_NAMES = [
   // Something that hurts. Drawn as a crate until now, in three lessons, in a
   // curriculum where a crate is the thing you push.
   'spike',
+  // Scenery, which is a different job from ground: a hill is what a parallax
+  // layer is FOR, and it has to read as far away rather than as walkable.
+  'hill',
+  // …and a segment of pipe, which is what a column of them is made of.
+  'pipe',
 ];
 export const ANIMATION_SPECS = {
   coinSpin: {frames: 6, frameRate: 12},
@@ -302,6 +307,24 @@ const STATIC = {
       }
     }
     c.rect(6, 29, 7, 3, [72, 48, 26]); // the ground it stands in
+  },
+  hill(c) {
+    // A mound whose foot is below the cell, so the visible part is the top of
+    // something bigger — and dimmer and bluer than `ground`, because at this
+    // size what says FAR AWAY is colour rather than detail. Wide enough to
+    // touch both edges, so a row of them reads as a ridge.
+    c.ellipse(16, 46, 20, 36, [46, 78, 62]);
+    c.ellipse(12, 50, 13, 34, [64, 100, 74]); // the lit side, up and to the left
+  },
+  pipe(c) {
+    // A SEGMENT. A pipe is a column of these, one per tile (`fixtures/flappy`),
+    // so the shading runs ACROSS it and never along: anything horizontal here
+    // would draw a seam at every tile boundary.
+    c.rect(0, 0, 32, 32, [58, 142, 74]); // the body
+    c.rect(2, 0, 7, 32, [96, 186, 108]); // lit down one side
+    c.rect(24, 0, 6, 32, [38, 104, 54]); // shaded down the other
+    c.rect(0, 0, 2, 32, [30, 84, 44]); // and its two hard edges
+    c.rect(30, 0, 2, 32, [30, 84, 44]);
   },
   spike(c) {
     // Three teeth on a plate, pointing UP, filling the cell the way `ground`
