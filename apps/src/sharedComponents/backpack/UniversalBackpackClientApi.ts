@@ -23,13 +23,14 @@ type ChannelIdsByAppType = {[appType: string]: string};
 type FileListsByChannelId = {[channelId: string]: FileMetadata[] | null};
 
 /**
- * Client for the universal backpack: the user's backpack that belongs to no lab.
- * Writes go to the universal backpack. Reads and deletes name the backpack they
- * mean by app type, so files saved from a lab's own backpack stay usable while
+ * Client for the universal backpack, which pulls in files from all of the user's per-lab backpacks
+ * plus their universal backpack.
+ * Writes go to the generic backpack (no app type). Reads and deletes name the backpack they
+ * mean by app type, so files saved from a lab's original backpack stay usable while
  * labs move over to the universal one.
  *
  * Each backpack is driven by a BackpackClientApi built from an already-known
- * channel, which is why those never fetch a channel of their own.
+ * channel, except the universal one, which is created if it doesn't exist.
  */
 export default class UniversalBackpackClientApi {
   // Channel of the universal backpack.
