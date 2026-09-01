@@ -1,6 +1,5 @@
-# Levelbuilder-only CRUD for one Quiz's placements of bank questions
-# :id across every action here is a quiz_question_id, not a
-# QuizQuestionPlacement id.
+# Levelbuilder-only CRUD for one Quiz's placements of bank questions.
+# :id is always a quiz_question_id, not a placement id.
 class QuizQuestionPlacementsController < ApplicationController
   include QuizQuestionSerialization
 
@@ -13,11 +12,8 @@ class QuizQuestionPlacementsController < ApplicationController
   # POST /levels/:level_id/quiz_question_placements
   #
   # Creates a MultipleChoiceQuestion and attaches it to this Quiz level.
-  # TODO: Implement other question types.
-  #
-  # All three writes (question, standards, placement) share one transaction.
-  # requires_new: true - without this, nesting inside an open transaction (e.g., a test's)
-  # just joins it, so a rescued exception here wouldn't actually roll back.
+  # TODO: other question types. requires_new: true - a plain transaction
+  # would just join a test's open one and not actually roll back.
   def create
     question = ActiveRecord::Base.transaction(requires_new: true) do
       question = MultipleChoiceQuestion.create!(
@@ -46,11 +42,8 @@ class QuizQuestionPlacementsController < ApplicationController
 
   # POST /levels/:level_id/quiz_question_placements/:id/attach
   #
-  # Attaches an existing bank question to this quiz - unlike create, this
-  # never creates a new QuizQuestion row, only a new QuizQuestionPlacement.
-  # find_or_create_by! makes this idempotent against a double click (adding
-  # twice would otherwise be a silent no-op anyway, but this avoids a
-  # spurious duplicate row/error).
+  # Attaches an existing bank question - no new QuizQuestion row, just a
+  # placement. find_or_create_by! makes double-clicking idempotent.
   def attach
     question = MultipleChoiceQuestion.find(params[:id])
     next_position = (@level.placements.maximum(:position) || 0) + 1
@@ -66,8 +59,7 @@ class QuizQuestionPlacementsController < ApplicationController
 
   # DELETE /levels/:level_id/quiz_question_placements/:id/detach
   #
-  # Removes the question from this quiz only - destroys the
-  # QuizQuestionPlacement, leaves the QuizQuestion itself untouched.
+  # Destroys the placement only; the question itself is untouched.
   def detach
     @level.placements.find_by!(quiz_question_id: params[:id]).destroy!
 
@@ -78,19 +70,10 @@ class QuizQuestionPlacementsController < ApplicationController
 
   # DELETE /levels/:level_id/quiz_question_placements/:id
   #
-  # Removes the question from this quiz AND destroys the QuizQuestion
-  # itself, provided nothing else still references it once detached: no
-  # other quiz's placement, no QuizQuestionResponse (a past graded
-  # attempt), and no other question forked from this one (fork_parent_id).
-  # Checked here rather than trusted from the client's earlier
-  # attachedToOtherQuizzes read (see quiz_question_json) - a stale read
-  # can't accidentally delete a question something else grabbed a
-  # reference to in the meantime, so this falls back to a plain detach
-  # instead. The whole sequence shares one transaction, so the placement's
-  # own removal can't commit ahead of a destroy that then fails - without
-  # that, an unanticipated fourth kind of reference would 500 after
-  # already detaching, rather than cleanly falling back like the three
-  # kinds above.
+  # Detaches, then hard-deletes the question too if nothing else
+  # references it (other placements, responses, forks) - else falls back
+  # to a plain detach. One transaction, so a failed destroy can't leave
+  # the placement already gone.
   def destroy
     placement = @level.placements.find_by!(quiz_question_id: params[:id])
     question = placement.quiz_question
@@ -105,10 +88,7 @@ class QuizQuestionPlacementsController < ApplicationController
       end
     end
 
-    # destroyed tells the caller whether this fell back to a plain detach -
-    # QuizQuestionBank needs to know that to decide whether the question
-    # should disappear from its results or just remain there, still
-    # attachable.
+    # True unless this fell back to a plain detach.
     render json: {destroyed: destroyed}
   rescue ActiveRecord::RecordNotFound
     head :not_found
