@@ -507,9 +507,12 @@ const position: WorldScenario = {
         addActor(local('marker'), [placeAt(160, 160)]),
         addActor(local('marker'), [placeAt(160, 160)]),
       ],
-      actors: [{id: 'marker', name: 'Marker', rows: [setSprite('coin.png')]}],
+      // A POST, which is what a marker is. Drawn as a coin, three of them in a
+      // heap read as treasure to collect rather than as places, and the whole
+      // lesson is putting each one somewhere.
+      actors: [{id: 'marker', name: 'Marker', rows: [setSprite('post.png')]}],
     }),
-    sprites: ['coin'],
+    sprites: ['post'],
   }),
   instructions: `
 ## x and y
