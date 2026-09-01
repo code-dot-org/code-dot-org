@@ -24,7 +24,7 @@
  * fallback. Once models fall back to an available provider there is nothing to
  * warn about, and this file, its helper and its copy delete together.
  *
- * Snapshot taken 2026-08-31. Regenerate with:
+ * Snapshot taken 2026-09-01. Regenerate with:
  *   chat  - Unit.joins(:levels).merge(Level.with_us_only_aichat_model).distinct.pluck(:name)
  *   tutor - Unit.joins(:levels).where(levels: {type: 'Weblab2'}).distinct.pluck(:name)
  *           minus Unit::NAMES_EXEMPT_FROM_ESSENTIAL_AI_CHAT_TOOLS
@@ -38,15 +38,13 @@ export const US_ONLY_CHAT_COURSES: Record<string, string[]> = {
   ],
   'ai-foundations-exploring-ai-and-cs-2026': [
     'AI-Powered Threats and Defenses',
+    'Foundations of AI Programming (JavaScript)',
   ],
   'ai-foundations-year1-2026': [
-    'AI-Powered Threats and Defenses',
     'AI and Algorithmic Decisions',
+    'AI-Powered Threats and Defenses',
   ],
   'ai-powered-threats-and-defenses-2026': ['AI-Powered Threats and Defenses'],
-  'artificial-intelligence-foundations-2026': [
-    'AI-Powered Threats and Defenses',
-  ],
   'computing-foundations-for-a-digital-age-2026': [
     'AI-Powered Threats and Defenses',
   ],
@@ -68,6 +66,8 @@ export const US_ONLY_CHAT_UNITS: Record<string, string> = {
   'ai-and-algorithmic-decisions-2026': 'AI and Algorithmic Decisions',
   'ai-powered-threats-and-defenses-2026': 'AI-Powered Threats and Defenses',
   'aif5-v3': 'AI-Powered Threats and Defenses',
+  'foundations-of-ai-programming-javascript-2026':
+    'Foundations of AI Programming (JavaScript)',
   'self-paced-pl-teaching-ai-powered-threats-and-defenses-2026':
     'Teaching AI-Powered Threats and Defenses',
   'self-paced-pl-teaching-thinking-critically-about-ai-2026':
@@ -81,19 +81,23 @@ export const US_ONLY_CHAT_UNITS: Record<string, string> = {
 export const US_ONLY_TUTOR_COURSES: Record<string, string[]> = {
   'ai-discoveries-2026': ['Web Development'],
   'ai-foundations-designing-and-building-with-ai-2026': [
-    'AI-Generated Design',
     'AI and Algorithmic Decisions',
+    'AI-Generated Design',
     'Building Data-Driven Systems with AI',
-    'Iterating with AI',
     'Designing Reliable Apps with AI and APIs',
+    'Iterating with AI',
     'Web Apps with AI Capstone Project',
   ],
+  'ai-foundations-exploring-ai-and-cs-2026': [
+    'AI History (AI Ready Skills Prep)',
+    'Foundations of AI Programming (JavaScript)',
+  ],
   'ai-foundations-year1-2026': [
-    'AI-Generated Design',
     'AI and Algorithmic Decisions',
+    'AI-Generated Design',
     'Building Data-Driven Systems with AI',
-    'Iterating with AI',
     'Designing Reliable Apps with AI and APIs',
+    'Iterating with AI',
     'Web Apps with AI Capstone Project',
   ],
   'focus-on-coding-2026': ['Web Development'],
@@ -102,16 +106,16 @@ export const US_ONLY_TUTOR_COURSES: Record<string, string[]> = {
   'intro-to-web-lab': ['Intro to Web Lab'],
   'teaching-ai-discoveries-2026': ['AID - Teaching Web Development'],
   'teaching-aif-design-build-ai-facilitators-2026': [
-    'Unit 1 - Teaching AI-Generated Design',
     'Unit 2 - Teaching AI and Algorithmic Decisions',
+    'Unit 1 - Teaching AI-Generated Design',
     'Unit 3 - Teaching Data-Driven Systems',
   ],
   'teaching-designing-and-building-with-ai-2026': [
-    'Teaching AI Generated Design',
     'Teaching AI and Algorithmic Decisions',
+    'Teaching AI Generated Design',
     'Teaching Data-Driven Systems',
-    'Teaching Iterating with AI',
     'Teaching Designing Reliable Apps with AI and APIs',
+    'Teaching Iterating with AI',
     'Teaching Web Apps with AI Capstone Project',
   ],
   'teaching-web-dev-2026': ['AID - Teaching Web Development'],
@@ -122,10 +126,13 @@ export const US_ONLY_TUTOR_COURSES: Record<string, string[]> = {
 export const US_ONLY_TUTOR_UNITS: Record<string, string> = {
   'ai-and-algorithmic-decisions-2026': 'AI and Algorithmic Decisions',
   'ai-generated-design-2026': 'AI-Generated Design',
+  'ai-history-2026': 'AI History (AI Ready Skills Prep)',
   'building-data-driven-systems-with-ai-2026':
     'Building Data-Driven Systems with AI',
   'designing-reliable-apps-with-ai-and-apis-2026':
     'Designing Reliable Apps with AI and APIs',
+  'foundations-of-ai-programming-javascript-2026':
+    'Foundations of AI Programming (JavaScript)',
   'intro-to-web-lab': 'Intro to Web Lab',
   'iterating-with-ai-2026': 'Iterating with AI',
   'pl-facilitators-aif2-ai-algorithmic-decisions-2026':

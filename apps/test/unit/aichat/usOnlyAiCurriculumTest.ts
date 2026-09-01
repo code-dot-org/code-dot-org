@@ -8,12 +8,21 @@ import {
 
 describe('getUsOnlyAiCurriculumWarnings', () => {
   describe('AI Chat levels', () => {
+    // Derived rather than hardcoded: which courses have only the chat impact
+    // shifts as curriculum changes, and pinning one makes this fail for
+    // reasons that have nothing to do with the behaviour under test.
+    const chatOnlyCourse = Object.keys(US_ONLY_CHAT_COURSES).find(
+      course => !US_ONLY_TUTOR_COURSES[course]
+    ) as string;
+
     it('names the affected units when a whole course is assigned', () => {
       const [warning] = getUsOnlyAiCurriculumWarnings({
-        courseVersionName: 'ai-foundations-exploring-ai-and-cs-2026',
+        courseVersionName: chatOnlyCourse,
       });
 
-      expect(warning).toContain('AI-Powered Threats and Defenses');
+      US_ONLY_CHAT_COURSES[chatOnlyCourse].forEach(unitTitle =>
+        expect(warning).toContain(unitTitle)
+      );
       expect(warning).toContain('Other units are unaffected');
     });
 
