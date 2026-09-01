@@ -78,4 +78,18 @@ class QuizTest < ActiveSupport::TestCase
     quiz.max_attempts = 2
     assert quiz.valid?
   end
+
+  test "destroying a quiz removes its placements and leaves bank questions" do
+    quiz = create(:quiz)
+    other_quiz = create(:quiz)
+    question = create(:quiz_question)
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
+    create(:quiz_question_placement, level: other_quiz, quiz_question: question)
+
+    quiz.destroy!
+
+    refute QuizQuestionPlacement.exists?(level: quiz, quiz_question: question)
+    assert QuizQuestionPlacement.exists?(level: other_quiz, quiz_question: question)
+    assert QuizQuestion.exists?(question.id)
+  end
 end

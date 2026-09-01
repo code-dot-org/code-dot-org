@@ -50,7 +50,7 @@ class Quiz < Level
   validate :max_attempts_requires_allow_multiple_attempts
   validate :show_intro_screen_required_when_time_limit
 
-  has_many :placements, -> {order(:page, :position)}, class_name: 'QuizQuestionPlacement', foreign_key: :level_id, inverse_of: :level, dependent: nil
+  has_many :placements, -> {order(:page, :position)}, class_name: 'QuizQuestionPlacement', foreign_key: :level_id, inverse_of: :level, dependent: :destroy
   has_many :questions, through: :placements, source: :quiz_question
   has_many :attempts, class_name: 'QuizAttempt', foreign_key: :level_id, inverse_of: :level, dependent: nil
 
