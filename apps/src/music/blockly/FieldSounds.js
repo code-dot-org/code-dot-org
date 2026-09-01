@@ -134,6 +134,10 @@ class FieldSounds extends BlocklyCore.Field {
     this.newDiv_.style.width = '600px';
     this.newDiv_.style.backgroundColor = color.dark_black;
     this.newDiv_.style.padding = '5px';
+    // The SoundsPanel child is itself 600px wide, so the width above must
+    // exclude the padding.  Bootstrap 3 (#73739) sets border-box on every
+    // element, which made the panel overflow the dropdown on the right.
+    this.newDiv_.style.boxSizing = 'content-box';
 
     return this.newDiv_;
   }
