@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-28 15:52:19 UTC",
+    "serialized_at": "2026-08-31 15:52:27 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -1931,6 +1931,28 @@
     },
     {
       "chapter": 72,
+      "position": 23,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-fcl-wrap"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "6bad7e12-f755-4f92-8aff-225b717db700"
+      },
+      "level_keys": [
+        "pl-aif1-js-fcl-wrap"
+      ]
+    },
+    {
+      "chapter": 73,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1952,7 +1974,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 74,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1974,7 +1996,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 75,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1996,31 +2018,9 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 76,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "progression": "Final Project"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "pl-aif1-js-practice-rubric"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "",
-        "script.name": "pl-aif-intro-programming-js",
-        "activity_section.key": "e82e63aa-8ac2-487c-9330-e24d6efb6196"
-      },
-      "level_keys": [
-        "pl-aif1-js-practice-rubric"
-      ]
-    },
-    {
-      "chapter": 76,
-      "position": 5,
-      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "progression": "Final Project"
@@ -2041,8 +2041,52 @@
     },
     {
       "chapter": 77,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Final Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-practice-rubric"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "e82e63aa-8ac2-487c-9330-e24d6efb6196"
+      },
+      "level_keys": [
+        "pl-aif1-js-practice-rubric"
+      ]
+    },
+    {
+      "chapter": 78,
       "position": 6,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrapping Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-reflect-padlet"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "96155fcb-631b-46e5-9e88-6ba17094f3c1"
+      },
+      "level_keys": [
+        "pl-aif1-js-reflect-padlet"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 7,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "progression": "Wrapping Up"
@@ -2917,6 +2961,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "pl-aif1-js-fcl-wrap",
+        "script_level.level_keys": [
+          "pl-aif1-js-fcl-wrap"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "6bad7e12-f755-4f92-8aff-225b717db700"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "pl-aif-lesson-6-overview-JS",
         "script_level.level_keys": [
           "pl-aif-lesson-6-overview-JS"
@@ -2953,6 +3009,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "pl-aif1-js-student-example",
+        "script_level.level_keys": [
+          "pl-aif1-js-student-example"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "e82e63aa-8ac2-487c-9330-e24d6efb6196"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "pl-aif1-js-practice-rubric",
         "script_level.level_keys": [
           "pl-aif1-js-practice-rubric"
@@ -2965,14 +3033,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-aif1-js-student-example",
+        "level.key": "pl-aif1-js-reflect-padlet",
         "script_level.level_keys": [
-          "pl-aif1-js-student-example"
+          "pl-aif1-js-reflect-padlet"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "pl-aif-intro-programming-js",
-        "activity_section.key": "e82e63aa-8ac2-487c-9330-e24d6efb6196"
+        "activity_section.key": "96155fcb-631b-46e5-9e88-6ba17094f3c1"
       }
     },
     {

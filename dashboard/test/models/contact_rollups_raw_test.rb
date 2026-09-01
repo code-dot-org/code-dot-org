@@ -50,6 +50,37 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
     assert_equal [Pd::Workshop::COURSE_CSD, Pd::Workshop::COURSE_CSF], courses
   end
 
+  test 'extract_users_and_geos takes only the latest geo record per user' do
+    teacher = create(:teacher)
+    base_time = Time.now.utc
+    create(:user_geo, user: teacher, city: 'Old Town', state: 'Washington',
+      updated_at: base_time - 2.days
+)
+    create(:user_geo, user: teacher, city: 'Newville', state: 'Oregon',
+      updated_at: base_time
+)
+
+    ContactRollupsRaw.extract_users_and_geos
+
+    records = ContactRollupsRaw.where(email: teacher.email, sources: 'dashboard.users')
+    assert_equal 1, records.count
+    data = records.first.data
+    assert_equal teacher.id, data['user_id']
+    assert_equal 'Newville', data['city']
+    assert_equal 'Oregon', data['state']
+  end
+
+  test 'extract_users_and_geos includes teachers without geo records' do
+    teacher = create(:teacher)
+
+    ContactRollupsRaw.extract_users_and_geos
+
+    record = ContactRollupsRaw.find_by(email: teacher.email, sources: 'dashboard.users')
+    refute_nil record
+    assert_equal teacher.id, record.data['user_id']
+    assert_nil record.data['city']
+  end
+
   test 'get_extraction_query can import when no data column is given' do
     email_preference = create(:email_preference)
 

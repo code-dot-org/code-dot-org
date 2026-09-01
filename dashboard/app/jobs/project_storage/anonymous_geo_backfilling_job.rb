@@ -36,7 +36,7 @@ class ProjectStorage::AnonymousGeoBackfillingJob < ApplicationJob
   end
 
   rescue_from StandardError do |exception|
-    Observability::Errors.capture_exception(exception)
+    Observability::Errors.report(exception)
   end
 
   def self.storage_id_cursor
