@@ -1,4 +1,6 @@
 import {
+  hasSupportAhead,
+  hasSupportAt,
   isSupported,
   resolvePlatformPhysics,
   PhysicsBox,
@@ -219,6 +221,64 @@ describe('platformPhysics', () => {
 
 // The set-gravity block's resolver seam: a custom magnitude, and a negative
 // value flipping the world vertically.
+describe('platformPhysics at zero gravity', () => {
+  const walls = [wallAt(1, 6)];
+
+  it('does not drop a player that steps off its block', () => {
+    const player = makeSprite(75, 275);
+    step(player, walls); // settle __slab2Prev
+    for (let i = 0; i < 20; i++) {
+      player.position.x += 4;
+      resolvePlatformPhysics(
+        [{sprite: player, x: player.position.x, y: player.position.y}],
+        walls,
+        VIEW,
+        0
+      );
+    }
+    expect(player.position.x).toBeGreaterThan(120);
+    expect(player.position.y).toBe(275);
+    expect(player.velocity.y).toBe(0);
+  });
+
+  it('steers up into a block and stops under it, and stops at the top edge', () => {
+    // Under the block (top 300..350, at row 6), moving up.
+    const player = makeSprite(75, 400);
+    step(player, walls);
+    for (let i = 0; i < 40; i++) {
+      player.position.y -= 3;
+      resolvePlatformPhysics(
+        [{sprite: player, x: player.position.x, y: player.position.y}],
+        walls,
+        VIEW,
+        0
+      );
+    }
+    // Body top against the underside: body centre 370, image centre 5 above.
+    expect(player.position.y).toBeCloseTo(350 + 20 - 5, 0);
+    const free = makeSprite(300, 100);
+    step(free, walls);
+    for (let i = 0; i < 60; i++) {
+      free.position.y -= 3;
+      resolvePlatformPhysics(
+        [{sprite: free, x: free.position.x, y: free.position.y}],
+        walls,
+        VIEW,
+        0
+      );
+    }
+    expect(free.position.y).toBeGreaterThan(0);
+    expect(free.position.y).toBeLessThan(30);
+  });
+
+  it('forgets vertical speed carried in from before', () => {
+    const player = makeSprite(200, 200);
+    player.velocity.y = -12;
+    resolvePlatformPhysics([{sprite: player, x: 200, y: 200}], walls, VIEW, 0);
+    expect(player.velocity.y).toBe(0);
+  });
+});
+
 describe('platformPhysics with custom gravity', () => {
   const stepWith = (
     sprite: PhysicsSprite,
@@ -278,6 +338,34 @@ describe('platformPhysics with custom gravity', () => {
     expect(isSupported(underBlock, walls, VIEW, -PLATFORM_GRAVITY)).toBe(true);
     const nearBlock = makeSprite(75, 360);
     expect(isSupported(nearBlock, walls, VIEW, -PLATFORM_GRAVITY)).toBe(false);
+  });
+
+  it('hasSupportAhead looks under the body edge on the side faced', () => {
+    // Block 50..100; the 20px body of a sprite at x=95 reaches 105.
+    const walls = [wallAt(1, 6)];
+    expect(hasSupportAhead(makeSprite(95, 275), 1, walls, VIEW)).toBe(false);
+    expect(hasSupportAhead(makeSprite(95, 275), -1, walls, VIEW)).toBe(true);
+    expect(hasSupportAhead(makeSprite(90, 275), 1, walls, VIEW)).toBe(true);
+  });
+
+  it('hasSupportAt probes a point at foot level, in the gravity direction', () => {
+    // Block 50..100 at row 6; the sprite stands on it at x=75.
+    const walls = [wallAt(1, 6)];
+    const onBlock = makeSprite(75, 275);
+    expect(hasSupportAt(onBlock, 20, walls, VIEW)).toBe(true);
+    expect(hasSupportAt(onBlock, 30, walls, VIEW)).toBe(false);
+    expect(hasSupportAt(onBlock, -30, walls, VIEW)).toBe(false);
+    // The floor always counts; in the air nothing does.
+    expect(hasSupportAt(makeSprite(300, 375), 100, walls, VIEW)).toBe(true);
+    expect(hasSupportAt(makeSprite(75, 200), 0, walls, VIEW)).toBe(false);
+    // Under flipped gravity, against the block's underside.
+    const underBlock = makeSprite(75, 375);
+    expect(hasSupportAt(underBlock, 20, walls, VIEW, -PLATFORM_GRAVITY)).toBe(
+      true
+    );
+    expect(hasSupportAt(underBlock, 30, walls, VIEW, -PLATFORM_GRAVITY)).toBe(
+      false
+    );
   });
 });
 

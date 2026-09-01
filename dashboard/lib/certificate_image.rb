@@ -93,7 +93,7 @@ class CertificateImage
       text_overlay.destroy!
     rescue Magick::ImageMagickError => exception
       # We want to know what kinds of text we are failing to render.
-      Honeybadger.notify(
+      Observability::Errors.report(
         exception,
         context: {
           text: text,

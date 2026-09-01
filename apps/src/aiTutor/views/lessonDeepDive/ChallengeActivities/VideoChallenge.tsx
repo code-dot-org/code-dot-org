@@ -136,10 +136,7 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
   };
 
   return (
-    <div className={styles.videoContainer}>
-      <div className={styles.questionText}>
-        {challenge ? challenge.question : 'DUMMY PROBLEM TEXT HERE'}
-      </div>
+    <div>
       <VideoRecorder
         onRecordingChange={setHasRecording}
         onIsRecordingChange={setIsRecording}

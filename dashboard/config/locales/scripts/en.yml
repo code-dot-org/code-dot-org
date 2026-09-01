@@ -1156,6 +1156,19 @@ en:
             practice:
               display_name: Teaching Practices
           student_description: This is a sample course that has all of the plc special things. Enrollment in this course does nothing. Right now, it's just a copy of TeacherCon
+        ui-test-plc:
+          title: UI Test course for PLC things
+          description: This is a sample course that has all of the plc special things. Enrollment in this course does nothing. Right now, it's just a copy of TeacherCon
+          description_short: This is a sample course that has all of the plc special things
+          description_audience: ''
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+            practice:
+              display_name: Teaching Practices
+          student_description: This is a sample course that has all of the plc special things. Enrollment in this course does nothing. Right now, it's just a copy of TeacherCon
         csd3-2017:
           title: CSD Unit 3 - Animations and Games ('17-'18)
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
@@ -28093,6 +28106,8 @@ en:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
+            lessonGroup-3:
+              display_name: End of Unit Survey
           title: Web Apps with AI Capstone Project
           description: |-
             This unit is the capstone of AI Foundations Semester 2, where students synthesize their learning to design and build a complete web app with a clear purpose and audience. They integrate technical fluency, human-centered design, and AI literacy, making choices that are transparent, ethical, and aligned with their values. The focus is not only on producing a finished app but on documenting and reflecting on the process, demonstrating the habits of intentional designers who create technology with clarity, confidence, and care.
@@ -30202,13 +30217,19 @@ en:
             lesson-6:
               name: Variables - Day 3
             lesson-7:
-              name: Lesson 7
+              name: 'Lesson 24: Strings - Day 1'
             lesson-8:
-              name: Lesson 8
+              name: 'Lesson 25: Strings - Day 2'
             lesson-9:
-              name: Lesson 9
+              name: 'Lesson 26: Expressions and Operators - Day 1'
             lesson-10:
-              name: Lesson 10
+              name: 'Lesson 27: Expressions and Operators - Day 2'
+            lesson-11:
+              name: 'Lesson 28: Random Values - Day 1'
+            lesson-12:
+              name: 'Lesson 29: Random Values - Day 2'
+            lesson-13:
+              name: 'Lesson 30: Project - Wrapped'
           lesson_groups: {}
           name: csp-unit1-dev-27-28
           title: Unit 1 - Creating Purposeful Apps and Programs
@@ -30333,7 +30354,7 @@ en:
           description: ''
           student_description: ''
         self-paced-pl-teaching-aiml-unit1-2026:
-          title: Teaching AI and Machine Learning
+          title: CSD - Teaching AI and Machine Learning
           description: |-
             **In this professional learning module, you will:**
 
@@ -30356,6 +30377,9 @@ en:
             **Suggested Time:** 100 minutes
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-aiml-unit1-2026
         self-paced-pl-teaching-csd-unit2-2026:
           title: Preparing to Teach Web Development
           description: |-
@@ -30382,6 +30406,9 @@ en:
             **Suggested time**: 120 minutes
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-csd-unit2-2026
         self-paced-pl-teaching-programming-with-music-lab-unit1-2026:
           title: AID - Teaching Programming with Music Lab
           description: |-
@@ -30414,24 +30441,36 @@ en:
           student_description: "This professional learning module is designed to help you prepare to teach CodeAI's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-csd-unit3-2026
         self-paced-pl-teaching-csd-unit5-2026:
           title: Preparing to Teach Data and Society
           description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 70 minutes"
           student_description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 70 minutes"
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-csd-unit5-2026
         self-paced-pl-teaching-physical-computing-2026:
           title: Preparing to Teach Creating Apps for Devices (Circuit Playground)
           description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
           student_description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-physical-computing-2026
         self-paced-pl-teaching-microbit-2026:
           title: Preparing to Teach Creating Apps for Devices (micro:bit)
           description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
           student_description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-microbit-2026
         foundations-of-ai-programming-javascript-2026:
           lesson_groups:
             lessonGroup-2:

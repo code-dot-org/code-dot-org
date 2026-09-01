@@ -36,7 +36,7 @@ class QuizAttemptTest < ActiveSupport::TestCase
   end
 
   test "expires_at/expired? follow started_at + the quiz's time_limit_minutes" do
-    quiz = create(:quiz, time_limit_minutes: 10)
+    quiz = create(:quiz, time_limit_minutes: 10, show_intro_screen: true)
     Timecop.freeze(Time.local(2026, 1, 1, 12, 0, 0)) do
       attempt = create(:quiz_attempt, level: quiz, started_at: Time.now)
       assert_equal Time.local(2026, 1, 1, 12, 10, 0), attempt.expires_at
@@ -51,7 +51,7 @@ class QuizAttemptTest < ActiveSupport::TestCase
   end
 
   test "response_deadline_passed? allows a grace period past expires_at" do
-    quiz = create(:quiz, time_limit_minutes: 10)
+    quiz = create(:quiz, time_limit_minutes: 10, show_intro_screen: true)
     Timecop.freeze(Time.local(2026, 1, 1, 12, 0, 0)) do
       attempt = create(:quiz_attempt, level: quiz, started_at: Time.now)
 

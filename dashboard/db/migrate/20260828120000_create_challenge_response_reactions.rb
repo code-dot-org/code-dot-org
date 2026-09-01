@@ -2,8 +2,6 @@ class CreateChallengeResponseReactions < ActiveRecord::Migration[7.0]
   def change
     create_table :challenge_response_reactions do |t|
       t.references :challenge_response, null: false, foreign_key: true
-      # users.id is a legacy integer key, not bigint, so the reference must
-      # match its type for the foreign key to be accepted.
       t.references :user, null: false, type: :integer, foreign_key: true
       # The reaction emoji, stored by name (e.g. "clap", "heart") from a
       # fixed vocabulary the model enforces, not an arbitrary glyph.

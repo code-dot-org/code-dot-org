@@ -64,6 +64,17 @@ export function onTrimsUpdated(listener: () => void): () => void {
 }
 
 /**
+ * Drop an image's cached trimmed thumbnail — its pixels changed to data
+ * that has not arrived yet, so the cache would keep showing the old
+ * pixels. The next trim pass repopulates it.
+ */
+export function forgetTrimmedThumbnail(name?: string): void {
+  if (name && trimmedByName.delete(name)) {
+    trimListeners.forEach(listener => listener());
+  }
+}
+
+/**
  * Load an image (dataURI or URL), crop transparent borders, and return the
  * cropped image as a dataURI. Returns the input unchanged when there's
  * nothing to trim (full-bleed content, fully transparent, or load failure).
@@ -114,6 +125,20 @@ function trimTransparentBorder(source: string): Promise<string> {
     trimCache.set(source, cached);
   }
   return cached;
+}
+
+/** The animation list restricted to images whose data has arrived. */
+export function loadedAnimations(
+  list: RuntimeAnimationList
+): RuntimeAnimationList {
+  const orderedKeys = (list.orderedKeys || []).filter(
+    key => list.propsByKey[key]?.dataURI
+  );
+  const propsByKey: RuntimeAnimationList['propsByKey'] = {};
+  orderedKeys.forEach(key => {
+    propsByKey[key] = list.propsByKey[key];
+  });
+  return {orderedKeys, propsByKey};
 }
 
 /**
