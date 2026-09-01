@@ -515,7 +515,19 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     # request continues on the v1 UserId.
     return if classlink_v2_id.nil?
 
-    unless User.find_by_credential(type: AuthenticationOption::CLASSLINK, id: classlink_v2_id)
+    v2_user = User.find_by_credential(type: AuthenticationOption::CLASSLINK, id: classlink_v2_id)
+    if v2_user
+      # Anchor an account that holds only a v2 record. The uid rewrite below makes this
+      # sign-in work, but it only works while SourcedId keeps arriving unchanged; the
+      # UserId-keyed record is what keeps the account reachable if it ever doesn't.
+      #
+      # Login only. On a connect attempt the account found here belongs to whoever
+      # holds the credential, not to current_user, and that path can go on to refuse
+      # the connect or to destroy the holder in a takeover — writing rows to a third
+      # party's account in the middle of either is blast radius the anchor does not
+      # need. Anchoring is about keeping login working, so it runs on login.
+      ensure_classlink_v1_auth_option(classlink_v2_id, auth.uid) unless should_connect_provider?
+    else
       v1_user = User.find_by_credential(type: AuthenticationOption::CLASSLINK, id: auth.uid)
       if v1_user
         # SourcedId present and no v2 record yet: add one alongside the v1
@@ -549,6 +561,36 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     # mutating the given hash in place — everything downstream re-reads
     # request.env['omniauth.auth'].
     request.env['omniauth.auth'] = auth.dup.tap {|a| a.uid = classlink_v2_id}
+  end
+
+  # Gives an account that holds only a v2 ClassLink auth option its UserId-keyed v1
+  # sibling, so it stays reachable if SourcedId ever changes or stops arriving.
+  #
+  # Deliberately never raises and never aborts the sign-in: failing to write the anchor
+  # costs a safety net, while raising here would cost the session of a user whose
+  # credential already matched. A failure is reported instead, since UserId is globally
+  # unique and there should be no way for this insert to be refused.
+  #
+  # @param classlink_v2_id [String] the "<TenantId>|<SourcedId>" id that matched
+  # @param classlink_user_id [String, Integer] ClassLink's UserId, from the payload
+  # @return [void]
+  private def ensure_classlink_v1_auth_option(classlink_v2_id, classlink_user_id)
+    new_auth_option = Services::Classlink::V1AuthOptionBuilder.call(
+      classlink_v2_id: classlink_v2_id,
+      classlink_user_id: classlink_user_id
+    )
+    # nil means there was nothing to do — the account already has a v1 record.
+    return if new_auth_option.nil?
+    return if new_auth_option.save
+
+    Observability::Errors.report(
+      'ClassLink v1 auth option not created',
+      context: {
+        classlink_user_id: classlink_user_id,
+        classlink_v2_id: classlink_v2_id,
+        errors: new_auth_option.errors.full_messages,
+      }
+    )
   end
 
   private def just_authorized_google_classroom?

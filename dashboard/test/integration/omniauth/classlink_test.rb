@@ -87,10 +87,13 @@ module OmniauthCallbacksControllerTests
     end
 
     test "sign-in via v2 authentication id" do
+      # Covers the lookup only. This sign-in also creates the account's v1 anchor,
+      # which "sign-in anchors a v2-only account on its UserId" asserts; the
+      # creates-nothing steady state is covered by the both-records test below.
       teacher = create(:teacher, :classlink_sso_provider, uid: '2222|T5678-0005')
       mock_oauth uid: 59_777_133, tenant_id: 2222, sourced_id: 'T5678-0005'
 
-      assert_does_not_create(AuthenticationOption) {sign_in_through_classlink}
+      sign_in_through_classlink
 
       assert_equal teacher.id, signed_in_user_id
     end
@@ -142,6 +145,67 @@ module OmniauthCallbacksControllerTests
       assert_equal AuthenticationOption::Classlink::VERSION[:v2], auth_option.version
     ensure
       created_user&.destroy!
+    end
+
+    test "sign-in anchors a v2-only account on its UserId" do
+      # A signup from an OneRoster district holds only a v2 record. SourcedId can
+      # change or stop arriving; the UserId cannot, so sign-in fills in the
+      # missing half of the pair while both ids are still in hand.
+      teacher = create(:teacher, :classlink_sso_provider, uid: '2222|T5678-0005')
+      mock_oauth uid: 59_777_133, tenant_id: 2222, sourced_id: 'T5678-0005'
+
+      assert_creates(AuthenticationOption) {sign_in_through_classlink}
+
+      assert_equal teacher.id, signed_in_user_id
+      v1_auth_option = teacher.reload.authentication_options.find_by(
+        credential_type: AuthenticationOption::CLASSLINK,
+        authentication_id: '59777133'
+      )
+      refute_nil v1_auth_option
+      assert_nil v1_auth_option.version
+    end
+
+    test "an anchored account signs in after its district disables OneRoster" do
+      # The property the anchor exists for. With SourcedId empty no v2 id can be
+      # built, so the UserId record is the only thing that can find this account.
+      # Without it the lookup misses and sign-up runs, orphaning the account.
+      teacher = create(:teacher, :classlink_sso_provider, uid: '2222|T5678-0005')
+      create(
+        :authentication_option,
+        user: teacher,
+        credential_type: AuthenticationOption::CLASSLINK,
+        authentication_id: '59777133'
+      )
+      mock_oauth uid: 59_777_133, tenant_id: 2222, sourced_id: ''
+      Observability::Errors.expects(:report).never
+
+      assert_does_not_create(User, AuthenticationOption) {sign_in_through_classlink}
+
+      assert_equal teacher.id, signed_in_user_id
+    end
+
+    test "sign-in via the v1 id records a changed SourcedId" do
+      # An SIS re-key, or a student moving schools inside the district: the stored
+      # v2 id no longer matches the payload, with OneRoster enabled the whole
+      # time. The UserId lookup still finds the account.
+      teacher = create(:teacher, :classlink_sso_provider, uid: '59777133')
+      create(
+        :authentication_option,
+        user: teacher,
+        credential_type: AuthenticationOption::CLASSLINK,
+        authentication_id: '2222|OLD-0001',
+        version: AuthenticationOption::Classlink::VERSION[:v2]
+      )
+      mock_oauth uid: 59_777_133, tenant_id: 2222, sourced_id: 'NEW-0002'
+
+      assert_creates(AuthenticationOption) {sign_in_through_classlink}
+
+      assert_equal teacher.id, signed_in_user_id
+      assert teacher.reload.authentication_options.exists?(
+        credential_type: AuthenticationOption::CLASSLINK,
+        authentication_id: '2222|NEW-0002',
+        version: AuthenticationOption::Classlink::VERSION[:v2]
+      )
     end
 
     test "sign-in uses the v1 id when the district sends no SourcedId" do

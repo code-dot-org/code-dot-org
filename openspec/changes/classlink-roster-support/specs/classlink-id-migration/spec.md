@@ -41,6 +41,37 @@ When a user authenticates via ClassLink SSO for the first time and the payload c
 - **WHEN** a user whose SSO payload carries no `SourcedId` authenticates via ClassLink for the first time
 - **THEN** their `AuthenticationOption` is created with `authentication_id = <UserId>` and `version` nil, exactly as ClassLink signups worked before this change
 
+#### Scenario: A v2 signup is anchored at its next sign-in
+- **WHEN** a user signs up from an OneRoster-enabled district, receiving a v2 auth option as their only credential, and later signs in again
+- **THEN** that sign-in creates their v1 `UserId`-keyed auth option, so the account is reachable by an id that cannot disappear; until then the account is recoverable only while `SourcedId` keeps arriving unchanged
+
+### Requirement: Every ClassLink account holds a UserId-keyed auth option
+The `UserId` from ClassLink's SSO payload is the durable login anchor: ClassLink assigns it, it is globally unique and stable within ClassLink, and it is present on every response — including from districts with no OneRoster, where `SourcedId` is empty. The `<TenantId>|<SourcedId>` v2 id is by contrast the rostering join key, and is the only one of the two that can change or disappear. The system SHALL therefore ensure every ClassLink account holds a v1 auth option keyed on `UserId`: when a sign-in resolves to a user who holds a v2 ClassLink auth option and no v1 option, the system SHALL create the v1 option with `authentication_id = <UserId>` and `version` nil, leaving the v2 record untouched.
+
+#### Scenario: A v2-only account gains its anchor at sign-in
+- **WHEN** a user whose only ClassLink auth option is v2 signs in with a payload carrying both `UserId` and `SourcedId`
+- **THEN** the system creates a v1 auth option on that user with `authentication_id = <UserId>` and `version` nil, does not modify the v2 record, and signs them in
+
+#### Scenario: An anchored account survives losing its SourcedId
+- **WHEN** a user who holds both a v1 and a v2 ClassLink auth option signs in from a district that has since disabled OneRoster, so the payload carries no `SourcedId`
+- **THEN** no v2 id can be built, the `UserId` lookup finds their v1 record, and they sign in to their existing account — rather than being locked out or given a duplicate account
+
+#### Scenario: An anchored account survives a changed SourcedId
+- **WHEN** a user's `SourcedId` changes (an SIS re-key, or a move between schools in the district) so their stored v2 id no longer matches the payload
+- **THEN** the `UserId` lookup finds their v1 record and signs them in to the existing account, and login-time migration adds a v2 record for the new `SourcedId`
+
+#### Scenario: Anchoring is idempotent
+- **WHEN** a user who already holds both a v1 and a v2 ClassLink auth option signs in
+- **THEN** no additional auth option is created
+
+#### Scenario: A connect attempt does not anchor the credential holder
+- **WHEN** a user attempts to connect a ClassLink credential held by a different, v2-only account
+- **THEN** no v1 auth option is created on the holder's account, because that request may go on to refuse the connect or to take over and destroy the holder — the anchor is written on the holder's own sign-in instead
+
+#### Scenario: Anchoring does not block sign-in when it fails
+- **WHEN** the v1 auth option cannot be created for a user who lacks one — for example the `UserId` is already held by another account
+- **THEN** the failure is reported for follow-up and the sign-in still succeeds against the record that matched
+
 ### Requirement: Dual-match login is permanent
 The system SHALL authenticate a ClassLink user whose identifiers match either a v2 record (`<TenantId>|<SourcedId>` format) or a legacy v1 record (`<UserId>` format), trying the v2-format lookup first. This dual lookup is durable routing logic, not a transition mechanism: the v1 path is the only login path for districts without OneRoster enabled, and it SHALL NOT be removed.
 

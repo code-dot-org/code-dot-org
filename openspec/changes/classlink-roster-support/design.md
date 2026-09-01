@@ -544,9 +544,112 @@ The residual cost of having no bulk lever is the duplicate-student window, which
 - Bulk migration script (build and optionally run): Rejected outright once `SourcedId` was documented as empty for non-OneRoster districts — see above. The reasoning is preserved in the Settled section so it is not re-proposed.
 - Marking v1 records with an explicit `version = 'v1'`: The existing ~14k records carry nil, so stamping new v1 signups differently would split one population into two spellings for no query we need. Nil already means "legacy format" unambiguously. Rejected.
 
+### 7a. The v1 record is every account's login anchor, not just older accounts'
+
+**Decision:** Every ClassLink account holds a v1 (`UserId`-keyed) auth option, including accounts that
+were created on the v2 format. At sign-in, when the resolved user holds a v2 ClassLink auth option and
+no v1 option, the system creates the v1 option from the payload's `UserId` with `version` nil. This is
+the mirror image of the login-time v2 creation in Decision 7, and runs at the same seam.
+
+**The two formats do different jobs, and neither is the other's successor:**
+
+- **v1 (`UserId`) is the durable login anchor.** ClassLink assigns it, it is globally unique and stable
+  within ClassLink (confirmed 2026-09-01), and `v2/my/info` returns it on **every** response — including
+  for districts with no OneRoster, where `SourcedId` is empty. Nothing else in the payload has all three
+  properties.
+- **v2 (`<TenantId>|<SourcedId>`) is the rostering join key.** One Roster identifies users only by
+  `SourcedId`, so it is what links an imported student to their account and what gates the rostering UI
+  (Decision 6a). It is also the only id of the two that can disappear or change.
+
+Reading v1 as "the old format" is what produced the gap this decision closes. It is not old; it is the
+half of the pair that cannot go missing.
+
+**The failure this prevents.** A v2-only account is unrecoverable the moment `SourcedId` stops arriving
+or changes, because nothing stored on it is keyed to anything the payload still carries:
+
+1. Sign-in arrives with an empty `SourcedId`, so no v2 id can be built and the uid stays the `UserId`.
+2. `find_user_by_credential` looks up that `UserId`, and the account has no record under it.
+3. `users.uid` cannot rescue the lookup either — `migrate_to_multi_auth` nulls it after signup, and
+   `initialize_new_oauth_user` had set it to the **v2** id anyway, since the uid is rewritten before the
+   user is built.
+4. Sign-up runs. If ClassLink supplies an email matching the existing account the teacher hits the
+   existing-account redirect and is locked out; otherwise a second account is created and the original's
+   progress is orphaned. Students without a trusted email land in the second case.
+
+So at the moment of failure we know exactly who the user is and cannot look them up — which is precisely
+what a `UserId`-keyed row fixes.
+
+**This is not hypothetical; it already happened on Clever.**
+`find_clever_user_by_legacy_id` (`omniauth_callbacks_controller.rb:350`) exists because a Clever district
+disabled the integration and re-enabled it after the v3 migration, orphaning users mid-flight. Districts
+toggling integrations is observed production behaviour in this subsystem, not a theoretical risk. Note how
+Clever recovers: `legacy_id` keeps arriving in Clever's own API response, so the pre-migration id is still
+available to look up by. ClassLink's `UserId` keeps arriving too — the only thing missing is a row keyed on
+it, which is what this decision adds.
+
+**Triggers, in rough order of likelihood.** The district-wide OneRoster flip is the least likely of them:
+
+- A `SourcedId` that **changes** rather than vanishes — an SIS re-key, or a student moving schools within
+  the district. The v2 id no longer matches, with OneRoster enabled the whole time.
+- A user dropping out of the SIS feed while remaining a ClassLink user, so their `SourcedId` goes empty
+  individually.
+- The district disabling OneRoster outright.
+
+The reverse direction is already safe and needs nothing: a user who starts with no `SourcedId` and gains
+one later picks up a v2 record alongside their v1 record (Decision 7). Only v2-first-then-gone strands an
+account, which is exactly the population that v2-only signups create.
+
+**Where this runs, and the window it leaves open.** Sign-in, not sign-up. The signup path cannot reach the
+`UserId`: `PartialRegistration.persist_attributes` stores only `Policies::User.user_attributes`, the User
+is created on a later request by the `after_create` hook `migrate_to_multi_auth` (which has a DCDO-gated
+alternate implementation in `Services::User::MultiAuthMigrator`), and the uid was rewritten to the v2 form
+before any of it. Writing both rows at signup means threading the `UserId` through that shared,
+feature-flagged path for every provider.
+
+That is not worth it for the remaining exposure. A new v2-only signup is anchored at its next sign-in, so
+the window is one login cycle, and stranding an account inside it requires the district to disable
+OneRoster in that exact interval. Phase 1 has not deployed to production (task 1.10), so no v2-only
+accounts exist yet and there is no backlog to race. If the window is ever judged too wide, closing it is a
+self-contained follow-up: give the ClassLink signup both auth options up front via
+`authentication_options_attributes`, which `user_attributes` already round-trips.
+
+**Anchoring runs on login, not on connect.** Both paths pass through the same uid-rewrite seam, so
+anchoring every account found there is the smaller diff, but on a connect attempt the account found is the
+credential *holder* rather than `current_user` — and that path continues either to refuse the connect or to
+destroy the holder in a takeover (`move_sections_and_destroy_source_user`). Writing rows onto a third
+party's account in the middle of either is blast radius the anchor does not need, and it makes a refused
+connect a mutating operation. The repair opportunity given up is negligible: any user who can connect can
+also sign in, which is where the anchor is written.
+
+**Alternatives considered:**
+
+- **Sign up on the v1 `UserId` and let the next sign-in add v2.** Strictly the strongest durability story —
+  the anchor exists from the first row, with no window at all — and the smallest change. Rejected on UX: a
+  newly signed-up teacher would hold no v2 option, so Decision 6a hides the rostering UI from them until
+  they sign out and back in. That is the "sign out and sign back in" experience Decision 6a exists to
+  eliminate, reintroduced at the exact moment a teacher is trying to set up their classes.
+- **Store the `UserId` in the v2 record's `data` JSON and look it up from there.** No index, so the lookup
+  is a scan of every ClassLink auth option on every failed sign-in. Rejected.
+- **Leave `users.uid` holding the raw `UserId` for ClassLink signups**, letting `find_by_credential`'s
+  existing legacy-column fallback find these users. Fewer rows and nearly free, but it makes ClassLink the
+  only provider whose legacy column disagrees with its auth option, and it leans on pre-multi-auth
+  plumbing the codebase is migrating away from — `migrate_to_multi_auth` nulls the column on purpose.
+  Rejected.
+- **Accept the exposure and recover by hand.** The symptom is a teacher or student losing access to their
+  work, the detection channel is a support ticket, and the fix is a manual account merge. Rejected: the
+  same argument would have rejected Clever's `legacy_id` recovery path, which turned out to be necessary.
+
 ## Risks / Trade-offs
 
 **API throughput** → ClassLink does not publish rate limits, and load testing found none: 8,400 requests across two sustained runs returned zero 429s. What it did find is **latency degradation in place of rejection**. At 40 rps for 120s, p50 was 351ms and p95 469ms; at 60 rps for 60s, p95 rose to 7,396ms and max to 11,574ms — every response still a 200. The ceiling is therefore throughput-related slowness, not a limit we can detect from a status code, and it matters because each in-flight One Roster call holds one of five Puma threads per worker. Per-teacher, user-triggered sync sits far below the knee between 40 and 60 rps. Monitor latency rather than 429 counts; if sustained load ever approaches that range, escalate to background jobs (ActiveJob) or district-level bulk sync. The 40 rps run also produced 2 transient 500s (~0.04%); with no retry these surface to the teacher as the generic rostering failure.
+
+**A v2 account whose SourcedId stops arriving** → Mitigated, not eliminated, by Decision 7a: every account
+gains a `UserId`-keyed v1 record at its next sign-in, and the `UserId` is stable and always present. The
+residual is the window between a new signup and its second sign-in, during which the account is v2-only and
+would be stranded if its `SourcedId` vanished or changed in that interval. Accepted; the fix if it ever
+matters is to write both rows at signup. Worth monitoring as a count of ClassLink users holding a v2 option
+and no v1 option — that number should trend to zero on its own, and a rising one means sign-ins are not
+converging the way this decision assumes.
 
 **Student duplicate accounts** → A student in an OneRoster-enabled district who holds a legacy `UserId`-format auth option and has not signed in since Phase 1 deployed will not be found when rostering imports them by `<TenantId>|<SourcedId>` — a second account is created, and the original (with any progress) is orphaned once dual-match prefers the new-format record at their next login. With the bulk script dropped, this window closes only as students sign in, and import-time linking to the legacy account is impossible by construction: the v1 record stores only `UserId`, which One Roster data never carries. Mitigation is sequencing, not tooling — let Phase 1 run in production for a while before Phase 2 reaches teachers, so routine SSO logins (sessions are short) converge the active students first. The residual — a rostered class containing a student who truly has not signed in across the whole gap — is accepted.
 
