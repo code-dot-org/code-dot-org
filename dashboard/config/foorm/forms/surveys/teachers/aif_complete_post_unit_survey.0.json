@@ -69,6 +69,10 @@
                   "text": "Iterating with AI"
                 },
                 {
+                  "value": "api_apps",
+                  "text": "Designing Reliable Apps with AI & APIs"
+                },
+                {
                   "value": "capstone",
                   "text": "Web Apps with AI (Capstone)"
                 }
