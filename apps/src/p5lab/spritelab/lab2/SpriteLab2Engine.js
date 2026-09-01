@@ -181,9 +181,8 @@ export default class SpriteLab2Engine extends SpriteLab {
       library.defaultSpriteSize = this.sceneLooksLikePlatformer_()
         ? cellSize(DEFAULT_SCENE_GRID_SIZE)
         : STORY_SCENE_SPRITE_SIZE;
-      // Landings carry sub-pixel float noise, so the classic footing
-      // command (isDirectlyAbove — the pool jump block's gate) must not
-      // compare contact exactly.
+      // Landings carry sub-pixel float noise; the classic footing command
+      // must not compare contact exactly.
       library.contactEpsilon = CONTACT_EPSILON;
     }
     // Fresh library = fresh run; gravity returns to the default until a
@@ -215,8 +214,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     };
     // Footing in the gravity direction — the resolver's own geometry, so it
     // agrees with where sprites actually rest. Wherever nothing can fall
-    // (outside a platform scene, or under the gravity in force for this
-    // sprite being zero) everything counts as supported.
+    // (outside a platform scene, or at zero gravity for this sprite)
+    // everything counts as supported.
     const footing = (spriteArg, test) => {
       if (!this.usesPlatformPhysics_) {
         return true;
@@ -643,8 +642,7 @@ export default class SpriteLab2Engine extends SpriteLab {
   // Platformer physics for players and marked sprites (see
   // platformPhysics.ts for the rules), run immediately before every paint —
   // after p5's pre-phase velocity integration and after this frame's
-  // behaviors/events have moved sprites. Other program-driven sprites keep
-  // the stock resolver.
+  // behaviors/events have moved sprites.
   resolvePlatformPhysics_() {
     if (!this.usesPlatformPhysics_ || !this.library || !this.p5Wrapper.p5) {
       return;
