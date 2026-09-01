@@ -3720,11 +3720,12 @@ won anyway.
 
 ### What you do
 
-1. Add **when ⟨any Crate⟩ starts touching**, and in it ask
-   **if ⟨event actor⟩ is a ⟨Mark⟩ → add ⟨1⟩ to the score**.
-2. Add **when ⟨any Crate⟩ stops touching** with the same question and
-   **add ⟨-1⟩**. The count now says how many are on marks right now, rather
-   than how many ever have been.
+1. Add **when ⟨any Crate⟩ starts touching ⟨Mark⟩**, and in it
+   **add ⟨1⟩ to the score**. The **⟨Mark⟩** is the hat's own dropdown: a
+   handler that hears one kind of touch and not the others.
+2. Add **when ⟨any Crate⟩ stops touching ⟨Mark⟩** and **add ⟨-1⟩**. The count
+   now says how many are on marks right now, rather than how many ever have
+   been.
 3. The world already sets **target score** to 2 — one per Mark. Add
    **when the target is reached → win the game**.
 4. Solve it. Nothing is said until the second Crate lands, and pushing one off
@@ -3879,11 +3880,13 @@ door is how you will know you got it right.
 1. Add **when ⟨any Player⟩ collects ⟨item⟩ → ⟨this actor⟩ takes ⟨event
    actor⟩**. Collecting is picking it up off the floor; taking is having it,
    and **event actor** is the thing that was picked up.
-2. Add **when ⟨any Door⟩ starts touching**, and in it:
-   **if ⟨event actor⟩ has a ⟨Key⟩ → ⟨event actor⟩ spends a ⟨Key⟩**, then
+2. Add **when ⟨any Door⟩ starts touching ⟨Player⟩** — the second dropdown is
+   what the door listens for, so a Crate rolling into it is not somebody
+   arriving with a key.
+3. In it: **if ⟨event actor⟩ has a ⟨Key⟩ → ⟨event actor⟩ spends a ⟨Key⟩**, then
    **remove ⟨this actor⟩**. Both **⟨Key⟩**s are dropdowns of the actors in your
-   project, like the one in **is a**.
-3. Fetch the Key, open the first door, and walk into the second one. It stays
+   project, like the one on the hat.
+4. Fetch the Key, open the first door, and walk into the second one. It stays
    shut, and it should: you had one key and you spent it.
 `.trim(),
 };

@@ -3741,46 +3741,36 @@ describe('the goal lesson’s check', () => {
   const counting = (options: {down: boolean; win: boolean}) =>
     editing(lesson.source, 'main.world', contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
-      const onAMark = (by: number): Row => ({
-        type: 'controls_if',
+      const scoring = (by: number): Row => ({
+        type: 'world_do_Scoring_AddToTheScoreAction',
         inputs: {
-          IF0: {
-            block: {
-              type: 'world_is_a',
-              fields: {TYPE: local('mark')},
-              inputs: {ACTOR: {block: {type: 'world_event_actor'}}},
-            },
-          },
-          DO0: {
-            block: {
-              type: 'world_do_Scoring_AddToTheScoreAction',
-              inputs: {
-                VALUE: {shadow: {type: 'math_number', fields: {NUM: by}}},
+          VALUE: {shadow: {type: 'math_number', fields: {NUM: by}}},
+        },
+      });
+      /** The hat, listening for one kind of touch: `⟨any Crate⟩ … ⟨Mark⟩`. */
+      const touching = (event: string, by: number): Row =>
+        ({
+          type: `world_on_Collisions_${event}Event`,
+          x: 1400,
+          y: by > 0 ? 20 : 220,
+          // The KIND, on the hat. It is the same guard the learner would
+          // otherwise write with `if ⟨event actor⟩ is a ⟨Mark⟩`, and it is
+          // three blocks shorter.
+          fields: {FILTER0: local('mark')},
+          inputs: {
+            ACTOR: {
+              block: {
+                type: 'world_actor_kind',
+                fields: {ACTOR: local('crate')},
               },
             },
           },
-        },
-      });
-      const crate = () => ({
-        block: {type: 'world_actor_kind', fields: {ACTOR: local('crate')}},
-      });
-      workspace.blocks.blocks.push({
-        type: 'world_on_Collisions_StartsTouchingEvent',
-        x: 1400,
-        y: 20,
-        fields: {FILTER0: ''},
-        inputs: {ACTOR: crate()},
-        next: {block: onAMark(1)},
-      } as unknown as Row);
+          next: {block: scoring(by)},
+        }) as unknown as Row;
+
+      workspace.blocks.blocks.push(touching('StartsTouching', 1));
       if (options.down) {
-        workspace.blocks.blocks.push({
-          type: 'world_on_Collisions_StopsTouchingEvent',
-          x: 1400,
-          y: 220,
-          fields: {FILTER0: ''},
-          inputs: {ACTOR: crate()},
-          next: {block: onAMark(-1)},
-        } as unknown as Row);
+        workspace.blocks.blocks.push(touching('StopsTouching', -1));
       }
       if (options.win) {
         workspace.blocks.blocks.push({
@@ -3826,7 +3816,6 @@ describe('the goal lesson’s check', () => {
     expect(passes).toBe(false);
   });
 });
-
 describe('the undo lesson’s check', () => {
   const lesson = LESSONS['puzzle/undo'];
   const REMEMBERS = 'History#RemembersWhereItWasTrait';
@@ -4255,7 +4244,9 @@ describe('the key lesson’s check', () => {
           type: 'world_on_Collisions_StartsTouchingEvent',
           x: 1400,
           y: 220,
-          fields: {FILTER0: ''},
+          // The door listens for a Player, on the hat: a Crate rolling into it
+          // is not somebody arriving with a key.
+          fields: {FILTER0: local('player')},
           inputs: {ACTOR: anyKind('door')},
           next: {
             block: {

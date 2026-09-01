@@ -177,7 +177,9 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
     'world_query_Steering_FromTowardOverQuery',
     'world_query_Steering_DistanceFromToQuery',
   ],
-  'puzzle/goal': ['controls_if', 'world_is_a', 'world_event_actor'],
+  // Nothing but the number: the kind is picked on the hat, so the two handlers
+  // are a hat and one block each.
+  'puzzle/goal': ['math_number'],
   'puzzle/undo': ['world_use_trait', 'world_on_Input_PressesEvent'],
   'adventure/world': [
     'world_define_camera',

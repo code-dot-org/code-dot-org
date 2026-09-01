@@ -1817,17 +1817,16 @@ export const TILES: readonly Tile[] = [
     task: 'Two crates, two marks, and a puzzle that can be solved and never finishes.',
     requires: ['puzzle/push'],
     unlocks: [{kind: 'rule', id: 'goals'}],
-    offers: [
-      {kind: 'block', type: 'controls_if'},
-      {kind: 'block', type: 'world_is_a'},
-      {kind: 'block', type: 'world_event_actor'},
-      {kind: 'block', type: 'math_number'},
-    ],
+    // Only the number. The kind this handler cares about is chosen on the hat
+    // itself — `when ⟨any Crate⟩ starts touching ⟨Mark ▾⟩` — so the lesson
+    // needs no `if`, no `is a` and no `event actor`, which is three blocks of
+    // scaffolding gone from in front of the thing it is about.
+    offers: [{kind: 'block', type: 'math_number'}],
     check: {
       kind: 'outcome',
       says: 'A scripted solution wins on the second crate and not on the first.',
       falsePass:
-        'Counting arrivals only, which reaches two at the same moment here and is wrong the first time a crate is pushed OFF a mark — one trace cannot tell them apart, so the shape half asks for the leaving handler as well as the arriving one. Winning on a move count is refused by the same half: it has no handlers at all.',
+        'Counting arrivals only, which reaches two at the same moment here and is wrong the first time a crate is pushed OFF a mark — one trace cannot tell them apart, so the shape half asks for the leaving handler as well as the arriving one. Winning on a move count is refused by the same half: it has no handlers at all. Leaving the hat on ⟨any⟩ rather than picking ⟨Mark⟩ is not caught either, and was measured rather than assumed: a crate is touched by the player who pushes it and let go of again, and on this board those cancel out to the same score at the same moment (`lessonChecks`).',
       run: {
         probes: {
           won: {kind: 'worldProperty', path: 'Goals.won'},
