@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 67,
-  "created_at": "2026-09-01T00:00:00.000Z",
+  "created_at": "2026-09-01T15:01:41.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -11,7 +11,9 @@
     "uses_lab2": "true",
     "long_instructions": "This dataset ranks cars on whether they are acceptable to buy. Train a decision tree on it, then read the tree: each branch is one question about one feature.",
     "hide_share_and_remix": "false",
-    "mode": "{\"trainer\":\"decisionTree\",\"datasets\":[\"car_evaluation\"],\"randomizeTestData\":true}"
-  }
+    "mode": "{\"trainer\":\"decisionTree\",\"datasets\":[\"car_evaluation\"],\"randomizeTestData\":true}",
+    "dynamic_instructions": "{\"modelTree\": \"Each blue box asks one question about one column. Follow **yes** to the left and **no** to the right until you reach an orange box: that is the model's answer.\"}"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-01 11:13:03 -0400\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"levelbuilder@code.org\"}]"
 }]]></config>
 </Ailab>

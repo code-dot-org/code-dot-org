@@ -1,5 +1,6 @@
 import I18n from '../i18n';
 import type {RootState} from '../redux';
+import {getTrainerFamily} from '../trainers/registry';
 import type {NavButton, PrevNextButtons} from '../types';
 /*
 Validation checks to determine if app set up is ready for machine learning
@@ -91,6 +92,12 @@ function isPanelAvailable(state: RootState, panelId: string): boolean {
     }
   }
 
+  // Only a decision tree has a structure to draw. A KNN level never reaches
+  // this panel, and its navigation is unchanged.
+  if (panelId === 'modelTree') {
+    return getTrainerFamily(state) === 'decisionTree' && !!state.trainedModel;
+  }
+
   return true;
 }
 
@@ -155,6 +162,20 @@ function isAccuracyAcceptable(state: RootState): boolean {
   return true;
 }
 
+/*
+  The forward button once the student has seen the results. The accuracy gate
+  lives here, so a level that sets `requireAccuracy` still blocks saving and
+  continuing, whether or not the tree panel sits in between.
+*/
+function afterResultsButton(state: RootState): NavButton | undefined {
+  if (!isAccuracyAcceptable(state)) {
+    return undefined;
+  }
+  return isPanelAvailable(state, 'saveModel')
+    ? {panel: 'saveModel', text: I18n.t('navigateForward')}
+    : {panel: 'continue', text: I18n.t('navigateDone')};
+}
+
 // Given the current panel, return the appropriate previous & next buttons.
 export function prevNextButtons(state: RootState): PrevNextButtons {
   let prev: NavButton | undefined, next: NavButton | undefined;
@@ -194,13 +215,18 @@ export function prevNextButtons(state: RootState): PrevNextButtons {
     prev = isPanelAvailable(state, 'dataDisplayFeatures')
       ? {panel: 'dataDisplayFeatures', text: I18n.t('tryAgain')}
       : undefined;
-    next = !isAccuracyAcceptable(state)
-      ? undefined
-      : isPanelAvailable(state, 'saveModel')
-        ? {panel: 'saveModel', text: I18n.t('navigateForward')}
-        : {panel: 'continue', text: I18n.t('navigateDone')};
-  } else if (state.currentPanel === 'saveModel') {
+    // Reading the tree is not gated on accuracy: a student below the bar has
+    // the most to learn from seeing where the model splits.
+    next = isPanelAvailable(state, 'modelTree')
+      ? {panel: 'modelTree', text: I18n.t('navigateForward')}
+      : afterResultsButton(state);
+  } else if (state.currentPanel === 'modelTree') {
     prev = {panel: 'results', text: I18n.t('navigateBack')};
+    next = afterResultsButton(state);
+  } else if (state.currentPanel === 'saveModel') {
+    prev = isPanelAvailable(state, 'modelTree')
+      ? {panel: 'modelTree', text: I18n.t('navigateBack')}
+      : {panel: 'results', text: I18n.t('navigateBack')};
     next = isPanelAvailable(state, 'modelSummary')
       ? {panel: 'modelSummary', text: I18n.t('saveProgress')}
       : undefined;

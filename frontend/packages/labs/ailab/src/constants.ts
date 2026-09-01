@@ -964,4 +964,46 @@ export const styles = {
   navigationButtonsContainer: {
     position: 'relative',
   },
+
+  // The panel is a flex column; minHeight lets this child shrink so that it,
+  // rather than the page, is what scrolls.
+  modelTreeScroller: {
+    flex: 1,
+    minHeight: 0,
+    overflow: 'auto',
+    backgroundColor: colors.background,
+    borderRadius: 5,
+    padding: 10,
+    boxSizing: 'border-box',
+  },
+
+  modelTreeSummary: {
+    fontSize: 14,
+    marginBottom: 8,
+    color: '#4d575f',
+  },
+
+  modelTreeEdgeLabel: {
+    fontSize: 11,
+    fill: '#4d575f',
+    fontFamily: '"Gotham 5r", sans-serif',
+  },
+
+  modelTreeNodeText: {
+    fontSize: 11,
+    fill: 'white',
+    fontFamily: '"Gotham 4r", sans-serif',
+  },
+
+  modelTreeLeafText: {
+    fontSize: 12,
+    fill: 'white',
+    fontFamily: '"Gotham 5r", sans-serif',
+  },
+
+  modelTreeSampleText: {
+    fontSize: 10,
+    fill: 'rgba(255, 255, 255, 0.85)',
+    fontFamily: '"Gotham 4r", sans-serif',
+  },
 } as const;

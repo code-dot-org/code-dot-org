@@ -23,6 +23,7 @@ import DataCard from './UIComponents/DataCard';
 import DataDisplay from './UIComponents/DataDisplay';
 import GenerateResults from './UIComponents/GenerateResults';
 import ModelCard from './UIComponents/ModelCard';
+import ModelTree from './UIComponents/ModelTree';
 import Predict from './UIComponents/Predict';
 import Results from './UIComponents/Results';
 import SaveModel from './UIComponents/SaveModel';
@@ -287,6 +288,14 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
               <Predict />
             </ContainerRight>
           )}
+        </BodyContainer>
+      )}
+
+      {currentPanel === 'modelTree' && (
+        <BodyContainer>
+          <ContainerFullWidth>
+            <ModelTree />
+          </ContainerFullWidth>
         </BodyContainer>
       )}
 

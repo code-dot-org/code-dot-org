@@ -11,7 +11,8 @@
     "uses_lab2": "true",
     "long_instructions": "Predict the calories in a food from its fat, carbohydrate, protein and water. The label is a number, so the tree predicts the average of the foods that reach the same leaf, not one of the values it was trained on.",
     "hide_share_and_remix": "false",
-    "mode": "{\"trainer\":\"decisionTree\",\"datasets\":[\"nutrition\"],\"randomizeTestData\":true}"
+    "mode": "{\"trainer\":\"decisionTree\",\"datasets\":[\"nutrition\"],\"randomizeTestData\":true}",
+    "dynamic_instructions": "{\"modelTree\": \"Each blue box asks one question about one column. The orange boxes hold numbers, because the model predicts the average calories of the foods that reached that box.\"}"
   }
 }]]></config>
 </Ailab>

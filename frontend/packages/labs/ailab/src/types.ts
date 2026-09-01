@@ -188,6 +188,7 @@ type ContentPanel =
   | 'trainModel'
   | 'generateResults'
   | 'results'
+  | 'modelTree'
   | 'saveModel'
   | 'modelSummary';
 

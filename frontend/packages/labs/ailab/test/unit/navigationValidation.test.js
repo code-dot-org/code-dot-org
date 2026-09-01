@@ -1,4 +1,8 @@
-import {isPanelEnabled} from '../../src/helpers/navigationValidation';
+import {
+  isPanelEnabled,
+  prevNextButtons,
+} from '../../src/helpers/navigationValidation';
+import I18n from '../../src/i18n';
 
 const initialState = {
   data: [],
@@ -132,5 +136,84 @@ describe('isPanelEnabled', () => {
   test('modelSummary - enabled', async () => {
     const result = isPanelEnabled(savedModelState, 'modelSummary');
     expect(result).toBe(true);
+  });
+});
+
+/*
+  The tree panel sits between results and saveModel, and only for a level that
+  selected the decision tree. A KNN level's navigation must be unchanged.
+*/
+describe('prevNextButtons around the tree panel', () => {
+  // prevNextButtons reads button text from I18n.
+  beforeAll(() => I18n.initI18n({}));
+  afterAll(() => I18n.reset());
+
+  const trainedState = {
+    ...resultsState,
+    trainedModel: {predict: () => [], toJSON: () => ({})},
+    historicResults: [{label: 'isEvil', features: ['house'], accuracy: '80.00'}],
+    columnsByDataType: {isEvil: 'categorical', house: 'categorical'},
+  };
+
+  const onPanel = (state, currentPanel) =>
+    prevNextButtons({...state, currentPanel});
+
+  const knnState = {...trainedState, mode: {}};
+  const treeState = {...trainedState, mode: {trainer: 'decisionTree'}};
+
+  test('a KNN level goes straight from results to saveModel', () => {
+    expect(onPanel(knnState, 'results').next.panel).toBe('saveModel');
+  });
+
+  test('a KNN level returns from saveModel to results', () => {
+    expect(onPanel(knnState, 'saveModel').prev.panel).toBe('results');
+  });
+
+  test('a tree level goes from results to the tree panel', () => {
+    expect(onPanel(treeState, 'results').next.panel).toBe('modelTree');
+  });
+
+  test('the tree panel leads on to saveModel and back to results', () => {
+    const buttons = onPanel(treeState, 'modelTree');
+    expect(buttons.next.panel).toBe('saveModel');
+    expect(buttons.prev.panel).toBe('results');
+  });
+
+  test('a tree level returns from saveModel to the tree panel', () => {
+    expect(onPanel(treeState, 'saveModel').prev.panel).toBe('modelTree');
+  });
+
+  test('an untrained tree level has no tree panel to reach', () => {
+    const untrained = {...treeState, trainedModel: undefined};
+    expect(onPanel(untrained, 'results').next.panel).toBe('saveModel');
+  });
+
+  describe('the accuracy gate', () => {
+    const belowBar = state => ({
+      ...state,
+      mode: {...state.mode, requireAccuracy: 90},
+    });
+
+    test('a tree level below the bar can still read the tree', () => {
+      expect(onPanel(belowBar(treeState), 'results').next.panel).toBe(
+        'modelTree',
+      );
+    });
+
+    test('but it cannot move on from the tree panel', () => {
+      expect(onPanel(belowBar(treeState), 'modelTree').next).toBeUndefined();
+    });
+
+    test('a KNN level below the bar cannot move on from results', () => {
+      expect(onPanel(belowBar(knnState), 'results').next).toBeUndefined();
+    });
+  });
+
+  test('a level that hides save continues from the tree panel', () => {
+    const hideSave = {
+      ...treeState,
+      mode: {trainer: 'decisionTree', hideSave: true},
+    };
+    expect(onPanel(hideSave, 'modelTree').next.panel).toBe('continue');
   });
 });
