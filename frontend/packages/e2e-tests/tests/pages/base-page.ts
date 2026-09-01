@@ -73,6 +73,20 @@ export class BasePage {
   }
 
   /**
+   * Rotate the viewport to portrait by swapping its dimensions. No-op when
+   * already portrait.
+   */
+  async rotateToPortrait(): Promise<void> {
+    const viewport = this.page.viewportSize();
+    if (viewport && viewport.width > viewport.height) {
+      await this.page.setViewportSize({
+        width: viewport.height,
+        height: viewport.width,
+      });
+    }
+  }
+
+  /**
    * Whether the document overflows horizontally. Mirrors the Cucumber step
    * "there is no horizontal scrollbar" via document.documentElement geometry.
    */
