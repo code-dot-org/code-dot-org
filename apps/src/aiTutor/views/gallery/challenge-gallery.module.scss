@@ -337,24 +337,26 @@
   z-index: 1;
   display: flex;
   gap: 2px;
-  padding: 4px;
+  padding: 0 4px;
   background-color: var(--background-neutral-secondary);
   border: 1px solid var(--border-neutral-secondary);
-  border-radius: var(--shape-md);
+  border-radius: var(--shape-round);
   box-shadow: 0 4px 12px rgb(0 0 0 / 40%);
 }
 
+// 32px emoji cells matching the Figma picker, each glyph ~24px so it fills
+// the cell with the designed padding.
 .pickerOption {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   padding: 0;
   background: none;
   border: none;
-  border-radius: var(--shape-sm);
-  font-size: 16px;
+  border-radius: var(--shape-round);
+  font-size: 24px;
   line-height: 1;
   cursor: pointer;
 
