@@ -1660,7 +1660,7 @@ FactoryBot.define do
     level {create(:applab)}
   end
 
-  factory :anonymous_level_progress do
+  factory :anonymous_level_progress, class: 'AnonymousLevel::Progress' do
     association :script
     association :level, factory: :applab
 

@@ -22,7 +22,7 @@
 #
 #  index_anonymous_level_progresses_on_unique_anon_script_level  (anon_user_id,script_id,level_id) UNIQUE
 #
-class AnonymousLevelProgress < ApplicationRecord
+class AnonymousLevel::Progress < ApplicationRecord
   include LevelProgressable
 
   export_to_analytics

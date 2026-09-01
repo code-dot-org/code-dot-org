@@ -1,9 +1,9 @@
 require 'test_helper'
 
-class Services::AnonymousLevelProgress::TrackerTest < ActiveSupport::TestCase
+class Services::AnonymousLevel::ProgressTrackerTest < ActiveSupport::TestCase
   include Minitest::RSpecMocks
 
-  let(:described_class) {Services::AnonymousLevelProgress::Tracker}
+  let(:described_class) {Services::AnonymousLevel::ProgressTracker}
   let(:described_instance) {described_class.new(**tracker_params)}
 
   let(:anon_user_id) {Faker::Internet.uuid}
@@ -22,18 +22,18 @@ class Services::AnonymousLevelProgress::TrackerTest < ActiveSupport::TestCase
       script_id: script.id,
       level_id: level.id,
       unit_group_id: unit_group.id,
-      submitted: submitted,
-      new_result: new_result,
-      time_spent: time_spent,
-      locale: locale,
+      submitted:,
+      new_result:,
+      time_spent:,
+      locale:,
     }
   end
 
-  let(:progress_scope) {::AnonymousLevelProgress.where(anon_user_id:, script_id: script.id, level_id: level.id)}
+  let(:progress_scope) {::AnonymousLevel::Progress.where(anon_user_id:, script:, level:)}
 
   before do
     allow(DCDO).to receive(:get).and_call_original
-    allow(DCDO).to receive(:get).with('anonymous_level_progress_tracking_enabled', false).and_return(tracking_enabled)
+    allow(DCDO).to receive(:get).with('anonymous_level_tracking_enabled', false).and_return(tracking_enabled)
   end
 
   it 'inherits from Services::Base' do
@@ -63,11 +63,11 @@ class Services::AnonymousLevelProgress::TrackerTest < ActiveSupport::TestCase
       let!(:progress) do
         create(
           :anonymous_level_progress,
-          anon_user_id: anon_user_id,
-          script: script,
-          level: level,
+          anon_user_id:,
+          script:,
+          level:,
           attempts: 1,
-          best_result: ActivityConstants::MINIMUM_FINISHED_RESULT
+          best_result: ActivityConstants::MINIMUM_FINISHED_RESULT,
         )
       end
 
@@ -81,23 +81,23 @@ class Services::AnonymousLevelProgress::TrackerTest < ActiveSupport::TestCase
     end
 
     context 'when another request creates matching progress first' do
-      let(:new_progress) {instance_double(::AnonymousLevelProgress)}
-      let(:existing_progress) {instance_double(::AnonymousLevelProgress)}
+      let(:new_progress) {instance_double(::AnonymousLevel::Progress)}
+      let(:existing_progress) {instance_double(::AnonymousLevel::Progress)}
       let(:duplicate_entry_error) {ActiveRecord::RecordNotUnique.new(Mysql2::Error.new("Duplicate entry '#{anon_user_id}-#{script.id}-#{level.id}'"))}
       let(:progress_attributes) do
         {
-          new_result: new_result,
-          submitted: submitted,
+          new_result:,
+          submitted:,
           unit_group_id: unit_group.id,
           level_source_id: nil,
           is_navigator: false,
-          time_spent: time_spent,
-          locale: locale,
+          time_spent:,
+          locale:,
         }
       end
 
       before do
-        allow(::AnonymousLevelProgress).to receive(:find_or_initialize_by).
+        allow(::AnonymousLevel::Progress).to receive(:find_or_initialize_by).
           with(anon_user_id:, script_id: script.id, level_id: level.id).
           and_return(new_progress, existing_progress)
         allow(new_progress).to receive(:update_progress!).and_raise(duplicate_entry_error)
@@ -107,7 +107,7 @@ class Services::AnonymousLevelProgress::TrackerTest < ActiveSupport::TestCase
       it 're-queries and updates existing progress' do
         track_progress
 
-        expect(::AnonymousLevelProgress).to have_received(:find_or_initialize_by).twice
+        expect(::AnonymousLevel::Progress).to have_received(:find_or_initialize_by).twice
         expect(existing_progress).to have_received(:update_progress!).with(progress_attributes).once
       end
     end
@@ -122,14 +122,14 @@ class Services::AnonymousLevelProgress::TrackerTest < ActiveSupport::TestCase
       it 'logs progress payload' do
         CDO.log.expects(:info).once.with do |message|
           payload = JSON.parse(message)
-          payload['namespace'] == 'anonymous_level_progress' &&
-            payload['event'] == 'tracking' &&
-            payload['anon_user_id'] == anon_user_id &&
-            payload['script_id'] == script.id &&
-            payload['level_id'] == level.id &&
-            payload['unit_group_id'] == unit_group.id &&
-            payload['submitted'] == submitted &&
-            payload['new_result'] == new_result
+          _(payload['namespace']).must_equal 'anonymous_level'
+          _(payload['event']).must_equal 'progress_tracking'
+          _(payload['anon_user_id']).must_equal anon_user_id
+          _(payload['script_id']).must_equal script.id
+          _(payload['level_id']).must_equal level.id
+          _(payload['unit_group_id']).must_equal unit_group.id
+          _(payload['submitted']).must_equal submitted
+          _(payload['new_result']).must_equal new_result
         end
 
         track_progress

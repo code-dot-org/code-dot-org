@@ -606,16 +606,16 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   describe '#milestone' do
-    let(:anon_stable_id) {Faker::Internet.uuid}
+    let(:anon_user_id) {Faker::Internet.uuid}
 
     context 'when there is no current user' do
       before do
         sign_out @user
-        session[:statsig_stable_id] = anon_stable_id
+        session[:statsig_stable_id] = anon_user_id
       end
 
       def expect_anonymous_level_progress_tracking(new_result:)
-        Services::AnonymousLevelProgress::Tracker.expects(:call).with(
+        Services::AnonymousLevel::ProgressTracker.expects(:call).with(
           has_entries(
             anon_user_id:,
             script_id: @script.id,

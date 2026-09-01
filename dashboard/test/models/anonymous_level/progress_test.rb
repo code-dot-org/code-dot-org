@@ -1,7 +1,7 @@
 require 'test_helper'
 
-class AnonymousLevelProgressTest < ActiveSupport::TestCase
-  let(:described_class) {AnonymousLevelProgress}
+class AnonymousLevel::ProgressTest < ActiveSupport::TestCase
+  let(:described_class) {AnonymousLevel::Progress}
 
   let(:script) {create(:unit)}
   let(:level) {create(:level)}

@@ -183,7 +183,7 @@ class ActivitiesController < ApplicationController
           unit_group: @unit_group
         )
       else
-        Services::AnonymousLevelProgress::Tracker.call(
+        Services::AnonymousLevel::ProgressTracker.call(
           anon_user_id:,
           script_id: @script_level.script_id,
           level_id: @level.id,
@@ -220,7 +220,7 @@ class ActivitiesController < ApplicationController
             unit_group: @unit_group
           )
         else
-          Services::AnonymousLevelProgress::Tracker.call(
+          Services::AnonymousLevel::ProgressTracker.call(
             anon_user_id:,
             script_id: @script_level.script_id,
             level_id: bubble_choice_parent_level.id,

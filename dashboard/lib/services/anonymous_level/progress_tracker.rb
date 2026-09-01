@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 module Services
-  module AnonymousLevelProgress
-    class Tracker < Services::Base
+  module AnonymousLevel
+    class ProgressTracker < Services::Base
       attr_reader :anon_user_id, :script_id, :level_id, :new_result, :submitted, :unit_group_id, :level_source_id,
                   :is_navigator, :time_spent, :locale
 
@@ -32,9 +32,9 @@ module Services
       end
 
       def call
-        if DCDO.get('anonymous_level_progress_tracking_enabled', false)
+        if DCDO.get('anonymous_level_tracking_enabled', false)
           Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-            anonymous_level_progress = ::AnonymousLevelProgress.find_or_initialize_by(anon_user_id:, script_id:, level_id:)
+            anonymous_level_progress = ::AnonymousLevel::Progress.find_or_initialize_by(anon_user_id:, script_id:, level_id:)
 
             anonymous_level_progress.update_progress!(
               new_result:,
@@ -48,8 +48,8 @@ module Services
           end
         else
           CDO.log.info JSON.dump(
-            namespace: 'anonymous_level_progress',
-            event: 'tracking',
+            namespace: 'anonymous_level',
+            event: 'progress_tracking',
             anon_user_id:,
             script_id:,
             level_id:,
