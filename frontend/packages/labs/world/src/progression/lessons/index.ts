@@ -2149,7 +2149,11 @@ const reveal: WorldScenario = {
       name: 'My World',
       rows: [
         addActor('actors/speechBox', [
-          placeAt(20, 200),
+          // The MIDDLE of the world, because a drawing is centred on the actor
+          // that carries it, exactly as a sprite is. A box 280 wide put at 20
+          // read as "20 in from the left" and hung 120 pixels off it, so every
+          // line of dialogue lost its first half.
+          placeAt(160, 200),
           setText('TextProperty', words(LINE)),
         ]),
       ],
@@ -2194,7 +2198,11 @@ const script: WorldScenario = {
       name: 'My World',
       rows: [
         addActor('actors/speechBox', [
-          placeAt(20, 200),
+          // The MIDDLE of the world, because a drawing is centred on the actor
+          // that carries it, exactly as a sprite is. A box 280 wide put at 20
+          // read as "20 in from the left" and hung 120 pixels off it, so every
+          // line of dialogue lost its first half.
+          placeAt(160, 200),
           {
             type: 'world_add_trait',
             fields: {TRAIT: 'Mouse#CanBeClickedTrait'},
@@ -2283,7 +2291,11 @@ const choice: WorldScenario = {
       rows: [
         declareProperty('boolean', 'opened the door', 'false'),
         addActor('actors/speechBox', [
-          placeAt(20, 200),
+          // The MIDDLE of the world, because a drawing is centred on the actor
+          // that carries it, exactly as a sprite is. A box 280 wide put at 20
+          // read as "20 in from the left" and hung 120 pixels off it, so every
+          // line of dialogue lost its first half.
+          placeAt(160, 200),
           {
             type: 'world_add_trait',
             fields: {TRAIT: 'Mouse#CanBeClickedTrait'},
@@ -2392,7 +2404,11 @@ const scene: WorldScenario = {
         },
         addActor('actors/portrait', [placeAt(80, 120)]),
         addActor('actors/speechBox', [
-          placeAt(20, 200),
+          // The MIDDLE of the world, because a drawing is centred on the actor
+          // that carries it, exactly as a sprite is. A box 280 wide put at 20
+          // read as "20 in from the left" and hung 120 pixels off it, so every
+          // line of dialogue lost its first half.
+          placeAt(160, 200),
           {
             type: 'world_add_trait',
             fields: {TRAIT: 'Mouse#CanBeClickedTrait'},
@@ -3201,7 +3217,13 @@ const bobStep = () => ({
                 A: heldPosition('y'),
                 B: {
                   block: {
-                    type: 'math_single',
+                    // `math_trig`, not `math_single`: SIN is not one of
+                    // `math_single`'s options (it holds abs, root, ln and
+                    // friends), and a block saved claiming it is loads with
+                    // the dropdown's first option instead — a square root,
+                    // which never comes back down, so both actors sank off the
+                    // bottom of the world and the lesson showed nothing.
+                    type: 'math_trig',
                     fields: {OP: 'SIN'},
                     inputs: {
                       NUM: {
@@ -3210,10 +3232,13 @@ const bobStep = () => ({
                           fields: {OP: 'MULTIPLY'},
                           inputs: {
                             A: {block: {type: 'world_time'}},
-                            // Radians a second: a whole cycle every second or
-                            // so, which makes the sum of the steps a bob
-                            // rather than a walk.
-                            B: num(6),
+                            // Half a turn a second, in DEGREES — the unit
+                            // `math_trig` and every angle in this lab work in
+                            // — so a whole bob takes two seconds. The steps ADD
+                            // their answer up rather than setting it, which
+                            // makes the bob's size the wave's size over its
+                            // rate: fast and small, or slow and wide.
+                            B: num(180),
                           },
                         },
                       },
@@ -3402,21 +3427,27 @@ them.
 
 // ── making/block ─────────────────────────────────────────────────────────────
 
-/** `⟨sin of ⟨time × 6⟩⟩ × ⟨amount⟩` — the sum this lesson gives a name to. */
+/**
+ * `⟨sin of ⟨time × 180⟩⟩ × ⟨amount⟩` — the sum this lesson gives a name to.
+ *
+ * `math_trig` rather than `math_single`, for the reason `bobStep` gives: SIN
+ * belongs to the trig block, and 180 is half a turn a second in the degrees
+ * that block reads — a whole bob every two seconds.
+ */
 const bobBy = (amount: number) => ({
   type: 'math_arithmetic',
   fields: {OP: 'MULTIPLY'},
   inputs: {
     A: {
       block: {
-        type: 'math_single',
+        type: 'math_trig',
         fields: {OP: 'SIN'},
         inputs: {
           NUM: {
             block: {
               type: 'math_arithmetic',
               fields: {OP: 'MULTIPLY'},
-              inputs: {A: {block: {type: 'world_time'}}, B: num(6)},
+              inputs: {A: {block: {type: 'world_time'}}, B: num(180)},
             },
           },
         },
@@ -3518,7 +3549,7 @@ const ownBlock: WorldScenario = {
 ## Your own vocabulary
 
 Open \`rules/bobbing.rule\`. Two traits, two steps, and inside them the same sum
-written out twice: **sin of ⟨time × 6⟩ × ⟨a number⟩**. One says 1 and the other
+written out twice: **sin of ⟨time × 180⟩ × ⟨a number⟩**. One says 1 and the other
 says 4, and everything else about them is identical.
 
 Reading it, you have to work out twice that it is a wave. Changing how the
@@ -3532,11 +3563,11 @@ A **define block** is a name for a sum, with the parts that vary as
 
 1. Add **define block** to the rule, phrased **bob by ⟨amount⟩**, returning a
    number.
-2. Put **return ⟨sin of ⟨time × 6⟩ × ⟨amount⟩⟩** in it — the sum, with the
+2. Put **return ⟨sin of ⟨time × 180⟩ × ⟨amount⟩⟩** in it — the sum, with the
    number replaced by the parameter.
 3. In both steps, use **bob by ⟨1⟩** and **bob by ⟨4⟩**. The sum is written
    once and said twice.
-4. Now change the 6 to a 2. One edit, and both of them slow down — which is
+4. Now change the 180 to a 60. One edit, and both of them slow down — which is
    the difference between a name and a copy.
 `.trim(),
 };

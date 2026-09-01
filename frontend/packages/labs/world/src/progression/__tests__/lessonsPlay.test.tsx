@@ -78,6 +78,44 @@ describe.each(ids)('the %s lesson', id => {
   });
 });
 
+// ── The values a lesson's dropdowns hold ────────────────────────────────────
+//
+// Blockly's dropdowns FALL BACK. A saved block naming an option the field does
+// not offer keeps the block, drops the value, and takes whatever option happens
+// to be first — so `sin of ⟨time × 360⟩` loaded as a SQUARE ROOT, which never
+// comes back down, and both bobbing lessons showed a world with nothing in it.
+// (SIN is `math_trig`'s; `math_single` holds abs, root, ln and friends.)
+//
+// It says so, once, on the console, and nothing was listening. This listens.
+
+describe('every dropdown a lesson fills in', () => {
+  it('holds a value its block offers', async () => {
+    const complaints: string[] = [];
+    const warn = console.warn;
+    const error = console.error;
+    const watch = (message: unknown) => {
+      if (String(message).includes('unavailable option')) {
+        complaints.push(String(message));
+      }
+    };
+    console.warn = watch;
+    console.error = watch;
+    try {
+      for (const id of ids) {
+        const before = complaints.length;
+        await built(id);
+        for (const complaint of complaints.slice(before)) {
+          complaints[complaints.indexOf(complaint)] = `${id}: ${complaint}`;
+        }
+      }
+    } finally {
+      console.warn = warn;
+      console.error = error;
+    }
+    expect([...new Set(complaints)].sort()).toEqual([]);
+  }, 300_000);
+});
+
 // ── The pictures a lesson names ─────────────────────────────────────────────
 //
 // A sprite is not a project FILE the way a world or a rule is — it is bytes,

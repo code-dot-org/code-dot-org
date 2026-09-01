@@ -8105,6 +8105,15 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
       'math_modulo',
       // Absolute value and friends — `abs` is what a distance test needs.
       'math_single',
+      // …and the trigonometric ones, which are a SEPARATE core block: SIN is
+      // not an option on `math_single`, and a saved block that says it is
+      // loads with whatever the dropdown's first option happens to be.
+      //
+      // Blockly's `math_trig` works in DEGREES, which is the unit everything
+      // else here measures an angle in (`Vector.fromAngle`, `Vector.angle`), so
+      // the block a learner reaches for and the blocks it feeds agree without
+      // anybody converting anything.
+      'math_trig',
       // Blockly's own random, rather than one of ours: it is a block a learner
       // may already have met, and its generator ships with the JavaScript one.
       //
