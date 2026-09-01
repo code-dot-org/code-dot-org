@@ -11,6 +11,7 @@
 // It can be answered from where the block SITS, and only from there:
 //
 //   under `define actor`                     → that actor
+//   in the body of `add actor ⟨Coin⟩`        → a Coin
 //   in a hat whose subject is `any ⟨Crate⟩`  → a Crate
 //   `event actor` under a hat filtered on ⟨Mark⟩ → a Mark
 //   anywhere else                            → nobody knows
@@ -31,6 +32,7 @@ import {Blockly, defineExtension, type Extension} from '@code-dot-org/blockly';
 import {actorIconImage} from './actorIcons';
 import {actorIcon, actorThumbnail} from './actorThumbnails';
 import {editingActorModule} from './editingRule';
+import {NAME_FIELD, NAMED} from './extensions/addActorName';
 import {addOnChange, isStructuralChange} from './extensions/onChange';
 import {localActorFor, localActorValue} from './localActors';
 
@@ -147,8 +149,34 @@ export function actorAbout(
   block: Surroundings,
   which: 'this' | 'event',
 ): ActorAbout | undefined {
-  for (let at = block.getParent?.(); at; at = at.getParent?.() ?? null) {
+  let child = block;
+  for (
+    let at = block.getParent?.();
+    at;
+    child = at, at = at.getParent?.() ?? null
+  ) {
     const type = at.type ?? '';
+    // `add actor ⟨Coin⟩ do:` binds the actor it places for the length of its
+    // body, so `this actor` in there is a Coin. Two conditions, both of them
+    // the generator's (extensions/addActorName):
+    //
+    //   the block is IN THE BODY, not chained after it — `add actor` twice in a
+    //   row makes the second a `getParent` child of the first, and it places
+    //   its own kind rather than living in anybody's scope;
+    //
+    //   and the block did not take a name. `as ⟨placed⟩` exists precisely so
+    //   that a body can still say `this actor` and mean the actor whose file it
+    //   is, so a picture of the placed kind there would be a lie.
+    if (type === 'world_add_actor' && which === 'this') {
+      if (
+        child.id !== undefined &&
+        at.getInputTargetBlock?.('DO')?.id === child.id &&
+        at.getFieldValue?.(NAME_FIELD) !== NAMED
+      ) {
+        return kindOfValue(at, at.getFieldValue?.('ACTOR'));
+      }
+      continue;
+    }
     if (type.startsWith('world_on_')) {
       if (which === 'this') {
         // A world's hat names a kind; an actor file's names `this actor`, and

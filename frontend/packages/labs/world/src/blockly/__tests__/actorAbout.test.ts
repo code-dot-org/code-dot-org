@@ -94,6 +94,62 @@ describe('what `this actor` is about', () => {
     ).toEqual({type: 'Crate', name: 'Crate'});
   });
 
+  it('is the kind an `add actor` body places', () => {
+    // The most common `this actor` in the whole progression: a world's opening
+    // lines are `add actor ⟨Coin⟩ do: set position of ⟨this actor⟩ …`, and
+    // that block was showing the bare word while the identical one under
+    // `define actor` showed a picture.
+    const workspace = worldWith('coin1', 'Coin');
+    const body: Stub = {type: 'world_set_position', id: 'body1', workspace};
+    const add = {
+      type: 'world_add_actor',
+      id: 'add1',
+      fields: {ACTOR: localActorValue('coin1')},
+      inputs: {DO: body},
+      workspace,
+    };
+    body.parent = add;
+
+    expect(actorAbout(asBlock(body), 'this')).toEqual({
+      type: 'Coin',
+      name: 'Coin',
+    });
+  });
+
+  it('is not the placed kind for a block merely chained after the `add`', () => {
+    // Two `add actor`s in a row: the second is a `getParent` child of the
+    // first and is in nobody's scope. Its own body is its own kind, which is
+    // the case above; what it is not is a Coin.
+    const workspace = worldWith('coin1', 'Coin');
+    const first = {
+      type: 'world_add_actor',
+      id: 'add1',
+      fields: {ACTOR: localActorValue('coin1')},
+      inputs: {DO: {type: 'world_set_position', id: 'body1', workspace}},
+      workspace,
+    };
+    const after = {type: 'world_print', id: 'after1', parent: first, workspace};
+
+    expect(actorAbout(asBlock(after), 'this')).toBeUndefined();
+  });
+
+  it('is nobody in the body of an `add actor` that took a name', () => {
+    // `as ⟨placed⟩` exists so a body can still say `this actor` and mean the
+    // actor whose file it is — a picture of the Bullet there would be a lie.
+    const workspace = worldWith('bullet1', 'Bullet');
+    const body: Stub = {type: 'world_set_position', id: 'body1', workspace};
+    const add = {
+      type: 'world_add_actor',
+      id: 'add1',
+      fields: {ACTOR: localActorValue('bullet1'), NAMED: 'named'},
+      inputs: {DO: body},
+      workspace,
+    };
+    body.parent = add;
+
+    expect(actorAbout(asBlock(body), 'this')).toBeUndefined();
+  });
+
   it('is nobody in a rule, because a trait says nothing about who elects it', () => {
     // The row that keeps the feature honest: `this actor` in a trait step is a
     // different kind per project, and a picture there would be a guess.
@@ -131,6 +187,33 @@ describe('what `event actor` is about', () => {
     };
 
     expect(actorAbout(asBlock({parent: hat}), 'event')).toBeUndefined();
+  });
+
+  it("is still the hat's, inside an `add actor` body under it", () => {
+    // `add actor` binds a subject, not an event: what the hat heard is the
+    // same block-for-block wherever in the handler you stand.
+    const workspace = worldWith('mark1', 'Mark');
+    const hat = {
+      type: 'world_on_Collisions_StartsTouchingEvent',
+      id: 'hat1',
+      workspace,
+      fields: {FILTER0: localActorValue('mark1')},
+    };
+    const body: Stub = {type: 'world_print', id: 'body1', workspace};
+    const add = {
+      type: 'world_add_actor',
+      id: 'add1',
+      fields: {ACTOR: ''},
+      inputs: {DO: body},
+      parent: hat,
+      workspace,
+    };
+    body.parent = add;
+
+    expect(actorAbout(asBlock(body), 'event')).toEqual({
+      type: 'Mark',
+      name: 'Mark',
+    });
   });
 
   it('is nobody under a hat whose filter is a KEY, not a kind', () => {

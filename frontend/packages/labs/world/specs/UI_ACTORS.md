@@ -420,6 +420,7 @@ They answer it now, from where the block SITS (`blockly/actorAbout`):
 | anywhere in an `.actor` file                  | that actor    |
 | in a world hat whose subject is `any ⟨Crate⟩` | a Crate       |
 | in a world's own `define actor`               | that actor    |
+| in the body of `add actor ⟨Coin⟩`             | a Coin        |
 | `event actor` under a hat filtered on ⟨Mark⟩  | a Mark        |
 | a rule's trait step, or the toolbox           | the word      |
 
@@ -437,6 +438,14 @@ better than a sentence about it can.
 ⟨picture⟩` — and the picture's `alt` is the kind, so it is read aloud as "this
 Crate". The dropdowns could not do that (an option is an image or text, never
 both); a block's message has room for the pair.
+
+**The `add actor` row is the common one**, and it was the row that was missing:
+a world's opening lines are `add actor ⟨Coin⟩ do: set position of ⟨this actor⟩
+…`, so most `this actor`s a learner ever sees are in one of those bodies. It
+takes both of the conditions the generator takes (`extensions/addActorName`) —
+the block is IN the body rather than chained after it, and the `add` did not
+take a name, because `as ⟨placed⟩` exists precisely so that a body can go on
+saying `this actor` and meaning the actor whose file it is.
 
 **Two traps, both paid for once.** A world's own `define actor` and an `.actor`
 file's root are the same block, and telling them apart is what decides whether
