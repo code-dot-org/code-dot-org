@@ -5,13 +5,13 @@ class AnonymousLevelProgressTest < ActiveSupport::TestCase
 
   let(:script) {create(:unit)}
   let(:level) {create(:level)}
-  let(:stable_id) {SecureRandom.uuid}
+  let(:anon_user_id) {Faker::Internet.uuid}
 
   describe 'shared level progress behavior' do
     let(:progress) do
       create(
         :anonymous_level_progress,
-        stable_id: stable_id,
+        anon_user_id:,
         script: script,
         level: level,
         best_result: ActivityConstants::MINIMUM_PASS_RESULT,
@@ -42,10 +42,10 @@ class AnonymousLevelProgressTest < ActiveSupport::TestCase
 
   describe 'validations' do
     it 'requires a stable ID' do
-      progress = build(:anonymous_level_progress, stable_id: nil)
+      progress = build(:anonymous_level_progress, anon_user_id: nil)
 
       _(progress).wont_be :valid?
-      _(progress.errors[:stable_id]).must_include 'is required'
+      _(progress.errors[:anon_user_id]).must_include 'is required'
     end
 
     it 'requires a script' do
@@ -63,15 +63,15 @@ class AnonymousLevelProgressTest < ActiveSupport::TestCase
     end
 
     context 'when the stable ID, script, and level already exist' do
-      let(:duplicate) {build(:anonymous_level_progress, stable_id: stable_id, script: script, level: level)}
+      let(:duplicate) {build(:anonymous_level_progress, anon_user_id:, script:, level:)}
 
       before do
-        create(:anonymous_level_progress, stable_id: stable_id, script: script, level: level)
+        create(:anonymous_level_progress, anon_user_id:, script:, level:)
       end
 
       it 'requires a unique stable ID within a script and level' do
         _(duplicate).wont_be :valid?
-        _(duplicate.errors[:stable_id]).must_include 'has already been taken'
+        _(duplicate.errors[:anon_user_id]).must_include 'has already been taken'
       end
     end
   end
@@ -80,9 +80,9 @@ class AnonymousLevelProgressTest < ActiveSupport::TestCase
     let(:progress) do
       create(
         :anonymous_level_progress,
-        stable_id: stable_id,
-        script: script,
-        level: level,
+        anon_user_id:,
+        script:,
+        level:,
         submitted: true,
         best_result: ActivityConstants::REVIEW_REJECTED_RESULT
       )

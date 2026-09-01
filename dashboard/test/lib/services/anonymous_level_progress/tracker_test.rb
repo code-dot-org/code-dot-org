@@ -6,7 +6,7 @@ class Services::AnonymousLevelProgress::TrackerTest < ActiveSupport::TestCase
   let(:described_class) {Services::AnonymousLevelProgress::Tracker}
   let(:described_instance) {described_class.new(**tracker_params)}
 
-  let(:stable_id) {SecureRandom.uuid}
+  let(:anon_user_id) {Faker::Internet.uuid}
   let(:script) {create(:unit)}
   let(:level) {create(:level)}
   let(:unit_group) {create(:unit_group)}
@@ -18,7 +18,7 @@ class Services::AnonymousLevelProgress::TrackerTest < ActiveSupport::TestCase
 
   let(:tracker_params) do
     {
-      stable_id: stable_id,
+      anon_user_id:,
       script_id: script.id,
       level_id: level.id,
       unit_group_id: unit_group.id,
@@ -29,7 +29,7 @@ class Services::AnonymousLevelProgress::TrackerTest < ActiveSupport::TestCase
     }
   end
 
-  let(:progress_scope) {::AnonymousLevelProgress.where(stable_id:, script_id: script.id, level_id: level.id)}
+  let(:progress_scope) {::AnonymousLevelProgress.where(anon_user_id:, script_id: script.id, level_id: level.id)}
 
   before do
     allow(DCDO).to receive(:get).and_call_original
@@ -63,7 +63,7 @@ class Services::AnonymousLevelProgress::TrackerTest < ActiveSupport::TestCase
       let!(:progress) do
         create(
           :anonymous_level_progress,
-          stable_id: stable_id,
+          anon_user_id: anon_user_id,
           script: script,
           level: level,
           attempts: 1,
@@ -83,11 +83,7 @@ class Services::AnonymousLevelProgress::TrackerTest < ActiveSupport::TestCase
     context 'when another request creates matching progress first' do
       let(:new_progress) {instance_double(::AnonymousLevelProgress)}
       let(:existing_progress) {instance_double(::AnonymousLevelProgress)}
-      let(:duplicate_entry_error) do
-        ActiveRecord::RecordNotUnique.new(
-          Mysql2::Error.new("Duplicate entry '#{stable_id}-#{script.id}-#{level.id}'")
-        )
-      end
+      let(:duplicate_entry_error) {ActiveRecord::RecordNotUnique.new(Mysql2::Error.new("Duplicate entry '#{anon_user_id}-#{script.id}-#{level.id}'"))}
       let(:progress_attributes) do
         {
           new_result: new_result,
@@ -102,7 +98,7 @@ class Services::AnonymousLevelProgress::TrackerTest < ActiveSupport::TestCase
 
       before do
         allow(::AnonymousLevelProgress).to receive(:find_or_initialize_by).
-          with(stable_id:, script_id: script.id, level_id: level.id).
+          with(anon_user_id:, script_id: script.id, level_id: level.id).
           and_return(new_progress, existing_progress)
         allow(new_progress).to receive(:update_progress!).and_raise(duplicate_entry_error)
         allow(existing_progress).to receive(:update_progress!)
@@ -128,7 +124,7 @@ class Services::AnonymousLevelProgress::TrackerTest < ActiveSupport::TestCase
           payload = JSON.parse(message)
           payload['namespace'] == 'anonymous_level_progress' &&
             payload['event'] == 'tracking' &&
-            payload['stable_id'] == stable_id &&
+            payload['anon_user_id'] == anon_user_id &&
             payload['script_id'] == script.id &&
             payload['level_id'] == level.id &&
             payload['unit_group_id'] == unit_group.id &&

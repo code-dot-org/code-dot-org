@@ -1664,7 +1664,7 @@ FactoryBot.define do
     association :script
     association :level, factory: :applab
 
-    stable_id {SecureRandom.uuid}
+    anon_user_id {Faker::Internet.uuid}
   end
 
   factory :user_script do
