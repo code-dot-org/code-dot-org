@@ -173,6 +173,12 @@ export const STOCK_SPRITES: readonly StockSprite[] = [
     dataUrl: image('door'),
   },
   {
+    id: 'post',
+    name: 'Post',
+    description: 'A banded wooden post, for a landmark or a place to reach.',
+    dataUrl: image('post'),
+  },
+  {
     id: 'playerWalk',
     name: 'Player Walking',
     description: 'Four frames of the player mid-stride, side by side.',

@@ -36,6 +36,10 @@ export const SPRITE_NAMES = [
   // A way out of the room. Fills the tile's height like `ground` does, so a
   // door stands on the floor rather than hovering over it.
   'door',
+  // Something to stand somewhere and mean it: a destination, a landmark, a
+  // thing in a row. Borrowed sprites read as what they are — a marker drawn as
+  // a floor tile is a floor tile hanging in the air.
+  'post',
 ];
 export const ANIMATION_SPECS = {
   coinSpin: {frames: 6, frameRate: 12},
@@ -263,6 +267,16 @@ const STATIC = {
     c.rect(8, 6, 16, 9, [140, 90, 42]); // upper panel
     c.rect(8, 19, 16, 9, [140, 90, 42]); // lower panel
     c.disc(22, 17, 2, [244, 196, 48]); // the handle, which is what says DOOR
+  },
+  post(c) {
+    // A stake driven into the ground, lit from the left. The shaded half is
+    // what makes it read as round rather than as a stripe, and the band near
+    // the top is what makes it a MARKER rather than a piece of timber.
+    c.roundRect(11, 3, 10, 29, 3, [92, 60, 30]); // the post and its edge
+    c.roundRect(12, 4, 8, 27, 2, [176, 116, 56]); // sunlit wood
+    c.rect(16, 5, 4, 26, [140, 90, 42]); // the shaded half
+    c.rect(10, 14, 12, 3, [216, 76, 66]); // the painted band
+    c.rect(9, 29, 14, 3, [72, 48, 26]); // the ground it stands in
   },
 };
 

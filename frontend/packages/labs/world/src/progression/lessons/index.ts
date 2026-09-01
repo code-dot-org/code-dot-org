@@ -813,10 +813,10 @@ const tween: WorldScenario = {
       ],
       actors: [
         {id: 'door', name: 'Door', rows: [setSprite('door.png')]},
-        {id: 'post', name: 'Post', rows: [setSprite('ground.png')]},
+        {id: 'post', name: 'Post', rows: [setSprite('post.png')]},
       ],
     }),
-    sprites: ['door', 'ground'],
+    sprites: ['door', 'post'],
   }),
   instructions: `
 ## A described movement
@@ -2310,6 +2310,19 @@ const choice: WorldScenario = {
             type: 'world_set_Conversation_HowManyLinesProperty',
             inputs: {ACTOR: me(), VALUE: num(4)},
           },
+          // A TITLE CARD, because the box cannot open on line one.
+          //
+          // The cursor is zero until something moves it, and moving it is an
+          // ACTION, which wants a running world — an `add actor … do` body runs
+          // against the builder (`fixtures/novel` documents the same wall). So
+          // the box shows the words it was made with until the first click, and
+          // what those words should be is this story's title rather than the
+          // Speech Box's stock "Once upon a time…", which is a line from
+          // somebody else's.
+          setText(
+            'TextProperty',
+            words('Somebody at the door. Click to begin.'),
+          ),
         ]),
         addActor('actors/button', [
           placeAt(80, 120),
@@ -2423,6 +2436,8 @@ const scene: WorldScenario = {
             type: 'world_set_Conversation_HowManyLinesProperty',
             inputs: {ACTOR: me(), VALUE: num(3)},
           },
+          // A title card here too, for the reason `choice` gives.
+          setText('TextProperty', words('An empty room. Click to begin.')),
         ]),
       ],
       handlers: [
@@ -4561,9 +4576,9 @@ const variable: WorldScenario = {
         addActor(local('post'), [placeAt(160, 160)]),
         addActor(local('post'), [placeAt(260, 160)]),
       ],
-      actors: [{id: 'post', name: 'Post', rows: [setSprite('box.png')]}],
+      actors: [{id: 'post', name: 'Post', rows: [setSprite('post.png')]}],
     }),
-    sprites: ['box'],
+    sprites: ['post'],
   }),
   instructions: `
 ## A box for a number

@@ -116,6 +116,41 @@ describe('every dropdown a lesson fills in', () => {
   }, 300_000);
 });
 
+// ── The words a lesson leaves on screen ─────────────────────────────────────
+//
+// Three stock actors ship with a placeholder in their `text`, so that one
+// dragged onto a map says something before anybody has typed anything and the
+// picker has a picture to show. A lesson that places one and never sets its
+// text leaves that placeholder on screen — and "Once upon a time…" in the
+// middle of a story about a knock at the door is a line from somebody else's.
+//
+// It is not always wrong: `story/reveal` is ABOUT a box that has been given
+// its words, and the ones that have not are the ones that need looking at. So
+// the check is per lesson, and the list is written down.
+
+describe('a stock actor a lesson places', () => {
+  it('does not sit there saying the words it shipped with', async () => {
+    const placeholders = new Set(['Once upon a time…', 'Label', 'Button']);
+    const showing: string[] = [];
+    for (const id of ids) {
+      const {world} = await built(id);
+      for (const actor of world.actors) {
+        for (const trait of actor.traits()) {
+          for (const property of Object.values(trait.properties)) {
+            if (
+              property.id === 'text' &&
+              placeholders.has(String(actor.get(property)))
+            ) {
+              showing.push(`${id}: ${actor.get(property)}`);
+            }
+          }
+        }
+      }
+    }
+    expect([...new Set(showing)].sort()).toEqual([]);
+  }, 300_000);
+});
+
 // ── The pictures a lesson names ─────────────────────────────────────────────
 //
 // A sprite is not a project FILE the way a world or a rule is — it is bytes,
