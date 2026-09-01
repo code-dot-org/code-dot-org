@@ -181,6 +181,43 @@ describe('UnifiedBackpackClientApi (jest)', () => {
     expect(HttpClient.delete).not.toHaveBeenCalled();
   });
 
+  it('reports a failed channel request through onError', async () => {
+    (HttpClient.fetchJson as jest.Mock).mockImplementationOnce(() =>
+      Promise.reject(new Error('no channel for you'))
+    );
+    const onError = jest.fn();
+
+    await unifiedBackpackClientApi.saveFile(
+      'shared.java',
+      'hello',
+      onError,
+      jest.fn()
+    );
+
+    expect(onError).toHaveBeenCalledWith(new Error('no channel for you'));
+    expect(HttpClient.put).not.toHaveBeenCalled();
+  });
+
+  it('rethrows a failed channel request when there is no error callback', async () => {
+    (HttpClient.fetchJson as jest.Mock).mockImplementationOnce(() =>
+      Promise.reject(new Error('no channel for you'))
+    );
+
+    await expect(
+      unifiedBackpackClientApi.saveFileFromUrl('shared.java', 'https://x/y')
+    ).rejects.toThrow('no channel for you');
+  });
+
+  it('getFileLists rejects when the channel request fails', async () => {
+    (HttpClient.fetchJson as jest.Mock).mockImplementationOnce(() =>
+      Promise.reject(new Error('no channel for you'))
+    );
+
+    await expect(unifiedBackpackClientApi.getFileLists()).rejects.toThrow(
+      'no channel for you'
+    );
+  });
+
   it('getFileFetchUrl names the given backpack', async () => {
     setChannelResponses({
       universal: universalChannelId,

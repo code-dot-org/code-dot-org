@@ -5,7 +5,7 @@ export interface FileMetadata {
   timestamp: string;
 }
 
-// Events that can a listener can subscribe to.
+// Events that a listener can subscribe to.
 export enum BackpackEvent {
   FileAdded = 'fileAdded',
   FileDeleted = 'fileDeleted',
