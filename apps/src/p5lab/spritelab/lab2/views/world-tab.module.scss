@@ -67,15 +67,21 @@
 }
 
 .worldGrid {
-  display: grid;
   width: fit-content;
   border: 1px solid var(--borders-neutral-primary);
   // Drag painting: keep touch drags painting instead of scrolling.
   touch-action: none;
 }
 
+// Real row elements (not display: contents), so the grid semantics reach
+// assistive technology intact.
+.worldRow {
+  display: flex;
+}
+
 .worldCell {
   box-sizing: border-box;
+  flex: none;
   margin: 0;
   padding: 1px;
   border: 1px solid var(--borders-neutral-quaternary, var(--borders-neutral-primary));
@@ -98,4 +104,26 @@
   &:hover {
     background: var(--background-neutral-tertiary);
   }
+}
+
+// The roving tab stops need a ring that reads inside the tight grid.
+.worldCell:focus-visible,
+.worldPaletteItem:focus-visible {
+  z-index: 1;
+  outline: 2px solid var(--borders-brand-teal-primary);
+  outline-offset: -2px;
+}
+
+// Visually hidden, read by screen readers (keyboard help and the action
+// narration live region).
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }
