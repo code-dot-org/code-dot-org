@@ -1,8 +1,6 @@
-// One look for image tiles wherever they appear — the Images tab's gallery
-// and the image dialog's Alternatives strip — so they read as one product:
-// checkered square, thin border, subtle grow on hover, image at full
-// brightness. Colors read the dialog chrome's variables where present and
-// fall back to the gallery's own.
+// One look for image tiles — the Images tab's gallery and the image
+// dialog's Alternatives strip. Colors read the dialog chrome's variables
+// where present and fall back to the gallery's own.
 
 @mixin image-tile($size) {
   display: flex;
@@ -17,8 +15,7 @@
   box-shadow: none;
   cursor: pointer;
   border: 1px solid var(--dialog-control-border, var(--borders-neutral-primary));
-  // Hover: grow subtly (like Music Lab's album covers) instead of the
-  // global button > img dim-until-hover treatment.
+  // Grow subtly on hover instead of the page's global image dimming.
   transition: transform 0.15s ease;
 
   &:hover {

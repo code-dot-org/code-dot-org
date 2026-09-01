@@ -245,10 +245,8 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                 maxLength={IMAGE_NAME_MAX_LENGTH}
                 onChange={e => setName(sanitizeImageName(e.target.value))}
               />
-              {/* Beside the field, not below it: appearing under the input
-                  would change the dialog's height for the moment it shows.
-                  It wraps within the row's leftover width, which the field
-                  is taller than, so the height holds either way. */}
+              {/* Beside the field, not below it, so showing the message
+                  never changes the dialog's height. */}
               {nameError && (
                 <span
                   id="new-image-name-error"

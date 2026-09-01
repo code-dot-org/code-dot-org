@@ -378,11 +378,10 @@ function canvasFromRaster(raster: Raster): HTMLCanvasElement {
  * drifting off-grid) normalizes with minor smearing along the drifted rows
  * rather than being left un-normalized.
  *
- * squareGrid pins the detected grid to the frame with one cell size on both
- * axes, so a square input yields a square logical output (a grid detected
- * at an offset would otherwise add a partial edge cell on that axis). For
- * imagery that must stay square and full-frame — a stage background — the
- * slight sampling misalignment beats losing the grid.
+ * squareGrid pins one cell size to the frame on both axes, so a square
+ * input yields a square logical output (an offset grid would add a partial
+ * edge cell). For imagery that must stay square and full-frame, slight
+ * sampling misalignment beats losing the grid.
  */
 export async function normalizePixelArtBlob(
   blob: Blob,
@@ -400,9 +399,8 @@ export async function normalizePixelArtBlob(
   const raster = rasterFromCanvas(canvas);
   let grid = assumePixelGrid(raster, fallbackBlockSize);
   if (squareGrid) {
-    // Pinning to one size only makes sense when the axes roughly agree; a
-    // size matching neither axis samples out of phase across the frame,
-    // scrambling blocks — worse than leaving the image un-normalized.
+    // Pin only when the axes roughly agree: a size matching neither axis
+    // samples blocks out of phase, worse than not normalizing.
     if (Math.abs(grid.sizeX - grid.sizeY) > 1) {
       return null;
     }

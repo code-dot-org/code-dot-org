@@ -49,9 +49,8 @@ export function alternativeFromAnimation(props?: {
 export function useImageSession(reclaimAsset: (url?: string) => void) {
   const [alternatives, setAlternatives] = useState<Alternative[]>([]);
   const urls = useRef<Set<string>>(new Set());
-  // The strip entry for the image the dialog opened on; it is the one entry
-  // that never ages out (losing it would delete the original irreversibly
-  // when the session ends).
+  // The entry for the image the dialog opened on: the one entry that never
+  // ages out, since losing it would delete the original at session end.
   const seedId = useRef<string | null>(null);
 
   const push = useCallback((alt: Alternative) => {
@@ -60,8 +59,7 @@ export function useImageSession(reclaimAsset: (url?: string) => void) {
       if (next.length <= MAX_ALTERNATIVES) {
         return next;
       }
-      // Age out the oldest entry that isn't the seed (the seed, when
-      // present, is always first).
+      // Age out the oldest entry that isn't the seed (always first).
       return next[0].id === seedId.current
         ? [next[0], ...next.slice(2)]
         : next.slice(1);
@@ -82,9 +80,9 @@ export function useImageSession(reclaimAsset: (url?: string) => void) {
     urls.current = new Set();
   }, [reclaimAsset]);
 
-  // Start a session, seeded with the image the dialog opened on (if any) so
-  // it stays choosable after a generation replaces it. Sweeps first, so an
-  // asset noted between sessions is reclaimed rather than stranded.
+  // Start a session, seeded with the image the dialog opened on (if any)
+  // so it stays choosable after a generation replaces it. Sweeps first, so
+  // nothing noted between sessions is stranded.
   const reset = useCallback(
     (seed?: Alternative | null) => {
       sweep();
@@ -101,7 +99,6 @@ export function useImageSession(reclaimAsset: (url?: string) => void) {
     setAlternatives([]);
   }, [sweep]);
 
-  // The callbacks are stable; `alternatives` changes per push/reset/end.
-  // Consumers should depend on the individual pieces, not the object.
+  // The callbacks are stable; depend on the pieces, not the object.
   return {alternatives, push, noteAsset, reset, end};
 }

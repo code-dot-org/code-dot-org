@@ -67,10 +67,9 @@ interface AnimationPatch {
 }
 
 /**
- * Create an animation under a validated name and return its key. The
- * classic addAnimation thunk unconditionally renames to name_N;
- * setAnimationName takes the plain name back (callers validate it free
- * before getting here).
+ * Create an animation under a name callers have already validated as free,
+ * and return its key. The classic addAnimation thunk always renames to
+ * name_N; the plain name is set back afterwards.
  */
 function createNamedAnimation(
   dispatch: Dispatch,
@@ -95,13 +94,10 @@ function createNamedAnimation(
 }
 
 /**
- * Point an existing animation at new pixels, via the raw list-replace
- * action rather than editAnimation: the classic EDIT_ANIMATION reducer
- * forces sourceUrl to null (it expects the legacy animation-save service to
- * upload later), which would strand the change in memory — Lab2 sources
- * persist sourceUrl, not dataURI. Recomputes the trimmed thumbnail (cached
- * by source; fires onTrimsUpdated, refreshing the gallery and block
- * dropdowns). Returns the sourceUrl the change replaced.
+ * Point an existing animation at new pixels and refresh its thumbnails.
+ * Uses the raw list-replace action because the classic edit action clears
+ * sourceUrl, which is what Lab2 saves. Returns the file URL the change
+ * replaced.
  */
 function repointAnimation(
   dispatch: Dispatch,
@@ -133,10 +129,8 @@ interface GalleryCardProps {
   onOpen: (key: string, trigger: HTMLElement) => void;
 }
 
-// Memoized: opening/closing the dialog re-renders the pane, and without this
-// every card (thumbnail img and all) re-renders with it. The thumb string is
-// computed by the parent so trim updates still flow through as a changed
-// prop.
+// Memoized: opening or closing the dialog re-renders the pane, and every
+// card would re-render with it. Thumbnail updates arrive as a changed prop.
 const GalleryCard = React.memo<GalleryCardProps>(
   ({animKey, name, thumb, onOpen}) => (
     <div className={moduleStyles.imageCard}>
@@ -175,10 +169,9 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
 }) => {
   const dispatch = useAppDispatch();
 
-  // The project's images live in the animation list (AI-generated images are
-  // bridged in there); this view is also how you manage them. Sorted under
-  // useMemo, not in the selector: a selector's fresh array would count as a
-  // change on every store dispatch.
+  // The project's images, from the classic animation-list store. Sorted
+  // under useMemo: a fresh array from the selector would count as a change
+  // on every store dispatch.
   const animationList = useAppSelector(state => state.animationList);
   const images = useMemo(
     () =>
@@ -205,17 +198,12 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     trimAnimationListImages(animationList);
   }, [animationList]);
 
-  // The channel is only needed to recognize this project's own asset URLs;
-  // uploads go through the uploadImage seam.
+  // Used only to recognize this project's own uploaded-file URLs.
   const channelId = useAppSelector(state => state.lab.channel?.id);
 
-  // Reclaim a superseded image asset. Guards keep it safe: only this
-  // project's own uploaded assets (never library images, absolute URLs,
-  // inline dataURIs, or level starter assets), and only when no image still
-  // points at it (a duplicate can share one). Best-effort — a failed cleanup
-  // never disrupts the edit or delete. Known tradeoff: restoring an older
-  // project version shows a broken image for anything deleted since (as in
-  // App Lab).
+  // Delete an uploaded image file nothing uses anymore. Deliberately
+  // narrow and best-effort: only this project's own uploads, only when no
+  // image still points at the file, and a failed delete is ignored.
   const deleteUnreferencedAsset = useCallback(
     (url?: string) => {
       if (!channelId || !url || !url.startsWith(`/v3/assets/${channelId}/`)) {
@@ -238,10 +226,9 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   const savingPaintRef = useRef(false);
 
   // The dialog's subject: an animation key, 'new', or closed. Painting is
-  // three-way: the details dialog stays up through 'loading' (the paint
-  // editor renders nothing until its image decodes) and hands off in one
-  // step when the editor reports ready — otherwise the backdrop vanishes
-  // for a moment between the two dialogs.
+  // three-way so the two dialogs swap in one step: the details dialog stays
+  // up through 'loading', and the paint editor takes over once it can
+  // render — otherwise the backdrop blinks between them.
   const [dialogTarget, setDialogTarget] = useState<string | 'new' | null>(null);
   const [painting, setPainting] = useState<'no' | 'loading' | 'active'>('no');
   // Set while a brand-new image is being painted onto a blank canvas; kept
@@ -273,22 +260,18 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   // The gallery card that opened the dialog; focus returns to it on close.
   const triggerRef = useRef<HTMLElement | null>(null);
 
-  // Which dialog subject async work belongs to. The persist paths span a
-  // model call and an upload; by the time one resolves the dialog may be
-  // closed, on another image, or its paint cancelled — a stale result must
-  // not land. Bumped by everything that changes the subject.
+  // Counts changes of the dialog's subject. Generating and saving are
+  // slow; a result that finishes after the subject changed must not land.
   const sessionEpochRef = useRef(0);
-  // The epoch when the in-flight generation left (one at a time: the view
-  // disables Generate while a request is out). Stamped at request time so
-  // the model-call window is covered, not just the upload after it.
+  // The count when the current generation was requested, so the whole
+  // request is covered. One at a time: Generate disables while one is out.
   const generationEpochRef = useRef(0);
   const handleGenerateStart = useCallback(() => {
     generationEpochRef.current = sessionEpochRef.current;
   }, []);
 
-  // Whether async work stamped with `epoch` still belongs to the open
-  // subject; a stale persist's freshly-uploaded asset is reclaimed (nothing
-  // references it).
+  // True when work stamped with `epoch` no longer matches the subject;
+  // whatever the stale work uploaded is deleted, since nothing uses it.
   const persistIsStale = useCallback(
     (epoch: number, uploadedUrl?: string) => {
       if (epoch === sessionEpochRef.current) {
@@ -412,8 +395,8 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   // image) or repoint the existing one, with the generation metadata.
   const handleAcceptGenerated = useCallback(
     async (result: GeneratedImageResult, newName?: string) => {
-      // Stamped when the generation left, so a dialog closed or moved
-      // during the model call orphans its result here.
+      // Stamped when the generation was requested, so a dialog closed or
+      // moved during the request drops its result here.
       const epoch = generationEpochRef.current;
       if (persistIsStale(epoch)) {
         return;
@@ -597,8 +580,8 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         dataURI,
         ...(frameSize ? {frameSize, sourceSize: frameSize} : {}),
         pixelGridSize: meta.pixelGridSize,
-        // Hand-edited pixels are no longer any generation's output; a kept
-        // prompt/seed would describe (and replay over) the wrong image.
+        // Hand-edited pixels are not the prompt's output anymore; drop the
+        // stale prompt and seed.
         generation: undefined,
         // Serialized with the animation, so the editor's recent-colors row
         // follows the project.
@@ -647,9 +630,8 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   );
 
   const creating = dialogTarget === 'new';
-  // What kind of image the paint editor is on; backgrounds paint over the
-  // stage's opaque ground instead of transparency (they must stay fully
-  // opaque, and the editor saves exactly what it shows).
+  // Backgrounds paint over the stage's opaque ground instead of
+  // transparency; they must stay fully opaque.
   const paintedType =
     creating && paintNewDraft
       ? paintNewDraft.imageType
@@ -733,9 +715,8 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
               ? `Paint ${paintNewDraft.name}`
               : `Edit ${targetProps?.name}`
           }
-          // Edit the ORIGINAL image (untrimmed): trims are a display-time
-          // optimization; the animation's pixels are the source of truth. A
-          // brand-new image starts on a blank canvas sized for its style.
+          // Edit the original, untrimmed pixels; a brand-new image starts
+          // on a blank canvas sized for its style.
           imageUrl={
             creating && blankPaint
               ? blankPaint.dataURI

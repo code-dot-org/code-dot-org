@@ -89,8 +89,7 @@ const brushDotPx = (size: number) => 3 + size * 1.6;
 // Keyboard painting: Shift+arrow moves the cursor this many art pixels.
 const KB_SHIFT_STEP = 10;
 
-// A #rrggbb color as the editor's RGBA (the opaqueGround prop is a hex
-// string; tools work in RGBA).
+// A #rrggbb color as the RGBA the editor's tools work in.
 function hexToRGBA(hex: string): RGBA {
   return [
     parseInt(hex.slice(1, 3), 16),
@@ -120,10 +119,8 @@ interface PixelEditorModalProps {
   // Seed for the recently-used-colors row (see PixelEditorSaveMeta).
   initialRecentColors?: RGBA[];
   // Ground color for an image that must stay fully opaque (e.g. a stage
-  // background). Drawn under the artwork in place of the transparency
-  // checker, and Save flattens onto it — the editor shows exactly what is
-  // saved. Tools are unchanged: the eraser still clears to transparency,
-  // which reads as painting the ground.
+  // background): drawn under the artwork instead of the transparency
+  // checker, and Save flattens onto it, so the editor shows what it saves.
   opaqueGround?: string;
   // Fires when the editor first renders content (the image loaded or
   // failed). Until then the modal renders nothing; a caller swapping

@@ -64,10 +64,9 @@ export function onTrimsUpdated(listener: () => void): () => void {
 }
 
 /**
- * Drop an image's cached trim: its pixels changed to data that has not
- * arrived yet (e.g. reverting to a version fetched from its URL), so the
- * cached thumbnail shows the old pixels. Thumbnails fall back to the
- * untrimmed source until the next trim pass sees the new data.
+ * Drop an image's cached trimmed thumbnail — its pixels changed to data
+ * that has not arrived yet, so the cache would keep showing the old
+ * pixels. The next trim pass repopulates it.
  */
 export function forgetTrimmedThumbnail(name?: string): void {
   if (name && trimmedByName.delete(name)) {
