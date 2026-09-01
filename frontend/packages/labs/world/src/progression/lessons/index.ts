@@ -776,7 +776,25 @@ const drag: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [addActor(local('ball'), [placeAt(24, 160), setVelocity(2.5, 0)])],
-      actors: [{id: 'ball', name: 'Ball', rows: BALL}],
+      // The wrap is what makes the first line of the instructions true. A
+      // speed is in units a second and a unit is a hundred pixels
+      // (`motion/units`), so 2.5 crosses this 320-pixel world in a second and
+      // a bit: without wrapping, "keeps going, at exactly the speed it began
+      // with, forever" is a ball nobody ever sees again, and the lesson's whole
+      // point is watching that same ball coast to a halt once it has Drag.
+      //
+      // The rule was imported for it. Nothing elected it.
+      actors: [
+        {
+          id: 'ball',
+          name: 'Ball',
+          rows: [
+            useTrait('Physics#CanMoveTrait'),
+            useTrait('Screen Wrap#WrapsAcrossTrait'),
+            setSprite('ball.png'),
+          ],
+        },
+      ],
     }),
     sprites: ['ball'],
     rules: ['motion', 'drag', 'wrap'],
@@ -1354,7 +1372,12 @@ const layers: WorldScenario = {
           drawing: {
             width: 96,
             height: 24,
-            commands: [fill(swatch('#f2f2f7')), drawText(0, 12)],
+            // The MIDDLE of the canvas, as the stock Label and Button draw
+            // theirs: the text is placed with whatever anchor the actor
+            // carries, and the default centres it — so drawn at x=0 half of
+            // "SCORE 0" fell off the left of its own 96-pixel canvas and the
+            // world showed "RE 0".
+            commands: [fill(swatch('#f2f2f7')), drawText(48, 12)],
           },
         },
       ],
