@@ -154,6 +154,8 @@ interface GenerateImagePaneProps {
   uploadImage?: UploadImageFunction;
   /** Rename an image and every reference to it; error message or null. */
   onRenameImage: (oldName: string, newName: string) => string | null;
+  /** Drop every reference to a deleted image (called after the removal). */
+  onDeleteImage: (name: string) => void;
   /** Level-imposed type for new images. */
   lockedImageType?: ImageType;
 }
@@ -165,6 +167,7 @@ interface GenerateImagePaneProps {
 const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   uploadImage,
   onRenameImage,
+  onDeleteImage,
   lockedImageType,
 }) => {
   const dispatch = useAppDispatch();
@@ -335,8 +338,8 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
 
   const handleDelete = useCallback(() => {
     if (dialogTarget && dialogTarget !== 'new') {
-      const removedUrl =
-        getStore().getState().animationList.propsByKey[dialogTarget]?.sourceUrl;
+      const removed =
+        getStore().getState().animationList.propsByKey[dialogTarget];
       dispatch(
         // deleteAnimation is an untyped JS thunk; cast for dispatch.
         deleteAnimation(
@@ -344,11 +347,21 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           true /* isSpriteLab */
         ) as unknown as AnyAction
       );
-      // The removal already happened; reclaim the asset if unreferenced now.
-      deleteUnreferencedAsset(removedUrl);
+      // The removal already happened; reclaim the asset if unreferenced now,
+      // and take the blocks and World cells that pointed at the image along.
+      deleteUnreferencedAsset(removed?.sourceUrl);
+      if (removed?.name) {
+        onDeleteImage(removed.name);
+      }
     }
     closeDialog();
-  }, [dispatch, dialogTarget, closeDialog, deleteUnreferencedAsset]);
+  }, [
+    dispatch,
+    dialogTarget,
+    closeDialog,
+    deleteUnreferencedAsset,
+    onDeleteImage,
+  ]);
 
   const handleRename = useCallback(
     (newName: string): string | null => {
