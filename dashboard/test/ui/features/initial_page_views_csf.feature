@@ -1,5 +1,6 @@
 @eyes
 @skip
+@playwright
 Feature: Looking at a few things with Applitools Eyes - CSF Levels
 
   Background:

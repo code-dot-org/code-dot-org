@@ -180,10 +180,9 @@ export class LegacyBlocklyLab extends LessonLevelPage {
     // instead: same dismissal (closeOverlay), no coordinate guessing.
     const overlay = this.page.locator('#overlay');
     if (await overlay.isVisible()) {
-      const dialogOk = this.page.getByRole('button', {
-        name: 'OK',
-        exact: true,
-      });
+      // Not by name: i18n.dialogOK() localizes it, so 'OK' misses on ar-sa.
+      // The <hr> is in the same overlayVisible-gated block as the button.
+      const dialogOk = this.instructionsPanel.locator('hr + button');
       // Retry the dismissal until the overlay actually hides. On firefox the
       // first click can land before the dialog's onClick (closeOverlay) is
       // bound and silently no-op, leaving the overlay up; re-clicking once the
@@ -197,11 +196,7 @@ export class LegacyBlocklyLab extends LessonLevelPage {
         await expect(overlay).toBeHidden({timeout: 2_000});
       }).toPass({timeout: LAB_LOAD_TIMEOUT_MS});
     }
-    // Let the header animation finish.
-    await expect(this.page.locator('#header_middle_content')).toHaveCSS(
-      'opacity',
-      '1',
-    );
+    await this.header.waitForFadeIn();
   }
 
   /**
