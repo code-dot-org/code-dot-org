@@ -95,7 +95,7 @@ module OmniauthCallbacksControllerTests
       assert_equal teacher.id, signed_in_user_id
     end
 
-    test "sign-in via legacy id creates v2 auth option and leaves v1 untouched" do
+    test "sign-in via v1 id creates v2 auth option and leaves v1 untouched" do
       teacher = create(:teacher, :classlink_sso_provider, uid: '59777133')
       v1_auth_option = teacher.authentication_options.find_by(credential_type: AuthenticationOption::CLASSLINK)
       v1_attributes = v1_auth_option.attributes
@@ -144,13 +144,38 @@ module OmniauthCallbacksControllerTests
       created_user&.destroy!
     end
 
-    test "sign-in falls back to the v1 path when the v2 id cannot be built" do
+    test "sign-in uses the v1 id when the district sends no SourcedId" do
+      # ClassLink sends an empty SourcedId for districts that have not enabled
+      # OneRoster. Those users have no v2 identifier and never will, so the v1
+      # UserId is their only credential on every sign-in. Nothing is reported:
+      # this is a documented normal payload, and reporting it would fire on
+      # every sign-in from every such district.
       teacher = create(:teacher, :classlink_sso_provider, uid: '59777133')
       mock_oauth uid: 59_777_133, tenant_id: 2222, sourced_id: ''
+      Observability::Errors.expects(:report).never
 
       assert_does_not_create(User, AuthenticationOption) {sign_in_through_classlink}
 
       assert_equal teacher.id, signed_in_user_id
+    end
+
+    test "sign-up with no SourcedId creates the auth option with the v1 id and nil version" do
+      # Same district shape on the sign-up path: with no SourcedId there is no
+      # v2 id to build, so the account is created on ClassLink's UserId exactly
+      # as it would have been before the v2 format existed. version stays nil,
+      # which is what marks a v1 id.
+      auth_hash = mock_oauth uid: '59777133', tenant_id: 2222, sourced_id: ''
+
+      post user_classlink_omniauth_authorize_path
+      get user_classlink_omniauth_callback_path
+      assert_creates(User) {finish_sign_up auth_hash, User::TYPE_TEACHER}
+
+      created_user = User.find signed_in_user_id
+      auth_option = created_user.authentication_options.find_by(credential_type: AuthenticationOption::CLASSLINK)
+      assert_equal '59777133', auth_option.authentication_id
+      assert_nil auth_option.version
+    ensure
+      created_user&.destroy!
     end
 
     private def mock_oauth(role: 'Teacher', uid: nil, tenant_id: nil, sourced_id: nil)
@@ -164,6 +189,8 @@ module OmniauthCallbacksControllerTests
       )
       # district_id and external_id mirror what omniauth-classlink derives from
       # the TenantId and SourcedId fields of ClassLink's v2/my/info response.
+      # SourcedId is empty for districts that have not enabled OneRoster, so a
+      # blank external_id is a normal payload, not a malformed one.
       auth_hash.info.district_id = tenant_id
       auth_hash.info.external_id = sourced_id
       auth_hash.extra = OmniAuth::AuthHash.new(
