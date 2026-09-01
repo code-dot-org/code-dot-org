@@ -468,6 +468,11 @@ export const PROPERTY_TYPES: ReadonlySet<string> = new Set([
   'color',
   'vector',
   'point',
+  // Lists of plain values, which unlike the actor list below are carried
+  // across a hot reload and authorable as data (specs/LISTS.md).
+  'numbers',
+  'words',
+  'vectors',
   // What a rule works out about who is where (specs/COLLISION.md). Not offered
   // as a query's return type below: a query reports a single value, and this is
   // one or many.
@@ -493,6 +498,13 @@ export const parseDefault = (text: string, type: PropertyType): unknown => {
     // No actors. There is no other sensible starting value for a set a rule
     // works out each tick, and no text a learner could type that would be one.
     case 'actors':
+      return [];
+    // An empty list, for the same reason and one more: a list's default is the
+    // one value every holder of it would otherwise share, so the emptiest
+    // possible one is the only safe thing to write down (`core/lists`).
+    case 'numbers':
+    case 'words':
+    case 'vectors':
       return [];
     // No actor — an empty list, because that is how one is stored too.
     case 'actor':

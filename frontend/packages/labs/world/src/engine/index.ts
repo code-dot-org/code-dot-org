@@ -20,7 +20,7 @@ export {Actor, type ActorInit} from './core/Actor';
 // Lists of plain values — numbers, words, places (specs/LISTS.md). Generated
 // code routes through these the way it routes actor values through the two
 // below: what a list operation MEANS is one place rather than in every block.
-export {addTo, items, listHas} from './core/lists';
+export {addTo, items, lastOf, listHas} from './core/lists';
 export {
   all,
   each,

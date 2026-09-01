@@ -1,8 +1,9 @@
 // "Can Be Taken Back" — what it declares, read rather than run.
 //
-// The tape is eight named properties because a rule cannot hold a list of
-// places, so the thing worth pinning here is the shape of the tape: eight
-// slots, all read-only, one number saying how many of them mean anything.
+// The tape was eight named properties, because a rule's state was a fixed set
+// of named slots and there was no list of places in the vocabulary. It is one
+// list now (specs/LISTS.md), and what is worth pinning is that shape: one
+// read-only list per actor, and one number saying how long it is.
 // `stockRulesRun` covers what it does.
 
 import {describe, expect, it} from 'vitest';
@@ -13,27 +14,20 @@ import {historyRule} from '../stock/history';
 const meta = parseRuleMeta('rules/history', historyRule)!;
 
 describe('rules/history.rule', () => {
-  it('is eight moves deep, in slots a project can read', () => {
-    // Written out because there is no list of places in the vocabulary. That
-    // they are readable is the consolation: `three moves ago of ⟨Crate⟩` is a
-    // question worth being able to ask.
-    const slots = meta.properties.filter(property =>
-      property.id.endsWith('_ago'),
+  it('keeps the tape as one list, and nothing else', () => {
+    // Eight properties became one, which is the whole of what a list bought
+    // here: no depth to choose, and no paragraph explaining the number eight.
+    const tape = meta.properties.find(
+      property => property.id === 'where_it_was',
     );
 
-    expect(slots.map(property => property.id)).toEqual([
-      'one_move_ago',
-      'two_moves_ago',
-      'three_moves_ago',
-      'four_moves_ago',
-      'five_moves_ago',
-      'six_moves_ago',
-      'seven_moves_ago',
-      'eight_moves_ago',
+    expect(tape?.type).toBe('vectors');
+    expect(tape?.scope).toBe('actor');
+    expect(tape?.readonly).toBe(true);
+    expect(meta.properties.map(property => property.id).sort()).toEqual([
+      'moves_remembered',
+      'where_it_was',
     ]);
-    expect(slots.every(property => property.type === 'point')).toBe(true);
-    expect(slots.every(property => property.readonly)).toBe(true);
-    expect(slots.every(property => property.scope === 'actor')).toBe(true);
   });
 
   it('counts the tape on the world, where a move belongs', () => {

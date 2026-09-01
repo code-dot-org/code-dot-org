@@ -136,13 +136,16 @@ describe('the Lists drawer', () => {
     });
   });
 
-  it('offers the six ways to use one, and the variable to keep it in', () => {
+  it('offers the ways to use one, and the variable to keep it in', () => {
     expect(lists?.slice(1)).toEqual([
       'lists_create_empty',
       'world_list_add',
       'world_list_empty',
       'lists_length',
       'world_list_has',
+      // The end a stack is read from — and the only reading there is, because
+      // an index is a decision about "past the end" and waits for a use.
+      'world_list_last',
       'world_for_each_number',
       'world_for_each_word',
       'world_for_each_place',

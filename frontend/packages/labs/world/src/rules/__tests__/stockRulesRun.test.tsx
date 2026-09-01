@@ -1493,11 +1493,11 @@ describe('History', () => {
       world.get(
         of('rules/history', 'MovesRememberedProperty'),
       ) as unknown as number;
-    const slot = (name: string) =>
-      (crate as unknown as {get(p: unknown): Vector}).get(
-        of('rules/history', name),
+    const tape = () =>
+      (crate as unknown as {get(p: unknown): Vector[]}).get(
+        of('rules/history', 'WhereItWasProperty'),
       );
-    return {world, say, spot, step, remembered, slot, putBack};
+    return {world, say, spot, step, remembered, tape, putBack};
   };
 
   it('puts a crate back where it was, and says which crate moved', () => {
@@ -1516,11 +1516,11 @@ describe('History', () => {
     expect(putBack).toEqual([64]);
   });
 
-  it('remembers eight moves and drops the ninth-oldest', () => {
-    // The tape is eight properties deep because a rule cannot hold a list of
-    // places. Ten moves therefore go back to the third, not the first, and the
-    // eleventh undo is not an error — it is a player pressing undo at the
-    // start of a level.
+  it('goes back as far as the game has been played', () => {
+    // The tape was eight properties deep, because a rule's state was a fixed
+    // set of named slots and there was no list of places to keep. It is one
+    // list now, so ten moves go back ten and the eleventh undo is not an error
+    // — it is a player pressing undo at the start of a level.
     const {say, spot, step, remembered} = board(true);
 
     for (let move = 0; move < 10; move++) {
@@ -1528,29 +1528,28 @@ describe('History', () => {
       step();
     }
     expect(spot().x).toBe(64 + 10 * 32);
-    expect(remembered()).toBe(8);
+    expect(remembered()).toBe(10);
 
-    for (let back = 0; back < 9; back++) {
+    for (let back = 0; back < 11; back++) {
       say('TakeBackAMoveAction');
     }
 
-    expect(spot().x).toBe(64 + 2 * 32);
+    expect(spot().x).toBe(64);
     expect(remembered()).toBe(0);
   });
 
-  it('answers where something was, several moves ago', () => {
-    // The consolation for a tape written out as properties: the slots are
-    // readable, so a project can draw the ghost of a move.
-    const {say, step, slot} = board(true);
+  it('keeps every place on one tape, oldest first', () => {
+    // What eight named slots were: one property, in the order the moves
+    // happened, and readable by anything that wants to draw where a crate has
+    // been.
+    const {say, step, tape} = board(true);
 
     for (let move = 0; move < 3; move++) {
       say('RememberThisMoveAction');
       step();
     }
 
-    expect(slot('OneMoveAgoProperty').x).toBe(128);
-    expect(slot('TwoMovesAgoProperty').x).toBe(96);
-    expect(slot('ThreeMovesAgoProperty').x).toBe(64);
+    expect(tape().map(place => place.x)).toEqual([64, 96, 128]);
   });
 
   it('leaves alone what did not ask to be remembered', () => {
@@ -1569,7 +1568,10 @@ describe('History', () => {
   });
 
   it('throws the tape away when a level is built again', () => {
-    const {say, spot, step, remembered} = board(true);
+    // The count AND the places, which the eight slots never had to do: a slot
+    // nobody reads is harmless, and a list nobody empties is a level's worth of
+    // places kept for a level that is gone.
+    const {say, spot, step, remembered, tape} = board(true);
 
     say('RememberThisMoveAction');
     step();
@@ -1577,6 +1579,7 @@ describe('History', () => {
     say('TakeBackAMoveAction');
 
     expect(remembered()).toBe(0);
+    expect(tape()).toEqual([]);
     expect(spot().x).toBe(96);
   });
 });

@@ -147,7 +147,7 @@ of` gave it a reason.
 | `memory/*`           | a variable, and no array               | a list lesson worth its tile |
 | `story/script`       | one `if` per line                      | the script as data           |
 | `adventure/errand`   | a count                                | the things still to find     |
-| `rules/history`      | eight properties written out           | one property, any depth      |
+| `rules/history`      | eight properties written out (now one) | one property, any depth      |
 | `rules/conversation` | the project maps index → words by hand | `item ⟨line⟩ of ⟨lines⟩`     |
 
 ## What is deliberately not solved
@@ -219,7 +219,25 @@ of` gave it a reason.
    goes. That is the first place the missing index is felt, and it is left felt
    rather than answered.
 
-5. **The rules that were written around it.** History's tape becomes one
-   property; Conversation gains nothing but its demo and its lesson get shorter.
-   Both are re-recorded and re-checked, and both are optional — the point of
-   steps 1–4 is that they are useful without this one.
+5. **The rules that were written around it.** History ✅; Conversation to come.
+
+   **History's eight slots are one list**, and three things went with them: the
+   depth, the paragraph explaining why the depth was eight, and the shifting —
+   `remember this move` was eight assignments per actor per move to slide the
+   tape along, and is now one `add … to`. Undo goes back to the first move of
+   the level, which is the forgiving thing `puzzle/undo` asked for and could not
+   have.
+
+   It also asked for the vocabulary a stack needs, which is what step 2 had left
+   out: `add ⟨v⟩ to ⟨tape⟩ of ⟨actor⟩` and `take the last off ⟨tape⟩ of
+⟨actor⟩` — a property's push and pop, generated per list property the way
+   the actor list's are — and `last of ⟨list⟩`, the end a stack is read from.
+   **Popping is the LAST one, never one by value**: a tape of places holds
+   duplicates the moment anything stands still, and "take the one I just put
+   on" is what a stack means.
+
+   **What was lost is that the slots were readable.** `three moves ago of
+⟨Crate⟩` was a question a project could ask — to draw the ghost of a move, or
+   to tell a player they are going in circles — and asking into a list wants an
+   index, which is still step 3. The rule's header says so rather than pretending
+   the feature moved.

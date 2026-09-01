@@ -157,6 +157,21 @@ export const firstCharacters = (words, count) => ({
 
 export const note = text => ({type: 'world_comment', fields: {TEXT: text}});
 
+/** `last of <list>` — the end a stack is read from. */
+export const lastOf = list => ({
+  type: 'world_list_last',
+  inputs: {LIST: value(list)},
+});
+
+/** `an empty list` — what a list is set back to. */
+export const emptyList = () => ({type: 'lists_create_empty'});
+
+/** `how many in <list>`. */
+export const countIn = list => ({
+  type: 'lists_length',
+  inputs: {VALUE: value(list)},
+});
+
 /**
  * `kind of <actor>` — which kind a thing is, as a name.
  *
@@ -491,6 +506,21 @@ function property(ruleName, traitId, {name, type, value: initial, readonly}) {
   };
   self.x = who => self.axis('x', who);
   self.y = who => self.axis('y', who);
+  if (type === 'numbers' || type === 'words' || type === 'vectors') {
+    /** `add <value> to <name> of <subject>`. */
+    self.push = (...args) => {
+      const who = scoped ? args.shift() : undefined;
+      return {
+        type: `world_push_${key}`,
+        inputs: {...subject(who), ITEM: value(args[0])},
+      };
+    };
+    /** `take the last off <name> of <subject>` — the pop of a stack. */
+    self.takeLast = (...args) => {
+      const who = scoped ? args.shift() : undefined;
+      return withInputs({type: `world_drop_${key}`}, {...subject(who)});
+    };
+  }
   if (type === 'actors') {
     /** `add <actor> to <name> of <subject>` — only a LIST has these. */
     self.push = (...args) => {
@@ -809,6 +839,20 @@ export function defineRule({name, ability, header}) {
           }),
         actors: (propName, opts) =>
           self.property({name: propName, type: 'actors', value: '', ...opts}),
+        /**
+         * A list of plain values — numbers, words or places (specs/LISTS.md).
+         *
+         * Unlike `actors`, one of these is SNAPSHOTTED: it is plain data, so a
+         * hot reload carries it and patches it live. Its blocks are the ones a
+         * stack wants — `add … to`, `take the last off` — because that is what
+         * asked for them.
+         */
+        numbers: (propName, opts) =>
+          self.property({name: propName, type: 'numbers', value: '', ...opts}),
+        words: (propName, opts) =>
+          self.property({name: propName, type: 'words', value: '', ...opts}),
+        vectors: (propName, opts) =>
+          self.property({name: propName, type: 'vectors', value: '', ...opts}),
         /**
          * ONE actor, not a list — a camera's actor to follow. The difference
          * is what gets generated around it: a list also has `add`/`remove`,

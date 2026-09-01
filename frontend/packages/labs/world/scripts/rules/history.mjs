@@ -2,16 +2,18 @@ import {Positional, position, setPosition} from './builtins.mjs';
 import {
   add,
   allWithTrait,
+  axisOf,
   defineRule,
+  emptyList,
   forEach,
   give,
-  lessThan,
+  lastOf,
   minus,
   moduleFor,
   moreThan,
   n,
   note,
-  pick,
+  vector,
   when,
 } from './dsl.mjs';
 
@@ -40,20 +42,22 @@ const rule = defineRule({
 // never seen the game. The tape is the rule's; what counts as a move is the
 // project's.
 //
-// THE TAPE IS EIGHT MOVES DEEP, and eight is a limit of what a rule can hold
-// rather than an opinion about puzzles. A rule's state is a fixed set of named
-// properties and there is no list of PLACES in the vocabulary, so the depth is
-// eight properties written out. That turned out to be worth having anyway:
-// they are readable, so \`three moves ago of ⟨Crate⟩\` is a question a project
-// can ask — to draw the ghost of a move, or to tell a player they are going in
-// circles. Remembering a ninth move drops the oldest, which is the only thing
-// a full tape can do.
+// THE TAPE GOES BACK TO THE START OF THE LEVEL, and it used to be eight moves
+// deep. Eight was never an opinion about puzzles: a rule's state was a fixed
+// set of named properties and there was no list of PLACES in the vocabulary, so
+// the depth was eight properties written out — \`one move ago\` through \`eight
+// moves ago\` — and the limit was documented rather than chosen.
 //
-// PAST \`moves remembered\` A SLOT HOLDS A LEFTOVER. Nothing is cleared when the
-// tape shrinks, because clearing would mean writing a place that is a lie
-// rather than leaving one that is stale, and neither is worth eight more
-// statements. The number is the guard: it says how many of the eight mean
-// anything.
+// A list is one property (specs/LISTS.md), so there is no depth to choose and
+// nothing to explain. A move is a Vector; a hundred moves is a hundred of them,
+// which is nothing, and a puzzle that can be taken back to its first move is
+// the forgiving thing the tile asked for in the first place.
+//
+// WHAT WAS LOST WITH THE SLOTS is that they were readable: \`three moves ago of
+// ⟨Crate⟩\` was a question a project could ask, to draw the ghost of a move or
+// to tell a player they are going in circles. Asking into a list wants an
+// index, and there is no index block yet — \`last of\` is the whole of what a
+// stack needs, so it is the whole of what was built.
 //
 // IT PUTS BACK POSITIONS AND NOTHING ELSE — not scores, not health, not
 // whether a door was opened. Some of that repairs itself and it is worth
@@ -72,16 +76,15 @@ const rule = defineRule({
 // they have stopped.`,
 });
 
-/** `one move ago` … `eight moves ago`: the tape, one slot per word. */
-const WORDS = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight'];
-const DEPTH = WORDS.length;
-
 /**
- * How many of the eight slots mean anything.
+ * How many moves are on the tape.
  *
  * World-scoped, because a move is the world's rather than any actor's: every
  * remembering actor is written on the same push, so one number describes them
- * all. Read-only — `remember this move` and `take back a move` are the ways it
+ * all — and it is still the right answer in a world where nothing remembers
+ * anything, which a tape's length is not.
+ *
+ * Read-only: `remember this move` and `take back a move` are the ways it
  * changes, and a project that set it by hand would be claiming places nothing
  * had stored.
  */
@@ -93,13 +96,14 @@ export const takenBack = rule.event(['a move is taken back']);
 const remembers = rule.trait('Remembers Where It Was');
 remembers.uses(Positional);
 
-const slots = WORDS.map((word, index) =>
-  remembers.point(
-    `${word} move${index === 0 ? '' : 's'} ago`,
-    {x: 0, y: 0},
-    {readonly: true},
-  ),
-);
+/**
+ * Everywhere this actor has been, oldest first.
+ *
+ * The whole of what was eight properties. Read-only, because the two verbs are
+ * the way on and off it — a project that wrote the tape by hand would be
+ * telling a game it had been somewhere it never was.
+ */
+const tape = remembers.vectors('where it was', {readonly: true});
 
 export const RemembersWhereItWas = rule.traitRef('Remembers Where It Was');
 
@@ -120,42 +124,22 @@ const remembering = () => allWithTrait(RemembersWhereItWas);
 export const rememberThisMove = rule.block({
   returns: 'none',
   description:
-    'Write down where everything is, just before a move happens. The tape is eight moves deep; a ninth drops the oldest.',
+    'Write down where everything is, just before a move happens. The tape goes back as far as the game has been played.',
   say: ['remember this move'],
   body: () => [
-    note('Oldest first: each slot takes the one in front of it, and then the'),
-    note('front takes where the actor is now. Going the other way would copy'),
-    note('one place into all eight.'),
+    note('Where everything is, on the end of its own tape.'),
     forEach(each, {
       from: remembering(),
       body: [
-        ...slots
-          .slice(1)
-          .reverse()
-          .map((slot, offset) => {
-            const nearer = slots[DEPTH - 2 - offset];
-            return slot.set(
-              each.get(),
-              nearer.x(each.get()),
-              nearer.y(each.get()),
-            );
-          }),
-        slots[0].set(
+        tape.push(
           each.get(),
-          position.x(each.get()),
-          position.y(each.get()),
+          vector(position.x(each.get()), position.y(each.get())),
         ),
       ],
     }),
-    note('One more remembered, up to eight — past that the tape is full and'),
-    note('the oldest move has just been written over.'),
-    remembered.set(
-      pick(
-        lessThan(remembered.of(), n(DEPTH)),
-        add(remembered.of(), n(1)),
-        n(DEPTH),
-      ),
-    ),
+    note('One more remembered, and no ceiling to stop at: a move is a place,'),
+    note('and a hundred places is nothing to keep.'),
+    remembered.set(add(remembered.of(), n(1))),
   ],
 });
 
@@ -174,21 +158,13 @@ export const takeBackAMove = rule.block({
           forEach(each, {
             from: remembering(),
             body: [
+              note('The last place it was, and then that place is spent.'),
               setPosition(
                 each.get(),
-                slots[0].x(each.get()),
-                slots[0].y(each.get()),
+                axisOf('x', lastOf(tape.of(each.get()))),
+                axisOf('y', lastOf(tape.of(each.get()))),
               ),
-              note('And the tape slides forward: what was two moves ago is'),
-              note('one move ago now. The last slot keeps its leftover.'),
-              ...slots.slice(0, -1).map((slot, index) => {
-                const older = slots[index + 1];
-                return slot.set(
-                  each.get(),
-                  older.x(each.get()),
-                  older.y(each.get()),
-                );
-              }),
+              tape.takeLast(each.get()),
               isPutBack({}, each.get()),
             ],
           }),
@@ -208,8 +184,13 @@ export const forgetEverything = rule.block({
     'Throw the tape away — for a level that has just been built, where there is nothing before the start.',
   say: ['forget everything'],
   body: () => [
-    note('The slots keep whatever they held. Nothing reads them while the'),
-    note('count says none of them means anything.'),
+    note('Every tape as well as the count, which the eight slots never had'),
+    note('to do: a slot nobody reads is harmless, and a list nobody empties'),
+    note('is a level’s worth of places kept for a level that is gone.'),
+    forEach(each, {
+      from: remembering(),
+      body: [tape.set(each.get(), emptyList())],
+    }),
     remembered.set(n(0)),
   ],
 });

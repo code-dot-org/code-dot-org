@@ -4456,10 +4456,10 @@ Push the Crate onto the Mark. You can push it and you can never pull it, so
 one press too many puts it somewhere no amount of playing will fix — and the
 only thing left is to build the level again.
 
-**A history is a stack**: the places everything was, most recent first. Undo is
-popping one off and putting everything back. The History rule keeps eight of
-them, and the two things it needs from you are which actors count and when a
-move happens — it cannot guess either. A move is not a frame.
+**A history is a stack**: the places everything was, most recent last. Undo is
+taking one off and putting everything back. The History rule keeps every move
+you tell it about, and the two things it needs from you are which actors count
+and when a move happens — it cannot guess either. A move is not a frame.
 
 ### What you do
 

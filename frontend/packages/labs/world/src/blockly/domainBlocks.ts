@@ -1385,6 +1385,11 @@ const isSettable = (property: PropertyMeta): boolean =>
 const isList = (property: PropertyMeta): boolean =>
   property.type === 'actors' && isGettable(property);
 
+/** …and one that holds a list of plain values (specs/LISTS.md). */
+const isValueList = (property: PropertyMeta): boolean =>
+  ['numbers', 'words', 'vectors'].includes(property.type) &&
+  isGettable(property);
+
 const isGettable = (property: PropertyMeta): boolean =>
   property.ref.exportName !== '' &&
   !HIDDEN_PROPERTY_EXPORTS.has(property.ref.exportName);
@@ -2085,6 +2090,99 @@ const defineListPropertyBlocks = (property: PropertyMeta) => {
 };
 
 /**
+ * Adding to and taking from a property that holds a LIST OF VALUES.
+ *
+ * The value-list twin of the actor pair above, and it exists for the reason
+ * that one does: `set` can say both of these — read the list out, change it,
+ * write it back — and that is three blocks and a variable to say "and this one
+ * too". History's tape is the case that asked for them, and what it needs is
+ * exactly a push and a pop.
+ *
+ * REMOVE IS THE LAST ONE, not one by value. A tape of places holds duplicates
+ * the moment anything stands still, and "take the one I just put on" is what a
+ * stack means; removing by value would take the first one equal to it, which is
+ * a different sentence that happens to leave a list of the same length.
+ */
+const defineValueListPropertyBlocks = (property: PropertyMeta) => {
+  const name = property.name;
+  const subjectScoped = property.scope !== 'world';
+  const owner = (label: string) =>
+    subjectScoped ? `${label} of %2` : `${label}`;
+  const ownerArg = (): BlockArgDefinition[] =>
+    subjectScoped ? [{type: 'input_value', name: 'ACTOR', check: 'Actor'}] : [];
+  const build = (
+    verb: 'push' | 'pop',
+    args0: BlockArgDefinition[],
+    message0: string,
+    tooltip: string,
+  ) => {
+    const type =
+      verb === 'push'
+        ? pushPropertyBlockType(memberKey(property.ref))
+        : dropPropertyBlockType(memberKey(property.ref));
+    registerMemberBlockType(type, memberRule(property.ref));
+    return defineBlock({
+      type,
+      message0,
+      args0,
+      inputsInline: true,
+      previousStatement: true,
+      nextStatement: true,
+      extensions: missingRuleAware(
+        subjectScoped
+          ? [subjectInputExtension(property.scope), valueShadowExtension]
+          : [valueShadowExtension, worldContextExtension],
+      ),
+      style: 'default',
+      tooltip,
+      generator: {
+        javascript(block, generator) {
+          if (!refResolves(property.ref)) {
+            return '';
+          }
+          const ref = refCode(property.ref, generator);
+          const item =
+            verb === 'push'
+              ? generator.valueToCode(block, 'ITEM', Order.NONE) || '0'
+              : '';
+          // Read, change, write — through the setter, so the store's own
+          // copying happens (`core/lists`) and a watcher sees the change.
+          const write = (subject: string) =>
+            verb === 'push'
+              ? `${subject}.set(${ref}, [...WorldLab.items(${subject}.get(${ref})), ${item}])`
+              : `${subject}.set(${ref}, WorldLab.items(${subject}.get(${ref})).slice(0, -1))`;
+          return subjectScoped
+            ? forEachActor(actorTarget(block, generator, Order.MEMBER), write)
+            : `${write('world')};\n`;
+        },
+      },
+    });
+  };
+  return [
+    build(
+      'push',
+      [{type: 'input_value', name: 'ITEM'}, ...ownerArg()],
+      `add %1 to ${owner(name)}`,
+      `Put something on the end of ${
+        subjectScoped ? "an actor's" : "the world's"
+      } ${name}.`,
+    ),
+    build(
+      'pop',
+      ownerArg().map((argument, index) =>
+        index === 0 ? {...argument, name: 'ACTOR'} : argument,
+      ),
+      subjectScoped
+        ? `take the last off ${name} of %1`
+        : `take the last off ${name}`,
+      `Take the last thing off ${
+        subjectScoped ? "an actor's" : "the world's"
+      } ${name}. Nothing happens if it is already empty.`,
+    ),
+  ];
+};
+
+/**
  * A "get …" reporter for one settable property — the read counterpart of the set
  * block. An actor property takes an ACTOR value input (defaulting to a `this
  * actor` shadow); a world property reads `world`. A `vector` property reads the
@@ -2373,6 +2471,12 @@ for (const rule of AUTHORING_RULES) {
     }
     if (isList(property) && isSettable(property)) {
       for (const block of defineListPropertyBlocks(property)) {
+        PROPERTY_BLOCKS.push(block);
+        types.push(block.type);
+      }
+    }
+    if (isValueList(property) && isSettable(property)) {
+      for (const block of defineValueListPropertyBlocks(property)) {
         PROPERTY_BLOCKS.push(block);
         types.push(block.type);
       }
@@ -2806,6 +2910,30 @@ const worldListEmpty = defineBlock({
     javascript(block, generator) {
       const list = generator.getVariableName(block.getFieldValue('LIST'));
       return `${list} = [];\n`;
+    },
+  },
+});
+
+const worldListLast = defineBlock({
+  type: 'world_list_last',
+  message0: 'last of %1',
+  args0: [{type: 'input_value', name: 'LIST', check: LIST_CHECK}],
+  inputsInline: true,
+  // UNTYPED, because what a list holds is the list's business — the same
+  // reason `event value` is untyped, and the same bargain: it plugs anywhere,
+  // and what it means depends on where it came from.
+  output: null,
+  style: 'sprite_blocks',
+  tooltip:
+    'The last thing in a list — the end a stack is read from. An empty list ' +
+    'has no last thing, and answers with nothing.',
+  generator: {
+    javascript(block, generator) {
+      const list = generator.valueToCode(block, 'LIST', Order.NONE) || '[]';
+      return [`WorldLab.lastOf(${list})`, Order.FUNCTION_CALL] as [
+        string,
+        number,
+      ];
     },
   },
 });
@@ -7514,6 +7642,7 @@ export const DOMAIN_BLOCKS = [
   worldKindOf,
   worldListAdd,
   worldListEmpty,
+  worldListLast,
   worldListHas,
   worldForEachNumber,
   worldForEachWord,
@@ -7941,6 +8070,10 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
       'world_list_empty',
       'lists_length',
       'world_list_has',
+      // The end a stack is read from. No `item ⟨n⟩ of` yet: an index is a
+      // decision about what "past the end" means, and it waits for a use that
+      // argues for one (specs/LISTS.md).
+      'world_list_last',
       // …and a loop per kind of thing, beside the one that walks actors.
       'world_for_each_number',
       'world_for_each_word',
@@ -8213,6 +8346,12 @@ function generateRulePalette(
       }
       if (writable && isList(property)) {
         for (const block of defineListPropertyBlocks(property)) {
+          blocks.push(block);
+          propTypes.push(block.type);
+        }
+      }
+      if (writable && isValueList(property)) {
+        for (const block of defineValueListPropertyBlocks(property)) {
           blocks.push(block);
           propTypes.push(block.type);
         }

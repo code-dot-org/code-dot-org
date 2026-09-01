@@ -95,3 +95,13 @@ function sameValue(one: unknown, other: unknown): boolean {
   const b = place(other);
   return a !== undefined && b !== undefined && a.x === b.x && a.y === b.y;
 }
+
+/**
+ * The last thing in a list, or nothing when there is none.
+ *
+ * The end a stack is read from, and the only reading blocks offer so far: an
+ * INDEX is a decision about what "past the end" means, and this needs no such
+ * decision — an empty list has no last thing, and says so.
+ */
+export const lastOf = (list: unknown): unknown =>
+  items(list)[items(list).length - 1];
