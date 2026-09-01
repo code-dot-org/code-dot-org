@@ -562,11 +562,9 @@ export default class SpriteLab2Engine extends SpriteLab {
   }
 
   /**
-   * Wait for the project's images, but not forever: the store never marks an
-   * image whose fetch failed, so after the grace period the run goes ahead
-   * with what has loaded. The costume commands will have no-op'd on the
-   * missing names by then, so if the stragglers do arrive later, one re-run
-   * picks them up.
+   * Wait for the project's images, but not forever: the store never marks
+   * an image whose fetch failed, so after the grace period the run goes
+   * ahead with what has loaded.
    */
   whenAnimationsAreReadyOrGivenUp_() {
     if (this.areAnimationsReady_()) {
@@ -594,8 +592,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     });
   }
 
-  // After a give-up: say what is still missing, and re-run once if it ever
-  // arrives (the images loaded then, so the re-run is clean).
+  // After a give-up: say what is still missing, and re-run once if it
+  // ever arrives.
   onImageLoadGiveUp_() {
     if (this.areAnimationsReady_()) {
       // Ready and timed out in the same tick; nothing is missing.
@@ -616,9 +614,9 @@ export default class SpriteLab2Engine extends SpriteLab {
       if (!this.areAnimationsReady_()) {
         return;
       }
-      // A stopped tick timer may just be mid-start (an execute or scene
-      // jump in progress), so the watch declines without consuming itself;
-      // a run whose preload sees everything clears it below.
+      // A stopped tick timer may just be mid-start (a run or scene jump
+      // in progress): stay subscribed, and let a preload that sees every
+      // image clear this instead.
       if (this.isTickTimerRunning()) {
         this.clearLateImagesWatch_();
         this.rerun();
@@ -641,8 +639,7 @@ export default class SpriteLab2Engine extends SpriteLab {
   // preload only the images whose data has arrived; one without would just
   // make p5 log an error.
   async preloadTrimmedImages_(animationList) {
-    // This preload sees everything there is; a late-images watch has
-    // nothing left to recover.
+    // This preload sees every image; the watch has nothing to recover.
     if (this.areAnimationsReady_()) {
       this.clearLateImagesWatch_();
     }

@@ -14,10 +14,9 @@ export const IMAGE_NAME_MAX_LENGTH = 40;
 
 /**
  * Tidy a name as it's typed: drop double quotes and backslashes (either
- * would corrupt the quoted reference format — and Blockly warns every frame
- * on an invalid value, dragging the whole app), collapse whitespace, cap
- * the length. A trailing space survives so multi-word names can be typed
- * naturally; callers trim when committing.
+ * would corrupt the quoted reference format), collapse whitespace, cap the
+ * length. A trailing space survives so multi-word names can be typed;
+ * callers trim when committing.
  */
 export function sanitizeImageName(raw: string): string {
   return raw
@@ -27,13 +26,10 @@ export function sanitizeImageName(raw: string): string {
     .slice(0, IMAGE_NAME_MAX_LENGTH);
 }
 
-// The picker fields that hold image references, by block type: the
-// costumePicker/backgroundPicker args of the GamelabJr pool blocks
-// (dashboard/config/blocks), plus the lab's own picker fields
-// (blockly/blockDefinitions). Keyed by block type because a field name
-// alone is ambiguous — GROUP here is a costume picker, but on the GameDev
-// group blocks it is the players/walls keyword dropdown, and rewriting one
-// of those would silently rewire the program.
+// The picker fields that hold image references, by block type. The block
+// type matters because a field name alone is ambiguous: GROUP here is a
+// costume picker, but on the GameDev group blocks it is the players/walls
+// dropdown, and rewriting that would silently rewire the program.
 const IMAGE_FIELDS: Record<string, readonly string[]> = {
   gamelab_addTarget: ['TARGET'],
   gamelab_allSpritesWithAnimation: ['ANIMATION'],
@@ -72,10 +68,9 @@ const IMAGE_FIELDS: Record<string, readonly string[]> = {
 // inside, whichever form it is in.
 const FIELD_ELEMENT = /^(<field\b[^>]*>)([\s\S]*)(<\/field>)$/;
 
-// The XML form escapes the element's text, so comparisons and rewrites work
-// on the unescaped name: "cats & dogs" is stored as `"cats &amp; dogs"`.
-// The serializer escapes exactly & < > in element text, and quotes never
-// occur in names (sanitizeImageName drops them).
+// The XML form escapes the element's text — "cats & dogs" is stored as
+// `"cats &amp; dogs"` — so comparisons and rewrites work on the unescaped
+// name. The serializer escapes exactly & < > in element text.
 const XML_ENTITIES: Record<string, string> = {
   amp: '&',
   lt: '<',
@@ -239,11 +234,10 @@ function removeInBlock(block: JsonBlockConfig, quoted: string): void {
 }
 
 /**
- * Drop every reference to a deleted image across the project's sources:
- * picker fields in every scene's blocks (and the top-level mirror of scene
- * 1) fall back to their first option, and World-tab cells placing the image
- * are cleared. Pure — returns a new sources object. A reference left behind
- * would spawn a costume the engine cannot find.
+ * Drop every reference to a deleted image across the project's sources —
+ * picker fields fall back to their first option, World cells clear — so no
+ * block asks for a costume the engine cannot find. Pure: returns a new
+ * sources object.
  */
 export function removeImageReferences(sources: Sources, name: string): Sources {
   const out: Sources = JSON.parse(JSON.stringify(sources));
