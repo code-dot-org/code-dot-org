@@ -97,25 +97,6 @@ class ContactRollupsV2
     DCDO.get(USE_REPORTING_DCDO_KEY, false)
   end
 
-  # Set all database configurations the pipeline will need
-  def self.set_db_variables
-    # In the test environment every pipeline query runs on the ActiveRecord
-    # connection (see retrieve_query_results), so there is no Sequel
-    # connection to configure — and CI cannot serve one (its Sequel URIs
-    # point at hosts the test container cannot reach).
-    return if Rails.env.test?
-
-    # Set group_concat_max_len to 65535 (same as VARCHAR max length).
-    # Its default value is 1024, too short for the amount of data we need to concat.
-    # @see:
-    #   ContactRollupsProcessed.get_data_aggregation_query
-    #   https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len
-    DASHBOARD_DB_WRITER.run('SET SESSION group_concat_max_len = 65535')
-    # The aggregation query that relies on group_concat_max_len runs on the
-    # reporting connection when the contact_rollups_use_reader flag is enabled.
-    DASHBOARD_REPORTING_DB.run('SET SESSION group_concat_max_len = 65535')
-  end
-
   attr_accessor :limit
 
   # @param is_dry_run [Boolean] If true, do not send requests to Pardot and do not
@@ -130,7 +111,6 @@ class ContactRollupsV2
       "is_dry_run: #{is_dry_run}, " \
       "limit_extraction = #{limit_extraction || 'nil'}"
     )
-    self.class.set_db_variables
   end
 
   # Build contact rollups and sync the results to Pardot.
