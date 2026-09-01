@@ -6175,7 +6175,7 @@ columns:
     collation: utf8mb4_unicode_ci
     comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: parent_id
+    name: fork_parent_id
     sql_type_metadata: *14
     'null': true
     default: 
@@ -7448,6 +7448,14 @@ columns:
     default: 
     default_function: 
     collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: anon_user_id
+    sql_type_metadata: *98
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb3_unicode_ci
     comment: 
   skills:
   - *9
@@ -9259,7 +9267,9 @@ primary_keys:
   contained_level_answers: id
   contained_levels: id
   course_offerings: id
-  course_offerings_pd_workshops: 
+  course_offerings_pd_workshops:
+  - pd_workshop_id
+  - course_offering_id
   course_scripts: id
   course_versions: id
   courses: id
@@ -14693,10 +14703,10 @@ indexes:
   quiz_questions:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: quiz_questions
-    name: index_quiz_questions_on_parent_id
+    name: index_quiz_questions_on_key
     unique: false
     columns:
-    - parent_id
+    - key
     lengths: {}
     orders: {}
     opclasses: {}
@@ -14706,10 +14716,10 @@ indexes:
     comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: quiz_questions
-    name: index_quiz_questions_on_key
+    name: index_quiz_questions_on_created_at
     unique: false
     columns:
-    - key
+    - created_at
     lengths: {}
     orders: {}
     opclasses: {}
@@ -16798,7 +16808,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20260828120000
+version: 20260901170000
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

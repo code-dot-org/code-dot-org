@@ -4,7 +4,7 @@ describe('SpriteLab2 generateBlocklyJson', () => {
   it('produces a when_run root hat', () => {
     const result = generateBlocklyJson('when_run\n  repeat 2');
     expect(result.blocks.blocks).toHaveLength(1);
-    expect(result.blocks.blocks[0].type).toBe('when_run');
+    expect(result.blocks.blocks[0].type).toBe('spritelab2_whenRun');
   });
 
   it('throws on an empty program instead of silently loading nothing', () => {
@@ -63,7 +63,7 @@ describe('SpriteLab2 generateBlocklyJson', () => {
     );
     // The unknown command is dropped; the rest of the program still loads.
     const root = result.blocks.blocks[0];
-    expect(root.type).toBe('when_run');
+    expect(root.type).toBe('spritelab2_whenRun');
     expect(root.next.block.type).toBe('controls_repeat_ext');
   });
 
@@ -151,7 +151,7 @@ describe('SpriteLab2 generateBlocklyJson', () => {
     );
     const roots = result.blocks.blocks;
     expect(roots).toHaveLength(2);
-    expect(roots[0].type).toBe('when_run');
+    expect(roots[0].type).toBe('spritelab2_whenRun');
     expect(roots[1].type).toBe('gamelab_whenKey');
     expect(roots[1].fields.KEY).toBe('"space"');
     expect(roots[1].y).toBeGreaterThan(roots[0].y);
