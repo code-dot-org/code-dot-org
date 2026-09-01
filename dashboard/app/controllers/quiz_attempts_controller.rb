@@ -29,6 +29,7 @@ class QuizAttemptsController < ApplicationController
     # Locks on current_user, not the attempt - there's no QuizAttempt row to
     # lock the first time through.
     attempt = nil
+    latest = nil
     current_user.with_lock do
       latest = latest_attempt(level.id, unit.id)
       attempt =
@@ -45,7 +46,8 @@ class QuizAttemptsController < ApplicationController
         end
     end
 
-    render status: :created, json: quiz_attempt_json(attempt)
+    # 201 only when that branch above actually minted a new row.
+    render status: (latest.nil? || latest.retakeable?) ? :created : :ok, json: quiz_attempt_json(attempt)
   rescue StandardError => exception
     render status: :bad_request, json: {error: exception.message}
   end

@@ -117,7 +117,7 @@ class QuizAttemptsControllerTest < ActionController::TestCase
       post :create, params: {levelId: @quiz.id, unitId: unit.id}
     end
 
-    assert_response :created
+    assert_response :ok
     assert_equal first_id, JSON.parse(response.body)['id']
   end
 
