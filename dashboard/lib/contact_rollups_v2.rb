@@ -158,8 +158,7 @@ class ContactRollupsV2
     extraction_methods = %i(
       extract_email_preferences
       extract_parent_emails
-      extract_scripts_taught
-      extract_courses_taught
+      extract_sections_taught
       extract_roles_from_user_permissions
       extract_users_and_geos
       extract_pd_enrollments
