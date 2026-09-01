@@ -11,6 +11,7 @@ import {
 } from 'react-router-dom';
 
 import {shouldShowAiChatEssentialAlert} from '@cdo/apps/aichat/helpers/aiChatAccess';
+import {getUsOnlyAiCurriculumWarnings} from '@cdo/apps/aichat/usOnlyAiCurriculum';
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -58,6 +59,9 @@ const TeacherNavigationBar: React.FC<{
 
   const teacherAiChatAccessLevel = useAppSelector(
     state => state.currentUser.aiChatAccessLevel
+  );
+  const usOnlyAichatModelsDisabled = useAppSelector(
+    state => state.currentUser.usOnlyAichatModelsDisabled
   );
 
   useEffect(() => {
@@ -218,11 +222,23 @@ const TeacherNavigationBar: React.FC<{
     [currentPathName]
   );
 
+  // Mirrors what AI settings shows, so the nav badge and the page agree.
   const shouldShowErrorIcon = React.useCallback(
     (key: string) => {
+      if (
+        key !== TEACHER_NAVIGATION_PATH_NAMES.aiChatSettings ||
+        !selectedSection
+      ) {
+        return false;
+      }
+      const hasUsOnlyWarning =
+        usOnlyAichatModelsDisabled &&
+        getUsOnlyAiCurriculumWarnings({
+          courseVersionName: selectedSection.courseVersionName,
+          unitName: selectedSection.unitName,
+        }).length > 0;
       return (
-        key === TEACHER_NAVIGATION_PATH_NAMES.aiChatSettings &&
-        !!selectedSection &&
+        hasUsOnlyWarning ||
         shouldShowAiChatEssentialAlert({
           assignedAiChatToolsDependency:
             selectedSection.assignedAiChatToolsDependency,
@@ -231,7 +247,7 @@ const TeacherNavigationBar: React.FC<{
         })
       );
     },
-    [selectedSection, teacherAiChatAccessLevel]
+    [selectedSection, teacherAiChatAccessLevel, usOnlyAichatModelsDisabled]
   );
 
   const getSidebarOptionsForSection = (
