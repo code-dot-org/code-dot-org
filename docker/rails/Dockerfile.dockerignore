@@ -46,11 +46,21 @@ dashboard/db/migrate
 dashboard/db/seeds.rb
 
 # Frontend assets and the sprockets pipeline. The api and worker roles
-# serve neither.
+# serve neither. Rails still loads Vite Ruby at boot, so keep its runtime
+# configuration without admitting the frontend source or toolchain.
 apps
 dashboard/app/assets
 dashboard/public
 frontend
+!frontend
+frontend/*
+!frontend/apps
+frontend/apps/*
+!frontend/apps/studio
+frontend/apps/studio/*
+!frontend/apps/studio/config
+frontend/apps/studio/config/*
+!frontend/apps/studio/config/vite.json
 shared/fonts
 shared/images
 
