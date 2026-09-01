@@ -165,6 +165,66 @@ module OmniauthCallbacksControllerTests
       assert_nil v1_auth_option.version
     end
 
+    test "a v2-only account anchored at sign-in survives losing its SourcedId" do
+      # The whole point of anchoring, as one sequence on one account: the second
+      # login is served by the record the first login's builder actually wrote,
+      # not by a factory-inserted stand-in. Paired with the negative control
+      # below, which shows the second login fails without it.
+      teacher = create(:teacher, :classlink_sso_provider, uid: '2222|T5678-0005')
+
+      # District still has OneRoster on. This writes the anchor.
+      mock_oauth uid: 59_777_133, tenant_id: 2222, sourced_id: 'T5678-0005'
+      assert_creates(AuthenticationOption) {sign_in_through_classlink}
+      assert_equal teacher.id, signed_in_user_id
+      get destroy_user_session_path
+
+      # District has since disabled OneRoster, so no v2 id can be built and only
+      # the UserId written above can find this account.
+      mock_oauth uid: 59_777_133, tenant_id: 2222, sourced_id: ''
+      Observability::Errors.expects(:report).never
+
+      assert_does_not_create(User, AuthenticationOption) {sign_in_through_classlink}
+
+      assert_equal teacher.id, signed_in_user_id
+    end
+
+    test "without the anchor a v2-only account is lost when SourcedId stops arriving" do
+      # Negative control for the test above. Suppressing only the anchor leaves the
+      # account v2-only, and the second login cannot reach it — it is routed to
+      # sign-up instead, which is the duplicate-account/lockout outcome. Without
+      # this, the test above could be passing on some unrelated fallback.
+      teacher = create(:teacher, :classlink_sso_provider, uid: '2222|T5678-0005')
+      Services::Classlink::V1AuthOptionBuilder.stubs(:call).returns(nil)
+
+      mock_oauth uid: 59_777_133, tenant_id: 2222, sourced_id: 'T5678-0005'
+      assert_does_not_create(AuthenticationOption) {sign_in_through_classlink}
+      assert_equal teacher.id, signed_in_user_id
+      get destroy_user_session_path
+
+      mock_oauth uid: 59_777_133, tenant_id: 2222, sourced_id: ''
+      sign_in_through_classlink
+
+      refute_equal teacher.id, signed_in_user_id
+      assert PartialRegistration.in_progress? session
+    end
+
+    test "sign-in succeeds and reports when another account holds the UserId" do
+      # A duplicate account holding this UserId is the fingerprint of an orphaning that
+      # predates anchoring. The anchor can't be written, which is worth a report, but it
+      # must not cost this user their session.
+      teacher = create(:teacher, :classlink_sso_provider, uid: '2222|T5678-0005')
+      create(:teacher, :classlink_sso_provider, uid: '59777133')
+      mock_oauth uid: 59_777_133, tenant_id: 2222, sourced_id: 'T5678-0005'
+      Observability::Errors.expects(:report).with(
+        'ClassLink v1 auth option not created',
+        has_key(:context)
+      ).once
+
+      assert_does_not_create(AuthenticationOption) {sign_in_through_classlink}
+
+      assert_equal teacher.id, signed_in_user_id
+    end
+
     test "an anchored account signs in after its district disables OneRoster" do
       # The property the anchor exists for. With SourcedId empty no v2 id can be
       # built, so the UserId record is the only thing that can find this account.

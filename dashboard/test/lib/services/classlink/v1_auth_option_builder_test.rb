@@ -86,6 +86,28 @@ class Services::Classlink::V1AuthOptionBuilderTest < ActiveSupport::TestCase
         end
       end
 
+      context 'when another account holds the v1 id' do
+        before do
+          create(
+            :authentication_option,
+            user: create(:student),
+            credential_type: AuthenticationOption::CLASSLINK,
+            authentication_id: classlink_user_id
+          )
+        end
+
+        # ClassLink's UserId is globally unique, so this means a duplicate account
+        # exists. Reporting it as "already anchored" would discard the only trace of
+        # that, so the builder hands back a record the caller cannot save and reports.
+        it 'returns a record rather than nil' do
+          refute_nil result
+        end
+
+        it 'returns a record that fails to save' do
+          refute result.save
+        end
+      end
+
       context 'when a v1 auth option exists whose id differs only by case' do
         let(:classlink_user_id) {'u59777133a'}
 
