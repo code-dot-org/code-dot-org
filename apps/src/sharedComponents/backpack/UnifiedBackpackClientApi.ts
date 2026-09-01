@@ -23,16 +23,16 @@ type ChannelIdsByAppType = {[appType: string]: string};
 type FileListsByChannelId = {[channelId: string]: FileMetadata[] | null};
 
 /**
- * Client for the universal backpack, which pulls in files from all of the user's per-lab backpacks
- * plus their universal backpack.
- * Writes go to the generic backpack (no app type). Reads and deletes name the backpack they
+ * Client for the unified backpack: a view over all the user's backpacks, including their
+ * per-lab ones plus their universal backpack.
+ * Writes go to the universal backpack. Reads and deletes name the backpack they
  * mean by app type, so files saved from a lab's original backpack stay usable while
  * labs move over to the universal one.
  *
  * Each backpack is driven by a BackpackClientApi built from an already-known
  * channel, except the universal one, which is created if it doesn't exist.
  */
-export default class UniversalBackpackClientApi {
+export default class UnifiedBackpackClientApi {
   // Channel of the universal backpack.
   channelId: string | null;
   // Every backpack the user has, including the universal one.
@@ -53,8 +53,8 @@ export default class UniversalBackpackClientApi {
   }
 
   // Get the universal backpack, creating it if the user does not have one yet, then
-  // list every backpack they have. Fetching the universal backpack first is what puts
-  // it in that list on a user's first visit.
+  // list every backpack they have. Fetching the universal backpack first ensures
+  // it's included in the list.
   async fetchChannels() {
     const universalResponse = await HttpClient.fetchJson<{channel: string}>(
       UNIVERSAL_CHANNEL_URL

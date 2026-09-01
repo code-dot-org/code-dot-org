@@ -1,5 +1,5 @@
 import {BackpackEvent} from '@cdo/apps/sharedComponents/backpack/types';
-import UniversalBackpackClientApi from '@cdo/apps/sharedComponents/backpack/UniversalBackpackClientApi';
+import UnifiedBackpackClientApi from '@cdo/apps/sharedComponents/backpack/UnifiedBackpackClientApi';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 // The api hands file writes off to a per-backpack client, so the callbacks it
@@ -13,11 +13,11 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
   get: jest.fn(() => Promise.resolve({})),
 }));
 
-describe('UniversalBackpackClientApi (jest)', () => {
+describe('UnifiedBackpackClientApi (jest)', () => {
   const universalChannelId = 'universal_channel_id';
   const javalabChannelId = 'javalab_channel_id';
 
-  let universalBackpackClientApi: UniversalBackpackClientApi;
+  let unifiedBackpackClientApi: UnifiedBackpackClientApi;
 
   const fileMetadata = (filename: string) => ({
     filename,
@@ -44,7 +44,7 @@ describe('UniversalBackpackClientApi (jest)', () => {
 
   beforeEach(() => {
     jest.clearAllMocks();
-    universalBackpackClientApi = new UniversalBackpackClientApi();
+    unifiedBackpackClientApi = new UnifiedBackpackClientApi();
   });
 
   it('fetchChannels stores the universal channel and every backpack', async () => {
@@ -53,11 +53,11 @@ describe('UniversalBackpackClientApi (jest)', () => {
       javalab: javalabChannelId,
     });
 
-    await universalBackpackClientApi.fetchChannels();
+    await unifiedBackpackClientApi.fetchChannels();
 
-    expect(universalBackpackClientApi.channelId).toBe(universalChannelId);
-    expect(universalBackpackClientApi.hasBackpack()).toBe(true);
-    expect(universalBackpackClientApi.channelIdsByAppType).toEqual({
+    expect(unifiedBackpackClientApi.channelId).toBe(universalChannelId);
+    expect(unifiedBackpackClientApi.hasBackpack()).toBe(true);
+    expect(unifiedBackpackClientApi.channelIdsByAppType).toEqual({
       universal: universalChannelId,
       javalab: javalabChannelId,
     });
@@ -78,7 +78,7 @@ describe('UniversalBackpackClientApi (jest)', () => {
       ],
     });
 
-    const fileLists = await universalBackpackClientApi.getFileLists();
+    const fileLists = await unifiedBackpackClientApi.getFileLists();
 
     expect(fileLists).toEqual({
       universal: ['shared.java'],
@@ -91,10 +91,10 @@ describe('UniversalBackpackClientApi (jest)', () => {
 
   it('getFileLists does not refetch channels it already has', async () => {
     setChannelResponses({universal: universalChannelId});
-    await universalBackpackClientApi.fetchChannels();
+    await unifiedBackpackClientApi.fetchChannels();
     setFileListResponse({[universalChannelId]: []});
 
-    await universalBackpackClientApi.getFileLists();
+    await unifiedBackpackClientApi.getFileLists();
 
     expect(HttpClient.fetchJson).toHaveBeenCalledTimes(3);
   });
@@ -106,7 +106,7 @@ describe('UniversalBackpackClientApi (jest)', () => {
     });
     const onSuccess = jest.fn();
 
-    await universalBackpackClientApi.saveFiles(
+    await unifiedBackpackClientApi.saveFiles(
       {'shared.java': {text: 'hello'}},
       ['shared.java'],
       jest.fn(),
@@ -128,7 +128,7 @@ describe('UniversalBackpackClientApi (jest)', () => {
     });
     const onSuccess = jest.fn();
 
-    await universalBackpackClientApi.deleteFiles(
+    await unifiedBackpackClientApi.deleteFiles(
       'javalab',
       ['old.java'],
       jest.fn(),
@@ -152,7 +152,7 @@ describe('UniversalBackpackClientApi (jest)', () => {
     );
     const onSuccess = jest.fn();
 
-    await universalBackpackClientApi.fetchFile(
+    await unifiedBackpackClientApi.fetchFile(
       'javalab',
       'old.java',
       jest.fn(),
@@ -170,7 +170,7 @@ describe('UniversalBackpackClientApi (jest)', () => {
     setChannelResponses({universal: universalChannelId});
     const onError = jest.fn();
 
-    await universalBackpackClientApi.deleteFiles(
+    await unifiedBackpackClientApi.deleteFiles(
       'javalab',
       ['old.java'],
       onError,
@@ -186,13 +186,13 @@ describe('UniversalBackpackClientApi (jest)', () => {
       universal: universalChannelId,
       javalab: javalabChannelId,
     });
-    await universalBackpackClientApi.fetchChannels();
+    await unifiedBackpackClientApi.fetchChannels();
 
     expect(
-      universalBackpackClientApi.getFileFetchUrl('javalab', 'old.java')
+      unifiedBackpackClientApi.getFileFetchUrl('javalab', 'old.java')
     ).toBe(`/v3/libraries/${javalabChannelId}/old.java`);
     expect(
-      universalBackpackClientApi.getFileFetchUrl('pythonlab', 'old.py')
+      unifiedBackpackClientApi.getFileFetchUrl('pythonlab', 'old.py')
     ).toBeUndefined();
   });
 
@@ -202,9 +202,9 @@ describe('UniversalBackpackClientApi (jest)', () => {
       javalab: javalabChannelId,
     });
     const listener = jest.fn();
-    universalBackpackClientApi.addEventListener(listener);
+    unifiedBackpackClientApi.addEventListener(listener);
 
-    await universalBackpackClientApi.deleteFiles(
+    await unifiedBackpackClientApi.deleteFiles(
       'javalab',
       ['old.java'],
       jest.fn(),
@@ -228,7 +228,7 @@ describe('UniversalBackpackClientApi (jest)', () => {
       [javalabChannelId]: null,
     });
 
-    const fileLists = await universalBackpackClientApi.getFileLists();
+    const fileLists = await unifiedBackpackClientApi.getFileLists();
 
     expect(fileLists).toEqual({universal: ['shared.java']});
   });
