@@ -463,6 +463,38 @@ export class World {
   );
   private readonly store = new Map<Property, unknown>();
   private readonly actorList: Actor[] = [];
+  /**
+   * How many actors are in `actorList` under each id — the index that makes
+   * {@link hasActor} a lookup rather than a scan.
+   *
+   * A COUNT and not the actor, because the list has never promised ids are
+   * unique: `addActor(template, …)` goes through {@link resolveInstanceId} and
+   * cannot collide, but the overload that places an actor somebody else built
+   * takes whatever id it was given. A map to the actor would have to choose
+   * which of two duplicates it held, and deleting one would leave `hasActor`
+   * lying about the other. A count cannot: it is `some(…)` with the scan taken
+   * out, and it answers the same for every input.
+   *
+   * WHY IT IS WORTH AN INDEX AT ALL: every `add actor` block passes its own
+   * block id, so placing n of them from one block probes `id`, `id#2`, `id#3` …
+   * — n²/2 probes, each of which WAS a scan of the whole list. `repeat 1000
+   * times` cost 636ms of arithmetic before a single frame was drawn, and the
+   * lesson that asks a learner to find where their machine gives out
+   * (`simulation/many`) was measuring this instead.
+   */
+  private readonly actorsById = new Map<string, number>();
+  /**
+   * The ordinal {@link resolveInstanceId} should try FIRST for a base id.
+   *
+   * Without it the n-th actor from one block counts up from 2 again, so a
+   * `repeat` of n costs n²/2 probes. It is a hint and not an answer — the
+   * candidate is still checked — so the only thing it changes is where the
+   * counting starts, and the only thing it gives up is REUSING an ordinal
+   * freed by a removal. `bullet#5` staying spent after `bullet#5` dies is the
+   * better answer anyway: an id that comes back refers to two different things
+   * over one run.
+   */
+  private readonly nextOrdinal = new Map<string, number>();
   // Not readonly: an actor KIND can contribute per-frame steps of its own, and
   // a kind is not known until one of its actors is placed (`useActorKind`).
   private scheduler: Scheduler;
@@ -754,10 +786,11 @@ export class World {
     if (explicitId === undefined) {
       return `${template.id}-${crypto.randomUUID()}`;
     }
-    let ordinal = 2;
+    let ordinal = this.nextOrdinal.get(base) ?? 2;
     while (this.hasActor(`${base}#${ordinal}`)) {
       ordinal += 1;
     }
+    this.nextOrdinal.set(base, ordinal + 1);
     return `${base}#${ordinal}`;
   }
 
@@ -851,6 +884,7 @@ export class World {
       }
     }
     this.actorList.push(actor);
+    this.actorsById.set(actor.id, (this.actorsById.get(actor.id) ?? 0) + 1);
     return actor;
   }
 
@@ -995,6 +1029,12 @@ export class World {
     const index = this.actorList.indexOf(actor);
     if (index >= 0) {
       this.actorList.splice(index, 1);
+      const left = (this.actorsById.get(actor.id) ?? 1) - 1;
+      if (left > 0) {
+        this.actorsById.set(actor.id, left);
+      } else {
+        this.actorsById.delete(actor.id);
+      }
     }
     // The back-references `addActor` set; an actor that is nowhere should not
     // be able to reach the world it used to be in, nor claim a layer in it.
@@ -1004,7 +1044,7 @@ export class World {
 
   /** Whether an actor with `id` is already in this world. */
   hasActor(id: string): boolean {
-    return this.actorList.some(actor => actor.id === id);
+    return this.actorsById.has(id);
   }
 
   /**
@@ -2118,6 +2158,10 @@ export class World {
       actor.layer = undefined;
     }
     this.actorList.length = 0;
+    this.actorsById.clear();
+    // An emptied world starts its counting over, so a `clear world` followed by
+    // a `load map` names things the way a fresh world would.
+    this.nextOrdinal.clear();
   }
 
   /** Set a world-scoped property by its `${ruleId}.${propId}` path. */

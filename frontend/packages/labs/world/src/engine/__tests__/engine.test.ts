@@ -8,6 +8,7 @@ import {
   ScaleProperty,
   SkewProperty,
   Vector,
+  World,
   WorldBuilder,
 } from '../index';
 import {AppearanceTrait, OpacityProperty} from '../rules/animation';
@@ -744,6 +745,32 @@ describe('WorldBuilder.addActor (instances)', () => {
     const b = builder.addActor(coin(), 'coin-a');
     const c = builder.addActor(coin(), 'coin-a');
     expect([a.id, b.id, c.id]).toEqual(['coin-a', 'coin-a#2', 'coin-a#3']);
+  });
+
+  // COUNTED RATHER THAN TIMED, because the thing worth protecting is the
+  // complexity and a clock would only measure the machine. Two ways of asking
+  // "is this id taken" used to be quadratic together: the ordinal search
+  // counted up from 2 every time, and `hasActor` scanned the whole list — so
+  // `repeat 1000 times ⟨add actor⟩` was half a million scans and 636ms of
+  // arithmetic before a frame was drawn. `simulation/many` asks a learner to
+  // find where their machine gives out; it was finding this instead.
+  it('asks about an id a constant number of times per actor placed', () => {
+    const world = new World({id: 'w', name: 'W', rules: []});
+    const real = world.hasActor.bind(world);
+    let asked = 0;
+    world.hasActor = (id: string) => {
+      asked += 1;
+      return real(id);
+    };
+
+    const coin = new ActorBuilder({id: 'coin', name: 'Coin'});
+    const placed = 500;
+    for (let i = 0; i < placed; i++) {
+      world.addActor(coin, 'coin-a');
+    }
+
+    // Two probes an actor, plus slack. Quadratic would be ~125,000.
+    expect(asked).toBeLessThan(placed * 4);
   });
 });
 
