@@ -69,6 +69,37 @@ describe('Design System - WithTooltip', () => {
     expect(screen.queryByText('tooltipText')).not.toBeInTheDocument();
   });
 
+  it('a hideTooltip call while hidden does not swallow the next focus', async () => {
+    const TestComponent = () => {
+      const tooltipRef = useRef<WithTooltipHandle>(null);
+
+      return (
+        <>
+          <button
+            type="button"
+            onClick={() => tooltipRef.current?.hideTooltip()}
+          >
+            hide it
+          </button>
+          <WithTooltip
+            ref={tooltipRef}
+            tooltipProps={{tooltipId: 'tooltip1', text: 'tooltipText'}}
+          >
+            <button type="button">focus me</button>
+          </WithTooltip>
+        </>
+      );
+    };
+    render(<TestComponent />);
+
+    // Nothing is showing, so the imperative hide must not arm the
+    // refocus suppression; the next real focus still shows the tooltip.
+    await user.click(screen.getByText('hide it'));
+    screen.getByText('focus me').focus();
+
+    expect(await screen.findByText('tooltipText')).toBeInTheDocument();
+  });
+
   it.each([
     [true, true],
     [undefined, false],

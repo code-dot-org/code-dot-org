@@ -44,12 +44,21 @@ const PaletteTooltip: React.FunctionComponent<{
   const handleRef = useRef<WithTooltipHandle>(null);
 
   // Leaving the browser window mid-hover swallows the mouseleave, leaving
-  // the bubble up forever; hide on window blur.
+  // the bubble up forever; hide on window blur. Only the hover case: a
+  // focus-shown bubble hides on the element's own blur, and the imperative
+  // hide would swallow the show on the next keyboard arrival (WithTooltip
+  // suppresses the focus that follows it).
   useEffect(() => {
-    const hide = () => handleRef.current?.hideTooltip();
+    const hide = () => {
+      const trigger = document.activeElement;
+      if (trigger?.getAttribute('aria-describedby') === tooltipId) {
+        return;
+      }
+      handleRef.current?.hideTooltip();
+    };
     window.addEventListener('blur', hide);
     return () => window.removeEventListener('blur', hide);
-  }, []);
+  }, [tooltipId]);
 
   return (
     <WithTooltip

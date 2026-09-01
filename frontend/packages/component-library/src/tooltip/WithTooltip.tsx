@@ -99,7 +99,12 @@ const WithTooltip = forwardRef<WithTooltipHandle, WithTooltipProps>(
         clearHideTimeout();
         setShowTooltip(false);
         setNodePosition(null);
-        suppressNextFocusRef.current = true;
+        // Swallow the refocus that follows a programmatic hide — but only
+        // when something was actually showing. Arming this on a hidden
+        // tooltip would eat the show on its next genuine focus.
+        if (showTooltip) {
+          suppressNextFocusRef.current = true;
+        }
       },
     }));
 
