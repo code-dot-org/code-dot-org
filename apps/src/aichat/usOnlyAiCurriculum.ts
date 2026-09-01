@@ -152,18 +152,18 @@ export const US_ONLY_TUTOR_UNITS: Record<string, string> = {
 
 // Kept here rather than in constants.ts so the whole feature deletes together.
 const chatUnitWarning =
-  'This unit includes levels that use AI models that are not available in your region. Those levels will be disabled for you and your students.';
+  'The assigned unit includes levels that use AI models that are not available in your region. On those levels, AI chat features will be disabled for you and your students.';
 
 const chatCourseWarning = (unitTitles: string[]) =>
-  `The following units in this course use AI models that are not available in your region: ${unitTitles.join(
+  `The following units in the assigned course use AI models that are not available in your region: ${unitTitles.join(
     ', '
   )}. Other units are unaffected.`;
 
 const tutorUnitWarning =
-  "This unit requires AI Tutor, which is not available in your region. Students won't be able to complete some levels in this unit.";
+  "The assigned unit requires AI Tutor, which is not available in your region. Students won't be able to complete some levels in the unit.";
 
 const tutorCourseWarning = (unitTitles: string[]) =>
-  `The following units require AI Tutor, which is not available in your region: ${unitTitles.join(
+  `The following units in the assigned course require AI Tutor, which is not available in your region: ${unitTitles.join(
     ', '
   )}. Students won't be able to complete some levels in these units.`;
 
