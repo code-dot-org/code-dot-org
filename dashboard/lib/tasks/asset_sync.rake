@@ -71,10 +71,13 @@ Rerun `assets:precompile` to regenerate new assets and try again."
   end
   Sprockets::Manifest.prepend UnDigestManifest
 
-  # The webpack hash can be either a 20- or 32-character hexadecimal string.
-  # Search `apps/webpack*.js` for [hash] and [contenthash] to
-  # see when webpack might generate content hashes of each length.
-  WP_REGEX = /wp\h{20,32}/
+  # The bundler hash is a 16- to 32-character hexadecimal string: webpack
+  # emits 20 or 32, rspack always 16 (its xxhash64 digest is 16 hex, so
+  # even an explicit [contenthash:20] comes out 16).  Search
+  # `apps/webpack*.js` and
+  # `apps/rspack.config.js` for [hash] and [contenthash] to see when each
+  # length is generated.
+  WP_REGEX = /wp\h{16,32}/
 end
 
 Rake::Task['assets:precompile'].enhance([:record_manifest_files]) do

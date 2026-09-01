@@ -44,6 +44,8 @@ interface UseBlocklyWorkspaceResult {
   getCurrentBlocks: () => WorkspaceSerialization | null;
   /** Serialize the workspace blocks into a toolbox definition; null before inject. */
   getToolboxDefinition: () => BlocklyCore.utils.toolbox.ToolboxInfo | null;
+  /** Re-render the toolbox, so flyout dropdowns show data fetched since. */
+  refreshToolbox: () => void;
   /** Load code into the workspace. */
   loadCode: (source: WorkspaceSerialization) => void;
   /**
@@ -68,6 +70,9 @@ export default function useBlocklyWorkspace({
   theme,
 }: UseBlocklyWorkspaceOptions): UseBlocklyWorkspaceResult {
   const workspaceRef = useRef<BlocklyCore.WorkspaceSvg | null>(null);
+  const toolboxRef = useRef<
+    BlocklyCore.utils.toolbox.ToolboxDefinition | undefined
+  >(undefined);
   // Store initial theme as a ref to prevent theme changes from re-injecting the workspace.
   const themeRef = useRef(theme);
   themeRef.current = theme;
@@ -117,6 +122,7 @@ export default function useBlocklyWorkspace({
       );
     };
 
+    toolboxRef.current = toolbox;
     workspaceRef.current = Blockly.inject(blocklyDiv, {
       toolbox,
       theme: themeRef.current === 'Dark' ? cdoDark : cdoTheme,
@@ -246,11 +252,18 @@ export default function useBlocklyWorkspace({
     []
   );
 
+  const refreshToolbox = useCallback(() => {
+    if (workspaceRef.current?.rendered && toolboxRef.current) {
+      workspaceRef.current.updateToolbox(toolboxRef.current);
+    }
+  }, []);
+
   return {
     getCode,
     getCurrentBlocks,
     getToolboxDefinition,
     loadCode,
+    refreshToolbox,
     subscribeToChanges,
   };
 }

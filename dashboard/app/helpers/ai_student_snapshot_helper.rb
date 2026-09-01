@@ -69,7 +69,7 @@ module AiStudentSnapshotHelper
 
   def self.notify_and_raise(message, context)
     exception = StandardError.new(message)
-    Honeybadger.notify(exception, context: context)
+    Observability::Errors.report(exception, context: context)
     raise exception
   end
 

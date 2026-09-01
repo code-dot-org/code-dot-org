@@ -11,7 +11,10 @@ import {
 import {getAssetUrl} from '@cdo/apps/aichat/utils';
 import type {AichatLevelProperties} from '@cdo/apps/aichatLab/types';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import {isTurnstileDevToolsError} from '@cdo/apps/aiGateway/turnstile';
+import {
+  isTurnstileDevToolsError,
+  turnstileUserMessage,
+} from '@cdo/apps/aiGateway/turnstile';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {TestResults} from '@cdo/apps/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -276,10 +279,16 @@ async function handleChatCompletionError(
   viewAsUserId: number | null,
   dimensions: MetricDimension[] = []
 ) {
+  // A Turnstile failure that got this far already produced a metric and a log
+  // in recordTurnstileOutcome, and an error tag on reportGatewayError. Logging
+  // it a third time here adds nothing.
+  const turnstileMessage = turnstileUserMessage(error);
+
   // Skip log report for expected client-side conditions (403, DevTools block).
   if (
     !(error instanceof NetworkError && error.response.status === 403) &&
-    !isTurnstileDevToolsError(error)
+    !isTurnstileDevToolsError(error) &&
+    !turnstileMessage
   ) {
     Lab2Registry.getInstance()
       .getMetricsReporter()
@@ -308,6 +317,15 @@ async function handleChatCompletionError(
     );
   } else if (error instanceof NetworkError && error.response.status === 403) {
     await notifyErrorUnauthorized(error, 'Chat Completion', dispatch);
+  } else if (turnstileMessage) {
+    dispatch(
+      addChatEvent({
+        removeId: getNewRemoveId(),
+        text: turnstileMessage,
+        notificationType: 'error',
+        timestamp: Date.now(),
+      })
+    );
   } else if (isTurnstileDevToolsError(error)) {
     dispatch(
       addChatEvent({

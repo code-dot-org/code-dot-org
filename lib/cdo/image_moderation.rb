@@ -5,6 +5,7 @@ require 'cdo/shared_constants'
 require 'honeybadger/ruby'
 require 'mini_magick'
 require 'stringio'
+require 'observability/errors'
 
 module ImageModeration
   # Azure AI Content Safety requires both dimensions to be at least this many pixels.
@@ -25,7 +26,7 @@ module ImageModeration
     moderation_io, moderation_type = scale_image_for_moderation_if_needed(image_data, content_type)
 
     unless CDO.azure_ai_content_safety_key
-      Honeybadger.notify("Azure AI Content Safety API key is missing", context: {endpoint: CDO.azure_ai_content_safety_endpoint})
+      Observability::Errors.report("Azure AI Content Safety API key is missing", context: {endpoint: CDO.azure_ai_content_safety_endpoint})
       return nil
     end
 
@@ -36,7 +37,7 @@ module ImageModeration
   rescue AzureAiContentSafety::UnsupportedContentType
     raise # This is a client error, not a service failure — let callers map to 400.
   rescue AzureAiContentSafety::AzureError => exception
-    Honeybadger.notify(exception, context: {reported_content_type: content_type, actual_content_type: moderation_type})
+    Observability::Errors.report(exception, context: {reported_content_type: content_type, actual_content_type: moderation_type})
     nil
   end
 

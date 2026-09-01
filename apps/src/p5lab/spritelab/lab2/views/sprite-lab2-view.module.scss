@@ -1,3 +1,4 @@
+@use './imageTile' as tile;
 @use '../quiet-button.scss' as buttons;
 
 .labRow {
@@ -157,6 +158,28 @@ $tab-segment-height: $tab-item-height - 2px;
 }
 
 // Action buttons beside the Play tab (shown only while playing), not tabs.
+// The song a playing game is using, sized to sit among the tab controls.
+.musicBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: $tab-item-height;
+  box-sizing: border-box;
+  padding: 0 10px;
+  border: 1px solid var(--borders-neutral-strong);
+  border-radius: 4px;
+  color: var(--text-neutral-primary);
+  font-size: 12px;
+  line-height: 1.2;
+  max-width: 220px;
+}
+
+.musicBarTitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .startOver {
   height: $tab-item-height;
   padding: 0 12px;
@@ -330,45 +353,7 @@ $tab-segment-height: $tab-item-height - 2px;
 }
 
 .imageThumb {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  width: 104px;
-  height: 104px;
-  // The thumb is a button (click to edit); neutralize global button styles.
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  box-shadow: none;
-  cursor: pointer;
-  border: 1px solid var(--borders-neutral-primary);
-  // Hover: grow subtly (like Music Lab's album covers) instead of the
-  // global button > img dim-until-hover treatment.
-  transition: transform 0.15s ease;
-
-  &:hover {
-    z-index: 1;
-    transform: scale(1.12);
-  }
-  // Subtle checkerboard: enough to signal transparency without competing
-  // with the sprite (translucent grey works on light and dark themes).
-  $check: rgb(128 128 128 / 16%);
-
-  background-image: linear-gradient(45deg, $check 25%, transparent 25%),
-    linear-gradient(-45deg, $check 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, $check 75%),
-    linear-gradient(-45deg, transparent 75%, $check 75%);
-  background-size: 16px 16px;
-  background-position: 0 0, 0 8px, 8px -8px, -8px 0;
-
-  img {
-    max-width: 100%;
-    max-height: 100%;
-    // Full quality always: undo the global `button > img` dimming (class +
-    // element outranks the global's two elements).
-    opacity: 1;
-  }
+  @include tile.image-tile(104px);
 }
 
 .imageName {
