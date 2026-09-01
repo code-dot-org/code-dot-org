@@ -12,7 +12,7 @@
     "long_instructions": "This dataset ranks cars on whether they are acceptable to buy. Train a decision tree on it, then read the tree: each branch is one question about one feature.",
     "hide_share_and_remix": "false",
     "mode": "{\"trainer\":\"decisionTree\",\"datasets\":[\"car_evaluation\"],\"randomizeTestData\":true}",
-    "dynamic_instructions": "{\"modelTree\": \"Each blue box asks one question about one column. Follow **yes** to the left and **no** to the right until you reach an orange box: that is the model's answer.\"}"
+    "dynamic_instructions": "{\"modelTree\": \"Each blue box asks one question about one column. Follow **yes** straight across and **no** down a step, until you reach an orange box: that is the model's answer.\"}"
   },
   "audit_log": "[{\"changed_at\":\"2026-09-01 11:13:03 -0400\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"levelbuilder@code.org\"}]"
 }]]></config>
