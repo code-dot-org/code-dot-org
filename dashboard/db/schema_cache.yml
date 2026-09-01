@@ -9267,7 +9267,9 @@ primary_keys:
   contained_level_answers: id
   contained_levels: id
   course_offerings: id
-  course_offerings_pd_workshops: 
+  course_offerings_pd_workshops:
+  - pd_workshop_id
+  - course_offering_id
   course_scripts: id
   course_versions: id
   courses: id

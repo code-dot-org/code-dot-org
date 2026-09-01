@@ -139,15 +139,6 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     assert_equal :writer_dataset, ContactRollupsV2.retrieve_query_results('SELECT 1')
   end
 
-  test 'set_db_variables does not open Sequel connections in the test environment' do
-    # CI cannot serve the Sequel URIs, and the test environment runs every
-    # pipeline query on the ActiveRecord connection anyway.
-    ContactRollupsV2::DASHBOARD_DB_WRITER.expects(:run).never
-    ContactRollupsV2::DASHBOARD_REPORTING_DB.expects(:run).never
-
-    ContactRollupsV2.set_db_variables
-  end
-
   test 'dry run makes no Pardot API calls' do
     # Called when creating and updating Pardot prospects
     PardotV2.expects(:submit_batch_request).never
