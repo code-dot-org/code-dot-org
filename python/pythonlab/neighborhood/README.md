@@ -117,13 +117,28 @@ only rotation primitive; turning right means calling it three times.
 
 ## Painting
 
-### `paint(color)`
+### `paint(color)` / `paint(red, green, blue)`
 
 Colors the current square and spends one unit of paint.
 
-`color` is either a CSS named color (case-insensitive, e.g. `"red"`,
-`"MediumVioletRed"`) or a hex string in `#RGB` or `#RRGGBB` form. Anything else
-raises `INVALID_COLOR`.
+The color is given one of two ways:
+
+- a single string, either a CSS named color (case-insensitive, e.g. `"red"`,
+  `"MediumVioletRed"`) or a hex value in `#RGB` or `#RRGGBB` form, or
+- three integer red, green, and blue components between 0 and 255, e.g.
+  `paint(255, 0, 0)`.
+
+Anything else — a component out of range, a non-integer, or the wrong number of
+arguments — raises `INVALID_COLOR`.
+
+RGB components are converted to `#rrggbb` before the square is colored, so
+`get_color()` after `paint(255, 0, 0)` returns `"#ff0000"`, not the components
+that were passed. A string is stored exactly as written, so `paint("red")` and
+`paint(255, 0, 0)` leave two squares the eye reads as the same color but a
+comparison does not. That matters in two places: validation compares
+`final_output` cells as strings, and the front end decides how to join
+neighboring painted squares by comparing their colors, so it draws a seam
+between a `"red"` square and a `#ff0000` one.
 
 Two ways this does not paint:
 
@@ -230,7 +245,7 @@ front end maps to a student-facing message.
 | --- | --- |
 | `INVALID_DIRECTION` | A direction string is not one of the four compass names. |
 | `INVALID_MOVE` | `move()` is called into a wall or off the grid. |
-| `INVALID_COLOR` | `paint()` is given something that is neither a CSS color name nor a hex value. |
+| `INVALID_COLOR` | `paint()` is given neither one CSS color name or hex value, nor three RGB components between 0 and 255. |
 | `INVALID_PAINT_LOCATION` | `paint()` is called on a square holding a paint bucket with paint remaining. |
 | `GET_SQUARE_FAILED` | A painter's own coordinates are off-grid or impassable. Reachable only from a bad constructor call, since `move()` refuses to enter such a square. |
 | `INVALID_GRID` | The grid file or string is missing, malformed, empty, or not square. |
