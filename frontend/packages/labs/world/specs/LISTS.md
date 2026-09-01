@@ -203,9 +203,22 @@ of` gave it a reason.
    last one, a zero of a type the block cannot know) are easier to choose
    between with a real use in front of them — which is the Conversation
    rewrite, step 5.
-4. **A lesson.** Memory's array tile, written the way every other lesson is:
-   a starting project that wants a list, and a check that a list is what was
-   used.
+4. ✅ **A lesson.** `memory/lists` — three notes made by three stacks of blocks
+   that know nothing about each other, and one list and one loop that make the
+   same three. Step three adds a fourth thing and nothing else changes, which is
+   the whole of what a list buys.
+
+   Its check has both halves, and needs them: the starter's notes already say
+   the right words in the right order, so the run half alone would pass the
+   project the lesson starts from. The shape half is what asks for the literal
+   and the loop — and a test plays the starter directly to show that the run
+   half would have been fooled.
+
+   **The notes are scattered rather than placed**, because a list has no
+   numbering in it yet: nothing in the loop can work out where the third note
+   goes. That is the first place the missing index is felt, and it is left felt
+   rather than answered.
+
 5. **The rules that were written around it.** History's tape becomes one
    property; Conversation gains nothing but its demo and its lesson get shorter.
    Both are re-recorded and re-checked, and both are optional — the point of

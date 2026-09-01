@@ -4419,3 +4419,103 @@ describe('the two-rooms lesson’s check', () => {
     expect(passes).toBe(false);
   });
 });
+
+describe('the list lesson’s check', () => {
+  const lesson = LESSONS['memory/lists'];
+  const ERRAND = ['BREAD', 'MILK', 'JAM'];
+  const list = {id: 'things', name: 'things', type: 'List'};
+  const item = {id: 'thing', name: 'thing', type: 'String'};
+
+  /** The lesson done: the words in a list, and one loop that makes the notes. */
+  const walking = (words: string[]) =>
+    editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const world = workspace.blocks.blocks.find(
+        block => block.type === 'world_world',
+      )!;
+      // The stack that is kept, with the loop's word where the typed one was.
+      const kept = world.next!.block!;
+      const said = inSocket(kept, 'DO')!;
+      said.inputs!.VALUE = {
+        block: {type: 'variables_get_String', fields: {VAR: item}},
+      };
+      // Two of the three stacks go; the third is wrapped in the loop.
+      world.next = {
+        block: {
+          type: 'variables_set_List',
+          fields: {VAR: list},
+          inputs: {
+            VALUE: {
+              block: {
+                type: 'lists_create_with',
+                extraState: {itemCount: words.length},
+                inputs: Object.fromEntries(
+                  words.map((text, at) => [
+                    `ADD${at}`,
+                    {block: {type: 'text', fields: {TEXT: text}}},
+                  ]),
+                ),
+              },
+            },
+          },
+          next: {
+            block: {
+              type: 'world_for_each_word',
+              fields: {VAR: item},
+              inputs: {
+                LIST: {
+                  block: {type: 'variables_get_List', fields: {VAR: list}},
+                },
+                DO: {block: {...kept, next: undefined}},
+              },
+            },
+          },
+        },
+      } as never;
+      return JSON.stringify(workspace);
+    });
+
+  it('refuses three stacks that each remember one thing', async () => {
+    const {passes} = await check('memory/lists', lesson.source);
+    expect(passes).toBe(false);
+
+    // …while the notes say exactly the right words, which is the whole reason
+    // the shape half is there: what the lesson is about is the list, and the
+    // starter's picture is already the picture the lesson ends with. Played
+    // directly, because the shape half refuses this project before it runs.
+    const {world} = await compileProject(projectFiles(lesson.source));
+    const result = playCheck(world, tile('memory/lists').check.run!);
+
+    expect((result.samples.said as string[][])[0]).toEqual(ERRAND);
+  });
+
+  it('accepts a list and one loop', async () => {
+    const {passes, result} = await check('memory/lists', walking(ERRAND));
+
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  it('accepts a fourth thing nobody touched the loop for', async () => {
+    // Step three, and the point of the lesson: the loop does not grow.
+    const {passes, result} = await check(
+      'memory/lists',
+      walking([...ERRAND, 'EGGS']),
+    );
+
+    const said = (result.samples.said as string[][])[0];
+    expect(said).toEqual([...ERRAND, 'EGGS']);
+    expect(passes).toBe(true);
+  });
+
+  it('refuses a list said in the wrong order', async () => {
+    // "In the order they were put in" is half the claim: a list is a sequence,
+    // and three words that come out shuffled are a different idea.
+    const {passes} = await check(
+      'memory/lists',
+      walking(['MILK', 'JAM', 'BREAD']),
+    );
+
+    expect(passes).toBe(false);
+  });
+});

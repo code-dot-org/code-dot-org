@@ -587,13 +587,11 @@ These are more serious than the rules, because a missing rule is a lesson the
 learner writes themselves and a missing block is a concept that cannot be
 taught here at all.
 
-**Lists of values.** There is no general list. `world_for_each` walks a list of
-ACTORS, and the filter/order/take blocks all hand back actors
-(`specs/ACTOR_LISTS.md`); Blockly's `lists_*` category is deliberately not
-registered. So the Memory region can teach a variable and cannot teach an
-array: no list of high scores, no list of dialogue lines the learner wrote, no
-inventory as a list, no `random from a list`. **This is the biggest single gap
-in the progression and the one to decide about first.**
+**Lists of values.** WRITTEN (specs/LISTS.md). Three property types, one
+socket check, nine blocks in a `Lists` drawer, and `memory/lists` to teach
+them. What is still missing is an INDEX — `item ⟨n⟩ of ⟨list⟩` — which is held
+back until something asks for it, and a list of lists, which is the grid
+question below.
 
 **A grid, or a list of lists.** `sim/emergent` and any tile-state puzzle wants
 a 2D store. Follows the list decision.

@@ -82,6 +82,15 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
     'math_arithmetic',
   ],
   'memory/many': ['world_for_each', 'world_all_actors', 'world_set_sprite'],
+  // The drawer this lesson grants, and the words the learner types into the
+  // literal.
+  'memory/lists': [
+    'lists_create_with',
+    'world_for_each_word',
+    'variables_set_List',
+    'variables_get_List',
+    'text',
+  ],
   'memory/world-state': ['world_rule_property', 'text_join', 'text'],
   'memory/actor-state': ['world_rule_property'],
   'memory/score': ['world_print', 'math_number'],

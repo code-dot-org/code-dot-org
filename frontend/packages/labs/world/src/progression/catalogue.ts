@@ -774,7 +774,7 @@ export const TILES: readonly Tile[] = [
     title: 'More than one of something',
     teaches:
       'A list: one name for several things, and the loop that walks what you put in it.',
-    task: 'Three things to remember and one variable to remember them in.',
+    task: 'Three things to remember, remembered three separate times.',
     requires: ['memory/score'],
     // The DRAWER, rather than its blocks one at a time. Eleven blocks is a lot
     // to hand over at once and they are one idea: a list, the ways to fill it,
@@ -782,11 +782,32 @@ export const TILES: readonly Tile[] = [
     // instead of the Actor drawer for the opposite reason — forty-two blocks is
     // not one idea.
     unlocks: [{kind: 'category', name: 'Lists'}],
+    // The words are the learner's to type, and `text` is Story's to grant.
+    offers: [{kind: 'block', type: 'text'}],
     check: {
       kind: 'outcome',
-      says: 'Everything the learner put in the list is said, in the order they put it there.',
+      says: 'One note per thing in the list, saying the things in the order they were put in.',
       falsePass:
-        'Three `print` blocks, which say the same three things and have no list in them — so the check reads the list itself as well as the console.',
+        'The three stacks the lesson starts with, which make the same three notes and have no list in them — so the shape half asks for the literal and the loop, and the run half for what the notes say. A learner who adds a fourth thing still passes: the check reads the three it knows about, at the front and in order.',
+      run: {
+        probes: {said: {kind: 'property', of: 'Label', name: 'text'}},
+        // Nothing to drive: the world says its piece as it is built.
+        trace: [{seconds: 0.1}],
+      },
+      inspect: files => {
+        const world = files['worlds/main.world'] ?? '';
+        return (
+          world.includes('lists_create_with') &&
+          world.includes('world_for_each_word')
+        );
+      },
+      passes: ({samples}) => {
+        const said = lastList<string>(samples.said);
+        return (
+          said.length >= 3 &&
+          ['BREAD', 'MILK', 'JAM'].every((word, at) => said[at] === word)
+        );
+      },
     },
   },
   {

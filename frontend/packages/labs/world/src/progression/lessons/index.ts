@@ -12,10 +12,8 @@
 // Blockly JSON behind them. So `catalogue.ts` stays data about tiles, and the
 // projects live here, looked up by tile id.
 //
-// Sixty-seven of sixty-eight. Every tile but one has a lesson, a starting
-// project, and a check tested in both directions — and the one is the newest:
-// `memory/lists`, whose vocabulary arrived first (specs/LISTS.md, step 2) and
-// whose lesson is the step after it.
+// SIXTY-EIGHT OF SIXTY-EIGHT: every tile on the map has a lesson, a starting
+// project, and a check tested in both directions.
 //
 // What is written is milestone 4 of specs/PROGRESSION_UI.md and then some: all
 // six FOUNDATIONS, and Arcade, Story and Making whole after them.
@@ -4718,6 +4716,74 @@ to be a file, because that is where a kind of actor keeps what is its own.
 `.trim(),
 };
 
+// ── memory/lists ─────────────────────────────────────────────────────────────
+
+/** The errand, as three stacks that know nothing about each other. */
+const ERRAND = ['BREAD', 'MILK', 'JAM'];
+
+/** One axis of a random place — `set position` wants numbers. */
+const randomAxis = (axis: 'x' | 'y') => ({
+  block: {
+    type: 'world_vector_component',
+    fields: {COMPONENT: axis},
+    inputs: {VEC: {block: {type: 'world_random_place'}}},
+  },
+});
+
+/** `add actor ⟨Label⟩ do: set its text to ⟨word⟩, and put it somewhere`. */
+const noteSaying = (said: object) =>
+  addActor('actors/label', [
+    setText('TextProperty', said),
+    // Scattered rather than placed: a list has no numbering in it yet, so
+    // nothing in the loop could work out where the third note goes — and three
+    // notes in a heap would be a worse picture than three notes anywhere.
+    //
+    // Two random places, one per axis, because `set position` takes two numbers
+    // and a random place is a whole one. Sampling it twice is still a random
+    // place; it is the shortest true way to say "anywhere".
+    {
+      type: 'world_set_position',
+      inputs: {
+        ACTOR: me(),
+        X: randomAxis('x'),
+        Y: randomAxis('y'),
+      },
+    },
+  ]);
+
+const listsLesson: WorldScenario = {
+  name: 'More than one of something',
+  description: 'Three things to remember, remembered three separate times.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: ERRAND.map(word => noteSaying(words(word))),
+    }),
+    stockActors: ['label'],
+  }),
+  instructions: `
+## More than one of something
+
+Three things to remember, and three stacks of blocks that each remember one. It
+works, and it is the shape of every list nobody has written yet: a fourth thing
+means a fourth stack, and moving them somewhere else means moving all three.
+
+A **list** is one name for several things. What you can do with it that you
+cannot do with three stacks is **walk it** — the same few blocks handle three
+things, or four, or twenty, without changing.
+
+### What you do
+
+1. From the **Lists** drawer take **make a list of**, put the three words in it,
+   and keep it in a variable: **set ⟨things⟩ to ⟨make a list of …⟩**.
+2. Take away two of the three stacks, and wrap the one that is left in
+   **for each word ⟨thing⟩ in ⟨things⟩**. Where the word used to be typed, put
+   **⟨thing⟩** — the loop's own word.
+3. Add a fourth thing to the list. A fourth note turns up, and you did not touch
+   the loop.
+`.trim(),
+};
+
 // ── memory/score ─────────────────────────────────────────────────────────────
 
 /** `counted`, the world's own tally — the thing this lesson throws away. */
@@ -4831,6 +4897,7 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'memory/many': many,
   'memory/world-state': worldState,
   'memory/actor-state': actorState,
+  'memory/lists': listsLesson,
   'memory/score': scoreLesson,
   'look/sprite': sprite,
   'look/drawing': drawing,
