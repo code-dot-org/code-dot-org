@@ -16,6 +16,14 @@ import {
   listWidgetSlugs,
   type WidgetManifest,
 } from '@code-dot-org/widgets-catalog';
+import {
+  filterAuthorshipTrail,
+  filterChatTurns,
+  findWidgetReference,
+  proposeWidget,
+  readSrcFiles,
+  type ProposeWidgetInput,
+} from '@code-dot-org/widgets-catalog/propose';
 
 import {EchoAgentRunner, type AgentRunner} from './agent/AgentRunner.js';
 import {ClaudeAgentRunner} from './agent/ClaudeAgentRunner.js';
@@ -43,7 +51,6 @@ import {
   CREATABLE_MAZE_SKINS,
 } from './levels/mazeLevel.js';
 import {buildChangeSet} from './publish/buildChangeSet.js';
-import {findWidgetReference, proposeWidget} from './publish/proposeWidget.js';
 import {AuthoringState} from './state/AuthoringState.js';
 import {
   EMPTY_SNAPSHOT,
@@ -64,10 +71,16 @@ const PORT = Number(process.env.PORT) || 3737;
 const SESSION_ID = 'default';
 const STUDIO_ORIGIN = process.env.STUDIO_ORIGIN || 'http://localhost:3036';
 const HEARTBEAT_MS = 25_000;
-// Studio's "Propose widget" push step reads this through /propose-config and
-// disables itself when it's unset — never defaulted here or in proposeWidget,
-// so an environment with no remote configured cannot push by accident.
+// Studio's "Propose widget" push step reads these through /propose-config
+// and disables the corresponding target when unset — never defaulted here
+// or in the propose flow, so an environment with no remote configured
+// cannot push by accident. The catalog remote is a git remote NAME already
+// configured in this checkout (e.g. a fork); the staff-apps remote is a raw
+// SSH/HTTPS URL, since that target builds its commit in a throwaway scratch
+// clone with no named remotes of its own.
 const PROPOSE_REMOTE = process.env.AUTHORING_PROPOSE_REMOTE || undefined;
+const PROPOSE_STAFF_APPS_REMOTE =
+  process.env.AUTHORING_PROPOSE_STAFF_APPS_REMOTE || undefined;
 
 const bridge = await loadAuthoringBridge();
 const store = SessionStore.forSession(FRONTEND_ROOT, SESSION_ID);
@@ -261,7 +274,9 @@ app.post('/api/levels/create-maze', async c => {
 // Tells studio's "Propose widget" dialog whether a push remote is
 // configured in this environment, so it can disable the push step and say
 // why rather than the service (or the client) guessing a default remote.
-app.get('/api/widgets/propose-config', c => c.json({remote: PROPOSE_REMOTE}));
+app.get('/api/widgets/propose-config', c =>
+  c.json({remote: PROPOSE_REMOTE, staffAppsRemote: PROPOSE_STAFF_APPS_REMOTE}),
+);
 
 // Catalog-first resolution (widget-pr-flow plan §3.4/Pass 6): a widgetId
 // referenced by an experience that has adopted a catalogRef serves the
@@ -394,15 +409,20 @@ app.get('/api/widgets/:id/gates', c => {
   return c.json({violations: checkWidgetDocument(injectWidgetChrome(html))});
 });
 
-// Graduates a session widget into a real pull request onto
-// @code-dot-org/widgets-catalog (widget PR flow plan, pass 4). Refuses on
-// any contract-gate violation, on a widget with no committable src/ (a
-// legacy hand-written widget.html has no TSX source to copy), and on a
-// slug collision with the catalog's existing widgets. `mode: 'dry-run'`
-// (the default) builds the commit but moves no ref and pushes nothing;
-// `mode: 'push'` additionally pushes it to `remote` and this endpoint
-// NEVER opens a pull request itself — the human does that from the
-// returned compare URL.
+// Graduates a session widget into a real pull request — onto
+// @code-dot-org/widgets-catalog (this monorepo) or codeai-staff-apps/widgets
+// (`target: 'staff-apps'`), a thin HTTP wrapper around
+// @code-dot-org/widgets-catalog/propose's `proposeWidget`, which does
+// everything else identically for the authoring service and the
+// `widgets:propose` CLI. Refuses on any contract-gate violation, on a
+// widget with no committable src/ (a legacy hand-written widget.html has no
+// TSX source to copy), and on a slug collision with the target's existing
+// widgets. `mode: 'dry-run'` (the default) builds the commit but moves no
+// ref and pushes nothing; `mode: 'push'` additionally pushes it. The
+// catalog target NEVER opens a pull request itself — the human does that
+// from the returned compare URL. The staff-apps target attempts to open one
+// (`gh`, then the GitHub REST API if a token is configured, else the same
+// compare-URL fallback).
 app.post('/api/widgets/:id/propose', async c => {
   const widgetId = c.req.param('id');
   const descriptor = state.findWidget(widgetId);
@@ -425,50 +445,44 @@ app.post('/api/widgets/:id/propose', async c => {
       400,
     );
   }
-  if (!repoRoot) {
-    return c.json(
-      {error: 'repo root not resolved; propose is unavailable'},
-      503,
-    );
-  }
 
-  let body: {mode?: string; remote?: string; baseRef?: string};
+  let body: {
+    target?: string;
+    mode?: string;
+    remote?: string;
+    baseRef?: string;
+    openPr?: boolean;
+  };
   try {
     body = (await c.req.json()) as typeof body;
   } catch {
     body = {};
   }
-  const mode = body.mode ?? 'dry-run';
-  if (mode !== 'dry-run' && mode !== 'push') {
+  const target = body.target ?? 'catalog';
+  if (target !== 'catalog' && target !== 'staff-apps') {
     return c.json(
-      {error: `mode must be "dry-run" or "push", got ${mode}`},
+      {error: `target must be "catalog" or "staff-apps", got ${target}`},
       400,
     );
   }
+  const rawMode = body.mode ?? 'dry-run';
+  if (rawMode !== 'dry-run' && rawMode !== 'push') {
+    return c.json(
+      {error: `mode must be "dry-run" or "push", got ${rawMode}`},
+      400,
+    );
+  }
+  const mode: 'dry-run' | 'push' = rawMode;
 
   const servedHtml = injectWidgetChrome(rawHtml);
   const violations = checkWidgetDocument(servedHtml);
   const sessionSrcDir = path.join(widgetDir, 'src');
   const snapshot = state.getSnapshot();
   const reference = findWidgetReference(snapshot, widgetId);
-  const authorshipTrail = state
-    .getChanges()
-    .filter(
-      change =>
-        (change.op === 'createWidget' && change.descriptor.id === widgetId) ||
-        (change.op === 'updateWidgetMetadata' && change.widgetId === widgetId),
-    );
-  const chatTurns = reference
-    ? state
-        .getChatLog()
-        .filter(
-          message =>
-            message.scope?.lessonId === reference.lessonId ||
-            message.scope?.experienceId === reference.experienceId,
-        )
-    : [];
+  const authorshipTrail = filterAuthorshipTrail(state.getChanges(), widgetId);
+  const chatTurns = filterChatTurns(state.getChatLog(), reference);
 
-  const result = proposeWidget({
+  const common = {
     mode,
     sessionId: SESSION_ID,
     widgetId,
@@ -476,38 +490,47 @@ app.post('/api/widgets/:id/propose', async c => {
     violations,
     servedHtml,
     sessionSrcDir,
-    srcFiles: readFilesRecursive(sessionSrcDir),
+    srcFiles: readSrcFiles(sessionSrcDir),
     toolchain: computeToolchain(),
-    existingSlugs: listWidgetSlugs(),
     authorshipTrail,
     chatTurns,
     reference,
-    repoRoot,
-    baseRef: body.baseRef,
-    remote: body.remote,
-  });
+  };
 
+  let input: ProposeWidgetInput;
+  if (target === 'catalog') {
+    if (!repoRoot) {
+      return c.json(
+        {error: 'repo root not resolved; catalog propose is unavailable'},
+        503,
+      );
+    }
+    input = {
+      ...common,
+      target: 'catalog',
+      repoRoot,
+      existingSlugs: listWidgetSlugs(),
+      baseRef: body.baseRef,
+      remote: body.remote,
+    };
+  } else {
+    if (!body.remote) {
+      return c.json(
+        {error: '"remote" is required for target: staff-apps'},
+        400,
+      );
+    }
+    input = {
+      ...common,
+      target: 'staff-apps',
+      remote: body.remote,
+      openPr: body.openPr,
+    };
+  }
+
+  const result = await proposeWidget(input);
   return c.json(result, result.ok ? 200 : 400);
 });
-
-/** Every file under `dir`, as repo-file-content pairs relative to `dir` itself (forward-slash joined regardless of platform). */
-function readFilesRecursive(
-  dir: string,
-  relPrefix = '',
-): {path: string; content: string}[] {
-  const entries = fs.readdirSync(dir, {withFileTypes: true});
-  const files: {path: string; content: string}[] = [];
-  for (const entry of entries) {
-    const rel = relPrefix ? `${relPrefix}/${entry.name}` : entry.name;
-    const full = path.join(dir, entry.name);
-    if (entry.isDirectory()) {
-      files.push(...readFilesRecursive(full, rel));
-    } else if (entry.isFile()) {
-      files.push({path: rel, content: fs.readFileSync(full, 'utf8')});
-    }
-  }
-  return files;
-}
 
 app.get('/api/events', c =>
   streamSSE(c, async stream => {

@@ -19,6 +19,11 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
+    },
+    "./propose": {
+      "types": "./dist/propose/index.d.ts",
+      "import": "./dist/propose/index.mjs",
+      "require": "./dist/propose/index.cjs"
     }
   },
   "scripts": {
@@ -31,6 +36,7 @@
     "test": "vitest --run",
     "test:gates": "tsx scripts/testGates.ts",
     "typecheck": "tsc -b --noEmit",
+    "widgets:propose": "tsx scripts/propose.ts",
     "widgets:rehash": "tsx scripts/rehash.ts"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",

@@ -32,7 +32,7 @@ export default defineConfig({
   build: {
     sourcemap: true,
     lib: {
-      entry: ['src/index.ts'],
+      entry: ['src/index.ts', 'src/propose/index.ts'],
       name: 'widgetsCatalog',
     },
     rollupOptions: {
