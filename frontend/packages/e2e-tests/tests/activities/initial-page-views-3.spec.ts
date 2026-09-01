@@ -22,55 +22,49 @@ interface ScenarioSurface {
  * circle disabled simple dashboard page view without instructions dialog"
  */
 test.describe('Looking at a few things with Applitools Eyes - Part 3', () => {
-  test(
-    'embedded blocks',
-    {tag: ['@visual', '@no_ci']},
-    async ({page, visualCheck}) => {
-      await resetSession(page);
-      await page.goto('/', {waitUntil: 'domcontentloaded'});
-      await createStudent(page, {name: 'Tester'});
+  test('embedded blocks', {tag: '@visual'}, async ({page, visualCheck}) => {
+    await resetSession(page);
+    await page.goto('/', {waitUntil: 'domcontentloaded'});
+    await createStudent(page, {name: 'Tester'});
 
-      const level = new LessonLevelPage(page);
-      // lesson 13/level 1 no longer hosts a lab (its embedded-Blockly feature
-      // was deprecated in 2025); it renders as a plain instructional level with
-      // no #overlay, so there is no overlay to close here.
-      await level.gotoLevel({lesson: 13, level: 1});
-      await waitForHeaderSettled(page);
-      await level.waitForLessonHeaderRendered();
+    const level = new LessonLevelPage(page);
+    // lesson 13/level 1 no longer hosts a lab (its embedded-Blockly feature
+    // was deprecated in 2025); it renders as a plain instructional level with
+    // no #overlay, so there is no overlay to close here.
+    await level.gotoLevel({lesson: 13, level: 1});
+    await waitForHeaderSettled(page);
+    await level.waitForLessonHeaderRendered();
 
-      await waitForVisualStability(page);
-      await visualCheck('embedded blocks');
+    await waitForVisualStability(page);
+    await visualCheck('embedded blocks');
 
-      await signOut(page);
-    },
-  );
+    await signOut(page);
+  });
 
   /** New coverage; the Cucumber feature has no equivalent. */
-  test(
-    'embedded blocks: no unexpected accessibility violations',
-    {tag: '@no_ci'},
-    async ({page}) => {
-      await resetSession(page);
-      await page.goto('/', {waitUntil: 'domcontentloaded'});
-      await createStudent(page, {name: 'Tester'});
+  test('embedded blocks: no unexpected accessibility violations', async ({
+    page,
+  }) => {
+    await resetSession(page);
+    await page.goto('/', {waitUntil: 'domcontentloaded'});
+    await createStudent(page, {name: 'Tester'});
 
-      const level = new LessonLevelPage(page);
-      await level.gotoLevel({lesson: 13, level: 1});
-      await waitForHeaderSettled(page);
-      await level.waitForLessonHeaderRendered();
+    const level = new LessonLevelPage(page);
+    await level.gotoLevel({lesson: 13, level: 1});
+    await waitForHeaderSettled(page);
+    await level.waitForLessonHeaderRendered();
 
-      // color-contrast: the "deprecated" markdown link, #0596ce on #ffffff,
-      // 3.35:1 against 4.5:1 (same shared link style Part 2 measured at 3.36:1).
-      expect(
-        await analyze(page, {
-          include: level.mainContentSelector,
-          tags: WCAG_AA_TAGS,
-        }),
-      ).toEqual({'color-contrast': 1});
+    // color-contrast: the "deprecated" markdown link, #0596ce on #ffffff,
+    // 3.35:1 against 4.5:1 (same shared link style Part 2 measured at 3.36:1).
+    expect(
+      await analyze(page, {
+        include: level.mainContentSelector,
+        tags: WCAG_AA_TAGS,
+      }),
+    ).toEqual({'color-contrast': 1});
 
-      await signOut(page);
-    },
-  );
+    await signOut(page);
+  });
 
   interface Scenario {
     testName: string;
