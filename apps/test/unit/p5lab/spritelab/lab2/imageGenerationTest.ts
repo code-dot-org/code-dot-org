@@ -7,15 +7,16 @@ jest.mock('@cdo/apps/aiGateway', () => ({
 
 const mockGenerateText = generateText as jest.Mock;
 
-// Backgrounds in smooth style skip the canvas post-processing, which jsdom
-// can't run; these tests exercise the request/metadata plumbing only.
+// A smooth-style background delivered as JPEG (no alpha) skips the canvas
+// post-processing, which jsdom can't run; these tests exercise the
+// request/metadata plumbing only.
 const OPTIONS = {imageType: 'background', style: 'smooth'} as const;
 
 describe('generateImage', () => {
   beforeEach(() => {
     mockGenerateText.mockReset();
     mockGenerateText.mockResolvedValue({
-      files: [{mediaType: 'image/png', uint8Array: new Uint8Array([1, 2, 3])}],
+      files: [{mediaType: 'image/jpeg', uint8Array: new Uint8Array([1, 2, 3])}],
     });
   });
 

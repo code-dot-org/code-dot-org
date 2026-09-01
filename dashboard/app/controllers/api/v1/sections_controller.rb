@@ -108,7 +108,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     unit_group = UnitGroup.get_from_cache(config[:unit_group_name]) if config[:unit_group_name].present?
 
     if unit.nil? || unit_group.nil?
-      Honeybadger.notify("Demo section creation failed due to misconfigured unit or course", context: {unit_name: config[:unit_name], resolved_unit_id: unit&.name, unit_group_name: config[:unit_group_name], resolved_unit_group_id: unit_group&.name})
+      Observability::Errors.report("Demo section creation failed due to misconfigured unit or course", context: {unit_name: config[:unit_name], resolved_unit_id: unit&.name, unit_group_name: config[:unit_group_name], resolved_unit_group_id: unit_group&.name})
     end
 
     section = ActiveRecord::Base.transaction do
@@ -184,7 +184,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     unit_group = UnitGroup.get_from_cache(config[:unit_group_name]) if config[:unit_group_name].present?
 
     if unit.nil? || unit_group.nil?
-      Honeybadger.notify(
+      Observability::Errors.report(
         "Demo section staleness reset failed due to misconfigured unit or course",
         context: {section_id: section.id, demo_type: section.demo_type, unit_name: config[:unit_name], unit_group_name: config[:unit_group_name]}
       )
@@ -203,7 +203,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     end
 
     if roster_failures.any?
-      Honeybadger.notify(
+      Observability::Errors.report(
         "Demo section reset rolled back: roster could not be reconciled",
         context: {section_id: section.id, demo_type: section.demo_type, failed_student_ids: roster_failures}
       )
@@ -491,7 +491,8 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     all_lesson_ids = section_data.flat_map do |_, current, history|
       [
         current&.dig('lesson_id'),
-        *history.flat_map {|e| [e['lesson_id'], e.dig('coming_up', 'lesson_id')]}
+        current&.dig('coming_up', 'lesson_id'),
+        *history.map {|e| e['lesson_id']}
       ]
     end.uniq.compact
 
@@ -518,12 +519,16 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       next hash[section.id] = nil unless data
       enriched = enrich.call(data)
       enriched_history = history.map {|e| enrich.call(e)}
-      raw_coming_up = history.find {|e| e['date'] == today}&.dig('coming_up')
+      raw_coming_up = data['coming_up']
       coming_up = raw_coming_up ? enrich.call(raw_coming_up) : nil
       hash[section.id] = enriched.merge('history' => enriched_history, 'coming_up' => coming_up)
     end
 
-    render json: result
+    # history dates are stamped in server time (config.time_zone, UTC), which
+    # can be a different calendar date than the browser's local "today" -
+    # returning our own idea of today lets the frontend match history entries
+    # against the same clock that wrote them, instead of guessing locally.
+    render json: {today: today, sections: result}
   end
 
   private def find_follower
@@ -573,7 +578,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
         section.remove_student(student, follower, notify: false)
       rescue ActiveRecord::ActiveRecordError => exception
         failures << student_id
-        Honeybadger.notify(exception, context: {section_id: section.id, student_id: student_id})
+        Observability::Errors.report(exception, context: {section_id: section.id, student_id: student_id})
       end
     end
 
@@ -588,7 +593,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
 
       unless Policies::DemoSections.demo_student?(student_id)
         failures << student_id
-        Honeybadger.notify(
+        Observability::Errors.report(
           "Refused to add non-demo student to demo section",
           context: {section_id: section.id, student_id: student_id}
         )
@@ -600,13 +605,13 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
         next if [Section::ADD_STUDENT_SUCCESS, Section::ADD_STUDENT_EXISTS].include?(result)
 
         failures << student_id
-        Honeybadger.notify(
+        Observability::Errors.report(
           "Failed to add demo student to section",
           context: {section_id: section.id, student_id: student_id, result: result}
         )
       rescue ActiveRecord::ActiveRecordError => exception
         failures << student_id
-        Honeybadger.notify(exception, context: {section_id: section.id, student_id: student_id})
+        Observability::Errors.report(exception, context: {section_id: section.id, student_id: student_id})
       end
     end
     failures

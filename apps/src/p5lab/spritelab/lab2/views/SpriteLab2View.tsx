@@ -47,6 +47,8 @@ import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import defaultSources from '../defaultSources.json';
 import {useGuideSteps} from '../guideSteps';
 import {
+  removeImageReferences,
+  removeImageReferencesOnWorkspace,
   renameImageReferences,
   renameImageReferencesOnWorkspace,
 } from '../imageReferences';
@@ -452,7 +454,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // Seed the animation list BEFORE the workspace injects: dropdown fields
   // validate saved values against the store at block-load time — hence the
   // animationsSeeded gate on useBlocklyWorkspace, not just dispatch ordering.
+  // Once per level: React Fast Refresh re-runs this effect, and re-seeding
+  // from the load-time list would revert every image made since.
+  const seededLevelRef = useRef<number | null>(null);
   useEffect(() => {
+    if (seededLevelRef.current === levelProperties.id) {
+      return;
+    }
+    seededLevelRef.current = levelProperties.id;
     let cancelled = false;
     seedAnimationList(initialSources.animations);
     // Workspace injection only waits on the section-scenes fetch when saved
@@ -1124,6 +1133,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [dispatch, updateSources, scheduleRun]
   );
 
+  const handleDeleteImage = useCallback(
+    (name: string) => {
+      updateSources(prev => removeImageReferences(prev, name));
+      removeImageReferencesOnWorkspace(Blockly.getMainWorkspace(), name);
+      refreshAnimationDropdownThumbnails();
+      scheduleRun();
+    },
+    [updateSources, scheduleRun]
+  );
+
   // A user edit: the workspace already displays this content; persist it
   // and refresh the preview.
   const handleWorkspaceChange = useCallback(
@@ -1377,6 +1396,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               <GenerateImagePane
                 uploadImage={uploadImage}
                 onRenameImage={handleRenameImage}
+                onDeleteImage={handleDeleteImage}
                 lockedImageType={levelProperties.lockedImageType}
               />
             </div>
