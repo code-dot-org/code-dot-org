@@ -51,14 +51,7 @@ dashboard/db/seeds.rb
 apps
 dashboard/app/assets
 dashboard/public
-!frontend
-frontend/*
-!frontend/apps
-frontend/apps/*
-!frontend/apps/studio
-frontend/apps/studio/*
-!frontend/apps/studio/config
-frontend/apps/studio/config/*
+frontend
 !frontend/apps/studio/config/vite.json
 shared/fonts
 shared/images
