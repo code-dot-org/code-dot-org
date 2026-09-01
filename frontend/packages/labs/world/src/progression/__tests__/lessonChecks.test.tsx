@@ -471,6 +471,35 @@ describe('the key-press lesson’s check', () => {
     expect(passes).toBe(true);
   });
 
+  it('accepts the last step of it, which hears every key and says which', () => {
+    // Step five: the filter comes off and the print says what the event
+    // carried. The script only ever presses space, so the count is the same
+    // two — what changed is that the handler is now told which key it was.
+    const anyKeyAt = editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(
+        electing(contents, 'Input#TakesKeyboardInputTrait', 'Hero'),
+      ) as {blocks: {blocks: Row[]}};
+      workspace.blocks.blocks.push({
+        type: 'world_on_Input_PressesEvent',
+        x: 420,
+        y: 300,
+        fields: {FILTER0: ''},
+        inputs: {ACTOR: anyKind('hero')},
+        next: {
+          block: {
+            type: 'world_print',
+            inputs: {VALUE: {block: {type: 'world_event_value'}}},
+          },
+        },
+      } as unknown as Row);
+      return JSON.stringify(workspace);
+    });
+    return check('input/press', anyKeyAt).then(({passes, result}) => {
+      expect(result.console).toEqual(['space', 'space']);
+      expect(passes).toBe(true);
+    });
+  });
+
   // The lesson's whole point: a handler that ran while the key was HELD would
   // say ninety things during the first stretch rather than one.
   it('refuses something that speaks every frame', async () => {
@@ -4194,9 +4223,8 @@ describe('the key lesson’s check', () => {
   const lesson = LESSONS['adventure/keys'];
   const eventActor = () => ({block: {type: 'world_event_actor'}});
   const thisActor = () => ({block: {type: 'world_this_actor'}});
-  const word = (words: string) => ({
-    shadow: {type: 'text', fields: {TEXT: words}},
-  });
+  /** The kind, as its dropdown holds it: a world's own actor by its id. */
+  const KEY = local('key');
 
   /** The lesson done, with a knob for the key that is never spent. */
   const carrying = (options: {spend: boolean}) =>
@@ -4218,7 +4246,7 @@ describe('the key lesson’s check', () => {
               type: 'world_do_Inventory_TakesAction',
               inputs: {
                 ACTOR: thisActor(),
-                VALUE: {block: {type: 'world_event_value'}},
+                VALUE: {block: {type: 'world_event_actor'}},
               },
             },
           },
@@ -4236,14 +4264,18 @@ describe('the key lesson’s check', () => {
                 IF0: {
                   block: {
                     type: 'world_query_Inventory_HasAQuery',
-                    inputs: {ACTOR: eventActor(), WHAT: word('key')},
+                    // The kind is a FIELD, like `is a`'s: a dropdown of the
+                    // project's actors rather than a socket for a word.
+                    fields: {WHAT: KEY},
+                    inputs: {ACTOR: eventActor()},
                   },
                 },
                 DO0: {
                   block: options.spend
                     ? {
                         type: 'world_do_Inventory_SpendsAAction',
-                        inputs: {ACTOR: eventActor(), VALUE: word('key')},
+                        fields: {VALUE: KEY},
+                        inputs: {ACTOR: eventActor()},
                         next: {block: open},
                       }
                     : open,

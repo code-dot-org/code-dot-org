@@ -1,12 +1,12 @@
 import {
   anyOf,
-  countOf,
   defineRule,
   equals,
   filter,
   firstActor,
   give,
   hasTrait,
+  kindOf,
   moduleFor,
   note,
   param,
@@ -43,11 +43,19 @@ const rule = defineRule({
 // it. It also means a thing can reach the bag without ever having been on the
 // floor: a reward for talking to somebody, a key handed over at the start.
 //
-// THINGS HAVE NAMES, and the name is the game's word rather than the engine's.
-// A carried thing carries a string — "key", "coin", "red key" — because a rule
-// cannot name the KINDS a project invented, and because two kinds of key is a
-// distinction only the game can draw. That is also what makes \`spends a ⟨key⟩\`
-// sayable at all: something has to say which one to spend.
+// A THING IS ITS KIND. \`spends a ⟨Key⟩\` names one from a dropdown of the
+// project's own actor kinds, which is the same dropdown \`is a ⟨Key⟩\` and
+// \`how many ⟨Coin⟩ in ⟨…⟩\` offer — so there is one way to say which sort of
+// thing you mean, and no way to misspell it.
+//
+// It was a STRING on the carried thing first, and the string was wrong twice
+// over. It could be typed two ways ("key" and "Key") and only the game running
+// would say so; and it made the bag's two questions a private vocabulary
+// alongside the public one, when \`how many ⟨Key⟩ in ⟨things of ⟨Player⟩⟩\`
+// already answers one of them in blocks a learner has met. What a string buys
+// is a category CUTTING ACROSS kinds — a Key and a Skeleton Key both spending
+// as "key" — and the library's word for a sort of thing is an actor kind, so a
+// game that wants two keys makes two kinds.
 //
 // WHAT IS IN THE BAG IS ACTORS, not names, and that is worth the extra step.
 // The thing you are carrying is the thing you picked up — its picture, its
@@ -76,31 +84,35 @@ const carries = rule.trait('Carries');
  */
 const things = carries.actors('things', {readonly: true});
 
-const carried = rule.trait('Can Be Carried');
-
 /**
- * What this thing IS, in the game's own word: "key", "coin", "rope".
+ * A thing that may go in a bag.
  *
- * A string rather than the actor's kind, because a rule cannot name the kinds a
- * project invented — and because a game with a red key and a blue key has two
- * words for one kind, which is a distinction it is allowed to draw.
+ * No properties: being carryable is a fact about a thing rather than a setting,
+ * which is what Collection's `Can Be Collected` is too. What sort of thing it
+ * is, is its kind.
  */
-const whatItIs = carried.string('what it is', 'thing');
+rule.trait('Can Be Carried');
 
 export const Carries = rule.traitRef('Carries');
 export const CanBeCarried = rule.traitRef('Can Be Carried');
 
-/** `when ⟨Player⟩ uses a ⟨key⟩` — where the door opens. */
-const uses = carries.event(['uses a', param('what', 'string')]);
+/**
+ * `when ⟨Player⟩ uses a thing` — where the door opens.
+ *
+ * It carries the ITEM rather than its kind, because the item is the more
+ * specific answer and the kind can be got from it (`is a ⟨Key⟩`) — and because
+ * a handler that wants to show what was spent wants the thing, not a word.
+ */
+const uses = carries.event(['uses a thing', param('item', 'actor')]);
 
 const each = rule.local('each', 'Actor');
 const found = rule.local('found', 'Actor');
 
-/** The things in this actor's bag that go by a given name. */
-const named = what =>
+/** The things in this actor's bag that are of a given kind. */
+const ofKind = wanted =>
   filter(each, {
     from: things.of(thisActor()),
-    where: equals(whatItIs.of(each.get()), what),
+    where: equals(kindOf(each.get()), wanted),
   });
 
 export const takes = carries.block({
@@ -109,9 +121,9 @@ export const takes = carries.block({
     'Put a thing in this actor’s bag. Usually said in a "collects" handler — collecting is picking it up off the floor, and this is having it.',
   say: ['takes', param('item', 'actor')],
   body: ({item}) => [
-    note('Only a thing that can be carried: everything else has no name to be'),
-    note('carried under, and a bag of nameless things is a bag nothing can'),
-    note('ever be spent from.'),
+    note('Only a thing that can be carried. The trait is the whole of what'),
+    note('makes something bag-able, and a project that put anything at all in'),
+    note('one would be keeping the world in a pocket.'),
     when([
       [
         hasTrait(item.get(), CanBeCarried),
@@ -124,36 +136,34 @@ export const takes = carries.block({
 export const hasA = carries.block({
   returns: 'boolean',
   description:
-    'Whether this actor is carrying anything by that name. The question a locked door asks.',
-  say: ['has a', param('what', 'string')],
-  body: ({what}) => [give(anyOf(named(what.get())))],
+    'Whether this actor is carrying one of a kind of thing. The question a locked door asks.',
+  say: ['has a', param('what', 'kind')],
+  body: ({what}) => [give(anyOf(ofKind(what.get())))],
 });
 
-export const hasHowMany = carries.block({
-  returns: 'number',
-  description:
-    'How many things by that name are in the bag — three keys, two ropes.',
-  say: ['has how many', param('what', 'string')],
-  body: ({what}) => [give(countOf(named(what.get())))],
-});
+// NO `has how many`. `how many ⟨Key⟩ in ⟨things of ⟨Player⟩⟩` says it already,
+// in a block a learner meets counting bricks — and a rule that answered it
+// again would be a second way to ask one question, in a private vocabulary
+// beside the public one.
 
 export const spends = carries.block({
   returns: 'none',
   description:
-    'Take one thing of that name out of the bag and raise "uses a". Does nothing if there is none — ask first if that matters.',
-  say: ['spends a', param('what', 'string')],
+    'Take one thing of a kind out of the bag and raise "uses a thing". Does nothing if there is none — ask first if that matters.',
+  say: ['spends a', param('what', 'kind')],
   body: ({what}) => [
-    note('The oldest one that goes by the name, which is what "a key" means'),
-    note('when the bag holds three.'),
-    found.set(firstActor(named(what.get()))),
+    note('The oldest one of that kind, which is what "a key" means when the'),
+    note('bag holds three.'),
+    found.set(firstActor(ofKind(what.get()))),
     when([
       [
         anyOf(found.get()),
         [
           things.drop(thisActor(), found.get()),
           note('Said after it is gone, so a handler that asks what is left'),
-          note('sees what is left.'),
-          uses({what: what.get()}, thisActor()),
+          note('sees what is left — and carrying the thing itself, which is'),
+          note('what a handler showing the key just used needs.'),
+          uses({item: found.get()}, thisActor()),
         ],
       ],
     ]),

@@ -183,3 +183,55 @@ when this actor [ space ▾ ] is pressed        (was: a key is pressed → if �
 
 Each step stands on its own: 1–2 are useful without 4, and 4 is the one the
 learner sees.
+
+## A second dropdown-shaped parameter: `kind`
+
+The same shape as an enum's, for the project's actor KINDS. A rule declares a
+parameter typed `kind` and the block wears a dropdown of the actors the project
+holds — the same list `is a ⟨Coin⟩` and `how many ⟨Coin⟩ in ⟨…⟩` offer, with
+pictures where there are pictures:
+
+```
+⟨Player⟩ spends a ⟨Key ▾⟩          Inventory
+⟨Player⟩ has a ⟨Key ▾⟩
+```
+
+**Why a rule could not do this before.** `is a` is a question a PROJECT asks:
+its dropdown names the project's own kinds, and a rule has never seen them. So
+a rule wanting to talk about a sort of thing had to be handed a word, and
+Inventory was: every carried thing held a string — `"key"` — that could be
+typed two ways with only the game running to say which had been meant.
+
+**What arrives is a string all the same**, which is why this is the enum's
+shape rather than a new one: the dropdown is about what may be CHOSEN, and the
+value is the module path (or a world's own stamped id) that the choice resolves
+to. `paramFlavour` maps it to the string flavour, `typedValueCode` resolves it
+the way `is a` does, and the engine hears nothing about kinds — `ParamType` is
+`ArgType` plus enums plus this, and both additions are about a socket rather
+than about a value.
+
+**A rule compares it with `kind of ⟨actor⟩`**, which is the half of `is a` a
+rule can hold: the kind as a value, so a body can ask whether the thing it is
+looking at is the thing it was asked about.
+
+**One trap, paid for once.** A live dropdown rebinds the ONE field it is named
+for (`moduleOptions`), so the kind field needs its own — the ready-made
+`actorTypeOptionsExtension` is bound to `TYPE`, and a parameter's field is
+named after the parameter. Bound to the wrong name it rebinds nothing, the
+options stay whatever they were when the block was defined, and a stored kind
+is dropped on load: a project that says `spends a ⟨Key⟩` generating
+`spends a ⟨⟩`.
+
+**And the same trap from the other side, found by using the editor.** An
+actor-carrying event's HAT has filtered by kind since it got a signature — the
+dropdown is `(any)` plus the project's kinds — but its option list was built by
+a closure that ignored the field it was handed. A world's own `define actor`
+kinds are found THROUGH the field (its workspace), so in a world that defines
+its actors inline — which is every progression lesson and the starter — the
+filter offered `(any)`, the `(none)` placeholder beside it, and nothing else.
+Two entries carrying the same empty value, one of them reading like an actor a
+game might have.
+
+So: pass the field, and drop the placeholder wherever `(any)` already says
+there is nothing to filter on. `(none)` is `orNone` saying a list is empty; it
+is never a thing to choose.

@@ -1678,7 +1678,7 @@ describe('Turns', () => {
 });
 
 describe('Inventory', () => {
-  /** A player with a bag, and three things to put in it. */
+  /** A player with a bag, and things of two kinds to put in it. */
   const bag = () => {
     const world = new WorldBuilder({id: 'w', name: 'W'})
       .useRules([rule('rules/collect'), rule('rules/inventory')])
@@ -1688,18 +1688,18 @@ describe('Inventory', () => {
       .instantiate('player');
     const used: string[] = [];
     player.on(
-      of('rules/inventory', 'UsesAEvent'),
-      (_world: unknown, _actor: unknown, what: unknown) => {
-        used.push(what as string);
+      of('rules/inventory', 'UsesAThingEvent'),
+      (_world: unknown, _actor: unknown, item: unknown) => {
+        used.push((item as {id: string}).id);
       },
     );
     world.addActor(player);
 
-    const thing = (id: string, name: string) => {
+    /** A thing of a KIND, which is what the bag sorts by. */
+    const thing = (id: string, kind: string) => {
       const made = new ActorBuilder({id, name: id})
         .useTraits([of('rules/inventory', 'CanBeCarriedTrait')])
-        .set(of('rules/inventory', 'WhatItIsProperty'), name)
-        .instantiate(id);
+        .instantiate(id, kind);
       world.addActor(made);
       return made;
     };
@@ -1711,64 +1711,75 @@ describe('Inventory', () => {
       );
       world.tick(1 / 60);
     };
-    const ask = (name: string, what: string) =>
+    const ask = (name: string, kind: string) =>
       (
         player as unknown as {query(q: never, ...rest: unknown[]): unknown}
-      ).query(of('rules/inventory', name), what);
-    return {world, player, thing, say, ask, used};
+      ).query(of('rules/inventory', name), kind);
+    /** What is in the bag, of a kind — what `how many ⟨Key⟩ in ⟨…⟩` counts. */
+    const held = (kind: string) =>
+      (
+        (player as unknown as {get(p: unknown): unknown}).get(
+          of('rules/inventory', 'ThingsProperty'),
+        ) as Array<{type: string}>
+      ).filter(item => item.type === kind).length;
+    return {world, player, thing, say, ask, held, used};
   };
 
-  it('holds what it is given, by the name the thing carries', () => {
-    const {thing, say, ask} = bag();
+  it('holds what it is given, sorted by the kind it is', () => {
+    const {thing, say, ask, held} = bag();
 
-    say('TakesAction', thing('key1', 'key'));
-    say('TakesAction', thing('apple', 'food'));
+    say('TakesAction', thing('key1', 'actors/key'));
+    say('TakesAction', thing('apple', 'actors/food'));
 
-    expect(ask('HasAQuery', 'key')).toBe(true);
-    expect(ask('HasAQuery', 'rope')).toBe(false);
-    expect(ask('HasHowManyQuery', 'food')).toBe(1);
+    expect(ask('HasAQuery', 'actors/key')).toBe(true);
+    expect(ask('HasAQuery', 'actors/rope')).toBe(false);
+    expect(held('actors/food')).toBe(1);
   });
 
-  it('spends one, and only one, and says so', () => {
+  it('spends one, and only one, and says which', () => {
     // The whole difference from Collection: a bag that can go down. Two keys
-    // in, one spent, one left — and a door that opened is told which.
-    const {thing, say, ask, used} = bag();
-    say('TakesAction', thing('key1', 'key'));
-    say('TakesAction', thing('key2', 'key'));
+    // in, one spent, one left — and what the event carries is the key itself
+    // rather than a word for it, which is what a handler showing it needs.
+    const {thing, say, ask, held, used} = bag();
+    say('TakesAction', thing('key1', 'actors/key'));
+    say('TakesAction', thing('key2', 'actors/key'));
 
-    say('SpendsAAction', 'key');
+    say('SpendsAAction', 'actors/key');
 
-    expect(ask('HasHowManyQuery', 'key')).toBe(1);
-    expect(ask('HasAQuery', 'key')).toBe(true);
-    expect(used).toEqual(['key']);
+    expect(held('actors/key')).toBe(1);
+    expect(ask('HasAQuery', 'actors/key')).toBe(true);
+    // The OLDEST, which is what "a key" means when the bag holds two.
+    expect(used).toEqual(['key1']);
   });
 
   it('spends nothing it has not got, and says nothing either', () => {
     // A second locked door with no second key: the ask is what a project does
     // about it, and this doing nothing quietly is what makes the ask optional
     // rather than compulsory.
-    const {thing, say, ask, used} = bag();
-    say('TakesAction', thing('key1', 'key'));
-    say('SpendsAAction', 'key');
+    const {thing, say, ask, held, used} = bag();
+    say('TakesAction', thing('key1', 'actors/key'));
+    say('SpendsAAction', 'actors/key');
 
-    say('SpendsAAction', 'key');
+    say('SpendsAAction', 'actors/key');
 
-    expect(ask('HasAQuery', 'key')).toBe(false);
-    expect(ask('HasHowManyQuery', 'key')).toBe(0);
-    expect(used).toEqual(['key']);
+    expect(ask('HasAQuery', 'actors/key')).toBe(false);
+    expect(held('actors/key')).toBe(0);
+    expect(used).toEqual(['key1']);
   });
 
-  it('will not carry a thing with no name', () => {
-    // Nameless things could never be spent, so a bag full of them is a bag
-    // that only fills up. `takes` refuses one rather than storing it.
-    const {world, say, ask} = bag();
+  it('will not carry a thing that cannot be carried', () => {
+    // The trait is the whole of what makes something bag-able; without it, a
+    // project putting anything at all in one would be keeping the world in a
+    // pocket.
+    const {world, say, held} = bag();
     const rock = new ActorBuilder({id: 'rock', name: 'rock'}).instantiate(
       'rock',
+      'actors/rock',
     );
     world.addActor(rock);
 
     say('TakesAction', rock);
 
-    expect(ask('HasHowManyQuery', 'thing')).toBe(0);
+    expect(held('actors/rock')).toBe(0);
   });
 });

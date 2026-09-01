@@ -152,7 +152,15 @@ export const TILES: readonly Tile[] = [
     teaches: 'The difference between a key being HELD and a key being PRESSED.',
     task: 'A lamp that toggles sixty times a second. Make it toggle once per press.',
     requires: ['input/arrows'],
-    unlocks: [{kind: 'rule', id: 'input'}],
+    unlocks: [
+      {kind: 'rule', id: 'input'},
+      // …and what a handler is HANDED. This is the tile where an event stops
+      // being a moment and starts being a moment with something in it, and
+      // "the key that was pressed" is the block's own first example. Nothing
+      // granted it before, so a gated learner could reach the end of the map
+      // without being offered the one block that reads what an event carried.
+      {kind: 'block', type: 'world_event_value'},
+    ],
     check: {
       kind: 'trace',
       says: 'One hold of the space bar says one thing, and a second press says a second.',

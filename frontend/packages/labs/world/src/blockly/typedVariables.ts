@@ -78,15 +78,27 @@ export const PARAM_FLAVOURS: ReadonlyArray<{
  * of an enum at all.
  */
 export const paramFlavour = (type: string): TypedVariable => {
-  const wanted = enumRefOfParamType(type) ? 'string' : type;
+  // A KIND parameter is a string parameter for the same reason an enum one is:
+  // what the body is handed is the module path of the kind that was chosen, and
+  // the dropdown is about what may be chosen rather than about what arrives.
+  const wanted = enumRefOfParamType(type) || type === 'kind' ? 'string' : type;
   return (PARAM_FLAVOURS.find(f => f.type === wanted) ?? PARAM_FLAVOURS[0])
     .variable;
 };
 
-/** The parameter type dropdown's `[label, value]` options. */
-export const PARAM_TYPE_OPTIONS: Array<[string, string]> = PARAM_FLAVOURS.map(
-  ({type}) => [type, type],
-);
+/**
+ * The parameter type dropdown's `[label, value]` options.
+ *
+ * The flavours, and then `kind` — which is not one, because it needs no
+ * variable of its own: it arrives as a string and is read with the string
+ * getter (`paramFlavour`). What makes it its own TYPE is the socket, which is a
+ * dropdown of the project's actor kinds rather than a text box, so a block can
+ * say `spends a ⟨Key ▾⟩` and mean the kind rather than the word.
+ */
+export const PARAM_TYPE_OPTIONS: Array<[string, string]> = [
+  ...PARAM_FLAVOURS.map(({type}) => [type, type] as [string, string]),
+  ['kind', 'kind'],
+];
 
 /** The getter blocks that read a parameter — one per flavour. */
 export const PARAM_GETTER_BLOCKS = PARAM_FLAVOURS.map(

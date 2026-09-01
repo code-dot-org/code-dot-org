@@ -134,7 +134,7 @@ export const STOCK_RULES: readonly StockRule[] = [
     name: 'Inventory',
     ability: 'Carries Things',
     description:
-      'A bag: what an actor is holding by name, and the way to spend one. Collection keeps a record of everything picked up, which only grows; this is the half that can go down, for a key that is gone once the door is open.',
+      'A bag: what an actor is holding, and the way to spend one of a kind. Collection keeps a record of everything picked up, which only grows; this is the half that can go down, for a key that is gone once the door is open.',
     provides: ['Carries', 'Can Be Carried'],
     contents: inventoryRule,
   },

@@ -35,7 +35,14 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
     'world_set_position',
   ],
   'input/arrows': ['world_use_trait'],
-  'input/press': ['world_use_trait', 'world_log'],
+  // …and step five, which prints what the event carried rather than a word of
+  // the learner's: `print` takes a value where `log` takes a typed-in string.
+  'input/press': [
+    'world_use_trait',
+    'world_log',
+    'world_print',
+    'world_event_value',
+  ],
   'input/mouse': ['world_use_trait', 'world_log'],
   'input/two-hands': ['world_use_trait'],
   'motion/speed': ['world_use_trait'],
@@ -157,7 +164,6 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   'adventure/keys': [
     'controls_if',
     'world_event_actor',
-    'world_event_value',
     'world_remove_actor',
     'text',
   ],

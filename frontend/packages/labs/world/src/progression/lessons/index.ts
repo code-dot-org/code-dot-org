@@ -571,6 +571,9 @@ you lean on the button.
    inside it.
 3. Run it and hold space down for a few seconds. One line, not two hundred.
 4. Let go and press again. Now there are two.
+5. Take the **⟨space⟩** off the hat so it hears every key, and print
+   **⟨event value⟩** instead of your word. Each key now says its own name: the
+   handler is told WHICH key, and that is what an event carries.
 `.trim(),
 };
 
@@ -3814,11 +3817,6 @@ where everything starts**, and the Player is one of the things in it.
 
 // ── adventure/keys ───────────────────────────────────────────────────────────
 
-/** A short string in a socket. */
-const text = (words: string) => ({
-  shadow: {type: 'text', fields: {TEXT: words}},
-});
-
 const keys: WorldScenario = {
   name: 'A door that wants something',
   description: 'Two locked doors, one key, and no way through either of them.',
@@ -3844,17 +3842,13 @@ const keys: WorldScenario = {
           ],
         },
         {
+          // What it IS is its KIND: a door asks for a ⟨Key⟩ from the same
+          // dropdown every other block names a kind with.
           id: 'key',
           name: 'Key',
           rows: [
             useTrait('Collection#CanBeCollectedTrait'),
             useTrait('Inventory#CanBeCarriedTrait'),
-            // What it IS, in the game's own word — which is what a door asks
-            // for, and what "spend a key" spends.
-            {
-              type: 'world_set_Inventory_WhatItIsProperty',
-              inputs: {ACTOR: me(), VALUE: text('key')},
-            },
             setSprite('coin.png'),
           ],
         },
@@ -3882,11 +3876,13 @@ door is how you will know you got it right.
 
 ### What you do
 
-1. Add **when ⟨any Player⟩ collects ⟨item⟩ → ⟨this actor⟩ takes ⟨the value⟩**.
-   Collecting is picking it up off the floor; taking is having it.
+1. Add **when ⟨any Player⟩ collects ⟨item⟩ → ⟨this actor⟩ takes ⟨event
+   actor⟩**. Collecting is picking it up off the floor; taking is having it,
+   and **event actor** is the thing that was picked up.
 2. Add **when ⟨any Door⟩ starts touching**, and in it:
-   **if ⟨the actor⟩ has a ⟨"key"⟩ → ⟨the actor⟩ spends a ⟨"key"⟩**, then
-   **remove ⟨this actor⟩**.
+   **if ⟨event actor⟩ has a ⟨Key⟩ → ⟨event actor⟩ spends a ⟨Key⟩**, then
+   **remove ⟨this actor⟩**. Both **⟨Key⟩**s are dropdowns of the actors in your
+   project, like the one in **is a**.
 3. Fetch the Key, open the first door, and walk into the second one. It stays
    shut, and it should: you had one key and you spent it.
 `.trim(),

@@ -58,7 +58,10 @@ const withInputs = (block, inputs) =>
 
 /** The variable type a parameter of this kind binds to in the workspace. */
 const VARIABLE_TYPE = type =>
-  type.startsWith('enum:') || type === 'string'
+  // A `kind` is a String for the same reason an enum choice is: the dropdown is
+  // about what may be CHOSEN, and what the body is handed is the name of the
+  // kind that was.
+  type.startsWith('enum:') || type === 'string' || type === 'kind'
     ? 'String'
     : type === 'actor'
       ? 'Actor'
@@ -153,6 +156,18 @@ export const firstCharacters = (words, count) => ({
 });
 
 export const note = text => ({type: 'world_comment', fields: {TEXT: text}});
+
+/**
+ * `kind of <actor>` — which kind a thing is, as a name.
+ *
+ * What a rule compares a `kind` parameter against. `is a <Coin>` is the
+ * question a PROJECT asks and one a rule cannot: that block's dropdown names
+ * the project's own kinds, and a rule has never seen them.
+ */
+export const kindOf = subject => ({
+  type: 'world_kind_of',
+  inputs: {ACTOR: value(subject)},
+});
 
 export const yes = () => ({type: 'logic_boolean', fields: {BOOL: 'TRUE'}});
 export const no = () => ({type: 'logic_boolean', fields: {BOOL: 'FALSE'}});

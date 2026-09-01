@@ -1038,9 +1038,21 @@ const defineEventBlock = (event: EventMeta) => {
       const field = filterFieldName(filters.length + kinds.length);
       // Pictures where the project has them, names where it does not — and
       // `(any)` is always a word, since "no filter" has nothing to draw.
-      const options = (): DropdownOptions => [
+      //
+      // THE FIELD IS PASSED, and it is the whole of whether this dropdown has
+      // anything in it. A world's own `define actor` kinds are found through
+      // the field's workspace (`localActorOptions`); without it the list is the
+      // project's `.actor` FILES alone — so in a world that defines its actors
+      // inline, which is every lesson and the starter, the filter offered
+      // nothing but `(any)` and the placeholder beside it.
+      //
+      // …and the placeholder goes. `orNone` adds `(none)` to an empty list to
+      // say there is nothing to choose, and its value is the empty string —
+      // which is what `(any)` already means here. Two entries doing one job,
+      // one of them reading as a kind of actor that a game might have.
+      const options = (own?: FieldDropdown): DropdownOptions => [
         ANY_CHOICE,
-        ...actorFieldOptions(),
+        ...actorFieldOptions(own).filter(([, value]) => value !== ''),
       ];
       args0.push({type: 'field_dropdown', name: field, options: options()});
       extensions.push(
@@ -1208,10 +1220,23 @@ const defineEmitBlock = (event: EventMeta) => {
         if (!refResolves(event.ref)) {
           return '';
         }
-        const carried = names
-          .slice(0, paramIndex)
-          .map(name => generator.valueToCode(block, name.value, Order.NONE))
-          .map(code => code || '""');
+        // What the handler is handed, one value per parameter.
+        //
+        // An ACTOR-typed one is narrowed to a single actor, because that is
+        // the language's rule for reading a value of several
+        // (specs/ACTOR_LISTS.md) and every other actor socket already obeys
+        // it. Without this, a rule raising an event with `first actor in ⟨…⟩`
+        // in the socket handed its listeners a LIST of one, and a handler
+        // asking that value anything about itself got nothing back — which is
+        // how `Inventory.spends` told a door it had used undefined.
+        const carried = params.slice(0, paramIndex).map((param, index) => {
+          const socket = names[index].value;
+          const code = generator.valueToCode(block, socket, Order.NONE);
+          if (!code) {
+            return '""';
+          }
+          return param.type === 'actor' ? `WorldLab.one(${code})` : code;
+        });
         // `refCode` resolves a project event to the bare local name when the
         // rule is emitting its OWN event (it is an `export const` in the module
         // being written), and imports it otherwise.
@@ -1540,6 +1565,16 @@ const typedValueCode = (
       return read(names.value) || str(String(d ?? ''));
     case 'actors':
       return read(names.value) || '[]';
+    case 'kind':
+      // A FIELD, like an enum's, so it is read rather than pulled through a
+      // socket — and resolved the way `is a` and `how many ⟨Coin⟩ in` resolve
+      // one: a world's own `define actor` is stamped with its id, a project
+      // template with its module path. What the rule is handed is that string,
+      // which is what `kind of ⟨actor⟩` answers with.
+      return str(
+        localActorFor(block, block.getFieldValue(names.value) ?? '')?.type ??
+          String(block.getFieldValue(names.value) ?? d ?? ''),
+      );
     case 'number':
       return read(names.value) || String(Number(d ?? 0));
     default:
@@ -1709,6 +1744,41 @@ const typedValueInputs = (
               fields: {COLOUR: String(d ?? '#ffffff')},
             },
           },
+        ],
+      };
+    case 'kind':
+      // The project's actor kinds, as a dropdown on the block. A FIELD for the
+      // reason an enum's choices are one: the kinds are the whole of what the
+      // argument can be, and a socket would draw a plug around a list and offer
+      // to accept something that is not on it.
+      //
+      // A LIVE dropdown bound to this field's own name, which is the whole of
+      // why `actorTypeOptionsExtension` will not do: an extension rebinds the
+      // one field it was given, and that one is bound to `TYPE`
+      // (`moduleOptions`). Bound to the wrong name it silently rebinds nothing,
+      // the options stay whatever they were when the block was defined, and a
+      // stored kind the list has never heard of is dropped on load — a project
+      // that says `spends a ⟨Key⟩` and generates `spends a ⟨⟩`.
+      //
+      // Live also means a kind added a moment ago is in the list, and a kind
+      // that has been deleted still reads as itself rather than becoming the
+      // first thing in it.
+      return {
+        message: `%${slot}`,
+        args: [
+          {
+            type: 'field_dropdown',
+            name: names.value,
+            options: actorFieldOptions(),
+          },
+        ],
+        shadows: [],
+        extensions: [
+          liveDropdown(
+            `world_kind_field_${names.value}`,
+            names.value,
+            actorFieldOptions,
+          ),
         ],
       };
     case 'actors':
@@ -2645,6 +2715,44 @@ const worldEventValue = defineBlock({
     },
   },
 });
+
+/**
+ * `kind of ⟨actor⟩` — which KIND a thing is, as the name a map or a dropdown
+ * calls it by.
+ *
+ * `is a ⟨Coin⟩` answers the question a project asks, and cannot be asked at all
+ * by a RULE: its dropdown names the project's own kinds, and a rule has never
+ * seen them. This is the half a rule can hold — the kind as a value — so that a
+ * rule taking a `kind` parameter can compare what it was given against what it
+ * is looking at (`Inventory.spends a ⟨Key⟩`).
+ *
+ * A STRING, and the string is a module path (`actors/key`) or a world's own
+ * stamped id. That is why a project should still use `is a`: this is the shape
+ * a comparison needs, not a name anybody wants to type.
+ */
+const worldKindOf = defineBlock({
+  type: 'world_kind_of',
+  message0: 'kind of %1',
+  args0: [{type: 'input_value', name: 'ACTOR', check: 'Actor'}],
+  inputsInline: true,
+  output: 'String',
+  extensions: [valueShadowExtension],
+  style: 'text_blocks',
+  tooltip:
+    'Which kind of actor this is, as a name — for comparing one actor’s kind ' +
+    'with another’s. To ask whether it is a particular kind, use “is a”.',
+  generator: {
+    javascript(block, generator) {
+      return [
+        `${oneActor(actorTarget(block, generator, Order.MEMBER))}.type`,
+        Order.MEMBER,
+      ] as [string, number];
+    },
+  },
+});
+registerValueShadows('world_kind_of', [
+  {name: 'ACTOR', shadow: {type: 'world_this_actor'}},
+]);
 
 /**
  * The actor an event was about — the one just touched, the one just hit.
@@ -7226,6 +7334,7 @@ export const DOMAIN_BLOCKS = [
   worldPrint,
   worldEventActor,
   worldEventValue,
+  worldKindOf,
   worldVector,
   worldVectorMath,
   worldVectorRotate,
@@ -7415,6 +7524,9 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_is_in_layer',
       ActorVariable.getterType,
       'world_is_a',
+      // …and the kind as a VALUE, which is the half `is a` cannot be: its
+      // dropdown names the project's kinds, and a rule has never seen them.
+      'world_kind_of',
       // How long it has been here — what a bullet, a spark or a lapsing shield
       // compares against to know it is done.
       'world_actor_age',

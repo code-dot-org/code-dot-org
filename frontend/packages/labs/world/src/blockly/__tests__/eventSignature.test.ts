@@ -13,6 +13,8 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {Blockly} from '@code-dot-org/blockly';
+
 import {inputRule} from '../../rules/stock/input';
 import {buildDomainPalette} from '../domainBlocks';
 import {parseRuleMeta} from '../ruleMeta';
@@ -330,5 +332,73 @@ describe('an actor event\u2019s hat, in the same rule', () => {
     expect(inRule).not.toContain('world_on_Input_IsPressedEvent');
     expect(inRule).toContain('world_emit_Input_PressesEvent');
     expect(inRule).toContain('world_emit_Input_IsPressedEvent');
+  });
+});
+
+describe('an event that carries an ACTOR', () => {
+  // A hat for one filters by KIND, and the dropdown is built by a function
+  // that is handed the field. That handing is the whole of whether it has
+  // anything in it: a world's own `define actor` kinds are found through the
+  // field's workspace, and a world that defines its actors inline is every
+  // lesson and the starter — so the filter offered `(any)` and a placeholder,
+  // and no kinds at all, until it was passed.
+  const TOUCHED = {
+    parts: [
+      {kind: 'label', text: 'is touched by'},
+      {kind: 'param', name: 'other', type: 'actor'},
+    ],
+  };
+  /** A workspace holding a world with two actors defined inside it. */
+  const fieldInAWorld = () => {
+    const blocks = [
+      {id: 'w1', type: 'world_world', getFieldValue: () => 'My World'},
+      {
+        id: 'a1',
+        type: 'world_actor',
+        getFieldValue: (name: string) => (name === 'NAME' ? 'Key' : undefined),
+      },
+      {
+        id: 'a2',
+        type: 'world_actor',
+        getFieldValue: (name: string) => (name === 'NAME' ? 'Door' : undefined),
+      },
+    ];
+    const workspace = {
+      getTopBlocks: () => blocks,
+      getBlockById: (id: string) => blocks.find(block => block.id === id),
+    };
+    return workspace;
+  };
+
+  it('offers the kinds the world defines, and only `(any)` beside them', () => {
+    // Through the EXTENSION, which is where the live list lives: the
+    // definition carries a snapshot taken before any project existed, and what
+    // a learner sees is what the field answers with once it is on a block.
+    const hat = hatFor(ruleWithEvent(TOUCHED)) as unknown as {
+      extensions: Array<{name: string; extension: () => void}>;
+    };
+    const field = new Blockly.FieldDropdown(() => [['(any)', '']]);
+    const block = {
+      getField: (name: string) => (name === 'FILTER0' ? field : null),
+      workspace: fieldInAWorld(),
+    };
+    // Stubbed rather than `setSourceBlock`, which wants a real block: what the
+    // live list asks the field for is where it is (`localActors.workspaceOf`).
+    (field as unknown as {getSourceBlock: () => unknown}).getSourceBlock = () =>
+      block;
+    // The extension is what a block gets on creation, and it is what binds the
+    // live list to the field.
+    hat.extensions
+      .find(extension => extension.name === 'world_event_kind_FILTER0')!
+      .extension.call(block as never);
+
+    const shown = field.getOptions(false) as Array<[string, string]>;
+
+    expect(shown[0]).toEqual(['(any)', '']);
+    expect(shown.map(([label]) => label)).toContain('Key');
+    expect(shown.map(([label]) => label)).toContain('Door');
+    // …and NOT `(none)`, which is `orNone`'s way of saying a list is empty and
+    // carries the same empty value `(any)` does. Two entries, one meaning.
+    expect(shown.map(([label]) => label)).not.toContain('(none)');
   });
 });
