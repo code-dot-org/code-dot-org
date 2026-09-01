@@ -43,6 +43,9 @@ export const SPRITE_NAMES = [
   // …and the end of the level, which is a different thing from a landmark: a
   // post says HERE and a flag says FINISHED.
   'flag',
+  // Something that hurts. Drawn as a crate until now, in three lessons, in a
+  // curriculum where a crate is the thing you push.
+  'spike',
 ];
 export const ANIMATION_SPECS = {
   coinSpin: {frames: 6, frameRate: 12},
@@ -299,6 +302,33 @@ const STATIC = {
       }
     }
     c.rect(6, 29, 7, 3, [72, 48, 26]); // the ground it stands in
+  },
+  spike(c) {
+    // Three teeth on a plate, pointing UP, filling the cell the way `ground`
+    // does — so a row of them lies flat on the floor rather than hovering over
+    // it, and so what you can see is what you can be hurt by.
+    c.rect(0, 26, 32, 6, [70, 74, 84]); // the plate they are set in
+    for (let tooth = 0; tooth < 3; tooth++) {
+      const x = 1 + tooth * 10;
+      c.polygon(
+        [
+          [x, 27],
+          [x + 5, 3],
+          [x + 10, 27],
+        ],
+        [176, 180, 192],
+      );
+      // The right half darker, which is the whole of why it reads as a cone
+      // rather than as a paper triangle.
+      c.polygon(
+        [
+          [x + 5, 3],
+          [x + 10, 27],
+          [x + 5, 27],
+        ],
+        [112, 116, 130],
+      );
+    }
   },
 };
 

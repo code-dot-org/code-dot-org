@@ -1064,7 +1064,10 @@ const kinds: WorldScenario = {
         {
           id: 'spike',
           name: 'Spike',
-          rows: [useTrait('Collisions#CanCollideTrait'), setSprite('box.png')],
+          rows: [
+            useTrait('Collisions#CanCollideTrait'),
+            setSprite('spike.png'),
+          ],
         },
       ],
       handlers: [
@@ -1074,7 +1077,7 @@ const kinds: WorldScenario = {
         }),
       ],
     }),
-    sprites: ['ball', 'coin', 'box'],
+    sprites: ['ball', 'coin', 'spike'],
     rules: ['motion', 'collisions'],
   }),
   instructions: `
@@ -1551,13 +1554,13 @@ const hazards: WorldScenario = {
           rows: [
             useTrait('Collisions#CanCollideTrait'),
             useTrait('Solid Bodies#SolidTrait'),
-            setSprite('box.png'),
+            setSprite('spike.png'),
           ],
         },
         {id: 'ground', name: 'Ground', rows: [setSprite('ground.png')]},
       ],
     }),
-    sprites: ['player', 'box', 'ground'],
+    sprites: ['player', 'spike', 'ground'],
     rules: ['arrows', 'motion', 'collisions', 'solid', 'health'],
   }),
   instructions: `
@@ -1644,7 +1647,7 @@ const level: WorldScenario = {
           rows: [
             useTrait('Collisions#CanCollideTrait'),
             useTrait('Health#DealsDamageTrait'),
-            setSprite('box.png'),
+            setSprite('spike.png'),
           ],
         },
         {
@@ -1662,7 +1665,7 @@ const level: WorldScenario = {
         },
       ],
     }),
-    sprites: ['player', 'coin', 'box', 'flag', 'ground'],
+    sprites: ['player', 'coin', 'spike', 'flag', 'ground'],
     rules: [
       'gravity',
       'arrows',

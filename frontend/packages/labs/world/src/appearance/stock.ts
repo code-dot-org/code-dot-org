@@ -185,6 +185,12 @@ export const STOCK_SPRITES: readonly StockSprite[] = [
     dataUrl: image('flag'),
   },
   {
+    id: 'spike',
+    name: 'Spike',
+    description: 'A row of metal teeth on a plate, for something that hurts.',
+    dataUrl: image('spike'),
+  },
+  {
     id: 'playerWalk',
     name: 'Player Walking',
     description: 'Four frames of the player mid-stride, side by side.',
