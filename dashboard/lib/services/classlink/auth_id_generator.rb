@@ -28,9 +28,9 @@ module Services
         tenant = tenant_id.to_s
         sourced = sourced_id.to_s
         if tenant.blank? || sourced.blank? || tenant.include?(SEPARATOR)
-          Observability::Errors.capture_message(
+          Observability::Errors.report(
             'ClassLink v2 authentication id not built',
-            extra: {
+            context: {
               classlink_user_id: classlink_user_id,
               tenant_id_blank: tenant.blank?,
               sourced_id_blank: sourced.blank?,

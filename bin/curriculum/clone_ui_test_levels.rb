@@ -109,7 +109,9 @@ def clone_dsl_level(level, new_name)
   dsl_text = level.dsl_text
   raise "no dsl text found for level #{level.name.dump}" if dsl_text.blank?
 
-  new_text = dsl_text.sub("name '#{level.name}'", "name '#{new_name}'")
+  # Some hand-written files pad the name keyword with extra spaces
+  # (u1l6_lesson_overview.external has two), so match any run of them.
+  new_text = dsl_text.sub(/name[ \t]+'#{Regexp.escape(level.name)}'/, "name '#{new_name}'")
   raise "name not formatted correctly in dsl text for level #{level.name.dump}" if new_text == dsl_text
 
   if level.is_a?(LevelGroup) || level.is_a?(BubbleChoice)

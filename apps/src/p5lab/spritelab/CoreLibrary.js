@@ -30,8 +30,7 @@ export default class CoreLibrary {
     this.numActivePrompts = 0;
     this.screenText = {};
     this.defaultSpriteSize = 100;
-    // Tolerance (px) for resting-contact comparisons in hasSupportAt /
-    // isDirectlyAbove.
+    // Tolerance (px) for resting-contact comparisons in isDirectlyAbove.
     this.contactEpsilon = 0;
     this.printLog = [];
     this.promptVars = {};
