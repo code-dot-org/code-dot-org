@@ -30217,13 +30217,19 @@ en:
             lesson-6:
               name: Variables - Day 3
             lesson-7:
-              name: Lesson 7
+              name: 'Lesson 24: Strings - Day 1'
             lesson-8:
-              name: Lesson 8
+              name: 'Lesson 25: Strings - Day 2'
             lesson-9:
-              name: Lesson 9
+              name: 'Lesson 26: Expressions and Operators - Day 1'
             lesson-10:
-              name: Lesson 10
+              name: 'Lesson 27: Expressions and Operators - Day 2'
+            lesson-11:
+              name: 'Lesson 28: Random Values - Day 1'
+            lesson-12:
+              name: 'Lesson 29: Random Values - Day 2'
+            lesson-13:
+              name: 'Lesson 30: Project - Wrapped'
           lesson_groups: {}
           name: csp-unit1-dev-27-28
           title: Unit 1 - Creating Purposeful Apps and Programs
@@ -30400,6 +30406,9 @@ en:
             **Suggested time**: 120 minutes
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-csd-unit2-2026
         self-paced-pl-teaching-programming-with-music-lab-unit1-2026:
           title: AID - Teaching Programming with Music Lab
           description: |-
@@ -30432,24 +30441,36 @@ en:
           student_description: "This professional learning module is designed to help you prepare to teach CodeAI's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-csd-unit3-2026
         self-paced-pl-teaching-csd-unit5-2026:
           title: Preparing to Teach Data and Society
           description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 70 minutes"
           student_description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 70 minutes"
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-csd-unit5-2026
         self-paced-pl-teaching-physical-computing-2026:
           title: Preparing to Teach Creating Apps for Devices (Circuit Playground)
           description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
           student_description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-physical-computing-2026
         self-paced-pl-teaching-microbit-2026:
           title: Preparing to Teach Creating Apps for Devices (micro:bit)
           description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
           student_description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-microbit-2026
         foundations-of-ai-programming-javascript-2026:
           lesson_groups:
             lessonGroup-2:
