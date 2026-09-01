@@ -38,8 +38,3 @@
 # exported to this schema, but should be limited to only columns that have an identified analytics purpose.
 cron-pii:
 - dashboard.course_offerings_pd_workshops
-
-# All tables in this section are exported to the Redshift `dashboard_production` schema. Do NOT export columns containing
-# sensitive data to this schema.
-cron:
-- dashboard.school_infos
