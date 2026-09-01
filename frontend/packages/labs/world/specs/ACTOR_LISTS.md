@@ -121,7 +121,15 @@ generators that call them.
 
 ## Where a list may live
 
-**Not in a property.** `PropertyType` is `number | boolean | string | vector |
+**Not in a property.** — WHICH STOPPED BEING TRUE. `PropertyType` grew `actors`
+and `actor`, and the library leans on them: Collision keeps `contacts`,
+Collection keeps `collected`, Inventory keeps `things`, Camera Follow keeps the
+one actor it is watching. What survived of this paragraph is the SNAPSHOT, which
+still refuses them for the reason below — so an actor property is state a step
+can keep and a hot reload cannot carry (`specs/LISTS.md`). The rest is left as
+written, because the reasoning is what made the exception explicit.
+
+`PropertyType` was `number | boolean | string | vector |
 point` — plain data, and deliberately: `World.snapshot()` puts every property's
 value into the hot-reload baseline and the reconciler compares by
 `JSON.stringify`. An Actor holds `actor.world` and the world holds its actors,
