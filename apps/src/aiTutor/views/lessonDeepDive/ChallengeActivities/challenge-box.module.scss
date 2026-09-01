@@ -15,7 +15,7 @@
 .mainColumn {
   display: flex;
   flex-direction: column;
-  flex: 3;
+  flex: 4;
   min-width: 0;
   min-height: 0;
 }
@@ -73,7 +73,7 @@
   margin: 0 0 8px !important;
   font-size: 1rem !important;
   font-weight: 600 !important;
-  color: var(--text-neutral-primary);
+  color: var(--text-info-primary-fixed) !important;
 }
 
 .instructionsText {
@@ -99,12 +99,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 12px !important;
   flex-basis: 0;
   flex-grow: 1;
   background-color: var(--background-neutral-secondary) !important;
 
   &.Selected {
-    border-color: var(--borders-brand-purple-strong);
+    // border-color: var(--borders-brand-purple-strong);
+    background-color: var(--background-selected-primary) !important;
+    color: var(--text-selected-primary) !important;
   }
 }
 
@@ -121,6 +124,17 @@
   background-color: var(--background-neutral-primary);
 }
 
+.rightSidebar {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  padding: 16px;
+  background-color: var(--background-neutral-primary);
+  border-left: 1px solid var(--borders-neutral-primary);
+  gap: 20px;
+}
+
 // The active challenge pane with the modality toggle underneath it. Fills
 // the whiteboard column below the top bar.
 .activityColumn {
@@ -130,13 +144,34 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  background-color: var(--background-neutral-primary);
+}
+
+.activityColumnTwo {
+  flex: 3;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: var(--background-neutral-primary);
+}
+
+.activityRow {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: var(--background-neutral-primary);
 }
 
 // WhiteboardChallenge wraps its content in the component-library ThemeProvider,
 // which renders an unstyled <div data-theme> between this column and the
 // canvas. It must carry the flex chain through so the whiteboard can grow to
 // fill the height rather than collapsing.
-.activityColumn > [data-theme] {
+.activityColumnTwo > [data-theme] {
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -145,13 +180,18 @@
 
 // Bottom modality toggle: icon-over-label choices, the active one framed
 // in a purple pill.
-.modalityToggle {
+.bottomPanel {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 20px;
   border-top: 1px solid var(--borders-neutral-primary);
   background-color: var(--background-neutral-primary);
+  padding: 8px;
+
+  :only-child {
+    margin: 0 auto;
+}
 }
 
 .choice {

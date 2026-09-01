@@ -23,6 +23,10 @@ interface ChallengeBoxProps {
   lessonId: number;
   challenge: Challenge;
   challengeType: string;
+  challengeSetCallback: (
+    pickedChallenge: Challenge | null,
+    pickedChallengeType: string | null
+  ) => void;
 }
 
 // Terminal evaluation_status values that map to a student-facing error
@@ -38,6 +42,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
   lessonId,
   challenge,
   challengeType,
+  challengeSetCallback,
 }) => {
   const [submitted, setSubmitted] = useState(false);
   const [showConfirmation, setShowConfirmation] = useState(false);
@@ -55,7 +60,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
     null
   );
 
-  // "Submit for feedback" lives in the top bar, but the work being submitted
+  // "Submit" lives in the bottom bar, but the work being submitted
   // (the drawing, or the recording) lives in the active modality component.
   // The modality reports whether it can be submitted through
   // onSubmittableChange, and registers its submit/reset handlers on these
@@ -63,6 +68,13 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
   const [canSubmit, setCanSubmit] = useState(false);
   const submitRef = useRef<(() => void | Promise<void>) | null>(null);
   const resetRef = useRef<(() => void) | null>(null);
+
+  // Video challenges are recordings top to bottom, so the record button
+  // always applies; whiteboard challenges only need it for an audio
+  // explanation.
+  const isRecordable =
+    challengeType === ChallengeTypes.VIDEO ||
+    explanationType === ExplanationTypes.AUDIO;
 
   // Both challenge modalities report submission through this callback; the
   // confirmation dialog is shared here rather than duplicated per modality.
@@ -218,8 +230,11 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
           ) : (
             <div className={styles.sidebarContent}>
               <div>
-                <Typography variant="h6" className={styles.sidebarHeading}>
-                  Instructions
+                <Typography
+                  variant="overline2"
+                  className={styles.sidebarHeading}
+                >
+                  Create
                 </Typography>
                 <Typography variant="body3" className={styles.instructionsText}>
                   {challenge.question}
@@ -227,6 +242,20 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
               </div>
               {challengeType === ChallengeTypes.WHITEBOARD && (
                 <div className={styles.whiteboardButtonContainer}>
+                  <div>
+                    <Typography
+                      variant="overline2"
+                      className={styles.sidebarHeading}
+                    >
+                      Explain
+                    </Typography>
+                    <Typography
+                      variant="body3"
+                      className={styles.instructionsText}
+                    >
+                      Use audio or text to explain what you created.
+                    </Typography>
+                  </div>
                   <div className={styles.explanationContainer}>
                     <MuiButton
                       className={classNames([
@@ -286,37 +315,6 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
                       Text
                     </MuiButton>
                   </div>
-                  {explanationType === ExplanationTypes.AUDIO && (
-                    <MuiButton
-                      size="medium"
-                      color={isRecording ? 'error' : 'secondary'}
-                      startIcon={
-                        <FontAwesomeV6Icon
-                          iconStyle="solid"
-                          iconName={isRecording ? 'square' : 'circle'}
-                          title={isRecording ? 'Stop' : 'Record'}
-                        />
-                      }
-                      variant="contained"
-                      disabled={submitted}
-                      onClick={() => setIsRecording(!isRecording)}
-                    >
-                      {isRecording
-                        ? 'Stop Recording'
-                        : hasRecording
-                        ? 'Record Again'
-                        : 'Start Recording'}
-                    </MuiButton>
-                  )}
-                  {explanationType === ExplanationTypes.TEXT && (
-                    <textarea
-                      id="challenge-explanation"
-                      className={styles.textArea}
-                      placeholder="Write a paragraph explaining your work"
-                      onChange={e => setTextExplanation(e.target.value)}
-                      disabled={submitted}
-                    />
-                  )}
                 </div>
               )}
             </div>
@@ -347,6 +345,24 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
               // to submit; "Start over" is always available.
               <>
                 <MuiButton
+                  variant="contained"
+                  color="primary"
+                  size="extraSmall"
+                  className={styles.submitButton}
+                  // disabled={!canSubmit}
+                  startIcon={
+                    <FontAwesomeV6Icon
+                      iconStyle="solid"
+                      iconName="arrow-left"
+                    />
+                  }
+                  onClick={() => {
+                    challengeSetCallback(null, null);
+                  }}
+                >
+                  Choose a different challenge
+                </MuiButton>
+                <MuiButton
                   variant="outlined"
                   color="secondary"
                   size="extraSmall"
@@ -360,57 +376,116 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
                 >
                   Start over
                 </MuiButton>
-                <MuiButton
-                  variant="contained"
-                  color="primary"
-                  size="extraSmall"
-                  className={styles.submitButton}
-                  disabled={!canSubmit}
-                  onClick={() => submitRef.current?.()}
-                >
-                  Submit for feedback
-                </MuiButton>
               </>
             )}
           </div>
           <div className={styles.activityColumn}>
-            {challengeType === ChallengeTypes.WHITEBOARD ? (
-              <WhiteboardChallenge
-                challengeId={challenge?.id ?? null}
-                submitted={submitted}
-                submitCallback={handleSubmittedChange}
-                isRecording={isRecording}
-                setIsRecording={setIsRecording}
-                hasRecording={hasRecording}
-                setHasRecording={setHasRecording}
-                explanationType={explanationType}
-                lessonId={lessonId}
-                textExplanation={textExplanation}
-                setEvaluationStatus={setEvaluationStatus}
-                setChallengeResponseId={setChallengeResponseId}
-                onSubmittableChange={setCanSubmit}
-                submitRef={submitRef}
-                resetRef={resetRef}
-                starterImageAltText={
-                  challenge?.whiteboard_starter_image_alt_text ?? null
-                }
-                starterImageUrl={
-                  challenge?.whiteboard_starter_image_url ?? null
-                }
-              />
-            ) : (
-              <VideoChallenge
-                submitted={submitted}
-                submitCallback={handleSubmittedChange}
-                challenge={challenge}
-                lessonId={lessonId}
-                setEvaluationStatus={setEvaluationStatus}
-                setChallengeResponseId={setChallengeResponseId}
-                onSubmittableChange={setCanSubmit}
-                submitRef={submitRef}
-                resetRef={resetRef}
-              />
-            )}
+            <div className={styles.activityRow}>
+              <div className={styles.activityColumnTwo}>
+                {challengeType === ChallengeTypes.WHITEBOARD ? (
+                  <WhiteboardChallenge
+                    challengeId={challenge?.id ?? null}
+                    submitted={submitted}
+                    submitCallback={handleSubmittedChange}
+                    isRecording={isRecording}
+                    setIsRecording={setIsRecording}
+                    hasRecording={hasRecording}
+                    setHasRecording={setHasRecording}
+                    explanationType={explanationType}
+                    lessonId={lessonId}
+                    textExplanation={textExplanation}
+                    setEvaluationStatus={setEvaluationStatus}
+                    setChallengeResponseId={setChallengeResponseId}
+                    onSubmittableChange={setCanSubmit}
+                    submitRef={submitRef}
+                    resetRef={resetRef}
+                    starterImageAltText={
+                      challenge?.whiteboard_starter_image_alt_text ?? null
+                    }
+                    starterImageUrl={
+                      challenge?.whiteboard_starter_image_url ?? null
+                    }
+                  />
+                ) : (
+                  <VideoChallenge
+                    submitted={submitted}
+                    submitCallback={handleSubmittedChange}
+                    isRecording={isRecording}
+                    setIsRecording={setIsRecording}
+                    hasRecording={hasRecording}
+                    setHasRecording={setHasRecording}
+                    challenge={challenge}
+                    lessonId={lessonId}
+                    setEvaluationStatus={setEvaluationStatus}
+                    setChallengeResponseId={setChallengeResponseId}
+                    onSubmittableChange={setCanSubmit}
+                    submitRef={submitRef}
+                    resetRef={resetRef}
+                  />
+                )}
+              </div>
+              {explanationType === ExplanationTypes.TEXT && (
+                <div className={styles.rightSidebar}>
+                  <div>
+                    <Typography
+                      variant="overline2"
+                      className={styles.sidebarHeading}
+                    >
+                      Text explanation
+                    </Typography>
+                    <Typography
+                      variant="body3"
+                      className={styles.instructionsText}
+                    >
+                      Write a short paragraph explaining your work.
+                    </Typography>
+                  </div>
+                  <textarea
+                    id="challenge-explanation"
+                    className={styles.textArea}
+                    placeholder="Write your explanation here"
+                    onChange={e => setTextExplanation(e.target.value)}
+                    disabled={submitted}
+                  />
+                </div>
+              )}
+            </div>
+            <div className={styles.bottomPanel}>
+              {isRecordable && (
+                <MuiButton
+                  size="medium"
+                  color={isRecording ? 'error' : 'secondary'}
+                  startIcon={
+                    <FontAwesomeV6Icon
+                      iconStyle="solid"
+                      iconName={isRecording ? 'square' : 'circle'}
+                      title={isRecording ? 'Stop' : 'Record'}
+                    />
+                  }
+                  variant="contained"
+                  disabled={submitted}
+                  onClick={() => setIsRecording(!isRecording)}
+                >
+                  {isRecording
+                    ? 'Stop Recording'
+                    : hasRecording
+                    ? 'Record Again'
+                    : 'Start Recording'}
+                </MuiButton>
+              )}
+              {(!isRecordable || hasRecording) && (
+                <MuiButton
+                  variant="contained"
+                  color="primary"
+                  size="medium"
+                  className={styles.submitButton}
+                  disabled={!canSubmit}
+                  onClick={() => submitRef.current?.()}
+                >
+                  Submit
+                </MuiButton>
+              )}
+            </div>
           </div>
         </div>
       </div>
