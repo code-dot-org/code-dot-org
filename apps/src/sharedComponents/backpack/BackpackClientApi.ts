@@ -140,13 +140,12 @@ export default class BackpackClientApi {
 
   /**
    * Takes a file name and contents and saves to the backpack.
-   * Used in Codebridge labs to save a file.
    * @param {String} filename
    * @param {String} fileContents Contents of file to be saved to the backpack.
    * @param {Function} onError Function to call if file fails to save.
    * @param {Function} onSuccess Function to call if file saves.
    */
-  saveCodebridgeFile(
+  saveFile(
     filename: string,
     fileContents: string,
     onError: ErrorCallback,
@@ -165,7 +164,7 @@ export default class BackpackClientApi {
   /**
    * Save a file to the backpack from the given URL.
    */
-  async saveCodebridgeFileFromUrl(
+  async saveFileFromUrl(
     filename: string,
     fileUrl: string,
     onError?: ErrorCallback,

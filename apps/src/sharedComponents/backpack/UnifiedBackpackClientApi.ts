@@ -154,34 +154,28 @@ export default class UnifiedBackpackClientApi {
 
   /**
    * Save a single file to the universal backpack.
-   * Used in Codebridge labs to save a file.
    */
-  async saveCodebridgeFile(
+  async saveFile(
     filename: string,
     fileContents: string,
     onError: ErrorCallback,
     onSuccess: () => void
   ) {
     const client = await this.universalClient(onError);
-    client?.saveCodebridgeFile(filename, fileContents, onError, onSuccess);
+    client?.saveFile(filename, fileContents, onError, onSuccess);
   }
 
   /**
    * Save a file to the universal backpack from the given URL.
    */
-  async saveCodebridgeFileFromUrl(
+  async saveFileFromUrl(
     filename: string,
     fileUrl: string,
     onError?: ErrorCallback,
     onSuccess?: () => void
   ) {
     const client = await this.universalClient(onError);
-    await client?.saveCodebridgeFileFromUrl(
-      filename,
-      fileUrl,
-      onError,
-      onSuccess
-    );
+    await client?.saveFileFromUrl(filename, fileUrl, onError, onSuccess);
   }
 
   async saveBlobFile(
