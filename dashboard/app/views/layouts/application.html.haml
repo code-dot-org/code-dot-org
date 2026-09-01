@@ -29,7 +29,6 @@
     = tag :link, rel: 'icon', type: 'image/svg+xml', href: asset_path(Cdo::Brand.favicon_svg(request))
     = favicon_link_tag asset_path(Cdo::Brand.favicon(request)), rel: 'icon', sizes: '32x32'
     = stylesheet_link_tag    'css/code-studio', media: 'all'
-    = stylesheet_link_tag    'legacy-styles', media: 'all'
     = render partial: 'layouts/google_analytics'
     - if DCDO.get('frontend-observability-enabled', false)
       -# Frontend config (read by core's SiteConfig via meta tag)

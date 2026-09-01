@@ -1,6 +1,11 @@
+// Dependency-provided styles
 @import "@selectize/selectize/dist/css/selectize";
+
+// Vendored styles
 @import "lib/jquery-ui/jquery-ui.min";
 @import "lib/qtip/jquery.qtip.min";
+
+// Styles imported from Dashboard
 @import "./legacy";
 @import "./legacy/errors";
 @import "./legacy/extra_links";
@@ -13,3 +18,13 @@
 @import "./legacy/unplugged";
 @import "./legacy/lti/login_lti_account_linking";
 @import "./legacy/lti/sign_up_warning_banner";
+
+// Shared styles
+@import "fonts/barlow-semi-condensed";
+@import "fonts/geist";
+@import "fonts/noto-sans";
+@import "fonts/space-grotesk";
+@import "user-menu";
+@import "buttons";
+@import "course-blocks";
+@import "warning-banner";
