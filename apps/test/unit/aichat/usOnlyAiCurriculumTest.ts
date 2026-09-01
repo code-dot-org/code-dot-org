@@ -24,8 +24,21 @@ describe('getUsOnlyAiCurriculumWarnings', () => {
         unitName: 'ai-powered-threats-and-defenses-2026',
       });
 
-      expect(warning).toContain('This unit includes levels');
+      // Unit-scoped copy speaks about the assignment itself; only the
+      // course-scoped copy enumerates units or reassures about siblings.
+      expect(warning).not.toContain('The following units');
       expect(warning).not.toContain('Other units are unaffected');
+    });
+
+    // Narrowing the section to an unaffected unit must not raise the course
+    // warning about units the teacher is not teaching.
+    it('stays quiet when the assigned unit is unaffected', () => {
+      expect(
+        getUsOnlyAiCurriculumWarnings({
+          courseVersionName: 'ai-foundations-exploring-ai-and-cs-2026',
+          unitName: 'problem-solving-with-ai-2026',
+        })
+      ).toStrictEqual([]);
     });
   });
 
@@ -39,13 +52,17 @@ describe('getUsOnlyAiCurriculumWarnings', () => {
       expect(tutor).toContain('Web Development');
     });
 
-    it('warns for an assigned Web Lab 2 unit', () => {
+    it('warns for an assigned Web Lab 2 unit, and only about that unit', () => {
       const warnings = getUsOnlyAiCurriculumWarnings({
         courseVersionName: 'ai-discoveries-2026',
         unitName: 'web-development-2026',
       });
 
-      expect(warnings.some(w => w.includes('Web Lab 2'))).toBe(true);
+      expect(warnings).toHaveLength(1);
+      expect(warnings[0]).toContain('AI Tutor');
+      // Not the course warning about Thinking Critically About AI, which this
+      // teacher has not assigned.
+      expect(warnings[0]).not.toContain('The following units');
     });
 
     // csd2-2026 was rebuilt in Web Lab 2 but never asks students to use the
@@ -71,10 +88,12 @@ describe('getUsOnlyAiCurriculumWarnings', () => {
     });
 
     expect(warnings).toHaveLength(2);
-    expect(warnings.some(w => w.includes('Other units are unaffected'))).toBe(
-      true
-    );
     expect(warnings.some(w => w.includes('AI Tutor'))).toBe(true);
+    // The tutor warning names further affected units in this course, so the
+    // chat warning must not claim the rest of it is fine.
+    expect(warnings.some(w => w.includes('Other units are unaffected'))).toBe(
+      false
+    );
   });
 
   it('returns nothing for unaffected curriculum or no assignment', () => {

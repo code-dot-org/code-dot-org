@@ -154,10 +154,10 @@ export const US_ONLY_TUTOR_UNITS: Record<string, string> = {
 const chatUnitWarning =
   'The assigned unit includes levels that use AI models that are not available in your region. On those levels, AI chat features will be disabled for you and your students.';
 
-const chatCourseWarning = (unitTitles: string[]) =>
+const chatCourseWarning = (unitTitles: string[], reassure: boolean) =>
   `The following units in the assigned course use AI models that are not available in your region: ${unitTitles.join(
     ', '
-  )}. Other units are unaffected.`;
+  )}.${reassure ? ' Other units are unaffected.' : ''}`;
 
 const tutorUnitWarning =
   "The assigned unit requires AI Tutor, which is not available in your region. Students won't be able to complete some levels in the unit.";
@@ -189,30 +189,34 @@ export const getUsOnlyAiCurriculumWarnings = ({
 
   // A single-unit course carries the same slug as course and as unit, so a hit
   // in either list means the section is pointed at one affected unit.
-  const assignedUnit = (units: Record<string, string>) =>
-    !!unitName && !!units[unitName];
-  const assignedUnitAsCourse = (courses: Record<string, string[]>) =>
-    !!unitName && !!courses[unitName];
+  const assignedUnitIsIn = (
+    units: Record<string, string>,
+    courses: Record<string, string[]>
+  ) => !!unitName && (!!units[unitName] || !!courses[unitName]);
 
-  if (
-    assignedUnit(US_ONLY_CHAT_UNITS) ||
-    assignedUnitAsCourse(US_ONLY_CHAT_COURSES)
-  ) {
+  // Fall back to the course only when no particular unit is assigned. A teacher
+  // who has narrowed the section to one unit should hear about that unit, not
+  // about units elsewhere in the course they are not teaching.
+  const courseUnits = (courses: Record<string, string[]>) =>
+    !unitName && courseVersionName ? courses[courseVersionName] : undefined;
+
+  const chatCourseUnits = courseUnits(US_ONLY_CHAT_COURSES);
+  const tutorCourseUnits = courseUnits(US_ONLY_TUTOR_COURSES);
+
+  if (assignedUnitIsIn(US_ONLY_CHAT_UNITS, US_ONLY_CHAT_COURSES)) {
     warnings.push(chatUnitWarning);
-  } else if (
-    courseVersionName &&
-    US_ONLY_CHAT_COURSES[courseVersionName]?.length
-  ) {
-    warnings.push(chatCourseWarning(US_ONLY_CHAT_COURSES[courseVersionName]));
+  } else if (chatCourseUnits?.length) {
+    // Drop the reassurance when the tutor warning below names further affected
+    // units in the same course; "other units are unaffected" would contradict it.
+    warnings.push(
+      chatCourseWarning(chatCourseUnits, !tutorCourseUnits?.length)
+    );
   }
 
-  if (assignedUnit(US_ONLY_TUTOR_UNITS)) {
+  if (assignedUnitIsIn(US_ONLY_TUTOR_UNITS, US_ONLY_TUTOR_COURSES)) {
     warnings.push(tutorUnitWarning);
-  } else if (
-    courseVersionName &&
-    US_ONLY_TUTOR_COURSES[courseVersionName]?.length
-  ) {
-    warnings.push(tutorCourseWarning(US_ONLY_TUTOR_COURSES[courseVersionName]));
+  } else if (tutorCourseUnits?.length) {
+    warnings.push(tutorCourseWarning(tutorCourseUnits));
   }
 
   return warnings;
