@@ -80,7 +80,7 @@ module Api::V1::Pd
     end
 
     private def notify_error(exception, error_status_code = :bad_request)
-      Honeybadger.notify(
+      Observability::Errors.report(
         exception,
         context: {
           workshop_id: @workshop.id,

@@ -14719,6 +14719,19 @@ indexes:
     comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: quiz_questions
+    name: index_quiz_questions_on_created_at
+    unique: false
+    columns:
+    - created_at
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: quiz_questions
     name: index_quiz_questions_on_name
     unique: false
     columns:
@@ -16798,7 +16811,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20260828120000
+version: 20260831000001
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8
