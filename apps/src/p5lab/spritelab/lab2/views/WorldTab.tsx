@@ -72,6 +72,9 @@ interface PaletteItem extends WorldCell {
   thumb?: string;
 }
 
+// What the palette can choose: a placeable cell, or the eraser.
+type PaletteSelection = WorldCell | 'erase';
+
 interface WorldTabProps {
   world?: World;
   // Cells per side of the playfield. Storage is larger, so placements keep
@@ -81,8 +84,8 @@ interface WorldTabProps {
   onPaintCell: (row: number, col: number, cell: WorldCell | null) => void;
   // Palette selection, owned by the view so it survives tab switches (this
   // component unmounts when the tab is hidden).
-  selected: WorldCell | 'erase' | null;
-  onSelect: (selection: WorldCell | 'erase') => void;
+  selected: PaletteSelection | null;
+  onSelect: (selection: PaletteSelection) => void;
 }
 
 /**
@@ -123,7 +126,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     [palette]
   );
   // The palette plus Erase, in keyboard order.
-  const selections: (WorldCell | 'erase')[] = useMemo(
+  const selections: PaletteSelection[] = useMemo(
     () => [
       ...palette.map(item => ({image: item.image, kind: item.kind})),
       'erase' as const,
@@ -148,10 +151,10 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
       current === message ? `${message}\u00a0` : message
     );
 
-  const selectionLabel = (selection: WorldCell | 'erase') =>
+  const selectionLabel = (selection: PaletteSelection) =>
     selection === 'erase' ? 'Erase' : selection.image;
 
-  const choose = (selection: WorldCell | 'erase') => {
+  const choose = (selection: PaletteSelection) => {
     onSelect(selection);
     announce(`${selectionLabel(selection)} chosen.`);
   };
@@ -200,17 +203,35 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     return {row, col};
   };
 
-  // Keyboard drag-paint, the paint editor's model: while Enter or Space is
-  // held, arrow moves paint the cell they land on, like dragging with the
-  // button down. The press decides paint-or-remove the way a pointer press
-  // does, and the whole stroke keeps that mode. A swallowed keyup (window
-  // blur mid-hold) must not leave the key stuck down.
+  // Whether Enter or Space is down, for drag-paint (see the component
+  // note). A swallowed keyup — window blur mid-hold — must not leave the
+  // key stuck down.
   const paintKeyHeld = useRef(false);
+  const isPaintKey = (key: string) => key === 'Enter' || key === ' ';
   useEffect(() => {
     const release = () => (paintKeyHeld.current = false);
     window.addEventListener('blur', release);
     return () => window.removeEventListener('blur', release);
   }, []);
+
+  // 1-9 and 0 work from the grid and the palette alike, so an item can be
+  // swapped without leaving the grid.
+  const handleShortcutKey = (event: React.KeyboardEvent): boolean => {
+    if (event.key >= '1' && event.key <= '9') {
+      const index = Number(event.key) - 1;
+      if (index < palette.length) {
+        choose(selections[index]);
+      }
+      return true;
+    }
+    if (event.key === ERASE_SHORTCUT) {
+      if (palette.length > 0) {
+        choose('erase');
+      }
+      return true;
+    }
+    return false;
+  };
 
   const activateCellByKeyboard = (row: number, col: number) => {
     if (!selected) {
@@ -231,7 +252,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
       paintKeyHeld.current = false;
       return;
     }
-    if (event.key === 'Enter' || event.key === ' ') {
+    if (isPaintKey(event.key)) {
       // Handled here, not by the button: native activation would auto-repeat
       // while held, toggling the cell on and off.
       event.preventDefault();
@@ -261,7 +282,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   };
 
   const handleGridKeyUp = (event: React.KeyboardEvent) => {
-    if (event.key === 'Enter' || event.key === ' ') {
+    if (isPaintKey(event.key)) {
       paintKeyHeld.current = false;
     }
   };
@@ -284,10 +305,11 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     if (count === 0) {
       return;
     }
+    const focusedIndex = paletteRefs.current.findIndex(
+      el => el === document.activeElement
+    );
     const current =
-      paletteRefs.current.findIndex(el => el === document.activeElement) >= 0
-        ? paletteRefs.current.findIndex(el => el === document.activeElement)
-        : Math.max(selectedIndex, 0);
+      focusedIndex >= 0 ? focusedIndex : Math.max(selectedIndex, 0);
     const items = paletteRefs.current;
     // Items before the first line wrap share the first item's top. Viewport
     // coordinates, because each item sits inside its own tooltip wrapper
@@ -315,25 +337,6 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
       event.preventDefault();
       focusAndChoose(next);
     }
-  };
-
-  // 1-9 and 0 work from the grid and the palette alike, so an item can be
-  // swapped without leaving the grid.
-  const handleShortcutKey = (event: React.KeyboardEvent): boolean => {
-    if (event.key >= '1' && event.key <= '9') {
-      const index = Number(event.key) - 1;
-      if (index < palette.length) {
-        choose(selections[index]);
-      }
-      return true;
-    }
-    if (event.key === ERASE_SHORTCUT) {
-      if (palette.length > 0) {
-        choose('erase');
-      }
-      return true;
-    }
-    return false;
   };
 
   const shortcutFor = (index: number) =>
@@ -483,7 +486,9 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
                         paintCell(row, col, strokeErase.current);
                       }
                     }}
-                    // Pointer presses painted above; this is keyboard activation.
+                    // Physical Enter and Space are handled in keydown; a
+                    // detail-0 click here is assistive tech activating the
+                    // cell without key events.
                     onClick={e => {
                       if (e.detail === 0) {
                         activateCellByKeyboard(row, col);
