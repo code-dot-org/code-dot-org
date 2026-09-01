@@ -78,7 +78,7 @@ class QuizQuestionsController < ApplicationController
     level = find_quiz_level(params[:quizLevelId])
     placement = level&.placements&.find_by!(quiz_question_id: question.id)
     should_fork = question.used_in_published_unit? || quiz_question_params[:editMode] == 'fork'
-    target = should_fork ? MultipleChoiceQuestion.new(key: SecureRandom.uuid, parent: question) : question
+    target = should_fork ? MultipleChoiceQuestion.new(key: SecureRandom.uuid, fork_parent: question) : question
 
     ActiveRecord::Base.transaction(requires_new: true) do
       target.update!(

@@ -70,10 +70,8 @@ class QuizQuestionPlacementsController < ApplicationController
 
   # DELETE /levels/:level_id/quiz_question_placements/:id
   #
-  # Detaches, then hard-deletes the question too if nothing else
-  # references it (other placements, responses, forks) - else falls back
-  # to a plain detach. One transaction, so a failed destroy can't leave
-  # the placement already gone.
+  # Detach, then delete the question unless another placement or a
+  # response still references it. Forks do not count (no FK).
   def destroy
     placement = @level.placements.find_by!(quiz_question_id: params[:id])
     question = placement.quiz_question
@@ -81,14 +79,14 @@ class QuizQuestionPlacementsController < ApplicationController
     destroyed = false
     ActiveRecord::Base.transaction(requires_new: true) do
       placement.destroy!
-      still_referenced = question.levels.exists? || question.quiz_question_responses.exists? || question.forks.exists?
+      still_referenced = question.levels.exists? || question.quiz_question_responses.exists?
       unless still_referenced
         question.destroy!
         destroyed = true
       end
     end
 
-    # True unless this fell back to a plain detach.
+    # false = fell back to a plain detach.
     render json: {destroyed: destroyed}
   rescue ActiveRecord::RecordNotFound
     head :not_found
