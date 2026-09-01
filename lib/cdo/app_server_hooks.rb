@@ -108,6 +108,7 @@ module Cdo
       # initialized in config/initializers/statsig.rb
       require 'cdo/statsig'
       Cdo::StatsigInitializer.init
+      Aws.empty_connection_pools!
     end
 
     def self.after_booted
