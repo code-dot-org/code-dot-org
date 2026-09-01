@@ -2,27 +2,27 @@
 #
 # Table name: quiz_questions
 #
-#  id          :bigint           not null, primary key
-#  type        :string(255)      not null
-#  key         :string(36)       not null
-#  parent_id   :bigint
-#  name        :string(255)      not null
-#  content     :json             not null
-#  explanation :text(65535)
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
+#  id             :bigint           not null, primary key
+#  type           :string(255)      not null
+#  key            :string(36)       not null
+#  fork_parent_id :bigint
+#  name           :string(255)      not null
+#  content        :json             not null
+#  explanation    :text(65535)
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
 #
 # Indexes
 #
-#  index_quiz_questions_on_created_at  (created_at)
-#  index_quiz_questions_on_key         (key)
-#  index_quiz_questions_on_name        (name)
-#  index_quiz_questions_on_parent_id   (parent_id)
+#  index_quiz_questions_on_created_at      (created_at)
+#  index_quiz_questions_on_fork_parent_id  (fork_parent_id)
+#  index_quiz_questions_on_key             (key)
+#  index_quiz_questions_on_name            (name)
 #
 class QuizQuestion < ApplicationRecord
   after_initialize {self.type ||= self.class.sti_name}
 
-  belongs_to :parent, class_name: 'QuizQuestion', optional: true
+  belongs_to :fork_parent, class_name: 'QuizQuestion', optional: true
 
   has_many :quiz_question_standards, dependent: :destroy
   has_many :standards, through: :quiz_question_standards
@@ -36,7 +36,7 @@ class QuizQuestion < ApplicationRecord
   # checks both (along with :placements/:levels) before allowing a hard
   # delete, falling back to a plain detach if either is still present.
   has_many :quiz_question_responses, dependent: nil
-  has_many :forks, class_name: 'QuizQuestion', foreign_key: :parent_id, inverse_of: :parent, dependent: nil
+  has_many :forks, class_name: 'QuizQuestion', foreign_key: :fork_parent_id, inverse_of: :fork_parent, dependent: nil
 
   validates :key, presence: true
   validates :name, presence: true

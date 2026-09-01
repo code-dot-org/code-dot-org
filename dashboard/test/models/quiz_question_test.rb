@@ -27,11 +27,11 @@ class QuizQuestionTest < ActiveSupport::TestCase
     assert_equal [standard], question.reload.standards
   end
 
-  test "parent_id chains a question to the prior revision" do
+  test "fork_parent_id chains a question to the prior revision" do
     original = create(:quiz_question)
-    revision = create(:quiz_question, parent: original)
+    revision = create(:quiz_question, fork_parent: original)
 
-    assert_equal original, revision.parent
+    assert_equal original, revision.fork_parent
   end
 
   test "not used_in_published_unit? when attached to no quiz at all" do

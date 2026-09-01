@@ -2,22 +2,22 @@
 #
 # Table name: quiz_questions
 #
-#  id          :bigint           not null, primary key
-#  type        :string(255)      not null
-#  key         :string(36)       not null
-#  parent_id   :bigint
-#  name        :string(255)      not null
-#  content     :json             not null
-#  explanation :text(65535)
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
+#  id             :bigint           not null, primary key
+#  type           :string(255)      not null
+#  key            :string(36)       not null
+#  fork_parent_id :bigint
+#  name           :string(255)      not null
+#  content        :json             not null
+#  explanation    :text(65535)
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
 #
 # Indexes
 #
-#  index_quiz_questions_on_created_at  (created_at)
-#  index_quiz_questions_on_key         (key)
-#  index_quiz_questions_on_name        (name)
-#  index_quiz_questions_on_parent_id   (parent_id)
+#  index_quiz_questions_on_created_at      (created_at)
+#  index_quiz_questions_on_fork_parent_id  (fork_parent_id)
+#  index_quiz_questions_on_key             (key)
+#  index_quiz_questions_on_name            (name)
 #
 class MultipleChoiceQuestion < QuizQuestion
   # Exactly one correct answer chosen from a list of choices.

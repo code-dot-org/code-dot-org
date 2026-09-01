@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_08_31_000001) do
+ActiveRecord::Schema[7.0].define(version: 2026_08_31_000002) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -2126,16 +2126,16 @@ ActiveRecord::Schema[7.0].define(version: 2026_08_31_000001) do
   create_table "quiz_questions", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "type", null: false
     t.string "key", limit: 36, null: false
-    t.bigint "parent_id"
+    t.bigint "fork_parent_id"
     t.string "name", null: false
     t.json "content", null: false
     t.text "explanation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["created_at"], name: "index_quiz_questions_on_created_at"
+    t.index ["fork_parent_id"], name: "index_quiz_questions_on_fork_parent_id"
     t.index ["key"], name: "index_quiz_questions_on_key"
     t.index ["name"], name: "index_quiz_questions_on_name", type: :fulltext
-    t.index ["parent_id"], name: "index_quiz_questions_on_parent_id"
   end
 
   create_table "reference_guides", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -3108,7 +3108,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_08_31_000001) do
   add_foreign_key "quiz_question_responses", "quiz_questions"
   add_foreign_key "quiz_question_standards", "quiz_questions"
   add_foreign_key "quiz_question_standards", "standards"
-  add_foreign_key "quiz_questions", "quiz_questions", column: "parent_id"
+  add_foreign_key "quiz_questions", "quiz_questions", column: "fork_parent_id"
   add_foreign_key "rubric_ai_evaluations", "rubrics"
   add_foreign_key "rubric_ai_evaluations", "users"
   add_foreign_key "rubric_ai_evaluations", "users", column: "requester_id"
