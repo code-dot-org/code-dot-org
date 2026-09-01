@@ -175,11 +175,34 @@ of` gave it a reason.
    same door, and a `vectors` list holds Vectors however its items were written
    — a `.map` file has `{x, y}` in it and a block hands over the real thing.
 
-2. **The blocks.** The six above, in `domainBlocks`, generating plain JS arrays;
-   `WorldLab` helpers only where a shape needs normalising (`item of` past the
-   end, `add` to a variable holding nothing).
-3. **The index.** `item ⟨n⟩ of ⟨list⟩`, one-based, with the off-by-one written
-   down in the tooltip rather than left to be discovered.
+2. ✅ **The blocks.** Nine in a `Lists` drawer, and three of them are Blockly's
+   own: `lists_create_with` for its MUTATOR — the thing that makes a literal
+   growable, and a hundred lines to write twice — with `lists_create_empty` and
+   `lists_length` beside it, all three reworded into this lab's voice through
+   the one file that writes to `Blockly.Msg` (`colorMessages`). The check they
+   report, `Array`, is what everything here agrees on for the same reason: it is
+   a string two sockets share and nothing a learner reads.
+
+   The rest is written: `add … to`, `empty`, `has`, and a `for each` per kind of
+   thing. **Three loops rather than one with a dropdown**, because what a
+   dropdown would choose is the TYPE of the variable it binds, and a variable's
+   type is fixed once it is made — switching it would need the find-rename-or-
+   replace machinery `define block`'s designer has and nothing else here does.
+   They read as a family with `for each actor`, which was the first of them.
+
+   **A drawer nobody has earned is shown to everybody**, which is how the shelf
+   gating works and why this step ends with a TILE as well as blocks: without
+   one, a learner in the first lesson meets a Lists drawer. `memory/lists`
+   grants the category — eleven blocks that are one idea, where the Actor drawer
+   is forty-two that are not — and its lesson is the next step.
+
+3. **The index.** `item ⟨n⟩ of ⟨list⟩`, one-based — held back until something
+   asks for it, which is the discipline the actor lists kept: `ordered by`
+   arrived only when `take ⟨3⟩ of` gave it a reason. The question it has to
+   answer first is what "past the end" is, and the honest options (nothing, the
+   last one, a zero of a type the block cannot know) are easier to choose
+   between with a real use in front of them — which is the Conversation
+   rewrite, step 5.
 4. **A lesson.** Memory's array tile, written the way every other lesson is:
    a starting project that wants a list, and a check that a list is what was
    used.

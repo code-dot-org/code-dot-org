@@ -768,6 +768,28 @@ export const TILES: readonly Tile[] = [
     },
   },
   {
+    id: 'memory/lists',
+    region: 'memory',
+    at: at('memory', 3, 1),
+    title: 'More than one of something',
+    teaches:
+      'A list: one name for several things, and the loop that walks what you put in it.',
+    task: 'Three things to remember and one variable to remember them in.',
+    requires: ['memory/score'],
+    // The DRAWER, rather than its blocks one at a time. Eleven blocks is a lot
+    // to hand over at once and they are one idea: a list, the ways to fill it,
+    // and the loops that walk it. `origin/first-world` grants seven blocks
+    // instead of the Actor drawer for the opposite reason — forty-two blocks is
+    // not one idea.
+    unlocks: [{kind: 'category', name: 'Lists'}],
+    check: {
+      kind: 'outcome',
+      says: 'Everything the learner put in the list is said, in the order they put it there.',
+      falsePass:
+        'Three `print` blocks, which say the same three things and have no list in them — so the check reads the list itself as well as the console.',
+    },
+  },
+  {
     id: 'memory/score',
     region: 'memory',
     at: at('memory', 3, 0),

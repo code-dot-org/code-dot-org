@@ -17,6 +17,10 @@ export {Trait} from './core/Trait';
 export {Actor, type ActorInit} from './core/Actor';
 // One actor or several, and what an operation means when it is several
 // (specs/ACTOR_LISTS.md). Generated code routes through these.
+// Lists of plain values — numbers, words, places (specs/LISTS.md). Generated
+// code routes through these the way it routes actor values through the two
+// below: what a list operation MEANS is one place rather than in every block.
+export {addTo, items, listHas} from './core/lists';
 export {
   all,
   each,

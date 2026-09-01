@@ -12,8 +12,10 @@
 // Blockly JSON behind them. So `catalogue.ts` stays data about tiles, and the
 // projects live here, looked up by tile id.
 //
-// SIXTY-SEVEN OF SIXTY-SEVEN: every tile on the map has a lesson, a starting
-// project, and a check tested in both directions.
+// Sixty-seven of sixty-eight. Every tile but one has a lesson, a starting
+// project, and a check tested in both directions — and the one is the newest:
+// `memory/lists`, whose vocabulary arrived first (specs/LISTS.md, step 2) and
+// whose lesson is the step after it.
 //
 // What is written is milestone 4 of specs/PROGRESSION_UI.md and then some: all
 // six FOUNDATIONS, and Arcade, Story and Making whole after them.

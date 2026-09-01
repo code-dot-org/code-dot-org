@@ -40,3 +40,58 @@ export function asList(type: string, value: unknown): unknown[] {
     ? value.map(item => Vector.from(item as VectorLike))
     : [...value];
 }
+
+/**
+ * The items of a value, for walking.
+ *
+ * Anything that is not a list walks as an empty one, which is what `for each`
+ * over an unset variable should do: nothing, rather than throw at a learner
+ * mid-sentence.
+ */
+export const items = (value: unknown): unknown[] =>
+  Array.isArray(value) ? value : [];
+
+/**
+ * `add ⟨5⟩ to ⟨scores⟩` — the same list, one longer.
+ *
+ * MUTATES and returns it, so two variables naming one list see each other's
+ * additions, exactly as `push ⟨actor⟩ to ⟨…⟩` does. The return is what makes
+ * the generated line an assignment, which is what covers the case a mutation
+ * cannot: a variable that holds nothing yet becomes a list of one.
+ */
+export function addTo(list: unknown, value: unknown): unknown[] {
+  if (Array.isArray(list)) {
+    list.push(value);
+    return list;
+  }
+  return [value];
+}
+
+/**
+ * Whether a list holds a value — `⟨scores⟩ has ⟨10⟩`.
+ *
+ * BY VALUE, which `Array.includes` is only for numbers and words: two Vectors
+ * at the same place are two objects, so a list of places would answer "no" to
+ * a place it holds. Comparing the pair of numbers is what a learner means by
+ * "the same place".
+ */
+export function listHas(list: unknown, value: unknown): boolean {
+  return items(list).some(item => sameValue(item, value));
+}
+
+/** Value equality across the three kinds a list may hold. */
+function sameValue(one: unknown, other: unknown): boolean {
+  if (one === other) {
+    return true;
+  }
+  const place = (value: unknown): {x: number; y: number} | undefined =>
+    typeof value === 'object' &&
+    value !== null &&
+    typeof (value as {x?: unknown}).x === 'number' &&
+    typeof (value as {y?: unknown}).y === 'number'
+      ? (value as {x: number; y: number})
+      : undefined;
+  const a = place(one);
+  const b = place(other);
+  return a !== undefined && b !== undefined && a.x === b.x && a.y === b.y;
+}

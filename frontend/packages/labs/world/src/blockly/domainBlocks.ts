@@ -207,11 +207,15 @@ import {
 } from './tweens';
 import {
   ActorVariable,
+  ListVariable,
+  NumberVariable,
   paramFlavour,
   PARAM_GETTER_BLOCKS,
   PARAM_SETTER_BLOCKS,
   PARAM_TYPE_OPTIONS,
   PARAM_VARIABLE_TYPES,
+  StringVariable,
+  VectorVariable,
 } from './typedVariables';
 import {
   registerValueShadows,
@@ -1570,6 +1574,12 @@ const typedValueCode = (
       return read(names.value) || str(String(d ?? ''));
     case 'actors':
       return read(names.value) || '[]';
+    case 'numbers':
+    case 'words':
+    case 'vectors':
+      // An empty socket is an empty list, which is the only default a list has
+      // — and the same answer `actors` gives one.
+      return read(names.value) || '[]';
     case 'kind':
       // A FIELD, like an enum's, so it is read rather than pulled through a
       // socket — and resolved the way `is a` and `how many ⟨Coin⟩ in` resolve
@@ -1786,6 +1796,17 @@ const typedValueInputs = (
           ),
         ],
       };
+    case 'numbers':
+    case 'words':
+    case 'vectors':
+      // A list socket, and no shadow: an empty one is an empty list, and a
+      // seeded literal would be a list a learner has to empty before they can
+      // put their own in.
+      return {
+        message: `%${slot}`,
+        args: [{type: 'input_value', name: names.value, check: LIST_CHECK}],
+        shadows: [],
+      };
     case 'actors':
       // An actor value, one or many — and no shadow: the empty socket means no
       // actors, which is the only default a set of them has.
@@ -1873,7 +1894,7 @@ const outputForType = (type: PropertyType): string =>
               // more than that: what it HOLDS is the property's business
               // (specs/LISTS.md).
               type === 'numbers' || type === 'words' || type === 'vectors'
-              ? 'List'
+              ? LIST_CHECK
               : 'Number';
 
 // A value block's style by the kind it reports: a boolean is logic, a whole
@@ -2187,6 +2208,15 @@ const defineGetPropertyBlock = (property: PropertyMeta) => {
 // of what the first offers — is worse than asking for it.
 
 /** The output/socket check each kind carries. */
+/**
+ * What a list plugs into — Blockly's own name, so the core literal fits.
+ *
+ * `lists_create_with` reports `Array`, and it is the one core list block this
+ * lab reuses: it carries the mutator that makes a literal growable, which is a
+ * hundred lines nobody has to write twice (specs/LISTS.md).
+ */
+export const LIST_CHECK = 'Array';
+
 const KIND_CHECK: Record<PropertyKind, string> = {
   number: 'Number',
   text: 'String',
@@ -2725,6 +2755,131 @@ const worldEventValue = defineBlock({
     },
   },
 });
+
+// ── Lists of values ──────────────────────────────────────────────────────────
+// The language could hold one number, one word, one place, and any number of
+// ACTORS; these are the blocks that let it hold two numbers (specs/LISTS.md).
+//
+// The literal and the count are Blockly's own, reworded (`colorMessages`): the
+// literal carries the mutator that makes it growable, and rebuilding that to
+// change three words would be the wrong trade. Everything else is here, in the
+// voice the actor lists already speak — `add … to`, `empty`, `how many`, and a
+// `for each` per kind of thing.
+
+const worldListAdd = defineBlock({
+  type: 'world_list_add',
+  message0: 'add %1 to %2',
+  args0: [
+    // UNTYPED, deliberately. A list holds numbers, words or places, and which
+    // is a fact about the list rather than about this block; a socket that
+    // asked would be three blocks to say one thing.
+    {type: 'input_value', name: 'ITEM'},
+    ListVariable.field('LIST'),
+  ],
+  inputsInline: true,
+  previousStatement: true,
+  nextStatement: true,
+  style: 'sprite_blocks',
+  tooltip:
+    'Put something on the end of a list. Two variables holding one list both ' +
+    'see it, and a variable holding nothing yet becomes a list of one.',
+  generator: {
+    javascript(block, generator) {
+      const item = generator.valueToCode(block, 'ITEM', Order.NONE) || '0';
+      const list = generator.getVariableName(block.getFieldValue('LIST'));
+      // An assignment rather than a bare `push`, which is what covers the
+      // variable that held nothing (`WorldLab.addTo`).
+      return `${list} = WorldLab.addTo(${list}, ${item});\n`;
+    },
+  },
+});
+
+const worldListEmpty = defineBlock({
+  type: 'world_list_empty',
+  message0: 'empty %1',
+  args0: [ListVariable.field('LIST')],
+  previousStatement: true,
+  nextStatement: true,
+  style: 'sprite_blocks',
+  tooltip: 'Take everything out of a list.',
+  generator: {
+    javascript(block, generator) {
+      const list = generator.getVariableName(block.getFieldValue('LIST'));
+      return `${list} = [];\n`;
+    },
+  },
+});
+
+const worldListHas = defineBlock({
+  type: 'world_list_has',
+  message0: '%1 has %2',
+  args0: [
+    {type: 'input_value', name: 'LIST', check: LIST_CHECK},
+    {type: 'input_value', name: 'ITEM'},
+  ],
+  inputsInline: true,
+  output: 'Boolean',
+  style: 'logic_blocks',
+  tooltip:
+    'Whether a list holds something. Two places at the same spot count as ' +
+    'the same place, which `includes` alone would not say.',
+  generator: {
+    javascript(block, generator) {
+      const list = generator.valueToCode(block, 'LIST', Order.NONE) || '[]';
+      const item = generator.valueToCode(block, 'ITEM', Order.NONE) || '0';
+      return [`WorldLab.listHas(${list}, ${item})`, Order.FUNCTION_CALL] as [
+        string,
+        number,
+      ];
+    },
+  },
+});
+
+/**
+ * `for each ⟨number ⟨n⟩⟩ in ⟨scores⟩` — one block per kind of thing.
+ *
+ * THREE BLOCKS RATHER THAN ONE WITH A DROPDOWN, because the thing a dropdown
+ * would choose is the TYPE of the variable it binds, and a variable's type is
+ * fixed once it is made: switching it would have to find, rename or replace the
+ * binding, which is the machinery `define block`'s designer needs and nothing
+ * else here does. Three blocks say it with none of that, and read as a family
+ * with `for each actor` — which is the fourth of them and was here first.
+ */
+const listLoop = (
+  kind: 'number' | 'word' | 'place',
+  variable: {field: (name: string) => BlockArgDefinition},
+  noun: string,
+) =>
+  defineBlock({
+    type: `world_for_each_${kind}`,
+    message0: `for each ${kind} %1 in %2`,
+    args0: [
+      variable.field('VAR'),
+      {type: 'input_value', name: 'LIST', check: LIST_CHECK},
+    ],
+    message1: 'do %1',
+    args1: [{type: 'input_statement', name: 'DO'}],
+    inputsInline: true,
+    previousStatement: true,
+    nextStatement: true,
+    style: 'loop_blocks',
+    tooltip: `Run the blocks below once for each ${noun} in a list.`,
+    generator: {
+      javascript(block, generator) {
+        const name = generator.getVariableName(block.getFieldValue('VAR'));
+        const list = generator.valueToCode(block, 'LIST', Order.NONE) || '[]';
+        const body = generator.statementToCode(block, 'DO');
+        // `WorldLab.items` rather than the value itself: a variable that has
+        // never been set is not a list, and a loop over one should run no
+        // times rather than throw.
+        return `for (const ${name} of WorldLab.items(${list})) {\n${body}}\n`;
+      },
+    },
+  });
+
+const worldForEachNumber = listLoop('number', NumberVariable, 'number');
+const worldForEachWord = listLoop('word', StringVariable, 'word');
+const worldForEachPlace = listLoop('place', VectorVariable, 'place');
 
 /**
  * `kind of ⟨actor⟩` — which KIND a thing is, as the name a map or a dropdown
@@ -7357,6 +7512,12 @@ export const DOMAIN_BLOCKS = [
   worldEventActor,
   worldEventValue,
   worldKindOf,
+  worldListAdd,
+  worldListEmpty,
+  worldListHas,
+  worldForEachNumber,
+  worldForEachWord,
+  worldForEachPlace,
   worldVector,
   worldVectorMath,
   worldVectorRotate,
@@ -7762,6 +7923,32 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
   // what a game sounds like is not what it looks like, and a learner looking
   // for "play sound" looks for a word, not for a drawer (specs/SOUND.md).
   {name: 'Sound', blocks: ['world_play_sound', 'world_set_music']},
+  // Lists of values — the drawer that lets a project keep two numbers
+  // (specs/LISTS.md). Its literal and its count are Blockly's own, reworded;
+  // the rest is this lab's, in the voice the actor lists speak.
+  {
+    name: 'Lists',
+    blocks: [
+      {
+        kind: 'block',
+        type: 'lists_create_with',
+        // Three sockets, as Blockly's own toolbox seeds it: a list of one is
+        // rarely what anybody means, and the mutator adds more.
+        extraState: {itemCount: 3},
+      },
+      'lists_create_empty',
+      'world_list_add',
+      'world_list_empty',
+      'lists_length',
+      'world_list_has',
+      // …and a loop per kind of thing, beside the one that walks actors.
+      'world_for_each_number',
+      'world_for_each_word',
+      'world_for_each_place',
+      ListVariable.getterType,
+      ListVariable.setterType,
+    ],
+  },
   {name: 'Console', blocks: ['world_log', 'world_print', 'world_event_value']},
   {
     name: 'Logic',

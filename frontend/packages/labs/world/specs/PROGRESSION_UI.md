@@ -532,9 +532,9 @@ anything depends on it.
    its own module. A check tested against a different runner from the one that
    judges a learner is a check nobody has tested.
 
-   **Every tile has a lesson, and every lesson has a check** — all sixty-seven
-   of them, with nothing left waiting on a rule or a block the library has not
-   got — and every one is tested in both directions: it refuses the starter the lesson ships with AND accepts a
+   **Every tile has a lesson, and every lesson has a check** — sixty-seven of
+   the sixty-eight, the exception being `memory/lists`, whose blocks landed
+   before its lesson (specs/LISTS.md) — and every one is tested in both directions: it refuses the starter the lesson ships with AND accepts a
    project where the lesson has been done, which no amount of refusing proves on
    its own. Three also have a HALFWAY case, because a check that stops at the
    first thing the lesson asks for calls it done halfway — gravity with the Hero

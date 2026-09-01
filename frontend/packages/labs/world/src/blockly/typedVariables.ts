@@ -23,23 +23,25 @@ export const ActorVariable: TypedVariable = createTypedVariable({
     'An actor held in a variable — e.g. the one a “for each” loop is on.',
 });
 
-// One flavour per parameter value type. Each getter's output is checked to the
+// One flavour per parameter value type. EXPORTED as well as listed below,
+// because a list's loop binds one directly: `for each number ⟨n⟩ in ⟨scores⟩`
+// is a Number variable bound by a block that is not a parameter row. Each getter's output is checked to the
 // type, so reading a `number` parameter only fits a Number socket. The `type` is
 // the authored value type (matches an {@link ArgType}); the flavour's tag is its
 // PascalCase form (`variables_get_Number`).
-const numberVariable = createTypedVariable({
+export const NumberVariable: TypedVariable = createTypedVariable({
   type: 'Number',
   style: 'math_blocks',
   defaultName: 'amount',
   tooltip: 'A number passed to this action or query.',
 });
-const booleanVariable = createTypedVariable({
+export const BooleanVariable: TypedVariable = createTypedVariable({
   type: 'Boolean',
   style: 'logic_blocks',
   defaultName: 'flag',
   tooltip: 'A true/false value passed to this action or query.',
 });
-const stringVariable = createTypedVariable({
+export const StringVariable: TypedVariable = createTypedVariable({
   type: 'String',
   style: 'text_blocks',
   defaultName: 'text',
@@ -55,6 +57,12 @@ const stringVariable = createTypedVariable({
  */
 export const ListVariable: TypedVariable = createTypedVariable({
   type: 'List',
+  // `Array` is Blockly's own name for this check, and the reason to take it is
+  // `lists_create_with`: the literal with the mutator, which reports `Array`
+  // and which this lab reuses rather than building a mutator to say the same
+  // thing (specs/LISTS.md). The check is a string two sockets agree on and
+  // nothing a learner reads; the blocks all say "list".
+  check: 'Array',
   // The colour of the blocks that make and read one, which are the list blocks
   // rather than any existing family.
   style: 'sprite_blocks',
@@ -62,7 +70,7 @@ export const ListVariable: TypedVariable = createTypedVariable({
   tooltip: 'A list of values — numbers, words or vectors.',
 });
 
-const vectorVariable = createTypedVariable({
+export const VectorVariable: TypedVariable = createTypedVariable({
   type: 'Vector',
   style: 'location_blocks',
   defaultName: 'vec',
@@ -78,10 +86,10 @@ export const PARAM_FLAVOURS: ReadonlyArray<{
   type: string;
   variable: TypedVariable;
 }> = [
-  {type: 'number', variable: numberVariable},
-  {type: 'boolean', variable: booleanVariable},
-  {type: 'string', variable: stringVariable},
-  {type: 'vector', variable: vectorVariable},
+  {type: 'number', variable: NumberVariable},
+  {type: 'boolean', variable: BooleanVariable},
+  {type: 'string', variable: StringVariable},
+  {type: 'vector', variable: VectorVariable},
   {type: 'actor', variable: ActorVariable},
   {type: 'list', variable: ListVariable},
 ];

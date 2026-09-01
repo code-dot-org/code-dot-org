@@ -1,4 +1,7 @@
-// US spelling for Blockly's stock color blocks.
+// The words this lab puts on Blockly's own blocks.
+//
+// Two sets, and both are rewordings rather than new blocks: US spelling for the
+// stock color blocks, and this lab's voice for the one list block it reuses.
 //
 // `colour_picker`, `colour_random` and `colour_blend` come from
 // `@blockly/field-colour` and read their text from `Blockly.Msg`, which ships
@@ -28,6 +31,33 @@
 import * as En from 'blockly/msg/en';
 
 import {Blockly} from '@code-dot-org/blockly';
+
+/**
+ * The list blocks this lab offers, said the way it says everything else.
+ *
+ * `lists_create_with` is reused rather than rebuilt because of its MUTATOR —
+ * the thing that makes a literal growable, and a hundred lines to write again
+ * (specs/LISTS.md). What comes with it is Blockly's voice: "create list with",
+ * "length of", an item called "item". The blocks around them say `add ⟨5⟩ to
+ * ⟨scores⟩` and `how many actors in ⟨…⟩`, so these say the same.
+ *
+ * The other eleven `lists_*` blocks stay unlisted, as they always were: they
+ * are an index-first vocabulary, and this lab's list has one index block
+ * written in its own words.
+ */
+const LIST_MESSAGES: Record<string, string> = {
+  LISTS_CREATE_WITH_INPUT_WITH: 'make a list of',
+  LISTS_CREATE_WITH_TOOLTIP: 'A list with any number of things in it.',
+  LISTS_CREATE_EMPTY_TITLE: 'an empty list',
+  LISTS_CREATE_EMPTY_TOOLTIP: 'A list with nothing in it yet.',
+  LISTS_CREATE_WITH_CONTAINER_TITLE_ADD: 'list',
+  LISTS_CREATE_WITH_CONTAINER_TOOLTIP:
+    'Add, remove or reorder the things this list is made of.',
+  LISTS_CREATE_WITH_ITEM_TITLE: 'thing',
+  LISTS_CREATE_WITH_ITEM_TOOLTIP: 'Add another thing to the list.',
+  LISTS_LENGTH_TITLE: 'how many in %1',
+  LISTS_LENGTH_TOOLTIP: 'How many things a list holds.',
+};
 
 /** `Blockly.Msg` key -> the US-spelled text to use instead. */
 const COLOR_MESSAGES: Record<string, string> = {
@@ -59,5 +89,6 @@ export function installColorMessages(): void {
   Blockly.setLocale({
     ...(En as unknown as Record<string, string>),
     ...COLOR_MESSAGES,
+    ...LIST_MESSAGES,
   });
 }
