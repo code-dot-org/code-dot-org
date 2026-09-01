@@ -42,6 +42,10 @@
             },
             {
               "kind": "block",
+              "type": "spritelab2_playMusic"
+            },
+            {
+              "kind": "block",
               "type": "spritelab2_setAsPlatformPlayer"
             },
             {
@@ -115,6 +119,10 @@
             {
               "kind": "block",
               "type": "gamelab_setBackgroundImageAs"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_playMusic"
             },
             {
               "kind": "block",

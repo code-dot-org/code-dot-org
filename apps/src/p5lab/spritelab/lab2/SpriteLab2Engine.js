@@ -111,6 +111,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.onGoToScene = null;
     this.onGoToExternalScene = null;
     this.onRestartScene = null;
+    this.onPlayMusic = null;
     // When the last restart fired, for the quiet window above.
     this.lastRestartAt_ = 0;
     // Jump lifecycle for the view's cover/fade: start fires with the block,
@@ -271,6 +272,11 @@ export default class SpriteLab2Engine extends SpriteLab {
       footing(spriteArg, (sprite, walls, view, gravity) =>
         hasSupportAhead(sprite, direction < 0 ? -1 : 1, walls, view, gravity)
       );
+    library.commands.playMusic = channelId => {
+      if (channelId && this.onPlayMusic) {
+        this.onPlayMusic(String(channelId));
+      }
+    };
     // p5.play throws on an unknown costume name and the interpreter stops
     // there; skip the block instead and say so once.
     const knownCostume = name =>
