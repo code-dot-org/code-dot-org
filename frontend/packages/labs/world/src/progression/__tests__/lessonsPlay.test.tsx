@@ -19,6 +19,7 @@ import {
 } from '../../__tests__/support/compileProject';
 import {STOCK_ACTORS} from '../../actors/stock';
 import {PositionProperty} from '../../engine';
+import {SpriteProperty} from '../../engine/rules/animation';
 import {projectFiles} from '../../runtime/projectFiles';
 import {TILES_BY_ID} from '../index';
 import {LESSONS} from '../lessons';
@@ -74,6 +75,60 @@ describe.each(ids)('the %s lesson', id => {
       expect(Number.isFinite(at.x), `${id}: ${actor.id} x`).toBe(true);
       expect(Number.isFinite(at.y), `${id}: ${actor.id} y`).toBe(true);
     }
+  });
+});
+
+// ── The pictures a lesson names ─────────────────────────────────────────────
+//
+// A sprite is not a project FILE the way a world or a rule is — it is bytes,
+// imported by name (`lessonSource`'s `sprites:`), and an actor names it as a
+// string. So a lesson that says `set sprite ⟨player⟩` and forgets to import
+// `player` compiles, ticks, places its actors and passes every test above: the
+// property holds `player.png` and the driver, finding nothing of that name,
+// draws the default green box.
+//
+// Which is what `adventure/rooms` did, in the lesson whose task is walking a
+// Player into a Door — two identical green squares, and no way to tell which
+// was which. Nothing but a browser saw it, so this is the test that would have.
+
+describe('every picture a lesson names', () => {
+  it('is a file the project holds', async () => {
+    const missing: string[] = [];
+    for (const id of ids) {
+      const {files} = LESSONS[id].source as unknown as {
+        files: Record<string, {name: string}>;
+      };
+      const held = new Set(Object.values(files).map(file => file.name));
+      const {world} = await built(id);
+      for (const actor of world.actors) {
+        const sprite = String(actor.get(SpriteProperty) ?? '');
+        if (sprite && !held.has(sprite)) {
+          missing.push(`${id} draws ${sprite}, which it does not hold`);
+        }
+      }
+    }
+    expect([...new Set(missing)].sort()).toEqual([]);
+  }, 300_000);
+
+  // The other half, and the reason the sweep above is not enough: an actor the
+  // STARTER never places is never asked what it draws. `adventure/rooms` keeps
+  // a Chest in room two, which the learner loads and the test cannot.
+  it('is held even where the starter places nobody', () => {
+    const missing: string[] = [];
+    for (const id of ids) {
+      const {files} = LESSONS[id].source as unknown as {
+        files: Record<string, {name: string; contents?: string}>;
+      };
+      const held = new Set(Object.values(files).map(file => file.name));
+      for (const file of Object.values(files)) {
+        for (const [named] of (file.contents ?? '').matchAll(/[\w.-]+\.png/g)) {
+          if (!held.has(named)) {
+            missing.push(`${id}: ${file.name} names ${named}`);
+          }
+        }
+      }
+    }
+    expect([...new Set(missing)].sort()).toEqual([]);
   });
 });
 

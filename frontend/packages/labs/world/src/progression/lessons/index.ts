@@ -3791,6 +3791,10 @@ const rooms: WorldScenario = {
       ]),
     },
     rules: ['motion', 'arrows', 'collisions'],
+    // The Chest's too, though nothing places one until the lesson is done: an
+    // import is a file the project holds, and room2 is loaded by the learner
+    // rather than by the starter.
+    sprites: ['player', 'ground', 'coin'],
   }),
   instructions: `
 ## A door to somewhere else
