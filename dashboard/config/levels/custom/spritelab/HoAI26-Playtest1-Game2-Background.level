@@ -26,10 +26,13 @@
     "locked_image_type": "background",
     "guide_mode": "instructions",
     "long_instructions": "# Make a background\nUse AI to create the background for your story scene. Describe a place - a forest, a city, outer space - and press **Generate**.",
+    "display_name": "Create a Background",
+    "bubble_choice_description": "Use your imagination and, if you choose, AI to create a background for your click-based game.",
+    "thumbnail_url": "https://images.code.org/2acd3d69655bdc9d618b87e88efa9152-Gemini_Generated_Image_5qyw6p5qyw6p5qyw.jpeg",
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-09-02T21:53:45.256+00:00\",\"changed\":[\"cloned from \\\"HoAI26-Playtest1-Story-Background\\\"\"],\"cloned_from\":\"HoAI26-Playtest1-Story-Background\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-09-02T21:53:45.256+00:00\",\"changed\":[\"cloned from \\\"HoAI26-Playtest1-Story-Background\\\"\"],\"cloned_from\":\"HoAI26-Playtest1-Story-Background\"},{\"changed_at\":\"2026-09-02 22:43:22 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-02 22:46:27 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
   <blocks/>
 </GamelabJr>

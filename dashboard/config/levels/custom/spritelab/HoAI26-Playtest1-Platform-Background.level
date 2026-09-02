@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2026-09-02T21:53:00.000Z",
   "level_num": "custom",
@@ -27,10 +26,6 @@
     "locked_image_type": "background",
     "guide_mode": "instructions",
     "long_instructions": "# Make a background\r\nUse AI to create the background for your story scene. Describe a place - a forest, a city, outer space - and press **Generate**.",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions_important": "false",
     "thumbnail_url": "https://images.code.org/a81b7dca3b4f41fc143e3e559f213a21-Gemini_Generated_Image_cgry71cgry71cgry.jpeg",
@@ -51,9 +46,13 @@
     "use_default_sprites": "false",
     "mini_toolbox": "false",
     "hide_pause_button": "false",
-    "enable_big_playspace": "false"
+    "enable_big_playspace": "false",
+    "display_name": "Create a Background",
+    "bubble_choice_description": "Use your imagination and, if you choose, AI to create a background for your platform game.",
+    "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2026-09-02T21:53:00.313+00:00\",\"changed\":[\"cloned from \\\"hoai2026-dev-spritelab-lab2-background\\\"\"],\"cloned_from\":\"hoai2026-dev-spritelab-lab2-background\"},{\"changed_at\":\"2026-09-02 22:10:57 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-02T21:53:00.313+00:00\",\"changed\":[\"cloned from \\\"hoai2026-dev-spritelab-lab2-background\\\"\"],\"cloned_from\":\"hoai2026-dev-spritelab-lab2-background\"},{\"changed_at\":\"2026-09-02 22:10:57 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-02 22:43:06 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-02 22:46:07 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
