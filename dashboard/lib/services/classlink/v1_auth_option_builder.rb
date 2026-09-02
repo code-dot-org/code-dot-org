@@ -4,11 +4,12 @@
 # This is the mirror of V2AuthOptionBuilder, and it exists because the two ids are not a
 # before-and-after pair: the UserId is ClassLink-assigned, globally unique, stable, and
 # present on every v2/my/info response, while "<TenantId>|<SourcedId>" depends on a
-# SourcedId that is empty for districts without OneRoster and can change when a district
-# re-keys its SIS. An account reachable only by its v2 id is therefore unreachable the
-# moment its SourcedId changes or stops arriving — at which point we still know who the
-# user is from the payload's UserId and have nothing stored under it to match. Every
-# ClassLink account keeps a UserId-keyed record so that lookup always has somewhere to land.
+# SourcedId that is empty for districts without OneRoster. An account reachable
+# only by its v2 id is therefore unreachable the moment its SourcedId changes or
+# stops arriving — at which point we still know who the user is from the payload's
+# UserId and have nothing stored under it to match.
+# Every ClassLink account keeps a UserId-keyed record so that lookup always has
+# somewhere to land.
 #
 # Returns nil if the UserId is blank, the v2 auth option doesn't exist, or this account
 # already holds a v1 auth option — so callers can treat nil as "nothing to do".
