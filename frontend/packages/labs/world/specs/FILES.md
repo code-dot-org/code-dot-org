@@ -34,10 +34,33 @@ nothing is titled from its own stem, the same fallback every dropdown makes:
 `level1.map` is "Level1". A `.sheet` is left out entirely, as it is from the
 tree: it belongs to the `.png` of the same name and is not a file to open.
 
-**Renaming the file is not offered.** It changes nothing these rows show and
-leaves the name the learner meant untouched. Renaming the THING — and moving
-its file to match — is the version worth having, and until it exists the tree
-still renames a file for anyone who wants the file renamed.
+**Rename means the THING.** The row says "Player", so that is what changes —
+and the file's stem is made from the new name, the way `New` makes one, so the
+two cannot drift apart. What that costs is every reference, since nothing in
+this lab records where one lives (`files/renameThing`):
+
+- a MODULE PATH — `actors/player`, on the fields that place an actor, filter an
+  event, count a kind, load a map, add an effect — and in every `.map`, which is
+  a document rather than a workspace and needs its own pass;
+- a FILE NAME — an asset is named by its file, and a spritesheet cell carries
+  `#3` on the end of it;
+- a BLOCK TYPE — an actor's own properties and blocks are minted from its path,
+  so `world_get_ActorsPlayer_IdProperty` becomes `…ActorsHero…` and every saved
+  block holding the old one would otherwise be a stand-in that generates
+  nothing;
+- a RULE's NAME, which is a reference in itself — to its traits, its members and
+  the worlds that use it — and already had a rename that carries
+  (`blockly/renameRule`).
+
+Prose is left alone: the walk reads fields, and a `log` block saying
+"actors/player" is a sentence about the project rather than a reference to it.
+
+**One file does not move.** `worlds/main.world` is the entry BY PATH — without
+it the runtime says "No entry file" and nothing runs — so renaming that world
+renames the thing and leaves the file where the runtime looks.
+
+The tree still renames a FILE, which is a different act: it leaves the thing
+inside called what it was.
 
 **The acts are the tree's acts.** Opening, renaming and deleting go through the
 same `useFileOperations` and the same prompts the file browser uses, including

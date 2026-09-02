@@ -6,7 +6,7 @@
 // and that `New` names the extension so a learner does not have to.
 
 import {fireEvent, render, screen} from '@testing-library/react';
-import {describe, expect, it, vi} from 'vitest';
+import {beforeEach, describe, expect, it, vi} from 'vitest';
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
@@ -59,6 +59,10 @@ const SOURCE: MultiFileSource = {
 };
 
 vi.mock('@code-dot-org/codebridge', () => ({
+  // `renameThing` pulls in the rewrite walk, which reaches the same barrel.
+  DEFAULT_FOLDER_ID: '0',
+  createNewFolder: (source: unknown) => source,
+  getNextFileId: () => 'new',
   getFileExtension: (name: string) => name.split('.').pop(),
   shouldShowFile: () => true,
   useFileOperations: () => ({
@@ -81,12 +85,27 @@ vi.mock('@code-dot-org/codebridge', () => ({
   validateFileName: () => undefined,
 }));
 
+const updateSources = vi.fn();
+
+vi.mock('@code-dot-org/lab/contexts', () => ({
+  useSources: () => ({currentSources: {source: SOURCE}, updateSources}),
+}));
+
 vi.mock('@code-dot-org/lab/redux', () => ({
   labActions: {isReadOnlyWorkspace: () => false},
   useAppSelector: (select: (state: unknown) => unknown) => select({}),
 }));
 
 const {FileMenus} = await import('../FileMenus');
+
+// Cleared between cases, because `toHaveBeenCalled` on a mock that ALREADY was
+// is a wait that ends immediately — and then `calls.at(-1)` reads the last
+// test's call rather than this one's. Which is exactly what happened the moment
+// the menus started closing before their dialog opens.
+beforeEach(() => {
+  vi.clearAllMocks();
+  promptForName.mockResolvedValue('Chaser');
+});
 
 const openMenu = (name: string) => {
   render(<FileMenus />);
@@ -170,7 +189,28 @@ describe('the file menus', () => {
     );
   });
 
-  it('does not offer to rename the file', () => {
+  it('renames the THING, and moves its file to match', async () => {
+    // The row says "Has Gravity"; renaming it renames the rule, moves
+    // `gravity.rule` to `hasHeavyGravity.rule`, and carries every reference —
+    // which is a write over the whole project rather than one file.
+    promptForName.mockResolvedValueOnce('Has Heavy Gravity');
+    openMenu('Rules');
+    fireEvent.click(
+      screen.getByRole('button', {name: 'Options for Has Gravity'}),
+    );
+    fireEvent.click(screen.getByText('Rename'));
+
+    await vi.waitFor(() => expect(updateSources).toHaveBeenCalled());
+    const written = updateSources.mock.calls.at(-1)![0] as {
+      source: {files: Record<string, {name: string; contents: string}>};
+    };
+    expect(written.source.files.a.name).toBe('hasHeavyGravity.rule');
+    expect(
+      JSON.parse(written.source.files.a.contents).blocks.blocks[0].fields.NAME,
+    ).toBe('Has Heavy Gravity');
+  });
+
+  it('offers renaming the thing, not the file', () => {
     // Renaming the FILE changes nothing these rows show and leaves the name
     // the learner meant untouched. The tree still renames a file.
     openMenu('Rules');
@@ -180,7 +220,7 @@ describe('the file menus', () => {
 
     expect(screen.getByText('Delete')).toBeTruthy();
     expect(screen.getByText('Clone')).toBeTruthy();
-    expect(screen.queryByText('Rename')).toBeNull();
+    expect(screen.getByText('Rename')).toBeTruthy();
   });
 
   it('says what is not there yet, rather than showing a blank menu', () => {

@@ -11,12 +11,12 @@
 // possible from here, which is what makes this an alternative reading rather
 // than a second file system.
 //
-// ONE ACT IS NOT OFFERED: renaming the file. These rows show what a file
-// DECLARES — `player.actor` reads as "Player", the word its blocks and every
-// dropdown already use — so renaming the file changes nothing a learner can
-// see here and leaves the name they meant untouched. Renaming the THING, and
-// moving its file to match, is the version worth having; the tree still
-// renames a file for anyone who wants the file renamed.
+// RENAME MEANS THE THING. These rows show what a file DECLARES —
+// `player.actor` reads as "Player", the word its blocks and every dropdown
+// already use — so the name worth changing is that one, and the file's stem is
+// made from it so the two cannot drift apart. Every reference moves with it
+// (`files/renameThing`). The tree still renames a FILE, which is a different
+// act and leaves the thing inside it called what it was.
 //
 // WHAT A MISSING FOLDER DOES. A project need not have all nine — a scenario
 // declares the folders it uses. `Import…` works anyway, because a shelf makes
@@ -48,8 +48,9 @@ import {
 } from '@code-dot-org/codebridge';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import type {ProjectFile} from '@code-dot-org/core/api';
+import type {ProjectFile, MultiFileSource} from '@code-dot-org/core/api';
 import {IconButtonWithTooltip} from '@code-dot-org/lab/components';
+import {useSources} from '@code-dot-org/lab/contexts';
 import {labActions, useAppSelector} from '@code-dot-org/lab/redux';
 
 import {label} from '../blockly/label';
@@ -58,6 +59,7 @@ import {authoredName} from '../blockly/projectModules';
 import styles from './fileMenus.module.css';
 import {FOLDER_MENUS, type FolderMenu, type Makeable} from './folderMenus';
 import {fileStem, renamed, seedFor} from './newThing';
+import {renameThing} from './renameThing';
 
 /** The file the row menu is about, and what it hangs off. */
 interface RowMenu {
@@ -69,6 +71,10 @@ interface RowMenu {
 
 export const FileMenus = () => {
   const ops = useFileOperations();
+  // A rename rewrites the WHOLE project in one go — the file, its contents and
+  // every reference to it — which is a write `useFileOperations` has no verb
+  // for: its own are one act on one file.
+  const {currentSources, updateSources} = useSources<MultiFileSource>();
   const config = useCodebridgeConfig();
   const {promptForName, confirm, alert} = usePrompts();
   const isReadOnly = useAppSelector(labActions.isReadOnlyWorkspace);
@@ -142,6 +148,22 @@ export const FileMenus = () => {
   const close = useCallback(() => setOpen(undefined), []);
 
   /**
+   * Close the menus, and wait for them to be gone before opening a dialog.
+   *
+   * TWO FOCUS TRAPS FIGHT. A MUI `Menu` contains focus and so does the prompt
+   * dialog (`focus-trap-react`), and each pulls it back from the other the
+   * moment it leaves — forever, until the stack runs out: "Maximum call stack
+   * size exceeded", twice, on every rename. Closing a menu is a state update,
+   * so it has not happened yet when the dialog opens in the same tick; this
+   * yields to let React commit first.
+   */
+  const thenAsk = useCallback(async () => {
+    setRow(undefined);
+    close();
+    await new Promise(resolve => setTimeout(resolve, 0));
+  }, [close]);
+
+  /**
    * Make one, from a name and the extension the folder gives it.
    *
    * The extension is the menu's, not the learner's: the folder decides the
@@ -155,7 +177,7 @@ export const FileMenus = () => {
       if (folderId === undefined) {
         return;
       }
-      close();
+      await thenAsk();
       const name = await promptForName({
         title: makeable.label,
         placeholder: makeable.placeholder,
@@ -184,7 +206,7 @@ export const FileMenus = () => {
       }
       ops.newFile({fileName, language, folderId, contents: seed?.contents});
     },
-    [ops, config, promptForName, folderIds, close],
+    [ops, config, promptForName, folderIds, thenAsk],
   );
 
   /**
@@ -202,8 +224,7 @@ export const FileMenus = () => {
    */
   const clone = useCallback(
     async (file: ProjectFile, was: string) => {
-      setRow(undefined);
-      close();
+      await thenAsk();
       const extension = file.name.split('.').pop() ?? '';
       const name = await promptForName({
         title: `Clone ${was}`,
@@ -238,21 +259,45 @@ export const FileMenus = () => {
         contents: renamed(file.contents ?? '', name),
       });
     },
-    [ops, config, promptForName, close],
+    [ops, config, promptForName, thenAsk],
+  );
+
+  /**
+   * Rename the THING, and let its file follow.
+   *
+   * Not the file: these rows say what a file declares, so the name worth
+   * changing is the one inside it — and the file's stem is made from that, the
+   * way `New` makes one, so the two cannot drift apart. Every reference goes
+   * with it (`files/renameThing`).
+   */
+  const rename = useCallback(
+    async (file: ProjectFile, was: string) => {
+      await thenAsk();
+      const name = await promptForName({title: `Rename ${was}`, value: was});
+      if (!name || name === was) {
+        return;
+      }
+      const {source: next, refusal} = renameThing(ops.source, file, name);
+      if (refusal) {
+        await alert({title: `Cannot rename ${was}`, message: refusal});
+        return;
+      }
+      updateSources({...currentSources, source: next});
+    },
+    [ops.source, promptForName, alert, updateSources, currentSources, thenAsk],
   );
 
   const importInto = useCallback(
     async (menu: FolderMenu) => {
-      close();
+      await thenAsk();
       await menu.shelf?.();
     },
-    [close],
+    [thenAsk],
   );
 
   const remove = useCallback(
     async (file: ProjectFile) => {
-      setRow(undefined);
-      close();
+      await thenAsk();
       // The lab's veto first, exactly as the tree asks it: some files hold
       // others up, and which ones is the lab's to know (`rules/deleteGuard`).
       const refusal = config.blockFileDeletion?.(file, ops.source);
@@ -269,7 +314,7 @@ export const FileMenus = () => {
         ops.deleteFile(file.id);
       }
     },
-    [ops, config, confirm, alert, close],
+    [ops, config, confirm, alert, thenAsk],
   );
 
   const files = open ? filesIn(open.menu.folder) : [];
@@ -388,6 +433,16 @@ export const FileMenus = () => {
           list: {'aria-label': row && `Options for ${row.name}`, dense: true},
         }}
       >
+        {row && (
+          <MenuItem onClick={() => rename(row.file, row.name)}>
+            <ListItemIcon className={styles.menuIcon}>
+              <FontAwesomeV6Icon iconName="pencil" iconStyle="solid" />
+            </ListItemIcon>
+            <ListItemText disableTypography>
+              <Typography variant="body4">Rename</Typography>
+            </ListItemText>
+          </MenuItem>
+        )}
         {row && (
           <MenuItem onClick={() => clone(row.file, row.name)}>
             <ListItemIcon className={styles.menuIcon}>

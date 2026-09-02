@@ -469,7 +469,14 @@ const ownDeclarationsIn = (
   return out;
 };
 
-const pathSlug = (modulePath: string): string =>
+/**
+ * A module path as a block-type segment: `actors/player` → `ActorsPlayer`.
+ *
+ * Exported because renaming an actor's FILE changes it, and every block type
+ * minted for that actor's own properties and blocks carries it
+ * (`files/renameThing`).
+ */
+export const pathSlug = (modulePath: string): string =>
   modulePath
     .split(/[^A-Za-z0-9]+/)
     .filter(Boolean)
