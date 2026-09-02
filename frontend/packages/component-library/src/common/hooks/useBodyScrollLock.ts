@@ -1,13 +1,21 @@
 import {useEffect} from 'react';
 
+// Shared across every caller, so overlapping locks are counted rather than
+// each keeping its own snapshot.
+let lockCount = 0;
+let hostOverflow: string | null = null;
+
 /**
  * useBodyScrollLock
  * A hook to toggle `overflow: hidden` on the `<body>` element to prevent scrolling.
  *
- * On release the body's previous inline `overflow` is put back rather than
- * cleared, so a lock the host page set for its own reasons outlives the
- * component. Nested locks unwind correctly for the same reason: each one
- * restores what it found, so the inner one hands control back to the outer.
+ * Locks are reference counted: the body is restored only once the last one
+ * releases. A per-lock snapshot would instead depend on release order, and
+ * sibling dialogs release oldest-first, which leaves the last writer's stale
+ * value behind — permanently locked, or unlocked while a dialog is still open.
+ *
+ * The value restored is whatever the body carried before the first lock, so a
+ * lock the host page took for its own reasons outlives the dialogs above it.
  *
  * @param isActive - A boolean indicating whether the body scroll should be locked.
  */
@@ -17,11 +25,18 @@ const useBodyScrollLock = (isActive: boolean) => {
       return;
     }
 
-    const previousOverflow = document.body.style.overflow;
+    if (lockCount === 0) {
+      hostOverflow = document.body.style.overflow;
+    }
+    lockCount += 1;
     document.body.style.overflow = 'hidden'; // Lock scroll
 
     return () => {
-      document.body.style.overflow = previousOverflow; // Restore scroll
+      lockCount -= 1;
+      if (lockCount === 0) {
+        document.body.style.overflow = hostOverflow ?? ''; // Restore scroll
+        hostOverflow = null;
+      }
     };
   }, [isActive]);
 };

@@ -1,9 +1,18 @@
-import {renderHook} from '@testing-library/react';
-import {afterEach, describe, expect, it} from 'vitest';
+import {render, renderHook} from '@testing-library/react';
+import {afterEach, beforeEach, describe, expect, it} from 'vitest';
 
 import useBodyScrollLock from '../useBodyScrollLock';
 
+const Locker = () => {
+  useBodyScrollLock(true);
+  return null;
+};
+
 describe('useBodyScrollLock', () => {
+  beforeEach(() => {
+    document.body.style.overflow = '';
+  });
+
   afterEach(() => {
     document.body.style.overflow = '';
   });
@@ -51,6 +60,38 @@ describe('useBodyScrollLock', () => {
 
     outer.unmount();
     expect(document.body.style.overflow).toBe('auto');
+  });
+
+  it('keeps the lock while a sibling dialog is still open', () => {
+    // Sibling dialogs release oldest-first, so the older lock must not
+    // restore while the newer one is still holding.
+    const Host = ({showFirst}: {showFirst: boolean}) => (
+      <>
+        {showFirst && <Locker />}
+        <Locker />
+      </>
+    );
+
+    const {rerender} = render(<Host showFirst />);
+    rerender(<Host showFirst={false} />);
+
+    expect(document.body.style.overflow).toBe('hidden');
+  });
+
+  it('releases a sibling pair torn down as one tree', () => {
+    // A dialog that renders a second one as its sibling (rather than its
+    // child) takes both down at once, oldest lock first.
+    const {unmount} = render(
+      <>
+        <Locker />
+        <Locker />
+      </>,
+    );
+    expect(document.body.style.overflow).toBe('hidden');
+
+    unmount();
+
+    expect(document.body.style.overflow).toBe('');
   });
 
   it('restores the previous value when it goes inactive', () => {
