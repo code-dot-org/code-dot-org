@@ -318,15 +318,7 @@ class LessonsController < ApplicationController
 
   private def build_tutor_gallery_data(script, unit_context)
     unit_group = unit_context[:unit_group] || script.original_unit_group
-    units = unit_group ? unit_group.default_units : [script]
-    sections = (current_user.sections_instructed + current_user.sections_as_student).uniq
-    {
-      currentUnitId: script.id,
-      units: units.map.with_index(1) do |unit, position|
-        {id: unit.id, name: unit.localized_title, position: position, link: unit.link}
-      end,
-      sections: sections.map {|section| {id: section.id, name: section.name}},
-    }
+    @lesson.summarize_for_tutor_gallery(current_user, unit_group)
   end
 
   private def setup_edit
