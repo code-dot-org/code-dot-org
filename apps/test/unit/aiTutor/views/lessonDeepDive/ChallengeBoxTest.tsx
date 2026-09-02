@@ -94,17 +94,20 @@ const fakeChallengeResponse = (
   ...overrides,
 });
 
-// Draws on the whiteboard and submits, past the point where ChallengeBox
-// has created the response and kicked off evaluation (setEvaluationStatus
-// only resolves to PENDING when the /evaluate POST reports response.ok).
+// Selects the text explanation modality (WhiteboardChallenge only reports
+// canSubmit once an explanation modality is chosen), draws on the
+// whiteboard, and submits, past the point where ChallengeBox has created
+// the response and kicked off evaluation (setEvaluationStatus only
+// resolves to PENDING when the /evaluate POST reports response.ok).
 const submitWhiteboardChallenge = async () => {
   await waitFor(() =>
     expect(
       screen.getByText('Draw a flowchart of the algorithm.')
     ).toBeInTheDocument()
   );
+  fireEvent.click(screen.getByRole('button', {name: 'Text'}));
   fireEvent.click(screen.getByRole('button', {name: 'Draw something'}));
-  fireEvent.click(screen.getByRole('button', {name: 'Submit for feedback'}));
+  fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
 };
 
 // Advances fake timers by `ms` and flushes the resulting state updates,
@@ -136,6 +139,7 @@ describe('ChallengeBox', () => {
         lessonId={42}
         challenge={fakeChallenge}
         challengeType={ChallengeTypes.WHITEBOARD}
+        challengeSetCallback={jest.fn()}
       />
     );
     await submitWhiteboardChallenge();
@@ -167,6 +171,7 @@ describe('ChallengeBox', () => {
         lessonId={42}
         challenge={fakeChallenge}
         challengeType={ChallengeTypes.WHITEBOARD}
+        challengeSetCallback={jest.fn()}
       />
     );
     await submitWhiteboardChallenge();
@@ -190,16 +195,86 @@ describe('ChallengeBox', () => {
       screen.queryByText('Tutor is writing feedback...')
     ).not.toBeInTheDocument();
 
-    // The top bar switches to its review state: gallery in, compose actions out.
+    // The top bar switches to its review state: gallery/done in, compose
+    // actions out.
     expect(
       screen.getByRole('button', {name: 'View project gallery'})
     ).toBeInTheDocument();
+    expect(screen.getByRole('button', {name: "I'm done"})).toBeInTheDocument();
     expect(
       screen.queryByRole('button', {name: 'Start over'})
     ).not.toBeInTheDocument();
     expect(
-      screen.queryByRole('button', {name: 'Submit for feedback'})
+      screen.queryByRole('button', {name: 'Choose a different challenge'})
     ).not.toBeInTheDocument();
+
+    // The sidebar switches into its feedback-review state.
+    expect(screen.getByText('Feedback')).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', {name: 'Respond Again'})
+    ).toBeInTheDocument();
+
+    jest.useRealTimers();
+  });
+
+  it('returns to a compose state, feedback still visible, when Respond Again is clicked', async () => {
+    jest.useFakeTimers();
+    fetchJson.mockResolvedValue({
+      value: fakeChallengeResponse({
+        evaluation_status: 'success',
+        student_feedback: 'Great job explaining the flowchart!',
+      }),
+    });
+    snapshot.mockResolvedValue({
+      blob: new Blob(['png-bytes'], {type: 'image/png'}),
+    });
+    post.mockResolvedValue({ok: true, json: async () => createdResponse});
+    put.mockResolvedValue({});
+
+    render(
+      <ChallengeBox
+        lessonId={42}
+        challenge={fakeChallenge}
+        challengeType={ChallengeTypes.WHITEBOARD}
+        challengeSetCallback={jest.fn()}
+      />
+    );
+    await submitWhiteboardChallenge();
+    await waitFor(() =>
+      expect(
+        screen.getByText('Tutor is writing feedback...')
+      ).toBeInTheDocument()
+    );
+    await tick(2000);
+    await waitFor(() =>
+      expect(
+        screen.getByText('Great job explaining the flowchart!')
+      ).toBeInTheDocument()
+    );
+
+    fireEvent.click(screen.getByRole('button', {name: 'Respond Again'}));
+
+    // Back in a compose state: the feedback that prompted this round stays
+    // visible alongside instructions to revise, and the compose actions
+    // (including Submit) are back.
+    expect(
+      screen.queryByRole('button', {name: 'Respond Again'})
+    ).not.toBeInTheDocument();
+    expect(
+      screen.getByText(
+        'Iterate on your project based on the feedback from Tutor.'
+      )
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText('Great job explaining the flowchart!')
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', {name: 'Choose a different challenge'})
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', {name: 'Start over'})
+    ).toBeInTheDocument();
+    expect(screen.getByRole('button', {name: 'Submit'})).toBeInTheDocument();
 
     jest.useRealTimers();
   });
@@ -231,6 +306,7 @@ describe('ChallengeBox', () => {
         lessonId={42}
         challenge={fakeChallenge}
         challengeType={ChallengeTypes.WHITEBOARD}
+        challengeSetCallback={jest.fn()}
       />
     );
     await submitWhiteboardChallenge();
@@ -283,6 +359,7 @@ describe('ChallengeBox', () => {
         lessonId={42}
         challenge={fakeChallenge}
         challengeType={ChallengeTypes.WHITEBOARD}
+        challengeSetCallback={jest.fn()}
       />
     );
 
@@ -295,18 +372,20 @@ describe('ChallengeBox', () => {
     expect(screen.getByRole('button', {name: 'Audio'})).toBeInTheDocument();
     expect(screen.getByRole('button', {name: 'Text'})).toBeInTheDocument();
 
-    // Compose state: "Start over" is always present, and "Submit for feedback"
-    // stays visible but is disabled until there is something drawn to submit.
+    // Compose state: "Start over" is always present, and "Submit" stays
+    // visible but is disabled until an explanation modality is chosen and
+    // there is something drawn to submit.
     expect(
       screen.getByRole('button', {name: 'Start over'})
     ).toBeInTheDocument();
-    expect(
-      screen.getByRole('button', {name: 'Submit for feedback'})
-    ).toBeDisabled();
+    expect(screen.getByRole('button', {name: 'Submit'})).toBeDisabled();
+
+    // Drawing alone isn't enough without an explanation modality selected.
     fireEvent.click(screen.getByRole('button', {name: 'Draw something'}));
-    expect(
-      screen.getByRole('button', {name: 'Submit for feedback'})
-    ).toBeEnabled();
+    expect(screen.getByRole('button', {name: 'Submit'})).toBeDisabled();
+
+    fireEvent.click(screen.getByRole('button', {name: 'Text'}));
+    expect(screen.getByRole('button', {name: 'Submit'})).toBeEnabled();
   });
 
   it('shows a textarea that can be typed in when the Text button is clicked', async () => {
@@ -315,6 +394,7 @@ describe('ChallengeBox', () => {
         lessonId={42}
         challenge={fakeChallenge}
         challengeType={ChallengeTypes.WHITEBOARD}
+        challengeSetCallback={jest.fn()}
       />
     );
 
@@ -341,6 +421,7 @@ describe('ChallengeBox', () => {
         lessonId={42}
         challenge={fakeChallenge}
         challengeType={ChallengeTypes.WHITEBOARD}
+        challengeSetCallback={jest.fn()}
       />
     );
 
