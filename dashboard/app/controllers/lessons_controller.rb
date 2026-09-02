@@ -140,18 +140,7 @@ class LessonsController < ApplicationController
     return render_404 unless @lesson&.lesson_tutor_available?
 
     unit_group = unit_context[:unit_group] || script.original_unit_group
-    units = unit_group ? unit_group.default_units : [script]
-    sections = (current_user.sections_instructed + current_user.sections_as_student).uniq
-
-    @tutor_gallery_data = {
-      currentUnitId: script.id,
-      units: units.map.with_index(1) do |unit, position|
-        # link lets the project page build lesson URLs within the unit,
-        # e.g. the "Respond again" button's path back to the challenge.
-        {id: unit.id, name: unit.localized_title, position: position, link: unit.link}
-      end,
-      sections: sections.map {|section| {id: section.id, name: section.name}},
-    }
+    @tutor_gallery_data = @lesson.summarize_for_tutor_gallery(current_user, unit_group)
   end
 
   # GET /s/:script_name_or_id/lessons/:lesson_position/edit
