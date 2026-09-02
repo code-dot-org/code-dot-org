@@ -810,7 +810,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               rightHeaderContent={
                 currentTab === Tabs.AiTutor ? (
                   <AiChatHeaderButtons />
-                ) : currentTab === Tabs.Backpack && !unifiedBackpackEnabled ? (
+                ) : currentTab === Tabs.Backpack ? (
                   <BackpackHeaderButtons
                     incrementBackpackRefreshKey={() =>
                       setBackpackRefreshKey(prev => prev + 1)
