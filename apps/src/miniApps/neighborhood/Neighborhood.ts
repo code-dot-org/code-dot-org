@@ -52,7 +52,7 @@ export default class Neighborhood extends MiniApp {
     onPartialOutputMessage: (message: string) => void,
     // Opts into screen reader narration. Java Lab's console moves focus on
     // every log line, so it does not.
-    narration?: {getConsoleLines: () => string[]}
+    getConsoleLines?: () => string[]
   ) {
     super();
     this.controller = null;
@@ -64,11 +64,11 @@ export default class Neighborhood extends MiniApp {
     this.speedTracker = NeighborhoodSpeedTracker.getInstance();
     this.onPartialOutputMessage = onPartialOutputMessage;
     this.isProcessingSignals = false;
-    if (narration) {
+    if (getConsoleLines) {
       // Read lazily: the controller does not exist until afterInject.
       this.narrator = new NeighborhoodRunNarrator(
         () => this.controller,
-        narration.getConsoleLines
+        getConsoleLines
       );
     }
   }

@@ -44,13 +44,12 @@ export async function handleRunClick(
     handleRunEndedUnexpectedly(consoleManager, pythonlabI18n.noCode());
     return;
   }
+  // Set before the run's first write, and left set past the end of the run:
+  // restoring announcements there would talk over the closing summary.
+  consoleManager?.setNarrating(isNeighborhoodLevel() && !runTests);
   if (runTests) {
     await runAllTests(source, dispatch, progressManager, validationFile);
   } else {
-    // Before the run's first write, so it does not speak over the narration.
-    if (isNeighborhoodLevel()) {
-      consoleManager?.setNarrating(true);
-    }
     // Run main.py
     consoleManager?.writeConsoleMessage(getTimestampMessage(RunType.RUN));
     const code = getFileByName(source.files, MAIN_PYTHON_FILE)?.contents;
@@ -128,8 +127,6 @@ export async function runAllTests(
   // we check the source for the validation file (this is the case in start mode).
   const validationToRun = validationFile || getValidationFromSource(source);
   const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
-  // Test output is not narrated, so the console speaks for it.
-  consoleManager?.setNarrating(false);
   if (validationToRun) {
     consoleManager?.writeConsoleMessage(
       getTimestampMessage(RunType.VALIDATION)

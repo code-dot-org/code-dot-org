@@ -94,7 +94,7 @@ const NeighborhoodPreview: React.FunctionComponent<
       onNewlineMessage,
       isRunning => dispatch(setIsRunning(isRunning)),
       onPartialLineMessage,
-      {getConsoleLines}
+      getConsoleLines
     );
     CodebridgeRegistry.getInstance().setNeighborhood(neighborhoodRef);
     return neighborhoodRef;

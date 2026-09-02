@@ -101,7 +101,7 @@ export default class NeighborhoodRunNarrator {
 
   constructor(
     getPositions: () => PainterPositions | null,
-    getConsoleLines: () => string[] = () => []
+    getConsoleLines: () => string[]
   ) {
     this.getPositions = getPositions;
     this.getConsoleLines = getConsoleLines;
@@ -155,8 +155,8 @@ export default class NeighborhoodRunNarrator {
             ? ` at ${position(x, y)}`
             : '';
         const facing = detail?.direction ? `, facing ${detail.direction}` : '';
-        // Always named: this is the line that introduces the painter.
         this.closeStreak();
+        // Always named: this is the line that introduces the painter.
         this.announce(`${this.name(id)} started${at}${facing}.`);
         return;
       }
