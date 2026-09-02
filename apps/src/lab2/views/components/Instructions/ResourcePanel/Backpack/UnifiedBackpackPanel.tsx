@@ -288,7 +288,9 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
           <details className={moduleStyles.unsupportedSection}>
             <summary className={moduleStyles.unsupportedSummary}>
               <Typography variant="body4" gutterBottom>
-                {`Not supported in this lab (${unsupportedFiles.length})`}
+                <Typography variant="strong">
+                  {`Not supported in this lab (${unsupportedFiles.length})`}
+                </Typography>
               </Typography>
               <FontAwesomeV6Icon iconName="chevron-down" aria-hidden="true" />
             </summary>

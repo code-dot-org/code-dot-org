@@ -47,12 +47,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 8px;
   padding: 8px;
   cursor: pointer;
   color: var(--text-neutral-secondary);
   // Hide the native disclosure triangle; the chevron below stands in for it.
   list-style: none;
+
+  // Horizontal line on either side of the heading, as on the per-lab divider in the
+  // original panel.
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid var(--borders-neutral-primary);
+  }
 
   &::-webkit-details-marker {
     display: none;
