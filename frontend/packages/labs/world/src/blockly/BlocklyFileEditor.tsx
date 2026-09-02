@@ -97,6 +97,7 @@ import {
 } from './openModule';
 import {projectPlacements} from './placementRequests';
 import {refreshProjectDropdowns} from './projectDropdowns';
+import {setProjectImages} from './projectImages';
 import {
   projectActorOptions,
   projectOwnMetas,
@@ -348,6 +349,16 @@ export const BlocklyFileEditor = ({
     () => refreshProjectDropdowns(files, imagePaths, imageSizes, soundPaths),
     [files, imagePaths, imageSizes, soundPaths],
   );
+  // …and the images themselves, for the two dropdowns whose subject IS a
+  // picture. Decoded already, for the pickers; a field cannot reach a context,
+  // so it is pushed the way the actor thumbnails are (`projectImages`).
+  useEffect(() => {
+    setProjectImages(
+      Object.fromEntries(
+        Object.entries(decoded).map(([name, image]) => [name, image.src]),
+      ),
+    );
+  }, [decoded]);
 
   /**
    * Refresh every registry from a project that has just been edited.

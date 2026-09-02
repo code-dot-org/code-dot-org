@@ -233,8 +233,8 @@ const str = (value: unknown): string => JSON.stringify(String(value));
 // The images a `set sprite` block may name: the project's own (populated live by
 // the extension), and `(import…)` to copy one in. There is no built-in list —
 // what a game draws is what its project holds.
-const spriteFieldOptions = (): Array<[string, string]> => [
-  ...spriteOptions().filter(([, value]: [string, string]) => value),
+const spriteFieldOptions = (): DropdownOptions => [
+  ...spriteOptions().filter(([, value]) => value),
   ['(import…)', IMPORT_SPRITE_VALUE],
 ];
 
@@ -5667,8 +5667,7 @@ const worldUseRule = defineBlock({
 
 // The backdrops a `set background to` block may name: the project's own
 // (populated live by the extension), and `(import…)` to copy one in.
-const backgroundFieldOptions = (): Array<[string, string]> =>
-  backgroundImportOptions();
+const backgroundFieldOptions = (): DropdownOptions => backgroundImportOptions();
 
 /** Point a `BACKGROUND` dropdown at the live list (the project's backdrops). */
 const backgroundOptionsExtension = liveDropdown(

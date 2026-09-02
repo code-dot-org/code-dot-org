@@ -18,6 +18,7 @@ import {actorIcon, actorThumbnail} from './actorThumbnails';
 import {IMPORT_EFFECT_VALUE} from './effectImport';
 import {label} from './label';
 import {actorIdFromName, localActorOptions} from './localActors';
+import {projectImage} from './projectImages';
 
 // `[label, path]` dropdown options, refreshed from the project (projectModules).
 let projectActors: Array<[string, string]> = [];
@@ -127,13 +128,37 @@ export function actorOptions(): Array<[string, string]> {
 }
 
 /** Current SPRITE dropdown options (the images the project holds). */
-export function spriteOptions(): Array<[string, string]> {
-  return orNone(projectSprites);
+export function spriteOptions(): DropdownOptions {
+  return orNone(projectSprites).map(asPicture);
 }
 
+/**
+ * One dropdown row for a picture: the picture, with its name as `alt`.
+ *
+ * A CELL OF A SHEET keeps its name. `switch.png#3` is one frame of a strip, and
+ * a field image cannot crop — drawn whole it would show all six squashed into a
+ * square, and drawn as the first cell it would be a picture of the wrong frame.
+ * The name is the honest answer, and it is the same fallback `pictured` makes
+ * for an actor whose thumbnail has not arrived.
+ */
+function asPicture([label, value]: [string, string]): DropdownOptions[number] {
+  const src = value.includes('#') ? undefined : projectImage(value);
+  return src
+    ? [{src, width: PICTURE_ICON, height: PICTURE_ICON, alt: label}, value]
+    : [label, value];
+}
+
+/**
+ * How big a picture is drawn in a dropdown, square.
+ *
+ * The actors' size, so the dropdowns a learner meets side by side — `add actor
+ * ⟨Coin⟩` and `set sprite ⟨coin⟩` — are the same height.
+ */
+const PICTURE_ICON = 24;
+
 /** Current BACKGROUND dropdown options (the project's backdrops). */
-export function backgroundOptions(): Array<[string, string]> {
-  return orNone(projectBackgrounds);
+export function backgroundOptions(): DropdownOptions {
+  return orNone(projectBackgrounds).map(asPicture);
 }
 
 /**
@@ -156,9 +181,9 @@ export function soundImportOptions(): Array<[string, string]> {
   return [...orNone(projectSounds), ['(import…)', IMPORT_SOUND_VALUE]];
 }
 
-export function backgroundImportOptions(): Array<[string, string]> {
+export function backgroundImportOptions(): DropdownOptions {
   return [
-    ...orNone(projectBackgrounds),
+    ...orNone(projectBackgrounds).map(asPicture),
     ['(import…)', IMPORT_BACKGROUND_VALUE],
   ];
 }
