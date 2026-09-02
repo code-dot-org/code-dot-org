@@ -226,7 +226,8 @@ describe('WhiteboardChallenge', () => {
         challengeId={5}
         submitted={false}
         submitCallback={jest.fn()}
-        explanationType={null}
+        explanationType={ExplanationTypes.TEXT}
+        textExplanation="My explanation"
       />
     );
 
@@ -235,6 +236,39 @@ describe('WhiteboardChallenge', () => {
 
     fireEvent.click(screen.getByRole('button', {name: 'Draw something'}));
     expect(submitButton).toBeEnabled();
+  });
+
+  it('disables submit until an explanation modality has been chosen', () => {
+    render(
+      <Harness
+        challengeId={5}
+        submitted={false}
+        submitCallback={jest.fn()}
+        explanationType={null}
+      />
+    );
+
+    fireEvent.click(screen.getByRole('button', {name: 'Draw something'}));
+    // A drawing alone isn't enough; ChallengeBox hasn't set an explanation
+    // modality (audio or text) yet.
+    expect(screen.getByRole('button', {name: 'Submit'})).toBeDisabled();
+  });
+
+  it('disables submit in audio mode until there is a recording', () => {
+    render(
+      <Harness
+        challengeId={5}
+        submitted={false}
+        submitCallback={jest.fn()}
+        explanationType={ExplanationTypes.AUDIO}
+      />
+    );
+
+    fireEvent.click(screen.getByRole('button', {name: 'Draw something'}));
+    expect(screen.getByRole('button', {name: 'Submit'})).toBeDisabled();
+
+    recordAudio();
+    expect(screen.getByRole('button', {name: 'Submit'})).toBeEnabled();
   });
 
   it('hides the image upload tool from the canvas', () => {
@@ -304,7 +338,8 @@ describe('WhiteboardChallenge', () => {
         challengeId={null}
         submitted={false}
         submitCallback={jest.fn()}
-        explanationType={null}
+        explanationType={ExplanationTypes.TEXT}
+        textExplanation="My explanation"
       />
     );
 
@@ -323,7 +358,8 @@ describe('WhiteboardChallenge', () => {
         challengeId={5}
         submitted={false}
         submitCallback={submitCallback}
-        explanationType={null}
+        explanationType={ExplanationTypes.TEXT}
+        textExplanation=""
       />
     );
 
@@ -339,7 +375,7 @@ describe('WhiteboardChallenge', () => {
         is_final: true,
         assets: [{asset_type: 'whiteboard_image'}],
         transcript: null,
-        student_text: null,
+        student_text: '',
       }),
       true,
       {'Content-Type': 'application/json'}
@@ -367,7 +403,8 @@ describe('WhiteboardChallenge', () => {
         challengeId={5}
         submitted={false}
         submitCallback={submitCallback}
-        explanationType={null}
+        explanationType={ExplanationTypes.TEXT}
+        textExplanation="My explanation"
       />
     );
 
