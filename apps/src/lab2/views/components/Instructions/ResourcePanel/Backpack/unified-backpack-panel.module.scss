@@ -1,0 +1,10 @@
+.unifiedBackpackPanel {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 0;
+  align-self: stretch;
+  height: 100%;
+  padding: var(--padding-p-xxs, 8px);
+  box-sizing: border-box;
+  overflow-y: auto;
+}
