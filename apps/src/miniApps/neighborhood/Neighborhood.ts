@@ -43,6 +43,7 @@ export default class Neighborhood extends MiniApp {
   private resolveOnDone?: () => void;
   private donePromise: Promise<void> | null = null;
   private narrator: NeighborhoodRunNarrator | null = null;
+  private narratedRun = false;
 
   constructor(
     onOutputMessage: (message: string) => void,
@@ -148,7 +149,9 @@ export default class Neighborhood extends MiniApp {
         // we are done processing commands and can stop checking for signals.
         // Set isRunning to false, add a blank line to the console, and return
         // The summary goes first, ahead of the run button's label change.
-        this.narrator?.endRun();
+        if (this.narratedRun) {
+          this.narrator?.endRun();
+        }
         this.setIsRunning(false);
         this.onNewlineMessage();
         if (this.resolveOnDone) {
@@ -259,6 +262,7 @@ export default class Neighborhood extends MiniApp {
 
   // narrate is false for validation and tests: the painter gets no signals.
   onRun(narrate = true) {
+    this.narratedRun = narrate;
     if (narrate) {
       this.narrator?.startRun();
     }
@@ -285,7 +289,9 @@ export default class Neighborhood extends MiniApp {
     timeoutList.clearTimeouts();
     this.resetSignalQueue();
     // The log keeps what the painter did before being stopped.
-    this.narrator?.stopRun();
+    if (this.narratedRun) {
+      this.narrator?.stopRun();
+    }
   }
 
   onClose() {

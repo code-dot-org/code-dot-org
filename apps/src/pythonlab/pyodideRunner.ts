@@ -198,6 +198,8 @@ function handleRunEndedUnexpectedly(
   consoleManager: ConsoleManager | null,
   message: string
 ) {
+  // Nothing ran, so the console speaks for itself.
+  consoleManager?.setNarrating(false);
   consoleManager?.writeConsoleMessage(getSystemMessage(message, appName));
   if (isNeighborhoodLevel()) {
     // We reset, run, and close the neighborhood to ensure that the neighborhood
