@@ -26,28 +26,28 @@ class QuizAttemptsController < ApplicationController
     unit = Unit.find(params[:unitId])
     raise ActiveRecord::RecordNotFound unless level.script_levels.exists?(script_id: unit.id)
 
-    # Locks on current_user, not the attempt - there's no QuizAttempt row to
-    # lock the first time through.
+    # Unique index is the integrity guarantee; retry so a concurrent create
+    # resumes the "winner"'s row instead of 400ing.
     attempt = nil
-    latest = nil
-    current_user.with_lock do
+    created = false
+    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       latest = latest_attempt(level.id, unit.id)
-      attempt =
-        if latest.nil? || latest.retakeable?
-          QuizAttempt.create!(
-            user: current_user,
-            level: level,
-            unit: unit,
-            attempt_number: (latest&.attempt_number || 0) + 1,
-            started_at: Time.now
-          )
-        else
-          latest
-        end
+      if latest.nil? || latest.retakeable?
+        attempt = QuizAttempt.create!(
+          user: current_user,
+          level: level,
+          unit: unit,
+          attempt_number: (latest&.attempt_number || 0) + 1,
+          started_at: Time.now
+        )
+        created = true
+      else
+        attempt = latest
+        created = false
+      end
     end
 
-    # 201 only when that branch above actually minted a new row.
-    render status: (latest.nil? || latest.retakeable?) ? :created : :ok, json: quiz_attempt_json(attempt)
+    render status: created ? :created : :ok, json: quiz_attempt_json(attempt)
   rescue StandardError => exception
     render status: :bad_request, json: {error: exception.message}
   end

@@ -121,6 +121,28 @@ class QuizAttemptsControllerTest < ActionController::TestCase
     assert_equal first_id, JSON.parse(response.body)['id']
   end
 
+  test "create retries and resumes when a concurrent request wins the unique index" do
+    unit = create_unit_with_quiz(@quiz)
+    sign_in @student
+
+    original_create = QuizAttempt.method(:create!)
+    QuizAttempt.stubs(:create!) do |*args, **kwargs|
+      original_create.call(*args, **kwargs)
+      raise ActiveRecord::RecordNotUnique, "Duplicate entry 'x' for key 'index_quiz_attempts_on_user_level_unit_attempt'"
+    end
+    assert_difference 'QuizAttempt.count', 1 do
+      post :create, params: {levelId: @quiz.id, unitId: unit.id}
+    end
+
+    assert_response :ok
+    body = JSON.parse(response.body)
+    attempt = QuizAttempt.find(body['id'])
+    assert_equal @student.id, attempt.user_id
+    assert_equal @quiz.id, attempt.level_id
+    assert_equal unit.id, attempt.unit_id
+    assert_equal 1, attempt.attempt_number
+  end
+
   test "create rejects a level that is not a Quiz" do
     unit = create(:unit)
     level = create(:level)
