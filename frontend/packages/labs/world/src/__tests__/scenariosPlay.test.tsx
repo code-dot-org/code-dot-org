@@ -112,3 +112,39 @@ describe.each(WORLD_SCENARIO_TAGS)('the %s scenario', tag => {
     }
   });
 });
+
+/**
+ * A bar pointed at nobody, which is the other silent picture.
+ *
+ * `subject` is the Health Bar's own property and its drawing reads it: pointed
+ * at nothing, the bar paints an empty track and every check above passes — it
+ * builds, it ticks, its position is finite, it carries no words. The two
+ * tellings of the platformer wire it two different ways (a placement naming
+ * another entry in the same map; a block, because an arrangement holds one
+ * kind and a reference across two of them names nothing), and only one of them
+ * worked.
+ */
+describe.each(['simple', 'platformer-single'] as const)(
+  'the %s platformer',
+  tag => {
+    it('points its health bar at somebody', async () => {
+      const {world} = await built(tag);
+      const bars = [...world.actors].filter(actor =>
+        actor.ownProperties().some(property => property.id === 'subject'),
+      );
+
+      expect(bars.length, `${tag}: no health bar`).toBe(1);
+      for (const bar of bars) {
+        const subject = bar
+          .ownProperties()
+          .find(property => property.id === 'subject')!;
+        // A LIST, and empty when the bar is pointed at nobody — which is why
+        // this asks how long it is. `toBeTruthy` passed on the broken telling:
+        // an actor-typed slot holds an actor COLLECTION, and an empty array is
+        // an object.
+        const about = bar.get(subject) as unknown as {length: number};
+        expect(about.length, `${tag}: the bar is about nobody`).toBe(1);
+      }
+    });
+  },
+);

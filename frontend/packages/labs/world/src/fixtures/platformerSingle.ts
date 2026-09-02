@@ -202,6 +202,23 @@ const SINGLE_WORLD = JSON.stringify({
               local(SCOREBOARD),
               'actors/scoreboard',
             ),
+            // POINT THE BAR AT THE PLAYER, which the starter does not have
+            // to: its map is one document, so a placement can name another
+            // entry in it and `load map` resolves the two together. An
+            // arrangement is one KIND, so the bar and the Player are placed by
+            // different blocks and neither map holds the other — a reference
+            // across them names nothing and is left unset (`World.loadMap`),
+            // which drew as a bar that was always empty.
+            //
+            // So it is said instead, in blocks, after everything is placed:
+            // `set subject of ⟨any ⟨Health Bar⟩⟩ to ⟨any ⟨Player⟩⟩`, which is
+            // the wiring the bar's own header gives. The placement override
+            // rides along in `LEVEL1_ACTORS` and does nothing here; taking it
+            // out would take it out of the starter, where it works.
+            {
+              type: `world_set_WorldsMain${pascalId(HEALTH_BAR)}_SubjectProperty`,
+              inputs: {ACTOR: kind(HEALTH_BAR), VALUE: kind(PLAYER)},
+            },
             // Three coins at ten each. The starter says this in its own
             // `main.world`, and here it is the same line in the same place.
             {
