@@ -2,6 +2,8 @@ import {ResultsGrades, MLTypes} from '../../src/constants';
 import {
   getAccuracyRegression,
   getAccuracyClassification,
+  gradeAccuracy,
+  getGradeOptions,
   getAccuracyGrades,
   getResultsByGrade,
   getPercentCorrect,
@@ -237,5 +239,81 @@ describe('get summary stat', () => {
     const summaryStat = getSummaryStat(regressionState);
     expect(summaryStat.stat).toBe(regressionPercent);
     expect(summaryStat.type).toBe(MLTypes.REGRESSION);
+  });
+});
+
+describe('gradeAccuracy', () => {
+  test('with no tolerance, a label must match exactly', () => {
+    const result = gradeAccuracy(['red', 'blue', 'red'], ['red', 'red', 'red']);
+
+    expect(result.grades).toEqual([
+      ResultsGrades.CORRECT,
+      ResultsGrades.INCORRECT,
+      ResultsGrades.CORRECT,
+    ]);
+    expect(result.percentCorrect).toBe('66.67');
+  });
+
+  test('a number and its string form match', () => {
+    // Both sides go through toString, as they did before this function existed.
+    expect(gradeAccuracy([1, '0'], ['1', 0]).percentCorrect).toBe('100.00');
+  });
+
+  test('with a tolerance, a label may differ by that much', () => {
+    const result = gradeAccuracy([10, 10], [10.1, 12], {tolerance: 0.5});
+
+    expect(result.grades).toEqual([
+      ResultsGrades.CORRECT,
+      ResultsGrades.INCORRECT,
+    ]);
+    expect(result.percentCorrect).toBe('50.00');
+  });
+
+  test('a difference exactly at the tolerance is correct', () => {
+    expect(gradeAccuracy([10], [10.5], {tolerance: 0.5}).percentCorrect).toBe(
+      '100.00',
+    );
+  });
+
+  test('an empty prediction list reports NaN', () => {
+    // The KNN sweep depends on this string losing the accuracy comparison.
+    expect(gradeAccuracy([], [])).toEqual({percentCorrect: 'NaN', grades: []});
+  });
+
+  test('a missing prediction list reports NaN', () => {
+    expect(gradeAccuracy(undefined, []).percentCorrect).toBe('NaN');
+  });
+});
+
+describe('getGradeOptions', () => {
+  test('a categorical label grades on an exact match', () => {
+    expect(getGradeOptions(classificationState)).toEqual({});
+  });
+
+  test('a numerical label grades on 5% of the label range', () => {
+    // The fixture heights run 0.9 to 3.9, so the range is 3 and 5% of it is 0.15.
+    const {tolerance} = getGradeOptions(regressionState);
+    expect(tolerance).toBeCloseTo(0.15, 10);
+  });
+
+  test('the regression selector uses that same tolerance', () => {
+    const viaSelector = getAccuracyRegression(regressionState);
+    const viaGrade = gradeAccuracy(
+      regressionState.accuracyCheckPredictedLabels,
+      regressionState.accuracyCheckLabels,
+      getGradeOptions(regressionState),
+    );
+
+    expect(viaSelector).toEqual(viaGrade);
+  });
+
+  test('the classification selector uses that same rule', () => {
+    expect(getAccuracyClassification(classificationState)).toEqual(
+      gradeAccuracy(
+        classificationState.accuracyCheckPredictedLabels,
+        classificationState.accuracyCheckLabels,
+        getGradeOptions(classificationState),
+      ),
+    );
   });
 });

@@ -4,7 +4,11 @@ https://github.com/mljs/knn */
 import KNN from 'ml-knn';
 import type {Store} from 'redux';
 
-import {getPercentCorrect} from '../helpers/accuracy';
+import {
+  gradeAccuracy,
+  getGradeOptions,
+  getPercentCorrect,
+} from '../helpers/accuracy';
 import {isRegression} from '../helpers/columnDetails';
 import {logMetric} from '../helpers/metrics';
 import type {RootState} from '../redux';
@@ -59,23 +63,27 @@ export default class KNNTrainer implements Trainer {
     let bestPredictedLabels: (number | string)[] = [];
     let bestK = -1;
     let bestAccuracy = -1;
-    const kValues = this.possibleKValues(state);
-    kValues.forEach((kValue: number) => {
-      this.knn = new KNN(state.trainingExamples, state.trainingLabels, {
+    const gradeOptions = getGradeOptions(state);
+
+    this.possibleKValues(state).forEach((kValue: number) => {
+      const model = new KNN(state.trainingExamples, state.trainingLabels, {
         k: kValue,
       });
-      const model = this.knn;
-      const predictedLabels = this.batchPredict(state.accuracyCheckExamples);
-      const accuracy = this.getAccuracyPercent();
-      if (accuracy > bestAccuracy) {
-        bestAccuracy = accuracy;
+      const predictedLabels = model.predict(state.accuracyCheckExamples);
+      const {percentCorrect} = gradeAccuracy(
+        predictedLabels,
+        state.accuracyCheckLabels,
+        gradeOptions,
+      );
+      // "NaN" from an empty check set loses this, so no model is stored.
+      if (parseFloat(percentCorrect) > bestAccuracy) {
+        bestAccuracy = parseFloat(percentCorrect);
         bestK = kValue;
         bestModel = model;
         bestPredictedLabels = predictedLabels;
       }
     });
-    // The loop leaves `this.knn` on the last candidate it tried. Restore the
-    // winner, so a later batchPredict uses the model the lab stored.
+
     this.knn = bestModel;
     return {
       model: bestModel!,
@@ -126,12 +134,6 @@ export default class KNNTrainer implements Trainer {
     return possibleKValues.filter(
       (kValue: number) => kValue <= trainingExamplesSize,
     );
-  }
-
-  getAccuracyPercent(): number {
-    const state = this.store.getState();
-    const percent = getPercentCorrect(state);
-    return parseFloat(percent);
   }
 
   batchPredict(accuracyCheckExamples: number[][]): (number | string)[] {

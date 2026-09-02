@@ -100,55 +100,70 @@ export function getPercentCorrect(state: RootState): string {
   return percentCorrect;
 }
 
-export function getAccuracyClassification(state: RootState): {
+export interface AccuracyGradeOptions {
+  // Absent means an exact match. Present means within this difference.
+  tolerance?: number;
+}
+
+export interface AccuracyGrades {
   percentCorrect: string;
   grades: string[];
-} {
+}
+
+export function gradeAccuracy(
+  predictedLabels: (number | string)[] | undefined,
+  expectedLabels: (number | string)[],
+  options: AccuracyGradeOptions = {},
+): AccuracyGrades {
+  const {tolerance} = options;
+  const grades: string[] = [];
   let numCorrect = 0;
-  const grades = [];
-  const numPredictedLabels = state.accuracyCheckPredictedLabels
-    ? state.accuracyCheckPredictedLabels.length
-    : 0;
-  for (let i = 0; i < numPredictedLabels; i++) {
-    if (
-      state.accuracyCheckLabels[i].toString() ===
-      state.accuracyCheckPredictedLabels[i].toString()
-    ) {
+  const count = predictedLabels ? predictedLabels.length : 0;
+
+  for (let i = 0; i < count; i++) {
+    const predicted = predictedLabels![i];
+    const expected = expectedLabels[i];
+    const correct =
+      tolerance === undefined
+        ? expected.toString() === predicted.toString()
+        : Math.abs(Number(expected) - Number(predicted)) <= tolerance;
+
+    if (correct) {
       numCorrect++;
       grades.push(ResultsGrades.CORRECT);
     } else {
       grades.push(ResultsGrades.INCORRECT);
     }
   }
+
   return {
-    percentCorrect: ((numCorrect / numPredictedLabels) * 100).toFixed(2),
+    // An empty list gives "NaN", which is what the lab has always reported.
+    percentCorrect: ((numCorrect / count) * 100).toFixed(2),
     grades,
   };
 }
 
-export function getAccuracyRegression(state: RootState): {
-  percentCorrect: string;
-  grades: string[];
-} {
-  let numCorrect = 0;
-  const grades: string[] = [];
-  const range = getExtrema(state.data, state.labelColumn!).range;
-  const errorTolerance = (range * REGRESSION_ERROR_TOLERANCE) / 100;
-  const numPredictedLabels = state.accuracyCheckPredictedLabels.length;
-  for (let i = 0; i < numPredictedLabels; i++) {
-    const diff = Math.abs(
-      Number(state.accuracyCheckLabels[i]) -
-        Number(state.accuracyCheckPredictedLabels[i]),
-    );
-    if (diff <= errorTolerance) {
-      numCorrect++;
-      grades.push(ResultsGrades.CORRECT);
-    } else {
-      grades.push(ResultsGrades.INCORRECT);
-    }
-  }
-  return {
-    percentCorrect: ((numCorrect / numPredictedLabels) * 100).toFixed(2),
-    grades,
-  };
+function regressionTolerance(state: RootState): number {
+  const {range} = getExtrema(state.data, state.labelColumn!);
+  return (range * REGRESSION_ERROR_TOLERANCE) / 100;
+}
+
+/* The grading rule for the label column this level uses. */
+export function getGradeOptions(state: RootState): AccuracyGradeOptions {
+  return isRegression(state) ? {tolerance: regressionTolerance(state)} : {};
+}
+
+export function getAccuracyClassification(state: RootState): AccuracyGrades {
+  return gradeAccuracy(
+    state.accuracyCheckPredictedLabels,
+    state.accuracyCheckLabels,
+  );
+}
+
+export function getAccuracyRegression(state: RootState): AccuracyGrades {
+  return gradeAccuracy(
+    state.accuracyCheckPredictedLabels,
+    state.accuracyCheckLabels,
+    {tolerance: regressionTolerance(state)},
+  );
 }
