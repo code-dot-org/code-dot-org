@@ -70,6 +70,19 @@ export interface CodebridgeConfig {
    * `languageMapping`.
    */
   fileIcons?: {[extension: string]: FileIcon};
+  /**
+   * What to CALL a file, where the lab knows better than the file name does.
+   *
+   * The tab strip asks this and falls back to the file's name. It is for a lab
+   * whose files declare what they are: World Lab's `main.world` holds a world
+   * called "Platform World", and that is the word on its blocks, in every
+   * dropdown that offers it, and in the menus a learner opened it from — so a
+   * tab reading `main.world` was the one place saying something else.
+   *
+   * The FILE BROWSER is deliberately not asked: it is a view of files, and a
+   * tree that renamed them would be lying about what is on disk.
+   */
+  fileLabel?: (file: ProjectFile) => string | undefined;
   /** Hide the new-folder affordances. */
   hideNewFolderButton?: boolean;
   /**

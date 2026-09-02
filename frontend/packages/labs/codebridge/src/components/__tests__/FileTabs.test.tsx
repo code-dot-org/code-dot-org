@@ -5,6 +5,8 @@ import type {LevelProperties, MultiFileSource} from '@code-dot-org/core/api';
 import {RootStateProvider} from '@code-dot-org/core/redux';
 import {SourcesProvider} from '@code-dot-org/lab/contexts';
 
+import type {CodebridgeConfig} from '../../config';
+import {CodebridgeConfigProvider} from '../../contexts';
 import {getEmptyProject} from '../../utils/multiFileSource';
 import FileTabs from '../FileTabs';
 
@@ -34,7 +36,19 @@ const twoFiles: MultiFileSource = {
   openFiles: ['1', '2'],
 };
 
-const renderTabs = (pinnedFileId?: string) =>
+/** The little of the config these tabs read, as the provider wants it. */
+const asConfig = (over: Partial<CodebridgeConfig> = {}): CodebridgeConfig =>
+  ({
+    editableFileTypes: [],
+    supportedFileTypes: [],
+    languageMapping: {},
+    ...over,
+  }) as CodebridgeConfig;
+
+const renderTabs = (
+  pinnedFileId?: string,
+  config: CodebridgeConfig = asConfig(),
+) =>
   render(
     <RootStateProvider>
       <SourcesProvider<LevelProperties, MultiFileSource>
@@ -42,7 +56,9 @@ const renderTabs = (pinnedFileId?: string) =>
         initialSources={{source: twoFiles}}
         defaultSources={{source: getEmptyProject()}}
       >
-        <FileTabs pinnedFileId={pinnedFileId} />
+        <CodebridgeConfigProvider config={config}>
+          <FileTabs pinnedFileId={pinnedFileId} />
+        </CodebridgeConfigProvider>
       </SourcesProvider>
     </RootStateProvider>,
   );
@@ -92,4 +108,21 @@ it('pins one file, not the strip', () => {
   fireEvent.click(screen.getByLabelText('Close b.py'));
   expect(screen.queryByRole('tab', {name: 'b.py'})).toBe(null);
   expect(screen.queryByRole('tab', {name: 'a.py'})).not.toBe(null);
+});
+
+it('calls a file what the lab calls it, and keeps the file name to hand', () => {
+  // A lab whose files declare what they are: the tab says the thing's name,
+  // which is the word its blocks and every menu already use, and the file name
+  // stays on the tooltip as the answer to "which file is this".
+  renderTabs(
+    undefined,
+    asConfig({
+      fileLabel: file => (file.name === 'a.py' ? 'The First One' : undefined),
+    }),
+  );
+
+  expect(selected('The First One')).toBe('true');
+  expect(screen.getByRole('tab', {name: 'The First One'}).title).toBe('a.py');
+  // …and a file the lab says nothing about keeps its own name.
+  expect(selected('b.py')).toBe('false');
 });

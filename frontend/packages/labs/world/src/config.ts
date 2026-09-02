@@ -7,6 +7,8 @@ import type {CodebridgeConfig} from '@code-dot-org/codebridge';
 import {AnimationEditor} from './animationEditor/AnimationEditor';
 import {followImages} from './appearance/sheetCompanions';
 import {BlocklyFileEditor} from './blockly/BlocklyFileEditor';
+import {label} from './blockly/label';
+import {authoredName} from './blockly/projectModules';
 import {EffectFileEditor} from './effect/EffectFileEditor';
 import {ImageFileEditor} from './imageEditor/ImageFileEditor';
 import {MapEditor} from './mapEditor/MapEditor';
@@ -122,6 +124,21 @@ export const worldConfig: Partial<CodebridgeConfig> = {
     anim: AnimationEditor,
     effect: EffectFileEditor,
   },
+  /**
+   * What a TAB calls a file: the name the file declares.
+   *
+   * `main.world` holds a world called "Platform World", and that is the word on
+   * its blocks, in every dropdown that offers it, and in the menu the learner
+   * opened it from (`files/FileMenus`) — so a tab reading `main.world` was the
+   * one place in the lab saying something else. One rule, one answer:
+   * `authoredName`, falling back to the file's own stem titled, which is what
+   * every dropdown does for a file that declares nothing.
+   *
+   * The file BROWSER still shows file names, and should: it is a view of files.
+   */
+  fileLabel: file =>
+    authoredName(file.contents ?? '') ??
+    label((file.name ?? '').replace(/\.[^.]+$/, '')),
   // File-browser icons for World's own extensions (all FontAwesome solid). The
   // built-in types (js/json/png/…) keep their defaults; these give each World
   // file type a distinct, meaningful glyph.

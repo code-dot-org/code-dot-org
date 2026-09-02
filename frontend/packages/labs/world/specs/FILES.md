@@ -26,6 +26,15 @@ Coin            ⋮   the row opens it; the ⋮ deletes it
 Player          ⋮
 ```
 
+**The tabs say the same thing.** A file opened from a menu called "Platform
+World" used to become a tab reading `main.world`, which is the one place in the
+lab that says a file name rather than a thing's name — and it wore a generic
+glyph beside a tree row wearing a globe. Codebridge asks the lab now
+(`CodebridgeConfig.fileLabel`, and the tab strip finally reads
+`config.fileIcons`), and the lab answers with the same `authoredName` the menus
+use. The file name stays as the tab's tooltip: it is still the answer to "which
+file is this".
+
 **Rows are named by what the file DECLARES**, not by what it is called.
 `player.actor` reads as "Player" — the word on its own blocks, in every
 dropdown that offers it, in the map editor — because the file name is where

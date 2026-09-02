@@ -3,6 +3,7 @@ import {Typography} from '@mui/material';
 import CloseButton from '@code-dot-org/component-library/closeButton';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
+import {useCodebridgeConfig} from '../contexts';
 import {useFileOperations} from '../hooks/useFileOperations';
 import {getFileIcon} from '../utils/fileIcons';
 import {getOpenFiles} from '../utils/multiFileSource';
@@ -34,6 +35,7 @@ export interface FileTabsProps {
  */
 const FileTabs = ({pinnedFileId}: FileTabsProps = {}) => {
   const {source, activateFile, closeFile} = useFileOperations();
+  const config = useCodebridgeConfig();
   const openFiles = getOpenFiles(source);
 
   if (openFiles.length === 0) {
@@ -43,7 +45,17 @@ const FileTabs = ({pinnedFileId}: FileTabsProps = {}) => {
   return (
     <div className={styles.fileTabs} role="tablist" aria-label="Open files">
       {openFiles.map(file => {
-        const {iconName, iconStyle, isBrand} = getFileIcon(file.name);
+        // The lab's icons, which the browser has always used and this had not:
+        // a `.world` tab wore the generic file glyph beside a tree row wearing
+        // a globe (`config.fileIcons`).
+        const {iconName, iconStyle, isBrand} = getFileIcon(
+          file.name,
+          config.fileIcons,
+        );
+        // …and what the lab calls it, which is what the menu that opened it
+        // said (`config.fileLabel`). The file name stays on the tab's tooltip:
+        // it is still the answer to "which file is this".
+        const label = config.fileLabel?.(file) ?? file.name;
         const pinned = file.id === pinnedFileId;
         return (
           <div
@@ -57,6 +69,7 @@ const FileTabs = ({pinnedFileId}: FileTabsProps = {}) => {
               role="tab"
               aria-selected={Boolean(file.active)}
               className={styles.label}
+              title={file.name}
               onClick={() => activateFile(file.id)}
               onKeyDown={e => {
                 if (!pinned && (e.key === 'Backspace' || e.key === 'Delete')) {
@@ -69,7 +82,7 @@ const FileTabs = ({pinnedFileId}: FileTabsProps = {}) => {
                 iconStyle={iconStyle}
                 iconFamily={isBrand ? 'brands' : undefined}
               />
-              <Typography variant="body4">{file.name}</Typography>
+              <Typography variant="body4">{label}</Typography>
             </button>
             {/* No close button rather than a disabled one: a control that is
                 always there and never works is a thing to keep trying. */}
@@ -78,7 +91,7 @@ const FileTabs = ({pinnedFileId}: FileTabsProps = {}) => {
                 onClick={() => closeFile(file.id)}
                 color="light"
                 size="s"
-                aria-label={`Close ${file.name}`}
+                aria-label={`Close ${label}`}
                 className={styles.closeButton}
               />
             )}

@@ -73,8 +73,11 @@ it('renders the World Lab shell from the default project', async () => {
   // default project renders.
   await act(async () => {});
 
-  // The default project's open file has a tab.
-  expect((await screen.findAllByText('main.world')).length).toBeGreaterThan(0);
+  // The default project's open file has a tab, called what the world in it is
+  // called — the word its blocks and the menus use (`worldConfig.fileLabel`).
+  // The file name is the tab's tooltip.
+  const tab = await screen.findByRole('tab', {name: 'Platform World'});
+  expect(tab.title).toBe('main.world');
   // …and the way around the project is the folder menus, one button per
   // folder, in the tab bar (`files/FileMenus`).
   expect(screen.getByRole('button', {name: 'Worlds'})).toBeTruthy();
