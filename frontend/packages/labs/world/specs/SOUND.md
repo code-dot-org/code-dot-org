@@ -149,13 +149,34 @@ preview, choose.
 
 ```
 play sound ⟨pop ▾⟩            a moment
-set music to ⟨theme ▾⟩        state; `(none)` stops it
+set music to ⟨theme ▾⟩        state
+stop music                    the track ends; sounds carry on
+stop all sounds               a moment: everything stops, music included
 ```
 
 Both dropdowns list the project's own sounds and carry the `(import…)` row, the
-same as `set sprite`. Volume, pitch and per-actor panning are NOT in the first
-pass: none of them is expressible as an obvious sentence yet, and a knob nobody
-asked for is a knob to keep working.
+same as `set sprite`. Neither lists a way to stop.
+
+STOPPING IS TWO BLOCKS, and was one menu row. `set music to ⟨none⟩` was how the
+track ended, and the row only ever appeared in a project that held no sounds at
+all — `orNone`'s empty-list fallback — so in a project with one track there was
+no way to say "stop" and the block's own tooltip named a row nobody could pick.
+A sentence beginning "set music to" is not where anybody looks for that anyway.
+So an empty dropdown here is an unfinished block, as everywhere else in the
+palette, and silence is said out loud.
+
+Two and not one, because they stop different amounts: `stop music` ends the
+track and leaves the effects playing, which is what a scene change wants;
+`stop all sounds` ends everything, which is what a pause or a lost game wants.
+The second is a MOMENT and travels in the one-shot queue, so a tick keeps its
+order — `stop all sounds` and then `play sound ⟨pop⟩` is a pop
+(`World.stopSounds`, `SoundChannel.sync`). It clears the track as well, in the
+world and in the driver's belief about it, so naming the same track again is
+heard as a change and starts it.
+
+Volume, pitch and per-actor panning are NOT in the first pass: none of them is
+expressible as an obvious sentence yet, and a knob nobody asked for is a knob to
+keep working.
 
 `play sound` takes no subject. A sound has no position in this lab — there is no
 listener, so there is nothing for a position to mean — and a block that took an

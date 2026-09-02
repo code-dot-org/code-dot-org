@@ -235,4 +235,6 @@ game might have.
 So: pass the field, and drop the placeholder wherever `(any)` already says
 there is nothing to filter on. The placeholder is `orNone` saying a list is
 empty — it reads "(no actors yet)" now, for the reason that function's header
-gives — and it is never a thing to choose.
+gives — and it is never a thing to choose. Nothing in the palette asks a learner
+to choose an empty row: the one that did, `set music to ⟨none⟩`, is a `stop
+music` block instead (specs/SOUND.md).

@@ -392,6 +392,24 @@ export class WorldBuilder {
   }
 
   /**
+   * Stop everything making a noise. See {@link World.stopSounds}.
+   *
+   * Straight to the world and NOT logged, for the reason `playSound` gives: it
+   * is a moment, and a moment in the log happens again every time this
+   * description makes a world.
+   *
+   * The track it clears is the RUNNING world's. A `set music to` in the same
+   * setup is logged and says what a world built from this description starts
+   * with, which is what it should say — "the music this world has" is a
+   * property of the description; "and now everything stops" is something that
+   * happened.
+   */
+  stopSounds(): this {
+    this.getWorld().stopSounds();
+    return this;
+  }
+
+  /**
    * Play a track. See {@link World.setMusic}.
    *
    * Deferred and COLLAPSED, like `set`: music has one value and the last write

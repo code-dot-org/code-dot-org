@@ -10,6 +10,8 @@
 // is that a one-shot fires every time and a track fires only when it CHANGES —
 // and neither of those needs an AudioContext to be wrong.
 
+import {STOP_ALL_SOUNDS, type SoundCue} from '../../engine';
+
 /** What the driver can actually do with sound. Phaser implements it. */
 export interface SoundOutput {
   /** Play a sound once, now. */
@@ -18,6 +20,8 @@ export interface SoundOutput {
   startMusic(name: string): void;
   /** Stop whatever track is playing. */
   stopMusic(): void;
+  /** Silence everything at once, one-shots and track alike. */
+  stopAll(): void;
 }
 
 /**
@@ -43,11 +47,20 @@ export class SoundChannel {
    *
    * Called after `tick`, with `world.drainSounds()` and `world.music()`.
    */
-  sync(played: readonly string[], music: string | undefined): void {
+  sync(played: readonly SoundCue[], music: string | undefined): void {
     // Every one, in the order raised, repeats included — two coins collected in
     // one tick are two pops (World.playSound).
-    for (const name of played) {
-      this.out.play(name);
+    for (const cue of played) {
+      if (cue === STOP_ALL_SOUNDS) {
+        this.out.stopAll();
+        // What this channel BELIEVES is playing, not just what is: `stopAll`
+        // took the track down too, so a world that names the same track again
+        // has to be heard as a change. Without this the comparison below finds
+        // them equal and the game plays on in silence.
+        this.track = undefined;
+        continue;
+      }
+      this.out.play(cue);
     }
     if (music === this.track) {
       return;

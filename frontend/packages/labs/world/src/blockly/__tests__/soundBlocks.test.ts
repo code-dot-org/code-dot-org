@@ -71,11 +71,40 @@ describe('set music to', () => {
     );
   });
 
-  it('stops the music on "(none)"', () => {
-    // The difference from `play sound`, and the reason there is no `stop music`
-    // block: silence is a value a learner means, so the empty dropdown is a
-    // finished sentence rather than an unfinished one.
-    expect(emit('world_set_music', '')).toBe('world.setMusic(undefined);\n');
+  it('emits nothing when it names nothing', () => {
+    // It used to silence the world here, on the reading that an empty dropdown
+    // meant "(none)" and "(none)" meant stop. Two things were wrong with that:
+    // the row only ever appeared in a project with no sounds at all, so nobody
+    // could pick it; and a saved block whose track had been deleted stopped the
+    // music instead of doing nothing. Silence is `stop music` now, and this is
+    // an unfinished block like every other.
+    expect(emit('world_set_music', '')).toBe('');
+  });
+
+  it('does not offer a row for stopping', () => {
+    // The menu is the project's tracks and a way to get more. What is not in it
+    // is a way to stop, which is a block.
+    setProjectSounds([['theme', 'theme.mp3']]);
+    expect(soundImportOptions()).toEqual([
+      ['theme', 'theme.mp3'],
+      ['(import…)', IMPORT_SOUND_VALUE],
+    ]);
+  });
+});
+
+describe('stop music', () => {
+  it('sets the track to nothing', () => {
+    // The same call `set music to ⟨…⟩` makes with no track: one method on the
+    // world, two sentences in the palette (`World.setMusic`).
+    expect(emit('world_stop_music', '')).toBe('world.setMusic(undefined);\n');
+  });
+});
+
+describe('stop all sounds', () => {
+  it('raises the cue that silences everything', () => {
+    // Through the QUEUE, so a tick keeps its order — the engine's half of this
+    // is `World.stopSounds` and the driver's is `SoundChannel.sync`.
+    expect(emit('world_stop_all_sounds', '')).toBe('world.stopSounds();\n');
   });
 
   it('emits nothing for the import row', () => {
@@ -96,6 +125,13 @@ describe('the toolbox', () => {
     }>;
     const category = categories.find(entry => entry.name === 'Sound');
 
-    expect(category?.blocks).toEqual(['world_play_sound', 'world_set_music']);
+    // Four: the two that make a noise, and the two that stop one — `stop
+    // music` leaves the effects playing and `stop all sounds` does not.
+    expect(category?.blocks).toEqual([
+      'world_play_sound',
+      'world_set_music',
+      'world_stop_music',
+      'world_stop_all_sounds',
+    ]);
   });
 });

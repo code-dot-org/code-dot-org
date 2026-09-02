@@ -46,6 +46,8 @@ export {
 export {
   World,
   DEFAULT_BACKDROP_COLOR,
+  STOP_ALL_SOUNDS,
+  type SoundCue,
   type WorldInit,
   type RenderState,
   type BackdropState,

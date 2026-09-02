@@ -4463,9 +4463,17 @@ const worldPlaySound = defineBlock({
  * way the sky does, so swapping the track while the game runs swaps the track
  * rather than restarting the game around a learner who was listening to it.
  *
- * `(none)` is silence and is how it STOPS. A world either has music or it does
- * not, so a second `stop music` block would be a second way to say one thing —
- * the same reason `set background to ⟨none⟩` is how a sky is taken away.
+ * SILENCE IS A BLOCK, not a row in this menu. It was `(none)` here, on the
+ * argument that a world either has music or it does not — and the row only
+ * ever appeared when the project had no sounds at all (`orNone`'s fallback),
+ * so in a project with one track there was no way to say "stop" and this
+ * block's tooltip named a row nobody could pick. `stop music` says it, where
+ * a sentence beginning "set music to" was never going to be where somebody
+ * looked for it anyway.
+ *
+ * So an empty value here is an UNFINISHED BLOCK, as it is everywhere else in
+ * the palette: it generates nothing rather than silencing a world by accident
+ * — which is what a saved block whose track was deleted would otherwise do.
  */
 const worldSetMusic = defineBlock({
   type: 'world_set_music',
@@ -4481,18 +4489,68 @@ const worldSetMusic = defineBlock({
   ],
   style: 'default',
   tooltip:
-    'Play a track over and over. Choosing “(none)” stops whatever is playing.',
+    'Play a track over and over, replacing whatever was playing. “stop music” ' +
+    'is how it stops.',
   generator: {
     javascript(block) {
       const sound = block.getFieldValue('SOUND');
-      // Here "(none)" is a VALUE rather than an unfinished block: silence is
-      // something a learner means. The import row is still not one.
-      if (sound === IMPORT_SOUND_VALUE) {
+      // Nothing chosen, or the import row still in the field: unfinished
+      // either way.
+      if (!sound || sound === IMPORT_SOUND_VALUE) {
         return '';
       }
-      return sound
-        ? `world.setMusic(${str(sound)});\n`
-        : 'world.setMusic(undefined);\n';
+      return `world.setMusic(${str(sound)});\n`;
+    },
+  },
+});
+
+/**
+ * `stop music` — silence, deliberately said.
+ *
+ * The other half of `set music to`, and a block rather than a row in its menu
+ * for the reason that block's header gives. It takes no argument: a world has
+ * one track, so there is nothing to name.
+ */
+const worldStopMusic = defineBlock({
+  type: 'world_stop_music',
+  message0: 'stop music',
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [worldContextExtension],
+  style: 'default',
+  tooltip: 'Stop the track that is playing. Sounds already playing carry on.',
+  generator: {
+    javascript() {
+      return 'world.setMusic(undefined);\n';
+    },
+  },
+});
+
+/**
+ * `stop all sounds` — silence, everything, now.
+ *
+ * NOT `stop music` twice over: that one ends the track and leaves the effects
+ * alone, and this ends both. What makes it a separate block rather than a
+ * flag on the other is that they are wanted at different moments — a scene
+ * changing its music, against a game being paused or lost.
+ *
+ * A MOMENT, like `play sound`, and raised through the same queue so that the
+ * order inside one tick is kept: `play sound ⟨pop⟩` after this one still pops
+ * (`World.stopSounds`).
+ */
+const worldStopAllSounds = defineBlock({
+  type: 'world_stop_all_sounds',
+  message0: 'stop all sounds',
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [worldContextExtension],
+  style: 'default',
+  tooltip:
+    'Stop everything that is making a noise, the music included. Sounds ' +
+    'played after this one still play.',
+  generator: {
+    javascript() {
+      return 'world.stopSounds();\n';
     },
   },
 });
@@ -7944,6 +8002,8 @@ export const DOMAIN_BLOCKS = [
   // (specs/ACTOR_LISTS.md).
   worldPlaySound,
   worldSetMusic,
+  worldStopMusic,
+  worldStopAllSounds,
   worldFilterActors,
   worldActorsWithin,
   worldNearPlaceOfKind,
@@ -8299,7 +8359,17 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
   // A noise, and a track. Its own category rather than tucked under Appearance:
   // what a game sounds like is not what it looks like, and a learner looking
   // for "play sound" looks for a word, not for a drawer (specs/SOUND.md).
-  {name: 'Sound', blocks: ['world_play_sound', 'world_set_music']},
+  {
+    name: 'Sound',
+    blocks: [
+      'world_play_sound',
+      'world_set_music',
+      // …and the two ways to stop, which are two because they stop different
+      // amounts (`world_stop_all_sounds`).
+      'world_stop_music',
+      'world_stop_all_sounds',
+    ],
+  },
   // Lists of values — the drawer that lets a project keep two numbers
   // (specs/LISTS.md). Its literal and its count are Blockly's own, reworded;
   // the rest is this lab's, in the voice the actor lists speak.

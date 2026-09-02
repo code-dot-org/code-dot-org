@@ -2146,6 +2146,10 @@ export const TILES: readonly Tile[] = [
       {kind: 'actor', id: 'portrait'},
       {kind: 'block', type: 'world_play_sound'},
       {kind: 'block', type: 'world_set_music'},
+      // …and the two ways to stop, granted with the ones that start: a scene
+      // that can turn the music on and not off is a scene with a bug in it.
+      {kind: 'block', type: 'world_stop_music'},
+      {kind: 'block', type: 'world_stop_all_sounds'},
       {kind: 'template', id: 'story'},
     ],
     offers: [

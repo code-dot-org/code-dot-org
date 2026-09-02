@@ -363,6 +363,14 @@ export class PhaserBinding {
         track?.destroy();
         track = undefined;
       },
+      stopAll: () => {
+        // Phaser's own, which stops every voice the scene owns — the one-shots
+        // this binding never kept a handle on, and the track it did. The track
+        // is destroyed here as well, for the reason `stopMusic` gives.
+        scene?.sound.stopAll();
+        track?.destroy();
+        track = undefined;
+      },
     });
     this.sound = sound;
 

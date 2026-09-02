@@ -8,6 +8,7 @@
 
 import {describe, expect, it, vi} from 'vitest';
 
+import {STOP_ALL_SOUNDS} from '../../../engine';
 import {SoundChannel, type SoundOutput} from '../sound';
 
 /** A port that writes down what it was asked to do. */
@@ -17,6 +18,7 @@ const output = () => {
     play: name => calls.push(`play ${name}`),
     startMusic: name => calls.push(`start ${name}`),
     stopMusic: () => calls.push('stop'),
+    stopAll: () => calls.push('stop all'),
   };
   return {out, calls};
 };
@@ -183,11 +185,40 @@ describe('the port', () => {
     // Stated as a test because it is the point of the seam: everything above
     // decided what should happen without an AudioContext existing.
     const play = vi.fn();
-    new SoundChannel({play, startMusic: vi.fn(), stopMusic: vi.fn()}).sync(
-      ['pop'],
-      undefined,
-    );
+    new SoundChannel({
+      play,
+      startMusic: vi.fn(),
+      stopMusic: vi.fn(),
+      stopAll: vi.fn(),
+    }).sync(['pop'], undefined);
 
     expect(play).toHaveBeenCalledWith('pop');
+  });
+});
+
+describe('stop all sounds', () => {
+  it('silences everything where it was said, and not the rest of the tick', () => {
+    // A cue in the queue rather than a flag beside it, so a tick keeps its
+    // order: what was said BEFORE it is stopped by it, and what was said after
+    // still plays (`World.stopSounds`).
+    const {out, calls} = output();
+
+    new SoundChannel(out).sync(['pop', STOP_ALL_SOUNDS, 'ding'], undefined);
+
+    expect(calls).toEqual(['play pop', 'stop all', 'play ding']);
+  });
+
+  it('forgets the track it had started, so the same one starts again', () => {
+    // The failure this is here for: `stopAll` takes the music down too, and a
+    // channel that went on believing it was playing would compare the world's
+    // track against itself, find no change, and leave the game in silence.
+    const {out, calls} = output();
+    const channel = new SoundChannel(out);
+
+    channel.sync([], 'theme');
+    channel.sync([STOP_ALL_SOUNDS], undefined);
+    channel.sync([], 'theme');
+
+    expect(calls).toEqual(['start theme', 'stop all', 'start theme']);
   });
 });

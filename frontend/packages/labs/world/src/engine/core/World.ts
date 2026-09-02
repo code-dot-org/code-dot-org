@@ -454,6 +454,19 @@ class ActorCollection {
   }
 }
 
+/**
+ * "Stop everything", as a thing that can sit in the sound queue.
+ *
+ * A SENTINEL and not a flag, so that a tick's sound keeps its order: whatever
+ * was said after it still plays (`World.stopSounds`). A symbol rather than a
+ * reserved name, because every other cue in the queue is a file name and a
+ * project may name a file anything.
+ */
+export const STOP_ALL_SOUNDS: unique symbol = Symbol('stop all sounds');
+
+/** One thing said about sound in a tick: play this, or stop everything. */
+export type SoundCue = string | typeof STOP_ALL_SOUNDS;
+
 export class World {
   readonly id: string;
   readonly name: string;
@@ -723,7 +736,7 @@ export class World {
     return this.inTick;
   }
   /** Sounds raised since the driver last drained, in the order raised. */
-  private readonly queuedSounds: string[] = [];
+  private readonly queuedSounds: SoundCue[] = [];
   /** The track playing, or undefined for silence (specs/SOUND.md). */
   private track: string | undefined;
 
@@ -1741,6 +1754,24 @@ export class World {
   }
 
   /**
+   * Stop everything making a noise — `stop all sounds`.
+   *
+   * IN THE QUEUE, not beside it, because a tick is ordered: `stop all sounds`
+   * and then `play sound ⟨pop⟩` is a pop, and a flag read after the queue was
+   * drained would make it silence. So this is a cue like any other and the
+   * driver reads them in order (`runtime/driver/sound`).
+   *
+   * The track is state and not a moment, so it is cleared HERE as well: a
+   * world that went on reporting music nobody can hear would start it again
+   * the moment anything else changed.
+   */
+  stopSounds(): this {
+    this.queuedSounds.push(STOP_ALL_SOUNDS);
+    this.track = undefined;
+    return this;
+  }
+
+  /**
    * Take the sounds raised since the last call, emptying the queue.
    *
    * The driver calls this after `tick`. A world nobody drains — one built to be
@@ -1748,16 +1779,17 @@ export class World {
    * away with its queue, which is what "building a world drops its sounds"
    * comes to in practice.
    */
-  drainSounds(): readonly string[] {
+  drainSounds(): readonly SoundCue[] {
     return this.queuedSounds.splice(0, this.queuedSounds.length);
   }
 
   /**
    * Play a track, replacing whatever was playing — `set music to ⟨theme⟩`.
    *
-   * `undefined` is silence, and is how it stops: a world either has music or it
-   * does not, so a second `stop music` method would be a second way to say one
-   * thing.
+   * `undefined` is silence and is how it stops, so there is one method and not
+   * two here. The PALETTE has two — `set music to` and `stop music` — because
+   * a menu row reading "(none)" is not where anybody looks for a way to stop
+   * something (`domainBlocks`).
    */
   setMusic(track: string | undefined): this {
     this.track = track;
