@@ -18,7 +18,9 @@ one rule that was written around it.
   `random integer` and `random place`, and nothing that picks one of a set the
   learner wrote down.
 - **A grid.** `simulation/emergent` and every tile-state puzzle wants a store
-  indexed two ways. That follows this decision rather than being it.
+  addressed two ways. A SEPARATE question, not a later part of this one — see
+  "what is deliberately not solved" below for why it is not waiting on the
+  index.
 
 And the rule: **History's tape is eight properties called `one move ago` …
 `eight moves ago`**, written out because a rule's state is a fixed set of named
@@ -156,6 +158,28 @@ of` gave it a reason.
   either nesting (a list whose items are lists, which the single `List` check
   admits and nothing else supports) or a `grid` type of its own with `⟨grid⟩ at
 ⟨x⟩ ⟨y⟩`. The second is probably right and is its own document.
+
+  **AND IT IS NOT WAITING ON THE INDEX**, which is what both this document and
+  the catalogue used to imply. The index is held back because a position in a
+  sequence invites an off-by-one and leaves "past the end" to answer (item 3
+  above). A grid has neither: `at ⟨3⟩ ⟨7⟩` is a pair of coordinates, the same
+  shape as `set position of`, and off the edge of a declared rectangle is a
+  question the grid can answer for itself because it knows how big it is. So
+  the flat-list-plus-index spelling is the one with the open question in it,
+  and it also asks a learner to write `row × width + column` — the arithmetic
+  this lab removes elsewhere, which is why `within` exists.
+
+  **What wants it is cells that are VALUES, not cells that are THINGS.** A tile
+  puzzle does not: an actor per cell is idiomatic here and brings drawing,
+  collisions and the map editor with it, which is why Sokoban is written that
+  way and is better for it. A distance field for a search, a heat map,
+  minesweeper's neighbour counts, a cellular automaton — those are numbers in a
+  rectangle, and there is nowhere to keep them.
+
+  So the thing that forces it is a lesson whose cells are numbers, the way the
+  index's is a lesson that addresses a script by its cursor. Neither exists
+  yet, and both are teaching decisions before they are code ones.
+
 - **Element types.** See above; a list of anything is the honest promise.
 - **Sorting.** A high-score table wants it the moment there are more than three
   scores. It arrives when a lesson asks, the way `ordered by` did.

@@ -609,8 +609,11 @@ them. What is still missing is an INDEX — `item ⟨n⟩ of ⟨list⟩` — whi
 back until something asks for it, and a list of lists, which is the grid
 question below.
 
-**A grid, or a list of lists.** `sim/emergent` and any tile-state puzzle wants
-a 2D store. Follows the list decision.
+**A grid.** `sim/emergent` and any tile-state puzzle wants a 2D store. It does
+NOT follow the list decision, which is what this entry used to say: a grid
+addressed `at ⟨x⟩ ⟨y⟩` has no index in it, and the index is the part being held
+back. See specs/LISTS.md — the two are separate questions, and the grid is the
+one that can be answered first.
 
 **A neighbourhood query.** WRITTEN: `the actors in ⟨…⟩ within ⟨80⟩ of ⟨this
 actor⟩` (`world_actors_within`, `WorldLab.within`), which is what
