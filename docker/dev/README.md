@@ -25,12 +25,10 @@ docker compose up -d
 docker compose exec app bash
 ```
 
-Run these commands once in the container. They create the databases and add
-the curriculum data.
-
 ```sh
-cd /code-dot-org/pegasus && bundle exec rake pegasus:setup_db
-cd /code-dot-org/dashboard && bundle exec rake dashboard:setup_db
+cd /code-dot-org
+bundle install
+bundle exec rake install
 ```
 
 Build the apps files. Leave this server running: it rebuilds each file you
