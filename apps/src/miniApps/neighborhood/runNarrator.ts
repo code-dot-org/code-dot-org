@@ -221,7 +221,6 @@ export default class NeighborhoodRunNarrator {
     this.log().replaceChildren();
   }
 
-  // Any other action ends an open streak.
   private say(id: string, phrase: string): void {
     this.closeStreak();
     this.record(id, phrase);
@@ -236,7 +235,6 @@ export default class NeighborhoodRunNarrator {
     );
   }
 
-  // Ends an open streak, recording how far or how many times it went.
   private closeStreak(): void {
     const streak = this.streak;
     if (!streak) {
@@ -258,7 +256,6 @@ export default class NeighborhoodRunNarrator {
     );
   }
 
-  // By id: a count changes what a painter is called as the log grows.
   private name(id: string): string {
     return id ? painterName(id) : 'Painter';
   }

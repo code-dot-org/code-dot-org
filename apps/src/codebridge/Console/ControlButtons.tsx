@@ -156,8 +156,6 @@ const ControlButtons: React.FunctionComponent = () => {
 
   return (
     <div className={moduleStyles.controlButtons}>
-      {/* One element, so focus survives the swap. A screen reader reads a
-          focus drop to <body> as the page title. */}
       <WithConditionalTooltip
         showTooltip={!isRunning && !!disabledCodeActionsTooltip}
         tooltipProps={{
