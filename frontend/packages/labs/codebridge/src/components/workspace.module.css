@@ -20,11 +20,22 @@
   min-height: 0;
 }
 
-/* The tab strip, plus the re-open button when the file browser is collapsed.
-   Shares the 40px top-bar row with the file browser header. */
+/* The tab strip, plus whatever the host puts beside it (`tabBarStart`) and the
+   re-open button when the file browser is collapsed. Shares the 40px top-bar
+   row with the file browser header.
+ *
+ * THE ROW HOLDS THE HEIGHT, not the strip inside it. `FileTabs` renders nothing
+ * at all when no file is open — there is nothing to show — and the bar
+ * collapsed with it: closing the last tab moved the editor up by 40px, and
+ * opening one moved everything down again. Every lab has that: it is the same
+ * row in Python Lab and Web Lab, where the only thing in it is the tabs. */
 .tabBar {
   display: flex;
   align-items: center;
+  flex: none;
+  height: 40px;
+  min-height: 40px;
+  box-sizing: border-box;
   background-color: var(--background-neutral-primary, #fff);
 }
 

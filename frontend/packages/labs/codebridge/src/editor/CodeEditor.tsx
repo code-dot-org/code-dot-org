@@ -224,7 +224,12 @@ const CodeEditor = () => {
       <CodebridgeEmptyState
         imageProps={{src: emptyFilesPlaceholderImage}}
         title="No files open"
-        description="Create a new file or open one from the file manager to start coding your project."
+        // Where from is the LAB's business: the file manager in Python Lab and
+        // Web Lab, the folder menus in World Lab, which has no manager at all.
+        // The sentence names neither, since a shell that says "the file
+        // manager" to a learner looking at a lab without one is worse than a
+        // shell that says less.
+        description="Create a new file or open one to start coding your project."
       />
     );
   }

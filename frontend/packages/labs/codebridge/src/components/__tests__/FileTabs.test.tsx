@@ -126,3 +126,25 @@ it('calls a file what the lab calls it, and keeps the file name to hand', () => 
   // …and a file the lab says nothing about keeps its own name.
   expect(selected('b.py')).toBe('false');
 });
+
+it('renders no strip at all when nothing is open', () => {
+  // What the tab bar's height is for: this renders nothing, so the ROW has to
+  // hold the height or the editor jumps 40px every time the last tab closes
+  // (`workspace.module.css`).
+  render(
+    <RootStateProvider>
+      <SourcesProvider<LevelProperties, MultiFileSource>
+        levelProperties={{} as LevelProperties}
+        initialSources={{source: {folders: {}, files: {}, openFiles: []}}}
+        defaultSources={{source: getEmptyProject()}}
+      >
+        <CodebridgeConfigProvider config={asConfig()}>
+          <FileTabs />
+        </CodebridgeConfigProvider>
+      </SourcesProvider>
+    </RootStateProvider>,
+  );
+
+  expect(screen.queryAllByRole('tab')).toHaveLength(0);
+  expect(screen.queryByRole('tablist')).toBeNull();
+});
