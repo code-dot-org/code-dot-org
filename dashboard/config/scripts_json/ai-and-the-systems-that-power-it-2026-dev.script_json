@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-29 21:42:37 UTC",
+    "serialized_at": "2026-09-01 18:37:33 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -125,9 +125,9 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "**What components are essential for a computer to work?**\n\nIn this lesson, students expand their understanding of computer hardware by exploring memory, storage, processing components, and peripherals. They apply the Input-Storage-Processing-Output (ISPO) model to understand how computers manage and process data. Through guided readings, activities, and career connections, students analyze how these hardware components and peripherals work together to support different tasks.",
+        "overview": "**What components are essential for a computer to work?**\n\nIn this lesson, students move beyond the peripherals they can see and touch to the components inside a computer. They assemble a virtual machine, then deliberately remove parts while it runs to observe what stops working. They use the Input-Storage-Process-Output (ISPO) model to organize what each component contributes. Students close by building and illustrating their own metaphor for computer hardware, mapping every stage of the ISPO model onto a setting of their choosing.",
         "preparation": "- Print copies of the Hardware activity guide (one for each student)",
-        "student_overview": "**What components are essential for a computer to work?**\n\nHow does a computer take in, store, and process information? In this lesson, you explore memory, storage, processing components, and peripherals to see how they fit into the ISPO model (Input, Storage, Processing, Output). You also learn how different careers rely on these components to perform their work."
+        "student_overview": "**What components are essential for a computer to work?**\n\nHow does a computer take in, store, and process information? In this lesson, you'll build a virtual computer — then pull pieces out to find out what each one was doing. You'll use the Input-Storage-Process-Output (ISPO) model to make sense of what's inside, and finish by creating your own metaphor for computer hardware using Sketch Lab and AI image generation."
       },
       "seeding_key": {
         "lesson.key": "Lesson 2: Hardware",
@@ -425,7 +425,7 @@
       "key": "8db137a5-6b0c-4541-ac93-0ed23f8115fc",
       "position": 1,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -439,7 +439,7 @@
       "key": "cad76c39-6166-485a-9ab4-8f8a31241aea",
       "position": 2,
       "properties": {
-        "duration": 25,
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -453,7 +453,7 @@
       "key": "0884266b-85e9-4eba-9561-6aae8ff7f932",
       "position": 3,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -1153,290 +1153,248 @@
       }
     },
     {
-      "key": "9fea7048-397b-445b-b938-457f3d5a6f7b",
+      "key": "aa3e7198-a927-4eb8-aa4b-684be007e3b2",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their AI and the Systems That Power It Unit Guide.\n\n <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define *hardware*."
+        "description": "**Say**: Input and output devices are all around us—they’re how we interact with and receive information from computer systems every day. Now, let’s take a closer look at different devices. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students look at each image, guess what it is and then determine if it’s an input or output device. \n"
       },
       "seeding_key": {
-        "activity_section.key": "9fea7048-397b-445b-b938-457f3d5a6f7b",
+        "activity_section.key": "aa3e7198-a927-4eb8-aa4b-684be007e3b2",
         "lesson_activity.key": "8db137a5-6b0c-4541-ac93-0ed23f8115fc"
       }
     },
     {
-      "key": "c25b6279-cb25-4713-b922-72a5e9e1561a",
+      "key": "fb2491a6-dd6f-4707-9ede-564b2e2174bc",
       "position": 2,
       "properties": {
-        "description": "The most noticeable hardware devices are input and output devices, also known as peripherals.",
-        "remarks": true
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the zoomed in image on screen and give students 20 seconds to figure out what it is. Have students talk with their partner to decide if this is input, output, or both. Explain that speakers are an example of output, they produce sound that the hardware user can hear. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the zoomed in image on screen and give students 20 seconds to figure out what it is. Have students share out what they think the image is. Explain that a controller is example of input, they have buttons that the user can press to control different things.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the zoomed in image on screen and give students 20 seconds to figure out what it is. Have students share out what they think the image is. Explain that a headset is an example of both input and output, they produce sound that the hardware user can hear and have a microphone to capture the user speaking."
       },
       "seeding_key": {
-        "activity_section.key": "c25b6279-cb25-4713-b922-72a5e9e1561a",
+        "activity_section.key": "fb2491a6-dd6f-4707-9ede-564b2e2174bc",
         "lesson_activity.key": "8db137a5-6b0c-4541-ac93-0ed23f8115fc"
       }
     },
     {
-      "key": "a9868580-e8ae-4140-9b65-1228973f00a9",
+      "key": "be0182e4-7d39-4596-a603-a65749fca3ba",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define *input devices* and *output devices*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in groups of three.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Hardware activity guide."
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Besides input and output devices, what other components does a computer need to work?\nTurn and Talk: Invite students to share one insight about a crucial internal component that makes a computer function (CPU, RAM, storage, power supply). If time allows, go around the room or ask for volunteers.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This discussion aims to help students recognize that a computer is more than just peripherals—it requires processing power, memory, and storage to operate. By identifying these key components, students will build a foundation for understanding how computers process and store information.\n"
       },
       "seeding_key": {
-        "activity_section.key": "a9868580-e8ae-4140-9b65-1228973f00a9",
+        "activity_section.key": "be0182e4-7d39-4596-a603-a65749fca3ba",
         "lesson_activity.key": "8db137a5-6b0c-4541-ac93-0ed23f8115fc"
       }
     },
     {
-      "key": "d37f9dc7-2e79-4fd6-802b-d46ca2aa3769",
+      "key": "12be0926-d8a7-4a99-85f0-eb71773b34cc",
       "position": 4,
       "properties": {
-        "description": " Input and output devices are all around us—they’re how we interact with and receive information from computer systems every day. Now, let’s take a closer look at different devices. \n",
-        "remarks": true
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define hardware.\n\n**Say**: The most noticeable hardware devices are input and output devices, also known as peripherals.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define input devices and output devices.\n"
       },
       "seeding_key": {
-        "activity_section.key": "d37f9dc7-2e79-4fd6-802b-d46ca2aa3769",
+        "activity_section.key": "12be0926-d8a7-4a99-85f0-eb71773b34cc",
         "lesson_activity.key": "8db137a5-6b0c-4541-ac93-0ed23f8115fc"
       }
     },
     {
-      "key": "0d9f50c0-a978-4692-bdf6-4bbb9dec392d",
+      "key": "13d5a495-c8fb-4955-9a9b-65e8e8f306b0",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students look at each image, guess what it is and then determine if it’s an input or output device. Once they know what the item is and whether it’s an input or output device, have them write it in the Venn diagram below in their activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Students will discuss the essential components a computer needs to function beyond input and output devices.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the zoomed in image on screen and give students 30 seconds to figure out what it is. Have students share out what they think the image is.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students talk with their partner to decide if this is input, output, or both. Have them write down the item in the corresponding category in the Venn Diagram. Explain that speakers are an example of output, they produce sound that the hardware user can hear.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the zoomed in image on screen and give students 30 seconds to figure out what it is. Have students share out what they think the image is.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students talk with their partner to decide if this is input, output, or both. Have them write down the item in the corresponding category in the Venn Diagram. Explain that a controller is example of input, they have buttons that the user can press to control different things.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the zoomed in image on screen and give students 30 seconds to figure out what it is. Have students share out what they think the image is.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students talk with their partner to decide if this is input, output, or both. Have them write down the item in the corresponding category in the Venn Diagram. Then have them fill out the Venn Diagram with any other input and output devices they can think of. Explain that a headset is an example of both input and output, they produce sound that the hardware user can hear and have a microphone to capture the user speaking.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  *Besides input and output devices, what other components does a computer need to work?*\n- Round Robin Sharing: Invite students to share one insight about a crucial internal component that makes a computer function (e.g., CPU, RAM, storage, power supply). If time allows, go around the room or ask for volunteers.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This discussion aims to help students recognize that a computer is more than just peripherals—it requires processing power, memory, and storage to operate. By identifying these key components, students will build a foundation for understanding how computers process and store information.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Introduce the Question of the Day."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
-        "activity_section.key": "0d9f50c0-a978-4692-bdf6-4bbb9dec392d",
+        "activity_section.key": "13d5a495-c8fb-4955-9a9b-65e8e8f306b0",
         "lesson_activity.key": "8db137a5-6b0c-4541-ac93-0ed23f8115fc"
       }
     },
     {
-      "key": "90d38510-039d-4a1d-b40b-14d26dbe2396",
+      "key": "a1c0f66e-9c00-4a63-be77-07209c844431",
       "position": 1,
       "properties": {
-        "description": "So far, we’ve learned about input and output devices—these are the parts of a computer that let us interact with it. But computers do more than just take in and display information. They also need to store dataand process it before sending the results to an output device. All computers, from smartphones to supercomputers, follow a basic cycle called the ISPO Model—which stands for Input, Storage, Process, and Output. Let’s watch a short video that explains these four key components in more detail.",
+        "description": "**Say**: So far, we’ve learned about input and output devices—these are the parts of a computer that let us interact with it. But computers do more than just take in and display information. They also need to store data and process it before sending the results to an output device. All computers, from smartphones to supercomputers, follow a basic cycle called the ISPO Model—which stands for Input, Storage, Process, and Output. Let’s watch a short video that explains these four key components in more detail.\n\n**Video**: Show the video \"How Computers Work\" from timemarks 2:50 to 4:24 to learn about the ISPO model.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "a1c0f66e-9c00-4a63-be77-07209c844431",
+        "lesson_activity.key": "cad76c39-6166-485a-9ab4-8f8a31241aea"
+      }
+    },
+    {
+      "key": "4ec9634b-ed8a-45cc-ab2e-dde91ef02f58",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Hardware activity guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "4ec9634b-ed8a-45cc-ab2e-dde91ef02f58",
+        "lesson_activity.key": "cad76c39-6166-485a-9ab4-8f8a31241aea"
+      }
+    },
+    {
+      "key": "0f6a7552-edf7-4248-852c-ca2e77196385",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students build a working mental model of what each internal component contributes by adding and removing parts, observing what works and what fails. By the end of these two levels, every student should be able to name a component for each stage of the ISPO model and explain why the machine can't run without it.\n\n**Say**: Now we will build a virtual computer and find out both what makes it work and what makes it stop working.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Levels 1–2.\n* **Level 1** — Build the Machine. Students click each part from the parts tray and attach it to the correct slot on the motherboard. Selecting a part opens the NOTES panel, which gives that component's ISPO category and a short description. This is the source students use to fill in the table in their activity guide. Once the machine is assembled, students power it on, then experiment by removing parts while it runs or booting without them.\n* **Level 2** — Component-Definition Match. Students match seven components — motherboard, CPU, GPU, RAM, SSD, keyboard, and monitor — to descriptions of what each one does, then submit to check. \n\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, check that they are experimenting with different combinations of parts, not just assembling once and stopping. Ask check-in questions such as:\n\n* \"What happened when you powered on without the CPU?\"\n* \"There are two RAM slots. Does it boot with only one? What changes?\"\n* \"You put the keyboard in an INPUT slot — what made that the right slot?\"\n* \"Pull the SSD out while it's running. What did you expect, and what actually happened?\"\n* \"The notes panel says the GPU is processing. So why isn't the monitor processing too?\"\n\nUse these check-ins to confirm that every student has broken the machine at least once on purpose and can say what the missing part was contributing.\n",
         "duration": "15",
-        "name": "Hardware Components",
-        "remarks": true
+        "name": "Investigating Computer Hardware",
+        "progression_name": "Investigating Computer Hardware"
       },
       "seeding_key": {
-        "activity_section.key": "90d38510-039d-4a1d-b40b-14d26dbe2396",
+        "activity_section.key": "0f6a7552-edf7-4248-852c-ca2e77196385",
         "lesson_activity.key": "cad76c39-6166-485a-9ab4-8f8a31241aea"
       }
     },
     {
-      "key": "db5a2ffa-5a6f-4918-9313-0a614cb6b32c",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video \"How Computers Work\" from timemarks 2:50 to 4:24 to learn about the ISPO model."
-      },
-      "seeding_key": {
-        "activity_section.key": "db5a2ffa-5a6f-4918-9313-0a614cb6b32c",
-        "lesson_activity.key": "cad76c39-6166-485a-9ab4-8f8a31241aea"
-      }
-    },
-    {
-      "key": "145ef71c-10b6-49fc-8645-e049d54dcba2",
-      "position": 3,
-      "properties": {
-        "description": "Computers rely on storage to manage data efficiently.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "145ef71c-10b6-49fc-8645-e049d54dcba2",
-        "lesson_activity.key": "cad76c39-6166-485a-9ab4-8f8a31241aea"
-      }
-    },
-    {
-      "key": "9f222012-b332-4727-954c-8017b9ad5e81",
+      "key": "4db83344-8abe-41dd-955a-9830c0ab89eb",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define *storage*."
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students don't need to guess at the activity guide table — the NOTES panel supplies the category and description for whichever part is selected. If a student is stuck on the ISPO column, have them click the part and read the panel."
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "9f222012-b332-4727-954c-8017b9ad5e81",
+        "activity_section.key": "4db83344-8abe-41dd-955a-9830c0ab89eb",
         "lesson_activity.key": "cad76c39-6166-485a-9ab4-8f8a31241aea"
       }
     },
     {
-      "key": "ea5486f2-f66b-4765-b6d1-efbb4a8cb0d9",
+      "key": "e7e00432-c1d8-435a-aa06-90fd0b4dca5c",
       "position": 5,
       "properties": {
-        "description": "Let’s take a look at actual storage components. These components play a crucial role in how a computer accesses and saves information. Everything from opening a file to loading a game depends on memory and storage working together. In this activity, you'll explore these components and complete the analogy to explain their roles.",
-        "remarks": true
+        "description": "**Say**: Computers rely on storage to manage data efficiently. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define storage. Connect it back to what students just saw in Level 1. Ask which component they pulled out that made saved files disappear, and which one only affected what was open at that moment.\n"
       },
       "seeding_key": {
-        "activity_section.key": "ea5486f2-f66b-4765-b6d1-efbb4a8cb0d9",
+        "activity_section.key": "e7e00432-c1d8-435a-aa06-90fd0b4dca5c",
         "lesson_activity.key": "cad76c39-6166-485a-9ab4-8f8a31241aea"
       }
     },
     {
-      "key": "e715958f-03e9-4150-a66f-68c1c2b3de0a",
+      "key": "329604d5-0f4e-4a75-819d-c0e0cb5287ce",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to Lesson 2, Level 1. Each student will read about storage components and take notes by by matching the phrase in the word bank to the correct analogy for each in the Storage section of their activity guide. Have students complete the Storage rows in their Unit Guide by providing at least one example of each.",
-        "progression_name": "Storage Components"
+        "description": "**Say**: Now that we've talked about storage, let's move on to another critical part of a computer—processing components.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define processing components. Note that a computer can have more than one. Students saw both a CPU and a GPU in Level 1, and they do the work differently.\n"
       },
       "seeding_key": {
-        "activity_section.key": "e715958f-03e9-4150-a66f-68c1c2b3de0a",
+        "activity_section.key": "329604d5-0f4e-4a75-819d-c0e0cb5287ce",
         "lesson_activity.key": "cad76c39-6166-485a-9ab4-8f8a31241aea"
       }
     },
     {
-      "key": "b9ddf75a-71eb-4a4b-82b9-54e705e97cb7",
+      "key": "bdb254a0-87da-4c2a-9df2-4f34777e36eb",
       "position": 7,
       "properties": {
-        "description": "Now that we've talked about storage, let's move on to another critical part of a computer—processing components.",
-        "remarks": true
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students demonstrate their understanding of the ISPO model by mapping every stage onto a setting of their own choosing. The metaphor is the evidence since a student who can assign a distinct, defensible counterpart to input, storage, processing, and output understands the model. \n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** With a partner, discuss the following metaphor:  Computer hardware is like _____________ because  ________________.\n* Round Robin Sharing: Provide two minutes for pairs to come up with a metaphor. When sharing out, variety matters more than depth on any single metaphor.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should move past surface resemblance (\"hardware is like a brain\") toward metaphors that assign distinct jobs to distinct parts. Listen for metaphors where you could point at one element and say \"that's the storage\" — a kitchen, a factory, a library, a body. The strongest responses separate temporary from permanent storage. This discussion prepares students for Level 3, so treat this discussion as a draft.\n",
+        "duration": "20",
+        "name": "Computer Hardware Metaphor"
       },
       "seeding_key": {
-        "activity_section.key": "b9ddf75a-71eb-4a4b-82b9-54e705e97cb7",
+        "activity_section.key": "bdb254a0-87da-4c2a-9df2-4f34777e36eb",
         "lesson_activity.key": "cad76c39-6166-485a-9ab4-8f8a31241aea"
       }
     },
     {
-      "key": "0bd59a31-16f2-487f-93c1-feff173b4f1e",
+      "key": "4b6039bb-206e-4f87-b107-05c8b33e8420",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define *processing components*."
+        "description": "\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the ISPO categories revealing the kitchen restaurant metaphor.\n\n**Say**: Here's one metaphor worked all the way through. Notice that every part of the kitchen has a job, and no two jobs are the same. That's what makes it a good metaphor rather than just a comparison.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students: \"Where does this metaphor break down?\" Prompt them toward the storage distinction — the freezer keeps food overnight, but RAM loses everything the moment the power goes off, so RAM is more like the counter space the cook clears at the end of a shift. Explain that finding where a metaphor breaks is how you find out what you actually understand.\n"
       },
       "seeding_key": {
-        "activity_section.key": "0bd59a31-16f2-487f-93c1-feff173b4f1e",
+        "activity_section.key": "4b6039bb-206e-4f87-b107-05c8b33e8420",
         "lesson_activity.key": "cad76c39-6166-485a-9ab4-8f8a31241aea"
       }
     },
     {
-      "key": "3fae8e4b-9118-42a3-8567-37c839b3abe8",
+      "key": "095c1a2c-e5b2-4879-8a7c-c72bdce18f31",
       "position": 9,
       "properties": {
-        "description": "Everything from opening an app to playing a video game relies on processing power. In this activity, you’ll learn more about these components and complete the analogy to explain their role.",
-        "remarks": true
+        "description": "**Say**: Now it's your turn. This level has two tools. Sketch Lab is where your metaphor gets built and labeled. Image Generation is where you make custom pictures for it. Start with the canvas since you can't ask for an image of something you haven't decided on yet.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 3. Students use two tools: Sketch Lab, where they build their metaphor on the canvas and label each part with the hardware component, how it's represented, and its ISPO category; and Image Generation, where they craft a system prompt to generate custom images for their metaphor. Explain that students can move back and forth between the two cards freely as their metaphor develops, but that the mapping in Sketch Lab is what drives the images,  not the other way around. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ask check-in questions such as:\n* \"Point to the storage in your metaphor. Which component is that?\"\n* \"How would someone tell your storage apart from your processing?\"\n* \"Read me your prompt — are you describing the freezer, or are you describing the SSD?\"\n* \"Which word bank frame did you use, and what did it make you figure out?\"\n* \"You have an SSD and RAM here — same thing in your metaphor, or different things?\"\n* \"Do your images look like they belong together? What style words did you reuse?\"\n\nUse these check-ins to confirm students can explain their mapping out loud before they invest time in imagery.\n",
+        "progression_name": "Computer Hardware Metaphor"
       },
       "seeding_key": {
-        "activity_section.key": "3fae8e4b-9118-42a3-8567-37c839b3abe8",
+        "activity_section.key": "095c1a2c-e5b2-4879-8a7c-c72bdce18f31",
         "lesson_activity.key": "cad76c39-6166-485a-9ab4-8f8a31241aea"
       }
     },
     {
-      "key": "10e973f3-29ca-454d-8c80-cd5e04c73e8d",
+      "key": "444faf4d-ba51-425f-951b-38364c244290",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to Lesson 2, Level 2. Each student will read about processing components and take notes by matching the phrase in the word bank to the correct analogy for each in the Processing Components section of their activity guide. Have students complete the Processing Components in their Unit Guide by providing at least one example of each.",
-        "progression_name": "Processing Components",
         "tips": [
           {
-            "type": "assessmentOpportunity",
-            "markdown": "The Hardware Activity Guide can be used to formatively assess the lesson objectives."
+            "type": "teachingTip",
+            "markdown": "A labeled canvas with no generated images demonstrates the objective. A set of polished images with no mapping does not. Consider saying this out loud when you launch the level as it sets the priority before students choose a card.\n\nThere are image & word banks available on the Sketch Lab canvas that students can use to assist with creating the metaphor."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "10e973f3-29ca-454d-8c80-cd5e04c73e8d",
+        "activity_section.key": "444faf4d-ba51-425f-951b-38364c244290",
         "lesson_activity.key": "cad76c39-6166-485a-9ab4-8f8a31241aea"
       }
     },
     {
-      "key": "00330380-1809-4873-8d9a-7379ada8b01b",
+      "key": "defc5cdf-a44e-4bf0-9755-f4d612f7f0e9",
       "position": 11,
       "properties": {
-        "description": "Now that we’ve explored individual computer components, let’s see how they all come together to make a functioning system. In this activity, you’ll be matching the descriptions of each component to the names and pictures by dragging and dropping. As you do this, think about how these components interact and depend on one another.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "00330380-1809-4873-8d9a-7379ada8b01b",
-        "lesson_activity.key": "cad76c39-6166-485a-9ab4-8f8a31241aea"
-      }
-    },
-    {
-      "key": "9158b5d4-a24a-4eb5-a4d5-8544cb7c76af",
-      "position": 12,
-      "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to Lesson 2, Level 3. Each student will open the PC Builder and drag and drop component descriptions from the left panel into the diagram, placing them in their correct locations. They will then select a highlight color to categorize each component based on its role in the computer system.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Once students have had some time to complete their work, have them compare their work with others to answer any questions they might have or to discuss any differences in how they labeled their diagram.\n",
-        "progression_name": "Connecting Components"
-      },
-      "seeding_key": {
-        "activity_section.key": "9158b5d4-a24a-4eb5-a4d5-8544cb7c76af",
-        "lesson_activity.key": "cad76c39-6166-485a-9ab4-8f8a31241aea"
-      }
-    },
-    {
-      "key": "b39a0d67-33e8-49b0-842e-8cf7f53d1d08",
-      "position": 13,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Use the “Self Check” slide to have students check their work against the key. ",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Adding to the Unit Guide -** You may choose to have students take a screenshot of their PC Builder slide and add it to their Unit Guides as a reference for them to use throughout the rest of the unit."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "b39a0d67-33e8-49b0-842e-8cf7f53d1d08",
-        "lesson_activity.key": "cad76c39-6166-485a-9ab4-8f8a31241aea"
-      }
-    },
-    {
-      "key": "7a8480a1-bb9b-452c-848d-3e7645493fc8",
-      "position": 14,
-      "properties": {
-        "description": "Now that you’ve built a computer, let’s explore how different professionals rely on specific components for their work. Whether it's gaming, music production, content creation, or graphic design, each of these fields depends on certain hardware components to get the best performance. In this next activity, you'll choose a career perspective, watch a video from an expert in that field, and reflect on the role of a key component like the GPU, CPU, SSD, or RAM.",
-        "duration": "10",
-        "name": "Career Hardware Needs",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "7a8480a1-bb9b-452c-848d-3e7645493fc8",
-        "lesson_activity.key": "cad76c39-6166-485a-9ab4-8f8a31241aea"
-      }
-    },
-    {
-      "key": "018c50be-6b1e-43fc-9ef5-b01e425d4054",
-      "position": 15,
-      "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 2, Level 4 to complete Levels 4 and 5. Each student will select a career option—gamer, music producer, content creator, or graphic designer. They will watch a short video where the professional explains how a specific hardware component (GPU, CPU, SSD, or RAM) impacts their work.",
-        "progression_name": "Career Hardware Needs",
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "Use responses to this reflection question to formatively assess the lesson objectives."
+            "markdown": "The Hardware activity guide and the hardware metaphor activity together provide evidence for both lesson objectives:\n* Name important hardware parts of a computer — the completed component table in the activity guide.\n* Explain how a computer works using the Input-Storage-Process-Output (ISPO) model — the ISPO column in the table, and whether the Level 3 metaphor assigns a distinct, correct counterpart to each of the four stages.\n"
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "018c50be-6b1e-43fc-9ef5-b01e425d4054",
+        "activity_section.key": "defc5cdf-a44e-4bf0-9755-f4d612f7f0e9",
         "lesson_activity.key": "cad76c39-6166-485a-9ab4-8f8a31241aea"
       }
     },
     {
-      "key": "3584f16d-aad7-44f3-b1b8-9fa786d40034",
+      "key": "07ddcb68-4d93-4d04-8549-2a2f19ae1b02",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Have students respond to the Question of the Day in their Unit Guides. After students have had some time to respond, assign students numbers in small groups and give them a discussion prompt. After a short discussion, randomly call out a number—students with that number share their group’s response.\n",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Teaching Tip\nIf you have time and want to give students an example of how all these components might fit together in a real computer, you may choose to show them this video [\"Build My First PC\"](https://youtu.be/QlaTC0yGoPg?si=bR2eA1MQrYS5iMZR) or any other you find via a web search."
-          }
-        ]
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives."
       },
       "seeding_key": {
-        "activity_section.key": "3584f16d-aad7-44f3-b1b8-9fa786d40034",
+        "activity_section.key": "07ddcb68-4d93-4d04-8549-2a2f19ae1b02",
         "lesson_activity.key": "0884266b-85e9-4eba-9561-6aae8ff7f932"
       }
     },
     {
-      "key": "c7716b2d-d4a4-4363-b389-e18f17ba1dc2",
+      "key": "d13d8b77-9a30-4bd5-928a-607f983b0209",
       "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Return to the Question of the Day now that students have built a virtual machine and created a metaphor to describe the function of its hardware. Push past naming components toward the ISPO framing. A complete answer names a component for each stage and says what that stage contributes. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "d13d8b77-9a30-4bd5-928a-607f983b0209",
+        "lesson_activity.key": "0884266b-85e9-4eba-9561-6aae8ff7f932"
+      }
+    },
+    {
+      "key": "607b0be8-446e-42a6-9883-69c731b21380",
+      "position": 3,
       "properties": {
         "tips": [
           {
-            "type": "assessmentOpportunity",
-            "markdown": "Student responses to the Question of the Day in the Unit Guide can be used to formatively assess the lesson objectives."
+            "type": "teachingTip",
+            "markdown": "If you have time and want to give students an example of how all these components might fit together in a real computer, you may choose to show them this video [\"Build My First PC\"](https://youtu.be/QlaTC0yGoPg?si=bR2eA1MQrYS5iMZR)  or any other you find via a web search."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "c7716b2d-d4a4-4363-b389-e18f17ba1dc2",
+        "activity_section.key": "607b0be8-446e-42a6-9883-69c731b21380",
+        "lesson_activity.key": "0884266b-85e9-4eba-9561-6aae8ff7f932"
+      }
+    },
+    {
+      "key": "afc39a58-75e1-4432-b635-8592a98e9437",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "afc39a58-75e1-4432-b635-8592a98e9437",
         "lesson_activity.key": "0884266b-85e9-4eba-9561-6aae8ff7f932"
       }
     },
@@ -3773,42 +3731,42 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Storage Components"
+        "progression": "Investigating Computer Hardware"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "computer-systems-lesson2-level1_v2_2026-dev"
+          "ai-and-the-systems-that-power-it-lesson2-weblab-1"
         ],
         "lesson.key": "Lesson 2: Hardware",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "e715958f-03e9-4150-a66f-68c1c2b3de0a"
+        "activity_section.key": "0f6a7552-edf7-4248-852c-ca2e77196385"
       },
       "level_keys": [
-        "computer-systems-lesson2-level1_v2_2026-dev"
+        "ai-and-the-systems-that-power-it-lesson2-weblab-1"
       ]
     },
     {
       "chapter": 3,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Processing Components"
+        "progression": "Investigating Computer Hardware"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "computer-systems-lesson2-level2_v2_2026-dev"
+          "ai-and-the-systems-that-power-it-lesson2-match-1"
         ],
         "lesson.key": "Lesson 2: Hardware",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "10e973f3-29ca-454d-8c80-cd5e04c73e8d"
+        "activity_section.key": "0f6a7552-edf7-4248-852c-ca2e77196385"
       },
       "level_keys": [
-        "computer-systems-lesson2-level2_v2_2026-dev"
+        "ai-and-the-systems-that-power-it-lesson2-match-1"
       ]
     },
     {
@@ -3817,90 +3775,24 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Connecting Components"
+        "progression": "Computer Hardware Metaphor"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "computer-systems-lesson2-level3_v2_2026-dev"
+          "ai-and-the-systems-that-power-it-lesson2-choice-1"
         ],
         "lesson.key": "Lesson 2: Hardware",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "9158b5d4-a24a-4eb5-a4d5-8544cb7c76af"
+        "activity_section.key": "095c1a2c-e5b2-4879-8a7c-c72bdce18f31"
       },
       "level_keys": [
-        "computer-systems-lesson2-level3_v2_2026-dev"
+        "ai-and-the-systems-that-power-it-lesson2-choice-1"
       ]
     },
     {
       "chapter": 5,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Career Hardware Needs"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "computer-systems-lesson2-level4_v2_2026-dev"
-        ],
-        "lesson.key": "Lesson 2: Hardware",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "018c50be-6b1e-43fc-9ef5-b01e425d4054"
-      },
-      "level_keys": [
-        "computer-systems-lesson2-level4_v2_2026-dev"
-      ]
-    },
-    {
-      "chapter": 6,
-      "position": 5,
-      "activity_section_position": 2,
-      "assessment": true,
-      "properties": {
-        "progression": "Career Hardware Needs"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "computer-systems-lesson2-level5_v2_2026-dev"
-        ],
-        "lesson.key": "Lesson 2: Hardware",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "018c50be-6b1e-43fc-9ef5-b01e425d4054"
-      },
-      "level_keys": [
-        "computer-systems-lesson2-level5_v2_2026-dev"
-      ]
-    },
-    {
-      "chapter": 7,
-      "position": 6,
-      "activity_section_position": 3,
-      "assessment": true,
-      "properties": {
-        "progression": "Career Hardware Needs"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "computer-systems-lesson2-level6_2025-launch_v2_2026-dev"
-        ],
-        "lesson.key": "Lesson 2: Hardware",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "018c50be-6b1e-43fc-9ef5-b01e425d4054"
-      },
-      "level_keys": [
-        "computer-systems-lesson2-level6_2025-launch_v2_2026-dev"
-      ]
-    },
-    {
-      "chapter": 8,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3922,7 +3814,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 6,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3944,7 +3836,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 7,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3966,7 +3858,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 8,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -3988,7 +3880,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 9,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4010,7 +3902,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 10,
       "position": 6,
       "activity_section_position": 2,
       "assessment": true,
@@ -4032,7 +3924,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 11,
       "position": 7,
       "activity_section_position": 3,
       "assessment": true,
@@ -4054,7 +3946,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4076,7 +3968,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 13,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -4098,7 +3990,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4120,7 +4012,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 15,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4142,7 +4034,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 16,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4164,7 +4056,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4186,7 +4078,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 18,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4208,7 +4100,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 19,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4230,7 +4122,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 20,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
@@ -4252,7 +4144,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4274,7 +4166,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4296,7 +4188,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 23,
       "position": 3,
       "activity_section_position": 3,
       "assessment": true,
@@ -4318,7 +4210,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4340,7 +4232,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4362,7 +4254,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -4384,7 +4276,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 27,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
@@ -4406,7 +4298,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 28,
       "position": 5,
       "activity_section_position": 3,
       "assessment": true,
@@ -4428,7 +4320,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4450,7 +4342,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 30,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4472,7 +4364,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 31,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4494,7 +4386,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4516,7 +4408,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4538,7 +4430,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4560,7 +4452,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 35,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4582,7 +4474,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 36,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4604,7 +4496,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 37,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4626,7 +4518,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 38,
       "position": 6,
       "activity_section_position": 2,
       "assessment": true,
@@ -4648,7 +4540,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4670,7 +4562,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4692,7 +4584,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4714,7 +4606,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 42,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4736,7 +4628,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 43,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4758,7 +4650,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 44,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4780,7 +4672,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 45,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4802,7 +4694,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 46,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4824,7 +4716,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4846,7 +4738,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4883,74 +4775,38 @@
     },
     {
       "seeding_key": {
-        "level.key": "computer-systems-lesson2-level1_v2_2026-dev",
+        "level.key": "ai-and-the-systems-that-power-it-lesson2-weblab-1",
         "script_level.level_keys": [
-          "computer-systems-lesson2-level1_v2_2026-dev"
+          "ai-and-the-systems-that-power-it-lesson2-weblab-1"
         ],
         "lesson.key": "Lesson 2: Hardware",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "e715958f-03e9-4150-a66f-68c1c2b3de0a"
+        "activity_section.key": "0f6a7552-edf7-4248-852c-ca2e77196385"
       }
     },
     {
       "seeding_key": {
-        "level.key": "computer-systems-lesson2-level2_v2_2026-dev",
+        "level.key": "ai-and-the-systems-that-power-it-lesson2-match-1",
         "script_level.level_keys": [
-          "computer-systems-lesson2-level2_v2_2026-dev"
+          "ai-and-the-systems-that-power-it-lesson2-match-1"
         ],
         "lesson.key": "Lesson 2: Hardware",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "10e973f3-29ca-454d-8c80-cd5e04c73e8d"
+        "activity_section.key": "0f6a7552-edf7-4248-852c-ca2e77196385"
       }
     },
     {
       "seeding_key": {
-        "level.key": "computer-systems-lesson2-level3_v2_2026-dev",
+        "level.key": "ai-and-the-systems-that-power-it-lesson2-choice-1",
         "script_level.level_keys": [
-          "computer-systems-lesson2-level3_v2_2026-dev"
+          "ai-and-the-systems-that-power-it-lesson2-choice-1"
         ],
         "lesson.key": "Lesson 2: Hardware",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "9158b5d4-a24a-4eb5-a4d5-8544cb7c76af"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "computer-systems-lesson2-level4_v2_2026-dev",
-        "script_level.level_keys": [
-          "computer-systems-lesson2-level4_v2_2026-dev"
-        ],
-        "lesson.key": "Lesson 2: Hardware",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "018c50be-6b1e-43fc-9ef5-b01e425d4054"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "computer-systems-lesson2-level5_v2_2026-dev",
-        "script_level.level_keys": [
-          "computer-systems-lesson2-level5_v2_2026-dev"
-        ],
-        "lesson.key": "Lesson 2: Hardware",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "018c50be-6b1e-43fc-9ef5-b01e425d4054"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "computer-systems-lesson2-level6_2025-launch_v2_2026-dev",
-        "script_level.level_keys": [
-          "computer-systems-lesson2-level6_2025-launch_v2_2026-dev"
-        ],
-        "lesson.key": "Lesson 2: Hardware",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "018c50be-6b1e-43fc-9ef5-b01e425d4054"
+        "activity_section.key": "095c1a2c-e5b2-4879-8a7c-c72bdce18f31"
       }
     },
     {
@@ -5567,10 +5423,11 @@
     },
     {
       "name": "[KEY] Hardware",
-      "url": "https://docs.google.com/document/d/1JtAo1SaHvH4H-o4nrbL6OBp5jcr7TzhIagRnI7g0qEw/edit?usp=drivesdk",
+      "url": "https://docs.google.com/document/d/1fo-tyiy8A0xN6w6BTScZjGQv66UUhjNLyY1WWfWuOUk/",
       "key": "_key_hardware",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Answer Key"
       },
       "seeding_key": {
@@ -5614,19 +5471,6 @@
       }
     },
     {
-      "name": "[KEY] PC Builder Activity",
-      "url": "https://docs.google.com/presentation/d/1-WeP7YX9XekGn-r8c7RPh0Oq85GtVrqx7jnxn7ZcORA/edit?slide=id.g347c06ff755_2_174#slide=id.g347c06ff755_2_174",
-      "key": "_key_pc_builder_activity",
-      "properties": {
-        "audience": "Verified Teacher",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_pc_builder_activity"
-      }
-    },
-    {
       "name": "[KEY] Processing Library Data",
       "url": "https://docs.google.com/document/d/1yo9k9fLnkYSHJi3IrVCeclU3A04z49JagemmGMao2a4/edit?usp=sharing",
       "key": "_key_processing_library_data",
@@ -5666,10 +5510,11 @@
     },
     {
       "name": "[KEY] Troubleshooting Hardware Issues",
-      "url": "https://docs.google.com/document/d/1BQFjkBGlq8ABku-7JqbYQ8mOuzpp421OjuVBshoNmOc",
+      "url": "https://docs.google.com/document/d/1pZjVmi0r0wK5gQG2smFdzrAv3HulxVOefUpa4-K87eU/",
       "key": "_key_troubleshooting_hardware_issues",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Answer Key"
       },
       "seeding_key": {
@@ -5869,10 +5714,11 @@
     },
     {
       "name": "Guess Who? Device Edition",
-      "url": "https://docs.google.com/document/d/1L6OaYMw_i3p5d7fT3zMU4DRfIPj_oTbRcfdY1ND0ziw/edit?tab=t.0",
+      "url": "https://docs.google.com/document/d/1xBBgLEpe3hKKvKMzy45iWkz613d_-UMYi2FftXf8IbU/",
       "key": "guess_who_device_edition",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Handout"
       },
@@ -5882,10 +5728,11 @@
     },
     {
       "name": "Hardware",
-      "url": "https://docs.google.com/document/d/12tg776-hUaREdIz21GeymBx6o4kHy4g9SSQfWDWrcS4/edit?usp=drivesdk",
+      "url": "https://docs.google.com/document/d/1hAuKBs7ALUtve8iTL2GILtL4NY5ZrDZxVrdDcm6_54o/",
       "key": "hardware",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -5895,10 +5742,11 @@
     },
     {
       "name": "Hardware",
-      "url": "https://docs.google.com/presentation/d/1i-Uj7o2zLYBGs2uPYKyooLfDT3gJi6nXdmwegdA-9Ic/edit?usp=drivesdk",
+      "url": "https://docs.google.com/presentation/d/11m4YZKGuBTUXOxPreTs7Xo8OxaXP6CuplCAQrfBvw0Q/",
       "key": "hardware_1",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -6224,10 +6072,11 @@
     },
     {
       "name": "Troubleshooting and Optimizing Hardware",
-      "url": "https://docs.google.com/presentation/d/1eWq_1tqLXwzR683dbPXWZxuPDp-OuYiiZOVHiLBO_NM/edit?usp=drivesdk",
+      "url": "https://docs.google.com/presentation/d/1Q_oCyiwjttvJsEi2IcxkNO0eD9dzSrnhSAs34deHVeo/",
       "key": "troubleshooting_and_optimizing_hardware",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -6248,10 +6097,11 @@
     },
     {
       "name": "Troubleshooting Hardware Issues",
-      "url": "https://docs.google.com/document/d/1_pBMwBBZPaxkhE5RLXHx6C_nySbxYNqIRkC5T7QjEnw/edit?tab=t.0#heading=h.kvosue8yonwy",
+      "url": "https://docs.google.com/document/d/1XHHa6Qwcq0NsjHMsbVADKgi1Y2d2npt1imNjpX94KAY/",
       "key": "troubleshooting_hardware_issues",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -6527,25 +6377,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 2: Hardware",
-        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 2: Hardware",
         "resource.key": "_key_hardware"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 2: Hardware",
-        "resource.key": "_key_pc_builder_activity"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 2: Hardware",
-        "resource.key": "ai_and_the_systems_that_power_it_unit_guide"
       }
     },
     {
@@ -6563,19 +6395,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 3: Troubleshooting and Optimizing Hardware",
-        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 3: Troubleshooting and Optimizing Hardware",
         "resource.key": "_key_troubleshooting_hardware_issues"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 3: Troubleshooting and Optimizing Hardware",
-        "resource.key": "ai_and_the_systems_that_power_it_unit_guide_1"
       }
     },
     {
@@ -7060,7 +6880,7 @@
     {
       "key": "storage",
       "word": "storage",
-      "definition": "holds data both temporarily for quick access and permanently to save files, applications, and the operating system.",
+      "definition": "holds data both temporarily for quick access and permanently to save files, applications, and the operating system",
       "properties": {
       },
       "seeding_key": {
