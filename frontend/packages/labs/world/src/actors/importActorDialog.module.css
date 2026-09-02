@@ -20,12 +20,26 @@
    design system's. */
 .actor {
   display: flex;
-  flex-direction: column;
-  gap: 2px;
-  align-items: flex-start;
+
+  /* The picture beside the words rather than above them: a row is read left to
+     right, and a preview at the top of one would put the sentence about a
+     Label under a picture of a different actor's row every time the list
+     scrolled. */
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
   padding: 10px 12px;
   text-align: start;
   text-transform: none;
+}
+
+/* What the row SAYS: name, sentence, and what else the import brings. */
+.words {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: flex-start;
+  min-width: 0;
 }
 
 /* The way back to the lesson that granted this actor, under the chosen row. */

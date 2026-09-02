@@ -313,11 +313,32 @@ differently in each of the three places a thumbnail is drawn.
 **A picker needs the KIND. The canvas needs the INSTANCE.** One image serving
 both is why each is wrong in its own way.
 
-| where                | how big               | what it should show |
-| -------------------- | --------------------- | ------------------- |
-| the map canvas       | the actor's real size | this placement      |
-| the map palette cell | 80 by 40, name below  | the kind's picture  |
-| a Blockly dropdown   | 24 by 24, no name     | a symbol            |
+| where                | how big                     | what it should show                            |
+| -------------------- | --------------------------- | ---------------------------------------------- |
+| the map canvas       | the actor's real size       | this placement                                 |
+| the map palette cell | 80 by 40, name below        | the kind's picture                             |
+| a Blockly dropdown   | 24 by 24, no name           | a symbol                                       |
+| the import dialog    | 120 by 56, beside the words | the kind's picture, before the project has one |
+
+The fourth is the odd one, and worth saying how it is answered. A learner
+choosing between a Label, a Button and a Speech Box is choosing between three
+pictures, and three sentences about text are not that choice — but the actor is
+not in the project yet, so there is nothing to instantiate and nothing to ask
+the sandbox about. So the dialog READS the drawing out of the `.actor` file it
+is offering (`actors/preview/previewDrawing`) and paints it with the DRIVER'S
+OWN painter (`runtime/driver/paintDrawing`, split from the Phaser textures for
+this). One painter, so a preview and the game cannot disagree about what a
+drawing means; what is left to drift is the reading, over a closed vocabulary of
+six commands.
+
+An actor that WEARS a picture has no drawing to read, and the dialog shows the
+image the import would copy — the first cell of the strip, for one whose picture
+is an animation.
+
+A poster, not a screenshot, in one place: a Health Bar reads the health of the
+actor it is pointed at, and points at nobody until a project wires it up, so its
+honest picture is an empty track. The preview answers "is anybody there?" with
+yes and reads the Health rule's own defaults.
 
 ### The canvas wants the instance, and does not have it
 

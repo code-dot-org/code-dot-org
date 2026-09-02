@@ -23,6 +23,7 @@ import {
   actorRequirements,
   actorSprites,
 } from './importStockActor';
+import {ActorPreview} from './preview/ActorPreview';
 import {STOCK_ACTORS, type StockActor} from './stock';
 
 export interface ImportActorDialogProps {
@@ -86,27 +87,38 @@ export const ImportActorDialog = ({
                 onClick={() => setChosen(actor)}
                 onDoubleClick={() => onImport(actor)}
               >
-                <Typography component="span" variant="label2" color="inherit">
-                  {actor.name}
-                </Typography>
-                <Typography component="span" variant="body4" color="inherit">
-                  {actor.description}
-                </Typography>
-                {brings(actor).length > 0 && (
-                  // What else lands in the project. An actor is written against
-                  // mechanics and pictures — a Label against Text, a Coin
-                  // against Collection and an animation — and they come with
-                  // it, so the dialog says so rather than leaving a learner to
-                  // wonder where the extra files came from.
-                  //
-                  // Abilities and picture names in one list, because from here
-                  // they are one thing: what this adds that is not the actor.
-                  // Which folder each lands in is not a question anybody is
-                  // asking before they have clicked Import.
-                  <Typography component="span" variant="body4" color="inherit">
-                    Also adds: {brings(actor).join(', ')}
+                {/* What it LOOKS like, beside what it is. A learner choosing
+                    between a Label, a Button and a Speech Box is choosing
+                    between three pictures, and three sentences about text is
+                    not that choice (`preview/ActorPreview`). */}
+                <ActorPreview actor={actor} />
+                <span className={styles.words}>
+                  <Typography component="span" variant="label2" color="inherit">
+                    {actor.name}
                   </Typography>
-                )}
+                  <Typography component="span" variant="body4" color="inherit">
+                    {actor.description}
+                  </Typography>
+                  {brings(actor).length > 0 && (
+                    // What else lands in the project. An actor is written against
+                    // mechanics and pictures — a Label against Text, a Coin
+                    // against Collection and an animation — and they come with
+                    // it, so the dialog says so rather than leaving a learner to
+                    // wonder where the extra files came from.
+                    //
+                    // Abilities and picture names in one list, because from here
+                    // they are one thing: what this adds that is not the actor.
+                    // Which folder each lands in is not a question anybody is
+                    // asking before they have clicked Import.
+                    <Typography
+                      component="span"
+                      variant="body4"
+                      color="inherit"
+                    >
+                      Also adds: {brings(actor).join(', ')}
+                    </Typography>
+                  )}
+                </span>
               </Button>
               {/* Outside the Button — see the same note in ImportRuleDialog. */}
               {(chosen?.id === actor.id || !held(actor)) && (

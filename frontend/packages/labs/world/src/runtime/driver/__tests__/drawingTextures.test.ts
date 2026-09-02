@@ -9,7 +9,8 @@ import {describe, expect, it, vi} from 'vitest';
 
 import type {DrawCommand, DrawingState} from 'world-lab';
 
-import {DrawingTextures, paintDrawing} from '../drawingTextures';
+import {DrawingTextures} from '../drawingTextures';
+import {paintDrawing} from '../paintDrawing';
 
 /** A 2D context that records what was asked of it rather than drawing it. */
 function recordingContext() {

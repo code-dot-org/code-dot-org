@@ -6,7 +6,7 @@
 
 import type {DrawingState, FrameState} from 'world-lab';
 
-import {paintDrawing} from './drawingTextures';
+import {paintDrawing} from './paintDrawing';
 
 const FALLBACK_COLOR = '#33cc66';
 
