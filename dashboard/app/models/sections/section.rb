@@ -423,7 +423,7 @@ class Section < ApplicationRecord
     return unless unit_group
     MailJet.create_contact_and_add_to_course_list(teacher, unit_group.name)
   rescue => exception
-    Honeybadger.notify(exception)
+    Observability::Errors.report(exception)
   end
 
   # return a version of self.students in which all students' names are

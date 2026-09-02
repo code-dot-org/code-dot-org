@@ -28,6 +28,10 @@ import {
   FIELD_BLOCK_IMAGE_TYPE,
   FIELD_COSTUME_TYPE,
 } from './imagePickerFields';
+import {
+  FIELD_MUSIC_PROJECT_DROPDOWN_TYPE,
+  MusicProjectDropdown,
+} from './musicProjectDropdown';
 
 // blocksCommon is a plain CommonJS module (exports.install = ...); give it a
 // minimal typed view.
@@ -62,6 +66,10 @@ function installLabBlocks(): void {
   Blockly.fieldRegistry.register(
     FIELD_EXTERNAL_SCENE_DROPDOWN_TYPE,
     ExternalSceneDropdown
+  );
+  Blockly.fieldRegistry.register(
+    FIELD_MUSIC_PROJECT_DROPDOWN_TYPE,
+    MusicProjectDropdown
   );
   Blockly.fieldRegistry.register(FIELD_COSTUME_TYPE, CostumeField);
   Blockly.fieldRegistry.register(FIELD_BLOCK_IMAGE_TYPE, BlockImageField);

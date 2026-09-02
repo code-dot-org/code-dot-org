@@ -11,11 +11,13 @@ import movingLeft from './movingLeft';
 import movingWithArrowKeys from './movingWithArrowKeys';
 import patrollingLeftRight from './patrollingLeftRight';
 import patrollingOnBlocks from './patrollingOnBlocks';
+import playMusic from './playMusic';
 import restartScene from './restartScene';
 import setAsPlatformPlayer from './setAsPlatformPlayer';
 import setCameraZoom from './setCameraZoom';
 import setPlatformGravity from './setPlatformGravity';
 import thePlayer from './thePlayer';
+import whenRun from './whenRun';
 
 // Lab-owned blocks, defined client-side rather than in the DB block pool. A
 // block whose runtime half is interpreted code exports it as helperCode.
@@ -25,6 +27,8 @@ const labBlockDefinitions: {
   helperCode?: string;
 }[] = [
   goToScene,
+  playMusic,
+  whenRun,
   goToExternalScene,
   restartScene,
   movingLeft,
