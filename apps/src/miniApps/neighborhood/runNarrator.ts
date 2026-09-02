@@ -1,8 +1,6 @@
-// Narrates the painter to a screen reader as a run happens.
-//
-// Announcements are lossy: a reader drops queued speech when the run button
-// relabels itself. So every line also stays in a log the student can navigate
-// back through, and losing an announcement costs nothing.
+// Narrates the painter to a screen reader as a run happens. Announcements are
+// lossy -- a reader drops queued speech when the run button relabels itself --
+// so every line also stays in a log the student can navigate back through.
 
 import {SVG_ID} from '@cdo/apps/maze/constants';
 
@@ -116,6 +114,13 @@ export default class NeighborhoodRunNarrator {
   // Fills the silence after Run is pressed.
   startRun(): void {
     this.announce('Program running.');
+  }
+
+  // Keeps the log: what the painter managed before being stopped is the point.
+  // Said here because re-enabling the console's own would move focus.
+  stopRun(): void {
+    this.closeStreak();
+    this.announce('Program stopped.');
   }
 
   onSignal({value, detail}: NeighborhoodSignal): void {
@@ -261,8 +266,10 @@ export default class NeighborhoodRunNarrator {
     );
   }
 
+  // By id, not by how many painters exist yet: naming by count would call the
+  // same painter two different things as the log grows.
   private name(id: string): string {
-    return this.painterIds.length > 1 && id ? painterName(id) : 'Painter';
+    return id ? painterName(id) : 'Painter';
   }
 
   // Built on first use: the grid it sits beside does not exist until the level

@@ -76,6 +76,21 @@ describe('NeighborhoodRunNarrator', () => {
     expect(utterances()).toEqual(['Program running.']);
   });
 
+  // What the painter managed before being stopped is the point of the log.
+  it('keeps the log when the student stops the program', () => {
+    narrator.onSignal(signal(NeighborhoodSignalType.PAINT, {color: 'red'}));
+    narrator.onSignal(move('east'));
+
+    narrator.stopRun();
+
+    expect(utterances()).toEqual([
+      'Painted red.',
+      // The walk in progress is closed out rather than dropped.
+      'Moved east 1 square.',
+      'Program stopped.',
+    ]);
+  });
+
   // A dropped announcement costs nothing if the line is still there to read.
   it('logs each action as it happens', () => {
     narrator.onSignal(move('east'));
@@ -121,11 +136,11 @@ describe('NeighborhoodRunNarrator', () => {
     narrator.endRun();
 
     expect(utterances()).toEqual([
-      'Painter started at row 4, column 1, facing east.',
+      'Painter 1 started at row 4, column 1, facing east.',
       'Moved east 4 squares.',
       'Painted red.',
       'Turned left, now facing north.',
-      'Run finished. Painter stopped at row 3, column 8.',
+      'Run finished. Painter 1 stopped at row 3, column 8.',
     ]);
   });
 

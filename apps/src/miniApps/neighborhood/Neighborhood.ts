@@ -271,12 +271,16 @@ export default class Neighborhood extends MiniApp {
     // this will clear all remaining processSignals() commands
     timeoutList.clearTimeouts();
     this.resetSignalQueue();
+    // Called as a run starts, which is when the log starts over.
+    this.narrator.reset();
     this.controller.reset(false, false);
   }
 
   onStop() {
     timeoutList.clearTimeouts();
     this.resetSignalQueue();
+    // The log keeps what the painter did before being stopped.
+    this.narrator.stopRun();
   }
 
   onClose() {
@@ -289,8 +293,6 @@ export default class Neighborhood extends MiniApp {
     this.signals = [];
     this.nextSignalIndex = 0;
     this.isProcessingSignals = false;
-    // A stopped run clears its log.
-    this.narrator.reset();
   }
 
   isRunning() {
