@@ -5,6 +5,7 @@ import React, {FC, useCallback, useEffect, useRef, useState} from 'react';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {ChallengeTypes} from '@cdo/generated-scripts/sharedConstants';
+import aiTutorAvatar from '@cdo/static/tutor/ai-tutor-avatar.png';
 
 import ProjectDetailsCard from '../../gallery/ProjectDetailsCard';
 import {ChallengeResponseDetail} from '../../gallery/types';
@@ -273,12 +274,8 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
                   <div className={styles.feedbackContainer}>
                     <div className={styles.feedbackWidget}>
                       <div className={styles.feedbackHeader}>
-                        <div className={styles.feedbackIconBG}>
-                          <FontAwesomeV6Icon
-                            iconStyle="solid"
-                            iconName="sparkle"
-                            title="Audio"
-                          />
+                        <div className={styles.feedbackAvatar}>
+                          <img src={aiTutorAvatar} alt="" />
                         </div>
                         <div className={styles.feedbackHeaderContent}>
                           <Typography variant="body3">Tutor</Typography>

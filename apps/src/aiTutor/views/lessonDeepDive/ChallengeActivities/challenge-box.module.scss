@@ -265,57 +265,48 @@
 }
 
 .feedbackWidget {
-  display: flex;
-  padding: 8px 0 16px 0;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-  border-radius: 12px;
-  background: var(--background-neutral-secondary);
+  overflow: hidden;
+  border-radius: var(--shape-md);
 }
 
 .feedbackHeader {
   display: flex;
-  flex-direction: row;
-  padding: 0 16px 8px;
   align-items: center;
   gap: 12px;
-  align-self: stretch;
-  border-bottom: var(--borders-neutral-primary) solid 2px;
+  padding: 8px 16px;
+  background-color: var(--background-info-strong);
 }
 
-.feedbackIconBG {
+.feedbackAvatar {
   display: flex;
-width: 32px;
-height: 32px;
-padding: 4px 4px 3px 3px;
-justify-content: center;
-align-items: center;
-border-radius: 999px;
-background: linear-gradient(
-      228deg,
-      var(--sentiment-success-50) 13.75%,
-      var(--sentiment-information-50) 85.74%
-    );
-i {
-      font-size: 20px;
-      color: var(--text-neutral-white-fixed);
-    }
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background-color: var(--background-neutral-white-fixed);
+  border-radius: var(--shape-round);
+
+  img {
+    width: 30px;
+    height: 20px;
+  }
 }
 
 .feedbackHeaderContent{
  display: flex;
  flex-direction: column;
- align-items: flex-start;
 }
 
 .feedbackText {
-  display: flex;
-padding: 0 16px;
-flex-direction: column;
-align-items: flex-start;
-gap: 8px;
-align-self: stretch;
+  padding: 16px;
+  background-color: var(--background-neutral-secondary);
+  font-size: 12px;
+  line-height: 18px;
+
+  p {
+    margin: 0;
+  }
 }
 
 .challengePickerContainer {
