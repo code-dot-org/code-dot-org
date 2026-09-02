@@ -44,14 +44,6 @@ export interface WorkspaceProps {
    */
   tabBarStart?: React.ReactNode;
   /**
-   * Start with the file browser collapsed.
-   *
-   * The learner's own toggle still opens it, and the choice sticks for the
-   * session. A host passes this when it offers another way around — see
-   * {@link tabBarStart}.
-   */
-  browserStartsCollapsed?: boolean;
-  /**
    * A file whose tab has no close button. See {@link FileTabsProps.pinnedFileId}.
    *
    * Pass it with {@link hideFileBrowser}: together they are "this workspace is
@@ -77,14 +69,11 @@ export const Workspace = ({
   hideFileBrowser,
   pinnedFileId,
   tabBarStart,
-  browserStartsCollapsed,
 }: WorkspaceProps) => {
   const [sidebarWidth, setSidebarWidth] = useState(SIDEBAR.initial);
   // Legacy has no draggable file-browser divider, only a collapse toggle; we
   // keep both — resize when open, collapse to zero width via the button.
-  const [fileBrowserCollapsed, setFileBrowserCollapsed] = useState(
-    Boolean(browserStartsCollapsed),
-  );
+  const [fileBrowserCollapsed, setFileBrowserCollapsed] = useState(false);
 
   return (
     <div className={styles.topArea}>

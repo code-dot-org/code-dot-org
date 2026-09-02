@@ -35,7 +35,14 @@ import {
   MenuItem,
   Typography,
 } from '@mui/material';
-import {createRef, useCallback, useMemo, useState} from 'react';
+import {
+  createRef,
+  useCallback,
+  useMemo,
+  useRef,
+  useState,
+  type ChangeEvent,
+} from 'react';
 
 import {
   createExternalFile,
@@ -45,6 +52,7 @@ import {
   shouldShowFile,
   useCodebridgeConfig,
   useFileOperations,
+  useFileUpload,
   usePrompts,
 } from '@code-dot-org/codebridge';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
@@ -86,6 +94,10 @@ export const FileMenus = () => {
   // and in a bare tree in tests, which does not — and a menu is not worth a
   // provider to mount.
   const {theme} = useTheme(true);
+  const uploading = useFileUpload();
+  /** The one hidden input every folder's `Upload…` opens, and who asked. */
+  const fileInput = useRef<HTMLInputElement>(null);
+  const pickingFor = useRef<string | undefined>(undefined);
   /** What each menu hangs off — one per button, since a click reports none. */
   const anchors = useMemo(
     () => FOLDER_MENUS.map(() => createRef<HTMLSpanElement>()),
@@ -319,6 +331,44 @@ export const FileMenus = () => {
     [ops.source, promptForName, alert, updateSources, currentSources, thenAsk],
   );
 
+  /**
+   * Take a file of the learner's own into this folder.
+   *
+   * The third way in, beside making one and taking one from the shelf — and
+   * the only one that was ever in the file tree, whose header button put every
+   * upload at the ROOT. Here it lands in the folder whose menu asked for it,
+   * which is what decides whether a picture is a sprite or a backdrop.
+   */
+  const uploadInto = useCallback(
+    async (menu: FolderMenu) => {
+      pickingFor.current = menu.folder;
+      await thenAsk();
+      fileInput.current?.click();
+    },
+    [thenAsk],
+  );
+
+  const tookUpload = useCallback(
+    async (event: ChangeEvent<HTMLInputElement>) => {
+      const chosen = event.target.files?.[0];
+      event.target.value = ''; // so the same file can be chosen again
+      const folder = pickingFor.current;
+      pickingFor.current = undefined;
+      if (!chosen || !folder) {
+        return;
+      }
+      // The folder first, as `make` does: an upload into `backgrounds/` is
+      // what makes the picture a backdrop, and the folder may not exist yet.
+      const placed = folderIn(ops.source, folder);
+      updateSources({...currentSources, source: placed.source});
+      const refusal = await uploading.upload(chosen, placed.folderId);
+      if (refusal) {
+        await alert(refusal);
+      }
+    },
+    [ops.source, updateSources, currentSources, uploading, alert],
+  );
+
   const importInto = useCallback(
     async (menu: FolderMenu) => {
       await thenAsk();
@@ -411,6 +461,16 @@ export const FileMenus = () => {
             </ListItemText>
           </MenuItem>
         )}
+        {!isReadOnly && open?.menu.uploads && uploading.enabled && (
+          <MenuItem onClick={() => uploadInto(open.menu)}>
+            <ListItemIcon className={styles.menuIcon}>
+              <FontAwesomeV6Icon iconName="upload" iconStyle="solid" />
+            </ListItemIcon>
+            <ListItemText disableTypography>
+              <Typography variant="body4">Upload…</Typography>
+            </ListItemText>
+          </MenuItem>
+        )}
         {!isReadOnly && <Divider />}
         {/* What is not there yet, said rather than left blank — the wording
             every empty dropdown in this lab uses (`blockly/moduleOptions`). */}
@@ -455,6 +515,15 @@ export const FileMenus = () => {
           </MenuItem>
         ))}
       </Menu>
+      {/* One input for all nine menus: which folder asked is a ref, because the
+          browser's file picker answers long after the click that opened it. */}
+      <input
+        ref={fileInput}
+        type="file"
+        accept={uploading.accept}
+        className={styles.hiddenInput}
+        onChange={tookUpload}
+      />
       <Menu
         open={Boolean(row)}
         anchorEl={row?.anchor}

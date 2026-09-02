@@ -17,3 +17,8 @@
 .menuIcon {
   min-width: 24px;
 }
+
+/* The file picker's input: opened by a menu item, never seen. */
+.hiddenInput {
+  display: none;
+}

@@ -137,11 +137,30 @@ Menu rows are `Typography variant="body4"` on a dense list — the size the file
 browser's rows and `PopUpButtonOption` use. MUI's default is 16px, which beside
 a 13px file tree reads as a different application.
 
-## The tree is still there
+## The tree is gone
 
-Collapsed to begin with, and one toggle away — the button at the left of the
-same bar. It is the answer to "show me everything at once", to uploading a file
-of your own, and to anything the menus deliberately leave out.
+It was collapsed and one toggle away, and it is now not there at all. One thing
+it could do that the menus deliberately will not: rename a FILE. For an actor
+that leaves the thing inside called what it was and every reference to it
+pointing at a path that is not there — the exact failure `renameThing` exists to
+avoid, reachable from a menu two clicks away from the one that avoids it.
+
+Everything else it offered has a place here. Making, renaming, cloning and
+deleting are the menus'; seeing the whole project at once is nine buttons that
+each say what they hold; and UPLOADING — the one thing that lived only in the
+tree's header — is a third item on the folders that take one:
+
+```
+New sprite
+Import…            from the shelf that ships with the lab
+Upload…            a file of your own
+```
+
+An upload lands in the folder whose menu asked for it, where the tree's put
+every one at the root — which for a picture is the whole question, since a PNG
+in `backgrounds/` is a backdrop and the same bytes in `sprites/` are a sprite.
+The act itself is Codebridge's (`useFileUpload`), shared with the tree that
+still has one in every other lab.
 
 ## Where the shelves live
 

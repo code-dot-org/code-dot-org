@@ -17,7 +17,6 @@ import type {
   ProjectFile,
   ProjectFolder,
 } from '@code-dot-org/core/api';
-import {DashboardApiClient} from '@code-dot-org/core/api';
 import {labActions} from '@code-dot-org/lab/redux';
 
 import {
@@ -28,10 +27,10 @@ import {
 import {DEFAULT_FOLDER_ID} from '../constants';
 import {useCodebridgeConfig} from '../contexts';
 import {useFileOperations} from '../hooks/useFileOperations';
+import {useFileUpload} from '../hooks/useFileUpload';
 import {useHandleDragEnd} from '../hooks/useHandleDragEnd';
 import {usePrompts} from '../hooks/usePrompts';
 import {useAppSelector} from '../redux/store';
-import {tooLarge} from '../uploadLimit';
 import {
   dragAndDropKeyboardCodes,
   fileBrowserCollisionDetector,
@@ -264,14 +263,12 @@ const FileBrowser = ({onToggleCollapse}: FileBrowserProps = {}) => {
   // hidden, matching legacy's `enableMenu={!isReadOnly}`.
   const isReadOnly = useAppSelector(labActions.isReadOnlyWorkspace);
 
-  // Upload: a hidden file input the "Upload File" menu triggers. A text file is
-  // read into contents; anything else is stored in the assets backend
-  // (`assets.upload`) and referenced by URL. The channel id scopes the asset to
-  // the current project. The api client is the app-wide singleton (no
-  // `ApiClientProvider` dependency — it renders fine in the bare shell tests).
-  const channelId = useAppSelector(state => state.lab.channel?.id);
+  // Upload: a hidden file input the "Upload File" menu triggers. What happens
+  // to the chosen file is `useFileUpload`, shared with any other way in a lab
+  // offers (World Lab's folder menus have one).
+  const uploading = useFileUpload();
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const canUpload = !isReadOnly && (config.validMimeTypes?.length ?? 0) > 0;
+  const canUpload = uploading.enabled;
 
   const handleFileSelected = useCallback(
     async (event: ChangeEvent<HTMLInputElement>) => {
@@ -280,46 +277,12 @@ const FileBrowser = ({onToggleCollapse}: FileBrowserProps = {}) => {
       if (!file) {
         return;
       }
-      // Before anything is read or sent: an oversized file should cost a
-      // message, not a round trip that fails with a status code.
-      const oversized = tooLarge(file, config.maxUploadBytes);
-      if (oversized) {
-        await alert(oversized);
-        return;
-      }
-      const language = languageForFileName(config, file.name);
-      try {
-        if (file.type.startsWith('text/')) {
-          ops.newFile({
-            fileName: file.name,
-            language,
-            folderId: DEFAULT_FOLDER_ID,
-            contents: await file.text(),
-          });
-          return;
-        }
-        if (!channelId) {
-          return;
-        }
-        const ext = getFileExtension(file.name);
-        const filename = `${crypto.randomUUID()}${ext ? `.${ext}` : ''}`;
-        const {url} = await DashboardApiClient.assets.upload({
-          channelId,
-          filename,
-          data: file,
-        });
-        ops.newExternalFile({
-          fileName: file.name,
-          language,
-          folderId: DEFAULT_FOLDER_ID,
-          url,
-          mimeType: file.type,
-        });
-      } catch (error) {
-        console.error('File upload failed', error);
+      const refusal = await uploading.upload(file);
+      if (refusal) {
+        await alert(refusal);
       }
     },
-    [ops, config, channelId, alert],
+    [uploading, alert],
   );
 
   const newFilePlaceholder = config.editableFileTypes[0]

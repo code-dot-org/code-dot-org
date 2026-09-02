@@ -15,6 +15,7 @@ const newExternalFile = vi.fn();
 const activateFile = vi.fn();
 const deleteFile = vi.fn();
 const promptForName = vi.fn(async () => 'Chaser');
+const upload = vi.fn(async () => undefined);
 const confirm = vi.fn(async () => true);
 const alert = vi.fn(async () => {});
 
@@ -96,6 +97,7 @@ vi.mock('@code-dot-org/codebridge', () => ({
     hiddenFileTypes: ['sheet'],
   }),
   usePrompts: () => ({promptForName, confirm, alert}),
+  useFileUpload: () => ({enabled: true, accept: 'image/png', upload}),
   languageForFileName: () => 'actor',
 }));
 
@@ -327,6 +329,23 @@ describe('the file menus', () => {
         }),
       ),
     );
+  });
+
+  it('takes a file of your own into the folder that gives it meaning', () => {
+    // The tree's upload put every file at the ROOT, which for a picture is the
+    // one thing that decides what it is: a PNG in `backgrounds/` is a backdrop
+    // and the same bytes in `sprites/` are a sprite (BACKGROUNDS.md §5).
+    openMenu('Sprites');
+
+    expect(screen.getByText('Upload…')).toBeTruthy();
+  });
+
+  it('does not offer an upload where one would mean nothing', () => {
+    // A world is authored, not brought in — there is no file on anybody's
+    // machine that is one.
+    openMenu('Worlds');
+
+    expect(screen.queryByText('Upload…')).toBeNull();
   });
 
   it('still makes nothing where making one from nothing means nothing', () => {

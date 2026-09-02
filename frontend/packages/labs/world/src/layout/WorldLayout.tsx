@@ -184,13 +184,16 @@ const WorldLayout = () => {
               <div className={styles.editorPane}>
                 <div className={styles.editorMain}>
                   <Workspace
-                    hideFileBrowser={!browsable}
+                    // NO FILE TREE. The menus are the way around a World
+                    // project (`files/folderMenus`), and the tree beside them
+                    // was a second one that could do a thing they deliberately
+                    // will not: rename a FILE, which for an actor leaves every
+                    // reference pointing at a path that is not there any more.
+                    // Everything it offered has a place in the menus now,
+                    // uploading included.
+                    hideFileBrowser
                     pinnedFileId={entryFileId}
-                    // The menus are the way around a World project; the tree
-                    // is one toggle away for anyone who wants all of it at
-                    // once (`files/folderMenus`).
                     tabBarStart={browsable ? <FileMenus /> : undefined}
-                    browserStartsCollapsed={browsable}
                   />
                 </div>
                 {/* Code-only view: the console falls back to under the editor. */}

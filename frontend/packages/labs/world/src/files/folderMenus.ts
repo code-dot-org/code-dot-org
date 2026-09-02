@@ -49,6 +49,16 @@ export interface FolderMenu {
   makes: readonly Makeable[];
   /** The shelf `Import…` opens, when something stocks this kind. */
   shelf?: () => Promise<string | undefined>;
+  /**
+   * Whether a file of your own can be brought in here.
+   *
+   * The pictures and the sounds: what a learner has on their machine that this
+   * lab can use (`worldConfig.validMimeTypes`). An upload lands in THIS folder,
+   * which is what decides whether a PNG is a sprite or a backdrop — where the
+   * file tree's upload always put one at the root, and left the learner to
+   * work out why their sky was in the sprite list.
+   */
+  uploads?: boolean;
 }
 
 /**
@@ -95,6 +105,7 @@ export const FOLDER_MENUS: readonly FolderMenu[] = [
     // starting point for a drawing (`files/newThing`).
     makes: [{label: 'New sprite', extension: 'png', placeholder: 'Chaser'}],
     shelf: () => requestAppearanceImport('sprite'),
+    uploads: true,
   },
   {
     folder: 'backgrounds',
@@ -102,6 +113,7 @@ export const FOLDER_MENUS: readonly FolderMenu[] = [
     icon: 'mountain-sun',
     makes: [{label: 'New background', extension: 'png', placeholder: 'Cave'}],
     shelf: () => requestAppearanceImport('background'),
+    uploads: true,
   },
   {
     folder: 'animations',
@@ -118,6 +130,7 @@ export const FOLDER_MENUS: readonly FolderMenu[] = [
     icon: 'volume-high',
     makes: [],
     shelf: requestSoundImport,
+    uploads: true,
   },
   {
     folder: 'effects',

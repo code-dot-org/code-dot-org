@@ -82,10 +82,11 @@ it('renders the World Lab shell from the default project', async () => {
   // folder, in the tab bar (`files/FileMenus`).
   expect(screen.getByRole('button', {name: 'Worlds'})).toBeTruthy();
   expect(screen.getByRole('button', {name: 'Actors'})).toBeTruthy();
-  // The tree is not showing: it starts collapsed now that there is another way
-  // around, and its own toggle brings it back.
+  // …and there is no file tree, nor a way to bring one back: the menus are the
+  // way around a World project, and a tree beside them could rename a FILE,
+  // which for an actor strands every reference to it (`layout/WorldLayout`).
   expect(screen.queryByText('actors')).toBeNull();
-  expect(screen.getByRole('button', {name: /open file manager/i})).toBeTruthy();
+  expect(screen.queryByRole('button', {name: /file manager/i})).toBeNull();
   // The active file is the Blockly world, so its (stubbed) Blockly editor mounts.
   expect(screen.getByText('blockly editor')).toBeTruthy();
   // The preview view toggle rendered.

@@ -36,7 +36,14 @@ export function showsRuleSource(
   return properties?.levelData?.showRuleSource !== false;
 }
 
-/** Whether this level shows the file browser beside the editor. */
+/**
+ * Whether this level lets a learner reach the project's other files.
+ *
+ * The FILE MENUS, since the tree went (`layout/WorldLayout`) — the level data
+ * keeps the name it was saved under, which is what "showFileBrowser" now means
+ * for a lab that has no browser: a level about one file shows the file and
+ * nothing else, and its one file cannot be closed.
+ */
 export function showsFileBrowser(
   properties: WorldLevelProperties | undefined,
 ): boolean {
