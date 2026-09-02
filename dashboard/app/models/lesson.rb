@@ -430,6 +430,24 @@ class Lesson < ApplicationRecord
     lesson_tutor_available? ? "#{get_uncached_show_path}/tutor" : nil
   end
 
+  # Bootstrap data for the Tutor+ project gallery: the units to browse
+  # (position-numbered within unit_group, which is where the page's "Unit 1"
+  # numbering comes from) and the signed-in user's sections.
+  def summarize_for_tutor_gallery(user, unit_group)
+    units = unit_group ? unit_group.default_units : [script]
+    sections = (user.sections_instructed + user.sections_as_student).uniq
+
+    {
+      currentUnitId: script.id,
+      units: units.map.with_index(1) do |unit, position|
+        # link lets the project page build lesson URLs within the unit,
+        # e.g. the "Respond again" button's path back to the challenge.
+        {id: unit.id, name: unit.localized_title, position: position, link: unit.link}
+      end,
+      sections: sections.map {|section| {id: section.id, name: section.name}},
+    }
+  end
+
   def summarize_for_calendar(unit_group_unit: nil)
     url = script_lesson_path(script, self)
     if Policies::Courses.modularity_enabled? && unit_group_unit
