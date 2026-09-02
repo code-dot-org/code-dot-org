@@ -303,6 +303,87 @@ describe('Attachment', () => {
   });
 });
 
+describe('a ledge, and which way you may pass it', () => {
+  // A ONE-WAY PLATFORM, which the catalogue had down as a mechanic still to
+  // build and which turns out to be two traits nobody has to add a third to.
+  // `is resting on` asks about DIRECTION — coming down onto it, and above its
+  // surface last frame — so a body on its way up is not resting on anything and
+  // nothing stops it. `Solid` is what stops it, in either direction.
+  //
+  // Emergent, and therefore worth a test: it is true because of how two rules
+  // were written rather than because anything says so, and either of them could
+  // stop it being true without meaning to.
+
+  const stage = (also: unknown[]) => {
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([
+        rule('rules/motion'),
+        rule('rules/gravity'),
+        rule('rules/collisions'),
+        rule('rules/solid'),
+      ])
+      .instantiate();
+    world.addActor(
+      new ActorBuilder({id: 'ledge', name: 'ledge'})
+        .useTraits([
+          of('rules/gravity', 'ActsAsGroundTrait'),
+          of('rules/collisions', 'CanCollideTrait'),
+          ...(also as never[]),
+        ])
+        .set(PositionProperty, new Vector(100, 100))
+        .instantiate('ledge'),
+    );
+    return world;
+  };
+
+  /** A hero at `at`, given `up` of upward speed (negative is up). */
+  const hero = (world: World, at: Vector, up: number) =>
+    world.addActor(
+      new ActorBuilder({id: 'hero', name: 'hero'})
+        .useTraits([
+          of('rules/gravity', 'AffectedByGravityTrait'),
+          of('rules/collisions', 'CanCollideTrait'),
+          of('rules/motion', 'CanMoveTrait'),
+        ])
+        .set(PositionProperty, at)
+        .set(of('rules/motion', 'VelocityProperty'), new Vector(0, up))
+        .instantiate('hero'),
+    );
+
+  it('is landed on from above whether or not it is solid', () => {
+    for (const also of [[], [of('rules/solid', 'SolidTrait')]]) {
+      const world = stage(also);
+      const dropper = hero(world, new Vector(100, 40), 0);
+
+      run(world, 1.2);
+
+      // Resting on its surface: the ledge's middle less both half-heights.
+      expect(dropper.get(PositionProperty).y).toBeCloseTo(68, 0);
+    }
+  });
+
+  it('is passed up through when it only acts as ground', () => {
+    const world = stage([]);
+    const jumper = hero(world, new Vector(100, 160), -4);
+
+    run(world, 0.5);
+
+    // Above it, and still going: nothing about rising is any of gravity's
+    // business, and there is no Solid here to have an opinion.
+    expect(jumper.get(PositionProperty).y).toBeLessThan(100);
+  });
+
+  it('stops a body rising into it once it is solid too', () => {
+    const world = stage([of('rules/solid', 'SolidTrait')]);
+    const jumper = hero(world, new Vector(100, 160), -4);
+
+    run(world, 0.5);
+
+    // Put back out of the face it came in through — under it, not through it.
+    expect(jumper.get(PositionProperty).y).toBeGreaterThan(100);
+  });
+});
+
 describe('Path', () => {
   // The claim, and the one Steering cannot make: a step that is not toward the
   // goal, because toward is into a wall.

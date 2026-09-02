@@ -1484,6 +1484,12 @@ count. That is what the **Jumping** rule holds.
    platformer that feels fair and one that does not.
 4. Set **jumps allowed** to 2. Now there is a second jump, in the air, and
    still not a third.
+5. Add a ledge above the Hero with **use trait ⟨Acts as Ground⟩** and nothing
+   else, and jump into it from underneath. You go straight through, and then
+   you land on top of it coming down — because landing is about the direction
+   you are going, and rising is not landing. That is a **one-way platform**,
+   and it is what the Ground under your feet would be if it were not **Solid**
+   as well.
 `.trim(),
 };
 

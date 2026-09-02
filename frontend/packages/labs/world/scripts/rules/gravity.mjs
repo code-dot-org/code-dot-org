@@ -240,6 +240,27 @@ affected.block({
 const startsFalling = affected.event(['starts falling']);
 const stopsFalling = affected.event(['stops falling']);
 
+/**
+ * Something to land ON — and, on its own, something to jump UP THROUGH.
+ *
+ * That second half is a mechanic nobody had to build, and it is worth saying
+ * out loud because it looks like one that is missing. `is resting on` above
+ * asks three things, and two of them are about direction: the faller has to be
+ * moving TOWARD the ground and to have been above its surface last frame. A
+ * body on its way up is neither, so nothing here stops it — a ledge with this
+ * trait and nothing else is a ONE-WAY PLATFORM, the kind a platformer is built
+ * out of.
+ *
+ * What makes an ordinary floor ordinary is the second trait beside this one:
+ * `Solid` puts a body back out of the face it came in through, whichever face
+ * that was, so a floor that is also solid is one you cannot rise through.
+ *
+ * So the pair says which kind of floor it is, and neither of them had to learn
+ * a third word for it:
+ *
+ *     Acts as Ground            → land on it, pass up through it
+ *     Acts as Ground + Solid    → land on it, and it stops you either way
+ */
 rule.trait('Acts as Ground').uses(CanCollide);
 
 const each = rule.local('each', 'Actor');

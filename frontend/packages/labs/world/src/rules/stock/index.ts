@@ -325,7 +325,7 @@ export const STOCK_RULES: readonly StockRule[] = [
     name: 'Gravity',
     ability: 'Has Gravity',
     description:
-      'Pulls actors downward, lands them on solid ground, and tells them when they start and stop falling.',
+      'Pulls actors downward, lands them on solid ground, and tells them when they start and stop falling. Landing is about DIRECTION \u2014 a faller has to be coming down onto a thing to rest on it \u2014 so a ledge that only acts as ground is one you jump up through, and a ledge that is also Solid is one you cannot.',
     provides: ['Affected by Gravity', 'Acts as Ground'],
     contents: gravityRule,
   },
