@@ -10,7 +10,7 @@ class QuizAttemptsController < ApplicationController
     viewed_user = current_user
     if params[:userId].present?
       viewed_user = User.find(params[:userId])
-      return head :forbidden unless viewed_user.student_of?(current_user) || viewed_user.id == current_user.id
+      authorize! :view_quiz_attempts, viewed_user
     end
     attempt = latest_attempt(params[:levelId], params[:unitId], viewed_user)
     render json: attempt && quiz_attempt_json(attempt)
