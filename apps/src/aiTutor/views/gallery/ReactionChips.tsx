@@ -71,6 +71,10 @@ interface ReactionChipsProps {
   // off it.
   responseId: number;
   reactions: Reaction[];
+  // Called with the new tallies whenever the viewer changes their reaction,
+  // so an owning view can keep its own copy in sync. Lets a reaction made on
+  // the project page show up on that project's gallery card, and vice versa.
+  onReactionsChange?: (reactions: Reaction[]) => void;
 }
 
 // The interactive row of emoji reactions on a gallery card or project page:
@@ -79,13 +83,25 @@ interface ReactionChipsProps {
 // reaction; the chip is highlighted while the viewer is among its reactors.
 // Toggles update optimistically and reconcile with the server's authoritative
 // tallies, reverting on failure.
-const ReactionChips: FC<ReactionChipsProps> = ({responseId, reactions}) => {
+const ReactionChips: FC<ReactionChipsProps> = ({
+  responseId,
+  reactions,
+  onReactionsChange,
+}) => {
   const [items, setItems] = useState<Reaction[]>(reactions);
   // Emoji with an in-flight request, to keep a chip from firing a second,
   // conflicting toggle before the first resolves.
   const [pending, setPending] = useState<Set<string>>(new Set());
   const [pickerOpen, setPickerOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
+
+  // Update the displayed tallies and notify the owner in one step, so every
+  // state the chips pass through (optimistic, server-reconciled, reverted) is
+  // mirrored up.
+  const applyItems = (next: Reaction[]) => {
+    setItems(next);
+    onReactionsChange?.(next);
+  };
 
   // Reseed when the component is reused for a different response (the gallery
   // reuses cards as the listing changes). Own optimistic edits for the same
@@ -125,15 +141,15 @@ const ReactionChips: FC<ReactionChipsProps> = ({responseId, reactions}) => {
     const wasReacted = items.find(r => r.emoji === emoji)?.reacted ?? false;
     const nowReacted = !wasReacted;
     const previous = items;
-    setItems(applyToggle(items, emoji, nowReacted));
+    applyItems(applyToggle(items, emoji, nowReacted));
     setPending(prev => new Set(prev).add(emoji));
 
     const request = nowReacted
       ? addReaction(responseId, emoji)
       : removeReaction(responseId, emoji);
     request
-      .then(serverReactions => setItems(serverReactions))
-      .catch(() => setItems(previous))
+      .then(serverReactions => applyItems(serverReactions))
+      .catch(() => applyItems(previous))
       .finally(() =>
         setPending(prev => {
           const next = new Set(prev);

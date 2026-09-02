@@ -129,4 +129,26 @@ describe('ReactionChips', () => {
       expect(screen.queryByRole('menu')).not.toBeInTheDocument()
     );
   });
+
+  it('reports reaction changes to onReactionsChange for the owning view', async () => {
+    const user = userEvent.setup();
+    const onReactionsChange = jest.fn();
+    const server = [heart({count: 4, reacted: true})];
+    addReaction.mockResolvedValue(server);
+    render(
+      <ReactionChips
+        responseId={5}
+        reactions={[heart()]}
+        onReactionsChange={onReactionsChange}
+      />
+    );
+
+    await user.click(screen.getByRole('button', {name: /Heart/}));
+
+    // Fired optimistically at once, then again with the server's tallies.
+    expect(onReactionsChange).toHaveBeenCalled();
+    await waitFor(() =>
+      expect(onReactionsChange).toHaveBeenLastCalledWith(server)
+    );
+  });
 });

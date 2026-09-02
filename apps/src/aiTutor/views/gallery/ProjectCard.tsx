@@ -4,6 +4,7 @@ import React, {FC} from 'react';
 import {
   ChallengeResponse,
   ChallengeResponseAsset,
+  Reaction,
 } from '../lessonDeepDive/types';
 
 import ReactionChips from './ReactionChips';
@@ -21,6 +22,9 @@ interface ProjectCardProps {
   // Opens the project's page. The card links to ?project=<id> and lets
   // this handler do the in-page navigation.
   onOpen?: () => void;
+  // Notifies the gallery when this card's reactions change, so its canonical
+  // list stays current (e.g. after reacting on the project page).
+  onReactionsChange?: (reactions: Reaction[]) => void;
 }
 
 interface CardTag {
@@ -73,6 +77,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
   variant,
   unitPosition,
   onOpen,
+  onReactionsChange,
 }) => {
   const projectHref = `?project=${response.id}`;
   const handleOpen = (event: React.MouseEvent) => {
@@ -154,6 +159,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
         <ReactionChips
           responseId={response.id}
           reactions={response.reactions}
+          onReactionsChange={onReactionsChange}
         />
       </div>
     </div>

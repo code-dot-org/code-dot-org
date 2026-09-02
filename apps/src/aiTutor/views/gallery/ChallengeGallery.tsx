@@ -4,6 +4,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {
   ChallengeResponse,
+  Reaction,
   challengeResponseListValidator,
 } from '../lessonDeepDive/types';
 
@@ -128,6 +129,19 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
     };
   }, [sectionId]);
 
+  // Fold a response's new reaction tallies back into the canonical listing.
+  // The gallery holds `responses` from its initial fetch and swaps in the
+  // project page while a project is open; without this, a reaction made on
+  // the project page would be lost when the viewer returns to the grid.
+  const updateResponseReactions = (id: number, reactions: Reaction[]) =>
+    setResponses(prev =>
+      prev
+        ? prev.map(response =>
+            response.id === id ? {...response, reactions} : response
+          )
+        : prev
+    );
+
   const unitPositionFor = (responseUnitId: number | null) =>
     units.find(unit => unit.id === responseUnitId)?.position ?? null;
 
@@ -158,6 +172,9 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
             variant={variant}
             unitPosition={unitPositionFor(response.unit_id)}
             onOpen={() => navigateToProject(response.id)}
+            onReactionsChange={reactions =>
+              updateResponseReactions(response.id, reactions)
+            }
           />
         ))}
       </div>
@@ -209,6 +226,7 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
           galleryResponses={responses}
           onBack={() => navigateToProject(null)}
           onOpenProject={navigateToProject}
+          onReactionsChange={updateResponseReactions}
         />
       </div>
     );
