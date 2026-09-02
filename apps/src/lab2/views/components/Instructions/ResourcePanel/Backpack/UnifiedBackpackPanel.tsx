@@ -24,8 +24,6 @@ interface AlertConfig {
   message: string;
 }
 
-// A file keeps the app type of the backpack holding it, which is what the chip
-// needs to read, add or delete it.
 interface UnifiedBackpackFile {
   appType: string;
   fileName: string;
@@ -49,7 +47,7 @@ const SnackbarPassthrough = React.forwardRef<
 >(({children}, ref) => <div ref={ref}>{children}</div>);
 
 /**
- * Backpack panel behind the 'unified-backpack' experiment. It shows every backpack the
+ * Backpack panel behind the 'unified-backpack' experiment. It shows every backpack file the
  * user has as one list, rather than the lab's own backpack plus a section per other lab.
  */
 const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({

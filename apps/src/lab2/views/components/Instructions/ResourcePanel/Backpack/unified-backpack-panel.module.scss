@@ -54,8 +54,7 @@
   // Hide the native disclosure triangle; the chevron below stands in for it.
   list-style: none;
 
-  // Horizontal line on either side of the heading, as on the per-lab divider in the
-  // original panel.
+  // Horizontal line on either side of the heading.
   &::before,
   &::after {
     content: '';
