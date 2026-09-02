@@ -26,22 +26,25 @@ No user-visible change. Establishes the identifier every later PR depends on, an
 login-time migration of the ~14,392 existing ClassLink users the moment it deploys.
 
 Rollback is non-lossy for users who still hold a v1 record, and **not** for users who sign up
-after this deploys — their v2 record is their only auth option. See the design's Rollback note.
+or connect ClassLink from Manage Linked Accounts after this deploys — their v2 record is their
+only auth option. See the design's Rollback note.
 
 ### 1. Phase 1 — ID Migration: Versioned Auth Options and Callback Updates
 
 - [x] 1.1 ~~Confirm the live `v2/my/info` payload shape~~ — done. Two live responses captured, plus a logged production auth hash confirming the gem exposes `info[:external_id]` and `info[:district_id]`
-- [ ] 1.2 Add `AuthenticationOption::Classlink::VERSION = {v2: 'v2'}.freeze` constant (mirrors `AuthenticationOption::Clever::VERSION`)
-- [ ] 1.3 Create `Services::Classlink::V2AuthOptionBuilder` (mirrors `Services::Clever::V3AuthOptionBuilder`): finds the v1 auth option, dups it, sets `authentication_id = <TenantId>|<SourcedId>` and `version = 'v2'`; returns nil if the v1 option is missing or a v2 option already exists
-- [ ] 1.3a Validate the components asymmetrically before constructing `authentication_id` (design Decision 1): both must be non-blank after `to_s`, and `TenantId` must additionally contain no pipe. Do **not** reject a pipe in `SourcedId` — it is a legal SIS value and first-pipe splitting handles it. On failure build nothing, log the `UserId`, and let login fall back to the v1 path. A blank `SourcedId` would otherwise produce `"<TenantId>|"` for every user in that tenant and collide them onto one auth option
-- [ ] 1.3c Parse `authentication_id` with `split('|', 2)` everywhere it is decomposed — never a bare `split('|')`, which truncates a `SourcedId` containing a pipe. The limit is what makes the format unambiguous, given `TenantId` cannot contain one (design Decision 1)
-- [ ] 1.3b Normalize `TenantId` with `to_s` wherever it is compared or joined — `v2/my/info` returns it as an integer while `/applications` returns `tenant_id`; an unnormalized cache key or comparison misses across the two
-- [ ] 1.4 Write unit tests for the builder (created, idempotent-nil, missing-v1-nil cases) plus the 1.3a/1.3c behavior: blank `SourcedId` builds nothing, blank `TenantId` builds nothing, pipe-containing `TenantId` builds nothing, and — the case that pins the design — a pipe-containing `SourcedId` **does** build and round-trips through `split('|', 2)` to the original value. Also: integer `TenantId` normalizes to the same id as its string form
-- [ ] 1.5 Extract `TenantId` and `SourcedId` in the callback from the gem's `info[:district_id]` and `info[:external_id]` rather than digging `raw_info` (see design Context)
-- [ ] 1.6 Update the ClassLink sign-up path: new accounts get `authentication_id = <TenantId>|<SourcedId>` and `version = 'v2'`
-- [ ] 1.7 Add dual-match login logic: try lookup by v2-format `authentication_id` first, fall back to legacy `UserId` lookup
-- [ ] 1.8 When a user is found via the legacy fallback, create their v2 auth option via the builder (login-time migration; v1 record untouched)
-- [ ] 1.9 Write unit tests for the updated callback and dual-match logic (v2 login, v1 fallback + v2 creation, both-records login creates nothing)
+- [x] 1.2 Add `AuthenticationOption::Classlink::VERSION = {v2: 'v2'}.freeze` constant (mirrors `AuthenticationOption::Clever::VERSION`)
+- [x] 1.3 Create `Services::Classlink::V2AuthOptionBuilder` (mirrors `Services::Clever::V3AuthOptionBuilder`): finds the v1 auth option, dups it, sets `authentication_id = <TenantId>|<SourcedId>` and `version = 'v2'`; returns nil if the v1 option is missing or a v2 option already exists
+- [x] 1.3a Validate the components asymmetrically before constructing `authentication_id` (design Decision 1): both must be non-blank after `to_s`, and `TenantId` must additionally contain no pipe. Do **not** reject a pipe in `SourcedId` — it is a legal SIS value and first-pipe splitting handles it. On failure build nothing, log the `UserId`, and let login fall back to the v1 path. A blank `SourcedId` would otherwise produce `"<TenantId>|"` for every user in that tenant and collide them onto one auth option
+- [x] 1.3c Parse `authentication_id` with `split('|', 2)` everywhere it is decomposed — never a bare `split('|')`, which truncates a `SourcedId` containing a pipe. The limit is what makes the format unambiguous, given `TenantId` cannot contain one (design Decision 1)
+- [x] 1.3b Normalize `TenantId` with `to_s` wherever it is compared or joined — `v2/my/info` returns it as an integer while `/applications` returns `tenant_id`; an unnormalized cache key or comparison misses across the two
+- [x] 1.4 Write unit tests for the builder (created, idempotent-nil, missing-v1-nil cases) plus the 1.3a/1.3c behavior: blank `SourcedId` builds nothing, blank `TenantId` builds nothing, pipe-containing `TenantId` builds nothing, and — the case that pins the design — a pipe-containing `SourcedId` **does** build and round-trips through `split('|', 2)` to the original value. Also: integer `TenantId` normalizes to the same id as its string form
+- [x] 1.5 Extract `TenantId` and `SourcedId` in the callback from the gem's `info[:district_id]` and `info[:external_id]` rather than digging `raw_info` (see design Context)
+- [x] 1.6 Update the ClassLink sign-up path: new accounts get `authentication_id = <TenantId>|<SourcedId>` and `version = 'v2'`
+- [x] 1.7 Add dual-match login logic: try lookup by v2-format `authentication_id` first, fall back to legacy `UserId` lookup
+- [x] 1.8 When a user is found via the legacy fallback, create their v2 auth option via the builder (login-time migration; v1 record untouched)
+- [x] 1.9 Write unit tests for the updated callback and dual-match logic (v2 login, v1 fallback + v2 creation, both-records login creates nothing)
+- [x] 1.9a Extend the v2 handling to `connect_provider` (Manage Linked Accounts → Connect): run the uid rewrite before the connect branch so the holder lookup, takeover checks, and new-auth-option creation all operate on v2 ids, and stamp `version` via `version_for` so a legacy-format fallback isn't mislabeled v2. Without this the v1-format holder lookup misses v2-only accounts (any post-deploy signup) and a second account could link the same credential. Tests: fresh connect creates a v2 option, invalid components fall back to v1 with nil version, connecting a credential the current user holds as v1 migrates it and no-ops, a v2-only holder with activity is refused
+- [x] 1.9b Use byte-exact id matching (merged separately: `classlink` is in `AuthenticationOption::CASE_SENSITIVE_CREDENTIAL_TYPES`, so `User.find_by_credential` confirms ClassLink matches byte-for-byte by default — the column collation ignores case, SIS-authored `SourcedId`s don't). Every lookup in this PR inherits that automatically; the one manual piece is the builder, whose direct `AuthenticationOption` queries use `find_by_exact_credential`, most critically the v2 idempotency check — under the collation, a case-twin's record would block a user's v2 option from ever being built. Test: a v2 option differing only by case does not block building
 - [ ] 1.10 Deploy Phase 1 to production
 
 ## PR 2 — One-time bulk migration script

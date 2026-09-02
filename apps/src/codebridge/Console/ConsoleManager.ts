@@ -44,6 +44,7 @@ export default class ConsoleManager {
   // so this manager owns writing it.
   private codeEnvironmentError: string | null;
   private terminalLinesListeners: ((lines: string[]) => void)[] = [];
+  private focusOnWrite: boolean;
   private queuedWrites: string[];
   private queuedBytes: number;
   private awaitingWrite: boolean;
@@ -57,6 +58,7 @@ export default class ConsoleManager {
     this.inputBuffer = '';
     this.lastLineIsPartial = false;
     this.codeEnvironmentError = null;
+    this.focusOnWrite = true;
     this.queuedWrites = [];
     this.queuedBytes = 0;
     this.awaitingWrite = false;
@@ -81,6 +83,20 @@ export default class ConsoleManager {
 
   public setTerminalFitAddon(terminalFitAddon: FitAddon) {
     this.terminalFitAddon = terminalFitAddon;
+  }
+
+  // Writing focuses the terminal for programs asking for input. Validation
+  // never asks, so it should leave focus alone.
+  public setFocusOnWrite(focusOnWrite: boolean) {
+    this.focusOnWrite = focusOnWrite;
+  }
+
+  // xterm ships .live-region as assertive, so writes interrupt the screen
+  // reader. Its parent also holds the browsable row list.
+  public setPoliteScreenReaderAnnouncements() {
+    this.terminal.element
+      ?.querySelector('.xterm-accessibility .live-region')
+      ?.setAttribute('aria-live', 'polite');
   }
 
   public clearTerminalLines() {
@@ -165,7 +181,7 @@ export default class ConsoleManager {
     this.lastLineIsPartial = false;
     this.writeToTerminal(this.drawnTerminalLines());
     this.terminal.scrollToBottom();
-    this.terminal.focus();
+    this.focusTerminal();
     this.executeTerminalLinesListeners();
   }
 
@@ -186,7 +202,7 @@ export default class ConsoleManager {
     this.lastLineIsPartial = true;
     this.writeToTerminal(message);
     this.terminal.scrollToBottom();
-    this.terminal.focus();
+    this.focusTerminal();
   }
 
   public echoInput(data: string) {
@@ -250,12 +266,19 @@ export default class ConsoleManager {
     );
   }
 
-  private appendTerminalLine(line: string, focusTerminal = true) {
+  private appendTerminalLine(line: string, shouldFocus = true) {
     this.updateTerminalLines(line);
     this.lastLineIsPartial = false;
     this.writeToTerminal(`${line}\r\n`);
     this.terminal.scrollToBottom();
-    if (focusTerminal) {
+    if (shouldFocus) {
+      this.focusTerminal();
+    }
+  }
+
+  // Every write focuses through here, so setFocusOnWrite governs all of them.
+  private focusTerminal() {
+    if (this.focusOnWrite) {
       this.terminal.focus();
     }
   }

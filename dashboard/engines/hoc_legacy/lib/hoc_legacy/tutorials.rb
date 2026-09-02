@@ -23,6 +23,7 @@ module HocLegacy
     # validate the tutorial id and then pass it to the congrats page.
     UI_TEST_TUTORIAL_PATHS = {
       'ui-test-artist' => '/s/ui-test-artist/reset',
+      'ui-test-oceans' => '/s/ui-test-oceans/reset',
     }.freeze
 
     # Minimal stand-in for a Contentful::Entry Tutorial, exposing only what the

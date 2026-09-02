@@ -336,6 +336,10 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({lessonId}) => {
           {challengeType === ChallengeTypes.WHITEBOARD ? (
             <WhiteboardChallenge
               challengeId={challenge?.id ?? null}
+              starterImageUrl={challenge?.whiteboard_starter_image_url ?? null}
+              starterImageAltText={
+                challenge?.whiteboard_starter_image_alt_text ?? null
+              }
               submitted={submitted}
               submitCallback={handleSubmittedChange}
               isRecording={isRecording}

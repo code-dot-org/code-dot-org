@@ -1554,11 +1554,21 @@ class User < ApplicationRecord
 
     user_storage_id = storage_id_for_user_id(user_id)
 
-    UserScript.where(user_id: user_id, script_id: script_id).destroy_all
-    UserLevel.where(user_id: user_id, script_id: script_id).destroy_all
-    ChannelToken.where(storage_id: user_storage_id, script_id: script_id).destroy_all unless user_storage_id.nil?
+    paranoid_destroy_all_with_retry(UserScript.where(user_id: user_id, script_id: script_id))
+    paranoid_destroy_all_with_retry(UserLevel.where(user_id: user_id, script_id: script_id))
+    paranoid_destroy_all_with_retry(ChannelToken.where(storage_id: user_storage_id, script_id: script_id)) unless user_storage_id.nil?
     TeacherFeedback.where(student_id: user_id, script_id: script_id).destroy_all
     CodeReview.where(user_id: user_id, script_id: script_id).destroy_all
+  end
+
+  # If two records collide on a unique index that includes deleted_at
+  # force the second one to a distinct deleted_at so it still gets deleted.
+  def self.paranoid_destroy_all_with_retry(relation)
+    relation.find_each do |record|
+      record.destroy
+    rescue ActiveRecord::RecordNotUnique
+      record.update_column(:deleted_at, Time.current + rand(1..99).seconds)
+    end
   end
 
   def self.find_or_create_facilitator(params, invited_by_user)
@@ -1930,8 +1940,25 @@ class User < ApplicationRecord
   # @param [String] type A credential type / provider type.  In the future this
   #   should always be one of the valid credential types from AuthenticationOption
   # @param [String] id A user id associated with the particular provider.
+  # @param [Boolean] exact_match When true, a stored id must match the given id
+  #   byte-for-byte; otherwise the lookup compares under the column collation
+  #   (utf8mb3_unicode_ci), which ignores case. Defaults by provider type via
+  #   AuthenticationOption::CASE_SENSITIVE_CREDENTIAL_TYPES, so callers only
+  #   pass it to override the type's policy.
   # @returns [User|nil]
-  def self.find_by_credential(type:, id:)
+  def self.find_by_credential(type:, id:, exact_match: AuthenticationOption::CASE_SENSITIVE_CREDENTIAL_TYPES.include?(type.to_s))
+    if exact_match
+      option = AuthenticationOption.find_by_exact_credential(
+        credential_type: type,
+        authentication_id: id
+      )
+      return option.user if option
+      # The legacy users.uid column has the same collation; apply the same
+      # byte-exact confirm rather than skipping the fallback — non-migrated
+      # users still live there.
+      return User.where(provider: type, uid: id).detect {|user| user.uid == id.to_s}
+    end
+
     authentication_option = AuthenticationOption.find_by(
       credential_type: type,
       authentication_id: id

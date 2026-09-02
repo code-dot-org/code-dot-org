@@ -89,6 +89,42 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     assert_equal 0, contact_record.data['opt_in']
   end
 
+  test 'use_reporting_db_for_selects? follows the DCDO flag' do
+    DCDO.stubs(:get).with(ContactRollupsV2::USE_REPORTING_DCDO_KEY, false).returns(false)
+    refute ContactRollupsV2.use_reporting_db_for_selects?
+
+    DCDO.stubs(:get).with(ContactRollupsV2::USE_REPORTING_DCDO_KEY, false).returns(true)
+    assert ContactRollupsV2.use_reporting_db_for_selects?
+  end
+
+  test 'retrieve_query_results routes to the reporting pool when enabled' do
+    Rails.env.stubs(:test?).returns(false)
+    ContactRollupsV2.stubs(:use_reporting_db_for_selects?).returns(true)
+    # Sleeps to let replicas catch up before reading tables written earlier in the run.
+    ContactRollupsV2.expects(:sleep).with(ContactRollupsV2::SAFE_AURORA_REPLICA_LAG_SEC)
+    ContactRollupsV2::DASHBOARD_REPORTING_DB.expects(:[]).with('SELECT 1').returns(:reporting_dataset)
+
+    assert_equal :reporting_dataset, ContactRollupsV2.retrieve_query_results('SELECT 1')
+  end
+
+  test 'retrieve_query_results routes to the writer pool when reporting is disabled' do
+    Rails.env.stubs(:test?).returns(false)
+    ContactRollupsV2.stubs(:use_reporting_db_for_selects?).returns(false)
+    ContactRollupsV2.expects(:sleep).never
+    ContactRollupsV2::DASHBOARD_DB_WRITER.expects(:[]).with('SELECT 1').returns(:writer_dataset)
+
+    assert_equal :writer_dataset, ContactRollupsV2.retrieve_query_results('SELECT 1')
+  end
+
+  test 'set_db_variables does not open Sequel connections in the test environment' do
+    # CI cannot serve the Sequel URIs, and the test environment runs every
+    # pipeline query on the ActiveRecord connection anyway.
+    ContactRollupsV2::DASHBOARD_DB_WRITER.expects(:run).never
+    ContactRollupsV2::DASHBOARD_REPORTING_DB.expects(:run).never
+
+    ContactRollupsV2.set_db_variables
+  end
+
   test 'dry run makes no Pardot API calls' do
     # Called when creating and updating Pardot prospects
     PardotV2.expects(:submit_batch_request).never

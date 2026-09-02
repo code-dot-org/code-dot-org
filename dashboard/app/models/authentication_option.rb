@@ -100,13 +100,69 @@ class AuthenticationOption < ApplicationRecord
     MICROSOFT
   ].freeze
 
+  # Providers whose external ids are case-sensitive strings. Lookups for these
+  # types confirm matches byte-for-byte (see User.find_by_credential and
+  # find_by_exact_credential below) instead of trusting the authentication_id
+  # column's case-insensitive collation.
+  CASE_SENSITIVE_CREDENTIAL_TYPES = [
+    CLASSLINK,
+  ].freeze
+
   module Clever
     VERSION = {
       v3: 'v3',
     }.freeze
   end
 
+  # Facts about the ClassLink authentication_id formats. A v1 id is
+  # ClassLink's internal UserId; a v2 id is "<TenantId>|<SourcedId>", built by
+  # Services::Classlink::AuthIdGenerator.
+  module Classlink
+    SEPARATOR = '|'.freeze
+
+    VERSION = {
+      v2: 'v2',
+    }.freeze
+
+    # Splits a v2 authentication_id back into [tenant_id, sourced_id].
+    # The limit of 2 is load-bearing: SourcedId may itself contain a pipe.
+    # That's safe only because AuthIdGenerator refuses to build an id whose
+    # TenantId contains one — change that validation and this split breaks.
+    def self.parse(authentication_id)
+      authentication_id.to_s.split(SEPARATOR, 2)
+    end
+
+    # The version marker matching a ClassLink authentication_id: 'v2' for the
+    # "<TenantId>|<SourcedId>" format, nil for a legacy UserId. Creation sites
+    # that copy an id they didn't build (signup migration, silent takeover)
+    # use this so the version column always describes the id's actual format.
+    def self.version_for(authentication_id)
+      authentication_id.to_s.include?(SEPARATOR) ? VERSION[:v2] : nil
+    end
+  end
+
   scope :trusted_email, -> {where(credential_type: TRUSTED_EMAIL_CREDENTIAL_TYPES)}
+
+  # The authentication_id column's collation (utf8mb3_unicode_ci) compares
+  # case-insensitively, but the external ids stored there are case-sensitive.
+  # This finder lets the index locate the candidates, then confirms the match
+  # byte-for-byte in Ruby: an id differing from the stored value only in case
+  # is no match, not a hit. Candidates are scanned rather than rechecking a
+  # single row so that ids differing only by case can coexist and still each
+  # resolve to their own record.
+  def self.find_by_exact_credential(credential_type:, authentication_id:)
+    return nil if authentication_id.blank?
+
+    candidates = where(credential_type: credential_type, authentication_id: authentication_id)
+    exact = candidates.detect {|option| option.authentication_id == authentication_id.to_s}
+    if exact.nil? && candidates.any?
+      Observability::Errors.capture_message(
+        'Authentication id matched by collation but not byte-exactly',
+        extra: {credential_type: credential_type}
+      )
+    end
+    exact
+  end
 
   def google?
     credential_type == GOOGLE

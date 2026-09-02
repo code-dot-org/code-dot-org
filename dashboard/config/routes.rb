@@ -1497,7 +1497,11 @@ Dashboard::Application.routes.draw do
     resources :user_practice_problem_attempts, only: [:index, :update, :create, :show]
     resources :practice_problems, only: [:index, :show]
 
-    resources :challenges, only: [:index, :show]
+    resources :challenges, only: [:index, :show] do
+      member do
+        get :starter_image
+      end
+    end
     resources :challenge_responses, only: [:index, :create, :show] do
       collection do
         get :unit_counts

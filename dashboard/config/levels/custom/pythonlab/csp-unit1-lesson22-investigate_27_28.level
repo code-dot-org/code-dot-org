@@ -1,0 +1,50 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-08-28T06:38:10.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "long_instructions": "## **Investigate**\r\n\r\nRun the code again and look at the output.\r\n\r\n**Trace it:** Before line 2 runs, `grade` doesn't exist yet. After line 2 runs, what value does `grade` store? Finish the comment on line 2 with your answer.\r\n\r\n**Tinker:** Add a new line after line 2: `grade = grade + 1`. Run the code again. What changed in the output? Why did it change?\r\n\r\n**Comment it:** Finish the comment on line 4, explaining what `input()` does in this line.",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "name = \"Jordan\"          # \ngrade = 10                 \nlucky_number = 7\nfavorite_subject = input(\"What's your favorite subject? \")  # \n\nprint(\"Name:\", name)\nprint(\"Grade:\", grade)\nprint(\"Lucky number:\", lucky_number)\nprint(\"Favorite subject:\", favorite_subject)",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nwBqt8V122jbwbYk+JYD0Ck33rm5HU+qClg==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-28T06:38:10.709+00:00\",\"changed\":[\"cloned from \\\"csp-unit1-lesson19-investigate_27_28\\\"\"],\"cloned_from\":\"csp-unit1-lesson19-investigate_27_28\"},{\"changed_at\":\"2026-08-28 06:45:43 +0000\",\"changed\":[\"serialized_maze\",\"mini_app\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-08-28 06:46:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-08-28 06:46:39 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pythonlab>
