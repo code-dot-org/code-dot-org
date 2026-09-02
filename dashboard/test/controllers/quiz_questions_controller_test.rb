@@ -238,7 +238,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     refute_equal @question.id, forked_id
 
     forked = MultipleChoiceQuestion.find(forked_id)
-    assert_equal @question, forked.parent
+    assert_equal @question, forked.fork_parent
     assert_equal 'Forked name', forked.name
 
     @question.reload

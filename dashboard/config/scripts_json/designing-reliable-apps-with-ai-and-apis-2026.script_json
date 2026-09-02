@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-08 19:15:30 UTC",
+    "serialized_at": "2026-09-01 15:49:32 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -302,6 +302,21 @@
       },
       "seeding_key": {
         "lesson.key": "End of Unit Assessment",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-2026"
+      }
+    },
+    {
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "End of Unit Survey",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026"
       }
@@ -818,6 +833,18 @@
       "seeding_key": {
         "lesson_activity.key": "18fbd122-5091-4f06-a17c-01192b4b7d97",
         "lesson.key": "End of Unit Assessment",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-2026"
+      }
+    },
+    {
+      "key": "11ed5b85-7099-408f-b9be-75104da87b6d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "11ed5b85-7099-408f-b9be-75104da87b6d",
+        "lesson.key": "End of Unit Survey",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026"
       }
@@ -3465,6 +3492,17 @@
         "activity_section.key": "20e5fae4-00bf-43d0-b3cc-77f7c3fa59d8",
         "lesson_activity.key": "18fbd122-5091-4f06-a17c-01192b4b7d97"
       }
+    },
+    {
+      "key": "518396ff-c2e6-4ebc-8035-d3b5452f0b6a",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "518396ff-c2e6-4ebc-8035-d3b5452f0b6a",
+        "lesson_activity.key": "11ed5b85-7099-408f-b9be-75104da87b6d"
+      }
     }
   ],
   "script_levels": [
@@ -4765,6 +4803,28 @@
       "level_keys": [
         "designing-reliable-apps-postassessment_2026"
       ]
+    },
+    {
+      "chapter": 60,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_-programming_v2_api_apps_2026"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "518396ff-c2e6-4ebc-8035-d3b5452f0b6a"
+      },
+      "level_keys": [
+        "student-eou-survey_-programming_v2_api_apps_2026"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -5474,6 +5534,18 @@
         "lesson_group.key": "lessonGroup-5",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
         "activity_section.key": "20e5fae4-00bf-43d0-b3cc-77f7c3fa59d8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_-programming_v2_api_apps_2026",
+        "script_level.level_keys": [
+          "student-eou-survey_-programming_v2_api_apps_2026"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "518396ff-c2e6-4ebc-8035-d3b5452f0b6a"
       }
     }
   ],
