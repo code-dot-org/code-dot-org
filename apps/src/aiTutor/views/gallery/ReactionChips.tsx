@@ -1,6 +1,5 @@
+import {Reaction} from '@code-dot-org/lesson-deep-dive';
 import React, {FC} from 'react';
-
-import {Reaction} from './types';
 
 import styles from './challenge-gallery.module.scss';
 

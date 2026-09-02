@@ -1,4 +1,9 @@
-import {VideoRecorder} from '@code-dot-org/lesson-deep-dive';
+import {
+  Challenge,
+  ChallengeResponse,
+  challengeResponseValidator,
+  VideoRecorder,
+} from '@code-dot-org/lesson-deep-dive';
 import React, {FC, useCallback, useEffect, useRef, useState} from 'react';
 
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
@@ -6,12 +11,6 @@ import {getClientApi} from '@cdo/apps/aichat/api/client';
 import WaitingAnimation from '@cdo/apps/aichat/views/WaitingAnimation';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
-
-import {
-  Challenge,
-  ChallengeResponse,
-  challengeResponseValidator,
-} from '../types';
 
 import {requestEvaluation} from './requestEvaluation';
 

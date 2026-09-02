@@ -1,8 +1,8 @@
-import {ResponseValidator} from '../../../util/HttpClient';
 import {
   ChallengeResponse,
   challengeResponseValidator,
-} from '../lessonDeepDive/types';
+  ResponseValidator,
+} from '../types';
 
 // Bootstrap data embedded by LessonsController#tutor_gallery.
 export type GalleryUnit = {

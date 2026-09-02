@@ -2,6 +2,7 @@ import {
   useTheme,
   ThemeProvider,
 } from '@code-dot-org/component-library/common/contexts';
+import {ExplanationTypes} from '@code-dot-org/lesson-deep-dive';
 import {createTheme, ThemeProvider as MuiThemeProvider} from '@mui/material';
 import {ReactFlowProvider, useReactFlow} from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
@@ -14,8 +15,6 @@ import {ReactFlowSketchLabSources} from '@cdo/apps/sketchlab/reactFlow/types';
 import {createSketchSnapshotBlob} from '@cdo/apps/sketchlab/reactFlow/utils/createSketchSnapshotBlob';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
-
-import {ExplanationTypes} from '../types';
 
 import AudioRecorder from './AudioRecorder';
 import {requestEvaluation} from './requestEvaluation';

@@ -1,9 +1,9 @@
+import {ChallengeResponseDetail} from '@code-dot-org/lesson-deep-dive';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
 import ProjectDetailsCard from '@cdo/apps/aiTutor/views/gallery/ProjectDetailsCard';
-import {ChallengeResponseDetail} from '@cdo/apps/aiTutor/views/gallery/types';
 
 const baseDetail: ChallengeResponseDetail = {
   id: 8,
