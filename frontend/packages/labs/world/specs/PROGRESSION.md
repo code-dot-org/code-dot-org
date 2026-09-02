@@ -625,9 +625,22 @@ already hold; these ask the WORLD, from a point, and go through a grid of
 buckets (`core/spatialIndex`) rather than measuring everything. It is the form
 anything searching somewhere it is not has to use — is this square clear, what
 is near where I am going — and asking it four hundred times in a row is the
-difference between a path and a frozen frame. `spatial.within` and Collisions
-still measure for themselves; moving them onto the index is a change to what
-they see mid-frame and wants its own verification.
+difference between a path and a frozen frame.
+
+Collisions asks it too, now. It used to pair every collider with every other
+one, every frame — a million questions at a thousand actors — and it asks the
+index for the few whose middles are near enough to be able to overlap, then runs
+the same test it always ran. The radius is its own half-diagonal plus the
+BIGGEST collider's, worked out in one pass at the top of its step: two
+overlapping boxes have their middles within the sum of their half-diagonals, and
+nobody knows whose until the answer comes back. Measured over a frame: 10.2ms →
+1.2ms at a hundred colliders, 352ms → 7.8ms at six hundred. Checked against box
+arithmetic written in the test rather than against the loop it replaced.
+
+`spatial.within` still measures for itself. It filters a list somebody already
+holds rather than asking the world, so it is a smaller prize — and it is the one
+`simulation/neighbours` and `simulation/emergent` are written against, so moving
+it wants its own verification.
 
 **Own blocks outside a rule.** `define block` lives in the Rule category and a
 `.behavior` file (`domainBlocks.ts`, `TOOLBOX_HEAD`). A learner's first

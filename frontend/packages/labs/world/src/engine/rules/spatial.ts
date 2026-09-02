@@ -9,7 +9,7 @@ import {
   filtered,
   type ActorSource,
   type ActorValue,
-  type LazyActors,
+  LazyActors,
 } from '../core/actorValue';
 import {SPATIAL} from '../core/spatialKeys';
 import {advanceTween} from '../core/tween';
@@ -209,6 +209,43 @@ export function within(
   // than an error a learner has to guard: an empty socket reads as 0 and a
   // radius of nothing should find nothing.
   const reach = Number.isFinite(distance) ? distance : -1;
+  const world = centres[0]?.world;
+  // ASKED OF THE WORLD when the source IS the world, which is the shape every
+  // flock is written in: `the actors in ⟨all actors⟩ within ⟨80⟩ of ⟨this
+  // actor⟩`, once per actor per frame. Measured over one frame, one query per
+  // actor: 5.0ms at 150 actors and 17.0ms at 300 measuring every pair, against
+  // 0.54ms and 0.89ms asking the index (`core/spatialIndex`). Sixteen point
+  // seven milliseconds is a frame, so the old shape spent the whole of one at
+  // three hundred — before gravity, before drawing — which is the size
+  // `simulation/many` walks a learner up to on purpose.
+  //
+  // Identity, not a type test: `world.actors` is one object for the life of a
+  // world, and it is what `all actors` compiles to. A narrower source — the
+  // actors somebody collected, a filtered list — is not the world and takes the
+  // walk below, which is the right answer rather than a fallback: the index
+  // knows about every actor and would hand back ones the source left out.
+  if (world && reach >= 0 && (value as unknown) === world.actors) {
+    return new LazyActors(function* () {
+      // ORDER IS THE INDEX'S HERE, and the walk's below. What a neighbourhood
+      // IS is a set — `is anything near me`, `how many`, `steer toward each` —
+      // and nothing in the language asks for the first of one in a way that
+      // could mean something. `the actor with the least ⟨distance⟩` is how you
+      // ask for the nearest, and it reads them all whatever order they arrive.
+      const seen = new Set<Actor>();
+      for (const centre of centres) {
+        for (const near of world.actorsNear(
+          centre.get(PositionProperty),
+          reach,
+        )) {
+          // A thing is not near itself, and near any of several is still once.
+          if (!centres.includes(near) && !seen.has(near)) {
+            seen.add(near);
+            yield near;
+          }
+        }
+      }
+    });
+  }
   return filtered(
     value,
     actor =>
