@@ -4,6 +4,7 @@ import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 export const OAuthSectionTypes = makeEnum(
   SectionLoginType.google_classroom,
   SectionLoginType.clever,
+  SectionLoginType.classlink,
   'microsoft_classroom'
 );
 

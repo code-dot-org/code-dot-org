@@ -200,4 +200,28 @@ describe('SectionActionDropdown', () => {
       expectedUrl
     );
   });
+
+  it('sends only the class sourcedId when syncing a ClassLink section', () => {
+    // The section code is CL-<TenantId>|<classSourcedId>; the tenant is never
+    // sent — the server derives it from the signed-in user.
+    let rosterArgs;
+    const classlinkSection = {
+      ...sections[1],
+      loginType: 'classlink',
+      code: 'CL-2222|33333',
+    };
+    const wrapper = shallow(
+      <SectionActionDropdown
+        {...DEFAULT_PROPS}
+        sectionData={classlinkSection}
+        sectionCode="CL-2222|33333"
+        sectionName="Sci5"
+        updateRoster={(...args) => {
+          rosterArgs = args;
+        }}
+      />
+    );
+    wrapper.instance().onClickSync();
+    expect(rosterArgs[0]).to.equal('33333');
+  });
 });

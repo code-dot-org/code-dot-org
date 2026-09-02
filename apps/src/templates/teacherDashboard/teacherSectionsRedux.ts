@@ -1078,6 +1078,30 @@ function fetchJSON(url: string, params?: object) {
   });
 }
 
+// Like fetchJSON, but POST, via HttpClient (which attaches the Rails
+// authenticity token). Rejects with the same message shape as fetchJSON, so
+// consumers that read the status and body out of the error text (e.g. the
+// sync-failure dialog) see both regardless of method.
+async function postJSON(url: string, params: object) {
+  try {
+    const response = await HttpClient.post(url, JSON.stringify(params), true, {
+      'Content-Type': 'application/json',
+    });
+    return await response.json();
+  } catch (error) {
+    if (error instanceof NetworkError) {
+      const responseText = await error.response.text().catch(() => '');
+      throw new Error(`
+        url: ${url}
+        status: ${error.response.status}
+        statusText: ${error.response.statusText}
+        responseText: ${responseText}
+      `);
+    }
+    throw error;
+  }
+}
+
 export const asyncLoadCoteacherInvite = (): SectionThunkAction => dispatch => {
   fetchJSON('/api/v1/section_instructors')
     .then(response => {
@@ -1206,6 +1230,7 @@ export const unassignSection =
 const urlByProvider: {[key: string]: string} = {
   [OAuthSectionTypes.google_classroom]: '/dashboardapi/google_classrooms',
   [OAuthSectionTypes.clever]: '/dashboardapi/clever_classrooms',
+  [OAuthSectionTypes.classlink]: '/dashboardapi/classlink_classrooms',
 } as const;
 
 /**
@@ -1249,6 +1274,7 @@ export const beginImportRosterFlow =
 const importUrlByProvider: {[key: string]: string} = {
   [OAuthSectionTypes.google_classroom]: '/dashboardapi/import_google_classroom',
   [OAuthSectionTypes.clever]: '/dashboardapi/import_clever_classroom',
+  [OAuthSectionTypes.classlink]: '/dashboardapi/import_classlink_classroom',
   [SectionLoginType.lti_v1]: '/lti/v1/sync_course',
 } as const;
 
@@ -1298,7 +1324,13 @@ export const importOrUpdateRoster =
         });
     }
     let sectionId: number;
-    return fetchJSON(importSectionUrl, {courseId, courseName})
+    // The ClassLink import route is POST-only: importing mutates a section,
+    // and a GET request would skip Rails CSRF verification.
+    const importRequest =
+      provider === OAuthSectionTypes.classlink
+        ? postJSON(importSectionUrl, {courseId, courseName})
+        : fetchJSON(importSectionUrl, {courseId, courseName});
+    return importRequest
       .then(newSection => (sectionId = (newSection as ServerSection).id))
       .then(() => dispatch(asyncLoadSectionData()))
       .then(() => dispatch(rosterImportSuccess(sectionId)));

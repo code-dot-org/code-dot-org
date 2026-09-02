@@ -1843,6 +1843,294 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :ok
   end
 
+  # --- ClassLink rostering ---
+  #
+  # ClassLink uses a central partner credential with no per-user scoping, so
+  # unlike Clever/Google these endpoints enforce the whole authorization
+  # matrix themselves (design invariants I1-I3). The One Roster client is
+  # stubbed at its class-method seam; its HTTP behavior is covered in
+  # test/lib/clients/classlink_one_roster_test.rb.
+
+  CLASSLINK_TENANT = '2222'.freeze
+  CLASSLINK_TEACHER_SOURCED_ID = '11111'.freeze
+  CLASSLINK_APPLICATION = {bearer: 'district-bearer', oneroster_application_id: '%2FgVa0ed75Gs%43'}.freeze
+
+  def create_classlink_v2_teacher(tenant: CLASSLINK_TENANT, sourced_id: CLASSLINK_TEACHER_SOURCED_ID)
+    teacher = create(:teacher, :with_classlink_authentication_option)
+    create(
+      :authentication_option,
+      user: teacher,
+      credential_type: AuthenticationOption::CLASSLINK,
+      authentication_id: "#{tenant}|#{sourced_id}",
+      version: AuthenticationOption::Classlink::VERSION[:v2]
+    )
+    teacher.reload
+  end
+
+  test 'classlink_classrooms is Forbidden when not signed in' do
+    sign_out :user
+    get :classlink_classrooms
+    assert_response :forbidden
+  end
+
+  test 'classlink_classrooms rejects a requester without a v2 auth option' do
+    # v1-only holder: unmigrated, or in a district without OneRoster.
+    teacher = create(:teacher, :with_classlink_authentication_option)
+    sign_in teacher
+    Clients::ClasslinkOneRoster.expects(:application_for_tenant).never
+
+    get :classlink_classrooms
+
+    assert_response :forbidden
+    assert_equal I18n.t('classlink_rostering.no_v2_account'), JSON.parse(response.body)['error']
+  end
+
+  test 'classlink_classrooms rejects a requester with no ClassLink credential at all' do
+    # The email-invited co-teacher case: the UI gate hides the entry point,
+    # but the endpoint must not rely on it.
+    sign_in create(:teacher)
+
+    get :classlink_classrooms
+
+    assert_response :forbidden
+    assert_equal I18n.t('classlink_rostering.no_v2_account'), JSON.parse(response.body)['error']
+  end
+
+  test 'classlink_classrooms reports district not enabled when no application matches' do
+    sign_in create_classlink_v2_teacher
+    Clients::ClasslinkOneRoster.stubs(:application_for_tenant).with(CLASSLINK_TENANT).returns(nil)
+
+    get :classlink_classrooms
+
+    assert_response :forbidden
+    assert_equal I18n.t('classlink_rostering.district_not_enabled'), JSON.parse(response.body)['error']
+  end
+
+  test 'classlink_classrooms returns the teacher classes keyed by sourcedId and title' do
+    sign_in create_classlink_v2_teacher
+    Clients::ClasslinkOneRoster.stubs(:application_for_tenant).with(CLASSLINK_TENANT).returns(CLASSLINK_APPLICATION)
+    Clients::ClasslinkOneRoster.expects(:teacher_classes).
+      with(CLASSLINK_APPLICATION[:oneroster_application_id], CLASSLINK_APPLICATION[:bearer], CLASSLINK_TEACHER_SOURCED_ID).
+      returns([{'sourcedId' => '33333', 'title' => 'Sci5 (Sci5)'}])
+
+    get :classlink_classrooms
+
+    assert_response :ok
+    assert_equal [{'id' => '33333', 'name' => 'Sci5 (Sci5)'}], JSON.parse(response.body)['courses']
+  end
+
+  test 'classlink_classrooms surfaces the district message on a non-expiry 401' do
+    sign_in create_classlink_v2_teacher
+    Clients::ClasslinkOneRoster.stubs(:application_for_tenant).returns(CLASSLINK_APPLICATION)
+    Clients::ClasslinkOneRoster.stubs(:teacher_classes).
+      raises(Clients::ClasslinkOneRoster::DistrictAuthorizationError)
+
+    get :classlink_classrooms
+
+    assert_response :forbidden
+    assert_equal I18n.t('classlink_rostering.district_not_enabled'), JSON.parse(response.body)['error']
+  end
+
+  test 'classlink_classrooms falls back to the generic message on an unexpected failure' do
+    sign_in create_classlink_v2_teacher
+    Clients::ClasslinkOneRoster.stubs(:application_for_tenant).returns(CLASSLINK_APPLICATION)
+    Clients::ClasslinkOneRoster.stubs(:teacher_classes).
+      raises(Clients::ClasslinkOneRoster::MalformedResponseError)
+
+    get :classlink_classrooms
+
+    assert_response :bad_gateway
+    assert_equal I18n.t('classlink_rostering.request_failed'), JSON.parse(response.body)['error']
+  end
+
+  test 'import_classlink_classroom is Forbidden when not signed in' do
+    sign_out :user
+    post :import_classlink_classroom
+    assert_response :forbidden
+  end
+
+  test 'import_classlink_classroom rejects a requester without a v2 auth option' do
+    teacher = create(:teacher, :with_classlink_authentication_option)
+    sign_in teacher
+    Clients::ClasslinkOneRoster.expects(:application_for_tenant).never
+
+    post :import_classlink_classroom, params: {courseId: '33333', courseName: 'Sci5'}
+
+    assert_response :forbidden
+    assert_equal I18n.t('classlink_rostering.no_v2_account'), JSON.parse(response.body)['error']
+  end
+
+  test 'import_classlink_classroom refuses first import of a class the requester does not teach' do
+    sign_in create_classlink_v2_teacher
+    Clients::ClasslinkOneRoster.stubs(:application_for_tenant).returns(CLASSLINK_APPLICATION)
+    Clients::ClasslinkOneRoster.expects(:class_teachers).
+      with(CLASSLINK_APPLICATION[:oneroster_application_id], CLASSLINK_APPLICATION[:bearer], '33333').
+      returns([{'sourcedId' => 'someone-else', 'role' => 'teacher'}])
+    Clients::ClasslinkOneRoster.expects(:class_students).never
+    ClasslinkSection.expects(:from_service).never
+
+    assert_no_difference 'Section.count' do
+      post :import_classlink_classroom, params: {courseId: '33333', courseName: 'Sci5'}
+    end
+
+    assert_response :forbidden
+  end
+
+  test 'import_classlink_classroom allows first import when the requester teaches the class' do
+    teacher = create_classlink_v2_teacher
+    sign_in teacher
+    students = [{'sourcedId' => '12345', 'givenName' => 'Ethan', 'familyName' => 'Doe', 'role' => 'student'}]
+    imported_section = mock('ClasslinkSection')
+    imported_section.stubs(:summarize).returns({section_id: 1})
+
+    Clients::ClasslinkOneRoster.stubs(:application_for_tenant).returns(CLASSLINK_APPLICATION)
+    Clients::ClasslinkOneRoster.expects(:class_teachers).
+      returns([{'sourcedId' => CLASSLINK_TEACHER_SOURCED_ID, 'role' => 'teacher'}])
+    Clients::ClasslinkOneRoster.expects(:class_students).
+      with(CLASSLINK_APPLICATION[:oneroster_application_id], CLASSLINK_APPLICATION[:bearer], '33333').
+      returns(students)
+    ClasslinkSection.expects(:from_service).
+      with('33333', CLASSLINK_TENANT, teacher.id, students, 'Sci5').
+      returns(imported_section)
+
+    post :import_classlink_classroom, params: {courseId: '33333', courseName: 'Sci5'}
+
+    assert_response :ok
+  end
+
+  test 'import_classlink_classroom syncs without teacher verification when requester is an instructor' do
+    teacher = create_classlink_v2_teacher
+    sign_in teacher
+    students = [{'sourcedId' => '12345', 'givenName' => 'Ethan', 'familyName' => 'Doe', 'role' => 'student'}]
+    section = create(
+      :section,
+      user: teacher,
+      login_type: Section::LOGIN_TYPE_CLASSLINK,
+      code: ClasslinkSection.code_for(CLASSLINK_TENANT, '33333')
+    )
+    imported_section = mock('ClasslinkSection')
+    imported_section.stubs(:summarize).returns({section_id: section.id})
+
+    Clients::ClasslinkOneRoster.stubs(:application_for_tenant).returns(CLASSLINK_APPLICATION)
+    Clients::ClasslinkOneRoster.expects(:class_teachers).never
+    Clients::ClasslinkOneRoster.expects(:class_students).returns(students)
+    ClasslinkSection.expects(:from_service).returns(imported_section)
+
+    post :import_classlink_classroom, params: {courseId: '33333', courseName: 'Sci5'}
+
+    assert_response :ok
+  end
+
+  test 'import_classlink_classroom adds a verified co-teacher on an existing section' do
+    section_owner = create(:teacher)
+    teacher = create_classlink_v2_teacher
+    sign_in teacher
+    create(
+      :section,
+      user: section_owner,
+      login_type: Section::LOGIN_TYPE_CLASSLINK,
+      code: ClasslinkSection.code_for(CLASSLINK_TENANT, '33333')
+    )
+    imported_section = mock('ClasslinkSection')
+    imported_section.stubs(:summarize).returns({section_id: 1})
+
+    Clients::ClasslinkOneRoster.stubs(:application_for_tenant).returns(CLASSLINK_APPLICATION)
+    Clients::ClasslinkOneRoster.expects(:class_teachers).
+      returns([{'sourcedId' => CLASSLINK_TEACHER_SOURCED_ID, 'role' => 'teacher'}])
+    Clients::ClasslinkOneRoster.expects(:class_students).
+      returns([{'sourcedId' => '12345', 'givenName' => 'E', 'familyName' => 'D', 'role' => 'student'}])
+    ClasslinkSection.expects(:from_service).returns(imported_section)
+
+    post :import_classlink_classroom, params: {courseId: '33333', courseName: 'Sci5'}
+
+    assert_response :ok
+  end
+
+  test 'import_classlink_classroom refuses an unverified non-instructor sync and leaves the section unchanged' do
+    section_owner = create(:teacher)
+    attacker = create_classlink_v2_teacher(sourced_id: 'attacker-id')
+    sign_in attacker
+    section = create(
+      :section,
+      user: section_owner,
+      login_type: Section::LOGIN_TYPE_CLASSLINK,
+      code: ClasslinkSection.code_for(CLASSLINK_TENANT, '33333')
+    )
+
+    Clients::ClasslinkOneRoster.stubs(:application_for_tenant).returns(CLASSLINK_APPLICATION)
+    Clients::ClasslinkOneRoster.expects(:class_teachers).
+      returns([{'sourcedId' => CLASSLINK_TEACHER_SOURCED_ID, 'role' => 'teacher'}])
+    Clients::ClasslinkOneRoster.expects(:class_students).never
+    ClasslinkSection.expects(:from_service).never
+
+    post :import_classlink_classroom, params: {courseId: '33333', courseName: 'Sci5'}
+
+    assert_response :forbidden
+    assert_empty section.reload.students
+  end
+
+  test 'import_classlink_classroom ignores forged tenant, application, and SourcedId params' do
+    teacher = create_classlink_v2_teacher
+    sign_in teacher
+    students = [{'sourcedId' => '12345', 'givenName' => 'E', 'familyName' => 'D', 'role' => 'student'}]
+    imported_section = mock('ClasslinkSection')
+    imported_section.stubs(:summarize).returns({section_id: 1})
+
+    # Identity must be server-derived: the client is only ever asked about the
+    # requester's own tenant, whatever the params claim.
+    Clients::ClasslinkOneRoster.expects(:application_for_tenant).with(CLASSLINK_TENANT).returns(CLASSLINK_APPLICATION)
+    Clients::ClasslinkOneRoster.expects(:class_teachers).
+      returns([{'sourcedId' => CLASSLINK_TEACHER_SOURCED_ID, 'role' => 'teacher'}])
+    Clients::ClasslinkOneRoster.expects(:class_students).returns(students)
+    ClasslinkSection.expects(:from_service).
+      with('33333', CLASSLINK_TENANT, teacher.id, students, 'Sci5').
+      returns(imported_section)
+
+    post :import_classlink_classroom, params: {
+      courseId: '33333',
+      courseName: 'Sci5',
+      tenantId: '9999',
+      sourcedId: 'forged-teacher',
+      onerosterApplicationId: 'forged-app',
+    }
+
+    assert_response :ok
+  end
+
+  test 'import_classlink_classroom errors on a courseId not resolvable in the requester tenant' do
+    sign_in create_classlink_v2_teacher
+    Clients::ClasslinkOneRoster.stubs(:application_for_tenant).returns(CLASSLINK_APPLICATION)
+    # A foreign courseId is queried only within the requester's own
+    # application, where the proxy does not know it.
+    Clients::ClasslinkOneRoster.stubs(:class_teachers).raises(RestClient::NotFound)
+    ClasslinkSection.expects(:from_service).never
+
+    assert_no_difference 'Section.count' do
+      post :import_classlink_classroom, params: {courseId: 'other-district-class', courseName: 'Foreign'}
+    end
+
+    assert_response :bad_gateway
+    assert_equal I18n.t('classlink_rostering.request_failed'), JSON.parse(response.body)['error']
+  end
+
+  test 'import_classlink_classroom reports a class with no students without touching the section' do
+    teacher = create_classlink_v2_teacher
+    sign_in teacher
+
+    Clients::ClasslinkOneRoster.stubs(:application_for_tenant).returns(CLASSLINK_APPLICATION)
+    Clients::ClasslinkOneRoster.expects(:class_teachers).
+      returns([{'sourcedId' => CLASSLINK_TEACHER_SOURCED_ID, 'role' => 'teacher'}])
+    Clients::ClasslinkOneRoster.expects(:class_students).returns([])
+    ClasslinkSection.expects(:from_service).never
+
+    assert_no_difference 'Section.count' do
+      post :import_classlink_classroom, params: {courseId: '33333', courseName: 'Sci5'}
+    end
+
+    assert_response :bad_request
+    assert_equal I18n.t('classlink_rostering.no_students', section_name: 'Sci5'), JSON.parse(response.body)['error']
+  end
+
   #
   # Given two arrays, checks that they represent equivalent bags (or multisets)
   # of elements.

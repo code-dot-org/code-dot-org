@@ -147,6 +147,70 @@ class ApiController < ApplicationController
     end
   end
 
+  # Lists the One Roster classes the requesting teacher may import. Inherently
+  # scoped: the teacher's SourcedId (from their own v2 auth option, never from
+  # params) is the path segment queried.
+  def classlink_classrooms
+    return head :forbidden unless current_user
+
+    tenant_id, teacher_sourced_id = classlink_v2_identity
+    return classlink_no_v2_error unless tenant_id
+
+    application = Clients::ClasslinkOneRoster.application_for_tenant(tenant_id)
+    return classlink_district_not_enabled_error unless application
+
+    classes = Clients::ClasslinkOneRoster.teacher_classes(
+      application[:oneroster_application_id],
+      application[:bearer],
+      teacher_sourced_id
+    )
+    json = classes.map {|course| {id: course['sourcedId'], name: course['title']}}
+    render json: {courses: json}
+  rescue Clients::ClasslinkOneRoster::DistrictAuthorizationError
+    classlink_district_not_enabled_error
+  rescue Clients::ClasslinkOneRoster::Error, RestClient::Exception, JSON::ParserError => exception
+    classlink_request_failed(exception)
+  end
+
+  # Imports or re-syncs a ClassLink class as a section. Unlike Clever and
+  # Google Classroom, ClassLink's partner credential can read any class in the
+  # requester's district, so authorization is enforced entirely here: identity
+  # is server-derived (I1), non-instructors must appear in the class's One
+  # Roster teacher list even on first import (I2), and existing instructors
+  # sync on local standing (I3).
+  def import_classlink_classroom
+    return head :forbidden unless current_user
+
+    tenant_id, teacher_sourced_id = classlink_v2_identity
+    return classlink_no_v2_error unless tenant_id
+
+    course_id = params[:courseId].to_s
+    course_name = params[:courseName].to_s
+
+    application = Clients::ClasslinkOneRoster.application_for_tenant(tenant_id)
+    return classlink_district_not_enabled_error unless application
+
+    section = ClasslinkSection.find_by(code: ClasslinkSection.code_for(tenant_id, course_id))
+    return head :forbidden unless section_instructor?(section) ||
+      classlink_teacher_for_course?(application, teacher_sourced_id, course_id)
+
+    students = Clients::ClasslinkOneRoster.class_students(
+      application[:oneroster_application_id],
+      application[:bearer],
+      course_id
+    )
+    if students.empty?
+      return render status: :bad_request, json: {error: I18n.t('classlink_rostering.no_students', section_name: course_name)}
+    end
+
+    section = ClasslinkSection.from_service(course_id, tenant_id, current_user.id, students, course_name)
+    render json: section.summarize
+  rescue Clients::ClasslinkOneRoster::DistrictAuthorizationError
+    classlink_district_not_enabled_error
+  rescue Clients::ClasslinkOneRoster::Error, RestClient::Exception, JSON::ParserError => exception
+    classlink_request_failed(exception)
+  end
+
   def user_menu
     prevent_caching
     show_pairing_dialog = !!session.delete(:show_pairing_dialog)
@@ -683,6 +747,45 @@ class ApiController < ApplicationController
       break unless next_page_token
     end
     false
+  end
+
+  # I1: rostering identity is derived only from the requester's own v2
+  # ClassLink auth option, never from params. Because class sourcedIds are
+  # unique per district, deriving the tenant here also confines every lookup
+  # to the requester's own district. Returns [tenant_id, sourced_id], or nil
+  # when the user holds no v2 option.
+  private def classlink_v2_identity
+    auth_id = current_user.uid_for_provider(
+      AuthenticationOption::CLASSLINK,
+      AuthenticationOption::Classlink::VERSION[:v2]
+    )
+    return nil unless auth_id
+    AuthenticationOption::Classlink.parse(auth_id)
+  end
+
+  private def classlink_teacher_for_course?(application, teacher_sourced_id, class_sourced_id)
+    teachers = Clients::ClasslinkOneRoster.class_teachers(
+      application[:oneroster_application_id],
+      application[:bearer],
+      class_sourced_id
+    )
+    teachers.any? {|teacher| teacher['sourcedId'].to_s == teacher_sourced_id}
+  end
+
+  private def classlink_no_v2_error
+    render status: :forbidden, json: {error: I18n.t('classlink_rostering.no_v2_account')}
+  end
+
+  # Also rendered for a non-expiry 401: indistinguishable from a district that
+  # never enabled sharing from the teacher's position, so the two states share
+  # one string and the distinction stays in the logs.
+  private def classlink_district_not_enabled_error
+    render status: :forbidden, json: {error: I18n.t('classlink_rostering.district_not_enabled')}
+  end
+
+  private def classlink_request_failed(exception)
+    Observability::Errors.report(exception, error_message: 'ClassLink rostering request failed')
+    render status: :bad_gateway, json: {error: I18n.t('classlink_rostering.request_failed')}
   end
 
   private def clever_teacher_for_course?(course_id)

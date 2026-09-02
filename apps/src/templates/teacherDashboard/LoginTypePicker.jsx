@@ -84,6 +84,10 @@ class LoginTypePicker extends Component {
       providers && providers.includes(OAuthSectionTypes.microsoft_classroom);
     const withClever =
       providers && providers.includes(OAuthSectionTypes.clever);
+    // Present only for users holding a v2 ClassLink auth option: the server
+    // filters classlink out of the providers payload for everyone else.
+    const withClasslink =
+      providers && providers.includes(OAuthSectionTypes.classlink);
     const withAllLmsProviders =
       providers &&
       [
@@ -153,6 +157,7 @@ class LoginTypePicker extends Component {
             <MicrosoftClassroomCard onClick={this.openImportDialog} />
           )}
           {withClever && <CleverCard onClick={this.openImportDialog} />}
+          {withClasslink && <ClasslinkCard onClick={this.openImportDialog} />}
           <PictureLoginCard onClick={this.onLoginTypeSelect} />
           <WordLoginCard onClick={this.onLoginTypeSelect} />
           <EmailLoginCard onClick={this.onLoginTypeSelect} />
@@ -280,3 +285,13 @@ const CleverCard = props => (
 );
 
 CleverCard.propTypes = PictureLoginCard.propTypes;
+
+const ClasslinkCard = props => (
+  <LoginTypeCard
+    title={i18n.loginTypeClasslink()}
+    description={i18n.loginTypeClasslinkDescription()}
+    onClick={() => props.onClick(OAuthSectionTypes.classlink)}
+  />
+);
+
+ClasslinkCard.propTypes = PictureLoginCard.propTypes;
