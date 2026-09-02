@@ -1,6 +1,9 @@
 # Creates a new v2 ClassLink AuthenticationOption by duplicating an existing v1 ClassLink
 # AuthenticationOption. The v1 record stores ClassLink's internal UserId; the v2 record
-# stores "<TenantId>|<SourcedId>" (see Services::Classlink::AuthIdGenerator).
+# stores "<TenantId>|<SourcedId>" (see Services::Classlink::AuthIdGenerator). The v1
+# record is kept, and not only for rollback: it stays a valid credential, and for a
+# district that has not enabled OneRoster it is the only one the user will ever have,
+# since ClassLink sends those districts no SourcedId to build a v2 id from.
 # Returns nil if the v1 auth option doesn't exist, a v2 auth option already exists, or
 # the v2 authentication id cannot be built from the given components.
 # Returns the new AuthenticationOption without persisting it.
