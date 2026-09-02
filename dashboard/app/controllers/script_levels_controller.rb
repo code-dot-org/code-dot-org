@@ -357,7 +357,7 @@ class ScriptLevelsController < ApplicationController
   # Provides a JSON summary of a particular lesson, that is consumed by tools used to
   # build lesson plans
   def summary_for_lesson_plans
-    require_levelbuilder_mode
+    require_levelbuilder_apis
     authorize! :read, ScriptLevel
 
     unit_context = ScriptLevelsController.get_unit_context(request)

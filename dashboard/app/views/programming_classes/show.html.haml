@@ -10,7 +10,7 @@
   = render layout: 'shared/extra_links' do
     %strong= @programming_class.name
     %ul
-      - if Rails.application.config.levelbuilder_mode
+      - if Policies::LevelbuilderApis.enabled?
         %li= link_to 'Edit', edit_programming_class_path(@programming_class)
       - else
         %li= link_to 'View on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", programming_class_path(@programming_class.programming_environment.name, @programming_class.key)).to_s

@@ -17,7 +17,7 @@ module Lessons
     include LevelsHelper
     include ResolvesLessonFromParams
 
-    before_action :require_levelbuilder_mode_or_test_env
+    before_action :require_levelbuilder_apis
     before_action :set_lesson
     before_action :authorize_lesson
 

@@ -5,7 +5,7 @@
   = render layout: 'shared/extra_links' do
     %strong= 'Data Docs'
     %ul
-      - if Rails.application.config.levelbuilder_mode
+      - if Policies::LevelbuilderApis.enabled?
         %li= link_to 'Edit All', edit_data_docs_path
       - else
         %li= link_to 'View on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", data_docs_path).to_s

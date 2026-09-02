@@ -1,6 +1,6 @@
 class JSONVideosController < ApplicationController
   before_action :authenticate_user!
-  before_action :require_levelbuilder_mode_or_test_env, only: [:search, :create, :update, :destroy]
+  before_action :require_levelbuilder_apis, only: [:search, :create, :update, :destroy]
   authorize_resource only: [:search, :create, :update, :destroy]
 
   SUPPLEMENTAL_BUCKET = 'cdo-supplemental-curricular-content'.freeze

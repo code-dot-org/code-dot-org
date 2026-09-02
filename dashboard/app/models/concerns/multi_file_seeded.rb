@@ -50,6 +50,7 @@ module MultiFileSeeded
   end
 
   def write_file
+    return unless Rails.application.config.levelbuilder_mode
     delete_file if file_path != file_path_was
     FileUtils.mkdir_p directory
     File.write file_path, file_content
@@ -58,6 +59,7 @@ module MultiFileSeeded
   end
 
   def delete_file
+    return unless Rails.application.config.levelbuilder_mode
     FileUtils.rm_f file_path_was
     delete_additional_files if respond_to? :delete_additional_files
   end

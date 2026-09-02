@@ -1,5 +1,5 @@
 class JitPlConceptsController < ApplicationController
-  before_action :require_levelbuilder_mode_or_test_env
+  before_action :require_levelbuilder_apis
   before_action :set_jit_pl_concept, only: [:edit, :update, :destroy]
   authorize_resource
 

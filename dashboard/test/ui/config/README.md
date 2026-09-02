@@ -65,7 +65,10 @@ A unit whose level pages should be publicly cacheable needs an entry in
 ## Adding content
 
 Developers author this content, working locally with `levelbuilder_mode`
-enabled so that saving a level writes its definition file. Curriculum authors
+enabled so that saving a level writes its definition file. Running the UI
+tests that exercise the editing pages needs only `levelbuilder_apis: true`
+in locals.yml, which opens the pages without writing files or showing
+instructor-only content to every user. Curriculum authors
 do not: the levelbuilder environment refuses to save or destroy `UI Test `
 levels (a `Level` validation and destroy guard), and under the proposal will
 not have access to this tree at all. To move an existing unit's levels here,

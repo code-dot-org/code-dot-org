@@ -1,7 +1,7 @@
 class ProgrammingExpressionsController < ApplicationController
   include Rails.application.routes.url_helpers
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:search, :show, :show_by_keys, :docs_show]
+  before_action :require_levelbuilder_apis, except: [:search, :show, :show_by_keys, :docs_show]
   before_action :set_expression_by_keys, only: [:show_by_keys, :docs_show]
   load_and_authorize_resource
 

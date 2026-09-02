@@ -4,8 +4,8 @@ class ScriptsController < ApplicationController
   include VersionRedirectOverrider
   include TeacherDashboardUtils
 
-  before_action :require_levelbuilder_mode, except: [:show, :vocab, :resources, :code, :standards, :edit, :update, :new, :create]
-  before_action :require_levelbuilder_mode_or_test_env, only: [:edit, :update, :new, :create, :generate, :update_lesson_outlines]
+  before_action :require_levelbuilder_apis, except: [:show, :vocab, :resources, :code, :standards, :edit, :update, :new, :create]
+  before_action :require_levelbuilder_apis, only: [:edit, :update, :new, :create, :generate, :update_lesson_outlines]
   before_action :authenticate_user!, except: [:show, :vocab, :resources, :code, :standards]
   check_authorization
   before_action :set_unit, only: [:show, :vocab, :resources, :code, :get_rollup_resources, :standards, :edit, :destroy, :generate, :listing, :update_lesson_outlines]
@@ -266,7 +266,7 @@ class ScriptsController < ApplicationController
   end
 
   def instructions
-    require_levelbuilder_mode
+    require_levelbuilder_apis
 
     unit = Unit.get_from_cache(params[:id])
 

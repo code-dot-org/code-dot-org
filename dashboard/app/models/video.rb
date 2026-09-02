@@ -58,6 +58,7 @@ class Video < ApplicationRecord
   end
 
   def self.merge_and_write_i18n(videos_i18n)
+    return unless Rails.application.config.levelbuilder_mode
     data_yml = File.expand_path('config/locales/data/en.yml')
     i18n = File.exist?(data_yml) ? YAML.load_file(data_yml) : {}
 

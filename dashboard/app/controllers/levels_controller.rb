@@ -9,7 +9,7 @@ class LevelsController < ApplicationController
   include Widget2Helper
   include ActiveSupport::Inflector
   before_action :authenticate_user!, except: [:show, :level_properties, :embed_level, :get_rubric, :get_serialized_maze]
-  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :level_properties, :embed_level, :get_rubric, :get_serialized_maze, :extra_links]
+  before_action :require_levelbuilder_apis, except: [:show, :level_properties, :embed_level, :get_rubric, :get_serialized_maze, :extra_links]
   load_and_authorize_resource except: [:create]
 
   before_action :set_level, only: [:show, :edit, :update, :destroy, :build_quiz_questions]
@@ -595,7 +595,7 @@ class LevelsController < ApplicationController
     # Curriculum writers rarely need to edit STANDALONE_PROJECTS levels, and accidental edits to these levels
     # can be quite disruptive. As a workaround you can navigate directly to the edit url for these levels.
     # We allow editing from the test environment to enable UI testing of the edit page.
-    if (Rails.application.config.levelbuilder_mode || rack_env?(:test)) && !is_standalone_project
+    if Policies::LevelbuilderApis.enabled? && !is_standalone_project
       can_edit_level = can? :edit, @level
 
       if can_edit_level

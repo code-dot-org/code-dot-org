@@ -283,26 +283,14 @@ class ApplicationController < ActionController::Base
     redirect_to '/', flash: {alert: 'Editing on levelbuilder is only supported in English (en-US locale).'} unless locale == :'en-US'
   end
 
-  protected def require_levelbuilder_mode
+  # Curriculum editing pages and APIs are reachable only where
+  # config.levelbuilder_apis is set: the levelbuilder environment, UI test
+  # servers, and developers who opt in. Whether an edit is also written back
+  # to the repo is a separate question, answered by config.levelbuilder_mode.
+  protected def require_levelbuilder_apis
     require_english_in_levelbuilder_mode
 
-    unless Rails.application.config.levelbuilder_mode
-      raise CanCan::AccessDenied.new('Cannot create or modify levels from this environment.')
-    end
-  end
-
-  # Allow us to get some UI test coverage on levelbuilder-only features. This
-  # protection must be applied carefully to make sure that script and level
-  # files in the test environment are never modified.
-  #
-  # UI test authors must be careful to clean up after themselves so that they do
-  # not modify curriculum content in a way could introduce intermittent failures
-  # in other tests. Developers wishing to run these tests locally should run
-  # their local server in levelbuilder_mode.
-  protected def require_levelbuilder_mode_or_test_env
-    require_english_in_levelbuilder_mode
-
-    unless Rails.application.config.levelbuilder_mode || rack_env?(:test)
+    unless Policies::LevelbuilderApis.enabled?
       raise CanCan::AccessDenied.new('Cannot create or modify levels from this environment.')
     end
   end

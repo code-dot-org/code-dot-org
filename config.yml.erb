@@ -459,8 +459,15 @@ read_only: false
 
 proxy: false # If true, generated URLs will not include explicit port numbers in development
 
-# Run dashboard-server with the level editing interface enabled (for admins)
+# Run dashboard-server as the curriculum authoring environment: content
+# changes are serialized back into the repo, the unit cache is off, and
+# instructor-only content is shown to everyone. Implies levelbuilder_apis.
 levelbuilder_mode:
+
+# Make the curriculum editing pages and APIs reachable by users with the
+# levelbuilder permission, without any of the other levelbuilder_mode
+# behaviors. Defaults to levelbuilder_mode in development, true in test.
+levelbuilder_apis:
 
 # Use different color header for local environment than the one on production to
 # make it easier to tell the difference

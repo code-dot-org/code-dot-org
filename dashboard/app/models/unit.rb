@@ -1063,6 +1063,7 @@ class Unit < ApplicationRecord
   # Creates a copy of all translations associated with this unit, and adds
   # them as translations for the unit named new_name.
   def copy_and_write_i18n(new_name, new_course_version)
+    return unless Rails.application.config.levelbuilder_mode
     units_yml = File.expand_path("#{Rails.root}/config/locales/scripts/en.yml")
     i18n = File.exist?(units_yml) ? YAML.load_file(units_yml) : {}
     i18n.deep_merge!(summarize_i18n_for_copy(new_name, new_course_version))
@@ -1284,6 +1285,7 @@ class Unit < ApplicationRecord
   #   will add to these when creating a new lesson.
   # 2. Unit Metadata (title, descs, etc.) which is in metadata_i18n
   def self.merge_and_write_i18n(lessons_i18n, unit_name = '', metadata_i18n = {}, log_event_type: 'write_other')
+    return unless Rails.application.config.levelbuilder_mode
     units_yml = File.expand_path("#{Rails.root}/config/locales/scripts/en.yml")
     old_size = `wc -l #{units_yml.dump}`.to_i
     i18n = File.exist?(units_yml) ? YAML.load_file(units_yml) : {}

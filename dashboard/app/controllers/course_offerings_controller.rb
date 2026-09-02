@@ -1,7 +1,7 @@
 class CourseOfferingsController < ApplicationController
   load_and_authorize_resource except: [:quick_assign_course_offerings, :self_paced_pl_course_offerings_for_workshops]
 
-  before_action :require_levelbuilder_mode, except: [:quick_assign_course_offerings, :self_paced_pl_course_offerings_for_workshops]
+  before_action :require_levelbuilder_apis, except: [:quick_assign_course_offerings, :self_paced_pl_course_offerings_for_workshops]
   before_action :authenticate_user!
 
   def edit

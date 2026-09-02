@@ -3,7 +3,7 @@ class ReferenceGuidesController < ApplicationController
   before_action :redirect_unit_group, only: [:show, :index]
   before_action :find_reference_guide, only: [:show, :update, :edit, :destroy]
   before_action :find_reference_guides, only: [:show, :edit, :edit_all]
-  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :index]
+  before_action :require_levelbuilder_apis, except: [:show, :index]
   authorize_resource id_param: :key
 
   # GET /courses/:course_name/guides/edit

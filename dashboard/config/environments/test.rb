@@ -64,6 +64,9 @@ Dashboard::Application.configure do
 
   # Don't act like a levelbuilder by default.
   config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode
+  # UI test servers (DTT, CI, and RAILS_ENV=test locally) can reach the
+  # editing pages. Unit tests stub this in test_helper.rb.
+  config.levelbuilder_apis = CDO.with_default(true).levelbuilder_apis
 
   # Set to :debug to see everything in the log.
   config.log_level = :info

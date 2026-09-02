@@ -2,7 +2,7 @@ class Widget2Controller < ApplicationController
   include Widget2Helper
 
   before_action :authenticate_user!
-  before_action :require_levelbuilder_mode
+  before_action :require_levelbuilder_apis
   authorize_resource class: false
 
   def index

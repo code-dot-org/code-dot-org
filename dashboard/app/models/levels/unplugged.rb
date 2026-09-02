@@ -52,6 +52,7 @@ class Unplugged < Level
 
   def update_i18n(name, new_strings)
     return unless name
+    return unless Rails.application.config.levelbuilder_mode
     unplugged_yml = File.expand_path('config/locales/unplugged/en.yml')
     i18n = File.exist?(unplugged_yml) ? YAML.load_file(unplugged_yml) : {}
     i18n.deep_merge!({'en' => {'data' => {'unplugged' => {name => new_strings}}}})

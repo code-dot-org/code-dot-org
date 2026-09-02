@@ -56,7 +56,7 @@
       %th.controls-column
       %th Name
       %th Type
-      - if Rails.application.config.levelbuilder_mode
+      - if Policies::LevelbuilderApis.enabled?
         %th Owner
   %tbody
     - @levels.each do |level|
@@ -96,7 +96,7 @@
         %td= level.class.name
 
         -# Level owner column (only on levelbuilder)
-        - if Rails.application.config.levelbuilder_mode
+        - if Policies::LevelbuilderApis.enabled?
           %td= level.user&.name
 
 = paginate @levels

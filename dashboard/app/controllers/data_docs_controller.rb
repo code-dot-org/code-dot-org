@@ -1,5 +1,5 @@
 class DataDocsController < ApplicationController
-  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :index]
+  before_action :require_levelbuilder_apis, except: [:show, :index]
   before_action :set_data_doc, only: [:show, :edit, :update, :destroy]
   before_action :index, only: [:edit_all]
   authorize_resource

@@ -1,5 +1,5 @@
 class JitPlExemplarsController < ApplicationController
-  before_action :require_levelbuilder_mode_or_test_env
+  before_action :require_levelbuilder_apis
   before_action :set_concept
   before_action :set_misconception
   before_action :set_exemplar, only: [:update, :destroy]

@@ -1,5 +1,5 @@
 class BlocksController < ApplicationController
-  before_action :require_levelbuilder_mode, except: :index
+  before_action :require_levelbuilder_apis, except: :index
   load_and_authorize_resource find_by: :name
 
   def index

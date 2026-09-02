@@ -1,5 +1,5 @@
 class SpriteManagementController < ApplicationController
-  before_action :require_levelbuilder_mode
+  before_action :require_levelbuilder_apis
   before_action :authenticate_user!
 
   def index

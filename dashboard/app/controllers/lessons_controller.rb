@@ -3,7 +3,7 @@ class LessonsController < ApplicationController
 
   skip_authorize_resource only: :level_properties_by_id
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show, :student_lesson_plan, :level_properties, :level_properties_by_id, :tutor, :tutor_gallery]
+  before_action :require_levelbuilder_apis, except: [:index, :show, :student_lesson_plan, :level_properties, :level_properties_by_id, :tutor, :tutor_gallery]
   before_action :authenticate_user!, only: [:tutor, :tutor_gallery]
   before_action :disallow_legacy_script_levels, only: [:edit, :update]
   before_action :disable_session_for_cached_pages, only: [:show]

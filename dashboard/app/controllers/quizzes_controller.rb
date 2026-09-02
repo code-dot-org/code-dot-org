@@ -1,7 +1,7 @@
 # Levelbuilder-only endpoint for a Quiz level's own configuration.
 class QuizzesController < ApplicationController
   before_action :authenticate_user!
-  before_action :require_levelbuilder_mode_or_test_env
+  before_action :require_levelbuilder_apis
   before_action {@level = Level.find(params[:level_id])}
   before_action {authorize! :manage, @level}
   before_action {head :not_found unless @level.is_a?(Quiz)}

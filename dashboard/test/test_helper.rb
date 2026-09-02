@@ -110,6 +110,7 @@ class ActiveSupport::TestCase
     DCDO.clear
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
+    Rails.application.config.stubs(:levelbuilder_apis).returns false
 
     # Ensure that AssetHelper#webpack_asset_path does not raise an exception
     # when called from unit tests. See comments on that method for details.

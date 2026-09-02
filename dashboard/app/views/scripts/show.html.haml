@@ -43,7 +43,7 @@
       %br/
       = "id: #{@script.id}"
       %ul
-        - if Rails.application.config.levelbuilder_mode
+        - if Policies::LevelbuilderApis.enabled?
           %li= link_to "Edit", edit_script_path(@script)
         - else
           - lb_path = "https://levelbuilder-studio.code.org#{script_path(@script)}"

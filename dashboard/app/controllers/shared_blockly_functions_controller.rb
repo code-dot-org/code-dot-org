@@ -1,5 +1,5 @@
 class SharedBlocklyFunctionsController < ApplicationController
-  before_action :require_levelbuilder_mode
+  before_action :require_levelbuilder_apis
   before_action :load_block_pool, only: [:new, :edit]
   load_and_authorize_resource
 

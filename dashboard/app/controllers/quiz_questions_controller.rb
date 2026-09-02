@@ -4,7 +4,7 @@ class QuizQuestionsController < ApplicationController
   include QuizQuestionSerialization
 
   before_action :authenticate_user!
-  before_action :require_levelbuilder_mode_or_test_env
+  before_action :require_levelbuilder_apis
   before_action {authorize! :manage, QuizQuestion}
 
   # GET /quiz_questions?quizLevelId=&search=&sort=&standardFrameworkShortcode=&standardShortcode=&courseOrUnitType=&courseOrUnitId=

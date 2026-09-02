@@ -11,7 +11,7 @@
       -# Curriculum writers rarely need to edit STANDALONE_PROJECTS levels, and accidental edits to these levels
       -# can be quite disruptive. As a workaround you can navigate directly to the edit url for these levels.
       - is_standalone_project = ProjectsController::STANDALONE_PROJECTS.values.pluck(:name).include?(@level.name)
-      - if Rails.application.config.levelbuilder_mode  && !is_standalone_project
+      - if Policies::LevelbuilderApis.enabled?  && !is_standalone_project
         - if can? :edit, @level
           %li
             = link_to '[E]dit', edit_level_path(@level), { accesskey: 'e', title: "Edit this level. Can use the browser-dependent accesskey shortcut for quick access." }

@@ -1,7 +1,7 @@
 module Foorm
   # Foorm Library Editor is only available on levelbuilder or test, for those with levelbuilder permissions.
   class LibrariesController < ApplicationController
-    before_action :require_levelbuilder_mode_or_test_env
+    before_action :require_levelbuilder_apis
     before_action :authenticate_user!
     load_and_authorize_resource
 

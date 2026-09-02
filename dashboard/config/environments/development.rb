@@ -78,6 +78,7 @@ Dashboard::Application.configure do
   # Set "levelbuilder_mode: true" in locals.yml if you want to be able to create
   # levels or test levelbuilder functionality.
   config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode
+  config.levelbuilder_apis = CDO.with_default(false).levelbuilder_apis
 
   config.experiment_cache_time_seconds = 0
 

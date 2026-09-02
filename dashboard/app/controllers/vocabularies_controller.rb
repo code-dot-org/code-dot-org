@@ -2,7 +2,7 @@ class VocabulariesController < ApplicationController
   include CurriculumHelper
   load_and_authorize_resource
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:show]
+  before_action :require_levelbuilder_apis, except: [:show]
 
   # GET /vocabularies/search
   def search

@@ -73,6 +73,7 @@ class Slides
   # needed. Always writes the envelope fields so a copied file can be
   # traced back to its origin.
   def write(slides)
+    return unless Rails.application.config.levelbuilder_mode
     path = file_path
     FileUtils.mkdir_p(File.dirname(path))
     File.write(path, JSON.pretty_generate(envelope(slides)))

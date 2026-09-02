@@ -1,6 +1,6 @@
 class LevelStarterAssetsController < ApplicationController
   authorize_resource class: false, except: [:show, :file, :file_by_uuid]
-  before_action :require_levelbuilder_mode, except: [:show, :file, :file_by_uuid]
+  before_action :require_levelbuilder_apis, except: [:show, :file, :file_by_uuid]
   before_action :set_level
   skip_before_action :verify_authenticity_token, only: [:destroy]
 

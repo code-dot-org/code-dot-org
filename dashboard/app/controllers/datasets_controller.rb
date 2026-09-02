@@ -3,7 +3,7 @@ require 'uri'
 
 class DatasetsController < ApplicationController
   before_action :authenticate_user!
-  before_action :require_levelbuilder_mode
+  before_action :require_levelbuilder_apis
   authorize_resource class: false
 
   LIVE_DATASETS = ['Daily Weather', 'Viral 50 USA']

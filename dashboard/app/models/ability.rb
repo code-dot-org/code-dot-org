@@ -473,17 +473,13 @@ class Ability
     # need to check that the user is persisted before checking the user
     # permissions.
 
-    # When in levelbuilder_mode, we want to grant users with levelbuilder
-    # permissions broad abilities to change curriculum and form objects.
-    #
-    # Note: We also grant these abilities in the 'test' environment to support
-    # running UI tests that cover level editing without having levelbuilder_mode
-    # set. An unfortunate side effect of this is that unit tests that cover the
-    # levelbuilder permission will mimic levelbuilder_mode instead of production
-    # by default.
+    # Where curriculum editing is enabled (the levelbuilder environment, UI
+    # test servers, and developers who set levelbuilder_apis in locals.yml),
+    # grant users with the levelbuilder permission broad abilities to change
+    # curriculum and form objects. Unit tests stub the flag in test_helper.rb.
     if user.persisted? &&
         user.levelbuilder? &&
-        (Rails.application.config.levelbuilder_mode || rack_env?(:test))
+        Policies::LevelbuilderApis.enabled?
       can :manage, [
         Block,
         SharedBlocklyFunction,

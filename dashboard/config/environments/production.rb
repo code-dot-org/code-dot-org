@@ -67,6 +67,7 @@ Dashboard::Application.configure do
 
   # don't act like a levelbuilder by default
   config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode
+  config.levelbuilder_apis = CDO.with_default(false).levelbuilder_apis
 
   # The activities_old table should not be part of the schema
   # DELETE_ME when the activities old table gets removed

@@ -20,7 +20,7 @@
   = render layout: 'shared/extra_links' do
     %strong= @lesson.name
     %ul
-      - if Rails.application.config.levelbuilder_mode
+      - if Policies::LevelbuilderApis.enabled?
         %li= link_to "Edit", @lesson.get_uncached_edit_path
         %li
           #copy-lesson-button

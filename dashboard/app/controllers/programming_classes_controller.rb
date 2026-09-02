@@ -1,6 +1,6 @@
 class ProgrammingClassesController < ApplicationController
   include Rails.application.routes.url_helpers
-  before_action :require_levelbuilder_mode_or_test_env, only: [:new, :create, :edit, :update, :destroy, :get_filtered_results]
+  before_action :require_levelbuilder_apis, only: [:new, :create, :edit, :update, :destroy, :get_filtered_results]
   load_and_authorize_resource
 
   def new
