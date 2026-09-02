@@ -13,7 +13,7 @@
 #
 #  index_challenge_response_reactions_on_challenge_response_id  (challenge_response_id)
 #  index_challenge_response_reactions_on_response_user_emoji    (challenge_response_id,user_id,emoji) UNIQUE
-#  index_challenge_response_reactions_on_user_id               (user_id)
+#  index_challenge_response_reactions_on_user_id                (user_id)
 #
 class ChallengeResponseReaction < ApplicationRecord
   belongs_to :challenge_response
