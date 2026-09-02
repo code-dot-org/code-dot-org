@@ -1,4 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import {Typography, Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
@@ -12,9 +13,11 @@ import {
   getCurrentScriptAssessmentList,
   setAssessmentId,
   isCurrentAssessmentSurvey,
+  isCurrentAssessmentQuiz,
   countSubmissionsForCurrentAssessment,
   getExportableData,
   setStudentId,
+  setQuizAttemptMode,
   ASSESSMENT_FEEDBACK_OPTION_ID,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import UnitSelectorV2 from '@cdo/apps/templates/teacherDashboardShared/UnitSelectorV2';
@@ -68,6 +71,9 @@ class SectionAssessments extends Component {
     asyncLoadAssessments: PropTypes.func.isRequired,
     multipleChoiceSurveyResults: PropTypes.array,
     isCurrentAssessmentSurvey: PropTypes.bool,
+    isCurrentAssessmentQuiz: PropTypes.bool,
+    quizAttemptMode: PropTypes.string,
+    setQuizAttemptMode: PropTypes.func.isRequired,
     totalStudentSubmissions: PropTypes.number,
     exportableData: PropTypes.array,
     studentId: PropTypes.number,
@@ -110,6 +116,11 @@ class SectionAssessments extends Component {
   onSelectStudent = studentId => {
     const {setStudentId} = this.props;
     setStudentId(studentId);
+  };
+
+  onSelectQuizAttemptMode = quizAttemptMode => {
+    const {setQuizAttemptMode} = this.props;
+    setQuizAttemptMode(quizAttemptMode);
   };
 
   showFreeResponseDetailDialog = () => {
@@ -155,6 +166,8 @@ class SectionAssessments extends Component {
       assessmentId,
       isLoading,
       isCurrentAssessmentSurvey,
+      isCurrentAssessmentQuiz,
+      quizAttemptMode,
       totalStudentSubmissions,
       exportableData,
       studentId,
@@ -183,6 +196,22 @@ class SectionAssessments extends Component {
                 assessmentList={assessmentList}
                 assessmentId={assessmentId}
                 onChange={this.onSelectAssessment}
+              />
+            </div>
+          )}
+          {isCurrentAssessmentQuiz && (
+            <div className={moduleStyles.assessmentSelection}>
+              <Typography variant="h4" className={moduleStyles.header}>
+                Attempt shown
+              </Typography>
+              <SegmentedButtons
+                size="s"
+                selectedButtonValue={quizAttemptMode}
+                onChange={this.onSelectQuizAttemptMode}
+                buttons={[
+                  {label: 'Highest score', value: 'highest_scoring'},
+                  {label: 'Most recent', value: 'most_recent'},
+                ]}
               />
             </div>
           )}
@@ -312,6 +341,8 @@ export default connect(
     courseVersionId: state.unitSelection.courseVersionId,
     assessmentId: state.sectionAssessments.assessmentId,
     isCurrentAssessmentSurvey: isCurrentAssessmentSurvey(state),
+    isCurrentAssessmentQuiz: isCurrentAssessmentQuiz(state),
+    quizAttemptMode: state.sectionAssessments.quizAttemptMode,
     totalStudentSubmissions: countSubmissionsForCurrentAssessment(state),
     exportableData: getExportableData(state),
     studentId: state.sectionAssessments.studentId,
@@ -328,6 +359,9 @@ export default connect(
     },
     setStudentId(studentId) {
       dispatch(setStudentId(studentId));
+    },
+    setQuizAttemptMode(quizAttemptMode) {
+      dispatch(setQuizAttemptMode(quizAttemptMode));
     },
   })
 )(SectionAssessments);

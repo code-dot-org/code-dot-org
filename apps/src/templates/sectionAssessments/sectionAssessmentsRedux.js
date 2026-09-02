@@ -14,12 +14,24 @@ export const ALL_STUDENT_FILTER = 0;
  * assessmentResponsesByScript - object - keys are scriptIds, values are objects of
  *  student ids to student response data for each assessment
  * assessmentQuestionsByScript - object - keys are scriptIds, values are objects of
- *   assessmentIds to question and answer information for each assessment
+ *   assessmentIds to question and answer information for each assessment. Quiz-backed
+ *   assessments are merged in here alongside LevelGroup ones (see
+ *   loadQuizAssessmentsFromServer) - ids never collide since both come from the same
+ *   `levels` table.
  * surveysByScript - object - keys are scriptIds, values are objects of
  *   assessmentIds to survey questions and anonymous responses
+ * quizResponsesByScript - object - keys are scriptIds, values are objects of
+ *   quiz assessment ids to {responses_by_student}, kept separate from
+ *   assessmentResponsesByScript (rather than merged in like the questions are)
+ *   because each student's entry carries both a "most recent" and a "highest
+ *   scoring" attempt summary - see quizAttemptMode/flattenQuizResponses below.
+ * quizAttemptMode - 'highest_scoring' | 'most_recent' - which attempt summary to
+ *   show for Quiz-backed assessments (matches the keys QuizzesController#section_responses
+ *   nests each student's data under); irrelevant for LevelGroup ones, which have
+ *   no concept of multiple attempts.
  * isLoading - boolean - indicates that requests for assessments and surveys have been
  * sent to the server but the client has not yet received a response
- * assessmentId - int - the level_group id of the assessment currently in view
+ * assessmentId - int - the level_group id (or quiz id) of the assessment currently in view
  * questionIndex - int - the question index of the question currently in view in detail view
  * studentId - int - the studentId of the current student being filtered for.
  */
@@ -28,6 +40,8 @@ const initialState = {
   assessmentQuestionsByScript: {},
   feedbackByScript: {},
   surveysByScript: {},
+  quizResponsesByScript: {},
+  quizAttemptMode: 'highest_scoring',
   isLoading: false,
   assessmentId: 0,
   questionIndex: 0,
@@ -79,6 +93,8 @@ const SET_INITIAL_ASSESSMENT_ID =
   'sectionAssessments/SET_INITIAL_ASSESSMENT_ID';
 const SET_STUDENT_ID = 'sectionAssessments/SET_STUDENT_ID';
 const SET_QUESTION_INDEX = 'sectionAssessments/SET_QUESTION_INDEX';
+const SET_QUIZ_RESPONSES = 'sectionAssessments/SET_QUIZ_RESPONSES';
+const SET_QUIZ_ATTEMPT_MODE = 'sectionAssessments/SET_QUIZ_ATTEMPT_MODE';
 
 // Action creators
 export const setAssessmentResponses = (
@@ -128,6 +144,15 @@ export const setSurveys = (scriptId, surveys) => ({
   scriptId,
   surveys,
 });
+export const setQuizResponses = (scriptId, quizResponses) => ({
+  type: SET_QUIZ_RESPONSES,
+  scriptId,
+  quizResponses,
+});
+export const setQuizAttemptMode = quizAttemptMode => ({
+  type: SET_QUIZ_ATTEMPT_MODE,
+  quizAttemptMode,
+});
 
 export const asyncLoadAssessments = (sectionId, scriptId, courseVersionId) => {
   return (dispatch, getState) => {
@@ -152,15 +177,46 @@ export const asyncLoadAssessments = (sectionId, scriptId, courseVersionId) => {
     const loadQuestions = loadAssessmentQuestionsFromServer(scriptId);
     const loadSurveys = loadSurveysFromServer(sectionId, scriptId);
     const loadFeedback = loadFeedbackFromServer(sectionId, scriptId);
+    const loadQuizAssessments = loadQuizAssessmentsFromServer(
+      sectionId,
+      scriptId,
+      courseVersionId
+    );
 
-    Promise.all([loadResponses, loadQuestions, loadSurveys, loadFeedback])
+    Promise.all([
+      loadResponses,
+      loadQuestions,
+      loadSurveys,
+      loadFeedback,
+      loadQuizAssessments,
+    ])
       .then(arrayOfValues => {
+        const quizAssessments = arrayOfValues[4] || {};
+        // Split the consolidated quiz payload into the two shapes the rest of
+        // this file expects: question metadata merges directly into the same
+        // dict as LevelGroup's (ids never collide - both come from `levels`),
+        // while responses stay separate (see quizResponsesByScript above).
+        const quizQuestionsById = {};
+        const quizResponsesById = {};
+        Object.keys(quizAssessments).forEach(quizId => {
+          const {responses_by_student: responsesByStudent, ...questionData} =
+            quizAssessments[quizId];
+          quizQuestionsById[quizId] = questionData;
+          quizResponsesById[quizId] = responsesByStudent;
+        });
+
         dispatch(
           setAssessmentResponses(courseVersionId, scriptId, arrayOfValues[0])
         );
-        dispatch(setAssessmentQuestions(scriptId, arrayOfValues[1]));
+        dispatch(
+          setAssessmentQuestions(scriptId, {
+            ...arrayOfValues[1],
+            ...quizQuestionsById,
+          })
+        );
         dispatch(setFeedback(scriptId, arrayOfValues[3]));
         dispatch(setSurveys(scriptId, arrayOfValues[2]));
+        dispatch(setQuizResponses(scriptId, quizResponsesById));
         dispatch(setInitialAssessmentId(scriptId));
         dispatch(finishLoadingAssessments());
       })
@@ -236,6 +292,21 @@ export default function sectionAssessments(state = initialState, action) {
       },
     };
   }
+  if (action.type === SET_QUIZ_RESPONSES) {
+    return {
+      ...state,
+      quizResponsesByScript: {
+        ...state.quizResponsesByScript,
+        [action.scriptId]: action.quizResponses,
+      },
+    };
+  }
+  if (action.type === SET_QUIZ_ATTEMPT_MODE) {
+    return {
+      ...state,
+      quizAttemptMode: action.quizAttemptMode,
+    };
+  }
   if (action.type === SET_ASSESSMENTS_QUESTIONS) {
     return {
       ...state,
@@ -284,11 +355,55 @@ export const getCurrentScriptAssessmentList = state => {
 
 // Get the student responses for assessments in the current script and current assessment
 export const getAssessmentResponsesForCurrentCourseAndScript = state => {
+  const scriptId = state.unitSelection.scriptId;
+  const assessmentId = state.sectionAssessments.assessmentId;
+  const quizResponses =
+    state.sectionAssessments.quizResponsesByScript[scriptId]?.[assessmentId];
+
+  if (quizResponses) {
+    return flattenQuizResponses(
+      quizResponses,
+      assessmentId,
+      state.sectionAssessments.quizAttemptMode
+    );
+  }
+
   return (
     state.sectionAssessments.assessmentResponsesByScript[
       state.unitSelection.courseVersionId
-    ]?.[state.unitSelection.scriptId] || {}
+    ]?.[scriptId] || {}
   );
+};
+
+// Quiz-backed assessments carry two attempt summaries per student
+// (most recent / highest scoring - see quizAttemptMode) instead of the single
+// flat summary a LevelGroup assessment has. This is the only place that knows
+// about that split: it picks the current mode's summary and re-flattens into
+// the same {student_name, responses_by_assessment} shape LevelGroup responses
+// already have, so every other selector in this file can stay agnostic to
+// which source an assessment came from.
+const flattenQuizResponses = (responsesByStudent, assessmentId, mode) => {
+  const flattened = {};
+  Object.keys(responsesByStudent).forEach(studentId => {
+    const student = responsesByStudent[studentId];
+    flattened[studentId] = {
+      student_name: student.student_name,
+      responses_by_assessment: {
+        [assessmentId]: student[mode],
+      },
+    };
+  });
+  return flattened;
+};
+
+// True if the currently selected assessment's data comes from a Quiz level
+// rather than a LevelGroup one - see quizResponsesByScript.
+export const isCurrentAssessmentQuiz = state => {
+  const scriptId = state.unitSelection.scriptId;
+  const assessmentId = state.sectionAssessments.assessmentId;
+  return !!state.sectionAssessments.quizResponsesByScript[scriptId]?.[
+    assessmentId
+  ];
 };
 
 // Get the question structure for assessments in the current script and current assessment
@@ -1227,6 +1342,28 @@ const loadFeedbackFromServer = (sectionId, scriptId) => {
   const payload = {script_id: scriptId, section_id: sectionId};
   return $.ajax({
     url: `/dashboardapi/assessments/section_feedback`,
+    method: 'GET',
+    contentType: 'application/json;charset=UTF-8',
+    data: payload,
+  });
+};
+
+// Loads every Quiz-backed assessment in the script in one shot - question
+// metadata and every student's responses together (see QuizzesController#section_responses).
+const loadQuizAssessmentsFromServer = (
+  sectionId,
+  scriptId,
+  courseVersionId
+) => {
+  let payload = {section_id: sectionId};
+  if (scriptId) {
+    payload.script_id = scriptId;
+  }
+  if (courseVersionId) {
+    payload.course_version_id = courseVersionId;
+  }
+  return $.ajax({
+    url: `/quizzes/section_responses`,
     method: 'GET',
     contentType: 'application/json;charset=UTF-8',
     data: payload,

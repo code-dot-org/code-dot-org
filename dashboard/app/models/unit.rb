@@ -1875,6 +1875,13 @@ class Unit < ApplicationRecord
     end
   end
 
+  # Get all script levels that are quizzes. Unlike get_assessment_script_levels,
+  # there's no analogous "not anonymous" filter - Quiz has no survey/anonymous
+  # concept, so every quiz-purpose (exam, practice, etc.) is included.
+  def get_quiz_script_levels
+    script_levels.select {|sl| sl.levels.first.is_a?(Quiz)}
+  end
+
   def get_feedback_for_section(section)
     feedback = {}
 
