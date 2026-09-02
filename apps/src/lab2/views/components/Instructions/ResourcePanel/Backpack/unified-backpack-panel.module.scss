@@ -38,3 +38,41 @@
   overflow-y: auto;
   padding-right: 8px;
 }
+
+.unsupportedSection {
+  width: 100%;
+}
+
+.unsupportedSummary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px;
+  cursor: pointer;
+  color: var(--text-neutral-secondary);
+  // Hide the native disclosure triangle; the chevron below stands in for it.
+  list-style: none;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  &:hover {
+    color: var(--text-neutral-primary);
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.unsupportedSection[open] .unsupportedSummary i {
+  transform: scaleY(-1);
+}
+
+.unsupportedFileList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

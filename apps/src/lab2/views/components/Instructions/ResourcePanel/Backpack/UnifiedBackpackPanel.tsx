@@ -1,6 +1,6 @@
 import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton, Snackbar, Fade} from '@mui/material';
+import {Button as MuiButton, Snackbar, Fade, Typography} from '@mui/material';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import {TransitionGroup} from 'react-transition-group';
 
@@ -11,6 +11,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import BackpackFileChip from './BackpackFileChip';
 import BackpackMessage from './BackpackMessage';
+import isFileTypeSupported from './isFileTypeSupported';
 
 import moduleStyles from './unified-backpack-panel.module.scss';
 
@@ -148,37 +149,35 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
     [openPanelCallback, removeAlert]
   );
 
-  const fileChips = useMemo(
-    () =>
-      files.map(({appType, fileName}) => {
-        const client = backpackApi.getClientForAppType(appType);
-        if (!client) {
-          return null;
-        }
-        return (
-          <BackpackFileChip
-            key={`${appType}/${fileName}`}
-            fileName={fileName}
-            backpackApi={client}
-            addAlert={addAlert}
-            validateFileName={validateFileName}
-            saveFileToProject={saveFileToProject}
-            createNewProjectFile={createNewProjectFile}
-            findIdForFileName={findIdForFileName}
-            supportedFileTypes={supportedFileTypes}
-            setActionInProgress={setActionInProgress}
-            disableActions={actionInProgress}
-            // Anything outside this lab's own backpack may hold another lab's images,
-            // which have to be moderated before they enter a project.
-            isSecondaryBackpack={appType !== currentAppName}
-            onImageFlagged={onImageFlagged}
-            addFileTooltipText={addFileTooltipText}
-            addFileHandler={addFileHandler}
-          />
-        );
-      }),
+  const renderFileChip = useCallback(
+    ({appType, fileName}: UnifiedBackpackFile) => {
+      const client = backpackApi.getClientForAppType(appType);
+      if (!client) {
+        return null;
+      }
+      return (
+        <BackpackFileChip
+          key={`${appType}/${fileName}`}
+          fileName={fileName}
+          backpackApi={client}
+          addAlert={addAlert}
+          validateFileName={validateFileName}
+          saveFileToProject={saveFileToProject}
+          createNewProjectFile={createNewProjectFile}
+          findIdForFileName={findIdForFileName}
+          supportedFileTypes={supportedFileTypes}
+          setActionInProgress={setActionInProgress}
+          disableActions={actionInProgress}
+          // Anything outside this lab's own backpack may hold another lab's images,
+          // which have to be moderated before they enter a project.
+          isSecondaryBackpack={appType !== currentAppName}
+          onImageFlagged={onImageFlagged}
+          addFileTooltipText={addFileTooltipText}
+          addFileHandler={addFileHandler}
+        />
+      );
+    },
     [
-      files,
       backpackApi,
       addAlert,
       validateFileName,
@@ -193,6 +192,19 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
       addFileHandler,
     ]
   );
+
+  const [supportedFiles, unsupportedFiles] = useMemo(() => {
+    const supported: UnifiedBackpackFile[] = [];
+    const unsupported: UnifiedBackpackFile[] = [];
+    files.forEach(file => {
+      if (isFileTypeSupported(file.fileName, supportedFileTypes)) {
+        supported.push(file);
+      } else {
+        unsupported.push(file);
+      }
+    });
+    return [supported, unsupported];
+  }, [files, supportedFileTypes]);
 
   if (!currentUserId) {
     return (
@@ -263,15 +275,27 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
         </TransitionGroup>
       </Snackbar>
       <div className={moduleStyles.fileListContainer}>
-        {files.length === 0 ? (
+        {files.length === 0 && (
           <BackpackMessage
             type="neutral"
             iconName="backpack"
             title="Your Backpack is empty"
             message="Files you save to your Backpack will appear here."
           />
-        ) : (
-          fileChips
+        )}
+        {supportedFiles.map(renderFileChip)}
+        {unsupportedFiles.length > 0 && (
+          <details className={moduleStyles.unsupportedSection}>
+            <summary className={moduleStyles.unsupportedSummary}>
+              <Typography variant="body4" gutterBottom>
+                {`Not supported in this lab (${unsupportedFiles.length})`}
+              </Typography>
+              <FontAwesomeV6Icon iconName="chevron-down" aria-hidden="true" />
+            </summary>
+            <div className={moduleStyles.unsupportedFileList}>
+              {unsupportedFiles.map(renderFileChip)}
+            </div>
+          </details>
         )}
       </div>
     </div>

@@ -15,6 +15,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import isFileTypeSupported from './isFileTypeSupported';
 import {onClickAddFile} from './onClickAddFile';
 import {
   fetchAndSaveFile,
@@ -74,8 +75,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
     useAppSelector(state => state.lab.channel && state.lab.channel.id) || '';
   const dialogControl = useDialogControl();
   const inReadOnly = useAppSelector(isReadOnlyWorkspace);
-  const isFileSupported =
-    fileExtension && supportedFileTypes.includes(fileExtension);
+  const isFileSupported = isFileTypeSupported(fileName, supportedFileTypes);
   // If the parent tells us to, we are in read-only mode, or the file type is unsupported, disable the add button.
   const addButtonDisabled = inReadOnly || !isFileSupported || disableActions;
   const addButtonTooltipText = useMemo(() => {
