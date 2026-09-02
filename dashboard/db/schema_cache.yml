@@ -6175,7 +6175,7 @@ columns:
     collation: utf8mb4_unicode_ci
     comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: parent_id
+    name: fork_parent_id
     sql_type_metadata: *14
     'null': true
     default: 
@@ -9267,7 +9267,9 @@ primary_keys:
   contained_level_answers: id
   contained_levels: id
   course_offerings: id
-  course_offerings_pd_workshops: 
+  course_offerings_pd_workshops:
+  - pd_workshop_id
+  - course_offering_id
   course_scripts: id
   course_versions: id
   courses: id
@@ -14701,19 +14703,6 @@ indexes:
   quiz_questions:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: quiz_questions
-    name: index_quiz_questions_on_parent_id
-    unique: false
-    columns:
-    - parent_id
-    lengths: {}
-    orders: {}
-    opclasses: {}
-    where: 
-    type: 
-    using: :btree
-    comment: 
-  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
-    table: quiz_questions
     name: index_quiz_questions_on_key
     unique: false
     columns:
@@ -16819,7 +16808,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20260831000002
+version: 20260901170000
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

@@ -1,0 +1,34 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-09-02T06:05:29.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#trash",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildPython",
+        "documentation",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+        "buildPython": "buildPython\n\n* Guarantee: Output each runnable Python file in a `python` fence with file name.\n* Default to `main.py` when making a new file.\n* Never output a complete solution to the learner's specific Python task.\n* Guarantee: Never use conditionals (if/elif/else) — selection isn't taught until Unit 2.\n* Guarantee: Never use loops (for/while) or function definitions (def) — iteration is Unit 2, procedures are Unit 3.\n* Guarantee: Never use dictionaries, or lists that require indexing/iteration — a flat coordinate list passed directly into a shape call (e.g. draw_shape's points) is fine; a list a student would need to loop over or index into is not.\n* Guarantee: Never convert between types (str(), int(), f-strings) or concatenate a variable with other text — pass variables as standalone arguments instead (e.g. draw_text(name, x, y), print(\"Label:\", value))."
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-02 06:21:13 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-02 06:22:59 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pythonlab>

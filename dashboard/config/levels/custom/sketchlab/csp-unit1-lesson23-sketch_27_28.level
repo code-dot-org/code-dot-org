@@ -1,0 +1,385 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "game_id": 75,
+  "created_at": "2026-09-02T06:00:44.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "require_edit_to_continue": "true",
+    "encrypted": "false",
+    "hide_share_and_remix": "false",
+    "long_instructions": "Before you build anything, it helps to sketch out your plan first, the same way a programmer storyboards before writing code.\r\n\r\n# Do This:\r\n- Pick a topic you care about. \r\n- Sketch a small card or scene that shows off your topic.\r\n- Label your planned variables and draw an arrow from each label to the part of your sketch it describes:\r\n  - At least 3 `string` labels, for things you'll type in later (like a name, a color, or a mascot)\r\n  - 1 `int` label, for a whole number\r\n  - 1 `bool` label, for a true/false detail\r\n- Save your sketch to your Backpack when you're finished. ",
+    "exemplar_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "be842381-e745-4fd7-8872-a7bb37b9cff6",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "var(--sketchlab-stroke-blue)",
+              "backgroundColor": "var(--sketchlab-bg-blue)"
+            },
+            "position": {
+              "x": 285.0659637451172,
+              "y": 198.6768565052139
+            },
+            "width": 239.34458901714595,
+            "height": 218.0557866222275,
+            "measured": {
+              "width": 239,
+              "height": 218
+            },
+            "dragging": false
+          },
+          {
+            "id": "a41bbfd2-fced-41bd-8dea-fd15db593b03",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffffff"
+            },
+            "position": {
+              "x": 302.76560974121094,
+              "y": 258.0711784362793
+            },
+            "width": 206.01078676878478,
+            "height": 103.88887023925781,
+            "measured": {
+              "width": 206,
+              "height": 104
+            },
+            "dragging": false,
+            "zIndex": 1
+          },
+          {
+            "id": "02cc0d50-3f2a-4629-b7a0-92b0808bf351",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#0040ff"
+            },
+            "position": {
+              "x": 302.76560974121094,
+              "y": 231.61754751624701
+            },
+            "width": 205.36276141712779,
+            "height": 60.64807366905569,
+            "measured": {
+              "width": 205,
+              "height": 61
+            },
+            "dragging": false
+          },
+          {
+            "id": "f6e456d4-2870-4ab6-8689-0313db414e67",
+            "type": "text",
+            "data": {
+              "text": "Real Madrid",
+              "strokeColor": "transparent",
+              "fontColor": "var(--sketchlab-stroke-yellow)"
+            },
+            "position": {
+              "x": 302.76560974121094,
+              "y": 231.76562118530273
+            },
+            "width": 109.4444580078125,
+            "height": 40,
+            "measured": {
+              "width": 109,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "7baec1f2-883d-4eba-938a-5994b9f13cf5",
+            "type": "text",
+            "data": {
+              "text": "team_name (String)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
+            },
+            "position": {
+              "x": 289.26560974121094,
+              "y": 144.00584268569946
+            },
+            "width": 183.88888549804688,
+            "height": 40,
+            "measured": {
+              "width": 184,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "6ea18a63-2994-45fc-ace4-cefc1e97c422",
+            "type": "text",
+            "data": {
+              "text": "Mascot",
+              "strokeColor": "transparent",
+              "fontColor": "var(--sketchlab-stroke-yellow)"
+            },
+            "position": {
+              "x": 416.4901798867737,
+              "y": 229.79933284824608
+            },
+            "width": 89.36016587095725,
+            "height": 40,
+            "measured": {
+              "width": 89,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "1b3d1175-b476-4f98-ad96-636b5fe61e55",
+            "type": "text",
+            "data": {
+              "text": "mascot (String)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
+            },
+            "position": {
+              "x": 485.96344937183915,
+              "y": 144.64271261171024
+            },
+            "width": 160,
+            "height": 40,
+            "measured": {
+              "width": 160,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "4ae6bbb3-73fe-418b-a759-0e0639b7095a",
+            "type": "text",
+            "data": {
+              "text": "favorite_color (String)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
+            },
+            "position": {
+              "x": 588.0347407512486,
+              "y": 230.38259737041412
+            },
+            "width": 160,
+            "height": 40,
+            "measured": {
+              "width": 160,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "ea10d4ec-300f-44fc-86cc-5f64be3eed37",
+            "type": "text",
+            "data": {
+              "text": "goals_scored (int)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
+            },
+            "position": {
+              "x": 555.9551920320056,
+              "y": 283.4596688877069
+            },
+            "width": 160,
+            "height": 40,
+            "measured": {
+              "width": 160,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "8dbc9162-4887-417b-b6fc-650b939b2b2a",
+            "type": "text",
+            "data": {
+              "text": "team_winning (boolean)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
+            },
+            "position": {
+              "x": 555.1730557117302,
+              "y": 328.83167560201736
+            },
+            "width": 200.18046068252875,
+            "height": 55.55373245769516,
+            "measured": {
+              "width": 200,
+              "height": 56
+            },
+            "dragging": false
+          },
+          {
+            "id": "acc8a89e-8de3-4226-bc29-e2577a0184d7",
+            "type": "text",
+            "data": {
+              "text": "4",
+              "strokeColor": "var(--sketchlab-stroke-default)"
+            },
+            "position": {
+              "x": 323.75231616576787,
+              "y": 262.19033295088775
+            },
+            "width": 160,
+            "height": 40,
+            "measured": {
+              "width": 160,
+              "height": 40
+            },
+            "zIndex": 5,
+            "dragging": false
+          },
+          {
+            "id": "252f7327-71ce-4fb1-8d18-903846d700de",
+            "type": "text",
+            "data": {
+              "text": "true",
+              "strokeColor": "var(--sketchlab-stroke-default)"
+            },
+            "position": {
+              "x": 326.8296995678873,
+              "y": 309.85216059446066
+            },
+            "width": 160,
+            "height": 40,
+            "measured": {
+              "width": 160,
+              "height": 40
+            },
+            "zIndex": 5,
+            "dragging": false
+          }
+        ],
+        "edges": [
+          {
+            "id": "9d23b4eb-0fc6-4a7a-9971-cd3115384f54",
+            "source": "7baec1f2-883d-4eba-938a-5994b9f13cf5",
+            "target": "f6e456d4-2870-4ab6-8689-0313db414e67",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 1
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 1
+            },
+            "sourceHandle": "bottom-source",
+            "zIndex": 2,
+            "targetHandle": "top-target"
+          },
+          {
+            "id": "24c06de9-950d-454d-9d92-2e492e1f0d91",
+            "source": "1b3d1175-b476-4f98-ad96-636b5fe61e55",
+            "target": "6ea18a63-2994-45fc-ace4-cefc1e97c422",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 1
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 1
+            },
+            "zIndex": 3,
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target"
+          },
+          {
+            "id": "32862b85-e846-4049-81b4-e514b76a67ee",
+            "source": "4ae6bbb3-73fe-418b-a759-0e0639b7095a",
+            "target": "6ea18a63-2994-45fc-ace4-cefc1e97c422",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 1
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 1
+            },
+            "sourceHandle": "left-source",
+            "zIndex": 4,
+            "targetHandle": "right-target"
+          },
+          {
+            "id": "9779035e-6ad8-49f7-819e-1bcfd2ed996e",
+            "source": "ea10d4ec-300f-44fc-86cc-5f64be3eed37",
+            "target": "acc8a89e-8de3-4226-bc29-e2577a0184d7",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 1
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 1
+            },
+            "zIndex": 6,
+            "sourceHandle": "left-source",
+            "targetHandle": "right-target"
+          },
+          {
+            "id": "8837f8f3-208a-43c2-af2d-055579f0c521",
+            "source": "8dbc9162-4887-417b-b6fc-650b939b2b2a",
+            "target": "252f7327-71ce-4fb1-8d18-903846d700de",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 1
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 1
+            },
+            "sourceHandle": "left-source",
+            "zIndex": 7,
+            "targetHandle": "right-target"
+          },
+          {
+            "id": "90a615e2-aa14-4535-aa33-fc6f90863d6b",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 1
+            },
+            "source": "6ea18a63-2994-45fc-ace4-cefc1e97c422",
+            "sourceHandle": "right-source",
+            "target": "02cc0d50-3f2a-4629-b7a0-92b0808bf351",
+            "targetHandle": "right-target",
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 1
+            }
+          }
+        ],
+        "viewport": {
+          "x": 17.791992044710355,
+          "y": 58.143988393959035,
+          "zoom": 1.2273575033905462
+        }
+      }
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-02 06:01:04 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-02 06:05:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-02 06:36:22 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-02 06:41:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-02 06:50:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-02 06:53:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-02 07:05:34 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-02 07:13:06 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Sketchlab>
