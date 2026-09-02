@@ -202,10 +202,6 @@ export const FileMenus = () => {
             tooltipSize="xs"
             tooltipDirection="onBottom"
             theme={theme}
-            // The TOOLTIP's class, which is what this prop is: the bubble
-            // portals to `<body>` at z-index 10 and the workspace paints over
-            // it, so it is lifted the way the image editor's tooltips are.
-            className={styles.tooltip}
             onClick={() =>
               setOpen(
                 anchors[at].current

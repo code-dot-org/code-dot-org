@@ -57,11 +57,14 @@ and draws black text on its own dark bubble. That component stamps the theme it
 is handed.
 
 …and the bubble sits at `z-index: 10`, under the Blockly workspace beside these
-buttons, so a folder's name appeared behind the blocks. Lifted per-site, the way
-the image editor lifts its own above a modal overlay
-(`imageEditor/pixel-editor.module.scss`), rather than globally: the design
-system's 10 is deliberate, and a blanket override would put every tooltip in the
-lab over dialogs that are meant to cover them.
+buttons, so a folder's name appeared behind the blocks. That is not a fact about
+these buttons — Blockly's own layers are at 20 to 80 (its toolbox at 70,
+measured in this lab), so it is every tooltip in the lab that is at risk, and
+the file menus were simply the second place to hit it. So the lift is ONE RULE
+(`app.module.css`), matching the portaled bubble by its module's name prefix,
+at 1200: above all of Blockly's layers and below `blocklyWidgetDiv` (99999),
+which is the field editor a learner is typing into and which a tooltip must
+never cover.
 
 Menu rows are `Typography variant="body4"` on a dense list — the size the file
 browser's rows and `PopUpButtonOption` use. MUI's default is 16px, which beside

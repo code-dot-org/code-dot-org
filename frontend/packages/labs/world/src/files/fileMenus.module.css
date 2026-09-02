@@ -17,11 +17,3 @@
 .menuIcon {
   min-width: 24px;
 }
-
-/* The design-system tooltip portals to <body> at z-index 10, which is under
-   the Blockly workspace beside these buttons — so a folder's name appeared
-   behind the blocks. Lifted to the same 1200 the image editor's tooltips use
-   to clear a modal overlay (`pixel-editor.module.scss`). */
-.tooltip {
-  z-index: 1200;
-}
