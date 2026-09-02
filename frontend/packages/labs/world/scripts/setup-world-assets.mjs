@@ -250,19 +250,25 @@ if (!existsSync(soundListing)) {
   );
 }
 
-// The rule demonstrations, GENERATED rather than fetched — the only assets here
-// that need no network (specs/RULE_DEMOS.md). They come from the demo worlds in
-// `src/rules/demos`, played and painted into strip PNGs.
+// The demonstrations, GENERATED rather than fetched — the only assets here that
+// need no network (specs/RULE_DEMOS.md). They come from the demo worlds in
+// `src/rules/demos` and the demo scenes in `src/actors/demos`, played and
+// painted into strip PNGs.
 //
-// Through vitest, because the recorder needs a DOM: a rule is Blockly JSON and
-// the thing that compiles one is the headless generator. Skipped when they are
-// already there, like everything else here, so a second `setup:world` is quick.
+// Through vitest, because the recorders need a DOM: a rule and an actor are
+// both Blockly JSON, and the thing that compiles one is the headless
+// generator. Skipped when they are already there, like everything else here,
+// so a second `setup:world` is quick.
+//
+// BOTH kinds, or neither. A checkout made before the actor demos existed has a
+// full `public/demos/` and no `actors/` in it, and a check that stopped at the
+// first PNG would leave it that way for good.
 const demosDir = join(pkgRoot, 'public', 'demos');
-if (
-  existsSync(demosDir) &&
-  readdirSync(demosDir).some(f => f.endsWith('.png'))
-) {
-  console.log('world assets: rule demos already present');
+const actorDemosDir = join(demosDir, 'actors');
+const anyPngIn = dir =>
+  existsSync(dir) && readdirSync(dir).some(f => f.endsWith('.png'));
+if (anyPngIn(demosDir) && anyPngIn(actorDemosDir)) {
+  console.log('world assets: demos already present');
 } else {
   const {spawnSync} = await import('node:child_process');
   const done = spawnSync(
@@ -271,13 +277,18 @@ if (
     {cwd: pkgRoot, stdio: 'pipe', encoding: 'utf8'},
   );
   if (done.status === 0) {
-    const written = readdirSync(demosDir).filter(f => f.endsWith('.png'));
-    console.log(`world assets: ${written.length} rule demos in public/demos/`);
+    const count = (dir, what) => {
+      const many = readdirSync(dir).filter(f => f.endsWith('.png')).length;
+      return `${many} ${what} demo${many === 1 ? '' : 's'}`;
+    };
+    console.log(
+      `world assets: ${count(demosDir, 'rule')} and ${count(actorDemosDir, 'actor')} in public/demos/`,
+    );
   } else {
     // A warning rather than a failure, like a backdrop that would not
-    // download: a lab with no demonstrations is a lab, and the dialog is
+    // download: a lab with no demonstrations is a lab, and the dialogs are
     // complete without them.
-    console.warn('world assets: could not record the rule demos');
+    console.warn('world assets: could not record the demos');
   }
 }
 

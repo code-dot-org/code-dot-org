@@ -5,7 +5,7 @@
 // them is the headless generator — so vitest is what runs it, through a config
 // of its own:
 //
-//   yarn build:rule-demos
+//   yarn build:demos   (which records the actor demos beside these)
 //
 // NO BROWSER. `build-effect-stills` drives Playwright and its header calls the
 // browser in the build path a cost it pays reluctantly; this pays nothing,

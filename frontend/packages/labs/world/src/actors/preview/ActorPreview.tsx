@@ -15,14 +15,22 @@ import {useEffect, useRef} from 'react';
 
 import {STOCK_SPRITES} from '../../appearance/stock';
 import {paintDrawing} from '../../runtime/driver/paintDrawing';
+import {ACTOR_DEMO_SIZE} from '../demos';
 import {actorAnimations, actorSprites} from '../importStockActor';
 import type {StockActor} from '../stock';
 
 import styles from './actorPreview.module.css';
 import {previewDrawing} from './previewDrawing';
 
-/** The box every preview is drawn in, in CSS pixels. */
-export const PREVIEW_SIZE = {width: 120, height: 56} as const;
+/**
+ * The box every preview is drawn in, in CSS pixels.
+ *
+ * A demo's frame, so that a row showing a still and a row showing a scene are
+ * the same shape and the list does not step in and out as it scrolls. It is
+ * the SCENE that fixes the size — 256 by 192 world pixels is what the Player's
+ * own jump needs — and a still has no size of its own to defend.
+ */
+export const PREVIEW_SIZE = ACTOR_DEMO_SIZE;
 
 /** What this actor wears, if it wears something: an image and a cell of it. */
 const pictureOf = (

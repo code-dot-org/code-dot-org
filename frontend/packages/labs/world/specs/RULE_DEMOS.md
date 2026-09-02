@@ -177,6 +177,53 @@ strip of either would be a strip of whichever rule was standing on it.
 Until a rule has a demo it shows what it shows today, which the dialog has to be
 comfortable with anyway (see above).
 
+## The same idea for ACTORS
+
+A stock actor has the same gap and a worse version of it. A rule's row at least
+names an ability; an actor's row shows a picture, and a picture of the
+Platformer Player is a blue sprite standing still — while what the import
+actually hands over is walking, falling, jumping, three rules, a key binding and
+an animation. The picture is not wrong, it is beside the point.
+
+So the actors get strips too (`src/actors/demos`), served beside the rule ones
+under `public/demos/actors/` and animated by the same CSS.
+
+**Filmed the long way round, on purpose.** A rule demo builds its world with the
+engine directly, because a rule is our code and needs none of the machinery that
+exists to run a learner's safely. An actor demo cannot do that and stay honest:
+what it demonstrates IS a file, so the scene imports the actor with
+`importStockActor` the way the dialog does, compiles the project with the
+generator the way the sandbox does, and holds keys down with `setInput` the way
+the driver does. Nothing in the middle is a stand-in, and a demo never reaches
+past the actor to move it — it presses arrow keys, and the file does the rest.
+
+**A demo is DATA.** Which stock actors the scene needs, where they stand, how
+long to run, and what is held when (`demos/types`). The staging that turns that
+into a running world is `demos/record/stage`, shared by the recorder and by the
+behaviour test — which is the same arrangement, and the same guarantee, as the
+rule demos' shared demo world.
+
+**The strip writer had to learn pictures.** A rule demo's actor wears none, and
+a plain rectangle is what the driver draws for one; an actor demo's subject is a
+thing you can see, and a grey box would demonstrate a grey box. The blitter
+composites the RGBA that `scripts/generate-sprites` DREW, asked for by a new
+`stockPixels()` export — not decoded from the PNGs that script encodes, which
+would have been a second copy of the format kept in step by hand to arrive back
+where the drawing already was.
+
+**The frame is 256 by 192 world pixels at half size**, and the Player's jump
+fixed it: 134 pixels of rise from a standing start means a scene with a floor
+and a jump in it is about 200 pixels tall whatever else is in it. Half size, by
+a whole number, so a 32-pixel drawing shrinks by sampling every other row rather
+than by inventing pixels between them. The shrink is the only thing about an
+actor demo that is not full fidelity.
+
+**Which actors get one.** The ones whose worth is a behaviour. An actor that IS
+a picture — a Label, a bar, a Speech Box — keeps its still, and a strip of one
+would be a strip of a word sitting there. The recorder REFUSES a drawn actor
+rather than filming a hole: it says so and stops, because the day one wants a
+demo is the day the strip writer learns to rasterize commands.
+
 ## What is deliberately not solved
 
 - **Sound.** A demo is silent. Nothing in the library makes a noise except the

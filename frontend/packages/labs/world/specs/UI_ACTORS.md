@@ -318,7 +318,7 @@ both is why each is wrong in its own way.
 | the map canvas       | the actor's real size       | this placement                                 |
 | the map palette cell | 80 by 40, name below        | the kind's picture                             |
 | a Blockly dropdown   | 24 by 24, no name           | a symbol                                       |
-| the import dialog    | 120 by 56, beside the words | the kind's picture, before the project has one |
+| the import dialog    | 128 by 96, beside the words | the kind's picture, before the project has one |
 
 The fourth is the odd one, and worth saying how it is answered. A learner
 choosing between a Label, a Button and a Speech Box is choosing between three
@@ -339,6 +339,31 @@ A poster, not a screenshot, in one place: a Health Bar reads the health of the
 actor it is pointed at, and points at nobody until a project wires it up, so its
 honest picture is an empty track. The preview answers "is anybody there?" with
 yes and reads the Health rule's own defaults.
+
+### And a picture is not enough for an actor that DOES something
+
+A Platformer Player standing still is a blue sprite. What the import actually
+hands over is walking, falling and jumping — three rules, a key binding and an
+animation — and none of it is in the picture. That is the same problem rules
+had, and it has the same answer: a recorded strip, animated by `steps()`, whose
+first cell is the still (specs/RULE_DEMOS.md).
+
+The demo is filmed the long way round, and that is what makes it worth
+watching. An ACTOR demo cannot build its world with the engine directly the way
+a rule demo does, because the thing under demonstration is a FILE: the scene
+imports the stock actor with `importStockActor`, compiles the project with the
+generator, and presses keys with `setInput`. Nothing in between is a stand-in,
+so an actor that stops jumping stops jumping in its demo — and fails the
+behaviour test that plays the same scene (`actors/demos`).
+
+The frame is 256 by 192 world pixels shown at half size, and the Player's own
+jump is what fixed it: it rises 134 pixels from a standing start, so a scene
+with a floor under it and a jump in it is about 200 pixels tall whatever else
+is in it. The still rows are drawn in that same 128 by 96 box, so a list of
+both does not step in and out as it scrolls.
+
+Actors whose worth IS the picture keep the still and should: a strip of a Label
+is a strip of a word sitting there.
 
 ### The canvas wants the instance, and does not have it
 

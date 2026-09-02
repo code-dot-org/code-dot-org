@@ -17,6 +17,7 @@ import {Dialog} from '@code-dot-org/component-library/dialog';
 import {LessonLink} from '../progression/LessonLink';
 import {useMaybeProgression} from '../progression/progressionContext';
 
+import {actorDemoFrames, actorDemoUrl, ACTOR_DEMO_SIZE} from './demos';
 import styles from './importActorDialog.module.css';
 import {
   actorAnimations,
@@ -75,7 +76,7 @@ export const ImportActorDialog = ({
       customContent={
         <ul className={styles.list}>
           {STOCK_ACTORS.map(actor => (
-            <li key={actor.id}>
+            <li key={actor.id} className={styles.row}>
               <Button
                 className={styles.actor}
                 disabled={!held(actor)}
@@ -87,11 +88,41 @@ export const ImportActorDialog = ({
                 onClick={() => setChosen(actor)}
                 onDoubleClick={() => onImport(actor)}
               >
-                {/* What it LOOKS like, beside what it is. A learner choosing
-                    between a Label, a Button and a Speech Box is choosing
-                    between three pictures, and three sentences about text is
-                    not that choice (`preview/ActorPreview`). */}
-                <ActorPreview actor={actor} />
+                {actorDemoUrl(actor.id) ? (
+                  // What it DOES, for an actor whose worth is a behaviour: a
+                  // Platformer Player standing still is a sprite, and the
+                  // walking, falling and jumping it brings with it is the
+                  // whole of what a learner is choosing (specs/RULE_DEMOS.md).
+                  //
+                  // The same strip and the same CSS as a rule's demo, down to
+                  // the custom properties — one recording animated by
+                  // `steps()`, whose first cell is the still every row shows
+                  // until it is looked at.
+                  <span
+                    className={
+                      chosen?.id === actor.id
+                        ? `${styles.demo} ${styles.playing}`
+                        : styles.demo
+                    }
+                    style={
+                      {
+                        '--demo': `url(${actorDemoUrl(actor.id)})`,
+                        '--frames': actorDemoFrames(actor.id),
+                        '--demo-width': `${ACTOR_DEMO_SIZE.width}px`,
+                        '--demo-height': `${ACTOR_DEMO_SIZE.height}px`,
+                      } as React.CSSProperties
+                    }
+                    // Decoration beside a row that says what it is in words.
+                    aria-hidden="true"
+                  />
+                ) : (
+                  /* What it LOOKS like, for the ones that do nothing on their
+                     own. A learner choosing between a Label, a Button and a
+                     Speech Box is choosing between three pictures, and three
+                     sentences about text is not that choice
+                     (`preview/ActorPreview`). */
+                  <ActorPreview actor={actor} />
+                )}
                 <span className={styles.words}>
                   <Typography component="span" variant="label2" color="inherit">
                     {actor.name}

@@ -530,6 +530,40 @@ export function encodePng(rgba, width, height) {
 }
 
 /**
+ * Every stock image as PIXELS, `{name: {width, height, data}}` in RGBA.
+ *
+ * What the drawings ARE, before anything encodes them. `stockImages` encodes
+ * these; the actor-demo recorder blits them into a strip, which is the reason
+ * this exists separately. That recorder runs in Node with no canvas, so its
+ * choice was to decode the PNGs it had just been handed or to be given the
+ * bytes that made them — and a decoder for our own encoder's output is a
+ * second copy of the format, kept in step by hand, to arrive back where this
+ * function already is.
+ */
+export function stockPixels() {
+  const pixels = {};
+  for (const name of SPRITE_NAMES) {
+    const c = canvas(SPRITE_SIZE);
+    STATIC[name](c);
+    pixels[name] = {width: SPRITE_SIZE, height: SPRITE_SIZE, data: c.data};
+  }
+  for (const [name, {frames}] of Object.entries(ANIMATION_SPECS)) {
+    const sheet = canvas(SPRITE_SIZE * frames, SPRITE_SIZE);
+    for (let t = 0; t < frames; t++) {
+      const frame = canvas(SPRITE_SIZE);
+      ANIMATION_FRAME[name](frame, t, frames);
+      blit(sheet, frame, t * SPRITE_SIZE);
+    }
+    pixels[name] = {
+      width: SPRITE_SIZE * frames,
+      height: SPRITE_SIZE,
+      data: sheet.data,
+    };
+  }
+  return pixels;
+}
+
+/**
  * Every stock image, as `{name: pngBuffer}`.
  *
  * The bytes, with nowhere to put them: `generateSprites` writes them to disk for
@@ -538,19 +572,8 @@ export function encodePng(rgba, width, height) {
  */
 export function stockImages() {
   const images = {};
-  for (const name of SPRITE_NAMES) {
-    const c = canvas(SPRITE_SIZE);
-    STATIC[name](c);
-    images[name] = encodePng(c.data, SPRITE_SIZE, SPRITE_SIZE);
-  }
-  for (const [name, {frames}] of Object.entries(ANIMATION_SPECS)) {
-    const sheet = canvas(SPRITE_SIZE * frames, SPRITE_SIZE);
-    for (let t = 0; t < frames; t++) {
-      const frame = canvas(SPRITE_SIZE);
-      ANIMATION_FRAME[name](frame, t, frames);
-      blit(sheet, frame, t * SPRITE_SIZE);
-    }
-    images[name] = encodePng(sheet.data, SPRITE_SIZE * frames, SPRITE_SIZE);
+  for (const [name, {width, height, data}] of Object.entries(stockPixels())) {
+    images[name] = encodePng(data, width, height);
   }
   return images;
 }
@@ -558,25 +581,8 @@ export function stockImages() {
 /** Write every built-in sprite and animation PNG into `outDir`. */
 export function generateSprites(outDir) {
   mkdirSync(outDir, {recursive: true});
-  for (const name of SPRITE_NAMES) {
-    const c = canvas(SPRITE_SIZE);
-    STATIC[name](c);
-    writeFileSync(
-      join(outDir, `${name}.png`),
-      encodePng(c.data, SPRITE_SIZE, SPRITE_SIZE),
-    );
-  }
-  for (const [name, {frames}] of Object.entries(ANIMATION_SPECS)) {
-    const sheet = canvas(SPRITE_SIZE * frames, SPRITE_SIZE);
-    for (let t = 0; t < frames; t++) {
-      const frame = canvas(SPRITE_SIZE);
-      ANIMATION_FRAME[name](frame, t, frames);
-      blit(sheet, frame, t * SPRITE_SIZE);
-    }
-    writeFileSync(
-      join(outDir, `${name}.png`),
-      encodePng(sheet.data, SPRITE_SIZE * frames, SPRITE_SIZE),
-    );
+  for (const [name, png] of Object.entries(stockImages())) {
+    writeFileSync(join(outDir, `${name}.png`), png);
   }
   return {sprites: SPRITE_NAMES, animations: Object.keys(ANIMATION_SPECS)};
 }

@@ -19,11 +19,12 @@ export default defineConfig({
       'node_modules/**',
       'dist/**',
       'spikes/**',
-      // A build step wearing a test's name (`vitest.record.config.ts`): it
-      // writes into `public/` and must not run with the suite. The file
-      // itself, not its directory — the strip renderer beside it is ordinary
-      // code with ordinary tests.
+      // Build steps wearing tests' names (`vitest.record.config.ts`): they
+      // write into `public/` and must not run with the suite. The files
+      // themselves, not their directories — the strip renderer beside one and
+      // the stage beside the other are ordinary code with ordinary tests.
       'src/rules/demos/record/recordRuleDemos.test.ts',
+      'src/actors/demos/record/recordActorDemos.test.ts',
     ],
   },
 });

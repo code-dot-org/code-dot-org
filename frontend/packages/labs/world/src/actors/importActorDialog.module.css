@@ -46,3 +46,43 @@
 .lesson {
   margin-inline-start: 8px;
 }
+
+/* An actor's demonstration: the same strip, the same CSS and the same
+   arguments as a rule's (`rules/importRuleDialog.module.css`, which explains
+   each of them). Copied rather than shared because the trigger is the ROW —
+   `.row:hover .demo` needs both classes in one stylesheet, and CSS modules
+   hash each file's names separately. */
+.demo {
+  width: var(--demo-width);
+  height: var(--demo-height);
+  flex: none;
+  border-radius: 4px;
+  background-image: var(--demo);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: calc(var(--demo-width) * var(--frames)) var(--demo-height);
+}
+
+/* Play while the row is being LOOKED at — hovered, focused, or selected. */
+.playing,
+.row:hover .demo,
+.row:focus-within .demo {
+  animation: actor-demo-strip calc(var(--frames) * 1s / 12) steps(var(--frames))
+    infinite;
+}
+
+@keyframes actor-demo-strip {
+  to {
+    background-position: calc(-1 * var(--demo-width) * var(--frames)) 0;
+  }
+}
+
+/* Held, for a reader who has asked for less motion: the still is frame one
+   either way, so what they lose is the animation and not the picture. */
+@media (prefers-reduced-motion: reduce) {
+  .playing,
+  .row:hover .demo,
+  .row:focus-within .demo {
+    animation: none;
+  }
+}
