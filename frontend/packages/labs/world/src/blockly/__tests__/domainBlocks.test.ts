@@ -3,6 +3,7 @@ import {afterEach, describe, expect, it} from 'vitest';
 
 import {Blockly} from '@code-dot-org/blockly';
 
+import {mouseRule} from '../../rules/stock';
 import {ACTOR_INPUT_EXTENSION} from '../actorInput';
 import {COLOUR_CHECK} from '../colorCheck';
 import {installColorMessages} from '../colorMessages';
@@ -3226,5 +3227,60 @@ describe('a vector and its polar halves', () => {
     expect(emitValue('world_vector_from_angle')[0]).toBe(
       'WorldLab.Vector.fromAngle(0, 1)',
     );
+  });
+});
+
+describe('the pointer, from a file that is not a rule', () => {
+  /**
+   * `mouse position` has to be reachable from an `.actor`.
+   *
+   * It was defined for every file and LISTED only in the Engine category,
+   * which a `.rule` gets and an `.actor` does not — so "the pointer is a place
+   * you can ask for" was a true sentence a learner could not act on, and
+   * `input/mouse`, written to teach the click that lands on you AND the place
+   * you can ask for, taught the half that was reachable.
+   */
+  const mouseCategories = (
+    options: Parameters<typeof buildDomainPalette>[1],
+  ) => {
+    const meta = parseRuleMeta('rules/mouse', mouseRule)!;
+    const palette = buildDomainPalette([meta], options);
+    const named = (name: string) =>
+      (palette.toolbox as Array<{name: string; blocks: string[]}>).find(
+        category => category.name === name,
+      )?.blocks ?? [];
+    return {mouse: named('Mouse'), engine: named('Engine')};
+  };
+
+  it('lists it in the Mouse drawer of an actor file', () => {
+    const {mouse, engine} = mouseCategories({fileKind: 'actor'});
+
+    // The drawer the rule's own events are in, which is where somebody who has
+    // just been told a click landed on them will look next.
+    expect(mouse).toContain('world_mouse_position');
+    // …and it is still the only place an `.actor` can find it.
+    expect(engine).toEqual([]);
+  });
+
+  it('does not mint a second block to do it', () => {
+    // A LISTING. One type, in two drawers for whoever is writing the rule
+    // itself — not a rule-declared `where the pointer is` that would be the
+    // same question in other words. The Engine drawer belongs to the file
+    // being EDITED as a rule (`ownRuleModule`), which is what an `.actor`
+    // never is.
+    const {mouse, engine} = mouseCategories({
+      fileKind: 'rule',
+      ownRuleModule: 'rules/mouse',
+    });
+
+    expect(mouse).toContain('world_mouse_position');
+    expect(engine).toContain('world_mouse_position');
+    expect(
+      buildDomainPalette([parseRuleMeta('rules/mouse', mouseRule)!], {
+        fileKind: 'actor',
+      })
+        .blocks.map(block => block.type)
+        .filter(type => type.includes('mouse_position')),
+    ).toEqual(['world_mouse_position']);
   });
 });

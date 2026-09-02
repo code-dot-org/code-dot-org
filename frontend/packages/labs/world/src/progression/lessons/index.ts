@@ -611,6 +611,21 @@ so an actor can be told about its own clicks and nobody else's.
 2. Add a **when ⟨Target⟩ is clicked** handler and **print** something in it.
 3. Click the Target, then click the empty space beside it. Only one of those
    says anything.
+
+### Where the click was
+
+A click that lands on you is one question. Where the pointer IS is the other,
+and it is not an event — it is a block you can ask at any moment.
+
+4. Give the Target **use trait ⟨Takes Mouse Input⟩** as well. Now it hears
+   every press, wherever it landed.
+5. Add a **when ⟨Target⟩ presses mouse button** handler, and inside it **set
+   position of ⟨this actor⟩** — with **x of ⟨mouse position⟩** in the x socket
+   and **y of ⟨mouse position⟩** in the y. **mouse position** is in the
+   **Mouse** drawer; **x of** is in **Math**.
+6. Click the empty space. The Target goes there, and says nothing — the two
+   handlers are about two different things: one is being clicked, the other is
+   the click.
 `.trim(),
 };
 

@@ -8512,6 +8512,29 @@ export const DOMAIN_TOOLBOX: Toolbox = DOMAIN_CATEGORIES;
 
 type DomainBlock = (typeof DOMAIN_BLOCKS)[number];
 
+/**
+ * Engine blocks a rule's drawer LISTS, though the rule does not declare them.
+ *
+ * The Engine category belongs to a `.rule` file alone (`withEngine`), so a
+ * block listed only there is a block an `.actor` cannot find. That is how
+ * `mouse position` came to be a true sentence a learner could not act on: the
+ * Mouse rule's own header says where the pointer is is not an event but a
+ * block you ask, and `input/mouse` was written to teach both halves of the
+ * pointer — the click that lands on you, and the place you can ask for — while
+ * an actor file offered only the first.
+ *
+ * A LISTING AND NOT A SECOND BLOCK. The type is defined for every file
+ * already; the Engine category lists it rather than owning it. So this puts
+ * one block in a second drawer, where a rule-declared `where the pointer is`
+ * would be the same question with different words on it.
+ *
+ * By rule NAME, which is what the category is titled with and what a rule is
+ * referred to by wherever a module path is not (`useRuleOptions`).
+ */
+const ALSO_LISTED: Record<string, readonly string[]> = {
+  Mouse: ['world_mouse_position'],
+};
+
 /** `ownRuleModule` sentinel meaning "every rule is its own" (see `allRuleModules`). */
 const ALL_RULE_MODULES = '\u0000all';
 
@@ -8676,6 +8699,7 @@ function generateRulePalette(
       ...actionTypes,
       ...ruleEventTypes,
       ...choiceTypes,
+      ...(ALSO_LISTED[rule.name] ?? []),
     ];
     if (categoryBlocks.length > 0) {
       // …and, at the top, the way back to the lesson this rule was met in

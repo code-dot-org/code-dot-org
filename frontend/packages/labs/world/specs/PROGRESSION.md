@@ -664,15 +664,17 @@ property teaches the rest.
 **Number formatting.** A score drawn as `00042`, a timer as `1:07`. `join` and
 `length` are there; nothing pads or formats.
 
-**`mouse position`, somewhere an actor can find it.** The block exists and works
-anywhere — it is REGISTERED globally and only LISTED in the Engine drawer, which
-a `.rule` file gets and an `.actor` does not. So "the pointer is a place you can
-ask for" is a true sentence a learner cannot act on: they can be told a click
-landed on them (the Mouse rule's `Can Be Clicked`) and they cannot ask where the
-pointer is. `input/mouse` was written to teach both and now teaches the half
-that is reachable. The fix is small — the Mouse rule's category should list the
-block, the way Steering's category lists `distance from ⟨a⟩ to ⟨b⟩` — and it is
-a decision about that rule rather than something a lesson may do for itself.
+~~**`mouse position`, somewhere an actor can find it.**~~ FIXED (`ALSO_LISTED`,
+`domainBlocks`). The block was registered for every file and LISTED only in the
+Engine drawer, which a `.rule` gets and an `.actor` does not, so "the pointer is
+a place you can ask for" was a true sentence a learner could not act on: they
+could be told a click landed on them (`Can Be Clicked`) and could not ask where
+the pointer was. The Mouse rule's category lists it now — a LISTING and not a
+second block, since a rule-declared `where the pointer is` would be the same
+question in other words. `input/mouse` teaches both halves again: the click that
+lands on you, and moving to where the pointer is.
+
+A rule may now name engine blocks that belong in its drawer. One does.
 
 ## Milestones
 
