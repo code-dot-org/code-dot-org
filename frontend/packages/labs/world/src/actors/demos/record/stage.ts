@@ -15,6 +15,7 @@ import {createRequire} from 'node:module';
 
 import {compileProject} from '../../../__tests__/support/compileProject';
 import type {Actor, World} from '../../../engine';
+import * as WorldLab from '../../../engine';
 import {PositionProperty} from '../../../engine';
 import {WORLD_SCENARIOS} from '../../../fixtures/scenarios';
 import type {Cell} from '../../../rules/demos/record/strip';
@@ -23,7 +24,7 @@ import {importStockActor} from '../../importStockActor';
 import {stockActorById} from '../../stock';
 import {
   ACTOR_DEMO_SHRINK,
-  ACTOR_DEMO_WORLD,
+  ACTOR_DEMO_SIZE,
   type ActorDemo,
   type ActorPlacement,
 } from '../types';
@@ -71,7 +72,12 @@ export interface StagedDemo {
   world: World;
   /** The actor the demo is ABOUT, which is what an assertion talks about. */
   subject: Actor;
+  /** Every compiled module by path — what `drive` reaches properties through. */
+  modules: Record<string, Record<string, unknown>>;
 }
+
+/** The engine itself, for the properties that belong to no rule. */
+const engine = WorldLab;
 
 /**
  * Import the demo's actors into an empty project, place them, and compile it.
@@ -137,7 +143,7 @@ export async function stageActorDemo(
     },
   };
 
-  const {world} = await compileProject(projectFiles(staged));
+  const {world, modules} = await compileProject(projectFiles(staged));
   const placed = demo.cast.find(one => one.actor === id);
   if (!placed) {
     throw new Error(`actor demo "${id}": its own actor is not in the cast`);
@@ -149,7 +155,7 @@ export async function stageActorDemo(
   if (!subject) {
     throw new Error(`actor demo "${id}": nothing was placed at its position`);
   }
-  return {world, subject};
+  return {world, subject, modules};
 }
 
 /**
@@ -160,14 +166,18 @@ export async function stageActorDemo(
  * actor it moved. Both readers step through here, so neither can drift.
  */
 export function stepActorDemo(
-  world: World,
+  staged: StagedDemo,
   demo: ActorDemo,
   tick: number,
   capture?: () => void,
 ): void {
-  world.setInput(demo.keys?.(tick / 60) ?? []);
+  const seconds = tick / 60;
+  staged.world.setInput(demo.keys?.(seconds) ?? []);
+  // What the GAME does this frame, for an actor that is shown things rather
+  // than played — before the shutter, for the same reason the keyboard is.
+  demo.drive?.({...staged, engine, seconds});
   capture?.();
-  world.tick(1 / 60);
+  staged.world.tick(1 / 60);
 }
 
 /**
@@ -181,8 +191,13 @@ export function stepActorDemo(
  * Shared with the test on purpose: what it checks is then what a reader sees,
  * rather than a position the drawing might not agree with.
  */
-export function actorDemoFrame(id: string, world: World): Cell[] {
+export function actorDemoFrame(
+  id: string,
+  world: World,
+  demo: ActorDemo,
+): Cell[] {
   const images = stockPixels();
+  const shrink = demo.shrink ?? ACTOR_DEMO_SHRINK;
   return (
     [...world.renderSnapshot()]
       // By layer, as the driver sorts: a Player behind its own floor would be a
@@ -190,13 +205,30 @@ export function actorDemoFrame(id: string, world: World): Cell[] {
       .sort((one, other) => one.layer - other.layer)
       .map(state => {
         const actorId = (state.actor as unknown as {id: string}).id;
+        if (state.drawing) {
+          // A drawn actor — a Label, a bar, a Speech Box — whose picture is
+          // the commands its kind describes. It WINS over a frame when both
+          // are there, which is the driver's own rule (specs/DRAWING.md).
+          return {
+            id: actorId,
+            x: state.x / shrink,
+            y: state.y / shrink,
+            width: state.drawing.width,
+            height: state.drawing.height,
+            // One number for both axes: a drawing scaled differently across
+            // than down is not something any stock actor does, and a second
+            // scale here would be arithmetic nothing exercises.
+            scale: Math.abs(state.scaleX) / shrink,
+            opacity: state.opacity,
+            commands: state.drawing.commands,
+          };
+        }
         if (!state.frame) {
-          // A drawn actor (a Label, a bar) has commands rather than a picture,
-          // and this rasterizes pictures. The demos that want one can be filmed
-          // the day something here can draw them; until then say so, rather
-          // than record a scene with a hole in it.
+          // Neither a picture nor a drawing: the driver paints a plain
+          // rectangle for this, and a demo whose subject is one is
+          // demonstrating nothing.
           throw new Error(
-            `actor demo "${id}": "${actorId}" wears no picture to draw`,
+            `actor demo "${id}": "${actorId}" has nothing to draw`,
           );
         }
         const name = state.frame.sprite.replace(/\.png$/, '');
@@ -212,7 +244,7 @@ export function actorDemoFrame(id: string, world: World): Cell[] {
           width: image.width,
           height: image.height,
         };
-        const scale = state.frame.scale / ACTOR_DEMO_SHRINK;
+        const scale = state.frame.scale / shrink;
         return {
           id: actorId,
           x: (state.x + state.frame.offset.x) / ACTOR_DEMO_SHRINK,
@@ -228,9 +260,9 @@ export function actorDemoFrame(id: string, world: World): Cell[] {
   );
 }
 
-/** Whether a drawn cell is inside the frame at all. */
+/** Whether a drawn cell is inside the frame at all — in strip pixels. */
 export const inFrame = (cell: Cell): boolean =>
   cell.x + cell.width / 2 > 0 &&
-  cell.x - cell.width / 2 < ACTOR_DEMO_WORLD.width / ACTOR_DEMO_SHRINK &&
+  cell.x - cell.width / 2 < ACTOR_DEMO_SIZE.width &&
   cell.y + cell.height / 2 > 0 &&
-  cell.y - cell.height / 2 < ACTOR_DEMO_WORLD.height / ACTOR_DEMO_SHRINK;
+  cell.y - cell.height / 2 < ACTOR_DEMO_SIZE.height;

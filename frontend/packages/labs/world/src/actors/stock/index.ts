@@ -112,7 +112,7 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     id: 'portrait',
     name: 'Portrait',
     description:
-      'The character whose turn it is to speak. It starts invisible and carries two movements of its own, “enters” and “leaves”, so a scene can bring somebody on and take them off again.',
+      'The face of whoever is speaking. It starts invisible, so a scene fades it in when its turn comes and out again when it passes.',
     // No rule at all: a picture and two tweens, and a tween is not a rule.
     requires: [],
     sprites: [PORTRAIT_SPRITE],

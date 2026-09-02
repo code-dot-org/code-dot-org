@@ -218,11 +218,58 @@ a whole number, so a 32-pixel drawing shrinks by sampling every other row rather
 than by inventing pixels between them. The shrink is the only thing about an
 actor demo that is not full fidelity.
 
-**Which actors get one.** The ones whose worth is a behaviour. An actor that IS
-a picture — a Label, a bar, a Speech Box — keeps its still, and a strip of one
-would be a strip of a word sitting there. The recorder REFUSES a drawn actor
-rather than filming a hole: it says so and stops, because the day one wants a
-demo is the day the strip writer learns to rasterize commands.
+**The demo may also play the GAME.** A Player is demonstrated by pressing keys,
+because a keyboard is what a Player answers to. A Progress Bar answers to a
+number somebody else sets — that IS the actor — and a bar nothing filled would
+be a demo of an empty rectangle. So a demo may declare `drive`, called once a
+frame beside the keys, which writes the line a project would write: `set
+fraction of ⟨the bar⟩`, `set text of ⟨the label⟩`, `set opacity of ⟨the
+portrait⟩`. It reaches properties the way a block does, through the compiled
+modules, and nothing deeper. That is the same bargain the Time and Shooting
+rule demos struck for the rules that raise an event and own nothing that
+follows.
+
+**And the strip writer learned to rasterize commands**, which this document
+said would be the price of filming a drawn actor. It was: rectangles, circles,
+lines and text, in command order, with the same last-writer-wins overlap the
+driver has. What differs from the game is the anti-aliasing, which this
+recorder has none of anywhere, and the TYPEFACE — a Label's words are set in
+the five-by-seven bitmap font, because the alternative is a browser in the
+build path to render one string. The demos write their words in capitals for
+that reason: text filmed differently from the text that was set would be a
+quiet lie.
+
+**A demo may choose how much world its frame holds.** The Player's jump fixes
+the wide shot at two world pixels per strip pixel; nothing in a Coin's scene
+jumps, and three coins shrunk by half are three specks. So `shrink` is the
+demo's, and every strip is still the same SIZE — what changes is whether it is
+a wide shot or a portrait. The Speech Box's panel is 280 across, which is
+nearly three strips wide, so that one is filmed at a third.
+
+**Frame one is the still, so a demo composes for it.** The unselected rows —
+most of the shelf, most of the time — show the first cell and nothing else, so
+a scene that opens on the empty half of its own story puts a black rectangle on
+the shelf. The Portrait therefore starts on screen and fades out rather than
+in, and the Progress Bar starts a quarter full rather than empty. Neither
+changes what is demonstrated; both change what the shelf looks like when
+nobody is pointing at it.
+
+**Which actors get one, and which two do not.** Seven of the nine: the Label
+counts, the Progress Bar fills, the Speech Box says its second line, the
+Portrait leaves and comes back, the Coin spins, the Player walks and jumps and
+falls, and the Ground catches it.
+
+The Health Bar cannot have one, and the reason is worth recording: it shows the
+health of whoever it is pointed at, and NOTHING ON THE SHELF HAS ANY — the
+stock Player deliberately leaves Health to the game that imports it. A demo
+would have to invent the actor whose health it showed, which is a
+demonstration of the demo.
+
+The Button cannot have one yet: a press needs a pointer, which no actor demo
+has, and the face it draws does not change when it is pressed. What a Button
+does is raise an event, and what happens next belongs to a project — so the
+strip would be a cursor arriving at a button that ignores it. Both rows keep
+their stills, which is what every row had before any of this.
 
 ## What is deliberately not solved
 

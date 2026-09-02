@@ -13,6 +13,7 @@
 import {beforeAll, describe, expect, it} from 'vitest';
 
 import {PositionProperty} from '../../../engine';
+import {KNOWN} from '../../../rules/demos/record/font';
 import {ACTOR_DEMOS} from '../index';
 import {
   actorDemoFrame,
@@ -36,11 +37,12 @@ interface Moment {
 
 /** Play a demo the way the recorder does, keeping what it would have drawn. */
 async function playDemo(id: string, demo: ActorDemo): Promise<Moment[]> {
-  const {world, subject} = await stageActorDemo(id, demo);
+  const staged = await stageActorDemo(id, demo);
+  const {world, subject} = staged;
   const subjectId = (subject as unknown as {id: string}).id;
   const moments: Moment[] = [];
   for (let tick = 0; tick < Math.round(demo.seconds * 60); tick++) {
-    stepActorDemo(world, demo, tick, () => {
+    stepActorDemo(staged, demo, tick, () => {
       if (tick % 5 !== 0) {
         return;
       }
@@ -50,12 +52,37 @@ async function playDemo(id: string, demo: ActorDemo): Promise<Moment[]> {
         subject: subjectId,
         x: position.x,
         y: position.y,
-        drawn: actorDemoFrame(id, world),
+        drawn: actorDemoFrame(id, world, demo),
       });
     });
   }
   return moments;
 }
+
+/**
+ * Everything a frame draws, as one comparable string.
+ *
+ * The pixels of a picture are left out — they are the same bytes every frame,
+ * and a signature carrying them would be megabytes of identical noise. WHICH
+ * cell of a sheet is in, because that is a coin spinning.
+ */
+const signature = (moment: Moment): string =>
+  JSON.stringify(
+    moment.drawn.map(cell =>
+      'pixels' in cell
+        ? {
+            id: cell.id,
+            x: cell.x,
+            y: cell.y,
+            width: cell.width,
+            height: cell.height,
+            flip: cell.flip,
+            opacity: cell.opacity,
+            source: cell.source,
+          }
+        : cell,
+    ),
+  );
 
 /** Compiled once per demo: staging one costs a whole project compile. */
 const played = new Map<string, Moment[]>();
@@ -94,11 +121,15 @@ describe.each(Object.keys(ACTOR_DEMOS))('the %s demo', id => {
 
   it('shows something happening', () => {
     // A demo whose every frame is identical is a still that costs forty times
-    // as much to serve. Positions, because that is what these demos are about;
-    // the rule side fingerprints everything drawn, because one of its demos
-    // only ever changes its text.
-    const places = new Set(moments.map(one => `${one.x},${one.y}`));
-    expect(places.size).toBeGreaterThan(1);
+    // as much to serve.
+    //
+    // EVERYTHING DRAWN, not the subject's position. Position was the first
+    // draft and it was too narrow the moment the drawn actors arrived: a
+    // Label counting up and a Progress Bar filling never move one pixel, and
+    // what changes about them is the picture. The rule side learned this the
+    // same way, from Writing.
+    const seen = new Set(moments.map(signature));
+    expect(seen.size).toBeGreaterThan(1);
   });
 });
 
@@ -140,5 +171,184 @@ describe('the player demo', () => {
     // The left arrow, which is a different trait's business from the right one
     // and has been broken on its own before (specs/RULES.md, on Arrow Keys).
     expect(at(3.45).x).toBeLessThan(at(2.8).x - 50);
+  });
+});
+
+/** The drawing a moment shows for `id`, for a demo whose actor draws itself. */
+const drawingIn = (moment: Moment, id?: string) => {
+  const cell = moment.drawn.find(
+    one => 'commands' in one && (id === undefined || one.id === id),
+  );
+  if (!cell || !('commands' in cell)) {
+    throw new Error('that moment drew no drawing');
+  }
+  return cell;
+};
+
+/** The text a drawing puts on the screen, in the order it draws it. */
+const wordsIn = (moment: Moment): string[] =>
+  drawingIn(moment).commands.flatMap(command =>
+    command.op === 'text' ? [command.text] : [],
+  );
+
+describe('the coin demo', () => {
+  let moments: Moment[];
+  beforeAll(async () => {
+    moments = await play('coin');
+  }, 60000);
+
+  it('spins — a different cell of its sheet, frame to frame', () => {
+    // The whole of the claim, and one a still cannot make: "Coin Spin" is in
+    // the row's list of what the import also brings, and a frozen cell of an
+    // animation looks exactly like a coin that does not move.
+    const cells = new Set(
+      moments.flatMap(moment =>
+        moment.drawn.flatMap(cell => ('source' in cell ? [cell.source.x] : [])),
+      ),
+    );
+    expect(cells.size).toBeGreaterThan(3);
+  });
+});
+
+describe('the ground demo', () => {
+  let moments: Moment[];
+  beforeAll(async () => {
+    moments = await play('ground');
+  }, 60000);
+
+  /** Where each actor was, by id, over the whole recording. */
+  const travelled = (moments: Moment[]) => {
+    const paths = new Map<string, {x: number; y: number}[]>();
+    for (const moment of moments) {
+      for (const cell of moment.drawn) {
+        paths.set(cell.id, [
+          ...(paths.get(cell.id) ?? []),
+          {x: cell.x, y: cell.y},
+        ]);
+      }
+    }
+    return paths;
+  };
+
+  it('catches what falls, and holds it up', () => {
+    const paths = travelled(moments);
+    const moving = [...paths].filter(([, path]) =>
+      path.some(one => one.y !== path[0].y),
+    );
+    // One thing moves and everything else is floor: a tile that wandered would
+    // be a demo of something other than a floor.
+    expect(moving.length).toBe(1);
+
+    const [, path] = moving[0];
+    const rested = path[path.length - 1].y;
+    // It fell, it stopped, and it stopped ABOVE the tiles rather than in them.
+    expect(rested).toBeGreaterThan(path[0].y + 20);
+    expect(path[path.length - 2].y).toBeCloseTo(rested, 5);
+    const floor = paths.get([...paths.keys()][0])![0].y;
+    expect(rested).toBeLessThan(floor);
+  });
+});
+
+describe('the progress bar demo', () => {
+  let moments: Moment[];
+  beforeAll(async () => {
+    moments = await play('progressBar');
+  }, 60000);
+
+  /** How wide the bar's fill is drawn — the second rectangle, over the track. */
+  const filled = (moment: Moment) => {
+    const [, fill] = drawingIn(moment).commands;
+    if (fill.op !== 'rectangle') {
+      throw new Error('the bar drew something other than a rectangle');
+    }
+    return fill.width;
+  };
+
+  it('fills, and the fill is the fraction', () => {
+    // What the actor IS: the arithmetic between a number and a width. A bar
+    // that stopped reading `fraction` would draw the same rectangle forever
+    // and look perfectly reasonable doing it.
+    //
+    // Frame one is a quarter, not nothing: it is the still every unselected
+    // row shows, and an empty track is the one picture of this actor that
+    // does not look like a bar.
+    const whole = drawingIn(moments[0]).width;
+    expect(filled(moments[0])).toBeCloseTo(whole / 4, 5);
+    expect(filled(moments[moments.length - 1])).toBe(whole);
+    const widths = moments.map(filled);
+    expect(
+      widths.every((width, at) => at === 0 || width >= widths[at - 1]),
+    ).toBe(true);
+  });
+});
+
+describe('the label demo', () => {
+  let moments: Moment[];
+  beforeAll(async () => {
+    moments = await play('label');
+  }, 60000);
+
+  it('says what it is told to, and says something else later', () => {
+    const said = new Set(moments.flatMap(wordsIn));
+    expect(said.size).toBeGreaterThan(3);
+    expect([...said][0]).toContain('SCORE');
+  });
+
+  it('says nothing the recorder cannot draw', () => {
+    // A character with no glyph draws as a gap, and nothing downstream can
+    // tell that gap from a space — so the demo's own words are checked here,
+    // as the rule demos' are.
+    for (const line of new Set(moments.flatMap(wordsIn))) {
+      for (const character of line.toUpperCase()) {
+        expect(KNOWN.has(character), `${line}: ${character}`).toBe(true);
+      }
+    }
+  });
+});
+
+describe('the portrait demo', () => {
+  let moments: Moment[];
+  beforeAll(async () => {
+    moments = await play('portrait');
+  }, 60000);
+
+  /** How solid the face is drawn — a box has no opacity, and none is drawn. */
+  const opacity = (moment: Moment) => {
+    const [cell] = moment.drawn;
+    return 'opacity' in cell ? (cell.opacity ?? 1) : 1;
+  };
+
+  it('goes, and comes back', () => {
+    // The thing its stillness hides. A Portrait's opacity is the whole of what
+    // its file does besides wear a face, and a broken `set opacity` looks
+    // exactly like a portrait: still there, all the way through.
+    expect(Math.min(...moments.map(opacity))).toBeLessThan(0.1);
+    expect(Math.max(...moments.map(opacity))).toBe(1);
+  });
+
+  it('is on screen in the frame the shelf shows', () => {
+    // Frame one is the still every unselected row shows (specs/RULE_DEMOS.md),
+    // so a scene that began at the start of the fade would put an empty black
+    // rectangle on the shelf.
+    expect(opacity(moments[0])).toBe(1);
+  });
+});
+
+describe('the speech box demo', () => {
+  let moments: Moment[];
+  beforeAll(async () => {
+    moments = await play('speechBox');
+  }, 60000);
+
+  it('says one line, and then the next', () => {
+    // A panel that keeps its words is a picture of a panel. What makes this a
+    // Speech Box is that the sentence is replaced and the box is not.
+    const lines = [...new Set(moments.flatMap(wordsIn))];
+    expect(lines.length).toBe(2);
+    for (const line of lines) {
+      for (const character of line.toUpperCase()) {
+        expect(KNOWN.has(character), `${line}: ${character}`).toBe(true);
+      }
+    }
   });
 });

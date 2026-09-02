@@ -71,12 +71,20 @@ export const ActorPreview = ({actor}: {actor: StockActor}) => {
     context.setTransform(ratio, 0, 0, ratio, 0, 0);
     context.clearRect(0, 0, PREVIEW_SIZE.width, PREVIEW_SIZE.height);
 
-    /** Fit `size` inside the box, centred, never enlarging past four times. */
+    /**
+     * Fit `size` inside the box, centred, and never LARGER than life.
+     *
+     * Life size because the demos are: a Health Bar's still beside a Progress
+     * Bar's scene are two rows about the same 64-pixel bar, and one of them
+     * blown up to twice the other reads as two different sizes of thing. Only
+     * the drawings too big for the box shrink, which is what a shelf of
+     * pictures at one scale means.
+     */
     const place = (width: number, height: number) => {
       const scale = Math.min(
         PREVIEW_SIZE.width / width,
         PREVIEW_SIZE.height / height,
-        4,
+        1,
       );
       return {
         scale,

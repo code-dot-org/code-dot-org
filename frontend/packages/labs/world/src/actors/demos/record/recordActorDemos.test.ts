@@ -28,14 +28,14 @@ import {actorDemoFrame, stageActorDemo, stepActorDemo} from './stage';
 
 /** Play a demo, keeping one frame every so often. */
 async function play(id: string, demo: ActorDemo): Promise<Cell[][]> {
-  const {world} = await stageActorDemo(id, demo);
+  const staged = await stageActorDemo(id, demo);
   const frames: Cell[][] = [];
   const ticks = Math.round(demo.seconds * 60);
   const every = Math.round(60 / DEMO_FPS);
   for (let tick = 0; tick < ticks; tick++) {
-    stepActorDemo(world, demo, tick, () => {
+    stepActorDemo(staged, demo, tick, () => {
       if (tick % every === 0) {
-        frames.push(actorDemoFrame(id, world));
+        frames.push(actorDemoFrame(id, staged.world, demo));
       }
     });
   }

@@ -50,13 +50,13 @@ describe('an actor showing what it does', () => {
   });
 
   it('draws a still for an actor with no demo', {timeout: 20000}, () => {
-    // A Label does nothing on its own, and a strip of one would be a strip of
-    // a word sitting there. The canvas preview is what those rows show, and
-    // both pictures are hidden from a screen reader: the row says what the
-    // actor is in words.
+    // A Health Bar shows the health of whoever it is pointed at, and nothing
+    // on the shelf has any to show — so it has no demo, and the canvas preview
+    // is what its row falls back to. Both pictures are hidden from a screen
+    // reader: the row says what the actor is in words.
     open();
 
-    const still = rowFor('Label')?.querySelector('canvas');
+    const still = rowFor('Health Bar')?.querySelector('canvas');
     expect(still).toBeTruthy();
     expect(still).toHaveAttribute('aria-hidden', 'true');
   });

@@ -8,11 +8,34 @@
 import {DEMO_FPS} from '../../rules/demos';
 import {getDemoBaseUrl} from '../../runtime/worldConfig';
 
+import {coinDemo} from './coin';
+import {groundDemo} from './ground';
+import {labelDemo} from './label';
 import {playerDemo} from './player';
+import {portraitDemo} from './portrait';
+import {progressBarDemo} from './progressBar';
+import {speechBoxDemo} from './speechBox';
 import type {ActorDemo} from './types';
 
 export const ACTOR_DEMOS: Readonly<Record<string, ActorDemo>> = {
+  // In the order the shelf lists them (`actors/stock`), so a demo is found the
+  // way everything else about an actor is.
+  label: labelDemo,
+  progressBar: progressBarDemo,
+  // No Health Bar: it shows the health of whoever it is pointed at, and
+  // nothing on the shelf has any — the stock Player deliberately leaves Health
+  // to the game that imports it. A demo would have to invent the actor whose
+  // health it showed, which is a demonstration of the demo.
+  //
+  // No Button either: a press needs a pointer, which no demo has yet, and the
+  // face this one draws does not change when it is pressed — so the strip
+  // would be a cursor arriving at a button that ignores it. What a Button does
+  // is raise an event, and what happens next belongs to a project.
+  speechBox: speechBoxDemo,
+  portrait: portraitDemo,
+  coin: coinDemo,
   player: playerDemo,
+  ground: groundDemo,
 };
 
 /** The demo for a stock actor id, or undefined if it has none yet. */

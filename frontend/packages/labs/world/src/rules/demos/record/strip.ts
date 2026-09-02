@@ -24,7 +24,9 @@
 // text instead, drawn from a bitmap table (`./font`) in the same clip and the
 // same colour a box would have had.
 
-import {GLYPH_HEIGHT, textPixels, textWidth} from './font';
+import type {DrawCommand} from 'world-lab';
+
+import {GLYPH_ADVANCE, GLYPH_HEIGHT, textPixels, textWidth} from './font';
 
 /** One actor at one moment, as much of it as a box needs. */
 export interface Box {
@@ -70,15 +72,96 @@ export interface Picture {
   source: {x: number; y: number; width: number; height: number};
 }
 
-/** What a frame is made of: filled boxes, lettering, and pictures. */
-export type Cell = Box | Picture;
+/**
+ * One actor at one moment, drawn from the commands its kind describes.
+ *
+ * The third and last thing an actor can be on screen (specs/DRAWING.md): it
+ * wears a picture, it wears nothing, or it DRAWS itself — a Label, a bar, a
+ * Speech Box. The driver rasterizes those commands with a canvas; this
+ * rasterizes them with arithmetic, because a build step has no canvas.
+ *
+ * `scale` is how many strip pixels one drawing pixel is, so everything else
+ * here is in the drawing's own coordinates and reads like the file that wrote
+ * it.
+ */
+export interface Drawing {
+  id: string;
+  /** The actor's middle, in strip pixels, as everything else's is. */
+  x: number;
+  y: number;
+  /** The drawing's canvas, in ITS coordinates — 64 by 8 for a bar. */
+  width: number;
+  height: number;
+  scale: number;
+  opacity?: number;
+  commands: readonly DrawCommand[];
+}
+
+/** What a frame is made of: filled boxes, lettering, pictures and drawings. */
+export type Cell = Box | Picture | Drawing;
 
 const isPicture = (cell: Cell): cell is Picture => 'pixels' in cell;
+const isDrawing = (cell: Cell): cell is Drawing => 'commands' in cell;
+
+/**
+ * A CSS colour as bytes, for the colours a drawing carries.
+ *
+ * `#rgb` and `#rrggbb`, which is what every stock drawing writes and what the
+ * colour field a learner edits produces. Anything else THROWS rather than
+ * guessing: a demo drawn in the wrong colour is a demo that lies quietly, and
+ * the day a drawing says `rgba(…)` is the day this should learn it on purpose.
+ */
+const colourOf = (css: string): [number, number, number] => {
+  const short = /^#([0-9a-f])([0-9a-f])([0-9a-f])$/i.exec(css);
+  if (short) {
+    return [
+      parseInt(short[1] + short[1], 16),
+      parseInt(short[2] + short[2], 16),
+      parseInt(short[3] + short[3], 16),
+    ];
+  }
+  if (/^#[0-9a-f]{6}$/i.test(css)) {
+    return rgb(css);
+  }
+  throw new Error(`the strip writer cannot read the colour "${css}"`);
+};
 
 export interface StripSize {
   width: number;
   height: number;
 }
+
+/** How far apart wrapped lines sit, as a multiple of the glyph height. */
+const LINE_SPACING = 1.25;
+
+/**
+ * `text` broken into lines of at most `columns` characters, words kept whole.
+ *
+ * The driver measures; this counts, because the font it draws in is one width
+ * per character. A word longer than the column stays on its own line and
+ * overhangs, which is the same answer the driver gives and the least
+ * surprising of the wrong ones.
+ */
+const wrapped = (text: string, columns: number | undefined): string[] => {
+  if (columns === undefined || columns < 1) {
+    return text.split('\n');
+  }
+  const lines: string[] = [];
+  for (const paragraph of text.split('\n')) {
+    let line = '';
+    for (const word of paragraph.split(' ')) {
+      const candidate = line ? `${line} ${word}` : word;
+      if (line && candidate.length > columns) {
+        lines.push(line);
+        line = word;
+      } else {
+        line = candidate;
+      }
+    }
+    lines.push(line);
+  }
+  return lines;
+};
 
 /** `#rrggbb` as bytes, for a palette written the way CSS writes one. */
 export const rgb = (hex: string): [number, number, number] => [
@@ -189,11 +272,190 @@ export function drawStrip(
     }
   };
 
+  /**
+   * Rasterize a drawing's commands.
+   *
+   * The same five operations the driver's painter takes (`core/drawing`), in
+   * the same order they arrive, with the same last-writer-wins overlap — so
+   * what differs between this and the game is the anti-aliasing and the
+   * typeface, and not what is drawn on top of what.
+   *
+   * TEXT IS THE BITMAP FONT, upper case and blocky, where the game sets it in
+   * a real one. A demo of a Label has to show a word; five by seven is the
+   * word, and the alternative is a browser in the build path to render one
+   * string (specs/RULE_DEMOS.md).
+   */
+  const describe = (drawing: Drawing, offset: number) => {
+    const {scale} = drawing;
+    const left = drawing.x - (drawing.width * scale) / 2;
+    const top = drawing.y - (drawing.height * scale) / 2;
+    const opacity = drawing.opacity ?? 1;
+    /** A point of the drawing, in strip pixels. */
+    const at = (x: number, y: number) =>
+      [Math.round(left + x * scale), Math.round(top + y * scale)] as const;
+    const spot = (
+      x: number,
+      y: number,
+      colour: readonly [number, number, number],
+      weight: number,
+    ) => {
+      // A stroke is drawn as a square brush, which is what a whole-pixel
+      // renderer can honestly do with a line width.
+      const arm = Math.max(0, Math.round((weight * scale) / 2) - 1);
+      for (let dy = -arm; dy <= arm; dy++) {
+        for (let dx = -arm; dx <= arm; dx++) {
+          blend(x + dx, y + dy, offset, colour, opacity);
+        }
+      }
+    };
+
+    for (const command of drawing.commands) {
+      const fill = 'fill' in command && command.fill;
+      const stroke = 'stroke' in command && command.stroke;
+      const weight =
+        ('strokeWidth' in command ? command.strokeWidth : undefined) ?? 1;
+
+      if (command.op === 'rectangle') {
+        const [x0, y0] = at(command.x, command.y);
+        const [x1, y1] = at(
+          command.x + command.width,
+          command.y + command.height,
+        );
+        if (fill) {
+          const colour = colourOf(fill);
+          for (let y = y0; y < y1; y++) {
+            for (let x = x0; x < x1; x++) {
+              blend(x, y, offset, colour, opacity);
+            }
+          }
+        }
+        if (stroke) {
+          const colour = colourOf(stroke);
+          for (let x = x0; x < x1; x++) {
+            spot(x, y0, colour, weight);
+            spot(x, y1 - 1, colour, weight);
+          }
+          for (let y = y0; y < y1; y++) {
+            spot(x0, y, colour, weight);
+            spot(x1 - 1, y, colour, weight);
+          }
+        }
+        continue;
+      }
+
+      if (command.op === 'circle') {
+        const [cx, cy] = at(command.x, command.y);
+        const radius = command.radius * scale;
+        const fillColour = fill ? colourOf(fill) : undefined;
+        const strokeColour = stroke ? colourOf(stroke) : undefined;
+        const arm = Math.ceil(radius) + 1;
+        for (let y = -arm; y <= arm; y++) {
+          for (let x = -arm; x <= arm; x++) {
+            const distance = Math.sqrt(x * x + y * y);
+            if (fillColour && distance <= radius) {
+              blend(cx + x, cy + y, offset, fillColour, opacity);
+            }
+            if (strokeColour && Math.abs(distance - radius) <= weight / 2) {
+              blend(cx + x, cy + y, offset, strokeColour, opacity);
+            }
+          }
+        }
+        continue;
+      }
+
+      if (command.op === 'line') {
+        if (!stroke) {
+          continue;
+        }
+        const colour = colourOf(stroke);
+        const [x0, y0] = at(command.x1, command.y1);
+        const [x1, y1] = at(command.x2, command.y2);
+        const steps = Math.max(Math.abs(x1 - x0), Math.abs(y1 - y0), 1);
+        for (let step = 0; step <= steps; step++) {
+          spot(
+            Math.round(x0 + ((x1 - x0) * step) / steps),
+            Math.round(y0 + ((y1 - y0) * step) / steps),
+            colour,
+            weight,
+          );
+        }
+        continue;
+      }
+
+      if (command.op === 'text') {
+        if (!fill) {
+          continue;
+        }
+        const colour = colourOf(fill);
+        // Whole pixels, and at least one: a glyph scaled by a fraction is a
+        // smudge, and one scaled to nothing is a gap.
+        const glyphScale = Math.max(
+          1,
+          Math.round((command.size * scale) / GLYPH_HEIGHT),
+        );
+        const height = GLYPH_HEIGHT * glyphScale;
+        const [x, y] = at(command.x, command.y);
+        const anchor = command.anchor;
+        // WHERE THE LINES BREAK is the drawer's business, as it is the
+        // driver's, and for the same reason: the engine says how wide the
+        // column may be and whoever holds the measuring tape decides what fits
+        // (specs/DRAWING.md). This tape is a fixed-width font, so the answer is
+        // division rather than measurement.
+        const lines = wrapped(
+          command.text,
+          command.wrapWidth === undefined
+            ? undefined
+            : (command.wrapWidth * scale) / (GLYPH_ADVANCE * glyphScale),
+        );
+        const step = Math.round(height * LINE_SPACING);
+        // Under one another from the point given, and centred as a BLOCK for
+        // the anchors that centre — the same arithmetic the driver does.
+        const middle = !anchor.includes('top') && !anchor.includes('bottom');
+        const first = middle ? y - ((lines.length - 1) * step) / 2 : y;
+        lines.forEach((line, index) => {
+          const width = textWidth(line, glyphScale);
+          const originX = anchor.includes('left')
+            ? x
+            : anchor.includes('right')
+              ? x - width
+              : x - width / 2;
+          const lineY = first + index * step;
+          const originY = anchor.includes('bottom')
+            ? lineY - height
+            : middle
+              ? lineY - height / 2
+              : lineY;
+          for (const [dx, dy] of textPixels(line, glyphScale)) {
+            blend(
+              Math.round(originX) + dx,
+              Math.round(originY) + dy,
+              offset,
+              colour,
+              opacity,
+            );
+          }
+        });
+        continue;
+      }
+
+      // `image`, which a stock drawing has never used: a picture inside a
+      // drawing is a sprite the actor could have worn. Say so rather than
+      // record a hole.
+      throw new Error(
+        `the strip writer cannot draw a "${command.op}" command yet`,
+      );
+    }
+  };
+
   frames.forEach((frame, index) => {
     const offset = index * size.width;
     for (const cell of frame) {
       if (isPicture(cell)) {
         draw(cell, offset);
+        continue;
+      }
+      if (isDrawing(cell)) {
+        describe(cell, offset);
         continue;
       }
       const box = cell;
