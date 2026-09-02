@@ -14,6 +14,11 @@ module ImageModeration
   MAX_MODERATION_DIMENSION = 7200
   # Azure AI Content Safety requires images to be at most 4MB.
   MAX_MODERATION_SIZE = 4 * 1024 * 1024
+  # Extra shrink beyond the area ratio; compressed formats do not scale with pixel count.
+  SIZE_SCALE_FACTOR_TO_FIT_MAX_MODERATION_SIZE = 0.85
+  MAX_SIZE_SCALE_ATTEMPTS = 5
+  # JPEG/WebP re-encode quality when shrinking to fit MAX_MODERATION_SIZE.
+  SIZE_SCALE_QUALITY = 70
 
   # @param [IO] image_data - binary image data to be rated
   # @param [String] content_type - image/gif, image/jpeg, image/png, etc
@@ -29,6 +34,9 @@ module ImageModeration
       Observability::Errors.report("Azure AI Content Safety API key is missing", context: {endpoint: CDO.azure_ai_content_safety_endpoint})
       return nil
     end
+
+    # Files API allows 5MB uploads; Azure rejects over 4MB (InvalidRequestBody).
+    return nil if moderation_io.size > MAX_MODERATION_SIZE
 
     AzureAiContentSafety.new(
       endpoint: CDO.azure_ai_content_safety_endpoint,
@@ -51,8 +59,10 @@ module ImageModeration
   # Scales images to meet Azure AI Content Safety dimension and size requirements.
   # Scales up images smaller than MIN_MODERATION_DIMENSION on either dimension.
   # Scales down images larger than MAX_MODERATION_DIMENSION on either dimension.
-  # Scales down images larger than MAX_MODERATION_SIZE.
-  # On errors, passes the original bytes through so Azure can still be tried.
+  # Scales down images larger than MAX_MODERATION_SIZE, repeating until under the
+  # limit or dimensions would drop below MIN_MODERATION_DIMENSION.
+  # On MiniMagick errors, returns the last bytes we had; moderate_image will not
+  # send them to Azure if they still exceed MAX_MODERATION_SIZE.
   # Uses magic-byte sniffing to determine actual content type, overriding the
   # reported content_type value which may be incorrect.
   def self.scale_image_for_moderation_if_needed(image_data, content_type)
@@ -77,14 +87,28 @@ module ImageModeration
       raw_data = image.to_blob
     end
 
-    if raw_data.bytesize > MAX_MODERATION_SIZE
+    attempts = 0
+    apply_quality = %w[image/jpeg image/webp].include?(actual_type)
+    while raw_data.bytesize > MAX_MODERATION_SIZE && attempts < MAX_SIZE_SCALE_ATTEMPTS
       # Scale factor is approximate: file size is not strictly proportional to pixel
       # count for compressed formats, so scale conservatively to stay under the limit.
-      scale = Math.sqrt(MAX_MODERATION_SIZE.to_f / raw_data.bytesize) * 0.85
+      scale = Math.sqrt(MAX_MODERATION_SIZE.to_f / raw_data.bytesize) * SIZE_SCALE_FACTOR_TO_FIT_MAX_MODERATION_SIZE
+      scale = [scale, SIZE_SCALE_FACTOR_TO_FIT_MAX_MODERATION_SIZE].min
       new_w = (image.width * scale).floor
       new_h = (image.height * scale).floor
-      image.resize "#{new_w}x#{new_h}!"
+      break if new_w < MIN_MODERATION_DIMENSION || new_h < MIN_MODERATION_DIMENSION
+
+      if apply_quality
+        image.combine_options do |c|
+          c.resize "#{new_w}x#{new_h}!"
+          c.quality SIZE_SCALE_QUALITY
+        end
+      else
+        image.resize "#{new_w}x#{new_h}!"
+      end
       raw_data = image.to_blob
+      attempts += 1
+      image = MiniMagick::Image.read(raw_data) if raw_data.bytesize > MAX_MODERATION_SIZE
     end
 
     [StringIO.new(raw_data), actual_type]
