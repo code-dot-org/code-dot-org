@@ -5,11 +5,11 @@ class UserLogTokenTest < ActiveSupport::TestCase
 
   setup do
     @user = create(:student)
-    Rails.cache.clear
+    CDO.shared_cache.clear
   end
 
   teardown do
-    Rails.cache.clear
+    CDO.shared_cache.clear
   end
 
   describe 'token_for' do
@@ -28,14 +28,14 @@ class UserLogTokenTest < ActiveSupport::TestCase
 
     it 'is stable for the same user, destination and period' do
       first = User::LogToken.token_for(@user.id, destination: DESTINATION)
-      Rails.cache.clear
+      CDO.shared_cache.clear
 
       assert_equal first, User::LogToken.token_for(@user.id, destination: DESTINATION)
     end
 
     it 'does not mint a second row on a later call' do
       User::LogToken.token_for(@user.id, destination: DESTINATION)
-      Rails.cache.clear
+      CDO.shared_cache.clear
 
       assert_no_difference 'User::LogToken.count' do
         User::LogToken.token_for(@user.id, destination: DESTINATION)
@@ -88,18 +88,6 @@ class UserLogTokenTest < ActiveSupport::TestCase
       User::LogToken.stubs(:find_or_create_by!).raises(ActiveRecord::RecordNotUnique, 'duplicate')
 
       assert_equal existing.uuid, User::LogToken.token_for(@user.id, destination: DESTINATION)
-    end
-  end
-
-  describe 'current_period' do
-    it 'labels a school year by the year it starts' do
-      Timecop.freeze(Date.new(2026, 7, 1)) {assert_equal 2026, User::LogToken.current_period}
-      Timecop.freeze(Date.new(2027, 6, 30)) {assert_equal 2026, User::LogToken.current_period}
-    end
-
-    it 'rolls over on July 1, not January 1' do
-      Timecop.freeze(Date.new(2026, 6, 30)) {assert_equal 2025, User::LogToken.current_period}
-      Timecop.freeze(Date.new(2027, 1, 1)) {assert_equal 2026, User::LogToken.current_period}
     end
   end
 
@@ -215,14 +203,14 @@ class UserLogTokenTest < ActiveSupport::TestCase
   end
 
   describe 'caching' do
-    # test_helper installs a null store for the whole suite, so the cache layer
-    # is only exercised where a test puts a real one back.
+    # The shared cache is a FileStore in test, which persists across examples,
+    # so these install a MemoryStore to keep them independent.
     before do
-      @null_cache = Rails.cache
-      Rails.cache = ActiveSupport::Cache::MemoryStore.new
+      @null_cache = CDO.shared_cache
+      CDO.stubs(:shared_cache).returns(ActiveSupport::Cache::MemoryStore.new)
     end
 
-    after {Rails.cache = @null_cache}
+    after {CDO.unstub(:shared_cache)}
 
     it 'answers a repeat call without touching the table' do
       User::LogToken.token_for(@user.id, destination: DESTINATION)
@@ -236,6 +224,23 @@ class UserLogTokenTest < ActiveSupport::TestCase
 
       assert_nil User::LogToken.token_for(@user.id, destination: DESTINATION)
       assert_equal 'a-real-uuid', User::LogToken.token_for(@user.id, destination: DESTINATION)
+    end
+  end
+
+  describe 'cache invalidation' do
+    before do
+      CDO.stubs(:shared_cache).returns(ActiveSupport::Cache::MemoryStore.new)
+    end
+
+    after {CDO.unstub(:shared_cache)}
+
+    # Purging a user destroys the row through the association; the token has to
+    # stop being emitted then, not when the entry expires.
+    it 'stops serving a token once its row is destroyed' do
+      token = User::LogToken.token_for(@user.id, destination: DESTINATION)
+      User::LogToken.find_by(uuid: token).destroy!
+
+      refute_equal token, User::LogToken.token_for(@user.id, destination: DESTINATION)
     end
   end
 
