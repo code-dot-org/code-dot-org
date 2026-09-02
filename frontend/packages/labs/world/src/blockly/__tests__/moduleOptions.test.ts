@@ -7,8 +7,13 @@ import {localActorValue} from '../localActors';
 import {
   actorFieldOptions,
   actorOptions,
+  animationFileOptions,
+  backgroundOptions,
   bindLiveOptions,
+  mapOptions,
   setProjectActors,
+  soundImportOptions,
+  spriteOptions,
 } from '../moduleOptions';
 
 // Registries are module state; reset between cases.
@@ -51,8 +56,46 @@ describe('moduleOptions', () => {
     ]);
   });
 
-  it('falls back to a single (none) option when empty', () => {
-    expect(actorOptions()).toEqual([['(none)', '']]);
+  it('names what is missing when empty, rather than offering a choice', () => {
+    // Not "(none)": a project with no actors did not CHOOSE to have none, and
+    // a row reading as a choice says it did (`orNone`). The value is the empty
+    // string either way, so an unfinished block still generates nothing.
+    expect(actorOptions()).toEqual([['(no actors yet)', '']]);
+  });
+});
+
+describe('an empty dropdown', () => {
+  /**
+   * Every list of the project's OWN FILES says what is missing.
+   *
+   * "(none)" reads as a choice, and for a file list it is not one: a project
+   * with no sprites did not choose to draw nothing. The line is drawn in
+   * `orNone`'s header — a state of the project, or an answer a learner might
+   * mean — and this is the half of it that is checkable. Trait, rule and
+   * property dropdowns are the other half and keep "(none)" on purpose.
+   */
+  it('names what the project has not got yet', () => {
+    // Nothing registered: `afterEach` clears the actors, and no test in this
+    // file ever sets the other four.
+    const empties: Array<[string, Array<[unknown, string]>]> = [
+      ['actors', actorOptions()],
+      ['sprites', spriteOptions() as Array<[unknown, string]>],
+      ['backgrounds', backgroundOptions() as Array<[unknown, string]>],
+      ['animations', animationFileOptions()],
+      ['maps', mapOptions()],
+      // …and the one that already said so, which is where the wording came
+      // from. Its import row is listed after the fallback, never instead of it.
+      ['sounds', soundImportOptions().slice(0, 1)],
+    ];
+
+    for (const [what, options] of empties) {
+      expect(options.length, what).toBe(1);
+      const [label, value] = options[0];
+      expect(String(label), what).toMatch(/^\(no .+ yet\)$/);
+      // The VALUE does not change with the words: an unfinished block
+      // generates nothing, whatever its one row says.
+      expect(value, what).toBe('');
+    }
   });
 });
 

@@ -234,7 +234,13 @@ const str = (value: unknown): string => JSON.stringify(String(value));
 // the extension), and `(import…)` to copy one in. There is no built-in list —
 // what a game draws is what its project holds.
 const spriteFieldOptions = (): DropdownOptions => [
-  ...spriteOptions().filter(([, value]) => value),
+  // The placeholder STAYS, and is first. It was filtered out when the import
+  // row arrived, which left `(import…)` as the only row in a project with no
+  // images — and a fresh block takes its first option as its value, so
+  // `set sprite` opened reading "(import…)", one click from a dialog nobody
+  // asked for. The sound and effect dropdowns say the same thing in their own
+  // headers; this is the one that was not doing it.
+  ...spriteOptions(),
   ['(import…)', IMPORT_SPRITE_VALUE],
 ];
 
@@ -1087,10 +1093,10 @@ const defineEventBlock = (event: EventMeta) => {
       // inline, which is every lesson and the starter, the filter offered
       // nothing but `(any)` and the placeholder beside it.
       //
-      // …and the placeholder goes. `orNone` adds `(none)` to an empty list to
-      // say there is nothing to choose, and its value is the empty string —
-      // which is what `(any)` already means here. Two entries doing one job,
-      // one of them reading as a kind of actor that a game might have.
+      // …and the placeholder goes. `orNone` adds a row to an empty list to say
+      // there is nothing to choose, and its value is the empty string — which
+      // is what `(any)` already means here. Two entries doing one job, one of
+      // them reading as a kind of actor that a game might have.
       const options = (own?: FieldDropdown): DropdownOptions => [
         ANY_CHOICE,
         ...actorFieldOptions(own).filter(([, value]) => value !== ''),
@@ -4437,8 +4443,8 @@ const worldPlaySound = defineBlock({
   generator: {
     javascript(block) {
       const sound = block.getFieldValue('SOUND');
-      // "(none)" — the project holds no sounds, or the file this named has been
-      // deleted. Nothing rather than `world.playSound()`, which would play
+      // Nothing chosen — the project holds no sounds, or the file this named
+      // has been deleted. Nothing rather than `world.playSound()`, which would play
       // silence loudly by throwing (the bargain every unfinished dropdown here
       // makes).
       if (!sound || sound === IMPORT_SOUND_VALUE) {

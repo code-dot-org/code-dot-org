@@ -228,10 +228,11 @@ dropdown is `(any)` plus the project's kinds — but its option list was built b
 a closure that ignored the field it was handed. A world's own `define actor`
 kinds are found THROUGH the field (its workspace), so in a world that defines
 its actors inline — which is every progression lesson and the starter — the
-filter offered `(any)`, the `(none)` placeholder beside it, and nothing else.
+filter offered `(any)`, the empty-list placeholder beside it, and nothing else.
 Two entries carrying the same empty value, one of them reading like an actor a
 game might have.
 
 So: pass the field, and drop the placeholder wherever `(any)` already says
-there is nothing to filter on. `(none)` is `orNone` saying a list is empty; it
-is never a thing to choose.
+there is nothing to filter on. The placeholder is `orNone` saying a list is
+empty — it reads "(no actors yet)" now, for the reason that function's header
+gives — and it is never a thing to choose.

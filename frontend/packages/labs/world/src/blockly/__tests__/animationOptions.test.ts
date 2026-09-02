@@ -13,8 +13,16 @@ import {animationOptions, setProjectAnimations} from '../animationOptions';
 afterEach(() => setProjectAnimations([]));
 
 describe('animationOptions', () => {
-  it('offers nothing but a way in when the project has no animations', () => {
-    expect(animationOptions()).toEqual([['(import…)', IMPORT_ANIMATION_VALUE]]);
+  it('names what is missing before it offers a way in', () => {
+    // NOT the import row alone, which is what this asserted while a fresh
+    // `play animation` block was taking its first option as its value: a
+    // project with no `.anim` files gave the block a dialog for a value. The
+    // placeholder carries the empty value, so the block stays unfinished and
+    // generates nothing until somebody chooses.
+    expect(animationOptions()).toEqual([
+      ['(no animations yet)', ''],
+      ['(import…)', IMPORT_ANIMATION_VALUE],
+    ]);
   });
 
   it('offers the project’s animations, deduped, with Title Case labels', () => {

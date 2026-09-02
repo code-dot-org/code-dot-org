@@ -119,11 +119,17 @@ const NONE_VALUE = '';
  *
  * `empty` NAMES WHAT IS MISSING where the caller knows. "(none)" is a fair
  * answer for a dropdown whose subject a learner may genuinely not want — no
- * trait, no rule — but it reads as a CHOICE, and for a list of the project's
- * own files it is not one: a project with no sounds is not a project that
- * chose silence, it is one with nothing in `sounds/` yet. `play tween` has
- * said "(no tweens yet)" since it was written (`blockly/tweens`), and this is
- * that wording made available to the rest.
+ * trait, no rule, no property of that kind — but it reads as a CHOICE, and for
+ * a list of the project's OWN FILES it is not one: a project with no sounds is
+ * not a project that chose silence, it is one with nothing in `sounds/` yet.
+ * `play tween` has said "(no tweens yet)" since it was written
+ * (`blockly/tweens`), and this is that wording made available to the rest.
+ *
+ * So every dropdown listing the project's own files says so: actors, sprites,
+ * backgrounds, animations, sounds, effects, maps. The line between the two
+ * groups is whether an empty list is a state of the PROJECT or an answer the
+ * learner might mean, and it is drawn here rather than at each call so that
+ * adding a dropdown is a decision about which group it is in.
  *
  * The VALUE is the same either way, so nothing downstream changes: an empty
  * value is "nothing chosen" and the block generates nothing.
@@ -136,12 +142,12 @@ export const orNone = (
 
 /** Current ACTOR dropdown options (the project's actor templates). */
 export function actorOptions(): Array<[string, string]> {
-  return orNone(projectActors);
+  return orNone(projectActors, '(no actors yet)');
 }
 
 /** Current SPRITE dropdown options (the images the project holds). */
 export function spriteOptions(): DropdownOptions {
-  return orNone(projectSprites).map(asPicture);
+  return orNone(projectSprites, '(no sprites yet)').map(asPicture);
 }
 
 /**
@@ -170,15 +176,15 @@ const PICTURE_ICON = 24;
 
 /** Current BACKGROUND dropdown options (the project's backdrops). */
 export function backgroundOptions(): DropdownOptions {
-  return orNone(projectBackgrounds).map(asPicture);
+  return orNone(projectBackgrounds, '(no backgrounds yet)').map(asPicture);
 }
 
 /**
  * The same, plus an `(import…)` row that opens the stock backdrop shelf.
  *
  * Listed last, and never as the fallback when the project has none — `orNone`
- * still supplies "(none)" there — so a saved block whose backdrop was deleted
- * does not silently become the import row.
+ * still supplies "(no backgrounds yet)" there — so a saved block whose backdrop
+ * was deleted does not silently become the import row.
  */
 /**
  * Current SOUND dropdown options, plus an `(import…)` row.
@@ -198,14 +204,14 @@ export function soundImportOptions(): Array<[string, string]> {
 
 export function backgroundImportOptions(): DropdownOptions {
   return [
-    ...orNone(projectBackgrounds).map(asPicture),
+    ...orNone(projectBackgrounds, '(no backgrounds yet)').map(asPicture),
     ['(import…)', IMPORT_BACKGROUND_VALUE],
   ];
 }
 
 /** Current FILE dropdown options (the project's animation files). */
 export function animationFileOptions(): Array<[string, string]> {
-  return orNone(projectAnimationFiles);
+  return orNone(projectAnimationFiles, '(no animations yet)');
 }
 
 /** Current EFFECT dropdown options (the project's effect files). */
@@ -236,6 +242,7 @@ export function mapOptions(): Array<[string, string]> {
   const paths = Object.keys(projectMaps);
   return orNone(
     paths.map(path => [label(path.split('/').pop() ?? path), path]),
+    '(no maps yet)',
   );
 }
 
@@ -440,7 +447,7 @@ export function actorFieldOptions(
 ): DropdownOptions {
   const local = localActorOptions(field);
   if (!local.length) {
-    return orNone(projectActors).map(([label, value]) =>
+    return orNone(projectActors, '(no actors yet)').map(([label, value]) =>
       pictured(label, value),
     );
   }
@@ -570,6 +577,7 @@ export const soundOptionsExtension = liveDropdown(
   'SOUND',
   soundImportOptions,
 );
+
 export const mapOptionsExtension = liveDropdown(
   'world_map_options',
   'MAP',

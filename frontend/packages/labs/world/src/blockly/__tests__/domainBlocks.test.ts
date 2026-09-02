@@ -3284,3 +3284,33 @@ describe('the pointer, from a file that is not a rule', () => {
     ).toEqual(['world_mouse_position']);
   });
 });
+
+describe('a dropdown with a way in', () => {
+  /**
+   * The import row is LAST, and never the only row.
+   *
+   * A fresh block takes its first option as its value, so a list whose one
+   * entry opens a dialog hands the block a dialog for a value — and a saved
+   * block whose file was deleted falls back to the same place. The sound,
+   * effect and background dropdowns say this in their own headers; `set sprite`
+   * filtered its placeholder out instead, so an empty project met a
+   * `set sprite ⟨(import…)⟩`.
+   */
+  it('names what the project has not got before offering to import', () => {
+    const setSprite = DOMAIN_BLOCKS.find(
+      block => block.type === 'world_set_sprite',
+    );
+    const field = setSprite?.args0?.find(
+      arg => (arg as {name?: string}).name === 'SPRITE',
+    ) as {options?: () => Array<[unknown, string]>} | undefined;
+    const rows = field?.options?.() ?? [];
+
+    // No project sprites are registered in this file, so this is the empty
+    // case — the one a learner opening a new project sees.
+    expect(rows.map(([label]) => String(label))).toEqual([
+      '(no sprites yet)',
+      '(import…)',
+    ]);
+    expect(rows[0][1]).toBe('');
+  });
+});

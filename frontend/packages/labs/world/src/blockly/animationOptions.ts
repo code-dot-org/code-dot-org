@@ -14,7 +14,7 @@ import {Blockly, defineExtension, type Extension} from '@code-dot-org/blockly';
 import {IMPORT_ANIMATION_VALUE} from '../appearance/appearanceImport';
 
 import {label} from './label';
-import {bindLiveOptions} from './moduleOptions';
+import {bindLiveOptions, orNone} from './moduleOptions';
 
 let projectAnimations: string[] = [];
 
@@ -23,11 +23,23 @@ export function setProjectAnimations(ids: string[]): void {
   projectAnimations = ids;
 }
 
-/** Current `[label, id]` options: the project's animations, then `(import…)`. */
+/**
+ * Current `[label, id]` options: the project's animations, then `(import…)`.
+ *
+ * With nothing defined the list is "(no animations yet)" and the import row,
+ * in that order — never the import row alone. A fresh block takes its first
+ * option as its value, so a project with no `.anim` files gave `play animation`
+ * a dialog for a value, and so did a block whose animation had been deleted.
+ * The wording is `orNone`'s: a project with no animations did not choose to
+ * play none, it has nothing in `animations/` yet.
+ */
 export function animationOptions(): Array<[string, string]> {
   const ids = [...new Set(projectAnimations)];
   return [
-    ...ids.map((id): [string, string] => [label(id), id]),
+    ...orNone(
+      ids.map((id): [string, string] => [label(id), id]),
+      '(no animations yet)',
+    ),
     ['(import…)', IMPORT_ANIMATION_VALUE],
   ];
 }
