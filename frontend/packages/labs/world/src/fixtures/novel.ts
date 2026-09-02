@@ -73,13 +73,24 @@ const isLine = (which: number) => ({
  * rule's: a line set without it reset is a line that never appears, and the
  * scene that first read two lines in a row is what found that out.
  */
-const say = (words: string) => ({
+const say = (words: string, who: object = box()) => ({
   type: 'world_do_RevealsText_SayAction',
   inputs: {
-    ACTOR: box(),
+    ACTOR: who,
     VALUE: {block: {type: 'text', fields: {TEXT: words}}},
   },
 });
+
+/**
+ * What the box says before anybody has pressed anything.
+ *
+ * SAID, and not left to the Speech Box's own default. The box ships with
+ * "Once upon a time…" written into it, and this one never showed it: `Reveals
+ * Text` writes `text` every frame from `the whole line`, which is empty until
+ * something is said — so the first frame wiped the default and the panel
+ * opened blank.
+ */
+const TITLE = 'The Hall. Press SPACE to begin.';
 
 /**
  * A fade, written where it is used.
@@ -215,6 +226,11 @@ const MAIN_WORLD = JSON.stringify({
                       type: 'world_set_Conversation_HowManyLinesProperty',
                       inputs: {ACTOR: me(), VALUE: number(LINES.length)},
                     },
+                    // On `me()` and not on `the ⟨Speech Box⟩`: the box being
+                    // dressed is not in the world yet, so a lookup by kind has
+                    // nothing to find. Everything else in this body says the
+                    // same thing.
+                    say(TITLE, me()),
                   ]),
                 },
               },
@@ -232,11 +248,11 @@ const MAIN_WORLD = JSON.stringify({
       },
       // Space begins it, and then moves it on.
       //
-      // BEGINNING CANNOT HAPPEN AS THE WORLD IS BUILT: `make ⟨…⟩ start
-      // talking` is a world action and wants a running world, while a
-      // `add actor … do` body runs against the BUILDER. So the first press
-      // starts the talk, and until then the box shows the words it was made
-      // with — which reads as a title card, and is the happier accident.
+      // BEGINNING IS THE PLAYER'S. A world's setup can act now
+      // (`WorldBuilder.act`), so `make ⟨…⟩ start talking` up there would work
+      // — and a scene that has already spoken its first line before anybody
+      // has touched a key is not a scene you can open. So the box is handed a
+      // title card instead, and the first press starts the talk.
       controls('space', 60, [
         {
           type: 'controls_if',
