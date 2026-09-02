@@ -1,7 +1,6 @@
-import {UniversalAppType} from '@cdo/generated-scripts/sharedConstants';
-
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
+import {UniversalAppType} from '@cdo/generated-scripts/sharedConstants';
 
 import BackpackClientApi from './BackpackClientApi';
 import {
