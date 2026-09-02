@@ -303,6 +303,115 @@ describe('Attachment', () => {
   });
 });
 
+describe('Collisions, asked of the index rather than walked', () => {
+  // The pairing used to be a nested loop: every collider against every other
+  // one, every frame, which is a million questions at a thousand actors. It
+  // asks the spatial index for the few whose middles are near enough to be able
+  // to overlap, and then runs the same test it always ran.
+  //
+  // THE RISK IS A MISS, not a wrong answer: a broadphase that returns too much
+  // is slow and a broadphase that returns too little is a collision that
+  // silently stopped happening. So this is checked against an oracle written
+  // here — plain box arithmetic over every pair — rather than against the rule
+  // it replaced, which would only prove the two agree about what they both got
+  // wrong.
+
+  /** Every overlapping pair, worked out the long way. */
+  const byHand = (
+    boxes: Array<{id: string; x: number; y: number; w: number; h: number}>,
+  ) => {
+    const touching: Record<string, string[]> = {};
+    for (const a of boxes) {
+      touching[a.id] = boxes
+        .filter(
+          b =>
+            b.id !== a.id &&
+            Math.abs(a.x - b.x) < (a.w + b.w) / 2 &&
+            Math.abs(a.y - b.y) < (a.h + b.h) / 2,
+        )
+        .map(b => b.id)
+        .sort();
+    }
+    return touching;
+  };
+
+  it('finds exactly the pairs that overlap, sizes mixed', () => {
+    // Mixed sizes on purpose: the query radius is one number shared by
+    // everybody — my half-diagonal plus the BIGGEST collider's — so a world
+    // where one thing is much larger than the rest is where a radius computed
+    // from the wrong box would start missing pairs.
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([rule('rules/collisions')])
+      .instantiate();
+    let seed = 20250901;
+    const next = () => {
+      seed = (seed * 1103515245 + 12345) % 2147483648;
+      return seed / 2147483648;
+    };
+    const boxes = Array.from({length: 120}, (_unused, i) => {
+      const wide = i % 17 === 0; // a few giants among the small
+      const size = wide ? 140 : 24 + Math.floor(next() * 40);
+      return {
+        id: `a${i}`,
+        x: Math.floor(next() * 400),
+        y: Math.floor(next() * 400),
+        w: size,
+        h: size,
+      };
+    });
+    for (const box of boxes) {
+      world.addActor(
+        new ActorBuilder({id: box.id, name: 'box'})
+          .useTraits([of('rules/collisions', 'CanCollideTrait')])
+          .set(PositionProperty, new Vector(box.x, box.y))
+          .set(of('rules/collisions', 'SizeProperty'), new Vector(box.w, box.h))
+          .instantiate(box.id),
+      );
+    }
+
+    run(world, 1 / 60);
+
+    const contacts = of('rules/collisions', 'ContactsProperty') as never;
+    const got: Record<string, string[]> = {};
+    for (const actor of world.actors) {
+      got[actor.id] = (actor.get(contacts) as unknown as {id: string}[])
+        .map(other => other.id)
+        .sort();
+    }
+    expect(got).toEqual(byHand(boxes));
+  });
+
+  it('finds a big thing overlapping a small one from outside its own reach', () => {
+    // The pair a radius of "my half-diagonal" alone would miss: the small one
+    // asks, and what overlaps it is something whose middle is far away because
+    // the thing is enormous.
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([rule('rules/collisions')])
+      .instantiate();
+    const small = world.addActor(
+      new ActorBuilder({id: 'small', name: 'small'})
+        .useTraits([of('rules/collisions', 'CanCollideTrait')])
+        .set(PositionProperty, new Vector(0, 0))
+        .set(of('rules/collisions', 'SizeProperty'), new Vector(8, 8))
+        .instantiate('small'),
+    );
+    world.addActor(
+      new ActorBuilder({id: 'wall', name: 'wall'})
+        .useTraits([of('rules/collisions', 'CanCollideTrait')])
+        .set(PositionProperty, new Vector(200, 0))
+        .set(of('rules/collisions', 'SizeProperty'), new Vector(500, 40))
+        .instantiate('wall'),
+    );
+
+    run(world, 1 / 60);
+
+    const contacts = of('rules/collisions', 'ContactsProperty') as never;
+    expect(
+      (small.get(contacts) as unknown as {id: string}[]).map(a => a.id),
+    ).toEqual(['wall']);
+  });
+});
+
 describe('a ledge, and which way you may pass it', () => {
   // A ONE-WAY PLATFORM, which the catalogue had down as a mechanic still to
   // build and which turns out to be two traits nobody has to add a third to.

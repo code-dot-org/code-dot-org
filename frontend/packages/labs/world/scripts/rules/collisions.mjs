@@ -3,15 +3,15 @@ import {
   absolute,
   add,
   allWithTrait,
-  axisOf,
+  anyOf,
   both,
+  axisOf,
   clearActors,
   defineRule,
   equals,
   filter,
   forEach,
   give,
-  hasTrait,
   isIn,
   lessThan,
   minus,
@@ -25,8 +25,11 @@ import {
   pushActor,
   thisActor,
   vector,
+  extremeActor,
+  vectorLength,
   vectorTimes,
   when,
+  withTraitNear,
 } from './dsl.mjs';
 
 const rule = defineRule({
@@ -143,20 +146,73 @@ export const isTouching = rule.block({
 const body = rule.local('body', 'Actor');
 const other = rule.local('other', 'Actor');
 const found = rule.local('found', 'Actor');
+const widest = rule.local('widest', 'Actor');
+
+/**
+ * How far the BIGGEST collider in the world reaches from its middle.
+ *
+ * Half its diagonal, which is what makes the question below a safe one to ask
+ * with a radius. Two boxes overlap when their middles are close on both axes,
+ * so if they overlap their middles are within `‖(ax,ay)‖ + ‖(bx,by)‖` of each
+ * other — my half-diagonal plus theirs. Nobody knows whose "theirs" until the
+ * answer comes back, so the biggest one in the world stands in for it: too wide
+ * is a longer list to sift, and too narrow would MISS a collision, which is the
+ * one thing a broadphase may never do.
+ *
+ * Worked out once a frame, in a single pass over the colliders, which is the
+ * whole of what this addition costs against the n² it removes.
+ *
+ * Read-only: the step owns it. A project setting it by hand would be telling
+ * the world a lie about how big things are, and the lie would present as
+ * collisions that stopped happening at a distance.
+ */
+const reach = rule.number('biggest reach', 0, {readonly: true});
+
+/** Half the diagonal of an actor's collision box. */
+const halfDiagonal = who =>
+  over(vectorLength(collisionSizeOf({sizeActor: who})), n(2));
 
 rule.step('find', 'touch', [
   note('Who is touching whom, worked out once and written down.'),
   note('What to DO about it belongs to whoever reads this.'),
+  note('First: how far the biggest collider reaches, which is what makes'),
+  note('the neighbourhood below wide enough to be safe.'),
+  note('Nothing to collide with is a reach of nothing — asked first,'),
+  note('because the biggest of no actors is not an actor to measure.'),
+  reach.set(n(0)),
+  when([
+    [
+      anyOf(allWithTrait(CanCollide)),
+      [
+        reach.set(
+          halfDiagonal(
+            extremeActor(widest, {
+              from: allWithTrait(CanCollide),
+              end: 'most',
+              key: halfDiagonal(widest.get()),
+            }),
+          ),
+        ),
+      ],
+    ],
+  ]),
   forEach(body, {
     from: allWithTrait(CanCollide),
     body: [
       clearActors(found),
+      note('ASKED OF THE WORLD, not walked. Pairing every collider with'),
+      note('every other one is n² a frame, and a thousand actors is a'),
+      note('million questions; this asks the index for the few whose'),
+      note('middles are near enough to be able to overlap, and the test'),
+      note('below is the same test it always was.'),
       forEach(other, {
         from: filter(other, {
-          where: both(
-            hasTrait(other.get(), CanCollide),
-            not(equals(other.get(), body.get())),
+          from: withTraitNear(
+            CanCollide,
+            add(halfDiagonal(body.get()), reach.of()),
+            vector(position.x(body.get()), position.y(body.get())),
           ),
+          where: not(equals(other.get(), body.get())),
         }),
         body: [
           when([
