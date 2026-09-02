@@ -133,11 +133,18 @@ const defineActor = (id: string, name: string, x: number, rows: object[]) => ({
  * header says "no inspector"), so a placement's properties are not a thing a
  * learner can set there. A fixture that carried them would be showing a file
  * format rather than a program anybody could have written.
+ *
+ * WHERE THEY GO IS ARITHMETIC, not taste. A Label is a 96 by 24 canvas with its
+ * words in the middle of it (`actors/stock/label`), so two of them less than 24
+ * apart overlap however small the type is — which is what these three did at
+ * 300, 288 and 276, with the title UNDER its own hints. The coins fill y 32 to
+ * 256, so the title goes in the band above them and the hints in the band
+ * below, a canvas apart.
  */
 const HUD: Array<[string, number, string, number]> = [
-  ['TAPPER', 300, '#ffffff', 14],
-  ['click a coin', 288, '#8890b0', 9],
-  ['the right button too', 276, '#8890b0', 9],
+  ['TAPPER', 16, '#ffffff', 14],
+  ['click a coin', 282, '#8890b0', 9],
+  ['the right button too', 306, '#8890b0', 9],
 ];
 
 /** `set ⟨what⟩ of this actor to ⟨value⟩`, for a property the Writing rule has. */
@@ -475,12 +482,15 @@ const MAIN_WORLD = JSON.stringify({
                       inputs: {
                         DO: {
                           block: stack([
+                            // y=16 and not 32: the top row of coins is
+                            // centred at 48 and is 32 tall, so a Label centred
+                            // at 32 has its lower half behind the first coin.
                             {
                               type: 'world_set_position',
                               inputs: {
                                 ACTOR: scoreLabel(),
                                 X: number(48),
-                                Y: number(32),
+                                Y: number(16),
                               },
                             },
                             {
