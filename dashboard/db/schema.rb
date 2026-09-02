@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_09_02_042145) do
+ActiveRecord::Schema[7.0].define(version: 2026_09_02_042146) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -194,6 +194,17 @@ ActiveRecord::Schema[7.0].define(version: 2026_09_02_042145) do
     t.integer "level_id"
     t.string "context_type"
     t.index ["user_id"], name: "index_aidiff_threads_on_user_id"
+  end
+
+  create_table "anonymous_level_geos", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "anon_user_id", limit: 36, null: false
+    t.string "country"
+    t.string "state"
+    t.string "city"
+    t.string "postal_code"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["anon_user_id"], name: "index_anonymous_level_geos_on_anon_user_id", unique: true
   end
 
   create_table "anonymous_level_progresses", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
