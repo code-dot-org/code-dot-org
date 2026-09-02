@@ -89,6 +89,14 @@ describe('FileTabs', () => {
     expect(newSource.files[file.id].active).toBe(true);
   });
 
+  it('marks only the active tab as current', () => {
+    renderDefault();
+    const tab = (name: string) =>
+      screen.getByText(name).closest('[role="button"]');
+    expect(tab('file1.py')).not.toHaveAttribute('aria-current');
+    expect(tab('file2.py')).toHaveAttribute('aria-current', 'true');
+  });
+
   it('can close a tab', async () => {
     renderDefault();
     const closeButton = screen.getByRole('button', {
