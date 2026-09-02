@@ -332,7 +332,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
                               : null,
                           ])}
                           size="medium"
-                          color="tertiary"
+                          color="secondary"
                           startIcon={
                             <FontAwesomeV6Icon
                               iconStyle="solid"
@@ -340,11 +340,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
                               title="Audio"
                             />
                           }
-                          variant={
-                            explanationType === ExplanationTypes.AUDIO
-                              ? 'outlined'
-                              : 'contained'
-                          }
+                          variant="outlined"
                           disabled={submitted}
                           onClick={() =>
                             switchExplanationType(ExplanationTypes.AUDIO)
@@ -360,7 +356,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
                               : null,
                           ])}
                           size="medium"
-                          color="tertiary"
+                          color="secondary"
                           startIcon={
                             <FontAwesomeV6Icon
                               iconStyle="solid"
@@ -368,11 +364,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
                               title="Text"
                             />
                           }
-                          variant={
-                            explanationType === ExplanationTypes.TEXT
-                              ? 'outlined'
-                              : 'contained'
-                          }
+                          variant="outlined"
                           disabled={submitted}
                           onClick={() =>
                             switchExplanationType(ExplanationTypes.TEXT)
@@ -431,6 +423,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
                   onClick={() => {
                     challengeSetCallback(null, null);
                   }}
+                  disabled={showConfirmation}
                 >
                   I'm done
                 </MuiButton>
@@ -441,10 +434,9 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
               // to submit; "Start over" is always available.
               <>
                 <MuiButton
-                  variant="contained"
-                  color="primary"
+                  variant="outlined"
+                  color="secondary"
                   size="extraSmall"
-                  className={styles.submitButton}
                   startIcon={
                     <FontAwesomeV6Icon
                       iconStyle="solid"
