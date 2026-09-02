@@ -183,6 +183,9 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
     !submitted &&
     !submitting &&
     challengeId !== null &&
+    ((explanationType === ExplanationTypes.AUDIO && hasRecording) ||
+      (explanationType === ExplanationTypes.TEXT &&
+        textExplanation !== null)) &&
     sources.source.nodes.length > 0;
 
   const clientType = AiChatClientTypes.LESSON_DEEP_DIVE;
@@ -232,7 +235,6 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
       const aichatClientApi = await getClientApi();
       const text = await aichatClientApi.transcribeAudio(audio);
       return text;
-      // setTranscribedText(text);
     } catch (error) {
       console.log(error);
       return null;
