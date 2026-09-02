@@ -7,15 +7,18 @@
 //   the paddle    Arrow Keys, and Solid, which is also what stops it: the room
 //                 is built out of solid walls, and a moving solid body cannot
 //                 end up inside one.
-//   the ball      a velocity, `bounciness` of 1, and Solid Bodies, which is the
-//                 whole of the bouncing: the walls and the paddle and the
-//                 bricks are all solid, and a perfectly bouncy body that hits
-//                 one comes off it.
+//   the ball      the velocity it is served with, `bounciness` of 1, and Solid
+//                 Bodies, which is the whole of the bouncing: the walls and the
+//                 paddle and the bricks are all solid, and a perfectly bouncy
+//                 body that hits one comes off it.
 //   the bricks    "Can Be Collected", so hitting one takes it out of the world
 //                 and puts it in the ball's `collected`, which is the score.
 //   losing        `when ⟨Ball⟩ leaves the map`. The map is walled on three
 //                 sides and open at the bottom, so the only way out is past the
-//                 paddle.
+//                 paddle. The ball goes back to the middle, at rest, and waits
+//                 to be served again.
+//   the serve     `when ⟨space⟩ is pressed`, said in the world rather than in
+//                 an actor, and only for a ball that is standing still.
 //
 // The paddle is a ground tile scaled to 2 x 0.5 — 64 by 16 — which is also the
 // smallest honest test of intrinsic size: before the project measured its own
@@ -33,10 +36,12 @@
 // the same either way, which is the argument: a fixture carrying a rule that
 // never fires teaches that you need it.
 //
-// What it is NOT is a finished game. There is no serve, no lives, no win
-// message: the ball starts moving and the console counts bricks. Each of those
-// is a thing the lab cannot say yet or can only say awkwardly, which is the
-// other reason this scenario is worth keeping — it is the list.
+// What it is NOT is a finished game. There are no lives and no win message:
+// the console counts bricks, and a ball that goes past the paddle comes back.
+// Each of those is a thing the lab cannot say yet or can only say awkwardly,
+// which is the other reason this scenario is worth keeping — it is the list.
+// The serve was on that list until the ball was left at rest, which is the
+// smaller lesson: some of what is missing is missing because nobody wrote it.
 
 import {stack, starterSprites, useTrait, type ProjectSpec} from '../constants';
 import {
@@ -65,7 +70,7 @@ const place = (type: string, id: string, column: number, row: number) => ({
 //   # B B B B B B B B #   2
 //   # . . . . . . . . #   3
 //   # . . . . . . . . #   4
-//   # . . . . o . . . #   5   o  the ball, already moving
+//   # . . . . o . . . #   5   o  the ball, waiting to be served
 //   # . . . . . . . . #   6
 //   # . . . . . . . . #   7
 //   # . . = = . . . . #   8   =  the paddle (one actor, 64 wide)
@@ -111,6 +116,104 @@ export const setNumber = (type: string, value: number) => ({
     VALUE: {block: {type: 'math_number', fields: {NUM: value}}},
   },
 });
+
+/**
+ * THE SERVE, and what a lost ball costs.
+ *
+ * The ball used to be handed a velocity as it was built, and a fixture nobody
+ * is playing plays itself: the room is open at the bottom, so within a few
+ * seconds of loading the ball is gone and the board is a still life. Both
+ * tellings of the game now start it at rest and hand the first move to the
+ * player, which is also the serve every game of this shape has.
+ *
+ * SAID IN THE WORLD, not in the ball: `when ⟨space⟩ is pressed` with no
+ * subject is the world hearing the key, which it does whether or not anybody
+ * elected `Takes Keyboard Input` (rules/input). The ball needs no opinion
+ * about the keyboard to be served.
+ *
+ * @param ball how this telling names the Ball — a path in one, a local id in
+ *   the other.
+ * @param where the corner of the canvas it sits at, since the two tellings have
+ *   different things on theirs. Under the world block by default, because a
+ *   reader opening `main.world` should not have to scroll sideways to find the
+ *   only other thing in it.
+ */
+export const serveHandler = (ball: string, where = {x: 20, y: 240}) => ({
+  type: 'world_on_Input_IsPressedEvent',
+  fields: {FILTER0: 'space'},
+  ...where,
+  next: {
+    block: {
+      type: 'controls_if',
+      inputs: {
+        // Only a ball that is STANDING STILL is served, so holding the key
+        // during a rally does not re-aim the ball. Nothing here slows down —
+        // there is no gravity and no friction, and a bounce flips a component
+        // rather than emptying it — so a vertical speed of zero means the ball
+        // has not been served yet.
+        IF0: {
+          block: {
+            type: 'logic_compare',
+            fields: {OP: 'EQ'},
+            inputs: {
+              A: {
+                block: {
+                  type: 'world_vector_component',
+                  fields: {COMPONENT: 'y'},
+                  inputs: {
+                    VEC: {
+                      block: {
+                        type: 'world_get_Physics_VelocityProperty',
+                        inputs: {ACTOR: kind(ball)},
+                      },
+                    },
+                  },
+                },
+              },
+              B: {block: {type: 'math_number', fields: {NUM: 0}}},
+            },
+          },
+        },
+        DO0: {block: velocity(kind(ball), 2.5, -2.5)},
+      },
+    },
+  },
+});
+
+/** `the ⟨Ball⟩` — the one of its kind, however this telling names the kind. */
+const kind = (actor: string) => ({
+  block: {type: 'world_actor_kind', fields: {ACTOR: actor}},
+});
+
+/** `set velocity of ⟨who⟩ to ⟨x, y⟩`. */
+export const velocity = (who: object, x: number, y: number) => ({
+  type: 'world_set_Physics_VelocityProperty',
+  inputs: {
+    ACTOR: who,
+    VALUE: {block: {type: 'world_vector', fields: {VECTOR: {x, y}}}},
+  },
+});
+
+/**
+ * Losing: say so, and put the ball back where it started, at rest.
+ *
+ * A game with one ball and no way to get it back is over the first time you
+ * miss, which for a scenario meant a board that could only be looked at. This
+ * is not lives — nothing counts them — it is the ball returning to the serve.
+ */
+export const lostBall = () =>
+  stack([
+    {type: 'world_log', fields: {TEXT: 'Ball lost!'}},
+    {
+      type: 'world_set_position',
+      inputs: {
+        ACTOR: {block: {type: 'world_this_actor'}},
+        X: {block: {type: 'math_number', fields: {NUM: at(5)}}},
+        Y: {block: {type: 'math_number', fields: {NUM: at(5)}}},
+      },
+    },
+    velocity({block: {type: 'world_this_actor'}}, 0, 0),
+  ]);
 
 // The room. Solid and nothing else: it does not move, it is not collectible,
 // and it has no opinion about what hits it.
@@ -229,19 +332,8 @@ const BALL_ACTOR = JSON.stringify({
               fields: {TRAIT: 'Collection#CollectsTrait'},
             },
             {type: 'world_set_sprite', fields: {SPRITE: 'ball.png'}},
-            // Already moving, up and to the right. No serve — see the header.
-            {
-              type: 'world_set_Physics_VelocityProperty',
-              inputs: {
-                ACTOR: {block: {type: 'world_this_actor'}},
-                VALUE: {
-                  block: {
-                    type: 'world_vector',
-                    fields: {VECTOR: {x: 2.5, y: -2.5}},
-                  },
-                },
-              },
-            },
+            // At rest until it is served. `serveHandler`, in the world, says
+            // why the first move is the player's.
           ]),
         },
       },
@@ -277,7 +369,7 @@ const BALL_ACTOR = JSON.stringify({
         type: 'world_on_Space_LeftMapEvent',
         x: 20,
         y: 460,
-        next: {block: {type: 'world_log', fields: {TEXT: 'Ball lost!'}}},
+        next: {block: lostBall()},
       },
     ],
   },
@@ -301,6 +393,7 @@ const BREAKOUT_WORLD = JSON.stringify({
           ]),
         },
       },
+      serveHandler('actors/ball'),
     ],
   },
 });

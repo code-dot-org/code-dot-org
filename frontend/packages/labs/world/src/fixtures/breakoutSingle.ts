@@ -3,7 +3,7 @@
 // The same game as ./breakout — same board, same rules, same behaviour — with
 // nothing outside the one file: the four actors are `define actor` blocks at
 // the world's top level, the board is `create ⟨kind⟩ in map` rather than a
-// `.map` file, and the ball's two handlers are hats in the world.
+// `.map` file, and the handlers are hats in the world.
 //
 // Kept BESIDE the other one, not instead of it, because the pair is the point.
 // A learner's first game is one file and their fifth is not, and the two
@@ -41,6 +41,8 @@ import {
   BRICK_COLUMNS,
   BRICK_ROWS,
   BREAKOUT_SUPPORT_FILES,
+  lostBall,
+  serveHandler,
   setNumber,
   SIDE_ROWS,
 } from './breakout';
@@ -146,24 +148,14 @@ const SINGLE_WORLD = JSON.stringify({
           },
         },
       ]),
+      // At rest, like the other telling's: the serve is the player's, and the
+      // handler that hears it is below.
       defineActor(BALL, 'Ball', 1110, [
         useTrait('Physics#CanMoveTrait'),
         useTrait('Collection#CollectsTrait'),
         {type: 'world_set_sprite', fields: {SPRITE: 'ball.png'}},
-        {
-          type: 'world_set_Physics_VelocityProperty',
-          inputs: {
-            ACTOR: {block: {type: 'world_this_actor'}},
-            VALUE: {
-              block: {
-                type: 'world_vector',
-                fields: {VECTOR: {x: 2.5, y: -2.5}},
-              },
-            },
-          },
-        },
       ]),
-      // The ball's two handlers. `any ⟨Ball⟩` in a hat's subject is the
+      // The ball's own two handlers. `any ⟨Ball⟩` in a hat's subject is the
       // template, so these reach every ball there will be.
       {
         type: 'world_on_Collection_CollectsEvent',
@@ -205,8 +197,12 @@ const SINGLE_WORLD = JSON.stringify({
             block: {type: 'world_actor_kind', fields: {ACTOR: local(BALL)}},
           },
         },
-        next: {block: {type: 'world_log', fields: {TEXT: 'Ball lost!'}}},
+        next: {block: lostBall()},
       },
+      // The serve. `local:` and not a path, which is the only difference
+      // between the two tellings of it: a world-local actor is named by its
+      // defining block.
+      serveHandler(local(BALL), {x: 1020, y: 780}),
     ],
   },
 });
