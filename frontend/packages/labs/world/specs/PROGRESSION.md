@@ -637,10 +637,14 @@ nobody knows whose until the answer comes back. Measured over a frame: 10.2ms �
 1.2ms at a hundred colliders, 352ms → 7.8ms at six hundred. Checked against box
 arithmetic written in the test rather than against the loop it replaced.
 
-`spatial.within` still measures for itself. It filters a list somebody already
-holds rather than asking the world, so it is a smaller prize — and it is the one
-`simulation/neighbours` and `simulation/emergent` are written against, so moving
-it wants its own verification.
+`spatial.within` asks it too, when the source IS the world — which is the shape
+every flock is written in, `the actors in ⟨all actors⟩ within ⟨80⟩ of ⟨this
+actor⟩`, once per actor per frame. Measured over one frame: 5.0ms → 0.54ms at a
+hundred and fifty actors, 17.0ms → 0.89ms at three hundred. A frame is 16.7ms,
+so three hundred used to spend the whole of one on the neighbourhood before
+anything was drawn, at the size `simulation/many` walks a learner up to on
+purpose. A NARROWER source still measures for itself, and must: the index knows
+about every actor and would hand back ones the source left out.
 
 **Own blocks outside a rule.** `define block` lives in the Rule category and a
 `.behavior` file (`domainBlocks.ts`, `TOOLBOX_HEAD`). A learner's first
