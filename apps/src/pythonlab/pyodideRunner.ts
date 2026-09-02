@@ -126,6 +126,9 @@ export async function runAllTests(
   // we check the source for the validation file (this is the case in start mode).
   const validationToRun = validationFile || getValidationFromSource(source);
   const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
+  // Test output is not narrated, so the console speaks for it even on a
+  // neighborhood level where a previous run silenced it.
+  consoleManager?.setNarrating(false);
   if (validationToRun) {
     consoleManager?.writeConsoleMessage(
       getTimestampMessage(RunType.VALIDATION)

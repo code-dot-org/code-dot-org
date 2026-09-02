@@ -129,8 +129,11 @@ const Console: React.FunctionComponent = () => {
 
     const existingConsoleManager =
       CodebridgeRegistry.getInstance().getConsoleManager();
+    let wasNarrating = false;
     if (existingConsoleManager) {
       existingTerminalLines = existingConsoleManager.getTerminalLines();
+      // Carried over, or a run in progress would start announcing again.
+      wasNarrating = existingConsoleManager.isNarrating();
     }
 
     const terminal = new Terminal({
@@ -164,6 +167,7 @@ const Console: React.FunctionComponent = () => {
     // this pr goes in: https://github.com/xtermjs/xterm.js/pull/5253
     // After that, we may just be able to call open() on the existing terminal instance
     // and move it to the new container.
+    newConsoleManager.setNarrating(wasNarrating);
     newConsoleManager.replayTerminalLines(existingTerminalLines);
 
     // Prevent keyboard trap.

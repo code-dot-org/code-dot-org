@@ -56,6 +56,7 @@ export default class ConsoleManager {
   // Either one silences the console's screen reader announcements.
   private narrating = false;
   private redrawing = false;
+  private quietPeriod: number | null = null;
 
   constructor(terminal: Terminal, terminalFitAddon: FitAddon) {
     this.terminal = terminal;
@@ -111,6 +112,11 @@ export default class ConsoleManager {
     this.applyAnnouncements();
   }
 
+  // Carried over when a console is replaced; see Console.
+  public isNarrating() {
+    return this.narrating;
+  }
+
   // Also off mid-redraw: a redraw hands the terminal every line it already had,
   // which would be read back as if it were new output.
   private applyAnnouncements() {
@@ -133,8 +139,13 @@ export default class ConsoleManager {
       return;
     }
     // xterm batches its own accessibility update, so it may not have taken the
-    // redraw in yet when the write reports back.
-    window.setTimeout(() => {
+    // redraw in yet when the write reports back. A later redraw supersedes
+    // this wait rather than being ended early by it.
+    if (this.quietPeriod !== null) {
+      window.clearTimeout(this.quietPeriod);
+    }
+    this.quietPeriod = window.setTimeout(() => {
+      this.quietPeriod = null;
       this.redrawing = false;
       this.applyAnnouncements();
     }, REDRAW_QUIET_MS);
