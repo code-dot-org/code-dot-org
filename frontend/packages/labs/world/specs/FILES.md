@@ -91,11 +91,19 @@ keeping it, since two things called "Player" are two rows nobody can tell apart
 and a word every dropdown offers twice. A picture is copied by its URL, which is
 where its bytes live.
 
-**A folder the project has not got** still gets a button. `Import…` works
-anyway, because a shelf makes the folder it writes into
-(`projectWrite.folderIn`); `New` appears once the folder exists, since a file is
-created IN one and the id of a folder made in the same breath is not known until
-the next render.
+**A folder the project has not got** still gets a button, and both ways in
+work: a shelf makes the folder it writes into, and `New` makes it in the same
+write as the file. That took writing the file here rather than through
+Codebridge's `newFile`, which takes a folder ID and so can only put a file
+somewhere already there — until then a project with no `effects/` could take an
+effect from the shelf and could not make one, for a reason nobody could see.
+
+**The name is checked as a NAME.** Codebridge's file-name rule refuses any
+extension the lab does not let a learner author, and `.png` is one of those —
+you upload or import a picture. But `New sprite` makes one, and the extension
+is the menu's rather than the learner's, so the prompt was refusing every name
+with a message about endings nobody had typed. What is left of the rule is what
+a name has to be: something, and not something already there.
 
 ## Two house details, learned the hard way
 

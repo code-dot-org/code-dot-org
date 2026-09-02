@@ -58,10 +58,25 @@ const SOURCE: MultiFileSource = {
   openFiles: ['a'],
 };
 
+const createNewFile = vi.fn((args: {source: MultiFileSource}) => args.source);
+const createExternalFile = vi.fn(
+  (args: {source: MultiFileSource}) => args.source,
+);
+
 vi.mock('@code-dot-org/codebridge', () => ({
   // `renameThing` pulls in the rewrite walk, which reaches the same barrel.
   DEFAULT_FOLDER_ID: '0',
-  createNewFolder: (source: unknown) => source,
+  // Honest enough for `folderIn`, which makes a folder and then looks for it.
+  createNewFolder: (source: MultiFileSource, name: string) => ({
+    ...source,
+    folders: {
+      ...source.folders,
+      [name]: {id: name, name, parentId: '0', open: true},
+    },
+  }),
+  createNewFile: (args: {source: MultiFileSource}) => createNewFile(args),
+  createExternalFile: (args: {source: MultiFileSource}) =>
+    createExternalFile(args),
   getNextFileId: () => 'new',
   getFileExtension: (name: string) => name.split('.').pop(),
   shouldShowFile: () => true,
@@ -82,7 +97,6 @@ vi.mock('@code-dot-org/codebridge', () => ({
   }),
   usePrompts: () => ({promptForName, confirm, alert}),
   languageForFileName: () => 'actor',
-  validateFileName: () => undefined,
 }));
 
 const updateSources = vi.fn();
@@ -229,14 +243,30 @@ describe('the file menus', () => {
     expect(screen.getByText('(no actors yet)')).toBeTruthy();
   });
 
-  it('offers the shelf even for a folder the project has not got', () => {
-    // `Import…` writes through a shelf, and a shelf makes its own folder — so
-    // it is offered where `New` cannot be. Effects: the project has no
-    // `effects/`, so there is nowhere to create one yet.
+  it('offers both ways in for a folder the project has not got', () => {
+    // The project has no `effects/`. Both work anyway: a shelf makes the folder
+    // it writes into, and `New` makes it in the same write as the file. It used
+    // to offer the shelf and not the making, for a reason nobody could see.
     openMenu('Effects');
 
     expect(screen.getByText('Import…')).toBeTruthy();
-    expect(screen.queryByText(/^New/)).toBeNull();
+    expect(screen.getByText('New effect')).toBeTruthy();
+  });
+
+  it('makes the folder as well, when the project has not got one', async () => {
+    promptForName.mockResolvedValueOnce('Ripple');
+    openMenu('Effects');
+
+    fireEvent.click(screen.getByText('New effect'));
+
+    await vi.waitFor(() => expect(createNewFile).toHaveBeenCalled());
+    const {source, folderId} = createNewFile.mock.calls.at(-1)![0] as {
+      source: MultiFileSource;
+      folderId: string;
+    };
+    // The folder is in the source the file is written into, and the file goes
+    // in it — one write, so neither can land without the other.
+    expect(source.folders[folderId].name).toBe('effects');
   });
 
   it('makes the file name out of the thing’s name', async () => {
@@ -248,7 +278,7 @@ describe('the file menus', () => {
 
     fireEvent.click(screen.getByText('New actor'));
     await vi.waitFor(() =>
-      expect(newFile).toHaveBeenCalledWith(
+      expect(createNewFile).toHaveBeenCalledWith(
         expect.objectContaining({fileName: 'healthBar.actor', folderId: 'f2'}),
       ),
     );
@@ -261,12 +291,25 @@ describe('the file menus', () => {
     openMenu('Actors');
 
     fireEvent.click(screen.getByText('New actor'));
-    await vi.waitFor(() => expect(newFile).toHaveBeenCalled());
-    const {contents} = newFile.mock.calls.at(-1)![0] as {contents: string};
+    await vi.waitFor(() => expect(createNewFile).toHaveBeenCalled());
+    const {contents} = createNewFile.mock.calls.at(-1)![0] as unknown as {
+      contents: string;
+    };
     expect(JSON.parse(contents).blocks.blocks[0]).toMatchObject({
       type: 'world_actor',
       fields: {NAME: 'Chaser'},
     });
+  });
+
+  it('lets a picture be named, which the file-name rule refuses', async () => {
+    // `validateFileName`'s first rule is that the extension must be one the lab
+    // lets a learner author, and `.png` is not — you upload or import one. So
+    // asking it about `chaser.png` refused every name for a file the menu was
+    // about to make, with a message about endings the learner never typed.
+    const {nameProblem} = await import('../FileMenus');
+
+    expect(nameProblem(SOURCE, 'f3', 'Chaser', 'png')).toBeUndefined();
+    expect(nameProblem(SOURCE, 'f3', '  ', 'png')).toMatch(/Enter a name/);
   });
 
   it('makes a sprite as bytes, since a picture is not text', async () => {
@@ -277,7 +320,7 @@ describe('the file menus', () => {
 
     fireEvent.click(screen.getByText('New sprite'));
     await vi.waitFor(() =>
-      expect(newExternalFile).toHaveBeenCalledWith(
+      expect(createExternalFile).toHaveBeenCalledWith(
         expect.objectContaining({
           fileName: 'chaser.png',
           mimeType: 'image/png',

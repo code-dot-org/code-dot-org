@@ -18,13 +18,13 @@
 // (`files/renameThing`). The tree still renames a FILE, which is a different
 // act and leaves the thing inside it called what it was.
 //
-// WHAT A MISSING FOLDER DOES. A project need not have all nine — a scenario
-// declares the folders it uses. `Import…` works anyway, because a shelf makes
-// the folder it writes into (`projectWrite.folderIn`); `New` is offered only
-// once the folder exists, because a file has to be created IN one and the id of
-// a folder made in the same breath is not known until the next render. So an
-// empty Effects menu offers the shelf, and offers to make one from nothing as
-// soon as the project has an `effects/`.
+// A MISSING FOLDER IS NOT A MISSING MENU. A project need not have all nine — a
+// scenario declares the folders it uses — and both ways in work regardless:
+// `Import…` because a shelf makes the folder it writes into, and `New` because
+// this makes it in the same write as the file (`make`). It was offered only
+// where the folder already existed, which meant a project with no `effects/`
+// could take an effect from the shelf and could not make one, for a reason
+// nobody could see.
 
 import {
   Divider,
@@ -38,13 +38,14 @@ import {
 import {createRef, useCallback, useMemo, useState} from 'react';
 
 import {
+  createExternalFile,
+  createNewFile,
   getFileExtension,
   languageForFileName,
   shouldShowFile,
   useCodebridgeConfig,
   useFileOperations,
   usePrompts,
-  validateFileName,
 } from '@code-dot-org/codebridge';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
@@ -55,6 +56,7 @@ import {labActions, useAppSelector} from '@code-dot-org/lab/redux';
 
 import {label} from '../blockly/label';
 import {authoredName} from '../blockly/projectModules';
+import {folderIn} from '../projectWrite';
 
 import styles from './fileMenus.module.css';
 import {FOLDER_MENUS, type FolderMenu, type Makeable} from './folderMenus';
@@ -171,22 +173,33 @@ export const FileMenus = () => {
    * answer already known. The tree asks for the whole file name because it has
    * no folder to read it from.
    */
+  /**
+   * Make one, in a folder that need not exist yet.
+   *
+   * WRITTEN HERE rather than through `ops.newFile`, which takes a folder ID
+   * and so can only put a file somewhere that is already there. A project
+   * declares the folders it uses, so a scenario with no `effects/` could offer
+   * the shelf (a shelf makes its own folder) and not the making — a cliff
+   * nobody could see the bottom of. The folder and the file are one write now
+   * (`projectWrite.folderIn`, then Codebridge's own pure edit), which is also
+   * what makes the new file open: `createNewFile` activates what it creates.
+   *
+   * The lab's reconcile still gets the last word, as it does on every write
+   * through `useFileOperations` — companion files are its business, not this
+   * menu's (`worldConfig.reconcileSource`).
+   */
   const make = useCallback(
     async (menu: FolderMenu, makeable: Makeable) => {
-      const folderId = folderIds.get(menu.folder);
-      if (folderId === undefined) {
-        return;
-      }
       await thenAsk();
       const name = await promptForName({
         title: makeable.label,
         placeholder: makeable.placeholder,
         validateInput: value =>
-          validateFileName(
-            config,
+          nameProblem(
             ops.source,
-            folderId,
-            fileNameFor(value, makeable.extension),
+            folderIds.get(menu.folder),
+            value,
+            makeable.extension,
           ),
       });
       if (!name) {
@@ -198,15 +211,39 @@ export const FileMenus = () => {
       const fileName = fileNameFor(name, makeable.extension);
       const language = languageForFileName(config, fileName);
       const seed = seedFor(makeable.extension, name);
-      if (seed && 'url' in seed) {
-        // Bytes rather than text, which is a different write: a `.png` lives
-        // on a URL and the image editor reads and writes it there.
-        ops.newExternalFile({fileName, language, folderId, ...seed});
-        return;
-      }
-      ops.newFile({fileName, language, folderId, contents: seed?.contents});
+      const placed = folderIn(ops.source, menu.folder);
+      const made =
+        seed && 'url' in seed
+          ? // Bytes rather than text, which is a different write: a `.png`
+            // lives on a URL and the image editor reads and writes it there.
+            createExternalFile({
+              source: placed.source,
+              fileName,
+              language,
+              folderId: placed.folderId,
+              ...seed,
+            })
+          : createNewFile({
+              source: placed.source,
+              fileName,
+              language,
+              folderId: placed.folderId,
+              contents: seed?.contents,
+            });
+      updateSources({
+        ...currentSources,
+        source: config.reconcileSource?.(made, ops.source) ?? made,
+      });
     },
-    [ops, config, promptForName, folderIds, thenAsk],
+    [
+      ops.source,
+      config,
+      promptForName,
+      folderIds,
+      thenAsk,
+      updateSources,
+      currentSources,
+    ],
   );
 
   /**
@@ -230,12 +267,7 @@ export const FileMenus = () => {
         title: `Clone ${was}`,
         value: `${was} copy`,
         validateInput: value =>
-          validateFileName(
-            config,
-            ops.source,
-            file.folderId,
-            fileNameFor(value, extension),
-          ),
+          nameProblem(ops.source, file.folderId, value, extension),
       });
       if (!name) {
         return;
@@ -318,7 +350,6 @@ export const FileMenus = () => {
   );
 
   const files = open ? filesIn(open.menu.folder) : [];
-  const canMake = open ? folderIds.has(open.menu.folder) : false;
 
   return (
     <div className={styles.menus}>
@@ -357,7 +388,6 @@ export const FileMenus = () => {
         slotProps={{list: {'aria-label': open?.menu.label, dense: true}}}
       >
         {!isReadOnly &&
-          canMake &&
           open?.menu.makes.map(makeable => (
             <MenuItem
               key={makeable.extension}
@@ -466,6 +496,37 @@ export const FileMenus = () => {
       </Menu>
     </div>
   );
+};
+
+/**
+ * Whether this NAME can be used here, in the words the prompt shows.
+ *
+ * Not `validateFileName`: that answers "may a learner type this FILE name",
+ * and its first rule is that the extension must be one the lab lets you
+ * author. A picture is not — you upload or import one — and yet `New sprite`
+ * makes one, because the extension here is the menu's rather than the
+ * learner's. Which left the prompt refusing every name with "File name must
+ * end in: .js, .ts, …" for a file whose ending was never in question.
+ *
+ * What is left of the rule is what a NAME has to be: something, and not
+ * something already here.
+ */
+export const nameProblem = (
+  source: MultiFileSource,
+  folderId: string | undefined,
+  value: string,
+  extension: string,
+): string | undefined => {
+  if (!fileStem(value)) {
+    return 'Enter a name.';
+  }
+  const fileName = fileNameFor(value, extension);
+  const taken =
+    folderId !== undefined &&
+    Object.values(source.files).some(
+      file => file.folderId === folderId && file.name === fileName,
+    );
+  return taken ? `There is already one called ${fileName} here.` : undefined;
 };
 
 /** `coinSpin.anim` is `coinSpin`, which `label` then titles. */

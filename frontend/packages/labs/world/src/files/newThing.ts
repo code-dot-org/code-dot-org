@@ -11,11 +11,14 @@
 // `Coin Spin` writes `coinSpin.anim` holding `"name": "Coin Spin"` — the same
 // pair an import leaves behind (`appearance/importStock`).
 //
-// A `.map` seeds nothing, and that is not an omission: an empty one parses to
-// the default map (`mapEditor/mapModel`), and a map is an arrangement rather
-// than a thing with a name.
+// A `.map` carries no name — it is an arrangement rather than a thing with one
+// — but it is still seeded, with the empty map the editor would have made. A
+// file created with no contents at all gets Codebridge's "Add your changes to
+// …" placeholder, and that sentence inside a `.map` is a document nothing can
+// parse.
 
 import {createEffectDocument} from '../effect/model/document';
+import {DEFAULT_MAP_SIZE, DEFAULT_TILE} from '../mapEditor/mapModel';
 
 /** What a new file is made of: text, or bytes that live on a URL. */
 export type Seed = {contents: string} | {url: string; mimeType: string};
@@ -68,6 +71,20 @@ export const seedFor = (extension: string, name: string): Seed | undefined => {
       // to start changing that (`effect/model/document`).
       return {
         contents: `${JSON.stringify(createEffectDocument(name), null, 2)}\n`,
+      };
+    case 'map':
+      // The empty map the editor would make, rather than nothing (see above).
+      return {
+        contents: `${JSON.stringify(
+          {
+            type: 'map',
+            size: {...DEFAULT_MAP_SIZE},
+            tile: {width: DEFAULT_TILE, height: DEFAULT_TILE},
+            actors: [],
+          },
+          null,
+          2,
+        )}\n`,
       };
     case 'png':
       return {url: BLANK_SPRITE, mimeType: 'image/png'};

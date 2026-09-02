@@ -48,10 +48,19 @@ describe('what a new file starts as', () => {
     expect((seed as {url: string}).url).toMatch(/^data:image\/png;base64,/);
   });
 
-  it('is nothing for a kind that starts empty', () => {
-    // A map is an arrangement rather than a thing with a name, and an empty
-    // one parses to the default map (`mapEditor/mapModel`).
-    expect(seedFor('map', 'Level 2')).toBeUndefined();
+  it('is the empty document for a kind that carries no name', () => {
+    // A map is an arrangement rather than a thing with a name — but a file
+    // created with no contents gets Codebridge's "Add your changes to …"
+    // placeholder, and that sentence inside a `.map` is a document nothing can
+    // parse.
+    const seed = seedFor('map', 'Level 2') as {contents: string};
+
+    expect(JSON.parse(seed.contents)).toMatchObject({type: 'map', actors: []});
+  });
+
+  it('is nothing for a kind with no way to start one', () => {
+    // A sound is bytes and there is no editor to fill an empty one in.
+    expect(seedFor('mp3', 'Jump')).toBeUndefined();
   });
 });
 
