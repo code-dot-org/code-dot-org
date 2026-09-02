@@ -1,7 +1,7 @@
 // The shelf: everything a learner has unlocked, as a question a library can ask.
 //
 // The design's first load-bearing claim (specs/PROGRESSION.md): **the unlock has
-// to be real.** If a New Project already offers all thirty-seven rules, the tree is
+// to be real.** If a New Project already offers all thirty-eight rules, the tree is
 // decoration and every learner correctly ignores it. So the import libraries
 // ask this before offering a row.
 //

@@ -2709,6 +2709,11 @@ is happy at.
    told which way that is, because which way depends on where you are standing.
 4. Set **keep distance** on the Chaser to 60. It now follows without ever
    arriving, which is most of what a companion in a game does.
+5. Now put something in the way — a Wall with **use trait ⟨Solid⟩**, between
+   you and the Chaser. It walks into it and stays there, and nothing is wrong:
+   toward is all it was ever told. Going AROUND is a different question and a
+   different rule, which is **Path** — the same two blocks, and it works out
+   where to step instead of which way to face.
 `.trim(),
 };
 

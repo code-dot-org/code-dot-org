@@ -409,6 +409,78 @@ export const extremeActor = (variable, {from, end = 'least', key}) => ({
   },
 });
 
+/**
+ * `the actors with <trait> within <distance> of <place>` — asked of the WORLD.
+ *
+ * The indexed question (`core/spatialIndex`), and the one a search has to use:
+ * `filter` over `all actors` measures every one of them, and a flood asking
+ * four hundred times in a row cannot afford that.
+ */
+export const withTraitNear = (traitRef, distance, place) => ({
+  type: 'world_near_place_trait',
+  fields: {TRAIT: traitRef},
+  inputs: {DISTANCE: value(distance), PLACE: value(place)},
+});
+
+/** `repeat <times> do <body>` — a bounded loop, since there is no `while`. */
+export const repeatTimes = (times, body) => ({
+  type: 'controls_repeat_ext',
+  inputs: {TIMES: value(times), DO: value(chain(body))},
+});
+
+/** `for each place <var> in <list> do <body>`. */
+export const forEachPlace = (variable, {from, body}) => ({
+  type: 'world_for_each_place',
+  fields: {VAR: variable.field},
+  inputs: {LIST: value(from), DO: value(chain(body))},
+});
+
+/**
+ * `make a list of <…>` — the growable literal, with its mutator set.
+ *
+ * Blockly counts the sockets in `extraState`; getting that wrong loads a block
+ * with inputs nothing is plugged into, which is the same trap `when` documents
+ * for its extra branches.
+ */
+export const makeList = items => ({
+  type: 'lists_create_with',
+  extraState: {itemCount: items.length},
+  inputs: Object.fromEntries(
+    items.map((item, index) => [`ADD${index}`, value(item)]),
+  ),
+});
+
+/** `stop the loop` — out of the innermost one, and on with what follows it. */
+export const stopLoop = () => ({
+  type: 'controls_flow_statements',
+  fields: {FLOW: 'BREAK'},
+});
+
+/** `add <item> to <list>` — a list VARIABLE, at the back. */
+export const addToList = (item, list) => ({
+  type: 'world_list_add',
+  fields: {LIST: list.field},
+  inputs: {ITEM: value(item)},
+});
+
+/** `take the first off <list>` — the front, removed and handed back. */
+export const takeFirstOf = list => ({
+  type: 'world_list_take_first',
+  fields: {LIST: list.field},
+});
+
+/** `empty <list>`. */
+export const emptyOut = list => ({
+  type: 'world_list_empty',
+  fields: {LIST: list.field},
+});
+
+/** `<list> has <item>` — a lookup, not a walk (`core/lists`). */
+export const listHolds = (list, item) => ({
+  type: 'world_list_has',
+  inputs: {LIST: value(list), ITEM: value(item)},
+});
+
 /** `first actor in <list>`. */
 export const firstActor = from => ({
   type: 'world_first_actor',

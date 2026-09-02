@@ -33,6 +33,7 @@ const RULES = [
   'collect',
   'health',
   'steering',
+  'path',
   'time',
   'spawner',
   'score',

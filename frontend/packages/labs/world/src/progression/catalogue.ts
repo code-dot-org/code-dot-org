@@ -2532,7 +2532,14 @@ export const TILES: readonly Tile[] = [
       'A direction worked out from two positions, and the distance question behind it.',
     task: 'Two actors with no opinion about where the player is. Make one close in and one keep away.',
     requires: ['simulation/many'],
-    unlocks: [{kind: 'rule', id: 'steering'}],
+    unlocks: [
+      {kind: 'rule', id: 'steering'},
+      // …and the rule for the question this one cannot answer, which the
+      // lesson's last step is about: toward walks into the wall, and around is
+      // a search. The same shape `arcade/waves` uses for Spawner — meet the
+      // limit, then meet the rule that does not have it.
+      {kind: 'rule', id: 'path'},
+    ],
     check: {
       kind: 'outcome',
       says: 'The Chaser is closer to the Player at the end than at the start, and the Fleer is further.',

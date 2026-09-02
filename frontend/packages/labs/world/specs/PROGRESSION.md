@@ -591,11 +591,11 @@ point of the exercise. Here is what it asks for and the lab has not got.
 The stock library is thirty-seven rules (`src/rules/stock/index.ts`) and it covers
 most of this. These are the holes, each named by the tile that found it.
 
-| Rule                  | Wanted by             | What it is                                                                                                               |
-| --------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| **Path**              | adventure/sim enemies | Step toward a target around walls. Steering is continuous and walks into corners.                                        |
-| ~~**Spawner**~~       | `arcade/waves`        | BUILT (`rules/spawner`). Not Time renamed: a wave is HOW MANY and CLOSER EACH TIME, and neither is sayable with a timer. |
-| **One-way platforms** | `platformer/ground`   | Solid from above, passable from below. A trait on Solid Bodies, probably, not a rule.                                    |
+| Rule                  | Wanted by             | What it is                                                                                                                                            |
+| --------------------- | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ~~**Path**~~          | adventure/sim enemies | BUILT (`rules/path`). Floods out from the GOAL a square at a time and hands back the square to step to; the lattice is the search's, not the world's. |
+| ~~**Spawner**~~       | `arcade/waves`        | BUILT (`rules/spawner`). Not Time renamed: a wave is HOW MANY and CLOSER EACH TIME, and neither is sayable with a timer.                              |
+| **One-way platforms** | `platformer/ground`   | Solid from above, passable from below. A trait on Solid Bodies, probably, not a rule.                                                                 |
 
 ### Blocks the concept half wants and the vocabulary lacks
 

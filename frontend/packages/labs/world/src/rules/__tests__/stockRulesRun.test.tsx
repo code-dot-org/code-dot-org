@@ -303,6 +303,140 @@ describe('Attachment', () => {
   });
 });
 
+describe('Path', () => {
+  // The claim, and the one Steering cannot make: a step that is not toward the
+  // goal, because toward is into a wall.
+
+  /** A world with a wall down the middle and a gap at the bottom. */
+  const walled = () => {
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([rule('rules/path'), rule('rules/solid')])
+      .instantiate();
+    // A column of solid blocks at x=160, from y=0 down to y=160 — so the only
+    // way from the left half to the right half is round the bottom of it.
+    for (let y = 0; y <= 160; y += 32) {
+      world.addActor(
+        new ActorBuilder({id: `wall${y}`, name: 'wall'})
+          .useTraits([of('rules/solid', 'SolidTrait')])
+          .set(PositionProperty, new Vector(160, y))
+          .instantiate(`wall${y}`),
+      );
+    }
+    return world;
+  };
+
+  /** A guard at `from`, told to find its way to a quarry at `to`. */
+  const guard = (world: World, from: Vector, to: Vector) => {
+    const quarry = world.addActor(
+      new ActorBuilder({id: 'quarry', name: 'quarry'})
+        .set(PositionProperty, to)
+        .instantiate('quarry'),
+    );
+    const walker = world.addActor(
+      new ActorBuilder({id: 'guard', name: 'guard'})
+        .useTraits([of('rules/path', 'FindsAWayTrait')])
+        .set(PositionProperty, from)
+        .set(of('rules/path', 'GoingToProperty'), [quarry])
+        .set(of('rules/path', 'HowFarToLookProperty'), 14)
+        .instantiate('guard'),
+    );
+    return walker;
+  };
+
+  it('steps AROUND a wall rather than into it', () => {
+    // The guard is left of the wall and the quarry is right of it, both at the
+    // same height — so "toward" is due east, straight into it. A way exists
+    // round the bottom, and the first step of it is not east.
+    const world = walled();
+    const walker = guard(world, new Vector(96, 96), new Vector(224, 96));
+
+    run(world, 0.05);
+
+    expect(walker.get(of('rules/path', 'HasAWayProperty') as never)).toBe(true);
+    const next = walker.get(
+      of('rules/path', 'NextPlaceProperty') as never,
+    ) as unknown as Vector;
+    // DOWN, not east. East is (128, 96) — one square nearer the quarry and
+    // straight at the wall, which is exactly the step Steering would take and
+    // the reason this rule exists. Round the bottom starts by going down.
+    expect({x: next.x, y: next.y}).toEqual({x: 96, y: 128});
+  });
+
+  it('walks the way it worked out, round the wall', () => {
+    // The other half. A guard that computes a step and stands still is a guard
+    // that does nothing, and "toward" is still east — so the test of the
+    // walking is that after a second the guard is BELOW where it started and
+    // has not crossed into the wall.
+    const world = walled();
+    const walker = guard(world, new Vector(96, 96), new Vector(224, 96));
+
+    run(world, 1);
+
+    const at = walker.get(PositionProperty);
+    expect(at.y).toBeGreaterThan(100);
+    expect(at.x).toBeLessThan(160);
+  });
+
+  it('says so when there is no way at all', () => {
+    // Walled in on every side: the flood runs out of squares, and a guard that
+    // cannot get there should say so rather than stand still and look broken.
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([rule('rules/path'), rule('rules/solid')])
+      .instantiate();
+    for (const [x, y] of [
+      [64, 96],
+      [128, 96],
+      [96, 64],
+      [96, 128],
+    ]) {
+      world.addActor(
+        new ActorBuilder({id: `box${x}_${y}`, name: 'box'})
+          .useTraits([of('rules/solid', 'SolidTrait')])
+          .set(PositionProperty, new Vector(x, y))
+          .instantiate(`box${x}_${y}`),
+      );
+    }
+    let saidSo = 0;
+    const quarry = world.addActor(
+      new ActorBuilder({id: 'quarry', name: 'quarry'})
+        .set(PositionProperty, new Vector(320, 96))
+        .instantiate('quarry'),
+    );
+    world.addActor(
+      new ActorBuilder({id: 'guard', name: 'guard'})
+        .useTraits([of('rules/path', 'FindsAWayTrait')])
+        .set(PositionProperty, new Vector(96, 96))
+        .set(of('rules/path', 'GoingToProperty'), [quarry])
+        .set(of('rules/path', 'HowFarToLookProperty'), 6)
+        .on(of('rules/path', 'FindsNoWayEvent'), () => {
+          saidSo++;
+        })
+        .instantiate('guard'),
+    );
+
+    run(world, 0.05);
+
+    expect(saidSo).toBe(1);
+  });
+
+  it('thinks on its beat rather than every frame', () => {
+    // The whole reason it is affordable. One search at the start and one more
+    // half a second later, not sixty.
+    const world = walled();
+    const walker = guard(world, new Vector(96, 96), new Vector(224, 96));
+
+    run(world, 0.9);
+
+    // `thought at` is the clock reading of the last search, so it moves only
+    // when one happened: at 0 and again just past 0.5.
+    const at = walker.get(
+      of('rules/path', 'ThoughtAtProperty') as never,
+    ) as unknown as number;
+    expect(at).toBeGreaterThan(0.5);
+    expect(at).toBeLessThan(0.55);
+  });
+});
+
 describe('Spawner', () => {
   // The two facts it has that a timer does not. Both are counted rather than
   // timed, because what is being asserted is the arithmetic and not the clock.

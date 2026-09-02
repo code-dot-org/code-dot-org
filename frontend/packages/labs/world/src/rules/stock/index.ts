@@ -35,6 +35,7 @@ import {inventoryRule} from './inventory';
 import {jumpRule} from './jump';
 import {motionRule} from './motion';
 import {mouseRule} from './mouse';
+import {pathRule} from './path';
 import {patrolRule} from './patrol';
 import {progressRule} from './progress';
 import {revealsRule} from './reveals';
@@ -156,6 +157,15 @@ export const STOCK_RULES: readonly StockRule[] = [
       'Lets an actor go after another one, or run from it. A chaser walks toward what it is told to chase and stops when it is close enough; a fleer runs only when the thing it avoids is too near. It sets velocity, so walls still stop it and gravity still owns the vertical when you say so \u2014 and it brings the \u201cdistance from \u2039a\u203a to \u2039b\u203a\u201d block, which is what \u201cthe nearest enemy\u201d is asked with.',
     provides: ['Chases', 'Flees'],
     contents: steeringRule,
+  },
+  {
+    id: 'path',
+    name: 'Path',
+    ability: 'Finds a Way',
+    description:
+      'Works out the next step toward something, around whatever solid is in between \u2014 which is what Steering cannot do: going toward a thing walks into the wall in front of it. It floods outward from the goal a square at a time and hands back the square to walk to, on a beat rather than every frame. What a square IS is a setting, so a tiled room and a room of scattered crates search the same way.',
+    provides: ['Finds a Way'],
+    contents: pathRule,
   },
   {
     id: 'patrol',
@@ -452,6 +462,7 @@ export {
   boundsRule,
   collectRule,
   healthRule,
+  pathRule,
   steeringRule,
   timeRule,
   spawnerRule,

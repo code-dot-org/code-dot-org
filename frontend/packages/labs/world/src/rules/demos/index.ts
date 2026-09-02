@@ -30,6 +30,7 @@ import {inputDemo} from './input';
 import {inventoryDemo} from './inventory';
 import {jumpDemo} from './jump';
 import {mouseDemo} from './mouse';
+import {pathDemo} from './path';
 import {patrolDemo} from './patrol';
 import {physicsDemo} from './physics';
 import {progressDemo} from './progress';
@@ -54,6 +55,7 @@ export const RULE_DEMOS: Readonly<Record<string, RuleDemo>> = {
   inventory: inventoryDemo,
   health: healthDemo,
   steering: steeringDemo,
+  path: pathDemo,
   patrol: patrolDemo,
   carry: carryDemo,
   grid: gridDemo,
