@@ -923,6 +923,9 @@ export const TILES: readonly Tile[] = [
     requires: ['look/sprite'],
     unlocks: [
       {kind: 'block', type: 'world_set_background'},
+      // …and the way back: a lesson that hands out a sky and no way to take it
+      // down is a lesson in a state you cannot leave.
+      {kind: 'block', type: 'world_clear_background'},
       {kind: 'block', type: 'world_set_background_repeat'},
       {kind: 'block', type: 'world_set_background_color'},
       {kind: 'block', type: 'world_set_background_offset'},

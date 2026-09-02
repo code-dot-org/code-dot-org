@@ -5885,7 +5885,36 @@ const defineSlotBlocks = (slot: {
     },
   });
 
-  return [setImage, setOffset, setRepeat];
+  /**
+   * `remove ⟨background⟩` — take the image away again.
+   *
+   * A BLOCK and not a row in `set ⟨…⟩ to`'s menu, for the reason `stop music`
+   * is a block: a menu of the project's images is where you go to choose one,
+   * not where you go to have none, and the row that would have said so only
+   * ever appeared in a project holding no images at all. Until this existed a
+   * sky, once set, could not be taken down.
+   *
+   * The same engine method with nothing to draw (`World.setBackground`), so
+   * there is one method and two sentences — as there is for music.
+   */
+  const clearImage = defineBlock({
+    type: `world_clear_${slot.id}`,
+    message0: `remove ${slot.label}`,
+    previousStatement: true,
+    nextStatement: true,
+    extensions: [worldContextExtension],
+    style: 'sprite_blocks',
+    tooltip:
+      `Take the ${slot.label} image away, leaving the backdrop colour. The ` +
+      'offset and the tiling stay as they were, for the next image.',
+    generator: {
+      javascript(block) {
+        return `world.set${slot.method}(undefined, ${str(layerOf(block))});\n`;
+      },
+    },
+  });
+
+  return [setImage, clearImage, setOffset, setRepeat];
 };
 
 /** The two slots, and the six blocks they generate between them. */
@@ -8251,9 +8280,11 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // What is behind everything: an image, a colour, and effects on that
       // image alone (BACKGROUNDS.md).
       'world_set_background',
+      'world_clear_background',
       'world_set_background_offset',
       'world_set_background_repeat',
       'world_set_foreground',
+      'world_clear_foreground',
       'world_set_foreground_offset',
       'world_set_foreground_repeat',
       'world_set_background_color',

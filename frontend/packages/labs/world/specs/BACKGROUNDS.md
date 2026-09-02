@@ -54,10 +54,11 @@ everything, and a per-layer colour would only ever be visible on the bottom one.
 
 ## 3. Blocks
 
-Three new blocks, each shaped like one that exists.
+Five blocks, each shaped like one that exists.
 
 ```
 set background to [cave.png ▾]        → world.setBackground('cave.png')
+remove background                     → world.setBackground(undefined)
 set background color to [swatch]      → world.setBackgroundColor(WorldLab.rgb('#88ccff'))
 add effect [ripple ▾] to the background
                                       → world.addBackgroundEffect('effects/ripple', ripple, {...})
@@ -69,6 +70,14 @@ remove effect [ripple ▾] from the background
   `liveDropdown`, the tolerant validator, the picker field) with the palette
   filtered to the `backgrounds/` folder. A backdrop is never a spritesheet, so
   the field takes a file name and never a `name.png#3` cell reference.
+- **`remove background`** is a block and not a row in that dropdown, for the
+  reason `stop music` is a block (specs/SOUND.md): a menu of the project's
+  images is where you go to CHOOSE one, and the row that would have meant
+  "none" only ever appeared in a project holding no images at all. An empty
+  dropdown here is an unfinished block and generates nothing, so until this
+  existed a sky, once set, could not be taken down. Both slots get one — they
+  come from the same factory (`defineSlotBlocks`), which is what stops
+  `foreground` drifting from `background`.
 - **The colour socket** takes a value rather than owning a field, so it goes
   through `engine/core/color.ts` exactly as effect parameters do — and
   `colour_picker`, `colour_random`, `colour_blend` and the `r g b a` block all

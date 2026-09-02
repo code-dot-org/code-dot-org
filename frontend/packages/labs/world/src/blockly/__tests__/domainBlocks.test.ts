@@ -2464,16 +2464,30 @@ describe('world block generators', () => {
     );
   });
 
-  it('generates the same six blocks for both image slots', () => {
+  it('generates the same four blocks for both image slots', () => {
     // They differ in one word, so they come from one factory over the two
-    // slots rather than six hand-written near-copies — the house idiom, and
+    // slots rather than eight hand-written near-copies — the house idiom, and
     // what stops `set foreground` drifting away from `set background`.
     const types = DOMAIN_BLOCKS.map(block => block.type);
     for (const slot of ['background', 'foreground']) {
       expect(types).toContain(`world_set_${slot}`);
+      expect(types).toContain(`world_clear_${slot}`);
       expect(types).toContain(`world_set_${slot}_offset`);
       expect(types).toContain(`world_set_${slot}_repeat`);
     }
+  });
+
+  it('takes an image away again, in the layer it was written in', () => {
+    // The half that was missing: `set background to ⟨…⟩` put a sky up and
+    // nothing took it down. An empty dropdown there is an unfinished block —
+    // see the case below — so removing it had to be said out loud, the way
+    // `stop music` is.
+    expect(run('world_clear_background', {}, {}, '')).toBe(
+      'world.setBackground(undefined, "main");\n',
+    );
+    expect(run('world_clear_foreground', {}, {}, '')).toBe(
+      'world.setForeground(undefined, "main");\n',
+    );
   });
 
   it('slides a slot by a vector, naming the layer it is written in', () => {
