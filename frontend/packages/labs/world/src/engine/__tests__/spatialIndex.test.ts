@@ -9,6 +9,7 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {RuleBuilder} from '../builders/RuleBuilder';
 import {
   Actor,
   ActorBuilder,
@@ -99,6 +100,42 @@ describe('the actors near a place', () => {
     expect(world.actorsNear({x: 40, y: 40}, 0).map(a => a.id)).toEqual([
       'here',
     ]);
+  });
+
+  it('sees a move made by an earlier step in the same frame', () => {
+    // The reason the stamp is a STEP and not a frame. Collisions runs in
+    // `touch`, after `move`; if the index were built once a frame, the first
+    // question asked — a search deciding, a flock sensing — would fix it at
+    // the top of the frame and a collision test would then be measuring where
+    // things WERE. A bullet at eight units a second moves eight pixels a
+    // frame, which is the difference between a hit and a miss.
+    const asked: string[][] = [];
+    // A rule with two steps: the first asks and then moves, the second asks
+    // again. Free steps keep author order, so this is the frame's shape.
+    const watcher = new RuleBuilder({id: 'watcher', name: 'Watcher'});
+    const mover = new ActorBuilder({id: 'mover', name: 'mover'})
+      .useTraits([PositionalTrait])
+      .set(PositionProperty, new Vector(0, 0))
+      .instantiate('mover');
+    watcher.addStep('ask then move', world => {
+      asked.push(world.actorsNear({x: 200, y: 0}, 20).map(a => a.id));
+      mover.set(PositionProperty, new Vector(200, 0));
+    });
+    watcher.addStep('ask again', world => {
+      asked.push(world.actorsNear({x: 200, y: 0}, 20).map(a => a.id));
+    });
+
+    const world = new World({
+      id: 'w',
+      name: 'W',
+      rules: [SpatialRule, watcher.build()],
+    });
+    world.addActor(mover);
+
+    world.tick(1 / 60);
+
+    // Nothing there before it moved, and something there after.
+    expect(asked).toEqual([[], ['mover']]);
   });
 
   it('looks at a handful of actors rather than all of them', () => {

@@ -23,12 +23,13 @@
 // Overlap is Collisions' question and wants a different index; when that is
 // built it can live beside this one rather than complicate it.
 //
-// IT IS A CACHE AND IT CAN BE STALE. The World rebuilds it when the clock or
-// the population has moved on (`World.actorsNear`), so a query inside one frame
-// sees the positions as of the first query in that frame. That is invisible for
-// every question it is offered for — a neighbourhood, a flock, the walls near a
-// path — and it is why Collisions does NOT use it yet: a collision test must
-// see where things are now, not where they were at the top of the frame.
+// IT IS A CACHE, KEPT PER STEP. The World rebuilds it for the first question
+// asked in each step (`World.actorsNear`), because a step is the unit of
+// "somebody may have moved things": four hundred questions inside one step get
+// one index, and the first question after a step that moved everything gets a
+// fresh one. That second half is what a collision test needs — it runs in
+// `touch`, after `move`, and an index fixed at the top of the frame would have
+// it measuring where things were.
 
 import type {Actor} from './Actor';
 import type {Vector} from './Vector';

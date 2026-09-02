@@ -29,6 +29,10 @@ export class Scheduler {
   /** Run every step in order, once, for this tick. */
   run(world: World, delta: number): void {
     for (const step of this.ordered) {
+      // Say that a step is beginning, which is what the spatial index is kept
+      // against: a step is the unit of "somebody may have moved things", so
+      // asking after one is asking about a different world (`World.actorsNear`).
+      world.beginStep();
       const run: StepFn = step.run;
       run(world, delta);
     }
