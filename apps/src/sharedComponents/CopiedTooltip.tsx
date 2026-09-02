@@ -6,54 +6,46 @@ import React, {ReactElement, useEffect} from 'react';
 
 import i18n from '@cdo/locale';
 
-/** How long the confirmation stays up before `onHide` fires. */
 export const COPIED_TOOLTIP_DURATION_MS = 2000;
 
 export interface CopiedTooltipProps {
-  /** Whether the confirmation is showing. Set it true when a copy succeeds. */
-  copied: boolean;
-  /** Called once {@link COPIED_TOOLTIP_DURATION_MS} has elapsed; set `copied` false. */
+  /** When the last copy succeeded; each new value re-arms the confirmation. */
+  copiedAt: number | null;
+  /** Called {@link COPIED_TOOLTIP_DURATION_MS} after `copiedAt`; set it to null. */
   onHide: () => void;
   /** The trigger. Must forward a ref and accept the tooltip's props. */
   children: ReactElement;
-  /** Tooltip placement; defaults to above the trigger. */
   placement?: TooltipProps['placement'];
-  /**
-   * Design system theme for the bubble. MUI renders the tooltip in a portal on
-   * `document.body`, so it does not inherit a `data-theme` subtree; pass the
-   * surrounding theme when the trigger sits in one (e.g. a Lab2 surface).
-   */
+  /** Theme for the bubble, which portals out of any `data-theme` subtree. */
   dataTheme?: Theme;
 }
 
 /**
- * A "Copied!" bubble over a copy button, so a click that only touches the
- * clipboard still reports that it worked.
+ * A "Copied!" bubble over a copy button, opened by the caller rather than by
+ * hover or focus and hidden again on a timer.
  *
- * The bubble is opened by the caller rather than by hover or focus, and it
- * hides itself on a timer. The popper is `aria-hidden` on purpose: the text is
- * announced once from the always-mounted live region instead, which is
- * reliable in a way a changing `aria-describedby` is not.
+ * The bubble is `aria-hidden` and the text announced from a live region
+ * instead: a changing `aria-describedby` is not reliably spoken.
  */
 const CopiedTooltip: React.FunctionComponent<CopiedTooltipProps> = ({
-  copied,
+  copiedAt,
   onHide,
   children,
   placement = 'top',
   dataTheme,
 }) => {
   useEffect(() => {
-    if (!copied) {
+    if (copiedAt === null) {
       return;
     }
     const timeout = setTimeout(onHide, COPIED_TOOLTIP_DURATION_MS);
     return () => clearTimeout(timeout);
-  }, [copied, onHide]);
+  }, [copiedAt, onHide]);
 
   return (
     <>
       <Tooltip
-        open={copied}
+        open={copiedAt !== null}
         placement={placement}
         disableFocusListener
         disableHoverListener
@@ -71,15 +63,10 @@ const CopiedTooltip: React.FunctionComponent<CopiedTooltipProps> = ({
       >
         {children}
       </Tooltip>
-      {/*
-       * `polite` rather than the announcer's assertive default: this region is
-       * mounted for as long as the copy button is, and a `role="alert"` that
-       * sits empty next to real alerts is both noisy and hard to tell apart
-       * from them.
-       */}
+      {/* Keyed per copy so a repeated copy is announced again. */}
       <ToastAnnouncer
-        message={copied ? i18n.copied() : null}
-        politeness="polite"
+        key={copiedAt ?? 'idle'}
+        message={copiedAt === null ? null : i18n.copied()}
       />
     </>
   );

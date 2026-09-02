@@ -15,30 +15,27 @@ export const CopyToClipboardButton: React.FunctionComponent<{
   shareUrl: string;
   projectType: ProjectType;
 }> = ({shareUrl, projectType}) => {
-  const [copiedToClipboard, setCopiedToClipboard] = useState(false);
+  const [copiedAt, setCopiedAt] = useState<number | null>(null);
 
   const handleCopyToClipboard = useCallback(() => {
-    copyToClipboard(shareUrl, () => {
-      setCopiedToClipboard(true);
-    });
+    copyToClipboard(
+      shareUrl,
+      () => setCopiedAt(Date.now()),
+      () => console.error('Error copying share link to clipboard')
+    );
     trackEvent('share', 'share_copy_url', {value: projectType});
   }, [shareUrl, projectType]);
 
-  const clearCopiedToClipboard = useCallback(
-    () => setCopiedToClipboard(false),
-    []
-  );
+  const clearCopiedAt = useCallback(() => setCopiedAt(null), []);
 
-  // The tooltip portals to document.body, outside the dialog's `data-theme`
-  // subtree, so hand it the lab theme the same way ShareDialog does.
   const theme = Lab2Registry.getInstance().getTheme();
 
   return (
     <CopiedTooltip
-      copied={copiedToClipboard}
-      onHide={clearCopiedToClipboard}
-      // Below the button: above it is the QR code, and an inverted (white)
-      // bubble laid over the QR's white quiet zone loses its own edge.
+      copiedAt={copiedAt}
+      onHide={clearCopiedAt}
+      // Above the button is the QR code, whose white quiet zone swallows the
+      // inverted bubble's edge.
       placement="bottom"
       dataTheme={theme}
     >
@@ -52,7 +49,7 @@ export const CopyToClipboardButton: React.FunctionComponent<{
         type="button"
         startIcon={
           <FontAwesomeV6Icon
-            iconName={copiedToClipboard ? 'clipboard-check' : 'clipboard'}
+            iconName={copiedAt ? 'clipboard-check' : 'clipboard'}
           />
         }
       >

@@ -106,14 +106,18 @@ describe('ShareAllowedDialog', () => {
   });
 
   describe('abuse alert', () => {
+    const abuseText = /reported for violating/i;
+
     it('does not show the abuse alert when isAbusive is false', () => {
       renderAndOpen({isAbusive: false});
-      expect(screen.queryByRole('alert')).not.toBeInTheDocument();
+      expect(screen.queryByText(abuseText)).not.toBeInTheDocument();
     });
 
     it('shows the abuse alert and keeps the share panel when isAbusive is true', () => {
       renderAndOpen({isAbusive: true});
-      expect(screen.getByRole('alert')).toBeInTheDocument();
+      expect(
+        screen.getByText(abuseText).closest('[role="alert"]')
+      ).toBeInTheDocument();
       expect(screen.getByText(/Copy Link to Project/i)).toBeInTheDocument();
     });
   });
@@ -143,6 +147,7 @@ describe('ShareAllowedDialog', () => {
 
       expect(copyToClipboard).toHaveBeenCalledWith(
         DEFAULT_PROPS.shareUrl,
+        expect.any(Function),
         expect.any(Function)
       );
       expect(screen.getByText('Copied!')).toBeInTheDocument();
@@ -158,10 +163,14 @@ describe('ShareAllowedDialog', () => {
     });
 
     it('shows no confirmation when the copy fails', () => {
-      copyToClipboard.mockImplementation(() => {});
+      copyToClipboard.mockImplementation((str, onSuccess, onFailure) =>
+        onFailure()
+      );
+      jest.spyOn(console, 'error').mockImplementation(() => {});
       renderAndOpen();
       fireEvent.click(screen.getByText(/Copy Link to Project/i));
       expect(screen.queryByText('Copied!')).not.toBeInTheDocument();
+      console.error.mockRestore();
     });
   });
 });

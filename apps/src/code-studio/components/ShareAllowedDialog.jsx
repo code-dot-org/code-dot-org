@@ -93,7 +93,7 @@ class ShareAllowedDialog extends React.Component {
     exportError: null,
     isTwitterAvailable: false,
     isFacebookAvailable: false,
-    hasBeenCopied: false,
+    copiedAt: null,
     isLoadingAccountAndProjectAge: false,
     showSharingDisallowedDialog: false,
   };
@@ -116,7 +116,7 @@ class ShareAllowedDialog extends React.Component {
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (this.props.isOpen && !prevProps.isOpen) {
       recordShare('SHARING_DIALOG_OPEN', this.props.appType);
-      this.setState({hasBeenCopied: false});
+      this.setState({copiedAt: null});
 
       if (this.sharingDisallowedWhileSignedIn()) {
         this.setState({showSharingDisallowedDialog: true});
@@ -163,12 +163,14 @@ class ShareAllowedDialog extends React.Component {
 
   // Copy to clipboard.
   copy = () => {
-    copyToClipboard(this.props.shareUrl, () =>
-      this.setState({hasBeenCopied: true})
+    copyToClipboard(
+      this.props.shareUrl,
+      () => this.setState({copiedAt: Date.now()}),
+      () => console.error('Error copying share link to clipboard')
     );
   };
 
-  clearCopied = () => this.setState({hasBeenCopied: false});
+  clearCopied = () => this.setState({copiedAt: null});
 
   // inRestrictedShareMode overrides canShareSocial
   isSocialShareAllowed = () =>
@@ -306,7 +308,7 @@ class ShareAllowedDialog extends React.Component {
                     </div>
                     <div className={moduleStyles.actionsColumn}>
                       <CopiedTooltip
-                        copied={this.state.hasBeenCopied}
+                        copiedAt={this.state.copiedAt}
                         onHide={this.clearCopied}
                       >
                         <MuiButton
@@ -324,9 +326,7 @@ class ShareAllowedDialog extends React.Component {
                           value={shareUrl}
                           startIcon={
                             <FontAwesomeV6Icon
-                              iconName={
-                                this.state.hasBeenCopied ? 'check' : 'copy'
-                              }
+                              iconName={this.state.copiedAt ? 'check' : 'copy'}
                             />
                           }
                         >
