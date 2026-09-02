@@ -28,16 +28,37 @@ const SOURCE: MultiFileSource = {
       id: 'a',
       name: 'gravity.rule',
       language: 'rule',
-      contents: '',
+      // What the file DECLARES, which is what its row shows — the same root a
+      // `use rule` dropdown reads (`blockly/projectModules`).
+      contents: JSON.stringify({
+        blocks: {blocks: [{type: 'world_rule', fields: {NAME: 'Has Gravity'}}]},
+      }),
       folderId: 'f1',
       open: true,
       active: true,
+    },
+    b: {
+      id: 'b',
+      // …and one that declares nothing, so its own stem is the only name.
+      name: 'level1.map',
+      language: 'map',
+      contents: JSON.stringify({type: 'map', actors: []}),
+      folderId: 'f1',
+    },
+    c: {
+      id: 'c',
+      name: 'coinSpin.sheet',
+      language: 'json',
+      contents: '{}',
+      folderId: 'f1',
     },
   },
   openFiles: ['a'],
 };
 
 vi.mock('@code-dot-org/codebridge', () => ({
+  getFileExtension: (name: string) => name.split('.').pop(),
+  shouldShowFile: () => true,
   useFileOperations: () => ({
     source: SOURCE,
     newFile,
@@ -48,6 +69,9 @@ vi.mock('@code-dot-org/codebridge', () => ({
   useCodebridgeConfig: () => ({
     languageMapping: {rule: 'rule', actor: 'actor'},
     blockFileDeletion: () => undefined,
+    // What the tree leaves out, which these menus leave out too: a `.sheet`
+    // belongs to the `.png` of the same name (`worldConfig`).
+    hiddenFileTypes: ['sheet'],
   }),
   usePrompts: () => ({promptForName, confirm, alert}),
   languageForFileName: () => 'actor',
@@ -88,12 +112,46 @@ describe('the file menus', () => {
     }
   });
 
-  it('lists what is in the folder, and opens what is clicked', () => {
+  it('lists what is in the folder by NAME, and opens what is clicked', () => {
+    // "Has Gravity", not `gravity.rule`: the file name is where the rule lives
+    // rather than what it is, and every other place a learner meets it says
+    // the declared name.
     openMenu('Rules');
 
-    fireEvent.click(screen.getByText('gravity.rule'));
+    expect(screen.queryByText('gravity.rule')).toBeNull();
+    fireEvent.click(screen.getByText('Has Gravity'));
 
     expect(activateFile).toHaveBeenCalledWith('a');
+  });
+
+  it('titles a file that declares no name, from its own stem', () => {
+    // A map is an arrangement and names nothing, so the file is the only name
+    // it has — titled the way every dropdown titles one (`blockly/label`).
+    openMenu('Rules');
+
+    expect(screen.getByText('Level1')).toBeTruthy();
+  });
+
+  it('leaves out what the tree leaves out', () => {
+    // A `.sheet` says how to cut the `.png` of the same name into cells. It is
+    // written and deleted by the image editor, never opened, and the tree
+    // hides it; a menu that listed it would be offering to open a file with no
+    // editor and to delete half of a spritesheet.
+    openMenu('Rules');
+
+    expect(screen.queryByText(/sheet/i)).toBeNull();
+  });
+
+  it('does not offer to rename the file', () => {
+    // Renaming the FILE changes nothing these rows show and leaves the name
+    // the learner meant untouched. The tree still renames a file.
+    openMenu('Rules');
+    fireEvent.click(
+      screen.getByRole('button', {name: 'Options for Has Gravity'}),
+    );
+
+    expect(screen.getByText('Delete')).toBeTruthy();
+    expect(screen.queryByText('Rename')).toBeNull();
   });
 
   it('says what is not there yet, rather than showing a blank menu', () => {

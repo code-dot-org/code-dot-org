@@ -28,15 +28,36 @@ import {cellCount} from './spriteCells';
 const CODE_EXT = /\.(rule|actor|world|behavior|ts|js)$/;
 
 // The root blocks whose NAME field names a Blockly-authored module.
-const NAMED_ROOTS = ['world_actor', 'world_world'];
+//
+// Rules among them, which they were not: a `.rule`'s options list fell through
+// to the file's stem, and every caller that wanted "Has Gravity" got it from
+// the rule REGISTRY instead. That is still where a `use rule` dropdown reads
+// it; this is for everything that has only the file (`files/itemName`).
+const NAMED_ROOTS = [
+  'world_actor',
+  'world_world',
+  'world_rule',
+  'world_behavior',
+];
 
-/** Best-effort authored name: a Blockly root's NAME field, else a builder's `name`. */
-function authoredName(contents: string): string | undefined {
+/**
+ * Best-effort authored name: what the file calls the thing it declares.
+ *
+ * A Blockly root's NAME field, an effect graph's `name`, or a builder's — in
+ * that order, and undefined for a file that declares no name at all (a `.map`
+ * is an arrangement, a `.png` is bytes). Exported because the file menus show
+ * a project by what its files declare rather than by what they are called
+ * (specs/FILES.md), and there should be one answer to that question.
+ */
+export function authoredName(contents: string): string | undefined {
   const trimmed = contents.trim();
   if (trimmed.startsWith('{')) {
     try {
-      const blocks = (JSON.parse(trimmed) as {blocks?: {blocks?: unknown[]}})
-        .blocks?.blocks;
+      const parsed = JSON.parse(trimmed) as {
+        blocks?: {blocks?: unknown[]};
+        name?: unknown;
+      };
+      const blocks = parsed.blocks?.blocks;
       const root = Array.isArray(blocks)
         ? (blocks.find(b =>
             NAMED_ROOTS.includes((b as {type?: string})?.type ?? ''),
@@ -45,8 +66,13 @@ function authoredName(contents: string): string | undefined {
       if (root?.fields?.NAME) {
         return root.fields.NAME;
       }
+      // …and a document that names itself at the top level, which is what an
+      // effect graph does (`projectEffectFileOptions` reads the same field).
+      if (typeof parsed.name === 'string' && parsed.name.trim()) {
+        return parsed.name;
+      }
     } catch {
-      // Not Blockly JSON — fall through to the source scan.
+      // Not JSON yet (mid-edit) — fall through to the source scan.
     }
   }
   // `new WorldBuilder({id: 'platform', name: 'Platform World'})` and friends
@@ -114,11 +140,15 @@ export function projectAnimationFileOptions(
   files: Record<string, string>,
 ): Array<[string, string]> {
   const options: Array<[string, string]> = [];
-  for (const path of Object.keys(files)) {
+  for (const [path, contents] of Object.entries(files)) {
     if (path.startsWith('animations/') && path.endsWith('.anim')) {
       const modulePath = path.replace(/\.anim$/, '');
       options.push([
-        label(modulePath.split('/').pop() ?? modulePath),
+        // The name the file carries, else its stem titled: an imported one
+        // says "Coin Spin", the words the dialog offered it under, where the
+        // stem is the camelCase id a block stores (`AnimationFile.name`).
+        authoredName(contents) ??
+          label(modulePath.split('/').pop() ?? modulePath),
         modulePath,
       ]);
     }

@@ -4,12 +4,19 @@
 // tree. This is the UI half: a button that opens the folder, the two ways to
 // get a new one at the top, and everything already there below.
 //
-// EVERY ACT HERE IS THE TREE'S ACT. Opening, renaming and deleting go through
-// the same `useFileOperations` and the same prompts the file browser uses,
-// including the lab's veto on deleting a rule another rule requires
+// EVERY ACT HERE IS THE TREE'S ACT. Opening and deleting go through the same
+// `useFileOperations` and the same prompts the file browser uses, including the
+// lab's veto on deleting a rule another rule requires
 // (`config.blockFileDeletion`). Two routes to one behaviour; nothing new is
 // possible from here, which is what makes this an alternative reading rather
 // than a second file system.
+//
+// ONE ACT IS NOT OFFERED: renaming the file. These rows show what a file
+// DECLARES — `player.actor` reads as "Player", the word its blocks and every
+// dropdown already use — so renaming the file changes nothing a learner can
+// see here and leaves the name they meant untouched. Renaming the THING, and
+// moving its file to match, is the version worth having; the tree still
+// renames a file for anyone who wants the file renamed.
 //
 // WHAT A MISSING FOLDER DOES. A project need not have all nine — a scenario
 // declares the folders it uses. `Import…` works anyway, because a shelf makes
@@ -31,7 +38,9 @@ import {
 import {createRef, useCallback, useMemo, useState} from 'react';
 
 import {
+  getFileExtension,
   languageForFileName,
+  shouldShowFile,
   useCodebridgeConfig,
   useFileOperations,
   usePrompts,
@@ -43,12 +52,17 @@ import type {ProjectFile} from '@code-dot-org/core/api';
 import {IconButtonWithTooltip} from '@code-dot-org/lab/components';
 import {labActions, useAppSelector} from '@code-dot-org/lab/redux';
 
+import {label} from '../blockly/label';
+import {authoredName} from '../blockly/projectModules';
+
 import styles from './fileMenus.module.css';
 import {FOLDER_MENUS, type FolderMenu} from './folderMenus';
 
 /** The file the row menu is about, and what it hangs off. */
 interface RowMenu {
   file: ProjectFile;
+  /** What the row SHOWED, which is what a menu about it should say. */
+  name: string;
   anchor: HTMLElement;
 }
 
@@ -81,16 +95,47 @@ export const FileMenus = () => {
     [ops.source],
   );
 
+  /**
+   * What is in a folder, by the name each file DECLARES.
+   *
+   * `player.actor` is called "Player" everywhere else a learner looks — on its
+   * own blocks, in every dropdown that offers it, in the map editor — and the
+   * file name is where that lives rather than what it is. So the menus say the
+   * word the rest of the lab says.
+   *
+   * A file that declares NOTHING is titled from its own stem, which is the
+   * same fallback every dropdown makes: a map is an arrangement and a `.png`
+   * is bytes, and "Coin Spin" is what the animation dropdown calls the file
+   * the sprite picker calls "Coin Spin" (`blockly/label`).
+   *
+   * Sorted by what is SHOWN, since a list ordered by something invisible reads
+   * as unordered.
+   */
   const filesIn = useCallback(
-    (folder: string): ProjectFile[] => {
+    (folder: string): Array<{file: ProjectFile; name: string}> => {
       const id = folderIds.get(folder);
+      const hidden = config.hiddenFileTypes ?? [];
       return id === undefined
         ? []
         : Object.values(ops.source.files)
-            .filter(file => file.folderId === id)
+            .filter(
+              file =>
+                file.folderId === id &&
+                // The tree's own two questions, asked here for the same
+                // reasons: a deleted file is still in the source until the
+                // project is saved, and a `.sheet` belongs to the `.png` of the
+                // same name rather than being a file to open (`worldConfig`).
+                shouldShowFile(file) &&
+                !hidden.includes(getFileExtension(file.name) ?? ''),
+            )
+            .map(file => ({
+              file,
+              name:
+                authoredName(file.contents ?? '') ?? label(stemOf(file.name)),
+            }))
             .sort((a, b) => a.name.localeCompare(b.name));
     },
-    [ops.source, folderIds],
+    [ops.source, folderIds, config],
   );
 
   const close = useCallback(() => setOpen(undefined), []);
@@ -139,23 +184,6 @@ export const FileMenus = () => {
       await menu.shelf?.();
     },
     [close],
-  );
-
-  const rename = useCallback(
-    async (file: ProjectFile) => {
-      setRow(undefined);
-      close();
-      const name = await promptForName({
-        title: 'Rename file',
-        value: file.name,
-        validateInput: value =>
-          validateFileName(config, ops.source, file.folderId, value, file.id),
-      });
-      if (name && name !== file.name) {
-        ops.renameFile(file.id, name);
-      }
-    },
-    [ops, config, promptForName, close],
   );
 
   const remove = useCallback(
@@ -257,7 +285,7 @@ export const FileMenus = () => {
             </ListItemText>
           </MenuItem>
         )}
-        {files.map(file => (
+        {files.map(({file, name}) => (
           <MenuItem
             key={file.id}
             selected={Boolean(file.active)}
@@ -267,20 +295,20 @@ export const FileMenus = () => {
             }}
           >
             <ListItemText disableTypography>
-              <Typography variant="body4">{file.name}</Typography>
+              <Typography variant="body4">{name}</Typography>
             </ListItemText>
             {!isReadOnly && (
               // A control inside a menu item, which is why it stops the click
               // reaching the item: the row OPENS the file and this asks what
               // else to do with it, the way the tree's `…` does.
               <IconButton
-                aria-label={`Options for ${file.name}`}
+                aria-label={`Options for ${name}`}
                 size="extraSmall"
                 color="tertiary"
                 className={styles.rowOptions}
                 onClick={event => {
                   event.stopPropagation();
-                  setRow({file, anchor: event.currentTarget});
+                  setRow({file, name, anchor: event.currentTarget});
                 }}
               >
                 <FontAwesomeV6Icon iconName="ellipsis-v" iconStyle="solid" />
@@ -294,19 +322,9 @@ export const FileMenus = () => {
         anchorEl={row?.anchor}
         onClose={() => setRow(undefined)}
         slotProps={{
-          list: {'aria-label': row && `Options for ${row.file.name}`},
+          list: {'aria-label': row && `Options for ${row.name}`, dense: true},
         }}
       >
-        {row && (
-          <MenuItem onClick={() => rename(row.file)}>
-            <ListItemIcon className={styles.menuIcon}>
-              <FontAwesomeV6Icon iconName="pencil" iconStyle="solid" />
-            </ListItemIcon>
-            <ListItemText disableTypography>
-              <Typography variant="body4">Rename</Typography>
-            </ListItemText>
-          </MenuItem>
-        )}
         {row && (
           <MenuItem onClick={() => remove(row.file)}>
             <ListItemIcon className={styles.menuIcon}>
@@ -321,6 +339,9 @@ export const FileMenus = () => {
     </div>
   );
 };
+
+/** `coinSpin.anim` is `coinSpin`, which `label` then titles. */
+const stemOf = (name: string): string => name.replace(/\.[^.]+$/, '');
 
 /** `player` in the actors menu is `player.actor`; `player.actor` already is. */
 const withExtension = (name: string, extension: string): string =>

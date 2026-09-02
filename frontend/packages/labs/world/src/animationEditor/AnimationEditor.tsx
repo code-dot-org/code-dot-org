@@ -45,6 +45,15 @@ import {filePath, projectFiles} from '../runtime/projectFiles';
 
 import {AddFramesDialog} from './AddFramesDialog';
 import styles from './animationEditor.module.css';
+import {
+  parseAnim,
+  serialize,
+  uid,
+  type AnimDef,
+  type AnimFile,
+  type Cell,
+  type Frame,
+} from './animDocument';
 import {CellPicker} from './CellPicker';
 import {pingPong, reversed} from './frameOps';
 import {frameAt, previousFrame, startOf, totalTime} from './playback';
@@ -68,95 +77,6 @@ const SPEEDS = [0.25, 0.5, 1, 2] as const;
 // stem, saying how big a cell is (appearance/sheetFile). Nothing about a PNG
 // says how it should be cut up — that is a decision someone made, so it is a
 // file rather than a guess about the picture's shape.
-
-/** A source rectangle within a spritesheet — what a frame draws (sheetFrames). */
-type Cell = CellRect;
-interface Frame {
-  sprite: string;
-  /** This frame's own timing, when it is an exception to the animation's. */
-  delay?: number;
-  scale?: number;
-  offset?: {x: number; y: number};
-  position?: Cell;
-  /** Client-only stable id (drag/react keys, draft keys); stripped on save. */
-  __id: string;
-}
-interface AnimDef {
-  loop?: boolean;
-  /** Frames per second, for the frames that do not name a delay (timing.ts). */
-  frameRate?: number;
-  frames: Frame[];
-}
-interface AnimFile {
-  type: 'animation';
-  animations: Record<string, AnimDef>;
-}
-
-const uid = (): string => crypto.randomUUID();
-
-/** Parse the `.anim` JSON leniently; the editor always writes it back valid. */
-function parseAnim(contents: string): AnimFile {
-  if (contents.trim()) {
-    try {
-      const raw = JSON.parse(contents) as {
-        type?: unknown;
-        animations?: Record<string, AnimDef>;
-      };
-      if (
-        raw.type === 'animation' &&
-        raw.animations &&
-        typeof raw.animations === 'object'
-      ) {
-        const animations: Record<string, AnimDef> = {};
-        for (const [id, def] of Object.entries(raw.animations)) {
-          animations[id] = {
-            loop: def.loop,
-            frameRate: def.frameRate,
-            frames: (def.frames ?? []).map(f => ({...f, __id: uid()})),
-          };
-        }
-        return {type: 'animation', animations};
-      }
-    } catch {
-      // Malformed — start empty rather than throw; the file rewrites on edit.
-    }
-  }
-  return {type: 'animation', animations: {}};
-}
-
-/** Drop client-only fields and defaults so the written file stays minimal (the
- *  hand-authored shape: no `__id`, no zero offset, no unit scale, no absent
- *  cell). `out` is rebuilt from known keys, so `__id` never leaks. */
-function cleanFrame(f: Frame): Omit<Frame, '__id'> {
-  const out: Omit<Frame, '__id'> = {sprite: f.sprite};
-  // Only when it differs from the animation's rate: a frame that says nothing
-  // is a frame that follows (timing.ts).
-  if (typeof f.delay === 'number') {
-    out.delay = f.delay;
-  }
-  if (f.position) {
-    out.position = f.position;
-  }
-  if (f.offset && (f.offset.x !== 0 || f.offset.y !== 0)) {
-    out.offset = f.offset;
-  }
-  if (f.scale !== undefined && f.scale !== 1) {
-    out.scale = f.scale;
-  }
-  return out;
-}
-
-function serialize(doc: AnimFile): string {
-  const animations: Record<string, object> = {};
-  for (const [id, def] of Object.entries(doc.animations)) {
-    animations[id] = {
-      ...(def.loop === false ? {loop: false} : {}),
-      ...(def.frameRate ? {frameRate: def.frameRate} : {}),
-      frames: def.frames.map(cleanFrame),
-    };
-  }
-  return JSON.stringify({type: 'animation', animations}, null, 2);
-}
 
 const parseNum = (s: string, fallback: number): number => {
   const n = parseFloat(s);

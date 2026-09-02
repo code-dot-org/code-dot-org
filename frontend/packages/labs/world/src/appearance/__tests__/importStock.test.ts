@@ -105,6 +105,21 @@ describe('importStockAnimation', () => {
     expect(files['coinSpin.sheet']).toBeDefined();
   });
 
+  it('writes the name the dialog offered it under', () => {
+    // The words a learner CHOSE. Without them the project's only word for this
+    // was `coinSpin` — the id, camelCase because a block stores it — and the
+    // name they picked was never seen again (`AnimationFile.name`).
+    const {source} = importStockAnimation(
+      project(),
+      stockAnimation('coinSpin')!,
+    );
+
+    const written = JSON.parse(byName(source)['coinSpin.anim'].contents) as {
+      name?: string;
+    };
+    expect(written.name).toBe('Coin Spin');
+  });
+
   it('names the animation inside the file, not the file', () => {
     // "switch.anim" holds an animation called "switchFlip"; a `play animation`
     // block stores what the runtime looks up, which is the latter.

@@ -21,10 +21,23 @@ So the tab bar carries one button per folder (`files/folderMenus`,
 New actor          — where making one from nothing is a thing to want
 Import…            — where something stocks that kind
 ───────────────
-ball.actor      ⋮
-coin.actor      ⋮   the row opens it; the ⋮ renames or deletes it
-player.actor    ⋮
+Ball            ⋮
+Coin            ⋮   the row opens it; the ⋮ deletes it
+Player          ⋮
 ```
+
+**Rows are named by what the file DECLARES**, not by what it is called.
+`player.actor` reads as "Player" — the word on its own blocks, in every
+dropdown that offers it, in the map editor — because the file name is where
+that lives rather than what it is (`authoredName`). A file that declares
+nothing is titled from its own stem, the same fallback every dropdown makes:
+`level1.map` is "Level1". A `.sheet` is left out entirely, as it is from the
+tree: it belongs to the `.png` of the same name and is not a file to open.
+
+**Renaming the file is not offered.** It changes nothing these rows show and
+leaves the name the learner meant untouched. Renaming the THING — and moving
+its file to match — is the version worth having, and until it exists the tree
+still renames a file for anyone who wants the file renamed.
 
 **The acts are the tree's acts.** Opening, renaming and deleting go through the
 same `useFileOperations` and the same prompts the file browser uses, including

@@ -823,7 +823,11 @@ function starterAnimation(id: string): Record<string, StarterFile> {
     [`anim-${id}`]: {
       name: `${id}.anim`,
       language: 'anim',
-      contents: `${JSON.stringify(animation.document, null, 2)}\n`,
+      // The NAME first, as an import writes it (`appearance/importStock`): a
+      // starter file is a copy of what importing one would leave, and a copy
+      // that left the name out would be a starter whose animation is called
+      // `coinSpin` where an imported one is called "Coin Spin".
+      contents: `${JSON.stringify({name: animation.name, ...animation.document}, null, 2)}\n`,
       folderId: 'animations',
     },
   };

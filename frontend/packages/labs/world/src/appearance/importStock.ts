@@ -113,11 +113,16 @@ export function importStockAnimation(
     }
   }
   const placed = folderIn(current, ANIMATIONS_FOLDER);
+  // The NAME the dialog offered it under, written into the file. Without it
+  // the project's only word for this animation was `coinSpin` — the id, which
+  // is camelCase because a block stores it — and a learner who chose "Coin
+  // Spin" never saw those words again (`AnimationFile.name`).
+  const document = {name: animation.name, ...animation.document};
   return {
     source: writeFile(placed.source, placed.folderId, {
       name: `${animation.id}.anim`,
       language: 'anim',
-      contents: `${JSON.stringify(animation.document, null, 2)}\n`,
+      contents: `${JSON.stringify(document, null, 2)}\n`,
     }),
     // The id a `play animation` block stores — the animation's own key inside
     // the file, which is not always the file's stem ("switch" holds

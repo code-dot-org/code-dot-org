@@ -14,6 +14,16 @@ import type {AnimationDef, AnimationFrame, Cell} from './animationTypes';
 /** The on-disk shape of an animation `.json` file. */
 export interface AnimationFile {
   type: 'animation';
+  /**
+   * What the file calls itself — "Coin Spin", the words the import dialog used.
+   *
+   * The engine never reads it (`parseAnimationFile` returns the animations and
+   * nothing else): it is there so the EDITOR can show a learner the name they
+   * picked instead of the file's stem, which is a camelCase id
+   * (`files/FileMenus`, `blockly/projectModules`). Optional, because a
+   * hand-written file need not have one and an older one does not.
+   */
+  name?: string;
   animations: Record<string, AnimationDef>;
 }
 
