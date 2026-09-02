@@ -18,49 +18,24 @@ import type {CustomEditorProps} from '@code-dot-org/codebridge';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useMaybeLevelProperties, useSources} from '@code-dot-org/lab/contexts';
 
-import {setActorImportHandler} from '../actors/actorImport';
-import {ImportActorDialog} from '../actors/ImportActorDialog';
-import {importStockActor} from '../actors/importStockActor';
-import type {StockActor} from '../actors/stock';
 import {
   SpritePickerDialog,
   type PickedSprite,
 } from '../animationEditor/SpritePickerDialog';
-import {
-  setAppearanceImportHandler,
-  type AppearanceKind,
-} from '../appearance/appearanceImport';
-import {BackgroundLibraryDialog} from '../appearance/BackgroundLibraryDialog';
+import {requestAppearanceImport} from '../appearance/appearanceImport';
 import {isBackgroundPath} from '../appearance/backgroundsFolder';
-import {fetchStockBackground} from '../appearance/fetchStockBackground';
-import {ImportAppearanceDialog} from '../appearance/ImportAppearanceDialog';
-import {
-  importStockAnimation,
-  importStockBackground,
-  importStockSprite,
-} from '../appearance/importStock';
 import {projectSheets} from '../appearance/sheetFile';
-import type {
-  StockAnimation,
-  StockBackground,
-  StockSprite,
-} from '../appearance/stock';
 import {sizesOfImages, useProjectImages} from '../appearance/useProjectImages';
-import {ImportEffectDialog} from '../effect/ImportEffectDialog';
-import {importStockEffect} from '../effect/importStockEffect';
-import type {StockEffect} from '../effect/stock';
 import {
   hiddenToolboxCategories,
   showsRuleSource,
   type WorldLevelProperties,
 } from '../levelData';
+import {refreshFor} from '../library/refreshRegistries';
 import {useMaybeProgression} from '../progression/progressionContext';
 import {shelvedToolbox} from '../progression/toolboxShelf';
-import {ImportRuleDialog} from '../rules/ImportRuleDialog';
-import {importStockRule} from '../rules/importStockRule';
 import {removeRule, type HeldRule} from '../rules/removeRule';
 import {RulesInPlayDialog} from '../rules/RulesInPlayDialog';
-import type {StockRule} from '../rules/stock';
 import {projectImageSizes} from '../runtime/imageSize';
 import {
   filePath,
@@ -69,11 +44,9 @@ import {
   projectSoundPaths,
 } from '../runtime/projectFiles';
 import {useWorldRuntime} from '../runtime/WorldRuntimeContext';
-import {fetchStockSound} from '../sound/fetchStockSound';
-import {importStockSound} from '../sound/importStockSound';
-import {setSoundImportHandler} from '../sound/soundImport';
-import {SoundLibraryDialog} from '../sound/SoundLibraryDialog';
-import type {StockSound} from '../sound/stock';
+
+// One copy, shared with the shelves that do the same thing after a write
+// (`library/refreshRegistries`).
 
 import {refreshActorPictures} from './actorAbout';
 import {projectActorIcons} from './actorIconMeta';
@@ -85,7 +58,6 @@ import {
 import styles from './blocklyFileEditor.module.css';
 import {buildDomainPalette} from './domainBlocks';
 import {setEditingActor, setEditingRule} from './editingRule';
-import {setEffectImportHandler} from './effectImport';
 import {refreshMissingRuleWarnings} from './extensions/missingRule';
 import {fileKindOf} from './fileKind';
 import {registerLessonButtons} from './lessonFlyoutButton';
@@ -114,7 +86,7 @@ import {
   renameRuleReferences,
   type MemberKey,
 } from './renameRule';
-import {setRuleImportHandler} from './ruleImport';
+import {requestRuleImport} from './ruleImport';
 import {parseRuleMeta} from './ruleMeta';
 import {ruleByName} from './ruleRegistry';
 import {setRulesConfigHandler} from './rulesConfig';
@@ -360,35 +332,8 @@ export const BlocklyFileEditor = ({
     );
   }, [decoded]);
 
-  /**
-   * Refresh every registry from a project that has just been edited.
-   *
-   * Each importer does this before it hands the field its value — the dropdown
-   * rebuilds from the registry, and a value with no matching option is dropped
-   * by Blockly. It was six copies of the same three arguments; a fourth
-   * argument made that a list to keep in step, so it is one function.
-   */
-  const refreshFor = useCallback((source: MultiFileSource) => {
-    refreshProjectDropdowns(
-      projectFiles(source),
-      projectImagePaths(source),
-      projectImageSizes(source),
-      projectSoundPaths(source),
-    );
-  }, []);
-
-  // The stock-effect import, opened from an effect dropdown's `(import…)` row.
-  //
-  // The dropdown lives inside Blockly, which cannot reach React context or the
-  // project sources — so the field asks through a registered handler
-  // (./effectImport) and waits on the promise this resolves. Held in a ref
-  // because the field calls it long after the render that installed it.
-  const [importing, setImporting] = useState(false);
-  const resolveImport = useRef<((path: string | undefined) => void) | null>(
-    null,
-  );
-  // Read at import time rather than captured, so the file is written against
-  // the project as it stands when the learner chooses, not as it stood when the
+  // Read at import time rather than captured, so a write lands against the
+  // project as it stands when the learner chooses, not as it stood when the
   // dialog opened.
   const sourcesRef = useRef(currentSources);
   sourcesRef.current = currentSources;
@@ -401,56 +346,22 @@ export const BlocklyFileEditor = ({
   const onChangeRef = useRef(onChange);
   onChangeRef.current = onChange;
 
-  // The same machinery for rules. Two handlers rather than one because the two
-  // dropdowns want different dialogs; `importing` says which is open, so only
-  // one can be at a time — which is what a modal means anyway.
-  const [importingRule, setImportingRule] = useState(false);
-  // …and for actors. An interface element is an actor, so importing a Label is
-  // the same act as importing a mechanic (specs/UI_ACTORS.md) — which is why
-  // this is a third state rather than a third kind of thing.
-  const [importingActor, setImportingActor] = useState(false);
-  // The rules panel is a third state rather than a third importer: it is not
-  // choosing a value for anything, and it is what the stock picker returns TO
-  // when the picker was opened from it (`addFromRulesPanel`).
+  // The rules panel: what a world holds, opened from the world block. Not an
+  // importer — it is not choosing a value for anything — which is why it is
+  // the one dialog still owned here now that the shelves are the lab's
+  // (`library/LibraryImports`).
   const [configuringRules, setConfiguringRules] = useState(false);
   const resolveRulesConfig = useRef<(() => void) | null>(null);
-  // Whether this import was started from the panel, so closing the picker goes
-  // back there rather than back to the workspace. A learner adding two rules
-  // should not have to find the button again between them.
-  const cameFromRulesPanel = useRef(false);
 
   useEffect(() => {
-    setEffectImportHandler(
-      () =>
-        new Promise<string | undefined>(resolve => {
-          resolveImport.current = resolve;
-          setImporting(true);
-        }),
-    );
-    setRuleImportHandler(
-      () =>
-        new Promise<string | undefined>(resolve => {
-          resolveImport.current = resolve;
-          setImportingRule(true);
-        }),
-    );
-    setActorImportHandler(
-      () =>
-        new Promise<string | undefined>(resolve => {
-          resolveImport.current = resolve;
-          setImportingActor(true);
-        }),
-    );
-    setSoundImportHandler(
-      () =>
-        new Promise<string | undefined>(resolve => {
-          resolveImport.current = resolve;
-          setImportingSound(true);
-        }),
-    );
     // The rules panel, from the world block. It resolves with nothing — what it
     // changes it changes in the project, and the block only wants to know when
     // it closed so it can count again (blockly/rulesConfig).
+    //
+    // The only seam left here. The five IMPORT shelves are the lab's now
+    // (`library/LibraryImports`): they are offered from the file menus as well,
+    // which are on screen whatever is open, and a dialog owned by one editor
+    // can only be opened while that editor is mounted.
     setRulesConfigHandler(
       () =>
         new Promise<void>(resolve => {
@@ -461,29 +372,8 @@ export const BlocklyFileEditor = ({
     // Cleared on unmount so a field on a disposed workspace cannot open a
     // dialog this editor no longer owns.
     return () => {
-      setEffectImportHandler(null);
-      setRuleImportHandler(null);
-      setActorImportHandler(null);
-      setSoundImportHandler(null);
       setRulesConfigHandler(null);
     };
-  }, []);
-
-  const finishImport = useCallback((path: string | undefined) => {
-    setImporting(false);
-    setImportingRule(false);
-    setImportingActor(false);
-    setImportingSound(false);
-    setImportingAppearance(null);
-    resolveImport.current?.(path);
-    resolveImport.current = null;
-    // Back where it was opened from. A picker opened by the panel resolves the
-    // panel's own promise the moment it opens (there is no value coming back to
-    // a block), so this is only about what is on screen.
-    if (cameFromRulesPanel.current) {
-      cameFromRulesPanel.current = false;
-      setConfiguringRules(true);
-    }
   }, []);
 
   /** Close the panel, and let the block that opened it count again. */
@@ -510,67 +400,6 @@ export const BlocklyFileEditor = ({
     },
     [updateSources],
   );
-
-  const handleImport = useCallback(
-    (effect: StockEffect) => {
-      const sources = sourcesRef.current;
-      const {source, path} = importStockEffect(sources.source, effect);
-      // The file has to be in the project BEFORE the field takes its value: the
-      // dropdown rebuilds from the registry, and a value with no matching option
-      // is dropped by Blockly.
-      updateSources({...sources, source});
-      refreshFor(source);
-      finishImport(path);
-    },
-    [updateSources, finishImport],
-  );
-
-  const handleRuleImport = useCallback(
-    (rule: StockRule) => {
-      const sources = sourcesRef.current;
-      const {source, name} = importStockRule(sources.source, rule);
-      // In the project BEFORE the field takes its value, as with an effect: the
-      // dropdown rebuilds from the registry, and a value with no matching
-      // option is dropped by Blockly. The value is the rule's NAME — the field
-      // says which rule, never which file.
-      updateSources({...sources, source});
-      refreshFor(source);
-      finishImport(name);
-    },
-    [updateSources, finishImport],
-  );
-
-  const handleActorImport = useCallback(
-    (actor: StockActor) => {
-      const sources = sourcesRef.current;
-      const {source, path} = importStockActor(sources.source, actor);
-      // In the project BEFORE the field takes its value, as the rule importer
-      // does: the dropdown rebuilds from the registry, and a value with no
-      // matching option is dropped by Blockly. The value is the MODULE PATH —
-      // an actor dropdown says which file, where a rule dropdown says which
-      // rule (`actorFieldOptions` against `useRuleOptions`).
-      updateSources({...sources, source});
-      refreshFor(source);
-      finishImport(path);
-    },
-    [updateSources, finishImport],
-  );
-
-  // The appearance picker, opened from a `set sprite` / `play animation`
-  // dropdown. Same machinery as the other two: the field cannot reach React, so
-  // it asks through a handler and waits on the promise this resolves.
-  const [importingAppearance, setImportingAppearance] =
-    useState<AppearanceKind | null>(null);
-  useEffect(() => {
-    setAppearanceImportHandler(
-      kind =>
-        new Promise<string | undefined>(resolve => {
-          resolveImport.current = resolve;
-          setImportingAppearance(kind);
-        }),
-    );
-    return () => setAppearanceImportHandler(null);
-  }, []);
 
   /**
    * The `set sprite` picker: one palette of everything the project can draw.
@@ -615,112 +444,6 @@ export const BlocklyFileEditor = ({
       );
     },
     [finishPick],
-  );
-
-  const handleAppearanceImport = useCallback(
-    (chosen: StockSprite | StockAnimation) => {
-      const sources = sourcesRef.current;
-      const {source, value} =
-        'dataUrl' in chosen
-          ? importStockSprite(sources.source, chosen)
-          : importStockAnimation(sources.source, chosen);
-      // In the project BEFORE the field takes its value: the dropdown rebuilds
-      // from the registry, and a value with no matching option is dropped.
-      updateSources({...sources, source});
-      refreshFor(source);
-      // An import from inside the picker continues the picking: the learner
-      // asked for a picture, and now the project has one. Back to the palette
-      // rather than straight to the field — an imported spritesheet still has
-      // to say WHICH cell.
-      if (resolvePick.current) {
-        setImportingAppearance(null);
-        setPickCurrent({sprite: value});
-        setPickingSprite(true);
-        return;
-      }
-      finishImport(value);
-    },
-    [updateSources, finishImport],
-  );
-
-  /**
-   * The backdrop shelf, opened from `set background to`'s `(import…)` row.
-   *
-   * Async where the others are not: a backdrop's bytes are served rather than
-   * bundled (BACKGROUNDS.md §7), so choosing one is a fetch before it is an
-   * edit. The dialog stays open and says so while that happens, because a
-   * dialog that vanished and then failed would leave the learner with nothing
-   * to look at and nothing to try again.
-   */
-  const [importingBackground, setImportingBackground] = useState(false);
-  const [backgroundError, setBackgroundError] = useState<string | undefined>();
-
-  /**
-   * The sound shelf, opened from a `play sound` / `set music to` `(import…)`
-   * row.
-   *
-   * Async and stateful in exactly the way the backdrop shelf is, and for the
-   * same reason: a stock sound's bytes are served rather than bundled
-   * (specs/SOUND.md), so choosing one is a fetch before it is an edit. The
-   * dialog stays open and says so while that happens, because one that vanished
-   * and then failed would leave the learner with nothing to try again.
-   */
-  const [importingSound, setImportingSound] = useState(false);
-  const [fetchingSound, setFetchingSound] = useState(false);
-  const [soundError, setSoundError] = useState<string | undefined>();
-
-  const handleBackgroundImport = useCallback(
-    async (chosen: StockBackground) => {
-      setBackgroundError(undefined);
-      setImportingBackground(true);
-      let dataUrl: string;
-      try {
-        dataUrl = await fetchStockBackground(chosen);
-      } catch (error) {
-        setImportingBackground(false);
-        setBackgroundError(
-          error instanceof Error ? error.message : String(error),
-        );
-        return;
-      }
-      setImportingBackground(false);
-      const sources = sourcesRef.current;
-      const {source, value} = importStockBackground(
-        sources.source,
-        chosen,
-        dataUrl,
-      );
-      // In the project BEFORE the field takes its value: the dropdown rebuilds
-      // from the registry, and a value with no matching option is dropped.
-      updateSources({...sources, source});
-      refreshFor(source);
-      finishImport(value);
-    },
-    [updateSources, finishImport],
-  );
-
-  const handleSoundImport = useCallback(
-    async (chosen: StockSound) => {
-      setSoundError(undefined);
-      setFetchingSound(true);
-      let dataUrl: string;
-      try {
-        dataUrl = await fetchStockSound(chosen);
-      } catch (error) {
-        setFetchingSound(false);
-        setSoundError(error instanceof Error ? error.message : String(error));
-        return;
-      }
-      setFetchingSound(false);
-      const sources = sourcesRef.current;
-      const {source, value} = importStockSound(sources.source, chosen, dataUrl);
-      // In the project BEFORE the field takes its value: the dropdown rebuilds
-      // from the registry, and a value with no matching option is dropped.
-      updateSources({...sources, source});
-      refreshFor(source);
-      finishImport(value);
-    },
-    [updateSources, finishImport, refreshFor],
   );
 
   // The world whose module the popup introspects: the file being edited when it
@@ -1239,35 +962,24 @@ export const BlocklyFileEditor = ({
 
   return (
     <div className={styles.editor}>
-      {importing && (
-        <ImportEffectDialog
-          onImport={handleImport}
-          onCancel={() => finishImport(undefined)}
-        />
-      )}
-      {importingRule && (
-        <ImportRuleDialog
-          onImport={handleRuleImport}
-          onCancel={() => finishImport(undefined)}
-        />
-      )}
-      {importingActor && (
-        <ImportActorDialog
-          onImport={handleActorImport}
-          onCancel={() => finishImport(undefined)}
-        />
-      )}
       {configuringRules && (
         <RulesInPlayDialog
           source={currentSources.source}
           editable={!isReadOnly}
-          onAdd={() => {
-            // Hand over to the picker and come back — one dialog on screen at a
+          onAdd={async () => {
+            // Hand over to the shelf and come back — one dialog on screen at a
             // time. The panel's promise stays unresolved across the handover,
-            // so the block still counts once at the end of the whole errand.
-            cameFromRulesPanel.current = true;
+            // so the block that opened it still counts once at the end of the
+            // whole errand.
+            //
+            // AWAITED, where this used to set a flag and let the shelf's own
+            // finisher put the panel back. The shelf is the lab's now
+            // (`library/LibraryImports`) and answers with a promise, so
+            // "come back afterwards" is the line after the await rather than a
+            // ref two components share.
             setConfiguringRules(false);
-            setImportingRule(true);
+            await requestRuleImport();
+            setConfiguringRules(true);
           }}
           onRemove={handleRuleRemove}
           onClose={finishRulesConfig}
@@ -1280,45 +992,20 @@ export const BlocklyFileEditor = ({
           sheets={sheets}
           current={pickCurrent}
           onPick={choosePicture}
-          onImport={() => {
+          onImport={async () => {
+            // The same handover, and the same reason it is an await: an import
+            // from inside the picker continues the picking. The learner asked
+            // for a picture and now the project has one, so it goes back to the
+            // palette rather than straight to the field — an imported
+            // spritesheet still has to say WHICH cell.
             setPickingSprite(false);
-            setImportingAppearance('sprite');
+            const value = await requestAppearanceImport('sprite');
+            if (value) {
+              setPickCurrent({sprite: value});
+            }
+            setPickingSprite(true);
           }}
           onCancel={() => finishPick(undefined)}
-        />
-      )}
-      {importingAppearance === 'background' && (
-        <BackgroundLibraryDialog
-          onImport={handleBackgroundImport}
-          busy={importingBackground}
-          error={backgroundError}
-          onCancel={() => {
-            setBackgroundError(undefined);
-            finishImport(undefined);
-          }}
-        />
-      )}
-      {importingSound && (
-        <SoundLibraryDialog
-          onImport={handleSoundImport}
-          busy={fetchingSound}
-          error={soundError}
-          onCancel={() => {
-            setSoundError(undefined);
-            finishImport(undefined);
-          }}
-        />
-      )}
-      {importingAppearance && importingAppearance !== 'background' && (
-        <ImportAppearanceDialog
-          kind={importingAppearance}
-          onImport={handleAppearanceImport}
-          onCancel={() =>
-            // Back to the pictures if this was a detour from the picker.
-            resolvePick.current
-              ? (setImportingAppearance(null), setPickingSprite(true))
-              : finishImport(undefined)
-          }
         />
       )}
       <BlocklyProvider blocks={blocks} plugins={plugins} theme={theme}>

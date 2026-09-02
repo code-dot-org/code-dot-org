@@ -17,6 +17,7 @@ import {useWorldBlocklyTheme} from '../blockly/worldBlocklyTheme';
 import {ENTRY_FILE, ViewMode, type ViewModeType} from '../constants';
 import {ConsolePanel} from '../debug/ConsolePanel';
 import {showsFileBrowser, type WorldLevelProperties} from '../levelData';
+import {LibraryImports} from '../library/LibraryImports';
 import {WorldPreview} from '../preview/WorldPreview';
 import {ProgressionButton} from '../progression/ProgressionButton';
 import {fileIdAt} from '../runtime/projectFiles';
@@ -173,6 +174,11 @@ const WorldLayout = () => {
           }
         >
           <div className={styles.editorAndPreview}>
+            {/* The import shelves, mounted beside the workspace rather than
+                inside an editor: they are asked for from a block's `(import…)`
+                row AND from the file menus, and the menus are on screen
+                whatever is open (`library/LibraryImports`). */}
+            <LibraryImports />
             {showEditor && (
               <div className={styles.editorPane}>
                 <div className={styles.editorMain}>
