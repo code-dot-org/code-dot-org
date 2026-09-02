@@ -1,0 +1,27 @@
+/* The row of folder buttons, before the open-file tabs. */
+.menus {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding-inline: 4px;
+  flex: none;
+}
+
+/* The `…` on a file row: at the end, and only as wide as it needs. */
+.rowOptions {
+  margin-inline-start: 12px;
+}
+
+/* The icon column, at the size of the words beside it rather than MUI's
+   default 56px — which put a hand's width between a plus and "New actor". */
+.menuIcon {
+  min-width: 24px;
+}
+
+/* The design-system tooltip portals to <body> at z-index 10, which is under
+   the Blockly workspace beside these buttons — so a folder's name appeared
+   behind the blocks. Lifted to the same 1200 the image editor's tooltips use
+   to clear a modal overlay (`pixel-editor.module.scss`). */
+.tooltip {
+  z-index: 1200;
+}

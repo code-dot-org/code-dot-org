@@ -73,10 +73,16 @@ it('renders the World Lab shell from the default project', async () => {
   // default project renders.
   await act(async () => {});
 
-  // The default project's open file and folders appear in the browser.
+  // The default project's open file has a tab.
   expect((await screen.findAllByText('main.world')).length).toBeGreaterThan(0);
-  expect(screen.getAllByText('worlds').length).toBeGreaterThan(0);
-  expect(screen.getAllByText('actors').length).toBeGreaterThan(0);
+  // …and the way around the project is the folder menus, one button per
+  // folder, in the tab bar (`files/FileMenus`).
+  expect(screen.getByRole('button', {name: 'Worlds'})).toBeTruthy();
+  expect(screen.getByRole('button', {name: 'Actors'})).toBeTruthy();
+  // The tree is not showing: it starts collapsed now that there is another way
+  // around, and its own toggle brings it back.
+  expect(screen.queryByText('actors')).toBeNull();
+  expect(screen.getByRole('button', {name: /open file manager/i})).toBeTruthy();
   // The active file is the Blockly world, so its (stubbed) Blockly editor mounts.
   expect(screen.getByText('blockly editor')).toBeTruthy();
   // The preview view toggle rendered.

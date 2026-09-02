@@ -16,6 +16,7 @@ import {useWorldTutor} from '../aiTutor/useWorldTutor';
 import {useWorldBlocklyTheme} from '../blockly/worldBlocklyTheme';
 import {ENTRY_FILE, ViewMode, type ViewModeType} from '../constants';
 import {ConsolePanel} from '../debug/ConsolePanel';
+import {FileMenus} from '../files/FileMenus';
 import {showsFileBrowser, type WorldLevelProperties} from '../levelData';
 import {LibraryImports} from '../library/LibraryImports';
 import {WorldPreview} from '../preview/WorldPreview';
@@ -185,6 +186,11 @@ const WorldLayout = () => {
                   <Workspace
                     hideFileBrowser={!browsable}
                     pinnedFileId={entryFileId}
+                    // The menus are the way around a World project; the tree
+                    // is one toggle away for anyone who wants all of it at
+                    // once (`files/folderMenus`).
+                    tabBarStart={browsable ? <FileMenus /> : undefined}
+                    browserStartsCollapsed={browsable}
                   />
                 </div>
                 {/* Code-only view: the console falls back to under the editor. */}

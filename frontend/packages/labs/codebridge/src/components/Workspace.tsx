@@ -31,6 +31,27 @@ export interface WorkspaceProps {
    */
   hideFileBrowser?: boolean;
   /**
+   * Rendered in the TAB BAR, before the tabs — a host's own way around its
+   * files.
+   *
+   * World Lab puts one menu button per folder there: its folders are semantic
+   * (a picture is a backdrop because it is in `backgrounds/`), so a tree that
+   * can move a file between them offers a move that means nothing, while a
+   * menu per folder says what each one is for. The tree remains, one toggle
+   * away, for anyone who wants the whole project at once.
+   *
+   * Different from {@link children}, which is a toolbar under the tabs.
+   */
+  tabBarStart?: React.ReactNode;
+  /**
+   * Start with the file browser collapsed.
+   *
+   * The learner's own toggle still opens it, and the choice sticks for the
+   * session. A host passes this when it offers another way around — see
+   * {@link tabBarStart}.
+   */
+  browserStartsCollapsed?: boolean;
+  /**
    * A file whose tab has no close button. See {@link FileTabsProps.pinnedFileId}.
    *
    * Pass it with {@link hideFileBrowser}: together they are "this workspace is
@@ -55,11 +76,15 @@ export const Workspace = ({
   children,
   hideFileBrowser,
   pinnedFileId,
+  tabBarStart,
+  browserStartsCollapsed,
 }: WorkspaceProps) => {
   const [sidebarWidth, setSidebarWidth] = useState(SIDEBAR.initial);
   // Legacy has no draggable file-browser divider, only a collapse toggle; we
   // keep both — resize when open, collapse to zero width via the button.
-  const [fileBrowserCollapsed, setFileBrowserCollapsed] = useState(false);
+  const [fileBrowserCollapsed, setFileBrowserCollapsed] = useState(
+    Boolean(browserStartsCollapsed),
+  );
 
   return (
     <div className={styles.topArea}>
@@ -95,6 +120,7 @@ export const Workspace = ({
               />
             </span>
           )}
+          {tabBarStart}
           <div className={styles.tabsFill}>
             <FileTabs pinnedFileId={pinnedFileId} />
           </div>
