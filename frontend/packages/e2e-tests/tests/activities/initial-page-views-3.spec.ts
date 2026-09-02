@@ -6,10 +6,7 @@ import {SignInPage} from '../pages/sign-in';
 import {UnitOverviewPage} from '../pages/unit-overview-page';
 import {createStudent, resetSession, signOut} from '../shared/auth';
 import {analyze, WCAG_AA_TAGS} from '../shared/axe';
-import {
-  waitForHeaderSettled,
-  waitForVisualStability,
-} from '../shared/stability';
+import {waitForVisualStability} from '../shared/stability';
 
 interface ScenarioSurface {
   rootSelector: string;
@@ -35,7 +32,7 @@ test.describe('Looking at a few things with Applitools Eyes - Part 3', () => {
       // was deprecated in 2025); it renders as a plain instructional level with
       // no #overlay, so there is no overlay to close here.
       await level.gotoLevel({lesson: 13, level: 1});
-      await waitForHeaderSettled(page);
+      await level.header.waitForSettled();
       await level.waitForLessonHeaderRendered();
 
       await waitForVisualStability(page);
@@ -56,7 +53,7 @@ test.describe('Looking at a few things with Applitools Eyes - Part 3', () => {
 
       const level = new LessonLevelPage(page);
       await level.gotoLevel({lesson: 13, level: 1});
-      await waitForHeaderSettled(page);
+      await level.header.waitForSettled();
       await level.waitForLessonHeaderRendered();
 
       // color-contrast: the "deprecated" markdown link, #0596ce on #ffffff,
