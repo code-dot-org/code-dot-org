@@ -56,7 +56,8 @@ import {label} from '../blockly/label';
 import {authoredName} from '../blockly/projectModules';
 
 import styles from './fileMenus.module.css';
-import {FOLDER_MENUS, type FolderMenu} from './folderMenus';
+import {FOLDER_MENUS, type FolderMenu, type Makeable} from './folderMenus';
+import {fileStem, renamed, seedFor} from './newThing';
 
 /** The file the row menu is about, and what it hangs off. */
 interface RowMenu {
@@ -149,33 +150,95 @@ export const FileMenus = () => {
    * no folder to read it from.
    */
   const make = useCallback(
-    async (menu: FolderMenu, extension: string) => {
+    async (menu: FolderMenu, makeable: Makeable) => {
       const folderId = folderIds.get(menu.folder);
       if (folderId === undefined) {
         return;
       }
       close();
       const name = await promptForName({
-        title: `New ${extension} in ${menu.folder}`,
-        placeholder: `name.${extension}`,
+        title: makeable.label,
+        placeholder: makeable.placeholder,
         validateInput: value =>
           validateFileName(
             config,
             ops.source,
             folderId,
-            withExtension(value, extension),
+            fileNameFor(value, makeable.extension),
           ),
       });
-      if (name) {
-        const fileName = withExtension(name, extension);
-        ops.newFile({
-          fileName,
-          language: languageForFileName(config, fileName),
-          folderId,
-        });
+      if (!name) {
+        return;
       }
+      // ONE NAME, SAID ONCE: it becomes the file's stem and the thing's own
+      // name, so the menus — which read what a file declares — call it what
+      // the learner just called it (`files/newThing`).
+      const fileName = fileNameFor(name, makeable.extension);
+      const language = languageForFileName(config, fileName);
+      const seed = seedFor(makeable.extension, name);
+      if (seed && 'url' in seed) {
+        // Bytes rather than text, which is a different write: a `.png` lives
+        // on a URL and the image editor reads and writes it there.
+        ops.newExternalFile({fileName, language, folderId, ...seed});
+        return;
+      }
+      ops.newFile({fileName, language, folderId, contents: seed?.contents});
     },
     [ops, config, promptForName, folderIds, close],
+  );
+
+  /**
+   * Make one that starts as a copy of this one — `Clone`.
+   *
+   * `New` with a head start, and named the same way: the learner says what the
+   * new thing is called, and that name becomes its file's stem AND the name
+   * inside it. REPLACED rather than kept, which is the whole difference
+   * between a clone and a duplicate — two actors both called "Player" would be
+   * two rows nobody can tell apart, and every dropdown in the lab would offer
+   * the word twice.
+   *
+   * A picture is copied by its URL, which is where the bytes live and what the
+   * image editor reads and writes through.
+   */
+  const clone = useCallback(
+    async (file: ProjectFile, was: string) => {
+      setRow(undefined);
+      close();
+      const extension = file.name.split('.').pop() ?? '';
+      const name = await promptForName({
+        title: `Clone ${was}`,
+        value: `${was} copy`,
+        validateInput: value =>
+          validateFileName(
+            config,
+            ops.source,
+            file.folderId,
+            fileNameFor(value, extension),
+          ),
+      });
+      if (!name) {
+        return;
+      }
+      const fileName = fileNameFor(name, extension);
+      const language = languageForFileName(config, fileName);
+      if (file.url) {
+        ops.newExternalFile({
+          fileName,
+          language,
+          folderId: file.folderId,
+          url: file.url,
+          mimeType: file.mimeType,
+        });
+        return;
+      }
+      ops.newFile({
+        fileName,
+        language,
+        folderId: file.folderId,
+        contents: renamed(file.contents ?? '', name),
+      });
+    },
+    [ops, config, promptForName, close],
   );
 
   const importInto = useCallback(
@@ -253,7 +316,7 @@ export const FileMenus = () => {
           open?.menu.makes.map(makeable => (
             <MenuItem
               key={makeable.extension}
-              onClick={() => make(open.menu, makeable.extension)}
+              onClick={() => make(open.menu, makeable)}
             >
               <ListItemIcon className={styles.menuIcon}>
                 <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />
@@ -326,6 +389,16 @@ export const FileMenus = () => {
         }}
       >
         {row && (
+          <MenuItem onClick={() => clone(row.file, row.name)}>
+            <ListItemIcon className={styles.menuIcon}>
+              <FontAwesomeV6Icon iconName="clone" iconStyle="solid" />
+            </ListItemIcon>
+            <ListItemText disableTypography>
+              <Typography variant="body4">Clone</Typography>
+            </ListItemText>
+          </MenuItem>
+        )}
+        {row && (
           <MenuItem onClick={() => remove(row.file)}>
             <ListItemIcon className={styles.menuIcon}>
               <FontAwesomeV6Icon iconName="trash" iconStyle="solid" />
@@ -343,6 +416,13 @@ export const FileMenus = () => {
 /** `coinSpin.anim` is `coinSpin`, which `label` then titles. */
 const stemOf = (name: string): string => name.replace(/\.[^.]+$/, '');
 
-/** `player` in the actors menu is `player.actor`; `player.actor` already is. */
-const withExtension = (name: string, extension: string): string =>
-  name.endsWith(`.${extension}`) ? name : `${name}.${extension}`;
+/**
+ * The file a thing called `name` goes in — `Health Bar` in actors is
+ * `healthBar.actor`.
+ *
+ * A name typed WITH the extension is taken as the file name it plainly is, so
+ * a learner who types `chaser.actor` gets what they asked for rather than
+ * `chaserActor.actor`.
+ */
+const fileNameFor = (name: string, extension: string): string =>
+  name.endsWith(`.${extension}`) ? name : `${fileStem(name)}.${extension}`;

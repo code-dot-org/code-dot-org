@@ -11,9 +11,10 @@ import {describe, expect, it, vi} from 'vitest';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 const newFile = vi.fn();
+const newExternalFile = vi.fn();
 const activateFile = vi.fn();
 const deleteFile = vi.fn();
-const promptForName = vi.fn(async () => 'chaser');
+const promptForName = vi.fn(async () => 'Chaser');
 const confirm = vi.fn(async () => true);
 const alert = vi.fn(async () => {});
 
@@ -22,6 +23,7 @@ const SOURCE: MultiFileSource = {
   folders: {
     f1: {id: 'f1', name: 'rules', parentId: '0', open: true},
     f2: {id: 'f2', name: 'actors', parentId: '0', open: true},
+    f3: {id: 'f3', name: 'sprites', parentId: '0', open: true},
   },
   files: {
     a: {
@@ -62,6 +64,7 @@ vi.mock('@code-dot-org/codebridge', () => ({
   useFileOperations: () => ({
     source: SOURCE,
     newFile,
+    newExternalFile,
     activateFile,
     deleteFile,
     renameFile: vi.fn(),
@@ -142,6 +145,31 @@ describe('the file menus', () => {
     expect(screen.queryByText(/sheet/i)).toBeNull();
   });
 
+  it('clones a thing under a new name, inside and out', async () => {
+    // A copy that still called itself "Has Gravity" would be two rules a
+    // learner cannot tell apart, and a word every dropdown offers twice.
+    promptForName.mockResolvedValueOnce('Has Heavy Gravity');
+    openMenu('Rules');
+    fireEvent.click(
+      screen.getByRole('button', {name: 'Options for Has Gravity'}),
+    );
+    fireEvent.click(screen.getByText('Clone'));
+
+    await vi.waitFor(() => expect(newFile).toHaveBeenCalled());
+    const written = newFile.mock.calls.at(-1)![0] as {
+      fileName: string;
+      contents: string;
+      folderId: string;
+    };
+    expect(written.fileName).toBe('hasHeavyGravity.rule');
+    // …and beside the one it came from, since a clone is another of the same
+    // kind of thing.
+    expect(written.folderId).toBe('f1');
+    expect(JSON.parse(written.contents).blocks.blocks[0].fields.NAME).toBe(
+      'Has Heavy Gravity',
+    );
+  });
+
   it('does not offer to rename the file', () => {
     // Renaming the FILE changes nothing these rows show and leaves the name
     // the learner meant untouched. The tree still renames a file.
@@ -151,6 +179,7 @@ describe('the file menus', () => {
     );
 
     expect(screen.getByText('Delete')).toBeTruthy();
+    expect(screen.getByText('Clone')).toBeTruthy();
     expect(screen.queryByText('Rename')).toBeNull();
   });
 
@@ -162,28 +191,65 @@ describe('the file menus', () => {
 
   it('offers the shelf even for a folder the project has not got', () => {
     // `Import…` writes through a shelf, and a shelf makes its own folder — so
-    // it is offered where `New` cannot be.
-    openMenu('Sounds');
+    // it is offered where `New` cannot be. Effects: the project has no
+    // `effects/`, so there is nowhere to create one yet.
+    openMenu('Effects');
 
     expect(screen.getByText('Import…')).toBeTruthy();
     expect(screen.queryByText(/^New/)).toBeNull();
   });
 
-  it('names the extension itself, since the folder already knows it', async () => {
+  it('makes the file name out of the thing’s name', async () => {
+    // One name, said once: the learner types "Health Bar" and gets
+    // `healthBar.actor` — the shape every shipped file's stem has — without
+    // saying the extension or thinking about spaces.
+    promptForName.mockResolvedValueOnce('Health Bar');
     openMenu('Actors');
 
     fireEvent.click(screen.getByText('New actor'));
     await vi.waitFor(() =>
       expect(newFile).toHaveBeenCalledWith(
-        expect.objectContaining({fileName: 'chaser.actor', folderId: 'f2'}),
+        expect.objectContaining({fileName: 'healthBar.actor', folderId: 'f2'}),
       ),
     );
   });
 
-  it('makes nothing where making one from nothing means nothing', () => {
-    // A sprite is bytes. An empty one is not a starting point, so the only way
-    // in is the shelf (or an upload from the tree).
+  it('puts that name INSIDE the new file, where the menus read one', async () => {
+    // The other half, and the reason the first half is not enough: these rows
+    // say what a file declares, so a file that declared nothing would be the
+    // one row in the lab showing a file name.
+    openMenu('Actors');
+
+    fireEvent.click(screen.getByText('New actor'));
+    await vi.waitFor(() => expect(newFile).toHaveBeenCalled());
+    const {contents} = newFile.mock.calls.at(-1)![0] as {contents: string};
+    expect(JSON.parse(contents).blocks.blocks[0]).toMatchObject({
+      type: 'world_actor',
+      fields: {NAME: 'Chaser'},
+    });
+  });
+
+  it('makes a sprite as bytes, since a picture is not text', async () => {
+    // A blank tile to draw on: an empty PNG is not a starting point for a game
+    // and is exactly one for a drawing. It goes through the other write, the
+    // one that puts a file on a URL.
     openMenu('Sprites');
+
+    fireEvent.click(screen.getByText('New sprite'));
+    await vi.waitFor(() =>
+      expect(newExternalFile).toHaveBeenCalledWith(
+        expect.objectContaining({
+          fileName: 'chaser.png',
+          mimeType: 'image/png',
+        }),
+      ),
+    );
+  });
+
+  it('still makes nothing where making one from nothing means nothing', () => {
+    // A sound is bytes, and an empty one is silence nobody can draw. The only
+    // way in is the shelf (or an upload from the tree).
+    openMenu('Sounds');
 
     expect(screen.queryByText(/^New/)).toBeNull();
     expect(screen.getByText('Import…')).toBeTruthy();

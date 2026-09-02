@@ -46,13 +46,27 @@ Nothing is possible from here that was not possible before; this is a second
 reading of one project, not a second file system.
 
 **What a row does not offer says something.** A folder with no `New` is one
-where making a file from nothing means nothing: a sprite is bytes and so is a
-sound, and an empty one of either is not a starting point. A folder with no
-`Import…` is one nobody stocks — nothing ships a world or a map to copy in.
+where making a file from nothing means nothing: a SOUND is bytes, and an empty
+one is silence nobody can draw. A folder with no `Import…` is one nobody
+stocks — nothing ships a world or a map to copy in.
 
-**The extension is the menu's business.** `New actor` asks for a name and adds
-`.actor`, because the folder has already answered the question the tree has to
-ask ("name.actor"), and the answer cannot differ.
+Sprites and backdrops were in the first list and are not any more. An empty PNG
+is not a starting point for a game and is exactly one for a drawing, which is
+what the image editor is for: `New sprite` writes a blank tile and opens it.
+
+**One name, said once.** `New actor` asks for a name — "Health Bar" — and that
+name becomes both the file's stem (`healthBar.actor`, the shape every shipped
+file has) and the name inside the file: a new Blockly file opens onto its root
+already named, a new `.anim` or `.effect` carries the name in its document.
+Before, `New` wrote an empty file, the learner typed the name a second time into
+a block they had to find first, and until they did the project had an actor
+whose only name was a path.
+
+**Clone** is `New` with a head start: it asks what the new thing is called and
+copies the old one under that name — REPLACING the name inside rather than
+keeping it, since two things called "Player" are two rows nobody can tell apart
+and a word every dropdown offers twice. A picture is copied by its URL, which is
+where its bytes live.
 
 **A folder the project has not got** still gets a button. `Import…` works
 anyway, because a shelf makes the folder it writes into

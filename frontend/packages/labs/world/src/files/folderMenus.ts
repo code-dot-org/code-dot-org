@@ -13,9 +13,14 @@
 // one toggle away for anyone who wants the whole project at once.
 //
 // WHAT IS MISSING FROM A ROW IS THE POINT. A folder with no `makes` is one
-// where making a file from nothing means nothing: a sprite is bytes and a sound
-// is bytes, and an empty one of either is not a starting point. A folder with
-// no `shelf` is one nobody stocks: nothing ships a world or a map to import.
+// where making a file from nothing means nothing: a SOUND is bytes, and an
+// empty one is silence nobody can draw. A folder with no `shelf` is one nobody
+// stocks: nothing ships a world or a map to import.
+//
+// Sprites and backdrops were in the first list and are not any more. An empty
+// PNG is not a starting point for a game and IS one for a drawing — it is what
+// the image editor exists to fill in — so "New sprite" writes a blank tile and
+// opens it (`files/newThing`).
 
 import {requestActorImport} from '../actors/actorImport';
 import {requestAppearanceImport} from '../appearance/appearanceImport';
@@ -29,6 +34,8 @@ export interface Makeable {
   label: string;
   /** The extension it gets, which is what decides its editor. */
   extension: string;
+  /** What to type, which is a NAME: the file's stem is made from it. */
+  placeholder: string;
 }
 
 export interface FolderMenu {
@@ -56,13 +63,13 @@ export const FOLDER_MENUS: readonly FolderMenu[] = [
     folder: 'worlds',
     label: 'Worlds',
     icon: 'earth-americas',
-    makes: [{label: 'New world', extension: 'world'}],
+    makes: [{label: 'New world', extension: 'world', placeholder: 'My World'}],
   },
   {
     folder: 'actors',
     label: 'Actors',
     icon: 'masks-theater',
-    makes: [{label: 'New actor', extension: 'actor'}],
+    makes: [{label: 'New actor', extension: 'actor', placeholder: 'Chaser'}],
     shelf: requestActorImport,
   },
   {
@@ -73,8 +80,8 @@ export const FOLDER_MENUS: readonly FolderMenu[] = [
     // (specs/BEHAVIORS.md) — a different thing to reach for, in the same
     // folder.
     makes: [
-      {label: 'New rule', extension: 'rule'},
-      {label: 'New behavior', extension: 'behavior'},
+      {label: 'New rule', extension: 'rule', placeholder: 'Has Gravity'},
+      {label: 'New behavior', extension: 'behavior', placeholder: 'Chases'},
     ],
     shelf: requestRuleImport,
   },
@@ -82,21 +89,27 @@ export const FOLDER_MENUS: readonly FolderMenu[] = [
     folder: 'sprites',
     label: 'Sprites',
     icon: 'image',
-    makes: [],
+    // A blank one to draw on, which is what the image editor is for. It was
+    // "making one from nothing means nothing" until the seed existed; what an
+    // empty PNG is not is a *starting point for a game*, and it is exactly the
+    // starting point for a drawing (`files/newThing`).
+    makes: [{label: 'New sprite', extension: 'png', placeholder: 'Chaser'}],
     shelf: () => requestAppearanceImport('sprite'),
   },
   {
     folder: 'backgrounds',
     label: 'Backgrounds',
     icon: 'mountain-sun',
-    makes: [],
+    makes: [{label: 'New background', extension: 'png', placeholder: 'Cave'}],
     shelf: () => requestAppearanceImport('background'),
   },
   {
     folder: 'animations',
     label: 'Animations',
     icon: 'film',
-    makes: [{label: 'New animation', extension: 'anim'}],
+    makes: [
+      {label: 'New animation', extension: 'anim', placeholder: 'Coin Spin'},
+    ],
     shelf: () => requestAppearanceImport('animation'),
   },
   {
@@ -110,13 +123,13 @@ export const FOLDER_MENUS: readonly FolderMenu[] = [
     folder: 'effects',
     label: 'Effects',
     icon: 'wand-sparkles',
-    makes: [{label: 'New effect', extension: 'effect'}],
+    makes: [{label: 'New effect', extension: 'effect', placeholder: 'Ripple'}],
     shelf: requestEffectImport,
   },
   {
     folder: 'maps',
     label: 'Maps',
     icon: 'map',
-    makes: [{label: 'New map', extension: 'map'}],
+    makes: [{label: 'New map', extension: 'map', placeholder: 'Level 2'}],
   },
 ];
