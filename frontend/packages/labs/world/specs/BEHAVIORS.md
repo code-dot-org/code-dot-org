@@ -19,10 +19,25 @@ kind of actor that wants the same behaviour has to write it again.
 
 So the space looks like this:
 
-|                | state                               | behaviour                  | shared |
-| -------------- | ----------------------------------- | -------------------------- | ------ |
-| an actor's own | `world_rule_property` in a `.actor` | `each frame` in a `.actor` | no     |
-| a rule's trait | a trait's property                  | a trait's `each frame`     | yes    |
+|                | state                               | behaviour                                    | shared |
+| -------------- | ----------------------------------- | -------------------------------------------- | ------ |
+| an actor's own | `world_rule_property` in a `.actor` | `each frame` / `define block` in a `.actor`  | no     |
+| a rule's trait | a trait's property                  | a trait's `each frame` / its designed blocks | yes    |
+
+The behaviour column holds two things, and they answer different questions.
+`each frame` is work that REPEATS — the crosshair following the pointer. A
+`define block` in an `.actor` is a NAMED thing the kind does, run when something
+says so: the serve a ball knows how to do, called from the key that serves it
+and again from the handler that lost it. A learner reaches for the second on
+finding they have written the same six blocks twice, which should not be the
+moment they have to learn what a rule is (`ActorBuilder.defineAction`).
+
+It is the same `define block` a rule designs its own with, and where it sits
+decides whose it is — the bargain `define property` and `each frame` already
+make in their several homes. Statements only for now: the form that REPORTS a
+value wants a `defineQuery` beside `defineAction` and a `return` a body may end
+with, and until that exists the block says so on its own face rather than
+compiling to nothing (`extensions/actorBlockReports`).
 
 The gap is the third row: **shared, without being a rule**. Sprite Lab calls it
 a Behavior — a function you write once and add to as many actors as you like,

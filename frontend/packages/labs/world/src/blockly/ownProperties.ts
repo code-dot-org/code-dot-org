@@ -36,12 +36,16 @@
 
 import type {PropertyType} from '../engine/core/types';
 
+import type {ParamType} from './enums';
 import {localActorVar} from './localActors';
 import {
+  designedName,
   parseDefault,
   pascal,
   PROPERTY_TYPES,
   slug,
+  type ActionMeta,
+  type MemberPart,
   type MemberRef,
   type PropertyMeta,
 } from './ruleMeta';
@@ -51,6 +55,15 @@ interface ActorBlock {
   type?: string;
   fields?: Record<string, unknown>;
   next?: {block?: ActorBlock};
+  /** A `define block`'s designed signature, as the designer mutator saved it. */
+  extraState?: {
+    parts?: ReadonlyArray<{
+      kind?: string;
+      text?: string;
+      var?: string;
+      type?: string;
+    }>;
+  };
 }
 
 const field = (block: ActorBlock, name: string): string =>
@@ -74,6 +87,27 @@ export interface OwnMeta {
   /** Its `define actor` NAME, which is what its properties are labelled by. */
   readonly name: string;
   readonly properties: readonly PropertyMeta[];
+  /**
+   * Things this kind does, by name — `define block` in an `.actor` file.
+   *
+   * The third declaration a kind may make, after state (`define property`) and
+   * per-frame work (`each frame`): a NAMED thing it does. A rule is still the
+   * answer when behaviour is shared between kinds, elected, or answerable by
+   * `has trait`; this is for when the same six blocks were written twice.
+   *
+   * `ActionMeta` and not a shape of its own, because everything downstream is
+   * the machinery a rule's actions already use: `defineActionBlock` mints the
+   * call site from this, `memberKey` names it apart from every other file's,
+   * and `refCode` imports it where it is used. An own action differs from a
+   * rule's in exactly what an own property differs in — the ref says which
+   * FILE declared it rather than which rule.
+   *
+   * STATEMENTS ONLY for now. `define block` also designs a block that REPORTS
+   * a value, which wants `defineQuery` and a `return` in the body; one that
+   * says it reports something is refused here and says so on its own face
+   * (`extensions/actorBlockStatementOnly`).
+   */
+  readonly actions: readonly ActionMeta[];
 }
 
 /**
@@ -88,7 +122,16 @@ export function parseActorOwnMeta(
   modulePath: string,
   contents: string,
 ): OwnMeta | undefined {
-  return declarationsIn(modulePath, contents, 'world_actor', 'actor', 'Actor');
+  return declarationsIn(
+    modulePath,
+    contents,
+    'world_actor',
+    'actor',
+    'Actor',
+    // The only root that may hold a `define block`, and so the only reader
+    // that asks for one — see `declarationsFrom`.
+    true,
+  );
 }
 
 /**
@@ -186,10 +229,22 @@ function declarationsIn(
   rootType: string,
   scope: 'actor' | 'world',
   fallbackName: string,
+  withActions = false,
 ): OwnMeta | undefined {
   let root: ActorBlock | undefined;
+  const variables = new Map<string, string>();
   try {
-    const parsed = JSON.parse(contents) as {blocks?: {blocks?: ActorBlock[]}};
+    const parsed = JSON.parse(contents) as {
+      blocks?: {blocks?: ActorBlock[]};
+      variables?: ReadonlyArray<{id?: string; name?: string}>;
+    };
+    // A designed block's parameters are workspace variables, and what the
+    // mutator saved is their ids — the same resolution `parseRuleMeta` does.
+    for (const variable of parsed.variables ?? []) {
+      if (variable.id) {
+        variables.set(variable.id, variable.name ?? variable.id);
+      }
+    }
     root = (parsed.blocks?.blocks ?? []).find(b => b?.type === rootType);
   } catch {
     return undefined; // mid-edit / not JSON
@@ -197,21 +252,56 @@ function declarationsIn(
   if (!root) {
     return undefined;
   }
-  return declarationsFrom(modulePath, root, scope, fallbackName);
+  return declarationsFrom(
+    modulePath,
+    root,
+    scope,
+    fallbackName,
+    variables,
+    withActions,
+  );
 }
 
-/** Everything one root declares, given the root itself. */
+/**
+ * Everything one root declares, given the root itself.
+ *
+ * @param variables the workspace's variable map, id → name. A designed block's
+ *   parameters are variables, and their ids are what the mutator saved; without
+ *   this every parameter would be called by its id.
+ * @param withActions whether `define block` in this root's chain declares one.
+ *   True for an `.actor` FILE and nothing else, which is the whole of where a
+ *   `define block` may be written today: a world's own `define actor` generates
+ *   into a block scope, where the `export const` a declaration emits is not
+ *   legal, and a `.world` is not offered the block at all (`ROOT_HOMES`).
+ */
 function declarationsFrom(
   modulePath: string,
   root: ActorBlock,
   scope: 'actor' | 'world',
   fallbackName: string,
+  variables: ReadonlyMap<string, string> = new Map(),
+  withActions = false,
 ): OwnMeta | undefined {
   const name = field(root, 'NAME') || fallbackName;
   const properties: PropertyMeta[] = [];
+  const actions: ActionMeta[] = [];
   const taken = new Set<string>();
+  const namedBlocks = new Set<string>();
 
   for (const block of chain(root)) {
+    if (block.type === 'world_rule_block') {
+      if (withActions) {
+        const declared = designedBlock(block, modulePath, name, variables);
+        // First wins, as for properties: two blocks designed to read the same
+        // way would mint one block type twice, and which one a call site meant
+        // would depend on registration order.
+        if (declared && !namedBlocks.has(declared.id)) {
+          namedBlocks.add(declared.id);
+          actions.push(declared);
+        }
+      }
+      continue;
+    }
     if (block.type !== 'world_rule_property') {
       continue;
     }
@@ -258,7 +348,74 @@ function declarationsFrom(
     });
   }
 
-  return {modulePath, name, properties};
+  return {modulePath, name, properties, actions};
+}
+
+/**
+ * One `define block` in an actor's body, as the metadata its call site is
+ * minted from.
+ *
+ * The same reading `parseRuleMeta` gives the same block (`addDesignedBlock`),
+ * and deliberately so: it is one block with one meaning, and where it sits
+ * decides whose it is. What differs is the REF — `own`, naming the file rather
+ * than a rule — which is exactly how an own property differs from a rule's.
+ *
+ * Returns nothing for a block that says it REPORTS something. That form wants
+ * `defineQuery` and a `return`, which is the next piece of work rather than
+ * this one; the block wears a warning saying so, so it is not silent.
+ */
+function designedBlock(
+  block: ActorBlock,
+  modulePath: string,
+  actorName: string,
+  variables: ReadonlyMap<string, string>,
+): ActionMeta | undefined {
+  const returns = field(block, 'RETURNS');
+  if (returns && returns !== 'none') {
+    return undefined;
+  }
+  const raw = block.extraState?.parts ?? [];
+  const parts: MemberPart[] = raw.flatMap((part): MemberPart[] => {
+    if (part.kind === 'param') {
+      return [
+        {
+          kind: 'param',
+          name: (part.var && variables.get(part.var)) || 'value',
+          type: (part.type ?? 'number') as ParamType,
+        },
+      ];
+    }
+    return part.text ? [{kind: 'label', text: part.text}] : [];
+  });
+  const named = designedName(raw);
+  if (!named) {
+    return undefined; // a block with no words on it names nothing
+  }
+  return {
+    id: slug(named),
+    name: named,
+    params: parts
+      .filter(
+        (part): part is {kind: 'param'; name: string; type: ParamType} =>
+          part.kind === 'param',
+      )
+      .map(part => ({name: part.name, type: part.type})),
+    parts,
+    description: field(block, 'DESCRIPTION') || undefined,
+    // An actor's, so the call site takes an actor socket and the body is
+    // handed one — the same scope a trait's action has.
+    scope: 'actor',
+    ref: {
+      source: 'project',
+      exportName: `${pascal(named)}Action`,
+      // The declaring ACTOR, as an own property's ref names it: `memberRule`
+      // reads `own` and looks up no rule, so nothing warns that a project has
+      // stopped having an actor named "Ball".
+      ruleName: actorName,
+      modulePath,
+      own: true,
+    },
+  };
 }
 
 /**

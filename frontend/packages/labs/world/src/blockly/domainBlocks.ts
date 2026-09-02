@@ -65,6 +65,7 @@ import {
   type ParamType,
   type EnumMeta,
 } from './enums';
+import {actorBlockReportsExtension} from './extensions/actorBlockReports';
 import {
   actorContextExtension,
   builderWorldExtension,
@@ -168,7 +169,7 @@ import {
   type PropertyKind,
 } from './propertyOptions';
 import {IMPORT_RULE_VALUE} from './ruleImport';
-import {slug} from './ruleMeta';
+import {designedName, pascal, slug} from './ruleMeta';
 import type {
   ActionMeta,
   EventMeta,
@@ -2619,7 +2620,11 @@ const defineActionBlock = (action: ActionMeta) => {
   if (shadows.length) {
     registerValueShadows(type, shadows);
   }
-  registerMemberBlockType(type, action.ref.ruleName);
+  // `memberRule`, not the ref's name: an actor's OWN action carries the
+  // declaring actor in `ruleName`, and registering that as its rule made the
+  // call site warn that the project no longer had a rule called "Ball" — the
+  // same trap the property blocks describe.
+  registerMemberBlockType(type, memberRule(action.ref));
   return defineBlock({
     type,
     message0,
@@ -6669,13 +6674,103 @@ const worldRuleBlock = defineBlock({
   previousStatement: true,
   nextStatement: true,
   mutator: blockDesignerMutator,
-  extensions: [blockDesignerInitExtension, wideTextExtension('DESCRIPTION')],
+  extensions: [
+    blockDesignerInitExtension,
+    wideTextExtension('DESCRIPTION'),
+    // …and the one that says an actor's own block cannot report a value yet.
+    // In a `.rule` it never fires (`actorBlockReports`).
+    actorBlockReportsExtension,
+  ],
   style: 'setup_blocks',
   tooltip:
-    'Define a block this rule adds. The row above "do" is the block itself — ' +
-    'edit it with the pencil, and it is what you will see when you use it.',
-  generator: noGenerator,
+    'Define a block this rule adds, or — in an actor file — a thing that kind ' +
+    'of actor does. The row above "do" is the block itself: edit it with the ' +
+    'pencil, and it is what you will see when you use it.',
+  generator: {
+    javascript(block, generator) {
+      // WHERE IT SITS DECIDES WHO WRITES IT, the same bargain `each frame`
+      // makes in its three homes (`traitStepDefinition`).
+      //
+      // In a `.rule` or a `.behavior` this is a DECLARATION and nothing more:
+      // the module is assembled from the file's metadata and the body is
+      // pulled out by a pass of its own (`extractRuleBodies`), so generating
+      // anything here would write it twice.
+      //
+      // In an `.actor` file there is no metadata pass to write it, so this is
+      // the whole declaration. `defineAction` is the third of the same bargain
+      // `defineProperty` and `defineStep` make: state a kind carries, work it
+      // does every frame, and a named thing it does (ActorBuilder).
+      if (!definesActorFile(block)) {
+        return '';
+      }
+      // The statement form only. A block that says it REPORTS something wants
+      // `defineQuery` and a `return`, which is the next piece of work; the
+      // block says so on its own face rather than quietly doing nothing
+      // (`actorBlockStatementOnly`).
+      const returns = block.getFieldValue('RETURNS');
+      if (returns && returns !== 'none') {
+        return '';
+      }
+      const parts = (
+        block as unknown as {
+          saveExtraState?: () => {
+            parts?: Array<{kind?: string; text?: string; var?: string}>;
+          };
+        }
+      ).saveExtraState?.()?.parts;
+      const name = designedName(parts);
+      if (!name) {
+        return ''; // a block with no words on it names nothing
+      }
+      // The mutator stores each parameter's VARIABLE ID; the body's getters
+      // resolve those to safe identifiers, so the closure's signature has to
+      // resolve them the same way or the two disagree.
+      const params = (parts ?? [])
+        .filter(part => part.kind === 'param')
+        .map(part => generator.getVariableName(part.var ?? ''));
+      const body = generator.statementToCode(block, 'DO');
+      // The closure's `actor` SHADOWS the module's builder, as a step's does:
+      // a body written in an actor file says `this actor` and means this one,
+      // and `this actor` compiles to `actor` wherever it is written.
+      //
+      // `world` is bound from the actor because a body may well ask the world
+      // something, and the engine hands an action `(actor, …args)` — the same
+      // preamble a rule's actor-scoped action gets (`ruleMetaToModule`).
+      return (
+        `export const ${pascal(name)}Action = actor.defineAction(` +
+        `${str(slug(name))}, (${['actor', ...params].join(', ')}) => {\n` +
+        `  const world = actor.world;\n${body}}, {name: ${str(name)}});\n`
+      );
+    },
+  },
 });
+
+/**
+ * Whether this block is being written in an `.actor` FILE.
+ *
+ * Two questions in one, and both matter. Is the top of its chain a `define
+ * actor` — a `define block` chained under anything else belongs to whoever
+ * owns that root. And is this file a WORLD — a world's own `define actor` is a
+ * `world_actor` root too, and its body generates into a block scope where the
+ * `export const` this emits is not legal. The palette does not offer the block
+ * there (`ROOT_HOMES`), and this is what makes a pasted one harmless.
+ */
+const definesActorFile = (
+  block: Pick<Block, 'workspace'> & {
+    getParent?: () => unknown;
+    type?: string;
+  },
+): boolean => {
+  let at = block as {getParent?: () => unknown; type?: string};
+  for (
+    let up = at.getParent?.() as typeof at | null;
+    up;
+    at = up, up = at.getParent?.() as typeof at | null
+  ) {
+    // walk to the top of the chain
+  }
+  return at.type === 'world_actor' && !definesWorld(block.workspace);
+};
 
 // `return` ends a query body with the value it reports. A body block (generated
 // via the standard path, not statically), so it carries its own generator. No
@@ -8181,6 +8276,11 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // kinds, elected, or answerable by `has trait`; this is for when it is
       // none of those (ActorBuilder.defineStep).
       'world_trait_step',
+      // …and the third: a NAMED thing this kind does, which is what a learner
+      // reaches for on finding they have written the same six blocks twice.
+      // The same block a rule designs its own with — where it sits decides
+      // whose it is (`ActorBuilder.defineAction`).
+      'world_rule_block',
     ],
   },
   // What this kind LOOKS LIKE, described rather than referenced
@@ -8942,6 +9042,16 @@ export function buildDomainPalette(
       : DOMAIN_BLOCKS;
   const ownBlocks: DomainBlock[] = [];
   const ownTypes: string[] = [];
+  // …and the things those actors DO, by name. The same call site a rule's
+  // action gets, from the same factory: what differs is the ref, which names
+  // the file that declared it rather than a rule (`ownProperties`).
+  for (const action of (options.ownProperties ?? []).flatMap(
+    actor => actor.actions,
+  )) {
+    const block = defineActionBlock(action);
+    ownBlocks.push(block);
+    ownTypes.push(block.type);
+  }
   for (const property of ownProperties) {
     if (!property.readonly) {
       const setBlock = defineSetPropertyBlock(property);

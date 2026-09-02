@@ -55,7 +55,11 @@ export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
   // `.rule` — which the file already knows how to become.
   ['world_rule_trait', new Set<FileKind>(['rule'])],
   ['world_rule_event', new Set<FileKind>(['rule'])],
-  ['world_rule_block', new Set<FileKind>(['rule'])],
+  // …and an ACTOR file, where the same block declares a thing that kind of
+  // actor does rather than a member of a rule (`ActorBuilder.defineAction`).
+  // Not a `.world`: a world's own `define actor` generates into a block scope,
+  // and the declaration this emits is an `export const`.
+  ['world_rule_block', new Set<FileKind>(['rule', 'actor'])],
   ['world_rule_enum', new Set<FileKind>(['rule'])],
   ['world_rule_enum_option', new Set<FileKind>(['rule'])],
   ['world_rule_step_tick', new Set<FileKind>(['rule'])],

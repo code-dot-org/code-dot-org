@@ -649,11 +649,20 @@ anything was drawn, at the size `simulation/many` walks a learner up to on
 purpose. A NARROWER source still measures for itself, and must: the index knows
 about every actor and would hand back ones the source left out.
 
-**Own blocks outside a rule.** `define block` lives in the Rule category and a
-`.behavior` file (`domainBlocks.ts`, `TOOLBOX_HEAD`). A learner's first
-function should not require authoring a rule. Proposal: allow `define block` in
-an `.actor` as that kind's private function; the Making rim then teaches
-sharing one, not having one.
+~~**Own blocks outside a rule.**~~ BUILT for the statement form
+(`ActorBuilder.defineAction`, `blockly/ownProperties`). `define block` lived in
+the Rule category alone, so naming a piece of behaviour meant authoring a rule —
+a trait, an election and a file — when the honest motivation was that the same
+six blocks had been written twice. It is offered in an `.actor` file now, where
+it declares a thing that KIND of actor does: the same block, the same designer,
+the same call site a rule's action gets, differing only in a ref that names the
+file rather than a rule. The Making rim now teaches SHARING a function rather
+than having one.
+
+What is left is the form that REPORTS a value — `defineQuery` beside
+`defineAction`, and a `return` a body may end with. A `define block` in an
+actor that says it reports something is refused and wears a warning saying so,
+so the hole is visible rather than silent.
 
 **`repeat until` / `while`.** Deliberately absent, and it should stay absent: a
 loop that spans frames is not a loop in a world that ticks, and the honest

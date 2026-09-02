@@ -8,6 +8,8 @@ import {Actor} from '../core/Actor';
 import type {ActorDrawing, Pen} from '../core/drawing';
 import {Trait} from '../core/Trait';
 import type {
+  ActionParam,
+  ActorAction,
   AppliedEffectSpec,
   EventHandler,
   GameEvent,
@@ -182,6 +184,42 @@ export class ActorBuilder {
   /** The per-frame bodies this kind declared, for the World to schedule. */
   get ownSteps(): readonly ActorStep[] {
     return this.steps;
+  }
+
+  /**
+   * Declare a thing this KIND of actor does, by name — `define block`.
+   *
+   * The third of the same bargain `defineProperty` and `defineStep` make: state
+   * a kind carries, work it does every frame, and now a NAMED thing it does.
+   * A rule is still the answer when the behaviour is shared between kinds,
+   * elected, or answerable by `has trait`; this is for the case where the
+   * honest motivation is that the same six blocks were written twice.
+   *
+   * NOTHING IS REGISTERED, unlike a property, and that is worth saying: an
+   * action is stateless, and `Actor.act` simply applies the one it is handed —
+   * it does not look it up on the actor, or check that the actor has whatever
+   * declared it. So this makes an object and returns it, which the generated
+   * module binds to a `const` its handlers close over.
+   *
+   * It is a method rather than an object literal in generated code because the
+   * ownership should be stated somewhere a reader can find it, and because a
+   * `world.`/`actor.` call is what `builderSurface.test` can see.
+   */
+  defineAction(
+    id: string,
+    apply: (actor: Actor, ...args: never[]) => void,
+    opts: {name?: string; params?: readonly ActionParam[]} = {},
+  ): ActorAction {
+    return {
+      id,
+      name: opts.name,
+      // The kind that declared it, which is what an error naming it has to
+      // say. There is no trait to point at, and `ownerId` is the only thing
+      // that says where it came from.
+      ownerId: this.id,
+      params: opts.params,
+      apply: apply as ActorAction['apply'],
+    };
   }
 
   /**
