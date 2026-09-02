@@ -87,8 +87,8 @@ module OmniauthCallbacksControllerTests
     end
 
     test "sign-in via v2 authentication id" do
-      # Covers the lookup only. This sign-in also creates the account's v1 anchor,
-      # which "sign-in anchors a v2-only account on its UserId" asserts; the
+      # Covers the lookup only. This sign-in also creates the account's v1 record,
+      # which "sign-in adds the v1 record for a v2-only account" asserts; the
       # creates-nothing steady state is covered by the both-records test below.
       teacher = create(:teacher, :classlink_sso_provider, uid: '2222|T5678-0005')
       mock_oauth uid: 59_777_133, tenant_id: 2222, sourced_id: 'T5678-0005'
@@ -147,7 +147,7 @@ module OmniauthCallbacksControllerTests
       created_user&.destroy!
     end
 
-    test "sign-in anchors a v2-only account on its UserId" do
+    test "sign-in adds the v1 record for a v2-only account" do
       # A signup from an OneRoster district holds only a v2 record. SourcedId can
       # change or stop arriving; the UserId cannot, so sign-in fills in the
       # missing half of the pair while both ids are still in hand.
@@ -165,14 +165,14 @@ module OmniauthCallbacksControllerTests
       assert_nil v1_auth_option.version
     end
 
-    test "a v2-only account anchored at sign-in survives losing its SourcedId" do
-      # The whole point of anchoring, as one sequence on one account: the second
+    test "a v2-only account given its v1 record at sign-in survives losing its SourcedId" do
+      # The whole point of the v1 record, as one sequence on one account: the second
       # login is served by the record the first login's builder actually wrote,
       # not by a factory-inserted stand-in. Paired with the negative control
       # below, which shows the second login fails without it.
       teacher = create(:teacher, :classlink_sso_provider, uid: '2222|T5678-0005')
 
-      # District still has OneRoster on. This writes the anchor.
+      # District still has OneRoster on. This writes the v1 record.
       mock_oauth uid: 59_777_133, tenant_id: 2222, sourced_id: 'T5678-0005'
       assert_creates(AuthenticationOption) {sign_in_through_classlink}
       assert_equal teacher.id, signed_in_user_id
@@ -188,8 +188,8 @@ module OmniauthCallbacksControllerTests
       assert_equal teacher.id, signed_in_user_id
     end
 
-    test "without the anchor a v2-only account is lost when SourcedId stops arriving" do
-      # Negative control for the test above. Suppressing only the anchor leaves the
+    test "without the v1 record a v2-only account is lost when SourcedId stops arriving" do
+      # Negative control for the test above. Suppressing only that write leaves the
       # account v2-only, and the second login cannot reach it — it is routed to
       # sign-up instead, which is the duplicate-account/lockout outcome. Without
       # this, the test above could be passing on some unrelated fallback.
@@ -210,7 +210,7 @@ module OmniauthCallbacksControllerTests
 
     test "sign-in succeeds and reports when another account holds the UserId" do
       # A duplicate account holding this UserId is the fingerprint of an orphaning that
-      # predates anchoring. The anchor can't be written, which is worth a report, but it
+      # predates this code. The v1 record can't be written, which is worth a report, but it
       # must not cost this user their session.
       teacher = create(:teacher, :classlink_sso_provider, uid: '2222|T5678-0005')
       create(:teacher, :classlink_sso_provider, uid: '59777133')
@@ -225,8 +225,8 @@ module OmniauthCallbacksControllerTests
       assert_equal teacher.id, signed_in_user_id
     end
 
-    test "an anchored account signs in after its district disables OneRoster" do
-      # The property the anchor exists for. With SourcedId empty no v2 id can be
+    test "an account holding its v1 record signs in after its district disables OneRoster" do
+      # The property the v1 record exists for. With SourcedId empty no v2 id can be
       # built, so the UserId record is the only thing that can find this account.
       # Without it the lookup misses and sign-up runs, orphaning the account.
       teacher = create(:teacher, :classlink_sso_provider, uid: '2222|T5678-0005')

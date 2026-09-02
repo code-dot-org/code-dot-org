@@ -544,7 +544,7 @@ The residual cost of having no bulk lever is the duplicate-student window, which
 - Bulk migration script (build and optionally run): Rejected outright once `SourcedId` was documented as empty for non-OneRoster districts — see above. The reasoning is preserved in the Settled section so it is not re-proposed.
 - Marking v1 records with an explicit `version = 'v1'`: The existing ~14k records carry nil, so stamping new v1 signups differently would split one population into two spellings for no query we need. Nil already means "legacy format" unambiguously. Rejected.
 
-### 7a. The v1 record is every account's login anchor, not just older accounts'
+### 7a. The v1 record is every account's durable login id, not just older accounts'
 
 **Decision:** Every ClassLink account holds a v1 (`UserId`-keyed) auth option, including accounts that
 were created on the v2 format. At sign-in, when the resolved user holds a v2 ClassLink auth option and
@@ -553,7 +553,7 @@ the mirror image of the login-time v2 creation in Decision 7, and runs at the sa
 
 **The two formats do different jobs, and neither is the other's successor:**
 
-- **v1 (`UserId`) is the durable login anchor.** ClassLink assigns it, it is globally unique and stable
+- **v1 (`UserId`) is the durable login id.** ClassLink assigns it, it is globally unique and stable
   within ClassLink (confirmed 2026-09-01), and `v2/my/info` returns it on **every** response — including
   for districts with no OneRoster, where `SourcedId` is empty. Nothing else in the payload has all three
   properties.
@@ -606,25 +606,25 @@ alternate implementation in `Services::User::MultiAuthMigrator`), and the uid wa
 before any of it. Writing both rows at signup means threading the `UserId` through that shared,
 feature-flagged path for every provider.
 
-That is not worth it for the remaining exposure. A new v2-only signup is anchored at its next sign-in, so
+That is not worth it for the remaining exposure. A new v2-only signup gains its v1 record at the next sign-in, so
 the window is one login cycle, and stranding an account inside it requires the district to disable
 OneRoster in that exact interval. Phase 1 has not deployed to production (task 1.10), so no v2-only
 accounts exist yet and there is no backlog to race. If the window is ever judged too wide, closing it is a
 self-contained follow-up: give the ClassLink signup both auth options up front via
 `authentication_options_attributes`, which `user_attributes` already round-trips.
 
-**Anchoring runs on login, not on connect.** Both paths pass through the same uid-rewrite seam, so
-anchoring every account found there is the smaller diff, but on a connect attempt the account found is the
+**The v1 record is written on login, not on connect.** Both paths pass through the same uid-rewrite
+seam, so writing it for every account found there is the smaller diff, but on a connect attempt the account found is the
 credential *holder* rather than `current_user` — and that path continues either to refuse the connect or to
 destroy the holder in a takeover (`move_sections_and_destroy_source_user`). Writing rows onto a third
-party's account in the middle of either is blast radius the anchor does not need, and it makes a refused
+party's account in the middle of either is blast radius this does not need, and it makes a refused
 connect a mutating operation. The repair opportunity given up is negligible: any user who can connect can
-also sign in, which is where the anchor is written.
+also sign in, which is where the record is written.
 
 **Alternatives considered:**
 
 - **Sign up on the v1 `UserId` and let the next sign-in add v2.** Strictly the strongest durability story —
-  the anchor exists from the first row, with no window at all — and the smallest change. Rejected on UX: a
+  the v1 record exists from the first row, with no window at all — and the smallest change. Rejected on UX: a
   newly signed-up teacher would hold no v2 option, so Decision 6a hides the rostering UI from them until
   they sign out and back in. That is the "sign out and sign back in" experience Decision 6a exists to
   eliminate, reintroduced at the exact moment a teacher is trying to set up their classes.

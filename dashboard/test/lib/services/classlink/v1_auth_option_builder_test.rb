@@ -97,7 +97,7 @@ class Services::Classlink::V1AuthOptionBuilderTest < ActiveSupport::TestCase
         end
 
         # ClassLink's UserId is globally unique, so this means a duplicate account
-        # exists. Reporting it as "already anchored" would discard the only trace of
+        # exists. Dismissing it as "nothing to do" would discard the only trace of
         # that, so the builder hands back a record the caller cannot save and reports.
         it 'returns a record rather than nil' do
           refute_nil result
@@ -121,7 +121,7 @@ class Services::Classlink::V1AuthOptionBuilderTest < ActiveSupport::TestCase
 
         # The existence check must compare byte-exactly. Under the column's
         # case-insensitive collation a case-twin's record would look like this
-        # account's own, leaving it permanently unanchored.
+        # account's own, leaving it permanently without a v1 record.
         it 'still builds the auth option' do
           _(result.authentication_id).must_equal classlink_user_id
         end

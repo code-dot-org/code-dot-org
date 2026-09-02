@@ -517,32 +517,16 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     v2_user = User.find_by_credential(type: AuthenticationOption::CLASSLINK, id: classlink_v2_id)
     if v2_user
-      # Anchor an account that holds only a v2 record. The uid rewrite below makes this
-      # sign-in work, but it only works while SourcedId keeps arriving unchanged; the
-      # UserId-keyed record is what keeps the account reachable if it ever doesn't.
-      #
-      # Login only. On a connect attempt the account found here belongs to whoever
-      # holds the credential, not to current_user, and that path can go on to refuse
-      # the connect or to destroy the holder in a takeover — writing rows to a third
-      # party's account in the middle of either is blast radius the anchor does not
-      # need. Anchoring is about keeping login working, so it runs on login.
       ensure_classlink_v1_auth_option(classlink_v2_id, auth.uid) unless should_connect_provider?
     else
       v1_user = User.find_by_credential(type: AuthenticationOption::CLASSLINK, id: auth.uid)
       if v1_user
-        # SourcedId present and no v2 record yet: add one alongside the v1
-        # record, which stays.
         new_auth_option = Services::Classlink::V2AuthOptionBuilder.call(
           classlink_v1_id: auth.uid.to_s,
           tenant_id: auth.info&.district_id,
           sourced_id: auth.info&.external_id
         )
-        # If the v2 record can't be created (e.g. the account's ClassLink
-        # credential lives only in users.uid, so there is no v1 auth option to
-        # duplicate), keep the v1 uid so the existing user is still found rather
-        # than duplicated. Reported because this path had a SourcedId to work
-        # from and still produced no v2 record: the user keeps signing in, but
-        # silently never gains one, and so never becomes eligible for rostering.
+
         unless new_auth_option&.save
           Observability::Errors.report(
             'ClassLink v2 auth option not created',
@@ -566,7 +550,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # Gives an account that holds only a v2 ClassLink auth option its UserId-keyed v1
   # sibling, so it stays reachable if SourcedId ever changes or stops arriving.
   #
-  # Deliberately never raises and never aborts the sign-in: failing to write the anchor
+  # Deliberately never raises and never aborts the sign-in: failing to write the record
   # costs a safety net, while raising here would cost the session of a user whose
   # credential already matched. A failure is reported instead, since UserId is globally
   # unique and there should be no way for this insert to be refused.

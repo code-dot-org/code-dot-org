@@ -125,10 +125,6 @@ class AuthenticationOption < ApplicationRecord
   module Classlink
     SEPARATOR = '|'.freeze
 
-    # No :v1 key on purpose. nil is the v1 marker: rows written before the
-    # column existed carry nil, and version_for still stamps nil for every new
-    # v1 id issued today. Adding 'v1' would split one population into two
-    # spellings and break every query written against the existing rows.
     VERSION = {
       v2: 'v2',
     }.freeze
