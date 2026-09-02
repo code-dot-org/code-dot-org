@@ -1,4 +1,12 @@
-// "Player" — something to steer, in a game with a floor.
+// "Platformer Player" — something to steer, in a game with a floor.
+//
+// NAMED FOR THE GAME IT ASSUMES. It was "Player", which is what every game has
+// and what none of them has the same of: this one walks LEFT AND RIGHT, jumps
+// with the space bar, and falls — a side view with gravity in it, and the
+// wrong player for a top-down game, a point-and-click or a puzzle. The name
+// says so before the import does, since a learner who takes "Player" and finds
+// it falling off the bottom of a top-down map has been told nothing they could
+// have acted on.
 //
 // The first stock actor that is an assembly rather than a thing: three traits,
 // an animation and a key binding, none of which is interesting alone and all of
@@ -32,7 +40,7 @@ const jump = {
 };
 
 export const playerActor = actorFile(
-  'Player',
+  'Platformer Player',
   [
     // Jumping, which brings being pulled down with it.
     useTrait('Jumping#JumpsTrait'),

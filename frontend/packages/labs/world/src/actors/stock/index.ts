@@ -132,9 +132,13 @@ export const STOCK_ACTORS: readonly StockActor[] = [
   },
   {
     id: 'player',
-    name: 'Player',
+    // The GAME it assumes, in the name: this one walks left and right, jumps,
+    // and falls, which is the wrong player for a top-down game. See the note
+    // in `player.ts`. The id stays `player` — it is the file's stem, and the
+    // lessons that place one name it.
+    name: 'Platformer Player',
     description:
-      'Somebody to be. Walks with the arrow keys, jumps with the space bar, and falls when there is nothing under it \u2014 which is why it comes with a Ground.',
+      'Somebody to be in a side-view game. Walks left and right with the arrow keys, jumps with the space bar, and falls when there is nothing under it \u2014 which is why it comes with a Ground.',
     // Jumping pulls Gravity, and Arrow Keys pulls Physics: three named rules
     // leave five in the project. What the entry names is what the FILE says,
     // and the rule importer works out the rest.
@@ -146,7 +150,7 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     id: 'ground',
     name: 'Ground',
     description:
-      'A tile that holds things up and cannot be walked through. The other half of the Player \u2014 gravity with nothing to land on is a long fall.',
+      'A tile that holds things up and cannot be walked through. The other half of the Platformer Player \u2014 gravity with nothing to land on is a long fall.',
     requires: ['Gravity', 'Solid Bodies'],
     sprites: [GROUND_SPRITE],
     contents: groundActor,
