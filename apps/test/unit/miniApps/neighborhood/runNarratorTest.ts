@@ -92,7 +92,7 @@ describe('NeighborhoodRunNarrator', () => {
     expect(utterances()).toEqual(['Moving east, 5 squares.']);
   });
 
-  it('does not repeat a total a progress report just gave', () => {
+  it('does not repeat a total that a progress report just gave', () => {
     for (let i = 0; i < 5; i++) {
       narrator.onSignal(move('east'));
     }
