@@ -78,7 +78,7 @@ class Pd::WorkshopSurveyFoormSubmission < ApplicationRecord
       session_count = pd_workshop.sessions.count
       if day > session_count
         errors.add(:day, "#{day} is not valid for workshop #{pd_workshop.id}")
-        Honeybadger.notify("Foorm was submitted for day #{day} for workshop #{pd_workshop.id}, which only had #{session_count} sessions.")
+        Observability::Errors.report("Foorm was submitted for day #{day} for workshop #{pd_workshop.id}, which only had #{session_count} sessions.")
       end
     end
   end

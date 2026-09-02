@@ -59,7 +59,7 @@
         "blocks": {
           "blocks": [
             {
-              "type": "when_run",
+              "type": "spritelab2_whenRun",
               "x": 20,
               "y": 20,
               "deletable": false,
@@ -77,7 +77,7 @@
               "languageVersion": 0,
               "blocks": [
                 {
-                  "type": "when_run",
+                  "type": "spritelab2_whenRun",
                   "id": "when-run",
                   "x": 20,
                   "y": 20,
@@ -152,7 +152,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false" x="20" y="20"/>
+        <block type="spritelab2_whenRun" deletable="false" movable="false" x="20" y="20"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>

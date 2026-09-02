@@ -8,6 +8,7 @@
  */
 
 import {findOpaqueBounds} from '@cdo/apps/p5lab/spritelab/lab2/imageTrim';
+import {BACKGROUND_GROUND_COLOR} from '@cdo/apps/p5lab/spritelab/lab2/paintBlank';
 
 export interface MatteOptions {
   // Soft matte feathers the edge (partial alpha + spill suppression). When
@@ -243,4 +244,29 @@ function loadImage(blob: Blob): Promise<HTMLImageElement> {
     img.onerror = reject;
     img.src = URL.createObjectURL(blob);
   });
+}
+
+/**
+ * Composite a PNG blob over the stage's ground color. Backgrounds must be
+ * fully opaque: model output sometimes carries transparent pixels, which
+ * would show the stage through the artwork.
+ */
+export async function flattenOntoGround(blob: Blob): Promise<Blob> {
+  const bitmap = await createImageBitmap(blob);
+  const canvas = document.createElement('canvas');
+  canvas.width = bitmap.width;
+  canvas.height = bitmap.height;
+  const ctx = canvas.getContext('2d');
+  if (!ctx) {
+    bitmap.close();
+    return blob;
+  }
+  ctx.fillStyle = BACKGROUND_GROUND_COLOR;
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.drawImage(bitmap, 0, 0);
+  bitmap.close();
+  const out = await new Promise<Blob | null>(resolve =>
+    canvas.toBlob(resolve, 'image/png')
+  );
+  return out || blob;
 }

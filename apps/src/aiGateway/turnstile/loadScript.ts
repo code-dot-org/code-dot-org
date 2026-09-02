@@ -1,4 +1,5 @@
 import {LOG, TURNSTILE_SCRIPT_URL} from './constants';
+import {TurnstileChallengeError} from './types';
 
 let scriptLoadPromise: Promise<void> | null = null;
 
@@ -27,7 +28,10 @@ export function loadTurnstileScript(): Promise<void> {
       resolve();
     };
     script.onerror = event => {
-      const err = new Error('Failed to load Turnstile script');
+      const err = new TurnstileChallengeError(
+        'script_load_failed',
+        'Failed to load Turnstile script'
+      );
       console.error(`${LOG} Script load failed:`, event);
       reject(err);
     };

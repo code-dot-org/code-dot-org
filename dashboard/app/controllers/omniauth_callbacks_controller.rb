@@ -524,9 +524,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
         # migration silently fails here never converges to v2, and the Phase 3
         # cleanup gate needs to know why.
         unless new_auth_option&.save
-          Observability::Errors.capture_message(
+          Observability::Errors.report(
             'ClassLink v2 auth option not created',
-            extra: {
+            context: {
               classlink_user_id: auth.uid,
               classlink_v2_id: classlink_v2_id,
               errors: new_auth_option&.errors&.full_messages,
@@ -632,7 +632,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
         'Failed to update User during silent takeover'
       # This should never happen if other logic is working correctly, so notify
       # This can happen if the account being taken over is already invalid
-      Honeybadger.notify(
+      Observability::Errors.report(
         error_class: error_class,
         error_message: exception.message,
         context: {
@@ -732,7 +732,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       begin
         Services::Lti::AccountLinker.call(user: user, session: session)
       rescue => exception
-        Honeybadger.notify(exception, context: {message: 'Error linking LTI account to oauth account', user_id: user.id})
+        Observability::Errors.report(exception, context: {message: 'Error linking LTI account to oauth account', user_id: user.id})
         PartialRegistration.delete(session)
 
         flash.alert = I18n.t('lti.account_linking.backend_error')

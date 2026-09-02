@@ -25,7 +25,7 @@ module Services
       }
 
       if formatted_notification[:external_id].blank? || formatted_notification[:title].blank? || formatted_notification[:description].blank? || formatted_notification[:icon_name].blank?
-        Honeybadger.notify(
+        Observability::Errors.report(
           'Unable to format Contentful notification. Check contentful to make sure the notification has all required fields input correctly.',
           context: {
             contentful_id: contentful_notification.id,
@@ -52,7 +52,7 @@ module Services
 
       formatted_notification
     rescue StandardError => exception
-      Honeybadger.notify(
+      Observability::Errors.report(
         'Error trying to format Contentful notification',
         context: {
           contentful_id: contentful_notification.id,
