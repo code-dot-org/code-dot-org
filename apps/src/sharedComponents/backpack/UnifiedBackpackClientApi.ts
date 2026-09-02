@@ -1,3 +1,5 @@
+import {UniversalAppType} from '@cdo/generated-scripts/sharedConstants';
+
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
 
@@ -8,9 +10,6 @@ import {
   ErrorCallback,
   FileMetadata,
 } from './types';
-
-// App type the backend uses for the backpack that belongs to no lab.
-export const UNIVERSAL_APP_TYPE = 'universal';
 
 const UNIVERSAL_CHANNEL_URL = '/backpacks/channel';
 const ALL_CHANNELS_URL = '/backpacks/channels';
@@ -202,7 +201,7 @@ export default class UnifiedBackpackClientApi {
 
   // Client for the universal backpack, where writes go.
   private universalClient(onError?: ErrorCallback) {
-    return this.clientForAppType(UNIVERSAL_APP_TYPE, onError);
+    return this.clientForAppType(UniversalAppType, onError);
   }
 
   // Client for one of the user's backpacks, fetching their channels if we have not
