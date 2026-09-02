@@ -1,0 +1,35 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2026-09-02T21:53:45.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
+    "visible_tabs": [
+      "Images"
+    ],
+    "locked_image_type": "background",
+    "guide_mode": "instructions",
+    "long_instructions": "# Make a background\nUse AI to create the background for your story scene. Describe a place - a forest, a city, outer space - and press **Generate**.",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-02T21:53:45.256+00:00\",\"changed\":[\"cloned from \\\"HoAI26-Playtest1-Story-Background\\\"\"],\"cloned_from\":\"HoAI26-Playtest1-Story-Background\"}]"
+}]]></config>
+  <blocks/>
+</GamelabJr>

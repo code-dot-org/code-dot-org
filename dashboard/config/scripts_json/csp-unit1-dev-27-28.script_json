@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-02 06:43:08 UTC",
+    "serialized_at": "2026-09-02 22:12:04 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -322,6 +322,18 @@
         "lesson_group.key": "",
         "script.name": "csp-unit1-dev-27-28"
       }
+    },
+    {
+      "key": "32750681-4a65-4fc5-a6c7-0a7ab6b6fd0b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "32750681-4a65-4fc5-a6c7-0a7ab6b6fd0b",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28"
+      }
     }
   ],
   "activity_sections": [
@@ -543,6 +555,28 @@
       "seeding_key": {
         "activity_section.key": "b3a97970-5f85-45af-85eb-61dd6739fccb",
         "lesson_activity.key": "09878874-bd42-424b-bfca-5730f8ef538c"
+      }
+    },
+    {
+      "key": "2130fe04-e6a7-44b1-80af-92279e9517e7",
+      "position": 1,
+      "properties": {
+        "progression_name": "Modify: Random Effects"
+      },
+      "seeding_key": {
+        "activity_section.key": "2130fe04-e6a7-44b1-80af-92279e9517e7",
+        "lesson_activity.key": "32750681-4a65-4fc5-a6c7-0a7ab6b6fd0b"
+      }
+    },
+    {
+      "key": "405c8d5e-8855-4367-b690-cf388e3c4319",
+      "position": 2,
+      "properties": {
+        "progression_name": "Make: Random Effects"
+      },
+      "seeding_key": {
+        "activity_section.key": "405c8d5e-8855-4367-b690-cf388e3c4319",
+        "lesson_activity.key": "32750681-4a65-4fc5-a6c7-0a7ab6b6fd0b"
       }
     }
   ],
@@ -938,6 +972,50 @@
       "level_keys": [
         "csp_unit1_lesson28_level5_dev_27_28"
       ]
+    },
+    {
+      "chapter": 19,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Modify: Random Effects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_unit1_lesson29_choice_dev_27_28"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "2130fe04-e6a7-44b1-80af-92279e9517e7"
+      },
+      "level_keys": [
+        "csp_unit1_lesson29_choice_dev_27_28"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Make: Random Effects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_unit1_lesson29_level5_dev_27_28"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "405c8d5e-8855-4367-b690-cf388e3c4319"
+      },
+      "level_keys": [
+        "csp_unit1_lesson29_level5_dev_27_28"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -1155,6 +1233,30 @@
         "lesson_group.key": "",
         "script.name": "csp-unit1-dev-27-28",
         "activity_section.key": "b3a97970-5f85-45af-85eb-61dd6739fccb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_unit1_lesson29_choice_dev_27_28",
+        "script_level.level_keys": [
+          "csp_unit1_lesson29_choice_dev_27_28"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "2130fe04-e6a7-44b1-80af-92279e9517e7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_unit1_lesson29_level5_dev_27_28",
+        "script_level.level_keys": [
+          "csp_unit1_lesson29_level5_dev_27_28"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "405c8d5e-8855-4367-b690-cf388e3c4319"
       }
     }
   ],
