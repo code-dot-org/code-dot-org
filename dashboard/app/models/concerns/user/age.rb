@@ -6,7 +6,7 @@ module User::Age
   included do
     AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
 
-    defer_age = proc {|user| %w(google_oauth2 clever).include?(user.provider) || user.sponsored? || Policies::Lti.lti?(user)}
+    defer_age = proc {|user| %w(google_oauth2 clever classlink).include?(user.provider) || user.sponsored? || Policies::Lti.lti?(user)}
     validates :age, presence: true, on: :create, unless: defer_age # only do this on create to avoid problems with existing users
     validates :age, presence: false, inclusion: {in: AGE_DROPDOWN_OPTIONS}, allow_blank: true
   end

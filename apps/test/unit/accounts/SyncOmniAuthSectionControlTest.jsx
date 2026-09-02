@@ -120,6 +120,18 @@ describe('SyncOmniAuthSectionControl', () => {
       wrapper.find(SyncOmniAuthSectionButton).simulate('click');
       expect(updateRoster).to.have.been.calledWith('2468');
     });
+
+    it('CL- sends only the class sourcedId, never the tenant', () => {
+      const wrapper = shallow(
+        <SyncOmniAuthSectionControl
+          {...defaultProps}
+          sectionProvider={OAuthSectionTypes.classlink}
+          sectionCode="CL-2222|33333"
+        />
+      );
+      wrapper.find(SyncOmniAuthSectionButton).simulate('click');
+      expect(updateRoster).to.have.been.calledWith('33333');
+    });
   });
 
   it('goes into an in-progress state when clicked', () => {

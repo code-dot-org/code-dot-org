@@ -180,6 +180,13 @@ en:
       account_exists: "Good news! You already have a CodeAI account that uses %{email}"
       sign_in: "Please sign in to your existing account. Then you will be able to link your %{provider} profile from your Account Settings page."
       sign_up: "Not your email? Want to create a new account with a different email? You will also be able to link your %{provider} profile from your Account Settings page if you choose to create a new account."
+  classlink_rostering:
+    # Also rendered for a non-expiry 401: the two states are indistinguishable
+    # from the teacher's position, and the distinction stays in the logs.
+    district_not_enabled: "Your district hasn't enabled roster sync for CodeAI."
+    no_v2_account: "Please sign in again from ClassLink to proceed with roster sync."
+    request_failed: "We're having trouble getting roster information from ClassLink. Please try again later."
+    no_students: "This section (%{section_name}) has no students."
   signup_form:
     email_signup: 'Sign up with your email address'
     student_count: '%{count} students have already signed up.'

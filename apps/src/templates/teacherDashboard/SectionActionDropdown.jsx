@@ -20,6 +20,7 @@ import BaseDialog from '../BaseDialog';
 
 import DialogFooter from './DialogFooter';
 import PrintCertificates from './PrintCertificates';
+import {courseIdFromSectionCode} from './sectionCodeHelpers';
 import {sortableSectionShape} from './shapes.jsx';
 import {
   removeSectionOrThrow,
@@ -115,8 +116,7 @@ class SectionActionDropdown extends Component {
         );
         break;
     }
-    // Section code is the course ID, without the G- or C- prefix.
-    const courseId = this.props.sectionCode.replace(/^[GC]-/, '');
+    const courseId = courseIdFromSectionCode(this.props.sectionCode);
     this.props.updateRoster(courseId, this.props.sectionName);
   };
 
