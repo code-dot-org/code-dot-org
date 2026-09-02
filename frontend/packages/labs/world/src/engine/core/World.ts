@@ -32,6 +32,7 @@ import {
 import {asList, isListType} from './lists';
 import {ruleContentHash} from './ruleIds';
 import {Scheduler} from './Scheduler';
+import {SpatialIndex} from './spatialIndex';
 import {APPEARANCE, SPATIAL} from './spatialKeys';
 import type {Trait} from './Trait';
 import {DependencySet} from './traits';
@@ -1056,6 +1057,84 @@ export class World {
   /** Whether an actor with `id` is already in this world. */
   hasActor(id: string): boolean {
     return this.actorsById.has(id);
+  }
+
+  /** The index, and the clock/population it was built for. */
+  private index?: SpatialIndex;
+  private indexAt = -1;
+  private indexCount = -1;
+
+  /**
+   * Every actor whose middle is within `radius` of a place.
+   *
+   * The world's own spatial question, answered through a grid of buckets
+   * (`core/spatialIndex`) rather than by measuring every actor. From a PLACE
+   * rather than from an actor, which is the whole reason it is here and not a
+   * list operation: a search asking whether a square is clear has no actor to
+   * ask about, and neither has "what is near where I am going".
+   *
+   * REBUILT AT MOST ONCE A FRAME, when the clock or the population has moved
+   * on. Everything this is offered for — a neighbourhood, a flock, the walls
+   * around a path — is indifferent to a frame of staleness, and the alternative
+   * is rebuilding inside a loop that is asking four hundred questions in a row.
+   * Anything that must see this instant, Collisions above all, measures for
+   * itself and does not come here.
+   *
+   * An empty list if nothing has a position: a world with no Spatial rule is a
+   * world where "near" has no meaning, which is not an error to raise at a
+   * learner mid-game.
+   */
+  actorsNear(
+    at: {x: number; y: number},
+    radius: number,
+    only?: {type?: string; trait?: Trait},
+  ): Actor[] {
+    const found = this.positional();
+    if (!found) {
+      return [];
+    }
+    const {trait, position} = found;
+    const positionOf = (actor: Actor) => actor.get(position);
+    if (
+      !this.index ||
+      this.indexAt !== this.elapsed ||
+      this.indexCount !== this.actorList.length
+    ) {
+      const index = new SpatialIndex();
+      for (const actor of this.actorList) {
+        if (actor.has(trait)) {
+          index.add(actor, positionOf(actor));
+        }
+      }
+      this.index = index;
+      this.indexAt = this.elapsed;
+      this.indexCount = this.actorList.length;
+    }
+    const near = this.index.near(at?.x ?? 0, at?.y ?? 0, radius, positionOf);
+    // NARROWED HERE rather than by the caller, so a kind with two of it in a
+    // world of a thousand allocates one short list instead of two long ones —
+    // and so the block that asks for `the ⟨any Coin⟩ within ⟨80⟩` is one call.
+    if (only?.type !== undefined) {
+      return near.filter(actor => actor.type === only.type);
+    }
+    if (only?.trait) {
+      return near.filter(actor => actor.has(only.trait!));
+    }
+    return near;
+  }
+
+  /**
+   * The positional trait and its `position`, resolved through the membership
+   * the way `renderSnapshot` resolves them — core speaking the Spatial rule's
+   * vocabulary without importing it (`core/spatialKeys`).
+   */
+  private positional(): {trait: Trait; position: Property<Vector>} | undefined {
+    const spatial = this.membership.items().find(r => r.id === SPATIAL.rule);
+    const trait: Trait | undefined = spatial?.traits[SPATIAL.trait];
+    const position = trait?.properties[SPATIAL.position] as
+      | Property<Vector>
+      | undefined;
+    return trait && position ? {trait, position} : undefined;
   }
 
   /**

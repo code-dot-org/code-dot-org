@@ -324,6 +324,23 @@ export class WorldBuilder {
   }
 
   /**
+   * What is near a place. See {@link World.actorsNear}.
+   *
+   * Forwarded rather than deferred, like `get` and for the same reason: it
+   * hands back a value out of the world instead of telling it something. And it
+   * has to be here at all because a `.world` file may ask — `load map`, then
+   * "is anything solid where this door opens" — which is a question about the
+   * actors the map just placed.
+   */
+  actorsNear(
+    at: {x: number; y: number},
+    radius: number,
+    only?: Parameters<World['actorsNear']>[2],
+  ): Actor[] {
+    return this.getWorld().actorsNear(at, radius, only);
+  }
+
+  /**
    * Play an effect across the whole viewport. See {@link World.addEffect}.
    *
    * The World counterpart to `ActorBuilder.addEffect`: that one filters one

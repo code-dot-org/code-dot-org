@@ -139,7 +139,10 @@ describe('the Lists drawer', () => {
   it('offers the ways to use one, and the variable to keep it in', () => {
     expect(lists?.slice(1)).toEqual([
       'lists_create_empty',
+      // Both ends of a list, which is what makes it a queue as well as a stack.
       'world_list_add',
+      'world_list_add_front',
+      'world_list_take_first',
       'world_list_empty',
       'lists_length',
       'world_list_has',

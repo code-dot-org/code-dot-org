@@ -2588,6 +2588,10 @@ export const TILES: readonly Tile[] = [
     unlocks: [
       {kind: 'block', type: 'world_actors_within'},
       {kind: 'block', type: 'world_filter_actors'},
+      // …and the same question asked of a PLACE rather than of an actor, which
+      // is the form anything searching somewhere it is not has to use.
+      {kind: 'block', type: 'world_near_place_kind'},
+      {kind: 'block', type: 'world_near_place_trait'},
     ],
     check: {
       kind: 'outcome',

@@ -2935,6 +2935,68 @@ const worldListAdd = defineBlock({
   },
 });
 
+/**
+ * `add ⟨x⟩ to the front of ⟨queue⟩` — the other end of `add … to`.
+ *
+ * A list with `add … to` and `take the last off` is a STACK: the last thing in
+ * is the first thing out, which is what "keep going down this branch" wants and
+ * the opposite of what "deal with these in the order they turned up" wants.
+ * With this and `take the first off` it is also a QUEUE, and the difference
+ * between the two is the difference between a search that dives and a search
+ * that spreads.
+ */
+const worldListAddFront = defineBlock({
+  type: 'world_list_add_front',
+  message0: 'add %1 to the front of %2',
+  args0: [{type: 'input_value', name: 'ITEM'}, ListVariable.field('LIST')],
+  inputsInline: true,
+  previousStatement: true,
+  nextStatement: true,
+  style: 'sprite_blocks',
+  tooltip:
+    'Put something on the FRONT of a list, where the next “take the first ' +
+    'off” will find it.',
+  generator: {
+    javascript(block, generator) {
+      const item = generator.valueToCode(block, 'ITEM', Order.NONE) || '0';
+      const list = generator.getVariableName(block.getFieldValue('LIST'));
+      return `${list} = WorldLab.addToFront(${list}, ${item});\n`;
+    },
+  },
+});
+
+/**
+ * `take the first off ⟨queue⟩` — the front of the list, and shorter by one.
+ *
+ * A STATEMENT that changes the list and a VALUE that reads it would be two
+ * blocks for one idea, and a learner would have to write them in the right
+ * order. This is the value: it hands back what it took.
+ *
+ * Taking the first is O(n) on an array, and at the sizes anything here holds
+ * that is not worth a ring buffer — a list a search walks is hundreds, not
+ * millions. Left as it is on purpose.
+ */
+const worldListTakeFirst = defineBlock({
+  type: 'world_list_take_first',
+  message0: 'take the first off %1',
+  args0: [ListVariable.field('LIST')],
+  inputsInline: true,
+  output: null,
+  style: 'sprite_blocks',
+  tooltip:
+    'Take the first thing off a list and hand it back, leaving the list ' +
+    'one shorter. Nothing, if the list is empty.',
+  generator: {
+    javascript(block, generator) {
+      const list = generator.getVariableName(block.getFieldValue('LIST'));
+      return [`WorldLab.takeFirst(${list})`, Order.FUNCTION_CALL] as [
+        string,
+        number,
+      ];
+    },
+  },
+});
+
 const worldListEmpty = defineBlock({
   type: 'world_list_empty',
   message0: 'empty %1',
@@ -4502,6 +4564,123 @@ const worldActorsWithin = defineBlock({
     },
   },
 });
+/**
+ * `the ⟨any Coin⟩ within ⟨80⟩ of ⟨place⟩` — near a PLACE, out of the whole world.
+ *
+ * The sibling of `the actors in ⟨…⟩ within ⟨…⟩ of ⟨…⟩`, and the difference is
+ * the two ends. That one filters a list you already have, measured from an
+ * ACTOR; this one asks the world, measured from a POINT — which is the form
+ * every question about somewhere you are not takes: is this square clear, what
+ * is near where I am going, what would I hit if I stood here.
+ *
+ * IT IS AN INDEXED QUESTION (`core/spatialIndex`). Written with `filter` over
+ * `all actors` the same sentence is a scan, and a search asking it four hundred
+ * times in a row is the difference between a path and a frozen frame.
+ *
+ * Middles, not edges, as `within` measures — and unlike `within` it does NOT
+ * leave out what it measures from, because there is nothing there to leave out:
+ * a point is not an actor, and a search asking whether a square is taken wants
+ * to be told about the thing standing on it.
+ */
+const worldNearPlaceOfKind = defineBlock({
+  type: 'world_near_place_kind',
+  message0: 'the %1 within %2 of %3',
+  args0: [
+    {type: 'field_dropdown', name: 'ACTOR', options: actorFieldOptions},
+    {type: 'input_value', name: 'DISTANCE', check: 'Number'},
+    {type: 'input_value', name: 'PLACE', check: 'Vector'},
+  ],
+  inputsInline: true,
+  output: 'Actor',
+  extensions: [
+    actorOptionsExtension,
+    worldContextExtension,
+    valueShadowExtension,
+    openSourceButtonExtension,
+  ],
+  style: 'sprite_blocks',
+  tooltip:
+    'The actors of a kind whose middle is within so many pixels of a place. ' +
+    'Asked of the whole world, and answered without looking at all of it.',
+  generator: {
+    javascript(block, generator) {
+      const distance =
+        generator.valueToCode(block, 'DISTANCE', Order.NONE) || '0';
+      const place = generator.valueToCode(block, 'PLACE', Order.NONE) || '0';
+      // Nothing chosen at all is `(any)`, and asking the resolver about it
+      // would be asking whether the empty string names a local actor.
+      const actor = block.getFieldValue('ACTOR');
+      const local = actor ? localActorFor(block, actor) : undefined;
+      // A definition since deleted names nothing, and finds nothing — the
+      // bargain every unfinished dropdown here makes.
+      if (actor && localActorBlockId(actor) && !local) {
+        return ['[]', Order.ATOMIC] as [string, number];
+      }
+      // Nothing chosen is `(any)`: every kind, which is what the word says.
+      const type = actor ? (local?.type ?? actor) : undefined;
+      const only = type ? `, {type: ${str(type)}}` : '';
+      return [
+        `world.actorsNear(${place}, ${distance}${only})`,
+        Order.FUNCTION_CALL,
+      ] as [string, number];
+    },
+  },
+});
+registerValueShadows('world_near_place_kind', [
+  {name: 'DISTANCE', shadow: {type: 'math_number', fields: {NUM: 80}}},
+  {name: 'PLACE', shadow: {type: 'world_vector'}},
+]);
+
+/**
+ * `the actors with ⟨Solid⟩ within ⟨80⟩ of ⟨place⟩` — the same, asked by ability.
+ *
+ * Two blocks rather than one with both dropdowns, because one would read `the
+ * ⟨any⟩ ⟨any⟩ within ⟨80⟩ of ⟨…⟩` in the common case and a learner reaching for
+ * "the coins near here" should not have to read past a socket they do not want.
+ * They share the index and the sentence; only the noun differs.
+ */
+const worldNearPlaceWithTrait = defineBlock({
+  type: 'world_near_place_trait',
+  message0: 'the actors with %1 within %2 of %3',
+  args0: [
+    {type: 'field_dropdown', name: 'TRAIT', options: anyTraitOptions},
+    {type: 'input_value', name: 'DISTANCE', check: 'Number'},
+    {type: 'input_value', name: 'PLACE', check: 'Vector'},
+  ],
+  inputsInline: true,
+  output: 'Actor',
+  extensions: [
+    worldContextExtension,
+    anyTraitOptionsExtension,
+    valueShadowExtension,
+  ],
+  style: 'sprite_blocks',
+  tooltip:
+    'The actors with a given ability whose middle is within so many pixels ' +
+    'of a place — the walls near a step, the solid things around a spawn.',
+  generator: {
+    javascript(block, generator) {
+      const distance =
+        generator.valueToCode(block, 'DISTANCE', Order.NONE) || '0';
+      const place = generator.valueToCode(block, 'PLACE', Order.NONE) || '0';
+      const trait = block.getFieldValue('TRAIT');
+      const ref = trait ? refFromValue(trait) : undefined;
+      if (!ref || !refResolves(ref)) {
+        return ['[]', Order.ATOMIC] as [string, number];
+      }
+      return [
+        `world.actorsNear(${place}, ${distance}, {trait: ${refCode(ref, generator)}})`,
+        Order.FUNCTION_CALL,
+      ] as [string, number];
+    },
+  },
+});
+
+registerValueShadows('world_near_place_trait', [
+  {name: 'DISTANCE', shadow: {type: 'math_number', fields: {NUM: 80}}},
+  {name: 'PLACE', shadow: {type: 'world_vector'}},
+]);
+
 registerValueShadows('world_actors_within', [
   {name: 'SOURCE', shadow: actorListShadow},
   {name: 'DISTANCE', shadow: {type: 'math_number', fields: {NUM: 100}}},
@@ -7685,6 +7864,8 @@ export const DOMAIN_BLOCKS = [
   worldEventValue,
   worldKindOf,
   worldListAdd,
+  worldListAddFront,
+  worldListTakeFirst,
   worldListEmpty,
   worldListLast,
   worldListHas,
@@ -7760,6 +7941,8 @@ export const DOMAIN_BLOCKS = [
   worldSetMusic,
   worldFilterActors,
   worldActorsWithin,
+  worldNearPlaceOfKind,
+  worldNearPlaceWithTrait,
   worldFirstActor,
   worldActorsWithTrait,
   worldExtremeActor,
@@ -7863,6 +8046,12 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // …and the one shape of it worth its own block: what is near something
       // (specs/PROGRESSION.md, `simulation/neighbours`).
       'world_actors_within',
+      // …and the same question asked of a PLACE, out of the whole world rather
+      // than out of a list — which is the form a search takes, and the one
+      // that goes through the index rather than measuring everything
+      // (`core/spatialIndex`).
+      'world_near_place_kind',
+      'world_near_place_trait',
       'world_ordered_actors',
       'world_take_actors',
       'world_first_actor',
@@ -8090,6 +8279,16 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
         inputs: {TIMES: {shadow: {type: 'math_number', fields: {NUM: 10}}}},
       },
       'world_count_with',
+      // …and the way out of one. Blockly's own, with its own warning when it is
+      // dropped outside a loop, and a generator that ships with the JavaScript
+      // one — the same bargain `repeat` and `random integer` take.
+      //
+      // IT LEAVES THE INNERMOST LOOP, which is what "stop" reads as and is
+      // exactly what a search wants: one loop, and a reason to stop walking it
+      // the moment the answer turns up. A learner who nests two and expects the
+      // outer one to end has written the one mistake this block can make, and
+      // it is the mistake every language with `break` in it allows.
+      'controls_flow_statements',
     ],
   },
   // A noise, and a track. Its own category rather than tucked under Appearance:
@@ -8111,6 +8310,8 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
       },
       'lists_create_empty',
       'world_list_add',
+      'world_list_add_front',
+      'world_list_take_first',
       'world_list_empty',
       'lists_length',
       'world_list_has',

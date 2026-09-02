@@ -59,6 +59,24 @@ const LIST_MESSAGES: Record<string, string> = {
   LISTS_LENGTH_TOOLTIP: 'How many things a list holds.',
 };
 
+/**
+ * The loop exit's wording, in the voice the rest of the loops speak.
+ *
+ * Blockly says "break out of loop" and "continue with next iteration", which
+ * are the words a programmer already knows them by. A learner meeting this on
+ * the day they write their first search does not, and both readings are
+ * available in plainer words with nothing lost.
+ */
+const LOOP_MESSAGES: Record<string, string> = {
+  CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK: 'stop the loop',
+  CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE: 'skip to the next one',
+  CONTROLS_FLOW_STATEMENTS_TOOLTIP_BREAK:
+    'Leave the loop this is inside, and carry on after it.',
+  CONTROLS_FLOW_STATEMENTS_TOOLTIP_CONTINUE:
+    'Stop here and go round the loop again with the next one.',
+  CONTROLS_FLOW_STATEMENTS_WARNING: 'This only means something inside a loop.',
+};
+
 /** `Blockly.Msg` key -> the US-spelled text to use instead. */
 const COLOR_MESSAGES: Record<string, string> = {
   COLOUR_PICKER_TOOLTIP: 'Choose a color from the palette.',
@@ -90,5 +108,6 @@ export function installColorMessages(): void {
     ...(En as unknown as Record<string, string>),
     ...COLOR_MESSAGES,
     ...LIST_MESSAGES,
+    ...LOOP_MESSAGES,
   });
 }

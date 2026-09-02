@@ -40,6 +40,8 @@ const MANY_BY_TYPE = new Set([
   // nothing rather than fail.
   'world_filter_actors',
   'world_actors_within',
+  'world_near_place_kind',
+  'world_near_place_trait',
   'world_ordered_actors',
   'world_take_actors',
   'world_actors_with_trait',

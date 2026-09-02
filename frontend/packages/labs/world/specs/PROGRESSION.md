@@ -604,7 +604,7 @@ learner writes themselves and a missing block is a concept that cannot be
 taught here at all.
 
 **Lists of values.** WRITTEN (specs/LISTS.md). Three property types, one
-socket check, nine blocks in a `Lists` drawer, and `memory/lists` to teach
+socket check, eleven blocks in a `Lists` drawer, and `memory/lists` to teach
 them. What is still missing is an INDEX — `item ⟨n⟩ of ⟨list⟩` — which is held
 back until something asks for it, and a list of lists, which is the grid
 question below.
@@ -617,6 +617,17 @@ actor⟩` (`world_actors_within`, `WorldLab.within`), which is what
 `simulation/neighbours` proposed and what `simulation/emergent` cannot be
 written without. Middles rather than edges, near any of several, and never the
 actor measured from — the three decisions are in `engine/rules/spatial`.
+
+…and the same question asked of a PLACE: `the ⟨any Coin⟩ within ⟨80⟩ of
+⟨place⟩` and `the actors with ⟨Solid⟩ within ⟨80⟩ of ⟨place⟩`
+(`world_near_place_kind`, `world_near_place_trait`). That one filters a list you
+already hold; these ask the WORLD, from a point, and go through a grid of
+buckets (`core/spatialIndex`) rather than measuring everything. It is the form
+anything searching somewhere it is not has to use — is this square clear, what
+is near where I am going — and asking it four hundred times in a row is the
+difference between a path and a frozen frame. `spatial.within` and Collisions
+still measure for themselves; moving them onto the index is a change to what
+they see mid-frame and wants its own verification.
 
 **Own blocks outside a rule.** `define block` lives in the Rule category and a
 `.behavior` file (`domainBlocks.ts`, `TOOLBOX_HEAD`). A learner's first

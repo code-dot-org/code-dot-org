@@ -59,9 +59,71 @@ export const items = (value: unknown): unknown[] =>
  * the generated line an assignment, which is what covers the case a mutation
  * cannot: a variable that holds nothing yet becomes a list of one.
  */
+/**
+ * How many times a list has been changed IN PLACE.
+ *
+ * The three functions below are the only things that do it — everything else
+ * that changes a list replaces it, so identity is enough to tell those apart
+ * (`take the last off ⟨…⟩ of ⟨actor⟩` generates a `.slice(0, -1)` and a `set`).
+ * These three cannot: `add … to` pushes so that two variables holding one list
+ * both see it, which is what its own tooltip promises.
+ *
+ * A LENGTH WOULD NOT DO. Take one off the front and add one to the back — which
+ * is what every queue does, once per turn round the loop — and the length is
+ * where it was while the contents are not.
+ *
+ * A symbol so it cannot collide with anything a list holds, and so nothing
+ * walking a list ever sees it.
+ */
+const VERSION = Symbol('list version');
+
+/** Note that a list has changed under whoever is holding it. */
+function touched(list: unknown[]): void {
+  const stamped = list as unknown as {[VERSION]?: number};
+  stamped[VERSION] = (stamped[VERSION] ?? 0) + 1;
+}
+
+/** What version a list is at — zero for one nothing has changed in place. */
+function versionOf(list: unknown[]): number {
+  return (list as unknown as {[VERSION]?: number})[VERSION] ?? 0;
+}
+
+/**
+ * `add ⟨x⟩ to the front of ⟨list⟩` — {@link addTo}'s other end.
+ *
+ * `unshift` rather than a new array, matching `addTo`: a list variable is one
+ * array that two variables may both hold, and replacing it would leave one of
+ * them looking at the old one.
+ */
+export function addToFront(list: unknown, value: unknown): unknown[] {
+  if (Array.isArray(list)) {
+    list.unshift(value);
+    touched(list);
+    return list;
+  }
+  return [value];
+}
+
+/**
+ * `take the first off ⟨list⟩` — the front, removed and handed back.
+ *
+ * Undefined for an empty list, which every socket already reads as nothing:
+ * a search whose queue has run dry asks once more and is told there is nothing
+ * there, rather than being stopped with an error.
+ */
+export function takeFirst(list: unknown): unknown {
+  if (!Array.isArray(list)) {
+    return undefined;
+  }
+  const first = list.shift();
+  touched(list);
+  return first;
+}
+
 export function addTo(list: unknown, value: unknown): unknown[] {
   if (Array.isArray(list)) {
     list.push(value);
+    touched(list);
     return list;
   }
   return [value];
@@ -75,8 +137,66 @@ export function addTo(list: unknown, value: unknown): unknown[] {
  * a place it holds. Comparing the pair of numbers is what a learner means by
  * "the same place".
  */
+/**
+ * A set of the values in a list, kept beside it so `has` is a lookup.
+ *
+ * WHY A CACHE AND NOT A SET IN THE FIRST PLACE: a list is ordered and may hold
+ * a value twice, and both matter — `for each` walks it in order, and a tally of
+ * scores is allowed to hold 10 twice. So the array stays the list, and this is
+ * an index of it.
+ *
+ * KEYED ON THE ARRAY, and rebuilt when the version it was built from has moved
+ * on. `addTo` pushes in place, so identity alone would go stale — and a length
+ * would go stale too, on the one pattern this exists for: a queue takes one off
+ * the front and adds one to the back every turn, and its length never changes.
+ *
+ * The keys are strings because a place is two numbers and a Vector is an
+ * object: `{x: 1, y: 2}` twice is two objects and one place, which is the whole
+ * reason `sameValue` exists.
+ */
+const indexes = new WeakMap<object, {version: number; keys: Set<string>}>();
+
+/** A value as a set key, or undefined for one that cannot be one. */
+function keyFor(value: unknown): string | undefined {
+  if (typeof value === 'number' || typeof value === 'string') {
+    return `${typeof value}:${value}`;
+  }
+  const place = value as {x?: unknown; y?: unknown} | null;
+  return place &&
+    typeof place === 'object' &&
+    typeof place.x === 'number' &&
+    typeof place.y === 'number'
+    ? `place:${place.x},${place.y}`
+    : undefined;
+}
+
 export function listHas(list: unknown, value: unknown): boolean {
-  return items(list).some(item => sameValue(item, value));
+  if (!Array.isArray(list)) {
+    return items(list).some(item => sameValue(item, value));
+  }
+  const wanted = keyFor(value);
+  if (wanted === undefined) {
+    // Something a key cannot be made of — an actor, say. Rare, and the scan
+    // is what it always was.
+    return list.some(item => sameValue(item, value));
+  }
+  const version = versionOf(list);
+  let index = indexes.get(list);
+  if (!index || index.version !== version) {
+    const keys = new Set<string>();
+    for (const item of list) {
+      const key = keyFor(item);
+      if (key === undefined) {
+        // A list holding something unkeyable is not one this can index; fall
+        // back rather than answer from a set that is missing entries.
+        return list.some(item_ => sameValue(item_, value));
+      }
+      keys.add(key);
+    }
+    index = {version, keys};
+    indexes.set(list, index);
+  }
+  return index.keys.has(wanted);
 }
 
 /** Value equality across the three kinds a list may hold. */
