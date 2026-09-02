@@ -67,33 +67,34 @@
 }
 
 .slides {
-  background-color: var(--sentiment-warning-20);
-  color: var(--sentiment-warning-60);
+  background-color: var(--background-warning-light);
+  color: var(--text-warning-primary);
 }
 
 .video {
-  background-color: var(--sentiment-success-10);
-  color: var(--sentiment-success-50);
+  background-color: var(--background-success-light);
+  color: var(--text-success-primary);
 }
 
 .lessonPlan {
-  background-color: var(--background-brand-purple-extra-light);
-  color: var(--text-brand-purple-primary);
+  background-color: var(--background-brand-light);
+  color: var(--text-brand-primary);
 }
 
 .link {
-  background-color: var(--accent-strawberry-10, #ffe3e3);
-  color: var(--accent-strawberry-50, #ed6060);
+  background-color: var(--background-accent-pink-light);
+  color: var(--text-accent-pink-primary);
 }
 
 .files {
-  background-color: var(--sentiment-information-10);
-  color: var(--sentiment-information-50);
+  background-color: var(--background-info-light);
+  color: var(--text-info-primary);
 }
 
+// Shares the lesson-plan color: the CADS brand family has one hue.
 .custom {
-  background-color: var(--brand-aqua-20);
-  color: var(--brand-aqua-70);
+  background-color: var(--background-brand-light);
+  color: var(--text-brand-primary);
 }
 
 .noUnitContainer {
