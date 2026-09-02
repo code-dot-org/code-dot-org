@@ -125,11 +125,11 @@ class QuizAttemptsControllerTest < ActionController::TestCase
     unit = create_unit_with_quiz(@quiz)
     sign_in @student
 
-    original_create = QuizAttempt.method(:create!)
-    QuizAttempt.stubs(:create!) do |*args, **kwargs|
-      original_create.call(*args, **kwargs)
-      raise ActiveRecord::RecordNotUnique, "Duplicate entry 'x' for key 'index_quiz_attempts_on_user_level_unit_attempt'"
-    end
+    # Mocha 1.2 ignores a block on stubs; with+raises is the invocation hook.
+    QuizAttempt.stubs(:create!).with do |attributes|
+      QuizAttempt.new(attributes).save!
+      true
+    end.raises(ActiveRecord::RecordNotUnique, "Duplicate entry 'x' for key 'index_quiz_attempts_on_user_level_unit_attempt'")
     assert_difference 'QuizAttempt.count', 1 do
       post :create, params: {levelId: @quiz.id, unitId: unit.id}
     end
