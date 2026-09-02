@@ -131,9 +131,8 @@ The color is given one of two ways:
 Anything else — a component out of range, a non-integer, or the wrong number of
 arguments — raises `INVALID_COLOR`.
 
-Both forms are positional only. There is no `color=` keyword form: the first
-parameter is either the whole color or the red component, so it cannot carry a
-single meaningful name. `paint(color="red")` raises `TypeError`.
+Parameters are positional only, i.e. you cannot call `paint(color='red')`, you
+can only call `paint('red')` or `paint(255, 0, 0)`.
 
 RGB components are converted to `#rrggbb` before the square is colored, so
 `get_color()` after `paint(255, 0, 0)` returns `"#ff0000"`, not the components
