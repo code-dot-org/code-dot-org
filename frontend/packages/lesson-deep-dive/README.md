@@ -137,15 +137,26 @@ gets the AI assessment panel, owner gets just their feedback, peer gets
 neither. In dashboard mode this is decided server-side from who is signed
 in, not by the query string.
 
+Unlike the student flow's page payload, the gallery's bootstrap comes from a
+real JSON endpoint: `gallery.tsx` fetches
+`GET /api/v1/tutor_gallery_data?script=&lessonPosition=` before mounting
+`ChallengeGallery`, in both modes. `?script=` (default `aif1-2025`) and
+`?lessonPosition=` (default `1`) pick which lesson dashboard mode bootstraps
+from; msw mode ignores both and always serves `TUTOR_GALLERY_DATA`.
+
 Dashboard mode has one prerequisite beyond the student flow's: sign in as a
-**teacher** whose section has students with final challenge submissions.
-`src/dev/galleryFixtures.ts`'s `TUTOR_GALLERY_DATA` is invented, not
-harvested, and its unit and section ids almost certainly do not match the
-signed-in teacher's real ones — `GET /challenge_responses?section_id=`
-authorizes against `Section.find(params[:section_id])`, so a mismatched id
-403s. Regenerate it by loading `/s/:script/lessons/:position/tutor/gallery`
-as that teacher and reading `script[data-tutorgallerydata]`, the same
-harvest doctrine as `lessonDeepDiveData` above.
+**teacher** whose section has students with final challenge submissions. If
+the endpoint fails for any reason — the local Rails checkout predates it,
+the script/lesson doesn't resolve, or the session is signed out — the shell
+falls back to `src/dev/galleryFixtures.ts`'s `TUTOR_GALLERY_DATA` and logs
+one `console.info` saying so; the page still renders. That fixture's unit
+and section ids are invented, not harvested, and almost certainly do not
+match a real teacher's — `GET /challenge_responses?section_id=` authorizes
+against `Section.find(params[:section_id])`, so a mismatched id 403s.
+Regenerate it by loading `/s/:script/lessons/:position/tutor/gallery` as
+that teacher and reading `script[data-tutorgallerydata]`, the same harvest
+doctrine as `lessonDeepDiveData` above — now only load-bearing for how
+realistic the msw fixture is, since dashboard mode prefers the live endpoint.
 
 `evaluation_result` only exists on a response once the async AI evaluation
 job has run (`EvaluateChallengeResponseJob`), which nothing in the dev shell

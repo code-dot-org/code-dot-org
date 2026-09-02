@@ -58,6 +58,9 @@ const dashboardProxyPrefixes = [
   '/aichat_request',
   '/ai_gateway',
   '/get_token',
+  // Exact path, not a bare '/api/v1' prefix — that would proxy every
+  // other /api/v1/* route this feature doesn't call.
+  '/api/v1/tutor_gallery_data',
 ];
 
 const dashboardTarget = 'http://localhost-studio.code.org:3000';

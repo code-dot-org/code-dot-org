@@ -11,6 +11,7 @@ import {registerMockFixture} from '@code-dot-org/core/api/mocks';
 import {
   CHALLENGES,
   FIXTURE_RESPONSES,
+  TUTOR_GALLERY_DATA,
   type FixtureResponse,
   type GalleryChallengeResponse,
 } from './galleryFixtures';
@@ -46,6 +47,15 @@ function toListResponse(response: FixtureResponse): GalleryChallengeResponse {
 
 export function registerGalleryMocks(): void {
   registerMockFixture([
+    // GET /api/v1/tutor_gallery_data — the gallery entry's bootstrap
+    // payload, fetched before mount in both modes (see gallery.tsx). Query
+    // params are ignored: the fixture is fixture regardless of which
+    // script/lesson dashboard mode asked for.
+    {
+      path: '*/api/v1/tutor_gallery_data',
+      respond: () => ({...TUTOR_GALLERY_DATA}),
+    },
+
     // GET /challenge_responses?unit_id=&section_id=&sort= — the gallery grid.
     // GET /challenge_responses?challenge_id=&user_id=&sort=oldest — a
     // project's version switcher. Both go through this one handler, same as
