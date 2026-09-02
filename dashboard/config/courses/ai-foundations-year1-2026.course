@@ -52,6 +52,17 @@
       }
     },
     {
+      "name": "AI Foundations & the AI Ready Skills Certification",
+      "url": "https://docs.google.com/document/d/1Pl6f3WpcbSDmJCLMOiCDHMaszkdb5qnjISfanb7lZyA/edit?usp=sharing",
+      "key": "ai_foundations_the_ai_ready_skills_certification",
+      "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
+      },
+      "seeding_key": {
+        "resource.key": "ai_foundations_the_ai_ready_skills_certification"
+      }
+    },
+    {
       "name": "All Resources",
       "url": "/courses/ai-foundations-year1-2026/resources",
       "key": "all_resources",
