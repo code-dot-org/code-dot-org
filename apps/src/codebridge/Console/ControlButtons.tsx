@@ -26,7 +26,6 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 
 import {getSystemMessage} from './MessageHelpers';
-import useControlFocusHandoff from './useControlFocusHandoff';
 
 import moduleStyles from './console.module.scss';
 
@@ -150,36 +149,15 @@ const ControlButtons: React.FunctionComponent = () => {
     return tooltip;
   };
 
-  // Only a safety net now that Run and Stop share one element: it acts solely
-  // when focus has actually landed on <body>, which the tooltip appearing or
-  // disappearing can still cause.
-  const {
-    ref: controlsRef,
-    onFocus: handleFocus,
-    onBlur: handleBlur,
-  } = useControlFocusHandoff<HTMLDivElement>(isRunning);
-
   const disabledCodeActionsTooltip = getDisabledCodeActionsTooltip();
   const disableCodeActions =
     !!codeEnvironmentError || !!disabledCodeActionsTooltip;
   const isEnvironmentLoading = !hasLoadedEnvironment && !codeEnvironmentError;
 
   return (
-    <div
-      className={moduleStyles.controlButtons}
-      ref={controlsRef}
-      onFocus={handleFocus}
-      onBlur={handleBlur}
-    >
-      {/*
-        Run and Stop are one element, not two branches of a ternary. Rendering
-        them separately unmounted whichever button had focus when a run started
-        or ended, dropping focus to <body>, which a screen reader reads out as
-        the page title. Sharing the element keeps the node -- and the focus --
-        across the swap. The tooltip wrapper is always rendered, and renders a
-        plain div when it has nothing to say, so the two states stay structurally
-        identical and React reuses the button rather than replacing it.
-      */}
+    <div className={moduleStyles.controlButtons}>
+      {/* Run and Stop share one element so the swap keeps focus on it. Two
+          elements would drop focus to <body>, read aloud as the page title. */}
       <WithConditionalTooltip
         showTooltip={!isRunning && !!disabledCodeActionsTooltip}
         tooltipProps={{
@@ -197,8 +175,8 @@ const ControlButtons: React.FunctionComponent = () => {
           loading={!isRunning && isEnvironmentLoading}
           loadingPosition="start"
           className={moduleStyles.controlButton}
-          // Ctrl+2 and the UI tests target the run button; while a program is
-          // running there is no run button to target.
+          // What Ctrl+2 and the UI tests target, so it only marks the button
+          // while it is a run button.
           id={isRunning ? undefined : 'uitest-codebridge-run'}
           onClick={isRunning ? handleStop : handleRun}
           type="button"

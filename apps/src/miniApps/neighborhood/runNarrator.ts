@@ -1,16 +1,22 @@
-// Narrates the painter to a screen reader while a program runs.
+// Narrates the painter to a screen reader as a run happens.
 //
-// The keyboard cursor stands down during a run, so nothing else describes the
-// grid. Speech is slower than the animation, so moves in one direction are
-// counted instead of announced one by one, and utterances stay a second apart
-// with anything arriving between them merged. Program output, errors and the
-// level's pass/fail message already have live regions of their own.
+// Announcements are lossy: a reader drops queued speech when the run button
+// relabels itself. So every line also stays in a log the student can navigate
+// back through, and losing an announcement costs nothing.
+
+import {SVG_ID} from '@cdo/apps/maze/constants';
 
 import {NeighborhoodSignalType} from './constants';
 import {NeighborhoodSignal} from './types';
 
-const MIN_GAP_MS = 1000;
-const REGION_ID = 'neighborhood-narration';
+const LOG_ID = 'neighborhood-run-log';
+const HEADING_ID = 'neighborhood-run-log-heading';
+
+// How far the painter walks between progress reports on one straight run.
+const MOVES_PER_UPDATE = 5;
+
+// A ceiling on DOM growth, past anything a readable run reaches.
+const MAX_ENTRIES = 500;
 
 // Only read once a run has ended.
 export interface PainterPositions {
@@ -18,7 +24,7 @@ export interface PainterPositions {
   getPegmanY: (id?: string) => number | undefined;
 }
 
-// Visually hidden, still read aloud.
+// Visually hidden, still in the accessibility tree.
 const SR_ONLY = {
   position: 'absolute',
   width: '1px',
@@ -29,19 +35,30 @@ const SR_ONLY = {
   whiteSpace: 'nowrap',
 };
 
-// One region per page, so repeated mounts cannot pile up divs.
-function liveRegion(): HTMLElement {
-  const found = document.getElementById(REGION_ID);
-  if (found) {
-    return found;
-  }
-  const el = document.createElement('div');
-  el.id = REGION_ID;
-  el.setAttribute('aria-live', 'polite');
-  el.setAttribute('aria-atomic', 'true');
-  Object.assign(el.style, SR_ONLY);
-  document.body.appendChild(el);
-  return el;
+// A labelled region with a heading, so the log is reachable from a screen
+// reader's landmark and heading lists rather than only by chance.
+function buildLog(): HTMLElement {
+  const region = document.createElement('div');
+  region.setAttribute('role', 'region');
+  region.setAttribute('aria-labelledby', HEADING_ID);
+  Object.assign(region.style, SR_ONLY);
+
+  const heading = document.createElement('h2');
+  heading.id = HEADING_ID;
+  heading.textContent = 'Run log';
+
+  const log = document.createElement('div');
+  log.id = LOG_ID;
+  log.setAttribute('role', 'log');
+  log.setAttribute('aria-live', 'polite');
+
+  region.append(heading, log);
+  // Beside the grid rather than at the end of the document, so a reader
+  // exploring the lab runs into it.
+  const parent =
+    document.getElementById(SVG_ID)?.parentElement ?? document.body;
+  parent.appendChild(region);
+  return log;
 }
 
 // "Painter 1", not "painter-1".
@@ -69,31 +86,36 @@ function paintPhrase(color: string | undefined): string {
     : `painted ${color}.`;
 }
 
-interface MoveRun {
+// A run of the same action repeated. Moves carry the direction travelled,
+// turns the direction ended up facing.
+interface Streak {
+  kind: 'move' | 'turn';
   id: string;
   direction: string;
   count: number;
-  // How far a ping already reported, so the closing total can skip a repeat.
+  // How far a progress report already got, so closing does not repeat it.
   reported: number;
 }
 
 export default class NeighborhoodRunNarrator {
   private readonly getPositions: () => PainterPositions | null;
-  private readonly region: HTMLElement;
-  private pending: string[] = [];
-  private run: MoveRun | null = null;
-  private lastSpokenAt = 0;
-  private timer: number | null = null;
+  private readonly getConsoleLines: () => string[];
+  private streak: Streak | null = null;
   private painterIds: string[] = [];
-  private painted = 0;
-  // Console output held back so it does not talk over the narration. The
-  // console's own announcements are off while a run is in flight; these are
-  // read out after the closing summary instead of being lost.
-  private consoleLines: string[] = [];
 
-  constructor(getPositions: () => PainterPositions | null) {
+  constructor(
+    getPositions: () => PainterPositions | null,
+    // The console is silent during a run, so its newest line is read out with
+    // the summary. Covers system messages, which never reach a signal.
+    getConsoleLines: () => string[] = () => []
+  ) {
     this.getPositions = getPositions;
-    this.region = liveRegion();
+    this.getConsoleLines = getConsoleLines;
+  }
+
+  // Fills the silence after Run is pressed.
+  startRun(): void {
+    this.announce('Program running.');
   }
 
   onSignal({value, detail}: NeighborhoodSignal): void {
@@ -104,14 +126,23 @@ export default class NeighborhoodRunNarrator {
         if (!direction) {
           return;
         }
-        // Still going the same way: just count it.
-        if (this.run?.id === id && this.run.direction === direction) {
-          this.run.count++;
+        // Still going the same way: count it, and report every so many squares
+        // so a long walk says something as it happens.
+        if (
+          this.streak?.kind === 'move' &&
+          this.streak.id === id &&
+          this.streak.direction === direction
+        ) {
+          this.streak.count++;
+          if (this.streak.count % MOVES_PER_UPDATE === 0) {
+            this.streak.reported = this.streak.count;
+            const far = squares(this.streak.count);
+            this.record(id, `moving ${direction}, ${far}.`);
+          }
           return;
         }
-        this.reportMove(true);
-        this.run = {id, direction, count: 1, reported: 0};
-        this.schedule();
+        this.closeStreak();
+        this.streak = {kind: 'move', id, direction, count: 1, reported: 0};
         return;
       }
       case NeighborhoodSignalType.INITIALIZE_PAINTER: {
@@ -125,18 +156,31 @@ export default class NeighborhoodRunNarrator {
             ? ` at ${position(x, y)}`
             : '';
         const facing = detail?.direction ? `, facing ${detail.direction}` : '';
-        return this.say(id, `started${at}${facing}.`);
+        // Always named: this is the line that introduces the painter.
+        this.closeStreak();
+        this.announce(`${this.name(id)} started${at}${facing}.`);
+        return;
       }
-      case NeighborhoodSignalType.TURN_LEFT:
-        // Python reports the direction the painter ends up facing.
-        return this.say(
+      case NeighborhoodSignalType.TURN_LEFT: {
+        // Python reports the direction the painter ends up facing, so a streak
+        // of turns keeps only the last one.
+        const facing = detail?.direction ?? '';
+        if (this.streak?.kind === 'turn' && this.streak.id === id) {
+          this.streak.count++;
+          this.streak.direction = facing;
+          return;
+        }
+        this.closeStreak();
+        this.streak = {
+          kind: 'turn',
           id,
-          detail?.direction
-            ? `turned left, now facing ${detail.direction}.`
-            : 'turned left.'
-        );
+          direction: facing,
+          count: 1,
+          reported: 0,
+        };
+        return;
+      }
       case NeighborhoodSignalType.PAINT:
-        this.painted++;
         return this.say(id, paintPhrase(detail?.color));
       case NeighborhoodSignalType.REMOVE_PAINT:
         return this.say(id, 'scraped the paint off this square.');
@@ -148,118 +192,94 @@ export default class NeighborhoodRunNarrator {
     }
   }
 
-  // Program output, held until the narration is done. Blank spacer lines carry
-  // nothing to say.
-  onConsoleMessage(text: string): void {
-    if (text.trim()) {
-      this.consoleLines.push(text.trim());
-    }
-  }
-
-  // Says what the run did. Makes no correctness claim: Painter levels have no
-  // finish square, and the level's own verdict is announced elsewhere.
+  // Makes no correctness claim: Painter levels have no finish square, and the
+  // level's own verdict is announced elsewhere.
   endRun(): void {
-    this.reportMove(true);
+    this.closeStreak();
     const parts = ['Run finished.'];
-    parts.push(
-      this.painted ? `Painted ${squares(this.painted)}.` : 'No squares painted.'
-    );
     const positions = this.getPositions();
     for (const id of this.painterIds) {
       const col = positions?.getPegmanX(id);
       const row = positions?.getPegmanY(id);
       if (typeof col === 'number' && typeof row === 'number') {
-        parts.push(`${this.who(id).trim()} stopped at ${position(col, row)}.`);
+        parts.push(`${this.name(id)} stopped at ${position(col, row)}.`);
       }
     }
-    this.pending.push(parts.join(' '));
-    // After the summary, so the run is described before its output is read.
-    if (this.consoleLines.length) {
-      this.pending.push(`Console: ${this.consoleLines.join(' ')}`);
-      this.consoleLines = [];
+    // Newest line only: the rest stay on the console to be read there.
+    const output = this.getConsoleLines()
+      .map(line => line.trim())
+      .filter(Boolean);
+    const newest = output[output.length - 1];
+    if (newest) {
+      parts.push(`Console: ${newest}`);
     }
-    this.speak();
+    this.announce(parts.join(' '));
   }
 
-  // A stopped run must stop talking, and the next starts its counts over.
+  // The log covers the run in hand, so each run starts it over.
   reset(): void {
-    if (this.timer !== null) {
-      window.clearTimeout(this.timer);
-      this.timer = null;
-    }
-    this.pending = [];
-    this.run = null;
+    this.streak = null;
     this.painterIds = [];
-    this.painted = 0;
-    this.consoleLines = [];
-    this.region.textContent = '';
+    this.log().replaceChildren();
   }
 
-  // Any other action closes an open move run.
+  // Any other action ends an open streak.
   private say(id: string, phrase: string): void {
-    this.reportMove(true);
-    this.pending.push(`${this.who(id)}${phrase}`);
-    this.schedule();
+    this.closeStreak();
+    this.record(id, phrase);
   }
 
-  // Reports an open move run. A ping leaves it open so a long straight walk
-  // says something while it happens; closing it names the distance covered.
-  private reportMove(closing: boolean): void {
-    const run = this.run;
-    if (!run) {
-      return;
-    }
-    if (closing) {
-      this.run = null;
-    }
-    if (run.count === run.reported) {
-      return;
-    }
-    run.reported = run.count;
-    const far = run.count === 1 ? '' : `, ${squares(run.count)}`;
-    this.pending.push(
-      closing
-        ? `${this.who(run.id)}moved ${run.direction} ${squares(run.count)}.`
-        : `${this.who(run.id)}moving ${run.direction}${far}.`
+  // Named only when there is more than one painter, so a single-painter log
+  // does not repeat it on every line.
+  private record(id: string, phrase: string): void {
+    this.announce(
+      this.painterIds.length > 1
+        ? `${this.name(id)} ${phrase}`
+        : phrase.charAt(0).toUpperCase() + phrase.slice(1)
     );
   }
 
-  // Number the painter only when more than one is in play.
-  private who(id: string): string {
-    return this.painterIds.length > 1 && id
-      ? `${painterName(id)} `
-      : 'Painter ';
+  // Ends an open streak, recording how far or how many times it went.
+  private closeStreak(): void {
+    const streak = this.streak;
+    if (!streak) {
+      return;
+    }
+    this.streak = null;
+    const {kind, direction, count} = streak;
+    if (count === streak.reported) {
+      return;
+    }
+    if (kind === 'move') {
+      this.record(streak.id, `moved ${direction} ${squares(count)}.`);
+      return;
+    }
+    const times = count === 1 ? 'turned left' : `turned left ${count} times`;
+    this.record(
+      streak.id,
+      direction ? `${times}, now facing ${direction}.` : `${times}.`
+    );
   }
 
-  // Speak now if the last utterance is far enough behind, otherwise wait out
-  // the gap and let whatever else arrives join this one.
-  private schedule(): void {
-    if (this.timer !== null) {
-      return;
-    }
-    const wait = MIN_GAP_MS - (Date.now() - this.lastSpokenAt);
-    if (wait <= 0) {
-      this.speak();
-      return;
-    }
-    this.timer = window.setTimeout(() => {
-      this.timer = null;
-      this.speak();
-    }, wait);
+  private name(id: string): string {
+    return this.painterIds.length > 1 && id ? painterName(id) : 'Painter';
   }
 
-  private speak(): void {
-    this.reportMove(false);
-    if (!this.pending.length) {
-      return;
+  // Built on first use: the grid it sits beside does not exist until the level
+  // has been injected.
+  private log(): HTMLElement {
+    return document.getElementById(LOG_ID) ?? buildLog();
+  }
+
+  // One node per line, so the reader queues them and the line stays readable
+  // afterwards whether or not it was announced.
+  private announce(text: string): void {
+    const log = this.log();
+    const line = document.createElement('div');
+    line.textContent = text;
+    log.appendChild(line);
+    while (log.childElementCount > MAX_ENTRIES) {
+      log.firstElementChild?.remove();
     }
-    const text = this.pending.join(' ');
-    this.pending = [];
-    this.lastSpokenAt = Date.now();
-    // Clear first so repeated text still re-fires.
-    this.region.textContent = '';
-    window.setTimeout(() => {
-      this.region.textContent = text;
-    }, 0);
   }
 }

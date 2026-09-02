@@ -43,16 +43,14 @@ export default class Neighborhood extends MiniApp {
   private resolveOnDone?: () => void;
   private donePromise: Promise<void> | null = null;
   private narrator: NeighborhoodRunNarrator;
-  private setConsoleAnnouncements: (enabled: boolean) => void;
 
   constructor(
     onOutputMessage: (message: string) => void,
     onNewlineMessage: () => void,
     setIsRunning: (isRunning: boolean) => void,
     onPartialOutputMessage: (message: string) => void,
-    // Lets the run narration speak first; the console's output is read after
-    // it. Optional because Java Lab has no such console.
-    setConsoleAnnouncements: (enabled: boolean) => void = () => {}
+    // Read out with the run summary; see NeighborhoodRunNarrator.
+    getConsoleLines: () => string[] = () => []
   ) {
     super();
     this.controller = null;
@@ -63,10 +61,12 @@ export default class Neighborhood extends MiniApp {
     this.nextSignalIndex = -1;
     this.speedTracker = NeighborhoodSpeedTracker.getInstance();
     this.onPartialOutputMessage = onPartialOutputMessage;
-    this.setConsoleAnnouncements = setConsoleAnnouncements;
     this.isProcessingSignals = false;
     // Read lazily: the controller does not exist until afterInject.
-    this.narrator = new NeighborhoodRunNarrator(() => this.controller);
+    this.narrator = new NeighborhoodRunNarrator(
+      () => this.controller,
+      getConsoleLines
+    );
   }
 
   afterInject(
@@ -144,12 +144,10 @@ export default class Neighborhood extends MiniApp {
       if (signal.value === NeighborhoodSignalType.DONE) {
         // we are done processing commands and can stop checking for signals.
         // Set isRunning to false, add a blank line to the console, and return
+        // The summary goes first, ahead of the run button's label change.
+        this.narrator.endRun();
         this.setIsRunning(false);
         this.onNewlineMessage();
-        // The narrator reads the run's console output as part of its summary,
-        // so the console stays quiet until the next write after the run.
-        this.narrator.endRun();
-        this.setConsoleAnnouncements(true);
         if (this.resolveOnDone) {
           this.resolveOnDone();
         }
@@ -163,11 +161,7 @@ export default class Neighborhood extends MiniApp {
       const beginTime = Date.now();
       if (signal.value === ConsoleSignalType.CONSOLE_LOG) {
         this.onOutputMessage(signal.detail);
-        this.narrator.onConsoleMessage(signal.detail);
       } else if (signal.value === ConsoleSignalType.PARTIAL_LOG) {
-        // A partial line is an input() prompt. It cannot wait for the end of
-        // the run, so the console speaks again from here on.
-        this.setConsoleAnnouncements(true);
         this.onPartialOutputMessage(signal.detail);
       } else {
         this.mazeCommand(signal as NeighborhoodSignal, timeForSignal);
@@ -187,7 +181,7 @@ export default class Neighborhood extends MiniApp {
   }
 
   mazeCommand(signal: NeighborhoodSignal, timeForSignal: number) {
-    // Narrate as the action is drawn, so speech tracks the animation.
+    // Logged as the action is drawn, so the log tracks the animation.
     this.narrator.onSignal(signal);
     switch (signal.value) {
       case NeighborhoodSignalType.MOVE: {
@@ -267,8 +261,7 @@ export default class Neighborhood extends MiniApp {
 
   setProcessSignals() {
     this.controller.hideDefaultPegman();
-    // The narration owns the screen reader for the duration of the run.
-    this.setConsoleAnnouncements(false);
+    this.narrator.startRun();
     this.isProcessingSignals = true;
     // start checking for signals after the specified wait time
     timeoutList.setTimeout(() => this.processSignals(), SIGNAL_CHECK_TIME);
@@ -296,11 +289,8 @@ export default class Neighborhood extends MiniApp {
     this.signals = [];
     this.nextSignalIndex = 0;
     this.isProcessingSignals = false;
-    // A stopped run must stop talking, and the next one starts its count over.
-    // Nothing will reach the narrator's summary now, so the console takes the
-    // screen reader back rather than staying silent.
+    // A stopped run clears its log.
     this.narrator.reset();
-    this.setConsoleAnnouncements(true);
   }
 
   isRunning() {
