@@ -116,11 +116,23 @@ const NONE_VALUE = '';
  * Exported because a list assembled elsewhere needs it too: `use rule` builds
  * its options in `domainBlocks` (it labels a rule by the ability the parsed
  * `.rule` declares), and it is precisely the list that may be empty.
+ *
+ * `empty` NAMES WHAT IS MISSING where the caller knows. "(none)" is a fair
+ * answer for a dropdown whose subject a learner may genuinely not want — no
+ * trait, no rule — but it reads as a CHOICE, and for a list of the project's
+ * own files it is not one: a project with no sounds is not a project that
+ * chose silence, it is one with nothing in `sounds/` yet. `play tween` has
+ * said "(no tweens yet)" since it was written (`blockly/tweens`), and this is
+ * that wording made available to the rest.
+ *
+ * The VALUE is the same either way, so nothing downstream changes: an empty
+ * value is "nothing chosen" and the block generates nothing.
  */
 export const orNone = (
   options: Array<[string, string]>,
+  empty = '(none)',
 ): Array<[string, string]> =>
-  options.length ? options : [['(none)', NONE_VALUE]];
+  options.length ? options : [[empty, NONE_VALUE]];
 
 /** Current ACTOR dropdown options (the project's actor templates). */
 export function actorOptions(): Array<[string, string]> {
@@ -174,11 +186,14 @@ export function backgroundOptions(): DropdownOptions {
  * Both sound blocks offer the row: `play sound` and `set music to` reach the
  * same shelf, and a learner who has no sounds yet is exactly the learner who
  * needs it. Listed last, and never as the fallback when the project has none —
- * `orNone` still supplies "(none)" — so a saved block whose file was deleted
- * does not silently become the import row.
+ * `orNone` still supplies "(no sounds yet)" — so a saved block whose file was
+ * deleted does not silently become the import row.
  */
 export function soundImportOptions(): Array<[string, string]> {
-  return [...orNone(projectSounds), ['(import…)', IMPORT_SOUND_VALUE]];
+  return [
+    ...orNone(projectSounds, '(no sounds yet)'),
+    ['(import…)', IMPORT_SOUND_VALUE],
+  ];
 }
 
 export function backgroundImportOptions(): DropdownOptions {
@@ -195,7 +210,7 @@ export function animationFileOptions(): Array<[string, string]> {
 
 /** Current EFFECT dropdown options (the project's effect files). */
 export function effectFileOptions(): Array<[string, string]> {
-  return orNone(projectEffectFiles);
+  return orNone(projectEffectFiles, '(no effects yet)');
 }
 
 /**
@@ -206,11 +221,14 @@ export function effectFileOptions(): Array<[string, string]> {
  * means to do.
  *
  * Listed last, and never as the fallback when the project has no effects yet —
- * `orNone` still supplies "(none)" there — so a saved block whose value is
- * missing does not silently become the import row.
+ * `orNone` still supplies "(no effects yet)" there — so a saved block whose
+ * value is missing does not silently become the import row.
  */
 export function effectFileImportOptions(): Array<[string, string]> {
-  return [...orNone(projectEffectFiles), ['(import…)', IMPORT_EFFECT_VALUE]];
+  return [
+    ...orNone(projectEffectFiles, '(no effects yet)'),
+    ['(import…)', IMPORT_EFFECT_VALUE],
+  ];
 }
 
 /** Current MAP dropdown options (the project's map files). */

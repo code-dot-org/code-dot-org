@@ -35,11 +35,12 @@ describe('the SOUND dropdown', () => {
     ]);
   });
 
-  it('says "(none)" rather than making the import row the fallback', () => {
+  it('names what is missing rather than making the import row the fallback', () => {
     // A saved block whose file was deleted falls back to the FIRST option, so
     // an import row in that position would turn a missing sound into a dialog
-    // opening itself.
-    expect(soundImportOptions()[0]).toEqual(['(none)', '']);
+    // opening itself. The words are "(no sounds yet)" and not "(none)",
+    // because silence was not chosen — there is simply nothing in `sounds/`.
+    expect(soundImportOptions()[0]).toEqual(['(no sounds yet)', '']);
   });
 });
 

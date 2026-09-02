@@ -28,11 +28,12 @@ describe('the effect dropdown options', () => {
     ]);
   });
 
-  it('still shows (none) when the project has no effects', () => {
+  it('says what is missing when the project has no effects', () => {
     // Not the import row as the fallback: a saved block whose effect has been
     // deleted would then silently re-point at "import" rather than reading as
-    // unset.
-    expect(effectFileImportOptions()[0]).toEqual(['(none)', '']);
+    // unset. And not "(none)", which reads as a choice — a project with no
+    // effects did not choose to have none, it has nothing in `effects/` yet.
+    expect(effectFileImportOptions()[0]).toEqual(['(no effects yet)', '']);
   });
 
   it('leaves the plain options alone, for the remove blocks', () => {

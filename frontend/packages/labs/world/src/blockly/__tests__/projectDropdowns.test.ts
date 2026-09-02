@@ -113,6 +113,6 @@ describe('the sound registry', () => {
 
     refreshProjectDropdowns(FILES, [], {}, []);
 
-    expect(soundImportOptions()[0]).toEqual(['(none)', '']);
+    expect(soundImportOptions()[0]).toEqual(['(no sounds yet)', '']);
   });
 });
