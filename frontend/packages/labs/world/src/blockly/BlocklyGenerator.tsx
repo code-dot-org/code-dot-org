@@ -12,6 +12,7 @@ import {
   Blockly,
   BlocklyProvider,
   BlocklyWorkspace,
+  useBlocklyContext,
 } from '@code-dot-org/blockly';
 
 import {assembleActorModule, assembleWorldModule} from './assembleActorModule';
@@ -59,6 +60,33 @@ export interface BlocklyGeneratorHandle {
   generate: (contents: string, path?: string) => string;
 }
 
+/** The half of the driver this needs: "register these definitions, now". */
+interface DriverHandle {
+  setBlocks: (blocks: unknown[]) => void;
+}
+
+/**
+ * Hands the provider's driver up to the component that renders it.
+ *
+ * A provider's driver is only reachable from inside it, and `generate` is a
+ * method on the component that renders one — so a child with no markup carries
+ * it out. Nothing else in this file wants React context, which is why this is
+ * three lines rather than a hook of its own.
+ */
+const CaptureDriver = ({
+  into,
+}: {
+  into: MutableRefObject<DriverHandle | null>;
+}) => {
+  // The hook casts the context to whatever it is asked for, and what this
+  // wants out of it is one method (`DriverHandle`).
+  const {driver} = useBlocklyContext() as unknown as {
+    driver?: {current?: DriverHandle};
+  };
+  into.current = driver?.current ?? null;
+  return null;
+};
+
 export const BlocklyGenerator = forwardRef<
   BlocklyGeneratorHandle,
   {
@@ -87,6 +115,24 @@ export const BlocklyGenerator = forwardRef<
    * per generate would pay for that again every time.
    */
   const headlessRef = useRef<Blockly.Workspace | null>(null);
+  /**
+   * This generator's own Blockly driver, captured from inside its provider.
+   *
+   * A BLOCK DEFINITION IS GLOBAL: `Blockly.Blocks` has one entry per type, and
+   * the last palette registered wins. Two of them differ by file — `each
+   * frame` and `define drawing` are roots in an `.actor` file and chained rows
+   * everywhere else, because a top-level block with a previous connection is
+   * disabled as an orphan (`DisableOrphansPlugin`) — so while an actor file was
+   * the open editor, this generator loaded every `.rule` against a definition
+   * with no previous connection and Blockly refused the trait's `each frame`:
+   * "the block is missing a previous connection". Every rule in the project,
+   * on any edit to an actor, until another file was opened.
+   *
+   * So the generator states its own definitions before it reads a file. It
+   * cannot avoid the divergence — both shapes are wanted, in different files —
+   * but it can stop depending on who registered last.
+   */
+  const driverRef = useRef<DriverHandle | null>(null);
 
   // The palette + root-block types for this project: the built-ins extended with
   // the project's own `.rule` rules. Setting `blocks` re-registers on the live
@@ -130,6 +176,8 @@ export const BlocklyGenerator = forwardRef<
         if (!workspaceRef.current || !generator) {
           throw new Error('Blockly generator is not ready');
         }
+        // Ours, not whoever's the open editor last registered (`driverRef`).
+        driverRef.current?.setBlocks(blocks);
         const workspace = (headlessRef.current ??= new Blockly.Workspace());
         // Tag this workspace so a renderer-dependent mutator (the params
         // `+`/`−`) skips its visual rebuild here — it has no renderer to draw
@@ -281,6 +329,7 @@ export const BlocklyGenerator = forwardRef<
   return (
     <div className={styles.offscreen} aria-hidden="true">
       <BlocklyProvider blocks={blocks}>
+        <CaptureDriver into={driverRef} />
         <BlocklyWorkspace
           options={{readOnly: true, trashcan: false}}
           workspaceRef={workspaceRef}

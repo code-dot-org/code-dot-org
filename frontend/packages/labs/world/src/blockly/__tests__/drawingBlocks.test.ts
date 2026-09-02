@@ -83,6 +83,11 @@ describe('define drawing', () => {
     // chains like the `use trait` above it. Which is also how it says WHOSE
     // picture it is — a local actor's body generates inside a block where
     // `actor` is that builder, so no field was needed to name one.
+    //
+    // WHAT THAT COSTS is a definition that differs by file, and
+    // `Blockly.Blocks` holds one per type — so whoever registered last speaks
+    // for the whole process. The generator states its own before it reads a
+    // file (`BlocklyGenerator`), which is the price of keeping both shapes.
     const shapeIn = (fileKind: FileKind) => {
       const matches = buildDomainPalette([], {fileKind}).blocks.filter(
         block => block.type === 'world_define_drawing',
