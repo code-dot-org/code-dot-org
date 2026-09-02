@@ -56,23 +56,35 @@
   flex-direction: column;
   flex: 1;
   min-width: 0;
-  padding: 16px;
   background-color: var(--background-neutral-primary);
   border-right: 1px solid var(--borders-neutral-primary);
-  gap: 20px;
 }
 
 .sidebarContent {
   display: flex;
+  flex: 1;
   flex-direction: column;
   gap: 20px;
+  padding: 16px;
   height: stretch;
 }
 
+.sidebarTop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px;
+  background-color: var(--background-neutral-true-base);
+  border-bottom: 1px solid var(--borders-neutral-primary);
+}
+
+.sidebarLabel {
+  margin: 2px 0 !important;
+}
+
 .sidebarHeading {
-  margin: 0 0 8px !important;
-  font-size: 1rem !important;
-  font-weight: 600 !important;
+  margin: 0 0 4px !important;
   color: var(--text-info-primary-fixed) !important;
 }
 
@@ -224,25 +236,20 @@
 }
 
 .waitingDisplay {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 36px;
-    background-color: var(--background-neutral-primary);
-    width: stretch;
-    height: stretch;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex: 1 0 0;
+  align-self: stretch;
 }
 
 // Fills the deep-dive content region so the flex chain below resolves to a
 // definite height (letting the whiteboard grow instead of collapsing).
 .topContainer {
   display: flex;
+  flex: 1;
   align-items: stretch;
   height: 100%;
   min-height: 0;
