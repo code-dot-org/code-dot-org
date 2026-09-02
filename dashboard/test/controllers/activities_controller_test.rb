@@ -606,7 +606,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   describe '#milestone' do
-    let(:anon_user_id) {Faker::Internet.uuid}
+    let(:anon_user_id) {AnonUserId.generate}
 
     context 'when there is no current user' do
       before do

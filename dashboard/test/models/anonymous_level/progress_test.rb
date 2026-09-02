@@ -5,7 +5,7 @@ class AnonymousLevel::ProgressTest < ActiveSupport::TestCase
 
   let(:script) {create(:unit)}
   let(:level) {create(:level)}
-  let(:anon_user_id) {Faker::Internet.uuid}
+  let(:anon_user_id) {AnonUserId.generate}
 
   describe 'shared level progress behavior' do
     let(:progress) do
@@ -41,11 +41,18 @@ class AnonymousLevel::ProgressTest < ActiveSupport::TestCase
   end
 
   describe 'validations' do
-    it 'requires a stable ID' do
+    it 'requires an anonymous user ID' do
       progress = build(:anonymous_level_progress, anon_user_id: nil)
 
       _(progress).wont_be :valid?
       _(progress.errors[:anon_user_id]).must_include 'is required'
+    end
+
+    it 'requires the anonymous user ID to be UUID v4' do
+      progress = build(:anonymous_level_progress, anon_user_id: 'invalid')
+
+      _(progress).wont_be :valid?
+      _(progress.errors[:anon_user_id]).must_include 'is invalid'
     end
 
     it 'requires a script' do
@@ -59,17 +66,17 @@ class AnonymousLevel::ProgressTest < ActiveSupport::TestCase
       progress = build(:anonymous_level_progress, level: nil)
 
       _(progress).wont_be :valid?
-      _(progress.errors[:level_id]).must_include 'is required'
+      _(progress.errors[:level]).must_include 'must exist'
     end
 
-    context 'when the stable ID, script, and level already exist' do
+    context 'when the anonymous user ID, script, and level already exist' do
       let(:duplicate) {build(:anonymous_level_progress, anon_user_id:, script:, level:)}
 
       before do
         create(:anonymous_level_progress, anon_user_id:, script:, level:)
       end
 
-      it 'requires a unique stable ID within a script and level' do
+      it 'requires a unique anonymous user ID within a script and level' do
         _(duplicate).wont_be :valid?
         _(duplicate.errors[:anon_user_id]).must_include 'has already been taken'
       end

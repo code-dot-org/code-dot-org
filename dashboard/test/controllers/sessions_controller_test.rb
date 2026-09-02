@@ -118,7 +118,7 @@ class SessionsControllerTest < ActionController::TestCase
 
   test 'signing in user creates SignIn' do
     frozen_time = Date.parse('1985-10-26 01:20:00')
-    anon_user_id = SecureRandom.uuid
+    anon_user_id = AnonUserId.generate
     DateTime.stubs(:now).returns(frozen_time)
     session[:statsig_stable_id] = anon_user_id
     user = create(:user, sign_in_count: 2)

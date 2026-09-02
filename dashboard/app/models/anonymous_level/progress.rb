@@ -43,7 +43,6 @@ class AnonymousLevel::Progress < ApplicationRecord
     updated_at: :confidential,
   )
 
-  validates :anon_user_id, presence: true, uniqueness: {scope: %i[script_id level_id]}
+  validates :anon_user_id, presence: true, format: AnonUserId::FORMAT, uniqueness: {scope: %i[script_id level_id]}
   validates :script_id, presence: true
-  validates :level_id, presence: true
 end

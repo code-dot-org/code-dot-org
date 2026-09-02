@@ -183,6 +183,8 @@ class ActivitiesController < ApplicationController
           unit_group: @unit_group
         )
       else
+        track_progress_in_session
+
         Services::AnonymousLevel::ProgressTracker.call(
           anon_user_id:,
           script_id: @script_level.script_id,
@@ -194,8 +196,6 @@ class ActivitiesController < ApplicationController
           time_spent: time_since_last_milestone,
           locale: I18n.locale,
         )
-
-        track_progress_in_session
       end
 
       is_sublevel = @script_level.levels.exclude?(@level)
