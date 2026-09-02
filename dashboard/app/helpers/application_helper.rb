@@ -47,12 +47,10 @@ module ApplicationHelper
     end
   end
 
-  # This method formats a date string to align with the format used in analytics:
-  # "YYYY-YY+1" (e.g. "2022-23")
-  # We define a school year as July 1st YYYY - June 30th YYYY+1, so:
-  # 07/01/2022 - 06/30/2023 should be formatted as "2022-23"
+  # The format analytics uses, "YYYY-YY+1" (e.g. "2022-23"). The boundary itself
+  # lives in Policies::SchoolYear.
   def school_year
-    year = Time.now.month >= 7 ? Time.now.year : Time.now.year - 1
+    year = Policies::SchoolYear.starting_year
     "#{year}-#{year.to_s[-2..].to_i + 1}"
   end
 

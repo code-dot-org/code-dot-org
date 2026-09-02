@@ -2,6 +2,8 @@
 # Tokens are random rather than derived, so this table is the only way back.
 # Rows must outlive the logs carrying their tokens: with a school-year window
 # and 90-day log retention, that is the current window and the one before it.
+require 'cdo/shared_cache'
+
 class User::LogToken < ApplicationRecord
   data_classification(
     id: :confidential,
@@ -19,13 +21,14 @@ class User::LogToken < ApplicationRecord
     SENTRY = 'sentry',
   ].freeze
 
-  # Bounds how long a deleted row keeps answering.
-  CACHE_TTL = 12.hours
-
-  # Matches ApplicationHelper#school_year: 7/1 YYYY - 6/30 YYYY+1.
-  ROLLOVER_MONTH = 7
+  # One primary-DB read per active user per day of use.
+  CACHE_TTL = 8.hours
 
   belongs_to :user, -> {with_deleted}
+
+  # Purging a user destroys their rows through the association, and the token
+  # must stop being emitted then rather than when the cache entry expires.
+  after_destroy {CDO.shared_cache.delete(self.class.send(:cache_key, user_id, destination, period))}
 
   validates :destination, inclusion: {in: DESTINATIONS}
   validates :period, presence: true
@@ -39,8 +42,8 @@ class User::LogToken < ApplicationRecord
       id = normalize(user_id)
       return nil unless id
 
-      period = current_period
-      Rails.cache.fetch(cache_key(id, destination, period), expires_in: CACHE_TTL, skip_nil: true) do
+      period = Policies::SchoolYear.starting_year
+      CDO.shared_cache.fetch(cache_key(id, destination, period), expires_in: CACHE_TTL, skip_nil: true) do
         mint(id, destination, period)
       end
     rescue StandardError => exception
@@ -59,12 +62,6 @@ class User::LogToken < ApplicationRecord
       result = record && {user_id: record.user_id, destination: record.destination, period: record.period}
       audit(result: result, actor_id: actor, reason: reason, request_id: request_id)
       result
-    end
-
-    # The school year this falls in, labelled by the year it starts.
-    def current_period
-      today = Time.zone.today
-      today.month >= ROLLOVER_MONTH ? today.year : today.year - 1
     end
 
     private def known_destination?(destination)
