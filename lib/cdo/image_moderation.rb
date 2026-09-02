@@ -35,9 +35,6 @@ module ImageModeration
       return nil
     end
 
-    # Files API allows 5MB uploads; Azure rejects over 4MB (InvalidRequestBody).
-    return nil if moderation_io.size > MAX_MODERATION_SIZE
-
     AzureAiContentSafety.new(
       endpoint: CDO.azure_ai_content_safety_endpoint,
       api_key: CDO.azure_ai_content_safety_key
