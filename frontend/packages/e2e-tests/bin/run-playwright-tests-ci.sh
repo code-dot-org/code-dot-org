@@ -3,13 +3,11 @@
 #   run-playwright-tests-ci.sh functional   # all three browsers
 #   run-playwright-tests-ci.sh eyes         # the @visual tests only
 #
-# Callers: lib/rake/ci.rake (Drone), lib/rake/test.rake (DTT).
+# Caller: lib/rake/test.rake, for Drone (lib/rake/ci.rake). The DTT runs both
+# suites on GitHub Actions instead (.github/workflows/dtt.yml).
 #
 # functional stops the build when it fails. eyes does not, because a person must
 # approve each new image. They run as two processes to get two exit codes.
-#
-# Chef does not install the browsers. Each Playwright version needs its own
-# browser version, and a cookbook change each time is too much work.
 set -euo pipefail
 
 suite="${1:?please choose a suite: functional or eyes}"
@@ -49,11 +47,6 @@ echo "--- running the Playwright $suite tests against $TARGET_URL ---"
 rm -rf "$report_dir" "$results_dir"
 
 yarn install --immutable
-# Only the DTT daemon needs this. The other images have the browsers.
-# install-deps is not here, because it reads apt each run.
-if [ "${PLAYWRIGHT_PROVIDER:-}" = dtt ]; then
-  yarn exec playwright install chromium firefox webkit
-fi
 
 # These variables replace the paths in playwright.config.ts.
 PLAYWRIGHT_HTML_OUTPUT_DIR="$report_dir" \

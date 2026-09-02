@@ -1,5 +1,6 @@
 require 'net/http'
 require 'octokit'
+require 'timeout'
 
 require_relative '../../deployment'
 require 'observability/errors'
@@ -33,6 +34,37 @@ module GitHub
   def self.dispatch_workflow(workflow_id:, ref:, inputs: {})
     configure_octokit
     Octokit.workflow_dispatch(REPO, workflow_id, ref, inputs: inputs)
+  end
+
+  # The newest run that a workflow_dispatch of `workflow_id` on `ref` created at
+  # or after `since`, or nil while GitHub has not created one yet. The dispatch
+  # API returns no run id, so a caller polls this after dispatching.
+  # @return [Sawyer::Resource, nil]
+  def self.find_workflow_run(workflow_id:, ref:, since:)
+    configure_octokit
+    created = ">=#{since.utc.strftime('%Y-%m-%dT%H:%M:%S+00:00')}"
+    runs = Octokit.workflow_runs(REPO, workflow_id, event: 'workflow_dispatch', branch: ref, created: created)
+    runs.workflow_runs.max_by(&:created_at)
+  end
+
+  # Polls the run every `interval` seconds until GitHub reports it completed.
+  # @raise [Timeout::Error] If the run is still going `timeout` seconds from now.
+  # @return [Sawyer::Resource] The completed run, with its conclusion.
+  def self.wait_for_workflow_run(run_id, timeout:, interval: 30)
+    configure_octokit
+    deadline = Time.now + timeout
+    loop do
+      run = Octokit.workflow_run(REPO, run_id)
+      return run if run.status == 'completed'
+      raise Timeout::Error, "workflow run #{run_id} is still #{run.status} after #{timeout} seconds" if Time.now >= deadline
+      sleep interval
+    end
+  end
+
+  # @return [Array<Sawyer::Resource>] The run's jobs, each with a name, conclusion, steps and html_url.
+  def self.workflow_run_jobs(run_id)
+    configure_octokit
+    Octokit.workflow_run_jobs(REPO, run_id).jobs
   end
 
   # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/PullRequests.html#pull_request_files-instance_method

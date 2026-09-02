@@ -16,6 +16,11 @@ on:
         type: string
         default: '--project=chromium'
         description: 'Playwright --project flags selecting browser projects. Defaults to Chromium, matching the legacy Drone Chrome-only lane; DTT overrides with the full engine matrix.'
+      eyes-blocking:
+        required: false
+        type: boolean
+        default: true
+        description: 'Whether a failed eyes job fails the run. DTT passes false: a visual diff reddens the eyes job for a person to review in Applitools, and the run conclusion stays the functional verdict.'
 
 jobs:
   # Sharded so wall time stays flat as specs are added.
@@ -133,6 +138,8 @@ jobs:
   eyes:
     runs-on: ubuntu-24.04
     timeout-minutes: 10
+    # A failure still reddens this job; with eyes-blocking false it stops there.
+    continue-on-error: ${{ !inputs.eyes-blocking }}
     container:
       image: mcr.microsoft.com/playwright:${{ inputs.playwright-image-tag }}
     steps:
@@ -155,13 +162,17 @@ jobs:
         working-directory: ./frontend
 
       - name: Eyes Tests
+        id: eyes
         env:
           VISUAL_PROVIDER: applitools
           APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
+          # The commit, so a caller can compute the batch link from the run's
+          # head_sha (lib/rake/test.rake does).
           APPLITOOLS_BATCH_ID: ${{ github.event.pull_request.head.sha || github.sha }}
           # Temporary, following the DTT model: on PRs an Eyes diff is
-          # reported to the dashboard but does not fail the run; the
-          # post-merge push run on staging still fails hard on diffs.
+          # reported to the dashboard but does not fail the run; every other
+          # event fails this step on a diff, and eyes-blocking decides whether
+          # the run follows.
           APPLITOOLS_SHOULD_REPORT_FAILURE: ${{ github.event_name != 'pull_request' }}
           APPLITOOLS_BATCH_NAME: E2E Playwright Eyes Tests
           APPLITOOLS_BRANCH: ${{ github.head_ref || github.ref_name }}
@@ -171,6 +182,19 @@ jobs:
           TARGET_URL: https://test-studio.code.org
         run: yarn test:ui --grep @visual --project=visual-chromium
         working-directory: ./frontend/packages/e2e-tests
+
+      # The run page is where an engineer lands; this puts the batch one click away.
+      - name: Eyes Summary
+        if: '!cancelled()'
+        env:
+          OUTCOME: ${{ steps.eyes.outcome }}
+          BATCH_URL: https://eyes.applitools.com/app/batches/?startInfoBatchId=${{ github.event.pull_request.head.sha || github.sha }}&hideBatchList=true
+        run: |
+          {
+            echo "### Eyes: ${OUTCOME}"
+            echo
+            echo "A failure is a visual diff to review or an Eyes error. The [Applitools batch](${BATCH_URL}) has the images; the Eyes Tests step log has the errors."
+          } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Upload Playwright Report
         if: failure() || cancelled()

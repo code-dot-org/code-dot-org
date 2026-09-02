@@ -26,11 +26,13 @@ From `frontend/`:
 - **Drone** — both suites, against the build the PR makes, before the Cucumber
   tests. Runs `chromium` only. To add browsers, see the commit tags in
   [dashboard/test/ui/README.md](../../../dashboard/test/ui/README.md).
-- **DTT** — the functional suite in all three browsers, against test-studio, with
-  the Cucumber tests. Eyes runs only through GitHub Actions.
-- **DTT → GitHub Actions** (`dtt.yml` → `e2e-tests-ci.yml`) — both suites again,
-  on GitHub runners, with nothing waiting for the result. Needs no CDO secrets
-  and no local Rails build, so contributors and agents can run it too.
+- **DTT → GitHub Actions** (`dtt.yml` → `e2e-tests-ci.yml`) — both suites, on
+  GitHub runners, against test-studio, in all three browsers, alongside the
+  Cucumber suites. The test-server daemon (`rake test:playwright_gha`) dispatches
+  the run, waits for it, and reports it to Slack with the deploy's other UI
+  suites: a failed functional matrix turns the DTT red; a failed eyes job is
+  linked for review in Applitools and fails nothing. Needs no CDO secrets and no
+  local Rails build, so contributors and agents can run it too.
 
 Sharding splits the Playwright test report too: each shard can only report on
 the tests it ran. So each writes its slice using Playwright's `blob` reporter, a

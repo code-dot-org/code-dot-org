@@ -3,7 +3,7 @@ import {defineConfig, devices} from '@playwright/test';
 import {visualProjects} from '@code-dot-org/playwright-support/visual';
 
 // Set by each automated lane's entry point (GitHub Actions workflow, rake task); unset = local.
-const provider = process.env.PLAYWRIGHT_PROVIDER; // 'github-actions' | 'drone' | 'dtt' | undefined
+const provider = process.env.PLAYWRIGHT_PROVIDER; // 'github-actions' | 'drone' | undefined
 const isAutomated = !!provider;
 const htmlReport = {outputFolder: 'playwright-report', open: 'never'} as const;
 
@@ -33,7 +33,7 @@ export default defineConfig({
   forbidOnly: isAutomated,
   // retry in automated lanes so a flake can't pass one lane and fail another.
   retries: isAutomated ? 2 : 0,
-  // 100% only on GitHub Actions (dedicated runner, external server); Drone/DTT share CPU.
+  // 100% only on GitHub Actions (dedicated runner, external server); Drone shares CPU with the server under test.
   workers: provider === 'github-actions' ? '100%' : undefined,
   reporter: isAutomated
     ? [

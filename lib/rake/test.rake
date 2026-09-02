@@ -125,7 +125,8 @@ namespace :test do
     Lighthouse.report CDO.studio_url('')
   end
 
-  # A failure stops the Drone PR build (lib/rake/ci.rake) and the DTT (ui_all).
+  # A failure stops the Drone PR build (lib/rake/ci.rake). The DTT runs this
+  # suite on GitHub Actions instead: see :playwright_gha.
   timed_task_with_logging :playwright_ui do
     raise 'Playwright e2e tests failed' unless run_playwright_suite(:functional)
   end
@@ -140,33 +141,41 @@ namespace :test do
     run_playwright_suite(:eyes)
   end
 
-  # Dispatch the dtt.yml Playwright run on GitHub Actions (ref: test), moving e2e
-  # browser execution off the daemon and onto horizontally scalable runners. The
-  # GHA run hits the same test-studio; only the execution substrate differs.
-  # Fire-and-forget: GitHub schedules and runs it, the daemon's job ends here.
-  # Non-blocking — a dispatch error warns but never raises (matches :playwright_ui).
-  timed_task_with_logging :dispatch_gha_dtt do
-    GitHub.dispatch_workflow(workflow_id: 'dtt.yml', ref: 'test')
-    ChatClient.log 'Dispatched <b>dtt.yml</b> Playwright e2e run on GitHub Actions (ref: test).'
-  rescue StandardError => exception
-    ChatClient.log "Could not dispatch dtt.yml Playwright run (non-blocking): #{exception.message}", color: 'red'
+  # The Playwright suites on GitHub Actions (dtt.yml, ref: test) against the
+  # deployed test-studio, off the daemon and on runners that scale out. The
+  # functional matrix gates: a failed run raises, and ui_all turns the DTT red.
+  # The eyes job never gates. dtt.yml runs it with continue-on-error, so a
+  # visual diff reddens that job and not the run, and a person reviews it in
+  # Applitools. A GitHub outage fails this suite like a provider outage fails
+  # the Cucumber suites.
+  timed_task_with_logging :playwright_gha do
+    # A minute early, in case this clock is ahead of GitHub's.
+    since = Time.now - 60
+    GitHub.dispatch_workflow(workflow_id: GHA_DTT_WORKFLOW, ref: GHA_DTT_REF)
+
+    # The dispatch API returns no run id. GitHub creates the run within seconds.
+    run = nil
+    12.times do
+      run = GitHub.find_workflow_run(workflow_id: GHA_DTT_WORKFLOW, ref: GHA_DTT_REF, since: since)
+      break if run
+      sleep 10
+    end
+    raise "GitHub created no #{GHA_DTT_WORKFLOW} run within two minutes of the dispatch" unless run
+
+    # dtt.yml fixes the target; test-studio is the deployment this DTT just made.
+    ChatClient.log %(Starting <b>dashboard</b> Playwright e2e tests against test-studio on <a href="#{run.html_url}">GitHub Actions</a>.)
+    run = GitHub.wait_for_workflow_run(run.id, timeout: GHA_DTT_TIMEOUT)
+    rollup = playwright_gha_rollup(run, GitHub.workflow_run_jobs(run.id))
+    PLAYWRIGHT_ROLLUP[:gha] = rollup
+
+    passed = run.conclusion == 'success'
+    ChatClient.log rollup, color: (passed ? 'green' : 'red')
+    raise "Playwright e2e tests failed on GitHub Actions: #{run.html_url}" unless passed
   end
 
   # Run the deploy-time UI suites in parallel. If one suite raises, allow the
   # others to complete, then make sure this task raises.
-  #
-  # The GHA run is dispatched first because from the ensure block its ~18
-  # minutes straddled the next deploy's Puma restart, which is where its 502s
-  # in late-scheduled firefox and webkit came from.
   timed_task_with_logging :ui_all do
-    # Rescued out here too: TimedTaskWithLogging logs its start event before
-    # entering its own rescue, and that must not cost us the suites.
-    begin
-      Rake::Task['test:dispatch_gha_dtt'].invoke if CDO.test_system?
-    rescue StandardError => exception
-      ChatClient.log "Could not dispatch the GHA Playwright run (non-blocking): #{exception.message}", color: 'red'
-    end
-
     # map returns each suite's exception in order, so the rollup needs no state
     # shared across the threads.
     exceptions = Parallel.map(UI_SUITES.keys, in_threads: 4) do |target|
@@ -606,8 +615,13 @@ UI_SUITES = {
   eyes_ui: 'Eyes',
   saucelabs_ui: 'Safari + iPad + iPhone UI',
   devicefarm_desktop_ui: 'Chrome + Firefox UI',
-  playwright_ui: PLAYWRIGHT_SUITES.fetch(:functional),
+  playwright_gha: 'Playwright (GitHub Actions)',
 }.freeze
+
+GHA_DTT_WORKFLOW = 'dtt.yml'.freeze
+GHA_DTT_REF = 'test'.freeze
+# The shards time out at 30 minutes and the report job at 10, plus queue time.
+GHA_DTT_TIMEOUT = 60 * 60
 
 # An exception cannot carry the test counts and the report link.
 PLAYWRIGHT_ROLLUP = {}
@@ -621,11 +635,8 @@ def run_playwright_suite(suite)
   e2e_dir = frontend_dir('packages', 'e2e-tests')
   script = File.join(e2e_dir, 'bin', 'run-playwright-tests-ci.sh')
 
-  # GitHub Actions sets its own PLAYWRIGHT_PROVIDER and skips this task.
-  provider =
-    if CDO.test_system?            then 'dtt'
-    elsif CI::Utils.running_on_ci? then 'drone'
-    end
+  # Only Drone runs this. GitHub Actions sets its own PLAYWRIGHT_PROVIDER.
+  provider = CI::Utils.running_on_ci? ? 'drone' : nil
 
   # The key does not change, so this link works when the run ends.
   pending_report = Cdo::PlaywrightReport.index_url(name: "playwright#{suffix}")
@@ -669,10 +680,43 @@ end
 # room, so this is the only place the whole deploy window can be read at once.
 def ui_all_rollup(failures)
   lines = UI_SUITES.map do |target, label|
-    next PLAYWRIGHT_ROLLUP[:functional] if target == :playwright_ui && PLAYWRIGHT_ROLLUP[:functional]
+    next PLAYWRIGHT_ROLLUP[:gha] if target == :playwright_gha && PLAYWRIGHT_ROLLUP[:gha]
     failures[target] ? "❌ #{label}: #{failures[target].message}." : "✅ #{label}: passed."
   end
   ['Deploy-time UI suites:', *lines].join("\n")
+end
+
+# Two lines: the functional matrix, which gates, and eyes, which does not. The
+# run's conclusion is the functional verdict because dtt.yml runs eyes with
+# continue-on-error. The eyes job's own conclusion says whether a person has a
+# diff to review. Both batch ids are the commit, so the Applitools link is
+# computable here (see APPLITOOLS_BATCH_ID in e2e-tests-ci.yml).
+def playwright_gha_rollup(run, jobs)
+  eyes_jobs, functional_jobs = jobs.partition {|job| job.name.end_with?('/ eyes')}
+  run_link = %(<a href="#{run.html_url}">GitHub Actions run</a>)
+
+  functional =
+    if run.conclusion == 'success'
+      "✅ #{UI_SUITES[:playwright_gha]}: passed. #{run_link}."
+    else
+      failed = functional_jobs.reject {|job| job.conclusion == 'success'}.map(&:name)
+      "❌ #{UI_SUITES[:playwright_gha]}: #{run.conclusion} (#{failed.join(', ')}). " \
+        "#{run_link}; its e2e-tests-report artifact is the merged HTML report."
+    end
+
+  batch_url = "https://eyes.applitools.com/app/batches/?startInfoBatchId=#{run.head_sha}&hideBatchList=true"
+  eyes_job = eyes_jobs.first
+  eyes =
+    if eyes_job.nil?
+      "⚠️ #{PLAYWRIGHT_SUITES[:eyes]} (warning only): no eyes job in this run."
+    elsif eyes_job.conclusion == 'success'
+      %(✅ #{PLAYWRIGHT_SUITES[:eyes]} (warning only): no visual diffs. <a href="#{batch_url}">Applitools batch</a>.)
+    else
+      "👀 #{PLAYWRIGHT_SUITES[:eyes]} (warning only): needs review. " \
+        "<a href=\"#{batch_url}\">Applitools batch</a> for diffs, <a href=\"#{eyes_job.html_url}\">job log</a> for errors."
+    end
+
+  [functional, eyes].join("\n")
 end
 
 def playwright_results_summary(results_json)

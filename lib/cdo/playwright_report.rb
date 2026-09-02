@@ -9,8 +9,8 @@ module Cdo
   # UI tests (see dashboard/test/ui/runner.rb).
   #
   # The S3 prefix mirrors runner.rb's scheme: per-CI-build under Drone, else
-  # "{hostname}/{branch}". On a DTT run (not Drone CI) the prefix is stable, so
-  # each run overwrites the previous report at the same keys.
+  # "{hostname}/{branch}", which is stable, so a rerun from the same checkout
+  # overwrites the previous report at the same keys.
   #
   # Each suite gives its own `name`. One report must not replace the other.
   module PlaywrightReport

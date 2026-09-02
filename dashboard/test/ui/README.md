@@ -20,15 +20,16 @@ Review all supported tags in [ci.rake](https://github.com/code-dot-org/code-dot-
 
 ### DTT (CD) Tests
 
-The UI tests run as part of our deployment during the Deploy To Test (DTT) via `rake test:ui_all`, which dispatches three suites in parallel against two providers:
+The UI tests run as part of our deployment during the Deploy To Test (DTT) via `rake test:ui_all`, which dispatches four suites in parallel against three providers:
 
 | Suite | Provider | Browsers |
 |-------|----------|----------|
 | Chrome + Firefox UI | AWS Device Farm | `Windows Chrome`, `Windows Firefox` (`browsers_device_farm.json`) |
 | Safari + iPad + iPhone UI | SauceLabs | `macOS Safari`, `iPad Safari`, `iPhone Safari` (`browsers_device_farm.json`) |
 | Eyes | SauceLabs | `Windows Chrome` (Applitools visual diff, `@eyes`) |
+| Playwright (GitHub Actions) | GitHub Actions (`.github/workflows/dtt.yml`) | `chromium`, `firefox`, `webkit` functional; `chromium` Eyes (`@visual`, warning only) |
 
-Each suite uploads its own status page (`test_status_{Safari_iPad_iPhone_UI,Chrome_Firefox_UI,Eyes}.html`) to the test machine and to S3.
+Each Cucumber suite uploads its own status page (`test_status_{Safari_iPad_iPhone_UI,Chrome_Firefox_UI,Eyes}.html`) to the test machine and to S3. The Playwright suite's merged HTML report is the `e2e-tests-report` artifact on its GitHub Actions run, which the Slack rollup links; see [frontend/packages/e2e-tests](../../../frontend/packages/e2e-tests/README.md).
 
 ## Concurrency limits
 

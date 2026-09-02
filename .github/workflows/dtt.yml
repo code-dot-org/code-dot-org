@@ -1,11 +1,13 @@
-# Dispatcher for the DTT (Deploy To Test) post-deploy Playwright e2e run.
+# The DTT (Deploy To Test) Playwright e2e run, functional and Eyes.
 #
-# The test-server daemon triggers this via the GitHub REST API (workflow_dispatch,
-# ref: test) at the start of test:ui_all, moving e2e browser execution off the single
-# daemon and onto GitHub Actions runners. It runs the same suite as the PR lane,
-# against the deployed test-studio. Fire-and-forget: the daemon does not wait for
-# or gate on the result. Note, all browsers are executed on DTT instead of just 
-# chromium.
+# The test-server daemon dispatches this via the GitHub REST API (workflow_dispatch,
+# ref: test) from test:playwright_gha in lib/rake/test.rake, one of the deploy's
+# parallel UI suites, moving e2e browser execution off the single daemon and onto
+# GitHub Actions runners. The daemon then polls the run and reports it to Slack
+# with the other suites: the run conclusion is the functional verdict and turns the
+# DTT red when it fails, and the eyes job is reported for review without failing
+# the run. It runs e2e-tests-ci.yml against the deployed test-studio in all three
+# browsers.
 #
 # workflow_dispatch only becomes dispatchable once this file (with the trigger)
 # lands on the default branch (staging); after that, any ref can be dispatched.
@@ -21,7 +23,10 @@ jobs:
       # Literal, not ${{ env.* }}: the env context is unavailable in a reusable
       # workflow's `with:`. Keep in lockstep with frontend-ci.yml's pin.
       playwright-image-tag: 'v1.59.1-noble'
-      # DTT is post-deploy and fire-and-forget, off the PR critical path, so it
-      # runs the full engine matrix. The PR lane keeps the Chromium-only default.
+      # DTT is post-deploy, off the PR critical path, so it runs the full
+      # engine matrix. The PR lane keeps the Chromium-only default.
       playwright-projects: '--project=chromium --project=firefox --project=webkit'
+      # A visual diff is for a person to review in Applitools; only the
+      # functional matrix gates the deploy.
+      eyes-blocking: false
     secrets: inherit
