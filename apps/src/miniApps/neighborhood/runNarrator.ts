@@ -1,6 +1,5 @@
 // Narrates the painter to a screen reader as a run happens. Announcements are
-// lossy -- a reader drops queued speech when the run button relabels itself --
-// so every line also stays in a log the student can navigate back through.
+// lossy, so every line also stays in a log the student can navigate.
 
 import {SVG_ID} from '@cdo/apps/maze/constants';
 
@@ -33,8 +32,8 @@ const SR_ONLY = {
   whiteSpace: 'nowrap',
 };
 
-// A labelled region with a heading, so the log is reachable from a screen
-// reader's landmark and heading lists rather than only by chance.
+// Labelled and headed, so the log is reachable from a screen reader's
+// landmark and heading lists.
 function buildLog(): HTMLElement {
   const region = document.createElement('div');
   region.setAttribute('role', 'region');
@@ -51,8 +50,7 @@ function buildLog(): HTMLElement {
   log.setAttribute('aria-live', 'polite');
 
   region.append(heading, log);
-  // Beside the grid rather than at the end of the document, so a reader
-  // exploring the lab runs into it.
+  // Beside the grid, where a reader exploring the lab runs into it.
   const parent =
     document.getElementById(SVG_ID)?.parentElement ?? document.body;
   parent.appendChild(region);
@@ -84,14 +82,14 @@ function paintPhrase(color: string | undefined): string {
     : `painted ${color}.`;
 }
 
-// A run of the same action repeated. Moves carry the direction travelled,
-// turns the direction ended up facing.
+// The same action repeated. Moves carry the direction travelled, turns the
+// direction ended up facing.
 interface Streak {
   kind: 'move' | 'turn';
   id: string;
   direction: string;
   count: number;
-  // How far a progress report already got, so closing does not repeat it.
+  // How far a progress report got, so closing does not repeat it.
   reported: number;
 }
 
@@ -103,8 +101,6 @@ export default class NeighborhoodRunNarrator {
 
   constructor(
     getPositions: () => PainterPositions | null,
-    // The console is silent during a run, so its newest line is read out with
-    // the summary. Covers system messages, which never reach a signal.
     getConsoleLines: () => string[] = () => []
   ) {
     this.getPositions = getPositions;
@@ -117,10 +113,9 @@ export default class NeighborhoodRunNarrator {
   }
 
   // Keeps the log: what the painter managed before being stopped is the point.
-  // Said here because re-enabling the console's own would move focus.
   stopRun(): void {
     this.closeStreak();
-    this.announce('Program stopped.');
+    this.announce(this.withConsole(['Program stopped.']));
   }
 
   onSignal({value, detail}: NeighborhoodSignal): void {
@@ -131,8 +126,7 @@ export default class NeighborhoodRunNarrator {
         if (!direction) {
           return;
         }
-        // Still going the same way: count it, and report every so many squares
-        // so a long walk says something as it happens.
+        // Report every so many squares, so a long walk says something.
         if (
           this.streak?.kind === 'move' &&
           this.streak.id === id &&
@@ -167,8 +161,7 @@ export default class NeighborhoodRunNarrator {
         return;
       }
       case NeighborhoodSignalType.TURN_LEFT: {
-        // Python reports the direction the painter ends up facing, so a streak
-        // of turns keeps only the last one.
+        // Python reports the direction ended up facing; keep the last.
         const facing = detail?.direction ?? '';
         if (this.streak?.kind === 'turn' && this.streak.id === id) {
           this.streak.count++;
@@ -197,8 +190,7 @@ export default class NeighborhoodRunNarrator {
     }
   }
 
-  // Makes no correctness claim: Painter levels have no finish square, and the
-  // level's own verdict is announced elsewhere.
+  // No correctness claim: the level's own verdict is announced elsewhere.
   endRun(): void {
     this.closeStreak();
     const parts = ['Run finished.'];
@@ -210,15 +202,16 @@ export default class NeighborhoodRunNarrator {
         parts.push(`${this.name(id)} stopped at ${position(col, row)}.`);
       }
     }
-    // Newest line only: the rest stay on the console to be read there.
-    const output = this.getConsoleLines()
+    this.announce(this.withConsole(parts));
+  }
+
+  // The console is silent while narrating, so its newest line is read here.
+  private withConsole(parts: string[]): string {
+    const lines = this.getConsoleLines()
       .map(line => line.trim())
       .filter(Boolean);
-    const newest = output[output.length - 1];
-    if (newest) {
-      parts.push(`Console: ${newest}`);
-    }
-    this.announce(parts.join(' '));
+    const newest = lines[lines.length - 1];
+    return [...parts, newest && `Console: ${newest}`].filter(Boolean).join(' ');
   }
 
   // The log covers the run in hand, so each run starts it over.
@@ -234,8 +227,7 @@ export default class NeighborhoodRunNarrator {
     this.record(id, phrase);
   }
 
-  // Named only when there is more than one painter, so a single-painter log
-  // does not repeat it on every line.
+  // Named only with more than one painter, to avoid repeating it every line.
   private record(id: string, phrase: string): void {
     this.announce(
       this.painterIds.length > 1
@@ -266,20 +258,17 @@ export default class NeighborhoodRunNarrator {
     );
   }
 
-  // By id, not by how many painters exist yet: naming by count would call the
-  // same painter two different things as the log grows.
+  // By id: a count changes what a painter is called as the log grows.
   private name(id: string): string {
     return id ? painterName(id) : 'Painter';
   }
 
-  // Built on first use: the grid it sits beside does not exist until the level
-  // has been injected.
+  // Built on first use: the grid it sits beside comes from afterInject.
   private log(): HTMLElement {
     return document.getElementById(LOG_ID) ?? buildLog();
   }
 
-  // One node per line, so the reader queues them and the line stays readable
-  // afterwards whether or not it was announced.
+  // One node per line: the reader queues them and each stays readable.
   private announce(text: string): void {
     const log = this.log();
     const line = document.createElement('div');

@@ -42,15 +42,16 @@ export default class Neighborhood extends MiniApp {
   private isProcessingSignals: boolean;
   private resolveOnDone?: () => void;
   private donePromise: Promise<void> | null = null;
-  private narrator: NeighborhoodRunNarrator;
+  private narrator: NeighborhoodRunNarrator | null = null;
 
   constructor(
     onOutputMessage: (message: string) => void,
     onNewlineMessage: () => void,
     setIsRunning: (isRunning: boolean) => void,
     onPartialOutputMessage: (message: string) => void,
-    // Read out with the run summary; see NeighborhoodRunNarrator.
-    getConsoleLines: () => string[] = () => []
+    // Opts into screen reader narration. Java Lab's console moves focus on
+    // every log line, so it does not.
+    narration?: {getConsoleLines: () => string[]}
   ) {
     super();
     this.controller = null;
@@ -62,11 +63,13 @@ export default class Neighborhood extends MiniApp {
     this.speedTracker = NeighborhoodSpeedTracker.getInstance();
     this.onPartialOutputMessage = onPartialOutputMessage;
     this.isProcessingSignals = false;
-    // Read lazily: the controller does not exist until afterInject.
-    this.narrator = new NeighborhoodRunNarrator(
-      () => this.controller,
-      getConsoleLines
-    );
+    if (narration) {
+      // Read lazily: the controller does not exist until afterInject.
+      this.narrator = new NeighborhoodRunNarrator(
+        () => this.controller,
+        narration.getConsoleLines
+      );
+    }
   }
 
   afterInject(
@@ -112,7 +115,7 @@ export default class Neighborhood extends MiniApp {
 
     this.signals = [];
     this.nextSignalIndex = 0;
-    this.narrator.reset();
+    this.narrator?.reset();
 
     // Expose an interface for testing.
     // Only used in legacy labs.
@@ -145,7 +148,7 @@ export default class Neighborhood extends MiniApp {
         // we are done processing commands and can stop checking for signals.
         // Set isRunning to false, add a blank line to the console, and return
         // The summary goes first, ahead of the run button's label change.
-        this.narrator.endRun();
+        this.narrator?.endRun();
         this.setIsRunning(false);
         this.onNewlineMessage();
         if (this.resolveOnDone) {
@@ -181,8 +184,7 @@ export default class Neighborhood extends MiniApp {
   }
 
   mazeCommand(signal: NeighborhoodSignal, timeForSignal: number) {
-    // Logged as the action is drawn, so the log tracks the animation.
-    this.narrator.onSignal(signal);
+    this.narrator?.onSignal(signal);
     switch (signal.value) {
       case NeighborhoodSignalType.MOVE: {
         const {direction, id} = signal.detail!;
@@ -255,13 +257,16 @@ export default class Neighborhood extends MiniApp {
     this.setProcessSignals();
   }
 
-  onRun() {
+  // narrate is false for validation and tests: the painter gets no signals.
+  onRun(narrate = true) {
+    if (narrate) {
+      this.narrator?.startRun();
+    }
     this.setProcessSignals();
   }
 
   setProcessSignals() {
     this.controller.hideDefaultPegman();
-    this.narrator.startRun();
     this.isProcessingSignals = true;
     // start checking for signals after the specified wait time
     timeoutList.setTimeout(() => this.processSignals(), SIGNAL_CHECK_TIME);
@@ -271,8 +276,8 @@ export default class Neighborhood extends MiniApp {
     // this will clear all remaining processSignals() commands
     timeoutList.clearTimeouts();
     this.resetSignalQueue();
-    // Called as a run starts, which is when the log starts over.
-    this.narrator.reset();
+    // A run starts the log over.
+    this.narrator?.reset();
     this.controller.reset(false, false);
   }
 
@@ -280,7 +285,7 @@ export default class Neighborhood extends MiniApp {
     timeoutList.clearTimeouts();
     this.resetSignalQueue();
     // The log keeps what the painter did before being stopped.
-    this.narrator.stopRun();
+    this.narrator?.stopRun();
   }
 
   onClose() {

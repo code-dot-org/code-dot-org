@@ -156,8 +156,8 @@ const ControlButtons: React.FunctionComponent = () => {
 
   return (
     <div className={moduleStyles.controlButtons}>
-      {/* Run and Stop share one element so the swap keeps focus on it. Two
-          elements would drop focus to <body>, read aloud as the page title. */}
+      {/* One element, so focus survives the swap. A screen reader reads a
+          focus drop to <body> as the page title. */}
       <WithConditionalTooltip
         showTooltip={!isRunning && !!disabledCodeActionsTooltip}
         tooltipProps={{
@@ -175,8 +175,7 @@ const ControlButtons: React.FunctionComponent = () => {
           loading={!isRunning && isEnvironmentLoading}
           loadingPosition="start"
           className={moduleStyles.controlButton}
-          // What Ctrl+2 and the UI tests target, so it only marks the button
-          // while it is a run button.
+          // What Ctrl+2 and the UI tests target.
           id={isRunning ? undefined : 'uitest-codebridge-run'}
           onClick={isRunning ? handleStop : handleRun}
           type="button"

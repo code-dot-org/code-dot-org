@@ -27,8 +27,7 @@ const TERMINAL_TRIM_BATCH = 200_000;
 // longer than this is still kept whole, on a line of its own.
 const MAX_LINE_CHARACTERS = 100_000;
 
-// Long enough for xterm's accessibility manager to take in a redraw while its
-// announcements are still off, so the redraw is not read back as new output.
+// Long enough for xterm to take a redraw in with announcements still off.
 const REDRAW_QUIET_MS = 250;
 
 const countCharacters = (lines: string[]) =>
@@ -53,7 +52,6 @@ export default class ConsoleManager {
   private queuedBytes: number;
   private awaitingWrite: boolean;
   private droppedCharacters: number;
-  // Either one silences the console's screen reader announcements.
   private narrating = false;
   private redrawing = false;
   private quietPeriod: number | null = null;
@@ -105,20 +103,17 @@ export default class ConsoleManager {
     this.applyAnnouncements();
   }
 
-  // A lab narrating its own run reads the console's output itself, so until it
-  // is done the console neither speaks nor takes focus over it.
+  // A lab narrating its own run reads the console's output itself.
   public setNarrating(narrating: boolean) {
     this.narrating = narrating;
     this.applyAnnouncements();
   }
 
-  // Carried over when a console is replaced; see Console.
   public isNarrating() {
     return this.narrating;
   }
 
-  // Also off mid-redraw: a redraw hands the terminal every line it already had,
-  // which would be read back as if it were new output.
+  // A redraw replays lines the console already had, not new output.
   private applyAnnouncements() {
     this.terminal.element
       ?.querySelector('.xterm-accessibility .live-region')
@@ -129,6 +124,8 @@ export default class ConsoleManager {
   }
 
   private redraw(data: string) {
+    // The latest redraw owns the quiet period.
+    this.clearQuietPeriod();
     this.redrawing = true;
     this.applyAnnouncements();
     this.writeToTerminal(data);
@@ -138,12 +135,9 @@ export default class ConsoleManager {
     if (!this.redrawing || this.queuedWrites.length > 0) {
       return;
     }
-    // xterm batches its own accessibility update, so it may not have taken the
-    // redraw in yet when the write reports back. A later redraw supersedes
-    // this wait rather than being ended early by it.
-    if (this.quietPeriod !== null) {
-      window.clearTimeout(this.quietPeriod);
-    }
+    // xterm batches its accessibility update, so it may not have taken the
+    // redraw in yet when the write reports back.
+    this.clearQuietPeriod();
     this.quietPeriod = window.setTimeout(() => {
       this.quietPeriod = null;
       this.redrawing = false;
@@ -151,13 +145,19 @@ export default class ConsoleManager {
     }, REDRAW_QUIET_MS);
   }
 
+  private clearQuietPeriod() {
+    if (this.quietPeriod !== null) {
+      window.clearTimeout(this.quietPeriod);
+      this.quietPeriod = null;
+    }
+  }
+
   public clearTerminalLines() {
     this.terminalLines = [];
     this.terminalCharacters = 0;
     this.discardQueuedWrites();
     this.droppedCharacters = 0;
-    // Narration belongs to the level that started it, or a Painter level would
-    // leave the next level's console silent.
+    // Narration belongs to the level that started it.
     this.narrating = false;
     this.applyAnnouncements();
     this.writeToTerminal(CLEAR_DISPLAY);
@@ -233,8 +233,7 @@ export default class ConsoleManager {
     // Where the previous console broke its lines is not carried over, so every
     // replayed line is drawn as a line of its own.
     this.lastLineIsPartial = false;
-    // Redrawn history is not output arriving now: it must neither take focus
-    // nor be read back line by line.
+    // Redrawn history is not new output: no focus, no announcement.
     this.redraw(this.drawnTerminalLines());
     this.terminal.scrollToBottom();
     this.executeTerminalLinesListeners();
@@ -257,8 +256,7 @@ export default class ConsoleManager {
     this.lastLineIsPartial = true;
     this.writeToTerminal(message);
     this.terminal.scrollToBottom();
-    // A partial line is an input() prompt, so it focuses even while narrating:
-    // the student has to be able to type.
+    // An input() prompt focuses even while narrating: the student must type.
     if (this.focusOnWrite) {
       this.terminal.focus();
     }
@@ -418,7 +416,7 @@ export default class ConsoleManager {
       // If we hit an error, count the chunk as dropped.
       this.awaitingWrite = false;
       this.droppedCharacters += chunk.length;
-      // Announcements must come back even when the redraw never landed.
+      // Announcements return even if the redraw never landed.
       this.finishRedraw();
     }
   }

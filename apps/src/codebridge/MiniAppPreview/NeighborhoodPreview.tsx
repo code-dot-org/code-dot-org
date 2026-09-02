@@ -81,8 +81,8 @@ const NeighborhoodPreview: React.FunctionComponent<
         .getConsoleManager()
         ?.writePartialLine(message);
 
-    // Stripped here: terminal lines carry ANSI colour codes, and an image is
-    // an escape sequence wrapping its whole base64 payload.
+    // Terminal lines carry ANSI codes, and an image is an escape sequence
+    // wrapping its whole base64 payload.
     const getConsoleLines = () =>
       CodebridgeRegistry.getInstance()
         .getConsoleManager()
@@ -94,7 +94,7 @@ const NeighborhoodPreview: React.FunctionComponent<
       onNewlineMessage,
       isRunning => dispatch(setIsRunning(isRunning)),
       onPartialLineMessage,
-      getConsoleLines
+      {getConsoleLines}
     );
     CodebridgeRegistry.getInstance().setNeighborhood(neighborhoodRef);
     return neighborhoodRef;

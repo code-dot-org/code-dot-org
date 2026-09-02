@@ -191,6 +191,14 @@ describe('NeighborhoodRunNarrator', () => {
     expect(spoken()).not.toContain('line 7');
   });
 
+  // Stopping ends the narration, so it reads the console out like a finish does.
+  it('reads the newest console line when stopped', () => {
+    consoleLines = ['half-finished output'];
+    narrator.stopRun();
+
+    expect(spoken()).toBe('Program stopped. Console: half-finished output');
+  });
+
   it('ignores blank console spacer lines', () => {
     consoleLines = ['', '   '];
     narrator.endRun();

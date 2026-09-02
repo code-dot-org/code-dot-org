@@ -47,8 +47,7 @@ export async function handleRunClick(
   if (runTests) {
     await runAllTests(source, dispatch, progressManager, validationFile);
   } else {
-    // Before the first write of the run: a neighborhood run is narrated, and
-    // the console must not speak or take focus over the narration.
+    // Before the run's first write, so it does not speak over the narration.
     if (isNeighborhoodLevel()) {
       consoleManager?.setNarrating(true);
     }
@@ -83,7 +82,10 @@ export async function runPythonCode(
     const isNeighborhoodRun = isNeighborhoodLevel();
     if (isNeighborhoodRun) {
       CodebridgeRegistry.getInstance().getNeighborhood()?.reset();
-      CodebridgeRegistry.getInstance().getNeighborhood()?.onRun();
+      // Validation sends the painter no signals, so there is nothing to narrate.
+      CodebridgeRegistry.getInstance()
+        .getNeighborhood()
+        ?.onRun(!validationFile);
     }
     if (isTheaterLevel()) {
       CodebridgeRegistry.getInstance().getTheater()?.reset();
@@ -126,8 +128,7 @@ export async function runAllTests(
   // we check the source for the validation file (this is the case in start mode).
   const validationToRun = validationFile || getValidationFromSource(source);
   const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
-  // Test output is not narrated, so the console speaks for it even on a
-  // neighborhood level where a previous run silenced it.
+  // Test output is not narrated, so the console speaks for it.
   consoleManager?.setNarrating(false);
   if (validationToRun) {
     consoleManager?.writeConsoleMessage(
@@ -203,7 +204,8 @@ function handleRunEndedUnexpectedly(
     // properly resets the run button back to run (from stop), and to reset the
     // neighborhood to its original state.
     CodebridgeRegistry.getInstance().getNeighborhood()?.reset();
-    CodebridgeRegistry.getInstance().getNeighborhood()?.onRun();
+    // Nothing ran, so there is nothing to narrate.
+    CodebridgeRegistry.getInstance().getNeighborhood()?.onRun(false);
     CodebridgeRegistry.getInstance().getNeighborhood()?.onClose();
   } else {
     consoleManager?.writeConsoleMessage('');
