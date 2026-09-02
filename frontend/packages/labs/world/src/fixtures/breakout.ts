@@ -23,7 +23,9 @@
 // The paddle is a ground tile scaled to 2 x 0.5 — 64 by 16 — which is also the
 // smallest honest test of intrinsic size: before the project measured its own
 // images, that paddle collided as a 32 by 32 square and "Stays Across" held it
-// half off the screen.
+// half off the screen. It stays a ground tile now that the room is stone: a
+// plank of turf is a platform, which is what a paddle is, and the two things
+// that were both floor tiles are no longer the same picture.
 //
 // NOT "Stays in the Map", though a paddle is the example that rule was written
 // for. A room made of solid walls already bounds everything in it, and it binds
@@ -234,7 +236,7 @@ const WALL_ACTOR = JSON.stringify({
           block: stack([
             useTrait('Solid Bodies#SolidTrait'),
             setNumber('world_set_SolidBodies_BouncinessProperty', 1),
-            {type: 'world_set_sprite', fields: {SPRITE: 'ground.png'}},
+            {type: 'world_set_sprite', fields: {SPRITE: 'wall.png'}},
           ]),
         },
       },
@@ -443,7 +445,7 @@ export const BREAKOUT_SUPPORT_FILES: ProjectSpec['files'] = {
     contents: collectRule,
     folderId: 'rules',
   },
-  ...starterSprites(['ground', 'ball', 'box']),
+  ...starterSprites(['ground', 'wall', 'ball', 'box']),
 };
 
 export const BREAKOUT_SPEC: ProjectSpec = {

@@ -631,10 +631,15 @@ const SCOREBOARD_ACTOR = JSON.stringify(
 //
 // `Deals Damage` and nothing else about hurting: what a hit costs is Health's
 // business, and the mercy time that stops a touch being thirty hits is too.
+//
+// Drawn as a CRAWLER, which it had not been: it wore `asteroid.png` from the
+// day Patrol was written, and a rock pacing a corridor reads as a rock nobody
+// stopped. The picture is the only thing that says a thing is dangerous before
+// it has hurt you.
 const CRAWLER_ACTOR = actorFile('Crawler', [
   useTrait('Patrol#PatrolsAcrossTrait'),
   useTrait('Health#DealsDamageTrait'),
-  {type: 'world_set_sprite', fields: {SPRITE: 'asteroid.png'}},
+  {type: 'world_set_sprite', fields: {SPRITE: 'crawler.png'}},
 ]);
 
 // A ball playing "pulse" — the animation in animations/game.anim.
@@ -1002,7 +1007,7 @@ export const STARTER_SPEC: ProjectSpec = {
       'ground',
       'coin',
       'ball',
-      'asteroid',
+      'crawler',
       'coinSpin',
     ]),
     // …and one animation copied in whole, frames and image both: the coin's

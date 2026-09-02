@@ -36,8 +36,10 @@
 //                the cheapest way to keep the bird's x honest.
 //
 // The bird is the meteors SHIP, turned 90° so its nose points the way it is
-// going. Standing in for a bird until there is one to draw, which is also why
-// the pipes are ground tiles: a fixture is worth having before its art is.
+// going — standing in until there is a bird to draw. The pipes were ground
+// tiles for the same reason and are now pipes, which is the argument for
+// keeping a fixture whose art is not finished: it is what says which picture
+// the library is missing.
 //
 // What it is NOT, again: no restart, no death (crashing says so and the bird
 // flies on), and the score is a coin count rather than pipes passed. Passing a

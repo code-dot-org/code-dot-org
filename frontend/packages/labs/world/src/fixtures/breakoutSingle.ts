@@ -125,7 +125,7 @@ const SINGLE_WORLD = JSON.stringify({
       defineActor(WALL, 'Wall', 20, [
         useTrait('Solid Bodies#SolidTrait'),
         setNumber('world_set_SolidBodies_BouncinessProperty', 1),
-        {type: 'world_set_sprite', fields: {SPRITE: 'ground.png'}},
+        {type: 'world_set_sprite', fields: {SPRITE: 'wall.png'}},
       ]),
       defineActor(BRICK, 'Brick', 370, [
         useTrait('Solid Bodies#SolidTrait'),

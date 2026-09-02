@@ -51,6 +51,14 @@ export const SPRITE_NAMES = [
   'hill',
   // …and a segment of pipe, which is what a column of them is made of.
   'pipe',
+  // Something that walks its beat and hurts to touch. The one in the starter
+  // has been an asteroid since the day Patrol was written, and a rock that
+  // paces a corridor reads as a rock somebody forgot to stop.
+  'crawler',
+  // A wall, which is not a floor stood on its end. Every room in the library
+  // was built out of `ground`, and a stack of grass-topped floor tiles reads
+  // as a ladder of stripes rather than as something you cannot walk through.
+  'wall',
 ];
 export const ANIMATION_SPECS = {
   coinSpin: {frames: 6, frameRate: 12},
@@ -243,6 +251,58 @@ const STATIC = {
     // an actor rests on the visible grass rather than floating above it.
     c.rect(0, 0, 32, 32, [107, 74, 43]); // soil fills the tile
     c.rect(0, 0, 32, 6, [90, 160, 44]); // grass top strip
+  },
+  crawler(c) {
+    // A bug on six legs, standing on the floor of its cell: the legs reach the
+    // bottom edge, so a crawler placed on a tile is walking on it rather than
+    // hovering over it.
+    //
+    // PURPLE because every other colour in the library already means something
+    // — blue is the player, gold is a coin, green is grass, grey is stone, red
+    // is the ball — and a thing that hurts you should not have to be read
+    // twice. The eyes are the player's eyes at the player's size, which is
+    // what makes the two read as the same kind of creature.
+    for (const x of [4, 11, 18, 25]) {
+      c.rect(x, 23, 3, 8, [52, 28, 70]); // legs
+    }
+    for (const x of [9, 15, 21]) {
+      c.polygon(
+        [
+          [x, 9],
+          [x + 3, 2],
+          [x + 6, 9],
+        ],
+        [52, 28, 70],
+      ); // the spines along its back
+    }
+    c.roundRect(2, 7, 28, 19, 9, [52, 28, 70]); // the shell's edge
+    c.roundRect(3, 8, 26, 17, 8, [138, 74, 178]); // the shell
+    c.roundRect(5, 9, 22, 7, 5, [170, 108, 210]); // lit from above
+    c.disc(12, 18, 2.6, [255, 255, 255]); // eyes
+    c.disc(20, 18, 2.6, [255, 255, 255]);
+    c.disc(12, 18, 1.2, [20, 30, 50]);
+    c.disc(20, 18, 1.2, [20, 30, 50]);
+  },
+  wall(c) {
+    // Courses of stone in a running bond, which is the pattern that says WALL
+    // with four rectangles: each row is offset half a stone from the one above,
+    // so the joints never line up into a column.
+    //
+    // IT HAS TO TILE, in both directions — a room is a line of these — so the
+    // stones are 16 wide into a 32-wide cell and the offset is 8: whatever is
+    // cut off one edge is what the next tile starts with. Nothing is drawn on
+    // the outer boundary except mortar, so two neighbours share a joint rather
+    // than showing a seam.
+    c.rect(0, 0, 32, 32, [66, 70, 82]); // mortar, and the joints between stones
+    for (let row = 0; row < 4; row++) {
+      const y = row * 8;
+      const shift = row % 2 ? 8 : 0;
+      for (let stone = -1; stone < 2; stone++) {
+        const x = shift + stone * 16;
+        c.rect(x + 1, y + 1, 14, 6, [122, 128, 142]); // the stone
+        c.rect(x + 1, y + 1, 14, 2, [148, 154, 168]); // its lit top edge
+      }
+    }
   },
   coin(c) {
     c.disc(16, 16, 13, [244, 196, 48]);

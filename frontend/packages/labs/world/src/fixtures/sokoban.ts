@@ -274,7 +274,7 @@ const WALL_ACTOR = JSON.stringify({
         next: {
           block: stack([
             useTrait('Grid#FillsATileTrait'),
-            {type: 'world_set_sprite', fields: {SPRITE: 'ground.png'}},
+            {type: 'world_set_sprite', fields: {SPRITE: 'wall.png'}},
           ]),
         },
       },
@@ -476,7 +476,7 @@ const SPEC: ProjectSpec = {
       contents: inputRule,
       folderId: 'rules',
     },
-    ...starterSprites(['player', 'ground', 'box']),
+    ...starterSprites(['player', 'wall', 'box']),
   },
   open: ['main'],
 };

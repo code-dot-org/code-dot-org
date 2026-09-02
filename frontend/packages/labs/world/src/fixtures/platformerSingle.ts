@@ -242,7 +242,7 @@ const SINGLE_WORLD = JSON.stringify({
       defineActor(CRAWLER, 'Crawler', 1520, [
         useTrait('Patrol#PatrolsAcrossTrait'),
         useTrait('Health#DealsDamageTrait'),
-        {type: 'world_set_sprite', fields: {SPRITE: 'asteroid.png'}},
+        {type: 'world_set_sprite', fields: {SPRITE: 'crawler.png'}},
       ]),
       // The health bar, which is a PICTURE and nothing else — no property, no
       // step, no handler pointing it at anybody. Its drawing asks the world

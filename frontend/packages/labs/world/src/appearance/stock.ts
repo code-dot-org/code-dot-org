@@ -203,6 +203,20 @@ export const STOCK_SPRITES: readonly StockSprite[] = [
     dataUrl: image('pipe'),
   },
   {
+    id: 'crawler',
+    name: 'Crawler',
+    description:
+      'A purple bug on six legs, for something that patrols and hurts.',
+    dataUrl: image('crawler'),
+  },
+  {
+    id: 'wall',
+    name: 'Wall',
+    description:
+      'A block of stone that tiles both ways, for rooms and columns.',
+    dataUrl: image('wall'),
+  },
+  {
     id: 'playerWalk',
     name: 'Player Walking',
     description: 'Four frames of the player mid-stride, side by side.',
