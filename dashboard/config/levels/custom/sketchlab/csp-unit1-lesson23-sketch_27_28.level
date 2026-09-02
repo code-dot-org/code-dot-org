@@ -1,0 +1,16 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2026-09-02T06:00:44.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "require_edit_to_continue": "true",
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're going to bring your SketchLab sketch to life as a Theater card.\r\n\r\n1. Get out your labeled sketch from SketchLab — you'll need it for this level.\r\n\r\n2. Using `input()`, create a **string** variable for each label on your sketch that calls for text (for example: a name, a mascot, a color — whatever your sketch labeled).\r\n\r\n3. Create one **int** variable and one **bool** variable. Assign these directly — don't use `input()` for these two.\r\n\r\n4. Use an operation to **combine two of your string variables** into a new variable.\r\n\r\n5. Write `print()` statements to show all of your variables, including the one your operation created.\r\n\r\n6. Upload your sketch to the AI Tutor along with your code, and ask it to build a Theater scene that matches what you drew.\r\n\r\n7. Before you run the AI's code, **predict** what you think it will draw.\r\n\r\n8. Run it. Compare the result to your prediction and your sketch — did it match?\r\n\r\n9. Write a short note: what did you keep, change, or reject from the AI's code, and why?\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nStart small, then build! Test your input and print statements first, before you add the AI-generated part. If you use a color for one of your variables, stick to common color names (like `\"gold\"` or `\"crimson\"`) — made-up or two-word colors may not render.",
+    "hide_share_and_remix": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-02 06:01:04 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Sketchlab>

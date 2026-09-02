@@ -1,0 +1,46 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-09-02T06:02:40.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "## Fei-Fei Li\n\n### ImageNet & Computer Vision\n\n*Image attribution: [Fei-Fei Li at AI for Good 2017](https://commons.wikimedia.org/wiki/File:Fei-Fei_Li_at_AI_for_Good_2017.jpg) by ITU Pictures, via Wikimedia Commons. CC BY 2.0.*\n",
+        "imageUrl": "https://images.code.org/a245b2ebf5e4d83c0f5ee14247db5f8a-li2.jpg",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-37f6d857-ab3b-4e1e-b18d-ce3bfaa38a45",
+        "fadeInOverPrevious": false,
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "### What She Contributed\n\nLi is a computer scientist and AI researcher who led the creation of ImageNet, a dataset of millions of labeled images. The annual ImageNet competition challenged AI systems to correctly classify images from this massive dataset — and helped drive major breakthroughs in computer vision and deep learning in the 2010s.<sup>1</sup>\n\n*Image attribution: [Banana / Plant / Flask](https://betterimagesofai.org/images?artist=MaxGruber&title=Banana%2FPlant%2FFlask) by Max Gruber for Better Images of AI. CC BY 4.0.*\n",
+        "imageUrl": "https://images.code.org/21ff202f8efa08bac6230381fa321ae0-image_classification.jpg",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-1eab77e5-f2ef-4fdf-b059-19dd3b604abd",
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "### Connection to AI History\n\nLi’s work connects to the deep learning era of AI history. The ImageNet competition results showed that large neural networks trained on huge labeled datasets could dramatically outperform older approaches — a shift that accelerated the modern wave of AI development.<sup>2</sup>\n\n*Image attribution: Computer vision image by MartinThoma, via Wikimedia Commons.*\n",
+        "imageUrl": "https://images.code.org/d4584576b88520541f70adbcab634ce3-computer_vision.jpg",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-0c7ff7a4-4735-4c26-84d0-b8872e1b2b50",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "### Why It Matters\n\nImageNet demonstrated that the quality and scale of training data could be just as important as the algorithm itself. Li’s work helped establish data curation and large-scale benchmarks as essential tools for AI — an insight that continues to shape how AI systems are built today.<sup>1</sup>\n\n*Image attribution: AI-generated illustration created with ChatGPT (OpenAI), 2026.*\n\n**Sources**\n\n1. [Britannica — Fei-Fei Li](https://www.britannica.com/biography/Fei-Fei-Li)\n2. [TED — How we’re teaching computers to understand pictures](https://www.ted.com/talks/fei_fei_li_how_we_re_teaching_computers_to_understand_pictures)\n",
+        "imageUrl": "https://images.code.org/1b311c69ec9bbc8f0943406b03c7c646-image_classification2.jpg",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-87ad2c1f-b495-4264-a7c0-51cce6ca9fff",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_year1-2026",
+    "display_name": "Fei-Fei Li",
+    "bubble_choice_description": "Choose Fei-Fei Li to explore how ImageNet and large labeled datasets drove breakthroughs in computer vision, deep learning, and modern AI.",
+    "use_links": "false",
+    "thumbnail_url": "https://images.code.org/a4e37e5da2b534319bf6fa73863ac3f6-li.jpg"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-02T06:02:40.360+00:00\",\"changed\":[\"cloned from \\\"ai-history-lesson2-level1e-v4-2026\\\"\"],\"cloned_from\":\"ai-history-lesson2-level1e-v4-2026\"}]"
+}]]></config>
+</Panels>
