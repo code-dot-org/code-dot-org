@@ -89,11 +89,8 @@ To get started, use scratch paper or sticky notes to **map out an algorithm that
          style="border-radius: 5px; border: 2px solid #ccc; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);">
 </div>
 
-<div style="background-color: #B7E0E5; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    <p style="font-size: 14pt; font-weight: bold; margin: 0;">Teacher Tip</p>
-    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
-        Encourage students to reflect on how breaking down a problem and mapping out decisions helps them write more efficient algorithms.<br><br> Taking time to visualize an algorithm before coding prevents confusion, reveals gaps in logic, and ensures a clear, structured approach to problem-solving.
-    </p>
+<div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 15px 20px; width: 90%; margin: 20px auto;">
+<p><b>💡 Teacher tip:</b> Encourage students to reflect on how breaking down a problem and mapping out decisions helps them write more efficient algorithms. Taking time to visualize an algorithm before coding prevents confusion, reveals gaps in logic, and ensures a clear, structured approach to problem solving.</p>
 </div>
 
 <br>

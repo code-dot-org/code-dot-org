@@ -1,0 +1,53 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-01T16:13:13.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Custom Range",
+    "long_instructions": "## Custom Range\r\n\r\nModify the original program so the user can choose the range.\r\n\r\n1. Ask the user for an integer to use as the smallest possible value.\r\n2. Ask the user for an integer to use as the largest possible value.\r\n3. Use those variables inside `randint()`.\r\n5. Print the random number.\r\n\r\n**Check:** Run the program several times with different ranges. Does the random number stay between the values you entered?",
+    "bubble_choice_description": "Ask the user for the lowest and highest possible values. Use those values inside randint() so the program chooses a random number in the user’s range.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "documentation",
+        "explainCode",
+        "buildPython"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "thumbnail_url": "https://images.code.org/f926eb884a820b99f991030e31ee0a8a-Pasted Graphic 1 4.png",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from random import randint\n\nroll = randint(1, 6)\n\nprint(roll)",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMpSvOkNOHQhDAE0\nBvswbgTvYpwBb+xMbJFkbo/vK+ZkPC2Njqzx6ZMgtgePXKwV0FPGI+qfC6aN\n81Phd8gK64zUc5TbQcrA5cHnjuoeUwR1/T5m2OES4jWLPzRTkf6eATXlX8ZF\naorYVoQyvk0444TgIg9wagQzdMkSkRx5xfoj2Zoxcwt1d1gEb2ejPKXu+vpo\n6CtnOQOUPVZlu0NXpfgrnLf4m3TTUPDUnmUWHaykh+V9IuoOViI/QFYrd/gA\nDIAQs5Wc/gyKeIVWkv2sebecybNh9U1I4+rPGc01RQmjgIA4bDTbidJs22W4\n1PfH01f/oEwW2MIuRNAvtelKvCTlTvlRoAIWJpFjvlYljHqiom9yBBXzaK+y\nh7eU3ta042g=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-01 16:29:28 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-01 16:30:34 +0000\",\"changed\":[\"bubble_choice_description\",\"predict_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-01 16:35:39 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-01 16:37:57 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-01 16:42:11 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-01 16:42:49 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-01 16:43:40 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Pythonlab>
