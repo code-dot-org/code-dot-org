@@ -10,7 +10,6 @@ import {AnimationPoses} from '../../characterAnimations';
 
 import {
   ASSUMED_BLOCK,
-  ImageAspectRatio,
   ImageSize,
   MODEL_OUTPUT_PX,
   SINGLE_IMAGE_SIZE,
@@ -144,8 +143,6 @@ export interface ImageRequest {
   model?: ReturnType<typeof getImageModel>;
   /** How hard the model thinks first; omitted = its default. */
   thinkingLevel?: ThinkingLevel;
-  /** Output shape; square unless asked. */
-  aspectRatio?: ImageAspectRatio;
 }
 
 /**
@@ -178,8 +175,7 @@ export async function requestImage(
     }),
     providerOptions: imageProviderOptions(
       request.imageSize || SINGLE_IMAGE_SIZE,
-      request.thinkingLevel,
-      request.aspectRatio
+      request.thinkingLevel
     ),
   });
 
@@ -204,11 +200,6 @@ export function bytesToDataURI(bytes: Uint8Array, mediaType: string): string {
     binary += String.fromCharCode(...bytes.subarray(i, i + 32768));
   }
   return `data:${mediaType};base64,${btoa(binary)}`;
-}
-
-/** Key out a generated costume's flat background. */
-export function keyOutSprite(raw: RawImage, style: ImageStyle): Promise<Blob> {
-  return removeBackground(rawImageToBlob(raw), {soft: style === 'smooth'});
 }
 
 /**

@@ -1,7 +1,7 @@
-// Character sets: the same character drawn standing, walking and jumping,
-// kept as ONE animation whose picture is the 4x1 strip characterAnimations.ts
-// describes (stand, mid-stride walk, rising jump, falling jump, facing
-// right; runtime mirroring covers left).
+// Character sets: the same character drawn idling, walking and jumping,
+// kept as ONE animation whose picture is the five-frame strip
+// characterAnimations.ts describes (second idle, stand, mid-stride walk,
+// rising jump, falling jump, facing right; runtime mirroring covers left).
 //
 // The strip is assembled here, never asked of the model: the base frame is
 // one ordinary generation, and each other frame is an edit request that
@@ -15,6 +15,7 @@ import {
   CHARACTER_STRIP_FRAME_COUNT,
   CHARACTER_STRIP_POSES,
 } from '../../characterAnimations';
+import {findOpaqueBounds} from '../../imageTrim';
 
 import {
   bytesToDataURI,
@@ -39,10 +40,18 @@ interface PosedFrame {
   pose: string;
 }
 
-// The three frames drawn from the base, in strip order after it. The pose
-// text rides on an edit request that carries the base picture, so it only
-// has to say what changes.
+// The frames drawn from the base. The pose text rides on an edit request
+// that carries the base picture, so it only has to say what changes. The
+// second idle comes first: the strip's frame order is this list with the
+// base spliced in after it (CHARACTER_STRIP_POSES).
 const POSED_FRAMES: PosedFrame[] = [
+  {
+    label: 'idling',
+    pose:
+      'a second idle frame: the very same standing pose with only a subtle ' +
+      'change — a small breath, the head or shoulders shifted a touch. The ' +
+      'feet do not move',
+  },
   {
     label: 'walking',
     pose:
@@ -117,25 +126,103 @@ export function posePrompt(
   );
 }
 
-// The strip's square cell. Four cells of the model's native 1024 would
-// break the 4MB asset bound comfortably kept below; four of these stay a
-// modest PNG while a sprite drawn at playspace sizes (50-300px) loses
-// nothing.
+// The strip's square cell. Cells at the model's native 1024 would break
+// the 4MB asset bound comfortably kept below; five of these stay a modest
+// PNG while a sprite drawn at playspace sizes (50-300px) loses nothing.
 const STRIP_CELL_PX = 768;
 
 // If an unusually detailed strip still encodes too large, redraw it smaller
 // once; past that, let it through and take the upload as it comes.
 const MAX_STRIP_BYTES = 4_000_000;
 
-/** The keyed frames drawn into one 4x1 strip of square cells. */
-async function composeStrip(frames: Blob[], cell: number): Promise<Blob> {
+// Alpha above this counts as the character when the strip is framed.
+const SOLID_ALPHA = 64;
+
+// Breathing room kept around the crop's sides and top, so an anti-aliased
+// edge isn't shaved.
+const CROP_PAD_PX = 2;
+
+// The strip frames that stand on the ground: everything through the walk
+// range's end (the jump frames follow, per CHARACTER_STRIP_POSES).
+const WALK_RANGE = CHARACTER_STRIP_POSES['walk-right']!;
+const GROUNDED_FRAMES = WALK_RANGE.start + WALK_RANGE.count;
+
+/**
+ * The keyed frames drawn into one strip of square cells. The model
+ * leaves margin around the character, and the physics body's feet are the
+ * image's bottom edge — kept as-is, the character floats above what it
+ * stands on and renders small in its cell. One crop — the union of every
+ * frame's content, its floor on the grounded frames' feet — is cut from
+ * all frames alike, so the crop cannot disturb their registration, then
+ * scaled to fill the cell, bottom-aligned. A falling frame's toes may
+ * reach below the grounded feet and clip: it is airborne when shown.
+ */
+async function composeStrip(
+  frames: Blob[],
+  cell: number,
+  style: ImageStyle
+): Promise<Blob> {
   const images = await Promise.all(frames.map(loadImageFromBlob));
+  // All frames are read in the first frame's coordinates; a stray
+  // different-sized response is stretched to them.
+  const width = images[0].width;
+  const height = images[0].height;
+  const rasters = images.map(img => {
+    const canvas = document.createElement('canvas');
+    canvas.width = width;
+    canvas.height = height;
+    const ctx = canvas.getContext('2d')!;
+    ctx.imageSmoothingEnabled = style === 'smooth';
+    ctx.drawImage(img, 0, 0, width, height);
+    const {data} = ctx.getImageData(0, 0, width, height);
+    return {canvas, bounds: findOpaqueBounds(data, width, height, SOLID_ALPHA)};
+  });
+
+  const boxes = rasters
+    .map(r => r.bounds)
+    .filter((b): b is NonNullable<typeof b> => b !== null);
+  const grounded = rasters
+    .slice(0, GROUNDED_FRAMES)
+    .map(r => r.bounds)
+    .filter((b): b is NonNullable<typeof b> => b !== null);
+  const crop = boxes.length
+    ? {
+        left: Math.max(0, Math.min(...boxes.map(b => b.left)) - CROP_PAD_PX),
+        top: Math.max(0, Math.min(...boxes.map(b => b.top)) - CROP_PAD_PX),
+        right: Math.min(
+          width - 1,
+          Math.max(...boxes.map(b => b.right)) + CROP_PAD_PX
+        ),
+        bottom: Math.max(
+          ...(grounded.length ? grounded : boxes).map(b => b.bottom)
+        ),
+      }
+    : {left: 0, top: 0, right: width - 1, bottom: height - 1};
+  const cropW = crop.right - crop.left + 1;
+  const cropH = crop.bottom - crop.top + 1;
+  const scale = Math.min(cell / cropW, cell / cropH);
+  const destW = Math.max(1, Math.round(cropW * scale));
+  const destH = Math.max(1, Math.round(cropH * scale));
+  const dx = Math.round((cell - destW) / 2);
+  const dy = cell - destH;
+
   const strip = document.createElement('canvas');
   strip.width = cell * frames.length;
   strip.height = cell;
   const ctx = strip.getContext('2d')!;
-  images.forEach((img, index) => {
-    ctx.drawImage(img, index * cell, 0, cell, cell);
+  ctx.imageSmoothingEnabled = style === 'smooth';
+  rasters.forEach((raster, index) => {
+    ctx.drawImage(
+      raster.canvas,
+      crop.left,
+      crop.top,
+      cropW,
+      cropH,
+      index * cell + dx,
+      dy,
+      destW,
+      destH
+    );
   });
   return new Promise<Blob>((resolve, reject) => {
     strip.toBlob(result => {
@@ -182,8 +269,8 @@ export interface CharacterSetProgress {
 
 /**
  * Generate a character set as one strip result (frames.poses names the
- * ranges). The base frame is drawn first; the three posed frames are drawn
- * from it in parallel.
+ * ranges). The base frame is drawn first; the posed frames are drawn from
+ * it in parallel.
  *
  * Pixel style is keyed like a single sprite but not grid-normalized: each
  * frame would find its own grid and land at its own scale, and the frames
@@ -224,7 +311,7 @@ export async function generateCharacterSet(
   onProgress?.({done, total, label: POSED_FRAMES[0].label, preview});
 
   // The posed frames each reference only the base, so they draw in
-  // parallel: a set costs two round trips, not four.
+  // parallel: a set costs two round trips, not five.
   const posed = await Promise.all(
     POSED_FRAMES.map(async (frame, index) => {
       const raw = await requestFrameWithRetry(
@@ -241,22 +328,22 @@ export async function generateCharacterSet(
       const keyed = await keyFrame(raw);
       done++;
       preview = await previewURI(keyed);
-      onProgress?.({
-        done,
-        total,
-        label: POSED_FRAMES[Math.min(index + 1, POSED_FRAMES.length - 1)].label,
-        preview,
-      });
+      // The posed frames finish in no particular order; the label names
+      // what just landed.
+      onProgress?.({done, total, label: frame.label, preview});
       return keyed;
     })
   );
 
   onProgress?.({done: total, total, label: 'assembling', preview});
+  // Strip order: the second idle, the base between the ranges that share
+  // it, then the walk and jump frames (CHARACTER_STRIP_POSES).
+  const stripFrames = [posed[0], baseKeyed, ...posed.slice(1)];
   let cell = STRIP_CELL_PX;
-  let blob = await composeStrip([baseKeyed, ...posed], cell);
+  let blob = await composeStrip(stripFrames, cell, options.style);
   if (blob.size > MAX_STRIP_BYTES) {
     cell = Math.round(cell * 0.6);
-    blob = await composeStrip([baseKeyed, ...posed], cell);
+    blob = await composeStrip(stripFrames, cell, options.style);
   }
 
   const generation: ImageGenerationMetadata = {

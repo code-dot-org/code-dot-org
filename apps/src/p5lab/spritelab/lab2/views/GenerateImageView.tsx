@@ -55,9 +55,9 @@ const TEMPERATURE_LEVEL_MAX = 10;
 const TEMPERATURE_LEVEL_DEFAULT = 5;
 const levelToTemperature = (level: number) =>
   (level / TEMPERATURE_LEVEL_MAX) * 2;
-// Where the slider goes when a character set is asked for: two dozen frames
-// must agree with one, so less wildness. Level 3 is a temperature of 0.6,
-// the closest slider stop to 0.5 and the setting a good live run used.
+// Where the slider goes when a character set is asked for: every posed
+// frame must agree with the base, so less wildness. Level 3 is a
+// temperature of 0.6, the setting a good live run used.
 const CHARACTER_SET_TEMPERATURE_LEVEL = 3;
 
 // Prompt hints, one per type, so the example suits what is being made.
@@ -157,8 +157,8 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   );
   const [source, setSource] = useState<RandomnessSource>('new');
   const [error, setError] = useState<string | null>(null);
-  // A whole character — standing, walking, jumping, both ways — instead of
-  // one picture. New sprites only: a set is drawn from a fresh base.
+  // A whole character — idling, walking, jumping — instead of one picture.
+  // New sprites only: a set is drawn from a fresh base.
   const [characterSet, setCharacterSet] = useState(false);
   const [progress, setProgress] = useState<CharacterSetProgress | null>(null);
   const canMakeSet = !!create && imageType === 'sprite' && source === 'new';
@@ -366,7 +366,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
             <div className={moduleStyles.formRow}>
               <Checkbox
                 name="character-set"
-                label={`Make a character set: standing, walking and jumping (${CHARACTER_SET_PICTURE_COUNT} pictures; takes a minute)`}
+                label={`Make a character set: idling, walking and jumping (${CHARACTER_SET_PICTURE_COUNT} pictures; takes a minute)`}
                 size="s"
                 checked={characterSet}
                 disabled={generating}
@@ -464,9 +464,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
           {generating && progress && (
             <div aria-live="polite" className={moduleStyles.generateProgress}>
               {progress.done < progress.total
-                ? `Drawing ${progress.done + 1} of ${progress.total}: ${
-                    progress.label
-                  }…`
+                ? `Drew ${progress.done} of ${progress.total} (${progress.label})…`
                 : 'Putting the frames together…'}
             </div>
           )}

@@ -9,7 +9,7 @@ const key = KEY_COLORS.magenta;
 
 describe('SpriteLab2 characterSet', () => {
   it('costs the base picture plus one per posed frame', () => {
-    expect(CHARACTER_SET_PICTURE_COUNT).toBe(4);
+    expect(CHARACTER_SET_PICTURE_COUNT).toBe(5);
   });
 
   it('the base prompt asks for the whole character on the key color', () => {

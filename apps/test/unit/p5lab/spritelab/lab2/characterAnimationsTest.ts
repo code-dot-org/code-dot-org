@@ -119,19 +119,22 @@ describe('SpriteLab2 characterAnimations', () => {
     expect(jumpFrame(-3, -0.75)).toBe(1);
   });
 
-  it('the strip: every range fits, the walk alternates stand and stride', () => {
+  it('the strip: ranges fit, and the standing frame is shared', () => {
     Object.values(CHARACTER_STRIP_POSES).forEach(range => {
       expect(range.start + range.count).toBeLessThanOrEqual(
         CHARACTER_STRIP_FRAME_COUNT
       );
     });
+    const stand = CHARACTER_STRIP_POSES['stand-right']!;
     const walk = CHARACTER_STRIP_POSES['walk-right']!;
-    expect(poseFrame(walk, 0)).toBe(
-      CHARACTER_STRIP_POSES['stand-right']!.start
-    );
-    expect(poseFrame(walk, walk.frameDelay)).toBe(1);
+    // The standing frame ends the idle range and starts the walk range.
+    expect(walk.start).toBe(stand.start + stand.count - 1);
+    expect(poseFrame(walk, 0)).toBe(walk.start);
+    expect(poseFrame(walk, walk.frameDelay)).toBe(walk.start + 1);
     expect(poseFrame(walk, walk.frameDelay * 2)).toBe(walk.start);
-    // The jump range starts past the walk frames; teeter holds its first.
-    expect(CHARACTER_STRIP_POSES['jump-right']!.start).toBe(2);
+    // The jump range follows the walk; teeter holds its first frame.
+    expect(CHARACTER_STRIP_POSES['jump-right']!.start).toBe(
+      walk.start + walk.count
+    );
   });
 });

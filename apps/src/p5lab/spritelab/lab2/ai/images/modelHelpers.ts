@@ -50,22 +50,17 @@ export const SINGLE_IMAGE_SIZE: ImageSize = '1K';
 // accepts it.
 export const CHARACTER_SET_IMAGE_SIZE: ImageSize = '1K';
 
-// Output shapes the model offers.
-export type ImageAspectRatio = '1:1' | '16:9' | '9:16' | '4:3' | '3:4';
-
 /**
- * Provider options for one image request: the given size and shape (square
- * unless asked), and optionally a thinking level (omitted = the model's
- * default).
+ * Provider options for one image request: the given size, square, and
+ * optionally a thinking level (omitted = the model's default).
  */
 export function imageProviderOptions(
   imageSize: ImageSize,
-  thinkingLevel?: ThinkingLevel,
-  aspectRatio: ImageAspectRatio = '1:1'
+  thinkingLevel?: ThinkingLevel
 ) {
   return {
     google: {
-      imageConfig: {aspectRatio, imageSize},
+      imageConfig: {aspectRatio: '1:1', imageSize},
       ...(thinkingLevel && {thinkingConfig: {thinkingLevel}}),
     },
   };

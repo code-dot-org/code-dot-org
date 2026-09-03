@@ -36,22 +36,24 @@ export type AnimationPoses = Partial<Record<PoseKey, PoseRange>>;
 export const CHARACTER_POSE_ORDER: CharacterPose[] = ['stand', 'walk', 'jump'];
 
 /**
- * The strip a generated set is stored as: one row of four square frames —
- * standing, mid-stride walk, rising jump, falling jump — facing right. The
- * walk alternates the standing and mid-stride frames, so its range starts
- * at the standing frame. Jump frames are not played on a clock in the game —
- * the engine picks by vertical speed (see jumpFrame) — so that delay only
- * paces the preview. Left is the right-facing frame mirrored at runtime
- * (pickPose's fallback plus the engine's mirrorX); drawn left frames — a
- * staff staying in the same hand — would be new `-left` ranges here.
+ * The strip a generated set is stored as: one row of five square frames —
+ * second idle, standing, mid-stride walk, rising jump, falling jump — all
+ * facing right. The standing frame is shared: the idle alternates it with
+ * the second idle, the walk alternates it with the mid-stride, which is
+ * why it sits between them (ranges are contiguous). Jump frames are not
+ * played on a clock in the game — the engine picks by vertical speed (see
+ * jumpFrame) — so that delay only paces the preview. Left is the
+ * right-facing frame mirrored at runtime (pickPose's fallback plus the
+ * engine's mirrorX); drawn left frames — a staff staying in the same
+ * hand — would be new `-left` ranges here.
  */
 export const CHARACTER_STRIP_POSES: AnimationPoses = {
-  'stand-right': {start: 0, count: 1, frameDelay: 20},
-  'walk-right': {start: 0, count: 2, frameDelay: 8},
-  'jump-right': {start: 2, count: 2, frameDelay: 8},
+  'stand-right': {start: 0, count: 2, frameDelay: 20},
+  'walk-right': {start: 1, count: 2, frameDelay: 8},
+  'jump-right': {start: 3, count: 2, frameDelay: 8},
 };
 
-export const CHARACTER_STRIP_FRAME_COUNT = 4;
+export const CHARACTER_STRIP_FRAME_COUNT = 5;
 
 /** Right first: the left-facing frames are mirrored from the right ones. */
 export const CHARACTER_FACINGS: CharacterFacing[] = ['right', 'left'];
