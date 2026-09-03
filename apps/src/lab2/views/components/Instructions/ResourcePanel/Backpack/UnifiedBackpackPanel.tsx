@@ -50,7 +50,7 @@ const SnackbarPassthrough = React.forwardRef<
 
 /**
  * Backpack panel behind the 'unified-backpack' experiment. It shows every backpack file the
- * user has as one list, rather than the lab's own backpack plus a section per other lab.
+ * user has as one list.
  */
 const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
   validateFileName,
@@ -85,8 +85,6 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
           ([appType, fileNames]) =>
             fileNames.map(fileName => ({appType, fileName}))
         );
-        // Sort by name so the list reads as one backpack instead of several
-        // concatenated ones.
         allFiles.sort((first, second) =>
           first.fileName.localeCompare(second.fileName)
         );

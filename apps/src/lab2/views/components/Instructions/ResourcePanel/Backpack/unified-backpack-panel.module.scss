@@ -1,5 +1,3 @@
-// Space between rows of the file list. The unsupported section cancels one of these,
-// so the two have to stay in step.
 $file-list-gap: 8px;
 
 .unifiedBackpackPanel {
@@ -62,14 +60,13 @@ $file-list-gap: 8px;
   justify-content: center;
   gap: 8px;
   padding: 10px 0;
-  // Hide the native disclosure triangle; the chevron below stands in for it.
+  // Hide the native disclosure triangle; the chevron icon stands in for it.
   list-style: none;
   // Confine the hit area to the label, so the lines are neither hoverable nor
   // clickable. Clicks on the label still bubble here and toggle the section.
   pointer-events: none;
 
-  // Horizontal line on either side of the heading, as on the per-lab divider in the
-  // original panel.
+  // Horizontal line on either side of the heading.
   &::before,
   &::after {
     content: '';
@@ -82,14 +79,14 @@ $file-list-gap: 8px;
   }
 
   // Cancel the global `details summary:hover` background in
-  // apps/style/code-studio/legacy.scss. Hovering the label marks this row hovered
-  // too, and that rule would spread the highlight across the lines.
+  // apps/style/code-studio/legacy.scss, since we have hover on the text label itself.
   &:hover {
     background: none;
   }
 }
 
-// Rest, hover and active states of the design system's text button in secondary.
+// This makes the toggle (just text) match the rest, hover and active 
+// states of the design system's text button in secondary,
 .unsupportedToggle {
   display: inline-flex;
   align-items: center;
@@ -115,7 +112,6 @@ $file-list-gap: 8px;
   }
 }
 
-// The summary takes keyboard focus, but the label wears the ring.
 .unsupportedSummary:focus-visible {
   outline: none;
 

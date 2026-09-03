@@ -33,10 +33,9 @@ interface BackpackFileChipProps extends BackpackProps {
   disableActions: boolean;
   setActionInProgress: (inProgress: boolean) => void;
   isSecondaryBackpack?: boolean;
-  // Backpack this file came from. Only set by the unified panel, which shows files
-  // from several backpacks at once and needs distinct ids for same-named files.
+  // Backpack this file came from, used to disambiguate same-named files.
   appType?: string;
-  // Lab this file was saved from, shown when another backpack holds the same name.
+  // Display name for the Lab this file was saved from, shown when another backpack holds the same name.
   sourceDisplayName?: string;
   onImageFlagged?: (
     file: File,
