@@ -145,7 +145,7 @@ export const STOCK_RULES: readonly StockRule[] = [
     name: 'Health',
     ability: 'Has Health',
     description:
-      'Lets actors be hurt and run out. One ability says what can be damaged and the other says what damages it, so a spike, an energy ball and a patrolling crawler are dangerous without knowing who to. Contact damage is spaced by a mercy time, and running out raises an event rather than removing anything — what running out means is the game\u2019s to say.',
+      'Lets actors be damaged and run out. One ability says what can be damaged and the other says what damages it, so a spike, an energy ball and a patrolling crawler are dangerous without knowing who to. Contact damage is spaced by a mercy time, and running out raises an event rather than removing anything — what running out means is the game\u2019s to say.',
     provides: ['Has Health', 'Deals Damage'],
     contents: healthRule,
   },

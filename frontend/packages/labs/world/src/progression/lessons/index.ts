@@ -1617,24 +1617,24 @@ const hazards: WorldScenario = {
 
 Walk the Hero into the Spike. It stops, and that is all: nothing here has said
 that a Spike is dangerous, or that a Hero is the sort of thing that can be
-hurt.
+damaged.
 
 Those are the two halves, and they are separate on purpose. **Has Health** says
 what can be damaged. **Deals Damage** says what damages. Neither names the
-other, which is why the same Spike hurts anything and the same Hero is hurt by
-anything.
+other, which is why the same Spike damages anything and the same Hero is
+damaged by anything.
 
 ### What you do
 
 1. Give the Hero **use trait ⟨Has Health⟩** and the Spike
    **use trait ⟨Deals Damage⟩**.
-2. Add **when ⟨any Hero⟩ is hurt → print ⟨health of ⟨this actor⟩⟩**, and walk
-   into the Spike. One line. Lean on it as long as you like: still one line,
-   because being hurt happens when the touch STARTS.
-3. Back off and walk in again. A second hit — unless you were quick, and then
+2. Add **when ⟨any Hero⟩ is damaged → print ⟨health of ⟨this actor⟩⟩**, and
+   walk into the Spike. One line. Lean on it as long as you like: still one
+   line, because being damaged happens when the touch STARTS.
+3. Back off and walk in again. A second one — unless you were quick, and then
    nothing, because of **mercy time**: half a second in which the Hero cannot
-   be hurt again. Set it to 2 and try to be hit twice.
-4. Give the Spike **use trait ⟨Patrols Across⟩**. Now it walks about hurting
+   be damaged again. Set it to 2 and try to take two.
+4. Give the Spike **use trait ⟨Patrols Across⟩**. Now it walks about damaging
    whatever it meets, and nothing about it mentions the Hero.
 `.trim(),
 };
@@ -1732,7 +1732,7 @@ const level: WorldScenario = {
 ## A level
 
 A room two screens wide with a floor, a camera that follows, two coins to take,
-a Spike that hurts, and a Flag at the far end. Every piece of it is a lesson you
+a Spike that damages, and a Flag at the far end. Every piece of it is a lesson you
 have already done.
 
 Walk to the Flag. Nothing happens — and nothing should, because a Flag is an
@@ -1752,8 +1752,9 @@ because it is not a fact about either of them.
    Coins and Spikes.
 3. Set **won** to true in there, and print something.
 4. Run it and walk the whole level. Take the coins: nothing. Walk into the
-   Spike: nothing but hurt. Reach the Flag: won.
-5. Add **when ⟨any Hero⟩ dies → print ⟨"game over"⟩**. A level has two ends
+   Spike: nothing but damage. Reach the Flag: won.
+5. Add **when ⟨any Hero⟩ runs out of health → print ⟨"game over"⟩**. A level
+   has two ends
    now, and the world knows which one it reached.
 `.trim(),
 };

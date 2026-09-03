@@ -145,7 +145,7 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
     description:
       'The starter project: gravity, arrow keys, and a room with coins to ' +
       'collect — two on the floor and one that has to be jumped for — a ' +
-      'score to reach, and something walking about that will hurt you.',
+      'score to reach, and something walking about that will damage you.',
     source: DEFAULT_PROJECT.source,
     instructions:
       '## World Lab\n\nBuild a game world in code. Edit the world and ' +

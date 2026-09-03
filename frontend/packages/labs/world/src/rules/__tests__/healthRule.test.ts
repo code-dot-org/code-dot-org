@@ -3,7 +3,7 @@
 // A library rule rather than a starter one, so it is read straight off the
 // shelf. What these pin is the shape a learner meets: two abilities, so a spike
 // and a player need know nothing about each other; a mercy time, without which
-// contact damage is sixty hits a second; and `dies` as an EVENT, because what
+// contact damage is sixty of them a second; and running out as an EVENT, because what
 // dying means is the game's to say and not this rule's.
 
 import {describe, expect, it} from 'vitest';
@@ -56,7 +56,7 @@ describe('rules/health.rule', () => {
   it('keeps the mercy clock read-only', () => {
     // A time, not a countdown, so nothing has to tick it down — and a step
     // owns it, so it is not a knob.
-    expect(propertyOf('Has Health', 'unhurt until')?.readonly).toBe(true);
+    expect(propertyOf('Has Health', 'safe until')?.readonly).toBe(true);
   });
 
   it('lets the dangerous thing say how much it takes off', () => {
@@ -68,21 +68,21 @@ describe('rules/health.rule', () => {
     // disagree about what dying means, and gravity makes the same one with
     // `starts falling`.
     const events = meta.events.map(one => one.name);
-    expect(events).toContain('is hurt');
-    expect(events).toContain('dies');
+    expect(events).toContain('is damaged');
+    expect(events).toContain('runs out of health');
     expect(healthRule).not.toContain('world_remove_actor');
   });
 
-  it('tells the attacker what it hit', () => {
+  it('tells the damaging actor what it touched', () => {
     // The other side of the pair, so a spike can react to hurting somebody —
     // Collection's `is collected by` one channel over.
-    const hurts = meta.events.find(one => one.name.startsWith('hurts'));
-    expect(hurts).toBeDefined();
+    const damages = meta.events.find(one => one.name.startsWith('damages'));
+    expect(damages).toBeDefined();
   });
 
   it('asks its question and applies its damage as blocks', () => {
     const said = [...meta.queries, ...meta.actions].map(one => one.name);
-    expect(said.some(name => name.includes('alive'))).toBe(true);
+    expect(said.some(name => name.includes('health left'))).toBe(true);
     expect(said.some(name => name.includes('damage'))).toBe(true);
   });
 

@@ -1413,7 +1413,7 @@ export const TILES: readonly Tile[] = [
     at: at('platformer', 3, 2),
     title: 'Something that can hurt you',
     teaches:
-      'A rule that does not know who it is hurting: one ability says what can be damaged, another says what damages.',
+      'A rule that does not know who it is damaging: one ability says what can be damaged, another says what damages.',
     task: 'A Hero that walks into a spike and stops. Make the spike dangerous, and the Hero the sort of thing it can hurt.',
     requires: ['platformer/ground'],
     unlocks: [
@@ -1488,7 +1488,7 @@ export const TILES: readonly Tile[] = [
     ],
     check: {
       kind: 'outcome',
-      says: 'One run right: the coins go, the Spike hurts, and the world is won only once the Flag is reached.',
+      says: 'One run right: the coins go, the Spike damages, and the world is won only once the Flag is reached.',
       falsePass:
         'A win that fires on any touch, which is true the moment the first Coin is taken — so the check reads `won` all the way along rather than at the end. The run takes two coins and a hit before it reaches the Flag, and every one of those has to leave the world unwon.',
       run: {

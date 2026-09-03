@@ -324,7 +324,7 @@ const SINGLE_WORLD = JSON.stringify({
       // Dying, which Health raises and does nothing else about. Reaching the
       // Scoreboard by kind is the one cross-actor line in either telling.
       {
-        type: 'world_on_Health_DiesEvent',
+        type: 'world_on_Health_RunsOutOfHealthEvent',
         x: 520,
         y: 900,
         inputs: {ACTOR: kind(PLAYER)},

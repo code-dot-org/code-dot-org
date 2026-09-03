@@ -393,16 +393,17 @@ const PLAYER_ACTOR = JSON.stringify(
           200,
           'Player started falling',
         ),
-        // The ending the starter did not have. Health raises `dies` and
-        // removes nothing — running out is a fact, not a policy — so what
-        // dying MEANS is this handler, and here it means the board says so.
+        // The ending the starter did not have. Health raises `runs out of
+        // health` and removes nothing — running out is a fact, not a policy —
+        // so what it MEANS is this handler, and here it means the board says
+        // so.
         //
         // It reaches another actor to say it, which is the only block in the
         // starter that does: `any ⟨Scoreboard⟩` names the kind, and an actor
         // socket handed several takes the first. A game with two scoreboards
         // would want a rule; a game with one wants this.
         {
-          type: 'world_on_Health_DiesEvent',
+          type: 'world_on_Health_RunsOutOfHealthEvent',
           x: 20,
           y: 560,
           next: {

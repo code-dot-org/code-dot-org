@@ -286,7 +286,7 @@ ordinary unit work. Whether the blocks it wrote are the RIGHT blocks is a
 question only compiling and running the project answers, so
 `actors/enhance/__tests__/health` does that: it enhances a Platformer Player,
 compiles the project with the real generator, and asserts that the bar draws
-the player's health, halves when the player is hurt, and rides above it as it
+the player's health, halves when the player is damaged, and rides above it as it
 falls. Cutting any one of the wiring lines fails it.
 
 And it places THREE players, because one is the case that hid the first
@@ -302,12 +302,13 @@ and because each is an argument for the concept rather than a plan:
   wired to Zapping's recharge; a stamina meter. The interesting question each
   one asks is _attached or HUD_, which is the thing a learner cannot guess.
 - **A second pool that bends a rule's arithmetic** — shields (absorb before
-  health, a step ahead of Health's), armour, lives and respawn (`dies` is
+  health, a step ahead of Health's), armour, lives and respawn (`runs out of
+health` is
   already an event), and the flicker that makes Health's existing mercy time
   visible.
 - **A voice** — a Speech Box that rides above an actor, a name plate, a
   floating "+10". Composition of Writing and Attachment, no new rules.
-- **A verb it did not have** — zaps, chases, is pushable, hurts to touch.
+- **A verb it did not have** — zaps, chases, is pushable, damages on touch.
   Collecting is built (above), which also unblocks the Coin's demo: nothing on
   the shelf could collect one until now.
 - **A relationship with the world** — stays in bounds; is a checkpoint. No
