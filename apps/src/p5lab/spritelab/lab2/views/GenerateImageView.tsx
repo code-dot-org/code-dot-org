@@ -24,7 +24,6 @@ import {
   generateImage,
   GenerateImageOptions,
 } from '../ai/images/imageGeneration';
-import {poseFigureSvgDataURI} from '../ai/images/poseFigures';
 import {
   IMAGE_STYLE_LABELS,
   IMAGE_TYPE_LABELS,
@@ -266,22 +265,8 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
           )}
         >
           {generating && progress?.preview ? (
-            // The latest frame of the set as it comes in, with the figure it
-            // was drawn to in the corner.
-            <>
-              <img src={progress.preview} alt="" />
-              {progress.previewPose && (
-                <img
-                  className={moduleStyles.poseInset}
-                  src={poseFigureSvgDataURI(
-                    progress.previewPose.pose,
-                    progress.previewPose.frame,
-                    progress.previewPose.facing
-                  )}
-                  alt="Pose reference"
-                />
-              )}
-            </>
+            // The latest frame of the set as it comes in.
+            <img src={progress.preview} alt="" />
           ) : sheet ? (
             <AnimatedSheetPreview {...sheet} />
           ) : thumb ? (
@@ -381,7 +366,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
             <div className={moduleStyles.formRow}>
               <Checkbox
                 name="character-set"
-                label={`Make a character set: standing, walking and jumping (${CHARACTER_SET_PICTURE_COUNT} pictures; takes a few minutes)`}
+                label={`Make a character set: standing, walking and jumping (${CHARACTER_SET_PICTURE_COUNT} pictures; takes a minute)`}
                 size="s"
                 checked={characterSet}
                 disabled={generating}

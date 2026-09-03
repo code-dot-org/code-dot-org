@@ -5,7 +5,6 @@ import {
   CharacterPose,
   orderedPoseKeys,
   PoseRange,
-  poseForFrame,
 } from '../characterAnimations';
 
 import moduleStyles from './image-details-dialog.module.scss';
@@ -40,7 +39,7 @@ const AnimatedSheetPreview: React.FunctionComponent<
   return (
     <div className={moduleStyles.posePreviews}>
       {keys.map(key => {
-        const at = poseForFrame(poses, poses[key]!.start);
+        const pose = key.split('-')[0] as CharacterPose;
         return (
           <figure key={key} className={moduleStyles.posePreview}>
             <PoseLoop
@@ -49,7 +48,7 @@ const AnimatedSheetPreview: React.FunctionComponent<
               range={poses[key]!}
               className={className}
             />
-            <figcaption>{at ? POSE_TITLES[at.pose] : key}</figcaption>
+            <figcaption>{POSE_TITLES[pose]}</figcaption>
           </figure>
         );
       })}

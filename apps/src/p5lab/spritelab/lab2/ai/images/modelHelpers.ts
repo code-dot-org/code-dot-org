@@ -26,16 +26,6 @@ export function getCharacterSetImageModel() {
   return googleProvider(CHARACTER_SET_IMAGE_MODEL);
 }
 
-// The walk's row picture. Gemini 3 Pro Image was tried here too
-// (2026-08-27; one request per set, so one Pro image): it drew sixteen
-// frames for twelve asked, with a floor shadow under some boots that keyed
-// as solid, and the walk played worse than Flash's. Flash it stays.
-export const SHEET_IMAGE_MODEL = AiChatModelIds.GEMINI_3_1_FLASH_IMAGE;
-
-export function getSheetImageModel() {
-  return googleProvider(SHEET_IMAGE_MODEL);
-}
-
 // How hard an image model thinks before drawing. Vertex refuses the
 // parameter for the image models ("thinking_level is not supported by this
 // model", live, 2026-08-25), so it stays unset; the plumbing remains for a
@@ -55,16 +45,13 @@ export type ImageSize = '512' | '1K' | '2K' | '4K';
 // (MODEL_OUTPUT_PX below); larger costs more and would only be scaled down.
 export const SINGLE_IMAGE_SIZE: ImageSize = '1K';
 
-// Character-set frames end up scaled to a ~360px cell, so most of a 1K
-// frame is thrown away; '512' is the size to try once the gateway accepts
-// it. One constant to flip.
+// Character-set frames are stored at a 768px cell; '512' would trade that
+// detail away and is not obviously enough. Revisit once the gateway
+// accepts it.
 export const CHARACTER_SET_IMAGE_SIZE: ImageSize = '1K';
 
 // Output shapes the model offers.
 export type ImageAspectRatio = '1:1' | '16:9' | '9:16' | '4:3' | '3:4';
-
-// A pose's frames asked for as one row picture want the width.
-export const SHEET_ASPECT_RATIO: ImageAspectRatio = '16:9';
 
 /**
  * Provider options for one image request: the given size and shape (square

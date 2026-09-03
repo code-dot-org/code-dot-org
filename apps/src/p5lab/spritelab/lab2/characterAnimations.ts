@@ -1,12 +1,16 @@
 // Character sets: one AI-generated character kept as ONE animation whose
-// sprite sheet holds several poses — standing, walking and jumping, each
-// facing right and left — as named frame ranges, and the per-frame choice
+// picture holds its poses as named frame ranges, and the per-frame choice
 // among them from how a sprite moved. The generator
 // (ai/images/characterSet.ts) writes the ranges; the engine plays them.
 //
 // A set is a plain animation with a `poses` map, so everything that knows
 // costumes by name — dropdowns, events, the World tab, rename, delete — sees
 // one image with one name, and a sprite wearing it never changes label.
+//
+// The `poses` map is also what marks the format: an animation WITHOUT one is
+// a single picture at whatever size it is — hand-painted sprites, and every
+// image made before character sets — and keeps playing as itself. Only an
+// animation carrying `poses` is read as the strip below.
 
 export type CharacterPose = 'stand' | 'walk' | 'jump';
 export type CharacterFacing = 'right' | 'left';
@@ -28,59 +32,35 @@ export interface PoseRange {
 /** A character set's poses, stored on its animation. */
 export type AnimationPoses = Partial<Record<PoseKey, PoseRange>>;
 
-export interface CharacterPoseSpec {
-  pose: CharacterPose;
-  frameCount: number;
-  frameDelay: number;
-}
+/** Pose order everywhere poses are listed. */
+export const CHARACTER_POSE_ORDER: CharacterPose[] = ['stand', 'walk', 'jump'];
 
 /**
- * The poses a set holds and how each plays. The generator asks for these
- * frames and the engine plays a set's frames at the rates stored with it;
- * both read the one table. Jump frames are not played on a clock in the game — the engine
- * picks the frame from the sprite's vertical speed (see jumpFrame) — so its
- * delay only paces the preview.
- *
- * The walk is drawn as one row picture and the model decides how many
- * frames the row holds: asked for eight it has drawn twelve, asked for four
- * or six it has drawn that many. Every frame it draws is kept, so the walk's
- * frameCount is the count asked for, and frameCount × frameDelay the cycle
- * time a set keeps whatever count it got (see poseFrameDelay): twelve frames
- * at two ticks and eight at three are the same walk.
+ * The strip a generated set is stored as: one row of four square frames —
+ * standing, mid-stride walk, rising jump, falling jump — facing right. The
+ * walk alternates the standing and mid-stride frames, so its range starts
+ * at the standing frame. Jump frames are not played on a clock in the game —
+ * the engine picks by vertical speed (see jumpFrame) — so that delay only
+ * paces the preview. Left is the right-facing frame mirrored at runtime
+ * (pickPose's fallback plus the engine's mirrorX); drawn left frames — a
+ * staff staying in the same hand — would be new `-left` ranges here.
  */
-export const CHARACTER_POSES: CharacterPoseSpec[] = [
-  {pose: 'stand', frameCount: 2, frameDelay: 20},
-  {pose: 'walk', frameCount: 8, frameDelay: 3},
-  {pose: 'jump', frameCount: 2, frameDelay: 8},
-];
+export const CHARACTER_STRIP_POSES: AnimationPoses = {
+  'stand-right': {start: 0, count: 1, frameDelay: 20},
+  'walk-right': {start: 0, count: 2, frameDelay: 8},
+  'jump-right': {start: 2, count: 2, frameDelay: 8},
+};
 
-/**
- * The delay that gives a pose of `count` frames the cycle time of its spec:
- * a walk that came back as twelve frames plays each for two ticks, one that
- * came back as eight for three.
- */
-export function poseFrameDelay(pose: CharacterPose, count: number): number {
-  const spec = CHARACTER_POSES.find(p => p.pose === pose)!;
-  return Math.max(1, Math.round((spec.frameCount * spec.frameDelay) / count));
-}
+export const CHARACTER_STRIP_FRAME_COUNT = 4;
 
-/** Right first: the left-facing frames are drawn from the right-facing ones. */
+/** Right first: the left-facing frames are mirrored from the right ones. */
 export const CHARACTER_FACINGS: CharacterFacing[] = ['right', 'left'];
-
-/**
- * The facings a set is generated for. Right only for now: left is the
- * right-facing frame mirrored at runtime (pickPose's fallback plus the
- * engine's mirrorX), which halves the pictures a set costs. Drawn left
- * frames — a staff staying in the same hand — are a matter of adding 'left'
- * back here.
- */
-export const GENERATED_FACINGS: CharacterFacing[] = ['right'];
 
 /** Every pose key in canonical order, right-facing first. */
 export function orderedPoseKeys(poses: AnimationPoses): PoseKey[] {
   const keys: PoseKey[] = [];
   CHARACTER_FACINGS.forEach(facing =>
-    CHARACTER_POSES.forEach(({pose}) => {
+    CHARACTER_POSE_ORDER.forEach(pose => {
       const key = poseKey(pose, facing);
       if (poses[key]) {
         keys.push(key);
@@ -131,8 +111,8 @@ export interface PickedPose {
  * The pose to show for a motion. A pose the set lacks falls back to
  * standing the same way before anything facing the other way: a
  * wrong-facing walk reads as moonwalking, a standing pose merely as stiff.
- * A set drawn facing right only (GENERATED_FACINGS) always lands on the
- * other facing for a left-moving sprite; the caller mirrors it.
+ * A set drawn facing right only (the strip) always lands on the other
+ * facing for a left-moving sprite; the caller mirrors it.
  */
 export function pickPose(
   poses: AnimationPoses,
@@ -154,31 +134,6 @@ export function pickPose(
       if (range) {
         return {key, pose, facing, range};
       }
-    }
-  }
-  return undefined;
-}
-
-export interface FramePose {
-  pose: CharacterPose;
-  facing: CharacterFacing;
-  /** Position within the pose's range. */
-  frame: number;
-}
-
-/** Which pose (and which of its frames) a sheet frame belongs to. */
-export function poseForFrame(
-  poses: AnimationPoses,
-  sheetFrame: number
-): FramePose | undefined {
-  for (const [key, range] of Object.entries(poses)) {
-    if (
-      range &&
-      sheetFrame >= range.start &&
-      sheetFrame < range.start + range.count
-    ) {
-      const [pose, facing] = key.split('-') as [CharacterPose, CharacterFacing];
-      return {pose, facing, frame: sheetFrame - range.start};
     }
   }
   return undefined;

@@ -459,39 +459,6 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         // A new subject, even though the session continues.
         sessionEpochRef.current++;
         setDialogTarget(key);
-        // The row pictures a set was cut from, as ordinary images beside it.
-        for (const [i, sheet] of (result.rawSheets || []).entries()) {
-          const rowName = `${newName}-row${i ? i + 1 : ''}`;
-          const rowDataURI = bytesToDataURI(sheet.uint8Array, sheet.mediaType);
-          let rowUrl = rowDataURI;
-          if (uploadImage) {
-            try {
-              rowUrl = await uploadImage(
-                `generated-${createUuid()}.png`,
-                sheet.uint8Array,
-                sheet.mediaType
-              );
-            } catch {
-              // Keep the embedded data URI.
-            }
-          }
-          const rowSize = await dataURIToSourceSize(rowDataURI).catch(
-            () => null
-          );
-          const rowKey = createUuid();
-          dispatch(
-            addAnimation(rowKey, {
-              name: rowName,
-              sourceUrl: rowUrl,
-              frameSize: rowSize || {x: MODEL_OUTPUT_PX, y: MODEL_OUTPUT_PX},
-              frameCount: 1,
-              frameDelay: 2,
-              looping: true,
-              categories: [],
-            }) as unknown as AnyAction
-          );
-          dispatch(setAnimationName(rowKey, rowName) as unknown as AnyAction);
-        }
         return;
       }
 

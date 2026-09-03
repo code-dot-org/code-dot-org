@@ -113,21 +113,6 @@
       color: var(--dialog-text-secondary);
     }
   }
-
-  // The stick figure a character-set frame was drawn to, in the corner of
-  // the preview area.
-  .poseInset {
-    position: absolute;
-    right: 8px;
-    bottom: 8px;
-    width: 26%;
-    height: auto;
-    border: 1px solid chrome.$border-subtle;
-    border-radius: 4px;
-    background: #fff;
-    image-rendering: auto;
-    pointer-events: none;
-  }
 }
 
 // Checkerboard signals transparency; base and tint follow the theme (the
