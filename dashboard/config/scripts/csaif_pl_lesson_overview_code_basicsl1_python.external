@@ -3,35 +3,41 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Lesson 3: Python Basics
- 
-This lesson introduces foundational coding concepts using Code.org’s Python Lab and Neighborhood IDE, or programming platform. 
+<h1>Lesson 3: Coding Basics</h1>
+<div style="display: inline-block; background-color: #E4E2F8; color: #1F1976; font-weight: bold; padding: 4px 12px; border-radius: 10px; margin-bottom: 12px;">Aligns to curriculum Lessons 4-7</div>
+<p>This lesson introduces foundational coding concepts using Code.org's Python Lab and Neighborhood IDE, or programming platform.</p>
 
-You will explore key programming elements such as variables, print statements, objects, and functions. This lesson aligns with **Lessons 4-7 in the Foundations of AI Programming** curriculum.
-
-
-
-<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
-
-  <div>
-    <p>By the end of this lesson, you will:</p>
-    <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
-      <li>Navigate the IDE and understand its essential features for coding instruction.
-</li> <br>
-    <li> Identify and apply key coding concepts, including variables, print statements, objects, and functions.
-</li><br>
-        <li> Use a Predict, Investigate/Modify, Practice (PRIMM) approach to engage students in coding exploration and skill development.
-
-
-</li>
-    </ul>
-  </div>
-  <div>
-    <img src="https://images.code.org/88771c5eb62946ea2a8651b4df91faa6-image-1741113537892.png" 
-         alt="Icon with gears symbolizing thinking" 
-         style="border-radius: 10px; width: 300px; height: auto;">
-  </div>
+<p>You will explore key programming elements such as variables, print statements, objects, and functions.</p>
+<div style="clear: both;"></div>
+<p>This lesson prepares you to teach four curriculum lessons:</p>
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 10px;">
+<p><b>Curriculum Lesson 4:</b> Variables and Data Flow</p>
+<a href="[LESSON 4 URL]" style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; padding: 6px 14px; border-radius: 8px; text-decoration: none; margin-top: 6px; font-size: 13px;">View Curriculum Lesson 4</a>
 </div>
-
-**Suggested Time:** 25 Minutes
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 10px;">
+<p><b>Curriculum Lesson 5:</b> Working with Objects</p>
+<a href="[LESSON 5 URL]" style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; padding: 6px 14px; border-radius: 8px; text-decoration: none; margin-top: 6px; font-size: 13px;">View Curriculum Lesson 5</a>
+</div>
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 10px;">
+<p><b>Curriculum Lesson 6:</b> Functions</p>
+<a href="[LESSON 6 URL]" style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; padding: 6px 14px; border-radius: 8px; text-decoration: none; margin-top: 6px; font-size: 13px;">View Curriculum Lesson 6</a>
+</div>
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px;">
+<p><b>Curriculum Lesson 7:</b> Functions with Parameters</p>
+<a href="[LESSON 7 URL]" style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; padding: 6px 14px; border-radius: 8px; text-decoration: none; margin-top: 6px; font-size: 13px;">View Curriculum Lesson 7</a>
+</div>
+<hr>
+<p><b>By the end of this lesson, you'll:</b></p>
+<p style="margin: 0 0 6px 0;">• Navigate the IDE and understand its essential features for coding instruction</p>
+<p style="margin: 0 0 6px 0;">• Identify and apply key coding concepts, including variables, print statements, objects, and functions</p>
+<p style="margin: 0;">• Use a Predict, Investigate/Modify, Practice (PRIMM) approach to engage students in coding exploration and skill development</p>
+<p style="margin: 16px 0 0 0;"><i>Suggested time: 25 minutes</i></p>
+<hr>
+<div style="display: flex; gap: 6px; margin-top: 24px; max-width: 700px;">
+  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 16px; padding: 10px 4px; border-radius: 6px;">Lesson 1</div>
+  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 16px; padding: 10px 4px; border-radius: 6px;">Lesson 2</div>
+  <div style="flex: 1; text-align: center; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 16px; padding: 10px 4px; border-radius: 6px;">Lesson 3</div>
+  <div style="flex: 1; text-align: center; background-color: #FFFFFF; color: #ACA8EA; font-weight: bold; font-size: 16px; padding: 10px 4px; border-radius: 6px; border: 1.5px solid #E4E2F8;">Lesson 4</div>
+  <div style="flex: 1; text-align: center; background-color: #FFFFFF; color: #ACA8EA; font-weight: bold; font-size: 16px; padding: 10px 4px; border-radius: 6px; border: 1.5px solid #E4E2F8;">Lesson 5</div>
+</div>
 MARKDOWN

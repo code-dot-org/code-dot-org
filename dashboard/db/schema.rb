@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_08_31_000002) do
+ActiveRecord::Schema[7.0].define(version: 2026_09_02_042144) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -583,7 +583,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_08_31_000002) do
     t.index ["key"], name: "index_course_offerings_on_key", unique: true
   end
 
-  create_table "course_offerings_pd_workshops", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "course_offerings_pd_workshops", primary_key: ["pd_workshop_id", "course_offering_id"], charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.bigint "pd_workshop_id", null: false
     t.bigint "course_offering_id", null: false
     t.datetime "created_at", null: false
@@ -2126,7 +2126,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_08_31_000002) do
   create_table "quiz_questions", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "type", null: false
     t.string "key", limit: 36, null: false
-    t.bigint "parent_id"
+    t.bigint "fork_parent_id"
     t.string "name", null: false
     t.json "content", null: false
     t.text "explanation"
@@ -2135,7 +2135,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_08_31_000002) do
     t.index ["created_at"], name: "index_quiz_questions_on_created_at"
     t.index ["key"], name: "index_quiz_questions_on_key"
     t.index ["name"], name: "index_quiz_questions_on_name", type: :fulltext
-    t.index ["parent_id"], name: "index_quiz_questions_on_parent_id"
   end
 
   create_table "reference_guides", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2930,6 +2929,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_08_31_000002) do
 
   create_table "user_project_storage_ids", id: :integer, charset: "utf8mb3", force: :cascade do |t|
     t.integer "user_id"
+    t.string "anon_user_id", limit: 36
     t.index ["user_id"], name: "user_id", unique: true
     t.index ["user_id"], name: "user_storage_ids_user_id_index"
   end
@@ -3109,7 +3109,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_08_31_000002) do
   add_foreign_key "quiz_question_responses", "quiz_questions"
   add_foreign_key "quiz_question_standards", "quiz_questions"
   add_foreign_key "quiz_question_standards", "standards"
-  add_foreign_key "quiz_questions", "quiz_questions", column: "parent_id"
   add_foreign_key "rubric_ai_evaluations", "rubrics"
   add_foreign_key "rubric_ai_evaluations", "users"
   add_foreign_key "rubric_ai_evaluations", "users", column: "requester_id"

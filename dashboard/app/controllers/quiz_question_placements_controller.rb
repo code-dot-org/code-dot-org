@@ -98,7 +98,7 @@ class QuizQuestionPlacementsController < ApplicationController
     destroyed = false
     ActiveRecord::Base.transaction(requires_new: true) do
       placement.destroy!
-      still_referenced = question.levels.exists? || question.quiz_question_responses.exists? || question.forks.exists?
+      still_referenced = question.levels.exists? || question.quiz_question_responses.exists?
       unless still_referenced
         question.destroy!
         destroyed = true

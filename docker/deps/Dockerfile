@@ -6,10 +6,10 @@
 #   docker build -f docker/deps/Dockerfile --build-arg BUILD_IMAGE=... .
 
 # BUILD_IMAGE has no default: cdo-build is unpublished, so a caller must build
-# and name it. Both are declared here so they can be used in a FROM.
-ARG \
-  BUILD_IMAGE \
-  BASE_IMAGE=ghcr.io/code-dot-org/cdo-base:latest
+# and name it. Keep these in separate instructions: Skaffold must expand both
+# while scanning the FROM dependencies for its development file watcher.
+ARG BUILD_IMAGE
+ARG BASE_IMAGE=ghcr.io/code-dot-org/cdo-base:latest
 
 ################################################################################
 FROM ${BUILD_IMAGE} AS builder
