@@ -35,7 +35,9 @@
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {cameraFollowEnhancement} from './cameraFollow';
+import {collectsEnhancement} from './collects';
 import {healthEnhancement} from './health';
+import {scoreboardEnhancement} from './scoreboard';
 
 /** What one enhancement is. */
 export interface Enhancement {
@@ -131,8 +133,12 @@ export interface EnhanceTarget {
 }
 
 export const ENHANCEMENTS: readonly Enhancement[] = [
+  // An actor's, then a world's, in the order a game is built up in: what the
+  // actor can do, then what the screen says about it.
   healthEnhancement,
+  collectsEnhancement,
   cameraFollowEnhancement,
+  scoreboardEnhancement,
 ];
 
 /** One by id, for a caller that knows which it wants. */

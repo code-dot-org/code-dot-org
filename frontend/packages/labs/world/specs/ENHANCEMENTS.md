@@ -228,6 +228,56 @@ rather than adding a rival: a world has one view, and a second answer is a
 learner changing their mind. A camera the learner made themselves is left
 alone — this owns the one it made and nothing else.
 
+## The pair: collecting, and the number it adds up to
+
+The starter's own wiring, which every project that keeps a score writes again.
+Two enhancements, one of each subject, and neither is worth much alone.
+
+**Collects things, and scores for them** (an actor's):
+
+    actors/<target>.actor    use trait ⟨Collection#Collects⟩
+                             when ⟨this actor⟩ collects ⟨any⟩:
+                               add ⟨10⟩ to the score
+
+`Collects` is what lets an actor take a Coin — the coin already declares `Can
+Be Collected`, and nothing happens until something can do the collecting. And
+taking one is worth nothing until a handler says what it is worth: collection
+knows nothing about scoring and scoring knows nothing about coins, which is why
+the line between them belongs to the project.
+
+**Ten, without asking.** The number is the starter's own, and it lands in a
+block in the learner's file that they can read and change. A shelf that stopped
+to ask would be asking about the one thing already in front of them.
+
+**A scoreboard** (a world's):
+
+    actors/scoreboard.actor  (new) the stock Label, renamed, plus
+                                   use trait ⟨Scoring#Watches the Score⟩
+                                   when ⟨this actor⟩ sees the score change:
+                                     set text to join ⟨"SCORE "⟩ ⟨the score⟩
+
+    worlds/<world>.world           define layer ⟨Interface⟩ do:
+                                     this layer ⟨fixed⟩
+                                     add actor ⟨Scoreboard⟩ do:
+                                       set position ⟨48, 16⟩
+
+**A kind of its own, rather than the stock Label placed and pointed at.** A hat
+names a KIND, so one on `any ⟨Label⟩` would rewrite every label in the project
+— including the ones the learner put there to say something else. So the
+scoreboard is a Label whose name is Scoreboard, which is exactly what the
+starter's own `scoreboard.actor` is.
+
+**The trait is what makes the hat fire.** "Sees the score change" is an actor's
+event and an actor hears it because it elected to watch. Without that row the
+board draws its seeded text for the rest of the game, which is what this looked
+like before the row was there.
+
+**And it goes on a fixed layer**, which is the piece a learner finds last and
+by accident: a world-space score sits where it was placed and slides off the
+screen the moment anything moves the camera. Written even in a project with no
+camera, because the camera is one wand away and nothing about the scoreboard
+should need revisiting when it arrives.
+
 ## Testing one
 
 Two halves, and the second is the one that matters. The patch's arithmetic —
@@ -257,8 +307,9 @@ and because each is an argument for the concept rather than a plan:
   visible.
 - **A voice** — a Speech Box that rides above an actor, a name plate, a
   floating "+10". Composition of Writing and Attachment, no new rules.
-- **A verb it did not have** — collects things (which is exactly the hole the
-  Coin's demo falls into), shoots, patrols, is pushable, hurts to touch.
+- **A verb it did not have** — shoots, chases, is pushable, hurts to touch.
+  Collecting is built (above), which also unblocks the Coin's demo: nothing on
+  the shelf could collect one until now.
 - **A relationship with the world** — stays in bounds; is a checkpoint. No
   picture at all, pure wiring. The camera is the one of these that is built
   (below).
