@@ -1,6 +1,6 @@
 [project]
 name = "neighborhood"
-version = "0.5.0"
+version = "0.6.0"
 requires-python = '>=3.12'
 dependencies = []
 

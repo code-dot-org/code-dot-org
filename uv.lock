@@ -532,7 +532,7 @@ wheels = [
 
 [[package]]
 name = "neighborhood"
-version = "0.5.0"
+version = "0.6.0"
 source = { editable = "python/pythonlab/neighborhood" }
 
 [package.dev-dependencies]

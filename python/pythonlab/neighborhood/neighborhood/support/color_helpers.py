@@ -32,3 +32,21 @@ WEB_COLORS = {
 def is_color(color: str) -> bool:
     # Check if the color matches the hex pattern or is in the set of web colors
     return bool(re.match(HEX_WEB_COLOR_PATTERN, color)) or color.lower() in WEB_COLORS
+
+def to_color_string(*color) -> str | None:
+    """
+    Normalizes a color argument into a string the front end can draw, or returns
+    None if it is not a color.
+
+    Accepts either one CSS color name or hex string, which comes back unchanged,
+    or three red/green/blue components between 0 and 255, which become "#rrggbb".
+    """
+    if len(color) == 1 and isinstance(color[0], str):
+        return color[0] if is_color(color[0]) else None
+    if len(color) == 3 and all(_is_rgb_component(component) for component in color):
+        return "#%02x%02x%02x" % color
+    return None
+
+def _is_rgb_component(value) -> bool:
+    # bool is a subclass of int, but True is not a red value.
+    return isinstance(value, int) and not isinstance(value, bool) and 0 <= value <= 255
