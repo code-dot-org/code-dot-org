@@ -12,6 +12,14 @@ import {BackpackEvent} from '@cdo/apps/sharedComponents/backpack/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import BackpackFileChip from './BackpackFileChip';
+import {
+  ALL_FILES_CATEGORY_ID,
+  BackpackSortOrder,
+  FileCategoryId,
+  getFileCategory,
+  sortBackpackFiles,
+} from './backpackFileFilters';
+import BackpackListControls from './BackpackListControls';
 import BackpackMessage from './BackpackMessage';
 import isFileTypeSupported from './isFileTypeSupported';
 
@@ -72,6 +80,10 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
   const [loadError, setLoadError] = useState<boolean>(false);
   const [alertList, setAlertList] = useState<AlertConfig[]>([]);
   const [actionInProgress, setActionInProgress] = useState<boolean>(false);
+  const [selectedCategoryId, setSelectedCategoryId] = useState<
+    FileCategoryId | typeof ALL_FILES_CATEGORY_ID
+  >(ALL_FILES_CATEGORY_ID);
+  const [sortOrder, setSortOrder] = useState<BackpackSortOrder>('name-asc');
 
   const loadFiles = useCallback(
     async (showLoading: boolean) => {
@@ -84,9 +96,6 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
         const allFiles = Object.entries(fileNamesByAppType).flatMap(
           ([appType, fileNames]) =>
             fileNames.map(fileName => ({appType, fileName}))
-        );
-        allFiles.sort((first, second) =>
-          first.fileName.localeCompare(second.fileName)
         );
         setFiles(allFiles);
       } catch (error) {
@@ -129,6 +138,19 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
     });
     return () => backpackApi.removeEventListener(listenerId);
   }, [backpackApi, loadFiles]);
+
+  useEffect(() => {
+    // Deleting the last file of a category retires that category, so fall back to
+    // showing everything rather than leaving an empty filter selected.
+    if (
+      selectedCategoryId !== ALL_FILES_CATEGORY_ID &&
+      !files.some(
+        ({fileName}) => getFileCategory(fileName).id === selectedCategoryId
+      )
+    ) {
+      setSelectedCategoryId(ALL_FILES_CATEGORY_ID);
+    }
+  }, [files, selectedCategoryId]);
 
   const removeAlert = useCallback((id: number) => {
     setAlertList(prevAlerts => prevAlerts.filter(alert => alert.id !== id));
@@ -208,10 +230,22 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
     ]
   );
 
+  const fileNames = useMemo(() => files.map(({fileName}) => fileName), [files]);
+
+  const visibleFiles = useMemo(() => {
+    const matchingFiles =
+      selectedCategoryId === ALL_FILES_CATEGORY_ID
+        ? files
+        : files.filter(
+            ({fileName}) => getFileCategory(fileName).id === selectedCategoryId
+          );
+    return sortBackpackFiles(matchingFiles, sortOrder);
+  }, [files, selectedCategoryId, sortOrder]);
+
   const [supportedFiles, unsupportedFiles] = useMemo(() => {
     const supported: UnifiedBackpackFile[] = [];
     const unsupported: UnifiedBackpackFile[] = [];
-    files.forEach(file => {
+    visibleFiles.forEach(file => {
       if (isFileTypeSupported(file.fileName, supportedFileTypes)) {
         supported.push(file);
       } else {
@@ -219,7 +253,7 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
       }
     });
     return [supported, unsupported];
-  }, [files, supportedFileTypes]);
+  }, [visibleFiles, supportedFileTypes]);
 
   if (!currentUserId) {
     return (
@@ -289,6 +323,15 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
           ))}
         </TransitionGroup>
       </Snackbar>
+      {files.length > 0 && (
+        <BackpackListControls
+          fileNames={fileNames}
+          selectedCategoryId={selectedCategoryId}
+          onCategoryChange={setSelectedCategoryId}
+          sortOrder={sortOrder}
+          onSortOrderChange={setSortOrder}
+        />
+      )}
       <div className={moduleStyles.fileListContainer}>
         {files.length === 0 && (
           <BackpackMessage
