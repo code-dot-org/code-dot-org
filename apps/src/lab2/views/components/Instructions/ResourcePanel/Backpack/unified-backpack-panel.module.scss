@@ -1,3 +1,7 @@
+// Space between rows of the file list. The unsupported section cancels one of these,
+// so the two have to stay in step.
+$file-list-gap: 8px;
+
 .unifiedBackpackPanel {
   position: relative;
   display: flex;
@@ -10,6 +14,12 @@
   overflow-y: auto;
   overflow-x: hidden;
   box-sizing: border-box;
+
+  // Collapsed, the heading ends the list and its own padding already holds it off the
+  // panel edge, so the panel's bottom padding is only dead space under a full list.
+  &:has(.unsupportedSection:not([open])) {
+    padding-bottom: 0;
+  }
 }
 
 .alertContainer {
@@ -32,7 +42,7 @@
 .fileListContainer {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: $file-list-gap;
   width: 100%;
   flex: 1;
   overflow-y: auto;
@@ -41,6 +51,9 @@
 
 .unsupportedSection {
   width: 100%;
+  // Drop the file list's gap above the heading, so the summary's own padding alone
+  // sets the space there and it matches the space below.
+  margin-top: -$file-list-gap;
 }
 
 .unsupportedSummary {
@@ -120,7 +133,7 @@
 .unsupportedFileList {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: $file-list-gap;
 }
 
 .unsupportedText {
