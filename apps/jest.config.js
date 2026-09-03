@@ -263,8 +263,12 @@ const config = {
   },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
+  // ky, camelcase-keys and its nested camelcase, quick-lru and map-obj ship ESM
+  // only; @code-dot-org/core's API client pulls them in, so they must be
+  // transformed for any suite that loads a package importing
+  // @code-dot-org/core/api.
   transformIgnorePatterns: [
-    'node_modules/(?!vmsg|@code-dot-org/johnny-five|@code-dot-org/js-interpreter|blockly/core)',
+    'node_modules/(?!vmsg|@code-dot-org/johnny-five|@code-dot-org/js-interpreter|blockly/core|ky|camelcase-keys|camelcase|quick-lru|map-obj)',
   ],
 
   // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them
