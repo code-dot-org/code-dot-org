@@ -333,9 +333,9 @@ describe('the jetpack level', () => {
     const at = () => ball.get(PositionProperty).x;
     const from = at();
 
-    play(world, 3);
+    play(world, 2);
     const there = at();
-    play(world, 8);
+    play(world, 4);
 
     // Right first — it is aimed away from where the Pilot starts — until the
     // wall, then back the way it came, which no clock in the level ever

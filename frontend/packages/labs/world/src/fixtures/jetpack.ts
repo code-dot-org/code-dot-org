@@ -701,6 +701,14 @@ const enemyActor = (
                 type: 'world_set_Turning_HeadingProperty',
                 inputs: {ACTOR: me(), VALUE: number(aim)},
               },
+              // Faster than the rule's default of one unit, which is tuned
+              // for a ten-tile room. This one is twenty-six across: at a
+              // hundred pixels a second a hazard takes eight seconds to
+              // cross it, which is a hazard you stroll past.
+              {
+                type: 'world_set_Turning_TravelSpeedProperty',
+                inputs: {ACTOR: me(), VALUE: number(1.8)},
+              },
             ]),
           },
         },
