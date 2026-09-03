@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'cdo/anon_user_id'
+
 # == Schema Information
 #
 # Table name: anonymous_level_progresses
@@ -43,6 +45,6 @@ class AnonymousLevel::Progress < ApplicationRecord
     updated_at: :confidential,
   )
 
-  validates :anon_user_id, presence: true, format: AnonUserId::FORMAT, uniqueness: {scope: %i[script_id level_id]}
+  validates :anon_user_id, presence: true, format: Cdo::AnonUserId::FORMAT, uniqueness: {scope: %i[script_id level_id]}
   validates :script_id, presence: true
 end
