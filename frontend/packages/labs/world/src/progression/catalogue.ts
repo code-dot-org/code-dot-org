@@ -1515,6 +1515,75 @@ export const TILES: readonly Tile[] = [
     },
   },
   {
+    id: 'platformer/walls',
+    region: 'platformer',
+    at: at('platformer', 6, 0),
+    title: 'Walls that come and go',
+    teaches:
+      'A room whose shape is a fact about what you have done in it, and the one lever that takes an actor out of every rule that reads a touch.',
+    task: 'A block across the corridor and a plate on the floor that does nothing to it. Make the plate move the wall.',
+    requires: ['platformer/pads'],
+    unlocks: [{kind: 'rule', id: 'switches'}],
+    check: {
+      kind: 'outcome',
+      says: 'The Hero gets past a block that spans the corridor, having walked over the plate on the way.',
+      falsePass:
+        'Making the wall passable to begin with, which lets the Hero through and is a corridor with nothing across it. The check reads the wall SHUT at the start and open later, so a wall that was never in the way fails on the first half and a plate that never fired fails on the second.',
+      run: {
+        probes: {
+          hero: {kind: 'positions', of: 'Hero'},
+          wall: {kind: 'positions', of: 'Wall'},
+        },
+        trace: Array.from({length: 16}, () => ({
+          hold: ['right arrow'],
+          seconds: 0.25,
+        })),
+      },
+      passes: ({samples}) => {
+        const xs = (samples.hero ?? []).map(
+          sample => (sample as {x: number}[])[0]?.x ?? 0,
+        );
+        // The bar is a column at x = 208, so its far face is 224.
+        return xs.some(x => x > 224);
+      },
+    },
+  },
+  {
+    id: 'platformer/digging',
+    region: 'platformer',
+    at: at('platformer', 6, -1),
+    title: 'A hole with a fuse on it',
+    teaches:
+      'Changing the room yourself, and why the thing that closes it owns the clock rather than the thing that opened it.',
+    task: 'A floor you cannot get through and a Hero standing on it. Give yourself a way down, and find out what it costs.',
+    requires: ['platformer/walls'],
+    unlocks: [{kind: 'rule', id: 'digging'}],
+    check: {
+      kind: 'outcome',
+      says: 'The Hero is standing on the upper floor to begin with, and below it by the end — through a hole it made itself.',
+      falsePass:
+        'Deleting a block of the Soil, which also puts the Hero underneath and is a floor with a gap drawn in it. So the check reads BOTH ends: it must be UP on the soil at the start and below it later. A floor with a hole already in it never holds the Hero up in the first place, and fails the first half before it can pass the second.',
+      run: {
+        probes: {hero: {kind: 'positions', of: 'Hero'}},
+        trace: [
+          {hold: ['down arrow'], seconds: 0.2},
+          ...Array.from({length: 12}, () => ({seconds: 0.25})),
+        ],
+      },
+      passes: ({samples}) => {
+        const ys = (samples.hero ?? []).map(
+          sample => (sample as {y: number}[])[0]?.y ?? 0,
+        );
+        if (ys.length < 3) {
+          return false;
+        }
+        // Standing ON the soil is 240 — its top, less half a Hero. The floor
+        // below is 272. So: up there first, down here later.
+        return ys[0] < 250 && ys.some(y => y > 260);
+      },
+    },
+  },
+  {
     id: 'platformer/enemies',
     region: 'platformer',
     at: at('platformer', 4, 1),

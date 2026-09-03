@@ -126,6 +126,7 @@ import {
   scoreRule,
   solidRule,
   surfacesRule,
+  switchesRule,
   teleportRule,
   turningRule,
   writingRule,
@@ -285,6 +286,32 @@ const PADS: ReadonlyArray<readonly [string, number, number]> = [
   ['actors/padRed', 23, 4],
 ];
 
+/**
+ * The barred way out, and the plate that unbars it.
+ *
+ * A COLUMN ACROSS THE FLOOR, one tile short of the door, from the sludge ledge
+ * down. It bars the WALK rather than the room: a full tank still goes over the
+ * top, which is the bargain this level always makes — fuel buys routes. What
+ * it takes away is the last walk being a walk, which is the one you have to
+ * make when the tank is empty, and that is exactly when it matters.
+ *
+ * The plate is at the far end of the same floor, so the last walk is now two
+ * walks: out to the plate and back to the door, past whatever is patrolling.
+ * That is the whole of what a switch buys a room — the shape of the level
+ * became a fact about what you have done in it.
+ *
+ * AND THE ENEMIES PRESS IT TOO, which is not a hazard added on top but the
+ * same rule: anything that moves can walk over a switch. A robot crossing the
+ * plate shuts the way while you are on your way to it.
+ */
+const BARS: ReadonlyArray<readonly [number, number]> = [
+  [23, 11],
+  [23, 12],
+  [23, 13],
+  [23, 14],
+];
+const PLATE_AT = [16, 14] as const;
+
 /** Where the way out is: on the floor, at the far end from the ladder. */
 const DOOR_AT = [24, 14] as const;
 
@@ -365,6 +392,10 @@ export const JETPACK_ACTORS = [
   ...PADS.map(([kind, column, row], index) =>
     place(kind, `Pad${index}`, column, row),
   ),
+  ...BARS.map(([column, row], index) =>
+    place('actors/bar', `Bar${index}`, column, row),
+  ),
+  place('actors/plate', 'Plate', PLATE_AT[0], PLATE_AT[1]),
   ...ENEMIES.map(([kind, column, row], index) =>
     place(kind, `Enemy${index}`, column, row),
   ),
@@ -952,6 +983,136 @@ const enemyActor = (
  * placed on rather than standing in the air — and so the thing standing on it
  * is drawn over it rather than behind it.
  */
+/**
+ * A wall a switch moves, and a plate that moves it.
+ *
+ * ONE ACTOR EACH, for the same reason the pads are one per colour: the colour
+ * is set where the actor is defined, and it is which NETWORK a thing belongs
+ * to rather than a setting on it.
+ *
+ * THE WALL SHOWS WHETHER IT IS THERE, at a quarter opacity when it is not,
+ * because a wall that goes on looking like a wall while you walk through it is
+ * a wall a player will keep not walking through. It reads its own `passes
+ * through things` every frame rather than being told twice — the picture
+ * cannot disagree with the behaviour if there is only one fact.
+ */
+const switchedWallActor = (name: string, colour: string) =>
+  JSON.stringify({
+    blocks: {
+      blocks: [
+        {
+          type: 'world_actor',
+          x: 20,
+          y: 20,
+          fields: {NAME: name},
+          next: {
+            block: stack([
+              useTrait('Switches#IsASwitchedWallTrait'),
+              useTrait('Gravity#ActsAsGroundTrait'),
+              useTrait('Solid Bodies#SolidTrait'),
+              {
+                type: 'world_set_Switches_WallColourProperty',
+                inputs: {ACTOR: me(), VALUE: swatch(colour)},
+              },
+            ]),
+          },
+        },
+        {
+          type: 'world_trait_step',
+          x: 20,
+          y: 220,
+          fields: {PHASE: 'react', NAME: 'look like what it is'},
+          inputs: {
+            DO: {
+              block: {
+                type: 'world_set_Appearance_OpacityProperty',
+                inputs: {
+                  ACTOR: me(),
+                  VALUE: {
+                    block: {
+                      type: 'logic_ternary',
+                      inputs: {
+                        IF: {
+                          block: {
+                            type: 'world_get_Collisions_PassesThroughThingsProperty',
+                            inputs: {ACTOR: me()},
+                          },
+                        },
+                        THEN: number(0.25),
+                        ELSE: number(1),
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+        {
+          type: 'world_define_drawing',
+          x: 20,
+          y: 380,
+          fields: {WIDTH: 32, HEIGHT: 32},
+          inputs: {
+            DO: {
+              block: stack([
+                fill({
+                  block: {
+                    type: 'world_get_Switches_WallColourProperty',
+                    inputs: {ACTOR: me()},
+                  },
+                }),
+                rectangle(0, 0, 32, 32),
+              ]),
+            },
+          },
+        },
+      ],
+    },
+  });
+
+const switchActor = (name: string, colour: string) =>
+  JSON.stringify({
+    blocks: {
+      blocks: [
+        {
+          type: 'world_actor',
+          x: 20,
+          y: 20,
+          fields: {NAME: name},
+          next: {
+            block: stack([
+              useTrait('Switches#IsASwitchTrait'),
+              {
+                type: 'world_set_Switches_SwitchColourProperty',
+                inputs: {ACTOR: me(), VALUE: swatch(colour)},
+              },
+            ]),
+          },
+        },
+        {
+          type: 'world_define_drawing',
+          x: 20,
+          y: 200,
+          fields: {WIDTH: 32, HEIGHT: 32},
+          inputs: {
+            DO: {
+              block: stack([
+                fill({
+                  block: {
+                    type: 'world_get_Switches_SwitchColourProperty',
+                    inputs: {ACTOR: me()},
+                  },
+                }),
+                rectangle(4, 20, 24, 12),
+              ]),
+            },
+          },
+        },
+      ],
+    },
+  });
+
 const padActor = (name: string, colour: string) =>
   JSON.stringify({
     blocks: {
@@ -1537,6 +1698,18 @@ export const JETPACK_SPEC: ProjectSpec = {
       contents: padActor('Red Pad', '#e0484a'),
       folderId: 'actors',
     },
+    barActor: {
+      name: 'bar.actor',
+      language: 'actor',
+      contents: switchedWallActor('Bar', '#c8a02c'),
+      folderId: 'actors',
+    },
+    plateActor: {
+      name: 'plate.actor',
+      language: 'actor',
+      contents: switchActor('Plate', '#c8a02c'),
+      folderId: 'actors',
+    },
     coinActor: {
       name: 'coin.actor',
       language: 'actor',
@@ -1689,6 +1862,14 @@ export const JETPACK_SPEC: ProjectSpec = {
       name: 'teleport.rule',
       language: 'rule',
       contents: teleportRule,
+      folderId: 'rules',
+    },
+    // The bar across the way out, and the plate that moves it
+    // (`rules/switches`, JETPACK.md phase 5).
+    switchesRuleFile: {
+      name: 'switches.rule',
+      language: 'rule',
+      contents: switchesRule,
       folderId: 'rules',
     },
     healthRuleFile: {

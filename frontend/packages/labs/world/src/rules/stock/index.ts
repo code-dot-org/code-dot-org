@@ -23,6 +23,7 @@ import {climbRule} from './climb';
 import {collectRule} from './collect';
 import {collisionsRule} from './collisions';
 import {conversationRule} from './conversation';
+import {diggingRule} from './digging';
 import {dragRule} from './drag';
 import {driveRule} from './drive';
 import {expiresRule} from './expires';
@@ -48,6 +49,7 @@ import {solidRule} from './solid';
 import {spawnerRule} from './spawner';
 import {steeringRule} from './steering';
 import {surfacesRule} from './surfaces';
+import {switchesRule} from './switches';
 import {teleportRule} from './teleport';
 import {timeRule} from './time';
 import {turningRule} from './turning';
@@ -409,6 +411,24 @@ export const STOCK_RULES: readonly StockRule[] = [
     contents: teleportRule,
   },
   {
+    id: 'switches',
+    name: 'Switches',
+    ability: 'Has Walls That Come and Go',
+    description:
+      'Pads on the floor that flip every wall painted the same colour — each wall from wherever it was, so a switch swaps a corridor rather than opening one. Anything that moves can press one.',
+    provides: ['Is a Switch', 'Is a Switched Wall'],
+    contents: switchesRule,
+  },
+  {
+    id: 'digging',
+    name: 'Digging',
+    ability: 'Digs Through Blocks',
+    description:
+      'A hole you make in the ground where you point, and one that fills itself back in on whoever is standing in it. The block owns how long it lasts, so two kinds of floor can close at two speeds.',
+    provides: ['Can Be Dug', 'Digs'],
+    contents: diggingRule,
+  },
+  {
     id: 'drive',
     name: 'Arrow Drive',
     ability: 'Drives with Arrow Keys',
@@ -530,6 +550,8 @@ export {
   climbRule,
   surfacesRule,
   turningRule,
+  diggingRule,
+  switchesRule,
   teleportRule,
   flappingRule,
   prowlingRule,

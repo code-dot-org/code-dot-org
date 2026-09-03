@@ -52,11 +52,33 @@ canCollide.uses(Positional);
 
 /** Set it yourself, or leave it at zero and let the picture decide. */
 const box = canCollide.point('size', {x: 0, y: 0});
+/**
+ * Whether this actor is there as far as touching is concerned.
+ *
+ * ONE LEVER FOR EVERY RULE THAT READS A CONTACT, which is the reason it is
+ * here rather than on each of them. "This wall is switched off" has to mean
+ * that it stops blocking (`Solid`), stops holding things up (`Acts as
+ * Ground`), stops being a floor with an opinion (`Surfaces`), stops hurting
+ * (`Health`) and stops being collectable — and every one of those is written
+ * as "for each thing I am touching". Turning the contact off turns all of
+ * them off at once, and no rule has to learn a word for it.
+ *
+ * A TRAIT CANNOT BE TAKEN AWAY at runtime, which is the other half of why this
+ * exists. A wall that a switch removes is not an actor that stops electing
+ * `Solid`; it is an actor that is still exactly what it was and is not in the
+ * way this moment.
+ *
+ * It hides the actor from BOTH sides. A body that passes through things has no
+ * contacts of its own, and appears in nobody else's — the asymmetric version
+ * of this is a wall that a player walks through while the wall insists it is
+ * being stood on.
+ */
+const passable = canCollide.boolean('passes through things', 'false');
 /** Everything this actor is touching, as of this tick. Written by the step. */
 const contacts = canCollide.actors('contacts', {readonly: true});
 
 export const CanCollide = rule.traitRef('Can Collide');
-export {box as size, contacts};
+export {box as size, contacts, passable};
 
 const working = rule.local('box', 'Vector');
 
@@ -212,7 +234,10 @@ rule.step('find', 'touch', [
             add(halfDiagonal(body.get()), reach.of()),
             vector(position.x(body.get()), position.y(body.get())),
           ),
-          where: not(equals(other.get(), body.get())),
+          where: both(
+            not(equals(other.get(), body.get())),
+            not(passable.of(other.get())),
+          ),
         }),
         body: [
           when([
@@ -223,6 +248,10 @@ rule.step('find', 'touch', [
           ]),
         ],
       }),
+      note('…and it touches nothing either, which is the other half: the'),
+      note('one-sided version of this is a wall a player walks through'),
+      note('while the wall goes on insisting it is being stood on.'),
+      when([[passable.of(body.get()), [clearActors(found)]]]),
       contacts.set(body.get(), found.get()),
     ],
   }),

@@ -137,6 +137,8 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   'platformer/hunter': ['world_use_trait'],
   'platformer/flier': ['world_use_trait'],
   'platformer/pads': [],
+  'platformer/walls': [],
+  'platformer/digging': ['world_use_trait'],
   'platformer/ground': ['world_use_trait'],
   'platformer/pickups': ['world_use_trait', 'world_print'],
   'platformer/hazards': ['world_use_trait', 'world_print'],

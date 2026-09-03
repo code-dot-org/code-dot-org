@@ -1995,6 +1995,307 @@ Try it. Nothing happens — and nothing is wrong. A pad sends you to another pad
 `.trim(),
 };
 
+// ── platformer/walls ─────────────────────────────────────────────────────────
+
+/** A block that shows whether it is in the way, drawn from its own colour. */
+const switchedWall = (colour: string) => ({
+  id: 'wall',
+  name: 'Wall',
+  rows: [
+    useTrait('Switches#IsASwitchedWallTrait'),
+    useTrait('Solid Bodies#SolidTrait'),
+    {
+      type: 'world_set_Switches_WallColourProperty',
+      inputs: {ACTOR: me(), VALUE: swatch(colour)},
+    },
+    // FAINT WHEN IT IS NOT THERE. A wall that goes on looking like a wall
+    // while you walk through it teaches the wrong thing twice: that it is
+    // still in the way, and that the rule did nothing.
+    {
+      type: 'world_trait_step',
+      fields: {PHASE: 'react', NAME: 'look like what it is'},
+      inputs: {
+        DO: {
+          block: {
+            type: 'world_set_Appearance_OpacityProperty',
+            inputs: {
+              ACTOR: me(),
+              VALUE: {
+                block: {
+                  type: 'logic_ternary',
+                  inputs: {
+                    IF: {
+                      block: {
+                        type: 'world_get_Collisions_PassesThroughThingsProperty',
+                        inputs: {ACTOR: me()},
+                      },
+                    },
+                    THEN: {block: {type: 'math_number', fields: {NUM: 0.25}}},
+                    ELSE: {block: {type: 'math_number', fields: {NUM: 1}}},
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  ],
+  drawing: {
+    width: 32,
+    height: 32,
+    commands: [
+      fill({
+        block: {
+          type: 'world_get_Switches_WallColourProperty',
+          inputs: {ACTOR: me()},
+        },
+      }),
+      rectangle(0, 0, 32, 32),
+    ],
+  },
+});
+
+const walls: WorldScenario = {
+  name: 'A wall you can talk out of the way',
+  description: 'A corridor with a block across it, and a plate on the floor.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        createInMap(local('ground'), floorAcross(10)),
+        createInMap(
+          local('wall'),
+          [176, 208, 240, 272].map(y => placed(`bar${y}`, 208, y)),
+        ),
+        addActor(local('plate'), [placeAt(80, 288)]),
+        addActor(local('hero'), [placeAt(32, 272)]),
+      ],
+      actors: [
+        {
+          id: 'hero',
+          name: 'Hero',
+          rows: [
+            useTrait('Gravity#AffectedByGravityTrait'),
+            useTrait('Input#TakesKeyboardInputTrait'),
+            useTrait('Arrow Keys#MovesAcrossTrait'),
+            setSprite('player.png'),
+          ],
+        },
+        {
+          id: 'ground',
+          name: 'Ground',
+          rows: [
+            useTrait('Gravity#ActsAsGroundTrait'),
+            useTrait('Solid Bodies#SolidTrait'),
+            setSprite('ground.png'),
+          ],
+        },
+        // A REAL SWITCH, already wired, already pressed every time you walk
+        // over it. What it is not is the same colour as the wall.
+        {
+          id: 'plate',
+          name: 'Plate',
+          rows: [
+            useTrait('Switches#IsASwitchTrait'),
+            {
+              type: 'world_set_Switches_SwitchColourProperty',
+              inputs: {ACTOR: me(), VALUE: swatch('#3fbf6a')},
+            },
+          ],
+          drawing: {
+            width: 32,
+            height: 32,
+            commands: [
+              fill({
+                block: {
+                  type: 'world_get_Switches_SwitchColourProperty',
+                  inputs: {ACTOR: me()},
+                },
+              }),
+              rectangle(0, 22, 32, 10),
+            ],
+          },
+        },
+        switchedWall('#e0484a'),
+      ],
+    }),
+    sprites: ['player', 'ground'],
+    rules: [
+      'gravity',
+      'solid',
+      'input',
+      'arrows',
+      'motion',
+      'collisions',
+      'switches',
+    ],
+  }),
+  instructions: `
+## A wall you can talk out of the way
+
+There is a block across the corridor and a green plate on the floor before it.
+Walk over the plate. It is a real switch and it fires every time — and the wall
+does not move, because a switch flips every wall painted **its own colour**,
+and the wall is red.
+
+### What you do
+
+1. Set the Wall's **wall colour** to the same green as the Plate. Walk over it
+   again: the wall goes faint and you walk through where it was.
+2. Walk back over the plate. It comes back. A switch does not open walls, it
+   SWAPS them — each one from wherever it was.
+3. That is worth having on purpose. Put a second wall further along, set its
+   **passes through things** to yes so that it starts open, and paint it green
+   too. Now one plate closes the way behind you as it opens the way on.
+4. Look at what "not there" means. The wall never stopped being a wall and
+   never stopped being solid — **passes through things** is one lever that
+   takes it out of every rule that reads a touch at once, which is why it stops
+   holding you up as well as stopping blocking you.
+`.trim(),
+};
+
+// ── platformer/digging ───────────────────────────────────────────────────────
+
+const digging: WorldScenario = {
+  name: 'A floor with no way through it',
+  description: 'Two floors, a Hero on the upper one, and nothing joining them.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        // The floor the Hero stands on, which is the one it has to get
+        // through — and a second one below to land on, so that falling is
+        // arriving somewhere rather than leaving the world.
+        createInMap(
+          local('soil'),
+          [2, 3, 4, 5, 6, 7].map(column =>
+            placed(`soil${column}`, column * 32 + 16, 272),
+          ),
+        ),
+        createInMap(local('ground'), floorAcross(10)),
+        addActor(local('hero'), [placeAt(112, 240)]),
+      ],
+      actors: [
+        {
+          id: 'hero',
+          name: 'Hero',
+          // It can already dig, and the key is already wired. What it has
+          // nothing to dig is soil that says it can be.
+          rows: [
+            useTrait('Gravity#AffectedByGravityTrait'),
+            useTrait('Input#TakesKeyboardInputTrait'),
+            useTrait('Arrow Keys#MovesAcrossTrait'),
+            useTrait('Digging#DigsTrait'),
+            setSprite('player.png'),
+            {
+              type: 'world_trait_step',
+              fields: {PHASE: 'touch', NAME: 'dig when asked'},
+              inputs: {
+                DO: {
+                  block: {
+                    type: 'controls_if',
+                    inputs: {
+                      IF0: {
+                        block: {
+                          type: 'world_is_key_down',
+                          fields: {KEY: 'down arrow'},
+                        },
+                      },
+                      DO0: {
+                        block: {
+                          type: 'world_do_Digging_DigTowardsAction',
+                          inputs: {
+                            ACTOR: me(),
+                            VALUE: {
+                              block: {
+                                type: 'world_vector_of',
+                                inputs: {
+                                  X: {
+                                    block: {
+                                      type: 'math_number',
+                                      fields: {NUM: 0},
+                                    },
+                                  },
+                                  Y: {
+                                    block: {
+                                      type: 'math_number',
+                                      fields: {NUM: 1},
+                                    },
+                                  },
+                                },
+                              },
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          ],
+        },
+        {
+          id: 'ground',
+          name: 'Ground',
+          rows: [
+            useTrait('Gravity#ActsAsGroundTrait'),
+            useTrait('Solid Bodies#SolidTrait'),
+            setSprite('ground.png'),
+          ],
+        },
+        // ORDINARY FLOOR, so far. Solid, holds you up, and has never heard of
+        // a shovel.
+        {
+          id: 'soil',
+          name: 'Soil',
+          rows: [
+            useTrait('Gravity#ActsAsGroundTrait'),
+            useTrait('Solid Bodies#SolidTrait'),
+            setSprite('ground.png'),
+          ],
+        },
+      ],
+    }),
+    sprites: ['player', 'ground'],
+    rules: [
+      'gravity',
+      'solid',
+      'input',
+      'arrows',
+      'motion',
+      'collisions',
+      'digging',
+    ],
+  }),
+  instructions: `
+## A floor with no way through it
+
+You are standing on a floor and there is another one below it. Hold **down**.
+Nothing happens — you can already dig, and the key is already wired, but the
+floor has never heard of a shovel.
+
+### What you do
+
+1. Give the Soil **use trait ⟨Can Be Dug⟩**. Hold down again: the block under
+   you stops being there and you fall through it.
+2. Wait where you land. It comes back — that is the fuse, and it is the
+   difference between a shovel and a hole in the drawing.
+3. Stand under it while it closes. It fills in **on** you, and says so; what
+   that costs is your game's to decide, which is why the rule only raises the
+   moment.
+4. Set the Soil's **closes after** to 1, and then to 8. The clock is the
+   BLOCK's rather than the digger's, so a level can have soil that closes
+   slowly and packed earth that closes fast without handing the player two
+   shovels.
+5. Look at what a hole IS. Nothing was removed and nothing was drawn: the
+   block set **passes through things**, the one lever that takes an actor out
+   of every rule that reads a touch — so it stopped blocking you and stopped
+   holding you up in the same breath.
+`.trim(),
+};
+
 // ── platformer/enemies ───────────────────────────────────────────────────────
 
 const enemies: WorldScenario = {
@@ -5958,6 +6259,8 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'platformer/hunter': hunter,
   'platformer/flier': flier,
   'platformer/pads': pads,
+  'platformer/walls': walls,
+  'platformer/digging': digging,
   'platformer/pickups': pickups,
   'platformer/hazards': hazards,
   'platformer/level': level,

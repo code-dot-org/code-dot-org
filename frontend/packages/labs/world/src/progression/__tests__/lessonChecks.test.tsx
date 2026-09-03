@@ -439,6 +439,55 @@ describe('the pads lesson’s check', () => {
   });
 });
 
+describe('the walls lesson’s check', () => {
+  const lesson = LESSONS['platformer/walls'];
+
+  /** The one edit the lesson asks for: the wall, painted the plate's green. */
+  const matched = editing(lesson.source, 'main.world', contents =>
+    contents.replaceAll('#e0484a', '#3fbf6a'),
+  );
+
+  it('refuses a switch and a wall that have nothing to do with each other', async () => {
+    // The plate is real and fires every time. What it is not is the wall's
+    // colour, and the check must not read "it is all wired up" as done.
+    const {passes} = await check('platformer/walls', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts a wall painted the switch’s colour', async () => {
+    const {passes, result} = await check('platformer/walls', matched);
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+});
+
+describe('the digging lesson’s check', () => {
+  const lesson = LESSONS['platformer/digging'];
+
+  /** The one edit the lesson asks for: soil that says it can be dug. */
+  const diggable = editing(lesson.source, 'main.world', contents => {
+    const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+    under(actorIn(workspace, 'Soil'), {
+      type: 'world_use_trait',
+      fields: {TRAIT: 'Digging#CanBeDugTrait'},
+    });
+    return JSON.stringify(workspace);
+  });
+
+  it('refuses a floor that has never heard of a shovel', async () => {
+    // The Hero can already dig and the key is already wired, so everything is
+    // plugged in and nothing happens. The check must not read that as done.
+    const {passes} = await check('platformer/digging', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts soil that can be dug', async () => {
+    const {passes, result} = await check('platformer/digging', diggable);
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+});
+
 describe('every lesson that has a check', () => {
   // The invariant behind all of the above: a check is written as a pair, and a
   // `run` with no `passes` is a button that measures a world and then throws

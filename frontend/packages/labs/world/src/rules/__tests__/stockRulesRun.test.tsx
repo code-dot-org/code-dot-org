@@ -484,6 +484,55 @@ describe('a ledge, and which way you may pass it', () => {
     expect(jumper.get(PositionProperty).y).toBeLessThan(100);
   });
 
+  it('is not there at all once it passes through things', () => {
+    // ONE LEVER FOR EVERY RULE THAT READS A CONTACT. "This wall is switched
+    // off" has to mean it stops blocking AND stops holding things up, and both
+    // are written as "for each thing I am touching" — so the honest place to
+    // say it is the contact, not one flag per rule. A trait cannot be taken
+    // away at runtime either: a wall a switch removed is the same actor,
+    // simply not in the way this moment.
+    const world = stage([of('rules/solid', 'SolidTrait')]);
+    const dropper = hero(world, new Vector(100, 40), 0);
+    const ledge = [...(world as unknown as {actors: Iterable<unknown>}).actors]
+      .map(one => one as {id: string; set(p: unknown, v: unknown): void})
+      .find(one => one.id === 'ledge')!;
+    ledge.set(of('rules/collisions', 'PassesThroughThingsProperty'), true);
+
+    run(world, 1.2);
+
+    // Straight past where it would have landed, and still falling: solid did
+    // not stop it and the ground did not catch it.
+    expect(dropper.get(PositionProperty).y).toBeGreaterThan(200);
+  });
+
+  it('has no contacts of its own while it does, not just none of theirs', () => {
+    // The one-sided version of this is a wall a player walks through while
+    // the wall goes on insisting it is being stood on.
+    const world = stage([of('rules/solid', 'SolidTrait')]);
+    // Dropped on to it and left to settle, so that it is genuinely standing
+    // there rather than merely placed near it.
+    hero(world, new Vector(100, 40), 0);
+    const ledge = [...(world as unknown as {actors: Iterable<unknown>}).actors]
+      .map(
+        one =>
+          one as {
+            id: string;
+            set(p: unknown, v: unknown): void;
+            get(p: unknown): unknown[];
+          },
+      )
+      .find(one => one.id === 'ledge')!;
+    run(world, 1.2);
+    expect(
+      ledge.get(of('rules/collisions', 'ContactsProperty')).length,
+    ).toBeGreaterThan(0);
+
+    ledge.set(of('rules/collisions', 'PassesThroughThingsProperty'), true);
+    run(world, 1 / 30);
+
+    expect(ledge.get(of('rules/collisions', 'ContactsProperty'))).toEqual([]);
+  });
+
   it('stops a body rising into it once it is solid too', () => {
     const world = stage([of('rules/solid', 'SolidTrait')]);
     const jumper = hero(world, new Vector(100, 160), -4);
@@ -3807,5 +3856,264 @@ describe('Teleport', () => {
     run(world, 2);
 
     expect(spotOf(walker).x).toBeCloseTo(200, 0);
+  });
+});
+
+describe('Switches', () => {
+  /**
+   * A switch on the floor and two walls of the same colour, one of each state.
+   *
+   * The pair is the point: a colour with one state could only open or close
+   * both, and what a room wants is a corridor that swaps.
+   */
+  const room = (colour = '#e0484a') => {
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([
+        rule('rules/motion'),
+        rule('rules/collisions'),
+        rule('rules/solid'),
+        rule('rules/switches'),
+      ])
+      .instantiate();
+    const made = [false, true].map((open, index) => {
+      const one = new ActorBuilder({id: `wall${index}`, name: 'Wall'})
+        .useTraits([
+          of('rules/switches', 'IsASwitchedWallTrait'),
+          of('rules/solid', 'SolidTrait'),
+        ])
+        .set(PositionProperty, at(300 + index * 100, 200))
+        .set(of('rules/collisions', 'SizeProperty'), new Vector(32, 32))
+        .instantiate(`wall${index}`);
+      one.set(of('rules/switches', 'WallColourProperty'), colour as never);
+      one.set(
+        of('rules/collisions', 'PassesThroughThingsProperty'),
+        open as never,
+      );
+      world.addActor(one);
+      return one;
+    });
+    const pad = new ActorBuilder({id: 'pad', name: 'Switch'})
+      .useTraits([of('rules/switches', 'IsASwitchTrait')])
+      .set(PositionProperty, at(100, 200))
+      .set(of('rules/collisions', 'SizeProperty'), new Vector(32, 32))
+      .instantiate('pad');
+    pad.set(of('rules/switches', 'SwitchColourProperty'), colour as never);
+    world.addActor(pad);
+    return {world, made, pad};
+  };
+
+  /** Something that can move, put where you say. */
+  const walker = (world: World, x: number) => {
+    const one = new ActorBuilder({id: 'walker', name: 'walker'})
+      .useTraits([
+        of('rules/collisions', 'CanCollideTrait'),
+        of('rules/motion', 'CanMoveTrait'),
+      ])
+      .set(PositionProperty, at(x, 200))
+      .set(of('rules/collisions', 'SizeProperty'), new Vector(16, 16))
+      .instantiate('walker');
+    world.addActor(one);
+    return one;
+  };
+
+  const isOpen = (one: unknown) =>
+    (one as {get(p: unknown): boolean}).get(
+      of('rules/collisions', 'PassesThroughThingsProperty'),
+    );
+
+  it('swaps every wall of its colour, each from where it was', () => {
+    // Not "opens them" — two walls, one open and one shut, come out the other
+    // way round. A colour with a single state could not say that.
+    const {world, made} = room();
+    walker(world, 100);
+
+    run(world, 0.2);
+
+    expect(isOpen(made[0])).toBe(true);
+    expect(isOpen(made[1])).toBe(false);
+  });
+
+  it('leaves a wall of another colour alone', () => {
+    const {world, made} = room();
+    (made[0] as {set(p: unknown, v: unknown): void}).set(
+      of('rules/switches', 'WallColourProperty'),
+      '#3f7fe0',
+    );
+    walker(world, 100);
+
+    run(world, 0.2);
+
+    // The blue one is as it was; the red one flipped.
+    expect(isOpen(made[0])).toBe(false);
+    expect(isOpen(made[1])).toBe(false);
+  });
+
+  it('flips once for arriving, not once a frame for standing', () => {
+    // A switch is walked OVER. Standing on one and flipping sixty times a
+    // second is not a switch, it is a strobe — and the visible half of that is
+    // a wall that flickers instead of moving.
+    const {world, made} = room();
+    walker(world, 100);
+
+    run(world, 1);
+
+    expect(isOpen(made[0])).toBe(true);
+    expect(isOpen(made[1])).toBe(false);
+  });
+
+  it('flips again when something arrives a second time', () => {
+    const {world, made} = room();
+    const one = walker(world, 100);
+
+    run(world, 0.2);
+    // Off it, then back.
+    (one as {set(p: unknown, v: unknown): void}).set(
+      PositionProperty,
+      new Vector(600, 200),
+    );
+    run(world, 0.2);
+    (one as {set(p: unknown, v: unknown): void}).set(
+      PositionProperty,
+      new Vector(100, 200),
+    );
+    run(world, 0.2);
+
+    expect(isOpen(made[0])).toBe(false);
+    expect(isOpen(made[1])).toBe(true);
+  });
+
+  it('is not pressed by something with no way of moving', () => {
+    // A wall and a coin are touching things all the time and neither has ever
+    // arrived anywhere.
+    const {world, made} = room();
+    const sitting = new ActorBuilder({id: 'crate', name: 'crate'})
+      .useTraits([of('rules/collisions', 'CanCollideTrait')])
+      .set(PositionProperty, at(100, 200))
+      .set(of('rules/collisions', 'SizeProperty'), new Vector(16, 16))
+      .instantiate('crate');
+    world.addActor(sitting);
+
+    run(world, 0.5);
+
+    expect(isOpen(made[0])).toBe(false);
+    expect(isOpen(made[1])).toBe(true);
+  });
+});
+
+describe('Digging', () => {
+  /** A floor of diggable blocks, and something standing on it that digs. */
+  const ground = (closesAfter = 4) => {
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([
+        rule('rules/motion'),
+        rule('rules/collisions'),
+        rule('rules/solid'),
+        rule('rules/gravity'),
+        rule('rules/digging'),
+      ])
+      .instantiate();
+    const blocks = [0, 1, 2, 3].map(column => {
+      const one = new ActorBuilder({id: `b${column}`, name: 'Block'})
+        .useTraits([
+          of('rules/digging', 'CanBeDugTrait'),
+          of('rules/gravity', 'ActsAsGroundTrait'),
+          of('rules/solid', 'SolidTrait'),
+        ])
+        .set(PositionProperty, at(column * 32 + 16, 200))
+        .set(of('rules/collisions', 'SizeProperty'), new Vector(32, 32))
+        .instantiate(`b${column}`);
+      one.set(of('rules/digging', 'ClosesAfterProperty'), closesAfter as never);
+      world.addActor(one);
+      return one;
+    });
+    const hero = new ActorBuilder({id: 'hero', name: 'hero'})
+      .useTraits([
+        of('rules/digging', 'DigsTrait'),
+        of('rules/gravity', 'AffectedByGravityTrait'),
+        of('rules/motion', 'CanMoveTrait'),
+      ])
+      .set(PositionProperty, at(48, 168))
+      .set(of('rules/collisions', 'SizeProperty'), new Vector(16, 16))
+      .instantiate('hero');
+    world.addActor(hero);
+    run(world, 0.5);
+    return {world, blocks, hero};
+  };
+
+  const dig = (who: unknown, x: number, y: number) =>
+    (who as {act(a: unknown, v: unknown): void}).act(
+      of('rules/digging', 'DigTowardsAction'),
+      new Vector(x, y),
+    );
+  const isHole = (one: unknown) =>
+    (one as {get(p: unknown): boolean}).get(
+      of('rules/digging', 'IsAHoleProperty'),
+    );
+
+  it('opens the nearest block in the direction it is pointed', () => {
+    const {blocks, hero} = ground();
+
+    dig(hero, 0, 1);
+
+    // Standing over the second block, digging down.
+    expect(isHole(blocks[1])).toBe(true);
+    expect(isHole(blocks[0])).toBe(false);
+    expect(isHole(blocks[2])).toBe(false);
+  });
+
+  it('makes a hole you fall through, which is what a hole is', () => {
+    // `passes through things` is one lever: the block stops blocking AND
+    // stops holding anything up, because both were "for each thing I am
+    // touching". A hole that still caught you would be a drawing.
+    const {world, hero} = ground();
+    const above = (hero as {get(p: unknown): Vector}).get(PositionProperty).y;
+
+    dig(hero, 0, 1);
+    run(world, 0.5);
+
+    expect(
+      (hero as {get(p: unknown): Vector}).get(PositionProperty).y,
+    ).toBeGreaterThan(above + 32);
+  });
+
+  it('fills itself back in on its own clock', () => {
+    const {world, blocks, hero} = ground(0.5);
+
+    dig(hero, 0, 1);
+    expect(isHole(blocks[1])).toBe(true);
+    run(world, 1);
+
+    expect(isHole(blocks[1])).toBe(false);
+  });
+
+  it('lets two kinds of ground close at two speeds', () => {
+    // The clock is the BLOCK's, not the digger's — a level with soil and
+    // packed earth wants two answers without handing the player two shovels.
+    const {world, blocks, hero} = ground(0.4);
+    (blocks[2] as {set(p: unknown, v: unknown): void}).set(
+      of('rules/digging', 'ClosesAfterProperty'),
+      4,
+    );
+
+    dig(hero, 0, 1);
+    (hero as {set(p: unknown, v: unknown): void}).set(
+      PositionProperty,
+      new Vector(80, 168),
+    );
+    dig(hero, 0, 1);
+    run(world, 1);
+
+    expect(isHole(blocks[1])).toBe(false);
+    expect(isHole(blocks[2])).toBe(true);
+  });
+
+  it('digs nothing when there is nothing that way', () => {
+    // Upwards is open air. A handler can call this on every press without
+    // asking whether there is anything to dig.
+    const {blocks, hero} = ground();
+
+    dig(hero, 0, -1);
+
+    expect(blocks.some(one => isHole(one))).toBe(false);
   });
 });

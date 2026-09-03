@@ -524,6 +524,29 @@ describe('the jetpack level', () => {
     expect(where[where.length - 1].x).toBeLessThan(where[0].x - 200);
   });
 
+  it('bars the way out until something crosses the plate', () => {
+    // JETPACK.md's phase five, in the room: the shape of the level is now a
+    // fact about what has happened in it. The bar is solid to start with and
+    // the plate is at the far end of the same floor, so the last walk became
+    // two walks.
+    const {world} = project;
+    play(world, 0.5);
+    const bar = named(world, 'Bar0');
+    const plate = named(world, 'Plate');
+    const passable = (
+      project.modules['rules/collisions'] as Record<string, unknown>
+    ).PassesThroughThingsProperty as never;
+    expect(bar.get(passable)).toBe(false);
+
+    // Walked over by hand rather than by the Pilot: getting a player down
+    // there is a test about flying, and this one is about the switch.
+    const walker = named(world, 'Enemy2');
+    walker.set(PositionProperty, plate.get(PositionProperty) as never);
+    play(world, 0.2);
+
+    expect(bar.get(passable)).toBe(true);
+  });
+
   it('keeps every enemy in the room', () => {
     // One trait each rather than a rule: "Stays in the Map" puts a body back
     // where it was at an edge, and a body that got nowhere is what both enemy

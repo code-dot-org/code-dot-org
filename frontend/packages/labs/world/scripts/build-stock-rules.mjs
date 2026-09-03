@@ -34,6 +34,8 @@ const RULES = [
   'prowling',
   'flapping',
   'teleport',
+  'switches',
+  'digging',
   'solid',
   'wrap',
   'bounds',
