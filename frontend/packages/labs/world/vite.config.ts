@@ -112,6 +112,7 @@ export default defineConfig(({command, mode}) => {
               apply: 'serve' as const,
               configureServer(server: {
                 watcher: {
+                  add(paths: string): void;
                   on(event: string, run: (path: string) => void): void;
                 };
               }) {
@@ -126,6 +127,16 @@ export default defineConfig(({command, mode}) => {
                       console.error('world: engine bundle failed', error),
                   );
                 };
+                // TOLD TO WATCH IT, which is the whole of why this works.
+                // Vite's watcher follows the MODULE GRAPH, and `src/engine` is
+                // deliberately not in it — the app does not import the engine,
+                // the sandbox loads the bundle below. So being inside the root
+                // is not enough: without this the plugin sits there listening
+                // for an event that is never raised, the bundle keeps whatever
+                // it had when the server started, and the symptom is a change
+                // that plainly did not take effect. It is the exact failure
+                // the comment above describes, wearing the fix as a disguise.
+                server.watcher.add(engine);
                 server.watcher.on('change', rebuild);
                 server.watcher.on('add', rebuild);
               },
