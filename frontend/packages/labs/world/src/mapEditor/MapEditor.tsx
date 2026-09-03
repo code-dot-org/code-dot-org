@@ -21,6 +21,7 @@ import {
   projectWorldOptions,
 } from '../blockly/projectModules';
 import {DEFAULT_BACKDROP_COLOR} from '../engine';
+import {agreedViewSize} from '../runtime/declaredSizes';
 import type {ActorSchema} from '../runtime/messages';
 import {projectFiles} from '../runtime/projectFiles';
 import {useWorldRuntime} from '../runtime/WorldRuntimeContext';
@@ -50,6 +51,15 @@ export const MapEditor = ({
   const actorOptions = useMemo(() => projectActorOptions(files), [files]);
   const worldPath = useMemo(
     () => projectWorldOptions(files)[0]?.[1] ?? '',
+    [files],
+  );
+
+  /** The window this map will be seen through — see `agreedViewSize`. */
+  const visible = useMemo(
+    () =>
+      agreedViewSize(
+        projectWorldOptions(files).map(([, path]) => files[`${path}.world`]),
+      ),
     [files],
   );
 
@@ -247,6 +257,7 @@ export const MapEditor = ({
         schemas={schemas}
         sizes={sizes}
         isReadOnly={isReadOnly}
+        visible={visible}
       />
     </div>
   );

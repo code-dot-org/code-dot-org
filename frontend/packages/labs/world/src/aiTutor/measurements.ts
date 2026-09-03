@@ -12,100 +12,43 @@
 // from the world it describes.
 
 import {
+  type DeclaredSize,
+  mapSizeOf,
+  viewSizeOf,
+} from '../runtime/declaredSizes';
+import {
   TILE_SIZE,
   VIEWPORT_HEIGHT,
   VIEWPORT_TILES,
   VIEWPORT_WIDTH,
 } from '../runtime/viewport';
 
-/** The largest a map may be, matching the editor's own clamp. */
-const MAX_TILES = 64;
-
-interface MapSize {
-  columns: number;
-  rows: number;
-  /** Whether the world said so, or is taking what it is given. */
-  declared: boolean;
-}
-
-const clamp = (value: number): number =>
-  Math.min(MAX_TILES, Math.max(1, Math.round(value)));
+const tiles = (size: DeclaredSize): string =>
+  `${size.columns} x ${size.rows} tiles ` +
+  `(${size.columns * TILE_SIZE} x ${size.rows * TILE_SIZE} pixels)`;
 
 /**
- * The size a world file declares, if it declares one.
+ * One world's line: how big it is, and how much of it is seen at once.
  *
- * Reads the JSON the same way `mapGridSize` reads the live workspace: the FIRST
- * `set size of map` block, its X and Y inputs, each a plain number. Anything
- * computed is not read — a size that is an expression is a size this cannot
- * state, and saying nothing is better than saying something wrong.
+ * The window is only mentioned when the world set it. Saying "and the screen
+ * shows 10 x 10" of every world would be three lines of boilerplate per
+ * project restating what the paragraph above already said.
  */
-export const declaredMapSize = (contents: string): MapSize | undefined => {
-  let found: MapSize | undefined;
-
-  const visit = (node: unknown): void => {
-    if (found || !node) {
-      return;
-    }
-    if (Array.isArray(node)) {
-      node.forEach(visit);
-      return;
-    }
-    if (typeof node !== 'object') {
-      return;
-    }
-    const block = node as {
-      type?: string;
-      inputs?: Record<
-        string,
-        {block?: {type?: string; fields?: {NUM?: number}}}
-      >;
-    };
-    if (block.type === 'world_set_map_size') {
-      const axis = (name: 'X' | 'Y'): number | undefined => {
-        const inner = block.inputs?.[name]?.block;
-        const value = Number(inner?.fields?.NUM);
-        return inner?.type === 'math_number' &&
-          Number.isFinite(value) &&
-          value > 0
-          ? clamp(value)
-          : undefined;
-      };
-      const columns = axis('X');
-      const rows = axis('Y');
-      if (columns !== undefined && rows !== undefined) {
-        found = {columns, rows, declared: true};
-        return;
-      }
-    }
-    Object.values(block).forEach(visit);
-  };
-
-  try {
-    visit(JSON.parse(contents));
-  } catch {
-    // A world that does not parse is one the editor could not open either.
-    // Nothing to measure, and not this file's business to complain.
-    return undefined;
-  }
-  return found;
-};
-
-/** The size a world runs at: what it declared, or the screen. */
-export const mapSizeOf = (contents: string): MapSize =>
-  declaredMapSize(contents) ?? {
-    columns: VIEWPORT_TILES,
-    rows: VIEWPORT_TILES,
-    declared: false,
-  };
-
-const describe = (path: string, size: MapSize): string =>
-  size.declared
-    ? `- \`${path}\` is ${size.columns} x ${size.rows} tiles ` +
-      `(${size.columns * TILE_SIZE} x ${size.rows * TILE_SIZE} pixels), ` +
-      'which it sets with `set size of map to`.'
+const describe = (
+  path: string,
+  size: DeclaredSize,
+  view: DeclaredSize,
+): string => {
+  const level = size.declared
+    ? `- \`${path}\` is ${tiles(size)}, which it sets with ` +
+      '`set size of map to`.'
     : `- \`${path}\` does not set a size, so it is one screen: ` +
-      `${size.columns} x ${size.rows} tiles ` +
-      `(${size.columns * TILE_SIZE} x ${size.rows * TILE_SIZE} pixels).`;
+      `${tiles(size)}.`;
+  return view.declared
+    ? `${level} It shows ${tiles(view)} at once, which it sets with ` +
+        '`set size of view to`.'
+    : level;
+};
 
 /**
  * The measurements section, or nothing if the project holds no world.
@@ -124,11 +67,14 @@ export const worldMeasurements = (
   return [
     '# How big things are',
     '',
-    `One tile is ${TILE_SIZE} pixels square. The screen is ${VIEWPORT_TILES} x ` +
-      `${VIEWPORT_TILES} tiles, which is ${VIEWPORT_WIDTH} x ${VIEWPORT_HEIGHT} ` +
-      'pixels. Do not assume any other tile size.',
+    `One tile is ${TILE_SIZE} pixels square. A world shows ${VIEWPORT_TILES} x ` +
+      `${VIEWPORT_TILES} tiles at once — ${VIEWPORT_WIDTH} x ${VIEWPORT_HEIGHT} ` +
+      'pixels — unless it says otherwise with `set size of view to`, which is ' +
+      'noted below for each world that does. Do not assume any other tile size.',
     '',
-    ...paths.map(path => describe(path, mapSizeOf(worlds[path]))),
+    ...paths.map(path =>
+      describe(path, mapSizeOf(worlds[path]), viewSizeOf(worlds[path])),
+    ),
     '',
     'Positions are in PIXELS, not tiles, and an actor’s position is its ' +
       `CENTRE. The middle of tile *n* is \`n * ${TILE_SIZE} + ${TILE_SIZE / 2}\`, ` +

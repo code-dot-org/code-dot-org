@@ -8,8 +8,8 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {TILE_SIZE, VIEWPORT_TILES} from '../../runtime/viewport';
-import {declaredMapSize, mapSizeOf, worldMeasurements} from '../measurements';
+import {TILE_SIZE} from '../../runtime/viewport';
+import {worldMeasurements} from '../measurements';
 
 /** A world workspace that sets its own size. */
 const sized = (columns: number, rows: number) =>
@@ -37,58 +37,26 @@ const bare = JSON.stringify({
   blocks: {blocks: [{type: 'world_world', fields: {NAME: 'My World'}}]},
 });
 
-describe('declaredMapSize', () => {
-  it('reads a size the world sets, however deep the block sits', () => {
-    expect(declaredMapSize(sized(20, 12))).toEqual({
-      columns: 20,
-      rows: 12,
-      declared: true,
-    });
-  });
-
-  it('is undefined when the world sets none', () => {
-    expect(declaredMapSize(bare)).toBeUndefined();
-  });
-
-  it('is undefined when the size is computed rather than typed', () => {
-    // A size that is an expression is a size this cannot state, and saying
-    // nothing is better than saying something wrong.
-    const computed = JSON.stringify({
-      blocks: {
-        blocks: [
-          {
-            type: 'world_set_map_size',
-            inputs: {
-              X: {block: {type: 'math_arithmetic'}},
-              Y: {block: {type: 'math_number', fields: {NUM: 10}}},
+const seeing = (columns: number, rows: number) =>
+  JSON.stringify({
+    blocks: {
+      blocks: [
+        {
+          type: 'world_world',
+          fields: {NAME: 'My World'},
+          next: {
+            block: {
+              type: 'world_set_view_size',
+              inputs: {
+                X: {block: {type: 'math_number', fields: {NUM: columns}}},
+                Y: {block: {type: 'math_number', fields: {NUM: rows}}},
+              },
             },
           },
-        ],
-      },
-    });
-
-    expect(declaredMapSize(computed)).toBeUndefined();
+        },
+      ],
+    },
   });
-
-  it('says nothing about a world that does not parse', () => {
-    expect(declaredMapSize('not json')).toBeUndefined();
-  });
-
-  it('clamps to what the editor would clamp to', () => {
-    expect(declaredMapSize(sized(999, 0.4))?.columns).toBe(64);
-    expect(declaredMapSize(sized(999, 0.4))?.rows).toBe(1);
-  });
-});
-
-describe('mapSizeOf', () => {
-  it('falls back to one screen, which is what the editor draws', () => {
-    expect(mapSizeOf(bare)).toEqual({
-      columns: VIEWPORT_TILES,
-      rows: VIEWPORT_TILES,
-      declared: false,
-    });
-  });
-});
 
 describe('worldMeasurements', () => {
   it('states the tile size, which is the question that was being asked', () => {
@@ -129,5 +97,23 @@ describe('worldMeasurements', () => {
 
   it('is nothing at all when the project holds no world', () => {
     expect(worldMeasurements({})).toBeUndefined();
+  });
+
+  it('states a view a world sets, in tiles and pixels', () => {
+    // A room-sized level — 26 by 16, all of it visible — is the case the
+    // standard window cannot express, and a tutor told "the screen is 10 x 10"
+    // about one would place every block it suggests off the right-hand edge.
+    const said = worldMeasurements({'worlds/room.world': seeing(26, 16)});
+
+    expect(said).toContain('26 x 16 tiles (832 x 512 pixels)');
+    expect(said).toContain('set size of view to');
+  });
+
+  it('says nothing per world about a view nobody set', () => {
+    // The paragraph above already gives the default. Repeating it under every
+    // world is boilerplate the tutor pays for by the token.
+    const said = worldMeasurements({'worlds/main.world': sized(20, 12)});
+
+    expect(said).not.toContain('at once, which it sets');
   });
 });

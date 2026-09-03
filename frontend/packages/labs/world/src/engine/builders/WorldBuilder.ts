@@ -581,6 +581,18 @@ export class WorldBuilder {
     return this.defer('setMapSize', columns, rows);
   }
 
+  /**
+   * Say how much of the world is on screen at once, in tiles. See
+   * {@link World.setViewSize}.
+   *
+   * Deferred and same-named for the reasons above: it is a statement about the
+   * world rather than about its construction, and one lost on the next rebuild
+   * would be a level that fits the screen until the moment it is reloaded.
+   */
+  setViewSize(columns: number, rows: number): this {
+    return this.defer('setViewSize', columns, rows);
+  }
+
   /** Somewhere in the map, at random. See {@link World.randomPlace}. */
   randomPlace(): Vector {
     return this.getWorld().randomPlace();

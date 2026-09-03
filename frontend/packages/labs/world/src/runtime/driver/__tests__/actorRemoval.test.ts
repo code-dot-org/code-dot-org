@@ -138,8 +138,10 @@ const world = (actors: string[]) => {
         {effects: [], offset: {x: 0, y: 0}, repeat: false},
       ],
       backdropColor: () => [0, 0, 0, 1],
-      // Only the backdrop code reads it; one viewport is a world with no map.
+      // Only the backdrop code reads them; one viewport is a world with no
+      // map, seen through the standard window.
       mapBounds: () => ({x: 320, y: 320}),
+      viewSize: () => ({x: 320, y: 320}),
       layerSnapshot: () => [
         {id: 'main', effects: [], parallax: {x: 1, y: 1}, fit: false},
       ],

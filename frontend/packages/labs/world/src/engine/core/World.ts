@@ -542,6 +542,13 @@ export class World {
    * it is NaN, and nothing throws.
    */
   private bounds = new Vector(VIEWPORT_WIDTH, VIEWPORT_HEIGHT);
+
+  /**
+   * How much of the world is on screen at once, in pixels — the game's native
+   * resolution. Ten tiles square unless the world says otherwise
+   * (`setViewSize`).
+   */
+  private view = new Vector(VIEWPORT_WIDTH, VIEWPORT_HEIGHT);
   // Game seconds since the first tick — see `time`. Advanced by `tick` and by
   // nothing else, so a world nobody ticks stays at zero however long it exists.
   private elapsed = 0;
@@ -960,7 +967,16 @@ export class World {
    */
   defineCamera(init: CameraInit): this {
     if (!this.cameraList.some(camera => camera.id === init.id)) {
-      const camera = makeCamera(init);
+      // A camera with no position of its own rests in the middle of THIS
+      // world's view. `Camera` defaults to the middle of the standard one,
+      // which is the wrong middle for a world that has said how wide it is —
+      // and `set size of view` is written above `define camera`, so a camera
+      // declared afterwards would never be caught by the sweep in
+      // `setViewSize` either.
+      const camera = makeCamera({
+        ...init,
+        position: init.position ?? new Vector(this.view.x / 2, this.view.y / 2),
+      });
       // The back-reference a camera-scoped body reads (see `Camera.world`).
       camera.world = this;
       this.cameraList.push(camera);
@@ -1338,7 +1354,43 @@ export class World {
    * settable later changes nothing that asks.
    */
   viewSize(): Vector {
-    return new Vector(VIEWPORT_WIDTH, VIEWPORT_HEIGHT);
+    return new Vector(this.view.x, this.view.y);
+  }
+
+  /**
+   * Say how much of the world is on screen at once, in TILES.
+   *
+   * The view was a constant — ten tiles square, the size the first levels were
+   * built at — and the constant is still the default, so a world that says
+   * nothing looks exactly as it did. What it could not say was the other kind
+   * of level: a room 26 by 16 that is meant to be taken in at a glance, where
+   * a camera panning over it would be hiding the puzzle rather than following
+   * the action.
+   *
+   * TILES, for the reason `setMapSize` gives: a level is authored in tiles and
+   * read in pixels, so each end uses its own unit and the conversion happens
+   * here.
+   *
+   * IT IS THE NATIVE RESOLUTION, not a zoom. The driver sizes its canvas to
+   * this and the pane scales that up, so a bigger view is more of the world at
+   * the same tile size rather than the same world drawn smaller.
+   */
+  setViewSize(columns: number, rows: number): void {
+    const was = this.view;
+    this.view = new Vector(
+      Math.max(0, Math.round(columns)) * TILE_SIZE || VIEWPORT_WIDTH,
+      Math.max(0, Math.round(rows)) * TILE_SIZE || VIEWPORT_HEIGHT,
+    );
+    // A camera resting in the middle of the OLD view would be looking a
+    // quarter of a level away from where it was, so the ones that are still
+    // where they were declared follow the view they rest in. One that has been
+    // moved — by a block, or by Camera Follow — is left where it was put.
+    const middle = new Vector(this.view.x / 2, this.view.y / 2);
+    for (const camera of this.cameraList) {
+      if (camera.position.x === was.x / 2 && camera.position.y === was.y / 2) {
+        camera.position = middle;
+      }
+    }
   }
 
   /**

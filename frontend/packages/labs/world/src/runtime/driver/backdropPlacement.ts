@@ -4,11 +4,14 @@
 // Split out of the Phaser binding because it is arithmetic and nothing else —
 // no scene, no game object — and because the two halves of it have to agree.
 // A layer's container is MOVED by the camera; a tiled slot inside one has to
-// undo exactly that to stay over the viewport. When those two drift, the
+// undo exactly that to stay over the view. When those two drift, the
 // background lags the world it belongs to, and nothing about a Phaser scene
 // makes that visible in a test.
-
-import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from '../viewport';
+//
+// "The view" is a world's own, passed in rather than read from a constant: how
+// much of the world is on screen is a fact about that world (`World.viewSize`),
+// and a backdrop sized to somebody else's window is a band of bare clear-colour
+// down one side.
 
 /** A screen-space displacement, in pixels. */
 export interface Shift {
@@ -64,8 +67,10 @@ export const layerShift = (
 export const tiledPlacement = (
   shift: Shift,
   offset: Shift,
+  /** How much of the world is on screen — `World.viewSize`, in pixels. */
+  view: Shift,
 ): {position: Shift; tile: Shift} => ({
-  position: {x: VIEWPORT_WIDTH / 2 + shift.x, y: VIEWPORT_HEIGHT / 2 + shift.y},
+  position: {x: view.x / 2 + shift.x, y: view.y / 2 + shift.y},
   tile: {x: shift.x - offset.x, y: shift.y - offset.y},
 });
 
@@ -75,9 +80,9 @@ export const tiledPlacement = (
  * Zero for a world no bigger than its window, which is a world with no map: the
  * camera has nowhere to go, and every span below collapses to the viewport.
  */
-const panRange = (mapSize: Shift): Shift => ({
-  x: Math.max(0, mapSize.x - VIEWPORT_WIDTH),
-  y: Math.max(0, mapSize.y - VIEWPORT_HEIGHT),
+const panRange = (mapSize: Shift, view: Shift): Shift => ({
+  x: Math.max(0, mapSize.x - view.x),
+  y: Math.max(0, mapSize.y - view.y),
 });
 
 /**
@@ -126,16 +131,18 @@ export const stretchedPlacement = (
   offset: Shift,
   mapSize: Shift,
   parallax: Shift,
+  /** How much of the world is on screen — `World.viewSize`, in pixels. */
+  view: Shift,
 ): {position: Shift; size: Shift} => {
-  const range = panRange(mapSize);
+  const range = panRange(mapSize, view);
   return {
     size: {
-      x: VIEWPORT_WIDTH + Math.abs(parallax.x) * range.x,
-      y: VIEWPORT_HEIGHT + Math.abs(parallax.y) * range.y,
+      x: view.x + Math.abs(parallax.x) * range.x,
+      y: view.y + Math.abs(parallax.y) * range.y,
     },
     position: {
-      x: (VIEWPORT_WIDTH + parallax.x * range.x) / 2 + offset.x,
-      y: (VIEWPORT_HEIGHT + parallax.y * range.y) / 2 + offset.y,
+      x: (view.x + parallax.x * range.x) / 2 + offset.x,
+      y: (view.y + parallax.y * range.y) / 2 + offset.y,
     },
   };
 };

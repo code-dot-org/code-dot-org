@@ -28,6 +28,10 @@ const SKY: LayerMotion = {parallax: {x: 0.2, y: 0}, fit: false};
 const INTERFACE: LayerMotion = {parallax: {x: 1, y: 1}, fit: true};
 const PINNED: LayerMotion = {parallax: {x: 0, y: 0}, fit: false};
 
+// The window onto the world, which a world states for itself and these pass in
+// (`World.viewSize`). The standard one, so every expectation below still reads
+// as the size it was written against.
+const VIEW = {x: VIEWPORT_WIDTH, y: VIEWPORT_HEIGHT};
 const CENTRE = {x: VIEWPORT_WIDTH / 2, y: VIEWPORT_HEIGHT / 2};
 const NO_OFFSET = {x: 0, y: 0};
 
@@ -80,7 +84,7 @@ describe('a tiled slot', () => {
       {x: 5000, y: -5000},
     ]) {
       const shift = layerShift(MOVES_WITH_VIEW, camera);
-      const {position} = tiledPlacement(shift, NO_OFFSET);
+      const {position} = tiledPlacement(shift, NO_OFFSET, VIEW);
 
       expect(onScreen(shift, position)).toEqual(CENTRE);
     }
@@ -88,7 +92,7 @@ describe('a tiled slot', () => {
 
   it('lands over the viewport for a parallax layer too', () => {
     const shift = layerShift(SKY, {x: 100, y: 50});
-    const {position} = tiledPlacement(shift, NO_OFFSET);
+    const {position} = tiledPlacement(shift, NO_OFFSET, VIEW);
 
     expect(onScreen(shift, position)).toEqual(CENTRE);
   });
@@ -101,7 +105,7 @@ describe('a tiled slot', () => {
     // sign.
     const shift = layerShift(MOVES_WITH_VIEW, {x: 80, y: 40});
 
-    expect(tiledPlacement(shift, NO_OFFSET).tile).toEqual({x: 80, y: 40});
+    expect(tiledPlacement(shift, NO_OFFSET, VIEW).tile).toEqual({x: 80, y: 40});
   });
 
   it('adds the author’s own slide to the camera’s', () => {
@@ -109,11 +113,14 @@ describe('a tiled slot', () => {
     // picture the way raising a position moves an actor.
     const shift = layerShift(MOVES_WITH_VIEW, {x: 80, y: 40});
 
-    expect(tiledPlacement(shift, {x: 30, y: 10}).tile).toEqual({x: 50, y: 30});
+    expect(tiledPlacement(shift, {x: 30, y: 10}, VIEW).tile).toEqual({
+      x: 50,
+      y: 30,
+    });
   });
 
   it('is unmoved with a resting camera, as it always was', () => {
-    const {position, tile} = tiledPlacement({x: 0, y: 0}, NO_OFFSET);
+    const {position, tile} = tiledPlacement({x: 0, y: 0}, NO_OFFSET, VIEW);
 
     expect(position).toEqual(CENTRE);
     expect(tile).toEqual({x: 0, y: 0});
@@ -131,7 +138,7 @@ describe('a stretched slot', () => {
    * is that the span contains `[0, viewport]` on both axes.
    */
   const covers = (parallax: {x: number; y: number}, camera: Shift) => {
-    const {position, size} = stretchedPlacement(NO_OFFSET, MAP, parallax);
+    const {position, size} = stretchedPlacement(NO_OFFSET, MAP, parallax, VIEW);
     const shift = layerShift({parallax, fit: false}, camera);
     const left = -shift.x + position.x - size.x / 2;
     const top = -shift.y + position.y - size.y / 2;
@@ -160,7 +167,12 @@ describe('a stretched slot', () => {
     // What a learner means by a background: it belongs to the level, not to the
     // window onto the level. One viewport at the viewport's centre covered
     // exactly one camera position and rode away from every other.
-    const {position, size} = stretchedPlacement(NO_OFFSET, MAP, {x: 1, y: 1});
+    const {position, size} = stretchedPlacement(
+      NO_OFFSET,
+      MAP,
+      {x: 1, y: 1},
+      VIEW,
+    );
 
     expect(size).toEqual(MAP);
     expect(position).toEqual({x: MAP.x / 2, y: MAP.y / 2});
@@ -185,7 +197,7 @@ describe('a stretched slot', () => {
     // `fit` is parallax zero here — its container never moves — so screen
     // furniture is untouched by any of this.
     const fixed = placementParallax(INTERFACE);
-    const {position, size} = stretchedPlacement(NO_OFFSET, MAP, fixed);
+    const {position, size} = stretchedPlacement(NO_OFFSET, MAP, fixed, VIEW);
 
     expect(fixed).toEqual({x: 0, y: 0});
     expect(size).toEqual({x: VIEWPORT_WIDTH, y: VIEWPORT_HEIGHT});
@@ -200,6 +212,7 @@ describe('a stretched slot', () => {
         NO_OFFSET,
         {x: VIEWPORT_WIDTH, y: VIEWPORT_HEIGHT},
         {x: factor, y: factor},
+        VIEW,
       );
 
       expect(size).toEqual({x: VIEWPORT_WIDTH, y: VIEWPORT_HEIGHT});
@@ -210,8 +223,69 @@ describe('a stretched slot', () => {
   it('still lets the author slide it off the edge', () => {
     // An offset on a stretched slot moves the picture bodily, gap and all —
     // that is what it means, and the tooltip points at tiled for the rest.
-    const {position} = stretchedPlacement({x: 30, y: 10}, MAP, {x: 1, y: 1});
+    const {position} = stretchedPlacement(
+      {x: 30, y: 10},
+      MAP,
+      {x: 1, y: 1},
+      VIEW,
+    );
 
     expect(position).toEqual({x: MAP.x / 2 + 30, y: MAP.y / 2 + 10});
+  });
+});
+
+describe('a world with a window of its own size', () => {
+  // 26 by 16 tiles: a room meant to be taken in at a glance, which is the case
+  // the constants could not express. Everything below would still pass against
+  // the old ten-tile square if it only checked ratios, so each one names a
+  // number that only comes out right when the world's own view is used.
+  const ROOM = {x: 26 * 32, y: 16 * 32};
+
+  it('centres a tiled slot in ITS window, not the standard one', () => {
+    const {position} = tiledPlacement({x: 0, y: 0}, NO_OFFSET, ROOM);
+
+    expect(position).toEqual({x: ROOM.x / 2, y: ROOM.y / 2});
+  });
+
+  it('draws a pinned stretched slot the size of that window', () => {
+    // The old size would have left the right-hand two thirds of a wide room
+    // showing bare clear-colour, which is the bug this parameter exists for.
+    const {size} = stretchedPlacement(NO_OFFSET, ROOM, {x: 0, y: 0}, ROOM);
+
+    expect(size).toEqual(ROOM);
+  });
+
+  it('gives a room no bigger than its window nowhere to pan', () => {
+    // `panRange` is the map less one VIEW. Measured against the standard
+    // viewport, a 26-tile room would look like 16 tiles of slack and stretch
+    // its sky across a pan that cannot happen.
+    const {size} = stretchedPlacement(NO_OFFSET, ROOM, {x: 1, y: 1}, ROOM);
+
+    expect(size).toEqual(ROOM);
+  });
+
+  it('still covers the window from every camera position', () => {
+    // The same requirement as the standard case, restated against a wider
+    // window: the picture must contain [0, view] on screen throughout the pan.
+    const map = {x: ROOM.x * 2, y: ROOM.y};
+    for (const parallax of [
+      {x: 0.2, y: 0},
+      {x: 1, y: 1},
+      {x: 2, y: 1},
+    ]) {
+      const {position, size} = stretchedPlacement(
+        NO_OFFSET,
+        map,
+        parallax,
+        ROOM,
+      );
+      for (const at of [0, (map.x - ROOM.x) / 2, map.x - ROOM.x]) {
+        const shift = layerShift({parallax, fit: false}, {x: at, y: 0});
+        const left = -shift.x + position.x - size.x / 2;
+
+        expect(left).toBeLessThanOrEqual(0);
+        expect(left + size.x).toBeGreaterThanOrEqual(ROOM.x);
+      }
+    }
   });
 });

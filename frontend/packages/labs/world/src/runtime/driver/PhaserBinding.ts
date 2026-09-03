@@ -55,11 +55,17 @@ import {installSkewHook, type RenderStepInternals} from './skew';
 import {SoundChannel} from './sound';
 
 const ACTOR_SIZE = 24;
-// The game's native resolution — its fixed logical coordinate space, shared with
-// the map editor (runtime/viewport). The Scale Manager's FIT mode
-// letterboxes/centers the canvas to fit the preview pane, shrinking it when the
-// pane is smaller; the host page caps the container at this width
-// (preview.html), so it is never scaled *above* native.
+// The game's native resolution AT STARTUP — the size the canvas is made at,
+// before the world has been built and can say how much of itself it wants on
+// screen. A world that says (`World.setViewSize`, `set size of view`) resizes
+// the canvas to match, which is what `syncViewSize` below is for; a world that
+// says nothing keeps this, which is the ten-tile square every existing project
+// was authored against.
+//
+// Native, not on-screen: the Scale Manager's FIT mode letterboxes and centres
+// the canvas within the preview pane, scaling it up or down. With `pixelArt`
+// that upscale is nearest-neighbour, so a 32-pixel sprite stays a grid of hard
+// squares instead of a smear.
 const GAME_WIDTH = VIEWPORT_WIDTH;
 const GAME_HEIGHT = VIEWPORT_HEIGHT;
 
@@ -78,9 +84,11 @@ const GAME_HEIGHT = VIEWPORT_HEIGHT;
  */
 const cameraOffset = (
   view: {position: {x: number; y: number}} | undefined,
+  /** How much of the world is on screen — `World.viewSize`, in pixels. */
+  size: {x: number; y: number},
 ) => ({
-  x: (view?.position.x ?? GAME_WIDTH / 2) - GAME_WIDTH / 2,
-  y: (view?.position.y ?? GAME_HEIGHT / 2) - GAME_HEIGHT / 2,
+  x: (view?.position.x ?? size.x / 2) - size.x / 2,
+  y: (view?.position.y ?? size.y / 2) - size.y / 2,
 });
 const DEGREES_TO_RADIANS = Math.PI / 180;
 // Depths WITHIN one layer's container. The container itself carries the layer's
@@ -469,6 +477,8 @@ export class PhaserBinding {
       parallaxOf: (index: number) => {x: number; y: number},
       /** How big the level is, which is what a stretched slot covers. */
       mapSize: {x: number; y: number},
+      /** How much of it is on screen — `World.viewSize`, in pixels. */
+      viewSize: {x: number; y: number},
     ) => {
       slots.forEach((slot, index) => {
         let image = images[index];
@@ -489,13 +499,13 @@ export class PhaserBinding {
         if (!image) {
           image = wantsTile
             ? scene.add.tileSprite(
-                GAME_WIDTH / 2,
-                GAME_HEIGHT / 2,
-                GAME_WIDTH,
-                GAME_HEIGHT,
+                viewSize.x / 2,
+                viewSize.y / 2,
+                viewSize.x,
+                viewSize.y,
                 sprite,
               )
-            : scene.add.image(GAME_WIDTH / 2, GAME_HEIGHT / 2, sprite);
+            : scene.add.image(viewSize.x / 2, viewSize.y / 2, sprite);
           image.setDepth(depth);
           intoLayer(scene, index, image);
           images[index] = image;
@@ -507,15 +517,19 @@ export class PhaserBinding {
           // whole promise of tiling, and the reason it takes two steps rather
           // than one: the slot is a child of its layer's container, and the
           // camera slides that container (see `layerShift`). Left alone, a
-          // finite rectangle of `GAME_WIDTH` by `GAME_HEIGHT` rides along with
-          // it and runs out — a quarter-viewport pan puts a quarter-viewport
-          // band of bare clear-colour on screen.
+          // finite rectangle of one view rides along with it and runs out — a
+          // quarter-view pan puts a quarter-view band of bare clear-colour on
+          // screen.
           //
           // So the shift is cancelled on the way in and re-applied to the
           // TEXTURE. The picture ends up exactly where riding along would have
           // put it, out of a surface with no edge to reach.
-          const {position, tile} = tiledPlacement(shiftOf(index), slot.offset);
-          image.setSize(GAME_WIDTH, GAME_HEIGHT);
+          const {position, tile} = tiledPlacement(
+            shiftOf(index),
+            slot.offset,
+            viewSize,
+          );
+          image.setSize(viewSize.x, viewSize.y);
           image.setPosition(position.x, position.y);
           image.setTilePosition(tile.x, tile.y);
         } else {
@@ -526,6 +540,7 @@ export class PhaserBinding {
             slot.offset,
             mapSize,
             parallaxOf(index),
+            viewSize,
           );
           image.setDisplaySize(size.x, size.y);
           image.setPosition(position.x, position.y);
@@ -561,7 +576,11 @@ export class PhaserBinding {
       // is a value change rather than a reload, so this is read every frame.
       const cameras = world.cameraSnapshot();
       const view = cameras.find(camera => camera.active) ?? cameras[0];
-      const offset = cameraOffset(view);
+      // Read every frame like the camera is, and for the same reason: a world
+      // may resize its view while it runs, and the backdrops have to be drawn
+      // against the window as it is now rather than as it started.
+      const viewSize = world.viewSize();
+      const offset = cameraOffset(view, viewSize);
       /**
        * How far the camera has slid one layer's container, in screen pixels.
        *
@@ -583,6 +602,7 @@ export class PhaserBinding {
         shiftOfLayer,
         parallaxOfLayer,
         mapSize,
+        viewSize,
       );
       syncSlots(
         scene,
@@ -592,6 +612,7 @@ export class PhaserBinding {
         shiftOfLayer,
         parallaxOfLayer,
         mapSize,
+        viewSize,
       );
 
       layers.forEach((layer, index) => {
@@ -629,7 +650,55 @@ export class PhaserBinding {
       }
     };
 
+    /**
+     * The canvas is the WORLD's size, which the world may state for itself.
+     *
+     * Ten tiles square unless a world says otherwise (`World.setViewSize`), and
+     * a world that says so does it while it is being described — so this asks
+     * every frame and resizes when the answer changes, rather than reading once
+     * before there is a world to ask.
+     *
+     * FIT then scales that into the `#game` box, and the box is told the shape
+     * to be. Without the second half the box keeps whatever shape the page gave
+     * it and FIT letterboxes inside it: a 26-by-16 room in a square box is bars
+     * top and bottom, and the box's border — a box-shadow on this element, set
+     * by the COLORS message — is drawn around the bars rather than around the
+     * game. The host page turns the ratio into a size (`sandbox/preview.html`);
+     * a page that does not use it is unaffected, since it is a custom property
+     * and nothing inherits a meaning for it.
+     */
+    let shown = {x: GAME_WIDTH, y: GAME_HEIGHT};
+    const syncViewSize = () => {
+      const view = world.viewSize();
+      if (view.x === shown.x && view.y === shown.y) {
+        return;
+      }
+      shown = {x: view.x, y: view.y};
+      // Three things in this order, and each of them is load-bearing.
+      //
+      // The BOX gets the shape first, so that the fit below has the rectangle
+      // it is fitting into. Fitting first and reshaping after leaves the canvas
+      // sized to the old shape — the right pixels drawn into the wrong
+      // rectangle, which is a game that ignores half its own clicks.
+      //
+      // Then the RATIO, which `resize` does not set. Phaser's `displaySize` is
+      // a `Size` in FIT mode, and a FIT-mode `Size.setSize` honours the aspect
+      // ratio it already holds rather than taking a new one from its arguments
+      // — so a game resized from 320x320 to 832x512 goes on being fitted as a
+      // square, and the canvas comes out square with the world squashed into
+      // it. `setAspectRatio` is the documented way to override it.
+      //
+      // Then the SIZE, which sets the backing store and re-fits. `refresh`
+      // afterwards re-measures the box: the property set above changed the
+      // layout, and `getParentBounds` is what reads it back.
+      parent.style.setProperty('--aspect', String(view.x / view.y));
+      this.game.scale.displaySize.setAspectRatio(view.x / view.y);
+      this.game.scale.resize(view.x, view.y);
+      this.game.scale.refresh();
+    };
+
     const sync = (scene: Phaser.Scene) => {
+      syncViewSize();
       syncBackdrops(scene);
 
       // Viewport-wide effects, applied to the camera rather than to any one
@@ -775,14 +844,24 @@ export class PhaserBinding {
       type: Phaser.WEBGL,
       parent,
       autoFocus: false,
+      // NEAREST-NEIGHBOUR, because the art is 32-pixel tiles and the canvas is
+      // always scaled UP to whatever room the preview pane has. Phaser's
+      // default is linear filtering, which is right for photographs and wrong
+      // for pixel art: a coin drawn at 32 and shown at 48 came out soft, and
+      // every straight edge in the library came with it. `pixelArt` also turns
+      // on `roundPixels`, so a sprite at a fractional position lands on a whole
+      // one rather than being resampled across two.
+      pixelArt: true,
       // Keyboard comes from the DOM listeners above (all keys); Phaser's own
       // keyboard input is off so it neither double-handles nor preventDefaults.
       input: {keyboard: false},
       scale: {
-        // FIT sizes the canvas to the (CSS-sized, exactly 16:9) `#game` box, so
-        // its scale — and thus input mapping — stays correct. No autoCenter: CSS
-        // already centers `#game`, and CENTER_BOTH would measure the parent and
-        // apply a margin to the canvas on every (re)load.
+        // FIT sizes the canvas to the CSS-sized `#game` box, so its scale —
+        // and thus input mapping — stays correct. The box is given the world's
+        // own shape (`syncViewSize`), so there is normally nothing to
+        // letterbox. No autoCenter: CSS already centers `#game`, and
+        // CENTER_BOTH would measure the parent and apply a margin to the canvas
+        // on every (re)load.
         mode: Phaser.Scale.FIT,
         width: GAME_WIDTH,
         height: GAME_HEIGHT,

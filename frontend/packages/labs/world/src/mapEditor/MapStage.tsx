@@ -114,6 +114,15 @@ export interface MapStageProps {
    */
   sizes?: Record<string, {width: number; height: number}>;
   isReadOnly: boolean;
+  /**
+   * The window this map will be seen through, in pixels — see the guide below.
+   *
+   * Given by the caller rather than read from the constant, because a world
+   * says how much of itself is on screen (`set size of view`) and a map drawn
+   * against somebody else's window shows a dashed rectangle in the wrong
+   * place. Absent is the standard window, which is what every map had.
+   */
+  visible?: Size;
 }
 
 /**
@@ -133,6 +142,7 @@ export const MapStage = ({
   schemas,
   sizes,
   isReadOnly,
+  visible = {w: VIEWPORT_WIDTH, h: VIEWPORT_HEIGHT},
 }: MapStageProps) => {
   // The document as this stage currently has it. A drag mutates it live for
   // feedback and commits once on release, so the local copy leads and the
@@ -984,16 +994,17 @@ export const MapStage = ({
     ctx.lineWidth = 2 / view.scale;
     ctx.strokeRect(0, 0, extent.w, extent.h);
 
-    // What the player will actually see: the game runs at the fixed viewport
-    // (runtime/viewport), so a map bigger than it has actors off screen. Drawn
-    // only when the two differ, because on a viewport-sized map this line would
-    // sit exactly under the border and mean nothing.
-    if (extent.w !== VIEWPORT_WIDTH || extent.h !== VIEWPORT_HEIGHT) {
+    // What the player will actually see: a map bigger than the window has
+    // actors off screen. Drawn only when the two differ, because on a
+    // window-sized map this line would sit exactly under the border and mean
+    // nothing — which is the case for a one-room level that sets its view to
+    // its own size, and the reason the window is a prop.
+    if (extent.w !== visible.w || extent.h !== visible.h) {
       ctx.save();
       ctx.strokeStyle = VIEWPORT_EDGE;
       ctx.lineWidth = 2 / view.scale;
       ctx.setLineDash([6 / view.scale, 4 / view.scale]);
-      ctx.strokeRect(0, 0, VIEWPORT_WIDTH, VIEWPORT_HEIGHT);
+      ctx.strokeRect(0, 0, visible.w, visible.h);
       ctx.restore();
     }
 
@@ -1178,6 +1189,8 @@ export const MapStage = ({
     selectedSchema,
     // …and the hover changes colour while a reference is being pointed.
     picking,
+    // The world may say how much of itself is on screen while this is open.
+    visible,
   ]);
 
   const canvasClass = [

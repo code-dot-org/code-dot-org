@@ -254,6 +254,9 @@ const world = (
     backdropColor: () => clearColor,
     // What a stretched slot covers: the level, not the window onto it.
     mapBounds: () => map,
+    // …and the window itself, which a world states for itself. The standard
+    // one here, so these expectations mean what they always did.
+    viewSize: () => ({x: 320, y: 320}),
     layerSnapshot: () =>
       backdrops.map((_, index) => ({
         id: index === 0 ? 'main' : `layer${index}`,
