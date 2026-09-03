@@ -122,13 +122,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
 
   // Students see auto-generated names, so the title says only what the
   // dialog is — keeping the new-image case distinct for screen readers.
-  const title = advanced
-    ? isNew
-      ? 'New image'
-      : name || 'Image'
-    : isNew
-    ? 'New image'
-    : 'Image';
+  const title = isNew ? 'New image' : advanced ? name || 'Image' : 'Image';
 
   const commitRename = () => {
     const trimmed = nameDraft.trim();
