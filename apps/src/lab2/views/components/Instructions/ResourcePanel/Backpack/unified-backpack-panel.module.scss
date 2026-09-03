@@ -48,13 +48,15 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 8px;
-  cursor: pointer;
-  color: var(--text-neutral-secondary);
+  padding: 4px 0;
   // Hide the native disclosure triangle; the chevron below stands in for it.
   list-style: none;
+  // Confine the hit area to the label, so the lines are neither hoverable nor
+  // clickable. Clicks on the label still bubble here and toggle the section.
+  pointer-events: none;
 
-  // Horizontal line on either side of the heading.
+  // Horizontal line on either side of the heading, as on the per-lab divider in the
+  // original panel.
   &::before,
   &::after {
     content: '';
@@ -65,9 +67,27 @@
   &::-webkit-details-marker {
     display: none;
   }
+}
+
+// Rest, hover and active states of the design system's text button in secondary.
+.unsupportedToggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+  pointer-events: auto;
+  transition: all 0.2s ease-in-out;
 
   &:hover {
-    color: var(--text-neutral-primary);
+    background-color: var(--background-neutral-quaternary);
+  }
+
+  &:active {
+    background-color: var(--background-neutral-quaternary);
+    color: var(--text-neutral-tertiary);
   }
 
   p {
@@ -75,7 +95,18 @@
   }
 }
 
-.unsupportedSection[open] .unsupportedSummary i {
+// The summary takes keyboard focus, but the label wears the ring.
+.unsupportedSummary:focus-visible {
+  outline: none;
+
+  .unsupportedToggle {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: 2px;
+    border-radius: 0.375rem;
+  }
+}
+
+.unsupportedSection[open] .unsupportedToggle i {
   transform: scaleY(-1);
 }
 

@@ -303,12 +303,14 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
         {unsupportedFiles.length > 0 && (
           <details className={moduleStyles.unsupportedSection}>
             <summary className={moduleStyles.unsupportedSummary}>
-              <Typography variant="body4" gutterBottom>
-                <Typography variant="strong">
-                  {`Not supported in this lab (${unsupportedFiles.length})`}
+              <span className={moduleStyles.unsupportedToggle}>
+                <Typography variant="body4" gutterBottom>
+                  <Typography variant="strong">
+                    {`Not supported in this lab (${unsupportedFiles.length})`}
+                  </Typography>
                 </Typography>
-              </Typography>
-              <FontAwesomeV6Icon iconName="chevron-down" aria-hidden="true" />
+                <FontAwesomeV6Icon iconName="chevron-down" aria-hidden="true" />
+              </span>
             </summary>
             <div className={moduleStyles.unsupportedFileList}>
               {unsupportedFiles.map(renderFileChip)}
