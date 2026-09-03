@@ -31,7 +31,6 @@ interface BackpackFileChipProps extends BackpackProps {
   isRecentlyAdded?: boolean;
   disableActions: boolean;
   setActionInProgress: (inProgress: boolean) => void;
-  isSecondaryBackpack?: boolean;
   onImageFlagged?: (
     file: File,
     fileType: string,
@@ -54,7 +53,6 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   supportedFileTypes,
   disableActions,
   setActionInProgress,
-  isSecondaryBackpack,
   onImageFlagged,
   addFileTooltipText = 'Add to project',
   addFileHandler,
@@ -104,7 +102,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [backpackApi, fileExtension, fileName, isRecentlyAdded]);
 
-  const handleAdd = async (isSecondaryBackpack?: boolean) => {
+  const handleAdd = async () => {
     // Use the addFileHandler if provided; otherwise fall back to default logic.
     if (addFileHandler) {
       onClickAddFile(
@@ -141,8 +139,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
         findIdForFileName,
         fileName,
         newFileName,
-        onImageFlagged,
-        isSecondaryBackpack
+        onImageFlagged
       );
     } else {
       // Fetch backpack file content and import new file to project - not a duplicate file name.
@@ -157,7 +154,6 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
         selectedFileName: fileName,
         newFileName: fileName,
         onImageFlagged,
-        isSecondaryBackpack,
       });
     }
     setActionInProgress(false);
@@ -266,7 +262,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
                 variant="outlined"
                 color="tertiary"
                 size="extraSmall"
-                onClick={() => handleAdd(isSecondaryBackpack)}
+                onClick={handleAdd}
                 type="button"
                 disabled={addButtonDisabled}
               >
