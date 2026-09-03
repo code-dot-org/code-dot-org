@@ -117,6 +117,12 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
     'world_layer_parallax',
   ],
   'platformer/jump': ['world_use_trait'],
+  'platformer/jetpack': [
+    'world_use_trait',
+    // The release is the half of the switch the lesson before it never
+    // needed: a jump is a press and nothing else.
+    'world_on_Input_ReleasesEvent',
+  ],
   'platformer/ground': ['world_use_trait'],
   'platformer/pickups': ['world_use_trait', 'world_print'],
   'platformer/hazards': ['world_use_trait', 'world_print'],

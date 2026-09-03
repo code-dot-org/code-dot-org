@@ -1880,6 +1880,84 @@ describe('the layers lesson’s check', () => {
   });
 });
 
+describe('the jetpack lesson’s check', () => {
+  const lesson = LESSONS['platformer/jetpack'];
+
+  /** The Hero given the trait, and the switch on the two moments a key gives. */
+  const flying = () =>
+    editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      under(actorIn(workspace, 'Hero'), {
+        type: 'world_use_trait',
+        fields: {TRAIT: 'Jetpack#FliesWithAJetpackTrait'},
+      });
+      // The press starts it, BESIDE the jump the lesson opens with rather
+      // than in place of it: with an empty tank `start flying` does nothing,
+      // so the same press is still a jump and no question had to be written.
+      const hat = workspace.blocks.blocks.find(
+        block => block.type === 'world_on_Input_PressesEvent',
+      )!;
+      const jump = hat.next!.block!;
+      jump.next = {
+        block: {
+          type: 'world_do_Jetpack_StartFlyingAction',
+          inputs: {VALUE: {block: {type: 'world_this_actor'}}},
+        },
+      };
+      // …and the release stops it. Two moments, two blocks, and no frames
+      // counted anywhere in the project.
+      workspace.blocks.blocks.push({
+        type: 'world_on_Input_ReleasesEvent',
+        fields: {FILTER0: 'space'},
+        inputs: {ACTOR: anyKind('hero')},
+        next: {
+          block: {
+            type: 'world_do_Jetpack_StopFlyingAction',
+            inputs: {VALUE: {block: {type: 'world_this_actor'}}},
+          },
+        },
+      } as Row);
+      return JSON.stringify(workspace);
+    });
+
+  /** …and the other way of clearing the ledge, which is not the lesson. */
+  const strongerJump = () =>
+    editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      under(actorIn(workspace, 'Hero'), {
+        type: 'world_set_Jumping_JumpStrengthProperty',
+        inputs: {
+          ACTOR: {block: {type: 'world_this_actor'}},
+          VALUE: {shadow: {type: 'math_number', fields: {NUM: 12}}},
+        },
+      });
+      return JSON.stringify(workspace);
+    });
+
+  it('refuses the jump it starts from, however long the key is held', async () => {
+    // A press is a moment. Holding for a second and a fifth is one jump, and
+    // one jump does not reach a ledge six tiles up.
+    const {passes} = await check('platformer/jetpack', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('refuses a jump tuned until it clears the ledge', async () => {
+    // The false pass written on the tile. It gets up there and spends nothing,
+    // which is why the check reads the tank as well as the height.
+    const {passes, result} = await check('platformer/jetpack', strongerJump());
+    expect(
+      Math.min(...(result.samples.hero as {y: number}[][]).map(at => at[0].y)),
+    ).toBeLessThan(120);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts the switch on the press and the release', async () => {
+    const {passes, result} = await check('platformer/jetpack', flying());
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+});
+
 describe('the jump lesson’s check', () => {
   const lesson = LESSONS['platformer/jump'];
 

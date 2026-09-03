@@ -32,6 +32,7 @@ import {healthRule} from './health';
 import {historyRule} from './history';
 import {inputRule} from './input';
 import {inventoryRule} from './inventory';
+import {jetpackRule} from './jetpack';
 import {jumpRule} from './jump';
 import {motionRule} from './motion';
 import {mouseRule} from './mouse';
@@ -339,6 +340,15 @@ export const STOCK_RULES: readonly StockRule[] = [
     contents: jumpRule,
   },
   {
+    id: 'jetpack',
+    name: 'Jetpack',
+    ability: 'Flies with a Jetpack',
+    description:
+      'Thrust for as long as a key is held, against gravity, out of a tank that empties. Carries the push, a top climbing speed, the fuel and how fast it burns — and says when the flying starts, stops, or runs dry.',
+    provides: ['Flies with a Jetpack'],
+    contents: jetpackRule,
+  },
+  {
     id: 'drive',
     name: 'Arrow Drive',
     ability: 'Drives with Arrow Keys',
@@ -482,6 +492,7 @@ export {
   cameraConfinedRule,
   cameraDeadzoneRule,
   jumpRule,
+  jetpackRule,
   scoreRule,
   patrolRule,
   carryRule,

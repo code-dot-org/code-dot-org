@@ -12,7 +12,7 @@
 // Blockly JSON behind them. So `catalogue.ts` stays data about tiles, and the
 // projects live here, looked up by tile id.
 //
-// SIXTY-EIGHT OF SIXTY-EIGHT: every tile on the map has a lesson, a starting
+// SIXTY-NINE OF SIXTY-NINE: every tile on the map has a lesson, a starting
 // project, and a check tested in both directions.
 //
 // What is written is milestone 4 of specs/PROGRESSION_UI.md and then some: all
@@ -1505,6 +1505,95 @@ count. That is what the **Jumping** rule holds.
    you are going, and rising is not landing. That is a **one-way platform**,
    and it is what the Ground under your feet would be if it were not **Solid**
    as well.
+`.trim(),
+};
+
+// ── platformer/jetpack ───────────────────────────────────────────────────────
+
+const jetpack: WorldScenario = {
+  name: 'A ledge out of reach',
+  description: 'A jump that clears three tiles, and a ledge six tiles up.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        createInMap(local('ground'), [
+          ...floorAcross(10),
+          // Six tiles up, which no jump in the lab reaches: the default
+          // clears 139 pixels and this is 192 above the floor.
+          ...[6, 7, 8, 9].map(column =>
+            placed(`ledge${column}`, column * 32 + 16, 112),
+          ),
+        ]),
+        addActor(local('hero'), [placeAt(48, 272)]),
+      ],
+      actors: [
+        {
+          id: 'hero',
+          name: 'Hero',
+          rows: [
+            useTrait('Gravity#AffectedByGravityTrait'),
+            useTrait('Input#TakesKeyboardInputTrait'),
+            useTrait('Arrow Keys#MovesAcrossTrait'),
+            useTrait('Jumping#JumpsTrait'),
+            setSprite('player.png'),
+          ],
+        },
+        {
+          id: 'ground',
+          name: 'Ground',
+          rows: [
+            useTrait('Gravity#ActsAsGroundTrait'),
+            useTrait('Solid Bodies#SolidTrait'),
+            setSprite('ground.png'),
+          ],
+        },
+      ],
+      handlers: [
+        onPressed('hero', 'space', {
+          type: 'world_do_Jumping_MakeJumpAction',
+          inputs: {VALUE: me()},
+        }),
+      ],
+    }),
+    sprites: ['player', 'ground'],
+    rules: ['gravity', 'solid', 'input', 'arrows', 'motion', 'jump', 'jetpack'],
+  }),
+  instructions: `
+## Held, not pressed
+
+Press space and the Hero jumps. Hold space and it jumps once, because a press
+is a moment: the handler runs when the key goes DOWN and never again while it
+is held. The ledge is six tiles up and no jump in the lab reaches it.
+
+A jetpack is the other shape. It is a **force**, applied for as long as the
+jetpack is on, and it fights gravity rather than beating it once — so the Hero
+sinks for a moment, then hangs, then climbs, and keeps climbing after you
+switch it off.
+
+Which is why it is a **switch** rather than something you ask for. The thrust
+has to happen every frame, and the keyboard only offers you two moments —
+**presses** and **releases**. Those two moments are the two blocks; the frames
+in between are the rule's business.
+
+### What you do
+
+1. Give the Hero **use trait ⟨Flies with a Jetpack⟩**.
+2. Leave the jump where it is and add **start ⟨this actor⟩ flying** under it,
+   on the same press. Then handle
+   **when ⟨any Hero⟩ releases ⟨space⟩ → stop ⟨this actor⟩ flying**.
+3. Run it and hold space. Watch the first half-second: nothing much happens,
+   because 18 of thrust against 9 of gravity is a net 9, and it takes a moment
+   to turn a fall around. Then it climbs, and the ledge is reachable.
+4. Let go halfway up. It keeps rising for a moment and then falls — which is
+   what an acceleration does and a set speed does not.
+5. Hold it down and watch **fuel**. Four seconds and the tank is empty, the
+   jetpack switches itself off and says so twice: **runs out of fuel**, and
+   then **stops flying**, the same thing letting go would have said.
+6. Now hold space again with the tank empty. The jump still answers, because
+   **start ⟨…⟩ flying** does nothing at all when there is no fuel — it does not
+   queue up and fire on the next pickup. One key, two answers, and you did not
+   have to write the question: the rule refusing is what leaves the press free.
 `.trim(),
 };
 
@@ -5064,6 +5153,7 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'place/camera-feel': cameraFeel,
   'place/layers': layers,
   'platformer/jump': jump,
+  'platformer/jetpack': jetpack,
   'platformer/pickups': pickups,
   'platformer/hazards': hazards,
   'platformer/level': level,

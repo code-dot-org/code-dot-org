@@ -2182,3 +2182,200 @@ describe('Inventory', () => {
     expect(held('actors/rock')).toBe(0);
   });
 });
+
+describe('Jetpack', () => {
+  /** A world with a floor, and an actor with a jetpack standing on it. */
+  const grounded = (settings: Record<string, number> = {}) => {
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([
+        rule('rules/motion'),
+        rule('rules/collisions'),
+        rule('rules/gravity'),
+        rule('rules/jetpack'),
+      ])
+      .instantiate();
+    const floor = new ActorBuilder({id: 'floor', name: 'floor'})
+      .useTraits([of('rules/gravity', 'ActsAsGroundTrait')])
+      .set(PositionProperty, at(100, 120))
+      .set(of('rules/collisions', 'SizeProperty'), new Vector(200, 16))
+      .instantiate('floor');
+    world.addActor(floor);
+    const pilot = new ActorBuilder({id: 'pilot', name: 'pilot'})
+      .useTraits([
+        of('rules/gravity', 'AffectedByGravityTrait'),
+        of('rules/jetpack', 'FliesWithAJetpackTrait'),
+        of('rules/motion', 'CanMoveTrait'),
+      ])
+      .set(PositionProperty, at(100, 104))
+      .set(of('rules/collisions', 'SizeProperty'), new Vector(16, 16))
+      .instantiate('pilot');
+    for (const [name, value] of Object.entries(settings)) {
+      pilot.set(of('rules/jetpack', name), value as never);
+    }
+    world.addActor(pilot);
+    // Long enough to land and be counted as standing.
+    run(world, 0.2);
+    return {world, floor, pilot};
+  };
+
+  /** Switch on, hold for a while, switch off — the two moments a key gives. */
+  const flyFor = (world: World, pilot: unknown, seconds: number) => {
+    world.act(of('rules/jetpack', 'StartFlyingAction'), pilot as never);
+    run(world, seconds);
+    world.act(of('rules/jetpack', 'StopFlyingAction'), pilot as never);
+  };
+
+  const read = (pilot: unknown, name: string) =>
+    (pilot as {get(p: unknown): number}).get(of('rules/jetpack', name));
+  const height = (pilot: unknown) =>
+    (pilot as {get(p: unknown): Vector}).get(PositionProperty).y;
+
+  it('climbs while it is on, and keeps climbing for a moment after', () => {
+    // The whole difference from a jump. Thrust is an ACCELERATION, so the rise
+    // continues past the release — a rule that set the speed directly would
+    // stop dead in the frame the key came up.
+    const {world, pilot} = grounded();
+    const floorLevel = height(pilot);
+
+    flyFor(world, pilot, 0.5);
+    const released = height(pilot);
+    run(world, 0.1);
+
+    expect(released).toBeLessThan(floorLevel - 30);
+    expect(height(pilot)).toBeLessThan(released);
+  });
+
+  it('does not rise on the first frame, because gravity is still winning', () => {
+    // The lag that makes it read as weight. On frame one the thrust has added
+    // 18/60 of a unit and gravity has taken 9/60 back, so the actor is barely
+    // moving — it is not at the top of the screen, which is what setting the
+    // speed would have done.
+    const {world, pilot} = grounded();
+    const floorLevel = height(pilot);
+
+    flyFor(world, pilot, 1 / 60);
+
+    expect(floorLevel - height(pilot)).toBeLessThan(2);
+  });
+
+  it('holds its top speed however long it is left on', () => {
+    // Uncapped, a fifth of a second of thrust already outruns a sixteen-tile
+    // room. The cap is what leaves the player time to aim.
+    const {world, pilot} = grounded();
+
+    world.act(of('rules/jetpack', 'StartFlyingAction'), pilot as never);
+    run(world, 0.5);
+    const before = height(pilot);
+    run(world, 1 / 60);
+
+    // Three units a second is 300 pixels a second, so five pixels a frame.
+    expect(before - height(pilot)).toBeLessThanOrEqual(5.01);
+  });
+
+  it('caps the climb without capping the fall', () => {
+    // A jetpack that also limited the fall would be a parachute. Falling is
+    // Gravity's business, and the cap is written against the sign so that it
+    // cannot touch it — which is invisible in a position and plain in a speed.
+    const {world, pilot} = grounded();
+    const speed = () =>
+      (pilot as {get(p: unknown): Vector}).get(
+        of('rules/motion', 'VelocityProperty'),
+      ).y;
+
+    flyFor(world, pilot, 1);
+    expect(speed()).toBeGreaterThanOrEqual(-3.01);
+    // Falling now, and past the cap: gravity takes about two thirds of a
+    // second to undo the climb and the same again to beat it.
+    run(world, 0.8);
+
+    expect(speed()).toBeGreaterThan(3.5);
+  });
+
+  it('burns fuel by the second, not by the frame', () => {
+    const {world, pilot} = grounded();
+
+    flyFor(world, pilot, 1);
+
+    // A quarter tank a second, so three quarters left after one.
+    expect(read(pilot, 'FuelProperty')).toBeCloseTo(75, 1);
+  });
+
+  it('will not switch on with an empty tank', () => {
+    // The state a fallback jump exists for, and the reason `start` refuses
+    // rather than arming: the press that could not fly is free for the jump
+    // to answer.
+    const {world, pilot} = grounded({FuelProperty: 0});
+    const floorLevel = height(pilot);
+
+    flyFor(world, pilot, 0.5);
+
+    expect(height(pilot)).toBeCloseTo(floorLevel, 1);
+    expect(
+      (pilot as {get(p: unknown): boolean}).get(
+        of('rules/jetpack', 'FlyingProperty'),
+      ),
+    ).toBe(false);
+  });
+
+  it('says when the flying starts, stops and runs dry — each once', () => {
+    // Three moments, and the reason they are moments: an animation started on
+    // every frame of thrust would restart sixty times a second.
+    const {world, pilot} = grounded({
+      FuelProperty: 25,
+      FuelPerSecondProperty: 25,
+    });
+    const said: string[] = [];
+    for (const [event, name] of [
+      ['StartsFlyingEvent', 'start'],
+      ['StopsFlyingEvent', 'stop'],
+      ['RunsOutOfFuelEvent', 'dry'],
+    ] as const) {
+      // ON THE ACTOR: these are the trait's, so they are about whoever elected
+      // it rather than about the world.
+      (pilot as {on(e: unknown, f: () => void): void}).on(
+        of('rules/jetpack', event),
+        () => said.push(name),
+      );
+    }
+
+    // A second of flight empties a quarter tank, and the empty tank switches
+    // the jetpack off itself — nothing outside says stop.
+    world.act(of('rules/jetpack', 'StartFlyingAction'), pilot as never);
+    run(world, 1.2);
+
+    expect(said).toEqual(['start', 'dry', 'stop']);
+  });
+
+  it('says it stopped when it is switched off, with fuel to spare', () => {
+    const {world, pilot} = grounded();
+    let stops = 0;
+    (pilot as {on(e: unknown, f: () => void): void}).on(
+      of('rules/jetpack', 'StopsFlyingEvent'),
+      () => {
+        stops++;
+      },
+    );
+
+    world.act(of('rules/jetpack', 'StartFlyingAction'), pilot as never);
+    run(world, 0.2);
+    expect(stops).toBe(0);
+    world.act(of('rules/jetpack', 'StopFlyingAction'), pilot as never);
+    // …and again, which a key released twice would do.
+    world.act(of('rules/jetpack', 'StopFlyingAction'), pilot as never);
+    // An event is queued and delivered after the steps, so it takes a frame
+    // to arrive however early it was raised (`EventQueue`).
+    run(world, 1 / 60);
+
+    expect(stops).toBe(1);
+    expect(read(pilot, 'FuelProperty')).toBeGreaterThan(0);
+  });
+
+  it('fills a tank without overfilling it', () => {
+    // What a pickup does, and the clamp is the part that is easy to leave out.
+    const {world, pilot} = grounded({FuelProperty: 80});
+
+    world.act(of('rules/jetpack', 'GiveFuelAction'), pilot as never, 50);
+
+    expect(read(pilot, 'FuelProperty')).toBe(100);
+  });
+});

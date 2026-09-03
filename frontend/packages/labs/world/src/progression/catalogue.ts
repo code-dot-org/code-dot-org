@@ -1333,6 +1333,51 @@ export const TILES: readonly Tile[] = [
     },
   },
   {
+    id: 'platformer/jetpack',
+    region: 'platformer',
+    at: at('platformer', 2, 1),
+    title: 'Held, not pressed',
+    teaches:
+      'A force applied for as long as a key is held, out of something that runs out.',
+    task: 'A ledge a jump cannot reach. Give the Hero thrust, and a tank to spend on it.',
+    requires: ['platformer/jump'],
+    unlocks: [{kind: 'rule', id: 'jetpack'}],
+    check: {
+      kind: 'outcome',
+      says: 'Holding the key for a second lifts the Hero past anything a jump could reach, and the tank is lower at the end than it was at the start.',
+      falsePass:
+        'A bigger jump. Raising "jump strength" until one press clears the ledge passes "it got up there" and nothing else, so this reads the TANK as well as the height — flying is the only thing in the lab that spends fuel, and a jump spends none.',
+      run: {
+        probes: {
+          hero: {kind: 'positions', of: 'Hero'},
+          fuel: {kind: 'property', of: 'Hero', name: 'fuel'},
+        },
+        // Held, which is the whole lesson: a trace of presses would be a
+        // trace about jumping.
+        trace: [{hold: ['space'], seconds: 1.2}, {seconds: 0.5}],
+      },
+      passes: ({samples}) => {
+        const heights = (samples.hero ?? []).map(
+          sample => (sample as {y: number}[])[0]?.y ?? 0,
+        );
+        const tank = (samples.fuel ?? []).map(
+          sample => (sample as (number | undefined)[])[0],
+        );
+        const filled = tank.filter(
+          (level): level is number => typeof level === 'number',
+        );
+        // A default jump peaks 139 pixels up, which from the floor at 272 is
+        // y = 133. Anything above 120 is thrust or a tuned jump; the tank is
+        // what tells those apart.
+        return (
+          Math.min(...heights) < 120 &&
+          filled.length > 1 &&
+          filled[filled.length - 1] < filled[0]
+        );
+      },
+    },
+  },
+  {
     id: 'platformer/ground',
     region: 'platformer',
     at: at('platformer', 2, 2),
