@@ -43,7 +43,7 @@ export const SPRITE_NAMES = [
   // …and the end of the level, which is a different thing from a landmark: a
   // post says HERE and a flag says FINISHED.
   'flag',
-  // Something that hurts. Drawn as a crate until now, in three lessons, in a
+  // Something that damages. Drawn as a crate until now, in three lessons, in a
   // curriculum where a crate is the thing you push.
   'spike',
   // Scenery, which is a different job from ground: a hill is what a parallax
@@ -51,9 +51,9 @@ export const SPRITE_NAMES = [
   'hill',
   // …and a segment of pipe, which is what a column of them is made of.
   'pipe',
-  // Something that walks its beat and hurts to touch. The one in the starter
-  // has been an asteroid since the day Patrol was written, and a rock that
-  // paces a corridor reads as a rock somebody forgot to stop.
+  // Something that walks its beat and damages what it touches. The one in the
+  // starter has been an asteroid since the day Patrol was written, and a rock
+  // that paces a corridor reads as a rock somebody forgot to stop.
   'crawler',
   // A wall, which is not a floor stood on its end. Every room in the library
   // was built out of `ground`, and a stack of grass-topped floor tiles reads
@@ -259,7 +259,7 @@ const STATIC = {
     //
     // PURPLE because every other colour in the library already means something
     // — blue is the player, gold is a coin, green is grass, grey is stone, red
-    // is the ball — and a thing that hurts you should not have to be read
+    // is the ball — and a thing that damages you should not have to be read
     // twice. The eyes are the player's eyes at the player's size, which is
     // what makes the two read as the same kind of creature.
     for (const x of [4, 11, 18, 25]) {
@@ -391,7 +391,7 @@ const STATIC = {
   spike(c) {
     // Three teeth on a plate, pointing UP, filling the cell the way `ground`
     // does — so a row of them lies flat on the floor rather than hovering over
-    // it, and so what you can see is what you can be hurt by.
+    // it, and so what you can see is what can damage you.
     c.rect(0, 26, 32, 6, [70, 74, 84]); // the plate they are set in
     for (let tooth = 0; tooth < 3; tooth++) {
       const x = 1 + tooth * 10;

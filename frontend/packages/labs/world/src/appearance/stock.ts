@@ -188,7 +188,7 @@ export const STOCK_SPRITES: readonly StockSprite[] = [
   {
     id: 'spike',
     name: 'Spike',
-    description: 'A row of metal teeth on a plate, for something that hurts.',
+    description: 'A row of metal teeth on a plate, for something that damages.',
     dataUrl: image('spike'),
   },
   {
@@ -207,7 +207,7 @@ export const STOCK_SPRITES: readonly StockSprite[] = [
     id: 'crawler',
     name: 'Crawler',
     description:
-      'A purple bug on six legs, for something that patrols and hurts.',
+      'A purple bug on six legs, for something that patrols and damages.',
     dataUrl: image('crawler'),
   },
   {
