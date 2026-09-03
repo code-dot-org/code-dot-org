@@ -619,7 +619,9 @@ their unit tests pass.
 | 5 | `ai/images/imageGeneration.ts` | dispatches on transport; `compositionClause()` asks for native transparency or a flat key color per model; keying skipped when the model returns alpha |
 | 6 | `ai/images/types.ts` | `model?` recorded, `seed?` now optional |
 | 7 | `views/GenerateImageView.tsx` | Model fieldset behind `experiments.SPRITELAB_IMAGE_MODEL`; temperature and seed disable themselves with the reason in the label |
+| 8 | `views/GenerateImageView.tsx`, `image-details-dialog.module.scss` | a11y pass — see below |
 | 9 | `test/unit/p5lab/spritelab/lab2/imageGenerationTest.ts` | 12 tests, 7 new |
+| 9 | `test/unit/aiGateway/generateImageTest.ts` | 6 tests, new — including one that parses the client's outbound body against the contract's request schema |
 
 **`ai-gateway` (branch `openai-image-model`)**
 
@@ -631,6 +633,30 @@ their unit tests pass.
 | `test/generateImageHandler.test.ts` | 6 tests |
 | `test/contract/outboundSchema.test.ts` | 3 more |
 | `README.md` | a Routes table and an "Adding a new endpoint" section |
+
+**What the accessibility pass changed**
+
+Two findings, both from the same root: the Model choice governs other
+controls, and greying a control out says nothing to a screen reader.
+
+- **A disabled control now names the reason that actually applies.** The
+  "use same seed" radio can be disabled for three different reasons — the
+  model does not use seeds, no seed was recorded for this image
+  (pre-existing), or the recorded seed belongs to a different model. It
+  now says which. Naming the wrong reason is worse than naming none.
+- **Choosing a model announces what it took away.** A `role="status"`
+  line under the fieldset carries "OpenAI GPT Image 1 does not use
+  temperature or seeds." It is rendered unconditionally and left empty
+  when there is nothing to say: a live region that enters the DOM at the
+  same moment as its text usually goes unannounced.
+
+Checked and already correct: the fieldset/legend grouping matches the
+Type and Style groups beside it, `RadioButton` is the design-system
+component, `.radioGroup` already remaps `--text-neutral-disabled` so
+disabled labels stay legible, and the disabled state reaches the
+accessibility tree through the `disabled` attribute rather than through
+color. Not verified, and needing a browser: focus-ring contrast on the
+new radios and reflow with a third group in the stack.
 
 **Not done**
 

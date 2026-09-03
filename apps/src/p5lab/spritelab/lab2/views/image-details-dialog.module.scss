@@ -250,6 +250,19 @@
   line-height: inherit;
 }
 
+// Says what the chosen image model cannot do. Empty most of the time; it
+// keeps its place in the DOM so the live region is there before the text is.
+.modelNote {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--dialog-text-secondary);
+
+  &:empty {
+    display: none;
+  }
+}
+
 // A column of stacked groups sharing a row with the prompt.
 .formStack {
   display: flex;

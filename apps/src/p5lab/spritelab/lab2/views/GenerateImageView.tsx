@@ -187,6 +187,33 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
     (existing?.generation?.model || DEFAULT_IMAGE_MODEL_ID) === modelId;
   const canUsePrevious = !!existing && modelSpec.supportsEdit;
 
+  // A disabled control has to say why, and there are three reasons this one
+  // can be disabled. Naming the wrong one is worse than naming none.
+  const seedLabel = (() => {
+    const base = 'Use same seed';
+    if (!modelSpec.supportsSeed) {
+      return `${base} (${modelSpec.label} does not use seeds)`;
+    }
+    if (existing?.generation?.seed === undefined) {
+      return `${base} (no seed was recorded for this image)`;
+    }
+    if (!canUseSeed) {
+      return `${base} (the recorded seed belongs to a different model)`;
+    }
+    return `${base} (small prompt changes keep the picture similar)`;
+  })();
+
+  // What the chosen model cannot do, in words. Rendered into a live region
+  // so choosing a model announces the controls it just took away — greying
+  // them out is invisible to a screen reader driving the radios.
+  const modelLimits = [
+    !modelSpec.supportsTemperature && 'temperature',
+    !modelSpec.supportsSeed && 'seeds',
+  ].filter(Boolean);
+  const modelNote = modelLimits.length
+    ? `${modelSpec.label} does not use ${modelLimits.join(' or ')}.`
+    : '';
+
   // Switching models can invalidate the current choice; fall back rather
   // than leave a checked radio the request would ignore.
   useEffect(() => {
@@ -376,6 +403,14 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                   ))}
                 </fieldset>
               )}
+              {showModelChoice && (
+                // Always rendered, even when empty: a live region added to
+                // the DOM at the same moment as its text usually goes
+                // unannounced.
+                <p role="status" className={moduleStyles.modelNote}>
+                  {modelNote}
+                </p>
+              )}
             </div>
           </div>
 
@@ -396,11 +431,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
               <RadioButton
                 name="generation-source"
                 value="seed"
-                label={
-                  modelSpec.supportsSeed
-                    ? 'Use same seed (small prompt changes keep the picture similar)'
-                    : `Use same seed (${modelSpec.label} does not support seeds)`
-                }
+                label={seedLabel}
                 size="s"
                 checked={source === 'seed'}
                 disabled={!canUseSeed}
