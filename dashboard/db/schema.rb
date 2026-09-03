@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_09_02_042144) do
+ActiveRecord::Schema[7.0].define(version: 2026_09_03_120000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -3100,15 +3100,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_09_02_042144) do
   add_foreign_key "plc_learning_modules", "stages"
   add_foreign_key "project_storage_geos", "user_project_storage_ids", column: "storage_id"
   add_foreign_key "queued_account_purges", "users"
-  add_foreign_key "quiz_attempts", "levels"
-  add_foreign_key "quiz_attempts", "scripts", column: "unit_id"
-  add_foreign_key "quiz_attempts", "users"
-  add_foreign_key "quiz_question_placements", "levels"
-  add_foreign_key "quiz_question_placements", "quiz_questions"
-  add_foreign_key "quiz_question_responses", "quiz_attempts"
-  add_foreign_key "quiz_question_responses", "quiz_questions"
-  add_foreign_key "quiz_question_standards", "quiz_questions"
-  add_foreign_key "quiz_question_standards", "standards"
   add_foreign_key "rubric_ai_evaluations", "rubrics"
   add_foreign_key "rubric_ai_evaluations", "users"
   add_foreign_key "rubric_ai_evaluations", "users", column: "requester_id"
