@@ -86,6 +86,12 @@
 }
 
 .detail {
+  /* THE DESIGN SYSTEM'S FONT. Every heading and paragraph here is a MUI
+     `Typography` and carries the theme's type with it, but the plain `<ul>`
+     under Unlocks is not one — it inherits from whatever is above it, which is
+     the dialog's container and not the theme. Named once, here, rather than by
+     wrapping every list item in a component. */
+  font-family: Geist, 'Noto Sans', system-ui, sans-serif;
   padding: 16px 18px 24px;
 }
 
@@ -110,6 +116,49 @@
   font-size: 14px;
 }
 
+/* The drawn block under an unlock: on its own line, under the words it
+   illustrates, and scrolling rather than stretching the pane when the block is
+   a wide one. */
+.blockPreview {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+  margin: 4px 0 8px;
+}
+
+/* No markers anywhere in this list. A row is either a drawn block — where a
+   bullet would be a mark for a word that is not there — or an icon and a name,
+   where the icon IS the mark and two would be one too many. */
+.unlock {
+  margin-left: -18px;
+  list-style: none;
+}
+
+/* Enough room for the widest of the file icons, so the names line up in a
+   column whatever kind each row happens to be. */
+.unlockIcon {
+  display: inline-block;
+  width: 18px;
+  margin-right: 6px;
+  opacity: 0.7;
+  text-align: center;
+}
+
+/* Blockly's injection div is sized for a WORKSPACE — `height: 100%` and
+   `flex: 1 1 100%` — which is right when it fills a pane and catastrophic in a
+   list: each preview took the height of the whole reading pane, so the two
+   unlocks of a lesson were the better part of a page apart. Inline mode sizes
+   the SVG itself once it has drawn; the container only has to get out of the
+   way.
+
+   `injectionDiv` is Blockly's own class rather than a hashed module one, which
+   is what makes it nameable from here at all. */
+.blockPreview :global(.injectionDiv) {
+  height: auto;
+  flex: none;
+  overflow: visible;
+}
+
 .list li {
   margin-bottom: 2px;
 }
@@ -132,33 +181,18 @@
   gap: 4px;
 }
 
+/* ALIGNMENT ONLY. The border, the fill, the type and the focus ring are the
+   button theme's to decide, and every one of them written here was a second,
+   worse answer to a question the design system had already answered. What is
+   left is the one thing the theme cannot know: a row that reads as a row wants
+   its label at the left edge, not centred the way a button's caption is. */
 .need {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  width: 100%;
+  justify-content: flex-start;
 
   /* 24px is the WCAG 2.2 floor for a pointer target; these are rows, so the
      width is never the problem and the height is. */
   min-height: 32px;
-  padding: 4px 8px;
-  border: 1px solid color-mix(in srgb, currentcolor 18%, transparent);
-  border-radius: 6px;
-  background: transparent;
-  color: inherit;
-  cursor: pointer;
-  font: inherit;
   text-align: left;
-}
-
-.need:hover {
-  border-color: color-mix(in srgb, currentcolor 40%, transparent);
-  background: color-mix(in srgb, currentcolor 6%, transparent);
-}
-
-.need:focus-visible {
-  outline: 3px solid var(--focus, #17399e);
-  outline-offset: 2px;
 }
 
 .needIcon {
@@ -178,20 +212,6 @@
   flex: none;
   font-size: 12px;
   opacity: 0.65;
-}
-
-/* Green for done and red for locked, and nothing for ready: two marks that
-   mean something and one that is just the shape of the row. */
-.need_done .needIcon {
-  color: #2d8a4e;
-}
-
-.need_shut .needIcon {
-  color: #c0392b;
-}
-
-.need_open .needIcon {
-  opacity: 0.45;
 }
 
 .pending {
@@ -228,40 +248,12 @@
   flex-wrap: wrap;
 }
 
-.secondary {
-  padding: 7px 12px;
-  border: 1px solid var(--borders-neutral-primary);
-  border-radius: 6px;
-  background: none;
-  color: inherit;
-  cursor: pointer;
-  font: 600 14px/1.2 inherit;
-}
-
-.secondary:disabled {
-  cursor: default;
-  opacity: 0.55;
-}
-
-.primary {
-  display: inline-block;
-  text-decoration: none;
-  padding: 7px 14px;
-  border: 1px solid #2c6ef2;
-  border-radius: 6px;
-  background: #2c6ef2;
-  color: #fff;
-  cursor: pointer;
-  font: 600 14px/1.2 inherit;
-}
-
-.primary:disabled {
-  border-color: var(--borders-neutral-primary);
-  background: none;
-  color: inherit;
-  cursor: default;
-  opacity: 0.55;
-}
+/* The buttons in this pane carry NO styling of their own. They are MUI
+   Buttons — `contained` for the action a lesson leads with, `outlined` for the
+   one beside it — and the colour, the border, the padding, the type, the
+   hover, the focus ring and the disabled state all come from the theme. There
+   was a hand-rolled blue here, and it was the one thing in the dialog that did
+   not change with the theme. */
 
 .verdict {
   margin: 10px 0 0;

@@ -7,7 +7,7 @@
 
 import {render, screen, within} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import {beforeEach, describe, expect, it} from 'vitest';
+import {beforeEach, describe, expect, it, vi} from 'vitest';
 
 import {RootStateProvider} from '@code-dot-org/core/redux';
 
@@ -17,6 +17,16 @@ import {LESSONS} from '../lessons';
 import {useProgression} from '../progressionContext';
 import {ProgressionProvider} from '../ProgressionProvider';
 import type {TileId} from '../types';
+
+// The drawn block under an unlock injects a real Blockly workspace, which
+// needs a real browser — jsdom cannot parse the stylesheet Blockly writes, and
+// the injection throws. The same bargain `__tests__/App` makes with the block
+// editor, for the same reason: what this file is about is the dialog, and the
+// preview is exercised where it can be, in `BlockPreview.test`.
+vi.mock('../BlockPreview', () => ({
+  BlockPreview: () => null,
+  blockForRule: () => undefined,
+}));
 
 /** A stand-in for the button in the resource panel strip. */
 const Opener = ({focus}: {focus?: TileId}) => {
@@ -153,9 +163,23 @@ describe('the detail pane', () => {
     });
   });
 
-  it('lists what the tile unlocks', async () => {
+  it('lists what the tile unlocks, by the name the library gives it', async () => {
+    // Not "the jump rule": the icon beside it says which kind it is, and the
+    // id is a file stem rather than a name anybody chose. (A rule whose block
+    // can be drawn shows the block instead — the preview is stubbed in this
+    // file, so what is left here is the row.)
     await openOn('platformer/jump');
-    expect(within(detail()).getByText('the jump rule')).toBeInTheDocument();
+    const unlocks = within(detail()).getByRole('region', {name: 'Unlocks'});
+
+    expect(within(unlocks).getByText('Jumping')).toBeInTheDocument();
+  });
+
+  it('names an actor and a picture the same way', async () => {
+    await openOn('platformer/pickups');
+    const unlocks = within(detail()).getByRole('region', {name: 'Unlocks'});
+
+    expect(within(unlocks).getByText('Coin')).toBeInTheDocument();
+    expect(within(unlocks).getByText('Coin Spin')).toBeInTheDocument();
   });
 
   it('refuses a shut tile and says what it is waiting for', async () => {

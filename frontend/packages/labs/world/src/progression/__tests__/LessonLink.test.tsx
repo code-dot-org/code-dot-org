@@ -9,6 +9,15 @@ import {RootStateProvider} from '@code-dot-org/core/redux';
 import {LessonLink} from '../LessonLink';
 import {ProgressionProvider} from '../ProgressionProvider';
 
+// The drawn block under an unlock injects a real Blockly workspace, which
+// needs a real browser — jsdom cannot parse the stylesheet Blockly writes.
+// Stubbed here for the reason `__tests__/App` stubs the block editor; the
+// preview is exercised where it can be, in `BlockPreview.test`.
+vi.mock('../BlockPreview', () => ({
+  BlockPreview: () => null,
+  blockForRule: () => undefined,
+}));
+
 /**
  * The providers the dialog needs around it.
  *

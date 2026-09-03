@@ -359,17 +359,27 @@ class Agent<T extends Environment = Environment> extends TypedEventEmitter<T> {
         this._container.innerHTML = '';
         this._container.appendChild(svg);
 
-        // Fix width and height (after it renders)
-        window.requestAnimationFrame(() => {
-          const size = (svg
-            .querySelector('.blocklyWorkspace')
-            ?.getClientRects() || [])[0] || {
-            width: 30,
-            height: 30,
-          };
-          svg.style.width = size.width + 'px';
-          svg.style.height = size.height + 'px';
-        });
+        // Fit the copy to the BLOCKS, which is the only thing an inline
+        // workspace is meant to show.
+        //
+        // Asked of the workspace rather than measured off the copy, and that
+        // is the fix rather than a tidy-up. The measurement used to be
+        // `.blocklyWorkspace`'s client rect, taken a frame later — but by then
+        // the injection div has been moved to `document.body` and resized
+        // against it, so what came back was the size of the WINDOW. Every
+        // inline block was a canvas of empty space with a block in the corner
+        // of it, and the taller the window the worse it got.
+        //
+        // `getBlocksBoundingBox` is in workspace units, so the scale turns it
+        // into the pixels the copy is drawn at. An empty workspace has no box
+        // and keeps the old floor of thirty, which is a small square rather
+        // than nothing at all.
+        const bounds = this._workspace.getBlocksBoundingBox();
+        const scale = this._workspace.scale || 1;
+        const width = Math.max(30, (bounds.right - bounds.left) * scale);
+        const height = Math.max(30, (bounds.bottom - bounds.top) * scale);
+        svg.style.width = width + 'px';
+        svg.style.height = height + 'px';
 
         // Copy classes over
         for (const blocklyClassName of Array.from(

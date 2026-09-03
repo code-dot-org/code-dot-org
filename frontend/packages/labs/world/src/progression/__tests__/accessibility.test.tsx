@@ -13,7 +13,7 @@
 
 import {render, screen, within} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import {describe, expect, it} from 'vitest';
+import {describe, expect, it, vi} from 'vitest';
 import {axe} from 'vitest-axe';
 
 import {RootStateProvider} from '@code-dot-org/core/redux';
@@ -23,6 +23,15 @@ import {tile} from '../index';
 import {useProgression} from '../progressionContext';
 import {ProgressionProvider} from '../ProgressionProvider';
 import type {TileId} from '../types';
+
+// The drawn block under an unlock injects a real Blockly workspace, which
+// needs a real browser — jsdom cannot parse the stylesheet Blockly writes.
+// Stubbed here for the reason `__tests__/App` stubs the block editor; the
+// preview is exercised where it can be, in `BlockPreview.test`.
+vi.mock('../BlockPreview', () => ({
+  BlockPreview: () => null,
+  blockForRule: () => undefined,
+}));
 
 const Opener = ({focus}: {focus?: TileId}) => {
   const {openTree} = useProgression();
