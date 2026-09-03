@@ -3,79 +3,62 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Welcome to the Neighborhood
+<h1>Welcome to the Neighborhood</h1>
+<img src="https://images.code.org/b448b13c66c9f0104a8a62e50340df88-image-1741198407647.png" alt="Neighborhood IDE scene with a taxi and donut truck" width="180px" style="border-radius:20px; float:right; margin: 0 0 10px 20px;">
+<br><br>
+<p>The Neighborhood IDE provides an engaging, visual approach to learning programming by allowing users to control a painter's character to navigate a neighborhood and create patterns.</p>
+<p>This interactive environment supports foundational coding skills while reinforcing computational thinking in an intuitive, exploratory way.</p>
+<p>It encourages creativity and problem solving, making coding more enjoyable for learners of all levels.</p>
+<div style="clear:both;"></div>
 
-<img src="https://images.code.org/b448b13c66c9f0104a8a62e50340df88-image-1741198407647.png" alt="neighborhood ide scene with taxi and donut truck" width="180px" style="border-radius:20px; float:right; margin: 0 20px 10px 0px;">
+<h2>Why this approach works</h2>
 
-
-
-The Neighborhood IDE provides an engaging, visual approach to learning programming by allowing users to control a painter's character to navigate a neighborhood and create patterns.
-
-This interactive environment supports foundational coding skills while reinforcing computational thinking in an intuitive, exploratory way.
-
-It encourages creativity and problem-solving, making coding more enjoyable for learners of all levels.
-
-<br>
-
-
-
-## Why this approach works
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 16px; font-weight: bold;">👁️ Visual and Immediate Feedback </summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-<p style="font-size: 16px;"> Seeing the painter move and create patterns helps learners quickly connect code to outcomes, reinforcing cause-and-effect relationships in programming.
-</p></div>
+<details style="background-color: #F7F7FB; border: 1px solid #E4E2F8; border-radius: 10px; padding: 12px 16px; margin-bottom: 10px;">
+<summary style="cursor: pointer; font-weight: bold; color: #1F1976; font-size: 16px; display: flex; align-items: center; gap: 10px;"><span style="display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; background-color: #4C42CF; color: #FFFFFF; font-size: 14px; flex-shrink:0;">1</span>Visual and Immediate Feedback</summary>
+<div style="margin-top: 12px; margin-left: 36px;">
+<p>Seeing the painter move and create patterns helps learners quickly connect code to outcomes, reinforcing cause and effect relationships in programming.</p>
+</div>
 </details>
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 16px; font-weight: bold;">⚖️ Low Barrier to Entry</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-<p style="font-size: 16px;"> The simple text commands make it accessible for beginners, reducing cognitive load while building confidence.
-</p></div>
+<details style="background-color: #F7F7FB; border: 1px solid #E4E2F8; border-radius: 10px; padding: 12px 16px; margin-bottom: 10px;">
+<summary style="cursor: pointer; font-weight: bold; color: #1F1976; font-size: 16px; display: flex; align-items: center; gap: 10px;"><span style="display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; background-color: #4C42CF; color: #FFFFFF; font-size: 14px; flex-shrink:0;">2</span>Low Barrier to Entry</summary>
+<div style="margin-top: 12px; margin-left: 36px;">
+<p>The simple text commands make it accessible for beginners, reducing cognitive load while building confidence.</p>
+</div>
 </details>
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 16px; font-weight: bold;">🧠 Supports Computational Thinking</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-<p style="font-size: 16px;">Concepts like sequencing, loops, and conditionals are introduced naturally as students direct the painter’s movement and actions.
-</p></div>
+<details style="background-color: #F7F7FB; border: 1px solid #E4E2F8; border-radius: 10px; padding: 12px 16px; margin-bottom: 10px;">
+<summary style="cursor: pointer; font-weight: bold; color: #1F1976; font-size: 16px; display: flex; align-items: center; gap: 10px;"><span style="display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; background-color: #4C42CF; color: #FFFFFF; font-size: 14px; flex-shrink:0;">3</span>Supports Computational Thinking</summary>
+<div style="margin-top: 12px; margin-left: 36px;">
+<p>Concepts like sequencing, loops, and conditionals are introduced naturally as students direct the painter's movement and actions.</p>
+</div>
 </details>
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 16px; font-weight: bold;">🎨 Creativity and Engagement </summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-<p style="font-size: 16px;"> Painting patterns and exploring the neighborhood make coding feel playful, promoting experimentation and problem-solving.
-</p></div>
+<details style="background-color: #F7F7FB; border: 1px solid #E4E2F8; border-radius: 10px; padding: 12px 16px; margin-bottom: 10px;">
+<summary style="cursor: pointer; font-weight: bold; color: #1F1976; font-size: 16px; display: flex; align-items: center; gap: 10px;"><span style="display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; background-color: #4C42CF; color: #FFFFFF; font-size: 14px; flex-shrink:0;">4</span>Creativity and Engagement</summary>
+<div style="margin-top: 12px; margin-left: 36px;">
+<p>Painting patterns and exploring the neighborhood make coding feel playful, promoting experimentation and problem solving.</p>
+</div>
 </details>
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 16px; font-weight: bold;">🌉 Bridges to More Complex Coding </summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-<p style="font-size: 16px;">  The structured yet flexible environment helps students transition from basic commands to more advanced programming concepts over time.
-</p></div>
+<details style="background-color: #F7F7FB; border: 1px solid #E4E2F8; border-radius: 10px; padding: 12px 16px; margin-bottom: 10px;">
+<summary style="cursor: pointer; font-weight: bold; color: #1F1976; font-size: 16px; display: flex; align-items: center; gap: 10px;"><span style="display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; background-color: #4C42CF; color: #FFFFFF; font-size: 14px; flex-shrink:0;">5</span>Bridges to More Complex Coding</summary>
+<div style="margin-top: 12px; margin-left: 36px;">
+<p>The structured yet flexible environment helps students transition from basic commands to more advanced programming concepts over time.</p>
+</div>
 </details>
 
----
+<hr>
 
 <div style="display: flex; align-items: center; gap: 20px; width: 95%; margin: 20px auto;">
- 
-    <img src="https://images.code.org/98110267b6c3ee2f93700b03b95d940b-image-1741026340788.png" 
-         alt="bargraph and data icon" 
-         style="border-radius: 10px; width: 15%; height: auto;">
-
-<div style="background-color: #B7E0E5; color: #000000; padding: 15px; border-radius: 10px; width: 85%;">
-        <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
-            While the neighborhood-themed activity provides a visual and engaging way to explore data types, we recognize that it may not be fully compatible with screen readers.<br><br> To ensure all students can participate meaningfully, an alternative lesson using Python Lab is available for those with accessibility needs. You can find these lesson by scrolling to the bottom of the unit to the <b>Alternative Level Progressions (console)</b>. Simply assign the designated students the alternative version. 
-        </p>
-    </div>
+  <img src="https://images.code.org/98110267b6c3ee2f93700b03b95d940b-image-1741026340788.png" alt="Bar graph and data icon" style="border-radius: 10px; width: 15%; height: auto;">
+  <div style="background-color: #D5EFFF; color: #06338D; padding: 15px 20px; border-radius: 10px; width: 85%;">
+    <p>While the neighborhood themed activity provides a visual and engaging way to explore data types, we recognize that it may not be fully compatible with screen readers.</p>
+    <p style="margin-top: 10px;">To ensure all students can participate meaningfully, an alternative lesson using Python Lab is available for those with accessibility needs. You can find these lessons by scrolling to the bottom of the unit to the <b>Alternative Level Progressions (console)</b>. Simply assign the designated students the alternative version.</p>
+  </div>
 </div>
 
-<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ Check out the level progressions and alternative progressions in the <a href='https://studio.code.org/courses/artificial-intelligence-foundations-2025' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>unit plan</a>.
-</p>
-
-
-
-
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+<p>➡️ Check out the level progressions and alternative progressions in the <a href="https://studio.code.org/courses/artificial-intelligence-foundations-2025" target="_blank" rel="noopener noreferrer" style="font-weight:bold;">unit plan</a>.</p>
+</div>
 MARKDOWN

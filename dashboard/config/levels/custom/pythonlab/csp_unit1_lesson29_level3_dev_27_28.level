@@ -1,0 +1,54 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-09-02T16:26:14.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "mini_app": "theater",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildPython",
+        "documentation",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "long_instructions": "## Lighting Designer\r\n\r\nMake the spotlight use a different color each time the program runs.\r\n\r\n1. Review the code and ask AI Tutor how `set_fill_color()` and `Color()` work.\r\n2. Create variables for red, green, and blue.\r\n3. Use `randint()` to store a random value in each variable. Each color value can be from 0 to 255. \r\n4. Update the spotlight color command to use your variables.\r\n5. Run the program several times and observe what changes.",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from theater import *\nfrom random import randint\n\n# Background\nset_fill_color(\"black\")\ndraw_rectangle(0, 0, 400, 400)\n\n# Sparkling light beam\nset_fill_color(Color(255, 0, 255))\ndraw_shape([200, 155, 90, 330, 310, 330], True)\n\n\n# Disco ball string\nset_stroke_color(\"white\")\nset_stroke_width(2)\ndraw_line(200, 0, 200, 45)\n\n# Disco ball\nset_fill_color(\"silver\")\ndraw_ellipse(145, 45, 110, 110)\n\n# Disco ball mirror tiles\nset_stroke_color(\"white\")\nset_stroke_width(1)\n\n# Vertical tile lines\ndraw_line(170, 55, 170, 146)\ndraw_line(200, 45, 200, 146)\ndraw_line(230, 55, 230, 146)\n\n# Horizontal tile lines\ndraw_line(150, 80, 250, 80)\ndraw_line(145, 110, 255, 110)\ndraw_line(159, 140, 239, 140)\n\n# Dance floor\nset_fill_color(\"purple\")\ndraw_rectangle(0, 330, 400, 70)\n\n# Sparkles\nset_text_color(\"white\")\nset_text_height(50)\ndraw_text(\"*\", 95, 95)\ndraw_text(\"*\", 280, 85)\ndraw_text(\"*\", 90, 205)\ndraw_text(\"*\", 300, 220)\n\n\n# Music notes\nset_text_color(\"aqua\")\nset_text_height(28)\ndraw_text(\"♪\", 55, 210)\ndraw_text(\"♫\", 330, 190)\n\n# Title\nset_text_color(\"white\")\nset_text_height(28)\ndraw_text(\"Disco Lights\", 115, 385)\n\n# Sound\nplay_note_and_pause(72, 0.25)\nplay_note_and_pause(79, 0.25)\n\nplay()",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nVGXT7jyo\n",
+    "display_name": "Lighting Designer",
+    "bubble_choice_description": "Make the spotlight use a different color each time the program runs.",
+    "thumbnail_url": "https://images.code.org/df335c8af678b02233ec841528af1b6f-6d0693e4-e4c7-454b-83be-9cbe5977f8f3.gif"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-02T16:26:14.817+00:00\",\"changed\":[\"cloned from \\\"csp_unit1_lesson29_level2_dev_27_28\\\"\"],\"cloned_from\":\"csp_unit1_lesson29_level2_dev_27_28\"},{\"changed_at\":\"2026-09-02 16:32:42 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 16:34:21 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 16:56:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 16:58:15 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 22:44:08 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 22:44:12 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Pythonlab>

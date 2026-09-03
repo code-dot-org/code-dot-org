@@ -1,5 +1,6 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
+import {stripAnsiSequences} from '@codebridge/Console/MessageHelpers';
 import {
   DEFAULT_FOLDER_ID,
   MAZE_FILE_NAME,
@@ -80,11 +81,20 @@ const NeighborhoodPreview: React.FunctionComponent<
         .getConsoleManager()
         ?.writePartialLine(message);
 
+    // Terminal lines carry ANSI codes, and an image is an escape sequence
+    // wrapping its whole base64 payload.
+    const getConsoleLines = () =>
+      CodebridgeRegistry.getInstance()
+        .getConsoleManager()
+        ?.getTerminalLines()
+        .map(stripAnsiSequences) ?? [];
+
     const neighborhoodRef = new Neighborhood(
       onOutputMessage,
       onNewlineMessage,
       isRunning => dispatch(setIsRunning(isRunning)),
-      onPartialLineMessage
+      onPartialLineMessage,
+      getConsoleLines
     );
     CodebridgeRegistry.getInstance().setNeighborhood(neighborhoodRef);
     return neighborhoodRef;
