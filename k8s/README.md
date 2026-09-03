@@ -1,147 +1,103 @@
-# Build & Run code-dot-org under Kubernetes using skaffold
+# Run the Code.org backend under Kubernetes with Skaffold
 
-We use [skaffold](https://skaffold.dev/) to make local dev on kubernetes a lot easier. Skaffold
-allows us to use a single almost-identical toolchain to both do "docker-compose" style local
-dev (a little slower because our massive source tree is baked into the docker image), as well
-as deploy real production/test/etc instances to a k8s cluster.
+Skaffold builds and runs the ActiveJob worker with cluster-local MySQL, Redis,
+and MinIO. It does not run the dashboard web frontend. Add that workload only
+after the root `docker/` family defines and tests an image containing the
+frontend assets.
 
-This makes debugging your production infra setup really easy: its just like what you're running
-locally.
+Local Kubernetes and the deployed clusters use the same image family:
 
-## Setting up skaffold
-
-We recommend adding `export SKAFFOLD_CACHE_ARTIFACTS=false` to your `~/.zprofile` or `~/.zshrc`.
-Alternatively you can pass the `--cache-artifacts=false` flag to every skaffold invocation.
-
-Skaffold's caching feature doesn't work well with many small files, and actually adds time
-to builds instead of saving them.
-
-## Running dashboard using skaffold
-
-### First time setup
-
-We recommend starting with Docker Desktop to run Kubernetes. If at some point you'd like to switch
-to a fully open source toolchain, try (minikube)[https://minikube.sigs.k8s.io/].
-
-#### Docker Desktop
-
-1. [Install Docker Desktop](https://docs.docker.com/get-started/get-docker/)
-   1. Alternatively: `brew install --cask docker`
-1. Docker Desktop Settings:
-   1. [Turn on Kubernetes](https://docs.docker.com/desktop/features/kubernetes/#install-and-turn-on-kubernetes)
-   1. If you installed docker before 2025: [enable the containerd image store](https://docs.docker.com/desktop/containerd/#enable-the-containerd-image-store)
-   1. Set Resources->Disk Space to at least 100GB (!!!)
-1. (Optional) Download [Headlamp](https://headlamp.dev/) to watch as k8s resources are created, view logs, etc.
-
-#### Seed DB and S3
-
-From code-dot-org/ run:
-```
-skaffold dev --trigger=manual -p dashboard -p setup-db -p setup-s3
+```text
+cdo-base -> cdo-build -> cdo-deps -> cdo-rails
 ```
 
-NOTE: this command **will not exit automatically** when complete, and will take 30+ minutes. 
-When you see the output: `[setup-db] setup-db COMPLETE`, press Ctrl-C to exit,
-and move on to the [next step](#run-dashboard). 
+The Dockerfiles and their contracts live under [`docker/`](../docker/README.md).
+Skaffold only describes how to build that family and deploy `cdo-rails`.
+Before building, it fetches any missing Git LFS locale files required by that
+image.
 
-Alternatively, you can try dashboard before you ctrl-c: http://localhost-studio.code.org:13000
+## Prerequisites
 
-<details>
-  <summary>What is it doing?</summary>
-Your first skaffold run will:
-  1. Build the docker images (20 minutes on an M2)
-  1. Then it will run K8S jobs:
-     1. setup-db: runs `rake dasboard:setup_db` to seed your DB (25 minutes on an M2)
-     1. setup-s3: create s3 buckets in minio (16 seconds on an M2)
-</details>
+Docker Desktop is the supported local Kubernetes provider.
 
-### Run dashboard
+1. Install Docker Desktop and enable Kubernetes.
+2. For Docker Desktop installations from before 2025, enable the containerd
+   image store.
+3. Give Docker at least 100 GB of disk space.
+4. Optionally install Headlamp, k9s, or the VS Code Kubernetes extension.
 
-Once setup is done, the command to start dashboard is:
-```
-skaffold dev -p dashboard
-```
+Set `SKAFFOLD_CACHE_ARTIFACTS=false` in your shell environment, or pass
+`--cache-artifacts=false` to each command. Skaffold's artifact cache adds more
+filesystem scanning than it saves for this repository; Docker's layer cache
+still applies.
 
-(Bare `skaffold dev` deploys the backend-only base — the ActiveJob worker
-and cluster services, no frontend. See "Backend-only mode" below.)
+## Initialize local services
 
-Then open: http://localhost-studio.code.org:13000
+From the repository root:
 
-## Debugging and monitoring dashboard
-
-We create a number of kubernetes resources in a stock dashboard dev setup, including mysql and redis
-deployments, a dashboard deployment (that can scale up if you set it to), configurationmaps, storage
-volumes, etc.
-
-To understand what's going on, the easiest way is to explore: poke around to view logs, watch statuses
-change, etc. While this can all be done using `kubectl`, the stock k8s tool which peeks and pokes yaml,
-it can be really really useful to use an interactive k8s browser.
-
-Recommendations:
-1. [Headlamp](https://headlamp.dev/) is a cross-platform open source k8s browser application in relatively early dev days.
-   I recommend starting here for k8s exploration purposes.
-1. The [VSCode Kubernetes Extension](https://marketplace.visualstudio.com/items?itemName=ms-kubernetes-tools.vscode-kubernetes-tools) is top-notch.
-1. [k9s](https://k9scli.io/) is great if you want a keyboard navigable curses-style CLI.
-
-## Bootstraping a prod-like codeai-k8s kubernetes cluster on EKS
-
-Normally, you'll not need to create a new cluster, you'll deploy to an existing cluster or a local
-kubernetes cluster. But if you're starting from scratch (e.g., new org, disaster, curiosity, etc),
-see: [k8s-gitops/bootstrap/codeai-k8s/README.md](https://github.com/code-dot-org/k8s-gitops/blob/main/bootstrap/codeai-k8s/README.md)
-in the [k8s-gitops repo](https://github.com/code-dot-org/k8s-gitops).
-
-Conventionally, the k8s-gitops repo will be checked out at ../k8s-gitops. 
-
-Commits to the main branch of k8s-gitops will be automatically synced to the live cluster by ArgoCD
-in approximately 3 minutes. See: [k8s-gitops/README.md](https://github.com/code-dot-org/k8s-gitops/blob/main/README.md)
-to learn more.
-
-## Useful dev commands
-
-### Skaffold commands
-
-Skaffold is configured by [skaffold.yaml](../skaffold.yaml) ([api docs](https://skaffold.dev/docs/references/yaml/)).
-A particularly useful page is [skaffold's CLI docs](https://skaffold.dev/docs/references/cli/).
-
-Here's a quick overview of the 4 most useful commands, run from the repo root:
-- `skaffold build` to build the docker images, this will also happen automatically when you run other skaffold commands, if needed.
-- `skaffold dev -p dashboard` run dashboard in "dev mode", this will tail log output to the console, and when you ctrl-c to quit, the app will be uninstalled from the cluster automatically. Bare `skaffold dev` runs the backend-only base instead.
-- `skaffold run -p dashboard` deploy dashboard to the k8s cluster as a standalone app.
-- `skaffold dev -p ________`: -p activates a skaffold profile, which can modify skaffold behavior (like running a job, or switching to a more production-like configuration), see [profiles: in skaffold.yaml](../skaffold.yaml) for some of the profiles.
-
-### Backend-only mode (the default)
-
-The base skaffold config is a backend-only stack: the ActiveJob worker and
-cluster services, no dashboard frontend and no frontend asset build. Bare
-`skaffold dev` gives you exactly that; every additional layer is an
-explicit profile (`-p dashboard` for the full app):
-
-```
-skaffold dev --trigger=manual -p setup-db-minimal   # create/migrate the DB (no curriculum seed)
-skaffold dev                                        # run the ActiveJob worker
+```sh
+skaffold dev --trigger=manual -p setup-db-minimal -p setup-s3
 ```
 
-### Other Commands
+This builds the image family, initializes a new database from
+`dashboard/db/schema.rb`, and creates the standard MinIO buckets. On later runs,
+the database setup skips a database that already matches that schema. It fails
+without changing a nonempty database in any other state. The command stays
+attached after both jobs finish. Stop it with Ctrl-C after `setup-db-minimal
+COMPLETE` and the MinIO setup job both complete. Skaffold replaces these
+one-shot Jobs before each deployment because Kubernetes does not permit
+changing an existing Job's pod template.
 
-From the repo root:
-- `./k8s/bin/shell` will shell you into the current dashboard kubernetes container, if you are running one (i.e. `skaffold dev`)
-- `./k8s/bin/bundle_exec` lets you run one-liners under a bundle exec, e.g. `k8s/bin/bundle_exec irb`
-- `./k8s/bin/rake` lets you run rake commands, e.g. `k8s/bin/rake build`
-- `./skaffold run -p development` or `skaffold run -p production`: deploy dashboard to the k8s cluster, unlike `skaffold dev` these will be deployed permanently, and you'll have to watch the cluster for log output, etc.
-- You can stack skaffold profiles, so e.g. you could do `skaffold run -p production,seed` to do a seed against the production configuration.
+`cdo-rails` does not contain migration history or curriculum seed inputs. The
+setup profile therefore initializes a fresh database; it cannot migrate or
+seed an existing one. Recreate the local MySQL volume when the checked-in schema
+changes. A future migration or seed job must be a separate member of the root
+Docker image family.
 
-## Architecture Notes
+The MySQL volume and its Kubernetes password survive Skaffold cleanup. Helm
+reuses that password even when another worktree has a different generated
+`cdo-local-secrets.env`. To discard the local database and start over, stop
+Skaffold and run:
 
-We use helm as our kubernetes packaging approach, helm charts can be found in `k8s/helm`.
+```sh
+kubectl delete pvc mysql-data-cdo-mysql-0
+kubectl delete secret cdo-local-secrets
+rm cdo-local-secrets.env
+```
 
-Skaffold is configured by `skaffold.yaml` in the root folder.
+The next `skaffold dev` generates one password for the new Secret and volume.
+These commands permanently delete the local Kubernetes database.
 
-This setup builds "full docker images", including all the source code inside the image. This setup
-is good because it means production === development: you're running exactly the same image, and
-the image is all you need to spin up an instance. The downside is that it can get a little slow
-because we have such a giant repo. As a result, this docker container currently removes a huge
-amount of stuff, including pegasus, i18n locales, etc.
+## Run the worker
 
-Dockerfiles are found in `k8s/docker/*.dockerfile`, note the .dockerignore files that are used to shape
-what's included in each image. The key issue is not to be sending 20GBs to the docker daemon when
-you build, that takes foooooorever and then each `skaffold dev` suddenly takes 2minutes.
+```sh
+skaffold dev
+```
+
+Skaffold tails logs and removes its resources when interrupted. It syncs
+matching source changes into the worker container and restarts the process.
+
+Useful commands:
+
+- `skaffold build` builds the root image family without deploying it.
+- `skaffold run` deploys the backend without attaching a development loop.
+- `k8s/bin/shell` opens `/bin/sh` in the ActiveJob worker.
+- `k8s/bin/bundle_exec irb` runs a command through the locked bundle.
+- `k8s/bin/rake TASK` runs the locked Rake executable.
+
+The root [`skaffold.yaml`](../skaffold.yaml) deploys the Helm chart. The sibling
+[`k8s/kustomize/skaffold.yaml`](kustomize/skaffold.yaml) exists while Helm and
+Kustomize parity is under evaluation; keep their build graphs equal.
+
+## Non-local clusters
+
+Argo CD and Kargo configuration lives in the
+[`k8s-gitops`](https://github.com/code-dot-org/k8s-gitops) repository, normally
+checked out beside this one. Kargo watches `ghcr.io/code-dot-org/cdo-rails` and
+writes immutable image digests into the deployment values files.
+
+See the
+[`k8s-gitops` bootstrap guide](https://github.com/code-dot-org/k8s-gitops/blob/main/bootstrap/codeai-k8s/README.md)
+for cluster creation and the
+[`k8s-gitops` README](https://github.com/code-dot-org/k8s-gitops/blob/main/README.md)
+for Argo CD deployment structure.
