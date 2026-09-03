@@ -114,9 +114,9 @@ export interface ExemplarOptions {
   promptTag: PromptTag;
 }
 
-// Teacher-facing exemplar pass shared by the Codebridge labs. Callers
-// must treat failures as non-fatal: the student-facing level is already
-// saved by the time this runs.
+// Teacher-facing exemplar pass shared by the Codebridge labs. Failure
+// is survivable by design: the student-facing level is already saved
+// before this runs.
 export async function generateCodebridgeExemplar(
   ctx: LevelContext,
   starterFiles: SourceFile[],

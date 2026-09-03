@@ -10,20 +10,12 @@ export interface CreatedLevel {
   reused: boolean;
 }
 
-// Look up a level by name first; fall back to POST /levels if it doesn't
-// exist. Looking up first avoids the noisy 406 "name has already been
-// taken" round-trip that the levelbuilder regenerates an existing level
-// would otherwise produce. The 406 fallback is still here for the rare
-// race where another tab creates the level between our find and our POST.
-//
-// POST passes `do_not_redirect=true` so the controller returns the created
-// Level record as JSON instead of a redirect URL.
-//
-// `dslText` is required for DSL-defined lab types (Multi / Match), whose
-// create path on the Rails side parses the DSL text to extract every
-// other field — name included. Passing it on create avoids a second
-// round-trip; for the reused-existing case the caller follows up with
-// updateLevelProperty(id, 'dsl_text', ...) to overwrite.
+// Find-by-name first, POST /levels as fallback: regeneration would
+// otherwise 406 on "name has already been taken" every time. The 406
+// branch covers the race where another tab creates the level between
+// find and POST. `do_not_redirect=true` makes the controller return the
+// created Level as JSON. `dslText` is required for DSL-defined types,
+// whose create path parses every field — name included — out of it.
 export async function createOrFindLevel(
   type: LabType,
   name: string,
@@ -187,11 +179,9 @@ export async function uploadLevelAsset(
 }
 
 // PUT /lessons/:id — replace the lesson's activity tree wholesale, and
-// optionally update the persisted /generate outline at the same time. The
-// caller is responsible for building a complete activities array (including
-// any new script_levels in their final positions); this function just
-// serializes it and posts. The server's update_activities/update_activity_sections
-// pipeline does the diff.
+// optionally update the persisted /generate outline at the same time.
+// Expects a complete activities array (new script_levels already in their
+// final positions); the server pipeline does the diff.
 export async function saveLessonActivities(
   lessonId: number,
   activities: SerializedActivity[],

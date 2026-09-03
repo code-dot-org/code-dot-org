@@ -10,18 +10,10 @@ import {
   PROMPT_TAGS,
 } from '@cdo/apps/levelbuilder/curriculum-generator/ai/shared';
 
-// Multi and Match levels are DSLDefined: their canonical source is a
-// `.multi` or `.match` text file under dashboard/config/scripts, parsed
-// by the Multi/Match DSL parser. The Rails create path REQUIRES the
-// dsl_text on POST; the parser extracts the level name from a `name '...'`
-// line in the text.
-//
-// Both generators run the same stub policy as Web Lab 2 — questions,
-// answers, and prompts are deliberately terse placeholders the
-// curriculum author will rewrite into real assessment prose later. We
-// still produce structurally complete records (a `right` answer marked
-// correct, distinct distractors, paired Q/A entries) so the level is
-// runnable from the day the generator finishes.
+// Multi and Match are DSLDefined: the Rails create path REQUIRES
+// dsl_text on POST, and the parser extracts the level name from it.
+// Content follows the stub policy, but structurally complete (one
+// correct answer, paired Q/A) so the level runs immediately.
 
 // ─── Multi (multiple-choice) ─────────────────────────────────────────
 

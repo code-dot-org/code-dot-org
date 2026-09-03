@@ -168,9 +168,8 @@ export async function generateWeblab2Exemplar(
 }
 
 // Template groups: multiple weblab2 members share one starter-source
-// level via project_template_level_name. The template sits outside the
-// activity tree; the curriculum author edits it via its edit URL,
-// surfaced in the Summary dialog.
+// level via project_template_level_name; the template sits outside the
+// activity tree.
 
 const weblabTemplateSchema = Output.object({
   schema: z.object({files: codebridgeFilesSchema}),

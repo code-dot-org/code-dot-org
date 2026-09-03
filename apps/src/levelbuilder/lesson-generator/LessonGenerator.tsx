@@ -70,10 +70,8 @@ import {
 import moduleStyles from './lesson-generator.module.scss';
 import sharedStyles from '../curriculum-generator/curriculum-generator.module.scss';
 
-// Display labels for the per-card Lab dropdown. `satisfies` keeps the
-// label literals narrow (handy if a caller ever wants them) while
-// still requiring every LabType to have an entry — adding a lab to
-// SUPPORTED_LAB_TYPES is a compile error here until the label lands.
+// Per-card Lab dropdown labels. `satisfies` makes a missing LabType
+// entry a compile error.
 const LAB_LABELS = {
   panels: 'Panels',
   weblab2: 'Web Lab 2',
@@ -485,13 +483,9 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     };
 
     // ─── Template-group pre-pass ────────────────────────────────────
-    // For each weblab2 templateGroup with ≥2 generating-non-existing
-    // members, generate ONE shared template level. The members in the
-    // per-spec loop below then carry only their own instructions +
-    // exemplar and point project_template_level_name at the template.
-    // Templates aren't placed in the activity tree — they live as
-    // standalone level records the levelbuilder edits via the Summary
-    // dialog's "Templates" section.
+    // Each weblab2 templateGroup with ≥2 members gets ONE shared template
+    // level, generated before the per-spec loop. Templates live outside
+    // the activity tree as standalone level records.
     interface ResolvedTemplate {
       templateName: string;
       files: {name: string; contents: string}[];
@@ -510,11 +504,9 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         groupCounts.set(groupId, (groupCounts.get(groupId) ?? 0) + 1);
       }
     }
-    // Trigger condition: at least one member of the group is being
-    // generated this run (whether brand-new or a regenerated existing
-    // level). Regenerating any group member rebuilds the shared template
-    // so a previously-failed template generation can be re-tried, and so
-    // the template stays in sync with edited member descriptions.
+    // Regenerating any group member rebuilds the shared template, so a
+    // failed template generation can be retried and the template tracks
+    // edited member descriptions.
     const groupsToGenerate = new Set<string>();
     for (const spec of levelSpecs) {
       const groupId = spec.templateGroup?.trim();
@@ -625,12 +617,9 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
       let generatedOutput: PriorOutput | undefined;
 
       try {
-        // Narrow the lesson-scope context to a LevelContext for this
-        // specific level. Hoisted out of the shouldGenerate branch so
-        // the DSL-defined types (multi/match) can run their AI before
-        // createOrFindLevel — the Rails create path REQUIRES dsl_text
-        // on POST. Outer-scope fields propagate via the spread;
-        // sibling-forward (precedingLevels) is fresh per call from the
+        // Built before createOrFindLevel because DSL-defined types must
+        // run their AI first — the Rails create path REQUIRES dsl_text
+        // on POST. precedingLevels is fresh per call from the
         // running priorEntries list.
         const levelCtx = {
           unitName: lesson.unitName,
@@ -826,14 +815,8 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
               sourcesForExemplar = result.files;
             }
 
-            // Exemplar pass: a second AI call produces a working solution
-            // with the same filenames as whatever this level shows the
-            // student (its own starter files standalone, or the shared
-            // template's files when template-backed). The teacher sees
-            // it via the showExemplarLink / exemplarSources path.
-            // Non-fatal: the student-facing level is already saved by
-            // this point, so a model error or transient API failure
-            // here only loses the teacher's solution view.
+            // Non-fatal: the student-facing level is already saved, so
+            // a failure here only loses the teacher's solution view.
             try {
               setStage('generating-exemplar');
               appendLog(`Generating exemplar for "${levelName}"…`);
@@ -949,10 +932,8 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
             );
             generatedOutput = {sketchlab: result};
           } else if (spec.labType === 'multi' && multiResult) {
-            // The DSL was either saved as part of the create POST above
-            // (fresh level) or PATCHed in the level.reused branch right
-            // after createOrFindLevel. All that's left here is the
-            // long_instructions stub for parity with the other labs.
+            // The DSL was already saved (create POST or reused-level
+            // PATCH); only the long_instructions stub remains.
             setStage('saving-properties');
             if (multiResult.longInstructions) {
               appendLog(`Saving instructions for "${levelName}"…`);

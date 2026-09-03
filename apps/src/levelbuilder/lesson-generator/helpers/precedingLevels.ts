@@ -219,11 +219,9 @@ function formatAssessmentSummary(
     .join('; ')}`;
 }
 
-// Render the running preceding-levels context as a plain-text block. Image
-// URLs and binary data are deliberately left out — only the text content
-// matters for continuity, and feeding image bytes to a text model is
-// pointless waste. Caller responsibility to skip emitting a heading when
-// this returns the empty string.
+// Render the running preceding-levels context as a plain-text block.
+// Image URLs and binary data are deliberately left out — only text
+// matters for continuity, and image bytes in a text prompt are waste.
 export function formatPrecedingLevels(entries: PriorEntry[]): string {
   if (entries.length === 0) return '';
   const blocks = entries.map(e => {
