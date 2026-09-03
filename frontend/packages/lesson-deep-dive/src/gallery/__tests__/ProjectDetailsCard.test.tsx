@@ -1,15 +1,7 @@
-import {
-  ChallengeResponseDetail,
-  ProjectDetailsCard,
-} from '@code-dot-org/lesson-deep-dive';
 import {render, screen} from '@testing-library/react';
-import '@testing-library/jest-dom';
-import React from 'react';
 
-// The package barrel is one chunk, so importing this component also loads
-// ChallengeGallery's `@code-dot-org/core/api` import, which Jest cannot
-// parse (ky is ESM-only). Nothing here uses it; an empty module suffices.
-jest.mock('@code-dot-org/core/api', () => ({__esModule: true}));
+import ProjectDetailsCard from '../ProjectDetailsCard';
+import {ChallengeResponseDetail} from '../types';
 
 const baseDetail: ChallengeResponseDetail = {
   id: 8,
@@ -53,18 +45,18 @@ describe('ProjectDetailsCard', () => {
           ],
         }}
         unitPosition={1}
-      />
+      />,
     );
 
     expect(screen.getByText('Unit 1, Lesson 3')).toBeInTheDocument();
     expect(
       ['Whiteboard', 'Audio', 'Text'].map(
-        label => screen.getByText(label).textContent
-      )
+        label => screen.getByText(label).textContent,
+      ),
     ).toEqual(['Whiteboard', 'Audio', 'Text']);
     expect(screen.getByText('Grace Hopper')).toBeInTheDocument();
     expect(
-      screen.getByText('Project Prompt: Draw a network.')
+      screen.getByText('Project Prompt: Draw a network.'),
     ).toBeInTheDocument();
   });
 
@@ -82,7 +74,7 @@ describe('ProjectDetailsCard', () => {
           ],
         }}
         unitPosition={1}
-      />
+      />,
     );
 
     expect(screen.getByText('Video Story')).toBeInTheDocument();

@@ -1,51 +1,22 @@
+import {fireEvent, render, screen, waitFor} from '@testing-library/react';
+import {type ComponentProps} from 'react';
+
 import {
   ApiClientProvider,
   createApiClient,
   type RequestOptions,
   type Transport,
 } from '@code-dot-org/core/api';
-import {
-  ChallengeResponse,
-  ChallengeResponseDetail,
-  GalleryUnit,
-  ProjectView,
-} from '@code-dot-org/lesson-deep-dive';
-import {fireEvent, render, screen, waitFor} from '@testing-library/react';
-import '@testing-library/jest-dom';
-import React from 'react';
 
-// The real module eagerly constructs a ky-backed DashboardApiClient singleton
-// at import time, which only ever ran under a bundler (webpack/Vite), never
-// Jest's CJS runtime; ky ships ESM-only and fails to load there. Standing in
-// a lightweight context-only mock avoids exercising that singleton entirely.
-jest.mock('@code-dot-org/core/api', () => {
-  const {createContext, createElement, useContext} = require('react');
-  const ApiClientContext = createContext(null);
-  return {
-    __esModule: true,
-    ApiClientProvider: ({
-      client,
-      children,
-    }: {
-      client: unknown;
-      children: unknown;
-    }) => createElement(ApiClientContext.Provider, {value: client}, children),
-    useApiClient: () => {
-      const client = useContext(ApiClientContext);
-      if (!client) {
-        throw new Error('useApiClient must be used within <ApiClientProvider>');
-      }
-      return client;
-    },
-    createApiClient: (transport: unknown) => ({transport}),
-  };
-});
+import {ChallengeResponse} from '../../types';
+import ProjectView from '../ProjectView';
+import {ChallengeResponseDetail, GalleryUnit} from '../types';
 
-const request = jest.fn();
+const request = vi.fn();
 const transport: Transport = {
   request,
-  requestBlob: jest.fn(),
-  requestWithMeta: jest.fn(),
+  requestBlob: vi.fn(),
+  requestWithMeta: vi.fn(),
 };
 const client = createApiClient(transport);
 
@@ -90,29 +61,27 @@ const versionOf = (id: number, created_at: string): ChallengeResponse => ({
 // detail, the list endpoint returns the given versions.
 const stubFetches = (
   detailResponse: ChallengeResponseDetail,
-  versions: ChallengeResponse[] = [detailResponse]
+  versions: ChallengeResponse[] = [detailResponse],
 ) => {
   request.mockImplementation(({url}: RequestOptions) =>
     url.startsWith('/challenge_responses?')
       ? Promise.resolve(versions)
-      : Promise.resolve(detailResponse)
+      : Promise.resolve(detailResponse),
   );
 };
 
-const renderView = (
-  props: Partial<React.ComponentProps<typeof ProjectView>> = {}
-) =>
+const renderView = (props: Partial<ComponentProps<typeof ProjectView>> = {}) =>
   render(
     <ApiClientProvider client={client}>
       <ProjectView
         responseId={8}
         units={units}
         galleryResponses={null}
-        onBack={jest.fn()}
-        onOpenProject={jest.fn()}
+        onBack={vi.fn()}
+        onOpenProject={vi.fn()}
         {...props}
       />
-    </ApiClientProvider>
+    </ApiClientProvider>,
   );
 
 describe('ProjectView', () => {
@@ -126,7 +95,7 @@ describe('ProjectView', () => {
     renderView();
 
     await waitFor(() =>
-      expect(screen.getByText('Grace Hopper')).toBeInTheDocument()
+      expect(screen.getByText('Grace Hopper')).toBeInTheDocument(),
     );
     expect(request).toHaveBeenCalledWith({
       method: 'GET',
@@ -136,16 +105,16 @@ describe('ProjectView', () => {
     // The stage and details card render from the fetched detail; their
     // contents are covered by ProjectStageTest and ProjectDetailsCardTest.
     expect(
-      screen.getByAltText("Grace Hopper's whiteboard project")
+      screen.getByAltText("Grace Hopper's whiteboard project"),
     ).toBeInTheDocument();
     expect(
-      screen.getByText('Project Prompt: Draw a network.')
+      screen.getByText('Project Prompt: Draw a network.'),
     ).toBeInTheDocument();
     expect(screen.getByText('Unit 1, Lesson 3')).toBeInTheDocument();
   });
 
   it("pages through the student's responses with the version switcher", async () => {
-    const onOpenProject = jest.fn();
+    const onOpenProject = vi.fn();
     stubFetches(detail, [
       versionOf(4, '2026-08-01T12:00:00Z'),
       versionOf(8, '2026-08-10T12:00:00Z'),
@@ -155,10 +124,10 @@ describe('ProjectView', () => {
 
     // The detail fetch renders first; the version list arrives after it.
     await waitFor(() =>
-      expect(screen.getByText('Grace Hopper')).toBeInTheDocument()
+      expect(screen.getByText('Grace Hopper')).toBeInTheDocument(),
     );
     await waitFor(() =>
-      expect(screen.getByText('Response #2')).toBeInTheDocument()
+      expect(screen.getByText('Response #2')).toBeInTheDocument(),
     );
     expect(request).toHaveBeenCalledWith({
       method: 'GET',
@@ -176,11 +145,11 @@ describe('ProjectView', () => {
     renderView();
 
     await waitFor(() =>
-      expect(screen.getByText('Respond again')).toBeInTheDocument()
+      expect(screen.getByText('Respond again')).toBeInTheDocument(),
     );
     expect(screen.getByText('Respond again')).toHaveAttribute(
       'href',
-      '/s/ai-1/lessons/3/tutor'
+      '/s/ai-1/lessons/3/tutor',
     );
     // Owners see the feedback panel, not the teacher assessment.
     expect(screen.getByText('Feedback')).toBeInTheDocument();
@@ -188,7 +157,7 @@ describe('ProjectView', () => {
   });
 
   it('lets a teacher page across the gallery projects', async () => {
-    const onOpenProject = jest.fn();
+    const onOpenProject = vi.fn();
     const teacherDetail = {...detail, viewer_role: 'teacher' as const};
     stubFetches(teacherDetail);
     const galleryResponses = [
@@ -218,7 +187,7 @@ describe('ProjectView', () => {
     renderView();
 
     await waitFor(() =>
-      expect(screen.getByText('Grace Hopper')).toBeInTheDocument()
+      expect(screen.getByText('Grace Hopper')).toBeInTheDocument(),
     );
     expect(screen.queryByText('Feedback')).not.toBeInTheDocument();
     expect(screen.queryByText('AI Assessment')).not.toBeInTheDocument();
@@ -232,8 +201,8 @@ describe('ProjectView', () => {
 
     await waitFor(() =>
       expect(
-        screen.getByText(/We couldn't load this project/)
-      ).toBeInTheDocument()
+        screen.getByText(/We couldn't load this project/),
+      ).toBeInTheDocument(),
     );
   });
 });

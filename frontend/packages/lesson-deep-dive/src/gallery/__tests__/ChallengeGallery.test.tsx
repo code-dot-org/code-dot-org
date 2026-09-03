@@ -1,58 +1,30 @@
+import {fireEvent, render, screen, waitFor} from '@testing-library/react';
+import {type ComponentProps} from 'react';
+
 import {
   ApiClientProvider,
   createApiClient,
   type RequestOptions,
   type Transport,
 } from '@code-dot-org/core/api';
-import {
-  ChallengeGallery,
-  ChallengeResponse,
-  TutorGalleryData,
-} from '@code-dot-org/lesson-deep-dive';
-import {fireEvent, render, screen, waitFor} from '@testing-library/react';
-import '@testing-library/jest-dom';
-import React from 'react';
 
-// The real module eagerly constructs a ky-backed DashboardApiClient singleton
-// at import time, which only ever ran under a bundler (webpack/Vite), never
-// Jest's CJS runtime; ky ships ESM-only and fails to load there. Standing in
-// a lightweight context-only mock avoids exercising that singleton entirely.
-jest.mock('@code-dot-org/core/api', () => {
-  const {createContext, createElement, useContext} = require('react');
-  const ApiClientContext = createContext(null);
-  return {
-    __esModule: true,
-    ApiClientProvider: ({
-      client,
-      children,
-    }: {
-      client: unknown;
-      children: unknown;
-    }) => createElement(ApiClientContext.Provider, {value: client}, children),
-    useApiClient: () => {
-      const client = useContext(ApiClientContext);
-      if (!client) {
-        throw new Error('useApiClient must be used within <ApiClientProvider>');
-      }
-      return client;
-    },
-    createApiClient: (transport: unknown) => ({transport}),
-  };
-});
+import {ChallengeResponse} from '../../types';
+import ChallengeGallery from '../ChallengeGallery';
+import {TutorGalleryData} from '../types';
 
-const request = jest.fn();
+const request = vi.fn();
 const transport: Transport = {
   request,
-  requestBlob: jest.fn(),
-  requestWithMeta: jest.fn(),
+  requestBlob: vi.fn(),
+  requestWithMeta: vi.fn(),
 };
 const client = createApiClient(transport);
 
-const renderGallery = (props: React.ComponentProps<typeof ChallengeGallery>) =>
+const renderGallery = (props: ComponentProps<typeof ChallengeGallery>) =>
   render(
     <ApiClientProvider client={client}>
       <ChallengeGallery {...props} />
-    </ApiClientProvider>
+    </ApiClientProvider>,
   );
 
 const galleryData: TutorGalleryData = {
@@ -113,10 +85,10 @@ const whiteboardResponse: ChallengeResponse = {
 // the unit_counts endpoint returns counts, everything else returns responses.
 const stubFetches = (
   responses: ChallengeResponse[],
-  counts: Record<string, number> = {}
+  counts: Record<string, number> = {},
 ) => {
   request.mockImplementation(({url}: RequestOptions) =>
-    Promise.resolve(url.includes('unit_counts') ? counts : responses)
+    Promise.resolve(url.includes('unit_counts') ? counts : responses),
   );
 };
 
@@ -134,7 +106,7 @@ describe('ChallengeGallery', () => {
     renderGallery({tutorGalleryData: galleryData});
 
     await waitFor(() =>
-      expect(screen.getByText('Ada Lovelace')).toBeInTheDocument()
+      expect(screen.getByText('Ada Lovelace')).toBeInTheDocument(),
     );
     expect(request).toHaveBeenCalledWith({
       method: 'GET',
@@ -169,14 +141,14 @@ describe('ChallengeGallery', () => {
     fireEvent.click(
       screen.getByRole('button', {
         name: /Unit 2: Foundations of AI Programming/,
-      })
+      }),
     );
 
     await waitFor(() =>
       expect(request).toHaveBeenCalledWith({
         method: 'GET',
         url: '/challenge_responses?unit_id=200&section_id=5',
-      })
+      }),
     );
   });
 
@@ -185,7 +157,7 @@ describe('ChallengeGallery', () => {
 
     renderGallery({tutorGalleryData: galleryData});
     await waitFor(() =>
-      expect(screen.getByText('Ada Lovelace')).toBeInTheDocument()
+      expect(screen.getByText('Ada Lovelace')).toBeInTheDocument(),
     );
 
     fireEvent.change(screen.getByDisplayValue('Most recent'), {
@@ -196,7 +168,7 @@ describe('ChallengeGallery', () => {
       expect(request).toHaveBeenCalledWith({
         method: 'GET',
         url: '/challenge_responses?unit_id=100&section_id=5&sort=oldest',
-      })
+      }),
     );
   });
 
@@ -205,7 +177,7 @@ describe('ChallengeGallery', () => {
 
     renderGallery({tutorGalleryData: galleryData});
     await waitFor(() =>
-      expect(screen.getByText('Ada Lovelace')).toBeInTheDocument()
+      expect(screen.getByText('Ada Lovelace')).toBeInTheDocument(),
     );
 
     fireEvent.change(screen.getByDisplayValue('Section 1 - CS Period 3'), {
@@ -216,7 +188,7 @@ describe('ChallengeGallery', () => {
       expect(request).toHaveBeenCalledWith({
         method: 'GET',
         url: '/challenge_responses?unit_id=100',
-      })
+      }),
     );
     expect(screen.getByText('My Projects')).toBeInTheDocument();
   });
@@ -230,7 +202,7 @@ describe('ChallengeGallery', () => {
       expect(request).toHaveBeenCalledWith({
         method: 'GET',
         url: '/challenge_responses?unit_id=100',
-      })
+      }),
     );
     expect(screen.getByText('My Projects')).toBeInTheDocument();
   });
@@ -242,8 +214,8 @@ describe('ChallengeGallery', () => {
 
     await waitFor(() =>
       expect(
-        screen.getByText('No projects have been submitted for this unit yet.')
-      ).toBeInTheDocument()
+        screen.getByText('No projects have been submitted for this unit yet.'),
+      ).toBeInTheDocument(),
     );
   });
 
@@ -254,8 +226,8 @@ describe('ChallengeGallery', () => {
 
     await waitFor(() =>
       expect(
-        screen.getByText(/We couldn't load the gallery/)
-      ).toBeInTheDocument()
+        screen.getByText(/We couldn't load the gallery/),
+      ).toBeInTheDocument(),
     );
   });
 
@@ -277,7 +249,7 @@ describe('ChallengeGallery', () => {
 
     renderGallery({tutorGalleryData: galleryData});
     await waitFor(() =>
-      expect(screen.getByText('Grace Hopper')).toBeInTheDocument()
+      expect(screen.getByText('Grace Hopper')).toBeInTheDocument(),
     );
 
     fireEvent.click(screen.getByRole('link', {name: 'Grace Hopper'}));
@@ -285,8 +257,8 @@ describe('ChallengeGallery', () => {
     expect(window.location.search).toBe('?project=8');
     await waitFor(() =>
       expect(
-        screen.getByText('Project Prompt: Draw a network.')
-      ).toBeInTheDocument()
+        screen.getByText('Project Prompt: Draw a network.'),
+      ).toBeInTheDocument(),
     );
     expect(request).toHaveBeenCalledWith({
       method: 'GET',
@@ -297,7 +269,7 @@ describe('ChallengeGallery', () => {
 
     expect(window.location.search).toBe('');
     await waitFor(() =>
-      expect(screen.getByText('Extension Activities')).toBeInTheDocument()
+      expect(screen.getByText('Extension Activities')).toBeInTheDocument(),
     );
   });
 });

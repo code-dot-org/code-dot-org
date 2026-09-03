@@ -1,15 +1,7 @@
-import {
-  AssessmentPanel,
-  ChallengeResponseDetail,
-} from '@code-dot-org/lesson-deep-dive';
 import {render, screen} from '@testing-library/react';
-import '@testing-library/jest-dom';
-import React from 'react';
 
-// The package barrel is one chunk, so importing this component also loads
-// ChallengeGallery's `@code-dot-org/core/api` import, which Jest cannot
-// parse (ky is ESM-only). Nothing here uses it; an empty module suffices.
-jest.mock('@code-dot-org/core/api', () => ({__esModule: true}));
+import AssessmentPanel from '../AssessmentPanel';
+import {ChallengeResponseDetail} from '../types';
 
 const baseDetail: ChallengeResponseDetail = {
   id: 8,
@@ -55,7 +47,7 @@ describe('AssessmentPanel', () => {
 
     expect(screen.getByText('Feedback')).toBeInTheDocument();
     expect(
-      screen.getByText('Great explanation of the network!')
+      screen.getByText('Great explanation of the network!'),
     ).toBeInTheDocument();
     expect(screen.queryByText('Rubric')).not.toBeInTheDocument();
     expect(screen.queryByText('AI Assigned Score')).not.toBeInTheDocument();
@@ -63,7 +55,7 @@ describe('AssessmentPanel', () => {
 
   it('shows a placeholder while the feedback is pending', () => {
     render(
-      <AssessmentPanel detail={{...baseDetail, student_feedback: null}} />
+      <AssessmentPanel detail={{...baseDetail, student_feedback: null}} />,
     );
 
     expect(screen.getByText('Feedback isn’t ready yet.')).toBeInTheDocument();
@@ -78,7 +70,7 @@ describe('AssessmentPanel', () => {
 
     // Levels are listed highest first, and only the assigned one is tagged.
     expect(
-      screen.getAllByText(/^Level \d$/).map(node => node.textContent)
+      screen.getAllByText(/^Level \d$/).map(node => node.textContent),
     ).toEqual(['Level 3', 'Level 2', 'Level 1', 'Level 0']);
     expect(screen.getByText('AI Assigned Score')).toBeInTheDocument();
     expect(screen.getByText('Answer is correct')).toBeInTheDocument();
