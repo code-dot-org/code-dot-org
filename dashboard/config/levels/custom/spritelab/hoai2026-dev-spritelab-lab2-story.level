@@ -30,7 +30,7 @@
     "guide_mode": "instructions",
     "guide_steps": [
       {
-        "text": "**Code your story scene.** Use the blocks to set your background, add your character, and make them speak or move. Your changes run live in the preview. When it feels right, click **Play**."
+        "text": "**Code your story scene.** Use the blocks to set your background, add your character, and make them speak. Your changes run live in the preview. When it feels right, click **Play**."
       },
       {
         "text": "**That's your story!** Watch it play, then continue when you're ready.",
@@ -40,7 +40,7 @@
         }
       }
     ],
-    "long_instructions": "# Code your story scene\nUse the blocks to set your background, add your character, and make them speak or move. Your changes run live in the preview.",
+    "long_instructions": "# Code your story scene\nUse the blocks to set your background, add your character, and make them speak. Your changes run live in the preview.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
