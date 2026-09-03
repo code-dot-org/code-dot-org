@@ -57,14 +57,9 @@ export interface CompletedChatMessage extends BaseChatMessage {
   /** Profanity classification feedback given by the teacher. If undefined, the teacher took no action or undid their action. */
   teacherFeedback?: FeedbackValue;
   /**
-   * The AI gateway worker's detached signature over the turn, carried by both
-   * the user and assistant messages of that turn. It holds a digest of the
-   * prompt the worker received and a digest of the response it produced, so
-   * log_chat_event can check each message against the matching one.
-   *
-   * Relayed to log_chat_event, which verifies it before admitting the message to
-   * history and then drops it -- it is never stored. Absent on the legacy Rails
-   * path, which has no worker to sign, and when the model was never called.
+   * One signature per turn, carried by both of its messages: it holds a digest
+   * of the prompt and one of the response, so each is checked against its own.
+   * Verified by log_chat_event and then dropped; never stored.
    */
   responseSignature?: string;
   /**

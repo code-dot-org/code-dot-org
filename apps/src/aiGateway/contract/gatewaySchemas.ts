@@ -247,24 +247,14 @@ export const GatewayTranscribeResponseV1Schema = z.object({
 // ---------------------------------------------------------------------------
 // Schema version 2
 // ---------------------------------------------------------------------------
-//
-// V2 adds `responseSignature` to the generateText response. Nothing else
-// changes, but a version covers the whole API rather than one endpoint: the
-// worker calls resolveVersion() once per request and then looks up a serializer
-// by that version, so an endpoint left without a V2 entry would be an undefined
-// lookup for any V2 client. The unchanged shapes are therefore re-exported
-// under V2 rather than omitted.
+// A version covers the whole API, not one endpoint: the worker resolves one
+// version per request and looks up a serializer by it, so an endpoint with no
+// V2 entry would be an undefined lookup. Unchanged shapes are re-exported.
 
 export const GatewayGenerateTextResponseV2Schema =
   GatewayGenerateTextResponseV1Schema.extend({
-    // Detached signature over the response: a compact JWS (RS256) signed with
-    // the worker's private key, carrying digests and binding claims only. The
-    // response itself travels unchanged in `text` above, so it stays
-    // independently verifiable -- dashboard recomputes the digest from what the
-    // browser submits and compares. See dashboard's AichatResponseSignature.
-    //
-    // Optional because the worker returns no signature when it has no signing
-    // key configured, and none is available for the finish reasons that
+    // Detached JWS over a digest of `text`; see AichatResponseSignature.
+    // Optional: absent with no signing key, and for the finish reasons that
     // withhold `text`.
     responseSignature: z.string().optional(),
   });
@@ -344,17 +334,11 @@ export const ALL_GATEWAY_SCHEMA_GROUPS: Record<
 export const CURRENT_SCHEMA_VERSION = '2' as const;
 
 // ---------------------------------------------------------------------------
-// Current-version response schemas — what the client should parse replies with.
-//
-// The client asks for CURRENT_SCHEMA_VERSION and must validate against the
-// matching schema. Parsing with an older one silently drops the newer fields,
-// because z.object() strips unknown keys and callers use the parsed result.
-//
-// These are separate exports rather than a lookup in the maps above so the
-// inferred types survive: the maps are typed z.ZodTypeAny, which erases them.
-// gatewaySchemaVersionTest.ts asserts each alias is the same schema the map
-// holds for CURRENT_SCHEMA_VERSION, so the two cannot drift.
+// Current-version response schemas — what the client parses replies with.
 // ---------------------------------------------------------------------------
+// Parsing with an older version silently drops the newer fields: z.object()
+// strips unknown keys and callers use the parsed result. Separate exports
+// rather than a map lookup, which would erase the inferred types.
 
 export const CurrentGatewayGenerateTextResponseSchema =
   GatewayGenerateTextResponseV2Schema;

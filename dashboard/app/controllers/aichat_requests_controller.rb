@@ -95,13 +95,8 @@ class AichatRequestsController < ApplicationController
 
   # POST /aichat_requests
   # -----------------------
-  # Create an AichatRequest row for a completion the client will carry out itself
-  # against the AI gateway worker.
-  #
-  # The row exists only because aichat_events has a foreign key to it. No job
-  # runs, and nothing here reads the conversation back, so the messages are not
-  # stored -- see build_request_attributes. The worker's signature, not this row,
-  # is what AichatEventsController checks a gateway turn against.
+  # The row exists only to satisfy the aichat_events foreign key: no job runs and
+  # nothing reads the conversation back, so the messages are not stored.
   def create
     unless chat_completion_has_required_params?
       return render status: :bad_request, json: {}

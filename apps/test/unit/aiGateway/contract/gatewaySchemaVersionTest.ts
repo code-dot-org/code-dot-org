@@ -1,17 +1,11 @@
 /**
- * Guards the wiring around schema versions, as distinct from the shapes
- * themselves (gatewaySchemaContractTest.ts covers those).
+ * Guards the wiring around schema versions; gatewaySchemaContractTest.ts covers
+ * the shapes themselves.
  *
- * Two failure modes motivate these:
- *
- *   - A version added to one endpoint but not another. The worker resolves one
- *     version per request and then looks up a serializer by it, so a gap is an
- *     undefined lookup at runtime for whichever endpoint was missed.
- *
- *   - The client parsing replies with a schema older than the version it asked
- *     for. z.object() strips unknown keys and the calling code uses the parsed
- *     result, so the newer fields would be silently discarded rather than
- *     producing an error anyone would notice.
+ * Two failure modes motivate these: a version added to one endpoint but not
+ * another is an undefined serializer lookup at runtime, and a client parsing
+ * replies with a schema older than the version it asked for silently discards
+ * the newer fields rather than erroring.
  */
 
 import {

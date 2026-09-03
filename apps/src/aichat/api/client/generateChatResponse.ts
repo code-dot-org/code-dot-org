@@ -80,7 +80,9 @@ export async function generateChatResponse(
     ? Output.object({schema: jsonSchema(modelParameters.responseJsonSchema)})
     : undefined;
 
-  // Generate a response with the model.
+  // Generate a response with the model. `text` is the response we return and
+  // store, even under a schema, where it holds the JSON the model emitted --
+  // not the parsed `output` re-serialized, which is not what was signed.
   const {text, files, finishReason, response, responseSignature} =
     await generateText(
       {
@@ -91,13 +93,6 @@ export async function generateChatResponse(
       },
       {phase: 'generation'}
     );
-
-  // `text` is returned as the response even when a schema was used, where it
-  // holds the JSON document the model emitted. Do not substitute the SDK's
-  // parsed `output` re-serialized: that is a different byte sequence for the
-  // same data, and it is not what the worker signed. Callers that want the
-  // parsed form parse this string -- see applySchemaDisplayTransform and
-  // notifySchemaResponse, which both do exactly that.
 
   if (['content-filter', 'other'].includes(finishReason)) {
     // Gemini stores moderation information in a non-standard place so we need to dig into the raw HTTP body.

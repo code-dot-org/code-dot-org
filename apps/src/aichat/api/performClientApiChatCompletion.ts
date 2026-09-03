@@ -79,10 +79,8 @@ export async function performClientApiChatCompletion(
     {name: 'ExecutionStatus', value: statusName},
   ]);
 
-  // The signature covers both halves of the turn, so the student's message
-  // carries it too: log_chat_event checks that message against the prompt digest
-  // and the reply against the response digest. Undefined when the model was
-  // never called (input moderation), which log_chat_event carves out.
+  // Carried by the student's message too: one signature covers both halves.
+  // Undefined when the model was never called, which log_chat_event carves out.
   const updatedUserMessage = {...newMessage, requestId, responseSignature};
 
   if (status === AiRequestExecutionStatus.USER_PROFANITY) {
@@ -91,9 +89,7 @@ export async function performClientApiChatCompletion(
     ];
   }
 
-  // Carried on the message so logChatEvent relays it to log_chat_event, which
-  // is where the response is admitted to chat history. Stripped before the event
-  // is stored -- it is proof of provenance, not part of the transcript.
+  // Relayed by logChatEvent, then stripped: provenance, not transcript.
   const assistantMessageBase = {
     requestId,
     chatMessageText: response,

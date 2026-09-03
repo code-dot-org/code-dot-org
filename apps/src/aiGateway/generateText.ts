@@ -57,12 +57,9 @@ const serializeOutputSchema = async (output?: SDKOptions['output']) => {
 };
 
 /**
- * The SDK result plus the one gateway-only field that rides alongside it.
- *
- * `responseSignature` is the worker's detached signature over `text`. A caller
+ * The SDK result plus the worker's detached signature over `text`. A caller
  * that persists the response must relay it to dashboard, which verifies it
- * before admitting the text to chat history rather than taking the browser's
- * word for what the model said.
+ * rather than taking the browser's word for what the model said.
  */
 export type GatewayGenerateTextResult<
   TOOLS extends SDKTools,
