@@ -3,7 +3,7 @@
   window.levelData = #{data.to_json};
 
 %script{src: webpack_asset_path('js/levels/_contract_match.js')}
-= stylesheet_link_tag webpack_asset_path('css/contract_match.css')
+= stylesheet_link_tag asset_path('css/contract_match.css')
 = render partial: 'levels/common_audio'
 
 .contract
