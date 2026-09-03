@@ -42,13 +42,13 @@
         }
       },
       {
-        "text": "**Set them walking.** In the **Code** tab, use **sprite [them] begins [patrolling left and right on blocks]**.",
+        "text": "**Nice!** Now switch to the **Code** tab to set them walking.",
         "after": {
           "worldSprites": 3
         }
       },
       {
-        "text": "**Now your choice.** Add **when [ ] touches [ ]** and pick your player and your new character from the dropdowns. Then decide what happens: a **say** block for a friendly hello, or **restart scene** to send your player back to the start. Press **Play** and go and meet them.",
+        "text": "**Set them walking.** Use **sprite [them] begins [patrolling left and right on blocks]**. Then add **when [ ] touches [ ]**, pick your player and your new character from the dropdowns, and decide what happens: a **say** block for a friendly hello, or **restart scene** to send your player back to the start. Press **Play** and go and meet them.",
         "after": {
           "tab": "Code"
         }
