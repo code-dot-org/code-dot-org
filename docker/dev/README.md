@@ -32,8 +32,8 @@ bundle exec rake install
 ```
 
 Build the apps files. Leave this server running: it rebuilds each file you
-change. The first build takes about 90 seconds and writes some gigabytes
-into the checkout.
+change. The first build takes about three minutes and writes some
+gigabytes into the checkout.
 
 ```sh
 cd /code-dot-org/apps && yarn start:cheapest

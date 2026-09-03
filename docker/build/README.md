@@ -38,7 +38,7 @@ argument:
 
 ```sh
 docker build -f docker/build/Dockerfile -t cdo-build:local .
-docker build -f docker/deps/Dockerfile --build-arg BUILD_IMAGE=cdo-build:local ...
+docker build -f docker/deps/Dockerfile --build-arg BUILD_IMAGE=cdo-build:local .
 ```
 
 The cost of not publishing is that a runner with no layer cache reinstalls
