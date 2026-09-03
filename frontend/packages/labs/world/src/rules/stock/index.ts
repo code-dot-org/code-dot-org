@@ -26,6 +26,7 @@ import {conversationRule} from './conversation';
 import {dragRule} from './drag';
 import {driveRule} from './drive';
 import {expiresRule} from './expires';
+import {flappingRule} from './flapping';
 import {goalsRule} from './goals';
 import {gravityRule} from './gravity';
 import {gridRule} from './grid';
@@ -389,6 +390,15 @@ export const STOCK_RULES: readonly StockRule[] = [
     contents: prowlingRule,
   },
   {
+    id: 'flapping',
+    name: 'Flapping',
+    ability: 'Flies in Flaps and Glides',
+    description:
+      'An enemy that flies in two phases: a few short flutters, each upward and a little towards you, and then a long straight glide aimed at where you were when it began. The glide commits, so walking under it is the way past.',
+    provides: ['Flaps and Glides'],
+    contents: flappingRule,
+  },
+  {
     id: 'drive',
     name: 'Arrow Drive',
     ability: 'Drives with Arrow Keys',
@@ -510,6 +520,7 @@ export {
   climbRule,
   surfacesRule,
   turningRule,
+  flappingRule,
   prowlingRule,
   mouseRule,
   writingRule,

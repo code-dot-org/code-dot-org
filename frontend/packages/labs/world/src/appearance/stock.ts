@@ -220,6 +220,13 @@ export const STOCK_SPRITES: readonly StockSprite[] = [
     dataUrl: image('pinball'),
   },
   {
+    id: 'bat',
+    name: 'Bat',
+    description:
+      'Wings spread and seen head-on, for something that flies at you in flaps — head-on rather than in profile because it turns round every time it flaps.',
+    dataUrl: image('bat'),
+  },
+  {
     id: 'rocket',
     name: 'Rocket',
     description:

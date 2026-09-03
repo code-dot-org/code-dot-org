@@ -388,6 +388,34 @@ describe('the arrow keys lesson’s check', () => {
   });
 });
 
+describe('the flier lesson’s check', () => {
+  const lesson = LESSONS['platformer/flier'];
+
+  /** The two edits the lesson asks for, and nothing else. */
+  const flapping = editing(lesson.source, 'main.world', contents =>
+    contents
+      .replaceAll('Steering#ChasesTrait', 'Flapping#FlapsAndGlidesTrait')
+      .replaceAll(
+        'world_set_Steering_ActorToChaseProperty',
+        'world_set_Flapping_ActorToHuntProperty',
+      ),
+  );
+
+  it('refuses the chaser the lesson starts with', async () => {
+    // The false pass, made concrete. The Bat already arrives — it is below
+    // the Hero and closing — so a check that asked whether it came nearer
+    // would pass the lesson before it had been done.
+    const {passes} = await check('platformer/flier', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts a Bat that flaps and glides', async () => {
+    const {passes, result} = await check('platformer/flier', flapping);
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+});
+
 describe('every lesson that has a check', () => {
   // The invariant behind all of the above: a check is written as a pair, and a
   // `run` with no `passes` is a button that measures a world and then throws

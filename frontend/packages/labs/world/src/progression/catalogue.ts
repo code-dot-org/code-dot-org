@@ -1553,6 +1553,45 @@ export const TILES: readonly Tile[] = [
     },
   },
   {
+    id: 'platformer/flier',
+    region: 'platformer',
+    at: at('platformer', 4, 2),
+    title: 'Something in the air',
+    teaches:
+      'Why an enemy that never stops re-aiming is an enemy you cannot play against, and what committing to a line buys instead.',
+    task: 'A bat below you that comes and keeps coming. Give it two phases, so that there is a moment you can move in.',
+    requires: ['platformer/hunter'],
+    unlocks: [
+      {kind: 'rule', id: 'flapping'},
+      {kind: 'asset', id: 'bat'},
+    ],
+    check: {
+      kind: 'outcome',
+      says: 'The Bat both climbs and descends — it flaps up in bursts and glides back down, rather than rising steadily to the one place you are.',
+      falsePass:
+        '"Chases and Flees", which is what the Bat starts with and which also arrives: it is above the floor, below the Hero, and closing, so any check that asked whether it got nearer would pass it unchanged. What a chaser CANNOT do is move away from you, ever — it re-aims every frame, so its height only ever falls towards yours. So this asks for both directions: a rise and a drop, which is the flap and the glide taking turns and is not something anything else in the lab produces.',
+      run: {
+        probes: {bat: {kind: 'positions', of: 'Bat'}},
+        // Fine legs, because the two phases have to be told apart from each
+        // other rather than from standing still.
+        trace: Array.from({length: 24}, () => ({seconds: 0.15})),
+      },
+      passes: ({samples}) => {
+        const ys = (samples.bat ?? []).map(
+          sample => (sample as {y: number}[])[0]?.y ?? 0,
+        );
+        if (ys.length < 8) {
+          return false;
+        }
+        // Two pixels, which is well above the nudging a solid body does and
+        // well below a flap or a glide.
+        const rose = ys.some((y, index) => index > 0 && y < ys[index - 1] - 2);
+        const fell = ys.some((y, index) => index > 0 && y > ys[index - 1] + 2);
+        return rose && fell;
+      },
+    },
+  },
+  {
     id: 'platformer/ground',
     region: 'platformer',
     at: at('platformer', 2, 2),

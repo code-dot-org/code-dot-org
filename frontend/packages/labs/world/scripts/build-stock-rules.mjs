@@ -32,6 +32,7 @@ const RULES = [
   'surfaces',
   'turning',
   'prowling',
+  'flapping',
   'solid',
   'wrap',
   'bounds',

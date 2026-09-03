@@ -135,6 +135,7 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   // another branch, so a lesson that sent somebody for one would be asking
   // for a block they have not got.
   'platformer/hunter': ['world_use_trait'],
+  'platformer/flier': ['world_use_trait'],
   'platformer/ground': ['world_use_trait'],
   'platformer/pickups': ['world_use_trait', 'world_print'],
   'platformer/hazards': ['world_use_trait', 'world_print'],

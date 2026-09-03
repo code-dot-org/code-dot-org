@@ -12,7 +12,7 @@ A stock rule is authored as a module under `scripts/rules/` and GENERATED into
 ships, and nothing works backward — editing the generated `.ts` is always the
 wrong move, because the next regeneration reverts it without saying so.
 
-Five steps, all of them required:
+Seven steps, all of them required:
 
 1. Write `scripts/rules/<name>.mjs`. Import the vocabulary from `./dsl.mjs`,
    build with `defineRule({name, ability, header})`, and
@@ -24,7 +24,30 @@ Five steps, all of them required:
 4. Add the import and a shelf entry to `src/rules/stock/index.ts`: `id`,
    `name`, `ability`, `description`, `provides` (the trait names, spelled as
    the rule spells them), `contents`.
-5. Run `yarn test`. `src/rules/__tests__/stockRuleSources.test.ts` regenerates
+5. Add it to `ALL_STOCK_SOURCES` in
+   `src/rules/__tests__/support/compileStockRules.tsx`, **in dependency
+   order** — a rule is evaluated against the ones before it, so a rule placed
+   above something it imports fails with a `ReferenceError` naming a symbol
+   that plainly exists.
+6. Give it a progression tile, which is not optional:
+   `src/progression/__tests__/layout.test.ts` has a "covers every stock rule"
+   case that fails until one unlocks it. A tile drags in more than it looks:
+
+   - a tile in `src/progression/catalogue.ts` — `at()` inside the six-ring
+     budget and ADJACENT to everything in its `requires`, with a `check` whose
+     `passes` refuses the state the lesson starts in;
+   - a lesson in `src/progression/lessons/index.ts`, and its entry in the
+     `LESSONS` map at the bottom;
+   - an `ASKS_FOR` entry in `src/progression/__tests__/toolboxShelf.test.ts`,
+     listing the plain blocks the instructions send a learner to find;
+   - a `describe` in `src/progression/__tests__/lessonChecks.test.tsx` proving
+     the check refuses the start and accepts the finish — there is no generic
+     test for that, and a check nobody has run both ways is a check that
+     passes everything;
+   - the lesson count in `src/progression/__tests__/ProgressionDialog.test.tsx`
+     ("N of M lessons done").
+
+7. Run `yarn test`. `src/rules/__tests__/stockRuleSources.test.ts` regenerates
    every rule in memory and fails if the committed file differs, so a forgotten
    step 3 is caught there and not in review.
 

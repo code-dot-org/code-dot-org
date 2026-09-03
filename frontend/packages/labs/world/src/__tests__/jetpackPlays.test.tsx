@@ -434,6 +434,46 @@ describe('the jetpack level', () => {
     expect(robot.get(PositionProperty).x).toBeLessThan(from - 50);
   });
 
+  it('flaps up, then commits to a glide at the Pilot', () => {
+    // The third enemy, and the third rule. What this pins is the SHAPE of the
+    // flight rather than that it arrives: "it got closer" would pass for any
+    // chaser, and a chaser is the thing this deliberately is not.
+    const {world} = project;
+    play(world, 0.3);
+    const bat = named(world, 'Enemy3');
+    const where: {x: number; y: number}[] = [];
+    for (let tick = 0; tick < 24; tick++) {
+      play(world, 0.15);
+      const at = bat.get(PositionProperty);
+      where.push({x: at.x, y: at.y});
+    }
+    const steps = where.slice(1).map((one, index) => ({
+      x: one.x - where[index].x,
+      y: one.y - where[index].y,
+    }));
+
+    // IT GOES UP AT ALL, which in this level nothing else could do for it: a
+    // bat elects no gravity and stands on nothing, so a rise is a flap.
+    expect(steps.some(step => step.y < -1)).toBe(true);
+
+    // …AND THERE IS A STRETCH IT HOLDS A LINE THROUGH. Six samples of the
+    // same step in both axes is nine hundred milliseconds of not turning,
+    // which is a glide and is not something a fall or a chase would produce.
+    const held = steps.some((step, index) =>
+      steps
+        .slice(index, index + 6)
+        .every(
+          other =>
+            Math.abs(other.x - step.x) < 0.5 &&
+            Math.abs(other.y - step.y) < 0.5,
+        ),
+    );
+    expect(held).toBe(true);
+
+    // …towards the Pilot, which starts away to the left of it.
+    expect(where[where.length - 1].x).toBeLessThan(where[0].x - 200);
+  });
+
   it('keeps every enemy in the room', () => {
     // One trait each rather than a rule: "Stays in the Map" puts a body back
     // where it was at an edge, and a body that got nowhere is what both enemy

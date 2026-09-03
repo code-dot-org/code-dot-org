@@ -107,6 +107,7 @@ import {
   climbRule,
   collectRule,
   collisionsRule,
+  flappingRule,
   goalsRule,
   gravityRule,
   healthRule,
@@ -254,11 +255,12 @@ const GEMS: ReadonlyArray<readonly [number, number]> = [
 const DOOR_AT = [24, 14] as const;
 
 /**
- * The two enemies, as `[kind, column, row]`.
+ * The four enemies, as `[kind, column, row]`.
  *
  * The ball rolls the length of the floor, which is the one place the Pilot has
  * to cross on foot when the tank is empty. The rocket flies the open middle of
- * the room, which is where a flight between ledges goes.
+ * the room, which is where a flight between ledges goes. The bat goes wherever
+ * the Pilot is, which is what makes it the one you cannot plan around.
  *
  * Which way each SETS OFF is in its own file rather than here, because there
  * is one of each: a level with a dozen would want to aim them one at a time,
@@ -270,6 +272,9 @@ const ENEMIES: ReadonlyArray<readonly [string, number, number]> = [
   // At the far end of the floor from the Pilot, so the first thing a player
   // sees it do is set off towards them.
   ['actors/robot', 20, 14],
+  // High and away, so its first few flaps are seen crossing the open middle
+  // rather than happening on top of the Pilot.
+  ['actors/bat', 22, 5],
 ];
 
 /**
@@ -753,6 +758,92 @@ const enemyActor = (
   });
 
 /**
+ * The bat: the enemy that is never where you last saw it.
+ *
+ * The first pass at this was built out of the library as it stood — `Time`'s
+ * repeating timer for the beat, `Gravity` at a third for the descent, and a
+ * handler that wrote a velocity when the timer fired. It flew, and it was
+ * wrong in a way worth recording, because it is the reason `rules/flapping`
+ * exists at all.
+ *
+ * A GLIDE UNDER GRAVITY IS A PARABOLA, and a parabola cannot be aimed. The bat
+ * would set off towards where the Pilot was and arrive somewhere else, by an
+ * amount that depended on how far away the Pilot had been — so the same enemy
+ * read as a different one across the room from you, and there was nothing for
+ * a player to learn. What a bat wants is a straight line at a stated speed,
+ * held for two seconds, and gravity's whole job is to make that impossible.
+ *
+ * So it is a rule, and what the rule is FOR is the commitment: the glide takes
+ * its aim once and does not look again, which is what makes walking under one
+ * the way past it. The three numbers set here are the level's balance, not the
+ * mechanic — the mechanic is `rules/flapping`, and the header there is the
+ * argument for it.
+ */
+const BAT_ACTOR = JSON.stringify({
+  blocks: {
+    blocks: [
+      {
+        type: 'world_actor',
+        x: 20,
+        y: 20,
+        fields: {NAME: 'Bat'},
+        next: {
+          block: stack([
+            useTrait('Flapping#FlapsAndGlidesTrait'),
+            useTrait('Health#DealsDamageTrait'),
+            // Both axes, unlike the Robot's: a bat can reach the ceiling, and
+            // nothing else in the room stops it there.
+            useTrait('Boundaries#StaysAcrossTrait'),
+            useTrait('Boundaries#StaysDownTrait'),
+            {type: 'world_set_sprite', fields: {SPRITE: 'bat.png'}},
+            // Slower than the Pilot's walk of 1.5, and that is the balance
+            // rather than a detail: a bat you cannot outrun is a bat you have
+            // to fight, and there is nothing in this level to fight with.
+            // Under it is where the player is meant to go, and the long slow
+            // flapping phase is what gives them time to get there.
+            {
+              type: 'world_set_Flapping_GlideSpeedProperty',
+              inputs: {ACTOR: me(), VALUE: number(1)},
+            },
+            {
+              type: 'world_set_Flapping_FlapSpeedProperty',
+              inputs: {ACTOR: me(), VALUE: number(0.6)},
+            },
+            {
+              type: 'world_set_Flapping_FlapLiftProperty',
+              inputs: {ACTOR: me(), VALUE: number(1.1)},
+            },
+          ]),
+        },
+      },
+      // WHO IT HUNTS, on the frame it arrives — a row under `define actor` is
+      // a declaration and has no world to ask, which is the same trap the
+      // Robot's own handler below is written to avoid.
+      {
+        type: 'world_on_Space_CreatedEvent',
+        x: 20,
+        y: 220,
+        inputs: {ACTOR: me()},
+        next: {
+          block: {
+            type: 'world_set_Flapping_ActorToHuntProperty',
+            inputs: {
+              ACTOR: me(),
+              VALUE: {
+                block: {
+                  type: 'world_first_actor',
+                  inputs: {SOURCE: kind('actors/pilot')},
+                },
+              },
+            },
+          },
+        },
+      },
+    ],
+  },
+});
+
+/**
  * The robot: the only actor in the level that knows the Pilot is there.
  *
  * It is pointed at the Pilot BY KIND — `first actor in ⟨any Pilot⟩` — which is
@@ -1160,6 +1251,12 @@ export const JETPACK_SPEC: ProjectSpec = {
       contents: enemyActor('Rocket', 'rocket.png', 90, false, ROCKET_AIM, true),
       folderId: 'actors',
     },
+    batActor: {
+      name: 'bat.actor',
+      language: 'actor',
+      contents: BAT_ACTOR,
+      folderId: 'actors',
+    },
     coinActor: {
       name: 'coin.actor',
       language: 'actor',
@@ -1297,6 +1394,15 @@ export const JETPACK_SPEC: ProjectSpec = {
       contents: turningRule,
       folderId: 'rules',
     },
+    // The Bat's two phases (`rules/flapping`), which is the third enemy and
+    // the third rule: a ball rolls, a robot decides at junctions, and this one
+    // commits to a line for two seconds at a time.
+    flappingRuleFile: {
+      name: 'flapping.rule',
+      language: 'rule',
+      contents: flappingRule,
+      folderId: 'rules',
+    },
     healthRuleFile: {
       name: 'health.rule',
       language: 'rule',
@@ -1360,6 +1466,7 @@ export const JETPACK_SPEC: ProjectSpec = {
       'pinball',
       'rocket',
       'robot',
+      'bat',
       'fuelCan',
       'fuelCanSmall',
     ]),

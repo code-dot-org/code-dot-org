@@ -2115,6 +2115,127 @@ pursuit, and in a room it is a machine pressed against a ceiling.
 `.trim(),
 };
 
+// ── platformer/flier ─────────────────────────────────────────────────────────
+
+const flier: WorldScenario = {
+  name: 'A bat you cannot get away from',
+  description: 'A ledge with you on it, open air below, and something coming.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        createInMap(local('ground'), [
+          ...floorAcross(10),
+          // A ledge to stand on, high and to one side, so that the thing
+          // below has somewhere to climb TO and something to be blocked by.
+          ...[5, 6, 7, 8, 9].map(column =>
+            placed(`ledge${column}`, column * 32 + 16, 144),
+          ),
+        ]),
+        addActor(local('bat'), [placeAt(80, 240)]),
+        addActor(local('hero'), [placeAt(240, 112)]),
+      ],
+      actors: [
+        {
+          id: 'hero',
+          name: 'Hero',
+          rows: [
+            useTrait('Gravity#AffectedByGravityTrait'),
+            useTrait('Input#TakesKeyboardInputTrait'),
+            useTrait('Arrow Keys#MovesAcrossTrait'),
+            setSprite('player.png'),
+          ],
+        },
+        {
+          id: 'ground',
+          name: 'Ground',
+          rows: [
+            useTrait('Gravity#ActsAsGroundTrait'),
+            useTrait('Solid Bodies#SolidTrait'),
+            setSprite('ground.png'),
+          ],
+        },
+        {
+          id: 'bat',
+          name: 'Bat',
+          // It ALREADY CHASES, which is the same opening the Robot lesson
+          // uses and for a different reason. There the chaser could not get
+          // up at all; here it can, and arrives — the failure is that there
+          // is nothing you can do about it. A learner has to feel that before
+          // the fix means anything.
+          rows: [
+            useTrait('Steering#ChasesTrait'),
+            setSprite('bat.png'),
+            {
+              type: 'world_trait_step',
+              fields: {PHASE: 'sense', NAME: 'know who to hunt'},
+              inputs: {
+                DO: {
+                  block: {
+                    type: 'world_set_Steering_ActorToChaseProperty',
+                    inputs: {
+                      ACTOR: me(),
+                      VALUE: {
+                        block: {
+                          type: 'world_first_actor',
+                          inputs: {SOURCE: anyKind('hero')},
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          ],
+        },
+      ],
+    }),
+    sprites: ['player', 'ground', 'bat'],
+    rules: [
+      'gravity',
+      'solid',
+      'input',
+      'arrows',
+      'motion',
+      'collisions',
+      'steering',
+      'flapping',
+    ],
+  }),
+  instructions: `
+## Something in the air
+
+The Bat is below you and it elects **⟨Chases⟩**, which reads where you are
+every frame and points itself at you.
+
+Run it. It comes, and it keeps coming, and there is no moment at which moving
+is the right answer — wherever you go it is already turning to follow. That is
+not a hard enemy, it is an enemy with nothing to play against.
+
+### What you do
+
+1. Take **⟨Chases⟩** off the Bat and give it **use trait ⟨Flaps and Glides⟩**
+   instead, then swap **set actor to chase** for **set actor to hunt** in the
+   step below it — the same answer to a different question.
+2. Watch it fly. It has two phases and they take turns: a few short flutters,
+   each one upward and a little towards you, and then a long straight glide.
+3. The glide is the whole rule. It takes its aim ONCE, at where you were when
+   it began, and then does not look again for two seconds — so walk under it
+   while it is gliding and it goes past you. That is the thing a chaser can
+   never give you.
+4. Set **glide seconds** to 0.2 and try again. It is a chaser now: it re-aims
+   so often that there is no moment long enough to move in. The commitment is
+   what makes it an enemy rather than a pursuer.
+5. Stand on the ledge and watch how it gets up to you. Height is bought a
+   flutter at a time and nothing else lifts it, which is why the flapping
+   phase is slow — that is the time you have.
+6. Set **least dive** to -1 and watch the two phases stop being different from
+   each other. A glide is allowed to aim almost flat and never above flat, so
+   climbing is the flaps' job and only theirs; let a glide aim upward and it
+   climbs too, and what is left is a chaser that pauses to think.
+`.trim(),
+};
+
 // ── platformer/pickups ───────────────────────────────────────────────────────
 
 const pickups: WorldScenario = {
@@ -5676,6 +5797,7 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'platformer/surfaces': surfaces,
   'platformer/enemies': enemies,
   'platformer/hunter': hunter,
+  'platformer/flier': flier,
   'platformer/pickups': pickups,
   'platformer/hazards': hazards,
   'platformer/level': level,

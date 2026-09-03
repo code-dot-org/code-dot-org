@@ -3429,3 +3429,121 @@ describe('Prowling', () => {
     expect(going(robot)).toBe(before);
   });
 });
+
+describe('Flapping', () => {
+  /** An open room, a bat in it, and something for it to hunt. */
+  const air = (batAt: Vector, preyAt: Vector) => {
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([
+        rule('rules/motion'),
+        rule('rules/collisions'),
+        rule('rules/flapping'),
+      ])
+      .instantiate();
+    const prey = new ActorBuilder({id: 'prey', name: 'prey'})
+      .set(PositionProperty, preyAt)
+      .set(of('rules/collisions', 'SizeProperty'), new Vector(16, 16))
+      .instantiate('prey');
+    world.addActor(prey);
+    const bat = new ActorBuilder({id: 'bat', name: 'bat'})
+      .useTraits([
+        of('rules/flapping', 'FlapsAndGlidesTrait'),
+        of('rules/motion', 'CanMoveTrait'),
+      ])
+      .set(PositionProperty, batAt)
+      .set(of('rules/collisions', 'SizeProperty'), new Vector(16, 16))
+      .instantiate('bat');
+    bat.set(of('rules/flapping', 'ActorToHuntProperty'), prey as never);
+    world.addActor(bat);
+    return {world, bat, prey};
+  };
+
+  const spot = (who: unknown) =>
+    (who as {get(p: unknown): Vector}).get(PositionProperty);
+
+  /** Where it was on each of `ticks` samples, `seconds` apart. */
+  const track = (
+    world: World,
+    who: unknown,
+    ticks: number,
+    seconds: number,
+  ) => {
+    const seen: Vector[] = [];
+    for (let tick = 0; tick < ticks; tick++) {
+      run(world, seconds);
+      seen.push(spot(who));
+    }
+    return seen;
+  };
+
+  it('climbs by flapping, and only by flapping', () => {
+    // Nothing else in this world lifts anything: there is no gravity here and
+    // no ground, so every pixel of height is a flap. A bat below its quarry
+    // must therefore end up higher than it started.
+    const {world, bat} = air(new Vector(200, 300), new Vector(200, 40));
+    const from = spot(bat).y;
+
+    run(world, 3);
+
+    expect(spot(bat).y).toBeLessThan(from - 40);
+  });
+
+  it('glides in a straight line at a steady speed', () => {
+    // THE POINT OF THE RULE. A glide under gravity is a parabola: it turns
+    // as it goes, so the thing it was aimed at is not where it arrives, and
+    // by an amount that depends on how far away that thing was. A straight
+    // line is what a player can learn in one viewing.
+    const {world, bat} = air(new Vector(200, 100), new Vector(500, 300));
+    // Past the flapping phase and into a glide: three flaps at 0.35 apiece.
+    run(world, 1.2);
+    const seen = track(world, bat, 6, 0.15);
+
+    const steps = seen.slice(1).map((where, index) => ({
+      x: where.x - seen[index].x,
+      y: where.y - seen[index].y,
+    }));
+    for (const step of steps) {
+      // Every step the same, in BOTH axes — which is what "straight" and
+      // "steady" together mean, and what a fall would break in the second.
+      expect(step.x).toBeCloseTo(steps[0].x, 1);
+      expect(step.y).toBeCloseTo(steps[0].y, 1);
+    }
+  });
+
+  it('does not re-aim a glide it has already begun', () => {
+    // What makes a bat dodgeable, and the whole reason the glide is a phase
+    // rather than a heading. A chaser that re-aimed every frame would have no
+    // moment at which moving was the right answer.
+    const {world, bat, prey} = air(new Vector(200, 100), new Vector(500, 300));
+    run(world, 1.2);
+    const before = track(world, bat, 2, 0.15);
+    const committed = {
+      x: before[1].x - before[0].x,
+      y: before[1].y - before[0].y,
+    };
+
+    // Take the quarry to the other end of the room, mid-glide.
+    (prey as {set(p: unknown, v: unknown): void}).set(
+      PositionProperty,
+      new Vector(-400, 300),
+    );
+    const after = track(world, bat, 2, 0.15);
+
+    const still = {x: after[1].x - after[0].x, y: after[1].y - after[0].y};
+    expect(still.x).toBeCloseTo(committed.x, 1);
+    expect(still.y).toBeCloseTo(committed.y, 1);
+  });
+
+  it('never glides upward, however high the quarry is', () => {
+    // `least dive`. Without it a bat under a player on a ledge glides UP at
+    // them, which is climbing without flapping — and then the flaps have no
+    // job and the two phases collapse into one chaser.
+    const {world, bat} = air(new Vector(200, 300), new Vector(260, 20));
+    run(world, 1.2);
+    const seen = track(world, bat, 8, 0.15);
+
+    for (const [index, where] of seen.slice(1).entries()) {
+      expect(where.y).toBeGreaterThan(seen[index].y);
+    }
+  });
+});

@@ -99,6 +99,11 @@ export const SPRITE_NAMES = [
   // these — so the rails run the full height of the cell and the rungs are
   // spaced so that a stacked pair keeps the same gap across the joint.
   'ladder',
+  // The enemy that flies (JETPACK.md, phase 3). Wings SPREAD and seen head-on,
+  // rather than in profile, because it is the only thing in the room that can
+  // be anywhere: a profile drawing has a side it is facing, and this one turns
+  // round every time it flaps.
+  'bat',
 ];
 export const ANIMATION_SPECS = {
   coinSpin: {frames: 6, frameRate: 12},
@@ -513,6 +518,79 @@ const STATIC = {
     c.disc(13, 13, 7, [210, 218, 232]);
     c.disc(11, 11, 3.5, [246, 250, 255]); // the highlight
     c.disc(21, 21, 4, [120, 128, 146]); // …and the shadowed underside
+  },
+  bat(c) {
+    // Wings spread, seen head-on, with a SCALLOPED trailing edge — three
+    // fingers and two notches. That edge is the whole of what says bat rather
+    // than bird at this size, and it is why the wing is a polygon rather than
+    // the two triangles that would otherwise do.
+    //
+    // Symmetric about x = 16, so the drawing is written once and mirrored: a
+    // thing that turns round every time it flaps must look the same going
+    // either way, or it reads as flying backwards half the time.
+    const WING = [104, 72, 138];
+    const WING_EDGE = [68, 46, 94];
+    const BODY = [52, 36, 68];
+    const EYE = [255, 96, 96];
+    const wing = [
+      [15, 13],
+      [21, 7],
+      [31, 6],
+      [25, 13],
+      [30, 16],
+      [23, 15],
+      [26, 21],
+      [16, 17],
+    ];
+    const mirrored = wing.map(([x, y]) => [32 - x, y]);
+    c.polygon(wing, WING);
+    c.polygon(mirrored, WING);
+    // The arm along the leading edge, which gives the wing a bone rather than
+    // leaving it a flat shape.
+    c.polygon(
+      [
+        [15, 13],
+        [21, 7],
+        [31, 6],
+        [31, 8],
+        [22, 9],
+        [16, 15],
+      ],
+      WING_EDGE,
+    );
+    c.polygon(
+      [
+        [17, 13],
+        [11, 7],
+        [1, 6],
+        [1, 8],
+        [10, 9],
+        [16, 15],
+      ],
+      WING_EDGE,
+    );
+    // Ears before the head, so the head's edge cuts across their bases and
+    // they read as attached rather than balanced on top.
+    c.polygon(
+      [
+        [12, 14],
+        [16, 14],
+        [12, 7],
+      ],
+      BODY,
+    );
+    c.polygon(
+      [
+        [20, 14],
+        [16, 14],
+        [20, 7],
+      ],
+      BODY,
+    );
+    c.disc(16, 14, 4.5, BODY); // the head
+    c.roundRect(13, 16, 6, 9, 3, BODY); // …and the body hanging under it
+    c.disc(14.2, 13.5, 1.3, EYE);
+    c.disc(17.8, 13.5, 1.3, EYE);
   },
   rocket(c) {
     // Pointing RIGHT unrotated, because that is where a heading of zero
