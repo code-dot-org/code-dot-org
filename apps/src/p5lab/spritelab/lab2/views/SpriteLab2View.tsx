@@ -8,6 +8,7 @@ import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {applyBlockIdOverrides} from '@cdo/apps/blockly/utils';
 import {getCodeFromSerializedWorkspace} from '@cdo/apps/blockly/utils/workspace/getCode';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import {TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
@@ -130,15 +131,16 @@ registerReducers({
 const ENABLED_TABS: readonly Tab[] = ['Images', 'Code', 'Play'];
 const WORLD_TABS: readonly Tab[] = ['Images', 'World', 'Code', 'Play'];
 
-// Internal flags carried as ?name=true URL parameters.
-function getBooleanParam(name: string) {
-  return new URLSearchParams(window.location.search).get(name) === 'true';
+// Authored level flags arrive as JSON and may be booleans or the strings
+// the levelbuilder checkbox helper writes; only true and 'true' mean on.
+function levelFlag(value: unknown): boolean {
+  return value === true || value === 'true';
 }
 
 // ?image-adlibs=simple|expanded previews the adlib combos without a level
 // change (levels set imageAdlibSet).
 function getImageAdlibSetParam(): ImageAdlibSet | undefined {
-  const value = new URLSearchParams(window.location.search).get('image-adlibs');
+  const value = queryParams('image-adlibs');
   return value === 'simple' || value === 'expanded' ? value : undefined;
 }
 
@@ -223,14 +225,18 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   const activeTab = useAppSelector(state => state.spriteLab2.activeTab);
   // World-tab experiment flag (levels can also opt in via showWorldTab).
-  const worldTabParamEnabled = useMemo(() => getBooleanParam('world-tab'), []);
-  // The image dialog defaults to the student form; this shows the full
-  // internal one (levels can also opt in via imagesAdvanced).
-  const imagesAdvancedParam = useMemo(
-    () => getBooleanParam('images-advanced'),
+  const worldTabParamEnabled = useMemo(
+    () => queryParams('world-tab') === 'true',
     []
   );
   const imageAdlibSetParam = useMemo(getImageAdlibSetParam, []);
+  // The image dialog defaults to the student form; this shows the full
+  // internal one (levels can also opt in via imagesAdvanced). Level edit
+  // modes author starter images, which needs the naming controls.
+  const imagesAdvanced =
+    useMemo(() => queryParams('images-advanced') === 'true', []) ||
+    levelFlag(levelProperties.imagesAdvanced) ||
+    isLevelEditMode;
   // A level can name its exact tab set; unknown names are dropped, and a list
   // naming none falls back to the defaults. Listing 'World' turns the world
   // tab on, as the URL flag and showWorldTab still do.
@@ -242,7 +248,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     if (requested?.length) {
       return requested;
     }
-    return worldTabParamEnabled || levelProperties.showWorldTab
+    return worldTabParamEnabled || levelFlag(levelProperties.showWorldTab)
       ? WORLD_TABS
       : ENABLED_TABS;
   }, [
@@ -1509,7 +1515,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 onRenameImage={handleRenameImage}
                 onDeleteImage={handleDeleteImage}
                 lockedImageType={levelProperties.lockedImageType}
-                advanced={levelProperties.imagesAdvanced || imagesAdvancedParam}
+                advanced={imagesAdvanced}
                 adlibSet={imageAdlibSetParam || levelProperties.imageAdlibSet}
               />
             </div>

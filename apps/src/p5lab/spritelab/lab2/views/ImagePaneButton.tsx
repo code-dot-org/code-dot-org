@@ -7,6 +7,8 @@ import moduleStyles from './image-details-dialog.module.scss';
 interface ImagePaneButtonProps {
   /** Current pixels; a blank placeholder when absent. */
   thumb?: string;
+  /** Pixel art upscales with hard edges; smooth art keeps its shading. */
+  pixelated?: boolean;
   /** Corner-chip icon. */
   iconName: string;
   label: string;
@@ -20,6 +22,7 @@ interface ImagePaneButtonProps {
  */
 const ImagePaneButton: React.FunctionComponent<ImagePaneButtonProps> = ({
   thumb,
+  pixelated,
   iconName,
   label,
   disabled,
@@ -37,7 +40,11 @@ const ImagePaneButton: React.FunctionComponent<ImagePaneButtonProps> = ({
     onClick={onClick}
   >
     {thumb ? (
-      <img src={thumb} alt="" />
+      <img
+        src={thumb}
+        alt=""
+        className={classNames(pixelated && moduleStyles.pixelArt)}
+      />
     ) : (
       <div className={moduleStyles.imagePlaceholder} aria-hidden />
     )}

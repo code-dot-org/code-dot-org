@@ -47,6 +47,8 @@ interface ImageDetailsDialogProps {
   advanced?: boolean;
   /** Offer this tier of adlib prompt combos (student dialog only). */
   adlibSet?: ImageAdlibSet;
+  /** The image is pixel art: previews upscale it with hard edges. */
+  pixelated?: boolean;
   /** Current pixels, for generation's "use previous image". */
   getDataURI: () => Promise<string | null>;
   /** Whether another image already uses this name. */
@@ -94,6 +96,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   lockedImageType,
   advanced,
   adlibSet,
+  pixelated,
   getDataURI,
   isNameTaken,
   onGenerateStart,
@@ -122,8 +125,14 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
     : nameError;
 
   // Students see auto-generated names, so the title says only what the
-  // dialog is.
-  const title = !advanced ? 'Image' : isNew ? 'New image' : name || 'Image';
+  // dialog is — keeping the new-image case distinct for screen readers.
+  const title = advanced
+    ? isNew
+      ? 'New image'
+      : name || 'Image'
+    : isNew
+    ? 'New image'
+    : 'Image';
 
   const commitRename = () => {
     const trimmed = nameDraft.trim();
@@ -254,6 +263,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                   }
             }
             thumb={isNew ? undefined : thumb}
+            thumbPixelated={pixelated}
             create={isNew ? {isNameTaken, initial: newImageDraft} : undefined}
             lockedImageType={lockedImageType}
             advanced={advanced}
@@ -273,6 +283,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
             <div className={moduleStyles.body}>
               <ImagePaneButton
                 thumb={thumb}
+                pixelated={pixelated}
                 iconName="pen"
                 label="Edit with paint tools"
                 onClick={onPaint}
