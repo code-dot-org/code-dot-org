@@ -91,7 +91,8 @@ type Shelf =
  * it outlives whichever editor is showing.
  */
 export const LibraryImports = () => {
-  const {currentSources, updateSources} = useSources<MultiFileSource>();
+  const {currentSources, updateSources, replaceSources} =
+    useSources<MultiFileSource>();
   const [shelf, setShelf] = useState<Shelf>(null);
   /** What the asker is waiting on: the value the field should take, or none. */
   const resolve = useRef<((value: string | undefined) => void) | null>(null);
@@ -151,6 +152,26 @@ export const LibraryImports = () => {
       finish(value);
     },
     [updateSources, finish],
+  );
+
+  /**
+   * The same, for a change that REWRITES files rather than adding one.
+   *
+   * `replaceSources` and not `updateSources`, which is the difference between
+   * the two (SourcesContext): an import writes a file nothing is showing, and
+   * an editor has nothing to re-read. An enhancement rewrites an actor whose
+   * workspace may be open — and an editor showing the old one goes on showing
+   * it, then writes that stale workspace back over the change on the next
+   * keystroke. Bumping the epoch is how an open editor finds out, and it is
+   * what the AI tutor's edits already use for the same reason.
+   */
+  const changed = useCallback(
+    (source: MultiFileSource, value: string) => {
+      replaceSources({...sourcesRef.current, source});
+      refreshFor(source);
+      finish(value);
+    },
+    [replaceSources, finish],
   );
 
   // The two shelves whose bytes are SERVED rather than bundled (BACKGROUNDS.md
@@ -225,7 +246,7 @@ export const LibraryImports = () => {
           onEnhance={(enhancement: Enhancement) =>
             // The actor's path back, so a caller waiting on this knows what
             // changed; nothing asks yet, and the seam hands back a string.
-            took(
+            changed(
               enhancement.apply(sourcesRef.current.source, shelf.enhancing),
               shelf.enhancing.path,
             )

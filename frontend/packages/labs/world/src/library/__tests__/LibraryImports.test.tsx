@@ -7,25 +7,32 @@
 // exactly the kind of change where every part still works and the whole stops.
 
 import {fireEvent, render, screen} from '@testing-library/react';
-import {describe, expect, it, vi} from 'vitest';
+import {beforeEach, describe, expect, it, vi} from 'vitest';
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 const SOURCE: MultiFileSource = {files: {}, folders: {}, openFiles: []};
 const updateSources = vi.fn();
+const replaceSources = vi.fn();
 
 vi.mock('@code-dot-org/lab/contexts', () => ({
   useSources: () => ({
     currentSources: {source: SOURCE},
     updateSources,
+    replaceSources,
     sourcesEpoch: 0,
   }),
 }));
 
 const {LibraryImports} = await import('../LibraryImports');
 const {requestRuleImport} = await import('../../blockly/ruleImport');
+const {requestActorEnhance} = await import('../../actors/enhance/actorEnhance');
 
 describe('the import shelves', () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
+
   it('open on request and hand back what was chosen', async () => {
     render(<LibraryImports />);
     // Nothing on screen until something asks: five dialogs mounted eagerly
@@ -56,5 +63,26 @@ describe('the import shelves', () => {
     fireEvent.click(await screen.findByRole('button', {name: 'Cancel'}));
 
     await expect(asked).resolves.toBeUndefined();
+  });
+
+  it('replaces the sources when an enhancement rewrites an open file', async () => {
+    // The one shelf that edits a file the learner may be looking at. An
+    // ordinary `updateSources` does not tell an open editor anything, so its
+    // workspace goes on showing the actor as it was — and writes that back
+    // over the enhancement at the next keystroke (SourcesContext).
+    render(<LibraryImports />);
+
+    const asked = requestActorEnhance({
+      path: 'actors/player',
+      name: 'Platformer Player',
+    });
+    fireEvent.click(
+      await screen.findByRole('button', {name: /Health, and a bar/}),
+    );
+    fireEvent.click(screen.getByRole('button', {name: 'Enhance'}));
+
+    await expect(asked).resolves.toBe('actors/player');
+    expect(replaceSources).toHaveBeenCalled();
+    expect(updateSources).not.toHaveBeenCalled();
   });
 });
