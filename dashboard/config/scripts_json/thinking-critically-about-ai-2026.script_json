@@ -34,7 +34,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-24 13:30:13 UTC",
+    "serialized_at": "2026-08-31 18:40:07 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -1154,7 +1154,7 @@
       "properties": {
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students brainstorm different possible use cases for AI and participate in explorations in which they test how helpful or unhelpful AI might be for the purpose that they have identified.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *Large Language Model (LLM)*.\n",
         "duration": "15",
-        "name": "Brainstorm Your Purpose"
+        "name": "Brainstorm AI Uses"
       },
       "seeding_key": {
         "activity_section.key": "cf4ce4bf-fc73-49c8-b1bc-0dfaa60322b5",
@@ -1216,7 +1216,7 @@
       "key": "6e8210c4-7cb0-45ce-982a-08b47b5cf59d",
       "position": 6,
       "properties": {
-        "description": "Every good guide starts here, before you open any tool. Designers who know their theme, audience, and purpose make better decisions at every step.\n",
+        "description": "Every good guide starts here, before you open any tool. Designers who know their theme, audience, and AI uses make better decisions at every step\n",
         "remarks": true
       },
       "seeding_key": {
@@ -1228,8 +1228,8 @@
       "key": "5d5a4b6b-df18-4fb4-b8ff-08caa3596a48",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review audience and theme from the previous lesson. Introduce purpose to define how AI might be able to assist their chosen audience and theme.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk through the example using Basketball as the main theme.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 3, Level 1. Students will use learn how to use the text tool in Sketch Lab, adding their guide's theme, audience, and purpose to the project template.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Assist students that are struggling with Sketch Lab. Specifically, students will need to know how to navigate, how to zoom, and how to click a box to add text. Encourage students to add as many different purposes as they can brainstorm!\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students turn to a shoulder partner and share some of the different purposes for AI that they've identified for their theme.",
-        "progression_name": "Brainstorm Purpose"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review audience and theme from the previous lesson. Introduce AI Uses to define how AI might be able to assist their chosen audience and theme.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk through the example using Basketball as the main theme.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 3, Level 1. Students will use learn how to use the text tool in Sketch Lab, adding their guide's theme, audience, and AI uses to the project template.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Assist students that are struggling with Sketch Lab. Specifically, students will need to know how to navigate, how to zoom, and how to click a box to add text. Encourage students to add as many different purposes as they can brainstorm!\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students turn to a shoulder partner and share some of the different purposes for AI that they've identified for their theme.",
+        "progression_name": "Brainstorm AI Uses"
       },
       "seeding_key": {
         "activity_section.key": "5d5a4b6b-df18-4fb4-b8ff-08caa3596a48",
@@ -1288,7 +1288,7 @@
       "key": "6e11c1dc-e283-4e20-a722-816477127805",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain to students that when they use AI to build something toward their own purpose, that's AI-assisted creation.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 3, Level 2 to complete Levels 2 and 3.\n- Level 2: Students use AI Chat to test using AI to assist with co-creation. They note their findings in their AI Audit Field Notes. Students should copy an outputs that show good and bad uses of AI for their purpose.\n- Level 3: Students paste their chat into Sketch Lab to use as a piece of evidence for their Generate and Judge project. They can use the shapes and formatting provided in the template to begin creating this section of their project guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Assist students that are struggling to write effective prompts for the AI Chat. Ask students how changing their prompts affected the output of the AI Chat. As students experiment with prompting and examining the outputs, remind them to copy text that they want to use as an example. Check that students are completing the 'what this tells me' field — that's the one that requires actual analysis, not just observation. Ask: \"Which of your chats represents a good example of how to effectively use AI? Which uses of AI didn't quite work for your purpose?\" Ask students: \"Who is your audience and why would this tip matter to them?\" Listen for students who are connecting their experience to a specific person's needs rather than writing a generic tip. On Level 3, point out to students that there are resources on the template to help them format and visualize their information.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain to students that when they use AI to build something toward their own purpose, that's AI-assisted creation.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 3, Level 2 to complete Levels 2 and 3.\n- Level 2: Students use AI Chat to test using AI to assist with co-creation. They note their findings in their AI Audit Field Notes. Students should copy outputs that show good and bad uses of AI.\n- Level 3: Students paste their chat into Sketch Lab to use as a piece of evidence for their Generate and Judge project. They can use the shapes and formatting provided in the template to begin creating this section of their project guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Assist students that are struggling to write effective prompts for the AI Chat. Ask students how changing their prompts affected the output of the AI Chat. As students experiment with prompting and examining the outputs, remind them to copy text that they want to use as an example. Check that students are completing the 'what this tells me' field — that's the one that requires actual analysis, not just observation. Ask: \"Which of your chats represents a good example of how to effectively use AI? Which uses of AI didn't quite work for your purpose?\" Ask students: \"Who is your audience and why would this tip matter to them?\" Listen for students who are connecting their experience to a specific person's needs rather than writing a generic tip. On Level 3, point out to students that there are resources on the template to help them format and visualize their information.",
         "progression_name": "AI-Assisted Creation",
         "tips": [
           {
@@ -1402,7 +1402,7 @@
       "key": "abf56b64-b8a4-45ec-98f6-87339303307b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 1. Students choose an image and try to generate a new one as close as possible.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 1. Students choose an image and try to generate a new one as close as possible.",
         "progression_name": "The Prompt Off",
         "tips": [
           {
@@ -1491,7 +1491,7 @@
       "key": "c37803bd-040d-44f7-86d6-b6002017ee4d",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Prepare students to use AI to generate images and participate in explorations. They will test how adjusting their prompt affects the images generated for the purpose they identified.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to take out their AI Audit Field Notes activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review theme, audience, and purpose for their project.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 2 to complete Levels 2 through 4.\n- Level 2: Students use AI to generate an image for their project.\n- Level 3: Students read about AI's impact on human skills and/or artists.\n- Level 4: Students add their image to their project and a tip about image generation that applies to their audience.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students accepting the first image without any refinement. Ask: \"Is this exactly what you wanted? What would you change?\" Listen for students saying \"the AI just did it\" or \"I got lucky.\" These are signals to redirect toward ownership. Ask: \"What decisions did you make that got you there?\" On Level 4, ask students: \"Who is your audience and why would this tip matter to them?\" Listen for students who are connecting their image generation experience to a specific person's needs rather than writing a generic tip.",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Prepare students to use AI to generate images and participate in explorations. They will test how adjusting their prompt affects the images generated for the purpose they identified.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to take out their AI Audit Field Notes activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review theme, audience, and AI uses for their project.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 2 to complete Levels 2 through 4.\n- Level 2: Students use AI to generate an image for their project.\n- Level 3: Students read about AI's impact on human skills and/or artists.\n- Level 4: Students add their image to their project and a tip about image generation that applies to their audience.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students accepting the first image without any refinement. Ask: \"Is this exactly what you wanted? What would you change?\" Listen for students saying \"the AI just did it\" or \"I got lucky.\" These are signals to redirect toward ownership. Ask: \"What decisions did you make that got you there?\" On Level 4, ask students: \"Who is your audience and why would this tip matter to them?\" Listen for students who are connecting their image generation experience to a specific person's needs rather than writing a generic tip.",
         "duration": "15",
         "name": "Create Images for Your Project",
         "progression_name": "Create Images for Your Project",
@@ -1636,7 +1636,7 @@
       "key": "80af2abd-98cb-45a1-9ae9-ad6d215a5ac2",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Learn to add context and goal statements within a prompt to create a custom chatbot that better serves a desired purpose.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 1. Students test the chatbot and edit the prompt to see how it changes its behavior.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Point out the visible prompt in the middle window of the AI Chat. Help students connect the prompt as written to the functionality of the chatbot that they used in Level 1. Encourage them to change both small and large parts of the prompt and to test the output to see how it changes the chatbot's functionality.",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Learn to add context and goal statements within a prompt to create a custom chatbot that better serves a desired purpose.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 1. Students test the chatbot and edit the prompt to see how it changes its behavior.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Point out the visible prompt in the middle window of the AI Chat. Help students connect the prompt as written to the functionality of the chatbot that they used in Level 1. Encourage them to change both small and large parts of the prompt and to test the output to see how it changes the chatbot's functionality.",
         "duration": "15",
         "name": "Creating a Chatbot",
         "progression_name": "Analyze a Chatbot"
@@ -1700,7 +1700,7 @@
       "key": "4eb24ddb-6190-48a9-9195-a7d5b913f68e",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 2 to complete Levels 2 through 5.\n- Level 2: Students read about adding context.\n- Level 3: Students choose one of the purposes they identified in their guide as the focus of their chatbot. Students practice adding context to a prompt, choosing from a list of possible stems.\n- Level 4: Students read about adding a goal.\n- Level 5: Students practice adding a goal to a prompt, choosing from a list of possible stems.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through this prompt-building exercise, ask them to point out where they added context and where they added a goal into the prompt. Encourage them to copy / paste from the sentence stems to make this part of the activity move more quickly. Connect this exercise back to the project– what purpose is this chatbot serving and how does it connect to the goal and audience that the student identified?",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 2 to complete Levels 2 through 5.\n- Level 2: Students read about adding context.\n- Level 3: Students choose one of the purposes they identified in their guide as the focus of their chatbot. Students practice adding context to a prompt, choosing from a list of possible stems.\n- Level 4: Students read about adding a goal.\n- Level 5: Students practice adding a goal to a prompt, choosing from a list of possible stems.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through this prompt-building exercise, ask them to point out where they added context and where they added a goal into the prompt. Encourage them to copy / paste from the sentence stems to make this part of the activity move more quickly. Connect this exercise back to the project– what purpose is this chatbot serving and how does it connect to the goal and audience that the student identified?",
         "progression_name": "Creating a Custom Chatbot"
       },
       "seeding_key": {
@@ -2852,7 +2852,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Brainstorm Purpose"
+        "progression": "Brainstorm AI Uses"
       },
       "bonus": false,
       "seeding_key": {
@@ -3892,7 +3892,7 @@
     },
     {
       "name": "Project Launch",
-      "url": "https://docs.google.com/presentation/d/1Nuz1y_eevYdhf-pGpKbU8D3BpbKljwXVFs8RAKkKfak/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1Nuz1y_eevYdhf-pGpKbU8D3BpbKljwXVFs8RAKkKfak/",
       "key": "a_deeper_look_into_ai",
       "properties": {
         "audience": "Teacher",
@@ -4000,7 +4000,7 @@
     },
     {
       "name": "Generate and Judge Project Guide",
-      "url": "https://docs.google.com/document/d/1DlPA8XSLKFaWIeBzc8nC5q0V-e0wC2B2xsCyXFMlKQw/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1DlPA8XSLKFaWIeBzc8nC5q0V-e0wC2B2xsCyXFMlKQw/",
       "key": "generate_judge_project_guide",
       "properties": {
         "audience": "Student",

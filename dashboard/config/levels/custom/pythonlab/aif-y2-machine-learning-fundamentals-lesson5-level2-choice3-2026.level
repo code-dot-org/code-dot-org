@@ -1,0 +1,44 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-08-21T21:00:06.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Baking Cookies",
+    "long_instructions": "Now that you’ve built a prediction model, you’d like to use it in a program that lets users say how many cookies they’d like to bake and get an estimated amount of flour they’ll need.\r\n\r\n**☑️ Do This:**\r\n\r\n1. Prompt the user to type in how many cookies they want to bake, then save that integer in a variable.\r\n2. Use the variable to calculate a predicted amount of flour needed.\r\n3. Print a message letting the user know the number of cookies and the predicted flour needed.\r\n\r\n**💻 Coding Tip**\r\n\r\nIf you’re asking the user for input and you want Python to treat that input as a number, you’ll usually want to convert the input to an `int` first. You can use code like this to convert the input:\r\n\r\n```python\r\nint(input(\"Type in a number: \"))\r\n```",
+    "bubble_choice_description": "Use a prediction model to predict how much flour you'll need to bake cookies.",
+    "thumbnail_url": "https://images.code.org/92212f577aaf80f1a40c513ba94c7195-cookies.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "def predict_flour(cookies):\n    return 8 + 2 * cookies\n\n# TODO 1: Prompt the user for a number of cookies, save the result in a variable\n\n# TODO 2: Calculate a predicted amount of flour for the cookies\n\n# TODO 3: Print a message letting the user know the cookie count and flour amount",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqj+BN1FcS5dfhh\ns5yhd6BLhPPX3XoaNiwAij2KIrAyhjfxZvMzjlJP2abmNEtVIzOyErG2Uhc2\nyKDCezbQ9gS6FbuPPCUBqWlM5ZPjhjV2t73jZSRIOA1X8eMk/M4Wjwmf24M6\nZO1nEeWzicBkroJRox3LasCUgOl4oCOyf9KUW/ZhoJufKlXBudo8Eo2hBIYD\n7Any7w+E8KdjcFrwLiOQ4PAbGJyiemFPnEIMjhJFj22CGIBUzOe87ZvzJewA\nr42GGQVzioBxQfvr2p1vA+cvEitOMsQeOxdVoRduo4RZ6vxCeET8DjzuClPu\nWA4tR1vrplwD8QV30k2z5m7FYxYGLgv17Y75U9OuGTI4PTlfHYkfINS2k7mD\nI2hHbADzs2JyUHxYsU1/ASl0s1eDJoG6hvupQa5QpFJOOcxk5RqTjgb8iNrK\ne8SGULI5zIx9PqQ=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-21 21:00:13 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-21 21:00:21 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

@@ -4,7 +4,6 @@ require 'digest/sha1'
 require 'dynamic_config/gatekeeper'
 require 'image_size'
 require 'cdo/firehose'
-require 'cdo/languages'
 require 'net/http'
 require 'uri'
 require 'json'
@@ -723,6 +722,7 @@ module LevelsHelper
       app_options[:is_viewing_exemplar] = level_options[:is_viewing_exemplar] || false
     end
     app_options[:share] = level_options[:share] if level_options[:share]
+    app_options[:is_building_quiz_questions] = level_options[:is_building_quiz_questions] if level_options[:is_building_quiz_questions]
     app_options[:public_caching] = @public_caching
     if @script_level&.lesson
       app_options[:theme] = @script_level.lesson.get_background_for_user(current_user)
@@ -1029,7 +1029,7 @@ module LevelsHelper
       begin
         body = s3.get_object(s3_args)[:body].read
       rescue => exception
-        Honeybadger.notify(exception, context: {message: "No code sample found in S3 with with args: #{s3_args}"})
+        Observability::Errors.report(exception, context: {message: "No code sample found in S3 with with args: #{s3_args}"})
         return
       end
       student_code = nil

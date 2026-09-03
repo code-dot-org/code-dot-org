@@ -4,11 +4,12 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "include_student_lesson_plans": true,
       "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-31 03:22:54 UTC",
+    "serialized_at": "2026-09-03 00:58:55 UTC",
     "hide_within_course": true,
     "published_state": "in_development",
     "instruction_type": null,
@@ -20,37 +21,813 @@
   },
   "lesson_groups": [
     {
-      "key": "",
-      "user_facing": false,
+      "key": "lessonGroup-2",
+      "user_facing": true,
       "position": 1,
       "properties": {
+        "display_name": "Content"
       },
       "seeding_key": {
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif-year2-semester1-unit3"
       }
     }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "What is Data Analysis?",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How can I make use of data?**\n\nIn this lesson, students play *Candidate*—a game that guides them, first-hand, through the process of data analysis. As they compete to run for student government on the most popular policy, students learn to ask strategic questions, collect simple data, and analyze it to make wise choices.",
+        "preparation": "- Read the *Candidate* Supplemental Teacher Guide.\n- Print one copy of the *Candidate* Persona Card sheets for every 32 students, then cut the cards apart and shuffle them. It’s okay if you have more cards than students—but every student should have one card.\n- Print one double-sided copy of the *Candidate* Activity Guide for each student.",
+        "student_overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How can I make use of data?**\n\nIn this lesson, you'll play *Candidate*—a game that guides you, first-hand, through the process of data analysis. As you compete to run for student government on the most popular policy, you'll learn to ask strategic questions, collect simple data, and analyze it to make wise choices.",
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Lesson 2",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Lesson 3",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Lesson 4",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Lesson 5",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Lesson 6",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Lesson 7",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Lesson 8",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Lesson 9",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Lesson 10",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "Lesson 11",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "Lesson 12",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "1a58d91f-18c1-4ade-8812-cfdf2624189a",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1a58d91f-18c1-4ade-8812-cfdf2624189a",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3"
+      }
+    },
+    {
+      "key": "0fe2b91a-b601-4fa9-9718-a5be98cbdb6d",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0fe2b91a-b601-4fa9-9718-a5be98cbdb6d",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3"
+      }
+    },
+    {
+      "key": "5a98eb46-28c3-487a-a811-eff6d70ee779",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5a98eb46-28c3-487a-a811-eff6d70ee779",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "59613137-9701-4efa-be10-637df99e8647",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** As students enter the room, prompt them to collect the materials they’ll  need to play *Candidate*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce this lesson’s career connection: a Data Analyst.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "59613137-9701-4efa-be10-637df99e8647",
+        "lesson_activity.key": "1a58d91f-18c1-4ade-8812-cfdf2624189a"
+      }
+    },
+    {
+      "key": "c56b5523-c8d8-4dcd-8181-623ac86d78fe",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Introduce students to the data analysis process by playing Candidate. In *Candidate*, students ask strategic questions, collect simple data, and interpret it to run for student government on the most popular policy.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce students to *Candidate*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the premise and goals of *Candidate*.",
+        "duration": "25",
+        "name": "Candidate"
+      },
+      "seeding_key": {
+        "activity_section.key": "c56b5523-c8d8-4dcd-8181-623ac86d78fe",
+        "lesson_activity.key": "0fe2b91a-b601-4fa9-9718-a5be98cbdb6d"
+      }
+    },
+    {
+      "key": "7ef77f4a-5182-487c-83ba-ec7304f1a148",
+      "position": 2,
+      "properties": {
+        "description": "You are running for student government. Your goal is to choose the most popular policy. There are five policies to choose from. Let’s see them.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7ef77f4a-5182-487c-83ba-ec7304f1a148",
+        "lesson_activity.key": "0fe2b91a-b601-4fa9-9718-a5be98cbdb6d"
+      }
+    },
+    {
+      "key": "5506fa1a-87fc-4217-8e72-6b754e069fcc",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Reveal and read aloud the five policy choices.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the voting mechanics."
+      },
+      "seeding_key": {
+        "activity_section.key": "5506fa1a-87fc-4217-8e72-6b754e069fcc",
+        "lesson_activity.key": "0fe2b91a-b601-4fa9-9718-a5be98cbdb6d"
+      }
+    },
+    {
+      "key": "6ca7dde9-686c-461b-b1da-804d537fbff2",
+      "position": 4,
+      "properties": {
+        "description": "Look at your Persona Card. Keep it a secret from your neighbor! The icon in the top right is the policy your persona will vote for at the end of the game. You still have to choose your own policy to run on: the policy your persona will vote for isn’t the policy you have to choose.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6ca7dde9-686c-461b-b1da-804d537fbff2",
+        "lesson_activity.key": "0fe2b91a-b601-4fa9-9718-a5be98cbdb6d"
+      }
+    },
+    {
+      "key": "8fdeb71e-776b-41aa-9901-15e8d86a9e77",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the win condition: students need to pick the policy that is most popular among the class’s persona cards."
+      },
+      "seeding_key": {
+        "activity_section.key": "8fdeb71e-776b-41aa-9901-15e8d86a9e77",
+        "lesson_activity.key": "0fe2b91a-b601-4fa9-9718-a5be98cbdb6d"
+      }
+    },
+    {
+      "key": "44341363-edbe-4419-ac36-62ae8cbe3d8d",
+      "position": 6,
+      "properties": {
+        "description": "At the end of the game, we’ll tally up the Persona Card votes to see which policy is the most popular. If you choose the policy that’s most popular among all of the class’s personas, you’ll win!",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider being extra clear: students themselves—not their Persona Cards—are choosing a policy to run on. Students can choose to run on a policy other than the policy their persona card will vote for. And their Persona Cards—not students themselves—are voting on policies to determine each policy’s popularity."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "44341363-edbe-4419-ac36-62ae8cbe3d8d",
+        "lesson_activity.key": "0fe2b91a-b601-4fa9-9718-a5be98cbdb6d"
+      }
+    },
+    {
+      "key": "ec868725-c7f5-4ca6-9203-24ef8c46286b",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the rounds of *Candidate*."
+      },
+      "seeding_key": {
+        "activity_section.key": "ec868725-c7f5-4ca6-9203-24ef8c46286b",
+        "lesson_activity.key": "0fe2b91a-b601-4fa9-9718-a5be98cbdb6d"
+      }
+    },
+    {
+      "key": "eca43d69-1719-4dd4-bb5a-a3ef3a5769c3",
+      "position": 8,
+      "properties": {
+        "description": "How should you choose a policy to run on? Ask the personas! We’ll play the game in two rounds: in each round, you’ll ask one yes-or-no question of the personas in your group.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "eca43d69-1719-4dd4-bb5a-a3ef3a5769c3",
+        "lesson_activity.key": "0fe2b91a-b601-4fa9-9718-a5be98cbdb6d"
+      }
+    },
+    {
+      "key": "d75f49af-0d53-4718-8e22-a26e8100bbac",
+      "position": 9,
+      "properties": {
+        "description": "With five policies and only two rounds of questions, you won’t be able to ask about each policy. You’ll need to get creative with your questions to gather as much information as you can.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d75f49af-0d53-4718-8e22-a26e8100bbac",
+        "lesson_activity.key": "0fe2b91a-b601-4fa9-9718-a5be98cbdb6d"
+      }
+    },
+    {
+      "key": "1b5c6b62-1b8a-406c-a1cd-46f7f2892cbe",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Prompt students to get into groups to begin playing *Candidate*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Step students through Round 1 of *Candidate*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *data analysis*."
+      },
+      "seeding_key": {
+        "activity_section.key": "1b5c6b62-1b8a-406c-a1cd-46f7f2892cbe",
+        "lesson_activity.key": "0fe2b91a-b601-4fa9-9718-a5be98cbdb6d"
+      }
+    },
+    {
+      "key": "81dbf808-f04c-4c76-9dc3-9946de58bc11",
+      "position": 11,
+      "properties": {
+        "description": "Data analysis is exactly what you’ll do first-hand today. Your job is to ask questions, collect data from personas, and use that information to make a call about which policy you’ll run on.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "81dbf808-f04c-4c76-9dc3-9946de58bc11",
+        "lesson_activity.key": "0fe2b91a-b601-4fa9-9718-a5be98cbdb6d"
+      }
+    },
+    {
+      "key": "9df665e9-1685-4f03-99d7-5cb4865c3802",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Prompt students to write a yes-or-no question on their Activity Guide, then pass their Activity Guide to their left. Once all students have done so, reveal the next instructions."
+      },
+      "seeding_key": {
+        "activity_section.key": "9df665e9-1685-4f03-99d7-5cb4865c3802",
+        "lesson_activity.key": "0fe2b91a-b601-4fa9-9718-a5be98cbdb6d"
+      }
+    },
+    {
+      "key": "2fed8586-909c-4515-8e6b-5d2a7ef89549",
+      "position": 13,
+      "properties": {
+        "description": "Give your question some thought. Make sure it’s a question you think other personas can answer. And try to write a question that gives you information about more than one policy’s possible popularity.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2fed8586-909c-4515-8e6b-5d2a7ef89549",
+        "lesson_activity.key": "0fe2b91a-b601-4fa9-9718-a5be98cbdb6d"
+      }
+    },
+    {
+      "key": "164d5221-54cb-40bd-b9bc-25914eefce50",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students write, look for questions that can’t be answered with a yes or a no. Remind those students that the question must be a yes-or-no question.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "While students think, consider displaying the five policies again—on a previous slide—for their reference. They can also reference the policies on their Activity Guide."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "164d5221-54cb-40bd-b9bc-25914eefce50",
+        "lesson_activity.key": "0fe2b91a-b601-4fa9-9718-a5be98cbdb6d"
+      }
+    },
+    {
+      "key": "0e1c6cdb-4055-4686-8265-9acf3b6df49e",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Prompt students to read the question they’ve received. Then, prompt them to answer the question based on how their Persona Card would answer it. Finally, prompt them to continue passing Activity Guides and answering questions until they receive their own Activity Guide back."
+      },
+      "seeding_key": {
+        "activity_section.key": "0e1c6cdb-4055-4686-8265-9acf3b6df49e",
+        "lesson_activity.key": "0fe2b91a-b601-4fa9-9718-a5be98cbdb6d"
+      }
+    },
+    {
+      "key": "114f051e-6056-4e82-b1dd-f1bf8b3e7e31",
+      "position": 16,
+      "properties": {
+        "description": "Read the question you’ve received. Then read your Persona Card. In the next row, put a check in the \"Yes\" or \"No\" column, based on the information on your Persona Card. If you’re really unsure about how to answer, or can’t understand the question, place a check in the \"Unsure\" column. Now, repeat until you get your own Activity Guide back.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "114f051e-6056-4e82-b1dd-f1bf8b3e7e31",
+        "lesson_activity.key": "0fe2b91a-b601-4fa9-9718-a5be98cbdb6d"
+      }
+    },
+    {
+      "key": "59ea0205-8002-4a44-a7cd-895a6a09f163",
+      "position": 17,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students pass their Activity Guides, look for…\n- Readers that slow a group down. If students get stuck, consider helping them read the question—or advise them to ask the student who wrote the question.\n- Students answering a question as themselves, rather than their Persona Card. Remind them that they should reference their Persona Card to answer each question.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Prompt students to reflect on what they’ve learned from their question."
+      },
+      "seeding_key": {
+        "activity_section.key": "59ea0205-8002-4a44-a7cd-895a6a09f163",
+        "lesson_activity.key": "0fe2b91a-b601-4fa9-9718-a5be98cbdb6d"
+      }
+    },
+    {
+      "key": "297ec75d-da48-4557-8b0c-277a9dd326df",
+      "position": 18,
+      "properties": {
+        "description": "Now it’s time to analyze the data you’ve collected. Respond to the question in your Activity Guide. As you respond, think about what you now know about the personas in the classroom. Which policies do you think will be more popular than others?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "297ec75d-da48-4557-8b0c-277a9dd326df",
+        "lesson_activity.key": "0fe2b91a-b601-4fa9-9718-a5be98cbdb6d"
+      }
+    },
+    {
+      "key": "0f3086fd-acc6-4eed-951d-a3da98e511df",
+      "position": 19,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Step students through Round 2 of Candidate."
+      },
+      "seeding_key": {
+        "activity_section.key": "0f3086fd-acc6-4eed-951d-a3da98e511df",
+        "lesson_activity.key": "0fe2b91a-b601-4fa9-9718-a5be98cbdb6d"
+      }
+    },
+    {
+      "key": "340f78da-92cf-4e9d-83de-384d93c1ec09",
+      "position": 20,
+      "properties": {
+        "description": "Before we begin Round 2, let’s reflect.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "340f78da-92cf-4e9d-83de-384d93c1ec09",
+        "lesson_activity.key": "0fe2b91a-b601-4fa9-9718-a5be98cbdb6d"
+      }
+    },
+    {
+      "key": "78257f37-b4f6-4e0b-b6c3-8ea9e412a655",
+      "position": 21,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do you think makes a good question? Can you share any examples you’ve seen?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Prompt students to reflect on how to write a strong question. Strong responses will describe questions that surface a common theme among multiple policies. For example, it might be effective to ask \"Do you have a lot to do after school?\", because multiple policies relate to after-school scheduling. Make the point that questions which touch on common themes, rather than questions that ask about specific policies, are more effective when you can only ask a few questions. Once students have shared a few examples they’ve seen, continue with Round 2.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Prompt students to write a yes-or-no question on their Activity Guide, then pass their Activity Guide to their left. Once all students have done so, reveal the next instructions."
+      },
+      "seeding_key": {
+        "activity_section.key": "78257f37-b4f6-4e0b-b6c3-8ea9e412a655",
+        "lesson_activity.key": "0fe2b91a-b601-4fa9-9718-a5be98cbdb6d"
+      }
+    },
+    {
+      "key": "61beedf4-6251-48ce-a429-c92b61a79175",
+      "position": 22,
+      "properties": {
+        "description": "Again, give your next question some thought. Make sure it’s a question you think other personas can answer.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "61beedf4-6251-48ce-a429-c92b61a79175",
+        "lesson_activity.key": "0fe2b91a-b601-4fa9-9718-a5be98cbdb6d"
+      }
+    },
+    {
+      "key": "49e8fcf7-2f65-4669-906c-1a0af87445c8",
+      "position": 23,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students write, look again for questions that can’t be answered with a yes or a no. Remind those students that the question must be a yes-or-no question.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "While students think, consider displaying the five policies again—on a previous slide—for their reference. They can also reference the policies on their Activity Guide."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "49e8fcf7-2f65-4669-906c-1a0af87445c8",
+        "lesson_activity.key": "0fe2b91a-b601-4fa9-9718-a5be98cbdb6d"
+      }
+    },
+    {
+      "key": "69f25247-b6bc-4688-a7de-48ce6af62855",
+      "position": 24,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Prompt students to read the question they’ve received. Then, prompt them to answer the question based on how their Persona Card would answer it. Finally, prompt them to continue passing Activity Guides and answering questions until they receive their own Activity Guide back."
+      },
+      "seeding_key": {
+        "activity_section.key": "69f25247-b6bc-4688-a7de-48ce6af62855",
+        "lesson_activity.key": "0fe2b91a-b601-4fa9-9718-a5be98cbdb6d"
+      }
+    },
+    {
+      "key": "47d69c0a-3182-4f20-af05-e9bf1c11782a",
+      "position": 25,
+      "properties": {
+        "description": "Just like Round 1. Read the question you’ve received. Then read your Persona Card. In the next row, put a check in the \"Yes\" or \"No\" column, based on the information on your Persona Card. If you’re really unsure about how to answer, or can’t understand the question, place a check in the \"Unsure\" column. Now, repeat until you get your own Activity Guide back.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "47d69c0a-3182-4f20-af05-e9bf1c11782a",
+        "lesson_activity.key": "0fe2b91a-b601-4fa9-9718-a5be98cbdb6d"
+      }
+    },
+    {
+      "key": "57a74983-c887-45e4-8dd5-c084e23ea339",
+      "position": 26,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students pass their Activity Guides, look again for…\n- Readers that slow a group down. If students get stuck, consider helping them read the question—or advise them to ask the student who wrote the question.\n- Students answering a question as themselves, rather than their Persona Card. Remind them that they should reference their Persona Card to answer each question.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Prompt students to reflect on what they’ve learned from their question."
+      },
+      "seeding_key": {
+        "activity_section.key": "57a74983-c887-45e4-8dd5-c084e23ea339",
+        "lesson_activity.key": "0fe2b91a-b601-4fa9-9718-a5be98cbdb6d"
+      }
+    },
+    {
+      "key": "eafcc623-4d37-48ba-ab2c-2f1fce157fdd",
+      "position": 27,
+      "properties": {
+        "description": "Now you have two questions whose data you can analyze. Using what you’ve learned from the data, decide on the policy you think will be most popular.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider being particularly explicit that students should choose the policy they believe will be most popular based on the data they’ve collected—not the policy that they personally want."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "eafcc623-4d37-48ba-ab2c-2f1fce157fdd",
+        "lesson_activity.key": "0fe2b91a-b601-4fa9-9718-a5be98cbdb6d"
+      }
+    },
+    {
+      "key": "bdcd147f-6145-4136-aae8-63aa9770cfd6",
+      "position": 28,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Start to reveal the results of the game.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the five possible policy choices. Tell students it’s time to reveal which policy they’re going to run on. Name each policy, and ask students to raise their hand or shout out if they are running on that policy.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Name each policy again. As you do, tell students to raise their hand if their persona is voting for that policy. Keep track of each policy’s popularity by writing the number of votes for each policy on the board.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Once the results are in, celebrate! Students who picked the most popular policy are the \"winners,\" though remind students the main point of the game is to see the data analysis process first-hand.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you have additional time, consider asking students: \"How was this game different from how real elections work?\""
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bdcd147f-6145-4136-aae8-63aa9770cfd6",
+        "lesson_activity.key": "0fe2b91a-b601-4fa9-9718-a5be98cbdb6d"
+      }
+    },
+    {
+      "key": "e04f519c-235d-4c77-8950-46c2da05d0f0",
+      "position": 29,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Create time for students to reflect on their early experience with the data analysis process.",
+        "duration": "10",
+        "name": "Reflecting on Candidate"
+      },
+      "seeding_key": {
+        "activity_section.key": "e04f519c-235d-4c77-8950-46c2da05d0f0",
+        "lesson_activity.key": "0fe2b91a-b601-4fa9-9718-a5be98cbdb6d"
+      }
+    },
+    {
+      "key": "862848cc-f69a-474a-a962-d587a1a8a1a8",
+      "position": 30,
+      "properties": {
+        "progression_name": "Question of the Day"
+      },
+      "seeding_key": {
+        "activity_section.key": "862848cc-f69a-474a-a962-d587a1a8a1a8",
+        "lesson_activity.key": "0fe2b91a-b601-4fa9-9718-a5be98cbdb6d"
+      }
+    },
+    {
+      "key": "883966e7-a51a-40d4-bd3c-b9a9c19c3334",
+      "position": 31,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1. Students answer the Question of the Day. After they do, discuss a related question.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Describe your process for deciding on a question and analyzing the data you collected. What did you learn?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Draw out students’ experiences with the data analysis process. Emphasize it’s not expected students will have expertly handled the process: they may have chosen a question that didn’t work or received data that wasn’t very useful. Rather, it’s expected students demonstrate they’ve learned something about, or from, the process: that data analysis involves choosing questions carefully, collecting data, and trying to make sense of it—even if it doesn’t always lead to direct answers."
+      },
+      "seeding_key": {
+        "activity_section.key": "883966e7-a51a-40d4-bd3c-b9a9c19c3334",
+        "lesson_activity.key": "0fe2b91a-b601-4fa9-9718-a5be98cbdb6d"
+      }
+    },
+    {
+      "key": "9cc77f36-55dd-4f63-9a74-486ee7099b66",
+      "position": 32,
+      "properties": {
+        "description": "Even if you didn’t win today’s game, you still learned something important about data analysis. Data analysis is about choosing good questions, collecting relevant data, and trying to make sense of that data. As we continue in this unit, we’ll explore the data analysis process in more depth. We’ll see why and how data analysis is an important part of building AI systems.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9cc77f36-55dd-4f63-9a74-486ee7099b66",
+        "lesson_activity.key": "0fe2b91a-b601-4fa9-9718-a5be98cbdb6d"
+      }
+    },
+    {
+      "key": "8303506f-5ad7-46ea-ba67-34f601e85eab",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "8303506f-5ad7-46ea-ba67-34f601e85eab",
+        "lesson_activity.key": "5a98eb46-28c3-487a-a811-eff6d70ee779"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Question of the Day"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-working-with-data-lesson1-level1-2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3",
+        "activity_section.key": "862848cc-f69a-474a-a962-d587a1a8a1a8"
+      },
+      "level_keys": [
+        "aif-y2-working-with-data-lesson1-level1-2026"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-working-with-data-lesson1-level1-2026",
+        "script_level.level_keys": [
+          "aif-y2-working-with-data-lesson1-level1-2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3",
+        "activity_section.key": "862848cc-f69a-474a-a962-d587a1a8a1a8"
+      }
+    }
   ],
   "resources": [
-
+    {
+      "name": "Candidate",
+      "url": "https://docs.google.com/document/d/1p8HKJ-cyCJiHdLLaeyju207TW-v1CkffbrTz3TGv6Mw/edit?usp=sharing",
+      "key": "candidate",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "candidate"
+      }
+    },
+    {
+      "name": "Candidate",
+      "url": "https://docs.google.com/document/d/1RZyS2DgUOShryOzq-RICicJ9NH4Ko-GSs31BVr1FhH0/edit?usp=sharing",
+      "key": "candidate_1",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "candidate_1"
+      }
+    },
+    {
+      "name": "Candidate Persona Cards",
+      "url": "https://drive.google.com/file/d/1FmLq1OW1srkxvnbiWkn0gMzmqHcmZEgT/view?usp=sharing",
+      "key": "candidate_persona_cards",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "candidate_persona_cards"
+      }
+    },
+    {
+      "name": "Candidate Supplemental Teacher Guide",
+      "url": "https://docs.google.com/document/d/1PRMzKL_3w0AniDo9gUGKZXK82R4drpHFBSg6q-I8l0c/edit?usp=sharing",
+      "key": "candidate_supplemental_teacher_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "candidate_supplemental_teacher_guide"
+      }
+    },
+    {
+      "name": "What is Data Analysis?",
+      "url": "https://docs.google.com/presentation/d/1jdD24hsyQ2KbaLa8XvKLuKah0ej7uiOdzgaadq7c2_M/edit?usp=sharing",
+      "key": "what_is_data_analysis_",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "what_is_data_analysis_"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "candidate"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "candidate_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "candidate_persona_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "candidate_supplemental_teacher_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "what_is_data_analysis_"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -59,16 +836,49 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "data_analysis",
+      "word": "data analysis",
+      "definition": "the use of data to answer questions",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data_analysis"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "data_analysis"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
-
+    {
+      "key": "2b793de1-d9b5-4713-9a48-a89fe03f7e6a",
+      "properties": {
+        "description": "Describe the process for conducting data analysis."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "2b793de1-d9b5-4713-9a48-a89fe03f7e6a"
+      }
+    },
+    {
+      "key": "3943399c-4d2e-4387-a55c-3989e858be8f",
+      "properties": {
+        "description": "Explore how data can help answer questions."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "3943399c-4d2e-4387-a55c-3989e858be8f"
+      }
+    }
   ],
   "lessons_standards": [
 
@@ -80,12 +890,79 @@
 
   ],
   "rubrics": [
-
+    {
+      "level_name": "aif-y2-working-with-data-lesson1-level1-2026",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3"
+      }
+    }
   ],
   "learning_goals": [
-
+    {
+      "key": "32ffe368-be0f-44ab-9d02-1fd2243305b2",
+      "position": 1,
+      "learning_goal": "Thinking Critically About Data",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "32ffe368-be0f-44ab-9d02-1fd2243305b2",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3"
+      }
+    }
   ],
   "learning_goal_evidence_levels": [
-
+    {
+      "understanding": 0,
+      "teacher_description": "Student’s answer is nonexistent or unrelated.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "32ffe368-be0f-44ab-9d02-1fd2243305b2",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student’s answer names a general reason that data is useful (e.g., \"It helps you learn something.\"), but doesn’t describe how data might become useful. Or, the student’s answer is ambiguous (e.g., \"Data becomes useful with questions.\").",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "32ffe368-be0f-44ab-9d02-1fd2243305b2",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student’s answer reasonably describes how data becomes useful (e.g., \"By asking questions, collecting data about the question, and then figuring out what the data says.\").",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "32ffe368-be0f-44ab-9d02-1fd2243305b2",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student’s answer describes how data becomes useful, and how data might be misleading (e.g., \"Data becomes useful when you ask the right questions about it, but it might not always give you the right answer if you don’t have all the data.\").",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "32ffe368-be0f-44ab-9d02-1fd2243305b2",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3"
+      }
+    }
   ]
 }

@@ -95,6 +95,42 @@ describe('setProperty image URL moderation', () => {
     expect(global.Applab.updateProperty).not.toHaveBeenCalled();
     expect(errorHandler.outputWarning).toHaveBeenCalled();
   });
+
+  it('does not update property for data URLs', () => {
+    applabCommands.setProperty({
+      elementId: 'test-image',
+      property: 'image',
+      value: 'data:image/png;base64,AAA=',
+    });
+
+    expect(mockModerateImageUrl).not.toHaveBeenCalled();
+    expect(global.Applab.updateProperty).not.toHaveBeenCalled();
+    expect(errorHandler.outputWarning).toHaveBeenCalled();
+  });
+
+  it('does not update property for uppercase DATA URLs', () => {
+    applabCommands.setProperty({
+      elementId: 'test-image',
+      property: 'image',
+      value: 'DATA:image/png;base64,AAA=',
+    });
+
+    expect(mockModerateImageUrl).not.toHaveBeenCalled();
+    expect(global.Applab.updateProperty).not.toHaveBeenCalled();
+    expect(errorHandler.outputWarning).toHaveBeenCalled();
+  });
+
+  it('does not update property for data URLs with leading whitespace', () => {
+    applabCommands.setProperty({
+      elementId: 'test-image',
+      property: 'image',
+      value: '  data:image/png;base64,AAA=',
+    });
+
+    expect(mockModerateImageUrl).not.toHaveBeenCalled();
+    expect(global.Applab.updateProperty).not.toHaveBeenCalled();
+    expect(errorHandler.outputWarning).toHaveBeenCalled();
+  });
 });
 
 describe('other image command URL moderation', () => {
@@ -195,6 +231,19 @@ describe('other image command URL moderation', () => {
     expect(testImage.getAttribute('data-canonical-image-url')).toBeNull();
   });
 
+  it('setImageURL warns and leaves src unchanged for data URLs', () => {
+    const originalSrc = testImage.src;
+    applabCommands.setImageURL({
+      elementId: 'test-image',
+      src: 'data:image/png;base64,AAA=',
+    });
+
+    expect(mockModerateImageUrl).not.toHaveBeenCalled();
+    expect(errorHandler.outputWarning).toHaveBeenCalled();
+    expect(testImage.src).toBe(originalSrc);
+    expect(testImage.getAttribute('data-canonical-image-url')).toBeNull();
+  });
+
   it('drawImageURL warns and invokes callback(false) when absolute URL is flagged', async () => {
     const callback = jest.fn();
     applabCommands.drawImageURL({
@@ -204,6 +253,18 @@ describe('other image command URL moderation', () => {
     await flushModerationAsync();
 
     expectModerationCalledWithHttpUrl();
+    expect(errorHandler.outputWarning).toHaveBeenCalled();
+    expect(callback).toHaveBeenCalledWith(false);
+  });
+
+  it('drawImageURL warns and invokes callback(false) for data URLs', () => {
+    const callback = jest.fn();
+    applabCommands.drawImageURL({
+      url: 'data:image/png;base64,AAA=',
+      callback,
+    });
+
+    expect(mockModerateImageUrl).not.toHaveBeenCalled();
     expect(errorHandler.outputWarning).toHaveBeenCalled();
     expect(callback).toHaveBeenCalledWith(false);
   });
@@ -220,6 +281,19 @@ describe('other image command URL moderation', () => {
     expectModerationCalledWithHttpUrl();
     expect(errorHandler.outputWarning).toHaveBeenCalled();
     expect(callback).toHaveBeenCalledWith(false);
+  });
+
+  it('image warns and leaves src empty for data URLs', () => {
+    applabCommands.image({
+      elementId: 'new-image',
+      src: 'data:image/png;base64,AAA=',
+    });
+
+    expect(mockModerateImageUrl).not.toHaveBeenCalled();
+    expect(errorHandler.outputWarning).toHaveBeenCalled();
+    const createdImage = document.getElementById('new-image');
+    expect(createdImage).toBeTruthy();
+    expect(createdImage.getAttribute('data-canonical-image-url')).toBeNull();
   });
 });
 

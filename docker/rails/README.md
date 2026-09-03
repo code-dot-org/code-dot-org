@@ -22,6 +22,10 @@ root files Rails boot reads, then carves out the exclusions in labelled
 groups. Its comments also record the inclusions that look excludable and
 are not, which is what to read before dropping a path.
 
+The frontend source and assets are excluded. The slice retains
+`frontend/apps/studio/config/vite.json`, however, because Rails loads Vite Ruby
+at boot even in the api and worker roles.
+
 Because it is an allowlist, a new top-level directory in the repo cannot
 join the image without an edit here.
 
@@ -44,6 +48,9 @@ installed the pull is a no-op. `.gitattributes` exempts `*en.yml` and `*en.json`
 so an English-only check will not catch it — the smoke test parses `ar-SA.yml`
 for exactly this reason. Locales are the only LFS-tracked path inside the
 slice, which is why the pull is by pattern rather than wholesale.
+
+`ensure-locales.sh` performs the same targeted pull only when the checkout
+contains an LFS pointer. Skaffold and the image workflow call it before builds.
 
 `DEPS_IMAGE` is the dependency layer this image stacks on. Its lockfile inputs
 must match this checkout: the build is only a `COPY`, so a mismatched parent
@@ -193,25 +200,60 @@ when you add something the running app reads from disk.
 
 ## Published image
 
-`ghcr.io/code-dot-org/cdo-rails`, amd64 only.
+`ghcr.io/code-dot-org/cdo-rails`, a multi-platform manifest over amd64 and
+arm64, built natively per architecture and merged — the cdo-base pattern.
 
 | tag | published from | meaning |
 |---|---|---|
-| `git-<sha>` | staging | the commit that published |
-| `latest` | staging | most recent staging publish |
+| `git-<sha>` | staging | the commit this image was built from |
+| `latest` | staging | the most recent staging publish |
 | `dev-<sha>` | other branches | manual dispatch |
+| `git-<sha>-amd64`, `git-<sha>-arm64` | any publish run | per-arch inputs to the merge job; not for consumers |
 
-`git-<sha>` names the source a publish built, but publishes happen on
-image-definition changes and on the `cdo-deps` chain, not on every staging
-commit, so most shas never get a tag. Do not treat the tag set as a per-commit
-contract.
+`.github/workflows/cdo-rails-image.yml` builds, tests and publishes the image.
+Every push to staging runs it. A pull request that touches this directory runs
+it. The `cdo-deps-image` chain and a manual dispatch run it too.
 
-`.github/workflows/cdo-rails-image.yml` runs the smoke matrix on docker and
-podman, runs `verify.sh`, and publishes from staging. It is not triggered by
-source changes — only by changes to this directory, to the key action, or to
-the workflow, plus the chain from `cdo-deps-image` and manual dispatch. The
-publish job re-runs both suites against the bytes it is about to push, because
-the earlier jobs tested images built on other runners.
+`Dockerfile.dockerignore` is the only definition of the slice, and only docker
+matches against it.
+
+### The dependency layer
+
+The build pulls a `cdo-deps` layer named by a content key. A push that changes
+`Gemfile`, `Gemfile.lock`, `.ruby-version`, `.python-version`, `pyproject.toml`
+or `uv.lock` arrives before that layer exists. `cdo-deps-image` is building it
+at that moment.
+
+On a push, a missing layer ends the run with a notice and publishes nothing.
+`cdo-deps-image` chains this workflow when the layer lands, and the build runs
+again. On any other event a missing layer is an error, because nothing will
+re-run the workflow.
+
+## Tag contract
+
+This directory publishes an image. It does not know who runs it.
+
+Four guarantees hold, and anything reading this registry may rely on them.
+
+**`latest` is the most recent staging publish.** It moves on every publish,
+including a rebuild of source that has not changed.
+
+**`git-<sha>` names the commit its image was built from.** Every staging
+publish writes one, and it is never repointed.
+
+**A digest pins exact bytes.** Tags move and digests do not, so a deployment
+that wants to hold still should record a digest.
+
+**Everything published passed the suites.** Smoke and boot verification run on
+the bytes of every publish, without exception.
+
+These four are an interface. Consumers of this registry are not visible from
+this directory, so a change to any of them breaks something you cannot see from
+here.
+
+These four are an interface. Consumers of this registry are not visible from
+this directory, so a change to any of them breaks something you cannot see from
+here.
 
 The workflow resolves `cdo-deps` by the content key its own checkout implies
 and fails, loudly, if no such layer has been published. Rebase onto the staging

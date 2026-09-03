@@ -29,8 +29,11 @@ const generator: GeneratorFunction = block =>
 // costume, so a label that fails to round-trip can't orphan the player from
 // its physics. Movement reads the sprite's own speed so "set speed" still
 // applies; the jump goes through platformJump, which checks footing and
-// jumps against gravity whichever way it points.
-const JUMP_SPEED = 10;
+// jumps against gravity whichever way it points. At zero gravity there is
+// no jump and the up and down arrows steer instead.
+// Clears a two-tile step with a little margin (apex ~2.4 tiles at the
+// default gravity).
+const JUMP_SPEED = 13;
 
 const helperCode = [
   // Shared by every block that produces a platform player; guarded so
@@ -46,6 +49,16 @@ const helperCode = [
   '  });',
   "  keyPressed('while', 'right', function () {",
   "    moveInDirection({group: 'players'}, getProp({group: 'players'}, 'speed'), 'East');",
+  '  });',
+  "  keyPressed('while', 'up', function () {",
+  '    if (platformGravity() === 0) {',
+  "      moveInDirection({group: 'players'}, getProp({group: 'players'}, 'speed'), 'North');",
+  '    }',
+  '  });',
+  "  keyPressed('while', 'down', function () {",
+  '    if (platformGravity() === 0) {',
+  "      moveInDirection({group: 'players'}, getProp({group: 'players'}, 'speed'), 'South');",
+  '    }',
   '  });',
   "  keyPressed('when', 'space', function () {",
   `    platformJump(${JUMP_SPEED});`,

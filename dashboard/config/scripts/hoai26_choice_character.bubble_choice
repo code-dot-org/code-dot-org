@@ -1,0 +1,11 @@
+name 'HoAI26-Choice-Character'
+display_name 'Choice Progression: Character'
+description "Create your main character."
+uses_lab2
+
+sublevels
+level 'HoAI26-Playtest1-Platform-CharacterNew'
+level 'HoAI26-Playtest1-Story-CharacterNew'
+level 'HoAI26-Playtest1-Game2-CharacterNew'
+
+navigation_type 'next_sublevel'

@@ -1,10 +1,12 @@
 {
   "name": "teaching-csd-microbit-2026",
   "script_names": [
-    "self-paced-pl-teaching-microbit-1-2026"
+    "self-paced-pl-teaching-microbit-2026",
+    "self-paced-pl-teaching-microbit-2026a"
   ],
   "original_script_names": [
-    "self-paced-pl-teaching-microbit-1-2026"
+    "self-paced-pl-teaching-microbit-2026",
+    "self-paced-pl-teaching-microbit-2026a"
   ],
   "published_state": "in_development",
   "instruction_type": "self_paced",

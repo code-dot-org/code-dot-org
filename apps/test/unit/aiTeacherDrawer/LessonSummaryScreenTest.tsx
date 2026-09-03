@@ -11,7 +11,7 @@ jest.mock('@cdo/apps/util/HttpClient');
 jest.mock('@cdo/apps/util/reduxHooks', () => ({
   useAppDispatch: jest.fn(),
 }));
-jest.mock('@cdo/apps/aiDifferentiation/redux', () => ({
+jest.mock('@cdo/apps/aiTeacherDrawer/redux', () => ({
   fetchThreadMessages: jest.fn(args => ({type: 'fetchThreadMessages', args})),
 }));
 jest.mock('@cdo/apps/sharedComponents/Spinner', () => ({

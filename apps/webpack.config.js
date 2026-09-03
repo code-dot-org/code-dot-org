@@ -15,10 +15,22 @@ const TerserPlugin = require('terser-webpack-plugin');
 const UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 const {WebpackManifestPlugin} = require('webpack-manifest-plugin');
-const {StatsWriterPlugin} = require('webpack-stats-plugin');
 
 const circularDependencies = require('./circular_dependencies.json');
 const envConstants = require('./envConstants');
+const {
+  DEV_SERVER_PORT,
+  nodeModulesToTranspile,
+  NODE_POLYFILL_PROVIDE,
+  NODE_POLYFILL_FALLBACK,
+  devtool,
+  localeDoNotImport,
+  APPLICATION_ALIASES,
+  LOCALE_ALIASES,
+  BUNDLE_EXTERNALS,
+  addPolyfillsToEntryPoints,
+  makeSplitChunks,
+} = require('./bundlerBase');
 
 if (envConstants.PROFILE_APPS_BUILD) {
   console.log(
@@ -39,52 +51,12 @@ const {
   LOCALIZATION_ENTRIES,
 } = require('./webpackEntryPoints');
 
-const WEBPACK_DEV_SERVER_PORT = 9000;
+const WEBPACK_DEV_SERVER_PORT = DEV_SERVER_PORT;
 
 const p = (...paths) => path.resolve(__dirname, ...paths);
 
 // Read worker count from environment variable, defaulting to 4 for local development
 const APPS_BUILD_WORKERS = parseInt(process.env.APPS_BUILD_WORKERS || '4', 10);
-
-// Certain packages ship in ES6 and need to be transpiled for our purposes.
-const nodeModulesToTranspile = [
-  // All of our @cdo- and @dsco_-aliased files should get transpiled as they are our own
-  // source files.
-  '@cdo',
-  '@dsco_',
-  // playground-io ships in ES6 as of 0.3.0
-  'playground-io',
-  'json-parse-better-errors',
-  '@blockly/field-grid-dropdown',
-  '@blockly/plugin-scroll-options',
-  '@blockly/field-angle',
-  '@blockly/field-bitmap',
-  '@blockly/field-colour',
-  'blockly',
-  '@code-dot-org/dance-party',
-  '@code-dot-org/johnny-five',
-  '@code-dot-org/remark-plugins',
-  'firmata',
-  // parse5 ships in ES6: https://github.com/inikulin/parse5/issues/263#issuecomment-410745073
-  'parse5',
-  'vmsg',
-  'ml-knn',
-  'ml-array-max',
-  'ml-array-min',
-  'ml-array-rescale',
-  'ml-distance-euclidean',
-  '@codemirror',
-  'style-mod',
-  '@lezer',
-  'microsoft-cognitiveservices-speech-sdk',
-  'slate',
-  'react-loading-skeleton',
-  'unified',
-].map(path => p('node_modules', path));
-
-// As of Webpack 5, Node APIs are no longer automatically polyfilled.
-// resolve.fallback resolves the API to its NPM package, and the plugin
-// makes the API available as a global.
 
 // map our circular dependency JSON to a set.
 const circularDependenciesSet = new Set(circularDependencies);
@@ -95,14 +67,7 @@ let seenCircles = new Set();
 let numUnresolvedCircles = 0;
 const nodePolyfillConfig = {
   plugins: [
-    new webpack.ProvidePlugin({
-      Buffer: ['buffer', 'Buffer'],
-      events: 'events',
-      stream: 'stream-browserify',
-      path: 'path-browserify',
-      process: 'process/browser',
-      timers: 'timers-browserify',
-    }),
+    new webpack.ProvidePlugin(NODE_POLYFILL_PROVIDE),
     new CircularDependencyPlugin({
       // ignore everything in a build directory or mode_modules
       exclude: /node_modules|build/,
@@ -155,78 +120,8 @@ const nodePolyfillConfig = {
     }),
   ],
   resolve: {
-    fallback: {
-      buffer: require.resolve('buffer/'),
-      events: require.resolve('events/'),
-      path: require.resolve('path-browserify'),
-      'process/browser': require.resolve('process/browser'),
-      stream: require.resolve('stream-browserify'),
-      timers: require.resolve('timers-browserify'),
-      crypto: false,
-      vm: require.resolve('vm-browserify'),
-    },
+    fallback: {...NODE_POLYFILL_FALLBACK},
   },
-};
-
-function devtool({minify} = {}) {
-  if (process.env.CI) {
-    return 'eval';
-  } else if (minify) {
-    return 'source-map';
-  } else if (process.env.DEBUG_MINIFIED) {
-    return 'eval-source-map';
-  } else if (process.env.DEV) {
-    return process.env.APPS_DEVTOOL || 'eval-cheap-module-source-map';
-  } else {
-    return 'inline-source-map';
-  }
-}
-
-// alias '@cdo/aichat/locale' => 'src/aichat/locale-do-not-import.js'
-const localeDoNotImport = (cdo, dir = 'src') => [
-  cdo,
-  p(cdo.replace(/^@cdo/, dir).replace(/locale$/, 'locale-do-not-import.js')),
-];
-// alias '@cdo/gamelab/locale' => 'src/p5lab/locale-do-not-import.js'
-const localeDoNotImportP5Lab = (cdo, dir = 'src') => [
-  cdo,
-  localeDoNotImport(cdo.replace(/^@cdo/, `${dir}/p5lab`)),
-];
-
-const APPLICATION_ALIASES = {
-  '@cdo/apps': p('src'),
-  '@cdo/static': p('static'),
-  repl: p('src/noop'),
-  '@cdo/storybook': p('.storybook'),
-  '@cdoide': p('src/weblab2/CDOIDE'),
-  '@cdo/generated-scripts': p('generated-scripts'),
-  '@codebridge': p('src/codebridge'),
-  // Prevent webpack from including linked npm dependencies' version of React
-  // In other words, only bundle one copy of React (the one specified in this file)
-  // and not the one specified by linked dependencies.
-  react: p('node_modules/react'),
-};
-
-const LOCALE_ALIASES = {
-  '@cdo/locale': path.resolve(__dirname, 'src/util/locale-do-not-import.js'),
-  ...Object.fromEntries([
-    localeDoNotImport('@cdo/applab/locale'),
-    localeDoNotImport('@cdo/codebridge/locale'),
-    localeDoNotImport('@cdo/javalab/locale'),
-    localeDoNotImport('@cdo/lab2/locale'),
-    localeDoNotImport('@cdo/music/locale'),
-    localeDoNotImport('@cdo/netsim/locale'),
-    localeDoNotImport('@cdo/pythonlab/locale'),
-    localeDoNotImport('@cdo/regionalPartnerMiniContact/locale'),
-    localeDoNotImport('@cdo/regionalPartnerSearch/locale'),
-    localeDoNotImport('@cdo/standaloneVideo/locale'),
-    localeDoNotImport('@cdo/weblab/locale'),
-    localeDoNotImport('@cdo/weblab2/locale'),
-    localeDoNotImport('@cdo/signup/locale'),
-    localeDoNotImportP5Lab('@cdo/gamelab/locale'),
-    localeDoNotImportP5Lab('@cdo/poetry/locale'),
-    localeDoNotImportP5Lab('@cdo/spritelab/locale'),
-  ]),
 };
 
 const WEBPACK_ALIASES = {
@@ -427,27 +322,12 @@ const WEBPACK_BASE_CONFIG = {
 };
 
 /**
- * Adds pollyfills to each entrypoint (before the existing path(s))
- *
- * @param {Object[]} entries - same format as the webpack config `entry` property
- * @param {String[]} pollyfills - prepends the pollyfills to each entrypoint (before the existing paths)
- */
-function addPollyfillsToEntryPoints(entries, polyfills) {
-  return Object.fromEntries(
-    Object.entries(entries).map(([entryName, paths]) => [
-      entryName,
-      [].concat(polyfills).concat(paths),
-    ])
-  );
-}
-
-/**
  * Generate the primary webpack config for building `apps/`.
  * Extends `WEBPACK_BASE_CONFIG` from above.
  *
  * Invoked by `Gruntfile.js` for `yarn start`, `yarn build`, etc
  *
- * @param {Object} appEntries - defaults to building all apps, to build only one app pass in e.g. `appEntriesFor('maze')`
+ * @param {Object} appsEntries - defaults to building all apps, to build only one app pass in e.g. `appsEntriesFor(['maze'])`
  * @param {boolean} minify - whether to minify the output
  * @param {boolean} piskelDevMode - whether to use the piskel dev mode
  * @returns {Object} A webpack config object for building `apps/`
@@ -472,7 +352,7 @@ function createWebpackConfig({
     stats: envConstants.DEV ? 'normal' : 'errors-only',
     devtool: devtool({minify}),
     entry: {
-      ...addPollyfillsToEntryPoints(
+      ...addPolyfillsToEntryPoints(
         {
           ...appsEntries,
           ...CODE_STUDIO_ENTRIES,
@@ -486,22 +366,7 @@ function createWebpackConfig({
       ),
       ...LOCALIZATION_ENTRIES,
     },
-    externals: [
-      {
-        jquery: 'var $',
-        // qtip2 doesn't actually export anything - it's a jquery extension
-        // and modifies the jquery object when present.
-        // We also want to be free to import 'qtip2' in our code (for tests)
-        // without including a copy of it in our release bundles since it's
-        // already provided by application.js.
-        // Therefore we include it as an external here (which keeps us from
-        // including the library in release bundles) but we map it to the
-        // jquery object, which will always be available when we are depending
-        // on qtip.  Tests skip this 'external' configuration and load the
-        // npm-provided copy of qtip2.
-        qtip2: 'var $',
-      },
-    ],
+    externals: BUNDLE_EXTERNALS,
     optimization: {
       chunkIds: 'total-size',
       moduleIds: 'size',
@@ -548,112 +413,10 @@ function createWebpackConfig({
         name: 'webpack-runtime',
       },
 
-      // Using splitChunks and/or StatsWriterPlugin in dev mode increases rebuild+reload time
-      // by 2x-10x. See: https://github.com/code-dot-org/code-dot-org/pull/55707
-      splitChunks: process.env.DEV
-        ? undefined
-        : {
-            // Override the default limit of 3 concurrent downloads on page load,
-            // which only makes sense for HTTP 1.1 servers. HTTP 2 performance has
-            // been observed to degrade only with > 200 simultaneous downloads.
-            maxInitialRequests: 100,
-            cacheGroups: {
-              // Pull any module shared by 2+ appsEntries into the "common" chunk.
-              common: {
-                name: 'common',
-                minChunks: 2,
-                chunks: chunk => {
-                  return Object.keys(appsEntries).includes(chunk.name);
-                },
-              },
-              // Pull any module shared by 2+ CODE_STUDIO_ENTRIES into the
-              // "code-studio-common" chunk.
-              'code-studio-common': {
-                name: 'code-studio-common',
-                minChunks: 2,
-                chunks: chunk => {
-                  const chunkNames = Object.keys(CODE_STUDIO_ENTRIES);
-                  return chunkNames.includes(chunk.name);
-                },
-                priority: 10,
-              },
-              // With just the cacheGroups listed above, we end up with many
-              // duplicate modules between the "common" and "code-studio-common"
-              // chunks. The next cache group eliminates some of this duplication
-              // by pulling more modules from "common" into "code-studio-common".
-              //
-              // The use of minChunks provides a guarantee that we don't
-              // unnecessarily move things into "code-studio-common" which are
-              // needed only by appsEntries. This avoids increasing the download
-              // size for code studio pages which include code-studio-common.js
-              // but not common.js.
-              //
-              // There is no converse guarantee that this strategy will eliminate
-              // all duplication between "common" and "code-studio-common".
-              // However, at the time of this writing, bundle analysis indicates
-              // that is currently effective in eliminating any duplication.
-              //
-              // In the future, we want to move toward asynchronous imports, which
-              // allow webpack to manage bundle splitting and sharing behind the
-              // scenes. Once we adopt this approach, the need for predefined
-              // cacheGroups will go away.
-              //
-              // For more information see: https://webpack.js.org/guides/code-splitting/
-              'code-studio-multi': {
-                name: 'code-studio-common',
-                minChunks: Object.keys(appsEntries).length + 1,
-                chunks: chunk => {
-                  const chunkNames = Object.keys(CODE_STUDIO_ENTRIES).concat(
-                    Object.keys(appsEntries)
-                  );
-                  return chunkNames.includes(chunk.name);
-                },
-                priority: 20,
-              },
-              vendors: {
-                name: 'vendors',
-                priority: 30,
-                chunks: chunk => {
-                  // all 'initial' chunks except OTHER_ENTRIES
-                  const chunkNames = Object.keys({
-                    ...appsEntries,
-                    ...CODE_STUDIO_ENTRIES,
-                    ...INTERNAL_ENTRIES,
-                    ...PEGASUS_ENTRIES,
-                    ...PROFESSIONAL_DEVELOPMENT_ENTRIES,
-                    ...SHARED_ENTRIES,
-                  });
-
-                  return chunkNames.includes(chunk.name);
-                },
-                test(module) {
-                  return [
-                    '@babel/polyfill/noConflict',
-                    '@mui',
-                    'immutable',
-                    'lodash',
-                    'moment',
-                    'radium',
-                    'react',
-                    'react-dom',
-                    'wgxpath',
-                  ].some(libName =>
-                    new RegExp(`/apps/node_modules/${libName}/`).test(
-                      module.resource
-                    )
-                  );
-                },
-              },
-              p5lab: {
-                name: 'p5-dependencies',
-                priority: 10,
-                minChunks: 2,
-                chunks: chunk =>
-                  ['spritelab', 'gamelab', 'dance'].includes(chunk.name),
-                test: module => /p5/.test(module.resource),
-              },
-            },
-          },
+      // Using splitChunks in dev mode increases rebuild+reload time by
+      // 2x-10x. See: https://github.com/code-dot-org/code-dot-org/pull/55707
+      // Both configs share the cacheGroups via bundlerBase.makeSplitChunks.
+      splitChunks: process.env.DEV ? undefined : makeSplitChunks(appsEntries),
     },
     mode: minify ? 'production' : 'development',
     profile: envConstants.PROFILE_APPS_BUILD,
@@ -751,15 +514,6 @@ function createWebpackConfig({
           }
           return file;
         },
-        ...(process.env.DEV
-          ? []
-          : [
-              // Using splitChunks and/or StatsWriterPlugin in dev mode increases rebuild+reload time
-              // by 2x-10x. See: https://github.com/code-dot-org/code-dot-org/pull/55707
-              new StatsWriterPlugin({
-                fields: ['assetsByChunkName', 'assets'],
-              }),
-            ]),
       }),
       new PyodidePlugin({
         outDirectory: `pyodide/${pyodide.version}`,
@@ -848,7 +602,6 @@ module.exports = {
   default: createWebpackConfig(),
   // Returns the `WEBPACK_CONFIG` used by our primary build:
   createWebpackConfig,
-  devtool,
   localeDoNotImport,
   // Used as the basis for karma and storybook webpack configs:
   WEBPACK_BASE_CONFIG,

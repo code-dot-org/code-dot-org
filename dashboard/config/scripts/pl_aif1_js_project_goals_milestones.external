@@ -7,6 +7,16 @@ markdown <<MARKDOWN
 
 <p>This is the unit's capstone. Everything from web app structure through loops and conditionals comes together here: students plan, build, and reflect on an interactive app of their own design over five class days.</p>
 
+---
+
+<h2>Sample Project</h2>
+<p>Remember the project from the beginning of the module. Now it's time to dive in.</p>
+<p><em>Click the ingredients and see what happens.</em></p>
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+  <iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/trail-mix-badge-builder-v2.html" width="100%" height="720" style="border:none;" title="Trail Mix Badge Builder sample project"></iframe>
+</div>
+
 <h2>Project Goals</h2>
 
 <p style="margin: 0 0 8px 0;">• Plan and model the logic for an interactive app that produces different outcomes based on user input</p>
@@ -14,17 +24,109 @@ markdown <<MARKDOWN
 <p style="margin: 0 0 8px 0;">• Organize and structure code with functions and event-driven design</p>
 <p style="margin: 0;">• Reflect on how AI tools and their own creative decisions shaped the process</p>
 
-<h2>The Four Milestones</h2>
+<h2 style="text-align:center; color:#4C42CF; margin-bottom:8px;">Project Roadmap</h2>
 
-<p>The project is divided into four milestones across five days, each with its own goal and its own reflection:</p>
+<p style="text-align:center; margin-top:0;">Follow the four milestones from planning through final reflection.</p>
 
-<p style="margin: 0 0 8px 0;">• <b>Milestone 1 (Day 1):</b> Plan the app idea, build a wireframe, and design a flowchart for the logic</p>
-<p style="margin: 0 0 8px 0;">• <b>Milestone 2 (Day 2):</b> Start building, focusing on one working interaction</p>
-<p style="margin: 0 0 8px 0;">• <b>Milestone 3 (Day 3):</b> Continue building and get structured peer feedback</p>
-<p style="margin: 0;">• <b>Milestone 4 (Days 4-5):</b> Refine based on feedback, finalize the project, and self-assess against the rubric</p>
+<div style="width:100%; overflow-x:auto; margin:28px 0; padding-bottom:10px;">
 
-<div style="text-align: center; margin: 20px 0;">
-<img src="https://images.code.org/d8db4db8bad22674da51415c7517d10f-image-1786542392351.png" alt="A wavy path diagram showing four milestones in sequence, leading to a final showcase at the end." style="max-width: 500px; width: 100%; border-radius: 10px;">
+  <div role="list" aria-label="Four project milestones" style="position:relative; display:flex; align-items:stretch; gap:18px; min-width:820px; padding:24px 12px 12px 12px; box-sizing:border-box; font-family:Arial, Helvetica, sans-serif;">
+
+<!-- Road -->
+  <div aria-hidden="true" style="position:absolute; left:8%; right:8%; top:47px; height:12px; background-color:#1F1976; border-radius:10px; z-index:0;"></div>
+
+  <div aria-hidden="true" style="position:absolute; left:8%; right:8%; top:52px; border-top:2px dashed #FFFFFF; z-index:1;"></div>
+
+   <!-- Milestone 1 -->
+   <div role="listitem" style="position:relative; flex:1; min-width:185px; z-index:2;">
+
+  <!-- Pin -->
+   <div style="width:44px; height:44px; margin:0 auto 30px auto; background-color:#1F1976; border:4px solid #FFFFFF; border-radius:50% 50% 50% 0; box-shadow:0 2px 5px rgba(0,0,0,0.20); box-sizing:border-box; transform:rotate(-45deg); display:flex; align-items:center; justify-content:center;">
+        <span style="color:#FFFFFF; font-size:18px; font-weight:bold; transform:rotate(45deg);">1</span>
+      </div>
+
+   <!-- Card -->
+   <div style="height:220px; box-sizing:border-box; background-color:#E4E2F8; color:#1F1976; border-top:6px solid #4C42CF; border-radius:10px; padding:16px; box-shadow:0 3px 8px rgba(0,0,0,0.12);">
+
+  <div style="display:inline-block; background-color:#ACA8EA; color:#1F1976; border-radius:14px; padding:3px 9px; margin-bottom:10px; font-size:14px; font-weight:bold;">
+       Day 1
+        </div>
+
+  <h3 style="color:#1F1976; margin:0 0 10px 0; font-size:19px;">Milestone 1: Plan</h3>
+
+  <ul style="margin:0; padding-left:20px; color:#000000; line-height:1.5;">
+          <li>Plan the app idea</li>
+          <li>Build a wireframe</li>
+          <li>Design a flowchart for the logic</li>
+        </ul>
+
+  </div>
+    </div>
+
+ <!-- Milestone 2 -->
+ <div role="listitem" style="position:relative; flex:1; min-width:185px; z-index:2;">
+
+  <!-- Pin -->
+  <div style="width:44px; height:44px; margin:0 auto 30px auto; background-color:#06338D; border:4px solid #FFFFFF; border-radius:50% 50% 50% 0; box-shadow:0 2px 5px rgba(0,0,0,0.20); box-sizing:border-box; transform:rotate(-45deg); display:flex; align-items:center; justify-content:center;">
+        <span style="color:#FFFFFF; font-size:18px; font-weight:bold; transform:rotate(45deg);">2</span>
+      </div>
+
+   <!-- Card -->
+  <div style="height:220px; box-sizing:border-box; background-color:#D5EFFF; color:#06338D; border-top:6px solid #0099F3; border-radius:10px; padding:16px; box-shadow:0 3px 8px rgba(0,0,0,0.12);">
+     <div style="display:inline-block; background-color:#6FCAFF; color:#06338D; border-radius:14px; padding:3px 9px; margin-bottom:10px; font-size:14px; font-weight:bold;">
+         Day 2
+        </div>
+    <h3 style="color:#06338D; margin:0 0 10px 0; font-size:19px;">Milestone 2: Build</h3>
+    <ul style="margin:0; padding-left:20px; color:#000000; line-height:1.5;">
+          <li>Start building the app</li>
+          <li>Focus on one working interaction</li>
+        </ul>
+
+   </div>
+    </div>
+    <!-- Milestone 3 -->
+    <div role="listitem" style="position:relative; flex:1; min-width:185px; z-index:2;">
+    <!-- Pin -->
+      <div style="width:44px; height:44px; margin:0 auto 30px auto; background-color:#003F25; border:4px solid #FFFFFF; border-radius:50% 50% 50% 0; box-shadow:0 2px 5px rgba(0,0,0,0.20); box-sizing:border-box; transform:rotate(-45deg); display:flex; align-items:center; justify-content:center;">
+        <span style="color:#FFFFFF; font-size:18px; font-weight:bold; transform:rotate(45deg);">3</span>
+      </div>
+      <!-- Card -->
+      <div style="height:220px; box-sizing:border-box; background-color:#CCF1D0; color:#003F25; border-top:6px solid #34BD43; border-radius:10px; padding:16px; box-shadow:0 3px 8px rgba(0,0,0,0.12);">
+    <div style="display:inline-block; background-color:#7CDB87; color:#003F25; border-radius:14px; padding:3px 9px; margin-bottom:10px; font-size:14px; font-weight:bold;">
+          Day 3
+        </div>
+
+  <h3 style="color:#003F25; margin:0 0 10px 0; font-size:19px;">Milestone 3: Get Feedback</h3>
+   <ul style="margin:0; padding-left:20px; color:#000000; line-height:1.5;">
+          <li>Continue building</li>
+          <li>Get structured peer feedback</li>
+        </ul>
+
+   </div>
+    </div>
+
+  <!-- Milestone 4 -->
+ <div role="listitem" style="position:relative; flex:1; min-width:185px; z-index:2;">
+
+   <!-- Pin -->
+  <div style="width:44px; height:44px; margin:0 auto 30px auto; background-color:#510000; border:4px solid #FFFFFF; border-radius:50% 50% 50% 0; box-shadow:0 2px 5px rgba(0,0,0,0.20); box-sizing:border-box; transform:rotate(-45deg); display:flex; align-items:center; justify-content:center;">
+        <span style="color:#FFFFFF; font-size:18px; font-weight:bold; transform:rotate(45deg);">4</span>
+      </div>
+    <!-- Card -->
+      <div style="height:220px; box-sizing:border-box; background-color:#FFE3CE; color:#510000; border-top:6px solid #F46B00; border-radius:10px; padding:16px; box-shadow:0 3px 8px rgba(0,0,0,0.12);">
+       <div style="display:inline-block; background-color:#FFA668; color:#510000; border-radius:14px; padding:3px 9px; margin-bottom:10px; font-size:14px; font-weight:bold;">
+          Days 4–5
+        </div>
+     <h3 style="color:#510000; margin:0 0 10px 0; font-size:19px;">Milestone 4: Finalize</h3>
+     <ul style="margin:0; padding-left:20px; color:#000000; line-height:1.5;">
+          <li>Refine based on feedback</li>
+          <li>Finalize the project</li>
+          <li>Self-assess against the rubric</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
 </div>
 
 <div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">

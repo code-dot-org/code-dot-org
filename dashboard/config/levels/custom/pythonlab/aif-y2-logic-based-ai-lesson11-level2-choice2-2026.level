@@ -42,9 +42,10 @@
       "openFiles": [
         "0"
       ]
-    }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqdbLpnSwrXVd40\nu5XUj+UAOoDBwtaJwZRmloS88dncUc/8eAUA9jNjVRrEglTkwKhDJro8hrxd\nj53tTQaXCXSl678zxDSxmy6Usceu2U+Qec/XNHEsf+zQdP1CBPD/z9AOr3mo\nYSeghloJxWL23XhDM6e19ZlN6Tl7VriNRnphZXOLy1Zdgs2aCo00FlyPkkI3\nmPK6raFPwxbWaHo044zOnb7c+VyC4UTascbT0qL3tMwaWrxCRgUTQMpAQtYg\nAwJu1VXIRAc1EoEljhVnhGtm7MkkkNcUwgKBbPsOYygQd99iCH01TdWDGXxu\n1juGQfPyGPogOALx/3u2u8Y1G794HYe1n5j7V1OJFLAFJ5PVxNgJbJjG46SF\nAHV6pzoI12MJWjvwE5s7WQfQpt8gedFtkOgF1Yt7J2K6XQ+xotFvQMwFxqM6\nMV6E6L50YjN7yJFlM5vR9FuE/ft4sj9tS32lW70HPAna4TkKC4wXq9iWoBDm\ngG4L+xcvtw5Lt21VM2U=\n"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-28 20:52:50 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 20:53:29 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-28 20:52:50 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 20:53:29 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-23 15:27:37 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

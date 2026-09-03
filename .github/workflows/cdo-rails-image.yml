@@ -1,7 +1,12 @@
-# Builds cdo-rails, smoke-tests it on docker and podman, boots Rails from
-# it against MySQL and Redis, and publishes it from staging. Not triggered by
-# source PRs — the slice is validated at publish time. amd64 only.
-# See docker/rails/README.md.
+# Builds cdo-rails, smoke-tests it on docker and podman on amd64 and arm64,
+# boots Rails from it against MySQL and Redis on both architectures, and
+# publishes it as a multi-platform manifest. Each architecture
+# builds natively on its own runner; a merge job puts the two images under
+# the final tags, the same pattern as cdo-base. Not triggered by source PRs
+# — the slice is validated at publish time. See docker/rails/README.md.
+#
+# Publishing is where this workflow stops. The tag contract it publishes under
+# is in docker/rails/README.md.
 
 name: cdo-rails-image
 
@@ -13,10 +18,6 @@ on:
       - '.github/workflows/cdo-rails-image.yml'
   push:
     branches: [staging]
-    paths:
-      - 'docker/rails/**'
-      - '.github/actions/cdo-deps-key/**'
-      - '.github/workflows/cdo-rails-image.yml'
   # Chained off cdo-deps rather than scheduled, so the source layer
   # rebuilds on the dependency layer that just shipped, a failed deps publish
   # rebuilds nothing, and the weekly cadence is inherited from cdo-base's
@@ -37,8 +38,11 @@ env:
 jobs:
   # Resolve cdo-deps once, by the bundle- content key this checkout implies,
   # and give the same digest to every build. A checkout whose dependency
-  # inputs have no published layer fails here, loudly, instead of landing on
-  # stale bytes.
+  # inputs have no published layer must not land on stale bytes.
+  #
+  # A push can arrive before that layer exists. cdo-deps-image is building it.
+  # It will chain this workflow again. A push miss therefore ends the run
+  # quietly. Any other event has no such second chance and fails.
   #
   # This is also where the workflow_run chain is filtered: that event fires
   # for failed runs and for other branches, and skipping this job skips the
@@ -79,24 +83,39 @@ jobs:
         id: deps
         env:
           REF: ghcr.io/code-dot-org/cdo-deps:${{ steps.key.outputs.key }}
+          EVENT_NAME: ${{ github.event_name }}
         run: |
-          set -euxo pipefail
-          digest="$(docker buildx imagetools inspect "$REF" \
-            --format '{{json .Manifest.Digest}}' | tr -d '"')" || {
-            echo "::error::No published dependency layer for this checkout's dependency inputs ($REF)." \
-                 "A lockfile change publishes its dependency layer on the staging push." >&2
-            exit 1
-          }
-          echo "digest=$digest" >> "$GITHUB_OUTPUT"
+          set -euo pipefail
+          if digest="$(docker buildx imagetools inspect "$REF" \
+            --format '{{json .Manifest.Digest}}' | tr -d '"')"; then
+            echo "digest=$digest" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [ "$EVENT_NAME" = push ]; then
+            echo "::notice::No dependency layer yet for this checkout ($REF)." \
+                 "cdo-deps-image is building it and will re-run this workflow." >&2
+            exit 0
+          fi
+          echo "::error::No published dependency layer for this checkout's dependency inputs ($REF)." \
+               "A lockfile change publishes its dependency layer on the staging push." >&2
+          exit 1
 
+  # PRs only. Publish runs are gated by build-push itself, which runs the
+  # same suites against the bytes it pushes; running this matrix there too
+  # tested a separate build of the same input twice.
   smoke-test:
-    name: smoke-test (${{ matrix.engine }})
+    name: smoke-test (${{ matrix.engine }}, ${{ matrix.arch }})
+    if: github.event_name == 'pull_request'
     needs: resolve-deps
     strategy:
       fail-fast: false
       matrix:
-        engine: [docker, podman]
-    runs-on: ubuntu-24.04
+        include:
+          - { engine: docker, arch: amd64, runs-on: ubuntu-24.04 }
+          - { engine: podman, arch: amd64, runs-on: ubuntu-24.04 }
+          - { engine: docker, arch: arm64, runs-on: ubuntu-24.04-arm }
+          - { engine: podman, arch: arm64, runs-on: ubuntu-24.04-arm }
+    runs-on: ${{ matrix.runs-on }}
     permissions:
       contents: read
       packages: read
@@ -113,7 +132,7 @@ jobs:
       # than with checkout's lfs: true: locales are the only LFS-tracked path
       # inside the slice, and everything else LFS holds is excluded anyway.
       - name: Fetch the LFS objects the source slice needs
-        run: git lfs pull --include='dashboard/config/locales/**'
+        run: ./docker/rails/ensure-locales.sh
 
       # podman reads ~/.docker/config.json as a credential fallback, so one
       # docker login serves both engines.
@@ -138,10 +157,19 @@ jobs:
   # proves schema load, a model write, a worker pass, and a signed-in API
   # read over HTTP — the check the Drone image cannot express, since it
   # tests the deployed bytes rather than a CI-only environment.
+  # PRs only, like smoke-test: build-push runs verify.sh on the publish
+  # bytes.
   rails-boot:
-    name: rails boots from the image
+    name: rails boots from the image (${{ matrix.arch }})
+    if: github.event_name == 'pull_request'
     needs: resolve-deps
-    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { arch: amd64, runs-on: ubuntu-24.04 }
+          - { arch: arm64, runs-on: ubuntu-24.04-arm }
+    runs-on: ${{ matrix.runs-on }}
     permissions:
       contents: read
       packages: read
@@ -157,7 +185,7 @@ jobs:
       # than with checkout's lfs: true: locales are the only LFS-tracked path
       # inside the slice, and everything else LFS holds is excluded anyway.
       - name: Fetch the LFS objects the source slice needs
-        run: git lfs pull --include='dashboard/config/locales/**'
+        run: ./docker/rails/ensure-locales.sh
 
       - name: Login to GitHub Container Registry
         uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
@@ -176,17 +204,27 @@ jobs:
       - name: Verify the image end to end
         run: ./docker/rails/verify.sh cdo-rails:boot docker
 
+  # Each architecture builds on its own native runner: the job runs the
+  # smoke and verify suites against the bytes it pushes, and those execute
+  # the image. Each leg pushes one arch-suffixed tag for the merge job to
+  # combine.
   build-push:
-    name: build and push
-    if: github.event_name != 'pull_request'
-    needs: [resolve-deps, smoke-test, rails-boot]
-    runs-on: ubuntu-24.04
+    name: build and push (${{ matrix.arch }})
+    if: github.event_name != 'pull_request' && needs.resolve-deps.outputs.digest != ''
+    needs: resolve-deps
+    strategy:
+      matrix:
+        include:
+          - { arch: amd64, runs-on: ubuntu-24.04 }
+          - { arch: arm64, runs-on: ubuntu-24.04-arm }
+    runs-on: ${{ matrix.runs-on }}
     # Inert until its deployment-branch policy is set; see docker/deps/README.md.
     environment: ghcr-publish
-    # Shared across refs so two publishes cannot interleave. Safe to cancel:
-    # nothing resolves `latest` programmatically.
+    # Grouped per architecture so the two legs of one run cannot cancel
+    # each other. Safe to cancel: nothing resolves `latest` programmatically.
+    # Grouped per ref so one branch cannot cancel another.
     concurrency:
-      group: cdo-rails-publish
+      group: cdo-rails-publish-${{ github.ref }}-${{ matrix.arch }}
       cancel-in-progress: true
     permissions:
       contents: read
@@ -203,7 +241,7 @@ jobs:
       # than with checkout's lfs: true: locales are the only LFS-tracked path
       # inside the slice, and everything else LFS holds is excluded anyway.
       - name: Fetch the LFS objects the source slice needs
-        run: git lfs pull --include='dashboard/config/locales/**'
+        run: ./docker/rails/ensure-locales.sh
 
       - name: Login to GitHub Container Registry
         uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
@@ -212,10 +250,58 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      # git-<sha> names the source a publish built, but publishes happen on
-      # image-definition changes and on the deps chain — not per staging
-      # commit — so most shas never get a tag. A per-commit contract belongs
-      # to a deploy pipeline, not to this bootstrap automation.
+      - name: Build cdo-rails
+        run: |
+          docker build \
+            -f docker/rails/Dockerfile \
+            --build-arg DEPS_IMAGE="$DEPS_IMAGE" \
+            -t cdo-rails:publish .
+
+      # The quality gate for everything this job pushes.
+      - name: Smoke test
+        run: ./docker/rails/smoke-test.sh cdo-rails:publish docker
+
+      - name: Verify the publish artifact end to end
+        run: ./docker/rails/verify.sh cdo-rails:publish docker
+
+      # Not build-push-action with push: true — that publishes in the step
+      # that builds, before the smoke suite can fail the job.
+      #
+      # The tag is keyed by commit and architecture, and no consumer
+      # resolves it. The merge job builds every consumer-facing tag from
+      # this immutable pair, so a racing publish or a tag left by a failed
+      # run cannot leak in.
+      - name: Push cdo-rails (per-arch tag)
+        run: |
+          set -euxo pipefail
+          docker tag cdo-rails:publish "$IMAGE:git-${{ github.sha }}-${{ matrix.arch }}"
+          docker push "$IMAGE:git-${{ github.sha }}-${{ matrix.arch }}"
+
+  # Until this runs, only the arch-suffixed tags exist, so an incomplete
+  # publish is visible as such instead of serving one architecture under
+  # the final name.
+  # See: https://docs.docker.com/build/ci/github-actions/multi-platform/#distribute-build-across-multiple-runners
+  merge:
+    name: merge per-arch images into one manifest
+    if: github.event_name != 'pull_request'
+    needs: build-push
+    runs-on: ubuntu-24.04
+    environment: ghcr-publish
+    concurrency:
+      group: cdo-rails-publish-${{ github.ref }}
+      cancel-in-progress: true
+    permissions:
+      packages: write
+    steps:
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      # No checkout: this tag contract has no content key, so
+      # metadata-action needs only the event context.
       - name: Compute tags
         id: meta
         uses: docker/metadata-action@dc802804100637a589fabce1cb79ff13a1411302 # v6.2.0
@@ -226,31 +312,17 @@ jobs:
             type=raw,value=latest,enable={{is_default_branch}}
             type=sha,prefix=dev-,format=long,enable={{is_not_default_branch}}
 
-      - name: Build cdo-rails
-        run: |
-          docker build \
-            -f docker/rails/Dockerfile \
-            --build-arg DEPS_IMAGE="$DEPS_IMAGE" \
-            -t cdo-rails:publish .
-
-      # The matrix and rails-boot tested images built on other runners. These
-      # test the bytes actually being published.
-      - name: Smoke test
-        run: ./docker/rails/smoke-test.sh cdo-rails:publish docker
-
-      - name: Verify the publish artifact end to end
-        run: ./docker/rails/verify.sh cdo-rails:publish docker
-
-      # Not build-push-action with push: true — that publishes in the step
-      # that builds, before the smoke suite can fail the job.
-      - name: Push cdo-rails
+      # The source tags are commit-keyed, so no moving tag can enter the
+      # manifest.
+      - name: Merge the per-arch pair under every tag
         env:
           TAGS: ${{ steps.meta.outputs.tags }}
         run: |
           set -euxo pipefail
           # An empty list would make this step a green no-op.
           test -n "$TAGS"
-          for ref in $TAGS; do
-            docker tag cdo-rails:publish "$ref"
-            docker push "$ref"
-          done
+          args=()
+          for ref in $TAGS; do args+=(-t "$ref"); done
+          docker buildx imagetools create "${args[@]}" \
+            "$IMAGE:git-${{ github.sha }}-amd64" \
+            "$IMAGE:git-${{ github.sha }}-arm64"

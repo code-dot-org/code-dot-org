@@ -1,10 +1,11 @@
 // Client for the experimental cross-project scene APIs (scenes UI variant).
 // See dashboard SpriteLab2Controller.
 
+import {JsonBlockConfig} from '@cdo/apps/blockly/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {ExternalSceneOption} from './redux/spriteLab2Redux';
-import {SerializedAnimationList, SpriteLab2Scene} from './types';
+import {SerializedAnimationList, Scene} from './types';
 
 // One scene in a section-mate's project, as listed by the dropdown.
 export interface ExternalSceneRef {
@@ -16,7 +17,7 @@ export interface ExternalSceneRef {
 
 // A fetched external project: everything needed to run its scenes.
 export interface ExternalProject {
-  scenes: SpriteLab2Scene[];
+  scenes: Scene[];
   animations: SerializedAnimationList;
   ownerName: string;
 }
@@ -48,20 +49,30 @@ export function toExternalSceneOptions(
   }));
 }
 
+// Scenes are shared within a script; outside one there is nothing to ask.
 export async function fetchSectionScenes(
-  levelId: number | string
+  levelId: number | string,
+  scriptId?: number | null
 ): Promise<ExternalSceneRef[]> {
+  if (!scriptId) {
+    return [];
+  }
   const {value} = await HttpClient.fetchJson<{scenes?: ExternalSceneRef[]}>(
-    `/sprite_lab2/section_scenes?level_id=${levelId}`
+    `/sprite_lab2/section_scenes?level_id=${levelId}&script_id=${scriptId}`
   );
   return value.scenes || [];
 }
 
+// The server serves only the owner's channel for this level and script.
 export async function fetchExternalProject(
-  channel: string
+  channel: string,
+  levelId: number | string,
+  scriptId?: number | null
 ): Promise<ExternalProject> {
   const {value} = await HttpClient.fetchJson<ExternalProject>(
-    `/sprite_lab2/external_scenes?channel=${encodeURIComponent(channel)}`
+    `/sprite_lab2/external_scenes?channel=${encodeURIComponent(
+      channel
+    )}&level_id=${levelId}&script_id=${scriptId ?? ''}`
   );
   return value;
 }
@@ -71,30 +82,56 @@ export async function fetchExternalProject(
  * dropdown values survive block-load validation (as placeholder options) even
  * when the listing API fails or an entry has vanished from it.
  */
-export function collectSavedExternalKeys(scenes: SpriteLab2Scene[]): string[] {
-  const keys = new Set<string>();
-  const walkBlock = (block: {
-    type?: string;
-    fields?: {[name: string]: unknown};
-    inputs?: {[name: string]: {block?: object; shadow?: object}};
-    next?: {block?: object};
-  }) => {
+export function collectSavedExternalKeys(scenes: Scene[]): string[] {
+  return collectSavedFieldValues(
+    scenes,
+    'spritelab2_goToExternalScene',
+    'SCENE'
+  );
+}
+
+/** Every block of a serialized workspace: shadows and next chains included. */
+export function forEachSavedBlock(
+  source: unknown,
+  visit: (block: JsonBlockConfig) => void
+): void {
+  const walk = (block?: JsonBlockConfig) => {
     if (!block) {
       return;
     }
-    if (block.type === 'spritelab2_goToExternalScene') {
-      const value = block.fields?.SCENE;
-      if (typeof value === 'string' && value) {
-        keys.add(value);
-      }
-    }
+    visit(block);
     Object.values(block.inputs || {}).forEach(input => {
-      walkBlock((input.block || input.shadow) as typeof block);
+      walk(input.block);
+      walk(input.shadow);
     });
-    walkBlock(block.next?.block as typeof block);
+    if (block.next) {
+      walk(block.next.block);
+      walk(block.next.shadow);
+    }
   };
+  (
+    (source as {blocks?: {blocks?: JsonBlockConfig[]}} | undefined)?.blocks
+      ?.blocks || []
+  ).forEach(walk);
+}
+
+/** Every non-empty value of `fieldName` on saved blocks of `blockType`. */
+export function collectSavedFieldValues(
+  scenes: Scene[],
+  blockType: string,
+  fieldName: string
+): string[] {
+  const values = new Set<string>();
   scenes.forEach(scene =>
-    (scene.source?.blocks?.blocks || []).forEach(walkBlock)
+    forEachSavedBlock(scene.source, block => {
+      if (block.type !== blockType) {
+        return;
+      }
+      const value = block.fields?.[fieldName];
+      if (typeof value === 'string' && value) {
+        values.add(value);
+      }
+    })
   );
-  return [...keys];
+  return [...values];
 }

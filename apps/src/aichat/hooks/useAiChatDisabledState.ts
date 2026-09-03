@@ -4,16 +4,42 @@ import {
   AI_SETTINGS_SUPPORT_LINK,
   AI_CHAT_NOT_AUTHORIZED_STUDENT,
   AI_CHAT_NOT_AUTHORIZED_TEACHER,
+  AI_CHAT_NOT_AVAILABLE_INTERNATIONAL,
+  AI_TUTOR_NOT_AVAILABLE_INTERNATIONAL,
+  AI_CHAT_LAB_FAQ_LINK,
+  AI_TUTOR_FAQ_LINK,
   VERIFIED_TEACHER_SUPPORT_LINK,
 } from '@cdo/apps/aichat/constants';
-import {areAiChatToolsEnabled} from '@cdo/apps/aichat/helpers/aiChatAccess';
+import {
+  areAiChatToolsEnabled,
+  isUsOnlyModelId,
+} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import type {AiChatDisabledState} from '@cdo/apps/aichat/types';
+import type {AiChatClientType} from '@cdo/apps/aichat/types/context';
+import type {ModelParameters} from '@cdo/apps/aichat/types/model';
 import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
+
+// Allows specific FAQ articles for different aichat clients.
+const REGION_BLOCKED_COPY: Partial<
+  Record<AiChatClientType, {message: string; faqLink: string}>
+> = {
+  [AiChatClientTypes.AI_CHAT_LAB]: {
+    message: AI_CHAT_NOT_AVAILABLE_INTERNATIONAL,
+    faqLink: AI_CHAT_LAB_FAQ_LINK,
+  },
+  [AiChatClientTypes.AI_TUTOR]: {
+    message: AI_TUTOR_NOT_AVAILABLE_INTERNATIONAL,
+    faqLink: AI_TUTOR_FAQ_LINK,
+  },
+};
 
 interface UseAiChatDisabledStateParams {
   appName?: string;
+  clientType?: AiChatClientType;
+  selectedModelId?: ModelParameters['selectedModelId'];
   isPredictLevel?: boolean;
   hasSubmittedPredictResponse?: boolean;
 }
@@ -22,11 +48,14 @@ interface UseAiChatDisabledStateParams {
  * Computes whether AI chat is disabled and what message to show, consolidating:
  * - which aiChatAccessLevel applies (section override for teachers, or user's own)
  * - whether the access level permits chat for the current app & access level
+ * - blocking of US only models (pass selectedModelId to enable)
  * - predict level gating
  * - teacher vs. student messaging
  */
 export function useAiChatDisabledState({
   appName,
+  clientType,
+  selectedModelId,
   isPredictLevel = false,
   hasSubmittedPredictResponse = false,
 }: UseAiChatDisabledStateParams): AiChatDisabledState {
@@ -36,6 +65,9 @@ export function useAiChatDisabledState({
   );
   const userAccessLevel = useAppSelector(
     state => state.currentUser.aiChatAccessLevel
+  );
+  const usOnlyAichatModelsDisabled = useAppSelector(
+    state => state.currentUser.usOnlyAichatModelsDisabled
   );
   const isLevelbuilder = useAppSelector(
     state => state.currentUser.isLevelbuilder
@@ -60,6 +92,31 @@ export function useAiChatDisabledState({
       return {
         disabled: true,
         disabledMessage: 'Chat is disabled until you submit your prediction.',
+      };
+    }
+
+    if (
+      selectedModelId &&
+      usOnlyAichatModelsDisabled &&
+      isUsOnlyModelId(selectedModelId)
+    ) {
+      if (!isTeacher) {
+        return {
+          disabled: true,
+          disabledMessage: AI_CHAT_NOT_AUTHORIZED_STUDENT,
+        };
+      }
+      const copy = clientType && REGION_BLOCKED_COPY[clientType];
+      return {
+        disabled: true,
+        disabledMessage: copy?.message ?? AI_CHAT_NOT_AVAILABLE_INTERNATIONAL,
+        ...(copy && {
+          disabledLink: {
+            href: copy.faqLink,
+            openInNewTab: true,
+            text: 'Learn more',
+          },
+        }),
       };
     }
 
@@ -107,12 +164,15 @@ export function useAiChatDisabledState({
         };
   }, [
     appName,
+    clientType,
+    selectedModelId,
     isPredictLevel,
     hasSubmittedPredictResponse,
     isTeacher,
     enabledForUser,
     sectionAccessLevel,
     isLevelbuilder,
+    usOnlyAichatModelsDisabled,
   ]);
 
   return disabledState;

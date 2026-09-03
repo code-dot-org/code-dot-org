@@ -2,7 +2,6 @@ import {
   TooltipProps,
   WithTooltip,
 } from '@code-dot-org/component-library/tooltip';
-import classNames from 'classnames';
 import React from 'react';
 
 interface WithConditionalTooltipProps {
@@ -10,36 +9,21 @@ interface WithConditionalTooltipProps {
   tooltipOverlayClassName?: string;
   tooltipProps: TooltipProps;
   showTooltip: boolean;
-  iconName?: string;
-  iconClassName?: string;
 }
 
 // Component that wraps children with a tooltip is showTooltip is true,
 // otherwise it just renders the children wrapped in a div.
+// The wrapper div is what carries the hover handlers, so the tooltip still
+// appears for disabled children, which get no pointer events of their own.
 const WithConditionalTooltip: React.FunctionComponent<
   WithConditionalTooltipProps
-> = ({
-  children,
-  tooltipOverlayClassName,
-  tooltipProps,
-  showTooltip,
-  iconName,
-  iconClassName,
-}) => {
+> = ({children, tooltipOverlayClassName, tooltipProps, showTooltip}) => {
   return showTooltip ? (
     <WithTooltip
       tooltipProps={tooltipProps}
       tooltipOverlayClassName={tooltipOverlayClassName}
     >
-      <div>
-        {children}
-        {iconName && (
-          <i
-            className={classNames('fa', iconName, iconClassName)}
-            aria-describedby={tooltipProps.tooltipId}
-          />
-        )}
-      </div>
+      <div>{children}</div>
     </WithTooltip>
   ) : (
     <div>{children}</div>

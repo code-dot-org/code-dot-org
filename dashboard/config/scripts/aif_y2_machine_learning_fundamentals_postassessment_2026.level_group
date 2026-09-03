@@ -1,0 +1,27 @@
+name 'aif-y2-machine-learning-fundamentals-postassessment-2026'
+title 'Logic-Based AI End-of-Unit Assessment'
+submittable 'true'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+text 'aif-y2-machine-learning-fundamentals-postassessment-intro-2026'
+level 'aif-y2-machine-learning-fundamentals-postassessment-q1-2026'
+level 'aif-y2-machine-learning-fundamentals-postassessment-q2-2026'
+level 'aif-y2-machine-learning-fundamentals-postassessment-q3-2026'
+level 'aif-y2-machine-learning-fundamentals-postassessment-q4-2026'
+level 'aif-y2-machine-learning-fundamentals-postassessment-q5-2026'
+
+page
+level 'aif-y2-machine-learning-fundamentals-postassessment-q6-2026'
+level 'aif-y2-machine-learning-fundamentals-postassessment-q7-2026'
+level 'aif-y2-machine-learning-fundamentals-postassessment-q8-2026'
+level 'aif-y2-machine-learning-fundamentals-postassessment-q9-2026'
+level 'aif-y2-machine-learning-fundamentals-postassessment-q10-2026'
+
+page
+level 'aif-y2-machine-learning-fundamentals-postassessment-q11-2026'
+level 'aif-y2-machine-learning-fundamentals-postassessment-q12-2026'
+level 'aif-y2-machine-learning-fundamentals-postassessment-q13-2026'
+level 'aif-y2-machine-learning-fundamentals-postassessment-q14-2026'
+level 'aif-y2-machine-learning-fundamentals-postassessment-q15-2026'

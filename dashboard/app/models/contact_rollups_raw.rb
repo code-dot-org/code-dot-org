@@ -37,62 +37,61 @@ class ContactRollupsRaw < ApplicationRecord
     ContactRollupsV2.execute_query_in_transaction(query)
   end
 
-  def self.extract_scripts_taught(limit = nil)
-    source_sql = <<~SQL.squish
-      SELECT
-        u.email,
-        sc.properties->'$.curriculum_umbrella' AS curriculum_umbrella,
+  def self.extract_sections_taught(limit = nil)
+    # One pre-aggregated row per teacher email. Sections data only feeds the
+    # curriculum-teacher roles (CSF/CSD/CSP/CSA/AIF Teacher), which need just
+    # the distinct curriculum umbrellas and the distinct csd/csp/csa
+    # course-name prefixes — so aggregate to those here instead of emitting
+    # one raw row per (teacher, unit, course) combination.
+    #
+    # A section carries curriculum through one of two paths: via its script
+    # (script's umbrella, plus the script's parent unit group) or via a
+    # direct course assignment (unit group). The UNION ALL covers both.
+    #
+    # LIKE BINARY preserves the case-sensitive prefix match of the previous
+    # Ruby implementation (course&.start_with? 'csd').
+    #
+    # The GROUP_CONCAT results are bounded (a handful of short values), far
+    # below any group_concat_max_len concern.
+    sections_taught_query = <<~SQL.squish
+      SELECT u.email,
+        sc.properties->>'$.curriculum_umbrella' AS curriculum_umbrella,
         ug.name AS course_name,
-        MAX(se.updated_at) AS updated_at
+        se.updated_at
       FROM sections AS se
       JOIN users AS u ON se.user_id = u.id
       JOIN scripts AS sc ON sc.id = se.script_id
       LEFT JOIN course_scripts AS cs ON cs.script_id = se.script_id
       LEFT JOIN unit_groups AS ug ON ug.id = cs.course_id
       WHERE u.email > ''
-      GROUP BY u.email, sc.name, ug.name
-    SQL
-    source_sql += "LIMIT #{limit}" unless limit.nil?
-
-    query = get_extraction_query('dashboard.sections', source_sql, 'curriculum_umbrella', 'course_name')
-    ContactRollupsV2.execute_query_in_transaction(query)
-  end
-
-  def self.extract_courses_taught(limit = nil)
-    source_sql = <<~SQL.squish
-      SELECT u.email, unit_groups.name AS course_name, MAX(se.updated_at) AS updated_at
+      UNION ALL
+      SELECT u.email, NULL, unit_groups.name, se.updated_at
       FROM users AS u
       JOIN sections AS se ON se.user_id = u.id
       JOIN unit_groups ON unit_groups.id = se.course_id
       WHERE u.email > ''
-      GROUP BY u.email, unit_groups.name
     SQL
-    source_sql += "LIMIT #{limit}" unless limit.nil?
 
-    query = get_extraction_query('dashboard.sections', source_sql, 'course_name')
-    ContactRollupsV2.execute_query_in_transaction(query)
-  end
-
-  def self.extract_professional_learning_attendance_old_attendance_model(limit = nil)
-    # "section_type" is not null only in cases where sections was used for
-    # PD attendance. It's always null when a section represents an actual
-    # classroom of students (the vast majority of rows in the sections table).
     source_sql = <<~SQL.squish
-      SELECT u.email, se.section_type, MAX(GREATEST(se.updated_at, f.updated_at)) AS updated_at
-        FROM users AS u
-        JOIN followers AS f ON u.id = f.student_user_id
-        JOIN sections AS se ON f.section_id = se.id
-        WHERE u.email > ''
-        AND se.section_type IS NOT NULL
-      GROUP BY 1,2
+      SELECT
+        email,
+        GROUP_CONCAT(DISTINCT curriculum_umbrella) AS curriculum_umbrellas,
+        GROUP_CONCAT(DISTINCT CASE
+          WHEN course_name LIKE BINARY 'csd%' THEN 'csd'
+          WHEN course_name LIKE BINARY 'csp%' THEN 'csp'
+          WHEN course_name LIKE BINARY 'csa%' THEN 'csa'
+        END) AS course_name_prefixes,
+        MAX(updated_at) AS updated_at
+      FROM (#{sections_taught_query}) AS sections_taught
+      GROUP BY email
     SQL
     source_sql += "LIMIT #{limit}" unless limit.nil?
 
-    query = get_extraction_query('dashboard.followers', source_sql, 'section_type')
+    query = get_extraction_query('dashboard.sections', source_sql, 'curriculum_umbrellas', 'course_name_prefixes')
     ContactRollupsV2.execute_query_in_transaction(query)
   end
 
-  def self.extract_professional_learning_attendance_new_attendance_model(limit = nil)
+  def self.extract_professional_learning_attendance(limit = nil)
     source_sql = <<~SQL.squish
       SELECT u.email, pdw.course, MAX(GREATEST(pda.updated_at, pds.updated_at, pdw.updated_at)) AS updated_at
         FROM pd_attendances AS pda
@@ -125,14 +124,23 @@ class ContactRollupsRaw < ApplicationRecord
   def self.extract_users_and_geos(limit = nil)
     # An user can have many user_geos records. user_geos records starts with only NULL
     # values until a cronjob runs, does IP-to-address lookup, and update them later.
+    #
+    # Only the most recently updated geo row matters: processing takes the
+    # latest value per field anyway, so emitting one row per historical geo
+    # tuple (the previous behavior) only inflated contact_rollups_raw and
+    # every downstream step. The LEFT JOIN keeps users with no geo record,
+    # whose user_id alone drives the Teacher role and db_Has_Teacher_Account.
     teacher_and_geo_query = <<~SQL.squish
       SELECT
         t.email, t.id AS user_id,
         ug.city, ug.state, ug.postal_code, ug.country,
-        MAX(GREATEST(t.updated_at, IFNULL(ug.updated_at, t.updated_at))) AS updated_at
+        GREATEST(t.updated_at, IFNULL(ug.updated_at, t.updated_at)) AS updated_at
       FROM (#{teacher_query('id, email, updated_at')}) AS t
-      LEFT OUTER JOIN user_geos AS ug ON t.id = ug.user_id
-      GROUP BY email, t.id, city, state, postal_code, country
+      LEFT OUTER JOIN (
+        SELECT user_id, city, state, postal_code, country, updated_at,
+          ROW_NUMBER() OVER (PARTITION BY user_id ORDER BY updated_at DESC, id DESC) AS geo_recency
+        FROM user_geos
+      ) AS ug ON t.id = ug.user_id AND ug.geo_recency = 1
     SQL
     teacher_and_geo_query += "LIMIT #{limit}" unless limit.nil?
 

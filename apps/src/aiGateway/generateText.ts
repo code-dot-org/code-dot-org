@@ -12,7 +12,11 @@ import {
 } from './contract/gatewaySchemas';
 import {reportGatewayError} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
-import {fetchTurnstileTokenIfEnabled, turnstileHeaders} from './turnstile';
+import {
+  fetchTurnstileToken,
+  turnstileErrorTags,
+  turnstileHeaders,
+} from './turnstile';
 
 export type GatewayPhase = 'input_filter' | 'generation' | 'output_filter';
 
@@ -118,10 +122,14 @@ const generateTextThroughGateway = async <
         output: serializedOutput,
       };
 
-      const [token, turnstileToken] = await Promise.all([
-        fetchAccessToken(),
-        fetchTurnstileTokenIfEnabled(),
-      ]);
+      // Serialized, not parallel: the access token response carries the
+      // Turnstile mode that decides whether a challenge is needed at all. The
+      // manager pre-fetches a token after every delivery, so only the first
+      // call of a session waits on a challenge here.
+      const {token, turnstileEnforcementMode} = await fetchAccessToken();
+      const turnstileToken = await fetchTurnstileToken(
+        turnstileEnforcementMode
+      );
 
       const headers = {
         'Content-Type': 'application/json',
@@ -163,7 +171,8 @@ const generateTextThroughGateway = async <
         await reportGatewayError(
           error,
           'generateTextThroughGateway',
-          modelString
+          modelString,
+          turnstileErrorTags(error)
         );
       }
       throw error;

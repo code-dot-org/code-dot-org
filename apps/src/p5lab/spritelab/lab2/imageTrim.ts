@@ -4,9 +4,11 @@
 
 import {BACKGROUNDS_CATEGORY, RuntimeAnimationList} from './types';
 
-// Alpha above which a pixel counts as content (matches soft-matte fringes
-// without letting near-invisible pixels defeat the trim).
-const ALPHA_THRESHOLD = 8;
+// Alpha above which a pixel counts as content: high enough to shed the soft
+// matte's near-invisible fringe (which otherwise stretches sprite bounds
+// past the visible art — platformer feet float on it), low enough to keep
+// real soft edges.
+const ALPHA_THRESHOLD = 32;
 
 /**
  * The tight bounding box of non-transparent content in RGBA data, or null for
@@ -62,6 +64,17 @@ export function onTrimsUpdated(listener: () => void): () => void {
 }
 
 /**
+ * Drop an image's cached trimmed thumbnail — its pixels changed to data
+ * that has not arrived yet, so the cache would keep showing the old
+ * pixels. The next trim pass repopulates it.
+ */
+export function forgetTrimmedThumbnail(name?: string): void {
+  if (name && trimmedByName.delete(name)) {
+    trimListeners.forEach(listener => listener());
+  }
+}
+
+/**
  * Load an image (dataURI or URL), crop transparent borders, and return the
  * cropped image as a dataURI. Returns the input unchanged when there's
  * nothing to trim (full-bleed content, fully transparent, or load failure).
@@ -114,6 +127,20 @@ function trimTransparentBorder(source: string): Promise<string> {
   return cached;
 }
 
+/** The animation list restricted to images whose data has arrived. */
+export function loadedAnimations(
+  list: RuntimeAnimationList
+): RuntimeAnimationList {
+  const orderedKeys = (list.orderedKeys || []).filter(
+    key => list.propsByKey[key]?.dataURI
+  );
+  const propsByKey: RuntimeAnimationList['propsByKey'] = {};
+  orderedKeys.forEach(key => {
+    propsByKey[key] = list.propsByKey[key];
+  });
+  return {orderedKeys, propsByKey};
+}
+
 /**
  * Return a copy of a serialized animation list whose costume dataURIs are
  * border-trimmed. Backgrounds are left alone (they should fill the canvas).
@@ -123,6 +150,17 @@ export async function trimAnimationListImages(
 ): Promise<RuntimeAnimationList> {
   const propsByKey: RuntimeAnimationList['propsByKey'] = {};
   let newTrims = false;
+  // Drop cached trims for names absent from the list: a deleted image's
+  // thumbnail must not resurface when a new image takes the same name.
+  const currentNames = new Set(
+    (list.orderedKeys || []).map(key => list.propsByKey[key]?.name)
+  );
+  for (const name of trimmedByName.keys()) {
+    if (!currentNames.has(name)) {
+      trimmedByName.delete(name);
+      newTrims = true;
+    }
+  }
   await Promise.all(
     (list.orderedKeys || []).map(async key => {
       const props = list.propsByKey[key];

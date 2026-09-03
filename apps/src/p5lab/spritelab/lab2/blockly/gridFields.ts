@@ -1,18 +1,23 @@
-// The 8x8 placement-grid fields used by the grid composite blocks, as
-// registered field types (see setup.ts) so JSON block definitions can
-// reference them. FieldJson is a closed type, so the single-select variant is
-// its own field type rather than one type with a config property.
+// The placement-grid fields used by the grid composite blocks, as registered
+// field types (see setup.ts) so JSON block definitions can reference them.
+// FieldJson is a closed type, so the single-select variant is its own field
+// type rather than one type with a config property.
 
 import * as BlocklyCore from 'blockly/core';
 
 import {CdoFieldBitmap} from '@cdo/apps/blockly/addons/cdoFieldBitmap';
 
+import {DEFAULT_SCENE_GRID_SIZE} from '../world';
+
 export const FIELD_GRID_TYPE = 'field_spritelab2_grid';
 export const FIELD_GRID_SINGLE_TYPE = 'field_spritelab2_grid_single';
 
+// Sized to the default playfield so a cell on a block means the same square
+// as a cell in the World tab. The runtime derives its own scale from the
+// bitmap it is given, so this size is a UI choice only.
 const GRID_CONFIG = {
-  height: 8,
-  width: 8,
+  height: DEFAULT_SCENE_GRID_SIZE,
+  width: DEFAULT_SCENE_GRID_SIZE,
   fieldHeight: 42,
   buttons: {randomize: false, clear: true},
 };

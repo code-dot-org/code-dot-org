@@ -1,20 +1,27 @@
 # Rake tasks that drive the end-to-end "MySQL transactional data → Zero ETL → Redshift materialized view" pipeline:
 #  analytics_export:zero_etl_data_filter[environment_type]                    # Print a table filter expression specifying which MySQL tables should be exported to Redshift via Zero ETL.
 #  analytics_export:update_zero_etl_filter[integration_arn,environment_type]  # Update a Zero ETL Integration MySQL table filter based on which Models should be `exported_to_analytics`.
+#  analytics_export:resync_zero_etl_table[table_names,environment_type]       # Resync one or more (space-separated, optionally `database.`-qualified) tables that failed to replicate via Zero ETL.
+#  analytics_export:zero_etl_export_status[environment_type]                  # Report the Zero ETL replication status of every table we export to analytics.
+#  analytics_export:configure_zero_etl_target_database[environment_type]      # Apply the required Zero ETL ingestion settings (ACCEPTINVCHARS, TRUNCATECOLUMNS) to the target database.
 #  analytics_export:generate_materialized_view_templates                      # Regenerate the Materialized View SQL ERB templates from the current Models (no Redshift connection).
 #  analytics_export:provision_materialized_views[environment_type]            # Provision Redshift Materialized Views for each Model which should be `exported_to_analytics`.
 #  analytics_export:refresh_materialized_views[environment_type]              # REFRESH each Model's Redshift Materialized Views if they are stale.
 #  analytics_export:materialized_view_status[environment_type]                # Output a CSV describing the status of each Model's Materialized View.
 #
 # IMPORTANT: These tasks should be executed by an engineer with administrative permissions to AWS on their local
-# development environment because these tasks View/Update Relational Database Service Zero ETL Integrations and authenticate
-# as a Redshift SQL user that has permissions to CREATE/DROP/REFRESH the target Zero ETL databases/tables in Redshift.
-#   * `export AWS_PROFILE=codeorg-admin`
-#   * ensure `CDO.redshift_username` is set to a SQL user that has permissions to CREATE/DROP/REFRESH Materialized Views
-#  in the `dev.learning_platform_test/production` and `dev.learning_platform_test/production_pii` schemas (the views live
-#  in the `dev` database; see `Cdo::Aws::Redshift::MaterializedViewManager::MATERIALIZED_VIEW_DATABASE`), and also the ability
-#  to query Redshift system tables that store Zero ETL Integration status, Materialized View refresh status, and the
-#  target Zero ETL databases.
+# development environment (`export AWS_PROFILE=codeorg-admin`). They authenticate to Redshift as `CDO.redshift_username`,
+# and the required Redshift privilege differs by task — set `CDO.redshift_username` accordingly:
+#
+#   * Materialized-view tasks (generate/provision/refresh/status): run as the MV owner (`etl_client`), which has
+#     CREATE/DROP/REFRESH on the `dev.learning_platform_<env>` / `_pii` schemas (the views live in the `dev` database;
+#     see `Cdo::Aws::Redshift::MaterializedViewManager::MATERIALIZED_VIEW_DATABASE`) plus read on the Zero ETL status
+#     system tables.
+#   * Target-database tasks (`configure_zero_etl_target_database`, `resync_zero_etl_table`): run as the Redshift
+#     SUPERUSER. Both issue `ALTER DATABASE <target> INTEGRATION ...` against the raw Zero ETL target database, which
+#     holds the full UNFILTERED dataset (all PII/highly-restricted rows). We intentionally keep write access there
+#     superuser-only rather than granting `etl_client` ownership; see `Cdo::Aws::Redshift::ZeroEtl`.
+#   * The `update_zero_etl_filter` task additionally needs RDS API permission to describe/modify the integration.
 #
 # These tasks inspect the local database schema to determine which tables can be replicated via Zero ETL and which
 # Redshift materialized views to create. The output is then used to configure the managed test server and production
@@ -61,10 +68,16 @@ namespace :analytics_export do
   task :update_zero_etl_filter, [:integration_arn, :environment_type] => :environment do |_t, args|
     abort "Usage: rake analytics_export:update_zero_etl_filter[ARN,environment_type]" if args[:integration_arn].blank? || args[:environment_type].blank?
 
+    require 'cdo/aws/rds'
+
+    db_name = "dashboard_#{args[:environment_type]}"
     dry_run = ENV['DRY_RUN'].present?
-    result = AnalyticsExportable.update_zero_etl_integration!(
+    # AnalyticsExportable computes the desired filter from the schema; Cdo::RDS reads/reconciles/writes
+    # it against the live integration via the RDS API.
+    result = Cdo::RDS.update_zero_etl_integration!(
       integration_arn: args[:integration_arn],
-      db_name: "dashboard_#{args[:environment_type]}",
+      desired_data_filter: AnalyticsExportable.zero_etl_data_filter(db_name: db_name),
+      db_name: db_name,
       dry_run: dry_run
     )
 
@@ -85,6 +98,99 @@ namespace :analytics_export do
     else
       puts "\nIntegration updated."
     end
+  end
+
+  # bundle exec rake 'analytics_export:resync_zero_etl_table[table_name,production]'
+  # bundle exec rake 'analytics_export:resync_zero_etl_table[table_one table_two,production]'
+  # bundle exec rake 'analytics_export:resync_zero_etl_table[pegasus.hoc_activity,production]'
+  desc "Resync one or more (space-separated) tables that failed to replicate via Zero ETL, e.g. after fixing a missing primary key."
+  task :resync_zero_etl_table, [:table_names, :environment_type] => :environment do |_t, args|
+    if args[:table_names].blank? || args[:environment_type].blank?
+      abort "Usage: rake analytics_export:resync_zero_etl_table[table_names,environment_type]"
+    end
+
+    require 'cdo/aws/redshift/zero_etl'
+    require 'cdo/aws/redshift/materialized_view_manager'
+
+    environment_type = args[:environment_type]
+    # Each table may be qualified with the MySQL database holding it (`pegasus.hoc_activity`);
+    # unqualified names are assumed to be in the dashboard database.
+    table_names = args[:table_names].split
+
+    result = Cdo::Aws::Redshift::ZeroEtl.resync_and_report(
+      client: Cdo::Aws::Redshift::MaterializedViewManager.redshift_client,
+      environment_type: environment_type,
+      table_names: table_names
+    )
+    result[:states].each do |row|
+      puts "  #{row['schema_name']}.#{row['table_name']} state=#{row['table_state']}"
+    end
+
+    case result[:outcome]
+    when :requested
+      puts "Resync requested for #{table_names.join(', ')}. Each table is unavailable in Redshift while it " \
+        "resyncs; re-run analytics_export:zero_etl_export_status[#{environment_type}] to watch it return to Synced."
+    when :already_syncing
+      puts "Nothing to do: #{table_names.join(', ')} already Synced or resyncing (REFRESH is a no-op once a resync has started)."
+    when :unknown
+      abort "No SVV_INTEGRATION_TABLE_STATE rows for #{table_names.join(', ')} — check the table name and environment."
+    when :blocked
+      warn "\nResync did not start; resolve the reason(s) below (the table won't replicate until fixed):"
+      result[:blocked].each do |row|
+        warn "  #{row['schema_name']}.#{row['table_name']} reason=#{row['reason']}"
+      end
+      exit 1
+    end
+  end
+
+  # bundle exec rake 'analytics_export:zero_etl_export_status[production]'
+  desc "Report the Zero ETL replication status (SVV_INTEGRATION_TABLE_STATE) of every table we export to analytics."
+  task :zero_etl_export_status, [:environment_type] => :environment do |_t, args|
+    abort "Usage: rake analytics_export:zero_etl_export_status[environment_type]" if args[:environment_type].blank?
+
+    require 'cdo/aws/redshift/zero_etl'
+    require 'cdo/aws/redshift/materialized_view_manager'
+    Rails.application.eager_load!
+
+    env = args[:environment_type]
+    status = Cdo::Aws::Redshift::ZeroEtl.export_status(
+      client: Cdo::Aws::Redshift::MaterializedViewManager.redshift_client,
+      environment_type: env,
+      table_names: AnalyticsExportable.exported_table_names
+    )
+
+    puts "Zero ETL replication status — env=#{env}, #{status[:total]} exported table(s)"
+    unless status[:by_state].empty?
+      puts "By state: #{status[:by_state].sort.map {|state, count| "#{count} #{state}"}.join(', ')}"
+    end
+
+    unless status[:unhealthy].empty?
+      puts "\nNot in a healthy state (#{status[:unhealthy].length}):"
+      status[:unhealthy].each {|row| puts "  #{row['schema_name']}.#{row['table_name']} #{row['table_state']} reason=#{row['reason']}"}
+    end
+
+    unless status[:missing].empty?
+      puts "\nNot replicating — no integration row (#{status[:missing].length}):"
+      status[:missing].each {|table_name| puts "  #{table_name}"}
+    end
+  end
+
+  # bundle exec rake 'analytics_export:configure_zero_etl_target_database[production]'
+  desc "Apply the required Zero ETL ingestion settings (ACCEPTINVCHARS, TRUNCATECOLUMNS) to the target database. Run after (re)creating it."
+  task :configure_zero_etl_target_database, [:environment_type] => :environment do |_t, args|
+    abort "Usage: rake analytics_export:configure_zero_etl_target_database[environment_type]" if args[:environment_type].blank?
+
+    require 'cdo/aws/redshift/zero_etl'
+    require 'cdo/aws/redshift/materialized_view_manager'
+
+    client = Cdo::Aws::Redshift::MaterializedViewManager.redshift_client
+    sql = Cdo::Aws::Redshift::ZeroEtl.apply_required_integration_settings(
+      client: client, environment_type: args[:environment_type]
+    )
+
+    puts "Applied: #{sql}"
+    puts 'Affects ingestion going forward only. Resync already-failed tables ' \
+      '(`analytics_export:resync_zero_etl_table`) to re-ingest them under the new settings.'
   end
 
   # bundle exec rake analytics_export:generate_materialized_view_templates

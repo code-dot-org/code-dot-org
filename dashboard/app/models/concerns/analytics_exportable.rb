@@ -116,6 +116,13 @@ module AnalyticsExportable
     exported_models - exportability_errors_by_model.keys
   end
 
+  # Bare table names of every Model that passes exportability checks, without the `database.`
+  # qualifier. Helps support Rails Models that persist to the Pegasus database.
+  # @return [Array<String>]
+  def self.exported_table_names
+    valid_exported_models.map {|model| model.table_name.to_s.rpartition('.').last}
+  end
+
   # @raise [ArgumentError] if any model lacks a primary key or has blob columns.
   def self.validate_exported_models!
     errors = exportability_errors
@@ -159,78 +166,5 @@ module AnalyticsExportable
     rules = ["include: #{db_name}.*"]
     rules.concat(zero_etl_exclude_filters(db_name: db_name, connection: connection))
     rules.join(", ")
-  end
-
-  # Splits a Maxwell data_filter string into individual rule strings.
-  def self.parse_data_filter(data_filter)
-    return [] if data_filter.blank?
-    data_filter.split(/,\s*/)
-  end
-
-  # Returns true if a Maxwell filter rule references the given database.
-  def self.rule_for_database?(rule, db_name)
-    rule.match?(/\b#{Regexp.escape(db_name)}\./)
-  end
-
-  # Computes the diff between the current integration filter and the desired
-  # state for the dashboard database. Rules for other databases are preserved
-  # untouched.
-  #
-  # @param current_data_filter [String] the integration's current data_filter.
-  # @param db_name [String] see zero_etl_exclude_filters.
-  # @param connection [ActiveRecord::ConnectionAdapters::AbstractAdapter]
-  # @return [Hash] :to_add, :to_remove, :unchanged, :reconciled_filter
-  def self.reconcile_zero_etl_filters(current_data_filter, db_name: nil, connection: ActiveRecord::Base.connection)
-    db_name ||= connection.current_database
-    current_rules = parse_data_filter(current_data_filter)
-
-    other_rules = current_rules.reject {|r| rule_for_database?(r, db_name)}
-    current_dashboard_excludes = Set.new(
-      current_rules.select {|r| r.start_with?('exclude:') && rule_for_database?(r, db_name)}
-    )
-
-    desired_dashboard_excludes = Set.new(zero_etl_exclude_filters(db_name: db_name, connection: connection))
-
-    to_add = (desired_dashboard_excludes - current_dashboard_excludes).sort
-    to_remove = (current_dashboard_excludes - desired_dashboard_excludes).sort
-    unchanged = (current_dashboard_excludes & desired_dashboard_excludes).sort
-
-    reconciled = other_rules + ["include: #{db_name}.*"] + desired_dashboard_excludes.sort
-
-    {
-      to_add: to_add,
-      to_remove: to_remove,
-      unchanged: unchanged,
-      reconciled_filter: reconciled.join(", ")
-    }
-  end
-
-  # Reads the current data_filter from a Zero ETL integration, reconciles
-  # the dashboard database excludes, and optionally applies the update.
-  #
-  # @param integration_arn [String] ARN of the Zero ETL integration.
-  # @param db_name [String] see zero_etl_exclude_filters.
-  # @param connection [ActiveRecord::ConnectionAdapters::AbstractAdapter]
-  # @param dry_run [Boolean] when true, computes the diff without applying.
-  # @param rds_client [Aws::RDS::Client] injectable for testing.
-  # @return [Hash] reconciliation result from reconcile_zero_etl_filters.
-  def self.update_zero_etl_integration!(integration_arn:, db_name: nil, connection: ActiveRecord::Base.connection, dry_run: false, rds_client: nil)
-    require 'aws-sdk-rds'
-    rds_client ||= Aws::RDS::Client.new
-
-    resp = rds_client.describe_integrations(integration_identifier: integration_arn)
-    integration = resp.integrations.first
-    raise ArgumentError, "Integration not found: #{integration_arn}" unless integration
-
-    result = reconcile_zero_etl_filters(integration.data_filter, db_name: db_name, connection: connection)
-
-    unless dry_run || (result[:to_add].empty? && result[:to_remove].empty?)
-      rds_client.modify_integration(
-        integration_identifier: integration_arn,
-        data_filter: result[:reconciled_filter]
-      )
-    end
-
-    result
   end
 end

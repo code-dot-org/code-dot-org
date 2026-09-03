@@ -1,0 +1,67 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-08-19T21:06:53.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "display_name": "Exclusive Drop!",
+    "bubble_choice_description": "Predict the price of an exclusive new merch drop.",
+    "thumbnail_url": "https://images.code.org/93c3ccd441c29ddcc2e511ceeff43416-shanimani660-shoe-2498994.jpg",
+    "encrypted": "false",
+    "long_instructions": "Predict the price of some exclusive new merch, given a certain quantity available.\r\n\r\n**☑️ Do This:**\r\n\r\n- Complete the `loss` function. Prompt AI to help you if you need it.\r\n- Run your code.\r\n- Test your loss function on both the `predict_price_1` model and the `predict_price_2` model by changing which model is given to `visualize_model`. Compare the loss calculated for both models.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "buildPython",
+        "debug",
+        "documentation",
+        "example",
+        "explainCode",
+        "hint",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from helpers import visualize_model\n\ndef loss(actual, predicted):\n    # TODO: Write a loss function\n    return 0\n\n# First model\ndef predict_price_1(quantity_available):\n    return -0.3 * quantity_available + 195\n\n# Second model\ndef predict_price_2(quantity_available):\n    return -0.2 * quantity_available + 180\n\nvisualize_model(predict_price_1, loss)",
+          "folderId": "0",
+          "active": false
+        },
+        "1": {
+          "id": "1",
+          "name": "helpers.py",
+          "contents": "import matplotlib.pyplot as plt\n\n# Dataset: (number of items available, resale price in dollars)\nDATA = [\n    (50, 180),\n    (100, 160),\n    (150, 145),\n    (200, 125),\n    (250, 115),\n    (300, 95),\n    (350, 85),\n    (400, 70),\n]\n\nX_LABEL = \"Number available\"\nY_LABEL = \"Resale price ($)\"\n\n\ndef _total_error(model, error):\n    \"\"\"Add up the student's loss function results across every data point.\"\"\"\n    total = 0\n    for x, actual in DATA:\n        predicted = model(x)\n        total += error(actual, predicted)\n    return total\n\n\ndef visualize_model(model, error):\n    \"\"\"Score the model with the student's loss function and draw the chart.\"\"\"\n    # Calculate loss\n    total_error = _total_error(model, error)\n\n    # Set up plot\n    fig, ax = plt.subplots()\n\n    # Plot data points\n    xs = [x for x, _ in DATA]\n    ys = [y for _, y in DATA]\n    ax.scatter(xs, ys, color=\"black\", zorder=3, label=\"Data\")\n\n    # Draw model's line\n    line_xs = [min(xs), max(xs)]\n    line_ys = [model(x) for x in line_xs]\n    ax.plot(\n        line_xs,\n        line_ys,\n        linestyle=\"-\",\n        color=\"#1f77b4\",\n        label=\"Model\",\n    )\n    ax.legend()\n\n    # Display the model's loss\n    ax.set_title(f\"Total loss: {total_error:.2f}\")\n\n    # Add labels, show plot\n    ax.set_xlabel(X_LABEL)\n    ax.set_ylabel(Y_LABEL)\n    plt.show()",
+          "folderId": "0",
+          "active": true,
+          "type": "support"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nKNUS46zvJIQIhRIE6RgG/pU=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-19 21:19:10 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-19 21:24:34 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-19 21:43:02 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-19 21:44:34 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-19 22:28:23 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>
