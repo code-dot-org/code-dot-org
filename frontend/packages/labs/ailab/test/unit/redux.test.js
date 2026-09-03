@@ -1,4 +1,4 @@
-import {ColumnTypes} from '../../src/constants';
+import {Algorithms, ColumnTypes} from '../../src/constants';
 import reducer, {
   initialState,
   setCurrentPanel,
@@ -8,13 +8,18 @@ import reducer, {
   setInstructionsEnabled,
   addSelectedFeature,
   setTestData,
+  setTestDataFromExample,
   setPrediction,
   setMode,
   setReserveLocation,
   setShowResultsDetails,
   setImportedData,
   resetState,
+  resetDatasetState,
+  resetToAlgorithmSelection,
   setSaveStatus,
+  setSelectedAlgorithm,
+  getPredictAvailable,
   saveModel,
 } from '../../src/redux';
 
@@ -82,6 +87,38 @@ describe('ailab reducer', () => {
       const twice = reducer(once, addSelectedFeature('a'));
       expect(twice.selectedFeatures).toEqual(['a']);
     });
+
+    test('clears trained output when the model features change', () => {
+      const trainedState = {
+        ...initialState,
+        selectedFeatures: ['a'],
+        trainingExamples: [[1]],
+        trainingLabels: [1],
+        accuracyCheckExamples: [[2]],
+        accuracyCheckLabels: [2],
+        accuracyCheckPredictedLabels: [2],
+        testData: {a: 1},
+        prediction: 1,
+        trainedModel: {},
+        kValue: 3,
+        saveStatus: 'success',
+        saveResponseData: {type: 'profanity'},
+      };
+
+      const next = reducer(trainedState, addSelectedFeature('b'));
+      expect(next.selectedFeatures).toEqual(['a', 'b']);
+      expect(next.trainingExamples).toEqual([]);
+      expect(next.trainingLabels).toEqual([]);
+      expect(next.accuracyCheckExamples).toEqual([]);
+      expect(next.accuracyCheckLabels).toEqual([]);
+      expect(next.accuracyCheckPredictedLabels).toEqual([]);
+      expect(next.testData).toEqual({});
+      expect(next.prediction).toBeUndefined();
+      expect(next.trainedModel).toBeUndefined();
+      expect(next.kValue).toBeNull();
+      expect(next.saveStatus).toBe('notStarted');
+      expect(next.saveResponseData).toBeUndefined();
+    });
   });
 
   describe('setCurrentColumn', () => {
@@ -111,6 +148,32 @@ describe('ailab reducer', () => {
       expect(next.testData).toEqual({a: 5});
       expect(next.prediction).toBeUndefined();
     });
+
+    test('treats zero as a complete test value', () => {
+      const state = {
+        ...initialState,
+        selectedFeatures: ['a'],
+        testData: {a: 0},
+      };
+      expect(getPredictAvailable(state)).toBe(true);
+    });
+
+    test('loads an example row into test data and clears any stale prediction', () => {
+      const predicted = {
+        ...initialState,
+        selectedFeatures: ['weather', 'temp'],
+        prediction: 'yes',
+      };
+      const next = reducer(
+        predicted,
+        setTestDataFromExample({
+          features: ['weather', 'temp'],
+          example: ['sunny', 'hot'],
+        }),
+      );
+      expect(next.testData).toEqual({weather: 'sunny', temp: 'hot'});
+      expect(next.prediction).toBeUndefined();
+    });
   });
 
   describe('resetState', () => {
@@ -123,13 +186,86 @@ describe('ailab reducer', () => {
       expect(next.mode).toEqual({datasets: ['d1']});
       expect(next.reserveLocation).toBe('random');
       expect(next.selectedFeatures).toEqual([]);
-      expect(next.currentPanel).toBe('selectDataset');
+      expect(next.currentPanel).toBe('selectAlgorithm');
     });
 
     test('preserves instructionsEnabled through reset', () => {
       const enabled = reducer(initialState, setInstructionsEnabled(true));
       const next = reducer(enabled, resetState());
       expect(next.instructionsEnabled).toBe(true);
+    });
+  });
+
+  describe('resetDatasetState', () => {
+    test('preserves algorithm and panel while clearing data setup', () => {
+      let state = reducer(
+        initialState,
+        setSelectedAlgorithm(Algorithms.DECISION_TREE),
+      );
+      state = reducer(state, setCurrentPanel('selectDataset'));
+      state = reducer(state, setImportedData([{a: 1}], false));
+      state = reducer(state, setLabelColumn('a'));
+      const next = reducer(state, resetDatasetState());
+      expect(next.selectedAlgorithm).toBe(Algorithms.DECISION_TREE);
+      expect(next.currentPanel).toBe('selectDataset');
+      expect(next.data).toEqual([]);
+      expect(next.labelColumn).toBeUndefined();
+    });
+  });
+
+  describe('resetToAlgorithmSelection', () => {
+    test('preserves algorithm and settings while clearing model setup', () => {
+      let state = reducer(
+        initialState,
+        setSelectedAlgorithm(Algorithms.DECISION_TREE),
+      );
+      state = reducer(state, setMode({datasets: ['d1']}));
+      state = reducer(state, setReserveLocation('random'));
+      state = reducer(state, setInstructionsEnabled(true));
+      state = reducer(state, setCurrentPanel('results'));
+      state = reducer(state, setImportedData([{a: 1}], false));
+      state = reducer(state, setLabelColumn('a'));
+      state = reducer(state, addSelectedFeature('b'));
+      state = {
+        ...state,
+        trainedModel: {},
+        accuracyCheckExamples: [[1]],
+        accuracyCheckPredictedLabels: [1],
+      };
+
+      const next = reducer(state, resetToAlgorithmSelection());
+      expect(next.selectedAlgorithm).toBe(Algorithms.DECISION_TREE);
+      expect(next.mode).toEqual({datasets: ['d1']});
+      expect(next.reserveLocation).toBe('random');
+      expect(next.instructionsEnabled).toBe(true);
+      expect(next.currentPanel).toBe('selectAlgorithm');
+      expect(next.instructionsKey).toBe('selectAlgorithm');
+      expect(next.data).toEqual([]);
+      expect(next.labelColumn).toBeUndefined();
+      expect(next.selectedFeatures).toEqual([]);
+      expect(next.trainedModel).toBeUndefined();
+      expect(next.accuracyCheckExamples).toEqual([]);
+      expect(next.accuracyCheckPredictedLabels).toEqual([]);
+    });
+  });
+
+  describe('setSelectedAlgorithm', () => {
+    test('records the selected algorithm and clears trained output', () => {
+      const trainedState = {
+        ...initialState,
+        selectedAlgorithm: Algorithms.KNN,
+        accuracyCheckExamples: [[1]],
+        accuracyCheckPredictedLabels: [1],
+        trainedModel: {},
+      };
+      const next = reducer(
+        trainedState,
+        setSelectedAlgorithm(Algorithms.DECISION_TREE),
+      );
+      expect(next.selectedAlgorithm).toBe(Algorithms.DECISION_TREE);
+      expect(next.accuracyCheckExamples).toEqual([]);
+      expect(next.accuracyCheckPredictedLabels).toEqual([]);
+      expect(next.trainedModel).toBeUndefined();
     });
   });
 
@@ -169,9 +305,13 @@ describe('ailab reducer', () => {
     });
 
     test('importing a dataset records uploaded vs selected', () => {
-      const uploaded = reducer(initialState, setImportedData([], true));
+      const selectDataset = reducer(
+        initialState,
+        setCurrentPanel('selectDataset'),
+      );
+      const uploaded = reducer(selectDataset, setImportedData([], true));
       expect(uploaded.instructionsKey).toBe('uploadedDataset');
-      const selected = reducer(initialState, setImportedData([], false));
+      const selected = reducer(selectDataset, setImportedData([], false));
       expect(selected.instructionsKey).toBe('selectedDataset');
     });
   });
@@ -199,9 +339,9 @@ describe('ailab reducer', () => {
       expect(actions[2].payload).toBe('modelSummary');
     });
 
-    test('an error response returns to the save panel', () => {
+    test('an error response returns to the export panel', () => {
       const actions = runSaveModel({status: 'error'});
-      expect(actions[actions.length - 1].payload).toBe('saveModel');
+      expect(actions[actions.length - 1].payload).toBe('exportModel');
     });
   });
 });

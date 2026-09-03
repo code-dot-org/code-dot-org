@@ -6,6 +6,7 @@ import {
   getLocalizedColumnName,
 } from '../helpers/columnDetails';
 import {areArraysEqual} from '../helpers/utils';
+import {getLocalizedValue} from '../helpers/valueDetails';
 import type {RootState} from '../redux';
 import {
   getLabelColumn,
@@ -16,6 +17,7 @@ import {
 import type {
   Coordinate,
   ScatterPlotData,
+  MixedRelationshipPlotData,
   CrossTabResult,
   CrossTabData,
   DataRow,
@@ -200,6 +202,94 @@ export const getCrossTabData = createSelector(
       uniqueLabelValues,
       featureNames: [localizedCurrentColumn],
       labelName: localizedLabelColumn,
+    };
+  },
+);
+
+function getJitter(index: number): number {
+  return ((index % 5) - 2) * 0.04;
+}
+
+export const getMixedRelationshipPlotData = createSelector(
+  [
+    getLabelColumn,
+    (state: RootState) => labelColumnIsNumerical(state),
+    (state: RootState) => labelColumnIsCategorical(state),
+    getCurrentColumn,
+    (state: RootState) => currentColumnIsNumerical(state),
+    (state: RootState) => currentColumnIsCategorical(state),
+    getData,
+    getDatasetId,
+  ],
+  (
+    labelColumn: string | undefined,
+    labelColumnIsNumerical: boolean,
+    labelColumnIsCategorical: boolean,
+    currentColumn: string | undefined,
+    currentColumnIsNumerical: boolean,
+    currentColumnIsCategorical: boolean,
+    data: DataRow[],
+    datasetId: string | undefined,
+  ): MixedRelationshipPlotData | null => {
+    if (!labelColumn || !currentColumn || labelColumn === currentColumn) {
+      return null;
+    }
+
+    const currentIsNumericalAndLabelIsCategorical =
+      currentColumnIsNumerical && labelColumnIsCategorical;
+    const currentIsCategoricalAndLabelIsNumerical =
+      currentColumnIsCategorical && labelColumnIsNumerical;
+
+    if (
+      !currentIsNumericalAndLabelIsCategorical &&
+      !currentIsCategoricalAndLabelIsNumerical
+    ) {
+      return null;
+    }
+
+    const categoricalColumn = currentIsNumericalAndLabelIsCategorical
+      ? labelColumn
+      : currentColumn;
+    const numericalColumn = currentIsNumericalAndLabelIsCategorical
+      ? currentColumn
+      : labelColumn;
+
+    const categoryValues = getUniqueOptions(data, categoricalColumn).sort((a, b) =>
+      String(a).localeCompare(String(b)),
+    );
+    if (categoryValues.length === 0) {
+      return null;
+    }
+
+    const xCategories = categoryValues.map(value =>
+      String(getLocalizedValue(value, datasetId ?? '')),
+    );
+    const categoryIndexByValue = new Map(
+      categoryValues.map((value, index) => [String(value), index]),
+    );
+    const coordinates: Coordinate[] = [];
+
+    data.forEach((row, rowIndex) => {
+      const categoryIndex = categoryIndexByValue.get(
+        String(row[categoricalColumn]),
+      );
+      const numericalValue = Number(row[numericalColumn]);
+
+      if (categoryIndex !== undefined && !isNaN(numericalValue)) {
+        coordinates.push({
+          x: categoryIndex + getJitter(rowIndex),
+          y: numericalValue,
+        });
+      }
+    });
+
+    return {
+      label: getLocalizedColumnName(datasetId ?? '', labelColumn),
+      feature: getLocalizedColumnName(datasetId ?? '', currentColumn),
+      xAxisLabel: getLocalizedColumnName(datasetId ?? '', categoricalColumn),
+      yAxisLabel: getLocalizedColumnName(datasetId ?? '', numericalColumn),
+      xCategories,
+      coordinates,
     };
   },
 );

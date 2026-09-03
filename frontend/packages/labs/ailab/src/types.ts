@@ -1,6 +1,8 @@
-import type KNN from 'ml-knn';
-
 export type DataRow = Record<string, string | number>;
+
+export type AlgorithmId = 'knn' | 'decisionTree';
+
+export type DataDisplayView = 'table' | 'cards';
 
 export interface Mode {
   datasets?: string[];
@@ -28,6 +30,8 @@ export interface NumericalColumnDetails {
   id: string;
   extrema?: {min: number; max: number; range: number};
   containsOnlyNumbers: boolean;
+  histogram?: HistogramBin[];
+  boxPlot?: BoxPlotStats;
 }
 
 export interface CurrentColumnInspector {
@@ -56,9 +60,33 @@ export interface Coordinate {
   y: number;
 }
 
+export interface HistogramBin {
+  label: string;
+  min: number;
+  max: number;
+  count: number;
+}
+
+export interface BoxPlotStats {
+  min: number;
+  q1: number;
+  median: number;
+  q3: number;
+  max: number;
+}
+
 export interface ScatterPlotData {
   label: string;
   feature: string;
+  coordinates: Coordinate[];
+}
+
+export interface MixedRelationshipPlotData {
+  label: string;
+  feature: string;
+  xAxisLabel: string;
+  yAxisLabel: string;
+  xCategories: string[];
   coordinates: Coordinate[];
 }
 
@@ -88,10 +116,52 @@ export interface Metadata {
   fields?: MetadataField[];
 }
 
-export interface KNNTrainedModelDetails {
-  model: KNN;
+export type DecisionTreeLabel = number | string;
+
+export type DecisionTreeNode =
+  | {
+      type: 'leaf';
+      prediction: DecisionTreeLabel;
+      sampleCount?: number;
+      labelCounts?: Record<string, number>;
+    }
+  | {
+      type: 'decision';
+      featureIndex: number;
+      splitType: 'categorical';
+      defaultLabel: DecisionTreeLabel;
+      sampleCount?: number;
+      labelCounts?: Record<string, number>;
+      impurityReduction?: number;
+      children: Record<string, DecisionTreeNode>;
+    }
+  | {
+      type: 'decision';
+      featureIndex: number;
+      splitType: 'numerical';
+      threshold: number;
+      defaultLabel: DecisionTreeLabel;
+      sampleCount?: number;
+      labelCounts?: Record<string, number>;
+      impurityReduction?: number;
+      left: DecisionTreeNode;
+      right: DecisionTreeNode;
+    };
+
+export interface DecisionTreeModelData {
+  algorithm: 'id3';
+  root: DecisionTreeNode;
+}
+
+export interface PredictionModel {
+  predict(dataset: number[][]): (number | string)[];
+  toJSON(): object;
+}
+
+export interface TrainedModelResult {
+  model: PredictionModel;
   predictedLabels: (number | string)[];
-  kValue: number;
+  kValue: number | null;
 }
 
 export interface TrainedModelDetails {
@@ -173,15 +243,31 @@ export interface PrevNextButtons {
   next?: NavButton;
 }
 
-type ContentPanel =
+export type ContentPanel =
+  | 'selectAlgorithm'
   | 'selectDataset'
+  | 'dataDisplayDataset'
   | 'dataDisplayLabel'
   | 'dataDisplayFeatures'
   | 'trainModel'
   | 'generateResults'
   | 'results'
-  | 'saveModel'
+  | 'exportModel'
   | 'modelSummary';
+
+export type NavigationTabId =
+  | 'dataset'
+  | 'train'
+  | 'test'
+  | 'export';
+
+export interface NavigationTab {
+  id: NavigationTabId;
+  text: string | undefined;
+  panel: ContentPanel | undefined;
+  enabled: boolean;
+  selected: boolean;
+}
 
 // Valid panels are content panels + Continue/Finish targets.
 export type Panel = ContentPanel | 'continue' | 'finish';

@@ -4,10 +4,12 @@ import {
   type ThunkAction,
   type AnyAction,
 } from '@reduxjs/toolkit';
-import type KNN from 'ml-knn';
 
 import {
+  Algorithms,
   ColumnTypes,
+  DecisionTreeClassificationTrainer,
+  DecisionTreeRegressionTrainer,
   RegressionTrainer,
   ClassificationTrainer,
   TestDataLocations,
@@ -37,10 +39,13 @@ import type {
   SaveResponse,
   SaveTrainedModel,
   Panel,
+  AlgorithmId,
+  PredictionModel,
 } from './types';
 
 export interface RootState {
   name: string | undefined;
+  selectedAlgorithm: AlgorithmId | undefined;
   csvfile: string | undefined;
   jsonfile: string | undefined;
   invalidData: string | undefined;
@@ -61,7 +66,7 @@ export interface RootState {
   accuracyCheckPredictedLabels: (number | string)[];
   testData: Record<string, string | number>;
   prediction: number | string | undefined;
-  trainedModel: KNN | undefined;
+  trainedModel: PredictionModel | undefined;
   trainedModelDetails: TrainedModelDetailsSave;
   currentPanel: Panel;
   currentColumn: string | undefined;
@@ -83,6 +88,7 @@ export interface RootState {
 
 export const initialState: RootState = {
   name: undefined,
+  selectedAlgorithm: undefined,
   csvfile: undefined,
   jsonfile: undefined,
   // Possible values for invalidData: "tooFewRows", and "tooFewColumns".
@@ -108,7 +114,7 @@ export const initialState: RootState = {
   prediction: undefined,
   trainedModel: undefined,
   trainedModelDetails: {},
-  currentPanel: 'selectDataset',
+  currentPanel: 'selectAlgorithm',
   currentColumn: undefined,
   resultsPhase: undefined,
   // Possible values for saveStatus: "notStarted", "started", "success",
@@ -129,10 +135,30 @@ export const initialState: RootState = {
   resultsTab: ResultsGrades.CORRECT,
 };
 
+function clearTrainedOutput(state: RootState): void {
+  state.trainingExamples = [];
+  state.trainingLabels = [];
+  state.accuracyCheckExamples = [];
+  state.accuracyCheckLabels = [];
+  state.accuracyCheckPredictedLabels = [];
+  state.testData = {};
+  state.prediction = undefined;
+  state.trainedModel = undefined;
+  state.kValue = null;
+  state.saveStatus = 'notStarted';
+  state.saveResponseData = undefined;
+}
+
 const ailabSlice = createSlice({
   name: 'ailab',
   initialState,
   reducers: {
+    setSelectedAlgorithm(state, action: PayloadAction<AlgorithmId | undefined>) {
+      if (state.selectedAlgorithm !== action.payload) {
+        state.selectedAlgorithm = action.payload;
+        clearTrainedOutput(state);
+      }
+    },
     setMode(state, action: PayloadAction<Mode | undefined>) {
       state.mode = action.payload;
     },
@@ -195,15 +221,23 @@ const ailabSlice = createSlice({
     addSelectedFeature(state, action: PayloadAction<string>) {
       if (!state.selectedFeatures.includes(action.payload)) {
         state.selectedFeatures.push(action.payload);
+        clearTrainedOutput(state);
       }
     },
     removeSelectedFeature(state, action: PayloadAction<string>) {
-      state.selectedFeatures = state.selectedFeatures.filter(
+      const selectedFeatures = state.selectedFeatures.filter(
         item => item !== action.payload,
       );
+      if (selectedFeatures.length !== state.selectedFeatures.length) {
+        state.selectedFeatures = selectedFeatures;
+        clearTrainedOutput(state);
+      }
     },
     setLabelColumn(state, action: PayloadAction<string>) {
-      state.labelColumn = action.payload;
+      if (state.labelColumn !== action.payload) {
+        state.labelColumn = action.payload;
+        clearTrainedOutput(state);
+      }
     },
     /* featureNumberKey maps feature names to a hash of category options mapped
       to integers.
@@ -251,6 +285,15 @@ const ailabSlice = createSlice({
         return {payload: {feature, value}};
       },
     },
+    setTestDataFromExample(
+      state,
+      action: PayloadAction<{features: string[]; example: (string | number)[]}>,
+    ) {
+      action.payload.features.forEach((feature, index) => {
+        state.testData[feature] = action.payload.example[index];
+      });
+      state.prediction = undefined;
+    },
     setPrediction(state, action: PayloadAction<number | string>) {
       state.prediction = action.payload;
     },
@@ -262,7 +305,28 @@ const ailabSlice = createSlice({
         instructionsEnabled: state.instructionsEnabled,
       };
     },
-    setTrainedModel(state, action: PayloadAction<KNN>) {
+    resetDatasetState(state) {
+      return {
+        ...initialState,
+        selectedAlgorithm: state.selectedAlgorithm,
+        mode: state.mode,
+        reserveLocation: state.reserveLocation,
+        instructionsEnabled: state.instructionsEnabled,
+        currentPanel: state.currentPanel,
+      };
+    },
+    resetToAlgorithmSelection(state) {
+      return {
+        ...initialState,
+        selectedAlgorithm: state.selectedAlgorithm,
+        mode: state.mode,
+        reserveLocation: state.reserveLocation,
+        instructionsEnabled: state.instructionsEnabled,
+        currentPanel: 'selectAlgorithm',
+        instructionsKey: 'selectAlgorithm',
+      };
+    },
+    setTrainedModel(state, action: PayloadAction<PredictionModel>) {
       state.trainedModel = action.payload;
     },
     setTrainedModelDetail: {
@@ -422,7 +486,7 @@ const ailabSlice = createSlice({
       state.showOverlay = false;
       state.showResultsDetails = action.payload;
     },
-    setKValue(state, action: PayloadAction<number>) {
+    setKValue(state, action: PayloadAction<number | null>) {
       state.kValue = action.payload;
     },
     setInstructionsDismissed(state) {
@@ -438,6 +502,7 @@ const ailabSlice = createSlice({
 });
 
 export const {
+  setSelectedAlgorithm,
   setMode,
   setSelectedName,
   setSelectedCSV,
@@ -458,8 +523,11 @@ export const {
   setTrainingExamples,
   setTrainingLabels,
   setTestData,
+  setTestDataFromExample,
   setPrediction,
   resetState,
+  resetDatasetState,
+  resetToAlgorithmSelection,
   setTrainedModel,
   setTrainedModelDetail,
   setCurrentPanel,
@@ -494,7 +562,7 @@ export const saveModel =
       dispatch(setSaveStatus(response.status, response.data));
       dispatch(
         setCurrentPanel(
-          response.status === 'success' ? 'modelSummary' : 'saveModel',
+          response.status === 'success' ? 'modelSummary' : 'exportModel',
         ),
       );
     });
@@ -513,7 +581,8 @@ function getShowColumnClicking(state: RootState): boolean {
 export function getPredictAvailable(state: RootState): boolean {
   return (
     Object.keys(state.testData).filter(
-      value => state.testData[value] && state.testData[value] !== '',
+      value =>
+        state.testData[value] !== undefined && state.testData[value] !== '',
     ).length === state.selectedFeatures.length
   );
 }
@@ -554,15 +623,23 @@ export function getLabelToSave(state: RootState): ModelCardColumn {
   return getColumnDataToSave(state, state.labelColumn!);
 }
 
+function getSelectedTrainer(state: RootState): string {
+  if (state.selectedAlgorithm === Algorithms.DECISION_TREE) {
+    return isRegression(state)
+      ? DecisionTreeRegressionTrainer
+      : DecisionTreeClassificationTrainer;
+  }
+
+  return isRegression(state) ? RegressionTrainer : ClassificationTrainer;
+}
+
 export function getTrainedModelDataToSave(state: RootState): ModelDataToSave {
   const dataToSave: ModelDataToSave = {
     name: state.trainedModelDetails.name,
     datasetDetails: getDatasetDetails(state),
     potentialUses: state.trainedModelDetails.potentialUses,
     potentialMisuses: state.trainedModelDetails.potentialMisuses,
-    selectedTrainer: isRegression(state)
-      ? RegressionTrainer
-      : ClassificationTrainer,
+    selectedTrainer: getSelectedTrainer(state),
     featureNumberKey: state.featureNumberKey,
     label: getColumnDataToSave(state, state.labelColumn!),
     features: getFeaturesToSave(state),

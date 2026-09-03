@@ -32,6 +32,9 @@ function getInstructionsDefaults(aiMsg) {
     selectDataset: aiMsg.selectDataset(),
     uploadedDataset: aiMsg.uploadedDataset(),
     selectedDataset: aiMsg.selectedDataset(),
+    dataDisplayDataset: aiMsg.dataDisplayDataset
+      ? aiMsg.dataDisplayDataset()
+      : aiMsg.selectedDataset(),
     dataDisplayLabel: aiMsg.dataDisplayLabel(),
     dataDisplayFeatures: aiMsg.dataDisplayFeatures(),
     selectedFeatureNumerical: aiMsg.selectedFeatureNumerical(),

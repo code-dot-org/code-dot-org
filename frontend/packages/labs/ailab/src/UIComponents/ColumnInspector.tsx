@@ -13,6 +13,7 @@ import ColumnDataTypeDropdown from './ColumnDataTypeDropdown';
 import ColumnDetailsCategorical from './ColumnDetailsCategorical';
 import ColumnDetailsNumerical from './ColumnDetailsNumerical';
 import CrossTab from './CrossTab';
+import MixedRelationshipPlot from './MixedRelationshipPlot';
 import ScatterPlot from './ScatterPlot';
 import ScrollableContent from './ScrollableContent';
 import SelectLabelButton from './SelectLabelButton';
@@ -80,6 +81,7 @@ const ColumnInspector = () => {
           {selectingFeatures && (
             <div style={styles.cardRow}>
               <ScatterPlot />
+              <MixedRelationshipPlot />
               <CrossTab />
             </div>
           )}

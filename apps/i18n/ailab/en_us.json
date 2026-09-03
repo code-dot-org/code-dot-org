@@ -2,6 +2,7 @@
   "selectDataset": "Select the data set you would like to use.",
   "uploadedDataset": "You just uploaded a dataset.",
   "selectedDataset": "You just selected a dataset.",
+  "dataDisplayDataset": "Explore the dataset columns.",
   "dataDisplayLabel": "Choose one column to predict.",
   "dataDisplayFeatures": "Choose one or more columns as inputs to help make the prediction.",
   "selectedFeatureNumerical": "You just selected a numerical feature.",

@@ -10,7 +10,7 @@ import {
   setSelectedName as setSelectedNameAction,
   setSelectedCSV as setSelectedCSVAction,
   setSelectedJSON as setSelectedJSONAction,
-  resetState as resetStateAction,
+  resetDatasetState as resetDatasetStateAction,
   getSpecifiedDatasets,
   setHighlightDataset as setHighlightDatasetAction,
 } from '../redux';
@@ -24,7 +24,7 @@ const SelectDataset = () => {
   const highlightDataset = useAppSelector(state => state.highlightDataset);
   const invalidData = useAppSelector(state => state.invalidData);
 
-  const resetState = () => dispatch(resetStateAction());
+  const resetDatasetState = () => dispatch(resetDatasetStateAction());
   const setSelectedName = (datasetName: string) =>
     dispatch(setSelectedNameAction(datasetName));
   const setSelectedCSV = (csvfilePath: string | File) =>
@@ -44,7 +44,7 @@ const SelectDataset = () => {
       const csvPath = assetPath + dataset.path;
       const jsonPath = assetPath + dataset.metadataPath;
 
-      resetState();
+      resetDatasetState();
       setSelectedName(dataset.name);
       setSelectedCSV(csvPath);
       setSelectedJSON(jsonPath);
@@ -56,7 +56,7 @@ const SelectDataset = () => {
   };
 
   const handleUploadSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
-    resetState();
+    resetDatasetState();
     setSelectedCSV(event.target.files![0]);
     parseCSV(event.target.files![0] as unknown as string, false, true);
   };

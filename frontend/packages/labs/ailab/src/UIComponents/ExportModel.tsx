@@ -1,8 +1,8 @@
-/* React component to handle saving a trained model. */
+/* React component to handle exporting a trained model. */
 import type React from 'react';
 import {useState} from 'react';
 
-import {styles, ModelNameMaxLength} from '../constants';
+import {ColumnTypes, styles, ModelNameMaxLength} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {
   getDatasetDescription,
@@ -16,9 +16,14 @@ import {getSelectedColumnsDescriptions} from '../selectors';
 import ScrollableContent from './ScrollableContent';
 import Statement from './Statement';
 
-const SaveModel = () => {
+const ExportModel = () => {
   const dispatch = useAppDispatch();
   const labelColumn = useAppSelector(state => state.labelColumn);
+  const selectedFeatures = useAppSelector(state => state.selectedFeatures);
+  const columnsByDataType = useAppSelector(state => state.columnsByDataType);
+  const trainedModelDetails = useAppSelector(
+    state => state.trainedModelDetails,
+  );
   const columnDescriptions = useAppSelector(getSelectedColumnsDescriptions);
   const dataDescription = useAppSelector(getDatasetDescription);
   const isUserUploaded = useAppSelector(isUserUploadedDataset);
@@ -40,6 +45,29 @@ const SaveModel = () => {
   ) => {
     dispatch(setTrainedModelDetail(field, event.target.value, isColumn));
   };
+
+  const getPredictionBlockFields = () => {
+    return selectedFeatures.map(feature => {
+      const sampleValue =
+        columnsByDataType[feature] === ColumnTypes.NUMERICAL
+          ? I18n.t('exportModelBlockNumberValue')
+          : I18n.t('exportModelBlockTextValue');
+      const featureKey = feature.replace(/\W/g, '') || feature;
+      return {
+        id: feature,
+        key: featureKey,
+        sampleValue,
+      };
+    });
+  };
+
+  const predictionBlockFields = getPredictionBlockFields();
+  const predictionBlockFieldSummary =
+    predictionBlockFields.length > 0
+      ? predictionBlockFields
+          .map(field => `${field.key}: ${field.sampleValue}`)
+          .join(', ')
+      : I18n.t('exportModelBlockNoFields');
 
   const getColumnFields = () => {
     const fields: {
@@ -82,6 +110,7 @@ const SaveModel = () => {
       text: I18n.t('potentialUsesLabel'),
       description: I18n.t('potentialUsesDescription'),
       placeholder: I18n.t('potentialUsesPlaceholder'),
+      answer: trainedModelDetails.potentialUses ?? '',
     });
     fields.push({
       id: 'potentialMisuses',
@@ -93,6 +122,7 @@ const SaveModel = () => {
         I18n.t('potentialMisusesDescriptionSituations'),
       ],
       placeholder: I18n.t('potentialMisusesPlaceholder'),
+      answer: trainedModelDetails.potentialMisuses ?? '',
     });
 
     return fields;
@@ -108,7 +138,9 @@ const SaveModel = () => {
     id: 'datasetDescription',
     text: I18n.t('datasetDescriptionLabel'),
     placeholder: I18n.t('datasetDescriptionPlaceholder'),
-    answer: dataDescription,
+    answer: isUserUploaded
+      ? (trainedModelDetails.datasetDescription ?? '')
+      : dataDescription,
   };
 
   const arrowIcon = showColumnDescriptions
@@ -121,12 +153,79 @@ const SaveModel = () => {
     <div id="uitest-model-card-form" style={styles.panel}>
       <Statement />
       <ScrollableContent tinted={true}>
+        <div style={styles.exportModelHeader}>
+          <h2 style={styles.exportModelHeading}>
+            {I18n.t('exportModelHeading')}
+          </h2>
+          <p style={styles.regularText}>{I18n.t('exportModelDescription')}</p>
+        </div>
+        <div style={styles.exportModelApiPreview}>
+          <h3 style={styles.exportModelSectionHeading}>
+            {I18n.t('exportModelApiPreviewHeading')}
+          </h3>
+          <p style={styles.regularText}>
+            {I18n.t('exportModelApiPreviewDescription')}
+          </p>
+          <div
+            style={styles.exportModelBlocklyPreview}
+            role="img"
+            aria-label={I18n.t('exportModelBlockAriaLabel', {
+              fields: predictionBlockFieldSummary,
+            })}
+          >
+            <div style={styles.exportModelBlocklyBlock}>
+              <div style={styles.exportModelBlocklyHeader}>
+                <span style={styles.exportModelBlocklyFunctionName}>
+                  getPrediction
+                </span>
+                <span style={styles.exportModelBlocklyInputLabel}>
+                  {I18n.t('exportModelBlockUsingLabel')}
+                </span>
+                <span style={styles.exportModelBlocklyValueSlot}>
+                  {I18n.t('exportModelBlockDataLabel')}
+                </span>
+              </div>
+              <div style={styles.exportModelBlocklyDataBlock}>
+                <div style={styles.exportModelBlocklyDataHeader}>
+                  {I18n.t('exportModelBlockDataLabel')}
+                </div>
+                {predictionBlockFields.length > 0 ? (
+                  predictionBlockFields.map(field => (
+                    <div
+                      key={field.id}
+                      style={styles.exportModelBlocklyFeatureRow}
+                    >
+                      <span style={styles.exportModelBlocklyFeatureName}>
+                        {field.key}
+                      </span>
+                      <span style={styles.exportModelBlocklyValueInput}>
+                        {field.sampleValue}
+                      </span>
+                    </div>
+                  ))
+                ) : (
+                  <div style={styles.exportModelBlocklyNoFields}>
+                    {I18n.t('exportModelBlockNoFields')}
+                  </div>
+                )}
+              </div>
+              <div style={styles.exportModelBlocklyReturnRow}>
+                <span>{I18n.t('exportModelApiResultLabel')}</span>
+                <span style={styles.exportModelBlocklyReturnValue}>
+                  {I18n.t('exportModelApiResult')}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
         <div key={nameField.id} style={styles.cardRow}>
-          <span style={styles.bold}>{nameField.text}</span>
-          &nbsp;
-          <span style={styles.italic}>
-            ({I18n.t('saveModelFieldRequired')})
-          </span>
+          <label htmlFor="uitest-model-name-input">
+            <span style={styles.bold}>{nameField.text}</span>
+            &nbsp;
+            <span style={styles.italic}>
+              ({I18n.t('saveModelFieldRequired')})
+            </span>
+          </label>
           <div>
             <input
               id="uitest-model-name-input"
@@ -134,14 +233,18 @@ const SaveModel = () => {
                 handleChange(event, nameField.id, nameField.isColumn)
               }
               maxLength={ModelNameMaxLength}
+              value={trainedModelDetails.name ?? ''}
             />
           </div>
         </div>
         <div>
           {getUsesFields().map(field => {
+            const inputId = `export-${field.id}-input`;
             return (
               <div key={field.id} style={styles.cardRow}>
-                <div style={styles.bold}>{field.text}</div>
+                <label htmlFor={inputId} style={styles.bold}>
+                  {field.text}
+                </label>
                 <div>{field.description}</div>
                 <ul>
                   {field.descriptionDetails &&
@@ -155,46 +258,49 @@ const SaveModel = () => {
                       },
                     )}
                 </ul>
-                {!field.answer && (
-                  <div>
-                    <textarea
-                      rows={4}
-                      onChange={event =>
-                        handleChange(event, field.id, !!field.isColumn)
-                      }
-                      placeholder={field.placeholder}
-                      style={styles.saveInputsWidth}
-                    />
-                  </div>
-                )}
-                {field.answer && <div>{field.answer}</div>}
+                <div>
+                  <textarea
+                    id={inputId}
+                    rows={4}
+                    onChange={event =>
+                      handleChange(event, field.id, !!field.isColumn)
+                    }
+                    placeholder={field.placeholder}
+                    style={styles.saveInputsWidth}
+                    value={field.answer}
+                  />
+                </div>
               </div>
             );
           })}
         </div>
         <div key={dataDescriptionField.id} style={styles.cardRow}>
-          <div style={styles.bold}>{dataDescriptionField.text}</div>
+          <label htmlFor="export-dataset-description" style={styles.bold}>
+            {dataDescriptionField.text}
+          </label>
           {isUserUploaded && (
             <div>
               <textarea
+                id="export-dataset-description"
                 rows={4}
                 onChange={event =>
                   handleChange(event, dataDescriptionField.id, false)
                 }
                 placeholder={dataDescriptionField.placeholder}
                 style={styles.saveInputsWidth}
+                value={dataDescriptionField.answer}
               />
             </div>
           )}
           {!isUserUploaded && <div>{dataDescriptionField.answer}</div>}
         </div>
         <div>
-          <span
+          <button
+            type="button"
             onClick={toggleColumnDescriptions}
-            onKeyDown={toggleColumnDescriptions}
-            style={styles.saveModelToggle}
-            role="button"
-            tabIndex={0}
+            style={styles.saveModelToggleButton}
+            aria-expanded={showColumnDescriptions}
+            aria-controls="export-column-descriptions"
           >
             <i className={arrowIcon} />
             &nbsp;
@@ -202,19 +308,24 @@ const SaveModel = () => {
               {I18n.t('saveModelColumnCountLabel')}
             </span>
             &nbsp; ({columnCount})
-          </span>
+          </button>
           {showColumnDescriptions && (
-            <div style={styles.saveModelToggleContents}>
-              {getColumnFields().map(field => {
+            <div
+              id="export-column-descriptions"
+              style={styles.saveModelToggleContents}
+            >
+              {getColumnFields().map((field, index) => {
+                const inputId = `export-column-description-${index}`;
                 return (
                   <div key={field.id} style={styles.cardRow}>
-                    <div>
+                    <label htmlFor={inputId}>
                       <span style={styles.bold}>{field.localizedName}</span> (
                       {field.columnType})
-                    </div>
+                    </label>
                     {isUserUploaded && (
                       <div>
                         <textarea
+                          id={inputId}
                           rows={1}
                           onChange={event =>
                             handleChange(event, field.id, !!field.isColumn)
@@ -237,4 +348,4 @@ const SaveModel = () => {
   );
 };
 
-export default SaveModel;
+export default ExportModel;

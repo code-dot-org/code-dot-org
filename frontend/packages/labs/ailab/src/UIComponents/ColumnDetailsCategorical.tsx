@@ -13,6 +13,7 @@ const chartOptions = {
       {
         ticks: {
           beginAtZero: true,
+          precision: 0,
         },
       },
     ],
@@ -27,7 +28,24 @@ const ColumnDetailsCategorical = () => {
 
   const {id, uniqueOptions, frequencies} = columnDetails;
   const labels = uniqueOptions && Object.values(uniqueOptions);
-  const localizedLabels = labels.map(option =>
+  const maxChartRows = 5;
+  const sortedLabels = [...labels].sort((a, b) => {
+    const frequencyDifference = frequencies[b] - frequencies[a];
+    return frequencyDifference || a.localeCompare(b);
+  });
+  const topLabels = sortedLabels.slice(0, maxChartRows);
+  const remainingLabels = sortedLabels.slice(maxChartRows);
+  const otherLabel = I18n.t('columnDetailsOtherValues') || 'Other';
+  const chartLabels =
+    remainingLabels.length > 0 ? [...topLabels, otherLabel] : topLabels;
+  const chartCounts =
+    remainingLabels.length > 0
+      ? [
+          ...topLabels.map(option => frequencies[option]),
+          remainingLabels.reduce((sum, option) => sum + frequencies[option], 0),
+        ]
+      : topLabels.map(option => frequencies[option]);
+  const localizedLabels = chartLabels.map(option =>
     getLocalizedValue(option, datasetId),
   );
   const barData = {
@@ -40,29 +58,39 @@ const ColumnDetailsCategorical = () => {
         borderWidth: 1,
         hoverBackgroundColor: '#59cad3',
         hoverBorderColor: 'white',
-        data: labels.map(option => frequencies[option]),
+        data: chartCounts,
       },
     ],
   };
 
-  const maxLabelsInHistogram = 5;
+  const chartHeight = 160;
 
   return (
     <div>
       <div style={styles.bold}>{I18n.t('columnDetailsInformation')}</div>
-      <div style={styles.barChart}>
-        {labels.length <= maxLabelsInHistogram && (
-          <Bar data={barData} width={100} height={150} options={chartOptions} />
-        )}
-        {labels.length > maxLabelsInHistogram && (
-          <div>
-            {I18n.t('columnDetailsTooManyLabels', {
-              labelCount: labels.length,
-              maxLabelCount: maxLabelsInHistogram,
-            })}
-          </div>
-        )}
+      <div
+        style={{...styles.barChart, height: chartHeight}}
+        role="img"
+        aria-label={I18n.t('columnDetailsCategoricalChartAriaLabel', {
+          column: id,
+          values: localizedLabels.join(', '),
+        })}
+      >
+        <Bar
+          data={barData}
+          width={100}
+          height={chartHeight}
+          options={chartOptions}
+        />
       </div>
+      {remainingLabels.length > 0 && (
+        <div style={styles.smallText}>
+          {I18n.t('columnDetailsTopValuesShown', {
+            shownCount: topLabels.length,
+            otherCount: remainingLabels.length,
+          })}
+        </div>
+      )}
     </div>
   );
 };

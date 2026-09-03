@@ -15,7 +15,7 @@ import {
   setAccuracyCheckPredictedLabels,
   setHistoricResult,
 } from '../redux';
-import type {KNNTrainedModelDetails} from '../types';
+import type {TrainedModelResult} from '../types';
 
 export default class KNNTrainer {
   private store: Store<RootState>;
@@ -47,7 +47,7 @@ export default class KNNTrainer {
     the curriculum. For large classification datasets we try a variety of K
     values and select the one that yields the most accurate model.
   */
-  getOptimalModelDetails(state: RootState): KNNTrainedModelDetails {
+  getOptimalModelDetails(state: RootState): TrainedModelResult {
     let bestModel: KNN | undefined;
     let bestPredictedLabels: (number | string)[] = [];
     let bestK = -1;
@@ -145,7 +145,7 @@ export default class KNNTrainer {
 
   storeTrainedModel(
     store: Store<RootState>,
-    trainedModel: KNNTrainedModelDetails,
+    trainedModel: TrainedModelResult,
   ): void {
     store.dispatch(setKValue(trainedModel.kValue));
     store.dispatch(

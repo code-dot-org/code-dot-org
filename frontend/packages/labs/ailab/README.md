@@ -13,11 +13,11 @@ AI Lab is a highly configurable environment providing a student experience for d
 - viewing per-column graphs and metadata
 - viewing custom [CrossTab](https://github.com/code-dot-org/ml-playground/pull/62) tables for comparing categorical columns
 - viewing scatter plot graphs for comparing continuous columns
-- using KNN classification or KNN regression to train a model
+- choosing KNN or ID3 decision tree training for a model
 - choosing the subset of data to reserve for validation
 - measuring accuracy of the resulting trained model using reserved data
 - using the trained model by doing predictions
-- saving the trained model to the server for use in App Lab
+- exporting the trained model for use in programming labs
 
 It can be run standalone for more rapid development, though its ultimate destination is to appear in [Code Studio](https://studio.code.org/). When run standalone, it does not have all of the styling of Code Studio. It also calls stub functions for completion, saving a trained model, and indicating which [Dynamic](https://github.com/code-dot-org/code-dot-org/pull/39384) [Instruction](https://github.com/code-dot-org/ml-playground/pull/97) should be shown. The standalone runtime does have a dropdown for selecting which set of level parameters are used, in lieu of a level providing these parameters, and it also shows the current Dynamic Instruction identifier.
 
@@ -51,9 +51,15 @@ Take care that each column is correctly listed in the `.json` file, and test tha
 
 ### Scenes:
 
+#### Select algorithm
+
+This is the first scene. Students choose which machine learning algorithm will
+train the model. The same dataset, label, and feature selection steps are used
+after choosing either KNN or ID3.
+
 #### Select dataset
 
-This is usually the first scene, and can offer selection of both "pre-canned" datasets, which have accompanying metadata, or user-uploaded CSV. The tiles use an art style somewhat consistent with that used elsewhere in our product. There is a fun "grow" animation on tile hover, just to feel a little more interactive, which is reused for the A.I. bot head elsewhere in the app.
+This scene can offer selection of both "pre-canned" datasets, which have accompanying metadata, or user-uploaded CSV. The tiles use an art style somewhat consistent with that used elsewhere in our product. There is a fun "grow" animation on tile hover, just to feel a little more interactive, which is reused for the A.I. bot head elsewhere in the app.
 
 #### Data display (label & features)
 
@@ -91,14 +97,15 @@ This screen does a few things:
 - It shows the results of previous sets of predictions, with their respective statements. This way the student can compare statements to see which have the highest "predictive power".
 - It lets the student view details of the most recent set of predictions, which shows in a pop-up. This view has a toggle between showing correct and incorrect predictions. In the table, the student can examine each row of reserved data to see how the label's actual value compares to what was predicted.
 - The student can "Try it out!" and run their own predictions. The interface here is very similar to what they can see in App Lab once they import the saved model there. The A.I. bot makes a reappearance here, because it's popular!
+- For decision tree models, it shows the trained tree and lets the student step through the path taken by the current "Try it out!" feature values.
 
-#### Save Model
+#### Export Model
 
-The student can fill out the "model card" and then save the model, along with the model card information, to the server. This model can then be imported in App Lab. The model card information is seen in App Lab when previewing the model prior to importing it. [Model cards](https://modelcards.withgoogle.com/about) serve as an accessible reference for an AI model. They allow the student to document decisions. And analyzing model cards in the curriculum helps students to [explore](https://codeorg.medium.com/code-org-curriculum-now-teaches-ai-to-every-student-f4d09895be15) issues of bias and ethics.
+The student can fill out the "model card" fields and then export the model, along with the model card information, for use in programming labs. This is also where the app previews the language-agnostic prediction API: `getPrediction(data)`. The model card information is seen when previewing the model prior to importing it. [Model cards](https://modelcards.withgoogle.com/about) serve as an accessible reference for an AI model. They allow the student to document decisions. And analyzing model cards in the curriculum helps students to [explore](https://codeorg.medium.com/code-org-curriculum-now-teaches-ai-to-every-student-f4d09895be15) issues of bias and ethics.
 
 #### Model Summary
 
-The student can see a summary of the model that they have just saved. Proceeding from here will go to the next level in the progression.
+The student can see a summary of the model that they have just exported. Proceeding from here will go to the next level in the progression.
 
 ## Common operations
 

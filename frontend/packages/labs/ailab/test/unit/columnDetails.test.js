@@ -8,6 +8,8 @@ import {
   tooManyUniqueOptions,
   isColumnReadOnly,
   getExtrema,
+  getHistogramBins,
+  getBoxPlotStats,
   containsOnlyNumbers,
   getColumnDescription,
 } from '../../src/helpers/columnDetails';
@@ -113,6 +115,30 @@ describe('extrema', () => {
     expect(result.max).toBe(mosquitoCountMax);
     expect(result.min).toBe(mosquitoCountMin);
     expect(result.range).toBe(mosquitoCountMax - mosquitoCountMin);
+  });
+});
+
+describe('histogram bins', () => {
+  test('gets equal-width histogram bins', async () => {
+    const result = getHistogramBins(allNumericalState.data, 'batCount', 3);
+    expect(result).toEqual([
+      {label: '40-60', min: 40, max: 60, count: 2},
+      {label: '60-80', min: 60, max: 80, count: 2},
+      {label: '80-100', min: 80, max: 100, count: 3},
+    ]);
+  });
+});
+
+describe('box plot stats', () => {
+  test('gets quartiles and whiskers', async () => {
+    const result = getBoxPlotStats(allNumericalState.data, 'mosquitoCount');
+    expect(result).toEqual({
+      min: 1,
+      q1: 2.5,
+      median: 4,
+      q3: 5.5,
+      max: 10,
+    });
   });
 });
 
