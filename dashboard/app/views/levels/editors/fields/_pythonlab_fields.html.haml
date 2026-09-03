@@ -9,19 +9,19 @@
   #neighborhood{class: ('collapse' if @level.mini_app != 'neighborhood')}
     = render partial: 'levels/editors/fields/neighborhood_settings', locals: {f: f}
 
-  #api_version{class: ('collapse' if @level.mini_app.blank?)}
-    = f.label :api_version, 'API Version'
+  #mini_app_variant{class: ('collapse' if @level.mini_app.blank?)}
+    = f.label :mini_app_variant, 'API Version'
     %p Which version of the API students will use. This setting determines which version of the API is provided to the AI Tutor.
-    = f.select :api_version, options_for_select(@level.class.api_versions, @level.api_version_or_default)
+    = f.select :mini_app_variant, options_for_select(@level.class.mini_app_variants, @level.mini_app_variant_or_default)
 
 :javascript
-  const defaultApiVersions = #{Pythonlab::DEFAULT_API_VERSIONS.to_json};
-  const hasSavedApiVersion = #{@level.api_version.present?};
+  const defaultMiniAppVariants = #{Pythonlab::DEFAULT_MINI_APP_VARIANTS.to_json};
+  const hasSavedMiniAppVariant = #{@level.mini_app_variant.present?};
 
   function toggleFields(val) {
     const miniApp = val.toLowerCase();
     const neighborhoodFields = document.getElementById('neighborhood');
-    const apiVersionFields = document.getElementById('api_version');
+    const miniAppVariantFields = document.getElementById('mini_app_variant');
 
     if (miniApp === 'neighborhood') {
       neighborhoodFields.classList.remove('collapse');
@@ -29,15 +29,15 @@
       neighborhoodFields.classList.add('collapse');
     }
 
-    const defaultApiVersion = defaultApiVersions[miniApp];
-    if (defaultApiVersion) {
-      apiVersionFields.classList.remove('collapse');
+    const defaultMiniAppVariant = defaultMiniAppVariants[miniApp];
+    if (defaultMiniAppVariant) {
+      miniAppVariantFields.classList.remove('collapse');
     } else {
-      apiVersionFields.classList.add('collapse');
+      miniAppVariantFields.classList.add('collapse');
     }
 
     // Don't overwrite a previously chosen version.
-    if (!hasSavedApiVersion) {
-      document.getElementById('level_api_version').value = defaultApiVersion || '';
+    if (!hasSavedMiniAppVariant) {
+      document.getElementById('level_mini_app_variant').value = defaultMiniAppVariant || '';
     }
   }

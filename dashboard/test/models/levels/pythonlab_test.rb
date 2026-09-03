@@ -29,26 +29,26 @@ class PythonlabTest < ActiveSupport::TestCase
     assert_nil level.properties['serialized_maze']
   end
 
-  test 'each mini app has its own default api version' do
+  test 'each mini app has its own default variant' do
     theater = Pythonlab.new(name: 'theater level', mini_app: 'theater')
     neighborhood = Pythonlab.new(name: 'neighborhood level', mini_app: 'neighborhood')
-    assert_equal 'functional', theater.api_version_or_default
-    assert_equal 'object_oriented', neighborhood.api_version_or_default
+    assert_equal 'functional', theater.mini_app_variant_or_default
+    assert_equal 'object_oriented', neighborhood.mini_app_variant_or_default
   end
 
-  test 'a level with no mini app has no default api version' do
+  test 'a level with no mini app has no default variant' do
     level = Pythonlab.new(name: 'plain level')
-    assert_nil level.api_version_or_default
+    assert_nil level.mini_app_variant_or_default
   end
 
-  test 'a stored api version overrides the default' do
-    level = Pythonlab.new(name: 'theater level', mini_app: 'theater', api_version: 'object_oriented')
-    assert_equal 'object_oriented', level.api_version_or_default
+  test 'a stored variant overrides the default' do
+    level = Pythonlab.new(name: 'theater level', mini_app: 'theater', mini_app_variant: 'object_oriented')
+    assert_equal 'object_oriented', level.mini_app_variant_or_default
   end
 
-  test 'a stray api version is stripped from a level with no mini app' do
-    level = Pythonlab.new(name: 'plain level', api_version: 'functional')
+  test 'a stray variant is stripped from a level with no mini app' do
+    level = Pythonlab.new(name: 'plain level', mini_app_variant: 'functional')
     level.send(:clean_up_mini_app_settings)
-    assert_nil level.properties['api_version']
+    assert_nil level.properties['mini_app_variant']
   end
 end

@@ -41,7 +41,7 @@ class Pythonlab < Level
     widget_view
     widget_view_allow_show_code
     ai_tutor_prompt_settings
-    api_version
+    mini_app_variant
   )
 
   validate :has_correct_multiple_choice_answer?
@@ -62,17 +62,17 @@ class Pythonlab < Level
     [['None', nil], ['Neighborhood', 'neighborhood'], ['Theater', 'theater']]
   end
 
-  DEFAULT_API_VERSIONS = {
+  DEFAULT_MINI_APP_VARIANTS = {
     'neighborhood' => 'object_oriented',
     'theater' => 'functional',
   }.freeze
 
-  def self.api_versions
+  def self.mini_app_variants
     [['Functional', 'functional'], ['Object Oriented', 'object_oriented']]
   end
 
-  def api_version_or_default
-    api_version || DEFAULT_API_VERSIONS[mini_app]
+  def mini_app_variant_or_default
+    mini_app_variant || DEFAULT_MINI_APP_VARIANTS[mini_app]
   end
 
   def uses_lab2?
@@ -109,7 +109,7 @@ class Pythonlab < Level
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
     level_properties = super
     level_properties[:serializedMaze] = get_serialized_maze
-    level_properties['apiVersion'] = api_version_or_default
+    level_properties['miniAppVariant'] = mini_app_variant_or_default
     level_properties
   end
 
@@ -121,7 +121,7 @@ class Pythonlab < Level
     if mini_app != 'neighborhood'
       properties.delete('serialized_maze')
     end
-    properties.delete('api_version') if mini_app.blank?
+    properties.delete('mini_app_variant') if mini_app.blank?
   end
 
   # Copied from javalab.rb
