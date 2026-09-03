@@ -33,7 +33,11 @@ class ChannelsApi < Sinatra::Base
       dont_cache
       content_type :json
       JSON.pretty_generate(
-        {storage_id: get_storage_id}
+        {
+          storage_id: get_storage_id,
+          anon_user_id: request.anon_user_id,
+          statsig_stable_id: request.statsig_stable_id,
+        }
       )
     end
   end
