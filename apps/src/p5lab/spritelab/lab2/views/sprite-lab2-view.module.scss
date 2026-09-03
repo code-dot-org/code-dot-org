@@ -427,6 +427,13 @@ $tab-segment-height: $tab-item-height - 2px;
   border-top: 1px solid rgb(255 255 255 / 20%);
 }
 
+// The Continue button once the level's task is done.
+.guideContinue {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
 // Shared metrics for the guide's form controls. All controls in the guide
 // read as one family: same height, radius, and type size. The zeroed margin
 // and shadow undo dashboard's global element styles (button {margin: 5px},

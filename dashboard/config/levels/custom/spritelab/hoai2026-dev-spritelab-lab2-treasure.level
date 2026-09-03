@@ -52,6 +52,13 @@
         "after": {
           "tab": "Code"
         }
+      },
+      {
+        "text": "**Treasure hunt!** Go find your jewel, then continue when you're ready.",
+        "showContinue": true,
+        "after": {
+          "tab": "Play"
+        }
       }
     ],
     "long_instructions": "# Add some treasure\nMake a jewel, place it in your world, and have your character say something when they touch it.",

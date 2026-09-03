@@ -79,6 +79,8 @@ export interface Sources extends ProjectSources {
  */
 export interface GuideStep {
   text: string;
+  /** Offer the Continue button to the next level while on this step. */
+  showContinue?: boolean;
   after?: {
     /** At least this many block-kind cells placed in the World. */
     worldBlocks?: number;

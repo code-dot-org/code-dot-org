@@ -52,6 +52,13 @@
         "after": {
           "tab": "Code"
         }
+      },
+      {
+        "text": "**Your world has company.** Go say hello, then continue when you're ready.",
+        "showContinue": true,
+        "after": {
+          "tab": "Play"
+        }
       }
     ],
     "long_instructions": "# Add someone else\nMake a second character and place it on a platform, walking back and forth. Then decide what happens when your player meets them: a friendly hello, or back to the start.",

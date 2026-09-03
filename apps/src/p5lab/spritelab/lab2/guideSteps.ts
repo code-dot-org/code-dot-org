@@ -61,8 +61,15 @@ export function nextGuideStepIndex(
   }
 }
 
+/** What the guide should show right now. */
+export interface GuideDisplay {
+  text?: string;
+  /** The current step offers the Continue button to the next level. */
+  showContinue: boolean;
+}
+
 /**
- * The guide text a level should show right now: the current step's, or the
+ * The guide content a level should show right now: the current step's, or the
  * level's plain instructions when it declares no steps. The position only ever
  * moves forward, so undoing work doesn't pull the instructions back.
  */
@@ -78,7 +85,7 @@ export function useGuideSteps({
   activeTab: Tab;
   images: number;
   fallback: string | undefined;
-}): string | undefined {
+}): GuideDisplay {
   const counts = useMemo(() => countWorldCells(grid), [grid]);
   const [index, setIndex] = useState(0);
   useEffect(() => {
@@ -87,7 +94,8 @@ export function useGuideSteps({
     );
   }, [steps, counts, activeTab, images]);
   if (!steps?.length) {
-    return fallback;
+    return {text: fallback, showContinue: false};
   }
-  return steps[Math.min(index, steps.length - 1)].text;
+  const step = steps[Math.min(index, steps.length - 1)];
+  return {text: step.text, showContinue: !!step.showContinue};
 }

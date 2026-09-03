@@ -424,7 +424,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // the project), otherwise the first scene.
   const defaultPlaySceneId = pinnedSceneId ?? scenes[0]?.id ?? null;
 
-  const guideInstructions = useGuideSteps({
+  const guide = useGuideSteps({
     steps: levelProperties.guideSteps,
     grid: activeWorld.grid,
     activeTab,
@@ -1540,7 +1540,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             activeTab === 'Code') && (
             <GenerateSpriteLab
               guideMode={levelProperties.guideMode}
-              instructions={guideInstructions}
+              instructions={guide.text}
+              showContinue={guide.showContinue}
+              levelProperties={levelProperties}
               onCodeGenerated={handleCodeGenerated}
             />
           )}
