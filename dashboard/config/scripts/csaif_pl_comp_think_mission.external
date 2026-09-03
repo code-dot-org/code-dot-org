@@ -1,0 +1,27 @@
+name 'csaif_pl_comp_think_mission'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Practice: The Four Pillars of Computational Thinking</h1>
+<p>Before Alex can solve the maze, you'll need to recognize which pillar of computational thinking applies at each stuck moment. Here's a quick refresher on all four before you dive in.</p>
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 10px;">
+<p><b>📖 Decomposition:</b> Breaking a complex problem into smaller, more manageable pieces.</p>
+</div>
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 10px;">
+<p><b>📖 Pattern Recognition:</b> Noticing similarities or repeated steps across a problem so they can be reused instead of rewritten.</p>
+</div>
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 10px;">
+<p><b>📖 Abstraction:</b> Focusing on the details that matter for solving the problem, while ignoring the ones that do not.</p>
+</div>
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px;">
+<p><b>📖 Algorithm Design:</b> Arranging a solution into a clear, ordered sequence of steps that can actually be followed.</p>
+</div>
+<p>Read what Alex is stuck on below, then choose the pillar that would help.</p>
+
+---
+
+<div style="border-radius:10px; overflow:hidden;">
+<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/ct_pillars_mission.html" width="100%" height="900" style="border:none;" title="Computational Thinking Mission: help Alex apply the four pillars"></iframe>
+</div>
+MARKDOWN

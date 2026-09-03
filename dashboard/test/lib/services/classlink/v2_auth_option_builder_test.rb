@@ -69,7 +69,9 @@ class Services::Classlink::V2AuthOptionBuilderTest < ActiveSupport::TestCase
         end
       end
 
-      context 'when the v2 id cannot be built' do
+      # No SourcedId means the district has not enabled OneRoster: no v2
+      # identifier exists for these users, ever, and the v1 record stands alone.
+      context 'when the district sends no SourcedId' do
         let(:sourced_id) {''}
 
         it 'returns nil' do

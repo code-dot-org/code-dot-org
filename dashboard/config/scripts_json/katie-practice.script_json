@@ -10,7 +10,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-28 09:29:05 UTC",
+    "serialized_at": "2026-09-01 23:24:28 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -48,6 +49,21 @@
       },
       "seeding_key": {
         "lesson.key": "Hello World: Food",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "katie-practice"
+      }
+    },
+    {
+      "key": "HoAI26 Playtest 1",
+      "name": "HoAI26 Playtest 1",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "HoAI26 Playtest 1",
         "lesson_group.key": "new-lesson-group",
         "script.name": "katie-practice"
       }
@@ -89,6 +105,18 @@
       "seeding_key": {
         "lesson_activity.key": "90f05a6c-094f-43d0-b747-14c905cc4a51",
         "lesson.key": "Hello World: Food",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "katie-practice"
+      }
+    },
+    {
+      "key": "54eb3142-a69e-490f-8b84-394d307862ae",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "54eb3142-a69e-490f-8b84-394d307862ae",
+        "lesson.key": "HoAI26 Playtest 1",
         "lesson_group.key": "new-lesson-group",
         "script.name": "katie-practice"
       }
@@ -170,6 +198,16 @@
       "seeding_key": {
         "activity_section.key": "21c4b42b-ac1a-4ad2-a901-fed49cd50382",
         "lesson_activity.key": "90f05a6c-094f-43d0-b747-14c905cc4a51"
+      }
+    },
+    {
+      "key": "94b52827-e00a-4f7a-b998-3a51147d96de",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "94b52827-e00a-4f7a-b998-3a51147d96de",
+        "lesson_activity.key": "54eb3142-a69e-490f-8b84-394d307862ae"
       }
     }
   ],
@@ -448,6 +486,90 @@
       "level_keys": [
         "helloworld_food_freeplay_katie-practice"
       ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI26-Choice-Project-Type"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "katie-practice",
+        "activity_section.key": "94b52827-e00a-4f7a-b998-3a51147d96de"
+      },
+      "level_keys": [
+        "HoAI26-Choice-Project-Type"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI26-Choice-Character"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "katie-practice",
+        "activity_section.key": "94b52827-e00a-4f7a-b998-3a51147d96de"
+      },
+      "level_keys": [
+        "HoAI26-Choice-Character"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI26-Choice-Background"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "katie-practice",
+        "activity_section.key": "94b52827-e00a-4f7a-b998-3a51147d96de"
+      },
+      "level_keys": [
+        "HoAI26-Choice-Background"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI26-How-AI"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "katie-practice",
+        "activity_section.key": "94b52827-e00a-4f7a-b998-3a51147d96de"
+      },
+      "level_keys": [
+        "HoAI26-How-AI"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -582,6 +704,54 @@
         "script.name": "katie-practice",
         "activity_section.key": "ab978d06-d156-4e28-b97f-ae3309044569"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoAI26-Choice-Project-Type",
+        "script_level.level_keys": [
+          "HoAI26-Choice-Project-Type"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "katie-practice",
+        "activity_section.key": "94b52827-e00a-4f7a-b998-3a51147d96de"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoAI26-Choice-Character",
+        "script_level.level_keys": [
+          "HoAI26-Choice-Character"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "katie-practice",
+        "activity_section.key": "94b52827-e00a-4f7a-b998-3a51147d96de"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoAI26-Choice-Background",
+        "script_level.level_keys": [
+          "HoAI26-Choice-Background"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "katie-practice",
+        "activity_section.key": "94b52827-e00a-4f7a-b998-3a51147d96de"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoAI26-How-AI",
+        "script_level.level_keys": [
+          "HoAI26-How-AI"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "new-lesson-group",
+        "script.name": "katie-practice",
+        "activity_section.key": "94b52827-e00a-4f7a-b998-3a51147d96de"
+      }
     }
   ],
   "resources": [
@@ -658,6 +828,9 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [
