@@ -13,6 +13,10 @@ function getRollupOutputConfig(format: 'es' | 'cjs'): OutputOptions {
   return {
     format,
     exports: 'auto',
+    // Only meaningful for CJS: without it a default import of an ESM-only
+    // external (ky) compiles to `require('ky').create`, which is undefined
+    // when a CJS consumer such as the apps webpack bundle loads it.
+    interop: 'auto',
     entryFileNames: format === 'es' ? '[name].mjs' : '[name].cjs',
     preserveModules: true,
     preserveModulesRoot: 'src',
