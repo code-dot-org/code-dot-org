@@ -6,17 +6,16 @@ class ProjectsTest < Minitest::Test
   include SetupTest
 
   def test_create_project_returns_uuid
-    uuid_format = /\A[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\z/i
     signedout_storage_id = create_storage_id_for_user(nil)
 
     #If DCDO flag is disabled, create should return old style channel id
     channel_id = Projects.new(signedout_storage_id).create({projectType: 'artist'}, ip: 123)
-    refute uuid_format.match?(channel_id)
+    refute ApplicationController::UUID_REGEX.match?(channel_id)
 
     # If DCDO flag is enabled, create should return a uuid
     DCDO.stubs(:get).with('project-uuid-in-url', false).returns(true)
     channel_id = Projects.new(signedout_storage_id).create({projectType: 'artist'}, ip: 123)
-    assert uuid_format.match?(channel_id)
+    assert ApplicationController::UUID_REGEX.match?(channel_id)
   end
 
   def test_get_anonymous_age_restricted_app
