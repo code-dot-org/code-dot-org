@@ -876,17 +876,10 @@ export default class SpriteLab2Engine extends SpriteLab {
     };
   }
 
-  /**
-   * p5.play keeps a sprite's width/height as its animation's UNSCALED frame
-   * size, and every collider here multiplies by `scale`. But when a playing
-   * animation changes frame, p5.play re-syncs those sizes multiplied by the
-   * scale (Sprite._syncAnimationSizes), so a sprite wearing a multi-frame
-   * sheet reports its on-screen size instead: measured, a 660px-tall frame
-   * at scale 0.076 read `height` 50, and the resolver's body — 50 × 0.076 —
-   * shrank to 4px, resting the sprite's centre on the platform, waist deep.
-   * Stills never change frame and never hit this. Put the unscaled sizes
-   * back at the top of every frame, before anything measures them.
-   */
+  // Colliders here multiply width/height by `scale`, expecting them UNSCALED,
+  // but a frame change on a multi-frame sheet makes p5.play re-sync them
+  // pre-scaled (Sprite._syncAnimationSizes) — double-scaled bodies sink into
+  // platforms. Put the unscaled sizes back before anything measures them.
   unscaleSheetSpriteSizes_() {
     if (!this.library) {
       return;
@@ -927,7 +920,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (!this.posesByName_.size) {
       return;
     }
-    const walls = library.getSpriteArray({group: 'walls'});
+    const walls = this.wallsThisFrame_(library);
     const view = {width: p5.width, height: p5.height};
     Object.values(library.nativeSpriteMap).forEach(sprite => {
       const poses = this.posesByName_.get(sprite.getAnimationLabel());

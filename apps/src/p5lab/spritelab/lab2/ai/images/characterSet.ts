@@ -8,14 +8,13 @@
 // passes the base picture back, so the character stays itself. Every frame
 // is drawn on a key colour we name (keyColor.ts) and keyed out afterwards.
 
-import {createUuid} from '@cdo/apps/utils';
-
 import {
   AnimationPoses,
   CHARACTER_STRIP_FRAME_COUNT,
   CHARACTER_STRIP_POSES,
-} from '../../characterAnimations';
-import {findOpaqueBounds} from '../../imageTrim';
+} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
+import {findOpaqueBounds} from '@cdo/apps/p5lab/spritelab/lab2/imageTrim';
+import {createUuid} from '@cdo/apps/utils';
 
 import {
   bytesToDataURI,
@@ -28,10 +27,13 @@ import {
 import {chooseKeyColor, KeyColor} from './keyColor';
 import {
   CHARACTER_SET_IMAGE_SIZE,
-  CHARACTER_SET_THINKING_LEVEL,
   getCharacterSetImageModel,
 } from './modelHelpers';
-import {loadImageFromBlob, removeKeyColor} from './removeBackground';
+import {
+  canvasToBlob,
+  loadImageFromBlob,
+  removeKeyColor,
+} from './removeBackground';
 import {ImageGenerationMetadata, ImageStyle} from './types';
 
 /** One frame of the strip after the base: its label and pose description. */
@@ -224,15 +226,7 @@ async function composeStrip(
       destH
     );
   });
-  return new Promise<Blob>((resolve, reject) => {
-    strip.toBlob(result => {
-      if (result) {
-        resolve(result);
-      } else {
-        reject(new Error('Failed to convert canvas to blob'));
-      }
-    }, 'image/png');
-  });
+  return canvasToBlob(strip);
 }
 
 // One pause-and-retry per frame: a transient failure gets one more try
@@ -261,7 +255,7 @@ export interface CharacterSetProgress {
   /** Frames finished so far, of total. */
   done: number;
   total: number;
-  /** What is being drawn now, for the dialog to show. */
+  /** What just finished drawing, for the dialog to show. */
   label: string;
   /** The last frame finished, keyed, for the dialog to show. */
   preview?: string;
@@ -301,14 +295,13 @@ export async function generateCharacterSet(
       temperature: options.temperature,
       imageSize: CHARACTER_SET_IMAGE_SIZE,
       model: getCharacterSetImageModel(),
-      thinkingLevel: CHARACTER_SET_THINKING_LEVEL,
     }
   );
   const baseURI = bytesToDataURI(base.uint8Array, base.mediaType);
   const baseKeyed = await keyFrame(base);
   let done = 1;
   let preview = await previewURI(baseKeyed);
-  onProgress?.({done, total, label: POSED_FRAMES[0].label, preview});
+  onProgress?.({done, total, label: 'the character', preview});
 
   // The posed frames each reference only the base, so they draw in
   // parallel: a set costs two round trips, not five.
@@ -322,7 +315,6 @@ export async function generateCharacterSet(
           references: [baseURI],
           imageSize: CHARACTER_SET_IMAGE_SIZE,
           model: getCharacterSetImageModel(),
-          thinkingLevel: CHARACTER_SET_THINKING_LEVEL,
         }
       );
       const keyed = await keyFrame(raw);

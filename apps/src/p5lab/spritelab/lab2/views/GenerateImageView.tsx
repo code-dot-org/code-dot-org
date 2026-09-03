@@ -4,7 +4,7 @@ import RadioButton from '@code-dot-org/component-library/radioButton';
 import Slider from '@code-dot-org/component-library/slider';
 import TextField from '@code-dot-org/component-library/textField';
 import classNames from 'classnames';
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import aiBot0 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-0.png';
 import aiBot1 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-1.png';
@@ -161,6 +161,8 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   // New sprites only: a set is drawn from a fresh base.
   const [characterSet, setCharacterSet] = useState(false);
   const [progress, setProgress] = useState<CharacterSetProgress | null>(null);
+  // Counts generate runs; progress callbacks from older runs are dropped.
+  const progressEpochRef = useRef(0);
   const canMakeSet = !!create && imageType === 'sprite' && source === 'new';
   const makingSet = canMakeSet && characterSet;
 
@@ -188,6 +190,10 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
     onGenerateStart?.();
     setMode('generating');
     setError(null);
+    // Progress from a superseded run must not paint over this one's: a set
+    // abandoned to its error handler can still call back.
+    const epoch = ++progressEpochRef.current;
+    setProgress(null);
     try {
       const options: GenerateImageOptions = {
         imageType,
@@ -208,7 +214,11 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
         const result = await generateCharacterSet(
           prompt.trim(),
           {style, temperature: options.temperature},
-          setProgress
+          p => {
+            if (epoch === progressEpochRef.current) {
+              setProgress(p);
+            }
+          }
         );
         await onAccept(result, trimmedName);
         return;

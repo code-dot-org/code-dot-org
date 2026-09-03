@@ -69,18 +69,6 @@ describe('generateImage', () => {
     });
   });
 
-  it('adds a thinking level to the provider options only when asked', async () => {
-    await requestImage('a frame', {seed: 1, thinkingLevel: 'high'});
-    expect(
-      mockGenerateText.mock.calls[0][0].providerOptions.google.thinkingConfig
-    ).toEqual({thinkingLevel: 'high'});
-    await requestImage('a frame', {seed: 1});
-    expect(
-      'thinkingConfig' in
-        mockGenerateText.mock.calls[1][0].providerOptions.google
-    ).toBe(false);
-  });
-
   it('lets a request choose its output size', async () => {
     await requestImage('a frame', {seed: 1, imageSize: '2K'});
     expect(

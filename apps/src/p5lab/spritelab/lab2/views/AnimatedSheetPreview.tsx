@@ -107,11 +107,21 @@ const AnimatedSheetPreview: React.FunctionComponent<
       }
       raf = requestAnimationFrame(draw);
     };
+    // The load outlives an unmount or src change; a late onload would start
+    // an animation loop nothing cancels.
+    let cancelled = false;
     img.onload = () => {
-      raf = requestAnimationFrame(draw);
+      if (!cancelled) {
+        raf = requestAnimationFrame(draw);
+      }
     };
+    // A failed load just leaves the canvas blank.
+    img.onerror = () => {};
     img.src = src;
-    return () => cancelAnimationFrame(raf);
+    return () => {
+      cancelled = true;
+      cancelAnimationFrame(raf);
+    };
   }, [src, frameSize.x, frameSize.y, turns]);
 
   return (

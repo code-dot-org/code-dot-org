@@ -17,22 +17,12 @@ export function getImageModel() {
 }
 
 // Character-set frames: Flash, like single images. Gemini 3 Pro Image was
-// tried (2026-08-25) at twice the price: it copied the plate's arm pose into
-// the walk even harder and lost costume consistency (boots changed colour
-// mid-cycle). One constant to flip.
+// tried and drew worse frames at twice the price. One constant to flip.
 export const CHARACTER_SET_IMAGE_MODEL = AiChatModelIds.GEMINI_3_1_FLASH_IMAGE;
 
 export function getCharacterSetImageModel() {
   return googleProvider(CHARACTER_SET_IMAGE_MODEL);
 }
-
-// How hard an image model thinks before drawing. Vertex refuses the
-// parameter for the image models ("thinking_level is not supported by this
-// model", live, 2026-08-25), so it stays unset; the plumbing remains for a
-// model that does take it.
-export type ThinkingLevel = 'minimal' | 'low' | 'medium' | 'high';
-export const CHARACTER_SET_THINKING_LEVEL: ThinkingLevel | undefined =
-  undefined;
 
 // Output sizes the model offers. The gateway forwards provider options to
 // the model untouched, but its own copy of the Google SDK validates them
@@ -50,18 +40,11 @@ export const SINGLE_IMAGE_SIZE: ImageSize = '1K';
 // accepts it.
 export const CHARACTER_SET_IMAGE_SIZE: ImageSize = '1K';
 
-/**
- * Provider options for one image request: the given size, square, and
- * optionally a thinking level (omitted = the model's default).
- */
-export function imageProviderOptions(
-  imageSize: ImageSize,
-  thinkingLevel?: ThinkingLevel
-) {
+/** Provider options for one image request: the given size, square. */
+export function imageProviderOptions(imageSize: ImageSize) {
   return {
     google: {
       imageConfig: {aspectRatio: '1:1', imageSize},
-      ...(thinkingLevel && {thinkingConfig: {thinkingLevel}}),
     },
   };
 }

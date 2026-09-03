@@ -1,7 +1,7 @@
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {AnyAction} from 'redux';
 
-import {dataURIToSourceSize} from '@cdo/apps/imageUtils';
+import {dataURIToSourceSize, toImage} from '@cdo/apps/imageUtils';
 import {
   addAnimation,
   deleteAnimation,
@@ -40,7 +40,11 @@ import {BACKGROUND_GROUND_COLOR, blankPaintImage} from '../paintBlank';
 
 import type {NewImageDraft} from './GenerateImageView';
 import ImageDetailsDialog, {AlternativeImage} from './ImageDetailsDialog';
-import {alternativeFromAnimation, useImageSession} from './useImageSession';
+import {
+  alternativeFromAnimation,
+  framesFromAnimation,
+  useImageSession,
+} from './useImageSession';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
@@ -61,6 +65,54 @@ interface AnimationPatch {
   pixelGridSize?: number;
   generation?: ImageGenerationMetadata;
   recentColors?: PixelEditorSaveMeta['recentColors'];
+}
+
+/**
+ * The standing frame of a character strip — the base picture the set was
+ * drawn from (the last frame of the stand range; see CHARACTER_STRIP_POSES).
+ * Falls back to the whole image if the crop can't be made.
+ */
+async function cropStandingFrame(
+  dataURI: string,
+  props: {frameSize: {x: number; y: number}; poses?: AnimationPoses}
+): Promise<string> {
+  const stand = props.poses?.['stand-right'];
+  const frame = stand ? stand.start + stand.count - 1 : 0;
+  try {
+    const img = await toImage(dataURI);
+    const canvas = document.createElement('canvas');
+    canvas.width = props.frameSize.x;
+    canvas.height = props.frameSize.y;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) {
+      return dataURI;
+    }
+    ctx.drawImage(img, -frame * props.frameSize.x, 0);
+    return canvas.toDataURL('image/png');
+  } catch {
+    return dataURI;
+  }
+}
+
+/**
+ * The patch a result's frame grid dictates: a character strip's layout, or a
+ * plain picture's single frame — which must overwrite any strip the image
+ * used to be (explicit undefined clears poses).
+ */
+function framesPatch(frames: GeneratedImageResult['frames']): AnimationPatch {
+  return frames
+    ? {
+        frameSize: frames.frameSize,
+        sourceSize: {
+          x: frames.frameSize.x * frames.frameCount,
+          y: frames.frameSize.y,
+        },
+        frameCount: frames.frameCount,
+        frameDelay: frames.frameDelay,
+        looping: frames.looping,
+        poses: frames.poses,
+      }
+    : {frameCount: 1, frameDelay: 2, looping: true, poses: undefined};
 }
 
 /**
@@ -382,23 +434,25 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     if (!targetProps) {
       return null;
     }
-    if (targetProps.dataURI) {
-      return targetProps.dataURI;
+    let dataURI = targetProps.dataURI ?? null;
+    if (!dataURI && targetProps.sourceUrl) {
+      try {
+        const blob = await (await HttpClient.get(targetProps.sourceUrl)).blob();
+        dataURI = await new Promise<string>((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => resolve(reader.result as string);
+          reader.onerror = reject;
+          reader.readAsDataURL(blob);
+        });
+      } catch {
+        return null;
+      }
     }
-    if (!targetProps.sourceUrl) {
-      return null;
-    }
-    try {
-      const blob = await (await HttpClient.get(targetProps.sourceUrl)).blob();
-      return await new Promise<string>((resolve, reject) => {
-        const reader = new FileReader();
-        reader.onload = () => resolve(reader.result as string);
-        reader.onerror = reject;
-        reader.readAsDataURL(blob);
-      });
-    } catch {
-      return null;
-    }
+    // "Start from current image" on a character set references one frame,
+    // not the five-frame strip.
+    return dataURI && targetProps.poses
+      ? cropStandingFrame(dataURI, targetProps)
+      : dataURI;
   }, [targetProps]);
 
   // Persist an accepted generation: upload, then create the animation (new
@@ -436,6 +490,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         sourceUrl,
         dataURI,
         frameSize,
+        frames: result.frames,
         pixelGridSize: result.pixelGridSize,
         generation: result.generation,
       });
@@ -444,14 +499,8 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       if (dialogTarget === 'new' && newName) {
         const key = createNamedAnimation(dispatch, newName, {
           sourceUrl,
-          frameSize: result.frames?.frameSize ||
-            frameSize || {x: MODEL_OUTPUT_PX, y: MODEL_OUTPUT_PX},
-          ...(result.frames && {
-            frameCount: result.frames.frameCount,
-            frameDelay: result.frames.frameDelay,
-            looping: result.frames.looping,
-            poses: result.frames.poses,
-          }),
+          frameSize: frameSize || {x: MODEL_OUTPUT_PX, y: MODEL_OUTPUT_PX},
+          ...framesPatch(result.frames),
           categories: categoriesForType(result.generation.imageType),
           pixelGridSize: result.pixelGridSize,
           generation: result.generation,
@@ -472,14 +521,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         ...(frameSize ? {frameSize, sourceSize: frameSize} : {}),
         // A regenerated image takes the new result's frame grid: a plain
         // sprite replacing a character set drops its poses.
-        ...(result.frames
-          ? {
-              frameSize: result.frames.frameSize,
-              frameCount: result.frames.frameCount,
-              frameDelay: result.frames.frameDelay,
-            }
-          : {frameCount: 1}),
-        poses: result.frames?.poses,
+        ...framesPatch(result.frames),
         pixelGridSize: result.pixelGridSize,
         generation: result.generation,
       });
@@ -521,6 +563,9 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         ...(alt.frameSize
           ? {frameSize: alt.frameSize, sourceSize: alt.frameSize}
           : {}),
+        // The entry's frame grid comes back with it — or clears the frame
+        // grid of the strip the image was a moment ago.
+        ...framesPatch(alt.frames),
         pixelGridSize: alt.pixelGridSize,
         generation: alt.generation,
       });
@@ -605,7 +650,12 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       const previousUrl = repointAnimation(dispatch, key, {
         sourceUrl,
         dataURI,
-        ...(frameSize ? {frameSize, sourceSize: frameSize} : {}),
+        // An edited character strip keeps its frame grid — the editor hands
+        // back the same canvas — so only a plain picture takes the measured
+        // size (which would otherwise turn the strip into one wide frame).
+        ...(frameSize && !props.poses
+          ? {frameSize, sourceSize: frameSize}
+          : {}),
         pixelGridSize: meta.pixelGridSize,
         // Hand-edited pixels are not the prompt's output anymore; drop the
         // stale prompt and seed.
@@ -620,6 +670,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         sourceUrl,
         dataURI,
         frameSize,
+        frames: framesFromAnimation(props),
         pixelGridSize: meta.pixelGridSize,
       });
       noteAsset(sourceUrl);

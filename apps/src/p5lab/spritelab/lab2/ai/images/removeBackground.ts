@@ -171,8 +171,8 @@ function keySignature(
 // band below it that the background can reach — flooding out from the
 // outright pixels through the band — are background too: the darker
 // patches of a textured backdrop, and the anti-aliased edge where key and
-// character blend. The band's floor keeps a saturated purple costume out
-// of reach (a robe at (120, 60, 180) scores 60).
+// character blend. The band's floor keeps a saturated costume out of reach
+// (keySignature's robe example scores 60).
 const KEY_SIGNATURE = 150;
 const KEY_EDGE_SIGNATURE = 65;
 
@@ -298,7 +298,8 @@ export async function removeKeyColor(
   return canvasToBlob(canvas);
 }
 
-function canvasToBlob(canvas: HTMLCanvasElement): Promise<Blob> {
+/** A canvas's pixels as a PNG Blob; rejects if the canvas can't encode. */
+export function canvasToBlob(canvas: HTMLCanvasElement): Promise<Blob> {
   return new Promise<Blob>((resolve, reject) => {
     canvas.toBlob(result => {
       if (result) {
@@ -331,15 +332,7 @@ export async function removeBackground(
   keyOutBackground(imageData.data, imageData.width, imageData.height, options);
   ctx.putImageData(imageData, 0, 0);
 
-  return new Promise<Blob>((resolve, reject) => {
-    canvas.toBlob(result => {
-      if (result) {
-        resolve(result);
-      } else {
-        reject(new Error('Failed to convert canvas to blob'));
-      }
-    }, 'image/png');
-  });
+  return canvasToBlob(canvas);
 }
 
 /**
@@ -390,15 +383,7 @@ export async function cropToContent(blob: Blob): Promise<Blob> {
       cropped.height
     );
 
-  return new Promise<Blob>((resolve, reject) => {
-    cropped.toBlob(result => {
-      if (result) {
-        resolve(result);
-      } else {
-        reject(new Error('Failed to convert canvas to blob'));
-      }
-    }, 'image/png');
-  });
+  return canvasToBlob(cropped);
 }
 
 /** Decode an image Blob into an element ready to draw. */
@@ -433,8 +418,5 @@ export async function flattenOntoGround(blob: Blob): Promise<Blob> {
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   ctx.drawImage(bitmap, 0, 0);
   bitmap.close();
-  const out = await new Promise<Blob | null>(resolve =>
-    canvas.toBlob(resolve, 'image/png')
-  );
-  return out || blob;
+  return canvasToBlob(canvas).catch(() => blob);
 }

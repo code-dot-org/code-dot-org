@@ -1,4 +1,5 @@
 import {generateText} from '@cdo/apps/aiGateway';
+import {AnimationPoses} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 import {
   crispScaleFor,
   normalizePixelArtBlob,
@@ -6,14 +7,11 @@ import {
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
 
-import {AnimationPoses} from '../../characterAnimations';
-
 import {
   ASSUMED_BLOCK,
   ImageSize,
   MODEL_OUTPUT_PX,
   SINGLE_IMAGE_SIZE,
-  ThinkingLevel,
   getImageModel,
   imageProviderOptions,
 } from './modelHelpers';
@@ -46,9 +44,9 @@ export function styleClause(style: ImageStyle): string {
 }
 
 // Asks for the flat key color a costume is keyed out against afterwards
-// (removeBackground flood-fills it from the corners). Shared with the
-// character-set generator so its frames key the same way.
-export const SPRITE_PROMPT_CLAUSE =
+// (removeBackground flood-fills it from the corners). The character-set
+// generator asks for a NAMED key color in its own prompts instead.
+const SPRITE_PROMPT_CLAUSE =
   'Use a plain solid background of one single flat color that contrasts strongly with the subject and appears nowhere on the subject, extending to all edges. Do not include any scenery, ground, sky, or other background elements — only the subject on that flat background.';
 
 // Name no drawable object here ("block", "tile") — the model adds it to the
@@ -141,8 +139,6 @@ export interface ImageRequest {
   imageSize?: ImageSize;
   /** The model to ask; single images take getImageModel(). */
   model?: ReturnType<typeof getImageModel>;
-  /** How hard the model thinks first; omitted = its default. */
-  thinkingLevel?: ThinkingLevel;
 }
 
 /**
@@ -174,8 +170,7 @@ export async function requestImage(
       temperature: request.temperature,
     }),
     providerOptions: imageProviderOptions(
-      request.imageSize || SINGLE_IMAGE_SIZE,
-      request.thinkingLevel
+      request.imageSize || SINGLE_IMAGE_SIZE
     ),
   });
 
