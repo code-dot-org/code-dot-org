@@ -220,12 +220,16 @@ const PILOT_ACTOR = JSON.stringify({
             useTrait('Jetpack#FliesWithAJetpackTrait'),
             useTrait('Collection#CollectsTrait'),
             {type: 'world_set_sprite', fields: {SPRITE: 'player.png'}},
-            // A tile and a bit, which is what "a weak hop" means: the default
-            // of 5 clears four tiles and would make half the ledges reachable
-            // without ever touching a can.
+            // Enough to get ON to a single tile and no more, which is what
+            // "a weak hop" has to mean if it is to be any use: the default of
+            // 5 clears four tiles and would make half the ledges reachable
+            // without ever touching a can, and 2.4 clears 32 pixels of AIR —
+            // which leaves the Pilot's feet exactly level with the top of a
+            // one-tile step and catching on it. Rise is v²/2g, so the margin
+            // costs almost nothing: 2.6 buys 37 pixels for a 32-pixel step.
             {
               type: 'world_set_Jumping_JumpStrengthProperty',
-              inputs: {ACTOR: me(), VALUE: number(2.4)},
+              inputs: {ACTOR: me(), VALUE: number(2.6)},
             },
             // Half a tank to start with. A full one crosses the whole room,
             // which would leave the first two cans as scenery.

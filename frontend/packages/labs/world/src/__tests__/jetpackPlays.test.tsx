@@ -9,9 +9,10 @@
 // Three things are being claimed, and each is a number somewhere else that
 // could quietly stop being true:
 //
-//   the jump cannot do it     `jump strength` is 2.4 here, and the lowest
-//                             ledge is five tiles up. Raise one or lower the
-//                             other and the level is about jumping.
+//   the jump cannot do it     `jump strength` is 2.6 here — a tile and a bit,
+//                             enough to get on to a single step — and the
+//                             lowest ledge is three tiles up. Raise one or
+//                             lower the other and the level is about jumping.
 //   the jetpack can           thrust against gravity, for as long as half a
 //                             tank lasts. A `fuel per second` that emptied it
 //                             sooner would leave the first can unreachable.
