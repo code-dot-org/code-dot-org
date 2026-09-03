@@ -547,6 +547,32 @@ describe('the jetpack level', () => {
     expect(bar.get(passable)).toBe(true);
   });
 
+  it('digs a way down through a ledge, and gives it back', () => {
+    // JETPACK.md's phase six in the room. The LEDGES are diggable and the
+    // border is not: a room where every surface gives way has no shape, and
+    // the ledges are what make it a climb.
+    const {world} = project;
+    play(world, 0.5);
+    const pilot = named(world, 'Pilot');
+    const digging = project.modules['rules/digging'] as Record<string, unknown>;
+    const hole = digging.IsAHoleProperty as never;
+    // On the low ledge, which runs along row 11 — standing on it is row 10.
+    pilot.set(PositionProperty, new Vector(5 * 32 + 16, 10 * 32 + 16) as never);
+    play(world, 0.4);
+    const under = named(world, 'Ledge11_5');
+    expect(under.get(hole)).toBe(false);
+
+    // `z` with no arrow: the block under its feet.
+    play(world, 0.2, ['z']);
+
+    expect(under.get(hole)).toBe(true);
+
+    // …and it comes back on the block's own clock, three seconds later.
+    play(world, 3.2);
+
+    expect(under.get(hole)).toBe(false);
+  });
+
   it('keeps every enemy in the room', () => {
     // One trait each rather than a rule: "Stays in the Map" puts a body back
     // where it was at an edge, and a body that got nowhere is what both enemy

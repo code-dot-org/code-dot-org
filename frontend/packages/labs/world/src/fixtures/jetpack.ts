@@ -113,6 +113,7 @@ import {
   climbRule,
   collectRule,
   collisionsRule,
+  diggingRule,
   flappingRule,
   goalsRule,
   gravityRule,
@@ -507,6 +508,18 @@ const noneLeft = (path: string) => ({
   },
 });
 
+/** `⟨key⟩ is down` as 1 or 0, so a direction can be added up from the arrows. */
+const keyAsNumber = (key: string) => ({
+  block: {
+    type: 'logic_ternary',
+    inputs: {
+      IF: {block: {type: 'world_is_key_down', fields: {KEY: key}}},
+      THEN: number(1),
+      ELSE: number(0),
+    },
+  },
+});
+
 /** `if ⟨test⟩ then ⟨body⟩`. */
 const onlyIf = (test: object, body: object) => ({
   type: 'controls_if',
@@ -638,6 +651,7 @@ const PILOT_ACTOR = JSON.stringify({
             // `rules/teleport` on why that is not the same choice an enemy
             // gets.
             useTrait('Teleport#UsesTeleportPadsTrait'),
+            useTrait('Digging#DigsTrait'),
             {
               type: 'world_set_Teleport_TravelSecondsProperty',
               inputs: {ACTOR: me(), VALUE: number(PILOT_TRIP)},
@@ -706,6 +720,52 @@ const PILOT_ACTOR = JSON.stringify({
               inputs: {VALUE: me()},
             },
           ]),
+        },
+      },
+      // THE SHOVEL: `z` held, and whichever arrow is held with it — which is
+      // what JETPACK.md asks for ("in the direction they are also holding").
+      // With no arrow at all the direction is nothing, the aimed-at point is
+      // where the Pilot is standing, and the nearest diggable block to that is
+      // the one under its feet. Which is the right answer for a shovel.
+      //
+      // A STEP RATHER THAN A HAT, because holding a key is a state and not a
+      // moment; and polling costs nothing, since digging a block that is
+      // already a hole does nothing (`rules/digging`).
+      {
+        type: 'world_trait_step',
+        x: 20,
+        y: 660,
+        fields: {PHASE: 'touch', NAME: 'dig where it is pointing'},
+        inputs: {
+          DO: {
+            block: onlyIf(
+              {block: {type: 'world_is_key_down', fields: {KEY: 'z'}}},
+              {
+                type: 'world_do_Digging_DigTowardsAction',
+                inputs: {
+                  ACTOR: me(),
+                  VALUE: {
+                    block: {
+                      type: 'world_vector_of',
+                      inputs: {
+                        X: {
+                          block: {
+                            type: 'math_arithmetic',
+                            fields: {OP: 'MINUS'},
+                            inputs: {
+                              A: keyAsNumber('right arrow'),
+                              B: keyAsNumber('left arrow'),
+                            },
+                          },
+                        },
+                        Y: keyAsNumber('down arrow'),
+                      },
+                    },
+                  },
+                },
+              },
+            ),
+          },
         },
       },
       // DOWN, which is free everywhere a pad can be. The Pilot's other use
@@ -803,6 +863,99 @@ const PILOT_ACTOR = JSON.stringify({
 });
 
 /** A tile that holds you up and cannot be walked through. */
+/**
+ * A ledge you can dig through, and which fills in on whoever is in it.
+ *
+ * THE LEDGES AND NOT THE WALLS. A room where every surface is diggable is a
+ * room with no shape at all — the border is what makes it a room, and the
+ * ledges are what make it a climb. Digging one is a way DOWN that costs
+ * something, which is the trade the mechanic is for.
+ *
+ * WHAT A CLOSING HOLE COSTS IS DECIDED HERE, which is `rules/digging`'s whole
+ * seam: the rule raises `fills in` and has no idea what a project wants that
+ * to mean. Lode Runner kills what it catches, and so does this — but only the
+ * Pilot, because it is the only thing in the room with anything to lose, and
+ * asking an enemy for health it has not got is asking a question that throws.
+ */
+const diggableLedgeActor = (name: string, sprite: string) =>
+  JSON.stringify({
+    blocks: {
+      blocks: [
+        {
+          type: 'world_actor',
+          x: 20,
+          y: 20,
+          fields: {NAME: name},
+          next: {
+            block: stack([
+              useTrait('Gravity#ActsAsGroundTrait'),
+              useTrait('Solid Bodies#SolidTrait'),
+              useTrait('Digging#CanBeDugTrait'),
+              // Long enough to climb down through and look around, short
+              // enough that a hole is not a staircase.
+              {
+                type: 'world_set_Digging_ClosesAfterProperty',
+                inputs: {ACTOR: me(), VALUE: number(3)},
+              },
+              {type: 'world_set_sprite', fields: {SPRITE: sprite}},
+            ]),
+          },
+        },
+        {
+          type: 'world_on_Digging_FillsInEvent',
+          x: 20,
+          y: 220,
+          inputs: {ACTOR: me()},
+          next: {
+            block: onlyIf(
+              // COUNTED rather than asked of one actor. `⟨x⟩ is a ⟨Pilot⟩`
+              // reads the kind off the actor it is given, and the first
+              // actor of an empty list is no actor at all — which is a
+              // question with nothing to ask it of, and it throws. Counting
+              // how many Pilots are in the hole is the same question with an
+              // answer for none of them.
+              {
+                block: {
+                  type: 'logic_compare',
+                  fields: {OP: 'GT'},
+                  inputs: {
+                    A: {
+                      block: {
+                        type: 'world_count_of_kind',
+                        fields: {TYPE: 'actors/pilot'},
+                        inputs: {
+                          LIST: {
+                            block: {
+                              type: 'world_get_Collisions_ContactsProperty',
+                              inputs: {ACTOR: me()},
+                            },
+                          },
+                        },
+                      },
+                    },
+                    B: number(0),
+                  },
+                },
+              },
+              {
+                type: 'world_do_Health_TakeDamageAction',
+                inputs: {
+                  ACTOR: {
+                    block: {
+                      type: 'world_first_actor',
+                      inputs: {SOURCE: kind('actors/pilot')},
+                    },
+                  },
+                  VALUE: number(1),
+                },
+              },
+            ),
+          },
+        },
+      ],
+    },
+  });
+
 const tileActor = (name: string, sprite: string) =>
   JSON.stringify({
     blocks: {
@@ -1628,7 +1781,7 @@ export const JETPACK_SPEC: ProjectSpec = {
     ledgeActor: {
       name: 'ledge.actor',
       language: 'actor',
-      contents: tileActor('Ledge', 'ground.png'),
+      contents: diggableLedgeActor('Ledge', 'ground.png'),
       folderId: 'actors',
     },
     beltActor: {
@@ -1870,6 +2023,14 @@ export const JETPACK_SPEC: ProjectSpec = {
       name: 'switches.rule',
       language: 'rule',
       contents: switchesRule,
+      folderId: 'rules',
+    },
+    // A way down through a ledge, and a floor that comes back on you
+    // (`rules/digging`, JETPACK.md phase 6).
+    diggingRuleFile: {
+      name: 'digging.rule',
+      language: 'rule',
+      contents: diggingRule,
       folderId: 'rules',
     },
     healthRuleFile: {
