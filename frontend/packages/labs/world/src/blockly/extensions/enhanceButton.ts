@@ -13,12 +13,15 @@
 // looking at an actor's blocks and wanting it to have health is already
 // pointing at the actor.
 //
-// ONLY IN AN ACTOR'S OWN FILE. A world's `define actor` defines an actor the
-// world keeps to itself, with no file of its own, and every edit an enhancement
-// makes lands in a file (`actors/enhance/health`). The workspace knows which
-// it is, because the editor told it (`blockly/editingRule`), so the button is
-// simply not built where it could not work — the same answer `add actor ⟨as⟩`
-// gives to a choice that has nothing to mean.
+// IT KNOWS WHICH ACTOR EITHER WAY. An actor with a file of its own is named by
+// that file, which the workspace was told when it opened; an actor a WORLD
+// defines for itself has no file, and is named by the world plus this block —
+// the same address `add actor` and `any ⟨kind⟩` use for one
+// (`blockly/localActors`). The enhancement takes both
+// (specs/ENHANCEMENTS.md), so the button is built for both.
+//
+// What it is NOT built on is a workspace that is neither — a `.rule`, a
+// flyout preview — where there is no actor for it to be about.
 //
 // IT IS NOT OFFERED ON A READ-ONLY WORKSPACE, and that is where it parts
 // company with the eye and the cap. Those two READ — a version being previewed
@@ -31,7 +34,9 @@ import {defineExtension, type Extension} from '@code-dot-org/blockly';
 import {FieldButton} from '@code-dot-org/blockly/fields/fieldButton';
 
 import {requestActorEnhance} from '../../actors/enhance/actorEnhance';
-import {editingActorModule} from '../editingRule';
+import type {EnhanceTarget} from '../../actors/enhance/enhancements';
+import {editingActorModule, editingFileModule} from '../editingRule';
+import {definesWorld} from '../localActors';
 
 import {addOnChange} from './onChange';
 
@@ -51,7 +56,15 @@ const WAND = '';
 /** What a block would have to be for the wand to mean anything. */
 export interface EnhanceContext {
   /** The `.actor` this workspace is editing, if it is editing one. */
-  module?: string;
+  actorModule?: string;
+  /** The file it is editing, whatever kind — the world, for a world's actor. */
+  fileModule?: string;
+  /** Whether that file defines a world, which is what makes this block local. */
+  world: boolean;
+  /** This `define actor` block's own id, which names a world-local actor. */
+  blockId: string;
+  /** What the block calls the actor, which is what the dialog's title says. */
+  name: string;
   /** Whether the block is a preview in a flyout rather than in the file. */
   flyout: boolean;
   /** Whether the workspace can be edited at all. */
@@ -59,14 +72,30 @@ export interface EnhanceContext {
 }
 
 /**
- * Whether this `define actor` gets a wand.
+ * Which actor this `define actor` is about, or none — in which case no wand.
  *
  * Exported for its test, as `rulesButton`'s wording is: the rest of this
  * module needs a workspace with the whole palette registered to say anything,
- * and what can be wrong on its own is which blocks are offered the button.
+ * and what can be wrong on its own is which blocks are offered the button and
+ * what they would be pointed at.
  */
-export function offersEnhancing(context: EnhanceContext): boolean {
-  return Boolean(context.module) && !context.flyout && !context.readOnly;
+export function enhanceTarget(
+  context: EnhanceContext,
+): EnhanceTarget | undefined {
+  if (context.flyout || context.readOnly) {
+    return undefined;
+  }
+  if (context.actorModule) {
+    return {path: context.actorModule, name: context.name};
+  }
+  if (context.world && context.fileModule) {
+    return {
+      path: context.fileModule,
+      block: context.blockId,
+      name: context.name,
+    };
+  }
+  return undefined;
 }
 
 /** The wand glyph, as the `<tspan>` `FieldButton` draws inside itself. */
@@ -86,7 +115,13 @@ function wandIcon(): SVGElement {
 function contextOf(block: Block): EnhanceContext {
   const workspace = block.workspace as WorkspaceSvg | undefined;
   return {
-    module: editingActorModule(block),
+    actorModule: editingActorModule(block),
+    fileModule: editingFileModule(block),
+    world: definesWorld(workspace),
+    blockId: block.id,
+    // Read at click time as well as here: the field is editable, and the name
+    // on screen is the one the learner means.
+    name: String(block.getFieldValue('NAME') ?? '').trim(),
     flyout: Boolean(workspace?.isFlyout),
     readOnly: Boolean(workspace?.options?.readOnly),
   };
@@ -99,7 +134,7 @@ function lastInput(block: Block): Input | undefined {
 
 /** Add or remove the button so it matches what this workspace is editing. */
 function syncButton(block: Block): void {
-  const wanted = offersEnhancing(contextOf(block));
+  const wanted = Boolean(enhanceTarget(contextOf(block)));
   const present = block.getField(FIELD_NAME) !== null;
   if (wanted === present) {
     return;
@@ -117,8 +152,8 @@ function syncButton(block: Block): void {
     new FieldButton({
       value: '',
       onClick: () => {
-        const module = editingActorModule(block);
-        if (!module) {
+        const target = enhanceTarget(contextOf(block));
+        if (!target) {
           return;
         }
         // After this click is finished with, not during it. An enhancement
@@ -128,15 +163,7 @@ function syncButton(block: Block): void {
         // timeout.
         setTimeout(
           () =>
-            requestActorEnhance({
-              // The module path, which is what an enhancement patches and what
-              // an actor dropdown holds — `actors/player`.
-              path: module,
-              // What the file calls itself, which is what the dialog's title
-              // says. Read at click time: the field is editable, and the name
-              // on screen is the one the learner means.
-              name: String(block.getFieldValue('NAME') ?? '').trim() || module,
-            }),
+            requestActorEnhance({...target, name: target.name || target.path}),
           0,
         );
       },

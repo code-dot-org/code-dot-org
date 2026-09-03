@@ -57,7 +57,7 @@ import {
 } from './actorThumbnails';
 import styles from './blocklyFileEditor.module.css';
 import {buildDomainPalette} from './domainBlocks';
-import {setEditingActor, setEditingRule} from './editingRule';
+import {setEditingActor, setEditingFile, setEditingRule} from './editingRule';
 import {refreshMissingRuleWarnings} from './extensions/missingRule';
 import {fileKindOf} from './fileKind';
 import {registerLessonButtons} from './lessonFlyoutButton';
@@ -894,6 +894,13 @@ export const BlocklyFileEditor = ({
     if (workspaceRef.current) {
       setEditingRule(workspaceRef.current, ownRuleModule);
       setEditingActor(workspaceRef.current, ownActorModule);
+      // …and which FILE it is at all, which is what an act on the file needs:
+      // a world's own `define actor` can be enhanced, and the patch lands in
+      // the world (`extensions/enhanceButton`).
+      setEditingFile(
+        workspaceRef.current,
+        filePath(currentSources.source, fileId)?.replace(/\.[^./]+$/, ''),
+      );
       // …and now that the workspace knows which file it is, the blocks that
       // draw the actor they are about can say so. HERE rather than only on
       // creation, because a block is created before it is connected and a
@@ -901,7 +908,7 @@ export const BlocklyFileEditor = ({
       // of "what am I about" can come before there is anything to answer with.
       refreshActorPictures(workspaceRef.current);
     }
-  }, [ownRuleModule, ownActorModule]);
+  }, [ownRuleModule, ownActorModule, currentSources.source, fileId]);
 
   // Reload after a rename, once `blocks` carries the renamed member types —
   // BlocklyProvider registers them in its own effect, which runs before this one

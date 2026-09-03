@@ -53,6 +53,24 @@
 // the Attachment rule's default, chosen there for exactly this. A line saying
 // what would have happened anyway is a line to keep in step with a default
 // that may change for a reason.
+//
+// AND THE SAME THING FOR AN ACTOR A WORLD DEFINES FOR ITSELF, which has no file
+// of its own (specs/ENHANCEMENTS.md). Every line above still lands, in the
+// world's own file, and only four things differ:
+//
+//   the file       `worlds/main.world` rather than `actors/<target>.actor`
+//   the chain      the `define actor` block named, not the file's only one
+//   the hat        `when ⟨any ⟨Ground⟩⟩ is created`, since a world's hat names
+//                  a KIND where an actor file's names `this actor` — and the
+//                  BODY is unchanged, because `this actor` inside a hat is the
+//                  actor the event fired for either way
+//   the property   its block type carries `worlds/main#<block>` rather than
+//                  the actor's path, which is how a world's own declarations
+//                  are keyed (`blockly/ownProperties`)
+//
+// The bar stays a FILE in both: `add actor ⟨Health Bar⟩` reads the same in a
+// world as in an actor, and a world that defines its own actors has no more
+// claim to define its own bar than to define its own Coin.
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
@@ -92,12 +110,42 @@ const BAR_PROPERTY = 'health bar';
 const BAR_PROPERTY_EXPORT = 'HealthBarProperty';
 const ATTACHED = 'Attachment#AttachedTrait';
 
-/** `this actor` — the handler's subject, which is the actor just created. */
+/** `this actor` — inside a hat, the actor the event fired for. */
 const me = () => ({block: {type: 'world_this_actor'}});
+
+/** Which file holds this actor, and which of its roots defines it. */
+const fileOf = (target: EnhanceTarget) =>
+  target.block
+    ? {
+        path: `${target.path}.world`,
+        root: {type: 'world_actor', id: target.block},
+      }
+    : {path: `${target.path}.actor`, root: {type: 'world_actor'}};
+
+/**
+ * What an own property this actor declares is keyed by.
+ *
+ * An actor with a file is keyed by the file; one a world defines is keyed by
+ * the world AND the block, because a world may define several and they each
+ * declare their own (`blockly/ownProperties`).
+ */
+const ownerOf = (target: EnhanceTarget): string =>
+  target.block ? `${target.path}#${target.block}` : target.path;
+
+/** Who the hat is about: this actor's file, or one kind among a world's. */
+const subjectOf = (target: EnhanceTarget) =>
+  target.block
+    ? {
+        block: {
+          type: 'world_actor_kind',
+          fields: {ACTOR: `local:${target.block}`},
+        },
+      }
+    : me();
 
 /** The variable the handler's `add actor … as ⟨…⟩` binds. */
 const barVariable = (target: EnhanceTarget) => {
-  const stem = target.path.split('/').pop() ?? 'actor';
+  const stem = target.block ?? target.path.split('/').pop() ?? 'actor';
   return {id: `enhanceHealthBar_${stem}`, name: `${stem}Bar`, type: 'Actor'};
 };
 
@@ -111,11 +159,15 @@ const useTrait = (trait: string): BlockJson => ({
   fields: {TRAIT: trait},
 });
 
-/** Whether a `use trait` for `trait` is already in the file's chain. */
-const hasTrait = (contents: string, trait: string): boolean =>
+/** Whether a `use trait` for `trait` is already in this actor's chain. */
+const hasTrait = (
+  contents: string,
+  trait: string,
+  root: {type: string; id?: string} = {type: 'world_actor'},
+): boolean =>
   holds(
     contents,
-    'world_actor',
+    root,
     block => block.type === 'world_use_trait' && block.fields?.TRAIT === trait,
   );
 
@@ -130,19 +182,22 @@ const declareBar = (): BlockJson => ({
   },
 });
 
-/** `⟨health bar⟩ of this actor`, on the file that declares it. */
+/** `⟨health bar⟩ of this actor`, on whoever declares it. */
 const barOfMe = (target: EnhanceTarget) => ({
   block: {
-    type: `world_get_${pathSlug(target.path)}_${BAR_PROPERTY_EXPORT}`,
+    type: `world_get_${pathSlug(ownerOf(target))}_${BAR_PROPERTY_EXPORT}`,
     inputs: {ACTOR: me()},
   },
 });
 
 /** Whether the actor already declares somewhere to keep its bar. */
-const declaresBar = (contents: string): boolean =>
+const declaresBar = (
+  contents: string,
+  root: {type: string; id?: string},
+): boolean =>
   holds(
     contents,
-    'world_actor',
+    root,
     block =>
       block.type === 'world_rule_property' &&
       block.fields?.NAME === BAR_PROPERTY,
@@ -154,7 +209,7 @@ const handler = (target: EnhanceTarget): BlockJson => {
   const bar = named(variable);
   return {
     type: CREATED_HAT,
-    inputs: {ACTOR: me()},
+    inputs: {ACTOR: subjectOf(target)},
     next: {
       block: {
         type: 'world_add_actor',
@@ -180,7 +235,7 @@ const handler = (target: EnhanceTarget): BlockJson => {
                       // …and the actor remembers it, because `as ⟨bar⟩` is a
                       // block scope and the handler that takes it away again
                       // is somewhere else entirely.
-                      type: `world_set_${pathSlug(target.path)}_${BAR_PROPERTY_EXPORT}`,
+                      type: `world_set_${pathSlug(ownerOf(target))}_${BAR_PROPERTY_EXPORT}`,
                       inputs: {ACTOR: me(), VALUE: bar},
                     },
                   },
@@ -197,7 +252,7 @@ const handler = (target: EnhanceTarget): BlockJson => {
 /** The other hat: when it goes, its bar goes with it. */
 const remover = (target: EnhanceTarget): BlockJson => ({
   type: REMOVED_HAT,
-  inputs: {ACTOR: me()},
+  inputs: {ACTOR: subjectOf(target)},
   next: {
     block: {
       type: 'world_remove_actor',
@@ -245,9 +300,10 @@ export const healthEnhancement: Enhancement = {
       : undefined;
   },
   applied(source: MultiFileSource, target: EnhanceTarget) {
-    const id = fileIdAt(source, `${target.path}.actor`);
+    const {path, root} = fileOf(target);
+    const id = fileIdAt(source, path);
     const contents = id ? source.files[id].contents : '';
-    return hasTrait(contents, HAS_HEALTH) && brings(contents, target);
+    return hasTrait(contents, HAS_HEALTH, root) && brings(contents, target);
   },
   apply(source: MultiFileSource, target: EnhanceTarget) {
     let current = source;
@@ -259,15 +315,16 @@ export const healthEnhancement: Enhancement = {
       current = importStockRule(current, attachment).source;
     }
 
-    const targetId = fileIdAt(current, `${target.path}.actor`);
+    const {path, root} = fileOf(target);
+    const targetId = fileIdAt(current, path);
     if (targetId) {
       current = edit(current, targetId, contents => {
         let next = contents;
-        if (!hasTrait(next, HAS_HEALTH)) {
-          next = append(next, 'world_actor', [useTrait(HAS_HEALTH)]);
+        if (!hasTrait(next, HAS_HEALTH, root)) {
+          next = append(next, root, [useTrait(HAS_HEALTH)]);
         }
-        if (!declaresBar(next)) {
-          next = append(next, 'world_actor', [declareBar()]);
+        if (!declaresBar(next, root)) {
+          next = append(next, root, [declareBar()]);
         }
         if (!brings(next, target)) {
           next = addRoot(next, handler(target));
@@ -281,7 +338,7 @@ export const healthEnhancement: Enhancement = {
     const barId = fileIdAt(current, `${BAR_PATH}.actor`);
     if (barId && !hasTrait(current.files[barId].contents, ATTACHED)) {
       current = edit(current, barId, contents =>
-        append(contents, 'world_actor', [useTrait(ATTACHED)]),
+        append(contents, {type: 'world_actor'}, [useTrait(ATTACHED)]),
       );
     }
     return current;

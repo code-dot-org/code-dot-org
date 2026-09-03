@@ -29,6 +29,8 @@ interface Workspace {
 /** One block, as much of it as an edit needs to see. */
 export interface BlockJson {
   type: string;
+  /** A root's own id, which is how a world names the actor it defines. */
+  id?: string;
   fields?: Record<string, unknown>;
   inputs?: Record<string, unknown>;
   next?: {block: BlockJson};
@@ -48,11 +50,27 @@ export function* down(block: BlockJson | undefined): Generator<BlockJson> {
   }
 }
 
-/** The `define actor` or `define world` a file is about, if it has one. */
-const rootOfType = (
-  workspace: Workspace,
-  type: string,
-): BlockJson | undefined => roots(workspace).find(block => block.type === type);
+/**
+ * Which root a patch is about.
+ *
+ * A `.actor` file has one `define actor` and there is nothing to choose. A
+ * `.world` file has one per actor it defines for itself, so an enhancement
+ * given one of THOSE has to say which — by the block's id, which is what names
+ * a world-local actor everywhere else (`blockly/localActors`).
+ */
+export interface RootPick {
+  type: string;
+  /** The defining block, when the file holds more than one. */
+  id?: string;
+}
+
+/** The root a pick names, if the file has it. */
+const rootOf = (workspace: Workspace, pick: RootPick): BlockJson | undefined =>
+  roots(workspace).find(
+    block =>
+      block.type === pick.type &&
+      (pick.id === undefined || block.id === pick.id),
+  );
 
 /** Whether any TOP-LEVEL block in the file matches — a hat, a drawing. */
 export function hasRoot(
@@ -115,26 +133,27 @@ export function withVariable(contents: string, variable: object): string {
       );
 }
 
-/** Whether the chain under `type`'s root already holds a matching row. */
+/** Whether the chain under the picked root already holds a matching row. */
 export function holds(
   contents: string,
-  type: string,
+  pick: RootPick,
   matches: (block: BlockJson) => boolean,
 ): boolean {
-  const root = rootOfType(parse(contents), type);
+  const root = rootOf(parse(contents), pick);
   return [...down(root)].some(matches);
 }
 
 /**
- * Append `rows` to the end of the chain under the file's root.
+ * Append `rows` to the end of the chain under the picked root.
  *
- * Returns the contents unchanged when the file has no root of that type: a
- * `.world` with its `define world` deleted is a project that does not compile,
- * and an enhancement is not the thing to notice it.
+ * Returns the contents unchanged when the file has no such root: a `.world`
+ * with its `define world` deleted is a project that does not compile, and an
+ * enhancement is not the thing to notice it. Likewise an actor a world defined
+ * and has since deleted, which is a block id naming nothing.
  */
 export function append(
   contents: string,
-  type: string,
+  pick: RootPick,
   rows: readonly BlockJson[],
   variables: readonly unknown[] = [],
 ): string {
@@ -142,7 +161,7 @@ export function append(
     return contents;
   }
   const workspace = parse(contents);
-  const root = rootOfType(workspace, type);
+  const root = rootOf(workspace, pick);
   if (!root) {
     return contents;
   }

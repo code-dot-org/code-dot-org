@@ -18,6 +18,7 @@ import type {Blockly} from '@code-dot-org/blockly';
 interface Tagged {
   __editingRuleModule?: string;
   __editingActorModule?: string;
+  __editingFileModule?: string;
 }
 
 /**
@@ -88,4 +89,36 @@ export function editingActorModule(
     ? (workspace.targetWorkspace as (Blockly.WorkspaceSvg & Tagged) | undefined)
     : workspace;
   return target?.__editingActorModule;
+}
+
+/**
+ * Record which FILE this workspace is, whatever kind of file it is.
+ *
+ * The two tags above answer questions about a file's own subject — which rule
+ * may not use itself, which actor `this actor` means. This one answers "where
+ * am I", which is what an act on the file needs: the wand on `define actor`
+ * enhances an actor a WORLD defines, and to write anything at all it has to
+ * know which world (`blockly/extensions/enhanceButton`).
+ */
+export function setEditingFile(
+  workspace: Blockly.Workspace,
+  modulePath: string | undefined,
+): void {
+  (workspace as Tagged).__editingFileModule = modulePath;
+}
+
+/** The module path of the file this block's workspace is editing, if any. */
+export function editingFileModule(
+  block: Blockly.Block | undefined,
+): string | undefined {
+  const workspace = block?.workspace as
+    | (Blockly.WorkspaceSvg & Tagged)
+    | undefined;
+  if (!workspace) {
+    return undefined;
+  }
+  const target = workspace.isFlyout
+    ? (workspace.targetWorkspace as (Blockly.WorkspaceSvg & Tagged) | undefined)
+    : workspace;
+  return target?.__editingFileModule;
 }

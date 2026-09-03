@@ -287,3 +287,96 @@ describe('the health enhancement, played', () => {
     expect(left.length).toBe(4);
   }, 60000);
 });
+
+describe('an actor a world defines for itself', () => {
+  // No file of its own: a `define actor` block among the world's own roots,
+  // which is what the single-world starter is made of (specs/ENHANCEMENTS.md).
+  const BALL = {
+    path: 'worlds/main',
+    block: 'platformerBallDef',
+    name: 'Ball',
+  };
+  const single = () => WORLD_SCENARIOS['platformer-single'].source;
+
+  const world = (source: ReturnType<typeof single>) =>
+    at(source, 'worlds/main.world')!;
+
+  it('writes into the world, in the chain of the actor it was given', () => {
+    const after = healthEnhancement.apply(single(), BALL);
+    const contents = world(after);
+
+    // The trait and the property go into BALL's chain and nobody else's: a
+    // world defines several actors, and an enhancement given one of them is
+    // not about the rest.
+    const roots = JSON.parse(contents).blocks.blocks as Array<{
+      type: string;
+      id?: string;
+      next?: unknown;
+    }>;
+    const chainOf = (id: string) => {
+      const root = roots.find(one => one.id === id)!;
+      return JSON.stringify(root);
+    };
+    expect(chainOf('platformerBallDef')).toContain('Health#HasHealthTrait');
+    expect(chainOf('platformerBallDef')).toContain('health bar');
+    expect(chainOf('platformerCoinDef')).not.toContain('Health#HasHealthTrait');
+
+    // …and the hats name the KIND, because a world's hat has no `this actor`
+    // to be about until the event fires.
+    expect(contents).toContain('world_on_Space_CreatedEvent');
+    expect(contents).toContain('world_on_Space_RemovedEvent');
+    expect(contents).toContain('local:platformerBallDef');
+    // The property's block type carries the world AND the block, which is how
+    // a world's own declarations are keyed.
+    expect(contents).toContain('WorldsMainPlatformerBallDef_HealthBarProperty');
+  });
+
+  it('does nothing the second time', () => {
+    const once = healthEnhancement.apply(single(), BALL);
+    expect(healthEnhancement.applied(once, BALL)).toBe(true);
+
+    expect(world(healthEnhancement.apply(once, BALL))).toBe(world(once));
+  });
+
+  it('is a different question from the actor beside it', () => {
+    // Two actors in one file, and enhancing one says nothing about the other.
+    const after = healthEnhancement.apply(single(), BALL);
+    expect(
+      healthEnhancement.applied(after, {
+        path: 'worlds/main',
+        block: 'platformerCoinDef',
+        name: 'Coin',
+      }),
+    ).toBe(false);
+  });
+
+  it('plays: every Ball gets a bar over its head', async () => {
+    const {world: running, modules} = await compileProject(
+      projectFiles(healthEnhancement.apply(single(), BALL)),
+    );
+    const health = modules['rules/health'] as unknown as {
+      HasHealthTrait: never;
+    };
+    // Two ticks, as ever: created is queued, and the attachment step puts the
+    // bar over the head on the tick after it is placed.
+    running.tick(1 / 60);
+    running.tick(1 / 60);
+
+    const actors = [...running.actors];
+    const balls = actors.filter(
+      actor => actor.type === 'Ball' && actor.has(health.HasHealthTrait),
+    );
+    expect(balls.length).toBeGreaterThan(0);
+
+    for (const ball of balls) {
+      const at = ball.get(PositionProperty);
+      const over = actors.filter(
+        other =>
+          other !== ball &&
+          Math.abs(other.get(PositionProperty).x - at.x) < 0.001 &&
+          Math.abs(other.get(PositionProperty).y - (at.y - 24)) < 0.001,
+      );
+      expect(over.length).toBe(1);
+    }
+  }, 60000);
+});

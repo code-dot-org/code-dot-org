@@ -71,19 +71,42 @@ block, after the eye that opens a file and the mortarboard that opens a lesson.
 It is the nearer of the two routes: a learner looking at an actor's blocks and
 wanting it to have health is already pointing at the actor.
 
-The wand is built only in an actor's own FILE. A world's `define actor` defines
-an actor the world keeps to itself, with no file of its own, and every edit an
-enhancement makes lands in a file — so the button is not built where it could
-not work, which is the same answer `add actor ⟨as …⟩` gives to a choice that has
-nothing to mean there. Reaching those actors means an enhancement that can
-patch a `define actor` in place and hang its handlers off the world's own hats;
-that is a second patch shape, and the seam already takes a target rather than
-reading one so it can carry a second kind of address
-(`actors/enhance/actorEnhance`).
-
-Nor is it built on a read-only workspace, and that is where it parts company
+It is not built on a read-only workspace, and that is where it parts company
 with the eye and the mortarboard beside it: those two READ — a version being
 previewed can still be looked into — and this one writes.
+
+## Two kinds of actor, two shapes of patch
+
+Most actors have a file of their own. An actor a WORLD defines for itself does
+not: it is a `define actor` block among the world's own roots, named everywhere
+else by the world plus that block (`blockly/localActors`), and the starter said
+entirely in `main.world` is made of them.
+
+A target is therefore a file path AND, for a world's own actor, a block id. The
+patch is the same patch; four things differ, and nothing else does:
+
+|                           | an actor with a file           | one a world defines              |
+| ------------------------- | ------------------------------ | -------------------------------- |
+| the file                  | `actors/<name>.actor`          | `worlds/<world>.world`           |
+| the chain                 | the file's only `define actor` | the one the block id names       |
+| the hat's subject         | `this actor`                   | `any ⟨Ground⟩`                   |
+| the property's block type | keyed by the file              | keyed by the world AND the block |
+
+**The BODY is unchanged**, which is what makes this cheap: `this actor` inside
+a hat is the actor the event fired for either way, so the three rows that place
+the bar, point it and remember it read the same in both.
+
+**The bar stays a file in both.** `add actor ⟨Health Bar⟩` reads the same in a
+world as in an actor, and a world that defines its own actors has no more claim
+to define its own bar than to define its own Coin.
+
+**A known interaction, since the single-world starter is where it shows up:**
+that project defines an actor of its OWN called "Health Bar", so enhancing
+anything in it leaves two actors of that name — the local one and the imported
+file — and the editor's thumbnails say so. That is what importing the stock
+Health Bar into that project does by any route, `Import…` included; it is a
+collision between a world's own actor and an imported file, and it wants
+solving there rather than here.
 
 ## The first one: health, and a bar above it
 
