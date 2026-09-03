@@ -10,17 +10,16 @@ export interface CreatedLevel {
   reused: boolean;
 }
 
-// Look up a level by name first; fall back to POST /levels if it doesn't
-// exist. Looking up first avoids the noisy 406 "name has already been
-// taken" round-trip that the levelbuilder regenerates an existing level
-// would otherwise produce. The 406 fallback is still here for the rare
-// race where another tab creates the level between our find and our POST.
-//
-// POST passes `do_not_redirect=true` so the controller returns the created
-// Level record as JSON instead of a redirect URL.
+// Find-by-name first, POST /levels as fallback: regeneration would
+// otherwise 406 on "name has already been taken" every time. The 406
+// branch covers the race where another tab creates the level between
+// find and POST. `do_not_redirect=true` makes the controller return the
+// created Level as JSON. `dslText` is required for DSL-defined types,
+// whose create path parses every field — name included — out of it.
 export async function createOrFindLevel(
   type: LabType,
-  name: string
+  name: string,
+  dslText?: string
 ): Promise<CreatedLevel> {
   const existing = await findLevelByName(type, name);
   if (existing) return {...existing, reused: true};
@@ -32,6 +31,7 @@ export async function createOrFindLevel(
         type: RAILS_TYPE_BY_LAB[type],
         name,
         published: true,
+        ...(dslText !== undefined ? {dsl_text: dslText} : {}),
       }),
       true,
       {
@@ -103,6 +103,26 @@ export async function updateStartSources(
   );
 }
 
+// POST /levels/:id/update_exemplar_code — write exemplar_sources into a
+// Weblab2 (or any encrypted_exemplar_sources-backed) level. Same shape
+// as start_sources; the controller assigns to the level's
+// `exemplar_sources` setter, which the SerializedProperties concern
+// transparently encrypts before storing in encrypted_exemplar_sources.
+export async function updateExemplarSources(
+  levelId: number,
+  exemplarSources: MultiFileSource
+): Promise<void> {
+  await HttpClient.post(
+    `/levels/${levelId}/update_exemplar_code`,
+    JSON.stringify({exemplar_sources: exemplarSources}),
+    true,
+    {
+      'Content-Type': 'application/json;charset=UTF-8',
+      Accept: 'application/json',
+    }
+  );
+}
+
 // PATCH /levels/:id — write a single string-valued serialized property on
 // the level. The levels controller's level_params allow-list pulls in
 // every serialized_attrs entry from the level subclass via
@@ -112,7 +132,22 @@ export async function updateStartSources(
 // Narrow the property name to keys this page actually writes. The level
 // edit controller would accept any permitted attribute, but limiting the
 // call sites here catches typos at the boundary and documents intent.
-export type LevelProperty = 'long_instructions' | 'generate_outline' | 'panels';
+export type LevelProperty =
+  | 'long_instructions'
+  | 'generate_outline'
+  | 'generate_aichat_preset'
+  | 'panels'
+  | 'mode'
+  | 'dynamic_instructions'
+  | 'uses_lab2'
+  | 'aichat_settings'
+  | 'dsl_text'
+  | 'project_template_level_name'
+  | 'thumbnail_url'
+  | 'bubble_choice_description'
+  | 'display_name'
+  | 'placeholder'
+  | 'solution';
 
 export async function updateLevelProperty(
   levelId: number,
@@ -144,11 +179,9 @@ export async function uploadLevelAsset(
 }
 
 // PUT /lessons/:id — replace the lesson's activity tree wholesale, and
-// optionally update the persisted /generate outline at the same time. The
-// caller is responsible for building a complete activities array (including
-// any new script_levels in their final positions); this function just
-// serializes it and posts. The server's update_activities/update_activity_sections
-// pipeline does the diff.
+// optionally update the persisted /generate outline at the same time.
+// Expects a complete activities array (new script_levels already in their
+// final positions); the server pipeline does the diff.
 export async function saveLessonActivities(
   lessonId: number,
   activities: SerializedActivity[],
