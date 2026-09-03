@@ -1,16 +1,19 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useMemo, useRef, useState} from 'react';
 
 import {
   AnimationPoses,
   CharacterPose,
   orderedPoseKeys,
-  PoseRange,
+  poseFrame,
 } from '../characterAnimations';
 
 import moduleStyles from './image-details-dialog.module.scss';
 
 // The sketch's frame rate, which pose frameDelays are counted in.
 const TICKS_PER_SECOND = 30;
+
+// How many times a pose's cycle plays before the next pose takes the pane.
+const CYCLES_PER_POSE = 3;
 
 const POSE_TITLES: Record<CharacterPose, string> = {
   stand: 'Idle',
@@ -23,66 +26,67 @@ interface AnimatedSheetPreviewProps {
   src: string;
   frameSize: {x: number; y: number};
   poses: AnimationPoses;
-  className?: string;
 }
 
 /**
- * Plays a character set's sheet: each pose in its own pane, side by side and
- * looping at its own frame delay, so the whole set is visible at once.
+ * Plays a character set at full size, one pose at a time: each pose's cycle
+ * plays a few times at its own frame delay, then the next pose takes the
+ * pane, round and round, with the pose's name in the top left corner.
  * Frames are cut from the sheet the way the engine cuts them — cells row by
  * row, wrapping at the image width.
  */
 const AnimatedSheetPreview: React.FunctionComponent<
   AnimatedSheetPreviewProps
-> = ({src, frameSize, poses, className}) => {
-  const keys = orderedPoseKeys(poses);
-  return (
-    <div className={moduleStyles.posePreviews}>
-      {keys.map(key => {
-        const pose = key.split('-')[0] as CharacterPose;
-        return (
-          <figure key={key} className={moduleStyles.posePreview}>
-            <PoseLoop
-              src={src}
-              frameSize={frameSize}
-              range={poses[key]!}
-              className={className}
-            />
-            <figcaption>{POSE_TITLES[pose]}</figcaption>
-          </figure>
-        );
-      })}
-    </div>
-  );
-};
-
-/** One pose of the sheet, looping. */
-const PoseLoop: React.FunctionComponent<{
-  src: string;
-  frameSize: {x: number; y: number};
-  range: PoseRange;
-  className?: string;
-}> = ({src, frameSize, range, className}) => {
+> = ({src, frameSize, poses}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  // Each pose's turn in the rotation: its range, name, and length in ticks.
+  const turns = useMemo(
+    () =>
+      orderedPoseKeys(poses).map(key => {
+        const range = poses[key]!;
+        return {
+          pose: key.split('-')[0] as CharacterPose,
+          range,
+          ticks: range.frameDelay * range.count * CYCLES_PER_POSE,
+        };
+      }),
+    [poses]
+  );
+  const [shownPose, setShownPose] = useState<CharacterPose | null>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas?.getContext('2d');
-    if (!canvas || !ctx) {
+    const totalTicks = turns.reduce((sum, turn) => sum + turn.ticks, 0);
+    if (!canvas || !ctx || !totalTicks) {
       return;
     }
     const img = new Image();
     let raf = 0;
     let started = 0;
     let lastFrame = -1;
-    const ticksPerFrame = Math.max(1, range.frameDelay);
+    let lastPose: CharacterPose | null = null;
     const draw = (now: number) => {
       if (!started) {
         started = now;
       }
-      const tick = Math.floor(((now - started) / 1000) * TICKS_PER_SECOND);
-      const frame =
-        range.start + (Math.floor(tick / ticksPerFrame) % range.count);
+      let tick =
+        Math.floor(((now - started) / 1000) * TICKS_PER_SECOND) % totalTicks;
+      let turn = turns[0];
+      for (const candidate of turns) {
+        turn = candidate;
+        if (tick < candidate.ticks) {
+          break;
+        }
+        tick -= candidate.ticks;
+      }
+      // Neighbouring poses share the standing frame, so the caption tracks
+      // the pose, not the frame.
+      if (turn.pose !== lastPose) {
+        lastPose = turn.pose;
+        setShownPose(turn.pose);
+      }
+      const frame = poseFrame(turn.range, tick);
       if (frame !== lastFrame) {
         lastFrame = frame;
         const columns = Math.max(1, Math.floor(img.naturalWidth / frameSize.x));
@@ -108,16 +112,22 @@ const PoseLoop: React.FunctionComponent<{
     };
     img.src = src;
     return () => cancelAnimationFrame(raf);
-  }, [src, frameSize.x, frameSize.y, range]);
+  }, [src, frameSize.x, frameSize.y, turns]);
 
   return (
-    <canvas
-      ref={canvasRef}
-      className={className}
-      width={frameSize.x}
-      height={frameSize.y}
-      aria-label="Animation preview"
-    />
+    <div className={moduleStyles.sheetPreview}>
+      <canvas
+        ref={canvasRef}
+        width={frameSize.x}
+        height={frameSize.y}
+        aria-label="Animation preview"
+      />
+      {shownPose && (
+        <span className={moduleStyles.sheetPreviewCaption}>
+          {POSE_TITLES[shownPose]}
+        </span>
+      )}
+    </div>
   );
 };
 
