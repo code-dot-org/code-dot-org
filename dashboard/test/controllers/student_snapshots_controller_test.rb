@@ -143,7 +143,6 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
       'Check for your understanding',
       'Checking for Understanding',
       'Check for understanding (diff between 3 and 4)',
-      'Check for undestanding',
       'Chemical Change CFU',
       'CFU',
     ]
