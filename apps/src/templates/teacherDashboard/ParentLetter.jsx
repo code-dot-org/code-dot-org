@@ -1,11 +1,10 @@
-import Link from '@code-dot-org/component-library/link';
+import {Markdown} from '@code-dot-org/markdown';
 import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
 import {LmsLoginTypeNames} from '@cdo/apps/accounts/constants';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {DEMO_SECTION_CODE_PLACEHOLDER} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {
   EmailLinks,
@@ -31,49 +30,22 @@ const LOGIN_TYPE_NAMES = {
   [SectionLoginType.email]: i18n.loginTypePersonal().toLowerCase(),
 };
 
+// Plain strings that are not markdown. Spacing between blocks comes from the
+// article's flex gap, so no gutterBottom here.
 const Paragraph = props => (
-  <Typography variant="body2" component="p" gutterBottom {...props} />
+  <Typography variant="body2" component="p" {...props} />
 );
 
+// A heading sits closer to the passage it introduces than to the block
+// above it; the extra room above comes from .heading.
 const SectionHeading = props => (
   <Typography
     variant="h4"
     component="h2"
-    gutterBottom
     className={styles.heading}
     {...props}
   />
 );
-
-const ListItem = props => (
-  <Typography variant="body2" component="li" {...props} />
-);
-
-// The data-* attributes are what SafeMarkdown's default anchor sets; they let
-// Localize translate the URL in the browser.
-const MarkdownLink = ({children, href, ...props}) => (
-  <Link
-    {...props}
-    href={href}
-    className={styles.inlineLink}
-    data-lz-url="true"
-    data-localize="markdown-url"
-  >
-    {children}
-  </Link>
-);
-MarkdownLink.propTypes = {
-  children: PropTypes.node,
-  href: PropTypes.string,
-};
-
-const MarkdownInline = props => <span {...props} />;
-
-// SafeMarkdown caches its processor by map identity, so these live at module
-// scope. BLOCK_MARKDOWN is for standalone passages; INLINE_MARKDOWN is for
-// markdown inside a ListItem, which already carries the text styling.
-const BLOCK_MARKDOWN = {a: MarkdownLink, p: Paragraph};
-const INLINE_MARKDOWN = {a: MarkdownLink, p: MarkdownInline};
 
 /**
  * A letter that teachers can send home to parents, providing guidance on
@@ -145,9 +117,8 @@ class ParentLetter extends React.Component {
         <Header logoUrl={logoUrl} />
         <article className={styles.body}>
           <Paragraph>{i18n.parentLetterHello()}</Paragraph>
-          <SafeMarkdown
-            rehypeMap={BLOCK_MARKDOWN}
-            markdown={i18n.parentLetterIntro({
+          <Markdown
+            content={i18n.parentLetterIntro({
               homeLink: pegasus('/'),
               studentName: studentName,
             })}
@@ -161,16 +132,14 @@ class ParentLetter extends React.Component {
             studentName={studentName}
           />
           <SectionHeading>{i18n.parentLetterWhy()}</SectionHeading>
-          <SafeMarkdown
-            rehypeMap={BLOCK_MARKDOWN}
-            markdown={i18n.parentLetterWhyDetails({
+          <Markdown
+            content={i18n.parentLetterWhyDetails({
               researchLink: RESEARCH_ARTICLE_URL,
             })}
           />
           <SectionHeading>{i18n.parentLetterStudentPrivacy()}</SectionHeading>
-          <SafeMarkdown
-            rehypeMap={BLOCK_MARKDOWN}
-            markdown={i18n.parentLetterStudentPrivacyDetails({
+          <Markdown
+            content={i18n.parentLetterStudentPrivacyDetails({
               pledgeLink: EmailLinks.STUDENT_PRIVACY_PLEDGE_URL,
               commonSenseLink: EmailLinks.COMMON_SENSE_MEDIA_URL,
               privacyPolicyLink: EmailLinks.PRIVACY_POLICY_URL,
@@ -214,11 +183,10 @@ const ParentLetterSteps = ({
   switch (loginType) {
     case SectionLoginType.lti_v1:
       return (
-        <div>
+        <>
           <SectionHeading>{i18n.parentLetterStep1()}</SectionHeading>
-          <SafeMarkdown
-            rehypeMap={BLOCK_MARKDOWN}
-            markdown={i18n.parentLetterStep1Details({
+          <Markdown
+            content={i18n.parentLetterStep1Details({
               engagementLink: ENGAGEMENT_URL,
               videosLink: pegasus(`/educate/resources/videos`),
             })}
@@ -232,22 +200,20 @@ const ParentLetterSteps = ({
             sectionCode={sectionCode}
             studentName={studentName}
           />
-          <SafeMarkdown
-            rehypeMap={BLOCK_MARKDOWN}
-            markdown={i18n.parentLetterStep2Details_LMS({
+          <Markdown
+            content={i18n.parentLetterStep2Details_LMS({
               studentName: studentName,
               loginTypeName: loginTypeName,
             })}
           />
-        </div>
+        </>
       );
     default: {
       return (
-        <div>
+        <>
           <SectionHeading>{i18n.parentLetterStep1()}</SectionHeading>
-          <SafeMarkdown
-            rehypeMap={BLOCK_MARKDOWN}
-            markdown={i18n.parentLetterStep1Details({
+          <Markdown
+            content={i18n.parentLetterStep1Details({
               engagementLink: ENGAGEMENT_URL,
               videosLink: pegasus(`/educate/resources/videos`),
             })}
@@ -261,22 +227,20 @@ const ParentLetterSteps = ({
             sectionCode={sectionCode}
             studentName={studentName}
           />
-          <SafeMarkdown
-            rehypeMap={BLOCK_MARKDOWN}
-            markdown={i18n.parentLetterStep2Details({
+          <Markdown
+            content={i18n.parentLetterStep2Details({
               studentName: studentName,
               projectsLink: studio('/projects/public'),
               atHomeLink: pegasus('/athome'),
             })}
           />
           <SectionHeading>{i18n.parentLetterStep3()}</SectionHeading>
-          <SafeMarkdown
-            rehypeMap={BLOCK_MARKDOWN}
-            markdown={i18n.parentLetterStep3Details({
+          <Markdown
+            content={i18n.parentLetterStep3Details({
               accountEditLink: studio('/users/edit'),
             })}
           />
-        </div>
+        </>
       );
     }
   }
@@ -303,30 +267,27 @@ const SignInInstructions = ({
     case SectionLoginType.lti_v1:
       steps = (
         <ol className={styles.list}>
-          <ListItem>
-            <SafeMarkdown
-              rehypeMap={INLINE_MARKDOWN}
-              markdown={i18n.parentLetter_LMS_Step1({
+          <li>
+            <Markdown
+              content={i18n.parentLetter_LMS_Step1({
                 loginTypeName: loginTypeName,
               })}
             />
-          </ListItem>
-          <ListItem>
-            <SafeMarkdown
-              rehypeMap={INLINE_MARKDOWN}
-              markdown={i18n.parentLetter_LMS_Step2({
+          </li>
+          <li>
+            <Markdown
+              content={i18n.parentLetter_LMS_Step2({
                 loginTypeName: loginTypeName,
               })}
             />
-          </ListItem>
-          <ListItem>
-            <SafeMarkdown
-              rehypeMap={INLINE_MARKDOWN}
-              markdown={i18n.parentLetter_LMS_Step3({
+          </li>
+          <li>
+            <Markdown
+              content={i18n.parentLetter_LMS_Step3({
                 loginTypeName: loginTypeName,
               })}
             />
-          </ListItem>
+          </li>
         </ol>
       );
       break;
@@ -334,22 +295,21 @@ const SignInInstructions = ({
     case SectionLoginType.clever:
       steps = (
         <ol className={styles.list}>
-          <ListItem>
-            <SafeMarkdown
-              rehypeMap={INLINE_MARKDOWN}
-              markdown={i18n.parentLetterClever1({
+          <li>
+            <Markdown
+              content={i18n.parentLetterClever1({
                 cleverLink: 'https://www.clever.com',
               })}
             />
-          </ListItem>
-          <ListItem>
-            {i18n.parentLetterClever2()}
+          </li>
+          <li>
+            <Markdown content={i18n.parentLetterClever2()} />
             <img
               src="/shared/images/clever_code_org_logo.png"
               alt={i18n.codeLogoClever()}
               className={styles.stepImage}
             />
-          </ListItem>
+          </li>
         </ol>
       );
       break;
@@ -358,8 +318,12 @@ const SignInInstructions = ({
       steps = (
         <ol className={styles.list}>
           <GoToSignIn />
-          <ListItem>{i18n.parentLetterGoogle1()}</ListItem>
-          <ListItem>{i18n.parentLetterGoogle2()}</ListItem>
+          <li>
+            <Markdown content={i18n.parentLetterGoogle1()} />
+          </li>
+          <li>
+            <Markdown content={i18n.parentLetterGoogle2()} />
+          </li>
         </ol>
       );
       break;
@@ -371,8 +335,8 @@ const SignInInstructions = ({
             sectionCode={sectionCode}
             studentName={studentName}
           />
-          <ListItem>
-            {i18n.parentLetterPicturePassword()}
+          <li>
+            <Markdown content={i18n.parentLetterPicturePassword()} />
             {secretPictureUrl && (
               <img
                 src={secretPictureUrl}
@@ -380,9 +344,11 @@ const SignInInstructions = ({
                 className={styles.stepImage}
               />
             )}
-          </ListItem>
+          </li>
           {!secretPictureUrl && (
-            <ListItem>{i18n.parentLetterForgotPicturePassword()}</ListItem>
+            <li>
+              <Markdown content={i18n.parentLetterForgotPicturePassword()} />
+            </li>
           )}
         </ol>
       );
@@ -395,13 +361,17 @@ const SignInInstructions = ({
             sectionCode={sectionCode}
             studentName={studentName}
           />
-          <ListItem>
-            {i18n.parentLetterSecretWords({
-              secretWords: secretWords ? `(${secretWords})` : '',
-            })}
-          </ListItem>
+          <li>
+            <Markdown
+              content={i18n.parentLetterSecretWords({
+                secretWords: secretWords ? `(${secretWords})` : '',
+              })}
+            />
+          </li>
           {!secretWords && (
-            <ListItem>{i18n.parentLetterForgotPassword()}</ListItem>
+            <li>
+              <Markdown content={i18n.parentLetterForgotPassword()} />
+            </li>
           )}
         </ol>
       );
@@ -412,8 +382,12 @@ const SignInInstructions = ({
       steps = (
         <ol className={styles.list}>
           <GoToSignIn />
-          <ListItem>{i18n.parentLetterSignInEmail()}</ListItem>
-          <ListItem>{i18n.parentLetterForgotPasswordEmail()}</ListItem>
+          <li>
+            <Markdown content={i18n.parentLetterSignInEmail()} />
+          </li>
+          <li>
+            <Markdown content={i18n.parentLetterForgotPasswordEmail()} />
+          </li>
         </ol>
       );
   }
@@ -422,15 +396,14 @@ const SignInInstructions = ({
     loginTypeName = LOGIN_TYPE_NAMES[loginType];
   }
   return (
-    <div>
-      <SafeMarkdown
-        rehypeMap={BLOCK_MARKDOWN}
-        markdown={i18n.parentLetterLoginType({
+    <>
+      <Markdown
+        content={i18n.parentLetterLoginType({
           loginTypeName: loginTypeName,
         })}
       />
       {steps}
-    </div>
+    </>
   );
 };
 SignInInstructions.propTypes = {
@@ -443,27 +416,25 @@ SignInInstructions.propTypes = {
 };
 
 const GoToSignIn = () => (
-  <ListItem>
-    <SafeMarkdown
-      rehypeMap={INLINE_MARKDOWN}
-      markdown={i18n.parentLetterSignIn({
+  <li>
+    <Markdown
+      content={i18n.parentLetterSignIn({
         studioLink: studio('/'),
       })}
     />
-  </ListItem>
+  </li>
 );
 
 const GoToSectionSignIn = ({sectionCode, studentName}) => {
   const sectionUrl = studio(`/sections/${sectionCode}`);
   return (
-    <ListItem>
-      <SafeMarkdown
-        rehypeMap={INLINE_MARKDOWN}
-        markdown={i18n.parentLetterSectionSignIn({
+    <li>
+      <Markdown
+        content={i18n.parentLetterSectionSignIn({
           sectionLink: sectionUrl,
         })}
       />
-    </ListItem>
+    </li>
   );
 };
 GoToSectionSignIn.propTypes = {
