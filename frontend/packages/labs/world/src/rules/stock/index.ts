@@ -47,6 +47,7 @@ import {spawnerRule} from './spawner';
 import {steeringRule} from './steering';
 import {surfacesRule} from './surfaces';
 import {timeRule} from './time';
+import {turningRule} from './turning';
 import {turnsRule} from './turns';
 import {wrapRule} from './wrap';
 import {writingRule} from './writing';
@@ -369,6 +370,15 @@ export const STOCK_RULES: readonly StockRule[] = [
     contents: surfacesRule,
   },
   {
+    id: 'turning',
+    name: 'Turning',
+    ability: 'Turns When It Hits Something',
+    description:
+      'Goes the way it is facing and turns when it stops getting anywhere. One number decides what kind of enemy it is: a hundred and eighty is a ball rolling back and forth, ninety is a rocket taking the next turning.',
+    provides: ['Turns When It Hits Something'],
+    contents: turningRule,
+  },
+  {
     id: 'drive',
     name: 'Arrow Drive',
     ability: 'Drives with Arrow Keys',
@@ -489,6 +499,7 @@ export {
   arrowsRule,
   climbRule,
   surfacesRule,
+  turningRule,
   mouseRule,
   writingRule,
   boundsRule,

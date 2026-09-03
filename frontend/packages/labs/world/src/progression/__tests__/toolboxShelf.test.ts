@@ -129,6 +129,7 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   // Four `use trait` rows and one number: everything the lesson asks for is
   // already on screen or in the rule's own drawer.
   'platformer/surfaces': ['world_use_trait'],
+  'platformer/enemies': ['world_use_trait'],
   'platformer/ground': ['world_use_trait'],
   'platformer/pickups': ['world_use_trait', 'world_print'],
   'platformer/hazards': ['world_use_trait', 'world_print'],

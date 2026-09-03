@@ -2918,3 +2918,162 @@ describe('Surfaces', () => {
     expect(across(walker) - from).toBeCloseTo(150, 0);
   });
 });
+
+describe('Turning', () => {
+  /**
+   * A corridor with solid walls at either end, and something in it.
+   *
+   * `traits` is what the mover elects beside Turning — gravity for a ball
+   * that rolls, nothing for a rocket that flies.
+   */
+  const corridor = (
+    traits: readonly unknown[],
+    settings: Record<string, number> = {},
+  ) => {
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([
+        rule('rules/motion'),
+        rule('rules/collisions'),
+        rule('rules/solid'),
+        rule('rules/gravity'),
+        rule('rules/turning'),
+      ])
+      .instantiate();
+    const wall = (id: string, x: number, y: number, w: number, h: number) => {
+      const one = new ActorBuilder({id, name: id})
+        .useTraits([
+          of('rules/gravity', 'ActsAsGroundTrait'),
+          of('rules/solid', 'SolidTrait'),
+        ])
+        .set(PositionProperty, at(x, y))
+        .set(of('rules/collisions', 'SizeProperty'), new Vector(w, h))
+        .instantiate(id);
+      world.addActor(one);
+      return one;
+    };
+    wall('floor', 200, 300, 400, 32);
+    // Full-height walls, so something flying above the floor meets them too:
+    // a rocket at head height and a ball on the ground are both in this room.
+    wall('left', 20, 150, 32, 300);
+    wall('right', 380, 150, 32, 300);
+    const mover = new ActorBuilder({id: 'mover', name: 'mover'})
+      .useTraits([
+        of('rules/turning', 'TurnsWhenItHitsSomethingTrait'),
+        of('rules/motion', 'CanMoveTrait'),
+        ...(traits as never[]),
+      ])
+      .set(PositionProperty, at(200, 276))
+      .set(of('rules/collisions', 'SizeProperty'), new Vector(16, 16))
+      .instantiate('mover');
+    for (const [name, value] of Object.entries(settings)) {
+      mover.set(of('rules/turning', name), value as never);
+    }
+    world.addActor(mover);
+    return {world, mover};
+  };
+
+  const heading = (mover: unknown) =>
+    (mover as {get(p: unknown): number}).get(
+      of('rules/turning', 'HeadingProperty'),
+    );
+  const where = (mover: unknown) =>
+    (mover as {get(p: unknown): Vector}).get(PositionProperty);
+
+  it('does not turn on its first frame, however far from the origin it is', () => {
+    // The failure the `measured` flag exists for: without it the distance
+    // from (0, 0) is read as travel that did not happen, and every actor of
+    // this kind sets off backwards.
+    const {world, mover} = corridor([]);
+
+    run(world, 1 / 60);
+
+    expect(heading(mover)).toBe(0);
+  });
+
+  it('rolls to the wall and comes back', () => {
+    const {world, mover} = corridor([
+      of('rules/gravity', 'AffectedByGravityTrait'),
+    ]);
+
+    run(world, 2);
+    const there = where(mover).x;
+    run(world, 2);
+
+    // It got to the right-hand wall, turned, and is on its way back.
+    expect(there).toBeGreaterThan(300);
+    expect(heading(mover)).toBe(180);
+    expect(where(mover).x).toBeLessThan(there);
+  });
+
+  it('says so when it turns, once per wall', () => {
+    const {world, mover} = corridor([
+      of('rules/gravity', 'AffectedByGravityTrait'),
+    ]);
+    let turns = 0;
+    (mover as {on(e: unknown, f: () => void): void}).on(
+      of('rules/turning', 'TurnsEvent'),
+      () => {
+        turns++;
+      },
+    );
+
+    // Long enough to reach one wall and no more: the corridor is about three
+    // hundred pixels of clear floor and this travels at a hundred a second.
+    run(world, 2.2);
+
+    expect(turns).toBe(1);
+  });
+
+  it('rolls rather than flies, because gravity is added on top', () => {
+    // The whole reason the heading is written in `decide`. Written later it
+    // would overwrite the fall, and a ball with a horizontal heading would
+    // sail across the room at the height it started.
+    const {world, mover} = corridor([
+      of('rules/gravity', 'AffectedByGravityTrait'),
+    ]);
+    mover.set(PositionProperty, at(200, 100) as never);
+
+    run(world, 1);
+
+    // On the floor, which is 32 tall centred at 300, so its surface is 284
+    // and a 16-tall body rests at 276.
+    expect(where(mover).y).toBeCloseTo(276, 0);
+  });
+
+  it('flies straight for an actor gravity has never heard of', () => {
+    const {world, mover} = corridor([]);
+    mover.set(PositionProperty, at(200, 100) as never);
+
+    run(world, 1);
+
+    expect(where(mover).y).toBeCloseTo(100, 0);
+  });
+
+  it('takes the next turning instead, on ninety', () => {
+    // The same trait and one different number: a rocket rather than a ball.
+    // Flying at head height, so the first thing it meets is the wall and not
+    // the floor it would otherwise be resting on.
+    const {world, mover} = corridor([], {TurnByProperty: 90});
+    mover.set(PositionProperty, at(200, 100) as never);
+
+    run(world, 2.2);
+    expect(heading(mover)).toBe(90);
+    // …and down, until the floor takes the next one.
+    run(world, 2.2);
+
+    expect(heading(mover)).toBe(180);
+  });
+
+  it('keeps the heading a number a person can read', () => {
+    // Four right turns is a full circle, and a heading that grew to 360 and
+    // then 450 would be a property nobody could look at in the inspector and
+    // say which way the thing was going.
+    const {world, mover} = corridor([], {TurnByProperty: 90});
+    mover.set(PositionProperty, at(200, 100) as never);
+
+    run(world, 12);
+
+    expect(heading(mover)).toBeGreaterThanOrEqual(0);
+    expect(heading(mover)).toBeLessThan(360);
+  });
+});

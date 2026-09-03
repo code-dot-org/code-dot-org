@@ -1475,6 +1475,47 @@ export const TILES: readonly Tile[] = [
     },
   },
   {
+    id: 'platformer/enemies',
+    region: 'platformer',
+    at: at('platformer', 4, 1),
+    title: 'Something that turns',
+    teaches:
+      'Turning on the world rather than on a clock, and how one number makes two different enemies.',
+    task: 'A steel ball that sits there. Make it roll the corridor and come back — and come back at the same place every time.',
+    requires: ['platformer/hazards'],
+    unlocks: [
+      {kind: 'rule', id: 'turning'},
+      {kind: 'asset', id: 'pinball'},
+      {kind: 'asset', id: 'rocket'},
+    ],
+    check: {
+      kind: 'outcome',
+      says: 'The Ball reaches BOTH walls and comes back off each of them, which is what turning on the world rather than on a clock buys.',
+      falsePass:
+        '"Walks Back and Forth", which also goes one way and then the other and would pass "it reversed" — and, being a clock, would pass "it turns at regular places" too. What it cannot do is turn at the WALL. Its beat is a speed and a period and knows nothing about the room, so in a corridor this long it turns round in the middle of it and never touches either end. So this measures WHERE the Ball turns.',
+      run: {
+        probes: {ball: {kind: 'positions', of: 'Ball'}},
+        // Fine legs, because the check has to see WHERE it turned rather
+        // than that it is somewhere different from where it started.
+        trace: Array.from({length: 24}, () => ({seconds: 0.25})),
+      },
+      passes: ({samples}) => {
+        const xs = (samples.ball ?? []).map(
+          sample => (sample as {x: number}[])[0]?.x ?? 0,
+        );
+        if (xs.length < 8) {
+          return false;
+        }
+        // It turned round at all: some sample is lower than one before it.
+        const came = xs.some((here, at) => at > 0 && here < xs[at - 1]);
+        // …and it got to BOTH ends. The corridor's clear floor runs from 48
+        // to 416; a default patrol covers ninety pixels a leg and reaches
+        // neither.
+        return came && Math.max(...xs) > 380 && Math.min(...xs) < 90;
+      },
+    },
+  },
+  {
     id: 'platformer/ground',
     region: 'platformer',
     at: at('platformer', 2, 2),

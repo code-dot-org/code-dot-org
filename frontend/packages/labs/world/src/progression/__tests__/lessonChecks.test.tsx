@@ -1936,6 +1936,50 @@ describe('the surfaces lesson’s check', () => {
   });
 });
 
+describe('the enemy lesson’s check', () => {
+  const lesson = LESSONS['platformer/enemies'];
+
+  /** The Ball given a trait, whichever one. */
+  const rolling = (trait: string) =>
+    editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      under(actorIn(workspace, 'Ball'), {
+        type: 'world_use_trait',
+        fields: {TRAIT: trait},
+      });
+      return JSON.stringify(workspace);
+    });
+
+  it('refuses the ball that sits there', async () => {
+    const {passes} = await check('platformer/enemies', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('refuses a patrol, which also goes back and forth', async () => {
+    // The false pass written on the tile, made concrete. A patrol turns after
+    // a fixed time, so its turning points slide along the corridor as the two
+    // periods drift — and the check measures WHERE it turned.
+    const {passes, result} = await check(
+      'platformer/enemies',
+      rolling('Patrol#PatrolsAcrossTrait'),
+    );
+    // It really did go back and forth, which is why "it reversed" would not
+    // have been enough to ask.
+    const xs = (result.samples.ball as {x: number}[][]).map(at => at[0].x);
+    expect(Math.max(...xs) - Math.min(...xs)).toBeGreaterThan(30);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts something that turns at the wall', async () => {
+    const {passes, result} = await check(
+      'platformer/enemies',
+      rolling('Turning#TurnsWhenItHitsSomethingTrait'),
+    );
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+});
+
 describe('the ladder lesson’s check', () => {
   const lesson = LESSONS['platformer/ladders'];
 

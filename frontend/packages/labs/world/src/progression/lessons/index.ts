@@ -12,7 +12,7 @@
 // Blockly JSON behind them. So `catalogue.ts` stays data about tiles, and the
 // projects live here, looked up by tile id.
 //
-// SEVENTY-ONE OF SEVENTY-ONE: every tile on the map has a lesson, a starting
+// SEVENTY-TWO OF SEVENTY-TWO: every tile on the map has a lesson, a starting
 // project, and a check tested in both directions.
 //
 // What is written is milestone 4 of specs/PROGRESSION_UI.md and then some: all
@@ -1824,6 +1824,111 @@ things a tile can be, and one thing a walker is.
    you have left up there — none of the three touches the vertical speed.
 6. Set the Belt's **belt speed** to a negative number and walk on to it again.
    One number, and the belt runs the other way.
+`.trim(),
+};
+
+// ── platformer/enemies ───────────────────────────────────────────────────────
+
+const enemies: WorldScenario = {
+  name: 'A ball that does not roll',
+  description:
+    'A corridor with walls at both ends, and a steel ball sitting in it.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      // Fourteen tiles rather than ten, and the width is the lesson: a
+      // corridor much longer than a patrol's beat is one where turning on a
+      // clock and turning on a wall visibly differ.
+      tiles: [14, 10],
+      rows: [
+        createInMap(local('ground'), [
+          ...floorAcross(14),
+          // Walls at both ends, reaching DOWN TO THE FLOOR — a wall that
+          // stops above the thing meant to hit it is a wall it rolls under,
+          // and the corridor has no ends at all.
+          ...[208, 240, 272].flatMap(y => [
+            placed(`left${y}`, 16, y),
+            placed(`right${y}`, 432, y),
+          ]),
+        ]),
+        addActor(local('ball'), [placeAt(160, 272)]),
+        addActor(local('hero'), [placeAt(64, 272)]),
+      ],
+      actors: [
+        {
+          id: 'hero',
+          name: 'Hero',
+          rows: [
+            useTrait('Gravity#AffectedByGravityTrait'),
+            useTrait('Input#TakesKeyboardInputTrait'),
+            useTrait('Arrow Keys#MovesAcrossTrait'),
+            setSprite('player.png'),
+          ],
+        },
+        {
+          id: 'ground',
+          name: 'Ground',
+          rows: [
+            useTrait('Gravity#ActsAsGroundTrait'),
+            useTrait('Solid Bodies#SolidTrait'),
+            setSprite('ground.png'),
+          ],
+        },
+        {
+          id: 'ball',
+          name: 'Ball',
+          // It falls, and that is all. Sitting on the floor is what an enemy
+          // with nothing to move it looks like.
+          rows: [
+            useTrait('Gravity#AffectedByGravityTrait'),
+            setSprite('pinball.png'),
+          ],
+        },
+      ],
+    }),
+    sprites: ['player', 'ground', 'pinball', 'rocket'],
+    // `patrol` as well, and it is not spare: the lesson is about the
+    // difference between turning on a clock and turning on the world, and a
+    // learner who reaches for the one they already know should find it.
+    rules: [
+      'gravity',
+      'solid',
+      'input',
+      'arrows',
+      'motion',
+      'patrol',
+      'turning',
+    ],
+  }),
+  instructions: `
+## Something that turns
+
+The Ball falls to the floor and sits there. It is a hazard that has never gone
+anywhere.
+
+You have met one way to make something move on its own — **Walks Back and
+Forth**, which turns on a *clock*: a speed and a period. That is right for a
+guard on a fixed beat and wrong for anything that should respect the shape of
+the room it is in. Put a patrolling actor in a corridor half as long as its
+beat and it spends half its life pressed against the end.
+
+**Turns When It Hits Something** turns on the *world* instead.
+
+### What you do
+
+1. Give the Ball **use trait ⟨Turns When It Hits Something⟩**. It rolls to
+   the wall and comes back, and it comes back at the same place every time,
+   because the wall is what turned it.
+2. Watch where it turns. Now change **travel speed** and watch again: it
+   turns in the same two places, because neither of them is a time.
+3. Now take **⟨Affected by Gravity⟩** off it and set **turn by** to 90. It
+   flies instead of rolling, and at the wall it takes the corner rather than
+   coming back. The same trait; one number.
+4. That is a rocket. Give it the Rocket picture and aim it with **heading** —
+   0 is right and 90 is down, the compass every other block here uses.
+5. The rule never asks what is in front of it. It asks whether it *got* where
+   it asked to go, which is one subtraction and is true of every way of being
+   stopped — a wall, a body pushed apart, another actor.
 `.trim(),
 };
 
@@ -5386,6 +5491,7 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'platformer/jetpack': jetpack,
   'platformer/ladders': ladders,
   'platformer/surfaces': surfaces,
+  'platformer/enemies': enemies,
   'platformer/pickups': pickups,
   'platformer/hazards': hazards,
   'platformer/level': level,

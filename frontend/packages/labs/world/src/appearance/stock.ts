@@ -206,6 +206,20 @@ export const STOCK_SPRITES: readonly StockSprite[] = [
     dataUrl: image('fuelCanSmall'),
   },
   {
+    id: 'pinball',
+    name: 'Steel Ball',
+    description:
+      'A heavy lit steel ball, for something that rolls along the floor and comes back.',
+    dataUrl: image('pinball'),
+  },
+  {
+    id: 'rocket',
+    name: 'Rocket',
+    description:
+      'A finned rocket pointing RIGHT, which is where a heading of zero points — for something that takes the next turning every time it stops.',
+    dataUrl: image('rocket'),
+  },
+  {
     id: 'doorOpen',
     name: 'Open Door',
     description:

@@ -63,6 +63,12 @@ export const SPRITE_NAMES = [
   // every other level: `player` is shared by the whole library and growing a
   // pack would put one on the platformer's hero too.
   'pilot',
+  // Two enemies out of one rule and one number (rules/turning): a ball that
+  // rolls back and forth along the floor, and a rocket that takes the next
+  // turning. Both are drawn to be read as HAZARD before they are read as
+  // anything — hard edges, cold metal, nothing friendly.
+  'pinball',
+  'rocket',
   // The way out, once it is open: the same frame with the slab gone. Two
   // sprites rather than one drawn two ways, because a locked door and an open
   // one are the same object in two states and `set sprite` is how a project
@@ -474,6 +480,61 @@ const STATIC = {
     c.rect(8, 6, 16, 9, [140, 90, 42]); // upper panel
     c.rect(8, 19, 16, 9, [140, 90, 42]); // lower panel
     c.disc(22, 17, 2, [244, 196, 48]); // the handle, which is what says DOOR
+  },
+  pinball(c) {
+    // Steel rather than the red `ball`, and lit hard from the upper left so it
+    // reads as heavy: a thing you would not want to be under. The rim is what
+    // stops it dissolving into a dark room.
+    c.disc(16, 16, 13, [78, 84, 96]);
+    c.disc(16, 16, 12, [168, 176, 192]);
+    c.disc(13, 13, 7, [210, 218, 232]);
+    c.disc(11, 11, 3.5, [246, 250, 255]); // the highlight
+    c.disc(21, 21, 4, [120, 128, 146]); // …and the shadowed underside
+  },
+  rocket(c) {
+    // Pointing RIGHT unrotated, because that is where a heading of zero
+    // points (rules/turning) — the ship and the asteroid point up because
+    // `facing` is what turns those, and this is turned by a heading instead.
+    c.polygon(
+      [
+        [4, 10],
+        [22, 10],
+        [30, 16],
+        [22, 22],
+        [4, 22],
+      ],
+      [92, 96, 108],
+    ); // the body and its nose
+    c.polygon(
+      [
+        [6, 12],
+        [21, 12],
+        [27, 16],
+        [21, 20],
+        [6, 20],
+      ],
+      [206, 62, 48],
+    );
+    c.rect(6, 14, 10, 3, [246, 160, 140]); // lit along the top
+    // Fins at the tail, above and below, which is what says rocket rather
+    // than bullet at this size.
+    c.polygon(
+      [
+        [4, 10],
+        [10, 10],
+        [4, 4],
+      ],
+      [92, 96, 108],
+    );
+    c.polygon(
+      [
+        [4, 22],
+        [10, 22],
+        [4, 28],
+      ],
+      [92, 96, 108],
+    );
+    c.disc(24, 16, 2.5, [120, 200, 255]); // the eye at the nose
   },
   doorOpen(c) {
     // The frame it left behind: the same lintel and jambs, and dark where the

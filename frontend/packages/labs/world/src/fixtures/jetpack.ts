@@ -65,8 +65,18 @@
 // and delivered after the steps — so by the time a handler asks how many are
 // left, the one just taken is already gone.
 //
-// WHAT IT IS NOT: there is nothing to avoid, and no second level for the door
-// to lead to (JETPACK.md, phase 3). It is the smallest thing that plays.
+// TWO ENEMIES, AND THEY ARE THE SAME ACTOR WITH ONE NUMBER CHANGED. A ball
+// that rolls the floor and comes back is `turn by 180`; a rocket that takes
+// the next turning is `turn by 90`. Both elect "Turns When It Hits Something"
+// and neither has any idea the other exists — which is the whole claim
+// `rules/turning` makes, standing in a room rather than in a test.
+//
+// They DAMAGE rather than kill, and the Pilot has health and a bar, so running
+// into one is a setback and not an ending. A level whose only ending is losing
+// is a level nobody finishes.
+//
+// WHAT IT IS NOT: there is no second level for the door to lead to (JETPACK.md,
+// phases 4 to 7). It is the smallest thing that plays.
 
 import {progressBarDrawing} from '../actors/stock/progressBar';
 import {drawText, fill, setText} from '../actors/stock/workspace';
@@ -84,6 +94,7 @@ import {
   collisionsRule,
   goalsRule,
   gravityRule,
+  healthRule,
   inputRule,
   jetpackRule,
   jumpRule,
@@ -92,6 +103,7 @@ import {
   scoreRule,
   solidRule,
   surfacesRule,
+  turningRule,
   writingRule,
 } from '../rules/stock';
 import {TILE_SIZE} from '../runtime/viewport';
@@ -226,6 +238,33 @@ const GEMS: ReadonlyArray<readonly [number, number]> = [
 const DOOR_AT = [24, 14] as const;
 
 /**
+ * The two enemies, as `[kind, column, row]`.
+ *
+ * The ball rolls the length of the floor, which is the one place the Pilot has
+ * to cross on foot when the tank is empty. The rocket flies the open middle of
+ * the room, which is where a flight between ledges goes.
+ *
+ * Which way each SETS OFF is in its own file rather than here, because there
+ * is one of each: a level with a dozen would want to aim them one at a time,
+ * and the heading is settable for exactly that.
+ */
+const ENEMIES: ReadonlyArray<readonly [string, number, number]> = [
+  ['actors/ball', 12, 14],
+  ['actors/rocket', 10, 3],
+];
+
+/**
+ * Which way each sets off.
+ *
+ * The ball goes RIGHT, away from where the Pilot starts. Aimed the other way
+ * it meets the Pilot in the first second, which is a level lost before it has
+ * been understood — and the ball is the one enemy on the floor the Pilot has
+ * to cross when the tank is empty.
+ */
+const BALL_AIM = 0;
+const ROCKET_AIM = 0;
+
+/**
  * Everything the level places, in the order the map lists it.
  *
  * Exported for the same reason `FLAPPY_ACTORS` is: a board written twice is
@@ -264,6 +303,9 @@ export const JETPACK_ACTORS = [
   ),
   ...GEMS.map(([column, row], index) =>
     place('actors/gem', `Gem${index}`, column, row),
+  ),
+  ...ENEMIES.map(([kind, column, row], index) =>
+    place(kind, `Enemy${index}`, column, row),
   ),
   place('actors/door', 'Door', DOOR_AT[0], DOOR_AT[1]),
   place('actors/scoreboard', 'Scoreboard', 20, 1),
@@ -399,6 +441,10 @@ const PILOT_ACTOR = JSON.stringify({
             // What makes the belt, the ice and the sludge mean anything: one
             // trait, and it meets all three (`rules/surfaces`).
             useTrait('Surfaces#StandsOnSurfacesTrait'),
+            // Something to lose. The enemies deal damage and know nothing
+            // about who to; this is the other half of that, and neither
+            // names the other (`rules/health`).
+            useTrait('Health#HasHealthTrait'),
             useTrait('Collection#CollectsTrait'),
             {type: 'world_set_sprite', fields: {SPRITE: 'pilot.png'}},
             // Enough to get ON to a single tile and no more, which is what
@@ -411,6 +457,23 @@ const PILOT_ACTOR = JSON.stringify({
             {
               type: 'world_set_Jumping_JumpStrengthProperty',
               inputs: {ACTOR: me(), VALUE: number(2.6)},
+            },
+            // Six hits rather than the default three, and a second of mercy
+            // rather than half. The default pair is tuned for a level where
+            // an enemy is something you walk into; here the ball rolls the
+            // floor the Pilot has to cross, so three hits is a room you lose
+            // before you have understood it.
+            {
+              type: 'world_set_Health_MostHealthProperty',
+              inputs: {ACTOR: me(), VALUE: number(6)},
+            },
+            {
+              type: 'world_set_Health_HealthProperty',
+              inputs: {ACTOR: me(), VALUE: number(6)},
+            },
+            {
+              type: 'world_set_Health_MercyTimeProperty',
+              inputs: {ACTOR: me(), VALUE: number(1)},
             },
             // Half a tank to start with. A full one crosses the whole room,
             // which would leave the first two cans as scenery.
@@ -487,6 +550,16 @@ const PILOT_ACTOR = JSON.stringify({
             inputs: {VALUE: number(1)},
           },
         },
+      },
+      // The other ending, and it is Goals' business rather than Health's:
+      // running out of health is a moment, and what a game DOES about one is
+      // the project's to say.
+      {
+        type: 'world_on_Health_RunsOutOfHealthEvent',
+        x: 20,
+        y: 1600,
+        inputs: {ACTOR: me()},
+        next: {block: {type: 'world_do_Goals_LoseTheGameAction'}},
       },
       // …and walking into the way out ends the level, if there is nothing
       // left to collect. The same question the Door asks itself: see the
@@ -587,6 +660,53 @@ const RUNG_ACTOR = JSON.stringify({
     ],
   },
 });
+
+/**
+ * An enemy: goes its way, turns when it stops getting anywhere, hurts.
+ *
+ * The ball and the rocket are THIS FUNCTION TWICE with a different picture and
+ * a different `turn by`, which is the argument `rules/turning` makes: a
+ * hundred and eighty is a thing that comes back, ninety is a thing that takes
+ * the corner. Whether it falls is the other difference, and it is one trait.
+ */
+const enemyActor = (
+  name: string,
+  sprite: string,
+  turnBy: number,
+  falls: boolean,
+  aim: number,
+) =>
+  JSON.stringify({
+    blocks: {
+      blocks: [
+        {
+          type: 'world_actor',
+          x: 20,
+          y: 20,
+          fields: {NAME: name},
+          next: {
+            block: stack([
+              useTrait('Turning#TurnsWhenItHitsSomethingTrait'),
+              ...(falls ? [useTrait('Gravity#AffectedByGravityTrait')] : []),
+              // What makes it an enemy rather than an obstacle. It does not
+              // know who it damages, and the Pilot does not know what damaged
+              // it (`rules/health`).
+              useTrait('Health#DealsDamageTrait'),
+              {type: 'world_set_sprite', fields: {SPRITE: sprite}},
+              {
+                type: 'world_set_Turning_TurnByProperty',
+                inputs: {ACTOR: me(), VALUE: number(turnBy)},
+              },
+              {
+                type: 'world_set_Turning_HeadingProperty',
+                inputs: {ACTOR: me(), VALUE: number(aim)},
+              },
+            ]),
+          },
+        },
+      ],
+    },
+  });
 
 /**
  * The way out: shut until the gems are gone, and then not.
@@ -712,6 +832,17 @@ const SCOREBOARD_ACTOR = JSON.stringify({
         next: {
           block: setText('TextProperty', {
             block: {type: 'text', fields: {TEXT: 'YOU MADE IT OUT'}},
+          }),
+        },
+      },
+      {
+        type: 'world_on_Goals_SeesTheGameLostEvent',
+        x: 20,
+        y: 580,
+        inputs: {ACTOR: me()},
+        next: {
+          block: setText('TextProperty', {
+            block: {type: 'text', fields: {TEXT: 'CAUGHT'}},
           }),
         },
       },
@@ -891,6 +1022,18 @@ export const JETPACK_SPEC: ProjectSpec = {
       contents: actingTile('Sludge', 'sludge.png', 'Surfaces#SlowsTrait'),
       folderId: 'actors',
     },
+    ballActor: {
+      name: 'ball.actor',
+      language: 'actor',
+      contents: enemyActor('Steel Ball', 'pinball.png', 180, true, BALL_AIM),
+      folderId: 'actors',
+    },
+    rocketActor: {
+      name: 'rocket.actor',
+      language: 'actor',
+      contents: enemyActor('Rocket', 'rocket.png', 90, false, ROCKET_AIM),
+      folderId: 'actors',
+    },
     coinActor: {
       name: 'coin.actor',
       language: 'actor',
@@ -1010,6 +1153,18 @@ export const JETPACK_SPEC: ProjectSpec = {
       contents: arrowsRule,
       folderId: 'rules',
     },
+    turningRuleFile: {
+      name: 'turning.rule',
+      language: 'rule',
+      contents: turningRule,
+      folderId: 'rules',
+    },
+    healthRuleFile: {
+      name: 'health.rule',
+      language: 'rule',
+      contents: healthRule,
+      folderId: 'rules',
+    },
     scoreRuleFile: {
       name: 'score.rule',
       language: 'rule',
@@ -1064,6 +1219,8 @@ export const JETPACK_SPEC: ProjectSpec = {
       'gem',
       'door',
       'doorOpen',
+      'pinball',
+      'rocket',
       'fuelCan',
       'fuelCanSmall',
     ]),

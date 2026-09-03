@@ -30,6 +30,7 @@ const RULES = [
   'jetpack',
   'climb',
   'surfaces',
+  'turning',
   'solid',
   'wrap',
   'bounds',

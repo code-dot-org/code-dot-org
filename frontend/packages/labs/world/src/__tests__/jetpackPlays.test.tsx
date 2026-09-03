@@ -322,4 +322,55 @@ describe('the jetpack level', () => {
 
     expect(won).toBe(1);
   });
+
+  it('rolls a ball along the floor and brings it back', () => {
+    // The enemy the level is crossed on foot past. The ball and the rocket
+    // are the same actor with one number changed, so this also stands for
+    // the rocket having any behaviour at all.
+    const {world} = project;
+    play(world, 0.5);
+    const ball = named(world, 'Enemy0');
+    const at = () => ball.get(PositionProperty).x;
+    const from = at();
+
+    play(world, 3);
+    const there = at();
+    play(world, 8);
+
+    // Right first — it is aimed away from where the Pilot starts — until the
+    // wall, then back the way it came, which no clock in the level ever
+    // mentions.
+    expect(there).toBeGreaterThan(from);
+    expect(at()).toBeLessThan(there);
+  });
+
+  it('damages the Pilot, and losing is Goals’ business rather than Health’s', () => {
+    // Neither side names the other: the ball deals damage and does not know
+    // who to, the Pilot can be damaged and does not know what by, and what
+    // the game DOES about running out is the project's line.
+    const {world} = project;
+    let lost = 0;
+    world.on(
+      (project.modules['rules/goals'] as Record<string, unknown>)
+        .TheGameIsLostEvent as never,
+      () => {
+        lost++;
+      },
+    );
+    play(world, 0.5);
+    const health = () =>
+      (pilot(world) as {get(p: unknown): number}).get(
+        (project.modules['rules/health'] as Record<string, unknown>)
+          .HealthProperty,
+      );
+    const before = health();
+
+    // Put the Pilot on the ball, which is rolling the floor it stands on.
+    const ball = named(world, 'Enemy0');
+    pilot(world).set(PositionProperty, ball.get(PositionProperty) as never);
+    play(world, 0.3);
+
+    expect(health()).toBeLessThan(before);
+    expect(lost).toBe(0);
+  });
 });
