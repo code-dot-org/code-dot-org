@@ -4,9 +4,7 @@ require 'i18n'
 require 'ipaddr'
 require 'json'
 require 'country_codes'
-require 'cdo/anon_user_id'
 require 'cdo/global_edition'
-require 'cdo/shared_constants'
 
 module Cdo
   module RequestExtension
@@ -95,28 +93,6 @@ module Cdo
 
     def splat_path_info
       env[:splat_path_info]
-    end
-
-    # Statsig stable ID for use of anonymous (signed-out) user tracking.
-    #
-    # @see apps/src/metrics/statsigHelpers.js
-    #
-    # @return [String, nil] the anonymous (signed-out) user ID in UUID v4 format
-    def statsig_stable_id
-      @statsig_stable_id ||= begin
-        # This cookie is used by the Statsig SDK for both JS and Ruby.
-        cookies_stable_id = cookies[SharedConstants::STATSIG_STABLE_ID_KEY]
-
-        if cookies_stable_id.is_a?(String) && !cookies_stable_id.empty?
-          session[SharedConstants::STATSIG_STABLE_ID_KEY] = cookies_stable_id
-        end
-
-        session[SharedConstants::STATSIG_STABLE_ID_KEY] ||= Cdo::AnonUserId.generate
-      end
-    end
-
-    def anon_user_id
-      @anon_user_id ||= AnonUserId.valid_value(statsig_stable_id)
     end
 
     def user

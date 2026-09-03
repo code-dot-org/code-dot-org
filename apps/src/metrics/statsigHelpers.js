@@ -1,10 +1,8 @@
 import cookies from 'js-cookie';
 
-import {StatsigStableIdKey} from '@cdo/generated-scripts/sharedConstants';
-
 import {getEnvironment, isProductionEnvironment, createUuid} from '../utils';
 
-const STABLE_ID_KEY = StatsigStableIdKey;
+const STABLE_ID_KEY = 'statsig_stable_id';
 const LOCAL_STORAGE_KEY = STABLE_ID_KEY.toUpperCase();
 const COOKIE_OPTIONS = {
   path: '/',

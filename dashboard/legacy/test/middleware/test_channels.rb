@@ -19,10 +19,6 @@ class ChannelsTest < Minitest::Test
     response = JSON.parse(last_response.body)
     assert last_request.url.end_with? "/#{response['id']}"
     assert_equal 'world', response['hello']
-
-    storage_id = storage_decrypt_id CGI.unescape(@session.cookie_jar[storage_id_cookie_name])
-    anon_user_id = user_storage_ids_table.where(id: storage_id).get(:anon_user_id)
-    assert Cdo::AnonUserId.valid?(anon_user_id)
   end
 
   def test_update_channel
