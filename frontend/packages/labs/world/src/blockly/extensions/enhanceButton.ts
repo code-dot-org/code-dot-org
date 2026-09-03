@@ -1,4 +1,5 @@
-// The wand on `define actor`: give this actor something it does not have yet.
+// The wand on `define actor` and on `define world`: give this thing something
+// it does not have yet.
 //
 // The third of the buttons that ride on a block — the eye opens the file a
 // block comes from, the mortarboard opens the lesson it was met in, and this
@@ -7,11 +8,16 @@
 // them: added and removed rather than shown and hidden, not serialized, and
 // opened after the click rather than during it.
 //
-// IT IS ON THE DEFINITION, which is where "this actor" is a thing rather than a
-// reference. Enhancing is done TO an actor, and the row menu in the tab bar was
-// the first place to say so; this is the second, and the nearer one — a learner
+// IT IS ON THE DEFINITION, which is where a thing is itself rather than a
+// reference to itself. Enhancing is done TO something, and the row menu in the
+// tab bar was the first place to say so; this is the nearer one — a learner
 // looking at an actor's blocks and wanting it to have health is already
 // pointing at the actor.
+//
+// AND ON THE WORLD, because not every enhancement is an actor's. A camera that
+// follows an actor is defined in a world and looked through by a world; the
+// actor appears in it as a value. The shelf shows what suits whichever was
+// clicked (`actors/enhance/enhancements`).
 //
 // IT KNOWS WHICH ACTOR EITHER WAY. An actor with a file of its own is named by
 // that file, which the workspace was told when it opened; an actor a WORLD
@@ -63,6 +69,8 @@ export interface EnhanceContext {
   world: boolean;
   /** This `define actor` block's own id, which names a world-local actor. */
   blockId: string;
+  /** Which definition this block IS — the wand rides on both. */
+  defines: 'actor' | 'world';
   /** What the block calls the actor, which is what the dialog's title says. */
   name: string;
   /** Whether the block is a preview in a flyout rather than in the file. */
@@ -85,11 +93,19 @@ export function enhanceTarget(
   if (context.flyout || context.readOnly) {
     return undefined;
   }
+  if (context.defines === 'world') {
+    // The world itself, named by its file: what a world enhancement writes
+    // into is the world, and there is one per file.
+    return context.fileModule
+      ? {kind: 'world', path: context.fileModule, name: context.name}
+      : undefined;
+  }
   if (context.actorModule) {
-    return {path: context.actorModule, name: context.name};
+    return {kind: 'actor', path: context.actorModule, name: context.name};
   }
   if (context.world && context.fileModule) {
     return {
+      kind: 'actor',
       path: context.fileModule,
       block: context.blockId,
       name: context.name,
@@ -119,6 +135,7 @@ function contextOf(block: Block): EnhanceContext {
     fileModule: editingFileModule(block),
     world: definesWorld(workspace),
     blockId: block.id,
+    defines: block.type === 'world_world' ? 'world' : 'actor',
     // Read at click time as well as here: the field is editable, and the name
     // on screen is the one the learner means.
     name: String(block.getFieldValue('NAME') ?? '').trim(),
@@ -172,7 +189,7 @@ function syncButton(block: Block): void {
     FIELD_NAME,
   );
   const field = block.getField(FIELD_NAME);
-  field?.setTooltip('Give this actor something it does not have yet');
+  field?.setTooltip('Give this something it does not have yet');
   // NOT saved, and not editable — see the note on the eye
   // (extensions/openSourceButton), which cost two Blockly warnings to work out.
   if (field) {

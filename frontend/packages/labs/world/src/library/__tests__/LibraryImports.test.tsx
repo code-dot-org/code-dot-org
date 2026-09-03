@@ -73,6 +73,7 @@ describe('the import shelves', () => {
     render(<LibraryImports />);
 
     const asked = requestActorEnhance({
+      kind: 'actor',
       path: 'actors/player',
       name: 'Platformer Player',
     });

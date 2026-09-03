@@ -16,6 +16,7 @@ const inFile: EnhanceContext = {
   fileModule: 'actors/player',
   world: false,
   blockId: 'defBlock',
+  defines: 'actor',
   name: 'Platformer Player',
   flyout: false,
   readOnly: false,
@@ -27,16 +28,36 @@ const inWorld: EnhanceContext = {
   fileModule: 'worlds/main',
   world: true,
   blockId: 'platformerBallDef',
+  defines: 'actor',
   name: 'Ball',
   flyout: false,
   readOnly: false,
 };
 
+/** …and the `define world` block itself, which is a thing to enhance too. */
+const theWorld: EnhanceContext = {
+  ...inWorld,
+  blockId: 'worldDef',
+  defines: 'world',
+  name: 'Platform World',
+};
+
 describe('the wand on define actor', () => {
   it('points at the file, for an actor that has one', () => {
     expect(enhanceTarget(inFile)).toEqual({
+      kind: 'actor',
       path: 'actors/player',
       name: 'Platformer Player',
+    });
+  });
+
+  it('points at the world, on the world block', () => {
+    // Not every enhancement is an actor's: a camera that follows an actor is
+    // defined in a world and looked through by a world.
+    expect(enhanceTarget(theWorld)).toEqual({
+      kind: 'world',
+      path: 'worlds/main',
+      name: 'Platform World',
     });
   });
 
@@ -45,6 +66,7 @@ describe('the wand on define actor', () => {
     // the world it is written in, and the block that defines it
     // (`blockly/localActors`).
     expect(enhanceTarget(inWorld)).toEqual({
+      kind: 'actor',
       path: 'worlds/main',
       block: 'platformerBallDef',
       name: 'Ball',

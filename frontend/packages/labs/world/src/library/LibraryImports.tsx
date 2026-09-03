@@ -243,11 +243,15 @@ export const LibraryImports = () => {
         <EnhanceActorDialog
           source={sourcesRef.current.source}
           target={shelf.enhancing}
-          onEnhance={(enhancement: Enhancement) =>
+          onEnhance={(enhancement: Enhancement, answer?: string) =>
             // The actor's path back, so a caller waiting on this knows what
             // changed; nothing asks yet, and the seam hands back a string.
             changed(
-              enhancement.apply(sourcesRef.current.source, shelf.enhancing),
+              enhancement.apply(
+                sourcesRef.current.source,
+                shelf.enhancing,
+                answer,
+              ),
               shelf.enhancing.path,
             )
           }

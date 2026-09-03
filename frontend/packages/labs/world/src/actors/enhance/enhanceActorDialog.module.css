@@ -24,3 +24,14 @@
   text-align: start;
   text-transform: none;
 }
+
+/* The enhancement's own question, under the row that raised it: which actor a
+   camera should follow. Wraps, because a project may hold a dozen actors and
+   this is a row of names rather than a list. */
+.answers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  margin: 6px 0 0 8px;
+}

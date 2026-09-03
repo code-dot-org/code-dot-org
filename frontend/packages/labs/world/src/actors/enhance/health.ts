@@ -288,6 +288,9 @@ const edit = (
 
 export const healthEnhancement: Enhancement = {
   id: 'health',
+  // The ACTOR's: every line it writes lands in the actor's own chain or in a
+  // hat about it, and the bar is a companion the actor makes for itself.
+  subject: 'actor',
   name: 'Health, and a bar above it',
   description:
     'Gives the actor health it can lose, and a Health Bar that rides over its head showing how much is left. Every one of these actors gets its own, brought along when it appears and taken away when it goes.',

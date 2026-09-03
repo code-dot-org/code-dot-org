@@ -402,6 +402,7 @@ export const FileMenus = () => {
     async (file: ProjectFile, name: string) => {
       await thenAsk();
       await requestActorEnhance({
+        kind: 'actor',
         path: (filePath(ops.source, file.id) ?? file.name).replace(
           /\.[^./]+$/,
           '',

@@ -26,6 +26,27 @@ test:
 > **If a stock actor cannot be demonstrated without a second actor the shelf
 > does not have, it is an enhancement in disguise.**
 
+## A subject, and sometimes an argument
+
+An enhancement has a SUBJECT: the thing whose files it edits, and so the thing
+it is asked for from. "Health and a bar above it" is an ACTOR's — the trait,
+the property and both handlers land in that actor, and the bar it places is a
+companion the actor makes for itself. "A camera that follows an actor" is a
+WORLD's: it defines a camera in the world and looks through it, and the actor
+appears in it as a value.
+
+Reading the camera as an actor enhancement was wrong in the way that matters,
+and it took building it to see. It was offered from the actor's own wand — "the
+camera follows THIS one" — and answering wrote nothing at all into the file the
+learner was looking at. The test is not which thing the change is ABOUT; it is
+whose fact it is, and so whose file it lands in.
+
+So an enhancement declares its subject, each wand offers what suits it, and one
+that has to name something else ASKS: the shelf puts the question under the row
+that raised it, with the choices read from the project. The camera asks which
+actor to follow, and offers both kinds — the world's own `define actor` blocks
+and the project's `.actor` files.
+
 ## What an enhancement is
 
 A patch, applied to an actor a project already has: rules imported, traits
@@ -70,6 +91,10 @@ about.
 block, after the eye that opens a file and the mortarboard that opens a lesson.
 It is the nearer of the two routes: a learner looking at an actor's blocks and
 wanting it to have health is already pointing at the actor.
+
+**And on `define world`**, which is the same button on the other kind of
+subject. A world enhancement is asked for from the world, for the same reason
+an actor's is asked for from the actor.
 
 It is not built on a read-only workspace, and that is where it parts company
 with the eye and the mortarboard beside it: those two READ — a version being
@@ -172,6 +197,37 @@ the Attachment rule's default, chosen there for this. A line saying what would
 have happened anyway is a line to keep in step with a default that may change
 for a reason.
 
+## The second one: the camera follows it
+
+A level bigger than the screen is the commonest thing a learner builds and the
+commonest one they cannot finish — the player walks off the right-hand side and
+the game goes on without them. The answer is five blocks, and not one of them
+is anywhere near the actor:
+
+    worlds/*.world    define camera ⟨Follow Camera⟩ do:
+                        use trait ⟨Camera Follow#Follows⟩
+                        set actor to follow of ⟨this camera⟩ to ⟨any ⟨target⟩⟩
+                      look through camera ⟨Follow Camera⟩
+
+**It is the WORLD's**, and it is the counter-example to the Health Bar rather
+than a repeat of its bug. Which camera a world looks through, and what that
+camera is aimed at, are facts about the world's view; a camera is not an actor
+and an actor cannot hold one. So the subject is the world, the actor is the
+ANSWER to the question it asks, and one world is patched — the one whose wand
+was clicked, which is also right for a project with two levels, since each
+world wants its own camera.
+
+**Appended at the end, and the ordering is load-bearing.** `any ⟨Player⟩` is
+read at the moment `define camera` runs, so a camera declared above `load map`
+is handed an empty list and sits still for the whole game, with nothing in the
+console to say why. The starter fixtures carry the same comment over the same
+line (`fixtures/flappy`).
+
+**One camera per world**, with an id of its own, so asking again REPOINTS it
+rather than adding a rival: a world has one view, and a second answer is a
+learner changing their mind. A camera the learner made themselves is left
+alone — this owns the one it made and nothing else.
+
 ## Testing one
 
 Two halves, and the second is the one that matters. The patch's arithmetic —
@@ -203,8 +259,8 @@ and because each is an argument for the concept rather than a plan:
   floating "+10". Composition of Writing and Attachment, no new rules.
 - **A verb it did not have** — collects things (which is exactly the hole the
   Coin's demo falls into), shoots, patrols, is pushable, hurts to touch.
-- **A relationship with the world** — the camera follows this one; stays in
-  bounds; is a checkpoint. No picture at all, pure wiring, and the first of
-  them answers the commonest "my game is broken" that is not a bug.
+- **A relationship with the world** — stays in bounds; is a checkpoint. No
+  picture at all, pure wiring. The camera is the one of these that is built
+  (below).
 - **A look that reports state** — flicker while hurt, tint while powered up, a
   trail of fading copies.

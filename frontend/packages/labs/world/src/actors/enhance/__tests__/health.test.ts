@@ -25,7 +25,11 @@ const withPlayer = () => {
   return source;
 };
 
-const PLAYER = {path: 'actors/player', name: 'Platformer Player'};
+const PLAYER = {
+  kind: 'actor' as const,
+  path: 'actors/player',
+  name: 'Platformer Player',
+};
 
 /** One file's contents, by the path it sits at. */
 const at = (source: ReturnType<typeof withPlayer>, path: string) => {
@@ -101,6 +105,7 @@ describe('the health enhancement, as edits', () => {
   it('refuses to give a Health Bar a health bar', () => {
     expect(
       healthEnhancement.refuse?.({
+        kind: 'actor',
         path: 'actors/healthBar',
         name: 'Health Bar',
       }),
@@ -292,6 +297,7 @@ describe('an actor a world defines for itself', () => {
   // No file of its own: a `define actor` block among the world's own roots,
   // which is what the single-world starter is made of (specs/ENHANCEMENTS.md).
   const BALL = {
+    kind: 'actor' as const,
     path: 'worlds/main',
     block: 'platformerBallDef',
     name: 'Ball',
@@ -343,6 +349,7 @@ describe('an actor a world defines for itself', () => {
     const after = healthEnhancement.apply(single(), BALL);
     expect(
       healthEnhancement.applied(after, {
+        kind: 'actor',
         path: 'worlds/main',
         block: 'platformerCoinDef',
         name: 'Coin',

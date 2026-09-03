@@ -133,6 +133,16 @@ export function withVariable(contents: string, variable: object): string {
       );
 }
 
+/** The file's top-level blocks, for a caller that wants to look at all of them. */
+export function rootsOf(contents: string): BlockJson[] {
+  return roots(parse(contents));
+}
+
+/** The rows in the chain under the picked root, in the order they are in. */
+export function rowsUnder(contents: string, pick: RootPick): BlockJson[] {
+  return [...down(rootOf(parse(contents), pick))];
+}
+
 /** Whether the chain under the picked root already holds a matching row. */
 export function holds(
   contents: string,

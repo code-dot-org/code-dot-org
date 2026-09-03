@@ -13,7 +13,11 @@ import {stockActorById} from '../../stock';
 import {EnhanceActorDialog} from '../EnhanceActorDialog';
 import {healthEnhancement} from '../health';
 
-const PLAYER = {path: 'actors/player', name: 'Platformer Player'};
+const PLAYER = {
+  kind: 'actor' as const,
+  path: 'actors/player',
+  name: 'Platformer Player',
+};
 
 const withPlayer = () =>
   importStockActor(WORLD_SCENARIOS.empty.source, stockActorById('player')!)
@@ -63,7 +67,9 @@ describe('EnhanceActorDialog', () => {
   });
 
   it('refuses the one it makes no sense for', () => {
-    open({target: {path: 'actors/healthBar', name: 'Health Bar'}});
+    open({
+      target: {kind: 'actor', path: 'actors/healthBar', name: 'Health Bar'},
+    });
 
     const row = screen.getByRole('button', {name: /Health, and a bar/});
     expect(row).toBeDisabled();
@@ -77,6 +83,6 @@ describe('EnhanceActorDialog', () => {
     fireEvent.click(screen.getByRole('button', {name: /Health, and a bar/}));
     fireEvent.click(screen.getByRole('button', {name: 'Enhance'}));
 
-    expect(onEnhance).toHaveBeenCalledWith(healthEnhancement);
+    expect(onEnhance).toHaveBeenCalledWith(healthEnhancement, undefined);
   });
 });
