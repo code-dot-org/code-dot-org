@@ -3,71 +3,51 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# The PRIMM Method
+<h1>The PRIMM Method</h1>
+<h2>Learning Approach to Programming</h2>
 
-## Learning Approach to Programming
+<p>The <b>PRIMM</b> method is a well-researched, structured approach to teaching programming that helps students effectively understand and engage with code.</p>
 
-The **PRIMM** method is a well-researched, structured approach to teaching programming that helps students effectively understand and engage with code.
+<p>It stands for Predict, Run, Investigate, Modify, and Make. As you work through the programming lessons, you will notice that they follow a <i>modified</i> version of this approach.</p>
 
-It stands for Predict, Run, Investigate, Modify, and Make. As you work through the programming lessons, you will notice that they follow a *modified* version of this approach.
+<h2>Here is a breakdown of each step:</h2>
 
-
-
-## Here is a breakdown of each step: 
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🤔 Predict</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p style="font-size:14pt;">
-Before running any code, students are encouraged to predict what the code will do. This helps them engage with the logic and structure of the code, fostering a deeper understanding of how it works. 
-</p></div>
-</details>
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🏃 Run </summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p style="font-size:14pt;">
-In this step, students run the code to see if their predictions were correct. This immediate feedback helps reinforce correct predictions and correct misunderstandings. 
-</p></div>
-</details>
-
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Investigate </summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-
-   <p style="font-size:14pt;">
-After running the code, students explore why it behaves as it does by examining its structure, syntax, and logic. They might debug, analyze flow, and identify errors. This step emphasizes comprehension and critical thinking.
-
-</p></div>
-</details>
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🧩 Modify </summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p style="font-size:14pt;">
-Students change the existing code by altering variables, adding functionality, or fixing errors. This helps them apply their understanding and experiment, reinforcing learning through practice.
-
-</p></div>
-</details>
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">💡 Make </summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p style="font-size:14pt;">
-    Finally, students apply their knowledge to create something new, either by writing code from scratch or building on existing code. This step encourages creativity and solidifies their coding skills.
- </p></div>
-</details>
-
-
----
-
-<div style="background-color: #B7E0E5; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-       <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
-        The <b>PRIMM</b> method is effective because it combines prediction and active experimentation with reflection and creation, promoting a deeper understanding of programming concepts and problem-solving skills.
-    </p>
+<details style="background-color: #F7F7FB; border: 1px solid #E4E2F8; border-radius: 10px; padding: 12px 16px; margin-bottom: 10px;">
+<summary style="cursor: pointer; font-weight: bold; color: #1F1976; font-size: 16px; display: flex; align-items: center; gap: 10px;"><span style="display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; background-color: #4C42CF; color: #FFFFFF; font-size: 14px;">1</span>Predict</summary>
+<div style="margin-top: 12px; margin-left: 36px;">
+<p>Before running any code, students are encouraged to predict what the code will do. This helps them engage with the logic and structure of the code, fostering a deeper understanding of how it works.</p>
 </div>
+</details>
 
- 
+<details style="background-color: #F7F7FB; border: 1px solid #E4E2F8; border-radius: 10px; padding: 12px 16px; margin-bottom: 10px;">
+<summary style="cursor: pointer; font-weight: bold; color: #1F1976; font-size: 16px; display: flex; align-items: center; gap: 10px;"><span style="display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; background-color: #4C42CF; color: #FFFFFF; font-size: 14px;">2</span>Run</summary>
+<div style="margin-top: 12px; margin-left: 36px;">
+<p>In this step, students run the code to see if their predictions were correct. This immediate feedback helps reinforce correct predictions and correct misunderstandings.</p>
+</div>
+</details>
 
+<details style="background-color: #F7F7FB; border: 1px solid #E4E2F8; border-radius: 10px; padding: 12px 16px; margin-bottom: 10px;">
+<summary style="cursor: pointer; font-weight: bold; color: #1F1976; font-size: 16px; display: flex; align-items: center; gap: 10px;"><span style="display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; background-color: #4C42CF; color: #FFFFFF; font-size: 14px;">3</span>Investigate</summary>
+<div style="margin-top: 12px; margin-left: 36px;">
+<p>After running the code, students explore why it behaves as it does by examining its structure, syntax, and logic. They might debug, analyze flow, and identify errors. This step emphasizes comprehension and critical thinking.</p>
+</div>
+</details>
+
+<details style="background-color: #F7F7FB; border: 1px solid #E4E2F8; border-radius: 10px; padding: 12px 16px; margin-bottom: 10px;">
+<summary style="cursor: pointer; font-weight: bold; color: #1F1976; font-size: 16px; display: flex; align-items: center; gap: 10px;"><span style="display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; background-color: #4C42CF; color: #FFFFFF; font-size: 14px;">4</span>Modify</summary>
+<div style="margin-top: 12px; margin-left: 36px;">
+<p>Students change the existing code by altering variables, adding functionality, or fixing errors. This helps them apply their understanding and experiment, reinforcing learning through practice.</p>
+</div>
+</details>
+
+<details style="background-color: #F7F7FB; border: 1px solid #E4E2F8; border-radius: 10px; padding: 12px 16px; margin-bottom: 20px;">
+<summary style="cursor: pointer; font-weight: bold; color: #1F1976; font-size: 16px; display: flex; align-items: center; gap: 10px;"><span style="display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; background-color: #4C42CF; color: #FFFFFF; font-size: 14px;">5</span>Make</summary>
+<div style="margin-top: 12px; margin-left: 36px;">
+<p>Finally, students apply their knowledge to create something new, either by writing code from scratch or building on existing code. This step encourages creativity and solidifies their coding skills.</p>
+</div>
+</details>
+
+<div style="background-color: #E4E2F8; color: #222222; padding: 16px 20px; border-radius: 10px; margin: 20px auto;">
+<p>The <b>PRIMM</b> method is effective because it combines prediction and active experimentation with reflection and creation, promoting a deeper understanding of programming concepts and problem-solving skills.</p>
+</div>
 MARKDOWN

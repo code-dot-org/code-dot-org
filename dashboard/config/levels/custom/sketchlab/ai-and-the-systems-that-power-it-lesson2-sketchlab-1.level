@@ -267,17 +267,17 @@
               "text": "Computer Hardware is like ________________________",
               "strokeColor": "transparent",
               "fontFamily": "sans",
-              "fontSize": "extra-large"
+              "fontSize": 60
             },
             "position": {
-              "x": 736.2902510506976,
-              "y": 123.51660163938911
+              "x": 353.2480032004037,
+              "y": 101.75283755698602
             },
-            "width": 697.1282541125066,
-            "height": 84.99999999999994,
+            "width": 1293.455389970351,
+            "height": 170.58258449441846,
             "measured": {
-              "width": 697,
-              "height": 85
+              "width": 1293,
+              "height": 171
             },
             "dragging": false
           },
@@ -595,13 +595,13 @@
 
         ],
         "viewport": {
-          "x": 244.48389957972057,
-          "y": 163.59335934424428,
-          "zoom": 0.4000000000000005
+          "x": 192.20598949284613,
+          "y": -17.119366599358614,
+          "zoom": 0.4594793419988149
         }
       }
     },
-    "long_instructions": "#Computer Hardware Metaphor\r\n\r\n1. Build your hardware metaphor on the Sketch Lab canvas. Label each part with the name of the hardware component and how it is represented in your metaphor.\r\n\r\n2. Use the Image Generation level to create custom images for your canvas.\r\n\r\n3. Make it clear whether the component is Input, Storage, Processing, or Output.\r\n\r\n4. Use the image / word bank as necessary to assist.",
+    "long_instructions": "#Computer Hardware Metaphor\r\n\r\n1. Build your hardware metaphor on the Sketch Lab canvas. Label each part with the name of the **hardware** component and how it is represented in your metaphor.\r\n\r\n2. Use the Image Generation level to create custom images for your canvas.\r\n\r\n3. Make it clear whether the component is **Input**, **Storage**, **Processing**, or **Output**.\r\n\r\n4. Use the image / word bank as necessary to assist.",
     "display_name": "Sketch Lab",
     "bubble_choice_description": "Use the canvas to bring your computer hardware metaphor to life",
     "thumbnail_url": "https://images.code.org/2cac7eb6a840bde9841a6153c2f5a6b1-sketch-lab-icon.png",
@@ -850,7 +850,7 @@
             "id": "b2460b2a-a08b-4e0c-96ef-271d6c63135a",
             "type": "text",
             "data": {
-              "text": "Order tickets coming in from the dining room",
+              "text": "Finished meal brought out to customer",
               "strokeColor": "transparent",
               "fontColor": "#de755f",
               "fontSize": "small"
@@ -1118,14 +1118,14 @@
 
         ],
         "viewport": {
-          "x": -919.1960464178414,
-          "y": -594.9752539702035,
-          "zoom": 1.5157165665103984
+          "x": -538.4780430667543,
+          "y": -355.18820573813537,
+          "zoom": 1.1486983549970349
         }
       }
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-08-26 18:19:59 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-26 19:01:28 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-26 19:04:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-26 19:09:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-26 19:09:22 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-27 15:18:04 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-28 15:18:06 +0000\",\"changed\":[\"teacher_markdown\",\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-28 15:19:39 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-28 15:27:21 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-28 15:28:25 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-28 15:37:22 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-28 15:38:08 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-28 15:39:29 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-28 15:40:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-28 15:43:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-28 15:52:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-08-26 18:19:59 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-26 19:01:28 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-26 19:04:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-26 19:09:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-26 19:09:22 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-27 15:18:04 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-28 15:18:06 +0000\",\"changed\":[\"teacher_markdown\",\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-28 15:19:39 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-28 15:27:21 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-28 15:28:25 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-28 15:37:22 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-28 15:38:08 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-28 15:39:29 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-28 15:40:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-28 15:43:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-28 15:52:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-01 14:46:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-01 15:16:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-01 15:17:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-01 15:37:26 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

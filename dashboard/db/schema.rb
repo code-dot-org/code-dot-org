@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_09_01_180000) do
+ActiveRecord::Schema[7.0].define(version: 2026_09_02_042144) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -2945,6 +2945,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_09_01_180000) do
 
   create_table "user_project_storage_ids", id: :integer, charset: "utf8mb3", force: :cascade do |t|
     t.integer "user_id"
+    t.string "anon_user_id", limit: 36
     t.index ["user_id"], name: "user_id", unique: true
     t.index ["user_id"], name: "user_storage_ids_user_id_index"
   end

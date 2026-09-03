@@ -42,6 +42,10 @@ run "translated locale is content, not an LFS pointer" "locale-content-ok" -- \
   ruby -ryaml -e 'abort "not a hash" unless YAML.load_file("dashboard/config/locales/base/ar-SA.yml").is_a?(Hash); puts "locale-content-ok"'
 run "schema and its boot cache present" "schema-ok" -- \
   sh -c 'test -f dashboard/db/schema.rb -a -f dashboard/db/schema_cache.yml && echo schema-ok'
+run "minimal schema initializer present" "schema-init-ok" -- \
+  sh -c 'test -x dashboard/bin/setup-db-minimal && echo schema-init-ok'
+run "Vite Ruby runtime config present" "vite-config-ok" -- \
+  sh -c 'test -f frontend/apps/studio/config/vite.json && echo vite-config-ok'
 run "runtime-read config data present" "optin-ok" -- \
   sh -c 'test -d dashboard/config/international_opt_in/school_data && echo optin-ok'
 run "middleware-served shared assets present" "shared-ok" -- \

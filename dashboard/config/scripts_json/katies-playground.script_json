@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-26 19:21:24 UTC",
+    "serialized_at": "2026-09-01 23:03:50 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -335,6 +335,21 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-20",
+        "lesson_group.key": "",
+        "script.name": "katies-playground"
+      }
+    },
+    {
+      "key": "lesson-21",
+      "name": "HoAI26 Playtest 1",
+      "absolute_position": 21,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 21,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-21",
         "lesson_group.key": "",
         "script.name": "katies-playground"
       }
@@ -687,6 +702,18 @@
       "seeding_key": {
         "lesson_activity.key": "1ea60f84-b233-4125-a631-adf755f651a0",
         "lesson.key": "lesson-20",
+        "lesson_group.key": "",
+        "script.name": "katies-playground"
+      }
+    },
+    {
+      "key": "6523f8fe-df43-4ad7-9e20-4f391487dce9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6523f8fe-df43-4ad7-9e20-4f391487dce9",
+        "lesson.key": "lesson-21",
         "lesson_group.key": "",
         "script.name": "katies-playground"
       }
@@ -1506,6 +1533,16 @@
       "seeding_key": {
         "activity_section.key": "9730b944-a7f3-4c68-b87f-bd4d0300f00e",
         "lesson_activity.key": "1ea60f84-b233-4125-a631-adf755f651a0"
+      }
+    },
+    {
+      "key": "5302e1e6-0fb6-489e-9d71-3f0182f79016",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5302e1e6-0fb6-489e-9d71-3f0182f79016",
+        "lesson_activity.key": "6523f8fe-df43-4ad7-9e20-4f391487dce9"
       }
     }
   ],
@@ -6071,6 +6108,90 @@
       "level_keys": [
         "HoAI-tl-test-1"
       ]
+    },
+    {
+      "chapter": 193,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI26-Choice-Project-Type"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5302e1e6-0fb6-489e-9d71-3f0182f79016"
+      },
+      "level_keys": [
+        "HoAI26-Choice-Project-Type"
+      ]
+    },
+    {
+      "chapter": 194,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI26-Choice-Character"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5302e1e6-0fb6-489e-9d71-3f0182f79016"
+      },
+      "level_keys": [
+        "HoAI26-Choice-Character"
+      ]
+    },
+    {
+      "chapter": 195,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI26-Choice-Background"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5302e1e6-0fb6-489e-9d71-3f0182f79016"
+      },
+      "level_keys": [
+        "HoAI26-Choice-Background"
+      ]
+    },
+    {
+      "chapter": 196,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI26-How-AI"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5302e1e6-0fb6-489e-9d71-3f0182f79016"
+      },
+      "level_keys": [
+        "HoAI26-How-AI"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -8376,6 +8497,54 @@
         "lesson_group.key": "",
         "script.name": "katies-playground",
         "activity_section.key": "9730b944-a7f3-4c68-b87f-bd4d0300f00e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoAI26-Choice-Project-Type",
+        "script_level.level_keys": [
+          "HoAI26-Choice-Project-Type"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5302e1e6-0fb6-489e-9d71-3f0182f79016"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoAI26-Choice-Character",
+        "script_level.level_keys": [
+          "HoAI26-Choice-Character"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5302e1e6-0fb6-489e-9d71-3f0182f79016"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoAI26-Choice-Background",
+        "script_level.level_keys": [
+          "HoAI26-Choice-Background"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5302e1e6-0fb6-489e-9d71-3f0182f79016"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoAI26-How-AI",
+        "script_level.level_keys": [
+          "HoAI26-How-AI"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5302e1e6-0fb6-489e-9d71-3f0182f79016"
       }
     }
   ],
