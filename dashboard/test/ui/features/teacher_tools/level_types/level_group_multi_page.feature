@@ -66,8 +66,8 @@ Scenario: Submit three pages.
 
   # Submit the long assessment
   And I press ".submitButton:first" using jQuery
-  And I wait to see ".modal"
-  And I press ".modal #ok-button" using jQuery to load a new page
+  And I wait to see a dialog titled "Submit your assessment"
+  And I press "#levelgroup-submit-ok-button" using jQuery to load a new page
 
   # Go back to the first page to see that correct options are selected.
   Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/23/levels/2/page/1?noautoplay=true"
