@@ -4,7 +4,7 @@
 #
 #  id             :bigint           not null, primary key
 #  user_id        :integer          not null
-#  level_id       :integer
+#  level_id       :integer          not null
 #  unit_id        :integer          not null
 #  attempt_number :integer          not null
 #  started_at     :datetime         not null
