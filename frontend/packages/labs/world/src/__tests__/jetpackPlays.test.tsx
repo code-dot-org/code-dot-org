@@ -28,6 +28,7 @@ import {beforeEach, describe, expect, it} from 'vitest';
 
 import {PositionProperty, Vector, type World} from '../engine';
 import {keyName} from '../engine/core/keys';
+import {SpriteProperty} from '../engine/rules/animation';
 import {WORLD_SCENARIOS} from '../fixtures/scenarios';
 import {projectFiles} from '../runtime/projectFiles';
 import {TILE_SIZE} from '../runtime/viewport';
@@ -238,5 +239,87 @@ describe('the jetpack level', () => {
     play(world, 0.5, ['left arrow']);
 
     expect(pilot(world).get(PositionProperty).x).toBeGreaterThan(from);
+  });
+
+  /** Take everything of one kind out of the world, as collecting it would. */
+  const clear = (world: World, id: RegExp) => {
+    for (const actor of [...world.actors]) {
+      if (id.test(actor.id)) {
+        world.removeActor(actor);
+      }
+    }
+  };
+
+  /** Walk the Pilot to a place, without asking how it would get there. */
+  const put = (world: World, column: number, row: number) =>
+    pilot(world).set(
+      PositionProperty,
+      new Vector(column * 32 + 16, row * 32 + 16) as never,
+    );
+
+  it('scores a coin and not a gem, from one rule and two handlers', () => {
+    // The distinction the level is built on: both elect `Can Be Collected`
+    // and neither knows what it is worth. A coin is a point because one
+    // handler says so.
+    const {world} = project;
+    const score = () =>
+      (world as {get(p: unknown): number}).get(
+        (project.modules['rules/score'] as Record<string, unknown>)
+          .ScoreProperty,
+      );
+    play(world, 0.5);
+
+    // On to the first coin on the floor, four tiles to the right.
+    play(world, 1.2, ['right arrow']);
+
+    expect(score()).toBeGreaterThan(0);
+  });
+
+  it('leaves the door shut while a gem is still out there', () => {
+    // Walking into a shut door does nothing at all, which is what makes the
+    // gems the level rather than decoration.
+    const {world} = project;
+    let won = 0;
+    world.on(
+      (project.modules['rules/goals'] as Record<string, unknown>)
+        .TheGameIsWonEvent as never,
+      () => {
+        won++;
+      },
+    );
+    play(world, 0.5);
+
+    put(world, 24, 14);
+    play(world, 0.5);
+
+    expect(won).toBe(0);
+  });
+
+  it('opens the door and ends the level once the gems are gone', () => {
+    // The whole goal structure, and neither half of it remembers anything:
+    // the Door asks how many gems are left and so does the Pilot.
+    const {world} = project;
+    let won = 0;
+    world.on(
+      (project.modules['rules/goals'] as Record<string, unknown>)
+        .TheGameIsWonEvent as never,
+      () => {
+        won++;
+      },
+    );
+    play(world, 0.5);
+    clear(world, /^Gem\d/);
+    play(world, 0.2);
+
+    // The Door's picture is the same fact, so it has changed by now too.
+    const door = named(world, 'Door');
+    expect((door as {get(p: unknown): string}).get(SpriteProperty)).toContain(
+      'doorOpen',
+    );
+
+    put(world, 24, 14);
+    play(world, 0.5);
+
+    expect(won).toBe(1);
   });
 });

@@ -47,10 +47,29 @@
 // the slow way across. All three are the SAME actor as a ledge with one trait
 // and one picture added — a floor that looks like a belt is a floor.
 //
-// WHAT IT IS NOT: there is no way to win and nothing to avoid (JETPACK.md,
-// phases 2 and 3). It is the smallest thing that plays.
+// THE GEMS ARE THE LEVEL AND THE COINS ARE THE SCORE, which is a distinction
+// worth drawing because the two are the same rule. Both elect `Can Be
+// Collected` and neither knows what it is worth: a coin is a point because a
+// handler says so, and a gem is a way out because the Door watches for them.
+// Swap the two lines and the game is about coins.
+//
+// AND THE DOOR NEEDS NO STATE, which surprised me. "Unlocked" looks like a
+// flag somebody has to set and clear, and it is not — it is "there are no gems
+// left", which the world can be asked at any moment. So the Door watches the
+// count and changes its own picture, and the Pilot asks the same question
+// again when it walks in. Nothing has to remember anything, and there is no
+// way for the picture and the behaviour to disagree.
+//
+// The counting is safe, and that is the one ordering worth knowing: Collection
+// raises `collects` BEFORE it removes what was taken, but an event is queued
+// and delivered after the steps — so by the time a handler asks how many are
+// left, the one just taken is already gone.
+//
+// WHAT IT IS NOT: there is nothing to avoid, and no second level for the door
+// to lead to (JETPACK.md, phase 3). It is the smallest thing that plays.
 
 import {progressBarDrawing} from '../actors/stock/progressBar';
+import {drawText, fill, setText} from '../actors/stock/workspace';
 import {
   stack,
   starterAnimations,
@@ -63,14 +82,17 @@ import {
   climbRule,
   collectRule,
   collisionsRule,
+  goalsRule,
   gravityRule,
   inputRule,
   jetpackRule,
   jumpRule,
   motionRule,
   progressRule,
+  scoreRule,
   solidRule,
   surfacesRule,
+  writingRule,
 } from '../rules/stock';
 import {TILE_SIZE} from '../runtime/viewport';
 
@@ -169,6 +191,41 @@ const CANS: ReadonlyArray<readonly [string, number, number]> = [
 ];
 
 /**
+ * The coins, as `[column, row]` — the score, and nothing else.
+ *
+ * On the floor and on the two ordinary ledges, which is where walking takes
+ * you: a coin is what you get for going the way you were going anyway. The
+ * gems are the ones worth a detour.
+ */
+const COINS: ReadonlyArray<readonly [number, number]> = [
+  [6, 14],
+  [9, 14],
+  [17, 14],
+  [4, 10],
+  [6, 10],
+  [12, 7],
+  [22, 11],
+  [5, 3],
+];
+
+/**
+ * The gems, as `[column, row]` — and there are three because the level is
+ * three journeys.
+ *
+ * One on the top-left ledge, one on the ice, one on the sludge: the two floors
+ * that make arriving difficult and the one place that costs a full tank to
+ * reach.
+ */
+const GEMS: ReadonlyArray<readonly [number, number]> = [
+  [3, 3],
+  [22, 4],
+  [20, 11],
+];
+
+/** Where the way out is: on the floor, at the far end from the ladder. */
+const DOOR_AT = [24, 14] as const;
+
+/**
  * Everything the level places, in the order the map lists it.
  *
  * Exported for the same reason `FLAPPY_ACTORS` is: a board written twice is
@@ -202,6 +259,14 @@ export const JETPACK_ACTORS = [
   ...CANS.map(([kind, column, row], index) =>
     place(kind, `Can${index}`, column, row),
   ),
+  ...COINS.map(([column, row], index) =>
+    place('actors/coin', `Coin${index}`, column, row),
+  ),
+  ...GEMS.map(([column, row], index) =>
+    place('actors/gem', `Gem${index}`, column, row),
+  ),
+  place('actors/door', 'Door', DOOR_AT[0], DOOR_AT[1]),
+  place('actors/scoreboard', 'Scoreboard', 20, 1),
   // The gauge, in the top-left corner of the room. See the header: the view
   // never moves, so a world position up here is a heads-up display. Inside
   // the ceiling rather than on it — a bar drawn over the brickwork reads as
@@ -284,6 +349,30 @@ const looks = (event: string, body: object, y: number) => ({
   y,
   inputs: {ACTOR: me()},
   next: {block: body},
+});
+
+/** `how many ⟨kind⟩ are left in the world`. */
+const countOfKind = (path: string) => ({
+  block: {
+    type: 'world_count_of_kind',
+    fields: {TYPE: path},
+    inputs: {LIST: {block: {type: 'world_all_actors'}}},
+  },
+});
+
+/** `⟨how many ⟨kind⟩⟩ = 0` — the whole of "the door is unlocked". */
+const noneLeft = (path: string) => ({
+  block: {
+    type: 'logic_compare',
+    fields: {OP: 'EQ'},
+    inputs: {A: countOfKind(path), B: number(0)},
+  },
+});
+
+/** `if ⟨test⟩ then ⟨body⟩`. */
+const onlyIf = (test: object, body: object) => ({
+  type: 'controls_if',
+  inputs: {IF0: test, DO0: {block: body}},
 });
 
 const PILOT_ACTOR = JSON.stringify({
@@ -384,6 +473,36 @@ const PILOT_ACTOR = JSON.stringify({
       looks('Jetpack_StopsFlyingEvent', still(), 1000),
       looks('Climbing_StartsClimbingEvent', playAnimation('pilotClimb'), 1120),
       looks('Climbing_StopsClimbingEvent', still(), 1240),
+      // A coin is a point BECAUSE THIS LINE SAYS SO. The coin elects the same
+      // trait a gem does and knows nothing about either.
+      {
+        type: 'world_on_Collection_CollectsEvent',
+        x: 20,
+        y: 1360,
+        fields: {FILTER0: 'actors/coin'},
+        inputs: {ACTOR: me()},
+        next: {
+          block: {
+            type: 'world_do_Scoring_AddToTheScoreAction',
+            inputs: {VALUE: number(1)},
+          },
+        },
+      },
+      // …and walking into the way out ends the level, if there is nothing
+      // left to collect. The same question the Door asks itself: see the
+      // header on why neither of them remembers the answer.
+      {
+        type: 'world_on_Collisions_StartsTouchingEvent',
+        x: 20,
+        y: 1480,
+        fields: {FILTER0: 'actors/door'},
+        inputs: {ACTOR: me()},
+        next: {
+          block: onlyIf(noneLeft('actors/gem'), {
+            type: 'world_do_Goals_WinTheGameAction',
+          }),
+        },
+      },
     ],
   },
 });
@@ -463,6 +582,137 @@ const RUNG_ACTOR = JSON.stringify({
             useTrait('Gravity#ActsAsGroundTrait'),
             {type: 'world_set_sprite', fields: {SPRITE: 'ladder.png'}},
           ]),
+        },
+      },
+    ],
+  },
+});
+
+/**
+ * The way out: shut until the gems are gone, and then not.
+ *
+ * IT KEEPS NO STATE, which is the thing worth reading. "Unlocked" looks like a
+ * flag somebody has to set and clear; it is really "there are no gems left",
+ * which the world can be asked at any moment. So this asks, every frame, and
+ * changes its own picture — and the Pilot asks the same question again when it
+ * walks in. There is no way for the picture and the behaviour to disagree
+ * because there is only one fact.
+ *
+ * NOT SOLID. A door you cannot walk into is a wall, and touching it is how the
+ * level ends.
+ */
+const DOOR_ACTOR = JSON.stringify({
+  blocks: {
+    blocks: [
+      {
+        type: 'world_actor',
+        x: 20,
+        y: 20,
+        fields: {NAME: 'Door'},
+        next: {
+          block: stack([
+            useTrait('Collisions#CanCollideTrait'),
+            {type: 'world_set_sprite', fields: {SPRITE: 'door.png'}},
+          ]),
+        },
+      },
+      {
+        type: 'world_trait_step',
+        x: 20,
+        y: 180,
+        fields: {PHASE: 'react', NAME: 'open when the gems are gone'},
+        inputs: {
+          DO: {
+            block: onlyIf(noneLeft('actors/gem'), {
+              type: 'world_set_sprite',
+              fields: {SPRITE: 'doorOpen.png'},
+              inputs: {ACTOR: me()},
+            }),
+          },
+        },
+      },
+    ],
+  },
+});
+
+/**
+ * The board: a Label that hears about the score rather than being told.
+ *
+ * `Watches the Score` is what makes that possible — an `.actor` file has no
+ * binding for a WORLD event, so without the trait the only place this could be
+ * written is `main.world`, reaching back out for whichever actor is the board.
+ */
+const SCOREBOARD_ACTOR = JSON.stringify({
+  blocks: {
+    blocks: [
+      {
+        type: 'world_actor',
+        x: 20,
+        y: 20,
+        fields: {NAME: 'Scoreboard'},
+        next: {
+          block: stack([
+            useTrait('Writing#ShowsTextTrait'),
+            useTrait('Scoring#WatchesTheScoreTrait'),
+            // …and the ending, for the same reason: an `.actor` file has no
+            // binding for a WORLD event, so hearing about one at all means
+            // electing the trait that turns it into the actor's own.
+            useTrait('Goals#WatchesTheEndingTrait'),
+            {type: 'world_show_as', fields: {ICON: 'text'}},
+            // Something to read before the first coin: a board that is blank
+            // until the score moves reads as a broken board.
+            setText('TextProperty', {
+              block: {type: 'text', fields: {TEXT: 'COINS 0'}},
+            }),
+          ]),
+        },
+      },
+      {
+        type: 'world_define_drawing',
+        x: 20,
+        y: 180,
+        fields: {WIDTH: 96, HEIGHT: 24},
+        inputs: {
+          DO: {
+            block: stack([
+              fill({
+                block: {
+                  type: 'world_get_Writing_TextColorProperty',
+                  inputs: {ACTOR: me()},
+                },
+              }),
+              drawText(48, 12),
+            ]),
+          },
+        },
+      },
+      {
+        type: 'world_on_Scoring_SeesTheScoreChangeEvent',
+        x: 20,
+        y: 340,
+        inputs: {ACTOR: me()},
+        next: {
+          block: setText('TextProperty', {
+            block: {
+              type: 'text_join',
+              extraState: {itemCount: 2},
+              inputs: {
+                ADD0: {block: {type: 'text', fields: {TEXT: 'COINS '}}},
+                ADD1: {block: {type: 'world_get_Scoring_ScoreProperty'}},
+              },
+            },
+          }),
+        },
+      },
+      {
+        type: 'world_on_Goals_SeesTheGameWonEvent',
+        x: 20,
+        y: 460,
+        inputs: {ACTOR: me()},
+        next: {
+          block: setText('TextProperty', {
+            block: {type: 'text', fields: {TEXT: 'YOU MADE IT OUT'}},
+          }),
         },
       },
     ],
@@ -641,6 +891,47 @@ export const JETPACK_SPEC: ProjectSpec = {
       contents: actingTile('Sludge', 'sludge.png', 'Surfaces#SlowsTrait'),
       folderId: 'actors',
     },
+    coinActor: {
+      name: 'coin.actor',
+      language: 'actor',
+      contents: JSON.stringify({
+        blocks: {
+          blocks: [
+            {
+              type: 'world_actor',
+              x: 20,
+              y: 20,
+              fields: {NAME: 'Coin'},
+              next: {
+                block: stack([
+                  useTrait('Collection#CanBeCollectedTrait'),
+                  playAnimation('coinSpin'),
+                ]),
+              },
+            },
+          ],
+        },
+      }),
+      folderId: 'actors',
+    },
+    gemActor: {
+      name: 'gem.actor',
+      language: 'actor',
+      contents: canActor('Gem', 'gem.png'),
+      folderId: 'actors',
+    },
+    doorActor: {
+      name: 'door.actor',
+      language: 'actor',
+      contents: DOOR_ACTOR,
+      folderId: 'actors',
+    },
+    scoreboardActor: {
+      name: 'scoreboard.actor',
+      language: 'actor',
+      contents: SCOREBOARD_ACTOR,
+      folderId: 'actors',
+    },
     ladderActor: {
       name: 'ladder.actor',
       language: 'actor',
@@ -719,6 +1010,24 @@ export const JETPACK_SPEC: ProjectSpec = {
       contents: arrowsRule,
       folderId: 'rules',
     },
+    scoreRuleFile: {
+      name: 'score.rule',
+      language: 'rule',
+      contents: scoreRule,
+      folderId: 'rules',
+    },
+    goalsRuleFile: {
+      name: 'goals.rule',
+      language: 'rule',
+      contents: goalsRule,
+      folderId: 'rules',
+    },
+    writingRuleFile: {
+      name: 'writing.rule',
+      language: 'rule',
+      contents: writingRule,
+      folderId: 'rules',
+    },
     surfacesRuleFile: {
       name: 'surfaces.rule',
       language: 'rule',
@@ -751,10 +1060,14 @@ export const JETPACK_SPEC: ProjectSpec = {
       'conveyor',
       'ice',
       'sludge',
+      'coin',
+      'gem',
+      'door',
+      'doorOpen',
       'fuelCan',
       'fuelCanSmall',
     ]),
-    ...starterAnimations(['pilotFly', 'pilotClimb']),
+    ...starterAnimations(['pilotFly', 'pilotClimb', 'coinSpin']),
   },
   open: ['main'],
 };

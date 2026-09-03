@@ -312,6 +312,16 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       'is what is left\n' +
       '- The whole room is on screen because the world says ' +
       '`set size of view to 26 x 16`. There is no camera in this project\n' +
+      '- **Three gems** are what the level is about. Take all three and the ' +
+      'door at the far right opens; walk into it and you are out\n' +
+      '- Coins are points and gems are the way out, and they are the SAME ' +
+      'rule: both elect `Can Be Collected` and neither knows what it is ' +
+      'worth. One handler makes a coin a point\n' +
+      '- The door keeps no state. "Unlocked" is "there are no gems left", ' +
+      'which the world can be asked at any moment — so the door watches the ' +
+      'count and the Pilot asks again when it walks in\n' +
+      '- The belt carries you if you stand still, the ice will not let you ' +
+      'turn round, and the sludge is the slow way across\n' +
       '- Try `thrust`, `top flying speed` and `fuel per second` on the Pilot — ' +
       'those three numbers are the whole feel of it',
   },

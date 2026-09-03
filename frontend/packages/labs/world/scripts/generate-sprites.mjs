@@ -63,6 +63,15 @@ export const SPRITE_NAMES = [
   // every other level: `player` is shared by the whole library and growing a
   // pack would put one on the platformer's hero too.
   'pilot',
+  // The way out, once it is open: the same frame with the slab gone. Two
+  // sprites rather than one drawn two ways, because a locked door and an open
+  // one are the same object in two states and `set sprite` is how a project
+  // says which — the alternative is a drawing with a condition in it.
+  'doorOpen',
+  // What a level is FOR: the thing you have to have all of. Told apart from a
+  // coin by shape and colour both, because "collect these and not those" only
+  // works if the two cannot be confused at a glance.
+  'gem',
   // Three floors that do something to you (rules/surfaces). Each fills the
   // cell the way `ground` does, so a row of them lies flat and what you can
   // see is what acts on you — and each is told apart by COLOUR before shape,
@@ -465,6 +474,50 @@ const STATIC = {
     c.rect(8, 6, 16, 9, [140, 90, 42]); // upper panel
     c.rect(8, 19, 16, 9, [140, 90, 42]); // lower panel
     c.disc(22, 17, 2, [244, 196, 48]); // the handle, which is what says DOOR
+  },
+  doorOpen(c) {
+    // The frame it left behind: the same lintel and jambs, and dark where the
+    // slab was. It has to read as a way THROUGH rather than as a hole, so the
+    // jambs stay lit and the opening is the room's own darkness.
+    c.rect(2, 0, 28, 32, [92, 60, 30]); // the frame, floor to lintel
+    c.rect(5, 3, 22, 29, [26, 24, 38]); // the doorway, dark
+    c.rect(2, 0, 28, 3, [140, 90, 42]); // the lintel, lit
+    c.rect(2, 0, 3, 32, [140, 90, 42]); // and both jambs
+    c.rect(27, 0, 3, 32, [140, 90, 42]);
+    // The slab, swung back inside the frame — a sliver, so the door is
+    // visibly open rather than gone.
+    c.rect(24, 4, 3, 27, [176, 116, 56]);
+  },
+  gem(c) {
+    // A cut stone: a flat table on top, facets falling away to a point. GREEN,
+    // because gold is a coin and red is a fuel can, and this has to be told
+    // from both across a room.
+    c.polygon(
+      [
+        [8, 9],
+        [24, 9],
+        [16, 27],
+      ],
+      [24, 128, 96],
+    ); // the body, tapering to a point
+    c.polygon(
+      [
+        [10, 10],
+        [22, 10],
+        [16, 24],
+      ],
+      [56, 200, 150],
+    ); // its lit face
+    c.polygon(
+      [
+        [16, 10],
+        [22, 10],
+        [16, 24],
+      ],
+      [30, 160, 118],
+    ); // …and the shaded half, which is what makes it read as cut
+    c.rect(7, 5, 18, 4, [88, 224, 176]); // the table, brightest
+    c.rect(7, 5, 18, 2, [180, 250, 230]);
   },
   post(c) {
     // A stake driven into the ground, lit from the left. The shaded half is

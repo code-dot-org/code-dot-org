@@ -206,6 +206,20 @@ export const STOCK_SPRITES: readonly StockSprite[] = [
     dataUrl: image('fuelCanSmall'),
   },
   {
+    id: 'doorOpen',
+    name: 'Open Door',
+    description:
+      'The same frame with the slab swung back and the room’s dark showing through — what a Door looks like once something has unlocked it.',
+    dataUrl: image('doorOpen'),
+  },
+  {
+    id: 'gem',
+    name: 'Gem',
+    description:
+      'A green cut stone with a bright table, for the thing a level is about having all of. Told from a Coin by shape and colour both.',
+    dataUrl: image('gem'),
+  },
+  {
     id: 'conveyor',
     name: 'Conveyor Belt',
     description:
