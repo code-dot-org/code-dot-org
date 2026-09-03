@@ -20,6 +20,7 @@ import {
   filesToMultiFileSource,
   generateCodebridgeExemplar,
   SourceFile,
+  suppliedCodeLines,
 } from './codebridge';
 
 const weblabPlanSchema = Output.object({
@@ -84,6 +85,7 @@ export async function generateWeblab2Level(
     '     for them. Express subfolders as a `/` in the file name (e.g.',
     '     "css/style.css"). Honor any explicit file count or layout the',
     '     description specifies.',
+    ...suppliedCodeLines(ctx),
     ...authoringRulesLines(ctx),
     ...(ctx.unitOutline
       ? [

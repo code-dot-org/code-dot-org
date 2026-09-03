@@ -84,6 +84,11 @@ export interface LevelContext extends LessonContext {
   // what *this specific level* should build.
   levelDescription: string;
 
+  // Code the curriculum author supplied for this level (Codebridge labs
+  // only). The plan prompt treats it as canonical rather than inventing
+  // starter files from scratch.
+  suppliedCode?: string;
+
   // Formatted text of the levels that have already been generated
   // earlier in the same run. The per-level AI uses it for continuity
   // (recurring characters, building on prior code, callbacks). Always

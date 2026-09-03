@@ -116,6 +116,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     // whether the description still matches what we last generated for.
     // The user can still override manually after.
     onAfterPatch: (_prev, next, patch) => {
+      if ('suppliedCode' in patch) return {...next, generate: true};
       if (!('description' in patch)) return next;
       return {
         ...next,
@@ -633,6 +634,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           targetProject,
           levelName,
           levelDescription: spec.description.trim(),
+          suppliedCode: spec.suppliedCode?.trim() || undefined,
           precedingLevels: precedingLevelsText || undefined,
         };
 
@@ -1037,6 +1039,13 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
             'generate_outline',
             spec.description.trim()
           );
+          if (spec.labType === 'weblab2' || spec.labType === 'pythonlab') {
+            await updateLevelProperty(
+              level.id,
+              'generate_supplied_code',
+              spec.suppliedCode?.trim() ?? ''
+            );
+          }
         } catch (err) {
           const message = err instanceof Error ? err.message : String(err);
           appendLog(

@@ -105,6 +105,24 @@ export function filesToMultiFileSource(
   return {folders, files, openFiles: fileIds};
 }
 
+// Prompt block for LevelContext.suppliedCode, shared by the Codebridge
+// plan prompts so the canonical-code contract can't drift between labs.
+export function suppliedCodeLines(ctx: LevelContext): string[] {
+  const code = ctx.suppliedCode?.trim();
+  if (!code) return [];
+  return [
+    '',
+    'Supplied code — the curriculum author provided this code for the',
+    'level. Treat it as canonical: reproduce it verbatim in the starter',
+    'files (choose file names for unlabeled snippets), add only what is',
+    'needed to make the project runnable, and write the instruction stub',
+    'around it. If it is explicitly labeled as a solution or end state,',
+    'design starter files that lead the student to it instead of shipping',
+    'it as-is.',
+    code,
+  ];
+}
+
 const exemplarSchema = Output.object({
   schema: z.object({files: codebridgeFilesSchema}),
 });

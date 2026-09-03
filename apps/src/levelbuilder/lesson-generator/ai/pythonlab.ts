@@ -19,6 +19,7 @@ import {
   filesToMultiFileSource,
   generateCodebridgeExemplar,
   SourceFile,
+  suppliedCodeLines,
 } from './codebridge';
 
 // Python Lab runs student code in pyodide: console output, blocking
@@ -89,6 +90,7 @@ export async function generatePythonlabLevel(
     '',
     'Runtime constraints:',
     ...PYTHON_RUNTIME_CONSTRAINTS.map(line => `  - ${line}`),
+    ...suppliedCodeLines(ctx),
     ...authoringRulesLines(ctx),
     ...(ctx.unitOutline
       ? [

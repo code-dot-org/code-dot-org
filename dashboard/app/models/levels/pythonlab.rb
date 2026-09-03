@@ -41,6 +41,7 @@ class Pythonlab < Level
     widget_view
     widget_view_allow_show_code
     ai_tutor_prompt_settings
+    generate_supplied_code
   )
 
   validate :has_correct_multiple_choice_answer?
@@ -59,6 +60,10 @@ class Pythonlab < Level
 
   def self.mini_apps
     [['None', nil], ['Neighborhood', 'neighborhood'], ['Theater', 'theater']]
+  end
+
+  def generate_fields
+    super.merge(generateSuppliedCode: generate_supplied_code)
   end
 
   def uses_lab2?

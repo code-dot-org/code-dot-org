@@ -123,3 +123,30 @@
   flex-direction: column;
   gap: 8px;
 }
+
+// Collapsed-by-default supplied-code editor on weblab2/pythonlab cards.
+.suppliedCode {
+  margin-top: 8px;
+
+  summary {
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  label {
+    display: block;
+    margin: 6px 0 4px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #555;
+  }
+
+  textarea {
+    width: 100%;
+    min-height: 120px;
+    font-family: monospace;
+    font-size: 12px;
+    box-sizing: border-box;
+  }
+}

@@ -136,6 +136,7 @@ export type LevelProperty =
   | 'long_instructions'
   | 'generate_outline'
   | 'generate_aichat_preset'
+  | 'generate_supplied_code'
   | 'panels'
   | 'mode'
   | 'dynamic_instructions'
