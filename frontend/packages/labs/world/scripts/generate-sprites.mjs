@@ -59,6 +59,10 @@ export const SPRITE_NAMES = [
   // was built out of `ground`, and a stack of grass-topped floor tiles reads
   // as a ladder of stripes rather than as something you cannot walk through.
   'wall',
+  // The player with a jetpack on, which is a different actor from the one in
+  // every other level: `player` is shared by the whole library and growing a
+  // pack would put one on the platformer's hero too.
+  'pilot',
   // Fuel, in two sizes. The Jetpack rule has a tank, and a tank wants
   // something to fill it with — a big can and a small one, because "how much
   // is this worth" has to be readable from across the room and a number
@@ -72,6 +76,10 @@ export const SPRITE_NAMES = [
 ];
 export const ANIMATION_SPECS = {
   coinSpin: {frames: 6, frameRate: 12},
+  // Fast, because a flame that flickers slowly reads as a flag.
+  pilotFly: {frames: 4, frameRate: 16},
+  // …and slow, because a climb is deliberate. Two rungs a second.
+  pilotClimb: {frames: 4, frameRate: 8},
   playerWalk: {frames: 4, frameRate: 8},
   switch: {frames: 6, frameRate: 12},
   shipThrust: {frames: 4, frameRate: 12},
@@ -166,6 +174,54 @@ function playerBody(c) {
   c.disc(20, 13, 2.6, [255, 255, 255]);
   c.disc(12, 13, 1.2, [20, 30, 50]);
   c.disc(20, 13, 1.2, [20, 30, 50]);
+}
+
+/**
+ * The jetpack itself: a tank either side, behind the body.
+ *
+ * Either side rather than on the back, because this actor faces the viewer —
+ * a pack drawn behind it would be a pack nobody ever sees. The red band is
+ * what makes two grey rectangles read as fuel rather than as arms.
+ */
+function pilotPack(c) {
+  for (const x of [1, 27]) {
+    c.roundRect(x, 8, 4, 15, 2, [92, 96, 108]);
+    c.rect(x, 10, 4, 3, [214, 72, 62]);
+  }
+}
+
+/** The pack, then the body over its inner edge — one silhouette, not three. */
+function pilotBody(c) {
+  pilotPack(c);
+  playerBody(c);
+}
+
+/**
+ * Two plumes, out of the bottom of the tanks.
+ *
+ * Drawn BEFORE the body so the tanks sit over the top of them, which is what
+ * makes the flame read as coming out of something rather than as hanging
+ * beneath it. `length` is what flickers.
+ */
+function pilotFlame(c, length) {
+  for (const x of [1, 27]) {
+    c.polygon(
+      [
+        [x, 20],
+        [x + 4, 20],
+        [x + 2, 22 + length],
+      ],
+      [255, 154, 48],
+    );
+    c.polygon(
+      [
+        [x + 1, 20],
+        [x + 3, 20],
+        [x + 2, 21 + length * 0.55],
+      ],
+      [255, 238, 160],
+    );
+  }
 }
 
 // ── The asteroids set ────────────────────────────────────────────────────────
@@ -450,6 +506,7 @@ const STATIC = {
     c.rect(0, 0, 2, 32, [30, 84, 44]); // and its two hard edges
     c.rect(30, 0, 2, 32, [30, 84, 44]);
   },
+  pilot: c => pilotBody(c),
   ladder(c) {
     // Two rails and two rungs. The rails reach both edges so a column of these
     // is one unbroken ladder; the rungs sit at 4 and 20, sixteen apart, which
@@ -529,6 +586,25 @@ const ANIMATION_FRAME = {
     // ship and the flicker reads as the flame cutting out.
     shipFlame(c, [11, 8, 10, 9][t]);
     shipHull(c);
+  },
+  // The jetpack lit. The flame flickers rather than pulsing evenly — a smooth
+  // in-and-out reads as breathing, not burning — and the shortest frame still
+  // clears the body, so the flicker is a flame guttering rather than one that
+  // goes out.
+  pilotFly(c, t) {
+    pilotFlame(c, [9, 5, 8, 6][t]);
+    pilotBody(c);
+  },
+  // Climbing: one arm up and the opposite leg down, and back. Four frames
+  // rather than two, so the reach has a middle and does not read as a twitch.
+  pilotClimb(c, t) {
+    pilotBody(c);
+    const reach = [0, 3, 6, 3][t];
+    const limb = [40, 78, 150];
+    c.rect(6, 6 - reach / 2, 4, 7, limb); // the arm that is reaching
+    c.rect(22, 3 + reach / 2, 4, 7, limb); // …and the one coming down
+    c.rect(11, 27, 4, 5 - reach / 2, limb); // legs, opposite the arms
+    c.rect(17, 27, 4, 2 + reach / 2, limb);
   },
   // The rock turning. An eighth of a circle per frame, seven sides.
   asteroidSpin(c, t, frames) {

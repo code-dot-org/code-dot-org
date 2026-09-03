@@ -64,15 +64,27 @@ describe('rules/climb.rule', () => {
   });
 
   it('keeps the climb itself out of a project’s hands', () => {
-    // Both flags are read-only, which is what keeps `starts climbing` and
-    // `stops climbing` honest — and what stops a project setting `climbing`
-    // in mid-air, which is a flight key with extra steps.
+    // The three that are read-only are the rule's own account of a climb in
+    // progress, which is what keeps `starts climbing` and `stops climbing`
+    // honest — and what stops a project setting `climbing` in mid-air, which
+    // is a flight key with extra steps.
     const own = meta.properties
       .filter(property => property.readonly)
       .map(property => property.id)
       .sort();
 
-    expect(own).toEqual(['climbing', 'climbing_up']);
+    expect(own).toEqual(['climbing', 'climbing_up', 'top_rung']);
+  });
+
+  it('leaves the two dials a level would turn', () => {
+    // How fast, and whether a climb pulls you on to the middle of the ladder —
+    // which is off for a wide one and on for a ladder in a one-tile gap.
+    const settable = meta.properties
+      .filter(property => !property.readonly)
+      .map(property => property.id)
+      .sort();
+
+    expect(settable).toEqual(['centers_on_the_ladder', 'climb_speed']);
   });
 
   it('asks the contact set rather than looking around', () => {

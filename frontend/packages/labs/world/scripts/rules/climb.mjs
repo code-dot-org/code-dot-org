@@ -1,21 +1,24 @@
 import {position, setPosition} from './builtins.mjs';
-import {contacts} from './collisions.mjs';
+import {collisionSizeOf, contacts} from './collisions.mjs';
 import {
   add,
   axisOf,
   countOf,
   defineRule,
+  extremeActor,
   filter,
   frameTime,
   give,
   hasTrait,
   keyDown,
+  minus,
   moduleFor,
   moreThan,
   n,
   no,
   not,
   note,
+  over,
   param,
   pick,
   pixelsPerUnit,
@@ -83,6 +86,16 @@ const rule = defineRule({
 // climb also ends by itself the moment the ladder does, which is what stepping
 // off the top is — there is no separate way to leave one.
 //
+// AND IT ENDS ON TOP OF THE LADDER RATHER THAN ABOVE IT, which is not tidiness.
+// Left to overshoot, a climber holding up at the top left the ladder, fell back
+// on to the top rung, was on a ladder again, climbed, left, fell — an endless
+// hop, one per frame the key was held, with \`starts falling\` and \`stops
+// falling\` narrating every one of them. So the frame that finds the ladder gone
+// puts the climber back down on the rung it last had hold of, at the height it
+// would rest there. Gravity then finds it already standing: nothing falls,
+// nothing lands, and holding up does nothing, because the top of a ladder is
+// not a ladder.
+//
 // IT WRITES DOWN THE SPEED IT CLIMBED AT, which looks redundant beside a
 // position it has already set and is the opposite. \`position before\` — which
 // Physics offers and half the library asks — is this frame's position less
@@ -126,6 +139,21 @@ const speed = climbs.number('climb speed', 2);
 const climbing = climbs.boolean('climbing', 'false', {readonly: true});
 // …and which way. Meaningless while `climbing` is false.
 const goingUp = climbs.boolean('climbing up', 'false', {readonly: true});
+// Whether a climb pulls the climber on to the middle of the ladder.
+//
+// On by default, and the default is the argument: a ladder in a gap one tile
+// wide is a thing you have to be lined up with, and lining yourself up while
+// falling is not a skill a level should be testing. With this the climb is a
+// commitment — the ladder holds your x for as long as you are on it, and
+// letting go of the key is how you leave.
+//
+// A setting rather than a fact, because a wide ladder (a rope net, a shaft you
+// can move about inside) is a real thing to want, and it is this switched off.
+const centers = climbs.boolean('centers on the ladder', 'true');
+// The highest rung this climb has had hold of, so that leaving the top has
+// somewhere to put the climber down. Read-only bookkeeping: a project setting
+// it would be telling the rule a lie about which ladder it is on.
+const topRung = climbs.actor('top rung', {readonly: true});
 
 export const Climbs = rule.traitRef('Climbs');
 
@@ -133,6 +161,17 @@ const startedClimbing = climbs.event(['starts climbing']);
 const stoppedClimbing = climbs.event(['stops climbing']);
 
 const rung = rule.local('rung', 'Actor');
+
+/** The rungs this actor is touching — the ladder, as far as it is concerned. */
+const ladderUnder = () =>
+  filter(rung, {
+    from: contacts.of(thisActor()),
+    where: hasTrait(rung.get(), CanBeClimbed),
+  });
+
+/** Half a box on the axis a climb travels. */
+const halfOf = who =>
+  over(axisOf('y', collisionSizeOf({sizeActor: who})), n(2));
 
 /**
  * Whether this actor is touching a ladder right now.
@@ -151,17 +190,7 @@ const onLadder = climbs.block({
   body: () => [
     note('`how many ACTORS` rather than `how many in`: a list of actors is'),
     note('its own type here, and the general list block cannot read one.'),
-    give(
-      moreThan(
-        countOf(
-          filter(rung, {
-            from: contacts.of(thisActor()),
-            where: hasTrait(rung.get(), CanBeClimbed),
-          }),
-        ),
-        n(0),
-      ),
-    ),
+    give(moreThan(countOf(ladderUnder()), n(0))),
   ],
 });
 
@@ -239,16 +268,92 @@ climbs.step('climb', 'adjust', [
         note('The ladder running out is what stepping off the top IS, so'),
         note('there is no separate block for it.'),
         when(
-          [[not(onLadder({}, thisActor())), end(thisActor())]],
           [
+            [
+              not(onLadder({}, thisActor())),
+              [
+                note('The ladder has run out. Going UP that means the top,'),
+                note('and the climber is put down on the rung it last held'),
+                note('rather than left in the air above it — see the header'),
+                note('on the hop that came of leaving it there. Going DOWN'),
+                note('it means the bottom, and falling off the bottom of a'),
+                note('ladder is just falling.'),
+                when([
+                  [
+                    goingUp.of(thisActor()),
+                    [
+                      note('A QUARTER PIXEL below the top, not exactly on'),
+                      note('it. Contacts are worked out from boxes that'),
+                      note('overlap, and boxes that merely share an edge do'),
+                      note('not — so a climber put down exactly on the'),
+                      note('surface is touching nothing, and there is'),
+                      note('nothing for Gravity to land it on.'),
+                      setPosition(
+                        thisActor(),
+                        position.x(thisActor()),
+                        add(
+                          minus(
+                            minus(
+                              position.y(topRung.of(thisActor())),
+                              halfOf(topRung.of(thisActor())),
+                            ),
+                            halfOf(thisActor()),
+                          ),
+                          n(0.25),
+                        ),
+                      ),
+                    ],
+                  ],
+                ]),
+                ...end(thisActor()),
+                note('…and a whisper of downward speed, which is the other'),
+                note('half of the same problem. Gravity lands a body by'),
+                note('asking whether it CROSSED a surface this frame, and'),
+                note('crossing is a question about where it WAS — which at'),
+                note('a dead stop is where it is. So the two together: a'),
+                note('quarter pixel below, moving slowly down, which reads'),
+                note('as a crossing and lands. The landing snaps it back to'),
+                note('the surface, so nothing on screen moves and neither'),
+                note('event is raised.'),
+                when([
+                  [
+                    goingUp.of(thisActor()),
+                    [
+                      velocity.set(
+                        thisActor(),
+                        vector(axisOf('x', velocity.of(thisActor())), n(0.5)),
+                      ),
+                    ],
+                  ],
+                ]),
+              ],
+            ],
+          ],
+          [
+            note('Which rung is highest, kept for the frame the ladder runs'),
+            note('out — by then the contact set no longer has it.'),
+            topRung.set(
+              thisActor(),
+              extremeActor(rung, {
+                from: ladderUnder(),
+                end: 'least',
+                key: position.y(rung.get()),
+              }),
+            ),
             note('Where this actor was at the top of the frame, plus a'),
             note('frame of climbing. Whatever gravity did to y since then is'),
             note('not consulted — see the header. Up is negative y, and the'),
             note('speed is units a second against a position in pixels, so'),
             note('this is the one place the two meet.'),
+            note('On to the middle of the ladder, unless the project says'),
+            note('otherwise — see `centers on the ladder`.'),
             setPosition(
               thisActor(),
-              position.x(thisActor()),
+              pick(
+                centers.of(thisActor()),
+                position.x(topRung.of(thisActor())),
+                position.x(thisActor()),
+              ),
               add(
                 axisOf(
                   'y',

@@ -23,7 +23,6 @@ import {
   note,
   over,
   param,
-  pick,
   rotated,
   shadow,
   thisActor,
@@ -321,38 +320,48 @@ rule.step('handleCollisions', 'react', [
         'Landing (or not) is also when we announce it: started falling, landed.',
       ),
       note('Unless this actor is on its way THROUGH the floor, in which'),
-      note('case there is nothing to land on and nothing to announce —'),
-      note('see `ignores ground`.'),
-      resting.set(
-        pick(
-          ignoresGround.of(each.get()),
-          no(),
-          landOnGround({faller: each.get(), frame: frameTime()}),
-        ),
-      ),
-      when(
+      note('case there is nothing to land on and nothing to say about it —'),
+      note('see `ignores ground`. The ANNOUNCEMENT is inside the guard too,'),
+      note('and that is the half it is easy to leave out: a climber whose'),
+      note('landing was skipped but whose "not resting" was not is a climber'),
+      note('told it has started falling, once, at the foot of every ladder.'),
+      when([
         [
+          not(ignoresGround.of(each.get())),
           [
-            resting.get(),
-            [
-              when([
+            resting.set(landOnGround({faller: each.get(), frame: frameTime()})),
+            when(
+              [
                 [
-                  falling.of(each.get()),
-                  [falling.set(each.get(), no()), stopsFalling({}, each.get())],
+                  resting.get(),
+                  [
+                    when([
+                      [
+                        falling.of(each.get()),
+                        [
+                          falling.set(each.get(), no()),
+                          stopsFalling({}, each.get()),
+                        ],
+                      ],
+                    ]),
+                  ],
                 ],
-              ]),
-            ],
+              ],
+              [
+                when([
+                  [
+                    not(falling.of(each.get())),
+                    [
+                      falling.set(each.get(), yes()),
+                      startsFalling({}, each.get()),
+                    ],
+                  ],
+                ]),
+              ],
+            ),
           ],
         ],
-        [
-          when([
-            [
-              not(falling.of(each.get())),
-              [falling.set(each.get(), yes()), startsFalling({}, each.get())],
-            ],
-          ]),
-        ],
-      ),
+      ]),
     ],
   }),
 ]);

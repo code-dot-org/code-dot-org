@@ -815,6 +815,27 @@ export function starterSprites(ids: readonly string[]) {
 }
 
 /** A stock animation shipped as a project file, exactly as an import leaves it. */
+/**
+ * Several animations, WITH the images their frames read.
+ *
+ * An animation document names a strip and reads squares out of it, so one
+ * copied in without its picture is a project holding an animation of nothing —
+ * which draws as a black square and says so nowhere. The starter lists the
+ * strip by hand beside the animation; anything using this need not.
+ */
+export function starterAnimations(
+  ids: readonly string[],
+): Record<string, StarterFile> {
+  const strips = ids.flatMap(
+    id => STOCK_ANIMATIONS.find(entry => entry.id === id)?.sprites ?? [],
+  );
+  return Object.assign(
+    {},
+    starterSprites(strips),
+    ...ids.map(id => starterAnimation(id)),
+  );
+}
+
 function starterAnimation(id: string): Record<string, StarterFile> {
   const animation = STOCK_ANIMATIONS.find(entry => entry.id === id);
   if (!animation) {

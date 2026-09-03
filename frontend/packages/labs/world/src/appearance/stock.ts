@@ -206,6 +206,13 @@ export const STOCK_SPRITES: readonly StockSprite[] = [
     dataUrl: image('fuelCanSmall'),
   },
   {
+    id: 'pilot',
+    name: 'Pilot',
+    description:
+      'The player with a jetpack on: a tank either side, so the pack is visible from the front.',
+    dataUrl: image('pilot'),
+  },
+  {
     id: 'ladder',
     name: 'Ladder',
     description:
@@ -260,6 +267,20 @@ export const STOCK_SPRITES: readonly StockSprite[] = [
     sheet: SQUARE_CELLS,
   },
   {
+    id: 'pilotFly',
+    name: 'Pilot Flying',
+    description: 'Four frames of the pilot with both jets lit, side by side.',
+    dataUrl: image('pilotFly'),
+    sheet: SQUARE_CELLS,
+  },
+  {
+    id: 'pilotClimb',
+    name: 'Pilot Climbing',
+    description: 'Four frames of the pilot reaching up a ladder, side by side.',
+    dataUrl: image('pilotClimb'),
+    sheet: SQUARE_CELLS,
+  },
+  {
     id: 'shipThrust',
     name: 'Ship Thrusting',
     description: 'Four frames of the ship with its engine lit, side by side.',
@@ -306,6 +327,26 @@ export const STOCK_ANIMATIONS: readonly StockAnimation[] = [
     document: {
       type: 'animation',
       animations: {switchFlip: strip('switch', 6, 12, false)},
+    },
+  },
+  {
+    id: 'pilotFly',
+    name: 'Pilot Flying',
+    description: 'A jetpack burning, for while it is switched on.',
+    sprites: ['pilotFly'],
+    document: {
+      type: 'animation',
+      animations: {pilotFly: strip('pilotFly', 4, 16)},
+    },
+  },
+  {
+    id: 'pilotClimb',
+    name: 'Pilot Climbing',
+    description: 'Hand over hand up a ladder, for while a climb lasts.',
+    sprites: ['pilotClimb'],
+    document: {
+      type: 'animation',
+      animations: {pilotClimb: strip('pilotClimb', 4, 8)},
     },
   },
   {

@@ -2566,6 +2566,79 @@ describe('Climbing', () => {
     expect(height(climber)).toBeCloseTo(start, 1);
   });
 
+  it('stops ON the top rung rather than above it', () => {
+    // The endless hop. Left in the air above the ladder, a climber holding up
+    // fell back on to the top rung, was on a ladder again, climbed, left,
+    // fell — once per frame, with `starts falling` and `stops falling`
+    // narrating all of it.
+    const {world, climber, rungs} = ladder();
+    const said: string[] = [];
+    for (const event of ['StartsFallingEvent', 'StopsFallingEvent'] as const) {
+      (climber as {on(e: unknown, f: () => void): void}).on(
+        of('rules/gravity', event),
+        () => said.push(event),
+      );
+    }
+
+    // Long enough to reach the top twice over, with the key never let go.
+    up(world, climber);
+    run(world, 3);
+
+    // The top rung is 32 tall centred at 80, so its surface is 64 and a
+    // 16-tall climber rests at 56.
+    expect(height(rungs[3])).toBe(80);
+    expect(height(climber)).toBeCloseTo(56, 0);
+    expect(said).toEqual([]);
+  });
+
+  it('will not climb the top of a ladder, because it is not one', () => {
+    // …and the other half of the same fix: standing up there, the key does
+    // nothing, so the hop cannot restart by another route.
+    const {world, climber} = ladder();
+    up(world, climber);
+    run(world, 3);
+    const onTop = height(climber);
+
+    up(world, climber);
+    run(world, 0.5);
+
+    expect(height(climber)).toBeCloseTo(onTop, 0);
+  });
+
+  it('pulls the climber on to the middle of the ladder', () => {
+    // A ladder in a one-tile gap is a thing you would otherwise have to line
+    // yourself up with, while falling. The rungs are at x = 100.
+    const {world, climber} = ladder();
+    climber.set(PositionProperty, at(108, 176) as never);
+    run(world, 0.2);
+
+    up(world, climber);
+    run(world, 0.3);
+
+    expect(
+      (climber as {get(p: unknown): Vector}).get(PositionProperty).x,
+    ).toBeCloseTo(100, 1);
+  });
+
+  it('leaves the climber where it is when told not to centre it', () => {
+    // A wide ladder — a rope net, a shaft you can move about inside — is this
+    // switched off, and it has to actually be switchable.
+    const {world, climber} = ladder();
+    climber.set(
+      of('rules/climb', 'CentersOnTheLadderProperty'),
+      false as never,
+    );
+    climber.set(PositionProperty, at(108, 176) as never);
+    run(world, 0.2);
+
+    up(world, climber);
+    run(world, 0.3);
+
+    expect(
+      (climber as {get(p: unknown): Vector}).get(PositionProperty).x,
+    ).toBeCloseTo(108, 1);
+  });
+
   it('lets go by itself when the ladder runs out', () => {
     // Stepping off the top is not a separate block: the climb ends when there
     // is no longer a ladder to be on, and gravity has the actor back.

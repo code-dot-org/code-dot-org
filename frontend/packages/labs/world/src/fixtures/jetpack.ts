@@ -44,7 +44,13 @@
 // phases 2 and 3). It is the smallest thing that plays.
 
 import {progressBarDrawing} from '../actors/stock/progressBar';
-import {stack, starterSprites, useTrait, type ProjectSpec} from '../constants';
+import {
+  stack,
+  starterAnimations,
+  starterSprites,
+  useTrait,
+  type ProjectSpec,
+} from '../constants';
 import {
   arrowsRule,
   climbRule,
@@ -225,6 +231,27 @@ const refuel = (canKind: string, amount: number, y: number) => ({
   },
 });
 
+/** `play animation ⟨id⟩` — what a moment looks like. */
+const playAnimation = (animation: string) => ({
+  type: 'world_play_animation',
+  fields: {ANIMATION: animation},
+});
+
+/** …and back to the still picture, which is what stopping one looks like. */
+const still = () => ({
+  type: 'world_set_sprite',
+  fields: {SPRITE: 'pilot.png'},
+});
+
+/** `when ⟨this actor⟩ ⟨event⟩ → ⟨what it looks like⟩`. */
+const looks = (event: string, body: object, y: number) => ({
+  type: `world_on_${event}`,
+  x: 20,
+  y,
+  inputs: {ACTOR: me()},
+  next: {block: body},
+});
+
 const PILOT_ACTOR = JSON.stringify({
   blocks: {
     blocks: [
@@ -247,7 +274,7 @@ const PILOT_ACTOR = JSON.stringify({
             // a trait, so this is the whole of it (`rules/climb`).
             useTrait('Climbing#ClimbsWithArrowKeysTrait'),
             useTrait('Collection#CollectsTrait'),
-            {type: 'world_set_sprite', fields: {SPRITE: 'player.png'}},
+            {type: 'world_set_sprite', fields: {SPRITE: 'pilot.png'}},
             // Enough to get ON to a single tile and no more, which is what
             // "a weak hop" has to mean if it is to be any use: the default of
             // 5 clears four tiles and would make half the ledges reachable
@@ -312,6 +339,14 @@ const PILOT_ACTOR = JSON.stringify({
       },
       refuel('actors/fuelCan', FULL_CAN, 640),
       refuel('actors/fuelSmall', SMALL_CAN, 760),
+      // The four moments the two rules raise, and what they are FOR. Neither
+      // rule names a picture — a jetpack does not know it has a flame — so
+      // this is where the project says what flying and climbing look like,
+      // and it is four handlers and nothing else.
+      looks('Jetpack_StartsFlyingEvent', playAnimation('pilotFly'), 880),
+      looks('Jetpack_StopsFlyingEvent', still(), 1000),
+      looks('Climbing_StartsClimbingEvent', playAnimation('pilotClimb'), 1120),
+      looks('Climbing_StopsClimbingEvent', still(), 1240),
     ],
   },
 });
@@ -494,7 +529,7 @@ const JETPACK_WORLD = JSON.stringify({
 });
 
 export const JETPACK_SPEC: ProjectSpec = {
-  folders: ['worlds', 'actors', 'rules', 'maps', 'sprites'],
+  folders: ['worlds', 'actors', 'rules', 'maps', 'sprites', 'animations'],
   files: {
     main: {
       name: 'main.world',
@@ -619,13 +654,14 @@ export const JETPACK_SPEC: ProjectSpec = {
       folderId: 'rules',
     },
     ...starterSprites([
-      'player',
+      'pilot',
       'ground',
       'wall',
       'ladder',
       'fuelCan',
       'fuelCanSmall',
     ]),
+    ...starterAnimations(['pilotFly', 'pilotClimb']),
   },
   open: ['main'],
 };
