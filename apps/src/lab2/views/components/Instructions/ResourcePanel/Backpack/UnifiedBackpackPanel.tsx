@@ -305,7 +305,10 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
             <summary className={moduleStyles.unsupportedSummary}>
               <span className={moduleStyles.unsupportedToggle}>
                 <Typography variant="body4" gutterBottom>
-                  <Typography variant="strong">
+                  <Typography
+                    variant="strong"
+                    className={moduleStyles.unsupportedText}
+                  >
                     {`Not supported in this lab (${unsupportedFiles.length})`}
                   </Typography>
                 </Typography>

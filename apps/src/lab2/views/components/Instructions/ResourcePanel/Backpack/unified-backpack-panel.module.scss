@@ -48,7 +48,7 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 4px 0;
+  padding: 10px 0;
   // Hide the native disclosure triangle; the chevron below stands in for it.
   list-style: none;
   // Confine the hit area to the label, so the lines are neither hoverable nor
@@ -121,4 +121,8 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+.unsupportedText {
+  font-size: 12px;
 }
