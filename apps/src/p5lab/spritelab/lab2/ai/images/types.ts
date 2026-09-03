@@ -31,8 +31,16 @@ export interface ImageGenerationMetadata {
   prompt: string;
   imageType: ImageType;
   style: ImageStyle;
-  /** Sending the same seed and prompt again asks for the same image. */
-  seed: number;
+  /**
+   * Which model drew it. Absent on images generated before there was a
+   * choice, which all came from the default; see modelHelpers.
+   */
+  model?: string;
+  /**
+   * Sending the same seed and prompt again asks for the same image. Absent
+   * when the model that drew it cannot replay a seed.
+   */
+  seed?: number;
   /** Sampling wildness the user chose; absent = the service default. */
   temperature?: number;
   /** True when the image was made by modifying its previous version. */

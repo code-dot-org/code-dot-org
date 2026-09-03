@@ -85,6 +85,11 @@ experiments.NEW_PREVIEW_DOMAIN = 'new-preview-domain';
 experiments.STUDENT_SCRAPBOOK = 'student-scrapbook';
 // Render the Teacher Panel inside the TA drawer on level pages.
 experiments.TA_TEACHER_PANEL = 'ta-teacher-panel';
+// Show the image-model choice in Sprite Lab 2's image dialog, for playtesting
+// one model against another. Enable for a single page load with
+// ?spritelab-image-model=1, or for the session with
+// ?enableExperiments=spritelab-image-model.
+experiments.SPRITELAB_IMAGE_MODEL = 'spritelab-image-model';
 
 /**
  * Get our query string. Provided as a method so that tests can mock this.
