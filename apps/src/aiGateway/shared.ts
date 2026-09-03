@@ -8,6 +8,12 @@ import {
 
 export const AI_GATEWAY_URL = `https://ai-gateway.code.org`;
 
+/** Wire payloads carry binary as base64; every caller wants the bytes. */
+export const base64ToUint8Array = (base64: string): Uint8Array => {
+  const binaryString = atob(base64);
+  return Uint8Array.from(binaryString, char => char.charCodeAt(0));
+};
+
 export interface GatewayAccessToken {
   /** Signed RS256 JWT, valid for one minute, sent with the gateway request. */
   token: string;
