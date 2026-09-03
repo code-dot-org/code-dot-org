@@ -820,6 +820,10 @@ Dashboard::Application.routes.draw do
         get :user_progress, action: 'user_progress_form', as: 'user_progress_form'
         get :user_projects, action: 'user_projects_form', as: 'user_projects_form'
         get :user_sections, action: 'user_sections_form', as: 'user_sections_form'
+        get :cap_actions, action: 'cap_actions_form', as: 'cap_actions_form'
+        post :update_cap_state
+        post :grant_cap_permission
+        post :force_cap_permission
         put :user_project, action: 'user_project_restore_form', as: 'user_project_restore_form'
         get :delete_progress, action: 'delete_progress_form', as: 'delete_progress_form'
         post :delete_progress
