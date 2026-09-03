@@ -136,6 +136,44 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     assert_equal [], response_data['cfu_levels']
   end
 
+  test "cfu_levels endpoint matches real-world CFU progression variants" do
+    matching_progressions = [
+      'Assessment: Check For Understanding: AP Practice',
+      'Check For Understanding - DNS',
+      'Check for your understanding',
+      'Checking for Understanding',
+      'Check for understanding (diff between 3 and 4)',
+      'Chemical Change CFU',
+      'CFU',
+    ]
+
+    matching_levels = matching_progressions.map.with_index do |progression, i|
+      level = create(:level, name: "Matching Level #{i}", type: 'Multi')
+      create(:script_level, script: @unit, lesson: @lesson1, progression: progression, levels: [level])
+      level
+    end
+
+    non_matching_progressions = [
+      'Check In',
+      'Checking for Palindromes',
+      'Understanding AI',
+      'Check Your Work',
+    ]
+
+    non_matching_progressions.each_with_index do |progression, i|
+      level = create(:level, name: "Non-Matching Level #{i}", type: 'Multi')
+      create(:script_level, script: @unit, lesson: @lesson1, progression: progression, levels: [level])
+    end
+
+    get :cfu_levels, params: {lesson_id: @lesson1.id}
+
+    assert_response :ok
+    response_data = JSON.parse(response.body)
+    cfu_ids = response_data['cfu_levels'].map {|l| l['id']}
+
+    assert_equal matching_levels.map(&:id).sort, cfu_ids.sort
+  end
+
   test "cfu_levels endpoint returns empty array when script_level has no progression" do
     regular_level = create(:level, name: 'Regular Level', type: 'Multi')
     create(:script_level, script: @unit, lesson: @lesson1, progression: nil, levels: [regular_level])
@@ -873,7 +911,7 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
   end
 
   test "student_code endpoint returns 200 with studentCode shape when student belongs to current teacher" do
-    pythonlab_level = create(:pythonlab, name: 'Test Pythonlab Level')
+    pythonlab_level = create(:pythonlab, name: 'Test Pythonlab Level', long_instructions: 'Write some code.')
     create(:script_level, script: @unit, lesson: @lesson1, levels: [pythonlab_level])
 
     student = create(:student)
@@ -888,6 +926,33 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     response_data = JSON.parse(response.body)
     assert response_data.key?('studentCode'), "response should include 'studentCode' key"
     assert_equal fake_code, response_data['studentCode']
+    assert_equal 'Write some code.', response_data['instructions']
+  end
+
+  test "exemplar_code endpoint returns exemplar source and instructions" do
+    stub_encryption_key = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+    CDO.stubs(:properties_encryption_key).returns(stub_encryption_key)
+
+    sign_in(create(:authorized_teacher))
+    pythonlab_level = create(
+      :pythonlab,
+      name: 'Test Pythonlab Level',
+      long_instructions: 'Write some code.',
+      exemplar_sources: {'main.py' => 'print("hello")'}
+    )
+    create(:script_level, script: @unit, lesson: @lesson1, levels: [pythonlab_level])
+
+    get :exemplar_code, params: {lesson_id: @lesson1.id}
+
+    assert_response :ok
+    response_data = JSON.parse(response.body)
+    assert_equal 'Write some code.', response_data['instructions']
+  end
+
+  test "exemplar_code endpoint returns forbidden for a non-verified-instructor" do
+    get :exemplar_code, params: {lesson_id: @lesson1.id}
+
+    assert_response :forbidden
   end
 
   test "student_code endpoint returns forbidden when student does not belong to current teacher" do

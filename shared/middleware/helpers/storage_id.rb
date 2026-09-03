@@ -4,15 +4,6 @@ require 'base64'
 def create_storage_id_cookie
   storage_id = create_storage_id_for_user(nil)
 
-  if defined?(Dashboard::Application)
-    begin
-      ProjectStorage::AnonymousGeoRecordingJob.perform_later(storage_id, request.ip)
-    rescue StandardError => exception
-      raise exception unless rack_env?(:production)
-      Observability::Errors.capture_exception(exception)
-    end
-  end
-
   response.set_cookie(
     storage_id_cookie_name,
     {

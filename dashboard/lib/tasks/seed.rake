@@ -76,14 +76,8 @@ namespace :seed do
   SCRIPTS_GLOB = Dir.glob("#{CURRICULUM_CONTENT_DIR}/config/scripts_json/**/*.script_json").sort.flatten.freeze
   SPECIAL_UI_TEST_SCRIPTS = Dir.glob("#{CURRICULUM_CONTENT_DIR}/test/ui/config/scripts_json/*.script_json").sort.freeze
   UI_TEST_SCRIPTS = SPECIAL_UI_TEST_SCRIPTS + %w(
-    allthehiddenthings
-    allthelessonplans
-    alltheplcthings
     alltheselfpacedplthings
     allthethings
-    allthettsthings
-    frozen
-    mc
   ).map {|script| "#{CURRICULUM_CONTENT_DIR}/config/scripts_json/#{script}.script_json"}.freeze
 
   # To improve adhoc start time, we only seed the most recent year of our common curriculum
@@ -254,12 +248,7 @@ namespace :seed do
     # seed those courses that are needed for UI tests
     %w(
       allthethingscourse
-      allthelessonplans
       alltheselfpacedplthings
-      allthettsthings
-      frozen
-      mc
-      original-allthelessonplans-course
       original-allthethings-course
       original-alltheselfpacedplthings-course
     ).each do |course_name|

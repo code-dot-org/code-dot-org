@@ -3,9 +3,37 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-<h1>Project Rubric</h1>
+<h1>Evidence of Thinking, Not Just a Working App</h1>
 
-<p class="directions" style="background-color: #D5EFFF; color: #06338D; border-radius: 10px; padding: 12px 16px;">Use the dropdowns below to review each category in full before grading Mood Playlist Picker.</p>
+<p>In a classroom where AI writes a lot of the code, a working app on its own doesn't tell you much about what a student actually understood. That's why this project has four separate layers, and why the rubric grades them separately too:</p>
+
+<div style="display: flex; flex-direction: column; gap: 10px; margin: 20px 0;">
+
+  <div style="background-color: #CCF1D0; border-radius: 10px; padding: 14px 18px;">
+    <p style="margin: 0;"><b style="color: #003F25;">Pseudocode:</b> shows their planning, before AI touched anything</p>
+  </div>
+
+  <div style="background-color: #FBDAE8; border-radius: 10px; padding: 14px 18px;">
+    <p style="margin: 0;"><b style="color: #7D0C3D;">Code:</b> shows what they actually built or accepted from AI</p>
+  </div>
+
+  <div style="background-color: #D5EFFF; border-radius: 10px; padding: 14px 18px;">
+    <p style="margin: 0;"><b style="color: #06338D;">Working app:</b> shows whether all of that thinking actually paid off</p>
+  </div>
+
+  <div style="background-color: #E4E2F8; border-radius: 10px; padding: 14px 18px;">
+    <p style="margin: 0;"><b style="color: #1F1976;">Reflection:</b> shows how they explain their own choices</p>
+  </div>
+
+</div>
+
+<p>Each layer is its own piece of evidence. A polished app built on thin planning tells a different story than a rough app built on a thoughtful plan, and the rubric is set up to catch that difference. As you look at the project below, resist the urge to jump straight to the working app. Read all four layers the way you'll want your students' work read.</p>
+
+---
+
+<h2>Project Rubric</h2>
+
+<p class="directions" style="background-color: #D5EFFF; color: #06338D; border-radius: 10px; padding: 12px 16px;">Click each category below to expand it and review all four tiers.</p>
 
 <details style="background-color: #F7F7FB; border: 1px solid #E4E2F8; border-radius: 10px; padding: 14px 18px; margin-bottom: 10px;">
 <summary style="cursor: pointer; font-weight: bold; color: #1F1976;">Algorithmic Planning</summary>
@@ -57,13 +85,8 @@ markdown <<MARKDOWN
 </div>
 </details>
 
-For this exercise, you'll practice grading just two of these five categories: **Algorithmic Planning and Conditional Logic Implementation**, using Mood Playlist Picker from the last level. Pay attention to whether the pseudocode, the working app, and the code actually agree with each other, they don't have to score the same.
 
 ---
-
-
-<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
-<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/practice-grading-rubric.html" width="100%" height="820" style="border:none;" title="Practice grading rubric: interactive rubric with two rows for algorithmic planning and conditional logic implementation"></iframe>
-</div>
+<p>On the next page, you'll see a snippet of a sample project. There's nothing to click through or grade there, just read it with these layers in mind, and notice how each one tells you something the others don't.</p>
 
 MARKDOWN

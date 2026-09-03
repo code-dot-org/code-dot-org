@@ -1,1 +1,0 @@
-../../../../../../dashboard/engines/hoc_legacy/hoc_legacy.gemspec

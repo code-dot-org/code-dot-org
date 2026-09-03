@@ -1,0 +1,16 @@
+name 'aif-y2-machine-learning-fundamentals-preassessment-q14-2026'
+
+wrong 'Testing a model to see how it behaves in unexpected situations'
+wrong "Considering if a model is safe to use by different groups of people"
+wrong 'Deciding whether a model is ready to be released to the public'
+right 'Making a model more efficient'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Which of the following would NOT be a primary part of the role of an AI safety engineer?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 11: Evaluating the Impact of Models
+MARKDOWN

@@ -1,0 +1,11 @@
+name 'HoAI26-Choice-Background'
+display_name 'Choice Progression: Background'
+description "Create your background"
+uses_lab2
+
+sublevels
+level 'HoAI26-Playtest1-Platform-Background'
+level 'HoAI26-Playtest1-Story-Background'
+level 'HoAI26-Playtest1-Game2-Background'
+
+navigation_type 'next_sublevel'

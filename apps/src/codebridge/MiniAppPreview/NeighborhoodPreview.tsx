@@ -1,5 +1,6 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
+import {stripAnsiSequences} from '@codebridge/Console/MessageHelpers';
 import {
   DEFAULT_FOLDER_ID,
   MAZE_FILE_NAME,
@@ -16,7 +17,10 @@ import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
 import NeighborhoodVisualization from '@cdo/apps/miniApps/neighborhood/NeighborhoodVisualization';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {DEFAULT_MINI_APP_SIZE} from '../Workspace/constants';
+import {
+  DEFAULT_MINI_APP_HEIGHT,
+  DEFAULT_MINI_APP_WIDTH,
+} from '../Workspace/constants';
 import {scaleMiniApp} from '../Workspace/outputHelpers';
 
 import moduleStyles from './mini-app-preview.module.scss';
@@ -35,12 +39,14 @@ const NeighborhoodPreview: React.FunctionComponent<
     return findFile(source, MAZE_FILE_NAME, DEFAULT_FOLDER_ID)?.contents;
   });
   const dispatch = useAppDispatch();
+  const isRunning = useAppSelector(state => state.lab2System.isRunning);
   const isVertical = config.activeLayout === 'vertical';
   const containerRef = useRef<HTMLDivElement>(null);
 
   const scaleNeighborhood = useCallback(() => {
-    const width = containerRef.current?.clientWidth || DEFAULT_MINI_APP_SIZE;
-    const height = containerRef.current?.clientHeight || DEFAULT_MINI_APP_SIZE;
+    const width = containerRef.current?.clientWidth || DEFAULT_MINI_APP_WIDTH;
+    const height =
+      containerRef.current?.clientHeight || DEFAULT_MINI_APP_HEIGHT;
     scaleMiniApp(height, width);
   }, []);
 
@@ -75,11 +81,20 @@ const NeighborhoodPreview: React.FunctionComponent<
         .getConsoleManager()
         ?.writePartialLine(message);
 
+    // Terminal lines carry ANSI codes, and an image is an escape sequence
+    // wrapping its whole base64 payload.
+    const getConsoleLines = () =>
+      CodebridgeRegistry.getInstance()
+        .getConsoleManager()
+        ?.getTerminalLines()
+        .map(stripAnsiSequences) ?? [];
+
     const neighborhoodRef = new Neighborhood(
       onOutputMessage,
       onNewlineMessage,
       isRunning => dispatch(setIsRunning(isRunning)),
-      onPartialLineMessage
+      onPartialLineMessage,
+      getConsoleLines
     );
     CodebridgeRegistry.getInstance().setNeighborhood(neighborhoodRef);
     return neighborhoodRef;
@@ -138,7 +153,11 @@ const NeighborhoodPreview: React.FunctionComponent<
 
   return (
     <div ref={containerRef} className={moduleStyles.miniAppContainer}>
-      <NeighborhoodVisualization useProtectedDiv={false} />
+      <NeighborhoodVisualization
+        useProtectedDiv={false}
+        backgroundClassName={moduleStyles.neighborhoodBackground}
+        isRunning={isRunning}
+      />
     </div>
   );
 };

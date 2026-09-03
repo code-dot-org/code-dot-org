@@ -79,6 +79,10 @@ module SharedConstants
 
   PL_GRADE_VALUE = 'pl'.freeze
 
+  # App type key for the backpack that belongs to no lab, as opposed to the
+  # backpacks keyed by the app type of a single lab.
+  UNIVERSAL_APP_TYPE = 'universal'.freeze
+
   # The set of artist autorun options.
   ARTIST_AUTORUN_OPTIONS = OpenStruct.new(
     {
@@ -740,7 +744,7 @@ module SharedConstants
   # Current song manifest file name for Dance Party. Note that different manifests
   # can be tested using query params (?manifest=...), but once this value is updated
   # the default manifest will change for all users.
-  DANCE_SONG_MANIFEST_FILENAME = 'songManifest2025_v1.json'
+  DANCE_SONG_MANIFEST_FILENAME = 'songManifest2026.json'
 
   # We should always specify a version for the LLM so the results don't unexpectedly change.
   # reference: https://platform.openai.com/docs/models/gpt-3-5.
@@ -857,13 +861,28 @@ module SharedConstants
   AI_CHAT_MODEL_IDS = {
     MISTRAL: "gen-ai-mistral-7b-inst-v01",
     CHATGPT: "gpt-4o-mini",
-    LEARNLM: "learnlm-2.0-flash-experimental",
     GEMINI_2_0_FLASH: "gemini-2.0-flash",
     GEMINI_2_5_FLASH: "gemini-2.5-flash",
     GEMINI_2_5_FLASH_LITE: "gemini-2.5-flash-lite",
     GEMINI_2_5_PRO: "gemini-2.5-pro",
     GEMINI_2_5_FLASH_IMAGE: "gemini-2.5-flash-image",
   }
+
+  # Models served via the Google Gemini API. This is about routing — which
+  # provider a model is requested from (see modelHelpers, shouldUseAiGateway) —
+  # not about who may use it.
+  AI_CHAT_GEMINI_MODEL_IDS = [
+    AI_CHAT_MODEL_IDS[:GEMINI_2_0_FLASH],
+    AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH],
+    AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH_LITE],
+    AI_CHAT_MODEL_IDS[:GEMINI_2_5_PRO],
+    AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH_IMAGE],
+  ].freeze
+
+  # Models only available to users in the US
+  # (see User::AiAccessible#can_use_aichat_model?). Kept separate from the list
+  # above, which is about which provider serves a model.
+  AI_CHAT_US_ONLY_MODEL_IDS = AI_CHAT_GEMINI_MODEL_IDS
 
   AI_CHAT_CLIENT_TYPES = {
     AI_CHAT_LAB: "ai-chat-lab",
@@ -983,6 +1002,7 @@ module SharedConstants
   BUBBLE_CHOICE_NAVIGATION_TYPES = {
     PARENT: 'parent',
     NEXT_LEVEL: 'next_level',
+    NEXT_SUBLEVEL: 'next_sublevel',
   }
 
   # Web Lab 2 and App Lab projects use the same list of allowed hostnames.

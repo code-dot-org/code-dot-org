@@ -45,7 +45,6 @@ class AichatRequestChatCompletionJob < ApplicationJob
   private def openai_or_gemini?(model_id)
     [
       SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT],
-      SharedConstants::AI_CHAT_MODEL_IDS[:LEARNLM],
       SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_0_FLASH],
       SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH],
       SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_PRO],
@@ -68,7 +67,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
       rescue OpenaiUserInputResponseTimeout => exception
         return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_TIMEOUT], exception.message]
       rescue AichatAiHelper::ModelRateLimitedError => exception
-        Honeybadger.notify(exception, context: {request_id: request.id, model: request.model_customizations['selectedModelId'], client_type: request.model_customizations['clientType'], level_id: request.level_id})
+        Observability::Errors.report(exception, context: {request_id: request.id, model: request.model_customizations['selectedModelId'], client_type: request.model_customizations['clientType'], level_id: request.level_id})
         return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_RATE_LIMITED], nil]
       end
     else

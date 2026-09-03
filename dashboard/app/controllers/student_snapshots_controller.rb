@@ -229,7 +229,10 @@ class StudentSnapshotsController < ApplicationController
 
     if level
       student_code_data = get_student_code(params[:student_id], level, params[:unit_id])
-      render json: {studentCode: student_code_data[:student_code]}
+      render json: {
+        studentCode: student_code_data[:student_code],
+        instructions: level.get_localized_property('long_instructions') || level.long_instructions
+      }
     else
       render json: {studentCode: nil}
     end
@@ -259,7 +262,8 @@ class StudentSnapshotsController < ApplicationController
     render json: {
       id: level.id,
       name: level.name,
-      exemplarSources: level.exemplar_sources
+      exemplarSources: level.exemplar_sources,
+      instructions: level.get_localized_property('long_instructions') || level.long_instructions
     }
   end
 
@@ -288,9 +292,15 @@ class StudentSnapshotsController < ApplicationController
   end
 
   # Returns the script_levels in a lesson that correspond to CFU progressions.
+  # Matches variants seen in curriculum data: "Check For/Your Understanding",
+  # "Check for your Understanding", "Checking for Understanding", suffixed/
+  # prefixed forms (e.g. "Check For Understanding - DNS", "Assessment: Check
+  # For Understanding: AP Practice"), and the bare
+  # "CFU" abbreviation.
+  CFU_PROGRESSION_REGEX = /\bcheck(?:s|ing)?[\s-]+(?:for[\s-]+)?(?:your[\s-]+)?understanding\b|\bCFU\b/i
   private def cfu_script_levels_for(lesson)
     lesson.script_levels.select do |script_level|
-      script_level.progression&.match?(/^Check\s+(Your|For)\s+Understanding$/i)
+      script_level.progression&.match?(CFU_PROGRESSION_REGEX)
     end
   end
 

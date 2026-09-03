@@ -42,9 +42,10 @@
       "openFiles": [
         "0"
       ]
-    }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqt1B/KhbvAqAAx\nrRKk5WlVPLFT3XRbSx8NS/ToF/J7hB5blJo3vuYZGcAURAFPQAavmpAAaRZg\no8YufnygAbge1gL9F5QDc+H/6hQ1ZPOqe7uunBhzS7QDTsdKG1xLB0fXUaAG\nDKaW4Jy5UlAAfoBWWlw+7KcCYcOEk9A5NxHMirY4KMDV3G1D9+FdnwK4hB0r\nAQtu36vwJgzZj0SIWq1tte3y5zszIQInyInBj4ip2Z8n9YqSSDs05/iQcPG1\njkbokVTENZluLxUne7zEAlGDNYCx6pTaLuaWi6LLGITL5Cw0hepaIb5BuNFD\nr7njXx5ZRz2kO/Nbi01j36jqRt2fJo2EucqT7LXIEaByP4RuJddA6iqEaMbD\nqK++KBJ/PMWzWJqXu1YuEuqZyB8z/owR\n"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-28 20:49:39 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 20:50:21 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 20:50:23 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 20:55:20 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-28 20:49:39 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 20:50:21 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 20:50:23 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 20:55:20 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-23 15:27:23 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

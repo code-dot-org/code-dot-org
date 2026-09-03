@@ -147,7 +147,7 @@ class RegistrationsController < Devise::RegistrationsController
   def create
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do |retries, exception|
       if retries > 0
-        Honeybadger.notify(
+        Observability::Errors.report(
           error_class: 'User creation required multiple attempts',
           error_message: "retry ##{retries} failed with exception: #{exception}"
         )
@@ -170,7 +170,7 @@ class RegistrationsController < Devise::RegistrationsController
         rescue => exception
           # If we can't add the user to the welcome series, we don't want to disrupt
           # sign up, but we do want to know about it.
-          Honeybadger.notify(
+          Observability::Errors.report(
             exception,
             error_message: 'Failed to add user to welcome series',
             context: {
@@ -386,6 +386,7 @@ class RegistrationsController < Devise::RegistrationsController
   def set_user_type
     return head(:bad_request) if params[:user].nil?
     return head(:bad_request) if params[:user][:user_type].nil?
+    return head(:bad_request) unless current_user.can_change_own_user_type?
 
     previous_user_type = current_user.user_type
 

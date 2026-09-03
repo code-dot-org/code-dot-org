@@ -27,6 +27,26 @@ class BackpackTest < ActiveSupport::TestCase
     assert project["hidden"]
   end
 
+  test 'find_or_create creates a backpack with no game when game_id is nil' do
+    Backpack.stubs(:storage_id_for_user_id).with(@user.id).returns(@storage_id)
+    backpack = Backpack.find_or_create(@user.id, nil, 'fake-ip')
+    assert backpack.project_id > 0
+    assert_nil backpack.game_id
+  end
+
+  test 'find_or_create serializes creation of the backpack with no game on the user row' do
+    Backpack.stubs(:storage_id_for_user_id).with(@user.id).returns(@storage_id)
+    User.any_instance.expects(:with_lock).once.yields
+    Backpack.find_or_create(@user.id, nil, 'fake-ip')
+  end
+
+  test 'find_or_create returns the existing backpack with no game without locking' do
+    Backpack.stubs(:storage_id_for_user_id).with(@user.id).returns(@storage_id)
+    backpack = Backpack.find_or_create(@user.id, nil, 'fake-ip')
+    User.any_instance.expects(:with_lock).never
+    assert_equal(backpack, Backpack.find_or_create(@user.id, nil, 'fake-ip'))
+  end
+
   test 'find_or_create returns existing backpack if it exists' do
     Backpack.stubs(:storage_id_for_user_id).with(@user.id).returns(@storage_id)
     backpack = Backpack.find_or_create(@user.id, @game_id, 'fake-ip')

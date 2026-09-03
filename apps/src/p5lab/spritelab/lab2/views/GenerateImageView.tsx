@@ -17,17 +17,19 @@ import {
   GeneratedImageResult,
   generateImage,
   GenerateImageOptions,
-} from '../ai/items/itemGeneration';
-import {IMAGE_NAME_MAX_LENGTH, sanitizeImageName} from '../imageReferences';
+} from '../ai/images/imageGeneration';
 import {
+  IMAGE_STYLE_LABELS,
+  IMAGE_TYPE_LABELS,
+  IMAGE_TYPES,
   ImageGenerationMetadata,
-  ITEM_STYLE_LABELS,
-  ITEM_TYPE_LABELS,
-  SpriteLab2ItemStyle,
-  SpriteLab2ItemType,
-} from '../types';
+  ImageStyle,
+  ImageType,
+} from '../ai/images/types';
+import {IMAGE_NAME_MAX_LENGTH, sanitizeImageName} from '../imageReferences';
 
 import DeleteImageButton from './DeleteImageButton';
+import TemperatureBot from './TemperatureBot';
 
 import moduleStyles from './image-details-dialog.module.scss';
 
@@ -46,15 +48,29 @@ const TEMPERATURE_LEVEL_DEFAULT = 5;
 const levelToTemperature = (level: number) =>
   (level / TEMPERATURE_LEVEL_MAX) * 2;
 
+// Prompt hints, one per type, so the example suits what is being made.
+const PROMPT_PLACEHOLDERS: Record<ImageType, string> = {
+  sprite: 'e.g. a friendly green dragon',
+  background: 'e.g. a misty forest at sunrise',
+  block: 'e.g. a mossy stone brick',
+};
+
 type GenerateMode = 'prompt' | 'generating';
 type RandomnessSource = 'new' | 'seed' | 'previous';
+
+/** What the new-image form has settled on, enough to start painting. */
+export interface NewImageDraft {
+  name: string;
+  imageType: ImageType;
+  style: ImageStyle;
+}
 
 interface GenerateImageViewProps {
   /** Set for an existing image; absent when generating a brand-new one. */
   existing?: {
     generation?: ImageGenerationMetadata;
     // Locked: regenerating can't change what kind of image this is.
-    itemType: SpriteLab2ItemType;
+    imageType: ImageType;
     /** Current pixels, for "use previous image". */
     getDataURI: () => Promise<string | null>;
   };
@@ -64,7 +80,16 @@ interface GenerateImageViewProps {
   create?: {
     /** Whether another image already uses this name. */
     isNameTaken: (name: string) => boolean;
+    /** Form values to reopen with (returning from a cancelled paint). */
+    initial?: NewImageDraft;
   };
+  /** Open the paint editor on a blank canvas instead of generating. */
+  onPaintManually?: (draft: NewImageDraft) => void;
+  /** Level-imposed type for new images; the Type choice is locked to it. */
+  lockedImageType?: ImageType;
+  /** A generation request is leaving; fires before the model call, so the
+      caller can stamp what the eventual result belongs to. */
+  onGenerateStart?: () => void;
   /** Persist a finished result (name set when creating). */
   onAccept: (
     result: GeneratedImageResult,
@@ -89,18 +114,24 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   existing,
   thumb,
   create,
+  lockedImageType,
+  onPaintManually,
+  onGenerateStart,
   onAccept,
   onCancel,
   onDelete,
 }) => {
   const [mode, setMode] = useState<GenerateMode>('prompt');
   const [prompt, setPrompt] = useState(existing?.generation?.prompt || '');
-  const [name, setName] = useState('');
-  const [itemType, setItemType] = useState<SpriteLab2ItemType>(
-    existing?.itemType || 'sprite'
+  const [name, setName] = useState(create?.initial?.name || '');
+  const [imageType, setImageType] = useState<ImageType>(
+    existing?.imageType ||
+      lockedImageType ||
+      create?.initial?.imageType ||
+      'sprite'
   );
-  const [style, setStyle] = useState<SpriteLab2ItemStyle>(
-    existing?.generation?.style || 'smooth'
+  const [style, setStyle] = useState<ImageStyle>(
+    existing?.generation?.style || create?.initial?.style || 'smooth'
   );
   const [temperatureLevel, setTemperatureLevel] = useState(
     TEMPERATURE_LEVEL_DEFAULT
@@ -129,11 +160,12 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   const canUsePrevious = !!existing;
 
   const generate = useCallback(async () => {
+    onGenerateStart?.();
     setMode('generating');
     setError(null);
     try {
       const options: GenerateImageOptions = {
-        itemType,
+        imageType,
         style,
         temperature: levelToTemperature(temperatureLevel),
       };
@@ -156,7 +188,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
     }
   }, [
     prompt,
-    itemType,
+    imageType,
     style,
     temperatureLevel,
     source,
@@ -164,6 +196,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
     canUseSeed,
     create,
     trimmedName,
+    onGenerateStart,
     onAccept,
   ]);
 
@@ -198,16 +231,31 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
         </div>
         <div className={moduleStyles.detailsPane}>
           {create && (
-            <div>
+            <div className={moduleStyles.nameRow}>
               <TextField
                 name="newImageName"
                 label="Name"
+                className={moduleStyles.nameField}
                 value={name}
-                errorMessage={nameError || undefined}
+                aria-invalid={!!nameError || undefined}
+                aria-describedby={
+                  nameError ? 'new-image-name-error' : undefined
+                }
                 disabled={generating}
                 maxLength={IMAGE_NAME_MAX_LENGTH}
                 onChange={e => setName(sanitizeImageName(e.target.value))}
               />
+              {/* Beside the field, not below it, so showing the message
+                  never changes the dialog's height. */}
+              {nameError && (
+                <span
+                  id="new-image-name-error"
+                  role="status"
+                  className={moduleStyles.inlineFieldError}
+                >
+                  {nameError}
+                </span>
+              )}
             </div>
           )}
 
@@ -223,28 +271,28 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                 className={moduleStyles.promptInput}
                 value={prompt}
                 rows={5}
-                placeholder="e.g. a friendly green dragon"
+                placeholder={PROMPT_PLACEHOLDERS[imageType]}
                 disabled={generating}
                 onChange={e => setPrompt(e.target.value)}
               />
             </label>
             <div className={moduleStyles.formStack}>
-              {/* An existing image's type is locked: regenerating can't
-                  change what kind of image it is. */}
+              {/* Regenerating can't change what kind of image this is, and a
+                  level can lock the choice for new images too. */}
               <fieldset
                 className={moduleStyles.radioGroup}
-                disabled={generating || !!existing}
+                disabled={generating || !!existing || !!lockedImageType}
               >
                 <legend>Type</legend>
-                {(['sprite', 'background', 'block'] as const).map(type => (
+                {IMAGE_TYPES.map(type => (
                   <RadioButton
                     key={type}
                     name="generation-type"
                     value={type}
-                    label={ITEM_TYPE_LABELS[type]}
+                    label={IMAGE_TYPE_LABELS[type]}
                     size="s"
-                    checked={itemType === type}
-                    onChange={() => setItemType(type)}
+                    checked={imageType === type}
+                    onChange={() => setImageType(type)}
                   />
                 ))}
               </fieldset>
@@ -258,7 +306,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                     key={s}
                     name="generation-style"
                     value={s}
-                    label={ITEM_STYLE_LABELS[s]}
+                    label={IMAGE_STYLE_LABELS[s]}
                     size="s"
                     checked={style === s}
                     onChange={() => setStyle(s)}
@@ -309,12 +357,9 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
               disabled={generating}
             >
               <legend id="temperature-label">Temperature</legend>
-              <img
-                src={botImage}
-                className={moduleStyles.bot}
-                alt=""
-                draggable={false}
-              />
+              {/* A wink: choosing pixel-art style pixelates the bot too. */}
+              <TemperatureBot src={botImage} pixelated={style === 'pixel'} />
+
               <Slider
                 name="temperature-slider"
                 aria-labelledby="temperature-label"
@@ -359,6 +404,21 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
         {onDelete && (
           <div className={moduleStyles.footerLeft}>
             <DeleteImageButton onDelete={onDelete} />
+          </div>
+        )}
+        {create && onPaintManually && (
+          <div className={moduleStyles.footerLeft}>
+            <button
+              type="button"
+              className={moduleStyles.button}
+              disabled={generating || !nameUsable}
+              onClick={() =>
+                onPaintManually({name: trimmedName, imageType, style})
+              }
+            >
+              <FontAwesomeV6Icon iconName="paintbrush" />
+              Paint manually
+            </button>
           </div>
         )}
         <button

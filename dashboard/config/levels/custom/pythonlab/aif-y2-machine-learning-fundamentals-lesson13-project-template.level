@@ -1,0 +1,48 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-08-22T01:03:28.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from helpers import predict_category\n\ntraining_images = [\n  # TODO 1: Replace the dictionaries below with one dictionary per training image\n  {\"category\": \"Category A\", \"feature1\": True, \"feature2\": False, \"feature3\": True},\n  {\"category\": \"Category B\", \"feature1\": False, \"feature2\": True, \"feature3\": False},\n]\n\n\ndef distance(image1, image2):\n    # TODO 3: Return a value representing how different the two images are\n    return 0\n\n# TODO 2: Replace the dictionary below with features from one of your test images\ntest_image = {\"feature1\": True, \"feature2\": True, \"feature3\": True}\n\nprediction = predict_category(test_image, training_images, distance)\nprint(f\"Predicted category for test image: {prediction}\")",
+          "folderId": "0",
+          "active": true
+        },
+        "1": {
+          "id": "1",
+          "name": "helpers.py",
+          "contents": "def predict_category(image, training_images, get_distance):\n    nearest_image = None\n    nearest_distance = None\n    for training_image in training_images:\n        distance = get_distance(image, training_image)\n        if nearest_distance is None or distance < nearest_distance:\n            nearest_image = training_image\n            nearest_distance = distance\n    return nearest_image[\"category\"]",
+          "folderId": "0",
+          "active": false,
+          "type": "support"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-22 01:04:11 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-22 01:04:18 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

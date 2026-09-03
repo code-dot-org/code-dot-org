@@ -1,0 +1,12 @@
+name 'ai-and-the-systems-that-power-it-lesson3-device-choice'
+display_name 'Troubleshooting Hardware Sample Scenarios'
+description 'Revisit your client from Lesson 1 or select a new client. Assist them by employing a structured troubleshooting approach to solve a device issue that they are having.'
+
+sublevels
+level 'ai-and-the-systems-that-power-it-lesson3-device-1'
+level 'ai-and-the-systems-that-power-it-lesson3-device-2'
+level 'ai-and-the-systems-that-power-it-lesson3-device-3'
+level 'ai-and-the-systems-that-power-it-lesson3-device-4'
+level 'ai-and-the-systems-that-power-it-lesson3-device-5'
+
+uses_lab2

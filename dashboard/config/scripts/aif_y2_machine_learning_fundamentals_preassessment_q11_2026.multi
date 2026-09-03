@@ -1,0 +1,16 @@
+name 'aif-y2-machine-learning-fundamentals-preassessment-q11-2026'
+
+wrong 'It calculates a line that is near to all training data points'
+wrong 'It makes an initial guess and refines it based on the neighbors of the guess'
+right 'It considers the labels of the points closest to the input'
+wrong 'It predicts a number that is as similar as possible to the training data'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+How does a nearest neighbor classifier make its predictions?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 8: Building Classifiers
+MARKDOWN

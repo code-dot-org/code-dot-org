@@ -1,8 +1,8 @@
 import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 
 // The full set of tabs for the SpriteLab2 full-screen UI.
-export const SPRITE_LAB2_TABS = ['Images', 'World', 'Code', 'Play'] as const;
-export type SpriteLab2Tab = (typeof SPRITE_LAB2_TABS)[number];
+export const ALL_TABS = ['Images', 'World', 'Code', 'Play'] as const;
+export type Tab = (typeof ALL_TABS)[number];
 
 // AI code-generation lifecycle, modeled on Music's GenerateCode state machine.
 export type AiGenerateState =
@@ -28,12 +28,23 @@ export interface ExternalSceneOption {
   label: string;
 }
 
+// One of the user's Music Lab projects, offered by the play-music block's
+// dropdown; channel is the value the block stores.
+export interface MusicProjectOption {
+  channel: string;
+  name: string;
+  /** A saved block's song the list cannot offer: it keeps its place on
+      that block, but is never offered as a new choice. */
+  unavailable?: boolean;
+}
+
 export interface SpriteLab2State {
-  activeTab: SpriteLab2Tab;
+  activeTab: Tab;
   hasRun: boolean;
   aiGenerateState: AiGenerateState;
   scenes: SceneMetadata[];
   externalScenes: ExternalSceneOption[];
+  musicProjects: MusicProjectOption[];
 }
 
 const initialState: SpriteLab2State = {
@@ -42,13 +53,14 @@ const initialState: SpriteLab2State = {
   aiGenerateState: 'none',
   scenes: [],
   externalScenes: [],
+  musicProjects: [],
 };
 
 const spriteLab2Slice = createSlice({
   name: 'spriteLab2',
   initialState,
   reducers: {
-    setActiveTab: (state, action: PayloadAction<SpriteLab2Tab>) => {
+    setActiveTab: (state, action: PayloadAction<Tab>) => {
       state.activeTab = action.payload;
     },
     setHasRun: (state, action: PayloadAction<boolean>) => {
@@ -66,6 +78,9 @@ const spriteLab2Slice = createSlice({
     ) => {
       state.externalScenes = action.payload;
     },
+    setMusicProjects: (state, action: PayloadAction<MusicProjectOption[]>) => {
+      state.musicProjects = action.payload;
+    },
     resetSpriteLab2: () => initialState,
   },
 });
@@ -76,6 +91,7 @@ export const {
   setAiGenerateState,
   setScenes,
   setExternalScenes,
+  setMusicProjects,
   resetSpriteLab2,
 } = spriteLab2Slice.actions;
 

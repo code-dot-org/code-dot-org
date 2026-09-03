@@ -1,0 +1,34 @@
+name 'pl-aif1-js-concatination'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>One Operator, Two Jobs</h1>
+
+<p>You just saw + used to change a number. The same operator does something different with text.</p>
+
+<div style="display: flex; gap: 20px; margin: 20px 0;">
+  <div style="flex: 1; background-color: #2B2745; border-radius: 10px; padding: 16px 20px; font-family: 'Courier New', monospace; font-size: 15px; color: #E4E2F8; line-height: 1.8;">
+    <div style="color: #ACA8EA; font-family: 'Geist', sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px;">WITH NUMBERS: ADDS</div>
+    let score = 0;<br>
+    score = score + 10;<br>
+    <span style="color: #7CDB87;">// score is now 10</span>
+  </div>
+  <div style="flex: 1; background-color: #2B2745; border-radius: 10px; padding: 16px 20px; font-family: 'Courier New', monospace; font-size: 15px; color: #E4E2F8; line-height: 1.8;">
+    <div style="color: #ACA8EA; font-family: 'Geist', sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 8px;">WITH TEXT: CONCATENATES</div>
+    let name = "Maya";<br>
+    "Hello " + name;<br>
+    <span style="color: #7CDB87;">// becomes "Hello Maya"</span>
+  </div>
+</div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px;">
+<p>📖 <b>Concatenation</b> is joining two or more strings together into one. It's the reason "Hello " + name doesn't add anything numerically, it combines the two pieces of text into a single string.</p>
+</div>
+
+<div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">
+<p><strong>💡 Teacher tip:</strong> this trips students up constantly. If they write "Hello " + name and get literally "Hello Sonia" with no space, or nothing shows up at all, the fix is almost always in how the pieces were joined, not the variable itself.</p>
+</div>
+
+<p>Next, you'll evaluate AI-generated code the way a QA Engineer would, and one of the bugs you'll spot uses exactly this operator.</p>
+MARKDOWN

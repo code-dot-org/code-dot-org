@@ -7,7 +7,7 @@
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Project Launch, Day Two\r\n\r\nWork through the following sections in your Product Launch Activity Guide during today's project time:\r\n* Build: Select and Configure\r\n* Test: Draft Questions\r\n* Test: Problem and The Fix\r\n\r\nFill in the associated sections in today's Sketch Lab and AI Chat levels. The work that you start today will carry forward.\r\n\r\n\r\n\r\n",
+    "long_instructions": "##Build & Test\r\n\r\nUse the Sketch Lab canvas to continue working through the process for launching your product.\r\n\r\n1. Create your _Product Chatbot_ using your system prompt draft from the **_Build_** section of your canvas\r\n2. Complete the **_Test_** section of your canvas:\r\n    - Draft Questions to test your Product Chatbot\r\n    - Refine your Chatbot based on the results of your testing\r\n\r\n",
     "require_edit_to_continue": "true",
     "project_template_level_name": "problem-solving-with-ai-project-prototype-2-template",
     "hide_share_and_remix": "false",
@@ -15,6 +15,6 @@
     "bubble_choice_description": "In Sketch Lab, document how you test and revise your chatbot's system prompt",
     "thumbnail_url": "https://images.code.org/ab3d2716b216aeb9dc77870dbb2ac278-sketch-lab-icon.png"
   },
-  "audit_log": "[{\"changed_at\":\"2026-08-06T15:41:29.828+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-project-sketchlab-day-one\\\"\"],\"cloned_from\":\"problem-solving-with-ai-project-sketchlab-day-one\"},{\"changed_at\":\"2026-08-06 15:43:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-06 19:01:11 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-08-06T15:41:29.828+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-project-sketchlab-day-one\\\"\"],\"cloned_from\":\"problem-solving-with-ai-project-sketchlab-day-one\"},{\"changed_at\":\"2026-08-06 15:43:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-06 19:01:11 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-13 17:28:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>
