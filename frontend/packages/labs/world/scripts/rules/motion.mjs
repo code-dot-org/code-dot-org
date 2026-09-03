@@ -35,8 +35,31 @@ const canMove = rule.trait('Can Move');
 canMove.uses(Positional);
 const velocity = canMove.vector('velocity', {x: 0, y: 0});
 
+/**
+ * Whether something is deliberately holding this body where it is.
+ *
+ * NOT "it is not moving", which is a thing anybody can see by looking at the
+ * velocity. This says WHY: a body that got nowhere because a wall was in the
+ * way and a body that got nowhere because a teleport pad is carrying it
+ * between two places look identical from outside, and two rules in this
+ * library act on the difference. `Turning` turns when it did not travel as far
+ * as it asked, and `Prowling` treats getting nowhere as a moment to think
+ * again — both correct about a wall, both wrong about a body somebody is
+ * holding on purpose, and neither able to tell without being told.
+ *
+ * It lives HERE, on the trait every mover already elects, rather than on the
+ * rule that happens to set it. `Turning` should not have to hold `Teleport` to
+ * ask this question, and the next thing that wants to hold a body still — a
+ * cutscene, a stun, a conveyor with a gate on it — should not have to be
+ * `Teleport` either.
+ *
+ * Whoever sets it clears it. Nothing here times it out: a flag that expired on
+ * its own would be a second opinion about how long a hold lasts.
+ */
+const held = canMove.boolean('held still', 'false');
+
 export const CanMove = rule.traitRef('Can Move');
-export {velocity};
+export {held, velocity};
 
 /** Where an actor was, going the speed it is going now. */
 export const positionBefore = rule.block({

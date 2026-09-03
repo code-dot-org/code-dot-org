@@ -93,7 +93,13 @@
 // phases 4 to 7). It is the smallest thing that plays.
 
 import {progressBarDrawing} from '../actors/stock/progressBar';
-import {drawText, fill, setText} from '../actors/stock/workspace';
+import {
+  drawText,
+  fill,
+  rectangle,
+  setText,
+  swatch,
+} from '../actors/stock/workspace';
 import {
   stack,
   starterAnimations,
@@ -120,6 +126,7 @@ import {
   scoreRule,
   solidRule,
   surfacesRule,
+  teleportRule,
   turningRule,
   writingRule,
 } from '../rules/stock';
@@ -251,6 +258,33 @@ const GEMS: ReadonlyArray<readonly [number, number]> = [
   [20, 11],
 ];
 
+/**
+ * The three networks, and where each end of each one is.
+ *
+ * Every pair links two places that are a JOURNEY apart, because a pad between
+ * two things a step apart is a pad nobody uses. And none of them is a way to
+ * skip the level: the red pair joins the two gem ledges, and reaching either
+ * of them at all still costs a tank of fuel.
+ */
+const PADS: ReadonlyArray<readonly [string, number, number]> = [
+  // Blue: the far end of the floor, and the belt six rows above it. ONE END
+  // ON THE FLOOR AND ONE OFF IT, which is not a detail — a pair with both
+  // ends on the floor is a loop, because the ball patrols the whole of it and
+  // takes every pad it meets: it would roll from one to the other for ever
+  // and never reach a wall to turn at, and turning at walls is the whole of
+  // what that enemy is. With one end up here it is flung on to the belt,
+  // carried along it, and falls back down, which is a thing to watch.
+  ['actors/padBlue', 22, 14],
+  ['actors/padBlue', 14, 7],
+  // Green: the low ledge and the sludge, which are the two middle floors.
+  ['actors/padGreen', 7, 10],
+  ['actors/padGreen', 19, 11],
+  // Red: the two gem ledges, at opposite top corners of the room. Not a way
+  // to skip anything — reaching either of them at all still costs a tank.
+  ['actors/padRed', 2, 3],
+  ['actors/padRed', 23, 4],
+];
+
 /** Where the way out is: on the floor, at the far end from the ladder. */
 const DOOR_AT = [24, 14] as const;
 
@@ -327,6 +361,9 @@ export const JETPACK_ACTORS = [
   ),
   ...GEMS.map(([column, row], index) =>
     place('actors/gem', `Gem${index}`, column, row),
+  ),
+  ...PADS.map(([kind, column, row], index) =>
+    place(kind, `Pad${index}`, column, row),
   ),
   ...ENEMIES.map(([kind, column, row], index) =>
     place(kind, `Enemy${index}`, column, row),
@@ -445,6 +482,105 @@ const onlyIf = (test: object, body: object) => ({
   inputs: {IF0: test, DO0: {block: body}},
 });
 
+/**
+ * What a traveller does while a pad is carrying it: fade out, then in.
+ *
+ * FOUR ROOTS AND NO RULE, which is the seam the teleport rule is built on.
+ * `Teleport` moves bodies and says when — `starts travelling` at the pad it is
+ * leaving, `arrives` at the one it comes out of — and has no opinion about what
+ * that should look like. A rule that faded actors itself would be a rule every
+ * project had to agree with about fading.
+ *
+ * IT FITS IN THE HOLD, which is the reason a trip has a duration at all. The
+ * traveller is held still for `travel seconds` and cannot be hurt for the same
+ * span, so a fade of half that plays out and back inside the window with no
+ * arithmetic tying the two together — and the actor is not moving while it
+ * plays, which is what makes it read as a departure rather than a smear.
+ *
+ * The ids are what `play tween` names, so they have to be unique per actor
+ * file and are not shown to anybody.
+ */
+/**
+ * How long an enemy's trip takes, in seconds.
+ *
+ * Short — long enough for a fade out and back and no longer. An enemy is held
+ * still for it, so anything more is an enemy standing on a pad waiting, which
+ * is the lag this exists to avoid.
+ */
+const ENEMY_TRIP = 0.2;
+
+/**
+ * …and the Pilot's, which is longer.
+ *
+ * The difference is the difference between a thing that happens TO you and one
+ * you asked for: a player who pressed a key is given a moment to watch what
+ * they asked for happen, and an enemy is given just enough for the fade to
+ * read. It is also how long the Pilot cannot be hurt for, which is the same
+ * number by construction (`rules/teleport`).
+ */
+const PILOT_TRIP = 0.4;
+
+const teleportFade = (seconds: number) => [
+  {
+    type: 'world_define_tween',
+    id: 'padFadeOut',
+    x: 320,
+    y: 20,
+    fields: {NAME: 'fade out', CURVE: 'linear'},
+    inputs: {
+      SECONDS: number(seconds),
+      DO: {
+        block: {
+          type: 'world_set_Appearance_OpacityProperty',
+          inputs: {ACTOR: me(), VALUE: number(0)},
+        },
+      },
+    },
+  },
+  {
+    type: 'world_define_tween',
+    id: 'padFadeIn',
+    x: 320,
+    y: 200,
+    fields: {NAME: 'fade in', CURVE: 'linear'},
+    inputs: {
+      SECONDS: number(seconds),
+      DO: {
+        block: {
+          type: 'world_set_Appearance_OpacityProperty',
+          inputs: {ACTOR: me(), VALUE: number(1)},
+        },
+      },
+    },
+  },
+  {
+    type: 'world_on_Teleport_StartsTravellingEvent',
+    x: 320,
+    y: 380,
+    inputs: {ACTOR: me()},
+    next: {
+      block: {
+        type: 'world_play_tween',
+        fields: {TWEEN: 'padFadeOut'},
+        inputs: {ACTOR: me()},
+      },
+    },
+  },
+  {
+    type: 'world_on_Teleport_ArrivesEvent',
+    x: 320,
+    y: 480,
+    inputs: {ACTOR: me()},
+    next: {
+      block: {
+        type: 'world_play_tween',
+        fields: {TWEEN: 'padFadeIn'},
+        inputs: {ACTOR: me()},
+      },
+    },
+  },
+];
+
 const PILOT_ACTOR = JSON.stringify({
   blocks: {
     blocks: [
@@ -466,6 +602,15 @@ const PILOT_ACTOR = JSON.stringify({
             // Up and down climb, and only on a ladder — the control scheme is
             // a trait, so this is the whole of it (`rules/climb`).
             useTrait('Climbing#ClimbsWithArrowKeysTrait'),
+            // …and the pads, which it uses when it asks to rather than
+            // whenever it stands on one — see the handler below and
+            // `rules/teleport` on why that is not the same choice an enemy
+            // gets.
+            useTrait('Teleport#UsesTeleportPadsTrait'),
+            {
+              type: 'world_set_Teleport_TravelSecondsProperty',
+              inputs: {ACTOR: me(), VALUE: number(PILOT_TRIP)},
+            },
             // What makes the belt, the ice and the sludge mean anything: one
             // trait, and it meets all three (`rules/surfaces`).
             useTrait('Surfaces#StandsOnSurfacesTrait'),
@@ -530,6 +675,21 @@ const PILOT_ACTOR = JSON.stringify({
               inputs: {VALUE: me()},
             },
           ]),
+        },
+      },
+      // DOWN, which is free everywhere a pad can be. The Pilot's other use
+      // for it is climbing down a ladder, and a pad on a rung would be a
+      // press that meant two things — so the level does not put one there.
+      {
+        type: 'world_on_Input_PressesEvent',
+        x: 20,
+        y: 540,
+        fields: {FILTER0: 'down arrow'},
+        next: {
+          block: {
+            type: 'world_do_Teleport_UseThePadAction',
+            inputs: {ACTOR: me()},
+          },
         },
       },
       {
@@ -606,6 +766,7 @@ const PILOT_ACTOR = JSON.stringify({
           }),
         },
       },
+      ...teleportFade(PILOT_TRIP / 2),
     ],
   },
 });
@@ -727,6 +888,20 @@ const enemyActor = (
               // know who it damages, and the Pilot does not know what damaged
               // it (`rules/health`).
               useTrait('Health#DealsDamageTrait'),
+              // An enemy has no choice about a pad, which is the other half
+              // of the mechanic: a shortcut you can take is a shortcut
+              // something else is already coming through.
+              useTrait('Teleport#UsesTeleportPadsTrait'),
+              {
+                type: 'world_set_Teleport_TakesAnyPadItTouchesProperty',
+                inputs: {ACTOR: me(), VALUE: truth(true)},
+              },
+              // Shorter than the Pilot's, which is the difference between a
+              // thing that happens TO you and one you asked for.
+              {
+                type: 'world_set_Teleport_TravelSecondsProperty',
+                inputs: {ACTOR: me(), VALUE: number(ENEMY_TRIP)},
+              },
               {type: 'world_set_sprite', fields: {SPRITE: sprite}},
               {
                 type: 'world_set_Turning_TurnByProperty',
@@ -751,6 +926,68 @@ const enemyActor = (
                 inputs: {ACTOR: me(), VALUE: truth(points)},
               },
             ]),
+          },
+        },
+        ...teleportFade(ENEMY_TRIP / 2),
+      ],
+    },
+  });
+
+/**
+ * A teleport pad, which is a floor that is somewhere else.
+ *
+ * ONE ACTOR PER COLOUR rather than one actor and six colours, because a pad's
+ * colour is set where the actor is defined and a map placement cannot say a
+ * property. Three kinds is also the truer reading of what a colour IS here: it
+ * is not a setting on a pad, it is which network the pad belongs to, and a
+ * level with two networks has two kinds of thing in it.
+ *
+ * IT DRAWS ITSELF FROM ITS OWN COLOUR rather than from a sprite, and that is
+ * worth the four lines: three sprites that had to be repainted whenever a
+ * colour changed would be three chances for the picture and the behaviour to
+ * disagree, and the whole mechanic is invisible unless a player can read the
+ * link at a glance.
+ *
+ * A PLATE AT THE BOTTOM of a tile-sized box, so a pad lies on the floor it is
+ * placed on rather than standing in the air — and so the thing standing on it
+ * is drawn over it rather than behind it.
+ */
+const padActor = (name: string, colour: string) =>
+  JSON.stringify({
+    blocks: {
+      blocks: [
+        {
+          type: 'world_actor',
+          x: 20,
+          y: 20,
+          fields: {NAME: name},
+          next: {
+            block: stack([
+              useTrait('Teleport#IsATeleportPadTrait'),
+              {
+                type: 'world_set_Teleport_PadColourProperty',
+                inputs: {ACTOR: me(), VALUE: swatch(colour)},
+              },
+            ]),
+          },
+        },
+        {
+          type: 'world_define_drawing',
+          x: 20,
+          y: 200,
+          fields: {WIDTH: 32, HEIGHT: 32},
+          inputs: {
+            DO: {
+              block: stack([
+                fill({
+                  block: {
+                    type: 'world_get_Teleport_PadColourProperty',
+                    inputs: {ACTOR: me()},
+                  },
+                }),
+                rectangle(0, 22, 32, 10),
+              ]),
+            },
           },
         },
       ],
@@ -791,6 +1028,18 @@ const BAT_ACTOR = JSON.stringify({
           block: stack([
             useTrait('Flapping#FlapsAndGlidesTrait'),
             useTrait('Health#DealsDamageTrait'),
+            // Every enemy takes any pad it touches, this one included — and
+            // it is the one that reaches the pads on the high ledges, since
+            // nothing else in the room can get up there without a tank.
+            useTrait('Teleport#UsesTeleportPadsTrait'),
+            {
+              type: 'world_set_Teleport_TakesAnyPadItTouchesProperty',
+              inputs: {ACTOR: me(), VALUE: truth(true)},
+            },
+            {
+              type: 'world_set_Teleport_TravelSecondsProperty',
+              inputs: {ACTOR: me(), VALUE: number(ENEMY_TRIP)},
+            },
             // Both axes, unlike the Robot's: a bat can reach the ceiling, and
             // nothing else in the room stops it there.
             useTrait('Boundaries#StaysAcrossTrait'),
@@ -839,6 +1088,7 @@ const BAT_ACTOR = JSON.stringify({
           },
         },
       },
+      ...teleportFade(ENEMY_TRIP / 2),
     ],
   },
 });
@@ -868,6 +1118,17 @@ const ROBOT_ACTOR = JSON.stringify({
             // it hovering at the ceiling of the map rather than falling.
             useTrait('Boundaries#StaysAcrossTrait'),
             useTrait('Health#DealsDamageTrait'),
+            // The floor is where the blue pair is, so the Robot is the enemy
+            // a player meets coming the other way through one.
+            useTrait('Teleport#UsesTeleportPadsTrait'),
+            {
+              type: 'world_set_Teleport_TakesAnyPadItTouchesProperty',
+              inputs: {ACTOR: me(), VALUE: truth(true)},
+            },
+            {
+              type: 'world_set_Teleport_TravelSecondsProperty',
+              inputs: {ACTOR: me(), VALUE: number(ENEMY_TRIP)},
+            },
             {type: 'world_set_sprite', fields: {SPRITE: 'robot.png'}},
             // Setting off LEFTWARDS, towards where the Pilot starts. Its
             // first junction is landing, which can happen before the handler
@@ -908,6 +1169,7 @@ const ROBOT_ACTOR = JSON.stringify({
           },
         },
       },
+      ...teleportFade(ENEMY_TRIP / 2),
     ],
   },
 });
@@ -1257,6 +1519,24 @@ export const JETPACK_SPEC: ProjectSpec = {
       contents: BAT_ACTOR,
       folderId: 'actors',
     },
+    padBlueActor: {
+      name: 'padBlue.actor',
+      language: 'actor',
+      contents: padActor('Blue Pad', '#3f7fe0'),
+      folderId: 'actors',
+    },
+    padGreenActor: {
+      name: 'padGreen.actor',
+      language: 'actor',
+      contents: padActor('Green Pad', '#3fbf6a'),
+      folderId: 'actors',
+    },
+    padRedActor: {
+      name: 'padRed.actor',
+      language: 'actor',
+      contents: padActor('Red Pad', '#e0484a'),
+      folderId: 'actors',
+    },
     coinActor: {
       name: 'coin.actor',
       language: 'actor',
@@ -1401,6 +1681,14 @@ export const JETPACK_SPEC: ProjectSpec = {
       name: 'flapping.rule',
       language: 'rule',
       contents: flappingRule,
+      folderId: 'rules',
+    },
+    // …and the pads, which are the one thing in the room that is not a way
+    // THROUGH it (`rules/teleport`, JETPACK.md phase 4).
+    teleportRuleFile: {
+      name: 'teleport.rule',
+      language: 'rule',
+      contents: teleportRule,
       folderId: 'rules',
     },
     healthRuleFile: {

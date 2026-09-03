@@ -1,9 +1,11 @@
 import {position, setPosition} from './builtins.mjs';
-import {CanCollide, contacts} from './collisions.mjs';
+import {CanCollide, collisionSizeOf, contacts} from './collisions.mjs';
 import {
+  absolute,
   add,
-  anyActor,
   allWithTrait,
+  anyActor,
+  axisOf,
   both,
   countOf,
   defineRule,
@@ -12,14 +14,15 @@ import {
   firstActor,
   hasTrait,
   lessThan,
-  moduleFor,
   minus,
+  moduleFor,
   moreThan,
   n,
   no,
   not,
-  sameActor,
   note,
+  over,
+  sameActor,
   thisActor,
   time,
   vector,
@@ -27,7 +30,7 @@ import {
   yes,
 } from './dsl.mjs';
 import {HasHealth, staySafe} from './health.mjs';
-import {CanMove, velocity} from './motion.mjs';
+import {CanMove, held, velocity} from './motion.mjs';
 
 const rule = defineRule({
   name: 'Teleport',
@@ -154,6 +157,28 @@ const startsTravelling = travels.event(['starts travelling']);
 /** …and when it gets there. */
 const arrives = travels.event(['arrives']);
 
+/**
+ * Stop going sideways, and leave the vertical alone.
+ *
+ * NOT `velocity = 0`. Every rule that asks where a body WAS asks `position
+ * before`, which is this frame's position less this frame's velocity — an
+ * extrapolation, not a history. Park BOTH components at zero and the answer
+ * becomes "it has always been exactly here", so Solid, asked to push a
+ * standing body out of the floor it overlaps, cannot tell which way it came
+ * from and takes the shortest way out: sideways, a tile a frame, for the whole
+ * of the wait. That is what a traveller whipping across the room was.
+ *
+ * Leaving gravity's downward speed alone keeps the honest answer — "it came
+ * from above" — and Solid then does what it does for every other standing
+ * body. `Climbing`'s header describes the same failure from the other end, and
+ * `Surfaces` writes its floors this way for the same reason.
+ */
+const holdStill = () =>
+  velocity.set(
+    thisActor(),
+    vector(n(0), axisOf('y', velocity.of(thisActor()))),
+  );
+
 const here = rule.local('here', 'Actor');
 const there = rule.local('there', 'Actor');
 const other = rule.local('other', 'Actor');
@@ -164,6 +189,19 @@ const padsUnder = () =>
     from: contacts.of(thisActor()),
     where: hasTrait(here.get(), IsATeleportPad),
   });
+
+/**
+ * Whether this actor's own middle has reached the middle of a pad it is on.
+ *
+ * Measured against HALF ITS OWN WIDTH rather than a number in this rule: a
+ * body has arrived at the middle of something when the middle is inside it,
+ * which is true of a coin and of a robot without either being told a distance.
+ */
+const overTheMiddle = pad =>
+  lessThan(
+    absolute(minus(position.x(thisActor()), position.x(pad))),
+    over(axisOf('x', collisionSizeOf({sizeActor: thisActor()})), n(2)),
+  );
 
 /**
  * `⟨who⟩ use the pad` — the player's half, for a key handler to call.
@@ -219,9 +257,15 @@ export const usePad = travels.block({
                   thisActor(),
                   add(time(), travelSeconds.of(thisActor())),
                 ),
-                note('Held still, so the trip is a trip rather than a jump'),
-                note('with the run-up kept.'),
-                velocity.set(thisActor(), vector(n(0), n(0))),
+                note('HELD, and said so rather than merely being still: see'),
+                note('`held still` in Physics. A body that is not moving and'),
+                note('a body that has been stopped look identical from'),
+                note('outside, and `Turning` and `Prowling` both act on the'),
+                note('difference — a ball waiting here would otherwise turn'),
+                note('round every frame of the wait, and a robot would'),
+                note('reconsider every frame of it.'),
+                held.set(thisActor(), yes()),
+                holdStill(),
                 note('And not a target while it is in transit. Health’s own'),
                 note('mercy window, asked for by name — a second idea of'),
                 note('invulnerability living here would be one nothing else'),
@@ -247,7 +291,15 @@ export const usePad = travels.block({
   ],
 });
 
-travels.step('travel', 'move', [
+// PUSH, one moment before `move`, and the phase is the fix rather than a
+// preference. `move` is where velocity becomes position, so a hold written
+// there is a hold written after the body has already been moved: the traveller
+// slid one frame's worth on the frame it stepped on, every time, which at a
+// rolling speed is a visible nudge. Written here the speed is zero before
+// anything reads it. Contacts are a frame old at this moment, which costs
+// nothing — a pad is somewhere you are standing rather than something you pass
+// through, and `Climbing` reads them a frame late for the same reason.
+travels.step('travel', 'push', [
   note('Standing on nothing? Then whatever pad it last arrived at is behind'),
   note('it, and the next one may take it. See the header: this is what stops'),
   note('an enemy leaving, landing and leaving again for ever.'),
@@ -257,10 +309,7 @@ travels.step('travel', 'move', [
       [
         travelling.of(thisActor()),
         [
-          note('Still going? Then held where it is — a body that drifted'),
-          note('while it was between two places would arrive somewhere'),
-          note('nobody aimed at.'),
-          velocity.set(thisActor(), vector(n(0), n(0))),
+          holdStill(),
           when([
             [
               not(lessThan(time(), arrivesAt.of(thisActor()))),
@@ -277,6 +326,7 @@ travels.step('travel', 'move', [
                   ),
                 ),
                 travelling.set(thisActor(), no()),
+                held.set(thisActor(), no()),
                 note('It is standing on the pad it arrived at, and that does'),
                 note('not count as touching one.'),
                 clear.set(thisActor(), no()),
@@ -289,8 +339,26 @@ travels.step('travel', 'move', [
     ],
     [
       note('An enemy has no choice, which is what makes a room with pads in'),
-      note('it one you cannot plan a route through.'),
-      when([[takesAny.of(thisActor()), [usePad({}, thisActor())]]]),
+      note('it one you cannot plan a route through — but it waits until it is'),
+      note('OVER THE MIDDLE of one. Touching starts at the edge, half a body'),
+      note('before that, and a thing that vanishes on the touch has vanished'),
+      note('while it still looks beside the pad rather than on it.'),
+      note('The pad is read out first: asking where nothing is is asking an'),
+      note('actor that is not there for its position (`rules/prowling` makes'),
+      note('the same guard for the same reason).'),
+      here.set(firstActor(padsUnder())),
+      when([
+        [
+          both(
+            takesAny.of(thisActor()),
+            both(
+              moreThan(countOf(here.get()), n(0)),
+              overTheMiddle(here.get()),
+            ),
+          ),
+          [usePad({}, thisActor())],
+        ],
+      ]),
     ],
   ),
 ]);

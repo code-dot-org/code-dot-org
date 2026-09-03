@@ -3,12 +3,14 @@ import {CanCollide} from './collisions.mjs';
 import {
   add,
   axisOf,
+  both,
   defineRule,
   frameTime,
   lessThan,
   minus,
   moduleFor,
   n,
+  not,
   note,
   pixelsPerUnit,
   remainder,
@@ -21,7 +23,7 @@ import {
   when,
   yes,
 } from './dsl.mjs';
-import {CanMove, velocity} from './motion.mjs';
+import {CanMove, held, velocity} from './motion.mjs';
 
 const rule = defineRule({
   name: 'Turning',
@@ -216,9 +218,12 @@ turns.step('turn if it got nowhere', 'react', [
   note('Nothing turns on the first frame: `measured` is false until the'),
   note('other step has run once, and the distance from the origin is not a'),
   note('distance anything travelled.'),
+  note('A body somebody is holding is not a body that was stopped — see'),
+  note('`held still` in Physics. Without this a ball waiting out a teleport'),
+  note('turns round every frame it waits.'),
   when([
     [
-      measured.of(thisActor()),
+      both(measured.of(thisActor()), not(held.of(thisActor()))),
       [
         when([
           [

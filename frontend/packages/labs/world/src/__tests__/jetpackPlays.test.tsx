@@ -28,7 +28,7 @@ import {beforeEach, describe, expect, it} from 'vitest';
 
 import {PositionProperty, Vector, type World} from '../engine';
 import {keyName} from '../engine/core/keys';
-import {SpriteProperty} from '../engine/rules/animation';
+import {OpacityProperty, SpriteProperty} from '../engine/rules/animation';
 import {RotationProperty} from '../engine/rules/spatial';
 import {MAP_COLUMNS, MAP_ROWS} from '../fixtures/jetpack';
 import {WORLD_SCENARIOS} from '../fixtures/scenarios';
@@ -325,25 +325,75 @@ describe('the jetpack level', () => {
     expect(won).toBe(1);
   });
 
-  it('rolls a ball along the floor and brings it back', () => {
-    // The enemy the level is crossed on foot past. The ball and the rocket
-    // are the same actor with one number changed, so this also stands for
-    // the rocket having any behaviour at all.
+  it('holds an enemy still and fades it while a pad carries it', () => {
+    // The two halves of what a trip is FOR. It has a duration so that there is
+    // somewhere for a fade to play; the fade is the level's, hung on the
+    // rule's two events, because a rule that faded actors itself would be a
+    // rule every project had to agree with about fading.
+    //
+    // AND IT MUST NOT MOVE while it plays, which is the whole reason `held
+    // still` exists in Physics: a ball that is not moving and a ball that has
+    // been stopped look identical from outside, and `Turning` would otherwise
+    // turn this one round on every frame of the wait.
     const {world} = project;
     play(world, 0.5);
     const ball = named(world, 'Enemy0');
-    const at = () => ball.get(PositionProperty).x;
-    const from = at();
+    const travelling = (
+      project.modules['rules/teleport'] as Record<string, unknown>
+    ).TravellingProperty as never;
 
-    play(world, 2);
-    const there = at();
-    play(world, 4);
+    // Roll on until a pad takes it.
+    let waited = 0;
+    while (!ball.get(travelling) && waited < 600) {
+      play(world, 1 / 60);
+      waited += 1;
+    }
+    expect(ball.get(travelling)).toBe(true);
 
-    // Right first — it is aimed away from where the Pilot starts — until the
-    // wall, then back the way it came, which no clock in the level ever
-    // mentions.
-    expect(there).toBeGreaterThan(from);
-    expect(at()).toBeLessThan(there);
+    const from = ball.get(PositionProperty);
+    const dimmest: number[] = [];
+    for (let tick = 0; tick < 6 && ball.get(travelling); tick++) {
+      play(world, 1 / 60);
+      dimmest.push(ball.get(OpacityProperty));
+      const now = ball.get(PositionProperty);
+      expect(now.x).toBeCloseTo(from.x, 1);
+      expect(now.y).toBeCloseTo(from.y, 1);
+    }
+
+    // …and it is on its way out while it waits.
+    expect(Math.min(...dimmest)).toBeLessThan(1);
+  });
+
+  it('carries the ball round the room through the pads', () => {
+    // What the pads did to the level's simplest hazard, and it is worth
+    // stating because it REPLACED a test. The Steel Ball used to roll the
+    // floor to the wall and come back, and that was the whole of it. Every
+    // enemy now takes any pad it touches (JETPACK.md, phase 4), and the ball
+    // patrols the one floor a pad is on — so it is flung up to the belt,
+    // rolls it, drops to the low ledge, is flung across to the sludge, and
+    // falls back to the floor. It never reaches a wall any more: a pad gets
+    // to it first.
+    //
+    // That is not a loss of the turning behaviour, only of this room's view
+    // of it — `Turning` is pinned by its own tests and by the enemies lesson,
+    // both of which put a ball in a corridor with nothing else in it.
+    const {world} = project;
+    play(world, 0.5);
+    const ball = named(world, 'Enemy0');
+    const heights: number[] = [];
+    for (let tick = 0; tick < 20; tick++) {
+      play(world, 0.4);
+      heights.push(ball.get(PositionProperty).y);
+    }
+
+    // Three floors of the room, in eight seconds: the ground it starts on and
+    // two it could not have rolled to. Rounded to the tile, because what is
+    // being counted is places rather than pixels.
+    const floors = new Set(heights.map(y => Math.round(y / 32)));
+    expect(floors.size).toBeGreaterThanOrEqual(3);
+    // …and one of them well above the floor it started on, which only a pad
+    // could have done: nothing in the room lifts a ball.
+    expect(Math.min(...heights)).toBeLessThan(heights[0] - 96);
   });
 
   it('turns the rocket’s nose the way it is flying', () => {

@@ -3598,6 +3598,76 @@ describe('Teleport', () => {
       of('rules/teleport', 'UseThePadAction'),
     );
 
+  it('stands still on the way, on a floor it is standing in', () => {
+    // THE BUG A PLAYER SAW: a traveller whipped across the room and then
+    // popped up where it was meant to go. Holding it still was written as
+    // `velocity = 0`, and `position before` is this frame's position less
+    // this frame's velocity — so both components at zero says "it has always
+    // been exactly here", and Solid, pushing a standing body out of the floor
+    // it overlaps, cannot tell which way it came from and takes the shortest
+    // way out. Sideways, a tile a frame, for the whole trip.
+    //
+    // Every pad worth having is on a floor, so this needs one to show at all.
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([
+        rule('rules/motion'),
+        rule('rules/collisions'),
+        rule('rules/solid'),
+        rule('rules/gravity'),
+        rule('rules/health'),
+        rule('rules/teleport'),
+      ])
+      .instantiate();
+    for (let column = 0; column < 12; column++) {
+      const tile = new ActorBuilder({id: `f${column}`, name: 'Ground'})
+        .useTraits([
+          of('rules/gravity', 'ActsAsGroundTrait'),
+          of('rules/solid', 'SolidTrait'),
+        ])
+        .set(PositionProperty, at(column * 32 + 16, 304))
+        .set(of('rules/collisions', 'SizeProperty'), new Vector(32, 32))
+        .instantiate(`f${column}`);
+      world.addActor(tile);
+    }
+    for (const [index, x] of [80, 304].entries()) {
+      const one = new ActorBuilder({id: `p${index}`, name: 'Pad'})
+        .useTraits([of('rules/teleport', 'IsATeleportPadTrait')])
+        .set(PositionProperty, at(x, 288))
+        .set(of('rules/collisions', 'SizeProperty'), new Vector(32, 32))
+        .instantiate(`p${index}`);
+      one.set(of('rules/teleport', 'PadColourProperty'), '#ff0000' as never);
+      world.addActor(one);
+    }
+    const walker = new ActorBuilder({id: 'w1', name: 'walker'})
+      .useTraits([
+        of('rules/gravity', 'AffectedByGravityTrait'),
+        of('rules/teleport', 'UsesTeleportPadsTrait'),
+        of('rules/motion', 'CanMoveTrait'),
+      ])
+      .set(PositionProperty, at(80, 272))
+      .set(of('rules/collisions', 'SizeProperty'), new Vector(16, 16))
+      .instantiate('w1');
+    world.addActor(walker);
+    run(world, 0.5);
+    const from = spotOf(walker).x;
+
+    step(walker);
+    // Well inside the default trip of four tenths of a second.
+    const seen: number[] = [];
+    for (let tick = 0; tick < 18; tick++) {
+      run(world, 1 / 60);
+      seen.push(spotOf(walker).x);
+    }
+
+    // Not a pixel of it, in either direction. The old behaviour moved sixteen
+    // a frame.
+    for (const x of seen) {
+      expect(x).toBeCloseTo(from, 1);
+    }
+    run(world, 0.5);
+    expect(spotOf(walker).x).toBeCloseTo(304, 0);
+  });
+
   it('takes a traveller to another pad of the same colour', () => {
     const {world, walker} = pads(['#ff0000', '#ff0000']);
 
@@ -3673,6 +3743,59 @@ describe('Teleport', () => {
     const far = (made[1] as {get(p: unknown): Vector}).get(PositionProperty);
     expect(spotOf(walker).x).toBeCloseTo(far.x, 0);
     expect(spotOf(walker).y).toBeCloseTo(far.y - 12, 0);
+  });
+
+  it('does not let a waiting traveller read as a stopped one', () => {
+    // WHY `held still` IS IN PHYSICS. A trip has a duration and the traveller
+    // is held for it, and a body that is not moving is exactly what `Turning`
+    // reads as one that was stopped — so without the flag a ball waiting out
+    // a teleport turns round on every frame of the wait. Both rules are right
+    // about a wall; neither can tell a wall from a hold without being told.
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([
+        rule('rules/motion'),
+        rule('rules/collisions'),
+        rule('rules/health'),
+        rule('rules/turning'),
+        rule('rules/teleport'),
+      ])
+      .instantiate();
+    for (const [index, x] of [100, 400].entries()) {
+      const one = new ActorBuilder({id: `p${index}`, name: 'Pad'})
+        .useTraits([of('rules/teleport', 'IsATeleportPadTrait')])
+        .set(PositionProperty, at(x, 200))
+        .set(of('rules/collisions', 'SizeProperty'), new Vector(32, 32))
+        .instantiate(`p${index}`);
+      one.set(of('rules/teleport', 'PadColourProperty'), '#ff0000' as never);
+      world.addActor(one);
+    }
+    const roller = new ActorBuilder({id: 'r', name: 'roller'})
+      .useTraits([
+        of('rules/turning', 'TurnsWhenItHitsSomethingTrait'),
+        of('rules/teleport', 'UsesTeleportPadsTrait'),
+        of('rules/motion', 'CanMoveTrait'),
+      ])
+      .set(PositionProperty, at(100, 200))
+      .set(of('rules/collisions', 'SizeProperty'), new Vector(16, 16))
+      .instantiate('r');
+    // Fifty degrees, so that any number of spurious turns lands somewhere
+    // other than where it started — a hundred and eighty would come back to
+    // itself on an even count and prove nothing.
+    roller.set(of('rules/turning', 'TurnByProperty'), 50 as never);
+    world.addActor(roller);
+    run(world, 0.2);
+    const before = (roller as {get(p: unknown): number}).get(
+      of('rules/turning', 'HeadingProperty'),
+    );
+
+    step(roller);
+    run(world, 1);
+
+    expect(
+      (roller as {get(p: unknown): number}).get(
+        of('rules/turning', 'HeadingProperty'),
+      ),
+    ).toBe(before);
   });
 
   it('sends an enemy through without being asked, once', () => {

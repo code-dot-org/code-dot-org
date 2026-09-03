@@ -46,7 +46,14 @@ describe('rules/motion.rule', () => {
     // number between them. It is a fact about the coordinate system the renderer
     // draws in — an Engine block — rather than a knob this rule owns, so the two
     // places that convert both reach for the same one.
-    expect(meta.properties.map(p => p.id)).toEqual(['velocity']);
+    //
+    // The list is short on purpose and this test is what keeps it short. Both
+    // entries are things a body HAS rather than settings: how fast it is going,
+    // and whether something is deliberately holding it there — the second
+    // because a body that got nowhere because of a wall and one that got
+    // nowhere because a teleport pad is carrying it are indistinguishable from
+    // outside, and two other rules act on the difference (`rules/teleport`).
+    expect(meta.properties.map(p => p.id)).toEqual(['velocity', 'held_still']);
     expect(source).toContain('world_pixels_per_unit');
   });
 

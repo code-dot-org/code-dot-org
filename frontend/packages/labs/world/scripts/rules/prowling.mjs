@@ -30,7 +30,7 @@ import {
   yes,
 } from './dsl.mjs';
 import {AffectedByGravity, falling} from './gravity.mjs';
-import {velocity} from './motion.mjs';
+import {held, velocity} from './motion.mjs';
 
 const rule = defineRule({
   name: 'Prowling',
@@ -186,15 +186,21 @@ prowls.step('choose at a junction', 'decide', [
   note('each axis, so that a body Solid has nudged is not read as one that'),
   note('got somewhere. Both axes, because a climber pinned against a floor'),
   note('gets nowhere in either and a falling robot gets somewhere in one.'),
+  note('…and nothing at all counts while something is holding it: a robot'),
+  note('waiting out a teleport has not run out of anywhere to go, it is'),
+  note('being carried (`held still` in Physics).'),
   stuck.set(
     both(
-      lessThan(
-        absolute(minus(position.x(thisActor()), wasAt.x(thisActor()))),
-        n(0.25),
-      ),
-      lessThan(
-        absolute(minus(position.y(thisActor()), wasAt.y(thisActor()))),
-        n(0.25),
+      not(held.of(thisActor())),
+      both(
+        lessThan(
+          absolute(minus(position.x(thisActor()), wasAt.x(thisActor()))),
+          n(0.25),
+        ),
+        lessThan(
+          absolute(minus(position.y(thisActor()), wasAt.y(thisActor()))),
+          n(0.25),
+        ),
       ),
     ),
   ),
