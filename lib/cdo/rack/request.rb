@@ -116,7 +116,7 @@ module Cdo
     end
 
     def anon_user_id
-      @anon_user_id ||= AnonUserId.valid_value(statsig_stable_id)
+      @anon_user_id ||= Cdo::AnonUserId.valid_value(statsig_stable_id)
     end
 
     def user
