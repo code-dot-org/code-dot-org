@@ -37,6 +37,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
+import {ImageAdlibSet} from '../ai/images/imageAdlibs';
 import {
   uploadAssetToLevel,
   uploadAssetToProject,
@@ -134,6 +135,13 @@ function getBooleanParam(name: string) {
   return new URLSearchParams(window.location.search).get(name) === 'true';
 }
 
+// ?image-adlibs=simple|expanded previews the adlib combos without a level
+// change (levels set imageAdlibSet).
+function getImageAdlibSetParam(): ImageAdlibSet | undefined {
+  const value = new URLSearchParams(window.location.search).get('image-adlibs');
+  return value === 'simple' || value === 'expanded' ? value : undefined;
+}
+
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
 const DEFAULT_SCENE_ID = 'scene-1';
 
@@ -222,6 +230,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     () => getBooleanParam('images-advanced'),
     []
   );
+  const imageAdlibSetParam = useMemo(getImageAdlibSetParam, []);
   // A level can name its exact tab set; unknown names are dropped, and a list
   // naming none falls back to the defaults. Listing 'World' turns the world
   // tab on, as the URL flag and showWorldTab still do.
@@ -1501,6 +1510,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 onDeleteImage={handleDeleteImage}
                 lockedImageType={levelProperties.lockedImageType}
                 advanced={levelProperties.imagesAdvanced || imagesAdvancedParam}
+                adlibSet={imageAdlibSetParam || levelProperties.imageAdlibSet}
               />
             </div>
           </div>

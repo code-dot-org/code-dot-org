@@ -105,7 +105,10 @@ export async function generateImage(
   // rolls, and an unrecorded roll can never be replayed.
   const seed = options.seed ?? Math.floor(Math.random() * 2 ** 31);
   const styleClause = STYLE_PROMPT[style];
-  let fullPrompt = `${prompt}. ${styleClause}`;
+  // Read the prompt as a sentence before the clauses, without doubling the
+  // punctuation a prompt may already end with.
+  const sentence = /[.!?]$/.test(prompt) ? prompt : `${prompt}.`;
+  let fullPrompt = `${sentence} ${styleClause}`;
   if (imageType === 'sprite') {
     fullPrompt = `${fullPrompt} Use a plain solid background of one single flat color that contrasts strongly with the subject and appears nowhere on the subject, extending to all edges. Do not include any scenery, ground, sky, or other background elements — only the subject on that flat background.`;
   } else if (imageType === 'block') {

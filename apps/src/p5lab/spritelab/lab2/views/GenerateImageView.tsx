@@ -5,6 +5,8 @@ import TextField from '@code-dot-org/component-library/textField';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useState} from 'react';
 
+import Adlib, {AdlibChoices} from '@cdo/apps/lab2/views/components/guide/Adlib';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import aiBot0 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-0.png';
 import aiBot1 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-1.png';
 import aiBot2 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-2.png';
@@ -13,6 +15,11 @@ import aiBotGenerating0 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generatin
 import aiBotGenerating1 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generating-1.png';
 import aiBotGenerating2 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generating-2.png';
 
+import {
+  ImageAdlibSet,
+  imageAdlibFor,
+  imageAdlibId,
+} from '../ai/images/imageAdlibs';
 import {
   GeneratedImageResult,
   generateImage,
@@ -96,6 +103,8 @@ interface GenerateImageViewProps {
       field (new images name themselves), no Start from, no temperature,
       and Paint manually moves from the footer into the blank image area. */
   advanced?: boolean;
+  /** Offer this tier of adlib prompt combos (student form only). */
+  adlibSet?: ImageAdlibSet;
   /** A generation request is leaving; fires before the model call, so the
       caller can stamp what the eventual result belongs to. */
   onGenerateStart?: () => void;
@@ -126,6 +135,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   create,
   lockedImageType,
   advanced,
+  adlibSet,
   onPaintManually,
   onGenerateStart,
   onAccept,
@@ -149,6 +159,29 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   );
   const [source, setSource] = useState<RandomnessSource>('new');
   const [error, setError] = useState<string | null>(null);
+
+  // Adlib prompt combos (student form): a sentence with word choices, an
+  // alternative to typing. Typed text wins while present.
+  const adlib =
+    adlibSet && !advanced ? imageAdlibFor(imageType, adlibSet) : undefined;
+  const [adlibChoices, setAdlibChoices] = useState<AdlibChoices>({});
+  const [adlibText, setAdlibText] = useState('');
+  const handleAdlibText = useCallback((text: string) => setAdlibText(text), []);
+  // A fresh combo (opening, or a Type switch swapping templates) rolls its
+  // own choices, so not every sentence starts the same.
+  useEffect(() => {
+    if (adlib) {
+      setAdlibChoices(
+        Object.fromEntries(
+          Object.entries(adlib.options).map(([slot, options]) => [
+            slot,
+            options[Math.floor(Math.random() * options.length)].id,
+          ])
+        )
+      );
+    }
+  }, [adlib]);
+  const freeTextEntered = !!prompt.trim();
 
   // Flag a duplicate as it's typed and hold the buttons until it's unique.
   // The student form has no name field, so the name never holds it back.
@@ -180,6 +213,16 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   const canUsePrevious = !!existing;
 
   const generate = useCallback(async () => {
+    const usingAdlib = !!adlib && !prompt.trim();
+    const promptText = usingAdlib ? adlibText : prompt.trim();
+    analyticsReporter.sendEvent('hoai2026-image-prompt', {
+      promptText,
+      method: usingAdlib ? 'adlib' : 'freeText',
+      imageType,
+      ...(usingAdlib && adlibSet
+        ? {adlibId: imageAdlibId(imageType, adlibSet)}
+        : {}),
+    });
     onGenerateStart?.();
     setMode('generating');
     setError(null);
@@ -199,7 +242,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
         }
         options.inputImageDataURI = dataURI;
       }
-      const result = await generateImage(prompt.trim(), options);
+      const result = await generateImage(promptText, options);
       // Apply immediately; the caller flips back to the summary view.
       await onAccept(result, create ? newImageName() : undefined);
     } catch {
@@ -208,6 +251,9 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
     }
   }, [
     prompt,
+    adlib,
+    adlibText,
+    adlibSet,
     imageType,
     style,
     temperatureLevel,
@@ -292,6 +338,26 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
             </div>
           )}
 
+          {adlib && (
+            <>
+              {/* Native disable dims the combo while typed text wins. */}
+              <fieldset
+                className={moduleStyles.adlibGroup}
+                disabled={generating || freeTextEntered}
+              >
+                <Adlib
+                  adlib={adlib}
+                  adlibChoices={adlibChoices}
+                  glowSpeed={freeTextEntered ? undefined : 'normal'}
+                  onChoicesChange={setAdlibChoices}
+                  onTextChange={handleAdlibText}
+                />
+              </fieldset>
+              <div className={moduleStyles.adlibDivider}>
+                …or describe it yourself
+              </div>
+            </>
+          )}
           <div className={moduleStyles.formRow}>
             <label
               className={classNames(
@@ -470,7 +536,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
         <button
           type="button"
           className={moduleStyles.primaryButton}
-          disabled={generating || !prompt.trim() || !nameUsable}
+          disabled={generating || (!prompt.trim() && !adlibText) || !nameUsable}
           onClick={generate}
         >
           <FontAwesomeV6Icon iconName="sparkles" />

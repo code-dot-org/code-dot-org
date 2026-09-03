@@ -5,6 +5,7 @@ import TextField from '@code-dot-org/component-library/textField';
 import classNames from 'classnames';
 import React, {useState} from 'react';
 
+import {ImageAdlibSet} from '../ai/images/imageAdlibs';
 import {GeneratedImageResult} from '../ai/images/imageGeneration';
 import {
   IMAGE_STYLE_LABELS,
@@ -44,6 +45,8 @@ interface ImageDetailsDialogProps {
   /** Show the full internal dialog — the image's name (and renaming),
       Start from, temperature. The default is the student version. */
   advanced?: boolean;
+  /** Offer this tier of adlib prompt combos (student dialog only). */
+  adlibSet?: ImageAdlibSet;
   /** Current pixels, for generation's "use previous image". */
   getDataURI: () => Promise<string | null>;
   /** Whether another image already uses this name. */
@@ -90,6 +93,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   imageType,
   lockedImageType,
   advanced,
+  adlibSet,
   getDataURI,
   isNameTaken,
   onGenerateStart,
@@ -253,6 +257,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
             create={isNew ? {isNameTaken, initial: newImageDraft} : undefined}
             lockedImageType={lockedImageType}
             advanced={advanced}
+            adlibSet={adlibSet}
             onPaintManually={isNew ? onPaintNew : undefined}
             onGenerateStart={onGenerateStart}
             onAccept={async (result, newName) => {
