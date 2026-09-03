@@ -75,6 +75,7 @@ import {
   turningRule,
   flappingRule,
   prowlingRule,
+  teleportRule,
   timeRule,
   turnsRule,
   wrapRule,
@@ -203,6 +204,7 @@ export const ALL_STOCK_SOURCES: Record<string, string> = {
   // After Climbing: it takes ladders with the same trait a player does.
   'rules/prowling': prowlingRule,
   'rules/flapping': flappingRule,
+  'rules/teleport': teleportRule,
   'rules/drive': driveRule,
   'rules/mouse': mouseRule,
   'rules/writing': writingRule,

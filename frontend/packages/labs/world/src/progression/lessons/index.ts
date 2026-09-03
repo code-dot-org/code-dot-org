@@ -1836,6 +1836,165 @@ things a tile can be, and one thing a walker is.
 `.trim(),
 };
 
+// ── platformer/pads ──────────────────────────────────────────────────────────
+
+/** `set fill ⟨this pad's own colour⟩` — the picture reading the behaviour. */
+const padFill = () =>
+  fill({
+    block: {
+      type: 'world_get_Teleport_PadColourProperty',
+      inputs: {ACTOR: me()},
+    },
+  });
+
+const pads: WorldScenario = {
+  name: 'Two plates and a wall between them',
+  description: 'A room cut in half, with a pad on each side and no way round.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        createInMap(local('ground'), [
+          ...floorAcross(10),
+          // The wall, floor to ceiling. There is no way round it, which is
+          // what makes the pads the only answer rather than the quick one.
+          ...[0, 32, 64, 96, 128, 160, 192, 224, 256].map(y =>
+            placed(`wall${y}`, 160, y),
+          ),
+        ]),
+        addActor(local('here'), [placeAt(64, 288)]),
+        addActor(local('there'), [placeAt(272, 288)]),
+        addActor(local('hero'), [placeAt(48, 272)]),
+      ],
+      actors: [
+        {
+          id: 'hero',
+          name: 'Hero',
+          rows: [
+            useTrait('Gravity#AffectedByGravityTrait'),
+            useTrait('Input#TakesKeyboardInputTrait'),
+            useTrait('Arrow Keys#MovesAcrossTrait'),
+            // It already knows how to use one. What it has not got is
+            // anywhere to go, which is the lesson.
+            useTrait('Teleport#UsesTeleportPadsTrait'),
+            setSprite('player.png'),
+            // The key, as a step rather than a hat: an actor definition holds
+            // rows, and a hat is a root of its own. Polling costs nothing
+            // here — `use the pad` does nothing off a pad, mid-trip, or on
+            // the pad it just arrived at, so holding the key down is one trip
+            // and not sixty.
+            {
+              type: 'world_trait_step',
+              fields: {PHASE: 'touch', NAME: 'use a pad when asked'},
+              inputs: {
+                DO: {
+                  block: {
+                    type: 'controls_if',
+                    inputs: {
+                      IF0: {
+                        block: {
+                          type: 'world_is_key_down',
+                          fields: {KEY: 'down arrow'},
+                        },
+                      },
+                      DO0: {
+                        block: {
+                          type: 'world_do_Teleport_UseThePadAction',
+                          inputs: {ACTOR: me()},
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          ],
+        },
+        {
+          id: 'ground',
+          name: 'Ground',
+          rows: [
+            useTrait('Gravity#ActsAsGroundTrait'),
+            useTrait('Solid Bodies#SolidTrait'),
+            setSprite('ground.png'),
+          ],
+        },
+        // TWO PADS, BOTH REAL, AND NO TWO OF A COLOUR. Everything about them
+        // works: they are pads, the Hero uses pads, the key is wired. What is
+        // missing is the one thing that makes two pads one place.
+        {
+          id: 'here',
+          name: 'Near Pad',
+          rows: [
+            useTrait('Teleport#IsATeleportPadTrait'),
+            {
+              type: 'world_set_Teleport_PadColourProperty',
+              inputs: {ACTOR: me(), VALUE: swatch('#e0484a')},
+            },
+          ],
+          drawing: {
+            width: 32,
+            height: 32,
+            commands: [padFill(), rectangle(0, 22, 32, 10)],
+          },
+        },
+        {
+          id: 'there',
+          name: 'Far Pad',
+          rows: [
+            useTrait('Teleport#IsATeleportPadTrait'),
+            {
+              type: 'world_set_Teleport_PadColourProperty',
+              inputs: {ACTOR: me(), VALUE: swatch('#3f7fe0')},
+            },
+          ],
+          drawing: {
+            width: 32,
+            height: 32,
+            commands: [padFill(), rectangle(0, 22, 32, 10)],
+          },
+        },
+      ],
+    }),
+    sprites: ['player', 'ground'],
+    rules: [
+      'gravity',
+      'solid',
+      'input',
+      'arrows',
+      'motion',
+      'collisions',
+      'health',
+      'teleport',
+    ],
+  }),
+  instructions: `
+## Two plates and a wall between them
+
+The wall goes floor to ceiling and there is no way round it. There are two
+pads, one on each side, and the Hero already knows what to do with one: stand
+on it and press **down**.
+
+Try it. Nothing happens — and nothing is wrong. A pad sends you to another pad
+**of the same colour**, and these two are not.
+
+### What you do
+
+1. Set the Far Pad's **pad colour** to the same red as the Near Pad. That is
+   the whole link: two pads of a colour are one place, however far apart they
+   are drawn, and a room can be folded.
+2. Stand on the near one and press down. There is a moment before you arrive,
+   and it is not lost time — it is where an animation goes, and you cannot be
+   hurt during it.
+3. Add a third red pad somewhere and use them for a while. It picks one of the
+   others **afresh every time**, so three pads is three places rather than two
+   and a decoration.
+4. Set that third one back to blue. Now it is a pad with nowhere to go: press
+   down on it all you like. One pad of a colour is not half a mechanic, it is
+   a decoration, and the rule says so by doing nothing.
+`.trim(),
+};
+
 // ── platformer/enemies ───────────────────────────────────────────────────────
 
 const enemies: WorldScenario = {
@@ -5798,6 +5957,7 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'platformer/enemies': enemies,
   'platformer/hunter': hunter,
   'platformer/flier': flier,
+  'platformer/pads': pads,
   'platformer/pickups': pickups,
   'platformer/hazards': hazards,
   'platformer/level': level,

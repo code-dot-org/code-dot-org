@@ -31,10 +31,12 @@ export {
 export {
   all,
   each,
+  anyOf,
   extreme,
   filtered,
   firstOf,
   firstWhere,
+  isSameActor,
   LazyActors,
   one,
   ordered,

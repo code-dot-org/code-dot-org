@@ -1475,6 +1475,46 @@ export const TILES: readonly Tile[] = [
     },
   },
   {
+    id: 'platformer/pads',
+    region: 'platformer',
+    at: at('platformer', 5, 0),
+    title: 'Two plates and one place',
+    teaches:
+      'A way across a room that is not a way through it, and why "one of them" is a thing a language has to be able to say.',
+    task: 'A wall with no way round it, and a pad on each side that have nothing to do with each other. Make them one place.',
+    requires: ['platformer/surfaces'],
+    unlocks: [{kind: 'rule', id: 'teleport'}],
+    check: {
+      kind: 'outcome',
+      says: 'The Hero gets to the far side of a wall it cannot walk round, climb or jump.',
+      falsePass:
+        'Anything that moved the Hero at all, which is why the wall runs floor to ceiling and the check reads the far SIDE of it rather than a distance travelled. Walking, jumping and falling are all still available and none of them crosses x = 176; the only thing in the room that does is a pad with somewhere to send you.',
+      run: {
+        probes: {hero: {kind: 'positions', of: 'Hero'}},
+        trace: [
+          // Land first: the Hero starts a little above the floor and the pad
+          // it starts on, and a body in mid-air is touching neither.
+          {seconds: 0.3},
+          // Then ask, and go on asking. Held rather than tapped because a
+          // press is one frame and a leg is a quarter of a second — and
+          // holding it is harmless, since `use the pad` does nothing on the
+          // pad it has just arrived at.
+          ...Array.from({length: 6}, () => ({
+            hold: ['down arrow'],
+            seconds: 0.25,
+          })),
+        ],
+      },
+      passes: ({samples}) => {
+        const xs = (samples.hero ?? []).map(
+          sample => (sample as {x: number}[])[0]?.x ?? 0,
+        );
+        // The wall is a column of tiles at x = 160, so its far face is 176.
+        return xs.some(x => x > 176);
+      },
+    },
+  },
+  {
     id: 'platformer/enemies',
     region: 'platformer',
     at: at('platformer', 4, 1),

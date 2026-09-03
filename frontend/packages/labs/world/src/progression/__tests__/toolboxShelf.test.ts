@@ -136,6 +136,7 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   // for a block they have not got.
   'platformer/hunter': ['world_use_trait'],
   'platformer/flier': ['world_use_trait'],
+  'platformer/pads': [],
   'platformer/ground': ['world_use_trait'],
   'platformer/pickups': ['world_use_trait', 'world_print'],
   'platformer/hazards': ['world_use_trait', 'world_print'],

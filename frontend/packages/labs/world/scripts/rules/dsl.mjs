@@ -487,6 +487,18 @@ export const firstActor = from => ({
   inputs: {...(from ? {SOURCE: value(from)} : {})},
 });
 
+/** `<a> is <b>` — whether two actor values are the same actor. */
+export const sameActor = (a, b) => ({
+  type: 'world_same_actor',
+  inputs: {A: value(a), B: value(b)},
+});
+
+/** `any actor in <list>` — one of them, picked afresh each time. */
+export const anyActor = from => ({
+  type: 'world_any_actor',
+  inputs: {...(from ? {SOURCE: value(from)} : {})},
+});
+
 /** `for each actor <var> in <list> do <…>`. */
 export const forEach = (variable, {from, body, ...rest}) => {
   // The loop took a `where` until the filter became a value of its own. A

@@ -4857,6 +4857,79 @@ registerValueShadows('world_first_actor', [
 ]);
 
 /**
+ * `⟨a⟩ is ⟨b⟩` — whether two actor values are the same actor.
+ *
+ * The language could compare two numbers, two words, two places and two
+ * colours, and could not compare two ACTORS. Nothing noticed until something
+ * had to say "another one" — a pad choosing a different pad, an enemy picking
+ * a target that is not itself — and until this block those were all written as
+ * "not at the same x", which is true right up until two of them are stacked.
+ */
+const worldSameActor = defineBlock({
+  type: 'world_same_actor',
+  message0: '%1 is %2',
+  args0: [
+    {type: 'input_value', name: 'A', check: 'Actor'},
+    {type: 'input_value', name: 'B', check: 'Actor'},
+  ],
+  inputsInline: true,
+  output: 'Boolean',
+  extensions: [worldContextExtension, valueShadowExtension],
+  style: 'logic_blocks',
+  tooltip:
+    'Whether these are the same actor. Two actors with everything in common ' +
+    'are still two actors, and a value holding no actors is not the same as ' +
+    'anything, including itself.',
+  generator: {
+    javascript(block, generator) {
+      const a = generator.valueToCode(block, 'A', Order.NONE) || '[]';
+      const b = generator.valueToCode(block, 'B', Order.NONE) || '[]';
+      return [`WorldLab.isSameActor(${a}, ${b})`, Order.FUNCTION_CALL] as [
+        string,
+        number,
+      ];
+    },
+  },
+});
+
+/**
+ * `any actor in ⟨…⟩` — one of them, chosen afresh each time it is asked.
+ *
+ * The sibling of `first actor in`, and the one a game usually wants: "the
+ * first" is a decision most programs did not mean to make. A teleport pad
+ * picking another pad, a spawner picking a spawn point, a quiz picking a
+ * question — all three read the same list every time and, with `first`, get
+ * the same answer every time.
+ *
+ * It answers with a LIST of one or of none, exactly as `first` does, so an
+ * empty source is the ordinary "no actors" outcome.
+ */
+const worldAnyActor = defineBlock({
+  type: 'world_any_actor',
+  message0: 'any actor in %1',
+  args0: [{type: 'input_value', name: 'SOURCE', check: 'Actor'}],
+  inputsInline: true,
+  output: 'Actor',
+  extensions: [worldContextExtension, valueShadowExtension],
+  style: 'sprite_blocks',
+  tooltip:
+    'One of the actors a value holds, picked at random each time it is ' +
+    'asked. When it holds none it answers with no actors, so a statement ' +
+    'using it does nothing rather than failing.',
+  generator: {
+    javascript(block, generator) {
+      return [
+        `WorldLab.anyOf(${actorSource(block, generator)})`,
+        Order.FUNCTION_CALL,
+      ] as [string, number];
+    },
+  },
+});
+registerValueShadows('world_any_actor', [
+  {name: 'SOURCE', shadow: {type: 'world_all_actors'}},
+]);
+
+/**
  * `all actors with trait ⟨T⟩` — the filter that is written more than all the
  * others together.
  *
@@ -8202,6 +8275,8 @@ export const DOMAIN_BLOCKS = [
   worldNearPlaceOfKind,
   worldNearPlaceWithTrait,
   worldFirstActor,
+  worldAnyActor,
+  worldSameActor,
   worldActorsWithTrait,
   worldExtremeActor,
   worldOrderedActors,
@@ -8313,6 +8388,8 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_ordered_actors',
       'world_take_actors',
       'world_first_actor',
+      'world_any_actor',
+      'world_same_actor',
       'world_extreme_actor',
       // Building a group up, and asking about one.
       'world_push_actor',

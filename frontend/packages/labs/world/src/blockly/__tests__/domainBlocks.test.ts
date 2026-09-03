@@ -3196,11 +3196,25 @@ describe('what an actor list’s source socket wears', () => {
     }
   });
 
+  it('world_any_actor asks the engine for a random one', () => {
+    const [code] = generatorFor('world_any_actor')(
+      {getFieldValue: () => '', getInputTargetBlock: () => null} as never,
+      {valueToCode: () => ''} as never,
+      {} as never,
+    ) as unknown as [string, number];
+
+    expect(code).toBe('WorldLab.anyOf(world.actors)');
+  });
+
   it('leaves the wrapping blocks on `all actors`', () => {
     // What goes in these is almost always another list block rather than a
     // kind, so the shadow is replaced by a drag either way and the broader
     // default costs nothing.
-    for (const type of ['world_first_actor', 'world_take_actors']) {
+    for (const type of [
+      'world_first_actor',
+      'world_any_actor',
+      'world_take_actors',
+    ]) {
       const entry = shadowsFor(type)?.find(s => s.name === 'SOURCE');
       expect(entry?.shadow).toEqual({type: 'world_all_actors'});
     }

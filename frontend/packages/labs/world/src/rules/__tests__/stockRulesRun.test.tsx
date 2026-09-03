@@ -3547,3 +3547,142 @@ describe('Flapping', () => {
     }
   });
 });
+
+describe('Teleport', () => {
+  /**
+   * A row of pads and something standing on the first of them.
+   *
+   * `colours` is one entry per pad, so `['#f00', '#f00', '#00f']` is two red
+   * pads and a blue one — which is the shape every question here asks about.
+   */
+  const pads = (colours: readonly string[], takesAny = false) => {
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([
+        rule('rules/motion'),
+        rule('rules/collisions'),
+        rule('rules/health'),
+        rule('rules/teleport'),
+      ])
+      .instantiate();
+    const made = colours.map((colour, index) => {
+      const one = new ActorBuilder({id: `pad${index}`, name: `pad${index}`})
+        .useTraits([of('rules/teleport', 'IsATeleportPadTrait')])
+        .set(PositionProperty, at(100 + index * 100, 200))
+        .set(of('rules/collisions', 'SizeProperty'), new Vector(32, 32))
+        .instantiate(`pad${index}`);
+      one.set(of('rules/teleport', 'PadColourProperty'), colour as never);
+      world.addActor(one);
+      return one;
+    });
+    const walker = new ActorBuilder({id: 'walker', name: 'walker'})
+      .useTraits([
+        of('rules/teleport', 'UsesTeleportPadsTrait'),
+        of('rules/motion', 'CanMoveTrait'),
+      ])
+      .set(PositionProperty, at(100, 200))
+      .set(of('rules/collisions', 'SizeProperty'), new Vector(16, 16))
+      .instantiate('walker');
+    walker.set(
+      of('rules/teleport', 'TakesAnyPadItTouchesProperty'),
+      takesAny as never,
+    );
+    world.addActor(walker);
+    run(world, 1 / 60);
+    return {world, walker, made};
+  };
+
+  const spotOf = (who: unknown) =>
+    (who as {get(p: unknown): Vector}).get(PositionProperty);
+  const step = (who: unknown) =>
+    (who as {act(a: unknown): void}).act(
+      of('rules/teleport', 'UseThePadAction'),
+    );
+
+  it('takes a traveller to another pad of the same colour', () => {
+    const {world, walker} = pads(['#ff0000', '#ff0000']);
+
+    step(walker);
+    run(world, 1);
+
+    expect(spotOf(walker).x).toBeCloseTo(200, 0);
+  });
+
+  it('does not go anywhere from the only pad of its colour', () => {
+    // The right answer rather than a special case: one pad is a pad with
+    // nowhere to go.
+    const {world, walker} = pads(['#ff0000', '#0000ff']);
+
+    step(walker);
+    run(world, 1);
+
+    expect(spotOf(walker).x).toBeCloseTo(100, 0);
+  });
+
+  it('takes time about it, and cannot be hurt on the way', () => {
+    // The gap is where an animation goes, and being held still on a pad with
+    // something walking towards you would be a punishment for using the
+    // mechanic. Health's own mercy window, asked for by name.
+    const {world, walker} = pads(['#ff0000', '#ff0000']);
+    (walker as {set(p: unknown, v: unknown): void}).set(
+      of('rules/teleport', 'TravelSecondsProperty'),
+      0.5,
+    );
+
+    step(walker);
+    run(world, 0.25);
+    const halfway = spotOf(walker).x;
+    run(world, 0.5);
+
+    expect(halfway).toBeCloseTo(100, 0);
+    expect(spotOf(walker).x).toBeCloseTo(200, 0);
+  });
+
+  it('reaches every pad of the colour, not just the first', () => {
+    // What `any actor in` is for, and what `first actor in` could not say:
+    // three red pads read with `first` are two pads and a decoration, because
+    // the answer never changes.
+    const seen = new Set<number>();
+    for (let go = 0; go < 40; go++) {
+      const {world, walker} = pads(['#ff0000', '#ff0000', '#ff0000']);
+      step(walker);
+      run(world, 1);
+      seen.add(Math.round(spotOf(walker).x));
+    }
+
+    expect([...seen].sort((a, b) => a - b)).toEqual([200, 300]);
+  });
+
+  it('puts a traveller down standing the way it was standing', () => {
+    // THE BUG A LESSON FOUND, and the commonest pad there is finds it: one
+    // set into the floor. Arriving at the destination pad's own position
+    // sounds right and puts the traveller INSIDE the ground, and Solid —
+    // which cannot know why — pushes it out sideways, a tile a frame, until
+    // it is somewhere nobody aimed at.
+    const {world, walker, made} = pads(['#ff0000', '#ff0000']);
+    // Standing above the pad rather than on its middle, which is what
+    // standing on something looks like.
+    (walker as {set(p: unknown, v: unknown): void}).set(
+      PositionProperty,
+      new Vector(100, 188),
+    );
+    run(world, 1 / 60);
+
+    step(walker);
+    run(world, 1);
+
+    const far = (made[1] as {get(p: unknown): Vector}).get(PositionProperty);
+    expect(spotOf(walker).x).toBeCloseTo(far.x, 0);
+    expect(spotOf(walker).y).toBeCloseTo(far.y - 12, 0);
+  });
+
+  it('sends an enemy through without being asked, once', () => {
+    // An enemy has no choice, which is what makes a room with pads in it one
+    // you cannot plan a route through — and arriving must not count as
+    // touching, or it leaves, lands and leaves again for ever.
+    const {world, walker} = pads(['#ff0000', '#ff0000'], true);
+
+    run(world, 2);
+
+    expect(spotOf(walker).x).toBeCloseTo(200, 0);
+  });
+});

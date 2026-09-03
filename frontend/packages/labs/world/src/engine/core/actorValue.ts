@@ -321,3 +321,55 @@ export function firstOf(value: ActorSource): readonly Actor[] {
   }
   return [];
 }
+
+/**
+ * Whether two actor values are the same actor — `⟨a⟩ is ⟨b⟩`.
+ *
+ * The language could compare two numbers, two words, two places and two
+ * colours, and could not compare two ACTORS, which is a gap nothing noticed
+ * until something had to say "another one". A teleport pad choosing a
+ * different pad, an enemy picking a target that is not itself, a puzzle asking
+ * whether the thing you are carrying is the thing on the pedestal: all three
+ * are this, and all three were being written as "not at the same x", which is
+ * true until two of them are stacked.
+ *
+ * IDENTITY, not equality of contents — two coins with everything in common are
+ * two coins. And the FIRST of each side, which is what every value socket in
+ * the language already does with a list; a value holding none is the same as
+ * nothing, including itself, because "no actor is that actor" is the answer
+ * that keeps a caller's `if` off.
+ */
+export function isSameActor(a: ActorSource, b: ActorSource): boolean {
+  const one = firstOf(a)[0];
+  return one !== undefined && one === firstOf(b)[0];
+}
+
+/**
+ * One of the actors a value holds, chosen at random — `any actor in ⟨…⟩`.
+ *
+ * The sibling of `firstOf`, and it exists because "the first one" is a
+ * decision a game usually does not want to have made: a teleport pad picks
+ * another pad, a spawner picks a spawn point, a quiz picks a question, and all
+ * three read the same list every time and would otherwise get the same answer
+ * every time. Said with `extreme` and a random key it works and nobody can
+ * read it.
+ *
+ * RESERVOIR SAMPLING rather than a length and an index, because an
+ * `ActorSource` is walked rather than indexed — it may be a list, one actor, a
+ * kind, or a filter over any of those — and asking how many there are means
+ * walking it once already. This is one pass and no array.
+ *
+ * A LIST of one or of none, like `firstOf`, so that an empty source is the
+ * ordinary "no actors" outcome rather than an `undefined` nobody named.
+ */
+export function anyOf(value: ActorSource): readonly Actor[] {
+  let chosen: Actor | undefined;
+  let seen = 0;
+  for (const actor of walk(value)) {
+    seen += 1;
+    if (Math.random() * seen < 1) {
+      chosen = actor;
+    }
+  }
+  return chosen ? [chosen] : [];
+}

@@ -224,6 +224,37 @@ export const heal = hurtable.block({
   ],
 });
 
+/**
+ * `⟨who⟩ be safe for ⟨n⟩ seconds` — mercy time, granted on purpose.
+ *
+ * The same window a hit already opens, opened by something else. Mercy exists
+ * so that one touch is one hit rather than sixty; that it is a WINDOW rather
+ * than a flag is what makes it reusable, and this is the block that reuses it:
+ * a respawn, a power-up, a cutscene, the moment a teleporter is carrying
+ * somebody between two pads (`rules/teleport`).
+ *
+ * IT ONLY EVER EXTENDS. Asking for a second of safety while three seconds
+ * remain is a request that would otherwise take two away, and nothing that
+ * hands out mercy means "and cancel the rest of it".
+ */
+const until = rule.local('until', 'Number');
+
+export const staySafe = hurtable.block({
+  returns: 'none',
+  description:
+    'Cannot be damaged for this many seconds. Extends any safety already running rather than replacing it.',
+  say: ['be safe for', param('seconds', 'number'), 'seconds'],
+  body: ({seconds}) => [
+    until.set(add(time(), seconds.get())),
+    when([
+      [
+        moreThan(until.get(), safeUntil.of(thisActor())),
+        [safeUntil.set(thisActor(), until.get())],
+      ],
+    ]),
+  ],
+});
+
 const source = rule.local('source', 'Actor');
 
 hurtable.step('take contact damage', 'react', [

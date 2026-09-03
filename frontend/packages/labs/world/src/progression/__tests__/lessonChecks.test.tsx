@@ -416,6 +416,29 @@ describe('the flier lesson’s check', () => {
   });
 });
 
+describe('the pads lesson’s check', () => {
+  const lesson = LESSONS['platformer/pads'];
+
+  /** The one edit the lesson asks for: the far pad, painted the near one's red. */
+  const linked = editing(lesson.source, 'main.world', contents =>
+    contents.replaceAll('#3f7fe0', '#e0484a'),
+  );
+
+  it('refuses two pads that have nothing to do with each other', async () => {
+    // Everything about them works — they are pads, the Hero uses pads, the
+    // key is wired. What is missing is the one thing that makes two pads one
+    // place, and the check must not read "it is all plugged in" as done.
+    const {passes} = await check('platformer/pads', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts two pads of a colour', async () => {
+    const {passes, result} = await check('platformer/pads', linked);
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+});
+
 describe('every lesson that has a check', () => {
   // The invariant behind all of the above: a check is written as a pair, and a
   // `run` with no `passes` is a button that measures a world and then throws

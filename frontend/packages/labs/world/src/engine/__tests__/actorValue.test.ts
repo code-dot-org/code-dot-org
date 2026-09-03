@@ -13,6 +13,7 @@ import {
   all,
   each,
   extreme,
+  anyOf,
   filtered,
   firstOf,
   firstWhere,
@@ -311,6 +312,40 @@ describe('extreme', () => {
     expect(extreme(actors, found => (found.id === 'a' ? NaN : 5))[0].id).toBe(
       'b',
     );
+  });
+});
+
+describe('anyOf', () => {
+  it('answers with no actors for none', () => {
+    expect(anyOf([])).toEqual([]);
+  });
+
+  it('answers with the one, for one', () => {
+    expect(anyOf(actor('a'))[0].id).toBe('a');
+  });
+
+  it('answers with one of the several, and only ever one', () => {
+    const three = [actor('a'), actor('b'), actor('c')];
+    for (let go = 0; go < 20; go++) {
+      const got = anyOf(three);
+      expect(got).toHaveLength(1);
+      expect(three).toContain(got[0]);
+    }
+  });
+
+  it('reaches every one of them, which is what makes it worth having', () => {
+    // The point of the block: `first actor in` reads the same list every time
+    // and gets the same answer every time. Twenty draws from three and the
+    // chance of missing one is under a thousandth of a per cent, so a
+    // reservoir that only ever kept the first — or only ever the last — fails
+    // here rather than in a game somebody is playing.
+    const three = [actor('a'), actor('b'), actor('c')];
+    const seen = new Set<string>();
+    for (let go = 0; go < 60; go++) {
+      seen.add(anyOf(three)[0].id);
+    }
+
+    expect([...seen].sort()).toEqual(['a', 'b', 'c']);
   });
 });
 

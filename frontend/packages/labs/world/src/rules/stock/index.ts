@@ -48,6 +48,7 @@ import {solidRule} from './solid';
 import {spawnerRule} from './spawner';
 import {steeringRule} from './steering';
 import {surfacesRule} from './surfaces';
+import {teleportRule} from './teleport';
 import {timeRule} from './time';
 import {turningRule} from './turning';
 import {turnsRule} from './turns';
@@ -399,6 +400,15 @@ export const STOCK_RULES: readonly StockRule[] = [
     contents: flappingRule,
   },
   {
+    id: 'teleport',
+    name: 'Teleport',
+    ability: 'Steps Through a Pad',
+    description:
+      'Pads that are two ends of one place. Step on one and come out of another of the same colour, chosen afresh each time — a player when it asks to, an enemy whether it wants to or not.',
+    provides: ['Is a Teleport Pad', 'Uses Teleport Pads'],
+    contents: teleportRule,
+  },
+  {
     id: 'drive',
     name: 'Arrow Drive',
     ability: 'Drives with Arrow Keys',
@@ -520,6 +530,7 @@ export {
   climbRule,
   surfacesRule,
   turningRule,
+  teleportRule,
   flappingRule,
   prowlingRule,
   mouseRule,

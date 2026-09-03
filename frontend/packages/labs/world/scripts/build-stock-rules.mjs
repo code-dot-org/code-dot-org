@@ -33,6 +33,7 @@ const RULES = [
   'turning',
   'prowling',
   'flapping',
+  'teleport',
   'solid',
   'wrap',
   'bounds',
