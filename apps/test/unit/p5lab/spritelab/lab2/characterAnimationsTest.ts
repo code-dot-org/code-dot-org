@@ -132,7 +132,7 @@ describe('SpriteLab2 characterAnimations', () => {
     expect(poseFrame(walk, 0)).toBe(walk.start);
     expect(poseFrame(walk, walk.frameDelay)).toBe(walk.start + 1);
     expect(poseFrame(walk, walk.frameDelay * 2)).toBe(walk.start);
-    // The jump range follows the walk; teeter holds its first frame.
+    // The jump range follows the walk; teeter holds its falling frame.
     expect(CHARACTER_STRIP_POSES['jump-right']!.start).toBe(
       walk.start + walk.count
     );

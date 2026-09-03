@@ -995,7 +995,8 @@ export default class SpriteLab2Engine extends SpriteLab {
             pick.range.count - 1
           );
       } else if (pick.pose === 'jump') {
-        frame = pick.range.start;
+        // Teetering: the falling frame, legs loose over the drop.
+        frame = pick.range.start + pick.range.count - 1;
         if (state.tick + 1 >= teeterTicks(pick.range)) {
           state.teetering = false;
         }

@@ -148,9 +148,9 @@ export function poseFrame(range: PoseRange, tick: number): number {
 
 /**
  * How long a player that stops with its toes over an edge holds back — the
- * jump pose's first frame, the crouch-and-rise, held for as long as the pose
- * would take to play once — before it stands. The falling frame is left
- * out: arms out and legs flung read as a leap, not a lean.
+ * jump pose's falling frame, legs loose over the drop, held for as long as
+ * the pose would take to play once — before it stands. The rising frame is
+ * left out: a crouch reads as about to leap, not a lean.
  */
 export function teeterTicks(range: PoseRange): number {
   return range.frameDelay * range.count;
