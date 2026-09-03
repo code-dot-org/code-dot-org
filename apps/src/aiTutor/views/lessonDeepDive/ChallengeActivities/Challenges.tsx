@@ -18,7 +18,7 @@ const Challenges: FC<ChallengesProps> = ({lessonId}) => {
   // Both challenge modalities report submission through this callback; the
   // confirmation dialog is shared here rather than duplicated per modality.
   const challengeSetCallback = useCallback(
-    (pickedChallenge: Challenge, pickedChallengeType: string) => {
+    (pickedChallenge: Challenge | null, pickedChallengeType: string | null) => {
       setChallenge(pickedChallenge);
       setChallengeType(pickedChallengeType);
     },
@@ -35,6 +35,7 @@ const Challenges: FC<ChallengesProps> = ({lessonId}) => {
       lessonId={lessonId}
       challenge={challenge}
       challengeType={challengeType || ChallengeTypes.WHITEBOARD}
+      challengeSetCallback={challengeSetCallback}
     />
   );
 };

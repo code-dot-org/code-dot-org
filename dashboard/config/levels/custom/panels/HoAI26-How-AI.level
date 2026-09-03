@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2026-09-01T23:03:33.000Z",
   "level_num": "custom",
@@ -9,30 +10,45 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "AI image generators produce a default look. Explore one of the examples here. ",
+        "text": "Have you noticed that if you simply ask AI to generate a dragon, a unicorn, or a superhero, they tend to look similar to these examples. ",
+        "imageUrl": "https://images.code.org/3736a365548adba05a21e8f0b333ec1f-three characters.png",
+        "key": "HoAI26-How-AI-a478b96e-eaef-446f-86ca-7020790e476c",
+        "links": [
+          {
+            "text": "Why does AI generate generic images?",
+            "x": 53,
+            "y": 90,
+            "targetKey": "HoAI26-How-043dd68d-7f75-4d8b-9f31-4a4bb5cf31be"
+          }
+        ],
+        "layout": "text-top-center",
+        "typing": true
+      },
+      {
+        "text": "It's because AI generates new images using patterns in the examples it had in its training. ",
         "imageUrl": "https://images.code.org/3736a365548adba05a21e8f0b333ec1f-three characters.png",
         "key": "HoAI26-How-043dd68d-7f75-4d8b-9f31-4a4bb5cf31be",
         "links": [
           {
-            "text": "Dragon",
+            "text": "Dragon Examples",
             "x": 23,
-            "y": 67,
+            "y": 76,
             "targetKey": "HoAI26-How-1c5a8409-54be-442a-b574-264ddbe90103",
-            "width": 11
+            "width": 18
           },
           {
-            "text": "Unicorns",
+            "text": "Unicorn Examples",
             "x": 53,
-            "y": 67,
+            "y": 76,
             "targetKey": "HoAI26-How-831e32d4-4cf5-4c52-957e-60557f5f9ba1",
-            "width": 12
+            "width": 19
           },
           {
-            "text": "Superheros",
+            "text": "Superhero Examples",
             "x": 78,
-            "y": 68,
+            "y": 76,
             "targetKey": "HoAI26-How-f413d57e-721d-416c-a86c-3d3c275f210b",
-            "width": 13
+            "width": 21
           },
           {
             "text": "Next",
@@ -42,10 +58,12 @@
             "width": 11
           }
         ],
-        "showContinueButton": false
+        "showContinueButton": false,
+        "layout": "text-top-center",
+        "typing": false
       },
       {
-        "text": "**The AI studied millions of dragon pictures**\n\nMost looked alike: big, scaly, breathing fire, standing in a spooky castle. When you type \"dragon,\" it plays the odds and draws the most common one, not the only one that could exist.",
+        "text": "**The AI studied millions of dragon pictures**\n\nWhat do you notice about most of these dragons? When you type \"dragon,\" it draws the most common one, not the only one that could exist.",
         "imageUrl": "https://images.code.org/1ca2b8e2cd0e17405550a5d5f793eec3-dragon data.png",
         "key": "HoAI26-How-1c5a8409-54be-442a-b574-264ddbe90103",
         "links": [
@@ -59,7 +77,7 @@
         ]
       },
       {
-        "text": "**The AI studied millions of unicorn pictures.**\n\nMost looked alike: white coat, rainbow-colored mane, spiral horn, standing in a magical forest. When you type \"unicorn,\" it draws the most common version it learned — not the only one possible.",
+        "text": "**The AI studied millions of unicorn pictures.**\n\nWhat do you notice about most of these unicorns? When you type \"unicorn,\" it draws the most common version it learned — not the only one possible.",
         "imageUrl": "https://images.code.org/2c533a258249f30a257bbd2c13e7a24c-Unicorn data.png",
         "key": "HoAI26-How-831e32d4-4cf5-4c52-957e-60557f5f9ba1",
         "layout": "text-bottom-center",
@@ -74,7 +92,7 @@
         ]
       },
       {
-        "text": "**The AI studied millions of superhero pictures.** \n\nMost looked alike: cape, mask, muscles, a dramatic pose against a city skyline. When you type \"superhero,\" it draws the most typical one it has seen — not the only kind there is.",
+        "text": "**The AI studied millions of superhero pictures.** \n\nWhat do you notice about most of these superheroes? When you type \"superhero,\" it draws the most typical one it has seen — not the only kind there is.",
         "imageUrl": "https://images.code.org/257a6a560d09946ef4bfede3903d69df-heros data.png",
         "key": "HoAI26-How-f413d57e-721d-416c-a86c-3d3c275f210b",
         "links": [
@@ -89,41 +107,42 @@
         "layout": "text-bottom-center"
       },
       {
-        "text": "Some details always show up together in what the AI learned, so it treats them like a matched set — tied together, not separate. Ask for just one piece of the bundle, and you have to say so, or all of them come along. Explore the examples",
-        "imageUrl": "https://images.code.org/817854fdf67e7817952d16f2b161f95f-set.png",
+        "text": "Some details always show up together in what the AI learned, so it treats them like a matched set or bundle. \n\nAsk for just one piece of the bundle, and you get all of the details. Explore the examples.",
+        "imageUrl": "https://images.code.org/6d82a005d8fbf8cfa0a2381b63cfd47c-detail bundles.png",
         "key": "HoAI26-How-a575c100-cf83-4bab-8b5c-226a11e20471",
         "links": [
           {
-            "text": "Dragons",
-            "x": 85,
-            "y": 48,
+            "text": "Dragon Details",
+            "x": 20,
+            "y": 80,
             "targetKey": "HoAI26-How-8a2a3f96-1d60-44f0-9f50-8e90ac4f252b",
-            "width": 14
+            "width": 22
           },
           {
-            "text": "Unicorns",
-            "x": 85,
-            "y": 61,
+            "text": "Unicorn Details",
+            "x": 52,
+            "y": 80,
             "targetKey": "HoAI26-How-17de75d7-a74c-4f35-8380-b9648dfbe333",
-            "width": 14
+            "width": 23
           },
           {
-            "text": "Superheros",
+            "text": "Superhero Details",
             "x": 85,
-            "y": 74,
+            "y": 80,
             "targetKey": "HoAI26-How-3c3b6c67-5cfe-466b-bbc1-6b0a8d8eb94b",
-            "width": 14
+            "width": 26
           },
           {
             "text": "Next",
-            "x": 83,
-            "y": 89,
+            "x": 91,
+            "y": 95,
             "targetKey": "HoAI26-How-b6bea56e-bd3b-4157-a16a-0029263ad917"
           }
-        ]
+        ],
+        "typing": true
       },
       {
-        "text": "Scales, wings, and fire almost always showed up together in what the AI studied. So it treats them like a set — grab one, and the others come along automatically. Want a dragon without fire? You have to say so.",
+        "text": "Scales, wings, and fire almost always showed up together in what the AI studied. So it treats them like a set — grab one, and the others come along automatically. Want a dragon without wings? You might have to say so.",
         "imageUrl": "https://images.code.org/c0c277ee536c01e1ee2f1796e06f0f06-dragon set.png",
         "key": "HoAI26-How-8a2a3f96-1d60-44f0-9f50-8e90ac4f252b",
         "layout": "text-bottom-center",
@@ -152,7 +171,7 @@
         ]
       },
       {
-        "text": "Capes, masks, and muscles almost always showed up together. The AI learned to bundle them as a set. Want a superhero without a cape? You have to say so — the AI will not guess it on its own.",
+        "text": "Capes, masks, and muscles almost always showed up together. The AI learned to bundle them as a set. Want a superhero without a cape? You might have to say so.",
         "imageUrl": "https://images.code.org/0ad0ff25f7928b4e87c8ace54131dc30-hero set.png",
         "key": "HoAI26-How-3c3b6c67-5cfe-466b-bbc1-6b0a8d8eb94b",
         "links": [
@@ -166,35 +185,35 @@
         ]
       },
       {
-        "text": "Behind the scenes, the tool is often set up to add extra detail and polish by default — like a photo filter that is already switched on. That is a choice the app makes, not something the AI \"decided\" was best.",
+        "text": "Behind the scenes, each AI tool/model is set up to add extra detail and polish. Like a photo filter that is already switched on. If you want different details, you just have to say so.",
         "imageUrl": "https://images.code.org/3792d32419805a5cf59d0b5a7f9d4b54-polish.png",
         "key": "HoAI26-How-b6bea56e-bd3b-4157-a16a-0029263ad917",
         "links": [
           {
-            "text": "Dragon",
+            "text": "Dragon Polish",
             "x": 17,
             "y": 94,
             "targetKey": "HoAI26-How-9e23ec7b-7d36-4525-95b4-d4aeda2783db",
-            "width": 12
+            "width": 16
           },
           {
-            "text": "Unicorn",
-            "x": 43,
-            "y": 93,
+            "text": "Unicorn Polish",
+            "x": 38,
+            "y": 94,
             "targetKey": "HoAI26-How-642a0a2b-08ec-439b-8a69-a5c1c6186624",
             "width": 16
           },
           {
-            "text": "Hero",
-            "x": 66,
+            "text": "Superhero Polish",
+            "x": 60,
             "y": 94,
             "targetKey": "HoAI26-How-fca34322-509e-4dea-a0fe-f170c0e6190a",
-            "width": 22
+            "width": 20
           },
           {
             "text": "Next",
-            "x": 86,
-            "y": 89,
+            "x": 93,
+            "y": 93,
             "targetKey": "HoAI26-How-4c1ab7ee-66a0-47e5-aac7-38003a653060",
             "width": 16
           }
@@ -203,7 +222,7 @@
         "layout": "text-top-left"
       },
       {
-        "text": "The tool often adds dramatic lighting and a glowing fire-lit haze by default, even if you just typed \"dragon.\" That polish is a setting the app chose, not something the AI figured out on its own.",
+        "text": "The tool often adds dramatic lighting and a glowing fire-lit haze by default, even if you just typed \"dragon.\" That polish is a setting the tool/model was programmed to do, not something the AI figured out on its own.",
         "imageUrl": "https://images.code.org/cd48c34d9dac20a62a36e2bb11f1cc79-dragon polish.png",
         "key": "HoAI26-How-9e23ec7b-7d36-4525-95b4-d4aeda2783db",
         "links": [
@@ -218,7 +237,7 @@
         "layout": "text-bottom-center"
       },
       {
-        "text": "The tool often adds sparkles and a glowing, dreamy light by default, even if you just typed \"unicorn.\" That polish is a setting the app chose, not something the AI figured out on its own.",
+        "text": "The tool often adds sparkles and a glowing, dreamy light by default, even if you just typed \"unicorn.\" That polish is a setting the tool/model was programmed to do, not something the AI figured out on its own.",
         "imageUrl": "https://images.code.org/b777d1e032cc71da1fa5ceef643cbeb2-unicorn polish.png",
         "key": "HoAI26-How-642a0a2b-08ec-439b-8a69-a5c1c6186624",
         "links": [
@@ -231,7 +250,7 @@
         ]
       },
       {
-        "text": "The tool often adds dramatic lighting and a heroic pose by default, even if you just typed \"superhero.\" That polish is a setting the app chose, not something the AI figured out on its own.",
+        "text": "The tool often adds dramatic lighting and a heroic pose by default, even if you just typed \"superhero.\" That polish is a setting the tool/model was programmed to do, not something the AI figured out on its own.",
         "imageUrl": "https://images.code.org/ebd4b7c39bb2c670b80ca1cc87e89255-hero polish.png",
         "key": "HoAI26-How-fca34322-509e-4dea-a0fe-f170c0e6190a",
         "links": [
@@ -245,7 +264,7 @@
         ]
       },
       {
-        "text": "You decide if it's good enough.\nThe AI isn't creative, nor is it confused. It did exactly what it was built to do: guess the most typical answer. That first image is just a starting point. If it's not what you pictured, add more detail and try again.",
+        "text": "**You** decide if it's good enough!\n\nThe AI is not creative, nor is it confused. It did exactly what it was built to do: guess the most typical answer. That first image is just a starting point. If it's not what you pictured, add more detail and try again.",
         "imageUrl": "https://images.code.org/5e7ccf54702e916496c24aa1b4bd99fa-end.png",
         "key": "HoAI26-How-4c1ab7ee-66a0-47e5-aac7-38003a653060",
         "showContinueButton": true
@@ -253,7 +272,6 @@
     ],
     "use_links": "true"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-09-01T23:03:33.403+00:00\",\"changed\":[\"cloned from \\\"HoAI26-How\\\"\"],\"cloned_from\":\"HoAI26-How\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-09-01T23:03:33.403+00:00\",\"changed\":[\"cloned from \\\"HoAI26-How\\\"\"],\"cloned_from\":\"HoAI26-How\"},{\"changed_at\":\"2026-09-02 23:01:55 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-02 23:09:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-02 23:11:47 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-02 23:18:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-02 23:20:26 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-02 23:24:15 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-02 23:32:57 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-02 23:34:58 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Panels>
