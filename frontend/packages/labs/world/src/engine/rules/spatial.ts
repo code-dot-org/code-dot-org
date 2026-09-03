@@ -335,6 +335,31 @@ export const CreatedEvent = rule.addEvent(SPATIAL.created, {
 });
 
 /**
+ * Raised on an actor when it is taken out of the world it was in.
+ *
+ * The other end of `is created`, and it exists for the same reason: an actor
+ * that brings company has to be able to take it away again. A health bar over
+ * a head is placed by the actor it is about, and an actor removed with its bar
+ * still in the world leaves a bar about nobody, hanging where its subject used
+ * to be (specs/ENHANCEMENTS.md).
+ *
+ * QUEUED, like everything else, so it is dispatched on the tick after the
+ * removal — by which time the actor is out of the world's list and its `world`
+ * back-reference is gone. That is not a problem for a handler: an event
+ * handler is passed the world it is being dispatched by, so `remove actor
+ * ⟨…⟩` works from a handler on an actor that has itself left.
+ *
+ * NOT RAISED BY `clear world`, and that is a decision rather than an
+ * oversight. Emptying a world is not something that happens TO each actor in
+ * it — nothing survives to react, a companion would be cleared by the same
+ * sweep, and a hundred handlers running as a level is torn down is a hundred
+ * chances to put something back into a world that is being emptied.
+ */
+export const RemovedEvent = rule.addEvent(SPATIAL.removed, {
+  name: 'is removed',
+});
+
+/**
  * Raised on an actor when one of its tweens reaches its end.
  *
  * On the SPATIAL rule because a tween is not about appearance — it moves any

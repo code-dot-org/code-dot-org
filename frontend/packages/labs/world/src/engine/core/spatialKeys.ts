@@ -17,6 +17,9 @@ export const SPATIAL = {
   // core reaches the rule's members by id (`World.renderSnapshot` does the
   // same for the transform).
   created: 'created',
+  // …and the other end of the same fact. Not raised by `clear world`, which
+  // empties a world rather than removing anybody from it (`rules/spatial`).
+  removed: 'removed',
 } as const;
 
 // The Animation rule's member ids, shared with core so `World.renderSnapshot`

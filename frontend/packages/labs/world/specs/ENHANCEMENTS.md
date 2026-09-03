@@ -75,12 +75,17 @@ one (`actors/enhance/actorEnhance`).
 
 Every line of it lands in the ACTOR:
 
-    actors/<target>.actor    use trait ⟨Health#Has Health⟩
+    actors/<target>.actor    define actor property ⟨health bar⟩ (actor)
+                             use trait ⟨Health#Has Health⟩
 
                              when ⟨this actor⟩ is created:
                                add actor ⟨Health Bar⟩ as ⟨bar⟩ do:
                                  set subject of ⟨bar⟩ to ⟨this actor⟩
                                  set attached to of ⟨bar⟩ to ⟨this actor⟩
+                                 set ⟨health bar⟩ of ⟨this actor⟩ to ⟨bar⟩
+
+                             when ⟨this actor⟩ is removed:
+                               remove actor ⟨health bar of this actor⟩
 
     actors/healthBar.actor   use trait ⟨Attachment#Attached⟩
 
@@ -105,6 +110,21 @@ the first tick, and its bar is over its head on the second. What it buys is
 that `add actor` inside the handler is the same ordinary call it is anywhere
 else.
 
+**And the other end, because company has to leave too.** An actor removed with
+its bar still in the world leaves a bar about nobody, hanging where its subject
+used to be — so `is removed` is the second half of the pair, raised the moment
+an actor actually leaves a world (both of `removeActor`'s paths pass through
+one `detach`). It is NOT raised by `clear world`: emptying a world is not
+something that happens to each actor in it, nothing survives to react, and a
+hundred handlers running as a level is torn down is a hundred chances to put
+something back into a world that is being emptied.
+
+**The actor remembers its bar in a property of its own**, which is what makes
+the second handler possible: `add actor … as ⟨bar⟩` opens a block scope, so
+that name is visible in that body and nowhere else, and a handler on the other
+side of the file cannot see it. A property is what an actor has that outlives a
+statement.
+
 **`as ⟨bar⟩` rather than `this actor`**, because inside `add actor` the unnamed
 reading rebinds `this actor` to the thing being placed — and both halves of
 this wiring are about the actor that was CREATED, which is the handler's own
@@ -127,7 +147,8 @@ the player's health, halves when the player is hurt, and rides above it as it
 falls. Cutting any one of the wiring lines fails it.
 
 And it places THREE players, because one is the case that hid the first
-draft's bug: three of them get three bars, each over its own head.
+draft's bug: three of them get three bars, each over its own head — and
+removing one of them takes that one's bar and leaves the other two standing.
 
 ## The catalogue this opens
 

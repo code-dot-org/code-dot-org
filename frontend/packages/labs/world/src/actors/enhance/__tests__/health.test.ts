@@ -70,6 +70,20 @@ describe('the health enhancement, as edits', () => {
     );
   });
 
+  it('teaches the actor to take its bar away again', () => {
+    const actor = at(
+      healthEnhancement.apply(withPlayer(), PLAYER),
+      'actors/player.actor',
+    )!;
+
+    // A property to remember it in, because `as ⟨bar⟩` is a block scope and
+    // the handler that removes it is a different root entirely.
+    expect(actor).toContain('world_rule_property');
+    expect(actor).toContain('health bar');
+    expect(actor).toContain('world_on_Space_RemovedEvent');
+    expect(actor).toContain('world_remove_actor');
+  });
+
   it('does nothing the second time', () => {
     const once = healthEnhancement.apply(withPlayer(), PLAYER);
     expect(healthEnhancement.applied(once, PLAYER)).toBe(true);
@@ -252,5 +266,24 @@ describe('the health enhancement, played', () => {
       .map(bar => bar.get(PositionProperty).x)
       .sort((one, other) => one - other);
     expect(over).toEqual(heads);
+  }, 60000);
+
+  it('takes its bar with it when it goes', async () => {
+    // An actor removed with its bar still in the world leaves a bar about
+    // nobody, hanging where its subject used to be.
+    const {world, players, bars} = await played(3);
+    expect(bars.length).toBe(3);
+
+    world.removeActor(players[0]);
+    // One tick: the removal is outside a tick, so the actor detaches at once
+    // and its `is removed` is dispatched on this one — which removes the bar
+    // before the same tick ends.
+    world.tick(1 / 60);
+
+    const left = [...world.actors];
+    expect(left).not.toContain(players[0]);
+    expect(left).not.toContain(bars[0]);
+    // …and only its own: the other two are still standing with theirs.
+    expect(left.length).toBe(4);
   }, 60000);
 });

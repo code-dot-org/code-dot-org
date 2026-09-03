@@ -11,14 +11,26 @@
 //
 // WHAT IT WRITES, and every line of it lands in the ACTOR:
 //
-//   actors/<target>.actor    use trait ⟨Health#Has Health⟩
+//   actors/<target>.actor    define actor property ⟨health bar⟩ (actor)
+//                            use trait ⟨Health#Has Health⟩
 //
 //                            when ⟨this actor⟩ is created:
 //                              add actor ⟨Health Bar⟩ as ⟨bar⟩ do:
 //                                set subject of ⟨bar⟩ to ⟨this actor⟩
 //                                set attached to of ⟨bar⟩ to ⟨this actor⟩
+//                                set ⟨health bar⟩ of ⟨this actor⟩ to ⟨bar⟩
+//
+//                            when ⟨this actor⟩ is removed:
+//                              remove actor ⟨health bar of this actor⟩
 //
 //   actors/healthBar.actor   use trait ⟨Attachment#Attached⟩
+//
+// THE ACTOR REMEMBERS ITS BAR, in a property of its own, and that is what the
+// second handler is for: an actor removed with its bar still in the world
+// leaves a bar about nobody, hanging where its subject used to be. The
+// variable the placement binds cannot answer this — `add actor` opens a block
+// scope, so `as ⟨bar⟩` is visible in that body and nowhere else — and a
+// property is what an actor has that outlives a statement.
 //
 // NO WORLD IS TOUCHED, and that is the whole of the second draft. The first one
 // placed the bar in every `.world` and pointed it with `any ⟨kind⟩`, which was
@@ -67,6 +79,17 @@ const HAS_HEALTH = 'Health#HasHealthTrait';
 /** `when ⟨this actor⟩ is created` — the Space rule's own event, minted as a
  *  hat by the same machinery every rule event is (`blockly/domainBlocks`). */
 const CREATED_HAT = 'world_on_Space_CreatedEvent';
+/** …and its other end, for taking the bar away again. */
+const REMOVED_HAT = 'world_on_Space_RemovedEvent';
+/**
+ * The property the actor keeps its bar in.
+ *
+ * The NAME is what the block says and what the block TYPE is minted from:
+ * `health bar` becomes `…_HealthBarProperty` on the file that declares it
+ * (`blockly/ownProperties`).
+ */
+const BAR_PROPERTY = 'health bar';
+const BAR_PROPERTY_EXPORT = 'HealthBarProperty';
 const ATTACHED = 'Attachment#AttachedTrait';
 
 /** `this actor` — the handler's subject, which is the actor just created. */
@@ -96,6 +119,35 @@ const hasTrait = (contents: string, trait: string): boolean =>
     block => block.type === 'world_use_trait' && block.fields?.TRAIT === trait,
   );
 
+/** `define property ⟨health bar⟩` — where the actor remembers what it placed. */
+const declareBar = (): BlockJson => ({
+  type: 'world_rule_property',
+  fields: {
+    TYPE: 'actor',
+    ACCESS: 'writable',
+    NAME: BAR_PROPERTY,
+    DEFAULT: '',
+  },
+});
+
+/** `⟨health bar⟩ of this actor`, on the file that declares it. */
+const barOfMe = (target: EnhanceTarget) => ({
+  block: {
+    type: `world_get_${pathSlug(target.path)}_${BAR_PROPERTY_EXPORT}`,
+    inputs: {ACTOR: me()},
+  },
+});
+
+/** Whether the actor already declares somewhere to keep its bar. */
+const declaresBar = (contents: string): boolean =>
+  holds(
+    contents,
+    'world_actor',
+    block =>
+      block.type === 'world_rule_property' &&
+      block.fields?.NAME === BAR_PROPERTY,
+  );
+
 /** The hat this adds: when this actor is created, it brings its own bar. */
 const handler = (target: EnhanceTarget): BlockJson => {
   const variable = barVariable(target);
@@ -123,6 +175,15 @@ const handler = (target: EnhanceTarget): BlockJson => {
                   // follow it. How far above is the Attachment rule's default.
                   type: 'world_set_Attachment_AttachedToProperty',
                   inputs: {ACTOR: bar, VALUE: me()},
+                  next: {
+                    block: {
+                      // …and the actor remembers it, because `as ⟨bar⟩` is a
+                      // block scope and the handler that takes it away again
+                      // is somewhere else entirely.
+                      type: `world_set_${pathSlug(target.path)}_${BAR_PROPERTY_EXPORT}`,
+                      inputs: {ACTOR: me(), VALUE: bar},
+                    },
+                  },
                 },
               },
             },
@@ -132,6 +193,18 @@ const handler = (target: EnhanceTarget): BlockJson => {
     },
   };
 };
+
+/** The other hat: when it goes, its bar goes with it. */
+const remover = (target: EnhanceTarget): BlockJson => ({
+  type: REMOVED_HAT,
+  inputs: {ACTOR: me()},
+  next: {
+    block: {
+      type: 'world_remove_actor',
+      inputs: {ACTOR: barOfMe(target)},
+    },
+  },
+});
 
 /** Whether this actor already brings its own bar. */
 const brings = (contents: string, target: EnhanceTarget): boolean => {
@@ -162,8 +235,8 @@ export const healthEnhancement: Enhancement = {
   id: 'health',
   name: 'Health, and a bar above it',
   description:
-    'Gives the actor health it can lose, and a Health Bar that rides over its head showing how much is left. Anything that deals damage takes it down; at nothing left, the actor dies.',
-  brings: ['Has Health', 'Attached', 'a Health Bar'],
+    'Gives the actor health it can lose, and a Health Bar that rides over its head showing how much is left. Every one of these actors gets its own, brought along when it appears and taken away when it goes.',
+  brings: ['Has Health', 'Attached', 'a Health Bar it carries with it'],
   refuse(target: EnhanceTarget) {
     // A bar about itself would ride above its own head and draw its own empty
     // health, which is a picture of nothing rather than an error.
@@ -193,8 +266,12 @@ export const healthEnhancement: Enhancement = {
         if (!hasTrait(next, HAS_HEALTH)) {
           next = append(next, 'world_actor', [useTrait(HAS_HEALTH)]);
         }
+        if (!declaresBar(next)) {
+          next = append(next, 'world_actor', [declareBar()]);
+        }
         if (!brings(next, target)) {
           next = addRoot(next, handler(target));
+          next = addRoot(next, remover(target));
           next = withVariable(next, barVariable(target));
         }
         return next;

@@ -1075,6 +1075,15 @@ export class World {
 
   /** Actually take it out: off the list, and no longer pointing at this world. */
   private detach(actor: Actor): void {
+    // …and the actor hears that it is going. Here rather than in
+    // `removeActor`, because that has two paths — straight out, or added to
+    // the set swept at the end of a tick — and this is the one moment both of
+    // them pass through. `clearActors` does not, which is deliberate
+    // (`rules/spatial`).
+    const removed = this.spatialEvent(SPATIAL.removed);
+    if (removed && this.actorList.includes(actor)) {
+      this.emit(removed, actor);
+    }
     const index = this.actorList.indexOf(actor);
     if (index >= 0) {
       this.actorList.splice(index, 1);
