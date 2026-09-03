@@ -7,10 +7,9 @@ require 'cdo/shared_cache'
 class User::LogToken < ApplicationRecord
   data_classification(
     id: :confidential,
-    user_id: :confidential,
+    user_id: :restricted,
     destination: :confidential,
     period: :confidential,
-    # A pseudonym still identifies a person; Project.uuid is classified the same.
     uuid: :restricted,
     created_at: :confidential,
     updated_at: :confidential,
@@ -22,7 +21,7 @@ class User::LogToken < ApplicationRecord
   ].freeze
 
   # One primary-DB read per active user per day of use.
-  CACHE_TTL = 8.hours
+  CACHE_TTL = 24.hours
 
   belongs_to :user, -> {with_deleted}
 
