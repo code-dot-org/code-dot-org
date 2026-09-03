@@ -6,5 +6,10 @@
 }
 
 .chatToolsAlert {
-  margin: 20px 0;
+  margin: var(--spacing-p-s) 0;
+}
+
+// Doubled to outrank `.chatToolsInfo.chatToolsInfo` above at equal specificity.
+.overviewSpacing.overviewSpacing {
+  margin: var(--spacing-p-s) 0;
 }
