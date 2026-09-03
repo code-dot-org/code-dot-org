@@ -50,8 +50,10 @@ class Quiz < Level
   validate :max_attempts_requires_allow_multiple_attempts
   validate :show_intro_screen_required_when_time_limit
 
-  has_many :placements, -> {order(:page, :position)}, class_name: 'QuizQuestionPlacement', foreign_key: :level_id, inverse_of: :level, dependent: nil
+  # The dependent: :destroy clause ensures associated join models are deleted but note that bank questions are shared and stay.
+  has_many :placements, -> {order(:page, :position)}, class_name: 'QuizQuestionPlacement', foreign_key: :level_id, inverse_of: :level, dependent: :destroy
   has_many :questions, through: :placements, source: :quiz_question
+  # The dependent: nil clause ensures student attempts are kept when this quiz is deleted.
   has_many :attempts, class_name: 'QuizAttempt', foreign_key: :level_id, inverse_of: :level, dependent: nil
 
   def self.create_from_level_builder(params, level_params)

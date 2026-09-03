@@ -26,6 +26,47 @@ class StorageIdTest < Minitest::Test
     end
   end
 
+  def test_create_storage_id_cookie_with_anon_user_id
+    stubs(:storage_encrypt_id).returns('encrypted-storage-id')
+
+    anon_user_id = SecureRandom.uuid
+    request = mock(anon_user_id: anon_user_id, shared_cookie_domain: 'code.org')
+    stubs(:request).returns(request)
+
+    response = mock
+    response.stubs(:set_cookie)
+    stubs(:response).returns(response)
+
+    expected_storage_id = rand
+    expects(:create_storage_id_for_user).with(anon_user_id:).returns(expected_storage_id)
+    assert_equal expected_storage_id, create_storage_id_cookie
+  end
+
+  def test_create_storage_id_cookie_without_anon_user_id
+    stubs(:storage_encrypt_id).returns('encrypted-storage-id')
+
+    request = mock(anon_user_id: nil, shared_cookie_domain: 'code.org')
+    stubs(:request).returns(request)
+
+    response = mock
+    response.stubs(:set_cookie)
+    stubs(:response).returns(response)
+
+    expected_storage_id = rand
+    expects(:create_storage_id_for_user).with(anon_user_id: nil).returns(expected_storage_id)
+    assert_equal expected_storage_id, create_storage_id_cookie
+  end
+
+  def test_create_storage_id_for_anonymous_user
+    anon_user_id = SecureRandom.uuid
+
+    storage_id = create_storage_id_for_user(anon_user_id: anon_user_id)
+    storage = user_storage_ids_table.where(id: storage_id).first
+
+    assert_nil storage[:user_id]
+    assert_equal anon_user_id, storage[:anon_user_id]
+  end
+
   def test_storage_id_for_current_user
     request = mock
     stubs(:request).returns(request)
@@ -71,7 +112,10 @@ class StorageIdTest < Minitest::Test
     # Mock the DB and table, raising an exception on insert.
     mock_table = mock('user storage ids table')
     mock_table.stubs(:where).with({user_id: table_user_id}).returns(mock_rows).twice
-    mock_table.stubs(:insert).with({user_id: table_user_id}).raises(Sequel::UniqueConstraintViolation).once
+    mock_table.stubs(:insert).
+      with({user_id: table_user_id, anon_user_id: nil}).
+      raises(Sequel::UniqueConstraintViolation).
+      once
 
     stubs(:user_storage_ids_table).returns(mock_table)
 
