@@ -34,6 +34,11 @@ const LABELS: Record<string, string> = {
 const glyphFor = (emoji: string) => GLYPHS[emoji] || emoji;
 const labelFor = (emoji: string) => LABELS[emoji] || emoji;
 
+const chipLabel = (reaction: Reaction) =>
+  `${labelFor(reaction.emoji)}, ${reaction.count} ${
+    reaction.count === 1 ? 'reaction' : 'reactions'
+  }`;
+
 const orderIndex = (emoji: string) => {
   const i = EMOJI_ORDER.indexOf(emoji);
   // Unknown emoji (should not happen) sort after the known set, stably.
@@ -71,21 +76,24 @@ interface ReactionChipsProps {
   // off it.
   responseId: number;
   reactions: Reaction[];
-  // Called with the new tallies whenever the viewer changes their reaction,
-  // so an owning view can keep its own copy in sync. Lets a reaction made on
-  // the project page show up on that project's gallery card, and vice versa.
+  // Show the tallies without the "add reaction" button and without toggling,
+  // for surfaces that only display reactions (the gallery card). Reactions are
+  // set on the project page.
+  readOnly?: boolean;
+  // Called with the new tallies whenever the viewer changes a reaction, so an
+  // owning view can keep its own copy in sync. Unused when readOnly.
   onReactionsChange?: (reactions: Reaction[]) => void;
 }
 
-// The interactive row of emoji reactions on a gallery card or project page:
-// an "add reaction" button that opens a picker of the full emoji set, and one
-// chip per emoji that has reactions. Clicking a chip toggles the viewer's own
-// reaction; the chip is highlighted while the viewer is among its reactors.
-// Toggles update optimistically and reconcile with the server's authoritative
-// tallies, reverting on failure.
+// A row of emoji reaction chips, each an emoji and its count, highlighted
+// while the viewer is among its reactors. On the project page (interactive)
+// it also shows an "add reaction" picker and toggles the viewer's reaction on
+// click, updating optimistically and reconciling with the server's tallies.
+// On the gallery card (readOnly) it shows the same chips as static labels.
 const ReactionChips: FC<ReactionChipsProps> = ({
   responseId,
   reactions,
+  readOnly = false,
   onReactionsChange,
 }) => {
   const [items, setItems] = useState<Reaction[]>(reactions);
@@ -168,6 +176,30 @@ const ReactionChips: FC<ReactionChipsProps> = ({
     }
   };
 
+  if (readOnly) {
+    if (reactions.length === 0) {
+      return null;
+    }
+    return (
+      <div className={styles.reactions}>
+        {reactions.map(reaction => (
+          <span
+            key={reaction.emoji}
+            role="img"
+            aria-label={chipLabel(reaction)}
+            className={classNames(
+              styles.chip,
+              reaction.reacted && styles.chipSelected
+            )}
+          >
+            <span aria-hidden="true">{glyphFor(reaction.emoji)}</span>
+            <span className={styles.count}>{reaction.count}</span>
+          </span>
+        ))}
+      </div>
+    );
+  }
+
   return (
     <div className={styles.reactions} ref={rootRef}>
       <div className={styles.addReactionWrapper}>
@@ -212,12 +244,11 @@ const ReactionChips: FC<ReactionChipsProps> = ({
           type="button"
           className={classNames(
             styles.chip,
+            styles.chipInteractive,
             reaction.reacted && styles.chipSelected
           )}
           aria-pressed={reaction.reacted}
-          aria-label={`${labelFor(reaction.emoji)}, ${reaction.count} ${
-            reaction.count === 1 ? 'reaction' : 'reactions'
-          }`}
+          aria-label={chipLabel(reaction)}
           disabled={pending.has(reaction.emoji)}
           onClick={() => toggle(reaction.emoji)}
         >

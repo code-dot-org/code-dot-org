@@ -46,6 +46,35 @@ describe('ReactionChips', () => {
     ).toBeInTheDocument();
   });
 
+  it('renders read-only chips with no add button and no toggling', async () => {
+    const user = userEvent.setup();
+    render(
+      <ReactionChips
+        responseId={5}
+        reactions={[heart({reacted: true})]}
+        readOnly
+      />
+    );
+
+    // The chip shows as a static label, not a button, and there is no picker.
+    const chip = screen.getByRole('img', {name: /Heart, 3 reactions/});
+    expect(chip).toBeInTheDocument();
+    expect(
+      screen.queryByRole('button', {name: 'Add reaction'})
+    ).not.toBeInTheDocument();
+
+    await user.click(chip);
+    expect(addReaction).not.toHaveBeenCalled();
+    expect(removeReaction).not.toHaveBeenCalled();
+  });
+
+  it('renders nothing read-only when there are no reactions', () => {
+    const {container} = render(
+      <ReactionChips responseId={5} reactions={[]} readOnly />
+    );
+    expect(container).toBeEmptyDOMElement();
+  });
+
   it('marks the viewer’s own reaction as pressed', () => {
     render(
       <ReactionChips responseId={5} reactions={[heart({reacted: true})]} />

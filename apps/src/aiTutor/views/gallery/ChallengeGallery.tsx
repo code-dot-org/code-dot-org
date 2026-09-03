@@ -30,7 +30,7 @@ const projectIdFromLocation = () => {
   return isNaN(id) ? null : id;
 };
 
-// The Tutor+ project gallery: submitted challenge work, browsable by class
+// Tutor+ project gallery: submitted challenge work, browsable by class
 // section and unit, split into video and whiteboard project grids. Shows
 // the selected section's work, or the signed-in user's own submissions in
 // the "My projects" view. Clicking a project opens its project page in
@@ -129,10 +129,9 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
     };
   }, [sectionId]);
 
-  // Fold a response's new reaction tallies back into the canonical listing.
-  // The gallery holds `responses` from its initial fetch and swaps in the
-  // project page while a project is open; without this, a reaction made on
-  // the project page would be lost when the viewer returns to the grid.
+  // Folds a response's new reaction tallies into the listing held from the
+  // initial fetch, so a reaction made on the project page shows on that
+  // project's card when the viewer returns to the grid.
   const updateResponseReactions = (id: number, reactions: Reaction[]) =>
     setResponses(prev =>
       prev
@@ -172,9 +171,6 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
             variant={variant}
             unitPosition={unitPositionFor(response.unit_id)}
             onOpen={() => navigateToProject(response.id)}
-            onReactionsChange={reactions =>
-              updateResponseReactions(response.id, reactions)
-            }
           />
         ))}
       </div>

@@ -12,11 +12,8 @@ import styles from './project-view.module.scss';
 
 interface ProjectDetailsCardProps {
   detail: ChallengeResponseDetail;
-  // The position of the project's unit within the course, for the
-  // "Unit N, Lesson M" label. Null when the unit is unknown.
   unitPosition: number | null;
-  // Bubbles this project's reaction changes up so the gallery card behind the
-  // project page reflects them on return.
+  // Forwards this project's reaction changes up toward the gallery.
   onReactionsChange?: (reactions: Reaction[]) => void;
 }
 

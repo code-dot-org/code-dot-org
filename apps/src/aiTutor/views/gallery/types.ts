@@ -4,8 +4,8 @@ import {
   challengeResponseValidator,
 } from '../lessonDeepDive/types';
 
-// Reactions travel embedded in each ChallengeResponse; re-exported here so
-// the gallery's own modules can keep importing the type from './types'.
+// Reactions ride embedded in each ChallengeResponse; re-exported so gallery
+// modules can import the type from './types'.
 export type {Reaction} from '../lessonDeepDive/types';
 
 // Bootstrap data embedded by LessonsController#tutor_gallery.

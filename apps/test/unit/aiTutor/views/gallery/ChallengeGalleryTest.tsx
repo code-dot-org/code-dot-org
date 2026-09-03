@@ -321,11 +321,12 @@ describe('ChallengeGallery', () => {
     expect(mockAddReaction).toHaveBeenCalledWith(8, 'heart');
 
     // Back on the gallery, the card carries the reaction made on the project
-    // page rather than the stale empty list from the initial fetch.
+    // page rather than the stale empty list from the initial fetch. The card
+    // shows reactions read-only, so the chip is a static label, not a button.
     fireEvent.click(screen.getByRole('button', {name: /project gallery/}));
     await waitFor(() =>
       expect(
-        screen.getByRole('button', {name: /Heart, 1 reaction/})
+        screen.getByRole('img', {name: /Heart, 1 reaction/})
       ).toBeInTheDocument()
     );
   });

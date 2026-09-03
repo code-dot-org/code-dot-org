@@ -19,11 +19,10 @@ class ChallengeResponseReaction < ApplicationRecord
   belongs_to :challenge_response
   belongs_to :user
 
-  # The reaction vocabulary, stored by name. The gallery frontend maps each
-  # name to a glyph; keeping a fixed, controlled set keeps the emoji column a
-  # short, index-friendly token instead of arbitrary unicode, and lets both
-  # ends agree on which reactions exist. Order here is the order chips render
-  # in (see ChallengeResponse#reaction_summary).
+  # The reaction vocabulary, stored by name (the gallery maps each to a glyph).
+  # A fixed set keeps the column a short, index-friendly token and lets client
+  # and server agree on the reaction set. Listed in the order chips render (see
+  # ChallengeResponse#reaction_summary).
   EMOJIS = %w[clap fire smile heart party trophy].freeze
 
   validates :emoji, presence: true, inclusion: {in: EMOJIS}

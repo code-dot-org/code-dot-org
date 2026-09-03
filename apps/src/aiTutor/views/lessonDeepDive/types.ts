@@ -138,8 +138,7 @@ export type Reaction = {
 };
 
 // Normalizes the server's reaction array. A missing or malformed list is
-// treated as no reactions rather than throwing, so an older payload without
-// the field still renders.
+// treated as no reactions rather than throwing.
 export const parseReactions = (raw: unknown): Reaction[] => {
   if (!Array.isArray(raw)) {
     return [];
