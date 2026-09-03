@@ -4,6 +4,7 @@ import React from 'react';
 import LevelGroupSubmitDialog, {
   showLevelGroupSubmitDialog,
 } from '@cdo/apps/code-studio/levels/LevelGroupSubmitDialog';
+import experiments from '@cdo/apps/util/experiments';
 
 const DIALOG_PROPS = {
   id: 'levelgroup-submit-complete-dialogcontent',
@@ -104,5 +105,17 @@ describe('showLevelGroupSubmitDialog', () => {
     fireEvent.keyDown(document, {key: 'Escape'});
     expect(onConfirm).not.toHaveBeenCalled();
     expect(screen.queryByRole('alertdialog')).not.toBeInTheDocument();
+  });
+
+  it('shows nothing when the bypass-dialog-popup experiment is enabled', () => {
+    const isEnabled = jest
+      .spyOn(experiments, 'isEnabled')
+      .mockImplementation(key => key === experiments.BYPASS_DIALOG_POPUP);
+    const onConfirm = jest.fn();
+    act(() => showLevelGroupSubmitDialog(DIALOG_PROPS, onConfirm));
+
+    expect(screen.queryByRole('alertdialog')).not.toBeInTheDocument();
+    expect(onConfirm).not.toHaveBeenCalled();
+    isEnabled.mockRestore();
   });
 });

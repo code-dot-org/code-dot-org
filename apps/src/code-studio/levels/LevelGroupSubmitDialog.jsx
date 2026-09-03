@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
 /**
@@ -56,6 +57,12 @@ export default LevelGroupSubmitDialog;
  * @param {function} onConfirm Called after the dialog closes on OK.
  */
 export function showLevelGroupSubmitDialog(dialogProps, onConfirm) {
+  // Same guard as dialogHelper's showDialog: the experiment suppresses every
+  // level dialog, and with it the submit that OK would have triggered.
+  if (experiments.isEnabled(experiments.BYPASS_DIALOG_POPUP)) {
+    return;
+  }
+
   const container = document.createElement('div');
   document.body.appendChild(container);
 

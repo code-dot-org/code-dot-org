@@ -790,9 +790,9 @@ end
 
 Then /^I wait to see a dialog titled "((?:[^"\\]|\\.)*)"$/ do |expected_text|
   # Legacy BaseDialog uses `.dialog-title`; DSCO dialogs put the title in a
-  # heading inside a `[role="dialog"]` (h2 for Dialog, h3 for Modal). Accept
-  # either.
-  selector = %q($('.dialog-title:visible').first().text() || $('[role="dialog"]:visible :header').first().text())
+  # heading (h2 for Dialog, h3 for Modal) inside a `[role="dialog"]` or, for
+  # Dialog, `[role="alertdialog"]`. Accept any of them.
+  selector = %q($('.dialog-title:visible').first().text() || $('[role="dialog"]:visible :header, [role="alertdialog"]:visible :header').first().text())
   wait_short_until {@browser.execute_script("return #{selector};")&.include?(expected_text)}
 end
 
