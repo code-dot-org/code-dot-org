@@ -138,7 +138,7 @@ const runsOut = hurtable.event(['runs out of health']);
 const damages = dangerous.event(['damages', param('other', 'actor')]);
 
 /**
- * `⟨Player⟩ has health left?` — whether there is any left.
+ * `⟨Player⟩ has health remaining?` — whether there is any of it left.
  *
  * The question a game asks constantly, and one a learner would otherwise write
  * as `health of ⟨…⟩ > 0` every time. `health of` is still there for the ones
@@ -146,8 +146,8 @@ const damages = dangerous.event(['damages', param('other', 'actor')]);
  */
 hurtable.block({
   returns: 'boolean',
-  description: 'Whether this actor still has health left.',
-  say: ['has health left?'],
+  description: 'Whether this actor still has health remaining.',
+  say: ['has health remaining?'],
   body: () => [give(moreThan(health.of(thisActor()), n(0)))],
 });
 
@@ -176,8 +176,8 @@ const takeDamage = hurtable.block({
       [
         moreThan(health.of(thisActor()), n(0)),
         [
-          note('Never below zero: health left is not a debt, and a game that'),
-          note('showed “-4 health” would be showing a number nobody meant.'),
+          note('Never below zero: health remaining is not a debt, and a game'),
+          note('that showed “-4 health” would show a number nobody meant.'),
           left.set(minus(health.of(thisActor()), amount.get())),
           health.set(
             thisActor(),

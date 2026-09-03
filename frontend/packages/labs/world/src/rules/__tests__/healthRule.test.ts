@@ -82,7 +82,7 @@ describe('rules/health.rule', () => {
 
   it('asks its question and applies its damage as blocks', () => {
     const said = [...meta.queries, ...meta.actions].map(one => one.name);
-    expect(said.some(name => name.includes('health left'))).toBe(true);
+    expect(said.some(name => name.includes('health remaining'))).toBe(true);
     expect(said.some(name => name.includes('damage'))).toBe(true);
   });
 
