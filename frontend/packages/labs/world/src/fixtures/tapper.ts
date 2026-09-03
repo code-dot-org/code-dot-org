@@ -27,7 +27,7 @@
 //
 // The last one is the one to read twice. `Takes Mouse Input` and `Can Be
 // Clicked` are not two spellings of the same subscription — they are two
-// questions. A scoreboard counting presses and a gun firing wherever it is
+// questions. A scoreboard counting presses and a zapper answering wherever it
 // aimed want the first; a button, a card, and a coin want the second.
 //
 // AND `mouse position`, which is not an event at all. It is where the pointer

@@ -1,17 +1,17 @@
-// "Shoots" — asked constantly, it fires at its own rate.
+// "Zaps" — asked constantly, it answers at its own rate.
 //
-// The rule owns the RATE and nothing else: it raises "fires" and a project
-// decides what a shot is (`rules/shoots`). So this demo is both halves — a
-// timer asking every frame, and a handler that makes a bullet — and what the
-// strip shows is the gap between them. The gun is asked sixty times a second
+// The rule owns the RATE and nothing else: it raises "zaps" and a project
+// decides what a zap sends (`rules/zaps`). So this demo is both halves — a
+// timer asking every frame, and a handler that sends an energy ball — and what
+// strip shows is the gap between them. The zapper is asked sixty times a second
 // and answers four, which is the reload time made visible as the spacing of
-// the bullets.
+// the balls.
 //
 // A timer with a period under one frame is the honest way to ask constantly.
 // The alternative is a key nobody is pressing, which is the device problem
 // these demos are deliberately not solving yet (specs/RULE_DEMOS.md).
 //
-// The bullets expire rather than accumulate. They would otherwise cross the
+// The balls expire rather than accumulate. They would otherwise cross the
 // frame and keep going, which is an actor loose outside the picture and a
 // demo world to fix.
 
@@ -19,36 +19,36 @@ import {ActorBuilder, PositionProperty, Vector} from '../../engine';
 
 import {demoWorld, type RuleDemo, type RuleModules} from './types';
 
-/** Seconds between shots — four a second, so six bullets in the strip. */
-const RELOAD = 0.25;
+/** Seconds between zaps — four a second, so six balls in the strip. */
+const RECHARGE = 0.25;
 
-export const shootsDemo: RuleDemo = {
-  rules: ['rules/motion', 'rules/time', 'rules/expires', 'rules/shoots'],
+export const zapsDemo: RuleDemo = {
+  rules: ['rules/motion', 'rules/time', 'rules/expires', 'rules/zaps'],
   seconds: 2.5,
   build(modules: RuleModules) {
     const of = (path: string, name: string) => modules[path][name] as never;
-    const world = demoWorld('shoots', modules, shootsDemo.rules);
+    const world = demoWorld('zaps', modules, zapsDemo.rules);
     // A rule's block compiles to an action DESCRIPTOR, not a function; the
-    // world is what runs one. `make ⟨who⟩ fire` is the block a project would
+    // world is what runs one. `make ⟨who⟩ zap` is the block a project would
     // put under a key press, and this is that same block called by hand.
-    const fire = () => world.act(of('rules/shoots', 'MakeFireAction'), gun);
+    const zap = () => world.act(of('rules/zaps', 'MakeZapAction'), zapper);
 
-    let shots = 0;
-    const gun = new ActorBuilder({id: 'gun', name: 'gun'})
+    let sent = 0;
+    const zapper = new ActorBuilder({id: 'zapper', name: 'zapper'})
       .useTraits([
-        of('rules/shoots', 'ShootsTrait'),
+        of('rules/zaps', 'ZapsTrait'),
         of('rules/time', 'HasATimerTrait'),
       ])
-      .set(of('rules/shoots', 'ReloadTimeProperty'), RELOAD)
+      .set(of('rules/zaps', 'RechargeTimeProperty'), RECHARGE)
       // Under a frame, so the ask happens every tick and the ANSWER is the
-      // only thing deciding when a bullet appears.
+      // only thing deciding when a ball appears.
       .set(of('rules/time', 'TimerPeriodProperty'), 0.001)
       .set(PositionProperty, new Vector(24, 64))
-      .on(of('rules/time', 'TimerFiresEvent'), fire)
-      .on(of('rules/shoots', 'FiresEvent'), () => {
-        const id = `shot${shots++}`;
+      .on(of('rules/time', 'TimerFiresEvent'), zap)
+      .on(of('rules/zaps', 'ZapsEvent'), () => {
+        const id = `ball${sent++}`;
         world.addActor(
-          new ActorBuilder({id, name: 'shot'})
+          new ActorBuilder({id, name: 'ball'})
             .useTraits([
               of('rules/motion', 'CanMoveTrait'),
               of('rules/expires', 'ExpiresTrait'),
@@ -60,14 +60,16 @@ export const shootsDemo: RuleDemo = {
             .instantiate(id),
         );
       })
-      .instantiate('gun');
-    world.addActor(gun);
+      .instantiate('zapper');
+    world.addActor(zapper);
 
-    return {world, cast: {gun}};
+    return {world, cast: {zapper}};
   },
   look(id: string) {
-    return id === 'gun'
+    return id === 'zapper'
       ? {width: 24, height: 24, colour: '#98c379'}
-      : {width: 10, height: 6, colour: '#e06c75'};
+      : // A ball rather than a bolt: round is what an energy ball is, and a
+        // box is all this recorder draws (specs/RULE_DEMOS.md).
+        {width: 8, height: 8, colour: '#61d8ff'};
   },
 };

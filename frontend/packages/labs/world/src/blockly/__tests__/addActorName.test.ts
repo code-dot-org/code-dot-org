@@ -89,11 +89,11 @@ describe('where naming the placed actor is offered', () => {
   });
 
   it('is, inside an actor’s event handler', () => {
-    // The `fires` handler — where a bullet is actually spawned. `inBuilderContext`
+    // The `zaps` handler — where a ball is actually spawned. `inBuilderContext`
     // treats any handler as disqualifying, which is right for the question IT
     // asks and would be exactly wrong here.
     expect(
-      enclosed({type: 'world_on_Shooting_FiresEvent', inputs: ['ACTOR']}),
+      enclosed({type: 'world_on_Zapping_ZapsEvent', inputs: ['ACTOR']}),
     ).toBe(true);
   });
 

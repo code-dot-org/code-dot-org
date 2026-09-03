@@ -142,7 +142,7 @@ is a running order rather than a verdict.
 **The obvious ones, first.** A rule does something visible on its own, given
 only the rules it requires and nobody touching the keyboard: Gravity, Solid
 Bodies, Collection, Health, Steering, Expiry, Boundaries, Screen Wrap, Drag,
-Shooting, Time, Physics (a thing with a velocity drifts, which is exactly what
+Zapping, Time, Physics (a thing with a velocity drifts, which is exactly what
 having physics means) and the camera rules. That is most of the shelf, it needs
 nothing invented, and it is where the shape of this gets tested.
 
@@ -225,7 +225,7 @@ be a demo of an empty rectangle. So a demo may declare `drive`, called once a
 frame beside the keys, which writes the line a project would write: `set
 fraction of ⟨the bar⟩`, `set text of ⟨the label⟩`, `set opacity of ⟨the
 portrait⟩`. It reaches properties the way a block does, through the compiled
-modules, and nothing deeper. That is the same bargain the Time and Shooting
+modules, and nothing deeper. That is the same bargain the Time and Zapping
 rule demos struck for the rules that raise an event and own nothing that
 follows.
 
@@ -338,20 +338,20 @@ this.
    thing to be stale.
 5. ✅ **The rest of the obvious ones**, once the shape has survived contact
    with three: Physics, Solid Bodies, Collection, Health, Steering, Gravity,
-   Drag, Expiry, Screen Wrap, Boundaries, Time, Shooting, Writing, Jumping,
+   Drag, Expiry, Screen Wrap, Boundaries, Time, Zapping, Writing, Jumping,
    Scoring, Patrol, Attachment, and the four camera rules.
 
    **Two of them needed a handler, which is the point.** Time raises "timer
-   fires" and Shooting raises "fires", and neither owns what happens next — so
+   fires" and Zapping raises "zaps", and neither owns what happens next — so
    their demos write the handler a project would write, in TypeScript instead
    of blocks. The Time demo leaves a mark per beat and the strip fills with
-   evenly spaced marks; the Shooting demo asks to fire every single frame and
-   the strip shows bullets coming out four a second, which is the reload time
+   evenly spaced marks; the Zapping demo asks to zap every single frame and
+   the strip shows energy balls coming out four a second, which is the recharge
    made visible as a distance.
 
    Asking every frame is done with a timer whose period is under one frame.
    The obvious way to ask constantly is a key held down, and nobody is
-   pressing anything in a recording — that is step 6's problem, and Shooting
+   pressing anything in a recording — that is step 6's problem, and Zapping
    did not have to wait for it.
 
    **Writing needed the font**, and getting it also widened the blanket test

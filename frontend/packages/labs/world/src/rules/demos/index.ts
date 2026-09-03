@@ -36,7 +36,6 @@ import {physicsDemo} from './physics';
 import {progressDemo} from './progress';
 import {revealsDemo} from './reveals';
 import {scoreDemo} from './score';
-import {shootsDemo} from './shoots';
 import {solidDemo} from './solid';
 import {spawnerDemo} from './spawner';
 import {steeringDemo} from './steering';
@@ -45,6 +44,7 @@ import {turnsDemo} from './turns';
 import {DEMO_FPS, type RuleDemo} from './types';
 import {wrapDemo} from './wrap';
 import {writingDemo} from './writing';
+import {zapsDemo} from './zaps';
 
 export const RULE_DEMOS: Readonly<Record<string, RuleDemo>> = {
   // Keyed by the stock rule's id (`rules/stock`), in the order the shelf
@@ -77,7 +77,7 @@ export const RULE_DEMOS: Readonly<Record<string, RuleDemo>> = {
   jump: jumpDemo,
   drive: driveDemo,
   drag: dragDemo,
-  shoots: shootsDemo,
+  zaps: zapsDemo,
   expires: expiresDemo,
   bounds: boundsDemo,
   wrap: wrapDemo,

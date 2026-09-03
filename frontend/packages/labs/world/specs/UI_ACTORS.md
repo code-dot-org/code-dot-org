@@ -76,7 +76,7 @@ define rule ⟨Writing⟩  ability ⟨Shows Text⟩
 NAMED FOR THE MECHANIC, not for the state. A rule's name is its toolbox
 category, and the toolbox already has a Text one — Blockly's, holding the string
 literal and the note block. Two categories sharing a name is a toolbox a learner
-has to read twice, so this sits beside `Physics`, `Collection` and `Shooting`,
+has to read twice, so this sits beside `Physics`, `Collection` and `Zapping`,
 which are named the same way.
 
 No steps: nothing about text happens over time. This is a rule that exists

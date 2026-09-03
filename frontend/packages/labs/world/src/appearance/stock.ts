@@ -161,10 +161,11 @@ export const STOCK_SPRITES: readonly StockSprite[] = [
     dataUrl: image('asteroid'),
   },
   {
-    id: 'shot',
-    name: 'Shot',
-    description: 'A small bright bolt, pointing up — for something fired.',
-    dataUrl: image('shot'),
+    id: 'energyBall',
+    name: 'Energy Ball',
+    description:
+      'A glowing blue orb — for something an actor sends across the screen.',
+    dataUrl: image('energyBall'),
   },
   {
     id: 'door',

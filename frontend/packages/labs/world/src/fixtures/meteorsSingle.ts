@@ -5,11 +5,11 @@
 // between them is what moving a thing into a file buys and costs.
 //
 // It is the more interesting of the two pairs, because this game has something
-// breakout does not — a handler that SPAWNS. The ship's `fires` handler is a
+// breakout does not — a handler that SPAWNS. The ship's `zaps` handler is a
 // hat here, on `any ⟨Ship⟩`, and what it adds is a world-local `define actor`
 // rather than a module. Nothing about the spawn changes: `any ⟨Ship⟩` in a
 // hat's subject compiles to the template, so the handler belongs to every ship
-// there will be, and `add actor ⟨Shot⟩ as ⟨shot⟩` still has to name the new
+// there will be, and `add actor ⟨Energy Ball⟩ as ⟨ball⟩` still has to name the new
 // actor because inside that block `this actor` means it and not the ship.
 //
 // ONE thing does change, and it is the honest cost of the shape. The rocks are
@@ -25,12 +25,12 @@
 
 import {stack, useTrait, type ProjectSpec} from '../constants';
 
-import {at, me, METEORS_SUPPORT_FILES, number, RING, SHOT_VAR} from './meteors';
+import {at, me, METEORS_SUPPORT_FILES, number, RING, BALL_VAR} from './meteors';
 
 // A local actor is named by its DEFINING BLOCK'S id, so the ids are written
 // down rather than generated (blockly/localActors).
 const SHIP = 'meteorsShipDef';
-const SHOT = 'meteorsShotDef';
+const SHOT = 'meteorsEnergy BallDef';
 const METEOR = 'meteorsMeteorDef';
 
 const local = (blockId: string) => `local:${blockId}`;
@@ -74,7 +74,7 @@ const defineActor = (id: string, name: string, x: number, rows: object[]) => ({
 });
 
 const SINGLE_WORLD = JSON.stringify({
-  variables: [SHOT_VAR],
+  variables: [BALL_VAR],
   blocks: {
     blocks: [
       // The world at the top left, where a reader starts. Its actors are
@@ -118,11 +118,11 @@ const SINGLE_WORLD = JSON.stringify({
         useTrait('Input#TakesKeyboardInputTrait'),
         useTrait('Screen Wrap#WrapsAcrossTrait'),
         useTrait('Screen Wrap#WrapsDownTrait'),
-        useTrait('Shooting#ShootsTrait'),
+        useTrait('Zapping#ZapsTrait'),
         useTrait('Collisions#CanCollideTrait'),
         {type: 'world_set_sprite', fields: {SPRITE: 'ship.png'}},
       ]),
-      defineActor(SHOT, 'Shot', 340, [
+      defineActor(SHOT, 'Energy Ball', 340, [
         useTrait('Physics#CanMoveTrait'),
         useTrait('Collisions#CanCollideTrait'),
         useTrait('Expiry#ExpiresTrait'),
@@ -130,7 +130,7 @@ const SINGLE_WORLD = JSON.stringify({
           type: 'world_set_Expiry_LifetimeProperty',
           inputs: {ACTOR: me(), VALUE: number(1.2)},
         },
-        {type: 'world_set_sprite', fields: {SPRITE: 'shot.png'}},
+        {type: 'world_set_sprite', fields: {SPRITE: 'energyBall.png'}},
       ]),
       defineActor(METEOR, 'Meteor', 660, [
         useTrait('Physics#CanMoveTrait'),
@@ -139,7 +139,7 @@ const SINGLE_WORLD = JSON.stringify({
         useTrait('Collisions#CanCollideTrait'),
         {type: 'world_set_sprite', fields: {SPRITE: 'asteroid.png'}},
       ]),
-      // Asking to fire is not firing: the cooldown decides (rules/shoots).
+      // Asking to zap is not zapping: the cooldown decides (rules/zaps).
       {
         type: 'world_on_Input_PressesEvent',
         fields: {FILTER0: 'space'},
@@ -148,21 +148,21 @@ const SINGLE_WORLD = JSON.stringify({
         inputs: {ACTOR: kind(SHIP)},
         next: {
           block: {
-            type: 'world_do_Shooting_MakeFireAction',
+            type: 'world_do_Zapping_MakeZapAction',
             inputs: {VALUE: me()},
           },
         },
       },
-      // …and this is what a shot IS, which is the project's business.
+      // …and this is what a zap SENDS, which is the project's business.
       {
-        type: 'world_on_Shooting_FiresEvent',
+        type: 'world_on_Zapping_ZapsEvent',
         x: 20,
         y: 960,
         inputs: {ACTOR: kind(SHIP)},
         next: {
           block: {
             type: 'world_add_actor',
-            fields: {ACTOR: local(SHOT), NAMED: 'named', VAR: SHOT_VAR},
+            fields: {ACTOR: local(SHOT), NAMED: 'named', VAR: BALL_VAR},
             extraState: {named: true},
             inputs: {
               DO: {
@@ -173,7 +173,7 @@ const SINGLE_WORLD = JSON.stringify({
                       ACTOR: {
                         block: {
                           type: 'variables_get_Actor',
-                          fields: {VAR: SHOT_VAR},
+                          fields: {VAR: BALL_VAR},
                         },
                       },
                       X: {
@@ -198,7 +198,7 @@ const SINGLE_WORLD = JSON.stringify({
                       ACTOR: {
                         block: {
                           type: 'variables_get_Actor',
-                          fields: {VAR: SHOT_VAR},
+                          fields: {VAR: BALL_VAR},
                         },
                       },
                       VALUE: {
@@ -228,7 +228,7 @@ const SINGLE_WORLD = JSON.stringify({
           },
         },
       },
-      // A rock, shot. `event actor` is the other side of the contact.
+      // A rock, zapped. `event actor` is the other side of the contact.
       {
         type: 'world_on_Collisions_StartsTouchingEvent',
         fields: {FILTER0: local(SHOT)},
@@ -237,7 +237,7 @@ const SINGLE_WORLD = JSON.stringify({
         inputs: {ACTOR: kind(METEOR)},
         next: {
           block: stack([
-            {type: 'world_log', fields: {TEXT: 'Meteor destroyed!'}},
+            {type: 'world_log', fields: {TEXT: 'Rock broken up!'}},
             {
               type: 'world_remove_actor',
               inputs: {ACTOR: {block: {type: 'world_event_actor'}}},
@@ -253,7 +253,7 @@ const SINGLE_WORLD = JSON.stringify({
         x: 900,
         y: 1060,
         inputs: {ACTOR: kind(SHIP)},
-        next: {block: {type: 'world_log', fields: {TEXT: 'Ship destroyed!'}}},
+        next: {block: {type: 'world_log', fields: {TEXT: 'Ship lost!'}}},
       },
     ],
   },

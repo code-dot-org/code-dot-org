@@ -1603,25 +1603,25 @@ export const TILES: readonly Tile[] = [
     },
   },
   {
-    id: 'arcade/shoot',
+    id: 'arcade/zap',
     region: 'arcade',
     at: at('arcade', 1, 3),
-    title: 'A bullet is spawned',
+    title: 'An energy ball is spawned',
     teaches:
       'Making things while the game runs, and the other half nobody remembers: taking them away again.',
-    task: 'A bullet per press, and none of them ever leaves. Put a reload time in front and a lifetime behind.',
+    task: 'One per press, and none of them ever leaves. Put a recharge time in front and a lifetime behind.',
     requires: ['arcade/bounce'],
     unlocks: [
-      {kind: 'rule', id: 'shoots'},
+      {kind: 'rule', id: 'zaps'},
       {kind: 'rule', id: 'expires'},
     ],
     check: {
       kind: 'outcome',
-      says: 'Ten presses make fewer than ten bullets, and the world empties itself afterwards.',
+      says: 'Ten presses make fewer than ten energy balls, and the world empties itself afterwards.',
       falsePass:
-        'A lifetime and no reload, which also empties the world and fires as fast as a finger can move — and a reload with no lifetime, which is a tidy stream that never ends. Both halves are read, because the lesson is that making and unmaking are two jobs.',
+        'A lifetime and no recharge, which also empties the world and answers as fast as a finger can move — and a recharge with no lifetime, which is a tidy stream that never ends. Both halves are read, because the lesson is that making and unmaking are two jobs.',
       run: {
-        probes: {bullets: {kind: 'actorCount', of: 'Bullet'}},
+        probes: {balls: {kind: 'actorCount', of: 'Energy Ball'}},
         // Ten presses in two seconds, then long enough for a lifetime to run
         // out. Held keys make ONE press: the event is the rising edge.
         trace: [
@@ -1633,7 +1633,7 @@ export const TILES: readonly Tile[] = [
         ],
       },
       passes: ({samples}) => {
-        const alive = (samples.bullets ?? []).map(count =>
+        const alive = (samples.balls ?? []).map(count =>
           typeof count === 'number' ? count : -1,
         );
         const most = Math.max(...alive);
@@ -1693,7 +1693,7 @@ export const TILES: readonly Tile[] = [
     teaches:
       'A timer belongs to an actor, and the interval can be a value like any other.',
     task: 'A Rock a second, forever. Make the gap between them close as the game goes on.',
-    requires: ['arcade/shoot', 'arcade/bricks'],
+    requires: ['arcade/zap', 'arcade/bricks'],
     unlocks: [
       {kind: 'rule', id: 'time'},
       // …and the rule that holds what this lesson writes by hand, which is the

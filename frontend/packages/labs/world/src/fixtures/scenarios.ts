@@ -220,15 +220,15 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
   meteors: {
     name: 'Meteors',
     description:
-      'A ship that turns and thrusts, rocks that drift and wrap, and a gun ' +
-      'with a reload. Arrow Drive, Screen Wrap, Shooting and Expiry.',
+      'A ship that turns and thrusts, rocks that drift and wrap, and a zapper ' +
+      'with a recharge. Arrow Drive, Screen Wrap, Zapping and Expiry.',
     source: buildProject(METEORS_SPEC).source,
     instructions:
-      '## Meteors\n\nTurn, thrust, and shoot the rocks.\n\n' +
+      '## Meteors\n\nTurn, thrust, and zap the rocks.\n\n' +
       '- Click the preview, then left and right to TURN and up to thrust — ' +
       'there is no friction, so you drift\n' +
-      '- Space fires. `make ⟨this actor⟩ fire` asks; the reload time answers\n' +
-      '- A shot is whatever the `fires` handler makes it — look in ' +
+      '- Space zaps. `make ⟨this actor⟩ zap` asks; the recharge time answers\n' +
+      '- A zap sends whatever the `zaps` handler makes — look in ' +
       '`ship.actor`\n' +
       '- Everything wraps at the edges, which is what makes a small map a ' +
       'whole world',
@@ -237,7 +237,7 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
     name: 'Meteors (single world)',
     description:
       'The same game with nothing outside main.world — including the handler ' +
-      'that spawns a shot, which is what breakout has no equivalent of.',
+      'that spawns an energy ball, which is what breakout has no equivalent of.',
     source: buildProject(METEORS_SINGLE_SPEC).source,
     levelData: ONE_FILE,
     instructions:
@@ -247,7 +247,7 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       '- The rocks are `create ⟨Meteor⟩ in map`, and each one\u2019s heading ' +
       'is written into the arrangement rather than rolled\n' +
       '- The ship\u2019s handlers are hats on `any ⟨Ship⟩` — including the ' +
-      'one that spawns a shot\n' +
+      'one that spawns an energy ball\n' +
       '- Compare it with **Meteors** to see what moving a thing into a file buys',
   },
   flappy: {

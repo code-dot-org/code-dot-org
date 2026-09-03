@@ -2143,18 +2143,18 @@ describe('the paddle lesson’s check', () => {
   });
 });
 
-describe('the shooting lesson’s check', () => {
-  const lesson = LESSONS['arcade/shoot'];
+describe('the zapping lesson’s check', () => {
+  const lesson = LESSONS['arcade/zap'];
 
-  /** The reload in front of the spawn, and optionally a lifetime behind it. */
+  /** The recharge in front of the spawn, and optionally a lifetime behind. */
   const armed = (lifetime?: number) =>
     editing(lesson.source, 'main.world', contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       under(actorIn(workspace, 'Ship'), {
         type: 'world_use_trait',
-        fields: {TRAIT: 'Shooting#ShootsTrait'},
+        fields: {TRAIT: 'Zapping#ZapsTrait'},
       });
-      // The press asks to fire; the spawn moves to the `fires` event, which is
+      // The press asks to zap; the spawn moves to the `zaps` event, which is
       // the moment the rule answers yes.
       const hat = workspace.blocks.blocks.find(
         block => block.type === 'world_on_Input_PressesEvent',
@@ -2162,12 +2162,12 @@ describe('the shooting lesson’s check', () => {
       const spawn = hat.next!.block!;
       hat.next = {
         block: {
-          type: 'world_do_Shooting_MakeFireAction',
+          type: 'world_do_Zapping_MakeZapAction',
           inputs: {VALUE: {block: {type: 'world_this_actor'}}},
         },
       };
       workspace.blocks.blocks.push({
-        type: 'world_on_Shooting_FiresEvent',
+        type: 'world_on_Zapping_ZapsEvent',
         x: 900,
         y: 20,
         inputs: {
@@ -2178,15 +2178,15 @@ describe('the shooting lesson’s check', () => {
         next: {block: spawn},
       } as unknown as Row);
       if (lifetime !== undefined) {
-        const bullet = actorIn(workspace, 'Bullet');
-        under(bullet, {
+        const ball = actorIn(workspace, 'Energy Ball');
+        under(ball, {
           type: 'world_set_Expiry_LifetimeProperty',
           inputs: {
             ACTOR: {block: {type: 'world_this_actor'}},
             VALUE: {shadow: {type: 'math_number', fields: {NUM: lifetime}}},
           },
         });
-        under(bullet, {
+        under(ball, {
           type: 'world_use_trait',
           fields: {TRAIT: 'Expiry#ExpiresTrait'},
         });
@@ -2194,20 +2194,20 @@ describe('the shooting lesson’s check', () => {
       return JSON.stringify(workspace);
     });
 
-  it('refuses a bullet per press that never leaves', async () => {
-    const {passes, result} = await check('arcade/shoot', lesson.source);
-    // Ten presses, ten bullets, and all ten still there at the end.
-    expect(lastNumberOf(result.samples.bullets)).toBe(10);
+  it('refuses one per press that never leaves', async () => {
+    const {passes, result} = await check('arcade/zap', lesson.source);
+    // Ten presses, ten balls, and all ten still there at the end.
+    expect(lastNumberOf(result.samples.balls)).toBe(10);
     expect(passes).toBe(false);
   });
 
-  it('refuses a reload with nothing to clean up', async () => {
-    const {passes} = await check('arcade/shoot', armed());
+  it('refuses a recharge with nothing to clean up', async () => {
+    const {passes} = await check('arcade/zap', armed());
     expect(passes).toBe(false);
   });
 
-  it('accepts a reload in front and a lifetime behind', async () => {
-    const {passes, result} = await check('arcade/shoot', armed(1));
+  it('accepts a recharge in front and a lifetime behind', async () => {
+    const {passes, result} = await check('arcade/zap', armed(1));
     expect(result.error).toBeUndefined();
     expect(passes).toBe(true);
   });

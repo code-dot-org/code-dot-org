@@ -21,7 +21,7 @@ const RULES = [
   'arrows',
   'drive',
   'drag',
-  'shoots',
+  'zaps',
   'expires',
   'motion',
   'collisions',

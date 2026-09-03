@@ -1,31 +1,31 @@
-// Meteors: a ship that turns and thrusts, rocks that drift, and a gun.
+// Meteors: a ship that turns and thrusts, rocks that drift, and a zapper.
 //
 // The third game in the catalogue, and the one that uses the rules the other
 // two do not: Arrow Drive instead of Arrow Keys, Screen Wrap instead of walls,
-// Shooting and Expiry instead of a paddle. Between it and breakout, every stock
+// Zapping and Expiry instead of a paddle. Between it and breakout, every stock
 // rule but the camera ones is in a scenario somebody can play.
 //
 //   the ship      Arrow Drive — left and right TURN, up thrusts along the way
 //                 it is facing, and there is no friction, so it drifts. Screen
 //                 Wrap on both axes, which is what makes a small map a whole
 //                 world.
-//   the gun       two blocks, and the pairing is the rule's whole design:
-//                 pressing space ASKS (`make ⟨this actor⟩ fire`) and the
-//                 cooldown answers, so a held key is not a wall of bullets.
-//                 What a shot IS lives in the `fires` handler, because no
+//   the zapper    two blocks, and the pairing is the rule's whole design:
+//                 pressing space ASKS (`make ⟨this actor⟩ zap`) and the
+//                 cooldown answers, so a held key is not a wall of energy balls.
+//                 What a zap SENDS lives in the `zaps` handler, because no
 //                 property can hold an actor template and a stock rule
-//                 therefore cannot know what a bullet is.
-//   the shot      spawned at the ship, moving the way the ship faces —
+//                 therefore cannot know what an energy ball is.
+//   the ball      spawned at the ship, moving the way the ship faces —
 //                 `rotate ⟨0, -6⟩ by ⟨rotation of this actor⟩` — and Expiry
 //                 takes it away a second later, which is the other half of
-//                 spawning. Without it a game slowly fills with bullets.
+//                 spawning. Without it a game slowly fills with energy balls.
 //   the rocks     placed on a ring at fixed points and given a RANDOM heading,
 //                 so the layout is the same every time and the game is not.
 //
-// The `as ⟨shot⟩` on the spawn is not decoration. Inside `add actor`'s body
-// `this actor` is the NEW actor, so a bullet that has to be put where the SHIP
+// The `as ⟨ball⟩` on the spawn is not decoration. Inside `add actor`'s body
+// `this actor` is the NEW actor, so a ball that has to be put where the SHIP
 // is cannot be written without naming one of the two — the arithmetic would
-// silently read the bullet's own position twice.
+// silently read the ball's own position twice.
 //
 // What it is NOT, again: no lives, no score, no splitting a rock into two
 // smaller ones. Splitting is the interesting one — it is `add actor` inside a
@@ -40,7 +40,7 @@ import {
   expiresRule,
   inputRule,
   motionRule,
-  shootsRule,
+  zapsRule,
   wrapRule,
 } from '../rules/stock';
 import {TILE_SIZE} from '../runtime/viewport';
@@ -57,10 +57,10 @@ export const number = (value: number) => ({
   block: {type: 'math_number', fields: {NUM: value}},
 });
 
-export const SHOT_VAR = {id: 'meteorsShotVar', name: 'shot', type: 'Actor'};
+export const BALL_VAR = {id: 'meteorsBallVar', name: 'ball', type: 'Actor'};
 
 const SHIP_ACTOR = JSON.stringify({
-  variables: [SHOT_VAR],
+  variables: [BALL_VAR],
   blocks: {
     blocks: [
       {
@@ -74,14 +74,14 @@ const SHIP_ACTOR = JSON.stringify({
             useTrait('Input#TakesKeyboardInputTrait'),
             useTrait('Screen Wrap#WrapsAcrossTrait'),
             useTrait('Screen Wrap#WrapsDownTrait'),
-            useTrait('Shooting#ShootsTrait'),
+            useTrait('Zapping#ZapsTrait'),
             // So a meteor can be noticed running into it.
             useTrait('Collisions#CanCollideTrait'),
             {type: 'world_set_sprite', fields: {SPRITE: 'ship.png'}},
           ]),
         },
       },
-      // Asking to fire is not firing: the cooldown decides (rules/shoots).
+      // Asking to zap is not zapping: the cooldown decides (rules/zaps).
       {
         type: 'world_on_Input_PressesEvent',
         fields: {FILTER0: 'space'},
@@ -89,20 +89,20 @@ const SHIP_ACTOR = JSON.stringify({
         y: 300,
         next: {
           block: {
-            type: 'world_do_Shooting_MakeFireAction',
+            type: 'world_do_Zapping_MakeZapAction',
             inputs: {VALUE: me()},
           },
         },
       },
-      // …and this is what a shot IS, which is the project's business.
+      // …and this is what a zap SENDS, which is the project's business.
       {
-        type: 'world_on_Shooting_FiresEvent',
+        type: 'world_on_Zapping_ZapsEvent',
         x: 20,
         y: 440,
         next: {
           block: {
             type: 'world_add_actor',
-            fields: {ACTOR: 'actors/shot', NAMED: 'named', VAR: SHOT_VAR},
+            fields: {ACTOR: 'actors/energyBall', NAMED: 'named', VAR: BALL_VAR},
             extraState: {named: true},
             inputs: {
               DO: {
@@ -113,7 +113,7 @@ const SHIP_ACTOR = JSON.stringify({
                       ACTOR: {
                         block: {
                           type: 'variables_get_Actor',
-                          fields: {VAR: SHOT_VAR},
+                          fields: {VAR: BALL_VAR},
                         },
                       },
                       X: {
@@ -138,7 +138,7 @@ const SHIP_ACTOR = JSON.stringify({
                       ACTOR: {
                         block: {
                           type: 'variables_get_Actor',
-                          fields: {VAR: SHOT_VAR},
+                          fields: {VAR: BALL_VAR},
                         },
                       },
                       VALUE: {
@@ -176,7 +176,7 @@ const SHIP_ACTOR = JSON.stringify({
         y: 300,
         inputs: {ACTOR: me()},
         next: {
-          block: {type: 'world_log', fields: {TEXT: 'Ship destroyed!'}},
+          block: {type: 'world_log', fields: {TEXT: 'Ship lost!'}},
         },
       },
     ],
@@ -190,7 +190,7 @@ const SHOT_ACTOR = JSON.stringify({
         type: 'world_actor',
         x: 20,
         y: 20,
-        fields: {NAME: 'Shot'},
+        fields: {NAME: 'Energy Ball'},
         next: {
           block: stack([
             useTrait('Physics#CanMoveTrait'),
@@ -198,7 +198,7 @@ const SHOT_ACTOR = JSON.stringify({
             // The other half of spawning: without it the world fills up.
             useTrait('Expiry#ExpiresTrait'),
             setNumber('world_set_Expiry_LifetimeProperty', 1.2),
-            {type: 'world_set_sprite', fields: {SPRITE: 'shot.png'}},
+            {type: 'world_set_sprite', fields: {SPRITE: 'energyBall.png'}},
           ]),
         },
       },
@@ -227,17 +227,17 @@ const METEOR_ACTOR = JSON.stringify({
           ]),
         },
       },
-      // Shot. `event actor` is the other side of the contact — the shot — so
-      // both go, and the gun does not punch through the whole field.
+      // `event actor` is the other side of the contact — the ball — so
+      // both go, and one zap does not clear the whole field.
       {
         type: 'world_on_Collisions_StartsTouchingEvent',
-        fields: {FILTER0: 'actors/shot'},
+        fields: {FILTER0: 'actors/energyBall'},
         x: 20,
         y: 300,
         inputs: {ACTOR: me()},
         next: {
           block: stack([
-            {type: 'world_log', fields: {TEXT: 'Meteor destroyed!'}},
+            {type: 'world_log', fields: {TEXT: 'Rock broken up!'}},
             {
               type: 'world_remove_actor',
               inputs: {ACTOR: {block: {type: 'world_event_actor'}}},
@@ -357,7 +357,7 @@ const METEORS_WORLD = JSON.stringify({
  * than two places to keep in step.
  *
  * What is worth noticing while reading it: there is no `solid.rule`. Nothing in
- * this game is solid — a rock is destroyed by a shot, not pushed by one — so
+ * this game is solid — a rock is broken by a ball, not pushed by one — so
  * `collisions.rule` is here for the contacts alone.
  */
 export const METEORS_SUPPORT_FILES: ProjectSpec['files'] = {
@@ -391,10 +391,10 @@ export const METEORS_SUPPORT_FILES: ProjectSpec['files'] = {
     contents: wrapRule,
     folderId: 'rules',
   },
-  shootsRuleFile: {
-    name: 'shoots.rule',
+  zapsRuleFile: {
+    name: 'zaps.rule',
     language: 'rule',
-    contents: shootsRule,
+    contents: zapsRule,
     folderId: 'rules',
   },
   expiresRuleFile: {
@@ -403,7 +403,7 @@ export const METEORS_SUPPORT_FILES: ProjectSpec['files'] = {
     contents: expiresRule,
     folderId: 'rules',
   },
-  ...starterSprites(['ship', 'asteroid', 'shot']),
+  ...starterSprites(['ship', 'asteroid', 'energyBall']),
 };
 
 export const METEORS_SPEC: ProjectSpec = {
@@ -432,8 +432,8 @@ export const METEORS_SPEC: ProjectSpec = {
       contents: SHIP_ACTOR,
       folderId: 'actors',
     },
-    shot: {
-      name: 'shot.actor',
+    energyBall: {
+      name: 'energyBall.actor',
       language: 'actor',
       contents: SHOT_ACTOR,
       folderId: 'actors',

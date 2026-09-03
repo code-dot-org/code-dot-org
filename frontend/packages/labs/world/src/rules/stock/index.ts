@@ -40,7 +40,6 @@ import {patrolRule} from './patrol';
 import {progressRule} from './progress';
 import {revealsRule} from './reveals';
 import {scoreRule} from './score';
-import {shootsRule} from './shoots';
 import {solidRule} from './solid';
 import {spawnerRule} from './spawner';
 import {steeringRule} from './steering';
@@ -48,6 +47,7 @@ import {timeRule} from './time';
 import {turnsRule} from './turns';
 import {wrapRule} from './wrap';
 import {writingRule} from './writing';
+import {zapsRule} from './zaps';
 
 /** One entry in the library. */
 export interface StockRule {
@@ -145,7 +145,7 @@ export const STOCK_RULES: readonly StockRule[] = [
     name: 'Health',
     ability: 'Has Health',
     description:
-      'Lets actors be hurt and run out. One ability says what can be damaged and the other says what damages it, so a spike, a bullet and a patrolling enemy are dangerous without knowing who to. Contact damage is spaced by a mercy time, and running out raises an event rather than removing anything — what dying means is the game\u2019s to say.',
+      'Lets actors be hurt and run out. One ability says what can be damaged and the other says what damages it, so a spike, an energy ball and a patrolling crawler are dangerous without knowing who to. Contact damage is spaced by a mercy time, and running out raises an event rather than removing anything — what running out means is the game\u2019s to say.',
     provides: ['Has Health', 'Deals Damage'],
     contents: healthRule,
   },
@@ -357,13 +357,13 @@ export const STOCK_RULES: readonly StockRule[] = [
     contents: dragRule,
   },
   {
-    id: 'shoots',
-    name: 'Shooting',
-    ability: 'Shoots',
+    id: 'zaps',
+    name: 'Zapping',
+    ability: 'Zaps',
     description:
-      'Limits how often an actor may fire and raises "fires" when a shot happens \u2014 your handler decides what a shot IS, so it can spawn any kind of bullet. Pair "make \u2026 fire" on a key press with a "fires" handler.',
-    provides: ['Shoots'],
-    contents: shootsRule,
+      'Limits how often an actor may zap and raises "zaps" when one happens \u2014 your handler decides what a zap SENDS, so it can be an energy ball or anything else. Pair "make \u2026 zap" on a key press with a "zaps" handler.',
+    provides: ['Zaps'],
+    contents: zapsRule,
   },
   {
     id: 'expires',
@@ -469,7 +469,7 @@ export {
   dragRule,
   driveRule,
   expiresRule,
-  shootsRule,
+  zapsRule,
   solidRule,
   wrapRule,
   collisionsRule,

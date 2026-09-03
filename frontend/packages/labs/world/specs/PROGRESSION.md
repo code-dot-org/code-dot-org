@@ -175,7 +175,7 @@ hand and a region is whatever shape they make. What it says:
   | Genre          | Between       | What it is                               |
   | -------------- | ------------- | ---------------------------------------- |
   | **Platformer** | Input, Motion | gravity, jump, hazards, a level to cross |
-  | **Arcade**     | Motion, Logic | a ball, a paddle, bullets, waves         |
+  | **Arcade**     | Motion, Logic | a ball, a paddle, energy balls, waves    |
   | **Puzzle**     | Logic, Memory | a grid, crates, a win condition          |
   | **Story**      | Memory, Look  | text, a script, a branching choice       |
   | **Adventure**  | Look, Place   | a big map, rooms, keys, an errand        |
@@ -448,7 +448,7 @@ The first thing anybody wants is for something to move when they press a key.
 | --------------- | ----------------------------------------------------------------------------------------------- | -------------------------- | ----------------------------------------------------------------- |
 | `arcade/bounce` | A ball that stops dead at the wall. What a collision does to a speed is the surface's business. | `bounciness`               | `[o]` as fast at the end of a long run as at the start            |
 | `arcade/paddle` | A paddle kept on screen by hand, with half of it hanging off.                                   | `view size`                | `[o]` stops half its own width from the wall, whatever that is    |
-| `arcade/shoot`  | A bullet per press, and none of them ever leaves.                                               | Shooting; Expires          | `[o]` ten presses make fewer than ten, and the world empties      |
+| `arcade/zap`    | One per press, and none of them ever leaves.                                                    | Zapping; Expires           | `[o]` ten presses make fewer than ten, and the world empties      |
 | `arcade/bricks` | Counting what is left is how a game knows it is over.                                           | `clear world`              | `[o]` ends on the last brick and not the second to last           |
 | `arcade/waves`  | A timer belongs to an actor, and the interval can be a value like any other.                    | Time rule; arcade template | `[o]` the gap between spawns is shorter at the end than the start |
 

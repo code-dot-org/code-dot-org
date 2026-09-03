@@ -32,7 +32,7 @@ export const SPRITE_NAMES = [
   // sideways the moment anything used it (rules/drive).
   'ship',
   'asteroid',
-  'shot',
+  'energyBall',
   // A way out of the room. Fills the tile's height like `ground` does, so a
   // door stands on the floor rather than hovering over it.
   'door',
@@ -323,11 +323,13 @@ const STATIC = {
   },
   ship: c => shipHull(c),
   asteroid: c => rock(c, 0),
-  shot(c) {
-    // A short bolt rather than a dot, so it reads as travelling — and vertical,
-    // so it still points the way it was fired once rotation is applied.
-    c.roundRect(14, 10, 5, 13, 2.5, [255, 196, 84]);
-    c.roundRect(15, 12, 3, 9, 1.5, [255, 248, 214]);
+  energyBall(c) {
+    // A ball with a bright core and a softer shell, so it reads as something
+    // charged rather than something fired: round from every side, which also
+    // means rotation does nothing to it and it looks the same going any way.
+    c.disc(16, 16, 7, [96, 208, 255]);
+    c.disc(16, 16, 4.5, [190, 240, 255]);
+    c.disc(16, 16, 2, [255, 255, 255]);
   },
   door(c) {
     // Frame, slab, two panels and a handle — the fewest marks that read as a

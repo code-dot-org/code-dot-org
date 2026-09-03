@@ -1917,11 +1917,11 @@ number if the Paddle ever changes size. Or you could say what you actually mean.
 `.trim(),
 };
 
-// ── arcade/shoot ─────────────────────────────────────────────────────────────
+// ── arcade/zap ───────────────────────────────────────────────────────────────
 
-/** `add actor ⟨Bullet⟩ do ⟨put it above the Ship and send it up⟩`. */
-const fireOne = () =>
-  addActor(local('bullet'), [
+/** `add actor ⟨Energy Ball⟩ do ⟨put it above the Ship and send it up⟩`. */
+const sendOne = () =>
+  addActor(local('ball'), [
     placeAt(160, 240),
     {
       type: 'world_set_Physics_VelocityProperty',
@@ -1932,9 +1932,9 @@ const fireOne = () =>
     },
   ]);
 
-const shoot: WorldScenario = {
-  name: 'A bullet is spawned',
-  description: 'A ship that fires sixty times a second and never tidies up.',
+const zap: WorldScenario = {
+  name: 'An energy ball is spawned',
+  description: 'A ship that zaps sixty times a second and never tidies up.',
   source: lessonSource({
     world: worldFile({
       name: 'My World',
@@ -1949,38 +1949,38 @@ const shoot: WorldScenario = {
           ],
         },
         {
-          id: 'bullet',
-          name: 'Bullet',
-          rows: [useTrait('Physics#CanMoveTrait'), setSprite('shot.png')],
+          id: 'ball',
+          name: 'Energy Ball',
+          rows: [useTrait('Physics#CanMoveTrait'), setSprite('energyBall.png')],
         },
       ],
-      handlers: [onPressed('ship', 'space', fireOne())],
+      handlers: [onPressed('ship', 'space', sendOne())],
     }),
-    sprites: ['ship', 'shot'],
-    rules: ['input', 'motion', 'shoots', 'expires'],
+    sprites: ['ship', 'energyBall'],
+    rules: ['input', 'motion', 'zaps', 'expires'],
   }),
   instructions: `
-## A bullet is spawned
+## An energy ball is spawned
 
-Hit space a few times. Each press adds a Bullet to the world, and each Bullet
-flies up out of the view and keeps going — forever, because nothing ever takes
-one away. Mash the key and you get a bullet per press, as fast as you can hit
-it.
+Hit space a few times. Each press adds an Energy Ball to the world, and each
+one flies up out of the view and keeps going — forever, because nothing ever
+takes one away. Hit the key fast and you get a ball per press, as fast as you
+can manage.
 
 Two halves are missing, and the second is the one everybody forgets.
-**Shooting** holds a reload time, so asking to fire is sometimes answered no.
+**Zapping** holds a recharge time, so asking to zap is sometimes answered no.
 **Expires** gives an actor a lifetime, so a thing that is made can also stop.
 
 ### What you do
 
-1. Give the Ship **use trait ⟨Shoots⟩**, and change the press handler to
-   **make ⟨this actor⟩ fire**.
-2. Add **when ⟨any Ship⟩ fires**, and move the \`add actor ⟨Bullet⟩\` into it.
-   Mash the key now: a bullet every quarter second however fast you hit it,
-   because that is the reload time and the answer to the rest was no.
-3. Give the Bullet **use trait ⟨Expires⟩** and **set lifetime of ⟨this actor⟩
-   to ⟨1⟩**. Fire for a while and then stop: the world empties itself.
-4. Set the reload time to a tenth and fire again. More bullets, and still a
+1. Give the Ship **use trait ⟨Zaps⟩**, and change the press handler to
+   **make ⟨this actor⟩ zap**.
+2. Add **when ⟨any Ship⟩ zaps**, and move the \`add actor ⟨Energy Ball⟩\` into
+   it. Hit the key fast now: one ball every quarter second however quickly you
+   press, because that is the recharge time and the answer to the rest was no.
+3. Give the Energy Ball **use trait ⟨Expires⟩** and **set lifetime of ⟨this
+   actor⟩ to ⟨1⟩**. Zap for a while and then stop: the world empties itself.
+4. Set the recharge time to a tenth and zap again. More balls, and still a
    count rather than a stream.
 `.trim(),
 };
@@ -5068,7 +5068,7 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'platformer/level': level,
   'arcade/bounce': bounce,
   'arcade/paddle': paddle,
-  'arcade/shoot': shoot,
+  'arcade/zap': zap,
   'arcade/bricks': bricks,
   'arcade/waves': waves,
   'story/text': storyText,

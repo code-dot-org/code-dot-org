@@ -1528,21 +1528,21 @@ describe('what the newer demos show', () => {
     expect(new Set(gaps).size).toBe(1);
   });
 
-  it('shoots: asked every frame, it answers at its reload rate', () => {
-    // The gun is asked sixty times a second and fires four, so the bullets
-    // come out evenly spaced — the reload time made visible as a distance.
-    const {world} = play(RULE_DEMOS.shoots);
-    const bullets = [...world.actors]
-      .filter(actor => actor.id.startsWith('shot'))
+  it('zaps: asked every frame, it answers at its recharge rate', () => {
+    // The zapper is asked sixty times a second and answers four, so the balls
+    // come out evenly spaced — the recharge time made visible as a distance.
+    const {world} = play(RULE_DEMOS.zaps);
+    const balls = [...world.actors]
+      .filter(actor => actor.id.startsWith('ball'))
       .map(actor => actor.get(PositionProperty).x)
       .sort((a, b) => a - b);
 
-    expect(bullets.length).toBeGreaterThan(2);
-    const gaps = bullets.slice(1).map((x, n) => x - bullets[n]);
+    expect(balls.length).toBeGreaterThan(2);
+    const gaps = balls.slice(1).map((x, n) => x - balls[n]);
     // Sixteen frames apart at 120 pixels a second, not the fifteen a quarter
     // of a second looks like: the clock is a running sum of 1/60, and fifteen
-    // of those is 0.24999999999999997 — a hair short of the reload, so the
-    // shot lands on the next frame. Evenly, which is what the strip shows and
+    // of those is 0.24999999999999997 — a hair short of the recharge, so the
+    // zap lands on the next frame. Evenly, which is what the strip shows and
     // what the rule promises; the exact number is arithmetic, not a rate.
     for (const gap of gaps) {
       expect(gap).toBeCloseTo(32, 0);

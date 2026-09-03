@@ -122,7 +122,7 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   'platformer/hazards': ['world_use_trait', 'world_print'],
   'arcade/bounce': [],
   'arcade/paddle': ['world_use_trait'],
-  'arcade/shoot': ['world_use_trait'],
+  'arcade/zap': ['world_use_trait'],
   'arcade/bricks': [
     'world_trait_step',
     'controls_if',

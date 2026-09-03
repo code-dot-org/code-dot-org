@@ -3,9 +3,9 @@
 // `add actor` compiles to a block scope with its own `const actor`, so inside
 // its body `this actor` is the NEW actor. That is the only reading a `.world`
 // file needs — there is no other actor to mean — but in an `.actor` file it
-// shadows the one whose blocks these are, and "put a bullet in front of me"
-// cannot be written at all: both `this actor`s are the bullet, and the
-// arithmetic silently reads the bullet's own position twice.
+// shadows the one whose blocks these are, and "put an energy ball in front of
+// me" cannot be written at all: both `this actor`s are the ball, and the
+// arithmetic silently reads the ball's own position twice.
 //
 // Choosing `as ⟨name⟩` binds the new actor to a variable instead, which leaves
 // `this actor` meaning what it means everywhere else in the file.
@@ -43,8 +43,8 @@ export const AS_THIS_ACTOR = 'this';
 export const NAMED = 'named';
 
 /**
- * Reads as a sentence either way: "add actor ⟨Bullet⟩ as this actor", or
- * "add actor ⟨Bullet⟩ as ⟨placed⟩". `this` first, so a dropdown built with no
+ * Reads as a sentence either way: "add actor ⟨Energy Ball⟩ as this actor", or
+ * "add actor ⟨Energy Ball⟩ as ⟨placed⟩". `this` first, so a dropdown built with no
  * stored value falls back to the reading every saved block was written under.
  */
 export const NAME_OPTIONS: Array<[string, string]> = [

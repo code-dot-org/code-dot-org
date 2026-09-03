@@ -407,7 +407,7 @@ describe('the scenario catalogue', () => {
     for (const rule of [
       'drive.rule',
       'wrap.rule',
-      'shoots.rule',
+      'zaps.rule',
       'expires.rule',
       'collisions.rule',
       'input.rule',
@@ -415,39 +415,39 @@ describe('the scenario catalogue', () => {
     ]) {
       expect(named(rule)).toBe(true);
     }
-    for (const actor of ['ship.actor', 'shot.actor', 'meteor.actor']) {
+    for (const actor of ['ship.actor', 'energyBall.actor', 'meteor.actor']) {
       expect(named(actor)).toBe(true);
     }
   });
 
-  it('asks to fire in one place and says what a shot is in another', () => {
+  it('asks to zap in one place and says what a zap sends in another', () => {
     // The Shooting rule's whole design: pressing a key ASKS and the cooldown
-    // answers, so a held key is not a wall of bullets. Spawning the bullet
+    // answers, so a held key is not a wall of energy balls. Spawning the ball
     // straight from the key press would be a gun with no rate limit — it would
     // look identical until someone held the key down.
     const ship = Object.values(WORLD_SCENARIOS.meteors.source.files).find(
       file => file.name === 'ship.actor',
     )!.contents;
 
-    expect(ship).toContain('world_do_Shooting_MakeFireAction');
-    expect(ship).toContain('world_on_Shooting_FiresEvent');
-    // And the shot is spawned NAMED, because inside `add actor` the words
-    // `this actor` mean the new one — a bullet put where the ship is cannot be
-    // written otherwise without silently reading the bullet's own position.
+    expect(ship).toContain('world_do_Zapping_MakeZapAction');
+    expect(ship).toContain('world_on_Zapping_ZapsEvent');
+    // And the ball is spawned NAMED, because inside `add actor` the words
+    // `this actor` mean the new one — a ball put where the ship is cannot be
+    // written otherwise without silently reading the ball's own position.
     expect(ship).toContain('"NAMED":"named"');
     expect(ship).toContain('world_vector_rotate');
   });
 
-  it('takes its shots away again', () => {
+  it('takes its energy balls away again', () => {
     // The other half of spawning. Without Expiry a game slowly fills with
-    // bullets and grinds down, which presents as "it gets slower the longer
+    // balls and grinds down, which presents as "it gets slower the longer
     // you play" and is very hard to see in a short demo.
-    const shot = Object.values(WORLD_SCENARIOS.meteors.source.files).find(
-      file => file.name === 'shot.actor',
+    const ball = Object.values(WORLD_SCENARIOS.meteors.source.files).find(
+      file => file.name === 'energyBall.actor',
     )!.contents;
 
-    expect(shot).toContain('Expiry#ExpiresTrait');
-    expect(shot).toContain('world_set_Expiry_LifetimeProperty');
+    expect(ball).toContain('Expiry#ExpiresTrait');
+    expect(ball).toContain('world_set_Expiry_LifetimeProperty');
   });
 
   it('says the single-world meteors without leaving main.world', () => {
@@ -462,7 +462,7 @@ describe('the scenario catalogue', () => {
     // having on top of the breakout one: a hat on `any ⟨Ship⟩` that adds a
     // world-local actor and names it, because inside `add actor` the words
     // `this actor` mean the new one.
-    expect(main).toContain('world_on_Shooting_FiresEvent');
+    expect(main).toContain('world_on_Zapping_ZapsEvent');
     expect(main).toContain('"NAMED":"named"');
     expect(main).toContain('world_create_in_map');
   });
