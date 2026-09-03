@@ -8,6 +8,7 @@
 import {DEMO_FPS} from '../../rules/demos';
 import {getDemoBaseUrl} from '../../runtime/worldConfig';
 
+import {buttonDemo} from './button';
 import {coinDemo} from './coin';
 import {groundDemo} from './ground';
 import {labelDemo} from './label';
@@ -22,15 +23,12 @@ export const ACTOR_DEMOS: Readonly<Record<string, ActorDemo>> = {
   // way everything else about an actor is.
   label: labelDemo,
   progressBar: progressBarDemo,
-  // No Health Bar: it shows the health of whoever it is pointed at, and
-  // nothing on the shelf has any — the stock Player deliberately leaves Health
-  // to the game that imports it. A demo would have to invent the actor whose
-  // health it showed, which is a demonstration of the demo.
-  //
-  // No Button either: a press needs a pointer, which no demo has yet, and the
-  // face this one draws does not change when it is pressed — so the strip
-  // would be a cursor arriving at a button that ignores it. What a Button does
-  // is raise an event, and what happens next belongs to a project.
+  // No Health Bar, and it is the only one: it shows the health of whoever it
+  // is pointed at, and nothing on the shelf has any — the stock Player
+  // deliberately leaves Health to the game that imports it. A demo would have
+  // to invent the actor whose health it showed, which is a demonstration of
+  // the demo.
+  button: buttonDemo,
   speechBox: speechBoxDemo,
   portrait: portraitDemo,
   coin: coinDemo,

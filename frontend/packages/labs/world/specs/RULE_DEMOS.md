@@ -254,22 +254,42 @@ in, and the Progress Bar starts a quarter full rather than empty. Neither
 changes what is demonstrated; both change what the shelf looks like when
 nobody is pointing at it.
 
-**Which actors get one, and which two do not.** Seven of the nine: the Label
-counts, the Progress Bar fills, the Speech Box says its second line, the
-Portrait leaves and comes back, the Coin spins, the Player walks and jumps and
-falls, and the Ground catches it.
+**A demo may also drive the POINTER, and wire up a handler.** The Button forced
+both. What it does when pressed is raise an event on itself and nothing else —
+its face does not change, deliberately, since what a particular button looks
+like is a routine a learner opens and edits. So a strip of one needs a cause in
+the frame and an answer out of it.
+
+The cause is a cursor: `pointer(seconds)` says where it is in world pixels and
+whether it presses, and the stage hands that to `setPointer` and draws a small
+square there — the same square that fattens on the press in the mouse RULE's
+demo, so the two dialogs agree about what a click looks like. It is an OVERLAY
+rather than an actor, because nothing in a project is a cursor and the shelf has
+none to import.
+
+`setPointer` speaks VIEWPORT pixels and the world converts by the active camera,
+which is the trap this document already records from the mouse demo. Here the
+camera happens to sit where the conversion is the identity, and the stage
+converts anyway (`pointerFor`): arithmetic that is right by accident is a demo
+that breaks on the day something moves a camera.
+
+The answer is `wire(stage)`, called once before the first tick, where a demo
+registers the handlers a project would write — `subject.on(IsClickedWithEvent,
+…)`, which is `when ⟨this button⟩ is clicked with ⟨any⟩` with the blocks taken
+off. `drive` is what the game does each frame; `wire` is what it has arranged to
+happen.
+
+**Which actors get one, and which one does not.** Eight of the nine: the Label
+counts, the Progress Bar fills, the Button answers a press, the Speech Box says
+its second line, the Portrait leaves and comes back, the Coin spins, the Player
+walks and jumps and falls, and the Ground catches it.
 
 The Health Bar cannot have one, and the reason is worth recording: it shows the
 health of whoever it is pointed at, and NOTHING ON THE SHELF HAS ANY — the
 stock Player deliberately leaves Health to the game that imports it. A demo
-would have to invent the actor whose health it showed, which is a
-demonstration of the demo.
-
-The Button cannot have one yet: a press needs a pointer, which no actor demo
-has, and the face it draws does not change when it is pressed. What a Button
-does is raise an event, and what happens next belongs to a project — so the
-strip would be a cursor arriving at a button that ignores it. Both rows keep
-their stills, which is what every row had before any of this.
+would have to invent the actor whose health it showed, which is a demonstration
+of the demo. Its row keeps the still, which is what every row had before any of
+this.
 
 ## What is deliberately not solved
 

@@ -84,6 +84,14 @@ export interface DemoStage {
   seconds: number;
 }
 
+/** Where the pointer is this frame, in world pixels, and whether it presses. */
+export interface PointerAt {
+  x: number;
+  y: number;
+  /** The left button, which is the only one a demo has wanted. */
+  down?: boolean;
+}
+
 export interface ActorDemo {
   /**
    * World pixels per strip pixel, when the default does not suit the scene.
@@ -134,6 +142,28 @@ export interface ActorDemo {
    * demonstrating the engine.
    */
   drive?(stage: DemoStage): void;
+  /**
+   * Where the pointer is, and whether the button is down.
+   *
+   * In WORLD pixels, as the cast's positions are; the stage converts to the
+   * viewport coordinates `setPointer` speaks and draws the cursor at the same
+   * place, so nothing the rule reads comes from a picture.
+   *
+   * A cursor is drawn in the frame for the reason the rule demos draw a key
+   * cap: the cause has to be in the picture, or the strip shows a button
+   * answering nobody.
+   */
+  pointer?(seconds: number): PointerAt | undefined;
+  /**
+   * The handlers a project would write, registered once before the first tick.
+   *
+   * `drive` is what the game DOES each frame; this is what it has arranged to
+   * happen. A Button raises "is clicked with" on itself and owns nothing that
+   * follows — that is the whole of the actor — so a demo of one has to supply
+   * the answer, exactly as the Time and Shooting rule demos supply theirs
+   * (specs/RULE_DEMOS.md).
+   */
+  wire?(stage: DemoStage): void;
 }
 
 /** How much WORLD a demo's frame holds, which is its shrink's business. */

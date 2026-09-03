@@ -18,7 +18,8 @@ import type {Actor, World} from '../../../engine';
 import * as WorldLab from '../../../engine';
 import {PositionProperty} from '../../../engine';
 import {WORLD_SCENARIOS} from '../../../fixtures/scenarios';
-import type {Cell} from '../../../rules/demos/record/strip';
+import {pointerFor} from '../../../rules/demos/device';
+import {rgb, type Cell} from '../../../rules/demos/record/strip';
 import {projectFiles} from '../../../runtime/projectFiles';
 import {importStockActor} from '../../importStockActor';
 import {stockActorById} from '../../stock';
@@ -27,6 +28,7 @@ import {
   ACTOR_DEMO_SIZE,
   type ActorDemo,
   type ActorPlacement,
+  type PointerAt,
 } from '../types';
 
 /**
@@ -155,7 +157,10 @@ export async function stageActorDemo(
   if (!subject) {
     throw new Error(`actor demo "${id}": nothing was placed at its position`);
   }
-  return {world, subject, modules};
+  const stage = {world, subject, modules};
+  // The handlers a project would have written, before anything has happened.
+  demo.wire?.({...stage, engine, seconds: 0});
+  return stage;
 }
 
 /**
@@ -173,12 +178,47 @@ export function stepActorDemo(
 ): void {
   const seconds = tick / 60;
   staged.world.setInput(demo.keys?.(seconds) ?? []);
+  const pointer = demo.pointer?.(seconds);
+  if (pointer) {
+    // VIEWPORT pixels, which is what a driver hands over and is a different
+    // rectangle from the demo's frame: handing this world coordinates puts the
+    // pointer some ninety pixels adrift and every click misses in silence
+    // (`rules/demos/device`, where that was found the first time).
+    staged.world.setPointer(
+      pointerFor(staged.world, new WorldLab.Vector(pointer.x, pointer.y)),
+      pointer.down ? ['left'] : [],
+    );
+  }
   // What the GAME does this frame, for an actor that is shown things rather
   // than played — before the shutter, for the same reason the keyboard is.
   demo.drive?.({...staged, engine, seconds});
   capture?.();
   staged.world.tick(1 / 60);
 }
+
+/**
+ * The cursor, drawn where the demo says the pointer is.
+ *
+ * Not an actor: nothing in a project is, and the shelf has no cursor to
+ * import. The rule demos draw theirs as one because those worlds are built by
+ * hand; here it is an overlay on the frame, which is the same idea and one
+ * fewer fiction in the world.
+ *
+ * A small square that fattens and brightens while the button is down, which is
+ * what the mouse RULE's demo draws, so the two dialogs agree about what a
+ * click looks like.
+ */
+const cursorCell = (pointer: PointerAt, shrink: number): Cell => {
+  const size = (pointer.down ? 14 : 8) / shrink;
+  return {
+    id: 'pointer',
+    x: pointer.x / shrink,
+    y: pointer.y / shrink,
+    width: Math.max(2, Math.round(size)),
+    height: Math.max(2, Math.round(size)),
+    colour: rgb(pointer.down ? '#ffffff' : '#abb2bf'),
+  };
+};
 
 /**
  * What the recorder would draw this frame, in strip pixels.
@@ -195,15 +235,17 @@ export function actorDemoFrame(
   id: string,
   world: World,
   demo: ActorDemo,
+  seconds: number,
 ): Cell[] {
   const images = stockPixels();
   const shrink = demo.shrink ?? ACTOR_DEMO_SHRINK;
+  const pointer = demo.pointer?.(seconds);
   return (
     [...world.renderSnapshot()]
       // By layer, as the driver sorts: a Player behind its own floor would be a
       // recording of a floor.
       .sort((one, other) => one.layer - other.layer)
-      .map(state => {
+      .map((state): Cell => {
         const actorId = (state.actor as unknown as {id: string}).id;
         if (state.drawing) {
           // A drawn actor — a Label, a bar, a Speech Box — whose picture is
@@ -247,8 +289,8 @@ export function actorDemoFrame(
         const scale = state.frame.scale / shrink;
         return {
           id: actorId,
-          x: (state.x + state.frame.offset.x) / ACTOR_DEMO_SHRINK,
-          y: (state.y + state.frame.offset.y) / ACTOR_DEMO_SHRINK,
+          x: (state.x + state.frame.offset.x) / shrink,
+          y: (state.y + state.frame.offset.y) / shrink,
           width: Math.round(source.width * Math.abs(state.scaleX) * scale),
           height: Math.round(source.height * Math.abs(state.scaleY) * scale),
           flip: state.scaleX < 0,
@@ -257,6 +299,9 @@ export function actorDemoFrame(
           source,
         };
       })
+      // The cursor last, so it is drawn over what it is pointing at — which is
+      // where a pointer is on every screen there has ever been.
+      .concat(pointer ? [cursorCell(pointer, shrink)] : [])
   );
 }
 

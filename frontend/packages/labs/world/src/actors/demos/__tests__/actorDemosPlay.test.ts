@@ -52,7 +52,7 @@ async function playDemo(id: string, demo: ActorDemo): Promise<Moment[]> {
         subject: subjectId,
         x: position.x,
         y: position.y,
-        drawn: actorDemoFrame(id, world, demo),
+        drawn: actorDemoFrame(id, world, demo, tick / 60),
       });
     });
   }
@@ -102,10 +102,30 @@ describe.each(Object.keys(ACTOR_DEMOS))('the %s demo', id => {
   it('draws its whole cast, every frame', () => {
     // `actorDemoFrame` throws for an actor it cannot draw, so reaching here at
     // all is half the check; the other half is that the scene is not empty.
+    // A demo with a pointer draws a cursor as well, which is not an actor.
+    const drawn =
+      ACTOR_DEMOS[id].cast.length + (ACTOR_DEMOS[id].pointer ? 1 : 0);
     expect(moments.length).toBeGreaterThan(0);
     for (const moment of moments) {
-      expect(moment.drawn.length).toBe(ACTOR_DEMOS[id].cast.length);
+      expect(moment.drawn.length).toBe(drawn);
     }
+  });
+
+  it('draws its subject where the demo put it', () => {
+    // The frame's arithmetic, checked once: a demo says where its actors go in
+    // WORLD pixels and the recorder draws in strip pixels, and the number
+    // between them is the demo's own `shrink`. Reading the default there
+    // instead drew every scene that chose one at half the distance from the
+    // corner — which looks like a composition somebody meant, in every strip
+    // it happened to.
+    const demo = ACTOR_DEMOS[id];
+    const placed = demo.cast.find(one => one.actor === id)!;
+    const shrink = demo.shrink ?? 2;
+    const drawn = moments[0].drawn.find(
+      cell => cell.id === moments[0].subject,
+    )!;
+    expect(drawn.x).toBeCloseTo(placed.x / shrink, 5);
+    expect(drawn.y).toBeCloseTo(placed.y / shrink, 5);
   });
 
   it('keeps its subject in shot', () => {
@@ -350,5 +370,51 @@ describe('the speech box demo', () => {
         expect(KNOWN.has(character), `${line}: ${character}`).toBe(true);
       }
     }
+  });
+});
+
+describe('the button demo', () => {
+  let moments: Moment[];
+  beforeAll(async () => {
+    moments = await play('button');
+  }, 60000);
+
+  /** Where the cursor is drawn, which is where the pointer was set. */
+  const cursorIn = (moment: Moment) =>
+    moment.drawn.find(cell => cell.id === 'pointer')!;
+
+  it('shows the pointer arriving, and pressing', () => {
+    // The cause, in the frame. A strip of a button answering nobody is a strip
+    // of a button that changed its mind.
+    const sizes = new Set(moments.map(moment => cursorIn(moment).width));
+    expect(sizes.size).toBe(2);
+    const travelled = new Set(
+      moments.map(moment => `${cursorIn(moment).x},${cursorIn(moment).y}`),
+    );
+    expect(travelled.size).toBeGreaterThan(5);
+  });
+
+  it('answers the press, and not before it', () => {
+    // The whole demonstration, and the one thing that cannot be faked into
+    // looking right: the pointer is set in VIEWPORT pixels and the actor is
+    // hit-tested in world ones, so a conversion that is wrong by the width of
+    // a camera means no event, no answer, and a strip of a cursor passing over
+    // a button that ignores it.
+    const words = moments.map(moment => {
+      const cell = moment.drawn.find(one => 'commands' in one)!;
+      if (!('commands' in cell)) {
+        throw new Error('the button drew no drawing');
+      }
+      return cell.commands.flatMap(command =>
+        command.op === 'text' ? [command.text] : [],
+      );
+    });
+    expect(words[0]).toEqual(['PRESS ME']);
+    expect(words[words.length - 1]).toEqual(['THANKS!']);
+    // …and it changed once, when it was pressed, rather than on some frame of
+    // its own choosing.
+    const changed = words.findIndex(said => said[0] === 'THANKS!');
+    expect(moments[changed].seconds).toBeGreaterThanOrEqual(1.2);
+    expect(moments[changed].seconds).toBeLessThan(1.5);
   });
 });

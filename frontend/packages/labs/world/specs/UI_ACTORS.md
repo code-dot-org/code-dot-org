@@ -362,11 +362,13 @@ with a floor under it and a jump in it is about 200 pixels tall whatever else
 is in it. The still rows are drawn in that same 128 by 96 box, so a list of
 both does not step in and out as it scrolls.
 
-Seven of the nine actors have one. The two that do not keep their stills — a
-Health Bar has nothing on the shelf to point at, and a Button's face does not
-change when it is pressed (specs/RULE_DEMOS.md records both). A still is drawn
-LIFE SIZE, never enlarged, because a demo is: a Health Bar blown up to twice a
-Progress Bar's scene would read as two different sizes of the same bar.
+Eight of the nine actors have one, including the Button — a demo may drive a
+POINTER, drawn as a cursor in the frame, and register the handler a project
+would write for the event a press raises (specs/RULE_DEMOS.md). The ninth keeps
+its still: a Health Bar shows the health of whoever it is pointed at, and
+nothing on the shelf has any. A still is drawn LIFE SIZE, never enlarged,
+because a demo is: a Health Bar blown up to twice a Progress Bar's scene would
+read as two different sizes of the same bar.
 
 ### The canvas wants the instance, and does not have it
 

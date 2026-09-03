@@ -35,7 +35,7 @@ async function play(id: string, demo: ActorDemo): Promise<Cell[][]> {
   for (let tick = 0; tick < ticks; tick++) {
     stepActorDemo(staged, demo, tick, () => {
       if (tick % every === 0) {
-        frames.push(actorDemoFrame(id, staged.world, demo));
+        frames.push(actorDemoFrame(id, staged.world, demo, tick / 60));
       }
     });
   }
