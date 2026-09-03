@@ -34,7 +34,7 @@
         "text": "**That's your background!** Make more if you like, then continue when you're ready.",
         "showContinue": true,
         "after": {
-          "images": 1
+          "backgroundImages": 1
         }
       }
     ],

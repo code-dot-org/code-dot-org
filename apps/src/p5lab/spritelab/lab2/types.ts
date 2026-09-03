@@ -91,6 +91,12 @@ export interface GuideStep {
      * carries every image from the levels before this one.
      */
     images?: number;
+    /** At least this many sprite-type images in the project. */
+    spriteImages?: number;
+    /** At least this many background-type images in the project. */
+    backgroundImages?: number;
+    /** At least this many block-type images in the project. */
+    blockImages?: number;
     /** This tab is active. */
     tab?: Tab;
   };

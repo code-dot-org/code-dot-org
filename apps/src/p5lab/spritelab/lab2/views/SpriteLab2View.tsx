@@ -46,7 +46,7 @@ import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import defaultSources from '../defaultSources.json';
-import {useGuideSteps} from '../guideSteps';
+import {countImagesByType, useGuideSteps} from '../guideSteps';
 import {
   removeImageReferences,
   removeImageReferencesOnWorkspace,
@@ -396,9 +396,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const activeScene = scenes.find(s => s.id === activeSceneId) ?? scenes[0];
   const activeWorld = worldFor(activeScene);
   const activeSceneSize = sceneGridSize(activeWorld);
-  // Images in the project, for guide steps waiting on one being made.
-  const imageCount = useAppSelector(
-    state => state.animationList.orderedKeys.length
+  // Images in the project by kind, for guide steps waiting on one being
+  // made. Memoized off the list: counting in the selector would make a fresh
+  // object on every store dispatch.
+  const animationList = useAppSelector(state => state.animationList);
+  const imageCounts = useMemo(
+    () => countImagesByType(animationList),
+    [animationList]
   );
 
   // Keep activeSceneId pointing at a real scene: locked to the pin once the
@@ -428,7 +432,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     steps: levelProperties.guideSteps,
     grid: activeWorld.grid,
     activeTab,
-    images: imageCount,
+    images: imageCounts,
     fallback: levelProperties.longInstructions,
   });
 

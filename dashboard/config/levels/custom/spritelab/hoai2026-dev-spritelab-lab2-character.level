@@ -34,7 +34,7 @@
         "text": "**There's your hero!** Make more characters if you like, then continue when you're ready.",
         "showContinue": true,
         "after": {
-          "images": 2
+          "spriteImages": 1
         }
       }
     ],

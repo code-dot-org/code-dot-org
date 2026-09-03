@@ -3,13 +3,26 @@
 
 import {useEffect, useMemo, useState} from 'react';
 
+import {ImageType} from './ai/images/types';
+import {imageTypeFromCategories} from './imageGallery';
 import {Tab} from './redux/spriteLab2Redux';
-import {GuideStep} from './types';
+import {GuideStep, RuntimeAnimationList} from './types';
 import {WorldCell} from './world';
 
 export interface WorldCounts {
   blocks: number;
   sprites: number;
+}
+
+/** Project images tallied by kind. */
+export type ImageCounts = Record<ImageType, number>;
+
+export function countImagesByType(list: RuntimeAnimationList): ImageCounts {
+  const counts: ImageCounts = {sprite: 0, background: 0, block: 0};
+  list.orderedKeys.forEach(key => {
+    counts[imageTypeFromCategories(list.propsByKey[key]?.categories)]++;
+  });
+  return counts;
 }
 
 // Placed World cells, tallied by kind.
@@ -32,7 +45,7 @@ export function countWorldCells(grid?: (WorldCell | null)[][]): WorldCounts {
 export interface GuideProgress {
   counts: WorldCounts;
   activeTab: Tab;
-  images: number;
+  images: ImageCounts;
 }
 
 // The step the guide should show: advance from `index` while the next step's
@@ -44,6 +57,7 @@ export function nextGuideStepIndex(
   progress: GuideProgress
 ): number {
   const {counts, activeTab, images} = progress;
+  const totalImages = images.sprite + images.background + images.block;
   let result = index;
   for (;;) {
     const after = steps?.[result + 1]?.after;
@@ -52,7 +66,12 @@ export function nextGuideStepIndex(
       (after.worldBlocks !== undefined && counts.blocks < after.worldBlocks) ||
       (after.worldSprites !== undefined &&
         counts.sprites < after.worldSprites) ||
-      (after.images !== undefined && images < after.images) ||
+      (after.images !== undefined && totalImages < after.images) ||
+      (after.spriteImages !== undefined &&
+        images.sprite < after.spriteImages) ||
+      (after.backgroundImages !== undefined &&
+        images.background < after.backgroundImages) ||
+      (after.blockImages !== undefined && images.block < after.blockImages) ||
       (after.tab !== undefined && after.tab !== activeTab)
     ) {
       return result;
@@ -83,7 +102,7 @@ export function useGuideSteps({
   steps: GuideStep[] | undefined;
   grid: (WorldCell | null)[][] | undefined;
   activeTab: Tab;
-  images: number;
+  images: ImageCounts;
   fallback: string | undefined;
 }): GuideDisplay {
   const counts = useMemo(() => countWorldCells(grid), [grid]);

@@ -38,7 +38,7 @@
       {
         "text": "**Put it in your world.** Switch to the **World** tab, pick your jewel from the palette, and place it somewhere your player can reach.",
         "after": {
-          "images": 4
+          "spriteImages": 2
         }
       },
       {
