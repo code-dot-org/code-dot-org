@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2026-09-02T21:53:45.000Z",
   "level_num": "custom",
@@ -19,20 +20,44 @@
     "hide_custom_blocks": true,
     "hide_share_and_remix": "true",
     "encrypted": "false",
-    "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
+    "project_template_level_name": "HoAI26-Playtest1-Game2-Template",
     "visible_tabs": [
       "Images"
     ],
     "locked_image_type": "background",
     "guide_mode": "instructions",
-    "long_instructions": "# Make a background\nUse AI to create the background for your story scene. Describe a place - a forest, a city, outer space - and press **Generate**.",
+    "long_instructions": "# Make a background\r\nUse AI to create the background for your story scene. Describe a place - a forest, a city, outer space - and press **Generate**.",
     "display_name": "Create a Background",
     "bubble_choice_description": "Use your imagination and, if you choose, AI to create a background for your click-based game.",
-    "thumbnail_url": "https://images.code.org/2acd3d69655bdc9d618b87e88efa9152-Gemini_Generated_Image_5qyw6p5qyw6p5qyw.jpeg",
-    "preload_asset_list": null
+    "thumbnail_url": "https://images.code.org/96062b168e9fc77098ff138fc914841f-Gemini_Generated_Image_x6qqhfx6qqhfx6qq.jpeg",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "use_modal_function_editor": "false",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "use_default_sprites": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "enable_big_playspace": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-09-02T21:53:45.256+00:00\",\"changed\":[\"cloned from \\\"HoAI26-Playtest1-Story-Background\\\"\"],\"cloned_from\":\"HoAI26-Playtest1-Story-Background\"},{\"changed_at\":\"2026-09-02 22:43:22 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-02 22:46:27 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-09-02T21:53:45.256+00:00\",\"changed\":[\"cloned from \\\"HoAI26-Playtest1-Story-Background\\\"\"],\"cloned_from\":\"HoAI26-Playtest1-Story-Background\"},{\"changed_at\":\"2026-09-02 22:43:22 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-02 22:46:27 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 01:31:09 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 01:39:33 +0000\",\"changed\":[\"project_template_level_name\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </GamelabJr>

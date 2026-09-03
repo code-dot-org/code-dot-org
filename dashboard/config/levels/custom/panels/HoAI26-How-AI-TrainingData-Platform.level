@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 73,
-  "created_at": "2026-09-01T23:03:33.000Z",
+  "created_at": "2026-09-03T01:49:26.000Z",
   "level_num": "custom",
   "user_id": 18754,
   "properties": {
@@ -10,7 +10,7 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "Have you noticed that if you simply ask AI to generate a dragon, a unicorn, or a superhero, they tend to look similar to these examples. ",
+        "text": "Have you noticed simple prompts get predictable results? Prompt AI for a dragon, unicorn, or superhero, and you'll likely get something like these examples.\nIf you prompt AI to generate a dragon, unicorn or a superhero they will likely look like these examples.",
         "imageUrl": "https://images.code.org/3736a365548adba05a21e8f0b333ec1f-three characters.png",
         "key": "HoAI26-How-AI-a478b96e-eaef-446f-86ca-7020790e476c",
         "links": [
@@ -272,6 +272,6 @@
     ],
     "use_links": "true"
   },
-  "audit_log": "[{\"changed_at\":\"2026-09-01T23:03:33.403+00:00\",\"changed\":[\"cloned from \\\"HoAI26-How\\\"\"],\"cloned_from\":\"HoAI26-How\"},{\"changed_at\":\"2026-09-02 23:01:55 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-02 23:09:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-02 23:11:47 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-02 23:18:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-02 23:20:26 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-02 23:24:15 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-02 23:32:57 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-02 23:34:58 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-09-03T01:49:26.385+00:00\",\"changed\":[\"cloned from \\\"HoAI26-How-AI\\\"\"],\"cloned_from\":\"HoAI26-How-AI\"},{\"changed_at\":\"2026-09-03 02:20:20 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 02:21:10 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Panels>

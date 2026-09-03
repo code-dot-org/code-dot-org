@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2026-09-02T21:54:52.000Z",
   "level_num": "custom",
@@ -19,7 +20,7 @@
     "hide_custom_blocks": true,
     "hide_share_and_remix": "true",
     "encrypted": "false",
-    "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
+    "project_template_level_name": " HoAI26-Playtest1-Story-Template",
     "visible_tabs": [
       "Images"
     ],
@@ -49,10 +50,12 @@
     "enable_big_playspace": "false",
     "display_name": "Create a Main Character",
     "bubble_choice_description": "Use your imagination and AI to create a main character for your project!",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-09-02T21:54:52.087+00:00\",\"changed\":[\"cloned from \\\"HoAI26-Playtest1-Platform-CharacterNew\\\"\"],\"cloned_from\":\"HoAI26-Playtest1-Platform-CharacterNew\"},{\"changed_at\":\"2026-09-02 22:18:34 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-02 22:21:42 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\",\"thumbnail_url\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-02 22:23:42 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-09-02T21:54:52.087+00:00\",\"changed\":[\"cloned from \\\"HoAI26-Playtest1-Platform-CharacterNew\\\"\"],\"cloned_from\":\"HoAI26-Playtest1-Platform-CharacterNew\"},{\"changed_at\":\"2026-09-02 22:18:34 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-02 22:21:42 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\",\"thumbnail_url\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-02 22:23:42 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 01:39:00 +0000\",\"changed\":[\"project_template_level_name\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

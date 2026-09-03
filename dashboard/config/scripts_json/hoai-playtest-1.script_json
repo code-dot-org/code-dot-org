@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-02 22:08:07 UTC",
+    "serialized_at": "2026-09-03 01:51:47 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -104,6 +104,17 @@
       },
       "seeding_key": {
         "activity_section.key": "a58dc831-7348-4f30-881d-716c734edbea",
+        "lesson_activity.key": "c58e5cb6-c759-49e1-a220-a29137a92c43"
+      }
+    },
+    {
+      "key": "f23ef883-ce54-42fd-af95-e1a410139ac2",
+      "position": 5,
+      "properties": {
+        "progression_name": "Project Templates"
+      },
+      "seeding_key": {
+        "activity_section.key": "f23ef883-ce54-42fd-af95-e1a410139ac2",
         "lesson_activity.key": "c58e5cb6-c759-49e1-a220-a29137a92c43"
       }
     }
@@ -208,7 +219,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "HoAI26-Playtest1-Platform-Background"
+          "HoAI26-Playtest1-Platform-CharacterNew"
         ],
         "lesson.key": "HoAI26 Playtest 1",
         "lesson_group.key": "",
@@ -216,7 +227,7 @@
         "activity_section.key": "d65090bb-7799-4478-8240-7bfc514f4cdc"
       },
       "level_keys": [
-        "HoAI26-Playtest1-Platform-Background"
+        "HoAI26-Playtest1-Platform-CharacterNew"
       ]
     },
     {
@@ -230,7 +241,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "HoAI26-Playtest1-Platform-CharacterNew"
+          "HoAI26-Playtest1-Platform-SimpleCode"
         ],
         "lesson.key": "HoAI26 Playtest 1",
         "lesson_group.key": "",
@@ -238,13 +249,35 @@
         "activity_section.key": "d65090bb-7799-4478-8240-7bfc514f4cdc"
       },
       "level_keys": [
-        "HoAI26-Playtest1-Platform-CharacterNew"
+        "HoAI26-Playtest1-Platform-SimpleCode"
       ]
     },
     {
       "chapter": 7,
       "position": 7,
       "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Platform Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI26-Playtest1-Platform-Background"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "",
+        "script.name": "hoai-playtest-1",
+        "activity_section.key": "d65090bb-7799-4478-8240-7bfc514f4cdc"
+      },
+      "level_keys": [
+        "HoAI26-Playtest1-Platform-Background"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "progression": "Platform Levels"
@@ -264,8 +297,52 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 8,
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Platform Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI26-Playtest1-Platform-WorldTab"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "",
+        "script.name": "hoai-playtest-1",
+        "activity_section.key": "d65090bb-7799-4478-8240-7bfc514f4cdc"
+      },
+      "level_keys": [
+        "HoAI26-Playtest1-Platform-WorldTab"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Platform Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI26-How-AI-TrainingData-Platform"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "",
+        "script.name": "hoai-playtest-1",
+        "activity_section.key": "d65090bb-7799-4478-8240-7bfc514f4cdc"
+      },
+      "level_keys": [
+        "HoAI26-How-AI-TrainingData-Platform"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -286,8 +363,8 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 9,
+      "chapter": 12,
+      "position": 12,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -308,9 +385,31 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 10,
+      "chapter": 13,
+      "position": 13,
       "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Story Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI26-Playtest1-Story-SimpleCode"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "",
+        "script.name": "hoai-playtest-1",
+        "activity_section.key": "05aac936-bd57-49aa-8db6-fe9da7fa228d"
+      },
+      "level_keys": [
+        "HoAI26-Playtest1-Story-SimpleCode"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "progression": "Story Levels"
@@ -330,31 +429,53 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 11,
-      "activity_section_position": 1,
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Game 2 Levels"
+        "progression": "Story Levels"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "HoAI26-Playtest1-Game2-Background"
+          "HoAI26-Playtest1-Story-WorldTab"
         ],
         "lesson.key": "HoAI26 Playtest 1",
         "lesson_group.key": "",
         "script.name": "hoai-playtest-1",
-        "activity_section.key": "a58dc831-7348-4f30-881d-716c734edbea"
+        "activity_section.key": "05aac936-bd57-49aa-8db6-fe9da7fa228d"
       },
       "level_keys": [
-        "HoAI26-Playtest1-Game2-Background"
+        "HoAI26-Playtest1-Story-WorldTab"
       ]
     },
     {
-      "chapter": 12,
-      "position": 12,
-      "activity_section_position": 2,
+      "chapter": 16,
+      "position": 16,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Story Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI26-How-AI-TrainingData-Story"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "",
+        "script.name": "hoai-playtest-1",
+        "activity_section.key": "05aac936-bd57-49aa-8db6-fe9da7fa228d"
+      },
+      "level_keys": [
+        "HoAI26-How-AI-TrainingData-Story"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 17,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "progression": "Game 2 Levels"
@@ -374,9 +495,53 @@
       ]
     },
     {
-      "chapter": 13,
-      "position": 13,
+      "chapter": 18,
+      "position": 18,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Game 2 Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI26-Playtest1-Game2-SimpleCode"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "",
+        "script.name": "hoai-playtest-1",
+        "activity_section.key": "a58dc831-7348-4f30-881d-716c734edbea"
+      },
+      "level_keys": [
+        "HoAI26-Playtest1-Game2-SimpleCode"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 19,
       "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Game 2 Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI26-Playtest1-Game2-Background"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "",
+        "script.name": "hoai-playtest-1",
+        "activity_section.key": "a58dc831-7348-4f30-881d-716c734edbea"
+      },
+      "level_keys": [
+        "HoAI26-Playtest1-Game2-Background"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 20,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "progression": "Game 2 Levels"
@@ -393,6 +558,116 @@
       },
       "level_keys": [
         "HoAI26-Playtest1-Game2-ObjectSprite"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 21,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Game 2 Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI26-Playtest1-Game2-WorldTab"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "",
+        "script.name": "hoai-playtest-1",
+        "activity_section.key": "a58dc831-7348-4f30-881d-716c734edbea"
+      },
+      "level_keys": [
+        "HoAI26-Playtest1-Game2-WorldTab"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 22,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Game 2 Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI26-How-AI-TrainingData-Game2"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "",
+        "script.name": "hoai-playtest-1",
+        "activity_section.key": "a58dc831-7348-4f30-881d-716c734edbea"
+      },
+      "level_keys": [
+        "HoAI26-How-AI-TrainingData-Game2"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 23,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Project Templates"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI26-Playtest1-Platform-Template"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "",
+        "script.name": "hoai-playtest-1",
+        "activity_section.key": "f23ef883-ce54-42fd-af95-e1a410139ac2"
+      },
+      "level_keys": [
+        "HoAI26-Playtest1-Platform-Template"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 24,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Project Templates"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI26-Playtest1-Story-Template"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "",
+        "script.name": "hoai-playtest-1",
+        "activity_section.key": "f23ef883-ce54-42fd-af95-e1a410139ac2"
+      },
+      "level_keys": [
+        "HoAI26-Playtest1-Story-Template"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 25,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Project Templates"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI26-Playtest1-Game2-Template"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "",
+        "script.name": "hoai-playtest-1",
+        "activity_section.key": "f23ef883-ce54-42fd-af95-e1a410139ac2"
+      },
+      "level_keys": [
+        "HoAI26-Playtest1-Game2-Template"
       ]
     }
   ],
@@ -447,18 +722,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "HoAI26-Playtest1-Platform-Background",
-        "script_level.level_keys": [
-          "HoAI26-Playtest1-Platform-Background"
-        ],
-        "lesson.key": "HoAI26 Playtest 1",
-        "lesson_group.key": "",
-        "script.name": "hoai-playtest-1",
-        "activity_section.key": "d65090bb-7799-4478-8240-7bfc514f4cdc"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "HoAI26-Playtest1-Platform-CharacterNew",
         "script_level.level_keys": [
           "HoAI26-Playtest1-Platform-CharacterNew"
@@ -471,9 +734,57 @@
     },
     {
       "seeding_key": {
+        "level.key": "HoAI26-Playtest1-Platform-SimpleCode",
+        "script_level.level_keys": [
+          "HoAI26-Playtest1-Platform-SimpleCode"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "",
+        "script.name": "hoai-playtest-1",
+        "activity_section.key": "d65090bb-7799-4478-8240-7bfc514f4cdc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoAI26-Playtest1-Platform-Background",
+        "script_level.level_keys": [
+          "HoAI26-Playtest1-Platform-Background"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "",
+        "script.name": "hoai-playtest-1",
+        "activity_section.key": "d65090bb-7799-4478-8240-7bfc514f4cdc"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "HoAI26-Playtest1-Platform-ObjectSprite",
         "script_level.level_keys": [
           "HoAI26-Playtest1-Platform-ObjectSprite"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "",
+        "script.name": "hoai-playtest-1",
+        "activity_section.key": "d65090bb-7799-4478-8240-7bfc514f4cdc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoAI26-Playtest1-Platform-WorldTab",
+        "script_level.level_keys": [
+          "HoAI26-Playtest1-Platform-WorldTab"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "",
+        "script.name": "hoai-playtest-1",
+        "activity_section.key": "d65090bb-7799-4478-8240-7bfc514f4cdc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoAI26-How-AI-TrainingData-Platform",
+        "script_level.level_keys": [
+          "HoAI26-How-AI-TrainingData-Platform"
         ],
         "lesson.key": "HoAI26 Playtest 1",
         "lesson_group.key": "",
@@ -507,6 +818,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "HoAI26-Playtest1-Story-SimpleCode",
+        "script_level.level_keys": [
+          "HoAI26-Playtest1-Story-SimpleCode"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "",
+        "script.name": "hoai-playtest-1",
+        "activity_section.key": "05aac936-bd57-49aa-8db6-fe9da7fa228d"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "HoAI26-Playtest1-Story-ObjectSprite",
         "script_level.level_keys": [
           "HoAI26-Playtest1-Story-ObjectSprite"
@@ -519,9 +842,33 @@
     },
     {
       "seeding_key": {
-        "level.key": "HoAI26-Playtest1-Game2-Background",
+        "level.key": "HoAI26-Playtest1-Story-WorldTab",
         "script_level.level_keys": [
-          "HoAI26-Playtest1-Game2-Background"
+          "HoAI26-Playtest1-Story-WorldTab"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "",
+        "script.name": "hoai-playtest-1",
+        "activity_section.key": "05aac936-bd57-49aa-8db6-fe9da7fa228d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoAI26-How-AI-TrainingData-Story",
+        "script_level.level_keys": [
+          "HoAI26-How-AI-TrainingData-Story"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "",
+        "script.name": "hoai-playtest-1",
+        "activity_section.key": "05aac936-bd57-49aa-8db6-fe9da7fa228d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoAI26-Playtest1-Game2-CharacterNew",
+        "script_level.level_keys": [
+          "HoAI26-Playtest1-Game2-CharacterNew"
         ],
         "lesson.key": "HoAI26 Playtest 1",
         "lesson_group.key": "",
@@ -531,9 +878,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "HoAI26-Playtest1-Game2-CharacterNew",
+        "level.key": "HoAI26-Playtest1-Game2-SimpleCode",
         "script_level.level_keys": [
-          "HoAI26-Playtest1-Game2-CharacterNew"
+          "HoAI26-Playtest1-Game2-SimpleCode"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "",
+        "script.name": "hoai-playtest-1",
+        "activity_section.key": "a58dc831-7348-4f30-881d-716c734edbea"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoAI26-Playtest1-Game2-Background",
+        "script_level.level_keys": [
+          "HoAI26-Playtest1-Game2-Background"
         ],
         "lesson.key": "HoAI26 Playtest 1",
         "lesson_group.key": "",
@@ -551,6 +910,66 @@
         "lesson_group.key": "",
         "script.name": "hoai-playtest-1",
         "activity_section.key": "a58dc831-7348-4f30-881d-716c734edbea"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoAI26-Playtest1-Game2-WorldTab",
+        "script_level.level_keys": [
+          "HoAI26-Playtest1-Game2-WorldTab"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "",
+        "script.name": "hoai-playtest-1",
+        "activity_section.key": "a58dc831-7348-4f30-881d-716c734edbea"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoAI26-How-AI-TrainingData-Game2",
+        "script_level.level_keys": [
+          "HoAI26-How-AI-TrainingData-Game2"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "",
+        "script.name": "hoai-playtest-1",
+        "activity_section.key": "a58dc831-7348-4f30-881d-716c734edbea"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoAI26-Playtest1-Platform-Template",
+        "script_level.level_keys": [
+          "HoAI26-Playtest1-Platform-Template"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "",
+        "script.name": "hoai-playtest-1",
+        "activity_section.key": "f23ef883-ce54-42fd-af95-e1a410139ac2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoAI26-Playtest1-Story-Template",
+        "script_level.level_keys": [
+          "HoAI26-Playtest1-Story-Template"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "",
+        "script.name": "hoai-playtest-1",
+        "activity_section.key": "f23ef883-ce54-42fd-af95-e1a410139ac2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoAI26-Playtest1-Game2-Template",
+        "script_level.level_keys": [
+          "HoAI26-Playtest1-Game2-Template"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "",
+        "script.name": "hoai-playtest-1",
+        "activity_section.key": "f23ef883-ce54-42fd-af95-e1a410139ac2"
       }
     }
   ],
