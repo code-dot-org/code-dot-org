@@ -85,8 +85,8 @@ export async function generateWeblab2Level(
     '     for them. Express subfolders as a `/` in the file name (e.g.',
     '     "css/style.css"). Honor any explicit file count or layout the',
     '     description specifies.',
-    ...suppliedCodeLines(ctx),
     ...authoringRulesLines(ctx),
+    ...suppliedCodeLines(ctx),
     ...(ctx.unitOutline
       ? [
           '',
@@ -299,8 +299,8 @@ export async function generateWeblab2TemplateBackedLevel(
     'bare content (no `TODO:` prefix on the bullet). Name the files the',
     'student touches and the moves they make. Do NOT write polished prose;',
     'the curriculum author writes that later. No other headings.',
-    '',
     ...authoringRulesLines(ctx),
+    '',
     "Shared template files (already open in the student's editor):",
     templateListing,
     ...(ctx.lessonOutline

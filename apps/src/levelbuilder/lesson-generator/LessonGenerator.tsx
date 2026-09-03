@@ -118,7 +118,8 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     newSpec: newLevelSpec,
     // Editing the description re-derives the `generate` checkbox from
     // whether the description still matches what we last generated for.
-    // The user can still override manually after.
+    // Editing supplied code always re-arms generation. The user can
+    // still override manually after.
     onAfterPatch: (_prev, next, patch) => {
       if ('suppliedCode' in patch) return {...next, generate: true};
       if (!('description' in patch)) return next;

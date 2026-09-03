@@ -90,8 +90,8 @@ export async function generatePythonlabLevel(
     '',
     'Runtime constraints:',
     ...PYTHON_RUNTIME_CONSTRAINTS.map(line => `  - ${line}`),
-    ...suppliedCodeLines(ctx),
     ...authoringRulesLines(ctx),
+    ...suppliedCodeLines(ctx),
     ...(ctx.unitOutline
       ? [
           '',

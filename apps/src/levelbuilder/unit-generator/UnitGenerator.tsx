@@ -233,7 +233,7 @@ const UnitGenerator: React.FC<UnitGeneratorProps> = ({unit}) => {
         <summary>Course rules (optional)</summary>
         <p className={moduleStyles.courseRulesHelp}>
           Free-text rules applied to every lesson generated in this unit. Saved
-          with the Save button below.
+          when you click &quot;Generate Lessons&quot; below.
         </p>
         <div className={moduleStyles.courseRulesField}>
           <label htmlFor="unit-drafting-rules">Level drafting rules</label>
