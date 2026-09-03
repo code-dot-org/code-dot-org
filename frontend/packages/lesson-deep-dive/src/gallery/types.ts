@@ -106,3 +106,36 @@ export const unitCountsValidator: ResponseValidator<
   }
   return bodyJson as Record<string, number>;
 };
+
+// GET <lesson path>/tutor/gallery_data — the gallery page's bootstrap
+// payload.
+export const tutorGalleryDataValidator: ResponseValidator<
+  TutorGalleryData
+> = bodyJson => {
+  const data = bodyJson as Partial<TutorGalleryData>;
+  if (typeof data.currentUnitId !== 'number') {
+    throw new Error('TutorGalleryData missing currentUnitId');
+  }
+  if (!Array.isArray(data.units)) {
+    throw new Error('TutorGalleryData missing units');
+  }
+  for (const unit of data.units as Partial<GalleryUnit>[]) {
+    if (
+      typeof unit.id !== 'number' ||
+      typeof unit.name !== 'string' ||
+      typeof unit.position !== 'number' ||
+      typeof unit.link !== 'string'
+    ) {
+      throw new Error('TutorGalleryData unit missing a required field');
+    }
+  }
+  if (!Array.isArray(data.sections)) {
+    throw new Error('TutorGalleryData missing sections');
+  }
+  for (const section of data.sections as Partial<GallerySection>[]) {
+    if (typeof section.id !== 'number' || typeof section.name !== 'string') {
+      throw new Error('TutorGalleryData section missing a required field');
+    }
+  }
+  return data as TutorGalleryData;
+};

@@ -65,33 +65,3 @@ class Lessons::TutorGalleryDataControllerTest < ActionController::TestCase
     assert_response :not_found
   end
 end
-
-# The JSON payload above is a hand-maintained duplicate of
-# LessonsController#tutor_gallery's @tutor_gallery_data (see that action's
-# comment for why). This guards against the two drifting apart.
-class Lessons::TutorGalleryDataDriftGuardTest < ActionDispatch::IntegrationTest
-  setup do
-    @ai_script = create(:script, name: 'gallery-data-drift-ai-unit-1')
-    @ai_course = create(:single_unit_course, :with_course_offering, unit: @ai_script)
-    @ai_course.course_version.course_offering.update!(marketing_initiative: 'AIF')
-    ai_lesson_group = create(:lesson_group, script: @ai_script)
-    @ai_lesson = create(:lesson, lesson_group: ai_lesson_group, has_lesson_plan: true)
-
-    @teacher = create(:teacher)
-    create(:section, user: @teacher, script: @ai_script)
-  end
-
-  test 'json payload matches the payload the page embeds' do
-    sign_in @teacher
-
-    get course_unit_lesson_tutor_gallery_path(@ai_course.name, 1, @ai_lesson.relative_position)
-    assert_response :success
-    page_payload = JSON.parse(css('script[data-tutorgallerydata]').first['data-tutorgallerydata'])
-
-    get course_unit_lesson_tutor_gallery_data_path(@ai_course.name, 1, @ai_lesson.relative_position)
-    assert_response :success
-    api_payload = JSON.parse(response.body)
-
-    assert_equal page_payload, api_payload
-  end
-end

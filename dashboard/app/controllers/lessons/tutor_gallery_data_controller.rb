@@ -1,12 +1,10 @@
 module Lessons
-  # JSON twin of the bootstrap payload LessonsController#tutor_gallery embeds
-  # in the Tutor+ gallery page, for clients that cannot read that page's
-  # data attribute (e.g. a standalone dev shell). Split into its own
-  # controller because LessonsController's before_action only/except lists
-  # are hand-maintained, and a public action left out of one of them 403s
-  # in production. The payload build below is duplicated from the page
-  # action on purpose, guarded by a test, until the page stops embedding
-  # the data itself.
+  # Where the Tutor+ gallery page's bootstrap payload comes from: the page
+  # renders an empty mount point and fetches this after mount, rather than
+  # having Rails embed the data in the HTML. Split into its own controller
+  # because LessonsController's before_action only/except lists are
+  # hand-maintained, and a public action left out of one of them 403s in
+  # production.
   class TutorGalleryDataController < ApplicationController
     include ResolvesLessonFromParams
 

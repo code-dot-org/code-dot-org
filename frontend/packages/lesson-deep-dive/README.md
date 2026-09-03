@@ -122,9 +122,10 @@ reading `script[data-lessondeepdivedata]`. Rebuilding it from
 
 `gallery.html` is a second dev entry, alongside the student flow at
 `index.html`. It renders the Tutor+ project gallery — the teacher-facing
-view of submitted challenge work — out of
-`apps/src/aiTutor/views/gallery/ChallengeGallery`, the same way `main.tsx`
-renders the student flow. Both modes work the same way as above:
+view of submitted challenge work — by mounting `TutorGalleryPage`, the same
+page component the Rails page's webpack entry mounts
+(`apps/src/sites/studio/pages/lessons/tutor_gallery.js`). Both modes work
+the same way as above:
 
 ```bash
 yarn dev                        # http://localhost-studio.code.org:5173/gallery.html
@@ -138,25 +139,25 @@ neither. In dashboard mode this is decided server-side from who is signed
 in, not by the query string.
 
 Unlike the student flow's page payload, the gallery's bootstrap comes from a
-real JSON endpoint: `gallery.tsx` fetches
-`GET /api/v1/tutor_gallery_data?script=&lessonPosition=` before mounting
-`ChallengeGallery`, in both modes. `?script=` (default `aif1-2025`) and
-`?lessonPosition=` (default `1`) pick which lesson dashboard mode bootstraps
-from; msw mode ignores both and always serves `TUTOR_GALLERY_DATA`.
+real JSON endpoint: `TutorGalleryPage` fetches
+`GET <lesson path>/tutor/gallery_data` before mounting `ChallengeGallery`,
+in both modes — msw mode serves `TUTOR_GALLERY_DATA`, dashboard mode proxies
+the request to Rails. `?script=` (default `aif1-2025`) and
+`?lessonPosition=` (default `1`) pick the lesson path; msw mode ignores
+both and always serves the fixture regardless of the lesson path it was
+asked for.
 
 Dashboard mode has one prerequisite beyond the student flow's: sign in as a
 **teacher** whose section has students with final challenge submissions. If
 the endpoint fails for any reason — the local Rails checkout predates it,
-the script/lesson doesn't resolve, or the session is signed out — the shell
-falls back to `src/dev/galleryFixtures.ts`'s `TUTOR_GALLERY_DATA` and logs
-one `console.info` saying so; the page still renders. That fixture's unit
-and section ids are invented, not harvested, and almost certainly do not
-match a real teacher's — `GET /challenge_responses?section_id=` authorizes
-against `Section.find(params[:section_id])`, so a mismatched id 403s.
-Regenerate it by loading `/s/:script/lessons/:position/tutor/gallery` as
-that teacher and reading `script[data-tutorgallerydata]`, the same harvest
-doctrine as `lessonDeepDiveData` above — now only load-bearing for how
-realistic the msw fixture is, since dashboard mode prefers the live endpoint.
+the script/lesson doesn't resolve, or the session is signed out — there is
+no fixture fallback any more: `TutorGalleryPage` shows the same "We
+couldn't load the gallery" line `ChallengeGallery` shows for a failed
+`/challenge_responses` fetch. The msw fixture's unit and section ids are
+invented, not harvested, and almost certainly do not match a real
+teacher's — `GET /challenge_responses?section_id=` authorizes against
+`Section.find(params[:section_id])`, so a mismatched id 403s in dashboard
+mode.
 
 `evaluation_result` only exists on a response once the async AI evaluation
 job has run (`EvaluateChallengeResponseJob`), which nothing in the dev shell

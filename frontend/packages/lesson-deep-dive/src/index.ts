@@ -29,6 +29,7 @@ export {assetWithUrl} from './gallery/assetUtils';
 export {
   challengeResponseDetailValidator,
   unitCountsValidator,
+  tutorGalleryDataValidator,
 } from './gallery/types';
 export type {
   ChallengeResponseDetail,
@@ -60,3 +61,4 @@ export {default as ProjectDetailsCard} from './gallery/ProjectDetailsCard';
 export {default as ProjectStage} from './gallery/ProjectStage';
 export {default as ProjectView} from './gallery/ProjectView';
 export {default as ReactionChips} from './gallery/ReactionChips';
+export {default as TutorGalleryPage} from './gallery/TutorGalleryPage';

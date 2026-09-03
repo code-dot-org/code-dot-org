@@ -4,6 +4,7 @@ import {challengeResponseListValidator, type ChallengeResponse} from '../types';
 
 import {
   challengeResponseDetailValidator,
+  tutorGalleryDataValidator,
   unitCountsValidator,
   type ChallengeResponseDetail,
   type TutorGalleryData,
@@ -49,13 +50,14 @@ export async function getChallengeResponse(
 
 // tutor/gallery_data is a sibling route of the tutor/gallery page; lessonPath
 // is the page path with the trailing /tutor/gallery removed, so both URL
-// grammars work. No consumer yet.
+// grammars work.
 export async function getTutorGalleryData(
   transport: Transport,
   lessonPath: string,
 ): Promise<TutorGalleryData> {
-  return transport.request<TutorGalleryData>({
+  const raw = await transport.request<unknown>({
     method: 'GET',
     url: `${lessonPath}/tutor/gallery_data`,
   });
+  return tutorGalleryDataValidator(raw as Record<string, unknown>);
 }

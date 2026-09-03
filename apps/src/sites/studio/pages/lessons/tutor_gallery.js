@@ -3,12 +3,11 @@ import {
   createApiClient,
   createKyTransport,
 } from '@code-dot-org/core/api';
-import {ChallengeGallery} from '@code-dot-org/lesson-deep-dive';
+import {TutorGalleryPage} from '@code-dot-org/lesson-deep-dive';
 import React from 'react';
 
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
-import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
   // The gallery is part of the challenge activities feature, so it is gated
@@ -20,7 +19,11 @@ $(document).ready(() => {
   ) {
     return;
   }
-  const tutorGalleryData = getScriptData('tutorGalleryData');
+  // Both URL grammars this page is routed at end in /tutor/gallery.
+  const lessonPath = window.location.pathname.replace(
+    /\/tutor\/gallery\/?$/,
+    ''
+  );
   // The gallery's requests are root-relative to the page's own origin, so
   // they ride the same cookie and the same dev proxies as the page. The
   // singleton DashboardApiClient is not used here: its base URL is absolute,
@@ -35,7 +38,7 @@ $(document).ready(() => {
   );
   createReactRoot(
     <ApiClientProvider client={apiClient}>
-      <ChallengeGallery tutorGalleryData={tutorGalleryData} />
+      <TutorGalleryPage lessonPath={lessonPath} />
     </ApiClientProvider>,
     document.getElementById('tutor-gallery-container')
   );

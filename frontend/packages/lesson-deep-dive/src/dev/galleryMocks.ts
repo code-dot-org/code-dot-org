@@ -47,12 +47,12 @@ function toListResponse(response: FixtureResponse): GalleryChallengeResponse {
 
 export function registerGalleryMocks(): void {
   registerMockFixture([
-    // GET /api/v1/tutor_gallery_data — the gallery entry's bootstrap
-    // payload, fetched before mount in both modes (see gallery.tsx). Query
-    // params are ignored: the fixture is fixture regardless of which
+    // GET <lessonPath>/tutor/gallery_data — the page route's sibling,
+    // fetched by TutorGalleryPage before it mounts the gallery. Query
+    // params are ignored: the fixture is the fixture regardless of which
     // script/lesson dashboard mode asked for.
     {
-      path: '*/api/v1/tutor_gallery_data',
+      path: '*/tutor/gallery_data',
       respond: () => ({...TUTOR_GALLERY_DATA}),
     },
 
