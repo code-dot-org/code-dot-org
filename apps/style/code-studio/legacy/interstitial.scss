@@ -100,6 +100,7 @@
   background-color: $brand_secondary_default;
   border-color: $brand_secondary_default;
   color: $neutral_white;
+
   @include main-font-semi-bold;
 }
 
@@ -128,6 +129,7 @@
 }
 #race-modal .dismiss-link {
   font-size: 14px;
+
   @include main-font-regular;
   line-height: 20px;
 }
@@ -136,10 +138,10 @@
   color: $light-gray;
 }
 
-$almost_white: #eee;
+$almost-white: #eee;
 #school-info-modal .selectize-control .selectize-input.disabled {
   opacity: 1;
-  background-color: $almost_white;
+  background-color: $almost-white;
 }
 
 @media (max-width: 600px) {
@@ -182,14 +184,11 @@ $almost_white: #eee;
 
 #student-information-modal select {
   margin-bottom: 5px;
+  width: 100%;
 }
 
 #student-information-modal #edit_user .form-group {
   margin-bottom: 10px;
-}
-
-#student-information-modal select {
-  width: 100%;
 }
 
 #student-information-modal #user_gender_student_input {
