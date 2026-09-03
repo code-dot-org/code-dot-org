@@ -11,7 +11,12 @@ import {
   type GatewayGenerateTextResponseV1,
 } from './contract/gatewaySchemas';
 import {reportGatewayError} from './logHelper';
-import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
+import {
+  AI_GATEWAY_URL,
+  base64ToUint8Array,
+  fetchAccessToken,
+  getModelString,
+} from './shared';
 import {
   fetchTurnstileToken,
   turnstileErrorTags,
@@ -24,11 +29,6 @@ type SDKOptions = Parameters<typeof generateText>[0];
 type ExtraOptions = Record<string, unknown>;
 type SDKTools = NonNullable<SDKOptions['tools']>;
 type SDKOutput = NonNullable<SDKOptions['output']>;
-
-const base64ToUint8Array = (base64: string): Uint8Array => {
-  const binaryString = atob(base64);
-  return Uint8Array.from(binaryString, char => char.charCodeAt(0));
-};
 
 // Make the serializer ASYNC to unwrap the SDK's hidden Promise.
 const serializeOutputSchema = async (output?: SDKOptions['output']) => {

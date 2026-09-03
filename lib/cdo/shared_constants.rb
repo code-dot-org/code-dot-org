@@ -868,7 +868,17 @@ module SharedConstants
     GEMINI_2_5_FLASH_LITE: "gemini-2.5-flash-lite",
     GEMINI_2_5_PRO: "gemini-2.5-pro",
     GEMINI_2_5_FLASH_IMAGE: "gemini-2.5-flash-image",
+    GPT_IMAGE_1: "gpt-image-1",
   }
+
+  # Image generation models. These are not language models: they are reached
+  # through the AI SDK's generateImage (ImageModelV3), not generateText, and
+  # so travel through the gateway's /generateImage route. GEMINI_2_5_FLASH_IMAGE
+  # is deliberately absent — it is a language model that emits image parts, and
+  # goes through generateText like any other chat model.
+  AI_IMAGE_MODEL_IDS = [
+    AI_CHAT_MODEL_IDS[:GPT_IMAGE_1],
+  ].freeze
 
   # Models served via the Google Gemini API. This is about routing — which
   # provider a model is requested from (see modelHelpers, shouldUseAiGateway) —
