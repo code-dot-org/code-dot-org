@@ -1,5 +1,4 @@
 require 'cdo/date'
-require 'cdo/anon_user_id'
 require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
 require 'dynamic_config/page_mode'

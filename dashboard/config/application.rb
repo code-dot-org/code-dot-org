@@ -17,6 +17,8 @@ require 'cdo/hash'
 require 'cdo/i18n'
 require 'cdo/i18n_backend'
 require 'cdo/shared_constants'
+require 'cdo/rack/request'
+require 'cdo/rack/response'
 
 # load and configure pycall before numpy and any other python-related gems
 # can be automatically loaded just below.

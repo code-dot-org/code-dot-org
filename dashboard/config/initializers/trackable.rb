@@ -1,5 +1,3 @@
-require 'cdo/anon_user_id'
-
 module OverrideUpdateTrackedFields
   def update_tracked_fields(request)
     super
