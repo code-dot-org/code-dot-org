@@ -24,8 +24,8 @@
 class QuizAttempt < ApplicationRecord
   belongs_to :user
   # optional: true so an existing attempt can survive its quiz being deleted
-  # (level_id becomes null). New attempts still need a quiz - see the
-  # on: :create presence validation below.
+  # (level_id stays pointing at the deleted row). New attempts still need a
+  # quiz - see the on: :create presence validation below.
   belongs_to :level, optional: true
   belongs_to :unit
 
