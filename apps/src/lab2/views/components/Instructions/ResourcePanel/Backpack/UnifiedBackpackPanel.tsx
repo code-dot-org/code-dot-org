@@ -5,6 +5,8 @@ import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import {TransitionGroup} from 'react-transition-group';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {ProjectType} from '@cdo/apps/lab2/types';
+import {convertProjectTypeToDisplayName} from '@cdo/apps/lab2/utils';
 import {BackpackProps} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import {BackpackEvent} from '@cdo/apps/sharedComponents/backpack/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -64,7 +66,6 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
 }) => {
   const backpackApi = Lab2Registry.getInstance().getUnifiedBackpackApi();
   const currentUserId = useAppSelector(state => state.currentUser.userId);
-  const currentAppName = Lab2Registry.getInstance().getAppName();
 
   const [files, setFiles] = useState<UnifiedBackpackFile[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -147,12 +148,30 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
     [openPanelCallback, removeAlert]
   );
 
+  // Names held by more than one backpack. Those rows have to say which backpack they
+  // came from, or they are indistinguishable.
+  const duplicateFileNames = useMemo(() => {
+    const seen = new Set<string>();
+    const duplicates = new Set<string>();
+    files.forEach(({fileName}) => {
+      if (seen.has(fileName)) {
+        duplicates.add(fileName);
+      }
+      seen.add(fileName);
+    });
+    return duplicates;
+  }, [files]);
+
   const renderFileChip = useCallback(
     ({appType, fileName}: UnifiedBackpackFile) => {
       const client = backpackApi.getClientForAppType(appType);
       if (!client) {
         return null;
       }
+      // The universal backpack has no display name, so its rows stay unlabeled.
+      const sourceDisplayName = duplicateFileNames.has(fileName)
+        ? convertProjectTypeToDisplayName(appType as ProjectType) || undefined
+        : undefined;
       return (
         <BackpackFileChip
           key={`${appType}/${fileName}`}
@@ -166,9 +185,8 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
           supportedFileTypes={supportedFileTypes}
           setActionInProgress={setActionInProgress}
           disableActions={actionInProgress}
-          // Anything outside this lab's own backpack may hold another lab's images,
-          // which have to be moderated before they enter a project.
-          isSecondaryBackpack={appType !== currentAppName}
+          appType={appType}
+          sourceDisplayName={sourceDisplayName}
           onImageFlagged={onImageFlagged}
           addFileTooltipText={addFileTooltipText}
           addFileHandler={addFileHandler}
@@ -177,6 +195,7 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
     },
     [
       backpackApi,
+      duplicateFileNames,
       addAlert,
       validateFileName,
       saveFileToProject,
@@ -184,7 +203,6 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
       findIdForFileName,
       supportedFileTypes,
       actionInProgress,
-      currentAppName,
       onImageFlagged,
       addFileTooltipText,
       addFileHandler,
