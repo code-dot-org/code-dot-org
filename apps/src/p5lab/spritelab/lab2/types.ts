@@ -2,6 +2,7 @@ import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {BlocklyLevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import {RGBA} from '@cdo/apps/pixelEditor/tools';
 
+import {ImageAdlibSet} from './ai/images/imageAdlibs';
 import {ImageGenerationMetadata, ImageType} from './ai/images/types';
 import {Tab} from './redux/spriteLab2Redux';
 import {World} from './world';
@@ -115,6 +116,9 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   // temperature — instead of the student one (equivalent to the
   // images-advanced=true URL parameter).
   imagesAdvanced?: boolean;
+  // Offer adlib prompt combos in the student image dialog, from this tier of
+  // the manifest (equivalent to the image-adlibs=<set> URL parameter).
+  imageAdlibSet?: ImageAdlibSet;
   // The one scene this level edits, created on first load if the project
   // lacks it. Must not be 'scene-1' (the id synthesized for sources saved
   // before scenes existed).

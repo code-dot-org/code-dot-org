@@ -1,0 +1,462 @@
+{
+  "adlibs": {
+    "background-simple": {
+      "template": "A {mood} {place}",
+      "options": {
+        "mood": [
+          {
+            "id": "sunny",
+            "text": "sunny"
+          },
+          {
+            "id": "spooky",
+            "text": "spooky"
+          },
+          {
+            "id": "frozen",
+            "text": "frozen"
+          },
+          {
+            "id": "magical",
+            "text": "magical"
+          },
+          {
+            "id": "misty",
+            "text": "misty"
+          },
+          {
+            "id": "starry",
+            "text": "starry"
+          }
+        ],
+        "place": [
+          {
+            "id": "forest",
+            "text": "forest"
+          },
+          {
+            "id": "castle",
+            "text": "castle"
+          },
+          {
+            "id": "city",
+            "text": "city"
+          },
+          {
+            "id": "beach",
+            "text": "beach"
+          },
+          {
+            "id": "cave",
+            "text": "cave"
+          },
+          {
+            "id": "planetscape",
+            "text": "planetscape"
+          }
+        ]
+      },
+      "variantCount": 1
+    },
+    "sprite-simple": {
+      "template": "A {adjective} {creature}",
+      "options": {
+        "adjective": [
+          {
+            "id": "brave",
+            "text": "brave"
+          },
+          {
+            "id": "sparkly",
+            "text": "sparkly"
+          },
+          {
+            "id": "grumpy",
+            "text": "grumpy"
+          },
+          {
+            "id": "friendly",
+            "text": "friendly"
+          },
+          {
+            "id": "cute",
+            "text": "cute"
+          }
+        ],
+        "creature": [
+          {
+            "id": "robot",
+            "text": "robot"
+          },
+          {
+            "id": "dragon",
+            "text": "dragon"
+          },
+          {
+            "id": "cat",
+            "text": "cat"
+          },
+          {
+            "id": "monster",
+            "text": "monster"
+          },
+          {
+            "id": "wizard",
+            "text": "wizard"
+          },
+          {
+            "id": "penguin",
+            "text": "penguin"
+          },
+          {
+            "id": "witch",
+            "text": "witch"
+          }
+        ]
+      },
+      "variantCount": 1
+    },
+    "block-simple": {
+      "template": "A block of {material}",
+      "options": {
+        "material": [
+          {
+            "id": "stone",
+            "text": "stone"
+          },
+          {
+            "id": "wood",
+            "text": "wood"
+          },
+          {
+            "id": "ice",
+            "text": "ice"
+          },
+          {
+            "id": "gold",
+            "text": "gold"
+          },
+          {
+            "id": "lava",
+            "text": "lava"
+          },
+          {
+            "id": "grass",
+            "text": "grass"
+          }
+        ]
+      },
+      "variantCount": 1
+    },
+    "background-expanded": {
+      "template": "A {mood} {place} at {time}, with {detail}",
+      "options": {
+        "mood": [
+          {
+            "id": "sunny",
+            "text": "sunny"
+          },
+          {
+            "id": "spooky",
+            "text": "spooky"
+          },
+          {
+            "id": "frozen",
+            "text": "frozen"
+          },
+          {
+            "id": "magical",
+            "text": "magical"
+          },
+          {
+            "id": "misty",
+            "text": "misty"
+          },
+          {
+            "id": "starry",
+            "text": "starry"
+          },
+          {
+            "id": "stormy",
+            "text": "stormy"
+          },
+          {
+            "id": "peaceful",
+            "text": "peaceful"
+          }
+        ],
+        "place": [
+          {
+            "id": "forest",
+            "text": "forest"
+          },
+          {
+            "id": "castle",
+            "text": "castle"
+          },
+          {
+            "id": "city",
+            "text": "city"
+          },
+          {
+            "id": "beach",
+            "text": "beach"
+          },
+          {
+            "id": "cave",
+            "text": "cave"
+          },
+          {
+            "id": "planetscape",
+            "text": "planetscape"
+          },
+          {
+            "id": "volcano",
+            "text": "volcano"
+          },
+          {
+            "id": "underwater-reef",
+            "text": "underwater reef"
+          }
+        ],
+        "time": [
+          {
+            "id": "sunrise",
+            "text": "sunrise"
+          },
+          {
+            "id": "noon",
+            "text": "noon"
+          },
+          {
+            "id": "sunset",
+            "text": "sunset"
+          },
+          {
+            "id": "night",
+            "text": "night"
+          }
+        ],
+        "detail": [
+          {
+            "id": "glowing-mushrooms",
+            "text": "glowing mushrooms"
+          },
+          {
+            "id": "floating-lanterns",
+            "text": "floating lanterns"
+          },
+          {
+            "id": "distant-mountains",
+            "text": "distant mountains"
+          },
+          {
+            "id": "falling-leaves",
+            "text": "falling leaves"
+          },
+          {
+            "id": "twinkling-lights",
+            "text": "twinkling lights"
+          },
+          {
+            "id": "drifting-fog",
+            "text": "drifting fog"
+          }
+        ]
+      },
+      "variantCount": 1
+    },
+    "sprite-expanded": {
+      "template": "A {adjective} {creature} {attire}, looking {expression}",
+      "options": {
+        "adjective": [
+          {
+            "id": "brave",
+            "text": "brave"
+          },
+          {
+            "id": "sparkly",
+            "text": "sparkly"
+          },
+          {
+            "id": "grumpy",
+            "text": "grumpy"
+          },
+          {
+            "id": "fluffy",
+            "text": "fluffy"
+          },
+          {
+            "id": "robotic",
+            "text": "robotic"
+          },
+          {
+            "id": "friendly",
+            "text": "friendly"
+          },
+          {
+            "id": "cute",
+            "text": "cute"
+          }
+        ],
+        "creature": [
+          {
+            "id": "robot",
+            "text": "robot"
+          },
+          {
+            "id": "dragon",
+            "text": "dragon"
+          },
+          {
+            "id": "cat",
+            "text": "cat"
+          },
+          {
+            "id": "monster",
+            "text": "monster"
+          },
+          {
+            "id": "wizard",
+            "text": "wizard"
+          },
+          {
+            "id": "penguin",
+            "text": "penguin"
+          },
+          {
+            "id": "knight",
+            "text": "knight"
+          },
+          {
+            "id": "dinosaur",
+            "text": "dinosaur"
+          },
+          {
+            "id": "witch",
+            "text": "witch"
+          }
+        ],
+        "attire": [
+          {
+            "id": "cape",
+            "text": "wearing a cape"
+          },
+          {
+            "id": "armor",
+            "text": "in shining armor"
+          },
+          {
+            "id": "tiny-hat",
+            "text": "with a tiny hat"
+          },
+          {
+            "id": "sunglasses",
+            "text": "wearing sunglasses"
+          },
+          {
+            "id": "backpack",
+            "text": "with a backpack"
+          },
+          {
+            "id": "spacesuit",
+            "text": "in a spacesuit"
+          }
+        ],
+        "expression": [
+          {
+            "id": "heroic",
+            "text": "heroic"
+          },
+          {
+            "id": "cheerful",
+            "text": "cheerful"
+          },
+          {
+            "id": "mischievous",
+            "text": "mischievous"
+          },
+          {
+            "id": "curious",
+            "text": "curious"
+          },
+          {
+            "id": "determined",
+            "text": "determined"
+          },
+          {
+            "id": "surprised",
+            "text": "surprised"
+          }
+        ]
+      },
+      "variantCount": 1
+    },
+    "block-expanded": {
+      "template": "A block of {material} with {detail}",
+      "options": {
+        "material": [
+          {
+            "id": "stone",
+            "text": "stone"
+          },
+          {
+            "id": "wood",
+            "text": "wood"
+          },
+          {
+            "id": "ice",
+            "text": "ice"
+          },
+          {
+            "id": "gold",
+            "text": "gold"
+          },
+          {
+            "id": "lava",
+            "text": "lava"
+          },
+          {
+            "id": "grass",
+            "text": "grass"
+          },
+          {
+            "id": "crystal",
+            "text": "crystal"
+          },
+          {
+            "id": "sand",
+            "text": "sand"
+          }
+        ],
+        "detail": [
+          {
+            "id": "glowing-cracks",
+            "text": "glowing cracks"
+          },
+          {
+            "id": "carved-patterns",
+            "text": "carved patterns"
+          },
+          {
+            "id": "tiny-gems",
+            "text": "tiny gems"
+          },
+          {
+            "id": "moss",
+            "text": "moss on top"
+          },
+          {
+            "id": "ancient-runes",
+            "text": "ancient runes"
+          },
+          {
+            "id": "metal-bolts",
+            "text": "metal bolts"
+          }
+        ]
+      },
+      "variantCount": 1
+    }
+  }
+}

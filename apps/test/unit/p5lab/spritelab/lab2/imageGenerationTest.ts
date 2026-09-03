@@ -47,6 +47,18 @@ describe('generateImage', () => {
     expect(generation.editedPrevious).toBeUndefined();
   });
 
+  it('reads the prompt as a sentence without doubling its punctuation', async () => {
+    await generateImage('a beach.', OPTIONS);
+    await generateImage('a beach!', OPTIONS);
+    await generateImage('a beach', OPTIONS);
+    const sent = mockGenerateText.mock.calls.map(
+      call => call[0].messages[0].content
+    );
+    expect(sent[0]).toMatch(/^a beach\. Render/);
+    expect(sent[1]).toMatch(/^a beach! Render/);
+    expect(sent[2]).toMatch(/^a beach\. Render/);
+  });
+
   it('omits temperature from the request unless given', async () => {
     await generateImage('a beach', OPTIONS);
     expect('temperature' in mockGenerateText.mock.calls[0][0]).toBe(false);

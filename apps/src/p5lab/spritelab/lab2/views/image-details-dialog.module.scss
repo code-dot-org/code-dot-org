@@ -223,6 +223,21 @@
 
 // --- Generate view ---
 
+// Hosts the transplanted guide Adlib (it brings its own dark panel and
+// glowing border); the native fieldset disable dims it while typed text
+// has precedence.
+.adlibGroup {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  transition: opacity 0.15s ease;
+
+  &[disabled] {
+    opacity: 0.45;
+  }
+}
+
 .formRow {
   display: flex;
   gap: 16px;

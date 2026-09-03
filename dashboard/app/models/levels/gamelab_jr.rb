@@ -45,6 +45,7 @@ class GamelabJr < Gamelab
     visible_tabs
     locked_image_type
     images_advanced
+    image_adlib_set
     pinned_scene_id
     pinned_scene_name
     guide_steps

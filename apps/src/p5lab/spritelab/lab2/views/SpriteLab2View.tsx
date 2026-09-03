@@ -38,6 +38,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
+import {ImageAdlibSet} from '../ai/images/imageAdlibs';
 import {
   uploadAssetToLevel,
   uploadAssetToProject,
@@ -136,6 +137,13 @@ function levelFlag(value: unknown): boolean {
   return value === true || value === 'true';
 }
 
+// ?image-adlibs=simple|expanded previews the adlib combos without a level
+// change (levels set imageAdlibSet).
+function getImageAdlibSetParam(): ImageAdlibSet | undefined {
+  const value = queryParams('image-adlibs');
+  return value === 'simple' || value === 'expanded' ? value : undefined;
+}
+
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
 const DEFAULT_SCENE_ID = 'scene-1';
 
@@ -221,6 +229,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     () => queryParams('world-tab') === 'true',
     []
   );
+  const imageAdlibSetParam = useMemo(getImageAdlibSetParam, []);
   // The image dialog defaults to the student form; this shows the full
   // internal one (levels can also opt in via imagesAdvanced). Level edit
   // modes author starter images, which needs the naming controls.
@@ -1507,6 +1516,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 onDeleteImage={handleDeleteImage}
                 lockedImageType={levelProperties.lockedImageType}
                 advanced={imagesAdvanced}
+                adlibSet={imageAdlibSetParam || levelProperties.imageAdlibSet}
               />
             </div>
           </div>

@@ -5,6 +5,7 @@ import TextField from '@code-dot-org/component-library/textField';
 import classNames from 'classnames';
 import React, {useState} from 'react';
 
+import {ImageAdlibSet} from '../ai/images/imageAdlibs';
 import {GeneratedImageResult} from '../ai/images/imageGeneration';
 import {
   IMAGE_STYLE_LABELS,
@@ -44,6 +45,8 @@ interface ImageDetailsDialogProps {
   /** Show the full internal dialog — the image's name (and renaming),
       Start from, temperature. The default is the student version. */
   advanced?: boolean;
+  /** Offer this tier of adlib prompt combos (student dialog only). */
+  adlibSet?: ImageAdlibSet;
   /** The image is pixel art: previews upscale it with hard edges. */
   pixelated?: boolean;
   /** Current pixels, for generation's "use previous image". */
@@ -92,6 +95,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   imageType,
   lockedImageType,
   advanced,
+  adlibSet,
   pixelated,
   getDataURI,
   isNameTaken,
@@ -257,6 +261,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
             create={isNew ? {isNameTaken, initial: newImageDraft} : undefined}
             lockedImageType={lockedImageType}
             advanced={advanced}
+            adlibSet={adlibSet}
             onPaintManually={isNew ? onPaintNew : undefined}
             onGenerateStart={onGenerateStart}
             onAccept={async (result, newName) => {

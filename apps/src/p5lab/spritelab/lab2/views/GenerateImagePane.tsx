@@ -17,6 +17,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 
+import {ImageAdlibSet} from '../ai/images/imageAdlibs';
 import {
   GeneratedImageResult,
   UploadImageFunction,
@@ -176,6 +177,8 @@ interface GenerateImagePaneProps {
   /** Show the full internal dialog and gallery names; the default is the
       student version (auto-named images, fewer generation controls). */
   advanced?: boolean;
+  /** Offer this tier of adlib prompt combos in the student dialog. */
+  adlibSet?: ImageAdlibSet;
 }
 
 /**
@@ -188,6 +191,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   onDeleteImage,
   lockedImageType,
   advanced,
+  adlibSet,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -731,6 +735,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           imageType={imageTypeFromCategories(targetProps?.categories)}
           lockedImageType={lockedImageType}
           advanced={advanced}
+          adlibSet={adlibSet}
           pixelated={!!targetProps?.pixelGridSize}
           getDataURI={getTargetDataURI}
           isNameTaken={isNameTaken}
