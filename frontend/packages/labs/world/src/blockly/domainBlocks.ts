@@ -96,6 +96,7 @@ import {
   paramSockets,
   type EffectParamState,
 } from './extensions/effectParamsMutator';
+import {enhanceButtonExtension} from './extensions/enhanceButton';
 import {eventActorToolboxExtension} from './extensions/eventActorToolbox';
 import {lessonButtonExtension} from './extensions/lessonButton';
 import {missingRuleExtension} from './extensions/missingRule';
@@ -556,6 +557,10 @@ const worldActor = defineBlock({
   // connection — the actor's `use trait` / `set` / `play` body chains below it,
   // not nested in a `do` input.
   nextStatement: true,
+  // …and a wand, in an actor's own FILE: the shelf of things this actor could
+  // be given (extensions/enhanceButton). Not built at all in a world's own
+  // `define actor`, which has no file for an enhancement to write into.
+  extensions: [enhanceButtonExtension],
   style: 'setup_blocks',
   tooltip: 'Define an actor: its traits, properties, and event handlers.',
   generator: {

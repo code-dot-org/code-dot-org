@@ -65,11 +65,25 @@ choosing the actor is not a question the dialog has to ask: it is answered by
 whose row the menu belongs to, and the dialog's title says which one it is
 about.
 
-That is the first place and not the only one. The next is a wand on the
-`define actor` block itself, which would also reach an actor a WORLD defines
-for itself and which has no file to have a row — a second kind of address for
-the same question, which is why the seam takes a target rather than reading
-one (`actors/enhance/actorEnhance`).
+**And on the `define actor` block itself**, as a wand beside the actor's name
+(`blockly/extensions/enhanceButton`) — the third of the buttons that ride on a
+block, after the eye that opens a file and the mortarboard that opens a lesson.
+It is the nearer of the two routes: a learner looking at an actor's blocks and
+wanting it to have health is already pointing at the actor.
+
+The wand is built only in an actor's own FILE. A world's `define actor` defines
+an actor the world keeps to itself, with no file of its own, and every edit an
+enhancement makes lands in a file — so the button is not built where it could
+not work, which is the same answer `add actor ⟨as …⟩` gives to a choice that has
+nothing to mean there. Reaching those actors means an enhancement that can
+patch a `define actor` in place and hang its handlers off the world's own hats;
+that is a second patch shape, and the seam already takes a target rather than
+reading one so it can carry a second kind of address
+(`actors/enhance/actorEnhance`).
+
+Nor is it built on a read-only workspace, and that is where it parts company
+with the eye and the mortarboard beside it: those two READ — a version being
+previewed can still be looked into — and this one writes.
 
 ## The first one: health, and a bar above it
 
