@@ -150,3 +150,35 @@
     box-sizing: border-box;
   }
 }
+
+// Collapsed-by-default planning-document import, under the outline block.
+.importDoc {
+  margin: 12px 0 16px;
+  padding: 8px 12px;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  background: #f8fafc;
+
+  summary {
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  p {
+    margin: 8px 0;
+    font-size: 13px;
+    color: #555;
+  }
+
+  textarea {
+    width: 100%;
+    min-height: 160px;
+    font-size: 13px;
+    font-family: inherit;
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+  }
+}

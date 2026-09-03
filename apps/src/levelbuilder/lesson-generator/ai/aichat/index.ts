@@ -17,7 +17,11 @@ import {
 
 import {AichatPreset, AICHAT_PRESETS, AichatPresetId} from './presets';
 
-export {AICHAT_PRESET_IDS, AICHAT_PRESETS} from './presets';
+export {
+  AICHAT_PRESET_IDS,
+  AICHAT_PRESETS,
+  DEFAULT_AICHAT_PRESET,
+} from './presets';
 export type {AichatPreset, AichatPresetId} from './presets';
 
 const baseAichatSchema = z.object({

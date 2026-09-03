@@ -20,15 +20,15 @@ import {
 
 import {AICHAT_PRESET_IDS, AichatPresetId} from './aichat';
 
-const supportedLabTypeEnum = z.enum(
+export const supportedLabTypeEnum = z.enum(
   SUPPORTED_LAB_TYPES as unknown as [LabType, ...LabType[]]
 );
 
-const sublevelLabTypeEnum = z.enum(
+export const sublevelLabTypeEnum = z.enum(
   BUBBLE_CHOICE_SUBLEVEL_LAB_TYPES as unknown as [LabType, ...LabType[]]
 );
 
-const aichatPresetEnum = z.enum(
+export const aichatPresetEnum = z.enum(
   AICHAT_PRESET_IDS as unknown as [AichatPresetId, ...AichatPresetId[]]
 );
 
