@@ -13,6 +13,10 @@ export const TERMINAL_FALL_SPEED = 10;
 // strengths behave identically here.
 export const PLATFORM_GRAVITY = 0.75;
 
+// What patrollers feel when the world's gravity is zero and the player is
+// steered about: enough to settle onto blocks, gently.
+export const PATROLLER_WEIGHTLESS_GRAVITY = 0.2;
+
 // Slack (px) for exact-contact comparisons: resting and pinned contact are
 // exact equalities, with possible sub-pixel noise on them.
 export const CONTACT_EPSILON = 0.1;
@@ -126,6 +130,9 @@ export function resolvePlatformPhysics(
     });
     return;
   }
+  // Zero gravity: steered, not falling — the wall rules with the falling
+  // rules off.
+  const weightless = gravity === 0;
   const boxes = walls.map(wall => ({
     x: wall.position.x,
     y: wall.position.y,
@@ -208,12 +215,19 @@ export function resolvePlatformPhysics(
         sprite.velocity.y = 0;
       }
     });
-    // The bottom clamp sits the feet exactly on the floor line, so
-    // hasSupportAt's floor branch holds and the player can jump from pits.
+    // The bottom clamp sits the feet exactly on the floor line, so the
+    // footing probes' floor branch holds and the player can jump from pits.
     if (y > view.height - halfH) {
       y = view.height - halfH;
       sprite.velocity.y = 0;
       landed = true;
+    }
+    // Weightless, nothing brings a player back from above the view, so the
+    // top is closed too — at the art box, like the sides, so no head is cut.
+    // This is the body-center y that puts the art top at 0.
+    const artBoxTopY = halfH + 2 * drop;
+    if (weightless && y < artBoxTopY) {
+      y = artBoxTopY;
     }
     // Final push-out: a landing or head bump declined above slides off
     // the corner sideways; other thin overlap (sideways drift through a
@@ -251,26 +265,33 @@ export function resolvePlatformPhysics(
         x += x < wall.x ? -penX : penX;
       }
     });
-    // Footing lost this frame with nothing catching the fall: drop at
-    // ledge speed at once (see LEDGE_FALL_SPEED).
-    if (!landed && sprite.velocity.y >= 0) {
-      const hadFooting =
-        prev.y + halfH >= view.height - CONTACT_EPSILON ||
-        boxes.some(
-          wall =>
-            Math.abs(prev.y + halfH - (wall.y - wall.halfH)) <=
-              CONTACT_EPSILON && Math.abs(prev.x - wall.x) < halfW + wall.halfW
-        );
-      if (hadFooting && sprite.velocity.y < LEDGE_FALL_SPEED) {
-        sprite.velocity.y = LEDGE_FALL_SPEED;
+    if (weightless) {
+      // Steered, not falling: no ledge drop, and no vertical speed carried
+      // from before gravity went to zero (a jump in flight, a fall).
+      sprite.velocity.y = 0;
+    } else {
+      // Footing lost this frame with nothing catching the fall: drop at
+      // ledge speed at once (see LEDGE_FALL_SPEED).
+      if (!landed && sprite.velocity.y >= 0) {
+        const hadFooting =
+          prev.y + halfH >= view.height - CONTACT_EPSILON ||
+          boxes.some(
+            wall =>
+              Math.abs(prev.y + halfH - (wall.y - wall.halfH)) <=
+                CONTACT_EPSILON &&
+              Math.abs(prev.x - wall.x) < halfW + wall.halfW
+          );
+        if (hadFooting && sprite.velocity.y < LEDGE_FALL_SPEED) {
+          sprite.velocity.y = LEDGE_FALL_SPEED;
+        }
       }
+      // Gravity accrues after the cap, so the effective fall step is the cap
+      // plus one gravity step.
+      if (sprite.velocity.y > TERMINAL_FALL_SPEED) {
+        sprite.velocity.y = TERMINAL_FALL_SPEED;
+      }
+      sprite.velocity.y += gravity;
     }
-    // Gravity accrues after the cap, so the effective fall step is the cap
-    // plus one gravity step.
-    if (sprite.velocity.y > TERMINAL_FALL_SPEED) {
-      sprite.velocity.y = TERMINAL_FALL_SPEED;
-    }
-    sprite.velocity.y += gravity;
     sprite.position.x = x;
     sprite.position.y = y - drop;
     sprite.__slab2Prev = {x, y: y - drop};
@@ -278,10 +299,10 @@ export function resolvePlatformPhysics(
 }
 
 /**
- * Whether a player is standing on support in the gravity direction: a wall
+ * Whether a sprite is standing on support in the gravity direction: a wall
  * face within contact slack of the body's feet (or its head, under flipped
  * gravity), or the view's floor (ceiling). Mirrors the resolver's footing
- * geometry; the jump command asks this.
+ * geometry.
  */
 export function isSupported(
   sprite: PhysicsSprite,
@@ -289,23 +310,16 @@ export function isSupported(
   view: View,
   gravity: number = PLATFORM_GRAVITY
 ): boolean {
-  if (gravity < 0) {
-    return isSupported(
-      flippedSprite(sprite, view),
-      flipWallsY(walls, view),
-      view,
-      -gravity
+  return inDownwardTerms(sprite, walls, view, gravity, (s, w) => {
+    const {halfW, feet} = feetLine(s);
+    return (
+      feet >= view.height - CONTACT_EPSILON ||
+      wallsAtFeet(w, feet).some(
+        wall =>
+          Math.abs(s.position.x - wall.position.x) < halfW + wallHalf(wall)
+      )
     );
-  }
-  const {halfW, halfH, drop} = playerBody(sprite);
-  const feet = sprite.position.y + drop + halfH;
-  if (feet >= view.height - CONTACT_EPSILON) {
-    return true;
-  }
-  return wallsAtFeet(walls, feet).some(
-    wall =>
-      Math.abs(sprite.position.x - wall.position.x) < halfW + wallHalf(wall)
-  );
+  });
 }
 
 /**
@@ -322,30 +336,87 @@ export function isAtEdge(
   direction: 1 | -1,
   gravity: number = PLATFORM_GRAVITY
 ): boolean {
+  return inDownwardTerms(sprite, walls, view, gravity, (s, w) => {
+    const {halfW, feet} = feetLine(s);
+    if (feet >= view.height - CONTACT_EPSILON) {
+      return false;
+    }
+    const atFeet = wallsAtFeet(w, feet);
+    const supported = atFeet.some(
+      wall => Math.abs(s.position.x - wall.position.x) < halfW + wallHalf(wall)
+    );
+    const toe = s.position.x + direction * halfW;
+    return (
+      supported &&
+      !atFeet.some(wall => Math.abs(toe - wall.position.x) <= wallHalf(wall))
+    );
+  });
+}
+
+/**
+ * Whether there is footing at foot level `offsetX` from the sprite's centre
+ * — a point probe, so it sees a gap narrower than the sprite — in the
+ * gravity direction. The floor (ceiling, under flipped gravity) counts.
+ */
+export function hasSupportAt(
+  sprite: PhysicsSprite,
+  offsetX: number,
+  walls: PhysicsBox[],
+  view: View,
+  gravity: number = PLATFORM_GRAVITY
+): boolean {
+  return inDownwardTerms(sprite, walls, view, gravity, (s, w) => {
+    const {feet} = feetLine(s);
+    if (feet >= view.height - CONTACT_EPSILON) {
+      return true;
+    }
+    const probe = s.position.x + offsetX;
+    return wallsAtFeet(w, feet).some(
+      wall => Math.abs(probe - wall.position.x) <= wallHalf(wall)
+    );
+  });
+}
+
+// Runs `check` in downward-gravity terms: under upward gravity the sprite
+// and walls are read in a view flipped top for bottom.
+function inDownwardTerms<T>(
+  sprite: PhysicsSprite,
+  walls: PhysicsBox[],
+  view: View,
+  gravity: number,
+  check: (sprite: PhysicsSprite, walls: PhysicsBox[]) => T
+): T {
   if (gravity < 0) {
-    return isAtEdge(
+    return inDownwardTerms(
       flippedSprite(sprite, view),
       flipWallsY(walls, view),
       view,
-      direction,
-      -gravity
+      -gravity,
+      check
     );
   }
+  return check(sprite, walls);
+}
+
+// The body's foot line and half-width, for the footing probes.
+function feetLine(sprite: PhysicsSprite): {halfW: number; feet: number} {
   const {halfW, halfH, drop} = playerBody(sprite);
-  const feet = sprite.position.y + drop + halfH;
-  if (feet >= view.height - CONTACT_EPSILON) {
-    return false;
-  }
-  const atFeet = wallsAtFeet(walls, feet);
-  const supported = atFeet.some(
-    wall =>
-      Math.abs(sprite.position.x - wall.position.x) < halfW + wallHalf(wall)
-  );
-  const toe = sprite.position.x + direction * halfW;
-  return (
-    supported &&
-    !atFeet.some(wall => Math.abs(toe - wall.position.x) <= wallHalf(wall))
-  );
+  return {halfW, feet: sprite.position.y + drop + halfH};
+}
+
+/**
+ * Whether there is footing under the body's leading edge in `direction`
+ * (1 right, -1 left): false with the toes over a drop.
+ */
+export function hasSupportAhead(
+  sprite: PhysicsSprite,
+  direction: 1 | -1,
+  walls: PhysicsBox[],
+  view: View,
+  gravity: number = PLATFORM_GRAVITY
+): boolean {
+  const {halfW} = playerBody(sprite);
+  return hasSupportAt(sprite, direction * halfW, walls, view, gravity);
 }
 
 // The walls whose top is at foot level, within contact tolerance.

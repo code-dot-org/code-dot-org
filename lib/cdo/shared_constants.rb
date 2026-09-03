@@ -79,6 +79,10 @@ module SharedConstants
 
   PL_GRADE_VALUE = 'pl'.freeze
 
+  # App type key for the backpack that belongs to no lab, as opposed to the
+  # backpacks keyed by the app type of a single lab.
+  UNIVERSAL_APP_TYPE = 'universal'.freeze
+
   # The set of artist autorun options.
   ARTIST_AUTORUN_OPTIONS = OpenStruct.new(
     {
@@ -1002,6 +1006,7 @@ module SharedConstants
   BUBBLE_CHOICE_NAVIGATION_TYPES = {
     PARENT: 'parent',
     NEXT_LEVEL: 'next_level',
+    NEXT_SUBLEVEL: 'next_sublevel',
   }
 
   # Web Lab 2 and App Lab projects use the same list of allowed hostnames.

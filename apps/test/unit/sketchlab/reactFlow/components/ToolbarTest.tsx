@@ -56,4 +56,12 @@ describe('Toolbar', () => {
     expect(openUploadsDisabledModal).toHaveBeenCalledTimes(1);
     expect(mockOpenFileInput).not.toHaveBeenCalled();
   });
+
+  it('omits the image tool entirely when image upload is not allowed', () => {
+    render(<Toolbar {...defaultProps} allowImageUpload={false} />);
+
+    expect(
+      screen.queryByRole('button', {name: 'Add image'})
+    ).not.toBeInTheDocument();
+  });
 });

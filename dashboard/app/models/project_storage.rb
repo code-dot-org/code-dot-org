@@ -2,8 +2,9 @@
 #
 # Table name: user_project_storage_ids
 #
-#  id      :integer          not null, primary key
-#  user_id :integer
+#  id           :integer          not null, primary key
+#  user_id      :integer
+#  anon_user_id :string(36)
 #
 # Indexes
 #
@@ -16,6 +17,7 @@ class ProjectStorage < ApplicationRecord
   data_classification(
     id: :confidential,
     user_id: :confidential,
+    anon_user_id: :confidential,
   )
 
   # Conceptually, an instance of this class represents blob storage for all of

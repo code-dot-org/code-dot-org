@@ -210,7 +210,7 @@ function updateAndDeleteSourceWithContents(
 // (see loadPackages in pyodideWebWorker); the theater wheel is 3 MB of instrument
 // samples and fonts, which is too much to charge every Python Lab page for.
 export const ON_DEMAND_PACKAGE_URLS: Record<string, string> = {
-  theater: `/blockly/js/pyodide/${version}/theater-0.4.0-py3-none-any.whl`,
+  theater: `/blockly/js/pyodide/${version}/theater-0.8.0-py3-none-any.whl`,
 };
 
 export async function importPackagesFromFiles(

@@ -159,6 +159,11 @@ class Ability
         in_shared_section_with_code_review && user.in_code_review_group_with?(other_user)
       end
 
+      # A user can view their own quiz attempts, or their student's.
+      can :view_quiz_attempts, User do |other_user|
+        other_user.id == user.id || other_user.student_of?(user)
+      end
+
       can :create, CodeReviewComment do |code_review_comment|
         code_review_comment.code_review.open? && can?(:code_review, code_review_comment.code_review.owner)
       end
@@ -339,7 +344,7 @@ class Ability
       can :create, UserPracticeProblemAttempt
       can [:index, :update, :show], UserPracticeProblemAttempt, user_id: user.id
       can [:index, :show], PracticeProblem
-      can [:index, :show], Challenge
+      can [:index, :show, :starter_image], Challenge
 
       # Students create and read their own challenge responses; teachers read
       # their students' responses; section peers read each other's final
@@ -491,6 +496,7 @@ class Ability
         Game,
         Level,
         Lesson,
+        QuizQuestion,
         ProgrammingClass,
         ProgrammingEnvironment,
         ProgrammingExpression,
@@ -581,10 +587,8 @@ class Ability
       end
 
       # These checks control access to Javabuilder.
-      # All teachers can generate a Javabuilder session token to run Java code,
-      # although only verified teachers can generate tokens will be valid for "main" javabuilder.
-      # Unverified teachers are given limited access to a separate "demo" javabuilder stack.
-      # Students who are also assigned to a CSA section with a verified instructor can run Java code in "main" javabuilder.
+      # Only verified instructors, and students assigned to a CSA section with a
+      # verified instructor, can generate a Javabuilder session token to run Java code.
       # The get_access_token endpoint is used for normal execution, and the access_token_with_override_sources
       # is used when viewing another version of a student's project (in preview or Code Review mode).
       # It is also used for running exemplars, but only teachers can access exemplars.
@@ -592,15 +596,11 @@ class Ability
       # channel's saved sources (access_token_with_override_validation) or
       # alongside override sources (access_token_with_override_sources_and_validation).
       can [:get_access_token, :access_token_with_override_sources], :javabuilder_session do
-        user.teacher? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
+        user.verified_instructor? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
       end
 
       can [:access_token_with_override_validation, :access_token_with_override_sources_and_validation], :javabuilder_session do
         user.levelbuilder?
-      end
-
-      can :use_unrestricted_javabuilder, :javabuilder_session do
-        user.verified_instructor? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
       end
 
       can :find_toxicity, :aichat do

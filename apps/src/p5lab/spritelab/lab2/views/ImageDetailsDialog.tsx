@@ -17,7 +17,7 @@ import {IMAGE_NAME_MAX_LENGTH, sanitizeImageName} from '../imageReferences';
 
 import AnimatedSheetPreview from './AnimatedSheetPreview';
 import DeleteImageButton from './DeleteImageButton';
-import GenerateImageView from './GenerateImageView';
+import GenerateImageView, {NewImageDraft} from './GenerateImageView';
 
 import moduleStyles from './image-details-dialog.module.scss';
 
@@ -40,6 +40,10 @@ interface ImageDetailsDialogProps {
   onClose: () => void;
   /** Open the paint editor on this image. */
   onPaint: () => void;
+  /** New image only: open the paint editor on a blank canvas. */
+  onPaintNew?: (draft: NewImageDraft) => void;
+  /** New image only: form values to reopen with after a cancelled paint. */
+  newImageDraft?: NewImageDraft;
   /** Rename this image everywhere; error or null. */
   onRename: (newName: string) => string | null;
   onDelete: () => void;
@@ -51,11 +55,24 @@ interface ImageDetailsDialogProps {
   getDataURI: () => Promise<string | null>;
   /** Whether another image already uses this name. */
   isNameTaken: (name: string) => boolean;
+  /** A generation request is leaving (see GenerateImageView). */
+  onGenerateStart?: () => void;
   /** Persist an accepted generation (newName set when creating). */
   onAcceptGenerated: (
     result: GeneratedImageResult,
     newName?: string
   ) => Promise<void>;
+  /** This dialog session's recent generations; shown when there's a choice. */
+  alternatives?: AlternativeImage[];
+  /** Make this alternative the image. */
+  onSelectAlternative?: (id: string) => void;
+}
+
+/** One choice in the Alternatives strip. */
+export interface AlternativeImage {
+  id: string;
+  thumb: string;
+  selected: boolean;
 }
 
 /**
@@ -73,13 +90,18 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   generation,
   onClose,
   onPaint,
+  onPaintNew,
+  newImageDraft,
   onRename,
   onDelete,
   imageType,
   lockedImageType,
   getDataURI,
   isNameTaken,
+  onGenerateStart,
   onAcceptGenerated,
+  alternatives,
+  onSelectAlternative,
 }) => {
   const isNew = animKey === null;
   const {theme} = useTheme();
@@ -145,7 +167,10 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                 aria-label="Image name"
                 className={moduleStyles.headerNameField}
                 value={nameDraft}
-                errorMessage={shownNameError || undefined}
+                aria-invalid={!!shownNameError || undefined}
+                aria-describedby={
+                  shownNameError ? 'rename-image-error' : undefined
+                }
                 maxLength={IMAGE_NAME_MAX_LENGTH}
                 onChange={e => {
                   setNameDraft(sanitizeImageName(e.target.value));
@@ -178,6 +203,17 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
               >
                 <FontAwesomeV6Icon iconName="xmark" />
               </button>
+              {/* Beside the field: below it would change the header's height
+                  for the moment it shows. */}
+              {shownNameError && (
+                <span
+                  id="rename-image-error"
+                  role="status"
+                  className={moduleStyles.inlineFieldError}
+                >
+                  {shownNameError}
+                </span>
+              )}
             </>
           ) : (
             <>
@@ -217,8 +253,10 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
             }
             thumb={isNew ? undefined : thumb}
             sheet={isNew ? undefined : sheet}
-            create={isNew ? {isNameTaken} : undefined}
+            create={isNew ? {isNameTaken, initial: newImageDraft} : undefined}
             lockedImageType={lockedImageType}
+            onPaintManually={isNew ? onPaintNew : undefined}
+            onGenerateStart={onGenerateStart}
             onAccept={async (result, newName) => {
               await onAcceptGenerated(result, newName);
               setView('details');
@@ -287,6 +325,30 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                     )}
                   </dl>
                 )}
+                {alternatives && alternatives.length > 1 && (
+                  <div className={moduleStyles.alternatives}>
+                    <div className={moduleStyles.alternativesLabel}>
+                      Alternatives
+                    </div>
+                    <div className={moduleStyles.alternativesRow}>
+                      {alternatives.map(alt => (
+                        <button
+                          key={alt.id}
+                          type="button"
+                          className={classNames(
+                            moduleStyles.alternativeThumb,
+                            alt.selected && moduleStyles.alternativeSelected
+                          )}
+                          aria-label="Use this image"
+                          aria-pressed={alt.selected}
+                          onClick={() => onSelectAlternative?.(alt.id)}
+                        >
+                          <img src={alt.thumb} alt="" />
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
             <div className={moduleStyles.footer}>
@@ -299,7 +361,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                 onClick={() => setView('generate')}
               >
                 <FontAwesomeV6Icon iconName="sparkles" />
-                {generation ? 'Regenerate with AI' : 'Generate with AI'}
+                Generate with AI
               </button>
               <button
                 type="button"

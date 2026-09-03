@@ -35,8 +35,15 @@ markdown <<MARKDOWN
 
 </div>
 
+---
+
 <div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">
 <p><strong>💡 Teacher tip:</strong> you don't need to memorize POUR to use it well. When something feels off on an AI-generated page, ask which of the four it's failing: can't see it, can't operate it, can't understand it, or it breaks somewhere else. That question alone will get you most of the way to naming the actual issue.</p>
+</div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px;">
+<p>You're about to do the same thing your students do in Curriculum Lesson 4's Accessibility Audit: review a site and identify what's actually blocking someone from using it.</p>
+<a href="[LESSON 4 URL]" style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; padding: 6px 14px; border-radius: 8px; text-decoration: none; margin-top: 6px; font-size: 13px;">View Curriculum Lesson 4</a>
 </div>
 
 <p>Next, you'll put POUR to work: spot a violation on a mock site, then practice the prompt that would actually fix it.</p>

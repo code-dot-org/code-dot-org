@@ -19,7 +19,7 @@
             {
               "type": "radiogroup",
               "name": "unit_name",
-              "defaultValueExpression": "{unit_number}",
+              "defaultValueExpression": "{unit}",
               "startWithNewLine": false,
               "readOnly": true,
               "visible": false,
@@ -67,6 +67,10 @@
                 {
                   "value": "iterating",
                   "text": "Iterating with AI"
+                },
+                {
+                  "value": "api_apps",
+                  "text": "Designing Reliable Apps with AI & APIs"
                 },
                 {
                   "value": "capstone",

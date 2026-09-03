@@ -80,8 +80,14 @@ const ProjectView: FC<ProjectViewProps> = ({
 
   const challengeId = detail?.challenge_id;
   const studentId = detail?.user_id;
+  const viewerRole = detail?.viewer_role;
   useEffect(() => {
     if (challengeId === undefined || studentId === undefined) {
+      return;
+    }
+    // Version navigation is for the work's owner and their teachers only;
+    // a section peer sees just the one submission the gallery linked to.
+    if (viewerRole === 'peer') {
       return;
     }
     let cancelled = false;
@@ -106,7 +112,7 @@ const ProjectView: FC<ProjectViewProps> = ({
     return () => {
       cancelled = true;
     };
-  }, [challengeId, studentId]);
+  }, [challengeId, studentId, viewerRole]);
 
   if (loadFailed) {
     return (
@@ -183,35 +189,44 @@ const ProjectView: FC<ProjectViewProps> = ({
           </MuiButton>
         </div>
         <div className={styles.versionControls}>
-          <MuiIconButton
-            type="button"
-            variant="text"
-            color="secondary"
-            size="extraSmall"
-            disabled={!previousVersion}
-            onClick={() => previousVersion && onOpenProject(previousVersion.id)}
-            aria-label="Previous response"
-          >
-            <FontAwesomeV6Icon iconName="angle-left" />
-          </MuiIconButton>
-          <Typography
-            variant="overline2"
-            component="span"
-            className={styles.versionLabel}
-          >
-            {`Response #${versionIndex >= 0 ? versionIndex + 1 : 1}`}
-          </Typography>
-          <MuiIconButton
-            type="button"
-            variant="text"
-            color="secondary"
-            size="extraSmall"
-            disabled={!nextVersion}
-            onClick={() => nextVersion && onOpenProject(nextVersion.id)}
-            aria-label="Next response"
-          >
-            <FontAwesomeV6Icon iconName="angle-right" />
-          </MuiIconButton>
+          {/* Owners and teachers can page through this student's earlier
+              submissions; peers only ever see the one linked from the
+              gallery, so the switcher is left out for them. */}
+          {(isTeacher || isOwner) && (
+            <>
+              <MuiIconButton
+                type="button"
+                variant="text"
+                color="secondary"
+                size="extraSmall"
+                disabled={!previousVersion}
+                onClick={() =>
+                  previousVersion && onOpenProject(previousVersion.id)
+                }
+                aria-label="Previous response"
+              >
+                <FontAwesomeV6Icon iconName="angle-left" />
+              </MuiIconButton>
+              <Typography
+                variant="overline2"
+                component="span"
+                className={styles.versionLabel}
+              >
+                {`Response #${versionIndex >= 0 ? versionIndex + 1 : 1}`}
+              </Typography>
+              <MuiIconButton
+                type="button"
+                variant="text"
+                color="secondary"
+                size="extraSmall"
+                disabled={!nextVersion}
+                onClick={() => nextVersion && onOpenProject(nextVersion.id)}
+                aria-label="Next response"
+              >
+                <FontAwesomeV6Icon iconName="angle-right" />
+              </MuiIconButton>
+            </>
+          )}
         </div>
         <div className={styles.topBarSide}>
           {isTeacher && galleryIndex >= 0 && galleryResponses && (

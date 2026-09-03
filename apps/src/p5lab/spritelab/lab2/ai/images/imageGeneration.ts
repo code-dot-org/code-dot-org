@@ -18,7 +18,11 @@ import {
   getImageModel,
   imageProviderOptions,
 } from './modelHelpers';
-import {cropToContent, removeBackground} from './removeBackground';
+import {
+  cropToContent,
+  flattenOntoGround,
+  removeBackground,
+} from './removeBackground';
 import {ImageGenerationMetadata, ImageStyle} from './types';
 
 // The logical canvas the prompt asks for: model output size over block size.
@@ -63,11 +67,20 @@ const BLOCK_PROMPT_CLAUSE =
  * recorded on the animation so the editor never has to re-detect.
  */
 async function normalizeIfPixelArt(
-  blob: Blob
+  blob: Blob,
+  {squareGrid = false} = {}
 ): Promise<{blob: Blob; pixelGridSize?: number}> {
   try {
-    const normalized = await normalizePixelArtBlob(blob, ASSUMED_BLOCK);
-    if (!normalized) {
+    // A background must stay square and full-frame (it letterboxes over the
+    // stage otherwise), so its grid is pinned square to the frame instead of
+    // following a detected offset.
+    const normalized = await normalizePixelArtBlob(blob, ASSUMED_BLOCK, {
+      squareGrid,
+    });
+    if (
+      !normalized ||
+      (squareGrid && normalized.logicalWidth !== normalized.logicalHeight)
+    ) {
       return {blob};
     }
     return {
@@ -246,38 +259,49 @@ export async function generateImage(
     ...(options.inputImageDataURI && {editedPrevious: true}),
   };
 
-  // Sprites and blocks get the key-color background removed the same way
-  // (both prompts keep the corner as background); blocks are then cropped to
-  // content so grid-placed copies tile seamlessly. Pixel style gets
-  // grid-normalized; a smooth background passes through as-is.
-  if (imageType !== 'background' || style === 'pixel') {
-    let blob = rawImageToBlob(raw);
-    if (imageType === 'sprite' || imageType === 'block') {
-      blob = await removeBackground(blob, {soft: style === 'smooth'});
-    }
-    if (imageType === 'block') {
-      blob = await cropToContent(blob);
-    }
-    let pixelGridSize: number | undefined;
-    if (style === 'pixel') {
-      const normalized = await normalizeIfPixelArt(blob);
-      blob = normalized.blob;
-      pixelGridSize = normalized.pixelGridSize;
-    }
+  // A smooth background delivered as JPEG passes through as-is — JPEG has
+  // no alpha to flatten, and re-encoding a photographic image to PNG would
+  // balloon it. Every other output goes through the canvas pipeline below.
+  if (
+    imageType === 'background' &&
+    style !== 'pixel' &&
+    raw.mediaType === 'image/jpeg'
+  ) {
     return {
-      filename: `generated-${createUuid()}.png`,
-      uint8Array: new Uint8Array(await blob.arrayBuffer()),
-      mediaType: 'image/png',
-      pixelGridSize,
+      filename: `generated-${createUuid()}.jpg`,
+      uint8Array: raw.uint8Array,
+      mediaType: raw.mediaType,
       generation,
     };
   }
 
-  const ext = raw.mediaType === 'image/png' ? 'png' : 'jpg';
+  // Sprites and blocks get the key-color background removed the same way
+  // (both prompts keep the corner as background); blocks are then cropped to
+  // content so grid-placed copies tile seamlessly. Backgrounds are flattened
+  // opaque; pixel style gets grid-normalized.
+  let blob = rawImageToBlob(raw);
+  if (imageType === 'sprite' || imageType === 'block') {
+    blob = await removeBackground(blob, {soft: style === 'smooth'});
+  }
+  if (imageType === 'block') {
+    blob = await cropToContent(blob);
+  }
+  if (imageType === 'background') {
+    blob = await flattenOntoGround(blob);
+  }
+  let pixelGridSize: number | undefined;
+  if (style === 'pixel') {
+    const normalized = await normalizeIfPixelArt(blob, {
+      squareGrid: imageType === 'background',
+    });
+    blob = normalized.blob;
+    pixelGridSize = normalized.pixelGridSize;
+  }
   return {
-    filename: `generated-${createUuid()}.${ext}`,
-    uint8Array: raw.uint8Array,
-    mediaType: raw.mediaType,
+    filename: `generated-${createUuid()}.png`,
+    uint8Array: new Uint8Array(await blob.arrayBuffer()),
+    mediaType: 'image/png',
+    pixelGridSize,
     generation,
   };
 }
