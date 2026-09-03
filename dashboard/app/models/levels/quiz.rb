@@ -70,6 +70,21 @@ class Quiz < Level
     true
   end
 
+  # Placements are quiz-owned join rows; questions stay shared bank content.
+  def clone_with_suffix(new_suffix, editor_experiment: nil, allow_existing: true)
+    suffix = new_suffix[0] == '_' ? new_suffix : "_#{new_suffix}"
+    max_index = 70 - suffix.length - 1
+    new_name = "#{base_name[0..max_index]}#{suffix}"
+    existing = Level.find_by_name(new_name)
+    return existing if existing && allow_existing
+
+    level = super(suffix, editor_experiment: editor_experiment, allow_existing: allow_existing)
+    placements.each do |placement|
+      level.placements.create!(quiz_question: placement.quiz_question, page: placement.page, position: placement.position)
+    end
+    level
+  end
+
   # Adds quiz_questions into levelProperties so the frontend can render and
   # answer them. Correct-answer and explanation fields (e.g. correct_choice_id)
   # are deliberately excluded so grading stays server-side.
