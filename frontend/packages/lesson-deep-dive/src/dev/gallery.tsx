@@ -11,6 +11,12 @@ import './nodeShims';
 
 import {StrictMode} from 'react';
 
+import {
+  ApiClientProvider,
+  createApiClient,
+  createKyTransport,
+} from '@code-dot-org/core/api';
+
 import ChallengeGallery from '@cdo/apps/aiTutor/views/gallery/ChallengeGallery';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
@@ -64,11 +70,24 @@ async function boot(): Promise<void> {
     tutorGalleryData = TUTOR_GALLERY_DATA;
   }
 
+  // Same-origin, root-relative requests, same as the Studio entry
+  // (apps/src/sites/studio/pages/lessons/tutor_gallery.js): the gallery's
+  // own fetches ride the Vite proxy set up in vite.config.ts.
+  const apiClient = createApiClient(
+    createKyTransport({
+      baseUrl: window.location.origin,
+      credentials: 'same-origin',
+      kyOptions: {timeout: false},
+    }),
+  );
+
   createReactRoot(
     <StrictMode>
-      <DevPageChrome>
-        <ChallengeGallery tutorGalleryData={tutorGalleryData} />
-      </DevPageChrome>
+      <ApiClientProvider client={apiClient}>
+        <DevPageChrome>
+          <ChallengeGallery tutorGalleryData={tutorGalleryData} />
+        </DevPageChrome>
+      </ApiClientProvider>
     </StrictMode>,
     document.getElementById('tutor-gallery-container')!,
   );

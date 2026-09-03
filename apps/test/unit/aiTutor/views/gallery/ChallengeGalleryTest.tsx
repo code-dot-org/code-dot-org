@@ -1,4 +1,10 @@
 import {
+  ApiClientProvider,
+  createApiClient,
+  type RequestOptions,
+  type Transport,
+} from '@code-dot-org/core/api';
+import {
   ChallengeResponse,
   TutorGalleryData,
 } from '@code-dot-org/lesson-deep-dive';
@@ -7,14 +13,48 @@ import '@testing-library/jest-dom';
 import React from 'react';
 
 import ChallengeGallery from '@cdo/apps/aiTutor/views/gallery/ChallengeGallery';
-import HttpClient from '@cdo/apps/util/HttpClient';
 
-jest.mock('@cdo/apps/util/HttpClient', () => ({
-  __esModule: true,
-  default: {fetchJson: jest.fn()},
-}));
+// The real module eagerly constructs a ky-backed DashboardApiClient singleton
+// at import time, which only ever ran under a bundler (webpack/Vite), never
+// Jest's CJS runtime; ky ships ESM-only and fails to load there. Standing in
+// a lightweight context-only mock avoids exercising that singleton entirely.
+jest.mock('@code-dot-org/core/api', () => {
+  const {createContext, createElement, useContext} = require('react');
+  const ApiClientContext = createContext(null);
+  return {
+    __esModule: true,
+    ApiClientProvider: ({
+      client,
+      children,
+    }: {
+      client: unknown;
+      children: unknown;
+    }) => createElement(ApiClientContext.Provider, {value: client}, children),
+    useApiClient: () => {
+      const client = useContext(ApiClientContext);
+      if (!client) {
+        throw new Error('useApiClient must be used within <ApiClientProvider>');
+      }
+      return client;
+    },
+    createApiClient: (transport: unknown) => ({transport}),
+  };
+});
 
-const fetchJson = HttpClient.fetchJson as jest.Mock;
+const request = jest.fn();
+const transport: Transport = {
+  request,
+  requestBlob: jest.fn(),
+  requestWithMeta: jest.fn(),
+};
+const client = createApiClient(transport);
+
+const renderGallery = (props: React.ComponentProps<typeof ChallengeGallery>) =>
+  render(
+    <ApiClientProvider client={client}>
+      <ChallengeGallery {...props} />
+    </ApiClientProvider>
+  );
 
 const galleryData: TutorGalleryData = {
   currentUnitId: 100,
@@ -70,20 +110,20 @@ const whiteboardResponse: ChallengeResponse = {
   ],
 };
 
+// Routes the mocked transport by URL, the same way the mocked HttpClient did:
+// the unit_counts endpoint returns counts, everything else returns responses.
 const stubFetches = (
   responses: ChallengeResponse[],
   counts: Record<string, number> = {}
 ) => {
-  fetchJson.mockImplementation((url: string) =>
-    url.includes('unit_counts')
-      ? Promise.resolve({value: counts})
-      : Promise.resolve({value: responses})
+  request.mockImplementation(({url}: RequestOptions) =>
+    Promise.resolve(url.includes('unit_counts') ? counts : responses)
   );
 };
 
 describe('ChallengeGallery', () => {
   beforeEach(() => {
-    fetchJson.mockReset();
+    request.mockReset();
     // Project navigation pushes ?project=<id>; start each test off a
     // clean URL.
     window.history.replaceState(null, '', '/');
@@ -92,16 +132,15 @@ describe('ChallengeGallery', () => {
   it('fetches the first section and current unit, and groups projects', async () => {
     stubFetches([videoResponse, whiteboardResponse], {'100': 2});
 
-    render(<ChallengeGallery tutorGalleryData={galleryData} />);
+    renderGallery({tutorGalleryData: galleryData});
 
     await waitFor(() =>
       expect(screen.getByText('Ada Lovelace')).toBeInTheDocument()
     );
-    expect(fetchJson).toHaveBeenCalledWith(
-      '/challenge_responses?unit_id=100&section_id=5',
-      {},
-      expect.any(Function)
-    );
+    expect(request).toHaveBeenCalledWith({
+      method: 'GET',
+      url: '/challenge_responses?unit_id=100&section_id=5',
+    });
 
     // Grouped into the two design sections.
     expect(screen.getByText('Video Projects')).toBeInTheDocument();
@@ -123,7 +162,7 @@ describe('ChallengeGallery', () => {
   it('shows unit counts in the sidebar and refetches when a unit is picked', async () => {
     stubFetches([videoResponse], {'100': 4, '200': 2});
 
-    render(<ChallengeGallery tutorGalleryData={galleryData} />);
+    renderGallery({tutorGalleryData: galleryData});
 
     await waitFor(() => expect(screen.getByText('4')).toBeInTheDocument());
     expect(screen.getByText('2')).toBeInTheDocument();
@@ -135,18 +174,17 @@ describe('ChallengeGallery', () => {
     );
 
     await waitFor(() =>
-      expect(fetchJson).toHaveBeenCalledWith(
-        '/challenge_responses?unit_id=200&section_id=5',
-        {},
-        expect.any(Function)
-      )
+      expect(request).toHaveBeenCalledWith({
+        method: 'GET',
+        url: '/challenge_responses?unit_id=200&section_id=5',
+      })
     );
   });
 
   it('refetches with sort=oldest when the sort dropdown changes', async () => {
     stubFetches([videoResponse]);
 
-    render(<ChallengeGallery tutorGalleryData={galleryData} />);
+    renderGallery({tutorGalleryData: galleryData});
     await waitFor(() =>
       expect(screen.getByText('Ada Lovelace')).toBeInTheDocument()
     );
@@ -156,18 +194,17 @@ describe('ChallengeGallery', () => {
     });
 
     await waitFor(() =>
-      expect(fetchJson).toHaveBeenCalledWith(
-        '/challenge_responses?unit_id=100&section_id=5&sort=oldest',
-        {},
-        expect.any(Function)
-      )
+      expect(request).toHaveBeenCalledWith({
+        method: 'GET',
+        url: '/challenge_responses?unit_id=100&section_id=5&sort=oldest',
+      })
     );
   });
 
   it('switches to the own-work view via the My projects option', async () => {
     stubFetches([videoResponse]);
 
-    render(<ChallengeGallery tutorGalleryData={galleryData} />);
+    renderGallery({tutorGalleryData: galleryData});
     await waitFor(() =>
       expect(screen.getByText('Ada Lovelace')).toBeInTheDocument()
     );
@@ -177,11 +214,10 @@ describe('ChallengeGallery', () => {
     });
 
     await waitFor(() =>
-      expect(fetchJson).toHaveBeenCalledWith(
-        '/challenge_responses?unit_id=100',
-        {},
-        expect.any(Function)
-      )
+      expect(request).toHaveBeenCalledWith({
+        method: 'GET',
+        url: '/challenge_responses?unit_id=100',
+      })
     );
     expect(screen.getByText('My Projects')).toBeInTheDocument();
   });
@@ -189,16 +225,13 @@ describe('ChallengeGallery', () => {
   it('fetches without a section when the user has none', async () => {
     stubFetches([]);
 
-    render(
-      <ChallengeGallery tutorGalleryData={{...galleryData, sections: []}} />
-    );
+    renderGallery({tutorGalleryData: {...galleryData, sections: []}});
 
     await waitFor(() =>
-      expect(fetchJson).toHaveBeenCalledWith(
-        '/challenge_responses?unit_id=100',
-        {},
-        expect.any(Function)
-      )
+      expect(request).toHaveBeenCalledWith({
+        method: 'GET',
+        url: '/challenge_responses?unit_id=100',
+      })
     );
     expect(screen.getByText('My Projects')).toBeInTheDocument();
   });
@@ -206,7 +239,7 @@ describe('ChallengeGallery', () => {
   it('shows an empty state when there are no submissions', async () => {
     stubFetches([]);
 
-    render(<ChallengeGallery tutorGalleryData={galleryData} />);
+    renderGallery({tutorGalleryData: galleryData});
 
     await waitFor(() =>
       expect(
@@ -216,9 +249,9 @@ describe('ChallengeGallery', () => {
   });
 
   it('shows an error message when the fetch fails', async () => {
-    fetchJson.mockRejectedValue(new Error('network'));
+    request.mockRejectedValue(new Error('network'));
 
-    render(<ChallengeGallery tutorGalleryData={galleryData} />);
+    renderGallery({tutorGalleryData: galleryData});
 
     await waitFor(() =>
       expect(
@@ -233,17 +266,17 @@ describe('ChallengeGallery', () => {
       viewer_role: 'peer',
       question: 'Draw a network.',
     };
-    fetchJson.mockImplementation((url: string) => {
+    request.mockImplementation(({url}: RequestOptions) => {
       if (url.startsWith('/challenge_responses/')) {
-        return Promise.resolve({value: detail});
+        return Promise.resolve(detail);
       }
       if (url.includes('unit_counts')) {
-        return Promise.resolve({value: {}});
+        return Promise.resolve({});
       }
-      return Promise.resolve({value: [videoResponse, whiteboardResponse]});
+      return Promise.resolve([videoResponse, whiteboardResponse]);
     });
 
-    render(<ChallengeGallery tutorGalleryData={galleryData} />);
+    renderGallery({tutorGalleryData: galleryData});
     await waitFor(() =>
       expect(screen.getByText('Grace Hopper')).toBeInTheDocument()
     );
@@ -256,11 +289,10 @@ describe('ChallengeGallery', () => {
         screen.getByText('Project Prompt: Draw a network.')
       ).toBeInTheDocument()
     );
-    expect(fetchJson).toHaveBeenCalledWith(
-      '/challenge_responses/8',
-      {},
-      expect.any(Function)
-    );
+    expect(request).toHaveBeenCalledWith({
+      method: 'GET',
+      url: '/challenge_responses/8',
+    });
 
     fireEvent.click(screen.getByRole('button', {name: /project gallery/}));
 

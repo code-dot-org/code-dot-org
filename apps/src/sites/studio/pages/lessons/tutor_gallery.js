@@ -1,3 +1,8 @@
+import {
+  ApiClientProvider,
+  createApiClient,
+  createKyTransport,
+} from '@code-dot-org/core/api';
 import React from 'react';
 
 import ChallengeGallery from '@cdo/apps/aiTutor/views/gallery/ChallengeGallery';
@@ -16,8 +21,22 @@ $(document).ready(() => {
     return;
   }
   const tutorGalleryData = getScriptData('tutorGalleryData');
+  // The gallery's requests are root-relative to the page's own origin, so
+  // they ride the same cookie and the same dev proxies as the page. The
+  // singleton DashboardApiClient is not used here: its base URL is absolute,
+  // which would bypass the webpack dev proxy. No timeout: the HttpClient
+  // calls this replaces had none, and ky's default is 10 seconds.
+  const apiClient = createApiClient(
+    createKyTransport({
+      baseUrl: window.location.origin,
+      credentials: 'same-origin',
+      kyOptions: {timeout: false},
+    })
+  );
   createReactRoot(
-    <ChallengeGallery tutorGalleryData={tutorGalleryData} />,
+    <ApiClientProvider client={apiClient}>
+      <ChallengeGallery tutorGalleryData={tutorGalleryData} />
+    </ApiClientProvider>,
     document.getElementById('tutor-gallery-container')
   );
 });

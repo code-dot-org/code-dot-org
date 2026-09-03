@@ -1,13 +1,12 @@
+import {useApiClient} from '@code-dot-org/core/api';
 import {
   ChallengeResponse,
-  challengeResponseListValidator,
   GallerySort,
+  getUnitCounts,
+  listChallengeResponses,
   TutorGalleryData,
-  unitCountsValidator,
 } from '@code-dot-org/lesson-deep-dive';
 import React, {FC, useEffect, useState} from 'react';
-
-import HttpClient from '@cdo/apps/util/HttpClient';
 
 import GallerySidebar from './GallerySidebar';
 import ProjectCard, {ProjectVariant} from './ProjectCard';
@@ -37,6 +36,7 @@ const projectIdFromLocation = () => {
 // place.
 const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
   const {units, sections, currentUnitId} = tutorGalleryData;
+  const api = useApiClient();
 
   const [sectionId, setSectionId] = useState<number | null>(
     sections[0]?.id ?? null
@@ -85,12 +85,8 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
     if (sort === 'oldest') {
       params.append('sort', 'oldest');
     }
-    HttpClient.fetchJson<ChallengeResponse[]>(
-      `/challenge_responses?${params.toString()}`,
-      {},
-      challengeResponseListValidator
-    )
-      .then(({value}) => {
+    listChallengeResponses(api.transport, params)
+      .then(value => {
         if (!cancelled) {
           setResponses(value || []);
         }
@@ -103,7 +99,7 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
     return () => {
       cancelled = true;
     };
-  }, [sectionId, unitId, sort]);
+  }, [sectionId, unitId, sort, api]);
 
   useEffect(() => {
     let cancelled = false;
@@ -111,12 +107,8 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
     if (sectionId !== null) {
       params.append('section_id', sectionId.toString());
     }
-    HttpClient.fetchJson<Record<string, number>>(
-      `/challenge_responses/unit_counts?${params.toString()}`,
-      {},
-      unitCountsValidator
-    )
-      .then(({value}) => {
+    getUnitCounts(api.transport, params)
+      .then(value => {
         if (!cancelled) {
           setUnitCounts(value || {});
         }
@@ -127,7 +119,7 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
     return () => {
       cancelled = true;
     };
-  }, [sectionId]);
+  }, [sectionId, api]);
 
   const unitPositionFor = (responseUnitId: number | null) =>
     units.find(unit => unit.id === responseUnitId)?.position ?? null;

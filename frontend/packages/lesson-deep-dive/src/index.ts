@@ -41,3 +41,10 @@ export type {
   TutorGalleryData,
   ViewerRole,
 } from './gallery/types';
+
+export {
+  getChallengeResponse,
+  getTutorGalleryData,
+  getUnitCounts,
+  listChallengeResponses,
+} from './gallery/api';

@@ -1,4 +1,10 @@
 import {
+  ApiClientProvider,
+  createApiClient,
+  type RequestOptions,
+  type Transport,
+} from '@code-dot-org/core/api';
+import {
   ChallengeResponse,
   ChallengeResponseDetail,
   GalleryUnit,
@@ -8,14 +14,41 @@ import '@testing-library/jest-dom';
 import React from 'react';
 
 import ProjectView from '@cdo/apps/aiTutor/views/gallery/ProjectView';
-import HttpClient from '@cdo/apps/util/HttpClient';
 
-jest.mock('@cdo/apps/util/HttpClient', () => ({
-  __esModule: true,
-  default: {fetchJson: jest.fn()},
-}));
+// The real module eagerly constructs a ky-backed DashboardApiClient singleton
+// at import time, which only ever ran under a bundler (webpack/Vite), never
+// Jest's CJS runtime; ky ships ESM-only and fails to load there. Standing in
+// a lightweight context-only mock avoids exercising that singleton entirely.
+jest.mock('@code-dot-org/core/api', () => {
+  const {createContext, createElement, useContext} = require('react');
+  const ApiClientContext = createContext(null);
+  return {
+    __esModule: true,
+    ApiClientProvider: ({
+      client,
+      children,
+    }: {
+      client: unknown;
+      children: unknown;
+    }) => createElement(ApiClientContext.Provider, {value: client}, children),
+    useApiClient: () => {
+      const client = useContext(ApiClientContext);
+      if (!client) {
+        throw new Error('useApiClient must be used within <ApiClientProvider>');
+      }
+      return client;
+    },
+    createApiClient: (transport: unknown) => ({transport}),
+  };
+});
 
-const fetchJson = HttpClient.fetchJson as jest.Mock;
+const request = jest.fn();
+const transport: Transport = {
+  request,
+  requestBlob: jest.fn(),
+  requestWithMeta: jest.fn(),
+};
+const client = createApiClient(transport);
 
 const units: GalleryUnit[] = [
   {id: 100, name: 'Problem Solving with AI', position: 1, link: '/s/ai-1'},
@@ -54,16 +87,16 @@ const versionOf = (id: number, created_at: string): ChallengeResponse => ({
   created_at,
 });
 
-// Routes the mocked HttpClient: /challenge_responses/:id returns the given
+// Routes the mocked transport: /challenge_responses/:id returns the given
 // detail, the list endpoint returns the given versions.
 const stubFetches = (
   detailResponse: ChallengeResponseDetail,
   versions: ChallengeResponse[] = [detailResponse]
 ) => {
-  fetchJson.mockImplementation((url: string) =>
+  request.mockImplementation(({url}: RequestOptions) =>
     url.startsWith('/challenge_responses?')
-      ? Promise.resolve({value: versions})
-      : Promise.resolve({value: detailResponse})
+      ? Promise.resolve(versions)
+      : Promise.resolve(detailResponse)
   );
 };
 
@@ -71,19 +104,21 @@ const renderView = (
   props: Partial<React.ComponentProps<typeof ProjectView>> = {}
 ) =>
   render(
-    <ProjectView
-      responseId={8}
-      units={units}
-      galleryResponses={null}
-      onBack={jest.fn()}
-      onOpenProject={jest.fn()}
-      {...props}
-    />
+    <ApiClientProvider client={client}>
+      <ProjectView
+        responseId={8}
+        units={units}
+        galleryResponses={null}
+        onBack={jest.fn()}
+        onOpenProject={jest.fn()}
+        {...props}
+      />
+    </ApiClientProvider>
   );
 
 describe('ProjectView', () => {
   beforeEach(() => {
-    fetchJson.mockReset();
+    request.mockReset();
   });
 
   it('fetches the project and renders its media, prompt, and details', async () => {
@@ -94,11 +129,10 @@ describe('ProjectView', () => {
     await waitFor(() =>
       expect(screen.getByText('Grace Hopper')).toBeInTheDocument()
     );
-    expect(fetchJson).toHaveBeenCalledWith(
-      '/challenge_responses/8',
-      {},
-      expect.any(Function)
-    );
+    expect(request).toHaveBeenCalledWith({
+      method: 'GET',
+      url: '/challenge_responses/8',
+    });
 
     // The stage and details card render from the fetched detail; their
     // contents are covered by ProjectStageTest and ProjectDetailsCardTest.
@@ -127,11 +161,10 @@ describe('ProjectView', () => {
     await waitFor(() =>
       expect(screen.getByText('Response #2')).toBeInTheDocument()
     );
-    expect(fetchJson).toHaveBeenCalledWith(
-      '/challenge_responses?challenge_id=1&user_id=99&sort=oldest',
-      {},
-      expect.any(Function)
-    );
+    expect(request).toHaveBeenCalledWith({
+      method: 'GET',
+      url: '/challenge_responses?challenge_id=1&user_id=99&sort=oldest',
+    });
 
     expect(screen.getByRole('button', {name: 'Next response'})).toBeDisabled();
     fireEvent.click(screen.getByRole('button', {name: 'Previous response'}));
@@ -194,7 +227,7 @@ describe('ProjectView', () => {
   });
 
   it('shows an error message when the fetch fails', async () => {
-    fetchJson.mockRejectedValue(new Error('network'));
+    request.mockRejectedValue(new Error('network'));
 
     renderView();
 
