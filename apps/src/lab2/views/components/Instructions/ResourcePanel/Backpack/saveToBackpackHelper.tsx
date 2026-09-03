@@ -52,12 +52,7 @@ export const handleSaveDuplicateFile = async (
   createNewFile: (fileName: string, contents: string, url?: string) => void,
   findIdForFileName: (fileName: string) => string | undefined,
   selectedFileName: string,
-  newFileName?: string,
-  onImageFlagged?: (
-    file: File,
-    fileType: string,
-    uploadFunction: () => Promise<void>
-  ) => void
+  newFileName?: string
 ) => {
   // The file name is a duplicate, but not a support file.
   // Give user the choice to replace or import with the new name.
@@ -87,7 +82,6 @@ export const handleSaveDuplicateFile = async (
       findIdForFileName,
       selectedFileName,
       newFileName,
-      onImageFlagged,
     });
   } else if (results.type === 'neutral') {
     // Import as new file
@@ -100,7 +94,6 @@ export const handleSaveDuplicateFile = async (
       createNewFile,
       findIdForFileName,
       selectedFileName,
-      onImageFlagged,
     });
   }
 };
@@ -115,11 +108,6 @@ export interface FetchAndSaveFileParams {
   findIdForFileName: (fileName: string) => string | undefined;
   selectedFileName: string;
   newFileName?: string;
-  onImageFlagged?: (
-    file: File,
-    fileType: string,
-    uploadFunction: () => Promise<void>
-  ) => void;
 }
 
 export const fetchAndSaveFile = async ({
@@ -132,7 +120,6 @@ export const fetchAndSaveFile = async ({
   findIdForFileName,
   selectedFileName,
   newFileName,
-  onImageFlagged,
 }: FetchAndSaveFileParams) => {
   const errorMessage = `An error occurred while adding ${
     newFileName || selectedFileName
