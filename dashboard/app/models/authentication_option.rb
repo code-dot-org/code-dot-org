@@ -117,6 +117,11 @@ class AuthenticationOption < ApplicationRecord
   # Facts about the ClassLink authentication_id formats. A v1 id is
   # ClassLink's internal UserId; a v2 id is "<TenantId>|<SourcedId>", built by
   # Services::Classlink::AuthIdGenerator.
+  #
+  # Both formats are permanent, and neither population is a subset of a
+  # migration in progress. A v2 id needs ClassLink's SourcedId, which is empty
+  # for districts that have not enabled OneRoster, so those districts keep
+  # signing up and signing in on v1 indefinitely.
   module Classlink
     SEPARATOR = '|'.freeze
 
@@ -133,9 +138,11 @@ class AuthenticationOption < ApplicationRecord
     end
 
     # The version marker matching a ClassLink authentication_id: 'v2' for the
-    # "<TenantId>|<SourcedId>" format, nil for a legacy UserId. Creation sites
-    # that copy an id they didn't build (signup migration, silent takeover)
-    # use this so the version column always describes the id's actual format.
+    # "<TenantId>|<SourcedId>" format, nil for a v1 UserId. Creation sites
+    # that copy an id they didn't build (signup, connect, silent takeover) use
+    # this so the version column always describes the id's actual format —
+    # including for a new signup that legitimately lands on v1 because its
+    # district sent no SourcedId.
     def self.version_for(authentication_id)
       authentication_id.to_s.include?(SEPARATOR) ? VERSION[:v2] : nil
     end
@@ -156,9 +163,9 @@ class AuthenticationOption < ApplicationRecord
     candidates = where(credential_type: credential_type, authentication_id: authentication_id)
     exact = candidates.detect {|option| option.authentication_id == authentication_id.to_s}
     if exact.nil? && candidates.any?
-      Observability::Errors.capture_message(
+      Observability::Errors.report(
         'Authentication id matched by collation but not byte-exactly',
-        extra: {credential_type: credential_type}
+        context: {credential_type: credential_type}
       )
     end
     exact

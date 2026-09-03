@@ -44,7 +44,7 @@ class DelayedJobDestroyDeadlockRetryTest < ActionDispatch::IntegrationTest
   end
 
   it 'retries deletion after each of first 2 deadlocks' do
-    Observability::Errors.expects(:capture_exception).with(deletion_deadlock_error).never
+    Observability::Errors.expects(:report).with(deletion_deadlock_error).never
 
     _ {Delayed::Worker.new.run(delayed_job)}.must_change -> {TestJob.perform_count}, from: 0, to: 1
 
@@ -55,7 +55,7 @@ class DelayedJobDestroyDeadlockRetryTest < ActionDispatch::IntegrationTest
     let(:deletion_deadlock_count) {3}
 
     it 'captures exception' do
-      Observability::Errors.expects(:capture_exception).with(deletion_deadlock_error).once
+      Observability::Errors.expects(:report).with(deletion_deadlock_error).once
 
       _ {Delayed::Worker.new.run(delayed_job)}.must_change -> {TestJob.perform_count}, from: 0, to: 1
 

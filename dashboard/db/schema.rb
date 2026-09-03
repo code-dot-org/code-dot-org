@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_08_24_120000) do
+ActiveRecord::Schema[7.0].define(version: 2026_09_02_042144) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -376,6 +376,17 @@ ActiveRecord::Schema[7.0].define(version: 2026_08_24_120000) do
     t.index ["challenge_response_id"], name: "index_challenge_response_assets_on_challenge_response_id"
   end
 
+  create_table "challenge_response_reactions", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "challenge_response_id", null: false
+    t.integer "user_id", null: false
+    t.string "emoji", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["challenge_response_id", "user_id", "emoji"], name: "index_challenge_response_reactions_on_response_user_emoji", unique: true
+    t.index ["challenge_response_id"], name: "index_challenge_response_reactions_on_challenge_response_id"
+    t.index ["user_id"], name: "index_challenge_response_reactions_on_user_id"
+  end
+
   create_table "challenge_responses", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.bigint "challenge_id", null: false
     t.integer "user_id", null: false
@@ -572,7 +583,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_08_24_120000) do
     t.index ["key"], name: "index_course_offerings_on_key", unique: true
   end
 
-  create_table "course_offerings_pd_workshops", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "course_offerings_pd_workshops", primary_key: ["pd_workshop_id", "course_offering_id"], charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.bigint "pd_workshop_id", null: false
     t.bigint "course_offering_id", null: false
     t.datetime "created_at", null: false
@@ -2115,15 +2126,15 @@ ActiveRecord::Schema[7.0].define(version: 2026_08_24_120000) do
   create_table "quiz_questions", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "type", null: false
     t.string "key", limit: 36, null: false
-    t.bigint "parent_id"
+    t.bigint "fork_parent_id"
     t.string "name", null: false
     t.json "content", null: false
     t.text "explanation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["created_at"], name: "index_quiz_questions_on_created_at"
     t.index ["key"], name: "index_quiz_questions_on_key"
     t.index ["name"], name: "index_quiz_questions_on_name", type: :fulltext
-    t.index ["parent_id"], name: "index_quiz_questions_on_parent_id"
   end
 
   create_table "reference_guides", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2491,6 +2502,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_08_24_120000) do
     t.integer "user_id", null: false
     t.datetime "sign_in_at", precision: nil, null: false
     t.integer "sign_in_count", null: false
+    t.string "anon_user_id", limit: 36
     t.index ["sign_in_at"], name: "index_sign_ins_on_sign_in_at"
     t.index ["user_id"], name: "index_sign_ins_on_user_id"
   end
@@ -2917,6 +2929,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_08_24_120000) do
 
   create_table "user_project_storage_ids", id: :integer, charset: "utf8mb3", force: :cascade do |t|
     t.integer "user_id"
+    t.string "anon_user_id", limit: 36
     t.index ["user_id"], name: "user_id", unique: true
     t.index ["user_id"], name: "user_storage_ids_user_id_index"
   end
@@ -3045,6 +3058,8 @@ ActiveRecord::Schema[7.0].define(version: 2026_08_24_120000) do
   add_foreign_key "census_submission_form_maps", "census_submissions"
   add_foreign_key "census_summaries", "schools"
   add_foreign_key "challenge_response_assets", "challenge_responses"
+  add_foreign_key "challenge_response_reactions", "challenge_responses"
+  add_foreign_key "challenge_response_reactions", "users"
   add_foreign_key "challenge_responses", "challenges"
   add_foreign_key "challenge_responses", "users"
   add_foreign_key "challenges", "stages", column: "lesson_id"
@@ -3094,7 +3109,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_08_24_120000) do
   add_foreign_key "quiz_question_responses", "quiz_questions"
   add_foreign_key "quiz_question_standards", "quiz_questions"
   add_foreign_key "quiz_question_standards", "standards"
-  add_foreign_key "quiz_questions", "quiz_questions", column: "parent_id"
   add_foreign_key "rubric_ai_evaluations", "rubrics"
   add_foreign_key "rubric_ai_evaluations", "users"
   add_foreign_key "rubric_ai_evaluations", "users", column: "requester_id"

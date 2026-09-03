@@ -104,14 +104,14 @@ export const openSaveToBackpackPrompt = async ({
       );
 
       if (file.url) {
-        backpackApi.saveCodebridgeFileFromUrl(
+        backpackApi.saveFileFromUrl(
           selectedFileName,
           file.url,
           errorCallback,
           successCallback
         );
       } else {
-        backpackApi.saveCodebridgeFile(
+        backpackApi.saveFile(
           selectedFileName,
           file.contents,
           errorCallback,

@@ -1,0 +1,9 @@
+name 'ai-history-lesson1-level2_year1-2026'
+display_name 'Compare Chatbots'
+description 'Choose a level with your partner. Compare how ELIZA and AI Tutor respond to the same prompts.'
+
+sublevels
+level 'ai-history-lesson1-level2a_year1-2026'
+level 'ai-history-lesson1-level2b_year1-2026'
+
+uses_lab2
