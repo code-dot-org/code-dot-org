@@ -1,8 +1,5 @@
-import {
-  ChallengeResponse,
-  ChallengeResponseAsset,
-  Reaction,
-} from '@code-dot-org/lesson-deep-dive';
+import {ChallengeResponse, ChallengeResponseAsset} from '../types';
+import {Reaction} from './types';
 import classNames from 'classnames';
 import React, {FC} from 'react';
 

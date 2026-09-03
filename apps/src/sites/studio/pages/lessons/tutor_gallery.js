@@ -3,9 +3,9 @@ import {
   createApiClient,
   createKyTransport,
 } from '@code-dot-org/core/api';
+import {ChallengeGallery} from '@code-dot-org/lesson-deep-dive';
 import React from 'react';
 
-import ChallengeGallery from '@cdo/apps/aiTutor/views/gallery/ChallengeGallery';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 import getScriptData from '@cdo/apps/util/getScriptData';

@@ -8,12 +8,11 @@ import {
   ChallengeResponse,
   ChallengeResponseDetail,
   GalleryUnit,
+  ProjectView,
 } from '@code-dot-org/lesson-deep-dive';
 import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
-
-import ProjectView from '@cdo/apps/aiTutor/views/gallery/ProjectView';
 
 // The real module eagerly constructs a ky-backed DashboardApiClient singleton
 // at import time, which only ever ran under a bundler (webpack/Vite), never

@@ -1,9 +1,15 @@
-import {ChallengeResponseDetail} from '@code-dot-org/lesson-deep-dive';
+import {
+  AssessmentPanel,
+  ChallengeResponseDetail,
+} from '@code-dot-org/lesson-deep-dive';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
-import AssessmentPanel from '@cdo/apps/aiTutor/views/gallery/AssessmentPanel';
+// The package barrel is one chunk, so importing this component also loads
+// ChallengeGallery's `@code-dot-org/core/api` import, which Jest cannot
+// parse (ky is ESM-only). Nothing here uses it; an empty module suffices.
+jest.mock('@code-dot-org/core/api', () => ({__esModule: true}));
 
 const baseDetail: ChallengeResponseDetail = {
   id: 8,

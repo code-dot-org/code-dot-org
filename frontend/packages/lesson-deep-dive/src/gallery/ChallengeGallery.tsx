@@ -1,12 +1,8 @@
 import {useApiClient} from '@code-dot-org/core/api';
-import {
-  ChallengeResponse,
-  GallerySort,
-  getUnitCounts,
-  listChallengeResponses,
-  TutorGalleryData,
-} from '@code-dot-org/lesson-deep-dive';
-import React, {FC, useEffect, useState} from 'react';
+import {ChallengeResponse} from '../types';
+import {GallerySort, TutorGalleryData} from './types';
+import {getUnitCounts, listChallengeResponses} from './api';
+import {FC, useEffect, useState} from 'react';
 
 import GallerySidebar from './GallerySidebar';
 import ProjectCard, {ProjectVariant} from './ProjectCard';

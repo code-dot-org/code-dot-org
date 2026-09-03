@@ -1,18 +1,14 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {useApiClient} from '@code-dot-org/core/api';
-import {
-  ChallengeResponse,
-  ChallengeResponseDetail,
-  GalleryUnit,
-  getChallengeResponse,
-  listChallengeResponses,
-} from '@code-dot-org/lesson-deep-dive';
+import {ChallengeResponse} from '../types';
+import {ChallengeResponseDetail, GalleryUnit} from './types';
+import {getChallengeResponse, listChallengeResponses} from './api';
 import {
   Typography,
   Button as MuiButton,
   IconButton as MuiIconButton,
 } from '@mui/material';
-import React, {FC, useEffect, useState} from 'react';
+import {FC, useEffect, useState} from 'react';
 
 import AssessmentPanel from './AssessmentPanel';
 import ProjectDetailsCard from './ProjectDetailsCard';

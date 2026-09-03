@@ -1,9 +1,7 @@
-import {
-  assetWithUrl,
-  ChallengeResponseDetail,
-} from '@code-dot-org/lesson-deep-dive';
+import {assetWithUrl} from './assetUtils';
+import {ChallengeResponseDetail} from './types';
 import {Typography} from '@mui/material';
-import React, {FC} from 'react';
+import {FC} from 'react';
 
 import styles from './project-view.module.scss';
 
