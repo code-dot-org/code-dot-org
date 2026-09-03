@@ -33,6 +33,7 @@ import {
 } from '../imageReferences';
 
 import DeleteImageButton from './DeleteImageButton';
+import ImagePaneButton from './ImagePaneButton';
 import TemperatureBot from './TemperatureBot';
 
 import moduleStyles from './image-details-dialog.module.scss';
@@ -157,8 +158,6 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   const nameUsable = !create || !advanced || (!!trimmedName && !duplicateName);
   const nameError = duplicateName ? 'That name is already used.' : null;
 
-  // What a brand-new image will be called: the typed name, or (student
-  // form) the type's label with the first free number.
   const newImageName = useCallback(
     () =>
       create && !advanced
@@ -238,28 +237,17 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   return (
     <>
       <div className={moduleStyles.body}>
-        {/* The student form keeps its footer to Cancel/Generate; instead the
-            blank pane is itself the way into the paint editor, wearing the
-            summary view's clickable-image treatment (corner chip lights up,
-            the whole area is the target). */}
+        {/* The student form's blank pane is itself the way into the paint
+            editor; its footer keeps just Cancel/Generate. */}
         {!advanced && create && onPaintManually && !thumb ? (
-          <button
-            type="button"
-            className={classNames(
-              moduleStyles.imagePane,
-              moduleStyles.imageButton
-            )}
-            aria-label="Paint manually"
+          <ImagePaneButton
+            iconName="paintbrush"
+            label="Paint manually"
             disabled={generating}
             onClick={() =>
               onPaintManually({name: newImageName(), imageType, style})
             }
-          >
-            <div className={moduleStyles.imagePlaceholder} aria-hidden />
-            <span className={moduleStyles.paintOverlay} aria-hidden>
-              <FontAwesomeV6Icon iconName="paintbrush" />
-            </span>
-          </button>
+          />
         ) : (
           <div
             className={classNames(

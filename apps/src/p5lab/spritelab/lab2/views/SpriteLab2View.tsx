@@ -129,21 +129,9 @@ registerReducers({
 const ENABLED_TABS: readonly Tab[] = ['Images', 'Code', 'Play'];
 const WORLD_TABS: readonly Tab[] = ['Images', 'World', 'Code', 'Play'];
 
-// World-tab experiment flag: ?world-tab=true shows the tab (levels can also
-// opt in via showWorldTab).
-function getWorldTabEnabledParam() {
-  return (
-    new URLSearchParams(window.location.search).get('world-tab') === 'true'
-  );
-}
-
-// The image dialog defaults to the student form; ?images-advanced=true shows
-// the full internal one (levels can also opt in via imagesAdvanced).
-function getImagesAdvancedParam() {
-  return (
-    new URLSearchParams(window.location.search).get('images-advanced') ===
-    'true'
-  );
+// Internal flags carried as ?name=true URL parameters.
+function getBooleanParam(name: string) {
+  return new URLSearchParams(window.location.search).get(name) === 'true';
 }
 
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
@@ -226,7 +214,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const dispatch = useAppDispatch();
 
   const activeTab = useAppSelector(state => state.spriteLab2.activeTab);
-  const worldTabParamEnabled = useMemo(getWorldTabEnabledParam, []);
+  // World-tab experiment flag (levels can also opt in via showWorldTab).
+  const worldTabParamEnabled = useMemo(() => getBooleanParam('world-tab'), []);
+  // The image dialog defaults to the student form; this shows the full
+  // internal one (levels can also opt in via imagesAdvanced).
+  const imagesAdvancedParam = useMemo(
+    () => getBooleanParam('images-advanced'),
+    []
+  );
   // A level can name its exact tab set; unknown names are dropped, and a list
   // naming none falls back to the defaults. Listing 'World' turns the world
   // tab on, as the URL flag and showWorldTab still do.
@@ -1505,9 +1500,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 onRenameImage={handleRenameImage}
                 onDeleteImage={handleDeleteImage}
                 lockedImageType={levelProperties.lockedImageType}
-                advanced={
-                  levelProperties.imagesAdvanced || getImagesAdvancedParam()
-                }
+                advanced={levelProperties.imagesAdvanced || imagesAdvancedParam}
               />
             </div>
           </div>

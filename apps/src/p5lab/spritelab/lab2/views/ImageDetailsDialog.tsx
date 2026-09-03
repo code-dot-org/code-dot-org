@@ -16,6 +16,7 @@ import {IMAGE_NAME_MAX_LENGTH, sanitizeImageName} from '../imageReferences';
 
 import DeleteImageButton from './DeleteImageButton';
 import GenerateImageView, {NewImageDraft} from './GenerateImageView';
+import ImagePaneButton from './ImagePaneButton';
 
 import moduleStyles from './image-details-dialog.module.scss';
 
@@ -265,25 +266,12 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
         ) : (
           <>
             <div className={moduleStyles.body}>
-              <button
-                type="button"
-                className={classNames(
-                  moduleStyles.imagePane,
-                  moduleStyles.imageButton,
-                  thumb && moduleStyles.imagePaneChecker
-                )}
-                aria-label="Edit with paint tools"
+              <ImagePaneButton
+                thumb={thumb}
+                iconName="pen"
+                label="Edit with paint tools"
                 onClick={onPaint}
-              >
-                {thumb ? (
-                  <img src={thumb} alt="" />
-                ) : (
-                  <div className={moduleStyles.imagePlaceholder} aria-hidden />
-                )}
-                <span className={moduleStyles.paintOverlay} aria-hidden>
-                  <FontAwesomeV6Icon iconName="pen" />
-                </span>
-              </button>
+              />
               <div className={moduleStyles.detailsPane}>
                 {generation && (
                   <dl className={moduleStyles.metadata}>
