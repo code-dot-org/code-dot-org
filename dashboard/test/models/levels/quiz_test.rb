@@ -93,7 +93,7 @@ class QuizTest < ActiveSupport::TestCase
     assert QuizQuestion.exists?(question.id)
   end
 
-  test "destroying a quiz nullifies attempts rather than deleting them" do
+  test "destroying a quiz disconnects attempts rather than deleting them" do
     quiz = create(:quiz)
     attempt = create(:quiz_attempt, level: quiz)
     response = create(:quiz_question_response, quiz_attempt: attempt)
@@ -101,7 +101,8 @@ class QuizTest < ActiveSupport::TestCase
     quiz.destroy!
 
     attempt.reload
-    assert_nil attempt.level_id
+    assert_equal quiz.id, attempt.level_id
+    assert_nil attempt.level
     assert QuizQuestionResponse.exists?(response.id)
   end
 end
