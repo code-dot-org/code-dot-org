@@ -33,6 +33,23 @@ class QuizTest < ActiveSupport::TestCase
     assert quiz.valid?
   end
 
+  test "show_intro_screen cannot be false when time_limit_minutes is set" do
+    quiz = create(:quiz, time_limit_minutes: nil, show_intro_screen: false)
+    assert quiz.valid?
+
+    quiz.time_limit_minutes = 20
+    refute quiz.valid?
+    assert_includes quiz.errors[:show_intro_screen].join, 'time_limit_minutes'
+
+    quiz.show_intro_screen = true
+    assert quiz.valid?
+  end
+
+  test "show_intro_screen may be false with custom_intro_text set and no time limit" do
+    quiz = create(:quiz, time_limit_minutes: nil, custom_intro_text: 'Welcome!', show_intro_screen: false)
+    assert quiz.valid?
+  end
+
   test "questions come from placements" do
     quiz = create(:quiz)
     question = create(:quiz_question)

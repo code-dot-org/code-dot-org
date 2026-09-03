@@ -1586,8 +1586,8 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   def setup_suggested_lesson_section
     unit = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: unit)
-    lesson1 = create(:lesson, script: unit, lesson_group: lesson_group)
-    lesson2 = create(:lesson, script: unit, lesson_group: lesson_group)
+    lesson1 = create(:lesson, script: unit, lesson_group: lesson_group, has_lesson_plan: true)
+    lesson2 = create(:lesson, script: unit, lesson_group: lesson_group, has_lesson_plan: true)
     sl1 = create(:script_level, lesson: lesson1, script: unit)
     sl2 = create(:script_level, lesson: lesson2, script: unit)
     section = create(:section, user: @teacher, script: unit)
@@ -1687,8 +1687,8 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   test 'get suggested_lesson uses majority threshold: half or more students must complete' do
     unit = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: unit)
-    lesson1 = create(:lesson, script: unit, lesson_group: lesson_group)
-    lesson2 = create(:lesson, script: unit, lesson_group: lesson_group)
+    lesson1 = create(:lesson, script: unit, lesson_group: lesson_group, has_lesson_plan: true)
+    lesson2 = create(:lesson, script: unit, lesson_group: lesson_group, has_lesson_plan: true)
     sl1 = create(:script_level, lesson: lesson1, script: unit)
     create(:script_level, lesson: lesson2, script: unit)
     section = create(:section, user: @teacher, script: unit)
@@ -1722,18 +1722,19 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test 'suggested_lessons returns empty object when teacher has no sections' do
+  test 'suggested_lessons returns today alongside an empty sections object when teacher has no sections' do
     sign_in create(:teacher)
     get :suggested_lessons
     assert_response :success
-    assert_equal({}, json_response)
+    assert_equal Time.zone.today.iso8601, json_response['today']
+    assert_equal({}, json_response['sections'])
   end
 
   test 'suggested_lessons returns nil for a section with no script' do
     sign_in @teacher
     get :suggested_lessons
     assert_response :success
-    assert_nil json_response[@section.id.to_s]
+    assert_nil json_response['sections'][@section.id.to_s]
   end
 
   test 'suggested_lessons computes and returns data for active student sections' do
@@ -1743,7 +1744,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     get :suggested_lessons
     assert_response :success
-    result = json_response[section.id.to_s]
+    result = json_response['sections'][section.id.to_s]
     assert_equal lesson2.id, result['lesson_id']
     assert result['name'].present?
     assert result['url'].present?
@@ -1761,7 +1762,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     get :suggested_lessons
     assert_response :success
-    result = json_response[section.id.to_s]
+    result = json_response['sections'][section.id.to_s]
     assert_equal lesson2.id, result['lesson_id']
     assert_equal fresh_timestamp, result['timestamp']
   end
@@ -1774,7 +1775,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     get :suggested_lessons
     assert_response :success
-    history = json_response[section.id.to_s]['history']
+    history = json_response['sections'][section.id.to_s]['history']
     assert_equal 1, history.length
     assert_equal Time.zone.today.iso8601, history.first['date']
   end
@@ -1793,7 +1794,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     get :suggested_lessons
     assert_response :success
-    history = json_response[section.id.to_s]['history']
+    history = json_response['sections'][section.id.to_s]['history']
     assert_equal 2, history.length
     assert(history.any? {|e| e['date'] == yesterday})
     assert(history.all? {|e| e['lesson_id'] == lesson1.id})
@@ -1803,14 +1804,14 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   test 'suggested_lessons coming_up returns the next lesson in sequence' do
     section, _student, lesson1, lesson2, _sl1, _sl2 = setup_suggested_lesson_section
     section.update!(
-      suggested_lesson: {'lesson_id' => lesson1.id, 'timestamp' => Time.now.utc.iso8601},
-      suggested_lesson_history: [{'lesson_id' => lesson1.id, 'date' => Time.zone.today.iso8601, 'coming_up' => {'lesson_id' => lesson2.id}}]
+      suggested_lesson: {'lesson_id' => lesson1.id, 'timestamp' => Time.now.utc.iso8601, 'coming_up' => {'lesson_id' => lesson2.id}},
+      suggested_lesson_history: [{'lesson_id' => lesson1.id, 'date' => Time.zone.today.iso8601}]
     )
 
     sign_in @teacher
     get :suggested_lessons
     assert_response :success
-    coming_up = json_response[section.id.to_s]['coming_up']
+    coming_up = json_response['sections'][section.id.to_s]['coming_up']
     assert_equal lesson2.id, coming_up['lesson_id']
     assert coming_up['name'].present?
     assert coming_up['url'].present?
@@ -1819,29 +1820,43 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   test 'suggested_lessons coming_up has completed_unit when suggested lesson is the last in the unit' do
     section, _student, _lesson1, lesson2, _sl1, _sl2 = setup_suggested_lesson_section
     section.update!(
-      suggested_lesson: {'lesson_id' => lesson2.id, 'timestamp' => Time.now.utc.iso8601},
-      suggested_lesson_history: [{'lesson_id' => lesson2.id, 'date' => Time.zone.today.iso8601, 'coming_up' => {'completed_unit' => true}}]
+      suggested_lesson: {'lesson_id' => lesson2.id, 'timestamp' => Time.now.utc.iso8601, 'coming_up' => {'completed_unit' => true}},
+      suggested_lesson_history: [{'lesson_id' => lesson2.id, 'date' => Time.zone.today.iso8601}]
     )
 
     sign_in @teacher
     get :suggested_lessons
     assert_response :success
-    coming_up = json_response[section.id.to_s]['coming_up']
+    coming_up = json_response['sections'][section.id.to_s]['coming_up']
     assert coming_up['completed_unit']
   end
 
   test 'suggested_lessons coming_up reflects completed_unit when unit is finished' do
     section, _student, _lesson1, _lesson2, _sl1, _sl2 = setup_suggested_lesson_section
     section.update!(
-      suggested_lesson: {'completed_unit' => true, 'timestamp' => Time.now.utc.iso8601},
-      suggested_lesson_history: [{'completed_unit' => true, 'date' => Time.zone.today.iso8601, 'coming_up' => {'completed_unit' => true}}]
+      suggested_lesson: {'completed_unit' => true, 'timestamp' => Time.now.utc.iso8601, 'coming_up' => {'completed_unit' => true}},
+      suggested_lesson_history: [{'completed_unit' => true, 'date' => Time.zone.today.iso8601}]
     )
 
     sign_in @teacher
     get :suggested_lessons
     assert_response :success
-    coming_up = json_response[section.id.to_s]['coming_up']
+    coming_up = json_response['sections'][section.id.to_s]['coming_up']
     assert coming_up['completed_unit']
+  end
+
+  test 'suggested_lessons does not store coming_up on history entries' do
+    section, _student, lesson1, lesson2, _sl1, _sl2 = setup_suggested_lesson_section
+    section.update!(
+      suggested_lesson: {'lesson_id' => lesson1.id, 'timestamp' => Time.now.utc.iso8601, 'coming_up' => {'lesson_id' => lesson2.id}},
+      suggested_lesson_history: [{'lesson_id' => lesson1.id, 'date' => Time.zone.today.iso8601}]
+    )
+
+    sign_in @teacher
+    get :suggested_lessons
+    assert_response :success
+    history = json_response['sections'][section.id.to_s]['history']
+    assert(history.all? {|e| !e.key?('coming_up')})
   end
 
   test 'suggested_lessons excludes hidden sections' do
@@ -1852,7 +1867,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     get :suggested_lessons
     assert_response :success
-    assert_nil json_response[section.id.to_s]
+    assert_nil json_response['sections'][section.id.to_s]
   end
 
   test 'suggested_lessons excludes teacher-participant sections' do
@@ -1861,7 +1876,32 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     get :suggested_lessons
     assert_response :success
-    assert_nil json_response[teacher_section.id.to_s]
+    assert_nil json_response['sections'][teacher_section.id.to_s]
+  end
+
+  test 'suggested_lessons creates a history entry for each day the unit stays completed' do
+    section, student, _lesson1, _lesson2, sl1, sl2 = setup_suggested_lesson_section
+    create(:user_level, user: student, level: sl1.oldest_active_level, script_id: section.script.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+    create(:user_level, user: student, level: sl2.oldest_active_level, script_id: section.script.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+
+    sign_in @teacher
+    dates = (0..2).map {|days_ago| Time.zone.today - days_ago}
+    dates.reverse_each {|date| Timecop.freeze(date.to_time) {get :suggested_lessons}}
+
+    assert_response :success
+    history = json_response['sections'][section.id.to_s]['history']
+    dates.each do |date|
+      entry = history.find {|e| e['date'] == date.iso8601}
+      assert entry, "expected a history entry for #{date.iso8601}"
+      assert entry['completed_unit'], "expected #{date.iso8601}'s entry to show completed_unit"
+    end
+  end
+
+  test 'suggested_lessons returns the server date so the frontend can match history entries against the same clock' do
+    sign_in @teacher
+    get :suggested_lessons
+    assert_response :success
+    assert_equal Time.zone.today.iso8601, json_response['today']
   end
 
   test 'suggested_lessons returns multiple sections' do
@@ -1873,8 +1913,8 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     get :suggested_lessons
     assert_response :success
-    assert_equal lesson1b.id, json_response[section1.id.to_s]['lesson_id']
-    assert_equal lesson2b.id, json_response[section2.id.to_s]['lesson_id']
+    assert_equal lesson1b.id, json_response['sections'][section1.id.to_s]['lesson_id']
+    assert_equal lesson2b.id, json_response['sections'][section2.id.to_s]['lesson_id']
   end
 
   test 'valid_course_offerings includes only published courses' do

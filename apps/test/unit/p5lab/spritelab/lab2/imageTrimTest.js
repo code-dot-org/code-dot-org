@@ -1,4 +1,7 @@
-import {findOpaqueBounds} from '@cdo/apps/p5lab/spritelab/lab2/imageTrim';
+import {
+  findOpaqueBounds,
+  loadedAnimations,
+} from '@cdo/apps/p5lab/spritelab/lab2/imageTrim';
 
 // Build RGBA data for a w x h image from a rows array of 0/1 (1 = opaque).
 function rgba(rows) {
@@ -63,6 +66,36 @@ describe('SpriteLab2 findOpaqueBounds', () => {
       top: 1,
       right: 1,
       bottom: 1,
+    });
+  });
+});
+
+describe('SpriteLab2 loadedAnimations', () => {
+  const list = {
+    orderedKeys: ['a', 'b', 'c'],
+    propsByKey: {
+      a: {name: 'cat', dataURI: 'data:image/png;base64,AAAA'},
+      b: {name: 'dog'},
+      c: {name: 'owl', dataURI: 'data:image/png;base64,BBBB'},
+    },
+  };
+
+  it('keeps only the images whose data has arrived, in order', () => {
+    const loaded = loadedAnimations(list);
+    expect(loaded.orderedKeys).toEqual(['a', 'c']);
+    expect(Object.keys(loaded.propsByKey)).toEqual(['a', 'c']);
+    expect(loaded.propsByKey.a).toBe(list.propsByKey.a);
+  });
+
+  it('leaves the given list untouched', () => {
+    loadedAnimations(list);
+    expect(list.orderedKeys).toEqual(['a', 'b', 'c']);
+  });
+
+  it('handles an empty list', () => {
+    expect(loadedAnimations({orderedKeys: [], propsByKey: {}})).toEqual({
+      orderedKeys: [],
+      propsByKey: {},
     });
   });
 });

@@ -1,6 +1,0 @@
-inherit_from:
-  - ../../../.config/rubocop/config.yml
-
-Gemspec/RequiredRubyVersion:
-  Exclude:
-    - dashboard/engines/**/*

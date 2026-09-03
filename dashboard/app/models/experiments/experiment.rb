@@ -84,7 +84,7 @@ class Experiment < ApplicationRecord
         experiment.enabled?(user: user)
     end
   rescue => exception
-    Honeybadger.notify(
+    Observability::Errors.report(
       exception,
       error_message: 'Error getting experiments',
       context: {

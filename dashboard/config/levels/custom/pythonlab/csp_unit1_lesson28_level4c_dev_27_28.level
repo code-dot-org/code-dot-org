@@ -1,0 +1,53 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-09-01T16:13:16.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Random Bonus",
+    "long_instructions": "## Random Bonus\r\n\r\nModify the original program so it adds random bonus points to a score.\r\n\r\n1. Create a variable for a starting score.\r\n2. Create a variable for random bonus points.\r\n3. Add the starting score and bonus points together.\r\n4. Print the starting score, bonus points, and total.\r\n\r\n**Check**: Run the program several times. What changes? What stays the same?",
+    "bubble_choice_description": "Create a starting score, then use randint() to generate bonus points. Add the bonus points to the starting score and print the total.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildPython",
+        "documentation",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "thumbnail_url": "https://images.code.org/1332385d593b5d58b48a154666157d77-Pasted Graphic 2 4.png",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from random import randint\n\nroll = randint(1, 6)\n\nprint(roll)",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMp7gUltCPgdVB9N\nmvevjuzs6H6mdeqgSB65SCd7KpB/qOQun6MrVik5e14H68b8qpHTtvvybeHU\nOjVOFUUFX2LcavAJlcLmlRoNo3vOEpcyxVK+gQA7bmCkgCwMQ+Ce8Qb0CrHb\nv81BU1fjGoghhOzxYYe5i7511mK57r731cwreiCB0WdZMZ8DOA+s1IV/1ZCS\nyc5V8i7l2wyt0rgR2BAdEpuIe45AVZEv1kl3AdSTOOjAmuGgtxSQKRh2tAQd\nWTzMdV26iN0AwrhDYcKlDm21EC8lwDcfnPriF7aNfFA6YYdV8DLInw4u10hj\nrPlgyMlFXHie5eUNtMOrwiIqxXlWw3aD/QDDpp2unrnAO6mTng==\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-01 16:31:37 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-01 16:36:04 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-01 16:38:08 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-01 16:38:09 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-01 16:44:02 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-01 16:44:49 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Pythonlab>

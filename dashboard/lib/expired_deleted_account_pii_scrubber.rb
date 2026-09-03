@@ -96,7 +96,7 @@ class ExpiredDeletedAccountPiiScrubber
 
     if user_errors.present?
       log_to_slack(summary, SLACK_CHANNEL_FOR_ERRORS)
-      Honeybadger.notify('Failed to scrub PII for users', context: {num_accounts_scrubbed:, user_errors:})
+      Observability::Errors.report('Failed to scrub PII for users', context: {num_accounts_scrubbed:, user_errors:})
     end
 
     summary

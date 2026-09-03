@@ -1,3 +1,4 @@
+@use './imageTile' as tile;
 // The image dialog: image large on the left, details or the generate form
 // on the right, actions in a footer bar. Wears the same rounded chrome as
 // the pixel editor (dialogChrome.scss), following the page's light/dark
@@ -333,4 +334,81 @@
   color: var(--dialog-danger-text);
   font-size: 13px;
   font-weight: 600;
+}
+
+// This dialog session's recent generations, pinned to the pane's bottom so
+// they sit beside the jumbo image's foot.
+.alternatives {
+  margin-top: auto;
+}
+
+.alternativesLabel {
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.alternativesRow {
+  display: flex;
+  gap: 10px;
+  // Room for the selection ring, which extends past the tiles.
+  padding: 4px;
+}
+
+.alternativeThumb {
+  @include tile.image-tile(72px);
+}
+
+.alternativeSelected {
+  // The chosen one wears a ring in the active-selection brand color (the
+  // active tab's), held off the image by a panel-colored gap so it reads
+  // against any image in any theme.
+  box-shadow: 0 0 0 2px var(--dialog-panel-bg),
+    0 0 0 4px var(--borders-brand-teal-primary);
+  cursor: default;
+
+  &:hover {
+    transform: none;
+  }
+}
+
+// A field's error, beside it rather than below, so its appearance doesn't
+// change the dialog's height.
+.nameRow {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+// Without a width the design system wrapper stretches to the whole pane,
+// leaving the error no room.
+.nameRow .nameField {
+  width: 240px;
+  min-width: 0;
+  flex-shrink: 0;
+
+  input {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+
+// Wraps within its row's leftover width instead of overflowing the panel;
+// the field beside it is taller than a few wrapped lines, so the dialog's
+// height still never changes.
+.inlineFieldError {
+  margin-bottom: 10px;
+  color: var(--dialog-danger-text);
+  font-size: 13px;
+  flex: 1;
+  min-width: 0;
+}
+
+// The fields can't take TextField's errorMessage prop (it renders its own
+// message below); restore the red border it would have drawn, keyed on the
+// aria-invalid the views set. Weighted to outrank the design system's
+// resting border (.textField.textField-color-* input).
+.dialogHost .nameRow .nameField input[aria-invalid='true'],
+.dialogHost .header .headerNameField input[aria-invalid='true'] {
+  border-color: var(--borders-error-primary);
 }

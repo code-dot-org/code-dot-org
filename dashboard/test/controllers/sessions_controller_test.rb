@@ -118,7 +118,9 @@ class SessionsControllerTest < ActionController::TestCase
 
   test 'signing in user creates SignIn' do
     frozen_time = Date.parse('1985-10-26 01:20:00')
+    anon_user_id = SecureRandom.uuid
     DateTime.stubs(:now).returns(frozen_time)
+    session[:statsig_stable_id] = anon_user_id
     user = create(:user, sign_in_count: 2)
     assert_creates(SignIn) do
       create_session_for_user(user)
@@ -127,6 +129,16 @@ class SessionsControllerTest < ActionController::TestCase
     assert sign_in
     assert_equal 2 + 1, sign_in.sign_in_count
     assert_equal frozen_time, sign_in.sign_in_at
+    assert_equal anon_user_id, sign_in.anon_user_id
+  end
+
+  test 'signing in user does not store a blank stable ID' do
+    session[:statsig_stable_id] = ''
+    user = create(:user)
+
+    create_session_for_user(user)
+
+    assert_nil SignIn.find_by!(user_id: user.id).anon_user_id
   end
 
   test 'failed signin does not create SignIn' do
