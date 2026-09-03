@@ -1,11 +1,14 @@
 # @code-dot-org/lesson-deep-dive
 
-Post-lesson review flow for AI Tutor+ students.
+Post-lesson review flow for AI Tutor+ students, and the Tutor+ project
+gallery teachers use to review their submissions.
 
-The feature's source still lives at `apps/src/aiTutor/views/lessonDeepDive/`.
-This package currently ships nothing; it hosts a dev shell that renders that
-code in a browser without Rails and without webpack, ahead of moving the views
-in.
+The gallery lives here entirely, under `src/gallery/`; the webpack entry
+`apps/src/sites/studio/pages/lessons/tutor_gallery.js` mounts `TutorGalleryPage`
+from this package. The student flow's container still lives at
+`apps/src/aiTutor/views/lessonDeepDive/` and imports its leaf views from here.
+The package also hosts a dev shell that renders both flows in a browser without
+Rails and without webpack.
 
 ## Dev shell
 
