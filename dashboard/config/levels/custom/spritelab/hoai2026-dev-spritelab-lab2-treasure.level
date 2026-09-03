@@ -33,7 +33,7 @@
     "guide_mode": "instructions",
     "guide_steps": [
       {
-        "text": "**Make some treasure.** Describe a jewel for your player to find - try a color and a shape, like \"a glowing purple gem\"."
+        "text": "**Make some treasure.** Describe a jewel for your player to find - try a color and a shape, like \"a shiny purple gem\"."
       },
       {
         "text": "**Put it in your world.** Switch to the **World** tab, pick your jewel from the palette, and place it somewhere your player can reach.",
