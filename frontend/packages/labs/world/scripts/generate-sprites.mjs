@@ -59,6 +59,12 @@ export const SPRITE_NAMES = [
   // was built out of `ground`, and a stack of grass-topped floor tiles reads
   // as a ladder of stripes rather than as something you cannot walk through.
   'wall',
+  // Fuel, in two sizes. The Jetpack rule has a tank, and a tank wants
+  // something to fill it with — a big can and a small one, because "how much
+  // is this worth" has to be readable from across the room and a number
+  // painted on a 32-pixel sprite is not.
+  'fuelCan',
+  'fuelCanSmall',
 ];
 export const ANIMATION_SPECS = {
   coinSpin: {frames: 6, frameRate: 12},
@@ -243,6 +249,58 @@ function rock(c, turn) {
   }
 }
 
+/**
+ * A jerry can, at `scale` of the cell.
+ *
+ * ONE DRAWING AT TWO SIZES rather than two drawings, because the two are the
+ * same object and a reader has to see that at a glance: a big can and a small
+ * can is "more" and "less", where two different containers would be two
+ * different things to learn. Scaled about the FLOOR of the cell rather than its
+ * middle, so both sit on a tile instead of the small one hovering.
+ */
+function fuelCan(c, scale) {
+  const w = Math.round(18 * scale);
+  const h = Math.round(23 * scale);
+  const x = Math.round((32 - w) / 2);
+  const y = 31 - h;
+  const unit = Math.max(1, Math.round(2 * scale));
+  // The body, its lit face, and the dark edge that keeps it off the background.
+  c.rect(x, y, w, h, [128, 34, 28]);
+  c.rect(x + unit, y + unit, w - 2 * unit, h - 2 * unit, [206, 62, 48]);
+  c.rect(x + unit, y + unit, w - 2 * unit, unit, [238, 120, 96]);
+  // The X brace, which is the mark that says jerry can and not box. Two thin
+  // quads rather than strokes, because a quad is the only line this canvas
+  // draws and a diagonal one pixel wide would vanish at the smaller size.
+  const left = x + unit * 2;
+  const right = x + w - unit * 2;
+  const top = y + unit * 2;
+  const bottom = y + h - unit * 2;
+  const brace = [148, 40, 32];
+  c.polygon(
+    [
+      [left, top],
+      [left + unit, top],
+      [right, bottom],
+      [right - unit, bottom],
+    ],
+    brace,
+  );
+  c.polygon(
+    [
+      [right - unit, top],
+      [right, top],
+      [left + unit, bottom],
+      [left, bottom],
+    ],
+    brace,
+  );
+  // A handle across the whole top, and a cap standing proud of it at one end.
+  // One bar rather than two stubs: two read as chimneys, and the thing a can
+  // is carried by is the line between them.
+  c.rect(x + unit, y - unit, w - unit * 2, unit, [90, 92, 104]);
+  c.rect(x + w - unit * 3, y - unit * 2, unit * 2, unit * 2, [118, 120, 132]);
+}
+
 const STATIC = {
   player: c => playerBody(c),
   ground(c) {
@@ -388,6 +446,8 @@ const STATIC = {
     c.rect(0, 0, 2, 32, [30, 84, 44]); // and its two hard edges
     c.rect(30, 0, 2, 32, [30, 84, 44]);
   },
+  fuelCan: c => fuelCan(c, 1),
+  fuelCanSmall: c => fuelCan(c, 0.66),
   spike(c) {
     // Three teeth on a plate, pointing UP, filling the cell the way `ground`
     // does — so a row of them lies flat on the floor rather than hovering over

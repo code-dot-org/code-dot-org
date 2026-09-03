@@ -31,6 +31,7 @@ import {BREAKOUT_SPEC} from './breakout';
 import {BREAKOUT_SINGLE_SPEC} from './breakoutSingle';
 import {FLAPPY_SPEC} from './flappy';
 import {FLAPPY_SINGLE_SPEC} from './flappySingle';
+import {JETPACK_SPEC} from './jetpack';
 import {METEORS_SPEC} from './meteors';
 import {METEORS_SINGLE_SPEC} from './meteorsSingle';
 import {NOVEL} from './novel';
@@ -57,6 +58,7 @@ export const WORLD_SCENARIO_TAGS = [
   'meteors-single',
   'flappy',
   'flappy-single',
+  'jetpack',
   'tapper',
   'sokoban',
   'novel',
@@ -288,6 +290,30 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       '- It is wired **after** the bird is placed. Before it, `any ⟨Bird⟩` is ' +
       'an empty list and the view never moves — and nothing says so\n' +
       '- Compare it with **Flappy** to see what moving a thing into a file buys',
+  },
+  jetpack: {
+    name: 'Jetpack',
+    description:
+      'A room 26 by 16 with all of it on screen at once, and a tank that ' +
+      'empties while you fly around it — the first level that is a place ' +
+      'rather than a corridor, and the first with something that runs out.',
+    source: buildProject(JETPACK_SPEC).source,
+    instructions:
+      '## Jetpack\n\nHold space to fly. Arrows to walk. Land on the cans.\n\n' +
+      '- Click the preview, then HOLD space — the jetpack is a **force**, so ' +
+      'you sink for a moment before you rise, and you keep rising after you ' +
+      'let go\n' +
+      '- The bar over the ceiling is the tank. Four seconds of holding empties ' +
+      'it, and then the same key is only a weak hop\n' +
+      '- A big can fills it; a small one is half. Nothing here knows a can is ' +
+      'fuel except the Pilot — the can only knows it can be collected\n' +
+      '- The press does BOTH `make jump` and `start flying`, with no question ' +
+      'round either: `start flying` does nothing on an empty tank, so the hop ' +
+      'is what is left\n' +
+      '- The whole room is on screen because the world says ' +
+      '`set size of view to 26 x 16`. There is no camera in this project\n' +
+      '- Try `thrust`, `top flying speed` and `fuel per second` on the Pilot — ' +
+      'those three numbers are the whole feel of it',
   },
   tapper: {
     name: 'Tapper',

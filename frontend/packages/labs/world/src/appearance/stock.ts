@@ -192,6 +192,20 @@ export const STOCK_SPRITES: readonly StockSprite[] = [
     dataUrl: image('spike'),
   },
   {
+    id: 'fuelCan',
+    name: 'Fuel Can',
+    description:
+      'A red jerry can, for something that fills a tank — a jetpack’s, or anything else that runs out.',
+    dataUrl: image('fuelCan'),
+  },
+  {
+    id: 'fuelCanSmall',
+    name: 'Small Fuel Can',
+    description:
+      'The same can, smaller. Worth less than the big one, and readable as less from across the room.',
+    dataUrl: image('fuelCanSmall'),
+  },
+  {
     id: 'hill',
     name: 'Hill',
     description: 'A dim green mound, for scenery a long way behind the floor.',

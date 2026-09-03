@@ -1,0 +1,165 @@
+// Jetpack, PLAYED — the test that decides whether the level is a level.
+//
+// Everything else about this fixture is checked standing still: the suite
+// builds it, places it and ticks it (`scenariosPlay`), and the rule's own
+// behaviour is played in `rules/__tests__/stockRulesRun`. What neither can say
+// is whether the two fit together into something you can get through — and
+// every way of getting THAT wrong looks fine on the first frame.
+//
+// Three things are being claimed, and each is a number somewhere else that
+// could quietly stop being true:
+//
+//   the jump cannot do it     `jump strength` is 2.4 here, and the lowest
+//                             ledge is five tiles up. Raise one or lower the
+//                             other and the level is about jumping.
+//   the jetpack can           thrust against gravity, for as long as half a
+//                             tank lasts. A `fuel per second` that emptied it
+//                             sooner would leave the first can unreachable.
+//   and a can pays for it     which is the wiring — the Pilot's own handler,
+//                             the rule's clamp, and the can knowing nothing.
+//
+// Driven through `setInput` and `keyName`, as the driver drives it, for the
+// reason `sokobanPlays` gives: the browser hands the world `KeyboardEvent.key`
+// and a test that fed anything else would be testing a control scheme nobody
+// can reach.
+
+import {beforeEach, describe, expect, it} from 'vitest';
+
+import {PositionProperty, type World} from '../engine';
+import {keyName} from '../engine/core/keys';
+import {WORLD_SCENARIOS} from '../fixtures/scenarios';
+import {projectFiles} from '../runtime/projectFiles';
+import {TILE_SIZE} from '../runtime/viewport';
+
+import {compileProject, type CompiledProject} from './support/compileProject';
+
+let project: CompiledProject;
+
+/** Tick for `seconds` at sixty frames a second, holding `keys` throughout. */
+const play = (world: World, seconds: number, keys: string[] = []): void => {
+  for (let frame = 0; frame < Math.round(seconds * 60); frame++) {
+    world.setInput(keys.map(keyName));
+    world.tick(1 / 60);
+  }
+};
+
+// A map's placements keep the ids the document gave them, so the level names
+// its own actors and this can find them by those names.
+const named = (world: World, id: string) =>
+  [...world.actors].find(one => one.id === id)!;
+
+const pilot = (world: World) => named(world, 'Pilot');
+
+const cans = (world: World) =>
+  [...world.actors].filter(one => /^Can\d/.test(one.id)).length;
+
+/** Which row an actor's middle is in, counting from the ceiling. */
+const rowOf = (world: World) =>
+  Math.round(
+    (pilot(world).get(PositionProperty).y - TILE_SIZE / 2) / TILE_SIZE,
+  );
+
+const fuelOf = (world: World, name: string) => {
+  const module = project.modules['rules/jetpack'] as Record<string, unknown>;
+  return (pilot(world) as {get(p: unknown): number}).get(module[name]);
+};
+
+beforeEach(async () => {
+  project = await compileProject(projectFiles(WORLD_SCENARIOS.jetpack.source));
+});
+
+describe('the jetpack level', () => {
+  it('stands the Pilot on the floor, with half a tank', () => {
+    const {world} = project;
+    play(world, 0.5);
+
+    // Row 14 is the last row before the floor tiles at 15.
+    expect(rowOf(world)).toBe(14);
+    expect(fuelOf(world, 'FuelProperty')).toBe(50);
+  });
+
+  it('cannot be jumped', () => {
+    // The claim the whole level rests on. A press is a jump AND a switch, so
+    // this holds the key exactly one frame — long enough for the press, short
+    // of a release — and then empties the tank so the thrust cannot help.
+    const {world} = project;
+    play(world, 0.5);
+    pilot(world).set(
+      (project.modules['rules/jetpack'] as Record<string, unknown>)
+        .FuelProperty as never,
+      0 as never,
+    );
+
+    play(world, 1 / 60, ['space']);
+    let highest = rowOf(world);
+    for (let frame = 0; frame < 60; frame++) {
+      play(world, 1 / 60);
+      highest = Math.min(highest, rowOf(world));
+    }
+
+    // The lowest ledge is row 11, which is three above the floor at 14. A hop
+    // of a tile and a bit gets nowhere near it.
+    expect(highest).toBeGreaterThan(12);
+  });
+
+  it('flies to the first ledge and takes the can that is on it', () => {
+    // UP FIRST, then across, which is the route the level is shaped for: the
+    // Pilot starts at column 2 and the ledge runs from column 3, so climbing
+    // while moving right puts it under the overhang — the ledge is solid, and
+    // a jetpack does not go through a floor from below.
+    const {world} = project;
+    play(world, 0.5);
+    const before = cans(world);
+
+    play(world, 0.9, ['space']);
+    play(world, 0.8, ['right arrow']);
+
+    // Standing on the ledge, which is row 11, so the Pilot's middle is in 10.
+    expect(rowOf(world)).toBe(10);
+    expect(cans(world)).toBe(before - 1);
+    // Most of the tank spent getting there and half a can back: more than the
+    // climb cost, which is what makes the cans somewhere to go rather than
+    // points.
+    expect(fuelOf(world, 'FuelProperty')).toBeGreaterThan(20);
+  });
+
+  it('runs the tank down while the key is held, and stops when it is empty', () => {
+    // Four seconds of thrust on a full tank, so half a tank is two — held for
+    // three, the last one is a fall.
+    const {world} = project;
+    play(world, 0.5);
+
+    play(world, 1.9, ['space']);
+    const spent = fuelOf(world, 'FuelProperty');
+    const peak = rowOf(world);
+    play(world, 1.1, ['space']);
+
+    expect(spent).toBeLessThan(5);
+    // Still holding, and coming down anyway: an empty tank switches the
+    // jetpack off and holding the key does not switch it back on.
+    expect(rowOf(world)).toBeGreaterThan(peak);
+  });
+
+  it('fills the gauge from the tank, without either knowing the other', () => {
+    // The one cross-actor line in the project: the bar reaches the Pilot by
+    // kind. Nothing else in the level would notice if this stopped working —
+    // the game plays exactly the same with a bar stuck at whatever it was.
+    const {world} = project;
+    const progress = project.modules['rules/progress'] as Record<
+      string,
+      unknown
+    >;
+    const gauge = named(world, 'Gauge');
+    play(world, 0.5);
+
+    const full = (gauge as {get(p: unknown): number}).get(
+      progress.FractionProperty,
+    );
+    play(world, 1, ['space']);
+
+    expect(full).toBeCloseTo(0.5, 2);
+    expect(
+      (gauge as {get(p: unknown): number}).get(progress.FractionProperty),
+    ).toBeLessThan(full);
+  });
+});
