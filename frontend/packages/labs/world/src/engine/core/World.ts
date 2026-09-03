@@ -910,7 +910,31 @@ export class World {
     }
     this.actorList.push(actor);
     this.actorsById.set(actor.id, (this.actorsById.get(actor.id) ?? 0) + 1);
+    // …and the actor hears that it exists, which is the one event every actor
+    // gets without electing anything (`rules/spatial`). Queued like the rest,
+    // so a handler that adds ANOTHER actor — which is the commonest thing to
+    // do here — is not growing this list while somebody is walking it.
+    //
+    // Looked up by id rather than imported: core cannot reach the rule layer,
+    // and this is the same door `renderSnapshot` opens for the transform.
+    const created = this.spatialEvent(SPATIAL.created);
+    if (created) {
+      this.emit(created, actor);
+    }
     return actor;
+  }
+
+  /**
+   * One of the Spatial rule's events, if that rule is in play.
+   *
+   * Absent for a world built without the foundation, which is a world with no
+   * positions in it — nothing to raise the event on and nothing to hear it.
+   */
+  private spatialEvent(id: string): GameEvent | undefined {
+    const spatial = this.membership
+      .items()
+      .find(one => one.id === SPATIAL.rule);
+    return spatial?.events?.[id];
   }
 
   /** The cameras this world holds. Never empty; the default is among them. */

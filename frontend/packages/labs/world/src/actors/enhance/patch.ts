@@ -54,6 +54,67 @@ const rootOfType = (
   type: string,
 ): BlockJson | undefined => roots(workspace).find(block => block.type === type);
 
+/** Whether any TOP-LEVEL block in the file matches — a hat, a drawing. */
+export function hasRoot(
+  contents: string,
+  matches: (block: BlockJson) => boolean,
+): boolean {
+  return roots(parse(contents)).some(root => [...down(root)].some(matches));
+}
+
+/**
+ * Add a top-level block, below everything already in the file.
+ *
+ * A hat is a ROOT, not a row: `define actor` has no mouth to put one in, and
+ * `DisableOrphansPlugin` disables a top-level block that has a previous
+ * connection along with everything under it (`actors/stock/workspace` says the
+ * same thing about a drawing). So an event handler sits beside the definition,
+ * which is where an actor file's handlers already are.
+ *
+ * Below, because a file is read downwards and what was there was written
+ * first.
+ */
+export function addRoot(contents: string, block: BlockJson): string {
+  const workspace = parse(contents);
+  const lowest = roots(workspace).reduce(
+    (bottom, root) => Math.max(bottom, Number(root.y ?? 0)),
+    0,
+  );
+  return JSON.stringify(
+    {
+      ...workspace,
+      blocks: {
+        ...workspace.blocks,
+        blocks: [...roots(workspace), {...block, x: 20, y: lowest + 220}],
+      },
+    },
+    null,
+    2,
+  );
+}
+
+/**
+ * Declare a variable the file's blocks refer to.
+ *
+ * A workspace stores its variables beside its blocks, and a `VAR` field is an
+ * id and a name pointing INTO that list: written without the declaration, the
+ * block loads with a variable Blockly has never heard of.
+ */
+export function withVariable(contents: string, variable: object): string {
+  const workspace = parse(contents);
+  const id = (variable as {id?: string}).id;
+  const already = (workspace.variables ?? []).some(
+    one => (one as {id?: string}).id === id,
+  );
+  return already
+    ? contents
+    : JSON.stringify(
+        {...workspace, variables: [...(workspace.variables ?? []), variable]},
+        null,
+        2,
+      );
+}
+
 /** Whether the chain under `type`'s root already holds a matching row. */
 export function holds(
   contents: string,

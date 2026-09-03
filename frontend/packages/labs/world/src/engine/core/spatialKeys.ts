@@ -12,6 +12,11 @@ export const SPATIAL = {
   rotation: 'rotation',
   skew: 'skew',
   intrinsicSize: 'intrinsicSize',
+  // The event every actor gets for nothing: it was placed in a world. Here
+  // rather than only in the rule because `World.place` is what raises it, and
+  // core reaches the rule's members by id (`World.renderSnapshot` does the
+  // same for the transform).
+  created: 'created',
 } as const;
 
 // The Animation rule's member ids, shared with core so `World.renderSnapshot`

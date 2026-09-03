@@ -32,8 +32,8 @@ A patch, applied to an actor a project already has: rules imported, traits
 elected, a companion actor placed, and the lines that aim them at each other.
 
 **It writes blocks the learner could have written.** Everything an enhancement
-does is ordinary rows appended to the chain under a `define actor` or a
-`define world` — the same blocks the toolbox offers, in the order somebody
+does is ordinary rows appended to the chain under a `define actor`, or a hat
+placed beside it — the same blocks the toolbox offers, in the order somebody
 would have dragged them (`actors/enhance/patch`). Nothing is marked, hidden or
 owned by the library afterwards. What it leaves behind is a project, and
 deleting the rows undoes it.
@@ -73,28 +73,47 @@ one (`actors/enhance/actorEnhance`).
 
 ## The first one: health, and a bar above it
 
-    actors/<target>.actor    use trait ⟨Health#Has Health⟩
-    actors/healthBar.actor   use trait ⟨Attachment#Attached⟩
-    worlds/*.world           add actor ⟨Health Bar⟩ as ⟨<target>Bar⟩ do:
-                               set subject of ⟨<target>Bar⟩ to ⟨any ⟨target⟩⟩
-                               set attached to of ⟨<target>Bar⟩ to ⟨any ⟨target⟩⟩
+Every line of it lands in the ACTOR:
 
-**`as ⟨name⟩` rather than `any ⟨Health Bar⟩`**, which is what the bar's own
-header suggests and what the starter world does. Naming the bar it just placed
-means a project may hold a second one — a HUD bar for the player, a rider over
-an enemy's head — and an enhancement touches only the one it made. The KIND is
-still good enough for the subject, because "the player" is one actor in the
-games this is for; the day it is not, that line is the one to change.
+    actors/<target>.actor    use trait ⟨Health#Has Health⟩
+
+                             when ⟨this actor⟩ is created:
+                               add actor ⟨Health Bar⟩ as ⟨bar⟩ do:
+                                 set subject of ⟨bar⟩ to ⟨this actor⟩
+                                 set attached to of ⟨bar⟩ to ⟨this actor⟩
+
+    actors/healthBar.actor   use trait ⟨Attachment#Attached⟩
+
+**No world is touched, and the first draft's mistake is why that matters.** It
+placed the bar in every `.world` and pointed it with `any ⟨kind⟩`, which was
+wrong twice. Giving one actor a bar meant editing files about LEVELS — an
+enhancement that says it edits an actor should edit an actor — and two of that
+actor shared one bar between them, because "any" is one actor however many
+there are. Six crawlers and a player is the ordinary case, not the exotic one.
+
+**So the engine learned to say when an actor appears.** `is created` is an
+event on the Space rule, raised by `World.place` for every actor, elected by
+nobody: every actor is created, the way every actor has a position. It is
+QUEUED like every other event, so a handler runs after the tick rather than
+inside whatever placed the actor — which matters here more than anywhere,
+because the commonest thing to do when an actor appears is to add another one,
+and a world that grew while it was being built or walked is a list mutating
+under somebody's feet.
+
+That costs a frame: an actor placed while the world is described hears this on
+the first tick, and its bar is over its head on the second. What it buys is
+that `add actor` inside the handler is the same ordinary call it is anywhere
+else.
+
+**`as ⟨bar⟩` rather than `this actor`**, because inside `add actor` the unnamed
+reading rebinds `this actor` to the thing being placed — and both halves of
+this wiring are about the actor that was CREATED, which is the handler's own
+subject.
 
 **No offset**, though a bar over a head plainly needs one: 24 above is already
 the Attachment rule's default, chosen there for this. A line saying what would
 have happened anyway is a line to keep in step with a default that may change
 for a reason.
-
-**Every world**, because a bar belongs to the level it is drawn in and a
-project with two levels wants one in each. A world that never places the target
-gets a bar pointed at nobody, which draws as an empty track — the same thing
-that world would show for any actor it does not have.
 
 ## Testing one
 
@@ -105,7 +124,10 @@ question only compiling and running the project answers, so
 `actors/enhance/__tests__/health` does that: it enhances a Platformer Player,
 compiles the project with the real generator, and asserts that the bar draws
 the player's health, halves when the player is hurt, and rides above it as it
-falls. Cutting any one of the three wiring lines fails it.
+falls. Cutting any one of the wiring lines fails it.
+
+And it places THREE players, because one is the case that hid the first
+draft's bug: three of them get three bars, each over its own head.
 
 ## The catalogue this opens
 

@@ -9,58 +9,74 @@
 // shelf with health for a bar to be about (specs/RULE_DEMOS.md). A description
 // that contains a recipe is a recipe missing from the lab.
 //
-// WHAT IT WRITES, in the order a learner would have written it:
+// WHAT IT WRITES, and every line of it lands in the ACTOR:
 //
 //   actors/<target>.actor    use trait ⟨Health#Has Health⟩
+//
+//                            when ⟨this actor⟩ is created:
+//                              add actor ⟨Health Bar⟩ as ⟨bar⟩ do:
+//                                set subject of ⟨bar⟩ to ⟨this actor⟩
+//                                set attached to of ⟨bar⟩ to ⟨this actor⟩
+//
 //   actors/healthBar.actor   use trait ⟨Attachment#Attached⟩
-//   worlds/*.world           add actor ⟨Health Bar⟩ as ⟨<target>Bar⟩ do:
-//                              set subject of ⟨<target>Bar⟩ to ⟨any ⟨target⟩⟩
-//                              set attached to of ⟨<target>Bar⟩ to ⟨any ⟨target⟩⟩
 //
-// AND NOT AN OFFSET, which the first draft set to (0, -24) and then found was
-// already the Attachment rule's default — chosen there for a bar over a head,
-// which is this. A line saying what would have happened anyway is a line to
-// keep in step with a default that may change for a reason.
+// NO WORLD IS TOUCHED, and that is the whole of the second draft. The first one
+// placed the bar in every `.world` and pointed it with `any ⟨kind⟩`, which was
+// wrong twice: giving one actor a bar meant editing files about levels, and two
+// of that actor shared one bar between them, because "any" is one actor however
+// many there are. An actor that hears its own creation adds its own bar, so a
+// crawler and a player and six more crawlers each get one and no world knows
+// anything about it.
 //
-// AS ⟨name⟩ RATHER THAN `any ⟨Health Bar⟩`, which is what the bar's header
-// suggests and what the starter world does. Naming the bar it just placed means
-// a project may hold a second one — a HUD bar for the player, a rider over an
-// enemy's head — and this touches only the one it made. The kind is still good
-// enough for the SUBJECT, because "the player" is one actor in the games this
-// is for; the day it is not, that line is the one to change.
+// That needed an event the engine did not raise: `is created`, on the Space
+// rule, queued like every other so a handler adding an actor is not growing a
+// list somebody is walking (`engine/rules/spatial`).
 //
-// EVERY WORLD, because a bar belongs to the level it is drawn in and a project
-// with two levels wants one in each. A world that never places the target gets
-// a bar pointed at nobody, which draws as an empty track — the same thing that
-// world would show for any actor it does not have.
+// AS ⟨bar⟩ rather than `this actor`, because inside `add actor` the unnamed
+// reading rebinds `this actor` to the thing being placed — and both halves of
+// this wiring are about the actor that was CREATED, which is the handler's own
+// subject (`blockly/extensions/addActorName`).
+//
+// NO OFFSET, though a bar over a head plainly needs one: 24 above is already
+// the Attachment rule's default, chosen there for exactly this. A line saying
+// what would have happened anyway is a line to keep in step with a default
+// that may change for a reason.
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {pathSlug} from '../../blockly/domainBlocks';
 import {importStockRule} from '../../rules/importStockRule';
 import {STOCK_RULES} from '../../rules/stock';
-import {fileIdAt, filePath} from '../../runtime/projectFiles';
+import {fileIdAt} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
 import {stockActorById} from '../stock';
 
 import type {Enhancement, EnhanceTarget} from './enhancements';
-import {append, holds, type BlockJson} from './patch';
+import {
+  addRoot,
+  append,
+  hasRoot,
+  holds,
+  withVariable,
+  type BlockJson,
+} from './patch';
 
 /** Where the bar lands, which is the stem the stock import gives it. */
 const BAR_PATH = 'actors/healthBar';
 const HAS_HEALTH = 'Health#HasHealthTrait';
+/** `when ⟨this actor⟩ is created` — the Space rule's own event, minted as a
+ *  hat by the same machinery every rule event is (`blockly/domainBlocks`). */
+const CREATED_HAT = 'world_on_Space_CreatedEvent';
 const ATTACHED = 'Attachment#AttachedTrait';
 
-/** The Actor variable the world's `add actor … as ⟨…⟩` binds. */
+/** `this actor` — the handler's subject, which is the actor just created. */
+const me = () => ({block: {type: 'world_this_actor'}});
+
+/** The variable the handler's `add actor … as ⟨…⟩` binds. */
 const barVariable = (target: EnhanceTarget) => {
   const stem = target.path.split('/').pop() ?? 'actor';
   return {id: `enhanceHealthBar_${stem}`, name: `${stem}Bar`, type: 'Actor'};
 };
-
-/** `any ⟨kind⟩` — the actors of that kind there are. */
-const anyKind = (path: string) => ({
-  block: {type: 'world_actor_kind', fields: {ACTOR: path}},
-});
 
 /** The variable the placement bound, as a socket's contents. */
 const named = (variable: object) => ({
@@ -80,28 +96,35 @@ const hasTrait = (contents: string, trait: string): boolean =>
     block => block.type === 'world_use_trait' && block.fields?.TRAIT === trait,
   );
 
-/** The rows a world gains: the bar, and the three lines that aim it. */
-const placement = (target: EnhanceTarget): BlockJson => {
+/** The hat this adds: when this actor is created, it brings its own bar. */
+const handler = (target: EnhanceTarget): BlockJson => {
   const variable = barVariable(target);
   const bar = named(variable);
   return {
-    type: 'world_add_actor',
-    fields: {ACTOR: BAR_PATH, NAMED: 'named', VAR: variable},
-    extraState: {named: true},
-    inputs: {
-      DO: {
-        block: {
-          // Whose health it shows. The bar's own property, so its block type
-          // carries the file it is declared in (`blockly/ownProperties`).
-          type: `world_set_${pathSlug(BAR_PATH)}_SubjectProperty`,
-          inputs: {ACTOR: bar, VALUE: anyKind(target.path)},
-          next: {
+    type: CREATED_HAT,
+    inputs: {ACTOR: me()},
+    next: {
+      block: {
+        type: 'world_add_actor',
+        fields: {ACTOR: BAR_PATH, NAMED: 'named', VAR: variable},
+        extraState: {named: true},
+        inputs: {
+          DO: {
             block: {
-              // …and where it sits, which is a separate question from what
-              // it is about: a HUD bar shows the player and must not follow
-              // it. How far above is the Attachment rule's own default.
-              type: 'world_set_Attachment_AttachedToProperty',
-              inputs: {ACTOR: bar, VALUE: anyKind(target.path)},
+              // Whose health it shows. The bar's own property, so its block
+              // type carries the file it is declared in
+              // (`blockly/ownProperties`).
+              type: `world_set_${pathSlug(BAR_PATH)}_SubjectProperty`,
+              inputs: {ACTOR: bar, VALUE: me()},
+              next: {
+                block: {
+                  // …and where it sits, which is a separate question from
+                  // what it is about: a HUD bar shows the player and must not
+                  // follow it. How far above is the Attachment rule's default.
+                  type: 'world_set_Attachment_AttachedToProperty',
+                  inputs: {ACTOR: bar, VALUE: me()},
+                },
+              },
             },
           },
         },
@@ -110,11 +133,17 @@ const placement = (target: EnhanceTarget): BlockJson => {
   };
 };
 
-/** Every `.world` file in the project, by id. */
-const worldIds = (source: MultiFileSource): string[] =>
-  Object.keys(source.files).filter(id =>
-    (filePath(source, id) ?? '').endsWith('.world'),
-  );
+/** Whether this actor already brings its own bar. */
+const brings = (contents: string, target: EnhanceTarget): boolean => {
+  const {id} = barVariable(target);
+  return hasRoot(contents, block => {
+    if (block.type !== 'world_add_actor') {
+      return false;
+    }
+    const variable = block.fields?.VAR as {id?: string} | undefined;
+    return variable?.id === id;
+  });
+};
 
 /** Rewrite one file's contents, leaving the rest of the project alone. */
 const edit = (
@@ -128,18 +157,6 @@ const edit = (
     [id]: {...source.files[id], contents: change(source.files[id].contents)},
   },
 });
-
-/** Whether this world already places a bar for this target. */
-const wired = (contents: string, target: EnhanceTarget): boolean => {
-  const {id} = barVariable(target);
-  return holds(contents, 'world_world', block => {
-    if (block.type !== 'world_add_actor') {
-      return false;
-    }
-    const variable = block.fields?.VAR as {id?: string} | undefined;
-    return variable?.id === id;
-  });
-};
 
 export const healthEnhancement: Enhancement = {
   id: 'health',
@@ -157,12 +174,7 @@ export const healthEnhancement: Enhancement = {
   applied(source: MultiFileSource, target: EnhanceTarget) {
     const id = fileIdAt(source, `${target.path}.actor`);
     const contents = id ? source.files[id].contents : '';
-    return (
-      hasTrait(contents, HAS_HEALTH) &&
-      worldIds(source).some(world =>
-        wired(source.files[world].contents, target),
-      )
-    );
+    return hasTrait(contents, HAS_HEALTH) && brings(contents, target);
   },
   apply(source: MultiFileSource, target: EnhanceTarget) {
     let current = source;
@@ -175,30 +187,24 @@ export const healthEnhancement: Enhancement = {
     }
 
     const targetId = fileIdAt(current, `${target.path}.actor`);
-    if (targetId && !hasTrait(current.files[targetId].contents, HAS_HEALTH)) {
-      current = edit(current, targetId, contents =>
-        append(contents, 'world_actor', [useTrait(HAS_HEALTH)]),
-      );
+    if (targetId) {
+      current = edit(current, targetId, contents => {
+        let next = contents;
+        if (!hasTrait(next, HAS_HEALTH)) {
+          next = append(next, 'world_actor', [useTrait(HAS_HEALTH)]);
+        }
+        if (!brings(next, target)) {
+          next = addRoot(next, handler(target));
+          next = withVariable(next, barVariable(target));
+        }
+        return next;
+      });
     }
 
     const barId = fileIdAt(current, `${BAR_PATH}.actor`);
     if (barId && !hasTrait(current.files[barId].contents, ATTACHED)) {
       current = edit(current, barId, contents =>
         append(contents, 'world_actor', [useTrait(ATTACHED)]),
-      );
-    }
-
-    for (const world of worldIds(current)) {
-      if (wired(current.files[world].contents, target)) {
-        continue;
-      }
-      current = edit(current, world, contents =>
-        append(
-          contents,
-          'world_world',
-          [placement(target)],
-          [barVariable(target)],
-        ),
       );
     }
     return current;

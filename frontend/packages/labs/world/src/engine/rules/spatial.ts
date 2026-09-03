@@ -305,6 +305,36 @@ watchProperty(PositionProperty, (actor, previous: Vector, next: Vector) => {
 });
 
 /**
+ * Raised on an actor the first time a world holds it.
+ *
+ * ON THE SPATIAL RULE because being in a world is what this rule is about: an
+ * actor's position, its scale, whether it has left the map — and now the
+ * moment it arrived. It is not an ability and nothing elects it; every actor
+ * is created, the way every actor has a position.
+ *
+ * QUEUED, LIKE EVERY EVENT, so a handler runs after the tick rather than in
+ * the middle of whatever placed the actor — which matters more here than
+ * elsewhere, because the commonest thing to do when an actor appears is to add
+ * ANOTHER one, and a world that grew an actor while it was being built or
+ * walked is a world mutating a list somebody is iterating.
+ *
+ * So an actor placed while the world is being described hears this on the
+ * first tick, and one spawned during a tick hears it on the next. What that
+ * costs is a frame; what it buys is that `add actor` inside the handler is the
+ * same ordinary call it is anywhere else.
+ *
+ * THIS IS WHAT LETS AN ACTOR BRING ITS OWN COMPANY (specs/ENHANCEMENTS.md). A
+ * health bar over an actor's head used to have to be placed by the WORLD and
+ * pointed back at the actor, so giving one actor a bar meant editing every
+ * world it appears in — and two of that actor shared one bar. An actor that
+ * hears its own creation can add its bar itself, which is both fewer files to
+ * edit and one bar each.
+ */
+export const CreatedEvent = rule.addEvent(SPATIAL.created, {
+  name: 'is created',
+});
+
+/**
  * Raised on an actor when one of its tweens reaches its end.
  *
  * On the SPATIAL rule because a tween is not about appearance — it moves any
