@@ -86,7 +86,8 @@ export const FileMenus = () => {
   // A rename rewrites the WHOLE project in one go — the file, its contents and
   // every reference to it — which is a write `useFileOperations` has no verb
   // for: its own are one act on one file.
-  const {currentSources, updateSources} = useSources<MultiFileSource>();
+  const {currentSources, updateSources, replaceSources} =
+    useSources<MultiFileSource>();
   const config = useCodebridgeConfig();
   const {promptForName, confirm, alert} = usePrompts();
   const isReadOnly = useAppSelector(labActions.isReadOnlyWorkspace);
@@ -328,9 +329,20 @@ export const FileMenus = () => {
         await alert({title: `Cannot rename ${was}`, message: refusal});
         return;
       }
-      updateSources({...currentSources, source: next});
+      // REPLACE, not update, because this rewrites files rather than adding
+      // one — the renamed file's own contents, and every reference to it in
+      // every other file. One of those may be the workspace on screen, and an
+      // editor is told a document was replaced by the epoch and nothing else
+      // (SourcesContext).
+      //
+      // What it looked like without this: renaming the open actor left a file
+      // called `bouncer.actor` holding an actor still called "Ball", because
+      // the stale workspace saved its old contents back over the rewritten
+      // ones. The file moved, the references followed it, and the name inside
+      // did not.
+      replaceSources({...currentSources, source: next});
     },
-    [ops.source, promptForName, alert, updateSources, currentSources, thenAsk],
+    [ops.source, promptForName, alert, replaceSources, currentSources, thenAsk],
   );
 
   /**

@@ -102,9 +102,14 @@ vi.mock('@code-dot-org/codebridge', () => ({
 }));
 
 const updateSources = vi.fn();
+const replaceSources = vi.fn();
 
 vi.mock('@code-dot-org/lab/contexts', () => ({
-  useSources: () => ({currentSources: {source: SOURCE}, updateSources}),
+  useSources: () => ({
+    currentSources: {source: SOURCE},
+    updateSources,
+    replaceSources,
+  }),
 }));
 
 vi.mock('@code-dot-org/lab/redux', () => ({
@@ -216,14 +221,36 @@ describe('the file menus', () => {
     );
     fireEvent.click(screen.getByText('Rename'));
 
-    await vi.waitFor(() => expect(updateSources).toHaveBeenCalled());
-    const written = updateSources.mock.calls.at(-1)![0] as {
+    await vi.waitFor(() => expect(replaceSources).toHaveBeenCalled());
+    const written = replaceSources.mock.calls.at(-1)![0] as {
       source: {files: Record<string, {name: string; contents: string}>};
     };
     expect(written.source.files.a.name).toBe('hasHeavyGravity.rule');
     expect(
       JSON.parse(written.source.files.a.contents).blocks.blocks[0].fields.NAME,
     ).toBe('Has Heavy Gravity');
+  });
+
+  it('REPLACES the sources, so an open workspace re-seeds', async () => {
+    // A rename rewrites files rather than adding one — the renamed file's own
+    // contents, and every reference to it in every other file — and one of
+    // those may be the workspace on screen. An editor is told a document was
+    // replaced by the epoch and by nothing else (SourcesContext), so an
+    // ordinary `updateSources` here leaves it showing the old blocks, and its
+    // next save writes them back over the rename.
+    //
+    // What that looked like, in a browser: a file called `bouncer.actor`
+    // holding an actor still called "Ball". The file had moved and the
+    // references had followed it; the name inside had not.
+    promptForName.mockResolvedValueOnce('Has Heavy Gravity');
+    openMenu('Rules');
+    fireEvent.click(
+      screen.getByRole('button', {name: 'Options for Has Gravity'}),
+    );
+    fireEvent.click(screen.getByText('Rename'));
+
+    await vi.waitFor(() => expect(replaceSources).toHaveBeenCalled());
+    expect(updateSources).not.toHaveBeenCalled();
   });
 
   it('offers renaming the thing, not the file', () => {
