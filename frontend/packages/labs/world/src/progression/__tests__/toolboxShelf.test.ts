@@ -130,6 +130,11 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   // already on screen or in the rule's own drawer.
   'platformer/surfaces': ['world_use_trait'],
   'platformer/enemies': ['world_use_trait'],
+  // Only the trait rows: naming what to hunt reuses the value block the
+  // starter's chaser already has on screen. `first actor in` is unlocked on
+  // another branch, so a lesson that sent somebody for one would be asking
+  // for a block they have not got.
+  'platformer/hunter': ['world_use_trait'],
   'platformer/ground': ['world_use_trait'],
   'platformer/pickups': ['world_use_trait', 'world_print'],
   'platformer/hazards': ['world_use_trait', 'world_print'],

@@ -65,7 +65,21 @@
 // and delivered after the steps — so by the time a handler asks how many are
 // left, the one just taken is already gone.
 //
-// TWO ENEMIES, AND THEY ARE THE SAME ACTOR WITH ONE NUMBER CHANGED. A ball
+// NONE OF THEM LEAVES THE ROOM, and it costs one trait each rather than a
+// rule. "Stays in the Map" puts a body back where it was when it reaches an
+// edge — and a body that got nowhere is exactly what both enemy rules read as
+// a moment to decide something. So the ball turns round at the edge, the
+// rocket takes the corner, and the robot picks a new direction, with nothing
+// in any of the three rules that has ever heard of a map.
+//
+// THE ROBOT IS THE ONE THAT THINKS, and it is the only actor in the level that
+// knows the Pilot exists. It walks the floor, takes the ladder when the Pilot
+// is above it, and reconsiders only where reconsidering is possible — so it is
+// slow, legible, and gets somewhere, which is the whole argument
+// `rules/prowling` makes. It is pointed at the Pilot BY KIND, the same one
+// cross-actor line the gauge uses.
+//
+// TWO MORE ENEMIES, AND THEY ARE THE SAME ACTOR WITH ONE NUMBER CHANGED. A ball
 // that rolls the floor and comes back is `turn by 180`; a rocket that takes
 // the next turning is `turn by 90`. Both elect "Turns When It Hits Something"
 // and neither has any idea the other exists — which is the whole claim
@@ -89,6 +103,7 @@ import {
 } from '../constants';
 import {
   arrowsRule,
+  boundsRule,
   climbRule,
   collectRule,
   collisionsRule,
@@ -100,6 +115,7 @@ import {
   jumpRule,
   motionRule,
   progressRule,
+  prowlingRule,
   scoreRule,
   solidRule,
   surfacesRule,
@@ -251,6 +267,9 @@ const DOOR_AT = [24, 14] as const;
 const ENEMIES: ReadonlyArray<readonly [string, number, number]> = [
   ['actors/ball', 12, 14],
   ['actors/rocket', 10, 3],
+  // At the far end of the floor from the Pilot, so the first thing a player
+  // sees it do is set off towards them.
+  ['actors/robot', 20, 14],
 ];
 
 /**
@@ -458,22 +477,24 @@ const PILOT_ACTOR = JSON.stringify({
               type: 'world_set_Jumping_JumpStrengthProperty',
               inputs: {ACTOR: me(), VALUE: number(2.6)},
             },
-            // Six hits rather than the default three, and a second of mercy
-            // rather than half. The default pair is tuned for a level where
-            // an enemy is something you walk into; here the ball rolls the
-            // floor the Pilot has to cross, so three hits is a room you lose
-            // before you have understood it.
+            // Eight hits and a second and a half of mercy, against defaults
+            // of three and a half. The defaults are tuned for a level where
+            // an enemy is something you walk into; this room has three that
+            // come to YOU — a ball rolling the floor, a rocket circling the
+            // walls, and a robot that follows you up ladders — and a Pilot
+            // who stands still for four seconds while learning the controls
+            // should not lose the game for it.
             {
               type: 'world_set_Health_MostHealthProperty',
-              inputs: {ACTOR: me(), VALUE: number(6)},
+              inputs: {ACTOR: me(), VALUE: number(8)},
             },
             {
               type: 'world_set_Health_HealthProperty',
-              inputs: {ACTOR: me(), VALUE: number(6)},
+              inputs: {ACTOR: me(), VALUE: number(8)},
             },
             {
               type: 'world_set_Health_MercyTimeProperty',
-              inputs: {ACTOR: me(), VALUE: number(1)},
+              inputs: {ACTOR: me(), VALUE: number(1.5)},
             },
             // Half a tank to start with. A full one crosses the whole room,
             // which would leave the first two cans as scenery.
@@ -687,6 +708,10 @@ const enemyActor = (
           next: {
             block: stack([
               useTrait('Turning#TurnsWhenItHitsSomethingTrait'),
+              // Both axes, because a rocket travels on both. See the header:
+              // the edge stops it, and being stopped is what makes it turn.
+              useTrait('Boundaries#StaysAcrossTrait'),
+              useTrait('Boundaries#StaysDownTrait'),
               ...(falls ? [useTrait('Gravity#AffectedByGravityTrait')] : []),
               // What makes it an enemy rather than an obstacle. It does not
               // know who it damages, and the Pilot does not know what damaged
@@ -715,6 +740,75 @@ const enemyActor = (
       ],
     },
   });
+
+/**
+ * The robot: the only actor in the level that knows the Pilot is there.
+ *
+ * It is pointed at the Pilot BY KIND — `first actor in ⟨any Pilot⟩` — which is
+ * the same one cross-actor line the gauge uses, and it is set once when the
+ * robot is defined rather than every frame: what it hunts does not change, and
+ * a step that re-read it would be re-deciding something nobody asked about.
+ */
+const ROBOT_ACTOR = JSON.stringify({
+  blocks: {
+    blocks: [
+      {
+        type: 'world_actor',
+        x: 20,
+        y: 20,
+        fields: {NAME: 'Robot'},
+        next: {
+          block: stack([
+            useTrait('Gravity#AffectedByGravityTrait'),
+            useTrait('Climbing#ClimbsTrait'),
+            useTrait('Prowling#ProwlsTrait'),
+            // Across only: a robot walks, and staying DOWN as well would have
+            // it hovering at the ceiling of the map rather than falling.
+            useTrait('Boundaries#StaysAcrossTrait'),
+            useTrait('Health#DealsDamageTrait'),
+            {type: 'world_set_sprite', fields: {SPRITE: 'robot.png'}},
+            // Setting off LEFTWARDS, towards where the Pilot starts. Its
+            // first junction is landing, which can happen before the handler
+            // below has named its quarry — and a robot with nothing to hunt
+            // yet keeps whatever it was born with, so being born facing the
+            // right way is what makes the first ten seconds read properly.
+            {
+              type: 'world_set_Prowling_GoingProperty',
+              inputs: {ACTOR: me(), VALUE: number(-1)},
+            },
+          ]),
+        },
+      },
+      // WHO IT HUNTS, on the frame it arrives rather than in the rows above.
+      // A row under `define actor` is a declaration and has no world to ask —
+      // `any ⟨Pilot⟩` there is a `ReferenceError: world is not defined`, which
+      // presents as the whole project failing to build. `when created` is a
+      // handler, so it has one, and it is the right moment anyway: what a
+      // robot hunts does not change, and a step re-reading it every frame
+      // would be re-deciding something nobody asked about.
+      {
+        type: 'world_on_Space_CreatedEvent',
+        x: 20,
+        y: 200,
+        inputs: {ACTOR: me()},
+        next: {
+          block: {
+            type: 'world_set_Prowling_ActorToHuntProperty',
+            inputs: {
+              ACTOR: me(),
+              VALUE: {
+                block: {
+                  type: 'world_first_actor',
+                  inputs: {SOURCE: kind('actors/pilot')},
+                },
+              },
+            },
+          },
+        },
+      },
+    ],
+  },
+});
 
 /**
  * The way out: shut until the gems are gone, and then not.
@@ -1030,6 +1124,12 @@ export const JETPACK_SPEC: ProjectSpec = {
       contents: actingTile('Sludge', 'sludge.png', 'Surfaces#SlowsTrait'),
       folderId: 'actors',
     },
+    robotActor: {
+      name: 'robot.actor',
+      language: 'actor',
+      contents: ROBOT_ACTOR,
+      folderId: 'actors',
+    },
     ballActor: {
       name: 'ball.actor',
       language: 'actor',
@@ -1161,6 +1261,18 @@ export const JETPACK_SPEC: ProjectSpec = {
       contents: arrowsRule,
       folderId: 'rules',
     },
+    boundsRuleFile: {
+      name: 'bounds.rule',
+      language: 'rule',
+      contents: boundsRule,
+      folderId: 'rules',
+    },
+    prowlingRuleFile: {
+      name: 'prowling.rule',
+      language: 'rule',
+      contents: prowlingRule,
+      folderId: 'rules',
+    },
     turningRuleFile: {
       name: 'turning.rule',
       language: 'rule',
@@ -1229,6 +1341,7 @@ export const JETPACK_SPEC: ProjectSpec = {
       'doorOpen',
       'pinball',
       'rocket',
+      'robot',
       'fuelCan',
       'fuelCanSmall',
     ]),

@@ -206,6 +206,13 @@ export const STOCK_SPRITES: readonly StockSprite[] = [
     dataUrl: image('fuelCanSmall'),
   },
   {
+    id: 'robot',
+    name: 'Tracked Robot',
+    description:
+      'A boxy robot on a tank track with one red eye, for something that goes along the floor and takes ladders.',
+    dataUrl: image('robot'),
+  },
+  {
     id: 'pinball',
     name: 'Steel Ball',
     description:

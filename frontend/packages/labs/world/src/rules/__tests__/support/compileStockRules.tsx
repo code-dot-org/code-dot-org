@@ -73,6 +73,7 @@ import {
   steeringRule,
   surfacesRule,
   turningRule,
+  prowlingRule,
   timeRule,
   turnsRule,
   wrapRule,
@@ -198,6 +199,8 @@ export const ALL_STOCK_SOURCES: Record<string, string> = {
   'rules/climb': climbRule,
   'rules/surfaces': surfacesRule,
   'rules/turning': turningRule,
+  // After Climbing: it takes ladders with the same trait a player does.
+  'rules/prowling': prowlingRule,
   'rules/drive': driveRule,
   'rules/mouse': mouseRule,
   'rules/writing': writingRule,

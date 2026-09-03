@@ -29,6 +29,7 @@ import {beforeEach, describe, expect, it} from 'vitest';
 import {PositionProperty, Vector, type World} from '../engine';
 import {keyName} from '../engine/core/keys';
 import {SpriteProperty} from '../engine/rules/animation';
+import {MAP_COLUMNS, MAP_ROWS} from '../fixtures/jetpack';
 import {WORLD_SCENARIOS} from '../fixtures/scenarios';
 import {projectFiles} from '../runtime/projectFiles';
 import {TILE_SIZE} from '../runtime/viewport';
@@ -372,5 +373,58 @@ describe('the jetpack level', () => {
 
     expect(health()).toBeLessThan(before);
     expect(lost).toBe(0);
+  });
+
+  it('sets the robot after the Pilot, once, on the frame it arrives', () => {
+    // The one cross-actor line in the enemy. A row under `define actor` has no
+    // world to ask — `any ⟨Pilot⟩` there fails the whole build with
+    // "world is not defined" — so it happens in a handler, and `when created`
+    // is the right one: what a robot hunts does not change.
+    const {world} = project;
+    play(world, 0.5);
+    const robot = named(world, 'Enemy2');
+
+    // A list of one, which is what every actor VALUE in the lab is: `first
+    // actor in` answers with no actors rather than with nothing, so a
+    // statement using it does nothing instead of failing.
+    expect(
+      (robot as {get(p: unknown): unknown[]}).get(
+        (project.modules['rules/prowling'] as Record<string, unknown>)
+          .ActorToHuntProperty,
+      ),
+    ).toEqual([pilot(world)]);
+  });
+
+  it('sends the robot after the Pilot along the floor', () => {
+    // It starts at the far end and the Pilot is at the ladder, so the first
+    // thing it does when it lands is set off leftwards — which is a decision
+    // and not a heading it was given.
+    const {world} = project;
+    play(world, 0.5);
+    const robot = named(world, 'Enemy2');
+    const from = robot.get(PositionProperty).x;
+
+    play(world, 2);
+
+    expect(robot.get(PositionProperty).x).toBeLessThan(from - 50);
+  });
+
+  it('keeps every enemy in the room', () => {
+    // One trait each rather than a rule: "Stays in the Map" puts a body back
+    // where it was at an edge, and a body that got nowhere is what both enemy
+    // rules read as a moment to decide something. So they turn round there,
+    // and nothing in either rule has ever heard of a map.
+    const {world} = project;
+    play(world, 0.5);
+
+    play(world, 12);
+
+    for (const id of ['Enemy0', 'Enemy1', 'Enemy2']) {
+      const where = named(world, id).get(PositionProperty);
+      expect(where.x, id).toBeGreaterThan(0);
+      expect(where.x, id).toBeLessThan(MAP_COLUMNS * 32);
+      expect(where.y, id).toBeGreaterThan(0);
+      expect(where.y, id).toBeLessThan(MAP_ROWS * 32);
+    }
   });
 });

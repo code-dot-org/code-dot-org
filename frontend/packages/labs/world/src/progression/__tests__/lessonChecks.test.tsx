@@ -1980,6 +1980,50 @@ describe('the enemy lesson’s check', () => {
   });
 });
 
+describe('the hunter lesson’s check', () => {
+  const lesson = LESSONS['platformer/hunter'];
+
+  /** The lesson done: Chases swapped for Prowls, and the quarry re-pointed. */
+  const prowling = () =>
+    editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      // The trait and the setter, which the lesson names as two edits and
+      // which live at two depths: the trait is a row beside the others, and
+      // the setter is inside the step that runs it — so this descends.
+      const swap = (row: Row | undefined) => {
+        for (let at = row; at; at = at.next?.block) {
+          if (at.fields?.TRAIT === 'Steering#ChasesTrait') {
+            at.fields = {TRAIT: 'Prowling#ProwlsTrait'};
+          }
+          if (at.type === 'world_set_Steering_ActorToChaseProperty') {
+            at.type = 'world_set_Prowling_ActorToHuntProperty';
+          }
+          swap(inSocket(at, 'DO'));
+        }
+      };
+      swap(actorIn(workspace, 'Robot'));
+      return JSON.stringify(workspace);
+    });
+
+  it('refuses the chaser it starts from', async () => {
+    // The false pass written on the tile, and it is the starter: a chaser
+    // really does come after you, and really cannot get up a ladder.
+    const {passes, result} = await check('platformer/hunter', lesson.source);
+    const ys = (result.samples.robot as {y: number}[][]).map(at => at[0].y);
+    // It really is chasing rather than stuck: the Hero is straight above it,
+    // so it rises — and stops dead against the underside of the floor she is
+    // standing on, which is the whole of what a chaser can do here.
+    expect(Math.max(...ys) - Math.min(...ys)).toBeGreaterThan(40);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts a robot that takes the ladder', async () => {
+    const {passes, result} = await check('platformer/hunter', prowling());
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+});
+
 describe('the ladder lesson’s check', () => {
   const lesson = LESSONS['platformer/ladders'];
 

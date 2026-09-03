@@ -1516,6 +1516,43 @@ export const TILES: readonly Tile[] = [
     },
   },
   {
+    id: 'platformer/hunter',
+    region: 'platformer',
+    at: at('platformer', 5, 1),
+    title: 'An enemy that thinks',
+    teaches:
+      'Why an enemy that reads you every frame is useless in a platformer, and what it does instead.',
+    task: 'A robot on the lower floor and a Hero on the upper one. Make the robot come and find you.',
+    requires: ['platformer/enemies'],
+    unlocks: [
+      {kind: 'rule', id: 'prowling'},
+      {kind: 'asset', id: 'robot'},
+    ],
+    check: {
+      kind: 'outcome',
+      says: 'The Robot crosses the lower floor, takes the ladder, and arrives on the floor the Hero is standing on.',
+      falsePass:
+        '"Chases and Flees", which points itself at the Hero every frame and would pass any check that only asked whether it came closer. What it cannot do is get UP: it walks to the spot under the Hero and stays there, because the way up is a ladder and a chaser has no idea what one is. So this asks whether the Robot changed floors.',
+      run: {
+        probes: {robot: {kind: 'positions', of: 'Robot'}},
+        trace: Array.from({length: 20}, () => ({seconds: 0.4})),
+      },
+      passes: ({samples}) => {
+        const ys = (samples.robot ?? []).map(
+          sample => (sample as {y: number}[])[0]?.y ?? 0,
+        );
+        if (ys.length < 4) {
+          return false;
+        }
+        // A robot standing on the upper floor is at 112. A CHASER, which is
+        // what the starter has, rises until it meets the underside of that
+        // floor and stops at 176 — so the line between them is what this
+        // measures, and the only way to cross it is the ladder.
+        return Math.min(...ys) < 150;
+      },
+    },
+  },
+  {
     id: 'platformer/ground',
     region: 'platformer',
     at: at('platformer', 2, 2),

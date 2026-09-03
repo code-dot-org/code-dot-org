@@ -3064,6 +3064,41 @@ describe('Turning', () => {
     expect(heading(mover)).toBe(180);
   });
 
+  it('turns at the map’s edge, with no wall there at all', () => {
+    // The composition worth having, and neither rule was written for it:
+    // "Stays in the Map" puts a body back where it was, which is a body that
+    // got nowhere, which is the fourth junction. So an enemy stays in the
+    // room without the room needing walls.
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([
+        rule('rules/motion'),
+        rule('rules/collisions'),
+        rule('rules/bounds'),
+        rule('rules/turning'),
+      ])
+      .instantiate();
+    const flier = new ActorBuilder({id: 'flier', name: 'flier'})
+      .useTraits([
+        of('rules/turning', 'TurnsWhenItHitsSomethingTrait'),
+        of('rules/bounds', 'StaysAcrossTrait'),
+        of('rules/motion', 'CanMoveTrait'),
+      ])
+      .set(PositionProperty, at(160, 160))
+      .set(of('rules/collisions', 'SizeProperty'), new Vector(16, 16))
+      .instantiate('flier');
+    world.addActor(flier);
+
+    // The map is one screen — 320 across — so a flier going right at a
+    // hundred pixels a second meets the edge in under two seconds.
+    run(world, 3);
+
+    expect(
+      (flier as {get(p: unknown): number}).get(
+        of('rules/turning', 'HeadingProperty'),
+      ),
+    ).toBe(180);
+  });
+
   it('keeps the heading a number a person can read', () => {
     // Four right turns is a full circle, and a heading that grew to 360 and
     // then 450 would be a property nobody could look at in the inspector and
@@ -3075,5 +3110,171 @@ describe('Turning', () => {
 
     expect(heading(mover)).toBeGreaterThanOrEqual(0);
     expect(heading(mover)).toBeLessThan(360);
+  });
+});
+
+describe('Prowling', () => {
+  /**
+   * Two floors joined by a ladder, a robot on the lower one, a quarry to hunt.
+   *
+   *   row 2 (y 80)    - - - - - - - - - -   the upper floor, with a gap
+   *   rows 3..5       |   the ladder, in the gap
+   *   row 6 (y 208)   - - - - - - - - - -   the lower floor
+   *
+   * The gap is what makes the upper floor reachable: a one-way platform is
+   * something you rise THROUGH, but the robot climbs rather than jumping.
+   */
+  const rooms = () => {
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([
+        rule('rules/motion'),
+        rule('rules/collisions'),
+        rule('rules/solid'),
+        rule('rules/gravity'),
+        rule('rules/climb'),
+        rule('rules/prowling'),
+      ])
+      .instantiate();
+    const floor = (id: string, x: number, y: number, w: number) => {
+      const one = new ActorBuilder({id, name: id})
+        .useTraits([of('rules/gravity', 'ActsAsGroundTrait')])
+        .set(PositionProperty, at(x, y))
+        .set(of('rules/collisions', 'SizeProperty'), new Vector(w, 16))
+        .instantiate(id);
+      world.addActor(one);
+      return one;
+    };
+    floor('lower', 200, 208, 400);
+    // The upper floor either side of the ladder's column, so there is a hole
+    // to come up through — and the hole is EXACTLY the ladder's width, or
+    // stepping off the top drops you straight back down it.
+    floor('upperLeft', 92, 80, 184);
+    floor('upperRight', 308, 80, 184);
+    // Walls at both ends, because a room without them is a room a robot
+    // walks out of, and this is a test about deciding rather than about
+    // falling off the world.
+    const solid = (id: string, x: number) => {
+      const one = new ActorBuilder({id, name: id})
+        .useTraits([
+          of('rules/gravity', 'ActsAsGroundTrait'),
+          of('rules/solid', 'SolidTrait'),
+        ])
+        .set(PositionProperty, at(x, 120))
+        .set(of('rules/collisions', 'SizeProperty'), new Vector(16, 200))
+        .instantiate(id);
+      world.addActor(one);
+    };
+    solid('west', 8);
+    solid('east', 392);
+    for (const [index, y] of [80, 112, 144, 176, 192].entries()) {
+      const rung = new ActorBuilder({id: 'rung', name: 'rung'})
+        .useTraits([of('rules/climb', 'CanBeClimbedTrait')])
+        .set(PositionProperty, at(200, y))
+        .set(of('rules/collisions', 'SizeProperty'), new Vector(32, 32))
+        .instantiate(`rung${index}`);
+      world.addActor(rung);
+    }
+    const prey = new ActorBuilder({id: 'prey', name: 'prey'})
+      .set(PositionProperty, at(100, 56))
+      .set(of('rules/collisions', 'SizeProperty'), new Vector(16, 16))
+      .instantiate('prey');
+    world.addActor(prey);
+    const robot = new ActorBuilder({id: 'robot', name: 'robot'})
+      .useTraits([
+        of('rules/gravity', 'AffectedByGravityTrait'),
+        of('rules/climb', 'ClimbsTrait'),
+        of('rules/prowling', 'ProwlsTrait'),
+        of('rules/motion', 'CanMoveTrait'),
+      ])
+      .set(PositionProperty, at(320, 184))
+      .set(of('rules/collisions', 'SizeProperty'), new Vector(16, 16))
+      .instantiate('robot');
+    robot.set(of('rules/prowling', 'ActorToHuntProperty'), prey as never);
+    world.addActor(robot);
+    run(world, 0.3);
+    return {world, robot, prey};
+  };
+
+  const at2 = (who: unknown) =>
+    (who as {get(p: unknown): Vector}).get(PositionProperty);
+  const going = (robot: unknown) =>
+    (robot as {get(p: unknown): number}).get(
+      of('rules/prowling', 'GoingProperty'),
+    );
+
+  it('turns towards its quarry when it lands, and not before', () => {
+    // The whole shape. It starts going right with the prey away to the left,
+    // and the decision waits for the floor.
+    const {world, robot} = rooms();
+
+    run(world, 1);
+
+    expect(going(robot)).toBe(-1);
+  });
+
+  it('keeps going between junctions rather than following every frame', () => {
+    // What separates this from Steering. The prey is moved to the other side
+    // mid-walk, and the robot carries on: it is not at a junction, so it does
+    // not know and does not look.
+    const {world, robot, prey} = rooms();
+    run(world, 1);
+    expect(going(robot)).toBe(-1);
+
+    prey.set(PositionProperty, at(380, 56) as never);
+    run(world, 0.4);
+
+    expect(going(robot)).toBe(-1);
+  });
+
+  it('takes the ladder when the quarry is above it', () => {
+    // Up before sideways, which is the ordering the header argues for: a
+    // ladder is the only way to change which floor you are on.
+    const {world, robot} = rooms();
+
+    run(world, 4);
+
+    expect(at2(robot).y).toBeLessThan(150);
+  });
+
+  it('says when it chooses, and chooses rarely', () => {
+    // Rarely is the point. A decision every frame is an enemy nobody can
+    // predict, and one that oscillates at the foot of a ladder for ever.
+    const {world, robot} = rooms();
+    let chose = 0;
+    (robot as {on(e: unknown, f: () => void): void}).on(
+      of('rules/prowling', 'ChoosesEvent'),
+      () => {
+        chose++;
+      },
+    );
+
+    run(world, 3);
+
+    expect(chose).toBeGreaterThan(0);
+    // Three seconds is a hundred and eighty frames. A continuous chaser would
+    // have decided every one of them.
+    expect(chose).toBeLessThan(12);
+  });
+
+  it('does not turn round for a quarry that is barely to one side', () => {
+    // "Exactly the same x" is almost never true and almost always nearly
+    // true, so without a tolerance a robot under its quarry flips direction
+    // at every junction and shakes on the spot. Two pixels is well inside
+    // half a tile, so the junction below must leave the heading alone.
+    const {world, robot, prey} = rooms();
+    run(world, 1);
+    const before = going(robot);
+
+    // Put the prey two pixels the other side of the robot and make a
+    // junction happen, by dropping the robot so that it lands.
+    prey.set(PositionProperty, new Vector(at2(robot).x + 2, 56) as never);
+    robot.set(
+      PositionProperty,
+      new Vector(at2(robot).x, at2(robot).y - 40) as never,
+    );
+    prey.set(PositionProperty, new Vector(at2(robot).x + 2, 56) as never);
+    run(world, 0.4);
+
+    expect(going(robot)).toBe(before);
   });
 });

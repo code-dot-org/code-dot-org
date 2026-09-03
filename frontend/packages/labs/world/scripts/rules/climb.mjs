@@ -136,7 +136,7 @@ const speed = climbs.number('climb speed', 2);
 // Whether this actor is on a ladder and going somewhere on it. Read-only: the
 // three blocks below are the only way to change it, which is what keeps
 // `starts climbing` and `stops climbing` honest.
-const climbing = climbs.boolean('climbing', 'false', {readonly: true});
+export const climbing = climbs.boolean('climbing', 'false', {readonly: true});
 // …and which way. Meaningless while `climbing` is false.
 const goingUp = climbs.boolean('climbing up', 'false', {readonly: true});
 // Whether a climb pulls the climber on to the middle of the ladder.
@@ -182,7 +182,7 @@ const halfOf = who =>
  * at a ladder is refused. A sixtieth of a second, against a mechanic where the
  * ladder is somewhere you are standing.
  */
-const onLadder = climbs.block({
+export const onLadder = climbs.block({
   returns: 'boolean',
   description:
     'Whether this actor is touching a ladder — something that elects "Can Be Climbed".',

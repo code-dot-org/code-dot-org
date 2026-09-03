@@ -40,6 +40,7 @@ import {mouseRule} from './mouse';
 import {pathRule} from './path';
 import {patrolRule} from './patrol';
 import {progressRule} from './progress';
+import {prowlingRule} from './prowling';
 import {revealsRule} from './reveals';
 import {scoreRule} from './score';
 import {solidRule} from './solid';
@@ -379,6 +380,15 @@ export const STOCK_RULES: readonly StockRule[] = [
     contents: turningRule,
   },
   {
+    id: 'prowling',
+    name: 'Prowling',
+    ability: 'Chooses Only at a Junction',
+    description:
+      'An enemy that goes the way it is going and reconsiders only where reconsidering is possible — when it lands, when it reaches a ladder, when a climb ends. It takes ladders using the same trait a player does.',
+    provides: ['Prowls'],
+    contents: prowlingRule,
+  },
+  {
     id: 'drive',
     name: 'Arrow Drive',
     ability: 'Drives with Arrow Keys',
@@ -500,6 +510,7 @@ export {
   climbRule,
   surfacesRule,
   turningRule,
+  prowlingRule,
   mouseRule,
   writingRule,
   boundsRule,

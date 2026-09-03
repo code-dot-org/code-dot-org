@@ -31,6 +31,7 @@ const RULES = [
   'climb',
   'surfaces',
   'turning',
+  'prowling',
   'solid',
   'wrap',
   'bounds',

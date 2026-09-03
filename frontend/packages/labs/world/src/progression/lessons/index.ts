@@ -12,8 +12,8 @@
 // Blockly JSON behind them. So `catalogue.ts` stays data about tiles, and the
 // projects live here, looked up by tile id.
 //
-// SEVENTY-TWO OF SEVENTY-TWO: every tile on the map has a lesson, a starting
-// project, and a check tested in both directions.
+// SEVENTY-THREE OF SEVENTY-THREE: every tile on the map has a lesson, a
+// starting project, and a check tested in both directions.
 //
 // What is written is milestone 4 of specs/PROGRESSION_UI.md and then some: all
 // six FOUNDATIONS, and Arcade, Story and Making whole after them.
@@ -1929,6 +1929,180 @@ beat and it spends half its life pressed against the end.
 5. The rule never asks what is in front of it. It asks whether it *got* where
    it asked to go, which is one subtraction and is true of every way of being
    stopped — a wall, a body pushed apart, another actor.
+`.trim(),
+};
+
+// ── platformer/hunter ────────────────────────────────────────────────────────
+
+const hunter: WorldScenario = {
+  name: 'A robot that cannot get up',
+  description: 'Two floors, a ladder at one end, and a robot at the other.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        createInMap(local('ground'), [
+          ...floorAcross(10),
+          // The upper floor, with the hole at the FAR END from where the
+          // Robot and the Hero stand. That is the whole geometry of the
+          // lesson: a chaser goes in a straight line, and straight up from
+          // the Robot is solid floor.
+          ...[2, 3, 4, 5, 6, 7, 8, 9].map(column =>
+            placed(`upper${column}`, column * 32 + 16, 144),
+          ),
+          // A wall at each end of the lower floor, so nothing walks off it
+          // before it has landed — and landing is when a robot first gets to
+          // think.
+          ...[176, 208, 240, 272].flatMap(y => [
+            placed(`west${y}`, 16, y),
+            placed(`east${y}`, 304, y),
+          ]),
+        ]),
+        createInMap(
+          local('ladder'),
+          [144, 176, 208, 240, 272].map((y, index) =>
+            placed(`rung${index}`, 48, y),
+          ),
+        ),
+        addActor(local('robot'), [placeAt(256, 240)]),
+        addActor(local('hero'), [placeAt(256, 112)]),
+      ],
+      actors: [
+        {
+          id: 'hero',
+          name: 'Hero',
+          rows: [
+            useTrait('Gravity#AffectedByGravityTrait'),
+            useTrait('Input#TakesKeyboardInputTrait'),
+            useTrait('Arrow Keys#MovesAcrossTrait'),
+            useTrait('Climbing#ClimbsWithArrowKeysTrait'),
+            setSprite('player.png'),
+          ],
+        },
+        {
+          id: 'ground',
+          name: 'Ground',
+          // SOLID as well, and that is what makes the lesson a lesson: a
+          // chaser moves in two dimensions and would otherwise rise straight
+          // through the upper floor to reach you. Solid gives the room walls,
+          // so the only way up is the hole the ladder is in.
+          rows: [
+            useTrait('Gravity#ActsAsGroundTrait'),
+            useTrait('Solid Bodies#SolidTrait'),
+            setSprite('ground.png'),
+          ],
+        },
+        {
+          id: 'ladder',
+          name: 'Ladder',
+          rows: [
+            useTrait('Climbing#CanBeClimbedTrait'),
+            useTrait('Gravity#ActsAsGroundTrait'),
+            setSprite('ladder.png'),
+          ],
+        },
+        {
+          id: 'robot',
+          name: 'Robot',
+          // It ALREADY CHASES, and that is the lesson: a chaser reads where
+          // you are every frame and walks to the spot underneath you, and
+          // there it stays. The learner meets the failure before the rule.
+          //
+          // Starting with it also keeps the value block on screen — naming
+          // what to chase is `first actor in ⟨any Hero⟩`, which is unlocked
+          // on a different branch, so a lesson that asked a learner to go and
+          // find one would be asking for something they have not got.
+          rows: [
+            useTrait('Gravity#AffectedByGravityTrait'),
+            useTrait('Solid Bodies#SolidTrait'),
+            useTrait('Climbing#ClimbsTrait'),
+            // The map's edge stops it, which is a robot that got nowhere,
+            // which is a moment to decide something. Two rules that have
+            // never heard of each other, and no wall needed.
+            useTrait('Boundaries#StaysAcrossTrait'),
+            useTrait('Steering#ChasesTrait'),
+            setSprite('robot.png'),
+            // WHO IT IS AFTER, in a step of the Robot's own.
+            //
+            // Not a row beside the traits: a row under `define actor` is a
+            // DECLARATION, and `any ⟨Hero⟩` there has no world to ask. Not a
+            // row in the world either: that runs while the world is being
+            // built, when the list of Heroes is still empty. A step has a
+            // world and runs after everything is in it, and re-answering the
+            // same question every frame costs nothing worth counting.
+            {
+              type: 'world_trait_step',
+              fields: {PHASE: 'sense', NAME: 'know who to chase'},
+              inputs: {
+                DO: {
+                  block: {
+                    type: 'world_set_Steering_ActorToChaseProperty',
+                    inputs: {
+                      ACTOR: me(),
+                      VALUE: {
+                        block: {
+                          type: 'world_first_actor',
+                          inputs: {SOURCE: anyKind('hero')},
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          ],
+        },
+      ],
+    }),
+    sprites: ['player', 'ground', 'ladder', 'robot'],
+    rules: [
+      'gravity',
+      'solid',
+      'input',
+      'arrows',
+      'motion',
+      'bounds',
+      'climb',
+      'steering',
+      'prowling',
+    ],
+  }),
+  instructions: `
+## An enemy that thinks
+
+The Robot is on the lower floor and you are on the upper one, and it is
+already after you: it elects **⟨Chases⟩**, which reads where you are every
+frame and points itself at you.
+
+Run it. It comes straight at you — and stops dead against the underside of the
+floor you are standing on, and stays there, for ever. A chaser points itself
+at where you are and nothing else; in an open field that is the whole of
+pursuit, and in a room it is a machine pressed against a ceiling.
+
+### What you do
+
+1. Take **⟨Chases⟩** off the Robot and give it **use trait ⟨Prowls⟩**
+   instead, then swap **set actor to chase** for **set actor to hunt** in the
+   step below it — the same answer to a different question.
+   That step is where it is for a reason worth knowing: **any ⟨Hero⟩** has to
+   be read once there IS a Hero, and the rows beside the traits run before
+   anything has been put in the world.
+2. Watch it. It goes the way it is going and reconsiders only where
+   reconsidering is possible — when it lands, when it reaches the ladder, when
+   a climb ends, and when it stops getting anywhere.
+3. It takes the ladder. Not because it knows about ladders: it elects
+   **⟨Climbs⟩**, the same trait you do, so what a robot can climb is exactly
+   what you can.
+4. Stand still on the upper floor and watch it arrive. Then move to the other
+   side while it is climbing — it will not turn round until it gets somewhere,
+   which is what makes it something you can plan around.
+5. Set **close enough** to 0 and stand almost exactly above it. It shakes:
+   "the same x as me" is a thing that is almost never true and almost always
+   nearly true, and that number is what stops it mattering.
+6. It also has **⟨Stays Across⟩**, and that is worth looking at. Nothing in
+   **Prowls** has ever heard of a map — but the edge stops the Robot, and a
+   Robot that got nowhere is one of its four moments to think. So it turns
+   round at the edge, out of two rules that know nothing about each other.
 `.trim(),
 };
 
@@ -5492,6 +5666,7 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'platformer/ladders': ladders,
   'platformer/surfaces': surfaces,
   'platformer/enemies': enemies,
+  'platformer/hunter': hunter,
   'platformer/pickups': pickups,
   'platformer/hazards': hazards,
   'platformer/level': level,

@@ -63,6 +63,10 @@ export const SPRITE_NAMES = [
   // every other level: `player` is shared by the whole library and growing a
   // pack would put one on the platformer's hero too.
   'pilot',
+  // The enemy that thinks (rules/prowling): a box on a tank track, which is
+  // the shape that says "goes along the floor and takes its time" rather than
+  // "flies at you".
+  'robot',
   // Two enemies out of one rule and one number (rules/turning): a ball that
   // rolls back and forth along the floor, and a rocket that takes the next
   // turning. Both are drawn to be read as HAZARD before they are read as
@@ -480,6 +484,25 @@ const STATIC = {
     c.rect(8, 6, 16, 9, [140, 90, 42]); // upper panel
     c.rect(8, 19, 16, 9, [140, 90, 42]); // lower panel
     c.disc(22, 17, 2, [244, 196, 48]); // the handle, which is what says DOOR
+  },
+  robot(c) {
+    // A tracked base and a boxy body with one eye. The TRACK is what makes it
+    // read as ground-bound: a thing on treads goes where the floor goes, and
+    // a player reads that before they read anything else about it.
+    c.rect(2, 22, 28, 9, [46, 48, 58]); // the track, floor to axle
+    for (const x of [5, 12, 19, 26]) {
+      c.rect(x, 24, 3, 5, [120, 126, 140]); // its cleats
+    }
+    c.disc(8, 26, 3.5, [78, 84, 96]); // the drive wheels showing through
+    c.disc(24, 26, 3.5, [78, 84, 96]);
+    c.roundRect(5, 6, 22, 17, 4, [58, 62, 74]); // the body's edge
+    c.roundRect(6, 7, 20, 15, 3, [148, 156, 172]); // the body
+    c.rect(8, 9, 16, 4, [188, 196, 212]); // lit along the top
+    c.disc(16, 16, 4.5, [40, 44, 54]); // the eye's socket
+    c.disc(16, 16, 3, [232, 92, 72]); // …and the eye, which is the one warm
+    c.disc(15, 15, 1.2, [255, 200, 180]); // colour on it
+    c.rect(15, 2, 2, 5, [78, 84, 96]); // an aerial, so it has a top
+    c.disc(16, 2, 1.6, [232, 92, 72]);
   },
   pinball(c) {
     // Steel rather than the red `ball`, and lit hard from the upper left so it
