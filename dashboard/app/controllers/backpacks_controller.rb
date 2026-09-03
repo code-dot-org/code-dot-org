@@ -1,9 +1,6 @@
 class BackpacksController < ApplicationController
   before_action :authenticate_user!
 
-  # Key used for the backpack that belongs to no lab.
-  UNIVERSAL_APP_TYPE = 'universal'.freeze
-
   # GET /backpacks/channel(/:app_type)
   #
   # Return the channel token for the current user's backpack for the given app,
@@ -28,7 +25,7 @@ class BackpacksController < ApplicationController
   def get_channels
     backpacks = Backpack.where(user_id: current_user.id).order(:id).includes(:game)
     channels = backpacks.each_with_object({}) do |backpack, result|
-      app_type = backpack.game_id ? backpack.game&.name&.downcase : UNIVERSAL_APP_TYPE
+      app_type = backpack.game_id ? backpack.game&.name&.downcase : SharedConstants::UNIVERSAL_APP_TYPE
       # A backpack whose game no longer exists cannot be keyed by app type.
       result[app_type] = backpack.channel if app_type
     end
