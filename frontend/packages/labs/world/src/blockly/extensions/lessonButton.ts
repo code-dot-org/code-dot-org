@@ -24,6 +24,7 @@ import type {UnlockTarget} from '../../progression/types';
 import {stockRuleByName} from '../../rules/stock';
 import {refFromValue} from '../ruleRegistry';
 
+import {glyphIcon} from './glyphIcon';
 import {addOnChange} from './onChange';
 
 export const LESSON_BUTTON_EXTENSION = 'world_lesson_button';
@@ -31,7 +32,13 @@ export const LESSON_BUTTON_EXTENSION = 'world_lesson_button';
 /** The field's name on the block — how it is found again to remove it. */
 const FIELD_NAME = 'LESSON';
 
-/** FontAwesome's graduation cap, drawn as an SVG glyph like the eye beside it. */
+/**
+ * FontAwesome's graduation cap, drawn as an SVG glyph like the eye beside it.
+ *
+ * `graduation-cap` (f19d). In the FREE package as well as the pro one, which
+ * is what makes it safe here — see `glyphIcon` on why naming the family is
+ * not enough on its own.
+ */
 const CAP = '';
 
 /**
@@ -63,17 +70,6 @@ export function unlockNamedBy(block: Block): UnlockTarget | undefined {
     return {kind: 'actor', id: actor.slice('actors/'.length)};
   }
   return undefined;
-}
-
-/** The cap glyph, as the `<tspan>` `FieldButton` draws inside itself. */
-function capIcon(): SVGElement {
-  const icon = document.createElementNS(
-    'http://www.w3.org/2000/svg',
-    'tspan',
-  ) as SVGElement;
-  icon.style.fontFamily = '"Font Awesome 6 Pro", "FontAwesome"';
-  icon.textContent = CAP;
-  return icon;
 }
 
 /** The input the button rides on: the last one, after the dropdown. */
@@ -110,7 +106,7 @@ function syncButton(block: Block): void {
             setTimeout(() => openLesson(open), 0);
           }
         },
-        icon: capIcon(),
+        icon: glyphIcon(CAP),
         allowReadOnlyClick: true,
       }),
       FIELD_NAME,

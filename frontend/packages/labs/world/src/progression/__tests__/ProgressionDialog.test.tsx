@@ -164,8 +164,13 @@ describe('the detail pane', () => {
     expect(
       within(pane).getByRole('button', {name: 'Mark as done'}),
     ).toBeDisabled();
+    // The row for what it needs says the state as well as the name — it is a
+    // button now rather than a bullet with a link in it, so its accessible
+    // name is the whole row.
     expect(
-      within(pane).getByRole('button', {name: tile('motion/gravity').title}),
+      within(pane).getByRole('button', {
+        name: new RegExp(`^${tile('motion/gravity').title}\\b`),
+      }),
     ).toBeInTheDocument();
   });
 
@@ -173,7 +178,7 @@ describe('the detail pane', () => {
     await openOn('platformer/jump');
     await userEvent.click(
       within(detail()).getByRole('button', {
-        name: tile('motion/gravity').title,
+        name: new RegExp(`^${tile('motion/gravity').title}\\b`),
       }),
     );
     expect(

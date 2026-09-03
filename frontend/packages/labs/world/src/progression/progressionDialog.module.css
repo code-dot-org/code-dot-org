@@ -1,6 +1,13 @@
 /* The modal around the map: a header, the map, and a reading pane beside it.
    The map's own colours are `progressionMap.module.css`; this file is the
-   furniture. */
+   furniture.
+ *
+ * TYPE COMES FROM THE THEME, not from here. Every heading and paragraph in the
+ * dialog is a MUI `Typography` with one of the design system's own variants
+ * (`themes/code.org`), so what is left in this file is layout — margins, gaps,
+ * widths and the two or three opacities that say "quieter than the thing above
+ * it". A pixel size typed in here would be a fourth size nobody chose, and a
+ * dialog that is the lab's should read as the lab's. */
 
 .dialog {
   /* The design system's dialog paints its own surface and leaves the text
@@ -56,14 +63,11 @@
 
 .heading {
   margin: 0;
-  font-size: 18px;
-  font-weight: 700;
 }
 
 .count {
   max-width: 46ch;
   margin: 0;
-  font-size: 13px;
   opacity: 0.75;
 }
 
@@ -87,24 +91,17 @@
 
 .breadcrumb {
   margin: 0;
-  font-size: 12px;
-  letter-spacing: 0.06em;
   opacity: 0.65;
   text-transform: uppercase;
 }
 
 .title {
   margin: 2px 0 10px;
-  font-size: 20px;
-  font-weight: 700;
 }
 
 .detail h3.heading {
   margin: 18px 0 4px;
-  font-size: 12px;
-  letter-spacing: 0.08em;
   opacity: 0.7;
-  text-transform: uppercase;
 }
 
 .list {
@@ -118,8 +115,83 @@
 }
 
 .muted {
-  font-size: 13px;
   opacity: 0.65;
+}
+
+/* ── What a lesson needs ─────────────────────────────────────────────────── */
+
+/* Rows rather than bullets: each one goes somewhere, so each one is a target.
+   No list marker, because the icon is the marker and two would be one too
+   many. */
+.needs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.need {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+
+  /* 24px is the WCAG 2.2 floor for a pointer target; these are rows, so the
+     width is never the problem and the height is. */
+  min-height: 32px;
+  padding: 4px 8px;
+  border: 1px solid color-mix(in srgb, currentcolor 18%, transparent);
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+}
+
+.need:hover {
+  border-color: color-mix(in srgb, currentcolor 40%, transparent);
+  background: color-mix(in srgb, currentcolor 6%, transparent);
+}
+
+.need:focus-visible {
+  outline: 3px solid var(--focus, #17399e);
+  outline-offset: 2px;
+}
+
+.needIcon {
+  flex: none;
+  width: 16px;
+  text-align: center;
+}
+
+.needTitle {
+  flex: 1;
+  font-size: 14px;
+}
+
+/* The state, said in words as well as in the icon and its colour — colour on
+   its own is not something everybody can read. */
+.needState {
+  flex: none;
+  font-size: 12px;
+  opacity: 0.65;
+}
+
+/* Green for done and red for locked, and nothing for ready: two marks that
+   mean something and one that is just the shape of the row. */
+.need_done .needIcon {
+  color: #2d8a4e;
+}
+
+.need_shut .needIcon {
+  color: #c0392b;
+}
+
+.need_open .needIcon {
+  opacity: 0.45;
 }
 
 .pending {
@@ -127,7 +199,6 @@
   padding: 8px 10px;
   border-radius: 6px;
   background: color-mix(in srgb, currentcolor 7%, transparent);
-  font-size: 13px;
   opacity: 0.8;
 }
 
@@ -194,7 +265,6 @@
 
 .verdict {
   margin: 10px 0 0;
-  font-size: 14px;
 }
 
 .verdict:empty {
@@ -203,7 +273,6 @@
 
 .empty {
   padding: 20px 18px;
-  font-size: 14px;
   opacity: 0.7;
 }
 

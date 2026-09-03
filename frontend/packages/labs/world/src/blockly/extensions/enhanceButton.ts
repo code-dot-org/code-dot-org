@@ -44,6 +44,7 @@ import type {EnhanceTarget} from '../../actors/enhance/enhancements';
 import {editingActorModule, editingFileModule} from '../editingRule';
 import {definesWorld} from '../localActors';
 
+import {glyphIcon} from './glyphIcon';
 import {addOnChange} from './onChange';
 
 export const ENHANCE_BUTTON_EXTENSION = 'world_enhance_button';
@@ -55,7 +56,9 @@ const FIELD_NAME = 'ENHANCE';
  * FontAwesome's wand, drawn as an SVG glyph like the eye beside it.
  *
  * `wand-magic` (f0d0), which is the icon the file menus already put on
- * `Enhance…` — one act, one picture, wherever it is offered from.
+ * `Enhance…` — one act, one picture, wherever it is offered from. In the FREE
+ * package as well as the pro one, which is what makes it safe here; see
+ * `glyphIcon` on why naming the family is not enough by itself.
  */
 const WAND = '';
 
@@ -112,19 +115,6 @@ export function enhanceTarget(
     };
   }
   return undefined;
-}
-
-/** The wand glyph, as the `<tspan>` `FieldButton` draws inside itself. */
-function wandIcon(): SVGElement {
-  const icon = document.createElementNS(
-    'http://www.w3.org/2000/svg',
-    'tspan',
-  ) as SVGElement;
-  // The lab injects FontAwesome 6 (`@code-dot-org/fonts`); the block is SVG, so
-  // the icon is a glyph in that font rather than an `<i>` element.
-  icon.style.fontFamily = '"Font Awesome 6 Pro", "FontAwesome"';
-  icon.textContent = WAND;
-  return icon;
 }
 
 /** What this workspace and block are, in the terms the decision is made in. */
@@ -184,7 +174,7 @@ function syncButton(block: Block): void {
           0,
         );
       },
-      icon: wandIcon(),
+      icon: glyphIcon(WAND),
     }),
     FIELD_NAME,
   );

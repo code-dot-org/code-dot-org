@@ -12,6 +12,9 @@
 // so the path is live and exercised from the first tile, and the day a lesson
 // is authored its own instructions take that place with nothing else changing.
 
+import {Typography} from '@mui/material';
+
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {MainInstructionsContent} from '@code-dot-org/lab/instructions';
 
 import {lessonHref} from './lessonRoute';
@@ -56,48 +59,88 @@ export const TileDetail = ({
 
   return (
     <div className={styles.detail}>
-      <p className={styles.breadcrumb}>
+      {/* Typography rather than a `<p>` with a pixel size on it: the type
+          comes from the theme, and this pane sits beside the instructions
+          panel, which is rendered by the lab's own renderer. */}
+      <Typography
+        variant="overline2"
+        component="p"
+        className={styles.breadcrumb}
+      >
         {region(tile.region).name} · {STATE_WORDS[state]}
-      </p>
+      </Typography>
       {/* A written lesson opens with its own heading, because it has to: the
           instructions panel a learner spends the lesson in shows the markdown
           and nothing else. So the pane supplies a title only when the lesson
           does not, and there is exactly one either way. */}
-      {!properties && <h2 className={styles.title}>{tile.title}</h2>}
+      {!properties && (
+        <Typography variant="h6" component="h2" className={styles.title}>
+          {tile.title}
+        </Typography>
+      )}
 
       <MainInstructionsContent instructionsText={instructions} />
 
       {!properties && (
-        <p className={styles.pending}>
+        <Typography variant="body2" className={styles.pending}>
           This lesson is designed but not written yet — what you are reading is
           the design.
-        </p>
+        </Typography>
       )}
 
       {tile.requires.length > 0 && (
         <section>
-          <h3 className={styles.heading}>Needs</h3>
-          <ul className={styles.list}>
-            {tile.requires.map(id => (
-              <li key={id}>
-                <button
-                  type="button"
-                  className={styles.link}
-                  onClick={() => onGoTo(id)}
-                >
-                  {TILES_BY_ID.get(id)?.title ?? id}
-                </button>{' '}
-                <span className={styles.muted}>
-                  — {STATE_WORDS[stateOf(id)]}
-                </span>
-              </li>
-            ))}
+          <Typography
+            variant="overline2"
+            component="h3"
+            className={styles.heading}
+          >
+            Needs
+          </Typography>
+          {/* BUTTONS, not bullets with a link in them. Every one of these goes
+              somewhere — that is the whole of what this list is for — and a
+              row that is a target you press says so, where a bullet with a
+              word underlined in it makes you look for the part that works.
+              Locked ones are buttons too: "why can I not start this" is
+              answered by going and looking at what it needs, which is exactly
+              the tile a locked row leads to. */}
+          <ul className={styles.needs}>
+            {tile.requires.map(id => {
+              const need = stateOf(id);
+              return (
+                <li key={id}>
+                  <button
+                    type="button"
+                    className={`${styles.need} ${styles[`need_${need}`]}`}
+                    onClick={() => onGoTo(id)}
+                  >
+                    <FontAwesomeV6Icon
+                      iconName={NEED_ICONS[need]}
+                      iconStyle="solid"
+                      className={styles.needIcon}
+                    />
+                    <span className={styles.needTitle}>
+                      {TILES_BY_ID.get(id)?.title ?? id}
+                    </span>
+                    <span className={styles.needState}>
+                      {STATE_WORDS[need]}
+                    </span>
+                  </button>
+                </li>
+              );
+            })}
           </ul>
         </section>
       )}
 
       <section>
-        <h3 className={styles.heading}>Unlocks</h3>
+        <Typography
+          variant="overline2"
+          component="h3"
+          className={styles.heading}
+        >
+          Unlocks
+        </Typography>
         <ul className={styles.list}>
           {tile.unlocks.map(unlock => (
             <li key={unlockLabel(unlock)}>
@@ -144,14 +187,20 @@ export const TileDetail = ({
           {state === 'done' ? 'Done' : 'Mark as done'}
         </button>
         {state === 'shut' && (
-          <p className={styles.muted}>
+          <Typography variant="body2" className={styles.muted}>
             Finish what it needs, above, to open this.
-          </p>
+          </Typography>
         )}
       </div>
       {/* Said out loud, because a check's result is the whole reason somebody
           pressed the button and the button itself does not change. */}
-      <p role="status" aria-label="Check result" className={styles.verdict}>
+      <Typography
+        variant="body2"
+        component="p"
+        role="status"
+        aria-label="Check result"
+        className={styles.verdict}
+      >
         {checker.state.status === 'passed' && 'That works. Lesson done.'}
         {checker.state.status === 'failed' &&
           `Not yet: the check looked for — ${tile.check.says}${
@@ -159,9 +208,22 @@ export const TileDetail = ({
               ? ` The world said: ${checker.state.because}`
               : ''
           }`}
-      </p>
+      </Typography>
     </div>
   );
+};
+
+/**
+ * The mark on a needed lesson's row, beside the word that says the same thing.
+ *
+ * A tick for done, a padlock for locked, and an empty circle for one that is
+ * ready — which is deliberately the quiet one, because "ready to start" is the
+ * ordinary case and the two either side of it are the news.
+ */
+const NEED_ICONS: Record<TileState, string> = {
+  done: 'circle-check',
+  open: 'circle',
+  shut: 'lock',
 };
 
 const STATE_WORDS: Record<TileState, string> = {

@@ -10,6 +10,7 @@
 // rather than pushed: moving around a map is not navigation, and a Back button
 // that walks back through forty tiles is worse than useless.
 
+import {Typography} from '@mui/material';
 import {useCallback, useEffect, useState} from 'react';
 
 import {CustomDialog} from '@code-dot-org/component-library/dialog';
@@ -88,12 +89,22 @@ export const ProgressionDialog = ({
     >
       <div className={styles.layout}>
         <header className={styles.header}>
-          {/* An h2, not an h1: this opens over a page that already has one. */}
-          <h2 className={styles.heading}>Progression</h2>
-          <p className={styles.count} id="dsco-dialog-description">
+          {/* MUI's Typography, so the type comes from the theme rather than
+              from a pixel size typed into a stylesheet — this dialog is the
+              lab's, and it should read as the lab's.
+              `component` keeps the semantics the heading levels need: an h2,
+              not an h1, because this opens over a page that already has one. */}
+          <Typography variant="h6" component="h2" className={styles.heading}>
+            Progression
+          </Typography>
+          <Typography
+            variant="body2"
+            className={styles.count}
+            id="dsco-dialog-description"
+          >
             {doneCount} of {TILES.length} lessons done. Pick one to read what it
             teaches and what finishing it unlocks.
-          </p>
+          </Typography>
           <div className={styles.views}>
             <SegmentedButtons
               size="xs"
@@ -144,16 +155,18 @@ export const ProgressionDialog = ({
               onComplete={onComplete}
             />
           ) : (
-            <p className={styles.empty}>
+            <Typography variant="body2" className={styles.empty}>
               Pick a lesson to read what it teaches and what finishing it gives
               you.
-            </p>
+            </Typography>
           )}
         </aside>
 
         {/* Polite, and outside the panes, so moving around the map never
             interrupts a reader — only a completion speaks. */}
-        <p
+        <Typography
+          variant="body2"
+          component="p"
           // `role="status"` rather than a bare `aria-live`: the role IS polite,
           // and it is what makes the label legal — axe rejects `aria-label` on
           // a `<p>` with no role, which is how this was found.
@@ -165,7 +178,7 @@ export const ProgressionDialog = ({
           className={styles.announcement}
         >
           {announcement}
-        </p>
+        </Typography>
       </div>
     </CustomDialog>
   );

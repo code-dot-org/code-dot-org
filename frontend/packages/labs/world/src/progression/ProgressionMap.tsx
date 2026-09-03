@@ -16,7 +16,10 @@
 // is not a fallback — an SVG is the wrong medium for "which lessons teach me
 // about text", and no medium at all for a screen reader.
 
+import {IconButton} from '@mui/material';
 import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import {TILES} from './catalogue';
 import {
@@ -73,6 +76,10 @@ export const ProgressionMap = ({
     selected ?? tiles[0]?.id ?? '',
   );
   const svg = useRef<SVGSVGElement>(null);
+  // The listener below is attached once; a closure over `zoom` would zoom from
+  // whatever it was when the map mounted.
+  const zoomRef = useRef(zoom);
+  zoomRef.current = zoom;
   const drag = useRef<{x: number; y: number; pan: Point} | null>(null);
   // Whether the gesture that just ended was a drag rather than a click. A drag
   // that happens to finish over a tile must not select it.
@@ -230,29 +237,75 @@ export const ProgressionMap = ({
     }
   }, [selected, bringIntoView]);
 
-  // Zoom about the pointer, so the thing under the cursor stays under it. The
-  // alternative — zooming about the centre — walks whatever you were looking at
-  // off the edge of the screen, which is the behaviour every map gets wrong.
-  const onWheel = (event: React.WheelEvent<SVGSVGElement>) => {
-    event.preventDefault();
-    const rect = svg.current?.getBoundingClientRect();
-    if (!rect) {
+  /**
+   * Where a screen point is in the map's own coordinates.
+   *
+   * Through the SVG's own matrix rather than by arithmetic on the bounding
+   * box, because `preserveAspectRatio` letterboxes the viewBox inside the
+   * element and the amount of that is not something this file should be
+   * working out for itself. `getScreenCTM` already knows.
+   */
+  const userPoint = useCallback((clientX: number, clientY: number) => {
+    const node = svg.current;
+    const matrix = node?.getScreenCTM?.();
+    if (!node || !matrix) {
+      return null;
+    }
+    const point = node.createSVGPoint();
+    point.x = clientX;
+    point.y = clientY;
+    return point.matrixTransform(matrix.inverse());
+  }, []);
+
+  /**
+   * Zoom about a point, keeping whatever is under it under it.
+   *
+   * The alternative — zooming about the middle — walks the thing you were
+   * looking at off the edge, which is the behaviour every map gets wrong.
+   *
+   * The arithmetic is in USER UNITS, which is the part that has to be said.
+   * The pan is applied inside the viewBox (`translate(pan) scale(zoom)`), so a
+   * map point `u` is drawn at `pan + zoom * u`; holding the point under the
+   * cursor fixed gives `pan' = c - (c - pan) * factor`, and every term in that
+   * has to be in the same units as the pan. Feeding it a pixel offset instead
+   * — which is what a bounding-box subtraction gives you — zooms about a point
+   * that drifts further from the cursor the further the map is panned.
+   */
+  const zoomTo = useCallback((next: number, at?: {x: number; y: number}) => {
+    setZoom(current => {
+      const limited = clamp(next, MIN_ZOOM, MAX_ZOOM);
+      const factor = limited / current;
+      if (at) {
+        setPan(previous => ({
+          x: at.x - (at.x - previous.x) * factor,
+          y: at.y - (at.y - previous.y) * factor,
+        }));
+      }
+      return limited;
+    });
+  }, []);
+
+  /**
+   * The wheel listener, attached by hand and NOT passive.
+   *
+   * React attaches `onWheel` at the root as a passive listener, so
+   * `preventDefault` inside one does nothing and says so in the console:
+   * "Unable to preventDefault inside passive event listener invocation." The
+   * visible half of that is the page scrolling while the map zooms.
+   */
+  useEffect(() => {
+    const node = svg.current;
+    if (!node) {
       return;
     }
-    const next = clamp(
-      zoom * Math.exp(-event.deltaY / 400),
-      MIN_ZOOM,
-      MAX_ZOOM,
-    );
-    const factor = next / zoom;
-    const px = event.clientX - rect.left;
-    const py = event.clientY - rect.top;
-    setPan({
-      x: px - (px - pan.x) * factor,
-      y: py - (py - pan.y) * factor,
-    });
-    setZoom(next);
-  };
+    const onWheel = (event: WheelEvent) => {
+      event.preventDefault();
+      const at = userPoint(event.clientX, event.clientY);
+      zoomTo(zoomRef.current * Math.exp(-event.deltaY / 400), at ?? undefined);
+    };
+    node.addEventListener('wheel', onWheel, {passive: false});
+    return () => node.removeEventListener('wheel', onWheel);
+  }, [userPoint, zoomTo]);
 
   const onPointerDown = (event: React.PointerEvent<SVGSVGElement>) => {
     if (event.button !== 0) {
@@ -332,7 +385,6 @@ export const ProgressionMap = ({
         // move within it (WAI-ARIA listbox, roving tabindex variant).
         role="listbox"
         aria-label="Progression map"
-        onWheel={onWheel}
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
         onPointerUp={onPointerUp}
@@ -438,24 +490,29 @@ export const ProgressionMap = ({
         </g>
       </svg>
 
+      {/* MUI's IconButton and FontAwesome, so these three read as the same
+          kind of control as every other icon button in the lab rather than as
+          three characters typed into a box. The surface, the border and the
+          focus ring stay the map's, because they sit ON the map. */}
       <div className={styles.controls}>
-        <button
-          type="button"
-          aria-label="Zoom in"
-          onClick={() => setZoom(z => clamp(z * 1.25, MIN_ZOOM, MAX_ZOOM))}
-        >
-          +
-        </button>
-        <button
-          type="button"
-          aria-label="Zoom out"
-          onClick={() => setZoom(z => clamp(z / 1.25, MIN_ZOOM, MAX_ZOOM))}
-        >
-          −
-        </button>
-        <button type="button" aria-label="Fit the whole map" onClick={fit}>
-          ⤢
-        </button>
+        {(
+          [
+            ['Zoom in', 'plus', () => zoomTo(zoomRef.current * 1.25)],
+            ['Zoom out', 'minus', () => zoomTo(zoomRef.current / 1.25)],
+            ['Fit the whole map', 'expand', fit],
+          ] as const
+        ).map(([label, icon, act]) => (
+          <IconButton
+            key={label}
+            aria-label={label}
+            title={label}
+            onClick={act}
+            className={styles.control}
+            size="small"
+          >
+            <FontAwesomeV6Icon iconName={icon} iconStyle="solid" />
+          </IconButton>
+        ))}
       </div>
     </div>
   );
@@ -508,10 +565,25 @@ const TileShape = ({
         points={cellPoints(tile.at, SIZE, TILE_INSET)}
       />
       {selected && (
-        <polygon
-          className={styles.ring}
-          points={cellPoints(tile.at, SIZE, RING_INSET)}
-        />
+        <>
+          {/* A halo under the ring, in the page colour: the ring lies across
+              whatever region fill and edge bars happen to be beneath it and
+              cannot be asked to contrast with all of them at once. The edges
+              solve the same problem the same way. */}
+          <polygon
+            className={styles.ringHalo}
+            points={cellPoints(tile.at, SIZE, RING_INSET)}
+          />
+          <polygon
+            className={styles.ring}
+            // Keyed by the tile, so React replaces the element when the
+            // selection moves rather than reusing it — which is what restarts
+            // the arrival pulse. Reused, the animation would play once for the
+            // first tile ever selected and never again.
+            key={tile.id}
+            points={cellPoints(tile.at, SIZE, RING_INSET)}
+          />
+        </>
       )}
       {focusable && (
         // Rendered whenever this is the tile the roving tabindex points at,
@@ -540,35 +612,31 @@ const TileShape = ({
  * same thing — because colour on its own is not something everybody can read.
  * A tick for done, a padlock for shut, and nothing for open, which is the
  * ordinary case and needs no mark.
+ *
+ * FONTAWESOME, as a glyph rather than as an `<i>`: this is inside an SVG, so
+ * the icon component's element would not render. The lab injects the font
+ * (`@code-dot-org/fonts`) and the block editor's own icons are drawn the same
+ * way (`blockly/extensions/enhanceButton`), so the two agree about what a lock
+ * looks like — which two hand-drawn paths could not promise.
  */
+const ICONS: Partial<Record<TileState, string>> = {
+  // fa-check and fa-lock, by codepoint. The names are in the comment because
+  // the codepoints are not readable and the names are what anybody would
+  // search for.
+  done: '\uf00c',
+  shut: '\uf023',
+};
+
 const Glyph = ({state, x, y}: {state: TileState; x: number; y: number}) => {
-  const r = SIZE * 0.11;
-  if (state === 'done') {
-    return (
-      <path
-        className={styles.glyph}
-        strokeWidth={r * 0.55}
-        d={`M${x - r},${y} l${r * 0.75},${r * 0.8} L${x + r},${y - r}`}
-      />
-    );
+  const icon = ICONS[state];
+  if (!icon) {
+    return null;
   }
-  if (state === 'shut') {
-    return (
-      <g className={styles.glyph} strokeWidth={r * 0.42}>
-        <rect
-          x={x - r * 0.8}
-          y={y - r * 0.15}
-          width={r * 1.6}
-          height={r * 1.2}
-          rx={r * 0.25}
-        />
-        <path
-          d={`M${x - r * 0.42},${y - r * 0.15} v${-r * 0.45} a${r * 0.42},${r * 0.42} 0 0 1 ${r * 0.84},0 v${r * 0.45}`}
-        />
-      </g>
-    );
-  }
-  return null;
+  return (
+    <text className={styles.glyph} x={x} y={y} fontSize={SIZE * 0.24}>
+      {icon}
+    </text>
+  );
 };
 
 /**

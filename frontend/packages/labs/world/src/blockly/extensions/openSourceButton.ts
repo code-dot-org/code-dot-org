@@ -20,6 +20,7 @@ import {FieldButton} from '@code-dot-org/blockly/fields/fieldButton';
 import {canOpenModule, openModule} from '../openModule';
 import {refFromValue, refModule, ruleLocation} from '../ruleRegistry';
 
+import {glyphIcon} from './glyphIcon';
 import {addOnChange} from './onChange';
 
 export const OPEN_SOURCE_BUTTON_EXTENSION = 'world_open_source_button';
@@ -27,7 +28,12 @@ export const OPEN_SOURCE_BUTTON_EXTENSION = 'world_open_source_button';
 /** The field's name on the block — how it is found again to remove it. */
 const FIELD_NAME = 'OPEN_SOURCE';
 
-/** FontAwesome's eye, drawn as an SVG glyph the way CDO's own fields do it. */
+/**
+ * FontAwesome's eye, drawn as an SVG glyph the way CDO's own fields do it.
+ *
+ * `eye` (f06e). In the free package as well as the pro one — see `glyphIcon`,
+ * which is what makes that matter.
+ */
 const EYE = '';
 
 /**
@@ -76,19 +82,6 @@ export function moduleNamedBy(block: Block): string | undefined {
   return undefined;
 }
 
-/** The eye glyph, as the `<tspan>` `FieldButton` draws inside itself. */
-function eyeIcon(): SVGElement {
-  const icon = document.createElementNS(
-    'http://www.w3.org/2000/svg',
-    'tspan',
-  ) as SVGElement;
-  // The lab injects FontAwesome 6 (`@code-dot-org/fonts`); the block is SVG, so
-  // the icon is a glyph in that font rather than an `<i>` element.
-  icon.style.fontFamily = '"Font Awesome 6 Pro", "FontAwesome"';
-  icon.textContent = EYE;
-  return icon;
-}
-
 /** The input the button rides on: the last one, after the dropdown. */
 function lastInput(block: Block): Input | undefined {
   return block.inputList[block.inputList.length - 1];
@@ -121,7 +114,7 @@ function syncButton(block: Block): void {
           // workspace that has gone).
           setTimeout(() => openModule(modulePath), 0);
         },
-        icon: eyeIcon(),
+        icon: glyphIcon(EYE),
         // A read-only workspace can still be read — that is all this does.
         allowReadOnlyClick: true,
       }),

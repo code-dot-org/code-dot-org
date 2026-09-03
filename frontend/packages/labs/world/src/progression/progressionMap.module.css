@@ -71,12 +71,15 @@
   fill: var(--field);
 }
 
+/* Heavier than the tiles' own strokes and fully opaque, because this is the
+   line that says where a region ENDS — and a region boundary drawn at the same
+   weight as the tiles inside it is a line nobody sees. */
 .regionOutline {
   fill: none;
   stroke: var(--line);
-  stroke-width: 2;
+  stroke-width: 3;
   stroke-linecap: round;
-  opacity: 0.6;
+  opacity: 0.9;
 }
 
 .regionName {
@@ -138,10 +141,16 @@
   stroke: var(--line);
 }
 
+/* A locked tile is grey INSIDE and its region's colour AROUND, which is the
+   one thing the map could not say before: a learner looking at a region they
+   have not opened could see the tiles and not which region they were in. The
+   fill still says "shut" — that is what a state is for — and the dashes say it
+   twice. */
 .shut .tileShape {
   fill: var(--shut-fill);
-  stroke: var(--shut-line);
+  stroke: var(--line);
   stroke-dasharray: 4 3;
+  opacity: 0.85;
 }
 
 .tile:hover .tileShape {
@@ -159,24 +168,58 @@
   fill: var(--shut-ink);
 }
 
+/* A FontAwesome glyph rather than a drawn path — see the component. Solid
+   weight is what makes the free font resolve `fa-lock` at all; without it the
+   glyph falls back to the regular face, which the free kit does not ship. */
 .glyph {
-  fill: none;
+  fill: var(--ink);
   pointer-events: none;
-  stroke: var(--ink);
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  text-anchor: middle;
+  dominant-baseline: central;
+  font-family: 'Font Awesome 6 Pro', 'Font Awesome 6 Free', FontAwesome,
+    sans-serif;
+  font-weight: 900;
 }
 
 .shut .glyph {
-  stroke: var(--shut-ink);
+  fill: var(--shut-ink);
 }
 
 /* The selection ring sits outside the tile rather than on it, so it does not
-   argue with the state stroke it would otherwise replace. */
+   argue with the state stroke it would otherwise replace.
+ *
+ * HEAVY, and drawn over a halo of the page colour. Two and a half pixels of
+ * ink was findable when you had just clicked the tile and invisible when you
+ * had not — and the case that matters is the second one: following a link in
+ * the detail pane moves the selection to a tile somewhere else on the map, and
+ * the whole point of the map coming along is being able to see where it went.
+ * The halo is what stops the ring disappearing into whatever region fill or
+ * edge bar happens to be under it. */
+.ringHalo {
+  fill: none;
+  stroke: var(--page);
+  stroke-width: 8;
+}
+
+/* …and a slow pulse, so a selection that ARRIVED draws the eye rather than
+   waiting to be found. Two beats and then still: an outline that never stops
+   moving is a distraction for the rest of the session. */
+@keyframes ring-arrives {
+  0%,
+  100% {
+    stroke-width: 4;
+  }
+
+  50% {
+    stroke-width: 7;
+  }
+}
+
 .ring {
   fill: none;
   stroke: var(--ring);
-  stroke-width: 2.5;
+  stroke-width: 4;
+  animation: ring-arrives 700ms ease-in-out 2;
 }
 
 /* Focus is the same ring in the accent colour, and is drawn as well as the
@@ -205,25 +248,27 @@
   gap: 4px;
 }
 
-.controls button {
-  /* 24×24 is the WCAG 2.2 floor for a pointer target; 32 leaves room to miss. */
+.control {
+  /* 24×24 is the WCAG 2.2 floor for a pointer target; 32 leaves room to miss.
+     Sized here rather than by MUI's `small`, which is smaller than the floor.
+     The surface and border are the MAP's rather than the theme's, because
+     these three sit on the map and have to read against whatever is under
+     them. */
   width: 32px;
   height: 32px;
   border: 1px solid var(--shut-line);
   border-radius: 6px;
   background: var(--surface);
   color: var(--ink);
-  cursor: pointer;
-  font:
-    600 13px/1 system-ui,
-    sans-serif;
+  font-size: 13px;
 }
 
-.controls button:hover {
+.control:hover {
   border-color: var(--ink);
+  background: var(--surface);
 }
 
-.controls button:focus-visible {
+.control:focus-visible {
   outline: 3px solid var(--focus);
   outline-offset: 2px;
 }
@@ -236,6 +281,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .ring {
+    animation: none;
+  }
+
   .tileShape {
     transition: none;
   }
