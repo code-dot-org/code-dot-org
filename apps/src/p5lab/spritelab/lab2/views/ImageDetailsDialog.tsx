@@ -40,6 +40,9 @@ interface ImageDetailsDialogProps {
   imageType?: ImageType;
   /** Level-imposed type for new images. */
   lockedImageType?: ImageType;
+  /** Show the full internal dialog — the image's name (and renaming),
+      Start from, temperature. The default is the student version. */
+  advanced?: boolean;
   /** Current pixels, for generation's "use previous image". */
   getDataURI: () => Promise<string | null>;
   /** Whether another image already uses this name. */
@@ -67,9 +70,10 @@ export interface AlternativeImage {
 /**
  * The image dialog. An existing image opens on the summary view: the image
  * large on the left (click it to paint), how it was made on the right, and
- * delete/regenerate in the footer; its name sits in the header with a
- * pencil to rename. A new image opens straight into the generate view.
- * Wears the pixel editor's chrome, following the page's light/dark theme.
+ * delete/regenerate in the footer; in the advanced dialog its name sits in
+ * the header with a pencil to rename. A new image opens straight into the
+ * generate view. Wears the pixel editor's chrome, following the page's
+ * light/dark theme.
  */
 const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   animKey,
@@ -84,6 +88,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   onDelete,
   imageType,
   lockedImageType,
+  advanced,
   getDataURI,
   isNameTaken,
   onGenerateStart,
@@ -111,7 +116,9 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
     ? 'That name is already used.'
     : nameError;
 
-  const title = isNew ? 'New image' : name || 'Image';
+  // Students see auto-generated names, so the title says only what the
+  // dialog is.
+  const title = !advanced ? 'Image' : isNew ? 'New image' : name || 'Image';
 
   const commitRename = () => {
     const trimmed = nameDraft.trim();
@@ -145,7 +152,9 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
         <span id="dsco-dialog-description" className={moduleStyles.srOnly}>
           {view === 'generate'
             ? 'Describe the image and generate it with AI.'
-            : 'View, edit, rename, or delete this image.'}
+            : advanced
+            ? 'View, edit, rename, or delete this image.'
+            : 'View, edit, or delete this image.'}
         </span>
         <div className={moduleStyles.header}>
           {renaming ? (
@@ -211,7 +220,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
               <span className={moduleStyles.headerTitle} tabIndex={0}>
                 {title}
               </span>
-              {!isNew && view === 'details' && (
+              {advanced && !isNew && view === 'details' && (
                 <button
                   type="button"
                   className={moduleStyles.iconButton}
@@ -242,6 +251,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
             thumb={isNew ? undefined : thumb}
             create={isNew ? {isNameTaken, initial: newImageDraft} : undefined}
             lockedImageType={lockedImageType}
+            advanced={advanced}
             onPaintManually={isNew ? onPaintNew : undefined}
             onGenerateStart={onGenerateStart}
             onAccept={async (result, newName) => {
@@ -286,7 +296,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                     <dd>{IMAGE_TYPE_LABELS[generation.imageType]}</dd>
                     <dt>Style</dt>
                     <dd>{IMAGE_STYLE_LABELS[generation.style]}</dd>
-                    {generation.temperature !== undefined && (
+                    {advanced && generation.temperature !== undefined && (
                       <>
                         <dt>Temperature</dt>
                         <dd>{generation.temperature}</dd>

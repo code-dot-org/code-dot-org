@@ -111,6 +111,10 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   guideSteps?: GuideStep[];
   // Locks the new-image dialog's Type choice.
   lockedImageType?: ImageType;
+  // Show the full internal image dialog — name field, Start from,
+  // temperature — instead of the student one (equivalent to the
+  // images-advanced=true URL parameter).
+  imagesAdvanced?: boolean;
   // The one scene this level edits, created on first load if the project
   // lacks it. Must not be 'scene-1' (the id synthesized for sources saved
   // before scenes existed).

@@ -124,7 +124,10 @@ function repointAnimation(
 
 interface GalleryCardProps {
   animKey: string;
-  name?: string;
+  /** Alt text and hover tooltip for the thumbnail. */
+  label?: string;
+  /** Name shown under the thumbnail; omitted in the student gallery. */
+  caption?: string;
   thumb?: string;
   onOpen: (key: string, trigger: HTMLElement) => void;
 }
@@ -132,19 +135,21 @@ interface GalleryCardProps {
 // Memoized: opening or closing the dialog re-renders the pane, and every
 // card would re-render with it. Thumbnail updates arrive as a changed prop.
 const GalleryCard = React.memo<GalleryCardProps>(
-  ({animKey, name, thumb, onOpen}) => (
+  ({animKey, label, caption, thumb, onOpen}) => (
     <div className={moduleStyles.imageCard}>
       <button
         type="button"
         className={moduleStyles.imageThumb}
-        title={name}
+        title={label}
         onClick={event => onOpen(animKey, event.currentTarget)}
       >
-        {thumb && <img src={thumb} alt={name || 'image'} />}
+        {thumb && <img src={thumb} alt={label || 'image'} />}
       </button>
-      <div className={moduleStyles.imageName} title={name}>
-        {name}
-      </div>
+      {caption !== undefined && (
+        <div className={moduleStyles.imageName} title={caption}>
+          {caption}
+        </div>
+      )}
     </div>
   )
 );
@@ -158,6 +163,9 @@ interface GenerateImagePaneProps {
   onDeleteImage: (name: string) => void;
   /** Level-imposed type for new images. */
   lockedImageType?: ImageType;
+  /** Show the full internal dialog and gallery names; the default is the
+      student version (auto-named images, fewer generation controls). */
+  advanced?: boolean;
 }
 
 /**
@@ -169,6 +177,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   onRenameImage,
   onDeleteImage,
   lockedImageType,
+  advanced,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -667,7 +676,12 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           <GalleryCard
             key={key}
             animKey={key}
-            name={props?.name}
+            // Students see auto-named images; the prompt describes them
+            // better than the name does.
+            label={
+              advanced ? props?.name : props?.generation?.prompt || props?.name
+            }
+            caption={advanced ? props?.name : undefined}
             thumb={
               getTrimmedThumbnail(props?.name) ||
               props?.dataURI ||
@@ -706,6 +720,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           onDelete={handleDelete}
           imageType={imageTypeFromCategories(targetProps?.categories)}
           lockedImageType={lockedImageType}
+          advanced={advanced}
           getDataURI={getTargetDataURI}
           isNameTaken={isNameTaken}
           onGenerateStart={handleGenerateStart}

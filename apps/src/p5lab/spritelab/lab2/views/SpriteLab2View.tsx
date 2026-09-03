@@ -137,6 +137,15 @@ function getWorldTabEnabledParam() {
   );
 }
 
+// The image dialog defaults to the student form; ?images-advanced=true shows
+// the full internal one (levels can also opt in via imagesAdvanced).
+function getImagesAdvancedParam() {
+  return (
+    new URLSearchParams(window.location.search).get('images-advanced') ===
+    'true'
+  );
+}
+
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
 const DEFAULT_SCENE_ID = 'scene-1';
 
@@ -1496,6 +1505,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 onRenameImage={handleRenameImage}
                 onDeleteImage={handleDeleteImage}
                 lockedImageType={levelProperties.lockedImageType}
+                advanced={
+                  levelProperties.imagesAdvanced || getImagesAdvancedParam()
+                }
               />
             </div>
           </div>
