@@ -1,6 +1,7 @@
 import {
   countImagesByType,
   countWorldCells,
+  imageCountsDelta,
   nextGuideStepIndex,
 } from '@cdo/apps/p5lab/spritelab/lab2/guideSteps';
 import {
@@ -193,6 +194,26 @@ describe('nextGuideStepIndex', () => {
         images: {sprite: 0, background: 0, block: 0},
       })
     ).toBe(0);
+  });
+});
+
+describe('imageCountsDelta', () => {
+  it('counts only images added since the baseline', () => {
+    expect(
+      imageCountsDelta(
+        {sprite: 2, background: 1, block: 0},
+        {sprite: 1, background: 1, block: 0}
+      )
+    ).toEqual({sprite: 1, background: 0, block: 0});
+  });
+
+  it('clamps at zero when images were deleted below the baseline', () => {
+    expect(
+      imageCountsDelta(
+        {sprite: 0, background: 0, block: 0},
+        {sprite: 2, background: 1, block: 0}
+      )
+    ).toEqual({sprite: 0, background: 0, block: 0});
   });
 });
 

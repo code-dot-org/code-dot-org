@@ -38,7 +38,7 @@
       {
         "text": "**Give them a platform.** In the **World** tab, place them on top of some blocks. They will walk back and forth along them.",
         "after": {
-          "spriteImages": 3
+          "spriteImages": 1
         }
       },
       {

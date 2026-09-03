@@ -46,7 +46,7 @@ import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import defaultSources from '../defaultSources.json';
-import {useGuideSteps} from '../guideSteps';
+import {countImagesByType, useGuideSteps} from '../guideSteps';
 import {
   removeImageReferences,
   removeImageReferencesOnWorkspace,
@@ -427,6 +427,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     grid: activeWorld.grid,
     activeTab,
     animations: animationList,
+    // From load-time sources, not the store: the redux list seeds a tick
+    // after mount, so its first value would snapshot as empty.
+    baselineImages: useMemo(
+      () =>
+        countImagesByType(
+          initialSources.animations ?? {orderedKeys: [], propsByKey: {}}
+        ),
+      [initialSources]
+    ),
     fallback: levelProperties.longInstructions,
   });
 
@@ -668,7 +677,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [levelProperties, initialSources]);
 
   // Persist Images-tab changes back to sources in the serialized shape.
-  const animationListState = useAppSelector(state => state.animationList);
   useEffect(() => {
     // Serialize from the LIVE store, not this commit's snapshot: this effect
     // runs after compileExternalScene's synchronous merge-and-restore, and a
@@ -678,7 +686,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         getStore().getState().animationList
       ),
     });
-  }, [animationListState, patchSources]);
+  }, [animationList, patchSources]);
 
   const {
     getCode,

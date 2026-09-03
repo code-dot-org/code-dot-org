@@ -25,6 +25,19 @@ export function countImagesByType(list: RuntimeAnimationList): ImageCounts {
   return counts;
 }
 
+/** Images added since a baseline, clamped at zero: Start Over can drop the
+    live count below what the level opened with. */
+export function imageCountsDelta(
+  now: ImageCounts,
+  baseline: ImageCounts
+): ImageCounts {
+  return {
+    sprite: Math.max(0, now.sprite - baseline.sprite),
+    background: Math.max(0, now.background - baseline.background),
+    block: Math.max(0, now.block - baseline.block),
+  };
+}
+
 // Placed World cells, tallied by kind.
 export function countWorldCells(grid?: (WorldCell | null)[][]): WorldCounts {
   let blocks = 0;
@@ -97,16 +110,24 @@ export function useGuideSteps({
   grid,
   activeTab,
   animations,
+  baselineImages,
   fallback,
 }: {
   steps: GuideStep[] | undefined;
   grid: (WorldCell | null)[][] | undefined;
   activeTab: Tab;
   animations: RuntimeAnimationList;
+  /** Images already in the project when the level opened. The channel is
+      shared across the unit, so earlier levels' images arrive pre-made;
+      image gates count only what this level added. */
+  baselineImages?: ImageCounts;
   fallback: string | undefined;
 }): GuideDisplay {
   const counts = useMemo(() => countWorldCells(grid), [grid]);
-  const images = useMemo(() => countImagesByType(animations), [animations]);
+  const images = useMemo(() => {
+    const now = countImagesByType(animations);
+    return baselineImages ? imageCountsDelta(now, baselineImages) : now;
+  }, [animations, baselineImages]);
   const [index, setIndex] = useState(0);
   useEffect(() => {
     setIndex(current =>
