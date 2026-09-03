@@ -1,10 +1,11 @@
 name 'HoAI26-Choice-Background'
-display_name 'Choice Progression: Parent Level 3'
-description "This is the third level in a branching choice progression. Use this level to select a branch. If you clicked continue from a previous sublevel you should NOT see this level. You should only see this level if you navigated here directly (via bubble click or URL)."
+display_name 'Choice Progression: Background'
+description "Create your background"
 uses_lab2
 
 sublevels
-level 'Choice Progression - Music 3'
-level 'Choice Progression - Weblab 3'
+level 'HoAI26-Playtest1-Platform-Background'
+level 'HoAI26-Playtest1-Story-Background'
+level 'HoAI26-Playtest1-Game2-Background'
 
 navigation_type 'next_sublevel'

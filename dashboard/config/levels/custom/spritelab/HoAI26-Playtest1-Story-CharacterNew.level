@@ -1,0 +1,63 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-09-02T21:54:52.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": " HoAI26-Playtest1-Story-Template",
+    "visible_tabs": [
+      "Images"
+    ],
+    "locked_image_type": "sprite",
+    "guide_mode": "instructions",
+    "long_instructions": "# Make a character\r\nNow create the hero of your story. Describe what your character looks like and press **Generate**.",
+    "embed": "false",
+    "instructions_important": "false",
+    "thumbnail_url": "https://images.code.org/7299f6e1fe7dffe7f8a7b7cc38252a29-Gemini_Generated_Image_zh9ivazh9ivazh9i.jpeg",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "use_modal_function_editor": "false",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "use_default_sprites": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "enable_big_playspace": "false",
+    "display_name": "Create a Main Character",
+    "bubble_choice_description": "Use your imagination and AI to create a main character for your project!",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-02T21:54:52.087+00:00\",\"changed\":[\"cloned from \\\"HoAI26-Playtest1-Platform-CharacterNew\\\"\"],\"cloned_from\":\"HoAI26-Playtest1-Platform-CharacterNew\"},{\"changed_at\":\"2026-09-02 22:18:34 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-02 22:21:42 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\",\"thumbnail_url\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-02 22:23:42 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 01:39:00 +0000\",\"changed\":[\"project_template_level_name\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</GamelabJr>
