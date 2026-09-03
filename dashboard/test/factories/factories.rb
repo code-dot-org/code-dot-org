@@ -729,7 +729,8 @@ FactoryBot.define do
           email: user.email,
           hashed_email: user.hashed_email,
           credential_type: AuthenticationOption::CLASSLINK,
-          # v1-style id: ClassLink's internal UserId, a plain integer string
+          # v1 id: ClassLink's internal UserId, a plain integer string. Still
+          # issued to districts without OneRoster, so this is a current format.
           authentication_id: rand(10_000_000..99_999_999).to_s,
           version: evaluator.auth_option_version,
           data: {

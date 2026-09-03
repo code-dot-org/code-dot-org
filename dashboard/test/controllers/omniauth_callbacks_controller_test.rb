@@ -1248,9 +1248,15 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal AuthenticationOption::Classlink::VERSION[:v2], auth_option.version
   end
 
-  test 'connect_provider: falls back to legacy classlink id when the v2 id cannot be built' do
+  test 'connect_provider: stores the v1 classlink id when TenantId is malformed' do
+    # A SourcedId with a blank TenantId is an undocumented shape, so the
+    # generator reports it and the connect proceeds on the v1 UserId.
     user = create(:user, uid: 'some-uid')
     auth = generate_classlink_auth_hash(district_id: '')
+    Observability::Errors.expects(:report).with(
+      'ClassLink v2 authentication id not built',
+      has_key(:context)
+    ).once
 
     setup_should_connect_provider(user, auth)
     assert_creates(AuthenticationOption) do
@@ -1264,15 +1270,35 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_nil auth_option.version
   end
 
-  test 'connect_provider: migrates a legacy classlink credential the current user already holds' do
+  test 'connect_provider: stores the v1 classlink id when the district sends no SourcedId' do
+    # The routine counterpart of the test above, and the one that will keep
+    # arriving: a district without OneRoster sends no SourcedId, so there is no
+    # v2 id to build. Same v1 outcome, but nothing is reported.
+    user = create(:user, uid: 'some-uid')
+    auth = generate_classlink_auth_hash(external_id: '')
+    Observability::Errors.expects(:report).never
+
+    setup_should_connect_provider(user, auth)
+    assert_creates(AuthenticationOption) do
+      get :classlink
+    end
+
+    user.reload
+    auth_option = user.authentication_options.last
+    assert_equal AuthenticationOption::CLASSLINK, auth_option.credential_type
+    assert_equal '987654321', auth_option.authentication_id
+    assert_nil auth_option.version
+  end
+
+  test 'connect_provider: adds a v2 option for a v1 classlink credential the current user already holds' do
     user = create(:user, :with_classlink_authentication_option)
     v1_option = user.authentication_options.find_by(credential_type: AuthenticationOption::CLASSLINK)
     auth = generate_classlink_auth_hash(uid: v1_option.authentication_id)
 
     setup_should_connect_provider(user, auth)
-    # The "already linked" no-op still creates one record: the same login-time
-    # migration that runs on sign-in duplicates the v1 option into its v2 form
-    # before the holder check, which then finds the current user by the v2 id.
+    # The "already linked" no-op still creates one record: sign-in adds the v2
+    # option alongside the v1 one before the holder check, which then finds the
+    # current user by the v2 id.
     assert_creates(AuthenticationOption) do
       get :classlink
     end
@@ -1291,8 +1317,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test 'connect_provider: refuses classlink credential held by a v2-only account with activity' do
-    # A signup created after the v2 format shipped holds only a v2-format auth
-    # option. The connect flow must find that holder — a legacy-format lookup
+    # A signup from a district that supplies SourcedId holds only a v2-format
+    # auth option. The connect flow must find that holder — a v1-only lookup
     # misses it entirely and would let a second account link the credential.
     other_user = create(:user)
     create(
@@ -1726,8 +1752,9 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       it 'creates new user (Teacher) from auth hash' do
         classlink_req
         _(partial_user).wont_be_nil
-        # New sign-ups get the v2 "<TenantId>|<SourcedId>" authentication id,
-        # built from the auth hash's district_id and external_id.
+        # This payload carries an external_id, so the signup gets the v2
+        # "<TenantId>|<SourcedId>" id. A payload without one — a district that
+        # has not enabled OneRoster — signs up on the v1 UserId instead.
         _(partial_user.uid).must_equal '0001|1234_5678-0000'
         _(partial_user.provider).must_equal AuthenticationOption::CLASSLINK
         _(partial_user.user_type).must_equal User::TYPE_TEACHER
@@ -1778,9 +1805,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         _(existing_user.primary_contact_info.data_hash[:oauth_token_expiration]).wont_equal auth_hash[:credentials][:expires_at]
         classlink_req
         existing_user.reload
-        # Login-time migration creates a v2 auth option alongside the v1 record;
+        # Sign-in adds a v2 auth option alongside the v1 record, which stays;
         # the login credential now matches the v2 record, so tokens land there.
-        # The v1 record is deliberately left untouched.
         v2_auth_option = existing_user.authentication_options.find_by(
           credential_type: AuthenticationOption::CLASSLINK,
           authentication_id: '0001|1234_5678-0000'
@@ -2245,7 +2271,9 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   # A ClassLink auth hash as the omniauth-classlink plugin shapes it: uid is
   # ClassLink's internal UserId, and the v2 authentication id is built from
-  # info's district_id and external_id.
+  # info's district_id and external_id. external_id is ClassLink's SourcedId,
+  # which is empty for districts that have not enabled OneRoster — pass
+  # external_id: '' for that case.
   private def generate_classlink_auth_hash(uid: '987654321', district_id: '0001', external_id: '1234_5678-0000')
     auth = generate_auth_user_hash(provider: 'classlink', uid: uid)
     auth.info.district_id = district_id

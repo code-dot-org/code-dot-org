@@ -196,6 +196,22 @@ ActiveRecord::Schema[7.0].define(version: 2026_09_03_120000) do
     t.index ["user_id"], name: "index_aidiff_threads_on_user_id"
   end
 
+  create_table "anonymous_level_progresses", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "anon_user_id", limit: 36, null: false
+    t.integer "script_id", null: false
+    t.integer "level_id", null: false
+    t.integer "unit_group_id"
+    t.bigint "level_source_id", unsigned: true
+    t.integer "attempts", default: 0, null: false
+    t.integer "best_result"
+    t.boolean "submitted"
+    t.integer "time_spent"
+    t.text "properties"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["anon_user_id", "script_id", "level_id"], name: "index_anonymous_level_progresses_on_unique_anon_script_level", unique: true
+  end
+
   create_table "assessment_activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "level_id", null: false
