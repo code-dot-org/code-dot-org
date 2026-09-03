@@ -22,6 +22,16 @@
 //     name and no other. Without it every one of these buttons is a box in any
 //     build that is not licensed.
 //
+//   BOTH MAJOR VERSIONS       The two halves of that are not on the same one.
+//     `@code-dot-org/fonts` points at a FontAwesome 6 PRO kit; this package
+//     depends on FontAwesome 7 FREE. A major version is part of the family
+//     NAME — 7 registers "Font Awesome 7 Free" and nothing under the 6 name —
+//     so a list naming one version resolves in one kind of build and silently
+//     draws boxes in the other. That is exactly what happened: the free demo
+//     had every block button empty while the licensed build looked correct.
+//     `fontAwesomeFamilies.test.ts` reads the installed package's own major
+//     and fails if this list has fallen behind it.
+//
 //   font-weight 900         The free package ships SOLID and BRANDS and no
 //     regular face at all. A glyph asked for at the default weight matches no
 //     face in the family, so the family is skipped and the codepoint falls
@@ -32,14 +42,29 @@
 /**
  * The icon font, in the order a browser should try it.
  *
+ * Pro before Free at each major, because a licensed build has both and the Pro
+ * faces draw more; newest major first, because a host that has upgraded should
+ * not be served the older face it also still carries. Fallback here is
+ * per-CODEPOINT rather than per-family, so a name for a font nobody loaded
+ * costs nothing and is only ever the difference between a glyph and a box.
+ *
  * `FontAwesome` is the version 4 and 5 family name, kept because a host that
  * loaded one of those still has it registered under that.
+ *
+ * EXPORTED because the progression map draws its own glyphs (the check and the
+ * padlock on a tile) and needs the same list. Two copies of it is what let the
+ * map keep working while the block buttons went blank.
  */
-const ICON_FAMILY =
-  '"Font Awesome 6 Pro", "Font Awesome 6 Free", "FontAwesome"';
+export const ICON_FAMILY = [
+  '"Font Awesome 7 Pro"',
+  '"Font Awesome 6 Pro"',
+  '"Font Awesome 7 Free"',
+  '"Font Awesome 6 Free"',
+  '"FontAwesome"',
+].join(', ');
 
 /** Solid, which is the only weight the free package ships. */
-const ICON_WEIGHT = '900';
+export const ICON_WEIGHT = '900';
 
 /**
  * One glyph, as the `<tspan>` a `FieldButton` draws inside itself.

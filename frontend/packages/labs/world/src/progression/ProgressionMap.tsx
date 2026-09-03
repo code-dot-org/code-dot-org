@@ -21,6 +21,8 @@ import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
+import {ICON_FAMILY, ICON_WEIGHT} from '../blockly/extensions/glyphIcon';
+
 import {TILES} from './catalogue';
 import {
   boundaryPath,
@@ -151,6 +153,20 @@ export const ProgressionMap = ({
       height: Math.max(cells.y + cells.height, ...boxes.map(b => b.bottom)) - y,
     };
   }, [tiles, regions]);
+
+  /**
+   * The tiles in paint order: everything, then the focused one, then the
+   * selected one.
+   *
+   * Focus under selection because the two rings are concentric and the
+   * selection is the louder of them; when one tile is both, it is drawn once
+   * either way.
+   */
+  const ordered = useMemo(() => {
+    const rank = (tile: Tile) =>
+      tile.id === selected ? 2 : tile.id === focused ? 1 : 0;
+    return [...tiles].sort((one, other) => rank(one) - rank(other));
+  }, [tiles, selected, focused]);
 
   const state = useCallback(
     (id: TileId): TileState => tileState(completed, id),
@@ -409,8 +425,18 @@ export const ProgressionMap = ({
             ))}
           </g>
 
+          {/* THE SELECTED AND FOCUSED TILES LAST, which in an SVG is the
+              only way to say "in front": paint order is document order, and
+              there is no z-index. A ring drawn inside a tile's own group is
+              painted over by every tile that comes after it in the catalogue,
+              so a selection ring appeared and disappeared along its own edges
+              depending on which neighbours happened to be listed later.
+              Reordering rather than lifting the ring out into a layer of its
+              own, because the ring belongs to the tile — it moves with it, it
+              is described by the same `aria-selected`, and a layer would be a
+              second place to keep the geometry in step. */}
           <g>
-            {tiles.map(tile => (
+            {ordered.map(tile => (
               <TileShape
                 key={tile.id}
                 tile={tile}
@@ -633,7 +659,16 @@ const Glyph = ({state, x, y}: {state: TileState; x: number; y: number}) => {
     return null;
   }
   return (
-    <text className={styles.glyph} x={x} y={y} fontSize={SIZE * 0.24}>
+    <text
+      className={styles.glyph}
+      x={x}
+      y={y}
+      fontSize={SIZE * 0.24}
+      // The family from `glyphIcon` rather than from this file's stylesheet:
+      // it is the same list the block buttons use, and the one time it was
+      // written out twice the two copies fell out of step with each other.
+      style={{fontFamily: ICON_FAMILY, fontWeight: ICON_WEIGHT}}
+    >
       {icon}
     </text>
   );

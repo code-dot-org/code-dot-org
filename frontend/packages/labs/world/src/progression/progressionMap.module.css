@@ -157,6 +157,16 @@
   stroke-width: 3;
 }
 
+/* THE DESIGN SYSTEM'S FONT, named rather than inherited. An SVG `<text>` does
+   not pick up the page's type the way a `<p>` does — it falls back to the
+   browser's default serif unless a family reaches it — so the map's titles and
+   region names were the one part of this dialog set in something nobody chose.
+   `Geist` with `Noto Sans` behind it is the lab's own stack
+   (`@code-dot-org/fonts`, FONT_FAMILY_NAMES). */
+.map text {
+  font-family: Geist, 'Noto Sans', system-ui, sans-serif;
+}
+
 .label {
   fill: var(--ink);
   font-weight: 600;
@@ -168,20 +178,23 @@
   fill: var(--shut-ink);
 }
 
-/* A FontAwesome glyph rather than a drawn path — see the component. Solid
-   weight is what makes the free font resolve `fa-lock` at all; without it the
-   glyph falls back to the regular face, which the free kit does not ship. */
-.glyph {
+/* A FontAwesome glyph rather than a drawn path — see the component, which sets
+   the family and the weight inline from `glyphIcon`.
+
+   THE FAMILY IS NOT HERE, and that is the point. The rule above names one for
+   every `<text>` in the map, and `.map text` outweighs a bare `.glyph` — one
+   class and one element beats one class — so a family declared here would lose
+   to Geist and both tiles would draw an empty box, which is what they did. An
+   inline style outranks either, and it comes from the same list the block
+   buttons use rather than a second copy of it. */
+.map .glyph {
   fill: var(--ink);
   pointer-events: none;
   text-anchor: middle;
   dominant-baseline: central;
-  font-family: 'Font Awesome 6 Pro', 'Font Awesome 6 Free', FontAwesome,
-    sans-serif;
-  font-weight: 900;
 }
 
-.shut .glyph {
+.map .shut .glyph {
   fill: var(--shut-ink);
 }
 
