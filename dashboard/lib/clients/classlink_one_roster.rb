@@ -20,8 +20,8 @@
 # email, and guardian references in agents[]): user-returning methods reduce
 # records to USER_FIELDS, and no method logs a raw payload.
 class Clients::ClasslinkOneRoster
-  # Host from ClassLink's partner documentation for the One Roster proxy.
-  API_HOST = 'https://oneroster-proxy.classlink.io'
+  # Host confirmed against live capture requests (2026-09).
+  API_HOST = 'https://oneroster-proxy.apis.classlink.com'
 
   # 1000 covers any real class or teacher in one page, so the pagination loop
   # rarely runs twice — but it stays well under the documented ceiling of

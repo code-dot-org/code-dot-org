@@ -99,6 +99,22 @@ class ClasslinkSectionTest < ActiveSupport::TestCase
     assert_equal 2, synced.reload.students.size
   end
 
+  test 'a sync to zero unenrolls everyone and a later correct sync restores them' do
+    owner = create(:teacher)
+    section = ClasslinkSection.from_service('33333', 2222, owner.id, student_list, 'Sci5')
+    assert_equal 2, section.reload.students.size
+
+    emptied = ClasslinkSection.from_service('33333', 2222, owner.id, [], 'Sci5')
+    assert_empty emptied.reload.students
+
+    # Removal soft-deletes the Follower and leaves the User untouched, so the
+    # restore re-enrolls the same accounts rather than creating new ones.
+    assert_no_difference 'User.count' do
+      restored = ClasslinkSection.from_service('33333', 2222, owner.id, student_list, 'Sci5')
+      assert_equal 2, restored.reload.students.size
+    end
+  end
+
   test 'sync removes a departed student and adds a new one' do
     owner = create(:teacher)
     section = ClasslinkSection.from_service('33333', 2222, owner.id, student_list, 'Sci5')

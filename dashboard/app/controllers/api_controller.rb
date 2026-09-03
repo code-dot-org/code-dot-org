@@ -199,10 +199,10 @@ class ApiController < ApplicationController
       application[:bearer],
       course_id
     )
-    if students.empty?
-      return render status: :bad_request, json: {error: I18n.t('classlink_rostering.no_students', section_name: course_name)}
-    end
 
+    # An empty roster is applied like any other: ClassLink is the source of
+    # truth, and a sync to zero is recoverable — removal soft-deletes the
+    # Follower, so a later correct sync restores membership.
     section = ClasslinkSection.from_service(course_id, tenant_id, current_user.id, students, course_name)
     render json: section.summarize
   rescue Clients::ClasslinkOneRoster::DistrictAuthorizationError

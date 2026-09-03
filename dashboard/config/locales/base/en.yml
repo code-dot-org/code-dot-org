@@ -186,7 +186,6 @@ en:
     district_not_enabled: "Your district hasn't enabled roster sync for CodeAI."
     no_v2_account: "Please sign in again from ClassLink to proceed with roster sync."
     request_failed: "We're having trouble getting roster information from ClassLink. Please try again later."
-    no_students: "This section (%{section_name}) has no students."
   signup_form:
     email_signup: 'Sign up with your email address'
     student_count: '%{count} students have already signed up.'

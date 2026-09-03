@@ -98,6 +98,10 @@ A teacher who is an instructor (owner or co-teacher) of a ClassLink section in o
 - **WHEN** a student is no longer in the class in One Roster
 - **THEN** the system removes the student from the section (destroys the Follower record)
 
+#### Scenario: Class roster contains no students
+- **WHEN** a class is imported or synced and its One Roster response contains no users with `role == "student"`
+- **THEN** the system applies the empty roster like any other — a first import creates the section with no students, and a sync unenrolls every student — because ClassLink is the source of truth, and a sync to zero is recoverable: removal soft-deletes the `Follower` and leaves accounts and progress intact, so a later correct sync restores membership
+
 ### Requirement: District credentials are resolved via cache-aside lookup
 The system SHALL cache the `/applications` lookup result (bearer token and `oneroster_application_id`) per `tenant_id` in the shared cache with a TTL, reading from the cache before calling `/applications`.
 
@@ -212,10 +216,6 @@ The system SHALL surface a distinct message for each ClassLink rostering failure
 #### Scenario: Unexpected failure has no specific message
 - **WHEN** a rostering request fails for any reason without its own copy — a response missing its collection key, a malformed body, or an unhandled client error
 - **THEN** the teacher sees the same "We're having trouble getting roster information from ClassLink. Please try again later." message, so no failure path renders an empty dialog
-
-#### Scenario: Imported class contains no students
-- **WHEN** a class is imported or synced and its roster contains no users with `role == "student"`
-- **THEN** the teacher sees "This section (<section_name>) has no students.", with the section name interpolated
 
 ### Requirement: ClassLink rostering UI matches Clever rostering UX
 The teacher-facing interface for importing and syncing ClassLink sections SHALL match the existing Clever rostering experience, using the same `RosterDialog` and section management components.

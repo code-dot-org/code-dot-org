@@ -2113,22 +2113,25 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal I18n.t('classlink_rostering.request_failed'), JSON.parse(response.body)['error']
   end
 
-  test 'import_classlink_classroom reports a class with no students without touching the section' do
+  test 'import_classlink_classroom applies an empty roster like any other' do
+    # ClassLink is the source of truth: a sync to zero unenrolls everyone and
+    # is recoverable by a later correct sync, so it is not refused.
     teacher = create_classlink_v2_teacher
     sign_in teacher
+    imported_section = mock('ClasslinkSection')
+    imported_section.stubs(:summarize).returns({section_id: 1})
 
     Clients::ClasslinkOneRoster.stubs(:application_for_tenant).returns(CLASSLINK_APPLICATION)
     Clients::ClasslinkOneRoster.expects(:class_teachers).
       returns([{'sourcedId' => CLASSLINK_TEACHER_SOURCED_ID, 'role' => 'teacher'}])
     Clients::ClasslinkOneRoster.expects(:class_students).returns([])
-    ClasslinkSection.expects(:from_service).never
+    ClasslinkSection.expects(:from_service).
+      with('33333', CLASSLINK_TENANT, teacher.id, [], 'Sci5').
+      returns(imported_section)
 
-    assert_no_difference 'Section.count' do
-      post :import_classlink_classroom, params: {courseId: '33333', courseName: 'Sci5'}
-    end
+    post :import_classlink_classroom, params: {courseId: '33333', courseName: 'Sci5'}
 
-    assert_response :bad_request
-    assert_equal I18n.t('classlink_rostering.no_students', section_name: 'Sci5'), JSON.parse(response.body)['error']
+    assert_response :ok
   end
 
   #
