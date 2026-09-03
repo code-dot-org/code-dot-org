@@ -327,8 +327,7 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
   const renderFileChip = (
     fileName: string,
     backpackApi: BackpackClientApi,
-    recentlyAddedList: string[] | undefined,
-    isSecondaryBackpack?: boolean
+    recentlyAddedList: string[] | undefined
   ) => {
     return (
       <BackpackFileChip
@@ -407,8 +406,7 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
                       renderFileChip(
                         fileName,
                         secondaryBackpackApis[appName],
-                        recentlyAddedFiles[fileName],
-                        true // isSecondaryBackpack
+                        recentlyAddedFiles[fileName]
                       )
                     )}
                   </div>
