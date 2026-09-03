@@ -48,6 +48,7 @@ describe('rules/gravity.rule', () => {
       'AmountOfGravityProperty',
       'GravityScaleProperty',
       'FallingProperty',
+      'IgnoresGroundProperty',
     ]);
     expect(meta.events.map(event => event.ref.exportName)).toEqual([
       'StartsFallingEvent',

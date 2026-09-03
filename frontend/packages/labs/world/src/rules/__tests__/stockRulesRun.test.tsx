@@ -1023,6 +1023,87 @@ describe('Scoring', () => {
   });
 });
 
+describe('Gravity’s "ignores ground"', () => {
+  /** An actor at rest on a one-way platform, which is what it can fall off. */
+  const resting = () => {
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([
+        rule('rules/motion'),
+        rule('rules/collisions'),
+        rule('rules/gravity'),
+      ])
+      .instantiate();
+    const platform = new ActorBuilder({id: 'platform', name: 'platform'})
+      .useTraits([of('rules/gravity', 'ActsAsGroundTrait')])
+      .set(PositionProperty, at(100, 200))
+      .set(of('rules/collisions', 'SizeProperty'), new Vector(200, 16))
+      .instantiate('platform');
+    world.addActor(platform);
+    const faller = new ActorBuilder({id: 'faller', name: 'faller'})
+      .useTraits([
+        of('rules/gravity', 'AffectedByGravityTrait'),
+        of('rules/motion', 'CanMoveTrait'),
+      ])
+      .set(PositionProperty, at(100, 150))
+      .set(of('rules/collisions', 'SizeProperty'), new Vector(16, 16))
+      .instantiate('faller');
+    world.addActor(faller);
+    run(world, 0.5);
+    return {world, faller};
+  };
+
+  const height = (who: unknown) =>
+    (who as {get(p: unknown): Vector}).get(PositionProperty).y;
+
+  it('holds an actor up until it is set', () => {
+    // The control. Without this half the test below proves only that the
+    // actor is somewhere lower than it started, which it would be anyway.
+    const {world, faller} = resting();
+    const landed = height(faller);
+
+    run(world, 1);
+
+    expect(landed).toBeCloseTo(184, 0);
+    expect(height(faller)).toBeCloseTo(landed, 1);
+  });
+
+  it('drops it through, which is what a drop-through platform is', () => {
+    const {world, faller} = resting();
+    const landed = height(faller);
+
+    faller.set(of('rules/gravity', 'IgnoresGroundProperty'), true as never);
+    run(world, 0.5);
+
+    expect(height(faller)).toBeGreaterThan(landed + 50);
+  });
+
+  it('catches it again the moment it is put back', () => {
+    // What makes it a switch rather than a one-way door: a project that turns
+    // it on for a moment gets its floor back, and Climbing depends on that —
+    // a climber that kept it would walk off the ladder and through the world.
+    //
+    // On the NEXT floor down, because a platform once passed is passed: this
+    // catches by crossing a surface from above, so the one it fell through has
+    // nothing left to offer it.
+    const {world, faller} = resting();
+    const below = new ActorBuilder({id: 'below', name: 'below'})
+      .useTraits([of('rules/gravity', 'ActsAsGroundTrait')])
+      .set(PositionProperty, at(100, 320))
+      .set(of('rules/collisions', 'SizeProperty'), new Vector(200, 16))
+      .instantiate('below');
+    world.addActor(below);
+
+    faller.set(of('rules/gravity', 'IgnoresGroundProperty'), true as never);
+    run(world, 0.12);
+    faller.set(of('rules/gravity', 'IgnoresGroundProperty'), false as never);
+    run(world, 1);
+
+    // The lower platform is 16 tall centred at 320, so its surface is 312 and
+    // a 16-tall body rests at 304.
+    expect(height(faller)).toBeCloseTo(304, 0);
+  });
+});
+
 describe('Jumping', () => {
   /** A world with a floor, and a jumper standing on it. */
   const standing = (settings: Record<string, number> = {}) => {
@@ -2377,5 +2458,152 @@ describe('Jetpack', () => {
     world.act(of('rules/jetpack', 'GiveFuelAction'), pilot as never, 50);
 
     expect(read(pilot, 'FuelProperty')).toBe(100);
+  });
+});
+
+describe('Climbing', () => {
+  /**
+   * A ladder standing on a floor, and a climber at the bottom of it.
+   *
+   * The ladder is `Can Be Climbed` AND `Acts as Ground`, which is the shape
+   * JETPACK.md asks for: you land on the top of it, you fall through the rest
+   * of it, and you climb down through the top when you ask to.
+   */
+  const ladder = () => {
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([
+        rule('rules/motion'),
+        rule('rules/collisions'),
+        rule('rules/gravity'),
+        rule('rules/climb'),
+      ])
+      .instantiate();
+    const floor = new ActorBuilder({id: 'floor', name: 'floor'})
+      .useTraits([of('rules/gravity', 'ActsAsGroundTrait')])
+      .set(PositionProperty, at(100, 200))
+      .set(of('rules/collisions', 'SizeProperty'), new Vector(200, 16))
+      .instantiate('floor');
+    world.addActor(floor);
+    // Four rungs, bottom to top, each 32 tall — a ladder from the floor up.
+    const rungs = [0, 1, 2, 3].map(index => {
+      const rung = new ActorBuilder({id: 'rung', name: 'rung'})
+        .useTraits([
+          of('rules/climb', 'CanBeClimbedTrait'),
+          of('rules/gravity', 'ActsAsGroundTrait'),
+        ])
+        .set(PositionProperty, at(100, 176 - index * 32))
+        .set(of('rules/collisions', 'SizeProperty'), new Vector(32, 32))
+        .instantiate(`rung${index}`);
+      world.addActor(rung);
+      return rung;
+    });
+    const climber = new ActorBuilder({id: 'climber', name: 'climber'})
+      .useTraits([
+        of('rules/gravity', 'AffectedByGravityTrait'),
+        of('rules/climb', 'ClimbsTrait'),
+        of('rules/motion', 'CanMoveTrait'),
+      ])
+      .set(PositionProperty, at(100, 176))
+      .set(of('rules/collisions', 'SizeProperty'), new Vector(16, 16))
+      .instantiate('climber');
+    world.addActor(climber);
+    run(world, 0.2);
+    return {world, floor, rungs, climber};
+  };
+
+  const up = (world: World, who: unknown) =>
+    world.act(of('rules/climb', 'StartClimbingUpAction'), who as never);
+  const down = (world: World, who: unknown) =>
+    world.act(of('rules/climb', 'StartClimbingDownAction'), who as never);
+  const stop = (world: World, who: unknown) =>
+    world.act(of('rules/climb', 'StopClimbingAction'), who as never);
+  const height = (who: unknown) =>
+    (who as {get(p: unknown): Vector}).get(PositionProperty).y;
+
+  it('goes up a ladder at the speed it says', () => {
+    const {world, climber} = ladder();
+    const start = height(climber);
+
+    up(world, climber);
+    run(world, 0.5);
+
+    // Two units a second is 200 pixels a second, so half a second is a
+    // hundred — and gravity, which is pulling the whole time, gets none of it.
+    expect(start - height(climber)).toBeCloseTo(100, 0);
+  });
+
+  it('goes DOWN off the top of the ladder, which is the whole point', () => {
+    // STANDING ON THE TOP RUNG, which is the only place the problem exists: a
+    // one-way platform re-lands you every frame you rest on its surface, so
+    // whatever a mechanic sets the position to, the next frame puts it back.
+    // Anywhere else on the ladder you are already below every surface and
+    // gravity was never going to stop you.
+    const {world, climber} = ladder();
+    // Dropped on to the top rung from just above it, so the landing is the
+    // engine's own rather than a position this test asserted.
+    climber.set(PositionProperty, at(100, 40) as never);
+    run(world, 0.5);
+    const onTop = height(climber);
+
+    down(world, climber);
+    run(world, 0.3);
+
+    // The top rung's surface is at 64, so a climber resting there is at 56.
+    expect(onTop).toBeCloseTo(56, 0);
+    expect(height(climber)).toBeGreaterThan(onTop + 50);
+  });
+
+  it('will not start off a ladder, so the key is not a flight key', () => {
+    const {world, climber} = ladder();
+    // Off to one side, clear of the rungs and standing on the floor.
+    climber.set(PositionProperty, at(20, 176) as never);
+    run(world, 0.3);
+    const start = height(climber);
+
+    up(world, climber);
+    run(world, 0.5);
+
+    expect(height(climber)).toBeCloseTo(start, 1);
+  });
+
+  it('lets go by itself when the ladder runs out', () => {
+    // Stepping off the top is not a separate block: the climb ends when there
+    // is no longer a ladder to be on, and gravity has the actor back.
+    const {world, climber} = ladder();
+    let stops = 0;
+    (climber as {on(e: unknown, f: () => void): void}).on(
+      of('rules/climb', 'StopsClimbingEvent'),
+      () => {
+        stops++;
+      },
+    );
+
+    up(world, climber);
+    run(world, 2);
+
+    expect(stops).toBe(1);
+    expect(
+      (climber as {get(p: unknown): boolean}).get(
+        of('rules/climb', 'ClimbingProperty'),
+      ),
+    ).toBe(false);
+  });
+
+  it('hands the actor back to gravity when it stops', () => {
+    // The half that is easy to leave out. A climber that kept `ignores ground`
+    // would walk off the ladder and straight through the floor.
+    const {world, climber} = ladder();
+    up(world, climber);
+    run(world, 0.3);
+    stop(world, climber);
+    run(world, 1.5);
+
+    expect(
+      (climber as {get(p: unknown): boolean}).get(
+        of('rules/gravity', 'IgnoresGroundProperty'),
+      ),
+    ).toBe(false);
+    // Back on the ladder's own top surface or the floor — either way, held up.
+    expect(height(climber)).toBeLessThanOrEqual(192);
   });
 });

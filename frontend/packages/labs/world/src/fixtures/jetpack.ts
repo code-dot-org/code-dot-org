@@ -33,13 +33,21 @@
 // room is on screen and the view never moves, so a world position at the top
 // of the room is a heads-up display and needs nothing to make it one.
 //
-// WHAT IT IS NOT: there is no way to win, nothing to avoid, and no ladders yet
-// (JETPACK.md, phases 2 and 3). It is the smallest thing that plays.
+// THE LADDER IS THE OTHER WAY UP, and it is here to be the un-fun one. It
+// reaches the lowest ledge and nothing above it, so the jetpack is still the
+// only way to most of the room — what a ladder buys is a way back that costs
+// no fuel, which is the choice the level is about. The rungs are `Can Be
+// Climbed` AND `Acts as Ground`, so the top of the ladder holds you up and the
+// rest of it does not.
+//
+// WHAT IT IS NOT: there is no way to win and nothing to avoid (JETPACK.md,
+// phases 2 and 3). It is the smallest thing that plays.
 
 import {progressBarDrawing} from '../actors/stock/progressBar';
 import {stack, starterSprites, useTrait, type ProjectSpec} from '../constants';
 import {
   arrowsRule,
+  climbRule,
   collectRule,
   collisionsRule,
   gravityRule,
@@ -125,8 +133,25 @@ const CANS: ReadonlyArray<readonly [string, number, number]> = [
  * Exported for the same reason `FLAPPY_ACTORS` is: a board written twice is
  * two boards unless both readings come from one list.
  */
+/**
+ * The ladder, as the rows it occupies in column 2.
+ *
+ * From the floor to the lowest ledge, and no further: a ladder to everywhere
+ * would be a level with no reason to fly. What it buys is a way up and back
+ * that costs no fuel, which is the choice the level is about.
+ *
+ * It reaches the row the Pilot STANDS in, so stepping on to it is not a thing
+ * a player has to line up — and the bottom of the climb is the solid floor,
+ * which stops it (`rules/climb`).
+ */
+const LADDER_COLUMN = 2;
+const LADDER_ROWS = [10, 11, 12, 13, 14];
+
 export const JETPACK_ACTORS = [
   ...border(),
+  ...LADDER_ROWS.map(row =>
+    place('actors/ladder', `Rung${row}`, LADDER_COLUMN, row),
+  ),
   ...LEDGES.flatMap(([row, from, to]) => {
     const tiles: ReturnType<typeof place>[] = [];
     for (let column = from; column <= to; column++) {
@@ -218,6 +243,9 @@ const PILOT_ACTOR = JSON.stringify({
             useTrait('Arrow Keys#MovesAcrossTrait'),
             useTrait('Jumping#JumpsTrait'),
             useTrait('Jetpack#FliesWithAJetpackTrait'),
+            // Up and down climb, and only on a ladder — the control scheme is
+            // a trait, so this is the whole of it (`rules/climb`).
+            useTrait('Climbing#ClimbsWithArrowKeysTrait'),
             useTrait('Collection#CollectsTrait'),
             {type: 'world_set_sprite', fields: {SPRITE: 'player.png'}},
             // Enough to get ON to a single tile and no more, which is what
@@ -312,6 +340,33 @@ const tileActor = (name: string, sprite: string) =>
       ],
     },
   });
+
+/**
+ * A rung. It has no speed and no opinion about who climbs it.
+ *
+ * `Acts as Ground` as well, which is what makes the top of the ladder somewhere
+ * to stand: landing asks which way you were going, so the rungs below the one
+ * you cross are passed straight through (`rules/gravity`).
+ */
+const RUNG_ACTOR = JSON.stringify({
+  blocks: {
+    blocks: [
+      {
+        type: 'world_actor',
+        x: 20,
+        y: 20,
+        fields: {NAME: 'Rung'},
+        next: {
+          block: stack([
+            useTrait('Climbing#CanBeClimbedTrait'),
+            useTrait('Gravity#ActsAsGroundTrait'),
+            {type: 'world_set_sprite', fields: {SPRITE: 'ladder.png'}},
+          ]),
+        },
+      },
+    ],
+  },
+});
 
 /** A can: something to pick up, and nothing else. It does not know it is fuel. */
 const canActor = (name: string, sprite: string) =>
@@ -467,6 +522,12 @@ export const JETPACK_SPEC: ProjectSpec = {
       contents: tileActor('Ledge', 'ground.png'),
       folderId: 'actors',
     },
+    ladderActor: {
+      name: 'ladder.actor',
+      language: 'actor',
+      contents: RUNG_ACTOR,
+      folderId: 'actors',
+    },
     fuelCanActor: {
       name: 'fuelCan.actor',
       language: 'actor',
@@ -539,6 +600,12 @@ export const JETPACK_SPEC: ProjectSpec = {
       contents: arrowsRule,
       folderId: 'rules',
     },
+    climbRuleFile: {
+      name: 'climb.rule',
+      language: 'rule',
+      contents: climbRule,
+      folderId: 'rules',
+    },
     collectRuleFile: {
       name: 'collect.rule',
       language: 'rule',
@@ -551,7 +618,14 @@ export const JETPACK_SPEC: ProjectSpec = {
       contents: progressRule,
       folderId: 'rules',
     },
-    ...starterSprites(['player', 'ground', 'wall', 'fuelCan', 'fuelCanSmall']),
+    ...starterSprites([
+      'player',
+      'ground',
+      'wall',
+      'ladder',
+      'fuelCan',
+      'fuelCanSmall',
+    ]),
   },
   open: ['main'],
 };

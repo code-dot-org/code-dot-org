@@ -123,6 +123,9 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
     // needed: a jump is a press and nothing else.
     'world_on_Input_ReleasesEvent',
   ],
+  // Two `use trait` rows and nothing else: the control scheme is a trait, so
+  // the four handlers a project would otherwise write are not written.
+  'platformer/ladders': ['world_use_trait'],
   'platformer/ground': ['world_use_trait'],
   'platformer/pickups': ['world_use_trait', 'world_print'],
   'platformer/hazards': ['world_use_trait', 'world_print'],

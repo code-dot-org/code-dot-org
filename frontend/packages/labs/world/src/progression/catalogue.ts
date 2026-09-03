@@ -1378,6 +1378,52 @@ export const TILES: readonly Tile[] = [
     },
   },
   {
+    id: 'platformer/ladders',
+    region: 'platformer',
+    at: at('platformer', 3, 1),
+    // NOT "Down", which is what `motion/gravity` is called: two tiles whose
+    // names begin the same way are two tiles a keyboard user cannot tell
+    // apart, and a test in `accessibility` says so.
+    title: 'Climbing down',
+    teaches:
+      'A floor that holds you up until you ask it not to, and why the control scheme is a separate trait.',
+    task: 'A ledge with a ladder to it, and a Hero that walks straight past. Make the ladder a ladder and the Hero a climber.',
+    requires: ['platformer/jetpack'],
+    unlocks: [
+      {kind: 'rule', id: 'climb'},
+      {kind: 'asset', id: 'ladder'},
+    ],
+    check: {
+      kind: 'outcome',
+      says: 'Holding up carries the Hero to the top of the ladder, and holding down afterwards carries it back off the top — which is the half a one-way platform cannot do.',
+      falsePass:
+        'Climbing up alone, which is what a jump or a jetpack would also do. Going back DOWN through the top is the part that needs the rule: an actor resting on a surface is re-landed on it every frame, so a Hero that only ever went up would pass "it got there" and be stuck at the top forever.',
+      run: {
+        probes: {hero: {kind: 'positions', of: 'Hero'}},
+        trace: [
+          {hold: ['up arrow'], seconds: 1.4},
+          {seconds: 0.3},
+          {hold: ['down arrow'], seconds: 1},
+        ],
+      },
+      passes: ({samples}) => {
+        const heights = (samples.hero ?? []).map(
+          sample => (sample as {y: number}[])[0]?.y ?? 0,
+        );
+        if (heights.length < 3) {
+          return false;
+        }
+        // The ledge is at row 4, so a Hero standing on it is near y = 112.
+        const climbed = Math.min(...heights) < 130;
+        // …and back below it afterwards, which is the half that needs the
+        // rule. Measured against the END rather than the start, so a Hero
+        // that never left the floor cannot pass by standing still.
+        const came = heights[heights.length - 1] > Math.min(...heights) + 60;
+        return climbed && came;
+      },
+    },
+  },
+  {
     id: 'platformer/ground',
     region: 'platformer',
     at: at('platformer', 2, 2),

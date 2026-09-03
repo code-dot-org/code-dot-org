@@ -44,6 +44,7 @@ import {
   cameraFollowRule,
   cameraRule,
   carryRule,
+  climbRule,
   collectRule,
   collisionsRule,
   conversationRule,
@@ -191,6 +192,8 @@ export const ALL_STOCK_SOURCES: Record<string, string> = {
   'rules/zaps': zapsRule,
   'rules/input': inputRule,
   'rules/arrows': arrowsRule,
+  // After Input: its arrow-key trait needs one.
+  'rules/climb': climbRule,
   'rules/drive': driveRule,
   'rules/mouse': mouseRule,
   'rules/writing': writingRule,

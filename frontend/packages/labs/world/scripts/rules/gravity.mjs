@@ -23,6 +23,7 @@ import {
   note,
   over,
   param,
+  pick,
   rotated,
   shadow,
   thisActor,
@@ -225,6 +226,26 @@ affected.uses(CanMove);
 affected.uses(CanCollide);
 const gravityScale = affected.number('gravity scale', 1);
 export const falling = affected.boolean('falling', 'false', {readonly: true});
+/**
+ * Fall THROUGH what would otherwise hold this actor up.
+ *
+ * Landing is the half of this rule that is hardest to opt out of from outside:
+ * an actor on a one-way platform is re-landed every frame it rests there, so a
+ * mechanic that wants to take it downwards has nothing to push against —
+ * whatever it sets the position to, the next `handleCollisions` puts it back on
+ * the surface. Dropping the trait is not an answer either, since the actor
+ * still has to fall.
+ *
+ * So this is the switch, and it is a switch a project may throw as readily as a
+ * rule: "hold down to drop through the platform" is one handler with it, and
+ * unwritable without it. `Climbs Ladders` is the other caller — climbing DOWN
+ * off the top of a ladder is exactly this problem.
+ *
+ * It does not make an actor weightless (`gravity scale` is that) and it does
+ * not pass through a SOLID body, which is a different rule pushing overlapping
+ * bodies apart. It is about the floor under your feet and nothing else.
+ */
+export const ignoresGround = affected.boolean('ignores ground', 'false');
 
 affected.block({
   returns: 'boolean',
@@ -299,7 +320,16 @@ rule.step('handleCollisions', 'react', [
       note(
         'Landing (or not) is also when we announce it: started falling, landed.',
       ),
-      resting.set(landOnGround({faller: each.get(), frame: frameTime()})),
+      note('Unless this actor is on its way THROUGH the floor, in which'),
+      note('case there is nothing to land on and nothing to announce —'),
+      note('see `ignores ground`.'),
+      resting.set(
+        pick(
+          ignoresGround.of(each.get()),
+          no(),
+          landOnGround({faller: each.get(), frame: frameTime()}),
+        ),
+      ),
       when(
         [
           [

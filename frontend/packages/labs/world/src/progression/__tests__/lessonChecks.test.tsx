@@ -1880,6 +1880,57 @@ describe('the layers lesson’s check', () => {
   });
 });
 
+describe('the ladder lesson’s check', () => {
+  const lesson = LESSONS['platformer/ladders'];
+
+  /** The two `use trait` rows the lesson asks for. */
+  const climbing = (heroTraits: readonly string[], ladderTraits: string[]) =>
+    editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      for (const trait of heroTraits) {
+        under(actorIn(workspace, 'Hero'), {
+          type: 'world_use_trait',
+          fields: {TRAIT: trait},
+        });
+      }
+      for (const trait of ladderTraits) {
+        under(actorIn(workspace, 'Ladder'), {
+          type: 'world_use_trait',
+          fields: {TRAIT: trait},
+        });
+      }
+      return JSON.stringify(workspace);
+    });
+
+  it('refuses the picture it starts from', async () => {
+    // A ladder that is only a drawing, which is the whole of the starter.
+    const {passes} = await check('platformer/ladders', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('refuses a climber with nothing to climb', async () => {
+    // Half the lesson: the Hero can climb and the ladder is still a picture,
+    // so `start climbing up` is refused every frame and nothing moves.
+    const {passes} = await check(
+      'platformer/ladders',
+      climbing(['Climbing#ClimbsWithArrowKeysTrait'], []),
+    );
+    expect(passes).toBe(false);
+  });
+
+  it('accepts a ladder and somebody to climb it', async () => {
+    const {passes, result} = await check(
+      'platformer/ladders',
+      climbing(
+        ['Climbing#ClimbsWithArrowKeysTrait'],
+        ['Climbing#CanBeClimbedTrait'],
+      ),
+    );
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+});
+
 describe('the jetpack lesson’s check', () => {
   const lesson = LESSONS['platformer/jetpack'];
 

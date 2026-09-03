@@ -163,4 +163,38 @@ describe('the jetpack level', () => {
       (gauge as {get(p: unknown): number}).get(progress.FractionProperty),
     ).toBeLessThan(full);
   });
+
+  it('climbs the ladder to the first ledge, on no fuel at all', () => {
+    // The other way up, and the reason it is in the level: it costs nothing.
+    // The Pilot starts ON the ladder, so this is the route a player takes
+    // once the tank is dry — and the check is that the tank stayed dry.
+    const {world} = project;
+    play(world, 0.5);
+    pilot(world).set(
+      (project.modules['rules/jetpack'] as Record<string, unknown>)
+        .FuelProperty as never,
+      0 as never,
+    );
+
+    play(world, 1.5, ['up arrow']);
+
+    // The ladder's top rung is row 10, so a Pilot on it is somewhere above
+    // row 11 — the lowest ledge, which is what the ladder reaches.
+    expect(rowOf(world)).toBeLessThan(11);
+    expect(fuelOf(world, 'FuelProperty')).toBe(0);
+  });
+
+  it('comes back down the ladder rather than falling off it', () => {
+    // The half a one-way platform cannot do: standing on the top rung and
+    // going down through it. Without `Climbs Ladders` this is a Pilot that
+    // stands there, and with it the level has a way back that costs nothing.
+    const {world} = project;
+    play(world, 0.5);
+    play(world, 1.5, ['up arrow']);
+    const onTop = rowOf(world);
+
+    play(world, 0.8, ['down arrow']);
+
+    expect(rowOf(world)).toBeGreaterThan(onTop + 2);
+  });
 });

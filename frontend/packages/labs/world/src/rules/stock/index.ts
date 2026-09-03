@@ -19,6 +19,7 @@ import {cameraDeadzoneRule} from './cameraDeadzone';
 import {cameraEaseRule} from './cameraEase';
 import {cameraFollowRule} from './cameraFollow';
 import {carryRule} from './carry';
+import {climbRule} from './climb';
 import {collectRule} from './collect';
 import {collisionsRule} from './collisions';
 import {conversationRule} from './conversation';
@@ -349,6 +350,15 @@ export const STOCK_RULES: readonly StockRule[] = [
     contents: jetpackRule,
   },
   {
+    id: 'climb',
+    name: 'Climbing',
+    ability: 'Climbs Ladders',
+    description:
+      'A ladder to go up, and — the part a one-way platform cannot do on its own — to go back down through. Says what a ladder is, what climbs one, and offers a control scheme for the arrow keys that a climber need not take.',
+    provides: ['Can Be Climbed', 'Climbs', 'Climbs with Arrow Keys'],
+    contents: climbRule,
+  },
+  {
     id: 'drive',
     name: 'Arrow Drive',
     ability: 'Drives with Arrow Keys',
@@ -467,6 +477,7 @@ export function stockRuleByName(name: string): StockRule | undefined {
 
 export {
   arrowsRule,
+  climbRule,
   mouseRule,
   writingRule,
   boundsRule,

@@ -206,6 +206,13 @@ export const STOCK_SPRITES: readonly StockSprite[] = [
     dataUrl: image('fuelCanSmall'),
   },
   {
+    id: 'ladder',
+    name: 'Ladder',
+    description:
+      'A rung of ladder, drawn to stack: a column of these is one ladder, with the rungs evenly spaced across the joints.',
+    dataUrl: image('ladder'),
+  },
+  {
     id: 'hill',
     name: 'Hill',
     description: 'A dim green mound, for scenery a long way behind the floor.',

@@ -28,6 +28,7 @@ const RULES = [
   'gravity',
   'jump',
   'jetpack',
+  'climb',
   'solid',
   'wrap',
   'bounds',

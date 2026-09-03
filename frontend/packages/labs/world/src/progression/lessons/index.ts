@@ -12,7 +12,7 @@
 // Blockly JSON behind them. So `catalogue.ts` stays data about tiles, and the
 // projects live here, looked up by tile id.
 //
-// SIXTY-NINE OF SIXTY-NINE: every tile on the map has a lesson, a starting
+// SEVENTY OF SEVENTY: every tile on the map has a lesson, a starting
 // project, and a check tested in both directions.
 //
 // What is written is milestone 4 of specs/PROGRESSION_UI.md and then some: all
@@ -1594,6 +1594,114 @@ in between are the rule's business.
    **start ⟨…⟩ flying** does nothing at all when there is no fuel — it does not
    queue up and fire on the next pickup. One key, two answers, and you did not
    have to write the question: the rule refusing is what leaves the press free.
+`.trim(),
+};
+
+// ── platformer/ladders ───────────────────────────────────────────────────────
+
+const ladders: WorldScenario = {
+  name: 'A ladder that is not one yet',
+  description:
+    'A ledge, a ladder up to it, and a Hero that walks straight through both.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        createInMap(local('ground'), floorAcross(10)),
+        // The ledge is a ONE-WAY platform — `Acts as Ground` and not Solid,
+        // which the lesson before this one built. It matters here for the
+        // second half: you cannot climb down through something solid.
+        createInMap(
+          local('ledge'),
+          [4, 5, 6, 7, 8, 9].map(column =>
+            placed(`ledge${column}`, column * 32 + 16, 144),
+          ),
+        ),
+        // …and the ladder, standing on the floor and reaching a rung above
+        // the ledge, so that letting go at the top drops you on to it.
+        createInMap(
+          local('ladder'),
+          [272, 240, 208, 176, 144, 112].map((y, index) =>
+            placed(`rung${index}`, 144, y),
+          ),
+        ),
+        addActor(local('hero'), [placeAt(144, 272)]),
+      ],
+      actors: [
+        {
+          id: 'hero',
+          name: 'Hero',
+          rows: [
+            useTrait('Gravity#AffectedByGravityTrait'),
+            useTrait('Input#TakesKeyboardInputTrait'),
+            useTrait('Arrow Keys#MovesAcrossTrait'),
+            setSprite('player.png'),
+          ],
+        },
+        {
+          id: 'ground',
+          name: 'Ground',
+          rows: [
+            useTrait('Gravity#ActsAsGroundTrait'),
+            useTrait('Solid Bodies#SolidTrait'),
+            setSprite('ground.png'),
+          ],
+        },
+        {
+          id: 'ledge',
+          name: 'Ledge',
+          rows: [
+            useTrait('Gravity#ActsAsGroundTrait'),
+            setSprite('ground.png'),
+          ],
+        },
+        {
+          id: 'ladder',
+          name: 'Ladder',
+          // A picture and nothing else, which is the lesson: it LOOKS like a
+          // ladder and the Hero stands there ignoring it, because looking
+          // like one is not a thing the world knows about.
+          rows: [setSprite('ladder.png')],
+        },
+      ],
+    }),
+    sprites: ['player', 'ground', 'ladder'],
+    rules: ['gravity', 'solid', 'input', 'arrows', 'motion', 'climb'],
+  }),
+  instructions: `
+## Climbing down
+
+The Hero is standing at the foot of a ladder, and the ladder is a picture.
+Nothing in the world knows what a ladder looks like.
+
+Getting UP is the easy half, and you have most of it already: the ledge above
+is a bare **Acts as Ground** tile, which is a one-way platform — you rise
+through it and land on top of it, because landing asks which way you were
+going and rising is not landing.
+
+Getting back DOWN through it is the half with no answer. An actor resting on a
+surface is re-landed on it *every frame*, so whatever moves it downwards, the
+next frame puts it back. That is what **Climbs Ladders** is for.
+
+### What you do
+
+1. Give the Ladder **use trait ⟨Can Be Climbed⟩**. That is the whole of a
+   ladder — it has no speed and no opinion about who climbs it.
+2. Give the Hero **use trait ⟨Climbs with Arrow Keys⟩**. Up and down now
+   climb, and only while it is touching a ladder: walk off the ladder and
+   press up, and nothing happens.
+3. Hold up. Past the top rung the climb ends by itself and the Hero drops on
+   to the ledge — stepping off the top is not a separate block.
+4. Now hold **down**. You go back through the ledge, which is the thing that
+   could not be written before. Try the same on the floor and you stop, because
+   the floor is **Solid** as well and solid is a different question.
+5. The switch doing the work is **ignores ground**, and it belongs to *Gravity*
+   rather than to this rule. On its own it is what "hold down to drop through
+   the platform" would be built from.
+6. Take **Climbs with Arrow Keys** off the Hero and give it plain **Climbs**
+   instead. Nothing happens on any key — which is the point of the split: a
+   robot that takes ladders has no keyboard, and the control scheme is a trait
+   you elect rather than something the mechanic assumes.
 `.trim(),
 };
 
@@ -5154,6 +5262,7 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'place/layers': layers,
   'platformer/jump': jump,
   'platformer/jetpack': jetpack,
+  'platformer/ladders': ladders,
   'platformer/pickups': pickups,
   'platformer/hazards': hazards,
   'platformer/level': level,

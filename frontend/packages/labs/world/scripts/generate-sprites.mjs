@@ -65,6 +65,10 @@ export const SPRITE_NAMES = [
   // painted on a 32-pixel sprite is not.
   'fuelCan',
   'fuelCanSmall',
+  // A way up that is not a jump. Tiles VERTICALLY — a ladder is a column of
+  // these — so the rails run the full height of the cell and the rungs are
+  // spaced so that a stacked pair keeps the same gap across the joint.
+  'ladder',
 ];
 export const ANIMATION_SPECS = {
   coinSpin: {frames: 6, frameRate: 12},
@@ -445,6 +449,21 @@ const STATIC = {
     c.rect(24, 0, 6, 32, [38, 104, 54]); // shaded down the other
     c.rect(0, 0, 2, 32, [30, 84, 44]); // and its two hard edges
     c.rect(30, 0, 2, 32, [30, 84, 44]);
+  },
+  ladder(c) {
+    // Two rails and two rungs. The rails reach both edges so a column of these
+    // is one unbroken ladder; the rungs sit at 4 and 20, sixteen apart, which
+    // is also the distance from the lower one to the next tile's upper.
+    const wood = [198, 152, 78];
+    const shade = [140, 100, 46];
+    for (const x of [6, 22]) {
+      c.rect(x, 0, 4, 32, shade);
+      c.rect(x, 0, 3, 32, wood);
+    }
+    for (const y of [4, 20]) {
+      c.rect(6, y, 20, 4, shade);
+      c.rect(6, y, 20, 3, wood);
+    }
   },
   fuelCan: c => fuelCan(c, 1),
   fuelCanSmall: c => fuelCan(c, 0.66),
