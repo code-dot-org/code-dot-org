@@ -33,6 +33,9 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
 
 import {setActorImportHandler} from '../actors/actorImport';
+import {setActorEnhanceHandler} from '../actors/enhance/actorEnhance';
+import {EnhanceActorDialog} from '../actors/enhance/EnhanceActorDialog';
+import type {Enhancement, EnhanceTarget} from '../actors/enhance/enhancements';
 import {ImportActorDialog} from '../actors/ImportActorDialog';
 import {importStockActor} from '../actors/importStockActor';
 import type {StockActor} from '../actors/stock';
@@ -70,7 +73,16 @@ import type {StockSound} from '../sound/stock';
 import {refreshFor} from './refreshRegistries';
 
 /** Which shelf is open. One at a time, which is what a modal means anyway. */
-type Shelf = 'effect' | 'rule' | 'actor' | AppearanceKind | 'sound' | null;
+type Shelf =
+  | 'effect'
+  | 'rule'
+  | 'actor'
+  | AppearanceKind
+  | 'sound'
+  // …and the one that is not a shelf: enhancing carries the actor it is being
+  // done to, chosen on that actor's row before anything opened.
+  | {enhancing: EnhanceTarget}
+  | null;
 
 /**
  * Mount the import shelves and register the seams they answer.
@@ -109,6 +121,9 @@ export const LibraryImports = () => {
     setEffectImportHandler(() => open('effect'));
     setRuleImportHandler(() => open('rule'));
     setActorImportHandler(() => open('actor'));
+    setActorEnhanceHandler((target: EnhanceTarget) =>
+      open({enhancing: target}),
+    );
     setSoundImportHandler(() => open('sound'));
     setAppearanceImportHandler(kind => open(kind));
     // Cleared on unmount so nothing can open a dialog that is no longer here.
@@ -116,6 +131,7 @@ export const LibraryImports = () => {
       setEffectImportHandler(null);
       setRuleImportHandler(null);
       setActorImportHandler(null);
+      setActorEnhanceHandler(null);
       setSoundImportHandler(null);
       setAppearanceImportHandler(null);
     };
@@ -196,6 +212,24 @@ export const LibraryImports = () => {
             );
             took(source, name);
           }}
+          onCancel={cancel}
+        />
+      )}
+      {shelf !== null && typeof shelf === 'object' && (
+        // Not an import: this one EDITS the actor it was given, so the source
+        // goes in as well as out — the dialog reads it to say what that actor
+        // already has (`actors/enhance`).
+        <EnhanceActorDialog
+          source={sourcesRef.current.source}
+          target={shelf.enhancing}
+          onEnhance={(enhancement: Enhancement) =>
+            // The actor's path back, so a caller waiting on this knows what
+            // changed; nothing asks yet, and the seam hands back a string.
+            took(
+              enhancement.apply(sourcesRef.current.source, shelf.enhancing),
+              shelf.enhancing.path,
+            )
+          }
           onCancel={cancel}
         />
       )}

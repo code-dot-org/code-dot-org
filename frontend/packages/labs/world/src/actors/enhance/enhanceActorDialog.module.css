@@ -1,0 +1,26 @@
+/* The enhancement shelf's CONTENT — the same shape as the actor picker's, and
+   deliberately so: it answers a question of the same kind and a learner who has
+   met one should recognise the other. */
+
+.list {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 55vh;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+}
+
+/* One row per enhancement: a whole-row button, as the actor picker has. */
+.enhancement {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: flex-start;
+  padding: 10px 12px;
+  text-align: start;
+  text-transform: none;
+}

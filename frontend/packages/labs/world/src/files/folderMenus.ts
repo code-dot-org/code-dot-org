@@ -50,6 +50,16 @@ export interface FolderMenu {
   /** The shelf `Import…` opens, when something stocks this kind. */
   shelf?: () => Promise<string | undefined>;
   /**
+   * Whether a file here can be GIVEN something rather than only made,
+   * imported or deleted.
+   *
+   * Only the actors, and it is not on this menu: enhancing is done TO an
+   * actor, so it is offered on that actor's own row beside Rename and Clone,
+   * which is where everything else done to one file lives
+   * (`actors/enhance`).
+   */
+  enhances?: boolean;
+  /**
    * Whether a file of your own can be brought in here.
    *
    * The pictures and the sounds: what a learner has on their machine that this
@@ -81,6 +91,7 @@ export const FOLDER_MENUS: readonly FolderMenu[] = [
     icon: 'masks-theater',
     makes: [{label: 'New actor', extension: 'actor', placeholder: 'Chaser'}],
     shelf: requestActorImport,
+    enhances: true,
   },
   {
     folder: 'rules',

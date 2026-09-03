@@ -62,9 +62,11 @@ import {IconButtonWithTooltip} from '@code-dot-org/lab/components';
 import {useSources} from '@code-dot-org/lab/contexts';
 import {labActions, useAppSelector} from '@code-dot-org/lab/redux';
 
+import {requestActorEnhance} from '../actors/enhance/actorEnhance';
 import {label} from '../blockly/label';
 import {authoredName} from '../blockly/projectModules';
 import {folderIn} from '../projectWrite';
+import {filePath} from '../runtime/projectFiles';
 
 import styles from './fileMenus.module.css';
 import {FOLDER_MENUS, type FolderMenu, type Makeable} from './folderMenus';
@@ -377,6 +379,27 @@ export const FileMenus = () => {
     [thenAsk],
   );
 
+  /**
+   * Give this actor something it does not have yet.
+   *
+   * On the file's OWN menu, beside Rename and Clone, because that is where
+   * everything done TO one file lives — and because choosing the actor is half
+   * the question, already answered by whose row this is (`actors/enhance`).
+   */
+  const enhance = useCallback(
+    async (file: ProjectFile, name: string) => {
+      await thenAsk();
+      await requestActorEnhance({
+        path: (filePath(ops.source, file.id) ?? file.name).replace(
+          /\.[^./]+$/,
+          '',
+        ),
+        name,
+      });
+    },
+    [thenAsk, ops.source],
+  );
+
   const remove = useCallback(
     async (file: ProjectFile) => {
       await thenAsk();
@@ -532,6 +555,19 @@ export const FileMenus = () => {
           list: {'aria-label': row && `Options for ${row.name}`, dense: true},
         }}
       >
+        {row && open?.menu.enhances && (
+          // First, because it is the only one of these that ADDS something —
+          // the rest rename, copy and remove. An actor is the only kind with
+          // anything to be given (`actors/enhance`).
+          <MenuItem onClick={() => enhance(row.file, row.name)}>
+            <ListItemIcon className={styles.menuIcon}>
+              <FontAwesomeV6Icon iconName="wand-magic" iconStyle="solid" />
+            </ListItemIcon>
+            <ListItemText disableTypography>
+              <Typography variant="body4">Enhance…</Typography>
+            </ListItemText>
+          </MenuItem>
+        )}
         {row && (
           <MenuItem onClick={() => rename(row.file, row.name)}>
             <ListItemIcon className={styles.menuIcon}>

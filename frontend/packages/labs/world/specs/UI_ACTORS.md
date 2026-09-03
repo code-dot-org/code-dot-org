@@ -340,6 +340,13 @@ actor it is pointed at, and points at nobody until a project wires it up, so its
 honest picture is an empty track. The preview answers "is anybody there?" with
 yes and reads the Health rule's own defaults.
 
+That the picture has to lie is the tell. A Health Bar is not a thing but a
+RELATIONSHIP — a bar, an actor with health, and a line pointing one at the
+other — which is why its description carries a recipe and why importing one
+gives a project a bar about nobody. Doing the whole recipe in one act is what
+an ENHANCEMENT is, and it is asked for on the actor's own row rather than from
+a shelf (specs/ENHANCEMENTS.md).
+
 ### And a picture is not enough for an actor that DOES something
 
 A Platformer Player standing still is a blue sprite. What the import actually
