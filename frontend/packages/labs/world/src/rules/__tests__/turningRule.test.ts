@@ -37,16 +37,23 @@ describe('rules/turning.rule', () => {
     });
   });
 
-  it('leaves a level three dials and no more', () => {
-    // Which way it starts, how fast, and what kind of enemy it is. A room
-    // full of these all setting off rightwards reads as one enemy copied,
-    // which is why the heading is settable rather than the rule's own.
+  it('leaves a level four dials and no more', () => {
+    // Which way it starts, how fast, what kind of enemy it is — and whether
+    // the drawing turns with it, which is a fact about the picture rather
+    // than about the movement: a ball is round and a rocket has a nose. A
+    // room full of these all setting off rightwards reads as one enemy
+    // copied, which is why the heading is settable rather than the rule's own.
     const settable = meta.properties
       .filter(property => !property.readonly)
       .map(property => property.id)
       .sort();
 
-    expect(settable).toEqual(['heading', 'travel_speed', 'turn_by']);
+    expect(settable).toEqual([
+      'heading',
+      'points_where_it_goes',
+      'travel_speed',
+      'turn_by',
+    ]);
   });
 
   it('remembers where it was, and that it has been anywhere', () => {

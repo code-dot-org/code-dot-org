@@ -358,6 +358,10 @@ const kind = (path: string) => ({
   block: {type: 'world_actor_kind', fields: {ACTOR: path}},
 });
 
+const truth = (value: boolean) => ({
+  block: {type: 'logic_boolean', fields: {BOOL: value ? 'TRUE' : 'FALSE'}},
+});
+
 /**
  * What a full can is worth, and what a small one is.
  *
@@ -696,6 +700,7 @@ const enemyActor = (
   turnBy: number,
   falls: boolean,
   aim: number,
+  points: boolean,
 ) =>
   JSON.stringify({
     blocks: {
@@ -733,6 +738,12 @@ const enemyActor = (
               {
                 type: 'world_set_Turning_TravelSpeedProperty',
                 inputs: {ACTOR: me(), VALUE: number(1.8)},
+              },
+              // The rocket's nose follows its heading; the ball is round and
+              // a rotating highlight would be the only thing it said.
+              {
+                type: 'world_set_Turning_PointsWhereItGoesProperty',
+                inputs: {ACTOR: me(), VALUE: truth(points)},
               },
             ]),
           },
@@ -1133,13 +1144,20 @@ export const JETPACK_SPEC: ProjectSpec = {
     ballActor: {
       name: 'ball.actor',
       language: 'actor',
-      contents: enemyActor('Steel Ball', 'pinball.png', 180, true, BALL_AIM),
+      contents: enemyActor(
+        'Steel Ball',
+        'pinball.png',
+        180,
+        true,
+        BALL_AIM,
+        false,
+      ),
       folderId: 'actors',
     },
     rocketActor: {
       name: 'rocket.actor',
       language: 'actor',
-      contents: enemyActor('Rocket', 'rocket.png', 90, false, ROCKET_AIM),
+      contents: enemyActor('Rocket', 'rocket.png', 90, false, ROCKET_AIM, true),
       folderId: 'actors',
     },
     coinActor: {

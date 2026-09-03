@@ -64,16 +64,24 @@ describe('rules/climb.rule', () => {
   });
 
   it('keeps the climb itself out of a project’s hands', () => {
-    // The three that are read-only are the rule's own account of a climb in
-    // progress, which is what keeps `starts climbing` and `stops climbing`
-    // honest — and what stops a project setting `climbing` in mid-air, which
-    // is a flight key with extra steps.
+    // Every read-only one is the rule's own account of a climb in progress,
+    // which is what keeps `starts climbing` and `stops climbing` honest — and
+    // what stops a project setting `climbing` in mid-air, which is a flight
+    // key with extra steps. `climbing from` and `climb measured` are the pair
+    // that lets a climb notice it has run into something; they are the same
+    // shape `Turning` keeps, and for the same reason.
     const own = meta.properties
       .filter(property => property.readonly)
       .map(property => property.id)
       .sort();
 
-    expect(own).toEqual(['climbing', 'climbing_up', 'top_rung']);
+    expect(own).toEqual([
+      'climb_measured',
+      'climbing',
+      'climbing_from',
+      'climbing_up',
+      'top_rung',
+    ]);
   });
 
   it('leaves the two dials a level would turn', () => {

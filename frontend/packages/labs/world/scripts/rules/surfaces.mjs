@@ -83,6 +83,15 @@ const rule = defineRule({
 // the rest of the level, which reads as the game having broken rather than as
 // a floor being slippery.
 //
+// AND THE MEMORY IS FORGOTTEN ON THE WAY OUT, which is the half that was
+// missing. "Take the speed when you arrive" was written as "take it when there
+// is no speed recorded yet", and those are the same sentence exactly once: the
+// first patch of ice a walker ever touches. Every patch after that still held
+// the number from the first, so a player who slid right across one patch was
+// still sliding right on the next one however they came on to it — walking
+// left, jumping on from the right, it made no difference. It reads as ice that
+// has decided which way you are going, which is the opposite of the rule.
+//
 // JUMPING STILL WORKS on all three, because none of them touches the vertical
 // speed. That is not a concession; it is what makes ice playable.
 //
@@ -149,7 +158,14 @@ stands.uses(CanCollide);
  * on ice from being on it, which is when the speed is taken.
  */
 const sliding = stands.boolean('sliding', 'false', {readonly: true});
-/** …and the speed it arrived at, which is what every frame after repeats. */
+/**
+ * …and the speed it arrived at, which is what every frame after repeats.
+ *
+ * Cleared on the way off, so that the next patch of ice reads the walker
+ * rather than the last patch. Zero doubles as "nothing recorded", which is
+ * what lets a walker that arrived at a standstill go on listening — see the
+ * header on both.
+ */
 const slideSpeed = stands.number('slide speed', 0, {readonly: true});
 
 export const StandsOnSurfaces = rule.traitRef('Stands on Surfaces');
@@ -214,6 +230,15 @@ stands.step('read the floor', 'push', [
               not(sliding.of(thisActor())),
               [
                 sliding.set(thisActor(), yes()),
+                note('The speed it came on with, taken HERE — on the frame'),
+                note('it arrived — rather than inferred later from there'),
+                note('being none recorded. See the header: those two are'),
+                note('the same sentence only on the first patch of ice a'),
+                note('walker ever touches.'),
+                slideSpeed.set(
+                  thisActor(),
+                  axisOf('x', velocity.of(thisActor())),
+                ),
                 startedSliding({}, thisActor()),
               ],
             ],
@@ -237,11 +262,17 @@ stands.step('read the floor', 'push', [
       ],
     ],
     [
-      note('Off the ice, and the walker has its own speed back.'),
+      note('Off the ice, and the walker has its own speed back — and the'),
+      note('ice forgets, so the next patch reads the walker rather than'),
+      note('this one.'),
       when([
         [
           sliding.of(thisActor()),
-          [sliding.set(thisActor(), no()), stoppedSliding({}, thisActor())],
+          [
+            sliding.set(thisActor(), no()),
+            slideSpeed.set(thisActor(), n(0)),
+            stoppedSliding({}, thisActor()),
+          ],
         ],
       ]),
     ],

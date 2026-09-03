@@ -1714,15 +1714,22 @@ const surfaces: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
+      // Twelve tiles rather than ten, for the ice. The Hero steps on to it
+      // off the sludge, which is to say at a crawl — and a walker that
+      // arrives slowly slides slowly, so two tiles of ice is a second of
+      // being unable to turn round and then the far edge of it. Four tiles
+      // is long enough for the thing the lesson asks you to try.
+      tiles: [12, 10],
       rows: [
         // The run the Hero walks: ordinary floor, then one stretch of each,
-        // in the order the lesson asks about them. Three tiles apiece, which
-        // is long enough to feel and short enough to cross.
+        // in the order the lesson asks about them.
         createInMap(local('ground'), [
           ...[0, 1].map(column =>
             placed(`floor${column}`, column * 32 + 16, 304),
           ),
-          ...[9].map(column => placed(`floor${column}`, column * 32 + 16, 304)),
+          ...[11].map(column =>
+            placed(`floor${column}`, column * 32 + 16, 304),
+          ),
         ]),
         createInMap(
           local('belt'),
@@ -1738,7 +1745,9 @@ const surfaces: WorldScenario = {
         ),
         createInMap(
           local('ice'),
-          [7, 8].map(column => placed(`ice${column}`, column * 32 + 16, 304)),
+          [7, 8, 9, 10].map(column =>
+            placed(`ice${column}`, column * 32 + 16, 304),
+          ),
         ),
         addActor(local('hero'), [placeAt(16, 272)]),
       ],

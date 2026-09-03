@@ -1,4 +1,4 @@
-import {position} from './builtins.mjs';
+import {position, rotation} from './builtins.mjs';
 import {CanCollide} from './collisions.mjs';
 import {
   add,
@@ -71,7 +71,20 @@ const rule = defineRule({
 //
 // THE HEADING IS SETTABLE, because which way an enemy starts is a fact about
 // where a level put it, and a room full of these all setting off rightwards is
-// a room that reads as one enemy copied.`,
+// a room that reads as one enemy copied.
+//
+// AND IT CAN POINT THE DRAWING, which is a separate switch because whether a
+// picture should turn is a fact about the picture and not about the movement.
+// A ball is round and turning it does nothing; a rocket that takes a corner
+// and keeps flying nose-east is the one thing in the room that reads as broken.
+// So \`points where it goes\` is off by default — nothing that already works
+// starts spinning — and the rocket in the jetpack level turns it on.
+//
+// The heading IS the rotation, with no conversion between them, because both
+// are the same compass: zero points right and ninety points down, which is
+// what \`vector direction\` answers and how the stock rocket is drawn. A rule
+// that had to correct for the artwork would be a rule with a number in it that
+// only one drawing could explain.`,
 });
 rule.uses('Physics');
 rule.uses('Collisions');
@@ -97,6 +110,16 @@ const speed = turns.number('travel speed', 1);
  * way and a room can hold both.
  */
 const turnBy = turns.number('turn by', 180);
+/**
+ * Whether the drawing turns with the heading.
+ *
+ * Off by default, because whether a picture should point somewhere is a fact
+ * about the picture: a ball is round and a crate has a top. On, the rotation
+ * IS the heading — same compass, no correction — so a drawing that points
+ * right when it is not turned points where it is going, which is how the
+ * stock rocket is drawn.
+ */
+const points = turns.boolean('points where it goes', 'false');
 /**
  * Where it was at the top of this frame.
  *
@@ -151,6 +174,16 @@ turns.step('go the way it is facing', 'decide', [
       vectorTimes(facing(), speed.of(thisActor())),
     ),
   ),
+  note('The drawing, if it was asked for. Here rather than after the turn'),
+  note('so that the picture and the movement are the same frame’s: a nose'),
+  note('that points where the actor went LAST frame is a nose that lags'),
+  note('visibly at every corner.'),
+  when([
+    [
+      points.of(thisActor()),
+      [rotation.set(thisActor(), heading.of(thisActor()))],
+    ],
+  ]),
   note('…and where it is starting from, for the other end of the frame to'),
   note('subtract.'),
   wasAt.set(thisActor(), position.x(thisActor()), position.y(thisActor())),

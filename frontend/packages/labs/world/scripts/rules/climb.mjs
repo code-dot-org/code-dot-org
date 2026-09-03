@@ -3,6 +3,7 @@ import {collisionSizeOf, contacts} from './collisions.mjs';
 import {
   add,
   axisOf,
+  both,
   countOf,
   defineRule,
   extremeActor,
@@ -11,6 +12,7 @@ import {
   give,
   hasTrait,
   keyDown,
+  lessThan,
   minus,
   moduleFor,
   moreThan,
@@ -137,8 +139,16 @@ const speed = climbs.number('climb speed', 2);
 // three blocks below are the only way to change it, which is what keeps
 // `starts climbing` and `stops climbing` honest.
 export const climbing = climbs.boolean('climbing', 'false', {readonly: true});
-// …and which way. Meaningless while `climbing` is false.
-const goingUp = climbs.boolean('climbing up', 'false', {readonly: true});
+// …and which way.
+//
+// Exported, and it KEEPS its value after a climb ends, which is the whole of
+// why: `Prowling` asks which way the climb that just failed was going, so that
+// a junction reached by a climb getting nowhere does not choose that same
+// direction again. Meaningless before the first climb, and the rules that read
+// it only do so having seen one end.
+export const goingUp = climbs.boolean('climbing up', 'false', {
+  readonly: true,
+});
 // Whether a climb pulls the climber on to the middle of the ladder.
 //
 // On by default, and the default is the argument: a ladder in a gap one tile
@@ -154,6 +164,21 @@ const centers = climbs.boolean('centers on the ladder', 'true');
 // somewhere to put the climber down. Read-only bookkeeping: a project setting
 // it would be telling the rule a lie about which ladder it is on.
 const topRung = climbs.actor('top rung', {readonly: true});
+/**
+ * Where the climber was when this frame's climb began, and whether it is
+ * filled in.
+ *
+ * The same pair `Turning` keeps and for the same reason: a climb that asked to
+ * travel and did not has run into something, and there is no way to notice
+ * that except by asking afterwards. The flag is needed because a climb can
+ * START in `touch` — a key handler's moment — which is after the step that
+ * would have recorded a position, so the first frame of a climb has nothing to
+ * compare against and must not be judged.
+ */
+const climbedFrom = climbs.number('climbing from', 0, {readonly: true});
+const climbMeasured = climbs.boolean('climb measured', 'false', {
+  readonly: true,
+});
 
 export const Climbs = rule.traitRef('Climbs');
 
@@ -239,6 +264,7 @@ const end = who => [
       climbing.of(who),
       [
         climbing.set(who, no()),
+        climbMeasured.set(who, no()),
         note('Gravity holds this actor up again — a climber that kept this'),
         note('would walk off the next ledge and through the floor under it.'),
         ignoresGround.set(who, no()),
@@ -340,6 +366,22 @@ climbs.step('climb', 'adjust', [
                 key: position.y(rung.get()),
               }),
             ),
+            note('Where it is starting from, for the end of the frame to'),
+            note('subtract — see `climbing from`. A climb that asked to'),
+            note('travel and did not has run into something.'),
+            note('THE TOP OF THE FRAME, which is the same place the climb'),
+            note('below starts from, and not where the actor is standing at'),
+            note('this instant: `move` has already run, so the position here'),
+            note('has this frame’s travel in it and subtracting it from the'),
+            note('answer would measure nothing at all.'),
+            climbedFrom.set(
+              thisActor(),
+              axisOf(
+                'y',
+                positionBefore({subject: thisActor(), seconds: frameTime()}),
+              ),
+            ),
+            climbMeasured.set(thisActor(), yes()),
             note('Where this actor was at the top of the frame, plus a'),
             note('frame of climbing. Whatever gravity did to y since then is'),
             note('not consulted — see the header. Up is negative y, and the'),
@@ -389,6 +431,61 @@ climbs.step('climb', 'adjust', [
             ),
           ],
         ),
+      ],
+    ],
+  ]),
+]);
+
+const got = rule.local('got', 'Number');
+const asked = rule.local('asked', 'Number');
+
+/**
+ * A climb that cannot get anywhere is over.
+ *
+ * THE BUG THIS EXISTS FOR was a robot frozen at the foot of a ladder for the
+ * rest of the level. It stood on solid ground, decided its quarry was below
+ * it, and started climbing DOWN — which is a legal thing to ask for, because
+ * the bottom rung is a rung like any other and a ladder that goes on down
+ * through a hole is a real ladder. This one did not: the floor pushed back
+ * exactly as far as the climb pushed, every frame, for ever.
+ *
+ * Nothing could get it out. `Prowling` reconsiders at four junctions and every
+ * one of them is either gated on not climbing or is a CHANGE — landing, a
+ * ladder arriving, a climb ending — and none of those can happen to an actor
+ * that is climbing and motionless. A player is in the same trap holding Down
+ * on the bottom rung.
+ *
+ * So the climb answers for itself, and asks `Turning`'s question: I asked to
+ * travel this far and I did not, so there is something there. That is one
+ * subtraction, it is true of every way of being stopped — a floor below, a
+ * ceiling above, a solid body in the way — and it is asked in `react`, after
+ * all of them have had their say.
+ *
+ * HALF THE DISTANCE, like `Turning`, because a body Solid has pushed part of
+ * the way out of a wall has travelled a little without having got anywhere.
+ */
+climbs.step('stop if the climb got nowhere', 'react', [
+  when([
+    [
+      both(climbing.of(thisActor()), climbMeasured.of(thisActor())),
+      [
+        note('Up is negative y, so the distance is signed by the direction'),
+        note('and a climb that was pushed BACKWARDS is stopped too.'),
+        got.set(
+          times(
+            minus(position.y(thisActor()), climbedFrom.of(thisActor())),
+            pick(goingUp.of(thisActor()), n(-1), n(1)),
+          ),
+        ),
+        asked.set(
+          times(times(speed.of(thisActor()), pixelsPerUnit()), frameTime()),
+        ),
+        when([
+          [
+            lessThan(got.get(), times(asked.get(), n(0.5))),
+            [stopClimbing({who: thisActor()})],
+          ],
+        ]),
       ],
     ],
   ]),

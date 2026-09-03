@@ -29,6 +29,7 @@ import {
   type World,
 } from '../../engine';
 import {keyName} from '../../engine/core/keys';
+import {RotationProperty} from '../../engine/rules/spatial';
 import {
   DEMO_SIZE,
   RULE_DEMOS,
@@ -2818,6 +2819,77 @@ describe('Surfaces', () => {
     expect(across(walker) - from).toBeLessThan(0);
   });
 
+  it('reads the walker again on the next patch of ice', () => {
+    // THE BUG THE LEVEL FOUND. "Take the speed when you arrive" was written
+    // as "take it when there is none recorded yet", and those are the same
+    // sentence exactly once — on the first patch of ice a walker ever
+    // touches. So the walker below arrives on the second patch walking LEFT
+    // and, before the fix, went on sliding right at the speed the first patch
+    // took from it.
+    const {world, walker, tile} = standing([
+      of('rules/surfaces', 'SlipperyTrait'),
+    ]);
+    // A plain floor under the ice, so that taking the ice away leaves the
+    // walker standing rather than falling: the test is about the trait, and a
+    // walker in mid-air is not on any surface at all.
+    const floor = new ActorBuilder({id: 'floor', name: 'floor'})
+      .useTraits([of('rules/gravity', 'ActsAsGroundTrait')])
+      .set(PositionProperty, at(100, 200))
+      .set(of('rules/collisions', 'SizeProperty'), new Vector(400, 16))
+      .instantiate('floor');
+    world.addActor(floor);
+    run(world, 0.2);
+
+    // The first patch, arrived at going right.
+    hold(world, 0.2, ['right arrow']);
+    // Off it, and walking the other way.
+    tile.set(
+      of('rules/collisions', 'SizeProperty'),
+      new Vector(1, 16) as never,
+    );
+    hold(world, 0.3, ['left arrow']);
+    // …and on to the second, still going left.
+    tile.set(
+      of('rules/collisions', 'SizeProperty'),
+      new Vector(400, 16) as never,
+    );
+    hold(world, 0.1, ['left arrow']);
+    const from = across(walker);
+
+    // Now ask to go right. The ice should refuse, and should refuse in the
+    // direction this walker actually arrived in.
+    hold(world, 0.5, ['right arrow']);
+
+    expect(across(walker) - from).toBeLessThan(0);
+  });
+
+  it('forgets the slide when the walker steps off', () => {
+    // The same fact from the other side, and the cheaper half of it: the
+    // memory is what the next patch reads, so a memory that outlives the ice
+    // is a walker who never gets to arrive again.
+    const {world, walker, tile} = standing([
+      of('rules/surfaces', 'SlipperyTrait'),
+    ]);
+    hold(world, 0.2, ['right arrow']);
+    expect(
+      (walker as {get(p: unknown): number}).get(
+        of('rules/surfaces', 'SlideSpeedProperty'),
+      ),
+    ).toBeGreaterThan(0);
+
+    tile.set(
+      of('rules/collisions', 'SizeProperty'),
+      new Vector(1, 16) as never,
+    );
+    hold(world, 0.1);
+
+    expect(
+      (walker as {get(p: unknown): number}).get(
+        of('rules/surfaces', 'SlideSpeedProperty'),
+      ),
+    ).toBe(0);
+  });
+
   it('leaves the vertical speed alone, so a jump still works', () => {
     // Not a concession — it is what makes ice playable at all.
     const {world, walker} = standing([of('rules/surfaces', 'SlipperyTrait')]);
@@ -2978,6 +3050,41 @@ describe('Turning', () => {
     );
   const where = (mover: unknown) =>
     (mover as {get(p: unknown): Vector}).get(PositionProperty);
+
+  const facing = (mover: unknown) =>
+    (mover as {get(p: unknown): number}).get(RotationProperty);
+
+  it('leaves the drawing alone unless it is asked to turn it', () => {
+    // Off by default, because whether a picture should point somewhere is a
+    // fact about the picture. A ball is round; turning it says nothing and
+    // moves its highlight.
+    const {world, mover} = corridor([], {TurnByProperty: 180});
+
+    run(world, 3);
+
+    // Far enough to have hit the end of the corridor and come back.
+    expect(heading(mover)).toBe(180);
+    expect(facing(mover)).toBe(0);
+  });
+
+  it('points the drawing along the heading when it is', () => {
+    // The rocket. The heading IS the rotation — both are the same compass,
+    // zero right and ninety down — so a drawing that points right when it is
+    // not turned points where it is going, with nothing in between to get
+    // the artwork wrong.
+    const {world, mover} = corridor([], {
+      PointsWhereItGoesProperty: true as never,
+      TurnByProperty: 90,
+    });
+
+    run(world, 1 / 60);
+    expect(facing(mover)).toBe(0);
+
+    run(world, 3);
+
+    expect(facing(mover)).toBe(heading(mover));
+    expect(facing(mover)).not.toBe(0);
+  });
 
   it('does not turn on its first frame, however far from the origin it is', () => {
     // The failure the `measured` flag exists for: without it the distance
@@ -3201,6 +3308,50 @@ describe('Prowling', () => {
     (robot as {get(p: unknown): number}).get(
       of('rules/prowling', 'GoingProperty'),
     );
+
+  it('does not spend the level on the bottom rung', () => {
+    // THE BUG THE LEVEL FOUND, and it needed three fixes in two rules.
+    //
+    // A robot standing on solid ground at the foot of a ladder, with its
+    // quarry below it, asks to climb DOWN — which is a legal request, because
+    // a ladder that carries on down through a hole is a real ladder. This one
+    // does not. The floor pushed back exactly as far as the climb pushed, so
+    // the robot did not move; and a robot that is climbing can reach none of
+    // the junctions at which it reconsiders, because every one of them is
+    // either gated on not climbing or is a change. It stood there for ever.
+    const {world, robot, prey} = rooms();
+    // A SOLID floor, which is what the level has and what `rooms` did not:
+    // without it the robot climbs down through the ground and falls out of
+    // the world, which is a different bug wearing the same clothes.
+    const slab = new ActorBuilder({id: 'slab', name: 'slab'})
+      .useTraits([
+        of('rules/gravity', 'ActsAsGroundTrait'),
+        of('rules/solid', 'SolidTrait'),
+      ])
+      .set(PositionProperty, at(200, 208))
+      .set(of('rules/collisions', 'SizeProperty'), new Vector(400, 16))
+      .instantiate('slab');
+    world.addActor(slab);
+    (robot as {set(p: unknown, v: unknown): void}).set(
+      PositionProperty,
+      at(200, 184),
+    );
+    (prey as {set(p: unknown, v: unknown): void}).set(
+      PositionProperty,
+      at(200, 300),
+    );
+    const from = at2(robot).x;
+
+    run(world, 2);
+
+    // It gave up on down and walked, which is the whole of what was wanted.
+    expect(Math.abs(at2(robot).x - from)).toBeGreaterThan(32);
+    expect(
+      (robot as {get(p: unknown): boolean}).get(
+        of('rules/climb', 'ClimbingProperty'),
+      ),
+    ).toBe(false);
+  });
 
   it('turns towards its quarry when it lands, and not before', () => {
     // The whole shape. It starts going right with the prey away to the left,

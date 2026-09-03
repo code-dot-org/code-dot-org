@@ -1,5 +1,12 @@
 import {position} from './builtins.mjs';
-import {climbDown, climbUp, climbing, Climbs, onLadder} from './climb.mjs';
+import {
+  climbDown,
+  climbUp,
+  climbing,
+  Climbs,
+  goingUp,
+  onLadder,
+} from './climb.mjs';
 import {
   absolute,
   axisOf,
@@ -138,14 +145,21 @@ const wasOnLadder = prowls.boolean('was on a ladder', 'false', {
 });
 const wasClimbing = prowls.boolean('was climbing', 'false', {readonly: true});
 /**
- * Where it was along the floor at the top of the last frame.
+ * Where it was at the top of the last frame — BOTH axes.
  *
- * The fourth junction: a robot that asked to walk and did not is a robot
- * whose direction has run out. `Turning` asks the same question of its own
- * heading, and for the same reason — a wall is not something to look for, it
- * is something you notice by not getting past it.
+ * The fourth junction: a robot that asked to go somewhere and did not is a
+ * robot whose direction has run out. `Turning` asks the same question of its
+ * own heading, and for the same reason — a wall is not something to look for,
+ * it is something you notice by not getting past it.
+ *
+ * A POINT rather than a sideways distance, and that is the fix for two things
+ * at once. A climber pinned against a floor moves in neither axis and was
+ * previously not stuck at all, because the test excluded anything climbing —
+ * which is how a robot came to spend a level frozen on the bottom rung. And a
+ * robot in free fall moves only downwards, which the sideways test read as
+ * stuck, so it re-decided on every frame of every fall.
  */
-const wasX = prowls.number('was at', 0, {readonly: true});
+const wasAt = prowls.point('was at', {x: 0, y: 0}, {readonly: true});
 
 export const Prowls = rule.traitRef('Prowls');
 
@@ -153,6 +167,9 @@ export const Prowls = rule.traitRef('Prowls');
 const chose = prowls.event(['chooses']);
 
 const here = rule.local('here', 'Boolean');
+/** Which way, if either, a climb that got nowhere was going. */
+const noUp = rule.local('noUp', 'Boolean');
+const noDown = rule.local('noDown', 'Boolean');
 const ladder = rule.local('ladder', 'Boolean');
 const junction = rule.local('junction', 'Boolean');
 const stuck = rule.local('stuck', 'Boolean');
@@ -164,14 +181,19 @@ prowls.step('choose at a junction', 'decide', [
   note('Nothing to hunt, nothing to do. A robot with no quarry keeps'),
   note('whatever heading it had, which is a robot on patrol.'),
   ladder.set(onLadder({}, thisActor())),
-  note('Stopped? A robot that asked to walk and did not has run out of the'),
-  note('direction it chose — a quarter of a pixel of tolerance, so that a'),
-  note('body Solid has nudged is not read as one that got somewhere.'),
+  note('Stopped? A robot that asked to go somewhere and did not has run out'),
+  note('of the direction it chose — a quarter of a pixel of tolerance in'),
+  note('each axis, so that a body Solid has nudged is not read as one that'),
+  note('got somewhere. Both axes, because a climber pinned against a floor'),
+  note('gets nowhere in either and a falling robot gets somewhere in one.'),
   stuck.set(
     both(
-      not(climbing.of(thisActor())),
       lessThan(
-        absolute(minus(position.x(thisActor()), wasX.of(thisActor()))),
+        absolute(minus(position.x(thisActor()), wasAt.x(thisActor()))),
+        n(0.25),
+      ),
+      lessThan(
+        absolute(minus(position.y(thisActor()), wasAt.y(thisActor()))),
         n(0.25),
       ),
     ),
@@ -203,6 +225,26 @@ prowls.step('choose at a junction', 'decide', [
         dx.set(
           minus(position.x(quarry.of(thisActor())), position.x(thisActor())),
         ),
+        note('A CLIMB THAT GOT NOWHERE RULES ITSELF OUT, which is the same'),
+        note('sentence as the wall below and cost the same bug. A robot on'),
+        note('the bottom rung with its quarry beneath it asks to climb'),
+        note('down, the floor refuses, the climb ends having moved nothing'),
+        note('— and that ending is a junction, at which the robot asks to'),
+        note('climb down. It stood there for the rest of the level. So the'),
+        note('direction a failed climb was going is the one direction now'),
+        note('known not to work, and this junction may not choose it.'),
+        noUp.set(
+          both(
+            stuck.get(),
+            both(wasClimbing.of(thisActor()), goingUp.of(thisActor())),
+          ),
+        ),
+        noDown.set(
+          both(
+            stuck.get(),
+            both(wasClimbing.of(thisActor()), not(goingUp.of(thisActor()))),
+          ),
+        ),
         note('UP OR DOWN FIRST — see the header. A ladder is the only way to'),
         note('change which floor you are on, so an enemy that preferred'),
         note('sideways would never take one.'),
@@ -210,13 +252,16 @@ prowls.step('choose at a junction', 'decide', [
         when([
           [
             both(
-              ladder.get(),
+              both(ladder.get(), not(noUp.get())),
               lessThan(dy.get(), times(tolerance.of(thisActor()), n(-1))),
             ),
             [climbUp({who: thisActor()}), here.set(yes())],
           ],
           [
-            both(ladder.get(), moreThan(dy.get(), tolerance.of(thisActor()))),
+            both(
+              both(ladder.get(), not(noDown.get())),
+              moreThan(dy.get(), tolerance.of(thisActor())),
+            ),
             [climbDown({who: thisActor()}), here.set(yes())],
           ],
         ]),
@@ -274,7 +319,7 @@ prowls.step('choose at a junction', 'decide', [
   wasFalling.set(thisActor(), falling.of(thisActor())),
   wasOnLadder.set(thisActor(), ladder.get()),
   wasClimbing.set(thisActor(), climbing.of(thisActor())),
-  wasX.set(thisActor(), position.x(thisActor())),
+  wasAt.set(thisActor(), position.x(thisActor()), position.y(thisActor())),
 ]);
 
 export default () => moduleFor(rule, 'prowling');

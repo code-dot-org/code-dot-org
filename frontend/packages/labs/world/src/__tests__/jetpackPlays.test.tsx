@@ -29,6 +29,7 @@ import {beforeEach, describe, expect, it} from 'vitest';
 import {PositionProperty, Vector, type World} from '../engine';
 import {keyName} from '../engine/core/keys';
 import {SpriteProperty} from '../engine/rules/animation';
+import {RotationProperty} from '../engine/rules/spatial';
 import {MAP_COLUMNS, MAP_ROWS} from '../fixtures/jetpack';
 import {WORLD_SCENARIOS} from '../fixtures/scenarios';
 import {projectFiles} from '../runtime/projectFiles';
@@ -343,6 +344,30 @@ describe('the jetpack level', () => {
     // mentions.
     expect(there).toBeGreaterThan(from);
     expect(at()).toBeLessThan(there);
+  });
+
+  it('turns the rocket’s nose the way it is flying', () => {
+    // The ball and the rocket are the same actor with two numbers changed,
+    // and this is the second of them. A rocket that takes the corner and
+    // keeps flying nose-east is the one thing in the room that reads as
+    // broken; a ball is round and is left alone.
+    const {world} = project;
+    play(world, 0.5);
+    const rocket = named(world, 'Enemy1');
+    const ball = named(world, 'Enemy0');
+
+    // Long enough to have met a wall and turned at least once — it starts
+    // aimed right, along the open middle of the room.
+    play(world, 6);
+
+    expect(rocket.get(RotationProperty)).not.toBe(0);
+    expect(rocket.get(RotationProperty)).toBe(
+      rocket.get(
+        (project.modules['rules/turning'] as Record<string, unknown>)
+          .HeadingProperty as never,
+      ),
+    );
+    expect(ball.get(RotationProperty)).toBe(0);
   });
 
   it('damages the Pilot, and losing is Goals’ business rather than Health’s', () => {
