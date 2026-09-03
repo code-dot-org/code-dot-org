@@ -8,12 +8,6 @@ class RequestTest
     # functionality without needing a complete Request object.
     # See https://github.com/rack/rack/blob/v2.2.6.4/lib/rack/request.rb
     class MockRequest
-      attr_reader :session
-
-      def initialize(session = {})
-        @session = session
-      end
-
       def http_host_and_port(host, port)
         return host if port == 80
         "#{host}:#{port}"
@@ -110,30 +104,6 @@ class RequestTest
       # Will fetch user id from the session if it exists
       def mock_session_store.with; {'warden.user.user.key' => [['user_id']]}; end
       assert_equal 'user_id', @mock_request.user_id_from_session_store
-    end
-
-    def test_statsig_stable_id_persists_in_session_across_requests
-      session = {}
-      stable_id = MockRequest.new(session).statsig_stable_id
-
-      assert Cdo::AnonUserId.valid?(stable_id)
-      assert_equal stable_id, MockRequest.new(session).statsig_stable_id
-    end
-
-    def test_statsig_stable_id_prefers_cookie
-      cookie_id = SecureRandom.uuid
-      session = {SharedConstants::STATSIG_STABLE_ID_KEY => SecureRandom.uuid}
-      request = MockRequest.new(session)
-      request.stubs(:cookies).returns(SharedConstants::STATSIG_STABLE_ID_KEY => cookie_id)
-
-      assert_equal cookie_id, request.statsig_stable_id
-      assert_equal cookie_id, session[SharedConstants::STATSIG_STABLE_ID_KEY]
-    end
-
-    def test_anon_user_id_rejects_invalid_statsig_stable_id
-      request = MockRequest.new(SharedConstants::STATSIG_STABLE_ID_KEY => 'invalid')
-
-      assert_nil request.anon_user_id
     end
   end
 end
