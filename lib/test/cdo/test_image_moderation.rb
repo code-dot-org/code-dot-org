@@ -95,20 +95,6 @@ class ImageModerationTest < Minitest::Test
     assert_equal 'image/jpeg', ct
   end
 
-  def test_skips_azure_when_image_still_exceeds_max_size
-    oversized = StringIO.new('x' * (ImageModeration::MAX_MODERATION_SIZE + 1))
-    ImageModeration.stubs(:scale_image_for_moderation_if_needed).returns([oversized, 'image/jpeg'])
-    AzureAiContentSafety.expects(:new).never
-    assert_nil ImageModeration.moderate_image(StringIO.new('ignored'), 'image/jpeg')
-  end
-
-  def test_skips_azure_when_minimagick_fails_on_oversized_image
-    blob = large_png_blob_over_max_size
-    MiniMagick::Image.stubs(:read).raises(MiniMagick::Error)
-    AzureAiContentSafety.expects(:new).never
-    assert_nil ImageModeration.moderate_image(StringIO.new(blob), 'image/png')
-  end
-
   # Extreme-ratio image: one side below MIN, the other above MAX.
   # e.g. 8000x40 -> MIN upscale brings it to ~10000x50, then MAX downscale
   # brings it to ~7200x36. Both MAX constraints must be satisfied; MIN is

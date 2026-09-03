@@ -90,7 +90,6 @@ module ImageModeration
       # Scale factor is approximate: file size is not strictly proportional to pixel
       # count for compressed formats, so scale conservatively to stay under the limit.
       scale = Math.sqrt(MAX_MODERATION_SIZE.to_f / raw_data.bytesize) * SHRINK_SIZE_SCALE_FACTOR
-      scale = [scale, SHRINK_SIZE_SCALE_FACTOR].min
       new_w = (image.width * scale).floor
       new_h = (image.height * scale).floor
       break if new_w < MIN_MODERATION_DIMENSION || new_h < MIN_MODERATION_DIMENSION
