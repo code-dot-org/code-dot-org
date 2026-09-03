@@ -96,16 +96,17 @@ export function useGuideSteps({
   steps,
   grid,
   activeTab,
-  images,
+  animations,
   fallback,
 }: {
   steps: GuideStep[] | undefined;
   grid: (WorldCell | null)[][] | undefined;
   activeTab: Tab;
-  images: ImageCounts;
+  animations: RuntimeAnimationList;
   fallback: string | undefined;
 }): GuideDisplay {
   const counts = useMemo(() => countWorldCells(grid), [grid]);
+  const images = useMemo(() => countImagesByType(animations), [animations]);
   const [index, setIndex] = useState(0);
   useEffect(() => {
     setIndex(current =>

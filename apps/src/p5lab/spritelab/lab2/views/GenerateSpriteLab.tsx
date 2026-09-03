@@ -182,8 +182,6 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
               )}
             </>
           )}
-          {/* Music Lab's guide button: Continue or Finish by progression,
-              advancing to the next level. */}
           {showContinue && (
             <div className={moduleStyles.guideContinue}>
               <NavigationArea
