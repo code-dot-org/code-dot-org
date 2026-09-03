@@ -225,7 +225,9 @@ const LevelCard: React.FC<LevelCardProps> = ({
                   <summary>Supplied code (optional)</summary>
                   <label htmlFor={`supplied-${spec.key}`}>
                     Canonical code for this level — the AI reproduces it in the
-                    starter files and builds the level around it.
+                    starter files and builds the level around it. Label code
+                    &quot;Solution:&quot; to instead have the AI design starter
+                    files that lead the student to it.
                   </label>
                   <textarea
                     id={`supplied-${spec.key}`}
