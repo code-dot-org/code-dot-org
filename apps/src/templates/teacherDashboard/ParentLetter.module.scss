@@ -1,0 +1,41 @@
+.header {
+  background-color: var(--background-brand-purple-primary-fixed);
+  margin-bottom: var(--spacing-p-m);
+  // Browsers drop backgrounds when printing unless told otherwise.
+  print-color-adjust: exact;
+}
+
+.logo {
+  display: block;
+  height: 2.625rem;
+  margin: 0.25rem 1rem;
+}
+
+.body {
+  padding: 0 var(--spacing-p-s);
+}
+
+.heading {
+  margin-top: var(--spacing-p-s);
+}
+
+.list {
+  margin: 0 0 var(--spacing-p-xs);
+  padding-left: var(--spacing-p-s);
+
+  li + li {
+    margin-top: 0.25rem;
+  }
+}
+
+.stepImage {
+  display: block;
+  width: 3.75rem;
+  margin: 0.625rem;
+}
+
+// The design-system Link is inline-flex for standalone use; inside running
+// text it has to flow and wrap with the sentence.
+.inlineLink {
+  display: inline;
+}
