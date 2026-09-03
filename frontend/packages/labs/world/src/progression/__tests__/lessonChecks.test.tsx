@@ -1880,6 +1880,62 @@ describe('the layers lesson’s check', () => {
   });
 });
 
+describe('the surfaces lesson’s check', () => {
+  const lesson = LESSONS['platformer/surfaces'];
+
+  /** The lesson done, or any part of it: one `use trait` per named actor. */
+  const acting = (traits: Record<string, string>) =>
+    editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      for (const [actor, trait] of Object.entries(traits)) {
+        under(actorIn(workspace, actor), {
+          type: 'world_use_trait',
+          fields: {TRAIT: trait},
+        });
+      }
+      return JSON.stringify(workspace);
+    });
+
+  const DONE = {
+    Hero: 'Surfaces#StandsOnSurfacesTrait',
+    Belt: 'Surfaces#ConveysTrait',
+    Sludge: 'Surfaces#SlowsTrait',
+    Ice: 'Surfaces#SlipperyTrait',
+  };
+
+  it('refuses three floors that are only pictures', async () => {
+    const {passes} = await check('platformer/surfaces', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('refuses a walker with nothing to walk on', async () => {
+    // The listener without the floors, which is the lesson's first step and
+    // changes nothing at all — which is what its instructions say.
+    const {passes} = await check(
+      'platformer/surfaces',
+      acting({Hero: DONE.Hero}),
+    );
+    expect(passes).toBe(false);
+  });
+
+  it('refuses a belt and sludge without the ice', async () => {
+    // The false pass, made concrete: two thirds of the lesson makes the walk
+    // longer and slower, and the check must not read that as done. Turning
+    // round at the end is the part only ice refuses.
+    const {passes} = await check(
+      'platformer/surfaces',
+      acting({Hero: DONE.Hero, Belt: DONE.Belt, Sludge: DONE.Sludge}),
+    );
+    expect(passes).toBe(false);
+  });
+
+  it('accepts all three floors acting', async () => {
+    const {passes, result} = await check('platformer/surfaces', acting(DONE));
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+});
+
 describe('the ladder lesson’s check', () => {
   const lesson = LESSONS['platformer/ladders'];
 

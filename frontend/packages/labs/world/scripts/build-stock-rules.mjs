@@ -29,6 +29,7 @@ const RULES = [
   'jump',
   'jetpack',
   'climb',
+  'surfaces',
   'solid',
   'wrap',
   'bounds',

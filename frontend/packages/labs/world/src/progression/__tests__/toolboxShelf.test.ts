@@ -126,6 +126,9 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   // Two `use trait` rows and nothing else: the control scheme is a trait, so
   // the four handlers a project would otherwise write are not written.
   'platformer/ladders': ['world_use_trait'],
+  // Four `use trait` rows and one number: everything the lesson asks for is
+  // already on screen or in the rule's own drawer.
+  'platformer/surfaces': ['world_use_trait'],
   'platformer/ground': ['world_use_trait'],
   'platformer/pickups': ['world_use_trait', 'world_print'],
   'platformer/hazards': ['world_use_trait', 'world_print'],

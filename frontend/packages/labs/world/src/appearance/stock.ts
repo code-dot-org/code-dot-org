@@ -206,6 +206,27 @@ export const STOCK_SPRITES: readonly StockSprite[] = [
     dataUrl: image('fuelCanSmall'),
   },
   {
+    id: 'conveyor',
+    name: 'Conveyor Belt',
+    description:
+      'A belt on rollers with chevrons pointing the way it runs, for a floor that carries you along.',
+    dataUrl: image('conveyor'),
+  },
+  {
+    id: 'ice',
+    name: 'Ice',
+    description:
+      'A pale blue floor with a lit top edge, for ground you cannot stop or turn on.',
+    dataUrl: image('ice'),
+  },
+  {
+    id: 'sludge',
+    name: 'Sludge',
+    description:
+      'A thick ochre ooze with a lumpy edge and bubbles in it, for ground that drags. Deliberately unlike grass, which is what ordinary Ground already looks like.',
+    dataUrl: image('sludge'),
+  },
+  {
     id: 'pilot',
     name: 'Pilot',
     description:

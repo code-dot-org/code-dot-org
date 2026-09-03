@@ -63,6 +63,13 @@ export const SPRITE_NAMES = [
   // every other level: `player` is shared by the whole library and growing a
   // pack would put one on the platformer's hero too.
   'pilot',
+  // Three floors that do something to you (rules/surfaces). Each fills the
+  // cell the way `ground` does, so a row of them lies flat and what you can
+  // see is what acts on you — and each is told apart by COLOUR before shape,
+  // because a player reads a floor at a glance and from across the room.
+  'conveyor',
+  'ice',
+  'sludge',
   // Fuel, in two sizes. The Jetpack rule has a tank, and a tank wants
   // something to fill it with — a big can and a small one, because "how much
   // is this worth" has to be readable from across the room and a number
@@ -505,6 +512,78 @@ const STATIC = {
     c.rect(24, 0, 6, 32, [38, 104, 54]); // shaded down the other
     c.rect(0, 0, 2, 32, [30, 84, 44]); // and its two hard edges
     c.rect(30, 0, 2, 32, [30, 84, 44]);
+  },
+  conveyor(c) {
+    // A belt on two rollers, with chevrons pointing the way it carries. Tiles
+    // sideways: the rollers sit inside the cell and the chevrons repeat every
+    // sixteen, so a run of these is one belt rather than a row of machines.
+    c.rect(0, 0, 32, 32, [48, 50, 58]); // the housing, filling the tile
+    c.rect(0, 2, 32, 12, [86, 90, 102]); // the belt itself, lit from above
+    c.rect(0, 14, 32, 3, [34, 36, 42]); // its shadow
+    for (const cx of [8, 24]) {
+      c.disc(cx, 8, 5, [58, 62, 72]); // a roller under the belt
+      c.disc(cx, 8, 2, [120, 126, 140]); // …and its axle
+    }
+    for (const x of [2, 18]) {
+      c.polygon(
+        [
+          [x, 3],
+          [x + 6, 8],
+          [x, 13],
+          [x + 2, 8],
+        ],
+        [214, 176, 64],
+      ); // a chevron, pointing right
+    }
+  },
+  ice(c) {
+    // Pale, and pale is the point: ice has to be readable as NOT ground from
+    // across a room, and a blue floor is the one thing in the library that
+    // cannot be mistaken for soil.
+    c.rect(0, 0, 32, 32, [120, 176, 214]);
+    c.rect(0, 0, 32, 7, [206, 236, 250]); // the lit top surface
+    c.rect(0, 7, 32, 2, [166, 210, 236]);
+    // Two glints, off the diagonal so a run of tiles does not read as stripes.
+    c.polygon(
+      [
+        [5, 14],
+        [13, 14],
+        [9, 22],
+      ],
+      [176, 216, 240],
+    );
+    c.polygon(
+      [
+        [20, 18],
+        [26, 18],
+        [23, 26],
+      ],
+      [176, 216, 240],
+    );
+  },
+  sludge(c) {
+    // NOT a green strip on brown, which is what `ground` already is — the two
+    // were told apart only by squinting, and a floor a player has to squint at
+    // is a floor they walk on to by accident. So: no lit top edge, no crisp
+    // line, and a colour nothing else in the library uses. A thick ochre ooze
+    // with a lumpy underside, sitting in the tile rather than growing out of
+    // it.
+    c.rect(0, 0, 32, 32, [58, 46, 30]); // the dark bed it sits in
+    c.rect(0, 0, 32, 14, [138, 116, 44]); // the ooze, filling the top
+    // A lumpy lower edge: three overlapping discs, so no two tiles in a row
+    // line up into a stripe.
+    for (const [cx, r] of [
+      [5, 5],
+      [16, 6],
+      [27, 5],
+    ]) {
+      c.disc(cx, 14, r, [138, 116, 44]);
+    }
+    // …and bubbles in it, which is the mark that says thick rather than wet.
+    c.disc(9, 6, 2.5, [176, 154, 70]);
+    c.disc(22, 8, 3, [176, 154, 70]);
+    c.disc(9, 6, 1.2, [96, 78, 28]);
+    c.disc(22, 8, 1.4, [96, 78, 28]);
   },
   pilot: c => pilotBody(c),
   ladder(c) {

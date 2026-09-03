@@ -1424,6 +1424,57 @@ export const TILES: readonly Tile[] = [
     },
   },
   {
+    id: 'platformer/surfaces',
+    region: 'platformer',
+    at: at('platformer', 4, 0),
+    title: 'Floors with opinions',
+    teaches:
+      'A rule that gets the last word on a number the player has already set, and why the moment it runs in is the whole design.',
+    task: 'A belt, some ice and some sludge, all of them behaving like ordinary floor. Make each one act.',
+    requires: ['platformer/ladders'],
+    unlocks: [
+      {kind: 'rule', id: 'surfaces'},
+      {kind: 'asset', id: 'conveyor'},
+      {kind: 'asset', id: 'ice'},
+      {kind: 'asset', id: 'sludge'},
+    ],
+    check: {
+      kind: 'outcome',
+      says: 'Walking left along the row, the Hero is carried backwards over the belt, wades the sludge, and cannot turn round on the ice.',
+      falsePass:
+        'Slowing the Hero down, which passes "it took longer" and is not what any of the three do. Each leg is measured on its own against what the SAME walk covers on ordinary floor: the belt must push the Hero the wrong way, the sludge must be slower and still forwards, and the ice must ignore a reversed key entirely.',
+      run: {
+        probes: {hero: {kind: 'positions', of: 'Hero'}},
+        // Broken into legs rather than two long holds, because a probe
+        // samples per leg: the last two are what "still going the wrong way"
+        // is measured between, and two samples would leave nothing to compare.
+        trace: [
+          ...Array.from({length: 4}, () => ({
+            hold: ['right arrow'],
+            seconds: 0.55,
+          })),
+          ...Array.from({length: 3}, () => ({
+            hold: ['left arrow'],
+            seconds: 0.3,
+          })),
+        ],
+      },
+      passes: ({samples}) => {
+        const xs = (samples.hero ?? []).map(
+          sample => (sample as {x: number}[])[0]?.x ?? 0,
+        );
+        if (xs.length < 3) {
+          return false;
+        }
+        // Still going right at the end, with the left arrow held: only ice
+        // does that, and nothing else in the lab does it at all.
+        const slid = xs[xs.length - 1] > xs[xs.length - 2];
+        // …and it got there, which needs the belt and the sludge crossed.
+        return slid && Math.max(...xs) > 200;
+      },
+    },
+  },
+  {
     id: 'platformer/ground',
     region: 'platformer',
     at: at('platformer', 2, 2),

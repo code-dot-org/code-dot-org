@@ -45,6 +45,7 @@ import {scoreRule} from './score';
 import {solidRule} from './solid';
 import {spawnerRule} from './spawner';
 import {steeringRule} from './steering';
+import {surfacesRule} from './surfaces';
 import {timeRule} from './time';
 import {turnsRule} from './turns';
 import {wrapRule} from './wrap';
@@ -359,6 +360,15 @@ export const STOCK_RULES: readonly StockRule[] = [
     contents: climbRule,
   },
   {
+    id: 'surfaces',
+    name: 'Surfaces',
+    ability: 'Has Ground That Acts',
+    description:
+      'Three kinds of floor that do something to whoever stands on them: a belt that carries you along, ice you cannot stop or turn on, and sludge that drags. A tile takes one; a walker takes one trait and meets all three.',
+    provides: ['Conveys', 'Slippery', 'Slows', 'Stands on Surfaces'],
+    contents: surfacesRule,
+  },
+  {
     id: 'drive',
     name: 'Arrow Drive',
     ability: 'Drives with Arrow Keys',
@@ -478,6 +488,7 @@ export function stockRuleByName(name: string): StockRule | undefined {
 export {
   arrowsRule,
   climbRule,
+  surfacesRule,
   mouseRule,
   writingRule,
   boundsRule,

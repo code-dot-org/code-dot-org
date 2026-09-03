@@ -26,7 +26,7 @@
 
 import {beforeEach, describe, expect, it} from 'vitest';
 
-import {PositionProperty, type World} from '../engine';
+import {PositionProperty, Vector, type World} from '../engine';
 import {keyName} from '../engine/core/keys';
 import {WORLD_SCENARIOS} from '../fixtures/scenarios';
 import {projectFiles} from '../runtime/projectFiles';
@@ -196,5 +196,47 @@ describe('the jetpack level', () => {
     play(world, 0.8, ['down arrow']);
 
     expect(rowOf(world)).toBeGreaterThan(onTop + 2);
+  });
+
+  it('is carried off the belt if it stands still on one', () => {
+    // The belt is the long low ledge, so standing still up there is a
+    // decision — which is the whole reason a belt is somewhere rather than
+    // anywhere.
+    const {world} = project;
+    play(world, 0.5);
+    // Dropped on to the LEFT end of the belt, which runs across row 8 from
+    // column 11: the belt is six tiles and carries at two hundred pixels a
+    // second, so measuring from the middle would be measuring the fall off
+    // the far end.
+    pilot(world).set(
+      PositionProperty,
+      new Vector(11 * 32 + 16, 7 * 32 + 16) as never,
+    );
+    play(world, 0.2);
+    const from = pilot(world).get(PositionProperty).x;
+
+    play(world, 0.4);
+
+    // Two units a second is eighty pixels in that time, and the Pilot asked
+    // for none of it.
+    expect(pilot(world).get(PositionProperty).x - from).toBeCloseTo(80, -1);
+  });
+
+  it('cannot turn round on the ice under the high can', () => {
+    // Arriving somewhere at a speed you can live with is what the ice makes
+    // into a question, and it is the only floor in the room that refuses a
+    // key outright.
+    const {world} = project;
+    play(world, 0.5);
+    pilot(world).set(
+      PositionProperty,
+      new Vector(20 * 32 + 16, 4 * 32 + 16) as never,
+    );
+    play(world, 0.4, ['right arrow']);
+    const from = pilot(world).get(PositionProperty).x;
+
+    play(world, 0.5, ['left arrow']);
+
+    expect(pilot(world).get(PositionProperty).x).toBeGreaterThan(from);
   });
 });

@@ -71,6 +71,7 @@ import {
   solidRule,
   spawnerRule,
   steeringRule,
+  surfacesRule,
   timeRule,
   turnsRule,
   wrapRule,
@@ -194,6 +195,7 @@ export const ALL_STOCK_SOURCES: Record<string, string> = {
   'rules/arrows': arrowsRule,
   // After Input: its arrow-key trait needs one.
   'rules/climb': climbRule,
+  'rules/surfaces': surfacesRule,
   'rules/drive': driveRule,
   'rules/mouse': mouseRule,
   'rules/writing': writingRule,

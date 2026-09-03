@@ -28,6 +28,7 @@ import {
   WorldBuilder,
   type World,
 } from '../../engine';
+import {keyName} from '../../engine/core/keys';
 import {
   DEMO_SIZE,
   RULE_DEMOS,
@@ -2678,5 +2679,242 @@ describe('Climbing', () => {
     ).toBe(false);
     // Back on the ladder's own top surface or the floor — either way, held up.
     expect(height(climber)).toBeLessThanOrEqual(192);
+  });
+});
+
+describe('Surfaces', () => {
+  /**
+   * A walker standing on one tile of the given kind, with arrows to drive it.
+   *
+   * The traits go on a floor that is otherwise ordinary, because that is what
+   * these are: a floor with one extra thing to say.
+   */
+  const standing = (
+    traits: readonly unknown[],
+    overrides: Record<string, number> = {},
+  ) => {
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([
+        rule('rules/motion'),
+        rule('rules/collisions'),
+        rule('rules/gravity'),
+        rule('rules/input'),
+        rule('rules/arrows'),
+        rule('rules/surfaces'),
+      ])
+      .instantiate();
+    const tile = new ActorBuilder({id: 'tile', name: 'tile'})
+      .useTraits([
+        of('rules/gravity', 'ActsAsGroundTrait'),
+        ...(traits as never[]),
+      ])
+      .set(PositionProperty, at(100, 200))
+      .set(of('rules/collisions', 'SizeProperty'), new Vector(400, 16))
+      .instantiate('tile');
+    for (const [name, value] of Object.entries(overrides)) {
+      tile.set(of('rules/surfaces', name), value as never);
+    }
+    world.addActor(tile);
+    const walker = new ActorBuilder({id: 'walker', name: 'walker'})
+      .useTraits([
+        of('rules/gravity', 'AffectedByGravityTrait'),
+        of('rules/input', 'TakesKeyboardInputTrait'),
+        of('rules/arrows', 'MovesAcrossTrait'),
+        of('rules/surfaces', 'StandsOnSurfacesTrait'),
+        of('rules/motion', 'CanMoveTrait'),
+      ])
+      .set(PositionProperty, at(100, 184))
+      .set(of('rules/collisions', 'SizeProperty'), new Vector(16, 16))
+      .instantiate('walker');
+    world.addActor(walker);
+    run(world, 0.2);
+    return {world, tile, walker};
+  };
+
+  /** Tick for `seconds`, holding `keys` throughout — as the driver does. */
+  const hold = (world: World, seconds: number, keys: string[] = []) => {
+    for (let frame = 0; frame < Math.round(seconds * 60); frame++) {
+      world.setInput(keys.map(keyName));
+      world.tick(1 / 60);
+    }
+  };
+
+  const across = (walker: unknown) =>
+    (walker as {get(p: unknown): Vector}).get(PositionProperty).x;
+
+  it('carries a walker who is doing nothing, on a belt', () => {
+    const {world, walker} = standing([of('rules/surfaces', 'ConveysTrait')]);
+    const from = across(walker);
+
+    hold(world, 0.5);
+
+    // Two units a second is 200 pixels a second, so half a second is a
+    // hundred — and the walker asked for none of it.
+    expect(across(walker) - from).toBeCloseTo(100, 0);
+  });
+
+  it('lets a walker make headway against one, slowly', () => {
+    // ADDED rather than imposed, which is what makes a belt crossable: the
+    // standard walk is 1.5 against a belt of 2, so walking into it still
+    // loses half a unit a second.
+    const {world, walker} = standing([of('rules/surfaces', 'ConveysTrait')]);
+    const from = across(walker);
+
+    hold(world, 0.5, ['left arrow']);
+
+    const moved = across(walker) - from;
+    expect(moved).toBeGreaterThan(0);
+    expect(moved).toBeLessThan(30);
+  });
+
+  it('wades through sludge at a fraction of the asked-for speed', () => {
+    const {world, walker} = standing([of('rules/surfaces', 'SlowsTrait')]);
+    const from = across(walker);
+
+    hold(world, 1, ['right arrow']);
+
+    // 1.5 units a second, kept at two fifths: 60 pixels rather than 150.
+    expect(across(walker) - from).toBeCloseTo(60, 0);
+  });
+
+  it('holds a walker at the speed it stepped on to the ice with', () => {
+    // The whole of what ice means. The walker arrives moving right and then
+    // asks to go LEFT, every frame, and goes right anyway.
+    const {world, walker} = standing([of('rules/surfaces', 'SlipperyTrait')]);
+    hold(world, 0.2, ['right arrow']);
+    const from = across(walker);
+
+    hold(world, 0.5, ['left arrow']);
+
+    expect(across(walker) - from).toBeCloseTo(75, 0);
+  });
+
+  it('gives the walker its own speed back when it steps off', () => {
+    // Ice that outlived the ice would be a player who never gets to walk
+    // again, which is the failure this bookkeeping exists to avoid.
+    const {world, walker, tile} = standing([
+      of('rules/surfaces', 'SlipperyTrait'),
+    ]);
+    let stops = 0;
+    (walker as {on(e: unknown, f: () => void): void}).on(
+      of('rules/surfaces', 'StopsSlidingEvent'),
+      () => {
+        stops++;
+      },
+    );
+    hold(world, 0.2, ['right arrow']);
+    // The ice is taken away rather than the walker moved off it, so the test
+    // is about the trait and not about the geometry.
+    tile.set(
+      of('rules/collisions', 'SizeProperty'),
+      new Vector(1, 16) as never,
+    );
+    hold(world, 0.2);
+    const from = across(walker);
+
+    hold(world, 0.5, ['left arrow']);
+
+    expect(stops).toBe(1);
+    expect(across(walker) - from).toBeLessThan(0);
+  });
+
+  it('leaves the vertical speed alone, so a jump still works', () => {
+    // Not a concession — it is what makes ice playable at all.
+    const {world, walker} = standing([of('rules/surfaces', 'SlipperyTrait')]);
+    const height = () =>
+      (walker as {get(p: unknown): Vector}).get(PositionProperty).y;
+    const floorLevel = height();
+
+    hold(world, 0.2, ['right arrow']);
+    (walker as {set(p: unknown, v: unknown): void}).set(
+      of('rules/motion', 'VelocityProperty'),
+      new Vector(2, -4),
+    );
+    hold(world, 0.2);
+
+    expect(height()).toBeLessThan(floorLevel - 20);
+  });
+
+  it('carries an actor that has no way of its own to move', () => {
+    // The bug the level found. Written as "add the belt's speed to the
+    // walker's", a belt worked for a walker with Arrow Keys — whose velocity
+    // is wiped and rewritten every frame — and accelerated anything else off
+    // the map. A belt is a floor going somewhere, not a speed you have.
+    const {world, walker} = standing([of('rules/surfaces', 'ConveysTrait')]);
+    // At the left-hand end of the belt, which is four hundred wide about
+    // x = 100. Half a second twice, so both halves are measured well inside
+    // it rather than one of them against the fall off the far end.
+    walker.set(PositionProperty, at(-80, 184) as never);
+    run(world, 0.2);
+    const from = across(walker);
+
+    hold(world, 0.5);
+    const after = across(walker);
+    hold(world, 0.5);
+
+    // THE SAME DISTANCE in the second second as in the first, which is what
+    // a speed is. The velocity-based belt covered half as much again in the
+    // second second as in the first, and more in the third.
+    expect(after - from).toBeCloseTo(across(walker) - after, 0);
+    // …and it is the belt's own speed: two units, a hundred pixels in half
+    // a second.
+    expect(across(walker) - after).toBeCloseTo(100, 0);
+  });
+
+  it('acts once however many tiles of a floor are underfoot', () => {
+    // A floor is made of tiles and a walker is a tile wide, so standing
+    // anywhere but exactly on a seam means touching two of them. Applied per
+    // tile, a belt carries at double speed on the seams and single speed
+    // between — a belt that stutters, and one no single-tile test would catch.
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([
+        rule('rules/motion'),
+        rule('rules/collisions'),
+        rule('rules/gravity'),
+        rule('rules/input'),
+        rule('rules/arrows'),
+        rule('rules/surfaces'),
+      ])
+      .instantiate();
+    for (const column of [0, 1, 2, 3]) {
+      const tile = new ActorBuilder({id: 'tile', name: 'tile'})
+        .useTraits([
+          of('rules/gravity', 'ActsAsGroundTrait'),
+          of('rules/surfaces', 'ConveysTrait'),
+        ])
+        .set(PositionProperty, at(column * 32 + 16, 200))
+        .set(of('rules/collisions', 'SizeProperty'), new Vector(32, 16))
+        .instantiate(`tile${column}`);
+      world.addActor(tile);
+    }
+    // Straddling the seam between two of them, on purpose.
+    const walker = new ActorBuilder({id: 'walker', name: 'walker'})
+      .useTraits([
+        of('rules/gravity', 'AffectedByGravityTrait'),
+        of('rules/surfaces', 'StandsOnSurfacesTrait'),
+        of('rules/motion', 'CanMoveTrait'),
+      ])
+      .set(PositionProperty, at(32, 184))
+      .set(of('rules/collisions', 'SizeProperty'), new Vector(16, 16))
+      .instantiate('walker');
+    world.addActor(walker);
+    run(world, 0.2);
+    const from = across(walker);
+
+    run(world, 0.3);
+
+    // Two units a second is sixty pixels, not a hundred and twenty.
+    expect(across(walker) - from).toBeCloseTo(60, 0);
+  });
+
+  it('does nothing at all on an ordinary floor', () => {
+    // The control: a tile with none of the three is a floor, and a walker on
+    // one walks at exactly the speed Arrow Keys asked for.
+    const {world, walker} = standing([]);
+    const from = across(walker);
+
+    hold(world, 1, ['right arrow']);
+
+    expect(across(walker) - from).toBeCloseTo(150, 0);
   });
 });

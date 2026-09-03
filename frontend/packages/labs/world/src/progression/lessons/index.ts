@@ -12,7 +12,7 @@
 // Blockly JSON behind them. So `catalogue.ts` stays data about tiles, and the
 // projects live here, looked up by tile id.
 //
-// SEVENTY OF SEVENTY: every tile on the map has a lesson, a starting
+// SEVENTY-ONE OF SEVENTY-ONE: every tile on the map has a lesson, a starting
 // project, and a check tested in both directions.
 //
 // What is written is milestone 4 of specs/PROGRESSION_UI.md and then some: all
@@ -1702,6 +1702,128 @@ next frame puts it back. That is what **Climbs Ladders** is for.
    instead. Nothing happens on any key — which is the point of the split: a
    robot that takes ladders has no keyboard, and the control scheme is a trait
    you elect rather than something the mechanic assumes.
+`.trim(),
+};
+
+// ── platformer/surfaces ──────────────────────────────────────────────────────
+
+const surfaces: WorldScenario = {
+  name: 'A floor is a floor is a floor',
+  description:
+    'A belt, some ice and some sludge, drawn as three things and behaving as one.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        // The run the Hero walks: ordinary floor, then one stretch of each,
+        // in the order the lesson asks about them. Three tiles apiece, which
+        // is long enough to feel and short enough to cross.
+        createInMap(local('ground'), [
+          ...[0, 1].map(column =>
+            placed(`floor${column}`, column * 32 + 16, 304),
+          ),
+          ...[9].map(column => placed(`floor${column}`, column * 32 + 16, 304)),
+        ]),
+        createInMap(
+          local('belt'),
+          [2, 3, 4].map(column =>
+            placed(`belt${column}`, column * 32 + 16, 304),
+          ),
+        ),
+        createInMap(
+          local('sludge'),
+          [5, 6].map(column =>
+            placed(`sludge${column}`, column * 32 + 16, 304),
+          ),
+        ),
+        createInMap(
+          local('ice'),
+          [7, 8].map(column => placed(`ice${column}`, column * 32 + 16, 304)),
+        ),
+        addActor(local('hero'), [placeAt(16, 272)]),
+      ],
+      actors: [
+        {
+          id: 'hero',
+          name: 'Hero',
+          rows: [
+            useTrait('Gravity#AffectedByGravityTrait'),
+            useTrait('Input#TakesKeyboardInputTrait'),
+            useTrait('Arrow Keys#MovesAcrossTrait'),
+            setSprite('player.png'),
+          ],
+        },
+        {
+          id: 'ground',
+          name: 'Ground',
+          rows: [
+            useTrait('Gravity#ActsAsGroundTrait'),
+            useTrait('Solid Bodies#SolidTrait'),
+            setSprite('ground.png'),
+          ],
+        },
+        // The three below are the SAME actor as Ground, three times, with
+        // three pictures — which is the lesson standing still: a floor that
+        // looks like a belt is a floor.
+        {
+          id: 'belt',
+          name: 'Belt',
+          rows: [
+            useTrait('Gravity#ActsAsGroundTrait'),
+            useTrait('Solid Bodies#SolidTrait'),
+            setSprite('conveyor.png'),
+          ],
+        },
+        {
+          id: 'sludge',
+          name: 'Sludge',
+          rows: [
+            useTrait('Gravity#ActsAsGroundTrait'),
+            useTrait('Solid Bodies#SolidTrait'),
+            setSprite('sludge.png'),
+          ],
+        },
+        {
+          id: 'ice',
+          name: 'Ice',
+          rows: [
+            useTrait('Gravity#ActsAsGroundTrait'),
+            useTrait('Solid Bodies#SolidTrait'),
+            setSprite('ice.png'),
+          ],
+        },
+      ],
+    }),
+    sprites: ['player', 'ground', 'conveyor', 'ice', 'sludge'],
+    rules: ['gravity', 'solid', 'input', 'arrows', 'motion', 'surfaces'],
+  }),
+  instructions: `
+## Floors with opinions
+
+Walk right. You cross a belt, some sludge and some ice, and all three feel
+exactly like the brown floor either side of them — because they *are* it. Three
+pictures, three actors, one behaviour.
+
+**Surfaces** is what makes a floor do something to whoever stands on it. Three
+things a tile can be, and one thing a walker is.
+
+### What you do
+
+1. Give the Hero **use trait ⟨Stands on Surfaces⟩**. Nothing changes yet: it
+   is the thing that listens, and no floor is saying anything.
+2. Give the Belt **use trait ⟨Conveys⟩**. Now walk on to it and stop. You are
+   carried. Walk *into* it and you still make headway, slowly, because a belt
+   ADDS to what you asked for rather than deciding for you.
+3. Give the Sludge **use trait ⟨Slows⟩**. Two fifths of the speed you asked
+   for — a multiplier, so it drags what you were doing instead of replacing it.
+4. Give the Ice **use trait ⟨Slippery⟩**. Step on it moving and try to turn
+   round. You cannot: ice keeps the speed you arrived with, because "you
+   cannot stop or change direction" is a statement about a speed you are no
+   longer choosing.
+5. Jump while you are on the ice. That still works, and it is the only control
+   you have left up there — none of the three touches the vertical speed.
+6. Set the Belt's **belt speed** to a negative number and walk on to it again.
+   One number, and the belt runs the other way.
 `.trim(),
 };
 
@@ -5263,6 +5385,7 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'platformer/jump': jump,
   'platformer/jetpack': jetpack,
   'platformer/ladders': ladders,
+  'platformer/surfaces': surfaces,
   'platformer/pickups': pickups,
   'platformer/hazards': hazards,
   'platformer/level': level,

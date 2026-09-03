@@ -40,6 +40,13 @@
 // Climbed` AND `Acts as Ground`, so the top of the ladder holds you up and the
 // rest of it does not.
 //
+// THREE OF THE LEDGES ARE NOT ORDINARY FLOOR, which is what makes the room a
+// route rather than a set of perches. A belt on the long low ledge carries you
+// off it if you stand still; the high one is ice, so the can up there has to
+// be approached at a speed you can live with; and the sludge in the middle is
+// the slow way across. All three are the SAME actor as a ledge with one trait
+// and one picture added — a floor that looks like a belt is a floor.
+//
 // WHAT IT IS NOT: there is no way to win and nothing to avoid (JETPACK.md,
 // phases 2 and 3). It is the smallest thing that plays.
 
@@ -63,6 +70,7 @@ import {
   motionRule,
   progressRule,
   solidRule,
+  surfacesRule,
 } from '../rules/stock';
 import {TILE_SIZE} from '../runtime/viewport';
 
@@ -98,11 +106,38 @@ type Run = readonly [number, number, number];
  */
 const LEDGES: readonly Run[] = [
   [11, 3, 7],
-  [8, 11, 16],
-  [12, 18, 22],
-  [5, 19, 23],
   [4, 2, 6],
 ];
+
+/**
+ * …and the three that act, as `[kind, row, from, to]`.
+ *
+ * One of each, and where each one is placed is the whole of what it is for.
+ * The belt is the long low ledge, so standing still on it is a decision. The
+ * sludge is the middle of the room, on the way to everywhere. The ice is the
+ * high one with a can on it, which is the hardest place to arrive at a speed
+ * you can live with.
+ */
+const ACTING: ReadonlyArray<readonly [string, number, number, number]> = [
+  ['actors/belt', 8, 11, 16],
+  ['actors/sludge', 12, 18, 22],
+  ['actors/ice', 5, 19, 23],
+];
+
+/** A row of one kind of tile, from one column to another. */
+const run = (
+  kind: string,
+  name: string,
+  row: number,
+  from: number,
+  to: number,
+) => {
+  const tiles: ReturnType<typeof place>[] = [];
+  for (let column = from; column <= to; column++) {
+    tiles.push(place(kind, `${name}_${column}`, column, row));
+  }
+  return tiles;
+};
 
 /** The border: floor, ceiling and both walls, which is the room. */
 const border = () => {
@@ -158,13 +193,12 @@ export const JETPACK_ACTORS = [
   ...LADDER_ROWS.map(row =>
     place('actors/ladder', `Rung${row}`, LADDER_COLUMN, row),
   ),
-  ...LEDGES.flatMap(([row, from, to]) => {
-    const tiles: ReturnType<typeof place>[] = [];
-    for (let column = from; column <= to; column++) {
-      tiles.push(place('actors/ledge', `Ledge${row}_${column}`, column, row));
-    }
-    return tiles;
-  }),
+  ...LEDGES.flatMap(([row, from, to]) =>
+    run('actors/ledge', `Ledge${row}`, row, from, to),
+  ),
+  ...ACTING.flatMap(([kind, row, from, to]) =>
+    run(kind, `${kind.split('/')[1]}${row}`, row, from, to),
+  ),
   ...CANS.map(([kind, column, row], index) =>
     place(kind, `Can${index}`, column, row),
   ),
@@ -273,6 +307,9 @@ const PILOT_ACTOR = JSON.stringify({
             // Up and down climb, and only on a ladder — the control scheme is
             // a trait, so this is the whole of it (`rules/climb`).
             useTrait('Climbing#ClimbsWithArrowKeysTrait'),
+            // What makes the belt, the ice and the sludge mean anything: one
+            // trait, and it meets all three (`rules/surfaces`).
+            useTrait('Surfaces#StandsOnSurfacesTrait'),
             useTrait('Collection#CollectsTrait'),
             {type: 'world_set_sprite', fields: {SPRITE: 'pilot.png'}},
             // Enough to get ON to a single tile and no more, which is what
@@ -368,6 +405,35 @@ const tileActor = (name: string, sprite: string) =>
               // is not what a wall is (`rules/gravity`).
               useTrait('Gravity#ActsAsGroundTrait'),
               useTrait('Solid Bodies#SolidTrait'),
+              {type: 'world_set_sprite', fields: {SPRITE: sprite}},
+            ]),
+          },
+        },
+      ],
+    },
+  });
+
+/**
+ * A ledge with one thing to say, and a picture that says it.
+ *
+ * The same three rows as an ordinary ledge plus one trait, which is the claim
+ * `rules/surfaces` makes standing still: a floor that looks like a belt is a
+ * floor.
+ */
+const actingTile = (name: string, sprite: string, trait: string) =>
+  JSON.stringify({
+    blocks: {
+      blocks: [
+        {
+          type: 'world_actor',
+          x: 20,
+          y: 20,
+          fields: {NAME: name},
+          next: {
+            block: stack([
+              useTrait('Gravity#ActsAsGroundTrait'),
+              useTrait('Solid Bodies#SolidTrait'),
+              useTrait(trait),
               {type: 'world_set_sprite', fields: {SPRITE: sprite}},
             ]),
           },
@@ -557,6 +623,24 @@ export const JETPACK_SPEC: ProjectSpec = {
       contents: tileActor('Ledge', 'ground.png'),
       folderId: 'actors',
     },
+    beltActor: {
+      name: 'belt.actor',
+      language: 'actor',
+      contents: actingTile('Belt', 'conveyor.png', 'Surfaces#ConveysTrait'),
+      folderId: 'actors',
+    },
+    iceActor: {
+      name: 'ice.actor',
+      language: 'actor',
+      contents: actingTile('Ice', 'ice.png', 'Surfaces#SlipperyTrait'),
+      folderId: 'actors',
+    },
+    sludgeActor: {
+      name: 'sludge.actor',
+      language: 'actor',
+      contents: actingTile('Sludge', 'sludge.png', 'Surfaces#SlowsTrait'),
+      folderId: 'actors',
+    },
     ladderActor: {
       name: 'ladder.actor',
       language: 'actor',
@@ -635,6 +719,12 @@ export const JETPACK_SPEC: ProjectSpec = {
       contents: arrowsRule,
       folderId: 'rules',
     },
+    surfacesRuleFile: {
+      name: 'surfaces.rule',
+      language: 'rule',
+      contents: surfacesRule,
+      folderId: 'rules',
+    },
     climbRuleFile: {
       name: 'climb.rule',
       language: 'rule',
@@ -658,6 +748,9 @@ export const JETPACK_SPEC: ProjectSpec = {
       'ground',
       'wall',
       'ladder',
+      'conveyor',
+      'ice',
+      'sludge',
       'fuelCan',
       'fuelCanSmall',
     ]),
