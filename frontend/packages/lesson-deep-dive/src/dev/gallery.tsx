@@ -17,8 +17,9 @@ import {
   createKyTransport,
 } from '@code-dot-org/core/api';
 
-import ChallengeGallery from '../gallery/ChallengeGallery';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+
+import ChallengeGallery from '../gallery/ChallengeGallery';
 
 import {DevPageChrome} from './devPageChrome';
 import {TUTOR_GALLERY_DATA, type TutorGalleryData} from './galleryFixtures';

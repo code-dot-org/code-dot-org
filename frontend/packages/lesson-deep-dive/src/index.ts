@@ -52,7 +52,10 @@ export {
 export {default as AssessmentPanel} from './gallery/AssessmentPanel';
 export {default as ChallengeGallery} from './gallery/ChallengeGallery';
 export {default as GallerySidebar} from './gallery/GallerySidebar';
-export {default as ProjectCard, type ProjectVariant} from './gallery/ProjectCard';
+export {
+  default as ProjectCard,
+  type ProjectVariant,
+} from './gallery/ProjectCard';
 export {default as ProjectDetailsCard} from './gallery/ProjectDetailsCard';
 export {default as ProjectStage} from './gallery/ProjectStage';
 export {default as ProjectView} from './gallery/ProjectView';

@@ -1,8 +1,3 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {useApiClient} from '@code-dot-org/core/api';
-import {ChallengeResponse} from '../types';
-import {ChallengeResponseDetail, GalleryUnit} from './types';
-import {getChallengeResponse, listChallengeResponses} from './api';
 import {
   Typography,
   Button as MuiButton,
@@ -10,9 +5,16 @@ import {
 } from '@mui/material';
 import {FC, useEffect, useState} from 'react';
 
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {useApiClient} from '@code-dot-org/core/api';
+
+import {ChallengeResponse} from '../types';
+
+import {getChallengeResponse, listChallengeResponses} from './api';
 import AssessmentPanel from './AssessmentPanel';
 import ProjectDetailsCard from './ProjectDetailsCard';
 import ProjectStage from './ProjectStage';
+import {ChallengeResponseDetail, GalleryUnit} from './types';
 
 import styles from './project-view.module.scss';
 
@@ -129,7 +131,7 @@ const ProjectView: FC<ProjectViewProps> = ({
   const galleryIndex =
     galleryResponses?.findIndex(
       r =>
-        r.user_id === detail.user_id && r.challenge_id === detail.challenge_id
+        r.user_id === detail.user_id && r.challenge_id === detail.challenge_id,
     ) ?? -1;
   const previousProject =
     galleryResponses && galleryIndex > 0

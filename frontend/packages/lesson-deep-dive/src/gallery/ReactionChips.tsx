@@ -1,5 +1,6 @@
-import {Reaction} from './types';
 import {FC} from 'react';
+
+import {Reaction} from './types';
 
 import styles from './challenge-gallery.module.scss';
 

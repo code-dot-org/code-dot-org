@@ -1,10 +1,10 @@
-import {assetWithUrl} from './assetUtils';
-import {ChallengeResponseDetail} from './types';
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import {FC} from 'react';
 
+import {assetWithUrl} from './assetUtils';
 import ReactionChips from './ReactionChips';
+import {ChallengeResponseDetail} from './types';
 
 import styles from './project-view.module.scss';
 

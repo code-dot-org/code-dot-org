@@ -1,7 +1,8 @@
-import {assetWithUrl} from './assetUtils';
-import {ChallengeResponseDetail} from './types';
 import {Typography} from '@mui/material';
 import {FC} from 'react';
+
+import {assetWithUrl} from './assetUtils';
+import {ChallengeResponseDetail} from './types';
 
 import styles from './project-view.module.scss';
 

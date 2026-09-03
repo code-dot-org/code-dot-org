@@ -1,11 +1,9 @@
-import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
-import {
-  GallerySection,
-  GallerySort,
-  GalleryUnit,
-} from './types';
 import classNames from 'classnames';
 import {FC} from 'react';
+
+import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
+
+import {GallerySection, GallerySort, GalleryUnit} from './types';
 
 import styles from './challenge-gallery.module.scss';
 
@@ -64,7 +62,7 @@ const GallerySidebar: FC<GallerySidebarProps> = ({
             onSectionChange(
               event.target.value === MY_PROJECTS_VALUE
                 ? null
-                : Number(event.target.value)
+                : Number(event.target.value),
             )
           }
         />
@@ -83,7 +81,7 @@ const GallerySidebar: FC<GallerySidebarProps> = ({
                 type="button"
                 className={classNames(
                   styles.unitButton,
-                  selected && styles.selected
+                  selected && styles.selected,
                 )}
                 aria-current={selected || undefined}
                 onClick={() => onUnitChange(unit.id)}
