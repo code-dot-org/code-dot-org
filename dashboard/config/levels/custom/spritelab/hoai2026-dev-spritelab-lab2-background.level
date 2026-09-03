@@ -26,6 +26,18 @@
     ],
     "locked_image_type": "background",
     "guide_mode": "instructions",
+    "guide_steps": [
+      {
+        "text": "**Make a background.** Use AI to create the background for your story scene. Describe a place - a forest, a city, outer space - and press **Generate**."
+      },
+      {
+        "text": "**That's your background!** Make more if you like, then continue when you're ready.",
+        "showContinue": true,
+        "after": {
+          "images": 1
+        }
+      }
+    ],
     "long_instructions": "# Make a background\nUse AI to create the background for your story scene. Describe a place - a forest, a city, outer space - and press **Generate**."
   }
 }]]></config>

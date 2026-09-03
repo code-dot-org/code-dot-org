@@ -26,6 +26,18 @@
     ],
     "locked_image_type": "sprite",
     "guide_mode": "instructions",
+    "guide_steps": [
+      {
+        "text": "**Make a character.** Now create the hero of your story. Describe what your character looks like and press **Generate**."
+      },
+      {
+        "text": "**There's your hero!** Make more characters if you like, then continue when you're ready.",
+        "showContinue": true,
+        "after": {
+          "images": 2
+        }
+      }
+    ],
     "long_instructions": "# Make a character\nNow create the hero of your story. Describe what your character looks like and press **Generate**."
   }
 }]]></config>
