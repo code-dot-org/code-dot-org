@@ -22,11 +22,11 @@
 # ORDER BY starttime DESC LIMIT 10;
 # ````
 
-require_relative '../../lib/cdo/redshift'
 require_relative 'only_one'
 abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative '../../dashboard/config/environment'
+require_relative '../../lib/cdo/aws/redshift/client'
 
 S3_BUCKET_NAME = 'cdo-data-sharing-internal'
 aws_account_id = Aws::STS::Client.new.get_caller_identity.account
@@ -37,6 +37,9 @@ SUBMISSIONS_REDSHIFT_TABLE_NAME = 'analysis_pii.foorm_submissions_reshaped'
 FORMS_S3_CSV_NAME = 'forms.csv'
 FORMS_REDSHIFT_TABLE_NAME = 'analysis.foorm_forms_reshaped'
 
+REDSHIFT_DATABASE = 'dashboard'
+COPY_TIMEOUT = 30.minutes
+
 def main
   log '*Processing Foorm Data*'
 
@@ -45,7 +48,7 @@ def main
     return
   end
 
-  redshift_client = RedshiftClient.instance
+  redshift_client = Cdo::Aws::Redshift::Client.new(database: REDSHIFT_DATABASE)
 
   # Processes and uploads Foorm submissions to Redshift for analytics use via S3.
   log 'Processing foorm submissions...'
@@ -63,8 +66,7 @@ def main
 end
 
 def write_forms_to_redshift(client, arn)
-  query = <<~SQL
-    DROP TABLE IF EXISTS #{FORMS_REDSHIFT_TABLE_NAME};
+  create_table = <<~SQL
     CREATE TABLE #{FORMS_REDSHIFT_TABLE_NAME}
     (
       form_id                 int,
@@ -79,21 +81,24 @@ def write_forms_to_redshift(client, arn)
       is_facilitator_specific int,
       response_options        varchar(max),
       num_response_options    int
-    );
+    )
+  SQL
 
+  copy_from_s3 = <<~SQL
     COPY #{FORMS_REDSHIFT_TABLE_NAME}
     FROM 's3://#{S3_BUCKET_NAME}/#{FORMS_S3_CSV_NAME}'
     IAM_ROLE '#{arn}'
     CSV
-    IGNOREHEADER 1;
+    IGNOREHEADER 1
   SQL
 
-  execute_redshift_query(client, query)
+  execute_redshift_statements(
+    client, ["DROP TABLE IF EXISTS #{FORMS_REDSHIFT_TABLE_NAME}", create_table, copy_from_s3]
+  )
 end
 
 def write_submissions_to_redshift(client, arn)
-  query = <<~SQL
-    DROP TABLE IF EXISTS #{SUBMISSIONS_REDSHIFT_TABLE_NAME};
+  create_table = <<~SQL
     CREATE TABLE IF NOT EXISTS #{SUBMISSIONS_REDSHIFT_TABLE_NAME}
     (
       submission_id    int,
@@ -101,22 +106,29 @@ def write_submissions_to_redshift(client, arn)
       matrix_item_name varchar,
       response_value   varchar(max),
       response_text    varchar(max)
-    );
+    )
+  SQL
 
+  copy_from_s3 = <<~SQL
     COPY #{SUBMISSIONS_REDSHIFT_TABLE_NAME}
     FROM 's3://#{S3_BUCKET_NAME}/#{SUBMISSIONS_S3_CSV_NAME}'
     IAM_ROLE  '#{arn}'
     CSV
-    IGNOREHEADER 1;
+    IGNOREHEADER 1
   SQL
 
-  execute_redshift_query(client, query)
+  execute_redshift_statements(
+    client, ["DROP TABLE IF EXISTS #{SUBMISSIONS_REDSHIFT_TABLE_NAME}", create_table, copy_from_s3]
+  )
 end
 
-def execute_redshift_query(client, query)
-  client.exec(query)
+# Submit the DROP, CREATE, and COPY in a single batch so that they execute as a single transaction.
+def execute_redshift_statements(client, statements)
+  result = client.batch_execute(statements, timeout: COPY_TIMEOUT.to_i)
+  # `batch_execute` reports per-statement outcomes, so check for one or more failed statements and `raise` if needed.
+  raise "Redshift statement(s) failed: #{result[:failed].map(&:last).join('; ')}" if result[:failed].any?
 rescue => exception
-  log "Error executing Redshift query: #{exception.message}\n#{exception.backtrace.join("\n")}"
+  log "Error executing Redshift statements: #{exception.message}\n#{exception.backtrace.join("\n")}"
   raise
 end
 
