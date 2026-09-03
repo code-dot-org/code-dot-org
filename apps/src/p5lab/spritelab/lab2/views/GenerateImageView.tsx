@@ -81,6 +81,8 @@ interface GenerateImageViewProps {
   };
   /** The image's current pixels, shown on the left while prompting. */
   thumb?: string;
+  /** The image is pixel art: the pane upscales it with hard edges. */
+  thumbPixelated?: boolean;
   /** Set when creating a brand-new image. */
   create?: {
     /** Whether another image already uses this name. */
@@ -123,6 +125,7 @@ interface GenerateImageViewProps {
 const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   existing,
   thumb,
+  thumbPixelated,
   create,
   lockedImageType,
   advanced,
@@ -169,12 +172,12 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   // Cycle the bot's generating frames while a request is out.
   const [generatingTick, setGeneratingTick] = useState(0);
   useEffect(() => {
-    if (mode !== 'generating') {
+    if (!advanced || mode !== 'generating') {
       return;
     }
     const timer = setInterval(() => setGeneratingTick(t => t + 1), 350);
     return () => clearInterval(timer);
-  }, [mode]);
+  }, [advanced, mode]);
 
   const canUseSeed = existing?.generation?.seed !== undefined;
   const canUsePrevious = !!existing;
@@ -239,7 +242,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
       <div className={moduleStyles.body}>
         {/* The student form's blank pane is itself the way into the paint
             editor; its footer keeps just Cancel/Generate. */}
-        {!advanced && create && onPaintManually && !thumb ? (
+        {!advanced && create && onPaintManually ? (
           <ImagePaneButton
             iconName="paintbrush"
             label="Paint manually"
@@ -256,7 +259,11 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
             )}
           >
             {thumb ? (
-              <img src={thumb} alt="" />
+              <img
+                src={thumb}
+                alt=""
+                className={classNames(thumbPixelated && moduleStyles.pixelArt)}
+              />
             ) : (
               <div className={moduleStyles.imagePlaceholder} aria-hidden />
             )}

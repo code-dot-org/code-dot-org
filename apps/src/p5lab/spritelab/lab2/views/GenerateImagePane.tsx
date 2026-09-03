@@ -122,6 +122,16 @@ function repointAnimation(
   return current.propsByKey[key]?.sourceUrl;
 }
 
+const MAX_GALLERY_LABEL_LENGTH = 100;
+
+// Student prompts are unbounded free text; cap what the card's alt text and
+// tooltip carry.
+function truncateLabel(label: string | undefined): string | undefined {
+  return label && label.length > MAX_GALLERY_LABEL_LENGTH
+    ? `${label.slice(0, MAX_GALLERY_LABEL_LENGTH - 1).trimEnd()}…`
+    : label;
+}
+
 interface GalleryCardProps {
   animKey: string;
   /** Alt text and hover tooltip for the thumbnail. */
@@ -678,9 +688,9 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
             animKey={key}
             // Students see auto-named images; the prompt describes them
             // better than the name does.
-            label={
+            label={truncateLabel(
               advanced ? props?.name : props?.generation?.prompt || props?.name
-            }
+            )}
             caption={advanced ? props?.name : undefined}
             thumb={
               getTrimmedThumbnail(props?.name) ||
@@ -721,6 +731,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           imageType={imageTypeFromCategories(targetProps?.categories)}
           lockedImageType={lockedImageType}
           advanced={advanced}
+          pixelated={!!targetProps?.pixelGridSize}
           getDataURI={getTargetDataURI}
           isNameTaken={isNameTaken}
           onGenerateStart={handleGenerateStart}
@@ -740,8 +751,12 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         <PixelEditorModal
           title={
             creating && paintNewDraft
-              ? `Paint ${paintNewDraft.name}`
-              : `Edit ${targetProps?.name}`
+              ? advanced
+                ? `Paint ${paintNewDraft.name}`
+                : 'Paint image'
+              : advanced
+              ? `Edit ${targetProps?.name ?? 'image'}`
+              : 'Edit image'
           }
           // Edit the original, untrimmed pixels; a brand-new image starts
           // on a blank canvas sized for its style.
