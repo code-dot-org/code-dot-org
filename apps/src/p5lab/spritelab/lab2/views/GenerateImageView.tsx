@@ -182,6 +182,10 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
     }
   }, [adlib]);
   const freeTextEntered = !!prompt.trim();
+  // What Generate will send: typed text when present, else the combo's
+  // sentence.
+  const usingAdlib = !!adlib && !freeTextEntered;
+  const promptText = usingAdlib ? adlibText : prompt.trim();
 
   // Flag a duplicate as it's typed and hold the buttons until it's unique.
   // The student form has no name field, so the name never holds it back.
@@ -213,8 +217,6 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   const canUsePrevious = !!existing;
 
   const generate = useCallback(async () => {
-    const usingAdlib = !!adlib && !prompt.trim();
-    const promptText = usingAdlib ? adlibText : prompt.trim();
     analyticsReporter.sendEvent('hoai2026-image-prompt', {
       promptText,
       method: usingAdlib ? 'adlib' : 'freeText',
@@ -250,9 +252,8 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
       setMode('prompt');
     }
   }, [
-    prompt,
-    adlib,
-    adlibText,
+    promptText,
+    usingAdlib,
     adlibSet,
     imageType,
     style,
@@ -339,24 +340,19 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
           )}
 
           {adlib && (
-            <>
-              {/* Native disable dims the combo while typed text wins. */}
-              <fieldset
-                className={moduleStyles.adlibGroup}
-                disabled={generating || freeTextEntered}
-              >
-                <Adlib
-                  adlib={adlib}
-                  adlibChoices={adlibChoices}
-                  glowSpeed={freeTextEntered ? undefined : 'normal'}
-                  onChoicesChange={setAdlibChoices}
-                  onTextChange={handleAdlibText}
-                />
-              </fieldset>
-              <div className={moduleStyles.adlibDivider}>
-                …or describe it yourself
-              </div>
-            </>
+            // Native disable dims the combo while typed text wins.
+            <fieldset
+              className={moduleStyles.adlibGroup}
+              disabled={generating || freeTextEntered}
+            >
+              <Adlib
+                adlib={adlib}
+                adlibChoices={adlibChoices}
+                glowSpeed={freeTextEntered ? undefined : 'normal'}
+                onChoicesChange={setAdlibChoices}
+                onTextChange={handleAdlibText}
+              />
+            </fieldset>
           )}
           <div className={moduleStyles.formRow}>
             <label
@@ -365,7 +361,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                 moduleStyles.wide
               )}
             >
-              <span>Prompt</span>
+              <span>{adlib ? 'Or prompt' : 'Prompt'}</span>
               <textarea
                 className={moduleStyles.promptInput}
                 value={prompt}
@@ -536,7 +532,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
         <button
           type="button"
           className={moduleStyles.primaryButton}
-          disabled={generating || (!prompt.trim() && !adlibText) || !nameUsable}
+          disabled={generating || !promptText || !nameUsable}
           onClick={generate}
         >
           <FontAwesomeV6Icon iconName="sparkles" />
