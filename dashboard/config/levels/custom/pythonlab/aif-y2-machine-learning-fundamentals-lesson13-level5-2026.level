@@ -1,0 +1,24 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-08-22T01:12:54.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "aif-y2-machine-learning-fundamentals-lesson13-project-template",
+    "long_instructions": "**☑️ Do This:**\r\n\r\nTest your classifier on each image in your test dataset by updating the value of `test_image` and then running your program once for each test image. Keep track of how accurate the predictions are and what kinds of mistakes your program makes. Be prepared to answer questions based on the results!\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    }
+  },
+  "published": true
+}]]></config>
+</Pythonlab>

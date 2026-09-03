@@ -4,6 +4,7 @@ require 'active_support/core_ext/object/blank'
 require 'active_support/core_ext/integer/time'
 require 'honeybadger/ruby'
 require 'dalli/elasticache'
+require 'observability/errors'
 
 # Provide a long-lived, cross-instance shared cache.
 # Use for caching objects that should be shared across multiple
@@ -22,7 +23,7 @@ module Cdo
           begin
             memcached_hosts = Dalli::ElastiCache.new(CDO.memcached_endpoint).servers
           rescue => exception # Notify if Auto Discovery fails.
-            Honeybadger.notify(exception)
+            Observability::Errors.report(exception)
           end
         end
         return nil unless memcached_hosts.present?

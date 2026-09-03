@@ -26,6 +26,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   # GET /users/auth/classlink/callback
   def classlink
+    apply_classlink_v2_authentication_id(auth_hash)
+
     return connect_provider if should_connect_provider?
 
     user = find_user_by_credential
@@ -156,7 +158,16 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       hashed_email: hashed_email || '',
       credential_type: provider,
       authentication_id: auth_hash.uid,
-      version: provider == AuthenticationOption::CLEVER ? AuthenticationOption::Clever::VERSION[:v3] : nil,
+      version:
+        case provider
+        when AuthenticationOption::CLEVER
+          AuthenticationOption::Clever::VERSION[:v3]
+        when AuthenticationOption::CLASSLINK
+          # The uid was rewritten to the v2 format before this flow ran, unless
+          # its components were invalid — version_for stamps what the id
+          # actually is, so a legacy-format fallback isn't mislabeled as v2.
+          AuthenticationOption::Classlink.version_for(auth_hash.uid)
+        end,
       data: new_data
     )
 
@@ -326,9 +337,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   private def find_user_by_credential
     return nil unless auth_hash
 
-    User.find_by_credential \
-      type: auth_hash.provider,
-      id: auth_hash.uid
+    User.find_by_credential(type: auth_hash.provider, id: auth_hash.uid)
   end
 
   # Temporary method to find existing Clever users by their legacy_id field. This
@@ -479,6 +488,61 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     auth
   end
 
+  # Rewrites the ClassLink auth hash's uid from ClassLink's legacy UserId to
+  # the v2 "<TenantId>|<SourcedId>" format, migrating a legacy-only user by
+  # creating their v2 auth option along the way.
+  # Must run before anything looks up a user by uid — both login and
+  # connect_provider — so existing accounts are found under either id format
+  # rather than duplicated or missed. If the v2 id can't be built or the
+  # migration fails, the uid is left as-is and the legacy path still works.
+  #
+  # @param auth [OmniAuth::AuthHash] the ClassLink omniauth callback hash
+  # @return [void] on success, replaces request.env['omniauth.auth'] with a
+  #   copy whose uid is the v2 id
+  private def apply_classlink_v2_authentication_id(auth)
+    return if auth.nil?
+    classlink_v2_id = Services::Classlink::AuthIdGenerator.call(
+      tenant_id: auth.info&.district_id,
+      sourced_id: auth.info&.external_id,
+      classlink_user_id: auth.uid
+    )
+    # Components invalid or absent: stay on the legacy v1 path.
+    return if classlink_v2_id.nil?
+
+    unless User.find_by_credential(type: AuthenticationOption::CLASSLINK, id: classlink_v2_id)
+      legacy_user = User.find_by_credential(type: AuthenticationOption::CLASSLINK, id: auth.uid)
+      if legacy_user
+        # Login-time migration: create the v2 auth option alongside the v1 record.
+        new_auth_option = Services::Classlink::V2AuthOptionBuilder.call(
+          classlink_v1_id: auth.uid.to_s,
+          tenant_id: auth.info&.district_id,
+          sourced_id: auth.info&.external_id
+        )
+        # If the v2 record can't be created (e.g. a non-migrated user has no v1
+        # auth option to duplicate), keep the legacy uid so the existing user is
+        # still found rather than duplicated. Reported because a population whose
+        # migration silently fails here never converges to v2, and the Phase 3
+        # cleanup gate needs to know why.
+        unless new_auth_option&.save
+          Observability::Errors.report(
+            'ClassLink v2 auth option not created',
+            context: {
+              classlink_user_id: auth.uid,
+              classlink_v2_id: classlink_v2_id,
+              errors: new_auth_option&.errors&.full_messages,
+            }
+          )
+          return
+        end
+      end
+    end
+
+    # Swap a copy carrying the v2 uid into the request env rather than
+    # mutating the given hash in place — everything downstream re-reads
+    # request.env['omniauth.auth'].
+    request.env['omniauth.auth'] = auth.dup.tap {|a| a.uid = classlink_v2_id}
+  end
+
   private def just_authorized_google_classroom?
     current_user&.providers&.include?(AuthenticationOption::GOOGLE) &&
       has_google_oauth2_scope?('classroom.rosters.readonly')
@@ -568,7 +632,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
         'Failed to update User during silent takeover'
       # This should never happen if other logic is working correctly, so notify
       # This can happen if the account being taken over is already invalid
-      Honeybadger.notify(
+      Observability::Errors.report(
         error_class: error_class,
         error_message: exception.message,
         context: {
@@ -668,7 +732,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       begin
         Services::Lti::AccountLinker.call(user: user, session: session)
       rescue => exception
-        Honeybadger.notify(exception, context: {message: 'Error linking LTI account to oauth account', user_id: user.id})
+        Observability::Errors.report(exception, context: {message: 'Error linking LTI account to oauth account', user_id: user.id})
         PartialRegistration.delete(session)
 
         flash.alert = I18n.t('lti.account_linking.backend_error')

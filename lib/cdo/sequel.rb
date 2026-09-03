@@ -1,11 +1,38 @@
 require 'sequel'
 require 'sequel/connection_pool/threaded'
+require 'uri'
 require 'dynamic_config/gatekeeper'
 require 'dynamic_config/dcdo'
 
 module Cdo
   # Wrapper for Sequel database framework, which is primarily used by Sinatra.
   module Sequel
+    # Matches every character that must be percent-encoded in a URI component,
+    # i.e. everything outside the RFC 3986 "unreserved" set.
+    URI_RESERVED = /[^A-Za-z0-9\-._~]/
+
+    # Build a mysql2:// connection URI from its parts.
+    #
+    # @param host [String] Database hostname.
+    # @param username [String] Database username.
+    # @param password [String] Database password.
+    # @param port [Integer, String, nil] Database port. Omitted from the URI when nil.
+    # @param database [String, nil] Default database to connect to. Omitted when nil.
+    # @return [String] e.g. "mysql2://user:p%40ssword@localhost:3306/dashboard"
+    def self.mysql2_uri(host:, username:, password:, port: nil, database: nil)
+      userinfo = [username, password].
+        map {|component| URI::DEFAULT_PARSER.escape(component.to_s, URI_RESERVED)}.
+        join(':')
+
+      URI::Generic.build(
+        scheme: 'mysql2',
+        userinfo: userinfo,
+        host: host,
+        port: port,
+        path: database && "/#{database}"
+      ).to_s
+    end
+
     # Create and return a Sequel::Database object, which represents a connection pool to a database and can be
     # used to query a database and/or issue other types of SQL statements.
     # https://sequel.jeremyevans.net/rdoc/classes/Sequel/Database.html

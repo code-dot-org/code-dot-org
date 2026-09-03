@@ -12,8 +12,6 @@ The easiest way to build the dockerfiles, is to use skaffold, from the root of t
 Skaffold is setup to build dependent dockerfiles, and layer them together. If you wish to build
 without the skaffold cache, try: `skaffold build --cache-artifacts=false`
 
-If the slow iteration time of our "source included" build is annoying, check out [mimic](../mimic).
-
 # Layers
 
 The dockerfiles are designed in layers, which allows minimal rebuilds when files change:

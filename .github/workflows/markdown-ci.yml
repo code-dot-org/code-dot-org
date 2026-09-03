@@ -71,6 +71,10 @@ jobs:
           VISUAL_PROVIDER: applitools
           APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
           APPLITOOLS_BATCH_ID: ${{ github.event.pull_request.head.sha || github.sha }}
+          # Temporary, following the DTT model: on PRs an Eyes diff is
+          # reported to the dashboard but does not fail the run; the
+          # post-merge push run on staging still fails hard on diffs.
+          APPLITOOLS_SHOULD_REPORT_FAILURE: ${{ github.event_name != 'pull_request' }}
           APPLITOOLS_BRANCH: ${{ github.head_ref }}
         run: yarn workspace @code-dot-org/markdown test:ui:ci
         working-directory: ./frontend

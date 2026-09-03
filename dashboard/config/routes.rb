@@ -35,7 +35,9 @@ Dashboard::Application.routes.draw do
   draw :api
   draw :marketing
 
-  get "frontend-studio(/*path)", to: "frontend_studio#index"
+  # format: false keeps the extension in :path. Without it Rails reads '.js' as
+  # the format, and a missing asset raises a cross-origin error, not our 404.
+  get "frontend-studio(/*path)", to: "frontend_studio#index", format: false
 
   # Override Error Codes
   get "404", to: "application#render_404", via: :all
@@ -67,7 +69,7 @@ Dashboard::Application.routes.draw do
     resource :teacher_dashboard, only: [] do
       get :home, controller: :teacher_dashboard, action: :show
       get :get_drawer_data, controller: :teacher_dashboard, action: :get_drawer_data
-      get :unit_in_aif, controller: :teacher_dashboard, action: :unit_in_aif
+      get :lesson_summaries_enabled_for_unit, controller: :teacher_dashboard, action: :lesson_summaries_enabled_for_unit
       resources :sections, only: %i[show], param: :section_id, controller: :teacher_dashboard do
         member do
           get :parent_letter
@@ -450,6 +452,7 @@ Dashboard::Application.routes.draw do
         get 'embed_level'
         get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
         get 'edit_exemplar', to: 'levels#edit_exemplar', as: 'edit_exemplar'
+        get 'build_quiz_questions'
         get 'get_serialized_maze'
         post 'update_properties'
         post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
@@ -461,6 +464,20 @@ Dashboard::Application.routes.draw do
         patch 'update_bubble_choice_settings'
         post 'add_skill'
         post 'remove_skill'
+      end
+
+      resource :quiz_configuration, only: [:update], controller: 'quizzes'
+      resources :quiz_question_placements, only: [:create, :destroy] do
+        member do
+          post 'attach'
+          delete 'detach'
+        end
+      end
+    end
+
+    resources :quiz_questions, only: [:index, :show, :update] do
+      collection do
+        get 'course_unit_search'
       end
     end
 
@@ -1446,7 +1463,8 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    get '/backpacks/channel/:app_type', to: 'backpacks#get_channel'
+    get '/backpacks/channel(/:app_type)', to: 'backpacks#get_channel'
+    get '/backpacks/channels', to: 'backpacks#get_channels'
 
     resources :project_commits, only: [:create]
     get 'project_commits/get_token', to: 'project_commits#get_token'
@@ -1495,7 +1513,11 @@ Dashboard::Application.routes.draw do
     resources :user_practice_problem_attempts, only: [:index, :update, :create, :show]
     resources :practice_problems, only: [:index, :show]
 
-    resources :challenges, only: [:index, :show]
+    resources :challenges, only: [:index, :show] do
+      member do
+        get :starter_image
+      end
+    end
     resources :challenge_responses, only: [:index, :create, :show] do
       collection do
         get :unit_counts

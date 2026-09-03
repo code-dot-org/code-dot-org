@@ -1,0 +1,16 @@
+name 'aif-y2-machine-learning-fundamentals-preassessment-q5-2026'
+
+wrong 'Regression predicts categorical data instead of numerical data'
+right 'Regression predicts numerical data instead of categorical data'
+wrong 'Regression uses machine learning and classification does not'
+wrong 'Classification uses machine learning and regression does not'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+What is the key difference between regression and classification?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 4: Prediction Models
+MARKDOWN

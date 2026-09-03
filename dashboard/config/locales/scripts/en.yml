@@ -416,6 +416,8 @@ en:
               name: Java Lab2
             lesson-60:
               name: AI Lab Lab2
+            lesson-61:
+              name: Choice Progression
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1143,6 +1145,19 @@ en:
           description_audience: Ages 5-18
         alltheplcthings:
           title: Sample course for PLC things
+          description: This is a sample course that has all of the plc special things. Enrollment in this course does nothing. Right now, it's just a copy of TeacherCon
+          description_short: This is a sample course that has all of the plc special things
+          description_audience: ''
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+            practice:
+              display_name: Teaching Practices
+          student_description: This is a sample course that has all of the plc special things. Enrollment in this course does nothing. Right now, it's just a copy of TeacherCon
+        ui-test-plc:
+          title: UI Test course for PLC things
           description: This is a sample course that has all of the plc special things. Enrollment in this course does nothing. Right now, it's just a copy of TeacherCon
           description_short: This is a sample course that has all of the plc special things
           description_audience: ''
@@ -1951,6 +1966,15 @@ en:
           lessons: {}
           name: allthettsthings
           title: All The TTS Things
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        ui-test-tts:
+          lesson_groups: {}
+          lessons: {}
+          name: ui-test-tts
+          title: UI Test Text-to-Speech
           description_audience: ''
           description_short: ''
           description: ''
@@ -24248,7 +24272,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-csd-unit1-2025
-          title: Preparing to Teach Problem Solving and Computing
+          title: CSD - Teaching Problem Solving and Computing
           description_audience: ''
           description_short: ''
           description: "##### This professional learning module is designed to help you prepare to teach CodeAI's Problem Solving and Computing unit. \n\n##### **In this professional learning module, you will:**\n* ##### Get an introduction to Problem Solving and Computing.\n* ##### Learn the key problem solving frameworks utilized in the unit\n* ##### Practice key concepts included in the unit.\n* ##### Explore end-of-chapter projects.\n\n##### **Suggested time:** 40 minutes"
@@ -25029,6 +25053,26 @@ en:
               display_name: UI/Eyes Test Content
           name: allthelessonplans
           title: All The Lesson Plans
+          description_audience: ''
+          description_short: ''
+          description: Teacher overview of the unit.
+          student_description: Student overview of the unit.
+        ui-test-lesson-plans:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lesson Group 1
+              big_questions: |-
+                * Who?
+                * What?
+                * Where?
+              description: Lesson group 1 description
+            lessonGroup-3:
+              display_name: Lesson Group 2
+            lessonGroup-4:
+              display_name: UI/Eyes Test Content
+          name: ui-test-lesson-plans
+          title: UI Test Lesson Plans
           description_audience: ''
           description_short: ''
           description: Teacher overview of the unit.
@@ -28062,6 +28106,8 @@ en:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
+            lessonGroup-3:
+              display_name: End of Unit Survey
           title: Web Apps with AI Capstone Project
           description: |-
             This unit is the capstone of AI Foundations Semester 2, where students synthesize their learning to design and build a complete web app with a clear purpose and audience. They integrate technical fluency, human-centered design, and AI literacy, making choices that are transparent, ethical, and aligned with their values. The focus is not only on producing a finished app but on documenting and reflecting on the process, demonstrating the habits of intentional designers who create technology with clarity, confidence, and care.
@@ -28250,7 +28296,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-csd-unit1-2026
-          title: Preparing to Teach Problem Solving and Computing
+          title: CSD - Preparing to Teach Problem Solving and Computing
           description_audience: ''
           description_short: ''
           description: "##### This professional learning module is designed to help you prepare to teach Code.org's Problem Solving and Computing unit. \n\n##### **In this professional learning module, you will:**\n* ##### Get an introduction to Problem Solving and Computing.\n* ##### Learn the key problem solving frameworks utilized in the unit\n* ##### Practice key concepts included in the unit.\n* ##### Explore end-of-chapter projects.\n\n##### **Suggested time:** 40 minutes"
@@ -28388,7 +28434,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-web-dev-2026
-          title: Teaching Web Development
+          title: AID - Teaching Web Development
           description_audience: ''
           description_short: ''
           description: |-
@@ -28417,7 +28463,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-programming-with-music-lab-2026
-          title: Teaching Programming with Music Lab
+          title: AID - Teaching Programming with Music Lab
           description_audience: ''
           description_short: ''
           description: |-
@@ -28446,7 +28492,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-data-and-society-2026
-          title: Teaching Data and Society
+          title: AID - Teaching Data and Society
           description_audience: "'26-'27"
           description_short: ''
           description: |-
@@ -28473,7 +28519,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-design-process-2026
-          title: Teaching The Design Process
+          title: AID - Teaching The Design Process
           description_audience: ''
           description_short: ''
           description: |-
@@ -28502,7 +28548,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-interactive-animations-and-games-2026
-          title: Teaching Interactive Animations and Games
+          title: AID - Teaching Interactive Animations and Games
           description_audience: "'26-'27"
           description_short: ''
           description: |-
@@ -28531,7 +28577,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-creating-apps-with-devices-circuit-2026
-          title: Teaching Creating Apps for Devices (Circuit Playground)
+          title: AID - Teaching Creating Apps for Devices (Circuit Playground)
           description_audience: ''
           description_short: ''
           description: "This professional learning module is designed to help you prepare to teach Creating Apps with Devices (Circuit Playground).\n\nIn this professional learning module, you will:\n\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground. \n* Practice key concepts included in the unit.\n* Preview end-of-chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
@@ -28540,7 +28586,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-creating-apps-with-devices-microbit-2026
-          title: Teaching Creating Apps with Devices (micro:bit)
+          title: AID - Teaching Creating Apps with Devices (micro:bit)
           description_audience: ''
           description_short: ''
           description: "This professional learning module is designed to help you prepare to teach Creating Apps with Devices (micro:bit).\n\nIn this professional learning module, you will:\n\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end-of-chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
@@ -28551,7 +28597,7 @@ en:
               name: Teaching AI and Machine Learning
           lesson_groups: {}
           name: self-paced-pl-teaching-ai-and-ml-2026
-          title: 'Teaching AI and Machine Learning '
+          title: 'AID - Teaching AI and Machine Learning '
           description_audience: ''
           description_short: ''
           description: |-
@@ -28781,6 +28827,8 @@ en:
           title: Foundations of AI Programming (Python)
           description: |-
             This unit introduces you to programming, algorithms, and ethical computing, exploring how Python programs are designed, debugged, and influenced by societal considerations. Through hands-on activities, you write, test, and refine programs using sequence, selection, iteration, and modular functions while applying human-centered design for inclusivity. You analyze the ethical implications of computing, including privacy, fairness, and accessibility, and propose risk mitigation strategies. Career-focused discussions connect programming skills to real-world pathways. Grounded in ethics, inclusivity, and computational thinking, this unit fosters persistence, critical thinking, and curiosity, empowering you to use technology for real-world problem-solving.
+
+            > **Choose Python or JavaScript, not both.** This unit and Foundations of AI Programming (JavaScript) cover the same core concepts and similar standards in two different languages. They exist so you can pick the language that best fits your students or pathway — teach one or the other, not both.
 
             ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
             - Define and explain the purpose of algorithms and their applications.
@@ -29325,13 +29373,23 @@ en:
               name: Lesson 12
             lesson-13:
               name: Lesson 13
-          lesson_groups: {}
+            lesson-14:
+              name: Pre-Assessment
+            lesson-15:
+              name: End of Unit Assessment
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Pre-Assessment
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Asssessment
           name: aif-year2-semester1-unit2
           title: Machine Learning Fundamentals
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: "This unit introduces students to machine learning as a tool for training computers to solve problems by learning from data. \n\nStudents are introduced to classification and regression as two of the core types of tasks in machine learning. In the process of exploring approaches to machine learning, students also learn concepts in probability and statistics that help guide their explorations. The unit’s focus on probability and statistics also invites students to closely examine some ethical questions regarding machine learning.\n\n::: details [<i class=\"fa-solid fa-badge-check\"></i> **By the end of this unit, students will be able to . . .**]\n- Describe classification and regression tasks in machine learning.\n- Identify different types of data that can be used in machine learning models.\n- Analyze training data and identify patterns that a machine could learn.\n- Construct a decision tree by finding patterns and apply it to make decisions.\n- Evaluate how well a model performs by testing it on new data.\n- Evaluate whether a model has underfit or overfit on training data.\n- Explain why an AI system might not always produce correct answers.\n- Use conditional probability to express the likelihood that a prediction is correct.\n- Explain the purpose of splitting data into training and test sets.\n- Reflect on how the choice of data used to train AI can bias its output.\n:::"
+          student_description: "This unit introduces you to machine learning as a tool for training computers to solve problems by learning from data. \n\nYou'll learn about classification and regression as two of the core types of tasks in machine learning. In the process of exploring approaches to machine learning, you'll also learn concepts in probability and statistics that will help guide your explorations. The unit’s focus on probability and statistics will also invite you to closely examine some ethical questions regarding machine learning.\n\n::: details [<i class=\"fa-solid fa-badge-check\"></i> **By the end of this unit, you'll be able to . . .**]\n- Describe classification and regression tasks in machine learning.\n- Identify different types of data that can be used in machine learning models.\n- Analyze training data and identify patterns that a machine could learn.\n- Construct a decision tree by finding patterns and apply it to make decisions.\n- Evaluate how well a model performs by testing it on new data.\n- Evaluate whether a model has underfit or overfit on training data.\n- Explain why an AI system might not always produce correct answers.\n- Use conditional probability to express the likelihood that a prediction is correct.\n- Explain the purpose of splitting data into training and test sets.\n- Reflect on how the choice of data used to train AI can bias its output.\n:::"
         self-paced-pl-ai-101-mod1-2026:
           lessons: {}
           lesson_groups: {}
@@ -29479,7 +29537,7 @@ en:
               name: Big Ideas in Thinking Critically About AI
           lesson_groups: {}
           name: self-paced-pl-teaching-thinking-critically-about-ai-2026
-          title: Teaching Thinking Critically about AI
+          title: AID - Teaching Thinking Critically about AI
           description_audience: ''
           description_short: ''
           description: |-
@@ -29604,7 +29662,7 @@ en:
               name: Lesson 2
           lesson_groups: {}
           name: ai-history
-          title: "[DEV] AI History (AI Ready Skills Prep)"
+          title: AI History (AI Ready Skills Prep)
           description_audience: ''
           description_short: ''
           description: |-
@@ -29660,6 +29718,8 @@ en:
               display_name: Content
             lessonGroup-3:
               display_name: End of Unit Project
+            lessonGroup-4:
+              display_name: End of Unit Survey
           name: foundations-of-ai-programming-js
           title: Foundations of AI Programming (JavaScript)
           description_audience: ''
@@ -29847,7 +29907,7 @@ en:
               display_name: End of Unit Project
             lessonGroup-5:
               display_name: End of Unit Assessment and Survey
-          title: AI and the Systems That Power It
+          title: "[DEV] AI and the Systems That Power It 26/27"
           description: |-
             This unit explores how AI and computing systems process information, interact with hardware and software, and integrate emerging technologies like IoT and robotics. Through hands-on activities, you design and troubleshoot systems, analyze AI’s societal and ethical impacts, and apply human-centered design to solve real-world problems. AI Chat supports your learning by unpacking system layers, optimizing software, and evaluating AI-generated content for accuracy and fairness. Discussions on bias and debates on AI’s role in society encourage creativity, critical thinking, and collaboration. Grounded in ethics, inclusivity, and computational thinking, this unit helps you develop a deeper understanding of AI and its potential for equitable solutions.
 
@@ -29890,6 +29950,8 @@ en:
             &nbsp;
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: ai-and-the-systems-that-power-it-2026-dev
         the-fabric-of-the-internet-and-ai-2026-dev:
           lesson_groups:
             lessonGroup-2:
@@ -30143,25 +30205,31 @@ en:
         csp-unit1-dev-27-28:
           lessons:
             lesson-1:
-              name: Lesson 1
+              name: Intro to Programming - Day 1
             lesson-2:
-              name: Lesson 2
+              name: Intro to Programming - Day 2
             lesson-3:
               name: 'Lesson 3:'
             lesson-4:
-              name: Lesson 4
+              name: Variables - Day 1
             lesson-5:
-              name: Lesson 5
+              name: Variables - Day 2
             lesson-6:
-              name: Lesson 6
+              name: Variables - Day 3
             lesson-7:
-              name: Lesson 7
+              name: 'Lesson 24: Strings - Day 1'
             lesson-8:
-              name: Lesson 8
+              name: 'Lesson 25: Strings - Day 2'
             lesson-9:
-              name: Lesson 9
+              name: 'Lesson 26: Expressions and Operators - Day 1'
             lesson-10:
-              name: Lesson 10
+              name: 'Lesson 27: Expressions and Operators - Day 2'
+            lesson-11:
+              name: 'Lesson 28: Random Values - Day 1'
+            lesson-12:
+              name: 'Lesson 29: Random Values - Day 2'
+            lesson-13:
+              name: 'Lesson 30: Project - Wrapped'
           lesson_groups: {}
           name: csp-unit1-dev-27-28
           title: Unit 1 - Creating Purposeful Apps and Programs
@@ -30285,3 +30353,204 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        self-paced-pl-teaching-aiml-unit1-2026:
+          title: CSD - Teaching AI and Machine Learning
+          description: |-
+            **In this professional learning module, you will:**
+
+            * Get an introduction to artificial intelligence and machine learning.
+            * Practice key concepts included in the unit.
+            * Engage with AI Lab and App Lab.
+            * Explore end of chapter projects.
+            * Make a plan for implementing the unit with your students.
+
+            **Suggested Time:** 100 minutes
+          student_description: |-
+            **In this professional learning module, you will:**
+
+            * Get an introduction to artificial intelligence and machine learning.
+            * Practice key concepts included in the unit.
+            * Engage with AI Lab and App Lab.
+            * Explore end of chapter projects.
+            * Make a plan for implementing the unit with your students.
+
+            **Suggested Time:** 100 minutes
+          description_short: ''
+          description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-aiml-unit1-2026
+        self-paced-pl-teaching-csd-unit2-2026:
+          title: Preparing to Teach Web Development
+          description: |-
+            This professional learning module is designed to help you prepare to teach CodeAI's Web Development unit.
+
+            **In this professional learning module, you will:**
+
+            * Get an introduction to Web Development.
+            * Practice key concepts included in the unit.
+            * Engage with Web Lab.
+            * Explore end-of-chapter projects.
+
+            **Suggested time**: 120 minutes
+          student_description: |-
+            This professional learning module is designed to help you prepare to teach CodeAI's Web Development unit.
+
+            **In this professional learning module, you will:**
+
+            * Get an introduction to Web Development.
+            * Practice key concepts included in the unit.
+            * Engage with Web Lab.
+            * Explore end-of-chapter projects.
+
+            **Suggested time**: 120 minutes
+          description_short: ''
+          description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-csd-unit2-2026
+        self-paced-pl-teaching-programming-with-music-lab-unit1-2026:
+          title: AID - Teaching Programming with Music Lab
+          description: |-
+            This professional learning module is designed to help you prepare to teach Programming with Music Lab.
+
+            In this professional learning module, you will:
+
+            * Code sequences, loops, and functions in Music Lab.
+            * Utilize the unit structure and lesson structure of the curriculum to facilitate a gradual release of responsibility for students.
+            * Implement the unit with students with diverse learning needs.
+            * Guide students through unit projects to synthesize their learning.
+
+            **Suggested Time**: 120 minutes
+          student_description: |-
+            This professional learning module is designed to help you prepare to teach Programming with Music Lab.
+
+            In this professional learning module, you will:
+
+            * Code sequences, loops, and functions in Music Lab.
+            * Utilize the unit structure and lesson structure of the curriculum to facilitate a gradual release of responsibility for students.
+            * Implement the unit with students with diverse learning needs.
+            * Guide students through unit projects to synthesize their learning.
+
+            **Suggested Time**: 120 minutes
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-teaching-csd-unit3-2026:
+          title: Preparing to Teach Interactive Animations and Games
+          description: "This professional learning module is designed to help you prepare to teach CodeAI's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach CodeAI's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
+          description_short: ''
+          description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-csd-unit3-2026
+        self-paced-pl-teaching-csd-unit5-2026:
+          title: Preparing to Teach Data and Society
+          description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 70 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 70 minutes"
+          description_short: ''
+          description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-csd-unit5-2026
+        self-paced-pl-teaching-physical-computing-2026:
+          title: Preparing to Teach Creating Apps for Devices (Circuit Playground)
+          description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
+          student_description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
+          description_short: ''
+          description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-physical-computing-2026
+        self-paced-pl-teaching-microbit-2026:
+          title: Preparing to Teach Creating Apps for Devices (micro:bit)
+          description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
+          student_description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
+          description_short: ''
+          description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-microbit-2026
+        foundations-of-ai-programming-javascript-2026:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: End of Unit Project
+            lessonGroup-4:
+              display_name: End of Unit Survey
+          title: Foundations of AI Programming (JavaScript)
+          description: |+
+            This unit introduces you to web app development, AI-assisted design, and interactive programming, exploring how web apps are designed, styled, and made responsive to user actions. Through hands-on activities, you build, test, and refine web apps using JavaScript while applying human-centered design for accessibility. You use AI as a development partner — generating code from prompts, evaluating AI output for correctness, and troubleshooting when it doesn't fit your page — while learning core programming concepts like variables, functions, conditionals, and loops. Career-focused discussions connect these skills to real-world roles like Front-End Developer, Inclusive Designer, and QA Engineer. Grounded in accessibility, critical evaluation of AI, and computational thinking, this unit fosters persistence, design sense, and curiosity, empowering you to build interactive web apps for real-world use.
+
+            > **Choose Python or JavaScript, not both.** This unit and Foundations of AI Programming (Python) cover the same core concepts and similar standards in two different languages. They exist so you can pick the language that best fits your students or pathway — teach one or the other, not both.
+
+            > **Planning on teaching the AI Foundations: Designing and Building with AI (semester 2) course?** _Skip this unit._ Its content overlaps with Semester 2's AI-Generated Design and AI and Algorithmic Decisions units, which already cover this material in the full-year sequence. See the AI Foundations Implementation Guide [link] for how programming instruction is structured across the three implementation models.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Identify the structural components of a web app and explain how layout choices guide user behavior.
+            - Use AI to generate HTML and CSS from prompts, and compare vague versus specific prompts to see how prompt quality affects output.
+            - Explain the separation of structure (HTML) and style (CSS) in a web app.
+            - Apply the POUR accessibility framework to audit and improve real-world websites and AI-generated designs.
+            - Use abstraction to wireframe an app idea, stripping away color and detail to focus on structure.
+            - Give and receive structured peer feedback on design work.
+            - Explain the relationship between events, elements, and the DOM, and connect user actions to on-screen changes.
+            - Write a JavaScript event handler and apply a Show / Describe / Confirm protocol to debug AI-generated code that doesn't fit the page.
+            - Use variables to make an app "remember" state and follow a create-update-display pattern.
+            - Apply an Evaluate AI framework — is the output what I asked for, does it work, can I explain it — to critique AI suggestions rather than accepting them outright.
+            - Write reusable, well-named functions using arrow syntax, parameters, and return values.
+            - Use conditional statements (if/else) to make an app respond differently to different user actions.
+            - Use loops to repeat an action a specified number of times, and test whether AI-generated loops behave correctly.
+            - Plan, build, test, and iterate on a student-designed interactive web app, distinguishing what AI contributed from what they built themselves.
+            :::
+
+          student_description: |-
+            This unit introduces you to web app development, AI-assisted design, and interactive programming, exploring how web apps are designed, styled, and made responsive to user actions. Through hands-on activities, you build, test, and refine web apps using JavaScript while applying human-centered design for accessibility. You use AI as a development partner — generating code from prompts, evaluating AI output for correctness, and troubleshooting when it doesn't fit your page — while learning core programming concepts like variables, functions, conditionals, and loops. Career-focused discussions connect these skills to real-world roles like Front-End Developer, Inclusive Designer, and QA Engineer. Grounded in accessibility, critical evaluation of AI, and computational thinking, this unit fosters persistence, design sense, and curiosity, empowering you to build interactive web apps for real-world use.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, you will be able to . . .**]
+            - Identify the structural components of a web app and explain how layout choices guide user behavior.
+            - Use AI to generate HTML and CSS from prompts, and compare vague versus specific prompts to see how prompt quality affects output.
+            - Explain the separation of structure (HTML) and style (CSS) in a web app.
+            - Apply the POUR accessibility framework to audit and improve real-world websites and AI-generated designs.
+            - Use abstraction to wireframe an app idea, stripping away color and detail to focus on structure.
+            - Give and receive structured peer feedback on design work.
+            - Explain the relationship between events, elements, and the DOM, and connect user actions to on-screen changes.
+            - Write a JavaScript event handler and apply a Show / Describe / Confirm protocol to debug AI-generated code that doesn't fit your page.
+            - Use variables to make an app "remember" state and follow a create-update-display pattern.
+            - Apply an Evaluate AI framework — is the output what I asked for, does it work, can I explain it — to critique AI suggestions rather than accepting them outright.
+            - Write reusable, well-named functions using arrow syntax, parameters, and return values.
+            - Use conditional statements (if/else) to make an app respond differently to different user actions.
+            - Use loops to repeat an action a specified number of times, and test whether AI-generated loops behave correctly.
+            - Plan, build, test, and iterate on your own interactive web app, distinguishing what AI contributed from what you built yourself.
+            :::
+          description_short: ''
+          description_audience: ''
+        ai-history-2026:
+          title: AI History (AI Ready Skills Prep)
+          description: |-
+            In this **optional** short unit, students explore how AI developed from early ideas about machine intelligence into the tools they see today. Students investigate major milestones and eras in AI history, including early rule-based systems, expert systems, AI winters, the shift toward machine learning, deep learning, and modern generative AI. They also examine how people’s ideas, choices, discoveries, and concerns shaped AI’s development, from foundational figures like Alan Turing and John McCarthy to contributors connected to computer vision, AI ethics, bias, and social impact. Across the unit, students use interactive resources, timeline activities, chatbot comparisons, and peer exchange to understand that AI progress is shaped by both technical breakthroughs and human decisions.
+
+            Learning Outcomes: By the end of this unit, students will be able to . . .
+
+            - Describe key milestones and eras in the history of AI.
+            - Explain how AI evolved from rule-based systems toward systems that learn patterns from data.
+            - Discuss how major people, ideas, and discoveries shaped the development of AI.
+            - Explain how people’s choices about goals, data, and risks can influence the development and impact of AI systems.
+
+            **This unit is aligned to the AI Ready Skills Certification and is recommended for students preparing for that certification.**
+          student_description: |-
+            In this unit, you explore how AI developed from early ideas about machine intelligence into the tools you see today. You learn about major milestones in AI history, compare an early chatbot with a modern AI Tutor, and investigate people whose ideas, discoveries, and concerns shaped the field. Along the way, you see how AI changed from systems that followed rules to systems that learn patterns from data, and how human choices continue to shape what AI can do and how it affects people.
+
+            <i class="fa-regular fa-bullseye-arrow"></i> Learning Outcomes: By the end of this unit, you will be able to . . .
+
+            - Describe key milestones and eras in the history of AI.
+            - Explain how AI evolved from rule-based systems toward systems that learn patterns from data.
+            - Discuss how major people, ideas, and discoveries shaped the development of AI.
+            - Explain how people’s choices about goals, data, and risks can influence the development and impact of AI systems.
+
+            This unit is aligned to the AI Ready Skills Certification and is recommended if you are preparing for that certification.
+          description_short: ''
+          description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: ai-history-2026

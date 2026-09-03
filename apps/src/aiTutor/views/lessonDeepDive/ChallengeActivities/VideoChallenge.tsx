@@ -23,6 +23,8 @@ interface VideoChallengeProps {
   submitCallback: React.Dispatch<React.SetStateAction<boolean>>;
   challenge: Challenge | null;
   lessonId: number;
+  setEvaluationStatus: React.Dispatch<React.SetStateAction<string>>;
+  setChallengeResponseId: React.Dispatch<React.SetStateAction<number>>;
 }
 
 const VideoChallenge: FC<VideoChallengeProps> = ({
@@ -30,6 +32,8 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
   submitCallback,
   lessonId,
   challenge = null,
+  setEvaluationStatus,
+  setChallengeResponseId,
 }) => {
   const [hasRecording, setHasRecording] = useState(false);
   const [isRecording, setIsRecording] = useState(false);
@@ -99,7 +103,9 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
 
       // Fire-and-forget: the evaluation result goes to the teacher, not the
       // student, so the submission flow does not wait on it.
-      requestEvaluation(challengeResponse.id);
+      const status = await requestEvaluation(challengeResponse.id);
+      setEvaluationStatus(status);
+      setChallengeResponseId(challengeResponse.id);
 
       // Only confirm once the upload actually succeeded; the confirmation
       // dialog in ChallengeBox keys off this.
@@ -131,9 +137,6 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
 
   return (
     <div>
-      <div className={styles.questionText}>
-        {challenge ? challenge.question : 'DUMMY PROBLEM TEXT HERE'}
-      </div>
       <VideoRecorder
         onRecordingChange={setHasRecording}
         onIsRecordingChange={setIsRecording}

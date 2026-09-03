@@ -28,13 +28,9 @@ They learn how to plan, build, and style a web app, how to use AI as a coding pa
 
 <div style="clear:both;"></div>
 
-## Unit Calendar 
+## Unit Calendar
 
-Take a quick look at the lessons included in this unit using the calendar tool.
-
-This version of the calendar assumes 5 lessons per week and can be customized using the drop-down menu to accommodate your schedule. 
-
-Check out the <a href="https://studio.code.org/s/aif1-2026" target="blank" rel="noopener noreferrer">calendar feature</a> on top of the unit preview. 
+Take a quick look at the lessons included in this unit using the calendar tool. This version of the calendar assumes 5 45-minute lessons per week.
 
 <!-- Unit Lesson Calendar -->
 <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 860px; margin: 0 auto; border-radius: 10px; overflow: hidden; border: 1.5px solid #ACA8EA;">
@@ -140,6 +136,10 @@ Check out the <a href="https://studio.code.org/s/aif1-2026" target="blank" rel="
   </div>
 
 </div>
+<br>
+
+Click "View Calendar" on the unit overview page to customize the lesson progression to fit your class schedule.
+
 <br>
 
 <div style="font-size: 12pt; font-weight: bold; background-color: #f7f8fa; padding: 10px; border-left: 5px solid #4c42cf; display: inline-block; color: #000;">

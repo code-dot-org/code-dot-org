@@ -64,7 +64,7 @@ const FileTab = ({
   const {iconName, iconStyle, iconClassName, isActive, className} =
     useFileTabState(file);
   const dispatch = useAppDispatch();
-  // Optional form: the existing tests render FileTabs with no ThemeProvider.
+  // Optional: FileTabs tests have no ThemeProvider.
   const {theme} = useTheme(true);
   const isAiTutorVersion = useAppSelector(
     state => state.lab2Project.viewingAiTutorVersion
@@ -142,11 +142,11 @@ const FileTab = ({
   return (
     <div className={className} ref={setNodeRef} style={dndStyle}>
       {/* Drag handle stops here — CloseButton is a sibling, not nested, to avoid WCAG nested interactive controls violation */}
-      {/* Empty title never opens. Screen readers get these instructions from dnd-kit. */}
+      {/* Empty title never opens. dnd-kit already speaks these instructions. */}
       <Tooltip
         title={showReorderHint ? 'Press M to reorder · Esc to cancel' : ''}
         placement="bottom-start"
-        // The bubble portals to document.body, outside the themed subtree.
+        // Portal is document.body, outside the themed subtree.
         slotProps={{tooltip: {'data-theme': theme}}}
         {...keyboardOnlyTooltipProps}
       >

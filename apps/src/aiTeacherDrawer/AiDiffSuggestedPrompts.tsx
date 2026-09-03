@@ -1,7 +1,7 @@
 import React from 'react';
 
 import SuggestedPrompts from '@cdo/apps/aiComponentLibrary/suggestedPrompt/SuggestedPrompts';
-import {setSelectedPrompt} from '@cdo/apps/aiDifferentiation/redux';
+import {setSelectedPrompt} from '@cdo/apps/aiTeacherDrawer/redux';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {ChatPrompt} from './types';

@@ -1,0 +1,3305 @@
+{
+  "script": {
+    "name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "self_paced_pl_6_8",
+      "curriculum_umbrella": "Self-paced PL - AID",
+      "has_unnumbered_lessons": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-08-25 21:11:09 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Introduction to Programming with Music Lab",
+      "name": "Introduction to Programming with Music Lab",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026"
+      }
+    },
+    {
+      "key": "Teaching Lessons 1 - 5: Sequencing",
+      "name": "Teaching Lessons 1 - 5: Sequencing",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026"
+      }
+    },
+    {
+      "key": "Teaching Lessons 6 - 9: Loops",
+      "name": "Teaching Lessons 6 - 9: Loops",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026"
+      }
+    },
+    {
+      "key": "Teaching Lessons 10 - 13: Functions",
+      "name": "Teaching Lessons 10 - 13: Functions",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "a888b6f4-d4ec-49d3-9c8c-555ef3a0ef53",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a888b6f4-d4ec-49d3-9c8c-555ef3a0ef53",
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026"
+      }
+    },
+    {
+      "key": "74bb4250-069f-476a-9e12-6a00d0811f4b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "74bb4250-069f-476a-9e12-6a00d0811f4b",
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026"
+      }
+    },
+    {
+      "key": "74e0a670-ad33-4d4e-9b3d-c5edabbd1237",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "74e0a670-ad33-4d4e-9b3d-c5edabbd1237",
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026"
+      }
+    },
+    {
+      "key": "cc8f9167-f8c6-43ff-bf90-12b6d8bd10fc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cc8f9167-f8c6-43ff-bf90-12b6d8bd10fc",
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "94125b33-e8a6-427c-8621-9b9443eae601",
+      "position": 1,
+      "properties": {
+        "progression_name": "Professional Learning Module Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "94125b33-e8a6-427c-8621-9b9443eae601",
+        "lesson_activity.key": "a888b6f4-d4ec-49d3-9c8c-555ef3a0ef53"
+      }
+    },
+    {
+      "key": "a5d3e9bb-908f-4031-a425-105a6ee370c5",
+      "position": 2,
+      "properties": {
+        "progression_name": "Section Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "a5d3e9bb-908f-4031-a425-105a6ee370c5",
+        "lesson_activity.key": "a888b6f4-d4ec-49d3-9c8c-555ef3a0ef53"
+      }
+    },
+    {
+      "key": "a8ea090a-7b34-42b1-a05f-a07227f67991",
+      "position": 3,
+      "properties": {
+        "progression_name": "Curriculum Structure"
+      },
+      "seeding_key": {
+        "activity_section.key": "a8ea090a-7b34-42b1-a05f-a07227f67991",
+        "lesson_activity.key": "a888b6f4-d4ec-49d3-9c8c-555ef3a0ef53"
+      }
+    },
+    {
+      "key": "9227048a-dcaf-40f6-8706-e3a8de2e7861",
+      "position": 4,
+      "properties": {
+        "progression_name": "Computational Thinking"
+      },
+      "seeding_key": {
+        "activity_section.key": "9227048a-dcaf-40f6-8706-e3a8de2e7861",
+        "lesson_activity.key": "a888b6f4-d4ec-49d3-9c8c-555ef3a0ef53"
+      }
+    },
+    {
+      "key": "a165fdfb-5e48-47ff-b542-e29b0153d505",
+      "position": 5,
+      "properties": {
+        "progression_name": "Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "a165fdfb-5e48-47ff-b542-e29b0153d505",
+        "lesson_activity.key": "a888b6f4-d4ec-49d3-9c8c-555ef3a0ef53"
+      }
+    },
+    {
+      "key": "98262bcc-28d7-4579-847c-59a7a08af553",
+      "position": 6,
+      "properties": {
+        "progression_name": "Career Spotlights"
+      },
+      "seeding_key": {
+        "activity_section.key": "98262bcc-28d7-4579-847c-59a7a08af553",
+        "lesson_activity.key": "a888b6f4-d4ec-49d3-9c8c-555ef3a0ef53"
+      }
+    },
+    {
+      "key": "d0722b9a-a3b4-44d2-8aa7-4d5967284e45",
+      "position": 7,
+      "properties": {
+        "progression_name": "Music Lab Coding Environment"
+      },
+      "seeding_key": {
+        "activity_section.key": "d0722b9a-a3b4-44d2-8aa7-4d5967284e45",
+        "lesson_activity.key": "a888b6f4-d4ec-49d3-9c8c-555ef3a0ef53"
+      }
+    },
+    {
+      "key": "8420933f-8491-40eb-b120-3c320cb5cc0a",
+      "position": 8,
+      "properties": {
+        "progression_name": "Closing"
+      },
+      "seeding_key": {
+        "activity_section.key": "8420933f-8491-40eb-b120-3c320cb5cc0a",
+        "lesson_activity.key": "a888b6f4-d4ec-49d3-9c8c-555ef3a0ef53"
+      }
+    },
+    {
+      "key": "c89ec1b8-98fe-4a75-9810-1a65aa7c6eaa",
+      "position": 1,
+      "properties": {
+        "progression_name": "Section Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "c89ec1b8-98fe-4a75-9810-1a65aa7c6eaa",
+        "lesson_activity.key": "74bb4250-069f-476a-9e12-6a00d0811f4b"
+      }
+    },
+    {
+      "key": "139a5d96-4ccb-43a9-8b53-eb21f72d8129",
+      "position": 2,
+      "properties": {
+        "progression_name": "Lesson 1: Introduction to Music Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "139a5d96-4ccb-43a9-8b53-eb21f72d8129",
+        "lesson_activity.key": "74bb4250-069f-476a-9e12-6a00d0811f4b"
+      }
+    },
+    {
+      "key": "defbd679-b67d-48ee-8df5-76c561a724f6",
+      "position": 3,
+      "properties": {
+        "progression_name": "Sequencing & Play Together"
+      },
+      "seeding_key": {
+        "activity_section.key": "defbd679-b67d-48ee-8df5-76c561a724f6",
+        "lesson_activity.key": "74bb4250-069f-476a-9e12-6a00d0811f4b"
+      }
+    },
+    {
+      "key": "f76ce190-640c-4f87-add9-c12ea30d1220",
+      "position": 4,
+      "properties": {
+        "progression_name": "Play Sequential"
+      },
+      "seeding_key": {
+        "activity_section.key": "f76ce190-640c-4f87-add9-c12ea30d1220",
+        "lesson_activity.key": "74bb4250-069f-476a-9e12-6a00d0811f4b"
+      }
+    },
+    {
+      "key": "33f19dc0-f912-4423-90ac-c5adecb70635",
+      "position": 5,
+      "properties": {
+        "progression_name": "Rests "
+      },
+      "seeding_key": {
+        "activity_section.key": "33f19dc0-f912-4423-90ac-c5adecb70635",
+        "lesson_activity.key": "74bb4250-069f-476a-9e12-6a00d0811f4b"
+      }
+    },
+    {
+      "key": "14b6d64a-a653-4f0a-b916-9f83ab4fc665",
+      "position": 6,
+      "properties": {
+        "progression_name": "Effects"
+      },
+      "seeding_key": {
+        "activity_section.key": "14b6d64a-a653-4f0a-b916-9f83ab4fc665",
+        "lesson_activity.key": "74bb4250-069f-476a-9e12-6a00d0811f4b"
+      }
+    },
+    {
+      "key": "4c425cd4-a0c1-491a-8831-d2adc16dc7df",
+      "position": 7,
+      "properties": {
+        "progression_name": "Mini-Project: Walk-Up Songs"
+      },
+      "seeding_key": {
+        "activity_section.key": "4c425cd4-a0c1-491a-8831-d2adc16dc7df",
+        "lesson_activity.key": "74bb4250-069f-476a-9e12-6a00d0811f4b"
+      }
+    },
+    {
+      "key": "d6edf7d3-40cb-4a2b-9d10-533766ca8b74",
+      "position": 8,
+      "properties": {
+        "progression_name": "Closing"
+      },
+      "seeding_key": {
+        "activity_section.key": "d6edf7d3-40cb-4a2b-9d10-533766ca8b74",
+        "lesson_activity.key": "74bb4250-069f-476a-9e12-6a00d0811f4b"
+      }
+    },
+    {
+      "key": "d2d0f269-a35c-4548-a860-ef34babd6ac2",
+      "position": 1,
+      "properties": {
+        "progression_name": "Section Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "d2d0f269-a35c-4548-a860-ef34babd6ac2",
+        "lesson_activity.key": "74e0a670-ad33-4d4e-9b3d-c5edabbd1237"
+      }
+    },
+    {
+      "key": "0fc88411-e809-4aa4-84d1-90de0a846f65",
+      "position": 2,
+      "properties": {
+        "progression_name": "Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "0fc88411-e809-4aa4-84d1-90de0a846f65",
+        "lesson_activity.key": "74e0a670-ad33-4d4e-9b3d-c5edabbd1237"
+      }
+    },
+    {
+      "key": "addbb6cb-496b-4591-8b1d-a12023997047",
+      "position": 3,
+      "properties": {
+        "progression_name": "Loops with Lyrics"
+      },
+      "seeding_key": {
+        "activity_section.key": "addbb6cb-496b-4591-8b1d-a12023997047",
+        "lesson_activity.key": "74e0a670-ad33-4d4e-9b3d-c5edabbd1237"
+      }
+    },
+    {
+      "key": "6bfd8acc-2c25-4ff1-b959-d85e4352e500",
+      "position": 4,
+      "properties": {
+        "progression_name": "Nested Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "6bfd8acc-2c25-4ff1-b959-d85e4352e500",
+        "lesson_activity.key": "74e0a670-ad33-4d4e-9b3d-c5edabbd1237"
+      }
+    },
+    {
+      "key": "6f9e4c7f-fb20-4463-b80b-358f5eeb75f8",
+      "position": 5,
+      "properties": {
+        "progression_name": "Live Coding with Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "6f9e4c7f-fb20-4463-b80b-358f5eeb75f8",
+        "lesson_activity.key": "74e0a670-ad33-4d4e-9b3d-c5edabbd1237"
+      }
+    },
+    {
+      "key": "4ce1d022-7f35-4a88-b9c9-72d5a856b6b0",
+      "position": 6,
+      "properties": {
+        "progression_name": "Mini Project: Cat GIF Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "4ce1d022-7f35-4a88-b9c9-72d5a856b6b0",
+        "lesson_activity.key": "74e0a670-ad33-4d4e-9b3d-c5edabbd1237"
+      }
+    },
+    {
+      "key": "4fe0c840-9320-4e89-8444-b797b195e5f9",
+      "position": 7,
+      "properties": {
+        "progression_name": "Closing"
+      },
+      "seeding_key": {
+        "activity_section.key": "4fe0c840-9320-4e89-8444-b797b195e5f9",
+        "lesson_activity.key": "74e0a670-ad33-4d4e-9b3d-c5edabbd1237"
+      }
+    },
+    {
+      "key": "dad05aac-7b45-47e8-b492-1f79b0b1f80c",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "dad05aac-7b45-47e8-b492-1f79b0b1f80c",
+        "lesson_activity.key": "cc8f9167-f8c6-43ff-bf90-12b6d8bd10fc"
+      }
+    },
+    {
+      "key": "706ff373-071e-4098-89f8-60b8ce080a82",
+      "position": 2,
+      "properties": {
+        "progression_name": "Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "706ff373-071e-4098-89f8-60b8ce080a82",
+        "lesson_activity.key": "cc8f9167-f8c6-43ff-bf90-12b6d8bd10fc"
+      }
+    },
+    {
+      "key": "e37a25fa-a508-4cb8-b838-f35da4aee04d",
+      "position": 3,
+      "properties": {
+        "progression_name": "Functions & Abstraction"
+      },
+      "seeding_key": {
+        "activity_section.key": "e37a25fa-a508-4cb8-b838-f35da4aee04d",
+        "lesson_activity.key": "cc8f9167-f8c6-43ff-bf90-12b6d8bd10fc"
+      }
+    },
+    {
+      "key": "8fdf0a98-5e53-4993-9f24-0e00eae57618",
+      "position": 4,
+      "properties": {
+        "progression_name": "Functions & Remixes"
+      },
+      "seeding_key": {
+        "activity_section.key": "8fdf0a98-5e53-4993-9f24-0e00eae57618",
+        "lesson_activity.key": "cc8f9167-f8c6-43ff-bf90-12b6d8bd10fc"
+      }
+    },
+    {
+      "key": "def8c3d1-5894-49f6-bef0-4f856fb6e4b8",
+      "position": 5,
+      "properties": {
+        "progression_name": "Project: Genre Mash-Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "def8c3d1-5894-49f6-bef0-4f856fb6e4b8",
+        "lesson_activity.key": "cc8f9167-f8c6-43ff-bf90-12b6d8bd10fc"
+      }
+    },
+    {
+      "key": "7b0fd114-c4b0-447f-afb7-a1e41bd1df83",
+      "position": 6,
+      "properties": {
+        "progression_name": "Wrap-Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "7b0fd114-c4b0-447f-afb7-a1e41bd1df83",
+        "lesson_activity.key": "cc8f9167-f8c6-43ff-bf90-12b6d8bd10fc"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Professional Learning Module Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-Welcome_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "94125b33-e8a6-427c-8621-9b9443eae601"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L1-Welcome_3a-2026"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Professional Learning Module Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-PlatformSupport_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "94125b33-e8a6-427c-8621-9b9443eae601"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L1-PlatformSupport_3a-2026"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Professional Learning Module Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-UnitOverview_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "94125b33-e8a6-427c-8621-9b9443eae601"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L1-UnitOverview_3a-2026"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Professional Learning Module Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-ModuleRoadmap_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "94125b33-e8a6-427c-8621-9b9443eae601"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L1-ModuleRoadmap_3a-2026"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Professional Learning Module Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-Certificate_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "94125b33-e8a6-427c-8621-9b9443eae601"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L1-Certificate_3a-2026"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Section Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-lesson1intro_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "a5d3e9bb-908f-4031-a425-105a6ee370c5"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L1-lesson1intro_3a-2026"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Curriculum Structure"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-coursestructure_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "a8ea090a-7b34-42b1-a05f-a07227f67991"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L1-coursestructure_3a-2026"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Curriculum Structure"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-EPS_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "a8ea090a-7b34-42b1-a05f-a07227f67991"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L1-EPS_3a-2026"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Curriculum Structure"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-lessonresources_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "a8ea090a-7b34-42b1-a05f-a07227f67991"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L1-lessonresources_3a-2026"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Computational Thinking"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-CT_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "9227048a-dcaf-40f6-8706-e3a8de2e7861"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L1-CT_3a-2026"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Computational Thinking"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-CT1_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "9227048a-dcaf-40f6-8706-e3a8de2e7861"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L1-CT1_3a-2026"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Computational Thinking"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-CT-CFU_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "9227048a-dcaf-40f6-8706-e3a8de2e7861"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L1-CT-CFU_3a-2026"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Computational Thinking"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-CT-CFU-Explanation_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "9227048a-dcaf-40f6-8706-e3a8de2e7861"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L1-CT-CFU-Explanation_3a-2026"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-assessment_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "a165fdfb-5e48-47ff-b542-e29b0153d505"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L1-assessment_3a-2026"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-assessment2_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "a165fdfb-5e48-47ff-b542-e29b0153d505"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L1-assessment2_3a-2026"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 16,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Career Spotlights"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-careerconnections_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "98262bcc-28d7-4579-847c-59a7a08af553"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L1-careerconnections_3a-2026"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 17,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Career Spotlights"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-careerspotlights2_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "98262bcc-28d7-4579-847c-59a7a08af553"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L1-careerspotlights2_3a-2026"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 18,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Music Lab Coding Environment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-aboutmusiclab_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "d0722b9a-a3b4-44d2-8aa7-4d5967284e45"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L1-aboutmusiclab_3a-2026"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 19,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Music Lab Coding Environment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-musiclabexample_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "d0722b9a-a3b4-44d2-8aa7-4d5967284e45"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L1-musiclabexample_3a-2026"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 20,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Music Lab Coding Environment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-musiclabexplainer_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "d0722b9a-a3b4-44d2-8aa7-4d5967284e45"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L1-musiclabexplainer_3a-2026"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 21,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Closing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-closing_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "8420933f-8491-40eb-b120-3c320cb5cc0a"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L1-closing_3a-2026"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Section Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-lesson2intro_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "c89ec1b8-98fe-4a75-9810-1a65aa7c6eaa"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L2-lesson2intro_3a-2026"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson 1: Introduction to Music Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-lesson1_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "139a5d96-4ccb-43a9-8b53-eb21f72d8129"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L2-lesson1_3a-2026"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Sequencing & Play Together"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-introtosequencing_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "defbd679-b67d-48ee-8df5-76c561a724f6"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L2-introtosequencing_3a-2026"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Sequencing & Play Together"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-playtogether1_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "defbd679-b67d-48ee-8df5-76c561a724f6"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L2-playtogether1_3a-2026"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Sequencing & Play Together"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-playtogether2_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "defbd679-b67d-48ee-8df5-76c561a724f6"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L2-playtogether2_3a-2026"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Sequencing & Play Together"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-playtogether3_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "defbd679-b67d-48ee-8df5-76c561a724f6"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L2-playtogether3_3a-2026"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 7,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Sequencing & Play Together"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-algorithms_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "defbd679-b67d-48ee-8df5-76c561a724f6"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L2-algorithms_3a-2026"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 8,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Sequencing & Play Together"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-playtogether4_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "defbd679-b67d-48ee-8df5-76c561a724f6"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L2-playtogether4_3a-2026"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 9,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Sequencing & Play Together"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-playtogether5_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "defbd679-b67d-48ee-8df5-76c561a724f6"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L2-playtogether5_3a-2026"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Play Sequential"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-playsequential1_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "f76ce190-640c-4f87-add9-c12ea30d1220"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L2-playsequential1_3a-2026"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Play Sequential"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-playsequential2_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "f76ce190-640c-4f87-add9-c12ea30d1220"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L2-playsequential2_3a-2026"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 12,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Play Sequential"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-playsequential3_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "f76ce190-640c-4f87-add9-c12ea30d1220"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L2-playsequential3_3a-2026"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 13,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Play Sequential"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-playsequential4_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "f76ce190-640c-4f87-add9-c12ea30d1220"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L2-playsequential4_3a-2026"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Rests "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-rests1_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "33f19dc0-f912-4423-90ac-c5adecb70635"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L2-rests1_3a-2026"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 15,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Rests "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-rests2_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "33f19dc0-f912-4423-90ac-c5adecb70635"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L2-rests2_3a-2026"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 16,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Rests "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-rests3_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "33f19dc0-f912-4423-90ac-c5adecb70635"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L2-rests3_3a-2026"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 17,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Effects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-effects1_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "14b6d64a-a653-4f0a-b916-9f83ab4fc665"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L2-effects1_3a-2026"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 18,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Effects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-effects2_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "14b6d64a-a653-4f0a-b916-9f83ab4fc665"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L2-effects2_3a-2026"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 19,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Effects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-effects3_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "14b6d64a-a653-4f0a-b916-9f83ab4fc665"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L2-effects3_3a-2026"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 20,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Mini-Project: Walk-Up Songs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-miniproject_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "4c425cd4-a0c1-491a-8831-d2adc16dc7df"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L2-miniproject_3a-2026"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 21,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Mini-Project: Walk-Up Songs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-mini-project-walk-1-pl_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "4c425cd4-a0c1-491a-8831-d2adc16dc7df"
+      },
+      "level_keys": [
+        "music-lab-mini-project-walk-1-pl_3a-2026"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 22,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Closing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-closing_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "d6edf7d3-40cb-4a2b-9d10-533766ca8b74"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L2-closing_3a-2026"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Section Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-lesson3intro_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "d2d0f269-a35c-4548-a860-ef34babd6ac2"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L3-lesson3intro_3a-2026"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-introtoloops_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "0fc88411-e809-4aa4-84d1-90de0a846f65"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L3-introtoloops_3a-2026"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-loops1_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "0fc88411-e809-4aa4-84d1-90de0a846f65"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L3-loops1_3a-2026"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-loops2_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "0fc88411-e809-4aa4-84d1-90de0a846f65"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L3-loops2_3a-2026"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-loops3_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "0fc88411-e809-4aa4-84d1-90de0a846f65"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L3-loops3_3a-2026"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-loops4_v2_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "0fc88411-e809-4aa4-84d1-90de0a846f65"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L3-loops4_v2_3a-2026"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 7,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-patterns_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "0fc88411-e809-4aa4-84d1-90de0a846f65"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L3-patterns_3a-2026"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Loops with Lyrics"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-loopswlyrics1_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "addbb6cb-496b-4591-8b1d-a12023997047"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L3-loopswlyrics1_3a-2026"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Loops with Lyrics"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-loopswlyrics2-updated_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "addbb6cb-496b-4591-8b1d-a12023997047"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L3-loopswlyrics2-updated_3a-2026"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Nested Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-nestedloops1_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "6bfd8acc-2c25-4ff1-b959-d85e4352e500"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L3-nestedloops1_3a-2026"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Nested Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-nestedloops2_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "6bfd8acc-2c25-4ff1-b959-d85e4352e500"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L3-nestedloops2_3a-2026"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 12,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Nested Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-nestedloops3_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "6bfd8acc-2c25-4ff1-b959-d85e4352e500"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L3-nestedloops3_3a-2026"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 13,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Nested Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-nestedloops4_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "6bfd8acc-2c25-4ff1-b959-d85e4352e500"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L3-nestedloops4_3a-2026"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Live Coding with Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-livecodingintro_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "6f9e4c7f-fb20-4463-b80b-358f5eeb75f8"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L3-livecodingintro_3a-2026"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 15,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Live Coding with Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-livecoding1_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "6f9e4c7f-fb20-4463-b80b-358f5eeb75f8"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L3-livecoding1_3a-2026"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 16,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Live Coding with Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-livecoding2_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "6f9e4c7f-fb20-4463-b80b-358f5eeb75f8"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L3-livecoding2_3a-2026"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 17,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Live Coding with Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-livecoding3_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "6f9e4c7f-fb20-4463-b80b-358f5eeb75f8"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L3-livecoding3_3a-2026"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 18,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Mini Project: Cat GIF Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-miniproject_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "4ce1d022-7f35-4a88-b9c9-72d5a856b6b0"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L3-miniproject_3a-2026"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 19,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Mini Project: Cat GIF Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-mini-project-gif-1-pl_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "4ce1d022-7f35-4a88-b9c9-72d5a856b6b0"
+      },
+      "level_keys": [
+        "music-lab-mini-project-gif-1-pl_3a-2026"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 20,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Closing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-closing_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "4fe0c840-9320-4e89-8444-b797b195e5f9"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L3-closing_3a-2026"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-lesson4intro_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "dad05aac-7b45-47e8-b492-1f79b0b1f80c"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L4-lesson4intro_3a-2026"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-introtofunctions_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "706ff373-071e-4098-89f8-60b8ce080a82"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L4-introtofunctions_3a-2026"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-functions0_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "706ff373-071e-4098-89f8-60b8ce080a82"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L4-functions0_3a-2026"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-functions1_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "706ff373-071e-4098-89f8-60b8ce080a82"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L4-functions1_3a-2026"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-functions2_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "706ff373-071e-4098-89f8-60b8ce080a82"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L4-functions2_3a-2026"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-functions3_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "706ff373-071e-4098-89f8-60b8ce080a82"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L4-functions3_3a-2026"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 7,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-functions4_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "706ff373-071e-4098-89f8-60b8ce080a82"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L4-functions4_3a-2026"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions & Abstraction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-abstraction1_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "e37a25fa-a508-4cb8-b838-f35da4aee04d"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L4-abstraction1_3a-2026"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions & Abstraction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-abstraction2_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "e37a25fa-a508-4cb8-b838-f35da4aee04d"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L4-abstraction2_3a-2026"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 10,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions & Abstraction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-abstraction3_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "e37a25fa-a508-4cb8-b838-f35da4aee04d"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L4-abstraction3_3a-2026"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 11,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions & Abstraction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-abstraction4_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "e37a25fa-a508-4cb8-b838-f35da4aee04d"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L4-abstraction4_3a-2026"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 12,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions & Abstraction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-abstraction_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "e37a25fa-a508-4cb8-b838-f35da4aee04d"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L4-abstraction_3a-2026"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions & Remixes"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-abstraction5_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "8fdf0a98-5e53-4993-9f24-0e00eae57618"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L4-abstraction5_3a-2026"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 14,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions & Remixes"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-remixes1_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "8fdf0a98-5e53-4993-9f24-0e00eae57618"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L4-remixes1_3a-2026"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 15,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions & Remixes"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-remixes2v2_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "8fdf0a98-5e53-4993-9f24-0e00eae57618"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L4-remixes2v2_3a-2026"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 16,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions & Remixes"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-remixes3v2_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "8fdf0a98-5e53-4993-9f24-0e00eae57618"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L4-remixes3v2_3a-2026"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 17,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Project: Genre Mash-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-endofunitproject_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "def8c3d1-5894-49f6-bef0-4f856fb6e4b8"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L4-endofunitproject_3a-2026"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 18,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Project: Genre Mash-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-genre-project-pl_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "def8c3d1-5894-49f6-bef0-4f856fb6e4b8"
+      },
+      "level_keys": [
+        "music-lab-genre-project-pl_3a-2026"
+      ]
+    },
+    {
+      "chapter": 82,
+      "position": 19,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-wrapup_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "7b0fd114-c4b0-447f-afb7-a1e41bd1df83"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L4-wrapup_3a-2026"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L1-Welcome_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-Welcome_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "94125b33-e8a6-427c-8621-9b9443eae601"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L1-PlatformSupport_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-PlatformSupport_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "94125b33-e8a6-427c-8621-9b9443eae601"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L1-UnitOverview_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-UnitOverview_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "94125b33-e8a6-427c-8621-9b9443eae601"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L1-ModuleRoadmap_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-ModuleRoadmap_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "94125b33-e8a6-427c-8621-9b9443eae601"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L1-Certificate_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-Certificate_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "94125b33-e8a6-427c-8621-9b9443eae601"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L1-lesson1intro_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-lesson1intro_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "a5d3e9bb-908f-4031-a425-105a6ee370c5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L1-coursestructure_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-coursestructure_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "a8ea090a-7b34-42b1-a05f-a07227f67991"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L1-EPS_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-EPS_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "a8ea090a-7b34-42b1-a05f-a07227f67991"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L1-lessonresources_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-lessonresources_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "a8ea090a-7b34-42b1-a05f-a07227f67991"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L1-CT_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-CT_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "9227048a-dcaf-40f6-8706-e3a8de2e7861"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L1-CT1_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-CT1_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "9227048a-dcaf-40f6-8706-e3a8de2e7861"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L1-CT-CFU_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-CT-CFU_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "9227048a-dcaf-40f6-8706-e3a8de2e7861"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L1-CT-CFU-Explanation_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-CT-CFU-Explanation_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "9227048a-dcaf-40f6-8706-e3a8de2e7861"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L1-assessment_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-assessment_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "a165fdfb-5e48-47ff-b542-e29b0153d505"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L1-assessment2_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-assessment2_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "a165fdfb-5e48-47ff-b542-e29b0153d505"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L1-careerconnections_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-careerconnections_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "98262bcc-28d7-4579-847c-59a7a08af553"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L1-careerspotlights2_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-careerspotlights2_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "98262bcc-28d7-4579-847c-59a7a08af553"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L1-aboutmusiclab_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-aboutmusiclab_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "d0722b9a-a3b4-44d2-8aa7-4d5967284e45"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L1-musiclabexample_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-musiclabexample_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "d0722b9a-a3b4-44d2-8aa7-4d5967284e45"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L1-musiclabexplainer_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-musiclabexplainer_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "d0722b9a-a3b4-44d2-8aa7-4d5967284e45"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L1-closing_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-closing_3a-2026"
+        ],
+        "lesson.key": "Introduction to Programming with Music Lab",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "8420933f-8491-40eb-b120-3c320cb5cc0a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L2-lesson2intro_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-lesson2intro_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "c89ec1b8-98fe-4a75-9810-1a65aa7c6eaa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L2-lesson1_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-lesson1_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "139a5d96-4ccb-43a9-8b53-eb21f72d8129"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L2-introtosequencing_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-introtosequencing_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "defbd679-b67d-48ee-8df5-76c561a724f6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L2-playtogether1_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-playtogether1_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "defbd679-b67d-48ee-8df5-76c561a724f6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L2-playtogether2_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-playtogether2_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "defbd679-b67d-48ee-8df5-76c561a724f6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L2-playtogether3_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-playtogether3_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "defbd679-b67d-48ee-8df5-76c561a724f6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L2-algorithms_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-algorithms_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "defbd679-b67d-48ee-8df5-76c561a724f6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L2-playtogether4_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-playtogether4_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "defbd679-b67d-48ee-8df5-76c561a724f6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L2-playtogether5_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-playtogether5_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "defbd679-b67d-48ee-8df5-76c561a724f6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L2-playsequential1_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-playsequential1_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "f76ce190-640c-4f87-add9-c12ea30d1220"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L2-playsequential2_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-playsequential2_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "f76ce190-640c-4f87-add9-c12ea30d1220"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L2-playsequential3_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-playsequential3_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "f76ce190-640c-4f87-add9-c12ea30d1220"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L2-playsequential4_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-playsequential4_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "f76ce190-640c-4f87-add9-c12ea30d1220"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L2-rests1_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-rests1_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "33f19dc0-f912-4423-90ac-c5adecb70635"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L2-rests2_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-rests2_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "33f19dc0-f912-4423-90ac-c5adecb70635"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L2-rests3_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-rests3_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "33f19dc0-f912-4423-90ac-c5adecb70635"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L2-effects1_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-effects1_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "14b6d64a-a653-4f0a-b916-9f83ab4fc665"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L2-effects2_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-effects2_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "14b6d64a-a653-4f0a-b916-9f83ab4fc665"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L2-effects3_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-effects3_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "14b6d64a-a653-4f0a-b916-9f83ab4fc665"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L2-miniproject_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-miniproject_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "4c425cd4-a0c1-491a-8831-d2adc16dc7df"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-mini-project-walk-1-pl_3a-2026",
+        "script_level.level_keys": [
+          "music-lab-mini-project-walk-1-pl_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "4c425cd4-a0c1-491a-8831-d2adc16dc7df"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L2-closing_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-closing_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 1 - 5: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "d6edf7d3-40cb-4a2b-9d10-533766ca8b74"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L3-lesson3intro_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-lesson3intro_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "d2d0f269-a35c-4548-a860-ef34babd6ac2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L3-introtoloops_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-introtoloops_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "0fc88411-e809-4aa4-84d1-90de0a846f65"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L3-loops1_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-loops1_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "0fc88411-e809-4aa4-84d1-90de0a846f65"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L3-loops2_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-loops2_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "0fc88411-e809-4aa4-84d1-90de0a846f65"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L3-loops3_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-loops3_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "0fc88411-e809-4aa4-84d1-90de0a846f65"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L3-loops4_v2_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-loops4_v2_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "0fc88411-e809-4aa4-84d1-90de0a846f65"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L3-patterns_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-patterns_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "0fc88411-e809-4aa4-84d1-90de0a846f65"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L3-loopswlyrics1_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-loopswlyrics1_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "addbb6cb-496b-4591-8b1d-a12023997047"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L3-loopswlyrics2-updated_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-loopswlyrics2-updated_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "addbb6cb-496b-4591-8b1d-a12023997047"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L3-nestedloops1_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-nestedloops1_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "6bfd8acc-2c25-4ff1-b959-d85e4352e500"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L3-nestedloops2_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-nestedloops2_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "6bfd8acc-2c25-4ff1-b959-d85e4352e500"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L3-nestedloops3_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-nestedloops3_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "6bfd8acc-2c25-4ff1-b959-d85e4352e500"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L3-nestedloops4_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-nestedloops4_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "6bfd8acc-2c25-4ff1-b959-d85e4352e500"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L3-livecodingintro_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-livecodingintro_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "6f9e4c7f-fb20-4463-b80b-358f5eeb75f8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L3-livecoding1_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-livecoding1_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "6f9e4c7f-fb20-4463-b80b-358f5eeb75f8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L3-livecoding2_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-livecoding2_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "6f9e4c7f-fb20-4463-b80b-358f5eeb75f8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L3-livecoding3_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-livecoding3_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "6f9e4c7f-fb20-4463-b80b-358f5eeb75f8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L3-miniproject_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-miniproject_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "4ce1d022-7f35-4a88-b9c9-72d5a856b6b0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-mini-project-gif-1-pl_3a-2026",
+        "script_level.level_keys": [
+          "music-lab-mini-project-gif-1-pl_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "4ce1d022-7f35-4a88-b9c9-72d5a856b6b0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L3-closing_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L3-closing_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 6 - 9: Loops",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "4fe0c840-9320-4e89-8444-b797b195e5f9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L4-lesson4intro_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-lesson4intro_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "dad05aac-7b45-47e8-b492-1f79b0b1f80c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L4-introtofunctions_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-introtofunctions_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "706ff373-071e-4098-89f8-60b8ce080a82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L4-functions0_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-functions0_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "706ff373-071e-4098-89f8-60b8ce080a82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L4-functions1_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-functions1_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "706ff373-071e-4098-89f8-60b8ce080a82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L4-functions2_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-functions2_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "706ff373-071e-4098-89f8-60b8ce080a82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L4-functions3_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-functions3_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "706ff373-071e-4098-89f8-60b8ce080a82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L4-functions4_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-functions4_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "706ff373-071e-4098-89f8-60b8ce080a82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L4-abstraction1_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-abstraction1_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "e37a25fa-a508-4cb8-b838-f35da4aee04d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L4-abstraction2_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-abstraction2_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "e37a25fa-a508-4cb8-b838-f35da4aee04d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L4-abstraction3_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-abstraction3_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "e37a25fa-a508-4cb8-b838-f35da4aee04d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L4-abstraction4_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-abstraction4_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "e37a25fa-a508-4cb8-b838-f35da4aee04d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L4-abstraction_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-abstraction_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "e37a25fa-a508-4cb8-b838-f35da4aee04d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L4-abstraction5_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-abstraction5_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "8fdf0a98-5e53-4993-9f24-0e00eae57618"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L4-remixes1_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-remixes1_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "8fdf0a98-5e53-4993-9f24-0e00eae57618"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L4-remixes2v2_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-remixes2v2_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "8fdf0a98-5e53-4993-9f24-0e00eae57618"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L4-remixes3v2_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-remixes3v2_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "8fdf0a98-5e53-4993-9f24-0e00eae57618"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L4-endofunitproject_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-endofunitproject_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "def8c3d1-5894-49f6-bef0-4f856fb6e4b8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-genre-project-pl_3a-2026",
+        "script_level.level_keys": [
+          "music-lab-genre-project-pl_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "def8c3d1-5894-49f6-bef0-4f856fb6e4b8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L4-wrapup_3a-2026",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L4-wrapup_3a-2026"
+        ],
+        "lesson.key": "Teaching Lessons 10 - 13: Functions",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-programming-with-music-lab-unit1-2026",
+        "activity_section.key": "7b0fd114-c4b0-447f-afb7-a1e41bd1df83"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

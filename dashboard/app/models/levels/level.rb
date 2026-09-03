@@ -392,6 +392,7 @@ class Level < ApplicationRecord
     'Poetry', # no ideal solution
     'PublicKeyCryptography', # widget
     'Pythonlab', # no ideal solution
+    'Quiz', # no ideal solution
     'ScriptCompletion', # unknown
     'Sketchlab', # no ideal solution
     'StandaloneVideo', # no user submitted content

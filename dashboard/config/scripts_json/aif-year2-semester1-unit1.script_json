@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-17 19:22:50 UTC",
+    "serialized_at": "2026-08-27 18:40:13 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -4998,7 +4998,7 @@
       "chapter": 3,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "progression": "Check Your Understanding"
       },
@@ -5438,7 +5438,7 @@
       "chapter": 23,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "progression": "Writing Functions"
       },
@@ -5592,7 +5592,7 @@
       "chapter": 30,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "progression": "Hill Climbing in Code"
       },
@@ -5702,7 +5702,7 @@
       "chapter": 35,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "progression": "Check Your Understanding"
       },
@@ -5834,7 +5834,7 @@
       "chapter": 41,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "progression": "Check Your Understanding"
       },
@@ -5922,7 +5922,7 @@
       "chapter": 45,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "progression": "Debug a Smart Home"
       },
@@ -6032,7 +6032,7 @@
       "chapter": 50,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "progression": "Improving Autocomplete"
       },
@@ -6142,7 +6142,7 @@
       "chapter": 55,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "progression": "Decision Trees in Code"
       },
@@ -6208,7 +6208,7 @@
       "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "progression": "Check Your Understanding"
       },
@@ -6296,7 +6296,7 @@
       "chapter": 62,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "progression": "Build Conversational AI"
       },
@@ -7343,6 +7343,20 @@
       }
     },
     {
+      "name": "Conditionals",
+      "url": "https://www.youtube.com/watch?v=ZS6Sld95z0U",
+      "key": "conditionals",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "conditionals"
+      }
+    },
+    {
       "name": "Conversational AI Project",
       "url": "https://docs.google.com/presentation/d/1tQzxVcsdIa-AmlkShz698DgSoDn9IGbrwBU5H8g_hIU/edit?usp=sharing",
       "key": "conversational_ai_project",
@@ -7424,6 +7438,20 @@
       },
       "seeding_key": {
         "resource.key": "finding_bugs"
+      }
+    },
+    {
+      "name": "For Loops",
+      "url": "https://www.youtube.com/watch?v=oP-1alsDPDI",
+      "key": "for_loops",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "for_loops"
       }
     },
     {
@@ -7638,6 +7666,20 @@
       }
     },
     {
+      "name": "While Loops",
+      "url": "https://www.youtube.com/watch?v=Y82nBfdbemM",
+      "key": "while_loops",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "while_loops"
+      }
+    },
+    {
       "name": "Writing Functions",
       "url": "https://www.youtube.com/watch?v=mY0cNQcK7K4",
       "key": "writing_functions",
@@ -7812,6 +7854,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
+        "resource.key": "conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
         "resource.key": "optimization"
       }
     },
@@ -7830,6 +7878,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
+        "resource.key": "for_loops"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
         "resource.key": "going_viral"
       }
     },
@@ -7843,6 +7897,12 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "simulation_part_2_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "while_loops"
       }
     },
     {
@@ -8681,12 +8741,962 @@
 
   ],
   "rubrics": [
-
+    {
+      "level_name": "aif-y2-logic-based-ai-lesson1-level3-v2-2026",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "level_name": "aif-y2-logic-based-ai-lesson10-level3-2026",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "level_name": "aif-y2-logic-based-ai-lesson11-level3-2026",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "level_name": "aif-y2-logic-based-ai-lesson12-level1-2026",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "level_name": "aif-y2-logic-based-ai-lesson13-level3-2026",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "level_name": "aif-y2-logic-based-ai-lesson4-level3-2026",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "level_name": "aif-y2-logic-based-ai-lesson5-level6-2026",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "level_name": "aif-y2-logic-based-ai-lesson6-level5-2026",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "level_name": "aif-y2-logic-based-ai-lesson7-level3-2026",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "level_name": "aif-y2-logic-based-ai-lesson8-level5-2026",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "level_name": "aif-y2-logic-based-ai-lesson9-level3-2026",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    }
   ],
   "learning_goals": [
-
+    {
+      "key": "0d6671ad-ebb5-4d6b-9564-456724f3dffd",
+      "position": 1,
+      "learning_goal": "Translating Ideas to Code",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "0d6671ad-ebb5-4d6b-9564-456724f3dffd",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "2607c3f1-6e18-469d-9178-53bc4256577b",
+      "position": 1,
+      "learning_goal": "Thinking Algorithmically",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "2607c3f1-6e18-469d-9178-53bc4256577b",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "35ca984a-f9dc-4af6-873a-86cd0913ed50",
+      "position": 1,
+      "learning_goal": "Translating Ideas to Code",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "35ca984a-f9dc-4af6-873a-86cd0913ed50",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "4684af0d-4c52-49c7-8da0-bb9e0e831b81",
+      "position": 1,
+      "learning_goal": "Thinking Algorithmically",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "4684af0d-4c52-49c7-8da0-bb9e0e831b81",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "4a25d0cd-4d13-48e0-8c06-9c4bf75bbc50",
+      "position": 2,
+      "learning_goal": "Translating Ideas to Code",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "4a25d0cd-4d13-48e0-8c06-9c4bf75bbc50",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "5bbc6e69-4c6d-47a5-b01d-ebaba906bd0a",
+      "position": 1,
+      "learning_goal": "Thinking Algorithmically",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "5bbc6e69-4c6d-47a5-b01d-ebaba906bd0a",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "69e5abf5-a75f-4ecb-bb4c-ebd366692dc6",
+      "position": 1,
+      "learning_goal": "Modeling Intelligence",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "69e5abf5-a75f-4ecb-bb4c-ebd366692dc6",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "727747fd-34b0-4145-a46a-27da26163da4",
+      "position": 1,
+      "learning_goal": "Thinking Algorithmically",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "727747fd-34b0-4145-a46a-27da26163da4",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "73f51f7b-65ce-4591-9e4b-232e0cc02e56",
+      "position": 1,
+      "learning_goal": "Modeling Intelligence",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "73f51f7b-65ce-4591-9e4b-232e0cc02e56",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "7d50f590-5f47-4897-9980-cd96429c1ce1",
+      "position": 2,
+      "learning_goal": "Translating Ideas to Code",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "7d50f590-5f47-4897-9980-cd96429c1ce1",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "890cfde2-210e-43b3-a4e5-d4b6f8aca257",
+      "position": 1,
+      "learning_goal": "Thinking Algorithmically",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "890cfde2-210e-43b3-a4e5-d4b6f8aca257",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "921a2db1-c382-47a1-94e4-49629f2bbf75",
+      "position": 1,
+      "learning_goal": "Thinking Algorithmically",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "921a2db1-c382-47a1-94e4-49629f2bbf75",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "95e17eb4-4bb5-465e-b9f3-eae1ceeb184a",
+      "position": 2,
+      "learning_goal": "Translating Ideas to Code",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "95e17eb4-4bb5-465e-b9f3-eae1ceeb184a",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "e1adcc9e-6f2c-4fe4-a2a7-730080022277",
+      "position": 1,
+      "learning_goal": "Translating Ideas to Code",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "e1adcc9e-6f2c-4fe4-a2a7-730080022277",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    }
   ],
   "learning_goal_evidence_levels": [
-
+    {
+      "understanding": 0,
+      "teacher_description": "Student did not attempt to write Python code: the starter code is left as they found it.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "0d6671ad-ebb5-4d6b-9564-456724f3dffd",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student attempted to write Python code, but did not use entirely correct syntax: for example, they forget parentheses in their calls to functions, or they omit quotation marks from strings.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "0d6671ad-ebb5-4d6b-9564-456724f3dffd",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student wrote Python code that logically reflects their ideas and is syntactically correct.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "0d6671ad-ebb5-4d6b-9564-456724f3dffd",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student wrote Python code that is syntactically correct and also elegantly designed: they choose meaningful and clear variable names and their logic is concise.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "0d6671ad-ebb5-4d6b-9564-456724f3dffd",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Student has not attempted to debug the problem.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "2607c3f1-6e18-469d-9178-53bc4256577b",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student incorrectly debugs the problem, or correctly debugs the problem with significant help: they may not identify the relevant piece of logic, or may require help reading the algorithm on their own.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "2607c3f1-6e18-469d-9178-53bc4256577b",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student correctly debugs the problem with minimal help, though they may need hints or guidance to focus on where to focus their attention.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "2607c3f1-6e18-469d-9178-53bc4256577b",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student correctly and independently debugs the problem, updating the logic without any unnecessary complexity in such a way that the program behaves as intended.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "2607c3f1-6e18-469d-9178-53bc4256577b",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Student writes Python code that doesn’t run: it contains errors they can’t resolve.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "35ca984a-f9dc-4af6-873a-86cd0913ed50",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student writes Python code that runs but shows shaky command of the syntax involved: nested if / else blocks are malformed, indentation isn’t even, return is confused with print, or some branches are missing.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "35ca984a-f9dc-4af6-873a-86cd0913ed50",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student writes Python code that runs and is mostly well-formed: nested conditionals return one of the four strings on every path. Their code may not use Pythonic idioms that would make it clearer to read.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "35ca984a-f9dc-4af6-873a-86cd0913ed50",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student writes Python code that runs, is well-formed, and shows mastery of Pythonic idioms.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "35ca984a-f9dc-4af6-873a-86cd0913ed50",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Student does not design a working decision tree: their tree may have missing pathways, lead to incorrect decisions, or otherwise fail to handle expected inputs.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "4684af0d-4c52-49c7-8da0-bb9e0e831b81",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student designs a working decision tree, but one that is overly simple: their tree may only make one question, or not truly fit the purposes for which it was designed.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "4684af0d-4c52-49c7-8da0-bb9e0e831b81",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student designs a simple, working decision tree. Their tree asks multiple questions and responds to user input to bring them to an appropriate decision.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "4684af0d-4c52-49c7-8da0-bb9e0e831b81",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student designs a complex, working decision tree. Their tree asks at least 4 question, and responds to user input to bring them to an appropriate decision.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "4684af0d-4c52-49c7-8da0-bb9e0e831b81",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Student has not attempted to write Python code: the starter code is left as they found it.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "4a25d0cd-4d13-48e0-8c06-9c4bf75bbc50",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student has attempted to write Python code, but can’t recall the syntax they need to use (e.g., how to use an f-string or how to define a variable), even though it has been presented in examples.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "4a25d0cd-4d13-48e0-8c06-9c4bf75bbc50",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student has written working Python code (e.g., they’ve defined variables and can use them in calls to functions), even if they required hints and guidance along the way.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "4a25d0cd-4d13-48e0-8c06-9c4bf75bbc50",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student writes working Python code independently, without any hints or guidance.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "4a25d0cd-4d13-48e0-8c06-9c4bf75bbc50",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Student does not attempt to solve the problem: the code is either missing or does not make progress towards the goal of storing and printing information.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "5bbc6e69-4c6d-47a5-b01d-ebaba906bd0a",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student creates an algorithm but does not use a step-by-step procedure: the program does not make use of variables to store information before printing.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "5bbc6e69-4c6d-47a5-b01d-ebaba906bd0a",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student creates an algorithm that defines two variables and uses them to print correct information.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "5bbc6e69-4c6d-47a5-b01d-ebaba906bd0a",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student goes beyond the level’s requirements and defines more than two variables of different types that are all used together to print relevant information to the user.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "5bbc6e69-4c6d-47a5-b01d-ebaba906bd0a",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Student does not accurately describe the limits of modeling artificial intelligence with logic-based systems. They may confuse logic-based AI with machine learning, or describe examples in which logic-based AI is actually likely to excel.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "69e5abf5-a75f-4ecb-bb4c-ebd366692dc6",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student describes the limits of modeling artificial intelligence with logic-based systems, but imprecisely. They provide only broad examples of problems that are likely to pose challenges for logic-based AI systems and offer generic reasoning.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "69e5abf5-a75f-4ecb-bb4c-ebd366692dc6",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student describes the limits of modeling artificial intelligence with logic-based systems. They provide examples of problems that are likely to pose challenges for logic-based AI systems.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "69e5abf5-a75f-4ecb-bb4c-ebd366692dc6",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student reasons about the inherent limits of modeling artificial intelligence with logic-based systems. They provide clear and detailed examples of problems that rely on tacit knowledge, problems that cause combinatorial explosion, or problems that are likely to have unexpected inputs. They may identify logic-based AI as a paradigm of its own, in contrast to other paradigms, such as machine learning.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "69e5abf5-a75f-4ecb-bb4c-ebd366692dc6",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Student does not answer the question.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "727747fd-34b0-4145-a46a-27da26163da4",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student describes a situation where a `while` loop may be useful, but their answer is vague.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "727747fd-34b0-4145-a46a-27da26163da4",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student describes a specific situation where a `while` loop may be useful.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "727747fd-34b0-4145-a46a-27da26163da4",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student describes a specific situation where a `while` loop may be useful. They may also note an instance where a `while` loop is less useful.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "727747fd-34b0-4145-a46a-27da26163da4",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Student gives no stance or restates the question. Any position offered is unsupported, or the reasoning shows no engagement with the question of how a machine relates to intelligence.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "73f51f7b-65ce-4591-9e4b-232e0cc02e56",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student states a stance with at least one reason, but the reason is vague or untethered to anything from the activity or debate. Reflection on the debate is missing or generic.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "73f51f7b-65ce-4591-9e4b-232e0cc02e56",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student states a stance supported by reasoning grounded in at least one example from class—the whole-class Turing test activity, or an argument from the AI debate—showing they're weighing what a machine that passes the test can or can't do. Reflection identifies whether their position changed or survived, and why.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "73f51f7b-65ce-4591-9e4b-232e0cc02e56",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student thoroughly supports their stance: the stance is supported by multiple examples or arguments from the activity and debate, the reasoning consistently connects those examples to what passing the test does or doesn't show about the machine, and the reflection names the specific debate argument that changed, sharpened, or tested their position.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "73f51f7b-65ce-4591-9e4b-232e0cc02e56",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Student has not attempted to update the `is_match` function.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "7d50f590-5f47-4897-9980-cd96429c1ce1",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student’s code is incorrect, or correct only with significant help. They may struggle to recall the string methods with dot notation, or need step-by-step help from AI or a teacher.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "7d50f590-5f47-4897-9980-cd96429c1ce1",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student’s code works with minimal help: they call methods on strings correctly. They may need a hint to fix a small error, such as the order in which they call these methods.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "7d50f590-5f47-4897-9980-cd96429c1ce1",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student’s code is correct and written on their own: they chain the string methods cleanly and find and fix any errors themselves.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "7d50f590-5f47-4897-9980-cd96429c1ce1",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Student does not answer the question.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "890cfde2-210e-43b3-a4e5-d4b6f8aca257",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student describes a situation where a `for` loop may be useful, but their answer is vague.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "890cfde2-210e-43b3-a4e5-d4b6f8aca257",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student describes a specific situation where a `for` loop may be useful.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "890cfde2-210e-43b3-a4e5-d4b6f8aca257",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student describes a specific situation where a `for` loop may be useful. They may also note an instance where a `for` loop is less useful.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "890cfde2-210e-43b3-a4e5-d4b6f8aca257",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Student has not attempted to make the matching rule ignore capitalization.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "921a2db1-c382-47a1-94e4-49629f2bbf75",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student’s rule is incorrect, or correct only with significant help. They may convert the case inconsistently, such that they still don’t match case-insensitively.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "921a2db1-c382-47a1-94e4-49629f2bbf75",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student’s rule works with minimal help. They convert both the fragment and the prediction to the same case before matching, though they may need a hint to identify what specific logic is necessary.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "921a2db1-c382-47a1-94e4-49629f2bbf75",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student’s rule is correct and precise on their own. They convert both the fragment and the prediction to the same case and check that the rule holds across different capitalization patterns.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "921a2db1-c382-47a1-94e4-49629f2bbf75",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Student writes Python code that doesn’t run: it contains errors they can’t resolve. Or, student requires significant help to write Python code that does run.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "95e17eb4-4bb5-465e-b9f3-eae1ceeb184a",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student writes Python code that runs but shows shaky command of the syntax involved: nested if / else blocks are malformed, indentation isn’t even, or some branches are missing.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "95e17eb4-4bb5-465e-b9f3-eae1ceeb184a",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student writes Python code that runs and is mostly well-formed: there may be opportunities to make their decision tree more readable.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "95e17eb4-4bb5-465e-b9f3-eae1ceeb184a",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student writes Python code that runs, is well-formed, and shows mastery of Pythonic idioms.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "95e17eb4-4bb5-465e-b9f3-eae1ceeb184a",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Student leaves code unchanged, or their code doesn’t run or returns values other than “LEFT,” “RIGHT,” or “STAY.” Student cannot extend the starter code, even with help.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "e1adcc9e-6f2c-4fe4-a2a7-730080022277",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student attempts a second conditional, but their work has flaws that would require prompting to fix (e.g., a wrong comparison, a missing return statement, or an indentation error).",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "e1adcc9e-6f2c-4fe4-a2a7-730080022277",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student adapts the example to create a correct conditional.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "e1adcc9e-6f2c-4fe4-a2a7-730080022277",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student independently creates a correct conditional to complete the program.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "e1adcc9e-6f2c-4fe4-a2a7-730080022277",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    }
   ]
 }

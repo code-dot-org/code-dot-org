@@ -21,6 +21,7 @@ import {getStore} from '@cdo/apps/redux';
 import {createUuid} from '@cdo/apps/utils';
 
 import {AWAITING_INPUT, SENDING_INPUT} from './pythonHelpers/constants';
+import type {ExternalFileContents} from './pythonHelpers/externalFileContents';
 import {
   parseMessageToNeighborhoodSignal,
   parseErrorMessage,
@@ -284,7 +285,8 @@ const asyncRun = (() => {
     script: string,
     source: MultiFileSource,
     validationFile?: ProjectFile,
-    shouldOutputToNeighborhood?: boolean
+    shouldOutputToNeighborhood?: boolean,
+    externalFiles?: ExternalFileContents
   ) => {
     id = createUuid();
 
@@ -310,6 +312,7 @@ const asyncRun = (() => {
         id,
         source,
         validationFile,
+        externalFiles,
       };
       pyodideWorker.postMessage(messageData);
     });

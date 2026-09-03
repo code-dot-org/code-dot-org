@@ -11,6 +11,14 @@ import {ConsoleSignal, NeighborhoodSignal} from './types';
 
 const Direction = tiles.Direction;
 
+// The cursor reads the grid from window.Maze. Set only this property: on a
+// maze page window.Maze is the app object maze/api.js needs.
+function publishController(controller: unknown): void {
+  const global = window as unknown as {Maze?: {controller?: unknown}};
+  global.Maze = global.Maze ?? {};
+  global.Maze.controller = controller;
+}
+
 const PAUSE_BETWEEN_SIGNALS = 200;
 const ANIMATED_STEP_SPEED = 500;
 const ANIMATED_STEPS: (ConsoleSignalType | NeighborhoodSignalType)[] = [
@@ -67,6 +75,8 @@ export default class Neighborhood extends MiniApp {
       }
     ) => void
   ) {
+    // A stale controller would let the cursor read the previous level's grid.
+    publishController(null);
     if (!level.serializedMaze) {
       return;
     }
@@ -88,6 +98,8 @@ export default class Neighborhood extends MiniApp {
     this.controller.subtype.createDrawer(svg);
     this.controller.subtype.initWallMap();
     this.controller.initWithSvg(svg);
+
+    publishController(this.controller);
 
     this.signals = [];
     this.nextSignalIndex = 0;

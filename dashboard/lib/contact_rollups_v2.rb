@@ -11,12 +11,46 @@ class ContactRollupsV2
     query_timeout: MAX_EXECUTION_TIME_SEC
   )
 
+  # The db_endpoint_* settings are bare hostnames; port, credentials, and
+  # database name live in their own settings and must be composed into a
+  # mysql2:// URI before Sequel can connect. Every environment defines these
+  # (test/development point them at localhost).
+  REPORTING_DB_URI = Cdo::Sequel.mysql2_uri(
+    host: CDO.db_endpoint_proxy_reporting,
+    port: CDO.db_endpoint_proxy_reporting_port,
+    username: CDO.db_credential_reader['username'],
+    password: CDO.db_credential_reader['password'],
+    database: CDO.dashboard_db_name
+  )
+
+  # Reporting database connection pool. Use this to execute the pipeline's
+  # large SELECT statements instead of loading the writer, which otherwise
+  # carries the entire nightly job.
+  DASHBOARD_REPORTING_DB = Cdo::Sequel.database_connection_pool(
+    REPORTING_DB_URI,
+    REPORTING_DB_URI,
+    query_timeout: MAX_EXECUTION_TIME_SEC
+  )
+
+  # DCDO flag that routes the pipeline's SELECT queries to the reporting
+  # endpoint. Defaults to false: reads stay on the writer, the long-standing
+  # behavior. Can be flipped in production without a deploy.
+  USE_REPORTING_DCDO_KEY = 'contact_rollups_use_reporting'.freeze
+
+  # Aurora replica lag stays below ~50ms even while this job runs its
+  # largest INSERTs (see PR #74613 for the CloudWatch evidence). Every table
+  # a reporting-pool SELECT reads is fully written before the read starts,
+  # so sleeping a comfortable multiple of the observed lag before reading
+  # guarantees replicas have seen those writes.
+  SAFE_AURORA_REPLICA_LAG_SEC = 5
+
   # Execute a SQL query in a transaction in the dashboard database.
   # Does not return query results.
   # The query uses a Sequel or ActiveRecord connection depends on the current Rails environment.
   #
   # This method is used to write to the database.
   # @see +retrieve_query_results+ method to fetch data from the database.
+  # @return [Integer] the number of rows the query affected
   def self.execute_query_in_transaction(query)
     # For long-running queries, we use Sequel connection instead of ActiveRecord connection.
     # ActiveRecord has a default 30s read_timeout that we cannot override. Sequel allows us
@@ -30,9 +64,11 @@ class ContactRollupsV2
     #
     # The workaround is to use different database connections in different environments.
     if Rails.env.test?
-      ActiveRecord::Base.transaction {ActiveRecord::Base.connection.exec_query(query)}
+      ActiveRecord::Base.transaction {ActiveRecord::Base.connection.exec_update(query)}
     else
-      DASHBOARD_DB_WRITER.transaction {DASHBOARD_DB_WRITER.run(query)}
+      # with_sql_update is the public API for running raw SQL and returning
+      # the affected-row count (execute_dui is adapter-internal).
+      DASHBOARD_DB_WRITER.transaction {DASHBOARD_DB_WRITER.dataset.with_sql_update(query)}
     end
   end
 
@@ -46,20 +82,38 @@ class ContactRollupsV2
     # why we have to use ActiveRecord connection in a test environment.
     if Rails.env.test?
       ActiveRecord::Base.connection.exec_query(query)
-    else
+    elsif use_reporting_db_for_selects?
+      # The tables this query reads were fully written before this point;
+      # give replicas a comfortable margin to catch up before reading.
+      sleep SAFE_AURORA_REPLICA_LAG_SEC
       # Sequel::Database#[] method returns a Sequel::Dataset, which fetch records only when needed.
+      DASHBOARD_REPORTING_DB[query]
+    else
       DASHBOARD_DB_WRITER[query]
     end
   end
 
+  def self.use_reporting_db_for_selects?
+    DCDO.get(USE_REPORTING_DCDO_KEY, false)
+  end
+
   # Set all database configurations the pipeline will need
   def self.set_db_variables
+    # In the test environment every pipeline query runs on the ActiveRecord
+    # connection (see retrieve_query_results), so there is no Sequel
+    # connection to configure — and CI cannot serve one (its Sequel URIs
+    # point at hosts the test container cannot reach).
+    return if Rails.env.test?
+
     # Set group_concat_max_len to 65535 (same as VARCHAR max length).
     # Its default value is 1024, too short for the amount of data we need to concat.
     # @see:
     #   ContactRollupsProcessed.get_data_aggregation_query
     #   https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len
     DASHBOARD_DB_WRITER.run('SET SESSION group_concat_max_len = 65535')
+    # The aggregation query that relies on group_concat_max_len runs on the
+    # reporting connection when the contact_rollups_use_reader flag is enabled.
+    DASHBOARD_REPORTING_DB.run('SET SESSION group_concat_max_len = 65535')
   end
 
   attr_accessor :limit
@@ -98,18 +152,27 @@ class ContactRollupsV2
       truncate_or_delete_table ContactRollupsProcessed
     end
 
-    # Extract dashboard data
-    @log_collector.time!('extract_email_preferences') {ContactRollupsRaw.extract_email_preferences(@limit)}
-    @log_collector.time!('extract_parent_emails') {ContactRollupsRaw.extract_parent_emails(@limit)}
-    @log_collector.time!('extract_scripts_taught') {ContactRollupsRaw.extract_scripts_taught(@limit)}
-    @log_collector.time!('extract_courses_taught') {ContactRollupsRaw.extract_courses_taught(@limit)}
-    @log_collector.time!('extract_roles_from_user_permissions') {ContactRollupsRaw.extract_roles_from_user_permissions(@limit)}
-    @log_collector.time!('extract_users_and_geos') {ContactRollupsRaw.extract_users_and_geos(@limit)}
-    @log_collector.time!('extract_pd_enrollments') {ContactRollupsRaw.extract_pd_enrollments(@limit)}
-    @log_collector.time!('extract_census_submissions') {ContactRollupsRaw.extract_census_submissions(@limit)}
-    @log_collector.time!('extract_school_geos') {ContactRollupsRaw.extract_school_geos(@limit)}
-    @log_collector.time!('extract_professional_learning_attendance') do
-      ContactRollupsRaw.extract_professional_learning_attendance(@limit)
+    # Extract dashboard data. Each extraction returns the number of rows it
+    # inserted into contact_rollups_raw; record one metric per source so the
+    # logs and CloudWatch show which sources dominate the nightly volume.
+    extraction_methods = %i(
+      extract_email_preferences
+      extract_parent_emails
+      extract_scripts_taught
+      extract_courses_taught
+      extract_roles_from_user_permissions
+      extract_users_and_geos
+      extract_pd_enrollments
+      extract_census_submissions
+      extract_school_geos
+      extract_professional_learning_attendance
+    )
+    extraction_methods.each do |extraction_method|
+      @log_collector.time!(extraction_method.to_s) do
+        rows_inserted = ContactRollupsRaw.public_send(extraction_method, @limit)
+        source = extraction_method.to_s.delete_prefix('extract_')
+        @log_collector.record_metrics({:"RowsExtracted_#{source}" => rows_inserted})
+      end
     end
   ensure
     @log_collector.record_metrics(
@@ -216,7 +279,7 @@ class ContactRollupsV2
       upload_metrics
       url = upload_to_s3
       report_to_slack log_url: url
-      @log_collector.exceptions.each {|e| Honeybadger.notify(e)}
+      @log_collector.exceptions.each {|e| Observability::Errors.report(e)}
     end
 
     print_logs

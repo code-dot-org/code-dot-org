@@ -1,0 +1,16 @@
+name 'aif-y2-machine-learning-fundamentals-preassessment-q1-2026'
+
+wrong 'To follow a fixed set of rules written by a programmer'
+wrong 'To store large amounts of data for later retrieval'
+right 'To make accurate predictions based on inputs'
+wrong 'To present raw data in more practical forms for a user to interpret'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+What is the purpose of a machine learning model?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 1: What is Machine Learning?
+MARKDOWN

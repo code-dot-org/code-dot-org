@@ -9,6 +9,9 @@ describe('Theater', () => {
   let theater: Theater;
   let playAudioSpy: jest.Mock;
   let pauseAudioSpy: jest.Mock;
+  let removeImageSrcSpy: jest.Mock;
+  let removeAudioSrcSpy: jest.Mock;
+  let loadAudioSpy: jest.Mock;
   let imageElement: Partial<HTMLImageElement>;
   let audioElement: Partial<HTMLAudioElement>;
   let onOutputMessage: jest.Mock;
@@ -17,6 +20,7 @@ describe('Theater', () => {
   let closePhotoPrompter: jest.Mock;
   let onJavabuilderMessage: jest.Mock;
   let onOutputVisibleChange: jest.Mock;
+  let onMediaLoadError: jest.Mock;
   let uploadFile: jest.Mock;
 
   beforeEach(() => {
@@ -26,11 +30,23 @@ describe('Theater', () => {
     closePhotoPrompter = jest.fn();
     onJavabuilderMessage = jest.fn();
     onOutputVisibleChange = jest.fn();
+    onMediaLoadError = jest.fn();
 
     playAudioSpy = jest.fn();
     pauseAudioSpy = jest.fn();
-    imageElement = {style: {} as CSSStyleDeclaration};
-    audioElement = {play: playAudioSpy, pause: pauseAudioSpy};
+    removeImageSrcSpy = jest.fn();
+    removeAudioSrcSpy = jest.fn();
+    loadAudioSpy = jest.fn();
+    imageElement = {
+      style: {} as CSSStyleDeclaration,
+      removeAttribute: removeImageSrcSpy,
+    };
+    audioElement = {
+      play: playAudioSpy,
+      pause: pauseAudioSpy,
+      removeAttribute: removeAudioSrcSpy,
+      load: loadAudioSpy,
+    };
     uploadFile = jest.fn();
 
     theater = new Theater(
@@ -39,11 +55,16 @@ describe('Theater', () => {
       openPhotoPrompter,
       closePhotoPrompter,
       onJavabuilderMessage,
-      onOutputVisibleChange
+      onOutputVisibleChange,
+      onMediaLoadError
     );
     theater.getImgElement = () => imageElement as HTMLImageElement;
     theater.getAudioElement = () => audioElement as HTMLAudioElement;
     theater.uploadFile = uploadFile;
+  });
+
+  afterEach(() => {
+    jest.useRealTimers();
   });
 
   it('sets audio detail when handleSignal with audio is called', () => {
@@ -53,6 +74,7 @@ describe('Theater', () => {
     theater.handleSignal(data);
     expect(audioElement.src).toContain(url);
     expect(typeof audioElement.oncanplaythrough).toBe('function');
+    expect(typeof audioElement.onerror).toBe('function');
     expect(theater.startPlayback).not.toHaveBeenCalled();
   });
 
@@ -64,6 +86,161 @@ describe('Theater', () => {
     expect(imageElement.src).toContain(url);
     expect(typeof imageElement.onload).toBe('function');
     expect(theater.startPlayback).not.toHaveBeenCalled();
+  });
+
+  it('cache-busts remote urls', () => {
+    theater.startPlayback = jest.fn();
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'https://example.com/theater.gif'},
+    });
+    expect(imageElement.src).toContain('https://example.com/theater.gif?=');
+  });
+
+  it('uses blob and data urls verbatim', () => {
+    theater.startPlayback = jest.fn();
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:https://studio.code.org/abc-123'},
+    });
+    expect(imageElement.src).toBe('blob:https://studio.code.org/abc-123');
+
+    theater.handleSignal({
+      value: TheaterSignalType.AUDIO_URL,
+      detail: {url: 'data:audio/wav;base64,AAAA'},
+    });
+    expect(audioElement.src).toBe('data:audio/wav;base64,AAAA');
+  });
+
+  it('revokes a blob url when it is replaced', () => {
+    const revokeSpy = jest.fn();
+    window.URL.revokeObjectURL = revokeSpy;
+    theater.startPlayback = jest.fn();
+
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:first'},
+    });
+    expect(revokeSpy).not.toHaveBeenCalled();
+
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:second'},
+    });
+    expect(revokeSpy).toHaveBeenCalledWith('blob:first');
+    expect(imageElement.src).toBe('blob:second');
+
+    theater.handleSignal({
+      value: TheaterSignalType.AUDIO_URL,
+      detail: {url: 'blob:audio-first'},
+    });
+    theater.handleSignal({
+      value: TheaterSignalType.AUDIO_URL,
+      detail: {url: 'blob:audio-second'},
+    });
+    expect(revokeSpy).toHaveBeenCalledWith('blob:audio-first');
+    expect(audioElement.src).toBe('blob:audio-second');
+  });
+
+  it('revokes blob urls on reset', () => {
+    const revokeSpy = jest.fn();
+    window.URL.revokeObjectURL = revokeSpy;
+    theater.startPlayback = jest.fn();
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:image'},
+    });
+    theater.handleSignal({
+      value: TheaterSignalType.AUDIO_URL,
+      detail: {url: 'blob:audio'},
+    });
+
+    theater.reset();
+
+    expect(revokeSpy).toHaveBeenCalledWith('blob:image');
+    expect(revokeSpy).toHaveBeenCalledWith('blob:audio');
+  });
+
+  it('drops a media src without loading an empty url', () => {
+    // Assigning '' would make the browser load the empty url, which Firefox
+    // reports as "Invalid URI. Load of media resource failed."
+    theater.startPlayback = jest.fn();
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:image'},
+    });
+    theater.handleSignal({
+      value: TheaterSignalType.AUDIO_URL,
+      detail: {url: 'blob:audio'},
+    });
+
+    theater.reset();
+
+    expect(removeImageSrcSpy).toHaveBeenCalledWith('src');
+    expect(removeAudioSrcSpy).toHaveBeenCalledWith('src');
+    expect(imageElement.src).not.toBe('');
+    expect(audioElement.src).not.toBe('');
+    // The audio element only lets go of the revoked object url once it reloads.
+    expect(loadAudioSpy).toHaveBeenCalled();
+  });
+
+  it('revokes blob urls after the elements are unmounted', () => {
+    const revokeSpy = jest.fn();
+    window.URL.revokeObjectURL = revokeSpy;
+    theater.startPlayback = jest.fn();
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:image'},
+    });
+    theater.handleSignal({
+      value: TheaterSignalType.AUDIO_URL,
+      detail: {url: 'blob:audio'},
+    });
+    theater.getImgElement = () => null;
+    theater.getAudioElement = () => null;
+
+    theater.onStop();
+
+    expect(revokeSpy).toHaveBeenCalledWith('blob:image');
+    expect(revokeSpy).toHaveBeenCalledWith('blob:audio');
+  });
+
+  it('does not revoke remote urls on reset', () => {
+    const revokeSpy = jest.fn();
+    window.URL.revokeObjectURL = revokeSpy;
+    theater.startPlayback = jest.fn();
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'https://example.com/theater.gif'},
+    });
+    theater.handleSignal({
+      value: TheaterSignalType.AUDIO_URL,
+      detail: {url: 'https://example.com/theater.wav'},
+    });
+
+    theater.reset();
+
+    expect(revokeSpy).not.toHaveBeenCalled();
+  });
+
+  it('reports output only after media arrives, until the next reset', () => {
+    theater.startPlayback = jest.fn();
+    expect(theater.hasOutput()).toBe(false);
+
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:image'},
+    });
+    expect(theater.hasOutput()).toBe(true);
+
+    theater.reset();
+    expect(theater.hasOutput()).toBe(false);
+  });
+
+  it('does not report output for a run that only signals NO_AUDIO', () => {
+    theater.handleSignal({value: TheaterSignalType.NO_AUDIO, detail: {}});
+
+    expect(theater.hasOutput()).toBe(false);
   });
 
   it('shows a/v once elements have loaded', () => {
@@ -87,11 +264,259 @@ describe('Theater', () => {
     expect(onOutputVisibleChange).toHaveBeenLastCalledWith(true);
   });
 
+  // Play a gif of the given length, with audio only when a length says so, and
+  // return once both elements have loaded.
+  const playMedia = (durationMs?: number, withAudio = false) => {
+    if (withAudio) {
+      theater.handleSignal({
+        value: TheaterSignalType.AUDIO_URL,
+        detail: {url: 'blob:audio'},
+      });
+    } else {
+      theater.handleSignal({value: TheaterSignalType.NO_AUDIO, detail: {}});
+    }
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:image', durationMs},
+    });
+    (imageElement as HTMLImageElement).onload?.(new Event('load'));
+    if (withAudio) {
+      (audioElement as HTMLAudioElement).oncanplaythrough?.(
+        new Event('canplaythrough')
+      );
+    }
+  };
+
+  // Whether waitUntilPlaybackDone has settled by now.
+  const isPlaybackDone = async () => {
+    let done = false;
+    theater.waitUntilPlaybackDone().then(() => {
+      done = true;
+    });
+    await Promise.resolve();
+    return done;
+  };
+
+  it('settles once the gif has run its length', async () => {
+    jest.useFakeTimers();
+    playMedia(2000);
+
+    jest.advanceTimersByTime(1999);
+    expect(await isPlaybackDone()).toBe(false);
+
+    jest.advanceTimersByTime(1);
+    expect(await isPlaybackDone()).toBe(true);
+  });
+
+  it('settles right away when the run played nothing', async () => {
+    expect(await isPlaybackDone()).toBe(true);
+  });
+
+  it('leaves the last frame on the stage when playback finishes', () => {
+    jest.useFakeTimers();
+    playMedia(1000);
+
+    jest.advanceTimersByTime(1000);
+
+    expect(imageElement.style?.visibility).toBe('visible');
+    expect(onOutputVisibleChange).toHaveBeenLastCalledWith(true);
+    expect(imageElement.src).toBe('blob:image');
+  });
+
+  it('waits for the audio to end as well as the gif', async () => {
+    jest.useFakeTimers();
+    playMedia(1000, /* withAudio */ true);
+
+    jest.advanceTimersByTime(1000);
+    expect(await isPlaybackDone()).toBe(false);
+
+    (audioElement as HTMLAudioElement).onended?.(new Event('ended'));
+    expect(await isPlaybackDone()).toBe(true);
+  });
+
+  it('waits for the gif as well as the audio', async () => {
+    jest.useFakeTimers();
+    playMedia(1000, /* withAudio */ true);
+
+    (audioElement as HTMLAudioElement).onended?.(new Event('ended'));
+    expect(await isPlaybackDone()).toBe(false);
+
+    jest.advanceTimersByTime(1000);
+    expect(await isPlaybackDone()).toBe(true);
+  });
+
+  it('waits for the second video of a run to load before timing it', async () => {
+    jest.useFakeTimers();
+    playMedia(3000);
+
+    // A scene with no pauses renders a gif of zero length, so its timer would
+    // settle at once if it started before the image loaded.
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:image2', durationMs: 0},
+    });
+    theater.handleSignal({value: TheaterSignalType.NO_AUDIO, detail: {}});
+    jest.advanceTimersByTime(3000);
+    expect(await isPlaybackDone()).toBe(false);
+
+    (imageElement as HTMLImageElement).onload?.(new Event('load'));
+    jest.advanceTimersByTime(0);
+    expect(await isPlaybackDone()).toBe(true);
+  });
+
+  it('waits for the last of two videos published by one run', async () => {
+    jest.useFakeTimers();
+    playMedia(1000);
+    playMedia(3000);
+
+    jest.advanceTimersByTime(1000);
+    expect(await isPlaybackDone()).toBe(false);
+
+    jest.advanceTimersByTime(2000);
+    expect(await isPlaybackDone()).toBe(true);
+  });
+
+  it('settles right away for a video of unknown length', async () => {
+    jest.useFakeTimers();
+    playMedia();
+
+    // Java Lab sends no length, and ends its runs on a Javabuilder message.
+    // Holding playback open on a length we never learn would park the caller
+    // until some later run reset the theater.
+    expect(await isPlaybackDone()).toBe(true);
+  });
+
+  it('still waits for the audio when the video length is unknown', async () => {
+    jest.useFakeTimers();
+    playMedia(undefined, /* withAudio */ true);
+
+    expect(await isPlaybackDone()).toBe(false);
+
+    (audioElement as HTMLAudioElement).onended?.(new Event('ended'));
+    expect(await isPlaybackDone()).toBe(true);
+  });
+
+  it('treats refused audio playback as audio that is already over', async () => {
+    jest.useFakeTimers();
+    playAudioSpy.mockReturnValue(Promise.reject(new Error('autoplay blocked')));
+    playMedia(1000, /* withAudio */ true);
+
+    await Promise.resolve();
+    jest.advanceTimersByTime(1000);
+
+    expect(await isPlaybackDone()).toBe(true);
+  });
+
+  it.each(['reset', 'onStop'] as const)(
+    'stops waiting on media dropped by %s',
+    async method => {
+      jest.useFakeTimers();
+      playMedia(1000);
+      let done = false;
+      theater.waitUntilPlaybackDone().then(() => {
+        done = true;
+      });
+
+      theater[method]();
+
+      await Promise.resolve();
+      expect(done).toBe(true);
+    }
+  );
+
   it.each(['reset', 'onStop'] as const)('hides output on %s', method => {
     theater[method]();
 
     expect(imageElement.style?.visibility).toBe('hidden');
     expect(onOutputVisibleChange).toHaveBeenLastCalledWith(false);
+  });
+
+  it('reports a failed image load and drops the media', () => {
+    const revokeSpy = jest.fn();
+    window.URL.revokeObjectURL = revokeSpy;
+    theater.handleSignal({value: TheaterSignalType.NO_AUDIO, detail: {}});
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:image'},
+    });
+
+    (imageElement as HTMLImageElement).onerror?.(new Event('error'));
+
+    expect(onMediaLoadError).toHaveBeenCalledTimes(1);
+    expect(theater.hasOutput()).toBe(false);
+    expect(imageElement.style?.visibility).toBe('hidden');
+    expect(onOutputVisibleChange).toHaveBeenLastCalledWith(false);
+    expect(revokeSpy).toHaveBeenCalledWith('blob:image');
+  });
+
+  it('reports a failed audio load and drops the media', () => {
+    const revokeSpy = jest.fn();
+    window.URL.revokeObjectURL = revokeSpy;
+    theater.handleSignal({
+      value: TheaterSignalType.AUDIO_URL,
+      detail: {url: 'blob:audio'},
+    });
+
+    (audioElement as HTMLAudioElement).onerror?.(new Event('error'));
+
+    expect(onMediaLoadError).toHaveBeenCalledTimes(1);
+    expect(theater.hasOutput()).toBe(false);
+    expect(onOutputVisibleChange).toHaveBeenLastCalledWith(false);
+    expect(revokeSpy).toHaveBeenCalledWith('blob:audio');
+  });
+
+  it('does not leave the stage hidden waiting on audio that never loads', () => {
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:image'},
+    });
+    (imageElement as HTMLImageElement).onload?.(new Event('load'));
+    theater.handleSignal({
+      value: TheaterSignalType.AUDIO_URL,
+      detail: {url: 'blob:audio'},
+    });
+
+    (audioElement as HTMLAudioElement).onerror?.(new Event('error'));
+
+    expect(playAudioSpy).not.toHaveBeenCalled();
+    expect(onOutputVisibleChange).toHaveBeenLastCalledWith(false);
+    expect(onMediaLoadError).toHaveBeenCalledTimes(1);
+  });
+
+  it('does not report an error for media dropped by a reset', () => {
+    theater.startPlayback = jest.fn();
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:image'},
+    });
+
+    theater.reset();
+
+    // Clearing the src can fire an error event for the discarded image.
+    expect(imageElement.onerror).toBeNull();
+    expect(imageElement.onload).toBeNull();
+    expect(audioElement.oncanplaythrough).toBeNull();
+    expect(audioElement.onerror).toBeNull();
+    expect(onMediaLoadError).not.toHaveBeenCalled();
+  });
+
+  it('starts playback on a later load after a failed one', () => {
+    theater.handleSignal({value: TheaterSignalType.NO_AUDIO, detail: {}});
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:bad'},
+    });
+    (imageElement as HTMLImageElement).onerror?.(new Event('error'));
+
+    theater.handleSignal({value: TheaterSignalType.NO_AUDIO, detail: {}});
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:good'},
+    });
+    (imageElement as HTMLImageElement).onload?.(new Event('load'));
+
+    expect(imageElement.style?.visibility).toBe('visible');
+    expect(onOutputVisibleChange).toHaveBeenLastCalledWith(true);
   });
 
   it('opens photo prompter after receiving a GET_IMAGE signal', () => {

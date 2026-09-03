@@ -63,6 +63,9 @@ export async function handleRunClick(
     if (isNeighborhoodLevel()) {
       setProjectThumbnail();
     }
+    if (isTheaterLevel()) {
+      resetTheaterIfNoOutput();
+    }
   }
 }
 
@@ -76,6 +79,9 @@ export async function runPythonCode(
     if (isNeighborhoodRun) {
       CodebridgeRegistry.getInstance().getNeighborhood()?.reset();
       CodebridgeRegistry.getInstance().getNeighborhood()?.onRun();
+    }
+    if (isTheaterLevel()) {
+      CodebridgeRegistry.getInstance().getTheater()?.reset();
     }
     // We only send all output to the neighborhood if this is a neighborhood level and
     // we are not running validation, as validation does not render to the neighborhood.
@@ -97,6 +103,9 @@ export async function runPythonCode(
 export function stopPythonCode() {
   if (isNeighborhoodLevel()) {
     CodebridgeRegistry.getInstance().getNeighborhood()?.onStop();
+  }
+  if (isTheaterLevel()) {
+    CodebridgeRegistry.getInstance().getTheater()?.onStop();
   }
   // This will terminate the worker and create a new one if there is a running program.
   restartPyodideIfProgramIsRunning();
@@ -152,11 +161,28 @@ export async function runAllTests(
   }
 }
 
+// A run that ended without producing any media -- most often because it threw --
+// would otherwise leave the previous run's stage standing. Safe to check at this
+// point because the sandbox delivers theater media before it reports the run
+// complete.
+function resetTheaterIfNoOutput() {
+  const theater = CodebridgeRegistry.getInstance().getTheater();
+  if (!theater?.hasOutput()) {
+    theater?.reset();
+  }
+}
+
+function getMiniApp() {
+  return getStore().getState().lab2Project.projectSources?.labConfig?.miniApp
+    ?.name;
+}
+
 function isNeighborhoodLevel() {
-  return (
-    getStore().getState().lab2Project.projectSources?.labConfig?.miniApp
-      ?.name === MiniApps.Neighborhood
-  );
+  return getMiniApp() === MiniApps.Neighborhood;
+}
+
+function isTheaterLevel() {
+  return getMiniApp() === MiniApps.Theater;
 }
 
 function handleRunEndedUnexpectedly(
@@ -173,6 +199,9 @@ function handleRunEndedUnexpectedly(
     CodebridgeRegistry.getInstance().getNeighborhood()?.onClose();
   } else {
     consoleManager?.writeConsoleMessage('');
+    if (isTheaterLevel()) {
+      CodebridgeRegistry.getInstance().getTheater()?.reset();
+    }
   }
 }
 
