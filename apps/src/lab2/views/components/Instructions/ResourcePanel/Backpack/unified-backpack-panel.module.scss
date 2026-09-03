@@ -67,6 +67,13 @@
   &::-webkit-details-marker {
     display: none;
   }
+
+  // Cancel the global `details summary:hover` background in
+  // apps/style/code-studio/legacy.scss. Hovering the label marks this row hovered
+  // too, and that rule would spread the highlight across the lines.
+  &:hover {
+    background: none;
+  }
 }
 
 // Rest, hover and active states of the design system's text button in secondary.
