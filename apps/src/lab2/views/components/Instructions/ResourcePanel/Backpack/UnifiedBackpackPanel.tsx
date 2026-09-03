@@ -112,11 +112,12 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
 
   useEffect(() => {
     // Reload when the user hits refresh in the panel header. The key starts at 0,
-    // which the initial load above already covers.
-    if (backpackRefreshKey > 0) {
+    // which the initial load above already covers. Only refresh if the user is signed in,
+    // otherwise the refresh would fail.
+    if (currentUserId && backpackRefreshKey > 0) {
       loadFiles(true);
     }
-  }, [backpackRefreshKey, loadFiles]);
+  }, [currentUserId, backpackRefreshKey, loadFiles]);
 
   useEffect(() => {
     const listenerId = backpackApi.addEventListener(event => {
