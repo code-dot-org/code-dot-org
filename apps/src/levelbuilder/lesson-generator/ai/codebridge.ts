@@ -3,7 +3,10 @@ import z from 'zod/v3';
 
 import {generateText} from '@cdo/apps/aiGateway';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
-import {LevelContext} from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
+import {
+  authoringRulesLines,
+  LevelContext,
+} from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
 import {
   getTextModel,
   logPrompt,
@@ -138,6 +141,7 @@ export async function generateCodebridgeExemplar(
     '  - Replace placeholder content with a real, working implementation.',
     '  - Keep it minimal — a model solution, not a portfolio piece. The',
     '    teacher uses this to check their own work or demo to students.',
+    ...authoringRulesLines(ctx),
     '',
     'Starter files:',
     starterListing,

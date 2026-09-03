@@ -2,7 +2,10 @@ import {Output} from 'ai';
 import z from 'zod/v3';
 
 import {generateText} from '@cdo/apps/aiGateway';
-import {LevelContext} from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
+import {
+  authoringRulesLines,
+  LevelContext,
+} from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
 import {
   getImageModel,
   getTextModel,
@@ -83,6 +86,7 @@ async function planPanels(ctx: LevelContext): Promise<PanelPlan[]> {
     'band or audience, in which case follow it. Each panel needs short',
     'overlay text (1-3 sentences, markdown allowed) and an image prompt for',
     'a single 16:9 illustration with no embedded text.',
+    ...authoringRulesLines(ctx),
     ...(ctx.unitOutline
       ? [
           '',

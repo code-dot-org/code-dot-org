@@ -223,6 +223,8 @@ export interface ExistingLessonData {
   // Unit-scope context so lesson prompts can anchor against the unit.
   unitName?: string;
   unitOutline?: string;
+  unitDraftingRules?: string;
+  unitAuthoringRules?: string;
 }
 
 // The shape returned by Lesson#summarize_for_lesson_edit, narrowed to the

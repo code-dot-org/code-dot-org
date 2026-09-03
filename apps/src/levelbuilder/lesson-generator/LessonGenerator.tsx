@@ -197,6 +197,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
       const lessonCtx = {
         unitName: lesson.unitName,
         unitOutline: lesson.unitOutline,
+        draftingRules: lesson.unitDraftingRules,
         lessonName: lesson.name,
         lessonOutline: outline.trim(),
         targetProject,
@@ -258,6 +259,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     lesson.name,
     lesson.unitName,
     lesson.unitOutline,
+    lesson.unitDraftingRules,
     setLevelSpecs,
     loadTargetProject,
   ]);
@@ -541,6 +543,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         const {startSources, files} = await generateWeblab2Template({
           unitName: lesson.unitName,
           unitOutline: lesson.unitOutline,
+          authoringRules: lesson.unitAuthoringRules,
           lessonName: lesson.name,
           lessonOutline: outline.trim() || undefined,
           targetProject,
@@ -624,6 +627,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         const levelCtx = {
           unitName: lesson.unitName,
           unitOutline: lesson.unitOutline,
+          authoringRules: lesson.unitAuthoringRules,
           lessonName: lesson.name,
           lessonOutline: outline.trim() || undefined,
           targetProject,
@@ -693,6 +697,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           bubbleChoicePlan = await generateBubbleChoiceLevel({
             unitName: lesson.unitName,
             unitOutline: lesson.unitOutline,
+            authoringRules: lesson.unitAuthoringRules,
             lessonName: lesson.name,
             lessonOutline: outline.trim() || undefined,
             targetProject,

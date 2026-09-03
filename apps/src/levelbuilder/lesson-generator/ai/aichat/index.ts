@@ -4,7 +4,10 @@ import z from 'zod/v3';
 import {Visibility} from '@cdo/apps/aichatLab/types/customizations';
 import {LevelAichatSettings} from '@cdo/apps/aichatLab/types/levelProperties';
 import {generateText} from '@cdo/apps/aiGateway';
-import {LevelContext} from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
+import {
+  authoringRulesLines,
+  LevelContext,
+} from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
 import {
   getTextModel,
   logPrompt,
@@ -139,6 +142,7 @@ export async function generateAichatLevel(
           '    generic; the point is that they have something to overwrite.',
         ]
       : []),
+    ...authoringRulesLines(ctx),
     ...(ctx.unitOutline
       ? [
           '',

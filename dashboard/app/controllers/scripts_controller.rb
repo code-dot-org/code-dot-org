@@ -239,10 +239,12 @@ class ScriptsController < ApplicationController
           end
         end
       end
-    # nil means "leave the persisted unit outline alone"; sending the param
-    # at all (even '') updates it.
+    # nil means "leave the persisted value alone"; sending the param at all
+    # (even '') updates it.
     unit_outline = params.key?(:generateOutline) ? params[:generateOutline].to_s : nil
-    @script.update_lesson_outlines(lessons, unit_outline)
+    drafting_rules = params.key?(:generateDraftingRules) ? params[:generateDraftingRules].to_s : nil
+    authoring_rules = params.key?(:generateAuthoringRules) ? params[:generateAuthoringRules].to_s : nil
+    @script.update_lesson_outlines(lessons, unit_outline, drafting_rules: drafting_rules, authoring_rules: authoring_rules)
     render json: @script.summarize_for_unit_generate
   rescue StandardError => exception
     render status: :unprocessable_entity, json: {message: exception.message}

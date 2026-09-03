@@ -3,7 +3,10 @@ import z from 'zod/v3';
 
 import {generateText} from '@cdo/apps/aiGateway';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
-import {LevelContext} from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
+import {
+  authoringRulesLines,
+  LevelContext,
+} from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
 import {
   getTextModel,
   logPrompt,
@@ -86,6 +89,7 @@ export async function generatePythonlabLevel(
     '',
     'Runtime constraints:',
     ...PYTHON_RUNTIME_CONSTRAINTS.map(line => `  - ${line}`),
+    ...authoringRulesLines(ctx),
     ...(ctx.unitOutline
       ? [
           '',
