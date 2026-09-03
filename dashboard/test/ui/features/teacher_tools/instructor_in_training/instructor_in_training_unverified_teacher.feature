@@ -32,7 +32,7 @@ Feature: Self Paced PL Instructor in Training - Unverified Instructor
   @no_mobile
   Scenario: View Instructor In Training External Level as Unverified Teacher
     Given I create a teacher named "Ms_Frizzle"
-    Then I am on "http://studio.code.org/courses/ui-test-instructor-in-training/units/1/lessons/1/levels/6"
+    Then I am on "http://studio.code.org/courses/ui-test-instructor-in-training/units/1/lessons/1/levels/5"
 
     And element ".submitButton" is visible
     And element ".teacher.hide-as-student" is not visible
@@ -41,7 +41,7 @@ Feature: Self Paced PL Instructor in Training - Unverified Instructor
   @no_mobile
   Scenario: View Instructor In Training Bubble Choice Level as Unverified Teacher
     Given I create a teacher named "Ms_Frizzle"
-    Then I am on "http://studio.code.org/courses/ui-test-instructor-in-training/units/1/lessons/1/levels/7"
+    Then I am on "http://studio.code.org/courses/ui-test-instructor-in-training/units/1/lessons/1/levels/6"
 
     And element ".bubble-choice" is visible
     And element ".teacher.hide-as-student" is not visible

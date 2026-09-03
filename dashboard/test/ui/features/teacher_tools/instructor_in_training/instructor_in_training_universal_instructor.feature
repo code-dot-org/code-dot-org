@@ -50,7 +50,7 @@ Feature: Self Paced PL Instructor in Training - Universal Instructor
     Given I create a teacher named "Universal Instructor"
     And I sign in as "Universal Instructor" and go home
     And I get universal instructor access
-    Then I am on "http://studio.code.org/courses/ui-test-instructor-in-training/units/1/lessons/1/levels/6"
+    Then I am on "http://studio.code.org/courses/ui-test-instructor-in-training/units/1/lessons/1/levels/5"
 
     And I wait to see ".external"
     And element ".teacher.hide-as-student" is visible
@@ -63,7 +63,7 @@ Feature: Self Paced PL Instructor in Training - Universal Instructor
     Given I create a teacher named "Universal Instructor"
     And I sign in as "Universal Instructor" and go home
     And I get universal instructor access
-    Then I am on "http://studio.code.org/courses/ui-test-instructor-in-training/units/1/lessons/1/levels/7"
+    Then I am on "http://studio.code.org/courses/ui-test-instructor-in-training/units/1/lessons/1/levels/6"
 
     And I wait to see ".bubble-choice"
     And element ".teacher.hide-as-student" is visible
@@ -82,5 +82,5 @@ Feature: Self Paced PL Instructor in Training - Universal Instructor
     And element ".teacher.hide-as-student" is visible
     And element ".teacher.hide-as-student" contains text "Answer"
     And element ".teacher.hide-as-student" contains text "For Teachers Only"
-    And element ".teacher.hide-as-student" contains text "This assessment is designed to be used in conjunction with the unit project to assess student learning of the objectives in this unit."
+    And element ".teacher.hide-as-student" contains text "Teacher only markdown for level group yay!"
     And element "#instructor_in_training_tag" is not visible

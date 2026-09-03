@@ -46,7 +46,7 @@ Feature: Self Paced PL Instructor in Training - Verified Instructor
   Scenario: View Instructor In Training External Level as Verified Teacher
     Given I create an authorized teacher-associated student named "Manuel"
     And I sign in as "Teacher_Manuel"
-    Then I am on "http://studio.code.org/courses/ui-test-instructor-in-training/units/1/lessons/1/levels/6"
+    Then I am on "http://studio.code.org/courses/ui-test-instructor-in-training/units/1/lessons/1/levels/5"
 
     And I wait to see ".external"
     And element ".teacher.hide-as-student" is visible
@@ -58,7 +58,7 @@ Feature: Self Paced PL Instructor in Training - Verified Instructor
   Scenario: View Instructor In Training Bubble Choice Level as Verified Teacher
     Given I create an authorized teacher-associated student named "Manuel"
     And I sign in as "Teacher_Manuel"
-    Then I am on "http://studio.code.org/courses/ui-test-instructor-in-training/units/1/lessons/1/levels/7"
+    Then I am on "http://studio.code.org/courses/ui-test-instructor-in-training/units/1/lessons/1/levels/6"
 
     And I wait to see ".bubble-choice"
     And element ".teacher.hide-as-student" is visible
@@ -76,5 +76,5 @@ Feature: Self Paced PL Instructor in Training - Verified Instructor
     And element ".teacher.hide-as-student" is visible
     And element ".teacher.hide-as-student" contains text "Answer"
     And element ".teacher.hide-as-student" contains text "For Teachers Only"
-    And element ".teacher.hide-as-student" contains text "This assessment is designed to be used in conjunction with the unit project to assess student learning of the objectives in this unit."
+    And element ".teacher.hide-as-student" contains text "Teacher only markdown for level group yay!"
     And element "#instructor_in_training_tag" contains text "Viewing As Instructor"

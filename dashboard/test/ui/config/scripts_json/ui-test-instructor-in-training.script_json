@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-03 16:24:52 UTC",
+    "serialized_at": "2026-09-03 22:59:33 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -225,31 +225,6 @@
       "properties": {
         "instructor_in_training": true,
         "level_keys": [
-          "UI Test self-paced-example-level-multi"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "UI Test self-paced-example-level-multi"
-        ],
-        "lesson.key": "Instructor In Training Levels",
-        "lesson_group.key": "",
-        "script.name": "ui-test-instructor-in-training",
-        "activity_section.key": "dd009660-4dac-4151-ac3e-79284a07dce2"
-      },
-      "level_keys": [
-        "UI Test self-paced-example-level-multi"
-      ]
-    },
-    {
-      "chapter": 6,
-      "position": 6,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-        "instructor_in_training": true,
-        "level_keys": [
           "UI Test self-paced-example-level-external"
         ]
       },
@@ -268,9 +243,9 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 7,
-      "activity_section_position": 7,
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "instructor_in_training": true,
@@ -293,7 +268,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -360,18 +335,6 @@
         "level.key": "UI Test self-paced-example-level-match",
         "script_level.level_keys": [
           "UI Test self-paced-example-level-match"
-        ],
-        "lesson.key": "Instructor In Training Levels",
-        "lesson_group.key": "",
-        "script.name": "ui-test-instructor-in-training",
-        "activity_section.key": "dd009660-4dac-4151-ac3e-79284a07dce2"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "UI Test self-paced-example-level-multi",
-        "script_level.level_keys": [
-          "UI Test self-paced-example-level-multi"
         ],
         "lesson.key": "Instructor In Training Levels",
         "lesson_group.key": "",
