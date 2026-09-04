@@ -9,9 +9,34 @@ import {useAichatContext} from '../curriculum-generator/hooks/useAichatContext';
 import {useBeforeUnloadWhile} from '../curriculum-generator/hooks/useBeforeUnloadWhile';
 import {useReorderableList} from '../curriculum-generator/hooks/useReorderableList';
 
+import {AICHAT_PRESETS, AichatPresetId, generateAichatLevel} from './ai/aichat';
+import {generateAilabLevel} from './ai/ailab';
+import {
+  generateMatchLevel,
+  generateMultiLevel,
+  type MatchGeneration,
+  type MultiGeneration,
+} from './ai/assessments';
+import {
+  BubbleChoiceGeneration,
+  generateBubbleChoiceLevel,
+  generateBubbleChoiceThumbnail,
+  renderBubbleChoiceDsl,
+} from './ai/bubbleChoice';
+import {generateFreeResponseLevel} from './ai/freeResponse';
 import {generateLessonOutline} from './ai/outline';
 import {generatePanelsForLevel} from './ai/panels';
-import {generateWeblab2Level} from './ai/weblab2';
+import {
+  generatePythonlabExemplar,
+  generatePythonlabLevel,
+} from './ai/pythonlab';
+import {generateSketchlabLevel} from './ai/sketchlab';
+import {
+  generateWeblab2Exemplar,
+  generateWeblab2Level,
+  generateWeblab2Template,
+  generateWeblab2TemplateBackedLevel,
+} from './ai/weblab2';
 import LevelCard from './components/LevelCard';
 import ProgressDialog from './components/ProgressDialog';
 import SummaryDialog from './components/SummaryDialog';
@@ -28,6 +53,7 @@ import {
   createOrFindLevel,
   loadProjectSources,
   saveLessonActivities,
+  updateExemplarSources,
   updateLevelProperty,
   updatePanelsLevel,
   updateStartSources,
@@ -44,14 +70,22 @@ import {
 import moduleStyles from './lesson-generator.module.scss';
 import sharedStyles from '../curriculum-generator/curriculum-generator.module.scss';
 
-// Display labels for the per-card Lab dropdown. `satisfies` keeps the
-// label literals narrow (handy if a caller ever wants them) while
-// still requiring every LabType to have an entry — adding a lab to
-// SUPPORTED_LAB_TYPES is a compile error here until the label lands.
+// Per-card Lab dropdown labels. `satisfies` makes a missing LabType
+// entry a compile error.
 const LAB_LABELS = {
   panels: 'Panels',
   weblab2: 'Web Lab 2',
+  pythonlab: 'Python Lab',
+  ailab: 'AI Lab',
+  aichat: 'AI Chat',
+  sketchlab: 'Sketch Lab',
+  multi: 'Multiple Choice',
+  match: 'Matching',
+  freeResponse: 'Free Response',
+  bubbleChoice: 'Bubble Choice',
 } as const satisfies Record<LabType, string>;
+
+const DEFAULT_AICHAT_PRESET: AichatPresetId = 'explore';
 
 const LAB_OPTIONS: {value: LabType; label: string}[] = SUPPORTED_LAB_TYPES.map(
   v => ({value: v, label: LAB_LABELS[v]})
@@ -174,6 +208,34 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         labType: level.labType,
         description: level.description,
         generate: true,
+        // Honour the outline AI's preset pick; for non-aichat labs the
+        // field is ignored. Default to 'explore' when the AI omits it
+        // on an aichat level so the dropdown lands on something valid.
+        ...(level.labType === 'aichat'
+          ? {aichatPreset: level.aichatPreset ?? DEFAULT_AICHAT_PRESET}
+          : {}),
+        ...(level.labType === 'weblab2' && level.templateGroup
+          ? {templateGroup: level.templateGroup}
+          : {}),
+        // Nested sublevels are only honoured on bubbleChoice specs; the
+        // outline AI is prompted to emit them only there. Each sublevel
+        // gets a fresh client key so React can track it independently.
+        ...(level.labType === 'bubbleChoice' && level.sublevels
+          ? {
+              sublevels: level.sublevels.map(sub => ({
+                key: createUuid(),
+                id: sub.id,
+                labType: sub.labType,
+                description: sub.description,
+                generate: true,
+                ...(sub.labType === 'aichat'
+                  ? {
+                      aichatPreset: sub.aichatPreset ?? DEFAULT_AICHAT_PRESET,
+                    }
+                  : {}),
+              })),
+            }
+          : {}),
       }));
       // Drop any blank brand-new rows (the default "Add level" placeholder
       // when nothing has been typed yet) before appending the AI plan, so
@@ -210,6 +272,26 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
       if (spec.unsupportedType) continue;
       if (!spec.id.trim()) return 'Every level needs an ID.';
       if (!spec.description.trim()) return 'Every level needs a description.';
+      if (spec.labType === 'bubbleChoice') {
+        const subs = spec.sublevels ?? [];
+        if (subs.length < 2) {
+          return `Bubble Choice "${spec.id}" needs at least 2 sublevels.`;
+        }
+        const subIds = new Set<string>();
+        for (const sub of subs) {
+          if (!sub.id.trim()) {
+            return `Bubble Choice "${spec.id}" has a sublevel with no ID.`;
+          }
+          if (!sub.description.trim()) {
+            return `Bubble Choice "${spec.id}" sublevel "${sub.id}" needs a description.`;
+          }
+          const subId = sub.id.trim();
+          if (subIds.has(subId)) {
+            return `Bubble Choice "${spec.id}" has a duplicate sublevel ID "${subId}".`;
+          }
+          subIds.add(subId);
+        }
+      }
     }
     const ids = new Set<string>();
     for (const spec of levelSpecs) {
@@ -275,6 +357,215 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     // extra context — same as if the field were blank.
     const targetProject = await loadTargetProject(appendLog);
 
+    // Runs in the parent's pre-plan phase: the BubbleChoice DSL create
+    // needs each sublevel to exist by name before it fires.
+    const generateSublevelContent = async (
+      sub: LevelSpec,
+      subCtx: {
+        unitName?: string;
+        unitOutline?: string;
+        lessonName: string;
+        lessonOutline?: string;
+        targetProject?: string;
+        levelName: string;
+        levelDescription: string;
+        precedingLevels?: string;
+      },
+      subLevelId: number,
+      log: (line: string) => void
+    ) => {
+      const subName = subCtx.levelName;
+      if (sub.labType === 'panels') {
+        const panels = await generatePanelsForLevel(subCtx, {
+          onPlanned: count =>
+            log(`Planned ${count} panel(s) for sublevel "${subName}".`),
+          onPanelStart: (idx, count) =>
+            log(
+              `Generating image for panel ${
+                idx + 1
+              } of ${count} in "${subName}"…`
+            ),
+        });
+        log(`Saving panel data for sublevel "${subName}"…`);
+        await updatePanelsLevel(subLevelId, panels);
+      } else if (sub.labType === 'weblab2') {
+        const result = await generateWeblab2Level(subCtx);
+        log(`Saving start sources for sublevel "${subName}"…`);
+        await updateStartSources(subLevelId, result.startSources);
+        log(`Saving instructions for sublevel "${subName}"…`);
+        await updateLevelProperty(
+          subLevelId,
+          'long_instructions',
+          result.longInstructions
+        );
+        // Exemplar is non-fatal — student-facing content is already saved.
+        try {
+          log(`Generating exemplar for sublevel "${subName}"…`);
+          const exemplarSources = await generateWeblab2Exemplar(
+            subCtx,
+            result.files
+          );
+          log(`Saving exemplar for sublevel "${subName}"…`);
+          await updateExemplarSources(subLevelId, exemplarSources);
+        } catch (err) {
+          const message = err instanceof Error ? err.message : String(err);
+          log(`Warning: exemplar for sublevel "${subName}" failed: ${message}`);
+        }
+      } else if (sub.labType === 'pythonlab') {
+        const result = await generatePythonlabLevel(subCtx);
+        log(`Saving start sources for sublevel "${subName}"…`);
+        await updateStartSources(subLevelId, result.startSources);
+        log(`Saving instructions for sublevel "${subName}"…`);
+        await updateLevelProperty(
+          subLevelId,
+          'long_instructions',
+          result.longInstructions
+        );
+        try {
+          log(`Generating exemplar for sublevel "${subName}"…`);
+          const exemplarSources = await generatePythonlabExemplar(
+            subCtx,
+            result.files
+          );
+          log(`Saving exemplar for sublevel "${subName}"…`);
+          await updateExemplarSources(subLevelId, exemplarSources);
+        } catch (err) {
+          const message = err instanceof Error ? err.message : String(err);
+          log(`Warning: exemplar for sublevel "${subName}" failed: ${message}`);
+        }
+      } else if (sub.labType === 'ailab') {
+        const result = await generateAilabLevel(subCtx);
+        log(`Saving AI Lab config for sublevel "${subName}"…`);
+        await updateLevelProperty(subLevelId, 'mode', result.mode);
+        await updateLevelProperty(
+          subLevelId,
+          'dynamic_instructions',
+          result.dynamicInstructions
+        );
+        await updateLevelProperty(subLevelId, 'uses_lab2', 'true');
+        await updateLevelProperty(
+          subLevelId,
+          'long_instructions',
+          result.longInstructions
+        );
+      } else if (sub.labType === 'aichat') {
+        const presetId: AichatPresetId =
+          (sub.aichatPreset as AichatPresetId | undefined) &&
+          sub.aichatPreset! in AICHAT_PRESETS
+            ? (sub.aichatPreset as AichatPresetId)
+            : DEFAULT_AICHAT_PRESET;
+        const result = await generateAichatLevel(subCtx, presetId);
+        log(`Saving AI Chat settings for sublevel "${subName}"…`);
+        await updateLevelProperty(
+          subLevelId,
+          'aichat_settings',
+          JSON.stringify(result.aichatSettings)
+        );
+        await updateLevelProperty(
+          subLevelId,
+          'long_instructions',
+          result.longInstructions
+        );
+        await updateLevelProperty(
+          subLevelId,
+          'generate_aichat_preset',
+          presetId
+        );
+      } else if (sub.labType === 'sketchlab') {
+        const result = await generateSketchlabLevel(subCtx);
+        log(`Saving instructions for sublevel "${subName}"…`);
+        await updateLevelProperty(
+          subLevelId,
+          'long_instructions',
+          result.longInstructions
+        );
+      }
+    };
+
+    // ─── Template-group pre-pass ────────────────────────────────────
+    // Each weblab2 templateGroup with ≥2 members gets ONE shared template
+    // level, generated before the per-spec loop. Templates live outside
+    // the activity tree as standalone level records.
+    interface ResolvedTemplate {
+      templateName: string;
+      files: {name: string; contents: string}[];
+    }
+    const templates = new Map<string, ResolvedTemplate>();
+    const templateLevelsCreated: GenerationSummary['created'] = [];
+
+    // Count members per group regardless of `generate` or `existing`: the
+    // group is defined by the lesson's full set of weblab2 cards carrying
+    // that templateGroup id. Groups of one are a no-op (the single member
+    // takes the standalone path).
+    const groupCounts = new Map<string, number>();
+    for (const spec of levelSpecs) {
+      if (spec.labType === 'weblab2' && spec.templateGroup?.trim()) {
+        const groupId = spec.templateGroup.trim();
+        groupCounts.set(groupId, (groupCounts.get(groupId) ?? 0) + 1);
+      }
+    }
+    // Regenerating any group member rebuilds the shared template, so a
+    // failed template generation can be retried and the template tracks
+    // edited member descriptions.
+    const groupsToGenerate = new Set<string>();
+    for (const spec of levelSpecs) {
+      const groupId = spec.templateGroup?.trim();
+      if (
+        spec.labType === 'weblab2' &&
+        spec.generate &&
+        groupId &&
+        (groupCounts.get(groupId) ?? 0) >= 2
+      ) {
+        groupsToGenerate.add(groupId);
+      }
+    }
+
+    for (const groupId of groupsToGenerate) {
+      const templateName = fullName(`template-${groupId}`);
+      // Feed the prompt every member of the group so the template
+      // scaffolds for all of them, not just the ones being regenerated
+      // this run.
+      const members = levelSpecs
+        .filter(
+          s => s.labType === 'weblab2' && s.templateGroup?.trim() === groupId
+        )
+        .map(s => ({
+          name: fullName(s.id.trim()),
+          description: s.description.trim(),
+        }));
+
+      try {
+        appendLog(
+          `Generating shared template "${templateName}" for ${members.length} levels…`
+        );
+        const {startSources, files} = await generateWeblab2Template({
+          unitName: lesson.unitName,
+          unitOutline: lesson.unitOutline,
+          lessonName: lesson.name,
+          lessonOutline: outline.trim() || undefined,
+          targetProject,
+          templateName,
+          members,
+        });
+        const templateLevel = await createOrFindLevel('weblab2', templateName);
+        await updateStartSources(templateLevel.id, startSources);
+        templates.set(groupId, {templateName, files});
+        templateLevelsCreated.push({
+          name: templateName,
+          editUrl: `/levels/${templateLevel.id}/edit`,
+        });
+        appendLog(`Saved template "${templateName}".`);
+      } catch (err) {
+        const message = err instanceof Error ? err.message : String(err);
+        appendLog(
+          `Warning: template "${templateName}" failed: ${message}. ` +
+            'Members in this group will fall back to standalone generation.'
+        );
+        // Don't record in `failed` — members still get a chance to
+        // succeed standalone in the main loop below.
+      }
+    }
+
     for (let i = 0; i < levelSpecs.length; i++) {
       const spec = levelSpecs[i];
       const levelName = fullName(spec.id.trim());
@@ -326,36 +617,139 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
       let generatedOutput: PriorOutput | undefined;
 
       try {
+        // Built before createOrFindLevel because DSL-defined types must
+        // run their AI first — the Rails create path REQUIRES dsl_text
+        // on POST. precedingLevels is fresh per call from the
+        // running priorEntries list.
+        const levelCtx = {
+          unitName: lesson.unitName,
+          unitOutline: lesson.unitOutline,
+          lessonName: lesson.name,
+          lessonOutline: outline.trim() || undefined,
+          targetProject,
+          levelName,
+          levelDescription: spec.description.trim(),
+          precedingLevels: precedingLevelsText || undefined,
+        };
+
+        // DSL-defined labs (multi / match / bubbleChoice) must plan
+        // their content before createOrFindLevel so we can pass
+        // dsl_text on POST; other labs go the create-then-save path.
+        let multiResult: MultiGeneration | undefined;
+        let matchResult: MatchGeneration | undefined;
+        let bubbleChoicePlan: BubbleChoiceGeneration | undefined;
+        const bubbleChoiceSublevelLevels: {
+          spec: LevelSpec;
+          fullName: string;
+          levelId: number;
+        }[] = [];
+        let dslText: string | undefined;
+        if (shouldGenerate && spec.labType === 'multi') {
+          setStage('planning');
+          appendLog(`Planning content for "${levelName}"…`);
+          multiResult = await generateMultiLevel(levelCtx);
+          dslText = multiResult.dslText;
+        } else if (shouldGenerate && spec.labType === 'match') {
+          setStage('planning');
+          appendLog(`Planning content for "${levelName}"…`);
+          matchResult = await generateMatchLevel(levelCtx);
+          dslText = matchResult.dslText;
+        } else if (shouldGenerate && spec.labType === 'bubbleChoice') {
+          const sublevels = spec.sublevels ?? [];
+          setStage('planning');
+          appendLog(
+            `Planning ${sublevels.length} sublevel(s) for "${levelName}"…`
+          );
+          for (const sub of sublevels) {
+            const subName = fullName(`${spec.id.trim()}-${sub.id.trim()}`);
+            const subLevel = await createOrFindLevel(sub.labType, subName);
+            const subCtx = {
+              ...levelCtx,
+              levelName: subName,
+              levelDescription: sub.description.trim(),
+            };
+            await generateSublevelContent(sub, subCtx, subLevel.id, appendLog);
+            // Persist the sublevel prompt so reopening /generate later
+            // pre-populates the sublevel description. Non-fatal.
+            try {
+              await updateLevelProperty(
+                subLevel.id,
+                'generate_outline',
+                sub.description.trim()
+              );
+            } catch (err) {
+              const message = err instanceof Error ? err.message : String(err);
+              appendLog(
+                `Warning: couldn't save generate outline for sublevel "${subName}": ${message}`
+              );
+            }
+            bubbleChoiceSublevelLevels.push({
+              spec: sub,
+              fullName: subName,
+              levelId: subLevel.id,
+            });
+          }
+          appendLog(`Planning bubble-choice parent "${levelName}"…`);
+          bubbleChoicePlan = await generateBubbleChoiceLevel({
+            unitName: lesson.unitName,
+            unitOutline: lesson.unitOutline,
+            lessonName: lesson.name,
+            lessonOutline: outline.trim() || undefined,
+            targetProject,
+            parentLevelName: levelName,
+            parentDescription: spec.description.trim(),
+            members: bubbleChoiceSublevelLevels.map(m => ({
+              name: m.fullName,
+              description: m.spec.description.trim(),
+            })),
+            precedingLevels: precedingLevelsText || undefined,
+          });
+          dslText = renderBubbleChoiceDsl(
+            levelName,
+            bubbleChoicePlan.displayName,
+            bubbleChoicePlan.description,
+            bubbleChoiceSublevelLevels.map(m => m.fullName)
+          );
+        }
+
         setStage('creating');
         appendLog(
           shouldGenerate
             ? `Creating level "${levelName}"…`
             : `Skipping content generation for "${levelName}" (Generate is unchecked).`
         );
-        const level = await createOrFindLevel(spec.labType, levelName);
+        const level = await createOrFindLevel(spec.labType, levelName, dslText);
         if (level.reused && shouldGenerate && !isExisting) {
           appendLog(
             `Level "${levelName}" already exists — reusing and overwriting its content.`
           );
+          // For DSL types we PATCHed nothing on create (the existing
+          // record kept its old dsl_text). Re-write with the fresh DSL.
+          if (multiResult) {
+            await updateLevelProperty(
+              level.id,
+              'dsl_text',
+              multiResult.dslText
+            );
+          } else if (matchResult) {
+            await updateLevelProperty(
+              level.id,
+              'dsl_text',
+              matchResult.dslText
+            );
+          } else if (bubbleChoicePlan && dslText) {
+            await updateLevelProperty(level.id, 'dsl_text', dslText);
+          }
         }
 
         if (shouldGenerate) {
-          setStage('planning');
-          appendLog(`Planning content for "${levelName}"…`);
-          // Narrow the lesson-scope context to a LevelContext for this
-          // specific level. Outer-scope fields propagate via the spread;
-          // sibling-forward (precedingLevels) is fresh per call from the
-          // running priorEntries list.
-          const levelCtx = {
-            unitName: lesson.unitName,
-            unitOutline: lesson.unitOutline,
-            lessonName: lesson.name,
-            lessonOutline: outline.trim() || undefined,
-            targetProject,
-            levelName,
-            levelDescription: spec.description.trim(),
-            precedingLevels: precedingLevelsText || undefined,
-          };
+          // Multi/Match ran the planning stage above (before create);
+          // the others run it here. Either way the stage label lines up
+          // with where the AI work actually happens.
+          if (spec.labType !== 'multi' && spec.labType !== 'match') {
+            setStage('planning');
+            appendLog(`Planning content for "${levelName}"…`);
+          }
           if (spec.labType === 'panels') {
             const panels = await generatePanelsForLevel(levelCtx, {
               onPlanned: count =>
@@ -370,7 +764,77 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
             await updatePanelsLevel(level.id, panels);
             generatedOutput = {panels};
           } else if (spec.labType === 'weblab2') {
-            const result = await generateWeblab2Level(levelCtx);
+            const groupId = spec.templateGroup?.trim();
+            const template = groupId ? templates.get(groupId) : undefined;
+            let sourcesForExemplar: {name: string; contents: string}[];
+            if (template) {
+              // Template-backed path: starter files came from the
+              // template pre-pass; this level only writes its own
+              // instructions and points project_template_level_name at
+              // the shared template.
+              const {longInstructions} =
+                await generateWeblab2TemplateBackedLevel(
+                  levelCtx,
+                  template.files
+                );
+              setStage('saving-properties');
+              appendLog(`Saving instructions for "${levelName}"…`);
+              await updateLevelProperty(
+                level.id,
+                'long_instructions',
+                longInstructions
+              );
+              appendLog(
+                `Linking "${levelName}" to template "${template.templateName}"…`
+              );
+              await updateLevelProperty(
+                level.id,
+                'project_template_level_name',
+                template.templateName
+              );
+              generatedOutput = {
+                weblab2: {
+                  startSources: {folders: {}, files: {}},
+                  longInstructions,
+                  files: template.files,
+                },
+              };
+              sourcesForExemplar = template.files;
+            } else {
+              const result = await generateWeblab2Level(levelCtx);
+              setStage('saving-properties');
+              appendLog(`Saving start sources for "${levelName}"…`);
+              await updateStartSources(level.id, result.startSources);
+              appendLog(`Saving instructions for "${levelName}"…`);
+              await updateLevelProperty(
+                level.id,
+                'long_instructions',
+                result.longInstructions
+              );
+              generatedOutput = {weblab2: result};
+              sourcesForExemplar = result.files;
+            }
+
+            // Non-fatal: the student-facing level is already saved, so
+            // a failure here only loses the teacher's solution view.
+            try {
+              setStage('generating-exemplar');
+              appendLog(`Generating exemplar for "${levelName}"…`);
+              const exemplarSources = await generateWeblab2Exemplar(
+                levelCtx,
+                sourcesForExemplar
+              );
+              setStage('saving-exemplar');
+              appendLog(`Saving exemplar for "${levelName}"…`);
+              await updateExemplarSources(level.id, exemplarSources);
+            } catch (err) {
+              const message = err instanceof Error ? err.message : String(err);
+              appendLog(
+                `Warning: exemplar generation failed for "${levelName}": ${message}`
+              );
+            }
+          } else if (spec.labType === 'pythonlab') {
+            const result = await generatePythonlabLevel(levelCtx);
             setStage('saving-properties');
             appendLog(`Saving start sources for "${levelName}"…`);
             await updateStartSources(level.id, result.startSources);
@@ -380,7 +844,181 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
               'long_instructions',
               result.longInstructions
             );
-            generatedOutput = {weblab2: result};
+            generatedOutput = {pythonlab: result};
+            // Same non-fatal exemplar pass as weblab2 above.
+            try {
+              setStage('generating-exemplar');
+              appendLog(`Generating exemplar for "${levelName}"…`);
+              const exemplarSources = await generatePythonlabExemplar(
+                levelCtx,
+                result.files
+              );
+              setStage('saving-exemplar');
+              appendLog(`Saving exemplar for "${levelName}"…`);
+              await updateExemplarSources(level.id, exemplarSources);
+            } catch (err) {
+              const message = err instanceof Error ? err.message : String(err);
+              appendLog(
+                `Warning: exemplar generation failed for "${levelName}": ${message}`
+              );
+            }
+          } else if (spec.labType === 'ailab') {
+            const result = await generateAilabLevel(levelCtx);
+            setStage('saving-properties');
+            // The AI Lab editor stores mode and dynamic_instructions as
+            // serialized JSON strings (textareas in the legacy editor); we
+            // produced them that way upstream. uses_lab2 flips the level
+            // onto the new Lab2 view; the generator only targets the new
+            // port.
+            appendLog(`Saving AI Lab mode for "${levelName}"…`);
+            await updateLevelProperty(level.id, 'mode', result.mode);
+            await updateLevelProperty(
+              level.id,
+              'dynamic_instructions',
+              result.dynamicInstructions
+            );
+            await updateLevelProperty(level.id, 'uses_lab2', 'true');
+            appendLog(`Saving instructions for "${levelName}"…`);
+            await updateLevelProperty(
+              level.id,
+              'long_instructions',
+              result.longInstructions
+            );
+            generatedOutput = {ailab: result};
+          } else if (spec.labType === 'aichat') {
+            // Honour the per-card preset override; fall back to the default
+            // if somehow the spec arrived without one (shouldn't happen via
+            // the outline path, but defensive against hand edits).
+            const presetId: AichatPresetId =
+              (spec.aichatPreset as AichatPresetId | undefined) &&
+              spec.aichatPreset! in AICHAT_PRESETS
+                ? (spec.aichatPreset as AichatPresetId)
+                : DEFAULT_AICHAT_PRESET;
+            const result = await generateAichatLevel(levelCtx, presetId);
+            setStage('saving-properties');
+            appendLog(`Saving AI Chat settings for "${levelName}"…`);
+            // aichat_settings is one of the JSON-string-to-object keys
+            // in the levels controller's handle_json_params allow-list,
+            // so a serialized payload lands as a nested object on the
+            // server side.
+            await updateLevelProperty(
+              level.id,
+              'aichat_settings',
+              JSON.stringify(result.aichatSettings)
+            );
+            appendLog(`Saving instructions for "${levelName}"…`);
+            await updateLevelProperty(
+              level.id,
+              'long_instructions',
+              result.longInstructions
+            );
+            // Persist the preset id so reopening /generate can re-select
+            // the preset dropdown. buildInitialState guards against an
+            // unknown id (i.e. a preset that has since been removed).
+            await updateLevelProperty(
+              level.id,
+              'generate_aichat_preset',
+              presetId
+            );
+            generatedOutput = {aichat: result};
+          } else if (spec.labType === 'sketchlab') {
+            const result = await generateSketchlabLevel(levelCtx);
+            setStage('saving-properties');
+            appendLog(`Saving instructions for "${levelName}"…`);
+            await updateLevelProperty(
+              level.id,
+              'long_instructions',
+              result.longInstructions
+            );
+            generatedOutput = {sketchlab: result};
+          } else if (spec.labType === 'multi' && multiResult) {
+            // The DSL was already saved (create POST or reused-level
+            // PATCH); only the long_instructions stub remains.
+            setStage('saving-properties');
+            if (multiResult.longInstructions) {
+              appendLog(`Saving instructions for "${levelName}"…`);
+              await updateLevelProperty(
+                level.id,
+                'long_instructions',
+                multiResult.longInstructions
+              );
+            }
+            generatedOutput = {multi: multiResult};
+          } else if (spec.labType === 'match' && matchResult) {
+            setStage('saving-properties');
+            if (matchResult.longInstructions) {
+              appendLog(`Saving instructions for "${levelName}"…`);
+              await updateLevelProperty(
+                level.id,
+                'long_instructions',
+                matchResult.longInstructions
+              );
+            }
+            generatedOutput = {match: matchResult};
+          } else if (spec.labType === 'freeResponse') {
+            const result = await generateFreeResponseLevel(levelCtx);
+            setStage('saving-properties');
+            appendLog(`Saving question for "${levelName}"…`);
+            await updateLevelProperty(
+              level.id,
+              'long_instructions',
+              result.longInstructions
+            );
+            if (result.placeholder) {
+              await updateLevelProperty(
+                level.id,
+                'placeholder',
+                result.placeholder
+              );
+            }
+            if (result.solution) {
+              await updateLevelProperty(level.id, 'solution', result.solution);
+            }
+            generatedOutput = {freeResponse: result};
+          } else if (spec.labType === 'bubbleChoice' && bubbleChoicePlan) {
+            // Parent DSL was written by createOrFindLevel / the reused-
+            // level PATCH; still owing are each sublevel's picker-facing
+            // fields (thumbnail, display_name, teaser).
+            setStage('saving-properties');
+            for (let s = 0; s < bubbleChoiceSublevelLevels.length; s++) {
+              const sub = bubbleChoiceSublevelLevels[s];
+              const subPlan = bubbleChoicePlan.sublevels[s];
+              try {
+                setStage(
+                  'generating-image',
+                  `sublevel ${s + 1} of ${bubbleChoiceSublevelLevels.length}`
+                );
+                appendLog(
+                  `Generating thumbnail for sublevel "${sub.fullName}"…`
+                );
+                const thumbnailUrl = await generateBubbleChoiceThumbnail(
+                  subPlan.thumbnailPrompt,
+                  sub.fullName
+                );
+                await updateLevelProperty(
+                  sub.levelId,
+                  'thumbnail_url',
+                  thumbnailUrl
+                );
+              } catch (err) {
+                const message =
+                  err instanceof Error ? err.message : String(err);
+                appendLog(
+                  `Warning: thumbnail for sublevel "${sub.fullName}" failed: ${message}`
+                );
+              }
+              await updateLevelProperty(
+                sub.levelId,
+                'display_name',
+                subPlan.displayName
+              );
+              await updateLevelProperty(
+                sub.levelId,
+                'bubble_choice_description',
+                subPlan.bubbleChoiceDescription
+              );
+            }
+            generatedOutput = {bubbleChoice: bubbleChoicePlan};
           }
         }
 
@@ -520,7 +1158,13 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
       );
     }
 
-    setSummary({created, failed});
+    setSummary({
+      created,
+      failed,
+      ...(templateLevelsCreated.length
+        ? {templates: templateLevelsCreated}
+        : {}),
+    });
     setIsGenerating(false);
     setProgress(null);
   }, [

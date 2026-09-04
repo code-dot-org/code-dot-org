@@ -1,6 +1,6 @@
 {
   "key": "teaching-csd-unit4",
-  "display_name": "Teaching The Design Process",
+  "display_name": "CSD - Teaching The Design Process",
   "is_featured": false,
   "assignable": false,
   "curriculum_type": "Professional Learning",
@@ -11,7 +11,7 @@
   "cs_topic": "app_design",
   "school_subject": null,
   "device_compatibility": null,
-  "description": "After completing this professional learning module, you'll be ready to get started teaching Code.org's CSD Unit 4 - The Design Process - with your students.",
+  "description": "After completing this professional learning module, you'll be ready to get started teaching CodeAI's CSD Unit 4 - The Design Process - with your students.",
   "professional_learning_program": null,
   "video": null,
   "published_date": "2025-05-30 05:00:00 UTC",
