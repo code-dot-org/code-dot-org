@@ -158,22 +158,59 @@ or `solid`: a learner who opens a 409-block workspace has been shown a wall.
 
 Meanwhile every rule's `header` in `scripts/rules/*.mjs` is a paragraph of
 exactly the explanation that learner needs — why coyote time is a step, why
-the bat commits to a glide — and it is emitted as a `//` comment at the top of
-`src/rules/stock/<id>.ts`, where nobody but the compiler ever goes. The
-description on the shelf is one sentence.
+the bat commits to a glide — and it goes nowhere near them. `moduleFor` emits
+it as a `//` comment ABOVE the workspace string in `src/rules/stock/<id>.ts`,
+where only the compiler goes. The `.rule` a learner opens begins at
+`world_rule` with two fields, `NAME` and `ABILITY`, and holds no prose at all.
+The description on the shelf is one sentence.
 
-**What to do.** The header travels with the rule, and the editor shows it. The
-generator already writes it into the module; write it into the `.rule` as well
-(a `world_rule` field, or a note block the rule starts with — the note block is
-better, because a learner writing their own rule then has the same place to
-say what it is for). The rule editor shows the prose above the workspace,
-collapsible, open by default the first time a rule is opened and remembered
-per file thereafter (browser storage; a per-viewer convenience).
+So this is two jobs, not one: get the prose into the file, then draw it.
+
+**What to do.**
+
+_The slot cannot be a field._ The 47 headers average 2,158 bytes and the
+longest (`climb`) is 4,643. Blockly's `field_input` is one line, nothing in
+this lab uses `field_multilinetext`, and a paragraph rendered inside a block
+would be unreadable however it is stored. The precedent that fits is
+`extraState`, which is where `world_rule_block` already keeps its `parts`: put
+`about` in the `world_rule` root's `extraState`, invisible to block rendering,
+and edit it through a textarea in the pane rather than through a Blockly
+field.
+
+_Then four small pieces._ `moduleFor` writes the header into the workspace it
+emits; `RuleMeta` gains `about?: string`, read off the root beside `name` and
+`ability` (`ruleMeta.ts`); `BlocklyFileEditor` draws it above the workspace,
+collapsible, remembered per file in browser storage; and a learner-authored
+rule gets the same slot, empty, which is what makes this a feature rather than
+a way to display stock rules.
+
+_The 12 starter rules gain about 26KB_, 2% of a project. That is inside the
+headroom `projectWeight.test.ts` allows, and the test will report it, which is
+what it is for.
+
+**FIRST, THOUGH: there is already a "How this works".**
+`blockly/lessonFlyoutButton` puts one at the top of every rule's toolbox
+drawer, and every one of the 47 stock rules has a progression tile behind it,
+so the button always leads somewhere. PROGRESSION_UI.md counts it as one of
+four deliberate back-links. Building the pane adds a second answer to "what is
+this rule for" beside a shipped one, and the two readings are:
+
+- The pane is the rule's own account of itself and the lesson is the taught
+  version — different registers, both wanted, and the pane must then be
+  written not to restate the lesson.
+- Or the header feeds the lesson's opening and there is no pane — cheaper, and
+  it does nothing for a learner-authored rule or for anyone who opens
+  `solid.rule` cold, which is the wall this section is about.
+
+The recommendation is the pane, because the wall is INSIDE the file and the
+drawer button is not there. But that is a decision about the teaching model
+rather than about code, and it belongs to whoever owns the progression.
 
 **Done when.** Opening `solid.rule` shows what Solid is for before it shows a
 block; the text is the DSL header, byte for byte, and a test proves the
 generated `.rule` carries it; a learner-authored rule has the same slot and it
-starts empty.
+starts empty; and the pane and the drawer's "How this works" do not say the
+same thing twice.
 
 ## 4. Make the words localizable while there are forty-seven rules
 
