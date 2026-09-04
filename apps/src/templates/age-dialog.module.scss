@@ -1,7 +1,4 @@
-/* Every option is short — ages 4 through 21+ — so pin a narrow width rather
-   than take the design system's full form-field width. The width sits on the
-   select so that SimpleDropdown's arrow, which is positioned against the
-   select's wrapper, stays at the right edge. */
+/* On the select, so SimpleDropdown's arrow stays at its right edge. */
 .ageDropdown select {
   width: 160px;
 }
