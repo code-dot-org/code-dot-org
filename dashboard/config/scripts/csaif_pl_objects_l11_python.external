@@ -9,6 +9,10 @@ In programming, an **object** is a collection of data (attributes) and behaviors
 
 **Objects** are used to model real-world things in a way that computers can understand and manipulate.
 
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px;">
+<p><b>📖 Object:</b> A collection of data (attributes) and behaviors (methods) that models a real-world thing in code.</p>
+</div>
+
 ## What is an Object? 
 
 <div style="background-color: #F7F8FA; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto; 

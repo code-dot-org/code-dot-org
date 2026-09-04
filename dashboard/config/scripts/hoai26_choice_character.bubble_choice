@@ -1,10 +1,11 @@
 name 'HoAI26-Choice-Character'
-display_name 'Choice Progression: Parent Level 2'
-description "This is the second level in a branching choice progression. Use this level to select a branch. If you clicked continue from a previous sublevel you should NOT see this level. You should only see this level if you navigated here directly (via bubble click or URL)."
+display_name 'Choice Progression: Character'
+description "Create your main character."
 uses_lab2
 
 sublevels
-level 'Choice Progression - Music 2'
-level 'Choice Progression - Weblab 2'
+level 'HoAI26-Playtest1-Platform-CharacterNew'
+level 'HoAI26-Playtest1-Story-CharacterNew'
+level 'HoAI26-Playtest1-Game2-CharacterNew'
 
 navigation_type 'next_sublevel'

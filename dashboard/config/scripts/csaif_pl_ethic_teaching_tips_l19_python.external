@@ -3,59 +3,36 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Facilitating Ethical Discussions
+<h1>Facilitating Ethical Discussions</h1>
+<p>Teaching students about ethical issues in algorithms goes beyond understanding how they work, it's about <b>thinking critically</b> and <b>questioning the impact of technology on society</b>.</p>
+<p>As students analyze more complex and controversial algorithms, such as those used in self-driving cars, AI-driven hiring, and facial recognition, discussions may spark strong opinions and highlight real-world dilemmas.</p>
+<p>These topics can spark strong opinions and have no easy answers.</p>
 
-Teaching students about ethical issues in algorithms goes beyond understanding how they work—it’s about **thinking critically** and **questioning the impact of technology on society**.
+<h2>When guiding students, consider:</h2>
 
-As students analyze more complex and controversial algorithms, such as those used in self-driving cars, AI-driven hiring, and facial recognition, discussions may spark strong opinions and highlight real-world dilemmas. 
-
-These topics can spark strong opinions and have no easy answers.
-
-## When guiding students, consider:
-
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🙋‍♀️ Encourage Multiple Perspectives
-</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
-
-
-Ask: “Who benefits from this algorithm? Who might be harmed?”
-
-Frame debates around trade-offs rather than “right vs. wrong.”
-
-</p></div>
+<details style="background-color: #F7F7FB; border: 1px solid #E4E2F8; border-radius: 10px; padding: 12px 16px; margin-bottom: 10px;">
+<summary style="cursor: pointer; font-weight: bold; color: #1F1976; font-size: 16px; display: flex; align-items: center; gap: 10px;"><span style="display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; background-color: #4C42CF; color: #FFFFFF; font-size: 14px; flex-shrink:0;">1</span>Encourage Multiple Perspectives</summary>
+<div style="margin-top: 12px; margin-left: 36px;">
+<p style="margin: 0 0 6px 0;">• Ask: "Who benefits from this algorithm? Who might be harmed?"</p>
+<p style="margin: 0;">• Frame debates around trade-offs rather than "right vs. wrong."</p>
+</div>
 </details>
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">❓ Use ‘What If’ Scenarios</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
-
-
-Example: “What if a self-driving car had to choose between protecting its passenger or a pedestrian?”
-
-Let students explore different viewpoints before giving definitive answer
-
-</p></div>
+<details style="background-color: #F7F7FB; border: 1px solid #E4E2F8; border-radius: 10px; padding: 12px 16px; margin-bottom: 10px;">
+<summary style="cursor: pointer; font-weight: bold; color: #1F1976; font-size: 16px; display: flex; align-items: center; gap: 10px;"><span style="display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; background-color: #4C42CF; color: #FFFFFF; font-size: 14px; flex-shrink:0;">2</span>Use 'What If' Scenarios</summary>
+<div style="margin-top: 12px; margin-left: 36px;">
+<p style="margin: 0 0 6px 0;">• Example: "What if a self-driving car had to choose between protecting its passenger or a pedestrian?"</p>
+<p style="margin: 0;">• Let students explore different viewpoints before giving a definitive answer.</p>
+</div>
 </details>
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">💡 Acknowledge Uncertainty</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
-
-
-Ethical decisions in AI are complex. Reinforce that even experts debate these topics.
-Help students see that questioning and critical thinking are valuable skills.
-
-
-</p></div>
+<details style="background-color: #F7F7FB; border: 1px solid #E4E2F8; border-radius: 10px; padding: 12px 16px; margin-bottom: 10px;">
+<summary style="cursor: pointer; font-weight: bold; color: #1F1976; font-size: 16px; display: flex; align-items: center; gap: 10px;"><span style="display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; background-color: #4C42CF; color: #FFFFFF; font-size: 14px; flex-shrink:0;">3</span>Acknowledge Uncertainty</summary>
+<div style="margin-top: 12px; margin-left: 36px;">
+<p style="margin: 0 0 6px 0;">• Ethical decisions in AI are complex. Reinforce that even experts debate these topics.</p>
+<p style="margin: 0;">• Help students see that questioning and critical thinking are valuable skills.</p>
+</div>
 </details>
 
----
-
-By guiding these discussions with openness and curiosity, you will help students develop a thoughtful, ethical approach to technology—one that prepares them to navigate and shape the digital world they live in.
-
+<p>By guiding these discussions with openness and curiosity, you will help students develop a thoughtful, ethical approach to technology, one that prepares them to navigate and shape the digital world they live in.</p>
 MARKDOWN

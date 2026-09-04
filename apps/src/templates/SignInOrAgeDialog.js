@@ -1,25 +1,31 @@
+import {CustomDialog, Dialog} from '@code-dot-org/component-library/dialog';
+import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
+import Link from '@code-dot-org/component-library/link';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
+import classNames from 'classnames';
 import cookies from 'js-cookie';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import {environmentSpecificCookieName} from '@cdo/apps/code-studio/utils';
-import fontConstants from '@cdo/apps/fontConstants';
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import {ages} from '@cdo/apps/templates/AgeDropdown';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import color from '@cdo/apps/util/color';
 import {reload} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
+import moduleStyles from './sign-in-or-age-dialog.module.scss';
+
 const sessionStorageKey = 'anon_over13';
+
+const ageItems = ages.map(age => ({value: age, text: age}));
 
 class SignInOrAgeDialog extends Component {
   state = {
     open: true,
     tooYoung: false,
+    age: '',
   };
 
   static propTypes = {
@@ -32,8 +38,12 @@ class SignInOrAgeDialog extends Component {
     storage: window.sessionStorage,
   };
 
+  onChangeAge = event => {
+    this.setState({age: event.target.value});
+  };
+
   onClickAgeOk = () => {
-    const value = this.ageDropdown.getValue();
+    const value = this.state.age;
     // Ignore click if nothing selected
     if (!value) {
       return;
@@ -67,139 +77,91 @@ class SignInOrAgeDialog extends Component {
       return null;
     }
 
-    const provideAge = (
-      <div style={styles.middleCell}>
-        {i18n.provideAge()}
-        <div style={styles.age}>
-          <AgeDropdown
-            style={styles.dropdown}
-            ref={element => (this.ageDropdown = element)}
-          />
-          <Button
-            id="uitest-submit-age"
-            onClick={this.onClickAgeOk}
-            text={i18n.ok()}
-            color={Button.ButtonColor.gray}
-            style={styles.okButton}
-          />
-        </div>
-      </div>
-    );
-
+    // Neither branch passes onClose: the dialog is uncloseable, the user has to
+    // sign in or give us an age.
     if (this.state.tooYoung) {
       return (
-        <BaseDialog useUpdatedStyles isOpen={true} uncloseable>
-          <div style={styles.container}>
-            <div style={styles.heading}>{i18n.tutorialUnavailable()}</div>
-            <div style={styles.middle}>
-              {i18n.tutorialUnavailableExplanation()}
-            </div>
-            <div style={styles.tooYoungButton}>
-              <Button
-                __useDeprecatedTag
-                href={pegasus('/hourofcode/overview')}
-                text="See all tutorials"
-                color={Button.ButtonColor.brandSecondaryDefault}
-              />
-            </div>
-          </div>
-        </BaseDialog>
+        <Dialog
+          className={moduleStyles.tooYoungDialog}
+          title={i18n.tutorialUnavailable()}
+          description={i18n.tutorialUnavailableExplanation()}
+          primaryButtonProps={{
+            children: i18n.seeAllTutorials(),
+            href: pegasus('/hourofcode/overview'),
+          }}
+        />
       );
     }
 
+    if (!this.state.open) {
+      return null;
+    }
+
     return (
-      <BaseDialog useUpdatedStyles isOpen={this.state.open} uncloseable>
-        <div style={styles.container} className="signInOrAgeDialog">
-          <div style={styles.heading}>{i18n.signinOrAge()}</div>
-          <div style={styles.middle}>
-            <div style={styles.middleCell}>
+      <CustomDialog
+        className={classNames('signInOrAgeDialog', moduleStyles.dialog)}
+        aria-label={i18n.signinOrAge()}
+      >
+        <MuiTypography variant="h3">{i18n.signinOrAge()}</MuiTypography>
+        <hr />
+        <div className={moduleStyles.columns}>
+          <div className={moduleStyles.column}>
+            <MuiTypography id="dsco-dialog-description" variant="body2">
               {i18n.signinForProgress()}
-              <div style={styles.button}>
-                <Button
-                  __useDeprecatedTag
-                  href={`/users/sign_in?user_return_to=${location.pathname}`}
-                  text={i18n.signinCodeOrg()}
-                  color={Button.ButtonColor.gray}
-                />
-              </div>
-            </div>
-            <div style={styles.center}>
-              <div style={styles.centerLine} />
-              <div style={styles.centerText}>{i18n.or()}</div>
-              <div style={styles.centerLine} />
-            </div>
-            {provideAge}
+            </MuiTypography>
+            <MuiButton
+              className={moduleStyles.action}
+              variant="contained"
+              color="primary"
+              href={`/users/sign_in?user_return_to=${location.pathname}`}
+            >
+              {i18n.signinCodeOrg()}
+            </MuiButton>
           </div>
-          <div>
-            <a href="https://code.org/privacy">{i18n.privacyPolicy()}</a>
+          <div className={moduleStyles.orDivider}>
+            <span className={moduleStyles.orLine} />
+            <MuiTypography variant="body2">{i18n.or()}</MuiTypography>
+            <span className={moduleStyles.orLine} />
+          </div>
+          <div className={moduleStyles.column}>
+            <MuiTypography variant="body2">{i18n.provideAge()}</MuiTypography>
+            <div className={moduleStyles.ageRow}>
+              <SimpleDropdown
+                className={moduleStyles.ageDropdown}
+                id="uitest-age-selector"
+                name="age"
+                labelText={i18n.age()}
+                isLabelVisible={false}
+                items={ageItems}
+                selectedValue={this.state.age}
+                onChange={this.onChangeAge}
+              />
+              <MuiButton
+                className={moduleStyles.action}
+                id="uitest-submit-age"
+                variant="contained"
+                color="primary"
+                onClick={this.onClickAgeOk}
+              >
+                {i18n.ok()}
+              </MuiButton>
+            </div>
           </div>
         </div>
-      </BaseDialog>
+        <hr />
+        {/* The dialog is uncloseable, so send the privacy policy to a new tab
+            rather than navigating out of the flow. */}
+        <Link
+          href="https://code.org/privacy"
+          text={i18n.privacyPolicy()}
+          size="s"
+          external
+          openInNewTab
+        />
+      </CustomDialog>
     );
   }
 }
-
-const styles = {
-  container: {
-    margin: 20,
-    color: color.charcoal,
-  },
-  heading: {
-    fontSize: 16,
-    ...fontConstants['main-font-semi-bold'],
-  },
-  middle: {
-    marginTop: 20,
-    marginBottom: 20,
-    paddingBottom: 20,
-    paddingTop: 20,
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
-    borderRightWidth: 0,
-    borderLeftWidth: 0,
-    borderStyle: 'solid',
-    borderColor: color.lighter_gray,
-    display: 'flex',
-  },
-  middleCell: {
-    display: 'inline-block',
-    verticalAlign: 'top',
-    maxWidth: '50%',
-  },
-  center: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    flexDirection: 'column',
-    display: 'flex',
-  },
-  centerLine: {
-    borderLeft: `1px solid ${color.lighter_gray}`,
-    marginLeft: '50%',
-    height: '100%',
-  },
-  centerText: {
-    padding: 3,
-  },
-  button: {
-    paddingTop: 15,
-  },
-  age: {
-    paddingTop: 15,
-  },
-  dropdown: {
-    verticalAlign: 'top',
-    marginRight: 10,
-    marginTop: 2,
-    width: 160,
-  },
-  tooYoungButton: {
-    textAlign: 'right',
-  },
-  okButton: {
-    margin: 0,
-    boxShadow: 'inset 0 2px 0 0 rgba(255, 255, 255, 0.8)',
-  },
-};
 
 export const UnconnectedSignInOrAgeDialog = SignInOrAgeDialog;
 

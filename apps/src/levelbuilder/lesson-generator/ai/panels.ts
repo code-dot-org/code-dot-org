@@ -2,18 +2,18 @@ import {Output} from 'ai';
 import z from 'zod/v3';
 
 import {generateText} from '@cdo/apps/aiGateway';
-import {Panel, PanelLayout} from '@cdo/apps/panels/types';
-import {createUuid} from '@cdo/apps/utils';
-import {SafeAndSupportedImageTypes} from '@cdo/generated-scripts/sharedConstants';
-
-import {LevelContext} from '../../curriculum-generator/ai/context';
+import {LevelContext} from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
 import {
   getImageModel,
   getTextModel,
   logPrompt,
   logResponse,
   PROMPT_TAGS,
-} from '../../curriculum-generator/ai/shared';
+} from '@cdo/apps/levelbuilder/curriculum-generator/ai/shared';
+import {Panel, PanelLayout} from '@cdo/apps/panels/types';
+import {createUuid} from '@cdo/apps/utils';
+import {SafeAndSupportedImageTypes} from '@cdo/generated-scripts/sharedConstants';
+
 import {uploadLevelAsset} from '../levelApi';
 
 // Exported so the slides generator (which also produces Panels-app

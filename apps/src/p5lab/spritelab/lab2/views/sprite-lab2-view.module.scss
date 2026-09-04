@@ -398,6 +398,15 @@ $tab-segment-height: $tab-item-height - 2px;
     }
   }
 
+  // List markers need this inset back: a global reset zeroes it, this
+  // margin shorthand zeroes the compensating margin, and the outside
+  // markers then draw past the guide's overflow clip — numbered lists
+  // showed items with no numbers.
+  ul,
+  ol {
+    padding-left: 20px;
+  }
+
   li + li {
     margin-top: 4px;
   }
@@ -425,6 +434,13 @@ $tab-segment-height: $tab-item-height - 2px;
   margin: 2px 0;
   border: none;
   border-top: 1px solid rgb(255 255 255 / 20%);
+}
+
+// The Continue button once the level's task is done.
+.guideContinue {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
 }
 
 // Shared metrics for the guide's form controls. All controls in the guide
