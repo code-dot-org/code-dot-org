@@ -11,11 +11,6 @@ import {
 
 import moduleStyles from './backpack-list-controls.module.scss';
 
-const SELECTED_OPTION_ICON = {
-  iconName: 'circle-check',
-  iconStyle: 'solid',
-} as const;
-
 const SORT_OPTIONS: IconDropdownOption[] = [
   {
     value: 'name-asc',
@@ -33,19 +28,6 @@ const SORT_OPTIONS: IconDropdownOption[] = [
     icon: {iconName: 'file', iconStyle: 'regular'},
   },
 ];
-
-// The trigger keeps the selected option's own icon; only its row in the menu trades
-// that icon for a check.
-function markSelectedOption(
-  options: IconDropdownOption[],
-  selectedValue: string
-) {
-  return options.map(option =>
-    option.value === selectedValue
-      ? {...option, icon: SELECTED_OPTION_ICON}
-      : option
-  );
-}
 
 interface BackpackListControlsProps {
   /** Every file in the backpack, not just the ones currently shown. */
@@ -96,10 +78,7 @@ const BackpackListControls: React.FC<BackpackListControlsProps> = ({
         labelText="File type"
         size="s"
         styleAsFormField
-        options={markSelectedOption(
-          categoryOptions,
-          selectedCategoryOption.value
-        )}
+        options={categoryOptions}
         selectedOption={selectedCategoryOption}
         onChange={option =>
           onCategoryChange(
@@ -115,7 +94,7 @@ const BackpackListControls: React.FC<BackpackListControlsProps> = ({
         size="s"
         styleAsFormField
         menuPlacement="right"
-        options={markSelectedOption(SORT_OPTIONS, selectedSortOption.value)}
+        options={SORT_OPTIONS}
         selectedOption={selectedSortOption}
         onChange={option =>
           onSortOrderChange(option.value as BackpackSortOrder)
