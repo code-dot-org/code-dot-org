@@ -102,6 +102,10 @@ beforeAll(() => {
   I18n.initI18n();
 });
 
+afterAll(() => {
+  I18n.reset();
+});
+
 /*
   Guards every number below. An edit to a shipped CSV changes the split and the
   accuracy, and this test says so directly instead of leaving a puzzle.
