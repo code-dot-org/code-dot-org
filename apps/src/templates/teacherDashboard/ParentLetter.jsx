@@ -5,15 +5,14 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {LmsLoginTypeNames} from '@cdo/apps/accounts/constants';
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import {studio, pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {DEMO_SECTION_CODE_PLACEHOLDER} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {
   EmailLinks,
   SectionLoginType,
 } from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
-
-import {queryParams} from '../../code-studio/utils';
-import {studio, pegasus} from '../../lib/util/urlHelpers';
 
 import styles from './ParentLetter.module.scss';
 
@@ -30,15 +29,12 @@ const LOGIN_TYPE_NAMES = {
   [SectionLoginType.email]: i18n.loginTypePersonal().toLowerCase(),
 };
 
-// Strings that carry no markdown. Only the link-bearing strings go through
-// Markdown; the rest stay out of the parser so translated text is never
-// misread as syntax. Block spacing comes from the article's flex gap.
+// Plain strings stay out of the markdown parser so a translation is never
+// misread as syntax.
 const Paragraph = props => (
   <Typography variant="body2" component="p" {...props} />
 );
 
-// A heading sits closer to the passage it introduces than to the block
-// above it; the extra room above comes from .heading.
 const SectionHeading = props => (
   <Typography
     variant="h4"
@@ -117,6 +113,13 @@ class ParentLetter extends React.Component {
       <div id="printArea">
         <Header logoUrl={logoUrl} />
         <article className={styles.body}>
+          <Typography
+            variant="h4"
+            component="h1"
+            className={styles.visuallyHidden}
+          >
+            {i18n.parentLetterTitle()}
+          </Typography>
           <Paragraph>{i18n.parentLetterHello()}</Paragraph>
           <Markdown
             content={i18n.parentLetterIntro({

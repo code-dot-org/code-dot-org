@@ -2191,6 +2191,7 @@
   "parentLetterStep3Details": "Keep up to date with what your student is working on and receive updates from CodeAI. Have your child sign in to CodeAI and then enter your email in Account Settings or [click here]({accountEditLink}).",
   "parentLetterStudentPrivacy": "CodeAI's commitment to student privacy",
   "parentLetterStudentPrivacyDetails": "CodeAI assigns utmost importance to student safety and security. As a not-for-profit organization, they are transparent about the limited data they collect and how they use it.  They do not sell data or exploit it for financial gain. They do not sell ads. CodeAI has signed the [Student Privacy Pledge]({pledgeLink}) and their privacy practices are highly rated by [Common Sense Media]({commonSenseLink}). You can find further details by viewing CodeAI's [Privacy Policy]({privacyPolicyLink}).",
+  "parentLetterTitle": "Parent letter",
   "parentLetterWhy": "Why computer science",
   "parentLetterWhyDetails": "[Six different studies show]({researchLink}): children who study computer science perform better in other subjects, excel at problem solving, and are 17% more likely to attend college. Computer science teaches students critical thinking, problem solving, and digital citizenship, and benefits all students, no matter what opportunities they pursue in the future. And learning to make interactive animations, code-art, games, and apps on CodeAI encourages creativity and makes learning fun.",
   "participantTypeStudentDescription": "Section For Students",
