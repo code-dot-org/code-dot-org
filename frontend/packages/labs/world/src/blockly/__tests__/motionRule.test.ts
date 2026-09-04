@@ -57,10 +57,17 @@ describe('rules/motion.rule', () => {
     //                  a wall and a teleport pad look identical without
     //   ignores walls  whether solid bodies stop it — the mover's fact, not
     //                  the wall's, and a mover need not elect `Solid` at all
+    //   corner reach   how far off a corner may be and still be slipped round,
+    //                  which is the mover's fact for the same reason
+    //
+    // The last two are read by `rules/solid` alone and live here rather than
+    // there because `Solid Bodies` declares exactly one trait on purpose: the
+    // one that says what a WALL is.
     expect(meta.properties.map(p => p.id)).toEqual([
       'velocity',
       'held_still',
       'ignores_walls',
+      'corner_reach',
     ]);
     expect(source).toContain('world_pixels_per_unit');
   });

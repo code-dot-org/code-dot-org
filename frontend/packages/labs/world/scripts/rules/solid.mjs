@@ -29,7 +29,13 @@ import {
   vectorPlus,
   when,
 } from './dsl.mjs';
-import {CanMove, ignoresWalls, positionBefore, velocity} from './motion.mjs';
+import {
+  CanMove,
+  cornerReach,
+  ignoresWalls,
+  positionBefore,
+  velocity,
+} from './motion.mjs';
 
 const rule = defineRule({
   name: 'Solid Bodies',
@@ -98,6 +104,8 @@ const slowedBy = rule.block({
 
 const reach = rule.local('reach', 'Vector');
 const was = rule.local('was', 'Vector');
+/** How deep into a solid body this one is, across — see `Slips Round Corners`. */
+const into = rule.local('into', 'Number');
 
 // ── The pieces both passes are built from ───────────────────────────────────
 // Each of these appears three or four times across the two push-out blocks. In
@@ -267,41 +275,97 @@ const pushOutUpOrDown = rule.block({
     ),
     note('has already run, so a body it pushed clear of a wall is clear here'),
     note('and keeps the speed it was climbing with.'),
+    note('How far into it this body is, across. A small number here is a'),
+    note('CORNER — the body is mostly past the block and is being caught by'),
+    note('an edge — which is the one case worth treating differently.'),
+    into.set(
+      minus(
+        axisOf('x', reach.get()),
+        absolute(minus(position.x(body.get()), position.x(solid.get()))),
+      ),
+    ),
     when([
       [
         both(overlapsNow('y', body, solid), overlapsNow('x', body, solid)),
         [
-          note('Put it back against the face it came in through, and stop it.'),
           when(
             [
               [
-                atMost(axisOf('y', was.get()), position.y(solid.get())),
+                both(
+                  moreThan(cornerReach.of(body.get()), n(0)),
+                  both(
+                    atMost(into.get(), cornerReach.of(body.get())),
+                    moreThan(
+                      absolute(axisOf('y', velocity.of(body.get()))),
+                      n(0),
+                    ),
+                  ),
+                ),
                 [
+                  note('SLIP ROUND IT. Nudged clear across and left going the'),
+                  note('way it was going — see `Slips Round Corners`. The'),
+                  note('velocity is not touched at all: being stopped is the'),
+                  note('thing this exists to avoid.'),
                   setPosition(
                     body.get(),
-                    alongSurface('x', body, solid, frame),
-                    minus(position.y(solid.get()), axisOf('y', reach.get())),
+                    add(
+                      position.x(body.get()),
+                      times(
+                        into.get(),
+                        pick(
+                          moreThan(
+                            position.x(body.get()),
+                            position.x(solid.get()),
+                          ),
+                          n(1),
+                          n(-1),
+                        ),
+                      ),
+                    ),
+                    position.y(body.get()),
                   ),
                 ],
               ],
             ],
             [
-              setPosition(
+              note(
+                'Put it back against the face it came in through, and stop it.',
+              ),
+              when(
+                [
+                  [
+                    atMost(axisOf('y', was.get()), position.y(solid.get())),
+                    [
+                      setPosition(
+                        body.get(),
+                        alongSurface('x', body, solid, frame),
+                        minus(
+                          position.y(solid.get()),
+                          axisOf('y', reach.get()),
+                        ),
+                      ),
+                    ],
+                  ],
+                ],
+                [
+                  setPosition(
+                    body.get(),
+                    alongSurface('x', body, solid, frame),
+                    add(position.y(solid.get()), axisOf('y', reach.get())),
+                  ),
+                ],
+              ),
+              velocity.set(
                 body.get(),
-                alongSurface('x', body, solid, frame),
-                add(position.y(solid.get()), axisOf('y', reach.get())),
+                vector(
+                  slowedBy({
+                    v: slid('x', body, solid, frame),
+                    drop: grip(solid, frame),
+                  }),
+                  bounce('y', body, solid),
+                ),
               ),
             ],
-          ),
-          velocity.set(
-            body.get(),
-            vector(
-              slowedBy({
-                v: slid('x', body, solid, frame),
-                drop: grip(solid, frame),
-              }),
-              bounce('y', body, solid),
-            ),
           ),
         ],
       ],

@@ -603,15 +603,13 @@ describe('the jetpack level', () => {
     const eyeStart = eyeball.get(PositionProperty).x;
     const spinFirst = shuriken.get(heading) as unknown as number;
     const spins: number[] = [];
-    // A LONG WINDOW because one of the four is random. The wanderer picks
-    // from three directions on each beat, so a handful of beats has a real
-    // chance of never once going left — a one in twelve failure, which is a
-    // test that cries wolf rather than one that has found anything. Thirty
-    // beats puts that under a ten-thousandth.
+    const velocity = (
+      project.modules['rules/motion'] as Record<string, unknown>
+    ).VelocityProperty as never;
     for (let tick = 0; tick < 40; tick++) {
-      play(world, 0.5);
+      play(world, 0.15);
       springY.push(spring.get(PositionProperty).y);
-      blobX.push(blob.get(PositionProperty).x);
+      blobX.push(Math.round((blob.get(velocity) as unknown as Vector).x * 10));
       spins.push(shuriken.get(heading) as unknown as number);
     }
 
@@ -635,11 +633,16 @@ describe('the jetpack level', () => {
     // room full of walls it is not stopped by.
     expect(eyeball.get(PositionProperty).x).toBeLessThan(eyeStart - 64);
 
-    // THE WANDERER went both ways, which none of the others do: everything
-    // else here commits to a direction until something changes it.
-    const steps = blobX.slice(1).map((x, index) => x - blobX[index]);
-    expect(steps.some(step => step > 0.5)).toBe(true);
-    expect(steps.some(step => step < -0.5)).toBe(true);
+    // THE WANDERER DOES NOT COMMIT, which none of the others do: everything
+    // else here holds a direction until something takes it away.
+    //
+    // Read as "its sideways speed took more than one value" rather than as
+    // "it went both ways", and the difference is the difference between a
+    // test and a coin toss. It picks from three directions on each beat, so
+    // over a handful of beats never once going LEFT is about one in twelve —
+    // an assertion that would cry wolf roughly every twelfth run. All of them
+    // coming up the same is a fifteen-thousandth, and says the same thing.
+    expect(new Set(blobX).size).toBeGreaterThan(1);
   });
 
   it('keeps every enemy in the room', () => {

@@ -72,9 +72,33 @@ const held = canMove.boolean('held still', 'false');
  * touches, still damages, still collects and can still be stood on.
  */
 const ignoresWalls = canMove.boolean('ignores walls', 'false');
+/**
+ * How far off a corner may be and still be slipped round, in pixels.
+ *
+ * A GAP ONE BLOCK WIDE IS EXACTLY ONE BODY WIDE, which is the shape of the
+ * problem: jumping or flying up into a one-tile gap means being lined up with
+ * it to the pixel, and a few pixels off a corner catches you — so what a
+ * player sees is a jump that plainly fitted and did not go. With this, a body
+ * caught only a little way into a corner is nudged clear across instead, and
+ * keeps the speed it was going up or down with.
+ *
+ * ZERO MEANS NO FORGIVENESS and is the default, because this is a trade rather
+ * than a fix: what it buys going up it costs coming down, since a body that
+ * clips the very edge of a ledge now slips off it instead of landing on the
+ * sliver. A game about getting into one-tile gaps wants it and a game about
+ * landing on ledges does not, so the level says which and says how much.
+ *
+ * It lives here for the reason `ignores walls` does — it is a fact about the
+ * MOVER, and `Solid Bodies` declares exactly one trait on purpose, the one
+ * that says what a WALL is. Only `rules/solid` reads it.
+ *
+ * Keep it small. Much past a quarter of a tile and it starts letting bodies
+ * through gaps a player can see they do not fit.
+ */
+const cornerReach = canMove.number('corner reach', 0);
 
 export const CanMove = rule.traitRef('Can Move');
-export {held, ignoresWalls, velocity};
+export {cornerReach, held, ignoresWalls, velocity};
 
 /** Where an actor was, going the speed it is going now. */
 export const positionBefore = rule.block({

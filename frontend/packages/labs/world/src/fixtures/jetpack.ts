@@ -663,6 +663,16 @@ const PILOT_ACTOR = JSON.stringify({
             // gets.
             useTrait('Teleport#UsesTeleportPadsTrait'),
             useTrait('Digging#DigsTrait'),
+            // A GAP ONE BLOCK WIDE IS EXACTLY ONE PILOT WIDE, and this room
+            // is full of them — the hole a dig leaves, the shaft the ladder
+            // is in, the space between two ledges. Without a few pixels of
+            // forgiveness, flying up into one means being lined up to the
+            // pixel, and what a player sees is a flight that plainly fitted
+            // and did not go (`corner reach`, in Physics).
+            {
+              type: 'world_set_Physics_CornerReachProperty',
+              inputs: {ACTOR: me(), VALUE: number(5)},
+            },
             {
               type: 'world_set_Teleport_TravelSecondsProperty',
               inputs: {ACTOR: me(), VALUE: number(PILOT_TRIP)},

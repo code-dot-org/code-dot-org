@@ -4319,3 +4319,90 @@ describe('Digging’s line-up with what it dug', () => {
     expect(across(digger)).toBeCloseTo(240, 0);
   });
 });
+
+describe('slipping round a corner', () => {
+  // A GAP ONE BLOCK WIDE IS EXACTLY ONE BODY WIDE, so getting up through one
+  // means being lined up to the pixel — and a few pixels off, a corner catches
+  // you and the jump that plainly fitted does not go.
+
+  /** Two blocks with a one-tile gap between them, and a body under it. */
+  const gap = (offset: number, forgiveness = 0) => {
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([
+        rule('rules/motion'),
+        rule('rules/collisions'),
+        rule('rules/solid'),
+      ])
+      .instantiate();
+    for (const [index, x] of [168, 232].entries()) {
+      const block = new ActorBuilder({id: `w${index}`, name: 'block'})
+        .useTraits([of('rules/solid', 'SolidTrait')])
+        .set(PositionProperty, at(x, 200))
+        .set(of('rules/collisions', 'SizeProperty'), new Vector(32, 32))
+        .instantiate(`w${index}`);
+      world.addActor(block);
+    }
+    // The gap is the 32 pixels between them, centred on 200.
+    const body = new ActorBuilder({id: 'body', name: 'body'})
+      .useTraits([
+        of('rules/collisions', 'CanCollideTrait'),
+        of('rules/motion', 'CanMoveTrait'),
+      ])
+      .set(PositionProperty, at(200 + offset, 260))
+      .set(of('rules/motion', 'VelocityProperty'), new Vector(0, -4))
+      .set(of('rules/collisions', 'SizeProperty'), new Vector(32, 32))
+      .instantiate('body');
+    body.set(of('rules/motion', 'CornerReachProperty'), forgiveness as never);
+    world.addActor(body);
+    return {world, body};
+  };
+
+  const height = (who: unknown) =>
+    (who as {get(p: unknown): Vector}).get(PositionProperty).y;
+  const across = (who: unknown) =>
+    (who as {get(p: unknown): Vector}).get(PositionProperty).x;
+
+  it('is caught by the corner with no forgiveness, which is the problem', () => {
+    const {world, body} = gap(4);
+
+    run(world, 0.6);
+
+    // Stopped under the blocks rather than through the gap.
+    expect(height(body)).toBeGreaterThan(200);
+  });
+
+  it('slips through when it is only a little off', () => {
+    const {world, body} = gap(4, 5);
+
+    run(world, 0.6);
+
+    // Up through the gap, and lined up with it on the way.
+    expect(height(body)).toBeLessThan(160);
+    expect(across(body)).toBeCloseTo(200, 0);
+  });
+
+  it('is still stopped when it plainly does not fit', () => {
+    // The forgiveness is small on purpose: a body half over a block has not
+    // nearly lined up with the gap, and letting it through would be a body
+    // passing through something a player can see it does not fit.
+    const {world, body} = gap(16, 5);
+
+    run(world, 0.6);
+
+    expect(height(body)).toBeGreaterThan(200);
+  });
+
+  it('keeps the speed it was going up with, rather than being stopped', () => {
+    // The point is not only that it gets through, it is that it does not
+    // pause at the lip — being stopped is the thing this exists to avoid.
+    const {world, body} = gap(4, 5);
+
+    run(world, 0.25);
+
+    expect(
+      (body as {get(p: unknown): Vector}).get(
+        of('rules/motion', 'VelocityProperty'),
+      ).y,
+    ).toBeCloseTo(-4, 1);
+  });
+});
