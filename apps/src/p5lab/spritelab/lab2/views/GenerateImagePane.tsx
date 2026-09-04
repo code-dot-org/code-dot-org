@@ -94,6 +94,10 @@ async function cropStandingFrame(
   }
 }
 
+// A plain single-frame picture's playback fields; also what a brand-new
+// animation starts as.
+const SINGLE_FRAME_PROPS = {frameCount: 1, frameDelay: 2, looping: true};
+
 /**
  * The patch a result's frame grid dictates: a character strip's layout, or a
  * plain picture's single frame — which must overwrite any strip the image
@@ -112,7 +116,7 @@ function framesPatch(frames: GeneratedImageResult['frames']): AnimationPatch {
         looping: frames.looping,
         poses: frames.poses,
       }
-    : {frameCount: 1, frameDelay: 2, looping: true, poses: undefined};
+    : {...SINGLE_FRAME_PROPS, poses: undefined};
 }
 
 /**
@@ -130,9 +134,7 @@ function createNamedAnimation(
     // addAnimation is an untyped JS thunk; cast for dispatch.
     addAnimation(key, {
       name,
-      frameCount: 1,
-      frameDelay: 2,
-      looping: true,
+      ...SINGLE_FRAME_PROPS,
       ...props,
     }) as unknown as AnyAction
   );
