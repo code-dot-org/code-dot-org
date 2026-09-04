@@ -300,6 +300,28 @@ Falsified both ways: dropping the skew term from the inversion fails the two
 skew tests, and a nudge that updates the stage without writing the file fails
 both nudge tests.
 
+_And the other editors, 2026-09-04._ "The other custom editors are pointer-
+first" was too broad a claim, and counting corrected it: the effect editor has
+fifteen test files and the animation editor eight, with the pure halves of
+both — connection rules, flow mapping, port types, swizzles, frame ops,
+playback, timing — already covered. The gap was the IMAGE editor: one test
+file, two tests, both about grid controls, and nothing at all on `tools.ts`
+and `pixelArt.ts`, which are 656 lines of pure raster arithmetic that the
+first says at the top is "canvas-free and unit-testable".
+
+Forty-two tests now. The two worth naming are the flood fill's, because both
+of its claims are invisible when they break: a fill that measured tolerance
+from a pixel's NEIGHBOUR would creep along a gradient and flood the picture,
+and one that recorded visited pixels by their colour would never terminate
+when the fill colour is itself inside the tolerance — that one hangs rather
+than fails, which is the honest signal. And `pixelArt`'s round trip is the
+module's whole purpose in one assertion: eight-by-eight art, drawn at eleven
+pixels a block, detected, downsampled, and identical.
+
+What is left is `PixelEditor.tsx` itself (1,248 lines), which wants the
+`MapStage` treatment — the same `ResizeObserver` and recording-context stubs
+would drive it — and the two big editor components beside it.
+
 ## 6. One voice on the shelf
 
 **The problem.** Early abilities read as one speaker: _Has Gravity, Jumps,
