@@ -118,7 +118,6 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
           <button
             key={item.image}
             type="button"
-            title={`${item.image} (${item.kind})`}
             className={classNames(
               moduleStyles.worldPaletteItem,
               selected !== 'erase' &&

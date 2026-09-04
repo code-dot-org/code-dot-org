@@ -53,6 +53,10 @@ const TEMPERATURE_LEVEL_DEFAULT = 5;
 const levelToTemperature = (level: number) =>
   (level / TEMPERATURE_LEVEL_MAX) * 2;
 
+// Prompts are otherwise unbounded free text; keep what a request (and the
+// stored generation metadata) carries within reason.
+export const MAX_PROMPT_LENGTH = 1000;
+
 // Prompt hints, one per type, so the example suits what is being made.
 const PROMPT_PLACEHOLDERS: Record<ImageType, string> = {
   sprite: 'e.g. a friendly green dragon',
@@ -311,6 +315,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                 className={moduleStyles.promptInput}
                 value={prompt}
                 rows={5}
+                maxLength={MAX_PROMPT_LENGTH}
                 placeholder={PROMPT_PLACEHOLDERS[imageType]}
                 disabled={generating}
                 onChange={e => setPrompt(e.target.value)}

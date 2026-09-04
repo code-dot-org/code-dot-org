@@ -122,33 +122,10 @@ function repointAnimation(
   return current.propsByKey[key]?.sourceUrl;
 }
 
-// Student prompts are unbounded free text; cap what the card's alt text and
-// tooltip carry. 125 characters is the classic JAWS chunk size for alt text,
-// the conventional ceiling for a name read in one piece.
-const MAX_GALLERY_LABEL_LENGTH = 125;
-
-function truncateLabel(label: string | undefined): string | undefined {
-  return label && label.length > MAX_GALLERY_LABEL_LENGTH
-    ? `${label.slice(0, MAX_GALLERY_LABEL_LENGTH - 1).trimEnd()}…`
-    : label;
-}
-
-// Students see auto-named images, so the prompt describes the picture better
-// than the name does; the advanced gallery labels by name, which it shows
-// and lets the user edit.
-export function galleryCardLabel(
-  props: {name?: string; generation?: {prompt: string}} | undefined,
-  advanced?: boolean
-): string | undefined {
-  return truncateLabel(
-    advanced ? props?.name : props?.generation?.prompt || props?.name
-  );
-}
-
 interface GalleryCardProps {
   animKey: string;
-  /** Alt text and hover tooltip for the thumbnail. */
-  label?: string;
+  /** The image's name; the thumbnail's alt text. */
+  name?: string;
   /** Name shown under the thumbnail; omitted in the student gallery. */
   caption?: string;
   thumb?: string;
@@ -157,22 +134,21 @@ interface GalleryCardProps {
 
 // Memoized: opening or closing the dialog re-renders the pane, and every
 // card would re-render with it. Thumbnail updates arrive as a changed prop.
+// Deliberately no title attribute and no prompt text: native tooltips are
+// unreliable, and the full prompt lives in the image's dialog.
 // Exported for the label tests.
 export const GalleryCard = React.memo<GalleryCardProps>(
-  ({animKey, label, caption, thumb, onOpen}) => (
+  ({animKey, name, caption, thumb, onOpen}) => (
     <div className={moduleStyles.imageCard}>
       <button
         type="button"
         className={moduleStyles.imageThumb}
-        title={label}
         onClick={event => onOpen(animKey, event.currentTarget)}
       >
-        {thumb && <img src={thumb} alt={label || 'image'} />}
+        {thumb && <img src={thumb} alt={name || 'image'} />}
       </button>
       {caption !== undefined && (
-        <div className={moduleStyles.imageName} title={caption}>
-          {caption}
-        </div>
+        <div className={moduleStyles.imageName}>{caption}</div>
       )}
     </div>
   )
@@ -700,7 +676,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           <GalleryCard
             key={key}
             animKey={key}
-            label={galleryCardLabel(props, advanced)}
+            name={props?.name}
             caption={advanced ? props?.name : undefined}
             thumb={
               getTrimmedThumbnail(props?.name) ||
