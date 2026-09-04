@@ -91,13 +91,18 @@ const WorldRow = React.memo<WorldRowProps>(
             ref={el => registerCell(row, col, el)}
             type="button"
             role="gridcell"
-            aria-label={cell ? `${cell.image}, ${cell.kind}` : 'empty'}
             tabIndex={col === cursorCol ? 0 : -1}
             className={moduleStyles.worldCell}
             onPointerDown={event => onCellPointerDown(event, row, col)}
             onPointerEnter={event => onCellPointerEnter(event, row, col)}
             onClick={event => onCellClick(event, row, col)}
           >
+            {/* Hidden text, not aria-label: VoiceOver appends "blank" on
+                every focus move to an element whose name has no backing
+                content. */}
+            <span className={moduleStyles.srOnly}>
+              {cell ? `${cell.image}, ${cell.kind}` : 'empty'}
+            </span>
             {thumb && <img src={thumb} alt="" />}
           </button>
         );
@@ -551,7 +556,6 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
               type="button"
               role="radio"
               aria-checked={selectedIndex === index}
-              aria-label={`${item.image}, ${item.kind}`}
               aria-keyshortcuts={shortcutFor(index)}
               tabIndex={index === Math.max(selectedIndex, 0) ? 0 : -1}
               className={classNames(
@@ -566,6 +570,9 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
                 choose(selections[index]);
               }}
             >
+              <span className={moduleStyles.srOnly}>
+                {item.image}, {item.kind}
+              </span>
               {item.thumb && <img src={item.thumb} alt="" />}
             </button>
           </PaletteTooltip>
