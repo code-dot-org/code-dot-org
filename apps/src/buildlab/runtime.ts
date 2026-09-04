@@ -33,10 +33,25 @@ export interface KeyboardMovement {
   speed: number;
 }
 
-export interface PendingPrediction {
+interface PendingElementPrediction {
+  kind: 'element';
   modelId: string;
+  requestId: number;
   resultElementId: string;
 }
+
+interface PendingSpritePrediction {
+  featureValues: Record<string, string>;
+  kind: 'sprite';
+  modelId: string;
+  predictorSpriteId: string;
+  requestId: number;
+  sourceSpriteId: string;
+}
+
+export type PendingPrediction =
+  | PendingElementPrediction
+  | PendingSpritePrediction;
 
 export type ArrowDirection =
   | 'ArrowDown'

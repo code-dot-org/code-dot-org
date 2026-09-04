@@ -15,6 +15,29 @@ export type AssetType = 'costume' | 'animation' | 'background';
 export type ObjectFit = 'fill' | 'cover' | 'contain' | 'none';
 export type TextAlignment = 'left' | 'right' | 'center' | 'justify';
 
+export const SPRITE_PREDICTION_DATA_KEYS = {
+  error: 'predictionError',
+  result: 'prediction',
+  status: 'predictionStatus',
+} as const;
+
+const RESERVED_SPRITE_DATA_KEYS = new Set([
+  '__proto__',
+  'constructor',
+  'prototype',
+]);
+
+export function normalizeSpriteDataKey(value: unknown): string | undefined {
+  if (typeof value !== 'string') {
+    return undefined;
+  }
+
+  const key = value.trim();
+  return key && !RESERVED_SPRITE_DATA_KEYS.has(key.toLowerCase())
+    ? key
+    : undefined;
+}
+
 export interface StageElement {
   assetId?: string;
   backgroundColor?: string;
@@ -22,6 +45,11 @@ export interface StageElement {
   borderRadius?: number;
   borderWidth?: number;
   className?: string;
+  /**
+   * Student-authored data attached to this element. Runtime changes are made
+   * on the engine's cloned elements, so Run always starts from these values.
+   */
+  data?: Record<string, string>;
   fontFamily?: string;
   fontSize?: number;
   height?: number;
@@ -149,6 +177,20 @@ function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null;
 }
 
+function normalizeElementData(
+  value: unknown
+): Record<string, string> | undefined {
+  if (!isRecord(value)) {
+    return undefined;
+  }
+
+  const entries = Object.entries(value).flatMap(([rawKey, entryValue]) => {
+    const key = normalizeSpriteDataKey(rawKey);
+    return key && typeof entryValue === 'string' ? [[key, entryValue]] : [];
+  });
+  return entries.length ? Object.fromEntries(entries) : undefined;
+}
+
 function isWorkspaceState(value: unknown): value is BuildlabWorkspaceState {
   if (!isRecord(value) || !isRecord(value.blocks)) {
     return false;
@@ -266,7 +308,10 @@ export function normalizeBuildLabProject(
   return {
     assets: migratedProject.assets,
     dataTables: migratedProject.dataTables,
-    elements: migratedProject.elements,
+    elements: migratedProject.elements.map(element => ({
+      ...element,
+      data: normalizeElementData(element.data),
+    })),
     keyValuePairs: migratedProject.keyValuePairs,
     mlModels: migratedProject.mlModels ?? [],
     screens: migratedProject.screens,

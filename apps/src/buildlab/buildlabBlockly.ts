@@ -56,6 +56,34 @@ export const BUILD_LAB_BLOCK_DEFINITIONS = [
     tooltip: 'Runs once when two sprites begin touching.',
   },
   {
+    type: 'buildlab_when_prediction_ready',
+    message0: 'when %1 finishes predicting',
+    args0: [
+      {
+        type: 'field_dropdown',
+        name: 'PREDICTOR',
+        options: [['sprite1', 'sprite1']],
+      },
+    ],
+    nextStatement: null,
+    style: 'event_blocks',
+    tooltip: 'Runs after a sprite receives a successful model prediction.',
+  },
+  {
+    type: 'buildlab_when_prediction_fails',
+    message0: 'when %1 prediction fails',
+    args0: [
+      {
+        type: 'field_dropdown',
+        name: 'PREDICTOR',
+        options: [['sprite1', 'sprite1']],
+      },
+    ],
+    nextStatement: null,
+    style: 'event_blocks',
+    tooltip: 'Runs after a model prediction for a sprite fails.',
+  },
+  {
     type: 'buildlab_set_text',
     message0: 'set %1 text to %2',
     args0: [
@@ -70,6 +98,27 @@ export const BUILD_LAB_BLOCK_DEFINITIONS = [
     nextStatement: null,
     style: 'lab_blocks',
     tooltip: 'Changes an element label.',
+  },
+  {
+    type: 'buildlab_set_text_from_sprite_data',
+    message0: 'set %1 text to %2 data %3',
+    args0: [
+      {
+        type: 'field_dropdown',
+        name: 'ELEMENT',
+        options: [['label1', 'label1']],
+      },
+      {
+        type: 'field_dropdown',
+        name: 'SPRITE',
+        options: [['sprite1', 'sprite1']],
+      },
+      {type: 'field_input', name: 'KEY', text: 'prediction'},
+    ],
+    previousStatement: null,
+    nextStatement: null,
+    style: 'lab_blocks',
+    tooltip: 'Shows one sprite data value in an element.',
   },
   {
     type: 'buildlab_show_screen',
@@ -137,6 +186,23 @@ export const BUILD_LAB_BLOCK_DEFINITIONS = [
     nextStatement: null,
     style: 'lab_blocks',
     tooltip: 'Stores a value in a variable.',
+  },
+  {
+    type: 'buildlab_set_sprite_data',
+    message0: 'set %1 data %2 to %3',
+    args0: [
+      {
+        type: 'field_dropdown',
+        name: 'SPRITE',
+        options: [['sprite1', 'sprite1']],
+      },
+      {type: 'field_input', name: 'KEY', text: 'feature'},
+      {type: 'field_input', name: 'VALUE', text: 'value'},
+    ],
+    previousStatement: null,
+    nextStatement: null,
+    style: 'variable_blocks',
+    tooltip: 'Stores a value on one sprite for this run.',
   },
   {
     type: 'buildlab_change_variable',
@@ -236,6 +302,32 @@ export const BUILD_LAB_BLOCK_DEFINITIONS = [
     tooltip: 'Runs an imported model and puts its prediction in an element.',
   },
   {
+    type: 'buildlab_predict_sprite',
+    message0: 'have %1 predict with %2 using data from %3',
+    args0: [
+      {
+        type: 'field_dropdown',
+        name: 'PREDICTOR',
+        options: [['sprite1', 'sprite1']],
+      },
+      {
+        type: 'field_dropdown',
+        name: 'MODEL',
+        options: [['No models imported', '']],
+      },
+      {
+        type: 'field_dropdown',
+        name: 'SOURCE',
+        options: [['sprite1', 'sprite1']],
+      },
+    ],
+    previousStatement: null,
+    nextStatement: null,
+    style: 'ai_blocks',
+    tooltip:
+      'Uses sprite data as model features. A class source means the matching sprite in the current touch event.',
+  },
+  {
     type: 'buildlab_generate_text',
     message0: 'ask AI %1 and show response in %2',
     args0: [
@@ -292,6 +384,7 @@ export const BUILD_LAB_TOOLBOX: BlocklyCore.utils.toolbox.ToolboxInfo = {
       colour: '#8c52c7',
       contents: [
         {kind: 'block', type: 'buildlab_set_text'},
+        {kind: 'block', type: 'buildlab_set_text_from_sprite_data'},
         {kind: 'block', type: 'buildlab_show_screen'},
         {kind: 'block', type: 'buildlab_set_position'},
         {kind: 'block', type: 'buildlab_set_visible'},
@@ -316,13 +409,17 @@ export const BUILD_LAB_TOOLBOX: BlocklyCore.utils.toolbox.ToolboxInfo = {
         {kind: 'block', type: 'buildlab_set_variable'},
         {kind: 'block', type: 'buildlab_change_variable'},
         {kind: 'block', type: 'buildlab_set_text_from_variable'},
+        {kind: 'block', type: 'buildlab_set_sprite_data'},
       ],
     },
     {
       kind: 'category',
       name: 'AI',
       colour: '#6f5bd3',
-      contents: [{kind: 'block', type: 'buildlab_generate_text'}],
+      contents: [
+        {kind: 'block', type: 'buildlab_generate_text'},
+        {kind: 'block', type: 'buildlab_predict_sprite'},
+      ],
     },
     {
       kind: 'category',
@@ -331,6 +428,8 @@ export const BUILD_LAB_TOOLBOX: BlocklyCore.utils.toolbox.ToolboxInfo = {
       contents: [
         {kind: 'block', type: 'buildlab_on_click'},
         {kind: 'block', type: 'buildlab_on_touch'},
+        {kind: 'block', type: 'buildlab_when_prediction_ready'},
+        {kind: 'block', type: 'buildlab_when_prediction_fails'},
       ],
     },
   ],
@@ -340,6 +439,8 @@ const HAT_BLOCK_TYPES = new Set([
   'buildlab_when_run',
   'buildlab_on_click',
   'buildlab_on_touch',
+  'buildlab_when_prediction_ready',
+  'buildlab_when_prediction_fails',
 ]);
 
 function quote(value: unknown) {
@@ -369,9 +470,26 @@ function registerGenerators() {
       block.getFieldValue('TARGET')
     )}, function () {\n${nextCode(block, blockGenerator)}});\n`;
 
+  generator.forBlock.buildlab_when_prediction_ready = (block, blockGenerator) =>
+    `engine.onPredictionReady(${quote(
+      block.getFieldValue('PREDICTOR')
+    )}, function () {\n${nextCode(block, blockGenerator)}});\n`;
+
+  generator.forBlock.buildlab_when_prediction_fails = (block, blockGenerator) =>
+    `engine.onPredictionFailed(${quote(
+      block.getFieldValue('PREDICTOR')
+    )}, function () {\n${nextCode(block, blockGenerator)}});\n`;
+
   generator.forBlock.buildlab_set_text = block =>
     `engine.setText(${quote(block.getFieldValue('ELEMENT'))}, ${quote(
       block.getFieldValue('TEXT')
+    )});\n`;
+
+  generator.forBlock.buildlab_set_text_from_sprite_data = block =>
+    `engine.setTextFromSpriteData(${quote(
+      block.getFieldValue('ELEMENT')
+    )}, ${quote(block.getFieldValue('SPRITE'))}, ${quote(
+      block.getFieldValue('KEY')
     )});\n`;
 
   generator.forBlock.buildlab_show_screen = block =>
@@ -391,6 +509,11 @@ function registerGenerators() {
     `engine.setVariable(${quote(block.getFieldValue('NAME'))}, ${quote(
       block.getFieldValue('VALUE')
     )});\n`;
+
+  generator.forBlock.buildlab_set_sprite_data = block =>
+    `engine.setSpriteData(${quote(block.getFieldValue('SPRITE'))}, ${quote(
+      block.getFieldValue('KEY')
+    )}, ${quote(block.getFieldValue('VALUE'))});\n`;
 
   generator.forBlock.buildlab_change_variable = block =>
     `engine.changeVariable(${quote(block.getFieldValue('NAME'))}, ${quote(
@@ -423,6 +546,11 @@ function registerGenerators() {
     `engine.predictModel(${quote(block.getFieldValue('MODEL'))}, ${quote(
       block.getFieldValue('RESULT')
     )});\n`;
+
+  generator.forBlock.buildlab_predict_sprite = block =>
+    `engine.predictSprite(${quote(block.getFieldValue('PREDICTOR'))}, ${quote(
+      block.getFieldValue('MODEL')
+    )}, ${quote(block.getFieldValue('SOURCE'))});\n`;
 
   generator.forBlock.buildlab_generate_text = block =>
     `engine.generateText(${quote(block.getFieldValue('PROMPT'))}, ${quote(

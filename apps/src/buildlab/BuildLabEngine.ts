@@ -2,7 +2,12 @@ import {
   compileBuildLabWorkspace,
   type BuildlabWorkspaceState,
 } from './buildlabBlockly';
-import type {StageElement, StageScreen} from './project';
+import {
+  normalizeSpriteDataKey,
+  SPRITE_PREDICTION_DATA_KEYS,
+  type StageElement,
+  type StageScreen,
+} from './project';
 import {
   clampToStage,
   DEFAULT_SPRITE_SIZE,
@@ -10,6 +15,7 @@ import {
   spritesAreTouching,
   STAGE_SIZE,
   type ArrowDirection,
+  type PendingPrediction,
   type RuntimeState,
 } from './runtime';
 
@@ -47,6 +53,12 @@ export default class BuildLabEngine {
   private touchHandlers = new Map<string, TouchRegistration>();
   private activeTouchPairs = new Set<string>();
   private variableBindings = new Map<string, string>();
+  private predictionReadyHandlers = new Map<string, RuntimeHandler[]>();
+  private predictionFailedHandlers = new Map<string, RuntimeHandler[]>();
+  private pendingPredictions: PendingPrediction[] = [];
+  private latestPredictionRequests = new Map<string, number>();
+  private nextPredictionRequestId = 1;
+  private activeTouchTargetId?: string;
 
   public constructor({
     fallbackSpriteAssetId,
@@ -72,6 +84,12 @@ export default class BuildLabEngine {
     this.touchHandlers.clear();
     this.activeTouchPairs.clear();
     this.variableBindings.clear();
+    this.predictionReadyHandlers.clear();
+    this.predictionFailedHandlers.clear();
+    this.pendingPredictions = [];
+    this.latestPredictionRequests.clear();
+    this.nextPredictionRequestId = 1;
+    this.activeTouchTargetId = undefined;
 
     const source = compileBuildLabWorkspace(workspaceState);
     this.executeGeneratedProgram(source);
@@ -122,6 +140,26 @@ export default class BuildLabEngine {
     this.clickHandlers.set(elementId, handlers);
   }
 
+  public onPredictionReady(spriteId: string, handler: RuntimeHandler) {
+    if (!this.isSprite(spriteId)) {
+      return;
+    }
+
+    const handlers = this.predictionReadyHandlers.get(spriteId) ?? [];
+    handlers.push(handler);
+    this.predictionReadyHandlers.set(spriteId, handlers);
+  }
+
+  public onPredictionFailed(spriteId: string, handler: RuntimeHandler) {
+    if (!this.isSprite(spriteId)) {
+      return;
+    }
+
+    const handlers = this.predictionFailedHandlers.get(spriteId) ?? [];
+    handlers.push(handler);
+    this.predictionFailedHandlers.set(spriteId, handlers);
+  }
+
   public onTouch(
     firstId: string,
     targetSelector: string,
@@ -144,6 +182,36 @@ export default class BuildLabEngine {
   public setText(elementId: string, text: string) {
     this.variableBindings.delete(elementId);
     this.updateElementText(elementId, String(text));
+  }
+
+  public setSpriteData(spriteId: string, rawKey: string, value: string) {
+    const key = normalizeSpriteDataKey(String(rawKey));
+    if (!key || !this.isSprite(spriteId)) {
+      return;
+    }
+
+    this.updateElement(spriteId, {
+      data: {
+        ...this.getElement(spriteId)?.data,
+        [key]: String(value),
+      },
+    });
+  }
+
+  public getSpriteData(spriteId: string, rawKey: string) {
+    const key = normalizeSpriteDataKey(String(rawKey));
+    const data = this.getElement(spriteId)?.data;
+    return key && data && Object.prototype.hasOwnProperty.call(data, key)
+      ? data[key]
+      : '';
+  }
+
+  public setTextFromSpriteData(
+    elementId: string,
+    spriteId: string,
+    rawKey: string
+  ) {
+    this.setText(elementId, this.getSpriteData(spriteId, rawKey));
   }
 
   public setVariable(name: string, value: string) {
@@ -299,10 +367,125 @@ export default class BuildLabEngine {
     if (!modelId || !resultElementId) {
       return;
     }
-    this.state = {
-      ...this.state,
-      pendingPrediction: {modelId, resultElementId},
+
+    const request: PendingPrediction = {
+      kind: 'element',
+      modelId,
+      requestId: this.nextPredictionRequestId++,
+      resultElementId,
     };
+    this.queuePrediction(request, resultElementId);
+  }
+
+  public predictSprite(
+    predictorSpriteId: string,
+    modelId: string,
+    sourceSpriteId: string
+  ) {
+    if (!modelId || !this.isSprite(predictorSpriteId)) {
+      return;
+    }
+
+    const sourceSprite = this.resolvePredictionSource(sourceSpriteId);
+    if (!sourceSprite) {
+      this.setSpritePredictionFailure(
+        predictorSpriteId,
+        sourceSpriteId.startsWith('class:')
+          ? 'A class data source must match the sprite in the current touch event'
+          : 'Prediction source sprite not found'
+      );
+      return;
+    }
+
+    const request: PendingPrediction = {
+      featureValues: {...sourceSprite.data},
+      kind: 'sprite',
+      modelId,
+      predictorSpriteId,
+      requestId: this.nextPredictionRequestId++,
+      sourceSpriteId: sourceSprite.id,
+    };
+    this.setSpriteData(
+      predictorSpriteId,
+      SPRITE_PREDICTION_DATA_KEYS.status,
+      'pending'
+    );
+    this.setSpriteData(
+      predictorSpriteId,
+      SPRITE_PREDICTION_DATA_KEYS.error,
+      ''
+    );
+    this.setSpriteData(
+      predictorSpriteId,
+      SPRITE_PREDICTION_DATA_KEYS.result,
+      ''
+    );
+    this.queuePrediction(request, predictorSpriteId);
+  }
+
+  public takePendingPredictions(): PendingPrediction[] {
+    const requests = this.pendingPredictions;
+    this.pendingPredictions = [];
+    this.state = {...this.state, pendingPrediction: undefined};
+    return requests;
+  }
+
+  public completePrediction(
+    request: PendingPrediction,
+    prediction: number | string
+  ): RuntimeState {
+    if (!this.isLatestPrediction(request)) {
+      return this.getState();
+    }
+
+    this.latestPredictionRequests.delete(this.predictionTarget(request));
+    if (request.kind === 'element') {
+      this.updateElementText(request.resultElementId, String(prediction));
+      return this.getState();
+    }
+
+    this.setSpriteData(
+      request.predictorSpriteId,
+      SPRITE_PREDICTION_DATA_KEYS.result,
+      String(prediction)
+    );
+    this.setSpriteData(
+      request.predictorSpriteId,
+      SPRITE_PREDICTION_DATA_KEYS.status,
+      'ready'
+    );
+    this.setSpriteData(
+      request.predictorSpriteId,
+      SPRITE_PREDICTION_DATA_KEYS.error,
+      ''
+    );
+    for (const handler of [
+      ...(this.predictionReadyHandlers.get(request.predictorSpriteId) ?? []),
+    ]) {
+      handler();
+    }
+    this.checkTouchEvents();
+    return this.getState();
+  }
+
+  public failPrediction(
+    request: PendingPrediction,
+    message: string
+  ): RuntimeState {
+    if (!this.isLatestPrediction(request)) {
+      return this.getState();
+    }
+
+    this.latestPredictionRequests.delete(this.predictionTarget(request));
+    if (request.kind === 'element') {
+      this.updateElementText(
+        request.resultElementId,
+        `Prediction failed: ${message}`
+      );
+    } else {
+      this.setSpritePredictionFailure(request.predictorSpriteId, message);
+    }
+    return this.getState();
   }
 
   public generateText(prompt: string, resultElementId: string) {
@@ -314,6 +497,12 @@ export default class BuildLabEngine {
       ...this.state,
       pendingGeneration: {prompt: trimmedPrompt, resultElementId},
     };
+  }
+
+  public takePendingGeneration() {
+    const pendingGeneration = this.state.pendingGeneration;
+    this.state = {...this.state, pendingGeneration: undefined};
+    return pendingGeneration;
   }
 
   public createSprite(
@@ -343,11 +532,68 @@ export default class BuildLabEngine {
   }
 
   private clearPendingRequests() {
+    this.pendingPredictions = [];
     this.state = {
       ...this.state,
       pendingGeneration: undefined,
       pendingPrediction: undefined,
     };
+  }
+
+  private getElement(elementId: string) {
+    return this.state.elements.find(element => element.id === elementId);
+  }
+
+  private resolvePredictionSource(sourceSelector: string) {
+    if (!sourceSelector.startsWith('class:')) {
+      const source = this.getElement(sourceSelector);
+      return source?.kind === 'sprite' ? source : undefined;
+    }
+
+    const touchedSprite = this.activeTouchTargetId
+      ? this.getElement(this.activeTouchTargetId)
+      : undefined;
+    const className = sourceSelector.slice(6);
+    return touchedSprite?.kind === 'sprite' &&
+      touchedSprite.className?.trim() === className
+      ? touchedSprite
+      : undefined;
+  }
+
+  private isSprite(elementId: string) {
+    return this.getElement(elementId)?.kind === 'sprite';
+  }
+
+  private predictionTarget(request: PendingPrediction) {
+    return request.kind === 'element'
+      ? request.resultElementId
+      : request.predictorSpriteId;
+  }
+
+  private isLatestPrediction(request: PendingPrediction) {
+    return (
+      this.latestPredictionRequests.get(this.predictionTarget(request)) ===
+      request.requestId
+    );
+  }
+
+  private queuePrediction(request: PendingPrediction, targetId: string) {
+    this.pendingPredictions.push(request);
+    this.latestPredictionRequests.set(targetId, request.requestId);
+    this.state = {...this.state, pendingPrediction: request};
+  }
+
+  private setSpritePredictionFailure(spriteId: string, message: string) {
+    this.setSpriteData(spriteId, SPRITE_PREDICTION_DATA_KEYS.status, 'failed');
+    this.setSpriteData(spriteId, SPRITE_PREDICTION_DATA_KEYS.error, message);
+    for (const handler of [
+      ...(this.predictionFailedHandlers.get(spriteId) ?? []),
+    ]) {
+      handler();
+    }
+    if (!this.activeTouchTargetId) {
+      this.checkTouchEvents();
+    }
   }
 
   private refreshVariableBindings(variableName: string) {
@@ -407,7 +653,13 @@ export default class BuildLabEngine {
         activeTouchPairs.add(pairKey);
         if (!this.activeTouchPairs.has(pairKey)) {
           for (const handler of [...registration.handlers]) {
-            handler();
+            const previousTouchTargetId = this.activeTouchTargetId;
+            this.activeTouchTargetId = target.id;
+            try {
+              handler();
+            } finally {
+              this.activeTouchTargetId = previousTouchTargetId;
+            }
           }
         }
       }
@@ -433,7 +685,10 @@ export default class BuildLabEngine {
 function cloneRuntimeState(state: RuntimeState): RuntimeState {
   return {
     ...state,
-    elements: state.elements.map(element => ({...element})),
+    elements: state.elements.map(element => ({
+      ...element,
+      data: element.data ? {...element.data} : undefined,
+    })),
     variables: {...state.variables},
     keyboardMovements: state.keyboardMovements?.map(movement => ({
       ...movement,

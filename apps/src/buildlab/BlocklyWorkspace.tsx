@@ -250,6 +250,7 @@ export function renameElementReferencesInWorkspace(
       (block.type === 'buildlab_on_click' ||
         block.type === 'buildlab_set_text' ||
         block.type === 'buildlab_set_text_from_variable' ||
+        block.type === 'buildlab_set_text_from_sprite_data' ||
         block.type === 'buildlab_set_position' ||
         block.type === 'buildlab_set_visible') &&
       fields.ELEMENT === previousElementId
@@ -257,7 +258,9 @@ export function renameElementReferencesInWorkspace(
       fields.ELEMENT = nextElementId;
     }
     if (
-      block.type === 'buildlab_move_with_arrow_keys' &&
+      (block.type === 'buildlab_move_with_arrow_keys' ||
+        block.type === 'buildlab_set_sprite_data' ||
+        block.type === 'buildlab_set_text_from_sprite_data') &&
       fields.SPRITE === previousElementId
     ) {
       fields.SPRITE = nextElementId;
@@ -282,6 +285,20 @@ export function renameElementReferencesInWorkspace(
       fields.RESULT === previousElementId
     ) {
       fields.RESULT = nextElementId;
+    }
+    if (
+      (block.type === 'buildlab_predict_sprite' ||
+        block.type === 'buildlab_when_prediction_ready' ||
+        block.type === 'buildlab_when_prediction_fails') &&
+      fields.PREDICTOR === previousElementId
+    ) {
+      fields.PREDICTOR = nextElementId;
+    }
+    if (
+      block.type === 'buildlab_predict_sprite' &&
+      fields.SOURCE === previousElementId
+    ) {
+      fields.SOURCE = nextElementId;
     }
 
     return {
@@ -334,57 +351,79 @@ export function renameScreenReferencesInWorkspace(
   };
 }
 
+function blockReferencesElement(
+  block: BuildlabBlockState,
+  elementIds: ReadonlySet<string>
+): boolean {
+  const fields = block.fields ?? {};
+  const fieldReferences: Partial<Record<string, string[]>> = {
+    buildlab_change_sprite_position: ['SPRITE'],
+    buildlab_generate_text: ['RESULT'],
+    buildlab_move_with_arrow_keys: ['SPRITE'],
+    buildlab_on_click: ['ELEMENT'],
+    buildlab_on_touch: ['SPRITE', 'TARGET'],
+    buildlab_predict_model: ['RESULT'],
+    buildlab_predict_sprite: ['PREDICTOR', 'SOURCE'],
+    buildlab_set_position: ['ELEMENT'],
+    buildlab_set_sprite_data: ['SPRITE'],
+    buildlab_set_sprite_size: ['SPRITE'],
+    buildlab_set_text: ['ELEMENT'],
+    buildlab_set_text_from_sprite_data: ['ELEMENT', 'SPRITE'],
+    buildlab_set_text_from_variable: ['ELEMENT'],
+    buildlab_set_visible: ['ELEMENT'],
+    buildlab_when_prediction_ready: ['PREDICTOR'],
+    buildlab_when_prediction_fails: ['PREDICTOR'],
+  };
+  const referencesElement = (fieldReferences[block.type] ?? []).some(
+    fieldName => elementIds.has(String(fields[fieldName] ?? ''))
+  );
+  return (
+    referencesElement ||
+    Boolean(
+      block.next?.block && blockReferencesElement(block.next.block, elementIds)
+    )
+  );
+}
+
+function blockReferencesScreen(
+  block: BuildlabBlockState,
+  screenId: string
+): boolean {
+  return (
+    (block.type === 'buildlab_show_screen' &&
+      String(block.fields?.SCREEN ?? '') === screenId) ||
+    Boolean(
+      block.next?.block && blockReferencesScreen(block.next.block, screenId)
+    )
+  );
+}
+
+function blockReferencesModel(
+  block: BuildlabBlockState,
+  modelId: string
+): boolean {
+  return (
+    ((block.type === 'buildlab_predict_model' ||
+      block.type === 'buildlab_predict_sprite') &&
+      String(block.fields?.MODEL ?? '') === modelId) ||
+    Boolean(
+      block.next?.block && blockReferencesModel(block.next.block, modelId)
+    )
+  );
+}
+
 export function removeDesignEventsForElement(
   workspaceState: BuildlabWorkspaceState,
   elementId: string
 ): BuildlabWorkspaceState {
+  const elementIds = new Set([elementId]);
   return {
     ...workspaceState,
     blocks: {
       ...workspaceState.blocks,
-      blocks: workspaceState.blocks.blocks.filter(block => {
-        if (
-          (block.type === 'buildlab_move_with_arrow_keys' ||
-            block.type === 'buildlab_set_sprite_size' ||
-            block.type === 'buildlab_change_sprite_position') &&
-          block.fields?.SPRITE === elementId
-        ) {
-          return false;
-        }
-
-        if (
-          block.type === 'buildlab_on_touch' &&
-          (block.fields?.SPRITE === elementId ||
-            block.fields?.TARGET === elementId)
-        ) {
-          return false;
-        }
-
-        if (
-          block.type === 'buildlab_set_text_from_variable' &&
-          block.fields?.ELEMENT === elementId
-        ) {
-          return false;
-        }
-
-        if (block.type !== 'buildlab_on_click') {
-          return true;
-        }
-
-        const actionBlock = block.next?.block;
-        const actionTarget =
-          actionBlock?.type === 'buildlab_set_text' ||
-          actionBlock?.type === 'buildlab_set_text_from_variable'
-            ? actionBlock.fields?.ELEMENT
-            : actionBlock?.type === 'buildlab_predict_model' ||
-              actionBlock?.type === 'buildlab_generate_text'
-            ? actionBlock.fields?.RESULT
-            : undefined;
-
-        return (
-          block.fields?.ELEMENT !== elementId && actionTarget !== elementId
-        );
-      }),
+      blocks: workspaceState.blocks.blocks.filter(
+        block => !blockReferencesElement(block, elementIds)
+      ),
     },
   };
 }
@@ -400,63 +439,11 @@ export function removeDesignEventsForScreen(
     ...workspaceState,
     blocks: {
       ...workspaceState.blocks,
-      blocks: workspaceState.blocks.blocks.filter(block => {
-        if (
-          (block.type === 'buildlab_move_with_arrow_keys' ||
-            block.type === 'buildlab_set_sprite_size' ||
-            block.type === 'buildlab_change_sprite_position') &&
-          removedElementIds.has(String(block.fields?.SPRITE ?? ''))
-        ) {
-          return false;
-        }
-
-        if (
-          block.type === 'buildlab_on_touch' &&
-          (removedElementIds.has(String(block.fields?.SPRITE ?? '')) ||
-            removedElementIds.has(String(block.fields?.TARGET ?? '')))
-        ) {
-          return false;
-        }
-
-        if (
-          block.type === 'buildlab_set_text_from_variable' &&
-          removedElementIds.has(String(block.fields?.ELEMENT ?? ''))
-        ) {
-          return false;
-        }
-
-        if (block.type !== 'buildlab_on_click') {
-          return true;
-        }
-
-        if (removedElementIds.has(String(block.fields?.ELEMENT ?? ''))) {
-          return false;
-        }
-
-        const actionBlock = block.next?.block;
-        if (
-          actionBlock?.type === 'buildlab_show_screen' &&
-          String(actionBlock.fields?.SCREEN ?? '') === screenId
-        ) {
-          return false;
-        }
-
-        return (
-          !(
-            actionBlock?.type === 'buildlab_set_text' &&
-            removedElementIds.has(String(actionBlock.fields?.ELEMENT ?? ''))
-          ) &&
-          !(
-            actionBlock?.type === 'buildlab_set_text_from_variable' &&
-            removedElementIds.has(String(actionBlock.fields?.ELEMENT ?? ''))
-          ) &&
-          !(
-            (actionBlock?.type === 'buildlab_predict_model' ||
-              actionBlock?.type === 'buildlab_generate_text') &&
-            removedElementIds.has(String(actionBlock.fields?.RESULT ?? ''))
-          )
-        );
-      }),
+      blocks: workspaceState.blocks.blocks.filter(
+        block =>
+          !blockReferencesElement(block, removedElementIds) &&
+          !blockReferencesScreen(block, screenId)
+      ),
     },
   };
 }
@@ -503,14 +490,9 @@ export function removeModelReferencesInWorkspace(
     ...workspaceState,
     blocks: {
       ...workspaceState.blocks,
-      blocks: workspaceState.blocks.blocks.filter(block => {
-        const actionBlock = block.next?.block;
-        return !(
-          block.type === 'buildlab_on_click' &&
-          actionBlock?.type === 'buildlab_predict_model' &&
-          String(actionBlock.fields?.MODEL ?? '') === modelId
-        );
-      }),
+      blocks: workspaceState.blocks.blocks.filter(
+        block => !blockReferencesModel(block, modelId)
+      ),
     },
   };
 }
@@ -588,6 +570,18 @@ function updateWorkspaceDropdowns(
   updateDropdownOptions(
     workspace,
     'TARGET',
+    touchTargetOptions,
+    'No sprites available'
+  );
+  updateDropdownOptions(
+    workspace,
+    'PREDICTOR',
+    spriteOptions,
+    'No sprites available'
+  );
+  updateDropdownOptions(
+    workspace,
+    'SOURCE',
     touchTargetOptions,
     'No sprites available'
   );

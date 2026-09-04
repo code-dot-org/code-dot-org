@@ -531,6 +531,51 @@
   color: var(--text-neutral-secondary);
 }
 
+.spriteDataSection {
+  border-top: 1px solid var(--borders-neutral-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  grid-column: 1 / -1;
+  padding-top: 12px;
+}
+
+.spriteDataList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.spriteDataRow,
+.spriteDataForm,
+.spriteModelFeatures {
+  align-items: end;
+  display: grid;
+  gap: 8px;
+}
+
+.spriteDataRow {
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.spriteDataForm {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) auto;
+}
+
+.spriteModelFeatures {
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.spriteDataRow :global(.MuiButton-root),
+.spriteDataForm :global(.MuiButton-root),
+.spriteModelFeatures :global(.MuiButton-root) {
+  min-height: 32px;
+}
+
+.spriteDataHint {
+  color: var(--text-neutral-secondary);
+}
+
 .screenProperties {
   background-color: var(--background-neutral-secondary);
   border: 1px solid var(--borders-neutral-primary);
@@ -1521,6 +1566,12 @@
 }
 
 @media (max-width: 600px) {
+  .spriteDataForm,
+  .spriteModelFeatures {
+    align-items: stretch;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   .header {
     align-items: flex-start;
     flex-direction: column;

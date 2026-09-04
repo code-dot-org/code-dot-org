@@ -23,6 +23,8 @@ export interface GeneratedMlModelElements {
   resultElementId: string;
 }
 
+export type MlFeatureValues = Record<string, string>;
+
 function modelPart(value: string) {
   return value.replace(/\W/g, '').toLowerCase() || 'model';
 }
@@ -218,9 +220,40 @@ function convertFeatureValue(
   return numberValue;
 }
 
-export async function predictMlModel(
+function getFeatureValue(featureValues: MlFeatureValues, featureId: string) {
+  const matchingEntry = Object.entries(featureValues).find(
+    ([key]) => featureKey(key) === featureKey(featureId)
+  );
+  return matchingEntry?.[1] ?? '';
+}
+
+/**
+ * Read the App Lab-style controls generated for an imported model. Keeping
+ * this adapter outside the predictor lets the same model consume sprite data.
+ */
+export function getMlFeatureValuesFromElements(
   modelId: string,
   elements: StageElement[]
+): MlFeatureValues {
+  return Object.fromEntries(
+    elements
+      .filter(
+        element =>
+          element.mlModelId === modelId &&
+          (element.kind === 'dropdown' || element.kind === 'textInput') &&
+          Boolean(element.mlFeatureId)
+      )
+      .map(element => [
+        element.mlFeatureId as string,
+        element.inputValue?.trim() ||
+          (element.kind === 'dropdown' ? element.options?.[0] ?? '' : ''),
+      ])
+  );
+}
+
+export async function predictMlModel(
+  modelId: string,
+  featureValues: MlFeatureValues
 ): Promise<number | string> {
   const response = await fetch(
     `/api/v1/ml_models/${encodeURIComponent(modelId)}`
@@ -248,26 +281,12 @@ export async function predictMlModel(
     throw new Error('The model is missing prediction data');
   }
 
-  const testData = Object.fromEntries(
-    features.map(feature => {
-      const control = elements.find(
-        element =>
-          element.mlModelId === modelId &&
-          (element.kind === 'dropdown' || element.kind === 'textInput') &&
-          featureKey(element.mlFeatureId ?? '') === featureKey(feature.id)
-      );
-      const value =
-        control?.inputValue?.trim() ||
-        (control?.kind === 'dropdown' ? control.options?.[0] ?? '' : '');
-      return [stripSpaceAndSpecial(feature.id), value];
-    })
-  );
   const featureIds = features.map(feature => feature.id);
   const testValues = featureIds.map(feature =>
     convertFeatureValue(
       modelData.featureNumberKey,
       feature,
-      String(testData[stripSpaceAndSpecial(feature)] ?? '')
+      getFeatureValue(featureValues, feature)
     )
   );
   const model = KNN.load(modelData.trainedModel);

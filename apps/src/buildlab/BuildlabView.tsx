@@ -38,7 +38,11 @@ import BlocklyWorkspace, {
   type BuildlabWorkspaceState,
 } from './BlocklyWorkspace';
 import BuildLabEngine from './BuildLabEngine';
-import {createMlModelElements, predictMlModel} from './mlModel';
+import {
+  createMlModelElements,
+  getMlFeatureValuesFromElements,
+  predictMlModel,
+} from './mlModel';
 import MlModelManager, {type ProvidedMlModel} from './MlModelManager';
 import {
   DEFAULT_PROJECT,
@@ -61,6 +65,7 @@ import {
   type KeyboardMovement,
   type RuntimeState,
 } from './runtime';
+import SpriteDataEditor from './SpriteDataEditor';
 
 import styles from './buildlab-view.module.scss';
 
@@ -412,6 +417,7 @@ export default function BuildlabView({
   >([]);
   const runtimeRunIdRef = useRef(0);
   const runtimeEngineRef = useRef<BuildLabEngine | null>(null);
+  const applyRuntimeStateRef = useRef<(state: RuntimeState) => void>(() => {});
   const [designInspectorTab, setDesignInspectorTab] =
     useState<DesignInspectorTab>('properties');
   const [showScreenProperties, setShowScreenProperties] = useState(false);
@@ -1103,22 +1109,30 @@ export default function BuildlabView({
     setRuntimeKeyboardMovements(nextRuntimeState.keyboardMovements ?? []);
 
     const runId = runtimeRunIdRef.current;
-    if (nextRuntimeState.pendingPrediction) {
-      const {modelId, resultElementId} = nextRuntimeState.pendingPrediction;
-      void predictMlModel(modelId, nextRuntimeState.elements)
+    const predictionRequests =
+      runtimeEngineRef.current?.takePendingPredictions() ??
+      (nextRuntimeState.pendingPrediction
+        ? [nextRuntimeState.pendingPrediction]
+        : []);
+    predictionRequests.forEach(request => {
+      const featureValues =
+        request.kind === 'sprite'
+          ? request.featureValues
+          : getMlFeatureValuesFromElements(
+              request.modelId,
+              nextRuntimeState.elements
+            );
+      void predictMlModel(request.modelId, featureValues)
         .then(prediction => {
           if (runId !== runtimeRunIdRef.current) {
             return;
           }
-          runtimeEngineRef.current?.updateElement(resultElementId, {
-            label: String(prediction),
-          });
-          setRuntimeElements(current =>
-            current.map(element =>
-              element.id === resultElementId
-                ? {...element, label: String(prediction)}
-                : element
-            )
+          const engine = runtimeEngineRef.current;
+          if (!engine) {
+            return;
+          }
+          applyRuntimeState(
+            engine.completePrediction(request, String(prediction))
           );
         })
         .catch(error => {
@@ -1127,36 +1141,30 @@ export default function BuildlabView({
           }
           const message =
             error instanceof Error ? error.message : 'Check your inputs';
-          runtimeEngineRef.current?.updateElement(resultElementId, {
-            label: `Prediction failed: ${message}`,
-          });
-          setRuntimeElements(current =>
-            current.map(element =>
-              element.id === resultElementId
-                ? {...element, label: `Prediction failed: ${message}`}
-                : element
-            )
-          );
+          const engine = runtimeEngineRef.current;
+          if (!engine) {
+            return;
+          }
+          applyRuntimeState(engine.failPrediction(request, message));
         });
-    }
+    });
 
-    if (nextRuntimeState.pendingGeneration) {
-      const {prompt, resultElementId} = nextRuntimeState.pendingGeneration;
+    const pendingGeneration =
+      runtimeEngineRef.current?.takePendingGeneration() ??
+      nextRuntimeState.pendingGeneration;
+    if (pendingGeneration) {
+      const {prompt, resultElementId} = pendingGeneration;
       void generateBuildLabText(prompt, channelId)
         .then(response => {
           if (runId !== runtimeRunIdRef.current) {
             return;
           }
-          runtimeEngineRef.current?.updateElement(resultElementId, {
-            label: response,
-          });
-          setRuntimeElements(current =>
-            current.map(element =>
-              element.id === resultElementId
-                ? {...element, label: response}
-                : element
-            )
-          );
+          const engine = runtimeEngineRef.current;
+          if (!engine) {
+            return;
+          }
+          engine.updateElement(resultElementId, {label: response});
+          applyRuntimeState(engine.getState());
         })
         .catch(error => {
           if (runId !== runtimeRunIdRef.current) {
@@ -1164,19 +1172,18 @@ export default function BuildlabView({
           }
           const message =
             error instanceof Error ? error.message : 'Check your inputs';
-          runtimeEngineRef.current?.updateElement(resultElementId, {
+          const engine = runtimeEngineRef.current;
+          if (!engine) {
+            return;
+          }
+          engine.updateElement(resultElementId, {
             label: `AI failed: ${message}`,
           });
-          setRuntimeElements(current =>
-            current.map(element =>
-              element.id === resultElementId
-                ? {...element, label: `AI failed: ${message}`}
-                : element
-            )
-          );
+          applyRuntimeState(engine.getState());
         });
     }
   };
+  applyRuntimeStateRef.current = applyRuntimeState;
 
   const toggleRun = () => {
     if (isRunning) {
@@ -1304,13 +1311,10 @@ export default function BuildlabView({
         return;
       }
 
-      setRuntimeElements(currentElements => {
-        const engine = runtimeEngineRef.current;
-        if (!engine) {
-          return currentElements;
-        }
-        return engine.moveWithArrowKeys(pressedKeys).elements;
-      });
+      const engine = runtimeEngineRef.current;
+      if (engine) {
+        applyRuntimeStateRef.current(engine.moveWithArrowKeys(pressedKeys));
+      }
       animationFrame = window.requestAnimationFrame(moveSprites);
     };
 
@@ -1991,6 +1995,15 @@ export default function BuildlabView({
                             })
                           }
                           selectedValue={selectedElement.assetId ?? ''}
+                        />
+                      )}
+                      {selectedElement.kind === 'sprite' && (
+                        <SpriteDataEditor
+                          models={mlModels}
+                          onChange={data =>
+                            updateElement(selectedElement.id, {data})
+                          }
+                          sprite={selectedElement}
                         />
                       )}
                       <div className={styles.positionFields}>

@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-13 22:18:58 UTC",
+    "serialized_at": "2026-09-04 16:28:49 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -353,6 +353,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U4_self-paced-4_25_2026"
+        ],
         "progression": "Introduction to Professional Learning"
       },
       "bonus": false,
@@ -375,6 +378,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit4_25_2026"
+        ],
         "progression": "Introduction to Professional Learning"
       },
       "bonus": false,
@@ -397,6 +403,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD-U4SelfPaced-Lesson1Cert_CSD-PL-24_may2025_2026"
+        ],
         "progression": "Introduction to Professional Learning"
       },
       "bonus": false,
@@ -419,6 +428,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit1_gettingstarted_2026"
+        ],
         "progression": "Introduction to Professional Learning"
       },
       "bonus": false,
@@ -441,6 +453,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview_U4L2_self-paced-4_25_2026"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -463,6 +478,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CI-LessonTypes-U4_self-paced-4_25_2026"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -485,6 +503,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-Project Overview_self-paced-unit4_25_2026"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -507,6 +528,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U4L3_self-paced-4_25_2026"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -529,6 +553,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_tools-U4_self-paced-4_25_2026"
+        ],
         "progression": "Learning tools"
       },
       "bonus": false,
@@ -551,6 +578,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-U4L5_self-paced-4_25_2026"
+        ],
         "progression": "Explore the first week of curriculum"
       },
       "bonus": false,
@@ -573,6 +603,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod4-lesson2-overview_self-paced-4_25_2026"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -595,6 +628,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-PrototypeExamples_self-paced-4_25_2026"
+        ],
         "progression": "What is a Paper Prototype?"
       },
       "bonus": false,
@@ -617,6 +653,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-CSDPL_mod4-prototype-C4U_self-paced-unit4_25_2026"
+        ],
         "progression": "What is a Paper Prototype?"
       },
       "bonus": false,
@@ -639,6 +678,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototypeOverview_self-paced-4_25_2026"
+        ],
         "progression": "Use a Paper Prototype to Test an App"
       },
       "bonus": false,
@@ -661,6 +703,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototype-computer_self-paced-4_25_2026"
+        ],
         "progression": "Use a Paper Prototype to Test an App"
       },
       "bonus": false,
@@ -683,6 +728,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototype-testing_self-paced-4_25_2026"
+        ],
         "progression": "Use a Paper Prototype to Test an App"
       },
       "bonus": false,
@@ -705,6 +753,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod4-paperProtocolTesting-video_25_2026"
+        ],
         "progression": "Use a Paper Prototype to Test an App"
       },
       "bonus": false,
@@ -727,6 +778,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototype-imporvements_self-paced-4_25_2026"
+        ],
         "progression": "Use a Paper Prototype to Test an App"
       },
       "bonus": false,
@@ -749,6 +803,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-Unit4SelfPaced_Lesson-7_25_2026"
+        ],
         "progression": "Chapter 1 Project - Paper Prototype"
       },
       "bonus": false,
@@ -771,6 +828,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-U4SelfPaced_Project Video_25_2026"
+        ],
         "progression": "Chapter 1 Project - Paper Prototype"
       },
       "bonus": false,
@@ -793,6 +853,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-U4SelfPaced-Chapter1Matching_25_2026"
+        ],
         "progression": "Section Wrap Up"
       },
       "bonus": false,
@@ -815,6 +878,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD_U4SelfPaced_Lesson2WrapUp_25_2026"
+        ],
         "progression": "Section Wrap Up"
       },
       "bonus": false,
@@ -837,6 +903,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod4-lesson3-overview_self-paced-4_25_2026"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -859,6 +928,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototype-studentDesigned_self-paced-4__2026"
+        ],
         "progression": "Preparing to Build a Digital Prototype"
       },
       "bonus": false,
@@ -881,6 +953,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototype-studentDesigned-testi_self-pa_2026"
+        ],
         "progression": "Preparing to Build a Digital Prototype"
       },
       "bonus": false,
@@ -903,6 +978,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-csd-explore ui-2_25_2026"
+        ],
         "progression": "Preparing to Build a Digital Prototype"
       },
       "bonus": false,
@@ -925,6 +1003,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-uiElements-c4u-matching_self-paced-4_25_2026"
+        ],
         "progression": "Preparing to Build a Digital Prototype"
       },
       "bonus": false,
@@ -947,6 +1028,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototype-studentDesigned-Namin_self-pa_2026"
+        ],
         "progression": "Preparing to Build a Digital Prototype"
       },
       "bonus": false,
@@ -969,6 +1053,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-mod4-prototype-studentDesigned-track_self-pa_2026"
+        ],
         "progression": "Preparing to Build a Digital Prototype"
       },
       "bonus": false,
@@ -991,6 +1078,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U4 App Lab Design Mode Video_25_2026"
+        ],
         "progression": "Design a Digital Prototype"
       },
       "bonus": false,
@@ -1013,6 +1103,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 1_25_2026"
+        ],
         "progression": "Design a Digital Prototype"
       },
       "bonus": false,
@@ -1035,6 +1128,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 2_25_2026"
+        ],
         "progression": "Design a Digital Prototype"
       },
       "bonus": false,
@@ -1057,6 +1153,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 3_25_2026"
+        ],
         "progression": "Design a Digital Prototype"
       },
       "bonus": false,
@@ -1079,6 +1178,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 4_25_2026"
+        ],
         "progression": "Design a Digital Prototype"
       },
       "bonus": false,
@@ -1101,6 +1203,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 5_25_2026"
+        ],
         "progression": "Design a Digital Prototype"
       },
       "bonus": false,
@@ -1123,6 +1228,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 6_25_2026"
+        ],
         "progression": "Design a Digital Prototype"
       },
       "bonus": false,
@@ -1145,6 +1253,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U4 App Lab Events Video_25_2026"
+        ],
         "progression": "Add Events to Your Digital Prototype"
       },
       "bonus": false,
@@ -1167,6 +1278,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Program 1_25_2026"
+        ],
         "progression": "Add Events to Your Digital Prototype"
       },
       "bonus": false,
@@ -1189,6 +1303,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Program 1.5_25_2026"
+        ],
         "progression": "Add Events to Your Digital Prototype"
       },
       "bonus": false,
@@ -1211,6 +1328,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Program 2_25_2026"
+        ],
         "progression": "Add Events to Your Digital Prototype"
       },
       "bonus": false,
@@ -1233,6 +1353,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Program 4_25_2026"
+        ],
         "progression": "Add Events to Your Digital Prototype"
       },
       "bonus": false,
@@ -1255,6 +1378,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD_U4SelfPaced_Lesson3WrapUp_25_2026"
+        ],
         "progression": "Section Wrap Up"
       },
       "bonus": false,
@@ -1277,6 +1403,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview--U4L5_self-paced-4_25_2026"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -1299,6 +1428,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-C2-Chapter2-ProjectOverview-U4L5C2_self-paced-4_2026"
+        ],
         "progression": "End-of-Unit Project"
       },
       "bonus": false,
@@ -1321,6 +1453,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-U4SelfPaced_EndofUnitProjectVideo_25_2026"
+        ],
         "progression": "End-of-Unit Project"
       },
       "bonus": false,
@@ -1343,6 +1478,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "-VPL-CSD-PILOT-summer22-navigation_self-paced-4_25_2026"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -1942,6 +2080,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [
