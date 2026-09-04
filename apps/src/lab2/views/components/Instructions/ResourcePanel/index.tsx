@@ -162,11 +162,6 @@ type ResourcePanelProps = InstructionsProps & {
   sidebarOnly?: boolean;
   hideCollapsedTabBorder?: boolean;
   backpackProps?: BackpackProps;
-  onImageFlagged?: (
-    file: File,
-    fileType: string,
-    uploadFunction: () => Promise<void>
-  ) => void;
   hasInstructionsDrawer?: boolean;
   validationSettings?: ValidationSettings;
   onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
@@ -197,7 +192,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   sidebarOnly = false,
   hideCollapsedTabBorder = false,
   backpackProps,
-  onImageFlagged,
   hasInstructionsDrawer,
   validationSettings,
   onAssetUploaded,
@@ -406,7 +400,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           {...backpackProps}
           openPanelCallback={setBackpackTabAsActive}
           backpackRefreshKey={backpackRefreshKey}
-          onImageFlagged={onImageFlagged}
         />
       );
     }
@@ -481,7 +474,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     setBackpackTabAsActive,
     backpackRefreshKey,
     unifiedBackpackEnabled,
-    onImageFlagged,
     hasInstructions,
   ]);
 

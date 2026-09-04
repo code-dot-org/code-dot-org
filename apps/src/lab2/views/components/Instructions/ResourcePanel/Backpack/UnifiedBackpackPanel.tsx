@@ -34,11 +34,6 @@ interface UnifiedBackpackFile {
 interface UnifiedBackpackPanelProps extends BackpackProps {
   openPanelCallback: () => void;
   backpackRefreshKey: number;
-  onImageFlagged?: (
-    file: File,
-    fileType: string,
-    uploadFunction: () => Promise<void>
-  ) => void;
 }
 
 // No-op transition for the Snackbar's transition slot
@@ -60,7 +55,6 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
   openPanelCallback,
   supportedFileTypes,
   backpackRefreshKey,
-  onImageFlagged,
   addFileTooltipText,
   addFileHandler,
 }) => {
@@ -186,7 +180,6 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
           disableActions={actionInProgress}
           appType={appType}
           sourceDisplayName={sourceDisplayName}
-          onImageFlagged={onImageFlagged}
           addFileTooltipText={addFileTooltipText}
           addFileHandler={addFileHandler}
         />
@@ -202,7 +195,6 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
       findIdForFileName,
       supportedFileTypes,
       actionInProgress,
-      onImageFlagged,
       addFileTooltipText,
       addFileHandler,
     ]
