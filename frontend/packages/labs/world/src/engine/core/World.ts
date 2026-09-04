@@ -1481,7 +1481,7 @@ export class World {
      * map.
      */
     const placed = new Map<string, Actor>();
-    const deferred: Array<[Actor, Property, string]> = [];
+    const deferred: Array<[Actor, Property, string | string[]]> = [];
     for (const entry of map.actors) {
       const builder = this.types.get(entry.type);
       if (!builder) {
@@ -1517,8 +1517,16 @@ export class World {
           }
           // An actor-typed value is the id of another entry, and the actor it
           // names may not exist yet. Held over rather than resolved here.
+          //
+          // A SET of them is the same thing several times over — a list of
+          // entry ids — and is held over for the same reason: any one of them
+          // may be an entry this loop has not reached.
           if (property.type === 'actor' && typeof value === 'string') {
             deferred.push([actor, property, value]);
+            continue;
+          }
+          if (property.type === 'actors' && Array.isArray(value)) {
+            deferred.push([actor, property, value as string[]]);
             continue;
           }
           actor.set(property, value);
@@ -1538,6 +1546,16 @@ export class World {
     // since been deleted, and refusing to load the map over it would take a
     // whole level away for a bar pointed at a missing enemy.
     for (const [actor, property, id] of deferred) {
+      if (Array.isArray(id)) {
+        // The ones that still exist, in the order the map listed them. Names
+        // that resolve to nothing are dropped rather than kept as holes: a
+        // list with a gap in it is a list every reader has to check.
+        const targets = id
+          .map(one => placed.get(one))
+          .filter((one): one is Actor => one !== undefined);
+        actor.set(property, targets as never);
+        continue;
+      }
       const target = placed.get(id);
       if (target) {
         actor.set(property, target as never);

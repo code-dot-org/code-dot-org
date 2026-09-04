@@ -506,6 +506,61 @@ describe('WorldBuilder.loadMap (Map data)', () => {
     expect(one(meter.get(subject) as never)).toBe(player);
   });
 
+  it('resolves a SET of actor-typed values, in the order the map listed', () => {
+    // The same trick several times over: a list of entry ids, held over until
+    // every entry exists. What makes it worth having is that some properties
+    // ARE lists — `Path`'s `going to` is the goals a follower walks between —
+    // and a level that could name one goal and not three was a level that had
+    // to say the rest in blocks.
+    const builder = new WorldBuilder({id: 'w', name: 'W'});
+    const walker = new ActorBuilder({id: 'walker', name: 'Walker'});
+    const goals = walker.defineProperty<unknown>('goals', 'actors', '');
+    builder.define('actors/walker', walker);
+    builder.define('actors/flag', new ActorBuilder({id: 'f', name: 'F'}));
+
+    const [follower, first, second] = builder.loadMap({
+      actors: [
+        {
+          type: 'actors/walker',
+          id: 'Walker',
+          properties: {walker: {goals: ['One', 'Two']}},
+        },
+        {type: 'actors/flag', id: 'One'},
+        {type: 'actors/flag', id: 'Two'},
+      ],
+    });
+
+    expect([...(follower.get(goals) as never as unknown[])]).toEqual([
+      first,
+      second,
+    ]);
+  });
+
+  it('drops a name in a set that resolves to nothing', () => {
+    // A list with a hole in it is a list every reader has to check, and the
+    // single-reference case already answers this the same way: a placement may
+    // point at something since deleted, and a level should not be taken away
+    // over it.
+    const builder = new WorldBuilder({id: 'w', name: 'W'});
+    const walker = new ActorBuilder({id: 'walker', name: 'Walker'});
+    const goals = walker.defineProperty<unknown>('goals', 'actors', '');
+    builder.define('actors/walker', walker);
+    builder.define('actors/flag', new ActorBuilder({id: 'f', name: 'F'}));
+
+    const [follower, only] = builder.loadMap({
+      actors: [
+        {
+          type: 'actors/walker',
+          id: 'Walker',
+          properties: {walker: {goals: ['Gone', 'Here']}},
+        },
+        {type: 'actors/flag', id: 'Here'},
+      ],
+    });
+
+    expect([...(follower.get(goals) as never as unknown[])]).toEqual([only]);
+  });
+
   it('lets two placements name each other', () => {
     // The other thing a second pass buys that an ordering cannot: a cycle has
     // no order to put it in.

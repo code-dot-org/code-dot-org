@@ -337,3 +337,33 @@
   width: 100%;
   min-width: 0;
 }
+
+/* A set-valued reference: its members listed, each with a way out of the set.
+   Laid out as a block rather than a row because the list grows, and a label
+   beside a growing list drifts away from the thing it names. */
+.inspector-set {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.inspector-set-label {
+  font-weight: 600;
+}
+
+.inspector-set-empty {
+  opacity: 0.65;
+}
+
+.inspector-set-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.inspector-set-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+}

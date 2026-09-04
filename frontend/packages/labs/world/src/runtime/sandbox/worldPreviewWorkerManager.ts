@@ -81,17 +81,20 @@ function describeActor(
         property =>
           !property.readonly &&
           property.scope === 'actor' &&
-          // A SET of actors is not a value a placement can be given: it is
-          // what a rule works out at runtime (specs/COLLISION.md), and there
-          // is nothing sensible to pick.
+          // BOTH ACTOR SHAPES ARE OFFERED, and the filter that decides it is
+          // `readonly` rather than the type.
           //
-          // ONE actor is, and used to be refused alongside it on the grounds
-          // that "there is no field that would edit one". That was true of a
-          // contact set and false of the stock Health Bar's `subject`, which
-          // is exactly a value a placement should be given. The field is a
-          // dropdown of the map's other placements, and what it stores is an
-          // ID that `loadMap` resolves in a second pass.
-          property.type !== 'actors' &&
+          // One actor was refused once on the grounds that "there is no field
+          // that would edit one". That was true of a contact set and false of
+          // the stock Health Bar's `subject`, which is exactly a value a
+          // placement should be given. A SET was refused for longer, on the
+          // grounds that a set is what a rule works out at runtime — which is
+          // true of every read-only one and of none of the others: `Path`'s
+          // `going to` is the goals a follower walks between, and a level that
+          // could name one goal and not three had to say the rest in blocks.
+          //
+          // What either stores is an ID, or a list of them, that `loadMap`
+          // resolves in a second pass once every entry exists.
           !DEFERRED_PROPS.has(`${property.ownerId}.${property.id}`),
       )
       .map(property => {
@@ -100,8 +103,14 @@ function describeActor(
         // property's static default.
         // An actor-typed property holds a REFERENCE in a map, and the
         // template's value is an actor value rather than an id — there is no
-        // sensible inherited default, so it starts unset.
-        const base = property.type === 'actor' ? '' : actor.get(property);
+        // sensible inherited default, so it starts unset. A set of them starts
+        // empty for the same reason.
+        const base =
+          property.type === 'actor'
+            ? ''
+            : property.type === 'actors'
+              ? []
+              : actor.get(property);
         const options = optionsFor(
           `${property.ownerId}.${property.id}`,
           animationIds,

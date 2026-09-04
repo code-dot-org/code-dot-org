@@ -15,7 +15,9 @@ import {
   MAX_MAP_TILES,
   MIN_MAP_TILES,
   parseMap,
+  chosenActors,
   linksFrom,
+  withPicked,
   placementChoices,
   type MapDoc,
   type Placement,
@@ -143,6 +145,49 @@ describe('placementChoices', () => {
   });
 });
 
+describe('picking an actor for a reference', () => {
+  // The one decision in a pick, and the only place the difference between the
+  // two shapes lives: a set is added to, a single reference is replaced.
+
+  it('replaces the one a single reference names', () => {
+    expect(withPicked('Old', 'New', false)).toBe('New');
+  });
+
+  it('adds to a set rather than replacing it', () => {
+    // The whole reason a set needs its own answer: picking twice on a single
+    // reference means changing your mind, and on a set it means two goals.
+    expect(withPicked(['One'], 'Two', true)).toEqual(['One', 'Two']);
+  });
+
+  it('starts a set from nothing', () => {
+    expect(withPicked(undefined, 'One', true)).toEqual(['One']);
+  });
+
+  it('does not add the same actor twice', () => {
+    // A set holds a thing or it does not. Twice over would draw two outlines
+    // on one actor and offer two Removes that do different things.
+    expect(withPicked(['One', 'Two'], 'One', true)).toEqual(['One', 'Two']);
+  });
+});
+
+describe('chosenActors', () => {
+  it('reads the list a set names', () => {
+    const walker = {
+      type: 'actors/walker',
+      id: 'W',
+      properties: {path: {goingTo: ['One']}},
+    } as unknown as Placement;
+
+    expect(chosenActors(walker, 'path', 'goingTo')).toEqual(['One']);
+  });
+
+  it('is empty for a property nothing has set', () => {
+    const walker = {type: 'actors/walker', id: 'W'} as Placement;
+
+    expect(chosenActors(walker, 'path', 'goingTo')).toEqual([]);
+  });
+});
+
 describe('linksFrom', () => {
   // What the canvas draws a line for. A reference is otherwise invisible — the
   // value is a name in a panel and the actor it names may be scrolled off the
@@ -167,6 +212,61 @@ describe('linksFrom', () => {
   it('finds the actor a reference names, and what it is called', () => {
     expect(linksFrom(meter, schema, [meter, hero])).toEqual([
       {name: 'subject', targetId: 'Hero'},
+    ]);
+  });
+
+  it('draws a line to every actor a SET names, in order', () => {
+    // Drawing all of them is what makes such a property readable at all:
+    // "going to" holding three names says nothing in a panel until the three
+    // are outlined on the canvas.
+    const walkerSchema = [
+      {
+        props: [
+          {
+            ownerId: 'path',
+            propId: 'goingTo',
+            name: 'going to',
+            type: 'actors',
+          },
+        ],
+      },
+    ];
+    const walker = {
+      type: 'actors/walker',
+      id: 'Walker',
+      properties: {path: {goingTo: ['Two', 'One']}},
+    } as unknown as Placement;
+    const one = {type: 'actors/flag', id: 'One'} as Placement;
+    const two = {type: 'actors/flag', id: 'Two'} as Placement;
+
+    expect(linksFrom(walker, walkerSchema, [walker, one, two])).toEqual([
+      {name: 'going to', targetId: 'Two'},
+      {name: 'going to', targetId: 'One'},
+    ]);
+  });
+
+  it('leaves out a name in a set with nothing on the canvas to point at', () => {
+    const walkerSchema = [
+      {
+        props: [
+          {
+            ownerId: 'path',
+            propId: 'goingTo',
+            name: 'going to',
+            type: 'actors',
+          },
+        ],
+      },
+    ];
+    const walker = {
+      type: 'actors/walker',
+      id: 'Walker',
+      properties: {path: {goingTo: ['Gone', 'One']}},
+    } as unknown as Placement;
+    const one = {type: 'actors/flag', id: 'One'} as Placement;
+
+    expect(linksFrom(walker, walkerSchema, [walker, one])).toEqual([
+      {name: 'going to', targetId: 'One'},
     ]);
   });
 

@@ -35,10 +35,12 @@ import {
   asVec,
   extentOf,
   positionOf,
+  chosenActors,
   linksFrom,
   placementChoices,
   propValue,
   transformOf,
+  withPicked,
   withProperty,
   type MapDoc,
   type Placement,
@@ -511,6 +513,33 @@ export const MapStage = ({
     commit(next);
   };
 
+  /** The ids a set-valued property currently names, in order. */
+  const chosenIds = (actor: Placement, prop: PropertySchema): string[] =>
+    chosenActors(actor, prop.ownerId, prop.propId);
+
+  /**
+   * Write a set-valued property whole.
+   *
+   * Whole rather than by adding and removing in place, because the map holds
+   * a list and a list is a value: writing it entire is what makes an undo one
+   * step and what keeps the file the same shape however it was edited.
+   */
+  const setChosen = (prop: PropertySchema, ids: readonly string[]) => {
+    if (!selectedActor) {
+      return;
+    }
+    const next = {
+      ...mapRef.current,
+      actors: mapRef.current.actors.map(a =>
+        a.id === selectedActor.id
+          ? withProperty(a, prop.ownerId, prop.propId, [...ids])
+          : a,
+      ),
+    };
+    mapRef.current = next;
+    commit(next);
+  };
+
   const editId = (value: string) => setDraft(d => ({...d, id: value}));
 
   // Persist an in-progress edit (writes the `.map`, recompiles) — on blur/Enter.
@@ -610,6 +639,69 @@ export const MapStage = ({
             }
           >
             {pickingThis ? 'Click an actor…' : 'Pick'}
+          </Button>
+        </div>
+      );
+    }
+    if (prop.type === 'actors') {
+      // SEVERAL references, and the same bargain as one: each is stored as a
+      // placement's id and resolved by `loadMap` once every entry exists.
+      //
+      // A list rather than a multi-select, because the thing a person wants to
+      // do here is see what is in the set and take one out — and because the
+      // canvas is already drawing an outline round every one of them, so the
+      // panel's job is to name them and let go of them, not to be the only
+      // place they appear.
+      const chosen = chosenIds(actor, prop);
+      const others = placementChoices(mapRef.current.actors, actor.id);
+      const pickingThis =
+        picking?.ownerId === prop.ownerId && picking?.propId === prop.propId;
+      return (
+        <div key={fieldKey(prop)} className={styles.inspectorSet}>
+          <span className={styles.inspectorSetLabel}>
+            {capitalize(prop.name)}
+          </span>
+          {chosen.length === 0 ? (
+            <span className={styles.inspectorSetEmpty}>(none)</span>
+          ) : (
+            <ul className={styles.inspectorSetList}>
+              {chosen.map(id => (
+                <li key={id} className={styles.inspectorSetItem}>
+                  <span>
+                    {others.find(one => one.value === id)?.text ?? id}
+                  </span>
+                  <Button
+                    variant="text"
+                    size="extraSmall"
+                    disabled={isReadOnly}
+                    aria-label={`Remove ${id}`}
+                    onClick={() =>
+                      setChosen(
+                        prop,
+                        chosen.filter(one => one !== id),
+                      )
+                    }
+                  >
+                    Remove
+                  </Button>
+                </li>
+              ))}
+            </ul>
+          )}
+          <Button
+            variant={pickingThis ? 'contained' : 'text'}
+            size="extraSmall"
+            disabled={isReadOnly}
+            aria-pressed={pickingThis}
+            onClick={() =>
+              setPicking(
+                pickingThis
+                  ? null
+                  : {ownerId: prop.ownerId, propId: prop.propId},
+              )
+            }
+          >
+            {pickingThis ? 'Click an actor…' : 'Add'}
           </Button>
         </div>
       );
@@ -772,13 +864,32 @@ export const MapStage = ({
       event.preventDefault();
       setPicking(null);
       if (hit && hit.id !== selectedActor.id) {
-        selectOption(
-          {
-            ownerId: picking.ownerId,
-            propId: picking.propId,
-          } as PropertySchema,
+        const prop = {
+          ownerId: picking.ownerId,
+          propId: picking.propId,
+        } as PropertySchema;
+        // A SET is added to and a single reference is replaced, which is the
+        // whole difference between the two and the only place the click has to
+        // know it. Naming the same actor twice adds nothing: a set holds a
+        // thing or it does not.
+        const isSet = (selectedSchema ?? [])
+          .flatMap(group => group.props)
+          .some(
+            one =>
+              one.ownerId === prop.ownerId &&
+              one.propId === prop.propId &&
+              one.type === 'actors',
+          );
+        const next = withPicked(
+          propValue(selectedActor, prop.ownerId, prop.propId),
           hit.id,
+          isSet,
         );
+        if (Array.isArray(next)) {
+          setChosen(prop, next);
+        } else {
+          selectOption(prop, next);
+        }
       }
       // A click on nothing CANCELS rather than clearing the reference: undoing
       // a pick is what the dropdown's "(none)" row is for, and a missed click

@@ -238,6 +238,46 @@ export interface PlacementLink {
  * `loadMap` leaves such a property unset rather than failing — but there is
  * nothing on the canvas to draw a line to.
  */
+/**
+ * The ids a set-valued reference names, in the order the map lists them.
+ *
+ * A placement's value is whatever JSON held, so this is also the guard: a
+ * property that has never been set holds nothing, and a set that holds nothing
+ * is empty rather than broken.
+ */
+export const chosenActors = (
+  actor: Placement,
+  ownerId: string,
+  propId: string,
+): string[] => {
+  const value = propValue(actor, ownerId, propId);
+  return Array.isArray(value) ? (value as string[]) : [];
+};
+
+/**
+ * What a reference becomes when a placement is picked for it.
+ *
+ * THE ONE DECISION IN PICKING, and the only place the difference between the
+ * two shapes lives: a set is added to, a single reference is replaced. Kept
+ * out of the click handler for the reason `linksFrom` is kept out of the
+ * drawing — it is a rule, and a rule can be checked.
+ *
+ * Naming the same actor twice adds nothing. A set holds a thing or it does
+ * not, and a list with it in twice would draw two outlines on one actor and
+ * offer two Removes that do different things.
+ */
+export const withPicked = (
+  current: unknown,
+  pickedId: string,
+  isSet: boolean,
+): string | string[] => {
+  if (!isSet) {
+    return pickedId;
+  }
+  const already = Array.isArray(current) ? (current as string[]) : [];
+  return already.includes(pickedId) ? already : [...already, pickedId];
+};
+
 export const linksFrom = (
   actor: Placement,
   schema: ReadonlyArray<{
@@ -252,12 +292,18 @@ export const linksFrom = (
 ): PlacementLink[] =>
   schema
     .flatMap(group => group.props)
-    .filter(prop => prop.type === 'actor')
+    .filter(prop => prop.type === 'actor' || prop.type === 'actors')
     .flatMap(prop => {
-      const targetId = propValue(actor, prop.ownerId, prop.propId);
-      return typeof targetId === 'string' &&
+      const value = propValue(actor, prop.ownerId, prop.propId);
+      // A SET is the same thing several times over, and drawing every one of
+      // them is what makes such a property readable at all: "going to" holding
+      // three names says nothing until the three are outlined on the canvas.
+      const ids = Array.isArray(value) ? value : [value];
+      return ids.flatMap(targetId =>
+        typeof targetId === 'string' &&
         targetId !== '' &&
         actors.some(other => other.id === targetId)
-        ? [{name: prop.name, targetId}]
-        : [];
+          ? [{name: prop.name, targetId}]
+          : [],
+      );
     });

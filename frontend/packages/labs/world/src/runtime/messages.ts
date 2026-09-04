@@ -247,6 +247,11 @@ export interface PropertySchema {
    * `WorldBuilder.loadMap` resolves it once every entry exists. The inspector
    * offers the map's own placements, which is the one list the sandbox cannot
    * supply — it knows the actor kinds, not what a particular map holds.
+   *
+   * `actors` is several of those, stored as an array of ids and resolved in
+   * the same pass. Only a SETTABLE one appears: the read-only ones are what a
+   * rule works out each frame — what is touching this, what it has collected —
+   * and there is nothing for a person to pick.
    */
   type:
     | 'number'
@@ -255,7 +260,8 @@ export interface PropertySchema {
     | 'color'
     | 'vector'
     | 'point'
-    | 'actor';
+    | 'actor'
+    | 'actors';
   /** Default value; a vector/point is `{x, y}`. */
   default: unknown;
   /**
