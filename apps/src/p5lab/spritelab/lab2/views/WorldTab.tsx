@@ -558,7 +558,13 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
                 moduleStyles.worldPaletteItem,
                 selectedIndex === index && moduleStyles.worldPaletteSelected
               )}
-              onClick={() => choose(selections[index])}
+              // The explicit focus is for Safari and macOS Firefox, which
+              // don't focus a pressed button; the roving tab stop follows
+              // the selection and must not part from focus.
+              onClick={event => {
+                event.currentTarget.focus();
+                choose(selections[index]);
+              }}
             >
               {item.thumb && <img src={item.thumb} alt="" />}
             </button>
@@ -582,7 +588,10 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
               moduleStyles.worldPaletteErase,
               effectiveSelected === 'erase' && moduleStyles.worldPaletteSelected
             )}
-            onClick={() => choose('erase')}
+            onClick={event => {
+              event.currentTarget.focus();
+              choose('erase');
+            }}
           >
             Erase
           </button>
