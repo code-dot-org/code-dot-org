@@ -5,7 +5,14 @@ import FontAwesomeV6Icon, {
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
-import React, {useEffect, useMemo, useState, useCallback, useRef} from 'react';
+import React, {
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useState,
+  useCallback,
+  useRef,
+} from 'react';
 
 import {shouldShowAiTutor} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledState';
@@ -140,6 +147,8 @@ const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
     icon: 'backpack',
   },
   [Tabs.StudentResources]: {title: 'Resources', icon: 'compass'},
+  [Tabs.QuestionBank]: {title: 'Question Bank', icon: 'clipboard-question'},
+  [Tabs.Configuration]: {title: 'Configuration', icon: 'wrench'},
 };
 
 type ResourcePanelProps = InstructionsProps & {
@@ -167,6 +176,14 @@ type ResourcePanelProps = InstructionsProps & {
   onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
   onAssetRemoved?: (asset: ChatAsset) => void;
   initialWelcomeMessage?: string;
+  // Hide navigation entirely, in both the Instructions tab and the footer.
+  // hideNavigation alone only controls the Instructions tab navigation.
+  hideAllNavigation?: boolean;
+  /** Used by the Quiz building UI. */
+  questionBankContent?: React.ReactNode;
+  configurationContent?: React.ReactNode;
+  // Callback that reports whether any tab ended up available.
+  onHasTabsChange?: (hasTabs: boolean) => void;
 };
 
 /**
@@ -197,6 +214,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   onAssetUploaded,
   onAssetRemoved,
   initialWelcomeMessage,
+  questionBankContent,
+  configurationContent,
+  hideAllNavigation = false,
+  onHasTabsChange,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -323,12 +344,20 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     const instructionsContent = hasInstructions ? (
       <Instructions
         {...instructionsProps}
-        hideNavigation={hideInstructionsNavigation}
+        hideNavigation={hideAllNavigation || hideInstructionsNavigation}
       />
     ) : null;
 
     if (hasInstructions) {
       tabMap[Tabs.Instructions] = instructionsContent;
+    }
+
+    if (questionBankContent) {
+      tabMap[Tabs.QuestionBank] = questionBankContent;
+    }
+
+    if (configurationContent) {
+      tabMap[Tabs.Configuration] = configurationContent;
     }
 
     if (validationSettings && hasValidationConditions) {
@@ -438,6 +467,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     levelProperties,
     instructionsProps,
     hideInstructionsNavigation,
+    hideAllNavigation,
+    questionBankContent,
+    configurationContent,
     validationSettings,
     hasValidationConditions,
     hiddenContextCallback,
@@ -480,6 +512,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const hasTabs = useMemo(() => {
     return Object.keys(availableTabs).length > 0;
   }, [availableTabs]);
+
+  // useLayoutEffect, not useEffect, so a caller sizing its own layout
+  // around this panel (see onHasTabsChange) sees the right value on the
+  // very first paint instead of a frame later.
+  useLayoutEffect(() => {
+    onHasTabsChange?.(hasTabs);
+  }, [hasTabs, onHasTabsChange]);
 
   const hasAiTutorTab = useMemo(() => {
     return availableTabs[Tabs.AiTutor] !== undefined;
@@ -655,8 +694,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               For standalone projects with at least one tab, we display the collapse/expand.
               We hide this button for standalone projects with no tabs, but the bottom buttons
               will still be available for users to access the settings panel, etc.
+              Quiz also gets the toggle whenever it has a tab.
             */}
-              {isProjectLevel && hasTabs && (
+              {(isProjectLevel || appName === 'quiz') && hasTabs && (
                 <WithTooltip
                   tooltipProps={{
                     text: isStandaloneCollapsed
@@ -844,8 +884,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                   );
                 })}
               </div>
-              {(hideInstructionsNavigation ||
-                currentTab !== Tabs.Instructions) &&
+              {!hideAllNavigation &&
+                (hideInstructionsNavigation ||
+                  currentTab !== Tabs.Instructions) &&
                 !isProjectLevel && (
                   <NavigationArea
                     {...instructionsProps}

@@ -35,7 +35,11 @@
     margin-top: 0;
     display: flex;
     flex-direction: column;
-    border-top: variables.$default-border;
+
+    // No border when there are no tab buttons to separate from.
+    &:not(:empty) {
+      border-top: variables.$default-border;
+    }
   }
 
   // Doubling class name to increase specificity and override default button styles.

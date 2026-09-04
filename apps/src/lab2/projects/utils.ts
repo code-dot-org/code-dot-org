@@ -15,6 +15,7 @@ export interface PartialAppOptions {
   isViewingExemplar: boolean;
   publicCaching: boolean;
   theme?: string;
+  isBuildingQuizQuestions: boolean;
 }
 
 /**
@@ -67,6 +68,17 @@ export function getAppOptionsEditingExemplar(): boolean | undefined {
   if (hasScriptData('script[data-appoptions]')) {
     const appOptions = getScriptData('appoptions') as PartialAppOptions;
     return appOptions.isEditingExemplar;
+  }
+}
+
+/**
+ * Returns the value of isBuildingQuizQuestions provided by App Options, if
+ * available - set only on the quiz question-building page.
+ */
+export function getAppOptionsIsBuildingQuizQuestions(): boolean | undefined {
+  if (hasScriptData('script[data-appoptions]')) {
+    const appOptions = getScriptData('appoptions') as PartialAppOptions;
+    return appOptions.isBuildingQuizQuestions;
   }
 }
 
