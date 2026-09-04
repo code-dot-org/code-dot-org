@@ -517,15 +517,27 @@ class ScriptLevel < ApplicationRecord
     summary[:id] = id.to_s
     summary[:activitySectionPosition] = activity_section_position
     summary[:levels] = levels.map do |level|
-      {
+      entry = {
         id: level.id.to_s,
         name: level.name,
         url: edit_level_path(id: level.id),
         type: level.type,
-        # Recorded by the AI lesson generator; surfaced here so the
-        # /generate page can re-populate the prompt for an existing level.
-        generateOutline: level.try(:generate_outline),
+        # Level#generate_fields: state the AI lesson generator persisted,
+        # surfaced so the /generate page can re-populate its form.
+        **level.generate_fields,
       }
+      if level.is_a?(BubbleChoice)
+        entry[:sublevels] = level.sublevels.map do |sub|
+          {
+            id: sub.id.to_s,
+            name: sub.name,
+            url: edit_level_path(id: sub.id),
+            type: sub.type,
+            **sub.generate_fields,
+          }
+        end
+      end
+      entry
     end
 
     # For now, the lesson edit page does not allow modification of level

@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-02 22:12:04 UTC",
+    "serialized_at": "2026-09-03 17:19:50 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -514,6 +514,27 @@
       }
     },
     {
+      "key": "410a0b57-d3c0-4b1d-bf34-739935cd8553",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "410a0b57-d3c0-4b1d-bf34-739935cd8553",
+        "lesson_activity.key": "e48a129b-6ec0-4555-ae74-ee55f29dba17"
+      }
+    },
+    {
+      "key": "59502ab4-80f0-4441-9b5d-2ef9542d3de1",
+      "position": 6,
+      "properties": {
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "59502ab4-80f0-4441-9b5d-2ef9542d3de1",
+        "lesson_activity.key": "e48a129b-6ec0-4555-ae74-ee55f29dba17"
+      }
+    },
+    {
       "key": "e6dfda49-8748-48c9-b59a-54b55f967d2d",
       "position": 1,
       "properties": {
@@ -865,6 +886,28 @@
     },
     {
       "chapter": 14,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_unit1_lesson24_cfu_27_28"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "59502ab4-80f0-4441-9b5d-2ef9542d3de1"
+      },
+      "level_keys": [
+        "csp_unit1_lesson24_cfu_27_28"
+      ]
+    },
+    {
+      "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -886,7 +929,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -908,7 +951,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -930,7 +973,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -952,7 +995,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -974,7 +1017,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -996,7 +1039,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1173,6 +1216,18 @@
         "lesson_group.key": "",
         "script.name": "csp-unit1-dev-27-28",
         "activity_section.key": "6fa5a18f-142b-475c-a969-f939357ae4c0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_unit1_lesson24_cfu_27_28",
+        "script_level.level_keys": [
+          "csp_unit1_lesson24_cfu_27_28"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "59502ab4-80f0-4441-9b5d-2ef9542d3de1"
       }
     },
     {

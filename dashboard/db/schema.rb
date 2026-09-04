@@ -196,6 +196,22 @@ ActiveRecord::Schema[7.0].define(version: 2026_09_04_165528) do
     t.index ["user_id"], name: "index_aidiff_threads_on_user_id"
   end
 
+  create_table "anonymous_level_progresses", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "anon_user_id", limit: 36, null: false
+    t.integer "script_id", null: false
+    t.integer "level_id", null: false
+    t.integer "unit_group_id"
+    t.bigint "level_source_id", unsigned: true
+    t.integer "attempts", default: 0, null: false
+    t.integer "best_result"
+    t.boolean "submitted"
+    t.integer "time_spent"
+    t.text "properties"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["anon_user_id", "script_id", "level_id"], name: "index_anonymous_level_progresses_on_unique_anon_script_level", unique: true
+  end
+
   create_table "assessment_activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "level_id", null: false
@@ -3101,15 +3117,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_09_04_165528) do
   add_foreign_key "plc_learning_modules", "stages"
   add_foreign_key "project_storage_geos", "user_project_storage_ids", column: "storage_id"
   add_foreign_key "queued_account_purges", "users"
-  add_foreign_key "quiz_attempts", "levels"
-  add_foreign_key "quiz_attempts", "scripts", column: "unit_id"
-  add_foreign_key "quiz_attempts", "users"
-  add_foreign_key "quiz_question_placements", "levels"
-  add_foreign_key "quiz_question_placements", "quiz_questions"
-  add_foreign_key "quiz_question_responses", "quiz_attempts"
-  add_foreign_key "quiz_question_responses", "quiz_questions"
-  add_foreign_key "quiz_question_standards", "quiz_questions"
-  add_foreign_key "quiz_question_standards", "standards"
   add_foreign_key "rubric_ai_evaluations", "rubrics"
   add_foreign_key "rubric_ai_evaluations", "users"
   add_foreign_key "rubric_ai_evaluations", "users", column: "requester_id"

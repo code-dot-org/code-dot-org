@@ -2,9 +2,7 @@
 @import "mixins";
 
 .unplugged {
-  $page_width: 800px;
-
-  width: $page_width;
+  width: 800px;
   margin-left: auto;
   margin-right: auto;
 
