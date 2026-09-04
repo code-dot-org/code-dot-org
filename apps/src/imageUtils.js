@@ -112,7 +112,7 @@ export async function toImage(input) {
 
   if (input instanceof Blob) {
     src = URL.createObjectURL(input);
-    cleanup = () => URL.revokeObjectURL(input);
+    cleanup = () => URL.revokeObjectURL(src);
   } else if (typeof input === 'string') {
     src = input;
   } else {
@@ -183,7 +183,11 @@ export async function toImageData(input) {
  */
 export function downloadBlobAsPng(blob, filename = 'image.png') {
   const download = document.createElement('a');
-  download.href = URL.createObjectURL(blob);
+  const url = URL.createObjectURL(blob);
+  download.href = url;
   download.download = filename;
   download.click();
+  // The download has begun; without this the blob stays pinned in memory
+  // until the page unloads.
+  URL.revokeObjectURL(url);
 }
