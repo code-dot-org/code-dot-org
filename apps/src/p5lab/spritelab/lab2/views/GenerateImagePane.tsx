@@ -67,17 +67,21 @@ interface AnimationPatch {
   recentColors?: PixelEditorSaveMeta['recentColors'];
 }
 
+/** Where a strip's standing frame sits — the base picture the set was drawn
+    from (the last frame of the stand range; see CHARACTER_STRIP_POSES). */
+function standingFrameIndex(poses?: AnimationPoses): number {
+  const stand = poses?.['stand-right'];
+  return stand ? stand.start + stand.count - 1 : 0;
+}
+
 /**
- * The standing frame of a character strip — the base picture the set was
- * drawn from (the last frame of the stand range; see CHARACTER_STRIP_POSES).
- * Falls back to the whole image if the crop can't be made.
+ * The standing frame of a character strip, full size. Falls back to the
+ * whole image if the crop can't be made.
  */
 async function cropStandingFrame(
   dataURI: string,
   props: {frameSize: {x: number; y: number}; poses?: AnimationPoses}
 ): Promise<string> {
-  const stand = props.poses?.['stand-right'];
-  const frame = stand ? stand.start + stand.count - 1 : 0;
   try {
     const img = await toImage(dataURI);
     const canvas = document.createElement('canvas');
@@ -87,7 +91,48 @@ async function cropStandingFrame(
     if (!ctx) {
       return dataURI;
     }
-    ctx.drawImage(img, -frame * props.frameSize.x, 0);
+    ctx.drawImage(img, -standingFrameIndex(props.poses) * props.frameSize.x, 0);
+    return canvas.toDataURL('image/png');
+  } catch {
+    return dataURI;
+  }
+}
+
+// The Alternatives row displays ~64px entries; full-resolution sources
+// would each hold a decoded multi-megabyte bitmap for the dialog's life.
+const ALTERNATIVE_THUMB_PX = 160;
+
+/**
+ * A small standalone thumbnail for an Alternatives entry: a strip's
+ * standing frame, or the whole picture, downscaled. Falls back to the
+ * full image if it can't be made.
+ */
+async function alternativeThumb(
+  dataURI: string,
+  frames?: GeneratedImageResult['frames']
+): Promise<string> {
+  try {
+    const img = await toImage(dataURI);
+    const cell = frames ? frames.frameSize : {x: img.width, y: img.height};
+    const scale = Math.min(1, ALTERNATIVE_THUMB_PX / Math.max(cell.x, cell.y));
+    const canvas = document.createElement('canvas');
+    canvas.width = Math.max(1, Math.round(cell.x * scale));
+    canvas.height = Math.max(1, Math.round(cell.y * scale));
+    const ctx = canvas.getContext('2d');
+    if (!ctx) {
+      return dataURI;
+    }
+    ctx.drawImage(
+      img,
+      (frames ? standingFrameIndex(frames.poses) : 0) * cell.x,
+      0,
+      cell.x,
+      cell.y,
+      0,
+      0,
+      canvas.width,
+      canvas.height
+    );
     return canvas.toDataURL('image/png');
   } catch {
     return dataURI;
@@ -309,7 +354,10 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     reset: resetSession,
     end: endSession,
     push: pushAlternative,
+    setThumb: setAlternativeThumb,
+    anchorSeed,
     noteAsset,
+    seedSourceUrl,
   } = useImageSession(deleteUnreferencedAsset);
   // The gallery card that opened the dialog; focus returns to it on close.
   const triggerRef = useRef<HTMLElement | null>(null);
@@ -343,13 +391,17 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       triggerRef.current = trigger;
       setDialogTarget(key);
       setPaintNewDraft(null);
-      resetSession(
-        alternativeFromAnimation(
-          getStore().getState().animationList.propsByKey[key]
-        )
+      const seed = alternativeFromAnimation(
+        getStore().getState().animationList.propsByKey[key]
       );
+      resetSession(seed);
+      if (seed) {
+        alternativeThumb(seed.thumb, seed.frames).then(thumb =>
+          setAlternativeThumb(seed.id, thumb)
+        );
+      }
     },
-    [resetSession]
+    [resetSession, setAlternativeThumb]
   );
 
   const openNewDialog = useCallback(
@@ -486,9 +538,11 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         return;
       }
 
+      const altId = createUuid();
       pushAlternative({
-        id: createUuid(),
-        thumb: dataURI,
+        id: altId,
+        // A strip's row entry shows its standing frame, not the whole sheet.
+        thumb: await alternativeThumb(dataURI, result.frames),
         sourceUrl,
         dataURI,
         frameSize,
@@ -507,7 +561,9 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           pixelGridSize: result.pixelGridSize,
           generation: result.generation,
         });
-        // A new subject, even though the session continues.
+        // A new subject, even though the session continues; its first
+        // pixels are the baseline later results are measured against.
+        anchorSeed(altId);
         sessionEpochRef.current++;
         setDialogTarget(key);
         return;
@@ -537,6 +593,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       uploadImage,
       dispatch,
       pushAlternative,
+      anchorSeed,
       noteAsset,
       persistIsStale,
     ]
@@ -624,9 +681,10 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           pixelGridSize: meta.pixelGridSize,
           recentColors: meta.recentColors,
         });
+        const altId = createUuid();
         pushAlternative({
-          id: createUuid(),
-          thumb: dataURI,
+          id: altId,
+          thumb: await alternativeThumb(dataURI),
           sourceUrl,
           dataURI,
           frameSize,
@@ -634,7 +692,9 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         });
         noteAsset(sourceUrl);
         setPaintNewDraft(null);
-        // A new subject, even though the session continues.
+        // A new subject, even though the session continues; the painted
+        // pixels are the baseline later results are measured against.
+        anchorSeed(altId);
         sessionEpochRef.current++;
         setDialogTarget(key);
         return;
@@ -666,13 +726,14 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         // follows the project.
         recentColors: meta.recentColors,
       });
+      const editedFrames = framesFromAnimation(props);
       pushAlternative({
         id: createUuid(),
-        thumb: dataURI,
+        thumb: await alternativeThumb(dataURI, editedFrames),
         sourceUrl,
         dataURI,
         frameSize,
-        frames: framesFromAnimation(props),
+        frames: editedFrames,
         pixelGridSize: meta.pixelGridSize,
       });
       noteAsset(sourceUrl);
@@ -686,6 +747,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       uploadEdited,
       dispatch,
       pushAlternative,
+      anchorSeed,
       noteAsset,
       persistIsStale,
     ]
@@ -784,6 +846,11 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           onDelete={handleDelete}
           imageType={imageTypeFromCategories(targetProps?.categories)}
           lockedImageType={lockedImageType}
+          imageChanged={
+            !!seedSourceUrl &&
+            !!targetProps?.sourceUrl &&
+            targetProps.sourceUrl !== seedSourceUrl
+          }
           getDataURI={getTargetDataURI}
           isNameTaken={isNameTaken}
           onGenerateStart={handleGenerateStart}

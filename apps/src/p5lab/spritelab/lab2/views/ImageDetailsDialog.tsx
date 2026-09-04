@@ -51,6 +51,8 @@ interface ImageDetailsDialogProps {
   imageType?: ImageType;
   /** Level-imposed type for new images. */
   lockedImageType?: ImageType;
+  /** This session replaced the image it opened on (closing keeps that). */
+  imageChanged?: boolean;
   /** Current pixels, for generation's "use previous image". */
   getDataURI: () => Promise<string | null>;
   /** Whether another image already uses this name. */
@@ -96,6 +98,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   onDelete,
   imageType,
   lockedImageType,
+  imageChanged,
   getDataURI,
   isNameTaken,
   onGenerateStart,
@@ -368,7 +371,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                 className={moduleStyles.primaryButton}
                 onClick={onClose}
               >
-                Done
+                {imageChanged ? 'Accept' : 'Done'}
               </button>
             </div>
           </>

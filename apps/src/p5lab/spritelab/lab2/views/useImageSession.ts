@@ -96,6 +96,20 @@ export function useImageSession(reclaimAsset: (url?: string) => void) {
     });
   }, []);
 
+  // Make an existing entry the seed: a 'new' dialog has no image to open
+  // on, so its first accepted result becomes the session's baseline (and
+  // gains the seed's eviction protection).
+  const anchorSeed = useCallback((id: string) => {
+    seedId.current = id;
+  }, []);
+
+  // Swap one entry's thumb (e.g. a strip's standing-frame crop, made async).
+  const setThumb = useCallback((id: string, thumb: string) => {
+    setAlternatives(prev =>
+      prev.map(alt => (alt.id === id ? {...alt, thumb} : alt))
+    );
+  }, []);
+
   // An asset this session made or superseded; kept until the session ends.
   const noteAsset = useCallback((url?: string) => {
     if (url) {
@@ -129,6 +143,20 @@ export function useImageSession(reclaimAsset: (url?: string) => void) {
     setAlternatives([]);
   }, [sweep]);
 
+  // What the dialog opened on, for "has this session changed the image".
+  const seedSourceUrl = alternatives.find(
+    a => a.id === seedId.current
+  )?.sourceUrl;
+
   // The callbacks are stable; depend on the pieces, not the object.
-  return {alternatives, push, noteAsset, reset, end};
+  return {
+    alternatives,
+    push,
+    setThumb,
+    anchorSeed,
+    noteAsset,
+    reset,
+    end,
+    seedSourceUrl,
+  };
 }
