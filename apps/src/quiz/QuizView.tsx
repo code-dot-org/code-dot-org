@@ -14,6 +14,7 @@ import useQuizBuilderView from './builder/useQuizBuilderView';
 import styles from './quiz-view.module.scss';
 
 const RESOURCE_PANEL_MIN_WIDTH = 350;
+const CONTENT_MIN_WIDTH = 300;
 
 // Shared shell for both quiz modes - build and attempt.
 const QuizView: React.FunctionComponent<LabProps> = props => {
@@ -37,6 +38,7 @@ const QuizView: React.FunctionComponent<LabProps> = props => {
   const {containerRef, sidebarWidth, sidebarSeparatorProps, isSidebarResizing} =
     useTwoPanelLayout({
       sidebarMinWidth: RESOURCE_PANEL_MIN_WIDTH,
+      contentMinWidth: CONTENT_MIN_WIDTH,
       isSidebarExpanded: isResourcePanelExpanded,
       appName: 'quiz',
     });
