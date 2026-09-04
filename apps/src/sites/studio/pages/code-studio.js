@@ -13,6 +13,8 @@ import '@code-dot-org/component-library-styles/colors.css';
 import '@code-dot-org/component-library-styles/brandOverrides.css';
 import {injectFontAwesome} from '@code-dot-org/fonts';
 import $ from 'jquery';
+//temporarily leave unimported, just to see what all breaks
+//import 'bootstrap-sass';
 import React from 'react';
 
 import hashEmail from '@cdo/apps/code-studio/hashEmail';
