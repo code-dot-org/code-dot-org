@@ -30,8 +30,9 @@ const LOGIN_TYPE_NAMES = {
   [SectionLoginType.email]: i18n.loginTypePersonal().toLowerCase(),
 };
 
-// Plain strings that are not markdown. Spacing between blocks comes from the
-// article's flex gap, so no gutterBottom here.
+// Strings that carry no markdown. Only the link-bearing strings go through
+// Markdown; the rest stay out of the parser so translated text is never
+// misread as syntax. Block spacing comes from the article's flex gap.
 const Paragraph = props => (
   <Typography variant="body2" component="p" {...props} />
 );
@@ -265,25 +266,19 @@ const SignInInstructions = ({
       steps = (
         <ol className={styles.list}>
           <li>
-            <Markdown
-              content={i18n.parentLetter_LMS_Step1({
-                loginTypeName: loginTypeName,
-              })}
-            />
+            <Paragraph>
+              {i18n.parentLetter_LMS_Step1({loginTypeName: loginTypeName})}
+            </Paragraph>
           </li>
           <li>
-            <Markdown
-              content={i18n.parentLetter_LMS_Step2({
-                loginTypeName: loginTypeName,
-              })}
-            />
+            <Paragraph>
+              {i18n.parentLetter_LMS_Step2({loginTypeName: loginTypeName})}
+            </Paragraph>
           </li>
           <li>
-            <Markdown
-              content={i18n.parentLetter_LMS_Step3({
-                loginTypeName: loginTypeName,
-              })}
-            />
+            <Paragraph>
+              {i18n.parentLetter_LMS_Step3({loginTypeName: loginTypeName})}
+            </Paragraph>
           </li>
         </ol>
       );
@@ -300,7 +295,7 @@ const SignInInstructions = ({
             />
           </li>
           <li>
-            <Markdown content={i18n.parentLetterClever2()} />
+            <Paragraph>{i18n.parentLetterClever2()}</Paragraph>
             <img
               src="/shared/images/clever_code_org_logo.png"
               alt={i18n.codeLogoClever()}
@@ -316,10 +311,10 @@ const SignInInstructions = ({
         <ol className={styles.list}>
           <GoToSignIn />
           <li>
-            <Markdown content={i18n.parentLetterGoogle1()} />
+            <Paragraph>{i18n.parentLetterGoogle1()}</Paragraph>
           </li>
           <li>
-            <Markdown content={i18n.parentLetterGoogle2()} />
+            <Paragraph>{i18n.parentLetterGoogle2()}</Paragraph>
           </li>
         </ol>
       );
@@ -330,7 +325,7 @@ const SignInInstructions = ({
         <ol className={styles.list}>
           <GoToSectionSignIn sectionCode={sectionCode} />
           <li>
-            <Markdown content={i18n.parentLetterPicturePassword()} />
+            <Paragraph>{i18n.parentLetterPicturePassword()}</Paragraph>
             {secretPictureUrl && (
               <img
                 src={secretPictureUrl}
@@ -341,7 +336,7 @@ const SignInInstructions = ({
           </li>
           {!secretPictureUrl && (
             <li>
-              <Markdown content={i18n.parentLetterForgotPicturePassword()} />
+              <Paragraph>{i18n.parentLetterForgotPicturePassword()}</Paragraph>
             </li>
           )}
         </ol>
@@ -353,15 +348,15 @@ const SignInInstructions = ({
         <ol className={styles.list}>
           <GoToSectionSignIn sectionCode={sectionCode} />
           <li>
-            <Markdown
-              content={i18n.parentLetterSecretWords({
+            <Paragraph>
+              {i18n.parentLetterSecretWords({
                 secretWords: secretWords ? `(${secretWords})` : '',
               })}
-            />
+            </Paragraph>
           </li>
           {!secretWords && (
             <li>
-              <Markdown content={i18n.parentLetterForgotPassword()} />
+              <Paragraph>{i18n.parentLetterForgotPassword()}</Paragraph>
             </li>
           )}
         </ol>
@@ -374,10 +369,10 @@ const SignInInstructions = ({
         <ol className={styles.list}>
           <GoToSignIn />
           <li>
-            <Markdown content={i18n.parentLetterSignInEmail()} />
+            <Paragraph>{i18n.parentLetterSignInEmail()}</Paragraph>
           </li>
           <li>
-            <Markdown content={i18n.parentLetterForgotPasswordEmail()} />
+            <Paragraph>{i18n.parentLetterForgotPasswordEmail()}</Paragraph>
           </li>
         </ol>
       );

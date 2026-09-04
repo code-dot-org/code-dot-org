@@ -1,7 +1,9 @@
 .header {
   background-color: var(--background-brand-purple-primary-fixed);
   margin-bottom: var(--spacing-p-m);
-  // Browsers drop backgrounds when printing unless told otherwise.
+  // Browsers drop backgrounds when printing unless told otherwise; Chromium
+  // and WebKit still want the prefixed form.
+  -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
 }
 
