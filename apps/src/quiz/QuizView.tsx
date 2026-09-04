@@ -1,7 +1,7 @@
 import classNames from 'classnames';
-import React, {useRef} from 'react';
-import {useResizable} from 'react-resizable-layout';
+import React, {useState} from 'react';
 
+import {useTwoPanelLayout} from '@cdo/apps/lab2/hooks/useTwoPanelLayout';
 import {getAppOptionsIsBuildingQuizQuestions} from '@cdo/apps/lab2/projects/utils';
 import {LabProps} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
@@ -13,8 +13,6 @@ import useQuizBuilderView from './builder/useQuizBuilderView';
 
 import styles from './quiz-view.module.scss';
 
-// Floor for the resource panel's drag-resizable width, in px - also its
-// starting width.
 const RESOURCE_PANEL_MIN_WIDTH = 350;
 
 // Shared shell for both quiz modes - build and attempt.
@@ -29,32 +27,28 @@ const QuizView: React.FunctionComponent<LabProps> = props => {
     ? builderView
     : attemptView;
 
-  const isResourcePanelCollapsed = useAppSelector(
+  const [hasResourcePanelTabs, setHasResourcePanelTabs] = useState(false);
+  const isStandaloneCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
   );
-  const containerRef = useRef<HTMLDivElement>(null);
-  const {
-    position: resourcePanelWidth,
-    separatorProps: resourcePanelSeparatorProps,
-    isDragging: isResizingResourcePanel,
-  } = useResizable({
-    axis: 'x',
-    containerRef,
-    initial: RESOURCE_PANEL_MIN_WIDTH,
-    min: RESOURCE_PANEL_MIN_WIDTH,
-    disabled: isResourcePanelCollapsed,
-  });
+  const isResourcePanelExpanded =
+    hasResourcePanelTabs && !isStandaloneCollapsed;
+
+  const {containerRef, sidebarWidth, sidebarSeparatorProps, isSidebarResizing} =
+    useTwoPanelLayout({
+      sidebarMinWidth: RESOURCE_PANEL_MIN_WIDTH,
+      isSidebarExpanded: isResourcePanelExpanded,
+      appName: 'quiz',
+    });
 
   return (
     <div className={styles.quiz} ref={containerRef}>
       <div
         className={classNames(
           styles.resourcePanel,
-          isResourcePanelCollapsed && styles.resourcePanelCollapsed
+          !isResourcePanelExpanded && styles.resourcePanelCollapsed
         )}
-        style={
-          isResourcePanelCollapsed ? undefined : {width: resourcePanelWidth}
-        }
+        style={isResourcePanelExpanded ? {width: sidebarWidth} : undefined}
       >
         <ResourcePanel
           levelProperties={props.levelProperties}
@@ -62,17 +56,18 @@ const QuizView: React.FunctionComponent<LabProps> = props => {
           hasRun={false}
           hasEdited={false}
           hideAllNavigation
+          onHasTabsChange={setHasResourcePanelTabs}
           {...resourcePanelProps}
         />
       </div>
-      {isResourcePanelCollapsed ? (
-        <div className={styles.divider} />
-      ) : (
+      {isResourcePanelExpanded ? (
         <ResizeBar
           isVertical
-          isDragging={isResizingResourcePanel}
-          separatorProps={resourcePanelSeparatorProps}
+          isDragging={isSidebarResizing}
+          separatorProps={sidebarSeparatorProps}
         />
+      ) : (
+        <div className={styles.divider} />
       )}
       <div className={styles.content}>{workspaceContent}</div>
     </div>
