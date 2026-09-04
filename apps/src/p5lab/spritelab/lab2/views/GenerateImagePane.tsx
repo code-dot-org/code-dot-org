@@ -134,8 +134,8 @@ interface GalleryCardProps {
 
 // Memoized: opening or closing the dialog re-renders the pane, and every
 // card would re-render with it. Thumbnail updates arrive as a changed prop.
-// Deliberately no title attribute and no prompt text: native tooltips are
-// unreliable, and the full prompt lives in the image's dialog.
+// Deliberately no title attribute: the card's label is the image's name
+// alone, and the full prompt lives in the image's dialog.
 // Exported for the label tests.
 export const GalleryCard = React.memo<GalleryCardProps>(
   ({animKey, name, caption, thumb, onOpen}) => (

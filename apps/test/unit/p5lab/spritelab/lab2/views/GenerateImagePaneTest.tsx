@@ -5,9 +5,8 @@ import {GalleryCard} from '@cdo/apps/p5lab/spritelab/lab2/views/GenerateImagePan
 
 // Gallery cards carry no visible caption in the student gallery, so the alt
 // text IS the card's accessible name — these tests pin that a screen reader
-// hears the image's name, and that the card carries no title attribute
-// (native tooltips are deliberately not used; the prompt lives in the
-// dialog, not on the card).
+// hears the image's name and that no title attribute renders (the full
+// prompt lives in the image's dialog, not on the card).
 
 describe('GalleryCard', () => {
   it('names the card by the image name, as the thumbnail alt text', () => {

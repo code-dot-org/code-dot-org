@@ -53,9 +53,9 @@ const TEMPERATURE_LEVEL_DEFAULT = 5;
 const levelToTemperature = (level: number) =>
   (level / TEMPERATURE_LEVEL_MAX) * 2;
 
-// Prompts are otherwise unbounded free text; keep what a request (and the
-// stored generation metadata) carries within reason.
-export const MAX_PROMPT_LENGTH = 1000;
+// The input is the only bound on prompt length: prompts persist verbatim
+// into each image's generation metadata and travel in every request.
+const MAX_PROMPT_LENGTH = 1000;
 
 // Prompt hints, one per type, so the example suits what is being made.
 const PROMPT_PLACEHOLDERS: Record<ImageType, string> = {
