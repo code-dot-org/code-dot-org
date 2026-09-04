@@ -163,17 +163,23 @@ const centers = climbs.boolean('centers on the ladder', 'true');
 // it would be telling the rule a lie about which ladder it is on.
 const topRung = climbs.actor('top rung', {readonly: true});
 /**
- * Where the climber was when this frame's climb began, and whether it is
- * filled in.
+ * Whether a climb has actually happened this frame.
  *
- * The same pair `Turning` keeps and for the same reason: a climb that asked to
- * travel and did not has run into something, and there is no way to notice
- * that except by asking afterwards. The flag is needed because a climb can
- * START in `touch` — a key handler's moment — which is after the step that
- * would have recorded a position, so the first frame of a climb has nothing to
- * compare against and must not be judged.
+ * A climb that asked to travel and did not has run into something, and there
+ * is no way to notice that except by asking afterwards — which the step below
+ * does, in `react`, against where Physics saw this body at the top of the
+ * frame. What that measurement cannot tell on its own is whether the climb
+ * step RAN: a climb can START in `touch`, a key handler's moment, which is
+ * after `adjust` has already been and gone. On that frame the climber has not
+ * climbed and has fallen the ordinary amount, so a measurement would find no
+ * progress and end the climb on the frame it began.
+ *
+ * This used to be half of a pair — the other half was a copy of the starting
+ * height, kept here because `position before` was worked out from the velocity
+ * and could not be trusted to say where a climber had been. Physics records it
+ * now, so only the flag is left, and it is the half that was never about the
+ * position.
  */
-const climbedFrom = climbs.number('climbing from', 0, {readonly: true});
 const climbMeasured = climbs.boolean('climb measured', 'false', {
   readonly: true,
 });
@@ -364,15 +370,8 @@ climbs.step('climb', 'adjust', [
                 key: position.y(rung.get()),
               }),
             ),
-            note('Where it is starting from, for the end of the frame to'),
-            note('subtract — see `climbing from`. A climb that asked to'),
-            note('travel and did not has run into something.'),
-            note('THE TOP OF THE FRAME, which is the same place the climb'),
-            note('below starts from, and not where the actor is standing at'),
-            note('this instant: `move` has already run, so the position here'),
-            note('has this frame’s travel in it and subtracting it from the'),
-            note('answer would measure nothing at all.'),
-            climbedFrom.set(thisActor(), positionBefore.y(thisActor())),
+            note('A climb has happened this frame, so the step in `react`'),
+            note('may judge whether it got anywhere — see `climb measured`.'),
             climbMeasured.set(thisActor(), yes()),
             note('Where this actor was at the top of the frame, plus a'),
             note('frame of climbing. Whatever gravity did to y since then is'),
@@ -453,11 +452,13 @@ climbs.step('stop if the climb got nowhere', 'react', [
     [
       both(climbing.of(thisActor()), climbMeasured.of(thisActor())),
       [
-        note('Up is negative y, so the distance is signed by the direction'),
-        note('and a climb that was pushed BACKWARDS is stopped too.'),
+        note('Against where Physics saw this body at the top of the frame,'),
+        note('which is where the climb below started from. Up is negative'),
+        note('y, so the distance is signed by the direction, and a climb'),
+        note('that was pushed BACKWARDS is stopped too.'),
         got.set(
           times(
-            minus(position.y(thisActor()), climbedFrom.of(thisActor())),
+            minus(position.y(thisActor()), positionBefore.y(thisActor())),
             pick(goingUp.of(thisActor()), n(-1), n(1)),
           ),
         ),

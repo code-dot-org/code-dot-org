@@ -59,17 +59,25 @@ describe('rules/turning.rule', () => {
     ]);
   });
 
-  it('remembers where it was, and that it has been anywhere', () => {
-    // The flag is not redundant. Every position is a place an actor might
-    // really be, so nothing could stand for "not yet" — and without it the
-    // distance from the origin is read as travel that did not happen, and
-    // every actor of this kind turns round on its first frame.
+  it('reads where it was from Physics, and keeps only the bit', () => {
+    // It used to keep a `was at` point of its own, written at the end of its
+    // `decide` step, because `position before` was worked out from the
+    // velocity and so lied about any body something had moved by hand. Physics
+    // records the place now and this rule reads it.
+    //
+    // The flag stays and is not redundant: the record is only written for
+    // bodies present when the frame began, so one added in the middle of a
+    // frame reads the default place — the origin — and every position is
+    // somewhere an actor might really be, so no value could stand for "not
+    // yet". Without it such a body reads its distance from the origin as
+    // travel that did not happen and turns round on the frame it appears.
     const own = meta.properties
       .filter(property => property.readonly)
       .map(property => property.id)
       .sort();
 
-    expect(own).toEqual(['measured', 'was_at']);
+    expect(own).toEqual(['measured']);
+    expect(turningRule).toContain('world_get_Physics_PositionBeforeProperty');
   });
 
   it('asks whether it arrived rather than what is in front of it', () => {

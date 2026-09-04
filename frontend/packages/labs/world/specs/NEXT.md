@@ -61,13 +61,32 @@ Climbing's `climbing from` and the two `was at` points read Motion's record
 or are gone, and no rule's prose has to explain that `position before` is an
 extrapolation.
 
-_Status, 2026-09-03:_ the record is in and the query is gone; Solid, Gravity
-and Climbing read it, and Gravity's landing blocks lost the `frame` socket
-they only took to feed the extrapolation. The three private records are still
-there — retiring them is the next commit's work. The engine's own test
-fixtures (`src/engine/__tests__/fixtures/motionRule.ts`) keep an extrapolating
-`previousPosition` for the hand-written rules the engine tests use; that is
-scaffolding for the engine, not a stock rule, and is left alone.
+_Status, 2026-09-03: done, with one correction._ The record is in and the
+query is gone; Solid, Gravity, Climbing and Turning read it, and Gravity's
+landing blocks lost the `frame` socket they only took to feed the
+extrapolation. Two of the three private records went with it — Climbing's
+`climbing from` and Turning's `was at`, both written and read inside one
+frame, which is what the record answers.
+
+**Prowling's `was at` stays, and this document was wrong to count it.** It
+asks in `decide`, before the frame's moving, where the other two ask in
+`react` after it. At `decide` the record and the position are the same place
+and the distance between them is zero; what a chooser needs is the frame that
+just finished, which only a note taken last time can give. Moving that test to
+`react` would change when a robot re-decides, which is a behaviour change
+rather than a cleanup.
+
+Both flags stay, and neither was ever about the position: Climbing's `climb
+measured` says a climb has actually happened this frame (one can start in
+`touch`, after `adjust` has been and gone), and Turning's `measured` says
+Physics has seen this body at all (a body added mid-frame reads the record's
+default, the origin, and every position is somewhere an actor might really
+be).
+
+The engine's own test fixtures (`src/engine/__tests__/fixtures/motionRule.ts`)
+keep an extrapolating `previousPosition` for the hand-written rules the engine
+tests use; that is scaffolding for the engine, not a stock rule, and is left
+alone.
 
 ## 2. Decide what a project holds when it imports a rule
 

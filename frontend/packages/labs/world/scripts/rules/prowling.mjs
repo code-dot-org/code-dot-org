@@ -145,12 +145,20 @@ const wasOnLadder = prowls.boolean('was on a ladder', 'false', {
 });
 const wasClimbing = prowls.boolean('was climbing', 'false', {readonly: true});
 /**
- * Where it was at the top of the last frame — BOTH axes.
+ * Where it was at the top of the LAST frame — both axes.
  *
  * The fourth junction: a robot that asked to go somewhere and did not is a
  * robot whose direction has run out. `Turning` asks the same question of its
  * own heading, and for the same reason — a wall is not something to look for,
  * it is something you notice by not getting past it.
+ *
+ * IT IS NOT `position before`, and the difference is which frame. Physics
+ * records where a body stood at the top of THIS frame, which is the right
+ * answer for anything asked afterwards — `Turning` and `Climbing` both ask in
+ * `react`, once the frame's moving is over. This rule asks in `decide`, before
+ * any of it has happened, so the record and the position are the same place
+ * and the distance between them is zero. What a chooser needs is the frame
+ * that just finished, which nothing but a note taken last time can give.
  *
  * A POINT rather than a sideways distance, and that is the fix for two things
  * at once. A climber pinned against a floor moves in neither axis and was

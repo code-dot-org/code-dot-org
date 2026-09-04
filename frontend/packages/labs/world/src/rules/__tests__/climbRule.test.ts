@@ -67,9 +67,15 @@ describe('rules/climb.rule', () => {
     // Every read-only one is the rule's own account of a climb in progress,
     // which is what keeps `starts climbing` and `stops climbing` honest — and
     // what stops a project setting `climbing` in mid-air, which is a flight
-    // key with extra steps. `climbing from` and `climb measured` are the pair
-    // that lets a climb notice it has run into something; they are the same
-    // shape `Turning` keeps, and for the same reason.
+    // key with extra steps.
+    //
+    // `climbing from` was here too, holding the height a climb began at,
+    // because `position before` was worked out from the velocity and a climb
+    // that parks its speed could not trust it. Physics records the place now.
+    // `climb measured` stays, and it is the half that was never about the
+    // position: a climb can start in `touch`, after `adjust` has been and
+    // gone, so on that frame no climb has happened and no measurement of one
+    // would mean anything.
     const own = meta.properties
       .filter(property => property.readonly)
       .map(property => property.id)
@@ -78,7 +84,6 @@ describe('rules/climb.rule', () => {
     expect(own).toEqual([
       'climb_measured',
       'climbing',
-      'climbing_from',
       'climbing_up',
       'top_rung',
     ]);

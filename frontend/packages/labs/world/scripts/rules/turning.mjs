@@ -27,7 +27,7 @@ import {
   when,
   yes,
 } from './dsl.mjs';
-import {CanMove, held, velocity} from './motion.mjs';
+import {CanMove, held, positionBefore, velocity} from './motion.mjs';
 
 const rule = defineRule({
   name: 'Turning',
@@ -145,21 +145,21 @@ const points = turns.boolean('points where it goes', 'false');
  */
 const mirrors = turns.boolean('bounces off what stops it', 'false');
 /**
- * Where it was at the top of this frame.
+ * Whether Physics has seen this body yet.
  *
- * Read-only bookkeeping, and a POINT rather than a vector because it is a
- * place. Compared against where it ended up, which is the whole of how this
- * rule notices a wall.
- */
-const wasAt = turns.point('was at', {x: 0, y: 0}, {readonly: true});
-/**
- * Whether `was at` has been filled in.
+ * How this rule notices a wall is to compare where the body ended up against
+ * `position before` — where Physics saw it at the top of the frame — and that
+ * record is only written for bodies present when the frame began. A body added
+ * in the middle of one reads the default place, the origin, until the next
+ * frame starts; and every position is somewhere an actor might really be, so
+ * there is no value the record could hold that would mean "not yet". Hence a
+ * bit that does mean it.
  *
- * The same extra bit `Carrying` needs and for the same reason: on the first
- * frame there is no "where I was", and every position is a place an actor
- * might really be, so there is no value that could stand for "not yet". An
- * actor without it turns on its first frame, because the distance from the
- * origin is not a distance it travelled.
+ * Without it such a body measures its distance from the origin, which is not a
+ * distance it travelled, and turns on the frame it appears.
+ *
+ * This rule kept its own copy of the starting place until Physics recorded
+ * one. The copy is gone; the bit is what was never about the position.
  */
 const measured = turns.boolean('measured', 'false', {readonly: true});
 
@@ -208,9 +208,6 @@ turns.step('go the way it is facing', 'decide', [
       [rotation.set(thisActor(), heading.of(thisActor()))],
     ],
   ]),
-  note('…and where it is starting from, for the other end of the frame to'),
-  note('subtract.'),
-  wasAt.set(thisActor(), position.x(thisActor()), position.y(thisActor())),
 ]);
 
 const got = rule.local('got', 'Number');
@@ -230,11 +227,11 @@ turns.step('turn if it got nowhere', 'react', [
   got.set(
     add(
       times(
-        minus(position.x(thisActor()), wasAt.x(thisActor())),
+        minus(position.x(thisActor()), positionBefore.x(thisActor())),
         axisOf('x', facing()),
       ),
       times(
-        minus(position.y(thisActor()), wasAt.y(thisActor())),
+        minus(position.y(thisActor()), positionBefore.y(thisActor())),
         axisOf('y', facing()),
       ),
     ),
@@ -263,7 +260,9 @@ turns.step('turn if it got nowhere', 'react', [
           both(
             moreThan(absolute(askedX.get()), n(0.01)),
             lessThan(
-              absolute(minus(position.x(thisActor()), wasAt.x(thisActor()))),
+              absolute(
+                minus(position.x(thisActor()), positionBefore.x(thisActor())),
+              ),
               times(absolute(askedX.get()), n(0.5)),
             ),
           ),
@@ -272,7 +271,9 @@ turns.step('turn if it got nowhere', 'react', [
           both(
             moreThan(absolute(askedY.get()), n(0.01)),
             lessThan(
-              absolute(minus(position.y(thisActor()), wasAt.y(thisActor()))),
+              absolute(
+                minus(position.y(thisActor()), positionBefore.y(thisActor())),
+              ),
               times(absolute(askedY.get()), n(0.5)),
             ),
           ),
