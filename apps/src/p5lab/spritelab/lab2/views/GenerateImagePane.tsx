@@ -122,14 +122,27 @@ function repointAnimation(
   return current.propsByKey[key]?.sourceUrl;
 }
 
-const MAX_GALLERY_LABEL_LENGTH = 100;
-
 // Student prompts are unbounded free text; cap what the card's alt text and
-// tooltip carry.
+// tooltip carry. 125 characters is the classic JAWS chunk size for alt text,
+// the conventional ceiling for a name read in one piece.
+const MAX_GALLERY_LABEL_LENGTH = 125;
+
 function truncateLabel(label: string | undefined): string | undefined {
   return label && label.length > MAX_GALLERY_LABEL_LENGTH
     ? `${label.slice(0, MAX_GALLERY_LABEL_LENGTH - 1).trimEnd()}…`
     : label;
+}
+
+// Students see auto-named images, so the prompt describes the picture better
+// than the name does; the advanced gallery labels by name, which it shows
+// and lets the user edit.
+export function galleryCardLabel(
+  props: {name?: string; generation?: {prompt: string}} | undefined,
+  advanced?: boolean
+): string | undefined {
+  return truncateLabel(
+    advanced ? props?.name : props?.generation?.prompt || props?.name
+  );
 }
 
 interface GalleryCardProps {
@@ -144,7 +157,8 @@ interface GalleryCardProps {
 
 // Memoized: opening or closing the dialog re-renders the pane, and every
 // card would re-render with it. Thumbnail updates arrive as a changed prop.
-const GalleryCard = React.memo<GalleryCardProps>(
+// Exported for the label tests.
+export const GalleryCard = React.memo<GalleryCardProps>(
   ({animKey, label, caption, thumb, onOpen}) => (
     <div className={moduleStyles.imageCard}>
       <button
@@ -686,11 +700,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           <GalleryCard
             key={key}
             animKey={key}
-            // Students see auto-named images; the prompt describes them
-            // better than the name does.
-            label={truncateLabel(
-              advanced ? props?.name : props?.generation?.prompt || props?.name
-            )}
+            label={galleryCardLabel(props, advanced)}
             caption={advanced ? props?.name : undefined}
             thumb={
               getTrimmedThumbnail(props?.name) ||
