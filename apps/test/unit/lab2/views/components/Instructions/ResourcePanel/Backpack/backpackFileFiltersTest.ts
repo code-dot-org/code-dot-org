@@ -57,13 +57,13 @@ describe('sortBackpackFiles', () => {
     ).toEqual(['zebra.png', 'style.css', 'index.html', 'app.js']);
   });
 
-  it('sorts by category, then by name within a category', () => {
+  it('sorts by category, then extension, then name', () => {
     expect(
       sortBackpackFiles(
-        named('b.png', 'app.js', 'a.png', 'index.html'),
+        named('b.png', 'app.js', 'a.png', 'index.html', 'z.gif', 'a.jpg'),
         'file-type'
       ).map(({fileName}) => fileName)
-    ).toEqual(['a.png', 'b.png', 'index.html', 'app.js']);
+    ).toEqual(['z.gif', 'a.jpg', 'a.png', 'b.png', 'index.html', 'app.js']);
   });
 
   it('leaves the input array untouched', () => {

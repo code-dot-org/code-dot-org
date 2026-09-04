@@ -25,7 +25,7 @@ const SORT_OPTIONS: IconDropdownOption[] = [
   {
     value: 'file-type',
     label: 'File type',
-    icon: {iconName: 'file', iconStyle: 'regular'},
+    icon: {iconName: 'file-arrow-down', iconStyle: 'solid'},
   },
 ];
 

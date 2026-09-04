@@ -94,8 +94,13 @@ const FILE_CATEGORIES: FileCategory[] = [
 
 const OTHER_CATEGORY = FILE_CATEGORIES[FILE_CATEGORIES.length - 1];
 
+function getFileExtension(fileName: string) {
+  const lastDot = fileName.lastIndexOf('.');
+  return lastDot === -1 ? '' : fileName.slice(lastDot + 1).toLowerCase();
+}
+
 export function getFileCategory(fileName: string): FileCategory {
-  const fileExtension = fileName.split('.').pop()?.toLowerCase();
+  const fileExtension = getFileExtension(fileName);
   if (!fileExtension) {
     return OTHER_CATEGORY;
   }
@@ -137,7 +142,12 @@ export function sortBackpackFiles<FileType extends {fileName: string}>(
         const categoryDifference =
           FILE_CATEGORIES.indexOf(getFileCategory(first.fileName)) -
           FILE_CATEGORIES.indexOf(getFileCategory(second.fileName));
-        return categoryDifference || byName(first, second);
+        const extensionDifference = getFileExtension(
+          first.fileName
+        ).localeCompare(getFileExtension(second.fileName));
+        return (
+          categoryDifference || extensionDifference || byName(first, second)
+        );
       });
   }
 }
