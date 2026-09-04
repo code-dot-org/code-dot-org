@@ -101,7 +101,7 @@ module Cdo
     #
     # @see apps/src/metrics/statsigHelpers.js
     #
-    # @return [String, nil] the anonymous (signed-out) user ID in UUID v4 format
+    # @return [String] the anonymous (signed-out) user ID in UUID v4 format
     def statsig_stable_id
       @statsig_stable_id ||= begin
         # This cookie is used by the Statsig SDK for both JS and Ruby.
