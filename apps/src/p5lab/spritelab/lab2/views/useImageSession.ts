@@ -96,13 +96,6 @@ export function useImageSession(reclaimAsset: (url?: string) => void) {
     });
   }, []);
 
-  // Make an existing entry the seed: a 'new' dialog has no image to open
-  // on, so its first accepted result becomes the session's baseline (and
-  // gains the seed's eviction protection).
-  const anchorSeed = useCallback((id: string) => {
-    seedId.current = id;
-  }, []);
-
   // Swap one entry's thumb (e.g. a strip's standing-frame crop, made async).
   const setThumb = useCallback((id: string, thumb: string) => {
     setAlternatives(prev =>
@@ -149,14 +142,5 @@ export function useImageSession(reclaimAsset: (url?: string) => void) {
   )?.sourceUrl;
 
   // The callbacks are stable; depend on the pieces, not the object.
-  return {
-    alternatives,
-    push,
-    setThumb,
-    anchorSeed,
-    noteAsset,
-    reset,
-    end,
-    seedSourceUrl,
-  };
+  return {alternatives, push, setThumb, noteAsset, reset, end, seedSourceUrl};
 }

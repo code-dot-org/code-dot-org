@@ -355,7 +355,6 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     end: endSession,
     push: pushAlternative,
     setThumb: setAlternativeThumb,
-    anchorSeed,
     noteAsset,
     seedSourceUrl,
   } = useImageSession(deleteUnreferencedAsset);
@@ -538,9 +537,8 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         return;
       }
 
-      const altId = createUuid();
       pushAlternative({
-        id: altId,
+        id: createUuid(),
         // A strip's row entry shows its standing frame, not the whole sheet.
         thumb: await alternativeThumb(dataURI, result.frames),
         sourceUrl,
@@ -561,9 +559,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           pixelGridSize: result.pixelGridSize,
           generation: result.generation,
         });
-        // A new subject, even though the session continues; its first
-        // pixels are the baseline later results are measured against.
-        anchorSeed(altId);
+        // A new subject, even though the session continues.
         sessionEpochRef.current++;
         setDialogTarget(key);
         return;
@@ -593,7 +589,6 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       uploadImage,
       dispatch,
       pushAlternative,
-      anchorSeed,
       noteAsset,
       persistIsStale,
     ]
@@ -681,9 +676,8 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           pixelGridSize: meta.pixelGridSize,
           recentColors: meta.recentColors,
         });
-        const altId = createUuid();
         pushAlternative({
-          id: altId,
+          id: createUuid(),
           thumb: await alternativeThumb(dataURI),
           sourceUrl,
           dataURI,
@@ -692,9 +686,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         });
         noteAsset(sourceUrl);
         setPaintNewDraft(null);
-        // A new subject, even though the session continues; the painted
-        // pixels are the baseline later results are measured against.
-        anchorSeed(altId);
+        // A new subject, even though the session continues.
         sessionEpochRef.current++;
         setDialogTarget(key);
         return;
@@ -747,7 +739,6 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       uploadEdited,
       dispatch,
       pushAlternative,
-      anchorSeed,
       noteAsset,
       persistIsStale,
     ]
@@ -846,10 +837,10 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           onDelete={handleDelete}
           imageType={imageTypeFromCategories(targetProps?.categories)}
           lockedImageType={lockedImageType}
+          // No seed means the session started from nothing; any image
+          // differs from that.
           imageChanged={
-            !!seedSourceUrl &&
-            !!targetProps?.sourceUrl &&
-            targetProps.sourceUrl !== seedSourceUrl
+            !!targetProps?.sourceUrl && targetProps.sourceUrl !== seedSourceUrl
           }
           getDataURI={getTargetDataURI}
           isNameTaken={isNameTaken}
