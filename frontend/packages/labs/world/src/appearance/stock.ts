@@ -116,6 +116,27 @@ function pulse(
   };
 }
 
+/**
+ * The sprites a picture picker should offer: every stock image EXCEPT the ones
+ * that exist only as an animation's frames.
+ *
+ * A strip is a truthful picture of a file and a useless one to place: six
+ * coins in a row is not a coin, and an actor given `coinSpin.png` as its
+ * picture draws all six at once. They are in the library because an animation
+ * import has to bring its frames with it, and they are offered by the
+ * ANIMATION picker, where they read as what they are.
+ *
+ * Worked out from the animations rather than flagged on the sprites, so that a
+ * new animation takes its own strip out of the picture list by existing — a
+ * flag would be a second place to remember.
+ */
+export const pictureSprites = (): readonly StockSprite[] => {
+  const framesOfAnimations = new Set(
+    STOCK_ANIMATIONS.flatMap(animation => animation.sprites),
+  );
+  return STOCK_SPRITES.filter(sprite => !framesOfAnimations.has(sprite.id));
+};
+
 /** The images, in the order the picker offers them. */
 export const STOCK_SPRITES: readonly StockSprite[] = [
   {

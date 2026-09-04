@@ -1175,6 +1175,10 @@ export const AnimationEditor = ({
           {importingSprite && (
             <ImportAppearanceDialog
               kind="sprite"
+              // FRAMES are being cut from whatever this picks, so the strips
+              // belong here — this is the one caller for which a spritesheet
+              // is the answer rather than the mistake.
+              forFrames
               onImport={importSprite}
               // Back to the pictures the project already has, not out of the
               // choosing altogether: this was a detour, not the errand.

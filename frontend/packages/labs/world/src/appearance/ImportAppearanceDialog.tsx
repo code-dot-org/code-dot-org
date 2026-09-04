@@ -10,14 +10,16 @@ import {useState} from 'react';
 
 import {Dialog} from '@code-dot-org/component-library/dialog';
 
+import {AnimationPreview} from './AnimationPreview';
 import type {AppearanceKind} from './appearanceImport';
 import styles from './importAppearanceDialog.module.css';
 import {sheetFileName} from './sheetFile';
 import {
+  pictureSprites,
+  STOCK_SPRITES,
   spriteFileName,
   stockSprite,
   STOCK_ANIMATIONS,
-  STOCK_SPRITES,
   type StockAnimation,
   type StockSprite,
 } from './stock';
@@ -29,6 +31,15 @@ export interface ImportAppearanceDialogProps {
   onImport: (chosen: StockSprite | StockAnimation) => void;
   /** Dismissed without choosing. */
   onCancel: () => void;
+  /**
+   * Whether the picture is being chosen to cut FRAMES from.
+   *
+   * The one place a strip is the right answer. Giving an actor its picture and
+   * giving an animation frame its source are the same dialog and opposite
+   * questions: `coinSpin.png` as an actor's picture draws six coins at once,
+   * and as a frame's source it is the whole point.
+   */
+  forFrames?: boolean;
 }
 
 /** The files one sprite lands as: the image, and the grid file if it is a grid. */
@@ -55,24 +66,32 @@ export const addedFiles = (item: StockSprite | StockAnimation): string[] =>
         }),
       ];
 
-/** The image a row shows: the sprite itself, or the first sprite an animation reads. */
-const previewUrl = (item: StockSprite | StockAnimation): string | undefined =>
-  'dataUrl' in item
-    ? item.dataUrl
-    : stockSprite(item.sprites[0] ?? '')?.dataUrl;
+/** The image a sprite row shows, which is the sprite. */
+const previewUrl = (item: StockSprite): string => item.dataUrl;
 
 export const ImportAppearanceDialog = ({
   kind,
   onImport,
   onCancel,
+  forFrames = false,
 }: ImportAppearanceDialogProps) => {
   // Picking a row selects it; `Import` commits — the same deferred choice the
   // rule and effect pickers make, for the same reason.
   const [chosen, setChosen] = useState<StockSprite | StockAnimation | null>(
     null,
   );
+  // PICTURES, not every image in the library: the strips an animation is made
+  // of are offered by the animation picker, where they read as what they are.
+  // Placing one as an actor's picture draws all six coins at once.
+  //
+  // UNLESS FRAMES ARE BEING CUT FROM IT, which is the animation editor asking,
+  // and the one place a strip is the answer rather than the mistake.
   const items: ReadonlyArray<StockSprite | StockAnimation> =
-    kind === 'sprite' ? STOCK_SPRITES : STOCK_ANIMATIONS;
+    kind === 'sprite'
+      ? forFrames
+        ? STOCK_SPRITES
+        : pictureSprites()
+      : STOCK_ANIMATIONS;
 
   return (
     <Dialog
@@ -109,12 +128,18 @@ export const ImportAppearanceDialog = ({
                 onClick={() => setChosen(item)}
                 onDoubleClick={() => onImport(item)}
               >
-                <img
-                  className={styles.preview}
-                  src={previewUrl(item)}
-                  alt=""
-                  aria-hidden="true"
-                />
+                {'dataUrl' in item ? (
+                  <img
+                    className={styles.preview}
+                    src={previewUrl(item)}
+                    alt=""
+                    aria-hidden="true"
+                  />
+                ) : (
+                  // An animation shows itself PLAYING — see `AnimationPreview`
+                  // on why a strip is the wrong picture of one.
+                  <AnimationPreview animation={item} />
+                )}
                 <span className={styles.text}>
                   <Typography component="span" variant="label2" color="inherit">
                     {item.name}
