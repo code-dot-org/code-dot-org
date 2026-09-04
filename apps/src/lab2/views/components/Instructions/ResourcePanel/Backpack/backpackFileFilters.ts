@@ -56,7 +56,7 @@ const FILE_CATEGORIES: FileCategory[] = [
   },
   {
     id: 'javascript',
-    label: 'Javascript',
+    label: 'JavaScript',
     icon: {iconName: 'js', iconStyle: 'regular', className: BRAND_ICON_CLASS},
     extensions: ['js'],
   },
