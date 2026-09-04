@@ -995,12 +995,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     musicProjects
   );
 
-  // The Code and Images tabs stay mounted behind a clip-path, which hides
-  // them visually but leaves their contents (the whole Blockly workspace)
-  // in the tab order and the accessibility tree. Inert while hidden.
-  // Set via refs: React 18's JSX has no inert attribute.
+  // Hidden tabs stay mounted behind a clip-path, which hides them visually
+  // but leaves their contents (workspace, palette, grid) in the tab order
+  // and the accessibility tree. Inert while hidden.
+  // Set via refs: React 18's JSX has no inert attribute. The mount flags
+  // are deps because a wrapper can first render while its tab is hidden
+  // (the Images idle pre-mount), after the last activeTab change.
   const codeWrapperRef = useRef<HTMLDivElement>(null);
   const imagesWrapperRef = useRef<HTMLDivElement>(null);
+  const worldWrapperRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (codeWrapperRef.current) {
       codeWrapperRef.current.inert = activeTab !== 'Code';
@@ -1008,7 +1011,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     if (imagesWrapperRef.current) {
       imagesWrapperRef.current.inert = activeTab !== 'Images';
     }
-  }, [activeTab]);
+    if (worldWrapperRef.current) {
+      worldWrapperRef.current.inert = activeTab !== 'World';
+    }
+  }, [activeTab, imagesMounted, worldMounted]);
 
   // The scene Play (re)starts from: null means the beginning (the first
   // scene). Clicking a preview sets it to the previewed scene; entering Play
@@ -1503,6 +1509,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
         {worldTabEnabled && worldMounted && (
           <div
+            ref={worldWrapperRef}
             className={moduleStyles.codeTabWrapper}
             style={{
               clipPath: activeTab === 'World' ? 'none' : 'inset(100%)',

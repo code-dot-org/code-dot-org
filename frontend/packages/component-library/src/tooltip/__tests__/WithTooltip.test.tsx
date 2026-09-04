@@ -69,6 +69,42 @@ describe('Design System - WithTooltip', () => {
     expect(screen.queryByText('tooltipText')).not.toBeInTheDocument();
   });
 
+  it('a hideTooltip call on a hover-shown tooltip does not swallow the next focus', async () => {
+    const TestComponent = () => {
+      const tooltipRef = useRef<WithTooltipHandle>(null);
+
+      return (
+        <>
+          <button
+            type="button"
+            onClick={() => tooltipRef.current?.hideTooltip()}
+          >
+            hide it
+          </button>
+          <WithTooltip
+            ref={tooltipRef}
+            tooltipProps={{tooltipId: 'tooltip1', text: 'tooltipText'}}
+          >
+            <button type="button">hover me</button>
+          </WithTooltip>
+        </>
+      );
+    };
+    render(<TestComponent />);
+    const trigger = screen.getByText('hover me');
+
+    // Shown by hover while the trigger is unfocused (a window-blur failsafe
+    // hides exactly this way); the suppression must not arm.
+    await user.hover(trigger);
+    expect(await screen.findByText('tooltipText')).toBeInTheDocument();
+    await user.click(screen.getByText('hide it'));
+    expect(screen.queryByText('tooltipText')).not.toBeInTheDocument();
+
+    trigger.focus();
+
+    expect(await screen.findByText('tooltipText')).toBeInTheDocument();
+  });
+
   it('a hideTooltip call while hidden does not swallow the next focus', async () => {
     const TestComponent = () => {
       const tooltipRef = useRef<WithTooltipHandle>(null);

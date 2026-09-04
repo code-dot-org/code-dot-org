@@ -3,7 +3,7 @@ import {
   WithTooltipHandle,
 } from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
-import React, {useEffect, useMemo, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -21,6 +21,9 @@ const GRID_PIXELS = 528;
 // scrolls instead (cells get too small to paint).
 const MIN_GRID_PIXELS = 320;
 
+// Rendered against a scene that has no world yet; never painted through.
+const EMPTY_GRID = createEmptyWorld().grid;
+
 // Number keys 1-9 pick the first nine palette items from anywhere in the
 // tab; 0 picks Erase.
 const SHORTCUT_COUNT = 9;
@@ -33,6 +36,76 @@ const ARROW_STEPS: Record<string, [number, number] | undefined> = {
   ArrowLeft: [0, -1],
   ArrowRight: [0, 1],
 };
+
+interface WorldRowProps {
+  row: number;
+  sceneSize: number;
+  /** This row of the grid; identity changes only when a paint lands. */
+  cells?: (WorldCell | null)[];
+  thumbsByImage: ReadonlyMap<string, string | undefined>;
+  /** The cursor's column while it is on this row; -1 otherwise. */
+  cursorCol: number;
+  registerCell: (
+    row: number,
+    col: number,
+    el: HTMLButtonElement | null
+  ) => void;
+  onCellPointerDown: (
+    event: React.PointerEvent<HTMLButtonElement>,
+    row: number,
+    col: number
+  ) => void;
+  onCellPointerEnter: (
+    event: React.PointerEvent<HTMLButtonElement>,
+    row: number,
+    col: number
+  ) => void;
+  onCellClick: (
+    event: React.MouseEvent<HTMLButtonElement>,
+    row: number,
+    col: number
+  ) => void;
+}
+
+// Memoized: an arrow-key cursor move re-renders the row it left and the row
+// it entered, not every cell on the board (24x24 worlds at key-repeat rate).
+const WorldRow = React.memo<WorldRowProps>(
+  ({
+    row,
+    sceneSize,
+    cells,
+    thumbsByImage,
+    cursorCol,
+    registerCell,
+    onCellPointerDown,
+    onCellPointerEnter,
+    onCellClick,
+  }) => (
+    <div role="row" className={moduleStyles.worldRow}>
+      {Array.from({length: sceneSize}, (_, col) => {
+        const cell = cells?.[col];
+        const thumb = cell ? thumbsByImage.get(cell.image) : undefined;
+        return (
+          <button
+            key={col}
+            ref={el => registerCell(row, col, el)}
+            type="button"
+            role="gridcell"
+            aria-label={cell ? `${cell.image}, ${cell.kind}` : 'empty'}
+            tabIndex={col === cursorCol ? 0 : -1}
+            className={moduleStyles.worldCell}
+            onPointerDown={event => onCellPointerDown(event, row, col)}
+            onPointerEnter={event => onCellPointerEnter(event, row, col)}
+            onClick={event => onCellClick(event, row, col)}
+          >
+            {thumb && <img src={thumb} alt="" />}
+          </button>
+        );
+      })}
+    </div>
+  )
+);
+WorldRow.displayName = 'WorldRow';
 
 // WithTooltip preconfigured for the palette: a small bubble below the item,
 // so the next item to the right stays readable while it shows.
@@ -141,14 +214,22 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     ],
     [palette]
   );
+  // A selection can outlive its image (deleted or recategorized on the
+  // Images tab — the reference scrub covers cells and blocks, not this);
+  // one the palette no longer offers counts as no selection.
+  const effectiveSelected =
+    selected === 'erase' ||
+    (selected && palette.some(item => item.image === selected.image))
+      ? selected
+      : null;
   const selectedIndex =
-    selected === 'erase'
+    effectiveSelected === 'erase'
       ? selections.length - 1
-      : selected
-      ? palette.findIndex(item => item.image === selected.image)
+      : effectiveSelected
+      ? palette.findIndex(item => item.image === effectiveSelected.image)
       : -1;
 
-  const grid = world?.grid ?? createEmptyWorld().grid;
+  const grid = world?.grid ?? EMPTY_GRID;
 
   // Screen-reader narration for actions whose visible result is a silent
   // DOM change (placements, removals, number-key choices). A no-break
@@ -167,20 +248,22 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     announce(`${selectionLabel(selection)} chosen.`);
   };
 
-  // Returns what the press did, so keyboard activation can narrate it.
+  // Returns what the press did, so the result can be narrated.
   const paintCell = (
     row: number,
     col: number,
     erase: boolean
   ): 'placed' | 'removed' | null => {
-    if (!selected) {
+    if (!effectiveSelected) {
       return null;
     }
-    const erasing = erase || selected === 'erase';
+    const erasing = erase || effectiveSelected === 'erase';
     onPaintCell(
       row,
       col,
-      erasing ? null : {image: selected.image, kind: selected.kind}
+      erasing
+        ? null
+        : {image: effectiveSelected.image, kind: effectiveSelected.kind}
     );
     return erasing ? 'removed' : 'placed';
   };
@@ -190,7 +273,8 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   const strokeErase = useRef(false);
   const startStroke = (row: number, col: number) => {
     strokeErase.current =
-      selected !== 'erase' && grid[row]?.[col]?.image === selected?.image;
+      effectiveSelected !== 'erase' &&
+      grid[row]?.[col]?.image === effectiveSelected?.image;
     return paintCell(row, col, strokeErase.current);
   };
 
@@ -223,32 +307,38 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   }, []);
 
   // 1-9 and 0 work from the grid and the palette alike, so an item can be
-  // swapped without leaving the grid.
-  const handleShortcutKey = (event: React.KeyboardEvent): boolean => {
-    if (event.key >= '1' && event.key <= '9') {
+  // swapped without leaving the grid; the palette passes focusAndChoose so
+  // the checked radio stays the group's tab stop.
+  const handleShortcutKey = (
+    event: React.KeyboardEvent,
+    chooseAt: (index: number) => void = index => choose(selections[index])
+  ): boolean => {
+    // Browser chords (tab switching, zoom reset) must not also select.
+    if (event.ctrlKey || event.metaKey || event.altKey) {
+      return false;
+    }
+    if (event.key >= '1' && Number(event.key) <= SHORTCUT_COUNT) {
       const index = Number(event.key) - 1;
       if (index < palette.length) {
-        choose(selections[index]);
+        chooseAt(index);
       }
       return true;
     }
     if (event.key === ERASE_SHORTCUT) {
-      if (palette.length > 0) {
-        choose('erase');
-      }
+      chooseAt(selections.length - 1);
       return true;
     }
     return false;
   };
 
   const activateCellByKeyboard = (row: number, col: number) => {
-    if (!selected) {
+    if (!effectiveSelected) {
       announce('Choose an item first: press 1 to 9, or 0 for Erase.');
       return;
     }
     const did = startStroke(row, col);
-    if (did === 'placed' && selected !== 'erase') {
-      announce(`${selected.image} placed.`);
+    if (did === 'placed' && effectiveSelected !== 'erase') {
+      announce(`${effectiveSelected.image} placed.`);
     } else if (did === 'removed') {
       announce('Removed.');
     }
@@ -282,8 +372,12 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     if (event.key === 'Delete' || event.key === 'Backspace') {
       event.preventDefault();
       paintKeyHeld.current = false;
-      onPaintCell(cursorRow, cursorCol, null);
-      announce('Removed.');
+      // Only a held cell: clearing empty cells would stream false
+      // "Removed." announcements on key repeat and restart the preview.
+      if (grid[cursorRow]?.[cursorCol]) {
+        onPaintCell(cursorRow, cursorCol, null);
+        announce('Removed.');
+      }
       return;
     }
     paintKeyHeld.current = false;
@@ -295,40 +389,99 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     }
   };
 
+  // The memoized rows need stable handlers; these read the live logic
+  // through a ref, assigned after every commit.
+  const latest = useRef({startStroke, paintCell, activateCellByKeyboard});
+  useEffect(() => {
+    latest.current = {startStroke, paintCell, activateCellByKeyboard};
+  });
+  const registerCell = useCallback(
+    (row: number, col: number, el: HTMLButtonElement | null) => {
+      const key = `${row}-${col}`;
+      if (el) {
+        cellRefs.current.set(key, el);
+      } else {
+        cellRefs.current.delete(key);
+      }
+    },
+    []
+  );
+  const handleCellPointerDown = useCallback(
+    (
+      event: React.PointerEvent<HTMLButtonElement>,
+      row: number,
+      col: number
+    ) => {
+      // Touch implicitly captures the pointer on the pressed cell, which
+      // would keep drag painting's enter events from the neighbors.
+      event.currentTarget.releasePointerCapture?.(event.pointerId);
+      // Keyboard use resumes from the pressed cell. The explicit focus is
+      // for Safari and macOS Firefox, which don't focus a pressed button.
+      event.currentTarget.focus();
+      setCursor({row, col});
+      latest.current.startStroke(row, col);
+    },
+    []
+  );
+  const handleCellPointerEnter = useCallback(
+    (
+      event: React.PointerEvent<HTMLButtonElement>,
+      row: number,
+      col: number
+    ) => {
+      if (event.buttons & 1) {
+        latest.current.paintCell(row, col, strokeErase.current);
+      }
+    },
+    []
+  );
+  // Physical Enter and Space are handled in keydown; a detail-0 click is
+  // assistive tech activating the cell without key events.
+  const handleCellClick = useCallback(
+    (event: React.MouseEvent<HTMLButtonElement>, row: number, col: number) => {
+      if (event.detail === 0) {
+        latest.current.activateCellByKeyboard(row, col);
+      }
+    },
+    []
+  );
+
   // Radio-style palette: one tab stop, arrows move AND choose. Up and Down
   // step by the measured items-per-row, so a wrapped palette walks as the
   // grid it looks like.
   const paletteRefs = useRef<(HTMLButtonElement | null)[]>([]);
-  paletteRefs.current.length = selections.length;
   const focusAndChoose = (index: number) => {
     const clamped = Math.min(Math.max(index, 0), selections.length - 1);
     paletteRefs.current[clamped]?.focus();
     choose(selections[clamped]);
   };
   const handlePaletteKeyDown = (event: React.KeyboardEvent) => {
-    if (handleShortcutKey(event)) {
+    if (handleShortcutKey(event, focusAndChoose)) {
+      return;
+    }
+    if (!(event.key in ARROW_STEPS)) {
       return;
     }
     const count = selections.length;
-    if (count === 0) {
-      return;
-    }
     const focusedIndex = paletteRefs.current.findIndex(
       el => el === document.activeElement
     );
     const current =
       focusedIndex >= 0 ? focusedIndex : Math.max(selectedIndex, 0);
     const items = paletteRefs.current;
-    // Items before the first line wrap share the first item's top. Viewport
-    // coordinates, because each item sits inside its own tooltip wrapper
-    // and offsets within it are meaningless.
-    const topOf = (el: HTMLButtonElement | null) =>
-      el ? Math.round(el.getBoundingClientRect().top) : 0;
     let perRow = count;
-    for (let i = 1; i < count; i++) {
-      if (items[i] && topOf(items[i]) !== topOf(items[0])) {
-        perRow = i;
-        break;
+    if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+      // Items before the first line wrap share the first item's top.
+      // Viewport coordinates, because each item sits inside its own tooltip
+      // wrapper and offsets within it are meaningless.
+      const topOf = (el: HTMLButtonElement | null) =>
+        el ? Math.round(el.getBoundingClientRect().top) : 0;
+      const firstTop = topOf(items[0]);
+      for (let i = 1; i < count; i++) {
+        if (items[i] && topOf(items[i]) !== firstTop) {
+          perRow = i;
+          break;
+        }
       }
     }
     let next = -1;
@@ -389,8 +542,8 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
             tooltipId={`world-palette-${index}`}
             text={
               shortcutFor(index)
-                ? `${item.image} (${shortcutFor(index)})`
-                : item.image
+                ? `${item.image}, ${item.kind} (${shortcutFor(index)})`
+                : `${item.image}, ${item.kind}`
             }
           >
             <button
@@ -411,29 +564,29 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
             </button>
           </PaletteTooltip>
         ))}
-        {palette.length > 0 && (
-          <PaletteTooltip
-            tooltipId="world-palette-erase"
-            text={`Erase (${ERASE_SHORTCUT})`}
+        {/* Unconditional: with no images left, Erase is still the only way
+            a pointer user can clear placed cells. */}
+        <PaletteTooltip
+          tooltipId="world-palette-erase"
+          text={`Erase (${ERASE_SHORTCUT})`}
+        >
+          <button
+            ref={el => (paletteRefs.current[palette.length] = el)}
+            type="button"
+            role="radio"
+            aria-checked={effectiveSelected === 'erase'}
+            aria-keyshortcuts={ERASE_SHORTCUT}
+            tabIndex={Math.max(selectedIndex, 0) === palette.length ? 0 : -1}
+            className={classNames(
+              moduleStyles.worldPaletteItem,
+              moduleStyles.worldPaletteErase,
+              effectiveSelected === 'erase' && moduleStyles.worldPaletteSelected
+            )}
+            onClick={() => choose('erase')}
           >
-            <button
-              ref={el => (paletteRefs.current[palette.length] = el)}
-              type="button"
-              role="radio"
-              aria-checked={selected === 'erase'}
-              aria-keyshortcuts={ERASE_SHORTCUT}
-              tabIndex={selectedIndex === selections.length - 1 ? 0 : -1}
-              className={classNames(
-                moduleStyles.worldPaletteItem,
-                moduleStyles.worldPaletteErase,
-                selected === 'erase' && moduleStyles.worldPaletteSelected
-              )}
-              onClick={() => choose('erase')}
-            >
-              Erase
-            </button>
-          </PaletteTooltip>
-        )}
+            Erase
+          </button>
+        </PaletteTooltip>
         {!palette.length && (
           <span className={moduleStyles.worldEmpty}>
             Create some images on the Images tab first.
@@ -454,60 +607,23 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
           // Focus lives on the cursor cell (roving tabindex).
           tabIndex={-1}
           className={moduleStyles.worldGrid}
+          style={{'--world-cell': `${cellPixels}px`} as React.CSSProperties}
           onKeyDown={handleGridKeyDown}
           onKeyUp={handleGridKeyUp}
         >
           {Array.from({length: sceneSize}, (_, row) => (
-            <div key={row} role="row" className={moduleStyles.worldRow}>
-              {Array.from({length: sceneSize}, (_, col) => {
-                const cell = grid[row]?.[col];
-                const thumb = cell && thumbsByImage.get(cell.image);
-                return (
-                  <button
-                    key={`${row}-${col}`}
-                    ref={el => {
-                      if (el) {
-                        cellRefs.current.set(`${row}-${col}`, el);
-                      } else {
-                        cellRefs.current.delete(`${row}-${col}`);
-                      }
-                    }}
-                    type="button"
-                    role="gridcell"
-                    aria-rowindex={row + 1}
-                    aria-colindex={col + 1}
-                    aria-label={cell ? `${cell.image}, ${cell.kind}` : 'empty'}
-                    tabIndex={row === cursorRow && col === cursorCol ? 0 : -1}
-                    className={moduleStyles.worldCell}
-                    style={{width: cellPixels, height: cellPixels}}
-                    // Touch implicitly captures the pointer on the pressed cell,
-                    // which would keep drag painting's enter events from the
-                    // neighbors — release it.
-                    onPointerDown={e => {
-                      e.currentTarget.releasePointerCapture?.(e.pointerId);
-                      // Keyboard use resumes from the pressed cell.
-                      setCursor({row, col});
-                      startStroke(row, col);
-                    }}
-                    onPointerEnter={e => {
-                      if (e.buttons & 1) {
-                        paintCell(row, col, strokeErase.current);
-                      }
-                    }}
-                    // Physical Enter and Space are handled in keydown; a
-                    // detail-0 click here is assistive tech activating the
-                    // cell without key events.
-                    onClick={e => {
-                      if (e.detail === 0) {
-                        activateCellByKeyboard(row, col);
-                      }
-                    }}
-                  >
-                    {thumb && <img src={thumb} alt="" />}
-                  </button>
-                );
-              })}
-            </div>
+            <WorldRow
+              key={row}
+              row={row}
+              sceneSize={sceneSize}
+              cells={grid[row]}
+              thumbsByImage={thumbsByImage}
+              cursorCol={row === cursorRow ? cursorCol : -1}
+              registerCell={registerCell}
+              onCellPointerDown={handleCellPointerDown}
+              onCellPointerEnter={handleCellPointerEnter}
+              onCellClick={handleCellClick}
+            />
           ))}
         </div>
       </div>

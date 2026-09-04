@@ -1,5 +1,7 @@
 // World tab (experiment): paint starter placements onto the scene grid.
 
+@use '../../../../pixelEditor/dialogChrome' as chrome;
+
 .worldTab {
   display: flex;
   flex-direction: column;
@@ -82,6 +84,9 @@
 .worldCell {
   box-sizing: border-box;
   flex: none;
+  // Sized once on the grid container; cells shrink with the visible extent.
+  width: var(--world-cell);
+  height: var(--world-cell);
   margin: 0;
   padding: 1px;
   border: 1px solid var(--borders-neutral-quaternary, var(--borders-neutral-primary));
@@ -117,13 +122,5 @@
 // Visually hidden, read by screen readers (keyboard help and the action
 // narration live region).
 .srOnly {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  white-space: nowrap;
+  @include chrome.sr-only;
 }
