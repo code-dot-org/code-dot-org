@@ -9,7 +9,8 @@ const named = (...fileNames: string[]) =>
 
 describe('getFileCategory', () => {
   it('maps known extensions to their category', () => {
-    expect(getFileCategory('sprite.PNG').id).toBe('media');
+    expect(getFileCategory('sprite.PNG').id).toBe('images');
+    expect(getFileCategory('beep.wav').id).toBe('audio');
     expect(getFileCategory('index.html').id).toBe('html');
     expect(getFileCategory('style.css').id).toBe('css');
     expect(getFileCategory('app.js').id).toBe('javascript');
@@ -33,7 +34,7 @@ describe('getPopulatedCategories', () => {
       'index.html',
     ]);
     expect(categories.map(({id, count}) => [id, count])).toEqual([
-      ['media', 2],
+      ['images', 2],
       ['html', 1],
       ['javascript', 1],
     ]);

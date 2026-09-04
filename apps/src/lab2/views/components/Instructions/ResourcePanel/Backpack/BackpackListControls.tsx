@@ -29,6 +29,12 @@ const SORT_OPTIONS: IconDropdownOption[] = [
   },
 ];
 
+// Helper to auto-close dropdown on select by simulating a mousedown elsewhere.
+// Once we migrate to MUI dropdown we shouldn't need this.
+function closeOpenDropdownMenu() {
+  document.dispatchEvent(new MouseEvent('mousedown'));
+}
+
 interface BackpackListControlsProps {
   /** Every file in the backpack, not just the ones currently shown. */
   fileNames: string[];
@@ -80,11 +86,12 @@ const BackpackListControls: React.FC<BackpackListControlsProps> = ({
         styleAsFormField
         options={categoryOptions}
         selectedOption={selectedCategoryOption}
-        onChange={option =>
+        onChange={option => {
           onCategoryChange(
             option.value as FileCategoryId | typeof ALL_FILES_CATEGORY_ID
-          )
-        }
+          );
+          closeOpenDropdownMenu();
+        }}
         aria-label={`File type: ${selectedCategoryOption.label}`}
       />
       <IconDropdown
@@ -96,9 +103,10 @@ const BackpackListControls: React.FC<BackpackListControlsProps> = ({
         menuPlacement="right"
         options={SORT_OPTIONS}
         selectedOption={selectedSortOption}
-        onChange={option =>
-          onSortOrderChange(option.value as BackpackSortOrder)
-        }
+        onChange={option => {
+          onSortOrderChange(option.value as BackpackSortOrder);
+          closeOpenDropdownMenu();
+        }}
         aria-label={`Sort by: ${selectedSortOption.label}`}
       />
     </div>

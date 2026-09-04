@@ -35,7 +35,7 @@ const FILE_CATEGORIES: FileCategory[] = [
   {
     id: 'images',
     label: 'Images',
-    icon: {iconName: 'image', iconStyle: 'solid'},
+    icon: {iconName: 'file-image', iconStyle: 'solid'},
     extensions: SUPPORTED_IMAGE_EXTENSIONS,
   },
   {
@@ -75,7 +75,7 @@ const FILE_CATEGORIES: FileCategory[] = [
   {
     id: 'data',
     label: 'Data',
-    icon: {iconName: 'table', iconStyle: 'solid'},
+    icon: {iconName: 'file-spreadsheet', iconStyle: 'solid'},
     extensions: ['csv', 'json'],
   },
   {
@@ -87,7 +87,7 @@ const FILE_CATEGORIES: FileCategory[] = [
   {
     id: 'other',
     label: 'Other',
-    icon: {iconName: 'file', iconStyle: 'regular'},
+    icon: {iconName: 'file', iconStyle: 'solid'},
     extensions: [],
   },
 ];
