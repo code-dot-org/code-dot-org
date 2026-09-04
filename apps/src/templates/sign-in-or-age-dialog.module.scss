@@ -1,8 +1,7 @@
-/* CustomDialog gives us only a themed rectangle with a border, so the box
-   styling here mirrors the design system Modal's own (modal.module.scss) to
-   keep this dialog consistent with the rest of them. What Modal cannot give
-   us is the two-column body, which is why this dialog builds on CustomDialog
-   rather than on Modal. */
+/* Built on CustomDialog rather than Modal because Modal fixes its content into
+   a single column, and this dialog's two columns are the design. The box rules
+   below mirror the design system's modal.module.scss so it still looks like one
+   of the family. */
 .dialog {
   display: flex;
   flex-direction: column;
@@ -33,7 +32,6 @@
   }
 }
 
-/* Sign in on one side, age on the other, with the "or" rule between them. */
 .columns {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -55,8 +53,6 @@
   gap: 0.25rem;
 }
 
-/* The two rules above and below the "or", which together read as one vertical
-   line through the middle of the body. */
 .orLine {
   width: 0.0625rem;
   flex: 1;
@@ -69,19 +65,19 @@
   gap: 0.75rem;
 }
 
-/* SimpleDropdown at size m is a fixed 2.5rem tall, while a medium button
-   derives its height from padding plus line height and lands ~2px taller.
-   Pin both buttons so all three controls in the body agree, which is the whole
-   point of the ticket. This has to be a class rather than a `button` selector:
-   the sign-in button has an href, so MUI renders it as an anchor. */
+/* SimpleDropdown is a fixed 2.5rem; a medium button lands ~2px taller. */
+
+/* A class, not a `button` selector: MUI renders the sign-in href as an anchor. */
 .action {
   height: 2.5rem;
 }
 
-/* Every option is short — ages 4 through 21+ — so pin a narrow width rather
-   than take the design system's full form-field width. The width sits on the
-   select so that SimpleDropdown's arrow, which is positioned against the
-   select's wrapper, stays at the right edge. */
+/* On the select, so SimpleDropdown's arrow stays at its right edge. */
 .ageDropdown select {
   width: 160px;
+}
+
+/* Dialog leaves its text start-aligned but centres its button. */
+.tooYoungDialog {
+  text-align: center;
 }

@@ -82,6 +82,7 @@ class SignInOrAgeDialog extends Component {
     if (this.state.tooYoung) {
       return (
         <Dialog
+          className={moduleStyles.tooYoungDialog}
           title={i18n.tutorialUnavailable()}
           description={i18n.tutorialUnavailableExplanation()}
           primaryButtonProps={{
@@ -110,8 +111,8 @@ class SignInOrAgeDialog extends Component {
             </MuiTypography>
             <MuiButton
               className={moduleStyles.action}
-              variant="outlined"
-              color="secondary"
+              variant="contained"
+              color="primary"
               href={`/users/sign_in?user_return_to=${location.pathname}`}
             >
               {i18n.signinCodeOrg()}
