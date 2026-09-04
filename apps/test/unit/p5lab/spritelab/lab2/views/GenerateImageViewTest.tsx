@@ -12,10 +12,12 @@ const SET_CHECKBOX = /Make a character set/;
 const SHEET = {
   src: 'data:image/png;base64,',
   frameSize: {x: 100, y: 100},
-  poses: {'stand-right': {start: 0, count: 1}},
+  poses: {'stand-right': {start: 0, count: 1, frameDelay: 2}},
 };
 
-function renderView(props = {}) {
+type ViewProps = React.ComponentProps<typeof GenerateImageView>;
+
+function renderView(props: Partial<ViewProps> = {}) {
   return render(
     <GenerateImageView onAccept={jest.fn()} onCancel={jest.fn()} {...props} />
   );

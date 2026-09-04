@@ -9,9 +9,11 @@ import ImageDetailsDialog from '@cdo/apps/p5lab/spritelab/lab2/views/ImageDetail
 // Done when the image is unchanged — the caller derives that; this pins
 // what each value shows.
 
-function renderDialog(props = {}) {
+type DialogProps = React.ComponentProps<typeof ImageDetailsDialog>;
+
+function renderDialog(props: Partial<DialogProps> = {}) {
   return render(
-    // The dialog follows the page's light/dark theme.
+    // useTheme throws without a provider.
     <ThemeProvider>
       <ImageDetailsDialog
         animKey="k1"
