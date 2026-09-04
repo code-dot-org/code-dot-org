@@ -43,13 +43,10 @@ const PaletteTooltip: React.FunctionComponent<{
 }> = ({tooltipId, text, children}) => {
   const handleRef = useRef<WithTooltipHandle>(null);
 
-  // If the browser window loses focus mid-hover, the mouseleave never
-  // arrives and the bubble would stay up forever — so hide it when the
-  // window blurs. One exception: when the bubble is up because its trigger
-  // has keyboard focus, leave it alone. That bubble already hides when the
-  // trigger blurs, and calling hideTooltip() on it would also swallow the
-  // bubble the NEXT time the trigger gains focus (WithTooltip suppresses
-  // the focus-show that follows an imperative hide).
+  // A window that loses focus never gets the mouseleave, so a hover
+  // bubble would stay up until the next hover — hide it on window blur.
+  // Skip when the trigger itself is focused: that bubble hides when the
+  // trigger blurs, and hiding it here would block its next focus-show.
   useEffect(() => {
     const hide = () => {
       const trigger = document.activeElement;
