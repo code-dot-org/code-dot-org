@@ -21,6 +21,8 @@ module SharedConstants
   GLOBAL_EDITION_DEFAULT_REGION = Cdo::GlobalEdition::DEFAULT_REGION
   GLOBAL_EDITION_EXCLUDED_PATHS = Cdo::GlobalEdition::EXCLUDED_PATHS.to_a
 
+  STATSIG_STABLE_ID_KEY = 'statsig_stable_id'
+
   # Used to communicate different types of levels.
   LEVEL_KIND = OpenStruct.new(
     {
@@ -78,6 +80,10 @@ module SharedConstants
   STUDENT_GRADE_LEVELS = %w(K 1 2 3 4 5 6 7 8 9 10 11 12 Other).freeze
 
   PL_GRADE_VALUE = 'pl'.freeze
+
+  # App type key for the backpack that belongs to no lab, as opposed to the
+  # backpacks keyed by the app type of a single lab.
+  UNIVERSAL_APP_TYPE = 'universal'.freeze
 
   # The set of artist autorun options.
   ARTIST_AUTORUN_OPTIONS = OpenStruct.new(

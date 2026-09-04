@@ -25,15 +25,17 @@
 #  index_levels_on_type       (type)
 #
 class Quiz < Level
-  # intro_text is shown once, on the pre-attempt 'start quiz' screen before timer/attempt begins.
-  # This is distinct from instructions which stays available in the persistent Instructions panel
-  # throughout the attempt.
+  # custom_intro_text, if set, is shown once on the pre-attempt 'start quiz'
+  # screen before timer/attempt begins (blank falls back to default framing
+  # text on the frontend). Distinct from instructions, which stays available
+  # in the persistent Instructions panel throughout the attempt.
   serialized_attrs %w(
     time_limit_minutes
     show_correctness
     reveal_answer_explanation
     purpose
-    intro_text
+    custom_intro_text
+    show_intro_screen
     allow_multiple_attempts
     max_attempts
   )
@@ -46,10 +48,13 @@ class Quiz < Level
 
   validate :reveal_answer_explanation_requires_show_correctness
   validate :max_attempts_requires_allow_multiple_attempts
+  validate :show_intro_screen_required_when_time_limit
 
-  has_many :placements, -> {order(:page, :position)}, class_name: 'QuizQuestionPlacement', foreign_key: :level_id, inverse_of: :level
+  # The dependent: :destroy clause ensures associated join models are deleted but note that bank questions are shared and stay.
+  has_many :placements, -> {order(:page, :position)}, class_name: 'QuizQuestionPlacement', foreign_key: :level_id, inverse_of: :level, dependent: :destroy
   has_many :questions, through: :placements, source: :quiz_question
-  has_many :attempts, class_name: 'QuizAttempt', foreign_key: :level_id, inverse_of: :level
+  # The dependent: nil clause ensures student attempts are kept when this quiz is deleted.
+  has_many :attempts, class_name: 'QuizAttempt', foreign_key: :level_id, inverse_of: :level, dependent: nil
 
   def self.create_from_level_builder(params, level_params)
     create!(
@@ -63,6 +68,21 @@ class Quiz < Level
 
   def uses_lab2?
     true
+  end
+
+  # Placements are quiz-owned join rows; questions stay shared bank content.
+  def clone_with_suffix(new_suffix, editor_experiment: nil, allow_existing: true)
+    suffix = new_suffix[0] == '_' ? new_suffix : "_#{new_suffix}"
+    max_index = 70 - suffix.length - 1
+    new_name = "#{base_name[0..max_index]}#{suffix}"
+    existing = Level.find_by_name(new_name)
+    return existing if existing && allow_existing
+
+    level = super(suffix, editor_experiment: editor_experiment, allow_existing: allow_existing)
+    placements.each do |placement|
+      level.placements.create!(quiz_question: placement.quiz_question, page: placement.page, position: placement.position)
+    end
+    level
   end
 
   # Adds quiz_questions into levelProperties so the frontend can render and
@@ -91,6 +111,15 @@ class Quiz < Level
   private def reveal_answer_explanation_requires_show_correctness
     return unless reveal_answer_explanation? && !show_correctness?
     errors.add(:reveal_answer_explanation, 'cannot be true unless show_correctness is also true')
+  end
+
+  # A time limit with no intro screen means a student could start the timer
+  # without ever being told there is one - custom_intro_text has no such
+  # requirement, since the frontend falls back to default framing text when
+  # it's blank.
+  private def show_intro_screen_required_when_time_limit
+    return unless time_limit_minutes.present? && !show_intro_screen?
+    errors.add(:show_intro_screen, 'cannot be false when time_limit_minutes is set')
   end
 
   # max_attempts blank means unlimited attempts (once allow_multiple_attempts

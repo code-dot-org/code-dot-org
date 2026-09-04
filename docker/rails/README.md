@@ -22,6 +22,10 @@ root files Rails boot reads, then carves out the exclusions in labelled
 groups. Its comments also record the inclusions that look excludable and
 are not, which is what to read before dropping a path.
 
+The frontend source and assets are excluded. The slice retains
+`frontend/apps/studio/config/vite.json`, however, because Rails loads Vite Ruby
+at boot even in the api and worker roles.
+
 Because it is an allowlist, a new top-level directory in the repo cannot
 join the image without an edit here.
 
@@ -44,6 +48,9 @@ installed the pull is a no-op. `.gitattributes` exempts `*en.yml` and `*en.json`
 so an English-only check will not catch it — the smoke test parses `ar-SA.yml`
 for exactly this reason. Locales are the only LFS-tracked path inside the
 slice, which is why the pull is by pattern rather than wholesale.
+
+`ensure-locales.sh` performs the same targeted pull only when the checkout
+contains an LFS pointer. Skaffold and the image workflow call it before builds.
 
 `DEPS_IMAGE` is the dependency layer this image stacks on. Its lockfile inputs
 must match this checkout: the build is only a `COPY`, so a mismatched parent

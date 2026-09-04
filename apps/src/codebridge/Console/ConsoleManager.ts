@@ -27,6 +27,9 @@ const TERMINAL_TRIM_BATCH = 200_000;
 // longer than this is still kept whole, on a line of its own.
 const MAX_LINE_CHARACTERS = 100_000;
 
+// Long enough for xterm to take a redraw in with announcements still off.
+const REDRAW_QUIET_MS = 250;
+
 const countCharacters = (lines: string[]) =>
   lines.reduce((total, line) => total + line.length, 0);
 
@@ -44,10 +47,14 @@ export default class ConsoleManager {
   // so this manager owns writing it.
   private codeEnvironmentError: string | null;
   private terminalLinesListeners: ((lines: string[]) => void)[] = [];
+  private focusOnWrite: boolean;
   private queuedWrites: string[];
   private queuedBytes: number;
   private awaitingWrite: boolean;
   private droppedCharacters: number;
+  private narrating = false;
+  private redrawing = false;
+  private quietPeriod: number | null = null;
 
   constructor(terminal: Terminal, terminalFitAddon: FitAddon) {
     this.terminal = terminal;
@@ -57,6 +64,7 @@ export default class ConsoleManager {
     this.inputBuffer = '';
     this.lastLineIsPartial = false;
     this.codeEnvironmentError = null;
+    this.focusOnWrite = true;
     this.queuedWrites = [];
     this.queuedBytes = 0;
     this.awaitingWrite = false;
@@ -83,11 +91,75 @@ export default class ConsoleManager {
     this.terminalFitAddon = terminalFitAddon;
   }
 
+  // Writing focuses the terminal for programs asking for input. Validation
+  // never asks, so it should leave focus alone.
+  public setFocusOnWrite(focusOnWrite: boolean) {
+    this.focusOnWrite = focusOnWrite;
+  }
+
+  // xterm ships .live-region as assertive, so writes interrupt the screen
+  // reader. Its parent also holds the browsable row list.
+  public setPoliteScreenReaderAnnouncements() {
+    this.applyAnnouncements();
+  }
+
+  // A lab narrating its own run reads the console's output itself.
+  public setNarrating(narrating: boolean) {
+    this.narrating = narrating;
+    this.applyAnnouncements();
+  }
+
+  public isNarrating() {
+    return this.narrating;
+  }
+
+  // A redraw replays lines the console already had, not new output.
+  private applyAnnouncements() {
+    this.terminal.element
+      ?.querySelector('.xterm-accessibility .live-region')
+      ?.setAttribute(
+        'aria-live',
+        this.narrating || this.redrawing ? 'off' : 'polite'
+      );
+  }
+
+  private redraw(data: string) {
+    // The latest redraw owns the quiet period.
+    this.clearQuietPeriod();
+    this.redrawing = true;
+    this.applyAnnouncements();
+    this.writeToTerminal(data);
+  }
+
+  private finishRedraw() {
+    if (!this.redrawing || this.queuedWrites.length > 0) {
+      return;
+    }
+    // xterm batches its accessibility update, so it may not have taken the
+    // redraw in yet when the write reports back.
+    this.clearQuietPeriod();
+    this.quietPeriod = window.setTimeout(() => {
+      this.quietPeriod = null;
+      this.redrawing = false;
+      this.applyAnnouncements();
+    }, REDRAW_QUIET_MS);
+  }
+
+  private clearQuietPeriod() {
+    if (this.quietPeriod !== null) {
+      window.clearTimeout(this.quietPeriod);
+      this.quietPeriod = null;
+    }
+  }
+
   public clearTerminalLines() {
     this.terminalLines = [];
     this.terminalCharacters = 0;
     this.discardQueuedWrites();
     this.droppedCharacters = 0;
+    // Narration belongs to the level that started it.
+    this.narrating = false;
+    this.applyAnnouncements();
     this.writeToTerminal(CLEAR_DISPLAY);
     this.lastLineIsPartial = false;
     // Characters typed since the last newline are erased along with everything
@@ -134,9 +206,7 @@ export default class ConsoleManager {
     this.discardQueuedWrites();
     // Anything the user has typed since the last newline is not in
     // terminalLines yet, so redraw it too.
-    this.writeToTerminal(
-      CLEAR_DISPLAY + this.drawnTerminalLines() + this.inputBuffer
-    );
+    this.redraw(CLEAR_DISPLAY + this.drawnTerminalLines() + this.inputBuffer);
 
     this.executeTerminalLinesListeners();
   }
@@ -163,9 +233,9 @@ export default class ConsoleManager {
     // Where the previous console broke its lines is not carried over, so every
     // replayed line is drawn as a line of its own.
     this.lastLineIsPartial = false;
-    this.writeToTerminal(this.drawnTerminalLines());
+    // Redrawn history is not new output: no focus, no announcement.
+    this.redraw(this.drawnTerminalLines());
     this.terminal.scrollToBottom();
-    this.terminal.focus();
     this.executeTerminalLinesListeners();
   }
 
@@ -186,7 +256,10 @@ export default class ConsoleManager {
     this.lastLineIsPartial = true;
     this.writeToTerminal(message);
     this.terminal.scrollToBottom();
-    this.terminal.focus();
+    // An input() prompt focuses even while narrating: the student must type.
+    if (this.focusOnWrite) {
+      this.terminal.focus();
+    }
   }
 
   public echoInput(data: string) {
@@ -250,12 +323,19 @@ export default class ConsoleManager {
     );
   }
 
-  private appendTerminalLine(line: string, focusTerminal = true) {
+  private appendTerminalLine(line: string, shouldFocus = true) {
     this.updateTerminalLines(line);
     this.lastLineIsPartial = false;
     this.writeToTerminal(`${line}\r\n`);
     this.terminal.scrollToBottom();
-    if (focusTerminal) {
+    if (shouldFocus) {
+      this.focusTerminal();
+    }
+  }
+
+  // Every write focuses through here, so setFocusOnWrite governs all of them.
+  private focusTerminal() {
+    if (this.focusOnWrite && !this.narrating) {
       this.terminal.focus();
     }
   }
@@ -330,11 +410,14 @@ export default class ConsoleManager {
         this.awaitingWrite = false;
         this.reportDroppedOutput();
         this.flushQueuedWrites();
+        this.finishRedraw();
       });
     } catch {
       // If we hit an error, count the chunk as dropped.
       this.awaitingWrite = false;
       this.droppedCharacters += chunk.length;
+      // Announcements return even if the redraw never landed.
+      this.finishRedraw();
     }
   }
 

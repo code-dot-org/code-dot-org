@@ -40,6 +40,7 @@ import {useExtraLinksButtonContext} from '@cdo/apps/lab2/views/LabViewsRenderer'
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
+import experiments from '@cdo/apps/util/experiments';
 import {findFirstFocusableElement} from '@cdo/apps/util/findFirstFocusableElement';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
@@ -53,6 +54,7 @@ import AiTutorChatWithInstructionDrawer from './AiTutorChatWithInstructionsDrawe
 import BackpackHeaderButtons from './Backpack/BackpackHeaderButtons';
 import BackpackPanel from './Backpack/BackpackPanel';
 import type {AddFileHandler} from './Backpack/types';
+import UnifiedBackpackPanel from './Backpack/UnifiedBackpackPanel';
 import {
   AI_TUTOR_DOT_SEEN_KEY_PREFIX,
   resourcePanelInstructionsElementId,
@@ -159,11 +161,6 @@ type ResourcePanelProps = InstructionsProps & {
   sidebarOnly?: boolean;
   hideCollapsedTabBorder?: boolean;
   backpackProps?: BackpackProps;
-  onImageFlagged?: (
-    file: File,
-    fileType: string,
-    uploadFunction: () => Promise<void>
-  ) => void;
   hasInstructionsDrawer?: boolean;
   validationSettings?: ValidationSettings;
   onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
@@ -194,7 +191,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   sidebarOnly = false,
   hideCollapsedTabBorder = false,
   backpackProps,
-  onImageFlagged,
   hasInstructionsDrawer,
   validationSettings,
   onAssetUploaded,
@@ -281,6 +277,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   });
 
   const showBackpack = backpackProps && !isPermanentlyReadOnly;
+  const unifiedBackpackEnabled = experiments.isEnabledAllowingQueryString(
+    experiments.UNIFIED_BACKPACK
+  );
   useResourcePanelTours({
     levelProperties,
     isStandaloneCollapsed,
@@ -392,12 +391,14 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
 
     if (showBackpack) {
+      const BackpackPanelComponent = unifiedBackpackEnabled
+        ? UnifiedBackpackPanel
+        : BackpackPanel;
       tabMap[Tabs.Backpack] = (
-        <BackpackPanel
+        <BackpackPanelComponent
           {...backpackProps}
           openPanelCallback={setBackpackTabAsActive}
           backpackRefreshKey={backpackRefreshKey}
-          onImageFlagged={onImageFlagged}
         />
       );
     }
@@ -471,7 +472,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     backpackProps,
     setBackpackTabAsActive,
     backpackRefreshKey,
-    onImageFlagged,
+    unifiedBackpackEnabled,
     hasInstructions,
   ]);
 

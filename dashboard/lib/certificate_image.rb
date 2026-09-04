@@ -1,5 +1,4 @@
 # Utility methods for generating certificate images.
-# Note: requires pegasus_dir to be in scope.
 require 'honeybadger/ruby'
 require 'rmagick'
 # needed for force_8859_to_utf8
@@ -93,7 +92,7 @@ class CertificateImage
       text_overlay.destroy!
     rescue Magick::ImageMagickError => exception
       # We want to know what kinds of text we are failing to render.
-      Honeybadger.notify(
+      Observability::Errors.report(
         exception,
         context: {
           text: text,

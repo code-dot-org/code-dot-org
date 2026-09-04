@@ -1,0 +1,1113 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "game_id": 75,
+  "created_at": "2026-09-02T21:27:25.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#Marcus Reyes — Visualization Supervisor\r\n\r\nMarcus plans complex film scenes digitally before they're shot. His workstation has a high-end graphics card, and he plays scenes back for the director to approve. Heavy scenes go over the studio network to render overnight.\r\n\r\n### What's Going Wrong?\r\n* Short playback is fine. Anything past a few seconds stutters.\r\n* Two overnight renders shut the machine off partway through.\r\n* It never happens on quick tasks — only on anything sustained.\r\n* It started about a month ago.",
+    "hide_share_and_remix": "false",
+    "require_edit_to_continue": "true",
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "53e6a62a-11ae-4fdd-b9cd-9fbea63fcafc",
+            "type": "group",
+            "position": {
+              "x": 2738.44372956217,
+              "y": 480.8728163925538
+            },
+            "width": 403,
+            "height": 395,
+            "zIndex": -1,
+            "data": {
+            },
+            "measured": {
+              "width": 403,
+              "height": 395
+            },
+            "dragging": false
+          },
+          {
+            "id": "eea2fa1d-88a6-4785-a843-6e1ebdea732e",
+            "type": "group",
+            "position": {
+              "x": 1919.2470332639173,
+              "y": 1778.0297122954025
+            },
+            "width": 882.1716367230324,
+            "height": 1112.1435277237897,
+            "zIndex": -1,
+            "data": {
+            },
+            "measured": {
+              "width": 882,
+              "height": 1112
+            },
+            "dragging": false
+          },
+          {
+            "id": "89ebd6e8-6c79-4258-b5fa-87f34d549999",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/85636f5f-01c5-4120-ba14-fd06230d31c2.png",
+              "altText": "comms_ethernet",
+              "locked": true
+            },
+            "position": {
+              "x": 2230.190315577703,
+              "y": 462.0278263108729
+            },
+            "width": 112,
+            "height": 120,
+            "measured": {
+              "width": 112,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "fd108d71-fbdc-44da-9a90-57f6b2d5b0b1",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/435081e6-5b01-44c0-83a2-5e392180cf58.png",
+              "altText": "hardware_desktop",
+              "locked": true
+            },
+            "position": {
+              "x": 2108.1601060697208,
+              "y": 76.4196146336563
+            },
+            "width": 98.25746341890954,
+            "height": 120,
+            "measured": {
+              "width": 98,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "737e2fe5-d633-47b3-9e8e-5f1c8802aa2e",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/871503b8-ec41-4004-8dc5-59de658f347a.png",
+              "altText": "hardware_power",
+              "locked": true
+            },
+            "position": {
+              "x": 1993.255430315384,
+              "y": 464.440903514099
+            },
+            "width": 106.87270108138728,
+            "height": 120,
+            "measured": {
+              "width": 107,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "a22e86f9-222b-410b-b5c2-aa991f1583b3",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/c61b821c-15dd-452e-9a0c-a7f1fbb4a6d4.png",
+              "altText": "hardware_power-outlet",
+              "locked": true
+            },
+            "position": {
+              "x": 1954.0263587191869,
+              "y": 686.5086466536062
+            },
+            "width": 108,
+            "height": 120,
+            "measured": {
+              "width": 108,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "20f37b4b-a66e-42b0-9d18-f4486af03f05",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/309c2dbc-155f-4d36-8752-3101b1be00ae.png",
+              "altText": "output_audio",
+              "locked": true
+            },
+            "position": {
+              "x": 2952.111666561352,
+              "y": 274.2841781958054
+            },
+            "width": 102,
+            "height": 120,
+            "measured": {
+              "width": 102,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "d51058dd-516c-4dce-b6c6-0751ef716cab",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/409e8ba9-0386-4d44-ac21-072ddea1847e.png",
+              "altText": "output_monitor",
+              "locked": true
+            },
+            "position": {
+              "x": 2928.502997946828,
+              "y": 124.39132114891476
+            },
+            "width": 98,
+            "height": 120,
+            "measured": {
+              "width": 98,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "82183550-ca7f-4adb-8b0e-fcb461804b16",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/a467e4ec-cd00-4713-b802-92a6e3396fb6.png",
+              "altText": "processing_CPU",
+              "locked": true
+            },
+            "position": {
+              "x": 2230.7982078839814,
+              "y": 259.01742355605006
+            },
+            "width": 102.40277047260497,
+            "height": 120,
+            "measured": {
+              "width": 102,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "1e4860f1-f7e5-496e-b2fb-5fb76b9a5723",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/8c9e7b67-927f-45e7-8088-35eb0e81411d.png",
+              "altText": "processing_GPU",
+              "locked": true
+            },
+            "position": {
+              "x": 2112.498247565423,
+              "y": 257.20650026317753
+            },
+            "width": 100,
+            "height": 120,
+            "measured": {
+              "width": 100,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "cc74b2f9-725a-4b1c-bacc-056fa32ed056",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/862d604b-7bd4-47d2-b1a5-72f9fb445087.png",
+              "altText": "storage_RAM",
+              "locked": true
+            },
+            "position": {
+              "x": 1991.0970954265413,
+              "y": 256.7568288867999
+            },
+            "width": 106.94992017213599,
+            "height": 120,
+            "measured": {
+              "width": 107,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "568756d3-378c-4c28-9cb2-ae546a789a56",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#e7f2e3",
+              "strokeColor": "#9dc88d",
+              "locked": true
+            },
+            "position": {
+              "x": 10,
+              "y": 10
+            },
+            "width": 430.7910011923752,
+            "height": 1091.7947709934203,
+            "measured": {
+              "width": 431,
+              "height": 1092
+            },
+            "dragging": false,
+            "zIndex": 1,
+            "parentId": "eea2fa1d-88a6-4785-a843-6e1ebdea732e",
+            "expandParent": true
+          },
+          {
+            "id": "ad8eed9e-3a02-4a3f-b2c6-3970909a7fe3",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#dfe9fb",
+              "strokeColor": "#6f9dec",
+              "locked": true
+            },
+            "position": {
+              "x": 1967.8111201777017,
+              "y": 130.80399805615707
+            },
+            "width": 388.63426433590087,
+            "height": 474.63339296922493,
+            "measured": {
+              "width": 389,
+              "height": 475
+            },
+            "dragging": false,
+            "zIndex": -5
+          },
+          {
+            "id": "7a53196b-12dd-4c85-a949-fae0d25b272d",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#fff9e5",
+              "strokeColor": "#ffd966",
+              "locked": true
+            },
+            "position": {
+              "x": 1910.0909839507196,
+              "y": -4.5058225057759955
+            },
+            "width": 1289.646560358366,
+            "height": 925.1838917017166,
+            "measured": {
+              "width": 1290,
+              "height": 925
+            },
+            "dragging": false,
+            "zIndex": -6
+          },
+          {
+            "id": "02330def-dc44-4846-a089-efccc5c3ac99",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#f9e2e2",
+              "strokeColor": "#e27878",
+              "locked": true
+            },
+            "position": {
+              "x": 441.79604976907876,
+              "y": 10.00482552486119
+            },
+            "width": 430.37558695395364,
+            "height": 1092.1387021989287,
+            "measured": {
+              "width": 430,
+              "height": 1092
+            },
+            "dragging": false,
+            "parentId": "eea2fa1d-88a6-4785-a843-6e1ebdea732e",
+            "expandParent": true
+          },
+          {
+            "id": "87b59a8f-b913-4f4a-9294-874ea7ad2541",
+            "type": "text",
+            "data": {
+              "text": "Talk through the scenario with your partner. Examine the possible troubleshooting steps below and choose which ones are worth pursuing and which are not. Sort them into the proper category.",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "fontSize": "large",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1921.6190091615254,
+              "y": 1331.6224870836493
+            },
+            "width": 1045.0483482824857,
+            "height": 40,
+            "measured": {
+              "width": 1045,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "c1389887-f2fb-41fd-bacb-0696a3b640f4",
+            "type": "text",
+            "data": {
+              "text": "Possible Causes",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "fontSize": "large",
+              "locked": true
+            },
+            "position": {
+              "x": 74.39517238594453,
+              "y": 24.678230027986274
+            },
+            "width": 249.0483482824858,
+            "height": 41.89464570813789,
+            "measured": {
+              "width": 249,
+              "height": 42
+            },
+            "dragging": false,
+            "zIndex": 2,
+            "parentId": "eea2fa1d-88a6-4785-a843-6e1ebdea732e",
+            "expandParent": true
+          },
+          {
+            "id": "23fbd26d-2b7e-435e-abe0-00d3d258cd06",
+            "type": "text",
+            "data": {
+              "text": "The processor can't keep up",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 1927.8580911531494,
+              "y": 1417.41428180539
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 9
+          },
+          {
+            "id": "e8e22ea8-ab1d-4d50-b81f-c2828e77c26d",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Marcus examines frames on a high-definition monitor and speakers.",
+              "backgroundColor": "#f9dcbe",
+              "strokeColor": "#f7b56e",
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": 2737.3188729737567,
+              "y": 227.96942357205847
+            },
+            "width": 187.21545734794984,
+            "height": 88.64689155401462,
+            "measured": {
+              "width": 187,
+              "height": 89
+            },
+            "dragging": false
+          },
+          {
+            "id": "fe1b579b-5789-4c40-8c71-8491785ac705",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "#fff2cc",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "locked": true
+            },
+            "position": {
+              "x": 2075.5686916759987,
+              "y": 56.2781917018242
+            },
+            "width": 168.24692444233096,
+            "height": 161.2346222116529,
+            "measured": {
+              "width": 168,
+              "height": 161
+            },
+            "dragging": false,
+            "zIndex": -4
+          },
+          {
+            "id": "a42b5600-bd47-4a02-8295-663b81e1a65f",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Marcus uses a high-end GPU to render frames from the scenes that he is creating.",
+              "backgroundColor": "#f9dcbe",
+              "strokeColor": "#f7b56e",
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": 2323.186151370799,
+              "y": 77.91105673449232
+            },
+            "width": 360.0071459301354,
+            "height": 71.97400932240025,
+            "measured": {
+              "width": 360,
+              "height": 72
+            },
+            "dragging": false
+          },
+          {
+            "id": "e8953d27-8048-47e6-9717-5b0d2792c6ab",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Heavy scenes go over the studio network to render on cloud machines overnight",
+              "backgroundColor": "#f9dcbe",
+              "strokeColor": "#f7b56e",
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": 2439.919574999497,
+              "y": 612.9492977005154
+            },
+            "width": 199.97387347696133,
+            "height": 122.34586920507616,
+            "measured": {
+              "width": 200,
+              "height": 122
+            },
+            "dragging": false
+          },
+          {
+            "id": "01a28c31-2c9a-4e2e-a63c-2bf3e898438b",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "A power supply feeds every component inside of the workstation",
+              "backgroundColor": "#f9dcbe",
+              "strokeColor": "#f7b56e",
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": 2101.946880937693,
+              "y": 637.821312596426
+            },
+            "width": 176.03511008170392,
+            "height": 98.00852759698842,
+            "measured": {
+              "width": 176,
+              "height": 98
+            },
+            "dragging": false
+          },
+          {
+            "id": "d00fc775-98a5-428a-a38d-4131e5048ca3",
+            "type": "text",
+            "data": {
+              "text": "SELF",
+              "strokeColor": "transparent",
+              "fontColor": "#ec8e22",
+              "fontSize": 60,
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1910.7516439606893,
+              "y": -189.88858812195917
+            },
+            "width": 492.1299277194439,
+            "height": 61.538094156194354,
+            "measured": {
+              "width": 492,
+              "height": 62
+            },
+            "dragging": false
+          },
+          {
+            "id": "3653adb3-cb3c-4f46-b608-8a6fda228319",
+            "type": "text",
+            "data": {
+              "text": "NEIGHBOR",
+              "strokeColor": "transparent",
+              "fontColor": "#ec8e22",
+              "fontSize": 60,
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1935.2804071851624,
+              "y": 1242.0691282611922
+            },
+            "width": 492.1299277194439,
+            "height": 61.538094156194354,
+            "measured": {
+              "width": 492,
+              "height": 62
+            },
+            "dragging": false
+          },
+          {
+            "id": "67bcd666-996e-43bf-b9bc-2d1f5f92fd46",
+            "type": "text",
+            "data": {
+              "text": "Eliminated Possibilities",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "fontSize": "large",
+              "locked": true
+            },
+            "position": {
+              "x": 527.4435206684302,
+              "y": 24.678230027986274
+            },
+            "width": 249.0483482824858,
+            "height": 41.89464570813789,
+            "measured": {
+              "width": 249,
+              "height": 42
+            },
+            "dragging": false,
+            "zIndex": 2,
+            "parentId": "eea2fa1d-88a6-4785-a843-6e1ebdea732e",
+            "expandParent": true
+          },
+          {
+            "id": "11b2ef87-4cae-4068-89b9-df531320967e",
+            "type": "text",
+            "data": {
+              "text": "The studio network is too slow",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2176.906439435635,
+              "y": 1417.41428180539
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 10
+          },
+          {
+            "id": "e86e1723-5b08-4660-b3f8-e748ab0fc3fc",
+            "type": "text",
+            "data": {
+              "text": "The scene files are corrupted",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2425.9547877181208,
+              "y": 1417.41428180539
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 11
+          },
+          {
+            "id": "d294f65e-15fe-4a10-bd80-af2175751bd0",
+            "type": "text",
+            "data": {
+              "text": "The cloud render machines are overloaded",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2675.0031360006064,
+              "y": 1417.41428180539
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 12
+          },
+          {
+            "id": "9067410f-63ff-4c42-92af-416beca67c4e",
+            "type": "text",
+            "data": {
+              "text": "The graphics card is overheating and slowing down",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2924.051484283092,
+              "y": 1417.41428180539
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 13
+          },
+          {
+            "id": "037ea9a6-da83-442d-8010-f7fbfcd823ab",
+            "type": "text",
+            "data": {
+              "text": "The workstation needs more memory",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 1927.9108157487922,
+              "y": 1571.3398613749926
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 14
+          },
+          {
+            "id": "48560197-8187-4bd6-a8e4-a4e1073b13de",
+            "type": "text",
+            "data": {
+              "text": "The graphics card is faulty",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2176.959164031278,
+              "y": 1571.3398613749926
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 15
+          },
+          {
+            "id": "6fde26d8-f0a3-49d0-9818-37a7f9d09de5",
+            "type": "text",
+            "data": {
+              "text": "The power supply can't handle the graphics card",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2426.0075123137635,
+              "y": 1571.3398613749926
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 16
+          },
+          {
+            "id": "d8ab76e4-07e2-4c18-840b-82318e5d1f5d",
+            "type": "text",
+            "data": {
+              "text": "Something changed recently",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2675.055860596249,
+              "y": 1571.3398613749926
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 17
+          },
+          {
+            "id": "bc29cd24-d29d-4008-9166-a5443850f8a4",
+            "type": "text",
+            "data": {
+              "text": "Restate the problem and make your best guesses about possible solutions",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "fontSize": "large",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1919.6407160285253,
+              "y": -101.99828374479044
+            },
+            "width": 1045.0483482824857,
+            "height": 40,
+            "measured": {
+              "width": 1045,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "13801601-3605-4a3f-aa9a-78ddcc3c819d",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson3-device-4/uuid/efa8de7b-9ddc-4252-ae3c-a18ccb33e429.png",
+              "altText": "storage_cloud",
+              "locked": true
+            },
+            "position": {
+              "x": 37.61587622223715,
+              "y": 128.85455484822694
+            },
+            "width": 97.8556207730735,
+            "height": 120,
+            "measured": {
+              "width": 98,
+              "height": 120
+            },
+            "dragging": false,
+            "zIndex": 6,
+            "parentId": "53e6a62a-11ae-4fdd-b9cd-9fbea63fcafc",
+            "expandParent": true
+          },
+          {
+            "id": "4b36ebb6-3de7-4bb4-9304-c38d7a3c4b7b",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#dfe9fb",
+              "strokeColor": "#6f9dec",
+              "locked": true
+            },
+            "position": {
+              "x": 26.4102421683765,
+              "y": 116.70455616580637
+            },
+            "width": 344.6784839070998,
+            "height": 142.6914649034478,
+            "measured": {
+              "width": 345,
+              "height": 143
+            },
+            "dragging": false,
+            "zIndex": 5,
+            "parentId": "53e6a62a-11ae-4fdd-b9cd-9fbea63fcafc",
+            "expandParent": true
+          },
+          {
+            "id": "1581985c-fd10-4a1c-aca2-79f7ed90702d",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/8c9e7b67-927f-45e7-8088-35eb0e81411d.png",
+              "altText": "processing_GPU",
+              "locked": true
+            },
+            "position": {
+              "x": 149.22922092602676,
+              "y": 129.4283158845475
+            },
+            "width": 100,
+            "height": 120,
+            "measured": {
+              "width": 100,
+              "height": 120
+            },
+            "dragging": false,
+            "zIndex": 7,
+            "parentId": "53e6a62a-11ae-4fdd-b9cd-9fbea63fcafc",
+            "expandParent": true
+          },
+          {
+            "id": "476174e2-3fcb-4fef-86f5-65c22ee96ecb",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson3-device-4/uuid/47574ddf-3563-4ddc-a8cd-8aa25eb71630.png",
+              "altText": "",
+              "locked": true
+            },
+            "position": {
+              "x": 10,
+              "y": 10
+            },
+            "width": 379.7789021440076,
+            "height": 374.6403831737467,
+            "measured": {
+              "width": 380,
+              "height": 375
+            },
+            "dragging": false,
+            "parentId": "53e6a62a-11ae-4fdd-b9cd-9fbea63fcafc",
+            "expandParent": true
+          },
+          {
+            "id": "9f2ec85a-d1c7-4155-81b8-0b6cec153c73",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/a467e4ec-cd00-4713-b802-92a6e3396fb6.png",
+              "altText": "processing_CPU",
+              "locked": true
+            },
+            "position": {
+              "x": 257.80621918510724,
+              "y": 129.72352261090953
+            },
+            "width": 102.40277047260497,
+            "height": 120,
+            "measured": {
+              "width": 102,
+              "height": 120
+            },
+            "dragging": false,
+            "zIndex": 8,
+            "parentId": "53e6a62a-11ae-4fdd-b9cd-9fbea63fcafc",
+            "expandParent": true
+          },
+          {
+            "id": "141fb52d-85f2-4245-9e47-45777761d621",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson3-device-4/uuid/02340351-8f42-4d8e-be33-04d5ebb2df40.png",
+              "altText": "",
+              "locked": true
+            },
+            "position": {
+              "x": 1688.6863162318352,
+              "y": -217.17946804604549
+            },
+            "width": 194.3072056800952,
+            "height": 180.69736389555317,
+            "measured": {
+              "width": 194,
+              "height": 181
+            },
+            "dragging": false
+          },
+          {
+            "id": "3b211ed4-a00f-4a29-8fad-d77befcdd3c0",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson3-device-4/uuid/02340351-8f42-4d8e-be33-04d5ebb2df40.png",
+              "altText": "",
+              "rotation": 49,
+              "locked": true
+            },
+            "position": {
+              "x": 1820.6371073091248,
+              "y": 998.1675241772766
+            },
+            "width": 194.3072056800952,
+            "height": 180.69736389555317,
+            "measured": {
+              "width": 194,
+              "height": 181
+            },
+            "dragging": false
+          },
+          {
+            "id": "b21c089d-1413-4877-b048-c0d4f80ce04a",
+            "type": "text",
+            "data": {
+              "text": "Start\nHere",
+              "strokeColor": "transparent",
+              "fontColor": "#ec8e22",
+              "fontSize": "extra-large",
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1656.0400941826751,
+              "y": -321.8393791992486
+            },
+            "width": 151.69688674003714,
+            "height": 82.65022072856067,
+            "measured": {
+              "width": 152,
+              "height": 83
+            },
+            "dragging": false
+          },
+          {
+            "id": "d962905f-e64c-49cd-809a-049f6104a06a",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "The CPU keeps the picture and sound in step with one another.",
+              "backgroundColor": "#f9dcbe",
+              "strokeColor": "#f7b56e",
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": 2317.9056047719287,
+              "y": 171.885483858137
+            },
+            "width": 261.48556910695936,
+            "height": 65.91114305635868,
+            "measured": {
+              "width": 261,
+              "height": 66
+            },
+            "dragging": false
+          },
+          {
+            "id": "2ca1cf6f-4ad8-4476-8b28-27e06c0bea3a",
+            "type": "text",
+            "data": {
+              "text": "The playback software has a memory issue",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2924.104208878735,
+              "y": 1571.3398613749926
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 17
+          }
+        ],
+        "edges": [
+          {
+            "id": "0d08f595-48f8-4bd8-96e1-9a96db6cfb19",
+            "source": "ad8eed9e-3a02-4a3f-b2c6-3970909a7fe3",
+            "target": "20f37b4b-a66e-42b0-9d18-f4486af03f05",
+            "type": "default",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 3
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "targetHandle": "left-target",
+            "sourceHandle": "right-source",
+            "data": {
+              "locked": true
+            }
+          },
+          {
+            "id": "2ac17cf2-08cf-4fcb-9655-62a12d59e2af",
+            "source": "ad8eed9e-3a02-4a3f-b2c6-3970909a7fe3",
+            "target": "d51058dd-516c-4dce-b6c6-0751ef716cab",
+            "type": "default",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 3
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "targetHandle": "left-target",
+            "sourceHandle": "right-source",
+            "data": {
+              "locked": true
+            }
+          },
+          {
+            "id": "e3b52726-877a-4d40-9af4-a36f863e5345",
+            "source": "a22e86f9-222b-410b-b5c2-aa991f1583b3",
+            "target": "737e2fe5-d633-47b3-9e8e-5f1c8802aa2e",
+            "type": "default",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 3
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "targetHandle": "bottom-target",
+            "sourceHandle": "top-source",
+            "data": {
+              "locked": true
+            }
+          },
+          {
+            "id": "0dd28a82-130b-48c7-b7f8-e57efaf1db03",
+            "source": "89ebd6e8-6c79-4258-b5fa-87f34d549999",
+            "target": "476174e2-3fcb-4fef-86f5-65c22ee96ecb",
+            "type": "default",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 3
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "targetHandle": "left-target",
+            "sourceHandle": "right-source",
+            "data": {
+              "locked": true
+            }
+          }
+        ],
+        "viewport": {
+          "x": -1061.1709678424272,
+          "y": 240.12599351312198,
+          "zoom": 0.6597539553864472
+        }
+      }
+    },
+    "display_name": "Marcus Reyes",
+    "bubble_choice_description": "My Playback Keeps Dropping Frames!"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-02T21:27:25.605+00:00\",\"changed\":[\"cloned from \\\"ai-and-the-systems-that-power-it-lesson3-device-1\\\"\"],\"cloned_from\":\"ai-and-the-systems-that-power-it-lesson3-device-1\"},{\"changed_at\":\"2026-09-02 21:28:04 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:32:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:36:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:37:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:39:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:39:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:40:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:56:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:03:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:05:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:37:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:39:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:48:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:50:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

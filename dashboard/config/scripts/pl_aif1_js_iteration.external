@@ -5,6 +5,8 @@ description 'description here'
 markdown <<MARKDOWN
 <h1>Iteration and the For Loop</h1>
 
+Now that you've learned about conditionals, let's see how to handle repitition.
+
 <p>Imagine a user types the number 5 into an app and clicks Generate. The app shows five cat emojis in a row, one for each number they asked for. Behind the scenes, it's easy to imagine that just being five lines of code, each one adding a cat emoji, copied and pasted five times.</p>
 
 <p>That works, until the user types 50. Or until they type something unexpected. Copy-pasting only works when you already know exactly how many times to repeat something. The moment a user controls that number, the app needs a way to repeat an action automatically, however many times it's asked for.</p>

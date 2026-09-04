@@ -1,0 +1,126 @@
+name 'pl-aif1-js-introduce-functions'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Introducing Functions in JavaScript</h1>
+
+<p>When building web apps, you may want the same action to happen in multiple places. For example, different buttons might add different amounts to a score.</p>
+
+<p>Instead of repeating the instructions for changing and displaying the score, we can move those shared instructions into a function.</p>
+
+<div style="background-color:#F7F7FB; border-left:4px solid #4C42CF; border-radius:8px; padding:12px 16px; margin-bottom:24px;">
+  <p style="margin:0;">📖 A <b>function</b> is a named set of reusable instructions that tells a program what to do.</p>
+</div>
+
+ <!-- Before: Repeating Code -->
+<div style="display:flex; flex-wrap:wrap; align-items:flex-start; gap:32px; width:100%; box-sizing:border-box; margin:30px 0;">
+
+  <!-- Left Column -->
+  <div style="flex:1 1 280px; min-width:0;">
+    <h2 style="margin:0 0 12px 0;">Before: Repeating Code</h2>
+
+<p>This code works, but look closely at what happens inside each event listener.</p>
+
+  <p>When either button is clicked, the program:</p>
+
+  <p style="margin:0 0 8px 0;">• Changes the value of <code>score</code></p>
+    <p style="margin:0 0 16px 0;">• Updates <code>scoreDisplay</code> on the page</p>
+
+  <p>Those same steps appear in both event listeners. If we wanted to change how the score is updated or displayed, we would need to edit the code in multiple places.</p>
+  </div>
+
+  <!-- Right Column -->
+  <div style="flex:2 1 520px; min-width:0;">
+    <div role="region" aria-label="JavaScript example with repeated code" style="width:100%; height:330px; box-sizing:border-box; overflow-x:auto; white-space:nowrap; background-color:#171717; color:#F5F5F5; border-radius:10px; padding:20px; box-shadow:0 3px 8px rgba(0,0,0,0.18); font-family:'Courier New', Courier, monospace; font-size:16px; line-height:1.6;">
+
+  <span style="color:#D987E8;">let</span> score = <span style="color:#F6AD72;">0</span>;<br>
+      <br>
+      <span style="color:#B680F2;">addFiveBtn</span>.addEventListener(<span style="color:#F6AD72;">"click"</span>, () =&gt; {<br>
+      &nbsp;&nbsp;score = score + <span style="color:#F6AD72;">5</span>;<br>
+      &nbsp;&nbsp;<span style="color:#B680F2;">scoreDisplay</span>.textContent = score;<br>
+      });<br>
+      <br>
+      <span style="color:#B680F2;">addTenBtn</span>.addEventListener(<span style="color:#F6AD72;">"click"</span>, () =&gt; {<br>
+      &nbsp;&nbsp;score = score + <span style="color:#F6AD72;">10</span>;<br>
+      &nbsp;&nbsp;<span style="color:#B680F2;">scoreDisplay</span>.textContent = score;<br>
+      });
+
+  </div>
+  </div>
+
+</div>
+
+<hr style="display:block; clear:both; width:100%; height:1px; border:0; background-color:#D8D5F5; margin:36px 0;">
+
+<!-- After: Using a Function -->
+<div style="display:flex; flex-wrap:wrap; align-items:flex-start; gap:32px; width:100%; box-sizing:border-box; margin:30px 0;">
+
+  <!-- Left Column -->
+  <div style="flex:1 1 280px; min-width:0;">
+    <h2 style="margin:0 0 12px 0;">After: Using a Function</h2>
+
+  <p>The repeated instructions are now inside a function called <code>addPoints()</code>.</p>
+
+   <p>The <code>points</code> input tells the function how many points to add:</p>
+
+  <p style="margin:0 0 8px 0;">• <code>addPoints(5)</code> adds 5 points</p>
+    <p style="margin:0 0 16px 0;">• <code>addPoints(10)</code> adds 10 points</p>
+
+  <p>The shared instructions now live in one place, making the code:</p>
+ <p style="margin:0 0 8px 0;">• Shorter</p>
+    <p style="margin:0 0 8px 0;">• Easier to read</p>
+    <p style="margin:0 0 16px 0;">• Easier to update</p>
+
+  <p>If we change how the score is calculated or displayed, we only need to edit the function.</p>
+  </div>
+
+  <!-- Right Column -->
+  <div style="flex:2 1 520px; min-width:0;">
+    <div role="region" aria-label="JavaScript example using a reusable function" style="width:100%; height:330px; box-sizing:border-box; overflow-x:auto; white-space:nowrap; background-color:#171717; color:#F5F5F5; border-radius:10px; padding:20px; box-shadow:0 3px 8px rgba(0,0,0,0.18); font-family:'Courier New', Courier, monospace; font-size:16px; line-height:1.6;">
+
+   <span style="color:#D987E8;">let</span> score = <span style="color:#F6AD72;">0</span>;<br>
+      <br>
+      <span style="color:#D987E8;">const</span> <span style="color:#B680F2;">addPoints</span> = (points) =&gt; {<br>
+      &nbsp;&nbsp;score = score + points;<br>
+      &nbsp;&nbsp;<span style="color:#B680F2;">scoreDisplay</span>.textContent = score;<br>
+      };<br>
+      <br>
+      <span style="color:#B680F2;">addFiveBtn</span>.addEventListener(<span style="color:#F6AD72;">"click"</span>, () =&gt; <span style="color:#B680F2;">addPoints</span>(<span style="color:#F6AD72;">5</span>));<br>
+      <br>
+      <span style="color:#B680F2;">addTenBtn</span>.addEventListener(<span style="color:#F6AD72;">"click"</span>, () =&gt; <span style="color:#B680F2;">addPoints</span>(<span style="color:#F6AD72;">10</span>));
+
+  </div>
+  </div>
+
+</div>
+
+<!-- Teacher Tip -->
+<div style="background-color:#E4E2F8; color:#222222; border-radius:10px; padding:16px 20px; margin:30px 0;">
+  <p style="margin:0;"><strong>💡 Teacher tip:</strong> This code uses an arrow function: <code>const addPoints = (points) =&gt; { }</code>. If you have coded before, you may be more familiar with the traditional format <code>function addPoints(points) { }</code>. Both formats can create a reusable function. This unit uses arrow functions because they are declared with <code>const</code>, keeping the syntax consistent with other variables students encounter. The value inside the parentheses, <code>points</code>, gives the function information it can use each time it runs.</p>
+</div>
+
+<div style="display:block; clear:both; width:100%; box-sizing:border-box; margin-top:36px;">
+
+  <h2 style="margin:0 0 16px 0;">Quick Check</h2>
+
+ <div style="background-color:#F7F7FB; border-left:4px solid #4C42CF; border-radius:8px; padding:12px 16px;">
+  <p style="margin:0;"><b>Question:</b> When the user clicks <code>addTenBtn</code>, how does the program know to add 10 points and update the score on the page?</p>
+</div>
+
+<details style="display:block; width:100%; box-sizing:border-box; margin-top:12px;">
+  <summary style="cursor:pointer; background-color:#F7F7FB; border:1px solid #E4E2F8; padding:10px 14px; border-radius:8px; font-weight:bold;">
+    🔎 Check Your Answer
+  </summary>
+
+  <div style="background-color:#D5EFFF; color:#06338D; border-radius:8px; padding:14px 16px; margin-top:8px;">
+    <p style="margin:0;"><b>Answer:</b> The event listener calls <code>addPoints(10)</code>, which sends the value <code>10</code> into the function as <code>points</code>. The function adds that value to <code>score</code>, then uses <code>scoreDisplay.textContent</code> to show the updated score on the page.</p>
+  </div>
+</details>
+
+  <p style="display:block; clear:both; width:100%; margin:24px 0 0 0;">
+    Next up: let’s create our own functions.
+  </p>
+
+</div>
+MARKDOWN

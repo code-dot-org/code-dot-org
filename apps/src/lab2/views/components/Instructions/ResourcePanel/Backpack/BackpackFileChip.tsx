@@ -14,6 +14,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import isFileTypeSupported from './isFileTypeSupported';
 import {onClickAddFile} from './onClickAddFile';
 import {
   fetchAndSaveFile,
@@ -30,12 +31,10 @@ interface BackpackFileChipProps extends BackpackProps {
   isRecentlyAdded?: boolean;
   disableActions: boolean;
   setActionInProgress: (inProgress: boolean) => void;
-  isSecondaryBackpack?: boolean;
-  onImageFlagged?: (
-    file: File,
-    fileType: string,
-    uploadFunction: () => Promise<void>
-  ) => void;
+  // Backpack this file came from, used to disambiguate same-named files.
+  appType?: string;
+  // Display name for the Lab this file was saved from, shown when another backpack holds the same name.
+  sourceDisplayName?: string;
 }
 
 const EXTENSIONS_WITH_PREVIEWS = ['png', 'jpg', 'jpeg', 'gif'];
@@ -53,12 +52,19 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   supportedFileTypes,
   disableActions,
   setActionInProgress,
-  isSecondaryBackpack,
-  onImageFlagged,
+  appType,
+  sourceDisplayName,
   addFileTooltipText = 'Add to project',
   addFileHandler,
 }) => {
   const fileExtension = fileName.split('.').pop()?.toLowerCase();
+  const idSuffix = appType ? `-${appType}` : '';
+  const fileDetailText = [
+    fileExtension?.toUpperCase(),
+    sourceDisplayName && `(Saved from ${sourceDisplayName})`,
+  ]
+    .filter(Boolean)
+    .join(' ');
   const fileIcon = useMemo(
     () =>
       getFileIconNameAndStyle({
@@ -73,8 +79,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
     useAppSelector(state => state.lab.channel && state.lab.channel.id) || '';
   const dialogControl = useDialogControl();
   const inReadOnly = useAppSelector(isReadOnlyWorkspace);
-  const isFileSupported =
-    fileExtension && supportedFileTypes.includes(fileExtension);
+  const isFileSupported = isFileTypeSupported(fileName, supportedFileTypes);
   // If the parent tells us to, we are in read-only mode, or the file type is unsupported, disable the add button.
   const addButtonDisabled = inReadOnly || !isFileSupported || disableActions;
   const addButtonTooltipText = useMemo(() => {
@@ -103,7 +108,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [backpackApi, fileExtension, fileName, isRecentlyAdded]);
 
-  const handleAdd = async (isSecondaryBackpack?: boolean) => {
+  const handleAdd = async () => {
     // Use the addFileHandler if provided; otherwise fall back to default logic.
     if (addFileHandler) {
       onClickAddFile(
@@ -139,9 +144,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
         createNewProjectFile,
         findIdForFileName,
         fileName,
-        newFileName,
-        onImageFlagged,
-        isSecondaryBackpack
+        newFileName
       );
     } else {
       // Fetch backpack file content and import new file to project - not a duplicate file name.
@@ -155,8 +158,6 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
         findIdForFileName,
         selectedFileName: fileName,
         newFileName: fileName,
-        onImageFlagged,
-        isSecondaryBackpack,
       });
     }
     setActionInProgress(false);
@@ -235,7 +236,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
           variant="body4"
           gutterBottom
         >
-          {fileExtension?.toUpperCase()}
+          {fileDetailText}
         </Typography>
       </div>
       <div className={moduleStyles.fileActions}>
@@ -243,7 +244,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
           <Tags
             tagsList={[
               {
-                tooltipId: `${fileName}-recently-added`,
+                tooltipId: `${fileName}-recently-added${idSuffix}`,
                 label: 'Added',
                 tooltipContent: 'Added',
                 icon: {iconName: 'check', placement: 'left'},
@@ -259,7 +260,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
                 variant="outlined"
                 color="tertiary"
                 size="extraSmall"
-                onClick={() => handleAdd(isSecondaryBackpack)}
+                onClick={handleAdd}
                 type="button"
                 aria-label={addButtonTooltipText}
                 disabled={addButtonDisabled}
@@ -270,7 +271,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
           </Tooltip>
         )}
         <ActionDropdown
-          name={`backpack-options-${fileName}`}
+          name={`backpack-options-${fileName}${idSuffix}`}
           options={[
             {
               value: 'delete',
@@ -280,7 +281,11 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
               icon: {iconName: 'trash', iconStyle: 'solid'},
             },
           ]}
-          labelText={`${fileName} options`}
+          labelText={
+            sourceDisplayName
+              ? `${fileName} from ${sourceDisplayName} options`
+              : `${fileName} options`
+          }
           size={'xs'}
           triggerButtonProps={{
             color: 'tertiary',

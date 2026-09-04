@@ -17,6 +17,8 @@ require 'cdo/hash'
 require 'cdo/i18n'
 require 'cdo/i18n_backend'
 require 'cdo/shared_constants'
+require 'cdo/rack/request'
+require 'cdo/rack/response'
 
 # load and configure pycall before numpy and any other python-related gems
 # can be automatically loaded just below.
@@ -52,6 +54,13 @@ module Dashboard
         resource '/dashboardapi/*', headers: :any, methods: [:get]
       end
     end
+
+    # Hotfix: recover users left with two `_learn_session` cookies after the
+    # brief `domain: nil` deploy. Runs outermost so its HTTP_COOKIE rewrite is
+    # seen by every downstream cookie reader. Remove once duplicate cookies have
+    # aged out (~40 days; dashboard_session_ttl_days).
+    require 'cdo/rack/session_cookie_scope_migration'
+    config.middleware.insert_before 0, Rack::SessionCookieScopeMigration
 
     if CDO.use_cookie_dcdo
       # Enables the setting of DCDO via cookies for testing purposes.
@@ -94,8 +103,10 @@ module Dashboard
 
     config.middleware.insert_after Rails::Rack::Logger, Middleware::I18n
     config.middleware.insert_after Middleware::I18n, Middleware::GlobalEdition
-    config.middleware.insert_after Middleware::I18n, FilesApi
 
+    # Ensure legacy endpoints are loaded last so they have access to middleware-provided
+    # functionality such as I18n, GlobalEdition, Redis-backed sessions, and cookies.
+    config.middleware.use FilesApi
     config.middleware.insert_after FilesApi, ChannelsApi
     config.middleware.insert_after ChannelsApi, SharedResources
     config.middleware.insert_after SharedResources, NetSimApi
