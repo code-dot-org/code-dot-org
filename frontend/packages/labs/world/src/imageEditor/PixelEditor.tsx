@@ -39,6 +39,7 @@ import {
   type Raster,
   type RGBA,
 } from './tools';
+import {undoDepthFor} from './undoBudget';
 
 import moduleStyles from './pixel-editor.module.scss';
 
@@ -86,13 +87,6 @@ const FILL_TOLERANCE = 32;
 // color is transparent; the preview layer uses this stand-in instead. The
 // committed shape uses the real color.
 const PREVIEW_STANDIN: RGBA = [128, 128, 128, 140];
-
-// Undo history: one snapshot per completed operation, bounded by memory, not
-// count — a 64x64 pixel-art backing is 16KB but a native-resolution image
-// can be megabytes. At least MIN_UNDO_DEPTH steps are always kept.
-const UNDO_BYTE_BUDGET = 16 * 1024 * 1024;
-const MIN_UNDO_DEPTH = 4;
-const MAX_UNDO_DEPTH = 30;
 
 // Recently used colors, shown as one row in the color picker. The caller
 // seeds them and persists the updated list handed back on save.
@@ -233,10 +227,9 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
     );
   }, []);
 
-  // Snapshot the backing before a mutating operation. Memory-bounded: total
-  // snapshot bytes stay under UNDO_BYTE_BUDGET (large images keep fewer
-  // steps, never fewer than MIN_UNDO_DEPTH). A new operation invalidates the
-  // redo stack.
+  // Snapshot the backing before a mutating operation. How deep the stack may
+  // go is a question about the picture's size rather than about drawing
+  // (./undoBudget). A new operation invalidates the redo stack.
   const pushUndo = useCallback(() => {
     const backing = backingRef.current;
     const ctx = backing?.getContext('2d');
@@ -249,11 +242,7 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
         ctx.getImageData(0, 0, backing.width, backing.height).data,
       ),
     );
-    const bytesPer = backing.width * backing.height * 4;
-    const maxDepth = Math.min(
-      MAX_UNDO_DEPTH,
-      Math.max(MIN_UNDO_DEPTH, Math.floor(UNDO_BYTE_BUDGET / bytesPer)),
-    );
+    const maxDepth = undoDepthFor(backing.width, backing.height);
     while (stack.length > maxDepth) {
       stack.shift();
     }

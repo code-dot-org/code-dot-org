@@ -318,9 +318,34 @@ than fails, which is the honest signal. And `pixelArt`'s round trip is the
 module's whole purpose in one assertion: eight-by-eight art, drawn at eleven
 pixels a block, detected, downsampled, and identical.
 
-What is left is `PixelEditor.tsx` itself (1,248 lines), which wants the
-`MapStage` treatment — the same `ResizeObserver` and recording-context stubs
-would drive it — and the two big editor components beside it.
+`PixelEditor.tsx` followed, and needed more of a canvas than the stage did:
+the stage's canvas is a VIEW of a document, this one IS the document, so the
+harness keeps a real pixel buffer and answers `getImageData`/`putImageData`
+faithfully while no-opping the rest. Four stubs go with it, each for something
+jsdom lacks outright — `ImageData`, an `Image` that loads, a rectangle for the
+display canvas (all-zero rects map every pointer to NaN), and pointer capture.
+
+The undo BUDGET came out first, as `undoBudget.ts`: how deep the stack may go
+is a question about the picture's size, and the only way to find out what four
+lines in the middle of a snapshot did was to draw thirty times. A 32×32 keeps
+all thirty steps; a 4K backdrop keeps the floor of four, at 133MB.
+
+Ten component tests, all of them about WHEN a file is written, because that is
+what nothing was checking: opening a picture must not write it (the trap that
+rewrote files on open in the Blockly editor for months), a burst of strokes
+writes once, and an undo is an edit and writes too. Falsified by removing the
+baseline guard, the debounce, and undo's version bump in turn — each fails
+exactly the tests that name it.
+
+One finding, not acted on: `isReadOnly` gates the commit and one toolbar
+control, and the pointer handlers draw regardless. A learner on a locked level
+can scribble and have every mark silently dropped. Nothing is written either
+way, which is the property that matters; whether the marks should be refused
+at the pointer belongs to whoever owns the locked-level experience.
+
+What is left is the two big editor components — `AnimationEditor` (1,534) and
+`EffectEditor` (1,227) — whose pure halves are already covered and whose
+component halves are not.
 
 ## 6. One voice on the shelf
 
