@@ -46,6 +46,8 @@ function paintSpectrum(canvas: HTMLCanvasElement) {
 interface ColorPickerProps {
   color: RGBA;
   onChange: (color: RGBA) => void;
+  /** Nothing may be picked — the swatch still shows what is chosen. */
+  disabled?: boolean;
   // Recently used colors, most recent first; shown as one row under the
   // spectrum, after the permanent transparent swatch.
   recentColors?: RGBA[];
@@ -57,6 +59,7 @@ interface ColorPickerProps {
  * anywhere else to close.
  */
 const ColorPicker: FunctionComponent<ColorPickerProps> = ({
+  disabled = false,
   color,
   onChange,
   recentColors = [],
@@ -137,6 +140,7 @@ const ColorPicker: FunctionComponent<ColorPickerProps> = ({
           ? undefined
           : {backgroundColor: `rgb(${color[0]}, ${color[1]}, ${color[2]})`}
       }
+      disabled={disabled}
       onClick={() => setOpen(o => !o)}
       aria-label="Choose color"
     />

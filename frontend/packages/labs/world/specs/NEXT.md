@@ -337,11 +337,23 @@ writes once, and an undo is an edit and writes too. Falsified by removing the
 baseline guard, the debounce, and undo's version bump in turn — each fails
 exactly the tests that name it.
 
-One finding, not acted on: `isReadOnly` gates the commit and one toolbar
-control, and the pointer handlers draw regardless. A learner on a locked level
-can scribble and have every mark silently dropped. Nothing is written either
-way, which is the property that matters; whether the marks should be refused
-at the pointer belongs to whoever owns the locked-level experience.
+One finding came out of it and was fixed. `isReadOnly` gated the commit and
+one toolbar control, and the pointer handlers drew regardless — so a learner
+on a locked level could paint, watch the marks appear, and lose every one of
+them on the way out without being told. Refusing at the save is the wrong end:
+nothing was written either way, and what was missing was saying so at the
+moment it mattered. A locked workspace is a viewer now — the pointer declines
+to start a gesture, undo and redo refuse in the callbacks (so Ctrl+Z goes with
+the buttons), and no tool, brush or colour is offered that cannot do anything.
+
+Writing the tests for that was the useful part. The first two asserted the
+undo button was disabled and the file unwritten, and BOTH passed with the
+pointer drawing freely — because `isReadOnly` gates the button and the commit
+on their own account. Only the pixels can tell, so the harness records every
+canvas the editor makes and digests them; and the keyboard case needs a
+history to undo, which a locked level cannot build, so it is tested the way it
+actually happens — the lock arriving after the drawing, which is what a
+project finishing its load does.
 
 What is left is the two big editor components — `AnimationEditor` (1,534) and
 `EffectEditor` (1,227) — whose pure halves are already covered and whose

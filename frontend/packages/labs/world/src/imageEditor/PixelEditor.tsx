@@ -380,6 +380,9 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
   }, [cancelInteraction]);
 
   const undo = useCallback(() => {
+    if (isReadOnly) {
+      return;
+    }
     const previous = undoStackRef.current.pop();
     if (!previous) {
       return;
@@ -391,9 +394,12 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
     restoreSnapshot(previous);
     repaint();
     setHistoryVersion(v => v + 1);
-  }, [currentPixels, restoreSnapshot, repaint]);
+  }, [isReadOnly, currentPixels, restoreSnapshot, repaint]);
 
   const redo = useCallback(() => {
+    if (isReadOnly) {
+      return;
+    }
     const next = redoStackRef.current.pop();
     if (!next) {
       return;
@@ -405,7 +411,7 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
     restoreSnapshot(next);
     repaint();
     setHistoryVersion(v => v + 1);
-  }, [currentPixels, restoreSnapshot, repaint]);
+  }, [isReadOnly, currentPixels, restoreSnapshot, repaint]);
   // Refs so the window keydown listener below can stay mounted once.
   const undoRef = useRef(undo);
   undoRef.current = undo;
@@ -513,6 +519,9 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
   // Single-key shortcuts (shown in the tooltips): letters pick tools, digits
   // 1-4 pick brush sizes. Ctrl/Cmd+Z undoes, with Shift (or Ctrl+Y) redoes;
   // other modifier combos pass through so browser shortcuts keep working.
+  //
+  // Undo and redo need no guard of their own here: they go through the same
+  // callbacks the buttons do, which refuse on a locked level.
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
       const key = e.key.toLowerCase();
@@ -709,6 +718,17 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
 
   const handlePointerDown = useCallback(
     (e: ReactPointerEvent<HTMLCanvasElement>) => {
+      // A LOCKED WORKSPACE IS A VIEWER. Refused here and nowhere else,
+      // because the move and the release both return unless a gesture is in
+      // progress — so declining to start one is the whole of it.
+      //
+      // It used to be refused only at the SAVE, which meant a learner on a
+      // locked level could draw, watch the marks appear, and lose every one
+      // of them without being told. Nothing was written either way; what was
+      // missing was saying so at the moment it mattered.
+      if (isReadOnly) {
+        return;
+      }
       const p = toPixel(e);
       const backing = backingRef.current;
       if (!p || !backing) {
@@ -738,6 +758,7 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
       }
     },
     [
+      isReadOnly,
       tool,
       brushSize,
       color,
@@ -941,6 +962,11 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
   // stacks themselves live in refs.
   const canUndo = historyVersion >= 0 && undoStackRef.current.length > 0;
   const canRedo = historyVersion >= 0 && redoStackRef.current.length > 0;
+  // Nothing that changes the picture is offered on a locked level: a control
+  // that is present and inert is the same silent nothing the pointer used to
+  // be. The canvas is still shown, and still scrolls and zooms — looking is
+  // the whole of what a viewer does.
+  const canEdit = !isReadOnly && loaded;
 
   if (!loaded && !loadError) {
     return null;
@@ -995,6 +1021,7 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
                     moduleStyles.toolButton,
                     tool === t.id && moduleStyles.toolActive,
                   )}
+                  disabled={!canEdit}
                   onClick={() => setTool(t.id)}
                 >
                   {t.icon}
@@ -1017,6 +1044,7 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
                     moduleStyles.toolButton,
                     brushSize === size && moduleStyles.toolActive,
                   )}
+                  disabled={!canEdit}
                   onClick={() => setBrushSize(size)}
                 >
                   <span
@@ -1037,6 +1065,7 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
               color={color}
               onChange={setColor}
               recentColors={recentColors}
+              disabled={!canEdit}
             />
           </div>
           <div className={moduleStyles.historyRow}>
@@ -1049,7 +1078,7 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
                 type="button"
                 aria-label="Undo (Ctrl+Z)"
                 className={moduleStyles.toolButton}
-                disabled={!canUndo}
+                disabled={!canUndo || isReadOnly}
                 onClick={undo}
               >
                 <FontAwesomeV6Icon iconName="rotate-left" />
@@ -1063,7 +1092,7 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
                 type="button"
                 aria-label="Redo (Ctrl+Shift+Z)"
                 className={moduleStyles.toolButton}
-                disabled={!canRedo}
+                disabled={!canRedo || isReadOnly}
                 onClick={redo}
               >
                 <FontAwesomeV6Icon iconName="rotate-right" />

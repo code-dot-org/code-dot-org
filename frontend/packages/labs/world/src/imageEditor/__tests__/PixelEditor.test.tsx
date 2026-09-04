@@ -109,7 +109,24 @@ const digest = (pixels: Uint8ClampedArray): string => {
 const LOADED: RGBA = [10, 20, 30, 255];
 const IMAGE_SIDE = 16;
 
+/**
+ * Every canvas the editor makes, so its pixels can be read.
+ *
+ * The backing is the picture — it is not in the DOM, it is a ref — so the
+ * only way to ask whether a stroke drew ANYTHING is to watch what the editor
+ * created. A digest over all of them answers that without this test having to
+ * know which canvas is which.
+ */
+let madeCanvases: Array<HTMLCanvasElement & {pixels?: Uint8ClampedArray}> = [];
+
+/** One number for the state of every canvas: it moves if any pixel does. */
+const pictureDigest = () =>
+  madeCanvases
+    .map(canvas => digest(canvas.pixels ?? new Uint8ClampedArray()))
+    .join('|');
+
 const originals = {
+  createElement: document.createElement,
   getContext: HTMLCanvasElement.prototype.getContext,
   toDataURL: HTMLCanvasElement.prototype.toDataURL,
   rect: Element.prototype.getBoundingClientRect,
@@ -119,6 +136,13 @@ const originals = {
 };
 
 beforeAll(() => {
+  document.createElement = function (this: Document, ...args: [string]) {
+    const made = originals.createElement.apply(this, args);
+    if (made instanceof HTMLCanvasElement) {
+      madeCanvases.push(made);
+    }
+    return made;
+  } as typeof document.createElement;
   HTMLCanvasElement.prototype.getContext = function (this: HTMLCanvasElement) {
     return contextFor(this);
   } as unknown as typeof HTMLCanvasElement.prototype.getContext;
@@ -154,6 +178,7 @@ beforeAll(() => {
 });
 
 afterAll(() => {
+  document.createElement = originals.createElement;
   HTMLCanvasElement.prototype.getContext = originals.getContext;
   HTMLCanvasElement.prototype.toDataURL = originals.toDataURL;
   Element.prototype.getBoundingClientRect = originals.rect;
@@ -164,6 +189,7 @@ afterAll(() => {
 
 beforeEach(() => {
   vi.useRealTimers();
+  madeCanvases = [];
 });
 
 const {default: PixelEditor} = await import('../PixelEditor');
@@ -300,13 +326,6 @@ describe('drawing', () => {
   });
 
   it('never writes the file when the workspace is locked', async () => {
-    // Worth stating precisely, because it is narrower than it sounds:
-    // read-only gates the COMMIT and one toolbar control, and the pointer
-    // handlers draw regardless. So a learner on a locked level can scribble
-    // on the canvas and have every mark silently dropped when they leave.
-    // Nothing is written either way, which is the property that matters
-    // here; whether the marks should be refused at the pointer is a
-    // question for whoever owns the locked-level experience.
     vi.useFakeTimers();
     const {canvas, onCommit} = await open({isReadOnly: true});
 
@@ -314,6 +333,69 @@ describe('drawing', () => {
     await settle();
 
     expect(onCommit).not.toHaveBeenCalled();
+  });
+});
+
+describe('a locked workspace', () => {
+  // Read-only used to gate the SAVE and nothing else: the pointer handlers
+  // drew regardless, so a learner on a locked level could paint, watch the
+  // marks appear, and lose every one of them on the way out without being
+  // told. Refusing at the save is the wrong end — nothing is written either
+  // way, and what was missing was saying so at the moment it mattered.
+
+  it('leaves the picture alone when it is drawn on', async () => {
+    // Read against the PIXELS, not against the save and not against the undo
+    // button: both of those are gated by `isReadOnly` on their own account,
+    // so either would pass with the pointer drawing freely. The picture
+    // itself is the only thing that can tell.
+    const {canvas} = await open({isReadOnly: true});
+    const before = pictureDigest();
+
+    stroke(canvas);
+
+    expect(pictureDigest()).toBe(before);
+  });
+
+  it('offers no tool that cannot do anything', async () => {
+    // A control that is present and inert is the same silent nothing the
+    // pointer used to be.
+    await open({isReadOnly: true});
+
+    expect(screen.getByRole('button', {name: /^pen/i})).toBeDisabled();
+    expect(screen.getByRole('button', {name: /brush size 1/i})).toBeDisabled();
+    expect(screen.getByRole('button', {name: /choose color/i})).toBeDisabled();
+    expect(screen.getByRole('button', {name: /undo/i})).toBeDisabled();
+    expect(screen.getByRole('button', {name: /redo/i})).toBeDisabled();
+  });
+
+  it('still shows the picture, because looking is the point', async () => {
+    const {canvas} = await open({isReadOnly: true});
+    expect(canvas).toBeInTheDocument();
+  });
+
+  it('refuses the keyboard as well as the buttons', async () => {
+    // Ctrl+Z does not go through a button, so a guard on the button alone
+    // leaves the shortcut live on a level the buttons say is locked.
+    //
+    // Reaching it takes a history to undo, and a locked level cannot build
+    // one — so this is the case where the lock arrives AFTER the drawing,
+    // which is what a project finishing its load does (the lab is read-only
+    // for a moment, and `MapStage` carries the same note about it).
+    const {canvas, rerender} = await open();
+    stroke(canvas);
+    const drawn = pictureDigest();
+
+    rerender(
+      <PixelEditor
+        title="coin.png"
+        imageUrl="data:image/png;base64,iVBORw0KGgo="
+        onCommit={vi.fn()}
+        isReadOnly
+      />,
+    );
+    fireEvent.keyDown(window, {key: 'z', ctrlKey: true});
+
+    expect(pictureDigest()).toBe(drawn);
   });
 });
 
