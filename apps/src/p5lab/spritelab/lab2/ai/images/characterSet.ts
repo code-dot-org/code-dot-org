@@ -42,10 +42,10 @@ interface PosedFrame {
   pose: string;
 }
 
-// The frames drawn from the base. The pose text rides on an edit request
-// that carries the base picture, so it only has to say what changes. The
-// second idle comes first: the strip's frame order is this list with the
-// base spliced in after it (CHARACTER_STRIP_POSES).
+// The frames drawn from the base. Each pose text is sent as an edit
+// request together with the base picture, so it describes only what
+// changes from the base. List order is strip order, except that the base
+// itself is inserted after the first entry (CHARACTER_STRIP_POSES).
 const POSED_FRAMES: PosedFrame[] = [
   {
     label: 'idling',
@@ -78,8 +78,7 @@ const POSED_FRAMES: PosedFrame[] = [
 export const CHARACTER_SET_PICTURE_COUNT = 1 + POSED_FRAMES.length;
 
 // Each frame is drawn on its own, so a companion or prop the model adds to
-// one frame has no reason to recur in the next: a cat came and went across
-// a witch's walk. Say so in every frame's prompt.
+// one frame has no reason to recur in the next.
 const ONLY_THIS_CHARACTER =
   'Only this one character, alone: no other creatures, people, pets, objects or companions, and nothing added that is not part of the character itself.';
 
