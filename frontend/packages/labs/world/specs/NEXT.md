@@ -355,9 +355,30 @@ history to undo, which a locked level cannot build, so it is tested the way it
 actually happens — the lock arriving after the drawing, which is what a
 project finishing its load does.
 
-What is left is the two big editor components — `AnimationEditor` (1,534) and
-`EffectEditor` (1,227) — whose pure halves are already covered and whose
-component halves are not.
+`AnimationEditor` followed, and needed no canvas harness at all — its two
+hardest behaviours are about the PROJECT rather than the picture, so mocking
+`useSources` is the whole setup. Both are the same fact: a `play animation`
+block holds an id and nothing else, and no block records which file it came
+from, so an id is a reference the editor is responsible for.
+
+Renaming therefore rewrites every play in the project, and does it in ONE
+write, because `onChange` saves through a `saveFile` closed over the sources
+of the render that made it — a per-file save following a project write would
+put the other files back and undo the rename it had just carried. It refuses
+a duplicate and an empty name, and it deliberately does NOT rewrite the plays
+when the old id was ambiguous, since a block naming it might have meant the
+other file's. Deleting cannot carry, because there is nothing to carry to, so
+it says what plays the animation and leaves those blocks exactly as written
+if the learner goes ahead — a play naming something absent is visible and
+fixable, where a field silently emptied is neither.
+
+Thirteen tests, and four falsifications: dropping the carry, ignoring the
+ambiguity, never asking before a delete, and accepting a duplicate each fail
+the test that names them. Read-only needed no fix here — unlike the pixel
+editor, this one already disabled its twelve controls.
+
+What is left is `EffectEditor` (1,227 lines), whose pure halves are covered
+and whose component half is not.
 
 ## 6. One voice on the shelf
 
