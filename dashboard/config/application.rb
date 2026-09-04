@@ -11,7 +11,6 @@ require_relative '../legacy/middleware/sound_library_api'
 require_relative '../legacy/middleware/animation_library_api'
 Dir[File.expand_path('../lib/middleware/**/*.rb', __dir__)].sort.each {|file| require file}
 
-require 'bootstrap-sass'
 require 'cdo/global_edition'
 require 'cdo/hash'
 require 'cdo/i18n'
