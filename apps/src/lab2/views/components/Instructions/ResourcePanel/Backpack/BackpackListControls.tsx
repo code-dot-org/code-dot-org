@@ -82,9 +82,10 @@ const BackpackListControls: React.FC<BackpackListControlsProps> = ({
         name="backpack-file-type-filter"
         className={moduleStyles.controlDropdown}
         labelText="File type"
-        size="s"
+        size="xs"
         styleAsFormField
         options={categoryOptions}
+        color="gray"
         selectedOption={selectedCategoryOption}
         onChange={option => {
           onCategoryChange(
@@ -98,9 +99,10 @@ const BackpackListControls: React.FC<BackpackListControlsProps> = ({
         name="backpack-sort-order"
         className={moduleStyles.controlDropdown}
         labelText="Sort by"
-        size="s"
+        size="xs"
         styleAsFormField
         menuPlacement="right"
+        color="gray"
         options={SORT_OPTIONS}
         selectedOption={selectedSortOption}
         onChange={option => {
