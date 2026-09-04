@@ -3,88 +3,53 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Pixels of Me Project Overview
-
-<img src="https://images.code.org/66f86ca5d8e42abfe1a34e51af2ea606-image-1741790839525.png" alt="Mario made out of pixels" width="170px" style="border-radius:10px; float:left; margin: 0px 50px 0px 50px;">
-
-In this project, students will create a digital pixel artifact that represents an aspect of their identity — such as a hobby, interest, future career, or favorite book/movie.
-
-They will apply computational thinking, Python programming, and AI tools to develop their designs while engaging in peer feedback and reflection.
-
+<h1>Pixels of Me Project Overview</h1>
+<img src="https://images.code.org/66f86ca5d8e42abfe1a34e51af2ea606-image-1741790839525.png" alt="Mario made out of pixels" width="170px" style="border-radius:10px; float:left; margin: 0px 20px 10px 0px;">
+<br><br>
+<p>In this project, students will create a digital pixel artifact that represents an aspect of their identity, such as a hobby, interest, future career, or favorite book or movie.</p>
+<p>They will apply computational thinking, Python programming, and AI tools to develop their designs while engaging in peer feedback and reflection.</p>
 <div style="clear:both;"></div>
 
-## Project Requirements:
+<h2>Project Requirements:</h2>
 
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🧠 Computational Thinking
-</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
-
-
-- Break down their design into smaller components (decomposition).
-- Identify patterns and simplify code using abstraction.
-
-
-</p></div>
+<details style="background-color: #F7F7FB; border: 1px solid #E4E2F8; border-radius: 10px; padding: 12px 16px; margin-bottom: 10px;">
+<summary style="cursor: pointer; font-weight: bold; color: #1F1976; font-size: 16px; display: flex; align-items: center; gap: 10px;"><span style="display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; background-color: #4C42CF; color: #FFFFFF; font-size: 14px; flex-shrink:0;">1</span>Computational Thinking</summary>
+<div style="margin-top: 12px; margin-left: 36px;">
+<p style="margin: 0 0 6px 0;">• Break down their design into smaller components (decomposition).</p>
+<p style="margin: 0;">• Identify patterns and simplify code using abstraction.</p>
+</div>
 </details>
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🧩 Algorithms & Python</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
-
-
-- Use sequencing, loops, and selection statements to structure their code.
-- Implement functions with descriptive names for clarity.
-
-
-</p></div>
+<details style="background-color: #F7F7FB; border: 1px solid #E4E2F8; border-radius: 10px; padding: 12px 16px; margin-bottom: 10px;">
+<summary style="cursor: pointer; font-weight: bold; color: #1F1976; font-size: 16px; display: flex; align-items: center; gap: 10px;"><span style="display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; background-color: #4C42CF; color: #FFFFFF; font-size: 14px; flex-shrink:0;">2</span>Algorithms & Python</summary>
+<div style="margin-top: 12px; margin-left: 36px;">
+<p style="margin: 0 0 6px 0;">• Use sequencing, loops, and selection statements to structure their code.</p>
+<p style="margin: 0;">• Implement functions with descriptive names for clarity.</p>
+</div>
 </details>
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">✏️ Code Documentation</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
-
-
-- Add comments to explain the purpose of key functions and code segments.
-
-
-</p></div>
+<details style="background-color: #F7F7FB; border: 1px solid #E4E2F8; border-radius: 10px; padding: 12px 16px; margin-bottom: 10px;">
+<summary style="cursor: pointer; font-weight: bold; color: #1F1976; font-size: 16px; display: flex; align-items: center; gap: 10px;"><span style="display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; background-color: #4C42CF; color: #FFFFFF; font-size: 14px; flex-shrink:0;">3</span>Code Documentation</summary>
+<div style="margin-top: 12px; margin-left: 36px;">
+<p style="margin: 0;">• Add comments to explain the purpose of key functions and code segments.</p>
+</div>
 </details>
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">💭 Feedback & Reflection</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
-
-
-- Participate in a TAG Method peer review to refine their work.
-- Reflect on their computational thinking process and problem-solving strategies.
-
-
-
-</p></div>
+<details style="background-color: #F7F7FB; border: 1px solid #E4E2F8; border-radius: 10px; padding: 12px 16px; margin-bottom: 10px;">
+<summary style="cursor: pointer; font-weight: bold; color: #1F1976; font-size: 16px; display: flex; align-items: center; gap: 10px;"><span style="display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; background-color: #4C42CF; color: #FFFFFF; font-size: 14px; flex-shrink:0;">4</span>Feedback & Reflection</summary>
+<div style="margin-top: 12px; margin-left: 36px;">
+<p style="margin: 0 0 6px 0;">• Participate in a TAG Method peer review to refine their work.</p>
+<p style="margin: 0;">• Reflect on their computational thinking process and problem-solving strategies.</p>
+</div>
 </details>
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🤖 AI Integration</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
-
-
-- Use AI tools for brainstorming, debugging, or refining their code.
-- Reflect on AI’s role in their project and discuss its ethical implications.
-
-
-</p></div>
+<details style="background-color: #F7F7FB; border: 1px solid #E4E2F8; border-radius: 10px; padding: 12px 16px; margin-bottom: 10px;">
+<summary style="cursor: pointer; font-weight: bold; color: #1F1976; font-size: 16px; display: flex; align-items: center; gap: 10px;"><span style="display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; background-color: #4C42CF; color: #FFFFFF; font-size: 14px; flex-shrink:0;">5</span>AI Integration</summary>
+<div style="margin-top: 12px; margin-left: 36px;">
+<p style="margin: 0 0 6px 0;">• Use AI tools for brainstorming, debugging, or refining their code.</p>
+<p style="margin: 0;">• Reflect on AI's role in their project and discuss its ethical implications.</p>
+</div>
 </details>
 
----
-
-This project allows students to apply their coding skills creatively while practicing structured problem-solving, peer collaboration, and responsible AI use.
-
-![]()
+<p>This project allows students to apply their coding skills creatively while practicing structured problem solving, peer collaboration, and responsible AI use.</p>
 MARKDOWN

@@ -87,6 +87,14 @@ class ImageModerationTest < Minitest::Test
     assert_equal 'image/png', ct
   end
 
+  def test_scales_down_large_jpeg_exceeding_max_byte_size
+    blob = large_jpeg_blob_over_max_size
+    assert_operator blob.bytesize, :>, ImageModeration::MAX_MODERATION_SIZE
+    io, ct = ImageModeration.scale_image_for_moderation_if_needed(StringIO.new(blob), 'image/jpeg')
+    assert_operator io.read.bytesize, :<=, ImageModeration::MAX_MODERATION_SIZE
+    assert_equal 'image/jpeg', ct
+  end
+
   # Extreme-ratio image: one side below MIN, the other above MAX.
   # e.g. 8000x40 -> MIN upscale brings it to ~10000x50, then MAX downscale
   # brings it to ~7200x36. Both MAX constraints must be satisfied; MIN is
@@ -163,6 +171,19 @@ class ImageModerationTest < Minitest::Test
         # PNG's compression algorithm so we can produce a large image that exceeds MAX_MODERATION_SIZE.
         c << 'plasma:fractal'
         c.compress 'None'
+        c << f.path
+      end
+      File.binread(f.path)
+    end
+  end
+
+  # High-quality JPEG that can stay over 4MB after a single dimension resize.
+  private def large_jpeg_blob_over_max_size
+    Tempfile.create(%w[large .jpg]) do |f|
+      MiniMagick::Tool::Convert.new do |c|
+        c.size '3000x3000'
+        c << 'plasma:fractal'
+        c.quality '95'
         c << f.path
       end
       File.binread(f.path)

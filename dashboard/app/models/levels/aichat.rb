@@ -34,6 +34,7 @@ class Aichat < Level
     starter_assets
     submittable
     disable_edit_run_for_submission
+    generate_aichat_preset
   )
 
   def self.create_from_level_builder(params, level_params)
@@ -45,6 +46,10 @@ class Aichat < Level
         properties: {}
       )
     )
+  end
+
+  def generate_fields
+    super.merge(generateAichatPreset: generate_aichat_preset)
   end
 
   def uses_lab2?
