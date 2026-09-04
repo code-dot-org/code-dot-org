@@ -422,20 +422,21 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // the project), otherwise the first scene.
   const defaultPlaySceneId = pinnedSceneId ?? scenes[0]?.id ?? null;
 
+  // From load-time sources, not the store: the redux list seeds a tick
+  // after mount, so its first value would snapshot as empty.
+  const baselineImages = useMemo(
+    () =>
+      countImagesByType(
+        initialSources.animations ?? {orderedKeys: [], propsByKey: {}}
+      ),
+    [initialSources]
+  );
   const guide = useGuideSteps({
     steps: levelProperties.guideSteps,
     grid: activeWorld.grid,
     activeTab,
     animations: animationList,
-    // From load-time sources, not the store: the redux list seeds a tick
-    // after mount, so its first value would snapshot as empty.
-    baselineImages: useMemo(
-      () =>
-        countImagesByType(
-          initialSources.animations ?? {orderedKeys: [], propsByKey: {}}
-        ),
-      [initialSources]
-    ),
+    baselineImages,
     fallback: levelProperties.longInstructions,
   });
 
