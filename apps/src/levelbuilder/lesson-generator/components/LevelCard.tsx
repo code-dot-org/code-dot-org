@@ -217,6 +217,30 @@ const LevelCard: React.FC<LevelCardProps> = ({
                 }
                 disabled={disabled}
               />
+              {(spec.labType === 'weblab2' || spec.labType === 'pythonlab') && (
+                <details
+                  className={moduleStyles.suppliedCode}
+                  open={!!spec.suppliedCode}
+                >
+                  <summary>Supplied code (optional)</summary>
+                  <label htmlFor={`supplied-${spec.key}`}>
+                    Canonical code for this level — the AI reproduces it in the
+                    starter files and builds the level around it. Label code
+                    &quot;Solution:&quot; to instead have the AI design starter
+                    files that lead the student to it.
+                  </label>
+                  <textarea
+                    id={`supplied-${spec.key}`}
+                    value={spec.suppliedCode ?? ''}
+                    onChange={e =>
+                      onChange(spec.key, {suppliedCode: e.target.value})
+                    }
+                    placeholder="Paste starter code, optionally with file-name labels."
+                    spellCheck={false}
+                    disabled={disabled}
+                  />
+                </details>
+              )}
               {spec.labType === 'bubbleChoice' && (
                 <SublevelSection
                   sublevels={sublevels}

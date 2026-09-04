@@ -1,7 +1,6 @@
 import React, {useCallback, useMemo, useState} from 'react';
 
 import {LevelPropertiesMap} from '@cdo/apps/lab2/types';
-import {createUuid} from '@cdo/apps/utils';
 
 import {loadLessonLevelProperties} from '../curriculum-generator/api/levelProperties';
 import OutlineBlock from '../curriculum-generator/components/OutlineBlock';
@@ -9,7 +8,12 @@ import {useAichatContext} from '../curriculum-generator/hooks/useAichatContext';
 import {useBeforeUnloadWhile} from '../curriculum-generator/hooks/useBeforeUnloadWhile';
 import {useReorderableList} from '../curriculum-generator/hooks/useReorderableList';
 
-import {AICHAT_PRESETS, AichatPresetId, generateAichatLevel} from './ai/aichat';
+import {
+  AICHAT_PRESETS,
+  AichatPresetId,
+  DEFAULT_AICHAT_PRESET,
+  generateAichatLevel,
+} from './ai/aichat';
 import {generateAilabLevel} from './ai/ailab';
 import {
   generateMatchLevel,
@@ -24,6 +28,7 @@ import {
   renderBubbleChoiceDsl,
 } from './ai/bubbleChoice';
 import {generateFreeResponseLevel} from './ai/freeResponse';
+import {parsePlanningDoc} from './ai/importPlan';
 import {generateLessonOutline} from './ai/outline';
 import {generatePanelsForLevel} from './ai/panels';
 import {
@@ -48,6 +53,7 @@ import {
   priorOutputFromLevelProperties,
 } from './helpers/precedingLevels';
 import {Placement, rebuildActivities} from './helpers/rebuildActivities';
+import {specsFromPlannedLevels} from './helpers/specsFromPlan';
 import {formatTargetProject} from './helpers/targetProject';
 import {
   createOrFindLevel,
@@ -85,8 +91,6 @@ const LAB_LABELS = {
   bubbleChoice: 'Bubble Choice',
 } as const satisfies Record<LabType, string>;
 
-const DEFAULT_AICHAT_PRESET: AichatPresetId = 'explore';
-
 const LAB_OPTIONS: {value: LabType; label: string}[] = SUPPORTED_LAB_TYPES.map(
   v => ({value: v, label: LAB_LABELS[v]})
 );
@@ -114,8 +118,10 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     newSpec: newLevelSpec,
     // Editing the description re-derives the `generate` checkbox from
     // whether the description still matches what we last generated for.
-    // The user can still override manually after.
+    // Editing supplied code always re-arms generation. The user can
+    // still override manually after.
     onAfterPatch: (_prev, next, patch) => {
+      if ('suppliedCode' in patch) return {...next, generate: true};
       if (!('description' in patch)) return next;
       return {
         ...next,
@@ -133,6 +139,9 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
   const [outline, setOutline] = useState<string>(lesson.generateOutline || '');
   const [isOutlining, setIsOutlining] = useState(false);
   const [outlineError, setOutlineError] = useState<string | null>(null);
+  const [importText, setImportText] = useState('');
+  const [isImporting, setIsImporting] = useState(false);
+  const [importError, setImportError] = useState<string | null>(null);
   // Optional Weblab2 channel id. When set, the lesson is generated as
   // progressing toward the app stored at that channel; the source files
   // (MultiFileSource) get fetched once and fed to the per-level AI
@@ -197,46 +206,13 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
       const lessonCtx = {
         unitName: lesson.unitName,
         unitOutline: lesson.unitOutline,
+        draftingRules: lesson.unitDraftingRules,
         lessonName: lesson.name,
         lessonOutline: outline.trim(),
         targetProject,
       };
       const planned = await generateLessonOutline(lessonCtx);
-      const newSpecs: LevelSpec[] = planned.map(level => ({
-        key: createUuid(),
-        id: level.id,
-        labType: level.labType,
-        description: level.description,
-        generate: true,
-        // Honour the outline AI's preset pick; for non-aichat labs the
-        // field is ignored. Default to 'explore' when the AI omits it
-        // on an aichat level so the dropdown lands on something valid.
-        ...(level.labType === 'aichat'
-          ? {aichatPreset: level.aichatPreset ?? DEFAULT_AICHAT_PRESET}
-          : {}),
-        ...(level.labType === 'weblab2' && level.templateGroup
-          ? {templateGroup: level.templateGroup}
-          : {}),
-        // Nested sublevels are only honoured on bubbleChoice specs; the
-        // outline AI is prompted to emit them only there. Each sublevel
-        // gets a fresh client key so React can track it independently.
-        ...(level.labType === 'bubbleChoice' && level.sublevels
-          ? {
-              sublevels: level.sublevels.map(sub => ({
-                key: createUuid(),
-                id: sub.id,
-                labType: sub.labType,
-                description: sub.description,
-                generate: true,
-                ...(sub.labType === 'aichat'
-                  ? {
-                      aichatPreset: sub.aichatPreset ?? DEFAULT_AICHAT_PRESET,
-                    }
-                  : {}),
-              })),
-            }
-          : {}),
-      }));
+      const newSpecs = specsFromPlannedLevels(planned);
       // Drop any blank brand-new rows (the default "Add level" placeholder
       // when nothing has been typed yet) before appending the AI plan, so
       // a fresh page replaces the empty starter card cleanly.
@@ -258,9 +234,44 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     lesson.name,
     lesson.unitName,
     lesson.unitOutline,
+    lesson.unitDraftingRules,
     setLevelSpecs,
     loadTargetProject,
   ]);
+
+  // Import a planning document as a canonical level list: the AI
+  // interprets the document's levels one-to-one rather than planning its
+  // own progression, so course drafting rules don't apply here.
+  const handleImportDoc = useCallback(async () => {
+    if (!importText.trim()) {
+      setImportError('Paste a planning document first.');
+      return;
+    }
+    setImportError(null);
+    setIsImporting(true);
+    try {
+      const imported = await parsePlanningDoc(lesson.name, importText);
+      const newSpecs = specsFromPlannedLevels(imported.levels);
+      setLevelSpecs(prev => {
+        const kept = prev.filter(s => {
+          if (s.existing || s.unsupportedType) return true;
+          return !!(s.id.trim() || s.description.trim());
+        });
+        return [...kept, ...newSpecs];
+      });
+      // Fill the outline box from the document's lesson prose, but never
+      // clobber an outline the levelbuilder already wrote.
+      if (imported.lessonOutline) {
+        setOutline(prev => (prev.trim() ? prev : imported.lessonOutline));
+      }
+      setImportText('');
+    } catch (err) {
+      const message = err instanceof Error ? err.message : String(err);
+      setImportError(message);
+    } finally {
+      setIsImporting(false);
+    }
+  }, [importText, lesson.name, setLevelSpecs]);
 
   const validationError = useMemo(() => {
     if (!prefix.trim()) return 'Set a level name prefix before generating.';
@@ -541,6 +552,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         const {startSources, files} = await generateWeblab2Template({
           unitName: lesson.unitName,
           unitOutline: lesson.unitOutline,
+          authoringRules: lesson.unitAuthoringRules,
           lessonName: lesson.name,
           lessonOutline: outline.trim() || undefined,
           targetProject,
@@ -624,11 +636,13 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         const levelCtx = {
           unitName: lesson.unitName,
           unitOutline: lesson.unitOutline,
+          authoringRules: lesson.unitAuthoringRules,
           lessonName: lesson.name,
           lessonOutline: outline.trim() || undefined,
           targetProject,
           levelName,
           levelDescription: spec.description.trim(),
+          suppliedCode: spec.suppliedCode?.trim() || undefined,
           precedingLevels: precedingLevelsText || undefined,
         };
 
@@ -693,6 +707,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           bubbleChoicePlan = await generateBubbleChoiceLevel({
             unitName: lesson.unitName,
             unitOutline: lesson.unitOutline,
+            authoringRules: lesson.unitAuthoringRules,
             lessonName: lesson.name,
             lessonOutline: outline.trim() || undefined,
             targetProject,
@@ -1032,6 +1047,13 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
             'generate_outline',
             spec.description.trim()
           );
+          if (spec.labType === 'weblab2' || spec.labType === 'pythonlab') {
+            await updateLevelProperty(
+              level.id,
+              'generate_supplied_code',
+              spec.suppliedCode?.trim() ?? ''
+            );
+          }
         } catch (err) {
           const message = err instanceof Error ? err.message : String(err);
           appendLog(
@@ -1221,6 +1243,37 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           </div>
         }
       />
+
+      <details className={moduleStyles.importDoc}>
+        <summary>Or: import a planning document</summary>
+        <p>
+          Paste a lesson planning document (lesson info plus a level list, with
+          any per-level code). Its levels are imported one-to-one as cards below
+          — nothing is added or reordered — and its lesson prose fills the
+          outline box above when that box is empty.
+        </p>
+        <textarea
+          value={importText}
+          onChange={e => setImportText(e.target.value)}
+          placeholder="Paste the planning document here."
+          disabled={isImporting || isGenerating}
+        />
+        <div>
+          <button
+            type="button"
+            className={sharedStyles.secondaryButton}
+            onClick={handleImportDoc}
+            disabled={isImporting || isGenerating}
+          >
+            {isImporting ? 'Importing…' : 'Import levels'}
+          </button>
+        </div>
+        {importError && (
+          <p className={sharedStyles.summaryBad} role="alert">
+            {importError}
+          </p>
+        )}
+      </details>
 
       <div className={moduleStyles.fieldRow}>
         <label htmlFor="level-prefix">Level name prefix</label>

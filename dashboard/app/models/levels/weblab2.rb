@@ -45,6 +45,7 @@ class Weblab2 < Level
     ai_tutor_prompt_settings
     widget2
     require_edit_to_continue
+    generate_supplied_code
   )
 
   after_initialize do
@@ -69,6 +70,10 @@ class Weblab2 < Level
 
   def self.ai_tutor_modes
     [['Suggest', 'suggest'], ['Outline', 'outline'], ['Guide', 'guide'], ['Produce', 'produce'], ['Designer', 'designer'], ['Tutor', 'tutor'], ['Engineer', 'engineer'], ['QA', 'qa']]
+  end
+
+  def generate_fields
+    super.merge(generateSuppliedCode: generate_supplied_code)
   end
 
   def uses_lab2?

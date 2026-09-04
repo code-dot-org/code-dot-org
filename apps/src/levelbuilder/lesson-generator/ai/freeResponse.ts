@@ -2,7 +2,10 @@ import {Output} from 'ai';
 import z from 'zod/v3';
 
 import {generateText} from '@cdo/apps/aiGateway';
-import {LevelContext} from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
+import {
+  authoringRulesLines,
+  LevelContext,
+} from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
 import {
   getTextModel,
   logPrompt,
@@ -62,6 +65,7 @@ export async function generateFreeResponseLevel(
     '  - placeholder: one short clause shown inside the empty response box.',
     '  - solution: teacher-only markdown — a brief sample strong response',
     '    plus 1-3 look-fors for reviewing answers.',
+    ...authoringRulesLines(ctx),
     ...(ctx.lessonOutline
       ? [
           '',

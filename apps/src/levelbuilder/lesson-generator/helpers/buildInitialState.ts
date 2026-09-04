@@ -124,6 +124,10 @@ export function buildInitialState(lesson: ExistingLessonData): InitialState {
         ...(labType === 'aichat'
           ? {aichatPreset: restoreAichatPreset(level.generateAichatPreset)}
           : {}),
+        ...((labType === 'weblab2' || labType === 'pythonlab') &&
+        level.generateSuppliedCode
+          ? {suppliedCode: level.generateSuppliedCode}
+          : {}),
       };
       if (labType === 'bubbleChoice' && Array.isArray(level.sublevels)) {
         const parentPrefix = level.name + '-';

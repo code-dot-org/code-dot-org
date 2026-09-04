@@ -190,6 +190,9 @@ export interface LevelSpec {
   // weblab2 only: specs sharing a non-empty id get one generated template
   // level ("<prefix>-template-<groupId>") via project_template_level_name.
   templateGroup?: string;
+  // weblab2/pythonlab only: code the curriculum author supplied for this
+  // level, treated as canonical by the plan prompt.
+  suppliedCode?: string;
   // bubbleChoice only: sublevel cards, each a LevelSpec whose labType is
   // in BUBBLE_CHOICE_SUBLEVEL_LAB_TYPES.
   sublevels?: LevelSpec[];
@@ -223,6 +226,8 @@ export interface ExistingLessonData {
   // Unit-scope context so lesson prompts can anchor against the unit.
   unitName?: string;
   unitOutline?: string;
+  unitDraftingRules?: string;
+  unitAuthoringRules?: string;
 }
 
 // The shape returned by Lesson#summarize_for_lesson_edit, narrowed to the
@@ -267,6 +272,8 @@ export interface SerializedLevel {
   // aichat only: preset id used at generation time; unknown ids reset to
   // the default on reload.
   generateAichatPreset?: string | null;
+  // weblab2/pythonlab only: persisted supplied code, restored on reload.
+  generateSuppliedCode?: string | null;
   // BubbleChoice parents only: nested sublevels in picker order.
   sublevels?: SerializedLevel[];
 }

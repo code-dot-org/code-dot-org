@@ -20,15 +20,15 @@ import {
 
 import {AICHAT_PRESET_IDS, AichatPresetId} from './aichat';
 
-const supportedLabTypeEnum = z.enum(
+export const supportedLabTypeEnum = z.enum(
   SUPPORTED_LAB_TYPES as unknown as [LabType, ...LabType[]]
 );
 
-const sublevelLabTypeEnum = z.enum(
+export const sublevelLabTypeEnum = z.enum(
   BUBBLE_CHOICE_SUBLEVEL_LAB_TYPES as unknown as [LabType, ...LabType[]]
 );
 
-const aichatPresetEnum = z.enum(
+export const aichatPresetEnum = z.enum(
   AICHAT_PRESET_IDS as unknown as [AichatPresetId, ...AichatPresetId[]]
 );
 
@@ -97,7 +97,7 @@ const lessonOutlineSchema = Output.object({
         })
       )
       .min(2)
-      .max(8),
+      .max(12),
   }),
 });
 
@@ -154,15 +154,25 @@ export async function generateLessonOutline(
     'You are helping a curriculum author plan a single lesson for a CS',
     'class. Assume a middle-school audience unless the outline below names',
     'a different grade band or target audience, in which case follow the',
-    'outline. Break the outline below into a sequence of',
-    '2 to 8 levels that, in order, take the student through the learning',
-    'experience. Each level is one of:',
+    'outline. Break the outline below into a sequence of levels that, in',
+    'order, take the student through the learning experience — typically 2',
+    'to 8; go beyond (up to 12) only when the outline or the course',
+    'drafting rules clearly demand it. Each level is one of:',
     ...labTypeBullets(),
     '',
     `Choose ${chooseForSummary()}. A typical lesson alternates: Panels intro`,
     '-> practice -> assessment -> Panels reflection, but you can deviate',
     'when the outline asks. Never open with an assessment — pair it with a',
     'concept the student has already seen.',
+    ...(ctx.draftingRules?.trim()
+      ? [
+          '',
+          'Course drafting rules — course-specific rules for choosing and',
+          'patterning levels. Where they conflict with the general guidance',
+          'above, these rules win:',
+          ctx.draftingRules.trim(),
+        ]
+      : []),
     ...(ctx.unitOutline
       ? [
           '',

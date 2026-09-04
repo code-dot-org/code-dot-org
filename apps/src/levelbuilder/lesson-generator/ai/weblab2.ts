@@ -3,7 +3,10 @@ import z from 'zod/v3';
 
 import {generateText} from '@cdo/apps/aiGateway';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
-import {LevelContext} from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
+import {
+  authoringRulesLines,
+  LevelContext,
+} from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
 import {
   getTextModel,
   logPrompt,
@@ -17,6 +20,7 @@ import {
   filesToMultiFileSource,
   generateCodebridgeExemplar,
   SourceFile,
+  suppliedCodeLines,
 } from './codebridge';
 
 const weblabPlanSchema = Output.object({
@@ -81,6 +85,8 @@ export async function generateWeblab2Level(
     '     for them. Express subfolders as a `/` in the file name (e.g.',
     '     "css/style.css"). Honor any explicit file count or layout the',
     '     description specifies.',
+    ...authoringRulesLines(ctx),
+    ...suppliedCodeLines(ctx),
     ...(ctx.unitOutline
       ? [
           '',
@@ -216,6 +222,7 @@ export async function generateWeblab2Template(
     '',
     'Members in this group:',
     memberList,
+    ...authoringRulesLines(ctx),
     ...(ctx.unitOutline
       ? [
           '',
@@ -292,6 +299,7 @@ export async function generateWeblab2TemplateBackedLevel(
     'bare content (no `TODO:` prefix on the bullet). Name the files the',
     'student touches and the moves they make. Do NOT write polished prose;',
     'the curriculum author writes that later. No other headings.',
+    ...authoringRulesLines(ctx),
     '',
     "Shared template files (already open in the student's editor):",
     templateListing,

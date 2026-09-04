@@ -533,6 +533,8 @@ class Lesson < ApplicationRecord
       generateProjectChannelId: generate_project_channel_id,
       unitName: script&.localized_title,
       unitOutline: script&.generate_outline,
+      unitDraftingRules: script&.generate_drafting_rules,
+      unitAuthoringRules: script&.generate_authoring_rules,
     }
   end
 

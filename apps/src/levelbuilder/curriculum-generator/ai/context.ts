@@ -40,6 +40,17 @@ export interface UnitContext {
   // The unit's `generate_outline` — the levelbuilder's free-text
   // description of what the unit teaches as a whole.
   unitOutline?: string;
+
+  // The unit's `generate_drafting_rules` — course-scoped rules for how
+  // the lesson outline AI should choose and pattern levels (vocabulary
+  // pairs, formative-check placement, choice groups, …). Consumed only
+  // by the lesson outline prompt.
+  draftingRules?: string;
+
+  // The unit's `generate_authoring_rules` — course-scoped constraints
+  // on generated level content (allowed syntax, code style, audience).
+  // Consumed by every per-level content prompt.
+  authoringRules?: string;
 }
 
 export interface LessonContext extends UnitContext {
@@ -72,6 +83,11 @@ export interface LevelContext extends LessonContext {
   // The levelbuilder's per-level description — the prompt that scopes
   // what *this specific level* should build.
   levelDescription: string;
+
+  // Code the curriculum author supplied for this level (Codebridge labs
+  // only). The plan prompt treats it as canonical rather than inventing
+  // starter files from scratch.
+  suppliedCode?: string;
 
   // Formatted text of the levels that have already been generated
   // earlier in the same run. The per-level AI uses it for continuity
@@ -114,4 +130,18 @@ export interface SlideContext extends SlidesPageContext {
   // sees its successors. Used by the per-slide AI for continuity
   // (recurring imagery, callbacks between cards).
   precedingSlides?: string;
+}
+
+// Prompt block for UnitContext.authoringRules, shared by every per-level
+// generator so the framing can't drift between labs.
+export function authoringRulesLines(ctx: UnitContext): string[] {
+  const rules = ctx.authoringRules?.trim();
+  if (!rules) return [];
+  return [
+    '',
+    'Course authoring rules — hard constraints on the content you',
+    'generate. Where they conflict with the general guidance above,',
+    'these rules win:',
+    rules,
+  ];
 }

@@ -4,7 +4,10 @@ import z from 'zod/v3';
 import {Visibility} from '@cdo/apps/aichatLab/types/customizations';
 import {LevelAichatSettings} from '@cdo/apps/aichatLab/types/levelProperties';
 import {generateText} from '@cdo/apps/aiGateway';
-import {LevelContext} from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
+import {
+  authoringRulesLines,
+  LevelContext,
+} from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
 import {
   getTextModel,
   logPrompt,
@@ -14,7 +17,11 @@ import {
 
 import {AichatPreset, AICHAT_PRESETS, AichatPresetId} from './presets';
 
-export {AICHAT_PRESET_IDS, AICHAT_PRESETS} from './presets';
+export {
+  AICHAT_PRESET_IDS,
+  AICHAT_PRESETS,
+  DEFAULT_AICHAT_PRESET,
+} from './presets';
 export type {AichatPreset, AichatPresetId} from './presets';
 
 const baseAichatSchema = z.object({
@@ -139,6 +146,7 @@ export async function generateAichatLevel(
           '    generic; the point is that they have something to overwrite.',
         ]
       : []),
+    ...authoringRulesLines(ctx),
     ...(ctx.unitOutline
       ? [
           '',
