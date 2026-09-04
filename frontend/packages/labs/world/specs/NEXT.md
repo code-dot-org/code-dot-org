@@ -93,8 +93,9 @@ alone.
 **The problem.** A project carries its own copy of every rule it uses
 (`AGENTS.md`, "A project carries its own copy"). That is the right ownership —
 the rule is the learner's, editable, unconnected to the library — and it is
-4.3MB of generated Blockly JSON across the stock shelf: `solid` is 476KB and
-409 blocks, and six rules exceed 230KB. The default project ships eight. Every
+4.19MB of generated Blockly JSON across the stock shelf: `solid` is 500KB and
+409 blocks, and six rules exceed 230KB. The default project ships twelve of
+them, which is 1.10MB of its 1.19MB (measured; see below). Every
 save, every diff, every tutor context and every tab switch pays for it. The
 tab switch is measured: about 340ms to rebuild a heavy rule's workspace, paid
 on every visit, and the cost is Blockly's renderer rather than anything in our
@@ -117,15 +118,37 @@ project pinned, not the current one, so a project saved last month does not
 change behaviour because the shelf did.
 
 The alternative — keep the copies and compress them — solves the save and the
-diff and nothing else, and is worth doing anyway as the one-line first step:
-measure a project's serialized size in a test, so that the number cannot creep
-without a test saying so.
+diff and nothing else.
 
-**Done when.** A New Project with the default rules serializes in a size a test
-asserts; the assertion holds at a number under a tenth of today's; a rule the
-learner has not edited is a reference; editing it makes it a copy, at the
+**Done when.** A New Project with the default rules serializes in a size a
+test asserts; the assertion holds at a number under a tenth of today's; a rule
+the learner has not edited is a reference; editing it makes it a copy, at the
 pinned version, and a test does exactly that and checks the blocks match the
 version pinned rather than the shelf's current one.
+
+_Status, 2026-09-03: measured, not yet decided._ The first step is done —
+`src/__tests__/projectWeight.test.ts` weighs a new project and fails when the
+number moves, so the creep this section is about can no longer happen quietly.
+What it found, in UTF-8 bytes of what a save actually carries:
+
+|                                                                                                    |                 |
+| -------------------------------------------------------------------------------------------------- | --------------- |
+| a new project, serialized                                                                          | 1,191,452       |
+| …of which twelve rule workspaces                                                                   | 1,103,970 (93%) |
+| …of which `solid.rule` alone                                                                       | 500,346 (42%)   |
+| everything the starter level IS — a world, six actors, a map, an animation, six sprites, an effect | 40,759          |
+| the shelf a project copies from, 47 rules                                                          | 4,186,278       |
+
+The last row of that table is the one to argue with. Forty thousand bytes is
+the learner's game; the other 1.15MB is the library, copied in, and the
+starter is a project nobody has typed into yet.
+
+`dominated by rules nobody typed` is the assertion this section exists to
+break: when a rule the learner has not edited becomes a reference, that test
+should fail and be rewritten to say the new truth. The ceilings carry about a
+tenth of headroom, so an honest edit to a rule updates a number in the same
+commit and a thirteenth rule in the starter does not slip in — adding `climb`
+(303KB) trips both the size and the count, which is how the test was checked.
 
 ## 3. Show a rule's prose to the person it was written for
 
