@@ -68,24 +68,6 @@ describe('a Coin just imported', () => {
   });
 });
 
-describe('a behavior', () => {
-  it('is openable too, which it was not either', () => {
-    // `.behavior` was missing from the same regex, and a `use trait` naming
-    // one had no eye for the same reason.
-    const tapper = WORLD_SCENARIOS.tapper.source;
-    refreshProjectDropdowns(projectFiles(tapper), [], {}, []);
-
-    const behaviors = Object.keys(projectFiles(tapper)).filter(path =>
-      path.endsWith('.behavior'),
-    );
-
-    expect(behaviors.length).toBeGreaterThan(0);
-    for (const path of behaviors) {
-      expect(canOpenModule(path.replace(/\.behavior$/, ''))).toBe(true);
-    }
-  });
-});
-
 // The half that shipped broken, and why the tests above did not notice.
 //
 // They asked whether a block could be opened — the registry's question — and
@@ -101,7 +83,7 @@ describe('the kinds a module path can name', () => {
     // If a kind is registered as openable it must be resolvable, and the only
     // way to keep that true is for one list to answer both.
     expect([...OPENABLE_EXTENSIONS]).toEqual(
-      expect.arrayContaining(['rule', 'behavior', 'actor']),
+      expect.arrayContaining(['rule', 'actor']),
     );
   });
 

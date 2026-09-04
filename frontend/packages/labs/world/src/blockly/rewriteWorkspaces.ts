@@ -11,12 +11,8 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 
 /**
  * File kinds that are Blockly workspaces, and so can hold a reference.
- *
- * A `.behavior` among them, which it was not: a behavior is a rule said in one
- * block (specs/BEHAVIORS.md), it holds `use rule` and names actors like any
- * other file, and every rename that carried was skipping it.
  */
-export const WORKSPACE_FILE = /\.(rule|behavior|actor|world)$/;
+export const WORKSPACE_FILE = /\.(rule|actor|world)$/;
 
 /** How a saved workspace is rewritten: block types, and reference fields. */
 export interface Rewriter {

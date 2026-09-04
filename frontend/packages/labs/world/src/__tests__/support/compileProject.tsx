@@ -89,13 +89,12 @@ export async function compileProject(
   // builds with nothing in it — silently, since an empty map is legal.
   refreshProjectDropdowns(files, [], {}, []);
 
-  // `projectRuleMetas`, not a filter of my own. A rule is a `.rule` OR a
-  // `.behavior` — a behavior parses into a RuleMeta with one trait, which is
-  // what makes everything downstream work unchanged (specs/BEHAVIORS.md). A
-  // hand-written `.rule` filter here missed the tapper scenario's `Spin`
-  // entirely, and the failure was "Invalid block definition for type
-  // world_set_Spin_SpinSpeedProperty" — a whole project refusing to compile
-  // over a file kind this had not heard of.
+  // `projectRuleMetas`, not a filter of my own: one scan answers "what rules
+  // does this project hold" for the lab and for this, so a file kind one of
+  // them has heard of and the other has not cannot happen. It did once — a
+  // hand-written filter here missed a whole kind, and the failure was "Invalid
+  // block definition for type world_set_Spin_SpinSpeedProperty", a project
+  // refusing to compile over a file the scan had never been told about.
   const metas = projectRuleMetas(files);
   registerProjectRules(metas);
 

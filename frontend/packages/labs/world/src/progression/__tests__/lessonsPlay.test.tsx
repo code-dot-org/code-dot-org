@@ -283,11 +283,11 @@ describe('a lesson that shows the file browser', () => {
     expect(shown.sort()).toEqual([
       'adventure/rooms',
       'look/sprite',
-      'making/behavior',
       'making/block',
       'making/change',
       'making/property',
       'making/read',
+      'making/rule',
       'making/trait',
       'memory/actor-state',
     ]);

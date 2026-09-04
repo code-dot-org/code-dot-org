@@ -21,7 +21,7 @@ type Generated = {
   };
 };
 
-const palette = (fileKind?: 'actor' | 'world' | 'rule' | 'behavior') =>
+const palette = (fileKind?: 'actor' | 'world' | 'rule') =>
   buildDomainPalette([], fileKind ? {fileKind} : {});
 
 const blockNamed = (type: string): Generated =>
@@ -218,7 +218,7 @@ describe('the Drawing category', () => {
     // Filtering by `ROOT_HOMES` alone would drop `define drawing` and leave the
     // pen behind — ten blocks in a `.world` file that could only ever wear a
     // warning saying there is nothing to draw on.
-    for (const kind of ['world', 'rule', 'behavior'] as const) {
+    for (const kind of ['world', 'rule'] as const) {
       const categories = palette(kind).toolbox as Array<{
         name?: string;
         blocks?: unknown[];

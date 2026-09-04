@@ -33,12 +33,41 @@ describe('what a new file starts as', () => {
       return parsed.blocks?.blocks?.[0]?.fields?.NAME ?? parsed.name;
     };
 
-    for (const extension of ['world', 'actor', 'rule', 'behavior']) {
+    for (const extension of ['world', 'actor', 'rule']) {
       expect(named(extension), extension).toBe('Chaser');
     }
     // …and the two documents that name themselves at the top level.
     expect(named('anim')).toBe('Chaser');
     expect(named('effect')).toBe('Chaser');
+  });
+
+  it('writes a rule’s three sentences for you', () => {
+    // What a rule IS before it does anything: what it is called, what
+    // carrying it is called, and when it runs. Left to a learner those were
+    // three blocks to find and a phase to pick — enough ceremony that the lab
+    // once grew a `.behavior` file type to skip them, which nothing reached
+    // for (specs/BEHAVIORS.md). Seeded, a one-name rule costs what a behavior
+    // did, with the two sentences it hid on the screen.
+    const seed = seedFor('rule', 'Bob') as {contents: string};
+    const {blocks} = JSON.parse(seed.contents) as {
+      blocks: {
+        blocks: Array<{
+          type: string;
+          fields?: Record<string, string>;
+          next?: {block: {type: string; fields?: Record<string, string>}};
+        }>;
+      };
+    };
+    const [rule, trait] = blocks.blocks;
+    expect(rule.type).toBe('world_rule');
+    // The ability as the name — the same fallback `parseRuleMeta` makes for an
+    // empty field, and not the block's own "Has My Rule".
+    expect(rule.fields).toEqual({NAME: 'Bob', ABILITY: 'Bob'});
+    expect(trait.type).toBe('world_rule_trait');
+    expect(trait.fields).toEqual({NAME: 'Bob', SUBJECT: 'actor'});
+    expect(trait.next?.block.type).toBe('world_trait_step');
+    expect(trait.next?.block.fields).toEqual({PHASE: 'decide'});
+    expect(blocks.blocks).toHaveLength(2);
   });
 
   it('is bytes for a sprite, and a picture that can be drawn on', () => {

@@ -4495,7 +4495,7 @@ other.
 `.trim(),
 };
 
-// ── making/behavior ──────────────────────────────────────────────────────────
+// ── making/rule ──────────────────────────────────────────────────────────────
 
 /** The bob written out by hand, which both actors have a copy of. */
 const bobStep = () => ({
@@ -4553,9 +4553,9 @@ const bobStep = () => ({
   },
 });
 
-const behaviour: WorldScenario = {
+const ownRule: WorldScenario = {
   levelData: {showFileBrowser: true},
-  name: 'Shared, without the ceremony',
+  name: 'Shared, without a copy',
   description: 'Two actors doing the same thing, written out twice.',
   source: lessonSource({
     world: worldFile({
@@ -4580,29 +4580,29 @@ const behaviour: WorldScenario = {
     sprites: ['coin', 'ball'],
   }),
   instructions: `
-## Shared, without the ceremony
+## Shared, without a copy
 
 A Fish and a Bird, both bobbing, and the bob is written twice — once in each
 \`define actor\`. Change your mind about how it should feel and you have two
 places to change, and a third the day something else bobs.
 
-You could make it a rule: a file, a \`define rule\`, a \`define trait\` inside it,
-and then elect the trait. For gravity that ceremony is worth it — several kinds
-share it, other rules depend on it, a world can be asked about it. For "bob up
-and down" it is a lot.
+What both of them want is one copy, somewhere either can reach. That is what a
+**rule** is for: it offers a **trait**, and any actor that elects the trait does
+what the trait does. Gravity is one — several kinds share it, and none of them
+holds a copy.
 
-A **behavior** is the middle: shared, without being a rule about it. It is one
-file, one hat, and what follows the hat is what runs.
+A rule is three sentences before it does anything: what it is called, what
+carrying it is called, and when it runs. A new rule file opens with all three
+written — **define rule**, a **define trait** beside it, and an **each frame**
+under the trait — so what is left to you is what goes in the mouth.
 
 ### What you do
 
-1. Make a new file, \`rules/bob.behavior\`, with **define behavior named ⟨Bob⟩**
-   at the top.
-2. Move the bobbing under it — the hat IS the step, so there is no
-   \`each frame\` inside it.
+1. Make a new file, \`rules/bob.rule\`, named **Bob**. It opens on the three
+   blocks above.
+2. Move the bobbing into the **each frame** under the trait.
 3. Take the \`each frame\` out of both actors and give each
-   **use trait ⟨Bob⟩** instead. They take it exactly the way they would take a
-   rule's, because underneath it IS one, with a single trait of the same name.
+   **use trait ⟨Bob⟩** instead.
 4. Change the bob once. Both change.
 `.trim(),
 };
@@ -6291,7 +6291,7 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'adventure/errand': errand,
   'making/change': changeRule,
   'making/trait': ownTrait,
-  'making/behavior': behaviour,
+  'making/rule': ownRule,
   'adventure/world': bigWorld,
   'making/read': readRule,
   'making/block': ownBlock,

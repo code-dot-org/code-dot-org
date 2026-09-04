@@ -97,13 +97,7 @@ export const FOLDER_MENUS: readonly FolderMenu[] = [
     folder: 'rules',
     label: 'Rules',
     icon: 'scroll',
-    // Two, because a `.behavior` is a rule with one trait said in one block
-    // (specs/BEHAVIORS.md) — a different thing to reach for, in the same
-    // folder.
-    makes: [
-      {label: 'New rule', extension: 'rule', placeholder: 'Has Gravity'},
-      {label: 'New behavior', extension: 'behavior', placeholder: 'Chases'},
-    ],
+    makes: [{label: 'New rule', extension: 'rule', placeholder: 'Gravity'}],
     shelf: requestRuleImport,
   },
   {

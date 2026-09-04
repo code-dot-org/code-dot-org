@@ -263,10 +263,10 @@ describe('the scenario catalogue', () => {
     expect(main).toContain('world_mouse_position');
     // The crosshair is a FILE, and has to be: `each frame` compiles to
     // `actor.defineStep`, which needs the const an actor module opens with.
-    // A BEHAVIOR — the one thing an actor's own `each frame` cannot be. Two
-    // kinds carry this one, and the coins carry their own copy of its state,
-    // which is the whole claim (specs/BEHAVIORS.md).
-    expect(named('spin.behavior')).toBe(true);
+    // A RULE WITH ONE TRAIT — the one thing an actor's own `each frame`
+    // cannot be, which is shared. Two kinds carry this one, and the coins
+    // carry their own copy of its state, which is the whole claim.
+    expect(named('spin.rule')).toBe(true);
     const carriers = files.filter(file =>
       file.contents.includes('Spin#SpinTrait'),
     );
@@ -702,7 +702,6 @@ describe('the language on each file', () => {
     world: 'world',
     actor: 'actor',
     rule: 'rule',
-    behavior: 'behavior',
     map: 'map',
     anim: 'anim',
     effect: 'effect',

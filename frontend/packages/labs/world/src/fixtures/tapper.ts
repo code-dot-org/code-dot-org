@@ -222,8 +222,8 @@ const countTo = (variable: object, body: object) => ({
  *
  * What the loop buys is the thing the placements were faking: a number the body
  * can read. `row` and `column` say where the coin goes, and the two together
- * say how fast it spins — so the nine copies of the behavior's own state are
- * visibly nine, which is the whole claim (specs/BEHAVIORS.md).
+ * say how fast it spins — so the nine copies of the trait's own state are
+ * visibly nine, which is the whole claim.
  */
 const COIN_GRID = countTo(
   ROW_VAR,
@@ -298,9 +298,9 @@ const CROSSHAIR_ACTOR = JSON.stringify({
         next: {
           block: stack([
             {type: 'world_set_sprite', fields: {SPRITE: 'switch.png#1'}},
-            // The same behavior the coins carry, which is the whole of what a
-            // behavior is FOR: the crosshair's own `each frame` below belongs
-            // to the crosshair, and this belongs to anything that asks.
+            // The same trait the coins carry, which is the whole of what a
+            // shared one is FOR: the crosshair's own `each frame` below
+            // belongs to the crosshair, and this belongs to anything that asks.
             useTrait('Spin#SpinTrait'),
           ]),
         },
@@ -331,35 +331,44 @@ const CROSSHAIR_ACTOR = JSON.stringify({
 });
 
 /**
- * A BEHAVIOR — the one thing an actor's own `each frame` cannot be: shared.
+ * A RULE WITH ONE TRAIT — the one thing an actor's own `each frame` cannot
+ * be: shared.
  *
  * The crosshair's step belongs to the crosshair and to nothing else, which is
  * right for a crosshair. Spinning is not like that: the coins do it and so does
  * the crosshair, and writing it twice would be two copies to keep in step.
  *
- * So it is a `.behavior` — a rule with exactly one trait of the same name,
- * without the two files' worth of ceremony (specs/BEHAVIORS.md) — and an actor
- * takes it the way it takes anything else, with `use trait ⟨Spin⟩`.
+ * So it is a `.rule` offering one trait of the same name, and an actor takes
+ * it the way it takes anything else, with `use trait ⟨Spin⟩`. This was once
+ * the lab's one `.behavior` — a file type whose whole purpose was to say this
+ * in one block rather than three, and which nothing else ever reached for
+ * (specs/BEHAVIORS.md, "Where this ended"). The three blocks here are the
+ * three `New rule` now writes.
  *
  * ITS STATE IS ITS OWN, AND EACH ACTOR'S IS ITS OWN. `spin speed` is declared
- * inside the behavior, so it arrives and leaves with it and no actor carries a
+ * under the trait, so it arrives and leaves with it and no actor carries a
  * dial for a mechanic it does not have — and every actor carrying it gets a
  * copy, which the coins prove by spinning at speeds written into their
  * arrangement.
  */
-const SPIN_BEHAVIOR = JSON.stringify({
+const SPIN_RULE = JSON.stringify({
   blocks: {
     blocks: [
       {
-        type: 'world_behavior',
+        type: 'world_rule',
         x: 20,
         y: 20,
-        fields: {NAME: 'Spin'},
+        fields: {NAME: 'Spin', ABILITY: 'Spins'},
+      },
+      {
+        type: 'world_rule_trait',
+        x: 20,
+        y: 120,
+        fields: {NAME: 'Spin', SUBJECT: 'actor'},
         next: {
           block: stack([
-            // A declaration and a default, not code — so it sits wherever it
-            // reads best, which is the top, and is lifted onto the behavior
-            // rather than run (specs/BEHAVIORS.md).
+            // A declaration and a default, not code — so it sits at the top,
+            // where it reads best, and the step below reads it.
             {
               type: 'world_rule_property',
               fields: {
@@ -370,34 +379,42 @@ const SPIN_BEHAVIOR = JSON.stringify({
               },
             },
             {
-              type: 'world_set_Space_RotationProperty',
+              type: 'world_trait_step',
+              fields: {PHASE: 'decide', NAME: 'spin'},
               inputs: {
-                ACTOR: me(),
-                // Degrees per SECOND, so the spin is the same however long a
-                // frame took — `delta` is what makes it so.
-                VALUE: {
+                DO: {
                   block: {
-                    type: 'math_arithmetic',
-                    fields: {OP: 'ADD'},
+                    type: 'world_set_Space_RotationProperty',
                     inputs: {
-                      A: {
-                        block: {
-                          type: 'world_get_Space_RotationProperty',
-                          inputs: {ACTOR: me()},
-                        },
-                      },
-                      B: {
+                      ACTOR: me(),
+                      // Degrees per SECOND, so the spin is the same however
+                      // long a frame took — `delta` is what makes it so.
+                      VALUE: {
                         block: {
                           type: 'math_arithmetic',
-                          fields: {OP: 'MULTIPLY'},
+                          fields: {OP: 'ADD'},
                           inputs: {
                             A: {
                               block: {
-                                type: 'world_get_Spin_SpinSpeedProperty',
+                                type: 'world_get_Space_RotationProperty',
                                 inputs: {ACTOR: me()},
                               },
                             },
-                            B: {block: {type: 'world_step_delta'}},
+                            B: {
+                              block: {
+                                type: 'math_arithmetic',
+                                fields: {OP: 'MULTIPLY'},
+                                inputs: {
+                                  A: {
+                                    block: {
+                                      type: 'world_get_Spin_SpinSpeedProperty',
+                                      inputs: {ACTOR: me()},
+                                    },
+                                  },
+                                  B: {block: {type: 'world_step_delta'}},
+                                },
+                              },
+                            },
                           },
                         },
                       },
@@ -620,10 +637,10 @@ export const TAPPER_SPEC: ProjectSpec = {
       active: true,
       open: true,
     },
-    spinBehavior: {
-      name: 'spin.behavior',
-      language: 'behavior',
-      contents: SPIN_BEHAVIOR,
+    spinRule: {
+      name: 'spin.rule',
+      language: 'rule',
+      contents: SPIN_RULE,
       folderId: 'rules',
     },
     crosshair: {

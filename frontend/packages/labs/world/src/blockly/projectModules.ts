@@ -23,9 +23,7 @@ import {parseRuleMeta, type RuleMeta} from './ruleMeta';
 import {cellCount} from './spriteCells';
 
 // Code files that define a module: a Blockly rule/actor/world, or plain JS/TS.
-// `.behavior` among them: a behavior IS a rule in play, so every scan that asks
-// what the project holds has to find one (specs/BEHAVIORS.md).
-const CODE_EXT = /\.(rule|actor|world|behavior|ts|js)$/;
+const CODE_EXT = /\.(rule|actor|world|ts|js)$/;
 
 // The root blocks whose NAME field names a Blockly-authored module.
 //
@@ -33,12 +31,7 @@ const CODE_EXT = /\.(rule|actor|world|behavior|ts|js)$/;
 // to the file's stem, and every caller that wanted "Has Gravity" got it from
 // the rule REGISTRY instead. That is still where a `use rule` dropdown reads
 // it; this is for everything that has only the file (`files/itemName`).
-const NAMED_ROOTS = [
-  'world_actor',
-  'world_world',
-  'world_rule',
-  'world_behavior',
-];
+const NAMED_ROOTS = ['world_actor', 'world_world', 'world_rule'];
 
 /**
  * Best-effort authored name: what the file calls the thing it declares.
@@ -336,13 +329,8 @@ export function projectOwnMetas(files: Record<string, string>): OwnMeta[] {
 export function projectRuleMetas(files: Record<string, string>): RuleMeta[] {
   const metas: RuleMeta[] = [];
   for (const [path, contents] of Object.entries(files)) {
-    // `.behavior` too: it parses into a `RuleMeta` with one trait, which is
-    // what makes everything downstream work unchanged (specs/BEHAVIORS.md).
-    if (path.startsWith('rules/') && /\.(rule|behavior)$/.test(path)) {
-      const meta = parseRuleMeta(
-        path.replace(/\.(rule|behavior)$/, ''),
-        contents,
-      );
+    if (path.startsWith('rules/') && path.endsWith('.rule')) {
+      const meta = parseRuleMeta(path.replace(/\.rule$/, ''), contents);
       if (meta) {
         metas.push(meta);
       }

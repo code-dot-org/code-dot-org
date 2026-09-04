@@ -182,7 +182,7 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   // rule author's rather than the world's.
   'making/change': [],
   'making/trait': [],
-  'making/behavior': [],
+  'making/rule': [],
   'making/read': [],
   'making/block': [],
   'puzzle/grid': ['world_use_trait'],

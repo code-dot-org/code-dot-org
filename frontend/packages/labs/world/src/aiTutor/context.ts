@@ -40,7 +40,7 @@ import {importableRules} from './ruleShelf';
 import {summarizeRules} from './ruleSummary';
 
 /** Kinds whose workspace is small enough to send whole. */
-const SENT_WHOLE = ['world', 'actor', 'behavior'];
+const SENT_WHOLE = ['world', 'actor'];
 
 /** Editable files that are already text a model can read. */
 const READABLE_TYPES = ['js', 'ts', 'json', 'md', 'txt'];

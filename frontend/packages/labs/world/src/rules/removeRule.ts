@@ -39,10 +39,7 @@ export interface HeldRule {
   provides: readonly string[];
 }
 
-// `.behavior` among them: a behavior is a rule in play, so the panel lists it,
-// the world block counts it, and the dependency guard protects it
-// (specs/BEHAVIORS.md).
-const RULE_FILE = /\.(rule|behavior|js|ts)$/;
+const RULE_FILE = /\.(rule|js|ts)$/;
 
 /** The id of the `rules/` folder, if the project has one. */
 function rulesFolderId(source: MultiFileSource): string | undefined {
@@ -69,7 +66,7 @@ export function heldRules(source: MultiFileSource): HeldRule[] {
     }
     const stem = file.name.replace(RULE_FILE, '');
     const path = `${RULES_FOLDER}/${stem}`;
-    const meta = /\.(rule|behavior)$/.test(file.name)
+    const meta = file.name.endsWith('.rule')
       ? parseRuleMeta(path, file.contents)
       : undefined;
     held.push({
@@ -102,7 +99,7 @@ export function rulesRequiring(
 ): string[] {
   const metas: RuleMeta[] = [];
   for (const [, file] of Object.entries(source.files)) {
-    if (!/\.(rule|behavior)$/.test(file.name)) {
+    if (!file.name.endsWith('.rule')) {
       continue;
     }
     const stem = file.name.replace(RULE_FILE, '');
@@ -146,7 +143,7 @@ export function filesUsing(source: MultiFileSource, rule: HeldRule): string[] {
     .sort((a, b) => a.localeCompare(b));
 }
 
-const BLOCKLY_FILE = /\.(actor|world|rule|behavior)$/;
+const BLOCKLY_FILE = /\.(actor|world|rule)$/;
 
 /**
  * Delete a rule's file from the project.

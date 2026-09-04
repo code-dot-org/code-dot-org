@@ -3253,20 +3253,25 @@ export const TILES: readonly Tile[] = [
     },
   },
   {
-    id: 'making/behavior',
+    id: 'making/rule',
     region: 'making',
     at: at('adventure', 3, 3),
-    title: 'Shared, without the ceremony',
+    title: 'Shared, without a copy',
     teaches:
-      'The middle of the space: work several kinds of actor share, without being a rule about it.',
+      'A rule of your own: work several kinds of actor share, written once and elected by each.',
     task: 'A Fish and a Bird, both bobbing, and the bob written out twice.',
     requires: ['adventure/errand'],
-    unlocks: [{kind: 'block', type: 'world_behavior'}],
+    // The root itself. `New rule` seeds one — with its trait and its step
+    // beside it, since those are the three sentences a rule is — so the block
+    // is not something this lesson has to be dragged from a drawer for; what
+    // the grant does is put it IN the drawer from here on, for the rule that
+    // wants a second one or was started from a blank file.
+    unlocks: [{kind: 'block', type: 'world_rule'}],
     check: {
       kind: 'outcome',
       says: 'Both still bob, and neither of them carries a copy of the bobbing any more.',
       falsePass:
-        'A behavior written and used by one of them, with the other left as it was — which bobs, and is the duplication the lesson is about. The shape half asks that NO actor holds an `each frame` of its own, so one copy left behind is one too many.',
+        'A rule written and used by one of them, with the other left as it was — which bobs, and is the duplication the lesson is about. The shape half asks that NO actor holds an `each frame` of its own, so one copy left behind is one too many.',
       run: {
         probes: {
           fish: {kind: 'positions', of: 'Fish'},
@@ -3275,15 +3280,21 @@ export const TILES: readonly Tile[] = [
         trace: Array.from({length: 8}, () => ({seconds: 0.15})),
       },
       inspect: files => {
-        const behaviour = Object.keys(files).some(path =>
-          path.endsWith('.behavior'),
+        // A rule that offers a trait with a step in it — the shape `New rule`
+        // seeds, and the shape a bob that moved out of both actors lands in.
+        const shared = Object.entries(files).some(
+          ([path, contents]) =>
+            path.startsWith('rules/') &&
+            path.endsWith('.rule') &&
+            contents.includes('world_rule_trait') &&
+            contents.includes('world_trait_step'),
         );
         // The world is where both `define actor`s live, so a copy left in
         // either of them is a `world_trait_step` still sitting in this file.
         const copies = (files['worlds/main.world'] ?? '').includes(
           'world_trait_step',
         );
-        return behaviour && !copies;
+        return shared && !copies;
       },
       passes: ({samples}) => {
         const bobbed = (name: string) => {

@@ -1,5 +1,10 @@
 # Behaviors, and the smallest thing a rule can be
 
+> **Retired, 2026-09-04.** The file type this document describes is gone. The
+> problem it was built for is real and is answered differently now — see
+> [Where this ended](#where-this-ended) at the bottom. The rest is kept as the
+> record of what was built and why.
+
 ## The problem
 
 A learner who wants an actor to keep doing something has two answers, and until
@@ -183,3 +188,37 @@ it was being written into, and esbuild refused the duplicate symbol.
   connection, or `DisableOrphansPlugin` greys it and everything below it.
 - `yarn setup:world` if anything in `src/engine` moves — the sandbox runs a
   prebuilt bundle, and it has caught this twice.
+
+## Where this ended
+
+Nobody reached for it. Six weeks after it was built the lab held one
+`.behavior` — Tapper's `Spin`, written to demonstrate the construct — and one
+lesson, written to teach it. Against that: twenty-three actor-own `each frame`s
+across the lessons and fixtures, and forty-seven stock rules, four of them
+exactly behavior-shaped (`attachment`, `drag`, `expires`, `patrol`: one trait,
+one step, no events), every one of which the lab's own authors wrote as a
+`.rule`.
+
+The diagnosis is in the table at the top. The third row was not empty because
+nobody found it; it was empty because the second row already fills it, and the
+gap between them is two blocks wide. `New rule` and `New behavior` both seeded
+one root. The ceremony a behavior saved arrived AFTER creation — `define trait
+⟨X⟩ for actor` and `each frame during ⟨phase⟩` — and those two blocks say the
+two things a behavior hid: what carrying it is called, and when it runs.
+Nothing a behavior could do, a rule with one trait could not; and a file type
+whose whole difference from another is two blocks of ceremony is a file type
+that misleads about the shape of the system.
+
+So the ceremony is pre-written instead. `New rule` seeds three blocks —
+`define rule ⟨Bob⟩ which adds ability ⟨Bob⟩`, `define trait ⟨Bob⟩ for actor`
+beside it, `each frame during decide` under the trait — and a one-name rule
+costs exactly what a behavior did, with the two sentences it hid on the screen
+to be read (`files/newThing`). The `.behavior` kind, its block, its menu row,
+its icon and the regexes that carried it are gone. Tapper's `Spin` is
+`spin.rule`, two blocks longer. The lesson is `making/rule`, "Shared, without a
+copy": the same Fish and Bird, the same duplication, and a rule where the
+behavior was.
+
+What was right in this document and stays right: the problem statement, the
+table, and the observation that an `.actor`'s own `each frame` is the correct
+answer for the crosshair. What was wrong was the lever.

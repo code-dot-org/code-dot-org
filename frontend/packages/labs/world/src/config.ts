@@ -41,8 +41,6 @@ export const WORLD_EDITABLE_FILE_TYPES = [
   'map',
   // A `.anim` is an animation file (JSON), edited in the visual animation editor.
   'anim',
-  // A behavior: a rule with one trait, said in one block (specs/BEHAVIORS.md).
-  'behavior',
   // An `.effect` is a node graph that compiles to a GLSL shader, edited in the
   // effect editor (specs/EFFECT_EDITOR.md).
   'effect',
@@ -97,7 +95,6 @@ export const worldConfig: Partial<CodebridgeConfig> = {
     json: 'json',
     md: 'markdown',
     rule: 'rule',
-    behavior: 'behavior',
     actor: 'actor',
     world: 'world',
     map: 'map',
@@ -117,7 +114,6 @@ export const worldConfig: Partial<CodebridgeConfig> = {
     // through the file's `url` (imageEditor/ImageFileEditor).
     png: ImageFileEditor,
     rule: BlocklyFileEditor,
-    behavior: BlocklyFileEditor,
     actor: BlocklyFileEditor,
     world: BlocklyFileEditor,
     map: MapEditor,
@@ -147,8 +143,6 @@ export const worldConfig: Partial<CodebridgeConfig> = {
     actor: {iconName: 'masks-theater', iconStyle: 'solid', isBrand: false},
     effect: {iconName: 'wand-sparkles', iconStyle: 'solid', isBrand: false},
     rule: {iconName: 'scroll', iconStyle: 'solid', isBrand: false},
-    // A smaller scroll for a smaller rule.
-    behavior: {iconName: 'note-sticky', iconStyle: 'solid', isBrand: false},
     map: {iconName: 'map', iconStyle: 'solid', isBrand: false},
     anim: {iconName: 'film', iconStyle: 'solid', isBrand: false},
     sheet: {iconName: 'table-cells', iconStyle: 'solid', isBrand: false},

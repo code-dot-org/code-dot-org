@@ -3737,15 +3737,15 @@ describe('the own-trait lesson’s check', () => {
   });
 });
 
-describe('the behavior lesson’s check', () => {
-  const lesson = LESSONS['making/behavior'];
+describe('the own-rule lesson’s check', () => {
+  const lesson = LESSONS['making/rule'];
 
   it('refuses the bob written out twice', async () => {
-    const {passes} = await check('making/behavior', lesson.source);
+    const {passes} = await check('making/rule', lesson.source);
     expect(passes).toBe(false);
   });
 
-  /** The bob moved into a `.behavior`, for one actor or for both. */
+  /** The bob moved into a `.rule`, for one actor or for both. */
   const shared = (both: boolean) => {
     let step: Row | undefined;
     const world = editing(lesson.source, 'main.world', contents => {
@@ -3761,17 +3761,24 @@ describe('the behavior lesson’s check', () => {
       }
       return JSON.stringify(workspace);
     });
-    // The hat IS the step: what follows it is what runs, so the step's own
-    // body chains below the `define behavior` rather than sitting in a mouth.
-    const behaviour = JSON.stringify({
+    // The shape `New rule` seeds: the rule, a trait beside it, and the step
+    // chained under the trait — here the very step lifted out of the actor,
+    // bob and all.
+    const rule = JSON.stringify({
       blocks: {
         blocks: [
           {
-            type: 'world_behavior',
+            type: 'world_rule',
             x: 20,
             y: 20,
-            fields: {NAME: 'Bob'},
-            next: {block: inSocket(step!, 'DO')},
+            fields: {NAME: 'Bob', ABILITY: 'Bob'},
+          },
+          {
+            type: 'world_rule_trait',
+            x: 20,
+            y: 120,
+            fields: {NAME: 'Bob', SUBJECT: 'actor'},
+            next: {block: step!},
           },
         ],
       },
@@ -3780,13 +3787,13 @@ describe('the behavior lesson’s check', () => {
       ...world,
       files: {
         ...world.files,
-        behaviour: {
-          id: 'behaviour',
-          name: 'bob.behavior',
-          language: 'behavior',
-          contents: behaviour,
+        rule: {
+          id: 'rule',
+          name: 'bob.rule',
+          language: 'rule',
+          contents: rule,
           // The FOLDER's id, which lives in `source.folders` — a folder is
-          // not a file, and a `.behavior` filed anywhere else is a file the
+          // not a file, and a `.rule` filed anywhere else is a file the
           // project holds and the generator never reads as a rule.
           folderId: Object.values(world.folders).find(
             folder => folder.name === 'rules',
@@ -3796,14 +3803,14 @@ describe('the behavior lesson’s check', () => {
     } as typeof world;
   };
 
-  it('accepts one behavior on both of them', async () => {
-    const {passes, result} = await check('making/behavior', shared(true));
+  it('accepts one rule on both of them', async () => {
+    const {passes, result} = await check('making/rule', shared(true));
     expect(result.error).toBeUndefined();
     expect(passes).toBe(true);
   });
 
   it('refuses one copy left behind', async () => {
-    const {passes} = await check('making/behavior', shared(false));
+    const {passes} = await check('making/rule', shared(false));
     expect(passes).toBe(false);
   });
 });

@@ -28,15 +28,13 @@
  *
  * Ordered, because the first three follow the compiler's own resolution: a
  * module path is tried as `.rule`, then `.js`, then `.ts`, so the file the eye
- * opens is the file the project would compile. `.behavior` sits with `.rule`,
- * being a rule file by another name and living in `rules/` beside them.
+ * opens is the file the project would compile.
  * `.actor` is a module with a namespace of its own. `.map` is last and is not
  * a module at all — a map is data a world names — but it has an editor, and
  * the eye opens FILES.
  */
 export const OPENABLE_EXTENSIONS = [
   'rule',
-  'behavior',
   'js',
   'ts',
   'actor',

@@ -8,7 +8,7 @@
 // both ask here.
 
 /** Which kind of file this is. */
-export type FileKind = 'actor' | 'world' | 'rule' | 'behavior';
+export type FileKind = 'actor' | 'world' | 'rule';
 
 /**
  * A Blockly file's kind, from its path — the one place the extensions are read.
@@ -18,7 +18,7 @@ export type FileKind = 'actor' | 'world' | 'rule' | 'behavior';
  * callers with no path (tests), and treats it as "work it out from the blocks".
  */
 export const fileKindOf = (path?: string): FileKind | undefined => {
-  const match = /\.(rule|actor|world|behavior)$/.exec(path ?? '');
+  const match = /\.(rule|actor|world)$/.exec(path ?? '');
   return match ? (match[1] as FileKind) : undefined;
 };
 
@@ -45,14 +45,6 @@ export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
   ['world_actor', new Set<FileKind>(['actor', 'world'])],
   ['world_world', new Set<FileKind>(['world'])],
   ['world_rule', new Set<FileKind>(['rule'])],
-  // A behavior is a rule with one trait, said in one block (specs/BEHAVIORS.md).
-  ['world_behavior', new Set<FileKind>(['behavior'])],
-  // What makes a rule a rule rather than a behavior, and so what a `.behavior`
-  // is not offered: a second trait, an event of its own, a designed block, a
-  // set of choices, a world-scoped step. Each of those is a REASON to be a
-  // rule, and a behavior that had them would be a rule wearing another hat
-  // (specs/BEHAVIORS.md). Reaching for one is how you find out you want a
-  // `.rule` — which the file already knows how to become.
   ['world_rule_trait', new Set<FileKind>(['rule'])],
   ['world_rule_event', new Set<FileKind>(['rule'])],
   // …and an ACTOR file, where the same block declares a thing that kind of
@@ -78,13 +70,10 @@ export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
   // nothing when it is not — `actor` is bound by the block that opens that
   // actor's body, and a step chained under `define world` would emit a call on
   // a name that is not there, which stops the whole project compiling.
-  //
-  // NOT `behavior`: a behavior IS its step, so a second one inside it would be
-  // a step within a step, which nothing else in the lab has.
   ['world_trait_step', new Set<FileKind>(['actor', 'rule', 'world'])],
   // A drawing belongs to a KIND of actor, and a kind is what an `.actor` file
-  // is. Not a rule or a behavior: those are shared mechanics, and how a
-  // particular actor looks is the one thing that is not shared — an actor that
+  // is. Not a rule: a rule is a shared mechanic, and how a particular actor
+  // looks is the one thing that is not shared — an actor that
   // wants somebody else's picture already has `set sprite` (specs/DRAWING.md).
   // A world may describe its OWN actors' pictures too, chained inside the
   // `define actor` that owns them (`drawingDefinition`). Root-shaped in an
@@ -150,10 +139,5 @@ export function moduleShape(
       );
     }
   }
-  // A `.behavior` COMPILES to a rule module — it is a rule with one trait, and
-  // `ruleMetaToModule` writes it (specs/BEHAVIORS.md). The kind still differs
-  // from `rule` everywhere the PALETTE is concerned, which is what the two
-  // functions are for: `fileKindOf` says what a file is, this says what it
-  // becomes.
-  return kind === 'behavior' ? 'rule' : kind;
+  return kind;
 }

@@ -307,6 +307,17 @@ the top of BEHAVIORS.md, and stop asking.
 
 **Done when.** The `TODO` line is gone and BEHAVIORS.md opens with the answer.
 
+_Status, 2026-09-04: retired._ The count was one `.behavior` in the lab and
+one lesson teaching it, against twenty-three actor-own `each frame`s and
+forty-seven stock rules — four of them behavior-shaped and every one written
+as a `.rule` by the people who knew the construct best. The difference between
+a behavior and a one-trait rule was two blocks of ceremony after creation, so
+the ceremony is pre-written now: `New rule` seeds the rule, a trait and a step
+(`files/newThing`), and the file type, its block, menu row, icon and regexes
+are gone. Tapper's `Spin` is `spin.rule`; the Adventure Making tile is
+`making/rule`, "Shared, without a copy", and grants `world_rule`. BEHAVIORS.md
+opens with the answer and closes with the reasoning.
+
 ## Not on the list, and why
 
 - **Live reload of actor properties** (`QUALITY_OF_LIFE.md` §1 and §3). Real,

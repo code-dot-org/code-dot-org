@@ -1357,9 +1357,6 @@ export const ROOT_BLOCK_TYPES: ReadonlySet<string> = new Set([
   'world_define_tween',
   'world_world',
   'world_rule',
-  // A behavior is a rule root and its one trait root at once
-  // (specs/BEHAVIORS.md).
-  'world_behavior',
   // A trait is a definition root too — its members chain below it, beside the
   // rule rather than inside it. So is each step: its body chains below it.
   'world_rule_trait',
@@ -6483,41 +6480,6 @@ const QUERY_RETURN_TYPE_OPTIONS: Array<[string, string]> = [
   ['vector', 'vector'],
 ];
 
-/**
- * `define behavior named ⟨Chase⟩` — the smallest thing a rule can be.
- *
- * ONE BLOCK, TWO ROLES: it is the rule root AND its single trait root
- * (specs/BEHAVIORS.md). A behavior IS a rule with exactly one trait of the same
- * name, which is the whole design rather than an implementation detail — every
- * thing downstream already works on `RuleMeta`, so what the `.behavior` file
- * removes is the vocabulary and two files' worth of ceremony, not the mechanism.
- *
- * ONE name, where a rule has two. A rule reads two ways round — what it IS
- * ("Gravity") and what a world HAS by using it ("Has Gravity") — because a
- * world is what uses a rule. An ACTOR is what uses a behavior, and "the enemy
- * has Chase" is already the sentence, so a second name would be a second way to
- * say the same thing.
- *
- * A root, so no previous connection: `DisableOrphansPlugin` disables a
- * top-level block that has one, along with everything chained after it.
- */
-const worldBehavior = defineBlock({
-  type: 'world_behavior',
-  message0: 'define behavior named %1',
-  args0: [{type: 'field_input', name: 'NAME', text: 'My Behavior'}],
-  // A definition root like every other `define`: no previous connection, and
-  // what it holds chains BELOW it rather than sitting in a mouth. That is also
-  // how a rule's own step roots read — a behavior is a hat, and what follows it
-  // is what runs (`extractRuleBodies`).
-  nextStatement: true,
-  style: 'setup_blocks',
-  tooltip:
-    'Define a behavior: what an actor carrying it does every frame. Put a ' +
-    '“define property” at the top for anything it needs to remember, and add ' +
-    'it to an actor with “use trait”.',
-  generator: noGenerator,
-});
-
 const worldRule = defineBlock({
   type: 'world_rule',
   // Two names, because a rule reads two ways round. NAME is what it IS
@@ -6838,7 +6800,7 @@ const worldRuleBlock = defineBlock({
       // WHERE IT SITS DECIDES WHO WRITES IT, the same bargain `each frame`
       // makes in its three homes (`traitStepDefinition`).
       //
-      // In a `.rule` or a `.behavior` this is a DECLARATION and nothing more:
+      // In a `.rule` this is a DECLARATION and nothing more:
       // the module is assembled from the file's metadata and the body is
       // pulled out by a pass of its own (`extractRuleBodies`), so generating
       // anything here would write it twice.
@@ -8266,7 +8228,6 @@ export const DOMAIN_BLOCKS = [
   signatureChoice,
   worldReturn,
   worldRuleStepIn,
-  worldBehavior,
   worldTraitStep,
   worldShowAs,
   worldCountWith,
@@ -8557,7 +8518,6 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
     name: 'Rule',
     blocks: [
       'world_rule',
-      'world_behavior',
       'world_use_rule', // a rule's dependencies (requires)
       'world_rule_trait', // a second definition root, beside the rule
       'world_use_trait', // a trait's dependencies (requires), under a trait
@@ -8817,15 +8777,7 @@ const structuralCategories = (fileKind?: FileKind): ToolboxCategory[] => {
   }
   const kept: ToolboxCategory[] = [];
   for (const category of TOOLBOX_HEAD) {
-    // A BEHAVIOR keeps the Rule category, minus everything `ROOT_HOMES` names
-    // as a rule's alone: what is left is `define behavior`, `each frame`,
-    // state, and `use rule` — which is exactly what one holds
-    // (specs/BEHAVIORS.md).
-    if (
-      category.name === 'Rule' &&
-      fileKind !== 'rule' &&
-      fileKind !== 'behavior'
-    ) {
+    if (category.name === 'Rule' && fileKind !== 'rule') {
       continue;
     }
     // Drawing is an `.actor`'s alone. Filtering by `ROOT_HOMES` would drop

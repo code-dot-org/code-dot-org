@@ -44,7 +44,7 @@ const MEMBER_TYPE =
 const extensionOf = (name: string): string => name.split('.').pop() ?? '';
 
 /** A code file is referred to by its module path; an asset by its file name. */
-const CODE = /\.(rule|behavior|actor|world|map|anim|effect)$/;
+const CODE = /\.(rule|actor|world|map|anim|effect)$/;
 
 /**
  * What this file is called from elsewhere, before and after.
@@ -191,7 +191,7 @@ export function renameThing(
 
   // A rule's NAME is itself a reference — to its traits, its members and the
   // worlds that use it — and carrying that is a transform of its own.
-  const wasRule = /\.(rule|behavior)$/.test(file.name);
+  const wasRule = file.name.endsWith('.rule');
   const wasCalled = declaredName(file.contents ?? '');
   let next =
     wasRule && wasCalled && wasCalled !== name
