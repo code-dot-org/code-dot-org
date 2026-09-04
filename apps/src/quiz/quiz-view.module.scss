@@ -1,0 +1,24 @@
+.quiz {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.resourcePanel {
+  flex: 0 0 auto;
+  min-width: 280px;
+  height: 100%;
+}
+
+.divider {
+  width: 1px;
+  height: 100%;
+  background-color: var(--background-neutral-quaternary);
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+  overflow: auto;
+}
