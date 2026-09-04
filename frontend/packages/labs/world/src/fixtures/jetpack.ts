@@ -126,8 +126,10 @@ import {
   prowlingRule,
   scoreRule,
   solidRule,
+  steeringRule,
   surfacesRule,
   switchesRule,
+  timeRule,
   teleportRule,
   turningRule,
   writingRule,
@@ -337,6 +339,15 @@ const ENEMIES: ReadonlyArray<readonly [string, number, number]> = [
   // High and away, so its first few flaps are seen crossing the open middle
   // rather than happening on top of the Pilot.
   ['actors/bat', 22, 5],
+  // The last four, each put where what it does is legible: the spring in the
+  // tall empty column beside the ladder, the shuriken in the open middle
+  // where a reflection has room to be one, the eyeball across the room from
+  // the Pilot so that its first move is seen coming through a wall, and the
+  // wanderer on the floor where nothing about it can be planned around.
+  ['actors/spring', 8, 13],
+  ['actors/shuriken', 14, 3],
+  ['actors/eyeball', 17, 6],
+  ['actors/blob', 11, 14],
 ];
 
 /**
@@ -1408,6 +1419,280 @@ const BAT_ACTOR = JSON.stringify({
 });
 
 /**
+ * THE LAST FOUR, and the whole of what they cost: two dials and no new rule.
+ *
+ * That is worth saying plainly because it is the argument the library has been
+ * making since `Turning` — three enemies out of one trait and one number. Four
+ * more come out of the same drawer:
+ *
+ *     the spring     `Turning`, aimed up, turning a half circle, no gravity.
+ *                    It rises until it gets nowhere and comes back down, which
+ *                    is what "turns when it hits something" already meant.
+ *     the shuriken   `Turning` again, with `bounces off what stops it` — the
+ *                    one dial the fixed turn could not be, because a mirror is
+ *                    not a number.
+ *     the eyeball    `Steering`'s ordinary chase and `ignores walls`, which is
+ *                    the mover's fact rather than the wall's. It still touches
+ *                    and still hurts; it is simply not stopped.
+ *     the wanderer   `Time`'s repeating timer and a random direction, which is
+ *                    how the bat was built before the bat needed a rule.
+ *
+ * They are drawn as four very different things ON PURPOSE. A player should
+ * never have to work out that the spring and the shuriken are the same rule.
+ */
+const springActor = () =>
+  JSON.stringify({
+    blocks: {
+      blocks: [
+        {
+          type: 'world_actor',
+          x: 20,
+          y: 20,
+          fields: {NAME: 'Spring'},
+          next: {
+            block: stack([
+              useTrait('Turning#TurnsWhenItHitsSomethingTrait'),
+              useTrait('Health#DealsDamageTrait'),
+              useTrait('Boundaries#StaysDownTrait'),
+              {type: 'world_set_sprite', fields: {SPRITE: 'spring.png'}},
+              // Straight up, and a half circle when it gets nowhere. No
+              // gravity at all: a spring that fell would be a ball.
+              {
+                type: 'world_set_Turning_HeadingProperty',
+                inputs: {ACTOR: me(), VALUE: number(-90)},
+              },
+              {
+                type: 'world_set_Turning_TurnByProperty',
+                inputs: {ACTOR: me(), VALUE: number(180)},
+              },
+              {
+                type: 'world_set_Turning_TravelSpeedProperty',
+                inputs: {ACTOR: me(), VALUE: number(2.4)},
+              },
+            ]),
+          },
+        },
+      ],
+    },
+  });
+
+const shurikenActor = () =>
+  JSON.stringify({
+    blocks: {
+      blocks: [
+        {
+          type: 'world_actor',
+          x: 20,
+          y: 20,
+          fields: {NAME: 'Shuriken'},
+          next: {
+            block: stack([
+              useTrait('Turning#TurnsWhenItHitsSomethingTrait'),
+              useTrait('Health#DealsDamageTrait'),
+              useTrait('Boundaries#StaysAcrossTrait'),
+              useTrait('Boundaries#StaysDownTrait'),
+              {type: 'world_set_sprite', fields: {SPRITE: 'shuriken.png'}},
+              // Off the diagonal, so that its first bounce is a reflection
+              // rather than a reversal — aimed along an axis it would come
+              // straight back and never show what it is.
+              {
+                type: 'world_set_Turning_HeadingProperty',
+                inputs: {ACTOR: me(), VALUE: number(35)},
+              },
+              {
+                type: 'world_set_Turning_BouncesOffWhatStopsItProperty',
+                inputs: {ACTOR: me(), VALUE: truth(true)},
+              },
+              {
+                type: 'world_set_Turning_TravelSpeedProperty',
+                inputs: {ACTOR: me(), VALUE: number(2)},
+              },
+            ]),
+          },
+        },
+        // THE SPIN, which is the level's and not the rule's: `points where it
+        // goes` would aim it, and a shuriken does not point anywhere. Turning
+        // the drawing a little every frame is all a spin is.
+        {
+          type: 'world_trait_step',
+          x: 20,
+          y: 220,
+          fields: {PHASE: 'react', NAME: 'spin'},
+          inputs: {
+            DO: {
+              block: {
+                type: 'world_set_Space_RotationProperty',
+                inputs: {
+                  ACTOR: me(),
+                  VALUE: {
+                    block: {
+                      type: 'math_arithmetic',
+                      fields: {OP: 'ADD'},
+                      inputs: {
+                        A: {
+                          block: {
+                            type: 'world_get_Space_RotationProperty',
+                            inputs: {ACTOR: me()},
+                          },
+                        },
+                        B: number(9),
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      ],
+    },
+  });
+
+const eyeballActor = () =>
+  JSON.stringify({
+    blocks: {
+      blocks: [
+        {
+          type: 'world_actor',
+          x: 20,
+          y: 20,
+          fields: {NAME: 'Eyeball'},
+          next: {
+            block: stack([
+              useTrait('Steering#ChasesTrait'),
+              useTrait('Health#DealsDamageTrait'),
+              // THE ONE THING A WALL DOES NOT STOP. `ignores walls` is the
+              // mover's fact rather than the wall's, and is read by nothing
+              // but Solid — so it still touches, and still hurts, which
+              // `passes through things` would have taken away.
+              {
+                type: 'world_set_Physics_IgnoresWallsProperty',
+                inputs: {ACTOR: me(), VALUE: truth(true)},
+              },
+              // Slow, because nothing in the room can be put between you and
+              // it: the only answer is to keep moving, and that has to be an
+              // answer a player can carry out.
+              {
+                type: 'world_set_Steering_ChaseSpeedProperty',
+                inputs: {ACTOR: me(), VALUE: number(0.55)},
+              },
+              {type: 'world_set_sprite', fields: {SPRITE: 'eyeball.png'}},
+            ]),
+          },
+        },
+        {
+          type: 'world_on_Space_CreatedEvent',
+          x: 20,
+          y: 220,
+          inputs: {ACTOR: me()},
+          next: {
+            block: {
+              type: 'world_set_Steering_ActorToChaseProperty',
+              inputs: {
+                ACTOR: me(),
+                VALUE: {
+                  block: {
+                    type: 'world_first_actor',
+                    inputs: {SOURCE: kind('actors/pilot')},
+                  },
+                },
+              },
+            },
+          },
+        },
+      ],
+    },
+  });
+
+/** `a random whole number from ⟨low⟩ to ⟨high⟩`. */
+const randomFrom = (low: number, high: number) => ({
+  block: {
+    type: 'math_random_int',
+    inputs: {FROM: number(low), TO: number(high)},
+  },
+});
+
+const blobActor = () =>
+  JSON.stringify({
+    blocks: {
+      blocks: [
+        {
+          type: 'world_actor',
+          x: 20,
+          y: 20,
+          fields: {NAME: 'Blob'},
+          next: {
+            block: stack([
+              useTrait('Time#HasATimerTrait'),
+              useTrait('Health#DealsDamageTrait'),
+              useTrait('Gravity#AffectedByGravityTrait'),
+              useTrait('Boundaries#StaysAcrossTrait'),
+              {type: 'world_set_sprite', fields: {SPRITE: 'blob.png'}},
+              // Often enough that it never commits to anything, which is the
+              // opposite of every other enemy here: the robot, the ball and
+              // the bat are all readable, and this one is not.
+              {
+                type: 'world_set_Time_TimerPeriodProperty',
+                inputs: {ACTOR: me(), VALUE: number(0.7)},
+              },
+            ]),
+          },
+        },
+        // A SMALL RANDOM DIRECTION on each beat, sideways only — the vertical
+        // is gravity's, as it is for everything else that walks. No rule for
+        // this: a timer and a number are what "wanders" means.
+        {
+          type: 'world_on_Time_TimerFiresEvent',
+          x: 20,
+          y: 220,
+          inputs: {ACTOR: me()},
+          next: {
+            block: {
+              type: 'world_set_Physics_VelocityProperty',
+              inputs: {
+                ACTOR: me(),
+                VALUE: {
+                  block: {
+                    type: 'world_vector_of',
+                    inputs: {
+                      X: {
+                        block: {
+                          type: 'math_arithmetic',
+                          fields: {OP: 'MULTIPLY'},
+                          inputs: {A: randomFrom(-1, 1), B: number(0.9)},
+                        },
+                      },
+                      // Its own downward speed, kept: the vertical is
+                      // gravity's here as it is for everything else that
+                      // walks. A velocity is a vector, so the component comes
+                      // off it with `⟨y⟩ of ⟨…⟩` rather than from a field on
+                      // the getter.
+                      Y: {
+                        block: {
+                          type: 'world_vector_component',
+                          fields: {COMPONENT: 'y'},
+                          inputs: {
+                            VEC: {
+                              block: {
+                                type: 'world_get_Physics_VelocityProperty',
+                                inputs: {ACTOR: me()},
+                              },
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      ],
+    },
+  });
+
+/**
  * The robot: the only actor in the level that knows the Pilot is there.
  *
  * It is pointed at the Pilot BY KIND — `first actor in ⟨any Pilot⟩` — which is
@@ -1833,6 +2118,30 @@ export const JETPACK_SPEC: ProjectSpec = {
       contents: BAT_ACTOR,
       folderId: 'actors',
     },
+    springActor: {
+      name: 'spring.actor',
+      language: 'actor',
+      contents: springActor(),
+      folderId: 'actors',
+    },
+    shurikenActor: {
+      name: 'shuriken.actor',
+      language: 'actor',
+      contents: shurikenActor(),
+      folderId: 'actors',
+    },
+    eyeballActor: {
+      name: 'eyeball.actor',
+      language: 'actor',
+      contents: eyeballActor(),
+      folderId: 'actors',
+    },
+    blobActor: {
+      name: 'blob.actor',
+      language: 'actor',
+      contents: blobActor(),
+      folderId: 'actors',
+    },
     padBlueActor: {
       name: 'padBlue.actor',
       language: 'actor',
@@ -2000,6 +2309,21 @@ export const JETPACK_SPEC: ProjectSpec = {
       contents: turningRule,
       folderId: 'rules',
     },
+    // The Blob's beat (`rules/time`) and the Eyeball's chase
+    // (`rules/steering`) — the two the last four needed and the room did not
+    // already have.
+    timeRuleFile: {
+      name: 'time.rule',
+      language: 'rule',
+      contents: timeRule,
+      folderId: 'rules',
+    },
+    steeringRuleFile: {
+      name: 'steering.rule',
+      language: 'rule',
+      contents: steeringRule,
+      folderId: 'rules',
+    },
     // The Bat's two phases (`rules/flapping`), which is the third enemy and
     // the third rule: a ball rolls, a robot decides at junctions, and this one
     // commits to a line for two seconds at a time.
@@ -2097,6 +2421,10 @@ export const JETPACK_SPEC: ProjectSpec = {
       'rocket',
       'robot',
       'bat',
+      'spring',
+      'shuriken',
+      'eyeball',
+      'blob',
       'fuelCan',
       'fuelCanSmall',
     ]),

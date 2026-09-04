@@ -1,17 +1,21 @@
 import {position, rotation} from './builtins.mjs';
 import {CanCollide} from './collisions.mjs';
 import {
+  absolute,
   add,
   axisOf,
   both,
+  either,
   defineRule,
   frameTime,
   lessThan,
   minus,
+  moreThan,
   moduleFor,
   n,
   not,
   note,
+  pick,
   pixelsPerUnit,
   remainder,
   thisActor,
@@ -123,6 +127,24 @@ const turnBy = turns.number('turn by', 180);
  */
 const points = turns.boolean('points where it goes', 'false');
 /**
+ * Whether it reflects off what stopped it instead of turning by a fixed amount.
+ *
+ * `turn by` is a number and a mirror is not one, which is why this is a switch
+ * rather than another value for that dial. What it buys is the one enemy the
+ * fixed turn cannot make: a thing that comes off a wall the way a ball does,
+ * at the angle it arrived, so that its path is a fact about the room's shape
+ * rather than about its own number (JETPACK.md, phase seven's shuriken).
+ *
+ * WHICH WALL IT WAS is worked out from the movement rather than from the wall,
+ * and that is the whole trick — the same trick this rule already plays to
+ * notice a wall at all. A body stopped by something upright got nowhere ACROSS
+ * and somewhere down; one stopped by a floor got nowhere down and somewhere
+ * across. So the axis that failed names the mirror: across flips the heading
+ * about the vertical, down flips it about the horizontal, and both at once is
+ * a corner, which is the reversal `turn by 180` would have given anyway.
+ */
+const mirrors = turns.boolean('bounces off what stops it', 'false');
+/**
  * Where it was at the top of this frame.
  *
  * Read-only bookkeeping, and a POINT rather than a vector because it is a
@@ -193,6 +215,12 @@ turns.step('go the way it is facing', 'decide', [
 
 const got = rule.local('got', 'Number');
 const asked = rule.local('asked', 'Number');
+/** Per axis, for the mirror: what it asked for and what it got. */
+const askedX = rule.local('askedX', 'Number');
+const askedY = rule.local('askedY', 'Number');
+const stuckX = rule.local('stuckX', 'Boolean');
+const stuckY = rule.local('stuckY', 'Boolean');
+const turnedTo = rule.local('turnedTo', 'Number');
 
 turns.step('turn if it got nowhere', 'react', [
   note('How far along its heading did it actually travel? The movement,'),
@@ -225,21 +253,73 @@ turns.step('turn if it got nowhere', 'react', [
     [
       both(measured.of(thisActor()), not(held.of(thisActor()))),
       [
+        note('WHICH WAY IT WOULD HAVE GONE, per axis, so that a mirror knows'),
+        note('which wall it met — see `bounces off what stops it`. Worked out'),
+        note('from the movement rather than from the wall, which is the same'),
+        note('trick that notices a wall at all.'),
+        askedX.set(times(axisOf('x', facing()), asked.get())),
+        askedY.set(times(axisOf('y', facing()), asked.get())),
+        stuckX.set(
+          both(
+            moreThan(absolute(askedX.get()), n(0.01)),
+            lessThan(
+              absolute(minus(position.x(thisActor()), wasAt.x(thisActor()))),
+              times(absolute(askedX.get()), n(0.5)),
+            ),
+          ),
+        ),
+        stuckY.set(
+          both(
+            moreThan(absolute(askedY.get()), n(0.01)),
+            lessThan(
+              absolute(minus(position.y(thisActor()), wasAt.y(thisActor()))),
+              times(absolute(askedY.get()), n(0.5)),
+            ),
+          ),
+        ),
+        note('A MIRROR ASKS PER AXIS AND A TURN ASKS ALONG THE HEADING, and'),
+        note('they are different questions. Something crossing a floor at'),
+        note('forty-five degrees still makes seven tenths of the progress it'),
+        note('asked for, so the along-heading test never fires and the'),
+        note('shuriken slides along the floor for ever instead of coming off'),
+        note('it. What stopped it is exactly the axis that failed.'),
         when([
           [
-            lessThan(got.get(), times(asked.get(), n(0.5))),
+            pick(
+              mirrors.of(thisActor()),
+              either(stuckX.get(), stuckY.get()),
+              lessThan(got.get(), times(asked.get(), n(0.5))),
+            ),
             [
+              note('A fixed turn, or a reflection: across the vertical when'),
+              note('something upright stopped it, across the horizontal when'),
+              note('a floor did, and a reversal in a corner — which is what'),
+              note('the fixed turn would have said there anyway.'),
+              turnedTo.set(
+                pick(
+                  not(mirrors.of(thisActor())),
+                  add(heading.of(thisActor()), turnBy.of(thisActor())),
+                  pick(
+                    both(stuckX.get(), stuckY.get()),
+                    add(heading.of(thisActor()), n(180)),
+                    pick(
+                      stuckX.get(),
+                      minus(n(180), heading.of(thisActor())),
+                      pick(
+                        stuckY.get(),
+                        times(heading.of(thisActor()), n(-1)),
+                        add(heading.of(thisActor()), n(180)),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
               note('Modulo 360 so a heading stays a number a person can'),
-              note('read in the inspector rather than growing for ever.'),
+              note('read in the inspector rather than growing for ever — and'),
+              note('plus 360 first, because a mirror can make it negative.'),
               heading.set(
                 thisActor(),
-                remainder(
-                  add(
-                    add(heading.of(thisActor()), turnBy.of(thisActor())),
-                    n(360),
-                  ),
-                  n(360),
-                ),
+                remainder(add(turnedTo.get(), n(360)), n(360)),
               ),
               turned({}, thisActor()),
             ],

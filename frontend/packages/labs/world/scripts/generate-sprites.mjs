@@ -104,6 +104,14 @@ export const SPRITE_NAMES = [
   // be anywhere: a profile drawing has a side it is facing, and this one turns
   // round every time it flaps.
   'bat',
+  // The last four (JETPACK.md, phase seven), and between them they are two
+  // dials and no new rule — which is the point of drawing them as four very
+  // different things. A player should never have to work out that the spring
+  // and the shuriken are the same rule.
+  'spring',
+  'shuriken',
+  'eyeball',
+  'blob',
 ];
 export const ANIMATION_SPECS = {
   coinSpin: {frames: 6, frameRate: 12},
@@ -591,6 +599,83 @@ const STATIC = {
     c.roundRect(13, 16, 6, 9, 3, BODY); // …and the body hanging under it
     c.disc(14.2, 13.5, 1.3, EYE);
     c.disc(17.8, 13.5, 1.3, EYE);
+  },
+  spring(c) {
+    // A coil seen from the side, which is the one shape that says "this goes
+    // up and down" standing still. Drawn symmetric top to bottom, because it
+    // arrives at the ceiling as often as at the floor and turning it over
+    // must not read as a different actor.
+    const COIL = [196, 202, 216];
+    const LIT = [232, 238, 250];
+    c.rect(4, 2, 24, 4, [150, 156, 170]); // the plate it pushes with
+    c.rect(4, 26, 24, 4, [150, 156, 170]);
+    // Four turns, JOINED alternately at each end. Without the joins it is
+    // four bars in a row, which reads as a ladder rather than a spring —
+    // what says coil is that you can follow it from one end to the other.
+    for (const [index, y] of [8, 13, 18, 23].entries()) {
+      c.rect(7, y, 18, 3, COIL);
+      c.rect(7, y, 18, 1, LIT);
+      if (index < 3) {
+        const atLeft = index % 2 === 0;
+        c.rect(atLeft ? 22 : 7, y, 3, 8, COIL);
+      }
+    }
+  },
+  shuriken(c) {
+    // Four blades from a hub, at the diagonals rather than the axes, so that
+    // a spin reads as a spin at any frame — a cross aligned to the pixel grid
+    // looks like a plus sign that flickers.
+    const STEEL = [188, 196, 212];
+    const EDGE = [120, 128, 146];
+    for (const [dx, dy] of [
+      [1, 1],
+      [1, -1],
+      [-1, 1],
+      [-1, -1],
+    ]) {
+      c.polygon(
+        [
+          [16, 16],
+          [16 + dx * 6, 16 - dy * 6],
+          [16 + dx * 15, 16 + dy * 15],
+          [16 - dx * 6, 16 + dy * 6],
+        ],
+        EDGE,
+      );
+      c.polygon(
+        [
+          [16, 16],
+          [16 + dx * 4, 16 - dy * 4],
+          [16 + dx * 13, 16 + dy * 13],
+          [16 - dx * 4, 16 + dy * 4],
+        ],
+        STEEL,
+      );
+    }
+    c.disc(16, 16, 4, EDGE);
+    c.disc(16, 16, 2, [40, 44, 54]); // the hole in the middle
+  },
+  eyeball(c) {
+    // SMALL and pale, because it is the one enemy a wall does not stop and it
+    // has to be read as not-quite-there. An iris that fills most of it, so
+    // that what a player sees is a thing looking at them.
+    c.disc(16, 16, 10, [226, 232, 244]);
+    c.disc(16, 16, 9, [246, 250, 255]);
+    c.disc(15, 15, 5, [92, 148, 220]); // the iris, off centre: it is looking
+    c.disc(15, 15, 2.5, [24, 28, 40]);
+    c.disc(13, 13, 1.2, [255, 255, 255]); // the catchlight
+    // Veins, which is what stops a white disc reading as a ball.
+    c.rect(23, 15, 3, 1, [226, 140, 140]);
+    c.rect(6, 18, 3, 1, [226, 140, 140]);
+  },
+  blob(c) {
+    // The wanderer: no eyes, no front, no direction. Everything else in the
+    // room tells you where it is going and this one cannot, which is the
+    // whole of what it is for — so it is drawn as a shape with no front.
+    c.disc(16, 18, 11, [96, 176, 108]);
+    c.disc(16, 17, 10, [126, 208, 138]);
+    c.disc(12, 13, 4, [168, 232, 176]); // a wet highlight
+    c.rect(5, 26, 22, 4, [78, 148, 92]); // squashed where it sits
   },
   rocket(c) {
     // Pointing RIGHT unrotated, because that is where a heading of zero

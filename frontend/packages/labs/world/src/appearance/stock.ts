@@ -227,6 +227,34 @@ export const STOCK_SPRITES: readonly StockSprite[] = [
     dataUrl: image('bat'),
   },
   {
+    id: 'spring',
+    name: 'Spring',
+    description:
+      'A side-on coil, symmetric top to bottom, for something that bounces between a floor and a ceiling and reads the same at either end.',
+    dataUrl: image('spring'),
+  },
+  {
+    id: 'shuriken',
+    name: 'Shuriken',
+    description:
+      'Four blades on the diagonals, for something that spins and comes off a wall at the angle it arrived — the diagonals so that a spin reads as one at any frame.',
+    dataUrl: image('shuriken'),
+  },
+  {
+    id: 'eyeball',
+    name: 'Eyeball',
+    description:
+      'Small and pale and looking at you, for the one thing in a room that a wall does not stop.',
+    dataUrl: image('eyeball'),
+  },
+  {
+    id: 'blob',
+    name: 'Blob',
+    description:
+      'A shape with no front, for something that wanders: everything else tells you where it is going and this one cannot.',
+    dataUrl: image('blob'),
+  },
+  {
     id: 'rocket',
     name: 'Rocket',
     description:

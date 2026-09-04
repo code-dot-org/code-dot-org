@@ -484,6 +484,47 @@ describe('a ledge, and which way you may pass it', () => {
     expect(jumper.get(PositionProperty).y).toBeLessThan(100);
   });
 
+  it('is walked through by a body that ignores walls, and still touched', () => {
+    // A GHOST IS A FACT ABOUT THE GHOST, which is why the flag is the mover's
+    // and not the wall's. `passes through things` is the other way of not
+    // being stopped and the wrong one here: it takes a body out of every
+    // contact, and something that walks through walls to reach you still has
+    // to be able to reach you. So this asserts BOTH — through it, and
+    // touching it on the way.
+    // NO GRAVITY, which is what the enemy this is for has: being held up is
+    // `Acts as Ground`'s question and being stopped is `Solid`'s, and they
+    // are separate on purpose — a one-way platform holds you up without being
+    // solid at all. A ghost that also fell would want `ignores ground` too.
+    const world = stage([of('rules/solid', 'SolidTrait')]);
+    const ghost = new ActorBuilder({id: 'ghost', name: 'ghost'})
+      .useTraits([
+        of('rules/collisions', 'CanCollideTrait'),
+        of('rules/motion', 'CanMoveTrait'),
+      ])
+      .set(PositionProperty, new Vector(100, 40))
+      .set(of('rules/motion', 'VelocityProperty'), new Vector(0, 3))
+      .instantiate('ghost');
+    world.addActor(ghost);
+    (ghost as {set(p: unknown, v: unknown): void}).set(
+      of('rules/motion', 'IgnoresWallsProperty'),
+      true,
+    );
+
+    let touched = false;
+    for (let tick = 0; tick < 72; tick++) {
+      run(world, 1 / 60);
+      const near = (ghost as {get(p: unknown): unknown[]}).get(
+        of('rules/collisions', 'ContactsProperty'),
+      );
+      touched = touched || near.length > 0;
+    }
+
+    // Straight past the ledge it would have landed on…
+    expect(ghost.get(PositionProperty).y).toBeGreaterThan(200);
+    // …and it registered the ledge on the way through.
+    expect(touched).toBe(true);
+  });
+
   it('is not there at all once it passes through things', () => {
     // ONE LEVER FOR EVERY RULE THAT READS A CONTACT. "This wall is switched
     // off" has to mean it stops blocking AND stops holding things up, and both
@@ -3133,6 +3174,43 @@ describe('Turning', () => {
 
     expect(facing(mover)).toBe(heading(mover));
     expect(facing(mover)).not.toBe(0);
+  });
+
+  it('reflects off what stopped it, rather than turning by a number', () => {
+    // The one enemy a fixed turn cannot make: a thing that comes off a wall
+    // the way a ball does, so its path is a fact about the room rather than
+    // about its own number. Aimed down and to the right at the floor, it
+    // should come back up and STILL be going right — a `turn by 180` would
+    // send it back the way it came.
+    const {world, mover} = corridor([], {
+      HeadingProperty: 45,
+      BouncesOffWhatStopsItProperty: true as never,
+      TravelSpeedProperty: 3,
+    });
+
+    // Short, because it bounces again off the far wall soon after: at three
+    // units a second this corridor is crossed in a little over a second, and
+    // the second bounce is a different mirror.
+    run(world, 0.2);
+
+    // Mirrored about the horizontal: 45 down-right becomes 315 up-right. It
+    // is still going RIGHT, which is what a reflection means and what a
+    // `turn by 180` could not have produced — that would be 225.
+    expect(heading(mover)).toBe(315);
+  });
+
+  it('reverses in a corner, which is what a fixed turn would have said', () => {
+    const {world, mover} = corridor([], {
+      HeadingProperty: 0,
+      BouncesOffWhatStopsItProperty: true as never,
+      TravelSpeedProperty: 3,
+    });
+
+    run(world, 3);
+
+    // Straight at the right-hand wall: nothing was moving vertically, so only
+    // the across axis failed, and the mirror is a reversal.
+    expect(heading(mover)).toBe(180);
   });
 
   it('does not turn on its first frame, however far from the origin it is', () => {

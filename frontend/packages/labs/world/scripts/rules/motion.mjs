@@ -57,9 +57,24 @@ const velocity = canMove.vector('velocity', {x: 0, y: 0});
  * its own would be a second opinion about how long a hold lasts.
  */
 const held = canMove.boolean('held still', 'false');
+/**
+ * Whether solid bodies stop this one.
+ *
+ * The mirror of `Gravity`'s `ignores ground`, and here rather than on `Solid`
+ * for the reason that one is here: it is a fact about the MOVER, and a mover
+ * need not elect `Solid` at all — a ghost is not a wall. Every body `Solid`
+ * would push has `Can Move`, so this is where such a body can carry it.
+ *
+ * NOT `passes through things`, which is the other way of not being stopped and
+ * the wrong one for a ghost: that takes a body out of every contact, and a
+ * thing that walks through walls to reach you still has to be able to reach
+ * you. Only `rules/solid` reads this, so a body that ignores walls still
+ * touches, still damages, still collects and can still be stood on.
+ */
+const ignoresWalls = canMove.boolean('ignores walls', 'false');
 
 export const CanMove = rule.traitRef('Can Move');
-export {held, velocity};
+export {held, ignoresWalls, velocity};
 
 /** Where an actor was, going the speed it is going now. */
 export const positionBefore = rule.block({

@@ -573,6 +573,60 @@ describe('the jetpack level', () => {
     expect(under.get(hole)).toBe(false);
   });
 
+  it('gives the last four their four different behaviours', () => {
+    // JETPACK.md's phase seven, and the claim worth pinning is that all four
+    // came out of two dials and no new rule. Each assertion is the thing that
+    // tells that enemy from the others — "it moved" would pass for any of
+    // them, and for the four that were already here.
+    const {world} = project;
+    play(world, 0.5);
+    const spring = named(world, 'Enemy4');
+    const shuriken = named(world, 'Enemy5');
+    const eyeball = named(world, 'Enemy6');
+    const blob = named(world, 'Enemy7');
+    const heading = (
+      project.modules['rules/turning'] as Record<string, unknown>
+    ).HeadingProperty as never;
+
+    const springY: number[] = [];
+    const blobX: number[] = [];
+    const eyeStart = eyeball.get(PositionProperty).x;
+    const spinFirst = shuriken.get(heading) as unknown as number;
+    const spins: number[] = [];
+    for (let tick = 0; tick < 40; tick++) {
+      play(world, 0.15);
+      springY.push(spring.get(PositionProperty).y);
+      blobX.push(blob.get(PositionProperty).x);
+      spins.push(shuriken.get(heading) as unknown as number);
+    }
+
+    // THE SPRING goes up and comes back: `Turning` aimed up with a half
+    // circle, and no gravity to make it a ball.
+    expect(Math.min(...springY)).toBeLessThan(springY[0] - 32);
+    expect(Math.max(...springY)).toBeGreaterThan(Math.min(...springY) + 32);
+
+    // THE SHURIKEN reflects rather than reverses. Sampled rather than read at
+    // the end, because two reflections can land on the same heading a single
+    // reversal would have — off a wall and then off the floor comes back to
+    // the start plus a half circle, and reading only the last one would call
+    // that a reversal. What a fixed turn can NEVER produce is a heading that
+    // is neither of those two, and one of those is what this looks for.
+    const reversed = (spinFirst + 180) % 360;
+    expect(spins.some(spin => spin !== spinFirst && spin !== reversed)).toBe(
+      true,
+    );
+
+    // THE EYEBALL closed on the Pilot, which is bottom-left of it, across a
+    // room full of walls it is not stopped by.
+    expect(eyeball.get(PositionProperty).x).toBeLessThan(eyeStart - 64);
+
+    // THE WANDERER went both ways, which none of the others do: everything
+    // else here commits to a direction until something changes it.
+    const steps = blobX.slice(1).map((x, index) => x - blobX[index]);
+    expect(steps.some(step => step > 0.5)).toBe(true);
+    expect(steps.some(step => step < -0.5)).toBe(true);
+  });
+
   it('keeps every enemy in the room', () => {
     // One trait each rather than a rule: "Stays in the Map" puts a body back
     // where it was at an edge, and a body that got nowhere is what both enemy

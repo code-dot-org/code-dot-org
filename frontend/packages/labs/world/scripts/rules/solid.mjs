@@ -6,6 +6,7 @@ import {
   atMost,
   axisOf,
   both,
+  not,
   defineRule,
   filter,
   forEach,
@@ -28,7 +29,7 @@ import {
   vectorPlus,
   when,
 } from './dsl.mjs';
-import {CanMove, positionBefore, velocity} from './motion.mjs';
+import {CanMove, ignoresWalls, positionBefore, velocity} from './motion.mjs';
 
 const rule = defineRule({
   name: 'Solid Bodies',
@@ -318,8 +319,14 @@ rule.step('resolve', 'settle', [
   forEach(mover, {
     from: filter(mover, {
       where: both(
-        hasTrait(mover.get(), CanMove),
-        hasTrait(mover.get(), CanCollide),
+        both(hasTrait(mover.get(), CanMove), hasTrait(mover.get(), CanCollide)),
+        // A GHOST IS A FACT ABOUT THE GHOST, so the flag is the mover's and
+        // is read only here — a body that ignores walls still touches, still
+        // damages, still collects and still gets landed on. `passes through
+        // things` is the other way of not being stopped and it is the wrong
+        // one for this: it takes a body out of every contact, and something
+        // that walks through walls to reach you still has to reach you.
+        not(ignoresWalls.of(mover.get())),
       ),
     }),
     body: [

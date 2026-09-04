@@ -47,13 +47,21 @@ describe('rules/motion.rule', () => {
     // draws in — an Engine block — rather than a knob this rule owns, so the two
     // places that convert both reach for the same one.
     //
-    // The list is short on purpose and this test is what keeps it short. Both
-    // entries are things a body HAS rather than settings: how fast it is going,
-    // and whether something is deliberately holding it there — the second
-    // because a body that got nowhere because of a wall and one that got
-    // nowhere because a teleport pad is carrying it are indistinguishable from
-    // outside, and two other rules act on the difference (`rules/teleport`).
-    expect(meta.properties.map(p => p.id)).toEqual(['velocity', 'held_still']);
+    // The list is short on purpose and this test is what keeps it short.
+    // Every entry is a fact about a BODY rather than a setting on this rule,
+    // and each is here because some other rule has to be able to ask it of
+    // anything that moves without depending on whoever answers:
+    //
+    //   velocity       how fast it is going
+    //   held still     whether something is holding it there ON PURPOSE, which
+    //                  a wall and a teleport pad look identical without
+    //   ignores walls  whether solid bodies stop it — the mover's fact, not
+    //                  the wall's, and a mover need not elect `Solid` at all
+    expect(meta.properties.map(p => p.id)).toEqual([
+      'velocity',
+      'held_still',
+      'ignores_walls',
+    ]);
     expect(source).toContain('world_pixels_per_unit');
   });
 
