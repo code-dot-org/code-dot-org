@@ -59,28 +59,40 @@ describe('rules/motion.rule', () => {
     //                  the wall's, and a mover need not elect `Solid` at all
     //   corner reach   how far off a corner may be and still be slipped round,
     //                  which is the mover's fact for the same reason
+    //   position before
+    //                  where it stood at the top of the frame — RECORDED here
+    //                  by this rule's own `sense` step, so that Solid, Gravity
+    //                  and Climbing read a fact rather than working backwards
+    //                  from a velocity that may not be what moved it
     //
-    // The last two are read by `rules/solid` alone and live here rather than
-    // there because `Solid Bodies` declares exactly one trait on purpose: the
-    // one that says what a WALL is.
+    // `ignores walls` and `corner reach` are read by `rules/solid` alone and
+    // live here rather than there because `Solid Bodies` declares exactly one
+    // trait on purpose: the one that says what a WALL is.
     expect(meta.properties.map(p => p.id)).toEqual([
       'velocity',
       'held_still',
       'ignores_walls',
       'corner_reach',
+      'position_before',
     ]);
     expect(source).toContain('world_pixels_per_unit');
   });
 
-  it('offers the shove and the rewind the other rules use', () => {
-    // `apply force` is on the trait, so it is asked OF an actor; `position
-    // before` is the world's, because it is a question about a pair of numbers.
+  it('offers the shove, and keeps the record the other rules read', () => {
+    // `apply force` is on the trait, so it is asked OF an actor. `position
+    // before` used to be a query beside it — `⟨actor⟩ position before
+    // ⟨seconds⟩`, answered as position less velocity times seconds — and is a
+    // property now, because there is nothing left to compute: the rule writes
+    // it down at the top of the frame and the answer is a fact about the
+    // frame rather than a guess from the speed. Read-only, since a project
+    // writing to it would be writing history.
     const force = meta.actions.find(a => a.id === 'apply_force');
     expect(force?.scope).toBe('actor');
-    const before = meta.queries.find(q => q.id === 'position_before');
-    expect(before?.scope).toBe('world');
-    expect(before?.returns).toBe('vector');
-    expect(before?.params.map(p => p.type)).toEqual(['actor', 'number']);
+    expect(meta.queries.map(q => q.id)).not.toContain('position_before');
+    const before = meta.properties.find(p => p.id === 'position_before');
+    expect(before?.scope).toBe('actor');
+    expect(before?.type).toBe('point');
+    expect(before?.readonly).toBe(true);
   });
 
   it('is the moment velocity becomes position, and nothing anchors to it', () => {
@@ -88,11 +100,23 @@ describe('rules/motion.rule', () => {
     // NAME was load-bearing — an anchor is `<RuleName>#<stepId>`, and renaming
     // it broke them. They each name a phase now, and this one names `move`, so
     // the name is a label again.
-    const [step] = meta.steps;
-    expect(step.id).toBe('reposition');
-    expect(step.order.kind).toBe('phase');
-    expect(step.order.phase).toBe('move');
+    const step = meta.steps.find(s => s.id === 'reposition');
+    expect(step?.order.kind).toBe('phase');
+    expect(step?.order.phase).toBe('move');
     expect(module_).toContain('rule.addStepIn("reposition", "move"');
+  });
+
+  it('writes down where every mover is before anything moves it', () => {
+    // The record behind `position before`, in `sense` — the first moment —
+    // and it has to be that early: `push` is where a teleport pad sets a
+    // traveller down, and a record taken after that would say the traveller
+    // had always stood at the far pad. The rule's own step rather than the
+    // trait's, because `sense` is a moment of the WORLD and a trait's step may
+    // only name the moments its subject takes part in (engine/core/phases).
+    const step = meta.steps.find(s => s.id === 'note_where_each_body_starts');
+    expect(step?.order.kind).toBe('phase');
+    expect(step?.order.phase).toBe('sense');
+    expect(step?.scope).toBe('world');
   });
 
   it('explains each block it defines', () => {

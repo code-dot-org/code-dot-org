@@ -178,7 +178,7 @@ const overlappedBefore = (which, solid) =>
   );
 
 /** The two lines every pass opens with. */
-const measure = (body, solid, frame) => [
+const measure = (body, solid) => [
   note('How far apart the two middles must be for the boxes to just touch.'),
   reach.set(
     vectorOver(
@@ -189,8 +189,9 @@ const measure = (body, solid, frame) => [
       n(2),
     ),
   ),
-  note('Where this actor was before it moved this frame.'),
-  was.set(positionBefore({subject: body.get(), seconds: frame.get()})),
+  note('Where this actor was at the top of the frame, before anything'),
+  note('moved it — Physics writes it down, so this is a record, not a guess.'),
+  was.set(vector(positionBefore.x(body.get()), positionBefore.y(body.get()))),
 ];
 
 // ── The two passes ──────────────────────────────────────────────────────────
@@ -208,7 +209,7 @@ const pushOutSideways = rule.block({
     param('frame', 'number'),
   ],
   body: ({body, solid, frame}) => [
-    ...measure(body, solid, frame),
+    ...measure(body, solid),
     note(
       'Only push sideways if it was ALREADY overlapping vertically before it',
     ),
@@ -269,7 +270,7 @@ const pushOutUpOrDown = rule.block({
     param('frame', 'number'),
   ],
   body: ({body, solid, frame}) => [
-    ...measure(body, solid, frame),
+    ...measure(body, solid),
     note(
       'Only push up or down if it overlaps sideways NOW — the sideways pass',
     ),

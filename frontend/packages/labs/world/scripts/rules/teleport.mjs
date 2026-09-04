@@ -160,18 +160,18 @@ const arrives = travels.event(['arrives']);
 /**
  * Stop going sideways, and leave the vertical alone.
  *
- * NOT `velocity = 0`. Every rule that asks where a body WAS asks `position
- * before`, which is this frame's position less this frame's velocity — an
- * extrapolation, not a history. Park BOTH components at zero and the answer
- * becomes "it has always been exactly here", so Solid, asked to push a
- * standing body out of the floor it overlaps, cannot tell which way it came
- * from and takes the shortest way out: sideways, a tile a frame, for the whole
- * of the wait. That is what a traveller whipping across the room was.
+ * The vertical is gravity's: a traveller standing on a pad on a floor is a
+ * standing body, and a standing body's downward speed is what Gravity and
+ * Solid use between them to keep it standing. Zeroing it would be a second
+ * opinion about how a body rests, taken once a frame for the whole of the
+ * wait.
  *
- * Leaving gravity's downward speed alone keeps the honest answer — "it came
- * from above" — and Solid then does what it does for every other standing
- * body. `Climbing`'s header describes the same failure from the other end, and
- * `Surfaces` writes its floors this way for the same reason.
+ * This used to be load-bearing for another reason — `position before` was
+ * worked out from the velocity, so a body with both components at zero read as
+ * one that had always stood exactly here, and Solid pushed it sideways out of
+ * the floor it stood in, a tile a frame. That was the traveller whipping
+ * across the room. Physics records the position now, and the whip is not a
+ * thing this shape prevents any more; the shape stays for the reason above.
  */
 const holdStill = () =>
   velocity.set(

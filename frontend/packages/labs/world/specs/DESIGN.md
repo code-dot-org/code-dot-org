@@ -63,10 +63,11 @@ So a velocity, a force or an acceleration is in UNITS per second, where a unit i
 100 pixels (`engine/core/units.ts`). Gravity is `9`, a walk `1.5`, a jump `-5`.
 
 The engine converts at the one place a rate meets a position: integrating
-velocity into position, and Motion's `position before` query — where an actor was
-a moment ago — which Collision and any landing rule use instead of multiplying a
-velocity by a time themselves. A rule that needs to mix the two and cannot is a
-sign the engine is missing a query, not a reason to write `× 100`.
+velocity into position. Where an actor WAS is not a conversion at all — Motion
+records `position before` at the top of every frame, and Solid, Gravity and
+Climbing read the record rather than working backwards from a velocity. A rule
+that needs to mix a rate and a position and cannot is a sign the engine is
+missing a query, not a reason to write `× 100`.
 
 The Physics rule is doing a lot of the work, here.
 This adds the `velocity` property to the Actor which is generally only readable.

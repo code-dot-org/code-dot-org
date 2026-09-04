@@ -304,7 +304,7 @@ how the generated call sites read. The drawing shows that socket, so the two
 cases read apart at a glance:
 
 ```
-⟨subject⟩ position before ⟨seconds⟩        at rule level: every actor is a parameter
+⟨faller⟩ land on ground? ⟨frame⟩           at rule level: every actor is a parameter
 apply force ⟨force⟩ on ⟨this actor⟩        under a trait: the subject is implied
 ⟨this actor⟩ is on the ground?             …and a query leads with it
 ```

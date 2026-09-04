@@ -99,19 +99,17 @@ const rule = defineRule({
 // not a ladder.
 //
 // IT WRITES DOWN THE SPEED IT CLIMBED AT, which looks redundant beside a
-// position it has already set and is the opposite. \`position before\` — which
-// Physics offers and half the library asks — is this frame's position less
-// this frame's VELOCITY: an extrapolation, not a history. So a climb that
-// parked the speed at zero told every other rule that the climber had always
-// been exactly where it is.
+// position it has already set and is not: the position is where the climber
+// is, and the velocity is what anything reading it — a bounce, a slide, an
+// animation choosing between climbing and hanging — takes the climber to be
+// doing. A climb that parked the speed at zero read as a standstill.
 //
-// Solid is the rule that minded. It decides which face a body came in through
-// by asking whether it already overlapped on the other axis before it moved,
-// and against a body that "has always been here" the answer is yes on both —
-// so a climber a few pixels inside a floor was judged to have arrived from the
-// SIDE and pushed a whole tile sideways, every frame, until it left the map.
-// Writing the true speed makes the answer true, Solid takes the up-and-down
-// pass, and the climb stops at the floor the way anything else would.`,
+// It used to matter more than that. \`position before\` was once worked out
+// from the velocity rather than recorded, so a parked speed told Solid the
+// climber had always been exactly where it is, and a climber a few pixels
+// inside a floor was pushed a whole tile sideways, every frame, until it left
+// the map. Physics writes the position down now (\`note where each body
+// starts\`), and Solid's answer no longer depends on what is written here.`,
 });
 rule.uses('Gravity');
 rule.uses('Physics');
@@ -374,13 +372,7 @@ climbs.step('climb', 'adjust', [
             note('this instant: `move` has already run, so the position here'),
             note('has this frame’s travel in it and subtracting it from the'),
             note('answer would measure nothing at all.'),
-            climbedFrom.set(
-              thisActor(),
-              axisOf(
-                'y',
-                positionBefore({subject: thisActor(), seconds: frameTime()}),
-              ),
-            ),
+            climbedFrom.set(thisActor(), positionBefore.y(thisActor())),
             climbMeasured.set(thisActor(), yes()),
             note('Where this actor was at the top of the frame, plus a'),
             note('frame of climbing. Whatever gravity did to y since then is'),
@@ -397,10 +389,7 @@ climbs.step('climb', 'adjust', [
                 position.x(thisActor()),
               ),
               add(
-                axisOf(
-                  'y',
-                  positionBefore({subject: thisActor(), seconds: frameTime()}),
-                ),
+                positionBefore.y(thisActor()),
                 times(
                   times(
                     times(speed.of(thisActor()), pixelsPerUnit()),
@@ -410,15 +399,10 @@ climbs.step('climb', 'adjust', [
                 ),
               ),
             ),
-            note('…and the speed it just moved at, which is not a detail.'),
-            note('Every rule that asks where a body WAS asks `position'),
-            note('before`, and that is this frame’s position less this'),
-            note('frame’s velocity — an extrapolation, not a history. Parking'),
-            note('the speed at zero therefore tells the whole world that this'),
-            note('actor has always been exactly where it is: Solid concluded'),
-            note('a climber inside a floor had arrived from the SIDE and'),
-            note('pushed it a tile sideways every frame until it left the'),
-            note('map. So the number written here is the truth.'),
+            note('…and the speed it just moved at, so that anything reading'),
+            note('the velocity — a bounce, a slide, an animation choosing'),
+            note('between climbing and hanging — sees a climb and not a'),
+            note('standstill.'),
             velocity.set(
               thisActor(),
               vector(

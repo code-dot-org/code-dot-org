@@ -3728,11 +3728,15 @@ describe('Teleport', () => {
   it('stands still on the way, on a floor it is standing in', () => {
     // THE BUG A PLAYER SAW: a traveller whipped across the room and then
     // popped up where it was meant to go. Holding it still was written as
-    // `velocity = 0`, and `position before` is this frame's position less
-    // this frame's velocity — so both components at zero says "it has always
-    // been exactly here", and Solid, pushing a standing body out of the floor
-    // it overlaps, cannot tell which way it came from and takes the shortest
-    // way out. Sideways, a tile a frame, for the whole trip.
+    // `velocity = 0`, and `position before` was then worked out from the
+    // velocity — so both components at zero said "it has always been exactly
+    // here", and Solid, pushing a standing body out of the floor it overlaps,
+    // could not tell which way it came from and took the shortest way out.
+    // Sideways, a tile a frame, for the whole trip.
+    //
+    // Physics records the position now, so this is structural rather than a
+    // matter of what Teleport writes to the velocity — but it is the test
+    // that would notice if the record were taken at the wrong moment.
     //
     // Every pad worth having is on a floor, so this needs one to show at all.
     const world = new WorldBuilder({id: 'w', name: 'W'})
@@ -4404,5 +4408,87 @@ describe('slipping round a corner', () => {
         of('rules/motion', 'VelocityProperty'),
       ).y,
     ).toBeCloseTo(-4, 1);
+  });
+});
+
+describe('where a body was', () => {
+  // `position before` used to be worked out — this frame's position less this
+  // frame's velocity — which is where a body was IF its velocity is what moved
+  // it, and wrong whenever something set the position by hand. Physics writes
+  // it down at the top of every frame now, and these two are the difference.
+
+  const positionBefore = () =>
+    of('rules/motion', 'PositionBeforeProperty') as unknown;
+  const spotOf = (who: unknown) =>
+    (who as {get(p: unknown): Vector}).get(PositionProperty);
+  const beforeOf = (who: unknown) =>
+    (who as {get(p: unknown): Vector}).get(positionBefore());
+
+  it('is where the body stood at the top of the frame', () => {
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([rule('rules/motion')])
+      .instantiate();
+    const body = new ActorBuilder({id: 'b', name: 'body'})
+      .useTraits([of('rules/motion', 'CanMoveTrait')])
+      .set(PositionProperty, at(100, 200))
+      .instantiate('b');
+    body.set(of('rules/motion', 'VelocityProperty'), new Vector(1, 0));
+    world.addActor(body);
+
+    run(world, 1 / 60);
+
+    // A unit a second is a hundred pixels a second: a sixtieth of that on.
+    expect(spotOf(body).x).toBeCloseTo(100 + 100 / 60, 5);
+    expect(beforeOf(body).x).toBeCloseTo(100, 5);
+    expect(beforeOf(body).y).toBeCloseTo(200, 5);
+  });
+
+  it('is a record, not a guess from the speed', () => {
+    // A teleport pad sets a traveller down at the far pad by hand, in `push`,
+    // with its speed at zero. Worked out from the speed, "where was it" on the
+    // arrival frame answers "at the far pad, always" — which is the sideways
+    // whip Solid made of it. Recorded, it answers where the trip began.
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([
+        rule('rules/motion'),
+        rule('rules/collisions'),
+        rule('rules/health'),
+        rule('rules/teleport'),
+      ])
+      .instantiate();
+    for (const [index, x] of [100, 200].entries()) {
+      const pad = new ActorBuilder({id: `pad${index}`, name: `pad${index}`})
+        .useTraits([of('rules/teleport', 'IsATeleportPadTrait')])
+        .set(PositionProperty, at(x, 200))
+        .set(of('rules/collisions', 'SizeProperty'), new Vector(32, 32))
+        .instantiate(`pad${index}`);
+      pad.set(of('rules/teleport', 'PadColourProperty'), '#ff0000' as never);
+      world.addActor(pad);
+    }
+    const walker = new ActorBuilder({id: 'walker', name: 'walker'})
+      .useTraits([
+        of('rules/teleport', 'UsesTeleportPadsTrait'),
+        of('rules/motion', 'CanMoveTrait'),
+      ])
+      .set(PositionProperty, at(100, 200))
+      .set(of('rules/collisions', 'SizeProperty'), new Vector(16, 16))
+      .instantiate('walker');
+    world.addActor(walker);
+    run(world, 1 / 60);
+    (walker as {act(a: unknown): void}).act(
+      of('rules/teleport', 'UseThePadAction'),
+    );
+
+    // Tick until it arrives; the default trip is four tenths of a second.
+    let arrived = false;
+    for (let tick = 0; tick < 60 && !arrived; tick++) {
+      run(world, 1 / 60);
+      arrived = spotOf(walker).x > 150;
+    }
+    expect(arrived).toBe(true);
+
+    // The frame it arrived: it IS at the far pad, and it WAS at the near one.
+    expect(spotOf(walker).x).toBeCloseTo(200, 5);
+    expect(beforeOf(walker).x).toBeCloseTo(100, 5);
   });
 });

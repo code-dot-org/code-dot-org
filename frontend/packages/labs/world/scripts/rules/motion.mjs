@@ -6,15 +6,12 @@ import {
   defineRule,
   forEach,
   frameTime,
-  give,
   moduleFor,
   note,
   param,
   pixelsPerUnit,
   thisActor,
   times,
-  vector,
-  vectorMinus,
   vectorPlus,
   vectorTimes,
 } from './dsl.mjs';
@@ -96,39 +93,42 @@ const ignoresWalls = canMove.boolean('ignores walls', 'false');
  * through gaps a player can see they do not fit.
  */
 const cornerReach = canMove.number('corner reach', 0);
+/**
+ * Where this body was at the top of the frame — RECORDED, not worked out.
+ *
+ * Half the library asks where a body was: Solid, to tell which face it came
+ * in through; Gravity, to tell whether it crossed a surface this frame;
+ * Climbing, to measure a climb against where it started. This used to be a
+ * query that answered `position − velocity × time`, which is where the body
+ * was IF velocity is what moved it — and disagreed with the truth whenever
+ * something set the position by hand. A ladder snapping a climber to its
+ * rungs, a pad teleporting a traveller, a step parking a speed at zero: each
+ * made the query say "it has always been exactly here", and Solid, asked to
+ * push such a body out of the floor it stood in, could not tell which way it
+ * came from and took the shortest way out. Sideways, a tile a frame. Three
+ * rules grew a private record of their own to get round it.
+ *
+ * So Physics writes it down instead, once a frame, in `sense` — the first
+ * moment, before anything decides anything and long before anything moves.
+ * From then to the end of the frame the answer is a fact about this frame
+ * rather than a guess from its speed, and a rule that moves a body by hand no
+ * longer has to lie about its velocity to keep the rest of the library honest.
+ *
+ * Read-only, because the one thing it means is "where Physics saw you at the
+ * top of the frame" and a project writing to it would be writing history.
+ *
+ * A body added in the MIDDLE of a frame has not been seen yet and reads its
+ * default until the next `sense` — one frame, and only for a body that
+ * appears already overlapping something solid.
+ */
+const positionBefore = canMove.point(
+  'position before',
+  {x: 0, y: 0},
+  {readonly: true},
+);
 
 export const CanMove = rule.traitRef('Can Move');
-export {cornerReach, held, ignoresWalls, velocity};
-
-/** Where an actor was, going the speed it is going now. */
-export const positionBefore = rule.block({
-  returns: 'vector',
-  description:
-    'Where this actor was that many seconds ago, at the speed it is going now.',
-  say: [
-    param('subject', 'actor'),
-    'position before',
-    param('seconds', 'number'),
-  ],
-  body: ({subject, seconds}) => [
-    note(
-      'Rewind: where was this actor a moment ago, going the speed it is going?',
-    ),
-    note(
-      'Speed is in units per second, position is in pixels — so we multiply',
-    ),
-    note('by "pixels per unit" to turn one into the other.'),
-    give(
-      vectorMinus(
-        vector(position.x(subject.get()), position.y(subject.get())),
-        vectorTimes(
-          velocity.of(subject.get()),
-          times(seconds.get(), pixelsPerUnit()),
-        ),
-      ),
-    ),
-  ],
-});
+export {cornerReach, held, ignoresWalls, positionBefore, velocity};
 
 /** A shove: adds to the speed an actor already has. */
 export const applyForce = canMove.block({
@@ -149,6 +149,26 @@ export const applyForce = canMove.block({
 
 const each = rule.local('each', 'Actor');
 const travel = rule.local('travel', 'Vector');
+
+// The rule's own step rather than the trait's, because `sense` is a moment of
+// the WORLD and a trait's step may only name the moments its subject takes
+// part in (engine/core/phases). It has to be this early: `push` is where a
+// teleport pad sets a traveller down, and a record taken after that would say
+// the traveller had always stood at the far pad.
+rule.step('note where each body starts', 'sense', [
+  forEach(each, {
+    from: allWithTrait(CanMove),
+    body: [
+      note('Before anything moves: where is everybody? Written down so that'),
+      note('the rest of the frame can ask, whatever moves them meanwhile.'),
+      positionBefore.set(
+        each.get(),
+        position.x(each.get()),
+        position.y(each.get()),
+      ),
+    ],
+  }),
+]);
 
 rule.step('reposition', 'move', [
   forEach(each, {

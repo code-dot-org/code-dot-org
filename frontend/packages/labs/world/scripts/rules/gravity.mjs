@@ -108,13 +108,8 @@ const isRestingOn = rule.block({
   returns: 'boolean',
   description:
     'Whether this actor is standing on that ground right now, this frame.',
-  say: [
-    param('faller', 'actor'),
-    'is resting on',
-    param('ground', 'actor'),
-    param('frame', 'number'),
-  ],
-  body: ({faller, ground, frame}) => [
+  say: [param('faller', 'actor'), 'is resting on', param('ground', 'actor')],
+  body: ({faller, ground}) => [
     note('Standing on this ground means three things are all true:'),
     note('1. we are over it, not off to one side,'),
     note('2. we are moving toward it (falling, not rising away),'),
@@ -139,13 +134,7 @@ const isRestingOn = rule.block({
           // Above the surface last frame…
           atMost(
             times(
-              minus(
-                axisOf(
-                  'y',
-                  positionBefore({subject: faller.get(), seconds: frame.get()}),
-                ),
-                restY.get(),
-              ),
+              minus(positionBefore.y(faller.get()), restY.get()),
               sign.get(),
             ),
             n(0),
@@ -168,8 +157,8 @@ const landOnGround = rule.block({
   returns: 'boolean',
   description:
     'Lands this actor on any ground it has reached, and says whether it did.',
-  say: [param('faller', 'actor'), 'land on ground?', param('frame', 'number')],
-  body: ({faller, frame}) => [
+  say: [param('faller', 'actor'), 'land on ground?'],
+  body: ({faller}) => [
     note('Collisions already worked out what this actor is touching,'),
     note('so this only looks at those — not at every actor in the world.'),
     note('Look at every ground in the world and ask: am I resting on it?'),
@@ -186,7 +175,6 @@ const landOnGround = rule.block({
             isRestingOn({
               faller: faller.get(),
               ground: ground.get(),
-              frame: frame.get(),
             }),
             [
               restY.set(
@@ -329,7 +317,7 @@ rule.step('handleCollisions', 'react', [
         [
           not(ignoresGround.of(each.get())),
           [
-            resting.set(landOnGround({faller: each.get(), frame: frameTime()})),
+            resting.set(landOnGround({faller: each.get()})),
             when(
               [
                 [
