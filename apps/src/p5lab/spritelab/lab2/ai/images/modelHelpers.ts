@@ -16,8 +16,7 @@ export function getImageModel() {
   return googleProvider(AiChatModelIds.GEMINI_3_1_FLASH_IMAGE);
 }
 
-// Character-set frames: Flash, like single images. Gemini 3 Pro Image was
-// tried and drew worse frames at twice the price. One constant to flip.
+// Character-set frames: Flash, like single images; one constant to flip.
 export const CHARACTER_SET_IMAGE_MODEL = AiChatModelIds.GEMINI_3_1_FLASH_IMAGE;
 
 export function getCharacterSetImageModel() {
