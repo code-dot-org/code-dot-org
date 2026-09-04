@@ -5,6 +5,7 @@ import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {FontSize} from '@cdo/apps/lab2/constants';
 import {
   setConsoleFontSize,
+  setEditorAutocompleteEnabled,
   setEditorFontSize,
 } from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import {Setting} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/types';
@@ -45,6 +46,9 @@ export function useCodebridgeSettings(): Setting[] {
   );
   const currentConsoleFontSizeKey = useAppSelector(
     state => state.lab2View.consoleFontSizeKey
+  );
+  const autocompleteEnabled = useAppSelector(
+    state => state.lab2View.editorAutocompleteEnabled
   );
 
   const {signInState} = useAppSelector(state => state.currentUser);
@@ -98,6 +102,14 @@ export function useCodebridgeSettings(): Setting[] {
     }
   };
 
+  const handleAutocompleteChange = (value: string) => {
+    const enabled = value === 'on';
+    dispatch(setEditorAutocompleteEnabled(enabled));
+    if (signInState === SignInState.SignedIn) {
+      new UserPreferences().setEditorAutocompleteEnabled(enabled);
+    }
+  };
+
   const handleLayoutChange = (value: string) => {
     const newLayout = value as LayoutKey;
     setSelectedLayout(newLayout);
@@ -141,6 +153,16 @@ export function useCodebridgeSettings(): Setting[] {
           },
         ]
       : []),
+    {
+      id: 'editorAutocomplete',
+      label: 'Autocomplete',
+      options: [
+        {value: 'on', text: 'On'},
+        {value: 'off', text: 'Off'},
+      ],
+      selectedValue: autocompleteEnabled ? 'on' : 'off',
+      onChange: handleAutocompleteChange,
+    },
     useThemeSetting(appName),
     ...(!widgetView && hasBothLayouts
       ? [

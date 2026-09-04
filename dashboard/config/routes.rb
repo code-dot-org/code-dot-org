@@ -90,6 +90,7 @@ Dashboard::Application.routes.draw do
       get '/font_size/console', to: 'user_preferences#console_font_size'
       get '/font_size/editor', to: 'user_preferences#editor_font_size'
       get '/theme', to: 'user_preferences#theme'
+      get '/editor_settings', to: 'user_preferences#editor_settings'
     end
 
     resources :survey_results, only: [:create], defaults: {format: 'json'}
@@ -1528,6 +1529,11 @@ Dashboard::Application.routes.draw do
       member do
         post :evaluate
       end
+      # The signed-in viewer's emoji reactions on this response. The emoji
+      # name (e.g. "heart") is the member id, so removing a reaction is a
+      # plain DELETE .../reactions/:emoji with no reaction row id exposed.
+      resources :reactions, only: [:create, :destroy], param: :emoji,
+        controller: 'challenge_response_reactions'
     end
     resources :challenge_response_assets, only: [:show] do
       member do

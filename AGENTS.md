@@ -42,6 +42,7 @@ and architecture.
 
 ## Rails Tips and Tricks:
 - As previously mentioned, see `dashboard/` directory for a conventional rails app with the usual directories (i.e. with dashboard/app/controllers, dashboard/app/models, dashboard/bin/rails, etc)
+- We typically avoid foreign keys unless there's a specific reason to add them - they can cause issues down the road if migrations or data need to change.
 - Some non-rails ruby code also lives in `lib/`
 - We use CanCanCan for authorization and Devise for authentication
 - Use `bundle exec` to run ruby commands (exception: most ./bin/* commands automatically load the rails environment)
