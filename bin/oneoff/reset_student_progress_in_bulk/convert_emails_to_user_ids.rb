@@ -31,14 +31,15 @@ rows = rows.map do |row|
     exit 1
   end
   user = User.find_by_email_or_hashed_email(row['student_email'])
-  raise("Student with email #{row['student_email']} not found") unless user
-  {student_id: user.id, unit_name: row['unit_name']}.compact
+  puts "Student with email #{row['student_email']} not found" unless user
+  {student_id: user&.id, unit_name: row['unit_name']}.compact
 end
 headers = rows.first.keys
 
 output_csv_file_path = csv_file_path.sub(/\.csv\z/, '-user-ids.csv')
 CSV.open(output_csv_file_path, 'w', headers: headers, write_headers: true) do |csv|
   rows.each do |row|
-    csv << row
+    puts row.inspect
+    csv << row if row[:student_id]
   end
 end
