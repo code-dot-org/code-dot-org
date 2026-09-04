@@ -398,6 +398,15 @@ $tab-segment-height: $tab-item-height - 2px;
     }
   }
 
+  // List markers need this inset back: a global reset zeroes it, this
+  // margin shorthand zeroes the compensating margin, and the outside
+  // markers then draw past the guide's overflow clip — numbered lists
+  // showed items with no numbers.
+  ul,
+  ol {
+    padding-left: 20px;
+  }
+
   li + li {
     margin-top: 4px;
   }
