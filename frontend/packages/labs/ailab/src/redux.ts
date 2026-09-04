@@ -4,25 +4,19 @@ import {
   type ThunkAction,
   type AnyAction,
 } from '@reduxjs/toolkit';
-import type KNN from 'ml-knn';
 
-import {
-  ColumnTypes,
-  RegressionTrainer,
-  ClassificationTrainer,
-  TestDataLocations,
-  ResultsGrades,
-} from './constants';
+import {ColumnTypes, TestDataLocations, ResultsGrades} from './constants';
 import {
   getSummaryStat,
   getResultsDataInDataTableForm,
 } from './helpers/accuracy';
-import {isRegression, getColumnDataToSave} from './helpers/columnDetails';
+import {getColumnDataToSave} from './helpers/columnDetails';
 import {getDatasetDetails} from './helpers/datasetDetails';
 import {
   uniqLabelFeaturesSelected,
   prevNextButtons,
 } from './helpers/navigationValidation';
+import {getTrainerId} from './trainers/ids';
 import type {
   DataRow,
   Metadata,
@@ -37,6 +31,7 @@ import type {
   SaveResponse,
   SaveTrainedModel,
   Panel,
+  TrainedModel,
 } from './types';
 
 export interface RootState {
@@ -61,7 +56,7 @@ export interface RootState {
   accuracyCheckPredictedLabels: (number | string)[];
   testData: Record<string, string | number>;
   prediction: number | string | undefined;
-  trainedModel: KNN | undefined;
+  trainedModel: TrainedModel | undefined;
   trainedModelDetails: TrainedModelDetailsSave;
   currentPanel: Panel;
   currentColumn: string | undefined;
@@ -262,7 +257,7 @@ const ailabSlice = createSlice({
         instructionsEnabled: state.instructionsEnabled,
       };
     },
-    setTrainedModel(state, action: PayloadAction<KNN>) {
+    setTrainedModel(state, action: PayloadAction<TrainedModel>) {
       state.trainedModel = action.payload;
     },
     setTrainedModelDetail: {
@@ -560,9 +555,7 @@ export function getTrainedModelDataToSave(state: RootState): ModelDataToSave {
     datasetDetails: getDatasetDetails(state),
     potentialUses: state.trainedModelDetails.potentialUses,
     potentialMisuses: state.trainedModelDetails.potentialMisuses,
-    selectedTrainer: isRegression(state)
-      ? RegressionTrainer
-      : ClassificationTrainer,
+    selectedTrainer: getTrainerId(state),
     featureNumberKey: state.featureNumberKey,
     label: getColumnDataToSave(state, state.labelColumn!),
     features: getFeaturesToSave(state),
