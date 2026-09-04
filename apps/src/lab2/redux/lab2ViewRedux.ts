@@ -8,6 +8,7 @@ export interface Lab2ViewState {
   consoleFontSizeKey: keyof typeof FontSize;
   editorFontSizeKey: keyof typeof FontSize;
   editorFontSizeLoaded: boolean;
+  editorAutocompleteEnabled: boolean;
   isStandaloneCollapsed?: boolean;
 }
 
@@ -15,6 +16,7 @@ const initialState: Lab2ViewState = {
   consoleFontSizeKey: 'Small',
   editorFontSizeKey: 'Small',
   editorFontSizeLoaded: false,
+  editorAutocompleteEnabled: true,
   isStandaloneCollapsed: false,
 };
 
@@ -51,6 +53,18 @@ export const fetchAndSaveEditorFontSize = createAsyncThunk<
   dispatch(setEditorFontSizeLoaded(true));
 });
 
+export const fetchAndSaveEditorAutocompleteEnabled = createAsyncThunk<
+  void,
+  void,
+  {dispatch: AppDispatch}
+>('lab2View/fetchAndSaveEditorAutocompleteEnabled', async (_, {dispatch}) => {
+  const savedSetting =
+    await new UserPreferences().getEditorAutocompleteEnabled();
+  if (savedSetting !== null) {
+    dispatch(setEditorAutocompleteEnabled(savedSetting));
+  }
+});
+
 // SLICE
 const lab2ViewSlice = createSlice({
   name: 'lab2View',
@@ -65,6 +79,9 @@ const lab2ViewSlice = createSlice({
     setEditorFontSizeLoaded(state, action: PayloadAction<boolean>) {
       state.editorFontSizeLoaded = action.payload;
     },
+    setEditorAutocompleteEnabled(state, action: PayloadAction<boolean>) {
+      state.editorAutocompleteEnabled = action.payload;
+    },
     setIsStandaloneCollapsed(state, action: PayloadAction<boolean>) {
       state.isStandaloneCollapsed = action.payload;
     },
@@ -75,6 +92,7 @@ export const {
   setConsoleFontSize,
   setEditorFontSize,
   setEditorFontSizeLoaded,
+  setEditorAutocompleteEnabled,
   setIsStandaloneCollapsed,
 } = lab2ViewSlice.actions;
 
