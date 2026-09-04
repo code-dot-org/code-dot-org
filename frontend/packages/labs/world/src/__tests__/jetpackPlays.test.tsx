@@ -364,41 +364,37 @@ describe('the jetpack level', () => {
     expect(Math.min(...dimmest)).toBeLessThan(1);
   });
 
-  it(
-    'carries the ball round the room through the pads',
-    {timeout: 20000},
-    () => {
-      // What the pads did to the level's simplest hazard, and it is worth
-      // stating because it REPLACED a test. The Steel Ball used to roll the
-      // floor to the wall and come back, and that was the whole of it. Every
-      // enemy now takes any pad it touches (JETPACK.md, phase 4), and the ball
-      // patrols the one floor a pad is on — so it is flung up to the belt,
-      // rolls it, drops to the low ledge, is flung across to the sludge, and
-      // falls back to the floor. It never reaches a wall any more: a pad gets
-      // to it first.
-      //
-      // That is not a loss of the turning behaviour, only of this room's view
-      // of it — `Turning` is pinned by its own tests and by the enemies lesson,
-      // both of which put a ball in a corridor with nothing else in it.
-      const {world} = project;
-      play(world, 0.5);
-      const ball = named(world, 'Enemy0');
-      const heights: number[] = [];
-      for (let tick = 0; tick < 20; tick++) {
-        play(world, 0.4);
-        heights.push(ball.get(PositionProperty).y);
-      }
+  it('carries the ball round the room through the pads', () => {
+    // What the pads did to the level's simplest hazard, and it is worth
+    // stating because it REPLACED a test. The Steel Ball used to roll the
+    // floor to the wall and come back, and that was the whole of it. Every
+    // enemy now takes any pad it touches (JETPACK.md, phase 4), and the ball
+    // patrols the one floor a pad is on — so it is flung up to the belt,
+    // rolls it, drops to the low ledge, is flung across to the sludge, and
+    // falls back to the floor. It never reaches a wall any more: a pad gets
+    // to it first.
+    //
+    // That is not a loss of the turning behaviour, only of this room's view
+    // of it — `Turning` is pinned by its own tests and by the enemies lesson,
+    // both of which put a ball in a corridor with nothing else in it.
+    const {world} = project;
+    play(world, 0.5);
+    const ball = named(world, 'Enemy0');
+    const heights: number[] = [];
+    for (let tick = 0; tick < 20; tick++) {
+      play(world, 0.4);
+      heights.push(ball.get(PositionProperty).y);
+    }
 
-      // Three floors of the room, in eight seconds: the ground it starts on and
-      // two it could not have rolled to. Rounded to the tile, because what is
-      // being counted is places rather than pixels.
-      const floors = new Set(heights.map(y => Math.round(y / 32)));
-      expect(floors.size).toBeGreaterThanOrEqual(3);
-      // …and one of them well above the floor it started on, which only a pad
-      // could have done: nothing in the room lifts a ball.
-      expect(Math.min(...heights)).toBeLessThan(heights[0] - 96);
-    },
-  );
+    // Three floors of the room, in eight seconds: the ground it starts on and
+    // two it could not have rolled to. Rounded to the tile, because what is
+    // being counted is places rather than pixels.
+    const floors = new Set(heights.map(y => Math.round(y / 32)));
+    expect(floors.size).toBeGreaterThanOrEqual(3);
+    // …and one of them well above the floor it started on, which only a pad
+    // could have done: nothing in the room lifts a ball.
+    expect(Math.min(...heights)).toBeLessThan(heights[0] - 96);
+  });
 
   it('turns the rocket’s nose the way it is flying', () => {
     // The ball and the rocket are the same actor with two numbers changed,
@@ -649,7 +645,7 @@ describe('the jetpack level', () => {
     expect(new Set(blobX).size).toBeGreaterThan(1);
   });
 
-  it('keeps every enemy in the room', {timeout: 20000}, () => {
+  it('keeps every enemy in the room', () => {
     // One trait each rather than a rule: "Stays in the Map" puts a body back
     // where it was at an edge, and a body that got nowhere is what both enemy
     // rules read as a moment to decide something. So they turn round there,

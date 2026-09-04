@@ -26,6 +26,22 @@ export default defineConfig({
     // suite is green and a file silently did not run. A number is a cheaper
     // fix than a flake that can hide a real failure.
     teardownTimeout: 30_000,
+    // …and longer than the five seconds vitest gives a TEST, for the same
+    // reason one level down. Ninety-three of these compile a project and then
+    // simulate seconds of game time — `starterPlays` walks a player into a
+    // crawler and waits for the health to run out — so several seconds is
+    // what they legitimately cost, and the default leaves them no margin at
+    // all under load.
+    //
+    // The failure is worse than slow: they pass alone, pass in a quiet run,
+    // and time out in a busy one, so the suite fails in a different place
+    // each time and none of the places is the bug. Two were patched
+    // one-by-one before this was set, which is how the pattern became
+    // visible.
+    //
+    // Twenty rather than more, because a test that hangs should still say so
+    // while somebody is watching.
+    testTimeout: 20_000,
     // `spikes/**` holds throwaway investigations that write files and take
     // seconds; they are run by hand, by path, and are not the suite.
     exclude: [
