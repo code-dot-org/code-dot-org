@@ -1528,6 +1528,11 @@ Dashboard::Application.routes.draw do
       member do
         post :evaluate
       end
+      # The signed-in viewer's emoji reactions on this response. The emoji
+      # name (e.g. "heart") is the member id, so removing a reaction is a
+      # plain DELETE .../reactions/:emoji with no reaction row id exposed.
+      resources :reactions, only: [:create, :destroy], param: :emoji,
+        controller: 'challenge_response_reactions'
     end
     resources :challenge_response_assets, only: [:show] do
       member do
