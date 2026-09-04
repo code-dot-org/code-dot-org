@@ -9,12 +9,35 @@
   #neighborhood{class: ('collapse' if @level.mini_app != 'neighborhood')}
     = render partial: 'levels/editors/fields/neighborhood_settings', locals: {f: f}
 
+  #mini_app_variant{class: ('collapse' if @level.mini_app.blank?)}
+    = f.label :mini_app_variant, 'Mini App Variant'
+    %p Which variant of the mini app students will use. This setting determines which variant's documentation is provided to the AI Tutor.
+    = f.select :mini_app_variant, options_for_select(@level.class.mini_app_variants, @level.mini_app_variant_or_default)
+
 :javascript
+  const defaultMiniAppVariants = #{Pythonlab::DEFAULT_MINI_APP_VARIANTS.to_json};
+  const hasSavedMiniAppVariant = #{@level.mini_app_variant.present?};
+
   function toggleFields(val) {
+    const miniApp = val.toLowerCase();
     const neighborhoodFields = document.getElementById('neighborhood');
-    if (val.toLowerCase() === 'neighborhood') {
+    const miniAppVariantFields = document.getElementById('mini_app_variant');
+
+    if (miniApp === 'neighborhood') {
       neighborhoodFields.classList.remove('collapse');
     } else {
       neighborhoodFields.classList.add('collapse');
+    }
+
+    const defaultMiniAppVariant = defaultMiniAppVariants[miniApp];
+    if (defaultMiniAppVariant) {
+      miniAppVariantFields.classList.remove('collapse');
+    } else {
+      miniAppVariantFields.classList.add('collapse');
+    }
+
+    // Don't overwrite a previously chosen version.
+    if (!hasSavedMiniAppVariant) {
+      document.getElementById('level_mini_app_variant').value = defaultMiniAppVariant || '';
     }
   }

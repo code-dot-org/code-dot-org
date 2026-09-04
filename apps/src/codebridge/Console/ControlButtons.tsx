@@ -156,46 +156,38 @@ const ControlButtons: React.FunctionComponent = () => {
 
   return (
     <div className={moduleStyles.controlButtons}>
-      {isRunning ? (
+      <WithConditionalTooltip
+        showTooltip={!isRunning && !!disabledCodeActionsTooltip}
+        tooltipProps={{
+          direction: 'onRight',
+          text: disabledCodeActionsTooltip || '',
+          size: 's',
+          tooltipId: 'code-actions-tooltip',
+        }}
+      >
         <MuiButton
           variant="contained"
-          color="error"
+          color={isRunning ? 'error' : 'primary'}
           size="extraSmall"
+          disabled={!isRunning && disableCodeActions}
+          loading={!isRunning && isEnvironmentLoading}
+          loadingPosition="start"
           className={moduleStyles.controlButton}
-          onClick={handleStop}
+          // What Ctrl+2 and the UI tests target.
+          id={isRunning ? undefined : 'uitest-codebridge-run'}
+          onClick={isRunning ? handleStop : handleRun}
           type="button"
-          startIcon={<FontAwesomeV6Icon iconStyle="solid" iconName="square" />}
+          sx={isRunning ? undefined : getRunButtonSx()}
+          startIcon={
+            <FontAwesomeV6Icon
+              iconStyle="solid"
+              iconName={isRunning ? 'square' : 'play'}
+            />
+          }
         >
-          {codebridgeI18n.stop()}
+          {isRunning ? codebridgeI18n.stop() : codebridgeI18n.run()}
         </MuiButton>
-      ) : (
-        <WithConditionalTooltip
-          showTooltip={!!disabledCodeActionsTooltip}
-          tooltipProps={{
-            direction: 'onRight',
-            text: disabledCodeActionsTooltip || '',
-            size: 's',
-            tooltipId: 'code-actions-tooltip',
-          }}
-        >
-          <MuiButton
-            variant="contained"
-            color="primary"
-            size="extraSmall"
-            disabled={disableCodeActions}
-            loading={isEnvironmentLoading}
-            loadingPosition="start"
-            className={moduleStyles.controlButton}
-            id="uitest-codebridge-run"
-            onClick={handleRun}
-            type="button"
-            sx={getRunButtonSx()}
-            startIcon={<FontAwesomeV6Icon iconStyle="solid" iconName="play" />}
-          >
-            {codebridgeI18n.run()}
-          </MuiButton>
-        </WithConditionalTooltip>
-      )}
+      </WithConditionalTooltip>
     </div>
   );
 };

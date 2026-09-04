@@ -1,6 +1,6 @@
 {
   "key": "teaching-csd-aiml",
-  "display_name": "Teaching AI and Machine Learning",
+  "display_name": "CSD - Teaching AI and Machine Learning",
   "is_featured": false,
   "assignable": false,
   "curriculum_type": "Professional Learning",
@@ -8,7 +8,7 @@
   "grade_levels": "6,7,8,9,10",
   "header": "self_paced",
   "image": "https://images.code.org/dddde6d1f34a5ea028a0ab910c58e07c-354488da87cbb925dcf2a2a40c29b598-AIML.png",
-  "cs_topic": "artificial_intelligence",
+  "cs_topic": "artificial_intelligence,programming",
   "school_subject": null,
   "device_compatibility": null,
   "description": "After completing this professional learning experience, you'll be ready to get started teaching Code.org's CSD Unit 4 - AI and Machine Learning with your students.",

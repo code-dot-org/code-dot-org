@@ -42,24 +42,38 @@ import {
   uploadAssetToProject,
   UploadImageFunction,
 } from '../ai/images/imageGeneration';
+import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import defaultSources from '../defaultSources.json';
-import {useGuideSteps} from '../guideSteps';
+import {countImagesByType, useGuideSteps} from '../guideSteps';
 import {
+  removeImageReferences,
+  removeImageReferencesOnWorkspace,
   renameImageReferences,
   renameImageReferencesOnWorkspace,
 } from '../imageReferences';
 import {onTrimsUpdated} from '../imageTrim';
-import {migrateAnimationList} from '../migrateSources';
+import {
+  migrateAnimationList,
+  migrateBlockTypes,
+  migrateScenes,
+} from '../migrateSources';
+import {
+  collectSavedSongs,
+  fetchMusicProjects,
+  withUnavailableSongs,
+} from '../musicProjects';
 import reseedablePageConstants, {
   RESET_PAGE_CONSTANTS,
 } from '../redux/reseedablePageConstants';
 import spriteLab2Reducer, {
   ExternalSceneOption,
+  MusicProjectOption,
   resetSpriteLab2,
   setActiveTab,
   setExternalScenes,
+  setMusicProjects,
   setScenes,
   ALL_TABS,
   Tab,
@@ -85,12 +99,14 @@ import {
 } from '../world';
 
 import {isPointerClick} from './blurAfterPointerClick';
+import SceneMusicBar from './components/SceneMusicBar';
 import TabShell from './components/TabShell';
 import GenerateImagePane from './GenerateImagePane';
 import GenerateSpriteLab from './GenerateSpriteLab';
 import Playspace, {PlayspaceMode} from './Playspace';
 import SceneSelector from './SceneSelector';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
+import useSceneMusic from './useSceneMusic';
 import WorldTab from './WorldTab';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
@@ -124,11 +140,18 @@ function getWorldTabEnabledParam() {
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
 const DEFAULT_SCENE_ID = 'scene-1';
 
+// How long workspace injection may wait on a fetched dropdown list.
+const LIST_FETCH_TIMEOUT_MS = 5000;
+
+// Saved sources are migrated in place as they are read (see migrateSources);
+// the next save persists the result.
 function getScenes(sources: Sources): Scene[] {
   if (sources.scenes?.length) {
+    migrateScenes(sources.scenes);
     return sources.scenes;
   }
   // Create a default scene from the project's source for projects that don't have scenes already.
+  migrateBlockTypes(sources.source);
   return [
     {
       id: DEFAULT_SCENE_ID,
@@ -373,10 +396,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const activeScene = scenes.find(s => s.id === activeSceneId) ?? scenes[0];
   const activeWorld = worldFor(activeScene);
   const activeSceneSize = sceneGridSize(activeWorld);
-  // Images in the project, for guide steps waiting on one being made.
-  const imageCount = useAppSelector(
-    state => state.animationList.orderedKeys.length
-  );
+  // The project's images, for guide steps waiting on some being made.
+  const animationList = useAppSelector(state => state.animationList);
 
   // Keep activeSceneId pointing at a real scene: locked to the pin once the
   // ensure effect lands it, otherwise reset to the first scene when the
@@ -401,11 +422,21 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // the project), otherwise the first scene.
   const defaultPlaySceneId = pinnedSceneId ?? scenes[0]?.id ?? null;
 
-  const guideInstructions = useGuideSteps({
+  // From load-time sources, not the store: the redux list seeds a tick
+  // after mount, so its first value would snapshot as empty.
+  const baselineImages = useMemo(
+    () =>
+      countImagesByType(
+        initialSources.animations ?? {orderedKeys: [], propsByKey: {}}
+      ),
+    [initialSources]
+  );
+  const guide = useGuideSteps({
     steps: levelProperties.guideSteps,
     grid: activeWorld.grid,
     activeTab,
-    images: imageCount,
+    animations: animationList,
+    baselineImages,
     fallback: levelProperties.longInstructions,
   });
 
@@ -449,54 +480,87 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [dispatch]
   );
 
+  // Set when the seeding effect fetched the songs itself (saved blocks
+  // needed them before the workspace), so they are not fetched twice.
+  const musicSeededRef = useRef(false);
+
   // Seed the animation list BEFORE the workspace injects: dropdown fields
   // validate saved values against the store at block-load time — hence the
   // animationsSeeded gate on useBlocklyWorkspace, not just dispatch ordering.
+  // Once per level: React Fast Refresh re-runs this effect, and re-seeding
+  // from the load-time list would revert every image made since.
+  const seededLevelRef = useRef<number | null>(null);
   useEffect(() => {
+    if (seededLevelRef.current === levelProperties.id) {
+      return;
+    }
+    seededLevelRef.current = levelProperties.id;
     let cancelled = false;
     seedAnimationList(initialSources.animations);
-    // Workspace injection only waits on the section-scenes fetch when saved
-    // blocks reference external scenes; the gated path times out into
-    // placeholder options so a hung API can't blank the lab.
+    // Workspace injection only waits on a fetched list (section scenes, the
+    // user's songs) when saved blocks hold values from it; the gated path
+    // times out into placeholder options so a hung API can't blank the lab.
     const savedExternalKeys = collectSavedExternalKeys(
       getScenes(initialSources)
     );
-    if (savedExternalKeys.length === 0) {
+    const savedSongs = collectSavedSongs(getScenes(initialSources));
+    const withTimeout = <T,>(fetching: Promise<T>): Promise<T> =>
+      Promise.race([
+        fetching,
+        new Promise<never>((_, reject) =>
+          setTimeout(() => reject(new Error('timeout')), LIST_FETCH_TIMEOUT_MS)
+        ),
+      ]);
+    const externalOptions = async (
+      timed: boolean
+    ): Promise<ExternalSceneOption[]> => {
+      try {
+        const fetching = fetchSectionScenes(levelProperties.id, scriptId);
+        const refs = await (timed ? withTimeout(fetching) : fetching);
+        return toExternalSceneOptions(refs);
+      } catch (e) {
+        console.warn('section scenes unavailable', e);
+        return [];
+      }
+    };
+    const musicOptions = async (): Promise<MusicProjectOption[]> => {
+      try {
+        return await withTimeout(fetchMusicProjects());
+      } catch (e) {
+        console.warn('music projects unavailable', e);
+        return [];
+      }
+    };
+    if (savedExternalKeys.length === 0 && savedSongs.length === 0) {
       setAnimationsSeeded(true);
-      fetchSectionScenes(levelProperties.id, scriptId)
-        .then(refs => {
-          if (!cancelled) {
-            dispatch(setExternalScenes(toExternalSceneOptions(refs)));
-          }
-        })
-        .catch(e => console.warn('section scenes unavailable', e));
-    } else {
-      const seedExternalScenes = async () => {
-        let options: ExternalSceneOption[] = [];
-        try {
-          const timeout = new Promise<never>((_, reject) =>
-            setTimeout(() => reject(new Error('timeout')), 5000)
-          );
-          const refs = await Promise.race([
-            fetchSectionScenes(levelProperties.id, scriptId),
-            timeout,
-          ]);
-          options = toExternalSceneOptions(refs);
-        } catch (e) {
-          console.warn('section scenes unavailable', e);
-        }
-        const known = new Set(options.map(o => o.key));
-        savedExternalKeys.forEach(key => {
-          if (!known.has(key)) {
-            options.push({key, label: `(unavailable) #${key.slice(0, 10)}`});
-          }
-        });
+      // Nothing waits on this list, so a slow response is simply used
+      // whenever it lands instead of being discarded at the timeout.
+      externalOptions(false).then(options => {
         if (!cancelled) {
           dispatch(setExternalScenes(options));
+        }
+      });
+    } else {
+      musicSeededRef.current = true;
+      Promise.all([externalOptions(true), musicOptions()]).then(
+        ([external, music]) => {
+          if (cancelled) {
+            return;
+          }
+          const known = new Set(external.map(o => o.key));
+          savedExternalKeys.forEach(key => {
+            if (!known.has(key)) {
+              external.push({
+                key,
+                label: `(unavailable) #${key.slice(0, 10)}`,
+              });
+            }
+          });
+          dispatch(setExternalScenes(external));
+          dispatch(setMusicProjects(withUnavailableSongs(music, savedSongs)));
           setAnimationsSeeded(true);
         }
-      };
-      seedExternalScenes();
+      );
     }
     return () => {
       cancelled = true;
@@ -614,7 +678,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [levelProperties, initialSources]);
 
   // Persist Images-tab changes back to sources in the serialized shape.
-  const animationListState = useAppSelector(state => state.animationList);
   useEffect(() => {
     // Serialize from the LIVE store, not this commit's snapshot: this effect
     // runs after compileExternalScene's synchronous merge-and-restore, and a
@@ -624,7 +687,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         getStore().getState().animationList
       ),
     });
-  }, [animationListState, patchSources]);
+  }, [animationList, patchSources]);
 
   const {
     getCode,
@@ -632,6 +695,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     getToolboxDefinition,
     loadCode,
     subscribeToChanges,
+    refreshToolbox,
   } = useBlocklyWorkspace({
     enabled: animationsSeeded,
     toolboxDefinition: levelProperties.toolboxDefinition,
@@ -856,6 +920,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           levelProperties.id,
           scriptId
         );
+        migrateScenes(project.scenes);
         externalProjectsRef.current.set(parsed.channel, project);
       } catch (e) {
         project = externalProjectsRef.current.get(parsed.channel);
@@ -898,12 +963,54 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     isPlayingRef.current = activeTab === 'Play';
   }, [activeTab]);
 
-  // The Code and Images tabs stay mounted behind a clip-path, which hides
-  // them visually but leaves their contents (the whole Blockly workspace)
-  // in the tab order and the accessibility tree. Inert while hidden.
-  // Set via refs: React 18's JSX has no inert attribute.
+  // The play-music block's songs, fetched once per level. The flyout
+  // usually renders first: it is redrawn with them, and a block placed
+  // meanwhile, holding no song, is given the newest.
+  const musicProjects = useAppSelector(state => state.spriteLab2.musicProjects);
+  useEffect(() => {
+    if (musicSeededRef.current) {
+      return;
+    }
+    let cancelled = false;
+    fetchMusicProjects()
+      .then(projects => {
+        if (cancelled) {
+          return;
+        }
+        dispatch(setMusicProjects(projects));
+        refreshToolbox();
+        const newest = projects.find(p => !p.unavailable);
+        const workspace = Blockly.getMainWorkspace();
+        if (newest && workspace) {
+          workspace
+            .getBlocksByType(PLAY_MUSIC_BLOCK_TYPE, false)
+            .forEach(block => {
+              if (!block.getFieldValue('SONG')) {
+                block.setFieldValue(newest.channel, 'SONG');
+              }
+            });
+        }
+      })
+      .catch(e => console.warn('music projects unavailable', e));
+    return () => {
+      cancelled = true;
+    };
+  }, [levelProperties.id, dispatch, refreshToolbox]);
+
+  const {nowPlaying, playMusic} = useSceneMusic(
+    activeTab === 'Play',
+    musicProjects
+  );
+
+  // Hidden tabs stay mounted behind a clip-path, which hides them visually
+  // but leaves their contents (workspace, palette, grid) in the tab order
+  // and the accessibility tree. Inert while hidden.
+  // Set via refs: React 18's JSX has no inert attribute. The mount flags
+  // are deps because a wrapper can first render while its tab is hidden
+  // (the Images idle pre-mount), after the last activeTab change.
   const codeWrapperRef = useRef<HTMLDivElement>(null);
   const imagesWrapperRef = useRef<HTMLDivElement>(null);
+  const worldWrapperRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (codeWrapperRef.current) {
       codeWrapperRef.current.inert = activeTab !== 'Code';
@@ -911,7 +1018,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     if (imagesWrapperRef.current) {
       imagesWrapperRef.current.inert = activeTab !== 'Images';
     }
-  }, [activeTab]);
+    if (worldWrapperRef.current) {
+      worldWrapperRef.current.inert = activeTab !== 'World';
+    }
+  }, [activeTab, imagesMounted, worldMounted]);
 
   // The scene Play (re)starts from: null means the beginning (the first
   // scene). Clicking a preview sets it to the previewed scene; entering Play
@@ -1015,8 +1125,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       setJumpCover(false);
     };
     engine.onSceneJumpCancel = () => setJumpCover(false);
+    engine.onPlayMusic = playMusic;
   }, [
     engineReady,
+    playMusic,
     scenes,
     runScene,
     runExternalScene,
@@ -1122,6 +1234,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return null;
     },
     [dispatch, updateSources, scheduleRun]
+  );
+
+  const handleDeleteImage = useCallback(
+    (name: string) => {
+      updateSources(prev => removeImageReferences(prev, name));
+      removeImageReferencesOnWorkspace(Blockly.getMainWorkspace(), name);
+      refreshAnimationDropdownThumbnails();
+      scheduleRun();
+    },
+    [updateSources, scheduleRun]
   );
 
   // A user edit: the workspace already displays this content; persist it
@@ -1307,6 +1429,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         enabledTabs={tabs}
         visibleTabs={tabs}
         onClickStartOver={isEditable ? () => setShowStartOver(true) : undefined}
+        startOverExtra={
+          activeTab === 'Play' && nowPlaying ? (
+            <SceneMusicBar
+              title={nowPlaying.title}
+              loading={nowPlaying.loading}
+            />
+          ) : undefined
+        }
         sceneTabsExtra={
           animationsSeeded ? (
             <SceneSelector
@@ -1377,6 +1507,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               <GenerateImagePane
                 uploadImage={uploadImage}
                 onRenameImage={handleRenameImage}
+                onDeleteImage={handleDeleteImage}
                 lockedImageType={levelProperties.lockedImageType}
               />
             </div>
@@ -1385,6 +1516,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
         {worldTabEnabled && worldMounted && (
           <div
+            ref={worldWrapperRef}
             className={moduleStyles.codeTabWrapper}
             style={{
               clipPath: activeTab === 'World' ? 'none' : 'inset(100%)',
@@ -1422,7 +1554,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             activeTab === 'Code') && (
             <GenerateSpriteLab
               guideMode={levelProperties.guideMode}
-              instructions={guideInstructions}
+              instructions={guide.text}
+              showContinue={guide.showContinue}
+              levelProperties={levelProperties}
               onCodeGenerated={handleCodeGenerated}
             />
           )}

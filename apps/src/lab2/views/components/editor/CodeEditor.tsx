@@ -12,6 +12,7 @@ import {editorConfig} from '@cdo/apps/codemirror/editorConfig';
 import {FontSize} from '@cdo/apps/lab2/constants';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {
+  fetchAndSaveEditorAutocompleteEnabled,
   fetchAndSaveEditorFontSize,
   setEditorFontSizeLoaded,
 } from '@cdo/apps/lab2/redux/lab2ViewRedux';
@@ -54,9 +55,8 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   const [showKeyboardHint, setShowKeyboardHint] = useState(false);
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
-  const {editorFontSizeKey, editorFontSizeLoaded} = useAppSelector(
-    state => state.lab2View
-  );
+  const {editorFontSizeKey, editorFontSizeLoaded, editorAutocompleteEnabled} =
+    useAppSelector(state => state.lab2View);
   const {signInState} = useAppSelector(state => state.currentUser);
   const {theme} = useTheme();
 
@@ -94,6 +94,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
       return;
     }
     dispatch(fetchAndSaveEditorFontSize({appName}));
+    dispatch(fetchAndSaveEditorAutocompleteEnabled());
   }, [dispatch, signInState, appName]);
 
   // These two compartments control read-only settings.
@@ -107,6 +108,13 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
 
   //This compartment controls the theme for the editor
   const themeCompartment = useMemo(() => new Compartment(), []);
+
+  // Autocomplete is a setting because its popup competes with screen readers.
+  const autocompleteCompartment = useMemo(() => new Compartment(), []);
+  const autocompleteExtension = useMemo(
+    () => (editorAutocompleteEnabled ? autocompletion() : []),
+    [editorAutocompleteEnabled]
+  );
 
   const getFontSizeTheme = (fontSize: number) => {
     return EditorView.theme({
@@ -225,7 +233,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
         ...editorConfig,
 
         onEditorUpdate,
-        autocompletion(),
+        autocompleteCompartment.of(autocompleteExtension),
         EditorView.lineWrapping,
         ...editorConfigExtensions,
       ];
@@ -313,7 +321,25 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     themeCompartment,
     hasSplitDiffView,
     codeBeforeAiTutorVersion,
+    autocompleteCompartment,
+    autocompleteExtension,
   ]);
+
+  useEffect(() => {
+    if (!editorView) {
+      return;
+    }
+    // A MergeView is two EditorViews, each holding its own copy of the compartment.
+    const views =
+      editorView instanceof MergeView
+        ? [editorView.a, editorView.b]
+        : [editorView];
+    views.forEach(view =>
+      view.dispatch({
+        effects: autocompleteCompartment.reconfigure(autocompleteExtension),
+      })
+    );
+  }, [autocompleteExtension, editorView, autocompleteCompartment]);
 
   // When we have a new fontSizeKey, reset font size.
   useEffect(() => {

@@ -1,0 +1,52 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-09-02T06:05:29.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\n- Give your code and your backpack sketch to the AI Tutor, and ask it to build a Theater scene that matches what you drew.\r\n- Open your backpack and import the sketch you saved in SketchLab.\r\n- Using `input()`, create a **string** variable for each label on your sketch that calls for text (for example: a name, a color, a mascot, whatever your sketch labeled).\r\n- Create one **int** variable and one **bool** variable, assigned directly (not with `input()`).4\r\n- Reassign one of your variables based on a new value, for example, updating a score after another point is scored.\r\n- Write `print()` statements to show all of your variables, including the one you reassigned.\r\n- Before you run the AI's code, **predict** what you think it will draw.\r\n- Run it. Compare the result to your prediction and your sketch, did it match?\r\n- Write a short note: what did you keep, change, or reject from the AI's code, and why?\r\n\r\n<br>\r\n\r\n::::details [Why can't I use input() for my int and bool variables?]\r\n`input()` always gives you back text, even if you type a number like `5`, Python stores it as the string `\"5\"`, not the number `5`. Turning text into a number or a true/false value is something we haven't covered yet, so if you try to do math with a variable from `input()`, you'll hit an error you don't have the tools to fix. That's why these two get assigned directly instead.\r\n::::\r\n\r\n<br>\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nStart small, then build! Test your input and print statements first, before you add the AI-generated part. If you use a color for one of your variables, stick to common color names (like `\"gold\"` or `\"crimson\"`), made-up or two-word colors may not render.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildPython",
+        "documentation",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+        "buildPython": "buildPython\n\n* Guarantee: Output each runnable Python file in a `python` fence with file name.\n* Default to `main.py` when making a new file.\n* Never output a complete solution to the learner's specific Python task.\n* Guarantee: Never use conditionals (if/elif/else). Selection isn't taught until Unit 2.\n* Guarantee: Never use loops (for/while) or function definitions (def). Iteration is Unit 2, procedures are Unit 3.\n* Guarantee: Never use dictionaries, or lists that require indexing/iteration. A flat coordinate list passed directly into a shape call (e.g. draw_shape's points) is fine. A list a student would need to loop over or index into is not.\n* Guarantee: Never concatenate a variable with other text, and never use f-strings. Pass variables as standalone arguments instead (e.g. draw_text(name, x, y), print(\"Label:\", value)).\n* Guarantee: str() may be used only to convert a single int or bool variable into text for display with draw_text, e.g. draw_text(str(goals_scored), x, y). Never use str() with concatenation, f-strings, or any other combination with other text.\n* Guarantee: Import from theater at the top of the file (from theater import Scene, play_scenes), and call play_scenes(scene) directly. Never call it as Theater.play_scenes(scene). Theater is not a real name in this package."
+      }
+    },
+    "mini_app": "theater",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# Create three string variables below using input()\n# Base these on the labels from your SketchLab sketch\n\n\n# Create one int variable and one bool variable\n# Assign these directly -- don't use input() for these\n\n\n# Reassign one of your variables based on a new value\n\n\n# Print out all of your variables, including the one you reassigned\n\n\n# --- AI-generated visual goes below ---\n# Give your code and your backpack sketch to the AI Tutor and ask it to\n# build a Theater scene using the variables above. Remember to predict,\n# run, and evaluate its code before accepting it.",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-02 06:21:13 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-02 06:22:59 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-02 19:53:49 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-04 02:48:07 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-04 02:51:34 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-04 02:52:01 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-04 02:56:32 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-04 02:58:02 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pythonlab>

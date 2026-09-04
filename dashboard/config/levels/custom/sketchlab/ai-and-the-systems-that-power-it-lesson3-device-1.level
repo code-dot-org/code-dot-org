@@ -1,0 +1,1202 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "game_id": 75,
+  "created_at": "2026-09-02T17:58:46.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#Amara Wanjiru — Veterinarian\r\n\r\nAmara runs a mobile practice, driving between farms to treat livestock from early morning until evening. She types each animal's treatment into a tablet, which saves to the tablet's own drive and uploads to the clinic's cloud records when it has a signal.\r\n\r\n### What's Going Wrong?\r\n* The first two farms are fine. By the third, the tablet is sluggish.\r\n* The screen she can read easily in the morning is too dim to read in the afternoon sun.\r\n* Records she enters after lunch don't reach the clinic until the next day.\r\n* By the last farm of the day, the tablet has shut itself down.",
+    "hide_share_and_remix": "false",
+    "require_edit_to_continue": "true",
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "eea2fa1d-88a6-4785-a843-6e1ebdea732e",
+            "type": "group",
+            "position": {
+              "x": 1923.8418266839053,
+              "y": 1791.8140925553664
+            },
+            "width": 882.1716367230324,
+            "height": 1112.1435277237897,
+            "zIndex": -1,
+            "data": {
+            },
+            "measured": {
+              "width": 882,
+              "height": 1112
+            },
+            "dragging": false
+          },
+          {
+            "id": "9756081e-d486-41d5-902e-b745da36d6c8",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/613eb7b6-956b-4f37-9f7f-b6d01479e112.png",
+              "altText": "comms_5G",
+              "locked": true
+            },
+            "position": {
+              "x": 2635.7697545575725,
+              "y": 250.7491209398329
+            },
+            "width": 96.82159047516325,
+            "height": 120,
+            "measured": {
+              "width": 97,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "cce2e085-271d-4a9a-b8a9-d14af5e9463f",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/bd8aa061-c6aa-458b-91af-4640148a367c.png",
+              "altText": "hardware_battery",
+              "locked": true
+            },
+            "position": {
+              "x": 2106.0228853970784,
+              "y": 513.4336107920794
+            },
+            "width": 98.25746341890954,
+            "height": 122.87174588749258,
+            "measured": {
+              "width": 98,
+              "height": 123
+            },
+            "dragging": false,
+            "zIndex": 3
+          },
+          {
+            "id": "fd108d71-fbdc-44da-9a90-57f6b2d5b0b1",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/435081e6-5b01-44c0-83a2-5e392180cf58.png",
+              "altText": "hardware_desktop",
+              "locked": true
+            },
+            "position": {
+              "x": 2834.1883414282015,
+              "y": 459.8959059607869
+            },
+            "width": 98.25746341890954,
+            "height": 120,
+            "measured": {
+              "width": 98,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "a22e86f9-222b-410b-b5c2-aa991f1583b3",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/c61b821c-15dd-452e-9a0c-a7f1fbb4a6d4.png",
+              "altText": "hardware_power-outlet",
+              "locked": true
+            },
+            "position": {
+              "x": 2451.7050965474828,
+              "y": 517.0222313704234
+            },
+            "width": 97.8556207730735,
+            "height": 120,
+            "measured": {
+              "width": 98,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "2bd35ca0-203d-40c4-a33c-1523b13f8bbe",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/112c4791-4117-43f3-baf7-38e79fbfe524.png",
+              "altText": "input_touch"
+            },
+            "position": {
+              "x": 1958.487305425408,
+              "y": 734.0055237802756
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "82183550-ca7f-4adb-8b0e-fcb461804b16",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/a467e4ec-cd00-4713-b802-92a6e3396fb6.png",
+              "altText": "processing_CPU",
+              "locked": true
+            },
+            "position": {
+              "x": 2103.9021759498214,
+              "y": 345.5910086867675
+            },
+            "width": 100.80256169586346,
+            "height": 120,
+            "measured": {
+              "width": 101,
+              "height": 120
+            },
+            "dragging": false,
+            "zIndex": 5
+          },
+          {
+            "id": "cc74b2f9-725a-4b1c-bacc-056fa32ed056",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/862d604b-7bd4-47d2-b1a5-72f9fb445087.png",
+              "altText": "storage_RAM",
+              "locked": true
+            },
+            "position": {
+              "x": 1988.8432498257218,
+              "y": 347.02366919717804
+            },
+            "width": 97.8556207730735,
+            "height": 120,
+            "measured": {
+              "width": 98,
+              "height": 120
+            },
+            "dragging": false,
+            "zIndex": 6
+          },
+          {
+            "id": "568756d3-378c-4c28-9cb2-ae546a789a56",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#e7f2e3",
+              "strokeColor": "#9dc88d",
+              "locked": true
+            },
+            "position": {
+              "x": 10,
+              "y": 10
+            },
+            "width": 430.7910011923752,
+            "height": 1091.7947709934203,
+            "measured": {
+              "width": 431,
+              "height": 1092
+            },
+            "dragging": false,
+            "zIndex": 1,
+            "parentId": "eea2fa1d-88a6-4785-a843-6e1ebdea732e",
+            "expandParent": true
+          },
+          {
+            "id": "ad8eed9e-3a02-4a3f-b2c6-3970909a7fe3",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#dfe9fb",
+              "strokeColor": "#6f9dec"
+            },
+            "position": {
+              "x": 1964.7796870446812,
+              "y": 238.41987427839524
+            },
+            "width": 388.63426433590087,
+            "height": 474.63339296922493,
+            "measured": {
+              "width": 389,
+              "height": 475
+            },
+            "dragging": false,
+            "zIndex": -5
+          },
+          {
+            "id": "5b090fff-86c5-44b0-ae3d-553473b334a6",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Amara types each animal's treatment into the tablet at every farm she visits",
+              "backgroundColor": "#f9dcbe",
+              "strokeColor": "#f7b56e",
+              "fontFamily": "draw"
+            },
+            "position": {
+              "x": 2116.006598513682,
+              "y": 745.7353299693519
+            },
+            "width": 253.37716649265815,
+            "height": 84.76808346426208,
+            "measured": {
+              "width": 253,
+              "height": 85
+            },
+            "dragging": false
+          },
+          {
+            "id": "7a53196b-12dd-4c85-a949-fae0d25b272d",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#fff9e5",
+              "strokeColor": "#ffd966",
+              "locked": true
+            },
+            "position": {
+              "x": 1910.0909839507196,
+              "y": -4.5058225057759955
+            },
+            "width": 1289.646560358366,
+            "height": 925.1838917017166,
+            "measured": {
+              "width": 1290,
+              "height": 925
+            },
+            "dragging": false,
+            "zIndex": -6
+          },
+          {
+            "id": "02330def-dc44-4846-a089-efccc5c3ac99",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#f9e2e2",
+              "strokeColor": "#e27878",
+              "locked": true
+            },
+            "position": {
+              "x": 441.79604976907876,
+              "y": 10.00482552486119
+            },
+            "width": 430.37558695395364,
+            "height": 1092.1387021989287,
+            "measured": {
+              "width": 430,
+              "height": 1092
+            },
+            "dragging": false,
+            "parentId": "eea2fa1d-88a6-4785-a843-6e1ebdea732e",
+            "expandParent": true
+          },
+          {
+            "id": "87b59a8f-b913-4f4a-9294-874ea7ad2541",
+            "type": "text",
+            "data": {
+              "text": "Talk through the scenario with your partner. Examine the possible causes of Amara's issues below and choose which ones are worth troubleshooting and which are not. Drag the cards into the proper category.",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "fontSize": "large",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1984.2986497188463,
+              "y": 1315.9525769443192
+            },
+            "width": 1045.0483482824857,
+            "height": 40,
+            "measured": {
+              "width": 1045,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "c1389887-f2fb-41fd-bacb-0696a3b640f4",
+            "type": "text",
+            "data": {
+              "text": "Possible Causes",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "fontSize": "large",
+              "locked": true
+            },
+            "position": {
+              "x": 74.39517238594453,
+              "y": 24.678230027986274
+            },
+            "width": 249.0483482824858,
+            "height": 41.89464570813789,
+            "measured": {
+              "width": 249,
+              "height": 42
+            },
+            "dragging": false,
+            "zIndex": 2,
+            "parentId": "eea2fa1d-88a6-4785-a843-6e1ebdea732e",
+            "expandParent": true
+          },
+          {
+            "id": "23fbd26d-2b7e-435e-abe0-00d3d258cd06",
+            "type": "text",
+            "data": {
+              "text": "The tablet's battery is worn out and needs replacing",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 1927.8580911531494,
+              "y": 1417.41428180539
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 20
+          },
+          {
+            "id": "dec1fccf-8c70-4587-b4f1-463c85cdc10a",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/d8a05d45-d66f-4265-9d20-d1407ad774d2.png",
+              "altText": "output_tablet",
+              "locked": true
+            },
+            "position": {
+              "x": 2103.4358369840847,
+              "y": 176.17798755718104
+            },
+            "width": 99.69333636265583,
+            "height": 120,
+            "measured": {
+              "width": 100,
+              "height": 120
+            },
+            "dragging": false,
+            "zIndex": 9
+          },
+          {
+            "id": "e8e22ea8-ab1d-4d50-b81f-c2828e77c26d",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Records save to the tablet's SSD drive. \nRAM holds the records that she has open on the tablet",
+              "backgroundColor": "#f9dcbe",
+              "strokeColor": "#f7b56e",
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": 1971.8820068860068,
+              "y": 61.240601255914655
+            },
+            "width": 372.1328784622184,
+            "height": 76.52115902193145,
+            "measured": {
+              "width": 372,
+              "height": 77
+            },
+            "dragging": false
+          },
+          {
+            "id": "fe1b579b-5789-4c40-8c71-8491785ac705",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "#fff2cc",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "locked": true
+            },
+            "position": {
+              "x": 2071.021541976468,
+              "y": 157.83120165802075
+            },
+            "width": 168.24692444233096,
+            "height": 161.2346222116529,
+            "measured": {
+              "width": 168,
+              "height": 161
+            },
+            "dragging": false,
+            "zIndex": 8
+          },
+          {
+            "id": "a42b5600-bd47-4a02-8295-663b81e1a65f",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "When she picks up a cell phone signal, the records upload over the network",
+              "backgroundColor": "#f9dcbe",
+              "strokeColor": "#f7b56e",
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": 2573.279384845015,
+              "y": 117.31968746376256
+            },
+            "width": 372.1328784622184,
+            "height": 76.52115902193145,
+            "measured": {
+              "width": 372,
+              "height": 77
+            },
+            "dragging": false
+          },
+          {
+            "id": "e8953d27-8048-47e6-9717-5b0d2792c6ab",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "The clinic's records are stored in cloud storage and are accessible from the clinic's desktop computer",
+              "backgroundColor": "#f9dcbe",
+              "strokeColor": "#f7b56e",
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": 2973.451806411158,
+              "y": 341.63603229515405
+            },
+            "width": 174.20669184628434,
+            "height": 155.69163366830492,
+            "measured": {
+              "width": 174,
+              "height": 156
+            },
+            "dragging": false
+          },
+          {
+            "id": "01a28c31-2c9a-4e2e-a63c-2bf3e898438b",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Charges at the clinic overnight",
+              "backgroundColor": "#f9dcbe",
+              "strokeColor": "#f7b56e",
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": 2417.2159267718566,
+              "y": 424.1052767184597
+            },
+            "width": 159.36222785008943,
+            "height": 79.81992879886366,
+            "measured": {
+              "width": 159,
+              "height": 80
+            },
+            "dragging": false
+          },
+          {
+            "id": "e86273a4-5451-4a3d-addc-aafd303a79ce",
+            "type": "lineAnchor",
+            "position": {
+              "x": 2348.144695473493,
+              "y": 305.08807988485677
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "d00fc775-98a5-428a-a38d-4131e5048ca3",
+            "type": "text",
+            "data": {
+              "text": "SELF",
+              "strokeColor": "transparent",
+              "fontColor": "#ec8e22",
+              "fontSize": 60,
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1917.716048467058,
+              "y": -148.10216108374533
+            },
+            "width": 492.1299277194439,
+            "height": 61.538094156194354,
+            "measured": {
+              "width": 492,
+              "height": 62
+            },
+            "dragging": false
+          },
+          {
+            "id": "3653adb3-cb3c-4f46-b608-8a6fda228319",
+            "type": "text",
+            "data": {
+              "text": "NEIGHBOR",
+              "strokeColor": "transparent",
+              "fontColor": "#ec8e22",
+              "fontSize": 60,
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1980.2189466158916,
+              "y": 1204.470409109124
+            },
+            "width": 492.1299277194439,
+            "height": 61.538094156194354,
+            "measured": {
+              "width": 492,
+              "height": 62
+            },
+            "dragging": false
+          },
+          {
+            "id": "67bcd666-996e-43bf-b9bc-2d1f5f92fd46",
+            "type": "text",
+            "data": {
+              "text": "Eliminated Possibilities",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "fontSize": "large",
+              "locked": true
+            },
+            "position": {
+              "x": 527.4435206684302,
+              "y": 24.678230027986274
+            },
+            "width": 249.0483482824858,
+            "height": 41.89464570813789,
+            "measured": {
+              "width": 249,
+              "height": 42
+            },
+            "dragging": false,
+            "zIndex": 2,
+            "parentId": "eea2fa1d-88a6-4785-a843-6e1ebdea732e",
+            "expandParent": true
+          },
+          {
+            "id": "11b2ef87-4cae-4068-89b9-df531320967e",
+            "type": "text",
+            "data": {
+              "text": "There's no cell signal at some of the farms",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2176.906439435635,
+              "y": 1417.41428180539
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 19
+          },
+          {
+            "id": "e86e1723-5b08-4660-b3f8-e748ab0fc3fc",
+            "type": "text",
+            "data": {
+              "text": "The tablet is running out of RAM",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2425.9547877181208,
+              "y": 1417.41428180539
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 18
+          },
+          {
+            "id": "d294f65e-15fe-4a10-bd80-af2175751bd0",
+            "type": "text",
+            "data": {
+              "text": "The tablet's storage drive is completely full",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2675.0031360006064,
+              "y": 1417.41428180539
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 17
+          },
+          {
+            "id": "9067410f-63ff-4c42-92af-416beca67c4e",
+            "type": "text",
+            "data": {
+              "text": "The cloud records service is down",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2924.051484283092,
+              "y": 1417.41428180539
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 16
+          },
+          {
+            "id": "037ea9a6-da83-442d-8010-f7fbfcd823ab",
+            "type": "text",
+            "data": {
+              "text": "Someone at the clinic is deleting the records",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 1927.484364795969,
+              "y": 1549.365072882679
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 15
+          },
+          {
+            "id": "48560197-8187-4bd6-a8e4-a4e1073b13de",
+            "type": "text",
+            "data": {
+              "text": "The tablet is too old for the number of files she opens",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2176.5327130784544,
+              "y": 1549.365072882679
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 14
+          },
+          {
+            "id": "6fde26d8-f0a3-49d0-9818-37a7f9d09de5",
+            "type": "text",
+            "data": {
+              "text": "The tablet gets too hot in the truck",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2425.58106136094,
+              "y": 1549.365072882679
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 13
+          },
+          {
+            "id": "d8ab76e4-07e2-4c18-840b-82318e5d1f5d",
+            "type": "text",
+            "data": {
+              "text": "The screen is broken",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2674.629409643426,
+              "y": 1549.365072882679
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 12
+          },
+          {
+            "id": "bc29cd24-d29d-4008-9166-a5443850f8a4",
+            "type": "text",
+            "data": {
+              "text": "Restate the problem and make your best guesses about possible solutions",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "fontSize": "large",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1926.605120534894,
+              "y": -60.21185670657661
+            },
+            "width": 1045.0483482824857,
+            "height": 40,
+            "measured": {
+              "width": 1045,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "c3bcee5e-4cd9-4bda-b570-5907923117f3",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson3-device-1/uuid/725de4a1-d9f7-4335-9ad4-71eea0fae793.png",
+              "altText": "",
+              "locked": true
+            },
+            "position": {
+              "x": 1900.5402261880458,
+              "y": 96.46732870812264
+            },
+            "width": 504.06766059786037,
+            "height": 741.443792269263,
+            "measured": {
+              "width": 504,
+              "height": 741
+            },
+            "dragging": false
+          },
+          {
+            "id": "859b3fe5-c7f3-4571-a2ce-495c7b35a436",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson3-device-1/uuid/04c47c60-9406-4b2b-900e-37e5adc85549.png",
+              "altText": "storage_cloud",
+              "locked": true
+            },
+            "position": {
+              "x": 2833.0388926169912,
+              "y": 250.18336458608894
+            },
+            "width": 99.37133733958399,
+            "height": 120,
+            "measured": {
+              "width": 99,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "c6165428-2b1a-4830-93a9-551a2e51515f",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson3-device-1/uuid/0a15c455-c985-466d-bc49-04b2964d3c6e.png",
+              "altText": "storage_physical",
+              "locked": true
+            },
+            "position": {
+              "x": 2219.470648613162,
+              "y": 346.98976747281483
+            },
+            "width": 97.8556207730735,
+            "height": 120,
+            "measured": {
+              "width": 98,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "ce368827-7f95-4903-b7e4-949d0b2ee250",
+            "type": "lineAnchor",
+            "position": {
+              "x": 2345.1346582452165,
+              "y": 611.3581110211892
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "bdef02db-2e12-478f-8c3e-ddc5565ae81a",
+            "type": "text",
+            "data": {
+              "text": "1.",
+              "strokeColor": "transparent",
+              "fontColor": "#90530e",
+              "fontSize": "extra-large",
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 2373.267941787883,
+              "y": 434.3565424018835
+            },
+            "width": 80,
+            "height": 61.538094156194354,
+            "measured": {
+              "width": 80,
+              "height": 62
+            },
+            "dragging": false
+          },
+          {
+            "id": "ea1aa039-05cc-4584-bef4-895f7e4f060a",
+            "type": "text",
+            "data": {
+              "text": "2.",
+              "strokeColor": "transparent",
+              "fontColor": "#90530e",
+              "fontSize": "extra-large",
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1942.6183803187741,
+              "y": 761.5945042735606
+            },
+            "width": 80,
+            "height": 61.538094156194354,
+            "measured": {
+              "width": 80,
+              "height": 62
+            },
+            "dragging": false
+          },
+          {
+            "id": "4b5f9aa4-2712-4e71-ab06-63815aa08efd",
+            "type": "text",
+            "data": {
+              "text": "3.",
+              "strokeColor": "transparent",
+              "fontColor": "#90530e",
+              "fontSize": "extra-large",
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1927.6138107431261,
+              "y": 70.1723590285655
+            },
+            "width": 80,
+            "height": 61.538094156194354,
+            "measured": {
+              "width": 80,
+              "height": 62
+            },
+            "dragging": false
+          },
+          {
+            "id": "670adeee-74c1-46cb-ab89-209b067a0ec0",
+            "type": "text",
+            "data": {
+              "text": "4.",
+              "strokeColor": "transparent",
+              "fontColor": "#90530e",
+              "fontSize": "extra-large",
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 2527.4999275876453,
+              "y": 126.91119919179981
+            },
+            "width": 80,
+            "height": 61.538094156194354,
+            "measured": {
+              "width": 80,
+              "height": 62
+            },
+            "dragging": false
+          },
+          {
+            "id": "5cd3f97b-b347-4823-a8bd-9e533b6ccb88",
+            "type": "text",
+            "data": {
+              "text": "5.",
+              "strokeColor": "transparent",
+              "fontColor": "#90530e",
+              "fontSize": "extra-large",
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 3033.700982767289,
+              "y": 281.2936247522281
+            },
+            "width": 80,
+            "height": 61.538094156194354,
+            "measured": {
+              "width": 80,
+              "height": 62
+            },
+            "dragging": false
+          },
+          {
+            "id": "a4cf2466-994d-415e-8f1c-a33cb5f92cc5",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson3-device-1/uuid/03c81deb-8d67-4e66-804f-489352fd363a.png",
+              "altText": "",
+              "locked": true
+            },
+            "position": {
+              "x": 1616.2482208576396,
+              "y": -127.03538292232332
+            },
+            "width": 260.2826012187397,
+            "height": 217.6435853971939,
+            "measured": {
+              "width": 260,
+              "height": 218
+            },
+            "dragging": false
+          },
+          {
+            "id": "dca68a8f-9f5d-4c0d-9c2d-e89cd45cad53",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson3-device-1/uuid/03c81deb-8d67-4e66-804f-489352fd363a.png",
+              "altText": "",
+              "rotation": 49,
+              "locked": true
+            },
+            "position": {
+              "x": 1750.8380277564747,
+              "y": 967.6960944307414
+            },
+            "width": 260.2826012187397,
+            "height": 217.6435853971939,
+            "measured": {
+              "width": 260,
+              "height": 218
+            },
+            "dragging": false
+          },
+          {
+            "id": "7bd81f8c-9ffe-4f7d-85e6-46351939e3f5",
+            "type": "text",
+            "data": {
+              "text": "Add your own issue!",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2923.6777579259124,
+              "y": 1549.365072882679
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 11
+          },
+          {
+            "id": "24dfe1de-3fc9-4961-ae37-e428a134f3d6",
+            "type": "text",
+            "data": {
+              "text": "Start \nHere",
+              "strokeColor": "transparent",
+              "fontColor": "#ec8e22",
+              "fontSize": "extra-large",
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1608.9394579540703,
+              "y": -214.26400389425055
+            },
+            "width": 140.4275001478111,
+            "height": 51.09148739664088,
+            "measured": {
+              "width": 140,
+              "height": 51
+            },
+            "dragging": false
+          }
+        ],
+        "edges": [
+          {
+            "id": "0d08f595-48f8-4bd8-96e1-9a96db6cfb19",
+            "source": "a22e86f9-222b-410b-b5c2-aa991f1583b3",
+            "target": "cce2e085-271d-4a9a-b8a9-d14af5e9463f",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 3
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "targetHandle": "right-target",
+            "sourceHandle": "left-source",
+            "zIndex": 10,
+            "data": {
+              "locked": true
+            }
+          },
+          {
+            "id": "68e43c7e-ad95-475d-a40b-c89da0c9cbac",
+            "source": "e86273a4-5451-4a3d-addc-aafd303a79ce",
+            "target": "9756081e-d486-41d5-902e-b745da36d6c8",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 3,
+              "strokeDasharray": "8 4"
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "targetHandle": "left-target",
+            "sourceHandle": "line-anchor-source",
+            "data": {
+              "locked": true
+            }
+          },
+          {
+            "id": "942ab591-e4e1-45f3-9413-bef85ae75bb6",
+            "source": "cce2e085-271d-4a9a-b8a9-d14af5e9463f",
+            "target": "ce368827-7f95-4903-b7e4-949d0b2ee250",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 3,
+              "strokeDasharray": "8 4"
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "sourceHandle": "bottom-source"
+          },
+          {
+            "id": "f4669a66-fb51-4414-a18b-8f779e9fafb0",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 3,
+              "strokeDasharray": "8 4"
+            },
+            "source": "9756081e-d486-41d5-902e-b745da36d6c8",
+            "sourceHandle": "right-source",
+            "target": "859b3fe5-c7f3-4571-a2ce-495c7b35a436",
+            "targetHandle": "left-target",
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "data": {
+              "locked": true
+            }
+          },
+          {
+            "id": "20db0e4e-96a9-45e7-9115-44d2156283bc",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 3,
+              "strokeDasharray": "8 4"
+            },
+            "source": "859b3fe5-c7f3-4571-a2ce-495c7b35a436",
+            "sourceHandle": "bottom-source",
+            "target": "fd108d71-fbdc-44da-9a90-57f6b2d5b0b1",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "data": {
+              "locked": true
+            }
+          }
+        ],
+        "viewport": {
+          "x": -1015.144108610607,
+          "y": 180.1840370956677,
+          "zoom": 0.6597539553864491
+        }
+      }
+    },
+    "display_name": "Amara Wanjiru",
+    "bubble_choice_description": "The Records Never Made It Back to the Clinic!"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-02T17:58:46.847+00:00\",\"changed\":[\"cloned from \\\"level 'ai-and-the-systems-that-power-it-hardware-components-to-clone\\\"\"],\"cloned_from\":\"level 'ai-and-the-systems-that-power-it-hardware-components-to-clone\"},{\"changed_at\":\"2026-09-02 20:50:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-02 21:08:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-02 21:09:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-02 21:12:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-02 21:16:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-02 21:18:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-02 21:18:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-02 21:20:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-02 21:21:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-02 21:26:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 15:36:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 15:39:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 15:41:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 16:03:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 16:05:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:51:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:54:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:05:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:16:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:17:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:18:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:50:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

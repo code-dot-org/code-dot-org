@@ -18,8 +18,10 @@ markdown <<MARKDOWN
 ---
 
 <div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
-<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/explore-files-toggle.html" width="100%" height="900" style="border:none;" title="Explore the Files: toggle between HTML, CSS, and a live preview"></iframe>
+<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/explore-files-toggle.html" width="100%" height="1350" style="border:none;" title="Explore the Files: toggle between HTML, CSS, and a live preview"></iframe>
 </div>
+
+---
 
 
 <p>In Web Lab, this file is named <code>style.css</code> by default, sitting right alongside the HTML file it's styling.</p>

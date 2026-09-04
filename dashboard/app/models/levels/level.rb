@@ -141,6 +141,14 @@ class Level < ApplicationRecord
     generate_outline
   )
 
+  # State the AI lesson generator persisted on this level, merged into
+  # ScriptLevel#summarize_for_lesson_edit so the /generate page can
+  # re-populate its form. Subclasses with extra generator state override
+  # and merge (see Aichat).
+  def generate_fields
+    {generateOutline: generate_outline}
+  end
+
   # Fix STI routing http://stackoverflow.com/a/9463495
   def self.model_name
     self < Level ? Level.model_name : super

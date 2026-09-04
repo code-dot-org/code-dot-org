@@ -45,6 +45,13 @@
         "after": {
           "tab": "Code"
         }
+      },
+      {
+        "text": "**You built a platformer!** Run and jump around your world, then continue when you're ready.",
+        "showContinue": true,
+        "after": {
+          "tab": "Play"
+        }
       }
     ],
     "long_instructions": "# Build your platformer\nPlace platform blocks on the grid in the World tab and add a player. Press **Run**, then use the arrow keys to run and jump.",

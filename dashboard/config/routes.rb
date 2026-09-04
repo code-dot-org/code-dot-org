@@ -90,6 +90,7 @@ Dashboard::Application.routes.draw do
       get '/font_size/console', to: 'user_preferences#console_font_size'
       get '/font_size/editor', to: 'user_preferences#editor_font_size'
       get '/theme', to: 'user_preferences#theme'
+      get '/editor_settings', to: 'user_preferences#editor_settings'
     end
 
     resources :survey_results, only: [:create], defaults: {format: 'json'}
@@ -452,6 +453,7 @@ Dashboard::Application.routes.draw do
         get 'embed_level'
         get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
         get 'edit_exemplar', to: 'levels#edit_exemplar', as: 'edit_exemplar'
+        get 'build_quiz_questions'
         get 'get_serialized_maze'
         post 'update_properties'
         post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
@@ -463,6 +465,20 @@ Dashboard::Application.routes.draw do
         patch 'update_bubble_choice_settings'
         post 'add_skill'
         post 'remove_skill'
+      end
+
+      resource :quiz_configuration, only: [:update], controller: 'quizzes'
+      resources :quiz_question_placements, only: [:create, :destroy] do
+        member do
+          post 'attach'
+          delete 'detach'
+        end
+      end
+    end
+
+    resources :quiz_questions, only: [:index, :show, :update] do
+      collection do
+        get 'course_unit_search'
       end
     end
 
@@ -805,6 +821,10 @@ Dashboard::Application.routes.draw do
         get :user_progress, action: 'user_progress_form', as: 'user_progress_form'
         get :user_projects, action: 'user_projects_form', as: 'user_projects_form'
         get :user_sections, action: 'user_sections_form', as: 'user_sections_form'
+        get :cap_actions, action: 'cap_actions_form', as: 'cap_actions_form'
+        post :update_cap_state
+        post :grant_cap_permission
+        post :force_cap_permission
         put :user_project, action: 'user_project_restore_form', as: 'user_project_restore_form'
         get :delete_progress, action: 'delete_progress_form', as: 'delete_progress_form'
         post :delete_progress
@@ -1448,7 +1468,8 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    get '/backpacks/channel/:app_type', to: 'backpacks#get_channel'
+    get '/backpacks/channel(/:app_type)', to: 'backpacks#get_channel'
+    get '/backpacks/channels', to: 'backpacks#get_channels'
 
     resources :project_commits, only: [:create]
     get 'project_commits/get_token', to: 'project_commits#get_token'
@@ -1497,6 +1518,9 @@ Dashboard::Application.routes.draw do
     resources :user_practice_problem_attempts, only: [:index, :update, :create, :show]
     resources :practice_problems, only: [:index, :show]
 
+    resources :quiz_attempts, only: [:index, :create, :update]
+    resources :quiz_question_responses, only: [:create]
+
     resources :challenges, only: [:index, :show] do
       member do
         get :starter_image
@@ -1509,6 +1533,11 @@ Dashboard::Application.routes.draw do
       member do
         post :evaluate
       end
+      # The signed-in viewer's emoji reactions on this response. The emoji
+      # name (e.g. "heart") is the member id, so removing a reaction is a
+      # plain DELETE .../reactions/:emoji with no reaction row id exposed.
+      resources :reactions, only: [:create, :destroy], param: :emoji,
+        controller: 'challenge_response_reactions'
     end
     resources :challenge_response_assets, only: [:show] do
       member do
