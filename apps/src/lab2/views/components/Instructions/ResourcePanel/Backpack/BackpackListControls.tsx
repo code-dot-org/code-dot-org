@@ -11,6 +11,9 @@ import {
 
 import moduleStyles from './backpack-list-controls.module.scss';
 
+const FILE_TYPE_FILTER_NAME = 'backpack-file-type-filter';
+const SORT_ORDER_NAME = 'backpack-sort-order';
+
 const SORT_OPTIONS: IconDropdownOption[] = [
   {
     value: 'name-asc',
@@ -30,9 +33,11 @@ const SORT_OPTIONS: IconDropdownOption[] = [
 ];
 
 // Helper to auto-close dropdown on select by simulating a mousedown elsewhere.
-// Once we migrate to MUI dropdown we shouldn't need this.
-function closeOpenDropdownMenu() {
+// The menu is hidden with the option button still focused, so move focus back
+// to the trigger button. Once we migrate to MUI dropdown we shouldn't need this.
+function closeOpenDropdownMenu(dropdownName: string) {
   document.dispatchEvent(new MouseEvent('mousedown'));
+  document.getElementById(`${dropdownName}-dropdown-button`)?.focus();
 }
 
 interface BackpackListControlsProps {
@@ -79,7 +84,7 @@ const BackpackListControls: React.FC<BackpackListControlsProps> = ({
   return (
     <div className={moduleStyles.listControls}>
       <IconDropdown
-        name="backpack-file-type-filter"
+        name={FILE_TYPE_FILTER_NAME}
         className={moduleStyles.controlDropdown}
         labelText="File type"
         size="xs"
@@ -91,12 +96,12 @@ const BackpackListControls: React.FC<BackpackListControlsProps> = ({
           onCategoryChange(
             option.value as FileCategoryId | typeof ALL_FILES_CATEGORY_ID
           );
-          closeOpenDropdownMenu();
+          closeOpenDropdownMenu(FILE_TYPE_FILTER_NAME);
         }}
         aria-label={`File type: ${selectedCategoryOption.label}`}
       />
       <IconDropdown
-        name="backpack-sort-order"
+        name={SORT_ORDER_NAME}
         className={moduleStyles.controlDropdown}
         labelText="Sort by"
         size="xs"
@@ -107,7 +112,7 @@ const BackpackListControls: React.FC<BackpackListControlsProps> = ({
         selectedOption={selectedSortOption}
         onChange={option => {
           onSortOrderChange(option.value as BackpackSortOrder);
-          closeOpenDropdownMenu();
+          closeOpenDropdownMenu(SORT_ORDER_NAME);
         }}
         aria-label={`Sort by: ${selectedSortOption.label}`}
       />

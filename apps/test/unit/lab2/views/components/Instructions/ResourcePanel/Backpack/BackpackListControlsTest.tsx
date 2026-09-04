@@ -59,4 +59,16 @@ describe('BackpackListControls', () => {
     await user.click(screen.getByText('HTML (1)'));
     expect(dropdown?.className).not.toMatch(/open/);
   });
+
+  it('returns focus to the trigger after a pick', async () => {
+    const user = userEvent.setup();
+    renderControls();
+
+    await user.click(screen.getByRole('button', {name: /^File type:/}));
+    await user.click(screen.getByText('HTML (1)'));
+
+    expect(document.activeElement).toBe(
+      document.getElementById('backpack-file-type-filter-dropdown-button')
+    );
+  });
 });
