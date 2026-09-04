@@ -30,9 +30,8 @@ const PURPOSE_OPTIONS = [
 interface QuizConfigurationFormProps {
   quizId: number;
   initialValues: QuizConfigurationData;
-  // Called with the server's saved values on success, so Quiz.tsx can sync
-  // displayName/customIntroText/timeLimitMinutes into its own state - lets
-  // a Preview right after saving reflect the change without a page reload.
+  // Called with the server's saved values on success, so a caller can sync
+  // its own copy of the configuration without a page reload.
   onSaved: (updated: QuizConfigurationData) => void;
 }
 
@@ -71,8 +70,8 @@ const QuizConfigurationForm: React.FunctionComponent<
     setError(null);
     // Blank means "no time limit" - QuizConfigurationData needs a real
     // positive integer otherwise. Checked here too, not just server-side
-    // (Quiz's own time_limit_minutes validation), so a bad value shows up
-    // immediately instead of after a round trip.
+    // (the Quiz model's time_limit_minutes validation), so a bad value
+    // shows up immediately instead of after a round trip.
     const parsedTimeLimitMinutes =
       timeLimitMinutes === '' ? null : Number(timeLimitMinutes);
     if (
