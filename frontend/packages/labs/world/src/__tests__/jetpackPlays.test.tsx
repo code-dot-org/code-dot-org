@@ -567,10 +567,20 @@ describe('the jetpack level', () => {
 
     expect(under.get(hole)).toBe(true);
 
-    // …and it comes back on the block's own clock, three seconds later.
+    // AND IT LOOKS LIKE ONE, which is the half that was missing at first:
+    // `passes through things` is invisible, so a dug ledge went on looking
+    // like solid floor while the Pilot fell through it and the mechanic read
+    // as a bug rather than a mechanic.
+    play(world, 0.3);
+    expect(under.get(OpacityProperty)).toBeLessThan(0.5);
+
+    // …and it comes back on the block's own clock, three seconds later, and
+    // comes back visible.
     play(world, 3.2);
 
     expect(under.get(hole)).toBe(false);
+    play(world, 0.4);
+    expect(under.get(OpacityProperty)).toBe(1);
   });
 
   it('gives the last four their four different behaviours', () => {

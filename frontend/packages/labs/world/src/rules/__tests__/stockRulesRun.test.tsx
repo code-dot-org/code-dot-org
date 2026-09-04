@@ -4195,3 +4195,127 @@ describe('Digging', () => {
     expect(blocks.some(one => isHole(one))).toBe(false);
   });
 });
+
+describe('Digging’s line-up with what it dug', () => {
+  // A HOLE IS EXACTLY AS WIDE AS THE THING THAT DUG IT — one block is one
+  // body — so getting into one means being lined up with it to the pixel, and
+  // a digger a few across stands on the lip instead of falling. `Climbing`
+  // met the same wall with a ladder in a one-tile gap and answered it the same
+  // way: take the lining-up off the player.
+  //
+  // ON THE BLOCK IT DUG AND NO OTHER, which is the part that took saying. A
+  // pull towards any hole nearby is a floor that grabs at you — walking past
+  // a gap you made earlier is not asking to go down it. Digging is the
+  // asking.
+  const overAHole = (offset: number) => {
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([
+        rule('rules/motion'),
+        rule('rules/collisions'),
+        rule('rules/solid'),
+        rule('rules/gravity'),
+        rule('rules/digging'),
+      ])
+      .instantiate();
+    const block = new ActorBuilder({id: 'b', name: 'Block'})
+      .useTraits([
+        of('rules/digging', 'CanBeDugTrait'),
+        of('rules/gravity', 'ActsAsGroundTrait'),
+        of('rules/solid', 'SolidTrait'),
+      ])
+      .set(PositionProperty, at(200, 200))
+      .set(of('rules/collisions', 'SizeProperty'), new Vector(32, 32))
+      .instantiate('b');
+    world.addActor(block);
+    const digger = new ActorBuilder({id: 'd', name: 'digger'})
+      .useTraits([
+        of('rules/digging', 'DigsTrait'),
+        of('rules/motion', 'CanMoveTrait'),
+      ])
+      .set(PositionProperty, at(200 + offset, 168))
+      .set(of('rules/collisions', 'SizeProperty'), new Vector(32, 32))
+      .instantiate('d');
+    world.addActor(digger);
+    run(world, 1 / 60);
+    return {world, block, digger};
+  };
+
+  const across = (who: unknown) =>
+    (who as {get(p: unknown): Vector}).get(PositionProperty).x;
+
+  it('lines a digger up with the block it is digging', () => {
+    const {world, digger} = overAHole(11);
+    (digger as {act(a: unknown, v: unknown): void}).act(
+      of('rules/digging', 'DigTowardsAction'),
+      new Vector(0, 1),
+    );
+
+    run(world, 0.5);
+
+    expect(across(digger)).toBeCloseTo(200, 0);
+  });
+
+  it('glides rather than snapping, which is what tells it from a ladder', () => {
+    // A climb is a commitment and being put on the ladder's middle reads as
+    // gripping it. A hole is something you fall into while running, and being
+    // moved sideways in one frame reads as the floor grabbing you.
+    const {world, digger} = overAHole(14);
+    (digger as {act(a: unknown, v: unknown): void}).act(
+      of('rules/digging', 'DigTowardsAction'),
+      new Vector(0, 1),
+    );
+
+    run(world, 1 / 60);
+
+    // Started fourteen across and has not arrived in a single frame.
+    expect(across(digger)).toBeGreaterThan(200);
+    expect(across(digger)).toBeLessThan(214);
+  });
+
+  it('leaves a body alone when the block is still solid', () => {
+    // A floor does not pull. Nothing has been asked for here.
+    const {world, digger} = overAHole(12);
+
+    run(world, 0.5);
+
+    expect(across(digger)).toBeCloseTo(212, 0);
+  });
+
+  it('does not pull a body towards a hole it did not make', () => {
+    // THE BEHAVIOUR THIS IS NOT. A hole somebody else made, or one you made
+    // and walked away from, is a gap in the floor and not an invitation — a
+    // pull towards it is the floor grabbing at you.
+    const {world, block, digger} = overAHole(12);
+    (block as {set(p: unknown, v: unknown): void}).set(
+      of('rules/collisions', 'PassesThroughThingsProperty'),
+      true,
+    );
+    (block as {set(p: unknown, v: unknown): void}).set(
+      of('rules/digging', 'IsAHoleProperty'),
+      true,
+    );
+
+    run(world, 0.5);
+
+    expect(across(digger)).toBeCloseTo(212, 0);
+  });
+
+  it('lets go once it has arrived, so a digger can walk away', () => {
+    const {world, digger} = overAHole(11);
+    (digger as {act(a: unknown, v: unknown): void}).act(
+      of('rules/digging', 'DigTowardsAction'),
+      new Vector(0, 1),
+    );
+    run(world, 0.5);
+    expect(across(digger)).toBeCloseTo(200, 0);
+
+    // Walked off it by hand: nothing should tug it back.
+    (digger as {set(p: unknown, v: unknown): void}).set(
+      PositionProperty,
+      new Vector(240, 168),
+    );
+    run(world, 0.5);
+
+    expect(across(digger)).toBeCloseTo(240, 0);
+  });
+});

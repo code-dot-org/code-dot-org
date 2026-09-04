@@ -1,4 +1,4 @@
-import {position} from './builtins.mjs';
+import {position, setPosition} from './builtins.mjs';
 import {CanCollide, passable} from './collisions.mjs';
 import {
   absolute,
@@ -13,6 +13,9 @@ import {
   lessThan,
   minus,
   moduleFor,
+  pick,
+  pixelsPerUnit,
+  frameTime,
   moreThan,
   n,
   no,
@@ -111,6 +114,45 @@ digger.uses(CanCollide);
  * a player would point at.
  */
 const reach = digger.number('dig reach', 48);
+/**
+ * Whether digging lines this actor up with the block it is digging.
+ *
+ * A HOLE IS EXACTLY AS WIDE AS THE THING THAT DUG IT, which is the whole
+ * problem: one block is one body, so getting into one means being lined up
+ * with it to the pixel, and a digger a few across from its own hole stands on
+ * the lip and does not fall in. `Climbing` met the same wall — a ladder in a
+ * gap one tile wide is a thing you have to be lined up with — and answered it
+ * the same way, by taking the lining-up off the player.
+ *
+ * ON THE BLOCK IT IS DIGGING, and no other. Pulling a body towards any hole it
+ * happens to be near is a floor that grabs at you: a player walking past a gap
+ * they made earlier has not asked to go down it. Digging is the asking, so
+ * that is where the line-up belongs — and once it is centred there, falling in
+ * needs no help at all.
+ *
+ * (Being TOLERANT of a hole you walk or jump into off-centre is a different
+ * mechanic and a real one; it belongs to whatever notices the edge, not here.)
+ *
+ * EASED RATHER THAN SNAPPED, unlike the ladder, and the difference is what
+ * each is for. A climb is a commitment: you have taken hold of the ladder, and
+ * being put on its middle reads as gripping it. A dig happens mid-stride, and
+ * being moved sideways in one frame reads as the floor grabbing you.
+ */
+const centers = digger.boolean('centers on what it digs', 'true');
+/** How fast that glide is, in units a second. */
+const centeringSpeed = digger.number('centering speed', 3);
+/** The block it is lining itself up with. */
+const liningUpWith = digger.actor('lining up with', {readonly: true});
+/**
+ * …and whether it has finished doing so.
+ *
+ * The pull ends on arrival rather than lasting: a digger still bound to its
+ * own hole could not walk away from it. A flag rather than forgetting the
+ * block, because "no actor" is not a value an actor property can be given —
+ * and the block is worth keeping anyway, for anything that wants to ask what
+ * this last dug.
+ */
+const linedUp = digger.boolean('lined up', 'true', {readonly: true});
 
 export const Digs = rule.traitRef('Digs');
 
@@ -170,12 +212,82 @@ export const digTowards = digger.block({
           passable.set(found.get(), yes()),
           open.set(found.get(), yes()),
           closesAt.set(found.get(), add(time(), closesAfter.of(found.get()))),
+          note('…and line up with it — see `centers on what it digs`. A hole'),
+          note('is exactly as wide as the body that made it, so being a few'),
+          note('pixels across from your own hole is standing on its lip.'),
+          liningUpWith.set(thisActor(), found.get()),
+          linedUp.set(thisActor(), no()),
           dug({}, found.get()),
         ],
       ],
     ]),
   ],
 });
+
+const across = rule.local('across', 'Number');
+const step = rule.local('step', 'Number');
+
+digger.step('line up with what it dug', 'adjust', [
+  when([
+    [
+      both(
+        centers.of(thisActor()),
+        both(
+          not(linedUp.of(thisActor())),
+          both(
+            moreThan(countOf(liningUpWith.of(thisActor())), n(0)),
+            open.of(liningUpWith.of(thisActor())),
+          ),
+        ),
+      ),
+      [
+        note('How far off centre, and how far this frame may close it —'),
+        note('never past the middle, or a glide becomes a wobble.'),
+        across.set(
+          minus(
+            position.x(liningUpWith.of(thisActor())),
+            position.x(thisActor()),
+          ),
+        ),
+        step.set(
+          times(
+            times(centeringSpeed.of(thisActor()), pixelsPerUnit()),
+            frameTime(),
+          ),
+        ),
+        when(
+          [
+            [
+              lessThan(absolute(across.get()), n(0.5)),
+              [
+                note('Arrived, and let go: a digger still pulled towards its'),
+                note('own hole could not walk away from it.'),
+                linedUp.set(thisActor(), yes()),
+              ],
+            ],
+          ],
+          [
+            setPosition(
+              thisActor(),
+              add(
+                position.x(thisActor()),
+                pick(
+                  lessThan(absolute(across.get()), step.get()),
+                  across.get(),
+                  times(
+                    step.get(),
+                    pick(moreThan(across.get(), n(0)), n(1), n(-1)),
+                  ),
+                ),
+              ),
+              position.y(thisActor()),
+            ),
+          ],
+        ),
+      ],
+    ],
+  ]),
+]);
 
 rule.step('fill the holes back in', 'sense', [
   note('The block owns its own clock, so this asks every hole rather than'),

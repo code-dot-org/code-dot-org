@@ -912,55 +912,113 @@ const diggableLedgeActor = (name: string, sprite: string) =>
             ]),
           },
         },
+        // A HOLE HAS TO LOOK LIKE ONE, which is the half this was missing:
+        // `passes through things` is invisible, so a dug ledge went on looking
+        // like solid floor while the Pilot fell through it, and the mechanic
+        // read as a bug. Faded rather than switched, because the moment a
+        // block gives way is the moment worth seeing — and the two events the
+        // rule already raises are exactly the two ends of it.
+        {
+          type: 'world_define_tween',
+          id: 'ledgeGiveWay',
+          x: 320,
+          y: 20,
+          fields: {NAME: 'give way', CURVE: 'linear'},
+          inputs: {
+            SECONDS: number(0.25),
+            DO: {
+              block: {
+                type: 'world_set_Appearance_OpacityProperty',
+                inputs: {ACTOR: me(), VALUE: number(0.25)},
+              },
+            },
+          },
+        },
+        {
+          type: 'world_define_tween',
+          id: 'ledgeComeBack',
+          x: 320,
+          y: 200,
+          fields: {NAME: 'come back', CURVE: 'linear'},
+          inputs: {
+            SECONDS: number(0.25),
+            DO: {
+              block: {
+                type: 'world_set_Appearance_OpacityProperty',
+                inputs: {ACTOR: me(), VALUE: number(1)},
+              },
+            },
+          },
+        },
+        {
+          type: 'world_on_Digging_IsDugEvent',
+          x: 320,
+          y: 380,
+          inputs: {ACTOR: me()},
+          next: {
+            block: {
+              type: 'world_play_tween',
+              fields: {TWEEN: 'ledgeGiveWay'},
+              inputs: {ACTOR: me()},
+            },
+          },
+        },
         {
           type: 'world_on_Digging_FillsInEvent',
           x: 20,
           y: 220,
           inputs: {ACTOR: me()},
           next: {
-            block: onlyIf(
-              // COUNTED rather than asked of one actor. `⟨x⟩ is a ⟨Pilot⟩`
-              // reads the kind off the actor it is given, and the first
-              // actor of an empty list is no actor at all — which is a
-              // question with nothing to ask it of, and it throws. Counting
-              // how many Pilots are in the hole is the same question with an
-              // answer for none of them.
+            block: stack([
               {
-                block: {
-                  type: 'logic_compare',
-                  fields: {OP: 'GT'},
-                  inputs: {
-                    A: {
-                      block: {
-                        type: 'world_count_of_kind',
-                        fields: {TYPE: 'actors/pilot'},
-                        inputs: {
-                          LIST: {
-                            block: {
-                              type: 'world_get_Collisions_ContactsProperty',
-                              inputs: {ACTOR: me()},
+                type: 'world_play_tween',
+                fields: {TWEEN: 'ledgeComeBack'},
+                inputs: {ACTOR: me()},
+              },
+              onlyIf(
+                // COUNTED rather than asked of one actor. `⟨x⟩ is a ⟨Pilot⟩`
+                // reads the kind off the actor it is given, and the first
+                // actor of an empty list is no actor at all — which is a
+                // question with nothing to ask it of, and it throws. Counting
+                // how many Pilots are in the hole is the same question with an
+                // answer for none of them.
+                {
+                  block: {
+                    type: 'logic_compare',
+                    fields: {OP: 'GT'},
+                    inputs: {
+                      A: {
+                        block: {
+                          type: 'world_count_of_kind',
+                          fields: {TYPE: 'actors/pilot'},
+                          inputs: {
+                            LIST: {
+                              block: {
+                                type: 'world_get_Collisions_ContactsProperty',
+                                inputs: {ACTOR: me()},
+                              },
                             },
                           },
                         },
                       },
-                    },
-                    B: number(0),
-                  },
-                },
-              },
-              {
-                type: 'world_do_Health_TakeDamageAction',
-                inputs: {
-                  ACTOR: {
-                    block: {
-                      type: 'world_first_actor',
-                      inputs: {SOURCE: kind('actors/pilot')},
+                      B: number(0),
                     },
                   },
-                  VALUE: number(1),
                 },
-              },
-            ),
+                {
+                  type: 'world_do_Health_TakeDamageAction',
+                  inputs: {
+                    ACTOR: {
+                      block: {
+                        type: 'world_first_actor',
+                        inputs: {SOURCE: kind('actors/pilot')},
+                      },
+                    },
+                    VALUE: number(1),
+                  },
+                },
+              ),
+            ]),
           },
         },
       ],
