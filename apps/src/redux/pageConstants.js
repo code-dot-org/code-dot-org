@@ -87,7 +87,6 @@ var ALLOWED_KEYS = new Set([
   'aiModelId',
   'aiModelName',
   'isCurriculumLevel',
-  'recaptchaSiteKey',
 ]);
 
 const initialState = {

@@ -17,7 +17,6 @@ import styleConstants from '../styleConstants';
 import {CsaViewMode} from './constants';
 import ControlButtons from './ControlButtons';
 import {DisplayTheme} from './DisplayTheme';
-import JavalabCaptchaDialog from './JavalabCaptchaDialog';
 import JavalabConsole from './JavalabConsole';
 import JavalabEditor from './JavalabEditor';
 import JavalabPanels from './JavalabPanels';
@@ -144,26 +143,6 @@ class JavalabView extends React.Component {
     );
   };
 
-  onCaptchaVerify = () => {
-    const {isRunning, isTesting, onRun, onTest} = this.props;
-    if (isRunning) {
-      onRun();
-    }
-    if (isTesting) {
-      onTest();
-    }
-  };
-
-  onCaptchaCancel = () => {
-    const {isRunning, isTesting, setIsRunning, setIsTesting} = this.props;
-    if (isRunning) {
-      setIsRunning(false);
-    }
-    if (isTesting) {
-      setIsTesting(false);
-    }
-  };
-
   render() {
     const {
       displayTheme,
@@ -218,10 +197,6 @@ class JavalabView extends React.Component {
             ...styles.javalab,
           }}
         >
-          <JavalabCaptchaDialog
-            onVerify={this.onCaptchaVerify}
-            onCancel={this.onCaptchaCancel}
-          />
           <JavalabPanels
             isLeftSideVisible={this.isLeftSideVisible()}
             viewMode={viewMode}
