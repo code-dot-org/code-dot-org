@@ -39,7 +39,6 @@ headers = rows.first.keys
 output_csv_file_path = csv_file_path.sub(/\.csv\z/, '-user-ids.csv')
 CSV.open(output_csv_file_path, 'w', headers: headers, write_headers: true) do |csv|
   rows.each do |row|
-    puts row.inspect
     csv << row if row[:student_id]
   end
 end
