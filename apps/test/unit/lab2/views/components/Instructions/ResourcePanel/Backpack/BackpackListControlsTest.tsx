@@ -28,7 +28,7 @@ describe('BackpackListControls', () => {
     expect(option('Images (1)')).toBeDefined();
     expect(option('HTML (1)')).toBeDefined();
     expect(option('CSS (1)')).toBeDefined();
-    expect(option('Javascript (1)')).toBeDefined();
+    expect(option('JavaScript (1)')).toBeDefined();
     expect(screen.queryByRole('button', {name: /^Python/})).toBeNull();
   });
 
