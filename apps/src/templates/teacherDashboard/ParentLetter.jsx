@@ -198,7 +198,6 @@ const ParentLetterSteps = ({
             secretPictureUrl={secretPictureUrl}
             secretWords={secretWords}
             sectionCode={sectionCode}
-            studentName={studentName}
           />
           <Markdown
             content={i18n.parentLetterStep2Details_LMS({
@@ -225,7 +224,6 @@ const ParentLetterSteps = ({
             secretPictureUrl={secretPictureUrl}
             secretWords={secretWords}
             sectionCode={sectionCode}
-            studentName={studentName}
           />
           <Markdown
             content={i18n.parentLetterStep2Details({
@@ -260,7 +258,6 @@ const SignInInstructions = ({
   secretPictureUrl,
   secretWords,
   sectionCode,
-  studentName,
 }) => {
   let steps;
   switch (loginType) {
@@ -331,10 +328,7 @@ const SignInInstructions = ({
     case SectionLoginType.picture:
       steps = (
         <ol className={styles.list}>
-          <GoToSectionSignIn
-            sectionCode={sectionCode}
-            studentName={studentName}
-          />
+          <GoToSectionSignIn sectionCode={sectionCode} />
           <li>
             <Markdown content={i18n.parentLetterPicturePassword()} />
             {secretPictureUrl && (
@@ -357,10 +351,7 @@ const SignInInstructions = ({
     case SectionLoginType.word:
       steps = (
         <ol className={styles.list}>
-          <GoToSectionSignIn
-            sectionCode={sectionCode}
-            studentName={studentName}
-          />
+          <GoToSectionSignIn sectionCode={sectionCode} />
           <li>
             <Markdown
               content={i18n.parentLetterSecretWords({
@@ -412,7 +403,6 @@ SignInInstructions.propTypes = {
   secretPictureUrl: PropTypes.string,
   secretWords: PropTypes.string,
   sectionCode: PropTypes.string, // TODO: Conditional required
-  studentName: PropTypes.string,
 };
 
 const GoToSignIn = () => (
@@ -425,7 +415,7 @@ const GoToSignIn = () => (
   </li>
 );
 
-const GoToSectionSignIn = ({sectionCode, studentName}) => {
+const GoToSectionSignIn = ({sectionCode}) => {
   const sectionUrl = studio(`/sections/${sectionCode}`);
   return (
     <li>
@@ -439,5 +429,4 @@ const GoToSectionSignIn = ({sectionCode, studentName}) => {
 };
 GoToSectionSignIn.propTypes = {
   sectionCode: PropTypes.string.isRequired,
-  studentName: PropTypes.string,
 };
