@@ -40,6 +40,8 @@ FORMS_REDSHIFT_TABLE_NAME = 'analysis.foorm_forms_reshaped'
 REDSHIFT_DATABASE = 'dashboard'
 COPY_TIMEOUT = 30.minutes
 
+SLACK_COLOR_BY_SEVERITY = {warn: 'yellow', error: 'red'}.freeze
+
 def main
   log '*Processing Foorm Data*'
 
@@ -128,13 +130,13 @@ def execute_redshift_statements(client, statements)
   # `batch_execute` reports per-statement outcomes, so check for one or more failed statements and `raise` if needed.
   raise "Redshift statement(s) failed: #{result[:failed].map(&:last).join('; ')}" if result[:failed].any?
 rescue => exception
-  log "Error executing Redshift statements: #{exception.message}\n#{exception.backtrace.join("\n")}"
+  log "Error executing Redshift statements: #{exception.message}\n#{exception.backtrace.join("\n")}", :error
   raise
 end
 
-def log(message)
-  puts message
-  ChatClient.message 'cron-daily', message
+def log(message, severity = :info)
+  CDO.log.public_send(severity, message)
+  ChatClient.message 'cron-daily', message, color: SLACK_COLOR_BY_SEVERITY[severity]
 end
 
 begin
