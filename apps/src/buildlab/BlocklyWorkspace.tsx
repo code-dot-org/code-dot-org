@@ -27,6 +27,7 @@ import styles from './buildlab-view.module.scss';
 const BLOCKLY_DIV_ID = 'buildlab-blockly-div';
 
 interface Props {
+  animationOptions: BuildlabDropdownOption[];
   assetOptions: BuildlabDropdownOption[];
   elementOptions: BuildlabDropdownOption[];
   onWorkspaceChange: (workspaceState: BuildlabWorkspaceState) => void;
@@ -260,7 +261,10 @@ export function renameElementReferencesInWorkspace(
     if (
       (block.type === 'buildlab_move_with_arrow_keys' ||
         block.type === 'buildlab_set_sprite_data' ||
-        block.type === 'buildlab_set_text_from_sprite_data') &&
+        block.type === 'buildlab_set_text_from_sprite_data' ||
+        block.type === 'buildlab_play_animation' ||
+        block.type === 'buildlab_stop_animation' ||
+        block.type === 'buildlab_animate_while_generating') &&
       fields.SPRITE === previousElementId
     ) {
       fields.SPRITE = nextElementId;
@@ -358,12 +362,14 @@ function blockReferencesElement(
   const fields = block.fields ?? {};
   const fieldReferences: Partial<Record<string, string[]>> = {
     buildlab_change_sprite_position: ['SPRITE'],
+    buildlab_animate_while_generating: ['SPRITE'],
     buildlab_generate_text: ['RESULT'],
     buildlab_move_with_arrow_keys: ['SPRITE'],
     buildlab_on_click: ['ELEMENT'],
     buildlab_on_touch: ['SPRITE', 'TARGET'],
     buildlab_predict_model: ['RESULT'],
     buildlab_predict_sprite: ['PREDICTOR', 'SOURCE'],
+    buildlab_play_animation: ['SPRITE'],
     buildlab_set_position: ['ELEMENT'],
     buildlab_set_sprite_data: ['SPRITE'],
     buildlab_set_sprite_size: ['SPRITE'],
@@ -371,6 +377,7 @@ function blockReferencesElement(
     buildlab_set_text_from_sprite_data: ['ELEMENT', 'SPRITE'],
     buildlab_set_text_from_variable: ['ELEMENT'],
     buildlab_set_visible: ['ELEMENT'],
+    buildlab_stop_animation: ['SPRITE'],
     buildlab_when_prediction_ready: ['PREDICTOR'],
     buildlab_when_prediction_fails: ['PREDICTOR'],
   };
@@ -451,7 +458,8 @@ export function removeDesignEventsForScreen(
 export function removeAssetReferencesInWorkspace(
   workspaceState: BuildlabWorkspaceState,
   assetId: string,
-  replacementAssetId = ''
+  replacementAssetId = '',
+  replacementAnimationAssetId = ''
 ): BuildlabWorkspaceState {
   const removeAssetReference = (
     block: BuildlabBlockState
@@ -462,6 +470,13 @@ export function removeAssetReferencesInWorkspace(
       String(fields.ASSET ?? '') === assetId
     ) {
       fields.ASSET = replacementAssetId;
+    }
+    if (
+      (block.type === 'buildlab_play_animation' ||
+        block.type === 'buildlab_animate_while_generating') &&
+      String(fields.ANIMATION ?? '') === assetId
+    ) {
+      fields.ANIMATION = replacementAnimationAssetId;
     }
 
     return {
@@ -539,6 +554,7 @@ function updateWorkspaceDropdowns(
   elementOptions: BuildlabDropdownOption[],
   screenOptions: BuildlabDropdownOption[],
   assetOptions: BuildlabDropdownOption[],
+  animationOptions: BuildlabDropdownOption[],
   spriteOptions: BuildlabDropdownOption[],
   touchTargetOptions: BuildlabDropdownOption[],
   modelOptions: BuildlabDropdownOption[]
@@ -560,6 +576,12 @@ function updateWorkspaceDropdowns(
     'ASSET',
     assetOptions,
     'No sprite assets available'
+  );
+  updateDropdownOptions(
+    workspace,
+    'ANIMATION',
+    animationOptions,
+    'No animations available'
   );
   updateDropdownOptions(
     workspace,
@@ -635,6 +657,7 @@ function loadWorkspaceState(
   elementOptions: BuildlabDropdownOption[],
   screenOptions: BuildlabDropdownOption[],
   assetOptions: BuildlabDropdownOption[],
+  animationOptions: BuildlabDropdownOption[],
   spriteOptions: BuildlabDropdownOption[],
   touchTargetOptions: BuildlabDropdownOption[],
   modelOptions: BuildlabDropdownOption[]
@@ -653,6 +676,7 @@ function loadWorkspaceState(
       elementOptions,
       screenOptions,
       assetOptions,
+      animationOptions,
       spriteOptions,
       touchTargetOptions,
       modelOptions
@@ -664,6 +688,7 @@ function loadWorkspaceState(
 }
 
 export default function BlocklyWorkspace({
+  animationOptions,
   assetOptions,
   elementOptions,
   onWorkspaceChange,
@@ -675,6 +700,7 @@ export default function BlocklyWorkspace({
   workspaceState,
 }: Props) {
   const dropdownOptionsRef = useRef({
+    animationOptions,
     assetOptions,
     elementOptions,
     screenOptions,
@@ -683,6 +709,7 @@ export default function BlocklyWorkspace({
     modelOptions,
   });
   dropdownOptionsRef.current = {
+    animationOptions,
     assetOptions,
     elementOptions,
     screenOptions,
@@ -720,6 +747,7 @@ export default function BlocklyWorkspace({
         dropdownOptionsRef.current.elementOptions,
         dropdownOptionsRef.current.screenOptions,
         dropdownOptionsRef.current.assetOptions,
+        dropdownOptionsRef.current.animationOptions,
         dropdownOptionsRef.current.spriteOptions,
         dropdownOptionsRef.current.touchTargetOptions,
         dropdownOptionsRef.current.modelOptions
@@ -737,6 +765,7 @@ export default function BlocklyWorkspace({
           dropdownOptionsRef.current.elementOptions,
           dropdownOptionsRef.current.screenOptions,
           dropdownOptionsRef.current.assetOptions,
+          dropdownOptionsRef.current.animationOptions,
           dropdownOptionsRef.current.spriteOptions,
           dropdownOptionsRef.current.touchTargetOptions,
           dropdownOptionsRef.current.modelOptions
@@ -770,6 +799,7 @@ export default function BlocklyWorkspace({
       serializeWorkspace: serializeBuildLabWorkspace,
       updateWorkspace: updateBuildLabWorkspace,
       workspaceUpdateKey: JSON.stringify({
+        animationOptions,
         assetOptions,
         elementOptions,
         screenOptions,

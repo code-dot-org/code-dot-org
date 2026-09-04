@@ -15,6 +15,7 @@ export function clampToStage(value: number, extent = DEFAULT_SPRITE_SIZE) {
 }
 
 export interface RuntimeState {
+  animations?: Record<string, RuntimeAnimation>;
   elements: StageElement[];
   variables: Record<string, string>;
   pendingGeneration?: PendingGeneration;
@@ -25,7 +26,16 @@ export interface RuntimeState {
 
 export interface PendingGeneration {
   prompt: string;
+  requestId: number;
   resultElementId: string;
+}
+
+export interface RuntimeAnimation {
+  assetId: string;
+  frameIndex: number;
+  frameIntervalMs: number;
+  lastFrameTime?: number;
+  playing: boolean;
 }
 
 export interface KeyboardMovement {

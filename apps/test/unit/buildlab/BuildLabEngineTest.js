@@ -2,6 +2,22 @@ import BuildLabEngine from '@cdo/apps/buildlab/BuildLabEngine';
 
 function makeEngine() {
   return new BuildLabEngine({
+    assets: [
+      {
+        assetType: 'animation',
+        frames: ['frame-1', 'frame-2', 'frame-3'],
+        id: 'loading-animation',
+        name: 'Loading',
+        style: 'wave',
+      },
+      {
+        assetType: 'animation',
+        frames: ['walk-1', 'walk-2'],
+        id: 'walking-animation',
+        name: 'Walking',
+        style: 'wave',
+      },
+    ],
     initialState: {
       elements: [
         {
@@ -165,5 +181,66 @@ describe('BuildLabEngine sprite data', () => {
     expect(engine.getSpriteData('scientist', 'predictionStatus')).toBe(
       'failed'
     );
+  });
+
+  it('plays, advances, and stops a sprite animation', () => {
+    const engine = makeEngine();
+
+    engine.playAnimation('scientist', 'loading-animation');
+    expect(engine.getState().animations.scientist).toMatchObject({
+      assetId: 'loading-animation',
+      frameIndex: 0,
+      playing: true,
+    });
+
+    engine.advanceAnimations(1000);
+    const advancedState = engine.advanceAnimations(1126);
+    expect(advancedState.animations.scientist.frameIndex).toBe(1);
+
+    engine.stopAnimation('scientist');
+    expect(engine.getState().animations.scientist).toMatchObject({
+      frameIndex: 1,
+      playing: false,
+    });
+  });
+
+  it('plays an animation until all AI text requests finish', () => {
+    const engine = makeEngine();
+    engine.animateWhileGenerating('scientist', 'loading-animation');
+
+    engine.generateText('First prompt', 'result');
+    engine.generateText('Latest prompt', 'result');
+    const [firstRequest, latestRequest] = engine.takePendingGenerations();
+    expect(engine.getState().animations.scientist.playing).toBe(true);
+
+    engine.completeGeneration(firstRequest, 'old response');
+    expect(engine.getState().animations.scientist.playing).toBe(true);
+
+    const completedState = engine.completeGeneration(
+      latestRequest,
+      'latest response'
+    );
+    expect(completedState.animations.scientist).toBeUndefined();
+    expect(
+      completedState.elements.find(element => element.id === 'result').label
+    ).toBe('latest response');
+  });
+
+  it('restores a sprite animation after AI generation finishes', () => {
+    const engine = makeEngine();
+    engine.playAnimation('scientist', 'walking-animation');
+    engine.animateWhileGenerating('scientist', 'loading-animation');
+
+    engine.generateText('Prompt', 'result');
+    const [request] = engine.takePendingGenerations();
+    expect(engine.getState().animations.scientist.assetId).toBe(
+      'loading-animation'
+    );
+
+    const completedState = engine.completeGeneration(request, 'Response');
+    expect(completedState.animations.scientist).toMatchObject({
+      assetId: 'walking-animation',
+      playing: true,
+    });
   });
 });

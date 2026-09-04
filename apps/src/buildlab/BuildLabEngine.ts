@@ -5,6 +5,7 @@ import {
 import {
   normalizeSpriteDataKey,
   SPRITE_PREDICTION_DATA_KEYS,
+  type Asset,
   type StageElement,
   type StageScreen,
 } from './project';
@@ -15,13 +16,17 @@ import {
   spritesAreTouching,
   STAGE_SIZE,
   type ArrowDirection,
+  type PendingGeneration,
   type PendingPrediction,
+  type RuntimeAnimation,
   type RuntimeState,
 } from './runtime';
 
 const GRID_SIZE = 5;
+const DEFAULT_ANIMATION_FPS = 8;
 
 export interface BuildLabEngineOptions {
+  assets?: Asset[];
   fallbackSpriteAssetId?: string;
   initialState: RuntimeState;
   screens: StageScreen[];
@@ -44,6 +49,7 @@ interface TouchRegistration {
  * exposes the runtime API that program is allowed to call.
  */
 export default class BuildLabEngine {
+  private readonly assets: Asset[];
   private readonly fallbackSpriteAssetId?: string;
   private readonly initialState: RuntimeState;
   private readonly screens: StageScreen[];
@@ -59,12 +65,23 @@ export default class BuildLabEngine {
   private latestPredictionRequests = new Map<string, number>();
   private nextPredictionRequestId = 1;
   private activeTouchTargetId?: string;
+  private pendingGenerations: PendingGeneration[] = [];
+  private activeGenerationRequests = new Set<number>();
+  private latestGenerationRequests = new Map<string, number>();
+  private nextGenerationRequestId = 1;
+  private generatingAnimations = new Map<string, string>();
+  private generationAnimationSnapshots = new Map<
+    string,
+    RuntimeAnimation | undefined
+  >();
 
   public constructor({
+    assets = [],
     fallbackSpriteAssetId,
     initialState,
     screens,
   }: BuildLabEngineOptions) {
+    this.assets = assets;
     this.fallbackSpriteAssetId = fallbackSpriteAssetId;
     this.initialState = cloneRuntimeState(initialState);
     this.screens = screens;
@@ -74,6 +91,7 @@ export default class BuildLabEngine {
   public run(workspaceState: BuildlabWorkspaceState): RuntimeState {
     this.state = {
       ...cloneRuntimeState(this.initialState),
+      animations: {},
       keyboardMovements: [],
       variables: {},
       pendingGeneration: undefined,
@@ -90,6 +108,12 @@ export default class BuildLabEngine {
     this.latestPredictionRequests.clear();
     this.nextPredictionRequestId = 1;
     this.activeTouchTargetId = undefined;
+    this.pendingGenerations = [];
+    this.activeGenerationRequests.clear();
+    this.latestGenerationRequests.clear();
+    this.nextGenerationRequestId = 1;
+    this.generatingAnimations.clear();
+    this.generationAnimationSnapshots.clear();
 
     const source = compileBuildLabWorkspace(workspaceState);
     this.executeGeneratedProgram(source);
@@ -363,6 +387,104 @@ export default class BuildLabEngine {
     };
   }
 
+  public playAnimation(spriteId: string, animationAssetId: string) {
+    const animationAsset = this.getAnimationAsset(animationAssetId);
+    if (!this.isSprite(spriteId) || !animationAsset) {
+      return;
+    }
+
+    const frameCount = animationAsset.frames?.length ?? 0;
+    this.state = {
+      ...this.state,
+      animations: {
+        ...this.state.animations,
+        [spriteId]: {
+          assetId: animationAssetId,
+          frameIndex: 0,
+          frameIntervalMs: 1000 / DEFAULT_ANIMATION_FPS,
+          playing: frameCount > 1,
+        },
+      },
+    };
+  }
+
+  public stopAnimation(spriteId: string) {
+    const animation = this.state.animations?.[spriteId];
+    if (!animation?.playing) {
+      return;
+    }
+
+    this.state = {
+      ...this.state,
+      animations: {
+        ...this.state.animations,
+        [spriteId]: {...animation, playing: false},
+      },
+    };
+  }
+
+  public animateWhileGenerating(spriteId: string, animationAssetId: string) {
+    if (!this.isSprite(spriteId) || !this.getAnimationAsset(animationAssetId)) {
+      return;
+    }
+
+    this.generatingAnimations.set(spriteId, animationAssetId);
+    if (this.activeGenerationRequests.size > 0) {
+      this.startGeneratingAnimation(spriteId, animationAssetId);
+    }
+  }
+
+  public advanceAnimations(timestamp: number): RuntimeState | undefined {
+    const animations = this.state.animations ?? {};
+    let stateChanged = false;
+    let visibleFrameChanged = false;
+    const nextAnimations = Object.fromEntries(
+      Object.entries(animations).map(([spriteId, animation]) => {
+        if (!animation.playing) {
+          return [spriteId, animation];
+        }
+
+        if (animation.lastFrameTime === undefined) {
+          stateChanged = true;
+          return [spriteId, {...animation, lastFrameTime: timestamp}];
+        }
+
+        const elapsed = timestamp - animation.lastFrameTime;
+        const elapsedFrames = Math.floor(elapsed / animation.frameIntervalMs);
+        if (elapsedFrames < 1) {
+          return [spriteId, animation];
+        }
+
+        const frameCount =
+          this.getAnimationAsset(animation.assetId)?.frames?.length ?? 0;
+        if (frameCount < 2) {
+          stateChanged = true;
+          return [spriteId, {...animation, playing: false}];
+        }
+
+        stateChanged = true;
+        visibleFrameChanged = true;
+        return [
+          spriteId,
+          {
+            ...animation,
+            frameIndex: (animation.frameIndex + elapsedFrames) % frameCount,
+            lastFrameTime:
+              animation.lastFrameTime +
+              elapsedFrames * animation.frameIntervalMs,
+          },
+        ];
+      })
+    );
+
+    if (!stateChanged) {
+      return undefined;
+    }
+
+    this.state = {...this.state, animations: nextAnimations};
+    return visibleFrameChanged ? this.getState() : undefined;
+  }
+
   public predictModel(modelId: string, resultElementId: string) {
     if (!modelId || !resultElementId) {
       return;
@@ -493,16 +615,50 @@ export default class BuildLabEngine {
     if (!trimmedPrompt || !resultElementId) {
       return;
     }
-    this.state = {
-      ...this.state,
-      pendingGeneration: {prompt: trimmedPrompt, resultElementId},
+    const request = {
+      prompt: trimmedPrompt,
+      requestId: this.nextGenerationRequestId++,
+      resultElementId,
     };
+    const wasGenerating = this.activeGenerationRequests.size > 0;
+    this.pendingGenerations.push(request);
+    this.activeGenerationRequests.add(request.requestId);
+    this.latestGenerationRequests.set(resultElementId, request.requestId);
+    this.state = {...this.state, pendingGeneration: request};
+    if (!wasGenerating) {
+      this.startGeneratingAnimations();
+    }
   }
 
-  public takePendingGeneration() {
-    const pendingGeneration = this.state.pendingGeneration;
+  public takePendingGenerations(): PendingGeneration[] {
+    const pendingGenerations = this.pendingGenerations;
+    this.pendingGenerations = [];
     this.state = {...this.state, pendingGeneration: undefined};
-    return pendingGeneration;
+    return pendingGenerations;
+  }
+
+  public completeGeneration(
+    request: PendingGeneration,
+    response: string
+  ): RuntimeState {
+    if (this.isLatestGeneration(request)) {
+      this.updateElementText(request.resultElementId, response);
+      this.latestGenerationRequests.delete(request.resultElementId);
+    }
+    this.finishGeneration(request);
+    return this.getState();
+  }
+
+  public failGeneration(
+    request: PendingGeneration,
+    message: string
+  ): RuntimeState {
+    if (this.isLatestGeneration(request)) {
+      this.updateElementText(request.resultElementId, `AI failed: ${message}`);
+      this.latestGenerationRequests.delete(request.resultElementId);
+    }
+    this.finishGeneration(request);
+    return this.getState();
   }
 
   public createSprite(
@@ -533,15 +689,88 @@ export default class BuildLabEngine {
 
   private clearPendingRequests() {
     this.pendingPredictions = [];
+    for (const request of this.pendingGenerations) {
+      this.activeGenerationRequests.delete(request.requestId);
+      if (this.isLatestGeneration(request)) {
+        this.latestGenerationRequests.delete(request.resultElementId);
+      }
+    }
+    this.pendingGenerations = [];
     this.state = {
       ...this.state,
       pendingGeneration: undefined,
       pendingPrediction: undefined,
     };
+    if (this.activeGenerationRequests.size === 0) {
+      this.restoreGeneratingAnimations();
+    }
   }
 
   private getElement(elementId: string) {
     return this.state.elements.find(element => element.id === elementId);
+  }
+
+  private getAnimationAsset(assetId: string) {
+    return this.assets.find(
+      asset =>
+        asset.id === assetId &&
+        asset.assetType === 'animation' &&
+        Boolean(asset.frames?.length)
+    );
+  }
+
+  private isLatestGeneration(request: PendingGeneration) {
+    return (
+      this.latestGenerationRequests.get(request.resultElementId) ===
+      request.requestId
+    );
+  }
+
+  private finishGeneration(request: PendingGeneration) {
+    this.activeGenerationRequests.delete(request.requestId);
+    if (this.activeGenerationRequests.size === 0) {
+      this.restoreGeneratingAnimations();
+    }
+  }
+
+  private startGeneratingAnimations() {
+    for (const [spriteId, animationAssetId] of this.generatingAnimations) {
+      this.startGeneratingAnimation(spriteId, animationAssetId);
+    }
+  }
+
+  private startGeneratingAnimation(spriteId: string, animationAssetId: string) {
+    if (!this.generationAnimationSnapshots.has(spriteId)) {
+      const currentAnimation = this.state.animations?.[spriteId];
+      this.generationAnimationSnapshots.set(
+        spriteId,
+        currentAnimation ? {...currentAnimation} : undefined
+      );
+    }
+    this.playAnimation(spriteId, animationAssetId);
+  }
+
+  private restoreGeneratingAnimations() {
+    if (this.generationAnimationSnapshots.size === 0) {
+      return;
+    }
+
+    const animations = {...this.state.animations};
+    for (const [spriteId, previousAnimation] of this
+      .generationAnimationSnapshots) {
+      if (previousAnimation) {
+        animations[spriteId] = {
+          ...previousAnimation,
+          lastFrameTime: previousAnimation.playing
+            ? undefined
+            : previousAnimation.lastFrameTime,
+        };
+      } else {
+        delete animations[spriteId];
+      }
+    }
+    this.generationAnimationSnapshots.clear();
+    this.state = {...this.state, animations};
   }
 
   private resolvePredictionSource(sourceSelector: string) {
@@ -685,6 +914,14 @@ export default class BuildLabEngine {
 function cloneRuntimeState(state: RuntimeState): RuntimeState {
   return {
     ...state,
+    animations: state.animations
+      ? Object.fromEntries(
+          Object.entries(state.animations).map(([spriteId, animation]) => [
+            spriteId,
+            {...animation},
+          ])
+        )
+      : undefined,
     elements: state.elements.map(element => ({
       ...element,
       data: element.data ? {...element.data} : undefined,

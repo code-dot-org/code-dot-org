@@ -106,4 +106,51 @@ describe('Build Lab sprite data blocks', () => {
 
     expect(source).toContain('engine.setSpriteData("flower", "height", "12");');
   });
+
+  it('generates animation playback and AI generation animation behavior', () => {
+    const source = compileBuildLabWorkspace({
+      blocks: {
+        languageVersion: 0,
+        blocks: [
+          {
+            fields: {
+              ANIMATION: 'loading-animation',
+              SPRITE: 'scientist',
+            },
+            id: 'animate-while-generating',
+            type: 'buildlab_animate_while_generating',
+          },
+          {
+            id: 'when-run',
+            next: {
+              block: {
+                fields: {
+                  ANIMATION: 'walking-animation',
+                  SPRITE: 'scientist',
+                },
+                id: 'play-animation',
+                next: {
+                  block: {
+                    fields: {SPRITE: 'scientist'},
+                    id: 'stop-animation',
+                    type: 'buildlab_stop_animation',
+                  },
+                },
+                type: 'buildlab_play_animation',
+              },
+            },
+            type: 'buildlab_when_run',
+          },
+        ],
+      },
+    });
+
+    expect(source).toContain(
+      'engine.animateWhileGenerating("scientist", "loading-animation");'
+    );
+    expect(source).toContain(
+      'engine.playAnimation("scientist", "walking-animation");'
+    );
+    expect(source).toContain('engine.stopAnimation("scientist");');
+  });
 });

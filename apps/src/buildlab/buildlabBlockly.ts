@@ -282,6 +282,41 @@ export const BUILD_LAB_BLOCK_DEFINITIONS = [
     tooltip: 'Moves a sprite by an amount without leaving the stage.',
   },
   {
+    type: 'buildlab_play_animation',
+    message0: 'play %1 on %2',
+    args0: [
+      {
+        type: 'field_dropdown',
+        name: 'ANIMATION',
+        options: [['No animations available', '']],
+      },
+      {
+        type: 'field_dropdown',
+        name: 'SPRITE',
+        options: [['sprite1', 'sprite1']],
+      },
+    ],
+    previousStatement: null,
+    nextStatement: null,
+    style: 'behavior_blocks',
+    tooltip: 'Plays an animation on a sprite in a loop.',
+  },
+  {
+    type: 'buildlab_stop_animation',
+    message0: 'stop animation on %1',
+    args0: [
+      {
+        type: 'field_dropdown',
+        name: 'SPRITE',
+        options: [['sprite1', 'sprite1']],
+      },
+    ],
+    previousStatement: null,
+    nextStatement: null,
+    style: 'behavior_blocks',
+    tooltip: 'Stops a sprite animation on its current frame.',
+  },
+  {
     type: 'buildlab_predict_model',
     message0: 'predict with %1 and show result in %2',
     args0: [
@@ -348,6 +383,25 @@ export const BUILD_LAB_BLOCK_DEFINITIONS = [
     tooltip: 'Generates text and puts the response in an element.',
   },
   {
+    type: 'buildlab_animate_while_generating',
+    message0: 'while AI is generating play %1 on %2',
+    args0: [
+      {
+        type: 'field_dropdown',
+        name: 'ANIMATION',
+        options: [['No animations available', '']],
+      },
+      {
+        type: 'field_dropdown',
+        name: 'SPRITE',
+        options: [['sprite1', 'sprite1']],
+      },
+    ],
+    style: 'ai_blocks',
+    tooltip:
+      'Automatically plays an animation while one or more AI text requests are running.',
+  },
+  {
     type: 'buildlab_create_sprite',
     message0: 'create %1 sprite at x %2 y %3',
     args0: [
@@ -398,6 +452,8 @@ export const BUILD_LAB_TOOLBOX: BlocklyCore.utils.toolbox.ToolboxInfo = {
         {kind: 'block', type: 'buildlab_move_with_arrow_keys'},
         {kind: 'block', type: 'buildlab_set_sprite_size'},
         {kind: 'block', type: 'buildlab_change_sprite_position'},
+        {kind: 'block', type: 'buildlab_play_animation'},
+        {kind: 'block', type: 'buildlab_stop_animation'},
         {kind: 'block', type: 'buildlab_predict_model'},
       ],
     },
@@ -418,6 +474,7 @@ export const BUILD_LAB_TOOLBOX: BlocklyCore.utils.toolbox.ToolboxInfo = {
       colour: '#6f5bd3',
       contents: [
         {kind: 'block', type: 'buildlab_generate_text'},
+        {kind: 'block', type: 'buildlab_animate_while_generating'},
         {kind: 'block', type: 'buildlab_predict_sprite'},
       ],
     },
@@ -441,6 +498,7 @@ const HAT_BLOCK_TYPES = new Set([
   'buildlab_on_touch',
   'buildlab_when_prediction_ready',
   'buildlab_when_prediction_fails',
+  'buildlab_animate_while_generating',
 ]);
 
 function quote(value: unknown) {
@@ -542,6 +600,14 @@ function registerGenerators() {
       block.getFieldValue('DY')
     )});\n`;
 
+  generator.forBlock.buildlab_play_animation = block =>
+    `engine.playAnimation(${quote(block.getFieldValue('SPRITE'))}, ${quote(
+      block.getFieldValue('ANIMATION')
+    )});\n`;
+
+  generator.forBlock.buildlab_stop_animation = block =>
+    `engine.stopAnimation(${quote(block.getFieldValue('SPRITE'))});\n`;
+
   generator.forBlock.buildlab_predict_model = block =>
     `engine.predictModel(${quote(block.getFieldValue('MODEL'))}, ${quote(
       block.getFieldValue('RESULT')
@@ -556,6 +622,11 @@ function registerGenerators() {
     `engine.generateText(${quote(block.getFieldValue('PROMPT'))}, ${quote(
       block.getFieldValue('RESULT')
     )});\n`;
+
+  generator.forBlock.buildlab_animate_while_generating = block =>
+    `engine.animateWhileGenerating(${quote(
+      block.getFieldValue('SPRITE')
+    )}, ${quote(block.getFieldValue('ANIMATION'))});\n`;
 
   generator.forBlock.buildlab_create_sprite = block =>
     `engine.createSprite(${quote(block.id)}, ${quote(

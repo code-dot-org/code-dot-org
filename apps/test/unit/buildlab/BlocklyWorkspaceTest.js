@@ -1,4 +1,5 @@
 import {
+  removeAssetReferencesInWorkspace,
   removeDesignEventsForElement,
   removeModelReferencesInWorkspace,
   renameElementReferencesInWorkspace,
@@ -84,5 +85,65 @@ describe('Build Lab sprite data workspace references', () => {
     expect(
       removeModelReferencesInWorkspace(workspace, 'model123456').blocks.blocks
     ).toHaveLength(2);
+  });
+
+  it('updates sprite and asset references in animation blocks', () => {
+    const workspace = {
+      blocks: {
+        languageVersion: 0,
+        blocks: [
+          {
+            fields: {ANIMATION: 'loading-animation', SPRITE: 'scientist'},
+            id: 'animate-while-generating',
+            type: 'buildlab_animate_while_generating',
+          },
+          {
+            fields: {ELEMENT: 'trigger'},
+            id: 'click-trigger',
+            next: {
+              block: {
+                fields: {ANIMATION: 'loading-animation', SPRITE: 'scientist'},
+                id: 'play-animation',
+                next: {
+                  block: {
+                    fields: {SPRITE: 'scientist'},
+                    id: 'stop-animation',
+                    type: 'buildlab_stop_animation',
+                  },
+                },
+                type: 'buildlab_play_animation',
+              },
+            },
+            type: 'buildlab_on_click',
+          },
+        ],
+      },
+    };
+
+    const renamed = renameElementReferencesInWorkspace(
+      workspace,
+      'scientist',
+      'researcher'
+    );
+    expect(renamed.blocks.blocks[0].fields.SPRITE).toBe('researcher');
+    expect(renamed.blocks.blocks[1].next.block.fields.SPRITE).toBe(
+      'researcher'
+    );
+    expect(renamed.blocks.blocks[1].next.block.next.block.fields.SPRITE).toBe(
+      'researcher'
+    );
+
+    const replaced = removeAssetReferencesInWorkspace(
+      renamed,
+      'loading-animation',
+      'bear',
+      'spinner-animation'
+    );
+    expect(replaced.blocks.blocks[0].fields.ANIMATION).toBe(
+      'spinner-animation'
+    );
+    expect(replaced.blocks.blocks[1].next.block.fields.ANIMATION).toBe(
+      'spinner-animation'
+    );
   });
 });

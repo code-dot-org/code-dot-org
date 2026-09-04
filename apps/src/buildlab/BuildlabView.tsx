@@ -63,6 +63,7 @@ import {
   STAGE_SIZE,
   type ArrowDirection,
   type KeyboardMovement,
+  type RuntimeAnimation,
   type RuntimeState,
 } from './runtime';
 import SpriteDataEditor from './SpriteDataEditor';
@@ -415,6 +416,9 @@ export default function BuildlabView({
   const [runtimeKeyboardMovements, setRuntimeKeyboardMovements] = useState<
     KeyboardMovement[]
   >([]);
+  const [runtimeAnimations, setRuntimeAnimations] = useState<
+    Record<string, RuntimeAnimation>
+  >({});
   const runtimeRunIdRef = useRef(0);
   const runtimeEngineRef = useRef<BuildLabEngine | null>(null);
   const applyRuntimeStateRef = useRef<(state: RuntimeState) => void>(() => {});
@@ -627,6 +631,15 @@ export default function BuildlabView({
         .map(asset => [`${asset.name} (${asset.assetType})`, asset.id]),
     [assets]
   );
+  const blocklyAnimationOptions = useMemo<BuildlabDropdownOption[]>(
+    () =>
+      assets
+        .filter(
+          asset => asset.assetType === 'animation' && asset.frames?.length
+        )
+        .map(asset => [asset.name, asset.id]),
+    [assets]
+  );
   const blocklyModelOptions = useMemo<BuildlabDropdownOption[]>(
     () => mlModels.map(model => [model.name, model.id]),
     [mlModels]
@@ -647,6 +660,10 @@ export default function BuildlabView({
     ? getAssetImageUrl(displayedBackgroundAsset)
     : undefined;
   const displayedElements = isRunning ? runtimeElements : elements;
+  const hasPlayingRuntimeAnimations = Object.values(runtimeAnimations).some(
+    animation => animation.playing
+  );
+  const hasRuntimeKeyboardMovements = runtimeKeyboardMovements.length > 0;
   const displayedScreenElements = useMemo(
     () =>
       displayedElements.filter(
@@ -883,6 +900,8 @@ export default function BuildlabView({
       remainingAssets[0];
     const replacementSpriteAssetId =
       remainingAssets.find(asset => asset.assetType !== 'background')?.id ?? '';
+    const replacementAnimationAssetId =
+      remainingAssets.find(asset => asset.assetType === 'animation')?.id ?? '';
 
     setAssets(remainingAssets);
     setElements(current =>
@@ -916,7 +935,8 @@ export default function BuildlabView({
       removeAssetReferencesInWorkspace(
         current,
         assetId,
-        replacementSpriteAssetId
+        replacementSpriteAssetId,
+        replacementAnimationAssetId
       )
     );
 
@@ -1104,6 +1124,7 @@ export default function BuildlabView({
   };
 
   const applyRuntimeState = (nextRuntimeState: RuntimeState) => {
+    setRuntimeAnimations(nextRuntimeState.animations ?? {});
     setRuntimeElements(nextRuntimeState.elements);
     setRuntimeScreenId(nextRuntimeState.screenId);
     setRuntimeKeyboardMovements(nextRuntimeState.keyboardMovements ?? []);
@@ -1149,11 +1170,13 @@ export default function BuildlabView({
         });
     });
 
-    const pendingGeneration =
-      runtimeEngineRef.current?.takePendingGeneration() ??
-      nextRuntimeState.pendingGeneration;
-    if (pendingGeneration) {
-      const {prompt, resultElementId} = pendingGeneration;
+    const generationRequests =
+      runtimeEngineRef.current?.takePendingGenerations() ??
+      (nextRuntimeState.pendingGeneration
+        ? [nextRuntimeState.pendingGeneration]
+        : []);
+    generationRequests.forEach(request => {
+      const {prompt} = request;
       void generateBuildLabText(prompt, channelId)
         .then(response => {
           if (runId !== runtimeRunIdRef.current) {
@@ -1163,8 +1186,7 @@ export default function BuildlabView({
           if (!engine) {
             return;
           }
-          engine.updateElement(resultElementId, {label: response});
-          applyRuntimeState(engine.getState());
+          applyRuntimeState(engine.completeGeneration(request, response));
         })
         .catch(error => {
           if (runId !== runtimeRunIdRef.current) {
@@ -1176,12 +1198,9 @@ export default function BuildlabView({
           if (!engine) {
             return;
           }
-          engine.updateElement(resultElementId, {
-            label: `AI failed: ${message}`,
-          });
-          applyRuntimeState(engine.getState());
+          applyRuntimeState(engine.failGeneration(request, message));
         });
-    }
+    });
   };
   applyRuntimeStateRef.current = applyRuntimeState;
 
@@ -1190,6 +1209,7 @@ export default function BuildlabView({
       runtimeRunIdRef.current += 1;
       runtimeEngineRef.current = null;
       setIsRunning(false);
+      setRuntimeAnimations({});
       setRuntimeKeyboardMovements([]);
       return;
     }
@@ -1197,11 +1217,13 @@ export default function BuildlabView({
     runtimeRunIdRef.current += 1;
 
     const engine = new BuildLabEngine({
+      assets,
       fallbackSpriteAssetId: assets.find(
         asset => asset.assetType !== 'background'
       )?.id,
       initialState: {
         elements: elements.map(element => ({...element})),
+        animations: {},
         keyboardMovements: [],
         variables: {},
         screenId: defaultScreenId(screens, activeScreenId),
@@ -1292,37 +1314,58 @@ export default function BuildlabView({
       runtimeRunIdRef.current += 1;
       runtimeEngineRef.current = null;
       setIsRunning(false);
+      setRuntimeAnimations({});
       setRuntimeElements([]);
       setRuntimeKeyboardMovements([]);
     }
   };
 
   useEffect(() => {
-    if (!isRunning || runtimeKeyboardMovements.length === 0) {
+    if (
+      !isRunning ||
+      (!hasRuntimeKeyboardMovements && !hasPlayingRuntimeAnimations)
+    ) {
       return;
     }
 
     const pressedKeys = new Set<ArrowDirection>();
     let animationFrame: number | undefined;
 
-    const moveSprites = () => {
-      if (pressedKeys.size === 0) {
+    const updateRuntime = (timestamp: number) => {
+      const engine = runtimeEngineRef.current;
+      if (!engine) {
+        return;
+      }
+
+      let nextState: RuntimeState | undefined;
+      if (pressedKeys.size > 0) {
+        nextState = engine.moveWithArrowKeys(pressedKeys);
+      }
+      nextState = engine.advanceAnimations(timestamp) ?? nextState;
+      if (nextState) {
+        applyRuntimeStateRef.current(nextState);
+      }
+    };
+
+    const advanceRuntime = (timestamp: number) => {
+      updateRuntime(timestamp);
+      if (pressedKeys.size === 0 && !hasPlayingRuntimeAnimations) {
         animationFrame = undefined;
         return;
       }
 
-      const engine = runtimeEngineRef.current;
-      if (engine) {
-        applyRuntimeStateRef.current(engine.moveWithArrowKeys(pressedKeys));
-      }
-      animationFrame = window.requestAnimationFrame(moveSprites);
+      animationFrame = window.requestAnimationFrame(advanceRuntime);
     };
 
     const startMoving = () => {
       if (animationFrame === undefined) {
-        animationFrame = window.requestAnimationFrame(moveSprites);
+        animationFrame = window.requestAnimationFrame(advanceRuntime);
       }
     };
+
+    if (hasPlayingRuntimeAnimations) {
+      startMoving();
+    }
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (isEditableTarget(event.target)) {
@@ -1364,7 +1407,12 @@ export default function BuildlabView({
       window.removeEventListener('blur', handleWindowBlur);
       handleWindowBlur();
     };
-  }, [isRunning, runtimeKeyboardMovements, runtimeScreenId]);
+  }, [
+    hasPlayingRuntimeAnimations,
+    hasRuntimeKeyboardMovements,
+    isRunning,
+    runtimeScreenId,
+  ]);
 
   const addScreen = () => {
     if (readOnly) {
@@ -1750,6 +1798,7 @@ export default function BuildlabView({
                   </div>
                 </div>
                 <BlocklyWorkspace
+                  animationOptions={blocklyAnimationOptions}
                   assetOptions={blocklyAssetOptions}
                   elementOptions={blocklyElementOptions}
                   onWorkspaceChange={setWorkspaceState}
@@ -3193,6 +3242,7 @@ export default function BuildlabView({
                     onDragStart={handleStageElementDragStart}
                     onValueChange={updateRuntimeElementValue}
                     onSelect={setSelectedElementId}
+                    runtimeAnimation={runtimeAnimations[element.id]}
                     selectedElementId={isRunning ? '' : selectedElementId}
                   />
                 ))}
@@ -3599,6 +3649,7 @@ function StageElementView({
   onValueChange,
   onActivate,
   onSelect,
+  runtimeAnimation,
   selectedElementId,
 }: {
   assets: Asset[];
@@ -3610,6 +3661,7 @@ function StageElementView({
   onValueChange: (elementId: string, value: string) => void;
   onActivate: (elementId: string) => void;
   onSelect: (elementId: string) => void;
+  runtimeAnimation?: RuntimeAnimation;
   selectedElementId: string;
 }) {
   if (element.visible === false) {
@@ -3722,8 +3774,16 @@ function StageElementView({
     );
   }
   if (element.kind === 'sprite') {
-    const asset = assets.find(candidate => candidate.id === element.assetId);
-    const imageUrl = asset ? getAssetImageUrl(asset) : undefined;
+    const assignedAsset = assets.find(
+      candidate => candidate.id === element.assetId
+    );
+    const runtimeAsset = runtimeAnimation
+      ? assets.find(candidate => candidate.id === runtimeAnimation.assetId)
+      : undefined;
+    const asset = runtimeAsset ?? assignedAsset;
+    const imageUrl =
+      runtimeAsset?.frames?.[runtimeAnimation?.frameIndex ?? 0] ||
+      (asset ? getAssetImageUrl(asset) : undefined);
 
     return (
       <button
