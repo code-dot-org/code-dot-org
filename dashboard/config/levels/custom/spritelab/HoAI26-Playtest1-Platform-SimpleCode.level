@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2026-09-03T01:47:43.000Z",
   "level_num": "custom",
@@ -27,7 +28,7 @@
     "pinned_scene_id": "story-scene",
     "pinned_scene_name": "Story",
     "guide_mode": "instructions",
-    "long_instructions": "# Code your player sprite\r\n- Use the blocks to set your sprite as the player.\r\n- Make it speak with a say block.",
+    "long_instructions": "# Code your player sprite\r\n\r\n1.  Use the blocks to set your sprite as the player.\r\n\r\n2. Make it speak with a say block.",
     "toolbox_definition": {
       "contents": [
         {
@@ -223,10 +224,12 @@
         }
       ]
     },
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-09-03T01:47:43.424+00:00\",\"changed\":[\"cloned from \\\"hoai2026-dev-spritelab-lab2-story\\\"\"],\"cloned_from\":\"hoai2026-dev-spritelab-lab2-story\"},{\"changed_at\":\"2026-09-03 01:54:32 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 02:00:50 +0000\",\"changed\":[\"project_template_level_name\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 02:02:58 +0000\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 02:08:27 +0000\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 02:09:57 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-09-03T01:47:43.424+00:00\",\"changed\":[\"cloned from \\\"hoai2026-dev-spritelab-lab2-story\\\"\"],\"cloned_from\":\"hoai2026-dev-spritelab-lab2-story\"},{\"changed_at\":\"2026-09-03 01:54:32 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 02:00:50 +0000\",\"changed\":[\"project_template_level_name\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 02:02:58 +0000\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 02:08:27 +0000\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 02:09:57 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 21:32:13 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 21:44:53 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

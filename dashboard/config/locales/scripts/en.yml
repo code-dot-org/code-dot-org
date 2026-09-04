@@ -21208,7 +21208,7 @@ en:
               name: Preparing for the Final Project
           lesson_groups: {}
           name: sandbox-csaif-pl-python
-          title: Teaching Foundations of AI Programming
+          title: Teaching Foundations of AI Programming [Python]
           description_audience: ''
           description_short: ''
           description: |-
@@ -30438,7 +30438,7 @@ en:
           lesson_groups: {}
           name: self-paced-pl-teaching-csd-unit2-2026
         self-paced-pl-teaching-programming-with-music-lab-unit1-2026:
-          title: AID - Teaching Programming with Music Lab
+          title: CSD - Teaching Programming with Music Lab
           description: |-
             This professional learning module is designed to help you prepare to teach Programming with Music Lab.
 
@@ -30463,6 +30463,9 @@ en:
             **Suggested Time**: 120 minutes
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-programming-with-music-lab-unit1-2026
         self-paced-pl-teaching-csd-unit3-2026:
           title: Preparing to Teach Interactive Animations and Games
           description: "This professional learning module is designed to help you prepare to teach CodeAI's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
@@ -30618,7 +30621,7 @@ en:
           description_short: ''
           description_audience: ''
         self-paced-pl-teaching-aiml-unit1-2026a:
-          title: Teaching AI and Machine Learning
+          title: CSD - Teaching AI and Machine Learning
           description: |-
             **In this professional learning module, you will:**
 
@@ -30641,8 +30644,11 @@ en:
             **Suggested Time:** 100 minutes
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-aiml-unit1-2026a
         self-paced-pl-teaching-csd-unit2-2026a:
-          title: Preparing to Teach Web Development
+          title: CSD - Teaching Web Development
           description: |-
             This professional learning module is designed to help you prepare to teach CodeAI's Web Development unit.
 
@@ -30667,6 +30673,9 @@ en:
             **Suggested time**: 120 minutes
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-csd-unit2-2026a
         self-paced-pl-teaching-programming-with-music-lab-unit1-2026a:
           title: AID - Teaching Programming with Music Lab
           description: |-
@@ -30694,15 +30703,18 @@ en:
           description_short: ''
           description_audience: ''
         self-paced-pl-teaching-csd-unit3-2026a:
-          title: Preparing to Teach Interactive Animations and Games
+          title: CSD -  Teaching Interactive Animations and Games
           description: "This professional learning module is designed to help you prepare to teach CodeAI's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
           student_description: "This professional learning module is designed to help you prepare to teach CodeAI's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-csd-unit3-2026a
         self-paced-pl-teaching-csd-unit4-2026a:
-          title: Preparing to Teach the Design Process
+          title: CSD - Teaching the Design Process
           description: |-
-            This professional learning module is designed to help you prepare to teach Code.org's Design Process unit.
+            This professional learning module is designed to help you prepare to teach CodeAI's Design Process unit.
 
             **In this professional learning module, you will:**
 
@@ -30713,7 +30725,7 @@ en:
 
             **Suggested time:** 120 minutes
           student_description: |-
-            This professional learning module is designed to help you prepare to teach Code.org's Design Process unit.
+            This professional learning module is designed to help you prepare to teach CodeAI's Design Process unit.
 
             **In this professional learning module, you will:**
 
@@ -30725,21 +30737,33 @@ en:
             **Suggested time:** 120 minutes
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-csd-unit4-2026a
         self-paced-pl-teaching-csd-unit5-2026a:
-          title: Preparing to Teach Data and Society
-          description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 70 minutes"
-          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 70 minutes"
+          title: CSD - Teaching Data and Society
+          description: "This professional learning module is designed to help you prepare to teach CodeAI's Data and Society unit. \n\n**In this professional learning module, you will:**\n\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 70 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach CodeAI's Data and Society unit. \n\n**In this professional learning module, you will:**\n\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 70 minutes"
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-csd-unit5-2026a
         self-paced-pl-teaching-physical-computing-2026a:
-          title: Preparing to Teach Creating Apps for Devices (Circuit Playground)
+          title: CSD - Teaching Creating Apps for Devices (Circuit Playground)
           description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
           student_description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-physical-computing-2026a
         self-paced-pl-teaching-microbit-2026a:
-          title: Preparing to Teach Creating Apps for Devices (micro:bit)
-          description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
-          student_description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
+          title: CSD - Teaching Creating Apps for Devices (micro:bit)
+          description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end-of-chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
+          student_description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end-of-chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-microbit-2026a

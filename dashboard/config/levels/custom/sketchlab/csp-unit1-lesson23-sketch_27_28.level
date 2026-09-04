@@ -8,33 +8,239 @@
     "require_edit_to_continue": "true",
     "encrypted": "false",
     "hide_share_and_remix": "false",
-    "long_instructions": "Before you build anything, it helps to sketch out your plan first, the same way a programmer storyboards before writing code.\r\n\r\n# Do This:\r\n- Pick a topic you care about. \r\n- Sketch a small card or scene that shows off your topic.\r\n- Label your planned variables and draw an arrow from each label to the part of your sketch it describes:\r\n  - At least 3 `string` labels, for things you'll type in later (like a name, a color, or a mascot)\r\n  - 1 `int` label, for a whole number\r\n  - 1 `bool` label, for a true/false detail\r\n- Save your sketch to your Backpack when you're finished. ",
+    "long_instructions": "Before you build anything, it helps to sketch out your plan first, the same way a programmer storyboards before writing code.\r\n\r\nDo This:\r\n- Pick a topic you care about. \r\n- Drag five label boxes from the tray into your design area, three `string`, one `int`, one `bool`.\r\n- Sketch a small card or scene around them that shows off your topic.\r\n- Type your own label into each box (for example: a name, a color, or a mascot for the strings) and draw an arrow from each one to the part of your sketch it describes.\r\n- Save your sketch to your Backpack when you're finished. You'll import it in the next lesson.",
     "exemplar_sources": {
       "source": {
         "nodes": [
           {
-            "id": "be842381-e745-4fd7-8872-a7bb37b9cff6",
+            "id": "66b4d524-64d4-4e17-976b-3bb58813c2ac",
             "type": "shape",
             "data": {
               "shapeType": "rectangle",
-              "label": "",
-              "strokeColor": "var(--sketchlab-stroke-blue)",
-              "backgroundColor": "var(--sketchlab-bg-blue)"
+              "label": "team_name\n(String)",
+              "backgroundColor": "var(--sketchlab-bg-red)"
             },
             "position": {
-              "x": 285.0659637451172,
-              "y": 198.6768565052139
+              "x": 329.9381600487488,
+              "y": 138.5623033887646
             },
-            "width": 239.34458901714595,
-            "height": 218.0557866222275,
+            "width": 193.29925234763505,
+            "height": 72.98929080333872,
             "measured": {
-              "width": 239,
-              "height": 218
+              "width": 193,
+              "height": 73
             },
             "dragging": false
           },
           {
-            "id": "a41bbfd2-fced-41bd-8dea-fd15db593b03",
+            "id": "d3665912-4948-4f71-ac88-47d0388d2fa9",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "mascot\n(String)",
+              "backgroundColor": "var(--sketchlab-bg-red)"
+            },
+            "position": {
+              "x": 333.0717942874572,
+              "y": 230.8507028199727
+            },
+            "width": 193.29925234763505,
+            "height": 72.98929080333872,
+            "measured": {
+              "width": 193,
+              "height": 73
+            },
+            "dragging": false
+          },
+          {
+            "id": "aad4ea34-c2be-4dd3-8463-c4987dce3621",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "favorite_color\n(String)",
+              "backgroundColor": "var(--sketchlab-bg-red)"
+            },
+            "position": {
+              "x": 335.0148422665698,
+              "y": 322.9448048049309
+            },
+            "width": 193.29925234763505,
+            "height": 72.98929080333872,
+            "measured": {
+              "width": 193,
+              "height": 73
+            },
+            "dragging": false
+          },
+          {
+            "id": "8c383b6a-428a-494e-b1c2-faa00341ebd6",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "goals\n(int)",
+              "backgroundColor": "var(--sketchlab-bg-blue)"
+            },
+            "position": {
+              "x": 335.99423204150025,
+              "y": 412.0692743236013
+            },
+            "width": 193.29925234763505,
+            "height": 72.98929080333872,
+            "measured": {
+              "width": 193,
+              "height": 73
+            },
+            "dragging": false
+          },
+          {
+            "id": "407a9bd3-ecfe-4f38-b094-d49d9408dac1",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "is_winning\n(bool)",
+              "backgroundColor": "var(--sketchlab-bg-yellow)"
+            },
+            "position": {
+              "x": 336.97362181643064,
+              "y": 506.09069271692397
+            },
+            "width": 193.29925234763505,
+            "height": 72.98929080333872,
+            "measured": {
+              "width": 193,
+              "height": 73
+            },
+            "dragging": false
+          },
+          {
+            "id": "ab4c60aa-8c62-4121-8246-dd13817663b1",
+            "type": "text",
+            "data": {
+              "text": "Design Your Scene",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": 567.3158256873903,
+              "y": 99.08368797203438
+            },
+            "width": 463.49817588768053,
+            "height": 64.05778223499905,
+            "measured": {
+              "width": 463,
+              "height": 64
+            },
+            "dragging": false
+          },
+          {
+            "id": "cb05908d-efd8-4015-8d90-071760381d37",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-red)"
+            },
+            "position": {
+              "x": 575.643519537967,
+              "y": 183.07379641395266
+            },
+            "width": 432.0379991188356,
+            "height": 343.92243464883745,
+            "measured": {
+              "width": 432,
+              "height": 344
+            },
+            "dragging": false
+          },
+          {
+            "id": "35a81e5b-9990-4763-9ffe-ab2f430933d7",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Arsenal",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": 575.643519537967,
+              "y": 184.92439504741412
+            },
+            "width": 211.81676173692097,
+            "height": 64.48204099615597,
+            "measured": {
+              "width": 212,
+              "height": 64
+            },
+            "dragging": false
+          },
+          {
+            "id": "c4579e03-8829-4a6c-be27-63fb24e072fa",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Gunnersaurus Rex",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 787.036022513731,
+              "y": 183.8546401431857
+            },
+            "width": 219.21915627076692,
+            "height": 64.48204099615597,
+            "measured": {
+              "width": 219,
+              "height": 64
+            },
+            "dragging": false
+          },
+          {
+            "id": "a5a1a917-fd87-447c-9f3d-d9daedb84e56",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "6",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "extra-large",
+              "backgroundColor": "#ffffff"
+            },
+            "position": {
+              "x": 601.9761591675842,
+              "y": 298.59175541779666
+            },
+            "width": 370.9682442146071,
+            "height": 64.48204099615597,
+            "measured": {
+              "width": 371,
+              "height": 64
+            },
+            "dragging": false,
+            "zIndex": 2
+          },
+          {
+            "id": "2d37cb4a-d531-4d7b-aae2-f7707cc50f67",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "True",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "extra-large",
+              "backgroundColor": "#ffffff"
+            },
+            "position": {
+              "x": 603.8267578010459,
+              "y": 398.52408162471585
+            },
+            "width": 370.9682442146071,
+            "height": 64.48204099615597,
+            "measured": {
+              "width": 371,
+              "height": 64
+            },
+            "dragging": false,
+            "zIndex": 1
+          },
+          {
+            "id": "deca435a-3892-4b9b-a8fd-54441502dd64",
             "type": "shape",
             "data": {
               "shapeType": "rectangle",
@@ -42,344 +248,393 @@
               "backgroundColor": "#ffffff"
             },
             "position": {
-              "x": 302.76560974121094,
-              "y": 258.0711784362793
+              "x": 586.7471113387357,
+              "y": 260.7989390193343
             },
-            "width": 206.01078676878478,
-            "height": 103.88887023925781,
+            "width": 402.42842098345216,
+            "height": 240.28891117499535,
             "measured": {
-              "width": 206,
-              "height": 104
+              "width": 402,
+              "height": 240
             },
-            "dragging": false,
-            "zIndex": 1
-          },
-          {
-            "id": "02cc0d50-3f2a-4629-b7a0-92b0808bf351",
-            "type": "shape",
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "#0040ff"
-            },
-            "position": {
-              "x": 302.76560974121094,
-              "y": 231.61754751624701
-            },
-            "width": 205.36276141712779,
-            "height": 60.64807366905569,
-            "measured": {
-              "width": 205,
-              "height": 61
-            },
-            "dragging": false
-          },
-          {
-            "id": "f6e456d4-2870-4ab6-8689-0313db414e67",
-            "type": "text",
-            "data": {
-              "text": "Real Madrid",
-              "strokeColor": "transparent",
-              "fontColor": "var(--sketchlab-stroke-yellow)"
-            },
-            "position": {
-              "x": 302.76560974121094,
-              "y": 231.76562118530273
-            },
-            "width": 109.4444580078125,
-            "height": 40,
-            "measured": {
-              "width": 109,
-              "height": 40
-            },
-            "dragging": false
-          },
-          {
-            "id": "7baec1f2-883d-4eba-938a-5994b9f13cf5",
-            "type": "text",
-            "data": {
-              "text": "team_name (String)",
-              "strokeColor": "var(--sketchlab-stroke-default)"
-            },
-            "position": {
-              "x": 289.26560974121094,
-              "y": 144.00584268569946
-            },
-            "width": 183.88888549804688,
-            "height": 40,
-            "measured": {
-              "width": 184,
-              "height": 40
-            },
-            "dragging": false
-          },
-          {
-            "id": "6ea18a63-2994-45fc-ace4-cefc1e97c422",
-            "type": "text",
-            "data": {
-              "text": "Mascot",
-              "strokeColor": "transparent",
-              "fontColor": "var(--sketchlab-stroke-yellow)"
-            },
-            "position": {
-              "x": 416.4901798867737,
-              "y": 229.79933284824608
-            },
-            "width": 89.36016587095725,
-            "height": 40,
-            "measured": {
-              "width": 89,
-              "height": 40
-            },
-            "dragging": false
-          },
-          {
-            "id": "1b3d1175-b476-4f98-ad96-636b5fe61e55",
-            "type": "text",
-            "data": {
-              "text": "mascot (String)",
-              "strokeColor": "var(--sketchlab-stroke-default)"
-            },
-            "position": {
-              "x": 485.96344937183915,
-              "y": 144.64271261171024
-            },
-            "width": 160,
-            "height": 40,
-            "measured": {
-              "width": 160,
-              "height": 40
-            },
-            "dragging": false
-          },
-          {
-            "id": "4ae6bbb3-73fe-418b-a759-0e0639b7095a",
-            "type": "text",
-            "data": {
-              "text": "favorite_color (String)",
-              "strokeColor": "var(--sketchlab-stroke-default)"
-            },
-            "position": {
-              "x": 588.0347407512486,
-              "y": 230.38259737041412
-            },
-            "width": 160,
-            "height": 40,
-            "measured": {
-              "width": 160,
-              "height": 40
-            },
-            "dragging": false
-          },
-          {
-            "id": "ea10d4ec-300f-44fc-86cc-5f64be3eed37",
-            "type": "text",
-            "data": {
-              "text": "goals_scored (int)",
-              "strokeColor": "var(--sketchlab-stroke-default)"
-            },
-            "position": {
-              "x": 555.9551920320056,
-              "y": 283.4596688877069
-            },
-            "width": 160,
-            "height": 40,
-            "measured": {
-              "width": 160,
-              "height": 40
-            },
-            "dragging": false
-          },
-          {
-            "id": "8dbc9162-4887-417b-b6fc-650b939b2b2a",
-            "type": "text",
-            "data": {
-              "text": "team_winning (boolean)",
-              "strokeColor": "var(--sketchlab-stroke-default)"
-            },
-            "position": {
-              "x": 555.1730557117302,
-              "y": 328.83167560201736
-            },
-            "width": 200.18046068252875,
-            "height": 55.55373245769516,
-            "measured": {
-              "width": 200,
-              "height": 56
-            },
-            "dragging": false
-          },
-          {
-            "id": "acc8a89e-8de3-4226-bc29-e2577a0184d7",
-            "type": "text",
-            "data": {
-              "text": "4",
-              "strokeColor": "var(--sketchlab-stroke-default)"
-            },
-            "position": {
-              "x": 323.75231616576787,
-              "y": 262.19033295088775
-            },
-            "width": 160,
-            "height": 40,
-            "measured": {
-              "width": 160,
-              "height": 40
-            },
-            "zIndex": 5,
-            "dragging": false
-          },
-          {
-            "id": "252f7327-71ce-4fb1-8d18-903846d700de",
-            "type": "text",
-            "data": {
-              "text": "true",
-              "strokeColor": "var(--sketchlab-stroke-default)"
-            },
-            "position": {
-              "x": 326.8296995678873,
-              "y": 309.85216059446066
-            },
-            "width": 160,
-            "height": 40,
-            "measured": {
-              "width": 160,
-              "height": 40
-            },
-            "zIndex": 5,
             "dragging": false
           }
         ],
         "edges": [
           {
-            "id": "9d23b4eb-0fc6-4a7a-9971-cd3115384f54",
-            "source": "7baec1f2-883d-4eba-938a-5994b9f13cf5",
-            "target": "f6e456d4-2870-4ab6-8689-0313db414e67",
+            "id": "9823227d-57ef-433f-96bc-7aa9aaabfcfc",
             "type": "straight",
             "style": {
               "stroke": "var(--sketchlab-stroke-default)",
-              "strokeWidth": 1
+              "strokeWidth": 3
             },
-            "markerEnd": {
-              "type": "arrowclosed",
-              "color": "var(--sketchlab-stroke-default)",
-              "width": 14,
-              "height": 14,
-              "strokeWidth": 1
-            },
-            "sourceHandle": "bottom-source",
-            "zIndex": 2,
-            "targetHandle": "top-target"
-          },
-          {
-            "id": "24c06de9-950d-454d-9d92-2e492e1f0d91",
-            "source": "1b3d1175-b476-4f98-ad96-636b5fe61e55",
-            "target": "6ea18a63-2994-45fc-ace4-cefc1e97c422",
-            "type": "straight",
-            "style": {
-              "stroke": "var(--sketchlab-stroke-default)",
-              "strokeWidth": 1
-            },
-            "markerEnd": {
-              "type": "arrowclosed",
-              "color": "var(--sketchlab-stroke-default)",
-              "width": 14,
-              "height": 14,
-              "strokeWidth": 1
-            },
-            "zIndex": 3,
-            "sourceHandle": "bottom-source",
-            "targetHandle": "top-target"
-          },
-          {
-            "id": "32862b85-e846-4049-81b4-e514b76a67ee",
-            "source": "4ae6bbb3-73fe-418b-a759-0e0639b7095a",
-            "target": "6ea18a63-2994-45fc-ace4-cefc1e97c422",
-            "type": "straight",
-            "style": {
-              "stroke": "var(--sketchlab-stroke-default)",
-              "strokeWidth": 1
-            },
-            "markerEnd": {
-              "type": "arrowclosed",
-              "color": "var(--sketchlab-stroke-default)",
-              "width": 14,
-              "height": 14,
-              "strokeWidth": 1
-            },
-            "sourceHandle": "left-source",
-            "zIndex": 4,
-            "targetHandle": "right-target"
-          },
-          {
-            "id": "9779035e-6ad8-49f7-819e-1bcfd2ed996e",
-            "source": "ea10d4ec-300f-44fc-86cc-5f64be3eed37",
-            "target": "acc8a89e-8de3-4226-bc29-e2577a0184d7",
-            "type": "straight",
-            "style": {
-              "stroke": "var(--sketchlab-stroke-default)",
-              "strokeWidth": 1
-            },
-            "markerEnd": {
-              "type": "arrowclosed",
-              "color": "var(--sketchlab-stroke-default)",
-              "width": 14,
-              "height": 14,
-              "strokeWidth": 1
-            },
-            "zIndex": 6,
-            "sourceHandle": "left-source",
-            "targetHandle": "right-target"
-          },
-          {
-            "id": "8837f8f3-208a-43c2-af2d-055579f0c521",
-            "source": "8dbc9162-4887-417b-b6fc-650b939b2b2a",
-            "target": "252f7327-71ce-4fb1-8d18-903846d700de",
-            "type": "straight",
-            "style": {
-              "stroke": "var(--sketchlab-stroke-default)",
-              "strokeWidth": 1
-            },
-            "markerEnd": {
-              "type": "arrowclosed",
-              "color": "var(--sketchlab-stroke-default)",
-              "width": 14,
-              "height": 14,
-              "strokeWidth": 1
-            },
-            "sourceHandle": "left-source",
-            "zIndex": 7,
-            "targetHandle": "right-target"
-          },
-          {
-            "id": "90a615e2-aa14-4535-aa33-fc6f90863d6b",
-            "type": "straight",
-            "style": {
-              "stroke": "var(--sketchlab-stroke-default)",
-              "strokeWidth": 1
-            },
-            "source": "6ea18a63-2994-45fc-ace4-cefc1e97c422",
+            "source": "407a9bd3-ecfe-4f38-b094-d49d9408dac1",
             "sourceHandle": "right-source",
-            "target": "02cc0d50-3f2a-4629-b7a0-92b0808bf351",
-            "targetHandle": "right-target",
+            "target": "2d37cb4a-d531-4d7b-aae2-f7707cc50f67",
+            "targetHandle": "bottom-target",
             "markerEnd": {
               "type": "arrowclosed",
               "color": "var(--sketchlab-stroke-default)",
               "width": 14,
               "height": 14,
-              "strokeWidth": 1
-            }
+              "strokeWidth": 3
+            },
+            "zIndex": 3
+          },
+          {
+            "id": "d2d29a90-e566-4e68-8d7c-d920f691aa62",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 3
+            },
+            "source": "8c383b6a-428a-494e-b1c2-faa00341ebd6",
+            "sourceHandle": "right-source",
+            "target": "a5a1a917-fd87-447c-9f3d-d9daedb84e56",
+            "targetHandle": "bottom-target",
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "zIndex": 4
+          },
+          {
+            "id": "86f9e42a-e91a-4caa-929d-3019e309aad7",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 3
+            },
+            "source": "aad4ea34-c2be-4dd3-8463-c4987dce3621",
+            "sourceHandle": "right-source",
+            "target": "cb05908d-efd8-4015-8d90-071760381d37",
+            "targetHandle": "left-target",
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "zIndex": 5
+          },
+          {
+            "id": "ef4e1c9e-978a-4465-be61-fd161a08f9ad",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 3
+            },
+            "source": "d3665912-4948-4f71-ac88-47d0388d2fa9",
+            "sourceHandle": "right-source",
+            "target": "c4579e03-8829-4a6c-be27-63fb24e072fa",
+            "targetHandle": "bottom-target",
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "zIndex": 6
+          },
+          {
+            "id": "fe941708-31b5-4637-9fc8-b73e5791b2f5",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 3
+            },
+            "source": "66b4d524-64d4-4e17-976b-3bb58813c2ac",
+            "sourceHandle": "right-source",
+            "target": "35a81e5b-9990-4763-9ffe-ab2f430933d7",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "zIndex": 7
           }
         ],
         "viewport": {
-          "x": 17.791992044710355,
-          "y": 58.143988393959035,
-          "zoom": 1.2273575033905462
+          "x": -294.5557057252312,
+          "y": -41.83058748360014,
+          "zoom": 1.0049025722767058
+        }
+      }
+    },
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "24e8ecc7-849e-4816-be01-874d8d560c86",
+            "type": "text",
+            "data": {
+              "text": "type your label here\n(string)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontFamily": "serif"
+            },
+            "position": {
+              "x": -64.1582995608895,
+              "y": 44.25847284775236
+            },
+            "width": 191.125,
+            "height": 69.90441176470591,
+            "measured": {
+              "width": 191,
+              "height": 70
+            },
+            "dragging": false
+          },
+          {
+            "id": "500878d6-33dd-4ce6-8a56-52cc4ec63660",
+            "type": "text",
+            "data": {
+              "text": "type your label here\n(string)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontFamily": "serif"
+            },
+            "position": {
+              "x": -63.44506426677172,
+              "y": 162.56545814187004
+            },
+            "width": 191.125,
+            "height": 69.90441176470591,
+            "measured": {
+              "width": 191,
+              "height": 70
+            },
+            "dragging": false
+          },
+          {
+            "id": "981cb013-4a99-4d90-a765-6f2ac6e097ad",
+            "type": "text",
+            "data": {
+              "text": "type your label here\n(string)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontFamily": "serif"
+            },
+            "position": {
+              "x": -60.52594661971291,
+              "y": 277.6518552006936
+            },
+            "width": 191.125,
+            "height": 69.90441176470591,
+            "measured": {
+              "width": 191,
+              "height": 70
+            },
+            "dragging": false
+          },
+          {
+            "id": "0da9b48d-e4c9-4def-babe-85cf2ed9040b",
+            "type": "text",
+            "data": {
+              "text": "type your label here\n(int)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontFamily": "serif"
+            },
+            "position": {
+              "x": -63.01675544324236,
+              "y": 498.24928167128184
+            },
+            "width": 191.125,
+            "height": 69.90441176470591,
+            "measured": {
+              "width": 191,
+              "height": 70
+            },
+            "dragging": false
+          },
+          {
+            "id": "6a54ae48-79b9-41ac-8922-a70a2970cbcb",
+            "type": "text",
+            "data": {
+              "text": "type your label here\n(bool)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontFamily": "serif"
+            },
+            "position": {
+              "x": -61.12153485500704,
+              "y": 393.96067873010526
+            },
+            "width": 191.125,
+            "height": 69.90441176470591,
+            "measured": {
+              "width": 191,
+              "height": 70
+            },
+            "dragging": false
+          },
+          {
+            "id": "da665d7f-61ca-4929-8184-4f9ad9f0098b",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": ""
+            },
+            "position": {
+              "x": 144.1054357332281,
+              "y": -23.14470421107103
+            },
+            "width": 602.9209599999999,
+            "height": 601.4899199999998,
+            "measured": {
+              "width": 603,
+              "height": 601
+            }
+          },
+          {
+            "id": "1ddfef73-169b-4ec7-9152-f923e3b21b05",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "backgroundColor": "var(--sketchlab-bg-red)"
+            },
+            "position": {
+              "x": -74.7727554432424,
+              "y": 31.199964906576014
+            },
+            "width": 213.02941176470588,
+            "height": 95.69485294117646,
+            "measured": {
+              "width": 213,
+              "height": 96
+            },
+            "dragging": false,
+            "zIndex": -3
+          },
+          {
+            "id": "bbac2e7e-bfdf-471a-816c-2f73d445ccc3",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "backgroundColor": "var(--sketchlab-bg-red)"
+            },
+            "position": {
+              "x": -74.31687309030124,
+              "y": 150.30566343598784
+            },
+            "width": 213.02941176470588,
+            "height": 95.69485294117646,
+            "measured": {
+              "width": 213,
+              "height": 96
+            },
+            "dragging": false,
+            "zIndex": -2
+          },
+          {
+            "id": "2e87b2ac-435b-47a5-b739-308c24d5ea09",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "backgroundColor": "var(--sketchlab-bg-red)"
+            },
+            "position": {
+              "x": -75.42165250206592,
+              "y": 264.0979428477526
+            },
+            "width": 213.02941176470588,
+            "height": 94.59007352941177,
+            "measured": {
+              "width": 213,
+              "height": 95
+            },
+            "dragging": false,
+            "zIndex": -4
+          },
+          {
+            "id": "09cfa6d0-d1fe-4888-be29-5bbb431cc795",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "backgroundColor": "var(--sketchlab-bg-blue)"
+            },
+            "position": {
+              "x": -73.2120936785365,
+              "y": 381.20456049481135
+            },
+            "width": 213.02941176470588,
+            "height": 94.59007352941177,
+            "measured": {
+              "width": 213,
+              "height": 95
+            },
+            "dragging": false,
+            "zIndex": -5
+          },
+          {
+            "id": "2337dfb3-d330-4591-b5cb-1f2741dcc756",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "backgroundColor": "var(--sketchlab-bg-yellow)"
+            },
+            "position": {
+              "x": -74.31687309030121,
+              "y": 486.98071585441613
+            },
+            "width": 213.02941176470588,
+            "height": 94.59007352941177,
+            "measured": {
+              "width": 213,
+              "height": 95
+            },
+            "dragging": false,
+            "zIndex": -6
+          },
+          {
+            "id": "a290c6fe-dee8-46e3-bc8b-a4a690e0d69e",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Design Your Scene",
+              "fontSize": "extra-large",
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-default)"
+            },
+            "position": {
+              "x": 189.0439261398975,
+              "y": -17.567212058462843
+            },
+            "width": 501.95989858678865,
+            "height": 60,
+            "measured": {
+              "width": 502,
+              "height": 60
+            },
+            "dragging": false
+          }
+        ],
+        "edges": [
+
+        ],
+        "viewport": {
+          "x": 356.78570298801907,
+          "y": 48.806792564523334,
+          "zoom": 0.8989871883767963
         }
       }
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-09-02 06:01:04 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-02 06:05:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-02 06:36:22 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-02 06:41:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-02 06:50:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-02 06:53:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-02 07:05:34 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-02 07:13:06 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-09-02 06:01:04 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-02 06:05:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-02 06:36:22 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-02 06:41:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-02 06:50:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-02 06:53:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-02 07:05:34 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-02 07:13:06 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-04 03:06:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-04 03:30:16 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-04 03:34:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-04 03:50:50 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-04 03:50:54 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-04 03:53:17 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-04 03:56:35 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Sketchlab>
