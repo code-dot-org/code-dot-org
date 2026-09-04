@@ -152,18 +152,22 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   const [style, setStyle] = useState<ImageStyle>(
     existing?.generation?.style || create?.initial?.style || 'smooth'
   );
+  // Calm when the set checkbox starts checked (posed frames must agree
+  // with the base), as checking it by hand also sets.
   const [temperatureLevel, setTemperatureLevel] = useState(
-    TEMPERATURE_LEVEL_DEFAULT
+    sheet ? CHARACTER_SET_TEMPERATURE_LEVEL : TEMPERATURE_LEVEL_DEFAULT
   );
   const [source, setSource] = useState<RandomnessSource>('new');
   const [error, setError] = useState<string | null>(null);
   // A whole character — idling, walking, jumping — instead of one picture.
-  // New sprites only: a set is drawn from a fresh base.
-  const [characterSet, setCharacterSet] = useState(false);
+  // Pre-checked when the image already is one: regenerating a character
+  // should keep it a character unless the student unchecks it.
+  const [characterSet, setCharacterSet] = useState(!!sheet);
   const [progress, setProgress] = useState<CharacterSetProgress | null>(null);
   // Counts generate runs; progress callbacks from older runs are dropped.
   const progressEpochRef = useRef(0);
-  const canMakeSet = !!create && imageType === 'sprite' && source === 'new';
+  // Sets are drawn from a fresh base, so the offer follows the 'new' source.
+  const canMakeSet = imageType === 'sprite' && source === 'new';
   const makingSet = canMakeSet && characterSet;
 
   // Flag a duplicate as it's typed and hold the buttons until it's unique.
@@ -220,7 +224,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
             }
           }
         );
-        await onAccept(result, trimmedName);
+        await onAccept(result, create ? trimmedName : undefined);
         return;
       }
       const result = await generateImage(prompt.trim(), options);
