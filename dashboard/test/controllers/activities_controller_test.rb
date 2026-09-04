@@ -606,7 +606,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   describe '#milestone' do
-    let(:anon_user_id) {AnonUserId.generate}
+    let(:anon_user_id) {Cdo::AnonUserId.generate}
 
     context 'when there is no current user' do
       before do

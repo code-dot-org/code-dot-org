@@ -6,7 +6,7 @@ class Services::AnonymousLevel::ProgressTrackerTest < ActiveSupport::TestCase
   let(:described_class) {Services::AnonymousLevel::ProgressTracker}
   let(:described_instance) {described_class.new(**tracker_params)}
 
-  let(:anon_user_id) {AnonUserId.generate}
+  let(:anon_user_id) {Cdo::AnonUserId.generate}
   let(:script) {create(:unit)}
   let(:level) {create(:level)}
   let(:unit_group) {create(:unit_group)}

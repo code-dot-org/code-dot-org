@@ -5,7 +5,7 @@ class AnonymousLevel::ProgressTest < ActiveSupport::TestCase
 
   let(:script) {create(:unit)}
   let(:level) {create(:level)}
-  let(:anon_user_id) {AnonUserId.generate}
+  let(:anon_user_id) {Cdo::AnonUserId.generate}
 
   describe 'shared level progress behavior' do
     let(:progress) do

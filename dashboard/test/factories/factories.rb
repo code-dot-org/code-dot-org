@@ -1665,7 +1665,7 @@ FactoryBot.define do
     association :script
     association :level, factory: :applab
 
-    anon_user_id {AnonUserId.generate}
+    anon_user_id {Cdo::AnonUserId.generate}
   end
 
   factory :user_script do
