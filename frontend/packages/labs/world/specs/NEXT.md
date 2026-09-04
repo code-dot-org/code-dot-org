@@ -377,8 +377,35 @@ ambiguity, never asking before a delete, and accepting a duplicate each fail
 the test that names them. Read-only needed no fix here — unlike the pixel
 editor, this one already disabled its twelve controls.
 
-What is left is `EffectEditor` (1,227 lines), whose pure halves are covered
-and whose component half is not.
+`EffectEditor` was audited rather than assumed, and the assumption was wrong
+again. Measured with `coverage-v8` over the whole suite, the effect module is
+in good shape: the compiler is at 93%, glsl 92%, the module root 87%, the
+model 85%. Two areas sit low and should stay there — `effect/preview` (20%)
+and `effect/runtime` (12%) are WebGL and Phaser filter attachment, and jsdom
+has neither a GL context nor a scene, so testing them means headless-gl or a
+deep Phaser mock to cover glue. `EffectEditor.tsx` itself is 67% statements
+and 55% functions, which is "some branches unrun" rather than untested: it
+already has sixty-four tests across eight files.
+
+The gap the measurement found was somewhere else entirely. THIRTEEN OF THE
+TWENTY-FIVE NODE TYPES WERE NAMED BY NO TEST — clamp, dot, maximum, minimum,
+mix, modulo, normalize, power, ramp, rotate, smoothstep, split, step — and a
+node definition is mostly one line, the GLSL it emits. A wrong emitter is
+invisible: it compiles, because the compiler assembles strings and does not
+read GLSL, and it type-checks, because a string is a string. What it produces
+is a shader that fails in the sandbox when a learner drops that node into a
+graph.
+
+So `everyNode.test.ts` walks the registry, builds a graph for each of the
+thirty-six nodes, and compiles it — feeding required ports by TYPE rather
+than per node, so a new definition needing a `vec2` needs nothing added, and
+one needing a type nothing can feed fails loudly. A table of expected GLSL
+must match the registry exactly, which is what makes the file cover the
+thirty-seventh node nobody remembers to write a test for. `nodes/definitions`
+went from 83% statements to 98.78%, at 100% branches.
+
+Falsified three ways: a typo in `minimum`'s GLSL, a node added with no table
+row, and a row removed each fail exactly the test that names them.
 
 ## 6. One voice on the shelf
 
