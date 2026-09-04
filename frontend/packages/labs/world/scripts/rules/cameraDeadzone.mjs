@@ -15,8 +15,8 @@ import {
 
 const rule = defineRule({
   name: 'Camera Deadzone',
-  ability: 'Ignores Small Movements',
-  header: `// "Ignores Small Movements" — the camera holds still while the subject moves
+  ability: 'Ignores Small Moves',
+  header: `// "Ignores Small Moves" — the camera holds still while the subject moves
 // about inside a box, and only follows once it leaves.
 //
 // The single biggest difference in how a platform camera FEELS. Without it the

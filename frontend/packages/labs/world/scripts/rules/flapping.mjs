@@ -29,8 +29,8 @@ import {CanMove, velocity} from './motion.mjs';
 
 const rule = defineRule({
   name: 'Flapping',
-  ability: 'Flies in Flaps and Glides',
-  header: `// "Flies in Flaps and Glides" — the enemy that is never where you last saw it.
+  ability: 'Flaps and Glides',
+  header: `// "Flaps and Glides" — the enemy that is never where you last saw it.
 //
 // The other two enemies in the platformer are things you learn and then avoid:
 // a ball rolls its floor, a robot takes the ladder you are on. Both of them are

@@ -16,8 +16,8 @@ import {
 
 const rule = defineRule({
   name: 'Patrol',
-  ability: 'Walks Back and Forth',
-  header: `// "Walks Back and Forth" — the second thing a level needs after a player.
+  ability: 'Patrols',
+  header: `// "Patrols" — the second thing a level needs after a player.
 //
 // Steering chases and flees, which is a thing an enemy does about YOU. This is
 // what one does when you are not there: a guard on its beat, a platform on its

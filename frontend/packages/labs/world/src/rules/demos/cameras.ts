@@ -128,7 +128,7 @@ export const cameraFollowDemo = cameraDemo(
 );
 
 /**
- * "Eases the Camera" — the view catches up instead of snapping.
+ * "Catches Up Smoothly" — the view catches up instead of snapping.
  *
  * Smoothness is the fraction of the gap closed each frame at sixty frames a
  * second, so a small one lags: at 0.05 a walker moving a hundred pixels a
@@ -144,7 +144,7 @@ export const cameraEaseDemo = cameraDemo('cameraEase', 'rules/cameraEase', {
 });
 
 /**
- * "Ignores Small Movements" — the view holds until the walker leaves the box.
+ * "Ignores Small Moves" — the view holds until the walker leaves the box.
  *
  * The slack is the default forty-eight pixels, so the first half-second is a
  * walker crossing a motionless picture and everything after it is the picture
@@ -157,7 +157,7 @@ export const cameraDeadzoneDemo = cameraDemo(
 );
 
 /**
- * "Keeps the View in the Map" — the view stops at the edge and the walker goes on.
+ * "Keeps the View Inside" — the view stops at the edge and the walker goes on.
  *
  * Started to the right of the map and walking slowly, so the recording is
  * about two parts pan to three parts stopped: long enough at the start to

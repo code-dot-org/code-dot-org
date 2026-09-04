@@ -402,7 +402,7 @@ step ordered before Motion integrates. A platformer elects "Moves Across" and
 leaves the vertical to gravity; a top-down game elects both. It was one
 sideways-only trait until a demonstration of it recorded a box standing
 perfectly still with the down arrow held, which was the platformer's answer
-written into the rule. `rules/stock/input` ("Responds to Input")
+written into the rule. `rules/stock/input` ("Reads the Keyboard")
 declares the two key events and fans each frame's key edges out to every actor.
 What stayed behind is the World's keyboard: which keys are down, and which
 changed SINCE THE LAST TICK. That last one is the whole reason the split is

@@ -18,8 +18,8 @@ import {
 
 const rule = defineRule({
   name: 'Camera Confined',
-  ability: 'Keeps the View in the Map',
-  header: `// "Keeps the View in the Map" — the camera stops at the edge of the level.
+  ability: 'Keeps the View Inside',
+  header: `// "Keeps the View Inside" — the camera stops at the edge of the level.
 //
 // The spec's promise: walk to the left-most part of the map and the camera
 // locks there, showing the left edge, until you have moved far enough right for

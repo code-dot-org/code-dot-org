@@ -66,10 +66,10 @@ describe('the use-rule dropdown', () => {
     // This used to leave out the rules a project ran by merely holding, since
     // a `use rule` naming one said nothing. Every rule is like that now, so
     // the block's only remaining meaning is a RULE's dependency — and "Drives
-    // with Arrow Keys requires Responds to Input" is a true and useful thing
+    // with Arrow Keys requires Reads the Keyboard" is a true and useful thing
     // to be able to say.
-    holds('input', 'Input', 'Responds to Input');
-    expect(options().map(([label]) => label)).toContain('Responds to Input');
+    holds('input', 'Input', 'Reads the Keyboard');
+    expect(options().map(([label]) => label)).toContain('Reads the Keyboard');
   });
 
   it('offers a project rule that shadows one of the engine’s', () => {

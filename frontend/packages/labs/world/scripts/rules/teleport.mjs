@@ -34,8 +34,8 @@ import {CanMove, held, velocity} from './motion.mjs';
 
 const rule = defineRule({
   name: 'Teleport',
-  ability: 'Steps Through a Pad',
-  header: `// "Steps Through a Pad" — a way across a room that is not a way through it.
+  ability: 'Has Teleport Pads',
+  header: `// "Has Teleport Pads" — a way across a room that is not a way through it.
 //
 // Every other way of getting somewhere in this library is CONTINUOUS: you walk,
 // you fall, you climb, you fly. A room built out of those is a room whose shape

@@ -143,7 +143,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'inventory',
     name: 'Inventory',
-    ability: 'Carries Things',
+    ability: 'Holds Things',
     description:
       'A bag: what an actor is holding, and the way to spend one of a kind. Collection keeps a record of everything picked up, which only grows; this is the half that can go down, for a key that is gone once the door is open.',
     provides: ['Carries', 'Can Be Carried'],
@@ -179,7 +179,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'patrol',
     name: 'Patrol',
-    ability: 'Walks Back and Forth',
+    ability: 'Patrols',
     description:
       'Walks an actor out and back on a beat of its own, across or down or both. What an enemy does when the player is not there, and what a moving platform does always.',
     provides: ['Patrols Across', 'Patrols Down'],
@@ -188,7 +188,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'carry',
     name: 'Carrying',
-    ability: 'Carries What Stands On It',
+    ability: 'Carries Riders',
     description:
       'Moves whatever is standing on an actor along with it, however that actor is being moved \u2014 a lift, a raft, a platform on a track. Two abilities: what carries, and what rides.',
     provides: ['Carries', 'Rides'],
@@ -197,7 +197,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'attachment',
     name: 'Attachment',
-    ability: 'Rides Along with an Actor',
+    ability: 'Rides on an Actor',
     description:
       'Keeps one actor on another, at an offset it carries. A health bar over an enemy, a name over a player, a shield around a ship — anything that should move as one thing with something else.',
     provides: ['Attached'],
@@ -278,7 +278,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'input',
     name: 'Input',
-    ability: 'Responds to Input',
+    ability: 'Reads the Keyboard',
     description:
       'Raises an event when a key goes down or comes up, so a handler can react to a press rather than to it being held. The world hears every key; an actor hears the ones it elected to.',
     provides: ['Takes Keyboard Input'],
@@ -287,7 +287,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'mouse',
     name: 'Mouse',
-    ability: 'Responds to the Mouse',
+    ability: 'Reads the Mouse',
     description:
       'Raises an event when a mouse button goes down or comes up, on the same terms as the keyboard rule, and tells an actor when a press landed on it. Where the pointer is is not an event — it is the “mouse position” block, which answers at any moment.',
     provides: ['Takes Mouse Input', 'Can Be Clicked'],
@@ -314,7 +314,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'history',
     name: 'History',
-    ability: 'Can Be Taken Back',
+    ability: 'Undoes Moves',
     description:
       'Writes down where everything is when the project says a move is happening, and puts it all back when the project says to undo one. Eight moves deep, and it remembers places rather than everything.',
     provides: ['Remembers Where It Was'],
@@ -368,7 +368,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'surfaces',
     name: 'Surfaces',
-    ability: 'Has Ground That Acts',
+    ability: 'Has Special Floors',
     description:
       'Three kinds of floor that do something to whoever stands on them: a belt that carries you along, ice you cannot stop or turn on, and sludge that drags. A tile takes one; a walker takes one trait and meets all three.',
     provides: ['Conveys', 'Slippery', 'Slows', 'Stands on Surfaces'],
@@ -377,7 +377,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'turning',
     name: 'Turning',
-    ability: 'Turns When It Hits Something',
+    ability: 'Turns at Walls',
     description:
       'Goes the way it is facing and turns when it stops getting anywhere. One number decides what kind of enemy it is: a hundred and eighty is a ball rolling back and forth, ninety is a rocket taking the next turning.',
     provides: ['Turns When It Hits Something'],
@@ -386,7 +386,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'prowling',
     name: 'Prowling',
-    ability: 'Chooses Only at a Junction',
+    ability: 'Prowls',
     description:
       'An enemy that goes the way it is going and reconsiders only where reconsidering is possible — when it lands, when it reaches a ladder, when a climb ends. It takes ladders using the same trait a player does.',
     provides: ['Prowls'],
@@ -395,7 +395,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'flapping',
     name: 'Flapping',
-    ability: 'Flies in Flaps and Glides',
+    ability: 'Flaps and Glides',
     description:
       'An enemy that flies in two phases: a few short flutters, each upward and a little towards you, and then a long straight glide aimed at where you were when it began. The glide commits, so walking under it is the way past.',
     provides: ['Flaps and Glides'],
@@ -404,7 +404,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'teleport',
     name: 'Teleport',
-    ability: 'Steps Through a Pad',
+    ability: 'Has Teleport Pads',
     description:
       'Pads that are two ends of one place. Step on one and come out of another of the same colour, chosen afresh each time — a player when it asks to, an enemy whether it wants to or not.',
     provides: ['Is a Teleport Pad', 'Uses Teleport Pads'],
@@ -413,7 +413,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'switches',
     name: 'Switches',
-    ability: 'Has Walls That Come and Go',
+    ability: 'Has Switches',
     description:
       'Pads on the floor that flip every wall painted the same colour — each wall from wherever it was, so a switch swaps a corridor rather than opening one. Anything that moves can press one.',
     provides: ['Is a Switch', 'Is a Switched Wall'],
@@ -422,7 +422,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'digging',
     name: 'Digging',
-    ability: 'Digs Through Blocks',
+    ability: 'Digs Holes',
     description:
       'A hole you make in the ground where you point, and one that fills itself back in on whoever is standing in it. The block owns how long it lasts, so two kinds of floor can close at two speeds.',
     provides: ['Can Be Dug', 'Digs'],
@@ -505,7 +505,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'cameraEase',
     name: 'Camera Ease',
-    ability: 'Eases the Camera',
+    ability: 'Catches Up Smoothly',
     description:
       'Lets a camera catch up to what it is aiming at over a few frames instead of snapping to it. Needs Camera.',
     provides: ['Eases'],
@@ -515,7 +515,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'cameraDeadzone',
     name: 'Camera Deadzone',
-    ability: 'Ignores Small Movements',
+    ability: 'Ignores Small Moves',
     description:
       'Holds a camera still while what it follows moves about inside a box, so the view only travels when the player really goes somewhere. Needs Camera.',
     provides: ['Has a Deadzone'],
@@ -525,7 +525,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'cameraConfined',
     name: 'Camera Confined',
-    ability: 'Keeps the View in the Map',
+    ability: 'Keeps the View Inside',
     description:
       'Stops a camera at the edge of the map, so the view never shows past the level. Needs Camera.',
     provides: ['Confined to the Map'],

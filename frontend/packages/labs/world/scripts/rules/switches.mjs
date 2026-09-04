@@ -22,8 +22,8 @@ import {CanMove} from './motion.mjs';
 
 const rule = defineRule({
   name: 'Switches',
-  ability: 'Has Walls That Come and Go',
-  header: `// "Has Walls That Come and Go" — a room whose shape you can change.
+  ability: 'Has Switches',
+  header: `// "Has Switches" — a room whose shape you can change.
 //
 // Every other wall in this library is a fact about the level. This one is a
 // fact about what you have DONE in it, and that is a different kind of puzzle:

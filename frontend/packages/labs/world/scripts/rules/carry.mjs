@@ -21,8 +21,8 @@ import {
 
 const rule = defineRule({
   name: 'Carrying',
-  ability: 'Carries What Stands On It',
-  header: `// "Carries What Stands On It" — the moving platform.
+  ability: 'Carries Riders',
+  header: `// "Carries Riders" — the moving platform.
 //
 // Solid Bodies stops a body ending up inside a solid one, and Gravity rests a
 // faller on whatever it landed on. Between them a platform holds a player up

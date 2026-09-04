@@ -1,4 +1,4 @@
-// "Can Be Taken Back" — the world remembers where things were.
+// "Undoes Moves" — the world remembers where things were.
 //
 // A box that marches four squares to the right and then walks back through
 // exactly the places it stood in. Nothing MOVES it back: each step of the

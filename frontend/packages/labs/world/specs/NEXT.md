@@ -286,6 +286,38 @@ Chooses Only at a Junction` becomes `Prowling / Turns at Junctions`.
 register; the rename is a `say`/`ability` change and a regeneration, and the
 progression tests still pass because they key on ids.
 
+_Status, 2026-09-04: done._ Seventeen of the forty-seven changed; the other
+thirty already spoke in one voice. The rule applied: a plain present-tense
+verb phrase for what the world or actor now does, no implementation and no
+condition in it, four words or fewer, and where the rule's name already IS the
+verb, the verb (`Patrol / Patrols`, `Prowling / Prowls`, as `Jumping / Jumps`
+always was).
+
+| was                          | is                    |
+| ---------------------------- | --------------------- |
+| Carries Things (Inventory)   | Holds Things          |
+| Walks Back and Forth         | Patrols               |
+| Carries What Stands On It    | Carries Riders        |
+| Rides Along with an Actor    | Rides on an Actor     |
+| Responds to Input            | Reads the Keyboard    |
+| Responds to the Mouse        | Reads the Mouse       |
+| Can Be Taken Back            | Undoes Moves          |
+| Has Ground That Acts         | Has Special Floors    |
+| Turns When It Hits Something | Turns at Walls        |
+| Chooses Only at a Junction   | Prowls                |
+| Flies in Flaps and Glides    | Flaps and Glides      |
+| Steps Through a Pad          | Has Teleport Pads     |
+| Has Walls That Come and Go   | Has Switches          |
+| Digs Through Blocks          | Digs Holes            |
+| Eases the Camera             | Catches Up Smoothly   |
+| Ignores Small Movements      | Ignores Small Moves   |
+| Keeps the View in the Map    | Keeps the View Inside |
+
+Trait names were left alone: a trait is what an ACTOR elects and is stored by
+name in every file that elects it, so Turning's trait is still `Turns When It
+Hits Something` while its ability is `Turns at Walls` — the same distance
+Gravity keeps between `Has Gravity` and `Affected by Gravity`.
+
 ## 7. Answer the behaviors question and remove one thing
 
 **The problem.** The `TODO` asks "are behaviors actually that useful?" — the

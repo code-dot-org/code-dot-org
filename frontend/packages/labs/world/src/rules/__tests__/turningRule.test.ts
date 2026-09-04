@@ -1,4 +1,4 @@
-// "Turns When It Hits Something" — what it declares, and the two orderings.
+// "Turns at Walls" — what it declares, and the two orderings.
 //
 // `stockRulesRun` covers what it does. What this pins is the shape, because
 // the whole rule is two steps in two moments and one number, and each of the

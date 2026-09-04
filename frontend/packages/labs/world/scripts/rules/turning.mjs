@@ -31,8 +31,8 @@ import {CanMove, held, positionBefore, velocity} from './motion.mjs';
 
 const rule = defineRule({
   name: 'Turning',
-  ability: 'Turns When It Hits Something',
-  header: `// "Turns When It Hits Something" — the enemy that needs no brain at all.
+  ability: 'Turns at Walls',
+  header: `// "Turns at Walls" — the enemy that needs no brain at all.
 //
 // Patrol already walks back and forth, and it turns on a CLOCK: a beat is a
 // speed and a period, and a guard walking one has no idea there is a wall in

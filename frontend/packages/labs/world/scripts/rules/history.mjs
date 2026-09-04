@@ -19,8 +19,8 @@ import {
 
 const rule = defineRule({
   name: 'History',
-  ability: 'Can Be Taken Back',
-  header: `// "Can Be Taken Back" — a world that remembers where things were.
+  ability: 'Undoes Moves',
+  header: `// "Undoes Moves" — a world that remembers where things were.
 //
 // A puzzle is a game you are meant to get wrong. Every other genre here
 // forgives a mistake by killing you and starting again, which is right for an

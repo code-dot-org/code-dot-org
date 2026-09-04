@@ -1,4 +1,4 @@
-// "Has Ground That Acts" — what it declares, and the shape of the split.
+// "Has Special Floors" — what it declares, and the shape of the split.
 //
 // `stockRulesRun` covers what the three floors do. What this pins is the
 // arrangement, because the two decisions in it look like taste and are not:

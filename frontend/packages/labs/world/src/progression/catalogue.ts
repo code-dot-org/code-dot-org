@@ -1601,7 +1601,7 @@ export const TILES: readonly Tile[] = [
       kind: 'outcome',
       says: 'The Ball reaches BOTH walls and comes back off each of them, which is what turning on the world rather than on a clock buys.',
       falsePass:
-        '"Walks Back and Forth", which also goes one way and then the other and would pass "it reversed" — and, being a clock, would pass "it turns at regular places" too. What it cannot do is turn at the WALL. Its beat is a speed and a period and knows nothing about the room, so in a corridor this long it turns round in the middle of it and never touches either end. So this measures WHERE the Ball turns.',
+        '"Patrols", which also goes one way and then the other and would pass "it reversed" — and, being a clock, would pass "it turns at regular places" too. What it cannot do is turn at the WALL. Its beat is a speed and a period and knows nothing about the room, so in a corridor this long it turns round in the middle of it and never touches either end. So this measures WHERE the Ball turns.',
       run: {
         probes: {ball: {kind: 'positions', of: 'Ball'}},
         // Fine legs, because the check has to see WHERE it turned rather

@@ -1,4 +1,4 @@
-// "Chooses Only at a Junction" — what it declares, and why it is not Steering.
+// "Prowls" — what it declares, and why it is not Steering.
 //
 // `stockRulesRun` covers what it does. What this pins is the shape, and the
 // shape IS the idea: an enemy that reads its quarry every frame is a different

@@ -34,8 +34,8 @@ import {held, velocity} from './motion.mjs';
 
 const rule = defineRule({
   name: 'Prowling',
-  ability: 'Chooses Only at a Junction',
-  header: `// "Chooses Only at a Junction" — an enemy that thinks rarely.
+  ability: 'Prowls',
+  header: `// "Prowls" — an enemy that thinks rarely.
 //
 // Steering already chases: it reads where you are, every frame, and points
 // itself at you. In an open field that is the whole of pursuit. In a PLATFORMER

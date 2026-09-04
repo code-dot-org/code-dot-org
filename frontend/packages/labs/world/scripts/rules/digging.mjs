@@ -33,8 +33,8 @@ import {
 
 const rule = defineRule({
   name: 'Digging',
-  ability: 'Digs Through Blocks',
-  header: `// "Digs Through Blocks" — a hole you make, and one that fills itself in.
+  ability: 'Digs Holes',
+  header: `// "Digs Holes" — a hole you make, and one that fills itself in.
 //
 // The other way of changing a room in this library is a switch: you walk over
 // a plate and walls elsewhere come and go. This is the same idea put in the

@@ -26,8 +26,8 @@ const BUTTON = 'enum:Engine#MouseButton';
 
 const rule = defineRule({
   name: 'Mouse',
-  ability: 'Responds to the Mouse',
-  header: `// "Responds to the Mouse" — what turns a pointer into events.
+  ability: 'Reads the Mouse',
+  header: `// "Reads the Mouse" — what turns a pointer into events.
 //
 // The keyboard's rule (rules/input) with one word changed, and deliberately so:
 // a button going down is the same KIND of thing a key going down is, and a

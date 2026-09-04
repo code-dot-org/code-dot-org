@@ -1,4 +1,4 @@
-// "Carries Things" — what it declares, read rather than run.
+// "Holds Things" — what it declares, read rather than run.
 //
 // The shape worth pinning is the split from Collection: a record that only
 // grows there, a bag that can go down here, and a name on the thing rather than

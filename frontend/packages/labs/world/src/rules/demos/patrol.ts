@@ -1,4 +1,4 @@
-// "Walks Back and Forth" — a guard on its beat and a lift on its track.
+// "Patrols" — a guard on its beat and a lift on its track.
 //
 // Both traits in one frame, because that is the argument for there being two:
 // across and down are not halves of one thing, they are different things to

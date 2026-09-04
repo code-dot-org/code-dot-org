@@ -1,4 +1,4 @@
-// "Carries What Stands On It" — the moving platform, and the thing that is not
+// "Carries Riders" — the moving platform, and the thing that is not
 // on one.
 //
 // TWO BOXES, and the second is the demonstration. A rider going along with a

@@ -11,8 +11,8 @@ import {
 
 const rule = defineRule({
   name: 'Attachment',
-  ability: 'Rides Along with an Actor',
-  header: `// "Rides Along with an Actor" — two things that move as one.
+  ability: 'Rides on an Actor',
+  header: `// "Rides on an Actor" — two things that move as one.
 //
 // CAMERA FOLLOW, ONE LEVEL DOWN. That rule points the VIEW at an actor and
 // keeps it there with an offset; this points an ACTOR at another and does the

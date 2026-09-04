@@ -12,8 +12,8 @@ const KEY = 'enum:Engine#Key';
 
 const rule = defineRule({
   name: 'Input',
-  ability: 'Responds to Input',
-  header: `// "Responds to Input" — what turns a keyboard into events.
+  ability: 'Reads the Keyboard',
+  header: `// "Reads the Keyboard" — what turns a keyboard into events.
 //
 // It runs in \`sense\`, the first moment of the frame, so everything that reads
 // a key this tick reads one that is up to date. That used to be "when tick",

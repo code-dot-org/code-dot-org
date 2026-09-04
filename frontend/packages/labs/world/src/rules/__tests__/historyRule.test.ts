@@ -1,4 +1,4 @@
-// "Can Be Taken Back" — what it declares, read rather than run.
+// "Undoes Moves" — what it declares, read rather than run.
 //
 // The tape was eight named properties, because a rule's state was a fixed set
 // of named slots and there was no list of places in the vocabulary. It is one

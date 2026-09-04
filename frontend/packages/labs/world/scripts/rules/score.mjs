@@ -53,7 +53,7 @@ const rule = defineRule({
 // would show it again and again. \`won\` is what remembers, and resetting the
 // score is what forgets.
 //
-// IT DECLARES ITS EVENTS TWICE, which is Responds to Input's shape and is here
+// IT DECLARES ITS EVENTS TWICE, which is Input's shape and is here
 // for the same reason. On the rule they are the WORLD's: the score changed,
 // and that is about nobody. Under "Watches the Score" they are an ACTOR's, and
 // only the actors that elected it are told.

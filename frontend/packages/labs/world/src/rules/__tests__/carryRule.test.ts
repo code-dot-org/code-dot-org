@@ -1,4 +1,4 @@
-// "Carries What Stands On It" — the rule that makes a moving platform work.
+// "Carries Riders" — the rule that makes a moving platform work.
 //
 // What it declares, read rather than run: the two traits and which is which,
 // and the two moments, which are the whole of the design. `stockRulesRun`

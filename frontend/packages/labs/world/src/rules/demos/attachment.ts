@@ -1,4 +1,4 @@
-// "Rides Along with an Actor" — two things that move as one.
+// "Rides on an Actor" — two things that move as one.
 //
 // A walker with a tag over its head and a shadow under its feet, all three
 // moving as one thing. Three actors and one rule: the walker is the only one

@@ -1,4 +1,4 @@
-// "Responds to the Mouse" — the keyboard's rule, one noun along.
+// "Reads the Mouse" — the keyboard's rule, one noun along.
 //
 // The point of these is the PARITY. `rules/input.rule` is checked in
 // blockly/__tests__/inputRule, and everything here has a line there answering
@@ -21,7 +21,7 @@ describe('rules/mouse.rule', () => {
     // A click belongs to nobody until somebody claims it, exactly as a keypress
     // does: raised once a frame, handled with no actor handed over.
     expect(meta.name).toBe('Mouse');
-    expect(meta.ability).toBe('Responds to the Mouse');
+    expect(meta.ability).toBe('Reads the Mouse');
     const worldEvents = meta.events.filter(event => event.scope === 'world');
     expect(worldEvents.map(event => event.ref.exportName)).toEqual([
       'IsPressedEvent',

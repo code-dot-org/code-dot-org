@@ -16,8 +16,8 @@ import {
 
 const rule = defineRule({
   name: 'Inventory',
-  ability: 'Carries Things',
-  header: `// "Carries Things" — a bag, and the difference between having and having had.
+  ability: 'Holds Things',
+  header: `// "Holds Things" — a bag, and the difference between having and having had.
 //
 // Collection already answers "how many coins did I pick up": it keeps every
 // actor a collector took, and a game counts the ones that are Coins. That is a

@@ -35,7 +35,7 @@ describe('rules/input.rule', () => {
     // They used to be raised for every actor in the world, every frame a key
     // changed, purely so there was somebody to raise them for.
     expect(meta.name).toBe('Input');
-    expect(meta.ability).toBe('Responds to Input');
+    expect(meta.ability).toBe('Reads the Keyboard');
     const worldEvents = meta.events.filter(event => event.scope === 'world');
     expect(worldEvents.map(event => event.ref.exportName)).toEqual([
       'IsPressedEvent',

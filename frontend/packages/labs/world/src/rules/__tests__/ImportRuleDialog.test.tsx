@@ -121,8 +121,8 @@ describe('the shelf as a tree', () => {
       rows.find(row => row.rule.ability === ability)?.depth;
 
     expect(depthOf('Has a Camera')).toBe(0);
-    expect(depthOf('Eases the Camera')).toBe(1);
-    expect(depthOf('Keeps the View in the Map')).toBe(1);
+    expect(depthOf('Catches Up Smoothly')).toBe(1);
+    expect(depthOf('Keeps the View Inside')).toBe(1);
   });
 
   it('leaves a rule with two requirements at the top', () => {

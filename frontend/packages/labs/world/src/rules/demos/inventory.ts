@@ -1,4 +1,4 @@
-// "Carries Things" — a bag, and the difference between having and having had.
+// "Holds Things" — a bag, and the difference between having and having had.
 //
 // A walker crosses a key and a door. The key goes into the bag, the count goes
 // up, the door opens, and the count goes back down — which is the whole of

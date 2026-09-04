@@ -16,8 +16,8 @@ import {
 
 const rule = defineRule({
   name: 'Camera Ease',
-  ability: 'Eases the Camera',
-  header: `// "Eases the Camera" — the camera catches up instead of snapping.
+  ability: 'Catches Up Smoothly',
+  header: `// "Catches Up Smoothly" — the camera catches up instead of snapping.
 //
 // It reads the goal something else proposed and hands back a nearer one, so the
 // camera drifts toward what it is aiming at over a few frames and a player who
