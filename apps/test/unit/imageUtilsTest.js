@@ -1,28 +1,32 @@
-import {downloadBlobAsPng} from '@cdo/apps/imageUtils';
-
-// setupJest mocks toImage suite-wide (it needs live image callbacks); this
-// test is about the real one's object-URL lifecycle, with Image stubbed.
-const {toImage} = jest.requireActual('@cdo/apps/imageUtils');
+// setupJest stubs toImage and dataURIToSourceSize suite-wide (they need
+// live image callbacks); requireActual gets the real functions.
+const {toImage, downloadBlobAsPng} = jest.requireActual('@cdo/apps/imageUtils');
 
 describe('imageUtils object URL lifecycle', () => {
   let originalImage;
+  let originalCreate;
+  let originalRevoke;
   beforeEach(() => {
-    // jsdom images never load; fire onload once src is set.
+    // jsdom images never load; fire onload as soon as src is set (toImage
+    // assigns the handlers first, so synchronous is safe and keeps these
+    // tests independent of timers).
     originalImage = global.Image;
     global.Image = class {
       set src(value) {
-        this._src = value;
-        setTimeout(() => this.onload && this.onload());
-      }
-      get src() {
-        return this._src;
+        this.onload && this.onload();
       }
     };
+    // Plain assignment: jsdom doesn't implement these, so there is nothing
+    // to spy on.
+    originalCreate = URL.createObjectURL;
+    originalRevoke = URL.revokeObjectURL;
     URL.createObjectURL = jest.fn(() => 'blob:fake-url');
     URL.revokeObjectURL = jest.fn();
   });
   afterEach(() => {
     global.Image = originalImage;
+    URL.createObjectURL = originalCreate;
+    URL.revokeObjectURL = originalRevoke;
   });
 
   describe('toImage', () => {
@@ -30,6 +34,16 @@ describe('imageUtils object URL lifecycle', () => {
       const blob = new Blob(['x'], {type: 'image/png'});
       await toImage(blob);
       expect(URL.createObjectURL).toHaveBeenCalledWith(blob);
+      expect(URL.revokeObjectURL).toHaveBeenCalledWith('blob:fake-url');
+    });
+
+    it('revokes on a failed load too', async () => {
+      global.Image = class {
+        set src(value) {
+          this.onerror && this.onerror(new Error('bad image'));
+        }
+      };
+      await expect(toImage(new Blob(['x']))).rejects.toBeTruthy();
       expect(URL.revokeObjectURL).toHaveBeenCalledWith('blob:fake-url');
     });
 
@@ -41,9 +55,23 @@ describe('imageUtils object URL lifecycle', () => {
   });
 
   describe('downloadBlobAsPng', () => {
-    it('revokes the object URL after starting the download', () => {
-      downloadBlobAsPng(new Blob(['x'], {type: 'image/png'}), 'x.png');
-      expect(URL.revokeObjectURL).toHaveBeenCalledWith('blob:fake-url');
+    it('revokes the object URL only after the click, deferred', () => {
+      jest.useFakeTimers();
+      const click = jest
+        .spyOn(HTMLAnchorElement.prototype, 'click')
+        .mockImplementation(() => {});
+      try {
+        downloadBlobAsPng(new Blob(['x'], {type: 'image/png'}), 'x.png');
+        expect(click).toHaveBeenCalled();
+        // Deferred so a browser that dereferences the URL after click()
+        // still finds it alive.
+        expect(URL.revokeObjectURL).not.toHaveBeenCalled();
+        jest.runAllTimers();
+        expect(URL.revokeObjectURL).toHaveBeenCalledWith('blob:fake-url');
+      } finally {
+        click.mockRestore();
+        jest.useRealTimers();
+      }
     });
   });
 });

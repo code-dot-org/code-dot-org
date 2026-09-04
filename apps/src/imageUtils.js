@@ -99,6 +99,9 @@ export async function dataURIToBlob(uri) {
 /**
  * Given an input of a supported type, converts it to an HTMLImageElement.
  *
+ * A Blob input's object URL is revoked once the image loads: the element
+ * draws fine (the bitmap is decoded), but its src can't be fetched again.
+ *
  * @param {Blob|HTMLImageElement|ImageURI} input
  * @returns {Promise<HTMLImageElement>}
  */
@@ -187,7 +190,8 @@ export function downloadBlobAsPng(blob, filename = 'image.png') {
   download.href = url;
   download.download = filename;
   download.click();
-  // The download has begun; without this the blob stays pinned in memory
-  // until the page unloads.
-  URL.revokeObjectURL(url);
+  // Deferred: WebKit can dereference the URL after click() returns, and a
+  // revoked URL there kills the download. A minute still bounds the blob's
+  // lifetime, where it used to stay pinned until the page unloaded.
+  setTimeout(() => URL.revokeObjectURL(url), 60 * 1000);
 }
