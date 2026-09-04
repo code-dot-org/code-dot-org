@@ -198,7 +198,7 @@ describe('placing a world’s own actor', () => {
   it('asks `is a` about the type the placement stamped', () => {
     const code = emit('world_is_a', {TYPE: localActorValue('a1')}, WORLD());
 
-    expect(code).toBe('actor.type === "Coin"');
+    expect(code).toBe('actor?.type === "Coin"');
   });
 });
 

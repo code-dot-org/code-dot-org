@@ -376,12 +376,33 @@ describe('domain block generators', () => {
   it('world_is_a tests an actor value against a module path', () => {
     // Default (empty ACTOR socket → `this actor`).
     expect(emitValue('world_is_a', {TYPE: 'actors/coin'})[0]).toBe(
-      'actor.type === "actors/coin"',
+      'actor?.type === "actors/coin"',
     );
     // A plugged-in actor (e.g. a loop variable) is tested instead.
     expect(
       emitValue('world_is_a', {TYPE: 'actors/coin'}, {ACTOR: 'each'})[0],
-    ).toBe('each.type === "actors/coin"');
+    ).toBe('each?.type === "actors/coin"');
+  });
+
+  it('world_is_a answers false for a value holding no actors', () => {
+    // EVERY OTHER VALUE SOCKET tolerates an empty actor value — `first actor
+    // in ⟨an empty list⟩` is the ordinary "no actors" outcome and not a
+    // failure — and this block alone read a field off it and threw. That made
+    // "is the thing in this hole a Pilot" a question nobody could ask of an
+    // empty hole, and the level that wanted to ask it had to count instead.
+    //
+    // The reading is not a compromise: no actor is not a Coin.
+    const [code] = emitValue(
+      'world_is_a',
+      {TYPE: 'actors/coin'},
+      {
+        ACTOR: 'nobody',
+      },
+    );
+
+    expect(code).toContain('?.');
+
+    expect(new Function('nobody', `return ${code};`)(undefined)).toBe(false);
   });
 
   it('world_for_each iterates its source and nothing else', () => {

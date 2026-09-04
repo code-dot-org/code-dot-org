@@ -190,7 +190,7 @@ describe('a property that says ONE actor', () => {
       ACTOR: 'target',
     })[0] as unknown as string;
 
-    expect(code).toContain('WorldLab.one(target).type');
+    expect(code).toContain('WorldLab.one(target)?.type');
   });
 });
 
@@ -201,7 +201,7 @@ describe('a value over an actor value', () => {
     })[0] as unknown as string;
 
     expect(code).toContain(
-      'WorldLab.one(world.actors.ofType("actors/coin")).type',
+      'WorldLab.one(world.actors.ofType("actors/coin"))?.type',
     );
   });
 
@@ -210,7 +210,7 @@ describe('a value over an actor value', () => {
       ACTOR: 'actor',
     })[0] as unknown as string;
 
-    expect(code).toBe('actor.type === "actors/coin"');
+    expect(code).toBe('actor?.type === "actors/coin"');
   });
 });
 

@@ -5150,8 +5150,14 @@ const worldIsA = defineBlock({
       // A world's own actor is stamped with its id, not a module path — the
       // same string `add actor` gave it (blockly/localActors).
       const modulePath = localActorFor(block, chosen)?.type ?? chosen;
+      // `?.` because a value may hold NO actors, which every other value
+      // socket in the language treats as the ordinary outcome — `first actor
+      // in ⟨an empty list⟩` answers with none rather than failing. This block
+      // read `.type` off it and threw, which made "is the thing in this hole a
+      // Pilot" a question that could not be asked of an empty hole. No actor
+      // is not a Pilot, so the answer is false.
       return [
-        `${oneActor(target)}.type === ${str(modulePath)}`,
+        `${oneActor(target)}?.type === ${str(modulePath)}`,
         Order.EQUALITY,
       ] as [string, number];
     },

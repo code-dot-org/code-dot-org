@@ -1008,10 +1008,21 @@ const diggableLedgeActor = (name: string, sprite: string) =>
                 {
                   type: 'world_do_Health_TakeDamageAction',
                   inputs: {
+                    // WHOEVER IS IN IT, rather than looking the Pilot up
+                    // again: the question above has already established that
+                    // the thing in this hole is one, and asking the world for
+                    // a Pilot would hurt the wrong one in a room with two.
                     ACTOR: {
                       block: {
                         type: 'world_first_actor',
-                        inputs: {SOURCE: kind('actors/pilot')},
+                        inputs: {
+                          SOURCE: {
+                            block: {
+                              type: 'world_get_Collisions_ContactsProperty',
+                              inputs: {ACTOR: me()},
+                            },
+                          },
+                        },
                       },
                     },
                     VALUE: number(1),

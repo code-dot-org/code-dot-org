@@ -603,8 +603,13 @@ describe('the jetpack level', () => {
     const eyeStart = eyeball.get(PositionProperty).x;
     const spinFirst = shuriken.get(heading) as unknown as number;
     const spins: number[] = [];
+    // A LONG WINDOW because one of the four is random. The wanderer picks
+    // from three directions on each beat, so a handful of beats has a real
+    // chance of never once going left — a one in twelve failure, which is a
+    // test that cries wolf rather than one that has found anything. Thirty
+    // beats puts that under a ten-thousandth.
     for (let tick = 0; tick < 40; tick++) {
-      play(world, 0.15);
+      play(world, 0.5);
       springY.push(spring.get(PositionProperty).y);
       blobX.push(blob.get(PositionProperty).x);
       spins.push(shuriken.get(heading) as unknown as number);
