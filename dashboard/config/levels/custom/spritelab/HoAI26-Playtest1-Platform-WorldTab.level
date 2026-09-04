@@ -61,10 +61,6 @@
         }
       ]
     },
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
@@ -84,9 +80,65 @@
     "use_default_sprites": "false",
     "mini_toolbox": "false",
     "hide_pause_button": "false",
-    "enable_big_playspace": "false"
+    "enable_big_playspace": "false",
+    "start_sources": {
+      "animations": {
+        "orderedKeys": [
+
+        ],
+        "propsByKey": {
+        }
+      },
+      "source": {
+        "blocks": {
+          "blocks": [
+            {
+              "type": "spritelab2_whenRun",
+              "x": 20,
+              "y": 20,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "scenes": [
+        {
+          "id": "platform-scene",
+          "name": "Platformer",
+          "source": {
+            "blocks": {
+              "languageVersion": 0,
+              "blocks": [
+                {
+                  "type": "spritelab2_whenRun",
+                  "id": "*A?k^q3I`f^;8$/2-B`N",
+                  "x": 20,
+                  "y": 20,
+                  "deletable": false,
+                  "movable": false,
+                  "next": {
+                    "block": {
+                      "type": "gamelab_setBackgroundImageAs",
+                      "id": "nIL5UYs,RU?Q3Aymza5`",
+                      "fields": {
+                        "IMG": "<field name=\"IMG\">null</field>"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "audit_log": "[{\"changed_at\":\"2026-09-03T01:45:32.415+00:00\",\"changed\":[\"cloned from \\\"hoai2026-dev-spritelab-lab2-platformer\\\"\"],\"cloned_from\":\"hoai2026-dev-spritelab-lab2-platformer\"},{\"changed_at\":\"2026-09-03 02:16:54 +0000\",\"changed\":[\"project_template_level_name\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-09-03T01:45:32.415+00:00\",\"changed\":[\"cloned from \\\"hoai2026-dev-spritelab-lab2-platformer\\\"\"],\"cloned_from\":\"hoai2026-dev-spritelab-lab2-platformer\"},{\"changed_at\":\"2026-09-03 02:16:54 +0000\",\"changed\":[\"project_template_level_name\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 18:31:38 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 18:31:49 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
