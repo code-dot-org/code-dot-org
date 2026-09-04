@@ -12,7 +12,7 @@ import ImageDetailsDialog from '@cdo/apps/p5lab/spritelab/lab2/views/ImageDetail
 function renderDialog(props = {}) {
   return render(
     // The dialog follows the page's light/dark theme.
-    <ThemeProvider defaultTheme="light">
+    <ThemeProvider>
       <ImageDetailsDialog
         animKey="k1"
         name="Sprite 1"
