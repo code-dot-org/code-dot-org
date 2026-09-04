@@ -46,3 +46,8 @@ module Cdo
 end
 
 Lograge::RequestLogSubscriber.prepend(Cdo::LogragePerRequestSeverity)
+
+# Disable ActiveModelSerializers logging.
+Rails.application.config.after_initialize do
+  ActiveModelSerializers.logger = ActiveSupport::Logger.new(IO::NULL) if Rails.application.config.lograge.enabled
+end

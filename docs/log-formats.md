@@ -290,7 +290,7 @@ Each request line is logged at a severity derived from the response status, and 
 
 The threshold is the DCDO key `http_request_log_level` (`info`, `warn`, or `error`). Its default is `warn` in production — so by default production logs only 4xx and 5xx — and `info` in every other environment. Set `http_request_log_level` to `info` in DCDO to get full request logging during an incident without a deploy; no restart is required. The policy lives in `Cdo::HttpRequestLogging` (`lib/cdo/http_request_logging.rb`).
 
-This threshold is independent of the Rails logger level (`config.log_level`, still `info`), so deliberate `CDO.log.info` / `CDO.log.warn` / `CDO.log.error` calls are unaffected by it. ActionView's per-render `Rendered ...` lines are silenced in the managed environments (`config.action_view.logger = nil`), so they no longer accompany each request.
+This threshold is independent of the Rails logger level (`config.log_level`, still `info`), so deliberate `CDO.log.info` / `CDO.log.warn` / `CDO.log.error` calls are unaffected by it. The per-render `Rendered ...` lines that otherwise accompany each request are also silenced in the managed environments: ActionView's `Rendered <template>`, and active_model_serializers' `Rendered <serializer> with <adapter>`.
 
 #### Other syslog lines you will see
 
