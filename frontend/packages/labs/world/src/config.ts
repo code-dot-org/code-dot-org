@@ -143,7 +143,7 @@ export const worldConfig: Partial<CodebridgeConfig> = {
   // built-in types (js/json/png/…) keep their defaults; these give each World
   // file type a distinct, meaningful glyph.
   fileIcons: {
-    world: {iconName: 'earth-americas', iconStyle: 'solid', isBrand: false},
+    world: {iconName: 'planet-ringed', iconStyle: 'solid', isBrand: false},
     actor: {iconName: 'masks-theater', iconStyle: 'solid', isBrand: false},
     effect: {iconName: 'wand-sparkles', iconStyle: 'solid', isBrand: false},
     rule: {iconName: 'scroll', iconStyle: 'solid', isBrand: false},

@@ -52,6 +52,16 @@ export const FREE_ICON_SHIMS: Shim[] = [
     glyph: '\\f101',
     substitute: 'angles-right',
   },
+  {
+    // The `.world` file's icon, in the browser, on its tab, and on a
+    // progression tile that unlocks a world. Pro draws a planet with a ring
+    // around it; Free has no planet at all, so this falls back to the globe
+    // the lab used before — the same idea one scale smaller, and the one icon
+    // here whose substitute is the thing it replaced.
+    name: 'planet-ringed',
+    glyph: '\\f57d',
+    substitute: 'earth-americas',
+  },
 ];
 
 /** The stylesheet those shims amount to. */

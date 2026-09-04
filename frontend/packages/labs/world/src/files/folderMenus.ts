@@ -82,7 +82,7 @@ export const FOLDER_MENUS: readonly FolderMenu[] = [
   {
     folder: 'worlds',
     label: 'Worlds',
-    icon: 'earth-americas',
+    icon: 'planet-ringed',
     makes: [{label: 'New world', extension: 'world', placeholder: 'My World'}],
   },
   {
