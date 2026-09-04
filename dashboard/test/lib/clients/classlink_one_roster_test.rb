@@ -121,16 +121,17 @@ class Clients::ClasslinkOneRosterTest < ActiveSupport::TestCase
     end
   end
 
-  test 'well-formed empty list warns and yields the unavailable path without raising' do
+  test 'well-formed empty list reports and yields the unavailable path without raising' do
     stub_applications([])
-    Rails.logger.expects(:warn).with(regexp_matches(/empty application list/))
+    Observability::Errors.expects(:report).with(regexp_matches(/empty application list/))
 
     assert_nil Clients::ClasslinkOneRoster.application_for_tenant(TENANT_ID)
   end
 
-  test 'unexpected top-level status is logged but does not change the outcome' do
+  test 'unexpected top-level status is reported but does not change the outcome' do
     stub_applications([application_record], status: 200)
-    Rails.logger.expects(:info).with(regexp_matches(/status=200/))
+    Observability::Errors.expects(:report).
+      with(regexp_matches(/unexpected status/), context: {status: 200})
 
     assert Clients::ClasslinkOneRoster.application_for_tenant(TENANT_ID)
   end
@@ -196,7 +197,8 @@ class Clients::ClasslinkOneRosterTest < ActiveSupport::TestCase
       with(query: hash_including('offset' => '0')).
       to_return(status: 401)
     stub_applications([])
-    Rails.logger.stubs(:warn)
+    # The re-fetch returns an empty list, which reports on its own.
+    Observability::Errors.stubs(:report)
 
     assert_raises Clients::ClasslinkOneRoster::DistrictAuthorizationError do
       Clients::ClasslinkOneRoster.class_students(APPLICATION_ID, BEARER, '33333')

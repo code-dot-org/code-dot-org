@@ -20,21 +20,16 @@
 # email, and guardian references in agents[]): user-returning methods reduce
 # records to USER_FIELDS, and no method logs a raw payload.
 class Clients::ClasslinkOneRoster
-  # Host confirmed against live capture requests (2026-09).
   API_HOST = 'https://oneroster-proxy.apis.classlink.com'
 
   # 1000 covers any real class or teacher in one page, so the pagination loop
   # rarely runs twice — but it stays well under the documented ceiling of
-  # 10000, where a silently clamped response would be indistinguishable from
-  # a legitimate final short page.
+  # 10000.
   PAGE_LIMIT = 1000
 
   CACHE_NAMESPACE = 'clients/classlink_one_roster/applications'
   CACHE_TTL = 5.days
 
-  # The only fields we consume from One Roster user records. Everything else
-  # (password, sms, phone, email, middleName, agents[], orgs[]) is dropped at
-  # the client boundary.
   USER_FIELDS = %w(sourcedId givenName familyName role).freeze
 
   class Error < StandardError; end
@@ -52,15 +47,22 @@ class Clients::ClasslinkOneRoster
   # Returns the raw application records from /applications. This endpoint
   # honors limit/offset but sends no count headers, so the shared pagination
   # helper's short-page rule is its only terminator. The top-level status
-  # field is logged when unexpected but never branched on: gating on an
+  # field is reported when unexpected but never branched on: gating on an
   # undocumented field would turn a benign format change into a global
-  # rostering outage.
+  # rostering outage. An empty list is reported but not raised — a true zero
+  # is possible in a fresh environment, but with hundreds of sharing
+  # districts in production it is far more likely a degraded response.
   def self.fetch_applications
     records = fetch_all_pages("#{API_HOST}/applications", 'applications', bearer: CDO.classlink_roster_api_key, one_roster: false) do |body|
       status = body['status']
-      Rails.logger.info("ClassLink /applications returned status=#{status.inspect}") unless status == 1
+      unless status == 1
+        Observability::Errors.report(
+          'ClassLink /applications returned an unexpected status',
+          context: {status: status}
+        )
+      end
     end
-    Rails.logger.warn('ClassLink /applications returned an empty application list') if records.empty?
+    Observability::Errors.report('ClassLink /applications returned an empty application list') if records.empty?
     records
   end
 
