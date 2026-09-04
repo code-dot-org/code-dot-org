@@ -14,7 +14,7 @@ import moduleStyles from './backpack-list-controls.module.scss';
 const FILE_TYPE_FILTER_NAME = 'backpack-file-type-filter';
 const SORT_ORDER_NAME = 'backpack-sort-order';
 
-const SORT_OPTIONS: IconDropdownOption[] = [
+const SORT_OPTIONS: (IconDropdownOption & {value: BackpackSortOrder})[] = [
   {
     value: 'name-asc',
     label: 'Alphabetical (A-Z)',
