@@ -10,6 +10,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {
   ChallengeResponse,
+  Reaction,
   challengeResponseListValidator,
 } from '../lessonDeepDive/types';
 
@@ -35,6 +36,10 @@ interface ProjectViewProps {
   // Switch the page to another response (a version of this project, or the
   // teacher's previous/next project).
   onOpenProject: (id: number) => void;
+  // Reports a reaction change on the response with the given id, so the
+  // gallery can update the matching card while the viewer is on the project
+  // page.
+  onReactionsChange?: (responseId: number, reactions: Reaction[]) => void;
 }
 
 // The Tutor+ project page: one submitted challenge project, its media and
@@ -47,6 +52,7 @@ const ProjectView: FC<ProjectViewProps> = ({
   galleryResponses,
   onBack,
   onOpenProject,
+  onReactionsChange,
 }) => {
   const [detail, setDetail] = useState<ChallengeResponseDetail | null>(null);
   const [loadFailed, setLoadFailed] = useState(false);
@@ -281,6 +287,9 @@ const ProjectView: FC<ProjectViewProps> = ({
           <ProjectDetailsCard
             detail={detail}
             unitPosition={unit?.position ?? null}
+            onReactionsChange={reactions =>
+              onReactionsChange?.(detail.id, reactions)
+            }
           />
         </div>
       </div>
