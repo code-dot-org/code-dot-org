@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_09_02_042144) do
+ActiveRecord::Schema[7.0].define(version: 2026_09_03_120000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -2856,6 +2856,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_09_02_042144) do
     t.json "editor_font_size"
     t.json "console_font_size"
     t.json "theme"
+    t.json "editor_settings"
     t.index ["user_id"], name: "index_user_preferences_on_user_id"
   end
 
