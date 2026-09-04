@@ -163,6 +163,7 @@ const QuizConfigurationForm: React.FunctionComponent<
           min={1}
           step={1}
           size="s"
+          className={styles.fullWidthField}
           value={timeLimitMinutes}
           onChange={e => setTimeLimitMinutes(e.target.value)}
         />

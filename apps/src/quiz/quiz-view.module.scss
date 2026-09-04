@@ -11,6 +11,12 @@
   height: 100%;
 }
 
+.resourcePanelCollapsed {
+  flex: 0 0 auto;
+  min-width: 0;
+  height: 100%;
+}
+
 .divider {
   width: 1px;
   height: 100%;
