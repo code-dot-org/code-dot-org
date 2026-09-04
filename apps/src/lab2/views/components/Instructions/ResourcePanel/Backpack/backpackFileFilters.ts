@@ -5,8 +5,6 @@ import {
   SUPPORTED_IMAGE_EXTENSIONS,
 } from '@cdo/apps/lab2/constants';
 
-// FontAwesome only reaches its brand glyphs through `fa-brands`, and IconDropdown
-// forwards an option icon's className but not its iconFamily.
 const BRAND_ICON_CLASS = 'fa-brands';
 
 export const ALL_FILES_CATEGORY_ID = 'all';
@@ -138,6 +136,7 @@ export function sortBackpackFiles<FileType extends {fileName: string}>(
     case 'name-desc':
       return sorted.sort((first, second) => byName(second, first));
     case 'file-type':
+      // File type sorting: first by category, then by extension, then by name A-Z.
       return sorted.sort((first, second) => {
         const categoryDifference =
           FILE_CATEGORIES.indexOf(getFileCategory(first.fileName)) -

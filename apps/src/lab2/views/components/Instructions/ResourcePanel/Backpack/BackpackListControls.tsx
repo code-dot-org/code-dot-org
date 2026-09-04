@@ -41,7 +41,6 @@ function closeOpenDropdownMenu(dropdownName: string) {
 }
 
 interface BackpackListControlsProps {
-  /** Every file in the backpack, not just the ones currently shown. */
   fileNames: string[];
   selectedCategoryId: FileCategoryId | typeof ALL_FILES_CATEGORY_ID;
   onCategoryChange: (
