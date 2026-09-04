@@ -111,6 +111,10 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
 
   // Autocomplete is a setting because its popup competes with screen readers.
   const autocompleteCompartment = useMemo(() => new Compartment(), []);
+  const autocompleteExtension = useMemo(
+    () => (editorAutocompleteEnabled ? autocompletion() : []),
+    [editorAutocompleteEnabled]
+  );
 
   const getFontSizeTheme = (fontSize: number) => {
     return EditorView.theme({
@@ -229,9 +233,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
         ...editorConfig,
 
         onEditorUpdate,
-        autocompleteCompartment.of(
-          editorAutocompleteEnabled ? autocompletion() : []
-        ),
+        autocompleteCompartment.of(autocompleteExtension),
         EditorView.lineWrapping,
         ...editorConfigExtensions,
       ];
@@ -320,20 +322,24 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     hasSplitDiffView,
     codeBeforeAiTutorVersion,
     autocompleteCompartment,
-    editorAutocompleteEnabled,
+    autocompleteExtension,
   ]);
 
   useEffect(() => {
-    if (editorView && editorView instanceof EditorView) {
-      editorView.dispatch({
-        effects: [
-          autocompleteCompartment.reconfigure(
-            editorAutocompleteEnabled ? autocompletion() : []
-          ),
-        ],
-      });
+    if (!editorView) {
+      return;
     }
-  }, [editorAutocompleteEnabled, editorView, autocompleteCompartment]);
+    // A MergeView is two EditorViews, each holding its own copy of the compartment.
+    const views =
+      editorView instanceof MergeView
+        ? [editorView.a, editorView.b]
+        : [editorView];
+    views.forEach(view =>
+      view.dispatch({
+        effects: autocompleteCompartment.reconfigure(autocompleteExtension),
+      })
+    );
+  }, [autocompleteExtension, editorView, autocompleteCompartment]);
 
   // When we have a new fontSizeKey, reset font size.
   useEffect(() => {
