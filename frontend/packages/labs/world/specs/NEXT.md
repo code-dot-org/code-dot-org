@@ -268,6 +268,38 @@ point, moves it with arrow keys, and reads the map document back; the
 selection outlining for actor-set properties — built, and never once rendered
 in a test — is one of those tests.
 
+_Status, 2026-09-04: done._ The arithmetic is `mapEditor/stageGeometry.ts` —
+the camera, the fit, the wheel zoom's pin, snapping, the hit test's inversion
+of translate → skew → rotate → scale, the pan-into-view margin, the selection
+cycle, and the keyboard step — thirty tests, each one a fact the handlers ask
+for. `MapStage` dropped from 1,395 lines to 1,348 and does no arithmetic of
+its own.
+
+The stage itself turned out to be testable after all, once two things were
+stubbed that jsdom lacks: a `ResizeObserver` that reports a pane the moment it
+is asked to observe, so the camera fits and a screen point means something;
+and a recording `getContext`, so what is DRAWN can be read back. Pointer
+events are `MouseEvent`s wearing pointer names — jsdom has no `PointerEvent`
+and React routes by the name. Fourteen tests drive it as a person would:
+select by a click at a computed point, cycle with the arrows, drag two tiles
+and drop on the cell centre, drop to the pixel with Alt, delete, place, and
+refuse all of it read-only. The outlining assertion reads the last frame's
+`strokeRect` calls by colour: one selection outline, one reference outline
+per actor a set names, and a labelled line to each.
+
+Two things came out of it. **Shift+arrow nudges the selection** a tile (a
+pixel with Alt), which is the keyboard's half of dragging and was missing — a
+canvas click is not reachable from a keyboard, so an actor that could only be
+moved by one could only be moved by some people. And the stage was repainting
+on every render of its inspector, because the `visible` prop's default was
+an object literal in the parameter list — a new object each time, and a
+dependency of the draw effect. The test that counts outlines is what found
+it; the default is one shared object now.
+
+Falsified both ways: dropping the skew term from the inversion fails the two
+skew tests, and a nudge that updates the stage without writing the file fails
+both nudge tests.
+
 ## 6. One voice on the shelf
 
 **The problem.** Early abilities read as one speaker: _Has Gravity, Jumps,

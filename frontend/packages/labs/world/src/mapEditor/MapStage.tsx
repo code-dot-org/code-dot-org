@@ -11,6 +11,11 @@
 // So this takes the placements it may edit, the placements it may only draw,
 // and the type a click places. It knows nothing about files, blocks, or where
 // the thumbnails came from.
+//
+// Nor does it do arithmetic. Which actor is under a point, where a dropped
+// one lands, whether the camera has to move — every answer that is a number
+// comes from `stageGeometry`, which has no canvas in it and is tested as such.
+// What is left here is drawing, gesture and state.
 
 import {Button, Typography} from '@mui/material';
 import type {
@@ -49,18 +54,18 @@ import {
   type Vec,
   type View,
 } from './mapModel';
-
-const DRAW_SIZE = 32;
-// The smallest an actor can be to click, in world pixels. A drawn actor may be
-// a few pixels tall — a health bar is eight — and its own size is too small a
-// target to find with a pointer.
-const MIN_HIT_SIZE = 14;
-
-// Camera limits. `FIT_PADDING` leaves a margin so the bordered map doesn't touch
-// the pane edges at the default (reset) zoom.
-const MIN_SCALE = 0.1;
-const MAX_SCALE = 8;
-const FIT_PADDING = 0.92;
+import {
+  DRAW_SIZE,
+  drawnSize,
+  fitView,
+  hitTest,
+  nextSelection,
+  panIntoView,
+  screenToWorld as toWorld,
+  snapToTile,
+  steppedBy,
+  zoomToward,
+} from './stageGeometry';
 
 const OUTSIDE_BG = '#0b0b12'; // the space beyond the map
 const MAP_BG = '#151521'; // the map region itself
@@ -76,26 +81,13 @@ const HOVER = 'rgba(77, 159, 255, 0.45)'; // lighter outline for the hovered act
 const REFERENCE = '#ffb454';
 const DEG2RAD = Math.PI / 180;
 
-const clamp = (n: number, lo: number, hi: number) =>
-  Math.max(lo, Math.min(hi, n));
 /**
- * The camera that fits a map of `extent` into a `w`×`h` pane, centred.
- *
- * Takes the extent rather than reading the viewport constant: a map is whatever
- * size it says it is now, so "fit the map" is a question about the document.
+ * The window a map is seen through when the world says nothing — one object,
+ * shared. A default written inline is a new object on every render, and the
+ * draw effect lists the window among its dependencies, so the stage was
+ * repainting on every render of its inspector for a value that never changed.
  */
-function fitView(w: number, h: number, extent: Size): View {
-  const scale = clamp(
-    Math.min(w / extent.w, h / extent.h) * FIT_PADDING,
-    MIN_SCALE,
-    MAX_SCALE,
-  );
-  return {
-    scale,
-    x: (w - extent.w * scale) / 2,
-    y: (h - extent.h * scale) / 2,
-  };
-}
+const STANDARD_WINDOW: Size = {w: VIEWPORT_WIDTH, h: VIEWPORT_HEIGHT};
 
 export interface MapStageProps {
   /** The document this stage edits: its grid, and the placements it owns. */
@@ -133,8 +125,9 @@ export interface MapStageProps {
  * Snap-to-grid by default; hold Alt to place freely. Middle-drag (or left-drag
  * with no actor selected) pans; the wheel zooms toward the cursor; a button
  * resets the view. In select mode, clicking a placed actor selects it, the arrow
- * keys cycle the selection (panning it into view), dragging moves it, Delete
- * removes it, and the inspector edits its position and its other properties.
+ * keys cycle the selection (panning it into view), Shift+arrow nudges it a tile
+ * (a pixel with Alt), dragging moves it, Delete removes it, and the inspector
+ * edits its position and its other properties.
  */
 export const MapStage = ({
   doc,
@@ -144,7 +137,7 @@ export const MapStage = ({
   schemas,
   sizes,
   isReadOnly,
-  visible = {w: VIEWPORT_WIDTH, h: VIEWPORT_HEIGHT},
+  visible = STANDARD_WINDOW,
 }: MapStageProps) => {
   // The document as this stage currently has it. A drag mutates it live for
   // feedback and commits once on release, so the local copy leads and the
@@ -273,20 +266,7 @@ export const MapStage = ({
       const rect = canvas.getBoundingClientRect();
       const sx = event.clientX - rect.left;
       const sy = event.clientY - rect.top;
-      setView(v => {
-        if (!v) {
-          return v;
-        }
-        const scale = clamp(
-          v.scale * Math.exp(-event.deltaY * 0.0015),
-          MIN_SCALE,
-          MAX_SCALE,
-        );
-        // Keep the world point under the cursor pinned in place.
-        const wx = (sx - v.x) / v.scale;
-        const wy = (sy - v.y) / v.scale;
-        return {scale, x: sx - wx * scale, y: sy - wy * scale};
-      });
+      setView(v => v && zoomToward(v, sx, sy, event.deltaY));
     };
     canvas.addEventListener('wheel', onWheel, {passive: false});
     return () => canvas.removeEventListener('wheel', onWheel);
@@ -297,78 +277,27 @@ export const MapStage = ({
     onDocChange(next);
   };
 
+  // A client point, through the canvas's rectangle and the camera. The
+  // arithmetic is `stageGeometry`'s; what this adds is the one thing a pure
+  // function cannot know, which is where the canvas is on the page.
   const screenToWorld = (clientX: number, clientY: number): Vec => {
     const rect = canvasRef.current!.getBoundingClientRect();
-    const v = view!;
-    return {
-      x: (clientX - rect.left - v.x) / v.scale,
-      y: (clientY - rect.top - v.y) / v.scale,
-    };
+    return toWorld(view!, clientX - rect.left, clientY - rect.top);
   };
 
   // Snap the actor's centre to a tile cell centre unless Alt frees it.
-  const snap = (pos: Vec, free: boolean): Vec => {
-    if (free) {
-      return {x: Math.round(pos.x), y: Math.round(pos.y)};
-    }
-    const {width, height} = map.tile;
-    return {
-      x: Math.floor(pos.x / width) * width + width / 2,
-      y: Math.floor(pos.y / height) * height + height / 2,
-    };
-  };
+  const snap = (pos: Vec, free: boolean): Vec =>
+    snapToTile(pos, map.tile, free);
 
-  // Topmost placed actor under a world point (actors draw in array order, so
-  // search back-to-front); its DRAW_SIZE box is the hit area.
-  /**
-   * How big a kind is drawn, in world pixels.
-   *
-   * A drawing DECLARES its canvas and that canvas is the actor's size, so the
-   * map can draw it at the size the game will — a 64-by-8 bar two tiles wide
-   * beside a 32-pixel player, rather than fitted into the same square as
-   * everything else.
-   *
-   * The nominal tile for a kind that does not say. A sprite's size is its
-   * image's and the image is not measured in the sandbox, so those still
-   * normalise — right for the 32-pixel sprites everything ships with, wrong
-   * for any other, and a measurement to add rather than a shape to guess
-   * (`ThumbnailsReadyMessage.sizes`).
-   */
-  const sizeOf = (type: string): {width: number; height: number} =>
-    sizes?.[type] ?? {width: DRAW_SIZE, height: DRAW_SIZE};
+  // How big a kind is drawn — the size the outline hugs and the hit test
+  // reaches for (`stageGeometry.drawnSize`).
+  const sizeOf = (type: string) => drawnSize(sizes, type);
 
-  const hitTest = (world: Vec): Placement | undefined => {
-    const actors = mapRef.current.actors;
-    for (let i = actors.length - 1; i >= 0; i--) {
-      if (!positionOf(actors[i])) {
-        continue;
-      }
-      const t = transformOf(actors[i]);
-      // Invert the draw transform (translate → skew → rotate → scale) to land the
-      // world point in the sprite's local frame: un-shift, then un-shear (y -=
-      // tan(skew)·x), then un-rotate, then un-scale. So the hit area tracks the
-      // skewed sprite, not a box where it would sit unskewed.
-      const dx = world.x - t.pos.x;
-      const dy =
-        world.y - t.pos.y - Math.tan(t.skew * DEG2RAD) * (world.x - t.pos.x);
-      const a = t.rotation * DEG2RAD;
-      const cos = Math.cos(a);
-      const sin = Math.sin(a);
-      const lx = (dx * cos + dy * sin) / (t.scale.x || 1);
-      const ly = (-dx * sin + dy * cos) / (t.scale.y || 1);
-      // The drawn size, but never so thin it cannot be hit. A health bar is
-      // eight pixels tall and would otherwise be an eight-pixel target; the
-      // OUTLINE still hugs the true shape, because that is what the actor is —
-      // only the reach is generous.
-      const box = sizeOf(actors[i].type);
-      const hw = Math.max(box.width, MIN_HIT_SIZE) / 2;
-      const hh = Math.max(box.height, MIN_HIT_SIZE) / 2;
-      if (Math.abs(lx) <= hw && Math.abs(ly) <= hh) {
-        return actors[i];
-      }
-    }
-    return undefined;
-  };
+  // The topmost placed actor under a world point, through each one's own
+  // transform (`stageGeometry.hitTest`). Reads the ref rather than the state
+  // so a gesture mid-drag sees the position it just wrote.
+  const hitUnder = (world: Vec): Placement | undefined =>
+    hitTest(mapRef.current.actors, world, sizes);
 
   // Live-patch a placed actor's `owner.prop` override (local only — a drag or
   // field edit commits once on release / blur).
@@ -856,7 +785,7 @@ export const MapStage = ({
       return;
     }
     const world = screenToWorld(event.clientX, event.clientY);
-    const hit = isReadOnly ? undefined : hitTest(world);
+    const hit = isReadOnly ? undefined : hitUnder(world);
     // Left button while POINTING a reference: the click chooses, and does not
     // select or drag. Changing the selection would take away the very actor
     // whose property is being set, which is the one thing this must not do.
@@ -946,7 +875,7 @@ export const MapStage = ({
     if (view) {
       const hit = isReadOnly
         ? undefined
-        : hitTest(screenToWorld(event.clientX, event.clientY));
+        : hitUnder(screenToWorld(event.clientX, event.clientY));
       setHoveredId(hit ? hit.id : null);
     }
   };
@@ -961,40 +890,57 @@ export const MapStage = ({
   // sits within a margin of the pane edge (or off it); the zoom is untouched. Used
   // when keyboard cycling lands on an actor that is scrolled out of view.
   const ensureVisible = (pos: Vec) => {
-    if (!view || size.w === 0 || size.h === 0) {
-      return;
+    const next = view && panIntoView(view, size, pos);
+    if (next) {
+      setView(next);
     }
-    const sx = pos.x * view.scale + view.x;
-    const sy = pos.y * view.scale + view.y;
-    const mx = size.w * 0.15;
-    const my = size.h * 0.15;
-    if (sx >= mx && sx <= size.w - mx && sy >= my && sy <= size.h - my) {
-      return;
-    }
-    setView({
-      ...view,
-      x: size.w / 2 - pos.x * view.scale,
-      y: size.h / 2 - pos.y * view.scale,
-    });
   };
 
   // Move the selection to the next (`+1`) or previous (`-1`) placed actor, in
   // placement order and wrapping around. With nothing selected, `+1` starts at the
   // first actor and `-1` at the last. Only actors with a position participate.
   const cycleSelection = (dir: 1 | -1) => {
-    const actors = mapRef.current.actors.filter(positionOf);
-    if (actors.length === 0) {
+    const next = nextSelection(mapRef.current.actors, selectedId, dir);
+    if (next) {
+      setSelectedId(next.id);
+      ensureVisible(positionOf(next)!);
+    }
+  };
+
+  /** One keyboard step, in tiles, per arrow. */
+  const ARROW_STEPS: Record<string, {dx: number; dy: number}> = {
+    ArrowRight: {dx: 1, dy: 0},
+    ArrowLeft: {dx: -1, dy: 0},
+    ArrowUp: {dx: 0, dy: -1},
+    ArrowDown: {dx: 0, dy: 1},
+  };
+
+  /**
+   * Move the selected actor a tile in an arrow's direction — a pixel with Alt,
+   * which is the bargain the drag makes.
+   *
+   * The keyboard's half of dragging, and the half that was missing: a canvas
+   * click is not reachable from a keyboard, and an actor that could only be
+   * moved by one could only be moved by some people. A discrete edit, so it
+   * commits at once, the way a checkbox does.
+   */
+  const nudgeSelection = (dx: number, dy: number, free: boolean) => {
+    if (!selectedActor) {
       return;
     }
-    const cur = actors.findIndex(a => a.id === selectedId);
-    const next =
-      cur === -1
-        ? dir === 1
-          ? 0
-          : actors.length - 1
-        : (cur + dir + actors.length) % actors.length;
-    setSelectedId(actors[next].id);
-    ensureVisible(positionOf(actors[next])!);
+    const from = positionOf(selectedActor) ?? {x: 0, y: 0};
+    const to = steppedBy(from, map.tile, dx, dy, free);
+    const next = {
+      ...mapRef.current,
+      actors: mapRef.current.actors.map(a =>
+        a.id === selectedActor.id
+          ? withProperty(a, 'positional', 'position', to)
+          : a,
+      ),
+    };
+    mapRef.current = next;
+    commit(next);
+    seedDraft(next.actors.find(a => a.id === selectedActor.id) ?? null);
   };
 
   const handleKeyDown = (event: ReactKeyboardEvent) => {
@@ -1007,6 +953,13 @@ export const MapStage = ({
     }
     // Place mode is click-driven; the keyboard shortcuts are select-mode only.
     if (selected) {
+      return;
+    }
+    // Shift+arrow NUDGES the selection rather than cycling it.
+    const step = ARROW_STEPS[event.key];
+    if (step && event.shiftKey && selectedId && !isReadOnly) {
+      event.preventDefault();
+      nudgeSelection(step.dx, step.dy, event.altKey);
       return;
     }
     if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
