@@ -1,5 +1,10 @@
 import {IconDropdownOption} from '@code-dot-org/component-library/dropdown/iconDropdown';
 
+import {
+  SUPPORTED_AUDIO_EXTENSIONS,
+  SUPPORTED_IMAGE_EXTENSIONS,
+} from '@cdo/apps/lab2/constants';
+
 // FontAwesome only reaches its brand glyphs through `fa-brands`, and IconDropdown
 // forwards an option icon's className but not its iconFamily.
 const BRAND_ICON_CLASS = 'fa-brands';
@@ -7,7 +12,8 @@ const BRAND_ICON_CLASS = 'fa-brands';
 export const ALL_FILES_CATEGORY_ID = 'all';
 
 export type FileCategoryId =
-  | 'media'
+  | 'images'
+  | 'audio'
   | 'html'
   | 'css'
   | 'javascript'
@@ -27,24 +33,16 @@ interface FileCategory {
 // The last entry has no extensions and catches everything the others miss.
 const FILE_CATEGORIES: FileCategory[] = [
   {
-    id: 'media',
-    label: 'Media',
+    id: 'images',
+    label: 'Images',
     icon: {iconName: 'image', iconStyle: 'solid'},
-    extensions: [
-      'png',
-      'jpg',
-      'jpeg',
-      'gif',
-      'webp',
-      'svg',
-      'bmp',
-      'mp3',
-      'wav',
-      'ogg',
-      'm4a',
-      'mp4',
-      'webm',
-    ],
+    extensions: SUPPORTED_IMAGE_EXTENSIONS,
+  },
+  {
+    id: 'audio',
+    label: 'Audio',
+    icon: {iconName: 'file-music', iconStyle: 'solid'},
+    extensions: SUPPORTED_AUDIO_EXTENSIONS,
   },
   {
     id: 'html',
