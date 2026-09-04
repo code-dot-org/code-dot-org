@@ -55,7 +55,7 @@ describe('imageUtils object URL lifecycle', () => {
   });
 
   describe('downloadBlobAsPng', () => {
-    it('revokes the object URL only after the click, deferred', () => {
+    it('clicks a download link and leaves its URL alive', () => {
       jest.useFakeTimers();
       const click = jest
         .spyOn(HTMLAnchorElement.prototype, 'click')
@@ -63,11 +63,10 @@ describe('imageUtils object URL lifecycle', () => {
       try {
         downloadBlobAsPng(new Blob(['x'], {type: 'image/png'}), 'x.png');
         expect(click).toHaveBeenCalled();
-        // Deferred so a browser that dereferences the URL after click()
-        // still finds it alive.
-        expect(URL.revokeObjectURL).not.toHaveBeenCalled();
         jest.runAllTimers();
-        expect(URL.revokeObjectURL).toHaveBeenCalledWith('blob:fake-url');
+        // Deliberate: a download dereferences the URL at an unobservable
+        // time, so there is no safe point to revoke.
+        expect(URL.revokeObjectURL).not.toHaveBeenCalled();
       } finally {
         click.mockRestore();
         jest.useRealTimers();

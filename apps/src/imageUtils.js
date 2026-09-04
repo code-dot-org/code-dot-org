@@ -190,8 +190,8 @@ export function downloadBlobAsPng(blob, filename = 'image.png') {
   download.href = url;
   download.download = filename;
   download.click();
-  // Deferred: WebKit can dereference the URL after click() returns, and a
-  // revoked URL there kills the download. A minute still bounds the blob's
-  // lifetime, where it used to stay pinned until the page unloaded.
-  setTimeout(() => URL.revokeObjectURL(url), 60 * 1000);
+  // Deliberately never revoked: an anchor download dereferences the URL at
+  // a time the page can't observe (on iOS it waits on the user's download
+  // prompt), so there is no safe revocation point. The cost is one blob
+  // kept per user-initiated download.
 }
