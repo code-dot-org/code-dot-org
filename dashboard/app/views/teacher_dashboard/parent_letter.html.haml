@@ -38,3 +38,5 @@
       script_data[:localeCode] = I18n.locale.to_s
       script_data[:logoUrl] = asset_path('logo-codeai-inverse.svg')
     %script{src: webpack_asset_path('js/teacher_dashboard/parent_letter.js'), data: {json: script_data.to_json}, 'data-ot-ignore' => ''}
+  -# The letter mounts itself into the body from parent_letter.js.
+  %body
