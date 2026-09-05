@@ -62,10 +62,12 @@ class DCDOBase < DynamicConfigBase
       # experiment name (see apps/src/util/experiments.js), so setting this
       # turns the picker on for a whole environment.
       'spritelab-image-model': DCDO.get('spritelab-image-model', false),
-      # Which AI Gateway an environment talks to. Empty means production; a
-      # *.code-org.workers.dev host points at a preview worker. Validated
-      # against that allowlist in apps/src/aiGateway/shared.ts.
-      'ai-gateway-url': DCDO.get('ai-gateway-url', ''),
+      # Which AI Gateway an environment talks to. Defaults to production, so an
+      # unset key names the normal place rather than leaving the frontend to
+      # infer it. A *.code-org.workers.dev host points at a preview worker
+      # instead; both are validated against that allowlist in
+      # apps/src/aiGateway/shared.ts, which holds the same URL.
+      'ai-gateway-url': DCDO.get('ai-gateway-url', 'https://ai-gateway.code.org'),
       'detect-remote-network-config': DCDO.get('detect-remote-network-config', {}),
       'show-aita-lesson-summaries': DCDO.get('show-aita-lesson-summaries', false),
       'ai-lesson-summary-podcasts': DCDO.get('ai-lesson-summary-podcasts', false),

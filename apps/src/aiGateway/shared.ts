@@ -29,7 +29,9 @@ const GATEWAY_URL_PARAM = 'aiGatewayUrl';
  * DCDO key naming a gateway for this environment to use, so a dev or adhoc
  * deploy can point at a preview worker without a rebuild and without a URL
  * parameter on every page. Forwarded to the frontend by dcdo.rb's
- * frontend_config; unset everywhere by default, which means production.
+ * frontend_config, which defaults it to production — so an unset key names
+ * the normal place rather than leaving this to infer it, and the fallback
+ * below only covers a page that never received the value at all.
  *
  * Same allowlist as the URL parameter. DCDO is server-controlled rather than
  * user-supplied, so this is not the exfiltration risk the parameter is — but
@@ -97,7 +99,7 @@ export function getAiGatewayUrl(): string {
     return announce(validateGatewayUrl(fromQuery, 'the page URL'));
   }
 
-  const fromDcdo = DCDO.get(GATEWAY_URL_DCDO_KEY, '');
+  const fromDcdo = DCDO.get(GATEWAY_URL_DCDO_KEY, PRODUCTION_AI_GATEWAY_URL);
   if (typeof fromDcdo === 'string' && fromDcdo) {
     return announce(validateGatewayUrl(fromDcdo, GATEWAY_URL_DCDO_KEY));
   }

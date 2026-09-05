@@ -57,6 +57,16 @@ describe('getAiGatewayUrl', () => {
       );
     });
 
+    // What every environment gets by default: frontend_config forwards the
+    // production URL rather than nothing.
+    it('resolves the forwarded production default quietly', () => {
+      withSearch('');
+      DCDO.set('ai-gateway-url', PRODUCTION_AI_GATEWAY_URL);
+      expect(getAiGatewayUrl()).toBe(PRODUCTION_AI_GATEWAY_URL);
+      expect(warn).not.toHaveBeenCalled();
+      expect(info).not.toHaveBeenCalled();
+    });
+
     it('treats an empty value as unset', () => {
       withSearch('');
       DCDO.set('ai-gateway-url', '');

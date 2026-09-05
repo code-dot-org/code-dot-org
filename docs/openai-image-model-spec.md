@@ -592,6 +592,9 @@ a preview host cannot outlive its deployment in someone's browser.
 Both are forwarded to the frontend by `frontend_config` in
 `lib/dynamic_config/dcdo.rb`, which is an allowlist — a DCDO key absent
 from it is invisible to the browser no matter what it is set to.
+`ai-gateway-url` defaults there to the production URL, so an unset key
+names the normal place explicitly rather than leaving the client to infer
+it from an empty value.
 `spritelab-image-model` is read as an experiment name, so setting it
 turns the Model picker on for everyone on that environment;
 `experiments.isEnabled` already consults DCDO, so no client code was
