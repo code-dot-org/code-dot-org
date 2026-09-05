@@ -6,6 +6,8 @@ import TextField from '@code-dot-org/component-library/textField';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import aiBot0 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-0.png';
 import aiBot1 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-1.png';
 import aiBot2 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-2.png';
@@ -218,6 +220,16 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   const canUsePrevious = !!existing;
 
   const generate = useCallback(async () => {
+    // The third argument attaches the project context (level path, app),
+    // for per-level breakdowns.
+    analyticsReporter.sendEvent(
+      EVENTS.HOAI2026_IMAGE_PROMPT,
+      {
+        promptText: prompt.trim(),
+        imageType,
+      },
+      true
+    );
     onGenerateStart?.();
     setMode('generating');
     setError(null);

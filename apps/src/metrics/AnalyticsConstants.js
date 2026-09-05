@@ -429,6 +429,9 @@ const EVENTS = {
     'User accepts and uploads a flagged custom image',
   CANCEL_FLAGGED_CUSTOM_IMAGE: 'User cancels upload of flagged custom image',
 
+  // Sprite Lab in Lab2 image generation
+  HOAI2026_IMAGE_PROMPT: 'hoai2026-image-prompt',
+
   // Moderate model output image
   MODEL_OUTPUT_IMAGE_CREATED: 'Model output image created',
   MODERATE_MODEL_OUTPUT_IMAGE_AZURE: 'Model output image moderated by Azure',
