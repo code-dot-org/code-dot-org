@@ -169,10 +169,18 @@ byte sizes. Every `image_optim` helper binary is absent (`optipng`,
 through unoptimized and come out several times larger than expected. None of
 these are in SETUP.md's apt list.
 
-**`shared/test_aws_s3_integration.rb`, 1 failure and 6 errors** —
-`VCR::Errors::UnhandledHTTPRequestError` and
-`uninitialized constant Cdo::LocalDevelopment`, on a host with no AWS
-credentials.
+**`shared/test_aws_s3_integration.rb`, 1 failure and 6 errors** — two
+distinct causes, not one. The `VCR::Errors::UnhandledHTTPRequestError`
+cassette misses are the missing AWS credentials. The
+`uninitialized constant Cdo::LocalDevelopment` is a real bug, found by the
+m8g host and confirmed here: `lib/cdo/aws/s3.rb:96` calls
+`Cdo::LocalDevelopment.populate_local_s3_bucket` but the file never requires
+`cdo/local_development`, so `download_from_bucket` raises whenever
+`CDO.aws_s3_emulated` is true — the configuration `docker/developers`
+recommends.
+
+    ruby -e 'require "./deployment"; require "cdo/aws/s3"; Cdo::LocalDevelopment'
+    => NameError: uninitialized constant Cdo::LocalDevelopment
 
 **`RubricsControllerTest`, 3 failures — undiagnosed.** The tests expect an
 AI-config validation to reject a create, so that no `.script_json` is
