@@ -2,6 +2,7 @@ import {
   getAiGatewayUrl,
   PRODUCTION_AI_GATEWAY_URL,
 } from '@cdo/apps/aiGateway/shared';
+import DCDO from '@cdo/apps/dcdo';
 
 const PREVIEW =
   'openai-image-model-ai-gateway-development.code-org.workers.dev';
@@ -25,10 +26,47 @@ describe('getAiGatewayUrl', () => {
 
   afterEach(() => {
     jest.restoreAllMocks();
+    DCDO.reset();
   });
 
-  it('is production when the page says nothing', () => {
+  it('is production when neither the page nor DCDO says otherwise', () => {
     withSearch('');
+    expect(getAiGatewayUrl()).toBe(PRODUCTION_AI_GATEWAY_URL);
+    expect(warn).not.toHaveBeenCalled();
+  });
+
+  describe('DCDO, which is how a whole deploy is pointed somewhere', () => {
+    it('uses the environment gateway when the page names none', () => {
+      withSearch('');
+      DCDO.set('ai-gateway-url', PREVIEW);
+      expect(getAiGatewayUrl()).toBe(`https://${PREVIEW}`);
+    });
+
+    it('yields to the page URL, so one tab can differ from the deploy', () => {
+      withSearch('?aiGatewayUrl=ai-gateway.code.org');
+      DCDO.set('ai-gateway-url', PREVIEW);
+      expect(getAiGatewayUrl()).toBe(PRODUCTION_AI_GATEWAY_URL);
+    });
+
+    it('holds the same allowlist as the page URL', () => {
+      withSearch('');
+      DCDO.set('ai-gateway-url', 'https://evil.example.com');
+      expect(getAiGatewayUrl()).toBe(PRODUCTION_AI_GATEWAY_URL);
+      expect(warn).toHaveBeenCalledWith(
+        expect.stringContaining('ai-gateway-url')
+      );
+    });
+
+    it('treats an empty value as unset', () => {
+      withSearch('');
+      DCDO.set('ai-gateway-url', '');
+      expect(getAiGatewayUrl()).toBe(PRODUCTION_AI_GATEWAY_URL);
+      expect(warn).not.toHaveBeenCalled();
+    });
+  });
+
+  it('accepts production by name, to opt out of a deploy default', () => {
+    withSearch('?aiGatewayUrl=ai-gateway.code.org');
     expect(getAiGatewayUrl()).toBe(PRODUCTION_AI_GATEWAY_URL);
     expect(warn).not.toHaveBeenCalled();
   });
@@ -36,7 +74,18 @@ describe('getAiGatewayUrl', () => {
   it('accepts a preview deployment on the org Cloudflare subdomain', () => {
     withSearch(`?aiGatewayUrl=https://${PREVIEW}`);
     expect(getAiGatewayUrl()).toBe(`https://${PREVIEW}`);
-    expect(info).toHaveBeenCalledWith(expect.stringContaining(PREVIEW));
+  });
+
+  // Its own hostname: the notice fires once per resolved URL for the life of
+  // the page, so a host another test already resolved would announce nothing.
+  it('says once where overridden traffic is going', () => {
+    withSearch('?aiGatewayUrl=announce-once.code-org.workers.dev');
+    getAiGatewayUrl();
+    getAiGatewayUrl();
+    expect(info).toHaveBeenCalledTimes(1);
+    expect(info).toHaveBeenCalledWith(
+      expect.stringContaining('announce-once.code-org.workers.dev')
+    );
   });
 
   it('accepts the bare hostname too', () => {

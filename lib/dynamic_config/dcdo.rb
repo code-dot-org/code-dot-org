@@ -58,6 +58,14 @@ class DCDOBase < DynamicConfigBase
       'skills-dashboard': DCDO.get('skills-dashboard', false),
       'teacher-homepage-welcome': DCDO.get('teacher-homepage-welcome', false),
       'blockly-keyboard-navigation': DCDO.get('blockly-keyboard-navigation', false),
+      # Shows the image-model choice in Sprite Lab 2's image dialog. Read as an
+      # experiment name (see apps/src/util/experiments.js), so setting this
+      # turns the picker on for a whole environment.
+      'spritelab-image-model': DCDO.get('spritelab-image-model', false),
+      # Which AI Gateway an environment talks to. Empty means production; a
+      # *.code-org.workers.dev host points at a preview worker. Validated
+      # against that allowlist in apps/src/aiGateway/shared.ts.
+      'ai-gateway-url': DCDO.get('ai-gateway-url', ''),
       'detect-remote-network-config': DCDO.get('detect-remote-network-config', {}),
       'show-aita-lesson-summaries': DCDO.get('show-aita-lesson-summaries', false),
       'ai-lesson-summary-podcasts': DCDO.get('ai-lesson-summary-podcasts', false),

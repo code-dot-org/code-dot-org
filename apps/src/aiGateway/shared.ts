@@ -1,4 +1,5 @@
 import AichatContextManager from '../aichat/aichatContextManager';
+import DCDO from '../dcdo';
 import HttpClient from '../util/HttpClient';
 
 import {
@@ -24,54 +25,90 @@ const PREVIEW_HOSTNAME = /^[a-z0-9][a-z0-9-]*\.code-org\.workers\.dev$/;
 
 const GATEWAY_URL_PARAM = 'aiGatewayUrl';
 
+/**
+ * DCDO key naming a gateway for this environment to use, so a dev or adhoc
+ * deploy can point at a preview worker without a rebuild and without a URL
+ * parameter on every page. Forwarded to the frontend by dcdo.rb's
+ * frontend_config; unset everywhere by default, which means production.
+ *
+ * Same allowlist as the URL parameter. DCDO is server-controlled rather than
+ * user-supplied, so this is not the exfiltration risk the parameter is — but
+ * a typo that silently redirected an environment's AI traffic is its own
+ * problem, and one validator for both sources is less to reason about.
+ */
+const GATEWAY_URL_DCDO_KEY = 'ai-gateway-url';
+
 // So a playtest session says once where its traffic is going, without a line
 // per request.
 let announcedOverride: string | undefined;
 
 /**
- * The gateway this page talks to: production, unless the URL names a preview
- * deployment on the org's Cloudflare subdomain.
- *
- * Deliberately not persisted — no localStorage, no experiment. The parameter
- * has to be on the URL you are looking at, so closing the tab or dropping it
- * from the address bar puts you back on production immediately. A stale
- * preview URL outliving its deployment is a worse failure than retyping the
- * parameter.
- *
- * Accepts `?aiGatewayUrl=https://name.code-org.workers.dev` or the bare
- * hostname. Only the hostname is ever used: the URL is rebuilt from it, so a
- * path, port, query, fragment or embedded credentials in the supplied value
- * cannot reach the request.
+ * Validate one candidate gateway against the allowlist. Returns undefined,
+ * loudly, for anything else: silently serving production while the URL or
+ * DCDO says otherwise is how a playtest ends up measuring the wrong
+ * deployment.
  */
-export function getAiGatewayUrl(): string {
-  let raw: string | null = null;
-  try {
-    raw = new URLSearchParams(window.location.search).get(GATEWAY_URL_PARAM);
-  } catch {
-    // No window (a test, a worker); production is the only sane answer.
-    return PRODUCTION_AI_GATEWAY_URL;
-  }
-  if (!raw) {
-    return PRODUCTION_AI_GATEWAY_URL;
-  }
-
+function validateGatewayUrl(raw: string, source: string): string | undefined {
   const hostname = raw
     .trim()
     .toLowerCase()
     .replace(/^https?:\/\//, '')
     .replace(/[/?#].*$/, '');
 
-  if (!PREVIEW_HOSTNAME.test(hostname)) {
-    // Loud: silently serving production while the URL says otherwise is how a
-    // playtest ends up measuring the wrong deployment.
-    console.warn(
-      `[aiGateway] Ignoring ${GATEWAY_URL_PARAM}=${raw} — only ` +
-        `*.code-org.workers.dev is accepted. Using production.`
-    );
+  // Naming production explicitly is how a page gets back to production from
+  // an environment whose DCDO points somewhere else.
+  if (`https://${hostname}` === PRODUCTION_AI_GATEWAY_URL) {
     return PRODUCTION_AI_GATEWAY_URL;
   }
+  if (!PREVIEW_HOSTNAME.test(hostname)) {
+    console.warn(
+      `[aiGateway] Ignoring gateway "${raw}" from ${source} — only ` +
+        `*.code-org.workers.dev and ${PRODUCTION_AI_GATEWAY_URL} are ` +
+        `accepted. Using production.`
+    );
+    return undefined;
+  }
+  // Rebuilt from the hostname alone, so a path, port, query, fragment or
+  // embedded credentials in the value never reach the request.
+  return `https://${hostname}`;
+}
 
-  const url = `https://${hostname}`;
+/**
+ * The gateway this page talks to. In order: the `aiGatewayUrl` URL parameter,
+ * the `ai-gateway-url` DCDO value for this environment, then production.
+ *
+ * The parameter is deliberately not persisted — no localStorage, no
+ * experiment — so it has to be on the URL in front of you and a preview host
+ * cannot outlive its deployment in someone's browser. Standing configuration
+ * for a whole deploy belongs in DCDO instead, which is revertible without a
+ * build and cannot be set by whoever sends you a link.
+ */
+export function getAiGatewayUrl(): string {
+  let fromQuery: string | null = null;
+  try {
+    fromQuery = new URLSearchParams(window.location.search).get(
+      GATEWAY_URL_PARAM
+    );
+  } catch {
+    // No window (a test, a worker); production is the only sane answer.
+    return PRODUCTION_AI_GATEWAY_URL;
+  }
+  if (fromQuery) {
+    return announce(validateGatewayUrl(fromQuery, 'the page URL'));
+  }
+
+  const fromDcdo = DCDO.get(GATEWAY_URL_DCDO_KEY, '');
+  if (typeof fromDcdo === 'string' && fromDcdo) {
+    return announce(validateGatewayUrl(fromDcdo, GATEWAY_URL_DCDO_KEY));
+  }
+
+  return PRODUCTION_AI_GATEWAY_URL;
+}
+
+function announce(url: string | undefined): string {
+  if (!url || url === PRODUCTION_AI_GATEWAY_URL) {
+    return PRODUCTION_AI_GATEWAY_URL;
+  }
   if (announcedOverride !== url) {
     announcedOverride = url;
     console.info(`[aiGateway] Using gateway override ${url}`);

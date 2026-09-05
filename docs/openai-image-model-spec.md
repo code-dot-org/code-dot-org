@@ -564,18 +564,40 @@ and the controller is unchanged.
 
 **Pointing a local page at a preview worker**
 
-`getAiGatewayUrl()` in `apps/src/aiGateway/shared.ts` reads
-`?aiGatewayUrl=` from the page URL, accepting only
-`*.code-org.workers.dev` — the org's own Cloudflare account subdomain, so
-only a worker we deploy can hold such a name. The restriction is the
-point: a gateway request carries a signed JWT for the current user
-together with their prompt, so an override that took any host would be a
-link that collects both. Only the hostname is used; the URL is rebuilt
-from it, so a path, port, query or embedded credentials never reach the
-request. Nothing persists it — drop the parameter and the next page load
-is back on production.
+`getAiGatewayUrl()` in `apps/src/aiGateway/shared.ts` resolves, in order:
+the `aiGatewayUrl` URL parameter, the `ai-gateway-url` DCDO value for the
+environment, then production. Both sources pass the same allowlist —
+`*.code-org.workers.dev`, the org's own Cloudflare account subdomain, so
+only a worker we deploy can hold such a name — plus
+`ai-gateway.code.org` by name, which is how a page opts back out of a
+deploy-wide default. Only the hostname is used; the URL is rebuilt from
+it, so a path, port, query or embedded credentials never reach the
+request. A rejected value warns rather than falling back quietly.
+
+The allowlist matters most for the URL parameter, which is
+attacker-supplied: a gateway request carries a signed JWT for the current
+user together with their prompt, so an unrestricted override would be a
+link that collects both. The parameter is deliberately not persisted, so
+a preview host cannot outlive its deployment in someone's browser.
+
+**One tab:**
 
     ?spritelab-image-model=1&aiGatewayUrl=<name>.code-org.workers.dev
+
+**A whole deploy**, no URL parameters, two DCDO values:
+
+    spritelab-image-model = true
+    ai-gateway-url        = <name>.code-org.workers.dev
+
+Both are forwarded to the frontend by `frontend_config` in
+`lib/dynamic_config/dcdo.rb`, which is an allowlist — a DCDO key absent
+from it is invisible to the browser no matter what it is set to.
+`spritelab-image-model` is read as an experiment name, so setting it
+turns the Model picker on for everyone on that environment;
+`experiments.isEnabled` already consults DCDO, so no client code was
+needed for it. Outside production, DCDO is a local JSON file
+(`dashboard/dcdo_<env>_temp.json`), writable with
+`DCDO.set('ai-gateway-url', '<host>')` from `./bin/rails runner`.
 
 Two things to check on the preview environment before blaming the image
 code, both per-environment wrangler secrets:
