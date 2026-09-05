@@ -25,7 +25,8 @@ below are those gaps, ordered by what leaving each alone would cost.
 Two of them are the same fact seen from two sides. The rules being real is what
 makes them heavy (§2) and what makes "open it and see how it works" stop
 scaling at about thirty blocks (§3). Neither is fixed by making the rules less
-real.
+real — but §8, added later, answers both at once by not putting the whole of a
+rule on one surface, and supersedes §3.
 
 ## 1. Record a real `position before`
 
@@ -205,6 +206,21 @@ this rule for" beside a shipped one, and the two readings are:
 The recommendation is the pane, because the wall is INSIDE the file and the
 drawer button is not there. But that is a decision about the teaching model
 rather than about code, and it belongs to whoever owns the progression.
+
+_Correction, 2026-09-05._ "The drawer button is not there" is false, and the
+recommendation rested on it. `structuralCategories` filters only the
+structural categories by file kind; the per-rule drawers are appended
+unfiltered, so `solid.rule` opens with a **Solid Bodies** drawer in its own
+toolbox and `How this works` at the top of it. What survives the correction is
+narrower and still real: `lessonFlyoutButton` returns nothing for a rule the
+learner wrote, and a rule that mints no blocks gets no category and so no
+button at all.
+
+_Superseded, 2026-09-05, by §8._ The pane is the right idea at the wrong
+granularity. A rule's documentation is not one paragraph about the file; it is
+one paragraph per trait, per property, per step — and this lab already carries
+that shape for one member kind and no other. §8 is that, and it answers the
+weight problem in §2 with the same change.
 
 **Done when.** Opening `solid.rule` shows what Solid is for before it shows a
 block; the text is the DSL header, byte for byte, and a test proves the
@@ -488,6 +504,112 @@ the ceremony is pre-written now: `New rule` seeds the rule, a trait and a step
 are gone. Tapper's `Spin` is `spin.rule`; the Adventure Making tile is
 `making/rule`, "Shared, without a copy", and grants `world_rule`. BEHAVIORS.md
 opens with the answer and closes with the reasoning.
+
+## 8. Break a rule into surfaces
+
+**The problem, which is three problems.** A heavy rule is slow to open, has
+nowhere to put what its author knows, and shows a learner a wall. Those are
+filed separately above — the weight in §2, the prose in §3 — and they have one
+cause: everything a rule is arrives in one workspace at once.
+
+Measured on the shelf as it stands, by counting blocks inside a step's or a
+designed block's `DO` body against everything else:
+
+| rule      | blocks | in a body | the interface that is left |
+| --------- | ------ | --------- | -------------------------- |
+| `solid`   | 473    | 445 (94%) | 28                         |
+| `climb`   | 311    | 285 (92%) | 26                         |
+| `grid`    | 264    | 244 (92%) | 20                         |
+| `gravity` | 209    | 183 (88%) | 26                         |
+| `motion`  | 53     | 37 (70%)  | 16                         |
+
+Nine tenths of a rule is implementation. What is left — `define rule`, its
+`use rule` rows, each trait and its properties, each designed block's
+signature, each step's name and phase — is twenty to thirty blocks, which is a
+screen.
+
+**What to do.** The outer workspace is the rule's INTERFACE. A body is a
+surface of its own, built when somebody asks for it, with that member's
+documentation above it.
+
+Gravity, opened:
+
+    define rule ⟨Gravity⟩ which adds ability ⟨Has Gravity⟩
+      use rule ⟨Physics⟩   use rule ⟨Solid Bodies⟩
+      define vector ⟨direction of gravity⟩ = 0,1
+      define number ⟨amount of gravity⟩ = 9
+
+    define trait ⟨Affected by Gravity⟩ for actor            ⓘ
+      define number ⟨gravity scale⟩ = 1                     ⓘ
+      define boolean ⟨falling⟩ readonly
+      define boolean ⟨ignores ground⟩ = false               ⓘ
+      ⟨this actor⟩ is on the ground?                [edit]  ⓘ
+      when ⟨starts falling⟩ · when ⟨stops falling⟩
+
+    define trait ⟨Acts as Ground⟩ for actor                 ⓘ
+    each frame during ⟨push⟩ ⟨applyVelocity⟩        [edit]  ⓘ
+    each frame during ⟨react⟩ ⟨handleCollisions⟩    [edit]  ⓘ
+
+Twenty-six blocks against two hundred and nine, and it reads as what the rule
+OFFERS rather than as how it works — which is the question somebody has when
+they open it.
+
+_Why this is affordable._ The editor's cost is per-block construction with its
+SVG machinery, and it was measured directly: collapsing 80% of `solid`'s
+blocks changed the tab switch from 342ms to 341ms. Hiding a block does not
+help; not building it does. Twenty-eight blocks instead of four hundred and
+seventy-three is the same lever, pulled properly.
+
+_Why it does not disturb the compiler._ Generation already runs on a workspace
+of its own — `BlocklyGenerator` keeps a headless `Blockly.Workspace` and loads
+the file into it, because building blocks without their SVG is a fifth of the
+cost. What the editor renders and what the generator walks are ALREADY two
+surfaces. So the editor may show less without changing what compiles, and the
+risk this design looked like it carried has been paid for already.
+
+_And it is where the documentation goes._ §3's pane is one paragraph about a
+file. What a rule actually holds is one explanation per member, and the lab
+already carries exactly that for one member kind: a `define block`'s
+`DESCRIPTION` travels in the `.rule` and becomes the minted block's tooltip
+(`domainBlocks.ts`). A trait, a property and a step have no such field, so
+`Acts as Ground`'s account of itself — that it is a one-way platform on its
+own, and an ordinary floor with `Solid` beside it — reaches nobody. Give those
+declarations the field a designed block already has, show it on the surface
+its body opens on, and documentation stops being a wall to scroll past and
+becomes what you get for opening something up.
+
+**What has to be decided.**
+
+- _Where a body lives on disk._ Nested in `inputs.DO`, as now, with the editor
+  simply not building it; or lifted into a side table keyed by member. Nested
+  changes no file format and no generator, and is where to start.
+- _Modal, bubble, or a surface swap._ Blockly's mutators use bubble
+  workspaces, and a note from earlier work says a bubble cannot hand blocks
+  OUT — a blocker there, and possibly not here, since a body is self-contained.
+  A full swap ("editing `applyVelocity` · ← back") is simpler to build and
+  reads better on a small screen.
+- _What the outer surface still allows._ Renaming a property, moving a step
+  between traits and adding a trait are interface edits and must stay. But a
+  learner dragging a block from the toolbox has nowhere to drop it on that
+  surface, which is a real change to how the editor feels and the thing most
+  likely to need a second draft.
+- _Whether every rule opens this way._ `motion` is fifty-three blocks and
+  loses something by being split. A threshold is a fudge; a per-file
+  preference is a setting nobody will find. The honest options are "always" or
+  "never", and always is probably right — consistency is worth more here than
+  saving a click on the four small rules.
+
+**Done when.** Opening `solid.rule` builds tens of blocks rather than
+hundreds, and `projectWeight.test.ts` grows a sibling that says so; the
+interface is legible in one screen; every trait, property and step can carry
+prose and Gravity's is visible where that member is; and generation is
+untouched, which a test asserts by compiling a rule whose bodies were never
+opened.
+
+**What it does not solve.** The file is still 500KB on disk — §2's copy-on-edit
+is a separate decision and this does not make it smaller. It also does not help
+the ACTOR and WORLD editors, whose files are small today; if that changes, the
+same split applies to an actor's own `each frame`.
 
 ## Not on the list, and why
 
