@@ -68,9 +68,25 @@ export async function generateChatResponse(
     levelSystemPrompt
   );
 
-  for (const message of [...storedMessages, newMessage]) {
-    messages.push(await formatChatMessage(message, buildAssetUrl));
+  // we're specifically dropping unreadable assets in just storedMessages to make sure corrupted chat history
+  // doesn't poison the rest of the conversation, but issues with the new message still surface.
+  for (const message of storedMessages) {
+    const formattedMessage = await formatChatMessage(message, buildAssetUrl, {
+      dropUnreadableAssets: true,
+    });
+    if (formattedMessage) {
+      messages.push(formattedMessage);
+    }
   }
+
+  const formattedNewMessage = await formatChatMessage(
+    newMessage,
+    buildAssetUrl
+  );
+  if (!formattedNewMessage) {
+    throw new Error('Cannot send an undefined chat message.');
+  }
+  messages.push(formattedNewMessage);
 
   // Structured-output schema, when the caller (e.g. weblab2/pythonlab AI
   // Tutor) requested one via modelParameters.responseJsonSchema. jsonSchema()
