@@ -1,6 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {IconButton as MuiIconButton} from '@mui/material';
+import {IconButton as MuiIconButton, Tooltip} from '@mui/material';
 import classNames from 'classnames';
 import React, {memo} from 'react';
 
@@ -48,18 +47,19 @@ const CleanFeedbackFooter: React.FC<Props> = ({
     />
   );
   const flagButton = (
-    <WithTooltip
+    <Tooltip
       key={`flag-tooltip-${teacherFlagged}`}
-      tooltipProps={{
-        tooltipId: 'flag-tooltip',
-        direction: isAssistant ? 'onRight' : 'onLeft',
-        size: 'xs',
-        text: teacherFlagged
-          ? 'You flagged this message. It has been hidden from the student.'
-          : 'Flag message as inappropriate',
-        className: moduleStyles.tooltip,
-        iconLeft: teacherFlagged ? {iconName: 'check'} : undefined,
-      }}
+      placement={isAssistant ? 'right' : 'left'}
+      title={
+        teacherFlagged ? (
+          <>
+            <FontAwesomeV6Icon iconName="check" />
+            You flagged this message. It has been hidden from the student.
+          </>
+        ) : (
+          'Flag message as inappropriate'
+        )
+      }
     >
       <MuiIconButton
         variant="text"
@@ -78,7 +78,7 @@ const CleanFeedbackFooter: React.FC<Props> = ({
           iconStyle={teacherFlagged ? 'solid' : 'regular'}
         />
       </MuiIconButton>
-    </WithTooltip>
+    </Tooltip>
   );
 
   // Place elements in the correct semantic order.

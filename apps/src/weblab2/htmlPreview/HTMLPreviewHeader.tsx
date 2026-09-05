@@ -2,8 +2,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@code-dot-org/component-library/segmentedButtons';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {IconButton as MuiIconButton} from '@mui/material';
+import {IconButton as MuiIconButton, Tooltip} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, ChangeEvent, useCallback, useRef} from 'react';
 
@@ -181,27 +180,23 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
           <FontAwesomeV6Icon iconName="refresh" />
         </MuiIconButton>
       </div>
-      <WithTooltip
-        tooltipProps={{
-          tooltipId: 'stop-preview',
-          direction: 'onBottom',
-          size: 'xs',
-          text: 'Stop preview',
-        }}
-      >
-        <MuiIconButton
-          variant="outlined"
-          color="error"
-          size="extraSmall"
-          disabled={!isStopEnabled}
-          className={moduleStyles.iconButton}
-          onClick={onStopPreview}
-          aria-label="Stop Preview"
-          type="button"
-        >
-          <FontAwesomeV6Icon iconName="circle-stop" />
-        </MuiIconButton>
-      </WithTooltip>
+      <Tooltip placement="bottom" title="Stop preview">
+        {/* Wrapper span so the tooltip still shows when the button is disabled. */}
+        <span>
+          <MuiIconButton
+            variant="outlined"
+            color="error"
+            size="extraSmall"
+            disabled={!isStopEnabled}
+            className={moduleStyles.iconButton}
+            onClick={onStopPreview}
+            aria-label="Stop Preview"
+            type="button"
+          >
+            <FontAwesomeV6Icon iconName="circle-stop" />
+          </MuiIconButton>
+        </span>
+      </Tooltip>
       <SegmentedButtons
         className={moduleStyles.previewViewModeButtons}
         {...previewViewModeButtonsProps}
@@ -210,13 +205,9 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
       {!isShareView && (
         // Hide debug panel toggle and full screen toggle buttons in share view.
         <>
-          <WithTooltip
-            tooltipProps={{
-              tooltipId: 'toggle-debug-panel',
-              direction: 'onBottom',
-              size: 'xs',
-              text: debugPanelOpen ? 'Close debug panel' : 'Open debug panel',
-            }}
+          <Tooltip
+            placement="bottom"
+            title={debugPanelOpen ? 'Close debug panel' : 'Open debug panel'}
           >
             <MuiIconButton
               variant="outlined"
@@ -234,14 +225,10 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
             >
               <FontAwesomeV6Icon iconName="bug" />
             </MuiIconButton>
-          </WithTooltip>
-          <WithTooltip
-            tooltipProps={{
-              tooltipId: 'toggle-inspector',
-              direction: 'onBottom',
-              size: 'xs',
-              text: inspectorEnabled ? 'Stop inspecting' : 'Inspect elements',
-            }}
+          </Tooltip>
+          <Tooltip
+            placement="bottom"
+            title={inspectorEnabled ? 'Stop inspecting' : 'Inspect elements'}
           >
             <MuiIconButton
               variant="outlined"
@@ -259,7 +246,7 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
             >
               <FontAwesomeV6Icon iconName="arrow-pointer" />
             </MuiIconButton>
-          </WithTooltip>
+          </Tooltip>
           <ToggleFullScreenButton
             isFullScreenView={isFullScreenView}
             onToggleFullScreen={onToggleFullScreen}

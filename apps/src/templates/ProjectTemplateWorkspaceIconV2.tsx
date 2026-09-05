@@ -1,6 +1,6 @@
 import {ComponentPlacementDirection} from '@code-dot-org/component-library/common/types';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
+import {Tooltip, TooltipProps} from '@mui/material';
 import classnames from 'classnames';
 import React from 'react';
 
@@ -13,26 +13,31 @@ interface ProjectTemplateWorkspaceIconV2Props {
   className?: string;
 }
 
+// Legacy direction → MUI placement ('none' and unset → bottom).
+const PLACEMENT_MAP: Record<
+  ComponentPlacementDirection,
+  TooltipProps['placement']
+> = {
+  onTop: 'top',
+  onRight: 'right',
+  onBottom: 'bottom',
+  onLeft: 'left',
+  none: 'bottom',
+};
+
 /**
- * Modernized version of ProjectTemplateWorkspaceIcon, which uses DSCO for the Tooltip
- * component and a FontAwesome icon for the connected level icon.
- * This component should be used in favor of ProjectTemplateWorkspaceIcon in the workspace
- * header.
- * @param tooltipPlace - The placement of the tooltip relative to the icon. Uses
- * the DSCO ComponentPlacementDirection enum.
- * @returns
+ * Modernized ProjectTemplateWorkspaceIcon: MUI Tooltip + a FontAwesome
+ * connected-level icon. Prefer this over ProjectTemplateWorkspaceIcon in the
+ * workspace header.
+ * @param tooltipPlace - Tooltip placement, as a DSCO ComponentPlacementDirection.
  */
 const ProjectTemplateWorkspaceIconV2: React.FunctionComponent<
   ProjectTemplateWorkspaceIconV2Props
 > = ({tooltipPlace, className}) => {
   return (
-    <WithTooltip
-      tooltipProps={{
-        text: commonI18n.workspaceProjectTemplateLevel(),
-        direction: tooltipPlace || 'onBottom',
-        tooltipId: 'project-template-workspace-icon-tooltip',
-        size: 'xs',
-      }}
+    <Tooltip
+      title={commonI18n.workspaceProjectTemplateLevel()}
+      placement={PLACEMENT_MAP[tooltipPlace || 'onBottom']}
     >
       {/* Wrap the icon in a button so that the tooltip is tabbable. */}
       <button
@@ -46,7 +51,7 @@ const ProjectTemplateWorkspaceIconV2: React.FunctionComponent<
           className={styles.icon}
         />
       </button>
-    </WithTooltip>
+    </Tooltip>
   );
 };
 

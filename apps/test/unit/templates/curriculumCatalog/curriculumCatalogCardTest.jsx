@@ -1,4 +1,4 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import {intersection, pull} from 'lodash';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -111,26 +111,34 @@ describe('CurriculumCatalogCard', () => {
     screen.getByText(`+${subjects.length + topics.length - 1}`);
   });
 
-  it('renders tooltip showing full text of first label when hovering over it', () => {
+  it('renders tooltip showing full text of first label when hovering over it', async () => {
     renderCurriculumCard({...defaultProps, subjects: subjects, topics: topics});
     const firstLabelText =
       translatedLabels[subjectsAndTopicsOrder[firstSubjectIndexUsed]];
     const firstLabelNode = screen.getByText(firstLabelText);
 
     fireEvent.mouseOver(firstLabelNode);
-    expect(screen.getAllByText(firstLabelText)).toHaveLength(2);
+    await waitFor(() =>
+      expect(screen.getAllByText(firstLabelText)).toHaveLength(2)
+    );
   });
 
-  it('renders tooltip showing full text of first label when focused on it', () => {
+  // The tooltip itself opens on :focus-visible, which jsdom never reports for
+  // scripted focus, so only reachability is assertable here.
+  it('gives the first label a keyboard-reachable tooltip trigger', () => {
     renderCurriculumCard({...defaultProps, subjects: subjects, topics: topics});
     const firstLabelText =
       translatedLabels[subjectsAndTopicsOrder[firstSubjectIndexUsed]];
-    const firstLabelNode = screen.getByText(firstLabelText);
-    firstLabelNode.closest('div').focus();
-    expect(screen.getAllByText(firstLabelText)).toHaveLength(2);
+    const firstLabelTrigger = screen
+      .getByText(firstLabelText)
+      .closest('div[tabindex]');
+
+    expect(firstLabelTrigger).toHaveAttribute('tabindex', '0');
+    firstLabelTrigger.focus();
+    expect(firstLabelTrigger).toHaveFocus();
   });
 
-  it('renders tooltip showing remaining labels when hovering on plus sign', () => {
+  it('renders tooltip showing remaining labels when hovering on plus sign', async () => {
     renderCurriculumCard({...defaultProps, subjects: subjects, topics: topics});
     const remainingLabels = pull(
       [...subjects, ...topics],
@@ -153,26 +161,20 @@ describe('CurriculumCatalogCard', () => {
     );
 
     fireEvent.mouseOver(plusSignText);
-    expect(screen.getByText(remainingLabelsTooltipContent)).toBeInTheDocument();
+    expect(
+      await screen.findByText(remainingLabelsTooltipContent)
+    ).toBeInTheDocument();
   });
 
-  it('renders tooltip showing remaining labels when plus sign is focused', () => {
+  it('gives the plus sign a keyboard-reachable tooltip trigger', () => {
     renderCurriculumCard({...defaultProps, subjects: subjects, topics: topics});
-    const remainingLabelsTooltipContent = intersection(
-      subjectsAndTopicsOrder,
-      pull(
-        [...subjects, ...topics],
-        subjectsAndTopicsOrder[firstSubjectIndexUsed]
-      )
-    )
-      .map(label => translatedLabels[label])
-      .join(', ');
+    const plusSignTrigger = screen
+      .getByText(`+${subjects.length + topics.length - 1}`)
+      .closest('div[tabindex]');
 
-    const plusSignText = screen.getByText(
-      `+${subjects.length + topics.length - 1}`
-    );
-    plusSignText.closest('div').focus();
-    expect(screen.getByText(remainingLabelsTooltipContent)).toBeInTheDocument();
+    expect(plusSignTrigger).toHaveAttribute('tabindex', '0');
+    plusSignTrigger.focus();
+    expect(plusSignTrigger).toHaveFocus();
   });
 
   it('renders one topic, the first available from ordered list, if no subject present', () => {

@@ -1,7 +1,6 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {RadioButton} from '@code-dot-org/component-library/radioButton';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {Typography, Button as MuiButton} from '@mui/material';
+import {Typography, Button as MuiButton, Tooltip} from '@mui/material';
 import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
@@ -128,35 +127,25 @@ const VersionHistoryRow: React.FunctionComponent<
             </MuiButton>
           )}
           {aiSavedComment && !showRestoreButton && (
-            <WithTooltip
-              tooltipProps={{
-                text: 'AI Version Save',
-                size: 's',
-                tooltipId: `${versionId}-ai-saved-tooltip`,
-                direction: 'onBottom',
-              }}
-            >
-              <FontAwesomeV6Icon
-                iconFamily="kit"
-                iconName="ai-head-solid"
-                className={moduleStyles.aiSaveIcon}
-              />
-            </WithTooltip>
+            <Tooltip title="AI Version Save" placement="bottom">
+              <span role="img" aria-label="AI Version Save">
+                <FontAwesomeV6Icon
+                  iconFamily="kit"
+                  iconName="ai-head-solid"
+                  className={moduleStyles.aiSaveIcon}
+                />
+              </span>
+            </Tooltip>
           )}
           {showAutoSavedIcon && !showRestoreButton && (
-            <WithTooltip
-              tooltipProps={{
-                text: lab2I18n.autosavedVersion(),
-                size: 's',
-                tooltipId: `${versionId}-autosaved-tooltip`,
-                direction: 'onBottom',
-              }}
-            >
-              <FontAwesomeV6Icon
-                iconName={'cloud-check'}
-                className={moduleStyles.autoSavedIcon}
-              />
-            </WithTooltip>
+            <Tooltip title={lab2I18n.autosavedVersion()} placement="bottom">
+              <span role="img" aria-label={lab2I18n.autosavedVersion()}>
+                <FontAwesomeV6Icon
+                  iconName={'cloud-check'}
+                  className={moduleStyles.autoSavedIcon}
+                />
+              </span>
+            </Tooltip>
           )}
         </div>
         {children}

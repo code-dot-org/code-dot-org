@@ -1,7 +1,6 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tags from '@code-dot-org/component-library/tags';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {Typography, Button as MuiButton} from '@mui/material';
+import {Typography, Button as MuiButton, Tooltip} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {Fragment} from 'react';
@@ -107,22 +106,20 @@ const RegionalWorkshopCatalogCard = ({
           )}
         </div>
         <div className={style.infoBlock}>
-          <WithTooltip
-            tooltipProps={{
-              tooltipId: sessions[0].start,
-              size: 'xs',
-              text: sessions.map(session => {
-                const text = buildSessionDateAndTime(session);
-                return (
-                  <Fragment key={text}>
-                    {text}
-                    <br />
-                  </Fragment>
-                );
-              }),
-            }}
+          <Tooltip
+            placement="top"
+            title={sessions.map(session => {
+              const text = buildSessionDateAndTime(session);
+              return (
+                <Fragment key={text}>
+                  {text}
+                  <br />
+                </Fragment>
+              );
+            })}
           >
-            <span className={style.infoLine}>
+            {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- the tooltip lists every session, the visible text only the first */}
+            <span className={style.infoLine} tabIndex={0}>
               <div className={style.infoLineIconContainer}>
                 <FontAwesomeV6Icon iconName={'calendar'} />
               </div>
@@ -130,7 +127,7 @@ const RegionalWorkshopCatalogCard = ({
                 {buildWorkshopStartText(sessions)}
               </Typography>
             </span>
-          </WithTooltip>
+          </Tooltip>
           <span className={style.infoLine}>
             <div className={style.infoLineIconContainer}>
               <FontAwesomeV6Icon iconName={'screen-users'} />

@@ -1,7 +1,6 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import NotificationBanner from '@code-dot-org/component-library/notification-banner';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {Button as MuiButton} from '@mui/material';
+import {Button as MuiButton, Tooltip} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useMemo} from 'react';
 import {connect} from 'react-redux';
@@ -73,13 +72,7 @@ const CoteacherInviteNotification = ({
           {i18n.coteacherInvite({
             invitedByName: invite.invited_by_name,
           })}
-          <WithTooltip
-            tooltipProps={{
-              text: i18n.coteacherTooltip(),
-              size: 's',
-              tooltipId: 'coteacher-invite-tooltip',
-            }}
-          >
+          <Tooltip title={i18n.coteacherTooltip()} placement="top">
             <button
               type="button"
               className={styles.tooltipTrigger}
@@ -87,7 +80,7 @@ const CoteacherInviteNotification = ({
             >
               <FontAwesomeV6Icon iconName="circle-info" />
             </button>
-          </WithTooltip>
+          </Tooltip>
         </>
       }
       description={

@@ -1,7 +1,7 @@
-import {
-  TooltipProps,
-  WithTooltip,
-} from '@code-dot-org/component-library/tooltip';
+import {ComponentPlacementDirection} from '@code-dot-org/component-library/common/types';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {TooltipProps} from '@code-dot-org/component-library/tooltip';
+import {Tooltip} from '@mui/material';
 import React from 'react';
 
 interface WithConditionalTooltipProps {
@@ -11,22 +11,55 @@ interface WithConditionalTooltipProps {
   showTooltip: boolean;
 }
 
-// Component that wraps children with a tooltip is showTooltip is true,
-// otherwise it just renders the children wrapped in a div.
-// The wrapper div is what carries the hover handlers, so the tooltip still
-// appears for disabled children, which get no pointer events of their own.
+// Legacy direction → MUI placement ('none' and unset → top).
+const DIRECTION_TO_PLACEMENT: Record<
+  ComponentPlacementDirection,
+  'top' | 'right' | 'bottom' | 'left'
+> = {
+  onTop: 'top',
+  onRight: 'right',
+  onBottom: 'bottom',
+  onLeft: 'left',
+  none: 'top',
+};
+
+// Wraps children in a tooltip when showTooltip is true. The wrapping div
+// carries the hover handlers, so the tooltip still shows for disabled children.
 const WithConditionalTooltip: React.FunctionComponent<
   WithConditionalTooltipProps
 > = ({children, tooltipOverlayClassName, tooltipProps, showTooltip}) => {
-  return showTooltip ? (
-    <WithTooltip
-      tooltipProps={tooltipProps}
-      tooltipOverlayClassName={tooltipOverlayClassName}
+  if (!showTooltip) {
+    return <div className={tooltipOverlayClassName}>{children}</div>;
+  }
+
+  const {text, direction, hideTail, iconLeft, iconRight, tooltipId} =
+    tooltipProps;
+  const dataTheme = tooltipProps['data-theme'];
+
+  const title =
+    iconLeft || iconRight ? (
+      <>
+        {iconLeft && <FontAwesomeV6Icon {...iconLeft} />}
+        {text}
+        {iconRight && <FontAwesomeV6Icon {...iconRight} />}
+      </>
+    ) : (
+      text
+    );
+
+  return (
+    <Tooltip
+      id={tooltipId}
+      title={title}
+      placement={direction ? DIRECTION_TO_PLACEMENT[direction] : 'top'}
+      arrow={hideTail ? false : undefined}
+      slotProps={dataTheme ? {tooltip: {'data-theme': dataTheme}} : undefined}
     >
-      <div>{children}</div>
-    </WithTooltip>
-  ) : (
-    <div>{children}</div>
+      {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- callers show this tooltip only while the control inside is disabled, so the wrapper is the only way to reach the reason */}
+      <div className={tooltipOverlayClassName} tabIndex={0}>
+        {children}
+      </div>
+    </Tooltip>
   );
 };
 

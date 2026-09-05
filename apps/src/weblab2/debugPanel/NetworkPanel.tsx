@@ -1,8 +1,7 @@
 import {IconDropdown} from '@code-dot-org/component-library/dropdown';
 import {IconDropdownOption} from '@code-dot-org/component-library/dropdown/iconDropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {Typography, IconButton as MuiIconButton} from '@mui/material';
+import {Typography, IconButton as MuiIconButton, Tooltip} from '@mui/material';
 import {isEqual} from 'lodash';
 import React, {useEffect, useMemo, useState} from 'react';
 
@@ -229,14 +228,7 @@ const NetworkPanel: React.FC = () => {
             <Typography variant="strong">Activity</Typography>
           </Typography>
           <div className={moduleStyles.networkHeaderButtons}>
-            <WithTooltip
-              tooltipProps={{
-                text: blockToggleLabel,
-                direction: 'onBottom',
-                tooltipId: 'block-network-tooltip',
-                size: 'xs',
-              }}
-            >
+            <Tooltip placement="bottom" title={blockToggleLabel}>
               <MuiIconButton
                 color={blockNetwork ? 'error' : 'tertiary'}
                 variant={blockNetwork ? 'contained' : 'outlined'}
@@ -249,7 +241,7 @@ const NetworkPanel: React.FC = () => {
               >
                 <FontAwesomeV6Icon iconName="ban" />
               </MuiIconButton>
-            </WithTooltip>
+            </Tooltip>
             {orderedNetworkRequests.length > 0 && (
               <IconDropdown
                 name="sort-order"

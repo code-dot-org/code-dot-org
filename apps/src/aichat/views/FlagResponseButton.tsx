@@ -1,6 +1,9 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
+import {
+  Button as MuiButton,
+  IconButton as MuiIconButton,
+  Tooltip,
+} from '@mui/material';
 import React, {useState} from 'react';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -69,14 +72,9 @@ const FlagResponseButton: React.FC<{
 
   return (
     <div className={style.flagWrapper}>
-      <WithTooltip
-        tooltipProps={{
-          tooltipId: 'internal-flag-tooltip',
-          direction: 'onLeft',
-          size: 'xs',
-          text: 'Is something notable about this AI response? Log to Langfuse for review.',
-          className: style.tooltip,
-        }}
+      <Tooltip
+        title="Is something notable about this AI response? Log to Langfuse for review."
+        placement="left"
       >
         <MuiIconButton
           variant="text"
@@ -85,6 +83,7 @@ const FlagResponseButton: React.FC<{
           onClick={() => {
             setShowInput(!showInput);
           }}
+          aria-label="Is something notable about this AI response? Log to Langfuse for review."
           type="button"
         >
           <FontAwesomeV6Icon
@@ -92,7 +91,7 @@ const FlagResponseButton: React.FC<{
             iconName="magnifying-glass-chart"
           />
         </MuiIconButton>
-      </WithTooltip>
+      </Tooltip>
       {showInput && (
         <>
           <input

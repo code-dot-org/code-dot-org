@@ -1,3 +1,4 @@
+import {Tooltip} from '@mui/material';
 import classNames from 'classnames';
 import {
   useCallback,
@@ -8,11 +9,23 @@ import {
 } from 'react';
 
 import CloseButton from '@/closeButton';
-import {ComponentSizeXSToL} from '@/common/types';
+import {ComponentPlacementDirection, ComponentSizeXSToL} from '@/common/types';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
-import {TooltipProps, WithTooltip} from '@/tooltip';
+import {TooltipProps} from '@/tooltip';
 
 import moduleStyles from './tabs.module.scss';
+
+// Legacy direction → MUI placement ('none' and unset → top).
+const PLACEMENT: Record<
+  ComponentPlacementDirection,
+  'top' | 'right' | 'bottom' | 'left'
+> = {
+  onTop: 'top',
+  onRight: 'right',
+  onBottom: 'bottom',
+  onLeft: 'left',
+  none: 'top',
+};
 
 export interface TabModel {
   /** Unique value of the tab */
@@ -104,8 +117,16 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
 }) => {
   const [overflowTooltip, setOverflowTooltip] = useState<TooltipProps>();
   const tabTextRef = useRef<HTMLSpanElement | null>(null);
-  const handleClick = useCallback(() => onClick(value), [onClick, value]);
-  const handleClose = useCallback(() => onClose(value), [onClose, value]);
+  const handleClick = useCallback(() => {
+    if (!disabled) {
+      onClick(value);
+    }
+  }, [disabled, onClick, value]);
+  const handleClose = useCallback(() => {
+    if (!disabled) {
+      onClose(value);
+    }
+  }, [disabled, onClose, value]);
 
   checkTabForErrors(isIconOnly, icon, text);
 
@@ -130,7 +151,7 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
         isIconOnly && moduleStyles.iconOnlyTab,
       )}
       onClick={handleClick}
-      disabled={disabled}
+      aria-disabled={disabled || undefined}
     >
       {buttonContent}
       {isClosable && (
@@ -138,6 +159,7 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
           onClick={handleClose}
           size={size}
           aria-label={`Close ${text}`}
+          aria-disabled={disabled || undefined}
         />
       )}
     </button>
@@ -167,9 +189,17 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
   return (
     <li role="presentation">
       {preferredTooltip ? (
-        <WithTooltip tooltipProps={preferredTooltip}>
+        <Tooltip
+          id={preferredTooltip.tooltipId}
+          title={preferredTooltip.text}
+          placement={
+            preferredTooltip.direction
+              ? PLACEMENT[preferredTooltip.direction]
+              : 'top'
+          }
+        >
           {buttonElement}
-        </WithTooltip>
+        </Tooltip>
       ) : (
         buttonElement
       )}

@@ -2,8 +2,7 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon, {
   kitIcons,
 } from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {IconButton as MuiIconButton} from '@mui/material';
+import {IconButton as MuiIconButton, Tooltip} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useState, useCallback, useRef} from 'react';
 
@@ -657,18 +656,18 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               will still be available for users to access the settings panel, etc.
             */}
               {isProjectLevel && hasTabs && (
-                <WithTooltip
-                  tooltipProps={{
-                    text: isStandaloneCollapsed
+                <Tooltip
+                  title={
+                    isStandaloneCollapsed
                       ? lab2I18n.expand()
-                      : lab2I18n.collapse(),
-                    tooltipId: 'tooltip-collapse',
-                    direction: 'onRight',
-                    size: 'xs',
-                    'data-theme': theme,
-                  }}
-                  hideDelayMs={hideTooltipDelayMs}
-                  hideOnFirstLeave={true}
+                      : lab2I18n.collapse()
+                  }
+                  placement="right"
+                  leaveDelay={hideTooltipDelayMs}
+                  disableInteractive
+                  slotProps={
+                    theme ? {tooltip: {'data-theme': theme}} : undefined
+                  }
                 >
                   <MuiIconButton
                     variant="text"
@@ -693,21 +692,19 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                       }
                     />
                   </MuiIconButton>
-                </WithTooltip>
+                </Tooltip>
               )}
             </div>
             <nav id={resourcePanelTabsElementId} className={styles.tabs}>
               {getTypedKeys(availableTabs).map(tab => (
-                <WithTooltip
-                  tooltipProps={{
-                    text: tabInfo[tab].title,
-                    tooltipId: `tooltip-${tab}`,
-                    direction: 'onRight',
-                    size: 'xs',
-                    'data-theme': theme,
-                  }}
-                  hideDelayMs={hideTooltipDelayMs}
-                  hideOnFirstLeave={true}
+                <Tooltip
+                  title={tabInfo[tab].title}
+                  placement="right"
+                  leaveDelay={hideTooltipDelayMs}
+                  disableInteractive
+                  slotProps={
+                    theme ? {tooltip: {'data-theme': theme}} : undefined
+                  }
                   key={`tooltip-${tab}`}
                 >
                   <div
@@ -752,7 +749,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                         />
                       )}
                   </div>
-                </WithTooltip>
+                </Tooltip>
               ))}
             </nav>
           </div>
@@ -768,7 +765,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 icon={{iconName: 'book', iconStyle: 'solid'}}
                 variant="text"
                 color="tertiary"
-                tooltipSize="xs"
                 tooltipDirection="onRight"
                 href={documentationUrl}
                 theme={theme}
@@ -784,7 +780,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 icon={{iconName: 'gear'}}
                 variant="text"
                 color="tertiary"
-                tooltipSize="xs"
                 tooltipDirection="onRight"
                 onClick={onClickSettingsButton}
                 theme={theme}
