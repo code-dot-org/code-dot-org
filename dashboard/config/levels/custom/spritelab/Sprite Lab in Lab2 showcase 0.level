@@ -1,7 +1,7 @@
 <GamelabJr>
   <config><![CDATA[{
   "game_id": 64,
-  "created_at": "2026-07-09T21:17:59.000Z",
+  "created_at": "2026-07-09T21:07:25.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -17,7 +17,7 @@
     "standalone_app_name": "spritelab",
     "hide_custom_blocks": true,
     "guide_mode": "aiCodeGenerate",
-    "long_instructions": "Build a game across scenes! Generate images in the **Images** tab, then code each scene in the **Code** tab \u2014 or *describe a game* and let AI build the blocks for you. Press **Play** to try it.",
+    "long_instructions": "Build a game across scenes! Generate images in the **Images** tab, then code each scene in the **Code** tab — or *describe a game* and let AI build the blocks for you. Press **Play** to try it.",
     "start_sources": {
       "animations": {
         "orderedKeys": [
@@ -49,7 +49,9 @@
             "frameCount": 1,
             "looping": true,
             "frameDelay": 2,
-            "categories": []
+            "categories": [
+
+            ]
           }
         }
       },
@@ -81,7 +83,8 @@
                   "y": 20,
                   "deletable": false,
                   "movable": false,
-                  "extraState": {},
+                  "extraState": {
+                  },
                   "next": {
                     "block": {
                       "type": "gamelab_setBackgroundImageAs",
@@ -254,8 +257,8 @@
                 "VAR": {
                   "block": {
                     "type": "variables_get",
-                    "movable": false,
-                    "extraState": {},
+                    "extraState": {
+                    },
                     "fields": {
                       "VAR": {
                         "id": "1*o3l{+}R}iNSYVARcd?",
@@ -285,8 +288,8 @@
                 "VAR": {
                   "block": {
                     "type": "variables_get",
-                    "movable": false,
-                    "extraState": {},
+                    "extraState": {
+                    },
                     "fields": {
                       "VAR": {
                         "id": "1*o3l{+}R}iNSYVARcd?",
@@ -1438,8 +1441,8 @@
                 "VAR": {
                   "block": {
                     "type": "variables_get",
-                    "movable": false,
-                    "extraState": {},
+                    "extraState": {
+                    },
                     "fields": {
                       "VAR": {
                         "id": "1*o3l{+}R}iNSYVARcd?",
@@ -2260,8 +2263,8 @@
       ],
       "kind": "categoryToolbox"
     },
-    "preload_asset_list": null,
-    "show_world_tab": "true"
+    "show_world_tab": "true",
+    "preload_asset_list": null
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2026-07-09T21:05:03.932Z\",\"changed\":[\"cloned from \\\"Sprite Lab 2 Dev\\\"\"],\"cloned_from\":\"Sprite Lab 2 Dev\"},{\"changed_at\":\"2026-07-21 22:34:31 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2026-07-21 22:45:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2026-07-21 22:46:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2026-07-22 00:15:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2026-07-22 22:37:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2026-07-27 21:18:35 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]"
