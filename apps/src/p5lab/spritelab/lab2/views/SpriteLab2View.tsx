@@ -372,7 +372,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // Start Over (the reinit count in the deps). On a scene-less project the
   // pin becomes the only scene — materializing the synthesized default too
   // would leave a stray "Scene 1" in every level sharing the project.
-  const {pinnedSceneId, pinnedSceneName} = levelProperties;
+  // Scenes are a program concept; a toolbox has none to pin. Neutralized
+  // here, at the one read of the property, so everything below — scene
+  // init, the fallback when the active scene no longer exists, play-start
+  // — sees no pin.
+  const pinnedSceneId = isToolboxMode
+    ? undefined
+    : levelProperties.pinnedSceneId;
+  const {pinnedSceneName} = levelProperties;
   useEffect(() => {
     if (!pinnedSceneId) {
       return;
@@ -1257,9 +1264,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
 
   // A user edit: the workspace already displays this content; persist it
-  // and refresh the preview.
+  // and refresh the preview. In toolbox mode there is nothing to do: the
+  // workspace IS the document (the levelbuilder Save serializes it
+  // directly), there are no scenes to write into, and no preview runs.
   const handleWorkspaceChange = useCallback(
     (source: WorkspaceSerialization) => {
+      if (isToolboxMode) {
+        return;
+      }
       writeActiveSceneSource(source);
       // Keep the live preview in sync with the edited code.
       scheduleRun();
@@ -1274,9 +1286,28 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [subscribeToChanges, handleWorkspaceChange, scheduleRun]
   );
 
-  // Update the workspace and run the current scene when the active scene code changes.
+  // Update the workspace when its content source changes. The mode decides
+  // everything up front: editing a toolbox, the workspace holds the toolbox
+  // itself — loaded once per sources generation, after which the workspace
+  // alone is the document — so no path through the scene machinery below
+  // can put the student default program (and its undeletable when-run hat)
+  // onto the canvas. In program mode, the workspace follows the active
+  // scene and re-runs the preview.
+  // Which sources generation the toolbox was loaded from: load once per
+  // generation, so Start Over (which reinitializes sources back to the
+  // saved toolbox) reloads the workspace.
+  const toolboxLoadedForRef = useRef(-1);
   useEffect(() => {
     if (!animationsSeeded) {
+      return;
+    }
+    if (isToolboxMode) {
+      if (toolboxLoadedForRef.current !== sourcesReinitializedCount) {
+        toolboxLoadedForRef.current = sourcesReinitializedCount;
+        // Toolbox edit sources always carry the object form (the
+        // container builds them from the toolbox definition).
+        loadCode((currentSources.source ?? {}) as WorkspaceSerialization);
+      }
       return;
     }
     const source = activeScene.source ?? DEFAULT_SCENE_SOURCE;
@@ -1288,9 +1319,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [
     animationsSeeded,
     activeScene,
+    currentSources.source,
     getCurrentBlocks,
     loadCode,
     runLocalScene,
+    sourcesReinitializedCount,
   ]);
 
   const handleSelectScene = useCallback(
@@ -1448,7 +1481,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           ) : undefined
         }
         sceneTabsExtra={
-          animationsSeeded ? (
+          // A toolbox has no scenes; "New scene…" here would put the student
+          // default onto the canvas and into the saved toolbox.
+          animationsSeeded && !isToolboxMode ? (
             <SceneSelector
               scenes={sceneMetadata}
               activeSceneId={activeSceneId}
