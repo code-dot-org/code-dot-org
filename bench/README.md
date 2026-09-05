@@ -1,5 +1,7 @@
 # Unit-suite benchmark
 
+Results and conclusions: [COMPARISON.md](COMPARISON.md).
+
 `bench-cdo-tests.sh` times the four unit suites (apps/jest, dashboard, lib,
 shared) and records enough machine context to compare results across hosts.
 Per-host output lives in a sibling directory named for the instance family:
