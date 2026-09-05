@@ -86,5 +86,7 @@ in the rules that need it most.
   import them normally.
 - `measure.mjs` — the driver.
 
-Delete this once §8 is built or abandoned. `interfaceOnly.mjs` is the piece
-worth keeping either way.
+Delete this once §8 is built or abandoned. `interfaceOnly.mjs` has since been
+promoted to `src/blockly/bodySurfaces.ts`, which splits and MERGES and knows
+about actor files too; the copy here stays only because the measurement runs
+it in a browser.

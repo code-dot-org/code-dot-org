@@ -598,21 +598,41 @@ becomes what you get for opening something up.
   members and must stay. Reading `next` as "body" everywhere empties the rule;
   reading only `DO` as "body" hides almost nothing in the rules that need it
   most.
-- _Modal, bubble, or a surface swap._ Blockly's mutators use bubble
-  workspaces, and a note from earlier work says a bubble cannot hand blocks
-  OUT — a blocker there, and possibly not here, since a body is self-contained.
-  A full swap ("editing `applyVelocity` · ← back") is simpler to build and
-  reads better on a small screen.
+- _Modal, bubble, or a surface swap._ **Decided: an overlay in the workspace
+  area, opened by a button on the `define …` block it belongs to.** Not a
+  modal and not a mutator bubble — the body takes over the pane the workspace
+  was in, with a header that edits the member's own metadata: its name, and
+  the description this document argues for below. The button has three
+  precedents on other blocks already (`openSourceButton`, `lessonButton`,
+  `enhanceButton` — a `FieldButton` drawing a glyph inside the block), so the
+  affordance is one a learner has met.
 - _What the outer surface still allows._ Renaming a property, moving a step
-  between traits and adding a trait are interface edits and must stay. But a
+  between traits and adding a trait are interface edits and must stay. A
   learner dragging a block from the toolbox has nowhere to drop it on that
-  surface, which is a real change to how the editor feels and the thing most
-  likely to need a second draft.
-- _Whether every rule opens this way._ `motion` is fifty-three blocks and
-  loses something by being split. A threshold is a fudge; a per-file
-  preference is a setting nobody will find. The honest options are "always" or
-  "never", and always is probably right — consistency is worth more here than
-  saving a click on the four small rules.
+  surface — which turns out to be a reason for the split rather than a cost,
+  because **the two surfaces want two toolboxes**, and the one they share
+  today is worse than either.
+
+  The `Rule` category holds fourteen blocks. Twelve declare something —
+  `define rule`, `define trait`, `define property`, `define block`, the three
+  step roots, `use rule`, `use trait`, the two enum blocks, `define event` —
+  and two are meaningless outside a body: `return` and `delta`. Today a
+  learner writing the inside of a step is offered `define trait`, and a
+  learner declaring a trait is offered `return`. Split the surface and each
+  side offers what belongs there: the interface gets the declarations, the
+  body gets `return`, `delta`, the block's own parameters, and the whole
+  ordinary palette — with twelve declaration blocks taken out of the way.
+
+  `fileKind`'s `ROOT_HOMES` already gates roots by FILE. This is the same idea
+  one level down, and the same table can carry it.
+
+- _Whether every rule opens this way._ **Decided: always.** A threshold is a
+  fudge and a per-file preference is a setting nobody finds. The probe removes
+  the performance argument either way — there is a fixed cost of two to four
+  milliseconds a load, so splitting a ten-block rule saves 1.6ms and costs a
+  click. What is left is consistency, and that decides it: a rule reads the
+  same way whatever its size, and a learner who has met `camera` knows where
+  `solid`'s implementation went.
 
 **Done when.** Opening `solid.rule` builds fourteen blocks rather than four
 hundred and seventy-three, and `projectWeight.test.ts` grows a sibling that
@@ -622,10 +642,32 @@ prose and Gravity's is visible where that member is; and generation is
 untouched, which a test asserts by compiling a rule whose bodies were never
 opened.
 
-**What it does not solve.** The file is still 500KB on disk — §2's copy-on-edit
-is a separate decision and this does not make it smaller. It also does not help
-the ACTOR and WORLD editors, whose files are small today; if that changes, the
-same split applies to an actor's own `each frame`.
+_Status, 2026-09-05: the split is built, the surface is not._
+`src/blockly/bodySurfaces.ts` is the pure half — `split`, `merge`, `reap`, and
+`hasBody` — with sixty tests, of which forty-seven are every stock rule taken
+apart and put back. That round trip is the one that matters: a merge which
+drops a body does not throw, it writes a rule whose steps are empty and a game
+that quietly stops working. Falsified by treating a rule's member list as a
+body (empties the file), by counting only `DO` as a body (hides nothing in the
+rules that need it), and by a merge that forgets a hat's body (eleven tests,
+including real rules).
+
+The file format does not change: `merge` is what a save writes, so the
+generator, the compiler and a diff never learn this happened. What remains is
+the editor — one helper the editor serializes through instead of calling
+`workspaces.save` directly, the overlay, the button, and the two toolboxes.
+
+**Not only rules.** An `.actor` file holds the same two shapes — its own
+`each frame` and its own `define block` (`ActorBuilder.defineStep`,
+`defineAction`) — and a world holds them inside `define actor`. Actor files
+are small today, so the weight argument does not apply to them, but the
+documentation and toolbox arguments do, and a learner should not meet two
+different ways of opening an implementation. So the split is written against
+BLOCK TYPES rather than against rules: a type whose body lives elsewhere is a
+type whose body lives elsewhere, wherever the file it sits in came from.
+
+**What it does not solve.** The file is still 500KB on disk — §2's
+copy-on-edit is a separate decision and this does not make it smaller.
 
 ## Not on the list, and why
 
