@@ -43,10 +43,10 @@ describe('DropletBlockTooltipManager', () => {
         .mockClear()
         .mockReturnValue('i18n-examples');
 
-      // Mock a DropletTooltipManager.
-      let dropletConfig = {};
+      // Mock a DropletTooltipManager for a lab that publishes docs.
+      let dropletConfig = {showExamplesLink: true};
       let blockInfo = {
-        showExamplesLink: 'http://example.com/examples',
+        showExamplesLink: true,
       };
       let tooltipManager = DropletTooltipManagerStub(dropletConfig, blockInfo);
 
@@ -61,6 +61,22 @@ describe('DropletBlockTooltipManager', () => {
       el.innerHTML = html;
       let a = el.querySelector('.tooltip-example-link a');
       expect(a.textContent).toBe('i18n-examples');
+    });
+
+    it('should omit "Examples" for a lab that publishes no docs', () => {
+      // Play Lab, Artist and Maze leave showExamplesLink out of their droplet
+      // config, so the /docs/ URL we would link to does not exist.
+      let dropletConfig = {};
+      let blockInfo = {
+        showExamplesLink: true,
+      };
+      let tooltipManager = DropletTooltipManagerStub(dropletConfig, blockInfo);
+
+      let tooltip = new DropletBlockTooltipManager(tooltipManager);
+
+      let el = document.createElement('div');
+      el.innerHTML = tooltip.getTooltipHTML();
+      expect(el.querySelector('.tooltip-example-link')).toBeNull();
     });
   });
 });
