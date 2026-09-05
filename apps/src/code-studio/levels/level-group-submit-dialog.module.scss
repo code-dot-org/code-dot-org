@@ -1,0 +1,7 @@
+// The DSCO Dialog centers its heading but leaves the description text
+// left-aligned; design asked for the body centered under the title here.
+.dialog {
+  p {
+    text-align: center;
+  }
+}

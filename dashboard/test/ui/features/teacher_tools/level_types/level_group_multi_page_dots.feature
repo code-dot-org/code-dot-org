@@ -66,7 +66,7 @@ Scenario: Submit three pages as... 1. all, 2. none, 3. some questions answered.
   When I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/23/levels/2/page/3?noautoplay=true"
   And I press ".submitButton" using jQuery
   And I wait to see a dialog titled "Submit your assessment"
-  And I press "#ok-button" using jQuery to load a new page
+  And I press "#levelgroup-submit-ok-button" using jQuery to load a new page
   And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/23/levels/1?noautoplay=true"
   And I wait to see ".react_stage"
 
@@ -122,9 +122,9 @@ Scenario: optional free play level
 
   When I press ".submitButton" using jQuery
   And I wait to see a dialog titled "Submit your assessment"
-  Then element ".modal-body" contains text "You left some questions incomplete"
+  Then element "#levelgroup-submit-incomplete-dialogcontent" contains text "You left some questions incomplete"
 
-  When I press "#cancel-button" using jQuery
+  When I press "#levelgroup-submit-cancel-button" using jQuery
   And I press ".previousPageButton" using jQuery to load a new page
   And I wait to see ".level-group-content"
   And check that the URL contains "/page/2"
@@ -142,4 +142,4 @@ Scenario: optional free play level
 
   When I press ".submitButton" using jQuery
   And I wait to see a dialog titled "Submit your assessment"
-  Then element ".modal-body" does not contain text "You left some questions incomplete"
+  Then element "#levelgroup-submit-complete-dialogcontent" does not contain text "You left some questions incomplete"
