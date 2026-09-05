@@ -512,21 +512,30 @@ nowhere to put what its author knows, and shows a learner a wall. Those are
 filed separately above — the weight in §2, the prose in §3 — and they have one
 cause: everything a rule is arrives in one workspace at once.
 
-Measured on the shelf as it stands, by counting blocks inside a step's or a
-designed block's `DO` body against everything else:
+Measured in a real browser against the shelf as it stands
+(`spikes/rule-surfaces`, whose FINDINGS.md records what the first estimate got
+wrong):
 
-| rule      | blocks | in a body | the interface that is left |
-| --------- | ------ | --------- | -------------------------- |
-| `solid`   | 473    | 445 (94%) | 28                         |
-| `climb`   | 311    | 285 (92%) | 26                         |
-| `grid`    | 264    | 244 (92%) | 20                         |
-| `gravity` | 209    | 183 (88%) | 26                         |
-| `motion`  | 53     | 37 (70%)  | 16                         |
+| rule      | blocks | → interface | load  | → interface | saved |
+| --------- | ------ | ----------- | ----- | ----------- | ----- |
+| `solid`   | 473    | 14          | 147ms | 8.6ms       | 17.1× |
+| `path`    | 394    | 15          | 122ms | 10.4ms      | 11.7× |
+| `climb`   | 311    | 26          | 110ms | 15.2ms      | 7.2×  |
+| `grid`    | 264    | 20          | 82ms  | 11.6ms      | 7.1×  |
+| `gravity` | 209    | 22          | 72ms  | 12.1ms      | 5.9×  |
+| `camera`  | 10     | 4           | 3.7ms | 2.1ms       | 1.8×  |
 
-Nine tenths of a rule is implementation. What is left — `define rule`, its
-`use rule` rows, each trait and its properties, each designed block's
-signature, each step's name and phase — is twenty to thirty blocks, which is a
-screen.
+All 47 rules: **5,228 blocks in 1,764ms → 587 blocks in 338ms.** What is left
+— `define rule`, its `use rule` rows, each trait and its properties, each
+designed block's signature, each step's name and phase — is under thirty
+blocks for every rule in the shelf and fourteen for the heaviest. A screen.
+
+Two limits the measurement adds. There is a fixed cost of two to four
+milliseconds a load, so under about twenty blocks the split buys nothing; and
+the absolute figures are a floor, because the probe registers no-op extensions
+where a real editor runs them — which is the gap between 147ms here and the
+340ms tab switch measured earlier on `solid`. The ratio is the trustworthy
+part.
 
 **What to do.** The outer workspace is the rule's INTERFACE. A body is a
 surface of its own, built when somebody asks for it, with that member's
@@ -557,7 +566,7 @@ they open it.
 _Why this is affordable._ The editor's cost is per-block construction with its
 SVG machinery, and it was measured directly: collapsing 80% of `solid`'s
 blocks changed the tab switch from 342ms to 341ms. Hiding a block does not
-help; not building it does. Twenty-eight blocks instead of four hundred and
+help; not building it does. Fourteen blocks instead of four hundred and
 seventy-three is the same lever, pulled properly.
 
 _Why it does not disturb the compiler._ Generation already runs on a workspace
@@ -580,9 +589,15 @@ becomes what you get for opening something up.
 
 **What has to be decided.**
 
-- _Where a body lives on disk._ Nested in `inputs.DO`, as now, with the editor
-  simply not building it; or lifted into a side table keyed by member. Nested
-  changes no file format and no generator, and is where to start.
+- _Where a body lives on disk._ Nested where it is now, with the editor simply
+  not building it; or lifted into a side table keyed by member. Nested changes
+  no file format and no generator, and is where to start. Whoever does it needs
+  what the probe turned up: a body hangs off `next` on a HAT (a rule-level
+  step, a behavior) and off the `DO` input on a MEMBER (a trait's step, a
+  designed block), while `next` on `define rule` and `define trait` holds their
+  members and must stay. Reading `next` as "body" everywhere empties the rule;
+  reading only `DO` as "body" hides almost nothing in the rules that need it
+  most.
 - _Modal, bubble, or a surface swap._ Blockly's mutators use bubble
   workspaces, and a note from earlier work says a bubble cannot hand blocks
   OUT — a blocker there, and possibly not here, since a body is self-contained.
@@ -599,8 +614,9 @@ becomes what you get for opening something up.
   "never", and always is probably right — consistency is worth more here than
   saving a click on the four small rules.
 
-**Done when.** Opening `solid.rule` builds tens of blocks rather than
-hundreds, and `projectWeight.test.ts` grows a sibling that says so; the
+**Done when.** Opening `solid.rule` builds fourteen blocks rather than four
+hundred and seventy-three, and `projectWeight.test.ts` grows a sibling that
+says so; the
 interface is legible in one screen; every trait, property and step can carry
 prose and Gravity's is visible where that member is; and generation is
 untouched, which a test asserts by compiling a rule whose bodies were never

@@ -7,6 +7,18 @@ an implementation, and records the answer alongside the code. Delete a spike
 once its findings have been absorbed into the real code and it stops being a
 useful reference.
 
+## rule-surfaces/
+
+Measures what `specs/NEXT.md` §8 would buy — a rule opening as its interface,
+with bodies built on demand — by loading every stock rule into a real browser
+workspace twice, whole and stripped. See `rule-surfaces/FINDINGS.md`.
+
+- `interfaceOnly.mjs` — the transform: a hat's `next` and a member's `DO` go,
+  every declaration stays.
+- `measure.mjs` — drives the dev server with Playwright. Run:
+  `yarn dev:isolated` in another terminal, then
+  `node spikes/rule-surfaces/measure.mjs`
+
 ## milestone-0/
 
 De-risks the driver's foundations (`specs/PLAN.md` §16 milestone 0). See
