@@ -337,6 +337,14 @@ module.exports = function (grunt) {
             'build/package/css/foorm_editor.css',
             'style/code-studio/foorm_editor.scss',
           ],
+          [
+            'build/package/css/contract_match.css',
+            'style/code-studio/levels/contract_match.scss',
+          ],
+          [
+            'build/package/css/pixelation.css',
+            'style/code-studio/levels/pixelation.scss',
+          ],
         ].concat(
           appsToBuild.map(function (app) {
             return [
