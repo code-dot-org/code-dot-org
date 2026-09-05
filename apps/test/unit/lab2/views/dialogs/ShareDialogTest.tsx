@@ -109,14 +109,20 @@ describe('Lab2 ShareDialog', () => {
     expect(mockDispatch).toHaveBeenCalledWith(hideShareDialog());
   });
 
+  // The copy button's live region is also role="alert", so pin these to the
+  // abuse alert's own text rather than to the role alone.
+  const abuseText = /reported for violating/i;
+
   it('does not show the abuse alert when the project is not flagged', () => {
     renderShareDialog();
-    expect(screen.queryByRole('alert')).not.toBeInTheDocument();
+    expect(screen.queryByText(abuseText)).not.toBeInTheDocument();
   });
 
   it('shows the abuse alert when the project is flagged', () => {
     renderShareDialog({isAbusive: true});
-    expect(screen.getByRole('alert')).toBeInTheDocument();
+    expect(
+      screen.getByText(abuseText).closest('[role="alert"]')
+    ).toBeInTheDocument();
     expect(
       screen.getByRole('button', {name: 'Copy link to project'})
     ).toBeInTheDocument();
