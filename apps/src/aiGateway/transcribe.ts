@@ -14,7 +14,7 @@ import {
   type GatewayTranscribeResponseV1,
 } from './contract/gatewaySchemas';
 import {reportGatewayError} from './logHelper';
-import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
+import {fetchAccessToken, getAiGatewayUrl, getModelString} from './shared';
 import {
   fetchTurnstileToken,
   turnstileErrorTags,
@@ -54,7 +54,7 @@ async function transcribeThroughGateway(
       }
 
       const response = await HttpClient.post(
-        `${AI_GATEWAY_URL}/transcribe`,
+        `${getAiGatewayUrl()}/transcribe`,
         formData,
         false,
         {

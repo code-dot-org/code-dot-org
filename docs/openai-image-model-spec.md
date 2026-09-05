@@ -562,6 +562,41 @@ and `./test/controllers/ai_gateway_auth_controller_test.rb` from
 `dashboard/` to confirm the new id is not swept into the US-only list
 and the controller is unchanged.
 
+**Pointing a local page at a preview worker**
+
+`getAiGatewayUrl()` in `apps/src/aiGateway/shared.ts` reads
+`?aiGatewayUrl=` from the page URL, accepting only
+`*.code-org.workers.dev` — the org's own Cloudflare account subdomain, so
+only a worker we deploy can hold such a name. The restriction is the
+point: a gateway request carries a signed JWT for the current user
+together with their prompt, so an override that took any host would be a
+link that collects both. Only the hostname is used; the URL is rebuilt
+from it, so a path, port, query or embedded credentials never reach the
+request. Nothing persists it — drop the parameter and the next page load
+is back on production.
+
+    ?spritelab-image-model=1&aiGatewayUrl=<name>.code-org.workers.dev
+
+Two things to check on the preview environment before blaming the image
+code, both per-environment wrangler secrets:
+
+- `JWT_PUBLIC_KEY` must be the counterpart of the local Rails
+  `CDO.ai_gateway_auth_key`, or every request is
+  `401 Unauthorized: Invalid token`. The JWT's `hostname` claim is
+  carried but never validated, so a token minted by localhost is
+  otherwise fine.
+- `OPENAI_API_KEY` must be set, or `/generateImage` fails at the provider
+  rather than at the gateway.
+
+Note also that a preview hostname is not in the worker's
+`PRODUCTION_HOSTNAMES`, so `isProduction()` is false and an outbound
+schema mismatch throws rather than being logged — a contract regression
+surfaces as a failed generation, not a warning. The dev-build client is
+symmetrically strict. And the development environment rate-limits to 50
+requests per 60 seconds per user, shared across every route: a
+generation burst plus safety-judge calls reaches that sooner than
+expected.
+
 **Manual, cannot be done without the deployed worker:**
 
 - Generate each of sprite, background and block, in each of smooth and

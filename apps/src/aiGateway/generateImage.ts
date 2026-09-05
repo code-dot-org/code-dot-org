@@ -12,9 +12,9 @@ import {
 } from './contract/gatewaySchemas';
 import {reportGatewayError} from './logHelper';
 import {
-  AI_GATEWAY_URL,
   base64ToUint8Array,
   fetchAccessToken,
+  getAiGatewayUrl,
   getModelString,
 } from './shared';
 import {
@@ -80,7 +80,7 @@ const generateImageThroughGateway = async (
       );
 
       const response = await HttpClient.post(
-        `${AI_GATEWAY_URL}/generateImage`,
+        `${getAiGatewayUrl()}/generateImage`,
         JSON.stringify({...restOptions, model: modelString, token}),
         false,
         {
