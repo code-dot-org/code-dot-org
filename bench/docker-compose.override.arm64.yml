@@ -1,0 +1,59 @@
+# Local, untracked. Two unrelated local adjustments to docker/developers/.
+#
+# 1. MinIO off port 9000. The apps webpack dev server binds 9000
+#    (apps/bundlerBase.js), so upstream's MinIO cannot coexist with `yarn
+#    start`. Moved to 9100; locals.yml aws_s3_endpoint must agree.
+#
+# 2. Services on loopback instead of every interface, so a host with a
+#    permissive security group does not expose root/password to the internet.
+#
+# Nothing here is an architecture workaround: mysql/mysql-server:8.0 and the
+# pinned MinIO release both publish arm64 and run natively on Graviton. The
+# mysql image swap below exists only because this volume was already seeded by
+# mysql:8.0 (8.0.46); Oracle's 8.0.32 refuses to start on a newer data
+# dictionary. A fresh checkout should drop it and keep upstream's image.
+
+services:
+  mysql:
+    image: mysql:8.0
+    ports: !override
+      - "127.0.0.1:3306:3306"
+    # The Docker Official image ships no HEALTHCHECK, but dashboard-services
+    # waits on condition: service_healthy. Oracle's image has one built in.
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uroot", "-ppassword"]
+      interval: 5s
+      timeout: 5s
+      retries: 60
+      start_period: 30s
+
+  mysql-contained:
+    image: mysql:8.0
+
+  redis:
+    ports: !override
+      - "127.0.0.1:6379:6379"
+
+  # network_mode: host, so --address is what actually moves the port.
+  minio:
+    command:
+      - server
+      - --address
+      - ":9100"
+      - --console-address
+      - ":3001"
+      - /data1
+      - /data2
+      - /data3
+      - /data4
+    environment:
+      MINIO_VOLUMES: "http://localhost:9100/data{1...4}"
+      MINIO_SERVER_URL: "http://localhost:9100"
+
+  minio-install:
+    environment:
+      AWS_ACCESS_KEY_ID: local-development
+      AWS_SECRET_ACCESS_KEY: allstudents
+      AWS_DEFAULT_REGION: us-east-1
+      AWS_S3_ENDPOINT_URL: http://localhost:9100
+      WITHIN_DOCKER: "1"
