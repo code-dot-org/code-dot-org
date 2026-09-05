@@ -102,6 +102,11 @@ module Cdo
     # Load rails environment into memory before forking workers so
     # that they share all this memory and don't have to reload it.
     def self.before_worker_fork
+      # Tag this process (and the workers forked from it) as an ActiveJob worker
+      # so code that should run only in the web server opts out. Set before
+      # requiring config/environment so it is in effect when initializers and
+      # to_prepare run.
+      CDO.execution_context = :active_job_worker
       require dashboard_dir('config', 'environment')
       Delayed::Worker.before_fork
     end
