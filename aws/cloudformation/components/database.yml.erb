@@ -313,6 +313,26 @@
       # Credentials (username and password) for the SQL User this Resource is provisioning.
       DBCredentialSecret: !Ref DatabaseSecretReader
       Privileges: ['SELECT']
+  ReplicationClientSQLUser:
+    Type: Custom::SQLUser
+<%  unless rack_env?(:production)%>
+    # Wait until DB Instances have completed provisioning before using the admin SQL user to provision an application
+    # SQL user.
+    DependsOn: [<%=DB_INSTANCE_RANGE.map {|i| "Aurora#{i}"}.join(',')%>]
+<%  end -%>
+    Properties:
+      ServiceToken: !Sub "arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:SQLUser"
+      # Production cluster has not been imported into this Stack, so pass the Secret that stores the writer endpoint
+      # instead of `!GetAtt AuroraCluster.Endpoint.Address`
+      DBWriterEndpointSecret: !Ref DBWriterEndpointConfig
+      # Credentials for SQL admin user that will create/update/delete this SQL user resource.
+      DBCredentialAdminSecret: !Ref DatabaseSecretAdmin
+      # Credentials (username and password) for the SQL User this Resource is provisioning.
+      DBCredentialSecret: !Ref DatabaseSecretReplicationClient
+      PrivilegeType: GLOBAL # This privilege is granted ON *.* and not a specific set of databases.
+      Privileges:
+        - 'REPLICATION CLIENT'
+        - 'REPLICATION SLAVE'
 <% if rack_env?(:production) || rack_env?(:test) # Provision Zero ETL on managed test server and production. -%>
   ZeroETLIntegration:
     Type: AWS::RDS::Integration
