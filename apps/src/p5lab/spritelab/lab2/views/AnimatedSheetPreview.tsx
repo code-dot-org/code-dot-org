@@ -57,11 +57,13 @@ const AnimatedSheetPreview: React.FunctionComponent<
           pose === 'jump'
             ? {...poses[key]!, frameDelay: JUMP_PREVIEW_FRAME_DELAY}
             : poses[key]!;
-        return {
-          pose,
-          range,
-          ticks: range.frameDelay * range.count * POSE_PREVIEW_CYCLES[pose],
-        };
+        let frames = range.count * POSE_PREVIEW_CYCLES[pose];
+        // One extra frame closes the walk back on the shared standing frame
+        // (its first frame) instead of stopping mid-stride.
+        if (pose === 'walk') {
+          frames += 1;
+        }
+        return {pose, range, ticks: range.frameDelay * frames};
       }),
     [poses]
   );
