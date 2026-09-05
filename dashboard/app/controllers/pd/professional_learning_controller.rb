@@ -191,6 +191,7 @@ class Pd::ProfessionalLearningController < ApplicationController
     rp_workshops = partner&.pd_workshops || []
     available_regional_workshops = rp_workshops.select do |ws|
       start_of_ws = ws.sessions.first.try(:start)
+      next false unless start_of_ws
       start_date = ws.time_zone ? start_of_ws.in_time_zone(ws.time_zone).to_date : start_of_ws.to_date
 
       ws.state == Pd::Workshop::STATE_NOT_STARTED &&
@@ -217,6 +218,7 @@ class Pd::ProfessionalLearningController < ApplicationController
 
     national_workshops_in_future = national_workshops.select do |ws|
       start_of_ws = ws.sessions.first.try(:start)
+      next false unless start_of_ws
       start_date = ws.time_zone ? start_of_ws.in_time_zone(ws.time_zone).to_date : start_of_ws.to_date
       start_date > Time.now.in_time_zone(ws.time_zone || 'America/Chicago').to_date
     end
