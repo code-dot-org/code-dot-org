@@ -18,6 +18,7 @@ import {IMAGE_NAME_MAX_LENGTH, sanitizeImageName} from '../imageReferences';
 import AnimatedSheetPreview from './AnimatedSheetPreview';
 import DeleteImageButton from './DeleteImageButton';
 import GenerateImageView, {NewImageDraft} from './GenerateImageView';
+import ImagePaneButton from './ImagePaneButton';
 
 import moduleStyles from './image-details-dialog.module.scss';
 
@@ -53,6 +54,11 @@ interface ImageDetailsDialogProps {
   lockedImageType?: ImageType;
   /** This session replaced the image it opened on (closing keeps that). */
   imageChanged?: boolean;
+  /** Show the full internal dialog — the image's name (and renaming),
+      Start from, temperature. The default is the student version. */
+  advanced?: boolean;
+  /** The image is pixel art: previews upscale it with hard edges. */
+  pixelated?: boolean;
   /** Current pixels, for generation's "use previous image". */
   getDataURI: () => Promise<string | null>;
   /** Whether another image already uses this name. */
@@ -80,9 +86,10 @@ export interface AlternativeImage {
 /**
  * The image dialog. An existing image opens on the summary view: the image
  * large on the left (click it to paint), how it was made on the right, and
- * delete/regenerate in the footer; its name sits in the header with a
- * pencil to rename. A new image opens straight into the generate view.
- * Wears the pixel editor's chrome, following the page's light/dark theme.
+ * delete/regenerate in the footer; in the advanced dialog its name sits in
+ * the header with a pencil to rename. A new image opens straight into the
+ * generate view. Wears the pixel editor's chrome, following the page's
+ * light/dark theme.
  */
 const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   animKey,
@@ -99,6 +106,8 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   imageType,
   lockedImageType,
   imageChanged,
+  advanced,
+  pixelated,
   getDataURI,
   isNameTaken,
   onGenerateStart,
@@ -126,7 +135,9 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
     ? 'That name is already used.'
     : nameError;
 
-  const title = isNew ? 'New image' : name || 'Image';
+  // Students see auto-generated names, so the title says only what the
+  // dialog is — keeping the new-image case distinct for screen readers.
+  const title = isNew ? 'New image' : advanced ? name || 'Image' : 'Image';
 
   const commitRename = () => {
     const trimmed = nameDraft.trim();
@@ -160,7 +171,9 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
         <span id="dsco-dialog-description" className={moduleStyles.srOnly}>
           {view === 'generate'
             ? 'Describe the image and generate it with AI.'
-            : 'View, edit, rename, or delete this image.'}
+            : advanced
+            ? 'View, edit, rename, or delete this image.'
+            : 'View, edit, or delete this image.'}
         </span>
         <div className={moduleStyles.header}>
           {renaming ? (
@@ -226,7 +239,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
               <span className={moduleStyles.headerTitle} tabIndex={0}>
                 {title}
               </span>
-              {!isNew && view === 'details' && (
+              {advanced && !isNew && view === 'details' && (
                 <button
                   type="button"
                   className={moduleStyles.iconButton}
@@ -256,8 +269,10 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
             }
             thumb={isNew ? undefined : thumb}
             sheet={isNew ? undefined : sheet}
+            thumbPixelated={pixelated}
             create={isNew ? {isNameTaken, initial: newImageDraft} : undefined}
             lockedImageType={lockedImageType}
+            advanced={advanced}
             onPaintManually={isNew ? onPaintNew : undefined}
             onGenerateStart={onGenerateStart}
             onAccept={async (result, newName) => {
@@ -271,6 +286,8 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
         ) : (
           <>
             <div className={moduleStyles.body}>
+              {/* A set is not painted (the editor would see one frame of
+                  many), so its pane is a preview, not the paint button. */}
               {sheet ? (
                 <div
                   className={classNames(
@@ -281,28 +298,13 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                   <AnimatedSheetPreview {...sheet} />
                 </div>
               ) : (
-                <button
-                  type="button"
-                  className={classNames(
-                    moduleStyles.imagePane,
-                    moduleStyles.imageButton,
-                    thumb && moduleStyles.imagePaneChecker
-                  )}
-                  aria-label="Edit with paint tools"
+                <ImagePaneButton
+                  thumb={thumb}
+                  pixelated={pixelated}
+                  iconName="pen"
+                  label="Edit with paint tools"
                   onClick={onPaint}
-                >
-                  {thumb ? (
-                    <img src={thumb} alt="" />
-                  ) : (
-                    <div
-                      className={moduleStyles.imagePlaceholder}
-                      aria-hidden
-                    />
-                  )}
-                  <span className={moduleStyles.paintOverlay} aria-hidden>
-                    <FontAwesomeV6Icon iconName="pen" />
-                  </span>
-                </button>
+                />
               )}
               <div className={moduleStyles.detailsPane}>
                 {generation && (
@@ -320,7 +322,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                     </dd>
                     <dt>Style</dt>
                     <dd>{IMAGE_STYLE_LABELS[generation.style]}</dd>
-                    {generation.temperature !== undefined && (
+                    {advanced && generation.temperature !== undefined && (
                       <>
                         <dt>Temperature</dt>
                         <dd>{generation.temperature}</dd>

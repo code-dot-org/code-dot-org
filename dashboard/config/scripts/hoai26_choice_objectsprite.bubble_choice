@@ -1,0 +1,11 @@
+name 'HoAI26-Choice-ObjectSprite'
+display_name 'Choice Progression: Object Sprite'
+description "Create an object Sprite"
+uses_lab2
+
+sublevels
+level 'HoAI26-Playtest1-Platform-ObjectSprite'
+level 'HoAI26-Playtest1-Story-ObjectSprite'
+level 'HoAI26-Playtest1-Game2-ObjectSprite'
+
+navigation_type 'next_sublevel'

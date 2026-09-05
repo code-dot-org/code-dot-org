@@ -3,22 +3,36 @@ import z from 'zod/v3';
 
 import {generateText} from '@cdo/apps/aiGateway';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
-import {createUuid} from '@cdo/apps/utils';
-
-import {LevelContext} from '../../curriculum-generator/ai/context';
+import {LevelContext} from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
 import {
   getTextModel,
   logPrompt,
   logResponse,
   PROMPT_TAGS,
-} from '../../curriculum-generator/ai/shared';
+} from '@cdo/apps/levelbuilder/curriculum-generator/ai/shared';
+
+import {
+  CodebridgeGeneration,
+  codebridgeFilesSchema,
+  filesToMultiFileSource,
+  generateCodebridgeExemplar,
+  SourceFile,
+} from './codebridge';
 
 const weblabPlanSchema = Output.object({
   schema: z.object({
     longInstructions: z
       .string()
       .describe(
-        'Student-facing instructions for the level, in markdown. Tell the student what to do — what they should change, add, or build on top of the starter code. 2-5 short paragraphs or a numbered list. No headings above ## level.'
+        'STUB ONLY. A short, terse outline that the curriculum author will ' +
+          'flesh out into real prose later. Format:\n\n' +
+          '  TODOs:\n' +
+          '  - name a file the student touches and the move they make\n' +
+          '  - …\n\n' +
+          'Exactly one literal `TODOs:` header, then 4-8 bullet items. Each ' +
+          'bullet is bare content (no `TODO:` prefix on the bullets — the ' +
+          'header sets the context once). Do NOT write polished student- ' +
+          'facing copy; this is scaffolding. No other headings, no paragraphs.'
       ),
     files: z
       .array(
@@ -41,19 +55,8 @@ const weblabPlanSchema = Output.object({
   }),
 });
 
-export interface Weblab2Generation {
-  startSources: MultiFileSource;
-  longInstructions: string;
-  // The raw file list as returned by the model, before it's wrapped into a
-  // MultiFileSource. Exposed so callers can include it in continuity
-  // context for later levels without re-parsing the wrapped form.
-  files: {name: string; contents: string}[];
-}
+export type Weblab2Generation = CodebridgeGeneration;
 
-// Web Lab 2 stores its starter sources as a MultiFileSource, the same
-// structure produced by prepareSourceForLevelbuilderSave in the codebridge
-// editor. Alongside the starter files we ask the model for student-facing
-// instructions (the level's `long_instructions` markdown field).
 export async function generateWeblab2Level(
   ctx: LevelContext
 ): Promise<Weblab2Generation> {
@@ -63,9 +66,13 @@ export async function generateWeblab2Level(
     'middle-school student unless the description below names a different',
     'grade band or audience, in which case follow it. Based on the',
     'description below, produce two things:',
-    '  1. Student-facing instructions in markdown that tell the student',
-    '     what to do in this level. Reference the file names you create',
-    '     so the student knows where to look. Keep it tight.',
+    '  1. A STUB outline for the student-facing instructions. Format as a',
+    '     single literal `TODOs:` line followed by 4-8 markdown bullets,',
+    '     each bare content (no `TODO:` prefix on the bullet — the header',
+    '     sets the context once). Name files the student touches and the',
+    '     moves they make. Do NOT write polished student-facing copy — the',
+    '     curriculum author writes that later. No other headings, no',
+    '     paragraphs.',
     '  2. Starter files (HTML / CSS / JS) the student will edit. Always',
     '     include an index.html. Keep total content under a few kilobytes',
     '     per file. Do not include external script or stylesheet links —',
@@ -129,7 +136,7 @@ export async function generateWeblab2Level(
   });
   const plan = response.output as {
     longInstructions: string;
-    files: {name: string; contents: string}[];
+    files: SourceFile[];
   };
   logResponse(PROMPT_TAGS.WEBLAB2_PLAN, plan, planContext);
   if (!plan.files?.length) {
@@ -139,70 +146,185 @@ export async function generateWeblab2Level(
     throw new Error('Model returned no instructions');
   }
 
-  // The implicit root folder has id "0". Subfolders sit under it via
-  // `parentId: "0"`; their own ids are uuids referenced by files in them.
-  // See dashboard/config/levels/custom/weblab2 for the canonical shape.
-  const folders: MultiFileSource['folders'] = {};
-  const folderIdByPath = new Map<string, string>();
-  folderIdByPath.set('', '0');
-
-  const files: MultiFileSource['files'] = {};
-  const fileIds: string[] = [];
-  let activeFileId: string | null = null;
-
-  for (const f of plan.files) {
-    const segments = f.name.split('/').filter(Boolean);
-    const baseName = segments.pop() || f.name;
-    // Walk the folder path, creating any missing folder entries.
-    let parentId = '0';
-    let pathSoFar = '';
-    for (const segment of segments) {
-      pathSoFar = pathSoFar ? `${pathSoFar}/${segment}` : segment;
-      const cached = folderIdByPath.get(pathSoFar);
-      if (cached !== undefined) {
-        parentId = cached;
-        continue;
-      }
-      const folderId = createUuid();
-      folders[folderId] = {
-        id: folderId,
-        name: segment,
-        parentId,
-        open: true,
-      };
-      folderIdByPath.set(pathSoFar, folderId);
-      parentId = folderId;
-    }
-
-    const id = createUuid();
-    fileIds.push(id);
-    // Prefer top-level index.html for the active file, else the first file.
-    if (
-      !activeFileId ||
-      (segments.length === 0 && /^index\.html?$/i.test(baseName))
-    ) {
-      activeFileId = id;
-    }
-    files[id] = {
-      id,
-      name: baseName,
-      contents: f.contents,
-      folderId: parentId,
-      type: ProjectFileType.STARTER,
-      active: false, // overwritten below for activeFileId
-    };
-  }
-  if (activeFileId) {
-    files[activeFileId] = {...files[activeFileId], active: true};
-  }
-
   return {
-    startSources: {
-      folders,
-      files,
-      openFiles: fileIds,
-    },
+    startSources: filesToMultiFileSource(plan.files, ProjectFileType.STARTER),
     longInstructions: plan.longInstructions.trim(),
     files: plan.files,
   };
+}
+
+export async function generateWeblab2Exemplar(
+  ctx: LevelContext,
+  starterFiles: SourceFile[]
+): Promise<MultiFileSource> {
+  return generateCodebridgeExemplar(ctx, starterFiles, {
+    labLabel: 'Web Lab 2',
+    constraints: [
+      'Output must run in Web Lab 2 (HTML/CSS/JS only, no external',
+      '  script or stylesheet links).',
+    ],
+    promptTag: PROMPT_TAGS.WEBLAB2_EXEMPLAR,
+  });
+}
+
+// Template groups: multiple weblab2 members share one starter-source
+// level via project_template_level_name; the template sits outside the
+// activity tree.
+
+const weblabTemplateSchema = Output.object({
+  schema: z.object({files: codebridgeFilesSchema}),
+});
+
+export interface TemplateMember {
+  name: string;
+  description: string;
+}
+
+// Sees every member's description; produces files that all members
+// build on without solving any one member's task.
+export async function generateWeblab2Template(
+  ctx: Omit<
+    LevelContext,
+    'levelName' | 'levelDescription' | 'precedingLevels'
+  > & {
+    templateName: string;
+    members: TemplateMember[];
+  }
+): Promise<{
+  startSources: MultiFileSource;
+  files: SourceFile[];
+}> {
+  const memberList = ctx.members
+    .map((m, i) => `  ${i + 1}. ${m.name}: ${m.description}`)
+    .join('\n');
+  const prompt = [
+    'You are writing the SHARED STARTER FILES for a group of Web Lab 2',
+    'levels in a single lesson. Each member level adds on top of these',
+    'files; the student opens the same project across multiple levels and',
+    'extends it. Your job is to produce files that:',
+    '  - support every member level (every member can begin its task',
+    '    without first having to recreate scaffolding)',
+    '  - do NOT solve any single member level (e.g. if member 3 says',
+    '    "add a navbar", do not include a navbar)',
+    '  - keep total content under a few kilobytes per file',
+    '  - stay flat (one root folder) unless a member explicitly asks for',
+    '    subfolders; subfolders go as forward-slash segments in the name',
+    '    (e.g. "css/style.css")',
+    '  - always include index.html; add style.css and/or script.js only',
+    '    if the member tasks suggest the student will need them',
+    '  - have no external script or stylesheet links',
+    '',
+    'Members in this group:',
+    memberList,
+    ...(ctx.unitOutline
+      ? [
+          '',
+          `Unit context — the lesson sits inside the unit "${
+            ctx.unitName ?? ''
+          }". Use it for broad continuity:`,
+          ctx.unitOutline,
+        ]
+      : []),
+    ...(ctx.lessonOutline
+      ? [
+          '',
+          'Lesson context — the lesson outline the curriculum author wrote:',
+          ctx.lessonOutline,
+        ]
+      : []),
+    ...(ctx.targetProject
+      ? [
+          '',
+          'Target project — the final app the lesson is building toward.',
+          'Use the file structure and idiom as a hint for how to scaffold',
+          'the template:',
+          ctx.targetProject,
+        ]
+      : []),
+  ].join('\n');
+
+  const logContext = {level: ctx.templateName, subtask: 'template'};
+  logPrompt(PROMPT_TAGS.WEBLAB2_TEMPLATE, prompt, logContext);
+  const response = await generateText({
+    model: getTextModel(),
+    prompt,
+    output: weblabTemplateSchema,
+  });
+  const plan = response.output as {files: SourceFile[]};
+  logResponse(PROMPT_TAGS.WEBLAB2_TEMPLATE, plan, logContext);
+  if (!plan.files?.length) throw new Error('Model returned no template files');
+  return {
+    startSources: filesToMultiFileSource(plan.files, ProjectFileType.STARTER),
+    files: plan.files,
+  };
+}
+
+const weblabTemplateLevelSchema = Output.object({
+  schema: z.object({
+    longInstructions: z
+      .string()
+      .describe(
+        'STUB ONLY. Format as a single literal `TODOs:` line followed by ' +
+          '4-8 markdown bullets, each bare content (no `TODO:` prefix on the ' +
+          'bullet). Name what the student does in THIS member level on top ' +
+          'of the shared template. The curriculum author writes final prose ' +
+          'later.'
+      ),
+  }),
+});
+
+// Emits only long_instructions; the starter files come from the
+// template pass. Prompt shows both the template's files and this
+// member's description.
+export async function generateWeblab2TemplateBackedLevel(
+  ctx: LevelContext,
+  templateFiles: SourceFile[]
+): Promise<{longInstructions: string}> {
+  const templateListing = templateFiles
+    .map(f => `=== ${f.name} ===\n${f.contents}`)
+    .join('\n\n');
+  const prompt = [
+    'You are writing the STUB student-facing instructions for a Web Lab 2',
+    'level that shares its starter files with other levels in the lesson.',
+    'The student already has the template files below open; this level',
+    'asks them to do one specific thing on top of those files. Format as a',
+    'single literal `TODOs:` line followed by 4-8 markdown bullets, each',
+    'bare content (no `TODO:` prefix on the bullet). Name the files the',
+    'student touches and the moves they make. Do NOT write polished prose;',
+    'the curriculum author writes that later. No other headings.',
+    '',
+    "Shared template files (already open in the student's editor):",
+    templateListing,
+    ...(ctx.lessonOutline
+      ? [
+          '',
+          'Lesson context — the lesson outline the curriculum author wrote:',
+          ctx.lessonOutline,
+        ]
+      : []),
+    ...(ctx.precedingLevels
+      ? [
+          '',
+          'Preceding levels in this lesson. Reference what the student',
+          'already did when listing the TODOs:',
+          ctx.precedingLevels,
+        ]
+      : []),
+    '',
+    `Level description: ${ctx.levelDescription}`,
+  ].join('\n');
+
+  const logContext = {level: ctx.levelName, subtask: 'template-level'};
+  logPrompt(PROMPT_TAGS.WEBLAB2_TEMPLATE_LEVEL, prompt, logContext);
+  const response = await generateText({
+    model: getTextModel(),
+    prompt,
+    output: weblabTemplateLevelSchema,
+  });
+  const plan = response.output as {longInstructions: string};
+  logResponse(PROMPT_TAGS.WEBLAB2_TEMPLATE_LEVEL, plan, logContext);
+  if (!plan.longInstructions?.trim()) {
+    throw new Error('Model returned no instructions');
+  }
+  return {longInstructions: plan.longInstructions.trim()};
 }

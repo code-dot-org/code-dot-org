@@ -1,6 +1,8 @@
 import {createUuid} from '@cdo/apps/utils';
 
+import {AICHAT_PRESET_IDS} from '../ai/aichat';
 import {
+  BUBBLE_CHOICE_SUBLEVEL_LAB_TYPES,
   ExistingLessonData,
   labTypeFromRailsType,
   LevelSpec,
@@ -8,6 +10,18 @@ import {
   SerializedScriptLevel,
   SUPPORTED_LAB_TYPES,
 } from '../types';
+
+// Round-trip helper: on reload we may see a persisted preset id that no
+// longer exists in AICHAT_PRESET_IDS (removed, renamed). Treat that as
+// "reset to default" rather than passing an unknown id down the UI.
+function restoreAichatPreset(
+  raw: string | null | undefined
+): string | undefined {
+  if (!raw) return undefined;
+  return (AICHAT_PRESET_IDS as readonly string[]).includes(raw)
+    ? raw
+    : undefined;
+}
 
 const newLevelSpec = (): LevelSpec => ({
   key: createUuid(),
@@ -95,7 +109,7 @@ export function buildInitialState(lesson: ExistingLessonData): InitialState {
     ({level, scriptLevel, activityIndex, sectionIndex}) => {
       const labType = labTypeFromRailsType(level.type);
       const description = level.generateOutline || '';
-      return {
+      const spec: LevelSpec = {
         key: createUuid(),
         id: stripPrefix(level.name),
         // Filler value when unsupported; the dropdown is hidden then.
@@ -107,7 +121,45 @@ export function buildInitialState(lesson: ExistingLessonData): InitialState {
         generate: labType !== undefined && !level.generateOutline,
         existing: {activityIndex, sectionIndex, scriptLevel},
         unsupportedType: labType === undefined ? level.type : undefined,
+        ...(labType === 'aichat'
+          ? {aichatPreset: restoreAichatPreset(level.generateAichatPreset)}
+          : {}),
       };
+      if (labType === 'bubbleChoice' && Array.isArray(level.sublevels)) {
+        const parentPrefix = level.name + '-';
+        spec.sublevels = level.sublevels.map(sub => {
+          const subLabType = labTypeFromRailsType(sub.type);
+          // Sublevels whose lab type falls outside the sublevel-allowed
+          // set get marked unsupported so the UI renders them read-only
+          // and the generator skips them.
+          const supportedSubLabType =
+            subLabType &&
+            (BUBBLE_CHOICE_SUBLEVEL_LAB_TYPES as readonly string[]).includes(
+              subLabType
+            )
+              ? subLabType
+              : undefined;
+          const subId = sub.name.startsWith(parentPrefix)
+            ? sub.name.slice(parentPrefix.length)
+            : sub.name;
+          return {
+            key: createUuid(),
+            id: subId,
+            labType: supportedSubLabType ?? BUBBLE_CHOICE_SUBLEVEL_LAB_TYPES[0],
+            description: sub.generateOutline || '',
+            lastGeneratedDescription: sub.generateOutline || undefined,
+            generate: supportedSubLabType !== undefined && !sub.generateOutline,
+            unsupportedType:
+              supportedSubLabType === undefined
+                ? sub.type ?? '(unknown)'
+                : undefined,
+            ...(supportedSubLabType === 'aichat'
+              ? {aichatPreset: restoreAichatPreset(sub.generateAichatPreset)}
+              : {}),
+          };
+        });
+      }
+      return spec;
     }
   );
   return {prefix, specs};

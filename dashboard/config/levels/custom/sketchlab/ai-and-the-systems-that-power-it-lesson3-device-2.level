@@ -1,0 +1,1024 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "game_id": 75,
+  "created_at": "2026-09-02T21:22:42.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#Joaquín Silva — Football Coach\r\n\r\nJoaquín's players each wear a performance tracker at practice. Every tracker sends readings to his tablet, which shows live workload numbers so he knows when to rest someone. The session uploads to the cloud afterwards.\r\n\r\n### What's Going Wrong?\r\n* The same players vanish from his display — always the ones working at the far end of the pitch.\r\n* When those players jog back toward the bench, they reappear.\r\n* The numbers he does get run several seconds behind what he's watching.\r\n* The app lists pods as out of range while he can see the players wearing them, right there on the pitch.",
+    "hide_share_and_remix": "false",
+    "require_edit_to_continue": "true",
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "eea2fa1d-88a6-4785-a843-6e1ebdea732e",
+            "type": "group",
+            "position": {
+              "x": 1921.2814749287913,
+              "y": 1752.3846755266131
+            },
+            "width": 882.1716367230324,
+            "height": 1112.1435277237897,
+            "zIndex": -1,
+            "data": {
+            },
+            "measured": {
+              "width": 882,
+              "height": 1112
+            },
+            "dragging": false
+          },
+          {
+            "id": "c092e9a4-22f9-4ec4-85b0-ed994bf0e1f6",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/089b50d7-96b9-4d55-8150-567887313dc9.png",
+              "altText": "comms_bluetooth",
+              "locked": true
+            },
+            "position": {
+              "x": 2519.7406293516874,
+              "y": 380.7557843900772
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "82353e0b-8b59-4afe-9ec0-f65819cac382",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/05dc98bf-67f5-48c3-8627-72b5b34f5bb6.png",
+              "altText": "comms_WIFI",
+              "locked": true
+            },
+            "position": {
+              "x": 3000.3484169753847,
+              "y": 447.9670998864601
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "cce2e085-271d-4a9a-b8a9-d14af5e9463f",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/bd8aa061-c6aa-458b-91af-4640148a367c.png",
+              "altText": "hardware_battery",
+              "locked": true
+            },
+            "position": {
+              "x": 2280.0798302491435,
+              "y": 495.8895372006667
+            },
+            "width": 98.25746341890954,
+            "height": 122.87174588749258,
+            "measured": {
+              "width": 98,
+              "height": 123
+            },
+            "dragging": false
+          },
+          {
+            "id": "a22e86f9-222b-410b-b5c2-aa991f1583b3",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/c61b821c-15dd-452e-9a0c-a7f1fbb4a6d4.png",
+              "altText": "hardware_power-outlet",
+              "locked": true
+            },
+            "position": {
+              "x": 1969.5836559325796,
+              "y": 736.0504268869142
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "5f1924e4-15fd-45f8-8774-7961d25c414d",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/fd380103-af09-4a37-bf12-5371b70feecd.png",
+              "altText": "output_wearable",
+              "locked": true
+            },
+            "position": {
+              "x": 2347.9101118796016,
+              "y": 226.85503024893768
+            },
+            "width": 144,
+            "height": 125.89321351910695,
+            "measured": {
+              "width": 144,
+              "height": 126
+            },
+            "dragging": false
+          },
+          {
+            "id": "82183550-ca7f-4adb-8b0e-fcb461804b16",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/a467e4ec-cd00-4713-b802-92a6e3396fb6.png",
+              "altText": "processing_CPU",
+              "locked": true
+            },
+            "position": {
+              "x": 2755.690448277898,
+              "y": 290.5920805365139
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "568756d3-378c-4c28-9cb2-ae546a789a56",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#e7f2e3",
+              "strokeColor": "#9dc88d",
+              "locked": true
+            },
+            "position": {
+              "x": 10,
+              "y": 10
+            },
+            "width": 430.7910011923752,
+            "height": 1091.7947709934203,
+            "measured": {
+              "width": 431,
+              "height": 1092
+            },
+            "dragging": false,
+            "zIndex": 1,
+            "parentId": "eea2fa1d-88a6-4785-a843-6e1ebdea732e",
+            "expandParent": true
+          },
+          {
+            "id": "5b090fff-86c5-44b0-ae3d-553473b334a6",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Battery charge runs one tracker for one workout session.",
+              "backgroundColor": "#f9dcbe",
+              "strokeColor": "#f7b56e",
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": 1978.9777444412875,
+              "y": 493.777681844216
+            },
+            "width": 253.37716649265815,
+            "height": 84.76808346426208,
+            "measured": {
+              "width": 253,
+              "height": 85
+            },
+            "dragging": false
+          },
+          {
+            "id": "7a53196b-12dd-4c85-a949-fae0d25b272d",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#fff9e5",
+              "strokeColor": "#ffd966",
+              "locked": true
+            },
+            "position": {
+              "x": 1910.0909839507196,
+              "y": -4.5058225057759955
+            },
+            "width": 1289.646560358366,
+            "height": 925.1838917017166,
+            "measured": {
+              "width": 1290,
+              "height": 925
+            },
+            "dragging": false,
+            "zIndex": -12
+          },
+          {
+            "id": "02330def-dc44-4846-a089-efccc5c3ac99",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#f9e2e2",
+              "strokeColor": "#e27878",
+              "locked": true
+            },
+            "position": {
+              "x": 441.79604976907876,
+              "y": 10.00482552486119
+            },
+            "width": 430.37558695395364,
+            "height": 1092.1387021989287,
+            "measured": {
+              "width": 430,
+              "height": 1092
+            },
+            "dragging": false,
+            "parentId": "eea2fa1d-88a6-4785-a843-6e1ebdea732e",
+            "expandParent": true
+          },
+          {
+            "id": "87b59a8f-b913-4f4a-9294-874ea7ad2541",
+            "type": "text",
+            "data": {
+              "text": "Talk through the scenario with your partner. Examine the possible troubleshooting steps below and choose which ones are worth pursuing and which are not. Sort them into the proper category.",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "fontSize": "large",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1921.6190091615254,
+              "y": 1331.6224870836493
+            },
+            "width": 1045.0483482824857,
+            "height": 40,
+            "measured": {
+              "width": 1045,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "c1389887-f2fb-41fd-bacb-0696a3b640f4",
+            "type": "text",
+            "data": {
+              "text": "Possible Causes",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "fontSize": "large",
+              "locked": true
+            },
+            "position": {
+              "x": 74.39517238594453,
+              "y": 24.678230027986274
+            },
+            "width": 249.0483482824858,
+            "height": 41.89464570813789,
+            "measured": {
+              "width": 249,
+              "height": 42
+            },
+            "dragging": false,
+            "zIndex": 2,
+            "parentId": "eea2fa1d-88a6-4785-a843-6e1ebdea732e",
+            "expandParent": true
+          },
+          {
+            "id": "23fbd26d-2b7e-435e-abe0-00d3d258cd06",
+            "type": "text",
+            "data": {
+              "text": "Those particular pods are faulty",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 1927.8580911531494,
+              "y": 1417.41428180539
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 12
+          },
+          {
+            "id": "dec1fccf-8c70-4587-b4f1-463c85cdc10a",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/d8a05d45-d66f-4265-9d20-d1407ad774d2.png",
+              "altText": "output_tablet",
+              "locked": true
+            },
+            "position": {
+              "x": 2785.5082919137635,
+              "y": 136.76935682791066
+            },
+            "width": 99.69333636265583,
+            "height": 120,
+            "measured": {
+              "width": 100,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "e8e22ea8-ab1d-4d50-b81f-c2828e77c26d",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Data is sent over bluetooth from the wearable to the coach's tablet.",
+              "backgroundColor": "#f9dcbe",
+              "strokeColor": "#f7b56e",
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": 2567.901479350496,
+              "y": 124.67438225843814
+            },
+            "width": 160.9038586653238,
+            "height": 114.92643534863953,
+            "measured": {
+              "width": 161,
+              "height": 115
+            },
+            "dragging": false
+          },
+          {
+            "id": "fe1b579b-5789-4c40-8c71-8491785ac705",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "#fff2cc",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "locked": true
+            },
+            "position": {
+              "x": 2335.3841774715643,
+              "y": 209.11609767756426
+            },
+            "width": 172.24692444233096,
+            "height": 165.23462221165286,
+            "measured": {
+              "width": 172,
+              "height": 165
+            },
+            "dragging": false,
+            "zIndex": -4
+          },
+          {
+            "id": "a42b5600-bd47-4a02-8295-663b81e1a65f",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Each player wears a tracker (known as a POD) for the whole workout",
+              "backgroundColor": "#f9dcbe",
+              "strokeColor": "#f7b56e",
+              "fontFamily": "draw"
+            },
+            "position": {
+              "x": 2002.8771028975102,
+              "y": 141.23620888270545
+            },
+            "width": 254.3566977269801,
+            "height": 109.80573183841176,
+            "measured": {
+              "width": 254,
+              "height": 110
+            },
+            "dragging": false
+          },
+          {
+            "id": "e8953d27-8048-47e6-9717-5b0d2792c6ab",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "The tablet processes the data that is received from each wearable",
+              "backgroundColor": "#f9dcbe",
+              "strokeColor": "#f7b56e",
+              "fontFamily": "draw"
+            },
+            "position": {
+              "x": 2754.5494981823354,
+              "y": 485.99140728997236
+            },
+            "width": 169.0859883360564,
+            "height": 94.24319154557202,
+            "measured": {
+              "width": 169,
+              "height": 94
+            },
+            "dragging": false
+          },
+          {
+            "id": "01a28c31-2c9a-4e2e-a63c-2bf3e898438b",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Trackers charge on a dock overnight",
+              "backgroundColor": "#f9dcbe",
+              "strokeColor": "#f7b56e",
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": 2132.374841173638,
+              "y": 812.3059849165801
+            },
+            "width": 159.36222785008943,
+            "height": 79.81992879886366,
+            "measured": {
+              "width": 159,
+              "height": 80
+            },
+            "dragging": false
+          },
+          {
+            "id": "d00fc775-98a5-428a-a38d-4131e5048ca3",
+            "type": "text",
+            "data": {
+              "text": "SELF",
+              "strokeColor": "transparent",
+              "fontColor": "#ec8e22",
+              "fontSize": 60,
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1910.7516439606893,
+              "y": -189.88858812195917
+            },
+            "width": 492.1299277194439,
+            "height": 61.538094156194354,
+            "measured": {
+              "width": 492,
+              "height": 62
+            },
+            "dragging": false
+          },
+          {
+            "id": "3653adb3-cb3c-4f46-b608-8a6fda228319",
+            "type": "text",
+            "data": {
+              "text": "NEIGHBOR",
+              "strokeColor": "transparent",
+              "fontColor": "#ec8e22",
+              "fontSize": 60,
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1935.2804071851624,
+              "y": 1242.0691282611922
+            },
+            "width": 492.1299277194439,
+            "height": 61.538094156194354,
+            "measured": {
+              "width": 492,
+              "height": 62
+            },
+            "dragging": false
+          },
+          {
+            "id": "67bcd666-996e-43bf-b9bc-2d1f5f92fd46",
+            "type": "text",
+            "data": {
+              "text": "Eliminated Possibilities",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "fontSize": "large",
+              "locked": true
+            },
+            "position": {
+              "x": 527.4435206684302,
+              "y": 24.678230027986274
+            },
+            "width": 249.0483482824858,
+            "height": 41.89464570813789,
+            "measured": {
+              "width": 249,
+              "height": 42
+            },
+            "dragging": false,
+            "zIndex": 2,
+            "parentId": "eea2fa1d-88a6-4785-a843-6e1ebdea732e",
+            "expandParent": true
+          },
+          {
+            "id": "11b2ef87-4cae-4068-89b9-df531320967e",
+            "type": "text",
+            "data": {
+              "text": "Those pods' batteries are dying mid-session",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2176.906439435635,
+              "y": 1417.41428180539
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 11
+          },
+          {
+            "id": "e86e1723-5b08-4660-b3f8-e748ab0fc3fc",
+            "type": "text",
+            "data": {
+              "text": "The players are wearing the pods wrong",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2425.9547877181208,
+              "y": 1417.41428180539
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 10
+          },
+          {
+            "id": "d294f65e-15fe-4a10-bd80-af2175751bd0",
+            "type": "text",
+            "data": {
+              "text": "The cloud upload is failing",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2675.0031360006064,
+              "y": 1417.41428180539
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 9
+          },
+          {
+            "id": "9067410f-63ff-4c42-92af-416beca67c4e",
+            "type": "text",
+            "data": {
+              "text": "The field is simply too big for the system",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2924.051484283092,
+              "y": 1417.41428180539
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 8
+          },
+          {
+            "id": "037ea9a6-da83-442d-8010-f7fbfcd823ab",
+            "type": "text",
+            "data": {
+              "text": "Another team's equipment is interfering",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 1928.7688795802364,
+              "y": 1565.9146836019945
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 7
+          },
+          {
+            "id": "48560197-8187-4bd6-a8e4-a4e1073b13de",
+            "type": "text",
+            "data": {
+              "text": "The tablet is too slow to process live data",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2177.817227862722,
+              "y": 1565.9146836019945
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 6
+          },
+          {
+            "id": "6fde26d8-f0a3-49d0-9818-37a7f9d09de5",
+            "type": "text",
+            "data": {
+              "text": "The pods are out of range",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2426.865576145208,
+              "y": 1565.9146836019945
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 5
+          },
+          {
+            "id": "d8ab76e4-07e2-4c18-840b-82318e5d1f5d",
+            "type": "text",
+            "data": {
+              "text": "Something is blocking the signal",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2675.9139244276935,
+              "y": 1565.9146836019945
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 4
+          },
+          {
+            "id": "bc29cd24-d29d-4008-9166-a5443850f8a4",
+            "type": "text",
+            "data": {
+              "text": "Restate the problem and make your best guesses about possible solutions",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "fontSize": "large",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1919.6407160285253,
+              "y": -101.99828374479044
+            },
+            "width": 1045.0483482824857,
+            "height": 40,
+            "measured": {
+              "width": 1045,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "149be734-2860-43d4-b891-ea97b17a79e1",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson3-device-2/uuid/e20dcd26-4bf5-4a7e-9fb3-a11cd9cf7ab2.png",
+              "altText": "",
+              "rotation": 315,
+              "locked": true
+            },
+            "position": {
+              "x": 2051.309748547977,
+              "y": 97.08924707419544
+            },
+            "width": 749.7181739922148,
+            "height": 734.3410622591126,
+            "measured": {
+              "width": 750,
+              "height": 734
+            },
+            "dragging": false,
+            "zIndex": -9
+          },
+          {
+            "id": "211207d0-3f28-4599-9062-40bad36f1ef7",
+            "type": "lineAnchor",
+            "position": {
+              "x": 2261.011862039016,
+              "y": 637.2334938420792
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "b4fb9e8d-f109-4430-907b-c335d232e4cc",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#f2e3ea",
+              "strokeColor": "#ca8ca7",
+              "locked": true
+            },
+            "position": {
+              "x": 2752.1991315091755,
+              "y": 115.53150505108223
+            },
+            "width": 171.69996748997312,
+            "height": 326.9928193916108,
+            "measured": {
+              "width": 172,
+              "height": 327
+            },
+            "dragging": false,
+            "zIndex": -11
+          },
+          {
+            "id": "ae2e8829-88b1-4cae-81f5-c4ab89747759",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson3-device-2/uuid/0fe96c69-1b15-44f9-b804-a205d144eb70.png",
+              "altText": "storage_cloud",
+              "locked": true
+            },
+            "position": {
+              "x": 3029.697693607373,
+              "y": 670.6704933748412
+            },
+            "width": 99.70802708908195,
+            "height": 120,
+            "measured": {
+              "width": 100,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "1d3ab67a-540d-43c7-a995-f4b79f48a0c4",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson3-device-2/uuid/fa13cd80-8555-4112-9bad-aa18ef3d1b60.png",
+              "altText": "",
+              "locked": true
+            },
+            "position": {
+              "x": 1695.9329504263385,
+              "y": -209.47020287781854
+            },
+            "width": 192.09484175472312,
+            "height": 141.95962856902113,
+            "measured": {
+              "width": 192,
+              "height": 142
+            },
+            "dragging": false
+          },
+          {
+            "id": "d8231c67-ca1d-4636-9a3f-5adfec39b5c6",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson3-device-2/uuid/5ed477fd-157d-457b-b58f-30f10210d333.png",
+              "altText": "",
+              "rotation": 36,
+              "locked": true
+            },
+            "position": {
+              "x": 1837.8259350261674,
+              "y": 993.2417618254917
+            },
+            "width": 200.54085274280828,
+            "height": 165.6084593356593,
+            "measured": {
+              "width": 201,
+              "height": 166
+            },
+            "dragging": false
+          },
+          {
+            "id": "32c6f126-a9cd-4102-ac04-c34fec9d8a93",
+            "type": "text",
+            "data": {
+              "text": "Start\nHere",
+              "strokeColor": "transparent",
+              "fontColor": "#ec8e22",
+              "fontSize": "extra-large",
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1660.3795626971105,
+              "y": -310.2251206123111
+            },
+            "width": 118.3185714728188,
+            "height": 97.38301872778857,
+            "measured": {
+              "width": 118,
+              "height": 97
+            },
+            "dragging": false
+          },
+          {
+            "id": "3bc18009-c9df-48f4-9c47-e9773d6f53f1",
+            "type": "text",
+            "data": {
+              "text": "The app shows a dropped pod as 0 bpm instead of \"no signal\"",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2924.962272710179,
+              "y": 1565.9146836019945
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 3
+          },
+          {
+            "id": "ce1e4dac-b2d0-40a5-8418-0eb8dccca5d9",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "After practice, data is uploaded over wifi to cloud storage",
+              "backgroundColor": "#f9dcbe",
+              "strokeColor": "#f7b56e",
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": 2991.4848080289094,
+              "y": 217.15447300301588
+            },
+            "width": 169.0859883360564,
+            "height": 94.24319154557202,
+            "measured": {
+              "width": 169,
+              "height": 94
+            },
+            "dragging": false
+          }
+        ],
+        "edges": [
+          {
+            "id": "38b1626c-d511-4784-97af-559f7131cd3d",
+            "source": "a22e86f9-222b-410b-b5c2-aa991f1583b3",
+            "target": "211207d0-3f28-4599-9062-40bad36f1ef7",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 3
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "sourceHandle": "right-source",
+            "data": {
+              "locked": true
+            }
+          },
+          {
+            "id": "d4ae169c-bf7a-43c2-b1a5-db927b4722d0",
+            "source": "c092e9a4-22f9-4ec4-85b0-ed994bf0e1f6",
+            "target": "dec1fccf-8c70-4587-b4f1-463c85cdc10a",
+            "type": "default",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 3,
+              "strokeDasharray": "8 4"
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "sourceHandle": "top-source",
+            "targetHandle": "left-target",
+            "data": {
+              "locked": true
+            }
+          },
+          {
+            "id": "402c8190-0b96-48da-888f-f7bc7172e6a3",
+            "source": "dec1fccf-8c70-4587-b4f1-463c85cdc10a",
+            "target": "82353e0b-8b59-4afe-9ec0-f65819cac382",
+            "type": "default",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 3,
+              "strokeDasharray": "8 4"
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "sourceHandle": "right-source",
+            "targetHandle": "top-target",
+            "data": {
+              "locked": true
+            }
+          },
+          {
+            "id": "7083fb69-b874-4427-96e8-ae80e2ec5f70",
+            "source": "82353e0b-8b59-4afe-9ec0-f65819cac382",
+            "target": "ae2e8829-88b1-4cae-81f5-c4ab89747759",
+            "type": "default",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 3,
+              "strokeDasharray": "8 4"
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "data": {
+              "locked": true
+            }
+          }
+        ],
+        "viewport": {
+          "x": -1082.052920372833,
+          "y": 255.0780665623143,
+          "zoom": 0.6800241892992602
+        }
+      }
+    },
+    "display_name": "Joaquín Silva",
+    "bubble_choice_description": "Our Player Trackers Keep Cutting Out!"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-02T21:22:42.782+00:00\",\"changed\":[\"cloned from \\\"ai-and-the-systems-that-power-it-lesson3-device-1\\\"\"],\"cloned_from\":\"ai-and-the-systems-that-power-it-lesson3-device-1\"},{\"changed_at\":\"2026-09-02 21:23:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-02 21:24:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-02 21:25:34 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 16:56:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:02:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:51:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:53:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:02:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:05:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:26:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

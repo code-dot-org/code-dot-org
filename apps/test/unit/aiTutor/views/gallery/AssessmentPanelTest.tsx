@@ -19,6 +19,7 @@ const baseDetail: ChallengeResponseDetail = {
   is_final: true,
   created_at: '2026-08-10T12:00:00Z',
   assets: [],
+  reactions: [],
   viewer_role: 'owner',
   question: 'Draw a network.',
   evaluated_at: '2026-08-11T15:30:00Z',

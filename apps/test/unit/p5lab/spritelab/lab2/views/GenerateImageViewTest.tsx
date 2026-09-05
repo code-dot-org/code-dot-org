@@ -46,7 +46,10 @@ describe('GenerateImageView character-set offer', () => {
   });
 
   it('withdraws the offer when the base is a previous image, not fresh', () => {
+    // Start-from radios exist only in the advanced form; the student form
+    // always draws from a fresh base, so its offer never withdraws.
     renderView({
+      advanced: true,
       existing: {imageType: 'sprite', getDataURI: async () => null},
     });
     expect(screen.getByLabelText(SET_CHECKBOX)).toBeInTheDocument();

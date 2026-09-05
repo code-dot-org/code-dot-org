@@ -1,2 +1,13 @@
 @import "@selectize/selectize/dist/css/selectize";
 @import "./legacy";
+@import "./legacy/errors";
+@import "./legacy/extra_links";
+@import "./legacy/interstitial";
+@import "./legacy/level";
+@import "./legacy/markdown";
+@import "./legacy/scaffolds";
+@import "./legacy/teacher-panel";
+@import "./legacy/trophy_sparkle";
+@import "./legacy/unplugged";
+@import "./legacy/lti/login_lti_account_linking";
+@import "./legacy/lti/sign_up_warning_banner";

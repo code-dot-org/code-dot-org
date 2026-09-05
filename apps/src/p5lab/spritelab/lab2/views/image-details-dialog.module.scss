@@ -65,11 +65,25 @@
   border-radius: 6px;
   background-color: transparent;
 
-  img,
+  img {
+    width: 100%;
+    height: 100%;
+    // Fill the pane even when the stored image is smaller than it (small
+    // crisp-scaled pixel art stops at 8x its logical size).
+    object-fit: contain;
+  }
+
+  // The sheet preview's canvas holds one full-resolution frame scaled to
+  // the pane; hard edges keep crisp frames crisp on the way down.
   canvas {
     max-width: 100%;
     max-height: 100%;
-    // Art-pixel edges stay crisp when upscaled.
+    image-rendering: pixelated;
+  }
+
+  // Only pixel art wants hard edges on that upscale; smooth art keeps its
+  // anti-aliasing.
+  img.pixelArt {
     image-rendering: pixelated;
   }
 
@@ -145,9 +159,13 @@
   transition: opacity 0.12s ease;
 }
 
-.imageButton:hover .paintOverlay,
+.imageButton:hover:not(:disabled) .paintOverlay,
 .imageButton:focus-visible .paintOverlay {
   opacity: 1;
+}
+
+.imageButton:disabled {
+  cursor: default;
 }
 
 .imagePlaceholder {

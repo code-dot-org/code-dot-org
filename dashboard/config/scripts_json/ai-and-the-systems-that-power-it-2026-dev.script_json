@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-01 18:37:33 UTC",
+    "serialized_at": "2026-09-02 21:30:31 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -500,6 +500,18 @@
       },
       "seeding_key": {
         "lesson_activity.key": "ea91197d-8df3-44d1-be9a-d725a2222b4b",
+        "lesson.key": "Lesson 3: Troubleshooting and Optimizing Hardware",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-the-systems-that-power-it-2026-dev"
+      }
+    },
+    {
+      "key": "94ef9dd6-3971-451e-9e90-70ed300f678b",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "94ef9dd6-3971-451e-9e90-70ed300f678b",
         "lesson.key": "Lesson 3: Troubleshooting and Optimizing Hardware",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev"
@@ -1611,6 +1623,16 @@
       "seeding_key": {
         "activity_section.key": "b829d9e5-1490-49e6-b312-329aca6a0d2d",
         "lesson_activity.key": "ea91197d-8df3-44d1-be9a-d725a2222b4b"
+      }
+    },
+    {
+      "key": "55339380-8d6a-411c-9d9a-3f7c50bd32b1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "55339380-8d6a-411c-9d9a-3f7c50bd32b1",
+        "lesson_activity.key": "94ef9dd6-3971-451e-9e90-70ed300f678b"
       }
     },
     {
@@ -3947,6 +3969,27 @@
     },
     {
       "chapter": 12,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-the-systems-that-power-it-lesson3-device-choice"
+        ],
+        "lesson.key": "Lesson 3: Troubleshooting and Optimizing Hardware",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
+        "activity_section.key": "55339380-8d6a-411c-9d9a-3f7c50bd32b1"
+      },
+      "level_keys": [
+        "ai-and-the-systems-that-power-it-lesson3-device-choice"
+      ]
+    },
+    {
+      "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3968,7 +4011,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -3990,7 +4033,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4012,7 +4055,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4034,7 +4077,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4056,7 +4099,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4078,7 +4121,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4100,7 +4143,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4122,7 +4165,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
@@ -4144,7 +4187,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4166,7 +4209,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4188,7 +4231,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 3,
       "activity_section_position": 3,
       "assessment": true,
@@ -4210,7 +4253,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4232,7 +4275,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4254,7 +4297,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -4276,7 +4319,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
@@ -4298,7 +4341,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 5,
       "activity_section_position": 3,
       "assessment": true,
@@ -4320,7 +4363,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4342,7 +4385,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4364,7 +4407,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4386,7 +4429,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4408,7 +4451,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4430,7 +4473,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4452,7 +4495,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4474,7 +4517,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4496,7 +4539,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4518,7 +4561,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 6,
       "activity_section_position": 2,
       "assessment": true,
@@ -4540,7 +4583,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4562,7 +4605,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4584,7 +4627,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4606,7 +4649,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4628,7 +4671,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4650,7 +4693,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4672,7 +4715,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4694,7 +4737,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4716,7 +4759,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4738,7 +4781,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4891,6 +4934,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev",
         "activity_section.key": "9004352c-0ae0-4e4f-98bf-bd848ee5bd01"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-the-systems-that-power-it-lesson3-device-choice",
+        "script_level.level_keys": [
+          "ai-and-the-systems-that-power-it-lesson3-device-choice"
+        ],
+        "lesson.key": "Lesson 3: Troubleshooting and Optimizing Hardware",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
+        "activity_section.key": "55339380-8d6a-411c-9d9a-3f7c50bd32b1"
       }
     },
     {

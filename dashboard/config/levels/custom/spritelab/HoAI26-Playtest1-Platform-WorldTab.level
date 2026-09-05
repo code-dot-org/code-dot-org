@@ -1,0 +1,146 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-09-03T01:45:32.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "HoAI26-Playtest1-Platform-Template",
+    "visible_tabs": [
+      "World",
+      "Code",
+      "Play"
+    ],
+    "pinned_scene_id": "platform-scene",
+    "pinned_scene_name": "Platformer",
+    "guide_mode": "instructions",
+    "guide_steps": [
+      {
+        "text": "**Build your world.** Pick your block image and paint platforms onto the grid - place at least 7 blocks. Then pick your character and place them where they should start."
+      },
+      {
+        "text": "**Nice!** Now switch to the **Code** tab to bring your platformer to life.",
+        "after": {
+          "worldBlocks": 7,
+          "worldSprites": 1
+        }
+      },
+      {
+        "text": "**Bring it to life.** Set a background and establish your player, then click **Play** to try it.",
+        "after": {
+          "tab": "Code"
+        }
+      }
+    ],
+    "long_instructions": "# Build your platformer\r\nPlace platform blocks on the grid in the World tab and add a player. Press **Run**, then use the arrow keys to run and jump.",
+    "toolbox_definition": {
+      "kind": "flyoutToolbox",
+      "contents": [
+        {
+          "kind": "block",
+          "type": "gamelab_setBackgroundImageAs"
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_setAsPlatformPlayer"
+        }
+      ]
+    },
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "use_modal_function_editor": "false",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "use_default_sprites": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "enable_big_playspace": "false",
+    "start_sources": {
+      "animations": {
+        "orderedKeys": [
+
+        ],
+        "propsByKey": {
+        }
+      },
+      "source": {
+        "blocks": {
+          "blocks": [
+            {
+              "type": "spritelab2_whenRun",
+              "x": 20,
+              "y": 20,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "scenes": [
+        {
+          "id": "platform-scene",
+          "name": "Platformer",
+          "source": {
+            "blocks": {
+              "languageVersion": 0,
+              "blocks": [
+                {
+                  "type": "spritelab2_whenRun",
+                  "id": "*A?k^q3I`f^;8$/2-B`N",
+                  "x": 20,
+                  "y": 20,
+                  "deletable": false,
+                  "movable": false,
+                  "next": {
+                    "block": {
+                      "type": "gamelab_setBackgroundImageAs",
+                      "id": "nIL5UYs,RU?Q3Aymza5`",
+                      "fields": {
+                        "IMG": "<field name=\"IMG\">null</field>"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-03T01:45:32.415+00:00\",\"changed\":[\"cloned from \\\"hoai2026-dev-spritelab-lab2-platformer\\\"\"],\"cloned_from\":\"hoai2026-dev-spritelab-lab2-platformer\"},{\"changed_at\":\"2026-09-03 02:16:54 +0000\",\"changed\":[\"project_template_level_name\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 18:31:38 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 18:31:49 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</GamelabJr>

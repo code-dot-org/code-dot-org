@@ -7,6 +7,7 @@
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "AIF",
       "hideable_lessons": true,
+      "include_student_lesson_plans": true,
       "is_migrated": true,
       "show_calendar": true,
       "topic_tags": [
@@ -16,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-24 21:40:33 UTC",
+    "serialized_at": "2026-09-03 21:16:59 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -6495,6 +6496,19 @@
   ],
   "resources": [
     {
+      "name": "Absolute Error",
+      "url": "https://www.youtube.com/watch?v=ODMItnoJ-K0",
+      "key": "absolute_error",
+      "properties": {
+        "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "absolute_error"
+      }
+    },
+    {
       "name": "Berry Picking",
       "url": "https://docs.google.com/document/d/1D6HEOSP1ZeJ7agud9HDHhfVdxXoonaU3UrvE2D1aXwg/edit?usp=sharing",
       "key": "berry_picking",
@@ -6726,6 +6740,19 @@
       }
     },
     {
+      "name": "Linear Regression",
+      "url": "https://www.youtube.com/watch?v=ps4gK-gYfyQ",
+      "key": "linear_regression",
+      "properties": {
+        "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "linear_regression"
+      }
+    },
+    {
       "name": "Machine Learning Fundamentals Unit Guide",
       "url": "https://docs.google.com/document/d/1NnoGobJk4weW2UddhZu_6OlTJh8OwzRKTH1u0M3ovw0/edit?usp=sharing",
       "key": "machine_learning_fundamentals_unit_guide",
@@ -6843,6 +6870,32 @@
       },
       "seeding_key": {
         "resource.key": "prediction_models"
+      }
+    },
+    {
+      "name": "Probability",
+      "url": "https://www.youtube.com/watch?v=xdZULv40dtM",
+      "key": "probability",
+      "properties": {
+        "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "probability"
+      }
+    },
+    {
+      "name": "Randomness",
+      "url": "https://www.youtube.com/watch?v=Kai3luGOHyo",
+      "key": "randomness",
+      "properties": {
+        "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "randomness"
       }
     },
     {
@@ -7011,6 +7064,19 @@
       }
     },
     {
+      "name": "Types of Predictions",
+      "url": "https://www.youtube.com/watch?v=fcowbFcDmSc",
+      "key": "types_of_predictions",
+      "properties": {
+        "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "types_of_predictions"
+      }
+    },
+    {
       "name": "What is Machine Learning?",
       "url": "https://docs.google.com/presentation/d/1a23EyuLsCa-1zAU7VXjiH13miEK2EjAAocaGb_h99FU/edit?usp=sharing",
       "key": "what_is_machine_learning_",
@@ -7148,6 +7214,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "probability"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "randomness"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-3",
         "resource.key": "describing_data"
       }
@@ -7172,8 +7250,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "types_of_predictions"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-5",
         "resource.key": "building_regression_models"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "linear_regression"
       }
     },
     {
@@ -7186,6 +7276,12 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "resource.key": "ride_share_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "absolute_error"
       }
     },
     {
@@ -7268,6 +7364,16 @@
 
   ],
   "vocabularies": [
+    {
+      "key": "absolute_error",
+      "word": "absolute error",
+      "definition": "the distance between a prediction and an actual value",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "absolute_error"
+      }
+    },
     {
       "key": "accountability",
       "word": "accountability",
@@ -7778,6 +7884,12 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "vocabulary.key": "y_intercept"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "absolute_error"
       }
     },
     {

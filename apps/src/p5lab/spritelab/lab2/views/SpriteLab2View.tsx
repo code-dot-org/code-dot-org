@@ -8,6 +8,7 @@ import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {applyBlockIdOverrides} from '@cdo/apps/blockly/utils';
 import {getCodeFromSerializedWorkspace} from '@cdo/apps/blockly/utils/workspace/getCode';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import {TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
@@ -46,7 +47,7 @@ import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import defaultSources from '../defaultSources.json';
-import {useGuideSteps} from '../guideSteps';
+import {countImagesByType, useGuideSteps} from '../guideSteps';
 import {
   removeImageReferences,
   removeImageReferencesOnWorkspace,
@@ -129,12 +130,10 @@ registerReducers({
 const ENABLED_TABS: readonly Tab[] = ['Images', 'Code', 'Play'];
 const WORLD_TABS: readonly Tab[] = ['Images', 'World', 'Code', 'Play'];
 
-// World-tab experiment flag: ?world-tab=true shows the tab (levels can also
-// opt in via showWorldTab).
-function getWorldTabEnabledParam() {
-  return (
-    new URLSearchParams(window.location.search).get('world-tab') === 'true'
-  );
+// Authored level flags arrive as JSON and may be booleans or the strings
+// the levelbuilder checkbox helper writes; only true and 'true' mean on.
+function levelFlag(value: unknown): boolean {
+  return value === true || value === 'true';
 }
 
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
@@ -217,7 +216,18 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const dispatch = useAppDispatch();
 
   const activeTab = useAppSelector(state => state.spriteLab2.activeTab);
-  const worldTabParamEnabled = useMemo(getWorldTabEnabledParam, []);
+  // World-tab experiment flag (levels can also opt in via showWorldTab).
+  const worldTabParamEnabled = useMemo(
+    () => queryParams('world-tab') === 'true',
+    []
+  );
+  // The image dialog defaults to the student form; this shows the full
+  // internal one (levels can also opt in via imagesAdvanced). Level edit
+  // modes author starter images, which needs the naming controls.
+  const imagesAdvanced =
+    useMemo(() => queryParams('images-advanced') === 'true', []) ||
+    levelFlag(levelProperties.imagesAdvanced) ||
+    isLevelEditMode;
   // A level can name its exact tab set; unknown names are dropped, and a list
   // naming none falls back to the defaults. Listing 'World' turns the world
   // tab on, as the URL flag and showWorldTab still do.
@@ -229,7 +239,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     if (requested?.length) {
       return requested;
     }
-    return worldTabParamEnabled || levelProperties.showWorldTab
+    return worldTabParamEnabled || levelFlag(levelProperties.showWorldTab)
       ? WORLD_TABS
       : ENABLED_TABS;
   }, [
@@ -396,10 +406,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const activeScene = scenes.find(s => s.id === activeSceneId) ?? scenes[0];
   const activeWorld = worldFor(activeScene);
   const activeSceneSize = sceneGridSize(activeWorld);
-  // Images in the project, for guide steps waiting on one being made.
-  const imageCount = useAppSelector(
-    state => state.animationList.orderedKeys.length
-  );
+  // The project's images, for guide steps waiting on some being made.
+  const animationList = useAppSelector(state => state.animationList);
 
   // Keep activeSceneId pointing at a real scene: locked to the pin once the
   // ensure effect lands it, otherwise reset to the first scene when the
@@ -424,11 +432,21 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // the project), otherwise the first scene.
   const defaultPlaySceneId = pinnedSceneId ?? scenes[0]?.id ?? null;
 
-  const guideInstructions = useGuideSteps({
+  // From load-time sources, not the store: the redux list seeds a tick
+  // after mount, so its first value would snapshot as empty.
+  const baselineImages = useMemo(
+    () =>
+      countImagesByType(
+        initialSources.animations ?? {orderedKeys: [], propsByKey: {}}
+      ),
+    [initialSources]
+  );
+  const guide = useGuideSteps({
     steps: levelProperties.guideSteps,
     grid: activeWorld.grid,
     activeTab,
-    images: imageCount,
+    animations: animationList,
+    baselineImages,
     fallback: levelProperties.longInstructions,
   });
 
@@ -670,7 +688,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [levelProperties, initialSources]);
 
   // Persist Images-tab changes back to sources in the serialized shape.
-  const animationListState = useAppSelector(state => state.animationList);
   useEffect(() => {
     // Serialize from the LIVE store, not this commit's snapshot: this effect
     // runs after compileExternalScene's synchronous merge-and-restore, and a
@@ -680,7 +697,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         getStore().getState().animationList
       ),
     });
-  }, [animationListState, patchSources]);
+  }, [animationList, patchSources]);
 
   const {
     getCode,
@@ -995,12 +1012,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     musicProjects
   );
 
-  // The Code and Images tabs stay mounted behind a clip-path, which hides
-  // them visually but leaves their contents (the whole Blockly workspace)
-  // in the tab order and the accessibility tree. Inert while hidden.
-  // Set via refs: React 18's JSX has no inert attribute.
+  // Hidden tabs stay mounted behind a clip-path, which hides them visually
+  // but leaves their contents (workspace, palette, grid) in the tab order
+  // and the accessibility tree. Inert while hidden.
+  // Set via refs: React 18's JSX has no inert attribute. The mount flags
+  // are deps because a wrapper can first render while its tab is hidden
+  // (the Images idle pre-mount), after the last activeTab change.
   const codeWrapperRef = useRef<HTMLDivElement>(null);
   const imagesWrapperRef = useRef<HTMLDivElement>(null);
+  const worldWrapperRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (codeWrapperRef.current) {
       codeWrapperRef.current.inert = activeTab !== 'Code';
@@ -1008,7 +1028,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     if (imagesWrapperRef.current) {
       imagesWrapperRef.current.inert = activeTab !== 'Images';
     }
-  }, [activeTab]);
+    if (worldWrapperRef.current) {
+      worldWrapperRef.current.inert = activeTab !== 'World';
+    }
+  }, [activeTab, imagesMounted, worldMounted]);
 
   // The scene Play (re)starts from: null means the beginning (the first
   // scene). Clicking a preview sets it to the previewed scene; entering Play
@@ -1496,6 +1519,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 onRenameImage={handleRenameImage}
                 onDeleteImage={handleDeleteImage}
                 lockedImageType={levelProperties.lockedImageType}
+                advanced={imagesAdvanced}
               />
             </div>
           </div>
@@ -1503,6 +1527,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
         {worldTabEnabled && worldMounted && (
           <div
+            ref={worldWrapperRef}
             className={moduleStyles.codeTabWrapper}
             style={{
               clipPath: activeTab === 'World' ? 'none' : 'inset(100%)',
@@ -1540,7 +1565,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             activeTab === 'Code') && (
             <GenerateSpriteLab
               guideMode={levelProperties.guideMode}
-              instructions={guideInstructions}
+              instructions={guide.text}
+              showContinue={guide.showContinue}
+              levelProperties={levelProperties}
               onCodeGenerated={handleCodeGenerated}
             />
           )}
