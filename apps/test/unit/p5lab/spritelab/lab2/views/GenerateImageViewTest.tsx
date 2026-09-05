@@ -7,7 +7,9 @@ import GenerateImageView from '@cdo/apps/p5lab/spritelab/lab2/views/GenerateImag
 // exists only for sprites drawn from a fresh base, and regenerating an
 // existing set keeps it a set unless the student unchecks it.
 
-const SET_CHECKBOX = /Make a character set/;
+// The student form's short label; the advanced form spells the offer out.
+const SET_CHECKBOX = 'Generate animation';
+const SET_CHECKBOX_ADVANCED = /Make a character set/;
 
 const SHEET = {
   src: 'data:image/png;base64,',
@@ -52,10 +54,12 @@ describe('GenerateImageView character-set offer', () => {
       advanced: true,
       existing: {imageType: 'sprite', getDataURI: async () => null},
     });
-    expect(screen.getByLabelText(SET_CHECKBOX)).toBeInTheDocument();
+    expect(screen.getByLabelText(SET_CHECKBOX_ADVANCED)).toBeInTheDocument();
     fireEvent.click(
       screen.getByLabelText(/Use previous image/, {selector: 'input'})
     );
-    expect(screen.queryByLabelText(SET_CHECKBOX)).not.toBeInTheDocument();
+    expect(
+      screen.queryByLabelText(SET_CHECKBOX_ADVANCED)
+    ).not.toBeInTheDocument();
   });
 });

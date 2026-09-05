@@ -435,7 +435,11 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
             <div className={moduleStyles.formRow}>
               <Checkbox
                 name="character-set"
-                label={`Make a character set: idling, walking and jumping (${CHARACTER_SET_PICTURE_COUNT} pictures; takes a minute)`}
+                label={
+                  advanced
+                    ? `Make a character set: idling, walking and jumping (${CHARACTER_SET_PICTURE_COUNT} pictures; takes a minute)`
+                    : 'Generate animation'
+                }
                 size="s"
                 checked={characterSet}
                 disabled={generating}
@@ -537,7 +541,12 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
           )}
           {generating && progress && (
             <div aria-live="polite" className={moduleStyles.generateProgress}>
-              {progress.done < progress.total
+              {!advanced
+                ? // The step in progress; assembly counts as the last step.
+                  `Step ${Math.min(progress.done + 1, progress.total)} of ${
+                    progress.total
+                  }`
+                : progress.done < progress.total
                 ? `Drew ${progress.done} of ${progress.total} (${progress.label})…`
                 : 'Putting the frames together…'}
             </div>
