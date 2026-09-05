@@ -47,4 +47,9 @@ class DynamicConfigBase
   def refresh
     @datastore_cache.update_local_cache
   end
+
+  # Reload the config from the datastore source of truth, not just the shared cache.
+  def reload!
+    @datastore_cache.reload!
+  end
 end
