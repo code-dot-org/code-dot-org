@@ -18,6 +18,7 @@ import type {EdgeMarkerType} from '@xyflow/system';
 import type * as BlocklyCore from 'blockly/core';
 import {ComponentType, CSSProperties, LazyExoticComponent} from 'react';
 
+import type {AiChatToolsDependencyValue} from '@cdo/apps/aichat/types/accessControls';
 import {BlockDefinition} from '@cdo/apps/blockly/types';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
 import {AiTutorPromptSettings} from '@cdo/apps/weblab2/types';
@@ -328,6 +329,10 @@ export interface LevelProperties {
   widgetViewAllowShowCode?: boolean;
   aiTutorMode?: string;
   aiTutorPromptSettings?: AiTutorPromptSettings;
+  // Whether this level's curriculum requires its AI Tutor ('essential', the
+  // default when unset) or merely offers it ('available'). See
+  // AI_CHAT_TOOLS_DEPENDENCY in shared_constants.rb.
+  aiTutorDependency?: AiChatToolsDependencyValue;
   levelSystemPrompt?: string;
   // Properties added for parity with non-lab2 AI Tutor levels
   aiTutorAvailable?: boolean;
