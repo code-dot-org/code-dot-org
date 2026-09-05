@@ -2,11 +2,13 @@ require 'logger'
 require 'dynamic_config/dcdo'
 
 module Cdo
-  # Policy for the one-line-per-HTTP-request log lograge emits for Rails
-  # controller actions (see dashboard/config/initializers/http_request_logging.rb).
-  # The line's severity is derived from the response status, and lines below a
-  # configurable threshold are dropped so we do not pay to ship 2xx/3xx request
-  # logs to CloudWatch in production.
+  # Policy shared by the two producers of the one-line-per-HTTP-request log: the
+  # lograge initializer for Rails controller actions
+  # (dashboard/config/initializers/http_request_logging.rb) and
+  # Rack::RequestLogger for the legacy Sinatra APIs mounted as Rack middleware
+  # (lib/cdo/rack/request_logger.rb). The line's severity is derived from the
+  # response status, and lines below a configurable threshold are dropped so we
+  # do not pay to ship 2xx/3xx request logs to CloudWatch in production.
   #
   #   5xx  -> :error
   #   4xx  -> :warn
@@ -21,9 +23,9 @@ module Cdo
   module HttpRequestLogging
     DCDO_KEY = 'http_request_log_level'.freeze
 
-    # Guards against logging a request twice: a raising action delivers both
-    # process_action (with the exception) and, via the lograge fork's
-    # DebugExceptions hook, process_exception.
+    # LOGGED_KEY marks a request lograge has logged, so Rack::RequestLogger does
+    # not log it a second time and lograge's own process_action/process_exception
+    # pair (a raising action delivers both) logs only once.
     LOGGED_KEY = :http_request_logged
 
     # Ordered lowest-to-highest so a threshold comparison is a simple >=.
@@ -50,6 +52,17 @@ module Cdo
 
       def default_threshold
         CDO.rack_env?(:production) ? :warn : :info
+      end
+
+      # Whether request logging is active. Tied to lograge: Rack::RequestLogger
+      # complements lograge for the legacy APIs, so it should run in exactly the
+      # environments lograge does (production, staging, adhoc, managed test) and
+      # stay quiet where Rails does its own request logging (development, unit
+      # tests). Read at request time; config.lograge.enabled is set per env.
+      def enabled?
+        return false unless defined?(Rails) && Rails.respond_to?(:application)
+        app = Rails.application
+        !!(app && app.config.lograge.enabled)
       end
     end
   end

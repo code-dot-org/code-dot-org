@@ -3,6 +3,7 @@ require 'cdo/poste'
 require 'rails/all'
 
 require 'cdo/geocoder'
+require 'cdo/rack/request_logger'
 require_relative '../legacy/middleware/files_api'
 require_relative '../legacy/middleware/channels_api'
 require 'shared_resources'
@@ -112,6 +113,9 @@ module Dashboard
     config.middleware.insert_after SharedResources, NetSimApi
     config.middleware.insert_after NetSimApi, AnimationLibraryApi
     config.middleware.insert_after AnimationLibraryApi, SoundLibraryApi
+
+    # Log a request line for the legacy Sinatra APIs above.
+    config.middleware.insert_before FilesApi, Rack::RequestLogger
 
     require 'cdo/rack/upgrade_insecure_requests'
     config.middleware.use ::Rack::UpgradeInsecureRequests
