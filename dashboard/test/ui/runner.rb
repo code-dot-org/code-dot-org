@@ -38,6 +38,7 @@ require 'colorize'
 require 'open3'
 require 'parallel'
 require 'securerandom'
+require 'uri'
 require 'socket'
 require 'parallel_tests/cucumber/scenarios'
 
@@ -432,6 +433,12 @@ def applitools_batch_url
   "https://eyes.applitools.com/app/batches/?startInfoBatchId=#{ENV.fetch('BATCH_ID', nil)}&hideBatchList=true"
 end
 
+# Hyperlink to this run's Applitools batch. nil for non-Eyes suites.
+def applitools_batch_link
+  return nil unless applitools_batch_url
+  "👀 <a href='#{applitools_batch_url}'>Eyes batch</a> on Applitools"
+end
+
 def report_tests_starting
   ChatClient.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type_label} tests in #{$options.parallel_limit} threads..."
   if eyes?
@@ -470,9 +477,10 @@ def report_tests_finished(start_time, run_results, s3_status_page_url = nil)
   ChatClient.log "Skipped tests tagged with: #{skipped_tags.to_a.join(', ')}"
 
   report_kind = $options.with_status_page ? 'TEST SUITE' : 'TEST MANUAL RUN'
-  test_report =  "\n#{test_type_label.upcase} #{report_kind}: #{failures.any? ? '*❌ FAILED*' : '*✅ PASSED*'}\n\n"
-  test_report += "Applitools Eyes Results:\n#{applitools_batch_url}\n\n" if applitools_batch_url
-  test_report += status_page_links(s3_status_page_url)
+  # Slack allows 5 line breaks before it folds the rest of the message behind
+  # "Show more". See status_page_links.
+  test_report =  "\n#{test_type_label.upcase} #{report_kind}: #{failures.any? ? '*❌ FAILED*' : '*✅ PASSED*'}\n"
+  test_report += status_page_links(s3_status_page_url, extra_links: [applitools_batch_link].compact)
   test_report += "#{pass_fail_summary(suite_success_count, failures.count, run_results.count, suite_duration, total_flaky_successful_reruns)}\n"
   # Slack truncates long messages. Show failures list last, so that status page
   # links are not truncated when there are many failures.
@@ -487,26 +495,37 @@ def server_status_page_url
 end
 
 # Returns text describing where to find the test status page:
-#   - non-CI: server URL first because it loads results faster, S3 URL second
-#     as a fallback in case the server is unreachable.
-#   - CI (drone): only the S3 URL, because the server is not typically
-#     available after the drone run ends.
+#   - non-CI: server URL first because it loads results faster, S3 URL second as
+#     a fallback in case the server is unreachable.
+#   - CI (drone): only the S3 URL, because the server is not typically available
+#     after the drone run ends.
 #
-# Both status pages show the most recent results for each
-# server name + branch name (+ CI run identifier) tuple. This means that CI
-# status page links remain tied to the specific CI run indefinitely,
-# while status page links on the test machine constantly update to show
-# the most recent results in that environment.
-def status_page_links(s3_status_page_url)
+# Both status pages show the most recent results for each server name + branch
+# name (+ CI run identifier) tuple. This means that CI status page links remain
+# tied to the specific CI run indefinitely, while status page links on the test
+# machine constantly update to show the most recent results in that environment.
+#
+# One bulleted line per link. Slack collapses text behind "Show more" after five
+# linebreaks (or 700 characters), so we try to keep the status page and summary
+# line above the fold.
+#
+# The Eyes suite passes its Applitools batch link as an extra_link. With three
+# links the summary line is the last line above the fold, so any line added to
+# this block pushes the summary below it.
+def status_page_links(s3_status_page_url, extra_links: [])
+  links = extra_links.dup
+
   if server_status_page_url && !CI::Utils.running_on_ci?
-    out = "#{test_type_label} Test Status Page:\n#{server_status_page_url}\n\n"
-    out += "Fallback status page (if server is unavailable):\n#{s3_status_page_url}\n\n" if s3_status_page_url
-    out
+    # URI#authority reads 'test-studio.code.org' on the test machine and
+    # 'localhost-studio.code.org:3000' in local development.
+    host = URI.parse(server_status_page_url).authority
+    links << "📊 <a href='#{server_status_page_url}'>Status page</a> on `#{host}`"
+    links << "☁ <a href='#{s3_status_page_url}'>Fallback status page</a> on S3" if s3_status_page_url
   elsif s3_status_page_url
-    "#{test_type_label} Test Status Page:\n#{s3_status_page_url}\n\n"
-  else
-    ''
+    links << "☁ <a href='#{s3_status_page_url}'>Status page</a> on S3"
   end
+
+  links.map {|link| "• #{link}\n"}.join
 end
 
 def pass_fail_summary(success_count, failure_count, total_count, duration, total_flaky_successful_reruns)
@@ -602,7 +621,7 @@ def generate_status_page(suite_start_time)
   )
   s3_status_page_url = upload_status_page_to_s3(status_page_path)
   links = status_page_links(s3_status_page_url)
-  ChatClient.log links unless links.empty?
+  ChatClient.log "#{test_type_label} test status pages:\n#{links}" unless links.empty?
   return s3_status_page_url
 end
 
