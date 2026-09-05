@@ -56,7 +56,7 @@ import {
   setPlacementThumbnails,
 } from './actorThumbnails';
 import styles from './blocklyFileEditor.module.css';
-import {createBodySeam} from './bodySurfaces';
+import {createBodySeam, HIDE_BODIES} from './bodySurfaces';
 import {buildDomainPalette} from './domainBlocks';
 import {setEditingActor, setEditingFile, setEditingRule} from './editingRule';
 import {refreshMissingRuleWarnings} from './extensions/missingRule';
@@ -616,25 +616,33 @@ export const BlocklyFileEditor = ({
 
   // Parsed once: Codebridge keys this component by file id, so it remounts (and
   // re-reads `initialContents`) when the active file changes.
-  const startBlocks = useRef(
-    seam.show(parseWorkspace(initialContents)),
-  ).current;
+  // `useState` with an initialiser, not `useRef(seam.show(…))`: a ref's
+  // argument is evaluated on every render and only the first result kept, so
+  // the split would re-run and remint the ids its bodies are keyed by while
+  // the workspace kept the first set.
+  const [startBlocks] = useState(() => {
+    const document = parseWorkspace(initialContents);
+    return HIDE_BODIES ? seam.show(document) : document;
+  });
 
   /** The FILE: what the workspace shows, with its bodies put back. */
   const readFile = useCallback(
-    (workspace: Blockly.Workspace) =>
-      seam.read(
-        Blockly.serialization.workspaces.save(
-          workspace,
-        ) as BlocklySerialization,
-      ),
+    (workspace: Blockly.Workspace) => {
+      const saved = Blockly.serialization.workspaces.save(
+        workspace,
+      ) as BlocklySerialization;
+      return HIDE_BODIES ? seam.read(saved) : saved;
+    },
     [seam],
   );
 
   /** Show a whole document: keep its bodies, render its interface. */
   const showFile = useCallback(
     (document: BlocklySerialization, workspace: Blockly.WorkspaceSvg) => {
-      Blockly.serialization.workspaces.load(seam.show(document), workspace);
+      Blockly.serialization.workspaces.load(
+        HIDE_BODIES ? seam.show(document) : document,
+        workspace,
+      );
     },
     [seam],
   );

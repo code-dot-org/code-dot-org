@@ -212,6 +212,21 @@ export interface BodySeam {
   setBody(id: string, saved: BlocklySerialization): void;
 }
 
+/**
+ * Whether the EDITOR hides a body, as opposed to whether it can.
+ *
+ * OFF until there is a way to open one. The split works — `solid.rule` opens
+ * with fourteen blocks rather than four hundred and seventy-three, driven in
+ * a browser — but a `define block` whose `do` is empty and whose
+ * implementation has no door reads as a broken rule, which is worse than a
+ * long workspace.
+ *
+ * Read by `BlocklyFileEditor` and by nothing here: a seam that sometimes did
+ * not split would be a seam whose `read` puts stale bodies back over live
+ * ones. Off, the editor bypasses it entirely; on, it is one line.
+ */
+export const HIDE_BODIES = false;
+
 export function createBodySeam(): BodySeam {
   let bodies: Bodies = {};
   return {

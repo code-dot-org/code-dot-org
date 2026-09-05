@@ -673,7 +673,29 @@ And **nothing else in the lab can see a body being dropped**: with `read`
 handing back the interface instead of the merged file, all 4,198 tests still
 passed. That is what the seam's own four tests are for.
 
-What remains is the overlay, the button, and the two toolboxes.
+What remains is the overlay, the button, and the two toolboxes — and until
+they exist **the editor does not hide anything**. `HIDE_BODIES` in
+`bodySurfaces` is off, and `BlocklyFileEditor` bypasses the seam while it is:
+a `define block` whose `do` is empty and whose implementation has no door
+reads as a broken rule, which is worse than a long workspace. The flag is read
+by the editor and by nothing in the seam, deliberately — a seam that sometimes
+declined to split would be a seam whose `read` puts stale bodies back over
+live ones.
+
+_Attempted and reverted, 2026-09-05._ The overlay was written and driven in a
+browser (`spikes/rule-surfaces/check-overlay.mjs`). What worked: the split in
+the real editor — fourteen blocks for `solid.rule`, as measured — the pencil
+on all four block types, the overlay opening, and the way back. What did not:
+a body opened EMPTY, and the wiring then handed `setBody` an empty workspace,
+which deleted the body and saved it. The seam is not the cause; two tests open
+every step in `solid` by the id its block carries.
+
+Two things for whoever picks it up. `setBody` must refuse to delete a body it
+never loaded — "the learner emptied this" and "nothing arrived" have to be
+distinguishable, and conflating them is what turned an empty surface into file
+damage. And `useRef(seam.show(…))` evaluates its argument on every render,
+reminting the ids the bodies are keyed by while the workspace keeps the first
+set; `useState` with an initialiser is the shape that works.
 
 **Not only rules.** An `.actor` file holds the same two shapes — its own
 `each frame` and its own `define block` (`ActorBuilder.defineStep`,
