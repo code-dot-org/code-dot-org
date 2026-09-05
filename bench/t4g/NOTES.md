@@ -242,43 +242,63 @@ files go unverified under this harness.
 
 ### Measured
 
-Two runs, same host, same commit. Run 1 was the first execution of each
-suite on a freshly built checkout; run 2 followed roughly an hour later.
+Three runs, same host, same commit. Run 1 was the first execution of each
+suite on a freshly built checkout. Run 2 followed an hour later. Run 3 came
+after Ruby was rebuilt under gcc-13, and is the run the committed
+`results.tsv` holds.
 
-| suite | tests | wall run 1 | wall run 2 | delta |
-|---|---:|---:|---:|---:|
-| `apps` | 10793 | 441 s | 339 s | -23% |
-| `dashboard/models` | 3409 | 613 s | 637 s | +4% |
-| `dashboard/controllers` | 4307 | 2600 s | 2423 s | -7% |
-| `dashboard/lib` | 1490 | 285 s | 302 s | +6% |
-| `dashboard/helpers` | 703 | 161 s | 171 s | +6% |
-| `dashboard/jobs` | 161 | 68 s | 77 s | +13% |
-| `dashboard/mailers` | 46 | 50 s | 51 s | +2% |
-| `dashboard/serializers` | 33 | 50 s | 49 s | -2% |
-| `dashboard/config` | 28 | 42 s | 42 s | +0% |
-| `dashboard/dsl` | 15 | 44 s | 46 s | +5% |
-| `dashboard/app` | 0 | 42 s | 42 s | +0% |
-| `dashboard/testing` | NA | 2 s | 2 s | +0% |
-| `dashboard/integration` | 436 | 177 s | 177 s | +0% |
-| `lib` | 792 | 507 s | 511 s | +1% |
-| `shared` | 112 | 111 s | 113 s | +2% |
-| **total** | **22,325** | **5193 s** | **4982 s** | **-4%** |
+| suite | tests | run 1 | run 2 | run 3 | 3 vs 2 |
+|---|---:|---:|---:|---:|---:|
+| `apps` | 10793 | 441 s | 339 s | 331 s | -2% |
+| `dashboard/models` | 3409 | 613 s | 637 s | 647 s | +2% |
+| `dashboard/controllers` | 4307 | 2600 s | 2423 s | 2492 s | +3% |
+| `dashboard/lib` | 1490 | 285 s | 302 s | 298 s | -1% |
+| `dashboard/helpers` | 703 | 161 s | 171 s | 167 s | -2% |
+| `dashboard/jobs` | 161 | 68 s | 77 s | 74 s | -4% |
+| `dashboard/mailers` | 46 | 50 s | 51 s | 54 s | +6% |
+| `dashboard/serializers` | 33 | 50 s | 49 s | 54 s | +10% |
+| `dashboard/config` | 28 | 42 s | 42 s | 47 s | +12% |
+| `dashboard/dsl` | 15 | 44 s | 46 s | 51 s | +11% |
+| `dashboard/app` | 0 | 42 s | 42 s | 46 s | +10% |
+| `dashboard/testing` | NA | 2 s | 2 s | 2 s | +0% |
+| `dashboard/integration` | 436 | 177 s | 177 s | 182 s | +3% |
+| `lib` | 792 | 507 s | 511 s | 514 s | +1% |
+| `shared` | 112 | 111 s | 113 s | 117 s | +4% |
+| **total** | **22,325** | **5193 s** | **4982 s** | **5076 s** | **+1.9%** |
 
-Everything except `apps` reproduced within a few percent. `apps` is the
-exception and the reason to care about cache state: 441s cold, 339s warm, a
-23% swing on identical work. That is larger than most of the hardware
-difference a comparison like this is trying to find, so **run the harness
-twice on each host and compare second run to second run.** The Ruby suites
-were already warm in run 1 and moved 4% or less.
+Two things to read out of this.
+
+**Cache state, not hardware, is the largest effect here.** `apps` went 441s
+cold to 339s warm, a 23% swing on identical work — larger than most of the
+hardware difference a cross-host comparison is trying to find. So **run the
+harness twice on each host and compare second run to second run.** The Ruby
+suites were already warm in run 1 and moved 4% or less.
+
+**Rebuilding Ruby under gcc-13 changed nothing measurable.** Total moved
++1.9%, within the run-to-run spread. The short directories appear to move
+~10% — `config` 42s to 47s, `app` 42s to 46s — but they are 45-second
+measurements where a few seconds is a large fraction, and a direct check
+does not support a real difference:
+
+    Rails boot, gcc-13 build   15.00  13.42  14.02 s   (mean 14.15)
+    Rails boot, GCC 15 build   13.52  14.39  13.31 s   (mean 13.74)
+
+The ranges overlap. An earlier reading of these notes claimed a ~10% boot
+regression on the gcc-13 build; that was inferred from the short-directory
+deltas alone and the direct measurement above does not bear it out. Treat
+anything under about 60 seconds in `results.tsv` as having ±10% of noise on
+it, and compare the large suites.
 
 `dashboard/controllers` dominates at roughly half the total. `dashboard/app`
-and `dashboard/config` are almost entirely Rails boot — 42s each, for 0 and
+and `dashboard/config` are almost entirely Rails boot — 46s each, for 0 and
 28 tests.
 
 ### The t4g did not throttle
 
-    calib start 1.98s   mid 1.97s   mid2 1.96s   end 1.97s
-    CPU steal   avg 0.47%   peak 1.18%   over 166 samples
+    run 3   calib start 2.01s  mid 1.91s  mid2 1.92s  end 1.92s
+            CPU steal  avg 0.45%  peak 1.27%  over 169 samples
+    run 2   calib start 1.98s  mid 1.97s  mid2 1.96s  end 1.97s
+            CPU steal  avg 0.47%  peak 1.18%  over 166 samples
 
 Identical work timed at four points, spanning about 75 minutes of sustained
 load, stayed flat to within 1%; steal never reached 2%. So this run spent no
@@ -294,8 +314,9 @@ run rather than assuming this holds.
 
 ### Flaky versus deterministic
 
-Run 2 reproduced all nine failures and none of the errors. The one run-1
-error, `HomeControllerTest` hitting
+Runs 2 and 3 each reproduced all nine failures and none of the errors. The
+one run-1 error, `HomeControllerTest` hitting
 `Mysql2::Error: Lost connection to MySQL server during query`, did not recur
-and was a flake. The three `RubricsControllerTest` failures reproduced
-exactly, so they are deterministic and worth chasing.
+in either and was a flake. The three `RubricsControllerTest` failures reproduced
+exactly in all three runs, and survive a change of Ruby build, so they are
+deterministic and worth chasing.
