@@ -1,0 +1,37 @@
+[
+  {
+    "filename": "Variables_V1.json",
+    "hash": "abc1def2ghi3jkl4mno567",
+    "description": "This video covers the basics of variables, describing them as labeled containers or boxes that store information in memory. It introduces three fundamental data types: Integers (Ints), Strings, and Booleans. The speech explains how to assign values using the equal sign and how to use the print function to output these values by referencing the variable name without quotes."
+  },
+  {
+    "filename": "Conditionals_V1.json",
+    "hash": "bcd2efg3hij4klm5nop678",
+    "description": "This video introduces the concept of conditional statements in programming. It explains that a conditional is a decision point that tells the computer to execute certain code only if a specific condition is true. Using Python as an example, it covers the syntax of the if statement, the importance of the colon, and how indentation defines which lines of code belong to the conditional block."
+  },
+  {
+    "filename": "If_Else_V1.json",
+    "hash": "cde3fgh4ijk5lmn6opq789",
+    "description": "This video builds upon basic conditionals by introducing two-way selection using the if-else statement. It explains that while a simple if statement is a one-way selection (it does nothing if the condition is false), the else keyword provides an alternative path. It uses a real-world analogy of finishing homework to illustrate how the program skips the if block and runs the else block when a condition is not met."
+  },
+  {
+    "filename": "Functions_V1.json",
+    "hash": "def4ghi5jkl6mno7pqr890",
+    "description": "This video provides an overview of functions, describing them as named blocks of code designed to perform specific tasks. It walks through the steps of defining a function using the def keyword, naming it, and using proper syntax (parentheses, colons, and indentation). Finally, it explains how to call a function to execute the instructions stored inside its definition."
+  },
+  {
+    "filename": "Functions_With_Parameters_V1.json",
+    "hash": "efg5hij6klm7nop8qrs901",
+    "description": "This video explains functions with parameters by using the analogy of a \"fill-in-the-blank\" sentence. It defines a parameter as a placeholder (the blank space) and an argument as the actual value provided to fill that space. The lesson highlights that parameters are used to make code more reusable and easier to understand by allowing the same function to work with different values."
+  },
+  {
+    "filename": "While_Loops_V1.json",
+    "hash": "fgh6ijk7lmn8opq9rst012",
+    "description": "This video explains the While Loop, a structure used to repeat instructions to keep code clean and organized. It uses a flowchart analogy to show how a computer checks a condition: if the condition is true, the code inside the loop runs; if false, the computer exits the loop. The video also covers the Python syntax for while loops, emphasizing the keyword while, the condition, and the required indentation for the repeated steps."
+  },
+  {
+    "filename": "Painter_Object_V1.json",
+    "hash": "ghi7jkl8mno9pqr0stu123",
+    "description": "This video introduces the \"Painter\" object used in certain code.org python levels. It explains the relationship between a class (the blueprint) and an object (the specific instance, like 'alice' or 'bob'). It defines attributes as things the object knows and methods as actions it can perform. Finally, it demonstrates the \"dot operator\" syntax used to call methods on a specific object."
+  }
+]
