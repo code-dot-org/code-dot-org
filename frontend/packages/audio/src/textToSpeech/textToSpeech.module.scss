@@ -1,0 +1,30 @@
+.playButton {
+  bottom: 0.5rem;
+  color: var(--text-primary-gray);
+  inset-inline-end: 0.5rem;
+  opacity: 35%;
+  position: absolute;
+  transition: opacity 0.2s ease;
+
+  &HigherPosition {
+    bottom: 58px;
+  }
+
+  &Playing {
+    opacity: 100%;
+  }
+
+  &:hover {
+    opacity: 100%;
+  }
+}
+
+.icon {
+  // Fixed-width, centered glyph (FontAwesome fa-fw style) so the button width
+  // stays consistent between the volume and stop icons, whose glyphs differ in
+  // width.
+  display: inline-block;
+  font-size: 0.9375rem;
+  text-align: center;
+  width: 1.25em;
+}
