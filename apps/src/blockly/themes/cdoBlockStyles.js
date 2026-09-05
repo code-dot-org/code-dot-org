@@ -13,7 +13,7 @@ const commonBlockStyles = {
     colourPrimary: '#00b0bc',
   },
   setup_blocks: {
-    colourPrimary: '#fca400',
+    colourPrimary: '#f46800',
   },
   event_blocks: {
     colourPrimary: '#00bc3e',
