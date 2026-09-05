@@ -323,3 +323,31 @@ describe('the editor seam', () => {
     expect(rootsOf(seam.read(asSaved(shown)))[0]).not.toHaveProperty('next');
   });
 });
+
+describe('opening one member’s body', () => {
+  it('hands back what the split took from that block', () => {
+    // What the pencil does: the id comes off a block in the workspace, which
+    // is a block the split put there, so the two have to agree.
+    const solid = JSON.parse(
+      STOCK_RULES.find(rule => rule.id === 'solid')!.contents,
+    );
+    const seam = createBodySeam();
+    const shown = seam.show(solid);
+
+    const steps = rootsOf(shown).filter(
+      root => root.type === 'world_rule_step_in',
+    );
+    expect(steps.length).toBeGreaterThan(0);
+
+    for (const step of steps) {
+      const body = seam.bodyOf(step.id!);
+      expect(rootsOf(body).length, `${step.id}`).toBe(1);
+    }
+  });
+
+  it('is empty for a block that has no body, rather than throwing', () => {
+    const seam = createBodySeam();
+    seam.show(doc(ruleStep('s1', statement('work'))));
+    expect(rootsOf(seam.bodyOf('nobody'))).toEqual([]);
+  });
+});

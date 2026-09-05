@@ -206,6 +206,10 @@ export interface BodySeam {
   show(document: BlocklySerialization): BlocklySerialization;
   /** The file: a workspace's own save, with the bodies put back. */
   read(saved: BlocklySerialization): BlocklySerialization;
+  /** One member's implementation, as a workspace could load it. */
+  bodyOf(id: string): BlocklySerialization;
+  /** …and back, when the surface that was editing it closes or changes. */
+  setBody(id: string, saved: BlocklySerialization): void;
 }
 
 export function createBodySeam(): BodySeam {
@@ -221,6 +225,25 @@ export function createBodySeam(): BodySeam {
       // outlive it, or the file grows one orphan per deleted step forever.
       bodies = reap(saved, bodies);
       return merge(saved, bodies);
+    },
+    bodyOf(id) {
+      // A body is one chain of statements, and a workspace holds a list of
+      // roots — so opening one is the chain as the only root, and an empty
+      // body is an empty workspace rather than an error.
+      const body = bodies[id];
+      return {blocks: {languageVersion: 0, blocks: body ? [body] : []}};
+    },
+    setBody(id, saved) {
+      const [root] = ((saved.blocks?.blocks ?? []) as SavedBlock[]).filter(
+        block => block.type !== undefined,
+      );
+      if (root) {
+        bodies[id] = root;
+      } else {
+        // Emptied on purpose: the member keeps existing and does nothing,
+        // which is what a step with no rows means everywhere else.
+        delete bodies[id];
+      }
     },
   };
 }
