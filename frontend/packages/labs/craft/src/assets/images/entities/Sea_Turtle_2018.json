@@ -1,0 +1,380 @@
+{"frames": {
+
+"Sea_Turtle00.png":
+{
+	"frame": {"x":97,"y":0,"w":96,"h":96},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":104,"y":113,"w":96,"h":96},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle01.png":
+{
+	"frame": {"x":0,"y":0,"w":97,"h":96},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":104,"y":113,"w":97,"h":96},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle02.png":
+{
+	"frame": {"x":0,"y":96,"w":96,"h":96},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":104,"y":113,"w":96,"h":96},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle03.png":
+{
+	"frame": {"x":0,"y":0,"w":97,"h":96},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":104,"y":113,"w":97,"h":96},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle04.png":
+{
+	"frame": {"x":0,"y":192,"w":93,"h":88},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":107,"y":109,"w":93,"h":88},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle05.png":
+{
+	"frame": {"x":0,"y":456,"w":89,"h":89},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":104,"y":107,"w":89,"h":89},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle06.png":
+{
+	"frame": {"x":0,"y":545,"w":89,"h":88},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":104,"y":107,"w":89,"h":88},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle07.png":
+{
+	"frame": {"x":89,"y":552,"w":89,"h":88},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":104,"y":107,"w":89,"h":88},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle08.png":
+{
+	"frame": {"x":0,"y":545,"w":89,"h":88},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":104,"y":107,"w":89,"h":88},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle09.png":
+{
+	"frame": {"x":0,"y":280,"w":93,"h":88},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":109,"y":110,"w":93,"h":88},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle10.png":
+{
+	"frame": {"x":96,"y":190,"w":96,"h":93},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":107,"y":107,"w":96,"h":93},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle11.png":
+{
+	"frame": {"x":93,"y":283,"w":97,"h":92},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":106,"y":109,"w":97,"h":92},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle12.png":
+{
+	"frame": {"x":96,"y":96,"w":97,"h":94},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":106,"y":107,"w":97,"h":94},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle13.png":
+{
+	"frame": {"x":93,"y":283,"w":97,"h":92},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":106,"y":109,"w":97,"h":92},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle14.png":
+{
+	"frame": {"x":93,"y":375,"w":92,"h":88},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":108,"y":111,"w":92,"h":88},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle15.png":
+{
+	"frame": {"x":89,"y":463,"w":89,"h":89},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":114,"y":109,"w":89,"h":89},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle16.png":
+{
+	"frame": {"x":0,"y":633,"w":89,"h":88},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":114,"y":109,"w":89,"h":88},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle17.png":
+{
+	"frame": {"x":89,"y":640,"w":89,"h":88},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":114,"y":109,"w":89,"h":88},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle18.png":
+{
+	"frame": {"x":0,"y":633,"w":89,"h":88},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":114,"y":109,"w":89,"h":88},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle19.png":
+{
+	"frame": {"x":0,"y":368,"w":93,"h":88},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":105,"y":110,"w":93,"h":88},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle_Surface00.png":
+{
+	"frame": {"x":250,"y":0,"w":1,"h":1},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":1,"h":1},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle_Surface01.png":
+{
+	"frame": {"x":192,"y":199,"w":60,"h":48},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":128,"y":128,"w":60,"h":48},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle_Surface02.png":
+{
+	"frame": {"x":152,"y":765,"w":79,"h":51},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":110,"y":125,"w":79,"h":51},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle_Surface03.png":
+{
+	"frame": {"x":79,"y":816,"w":77,"h":50},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":111,"y":126,"w":77,"h":50},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle_Surface04.png":
+{
+	"frame": {"x":0,"y":721,"w":76,"h":87},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":111,"y":110,"w":76,"h":87},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle_Surface05.png":
+{
+	"frame": {"x":178,"y":463,"w":74,"h":85},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":113,"y":111,"w":74,"h":85},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle_Surface06.png":
+{
+	"frame": {"x":178,"y":633,"w":72,"h":66},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":125,"y":115,"w":72,"h":66},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle_Surface07.png":
+{
+	"frame": {"x":193,"y":0,"w":57,"h":66},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":136,"y":112,"w":57,"h":66},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle_Surface08.png":
+{
+	"frame": {"x":193,"y":132,"w":39,"h":67},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":136,"y":109,"w":39,"h":67},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle_Surface09.png":
+{
+	"frame": {"x":232,"y":132,"w":10,"h":10},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":136,"y":163,"w":10,"h":10},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle_Surface10.png":
+{
+	"frame": {"x":232,"y":132,"w":10,"h":10},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":136,"y":162,"w":10,"h":10},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle_Surface11.png":
+{
+	"frame": {"x":232,"y":132,"w":10,"h":10},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":136,"y":161,"w":10,"h":10},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle_Surface12.png":
+{
+	"frame": {"x":250,"y":0,"w":1,"h":1},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":1,"h":1},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle_Surface13.png":
+{
+	"frame": {"x":250,"y":0,"w":1,"h":1},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":1,"h":1},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle_Surface14.png":
+{
+	"frame": {"x":192,"y":247,"w":60,"h":48},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":119,"y":128,"w":60,"h":48},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle_Surface15.png":
+{
+	"frame": {"x":0,"y":815,"w":79,"h":51},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":118,"y":125,"w":79,"h":51},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle_Surface16.png":
+{
+	"frame": {"x":156,"y":816,"w":77,"h":50},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":119,"y":126,"w":77,"h":50},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle_Surface17.png":
+{
+	"frame": {"x":76,"y":728,"w":76,"h":87},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":120,"y":110,"w":76,"h":87},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle_Surface18.png":
+{
+	"frame": {"x":178,"y":548,"w":74,"h":85},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":120,"y":111,"w":74,"h":85},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle_Surface19.png":
+{
+	"frame": {"x":178,"y":699,"w":72,"h":66},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":110,"y":115,"w":72,"h":66},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle_Surface20.png":
+{
+	"frame": {"x":193,"y":66,"w":57,"h":66},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":114,"y":112,"w":57,"h":66},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle_Surface21.png":
+{
+	"frame": {"x":190,"y":295,"w":39,"h":67},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":132,"y":109,"w":39,"h":67},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle_Surface22.png":
+{
+	"frame": {"x":242,"y":132,"w":10,"h":10},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":161,"y":163,"w":10,"h":10},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle_Surface23.png":
+{
+	"frame": {"x":242,"y":132,"w":10,"h":10},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":161,"y":162,"w":10,"h":10},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle_Surface24.png":
+{
+	"frame": {"x":242,"y":132,"w":10,"h":10},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":161,"y":161,"w":10,"h":10},
+	"sourceSize": {"w":307,"h":307}
+},
+"Sea_Turtle_Surface25.png":
+{
+	"frame": {"x":250,"y":0,"w":1,"h":1},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":1,"h":1},
+	"sourceSize": {"w":307,"h":307}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "Sea_Turtle_2018.png",
+	"format": "RGBA8888",
+	"size": {"w":252,"h":866},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:c58afe01ac1215750db9f5bcf78b1197:5b74773864ed1a39a4b25051bcf98c9b:d4ee66da5a319978310eaaa7625af495$"
+}
+}

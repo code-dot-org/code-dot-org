@@ -1,0 +1,29 @@
+language: node_js
+
+node_js:
+- 6
+
+cache:
+  directories:
+    - node_modules
+
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev build-essential g++
+
+script:
+  - npm test && npm run codecov
+
+notifications:
+  email: false
+
+before_deploy:
+  - npm run build && cp -r dist/* demo/
+
+deploy:
+  local_dir: demo
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: main

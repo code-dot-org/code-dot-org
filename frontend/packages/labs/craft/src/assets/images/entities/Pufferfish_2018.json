@@ -1,0 +1,525 @@
+{"frames": {
+
+"Pufferfish00.png":
+{
+	"frame": {"x":295,"y":109,"w":14,"h":18},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":147,"y":146,"w":14,"h":18},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish01.png":
+{
+	"frame": {"x":305,"y":72,"w":14,"h":18},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":147,"y":146,"w":14,"h":18},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish02.png":
+{
+	"frame": {"x":305,"y":90,"w":14,"h":18},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":147,"y":146,"w":14,"h":18},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish03.png":
+{
+	"frame": {"x":305,"y":72,"w":14,"h":18},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":147,"y":146,"w":14,"h":18},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish04.png":
+{
+	"frame": {"x":290,"y":91,"w":15,"h":18},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":147,"y":148,"w":15,"h":18},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish05.png":
+{
+	"frame": {"x":319,"y":74,"w":16,"h":15},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":146,"y":148,"w":16,"h":15},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish06.png":
+{
+	"frame": {"x":319,"y":89,"w":16,"h":15},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":146,"y":148,"w":16,"h":15},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish07.png":
+{
+	"frame": {"x":335,"y":90,"w":16,"h":15},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":146,"y":148,"w":16,"h":15},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish08.png":
+{
+	"frame": {"x":319,"y":89,"w":16,"h":15},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":146,"y":148,"w":16,"h":15},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish09.png":
+{
+	"frame": {"x":328,"y":41,"w":18,"h":17},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":145,"y":148,"w":18,"h":17},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish10.png":
+{
+	"frame": {"x":309,"y":108,"w":14,"h":16},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":146,"y":148,"w":14,"h":16},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish11.png":
+{
+	"frame": {"x":335,"y":74,"w":14,"h":16},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":146,"y":148,"w":14,"h":16},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish12.png":
+{
+	"frame": {"x":323,"y":105,"w":14,"h":16},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":146,"y":148,"w":14,"h":16},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish13.png":
+{
+	"frame": {"x":335,"y":74,"w":14,"h":16},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":146,"y":148,"w":14,"h":16},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish14.png":
+{
+	"frame": {"x":290,"y":72,"w":15,"h":19},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":146,"y":146,"w":15,"h":19},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish15.png":
+{
+	"frame": {"x":247,"y":113,"w":16,"h":14},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":144,"y":148,"w":16,"h":14},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish16.png":
+{
+	"frame": {"x":263,"y":113,"w":16,"h":14},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":144,"y":148,"w":16,"h":14},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish17.png":
+{
+	"frame": {"x":279,"y":113,"w":16,"h":14},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":144,"y":148,"w":16,"h":14},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish18.png":
+{
+	"frame": {"x":263,"y":113,"w":16,"h":14},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":144,"y":148,"w":16,"h":14},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish19.png":
+{
+	"frame": {"x":328,"y":58,"w":17,"h":16},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":144,"y":148,"w":17,"h":16},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish20.png":
+{
+	"frame": {"x":228,"y":82,"w":31,"h":31},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":138,"y":145,"w":31,"h":31},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish21.png":
+{
+	"frame": {"x":266,"y":41,"w":31,"h":31},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":138,"y":145,"w":31,"h":31},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish22.png":
+{
+	"frame": {"x":297,"y":41,"w":31,"h":31},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":138,"y":145,"w":31,"h":31},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish23.png":
+{
+	"frame": {"x":259,"y":82,"w":31,"h":31},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":138,"y":145,"w":31,"h":31},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish24.png":
+{
+	"frame": {"x":80,"y":0,"w":38,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":135,"y":139,"w":38,"h":41},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish25.png":
+{
+	"frame": {"x":118,"y":0,"w":38,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":135,"y":139,"w":38,"h":41},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish26.png":
+{
+	"frame": {"x":156,"y":0,"w":38,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":135,"y":139,"w":38,"h":41},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish27.png":
+{
+	"frame": {"x":118,"y":0,"w":38,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":135,"y":139,"w":38,"h":41},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish28.png":
+{
+	"frame": {"x":0,"y":43,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":135,"y":138,"w":38,"h":42},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish29.png":
+{
+	"frame": {"x":0,"y":85,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":135,"y":138,"w":38,"h":42},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish30.png":
+{
+	"frame": {"x":194,"y":0,"w":38,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":135,"y":139,"w":38,"h":41},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish31.png":
+{
+	"frame": {"x":232,"y":0,"w":38,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":135,"y":139,"w":38,"h":41},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish32.png":
+{
+	"frame": {"x":194,"y":0,"w":38,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":135,"y":139,"w":38,"h":41},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish33.png":
+{
+	"frame": {"x":270,"y":0,"w":38,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":135,"y":139,"w":38,"h":41},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish34.png":
+{
+	"frame": {"x":308,"y":0,"w":38,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":135,"y":139,"w":38,"h":41},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish35.png":
+{
+	"frame": {"x":38,"y":43,"w":38,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":135,"y":139,"w":38,"h":41},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish36.png":
+{
+	"frame": {"x":38,"y":84,"w":38,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":135,"y":139,"w":38,"h":41},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish37.png":
+{
+	"frame": {"x":38,"y":43,"w":38,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":135,"y":139,"w":38,"h":41},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish38.png":
+{
+	"frame": {"x":42,"y":0,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":135,"y":138,"w":38,"h":42},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish39.png":
+{
+	"frame": {"x":76,"y":42,"w":38,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":135,"y":139,"w":38,"h":41},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish40.png":
+{
+	"frame": {"x":76,"y":83,"w":38,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":135,"y":139,"w":38,"h":41},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish41.png":
+{
+	"frame": {"x":114,"y":41,"w":38,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":135,"y":139,"w":38,"h":41},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish42.png":
+{
+	"frame": {"x":76,"y":83,"w":38,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":135,"y":139,"w":38,"h":41},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish43.png":
+{
+	"frame": {"x":0,"y":0,"w":42,"h":43},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":130,"y":137,"w":42,"h":43},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish_Surface00.png":
+{
+	"frame": {"x":80,"y":41,"w":1,"h":1},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":1,"h":1},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish_Surface01.png":
+{
+	"frame": {"x":42,"y":42,"w":15,"h":1},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":146,"y":158,"w":15,"h":1},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish_Surface02.png":
+{
+	"frame": {"x":114,"y":82,"w":38,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":135,"y":139,"w":38,"h":41},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish_Surface03.png":
+{
+	"frame": {"x":152,"y":41,"w":38,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":135,"y":139,"w":38,"h":41},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish_Surface04.png":
+{
+	"frame": {"x":152,"y":82,"w":38,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":135,"y":139,"w":38,"h":41},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish_Surface05.png":
+{
+	"frame": {"x":152,"y":41,"w":38,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":135,"y":139,"w":38,"h":41},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish_Surface06.png":
+{
+	"frame": {"x":190,"y":41,"w":38,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":135,"y":139,"w":38,"h":41},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish_Surface07.png":
+{
+	"frame": {"x":152,"y":41,"w":38,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":135,"y":139,"w":38,"h":41},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish_Surface08.png":
+{
+	"frame": {"x":190,"y":82,"w":38,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":135,"y":139,"w":38,"h":41},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish_Surface09.png":
+{
+	"frame": {"x":228,"y":41,"w":38,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":135,"y":139,"w":38,"h":41},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish_Surface10.png":
+{
+	"frame": {"x":228,"y":113,"w":19,"h":14},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":142,"y":158,"w":19,"h":14},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish_Surface11.png":
+{
+	"frame": {"x":266,"y":72,"w":8,"h":8},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":151,"y":162,"w":8,"h":8},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Pufferfish_Surface12.png":
+{
+	"frame": {"x":80,"y":41,"w":1,"h":1},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":1,"h":1},
+	"sourceSize": {"w":307,"h":307},
+	"pivot": {"x":0.5,"y":0.5}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "Pufferfish_2018.png",
+	"format": "RGBA8888",
+	"size": {"w":351,"h":127},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:d621f9db6f16c9417e4a8239b98a3cb0:8ab379d4f5bd59d177a39e44db11cd87:a288af8fc03b40973a07b97ac2e3e43c$"
+}
+}

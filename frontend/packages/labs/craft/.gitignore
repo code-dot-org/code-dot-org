@@ -1,0 +1,46 @@
+# Node.js with Express and Stlyus
+/.monitor
+
+# Eclipse
+/.project
+/.settings
+/.buildpath
+
+# IntelliJ
+/.idea
+
+# Sublime
+*.sublime-project
+*.sublime-workspace
+
+# Windows
+Thumbs.db
+
+# Vim
+.*.sw[a-z]
+*.un~i
+tags
+
+# OSX
+.DS_Store
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+
+# nodejs npm modules
+/node_modules
+
+# Code coverage
+/coverage
+.nyc_output
+
+# ZSH Cake plugin cache
+/.cake_task_cache
+
+# Build files
+/build/*
+/dist
+
+# VScode settings
+/.vscode

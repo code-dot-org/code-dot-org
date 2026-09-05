@@ -1,0 +1,7 @@
+Block Mined from Left 00-11
+
+	From Below 12-23
+
+	From Right 24-35
+
+	From Above 36-47

@@ -1,0 +1,26 @@
+Swimming: Tropical_Fish**
+_____________________________________________
+
+Facing Up:	Swim - 00-03
+
+Facing Left: 	Swim - 05-08
+
+Facing Down:	Swim - 10-13
+
+Facing Right:	Swim - 15-18
+
+
+Turn frame: 
+		Up/Right - 04
+		Down/Right - 09
+		Down/Left - 14
+		Up/Left - 19
+
+_____________________________________________
+
+Surfacing: Tropical_Fish_Surface**
+_____________________________________________
+
+Facing Right: 00-06
+
+Facing Left: 07-13

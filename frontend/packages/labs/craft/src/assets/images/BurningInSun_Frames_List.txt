@@ -1,0 +1,7 @@
+Draw BurningBehind_001 - 015 first
+
+Draw Mob second
+
+Draw BurningInFront_001 - 015 third
+
+*See Burning In Sun GIF in the Source_Assets>Gifs folder
