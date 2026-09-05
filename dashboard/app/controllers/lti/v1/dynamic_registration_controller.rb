@@ -1,6 +1,7 @@
 require 'clients/cache_client'
 require 'clients/lti_dynamic_registration_client'
 require 'metrics/events'
+# TODO: Remove this line, used for commit and adhoc
 
 module Lti
   module V1
