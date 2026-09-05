@@ -1,10 +1,12 @@
-import {Box, Typography} from '@mui/material';
+import {Markdown} from '@code-dot-org/markdown';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
 import {LmsLoginTypeNames} from '@cdo/apps/accounts/constants';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import {studio, pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {DEMO_SECTION_CODE_PLACEHOLDER} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {
   EmailLinks,
@@ -12,8 +14,7 @@ import {
 } from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import {queryParams} from '../../code-studio/utils';
-import {studio, pegasus} from '../../lib/util/urlHelpers';
+import styles from './ParentLetter.module.scss';
 
 const RESEARCH_ARTICLE_URL =
   'https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536';
@@ -27,6 +28,21 @@ const LOGIN_TYPE_NAMES = {
   [SectionLoginType.word]: i18n.loginTypeWordUpdated().toLowerCase(),
   [SectionLoginType.email]: i18n.loginTypePersonal().toLowerCase(),
 };
+
+// Plain strings stay out of the markdown parser so a translation is never
+// misread as syntax.
+const Paragraph = props => (
+  <Typography variant="body2" component="p" {...props} />
+);
+
+const SectionHeading = props => (
+  <Typography
+    variant="h4"
+    component="h2"
+    className={styles.heading}
+    {...props}
+  />
+);
 
 /**
  * A letter that teachers can send home to parents, providing guidance on
@@ -94,12 +110,19 @@ class ParentLetter extends React.Component {
     const secretWords = student ? student.secretWords : null;
 
     return (
-      <Box id="printArea">
+      <div id="printArea">
         <Header logoUrl={logoUrl} />
-        <Box component="article">
-          <Typography component="p">{i18n.parentLetterHello()}</Typography>
-          <SafeMarkdown
-            markdown={i18n.parentLetterIntro({
+        <article className={styles.body}>
+          <Typography
+            variant="h4"
+            component="h1"
+            className={styles.visuallyHidden}
+          >
+            {i18n.parentLetterTitle()}
+          </Typography>
+          <Paragraph>{i18n.parentLetterHello()}</Paragraph>
+          <Markdown
+            content={i18n.parentLetterIntro({
               homeLink: pegasus('/'),
               studentName: studentName,
             })}
@@ -112,26 +135,24 @@ class ParentLetter extends React.Component {
             sectionCode={sectionCode}
             studentName={studentName}
           />
-          <Typography variant="h1">{i18n.parentLetterWhy()}</Typography>
-          <SafeMarkdown
-            markdown={i18n.parentLetterWhyDetails({
+          <SectionHeading>{i18n.parentLetterWhy()}</SectionHeading>
+          <Markdown
+            content={i18n.parentLetterWhyDetails({
               researchLink: RESEARCH_ARTICLE_URL,
             })}
           />
-          <Typography variant="h1">
-            {i18n.parentLetterStudentPrivacy()}
-          </Typography>
-          <SafeMarkdown
-            markdown={i18n.parentLetterStudentPrivacyDetails({
+          <SectionHeading>{i18n.parentLetterStudentPrivacy()}</SectionHeading>
+          <Markdown
+            content={i18n.parentLetterStudentPrivacyDetails({
               pledgeLink: EmailLinks.STUDENT_PRIVACY_PLEDGE_URL,
               commonSenseLink: EmailLinks.COMMON_SENSE_MEDIA_URL,
               privacyPolicyLink: EmailLinks.PRIVACY_POLICY_URL,
             })}
           />
-          <Typography component="p">{i18n.parentLetterClosing()}</Typography>
-          <Typography component="p">{teacherName}</Typography>
-        </Box>
-      </Box>
+          <Paragraph>{i18n.parentLetterClosing()}</Paragraph>
+          <Paragraph>{teacherName}</Paragraph>
+        </article>
+      </div>
     );
   }
 }
@@ -147,17 +168,9 @@ export default connect(state => ({
 }))(ParentLetter);
 
 const Header = ({logoUrl = '/shared/images/CodeLogo_White.png'}) => (
-  <Box
-    component="header"
-    sx={{backgroundColor: 'primary.main', marginBottom: 3.75}}
-  >
-    <Box
-      component="img"
-      src={logoUrl}
-      alt={i18n.codeLogo()}
-      sx={{height: 42, margin: '4px 16px'}}
-    />
-  </Box>
+  <header className={styles.header}>
+    <img src={logoUrl} alt={i18n.codeLogo()} className={styles.logo} />
+  </header>
 );
 Header.propTypes = {
   logoUrl: PropTypes.string,
@@ -174,64 +187,62 @@ const ParentLetterSteps = ({
   switch (loginType) {
     case SectionLoginType.lti_v1:
       return (
-        <Box>
-          <Typography variant="h1">{i18n.parentLetterStep1()}</Typography>
-          <SafeMarkdown
-            markdown={i18n.parentLetterStep1Details({
+        <>
+          <SectionHeading>{i18n.parentLetterStep1()}</SectionHeading>
+          <Markdown
+            content={i18n.parentLetterStep1Details({
               engagementLink: ENGAGEMENT_URL,
               videosLink: pegasus(`/educate/resources/videos`),
             })}
           />
-          <Typography variant="h1">{i18n.parentLetterStep2()}</Typography>
+          <SectionHeading>{i18n.parentLetterStep2()}</SectionHeading>
           <SignInInstructions
             loginType={loginType}
             loginTypeName={loginTypeName}
             secretPictureUrl={secretPictureUrl}
             secretWords={secretWords}
             sectionCode={sectionCode}
-            studentName={studentName}
           />
-          <SafeMarkdown
-            markdown={i18n.parentLetterStep2Details_LMS({
+          <Markdown
+            content={i18n.parentLetterStep2Details_LMS({
               studentName: studentName,
               loginTypeName: loginTypeName,
             })}
           />
-        </Box>
+        </>
       );
     default: {
       return (
-        <Box>
-          <Typography variant="h1">{i18n.parentLetterStep1()}</Typography>
-          <SafeMarkdown
-            markdown={i18n.parentLetterStep1Details({
+        <>
+          <SectionHeading>{i18n.parentLetterStep1()}</SectionHeading>
+          <Markdown
+            content={i18n.parentLetterStep1Details({
               engagementLink: ENGAGEMENT_URL,
               videosLink: pegasus(`/educate/resources/videos`),
             })}
           />
-          <Typography variant="h1">{i18n.parentLetterStep2()}</Typography>
+          <SectionHeading>{i18n.parentLetterStep2()}</SectionHeading>
           <SignInInstructions
             loginType={loginType}
             loginTypeName={loginTypeName}
             secretPictureUrl={secretPictureUrl}
             secretWords={secretWords}
             sectionCode={sectionCode}
-            studentName={studentName}
           />
-          <SafeMarkdown
-            markdown={i18n.parentLetterStep2Details({
+          <Markdown
+            content={i18n.parentLetterStep2Details({
               studentName: studentName,
               projectsLink: studio('/projects/public'),
               atHomeLink: pegasus('/athome'),
             })}
           />
-          <Typography variant="h1">{i18n.parentLetterStep3()}</Typography>
-          <SafeMarkdown
-            markdown={i18n.parentLetterStep3Details({
+          <SectionHeading>{i18n.parentLetterStep3()}</SectionHeading>
+          <Markdown
+            content={i18n.parentLetterStep3Details({
               accountEditLink: studio('/users/edit'),
             })}
           />
-        </Box>
+        </>
       );
     }
   }
@@ -251,33 +262,26 @@ const SignInInstructions = ({
   secretPictureUrl,
   secretWords,
   sectionCode,
-  studentName,
 }) => {
   let steps;
   switch (loginType) {
     case SectionLoginType.lti_v1:
       steps = (
-        <ol>
+        <ol className={styles.list}>
           <li>
-            <SafeMarkdown
-              markdown={i18n.parentLetter_LMS_Step1({
-                loginTypeName: loginTypeName,
-              })}
-            />
+            <Paragraph>
+              {i18n.parentLetter_LMS_Step1({loginTypeName: loginTypeName})}
+            </Paragraph>
           </li>
           <li>
-            <SafeMarkdown
-              markdown={i18n.parentLetter_LMS_Step2({
-                loginTypeName: loginTypeName,
-              })}
-            />
+            <Paragraph>
+              {i18n.parentLetter_LMS_Step2({loginTypeName: loginTypeName})}
+            </Paragraph>
           </li>
           <li>
-            <SafeMarkdown
-              markdown={i18n.parentLetter_LMS_Step3({
-                loginTypeName: loginTypeName,
-              })}
-            />
+            <Paragraph>
+              {i18n.parentLetter_LMS_Step3({loginTypeName: loginTypeName})}
+            </Paragraph>
           </li>
         </ol>
       );
@@ -285,25 +289,20 @@ const SignInInstructions = ({
 
     case SectionLoginType.clever:
       steps = (
-        <ol>
+        <ol className={styles.list}>
           <li>
-            <SafeMarkdown
-              markdown={i18n.parentLetterClever1({
+            <Markdown
+              content={i18n.parentLetterClever1({
                 cleverLink: 'https://www.clever.com',
               })}
             />
           </li>
-
           <li>
-            <Typography component="span">
-              {i18n.parentLetterClever2()}
-            </Typography>
-            <br />
-            <Box
-              component="img"
+            <Paragraph>{i18n.parentLetterClever2()}</Paragraph>
+            <img
               src="/shared/images/clever_code_org_logo.png"
               alt={i18n.codeLogoClever()}
-              sx={{width: 60, margin: '10px'}}
+              className={styles.stepImage}
             />
           </li>
         </ol>
@@ -312,17 +311,13 @@ const SignInInstructions = ({
 
     case SectionLoginType.google_classroom:
       steps = (
-        <ol>
+        <ol className={styles.list}>
           <GoToSignIn />
           <li>
-            <Typography component="span">
-              {i18n.parentLetterGoogle1()}
-            </Typography>
+            <Paragraph>{i18n.parentLetterGoogle1()}</Paragraph>
           </li>
           <li>
-            <Typography component="span">
-              {i18n.parentLetterGoogle2()}
-            </Typography>
+            <Paragraph>{i18n.parentLetterGoogle2()}</Paragraph>
           </li>
         </ol>
       );
@@ -330,32 +325,21 @@ const SignInInstructions = ({
 
     case SectionLoginType.picture:
       steps = (
-        <ol>
-          <GoToSectionSignIn
-            sectionCode={sectionCode}
-            studentName={studentName}
-          />
+        <ol className={styles.list}>
+          <GoToSectionSignIn sectionCode={sectionCode} />
           <li>
-            <Typography component="span">
-              {i18n.parentLetterPicturePassword()}
-            </Typography>
+            <Paragraph>{i18n.parentLetterPicturePassword()}</Paragraph>
             {secretPictureUrl && (
-              <span>
-                <br />
-                <Box
-                  component="img"
-                  src={secretPictureUrl}
-                  alt={i18n.parentLetterPicturePasswordImg()}
-                  sx={{width: 60, margin: '10px'}}
-                />
-              </span>
+              <img
+                src={secretPictureUrl}
+                alt={i18n.parentLetterPicturePasswordImg()}
+                className={styles.stepImage}
+              />
             )}
           </li>
           {!secretPictureUrl && (
             <li>
-              <Typography component="span">
-                {i18n.parentLetterForgotPicturePassword()}
-              </Typography>
+              <Paragraph>{i18n.parentLetterForgotPicturePassword()}</Paragraph>
             </li>
           )}
         </ol>
@@ -364,23 +348,18 @@ const SignInInstructions = ({
 
     case SectionLoginType.word:
       steps = (
-        <ol>
-          <GoToSectionSignIn
-            sectionCode={sectionCode}
-            studentName={studentName}
-          />
+        <ol className={styles.list}>
+          <GoToSectionSignIn sectionCode={sectionCode} />
           <li>
-            <Typography component="p">
+            <Paragraph>
               {i18n.parentLetterSecretWords({
                 secretWords: secretWords ? `(${secretWords})` : '',
               })}
-            </Typography>
+            </Paragraph>
           </li>
           {!secretWords && (
             <li>
-              <Typography component="span">
-                {i18n.parentLetterForgotPassword()}
-              </Typography>
+              <Paragraph>{i18n.parentLetterForgotPassword()}</Paragraph>
             </li>
           )}
         </ol>
@@ -390,17 +369,13 @@ const SignInInstructions = ({
     case SectionLoginType.email:
     default:
       steps = (
-        <ol>
+        <ol className={styles.list}>
           <GoToSignIn />
           <li>
-            <Typography component="span">
-              {i18n.parentLetterSignInEmail()}
-            </Typography>
+            <Paragraph>{i18n.parentLetterSignInEmail()}</Paragraph>
           </li>
           <li>
-            <Typography component="span">
-              {i18n.parentLetterForgotPasswordEmail()}
-            </Typography>
+            <Paragraph>{i18n.parentLetterForgotPasswordEmail()}</Paragraph>
           </li>
         </ol>
       );
@@ -410,14 +385,14 @@ const SignInInstructions = ({
     loginTypeName = LOGIN_TYPE_NAMES[loginType];
   }
   return (
-    <Box>
-      <SafeMarkdown
-        markdown={i18n.parentLetterLoginType({
+    <>
+      <Markdown
+        content={i18n.parentLetterLoginType({
           loginTypeName: loginTypeName,
         })}
       />
       {steps}
-    </Box>
+    </>
   );
 };
 SignInInstructions.propTypes = {
@@ -426,25 +401,24 @@ SignInInstructions.propTypes = {
   secretPictureUrl: PropTypes.string,
   secretWords: PropTypes.string,
   sectionCode: PropTypes.string, // TODO: Conditional required
-  studentName: PropTypes.string,
 };
 
 const GoToSignIn = () => (
   <li>
-    <SafeMarkdown
-      markdown={i18n.parentLetterSignIn({
+    <Markdown
+      content={i18n.parentLetterSignIn({
         studioLink: studio('/'),
       })}
     />
   </li>
 );
 
-const GoToSectionSignIn = ({sectionCode, studentName}) => {
+const GoToSectionSignIn = ({sectionCode}) => {
   const sectionUrl = studio(`/sections/${sectionCode}`);
   return (
     <li>
-      <SafeMarkdown
-        markdown={i18n.parentLetterSectionSignIn({
+      <Markdown
+        content={i18n.parentLetterSectionSignIn({
           sectionLink: sectionUrl,
         })}
       />
@@ -453,5 +427,4 @@ const GoToSectionSignIn = ({sectionCode, studentName}) => {
 };
 GoToSectionSignIn.propTypes = {
   sectionCode: PropTypes.string.isRequired,
-  studentName: PropTypes.string,
 };

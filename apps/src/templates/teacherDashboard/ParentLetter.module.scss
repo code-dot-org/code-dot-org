@@ -1,0 +1,54 @@
+.header {
+  background-color: var(--background-brand-purple-primary-fixed);
+  margin-bottom: var(--spacing-p-m);
+  // Keeps the band when printing; Chromium and WebKit still need the prefix.
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.logo {
+  display: block;
+  height: 2.625rem;
+  margin: 0.25rem 1rem;
+}
+
+// The letter opens with the logo band, so the document title is for
+// assistive tech only.
+.visuallyHidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-p-xs);
+  padding: 0 var(--spacing-p-s);
+}
+
+// Extra room above only: a heading belongs to the passage it introduces.
+.heading {
+  margin-top: var(--spacing-p-xxs);
+}
+
+.list {
+  margin: 0;
+  padding-left: var(--spacing-p-s);
+
+  li + li {
+    margin-top: 0.25rem;
+  }
+}
+
+.stepImage {
+  display: block;
+  width: 3.75rem;
+  margin: 0.625rem 0;
+}
