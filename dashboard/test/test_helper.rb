@@ -29,7 +29,7 @@ ENV['TZ'] = 'UTC'
 # but running unit tests in the test env for developers only sets
 # RAILS ENV. We fix it above but we need to reload some stuff...
 
-require 'mocha/mini_test'
+require 'mocha/minitest'
 
 CDO.stubs(:rack_env).returns(:test) if defined? CDO
 Rails.application&.reload_routes! if defined?(Rails) && defined?(Rails.application)
@@ -58,9 +58,11 @@ end
 I18n.load_path += Dir[Rails.root.join('test', 'en.yml')]
 I18n.backend.reload!
 I18n.fallbacks[:'te-ST'] = [:'te-ST', :'en-US', :en]
+
+# Normalize URLs
+Mocha::Mockery.setup # enable stubbing
 CDO.stubs(override_pegasus: nil)
 CDO.stubs(override_dashboard: nil)
-
 Dashboard::Application.routes.default_url_options = {protocol: 'https', host: CDO.dashboard_hostname, port: nil}
 Dashboard::Application.config.action_mailer.default_url_options = Dashboard::Application.routes.default_url_options
 Devise.mailer.default_url_options = Dashboard::Application.routes.default_url_options
