@@ -38,11 +38,11 @@ run "UV_NO_SYNC exported" "1" -- sh -c 'echo "$UV_NO_SYNC"'
 # uv is the deliberate exception: boot resolves the venv through it.
 assert_no_toolchain cc gcc make node yarn pkg-config git
 
-# Asserted on disk, not by requiring: BUNDLE_WITHOUT keeps the group off the
-# load path, so a require raises whether or not the gem shipped.
-# shellcheck disable=SC2016
-fails_with "development group not installed" "No such file or directory" -- \
-  sh -c 'ls -d "$BUNDLE_PATH"/ruby/*/gems/web-console-*'
+# The boundary with the dev image, computed by Bundler instead of proxied
+# by a named gem: with BUNDLE_WITHOUT cleared, check must fail on the
+# missing dev and test groups. cdo-dev's smoke test asserts the inverse.
+fails_with "dev and test groups not installed" "missing" -- \
+  sh -c 'BUNDLE_WITHOUT= bundle check'
 
 # Checked over the whole tree, because there are two cache directories: a
 # self-installed bundler tarball lands in $GEM_HOME/cache, not the mounted one.
