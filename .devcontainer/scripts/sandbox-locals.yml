@@ -1,0 +1,51 @@
+# Sandbox locals.yml: zero-credential config for devcontainer sandboxes.
+# DB sidecar at hostname "db" (compose network), redis at "redis".
+
+db_writer: 'mysql://root:password@db:3306/'
+db_endpoint_writer: 'db:3306'
+db_credential_admin:
+  username: root
+  password: password
+db_endpoint_proxy_reporting: 'db:3306'
+db_endpoint_proxy_reader: 'db:3306'
+db_credential_reader:
+  username: root
+  password: password
+db_endpoint_proxy_writer: 'db:3306'
+db_credential_writer:
+  username: root
+  password: password
+
+redis_url: 'redis://redis:6379/0'
+
+aws_s3_endpoint: http://127.0.0.1:33993
+aws_s3_access_key_id: local-development
+aws_s3_secret_access_key: allstudents
+aws_s3_emulated: true
+
+cloudfront_key_pair_id: localoverride
+cloudfront_private_key: localoverride
+slack_bot_token: localoverride
+properties_encryption_key: ''
+
+# Stub all AWS Secrets Manager-resolved keys so db:migrate never hits SecretsManager.
+pardot_private_key: localoverride
+openai_student_learning_api_key: localoverride
+openai_measures_of_learning_api_key: localoverride
+tutor_langfuse_secret_key: localoverride
+ta_langfuse_secret_key: localoverride
+tutor_langfuse_public_key: localoverride
+ta_langfuse_public_key: localoverride
+google_gemini_ai_chat_lab_api_key: localoverride
+google_gemini_ai_tutor_api_key: localoverride
+azure_ai_content_safety_key: localoverride
+ai_gateway_auth_key: localoverride
+ai_gateway_auth_public_key: localoverride
+ai_gateway_auth_key_passphrase: localoverride
+google_vertex_ai_tutor_service_account_key: localoverride
+google_vertex_ai_chat_service_account_key: localoverride
+device_farm_mobile_project_arn: localoverride
+
+# use_my_apps: false downloads pre-built apps from S3 (public-read, no creds needed).
+# Set to true only if you're actively developing in apps/ and need local builds.
+use_my_apps: false

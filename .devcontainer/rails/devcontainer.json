@@ -1,0 +1,27 @@
+{
+  "name": "code-dot-org (rails)",
+  "dockerComposeFile": [
+    "docker-compose.yml",
+    "docker-compose.rails.yml"
+  ],
+  "service": "app",
+  "workspaceFolder": "/code-dot-org",
+  "remoteUser": "cdo",
+  "initializeCommand": ".devcontainer/scripts/init-repo-volume.sh",
+  "postStartCommand": "/usr/local/bin/entrypoint.sh true",
+  "forwardPorts": [
+    3000,
+    3306
+  ],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "rebornix.Ruby",
+        "Shopify.ruby-lsp"
+      ]
+    }
+  }
+}
