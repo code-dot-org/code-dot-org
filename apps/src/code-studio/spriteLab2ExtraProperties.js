@@ -11,11 +11,12 @@ import HttpClient, {isNetworkError} from '@cdo/apps/util/HttpClient';
 import initializeCodeMirror6 from './initializeCodeMirror6';
 
 // The flags this box may show and write. Explicit on purpose: it is the
-// burndown of properties still lacking real UI — remove an entry when its
-// editor lands, and the section retires with the last one. Deliberately
-// absent: ai_code_generate_adlib/_text (declared in the lab's types but
+// list of properties still lacking real UI — remove an entry when its
+// editor lands, and the section retires with the last one. Left out on
+// purpose: ai_code_generate_adlib/_text (declared in the lab's types but
 // consumed only by Music Lab so far) and the classic-era flags
-// (mini_toolbox, instructions_icon, ...) — the charter here is Lab2 flags.
+// (mini_toolbox, instructions_icon, ...) — this section is for the newer
+// Lab2 flags.
 export const RAW_EDITABLE_PROPERTIES = [
   'guide_mode',
   'guide_steps',
