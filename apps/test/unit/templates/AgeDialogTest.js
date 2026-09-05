@@ -3,6 +3,7 @@ import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import {UnconnectedAgeDialog as AgeDialog} from '@cdo/apps/templates/AgeDialog';
+import i18n from '@cdo/locale';
 
 import FakeStorage from '../../util/FakeStorage';
 
@@ -37,6 +38,9 @@ describe('AgeDialog', () => {
 
   it('renders a dialog if neither signed in nor seen before', () => {
     const wrapper = shallow(<AgeDialog {...defaultProps} />);
-    assert.equal(wrapper.name(), 'BaseDialog');
+    // The design system Modal is minified in the built component library, so
+    // assert on the props we pass it rather than on its component name.
+    assert.equal(wrapper.prop('className'), 'age-dialog');
+    assert.equal(wrapper.prop('title'), i18n.welcomeToDanceParty());
   });
 });

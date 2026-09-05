@@ -1,17 +1,17 @@
+import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
+import Modal from '@code-dot-org/component-library/modal';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import fontConstants from '@cdo/apps/fontConstants';
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import {ages} from '@cdo/apps/templates/AgeDropdown';
 import {SignInState, setOver21} from '@cdo/apps/templates/currentUserRedux';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
+
+import moduleStyles from './age-dialog.module.scss';
 
 /*
  * SignInOrAgeDialog uses 'anon_over13' as its session storage key.
@@ -20,6 +20,8 @@ import i18n from '@cdo/locale';
  */
 const AGE_DIALOG_SESSION_KEY = 'ad_anon_over13';
 const SONG_FILTER_SESSION_KEY = 'song_filter_on';
+
+const ageItems = ages.map(age => ({value: age, text: age}));
 
 export const ageDialogSelectedOver13 = () => {
   return sessionStorage.getItem(AGE_DIALOG_SESSION_KEY) === 'true';
@@ -32,6 +34,7 @@ export const songFilterOn = () => {
 class AgeDialog extends Component {
   state = {
     open: true,
+    age: '',
   };
 
   static propTypes = {
@@ -60,8 +63,12 @@ class AgeDialog extends Component {
     }
   }
 
+  onChangeAge = event => {
+    this.setState({age: event.target.value});
+  };
+
   onClickAgeOk = () => {
-    const value = this.ageDropdown.getValue();
+    const value = this.state.age;
     // Ignore click if nothing selected
     if (!value) {
       return;
@@ -91,79 +98,40 @@ class AgeDialog extends Component {
 
     // Don't show dialog unless script requires 13+, we're not signed in, and
     // we haven't already given this dialog our age or we do not require sign-in
-    if (signedIn || storage.getItem(AGE_DIALOG_SESSION_KEY)) {
+    if (
+      signedIn ||
+      storage.getItem(AGE_DIALOG_SESSION_KEY) ||
+      !this.state.open
+    ) {
       return null;
     }
 
+    // No onClose handler: the dialog is uncloseable, the user has to pick an age.
     return (
-      <BaseDialog useUpdatedStyles isOpen={this.state.open} uncloseable>
-        <div style={styles.container} className="age-dialog">
-          <div style={styles.dancePartyHeading}>
-            {i18n.welcomeToDanceParty()}
-          </div>
-          <div>
-            <div style={styles.middle}>
-              <div style={styles.middleCell}>
-                <label htmlFor="uitest-age-selector">{i18n.provideAge()}</label>
-                <div style={styles.age}>
-                  <AgeDropdown
-                    style={styles.dropdown}
-                    ref={element => (this.ageDropdown = element)}
-                  />
-                  <Button
-                    id="uitest-submit-age"
-                    onClick={this.onClickAgeOk}
-                    text={i18n.ok()}
-                    color={Button.ButtonColor.gray}
-                    style={{margin: 0}}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </BaseDialog>
+      <Modal
+        className="age-dialog"
+        title={i18n.welcomeToDanceParty()}
+        description={i18n.provideAge()}
+        customContent={
+          <SimpleDropdown
+            className={moduleStyles.ageDropdown}
+            id="uitest-age-selector"
+            name="age"
+            labelText={i18n.age()}
+            items={ageItems}
+            selectedValue={this.state.age}
+            onChange={this.onChangeAge}
+          />
+        }
+        primaryButtonProps={{
+          id: 'uitest-submit-age',
+          children: i18n.ok(),
+          onClick: this.onClickAgeOk,
+        }}
+      />
     );
   }
 }
-
-const styles = {
-  container: {
-    margin: 20,
-    color: color.charcoal,
-  },
-  dancePartyHeading: {
-    fontSize: 32,
-    ...fontConstants['main-font-bold'],
-  },
-  middle: {
-    marginTop: 20,
-    marginBottom: 20,
-    paddingBottom: 20,
-    paddingTop: 20,
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
-    borderRightWidth: 0,
-    borderLeftWidth: 0,
-    borderStyle: 'solid',
-    borderColor: color.lighter_gray,
-    display: 'flex',
-  },
-  middleCell: {
-    display: 'inline-block',
-    verticalAlign: 'top',
-    maxWidth: '50%',
-  },
-  age: {
-    paddingTop: 15,
-  },
-  dropdown: {
-    verticalAlign: 'top',
-    marginRight: 10,
-    marginTop: 2,
-    width: 160,
-  },
-};
 
 export const UnconnectedAgeDialog = AgeDialog;
 
