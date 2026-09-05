@@ -57,13 +57,6 @@ export interface CompletedChatMessage extends BaseChatMessage {
   /** Profanity classification feedback given by the teacher. If undefined, the teacher took no action or undid their action. */
   teacherFeedback?: FeedbackValue;
   /**
-   * Already-parsed structured output, when the request used a JSON schema
-   * (gateway path only -- the legacy path never has a parsed form to offer).
-   * submitChatContents parses this (or chatMessageText, when absent) once
-   * before calling jsonSchemaResponseCallback.
-   */
-  structuredOutput?: unknown;
-  /**
    * Can be any status besides 'unknown', which is reserved only for pending messages.
    * Note that 'error' here means that the chat message call was returned by the server, but the server returned an error
    * (i.e. downstream AI service error).

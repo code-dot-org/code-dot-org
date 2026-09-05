@@ -100,14 +100,13 @@ describe('submitChatContents', () => {
     mockSendAnalytics.mockReturnValue({type: 'analytics/send'});
   });
 
-  it('applies jsonSchemaResponseCallback to successful assistant messages', async () => {
+  it('saves the model response verbatim, without reshaping it', async () => {
     mockPostAichatCompletionMessage.mockResolvedValue(
       makeMessages({
         chatMessageText: '{"answer":"formatted"}',
         status: Status.OK,
       })
     );
-    const jsonSchemaResponseCallback = jest.fn(() => 'formatted response');
     const store = makeStore();
 
     const result = await store.dispatch(
@@ -115,38 +114,28 @@ describe('submitChatContents', () => {
         text: 'Hello',
         modelParameters,
         clientType: AiChatClientTypes.AI_TUTOR,
-        jsonSchemaResponseCallback,
       })
     );
 
     expect(submitChatContents.fulfilled.match(result)).toBe(true);
-    // The legacy Rails-job path never has a parsed form to offer, so
-    // submitChatContents parses chatMessageText itself before invoking the
-    // callback -- the callback always receives already-parsed JSON.
-    expect(jsonSchemaResponseCallback).toHaveBeenCalledWith({
-      answer: 'formatted',
-    });
     expect(store.getState().aichat.chatEventsCurrent).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
           role: Role.ASSISTANT,
           status: Status.OK,
-          chatMessageText: 'formatted response',
+          chatMessageText: '{"answer":"formatted"}',
         }),
       ])
     );
   });
 
-  it('does not apply jsonSchemaResponseCallback to assistant error messages', async () => {
+  it('saves assistant error messages unchanged', async () => {
     mockPostAichatCompletionMessage.mockResolvedValue(
       makeMessages({
         chatMessageText: 'Error: service account missing',
         status: Status.ERROR,
       })
     );
-    const jsonSchemaResponseCallback = jest.fn(() => {
-      throw new Error('should not parse error text');
-    });
     const store = makeStore();
 
     const result = await store.dispatch(
@@ -154,12 +143,10 @@ describe('submitChatContents', () => {
         text: 'Hello',
         modelParameters,
         clientType: AiChatClientTypes.AI_TUTOR,
-        jsonSchemaResponseCallback,
       })
     );
 
     expect(submitChatContents.fulfilled.match(result)).toBe(true);
-    expect(jsonSchemaResponseCallback).not.toHaveBeenCalled();
     expect(store.getState().aichat.chatEventsCurrent).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
@@ -167,6 +154,99 @@ describe('submitChatContents', () => {
           status: Status.ERROR,
           chatMessageText: 'Error: service account missing',
         }),
+      ])
+    );
+  });
+
+  it('hands a structured response to onSchemaResponse once, parsed', async () => {
+    mockPostAichatCompletionMessage.mockResolvedValue(
+      makeMessages({
+        chatMessageText: '{"answer":{"explanation":"do this"}}',
+        status: Status.OK,
+      })
+    );
+    const onSchemaResponse = jest.fn();
+    const store = makeStore();
+
+    await store.dispatch(
+      submitChatContents({
+        text: 'Hello',
+        modelParameters,
+        clientType: AiChatClientTypes.AI_TUTOR,
+        onSchemaResponse,
+      })
+    );
+
+    expect(onSchemaResponse).toHaveBeenCalledTimes(1);
+    expect(onSchemaResponse).toHaveBeenCalledWith({
+      answer: {explanation: 'do this'},
+    });
+  });
+
+  it('does not notify onSchemaResponse for a non-schema response', async () => {
+    mockPostAichatCompletionMessage.mockResolvedValue(
+      makeMessages({chatMessageText: 'just prose', status: Status.OK})
+    );
+    const onSchemaResponse = jest.fn();
+    const store = makeStore();
+
+    await store.dispatch(
+      submitChatContents({
+        text: 'Hello',
+        modelParameters,
+        clientType: AiChatClientTypes.AI_TUTOR,
+        onSchemaResponse,
+      })
+    );
+
+    expect(onSchemaResponse).not.toHaveBeenCalled();
+  });
+
+  it('does not notify onSchemaResponse for an errored response', async () => {
+    mockPostAichatCompletionMessage.mockResolvedValue(
+      makeMessages({
+        chatMessageText: '{"answer":"nope"}',
+        status: Status.ERROR,
+      })
+    );
+    const onSchemaResponse = jest.fn();
+    const store = makeStore();
+
+    await store.dispatch(
+      submitChatContents({
+        text: 'Hello',
+        modelParameters,
+        clientType: AiChatClientTypes.AI_TUTOR,
+        onSchemaResponse,
+      })
+    );
+
+    expect(onSchemaResponse).not.toHaveBeenCalled();
+  });
+
+  // A lab that throws while loading the model's code must not fail the send:
+  // the response is already saved and on screen by then.
+  it('still fulfills when onSchemaResponse throws', async () => {
+    mockPostAichatCompletionMessage.mockResolvedValue(
+      makeMessages({chatMessageText: '{"answer":"x"}', status: Status.OK})
+    );
+    const store = makeStore();
+
+    const result = await store.dispatch(
+      submitChatContents({
+        text: 'Hello',
+        modelParameters,
+        clientType: AiChatClientTypes.AI_TUTOR,
+        onSchemaResponse: () => {
+          throw new Error('lab blew up');
+        },
+      })
+    );
+
+    expect(submitChatContents.fulfilled.match(result)).toBe(true);
+    expect(store.getState().aichat.chatEventsCurrent).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({chatMessageText: '{"answer":"x"}'}),
       ])
     );
   });
