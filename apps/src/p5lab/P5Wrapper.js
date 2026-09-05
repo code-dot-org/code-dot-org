@@ -513,6 +513,7 @@ P5Wrapper.prototype.getMarshallableP5Properties = function () {
   const propNames = [];
   for (const prop in this.p5) {
     if (
+      !prop.startsWith('_') &&
       -1 === blockedProps.indexOf(prop) &&
       -1 === this.p5specialFunctions.indexOf(prop) &&
       !globalCustomMarshalProps[prop]
