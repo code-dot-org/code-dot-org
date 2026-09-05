@@ -56,10 +56,11 @@ import {
   setPlacementThumbnails,
 } from './actorThumbnails';
 import styles from './blocklyFileEditor.module.css';
-import {createBodySeam, HIDE_BODIES} from './bodySurfaces';
+import {BODY_OWNER_ID, createBodySeam, HIDE_BODIES} from './bodySurfaces';
 import {buildDomainPalette} from './domainBlocks';
 import {setEditingActor, setEditingFile, setEditingRule} from './editingRule';
 import {setBodyOpener} from './extensions/bodyButton';
+import {anchorBodyOwner} from './extensions/bodyOwner';
 import {refreshMissingRuleWarnings} from './extensions/missingRule';
 import {fileKindOf} from './fileKind';
 import {registerLessonButtons} from './lessonFlyoutButton';
@@ -89,7 +90,7 @@ import {
   type MemberKey,
 } from './renameRule';
 import {requestRuleImport} from './ruleImport';
-import {parseRuleMeta} from './ruleMeta';
+import {designedName, parseRuleMeta} from './ruleMeta';
 import {ruleByName} from './ruleRegistry';
 import {setRulesConfigHandler} from './rulesConfig';
 import {parseSpriteRef} from './spriteCells';
@@ -97,6 +98,9 @@ import {setSpritePickHandler} from './spritePick';
 import {standInBlocks} from './standInBlocks';
 import {withoutCategories} from './toolboxFilter';
 import {useWorldBlocklyTheme} from './worldBlocklyTheme';
+
+/** Where the head of a body surface sits from the top left, in pixels. */
+const BODY_MARGIN = 24;
 
 // Distinct connector nubs for the lab's own value types, so they read apart from
 // the puzzle-tab of numbers/strings: a triangle for `Actor` (`this actor`, every
@@ -664,9 +668,22 @@ export const BlocklyFileEditor = ({
     interfaceRef.current = Blockly.serialization.workspaces.save(
       workspace,
     ) as BlocklySerialization;
+    // `define block` has no NAME field — what it is called is the signature
+    // the learner designed, which is where every other reader of the file gets
+    // it from too (`ruleMeta.addDesignedBlock`).
+    const block = workspace.getBlockById(blockId);
+    const designed = designedName(
+      (
+        block as unknown as {
+          saveExtraState?: () => {
+            parts?: Array<{kind?: string; text?: string}>;
+          };
+        }
+      )?.saveExtraState?.()?.parts,
+    );
     setEditing({
       id: blockId,
-      label: workspace.getBlockById(blockId)?.getFieldValue('NAME') || 'this',
+      label: block?.getFieldValue('NAME') || designed || 'this',
     });
   }, []);
 
@@ -1061,14 +1078,30 @@ export const BlocklyFileEditor = ({
       return;
     }
     surfaceRef.current = want;
-    const document = editing
-      ? seam.bodyOf(editing.id)
-      : (interfaceRef.current ?? startBlocks);
+    const held = interfaceRef.current ?? startBlocks;
+    const document = editing ? seam.bodyOf(editing.id, held) : held;
     Blockly.Events.disable();
     try {
       Blockly.serialization.workspaces.load(document, workspace);
+      if (editing) {
+        // Inside the quiet, not after it: anchoring changes the block, and a
+        // change event here would be read as the learner editing the body and
+        // written straight back to the file.
+        const head = workspace.getBlockById(BODY_OWNER_ID);
+        if (head) {
+          anchorBodyOwner(head);
+          // The viewport is wherever the interface left it, which for a rule
+          // wider than the screen is not where this is. To the ORIGIN rather
+          // than centred on the head: the head is as wide as the signature it
+          // draws, and centring a wide block puts its left edge behind the
+          // toolbox.
+        }
+      }
     } finally {
       Blockly.Events.enable();
+    }
+    if (editing) {
+      workspace.scroll(BODY_MARGIN, BODY_MARGIN);
     }
     refreshActorPictures(workspace);
   }, [editing, blocks, seam, startBlocks]);

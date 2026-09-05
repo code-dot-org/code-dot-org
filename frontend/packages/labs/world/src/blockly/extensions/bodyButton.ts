@@ -24,8 +24,12 @@ export const BODY_BUTTON_EXTENSION = 'world_body_button';
 /** The field's name on the block — how it is found again to remove it. */
 const FIELD_NAME = 'OPEN_BODY';
 
-/** FontAwesome's `pen-to-square` (f044). */
-const PENCIL = '';
+// FontAwesome f044: `edit` in the free 5.x package this build installs,
+// renamed `pen-to-square` in 6 and 7. The codepoint is the same in every
+// major, which is why it is written here rather than a name. It was empty
+// in the first version of this file and drew nothing at all — a blank
+// button reads as a broken one, and neither Blockly nor the font warns.
+const PENCIL = '';
 
 type Opener = (blockId: string) => void;
 
@@ -36,8 +40,9 @@ export function setBodyOpener(next: Opener | null): void {
   opener = next;
 }
 
-const lastInput = (block: Block): Input | undefined =>
-  block.inputList[block.inputList.length - 1];
+// The FIRST row: `define block` names the thing, so the way into it belongs
+// beside the name, not at the bottom under everything the block declares.
+const firstInput = (block: Block): Input | undefined => block.inputList[0];
 
 function syncButton(block: Block): void {
   // NOT gated on an opener being installed. The editor installs itself in an
@@ -52,7 +57,7 @@ function syncButton(block: Block): void {
   if (wanted === Boolean(block.getField(FIELD_NAME))) {
     return;
   }
-  const input = lastInput(block);
+  const input = firstInput(block);
   if (!input) {
     return;
   }
@@ -87,6 +92,19 @@ function syncButton(block: Block): void {
     input.removeField(FIELD_NAME);
   }
   (block as BlockSvg).render?.();
+}
+
+/**
+ * Take the pencil off a block.
+ *
+ * For the copy that heads a body's own surface (`anchorBodyOwner`): the way in
+ * is not worth drawing on the thing it already opened.
+ */
+export function removeBodyButton(block: Block): void {
+  const input = block.inputList.find(row =>
+    row.fieldRow.some(field => field.name === FIELD_NAME),
+  );
+  input?.removeField(FIELD_NAME);
 }
 
 export const bodyButtonExtension: Extension = defineExtension(

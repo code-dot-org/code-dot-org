@@ -714,6 +714,62 @@ does — the control says the sandbox, not the code. The claim rests instead on
 the merged document the editor emits, measured at the write, and on the
 round-trip tests over all forty-seven stock rules.
 
+_Polished, 2026-09-05._ Four things, all of them about what the two surfaces
+say rather than what they store.
+
+The pencil drew NOTHING: `PENCIL` was the empty string, so the button was a
+blank rectangle. Neither Blockly nor the font complains about a glyph that is
+not there — `glyphIcon` already records that a wrong family draws a box, and
+this is the case below it. The codepoint is f044, `edit` in the FontAwesome 5
+free package this build installs and `pen-to-square` in 6 and 7; it is the same
+codepoint in every major, which is why it is written as one.
+
+The button moved to the FIRST row. `define block` names the thing, so the way
+into it belongs beside the name rather than under everything the block
+declares.
+
+The `do` row is gone from the editor. With the split on it was empty every
+time and there was no way to put anything in it. It cannot be deleted from the
+DEFINITION — `BlocklyGenerator` loads whole files, bodies included, into a
+headless workspace, and a `define block` with no `DO` input would drop every
+body at compile time — so `bodySocketExtension` takes the row off everywhere
+except there, reading the `isRuleGenerator` mark the generator already sets.
+The file still holds the body in `DO`; only the drawing changed.
+
+And a body surface now has a HEAD: the member's own block, copied from the
+interface, standing where `define rule` stands in a rule file. It carries the
+name, description and signature, so the surface says what it is implementing;
+it is unmovable and undeletable, so the thing the body attaches to cannot be
+dragged off; and it has no pencil, since it is already open. The body is its
+`next`.
+
+Three things the head has to get right, each a way to lose the file rather
+than just to look wrong.
+
+It wears a fixed id (`BODY_OWNER_ID`), not the member's. The editor tells
+which surface is up by asking whether the member's block is in the workspace —
+a member lives on the interface and never inside its own body — and a head
+keeping the real id answers yes on both, so every palette rebuild would reload
+the body over the learner's edits.
+
+Its `next` is dropped before the body is attached. On the interface that
+`next` is the member AFTER this one, and the head's `next` is read back as the
+body: carry it over and the rest of the rule becomes this member's
+implementation. The case that shows it is a member with NO body, because a
+body present overwrites the chain and hides the bug — the first test written
+for this passed with the fault in place.
+
+And `setBody` now refuses a save with no head in it. "Nothing arrived" and
+"the learner emptied this" are different, and reading the first as the second
+is how the first attempt deleted bodies and wrote the result.
+
+The head is READ-ONLY for now. It draws `RETURNS` and the description because
+they are what the member is, but the interface is where they are edited — a
+second editable copy of a field is a second answer to what the file says.
+Making the head authoritative is what moving `RETURNS` off the interface and
+down into the body surface needs, and that is the next piece of §8 along with
+the two toolboxes.
+
 **Not only rules.** An `.actor` file holds the same two shapes — its own
 `each frame` and its own `define block` (`ActorBuilder.defineStep`,
 `defineAction`) — and a world holds them inside `define actor`. Actor files

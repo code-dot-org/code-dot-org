@@ -7,7 +7,14 @@
 import {describe, expect, it} from 'vitest';
 
 import {STOCK_RULES} from '../../rules/stock';
-import {createBodySeam, hasBody, merge, reap, split} from '../bodySurfaces';
+import {
+  BODY_OWNER_ID,
+  createBodySeam,
+  hasBody,
+  merge,
+  reap,
+  split,
+} from '../bodySurfaces';
 
 /** A step whose body is the chain that follows it. */
 const ruleStep = (id: string, body: unknown) => ({
@@ -44,6 +51,25 @@ interface Saved {
 /** The roots of a document, as blocks a test can look inside. */
 const rootsOf = (document: unknown): Saved[] =>
   ((document as {blocks?: {blocks?: Saved[]}}).blocks?.blocks ?? []) as Saved[];
+
+/** A body surface as the workspace would save it: the head, body under it. */
+const surface = (body?: unknown) =>
+  ({
+    blocks: {
+      languageVersion: 0,
+      blocks: [
+        {
+          type: 'world_rule_step_in',
+          id: BODY_OWNER_ID,
+          ...(body ? {next: {block: body}} : {}),
+        },
+      ],
+    },
+  }) as never;
+
+/** What a body surface is holding, which is the head's `next`. */
+const bodyOn = (document: unknown): unknown =>
+  rootsOf(document)[0]?.next?.block;
 
 describe('hasBody', () => {
   it('knows the two shapes a body takes, and nothing else', () => {
@@ -340,15 +366,60 @@ describe('opening one member’s body', () => {
     expect(steps.length).toBeGreaterThan(0);
 
     for (const step of steps) {
-      const body = seam.bodyOf(step.id!);
-      expect(rootsOf(body).length, `${step.id}`).toBe(1);
+      const [head, ...rest] = rootsOf(seam.bodyOf(step.id!, shown));
+
+      // One root, and it is the member's own block standing in for itself:
+      // same type, same fields, under an id that says which surface this is.
+      expect(rest, `${step.id}`).toEqual([]);
+      expect(head.id, `${step.id}`).toBe(BODY_OWNER_ID);
+      expect(head.type, `${step.id}`).toBe(step.type);
+      expect(
+        (head as unknown as {fields?: unknown}).fields,
+        `${step.id}`,
+      ).toEqual((step as unknown as {fields?: unknown}).fields);
+      expect(head.next?.block, `${step.id}`).toBeTruthy();
     }
+  });
+
+  it('heads the surface even when the body is empty', () => {
+    // The head is what a body is attached TO. An empty body that opened an
+    // empty workspace would leave nothing to attach to and nothing saying
+    // which member the surface belongs to.
+    const seam = createBodySeam();
+    const shown = seam.show(
+      doc({type: 'world_rule_step_in', id: 's1', fields: {NAME: 'x'}}),
+    );
+    const [head] = rootsOf(seam.bodyOf('s1', shown));
+
+    expect(head.id).toBe(BODY_OWNER_ID);
+    expect(head.next).toBeUndefined();
+  });
+
+  it('drops the member chain, which belongs to the interface', () => {
+    // `define block`'s `next` is the member AFTER it, and the head's `next` is
+    // read back as the body. So a member with NOTHING in it is the case that
+    // tells: carry the chain over and the rest of the rule becomes this
+    // member's implementation, and the next save writes it there. With a body
+    // present the bug hides, because the body overwrites the chain.
+    const seam = createBodySeam();
+    const shown = seam.show(
+      doc({
+        type: 'world_rule_block',
+        id: 'b1',
+        fields: {RETURNS: 'none'},
+        next: {block: {type: 'world_rule_property', id: 'p1'}},
+      }),
+    );
+    const [head] = rootsOf(seam.bodyOf('b1', shown));
+
+    expect(head.id).toBe(BODY_OWNER_ID);
+    expect(head.next).toBeUndefined();
   });
 
   it('is empty for a block that has no body, rather than throwing', () => {
     const seam = createBodySeam();
-    seam.show(doc(ruleStep('s1', statement('work'))));
-    expect(rootsOf(seam.bodyOf('nobody'))).toEqual([]);
+    const shown = seam.show(doc(ruleStep('s1', statement('work'))));
+    expect(rootsOf(seam.bodyOf('nobody', shown))).toEqual([]);
   });
 });
 
@@ -424,10 +495,10 @@ describe('editing one body and writing the file', () => {
 
     const [edited, ...untouched] = ids;
     const before = Object.fromEntries(
-      untouched.map(id => [id, rootsOf(seam.bodyOf(id))[0]]),
+      untouched.map(id => [id, bodyOn(seam.bodyOf(id, held))]),
     );
 
-    seam.setBody(edited, doc(statement('what the learner left')));
+    seam.setBody(edited, surface(statement('what the learner left')));
     const file = seam.read(held);
 
     expect(bodyIn(file, edited)).toMatchObject({
@@ -445,13 +516,13 @@ describe('editing one body and writing the file', () => {
     const seam = createBodySeam();
     const held = seam.show(solidDocument());
     const [first] = owners(held);
-    seam.setBody(first, doc(statement('again')));
+    seam.setBody(first, surface(statement('again')));
 
     const again = createBodySeam();
     const reshown = again.show(seam.read(held));
 
     expect(owners(reshown)).toEqual(owners(held));
-    expect(rootsOf(again.bodyOf(first))[0]).toMatchObject({
+    expect(bodyOn(again.bodyOf(first, reshown))).toMatchObject({
       fields: {TEXT: 'again'},
     });
   });
@@ -465,13 +536,41 @@ describe('editing one body and writing the file', () => {
     const held = seam.show(
       doc(ruleStep('s1', statement('a')), ruleStep('s2', statement('b'))),
     );
-    expect(rootsOf(seam.bodyOf('s2'))).toHaveLength(1);
+    expect(bodyOn(seam.bodyOf('s2', held))).toBeTruthy();
 
     const afterDelete = {
       blocks: {...held.blocks, blocks: [rootsOf(held)[0]]},
     };
     seam.read(afterDelete as never);
 
-    expect(rootsOf(seam.bodyOf('s2'))).toEqual([]);
+    // Asked against the interface that still names s2, so a head still comes
+    // back: what is gone is the body under it.
+    expect(bodyOn(seam.bodyOf('s2', held))).toBeUndefined();
+  });
+
+  it('ignores a save from a surface that is not a body', () => {
+    // The guard the first attempt did without. A workspace holding no head is
+    // not "the learner emptied this member" — it is the interface, or a load
+    // in progress — and storing it deleted bodies and wrote the result.
+    const seam = createBodySeam();
+    const held = seam.show(doc(ruleStep('s1', statement('a'))));
+
+    seam.setBody('s1', doc(statement('not a body surface')));
+
+    expect(bodyOn(seam.bodyOf('s1', held))).toMatchObject({
+      fields: {TEXT: 'a'},
+    });
+  });
+
+  it('empties a member when the head comes back with nothing under it', () => {
+    // …and the other half: a head with an empty socket IS the learner
+    // clearing it out, and has to be written.
+    const seam = createBodySeam();
+    const held = seam.show(doc(ruleStep('s1', statement('a'))));
+
+    seam.setBody('s1', surface());
+
+    expect(bodyOn(seam.bodyOf('s1', held))).toBeUndefined();
+    expect(rootsOf(seam.read(held))[0]).not.toHaveProperty('next');
   });
 });

@@ -89,6 +89,7 @@ import {
   eventDesignerMutator,
 } from './extensions/blockDesigner';
 import {bodyButtonExtension} from './extensions/bodyButton';
+import {bodySocketExtension} from './extensions/bodyOwner';
 import {drawingContextExtension} from './extensions/drawingContext';
 import {effectImportFieldExtension} from './extensions/effectImportField';
 import {
@@ -6779,6 +6780,10 @@ const worldRuleBlock = defineBlock({
   args1: [
     {type: 'field_input', name: 'DESCRIPTION', text: '', spellcheck: true},
   ],
+  // The body's socket. It is NOT drawn in the editor — `bodySocketExtension`
+  // takes the row off, because with the split on it is always empty and the
+  // pencil above is the way in. It stays in the definition because the file
+  // still holds the body here, and the generator loads the file whole.
   message2: 'do %1',
   args2: [{type: 'input_statement', name: 'DO'}],
   previousStatement: true,
@@ -6791,12 +6796,13 @@ const worldRuleBlock = defineBlock({
     // In a `.rule` it never fires (`actorBlockReports`).
     actorBlockReportsExtension,
     bodyButtonExtension,
+    bodySocketExtension,
   ],
   style: 'setup_blocks',
   tooltip:
     'Define a block this rule adds, or — in an actor file — a thing that kind ' +
-    'of actor does. The row above "do" is the block itself: edit it with the ' +
-    'pencil, and it is what you will see when you use it.',
+    'of actor does. The bottom row is the block itself, drawn as you will see ' +
+    'it when you use it; the pencil opens what it does.',
   generator: {
     javascript(block, generator) {
       // WHERE IT SITS DECIDES WHO WRITES IT, the same bargain `each frame`
@@ -7002,7 +7008,11 @@ const traitStepDefinition = (asRoot: boolean) =>
     message1: '%1',
     args1: [{type: 'input_statement', name: 'DO'}],
     ...(asRoot ? {} : {previousStatement: true, nextStatement: true}),
-    extensions: [phaseOptionsExtension, bodyButtonExtension],
+    extensions: [
+      phaseOptionsExtension,
+      bodyButtonExtension,
+      bodySocketExtension,
+    ],
     style: 'event_blocks',
     tooltip:
       'Run this every tick for each thing that has this trait — or, on its own ' +

@@ -74,6 +74,22 @@ out.members = (await pencils()).length;
 
 await clickPencil((await pencils())[0]);
 out.firstBody = await count();
+
+// The head: the member's own block, standing at the top of its own surface.
+// Unmovable and undeletable, so the thing the body attaches to cannot be
+// dragged off or thrown away, and with no pencil — it is already open.
+out.head = await ws(B => {
+  const head = B.getMainWorkspace().getBlockById('body-owner');
+  return (
+    head && {
+      type: head.type,
+      movable: head.isMovable(),
+      deletable: head.isDeletable(),
+      pencil: Boolean(head.getField('OPEN_BODY')),
+      bodyAttached: Boolean(head.getNextBlock()),
+    }
+  );
+});
 // Delete one statement from the body's chain: a real edit, through Blockly.
 await ws(B => {
   const w = B.getMainWorkspace();
@@ -95,7 +111,8 @@ await clickPencil((await pencils())[0]);
 out.firstBodyAgain = await count();
 out.errors = errors.slice(0, 4);
 
-// Expected: members 5, firstBody 35, afterEdit 34, backToInterface 14,
-// secondBody a body rather than 14, firstBodyAgain 34.
+// Expected: members 5; firstBody 36 (the head, plus 35 blocks of body);
+// head unmovable, undeletable, no pencil, body attached; afterEdit 35;
+// backToInterface 14; secondBody a body rather than 14; firstBodyAgain 35.
 console.log(JSON.stringify(out, null, 1));
 await b.close();

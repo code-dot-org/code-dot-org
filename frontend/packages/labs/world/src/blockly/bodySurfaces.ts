@@ -59,6 +59,17 @@ const BODY_IN_DO = new Set(['world_rule_block', 'world_trait_step']);
 export const hasBody = (type: string): boolean =>
   BODY_IN_NEXT.has(type) || BODY_IN_DO.has(type);
 
+/**
+ * The id the owner block wears while its own body is the surface.
+ *
+ * NOT the block's real id, and that is the point. The editor tells which
+ * surface the workspace is showing by asking whether the member's block is in
+ * it — a member lives on the interface and never inside its own body — and a
+ * head that kept the real id would answer yes on both, so every rebuild of the
+ * palette would reload the body over the learner's edits.
+ */
+export const BODY_OWNER_ID = 'body-owner';
+
 /** The bodies a document was carrying, by the id of the block that owns each. */
 export type Bodies = Record<string, SavedBlock>;
 
@@ -192,6 +203,32 @@ export function reap(shown: BlocklySerialization, bodies: Bodies): Bodies {
   );
 }
 
+/** The block with this id, wherever it sits in the document. */
+function findById(
+  document: BlocklySerialization,
+  id: string,
+): SavedBlock | undefined {
+  const walk = (block: SavedBlock): SavedBlock | undefined => {
+    if (block.id === id) {
+      return block;
+    }
+    for (const socket of Object.values(block.inputs ?? {})) {
+      const hit = socket.block && walk(socket.block);
+      if (hit) {
+        return hit;
+      }
+    }
+    return block.next?.block ? walk(block.next.block) : undefined;
+  };
+  for (const root of (document.blocks?.blocks ?? []) as SavedBlock[]) {
+    const hit = walk(root);
+    if (hit) {
+      return hit;
+    }
+  }
+  return undefined;
+}
+
 /**
  * One file's split, held.
  *
@@ -206,8 +243,15 @@ export interface BodySeam {
   show(document: BlocklySerialization): BlocklySerialization;
   /** The file: a workspace's own save, with the bodies put back. */
   read(saved: BlocklySerialization): BlocklySerialization;
-  /** One member's implementation, as a workspace could load it. */
-  bodyOf(id: string): BlocklySerialization;
+  /**
+   * One member's implementation, as a workspace could load it: the member's
+   * own block at the head, with the body attached under it.
+   *
+   * `shown` is the interface the editor is holding, which is where the head
+   * is copied from — so the head reads as whatever the learner has just named
+   * and designed, not as whatever the file said when it was opened.
+   */
+  bodyOf(id: string, shown: BlocklySerialization): BlocklySerialization;
   /** …and back, when the surface that was editing it closes or changes. */
   setBody(id: string, saved: BlocklySerialization): void;
 }
@@ -243,19 +287,48 @@ export function createBodySeam(): BodySeam {
       bodies = reap(saved, bodies);
       return merge(saved, bodies);
     },
-    bodyOf(id) {
-      // A body is one chain of statements, and a workspace holds a list of
-      // roots — so opening one is the chain as the only root, and an empty
-      // body is an empty workspace rather than an error.
+    bodyOf(id, shown) {
+      // The member's own block heads the surface, the way `define rule` heads
+      // a rule file: something to attach to, and a statement of what is being
+      // implemented. A chain floating in an empty workspace said neither, and
+      // an empty body said nothing at all.
+      //
+      // Its `next` is the BODY here. On the interface that same `next` is the
+      // member chain — what the rule declares after this one — so it is
+      // dropped first; the interface keeps it, and `merge` puts the body back
+      // wherever the file format holds it.
       const body = bodies[id];
-      return {blocks: {languageVersion: 0, blocks: body ? [body] : []}};
+      const owner = findById(shown, id);
+      if (!owner) {
+        return {blocks: {languageVersion: 0, blocks: body ? [body] : []}};
+      }
+      const head: SavedBlock = {...owner, id: BODY_OWNER_ID};
+      delete head.next;
+      // Where it sat on the interface means nothing here — it is the only
+      // root on this surface. Carried over, it put the head wherever that
+      // member happened to be in a long rule, which on `solid` is off the
+      // side of the screen.
+      delete head.x;
+      delete head.y;
+      if (body) {
+        head.next = {block: body};
+      }
+      return {blocks: {languageVersion: 0, blocks: [head]}};
     },
     setBody(id, saved) {
-      const [root] = ((saved.blocks?.blocks ?? []) as SavedBlock[]).filter(
-        block => block.type !== undefined,
-      );
-      if (root) {
-        bodies[id] = root;
+      // Found by the head, not by taking the first root: a learner who
+      // detaches a chain to rearrange it leaves an orphan behind, and which
+      // root comes first is then a question about drag order.
+      const roots = (saved.blocks?.blocks ?? []) as SavedBlock[];
+      const head = roots.find(block => block.id === BODY_OWNER_ID);
+      if (!head) {
+        // NOTHING ARRIVED — the surface is not up, or is not this member's.
+        // Reading that as "the learner emptied it" is how the first attempt
+        // deleted bodies and saved the result, so it is read as nothing.
+        return;
+      }
+      if (head.next?.block) {
+        bodies[id] = head.next.block;
       } else {
         // Emptied on purpose: the member keeps existing and does nothing,
         // which is what a step with no rows means everywhere else.
