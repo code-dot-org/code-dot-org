@@ -8,9 +8,26 @@ import {Workspace} from 'blockly/core';
 import CdoFieldAnimationDropdown from '@cdo/apps/blockly/addons/cdoFieldAnimationDropdown';
 import {JsonBlockConfig, WorkspaceSerialization} from '@cdo/apps/blockly/types';
 
+import {IMAGE_TYPE_LABELS, ImageType} from './ai/images/types';
 import {Sources} from './types';
 
 export const IMAGE_NAME_MAX_LENGTH = 40;
+
+/**
+ * Name for an image created without a name field (the student dialog): the
+ * type's label plus the first free number — "Sprite 1", "Sprite 2", …
+ */
+export function nextImageName(
+  imageType: ImageType,
+  isNameTaken: (name: string) => boolean
+): string {
+  for (let n = 1; ; n++) {
+    const name = `${IMAGE_TYPE_LABELS[imageType]} ${n}`;
+    if (!isNameTaken(name)) {
+      return name;
+    }
+  }
+}
 
 /**
  * Tidy a name as it's typed: drop double quotes and backslashes (either

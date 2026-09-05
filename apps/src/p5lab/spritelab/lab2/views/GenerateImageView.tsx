@@ -26,9 +26,14 @@ import {
   ImageStyle,
   ImageType,
 } from '../ai/images/types';
-import {IMAGE_NAME_MAX_LENGTH, sanitizeImageName} from '../imageReferences';
+import {
+  IMAGE_NAME_MAX_LENGTH,
+  nextImageName,
+  sanitizeImageName,
+} from '../imageReferences';
 
 import DeleteImageButton from './DeleteImageButton';
+import ImagePaneButton from './ImagePaneButton';
 import TemperatureBot from './TemperatureBot';
 
 import moduleStyles from './image-details-dialog.module.scss';
@@ -47,6 +52,10 @@ const TEMPERATURE_LEVEL_MAX = 10;
 const TEMPERATURE_LEVEL_DEFAULT = 5;
 const levelToTemperature = (level: number) =>
   (level / TEMPERATURE_LEVEL_MAX) * 2;
+
+// The input is the only bound on prompt length: prompts persist verbatim
+// into each image's generation metadata and travel in every request.
+const MAX_PROMPT_LENGTH = 1000;
 
 // Prompt hints, one per type, so the example suits what is being made.
 const PROMPT_PLACEHOLDERS: Record<ImageType, string> = {
@@ -76,6 +85,8 @@ interface GenerateImageViewProps {
   };
   /** The image's current pixels, shown on the left while prompting. */
   thumb?: string;
+  /** The image is pixel art: the pane upscales it with hard edges. */
+  thumbPixelated?: boolean;
   /** Set when creating a brand-new image. */
   create?: {
     /** Whether another image already uses this name. */
@@ -87,6 +98,10 @@ interface GenerateImageViewProps {
   onPaintManually?: (draft: NewImageDraft) => void;
   /** Level-imposed type for new images; the Type choice is locked to it. */
   lockedImageType?: ImageType;
+  /** Show the full internal form. The default student form has no name
+      field (new images name themselves), no Start from, no temperature,
+      and Paint manually moves from the footer into the blank image area. */
+  advanced?: boolean;
   /** A generation request is leaving; fires before the model call, so the
       caller can stamp what the eventual result belongs to. */
   onGenerateStart?: () => void;
@@ -104,7 +119,8 @@ interface GenerateImageViewProps {
 
 /**
  * The image dialog's Generate view: the current image (or a blank area) on
- * the left; on the right the prompt, style, a choice of where the
+ * the left, the form on the right. The student form asks only for a prompt,
+ * type and style; the advanced form adds a name, a choice of where the
  * randomness comes from, and a temperature slider with a bot whose
  * expression follows it. A finished generation is applied immediately —
  * the caller returns to the summary showing the new image. Renders the
@@ -113,8 +129,10 @@ interface GenerateImageViewProps {
 const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   existing,
   thumb,
+  thumbPixelated,
   create,
   lockedImageType,
+  advanced,
   onPaintManually,
   onGenerateStart,
   onAccept,
@@ -140,21 +158,30 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   const [error, setError] = useState<string | null>(null);
 
   // Flag a duplicate as it's typed and hold the buttons until it's unique.
+  // The student form has no name field, so the name never holds it back.
   const trimmedName = name.trim();
   const duplicateName =
     !!create && !!trimmedName && create.isNameTaken(trimmedName);
-  const nameUsable = !create || (!!trimmedName && !duplicateName);
+  const nameUsable = !create || !advanced || (!!trimmedName && !duplicateName);
   const nameError = duplicateName ? 'That name is already used.' : null;
+
+  const newImageName = useCallback(
+    () =>
+      create && !advanced
+        ? nextImageName(imageType, create.isNameTaken)
+        : trimmedName,
+    [create, advanced, imageType, trimmedName]
+  );
 
   // Cycle the bot's generating frames while a request is out.
   const [generatingTick, setGeneratingTick] = useState(0);
   useEffect(() => {
-    if (mode !== 'generating') {
+    if (!advanced || mode !== 'generating') {
       return;
     }
     const timer = setInterval(() => setGeneratingTick(t => t + 1), 350);
     return () => clearInterval(timer);
-  }, [mode]);
+  }, [advanced, mode]);
 
   const canUseSeed = existing?.generation?.seed !== undefined;
   const canUsePrevious = !!existing;
@@ -181,7 +208,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
       }
       const result = await generateImage(prompt.trim(), options);
       // Apply immediately; the caller flips back to the summary view.
-      await onAccept(result, create ? trimmedName : undefined);
+      await onAccept(result, create ? newImageName() : undefined);
     } catch {
       setError("Couldn't generate the image. Try again.");
       setMode('prompt');
@@ -195,7 +222,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
     existing,
     canUseSeed,
     create,
-    trimmedName,
+    newImageName,
     onGenerateStart,
     onAccept,
   ]);
@@ -217,20 +244,37 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   return (
     <>
       <div className={moduleStyles.body}>
-        <div
-          className={classNames(
-            moduleStyles.imagePane,
-            thumb && moduleStyles.imagePaneChecker
-          )}
-        >
-          {thumb ? (
-            <img src={thumb} alt="" />
-          ) : (
-            <div className={moduleStyles.imagePlaceholder} aria-hidden />
-          )}
-        </div>
+        {/* The student form's blank pane is itself the way into the paint
+            editor; its footer keeps just Cancel/Generate. */}
+        {!advanced && create && onPaintManually ? (
+          <ImagePaneButton
+            iconName="paintbrush"
+            label="Paint manually"
+            disabled={generating}
+            onClick={() =>
+              onPaintManually({name: newImageName(), imageType, style})
+            }
+          />
+        ) : (
+          <div
+            className={classNames(
+              moduleStyles.imagePane,
+              thumb && moduleStyles.imagePaneChecker
+            )}
+          >
+            {thumb ? (
+              <img
+                src={thumb}
+                alt=""
+                className={classNames(thumbPixelated && moduleStyles.pixelArt)}
+              />
+            ) : (
+              <div className={moduleStyles.imagePlaceholder} aria-hidden />
+            )}
+          </div>
+        )}
         <div className={moduleStyles.detailsPane}>
-          {create && (
+          {advanced && create && (
             <div className={moduleStyles.nameRow}>
               <TextField
                 name="newImageName"
@@ -271,6 +315,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                 className={moduleStyles.promptInput}
                 value={prompt}
                 rows={5}
+                maxLength={MAX_PROMPT_LENGTH}
                 placeholder={PROMPT_PLACEHOLDERS[imageType]}
                 disabled={generating}
                 onChange={e => setPrompt(e.target.value)}
@@ -316,81 +361,86 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
             </div>
           </div>
 
-          <div className={moduleStyles.formRow}>
-            <fieldset
-              className={classNames(moduleStyles.radioGroup, moduleStyles.wide)}
-              disabled={generating}
-            >
-              <legend>Start from</legend>
-              <RadioButton
-                name="generation-source"
-                value="new"
-                label="Create new image"
-                size="s"
-                checked={source === 'new'}
-                onChange={() => setSource('new')}
-              />
-              <RadioButton
-                name="generation-source"
-                value="seed"
-                label="Use same seed (small prompt changes keep the picture similar)"
-                size="s"
-                checked={source === 'seed'}
-                disabled={!canUseSeed}
-                onChange={() => setSource('seed')}
-              />
-              <RadioButton
-                name="generation-source"
-                value="previous"
-                label="Use previous image (the prompt modifies it)"
-                size="s"
-                checked={source === 'previous'}
-                disabled={!canUsePrevious}
-                onChange={() => setSource('previous')}
-              />
-            </fieldset>
-            <fieldset
-              className={classNames(
-                moduleStyles.radioGroup,
-                moduleStyles.temperatureGroup
-              )}
-              disabled={generating}
-            >
-              <legend id="temperature-label">Temperature</legend>
-              {/* A wink: choosing pixel-art style pixelates the bot too. */}
-              <TemperatureBot src={botImage} pixelated={style === 'pixel'} />
+          {advanced && (
+            <div className={moduleStyles.formRow}>
+              <fieldset
+                className={classNames(
+                  moduleStyles.radioGroup,
+                  moduleStyles.wide
+                )}
+                disabled={generating}
+              >
+                <legend>Start from</legend>
+                <RadioButton
+                  name="generation-source"
+                  value="new"
+                  label="Create new image"
+                  size="s"
+                  checked={source === 'new'}
+                  onChange={() => setSource('new')}
+                />
+                <RadioButton
+                  name="generation-source"
+                  value="seed"
+                  label="Use same seed (small prompt changes keep the picture similar)"
+                  size="s"
+                  checked={source === 'seed'}
+                  disabled={!canUseSeed}
+                  onChange={() => setSource('seed')}
+                />
+                <RadioButton
+                  name="generation-source"
+                  value="previous"
+                  label="Use previous image (the prompt modifies it)"
+                  size="s"
+                  checked={source === 'previous'}
+                  disabled={!canUsePrevious}
+                  onChange={() => setSource('previous')}
+                />
+              </fieldset>
+              <fieldset
+                className={classNames(
+                  moduleStyles.radioGroup,
+                  moduleStyles.temperatureGroup
+                )}
+                disabled={generating}
+              >
+                <legend id="temperature-label">Temperature</legend>
+                {/* A wink: choosing pixel-art style pixelates the bot too. */}
+                <TemperatureBot src={botImage} pixelated={style === 'pixel'} />
 
-              <Slider
-                name="temperature-slider"
-                aria-labelledby="temperature-label"
-                minValue={0}
-                maxValue={TEMPERATURE_LEVEL_MAX}
-                step={1}
-                value={temperatureLevel}
-                onChange={e => setTemperatureLevel(+e.target.value)}
-                hideValue={true}
-                color="aqua"
-                leftButtonProps={{
-                  children: (
-                    <FontAwesomeV6Icon
-                      iconName="minus"
-                      title="Lower temperature"
-                    />
-                  ),
-                  ['aria-label']: 'Lower temperature',
-                }}
-                rightButtonProps={{
-                  children: (
-                    <FontAwesomeV6Icon
-                      iconName="plus"
-                      title="Raise temperature"
-                    />
-                  ),
-                  ['aria-label']: 'Raise temperature',
-                }}
-              />
-            </fieldset>
-          </div>
+                <Slider
+                  name="temperature-slider"
+                  aria-labelledby="temperature-label"
+                  minValue={0}
+                  maxValue={TEMPERATURE_LEVEL_MAX}
+                  step={1}
+                  value={temperatureLevel}
+                  onChange={e => setTemperatureLevel(+e.target.value)}
+                  hideValue={true}
+                  color="aqua"
+                  leftButtonProps={{
+                    children: (
+                      <FontAwesomeV6Icon
+                        iconName="minus"
+                        title="Lower temperature"
+                      />
+                    ),
+                    ['aria-label']: 'Lower temperature',
+                  }}
+                  rightButtonProps={{
+                    children: (
+                      <FontAwesomeV6Icon
+                        iconName="plus"
+                        title="Raise temperature"
+                      />
+                    ),
+                    ['aria-label']: 'Raise temperature',
+                  }}
+                />
+              </fieldset>
+            </div>
+          )}
 
           {error && (
             <div aria-live="polite" className={moduleStyles.generateError}>
@@ -406,7 +456,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
             <DeleteImageButton onDelete={onDelete} />
           </div>
         )}
-        {create && onPaintManually && (
+        {advanced && create && onPaintManually && (
           <div className={moduleStyles.footerLeft}>
             <button
               type="button"
