@@ -35,10 +35,6 @@ export function camelize(snakeName) {
   return snakeName.replace(/_([a-z])/g, (_, letter) => letter.toUpperCase());
 }
 
-// True when the editor text changed while a save request was out —
-// "Saved." must not vouch for text that was never sent.
-let editedDuringSave = false;
-
 // Init fires one load and every save fires another; a stale response must
 // not overwrite a newer dump.
 let loadEpoch = 0;
@@ -72,12 +68,12 @@ function init() {
   // chrome, not the save path.
   try {
     initializeCodeMirror6('extra_properties_json', 'json', {
-      // Fires as the document changes; also what turns the lint gutter on.
-      // A stale "Saved." next to edited text would claim the edit is saved.
+      // Fires after document changes (debounced); also what turns the lint
+      // gutter on. A stale "Saved." next to edited text would claim the
+      // edit is saved. Lint passes for pre-save typing can land mid-save,
+      // so the edited-during-save signal is a text comparison, not this.
       onUpdateLinting: () => {
-        if (status.textContent === 'Saving…') {
-          editedDuringSave = true;
-        } else {
+        if (status.textContent !== 'Saving…') {
           status.textContent = '';
         }
       },
@@ -178,7 +174,7 @@ async function save(levelId, status) {
     return;
   }
   saveButton.disabled = true;
-  editedDuringSave = false;
+  const sentText = textarea.value;
   status.textContent = 'Saving…';
   try {
     await HttpClient.post(
@@ -202,7 +198,7 @@ async function save(levelId, status) {
         'the level is unpublished, so use "Save and publish" to get this into its .level file'
       );
     }
-    if (editedDuringSave) {
+    if (textarea.value !== sentText) {
       suffixes.push('the box has newer, unsaved edits');
     }
     status.textContent = suffixes.length
