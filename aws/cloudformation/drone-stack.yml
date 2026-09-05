@@ -576,3 +576,35 @@ Resources:
       Roles:
         - 'DroneWorker'
         - 'DroneServer'
+
+  # AWS Device Farm (Test Grid) access for UI test runners on DroneWorker.
+  # Scoped to Test Grid only — this is a Selenium/WebDriver replacement
+  # evaluation for Saucelabs and does not need mobile Device Farm actions.
+  DroneDeviceFarmPolicy:
+    Type: 'AWS::IAM::Policy'
+    Properties:
+      PolicyName: DroneDeviceFarmPolicy
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          # Resource-scoped actions: operate on a specific project or session.
+          - Effect: Allow
+            Action:
+              - 'devicefarm:CreateTestGridUrl'
+              - 'devicefarm:GetTestGridProject'
+              - 'devicefarm:GetTestGridSession'
+              - 'devicefarm:ListTestGridSessionActions'
+              - 'devicefarm:ListTestGridSessionArtifacts'
+              - 'devicefarm:ListTestGridSessions'
+              - 'devicefarm:StopTestGridSession'
+            Resource:
+              - !Sub 'arn:aws:devicefarm:*:${AWS::AccountId}:testgrid-project:*'
+              - !Sub 'arn:aws:devicefarm:*:${AWS::AccountId}:testgrid-session:*'
+          # List actions are not resource-scopable by AWS and must use "*".
+          - Effect: Allow
+            Action:
+              - 'devicefarm:ListTestGridProjects'
+            Resource: '*'
+      Roles:
+        - 'DroneWorker'
+
