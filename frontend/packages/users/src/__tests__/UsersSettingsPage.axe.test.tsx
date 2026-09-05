@@ -1,4 +1,4 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {fireEvent, render, screen, within} from '@testing-library/react';
 import {http, HttpResponse} from 'msw';
 import {afterEach, describe, expect, it} from 'vitest';
 import {axe} from 'vitest-axe';
@@ -16,13 +16,13 @@ import UsersSettingsPage from '../UsersSettingsPage';
 
 // Audit the whole document: MUI Dialogs portal to document.body, outside the
 // render container.
-function renderPage(tag: string) {
+function renderPage(tag: string, tab = 'account-details') {
   registerUsersFixtures();
   setActiveScenario({labKey: USERS_LAB_KEY, tag});
   const client = createQueryClient({queries: {retry: false}});
   render(
     <QueryClientProvider client={client}>
-      <UsersSettingsPage tab="account-details" onTabChange={() => {}} />
+      <UsersSettingsPage tab={tab} onTabChange={() => {}} />
     </QueryClientProvider>,
   );
 }
@@ -36,14 +36,51 @@ function auditBody() {
 afterEach(() => resetUsersFixtures());
 
 describe('UsersSettingsPage — accessibility', () => {
-  it.each(['teacher', 'student', 'sso-teacher', 'sso-student', 'minimal'])(
-    'has no axe violations on the loaded page (%s)',
+  it.each([
+    'teacher',
+    'student',
+    'sso-teacher',
+    'sso-student',
+    'minimal',
+    'teacher-no-school',
+  ])('has no axe violations on the loaded page (%s)', async tag => {
+    renderPage(tag);
+    await screen.findByRole('tablist');
+    expect(await auditBody()).toHaveNoViolations();
+  });
+
+  it.each(['teacher', 'teacher-no-school'])(
+    'has no axe violations on the Educator Profile tab (%s)',
     async tag => {
-      renderPage(tag);
-      await screen.findByRole('tablist');
+      renderPage(tag, 'educator-profile');
+      await screen.findByRole('heading', {level: 2, name: 'Role'});
       expect(await auditBody()).toHaveNoViolations();
     },
   );
+
+  it('has no axe violations with the update-school dialog open', async () => {
+    renderPage('teacher-no-school', 'educator-profile');
+    await screen.findByRole('heading', {level: 2, name: 'Role'});
+    fireEvent.click(screen.getByRole('button', {name: 'Update my school'}));
+    await screen.findByRole('dialog', {
+      name: 'Update your school information',
+    });
+    expect(await auditBody()).toHaveNoViolations();
+  });
+
+  it('has no axe violations with the update-school dialog on the US school list', async () => {
+    renderPage('teacher', 'educator-profile');
+    await screen.findByRole('heading', {level: 2, name: 'Role'});
+    fireEvent.click(screen.getByRole('button', {name: 'Update my school'}));
+    const dialog = await screen.findByRole('dialog', {
+      name: 'Update your school information',
+    });
+    fireEvent.change(within(dialog).getByRole('textbox', {name: /zip code/i}), {
+      target: {value: '98101'},
+    });
+    await within(dialog).findByRole('option', {name: 'Example Middle School'});
+    expect(await auditBody()).toHaveNoViolations();
+  });
 
   it('has no axe violations with the dirty save bar shown', async () => {
     renderPage('teacher');
