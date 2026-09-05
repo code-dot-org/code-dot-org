@@ -1,9 +1,10 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import RadioButton from '@code-dot-org/component-library/radioButton';
 import Slider from '@code-dot-org/component-library/slider';
 import TextField from '@code-dot-org/component-library/textField';
 import classNames from 'classnames';
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import aiBot0 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-0.png';
 import aiBot1 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-1.png';
@@ -13,6 +14,11 @@ import aiBotGenerating0 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generatin
 import aiBotGenerating1 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generating-1.png';
 import aiBotGenerating2 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generating-2.png';
 
+import {
+  CHARACTER_SET_PICTURE_COUNT,
+  CharacterSetProgress,
+  generateCharacterSet,
+} from '../ai/images/characterSet';
 import {
   GeneratedImageResult,
   generateImage,
@@ -26,12 +32,14 @@ import {
   ImageStyle,
   ImageType,
 } from '../ai/images/types';
+import {AnimationPoses} from '../characterAnimations';
 import {
   IMAGE_NAME_MAX_LENGTH,
   nextImageName,
   sanitizeImageName,
 } from '../imageReferences';
 
+import AnimatedSheetPreview from './AnimatedSheetPreview';
 import DeleteImageButton from './DeleteImageButton';
 import ImagePaneButton from './ImagePaneButton';
 import TemperatureBot from './TemperatureBot';
@@ -52,6 +60,10 @@ const TEMPERATURE_LEVEL_MAX = 10;
 const TEMPERATURE_LEVEL_DEFAULT = 5;
 const levelToTemperature = (level: number) =>
   (level / TEMPERATURE_LEVEL_MAX) * 2;
+// Where the slider goes when a character set is asked for: every posed
+// frame must agree with the base, so less wildness. Level 3 is a
+// temperature of 0.6, the setting a good live run used.
+const CHARACTER_SET_TEMPERATURE_LEVEL = 3;
 
 // The input is the only bound on prompt length: prompts persist verbatim
 // into each image's generation metadata and travel in every request.
@@ -85,6 +97,12 @@ interface GenerateImageViewProps {
   };
   /** The image's current pixels, shown on the left while prompting. */
   thumb?: string;
+  /** An existing character set's sheet, shown playing instead of `thumb`. */
+  sheet?: {
+    src: string;
+    frameSize: {x: number; y: number};
+    poses: AnimationPoses;
+  };
   /** The image is pixel art: the pane upscales it with hard edges. */
   thumbPixelated?: boolean;
   /** Set when creating a brand-new image. */
@@ -129,6 +147,7 @@ interface GenerateImageViewProps {
 const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   existing,
   thumb,
+  sheet,
   thumbPixelated,
   create,
   lockedImageType,
@@ -151,11 +170,23 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   const [style, setStyle] = useState<ImageStyle>(
     existing?.generation?.style || create?.initial?.style || 'smooth'
   );
+  // Calm when the set checkbox starts checked (posed frames must agree
+  // with the base), as checking it by hand also sets.
   const [temperatureLevel, setTemperatureLevel] = useState(
-    TEMPERATURE_LEVEL_DEFAULT
+    sheet ? CHARACTER_SET_TEMPERATURE_LEVEL : TEMPERATURE_LEVEL_DEFAULT
   );
   const [source, setSource] = useState<RandomnessSource>('new');
   const [error, setError] = useState<string | null>(null);
+  // A whole character — idling, walking, jumping — instead of one picture.
+  // Pre-checked when the image already is one: regenerating a character
+  // should keep it a character unless the student unchecks it.
+  const [characterSet, setCharacterSet] = useState(!!sheet);
+  const [progress, setProgress] = useState<CharacterSetProgress | null>(null);
+  // Counts generate runs; progress callbacks from older runs are dropped.
+  const progressEpochRef = useRef(0);
+  // Sets are drawn from a fresh base, so the offer follows the 'new' source.
+  const canMakeSet = imageType === 'sprite' && source === 'new';
+  const makingSet = canMakeSet && characterSet;
 
   // Flag a duplicate as it's typed and hold the buttons until it's unique.
   // The student form has no name field, so the name never holds it back.
@@ -190,6 +221,10 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
     onGenerateStart?.();
     setMode('generating');
     setError(null);
+    // Progress from a superseded run must not paint over this one's: a set
+    // abandoned to its error handler can still call back.
+    const epoch = ++progressEpochRef.current;
+    setProgress(null);
     try {
       const options: GenerateImageOptions = {
         imageType,
@@ -206,12 +241,30 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
         }
         options.inputImageDataURI = dataURI;
       }
+      if (makingSet) {
+        const result = await generateCharacterSet(
+          prompt.trim(),
+          {style, temperature: options.temperature},
+          p => {
+            if (epoch === progressEpochRef.current) {
+              setProgress(p);
+            }
+          }
+        );
+        await onAccept(result, create ? newImageName() : undefined);
+        return;
+      }
       const result = await generateImage(prompt.trim(), options);
       // Apply immediately; the caller flips back to the summary view.
       await onAccept(result, create ? newImageName() : undefined);
     } catch {
-      setError("Couldn't generate the image. Try again.");
+      setError(
+        makingSet
+          ? "Couldn't finish the character. Try again."
+          : "Couldn't generate the image. Try again."
+      );
       setMode('prompt');
+      setProgress(null);
     }
   }, [
     prompt,
@@ -225,6 +278,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
     newImageName,
     onGenerateStart,
     onAccept,
+    makingSet,
   ]);
 
   const botImage =
@@ -244,9 +298,20 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   return (
     <>
       <div className={moduleStyles.body}>
-        {/* The student form's blank pane is itself the way into the paint
-            editor; its footer keeps just Cancel/Generate. */}
-        {!advanced && create && onPaintManually ? (
+        {generating && progress?.preview ? (
+          // The latest frame of the set as it comes in — also in the student
+          // form, where the pane is otherwise the paint button.
+          <div
+            className={classNames(
+              moduleStyles.imagePane,
+              moduleStyles.imagePaneChecker
+            )}
+          >
+            <img src={progress.preview} alt="" />
+          </div>
+        ) : !advanced && create && onPaintManually ? (
+          /* The student form's blank pane is itself the way into the paint
+             editor; its footer keeps just Cancel/Generate. */
           <ImagePaneButton
             iconName="paintbrush"
             label="Paint manually"
@@ -259,10 +324,12 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
           <div
             className={classNames(
               moduleStyles.imagePane,
-              thumb && moduleStyles.imagePaneChecker
+              (thumb || sheet) && moduleStyles.imagePaneChecker
             )}
           >
-            {thumb ? (
+            {sheet ? (
+              <AnimatedSheetPreview {...sheet} />
+            ) : thumb ? (
               <img
                 src={thumb}
                 alt=""
@@ -361,6 +428,31 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
             </div>
           </div>
 
+          {/* In both forms: making animated characters is the student
+              feature. Checking it still calms the temperature the student
+              form doesn't show — the state drives the request either way. */}
+          {canMakeSet && (
+            <div className={moduleStyles.formRow}>
+              <Checkbox
+                name="character-set"
+                label={
+                  advanced
+                    ? `Make a character set: idling, walking and jumping (${CHARACTER_SET_PICTURE_COUNT} pictures; takes a minute)`
+                    : 'Generate animation'
+                }
+                size="s"
+                checked={characterSet}
+                disabled={generating}
+                onChange={e => {
+                  setCharacterSet(e.target.checked);
+                  if (e.target.checked) {
+                    setTemperatureLevel(CHARACTER_SET_TEMPERATURE_LEVEL);
+                  }
+                }}
+              />
+            </div>
+          )}
+
           {advanced && (
             <div className={moduleStyles.formRow}>
               <fieldset
@@ -445,6 +537,18 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
           {error && (
             <div aria-live="polite" className={moduleStyles.generateError}>
               {error}
+            </div>
+          )}
+          {generating && progress && (
+            <div aria-live="polite" className={moduleStyles.generateProgress}>
+              {!advanced
+                ? // The step in progress; assembly counts as the last step.
+                  `Step ${Math.min(progress.done + 1, progress.total)} of ${
+                    progress.total
+                  }`
+                : progress.done < progress.total
+                ? `Drew ${progress.done} of ${progress.total} (${progress.label})…`
+                : 'Putting the frames together…'}
             </div>
           )}
         </div>

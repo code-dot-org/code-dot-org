@@ -53,6 +53,7 @@
 }
 
 .imagePane {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,10 +73,39 @@
     object-fit: contain;
   }
 
+  // The sheet preview's canvas holds one full-resolution frame scaled to
+  // the pane; hard edges keep crisp frames crisp on the way down.
+  canvas {
+    max-width: 100%;
+    max-height: 100%;
+    image-rendering: pixelated;
+  }
+
   // Only pixel art wants hard edges on that upscale; smooth art keeps its
   // anti-aliasing.
   img.pixelArt {
     image-rendering: pixelated;
+  }
+
+  // A character set plays one pose at a time at full size (the canvas takes
+  // the pane's own img/canvas sizing), named in the pane's top left corner.
+  .sheetPreview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    inset: 0;
+  }
+
+  .sheetPreviewCaption {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: rgb(0 0 0 / 45%);
+    color: #fff;
+    font-size: 13px;
   }
 }
 
@@ -422,4 +452,9 @@
 .dialogHost .nameRow .nameField input[aria-invalid='true'],
 .dialogHost .header .headerNameField input[aria-invalid='true'] {
   border-color: var(--borders-error-primary);
+}
+
+.generateProgress {
+  font-size: 13px;
+  opacity: 0.8;
 }

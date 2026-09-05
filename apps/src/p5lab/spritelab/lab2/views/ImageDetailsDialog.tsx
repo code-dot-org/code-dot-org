@@ -12,8 +12,10 @@ import {
   ImageGenerationMetadata,
   ImageType,
 } from '../ai/images/types';
+import {AnimationPoses} from '../characterAnimations';
 import {IMAGE_NAME_MAX_LENGTH, sanitizeImageName} from '../imageReferences';
 
+import AnimatedSheetPreview from './AnimatedSheetPreview';
 import DeleteImageButton from './DeleteImageButton';
 import GenerateImageView, {NewImageDraft} from './GenerateImageView';
 import ImagePaneButton from './ImagePaneButton';
@@ -26,6 +28,15 @@ interface ImageDetailsDialogProps {
   animKey: string | null;
   name?: string;
   thumb?: string;
+  /**
+   * Set for a character set: its sheet, shown playing. Sets are not
+   * painted (the editor would see one frame of many).
+   */
+  sheet?: {
+    src: string;
+    frameSize: {x: number; y: number};
+    poses: AnimationPoses;
+  };
   generation?: ImageGenerationMetadata;
   onClose: () => void;
   /** Open the paint editor on this image. */
@@ -41,6 +52,8 @@ interface ImageDetailsDialogProps {
   imageType?: ImageType;
   /** Level-imposed type for new images. */
   lockedImageType?: ImageType;
+  /** This session replaced the image it opened on (closing keeps that). */
+  imageChanged?: boolean;
   /** Show the full internal dialog — the image's name (and renaming),
       Start from, temperature. The default is the student version. */
   advanced?: boolean;
@@ -82,6 +95,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   animKey,
   name,
   thumb,
+  sheet,
   generation,
   onClose,
   onPaint,
@@ -91,6 +105,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   onDelete,
   imageType,
   lockedImageType,
+  imageChanged,
   advanced,
   pixelated,
   getDataURI,
@@ -253,6 +268,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                   }
             }
             thumb={isNew ? undefined : thumb}
+            sheet={isNew ? undefined : sheet}
             thumbPixelated={pixelated}
             create={isNew ? {isNameTaken, initial: newImageDraft} : undefined}
             lockedImageType={lockedImageType}
@@ -270,13 +286,26 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
         ) : (
           <>
             <div className={moduleStyles.body}>
-              <ImagePaneButton
-                thumb={thumb}
-                pixelated={pixelated}
-                iconName="pen"
-                label="Edit with paint tools"
-                onClick={onPaint}
-              />
+              {/* A set is not painted (the editor would see one frame of
+                  many), so its pane is a preview, not the paint button. */}
+              {sheet ? (
+                <div
+                  className={classNames(
+                    moduleStyles.imagePane,
+                    moduleStyles.imagePaneChecker
+                  )}
+                >
+                  <AnimatedSheetPreview {...sheet} />
+                </div>
+              ) : (
+                <ImagePaneButton
+                  thumb={thumb}
+                  pixelated={pixelated}
+                  iconName="pen"
+                  label="Edit with paint tools"
+                  onClick={onPaint}
+                />
+              )}
               <div className={moduleStyles.detailsPane}>
                 {generation && (
                   <dl className={moduleStyles.metadata}>
@@ -286,7 +315,11 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                       {generation.prompt}
                     </dd>
                     <dt>Type</dt>
-                    <dd>{IMAGE_TYPE_LABELS[generation.imageType]}</dd>
+                    <dd>
+                      {sheet
+                        ? 'Sprite (animated)'
+                        : IMAGE_TYPE_LABELS[generation.imageType]}
+                    </dd>
                     <dt>Style</dt>
                     <dd>{IMAGE_STYLE_LABELS[generation.style]}</dd>
                     {advanced && generation.temperature !== undefined && (
@@ -340,7 +373,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                 className={moduleStyles.primaryButton}
                 onClick={onClose}
               >
-                Done
+                {imageChanged ? 'Accept' : 'Done'}
               </button>
             </div>
           </>

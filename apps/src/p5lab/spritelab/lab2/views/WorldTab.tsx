@@ -7,6 +7,7 @@ import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {getTrimmedThumbnail, onTrimsUpdated} from '../imageTrim';
 import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
 import {createEmptyWorld, World, WorldCell} from '../world';
 
@@ -193,6 +194,11 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   onSelect,
 }) => {
   const animationList = useAppSelector(state => state.animationList);
+  // Thumbnails prefer the engine's trimmed image (a sprite sheet's is its
+  // first frame; the raw sheet would show every frame side by side). Trims
+  // land as the engine preloads; re-render when they do.
+  const [trimVersion, setTrimVersion] = useState(0);
+  useEffect(() => onTrimsUpdated(() => setTrimVersion(v => v + 1)), []);
   const palette: PaletteItem[] = useMemo(
     () =>
       animationList.orderedKeys
@@ -203,9 +209,11 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
           kind: props.categories?.includes(BLOCKS_CATEGORY)
             ? ('block' as const)
             : ('sprite' as const),
-          thumb: props.dataURI || props.sourceUrl,
+          thumb:
+            getTrimmedThumbnail(props.name) || props.dataURI || props.sourceUrl,
         })),
-    [animationList]
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [animationList, trimVersion]
   );
   const thumbsByImage = useMemo(
     () => new Map(palette.map(item => [item.image, item.thumb])),

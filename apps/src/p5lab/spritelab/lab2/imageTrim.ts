@@ -17,7 +17,10 @@ const ALPHA_THRESHOLD = 32;
 export function findOpaqueBounds(
   data: Uint8ClampedArray,
   width: number,
-  height: number
+  height: number,
+  // Pixels more opaque than this count as content; the default keeps
+  // anything visible at all.
+  alphaThreshold: number = ALPHA_THRESHOLD
 ): {left: number; top: number; right: number; bottom: number} | null {
   let left = width;
   let top = height;
@@ -25,7 +28,7 @@ export function findOpaqueBounds(
   let bottom = -1;
   for (let y = 0; y < height; y++) {
     for (let x = 0; x < width; x++) {
-      if (data[(y * width + x) * 4 + 3] > ALPHA_THRESHOLD) {
+      if (data[(y * width + x) * 4 + 3] > alphaThreshold) {
         if (x < left) {
           left = x;
         }
@@ -46,6 +49,7 @@ export function findOpaqueBounds(
 
 // Trimming is deterministic; cache by source so re-runs don't redo the work.
 const trimCache = new Map<string, Promise<string>>();
+const frameThumbCache = new Map<string, Promise<string>>();
 
 // Trimmed image per costume name, for the block image fields (dropdown
 // thumbnails). Populated as animation lists get trimmed for preload.
@@ -142,8 +146,54 @@ export function loadedAnimations(
 }
 
 /**
+ * The first frame of a sprite sheet as a dataURI, for thumbnails. Cached by
+ * source like the trims.
+ */
+function firstFrameThumbnail(
+  source: string,
+  frameSize: {x: number; y: number}
+): Promise<string> {
+  let cached = frameThumbCache.get(source);
+  if (!cached) {
+    cached = new Promise<string>(resolve => {
+      const img = new Image();
+      img.onload = () => {
+        try {
+          const canvas = document.createElement('canvas');
+          canvas.width = frameSize.x;
+          canvas.height = frameSize.y;
+          canvas
+            .getContext('2d')
+            ?.drawImage(
+              img,
+              0,
+              0,
+              frameSize.x,
+              frameSize.y,
+              0,
+              0,
+              frameSize.x,
+              frameSize.y
+            );
+          resolve(canvas.toDataURL('image/png'));
+        } catch (e) {
+          resolve(source);
+        }
+      };
+      img.onerror = () => resolve(source);
+      img.src = source;
+    });
+    frameThumbCache.set(source, cached);
+  }
+  return cached;
+}
+
+/**
  * Return a copy of a serialized animation list whose costume dataURIs are
  * border-trimmed. Backgrounds are left alone (they should fill the canvas).
+ * So are sprite sheets: their frame grid is their geometry, and trimming
+ * the sheet's border would shift every frame off it — their thumbnail is
+ * their first frame instead.
  */
 export async function trimAnimationListImages(
   list: RuntimeAnimationList
@@ -174,12 +224,15 @@ export async function trimAnimationListImages(
         propsByKey[key] = props;
         return;
       }
-      const trimmed = await trimTransparentBorder(props.dataURI);
+      const isSheet = props.frameCount > 1 && !!props.frameSize;
+      const trimmed = isSheet
+        ? await firstFrameThumbnail(props.dataURI, props.frameSize)
+        : await trimTransparentBorder(props.dataURI);
       if (props.name && trimmedByName.get(props.name) !== trimmed) {
         trimmedByName.set(props.name, trimmed);
         newTrims = true;
       }
-      propsByKey[key] = {...props, dataURI: trimmed};
+      propsByKey[key] = isSheet ? props : {...props, dataURI: trimmed};
     })
   );
   if (newTrims) {

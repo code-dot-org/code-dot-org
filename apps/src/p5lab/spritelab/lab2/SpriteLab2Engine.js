@@ -16,10 +16,20 @@ import {
   stepZoom,
   worldPoint,
 } from './camera';
+import {
+  isMoving,
+  jumpFrame,
+  nextFacing,
+  pickPose,
+  poseFrame,
+  posesByImageName,
+  teeterTicks,
+} from './characterAnimations';
 import {loadedAnimations, trimAnimationListImages} from './imageTrim';
 import {
   CONTACT_EPSILON,
   hasSupportAhead,
+  isAtEdge,
   isSupported,
   PATROLLER_WEIGHTLESS_GRAVITY,
   PLATFORM_GRAVITY,
@@ -673,6 +683,8 @@ export default class SpriteLab2Engine extends SpriteLab {
   }
 
   // Base preloadSpriteImages_ with costume border-trimming (imageTrim.ts).
+  // Only images that have loaded are handed to p5: preloading an image with
+  // no data logs an error per image and adds nothing.
   async preloadTrimmedSpriteImages_() {
     await this.whenAnimationsAreReadyOrGivenUp_();
     return this.preloadTrimmedImages_(getStore().getState().animationList);
@@ -687,7 +699,8 @@ export default class SpriteLab2Engine extends SpriteLab {
       this.clearLateImagesWatch_();
     }
     return this.p5Wrapper.preloadSpriteImages(
-      loadedAnimations(await trimAnimationListImages(animationList))
+      loadedAnimations(await trimAnimationListImages(animationList)),
+      {multiFrame: true}
     );
   }
 
@@ -858,12 +871,145 @@ export default class SpriteLab2Engine extends SpriteLab {
         this.resolvePlatformPhysics_();
       }
       this.physicsResolvedThisFrame_ = false;
+      this.updateCharacterAnimations_();
       return paint(...args);
     };
   }
 
+  // Colliders here multiply width/height by `scale`, expecting them UNSCALED,
+  // but a frame change on a multi-frame sheet makes p5.play re-sync them
+  // pre-scaled (Sprite._syncAnimationSizes) — double-scaled bodies sink into
+  // platforms. Put the unscaled sizes back before anything measures them.
+  unscaleSheetSpriteSizes_() {
+    if (!this.library) {
+      return;
+    }
+    Object.values(this.library.nativeSpriteMap).forEach(sprite => {
+      const animation = sprite.animation;
+      if (animation && animation.images.length > 1) {
+        sprite._internalWidth = animation.getWidth();
+        sprite._internalHeight = animation.getHeight();
+      }
+    });
+  }
+
+  /**
+   * Character sets (characterAnimations.ts): once the physics has settled
+   * every sprite for this frame, a sprite wearing a set's sheet shows the
+   * frame for how it moved — walking when it moved sideways, jumping while a
+   * player is off its footing, standing otherwise — facing the way it last
+   * moved. The sheet holds every pose, so this drives the frame index
+   * itself (p5.play would run the whole sheet end to end) and the sprite
+   * never changes costume. A player that stops with its toes over a drop
+   * holds back from the edge: the jump pose's first frame for a moment,
+   * then standing; moving again re-arms it. Only players can be airborne: patrollers and
+   * props ride the stock resolver and would read as jumping at every seam.
+   */
+  updateCharacterAnimations_() {
+    const p5 = this.p5Wrapper.p5;
+    const library = this.library;
+    if (!p5 || !library) {
+      return;
+    }
+    const list =
+      this.preloadAnimationsOverride || getStore().getState().animationList;
+    if (this.posesSource_ !== list) {
+      this.posesSource_ = list;
+      this.posesByName_ = posesByImageName(list);
+    }
+    if (!this.posesByName_.size) {
+      return;
+    }
+    const walls = this.wallsThisFrame_(library);
+    const view = {width: p5.width, height: p5.height};
+    Object.values(library.nativeSpriteMap).forEach(sprite => {
+      const poses = this.posesByName_.get(sprite.getAnimationLabel());
+      const animation = sprite.animation;
+      if (!poses || !animation) {
+        return;
+      }
+      const state =
+        sprite.characterState ||
+        (sprite.characterState = {
+          x: sprite.position.x,
+          facing: 'right',
+          key: null,
+          tick: 0,
+          moving: false,
+          teetering: false,
+        });
+      const dx = sprite.position.x - state.x;
+      state.x = sprite.position.x;
+      state.facing = nextFacing(state.facing, dx);
+      const moving = isMoving(dx);
+      const player = this.usesPlatformPhysics_ && sprite.group === 'players';
+      const airborne =
+        player && !isSupported(sprite, walls, view, this.platformGravity_);
+      if (moving || airborne) {
+        state.teetering = false;
+      } else if (
+        state.moving &&
+        player &&
+        isAtEdge(
+          sprite,
+          walls,
+          view,
+          state.facing === 'right' ? 1 : -1,
+          this.platformGravity_
+        )
+      ) {
+        state.teetering = true;
+      }
+      state.moving = moving;
+      const pick = pickPose(poses, {
+        moving,
+        airborne,
+        teetering: state.teetering,
+        facing: state.facing,
+      });
+      if (!pick) {
+        return;
+      }
+      if (pick.key !== state.key) {
+        state.key = pick.key;
+        state.tick = 0;
+      }
+      // Frames drawn facing the other way are shown mirrored; a set drawn
+      // facing right only turns left this way.
+      sprite.mirrorX(pick.facing === state.facing ? 1 : -1);
+      // Ours to drive; p5.play must not advance it.
+      animation.stop();
+      let frame;
+      if (pick.pose === 'jump' && airborne) {
+        frame =
+          pick.range.start +
+          Math.min(
+            jumpFrame(sprite.velocity.y, this.platformGravity_),
+            pick.range.count - 1
+          );
+      } else if (pick.pose === 'jump') {
+        // Teetering: the falling frame, legs loose over the drop.
+        frame = pick.range.start + pick.range.count - 1;
+        if (state.tick + 1 >= teeterTicks(pick.range)) {
+          state.teetering = false;
+        }
+      } else {
+        frame = poseFrame(pick.range, state.tick);
+        // A set without jump frames has nothing to hold back with.
+        state.teetering = false;
+      }
+      animation.changeFrame(frame);
+      state.tick++;
+    });
+  }
+
   onP5Draw() {
     this.wrapDrawSpritesOnce_();
+    // Before the behaviors and events run: p5.play's pre-draw update is
+    // where the sizes go wrong, and a patrol behavior probing its footing
+    // with a 4px-tall sprite reads "airborne" and never checks for the
+    // edge of its platform.
+    this.unscaleSheetSpriteSizes_();
     super.onP5Draw();
   }
 
