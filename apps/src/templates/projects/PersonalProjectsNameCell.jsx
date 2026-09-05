@@ -1,10 +1,12 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Link from '@code-dot-org/component-library/link';
+import TextField from '@code-dot-org/component-library/textField';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import {showFrozenProjectInfoDialog} from '@cdo/apps/templates/projects/frozenProjectInfoDialog/frozenProjectInfoDialogRedux';
+import i18n from '@cdo/locale';
 
 import {updateProjectName} from './projectsRedux';
 
@@ -71,8 +73,10 @@ class PersonalProjectsNameCell extends Component {
         )}
         {isEditing && (
           <div>
-            <input
+            <TextField
               required
+              size="s"
+              aria-label={i18n.projectName()}
               className={moduleStyles.inputBox}
               value={updatedName}
               onChange={this.onChangeName}
