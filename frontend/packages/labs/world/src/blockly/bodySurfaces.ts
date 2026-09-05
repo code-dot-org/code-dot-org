@@ -215,17 +215,19 @@ export interface BodySeam {
 /**
  * Whether the EDITOR hides a body, as opposed to whether it can.
  *
- * OFF until there is a way to open one. The split works — `solid.rule` opens
- * with fourteen blocks rather than four hundred and seventy-three, driven in
- * a browser — but a `define block` whose `do` is empty and whose
- * implementation has no door reads as a broken rule, which is worse than a
- * long workspace.
+ * ON: `solid.rule` opens with fourteen blocks rather than four hundred and
+ * seventy-three, and the pencil on each `define …` opens the rest. The first
+ * attempt turned this on before the pencil existed, which left a `define
+ * block` whose `do` was empty and had no door — a broken-looking rule, worse
+ * than a long workspace. The button is what earns the flag.
  *
  * Read by `BlocklyFileEditor` and by nothing here: a seam that sometimes did
  * not split would be a seam whose `read` puts stale bodies back over live
- * ones. Off, the editor bypasses it entirely; on, it is one line.
+ * ones. Off, the editor bypasses it entirely; on, it is one line. It stays a
+ * flag because the surfaces are new and turning them off is a one-word
+ * revert.
  */
-export const HIDE_BODIES = false;
+export const HIDE_BODIES = true;
 
 export function createBodySeam(): BodySeam {
   let bodies: Bodies = {};

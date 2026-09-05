@@ -59,6 +59,7 @@ import styles from './blocklyFileEditor.module.css';
 import {createBodySeam, HIDE_BODIES} from './bodySurfaces';
 import {buildDomainPalette} from './domainBlocks';
 import {setEditingActor, setEditingFile, setEditingRule} from './editingRule';
+import {setBodyOpener} from './extensions/bodyButton';
 import {refreshMissingRuleWarnings} from './extensions/missingRule';
 import {fileKindOf} from './fileKind';
 import {registerLessonButtons} from './lessonFlyoutButton';
@@ -636,6 +637,49 @@ export const BlocklyFileEditor = ({
     [seam],
   );
 
+  /**
+   * The member whose body is on screen, if one is.
+   *
+   * ONE workspace, loaded in place — the same thing the rename and epoch
+   * effects below do, with events off. Re-keying the `BlocklyWorkspace` to
+   * swap `startBlocks` was the first attempt and the body came up empty;
+   * loading is what this file already knows how to do.
+   */
+  const [editing, setEditing] = useState<{id: string; label: string} | null>(
+    null,
+  );
+  /** The interface, held while a body has its place. */
+  const interfaceRef = useRef<BlocklySerialization | null>(null);
+  /** Which surface the workspace is actually showing. */
+  const surfaceRef = useRef<string | null>(null);
+
+  /** What the pencil on a `define …` block does. */
+  const openBody = useCallback((blockId: string) => {
+    const workspace = workspaceRef.current;
+    if (!workspace) {
+      return;
+    }
+    // Saved, not re-read from the file: the learner may have renamed a
+    // property since, and going back should show what they left.
+    interfaceRef.current = Blockly.serialization.workspaces.save(
+      workspace,
+    ) as BlocklySerialization;
+    setEditing({
+      id: blockId,
+      label: workspace.getBlockById(blockId)?.getFieldValue('NAME') || 'this',
+    });
+  }, []);
+
+  const closeBody = useCallback(() => setEditing(null), []);
+
+  // A Blockly field has no route to React state, so the editor installs
+  // itself while it is mounted — `setModuleOpener` and `setLessonOpener` are
+  // the same arrangement.
+  useEffect(() => {
+    setBodyOpener(openBody);
+    return () => setBodyOpener(null);
+  }, [openBody]);
+
   /** Show a whole document: keep its bodies, render its interface. */
   const showFile = useCallback(
     (document: BlocklySerialization, workspace: Blockly.WorkspaceSvg) => {
@@ -839,6 +883,30 @@ export const BlocklyFileEditor = ({
         }
         return;
       }
+      // A BODY's edits are not the file's. The workspace holds one member's
+      // implementation, so what it saves is that body — put back in the seam,
+      // and the file is the interface this editor set aside, merged with it.
+      //
+      // Safe against the empty surface that broke the first attempt: the swap
+      // above loads with events off, so nothing arrives here until a person
+      // has done something, and `surfaceRef` says which surface they did it
+      // on.
+      if (editing && surfaceRef.current === editing.id) {
+        if (event.isUiEvent) {
+          return;
+        }
+        seam.setBody(
+          editing.id,
+          Blockly.serialization.workspaces.save(
+            workspace,
+          ) as BlocklySerialization,
+        );
+        const held = interfaceRef.current;
+        if (held && !isReadOnly) {
+          onChangeRef.current(JSON.stringify(seam.read(held), null, 2));
+        }
+        return;
+      }
       // Ignore pure UI events (selection, viewport) — only persist real edits,
       // except a mutator bubble closing, which commits a signature.
       const bubble = bubbleToggle(event);
@@ -883,7 +951,11 @@ export const BlocklyFileEditor = ({
       }
       onChangeRef.current(contents);
     },
-    [handleRename, reconcileMembers],
+    // `editing` among them, and it is not optional: without it this closure
+    // keeps the value it had when the editor mounted — null — and a body's
+    // edits fall through to the path that writes the whole file, which for a
+    // workspace holding one implementation is not the file at all.
+    [handleRename, reconcileMembers, editing, seam, isReadOnly, readFile],
   );
 
   // The eye on a `use rule` / `use trait` block, and what it does. The handler
@@ -967,6 +1039,40 @@ export const BlocklyFileEditor = ({
     workspace.scroll(scrollX, scrollY);
   }, [blocks, showFile]);
 
+  // Swap the surface, and keep it swapped.
+  //
+  // NOT one-shot on `editing` changing. `BlocklyWorkspace` re-seeds itself
+  // from `startBlocks` when its `blocks` prop changes, and `blocks` is
+  // rebuilt whenever the project's files change — which a body's own edit
+  // does. So the interface reappeared underneath an open body, and the next
+  // edit stored THAT as the body. This runs on `blocks` too and asks the
+  // workspace what it is actually showing.
+  //
+  // The question it asks: a member's block lives on the interface and never
+  // inside its own body, so finding it means the interface is up.
+  useEffect(() => {
+    const workspace = workspaceRef.current;
+    if (!workspace) {
+      return;
+    }
+    const want = editing?.id ?? null;
+    const showingInterface = Boolean(want && workspace.getBlockById(want));
+    if (surfaceRef.current === want && !showingInterface) {
+      return;
+    }
+    surfaceRef.current = want;
+    const document = editing
+      ? seam.bodyOf(editing.id)
+      : (interfaceRef.current ?? startBlocks);
+    Blockly.Events.disable();
+    try {
+      Blockly.serialization.workspaces.load(document, workspace);
+    } finally {
+      Blockly.Events.enable();
+    }
+    refreshActorPictures(workspace);
+  }, [editing, blocks, seam, startBlocks]);
+
   /**
    * Re-seed when the lab is handed a different document.
    *
@@ -1045,6 +1151,17 @@ export const BlocklyFileEditor = ({
           }}
           onCancel={() => finishPick(undefined)}
         />
+      )}
+      {editing && (
+        // The body has the workspace's place; this says whose it is and how
+        // to get back. A header rather than a modal's chrome, because the
+        // pane is the same pane and what changed is what is in it.
+        <div className={styles.bodyHeader}>
+          <button type="button" className={styles.bodyBack} onClick={closeBody}>
+            ← Back
+          </button>
+          <span className={styles.bodyTitle}>{editing.label}</span>
+        </div>
       )}
       <BlocklyProvider blocks={blocks} plugins={plugins} theme={theme}>
         <BlocklyWorkspace

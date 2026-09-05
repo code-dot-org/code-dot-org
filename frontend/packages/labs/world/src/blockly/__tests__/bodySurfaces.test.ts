@@ -351,3 +351,127 @@ describe('opening one member’s body', () => {
     expect(rootsOf(seam.bodyOf('nobody'))).toEqual([]);
   });
 });
+
+describe('editing one body and writing the file', () => {
+  // THE REGRESSION. The editor stored an edited body, wrote the file, and the
+  // file came back carrying the ORIGINAL body — 473 blocks where 472 was
+  // right. Storing and writing are two calls with the interface held in
+  // between, and only the pair is worth testing: `setBody` alone looked
+  // correct the whole time it was broken.
+  //
+  // The other half is the one that looked fine: a write that lost every body
+  // EXCEPT the edited one would satisfy any check aimed at the edit.
+
+  /** The block with this id, wherever it sits. */
+  const findById = (document: unknown, id: string): Saved | undefined => {
+    const walk = (block: Saved): Saved | undefined => {
+      if (block.id === id) {
+        return block;
+      }
+      for (const socket of Object.values(block.inputs ?? {})) {
+        const hit = socket.block && walk(socket.block);
+        if (hit) {
+          return hit;
+        }
+      }
+      return block.next?.block ? walk(block.next.block) : undefined;
+    };
+    for (const root of rootsOf(document)) {
+      const hit = walk(root);
+      if (hit) {
+        return hit;
+      }
+    }
+    return undefined;
+  };
+
+  /** What that block runs, whichever of the two places holds it. */
+  const bodyIn = (document: unknown, id: string): unknown => {
+    const block = findById(document, id);
+    return block?.inputs?.DO?.block ?? block?.next?.block;
+  };
+
+  const solidDocument = () =>
+    JSON.parse(STOCK_RULES.find(rule => rule.id === 'solid')!.contents);
+
+  /** Every block the split took a body from. */
+  const owners = (shown: unknown): string[] => {
+    const found: string[] = [];
+    const walk = (block: Saved): void => {
+      if (block.id && hasBody(block.type)) {
+        found.push(block.id);
+      }
+      for (const socket of Object.values(block.inputs ?? {})) {
+        if (socket.block) {
+          walk(socket.block);
+        }
+      }
+      if (block.next?.block) {
+        walk(block.next.block);
+      }
+    };
+    rootsOf(shown).forEach(walk);
+    return found;
+  };
+
+  it('puts the edit in the file and leaves every other body whole', () => {
+    const solid = solidDocument();
+    const seam = createBodySeam();
+    // What the editor holds while a body is open: the interface, saved.
+    const held = seam.show(solid);
+    const ids = owners(held);
+    expect(ids.length).toBeGreaterThan(1);
+
+    const [edited, ...untouched] = ids;
+    const before = Object.fromEntries(
+      untouched.map(id => [id, rootsOf(seam.bodyOf(id))[0]]),
+    );
+
+    seam.setBody(edited, doc(statement('what the learner left')));
+    const file = seam.read(held);
+
+    expect(bodyIn(file, edited)).toMatchObject({
+      fields: {TEXT: 'what the learner left'},
+    });
+    for (const id of untouched) {
+      expect(bodyIn(file, id), id).toEqual(before[id]);
+    }
+  });
+
+  it('writes a file the split can take apart again', () => {
+    // The editor does not stop after one edit. A file that merged correctly
+    // once but could not be re-split would strand every body on the next
+    // load, which is the same loss one save later.
+    const seam = createBodySeam();
+    const held = seam.show(solidDocument());
+    const [first] = owners(held);
+    seam.setBody(first, doc(statement('again')));
+
+    const again = createBodySeam();
+    const reshown = again.show(seam.read(held));
+
+    expect(owners(reshown)).toEqual(owners(held));
+    expect(rootsOf(again.bodyOf(first))[0]).toMatchObject({
+      fields: {TEXT: 'again'},
+    });
+  });
+
+  it('forgets a deleted member’s body, which only the seam can show', () => {
+    // Written after the first version of this test passed with `reap` taken
+    // out. A dropped orphan is invisible in the file either way — `merge`
+    // only puts a body back on a block that is still there — so the claim has
+    // to be made against what the seam still holds.
+    const seam = createBodySeam();
+    const held = seam.show(
+      doc(ruleStep('s1', statement('a')), ruleStep('s2', statement('b'))),
+    );
+    expect(rootsOf(seam.bodyOf('s2'))).toHaveLength(1);
+
+    const afterDelete = {
+      blocks: {...held.blocks, blocks: [rootsOf(held)[0]]},
+    };
+    seam.read(afterDelete as never);
+
+    expect(rootsOf(seam.bodyOf('s2'))).toEqual([]);
+  });
+});

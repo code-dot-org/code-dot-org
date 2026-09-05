@@ -85,6 +85,28 @@ in the rules that need it most.
   from `page.evaluate` resolves nothing; a file the server transforms can
   import them normally.
 - `measure.mjs` — the driver.
+- `check-overlay.mjs` — opens `solid.rule`, counts the interface, clicks a
+  pencil, counts the body, comes back.
+- `check-roundtrip.mjs` — the same, plus an edit: does it reach the file, and
+  do the other bodies survive it.
+
+## Two things that wasted a day
+
+**A Blockly field cannot be clicked at coordinates read earlier.** Going Back
+re-renders the interface, and a rectangle captured before that points at empty
+canvas. The click lands, nothing happens, and it reads exactly like a dead
+button — which sent this work chasing stranded gestures, a module-level opener
+owned by the wrong editor, and a remount that was not happening. All three
+were ruled out by measurement; none was the cause. Drive the field's own
+`onClick()` instead, and the probe stops lying.
+
+**`yarn dev:isolated` does not persist anything across a reload.** Its mock
+sources are reseeded on every load, so an edit inside a body reverts — and so
+does a plain edit on the interface, which is the control that says the sandbox
+rather than the code. Reading `sessionStorage` mid-session is no better: it is
+not written per edit, and it sat byte-identical through an edit that the
+editor had emitted correctly. Whether a write is right has to be judged from
+the document the editor hands to `onChange`, or from the unit tests.
 
 Delete this once §8 is built or abandoned. `interfaceOnly.mjs` has since been
 promoted to `src/blockly/bodySurfaces.ts`, which splits and MERGES and knows

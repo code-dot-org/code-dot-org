@@ -88,6 +88,7 @@ import {
   blockDesignerMutator,
   eventDesignerMutator,
 } from './extensions/blockDesigner';
+import {bodyButtonExtension} from './extensions/bodyButton';
 import {drawingContextExtension} from './extensions/drawingContext';
 import {effectImportFieldExtension} from './extensions/effectImportField';
 import {
@@ -6789,6 +6790,7 @@ const worldRuleBlock = defineBlock({
     // …and the one that says an actor's own block cannot report a value yet.
     // In a `.rule` it never fires (`actorBlockReports`).
     actorBlockReportsExtension,
+    bodyButtonExtension,
   ],
   style: 'setup_blocks',
   tooltip:
@@ -6956,7 +6958,7 @@ const worldRuleStepIn = stepBlock(
   [{type: 'field_dropdown', name: 'PHASE', options: phaseOptions}, nameArg],
   'Run this every tick, in a named part of the frame — “this is a force”, ' +
     'rather than “this runs before that other rule’s step”.',
-  [phaseOptionsExtension],
+  [phaseOptionsExtension, bodyButtonExtension],
 );
 
 // A step that belongs to a TRAIT, chained under `define trait` beside the
@@ -7000,7 +7002,7 @@ const traitStepDefinition = (asRoot: boolean) =>
     message1: '%1',
     args1: [{type: 'input_statement', name: 'DO'}],
     ...(asRoot ? {} : {previousStatement: true, nextStatement: true}),
-    extensions: [phaseOptionsExtension],
+    extensions: [phaseOptionsExtension, bodyButtonExtension],
     style: 'event_blocks',
     tooltip:
       'Run this every tick for each thing that has this trait — or, on its own ' +
@@ -7523,6 +7525,7 @@ const worldRuleStepTick = stepBlock(
   'when tick do %1',
   [nameArg],
   'Run this every tick, in no particular order relative to other rules.',
+  [bodyButtonExtension],
 );
 
 const worldStepDelta = defineBlock({

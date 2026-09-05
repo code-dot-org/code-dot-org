@@ -673,29 +673,46 @@ And **nothing else in the lab can see a body being dropped**: with `read`
 handing back the interface instead of the merged file, all 4,198 tests still
 passed. That is what the seam's own four tests are for.
 
-What remains is the overlay, the button, and the two toolboxes — and until
-they exist **the editor does not hide anything**. `HIDE_BODIES` in
-`bodySurfaces` is off, and `BlocklyFileEditor` bypasses the seam while it is:
-a `define block` whose `do` is empty and whose implementation has no door
-reads as a broken rule, which is worse than a long workspace. The flag is read
-by the editor and by nothing in the seam, deliberately — a seam that sometimes
-declined to split would be a seam whose `read` puts stale bodies back over
-live ones.
+The seam landed before anything could open a body, so it landed **off**:
+`HIDE_BODIES` in `bodySurfaces` gated it and `BlocklyFileEditor` bypassed the
+seam entirely, because a `define block` whose `do` is empty and whose
+implementation has no door reads as a broken rule — worse than a long
+workspace. The flag is read by the editor and by nothing in the seam,
+deliberately: a seam that sometimes declined to split would be a seam whose
+`read` puts stale bodies back over live ones. The button is what earned the
+flag; what remains after it is the two toolboxes.
 
-_Attempted and reverted, 2026-09-05._ The overlay was written and driven in a
-browser (`spikes/rule-surfaces/check-overlay.mjs`). What worked: the split in
-the real editor — fourteen blocks for `solid.rule`, as measured — the pencil
-on all four block types, the overlay opening, and the way back. What did not:
-a body opened EMPTY, and the wiring then handed `setBody` an empty workspace,
-which deleted the body and saved it. The seam is not the cause; two tests open
-every step in `solid` by the id its block carries.
+_Built, 2026-09-05._ `HIDE_BODIES` is on. `solid.rule` opens with fourteen
+blocks instead of four hundred and seventy-three; the pencil on a `define …`
+opens what it runs, with a `← Back` header above it; an edit inside a body
+writes the whole file, and the other bodies come back whole. Driven in a
+browser: `spikes/rule-surfaces/check-overlay.mjs` (open, count, click, return)
+and `check-roundtrip.mjs` (edit one body, leave, open another, come back to
+the first and find the edit).
 
-Two things for whoever picks it up. `setBody` must refuse to delete a body it
-never loaded — "the learner emptied this" and "nothing arrived" have to be
-distinguishable, and conflating them is what turned an empty surface into file
-damage. And `useRef(seam.show(…))` evaluates its argument on every render,
-reminting the ids the bodies are keyed by while the workspace keeps the first
-set; `useState` with an initialiser is the shape that works.
+Three things the second attempt had to get right, each of which had already
+produced a wrong answer once.
+
+`useRef(seam.show(…))` evaluates its argument on every render, reminting the
+ids the bodies are keyed by while the workspace keeps the first set. `useState`
+with an initialiser is the shape that works.
+
+`handleChange` must have `editing` among its dependencies. Without it the
+closure keeps the value it had at mount — null — so a body's edits take the
+path that writes the whole file, and what it writes is the body.
+
+The workspace is reloaded in place when the surface changes, so `setBody` must
+be able to tell "the learner emptied this" from "the surface is not up yet".
+`surfaceRef` answers that: it says which surface the workspace is actually
+showing, and the swap loads with events off so nothing arrives before a person
+has done something.
+
+What could NOT be checked here: whether the edit survives being written and
+read back. `yarn dev:isolated` reseeds its mock sources on every load, so a
+plain edit on the interface reverts across a reload exactly as a body's edit
+does — the control says the sandbox, not the code. The claim rests instead on
+the merged document the editor emits, measured at the write, and on the
+round-trip tests over all forty-seven stock rules.
 
 **Not only rules.** An `.actor` file holds the same two shapes — its own
 `each frame` and its own `define block` (`ActorBuilder.defineStep`,
