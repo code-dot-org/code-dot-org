@@ -20,7 +20,9 @@ class CurriculumCatalogController < ApplicationController
     end
 
     @catalog_data = {
-      curriculaData: CourseOffering.assignable_published_for_students_course_offerings.sort_by(&:display_name).map {|co| co&.summarize_for_catalog(locale, current_user)},
+      # Featured offerings lead the grid, alphabetical by display name within each group.
+      # The catalog filters narrow this list without reordering it, so this is the order on screen.
+      curriculaData: CourseOffering.assignable_published_for_students_course_offerings.sort_by {|co| [co.is_featured? ? 0 : 1, co.display_name]}.map {|co| co&.summarize_for_catalog(locale, current_user)},
       isEnglish: language == "en",
       languageEnglishName: @language_english_name,
       languageNativeName: @language_native_name,
