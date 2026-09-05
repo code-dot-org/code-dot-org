@@ -1,0 +1,19 @@
+WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.
+WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.
+WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.
+Started with run options --seed 42283
+
+
+Progress: |==================================WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.
+========
+Progress: |
+Would import 1 ProjectStorage::Geo records
+Range:       1..226
+Batch:       1000
+Storage IDs: [226]
+Progress: |====================================================================|
+=WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.
+=========================|
+
+Finished in 13.21319s
+161 tests, 533 assertions, 0 failures, 0 errors, 0 skips

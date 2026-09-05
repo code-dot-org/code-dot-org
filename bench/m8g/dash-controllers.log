@@ -1,0 +1,255 @@
+WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.
+WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.
+WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.
+WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.
+Started with run options --seed 30993
+
+
+Progress: |===Since there is no EDITOR or BETTER_ERRORS_EDITOR environment variable, using Textmate by default.
+======[1000D[K SKIP["test_new-code-account_is_0_if_the_user_was_created_five_minutes_ago_or_more", "Api::V1::AmazonFutureEngineerControllerTest", 80.62870382099936]
+ test_new-code-account_is_0_if_the_user_was_created_five_minutes_ago_or_more#Api::V1::AmazonFutureEngineerControllerTest (80.63s)
+        Skipped, no message given
+        test/controllers/api/v1/amazon_future_engineer_controller_test.rb:92:in `block in <class:AmazonFutureEngineerControllerTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_new-code-account_is_1_if_the_user_was_created_less_than_five_minutes_ago", "Api::V1::AmazonFutureEngineerControllerTest", 80.63940117500897]
+ test_new-code-account_is_1_if_the_user_was_created_less_than_five_minutes_ago#Api::V1::AmazonFutureEngineerControllerTest (80.64s)
+        Skipped, no message given
+        test/controllers/api/v1/amazon_future_engineer_controller_test.rb:111:in `block in <class:AmazonFutureEngineerControllerTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+=====[1000D[K SKIP["test_get_azure_speech_service_voices_returns_nil_on_error", "AzureTextToSpeechTest", 126.23902401101077]
+ test_get_azure_speech_service_voices_returns_nil_on_error#AzureTextToSpeechTest (126.24s)
+        tests have been flaky
+        test/controllers/concerns/azure_text_to_speech_test.rb:6:in `block in <class:AzureTextToSpeechTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_get_token:_caches_token", "AzureTextToSpeechTest", 126.25161638999998]
+ test_get_token:_caches_token#AzureTextToSpeechTest (126.25s)
+        tests have been flaky
+        test/controllers/concerns/azure_text_to_speech_test.rb:6:in `block in <class:AzureTextToSpeechTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_get_token:_returns_nil_on_error", "AzureTextToSpeechTest", 126.2638119750045]
+ test_get_token:_returns_nil_on_error#AzureTextToSpeechTest (126.26s)
+        tests have been flaky
+        test/controllers/concerns/azure_text_to_speech_test.rb:6:in `block in <class:AzureTextToSpeechTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_get_token:_returns_token_on_success", "AzureTextToSpeechTest", 126.27602426800877]
+ test_get_token:_returns_token_on_success#AzureTextToSpeechTest (126.28s)
+        tests have been flaky
+        test/controllers/concerns/azure_text_to_speech_test.rb:6:in `block in <class:AzureTextToSpeechTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_get_voice_by:_returns_voice_name_if_exists_for_given_locale_+_gender", "AzureTextToSpeechTest", 126.2885552420048]
+ test_get_voice_by:_returns_voice_name_if_exists_for_given_locale_+_gender#AzureTextToSpeechTest (126.29s)
+        tests have been flaky
+        test/controllers/concerns/azure_text_to_speech_test.rb:6:in `block in <class:AzureTextToSpeechTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_get_voices:_caches_and_returns_voices_array_on_success", "AzureTextToSpeechTest", 126.30038675000833]
+ test_get_voices:_caches_and_returns_voices_array_on_success#AzureTextToSpeechTest (126.30s)
+        tests have been flaky
+        test/controllers/concerns/azure_text_to_speech_test.rb:6:in `block in <class:AzureTextToSpeechTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_get_voices:_returns_nil_if_voices_response_is_empty", "AzureTextToSpeechTest", 126.31290675100172]
+ test_get_voices:_returns_nil_if_voices_response_is_empty#AzureTextToSpeechTest (126.31s)
+        tests have been flaky
+        test/controllers/concerns/azure_text_to_speech_test.rb:6:in `block in <class:AzureTextToSpeechTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_throttled_get_speech:_does_not_yield_if_request_is_throttled", "AzureTextToSpeechTest", 126.32543603501108]
+ test_throttled_get_speech:_does_not_yield_if_request_is_throttled#AzureTextToSpeechTest (126.33s)
+        tests have been flaky
+        test/controllers/concerns/azure_text_to_speech_test.rb:6:in `block in <class:AzureTextToSpeechTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_throttled_get_speech:_yields_nil_if_token_is_nil", "AzureTextToSpeechTest", 126.33790579299966]
+ test_throttled_get_speech:_yields_nil_if_token_is_nil#AzureTextToSpeechTest (126.34s)
+        tests have been flaky
+        test/controllers/concerns/azure_text_to_speech_test.rb:6:in `block in <class:AzureTextToSpeechTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_throttled_get_speech:_yields_nil_on_error", "AzureTextToSpeechTest", 126.35018746599962]
+ test_throttled_get_speech:_yields_nil_on_error#AzureTextToSpeechTest (126.35s)
+        tests have been flaky
+        test/controllers/concerns/azure_text_to_speech_test.rb:6:in `block in <class:AzureTextToSpeechTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_throttled_get_speech:_yields_text_as_speech_on_success", "AzureTextToSpeechTest", 126.3623286630027]
+ test_throttled_get_speech:_yields_text_as_speech_on_success#AzureTextToSpeechTest (126.36s)
+        tests have been flaky
+        test/controllers/concerns/azure_text_to_speech_test.rb:6:in `block in <class:AzureTextToSpeechTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+===/home/ubuntu/code-dot-org/dashboard/test/controllers/api_controller_test.rb:67: warning: already initialized constant ApiControllerTest::STUB_ENCRYPTION_KEY
+/home/ubuntu/code-dot-org/dashboard/test/controllers/api_controller_test.rb:49: warning: previous definition of STUB_ENCRYPTION_KEY was here
+/home/ubuntu/code-dot-org/dashboard/test/controllers/api_controller_test.rb:84: warning: already initialized constant ApiControllerTest::STUB_ENCRYPTION_KEY
+/home/ubuntu/code-dot-org/dashboard/test/controllers/api_controller_test.rb:67: warning: previous definition of STUB_ENCRYPTION_KEY was here
+[1000D[K SKIP["test_sign_cookies", "ApiControllerTest", 155.28357541700825]
+ test_sign_cookies#ApiControllerTest (155.28s)
+        TODO: stub secret key for CloudFront cookie signing
+        test/controllers/api_controller_test.rb:1911:in `block in <class:ApiControllerTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+===============/home/ubuntu/code-dot-org/dashboard/test/controllers/datasets_controller_test.rb:43: warning: already initialized constant DatablockStorageTable::MAX_TABLE_COUNT
+/home/ubuntu/code-dot-org/dashboard/app/models/datablock_storage_table.rb:64: warning: previous definition of MAX_TABLE_COUNT was here
+/home/ubuntu/code-dot-org/dashboard/test/controllers/datasets_controller_test.rb:58: warning: already initialized constant DatablockStorageTable::MAX_TABLE_COUNT
+/home/ubuntu/code-dot-org/dashboard/test/controllers/datasets_controller_test.rb:43: warning: previous definition of MAX_TABLE_COUNT was here
+=={"timestamp"=>1788644006402, "script_id"=>5087, "level_id"=>3817, "new_level_completed"=>true, "level_path"=>"/courses/bogus-single-unit-course-2194/units/1/lessons/1/levels/1", "redirect"=>"/courses/bogus-single-unit-course-2194/units/1/lessons/1/levels/1", "phone_share_url"=>"http://test.host/sms/send", "level_source"=>"http://test.host/c/416", "level_source_id"=>416, "hint_view_requests"=>[], "hint_view_request_url"=>"/hint_view_requests", "puzzle_ratings_enabled"=>true}
+=====DCDO - foo User4576 Codeberg set to bar
+DCDO - foo User4577 Codeberg set to bar
+Gatekeeper - test access User4580 Codeberg set {} to true
+Gatekeeper - test access User4580 Codeberg deleted rule where {"foo"=>"bar"}
+Gatekeeper - test access User4581 Codeberg deleted rule where {"foo"=>"bar"}
+Gatekeeper - test access User4582 Codeberg set {} to true
+===[1000D[K SKIP["test_do_not_show_levelbuilder_links_when_not_levelbuilder", "HomeControllerTest", 440.647535778]
+ test_do_not_show_levelbuilder_links_when_not_levelbuilder#HomeControllerTest (440.65s)
+        TODO: look into bringing levelbuilder links to /home
+        test/controllers/home_controller_test.rb:288:in `block in <class:HomeControllerTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_do_show_admin_links_when_admin", "HomeControllerTest", 440.6908371449972]
+ test_do_show_admin_links_when_admin#HomeControllerTest (440.69s)
+        TODO: get :home
+        test/controllers/home_controller_test.rb:280:in `block in <class:HomeControllerTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_do_show_levelbuilder_links_when_levelbuilder", "HomeControllerTest", 440.73237942700507]
+ test_do_show_levelbuilder_links_when_levelbuilder#HomeControllerTest (440.73s)
+        TODO: look into bringing levelbuilder links to /home
+        test/controllers/home_controller_test.rb:297:in `block in <class:HomeControllerTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_language_is_determined_from_I18n.locale", "HomeControllerTest", 441.932842884009]
+ test_language_is_determined_from_I18n.locale#HomeControllerTest (441.93s)
+        TODO: get :home, and look for a div that still exists
+        test/controllers/home_controller_test.rb:211:in `block in <class:HomeControllerTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_should_get_index_with_edmodo_header", "HomeControllerTest", 442.1016687710071]
+ test_should_get_index_with_edmodo_header#HomeControllerTest (442.10s)
+        TODO: get :home
+        test/controllers/home_controller_test.rb:256:in `block in <class:HomeControllerTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_should_get_index_with_weebly_header", "HomeControllerTest", 442.13847089299816]
+ test_should_get_index_with_weebly_header#HomeControllerTest (442.14s)
+        TODO: get :home
+        test/controllers/home_controller_test.rb:265:in `block in <class:HomeControllerTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+=/home/ubuntu/code-dot-org/dashboard/test/controllers/datablock_storage_controller_test.rb:146: warning: already initialized constant DatablockStorageTable::MAX_TABLE_COUNT
+/home/ubuntu/code-dot-org/dashboard/test/controllers/datasets_controller_test.rb:58: warning: previous definition of MAX_TABLE_COUNT was here
+/home/ubuntu/code-dot-org/dashboard/test/controllers/datablock_storage_controller_test.rb:161: warning: already initialized constant DatablockStorageTable::MAX_TABLE_COUNT
+/home/ubuntu/code-dot-org/dashboard/test/controllers/datablock_storage_controller_test.rb:146: warning: previous definition of MAX_TABLE_COUNT was here
+/home/ubuntu/code-dot-org/dashboard/test/controllers/datablock_storage_controller_test.rb:167: warning: already initialized constant DatablockStorageTable::MAX_TABLE_ROW_COUNT
+/home/ubuntu/code-dot-org/dashboard/app/models/datablock_storage_table.rb:65: warning: previous definition of MAX_TABLE_ROW_COUNT was here
+/home/ubuntu/code-dot-org/dashboard/test/controllers/datablock_storage_controller_test.rb:179: warning: already initialized constant DatablockStorageTable::MAX_TABLE_ROW_COUNT
+/home/ubuntu/code-dot-org/dashboard/test/controllers/datablock_storage_controller_test.rb:167: warning: previous definition of MAX_TABLE_ROW_COUNT was here
+=/home/ubuntu/code-dot-org/dashboard/test/controllers/datablock_storage_controller_test.rb:73: warning: already initialized constant DatablockStorageKvp::MAX_NUM_KVPS
+/home/ubuntu/code-dot-org/dashboard/app/models/datablock_storage_kvp.rb:27: warning: previous definition of MAX_NUM_KVPS was here
+/home/ubuntu/code-dot-org/dashboard/test/controllers/datablock_storage_controller_test.rb:85: warning: already initialized constant DatablockStorageKvp::MAX_NUM_KVPS
+/home/ubuntu/code-dot-org/dashboard/test/controllers/datablock_storage_controller_test.rb:73: warning: previous definition of MAX_NUM_KVPS was here
+===========[1000D[K SKIP["test_section_level_progress", "ApiControllerQueriesTest", 619.6779441760009]
+ test_section_level_progress#ApiControllerQueriesTest (619.68s)
+        flaky as of 7/17/2023
+        test/controllers/api_controller_queries_test.rb:5:in `block in <class:ApiControllerQueriesTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+===[1000D[K FAIL["test_cannot_create_ai-enabled_learning_goal_without_ai_config", "RubricsControllerTest", 837.7620470719994]
+ test_cannot_create_ai-enabled_learning_goal_without_ai_config#RubricsControllerTest (837.76s)
+        unexpected invocation: File.write('/home/ubuntu/code-dot-org/dashboard/config/scripts_json/bogus-script-2199.script_json', '{\n  \'script\': {\n    \'name\': \'bogus-script-2199\',\n    \'wrapup_video_id\': null,\n    \'login_required\': false,\n    \'properties\': {\n      \'is_migrated\': true\n    },\n    \'new_name\': null,\n    \'family_name\': null,\n    \'serialized_at\': \'2026-09-05 21:38:19 UTC\',\n    \'hide_within_course\': false,\n    \'published_state\': \'in_development\',\n    \'instruction_type\': null,\n    \'instructor_audience\': null,\n    \'participant_audience\': null,\n    \'seeding_key\': {\n      \'script.name\': \'bogus-script-2199\'\n    }\n  },\n  \'lesson_groups\': [\n    {\n      \'key\': \'Bogus Lesson Group 1808\',\n      \'user_facing\': true,\n      \'position\': 1,\n      \'properties\': {\n        \'display_name\': \'Bogus Lesson Group 1808\'\n      },\n      \'seeding_key\': {\n        \'lesson_group.key\': \'Bogus Lesson Group 1808\',\n        \'script.name\': \'bogus-script-2199\'\n      }\n    }\n  ],\n  \'lessons\': [\n    {\n      \'key\': \'Bogus-Lesson-2620\',\n      \'name\': \'Bogus Lesson 2034\',\n      \'absolute_position\': 1,\n      \'lockable\': false,\n      \'has_lesson_plan\': false,\n      \'relative_position\': 1,\n      \'properties\': {\n      },\n      \'seeding_key\': {\n        \'lesson.key\': \'Bogus-Lesson-2620\',\n        \'lesson_group.key\': \'Bogus Lesson Group 1808\',\n        \'script.name\': \'bogus-script-2199\'\n      }\n    }\n  ],\n  \'lesson_activities\': [\n\n  ],\n  \'activity_sections\': [\n\n  ],\n  \'script_levels\': [\n    {\n      \'chapter\': 1,\n      \'position\': 1,\n      \'activity_section_position\': null,\n      \'assessment\': false,\n      \'properties\': {\n      },\n      \'bonus\': false,\n      \'seeding_key\': {\n        \'script_level.level_keys\': [\n          \'Level_1646\'\n        ],\n        \'lesson.key\': \'Bogus-Lesson-2620\',\n        \'lesson_group.key\': \'Bogus Lesson Group 1808\',\n        \'script.name\': \'bogus-script-2199\'\n      },\n      \'level_keys\': [\n        \'Level_1646\'\n      ]\n    }\n  ],\n  \'levels_script_levels\': [\n    {\n      \'seeding_key\': {\n        \'level.key\': \'Level_1646\',\n        \'script_level.level_keys\': [\n          \'Level_1646\'\n        ],\n        \'lesson.key\': \'Bogus-Lesson-2620\',\n        \'lesson_group.key\': \'Bogus Lesson Group 1808\',\n        \'script.name\': \'bogus-script-2199\'\n      }\n    }\n  ],\n  \'resources\': [\n\n  ],\n  \'lessons_resources\': [\n\n  ],\n  \'scripts_resources\': [\n\n  ],\n  \'scripts_student_resources\': [\n\n  ],\n  \'vocabularies\': [\n\n  ],\n  \'lessons_vocabularies\': [\n\n  ],\n  \'lessons_programming_expressions\': [\n\n  ],\n  \'objectives\': [\n\n  ],\n  \'lessons_standards\': [\n\n  ],\n  \'lessons_opportunity_standards\': [\n\n  ],\n  \'jit_pl_concepts_lessons\': [\n\n  ],\n  \'rubrics\': [\n    {\n      \'level_name\': \'Level_1646\',\n      \'s3_config_dir\': \'fake-lesson-s3-name\',\n      \'seeding_key\': {\n        \'lesson.key\': \'Bogus-Lesson-2620\',\n        \'lesson_group.key\': \'Bogus Lesson Group 1808\',\n        \'script.name\': \'bogus-script-2199\'\n      }\n    }\n  ],\n  \'learning_goals\': [\n    {\n      \'key\': \'fec7b720-9560-492d-a897-cdd139930096\',\n      \'position\': 1,\n      \'learning_goal\': \'non-ai learning goal\',\n      \'ai_enabled\': true,\n      \'tips\': null,\n      \'seeding_key\': {\n        \'learning_goal.key\': \'fec7b720-9560-492d-a897-cdd139930096\',\n        \'lesson.key\': \'Bogus-Lesson-2620\',\n        \'lesson_group.key\': \'Bogus Lesson Group 1808\',\n        \'script.name\': \'bogus-script-2199\'\n      }\n    }\n  ],\n  \'learning_goal_evidence_levels\': [\n\n  ]\n}\n')
+        unsatisfied expectations:
+        - expected never, invoked once: File.write(any_parameters)
+        satisfied expectations:
+        - allowed any number of times, not yet invoked: AWS::S3.create_client(any_parameters)
+        - allowed any number of times, not yet invoked: AWS::S3.exists_in_bucket(any_parameters)
+        - allowed any number of times, not yet invoked: AWS::S3.cached_exists_in_bucket?(any_parameters)
+        - allowed any number of times, not yet invoked: AWS::S3.download_from_bucket(any_parameters)
+        - allowed any number of times, not yet invoked: AWS::S3.upload_to_bucket(any_parameters)
+        - allowed any number of times, not yet invoked: #<Cdo::Impl:0xc3730>.use_my_apps(any_parameters)
+        - allowed any number of times, not yet invoked: #<Cdo::Impl:0xc3730>.optimize_webpack_assets(any_parameters)
+        - allowed any number of times, invoked 21 times: #<Cdo::Impl:0xc3730>.rack_env(any_parameters)
+        - allowed any number of times, invoked twice: #<Cdo::Impl:0xc3730>.default_scheme(any_parameters)
+        - allowed any number of times, invoked twice: #<Cdo::Impl:0xc3730>.override_dashboard(any_parameters)
+        - allowed any number of times, invoked twice: #<Cdo::Impl:0xc3730>.override_pegasus(any_parameters)
+        - allowed any number of times, invoked 4 times: #<Rails::Application::Configuration:0xc41a8>.levelbuilder_mode(any_parameters)
+        - allowed any number of times, invoked 4 times: #<Rails::Application::Configuration:0xc41a8>.levelbuilder_mode(any_parameters)
+        - allowed any number of times, not yet invoked: #<AnyInstance:SourceBucket>.get('6Fi0ZAXbFR0SVWX4TccI1g', 'main.json')
+        - allowed any number of times, not yet invoked: AiRubricConfig.s3_client(any_parameters)
+        - allowed any number of times, not yet invoked: AiRubricConfig.get_lesson_s3_name(any_parameters)
+        app/models/unit.rb:1258:in `write_script_json'
+        app/controllers/rubrics_controller.rb:44:in `create'
+        app/controllers/application_controller.rb:461:in `with_global_current_user'
+        test/controllers/rubrics_controller_test.rb:154:in `block (2 levels) in <class:RubricsControllerTest>'
+        test/test_helper.rb:204:in `assert_does_not_create'
+        test/controllers/rubrics_controller_test.rb:153:in `block in <class:RubricsControllerTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K FAIL["test_cannot_set_ai_enabled_field_for_non-ai-configured_learning_goal", "RubricsControllerTest", 1024.6484526929999]
+ test_cannot_set_ai_enabled_field_for_non-ai-configured_learning_goal#RubricsControllerTest (1024.65s)
+        unexpected invocation: File.write('/home/ubuntu/code-dot-org/dashboard/config/scripts_json/bogus-script-2204.script_json', '{\n  \'script\': {\n    \'name\': \'bogus-script-2204\',\n    \'wrapup_video_id\': null,\n    \'login_required\': false,\n    \'properties\': {\n      \'is_migrated\': true\n    },\n    \'new_name\': null,\n    \'family_name\': null,\n    \'serialized_at\': \'2026-09-05 21:41:23 UTC\',\n    \'hide_within_course\': false,\n    \'published_state\': \'in_development\',\n    \'instruction_type\': null,\n    \'instructor_audience\': null,\n    \'participant_audience\': null,\n    \'seeding_key\': {\n      \'script.name\': \'bogus-script-2204\'\n    }\n  },\n  \'lesson_groups\': [\n    {\n      \'key\': \'Bogus Lesson Group 1812\',\n      \'user_facing\': true,\n      \'position\': 1,\n      \'properties\': {\n        \'display_name\': \'Bogus Lesson Group 1812\'\n      },\n      \'seeding_key\': {\n        \'lesson_group.key\': \'Bogus Lesson Group 1812\',\n        \'script.name\': \'bogus-script-2204\'\n      }\n    }\n  ],\n  \'lessons\': [\n    {\n      \'key\': \'Bogus-Lesson-2625\',\n      \'name\': \'Bogus Lesson 2039\',\n      \'absolute_position\': 1,\n      \'lockable\': false,\n      \'has_lesson_plan\': false,\n      \'relative_position\': 1,\n      \'properties\': {\n      },\n      \'seeding_key\': {\n        \'lesson.key\': \'Bogus-Lesson-2625\',\n        \'lesson_group.key\': \'Bogus Lesson Group 1812\',\n        \'script.name\': \'bogus-script-2204\'\n      }\n    }\n  ],\n  \'lesson_activities\': [\n\n  ],\n  \'activity_sections\': [\n\n  ],\n  \'script_levels\': [\n    {\n      \'chapter\': 1,\n      \'position\': 1,\n      \'activity_section_position\': null,\n      \'assessment\': false,\n      \'properties\': {\n      },\n      \'bonus\': false,\n      \'seeding_key\': {\n        \'script_level.level_keys\': [\n          \'Level_1651\'\n        ],\n        \'lesson.key\': \'Bogus-Lesson-2625\',\n        \'lesson_group.key\': \'Bogus Lesson Group 1812\',\n        \'script.name\': \'bogus-script-2204\'\n      },\n      \'level_keys\': [\n        \'Level_1651\'\n      ]\n    }\n  ],\n  \'levels_script_levels\': [\n    {\n      \'seeding_key\': {\n        \'level.key\': \'Level_1651\',\n        \'script_level.level_keys\': [\n          \'Level_1651\'\n        ],\n        \'lesson.key\': \'Bogus-Lesson-2625\',\n        \'lesson_group.key\': \'Bogus Lesson Group 1812\',\n        \'script.name\': \'bogus-script-2204\'\n      }\n    }\n  ],\n  \'resources\': [\n\n  ],\n  \'lessons_resources\': [\n\n  ],\n  \'scripts_resources\': [\n\n  ],\n  \'scripts_student_resources\': [\n\n  ],\n  \'vocabularies\': [\n\n  ],\n  \'lessons_vocabularies\': [\n\n  ],\n  \'lessons_programming_expressions\': [\n\n  ],\n  \'objectives\': [\n\n  ],\n  \'lessons_standards\': [\n\n  ],\n  \'lessons_opportunity_standards\': [\n\n  ],\n  \'jit_pl_concepts_lessons\': [\n\n  ],\n  \'rubrics\': [\n    {\n      \'level_name\': \'Level_1651\',\n      \'s3_config_dir\': \'fake-lesson-s3-name\',\n      \'seeding_key\': {\n        \'lesson.key\': \'Bogus-Lesson-2625\',\n        \'lesson_group.key\': \'Bogus Lesson Group 1812\',\n        \'script.name\': \'bogus-script-2204\'\n      }\n    }\n  ],\n  \'learning_goals\': [\n    {\n      \'key\': \'272c0c31-9d8d-4813-8905-b26ad32825c8\',\n      \'position\': 0,\n      \'learning_goal\': \'non-ai learning goal\',\n      \'ai_enabled\': true,\n      \'tips\': null,\n      \'seeding_key\': {\n        \'learning_goal.key\': \'272c0c31-9d8d-4813-8905-b26ad32825c8\',\n        \'lesson.key\': \'Bogus-Lesson-2625\',\n        \'lesson_group.key\': \'Bogus Lesson Group 1812\',\n        \'script.name\': \'bogus-script-2204\'\n      }\n    }\n  ],\n  \'learning_goal_evidence_levels\': [\n\n  ]\n}\n')
+        unsatisfied expectations:
+        - expected never, invoked once: File.write(any_parameters)
+        satisfied expectations:
+        - allowed any number of times, not yet invoked: AWS::S3.create_client(any_parameters)
+        - allowed any number of times, not yet invoked: AWS::S3.exists_in_bucket(any_parameters)
+        - allowed any number of times, not yet invoked: AWS::S3.cached_exists_in_bucket?(any_parameters)
+        - allowed any number of times, not yet invoked: AWS::S3.download_from_bucket(any_parameters)
+        - allowed any number of times, not yet invoked: AWS::S3.upload_to_bucket(any_parameters)
+        - allowed any number of times, not yet invoked: #<Cdo::Impl:0xc3730>.use_my_apps(any_parameters)
+        - allowed any number of times, not yet invoked: #<Cdo::Impl:0xc3730>.optimize_webpack_assets(any_parameters)
+        - allowed any number of times, invoked 24 times: #<Cdo::Impl:0xc3730>.rack_env(any_parameters)
+        - allowed any number of times, invoked twice: #<Cdo::Impl:0xc3730>.default_scheme(any_parameters)
+        - allowed any number of times, invoked twice: #<Cdo::Impl:0xc3730>.override_dashboard(any_parameters)
+        - allowed any number of times, invoked twice: #<Cdo::Impl:0xc3730>.override_pegasus(any_parameters)
+        - allowed any number of times, invoked 4 times: #<Rails::Application::Configuration:0xc41a8>.levelbuilder_mode(any_parameters)
+        - allowed any number of times, invoked 8 times: #<Rails::Application::Configuration:0xc41a8>.levelbuilder_mode(any_parameters)
+        - allowed any number of times, not yet invoked: #<AnyInstance:SourceBucket>.get('EmHr2GNQO6lYUWlJtvlAuw', 'main.json')
+        - allowed any number of times, not yet invoked: AiRubricConfig.s3_client(any_parameters)
+        - allowed any number of times, not yet invoked: AiRubricConfig.get_lesson_s3_name(any_parameters)
+        app/models/unit.rb:1258:in `write_script_json'
+        app/controllers/rubrics_controller.rb:57:in `update'
+        app/controllers/application_controller.rb:461:in `with_global_current_user'
+        test/controllers/rubrics_controller_test.rb:234:in `block in <class:RubricsControllerTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K FAIL["test_cannot_update_ai_enabled_learning_goal_to_non-ai-configured_name", "RubricsControllerTest", 1205.233237449007]
+ test_cannot_update_ai_enabled_learning_goal_to_non-ai-configured_name#RubricsControllerTest (1205.23s)
+        unexpected invocation: File.write('/home/ubuntu/code-dot-org/dashboard/config/scripts_json/bogus-script-2207.script_json', '{\n  \'script\': {\n    \'name\': \'bogus-script-2207\',\n    \'wrapup_video_id\': null,\n    \'login_required\': false,\n    \'properties\': {\n      \'is_migrated\': true\n    },\n    \'new_name\': null,\n    \'family_name\': null,\n    \'serialized_at\': \'2026-09-05 21:44:29 UTC\',\n    \'hide_within_course\': false,\n    \'published_state\': \'in_development\',\n    \'instruction_type\': null,\n    \'instructor_audience\': null,\n    \'participant_audience\': null,\n    \'seeding_key\': {\n      \'script.name\': \'bogus-script-2207\'\n    }\n  },\n  \'lesson_groups\': [\n    {\n      \'key\': \'Bogus Lesson Group 1815\',\n      \'user_facing\': true,\n      \'position\': 1,\n      \'properties\': {\n        \'display_name\': \'Bogus Lesson Group 1815\'\n      },\n      \'seeding_key\': {\n        \'lesson_group.key\': \'Bogus Lesson Group 1815\',\n        \'script.name\': \'bogus-script-2207\'\n      }\n    }\n  ],\n  \'lessons\': [\n    {\n      \'key\': \'Bogus-Lesson-2628\',\n      \'name\': \'Bogus Lesson 2042\',\n      \'absolute_position\': 1,\n      \'lockable\': false,\n      \'has_lesson_plan\': false,\n      \'relative_position\': 1,\n      \'properties\': {\n      },\n      \'seeding_key\': {\n        \'lesson.key\': \'Bogus-Lesson-2628\',\n        \'lesson_group.key\': \'Bogus Lesson Group 1815\',\n        \'script.name\': \'bogus-script-2207\'\n      }\n    }\n  ],\n  \'lesson_activities\': [\n\n  ],\n  \'activity_sections\': [\n\n  ],\n  \'script_levels\': [\n    {\n      \'chapter\': 1,\n      \'position\': 1,\n      \'activity_section_position\': null,\n      \'assessment\': false,\n      \'properties\': {\n      },\n      \'bonus\': false,\n      \'seeding_key\': {\n        \'script_level.level_keys\': [\n          \'Level_1654\'\n        ],\n        \'lesson.key\': \'Bogus-Lesson-2628\',\n        \'lesson_group.key\': \'Bogus Lesson Group 1815\',\n        \'script.name\': \'bogus-script-2207\'\n      },\n      \'level_keys\': [\n        \'Level_1654\'\n      ]\n    }\n  ],\n  \'levels_script_levels\': [\n    {\n      \'seeding_key\': {\n        \'level.key\': \'Level_1654\',\n        \'script_level.level_keys\': [\n          \'Level_1654\'\n        ],\n        \'lesson.key\': \'Bogus-Lesson-2628\',\n        \'lesson_group.key\': \'Bogus Lesson Group 1815\',\n        \'script.name\': \'bogus-script-2207\'\n      }\n    }\n  ],\n  \'resources\': [\n\n  ],\n  \'lessons_resources\': [\n\n  ],\n  \'scripts_resources\': [\n\n  ],\n  \'scripts_student_resources\': [\n\n  ],\n  \'vocabularies\': [\n\n  ],\n  \'lessons_vocabularies\': [\n\n  ],\n  \'lessons_programming_expressions\': [\n\n  ],\n  \'objectives\': [\n\n  ],\n  \'lessons_standards\': [\n\n  ],\n  \'lessons_opportunity_standards\': [\n\n  ],\n  \'jit_pl_concepts_lessons\': [\n\n  ],\n  \'rubrics\': [\n    {\n      \'level_name\': \'Level_1654\',\n      \'s3_config_dir\': \'fake-lesson-s3-name\',\n      \'seeding_key\': {\n        \'lesson.key\': \'Bogus-Lesson-2628\',\n        \'lesson_group.key\': \'Bogus Lesson Group 1815\',\n        \'script.name\': \'bogus-script-2207\'\n      }\n    }\n  ],\n  \'learning_goals\': [\n    {\n      \'key\': \'5a1314ef-98fe-45c0-aaf7-b98140abf39d\',\n      \'position\': 0,\n      \'learning_goal\': \'non-ai learning goal\',\n      \'ai_enabled\': true,\n      \'tips\': null,\n      \'seeding_key\': {\n        \'learning_goal.key\': \'5a1314ef-98fe-45c0-aaf7-b98140abf39d\',\n        \'lesson.key\': \'Bogus-Lesson-2628\',\n        \'lesson_group.key\': \'Bogus Lesson Group 1815\',\n        \'script.name\': \'bogus-script-2207\'\n      }\n    }\n  ],\n  \'learning_goal_evidence_levels\': [\n\n  ]\n}\n')
+        unsatisfied expectations:
+        - expected never, invoked once: File.write(any_parameters)
+        satisfied expectations:
+        - allowed any number of times, not yet invoked: AWS::S3.create_client(any_parameters)
+        - allowed any number of times, not yet invoked: AWS::S3.exists_in_bucket(any_parameters)
+        - allowed any number of times, not yet invoked: AWS::S3.cached_exists_in_bucket?(any_parameters)
+        - allowed any number of times, not yet invoked: AWS::S3.download_from_bucket(any_parameters)
+        - allowed any number of times, not yet invoked: AWS::S3.upload_to_bucket(any_parameters)
+        - allowed any number of times, not yet invoked: #<Cdo::Impl:0xc3730>.use_my_apps(any_parameters)
+        - allowed any number of times, not yet invoked: #<Cdo::Impl:0xc3730>.optimize_webpack_assets(any_parameters)
+        - allowed any number of times, invoked 24 times: #<Cdo::Impl:0xc3730>.rack_env(any_parameters)
+        - allowed any number of times, invoked twice: #<Cdo::Impl:0xc3730>.default_scheme(any_parameters)
+        - allowed any number of times, invoked twice: #<Cdo::Impl:0xc3730>.override_dashboard(any_parameters)
+        - allowed any number of times, invoked twice: #<Cdo::Impl:0xc3730>.override_pegasus(any_parameters)
+        - allowed any number of times, invoked 4 times: #<Rails::Application::Configuration:0xc41a8>.levelbuilder_mode(any_parameters)
+        - allowed any number of times, invoked 8 times: #<Rails::Application::Configuration:0xc41a8>.levelbuilder_mode(any_parameters)
+        - allowed any number of times, not yet invoked: #<AnyInstance:SourceBucket>.get('pRH7ZSAUpoHVAjUjJ26e0A', 'main.json')
+        - allowed any number of times, not yet invoked: AiRubricConfig.s3_client(any_parameters)
+        - allowed any number of times, not yet invoked: AiRubricConfig.get_lesson_s3_name(any_parameters)
+        app/models/unit.rb:1258:in `write_script_json'
+        app/controllers/rubrics_controller.rb:57:in `update'
+        app/controllers/application_controller.rb:461:in `with_global_current_user'
+        test/controllers/rubrics_controller_test.rb:209:in `block in <class:RubricsControllerTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+====Updating UserPermission: environment: production, user ID: 14706, email: teacher_1f68ca51-f1e2-4d7a-9a1f-778997cb0ed0@code.org, permission: levelbuilder
+Updating UserPermission: environment: staging, user ID: 14707, email: teacher_680f8d69-0bb4-438f-ae12-3f10c9b0c0b3@code.org, permission: levelbuilder
+=Updating UserPermission: environment: production, user ID: 14746, email: teacher_468f3488-9c85-4f38-b1cb-74dfc0ab0144@code.org, permission: levelbuilder
+Updating UserPermission: environment: staging, user ID: 14747, email: teacher_24ae35f1-ac7e-440d-a19f-afcc0376a87b@code.org, permission: levelbuilder
+=====|
+
+Finished in 1413.47094s
+4307 tests, 13406 assertions, 3 failures, 0 errors, 21 skips

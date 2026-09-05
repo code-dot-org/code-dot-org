@@ -1,0 +1,10 @@
+WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.
+WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.
+WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.
+Started with run options --seed 18599
+
+
+Progress: |====================================================================|
+
+Finished in 0.14836s
+28 tests, 82 assertions, 0 failures, 0 errors, 0 skips

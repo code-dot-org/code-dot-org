@@ -1,0 +1,83 @@
+WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.
+WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.
+WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.
+Started with run options --seed 58098
+
+
+Progress: |WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.
+====Generating script resources PDF for "bogus-script-4"
+Generating script resources PDF for "bogus-script-4"
+Generating script resources PDF for "bogus-script-4"
+Generating script resources PDF for "bogus-script-5"
+Generating script resources PDF for "bogus-script-5"
+==Set scale feature mode for environment test to normal
+Set scale feature mode for environment test to emergency
+Set scale feature mode for environment test to emergency
+Set scale feature mode for environment test to fallback
+Set scale feature mode for environment test to normal
+Set scale feature mode for environment test to normal
+Set scale feature mode for environment test to normal
+Set scale feature mode for environment test to normal
+Set scale feature mode for environment test to normal
+Set scale feature mode for environment test to scale
+Set scale feature mode for environment test to emergency
+Set scale feature mode for environment test to scale
+===========Uploading all generated PDFs to S3
+======/home/ubuntu/code-dot-org/dashboard/test/lib/services/base_test.rb:4: warning: already initialized constant Services::BaseTest::TestService
+/home/ubuntu/code-dot-org/dashboard/test/lib/services/base_test.rb:4: warning: previous definition of TestService was here
+=======WARNING: level 'LevelLoader encrypted probe' not seeded properly due to missing CDO.properties_encryption_key
+========WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.
+====*ExpiredDeletedAccountPurger* <https://github.com/code-dot-org/code-dot-org/blob/production/dashboard/lib/expired_deleted_account_purger.rb|(source)>
+Found 6 accounts to purge, which exceeds the configured limit of 5. Abandoning run.
+*ExpiredDeletedAccountPurger* <https://github.com/code-dot-org/code-dot-org/blob/production/dashboard/lib/expired_deleted_account_purger.rb|(source)>
+Found 6 accounts to purge, which exceeds the configured limit of 5. Abandoning run.
+*ExpiredDeletedAccountPurger* <https://github.com/code-dot-org/code-dot-org/blob/production/dashboard/lib/expired_deleted_account_purger.rb|(source)>
+Found 6 teachers to purge, which exceeds the configured limit of 5. Abandoning run.
+*ExpiredDeletedAccountPurger* <https://github.com/code-dot-org/code-dot-org/blob/production/dashboard/lib/expired_deleted_account_purger.rb|(source)>
+Found 6 teachers to purge, which exceeds the configured limit of 5. Abandoning run.
+Resource object "resource_103" is missing course version and/or offering
+Resource object "resource_104" is missing course version and/or offering
+Resource object "resource_101" is missing course version and/or offering
+Resource object "resource_102" is missing course version and/or offering
+Resource object "resource_103" is missing course version and/or offering
+Resource object "resource_104" is missing course version and/or offering
+Resource object "resource_105" is missing course version and/or offering
+=Resource object "resource_103" is missing course version and/or offering
+Vocabulary object "Debugging" is missing course version and/or offering
+Vocabulary object "Programming" is missing course version and/or offering
+Vocabulary object "Debugging" is missing course version and/or offering
+Vocabulary object "Programming" is missing course version and/or offering
+Vocabulary object "Algorithm" is missing course version and/or offering
+Vocabulary object "Debugging" is missing course version and/or offering
+=WARNING: unable to import resources into script test-md5-clear-script because course version is missing. This is only to be expected if the script is being seeded for the first time.
+WARNING: unable to import vocabulary into script test-md5-clear-script because course version is missing. This is only to be expected if the script is being seeded for the first time.
+=WARNING: unable to import resources into script uuid-9670f136-1d22-46b5-8f1c-e5e88dc062a2-script because course version is missing. This is only to be expected if the script is being seeded for the first time.
+WARNING: unable to import vocabulary into script uuid-9670f136-1d22-46b5-8f1c-e5e88dc062a2-script because course version is missing. This is only to be expected if the script is being seeded for the first time.
+=========[1000D[K FAIL["test_images_match", "ImageLibTest", 108.53661630599527]
+ test_images_match#ImageLibTest (108.54s)
+        Identical images should match
+        test/lib/image_lib_test.rb:37:in `test_images_match'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K FAIL["test_overlay_image", "ImageLibTest", 108.61654319099034]
+ test_overlay_image#ImageLibTest (108.62s)
+        Overlaid image did not match expected value
+        Actual image: /tmp/framed_image.png
+        Expected image: /home/ubuntu/code-dot-org/dashboard/test/fixtures/expected_overlaid_image.png.
+        test/lib/image_lib_test.rb:31:in `test_overlay_image'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K FAIL["test_to_png_for_jpg", "ImageLibTest", 108.74513371499779]
+ test_to_png_for_jpg#ImageLibTest (108.75s)
+        Expected false to be truthy.
+        test/lib/image_lib_test.rb:84:in `test_to_png_for_jpg'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+========Generating script overview PDF for "bogus-script-57"
+Generating script overview PDF for "bogus-script-57"
+Generating script overview PDF for "bogus-script-57"
+Generating script overview PDF for "bogus-script-58"
+======|
+
+Finished in 130.72624s
+1490 tests, 9350 assertions, 3 failures, 0 errors, 0 skips

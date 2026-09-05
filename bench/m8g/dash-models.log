@@ -1,0 +1,242 @@
+WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.
+WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.
+WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.
+Started with run options --seed 3663
+
+
+Progress: |==WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.
+======/home/ubuntu/code-dot-org/dashboard/test/models/script_level_test.rb:111: warning: already initialized constant ScriptLevelTest::ExampleSolutionsTests::STUB_ENCRYPTION_KEY
+/home/ubuntu/code-dot-org/dashboard/test/models/script_level_test.rb:111: warning: previous definition of STUB_ENCRYPTION_KEY was here
+/home/ubuntu/code-dot-org/dashboard/test/models/script_level_test.rb:111: warning: already initialized constant ScriptLevelTest::ExampleSolutionsTests::STUB_ENCRYPTION_KEY
+/home/ubuntu/code-dot-org/dashboard/test/models/script_level_test.rb:111: warning: previous definition of STUB_ENCRYPTION_KEY was here
+/home/ubuntu/code-dot-org/dashboard/test/models/script_level_test.rb:111: warning: already initialized constant ScriptLevelTest::ExampleSolutionsTests::STUB_ENCRYPTION_KEY
+/home/ubuntu/code-dot-org/dashboard/test/models/script_level_test.rb:111: warning: previous definition of STUB_ENCRYPTION_KEY was here
+/home/ubuntu/code-dot-org/dashboard/test/models/script_level_test.rb:111: warning: already initialized constant ScriptLevelTest::ExampleSolutionsTests::STUB_ENCRYPTION_KEY
+/home/ubuntu/code-dot-org/dashboard/test/models/script_level_test.rb:111: warning: previous definition of STUB_ENCRYPTION_KEY was here
+/home/ubuntu/code-dot-org/dashboard/test/models/script_level_test.rb:111: warning: already initialized constant ScriptLevelTest::ExampleSolutionsTests::STUB_ENCRYPTION_KEY
+/home/ubuntu/code-dot-org/dashboard/test/models/script_level_test.rb:111: warning: previous definition of STUB_ENCRYPTION_KEY was here
+/home/ubuntu/code-dot-org/dashboard/test/models/script_level_test.rb:111: warning: already initialized constant ScriptLevelTest::ExampleSolutionsTests::STUB_ENCRYPTION_KEY
+/home/ubuntu/code-dot-org/dashboard/test/models/script_level_test.rb:111: warning: previous definition of STUB_ENCRYPTION_KEY was here
+/home/ubuntu/code-dot-org/dashboard/test/models/script_level_test.rb:111: warning: already initialized constant ScriptLevelTest::ExampleSolutionsTests::STUB_ENCRYPTION_KEY
+/home/ubuntu/code-dot-org/dashboard/test/models/script_level_test.rb:111: warning: previous definition of STUB_ENCRYPTION_KEY was here
+/home/ubuntu/code-dot-org/dashboard/test/models/script_level_test.rb:111: warning: already initialized constant ScriptLevelTest::ExampleSolutionsTests::STUB_ENCRYPTION_KEY
+/home/ubuntu/code-dot-org/dashboard/test/models/script_level_test.rb:111: warning: previous definition of STUB_ENCRYPTION_KEY was here
+/home/ubuntu/code-dot-org/dashboard/test/models/script_level_test.rb:111: warning: already initialized constant ScriptLevelTest::ExampleSolutionsTests::STUB_ENCRYPTION_KEY
+/home/ubuntu/code-dot-org/dashboard/test/models/script_level_test.rb:111: warning: previous definition of STUB_ENCRYPTION_KEY was here
+/home/ubuntu/code-dot-org/dashboard/test/models/script_level_test.rb:111: warning: already initialized constant ScriptLevelTest::ExampleSolutionsTests::STUB_ENCRYPTION_KEY
+/home/ubuntu/code-dot-org/dashboard/test/models/script_level_test.rb:111: warning: previous definition of STUB_ENCRYPTION_KEY was here
+/home/ubuntu/code-dot-org/dashboard/test/models/script_level_test.rb:111: warning: already initialized constant ScriptLevelTest::ExampleSolutionsTests::STUB_ENCRYPTION_KEY
+/home/ubuntu/code-dot-org/dashboard/test/models/script_level_test.rb:111: warning: previous definition of STUB_ENCRYPTION_KEY was here
+/home/ubuntu/code-dot-org/dashboard/test/models/script_level_test.rb:111: warning: already initialized constant ScriptLevelTest::ExampleSolutionsTests::STUB_ENCRYPTION_KEY
+/home/ubuntu/code-dot-org/dashboard/test/models/script_level_test.rb:111: warning: previous definition of STUB_ENCRYPTION_KEY was here
+Granting UserPermission: environment: production, user ID: 1062, email: teacher_bd80b950-e990-42d4-a8ed-d90024c59e2a@code.org, permission: ADMIN
+Granting UserPermission: environment: production, user ID: 1063, email: teacher_1f3f3b66-68c9-407f-b5ee-0e745a9ab95b@code.org, permission: ADMIN
+Updating UserPermission: environment: production, user ID: 1064, email: facilitator_3c88d719-dadf-46d9-9f56-c784aa6b50d0@code.org, permission: facilitator
+Updating UserPermission: environment: production, user ID: 1065, email: teacher_3f6b11d8-c441-49c1-aac7-101592e9bc63@code.org, permission: levelbuilder
+Updating UserPermission: environment: production, user ID: 1066, email: facilitator_aa24da86-bb3a-4aec-8cf4-30b11d54573b@code.org, permission: facilitator
+Updating UserPermission: environment: production, user ID: 1067, email: test_plc_reviewer_12@example.com.xx, permission: plc_reviewer
+Updating UserPermission: environment: production, user ID: 1069, email: facilitator_63a19c7b-5bdb-4324-9f30-a87ae0f8a245@code.org, permission: facilitator
+Updating UserPermission: environment: production, user ID: 1072, email: test_universal_instructor_12@example.com.xx, permission: universal_instructor
+Updating UserPermission: environment: production, user ID: 1076, email: teacher_0caddc81-480a-4f54-9b94-00d586a66d94@code.org, permission: levelbuilder
+=Updating UserPermission: environment: production, user ID: 1078, email: teacher_c8683755-2de0-4f74-ad3c-8406ba9e500e@code.org, permission: levelbuilder
+Updating UserPermission: environment: production, user ID: 1079, email: teacher_40683432-f74c-4ed5-be67-08018800ac93@code.org, permission: levelbuilder
+Updating UserPermission: environment: production, user ID: 1080, email: teacher_6171b286-4d54-4364-96f8-68126958f8ad@code.org, permission: levelbuilder
+Updating UserPermission: environment: production, user ID: 1082, email: , permission: project_validator
+[1000D[K SKIP["test_only_the_project_owner_can_create_a_code_review_on_that_project", "AbilityTest", 27.806186939997133]
+ test_only_the_project_owner_can_create_a_code_review_on_that_project#AbilityTest (27.81s)
+        tests that create a project
+        test/models/ability_test.rb:927:in `block in <class:AbilityTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+Updating UserPermission: environment: production, user ID: 1085, email: teacher_4c9f6daf-5da3-4df9-b6a1-45f3646eb9dd@code.org, permission: project_validator
+Updating UserPermission: environment: production, user ID: 1087, email: teacher_d909606d-65d8-4eab-b917-bdcbf1e4ab27@code.org, permission: program_manager
+=[1000D[K SKIP["test_who_can_view_code_reviews_on_a_given_project", "AbilityTest", 30.62682942999527]
+ test_who_can_view_code_reviews_on_a_given_project#AbilityTest (30.63s)
+        tests that create a project
+        test/models/ability_test.rb:950:in `block in <class:AbilityTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+Updating UserPermission: environment: production, user ID: 1153, email: teacher_2ca750b8-bf45-4faf-99ed-d5c36f818128@code.org, permission: workshop_admin
+Updating UserPermission: environment: production, user ID: 1155, email: teacher_fa1e2702-bc2c-4c9d-9eb6-19677faa2aff@code.org, permission: workshop_admin
+Updating UserPermission: environment: production, user ID: 1156, email: workshoporganizer_81fdfb9b-4da5-49be-8c83-37fc74160456@code.org, permission: workshop_organizer
+======================Cleaning PD content
+==============[1000D[K SKIP["setup_all", Pd::JotFormBackedFormTest, 183.89145919299335]
+ setup_all#Pd::JotFormBackedFormTest (183.89s)
+        test is incompatible with MySQL binary logging (when Global Transaction IDentifiers - GTID - are enabled)
+        test/models/concerns/pd/jot_form_backed_form_test.rb:37:in `block in <class:JotFormBackedFormTest>'
+        test/testing/transactional_test_case.rb:32:in `instance_exec'
+        test/testing/transactional_test_case.rb:32:in `block in setup_all'
+        test/testing/setup_all_and_teardown_all.rb:54:in `block (2 levels) in run_callbacks'
+        test/testing/setup_all_and_teardown_all.rb:53:in `block in run_callbacks'
+        test/testing/setup_all_and_teardown_all.rb:52:in `run_callbacks'
+        test/testing/setup_all_and_teardown_all.rb:33:in `run'
+
+[1000D[K SKIP["test_answers_are_checked_against_questions_before_validation", "Pd::JotFormBackedFormTest", 183.91485070499766]
+ test_answers_are_checked_against_questions_before_validation#Pd::JotFormBackedFormTest (183.91s)
+        test is incompatible with MySQL binary logging (when Global Transaction IDentifiers - GTID - are enabled)
+        test/models/concerns/pd/jot_form_backed_form_test.rb:51:in `block in <class:JotFormBackedFormTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_attribute_mapping_is_used_to_populate_attributes_before_validation", "Pd::JotFormBackedFormTest", 183.9407107339939]
+ test_attribute_mapping_is_used_to_populate_attributes_before_validation#Pd::JotFormBackedFormTest (183.94s)
+        test is incompatible with MySQL binary logging (when Global Transaction IDentifiers - GTID - are enabled)
+        test/models/concerns/pd/jot_form_backed_form_test.rb:51:in `block in <class:JotFormBackedFormTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_create_placeholder!_creates_a_placeholder", "Pd::JotFormBackedFormTest", 183.97068449298968]
+ test_create_placeholder!_creates_a_placeholder#Pd::JotFormBackedFormTest (183.97s)
+        test is incompatible with MySQL binary logging (when Global Transaction IDentifiers - GTID - are enabled)
+        test/models/concerns/pd/jot_form_backed_form_test.rb:51:in `block in <class:JotFormBackedFormTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_create_placeholder!_logs_a_warning_and_skips_duplicate_submissions", "Pd::JotFormBackedFormTest", 183.99986942399119]
+ test_create_placeholder!_logs_a_warning_and_skips_duplicate_submissions#Pd::JotFormBackedFormTest (184.00s)
+        test is incompatible with MySQL binary logging (when Global Transaction IDentifiers - GTID - are enabled)
+        test/models/concerns/pd/jot_form_backed_form_test.rb:51:in `block in <class:JotFormBackedFormTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_create_placeholder!_raises_error_when_missing_a_unique_attribute", "Pd::JotFormBackedFormTest", 184.0292039809865]
+ test_create_placeholder!_raises_error_when_missing_a_unique_attribute#Pd::JotFormBackedFormTest (184.03s)
+        test is incompatible with MySQL binary logging (when Global Transaction IDentifiers - GTID - are enabled)
+        test/models/concerns/pd/jot_form_backed_form_test.rb:51:in `block in <class:JotFormBackedFormTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_create_placeholder!_raises_error_when_missing_form_id", "Pd::JotFormBackedFormTest", 184.05841196599067]
+ test_create_placeholder!_raises_error_when_missing_form_id#Pd::JotFormBackedFormTest (184.06s)
+        test is incompatible with MySQL binary logging (when Global Transaction IDentifiers - GTID - are enabled)
+        test/models/concerns/pd/jot_form_backed_form_test.rb:51:in `block in <class:JotFormBackedFormTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_create_placeholder!_raises_error_when_missing_submission_id", "Pd::JotFormBackedFormTest", 184.08679704999668]
+ test_create_placeholder!_raises_error_when_missing_submission_id#Pd::JotFormBackedFormTest (184.09s)
+        test is incompatible with MySQL binary logging (when Global Transaction IDentifiers - GTID - are enabled)
+        test/models/concerns/pd/jot_form_backed_form_test.rb:51:in `block in <class:JotFormBackedFormTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_duplicate?_returns_true_for_new_records_that_match_existing_unique_attributes", "Pd::JotFormBackedFormTest", 184.11648330499884]
+ test_duplicate?_returns_true_for_new_records_that_match_existing_unique_attributes#Pd::JotFormBackedFormTest (184.12s)
+        test is incompatible with MySQL binary logging (when Global Transaction IDentifiers - GTID - are enabled)
+        test/models/concerns/pd/jot_form_backed_form_test.rb:51:in `block in <class:JotFormBackedFormTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_fill_placeholders_collects_errors_and_re-raises_at_the_end", "Pd::JotFormBackedFormTest", 184.1457372149889]
+ test_fill_placeholders_collects_errors_and_re-raises_at_the_end#Pd::JotFormBackedFormTest (184.15s)
+        test is incompatible with MySQL binary logging (when Global Transaction IDentifiers - GTID - are enabled)
+        test/models/concerns/pd/jot_form_backed_form_test.rb:51:in `block in <class:JotFormBackedFormTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_fill_placeholders_syncs_each_placeholder", "Pd::JotFormBackedFormTest", 184.17595320499095]
+ test_fill_placeholders_syncs_each_placeholder#Pd::JotFormBackedFormTest (184.18s)
+        test is incompatible with MySQL binary logging (when Global Transaction IDentifiers - GTID - are enabled)
+        test/models/concerns/pd/jot_form_backed_form_test.rb:51:in `block in <class:JotFormBackedFormTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_form_data_hash_checks_answers_against_questions_once_then_caches", "Pd::JotFormBackedFormTest", 184.20809989199915]
+ test_form_data_hash_checks_answers_against_questions_once_then_caches#Pd::JotFormBackedFormTest (184.21s)
+        test is incompatible with MySQL binary logging (when Global Transaction IDentifiers - GTID - are enabled)
+        test/models/concerns/pd/jot_form_backed_form_test.rb:51:in `block in <class:JotFormBackedFormTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_form_id_and_submission_id_are_required", "Pd::JotFormBackedFormTest", 184.23891856599948]
+ test_form_id_and_submission_id_are_required#Pd::JotFormBackedFormTest (184.24s)
+        test is incompatible with MySQL binary logging (when Global Transaction IDentifiers - GTID - are enabled)
+        test/models/concerns/pd/jot_form_backed_form_test.rb:51:in `block in <class:JotFormBackedFormTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_jotform_sync_collects_errors_and_updates_last_processed_submission_id", "Pd::JotFormBackedFormTest", 184.2662177389866]
+ test_jotform_sync_collects_errors_and_updates_last_processed_submission_id#Pd::JotFormBackedFormTest (184.27s)
+        test is incompatible with MySQL binary logging (when Global Transaction IDentifiers - GTID - are enabled)
+        test/models/concerns/pd/jot_form_backed_form_test.rb:51:in `block in <class:JotFormBackedFormTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_jotform_sync_gets_questions_syncs_new_answers_for_each_form", "Pd::JotFormBackedFormTest", 184.29550689799362]
+ test_jotform_sync_gets_questions_syncs_new_answers_for_each_form#Pd::JotFormBackedFormTest (184.30s)
+        test is incompatible with MySQL binary logging (when Global Transaction IDentifiers - GTID - are enabled)
+        test/models/concerns/pd/jot_form_backed_form_test.rb:51:in `block in <class:JotFormBackedFormTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_jotform_sync_retrieves_and_processes_all_new_submissions_in_batches_and_updates_last_submission_id", "Pd::JotFormBackedFormTest", 184.32182455599832]
+ test_jotform_sync_retrieves_and_processes_all_new_submissions_in_batches_and_updates_last_submission_id#Pd::JotFormBackedFormTest (184.32s)
+        test is incompatible with MySQL binary logging (when Global Transaction IDentifiers - GTID - are enabled)
+        test/models/concerns/pd/jot_form_backed_form_test.rb:51:in `block in <class:JotFormBackedFormTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_jotform_sync_stops_processing_when_an_entire_batch_fails", "Pd::JotFormBackedFormTest", 184.3494766119984]
+ test_jotform_sync_stops_processing_when_an_entire_batch_fails#Pd::JotFormBackedFormTest (184.35s)
+        test is incompatible with MySQL binary logging (when Global Transaction IDentifiers - GTID - are enabled)
+        test/models/concerns/pd/jot_form_backed_form_test.rb:51:in `block in <class:JotFormBackedFormTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_placeholder?", "Pd::JotFormBackedFormTest", 184.3789572569949]
+ test_placeholder?#Pd::JotFormBackedFormTest (184.38s)
+        test is incompatible with MySQL binary logging (when Global Transaction IDentifiers - GTID - are enabled)
+        test/models/concerns/pd/jot_form_backed_form_test.rb:51:in `block in <class:JotFormBackedFormTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_placeholder_sync_from_jotform_updates_answers_from_JotForm_API", "Pd::JotFormBackedFormTest", 184.4082423989894]
+ test_placeholder_sync_from_jotform_updates_answers_from_JotForm_API#Pd::JotFormBackedFormTest (184.41s)
+        test is incompatible with MySQL binary logging (when Global Transaction IDentifiers - GTID - are enabled)
+        test/models/concerns/pd/jot_form_backed_form_test.rb:51:in `block in <class:JotFormBackedFormTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_reassigning_answers_clears_form_data_hash_cache", "Pd::JotFormBackedFormTest", 184.43559151199588]
+ test_reassigning_answers_clears_form_data_hash_cache#Pd::JotFormBackedFormTest (184.44s)
+        test is incompatible with MySQL binary logging (when Global Transaction IDentifiers - GTID - are enabled)
+        test/models/concerns/pd/jot_form_backed_form_test.rb:51:in `block in <class:JotFormBackedFormTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_response_exists?", "Pd::JotFormBackedFormTest", 184.46332512199297]
+ test_response_exists?#Pd::JotFormBackedFormTest (184.46s)
+        test is incompatible with MySQL binary logging (when Global Transaction IDentifiers - GTID - are enabled)
+        test/models/concerns/pd/jot_form_backed_form_test.rb:51:in `block in <class:JotFormBackedFormTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_response_exists?_raises_error_when_missing_a_unique_attribute", "Pd::JotFormBackedFormTest", 184.49014333898958]
+ test_response_exists?_raises_error_when_missing_a_unique_attribute#Pd::JotFormBackedFormTest (184.49s)
+        test is incompatible with MySQL binary logging (when Global Transaction IDentifiers - GTID - are enabled)
+        test/models/concerns/pd/jot_form_backed_form_test.rb:51:in `block in <class:JotFormBackedFormTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_response_exists?_raises_error_when_missing_form_id", "Pd::JotFormBackedFormTest", 184.51847391598858]
+ test_response_exists?_raises_error_when_missing_form_id#Pd::JotFormBackedFormTest (184.52s)
+        test is incompatible with MySQL binary logging (when Global Transaction IDentifiers - GTID - are enabled)
+        test/models/concerns/pd/jot_form_backed_form_test.rb:51:in `block in <class:JotFormBackedFormTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_static_attribute_values_are_included_in_placeholders", "Pd::JotFormBackedFormTest", 184.5466296569939]
+ test_static_attribute_values_are_included_in_placeholders#Pd::JotFormBackedFormTest (184.55s)
+        test is incompatible with MySQL binary logging (when Global Transaction IDentifiers - GTID - are enabled)
+        test/models/concerns/pd/jot_form_backed_form_test.rb:51:in `block in <class:JotFormBackedFormTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_static_attribute_values_are_included_in_response_exists?_queries", "Pd::JotFormBackedFormTest", 184.57547671299835]
+ test_static_attribute_values_are_included_in_response_exists?_queries#Pd::JotFormBackedFormTest (184.58s)
+        test is incompatible with MySQL binary logging (when Global Transaction IDentifiers - GTID - are enabled)
+        test/models/concerns/pd/jot_form_backed_form_test.rb:51:in `block in <class:JotFormBackedFormTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_static_attribute_values_are_included_on_new_objects", "Pd::JotFormBackedFormTest", 184.60316267699818]
+ test_static_attribute_values_are_included_on_new_objects#Pd::JotFormBackedFormTest (184.60s)
+        test is incompatible with MySQL binary logging (when Global Transaction IDentifiers - GTID - are enabled)
+        test/models/concerns/pd/jot_form_backed_form_test.rb:51:in `block in <class:JotFormBackedFormTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_sync_from_jotform_with_a_form_id_only_syncs_that_form", "Pd::JotFormBackedFormTest", 184.63199909598916]
+ test_sync_from_jotform_with_a_form_id_only_syncs_that_form#Pd::JotFormBackedFormTest (184.63s)
+        test is incompatible with MySQL binary logging (when Global Transaction IDentifiers - GTID - are enabled)
+        test/models/concerns/pd/jot_form_backed_form_test.rb:51:in `block in <class:JotFormBackedFormTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_sync_from_jotform_with_no_args_syncs_all_forms", "Pd::JotFormBackedFormTest", 184.65877867798554]
+ test_sync_from_jotform_with_no_args_syncs_all_forms#Pd::JotFormBackedFormTest (184.66s)
+        test is incompatible with MySQL binary logging (when Global Transaction IDentifiers - GTID - are enabled)
+        test/models/concerns/pd/jot_form_backed_form_test.rb:51:in `block in <class:JotFormBackedFormTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+====WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.
+==================|
+WARNING: Your progress bar is currently at 3408 out of 3408 and cannot be incremented. In v2.0.0 this will become a ProgressBar::InvalidProgressError.
+
+
+Finished in 300.88334s
+3409 tests, 8211 assertions, 0 failures, 0 errors, 30 skips

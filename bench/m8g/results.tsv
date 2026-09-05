@@ -1,0 +1,16 @@
+suite	files	tests	assertions	failures	errors	skips	wall_s
+apps	1138	10793	0	0	0	8	166
+dashboard/models	200	3409	8211	0	0	30	330
+dashboard/controllers	204	4307	13406	3	0	21	1444
+dashboard/lib	153	1490	9350	3	0	0	160
+dashboard/helpers	47	703	4172	0	0	0	91
+dashboard/jobs	16	161	533	0	0	0	43
+dashboard/mailers	14	46	161	0	0	0	34
+dashboard/serializers	6	33	76	0	0	0	33
+dashboard/config	5	28	82	0	0	0	29
+dashboard/dsl	2	15	43	0	0	0	31
+dashboard/app	1	0	0	0	0	0	31
+dashboard/testing	2	NA	NA	NA	NA	NA	0
+dashboard/integration	48	436	2307	0	0	2	104
+lib	86	792	2504	2	0	2	294
+shared	21	112	349294	1	6	0	65

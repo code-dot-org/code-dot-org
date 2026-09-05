@@ -1,0 +1,26 @@
+/home/ubuntu/.rbenv/versions/3.2.11/lib/ruby/gems/3.2.0/gems/railties-7.0.10/lib/rails/test_help.rb:5:in `<main>': undefined method `env' for Rails:Module (NoMethodError)
+
+abort("Abort testing: Your Rails environment is running in production mode!") if Rails.env.production?
+                                                                                      ^^^^
+	from <internal:/home/ubuntu/.rbenv/versions/3.2.11/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+	from <internal:/home/ubuntu/.rbenv/versions/3.2.11/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+	from /home/ubuntu/.rbenv/versions/3.2.11/lib/ruby/gems/3.2.0/gems/bootsnap-1.16.0/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require'
+	from /home/ubuntu/code-dot-org/dashboard/test/testing/test_case_test.rb:1:in `<main>'
+	from <internal:/home/ubuntu/.rbenv/versions/3.2.11/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+	from <internal:/home/ubuntu/.rbenv/versions/3.2.11/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+	from /home/ubuntu/.rbenv/versions/3.2.11/lib/ruby/gems/3.2.0/gems/bootsnap-1.16.0/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require'
+	from /home/ubuntu/.rbenv/versions/3.2.11/lib/ruby/gems/3.2.0/gems/railties-7.0.10/lib/rails/test_unit/runner.rb:47:in `block in load_tests'
+	from /home/ubuntu/.rbenv/versions/3.2.11/lib/ruby/gems/3.2.0/gems/railties-7.0.10/lib/rails/test_unit/runner.rb:47:in `each'
+	from /home/ubuntu/.rbenv/versions/3.2.11/lib/ruby/gems/3.2.0/gems/railties-7.0.10/lib/rails/test_unit/runner.rb:47:in `load_tests'
+	from /home/ubuntu/.rbenv/versions/3.2.11/lib/ruby/gems/3.2.0/gems/railties-7.0.10/lib/rails/test_unit/runner.rb:40:in `run'
+	from /home/ubuntu/.rbenv/versions/3.2.11/lib/ruby/gems/3.2.0/gems/railties-7.0.10/lib/rails/commands/test/test_command.rb:33:in `perform'
+	from /home/ubuntu/.rbenv/versions/3.2.11/lib/ruby/gems/3.2.0/gems/thor-1.2.1/lib/thor/command.rb:27:in `run'
+	from /home/ubuntu/.rbenv/versions/3.2.11/lib/ruby/gems/3.2.0/gems/thor-1.2.1/lib/thor/invocation.rb:127:in `invoke_command'
+	from /home/ubuntu/.rbenv/versions/3.2.11/lib/ruby/gems/3.2.0/gems/thor-1.2.1/lib/thor.rb:392:in `dispatch'
+	from /home/ubuntu/.rbenv/versions/3.2.11/lib/ruby/gems/3.2.0/gems/railties-7.0.10/lib/rails/command/base.rb:87:in `perform'
+	from /home/ubuntu/.rbenv/versions/3.2.11/lib/ruby/gems/3.2.0/gems/railties-7.0.10/lib/rails/command.rb:48:in `invoke'
+	from /home/ubuntu/.rbenv/versions/3.2.11/lib/ruby/gems/3.2.0/gems/railties-7.0.10/lib/rails/commands.rb:18:in `<main>'
+	from <internal:/home/ubuntu/.rbenv/versions/3.2.11/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+	from <internal:/home/ubuntu/.rbenv/versions/3.2.11/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+	from /home/ubuntu/.rbenv/versions/3.2.11/lib/ruby/gems/3.2.0/gems/bootsnap-1.16.0/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require'
+	from bin/rails:9:in `<main>'

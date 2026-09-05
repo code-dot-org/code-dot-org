@@ -1,0 +1,73 @@
+WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.
+WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.
+WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.
+Started with run options --seed 57410
+
+
+Progress: |====WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.
+==Since there is no EDITOR or BETTER_ERRORS_EDITOR environment variable, using Textmate by default.
+==course_links: ["/courses/bogus-single-unit-course-30", "/courses/bogus-single-unit-course-29"]
+===D, [2026-09-05T21:59:29.426007 #541518] DEBUG -- omniauth: (google_oauth2) Setup endpoint detected, running now.
+D, [2026-09-05T21:59:29.426828 #541518] DEBUG -- omniauth: (google_oauth2) Request phase initiated.
+D, [2026-09-05T21:59:29.433975 #541518] DEBUG -- omniauth: (google_oauth2) Setup endpoint detected, running now.
+D, [2026-09-05T21:59:29.434361 #541518] DEBUG -- omniauth: (google_oauth2) Callback phase initiated.
+E, [2026-09-05T21:59:29.434439 #541518] ERROR -- omniauth: (google_oauth2) Authentication failure! csrf_detected: OmniAuth::Strategies::OAuth2::CallbackError, csrf_detected | CSRF detected
+D, [2026-09-05T21:59:29.449878 #541518] DEBUG -- omniauth: (google_oauth2) Setup endpoint detected, running now.
+D, [2026-09-05T21:59:29.450084 #541518] DEBUG -- omniauth: (google_oauth2) Request phase initiated.
+D, [2026-09-05T21:59:29.457001 #541518] DEBUG -- omniauth: (google_oauth2) Setup endpoint detected, running now.
+D, [2026-09-05T21:59:29.457391 #541518] DEBUG -- omniauth: (google_oauth2) Callback phase initiated.
+E, [2026-09-05T21:59:29.457445 #541518] ERROR -- omniauth: (google_oauth2) Authentication failure! csrf_detected: OmniAuth::Strategies::OAuth2::CallbackError, csrf_detected | CSRF detected
+D, [2026-09-05T21:59:29.476081 #541518] DEBUG -- omniauth: (microsoft_v2_auth) Request phase initiated.
+D, [2026-09-05T21:59:29.482917 #541518] DEBUG -- omniauth: (microsoft_v2_auth) Callback phase initiated.
+E, [2026-09-05T21:59:29.483236 #541518] ERROR -- omniauth: (microsoft_v2_auth) Authentication failure! csrf_detected: OmniAuth::Strategies::OAuth2::CallbackError, csrf_detected | CSRF detected
+=D, [2026-09-05T21:59:29.499518 #541518] DEBUG -- omniauth: (microsoft_v2_auth) Request phase initiated.
+D, [2026-09-05T21:59:29.506294 #541518] DEBUG -- omniauth: (microsoft_v2_auth) Callback phase initiated.
+E, [2026-09-05T21:59:29.506618 #541518] ERROR -- omniauth: (microsoft_v2_auth) Authentication failure! csrf_detected: OmniAuth::Strategies::OAuth2::CallbackError, csrf_detected | CSRF detected
+D, [2026-09-05T21:59:29.525694 #541518] DEBUG -- omniauth: (facebook) Request phase initiated.
+D, [2026-09-05T21:59:29.533155 #541518] DEBUG -- omniauth: (facebook) Callback phase initiated.
+E, [2026-09-05T21:59:29.534502 #541518] ERROR -- omniauth: (facebook) Authentication failure! no_authorization_code: OmniAuth::Strategies::Facebook::NoAuthorizationCodeError, must pass either a `code` (via URL or by an `fbsr_XXX` signed request cookie)
+D, [2026-09-05T21:59:29.550334 #541518] DEBUG -- omniauth: (facebook) Request phase initiated.
+D, [2026-09-05T21:59:29.557612 #541518] DEBUG -- omniauth: (facebook) Callback phase initiated.
+E, [2026-09-05T21:59:29.558015 #541518] ERROR -- omniauth: (facebook) Authentication failure! no_authorization_code: OmniAuth::Strategies::Facebook::NoAuthorizationCodeError, must pass either a `code` (via URL or by an `fbsr_XXX` signed request cookie)
+D, [2026-09-05T21:59:29.576753 #541518] DEBUG -- omniauth: (clever) Request phase initiated.
+D, [2026-09-05T21:59:29.584582 #541518] DEBUG -- omniauth: (clever) Callback phase initiated.
+E, [2026-09-05T21:59:29.584961 #541518] ERROR -- omniauth: (clever) Authentication failure! csrf_detected: OmniAuth::Strategies::OAuth2::CallbackError, csrf_detected | CSRF detected
+D, [2026-09-05T21:59:29.601301 #541518] DEBUG -- omniauth: (clever) Request phase initiated.
+D, [2026-09-05T21:59:29.608298 #541518] DEBUG -- omniauth: (clever) Callback phase initiated.
+E, [2026-09-05T21:59:29.608610 #541518] ERROR -- omniauth: (clever) Authentication failure! csrf_detected: OmniAuth::Strategies::OAuth2::CallbackError, csrf_detected | CSRF detected
+==[1000D[K SKIP["test_Send_and_receive_Twilio_SMS_on_carrier_network", "TwilioSmsTest", 30.921526888007065]
+ test_Send_and_receive_Twilio_SMS_on_carrier_network#TwilioSmsTest (30.92s)
+        Run this test manually with TEST_SMS=1
+        test/integration/twilio_sms_test.rb:33:in `block in <class:TwilioSmsTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+[1000D[K SKIP["test_Twilio_SMS_test_API", "TwilioSmsTest", 30.924976581009105]
+ test_Twilio_SMS_test_API#TwilioSmsTest (30.93s)
+        twilio_sid_test credential not provided
+        test/integration/twilio_sms_test.rb:14:in `block in <class:TwilioSmsTest>'
+        test/testing/setup_all_and_teardown_all.rb:36:in `run'
+
+=WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.
+=WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.
+WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.
+WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.
+=====D, [2026-09-05T21:59:34.853276 #541518] DEBUG -- omniauth: (google_oauth2) Setup endpoint detected, running now.
+D, [2026-09-05T21:59:34.859196 #541518] DEBUG -- omniauth: (google_oauth2) Setup endpoint detected, running now.
+D, [2026-09-05T21:59:34.895710 #541518] DEBUG -- omniauth: (google_oauth2) Setup endpoint detected, running now.
+D, [2026-09-05T21:59:34.900801 #541518] DEBUG -- omniauth: (google_oauth2) Setup endpoint detected, running now.
+D, [2026-09-05T21:59:35.007547 #541518] DEBUG -- omniauth: (google_oauth2) Setup endpoint detected, running now.
+D, [2026-09-05T21:59:35.013551 #541518] DEBUG -- omniauth: (google_oauth2) Setup endpoint detected, running now.
+D, [2026-09-05T21:59:35.064091 #541518] DEBUG -- omniauth: (google_oauth2) Setup endpoint detected, running now.
+D, [2026-09-05T21:59:35.069261 #541518] DEBUG -- omniauth: (google_oauth2) Setup endpoint detected, running now.
+D, [2026-09-05T21:59:35.158814 #541518] DEBUG -- omniauth: (google_oauth2) Setup endpoint detected, running now.
+D, [2026-09-05T21:59:35.164339 #541518] DEBUG -- omniauth: (google_oauth2) Setup endpoint detected, running now.
+D, [2026-09-05T21:59:35.261847 #541518] DEBUG -- omniauth: (google_oauth2) Setup endpoint detected, running now.
+D, [2026-09-05T21:59:35.266308 #541518] DEBUG -- omniauth: (google_oauth2) Setup endpoint detected, running now.
+D, [2026-09-05T21:59:35.301490 #541518] DEBUG -- omniauth: (google_oauth2) Setup endpoint detected, running now.
+D, [2026-09-05T21:59:35.305914 #541518] DEBUG -- omniauth: (google_oauth2) Setup endpoint detected, running now.
+==============================================WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.
+WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.
+=|
+
+Finished in 73.30146s
+436 tests, 2307 assertions, 0 failures, 0 errors, 2 skips
