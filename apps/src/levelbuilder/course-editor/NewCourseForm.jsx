@@ -47,6 +47,7 @@ export default function NewCourseForm(props) {
       <NewCourseFields
         families={props.families}
         versionYearOptions={props.versionYearOptions}
+        familiesCourseTypes={props.familiesCourseTypes}
         familyName={familyName}
         setFamilyAndCourseType={setFamilyAndCourseType}
         setFamilyName={setFamilyName}
@@ -65,7 +66,7 @@ export default function NewCourseForm(props) {
               <p>
                 The course slug is used to create the link to the course. It is
                 in the format of studio.code.org/courses/course-slug-here. A
-                course slug can only contain lowercase letters, numbers and
+                course slug can only contain lowercase letters, numbers, and
                 dashes. Once you set the slug it can not be updated.
               </p>
             </HelpTip>

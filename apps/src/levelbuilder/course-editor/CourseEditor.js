@@ -159,7 +159,7 @@ class CourseEditor extends Component {
     ) {
       this.setState({
         isSaving: false,
-        error: 'Please set both version year and family name.',
+        error: 'Please set both version key and family name.',
       });
       return;
     } else if (
