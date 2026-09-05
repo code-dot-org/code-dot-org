@@ -653,9 +653,27 @@ rules that need it), and by a merge that forgets a hat's body (eleven tests,
 including real rules).
 
 The file format does not change: `merge` is what a save writes, so the
-generator, the compiler and a diff never learn this happened. What remains is
-the editor — one helper the editor serializes through instead of calling
-`workspaces.save` directly, the overlay, the button, and the two toolboxes.
+generator, the compiler and a diff never learn this happened.
+
+_And the seam, the same day._ `createBodySeam` holds one file's split, and
+`BlocklyFileEditor` has no other way to serialize: `readFile` is how the file
+is read, `showFile` how one is put on screen, and the only remaining
+`workspaces.save`/`load` in that file are the two inside those two functions.
+Six crossings went through it — the initial parse, the two saves, and the
+three reloads (a rename, a member rename, a new document from the host).
+
+Two things this turned up. **`renameMemberReferences` rewrites block TYPES,
+and those live inside bodies** — `world_get_Physics_VelocityProperty` is what
+a step's body says when it reads a property — so anything reasoning about the
+file must be handed the merged document, not the interface. Renaming a member
+against the interface alone would rewrite the declaration and leave every use
+of it behind.
+
+And **nothing else in the lab can see a body being dropped**: with `read`
+handing back the interface instead of the merged file, all 4,198 tests still
+passed. That is what the seam's own four tests are for.
+
+What remains is the overlay, the button, and the two toolboxes.
 
 **Not only rules.** An `.actor` file holds the same two shapes — its own
 `each frame` and its own `define block` (`ActorBuilder.defineStep`,

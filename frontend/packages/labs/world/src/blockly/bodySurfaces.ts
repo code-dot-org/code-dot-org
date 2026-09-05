@@ -191,3 +191,36 @@ export function reap(shown: BlocklySerialization, bodies: Bodies): Bodies {
     Object.entries(bodies).filter(([id]) => live.has(id)),
   );
 }
+
+/**
+ * One file's split, held.
+ *
+ * The editor is where a body would be lost: every save is a fresh
+ * `workspaces.save`, and the workspace has not held a body since it was
+ * loaded. So the editor keeps one of these and never touches the workspace's
+ * serialization directly — `read` is the only way to get the file, `show` the
+ * only way to put one on screen.
+ */
+export interface BodySeam {
+  /** What to load: the document handed in, minus its bodies. */
+  show(document: BlocklySerialization): BlocklySerialization;
+  /** The file: a workspace's own save, with the bodies put back. */
+  read(saved: BlocklySerialization): BlocklySerialization;
+}
+
+export function createBodySeam(): BodySeam {
+  let bodies: Bodies = {};
+  return {
+    show(document) {
+      const next = split(document);
+      bodies = next.bodies;
+      return next.shown;
+    },
+    read(saved) {
+      // Reaped on the way out: a body whose block has been deleted must not
+      // outlive it, or the file grows one orphan per deleted step forever.
+      bodies = reap(saved, bodies);
+      return merge(saved, bodies);
+    },
+  };
+}

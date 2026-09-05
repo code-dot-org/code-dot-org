@@ -56,6 +56,7 @@ import {
   setPlacementThumbnails,
 } from './actorThumbnails';
 import styles from './blocklyFileEditor.module.css';
+import {createBodySeam} from './bodySurfaces';
 import {buildDomainPalette} from './domainBlocks';
 import {setEditingActor, setEditingFile, setEditingRule} from './editingRule';
 import {refreshMissingRuleWarnings} from './extensions/missingRule';
@@ -603,9 +604,40 @@ export const BlocklyFileEditor = ({
     shelf,
   ]);
 
+  /**
+   * The implementations this file holds and the workspace does not (§8).
+   *
+   * The editor has no other way to serialize: `readFile` is how the file is
+   * read and `showFile` how one is put on screen, because those are the two
+   * places the split is put back together. Calling `workspaces.save` directly
+   * would not throw — it would hand out a rule whose every step is empty.
+   */
+  const seam = useRef(createBodySeam()).current;
+
   // Parsed once: Codebridge keys this component by file id, so it remounts (and
   // re-reads `initialContents`) when the active file changes.
-  const startBlocks = useRef(parseWorkspace(initialContents)).current;
+  const startBlocks = useRef(
+    seam.show(parseWorkspace(initialContents)),
+  ).current;
+
+  /** The FILE: what the workspace shows, with its bodies put back. */
+  const readFile = useCallback(
+    (workspace: Blockly.Workspace) =>
+      seam.read(
+        Blockly.serialization.workspaces.save(
+          workspace,
+        ) as BlocklySerialization,
+      ),
+    [seam],
+  );
+
+  /** Show a whole document: keep its bodies, render its interface. */
+  const showFile = useCallback(
+    (document: BlocklySerialization, workspace: Blockly.WorkspaceSvg) => {
+      Blockly.serialization.workspaces.load(seam.show(document), workspace);
+    },
+    [seam],
+  );
 
   const options = useMemo(
     () => ({
@@ -809,11 +841,7 @@ export const BlocklyFileEditor = ({
         }
         // Closing it commits the session: a designed block's name is its whole
         // signature, so what was typed into the bubble is only finished now.
-        const edited = JSON.stringify(
-          Blockly.serialization.workspaces.save(workspace),
-          null,
-          2,
-        );
+        const edited = JSON.stringify(readFile(workspace), null, 2);
         reconcileMembers(edited);
         if (!pendingReload.current) {
           onChangeRef.current(edited);
@@ -831,9 +859,7 @@ export const BlocklyFileEditor = ({
       ) {
         return;
       }
-      const state = Blockly.serialization.workspaces.save(
-        workspace,
-      ) as BlocklySerialization;
+      const state = readFile(workspace);
       const contents = JSON.stringify(state, null, 2);
       const rename = ruleRename(event, workspace);
       if (rename && handleRename(rename, contents)) {
@@ -925,13 +951,13 @@ export const BlocklyFileEditor = ({
     const {scrollX, scrollY} = workspace;
     Blockly.Events.disable();
     try {
-      Blockly.serialization.workspaces.load(state, workspace);
+      showFile(state, workspace);
     } finally {
       Blockly.Events.enable();
     }
     refreshActorPictures(workspace);
     workspace.scroll(scrollX, scrollY);
-  }, [blocks]);
+  }, [blocks, showFile]);
 
   /**
    * Re-seed when the lab is handed a different document.
@@ -952,16 +978,13 @@ export const BlocklyFileEditor = ({
     // state, and re-saving it would be a second write for an edit nobody made.
     Blockly.Events.disable();
     try {
-      Blockly.serialization.workspaces.load(
-        parseWorkspace(initialContents),
-        workspace,
-      );
+      showFile(parseWorkspace(initialContents), workspace);
     } finally {
       Blockly.Events.enable();
     }
     refreshActorPictures(workspace);
     workspace.scroll(scrollX, scrollY);
-  }, [sourcesEpoch, initialContents]);
+  }, [sourcesEpoch, initialContents, showFile]);
 
   // The selected block-color theme (its dark variant when the app is in dark
   // mode). `BlocklyWorkspace` applies live updates via its `theme` prop.

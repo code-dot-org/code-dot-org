@@ -7,7 +7,7 @@
 import {describe, expect, it} from 'vitest';
 
 import {STOCK_RULES} from '../../rules/stock';
-import {hasBody, merge, reap, split} from '../bodySurfaces';
+import {createBodySeam, hasBody, merge, reap, split} from '../bodySurfaces';
 
 /** A step whose body is the chain that follows it. */
 const ruleStep = (id: string, body: unknown) => ({
@@ -247,5 +247,79 @@ describe('every stock rule survives the round trip', () => {
     expect(count(solid)).toBeGreaterThan(400);
     expect(count(shown)).toBeLessThan(30);
     expect(Object.keys(bodies).length).toBeGreaterThan(0);
+  });
+});
+
+describe('the editor seam', () => {
+  // What the editor does with it: `show` on the way in, `read` on the way
+  // out, and a workspace in between that never held a body. The falsification
+  // that produced this file: with `read` handing back the interface instead of
+  // the merged document, all 4,198 tests in the suite still passed — nothing
+  // else in the lab can see a body being dropped.
+
+  /** What Blockly hands back: what was loaded, with the ids it kept. */
+  const asSaved = (shown: unknown) => JSON.parse(JSON.stringify(shown));
+
+  it('gives the file back whole after a save that changed nothing', () => {
+    const before = doc(ruleStep('s1', statement('work')));
+    const seam = createBodySeam();
+
+    const shown = seam.show(before);
+    expect(rootsOf(shown)[0]).not.toHaveProperty('next');
+    expect(seam.read(asSaved(shown))).toEqual(before);
+  });
+
+  it('keeps every body through a real rule', () => {
+    const solid = JSON.parse(
+      STOCK_RULES.find(rule => rule.id === 'solid')!.contents,
+    );
+    const seam = createBodySeam();
+
+    const shown = seam.show(solid);
+    const read = seam.read(asSaved(shown));
+
+    expect(rootsOf(read)).toEqual(rootsOf(seam.read(asSaved(shown))));
+    expect(JSON.stringify(read).length).toBeGreaterThan(
+      JSON.stringify(shown).length * 5,
+    );
+  });
+
+  it('leaves the rest of the file alone when a step is deleted', () => {
+    // `reap` also forgets the deleted step's body, which this cannot see: an
+    // orphan is invisible in the output either way, because `merge` only puts
+    // a body back on a block that is still there. That is why reaping is
+    // tested against the function above rather than here — it bounds what the
+    // editor holds, which is not a claim about the file.
+    const seam = createBodySeam();
+    const shown = seam.show(
+      doc(ruleStep('s1', statement('a')), ruleStep('s2', statement('b'))),
+    );
+    const roots = rootsOf(shown);
+
+    const afterDelete = {blocks: {...shown.blocks, blocks: [roots[0]]}};
+    const read = seam.read(afterDelete as never);
+
+    expect(rootsOf(read)).toHaveLength(1);
+    expect(rootsOf(read)[0].next?.block).toMatchObject({
+      fields: {TEXT: 'a'},
+    });
+  });
+
+  it('forgets the old file when it is shown a new one', () => {
+    // A rename reloads the whole document. Bodies carried over from the last
+    // one would reattach to whatever happens to share an id — so the case
+    // that tells is a step which HAD a body and now has none, where a leaked
+    // body comes back from a file the learner has moved on from.
+    const seam = createBodySeam();
+    seam.show(doc(ruleStep('s1', statement('old'))));
+    const shown = seam.show(
+      doc({
+        type: 'world_rule_step_in',
+        id: 's1',
+        fields: {NAME: 'applyVelocity', PHASE: 'push'},
+      }),
+    );
+
+    expect(rootsOf(seam.read(asSaved(shown)))[0]).not.toHaveProperty('next');
   });
 });
