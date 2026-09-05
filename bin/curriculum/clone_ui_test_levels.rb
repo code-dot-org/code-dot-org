@@ -117,7 +117,16 @@ def clone_dsl_level(level, new_name)
   if level.is_a?(LevelGroup) || level.is_a?(BubbleChoice)
     level.all_child_levels.uniq.each do |child|
       child_clone = clone_level(child)
-      new_text = new_text.gsub("level '#{child.name}'", "level '#{child_clone.name}'")
+      # A LevelGroup names its External sublevels with the text keyword and
+      # everything else with level; BubbleChoice uses level throughout. Left
+      # unanchored, like the plain string match it replaces, so a hand-written
+      # file with CRLF endings or a trailing space still matches.
+      before = new_text
+      new_text = new_text.gsub(/(level|text) '#{Regexp.escape(child.name)}'/) {"#{$1} '#{child_clone.name}'"}
+      if new_text == before
+        raise "no sublevel reference to #{child.name.dump} found in the dsl text of " \
+          "#{level.name.dump}; the clone would keep pointing at the production child."
+      end
     end
   end
 
