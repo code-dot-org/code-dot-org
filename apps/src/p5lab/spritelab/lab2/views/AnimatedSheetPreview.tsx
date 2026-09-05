@@ -12,8 +12,17 @@ import moduleStyles from './image-details-dialog.module.scss';
 // The sketch's frame rate, which pose frameDelays are counted in.
 const TICKS_PER_SECOND = 30;
 
-// How many times a pose's cycle plays before the next pose takes the pane.
-const CYCLES_PER_POSE = 3;
+// How many times each pose's cycle plays per turn — quick cycles play more,
+// so turns come out roughly even without the slow idle dominating.
+const POSE_PREVIEW_CYCLES: Record<CharacterPose, number> = {
+  stand: 2,
+  walk: 6,
+  jump: 1,
+};
+
+// The game picks jump frames from physics rather than cycling them, so the
+// preview shows a jump once — up, then down — each frame held a second.
+const JUMP_PREVIEW_FRAME_DELAY = 30;
 
 const POSE_TITLES: Record<CharacterPose, string> = {
   stand: 'Idle',
@@ -43,11 +52,15 @@ const AnimatedSheetPreview: React.FunctionComponent<
   const turns = useMemo(
     () =>
       orderedPoseKeys(poses).map(key => {
-        const range = poses[key]!;
+        const pose = key.split('-')[0] as CharacterPose;
+        const range =
+          pose === 'jump'
+            ? {...poses[key]!, frameDelay: JUMP_PREVIEW_FRAME_DELAY}
+            : poses[key]!;
         return {
-          pose: key.split('-')[0] as CharacterPose,
+          pose,
           range,
-          ticks: range.frameDelay * range.count * CYCLES_PER_POSE,
+          ticks: range.frameDelay * range.count * POSE_PREVIEW_CYCLES[pose],
         };
       }),
     [poses]
