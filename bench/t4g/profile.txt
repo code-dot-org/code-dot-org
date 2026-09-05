@@ -1,0 +1,13 @@
+date            2026-09-05T17:08:14Z
+host            ip-10-0-0-20
+kernel          7.0.0-1006-aws  aarch64
+cpu_model       Neoverse-N1
+cpu_cores       8
+mem_total       30Gi
+swap_total      15Gi
+disk_avail      37G
+instance_type   t4g.2xlarge
+ruby            ruby 3.2.11
+node            v20.20.2
+imagemagick     Version: ImageMagick 7.1.2-18
+git_sha         faf0f7ad3b9

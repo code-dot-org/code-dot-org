@@ -149,3 +149,63 @@ are both stale.
 `undefined method 'env' for Rails:Module` out of `rails/test_help.rb`. That
 is an artifact of running the suite one directory at a time, so those two
 files go unverified under this harness.
+
+### Measured
+
+Two runs, same host, same commit. Run 1 was the first execution of each
+suite on a freshly built checkout; run 2 followed roughly an hour later.
+
+| suite | tests | wall run 1 | wall run 2 | delta |
+|---|---:|---:|---:|---:|
+| `apps` | 10793 | 441 s | 339 s | -23% |
+| `dashboard/models` | 3409 | 613 s | 637 s | +4% |
+| `dashboard/controllers` | 4307 | 2600 s | 2423 s | -7% |
+| `dashboard/lib` | 1490 | 285 s | 302 s | +6% |
+| `dashboard/helpers` | 703 | 161 s | 171 s | +6% |
+| `dashboard/jobs` | 161 | 68 s | 77 s | +13% |
+| `dashboard/mailers` | 46 | 50 s | 51 s | +2% |
+| `dashboard/serializers` | 33 | 50 s | 49 s | -2% |
+| `dashboard/config` | 28 | 42 s | 42 s | +0% |
+| `dashboard/dsl` | 15 | 44 s | 46 s | +5% |
+| `dashboard/app` | 0 | 42 s | 42 s | +0% |
+| `dashboard/testing` | NA | 2 s | 2 s | +0% |
+| `dashboard/integration` | 436 | 177 s | 177 s | +0% |
+| `lib` | 792 | 507 s | 511 s | +1% |
+| `shared` | 112 | 111 s | 113 s | +2% |
+| **total** | **22,325** | **5193 s** | **4982 s** | **-4%** |
+
+Everything except `apps` reproduced within a few percent. `apps` is the
+exception and the reason to care about cache state: 441s cold, 339s warm, a
+23% swing on identical work. That is larger than most of the hardware
+difference a comparison like this is trying to find, so **run the harness
+twice on each host and compare second run to second run.** The Ruby suites
+were already warm in run 1 and moved 4% or less.
+
+`dashboard/controllers` dominates at roughly half the total. `dashboard/app`
+and `dashboard/config` are almost entirely Rails boot — 42s each, for 0 and
+28 tests.
+
+### The t4g did not throttle
+
+    calib start 1.98s   mid 1.97s   mid2 1.96s   end 1.97s
+    CPU steal   avg 0.47%   peak 1.18%   over 166 samples
+
+Identical work timed at four points, spanning about 75 minutes of sustained
+load, stayed flat to within 1%; steal never reached 2%. So this run spent no
+CPU credits it could not replace, and the numbers above are a property of the
+hardware rather than of the credit balance. A t4g-to-m8g comparison against
+these figures is sound.
+
+That is a result about this workload, not a general one. The suites spend
+much of their time on a single core — `dashboard/config` is 42s of Rails boot
+for 28 tests — and never saturate all eight for long. A more parallel
+workload could still exhaust credits, so check `calibration.tsv` on every
+run rather than assuming this holds.
+
+### Flaky versus deterministic
+
+Run 2 reproduced all nine failures and none of the errors. The one run-1
+error, `HomeControllerTest` hitting
+`Mysql2::Error: Lost connection to MySQL server during query`, did not recur
+and was a flake. The three `RubricsControllerTest` failures reproduced
+exactly, so they are deterministic and worth chasing.

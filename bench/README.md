@@ -41,6 +41,10 @@ comparison means anything:
 Both exist because `t4g` is burstable and `m8g` is not. A t4g number gathered
 while throttled is a lower bound on that machine, not a measurement of it.
 
+Cache state moves the `apps` suite by 23% between a cold and a warm run —
+more than the hardware difference a comparison like this is usually chasing.
+Run the harness twice on each host and compare second run to second run.
+
 Each suite pays about 42 seconds of Rails or Node boot per invocation. The
 dashboard suite runs once per test directory, so it pays that cost twelve
 times — roughly 8 minutes of the dashboard total is boot, not testing.
