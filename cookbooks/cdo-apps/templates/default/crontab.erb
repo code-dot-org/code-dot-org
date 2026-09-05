@@ -88,13 +88,11 @@
     # running while the new server is under construction.
     if node.chef_environment == 'production' # production daemon
       cronjob at:'30 14 * * *', do:dashboard_dir('bin','scheduled_pd_workshop_emails')
-      cronjob at:'0 16 * * *', do:dashboard_dir('bin','scheduled_pd_application_emails')
       cronjob at:'*/4 * * * *', do:dashboard_dir('bin', 'process_pd_workshop_ends')
       cronjob at:'*/5 * * * *', do:dashboard_dir('bin', 'fill_jotform_placeholders')
       cronjob at:'0 6 * * *', do:deploy_dir('bin', 'cron', 'process_foorm_data')
       cronjob at:'*/10 * * * *', do:deploy_dir('bin', 'cron', 'delete_twilio_data')
       cronjob at:'* * * * *', do:deploy_dir('bin', 'cron', 'confirm_usage')
-      cronjob at:'0 */2 * * *', do:deploy_dir('bin', 'cron', 'teacher_applications_to_gdrive')
       cronjob at:'0 5 * * *', do:deploy_dir('bin', 'cron', 'summer_workshops_to_gdrive')
       cronjob at:'0 13 * * *', do:deploy_dir('bin', 'cron', 'eir_teachers_to_gdrive')
       cronjob at:'0 7 * * 6', do:deploy_dir('bin', 'cron', 'stop_inactive_adhoc_instances')
