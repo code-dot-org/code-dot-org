@@ -64,8 +64,8 @@ function init() {
     .getElementById('extra_properties_save')
     .addEventListener('click', () => save(levelId, status));
 
-  // After the save button is wired, so a failure here costs the editor
-  // chrome, not the save path.
+  // After the save button is wired: if CodeMirror fails to set up, the
+  // section still saves — the user just types into a plain textarea.
   try {
     initializeCodeMirror6('extra_properties_json', 'json', {
       // Fires after document changes (debounced); also what turns the lint
