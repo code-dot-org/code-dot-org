@@ -7,7 +7,13 @@ Per-host output lives in a sibling directory named for the instance family:
 
 ## Running
 
-    REPO=/path/to/code-dot-org OUT=/path/to/bench/<family> bench/bench-cdo-tests.sh
+    cp bench/bench-cdo-tests.sh ~/bench-cdo-tests.sh
+    REPO=/path/to/code-dot-org OUT=/path/to/bench/<family> ~/bench-cdo-tests.sh
+
+Run it from outside the working tree. Bash reads a script by byte offset and
+re-reads it lazily, so pulling or rebasing the branch mid-run can resume the
+running process at the wrong offset, mid-line. Both hosts pull from this
+branch while the other is running.
 
 The script needs a working development environment — see `t4g/NOTES.md` for
 the setup deviations these hosts required. Ruby must be built under gcc-13
@@ -32,6 +38,12 @@ Expect roughly 90 minutes.
 
 Compare `results.tsv` wall seconds per suite. Two columns decide whether the
 comparison means anything:
+
+Compare **steady state to steady state**: the mean of `mid`, `mid2` and `end`,
+discarding `start` as a warm-up. A first sample taken after a toolchain change
+or a cleared cache can sit several percent above its own series, and the
+cross-host ratio is sensitive to which sample it is built from — 2.00x versus
+2.09x between these two hosts, purely on that choice.
 
 - **`calibration.tsv`** — the same work, timed four times. Flat means the host
   held its clock for the whole run. Rising means it did not, and the later

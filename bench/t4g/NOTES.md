@@ -72,21 +72,28 @@ itself under gcc-13 and the problem goes away, after which `bootsnap`'s
 
     CC=gcc-13 CXX=g++-13 rbenv install 3.2.11
 
-The mechanism is worth stating precisely, because it is not the one you would
-guess. `ruby/internal/stdbool.h` ends in a fallback:
+The mechanism, verified on both builds of this host. The generated config is
+`include/ruby-3.2.0/<arch>/ruby/config.h` — not
+`include/ruby-3.2.0/ruby/internal/config.h`, which is a wrapper and contains
+no probe results:
+
+    gcc-13 build   HAVE__BOOL 1   HAVE_STDBOOL_H 1
+    GCC 15 build   HAVE__BOOL 1
+
+and the tail of `ruby/internal/stdbool.h`:
 
     #elif defined(HAVE_STDBOOL_H)
     # include <stdbool.h>
     #elif !defined(HAVE__BOOL)
     # define bool _Bool
 
-Under GCC 15 the probe writes `HAVE__BOOL 1` and no `HAVE_STDBOOL_H`. That is
-the worst of both: the `<stdbool.h>` branch is skipped, and defining
-`HAVE__BOOL` *suppresses* the fallback that would have defined `bool` — so
-nothing defines it, and only C23's keyword saves the default build. Under
-gcc-13, config.h contains **neither** macro, the fallback fires, and `bool`
-is defined for every `-std`. Verified on this host: `HAVE_STDBOOL_H` does not
-appear in either build's config.h.
+Under gcc-13 the first branch fires and `<stdbool.h>` is included. Under
+GCC 15 the C23 default breaks autoconf's `stdbool.h` probe, so
+`HAVE_STDBOOL_H` is never written — and this is the trap — `HAVE__BOOL`
+alone is worse than neither macro, because it takes the `<stdbool.h>` branch
+out of play while *also* suppressing the `#define bool _Bool` fallback that
+would otherwise have covered for it. Nothing defines `bool`, and only C23's
+keyword keeps the default build compiling.
 
 `xxhash` needs `-Wno-incompatible-pointer-types` separately, since GCC 14
 promoted that to an error; pass it via `CONFIGURE_ARGS`, as mkmf ignores
@@ -217,11 +224,20 @@ thousand rows, and its `hourofcode` script collides with
 `create_hourofcode_unit_and_levels` at `dashboard/test/test_helper.rb:195`,
 which cost the m8g host 373 errors.
 
-On this host `db:reset` populated `secret_pictures` (22) and `secret_words`
-(9) on its own; `seed:secret_pictures seed:secret_words` was never run and the
-suite never raised `there are no SecretPictures!`. The m8g host needed those
-seeds explicitly, but was recovering a damaged schema load at the time, so it
-is unclear whether they are genuinely required after a clean `db:reset`.
+`seed:secret_pictures seed:secret_words` is not needed, and neither is any
+other manual seeding. `dashboard/lib/tasks/seed_in_test.rake:1` enhances
+`db:test:prepare` to run `db:fixtures:load` and then `seed:test`, and
+`seed.rake:615` defines `seed:test` as videos, games, concepts, secret words,
+secret pictures, school districts, schools, standards and foorms. That is why
+`secret_pictures` reads 22 here without the task ever being run, and why the
+database is complete despite `levels` and `scripts` being 0 — `seed:test`
+deliberately omits both.
+
+The practical consequence: substituting `db:drop db:create db:schema:load` for
+`db:test:prepare` silently skips the fixtures and that whole seed list, which
+looks like missing secret pictures but is really missing videos, games and
+concepts too. Run the documented command. (Mechanism found by the m8g host
+after it lost 53 errors to exactly this substitution.)
 
 Skipping `assets:precompile` does not fail cleanly. The suite aborts at load
 time with `Sprockets::Rails::Helper::AssetNotFound: "logo-codeai-inverse.svg"`,
