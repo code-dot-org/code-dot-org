@@ -13,6 +13,7 @@ export * from './fields/sounds';
 export * from './fields/validators';
 export * from './legacy/blockLimits';
 export * from './localization/blockDefinitions';
+export * from './localization/blockStrings';
 export * from './localization/locale';
 export * from './localization/variables';
 export * from './serialization/hooks';

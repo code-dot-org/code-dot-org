@@ -79,7 +79,7 @@ export const blocks = BlocklyCore.common.createBlockDefinitionsFromJsonArray([
     message0: '%1 %2',
     args0: [
       {
-        type: 'field_label',
+        type: 'field_procedure_name',
         name: 'NAME',
         text: '%{BKY_UNNAMED_KEY}',
       },

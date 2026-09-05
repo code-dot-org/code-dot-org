@@ -21,6 +21,7 @@ export interface BlockDefinition {
 
 export interface BlockConfig {
   args: arg[];
+  sourceArgs?: arg[];
   blockText: string;
   color: [number, number, number];
   func: string;
@@ -151,8 +152,6 @@ export interface BlocklyWrapperType extends BlocklyCoreType {
     [name: string]: BlocklyCore.ShortcutRegistry.KeyboardShortcut | undefined;
   };
   extraScrollHeight?: number;
-  /** Maintains the original English forms of Msg.* strings */
-  SourceMsg: {[key: string]: string};
   /** Maintains the original English names of provided variables in flyouts, toolboxes, etc */
   SourceVariables: {[key: string]: string};
   /** Keeps track of the original inputTypes passed in when predefined in level metadata */

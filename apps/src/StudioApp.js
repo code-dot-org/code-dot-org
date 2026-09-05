@@ -15,7 +15,9 @@ import {
   appendSharedFunctionsToState,
   highlightBlock,
   loadBlocksToWorkspace,
+  localizeBlockStrings,
   processToolboxXml,
+  localizeBlockInitDefinition,
 } from '@cdo/apps/blockly/utils';
 import {addCallouts} from '@cdo/apps/code-studio/callouts';
 import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
@@ -545,7 +547,10 @@ StudioApp.prototype.init = function (config) {
   // TODO (cpirich): implement block count for droplet (for now, blockly only)
   if (this.isUsingBlockly()) {
     // Hook the blockly environment into the localization engine
-    if (experiments.isEnabledAllowingQueryString(experiments.LOCALIZEJS)) {
+    if (
+      localization.isLocalizeJS() ||
+      experiments.isEnabledAllowingQueryString(experiments.LOCALIZEJS)
+    ) {
       localization.on('change', info => {
         const blockDefinitions =
           BlocklyUtils.getBlockDefinitionsForUpdatedLocale(info.rtl);
@@ -553,6 +558,14 @@ StudioApp.prototype.init = function (config) {
           blockly: Blockly,
           blockDefinitions,
           customInputTypes: Blockly.SourceCustomInputTypes,
+        });
+
+        // Also localize the base init blocks
+        Object.entries(BlocklyCore.Blocks).forEach(([key, blockDefinition]) => {
+          if (blockDefinition.init) {
+            BlocklyCore.Blocks[key] =
+              localizeBlockInitDefinition(blockDefinition);
+          }
         });
         BlocklyUtils.refreshWorkspacesForUpdatedLocale(info.rtl);
       });
@@ -1331,7 +1344,7 @@ StudioApp.prototype.initReadonly = function (options) {
  * @param {string} source Text representation of blocks (XML or JSON).
  */
 StudioApp.prototype.loadBlocks = function (source) {
-  loadBlocksToWorkspace(Blockly.mainBlockSpace, source);
+  loadBlocksToWorkspace(Blockly.mainBlockSpace, localizeBlockStrings(source));
 };
 
 /**

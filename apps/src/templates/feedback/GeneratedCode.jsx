@@ -21,7 +21,7 @@ export default class GeneratedCode extends React.Component {
         )}
 
         {/* code container should be LTR even in RTL mode */}
-        <pre className="generatedCode" dir="ltr">
+        <pre data-notranslate="true" className="generatedCode" dir="ltr">
           {this.props.code}
         </pre>
       </div>

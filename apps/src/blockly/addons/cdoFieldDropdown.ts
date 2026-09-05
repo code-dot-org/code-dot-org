@@ -29,6 +29,7 @@ export default class CdoFieldDropdown extends BlocklyCore.FieldDropdown {
     }
     super(menuGenerator, validator, config);
   }
+
   /**
    * Ensure that the input value is a valid language-neutral option.
    * @param newValue The input value.
@@ -104,6 +105,18 @@ export default class CdoFieldDropdown extends BlocklyCore.FieldDropdown {
     // Currently, we support the `config` attribute if `config` is stored in xml, but not in json.
     // The config is handled by `fromXml`.
     this.fromXml(field);
+  }
+
+  /**
+   * Updates to ensure that the popup div does not translate the items.
+   */
+  showEditor_(e?: MouseEvent) {
+    super.showEditor_(e);
+
+    const root = Blockly.DropDownDiv.getContentDiv();
+    for (const item of root.querySelectorAll('.blocklyMenuItemContent')) {
+      item.setAttribute('data-notranslate', 'true');
+    }
   }
 
   /**
