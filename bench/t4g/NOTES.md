@@ -67,10 +67,26 @@ reproduces it:
 
 The third line is why compiling gems with an older compiler does not help —
 the broken `config.h` is baked into the Ruby installation. Configure Ruby
-itself under gcc-13 and `HAVE_STDBOOL_H` appears, after which `bootsnap`'s
-`-std=c99` compiles unmodified:
+itself under gcc-13 and the problem goes away, after which `bootsnap`'s
+`-std=c99` compiles unmodified, as does `-std=c11`:
 
     CC=gcc-13 CXX=g++-13 rbenv install 3.2.11
+
+The mechanism is worth stating precisely, because it is not the one you would
+guess. `ruby/internal/stdbool.h` ends in a fallback:
+
+    #elif defined(HAVE_STDBOOL_H)
+    # include <stdbool.h>
+    #elif !defined(HAVE__BOOL)
+    # define bool _Bool
+
+Under GCC 15 the probe writes `HAVE__BOOL 1` and no `HAVE_STDBOOL_H`. That is
+the worst of both: the `<stdbool.h>` branch is skipped, and defining
+`HAVE__BOOL` *suppresses* the fallback that would have defined `bool` — so
+nothing defines it, and only C23's keyword saves the default build. Under
+gcc-13, config.h contains **neither** macro, the fallback fires, and `bool`
+is defined for every `-std`. Verified on this host: `HAVE_STDBOOL_H` does not
+appear in either build's config.h.
 
 `xxhash` needs `-Wno-incompatible-pointer-types` separately, since GCC 14
 promoted that to an error; pass it via `CONFIGURE_ARGS`, as mkmf ignores

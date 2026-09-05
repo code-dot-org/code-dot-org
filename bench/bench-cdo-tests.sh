@@ -4,6 +4,8 @@
 # The dashboard suite is run per-directory: `rails test` over the whole
 # tree wedges on this checkout (64 tests in 63 min, then no progress).
 #
+# Ruby is assumed to be built under gcc-13; see bench/t4g/NOTES.md section 3.
+#
 # Usage: REPO=/path/to/code-dot-org OUT=/tmp/bench ./bench-cdo-tests.sh
 set -u
 
@@ -14,7 +16,7 @@ TSV="$OUT/results.tsv"
 printf "suite\tfiles\ttests\tassertions\tfailures\terrors\tskips\twall_s\n" > "$TSV"
 
 # --- environment ------------------------------------------------------
-export PATH="$HOME/.cdo-ccshim:$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
 command -v rbenv >/dev/null && eval "$(rbenv init - bash)"
 export NVM_DIR="${NVM_DIR:-$HOME/.nvm}"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" >/dev/null 2>&1 && nvm use default >/dev/null 2>&1
