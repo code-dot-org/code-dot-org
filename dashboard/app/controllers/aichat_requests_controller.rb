@@ -95,8 +95,8 @@ class AichatRequestsController < ApplicationController
 
   # POST /aichat_requests
   # -----------------------
-  # Create a new AichatRequest record without enqueuing a job.
-  # Used for scenarios where the actual request will be carried out elsewhere (e.g. on the client).
+  # The row exists only to satisfy the aichat_events foreign key: no job runs and
+  # nothing reads the conversation back, so the messages are not stored.
   def create
     unless chat_completion_has_required_params?
       return render status: :bad_request, json: {}
@@ -108,36 +108,19 @@ class AichatRequestsController < ApplicationController
       return render status: :forbidden, json: {user_type: current_user.user_type, error: MODEL_REGION_BLOCKED_ERROR}
     end
 
-    request = create_request
+    request = create_request(store_messages: false)
     render json: {requestId: request.id}
   end
 
-  # PUT /aichat_requests/:id
-  # -----------------------
-  # Update an existing AichatRequest record with execution status and response.
-  # Used for scenarios where the request has been carried out elsewhere (e.g. on the client).
-  def update
-    begin
-      request = AichatRequest.find(params[:id])
-    rescue ActiveRecord::RecordNotFound
-      return render status: :not_found, json: {}
-    end
-
-    # Only the user who initiated the request can update it.
-    return render status: :forbidden, json: {} if request.user_id != current_user.id
-
-    if request.update(update_params)
-      render status: :ok, json: {requestId: request.id}
-    else
-      render status: :unprocessable_entity, json: {errors: request.errors}
-    end
-  end
-
-  def create_request
+  def create_request(store_messages: true)
     # TODO: confirm request shape and data usage https://codedotorg.atlassian.net/browse/TEACHING-60
     request_params = params.permit!.to_h.deep_symbolize_keys
 
-    attributes = AichatAiHelper.build_request_attributes(current_user.id, request_params)
+    attributes = AichatAiHelper.build_request_attributes(
+      current_user.id,
+      request_params,
+      store_messages: store_messages
+    )
 
     AichatRequest.new(attributes).tap(&:save!)
   end
@@ -192,9 +175,5 @@ class AichatRequestsController < ApplicationController
 
   private def get_backoff_rate
     DCDO.get("aichat_polling_backoff_rate", DEFAULT_POLLING_BACKOFF_RATE)
-  end
-
-  private def update_params
-    params.permit(:execution_status, :response)
   end
 end

@@ -1,6 +1,13 @@
 class AichatEventsController < ApplicationController
   authorize_resource class: false
 
+  # No shared constant for chat roles; AichatAiHelper spells them out too.
+  ASSISTANT_ROLE = 'assistant'.freeze
+  USER_ROLE = 'user'.freeze
+
+  # responseSignature is transport; teacherFeedback is authorization-bearing.
+  UNPERSISTED_EVENT_KEYS = %w[responseSignature teacherFeedback].freeze
+
   # POST /aichat_events/log_chat_event
   # ----------------------------------
   # params are:
@@ -27,6 +34,14 @@ class AichatEventsController < ApplicationController
 
     event = params[:newChatEvent]
 
+    integrity = event_integrity(event, context)
+    if integrity[:error]
+      log_integrity_failure(event, context, integrity[:error])
+      if require_response_signature?
+        return render status: :unprocessable_entity, json: {error: 'chat event failed integrity check'}
+      end
+    end
+
     project_id = nil
     if context[:channelId]
       _, project_id = get_storage_id_and_project_id(context[:channelId])
@@ -40,7 +55,7 @@ class AichatEventsController < ApplicationController
         project_id: project_id,
         lesson_id: context[:lessonId],
         request_id: event[:requestId], # Only present if ChatEvent is a ChatMessage, otherwise nil
-        aichat_event: event
+        aichat_event: persistable_event(event)
       )
     rescue StandardError => exception
       return render status: :bad_request, json: {error: exception.message}
@@ -129,6 +144,103 @@ class AichatEventsController < ApplicationController
     chat_event.save!
 
     render status: :ok, json: {}
+  end
+
+  # Both halves are checked. Provenance is not client-selected: a gateway turn
+  # has the worker's signature, a Rails-only turn has columns our job wrote.
+  private def event_integrity(event, context)
+    role = event[:role].to_s
+    return {error: nil} if event[:chatMessageText].blank?
+    return {error: nil} unless [USER_ROLE, ASSISTANT_ROLE].include?(role)
+    return {error: nil, status: :no_model_call} if no_model_call?(event, role)
+
+    result = AichatResponseSignature.verify(
+      signature: event[:responseSignature],
+      text: event[:chatMessageText],
+      user: current_user,
+      context: context,
+      covers: role == USER_ROLE ? :prompt : :response
+    )
+    return {error: nil, status: result.status} if result.verified?
+
+    # Absent is normal for a Rails-only event; a failed signature is not.
+    if result.status == :absent
+      legacy_error = legacy_mismatch(event, role)
+      return {error: nil, status: :server_executed} if legacy_error.nil?
+      return {error: legacy_error, status: :absent}
+    end
+
+    {error: result.error || result.status.to_s, status: result.status}
+  end
+
+  # Compares against columns our own job wrote, not against client input.
+  private def legacy_mismatch(event, role)
+    request_id = event[:requestId]
+    return "#{role} message without requestId or response signature" if request_id.blank?
+
+    request = AichatRequest.find_by(id: request_id)
+    return 'requestId not found' if request.nil?
+    # requestId is client-supplied, so ownership needs an explicit check.
+    return 'requestId belongs to another user' if request.user_id != current_user.id
+
+    if role == USER_ROLE
+      # What the job actually sent, whatever the client now claims.
+      recorded = request.new_message.is_a?(Hash) ? request.new_message['chatMessageText'] : nil
+      return 'request has no recorded message' if recorded.nil?
+    else
+      recorded = request.response
+      return 'request has no recorded response' if recorded.nil?
+    end
+
+    expected = AichatResponseSignature.sha256(recorded)
+    actual = AichatResponseSignature.sha256(event[:chatMessageText])
+    return nil if ActiveSupport::SecurityUtils.secure_compare(expected, actual)
+    "chatMessageText does not match the recorded #{role == USER_ROLE ? 'message' : 'response'}"
+  end
+
+  # Matched exactly, never by a loose rule: role, status and text all come from
+  # the client, so a broad carve-out would bypass the whole check.
+  private def no_model_call?(event, role)
+    if role == ASSISTANT_ROLE
+      # submitChatContents logs this fixed placeholder when a completion never
+      # produced a response at all.
+      return event[:status].to_s == SharedConstants::AI_INTERACTION_STATUS[:ERROR] &&
+          event[:chatMessageText].to_s == 'error' &&
+          event[:requestId].blank?
+    end
+
+    # Input moderation rejected the message before the model was invoked, so the
+    # worker never saw it and could not sign it.
+    return true if [
+      SharedConstants::AI_INTERACTION_STATUS[:PROFANITY_VIOLATION],
+      SharedConstants::AI_INTERACTION_STATUS[:PII_VIOLATION],
+    ].include?(event[:status].to_s)
+
+    # The request never reached a completion (403, 429, network failure), so no
+    # row exists to compare against.
+    event[:status].to_s == SharedConstants::AI_INTERACTION_STATUS[:ERROR] &&
+      event[:requestId].blank?
+  end
+
+  private def persistable_event(event)
+    event.except(*UNPERSISTED_EVENT_KEYS)
+  end
+
+  private def require_response_signature?
+    DCDO.get('aichat_require_response_signature', false)
+  end
+
+  # Kept distinct: :invalid/:replayed are attack signals, :key_unavailable ours.
+  private def log_integrity_failure(event, context, reason)
+    CDO.log.info({
+      event: 'aichat_event_integrity_failure',
+      reason: reason,
+      requestId: event[:requestId],
+      userId: current_user.id,
+      clientType: context[:clientType],
+      enforcing: require_response_signature?,
+    }.to_json.to_s
+)
   end
 
   private def can_log_aichat_events?(level_id, client_type)

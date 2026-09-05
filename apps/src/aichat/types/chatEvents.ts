@@ -57,6 +57,12 @@ export interface CompletedChatMessage extends BaseChatMessage {
   /** Profanity classification feedback given by the teacher. If undefined, the teacher took no action or undid their action. */
   teacherFeedback?: FeedbackValue;
   /**
+   * One signature per turn, carried by both of its messages: it holds a digest
+   * of the prompt and one of the response, so each is checked against its own.
+   * Verified by log_chat_event and then dropped; never stored.
+   */
+  responseSignature?: string;
+  /**
    * Can be any status besides 'unknown', which is reserved only for pending messages.
    * Note that 'error' here means that the chat message call was returned by the server, but the server returned an error
    * (i.e. downstream AI service error).
