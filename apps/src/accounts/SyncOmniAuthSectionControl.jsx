@@ -13,6 +13,7 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import ReauthorizeClever from '@cdo/apps/templates/teacherDashboard/ReauthorizeClever';
 import ReauthorizeGoogleClassroom from '@cdo/apps/templates/teacherDashboard/ReauthorizeGoogleClassroom';
+import {courseIdFromSectionCode} from '@cdo/apps/templates/teacherDashboard/sectionCodeHelpers';
 import {importOrUpdateRoster} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {
   sectionCode,
@@ -30,6 +31,7 @@ import * as utils from '../utils';
 const SUPPORTED_PROVIDERS = [
   OAuthSectionTypes.clever,
   OAuthSectionTypes.google_classroom,
+  OAuthSectionTypes.classlink,
   SectionLoginType.lti_v1,
 ];
 
@@ -85,8 +87,7 @@ class SyncOmniAuthSectionControl extends React.Component {
 
     // Default case: Button is READY
     this.setState({buttonState: IN_PROGRESS});
-    // Section code is the course ID, without the G- or C- prefix.
-    const courseId = sectionCode.replace(/^[GC]-/, '');
+    const courseId = courseIdFromSectionCode(sectionCode);
     updateRoster(courseId, sectionName)
       .then(() => {
         if (sectionProvider === SectionLoginType.lti_v1) {

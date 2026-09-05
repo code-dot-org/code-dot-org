@@ -32,7 +32,16 @@
   teacher_dashboard_data[:showAITALessonSummary] = DCDO.get('show-aita-lesson-summaries', false)
   teacher_dashboard_data[:showAITAPodcasts] = DCDO.get('ai-lesson-summary-podcasts', false)
   teacher_dashboard_data[:hasCompletedPersonalizationQuiz] = @current_user.present? && TeachingProfileData.find_by(user: @current_user).present?
-  teacher_dashboard_data[:providers] = @current_user.providers
+  # ClassLink rostering needs the v2 (TenantId|SourcedId) auth option, which
+  # a user in a district without OneRoster never gets — so the entry point is
+  # hidden from v1-only holders rather than prompting a re-login that may
+  # never help. Visibility only: the rostering endpoints reject no-v2
+  # requesters on their own.
+  providers = @current_user.providers
+  unless @current_user.authentication_options.exists?(credential_type: AuthenticationOption::CLASSLINK, version: AuthenticationOption::Classlink::VERSION[:v2])
+    providers -= [AuthenticationOption::CLASSLINK]
+  end
+  teacher_dashboard_data[:providers] = providers
   teacher_dashboard_data[:flash] = @flash if @flash.present?
   teacher_dashboard_data[:logoTransitionEnabled] = true if logo_transition_enabled
 
