@@ -16,8 +16,8 @@
 # Rails-level `self.primary_key = 'id'` declaration does not imply a real
 # database-level primary key (see the `schools` table for an example).
 #
-# Validation is lazy — performed by `validate_exported_models!` /
-# `exportability_errors`, not at class load time — because:
+# Validation is lazy - performed by `validate_exported_models!` /
+# `exportability_errors`, not at class load time - because:
 #   * Models may set `self.table_name` after the `export_to_analytics`
 #     declaration, and we need the final table name to query the schema.
 #   * The database connection is not necessarily available when the model
@@ -41,6 +41,13 @@ module AnalyticsExportable
       if self != base_class
         raise ArgumentError, "export_to_analytics must be called on the Single Table Inheritance base class (#{base_class.name}), not #{name}"
       end
+
+      # Guard every exported table against NUL bytes, which MySQL tolerates but Redshift's SUPER type
+      # rejects (Zero ETL load error 1224), stalling the table's replication. See SanitizesNullBytes.
+      # `respond_to?(:before_save)` keeps this to real persistable models: test doubles that mix in
+      # this concern without being ActiveRecord classes have no save callbacks to hook. `include` is
+      # idempotent, so no need to guard against including it twice.
+      include SanitizesNullBytes if respond_to?(:before_save)
 
       AnalyticsExportable.exported_models.add(self)
     end
