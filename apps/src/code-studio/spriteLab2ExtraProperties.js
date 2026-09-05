@@ -35,6 +35,14 @@ export function camelize(snakeName) {
   return snakeName.replace(/_([a-z])/g, (_, letter) => letter.toUpperCase());
 }
 
+// True when the editor text changed while a save request was out —
+// "Saved." must not vouch for text that was never sent.
+let editedDuringSave = false;
+
+// Init fires one load and every save fires another; a stale response must
+// not overwrite a newer dump.
+let loadEpoch = 0;
+
 document.addEventListener('DOMContentLoaded', init);
 
 function init() {
@@ -51,6 +59,7 @@ function init() {
     return;
   }
   form.insertAdjacentElement('afterend', buildSection());
+  const textarea = document.getElementById('extra_properties_json');
   const status = document.getElementById('extra_properties_status');
 
   loadCurrentValues(levelId);
@@ -59,17 +68,25 @@ function init() {
     .getElementById('extra_properties_save')
     .addEventListener('click', () => save(levelId, status));
 
-  // After the save button works on its own: a failure here costs the lint
-  // gutter, not the save path.
-  initializeCodeMirror6('extra_properties_json', 'json', {
-    // Fires as the document changes; also what turns the lint gutter on.
-    // A stale "Saved." next to edited text would claim the edit is saved.
-    onUpdateLinting: () => {
-      if (status.textContent !== 'Saving…') {
-        status.textContent = '';
-      }
-    },
-  });
+  // After the save button is wired, so a failure here costs the editor
+  // chrome, not the save path.
+  try {
+    initializeCodeMirror6('extra_properties_json', 'json', {
+      // Fires as the document changes; also what turns the lint gutter on.
+      // A stale "Saved." next to edited text would claim the edit is saved.
+      onUpdateLinting: () => {
+        if (status.textContent === 'Saving…') {
+          editedDuringSave = true;
+        } else {
+          status.textContent = '';
+        }
+      },
+    });
+  } catch {
+    // CodeMirror hides the textarea before mounting; put it back so the
+    // box still works as a plain textarea.
+    textarea.style.display = '';
+  }
 }
 
 // All static markup — nothing user-controlled passes through innerHTML
@@ -111,14 +128,21 @@ function buildSection() {
 }
 
 // The dump enumerates every editable key, set or not, so it reads like a
-// form of the available knobs. level_properties returns the properties the
-// lab itself consumes, keyed by level id, names camelized.
+// form of the available knobs — and it always shows what the server
+// stored, never what was submitted, since it is the documented copy-source
+// for nested edits. level_properties returns the properties the lab itself
+// consumes, keyed by level id, names camelized.
 async function loadCurrentValues(levelId) {
+  const epoch = ++loadEpoch;
   const pre = document.getElementById('extra_properties_current');
   try {
     const response = await HttpClient.fetchJson(
-      `/levels/${levelId}/level_properties`
+      `/levels/${levelId}/level_properties`,
+      {headers: {Accept: 'application/json'}}
     );
+    if (epoch !== loadEpoch) {
+      return;
+    }
     const properties = response.value[levelId] || {};
     const display = {};
     RAW_EDITABLE_PROPERTIES.forEach(key => {
@@ -126,7 +150,9 @@ async function loadCurrentValues(levelId) {
     });
     pre.textContent = JSON.stringify(display, null, 2);
   } catch {
-    pre.textContent = "Couldn't load current values — saving still works.";
+    if (epoch === loadEpoch) {
+      pre.textContent = "Couldn't load current values — saving still works.";
+    }
   }
 }
 
@@ -152,6 +178,7 @@ async function save(levelId, status) {
     return;
   }
   saveButton.disabled = true;
+  editedDuringSave = false;
   status.textContent = 'Saving…';
   try {
     await HttpClient.post(
@@ -160,13 +187,30 @@ async function save(levelId, status) {
       true,
       {
         'Content-Type': 'application/json;charset=UTF-8',
+        Accept: 'application/json',
       }
     );
-    applyChanges(changes);
-    status.textContent = 'Saved.';
+    await loadCurrentValues(levelId);
+    // An unpublished level's save reaches the database but not its .level
+    // file (only published levels are written to disk); the next publish
+    // writes the file with these properties included.
+    const published =
+      document.getElementById('level_published')?.value === 'true';
+    const suffixes = [];
+    if (!published) {
+      suffixes.push(
+        'the level is unpublished, so use "Save and publish" to get this into its .level file'
+      );
+    }
+    if (editedDuringSave) {
+      suffixes.push('the box has newer, unsaved edits');
+    }
+    status.textContent = suffixes.length
+      ? `Saved — ${suffixes.join('; ')}.`
+      : 'Saved.';
   } catch (e) {
-    // A rejection with a JSON body sends its reason there; HttpClient's
-    // error carries only the status line.
+    // A failure with a JSON body may carry its reason there; HttpClient's
+    // error itself has only the status line.
     let message = e.message;
     if (isNetworkError(e)) {
       const body = await e.response.json().catch(() => null);
@@ -178,34 +222,4 @@ async function save(levelId, status) {
   } finally {
     saveButton.disabled = false;
   }
-}
-
-// Mirror the save into the current-values dump in place — a reload here
-// would discard unsaved edits in the level form on the same page. The dump
-// enumerates every editable key, so a removed value shows as null (blank
-// values disappear on save; properties store no blanks).
-function applyChanges(changes) {
-  const pre = document.getElementById('extra_properties_current');
-  let current;
-  try {
-    current = JSON.parse(pre.textContent);
-  } catch {
-    return;
-  }
-  Object.entries(changes).forEach(([key, value]) => {
-    current[key] = isBlank(value) ? null : value;
-  });
-  pre.textContent = JSON.stringify(current, null, 2);
-}
-
-// Rails present?, near enough: what SerializedProperties strips on save.
-// Exported for its unit test.
-export function isBlank(value) {
-  return (
-    value === null ||
-    value === false ||
-    (typeof value === 'string' && value.trim() === '') ||
-    (Array.isArray(value) && value.length === 0) ||
-    (typeof value === 'object' && Object.keys(value).length === 0)
-  );
 }
