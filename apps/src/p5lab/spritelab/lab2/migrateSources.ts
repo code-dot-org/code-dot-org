@@ -3,7 +3,11 @@
 // DELETE THIS FILE once no live project predates the renames below. Nothing
 // but the shape of already-saved JSON depends on it: sources are rewritten in
 // the current shape on the next save, so each migration only has to survive
-// until the projects it covers have been opened once.
+// until the projects it covers have been opened once. One extra dependent to
+// check before deleting: the toolbox editor's lock-stripping relies on the
+// when_run rename — cdoBlockSerializer forces deletable=false onto the
+// legacy type on every load, which would re-bake the lock the stripping
+// removes.
 
 import {
   LEGACY_WHEN_RUN_BLOCK_TYPE,

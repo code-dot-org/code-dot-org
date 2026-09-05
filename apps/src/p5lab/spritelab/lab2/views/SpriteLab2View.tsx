@@ -85,6 +85,7 @@ import {
   fetchExternalProject,
   fetchSectionScenes,
   parseExternalSceneKey,
+  stripEditingLocks,
   toExternalSceneOptions,
 } from '../scenesApi';
 import SpriteLab2Engine from '../SpriteLab2Engine';
@@ -160,6 +161,12 @@ function getScenes(sources: Sources): Scene[] {
     },
   ];
 }
+
+// Defensive guard for toolbox mode's load: the toolbox edit sources always
+// carry a source (an empty toolbox arrives as {}), so this should never be
+// reached — but the value to load if it ever is must not be the student
+// default, whose UNDELETABLE when-run hat would bake into the toolbox.
+const EMPTY_SCENE_SOURCE: WorkspaceSerialization = {};
 
 // Debounce between a workspace edit and the live-preview re-run.
 const RUN_DEBOUNCE_MS = 400;
@@ -372,7 +379,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // Start Over (the reinit count in the deps). On a scene-less project the
   // pin becomes the only scene — materializing the synthesized default too
   // would leave a stray "Scene 1" in every level sharing the project.
-  const {pinnedSceneId, pinnedSceneName} = levelProperties;
+  // Scenes are a program concept; a toolbox has none to pin. Neutralized
+  // here, at the one read of the property, so every consumer below (scene
+  // init, the vanished-scene repair, play-start, the locked selector) sees
+  // no pin — a pin that is never materialized in toolbox mode would
+  // otherwise leave activeSceneId pointing at a scene that never exists,
+  // and every workspace edit would write to nothing and be reverted.
+  const pinnedSceneId = isToolboxMode
+    ? undefined
+    : levelProperties.pinnedSceneId;
+  const {pinnedSceneName} = levelProperties;
   useEffect(() => {
     if (!pinnedSceneId) {
       return;
@@ -1279,8 +1295,20 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     if (!animationsSeeded) {
       return;
     }
-    const source = activeScene.source ?? DEFAULT_SCENE_SOURCE;
-    if (isEqual(getCurrentBlocks(), source)) {
+    const source = isToolboxMode
+      ? stripEditingLocks(activeScene.source ?? EMPTY_SCENE_SOURCE)
+      : activeScene.source ?? DEFAULT_SCENE_SOURCE;
+    // Compare like with like: the loaded workspace can re-emit a delete
+    // lock the stripped source no longer carries (the serializer forces one
+    // onto legacy when_run blocks), and a mismatch here reloads the
+    // workspace out from under the user's edit, forever.
+    const current = getCurrentBlocks();
+    if (
+      isEqual(
+        isToolboxMode && current ? stripEditingLocks(current) : current,
+        source
+      )
+    ) {
       return;
     }
     loadCode(source);
@@ -1448,7 +1476,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           ) : undefined
         }
         sceneTabsExtra={
-          animationsSeeded ? (
+          // Never in toolbox mode: "New scene…" would make DEFAULT_SCENE_SOURCE
+          // the active scene, and saving would overwrite the toolbox with it.
+          animationsSeeded && !isToolboxMode ? (
             <SceneSelector
               scenes={sceneMetadata}
               activeSceneId={activeSceneId}

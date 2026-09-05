@@ -1,7 +1,9 @@
 // Client for the experimental cross-project scene APIs (scenes UI variant).
 // See dashboard SpriteLab2Controller.
 
-import {JsonBlockConfig} from '@cdo/apps/blockly/types';
+import {cloneDeep} from 'lodash';
+
+import {JsonBlockConfig, WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {ExternalSceneOption} from './redux/spriteLab2Redux';
@@ -113,6 +115,30 @@ export function forEachSavedBlock(
     (source as {blocks?: {blocks?: JsonBlockConfig[]}} | undefined)?.blocks
       ?.blocks || []
   ).forEach(walk);
+}
+
+/**
+ * Unlock blocks a past toolbox save baked in with the student default's
+ * editing locks, so the toolbox editor can finally remove them. Delete
+ * locks are never authorable in toolbox mode, so they go everywhere;
+ * move locks go only on root blocks — an immovable CHILD is an authored
+ * toolbox feature (the workspace context menu offers it there), while a
+ * root's can only be old bake residue, is not authorable or clearable in
+ * toolbox mode, and would ride the flyout into student workspaces.
+ */
+export function stripEditingLocks(
+  source: WorkspaceSerialization
+): WorkspaceSerialization {
+  const stripped = cloneDeep(source);
+  forEachSavedBlock(stripped, block => {
+    delete block.deletable;
+  });
+  (
+    (stripped as {blocks?: {blocks?: JsonBlockConfig[]}}).blocks?.blocks || []
+  ).forEach(block => {
+    delete block.movable;
+  });
+  return stripped;
 }
 
 /** Every non-empty value of `fieldName` on saved blocks of `blockType`. */
