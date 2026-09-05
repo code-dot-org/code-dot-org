@@ -10,7 +10,9 @@ Per-host output lives in a sibling directory named for the instance family:
     REPO=/path/to/code-dot-org OUT=/path/to/bench/<family> bench/bench-cdo-tests.sh
 
 The script needs a working development environment — see `t4g/NOTES.md` for
-the setup deviations an arm64 host requires. It stops nothing on its own;
+the setup deviations these hosts required. Ruby must be built under gcc-13
+(`CC=gcc-13 CXX=g++-13 rbenv install`); see NOTES.md §3 for why. Both hosts
+run that build, so the timings are comparable. It stops nothing on its own;
 shut down `dashboard-server` and any other load first, or the timings are
 noise.
 

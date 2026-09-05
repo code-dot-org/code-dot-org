@@ -23,39 +23,63 @@ at 8.5 MB/s, which took the same install down to 59 seconds. Rewrite both
 URIs — the archive and the security suite — in
 `/etc/apt/sources.list.d/ubuntu.sources`.
 
-**2. Override the MySQL image.** `docker/developers/docker-compose.mysql.yml`
-pins `mysql/mysql-server:8.0`, an Oracle-published image whose manifest is
-amd64 only. It cannot run here. `docker-compose.override.arm64.yml` in the
-parent directory substitutes the multi-arch official `mysql:8.0`, which takes
-the same `MYSQL_*` environment but ships no `HEALTHCHECK` — and
-`dashboard-services` waits on `condition: service_healthy` — so the override
-supplies one, and binds both containers to loopback instead of `0.0.0.0`.
-Copy it to the repository root as `docker-compose.override.yml`.
+**2. Keep upstream's images; take the port bindings.** Earlier revisions of
+this file claimed `mysql/mysql-server:8.0` and the pinned MinIO release were
+amd64-only and could not run on Graviton. That was wrong. Both publish arm64:
 
-The MinIO image the compose file pins is amd64 only as well. Its service also
-wants host port 9000, which is the webpack dev server's port
-(`apps/bundlerBase.js`), so the two cannot run at once. Bring up
-`dashboard-services` (MySQL and Redis) rather than `all-services` unless you
-need S3 emulation.
+    $ docker manifest inspect mysql/mysql-server:8.0 | grep architecture
+    amd64  arm64
+    $ docker manifest inspect minio/minio:RELEASE.2021-07-30T00-02-00Z
+    amd64  arm64  ppc64le  s390x
 
-**3. Relax the compiler for two gems.** GCC 14 promoted several warnings to
-errors, and Ubuntu 26.04 ships GCC 15. `xxhash` fails on
-`-Wincompatible-pointer-types`; `bootsnap` forces `-std=c99`, where `bool`
-needs `<stdbool.h>` that C23 would have provided. Setting `CFLAGS` in the
-environment does nothing, because gem extconfs overwrite it. A shim on `PATH`
-ahead of `/usr/bin` works:
+The m8g host ran upstream's compose file unmodified for nine hours. A fresh
+checkout should do the same.
 
-    #!/bin/sh
-    exec /usr/bin/gcc "$@" \
-      -include stdbool.h \
-      -Wno-error=incompatible-pointer-types \
-      -Wno-error=implicit-function-declaration \
-      -Wno-error=int-conversion \
-      -Wno-error=return-mismatch \
-      -Wno-error=declaration-missing-parameter-type
+`docker-compose.override.arm64.yml` in the parent directory is therefore not
+an architecture workaround, and its name is a misnomer. Two of its three parts
+are still worth taking on any host:
 
-with the same file for `g++` minus the `-include` (C++ has a builtin `bool`).
-This is the general form of the `thin` workaround SETUP.md already documents.
+- MinIO moved off port 9000, which the apps webpack dev server binds
+  (`apps/bundlerBase.js`), so MinIO and `yarn start` cannot coexist.
+  `locals.yml`'s `aws_s3_endpoint` must agree with whichever port you pick.
+- MySQL and Redis bound to loopback rather than every interface, so a host
+  with a permissive security group does not publish root/password to the
+  internet.
+
+The third part, swapping in the official `mysql:8.0`, is local history and
+should not be copied: this host's volume had already been initialised by
+`mysql:8.0` (8.0.46), and Oracle's 8.0.32 refuses to start against a newer
+data dictionary. The official image also ships no `HEALTHCHECK`, which
+`dashboard-services` needs for `condition: service_healthy`, so the override
+supplies one. Start from upstream's image and you need none of that.
+
+**3. Build Ruby under gcc-13.** Ubuntu 26.04 ships GCC 15, whose C23 default
+breaks autoconf's `stdbool.h` probe. Ruby 3.2.11 as built by ruby-build then
+gets a `config.h` defining `HAVE__BOOL` but not `HAVE_STDBOOL_H`, so
+`ruby/internal/stdbool.h` neither includes `<stdbool.h>` nor defines `bool`
+itself. `bool` survives only as a C23 keyword, and any gem forcing an older
+`-std` fails inside Ruby's own headers. `#include <ruby.h>` and nothing else
+reproduces it:
+
+    gcc     default (C23)    OK
+    gcc     -std=c99         error: unknown type name 'bool'
+    gcc-13  default (gnu17)  error: unknown type name 'bool'
+
+The third line is why compiling gems with an older compiler does not help —
+the broken `config.h` is baked into the Ruby installation. Configure Ruby
+itself under gcc-13 and `HAVE_STDBOOL_H` appears, after which `bootsnap`'s
+`-std=c99` compiles unmodified:
+
+    CC=gcc-13 CXX=g++-13 rbenv install 3.2.11
+
+`xxhash` needs `-Wno-incompatible-pointer-types` separately, since GCC 14
+promoted that to an error; pass it via `CONFIGURE_ARGS`, as mkmf ignores
+`CFLAGS`.
+
+This supersedes an earlier `gcc` PATH shim that force-included `stdbool.h`
+into every gem compile. The shim worked, but treated the symptom, and left
+`bench-cdo-tests.sh` silently depending on a `$HOME/.cdo-ccshim` that existed
+on only one of the two hosts. Diagnosis is the m8g host's.
 
 **4. Fix the endpoint keys `docker/developers` prints.**
 `docker-compose.dashboard.yml` tells you to write
@@ -138,6 +162,56 @@ in the working tree; delete them after a run.
 `HomeControllerTest` produced one further error,
 `Mysql2::Error: Lost connection to MySQL server during query`, which did not
 reproduce.
+
+`ProgrammingExpressionAutocompleteTest` fails on the m8g host but not here.
+That host's `dashboard_test` had been seeded with `rake seed:all`; this one
+was left empty, per TESTING.md. Treat it as a symptom of a seeded test
+database rather than a property of the suite.
+
+## Working-tree churn during a run
+
+Two kinds of debris. Both are the suite writing into `dashboard/config/`
+rather than a temp directory, and neither is gitignored.
+
+`dashboard/config/course_offerings/bogus-course-*.json` are new files, four
+per full `controllers` run. Delete them afterwards.
+
+`dashboard/config/blocks/**` is worse: `dashboard/test/models/block_test.rb`
+and `app/models/concerns/multi_file_seeded.rb` churn it mid-run, and the m8g
+host twice found 439 *tracked* files showing as deleted. Restore with
+
+    git checkout -- dashboard/config/blocks
+
+and check `git status` before committing anything after a test run, so the
+deletions do not get swept in. (Reported by the m8g host; not independently
+seen here.)
+
+## Test database
+
+Prepare it with TESTING.md's commands verbatim and nothing more:
+
+    RAILS_ENV=test bundle exec rake assets:precompile
+    RAILS_ENV=test bundle exec rake db:reset db:test:prepare
+    cd ../pegasus && RAILS_ENV=test bundle exec rake test:reset_dependencies
+
+The test database is meant to be empty — `levels` and `scripts` both read 0
+here — and the factories build what each test needs. Seeding it with
+`seed:all` is actively harmful: it makes the DB-bound suites walk a hundred
+thousand rows, and its `hourofcode` script collides with
+`create_hourofcode_unit_and_levels` at `dashboard/test/test_helper.rb:195`,
+which cost the m8g host 373 errors.
+
+On this host `db:reset` populated `secret_pictures` (22) and `secret_words`
+(9) on its own; `seed:secret_pictures seed:secret_words` was never run and the
+suite never raised `there are no SecretPictures!`. The m8g host needed those
+seeds explicitly, but was recovering a damaged schema load at the time, so it
+is unclear whether they are genuinely required after a clean `db:reset`.
+
+Skipping `assets:precompile` does not fail cleanly. The suite aborts at load
+time with `Sprockets::Rails::Helper::AssetNotFound: "logo-codeai-inverse.svg"`,
+which reads like a missing asset rather than a missing setup step, and Spring
+keeps serving the stale environment afterwards — so precompiling appears not
+to have helped until you `spring stop` or set `DISABLE_SPRING=1`.
 
 ## Suites that do not run
 
