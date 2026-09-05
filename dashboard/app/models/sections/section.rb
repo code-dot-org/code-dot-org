@@ -654,6 +654,7 @@ class Section < ApplicationRecord
         avatar_emoji: avatar_emoji,
         demo_type: demo_type,
         assigned_ai_chat_tools_dependency: assigned_ai_chat_tools_dependency,
+        assigned_inaccessible_ai_models: assigned_inaccessible_ai_models?,
         ai_chat_access_level: ai_chat_access_level,
       }
     end
@@ -746,6 +747,7 @@ class Section < ApplicationRecord
           avatar_emoji: avatar_emoji,
           demo_type: demo_type,
           assigned_ai_chat_tools_dependency: assigned_ai_chat_tools_dependency,
+          assigned_inaccessible_ai_models: assigned_inaccessible_ai_models?,
           ai_chat_access_level: ai_chat_access_level,
         }
       )
@@ -880,6 +882,15 @@ class Section < ApplicationRecord
     return SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:ESSENTIAL] if script&.requires_ai_chat_tools? || unit_group&.requires_ai_chat_tools?
     return SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:AVAILABLE] if script&.has_ai_chat_tools? || unit_group&.has_ai_chat_tools?
     SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE]
+  end
+
+  # Whether the assigned curriculum uses AI models this section's instructor
+  # cannot reach, because they are unavailable outside the US.
+  # False whenever nothing is inaccessible, which for instructors with no
+  # restrictions also lets us skip scanning the curriculum's levels.
+  def assigned_inaccessible_ai_models?
+    return false unless user&.us_only_aichat_models_disabled?
+    !!(script&.uses_us_only_ai_models? || unit_group&.uses_us_only_ai_models?)
   end
 
   # A section can be assigned a course (aka unit_group) without being assigned a script,

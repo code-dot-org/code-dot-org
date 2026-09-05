@@ -73,6 +73,25 @@ class Level < ApplicationRecord
 
   scope :with_any_ai_chat_tools, -> {with_essential_ai_chat_tools.or(with_ai_tutor_available)}
 
+  # Aichat levels pick their model per level, so only those configured with a
+  # US only model count.
+  scope :with_us_only_aichat_model, (lambda do
+    where(type: 'Aichat').where(
+      "levels.properties->>'$.aichat_settings.initialCustomizations.selectedModelId' IN (?)",
+      SharedConstants::AI_CHAT_US_ONLY_MODEL_IDS
+    )
+  end)
+
+  # scope for levels whose AI features use a model that is only available in
+  # the US. AI Tutor has no per-level model (see
+  # apps/src/lab2/ai/ai-tutor-model-id.ts) and Weblab2 makes the tutor
+  # essential, so any of those levels counts.
+  scope :with_us_only_ai_models, (lambda do
+    with_us_only_aichat_model.
+      or(where(type: 'Weblab2')).
+      or(with_ai_tutor_available)
+  end)
+
   before_validation :strip_name
   before_destroy :remove_empty_script_levels
 

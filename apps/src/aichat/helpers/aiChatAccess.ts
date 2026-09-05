@@ -88,3 +88,22 @@ export const shouldShowAiChatEssentialAlert = ({
       teacherAiChatAccessLevel === AiChatAccessLevels.DISABLED)
   );
 };
+
+/**
+ * Returns true if the section's assigned curriculum needs AI chat tools that
+ * the instructor cannot reach because the models are only available in the US.
+ * Distinct from shouldShowAiChatEssentialAlert, which covers tools turned off
+ * by an access level and is fixable from the AI settings page; this one is not.
+ */
+export const shouldShowUsOnlyModelsAlert = ({
+  assignedAiChatToolsDependency,
+  assignedInaccessibleAiModels,
+}: {
+  assignedAiChatToolsDependency: AiChatToolsDependencyValue | undefined;
+  assignedInaccessibleAiModels: boolean | undefined;
+}): boolean => {
+  return (
+    assignedAiChatToolsDependency === AiChatToolsDependency.ESSENTIAL &&
+    !!assignedInaccessibleAiModels
+  );
+};

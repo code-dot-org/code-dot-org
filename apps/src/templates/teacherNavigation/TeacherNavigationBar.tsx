@@ -10,7 +10,10 @@ import {
   useParams,
 } from 'react-router-dom';
 
-import {shouldShowAiChatEssentialAlert} from '@cdo/apps/aichat/helpers/aiChatAccess';
+import {
+  shouldShowAiChatEssentialAlert,
+  shouldShowUsOnlyModelsAlert,
+} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -220,14 +223,23 @@ const TeacherNavigationBar: React.FC<{
 
   const shouldShowErrorIcon = React.useCallback(
     (key: string) => {
+      if (
+        key !== TEACHER_NAVIGATION_PATH_NAMES.aiChatSettings ||
+        !selectedSection
+      ) {
+        return false;
+      }
+      const {assignedAiChatToolsDependency, assignedInaccessibleAiModels} =
+        selectedSection;
       return (
-        key === TEACHER_NAVIGATION_PATH_NAMES.aiChatSettings &&
-        !!selectedSection &&
         shouldShowAiChatEssentialAlert({
-          assignedAiChatToolsDependency:
-            selectedSection.assignedAiChatToolsDependency,
+          assignedAiChatToolsDependency,
           sectionAiChatAccessLevel: selectedSection.aiChatAccessLevel,
           teacherAiChatAccessLevel,
+        }) ||
+        shouldShowUsOnlyModelsAlert({
+          assignedAiChatToolsDependency,
+          assignedInaccessibleAiModels,
         })
       );
     },

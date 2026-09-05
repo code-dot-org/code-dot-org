@@ -46,6 +46,10 @@ export const AI_CHAT_NOT_AVAILABLE_INTERNATIONAL =
   'This AI Chat level is not available in your region.';
 export const AI_TUTOR_NOT_AVAILABLE_INTERNATIONAL =
   'AI Tutor is not available in your region.';
+// Shown in Teacher Dashboard AI Settings when the teacher's region blocks
+// Gemini models. Settings still apply to levels using other models.
+export const US_ONLY_MODELS_TEACHER_SETTINGS =
+  'Some AI models are not available in your region. Levels that use them will be disabled for you and your students.';
 
 export const MODEL_PARAMETER_LABELS: {
   [key in keyof ModelParameters]: string;
