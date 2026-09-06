@@ -173,13 +173,22 @@ holds them, along with the thing no unit test can say: that the saved project
 is 51,090 bytes with twelve rules and twelve references, and is still twelve
 references after somebody has opened one and looked at it.
 
-**What is left.** §2 also said the editor should open an unedited rule
-read-only until the learner asks for it. It does not: today the first block
-that moves materializes the rule silently, which is the behaviour this section
-describes and is honest, but it means a stray drag inflates a project by half a
-megabyte with nothing said. The read-only viewer and an explicit "make this
-mine" is the follow-on, and `0ccb8def041` already made a locked workspace a
-viewer.
+**The read-only viewer this section asked for is NOT wanted, and that is a
+decision rather than an omission.** §2 said the editor should open an unedited
+rule read-only until the learner asks for it. It does not, and it should not:
+a stock rule is meant to be opened and changed, and putting a gate in front of
+that teaches the opposite of what the rule being real is for. The silent
+materialize is the behaviour — you open Gravity, you change something, it is
+yours, and nothing asked you to confirm that you meant it.
+
+What that costs is a stray drag turning into half a megabyte, and that is the
+right trade: the weight was an easy win taken on the way past, not a reason to
+put friction between a learner and a mechanic they were invited to read. Copy
+on WRITE, with no ceremony around the write.
+
+So there is nothing left here. `0ccb8def041`'s locked workspace is for a
+viewer that has no business editing — a lesson's worked example — and not for
+this.
 
 _Status, 2026-09-03: measured, not yet decided._ The first step is done —
 `src/__tests__/projectWeight.test.ts` weighs a new project and fails when the

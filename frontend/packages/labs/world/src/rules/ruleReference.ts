@@ -11,6 +11,14 @@
 // learner moves makes the rule theirs, at which point it is a file like any
 // other and nothing here is involved again.
 //
+// AND THERE IS DELIBERATELY NO GATE IN FRONT OF THAT. §2 originally asked for
+// an unedited rule to open read-only until the learner said they meant it,
+// which would make a stray drag cost nothing — and would teach that a stock
+// rule is somebody else's, which is the opposite of what these being real
+// rules is for. A learner opens Gravity, changes something, and it is theirs.
+// The saving was an easy win taken on the way past; it is not a reason to ask
+// anybody whether they are sure.
+//
 // WHAT MAKES THIS CHEAP is that there is one place to resolve it. Everything
 // downstream of `projectFiles` — the palette, the dropdowns, the generator,
 // the compiler, the tutor — reads `path -> contents`, and a reference resolved
