@@ -794,6 +794,48 @@ the toolbox prop changes when a body opens, and a re-injection there would
 throw away the surface the learner is standing on. The body is thirty-six
 blocks before and after.
 
+_The head is authoritative, 2026-09-05._ `RETURNS` has moved. A `define block`
+on the interface now reads `define block ✎` / `description …` / the block
+itself; whether it does something or reports something is asked on its own
+surface, where the implementation that has a `return` in it — or does not — is
+written.
+
+HIDDEN, NOT REMOVED. A field taken off a block is a field Blockly does not
+save, and the interface is what the file is written from, so removing
+`RETURNS` there would drop it from every rule on the next save. It is still on
+the block, still serialized, just not drawn; `anchorBodyOwner` draws it again
+on the head.
+
+That makes the head the only place the field exists, which is why the seam had
+to grow a second table beside the bodies. `setBody` takes the head's fields as
+well as its body, `merge` lays them over the interface's, `bodyOf` shows them
+again if the same body is reopened, and `show` forgets them — a head's answer
+must not follow the learner into a file it was never about. Nothing else in
+the lab can see this go wrong: the block still renders and the rule still
+compiles, it just quietly says "does something" again.
+
+Coming back is a re-read, not a restore. `closeBody` rebuilds the interface
+from `read` rather than from the snapshot taken when the body opened, because
+that snapshot predates every change the head made.
+
+Not the signature. The gear is taken off the head, because redesigning a
+`define block` renames it and a rename rewrites the block TYPES its uses are
+written in, all over the file — work the interface does on its own edits and
+this branch does not. Switching between doing and reporting is already
+deliberately not a rename (`renamedMember` says so), so it needs none of that;
+it is passed to `reconcileMembers` only to keep the snapshot that detects
+renames in step with the file.
+
+Verified end to end in `spikes/rule-surfaces/check-head-field.mjs`: the field
+is present but undrawn on the interface, drawn and editable on the head with
+no gear, and after picking a value and going Back the interface — rebuilt from
+the file — reports the new one.
+
+The description is drawn on both surfaces and edits in either reach the file
+by the same path. Two surfaces cannot be edited at once, so there is no
+conflict to resolve; it is on the head because a body surface is where §8
+wanted the documentation to be.
+
 **Not only rules.** An `.actor` file holds the same two shapes — its own
 `each frame` and its own `define block` (`ActorBuilder.defineStep`,
 `defineAction`) — and a world holds them inside `define actor`. Actor files

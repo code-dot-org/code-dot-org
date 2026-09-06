@@ -70,6 +70,15 @@ export const hasBody = (type: string): boolean =>
  */
 export const BODY_OWNER_ID = 'body-owner';
 
+/**
+ * Fields a body surface owns, by the id of the block that owns each.
+ *
+ * The head of a body surface draws `RETURNS` — the interface does not any
+ * more — so the value the learner picks there exists nowhere else until the
+ * file is written. This is where it waits.
+ */
+export type Heads = Record<string, Record<string, unknown>>;
+
 /** The bodies a document was carrying, by the id of the block that owns each. */
 export type Bodies = Record<string, SavedBlock>;
 
@@ -125,15 +134,27 @@ export function split(document: BlocklySerialization): Split {
   return {shown, bodies};
 }
 
-const mergeBlock = (block: SavedBlock, bodies: Bodies): SavedBlock => {
+const mergeBlock = (
+  block: SavedBlock,
+  bodies: Bodies,
+  heads: Heads,
+): SavedBlock => {
   const out: SavedBlock = {...block};
   const body = block.id ? bodies[block.id] : undefined;
+
+  // What the head of this member's own surface is showing. It wins, because
+  // the fields it draws are drawn nowhere else — the interface stopped
+  // offering them, so it has nothing newer to say about them.
+  const head = block.id ? heads[block.id] : undefined;
+  if (head) {
+    out.fields = {...(block.fields as object), ...head};
+  }
 
   if (block.inputs) {
     const inputs: SavedBlock['inputs'] = {};
     for (const [name, socket] of Object.entries(block.inputs)) {
       inputs[name] = socket.block
-        ? {...socket, block: mergeBlock(socket.block, bodies)}
+        ? {...socket, block: mergeBlock(socket.block, bodies, heads)}
         : socket;
     }
     out.inputs = inputs;
@@ -143,7 +164,7 @@ const mergeBlock = (block: SavedBlock, bodies: Bodies): SavedBlock => {
   }
 
   if (block.next?.block) {
-    out.next = {block: mergeBlock(block.next.block, bodies)};
+    out.next = {block: mergeBlock(block.next.block, bodies, heads)};
   }
   if (body && BODY_IN_NEXT.has(block.type)) {
     out.next = {block: body};
@@ -161,13 +182,14 @@ const mergeBlock = (block: SavedBlock, bodies: Bodies): SavedBlock => {
 export function merge(
   shown: BlocklySerialization,
   bodies: Bodies,
+  heads: Heads = {},
 ): BlocklySerialization {
   const roots = (shown.blocks?.blocks ?? []) as SavedBlock[];
   return {
     ...shown,
     blocks: {
       ...shown.blocks,
-      blocks: roots.map(root => mergeBlock(root, bodies)),
+      blocks: roots.map(root => mergeBlock(root, bodies, heads)),
     },
   } as BlocklySerialization;
 }
@@ -275,17 +297,23 @@ export const HIDE_BODIES = true;
 
 export function createBodySeam(): BodySeam {
   let bodies: Bodies = {};
+  let heads: Heads = {};
   return {
     show(document) {
       const next = split(document);
       bodies = next.bodies;
+      // A new document says everything about itself, including the fields a
+      // head was holding. Keeping them would put an old surface's answer over
+      // a file the learner has moved on to.
+      heads = {};
       return next.shown;
     },
     read(saved) {
       // Reaped on the way out: a body whose block has been deleted must not
       // outlive it, or the file grows one orphan per deleted step forever.
       bodies = reap(saved, bodies);
-      return merge(saved, bodies);
+      heads = reap(saved, heads as Bodies) as Heads;
+      return merge(saved, bodies, heads);
     },
     bodyOf(id, shown) {
       // The member's own block heads the surface, the way `define rule` heads
@@ -302,7 +330,15 @@ export function createBodySeam(): BodySeam {
       if (!owner) {
         return {blocks: {languageVersion: 0, blocks: body ? [body] : []}};
       }
-      const head: SavedBlock = {...owner, id: BODY_OWNER_ID};
+      const held = heads[id];
+      const head: SavedBlock = {
+        ...owner,
+        id: BODY_OWNER_ID,
+        // What this surface last said about its own fields, over what the
+        // interface remembers: the interface is a snapshot from when the body
+        // was opened, and it does not draw these any more.
+        ...(held ? {fields: {...(owner.fields as object), ...held}} : {}),
+      };
       delete head.next;
       // Where it sat on the interface means nothing here — it is the only
       // root on this surface. Carried over, it put the head wherever that
@@ -326,6 +362,12 @@ export function createBodySeam(): BodySeam {
         // Reading that as "the learner emptied it" is how the first attempt
         // deleted bodies and saved the result, so it is read as nothing.
         return;
+      }
+      // The head's own fields come back with it: `RETURNS` is drawn here and
+      // nowhere else, so if this did not carry it, picking one would change
+      // the block on screen and nothing in the file.
+      if (head.fields) {
+        heads[id] = head.fields as Record<string, unknown>;
       }
       if (head.next?.block) {
         bodies[id] = head.next.block;

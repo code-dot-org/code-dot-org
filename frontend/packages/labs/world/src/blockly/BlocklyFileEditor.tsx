@@ -688,7 +688,17 @@ export const BlocklyFileEditor = ({
     });
   }, []);
 
-  const closeBody = useCallback(() => setEditing(null), []);
+  const closeBody = useCallback(() => {
+    // Back to the FILE, not to the snapshot taken when the body opened. The
+    // head has been drawing `RETURNS` since then, and it is the only place
+    // that field exists — so the interface is rebuilt from what the file now
+    // says, which also lets the seam forget what the head was holding.
+    const held = interfaceRef.current;
+    if (held && HIDE_BODIES) {
+      interfaceRef.current = seam.show(seam.read(held));
+    }
+    setEditing(null);
+  }, [seam]);
 
   // A Blockly field has no route to React state, so the editor installs
   // itself while it is mounted — `setModuleOpener` and `setLessonOpener` are
@@ -930,7 +940,18 @@ export const BlocklyFileEditor = ({
         );
         const held = interfaceRef.current;
         if (held && !isReadOnly) {
-          onChangeRef.current(JSON.stringify(seam.read(held), null, 2));
+          const contents = JSON.stringify(seam.read(held), null, 2);
+          // A field on the HEAD is not a change to this member's body — it is
+          // a change to what the rule offers, and `reconcileMembers` keeps the
+          // snapshot it compares against in step. Switching a `define block`
+          // between doing and reporting is deliberately not treated as a
+          // rename (`renamedMember`), so this only updates that snapshot; it
+          // is here so the next edit on the interface is compared against what
+          // the file actually says.
+          if ((event as {blockId?: string}).blockId === BODY_OWNER_ID) {
+            reconcileMembers(contents);
+          }
+          onChangeRef.current(contents);
         }
         return;
       }

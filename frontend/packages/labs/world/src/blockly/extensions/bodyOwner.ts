@@ -11,7 +11,7 @@
 // already marks its own workspace (`isRuleGenerator`), which is what this
 // reads. No flag of its own, and nothing to keep in step with a load.
 
-import type {Block} from 'blockly';
+import type {Block, BlockSvg} from 'blockly';
 
 import {defineExtension, type Extension} from '@code-dot-org/blockly';
 
@@ -19,10 +19,26 @@ import {HIDE_BODIES} from '../bodySurfaces';
 
 import {removeBodyButton} from './bodyButton';
 
-export const BODY_SOCKET_EXTENSION = 'world_body_socket';
+export const BODY_SURFACE_EXTENSION = 'world_body_surface';
 
 /** The input a `define block` and an `each frame` keep their body in. */
 const SOCKET = 'DO';
+
+/**
+ * Fields that belong to a member's own surface, not to the interface.
+ *
+ * `RETURNS` says whether a `define block` does something or reports something.
+ * That is a fact about the implementation — a query has a `return` in it and
+ * an action does not — so it is asked where the implementation is written, and
+ * the interface shows the signature it produces instead.
+ *
+ * HIDDEN, NOT REMOVED. A field taken off a block is a field Blockly does not
+ * save, and the interface is what the file is written from: removing `RETURNS`
+ * there would drop it from every rule on the next save.
+ */
+const BODY_SURFACE_FIELDS: Readonly<Record<string, readonly string[]>> = {
+  world_rule_block: ['RETURNS'],
+};
 
 /**
  * Whether this workspace exists to compile rather than to be read.
@@ -41,8 +57,8 @@ const isForGenerator = (block: Block): boolean =>
  * under it and no way to put anything in the hole. The pencil is the way in
  * now, and the row is gone.
  */
-export const bodySocketExtension: Extension = defineExtension(
-  BODY_SOCKET_EXTENSION,
+export const bodySurfaceExtension: Extension = defineExtension(
+  BODY_SURFACE_EXTENSION,
   {
     extension() {
       const block = this as unknown as Block;
@@ -52,6 +68,9 @@ export const bodySocketExtension: Extension = defineExtension(
       // Quiet: `world_trait_step` in an actor file has been through here
       // already on a previous render, and a missing input is not an error.
       block.removeInput(SOCKET, true);
+      for (const name of BODY_SURFACE_FIELDS[block.type] ?? []) {
+        block.getField(name)?.setVisible(false);
+      }
     },
   },
 );
@@ -74,15 +93,21 @@ export function anchorBodyOwner(block: Block): void {
   removeBodyButton(block);
   block.setMovable(false);
   block.setDeletable(false);
-  // Read-only FOR NOW. The head shows the member's name, description and
-  // signature so the surface says what it is implementing — but the interface
-  // is where those are edited, and a second editable copy of a field is a
-  // second answer to what the file says. Making this one authoritative is
-  // what moving `RETURNS` down here needs (§8).
-  block.setEditable(false);
   // Nothing goes above the head. On the interface this connection is how a
   // member follows another; here there is only ever one block to be head of.
   if (block.previousConnection) {
     block.setPreviousStatement(false);
   }
+  // The fields the interface stopped drawing are drawn HERE, and this is the
+  // only place they can be changed. `bodySurfaces` carries what they say back
+  // into the file.
+  for (const name of BODY_SURFACE_FIELDS[block.type] ?? []) {
+    block.getField(name)?.setVisible(true);
+  }
+  // …but not the signature, which is the one edit this surface cannot carry.
+  // Redesigning a `define block` renames it, and a rename rewrites the block
+  // TYPES its uses are written in, all over the file (`renameMemberReferences`)
+  // — work the interface does on its own edits and this branch does not. The
+  // gear stays on the interface until it does.
+  (block as BlockSvg).setMutator?.(null);
 }

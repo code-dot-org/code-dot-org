@@ -89,7 +89,7 @@ import {
   eventDesignerMutator,
 } from './extensions/blockDesigner';
 import {bodyButtonExtension} from './extensions/bodyButton';
-import {bodySocketExtension} from './extensions/bodyOwner';
+import {bodySurfaceExtension} from './extensions/bodyOwner';
 import {drawingContextExtension} from './extensions/drawingContext';
 import {effectImportFieldExtension} from './extensions/effectImportField';
 import {
@@ -6780,7 +6780,7 @@ const worldRuleBlock = defineBlock({
   args1: [
     {type: 'field_input', name: 'DESCRIPTION', text: '', spellcheck: true},
   ],
-  // The body's socket. It is NOT drawn in the editor — `bodySocketExtension`
+  // The body's socket. It is NOT drawn in the editor — `bodySurfaceExtension`
   // takes the row off, because with the split on it is always empty and the
   // pencil above is the way in. It stays in the definition because the file
   // still holds the body here, and the generator loads the file whole.
@@ -6796,7 +6796,7 @@ const worldRuleBlock = defineBlock({
     // In a `.rule` it never fires (`actorBlockReports`).
     actorBlockReportsExtension,
     bodyButtonExtension,
-    bodySocketExtension,
+    bodySurfaceExtension,
   ],
   style: 'setup_blocks',
   tooltip:
@@ -7011,7 +7011,7 @@ const traitStepDefinition = (asRoot: boolean) =>
     extensions: [
       phaseOptionsExtension,
       bodyButtonExtension,
-      bodySocketExtension,
+      bodySurfaceExtension,
     ],
     style: 'event_blocks',
     tooltip:

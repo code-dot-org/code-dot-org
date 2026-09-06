@@ -53,14 +53,15 @@ const rootsOf = (document: unknown): Saved[] =>
   ((document as {blocks?: {blocks?: Saved[]}}).blocks?.blocks ?? []) as Saved[];
 
 /** A body surface as the workspace would save it: the head, body under it. */
-const surface = (body?: unknown) =>
+const surface = (body?: unknown, fields?: Record<string, unknown>) =>
   ({
     blocks: {
       languageVersion: 0,
       blocks: [
         {
-          type: 'world_rule_step_in',
+          type: 'world_rule_block',
           id: BODY_OWNER_ID,
+          ...(fields ? {fields} : {}),
           ...(body ? {next: {block: body}} : {}),
         },
       ],
@@ -572,5 +573,103 @@ describe('editing one body and writing the file', () => {
 
     expect(bodyOn(seam.bodyOf('s1', held))).toBeUndefined();
     expect(rootsOf(seam.read(held))[0]).not.toHaveProperty('next');
+  });
+});
+
+describe('a field the head owns', () => {
+  // `RETURNS` is drawn on the body surface and nowhere else — the interface
+  // stopped offering it — so a value picked there exists in one place only
+  // until the file is written. Nothing else in the lab can see it go missing:
+  // the block still renders and the rule still compiles, it just quietly says
+  // "does something" again.
+
+  const ruleWith = (returns: string) =>
+    doc({
+      type: 'world_rule_block',
+      id: 'b1',
+      fields: {RETURNS: returns, DESCRIPTION: 'how far it fell'},
+      inputs: {DO: {block: statement('work')}},
+    });
+
+  /** The block with this id in a merged document. */
+  const blockIn = (document: unknown, id: string): Saved | undefined =>
+    rootsOf(document).find(root => root.id === id);
+
+  it('reaches the file', () => {
+    const seam = createBodySeam();
+    const held = seam.show(ruleWith('none'));
+
+    seam.setBody('b1', surface(statement('work'), {RETURNS: 'number'}));
+
+    expect(
+      (blockIn(seam.read(held), 'b1') as unknown as {fields: unknown}).fields,
+    ).toMatchObject({RETURNS: 'number'});
+  });
+
+  it('leaves the fields it says nothing about alone', () => {
+    // The head carries every field it draws, and the merge takes them all —
+    // so a field the head never had must not be wiped by the ones it did.
+    const seam = createBodySeam();
+    const held = seam.show(ruleWith('none'));
+
+    seam.setBody('b1', surface(statement('work'), {RETURNS: 'number'}));
+
+    expect(
+      (blockIn(seam.read(held), 'b1') as unknown as {fields: unknown}).fields,
+    ).toMatchObject({DESCRIPTION: 'how far it fell'});
+  });
+
+  it('comes back when the same body is opened again', () => {
+    // The interface the editor holds was saved before the change and does not
+    // draw this field, so it is the seam that has to remember.
+    const seam = createBodySeam();
+    const held = seam.show(ruleWith('none'));
+    seam.setBody('b1', surface(statement('work'), {RETURNS: 'number'}));
+
+    const [head] = rootsOf(seam.bodyOf('b1', held));
+
+    expect((head as unknown as {fields: unknown}).fields).toMatchObject({
+      RETURNS: 'number',
+    });
+  });
+
+  it('is forgotten when the editor is shown another file', () => {
+    // Otherwise a head's answer follows the learner into a file it was never
+    // about, and lands on whatever happens to share an id.
+    const seam = createBodySeam();
+    seam.show(ruleWith('none'));
+    seam.setBody('b1', surface(statement('work'), {RETURNS: 'number'}));
+
+    const held = seam.show(ruleWith('none'));
+
+    expect(
+      (blockIn(seam.read(held), 'b1') as unknown as {fields: unknown}).fields,
+    ).toMatchObject({RETURNS: 'none'});
+  });
+
+  it('does not touch a member it does not belong to', () => {
+    const seam = createBodySeam();
+    const held = seam.show(
+      doc({
+        type: 'world_rule_block',
+        id: 'b1',
+        fields: {RETURNS: 'none'},
+        inputs: {DO: {block: statement('a')}},
+        next: {
+          block: {
+            type: 'world_rule_block',
+            id: 'b2',
+            fields: {RETURNS: 'none'},
+            inputs: {DO: {block: statement('b')}},
+          },
+        },
+      }),
+    );
+
+    seam.setBody('b1', surface(statement('a'), {RETURNS: 'number'}));
+
+    const file = seam.read(held);
+    const second = rootsOf(file)[0].next?.block as unknown as {fields: unknown};
+    expect(second.fields).toMatchObject({RETURNS: 'none'});
   });
 });
