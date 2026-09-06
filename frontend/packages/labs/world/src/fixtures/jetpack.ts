@@ -546,11 +546,19 @@ const ENEMY_TRIP = 0.2;
  * you asked for: a player who pressed a key is given a moment to watch what
  * they asked for happen, and an enemy is given just enough for the fade to
  * read. It is also how long the Pilot cannot be hurt for, which is the same
- * number by construction (`rules/teleport`).
+ * number by construction — the Pilot's handler asks for exactly the trip it is
+ * on (see `teleportFade`).
  */
 const PILOT_TRIP = 0.4;
 
-const teleportFade = (seconds: number) => [
+/**
+ * `safe` is the Pilot's alone, and the reason is the reason Teleport stopped
+ * granting it: only an actor with `Has Health` can be made safe, and asking
+ * one without it throws — "Enemy0 has no property 'safe_until'". The rule used
+ * to guard the call with `has trait ⟨Has Health⟩`; here the guard is knowing
+ * which actor this is, which is a thing a project knows and a rule does not.
+ */
+const teleportFade = (seconds: number, {safe = false} = {}) => [
   {
     type: 'world_define_tween',
     id: 'padFadeOut',
@@ -593,6 +601,40 @@ const teleportFade = (seconds: number) => [
         type: 'world_play_tween',
         fields: {TWEEN: 'padFadeOut'},
         inputs: {ACTOR: me()},
+        // …AND, FOR THE PILOT, SAFE FOR THE TRIP. This project's decision and
+        // not the pad's: a traveller is held still for the duration, so an
+        // enemy walking towards a pad would otherwise make using one a
+        // punishment. Teleport used to grant this itself and had no business
+        // to — whether a body can be hurt is not a fact about moving it, and
+        // reaching for Health made every project that wanted a pad take on a
+        // rule about damage. The event is the seam: it says when a trip
+        // starts, and this says what that means here.
+        //
+        // The trip's own length, read off the traveller rather than written
+        // twice, so a slower pad is a safer one without anybody remembering
+        // both numbers.
+        ...(safe
+          ? {
+              next: {
+                block: {
+                  type: 'world_do_Health_BeSafeForSecondsAction',
+                  inputs: {
+                    ACTOR: me(),
+                    // `VALUE`, which is what a designed block calls its one
+                    // parameter's socket — read off how Teleport itself called
+                    // this before the call moved, not guessed from the
+                    // parameter's name.
+                    VALUE: {
+                      block: {
+                        type: 'world_get_Teleport_TravelSecondsProperty',
+                        inputs: {ACTOR: me()},
+                      },
+                    },
+                  },
+                },
+              },
+            }
+          : {}),
       },
     },
   },
@@ -853,7 +895,7 @@ const PILOT_ACTOR = JSON.stringify({
           }),
         },
       },
-      ...teleportFade(PILOT_TRIP / 2),
+      ...teleportFade(PILOT_TRIP / 2, {safe: true}),
     ],
   },
 });

@@ -29,7 +29,6 @@ import {
   when,
   yes,
 } from './dsl.mjs';
-import {HasHealth, staySafe} from './health.mjs';
 import {CanMove, held, placed, velocity} from './motion.mjs';
 
 const rule = defineRule({
@@ -67,11 +66,19 @@ Give pads **Is a Teleport Pad** and travellers **Uses Teleport Pads**.`,
 // the eye does not accept that the thing on the left and the thing on the right
 // are the same thing — so a traveller stops where it is, waits, and arrives.
 // That gap is somewhere for an animation to go (\`starts travelling\` says when),
-// and it is also what makes the trip fair: a body held still on a pad with an
-// enemy walking towards it would be a punishment for using the mechanic, so it
-// cannot be damaged while it is in transit. That is Health's ordinary mercy
-// window, asked for by name (\`be safe for ⟨n⟩ seconds\`) rather than a second
-// idea of invulnerability living here.
+// and it is also where a project decides what a trip costs. A body held still
+// on a pad with an enemy walking towards it is a punishment for using the
+// mechanic, so a game will usually want the traveller safe for the duration —
+// and that is a HANDLER on \`starts travelling\`, calling Health's own \`be safe
+// for ⟨n⟩ seconds\`, not something this rule does.
+//
+// THIS RULE DOES NOT KNOW ABOUT HEALTH, and did until it was pointed out that
+// it had no business to. Teleport moves bodies; whether a body can be hurt is
+// not a fact about moving it. Reaching for Health here made every project that
+// wanted a pad take on a rule about damage, and decided on their behalf that a
+// trip is safe — which is a game's decision and one some games will want the
+// other way round. The seam was already there: the event says when a trip
+// starts, and a handler is where a project says what that means.
 //
 // TWO WAYS TO STEP ON ONE, because a player and an enemy want opposite things.
 // A player wants to choose: standing on a pad is not using it, or the mechanic
@@ -88,7 +95,6 @@ Give pads **Is a Teleport Pad** and travellers **Uses Teleport Pads**.`,
 });
 rule.uses('Physics');
 rule.uses('Collisions');
-rule.uses('Health');
 
 // ── The pad ──────────────────────────────────────────────────────────────────
 
@@ -285,20 +291,6 @@ export const usePad = travels.block({
                 ),
                 held.set(thisActor(), yes()),
                 holdStill(),
-                doc(
-                  'And not a target while it is in transit. Health’s own mercy window, asked for by name — a second idea of invulnerability living here would be one nothing else could see (`rules/health`).',
-                ),
-                when([
-                  [
-                    hasTrait(thisActor(), HasHealth),
-                    [
-                      staySafe(
-                        {seconds: travelSeconds.of(thisActor())},
-                        thisActor(),
-                      ),
-                    ],
-                  ],
-                ]),
                 startsTravelling({}, thisActor()),
               ],
             ],
