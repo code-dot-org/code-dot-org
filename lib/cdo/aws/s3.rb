@@ -93,7 +93,12 @@ module AWS
     def self.download_from_bucket(bucket, key, options = {})
       # If we are emulating S3 (usually for local development environments), we
       # first attempt to lazily populate the emulated bucket.
-      Cdo::LocalDevelopment.populate_local_s3_bucket(bucket, key) if CDO.aws_s3_emulated
+      if CDO.aws_s3_emulated
+        # Not required at the top of the file: cdo/local_development requires
+        # this one back, and emulation never loads outside development.
+        require 'cdo/local_development'
+        Cdo::LocalDevelopment.populate_local_s3_bucket(bucket, key)
+      end
 
       create_client.get_object(bucket: bucket, key: key).body.read.force_encoding(Encoding::BINARY)
     rescue Aws::S3::Errors::NoSuchKey
