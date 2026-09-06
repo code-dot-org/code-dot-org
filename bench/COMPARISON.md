@@ -6,6 +6,17 @@ with the same Ruby, node, yarn and ImageMagick, and an empty `dashboard_test`
 prepared by TESTING.md's commands. Per-host detail is in
 [`t4g/NOTES.md`](t4g/NOTES.md) and [`m8g/NOTES.md`](m8g/NOTES.md).
 
+That last condition carries more weight than it reads. Preparing the test
+database any other way produces numbers that look plausible and are wrong: on
+the m8g host, seeding it with `seed:all` made `integration` ten times slower
+and it still finished, and made `models` slower on the faster machine — a 93
+minute run that had to be discarded. Substituting
+`db:drop db:create db:schema:load` for `db:test:prepare` is the other trap; it
+skips an `enhance` hook that loads fixtures and runs `seed:test`. Both are
+written up in [`m8g/NOTES.md`](m8g/NOTES.md#preparing-the-test-database).
+Run TESTING.md's commands verbatim and check `levels` and `scripts` read 0
+before trusting a comparison.
+
     t4g.2xlarge   Neoverse-N1, 8 cores, 30Gi   burstable
     m8g.2xlarge   Neoverse-V2, 8 cores, 30Gi   not burstable
 
