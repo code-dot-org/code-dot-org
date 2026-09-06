@@ -1,6 +1,14 @@
 import {position} from './builtins.mjs';
 import {Aimed, goal} from './camera.mjs';
-import {add, anyOf, defineRule, moduleFor, thisCamera, when} from './dsl.mjs';
+import {
+  add,
+  anyOf,
+  defineRule,
+  doc,
+  moduleFor,
+  thisCamera,
+  when,
+} from './dsl.mjs';
 
 const rule = defineRule({
   name: 'Camera Follow',
@@ -52,6 +60,9 @@ const target = follows.actor('actor to follow');
 const look = follows.point('look offset', {x: 0, y: 0});
 
 follows.step('aim at the actor', 'aim', [
+  doc(
+    'Where the camera WANTS to be: the actor it follows, plus whatever `look` offset the project set — ahead of a runner, or above a jumper.\n\nThis only sets the goal. What actually happens to the view is the rest of the camera pipeline: a deadzone may ignore it, easing may approach it slowly, and being confined to the map may refuse part of it.',
+  ),
   when([
     [
       anyOf(target.of(thisCamera())),

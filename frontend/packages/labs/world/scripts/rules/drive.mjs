@@ -106,6 +106,9 @@ export const pushedForward = rule.block({
     'A push of this size in the direction the actor is facing. Add it to a velocity to speed up that way.',
   say: [param('who', 'actor'), 'pushed', param('amount'), 'forward'],
   body: ({who, amount}) => [
+    doc(
+      '**Forward is wherever it is pointing.** `the way ⟨who⟩ is facing` is an arrow one pixel long in the direction of its rotation, so multiplying it by an amount gives that far in that direction.\n\nThis is what makes a car a car rather than a thing that slides: steering changes the rotation, and the same push then goes somewhere else.',
+    ),
     give(
       vectorTimes(facing({who: who.get()}), vector(amount.get(), amount.get())),
     ),

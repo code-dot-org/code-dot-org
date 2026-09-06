@@ -204,7 +204,12 @@ export const canTakeBack = rule.block({
   description:
     'Whether there is a move on the tape. Ask it to grey out an undo button, or to say "nothing to undo".',
   say: ['is there a move to take back?'],
-  body: () => [give(moreThan(remembered.of(), n(0)))],
+  body: () => [
+    doc(
+      'Whether anything has been remembered yet. Worth asking before offering an undo button, so the first move of a game does not offer to take back a move nobody made.',
+    ),
+    give(moreThan(remembered.of(), n(0))),
+  ],
 });
 
 export default () => moduleFor(rule, 'history');

@@ -98,6 +98,9 @@ const apart = rule.block({
   description: 'The vector from the first actor to the second.',
   say: ['from', param('a', 'actor'), 'to', param('b', 'actor')],
   body: ({a, b}) => [
+    doc(
+      '**Subtracting one position from another.** The arrow from `a` to `b` is `(b.x - a.x, b.y - a.y)`: how far you would have to travel across, and how far down, to get from one to the other.\n\nEverything else in this rule is built on it. Its LENGTH is the distance between them, its DIRECTION is the way one lies from the other, and dividing it by its own length gives a step of exactly one pixel that way.',
+    ),
     give(
       vector(
         minus(position.x(b.get()), position.x(a.get())),
@@ -111,7 +114,12 @@ const distance = rule.block({
   returns: 'number',
   description: 'How far apart two actors are, in pixels.',
   say: ['distance from', param('a', 'actor'), 'to', param('b', 'actor')],
-  body: ({a, b}) => [give(vectorLength(apart({a: a.get(), b: b.get()})))],
+  body: ({a, b}) => [
+    doc(
+      '**Pythagoras.** The arrow from `a` to `b` has an across part and a down part; they meet at a right angle, so the straight-line distance is `sqrt(across^2 + down^2)` — which is what taking the length of the vector does.',
+    ),
+    give(vectorLength(apart({a: a.get(), b: b.get()}))),
+  ],
 });
 
 /**
@@ -128,6 +136,9 @@ rule.block({
   description: 'Turn this actor to point at another one.',
   say: [param('turner', 'actor'), 'turn to face', param('target', 'actor')],
   body: ({turner, target}) => [
+    doc(
+      '**Which way is that?** Take the arrow from this actor to the other one and ask for its direction — the angle whose tangent is `down / across`, worked out so that it comes back right in all four quarters of the circle.\n\nThat is an arctangent, and this block could not be written until the maths blocks grew one. Rotation is degrees, and the direction of a vector is exactly the degrees to turn to.',
+    ),
     rotation.set(
       turner.get(),
       vectorDirection(apart({a: turner.get(), b: target.get()})),
@@ -207,6 +218,9 @@ const towards = rule.block({
     param('gapBetween', 'number'),
   ],
   body: ({here, there, gapBetween}) => [
+    doc(
+      '**Making an arrow one pixel long.** Divide a vector by its own length and what is left points the same way but measures one — a `unit vector`. Multiply that by a speed and you have a step of exactly that speed in exactly that direction.\n\nThe length is passed in rather than worked out here because the caller has already measured it, and a square root is not worth doing twice in a frame for every chaser in the level.',
+    ),
     give(vectorOver(apart({a: here.get(), b: there.get()}), gapBetween.get())),
   ],
 });

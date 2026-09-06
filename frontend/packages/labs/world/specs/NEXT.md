@@ -1166,12 +1166,26 @@ They are drawn where §8 said documentation belonged: inside the member's own
 body surface, revealed with the implementation rather than crowding the rule.
 A rule's interface has none on it.
 
-WHAT IS LEFT is authoring rather than moving. Of a hundred members and steps
-in the stock rules, 54 now carry a paragraph, 25 have a single note that was
-never part of a run, and 21 say nothing at all. The 21 are the ones worth
-writing, and the material for them exists — every rule script opens with a
-`header` of prose that goes into the generated module and has never been
-visible in the workspace at all (47 of them, 34 lines apiece at the median).
+_Written, 2026-09-06._ The 21 that said nothing now say something: every
+member and step in the stock rules carries a paragraph or a note, and 75 of
+the 100 carry a paragraph. 151 `doc` blocks across the library.
+
+They are written for a student who wants to know HOW, and the maths is the
+part worth writing down. Easing is `1 - (1 - smoothness)^(seconds x 60)`,
+which is the gap left after a frame taken away from all of it — and why the
+same smoothness feels the same at thirty frames a second and at two hundred.
+A deadzone is a window whose EDGE drags the camera rather than the target.
+Confining is a clamp, and the range runs from half a view rather than nought
+because a camera sits in the middle of what it shows. Steering is four lines
+of vector arithmetic: subtract two positions for the arrow between them, take
+its length by Pythagoras for the distance, take its direction by arctangent to
+face something, and divide it by its own length for a step of exactly one
+pixel that way.
+
+Each was read before it was described. A paragraph about an implementation
+that has drifted from it is worse than none, and these will drift — a doc is
+prose beside code, with nothing to keep the two honest but whoever changes the
+code.
 
 Still open: prose is exactly what §4 (localization) has to carry, so the two
 meet.

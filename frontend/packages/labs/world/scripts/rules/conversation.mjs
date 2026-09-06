@@ -3,6 +3,7 @@ import {
   atLeast,
   atMost,
   defineRule,
+  doc,
   give,
   lessThan,
   moduleFor,
@@ -113,7 +114,12 @@ rule.block({
   description:
     'Move on to the next line — what a click does. Ends the conversation if there is no next one.',
   say: ['make', param('who', 'actor'), 'say the next thing'],
-  body: ({who}) => [...goTo(who.get(), add(line.of(who.get()), n(1)))],
+  body: ({who}) => [
+    doc(
+      'One line on. Running off the end is not an error — it is how a conversation finishes, and the `ends` event is raised for it.',
+    ),
+    ...goTo(who.get(), add(line.of(who.get()), n(1))),
+  ],
 });
 
 rule.block({
@@ -121,7 +127,12 @@ rule.block({
   description:
     'Jump somewhere else in the script. This is how a choice works: a button sends the conversation to the line its answer starts at.',
   say: ['send', param('who', 'actor'), 'to line', param('which')],
-  body: ({who, which}) => [...goTo(who.get(), which.get())],
+  body: ({who, which}) => [
+    doc(
+      'Jump to a line by number, which is what a branching conversation is made of: ask a question, then send the speaker to the line the answer belongs to.\n\nA number off either end finishes the conversation rather than sitting silently on a line that is not there.',
+    ),
+    ...goTo(who.get(), which.get()),
+  ],
 });
 
 rule.block({

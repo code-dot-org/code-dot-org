@@ -2,6 +2,7 @@ import {Aimed, goal} from './camera.mjs';
 import {
   axisOf,
   defineRule,
+  doc,
   give,
   lessThan,
   mapSize,
@@ -47,6 +48,9 @@ const kept = rule.block({
     'A number pushed back inside a range: never below the low end, never above the high one.',
   say: [param('value'), 'kept between', param('low'), 'and', param('high')],
   body: ({value, low, high}) => [
+    doc(
+      '**Clamping**: a number pushed back inside a range. Below the low end it becomes the low end, above the high end it becomes the high end, and anywhere between it is left alone.',
+    ),
     when([
       [lessThan(value.get(), low.get()), [give(low.get())]],
       [moreThan(value.get(), high.get()), [give(high.get())]],
@@ -69,6 +73,9 @@ const confined = which =>
   });
 
 confinedTrait.step('keep the view inside', 'confine', [
+  doc(
+    'Stop the view running off the edge of the map.\n\nThe camera position is the MIDDLE of the view, so the edge is half a view away — which is why the range is `half the view` to `the map minus half the view` rather than `0` to `the map`. Get that wrong and the camera stops with a strip of nothing showing.\n\nLast of the camera steps for a reason: whatever aiming, easing and dragging have decided, the view still has to be somewhere the map exists.',
+  ),
   goal.set(thisCamera(), confined('x'), confined('y')),
 ]);
 

@@ -129,7 +129,12 @@ export const startTheTurnsAgain = rule.block({
   description:
     'Put the turn count back to nothing, for a level that has just been built.',
   say: ['start the turns again'],
-  body: () => [taken.set(n(0))],
+  body: () => [
+    doc(
+      'Back to nought turns taken. A new game, a new level, or a puzzle being reset — whatever counts as starting over is the project\u2019s to decide, and this is how it says so.',
+    ),
+    taken.set(n(0)),
+  ],
 });
 
 export const everyNTurns = rule.block({

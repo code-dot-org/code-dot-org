@@ -252,7 +252,13 @@ export const climbUp = rule.block({
   description:
     'Start this actor climbing up, if it is on a ladder. Does nothing if it is not.',
   say: ['start', param('who', 'actor'), 'climbing up'],
-  body: ({who}) => [goingUp.set(who.get(), yes()), ...begin(who.get())],
+  body: ({who}) => [
+    doc(
+      'Take hold of the ladder, going up. Which way is remembered because the climb step needs it every frame, and because letting go at the TOP and letting go at the BOTTOM are different endings.',
+    ),
+    goingUp.set(who.get(), yes()),
+    ...begin(who.get()),
+  ],
 });
 
 export const climbDown = rule.block({
@@ -290,7 +296,12 @@ export const stopClimbing = rule.block({
   description:
     'Stop this actor climbing. Gravity takes over from wherever it had got to.',
   say: ['stop', param('who', 'actor'), 'climbing'],
-  body: ({who}) => end(who.get()),
+  body: ({who}) => [
+    doc(
+      'Let go. The one way off a ladder, however the climb ended — arriving at the top, stepping off the side, or releasing the key — so that giving gravity back is written once and cannot be forgotten in one of the three.',
+    ),
+    ...end(who.get()),
+  ],
 });
 
 climbs.step('climb', 'adjust', [
@@ -477,6 +488,9 @@ arrows.uses(Climbs);
 arrows.uses('Input#TakesKeyboardInputTrait');
 
 arrows.step('read the arrows', 'decide', [
+  doc(
+    'Up climbs up, down climbs down, and **anything else lets go**.\n\nRead every frame rather than on a key press, which is what makes releasing the key end the climb without a handler for it. It runs in `decide`, before anything moves, so a climb begun this frame is already in force when the climb step runs.',
+  ),
   when(
     [
       [keyDown('up arrow'), [climbUp({who: thisActor()})]],

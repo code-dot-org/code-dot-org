@@ -1,8 +1,9 @@
 import {
+  add,
   atLeast,
   atMost,
-  add,
   defineRule,
+  doc,
   firstCharacters,
   frameTime,
   moduleFor,
@@ -114,6 +115,9 @@ reveals.block({
 });
 
 reveals.step('reveal a few more', 'react', [
+  doc(
+    '**Typing the line out, a few letters a frame.**\n\n`shown` is how many letters have arrived, and it grows by `speed x the length of the frame` — letters per SECOND, so the text appears at the same rate however fast the game is running. The text shown is simply the first `shown` characters of the whole line.\n\nIt counts past the end of the line by design: reaching the end is what raises `all shown`, and starting a new line zeroes the count, so nothing has to remember a flag.',
+  ),
   when([
     [
       // Nothing to do once it has all arrived. Guarded on the count rather

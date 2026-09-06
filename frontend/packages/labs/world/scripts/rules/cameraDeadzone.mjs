@@ -3,6 +3,7 @@ import {Aimed, goal} from './camera.mjs';
 import {
   add,
   defineRule,
+  doc,
   give,
   lessThan,
   minus,
@@ -49,6 +50,9 @@ const drag = rule.block({
     param('here'),
   ],
   body: ({target, slack, here}) => [
+    doc(
+      '**A window the target can move about inside without the camera moving at all.**\n\nIf the target has got further ahead than the slack, the camera sits exactly `slack` behind it; if it has fallen further behind, exactly `slack` in front. Anywhere between the two, the camera stays where it is.\n\nSo the camera is dragged along by the EDGE of the window rather than following the target itself, which is what stops a small wobble in the player from shaking the whole screen.',
+    ),
     when([
       // Further ahead than the slack: sit exactly that far behind it.
       [
@@ -77,6 +81,9 @@ const dragged = which =>
   });
 
 deadzone.step('ignore small movements', 'steady', [
+  doc(
+    'Each axis on its own, so a player moving sideways inside the slack does not drag the view up and down with it.',
+  ),
   goal.set(thisCamera(), dragged('x'), dragged('y')),
 ]);
 

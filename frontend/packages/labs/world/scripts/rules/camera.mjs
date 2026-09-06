@@ -1,5 +1,5 @@
 import {setPosition} from './builtins.mjs';
-import {defineRule, moduleFor, thisCamera} from './dsl.mjs';
+import {defineRule, doc, moduleFor, thisCamera} from './dsl.mjs';
 
 const rule = defineRule({
   name: 'Camera',
@@ -21,6 +21,9 @@ export const goal = aimed.point('goal', {x: 0, y: 0});
 export const Aimed = rule.traitRef('Aimed');
 
 aimed.step('take the view', 'view', [
+  doc(
+    '**The last word.** Every other camera step writes to `goal`, which is a wish rather than a place; this is the one that moves the view to it.\n\nDoing it last, in a moment of its own, is what lets the other steps be written independently — aim, then steady, then smooth, then confine. Each reads the goal the one before it left, and none of them has to know which of the others the project turned on.',
+  ),
   setPosition(thisCamera(), goal.x(thisCamera()), goal.y(thisCamera())),
 ]);
 

@@ -2,6 +2,7 @@ import {position} from './builtins.mjs';
 import {Aimed, goal} from './camera.mjs';
 import {
   defineRule,
+  doc,
   frameTime,
   minus,
   moduleFor,
@@ -46,6 +47,9 @@ const caughtUp = rule.block({
   // 1 - (1 - smoothness) ^ (seconds x 60): what is LEFT of the gap after this
   // frame, taken away from all of it.
   body: ({smoothness, seconds}) => [
+    doc(
+      '**How much of the gap to close this frame.**\n\nSmoothness is the fraction of the remaining gap to close in one frame *at sixty frames a second* — `0.2` means a fifth of what is left, every frame. After `n` such frames the part still uncovered is `(1 - smoothness)^n`, so the part covered is `1 - (1 - smoothness)^n`. That is this block, with `n = seconds x 60`.\n\nWorking it out this way, rather than just multiplying by the frame time, is what makes the same smoothness feel the same whether the game runs at thirty frames a second or two hundred. The curve is the same shape; a faster machine only samples it more often.',
+    ),
     give(
       minus(
         n(1),
@@ -73,6 +77,9 @@ const eased = which =>
   );
 
 eases.step('ease toward the goal', 'smooth', [
+  doc(
+    'Move a **fraction of the way** from where the camera is to where it wants to be: `position + (goal - position) x caught up`.\n\nIt never quite arrives, and that is the point — the closer it gets the less it moves, so the camera glides after a running player instead of snapping to it.',
+  ),
   goal.set(thisCamera(), eased('x'), eased('y')),
 ]);
 
