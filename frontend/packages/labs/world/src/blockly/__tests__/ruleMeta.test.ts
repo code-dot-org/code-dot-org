@@ -210,12 +210,17 @@ const trait = (name: string, ...body: object[]): object =>
   subjectTrait(name, 'actor', ...body);
 
 /** A trait declaring what elects it — an actor, or a camera. */
-/** `in ⟨phase⟩ do ⟨name⟩` beside the rule — no subject, every moment offered. */
+/**
+ * `during ⟨phase⟩ do ⟨name⟩` — a member of the rule, no subject, every moment
+ * offered.
+ *
+ * Chained like the rest of them. It stood beside the rule while its body was
+ * the chain below it, which is what a step had to be when that body was
+ * hundreds of blocks long; the body is on its own surface now.
+ */
 const stepIn = (name: string, phase: string): object => ({
-  __root: {
-    type: 'world_rule_step_in',
-    fields: {NAME: name, PHASE: phase},
-  },
+  type: 'world_rule_step_in',
+  fields: {NAME: name, PHASE: phase},
 });
 
 /** `each frame in ⟨phase⟩ do ⟨name⟩`, chained under a `define trait`. */

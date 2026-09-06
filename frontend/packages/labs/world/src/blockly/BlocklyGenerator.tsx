@@ -32,6 +32,7 @@ import {
   ruleMetaToModule,
   type RuleMeta,
 } from './ruleMeta';
+import {upgradeRuleDocument} from './ruleUpgrade';
 import {standInBlocks} from './standInBlocks';
 
 // Headless Blockly → world-lab code generation for `.rule`/`.actor` files
@@ -185,7 +186,13 @@ export const BlocklyGenerator = forwardRef<
         // every call, before any block loads.
         (workspace as {isRuleGenerator?: boolean}).isRuleGenerator = true;
         workspace.clear();
-        const state = contents.trim() ? JSON.parse(contents) : {};
+        // …and a file written before steps were members is brought up to
+        // date first. `world_rule_step_in` has a previous connection now, so
+        // an old step left at the top level is an orphan — it would compile
+        // to nothing, quietly.
+        const state = upgradeRuleDocument(
+          contents.trim() ? JSON.parse(contents) : {},
+        );
         Blockly.serialization.workspaces.load(state, workspace);
 
         // Events are their own top-level blocks, so we can't rely on

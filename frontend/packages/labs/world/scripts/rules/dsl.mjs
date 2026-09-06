@@ -762,7 +762,6 @@ function declareEvent(rule, ruleSlug, into, say, scope, variables) {
 export function defineRule({name, ability, header}) {
   const ruleSlug = RULE_SLUG(name);
   const chainMembers = [];
-  const steps = [];
   const traits = [];
   const variables = [];
 
@@ -852,10 +851,15 @@ export function defineRule({name, ability, header}) {
      * trait that elects it (`trait.step`), which walks them for you.
      */
     step(stepName, phase, body) {
-      steps.push({
+      // A MEMBER of the rule, chained with the properties and the blocks it
+      // declares — and its body in a `do` mouth, because a member's `next` is
+      // the member after it. It used to be a root with the body chained below,
+      // which is what a step had to be while that body was hundreds of blocks
+      // long; the body lives on its own surface now.
+      chainMembers.push({
         type: 'world_rule_step_in',
         fields: {NAME: stepName, PHASE: phase},
-        ...(body.length ? {next: {block: chain(body)}} : {}),
+        ...(body.length ? {inputs: {DO: {block: chain(body)}}} : {}),
       });
       return rule;
     },
@@ -986,7 +990,6 @@ export function defineRule({name, ability, header}) {
           ...(chainMembers.length ? {next: {block: chain(chainMembers)}} : {}),
         },
         ...traits.map(trait => trait.root()),
-        ...steps,
       ];
       return {
         // What Blockly itself writes at the top of a serialized workspace. It

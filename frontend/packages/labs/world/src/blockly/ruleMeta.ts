@@ -27,6 +27,7 @@ import {
   ruleByName,
   ruleLocation,
 } from './ruleRegistry';
+import {upgradeRuleDocument} from './ruleUpgrade';
 
 export type RuleSource = 'builtin' | 'project';
 
@@ -566,7 +567,6 @@ export function parseRuleMeta(
 ): RuleMeta | undefined {
   let root: RuleBlock | undefined;
   let traitRoots: RuleBlock[] = [];
-  let stepRoots: RuleBlock[] = [];
   let enumRoots: RuleBlock[] = [];
   // A `.rule`'s parameter names live in the workspace variable map (a param
   // block's VAR field is a variable id); resolve id → name to label params.
@@ -581,12 +581,14 @@ export function parseRuleMeta(
         variableNames.set(variable.id, variable.name ?? variable.id);
       }
     }
-    const tops = parsed.blocks?.blocks ?? [];
+    // A file written before steps were members keeps them beside the rule.
+    // Corrected here rather than tolerated: two shapes to read is two shapes
+    // to keep right forever, and one of them is already gone from the editor.
+    const tops = upgradeRuleDocument(parsed).blocks?.blocks ?? [];
     root = tops.find(b => b?.type === 'world_rule');
     // Traits are top blocks beside the rule, not chained inside it — one `.rule`
     // declares one rule, so every trait in the file belongs to it.
     traitRoots = tops.filter(b => b?.type === 'world_rule_trait');
-    stepRoots = tops.filter(b => b?.type?.startsWith('world_rule_step'));
     enumRoots = tops.filter(b => b?.type === 'world_rule_enum');
   } catch {
     return undefined; // mid-edit / not JSON
@@ -871,6 +873,12 @@ export function parseRuleMeta(
       addProperty(block);
     } else if (block.type === 'world_rule_block') {
       addDesignedBlock(block);
+    } else if (block.type?.startsWith('world_rule_step')) {
+      // A member like the rest of them now. It used to be a root — an event
+      // hat with its body chained below — which is what a step had to be while
+      // that body was hundreds of blocks long. The body is on its own surface
+      // now, so the step is one row in the rule's own list.
+      addStep(block);
     } else if (block.type === 'world_rule_event') {
       // Declared on the rule, so it is the WORLD's: the keyboard rule's key
       // events are about the world, not about a kind of actor. Every event is
@@ -878,11 +886,6 @@ export function parseRuleMeta(
       // what it is about, and so what a handler is handed.
       addEvent(block);
     }
-  }
-
-  // Steps are roots too: an event hat per tick, with its body chained below.
-  for (const stepBlock of stepRoots) {
-    addStep(stepBlock);
   }
 
   // A set of choices: the root names it, the blocks below it are the choices.
@@ -1075,29 +1078,24 @@ export function extractRuleBodies(
           block,
           slug(designedName(block.saveExtraState?.()?.parts)),
         );
+      } else if (block.type?.startsWith('world_rule_step')) {
+        // A rule-level step: no trait owns it, so it is the world's work, and
+        // it takes no parameters — its closure is `(world, delta)`.
+        record('step', 'world', undefined, block);
       } else if (block.type === 'world_trait_step') {
         // A step declared under a trait, so it carries the trait's scope and
         // owner — that is what the generator keys the body by, and what tells
         // it whether the loop it wraps the body in walks actors or cameras.
         //
-        // Its body is a `DO` mouth, not the chain below it: a trait's members
-        // chain through `next`, so a hat's shape was not available here.
+        // Its body is a `DO` mouth, not the chain below it — as every
+        // member's is now: a member chains through `next`, so the body needs
+        // somewhere else to be.
         record('step', scope, ownerTraitId, block);
       }
     }
   };
   for (const root of roots) {
-    if (root.type?.startsWith('world_rule_step')) {
-      // A step's body is the chain BELOW it, not a `DO` input — it is an event
-      // hat, so what follows it is what runs.
-      const id = slug(root.getFieldValue('NAME') ?? '');
-      if (id) {
-        bodies.set(ruleBodyKey('step', 'world', undefined, id), {
-          params: [],
-          body: gen.chainBody(root),
-        });
-      }
-    } else if (root.type === 'world_rule') {
+    if (root.type === 'world_rule') {
       visit(root.getNextBlock(), 'world', undefined);
     } else if (root.type === 'world_rule_trait') {
       // A trait's members belong to whatever elects it — an actor, or a camera

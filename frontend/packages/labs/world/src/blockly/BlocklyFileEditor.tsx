@@ -94,6 +94,7 @@ import {requestRuleImport} from './ruleImport';
 import {designedName, parseRuleMeta} from './ruleMeta';
 import {ruleByName} from './ruleRegistry';
 import {setRulesConfigHandler} from './rulesConfig';
+import {upgradeRuleDocument} from './ruleUpgrade';
 import {parseSpriteRef} from './spriteCells';
 import {setSpritePickHandler} from './spritePick';
 import {standInBlocks} from './standInBlocks';
@@ -244,7 +245,12 @@ function parseWorkspace(contents: string): BlocklySerialization {
     return {};
   }
   try {
-    return JSON.parse(contents) as BlocklySerialization;
+    // Every read of a rule file goes through here, which is why the upgrade
+    // does too: a step written before steps were members stands beside the
+    // rule, and `world_rule_step_in` has a previous connection now — so
+    // `DisableOrphansPlugin` would grey it out and everything under it, and
+    // the rule would quietly stop working with nothing said.
+    return upgradeRuleDocument(JSON.parse(contents) as BlocklySerialization);
   } catch {
     return {};
   }

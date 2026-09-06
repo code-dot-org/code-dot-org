@@ -7023,10 +7023,19 @@ const stepBlock = (
     type,
     message0,
     args0,
-    // A definition root, like `define rule` and `define trait`: its body chains
-    // below rather than nesting in a `do` mouth.
+    // The body's socket, drawn on the step's own surface and nowhere else
+    // (`bodySurfaceExtension`). A MOUTH rather than the chain below, which is
+    // what it used to be: a step was a definition ROOT because its body was
+    // hundreds of blocks long and chaining it under `define rule` would have
+    // made one enormous column. The body lives on its own surface now, so a
+    // step is one row like every other member — and a member chains through
+    // `next`, which leaves the body needing somewhere else to be. `define
+    // block` and `each frame` have the same shape for the same reason.
+    message1: 'do %1',
+    args1: [{type: 'input_statement', name: 'DO'}],
+    previousStatement: true,
     nextStatement: true,
-    extensions,
+    extensions: [...extensions, bodySurfaceExtension],
     style: 'event_blocks',
     tooltip,
     generator: noGenerator,

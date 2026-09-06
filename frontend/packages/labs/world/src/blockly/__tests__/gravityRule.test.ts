@@ -229,37 +229,62 @@ describe('rules/gravity.rule', () => {
     );
   });
 
-  it('declares its traits and steps as top blocks, beside the rule', () => {
-    // A trait and a step are each definitions of their own, not `do` mouths
-    // nested in the rule's tower — so each is a separate stack a learner can
-    // move and read alone.
-    const tops = (
-      JSON.parse(source) as {blocks: {blocks: Array<{type: string}>}}
-    ).blocks.blocks;
-    expect(tops.map(b => b.type)).toEqual([
+  /** The rule's own members: the chain hanging off `define rule`. */
+  type Member = {
+    type: string;
+    fields?: Record<string, string>;
+    inputs?: Record<string, {block?: unknown}>;
+  };
+  const members = (json: string): Member[] => {
+    const doc = JSON.parse(json) as {
+      blocks: {blocks: Array<Record<string, unknown>>};
+    };
+    const rule = doc.blocks.blocks.find(b => b.type === 'world_rule');
+    const out: Member[] = [];
+    let at = (rule?.next as {block?: Record<string, unknown>})?.block;
+    while (at) {
+      out.push(at as unknown as Member);
+      at = (at.next as {block?: Record<string, unknown>})?.block;
+    }
+    return out;
+  };
+
+  it('declares its traits as top blocks and its steps as members', () => {
+    // A trait is a definition of its own — a separate stack a learner can move
+    // and read alone. A step used to be one too, because its body was the
+    // chain below it and hundreds of blocks long; the body is on its own
+    // surface now, so a step is one row in the rule's own list like every
+    // other member.
+    const doc = JSON.parse(source) as {
+      blocks: {blocks: Array<{type: string}>};
+    };
+
+    expect(doc.blocks.blocks.map(b => b.type)).toEqual([
       'world_rule',
       'world_rule_trait',
       'world_rule_trait',
-      'world_rule_step_in',
-      'world_rule_step_in',
     ]);
+    expect(members(source).map(b => b.type)).toContain('world_rule_step_in');
   });
 
   it('carries a step’s ordering in its block type, not a field', () => {
-    // `in ⟨push⟩` and `when tick` are different KINDS of step, not one block
-    // with a setting — which is why no dropdown has to be hidden when it would
-    // be meaningless. The PHASE field is the phase itself, not a mode switch.
-    const tops = (
-      JSON.parse(source) as {
-        blocks: {
-          blocks: Array<{type: string; fields?: Record<string, string>}>;
-        };
-      }
-    ).blocks.blocks;
-    const steps = tops.filter(b => b.type === 'world_rule_step_in');
+    // `during ⟨push⟩` and `when tick` are different KINDS of step, not one
+    // block with a setting — which is why no dropdown has to be hidden when it
+    // would be meaningless. The PHASE field is the phase itself, not a mode
+    // switch.
+    const steps = members(source).filter(b => b.type === 'world_rule_step_in');
+
     expect(steps.map(b => b.fields?.PHASE)).toEqual(['push', 'react']);
     expect(steps[0].fields?.STEP).toBeUndefined();
     expect(steps[0].fields?.ORDER).toBeUndefined();
+  });
+
+  it('puts a step’s body in its mouth, not the chain below it', () => {
+    // The chain below a member is the member AFTER it. Reading it as the body
+    // would put the rest of the rule inside the step.
+    const [step] = members(source).filter(b => b.type === 'world_rule_step_in');
+
+    expect(step.inputs?.DO?.block).toBeTruthy();
   });
 
   it('chains a trait’s members below it, not inside a `do`', () => {

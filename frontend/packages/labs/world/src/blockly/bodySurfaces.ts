@@ -38,14 +38,6 @@ interface SavedBlock {
 }
 
 /**
- * Roots whose `next` chain is what they run.
- *
- * A hat: what follows it is its body. Not `world_rule` or `world_rule_trait`,
- * whose `next` is the list of what they declare.
- */
-const BODY_IN_NEXT = new Set(['world_rule_step_in', 'world_rule_step_tick']);
-
-/**
  * Members whose `DO` input is what they run.
  *
  * `world_trait_step` is `each frame` in all three of its homes — a trait's
@@ -53,11 +45,18 @@ const BODY_IN_NEXT = new Set(['world_rule_step_in', 'world_rule_step_tick']);
  * world's `define actor` — so an actor file splits on the same rule a rule
  * file does, which is the point (§8, "Not only rules").
  */
-const BODY_IN_DO = new Set(['world_rule_block', 'world_trait_step']);
+const BODY_IN_DO = new Set([
+  'world_rule_block',
+  'world_trait_step',
+  // The rule-level steps. They were roots with the body chained below, which
+  // is why the split had a second shape to know about; now they are members
+  // everything else, and a member's `next` is the member after it.
+  'world_rule_step_in',
+  'world_rule_step_tick',
+]);
 
 /** Whether this block keeps an implementation somewhere. */
-export const hasBody = (type: string): boolean =>
-  BODY_IN_NEXT.has(type) || BODY_IN_DO.has(type);
+export const hasBody = (type: string): boolean => BODY_IN_DO.has(type);
 
 /**
  * Blocks with a surface of their own but NOTHING to take off them.
@@ -153,12 +152,7 @@ const splitBlock = (block: SavedBlock, bodies: Bodies): SavedBlock => {
   }
 
   if (block.next?.block) {
-    if (BODY_IN_NEXT.has(block.type)) {
-      bodies[id] = block.next.block;
-      delete out.next;
-    } else {
-      out.next = {block: splitBlock(block.next.block, bodies)};
-    }
+    out.next = {block: splitBlock(block.next.block, bodies)};
   }
   return out;
 };
@@ -205,15 +199,12 @@ const mergeBlock = (
     }
     out.inputs = inputs;
   }
-  if (body && BODY_IN_DO.has(block.type)) {
+  if (body) {
     out.inputs = {...out.inputs, DO: {block: body}};
   }
 
   if (block.next?.block) {
     out.next = {block: mergeBlock(block.next.block, bodies, heads)};
-  }
-  if (body && BODY_IN_NEXT.has(block.type)) {
-    out.next = {block: body};
   }
   return out;
 };

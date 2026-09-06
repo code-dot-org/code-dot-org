@@ -1053,6 +1053,37 @@ fault in place and was rewritten against a dynamic drawer.
 With no `compose`/`decompose` left on either designer there is no gear on
 either block, and the bubble's container block went with them.
 
+_Steps are members, 2026-09-05._ A rule is one list now. `Gravity` reads
+`use rule`, `use rule`, two properties, four `define block`s and then `during
+⟨push⟩ do applyVelocity ✎` — twenty-two blocks, on one screen, where the file
+used to open with hundreds.
+
+A rule-level step was a definition ROOT beside the rule, with its body the
+chain below it. It had to be: that body was hundreds of blocks long, and
+chaining it under `define rule` would have made one enormous column. The
+bodies live on their own surfaces now, so the reason is gone — and a member
+chains through `next`, which leaves the body needing the `do` mouth that
+`define block` and `each frame` already use. `BODY_IN_NEXT` went with it:
+there is one shape for a body again.
+
+THE FILE CHANGED, which nothing else in §8 did. The stock rules are generated,
+so `dsl.mjs` emits the new shape and `yarn build:rules` wrote all forty-seven;
+the starter projects hold no rule-level step at all. What is left is a
+learner's own saves, and for those the shape is corrected on the way in
+(`ruleUpgrade`), at all three places a rule file is read — the editor, the
+metadata, and the compiler.
+
+It is not politeness. `world_rule_step_in` has a previous connection now, and
+`DisableOrphansPlugin` reads a top-level block with one as an orphan: an
+un-upgraded step and everything under it would draw greyed out and generate
+nothing, with no message saying why. The upgrade is a rewrite of the DOCUMENT
+rather than the file — nothing is saved until the learner edits something, and
+then it is saved in the shape the editor now writes.
+
+Reading it in two shapes was the alternative and was not taken: two shapes to
+read is two shapes to keep right forever, and the split would have had to
+decide where a body lives by the block's POSITION rather than its type.
+
 **Not only rules.** An `.actor` file holds the same two shapes — its own
 `each frame` and its own `define block` (`ActorBuilder.defineStep`,
 `defineAction`) — and a world holds them inside `define actor`. Actor files

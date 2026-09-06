@@ -17,12 +17,12 @@ import {
   split,
 } from '../bodySurfaces';
 
-/** A step whose body is the chain that follows it. */
+/** A rule-level step, whose body is its `DO` mouth like every member's. */
 const ruleStep = (id: string, body: unknown) => ({
   type: 'world_rule_step_in',
   id,
   fields: {NAME: 'applyVelocity', PHASE: 'push'},
-  next: {block: body},
+  inputs: {DO: {block: body}},
 });
 
 /** A designed block, whose body is its `DO` socket. */
@@ -129,10 +129,10 @@ describe('hasSurface', () => {
 });
 
 describe('split', () => {
-  it('takes a hat’s next chain', () => {
+  it('takes a step’s `DO` mouth', () => {
     const {shown, bodies} = split(doc(ruleStep('s1', statement('work'))));
 
-    expect(rootsOf(shown)[0]).not.toHaveProperty('next');
+    expect(rootsOf(shown)[0].inputs).toEqual({});
     expect(bodies.s1).toMatchObject({type: 'world_comment'});
   });
 
@@ -184,7 +184,7 @@ describe('split', () => {
       doc({
         type: 'world_rule_step_in',
         fields: {NAME: 'x', PHASE: 'push'},
-        next: {block: statement('work')},
+        inputs: {DO: {block: statement('work')}},
       }),
     );
     const id = rootsOf(shown)[0].id as string;
@@ -204,7 +204,7 @@ describe('split', () => {
 });
 
 describe('merge', () => {
-  it('puts a hat’s body back on its `next`', () => {
+  it('puts a step’s body back in its mouth', () => {
     const {shown, bodies} = split(doc(ruleStep('s1', statement('work'))));
     expect(merge(shown, bodies)).toEqual(
       doc(ruleStep('s1', statement('work'))),
@@ -223,7 +223,7 @@ describe('merge', () => {
     const {shown} = split(doc(ruleStep('s1', statement('work'))));
     const merged = merge(shown, {});
 
-    expect(rootsOf(merged)[0]).not.toHaveProperty('next');
+    expect(rootsOf(merged)[0].inputs).toEqual({});
   });
 });
 
@@ -370,7 +370,7 @@ describe('the editor seam', () => {
     const read = seam.read(afterDelete as never);
 
     expect(rootsOf(read)).toHaveLength(1);
-    expect(rootsOf(read)[0].next?.block).toMatchObject({
+    expect(rootsOf(read)[0].inputs?.DO?.block).toMatchObject({
       fields: {TEXT: 'a'},
     });
   });
@@ -390,7 +390,7 @@ describe('the editor seam', () => {
       }),
     );
 
-    expect(rootsOf(seam.read(asSaved(shown)))[0]).not.toHaveProperty('next');
+    expect(rootsOf(seam.read(asSaved(shown)))[0].inputs?.DO).toBeUndefined();
   });
 });
 
@@ -404,9 +404,23 @@ describe('opening one member’s body', () => {
     const seam = createBodySeam();
     const shown = seam.show(solid);
 
-    const steps = rootsOf(shown).filter(
-      root => root.type === 'world_rule_step_in',
-    );
+    // Steps are MEMBERS now, chained under `define rule` rather than standing
+    // beside it, so this looks through the document rather than at its roots.
+    const steps: Saved[] = [];
+    const walk = (block: Saved): void => {
+      if (block.type === 'world_rule_step_in') {
+        steps.push(block);
+      }
+      for (const socket of Object.values(block.inputs ?? {})) {
+        if (socket.block) {
+          walk(socket.block);
+        }
+      }
+      if (block.next?.block) {
+        walk(block.next.block);
+      }
+    };
+    rootsOf(shown).forEach(walk);
     expect(steps.length).toBeGreaterThan(0);
 
     for (const step of steps) {
@@ -646,7 +660,7 @@ describe('editing one body and writing the file', () => {
     seam.setBody('s1', surface());
 
     expect(bodyOn(seam.bodyOf('s1', held))).toBeUndefined();
-    expect(rootsOf(seam.read(held))[0]).not.toHaveProperty('next');
+    expect(rootsOf(seam.read(held))[0].inputs).toEqual({});
   });
 });
 
