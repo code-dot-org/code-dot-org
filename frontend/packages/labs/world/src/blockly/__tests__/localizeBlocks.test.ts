@@ -132,6 +132,34 @@ describe('what a translation may change', () => {
     });
   });
 
+  it('calls a live dropdown the way Blockly calls it', () => {
+    // Blockly invokes an options generator as a METHOD of the field, and this
+    // lab's generators read the field to know where they are: which enum a
+    // choice belongs to, whose phases to offer, which rule to leave out of a
+    // `use rule` list. The first version of this wrapper was an arrow function
+    // calling `options()` — no `this`, no argument — so every one of them
+    // answered as if it were nowhere. An empty list is a dropdown with no
+    // text, which draws as a bare arrow with no block around it.
+    const seen: unknown[] = [];
+    function options(this: unknown, field?: unknown) {
+      seen.push({field, self: this});
+      return field ? [['from the field', 'v']] : [];
+    }
+    const [out] = localizeBlocks(
+      [{type: 'x', message0: '%1', args0: [{name: 'D', options}]}],
+      shout,
+    ) as Definition[];
+
+    const wrapped = out.args0?.[0]?.options as (
+      this: unknown,
+      field?: unknown,
+    ) => Array<[string, string]>;
+    const field = {id: 'the field'};
+
+    expect(wrapped.call(field, field)).toEqual([['«from the field»', 'v']]);
+    expect(seen).toEqual([{field, self: field}]);
+  });
+
   it('translates a live dropdown when it is opened, not before', () => {
     // A live dropdown lists things that may not exist yet at definition time —
     // an enum written a minute ago — so the options are a function, and the

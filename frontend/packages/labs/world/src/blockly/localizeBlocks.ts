@@ -104,11 +104,27 @@ const localizeOptions = (
     // A live dropdown works its options out when it is opened, so the
     // translation has to happen then too — the enums it lists may not exist
     // yet at definition time.
-    return () =>
-      options().map(
-        option =>
-          [localizeLabel(option[0], translate), option[1]] as unknown as Option,
-      );
+    //
+    // CALLED THE WAY BLOCKLY CALLS IT, which the first version of this was
+    // not. Blockly invokes an options generator as a METHOD of the field, and
+    // this lab's generators read the field to know where they are — which
+    // enum a choice belongs to, which subject's phases to offer, which rule to
+    // leave out of a `use rule` list. An arrow function that called
+    // `options()` gave them neither `this` nor the argument, so every one of
+    // them answered as if it were nowhere: an empty list, a dropdown with no
+    // text, and a block drawn as a bare arrow with nothing around it.
+    const live = options as (this: unknown, ...args: unknown[]) => Option[];
+    return function (this: unknown, ...args: unknown[]): Option[] {
+      return (live as (...a: unknown[]) => Option[])
+        .apply(this as never, args)
+        .map(
+          option =>
+            [
+              localizeLabel(option[0], translate),
+              option[1],
+            ] as unknown as Option,
+        );
+    } as unknown as () => Option[];
   }
   return options?.map(
     option =>

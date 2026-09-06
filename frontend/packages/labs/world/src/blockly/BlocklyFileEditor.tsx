@@ -1018,6 +1018,31 @@ export const BlocklyFileEditor = ({
     [],
   );
 
+  /**
+   * Ask every block on the workspace to work out its own size.
+   *
+   * A LOAD DOES NOT ALWAYS LAY OUT WHAT IT BUILT. Opening `use the pad` on
+   * Teleport — eighty-eight blocks, seventeen of them values nested inside
+   * other values — left those seventeen reporting a height and width of zero
+   * while claiming to be rendered and holding an SVG root. A block with no
+   * size draws as nothing, and a dropdown on one draws as an arrow with no
+   * block around it, which is what it looks like from the front.
+   *
+   * `finishQueuedRenders` alone does not help, and that is the tell: nothing
+   * had been queued. So they are queued here, by name, and then flushed.
+   *
+   * Cheap enough to do after every load — a block that already knows its size
+   * re-renders to the same numbers — and worth doing there rather than only
+   * where it was noticed, since which blocks get missed is not something this
+   * code decides.
+   */
+  const layOut = useCallback((workspace: Blockly.WorkspaceSvg): void => {
+    for (const block of workspace.getAllBlocks(false)) {
+      block.queueRender();
+    }
+    void Blockly.renderManagement.finishQueuedRenders();
+  }, []);
+
   const handleChange = useCallback(
     (event: Blockly.Events.Abstract) => {
       const workspace = workspaceRef.current;
@@ -1258,8 +1283,9 @@ export const BlocklyFileEditor = ({
     }
     refreshActorPictures(workspace);
     refreshBlockDesigns(workspace);
+    layOut(workspace);
     workspace.scroll(scrollX, scrollY);
-  }, [blocks, showFile]);
+  }, [blocks, showFile, layOut]);
 
   // Swap the surface, and keep it swapped.
   //
@@ -1319,7 +1345,8 @@ export const BlocklyFileEditor = ({
     // on, because the serializer applies `extraState` before fields — never
     // arrives. Without this a query is drawn as an action, every time.
     refreshBlockDesigns(workspace);
-  }, [editing, blocks, seam, startBlocks]);
+    layOut(workspace);
+  }, [editing, blocks, seam, startBlocks, layOut]);
 
   /**
    * Re-seed when the lab is handed a different document.
