@@ -951,6 +951,53 @@ and it fails when the code does.
 
 §8 is finished.
 
+_First render, 2026-09-05._ Three things that were only wrong the first time
+something was drawn, and right ever after — which is the hardest kind to
+notice and the easiest to dismiss.
+
+TWO OF THEM ARE THE SAME BUG. Every load this editor makes is silent: the
+surface swap and the reloads after a rename wrap `workspaces.load` in
+`Blockly.Events.disable()`, so the file is not written back as a consequence
+of being read. `FINISHED_LOADING` is silenced along with everything else — and
+that is the event the designer redraws its preview on, because the serializer
+applies `extraState` BEFORE fields, so the shape built while loading was drawn
+against the `RETURNS` dropdown's default. Every query came back drawn as an
+action: on a body surface always, and on the interface after coming Back.
+`refreshBlockDesigns` runs beside `refreshActorPictures`, which was already
+being called at exactly those three places for the same kind of reason.
+
+The other half is `buildArguments_` writing an argument's type with events
+off, so the extension listening for a type change never heard it and the
+default field stayed whatever the block was born with — a number box on an
+argument that had been an `actor` since before the surface opened. The sync is
+reachable from outside now and the build calls it by hand.
+
+Both are covered by `check-arguments.mjs`, and both were confirmed by breaking
+them again: without the refresh the head draws as an action in the action
+colour; without the sync an `actor` argument comes back with a default box.
+
+THE THIRD IS A RENDERER CONSTANT, not the per-block drawing. A renderer
+measures the font ONCE, when the workspace is injected, and keeps the answer:
+`FIELD_TEXT_HEIGHT` and `FIELD_TEXT_BASELINE`. The first workspace of a page
+load is injected before the web font arrives, so both are measured in whatever
+face stood in — 17 and 14 here against the 20 and 16 the same file gets when
+it is opened again — and every row is out by the difference for the life of
+that workspace. Which way it is out depends on the fallback: shorter with the
+one this machine falls back to, taller with a taller one.
+
+Two measurements settle what to do about it. `refreshTheme` recomputes the
+constants but changes no block: a block keeps the layout it was built with,
+and `queueRender` with the queue flushed leaves it exactly as tall as it was.
+Loading the workspace back into itself does change them — 41,31,31,27 became
+44,34,34,30 — which is what a file switch has always done, and why switching
+files has always been the cure. So the fix is `refreshTheme` and a reload, on
+`loadingdone`, guarded on the metric actually having moved.
+
+THE RACE STOPS REPRODUCING once the font is served from cache, which it is on
+any second run against a warm dev server — so a run where the two agree is
+proof of no harm, not proof of the fix. The claim rests on the two
+measurements above rather than on catching the fault again.
+
 **Not only rules.** An `.actor` file holds the same two shapes — its own
 `each frame` and its own `define block` (`ActorBuilder.defineStep`,
 `defineAction`) — and a world holds them inside `define actor`. Actor files

@@ -495,6 +495,11 @@ export const blockDesignerMutator = defineMutator(BLOCK_DESIGNER_MUTATOR, {
         // The type as stored, plain or `enum:`-prefixed: the dropdown's
         // values are parameter types, so this is the value.
         item.setFieldValue(part.type, TYPE_FIELD);
+        // …and the default's widget follows it by hand, because this runs with
+        // events off and the extension listens for a change event.
+        (
+          item as unknown as {syncDefaultField_?: () => void}
+        ).syncDefaultField_?.();
         item.setFieldValue(part.name ?? part.type, TEXT_FIELD);
         // After the type, which is what decides whether there is a default
         // field at all and what kind it is.
@@ -666,6 +671,12 @@ export const argumentDefaultExtension: Extension = defineExtension(
         }
         block.render?.();
       };
+      // Reachable from outside, because the type is not always changed by a
+      // person: `buildArguments_` writes it while events are off, so no change
+      // event is raised and this would otherwise keep the field it was born
+      // with — a number box on an argument that is now an actor.
+      (block as unknown as {syncDefaultField_?: () => void}).syncDefaultField_ =
+        sync;
       sync();
       block.setOnChange(event => {
         if (
@@ -679,6 +690,23 @@ export const argumentDefaultExtension: Extension = defineExtension(
     },
   },
 );
+
+/**
+ * Redraw every `define block`'s preview in a workspace.
+ *
+ * For loads made with events OFF, which is most of them here: the surface swap
+ * and the reloads after a rename all silence Blockly so the file is not
+ * written back. `FINISHED_LOADING` is silenced with everything else, and that
+ * event is what the init extension rebuilds on — because the serializer
+ * applies `extraState` BEFORE fields, so the shape built while loading was
+ * drawn against the dropdown's default. Without this a query comes back drawn
+ * as an action, on the interface after going Back and on every body surface.
+ */
+export function refreshBlockDesigns(workspace: Blockly.Workspace): void {
+  for (const block of workspace.getAllBlocks(false)) {
+    (block as unknown as {rebuildDesign_?: () => void}).rebuildDesign_?.();
+  }
+}
 
 export const BLOCK_DESIGNER_INIT_EXTENSION = 'block_designer_init';
 

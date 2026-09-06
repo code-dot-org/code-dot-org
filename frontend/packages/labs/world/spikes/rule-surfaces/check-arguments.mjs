@@ -75,6 +75,22 @@ await p.waitForTimeout(3000);
 out.head = await shapeOf('body-owner');
 out.bodyDrawers = (await drawers()).includes('Block');
 
+// FIRST RENDER, which is its own question. A body surface is loaded with
+// events OFF so the file is not written back, and `FINISHED_LOADING` is
+// silenced with everything else — which is the event the designer redraws the
+// preview on, because the serializer applies `extraState` before fields. Left
+// alone, every query's head draws as an action.
+out.headPreview = await p.evaluate(async () => {
+  const {Blockly} = await import('/spikes/rule-surfaces/harness.ts');
+  const head = Blockly.getMainWorkspace().getBlockById('body-owner');
+  const drawn = head.getField('DRAWING')?.mini?.getTopBlocks(false)[0];
+  return {
+    returns: head.getFieldValue('RETURNS'),
+    isQuery: drawn ? Boolean(drawn.outputConnection) : null,
+    colour: drawn ? drawn.getColour() : null,
+  };
+});
+
 // Rename an argument, which is a rename of the variable the body reads.
 out.renamed = await p.evaluate(async () => {
   const {Blockly} = await import('/spikes/rule-surfaces/harness.ts');
@@ -138,6 +154,59 @@ out.callSiteShadow = await p.evaluate(async () => {
       }),
     );
 });
+// …and the same question for the default field: `buildArguments_` writes the
+// type with events off, so the extension's change listener never hears it. An
+// argument that is already an `actor` when the surface opens must come up with
+// no default box at all.
+await p.evaluate(async () => {
+  const {Blockly} = await import('/spikes/rule-surfaces/harness.ts');
+  const w = Blockly.getMainWorkspace();
+  w.getAllBlocks(false)
+    .find(
+      x =>
+        x.type === 'world_rule_block' && x.getFieldValue('RETURNS') !== 'none',
+    )
+    .getField('OPEN_BODY')
+    .onClick();
+});
+await p.waitForTimeout(3000);
+await p.evaluate(async () => {
+  const {Blockly} = await import('/spikes/rule-surfaces/harness.ts');
+  const head = Blockly.getMainWorkspace().getBlockById('body-owner');
+  let item = head.getInput('ARGUMENTS').connection.targetBlock();
+  while (item && item.type !== 'world_signature_argument') {
+    item = item.getNextBlock();
+  }
+  item.setFieldValue('actor', 'TYPE');
+});
+await p.waitForTimeout(3000);
+await p.getByText('← Back').first().click();
+await p.waitForTimeout(3000);
+await p.evaluate(async () => {
+  const {Blockly} = await import('/spikes/rule-surfaces/harness.ts');
+  const w = Blockly.getMainWorkspace();
+  w.getAllBlocks(false)
+    .find(
+      x =>
+        x.type === 'world_rule_block' && x.getFieldValue('RETURNS') !== 'none',
+    )
+    .getField('OPEN_BODY')
+    .onClick();
+});
+await p.waitForTimeout(2500);
+out.actorOnReopen = await p.evaluate(async () => {
+  const {Blockly} = await import('/spikes/rule-surfaces/harness.ts');
+  const head = Blockly.getMainWorkspace().getBlockById('body-owner');
+  let item = head.getInput('ARGUMENTS').connection.targetBlock();
+  while (item && item.type !== 'world_signature_argument') {
+    item = item.getNextBlock();
+  }
+  return {
+    type: item.getFieldValue('TYPE'),
+    hasDefault: Boolean(item.getField('DEFAULT')),
+  };
+});
+
 out.errors = errors.slice(0, 4);
 
 // Expected: no icons on either; RETURNS_ROW and ARGUMENTS hidden on the
@@ -146,5 +215,9 @@ out.errors = errors.slice(0, 4);
 // which is what a parameter rebound to a second variable looks like; a default
 // field for number/string/boolean and none for actor/vector/kind; and
 // callSiteShadow `["N=5"]`, which is the whole reason a default exists.
+//
+// And two things that are only wrong on a FIRST render: headPreview must be a
+// query (`isQuery` true, not the action colour `#00b0bc`), and actorOnReopen
+// must be `{type: 'actor', hasDefault: false}`.
 console.log(JSON.stringify(out, null, 1));
 await b.close();

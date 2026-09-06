@@ -59,6 +59,7 @@ import styles from './blocklyFileEditor.module.css';
 import {BODY_OWNER_ID, createBodySeam, HIDE_BODIES} from './bodySurfaces';
 import {buildDomainPalette} from './domainBlocks';
 import {setEditingActor, setEditingFile, setEditingRule} from './editingRule';
+import {refreshBlockDesigns} from './extensions/blockDesigner';
 import {setBodyOpener} from './extensions/bodyButton';
 import {anchorBodyOwner} from './extensions/bodyOwner';
 import {refreshMissingRuleWarnings} from './extensions/missingRule';
@@ -1090,6 +1091,7 @@ export const BlocklyFileEditor = ({
       Blockly.Events.enable();
     }
     refreshActorPictures(workspace);
+    refreshBlockDesigns(workspace);
     workspace.scroll(scrollX, scrollY);
   }, [blocks, showFile]);
 
@@ -1146,6 +1148,11 @@ export const BlocklyFileEditor = ({
       workspace.scroll(0, 0);
     }
     refreshActorPictures(workspace);
+    // …and every `define block` redraws the block it defines. The load above
+    // is SILENT, so `FINISHED_LOADING` — which is what the designer rebuilds
+    // on, because the serializer applies `extraState` before fields — never
+    // arrives. Without this a query is drawn as an action, every time.
+    refreshBlockDesigns(workspace);
   }, [editing, blocks, seam, startBlocks]);
 
   /**
@@ -1172,8 +1179,78 @@ export const BlocklyFileEditor = ({
       Blockly.Events.enable();
     }
     refreshActorPictures(workspace);
+    refreshBlockDesigns(workspace);
     workspace.scroll(scrollX, scrollY);
   }, [sourcesEpoch, initialContents, showFile]);
+
+  // Re-measure when the web fonts land.
+  //
+  // A renderer measures the font ONCE, when the workspace is injected, and
+  // keeps the answer in its constants: `FIELD_TEXT_HEIGHT` and
+  // `FIELD_TEXT_BASELINE`. The first workspace of a page load is injected
+  // before the web font has arrived, so those are measured in the fallback
+  // face and every row is a few pixels out for the life of that workspace —
+  // measured here, 17 and 14 against the 20 and 16 the same file gets when it
+  // is opened again. Which way it is wrong depends on which font stood in.
+  //
+  // Nothing recovers it but REBUILDING the blocks. `refreshTheme` recomputes
+  // the constants, and re-rendering does not use them: a block keeps the
+  // layout it was built with, and `queueRender` with the renders flushed
+  // leaves it exactly as tall as it was. Loading the workspace back into
+  // itself is what a file switch does, which is why switching has always been
+  // the cure.
+  //
+  // `loadingdone` rather than `fonts.ready`: that promise settles for whatever
+  // was pending when it was asked, and more faces start loading after — it
+  // resolved a second before these blocks existed. The event fires once per
+  // batch, a handful of times, and never in a steady state; and the guard
+  // below means a batch that changes no metric costs a measurement and stops.
+  useEffect(() => {
+    const fonts = document.fonts;
+    if (!fonts?.addEventListener) {
+      return;
+    }
+    const textHeight = (workspace: Blockly.WorkspaceSvg): number =>
+      (
+        workspace.getRenderer().getConstants() as unknown as {
+          FIELD_TEXT_HEIGHT?: number;
+        }
+      ).FIELD_TEXT_HEIGHT ?? 0;
+
+    const remeasure = (): void => {
+      const workspace = workspaceRef.current;
+      if (!workspace) {
+        return;
+      }
+      const before = textHeight(workspace);
+      workspace.refreshTheme();
+      if (textHeight(workspace) === before) {
+        return;
+      }
+      const {scrollX, scrollY} = workspace;
+      const state = Blockly.serialization.workspaces.save(workspace);
+      // Silently: a font arriving is not an edit, and this must not write the
+      // file back — least of all a body surface, whose workspace is one
+      // member's implementation and not the file at all.
+      Blockly.Events.disable();
+      try {
+        Blockly.serialization.workspaces.load(state, workspace);
+        // The head is anchored imperatively, so a reload hands back a plain
+        // block: draggable, deletable, wearing a pencil into itself.
+        const head = workspace.getBlockById(BODY_OWNER_ID);
+        if (head) {
+          anchorBodyOwner(head);
+        }
+      } finally {
+        Blockly.Events.enable();
+      }
+      workspace.scroll(scrollX, scrollY);
+      refreshActorPictures(workspace);
+      refreshBlockDesigns(workspace);
+    };
+    fonts.addEventListener('loadingdone', remeasure);
+    return () => fonts.removeEventListener('loadingdone', remeasure);
+  }, []);
 
   // The selected block-color theme (its dark variant when the app is in dark
   // mode). `BlocklyWorkspace` applies live updates via its `theme` prop.
