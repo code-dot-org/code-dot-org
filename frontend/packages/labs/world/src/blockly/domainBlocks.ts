@@ -6589,17 +6589,31 @@ const worldRuleEvent = defineBlock({
   // "⟨space⟩ is pressed" — is one a handler can filter on, which is the whole
   // of specs/ENUMS.md.
   message0: 'define event',
+  // The phrasing, as blocks — drawn only on the event's own surface, which the
+  // pencil opens. An event has no implementation to put under it, so that
+  // surface holds this and nothing else; `bodySurfaces.hasSurface` is where
+  // "there is something to open" parts company with "there is a body".
+  message1: 'arguments %1',
+  args1: [{type: 'input_statement', name: ARGUMENTS_INPUT}],
   previousStatement: true,
   nextStatement: true,
+  // Kept for `saveExtraState`/`loadExtraState`, which is what carries the
+  // parts. With no `compose`/`decompose` on it there is no gear: Blockly draws
+  // one only when a mutator can open a bubble.
   mutator: eventDesignerMutator,
-  extensions: [blockDesignerInitExtension],
+  extensions: [
+    blockDesignerInitExtension,
+    bodyButtonExtension,
+    bodySurfaceExtension,
+  ],
   // A DEFINITION, coloured like the other definitions — `define rule`,
   // `define trait`, `define block`. The event colour belongs to the hat this
   // makes, which the preview row below draws.
   style: 'setup_blocks',
   tooltip:
     'Define an event a rule can raise. The row below is the "when …" block it ' +
-    'makes — edit it with the pencil. A choice in it is what a handler filters on.',
+    'makes; the pencil opens what it is made of. A choice in it is what a ' +
+    'handler filters on.',
   generator: noGenerator,
 });
 
@@ -6644,16 +6658,17 @@ const worldRuleEnumOption = defineBlock({
   generator: noGenerator,
 });
 
-// ── The signature mutator's own blocks ───────────────────────────────────────
-// These live only inside `define block`'s bubble; they are never in the
-// toolbox. The container holds a statement stack, and the stack IS the
-// signature, read left-to-right as top-to-bottom: drag a `text` in to add
-// wording, drag a type in to add an input, reorder by reordering statements,
-// remove by dragging out. The familiar mutator, doing the job a signature
-// actually needs.
+// ── The blocks a signature is written in ─────────────────────────────────────
+// A stack of these IS the signature, read left-to-right as top-to-bottom: a
+// `text` adds wording, an `argument` adds an input, reordering the statements
+// reorders the block. They live in the `arguments` row on a definition's own
+// surface, and are offered in a toolbox drawer only there (`surfaceToolbox`).
+//
+// `define block` writes its arguments as `argument`, which carries a type;
+// `define event` writes them as `choice`, because an event's parameter is a
+// filter and a filter over "any number" is a comparison rather than a hat.
 
-const SIGNATURE_CONTAINER = 'world_signature';
-/** One item block per parameter type, plus the label. Order = flyout order. */
+/** One item block per parameter type, plus the label. */
 const SIGNATURE_ITEMS: Array<{type: string; label: string; param?: string}> = [
   {type: 'world_signature_text', label: 'text'},
   ...PARAM_TYPE_OPTIONS.map(([label, value]) => ({
@@ -6662,17 +6677,6 @@ const SIGNATURE_ITEMS: Array<{type: string; label: string; param?: string}> = [
     param: value,
   })),
 ];
-
-const signatureContainer = defineBlock({
-  type: SIGNATURE_CONTAINER,
-  message0: 'block %1',
-  args0: [{type: 'input_statement', name: 'PARTS'}],
-  style: 'setup_blocks',
-  tooltip:
-    'The block being designed. Stack words and inputs here, in the order they ' +
-    'should read.',
-  generator: noGenerator,
-});
 
 /**
  * The `choice` item: a parameter typed by an ENUM.
@@ -8315,7 +8319,6 @@ export const DOMAIN_BLOCKS = [
   worldRuleBlock,
   worldRuleEnum,
   worldRuleEnumOption,
-  signatureContainer,
   ...signatureItems,
   signatureChoice,
   signatureArgument,
@@ -8631,11 +8634,13 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
     ],
   },
   {
-    // What a `define block` is made of, offered only where one is being
-    // written: these go in the `arguments` row on a body surface's head, and
-    // there is no such row anywhere else (`surfaceToolbox`).
+    // What a definition's own block is made of, offered only where one is
+    // being written: these go in the `arguments` row on a surface's head, and
+    // there is no such row anywhere else. Which of them a given surface
+    // offers is `surfaceToolbox`'s business — a `define block` takes
+    // `argument`, a `define event` takes `choice`.
     name: 'Block',
-    blocks: [SIGNATURE_ARGUMENT, 'world_signature_text'],
+    blocks: [SIGNATURE_ARGUMENT, SIGNATURE_CHOICE, 'world_signature_text'],
   },
 ];
 const BUILTIN_RULE_CATEGORIES: ToolboxCategory[] = AUTHORING_RULES.map(

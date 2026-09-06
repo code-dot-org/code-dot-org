@@ -97,7 +97,7 @@ import {setRulesConfigHandler} from './rulesConfig';
 import {parseSpriteRef} from './spriteCells';
 import {setSpritePickHandler} from './spritePick';
 import {standInBlocks} from './standInBlocks';
-import {toolboxForSurface} from './surfaceToolbox';
+import {toolboxForSurface, type Surface} from './surfaceToolbox';
 import {withoutCategories} from './toolboxFilter';
 import {useWorldBlocklyTheme} from './worldBlocklyTheme';
 
@@ -648,9 +648,12 @@ export const BlocklyFileEditor = ({
    * swap `startBlocks` was the first attempt and the body came up empty;
    * loading is what this file already knows how to do.
    */
-  const [editing, setEditing] = useState<{id: string; label: string} | null>(
-    null,
-  );
+  const [editing, setEditing] = useState<{
+    id: string;
+    label: string;
+    /** Which toolbox this surface wants — an event's is not a body's. */
+    kind: Surface;
+  } | null>(null);
   /** The interface, held while a body has its place. */
   const interfaceRef = useRef<BlocklySerialization | null>(null);
   /** Which surface the workspace is actually showing. */
@@ -683,6 +686,9 @@ export const BlocklyFileEditor = ({
     setEditing({
       id: blockId,
       label: block?.getFieldValue('NAME') || designed || 'this',
+      // `define event` has a surface but no implementation, so what it offers
+      // is its phrasing and nothing else (`surfaceToolbox`).
+      kind: block?.type === 'world_rule_event' ? 'event' : 'body',
     });
   }, []);
 
@@ -722,7 +728,7 @@ export const BlocklyFileEditor = ({
   // definition and is watched by the effect that swaps surfaces, so folding
   // this into it would rebuild the palette every time a body opened.
   const surfaceToolbox = useMemo(
-    () => toolboxForSurface(toolbox, editing ? 'body' : 'interface'),
+    () => toolboxForSurface(toolbox, editing?.kind ?? 'interface'),
     [toolbox, editing],
   );
 

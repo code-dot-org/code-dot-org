@@ -15,7 +15,7 @@ import type {Block, BlockSvg, Input} from 'blockly';
 import {defineExtension, type Extension} from '@code-dot-org/blockly';
 import {FieldButton} from '@code-dot-org/blockly/fields/fieldButton';
 
-import {hasBody, HIDE_BODIES} from '../bodySurfaces';
+import {hasSurface, HIDE_BODIES} from '../bodySurfaces';
 
 import {glyphIcon} from './glyphIcon';
 
@@ -53,7 +53,7 @@ function syncButton(block: Block): void {
   // …and gated on the split being on. With it off the bodies are still in
   // the workspace, so there is nothing behind the pencil and it would open an
   // empty surface — worse than no pencil.
-  const wanted = HIDE_BODIES && hasBody(block.type);
+  const wanted = HIDE_BODIES && hasSurface(block.type);
   if (wanted === Boolean(block.getField(FIELD_NAME))) {
     return;
   }

@@ -43,6 +43,10 @@ const SOCKET = 'DO';
  */
 const BODY_SURFACE_ROWS: Readonly<Record<string, readonly string[]>> = {
   world_rule_block: [DESCRIPTION_ROW, RETURNS_ROW, ARGUMENTS_INPUT],
+  // An event has no implementation, so its surface is its phrasing and
+  // nothing else — but the row is hidden on the interface for the same reason
+  // the others are: what the block IS belongs where it is written.
+  world_rule_event: [ARGUMENTS_INPUT],
 };
 
 /**

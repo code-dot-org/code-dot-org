@@ -11,6 +11,7 @@ import {
   BODY_OWNER_ID,
   createBodySeam,
   hasBody,
+  hasSurface,
   merge,
   reap,
   split,
@@ -82,6 +83,48 @@ describe('hasBody', () => {
     expect(hasBody('world_rule')).toBe(false);
     expect(hasBody('world_rule_trait')).toBe(false);
     expect(hasBody('world_rule_property')).toBe(false);
+  });
+});
+
+describe('hasSurface', () => {
+  it('opens for a `define event`, which has no body at all', () => {
+    // The two questions are different: `split` asks what to take OUT of the
+    // document, and this asks what a learner can open. An event is a
+    // declaration — the blocks that run for it live under the hat it makes,
+    // in whatever file cares — so there is nothing to take, and its surface
+    // holds a signature and no body.
+    expect(hasSurface('world_rule_event')).toBe(true);
+    expect(hasBody('world_rule_event')).toBe(false);
+  });
+
+  it('never lets an event be split, which would eat the rule', () => {
+    // THE ONE THAT MATTERS. `world_rule_event`'s `next` is the member chain —
+    // what the rule declares after it. Read as a body, the rest of the rule
+    // moves inside the event and the next save writes it there.
+    const shown = split(
+      doc({
+        type: 'world_rule_event',
+        id: 'e1',
+        next: {block: {type: 'world_rule_property', id: 'p1'}},
+      }),
+    );
+
+    expect(rootsOf(shown.shown)[0].next?.block.type).toBe(
+      'world_rule_property',
+    );
+    expect(shown.bodies).toEqual({});
+  });
+
+  it('agrees with hasBody everywhere else', () => {
+    for (const type of [
+      'world_rule_step_in',
+      'world_rule_step_tick',
+      'world_rule_block',
+      'world_trait_step',
+    ]) {
+      expect(hasSurface(type), type).toBe(true);
+    }
+    expect(hasSurface('world_rule_property')).toBe(false);
   });
 });
 

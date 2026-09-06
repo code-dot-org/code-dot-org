@@ -152,3 +152,57 @@ describe('what filtering must not break', () => {
     ]);
   });
 });
+
+describe('an event surface', () => {
+  // `define event` has a surface but no implementation. There is nowhere on it
+  // to put a statement, so a full toolbox would be a wall of blocks that
+  // cannot be used anywhere.
+  it('offers one drawer and no more', () => {
+    expect(names(toolboxForSurface(palette(), 'event'))).toEqual(['Block']);
+  });
+
+  it('drops even a drawer that fills itself when it is opened', () => {
+    // Written after the first version of this passed with the fault in place.
+    // Emptying the other drawers is not enough: a dynamic category keeps its
+    // place when its static list runs out — deliberately, because what
+    // `onLoad` will offer is not knowable — so Variables would stand open on a
+    // surface with nowhere to put a variable.
+    const dynamic = {
+      name: 'Variables',
+      key: 'VARIABLE',
+      onLoad: () => [],
+      blocks: [],
+    } as unknown as ToolboxCategory;
+    const signature = {
+      name: 'Block',
+      blocks: ['world_signature_choice'],
+    } as ToolboxCategory;
+
+    expect(
+      names(toolboxForSurface([dynamic, signature] as Toolbox, 'event')),
+    ).toEqual(['Block']);
+    // …and it keeps its place everywhere else.
+    expect(
+      names(toolboxForSurface([dynamic, signature] as Toolbox, 'body')),
+    ).toContain('Variables');
+  });
+
+  it('offers choices and wording, not the typed argument', () => {
+    // An event's parameter is a FILTER, and a filter over "any number" is a
+    // comparison rather than a hat.
+    const shown = offered(toolboxForSurface(palette(), 'event'));
+
+    expect(shown).toContain('world_signature_choice');
+    expect(shown).toContain('world_signature_text');
+    expect(shown).not.toContain('world_signature_argument');
+  });
+
+  it('is the other way round inside a body', () => {
+    // A `define block` says the same thing by picking an enum in `argument`'s
+    // type dropdown, so the choice item is the event's alone.
+    const shown = offered(toolboxForSurface(palette(), 'body'));
+
+    expect(shown).toContain('world_signature_argument');
+    expect(shown).not.toContain('world_signature_choice');
+  });
+});

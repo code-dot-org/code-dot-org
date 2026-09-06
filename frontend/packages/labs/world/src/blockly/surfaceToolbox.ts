@@ -21,8 +21,23 @@ import type {Toolbox, ToolboxCategory} from '@code-dot-org/blockly';
 
 import {HIDE_BODIES} from './bodySurfaces';
 
-/** Which of a rule's two surfaces a toolbox is being built for. */
-export type Surface = 'interface' | 'body';
+/**
+ * Which surface a toolbox is being built for.
+ *
+ * `interface` is the rule itself. `body` is a member's implementation. `event`
+ * is the odd one: `define event` has a surface but no implementation — an
+ * event is a declaration, and the blocks that run for it live under the hat it
+ * makes, in whatever file cares — so there is nowhere on it to put a
+ * statement, and offering any would be offering blocks with no socket.
+ */
+export type Surface = 'interface' | 'body' | 'event';
+
+/** The drawer holding what a definition's own block is made of. */
+const SIGNATURE_DRAWER = 'Block';
+
+/** What each surface writes its arguments in. */
+const ARGUMENT_BLOCK = 'world_signature_argument';
+const CHOICE_BLOCK = 'world_signature_choice';
 
 /**
  * Blocks that say what a rule OFFERS.
@@ -57,10 +72,11 @@ const DECLARATIONS: ReadonlySet<string> = new Set([
 const IMPLEMENTATION: ReadonlySet<string> = new Set([
   'world_return',
   'world_step_delta',
-  // The signature's own blocks. They go in the `arguments` row on a body
-  // surface's head — the interface has no such row, so offering them there
-  // would be offering blocks with nowhere to put them.
-  'world_signature_argument',
+  // The signature's own blocks. They go in the `arguments` row on a
+  // definition's own surface — the interface has no such row, so offering them
+  // there would be offering blocks with nowhere to put them.
+  ARGUMENT_BLOCK,
+  CHOICE_BLOCK,
   'world_signature_text',
 ]);
 
@@ -79,9 +95,18 @@ const wanted = (surface: Surface, entry: unknown): boolean => {
     // A separator, a label, a button — not a block, and not ours to judge.
     return true;
   }
-  return surface === 'body'
-    ? !DECLARATIONS.has(type)
-    : !IMPLEMENTATION.has(type);
+  if (surface === 'event') {
+    // An event's argument is a FILTER, and a filter over "any number" is a
+    // comparison rather than a hat — so it takes choices and wording, and the
+    // typed `argument` is not offered rather than offered and then refused.
+    return type === CHOICE_BLOCK || type === 'world_signature_text';
+  }
+  if (surface === 'body') {
+    // …and the choice item is the event's alone: a `define block` says the
+    // same thing by picking an enum in `argument`'s type dropdown.
+    return !DECLARATIONS.has(type) && type !== CHOICE_BLOCK;
+  }
+  return !IMPLEMENTATION.has(type);
 };
 
 /**
@@ -95,7 +120,14 @@ export function toolboxForSurface(toolbox: Toolbox, surface: Surface): Toolbox {
   if (!HIDE_BODIES || !Array.isArray(toolbox)) {
     return toolbox;
   }
-  return (toolbox as ToolboxCategory[])
+  const categories = toolbox as ToolboxCategory[];
+  // An event surface offers ONE drawer. There is no socket on it for anything
+  // else, so a full toolbox there is a wall of blocks that cannot be used.
+  const chosen =
+    surface === 'event'
+      ? categories.filter(category => category.name === SIGNATURE_DRAWER)
+      : categories;
+  return chosen
     .map(category => {
       if (!category.blocks) {
         return category;

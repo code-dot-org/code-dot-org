@@ -60,6 +60,30 @@ export const hasBody = (type: string): boolean =>
   BODY_IN_NEXT.has(type) || BODY_IN_DO.has(type);
 
 /**
+ * Blocks with a surface of their own but NOTHING to take off them.
+ *
+ * `define event` is a declaration: it makes a hat, and the blocks that run for
+ * it live under that hat in whatever file cares. So there is no body to split
+ * out — and it must never be treated as if there were, because an event's
+ * `next` is the member chain, and reading that as a body would move the rest
+ * of the rule into it.
+ *
+ * What it does have is a signature, which is edited exactly the way a `define
+ * block`'s is. So it earns a pencil and a surface; the surface simply holds
+ * the head and no body.
+ */
+const SURFACE_WITHOUT_BODY = new Set(['world_rule_event']);
+
+/**
+ * Whether a pencil opens something for this block.
+ *
+ * Wider than `hasBody`, and deliberately a different question: `split` asks
+ * what to take OUT of the document, and this asks what a learner can open.
+ */
+export const hasSurface = (type: string): boolean =>
+  hasBody(type) || SURFACE_WITHOUT_BODY.has(type);
+
+/**
  * The id the owner block wears while its own body is the surface.
  *
  * NOT the block's real id, and that is the point. The editor tells which

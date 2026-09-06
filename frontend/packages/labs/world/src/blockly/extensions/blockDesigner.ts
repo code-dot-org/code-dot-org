@@ -82,9 +82,6 @@ export interface BlockDesignState {
 }
 
 const PREVIEW_INPUT = 'PREVIEW';
-/** The bubble's container block and the statement input holding the signature. */
-const SIGNATURE_CONTAINER = 'world_signature';
-const PARTS_INPUT = 'PARTS';
 const TEXT_FIELD = 'TEXT';
 
 /**
@@ -218,6 +215,8 @@ interface Designer {
   rebuildDesign_(): void;
   bindParts_(): void;
   buildDesignShape_(): void;
+  buildArguments_(): void;
+  readArguments_(): void;
 }
 
 const designer: Designer & ThisType<Blockly.BlockSvg & Designer> = {
@@ -372,100 +371,6 @@ const designer: Designer & ThisType<Blockly.BlockSvg & Designer> = {
       this.type === 'world_rule_event' ? 'event' : 'block',
     );
   },
-};
-
-/**
- * The designer with a bubble: `define event`'s gear.
- *
- * An event is a declaration and has no implementation, so there is no surface
- * of its own to write a signature on — the bubble is still where its phrasing
- * is edited, and `blocks` is that bubble's flyout.
- */
-const designerMutator = (name: string, blocks: string[]) =>
-  defineMutator(
-    name,
-    {
-      ...designer,
-      /**
-       * Build the bubble's contents from the current signature.
-       *
-       * Each part becomes its item block, connected in order. A parameter's item
-       * carries its variable id on the block (`varId_`), the way Blockly's own
-       * mutators carry a saved connection — so a part dragged out and back keeps
-       * the variable the body already reads, rather than becoming a new one.
-       */
-      decompose: function (workspace: Blockly.Workspace) {
-        const container = workspace.newBlock(SIGNATURE_CONTAINER);
-        (container as Blockly.BlockSvg).initSvg?.();
-        let connection = container.getInput(PARTS_INPUT)?.connection ?? null;
-        for (const part of this.parts_ ?? []) {
-          const item = workspace.newBlock(itemTypeFor(part));
-          (item as Blockly.BlockSvg).initSvg?.();
-          if (part.kind === 'label') {
-            item.setFieldValue(part.text, TEXT_FIELD);
-          } else {
-            // Which enum, before the name: the choice item's dropdown is what
-            // makes it this parameter rather than a differently-typed one, and a
-            // part reopened in the bubble has to come back as what it was.
-            const choice = enumRefOfParamType(part.type);
-            if (choice) {
-              item.setFieldValue(choice, ENUM_FIELD);
-            }
-            item.setFieldValue(part.name ?? part.type, TEXT_FIELD);
-            (item as {varId_?: string}).varId_ = part.var;
-          }
-          connection?.connect(item.previousConnection!);
-          connection = item.nextConnection;
-        }
-        return container;
-      },
-
-      /** Read the stack back out as the signature. */
-      compose: function (container: Blockly.Block) {
-        const parts: BlockPart[] = [];
-        let item = container.getInput(PARTS_INPUT)?.connection?.targetBlock();
-        while (item) {
-          const param = paramTypeOf(item);
-          if (param) {
-            parts.push({
-              kind: 'param',
-              type: param,
-              // Kept from `decompose` when this item was already in the signature;
-              // empty for one just dragged in, which the rebuild binds afresh.
-              var: (item as {varId_?: string}).varId_ ?? '',
-              name: item.getFieldValue(TEXT_FIELD) ?? '',
-            });
-          } else {
-            parts.push({
-              kind: 'label',
-              text: item.getFieldValue(TEXT_FIELD) ?? '',
-            });
-          }
-          item = item.getNextBlock();
-        }
-        // Never nothing: a block with no parts has no name and no shape.
-        this.parts_ = parts.length > 0 ? parts : defaultParts();
-        this.rebuildDesign_();
-      },
-    },
-    // The bubble's flyout — what may go into a signature.
-    {blocks},
-  );
-
-/**
- * `define block`'s designer, with no bubble.
- *
- * The signature is a stack of blocks in `ARGUMENTS_INPUT` on the block's own
- * face, so there is nothing for a gear to open — and leaving `compose` and
- * `decompose` off is what stops Blockly drawing one. What the bubble used to
- * do, `buildArguments_` and `readArguments_` do in the workspace itself.
- *
- * The stack is NOT the file. `extraState.parts` is still what a rule is saved
- * with, so nothing downstream changed: these two only keep the blocks and the
- * parts saying the same thing.
- */
-export const blockDesignerMutator = defineMutator(BLOCK_DESIGNER_MUTATOR, {
-  ...designer,
 
   /**
    * Write the signature out as blocks, into the block's own `arguments` row.
@@ -489,11 +394,28 @@ export const blockDesignerMutator = defineMutator(BLOCK_DESIGNER_MUTATOR, {
     let at: Blockly.Connection | null = connection;
     for (const part of this.parts_ ?? []) {
       const item = this.workspace.newBlock(
-        part.kind === 'label' ? 'world_signature_text' : SIGNATURE_ARGUMENT,
+        // `define event`'s arguments are CHOICES and nothing else — its
+        // parameter is a filter, and a filter over "any number" is a
+        // comparison rather than a hat — so it writes them as the choice item
+        // rather than the `argument` block with its type dropdown.
+        this.type === 'world_rule_event'
+          ? itemTypeFor(part)
+          : part.kind === 'label'
+            ? 'world_signature_text'
+            : SIGNATURE_ARGUMENT,
       );
       (item as Blockly.BlockSvg).initSvg?.();
       if (part.kind === 'label') {
         item.setFieldValue(part.text, TEXT_FIELD);
+      } else if (item.type === SIGNATURE_CHOICE) {
+        // Which enum, before the name: the choice item's dropdown is what
+        // makes it this parameter rather than a differently-typed one.
+        const choice = enumRefOfParamType(part.type);
+        if (choice) {
+          item.setFieldValue(choice, ENUM_FIELD);
+        }
+        item.setFieldValue(part.name ?? part.type, TEXT_FIELD);
+        (item as {varId_?: string}).varId_ = part.var;
       } else {
         // The type as stored, plain or `enum:`-prefixed: the dropdown's
         // values are parameter types, so this is the value.
@@ -569,23 +491,35 @@ export const blockDesignerMutator = defineMutator(BLOCK_DESIGNER_MUTATOR, {
     this.parts_ = next;
     this.rebuildDesign_();
   },
-});
-
-/** The name the event designer registers under (`define event`'s mutator). */
-export const EVENT_DESIGNER_MUTATOR = 'event_designer_mutator';
+};
 
 /**
- * The same designer for an event's phrasing — wording and choices only.
+ * The designers, neither of which has a bubble any more.
  *
- * An event's parameter is a FILTER: the hat runs when what was emitted matches
- * it. That is a question with an answer for a named set of choices ("when
- * ⟨space⟩ is pressed") and not one for a number or a vector, so those items are
- * not offered rather than being offered and quietly ignored.
+ * A signature is a stack of blocks in `ARGUMENTS_INPUT` on the block's own
+ * face, opened with the pencil — so there is nothing for a gear to open, and
+ * leaving `compose` and `decompose` off is exactly what stops Blockly drawing
+ * one. What the bubble used to do, `buildArguments_` and `readArguments_` do
+ * in the workspace itself.
+ *
+ * The stack is NOT the file. `extraState.parts` is still what a rule is saved
+ * with, so nothing downstream changed: those two only keep the blocks and the
+ * parts saying the same thing.
+ *
+ * The two differ in one place and it is not here: `define event` writes its
+ * arguments as CHOICE items, because an event's parameter is a filter and a
+ * filter over "any number" is a comparison rather than a hat.
  */
-export const eventDesignerMutator = designerMutator(EVENT_DESIGNER_MUTATOR, [
-  'world_signature_text',
-  SIGNATURE_CHOICE,
-]);
+export const blockDesignerMutator = defineMutator(BLOCK_DESIGNER_MUTATOR, {
+  ...designer,
+});
+
+/** The name the event designer registers under. */
+export const EVENT_DESIGNER_MUTATOR = 'event_designer_mutator';
+
+export const eventDesignerMutator = defineMutator(EVENT_DESIGNER_MUTATOR, {
+  ...designer,
+});
 
 /**
  * The widget a default value is typed into, for an argument of this type.

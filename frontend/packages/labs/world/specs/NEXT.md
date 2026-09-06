@@ -1022,6 +1022,37 @@ with nothing on screen to say so. `ruleMeta.test.ts` guards it at the only
 place the loss would show: the description arriving in the metadata a call
 site is built from.
 
+_`define event` too, 2026-09-05._ The last bubble is gone. An event's phrasing
+is edited the way a block's is — a pencil, a surface of its own, an
+`arguments` row — and `define event` on the interface is its name and the hat
+it makes.
+
+WHICH MEANT SEPARATING TWO QUESTIONS that had been one. `hasBody` asks what
+`split` should take OUT of a document; `hasSurface` asks what a learner can
+open. An event is a declaration: it makes a hat, and the blocks that run for
+it live under that hat in whatever file cares, so there is nothing to take and
+its surface holds the head alone. Its `next` is the MEMBER CHAIN, and reading
+that as a body would move the rest of the rule inside the event — so
+`hasBody` stays false for it, and a test says so by splitting an event with a
+member after it and finding the member still there.
+
+An event's arguments are CHOICES. Its parameter is a filter, and a filter over
+"any number" is a comparison rather than a hat, so it writes them with the
+choice item rather than the typed `argument`; a `define block` says the same
+thing by picking an enum in `argument`'s type dropdown, which is why the
+choice item is the event's alone. The two designers now differ in that one
+place and nowhere else.
+
+Its surface offers ONE drawer, because there is nowhere on it to put a
+statement. Emptying the others is not enough: a dynamic category keeps its
+place when its static list runs out — deliberately, since what `onLoad` will
+offer is not knowable — so Variables would have stood open on a surface with
+nowhere to put a variable. The first test written for this passed with that
+fault in place and was rewritten against a dynamic drawer.
+
+With no `compose`/`decompose` left on either designer there is no gear on
+either block, and the bubble's container block went with them.
+
 **Not only rules.** An `.actor` file holds the same two shapes — its own
 `each frame` and its own `define block` (`ActorBuilder.defineStep`,
 `defineAction`) — and a world holds them inside `define actor`. Actor files
