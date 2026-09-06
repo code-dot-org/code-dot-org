@@ -246,7 +246,12 @@ const subjectTrait = (
 const designed = (
   name: string,
   returns = 'none',
-  params: Array<{type: string; var: string; name?: string}> = [],
+  params: Array<{
+    type: string;
+    var: string;
+    name?: string;
+    default?: unknown;
+  }> = [],
 ): object => ({
   type: 'world_rule_block',
   fields: {RETURNS: returns},
@@ -1001,5 +1006,52 @@ describe('a step declared under a trait', () => {
     expect(ruleMetaToModule(meta, new Map())).toContain(
       `for (const actor of world.actors.with(FallsTrait)) {`,
     );
+  });
+});
+
+describe('an argument’s default value', () => {
+  // Written on a `define block`'s `argument` row, and spent at every call
+  // site: `EditorParam.default` is what seeds the shadow block on the socket
+  // (`typedValueInputs`). If it stopped here the block would still render and
+  // still compile — the socket would just come up empty, or zero.
+  const ruleWith = (params: Parameters<typeof designed>[2]) =>
+    parseRuleMeta(
+      'rules/defaults',
+      ruleFile('Defaults', designed('nudge', 'none', params)),
+    );
+
+  it('reaches the parameter a call site is built from', () => {
+    const meta = ruleWith([
+      {type: 'number', var: 'v1', name: 'amount', default: 5},
+    ]);
+
+    expect(meta?.actions[0]?.params[0]).toMatchObject({
+      type: 'number',
+      default: 5,
+    });
+  });
+
+  it('stays unset when the author gave none, rather than becoming a value', () => {
+    // Written after the first version of this passed with the fault in place:
+    // `not.toHaveProperty` cannot tell an absent key from one holding
+    // `undefined`, and neither can the call site — both fall through to
+    // `default ?? <the type's own fallback>`. What WOULD matter is this
+    // inventing a value, because every socket of every call site would then
+    // come up holding it.
+    const meta = ruleWith([{type: 'number', var: 'v1', name: 'amount'}]);
+
+    expect(meta?.actions[0]?.params[0]?.default).toBeUndefined();
+  });
+
+  it('carries a value of whatever kind the argument is', () => {
+    const meta = ruleWith([
+      {type: 'string', var: 'v1', name: 'greeting', default: 'hello'},
+      {type: 'boolean', var: 'v2', name: 'loudly', default: 'TRUE'},
+    ]);
+
+    expect(meta?.actions[0]?.params.map(p => p.default)).toEqual([
+      'hello',
+      'TRUE',
+    ]);
   });
 });

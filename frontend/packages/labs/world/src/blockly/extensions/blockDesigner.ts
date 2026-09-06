@@ -46,7 +46,7 @@ import {
   type Extension,
 } from '@code-dot-org/blockly';
 
-import {enumParamType, enumRefOfParamType} from '../enums';
+import {enumOptions, enumParamType, enumRefOfParamType} from '../enums';
 import {FieldBlockPreview} from '../fields/FieldBlockPreview';
 import {PARAM_FLAVOURS, paramFlavour} from '../typedVariables';
 
@@ -61,7 +61,20 @@ export const BLOCK_DESIGNER_MUTATOR = 'block_designer_mutator';
  */
 export type BlockPart =
   | {kind: 'label'; text: string}
-  | {kind: 'param'; type: string; var: string; name?: string};
+  | {
+      kind: 'param';
+      type: string;
+      var: string;
+      name?: string;
+      /**
+       * What a call site starts with when it is left alone.
+       *
+       * Seeded into the shadow block on the socket (`typedValueInputs`), which
+       * is why it is stored as the plain value that shadow holds. Absent for
+       * the types that have no sensible one — there is no default actor.
+       */
+      default?: unknown;
+    };
 
 /** The designer's serialized state: the signature. */
 export interface BlockDesignState {
@@ -90,6 +103,10 @@ const TEXT_FIELD = 'TEXT';
 export const SIGNATURE_ARGUMENT = 'world_signature_argument';
 /** The field on it naming the type — a param type or an enum ref. */
 export const TYPE_FIELD = 'TYPE';
+
+/** The value a call site falls back to, and the word in front of it. */
+export const DEFAULT_FIELD = 'DEFAULT';
+const DEFAULT_LABEL = 'DEFAULT_LABEL';
 
 /** The statement input on `define block` holding its signature. */
 export const ARGUMENTS_INPUT = 'ARGUMENTS';
@@ -479,6 +496,11 @@ export const blockDesignerMutator = defineMutator(BLOCK_DESIGNER_MUTATOR, {
         // values are parameter types, so this is the value.
         item.setFieldValue(part.type, TYPE_FIELD);
         item.setFieldValue(part.name ?? part.type, TEXT_FIELD);
+        // After the type, which is what decides whether there is a default
+        // field at all and what kind it is.
+        if (part.default !== undefined && item.getField(DEFAULT_FIELD)) {
+          item.setFieldValue(String(part.default), DEFAULT_FIELD);
+        }
         (item as {varId_?: string}).varId_ = part.var;
       }
       at?.connect(item.previousConnection!);
@@ -498,6 +520,9 @@ export const blockDesignerMutator = defineMutator(BLOCK_DESIGNER_MUTATOR, {
     while (item) {
       const param = paramTypeOf(item);
       if (param) {
+        const fallback = item.getField(DEFAULT_FIELD)
+          ? (item.getFieldValue(DEFAULT_FIELD) ?? undefined)
+          : undefined;
         parts.push({
           kind: 'param',
           type: param,
@@ -505,6 +530,7 @@ export const blockDesignerMutator = defineMutator(BLOCK_DESIGNER_MUTATOR, {
           // the rebuild binds to a variable of its own.
           var: (item as {varId_?: string}).varId_ ?? '',
           name: item.getFieldValue(TEXT_FIELD) ?? '',
+          ...(fallback === undefined ? {} : {default: fallback}),
         });
       } else {
         parts.push({kind: 'label', text: item.getFieldValue(TEXT_FIELD) ?? ''});
@@ -526,7 +552,7 @@ export const blockDesignerMutator = defineMutator(BLOCK_DESIGNER_MUTATOR, {
         list.map(part =>
           part.kind === 'label'
             ? ['label', part.text]
-            : ['param', part.type, part.name ?? ''],
+            : ['param', part.type, part.name ?? '', part.default ?? ''],
         ),
       );
     if (same(next) === same(this.parts_ ?? [])) {
@@ -552,6 +578,107 @@ export const eventDesignerMutator = designerMutator(EVENT_DESIGNER_MUTATOR, [
   'world_signature_text',
   SIGNATURE_CHOICE,
 ]);
+
+/**
+ * The widget a default value is typed into, for an argument of this type.
+ *
+ * The same kind of control the call site will show, because it is the same
+ * question: a number field for a number, `true`/`false` for a boolean, the
+ * enum's own words for an enum. `null` for the types that have no sensible
+ * default — there is no default actor, a `kind` is chosen from the project's
+ * kinds at the call site, and a vector is two numbers rather than one value.
+ * Offering an empty box for those would be offering to answer a question that
+ * is not being asked.
+ */
+const defaultFieldFor = (type: string): Blockly.Field | null => {
+  const choice = enumRefOfParamType(type);
+  if (choice) {
+    const options = (): Array<[string, string]> => {
+      const live = enumOptions(choice);
+      return live.length > 0 ? live : [['(no choices yet)', '']];
+    };
+    return new Blockly.FieldDropdown(options);
+  }
+  switch (type) {
+    case 'number':
+      return new Blockly.FieldNumber(0);
+    case 'string':
+      return new Blockly.FieldTextInput('');
+    case 'boolean':
+      return new Blockly.FieldDropdown([
+        ['true', 'TRUE'],
+        ['false', 'FALSE'],
+      ]);
+    default:
+      return null;
+  }
+};
+
+export const ARGUMENT_DEFAULT_EXTENSION = 'world_signature_argument_default';
+
+/**
+ * Keep an `argument` block's default field in step with its type.
+ *
+ * The type is a dropdown, so it changes under a field that was built for the
+ * old one — a number box left behind on an argument that is now a choice. The
+ * field is rebuilt when it changes, and the value carried over when the new
+ * widget will take it.
+ */
+export const argumentDefaultExtension: Extension = defineExtension(
+  ARGUMENT_DEFAULT_EXTENSION,
+  {
+    extension() {
+      const block = this as unknown as Blockly.BlockSvg;
+      const sync = (): void => {
+        const row = block.inputList[0];
+        if (!row) {
+          return;
+        }
+        const had = block.getField(DEFAULT_FIELD)?.getValue();
+        // Silently: this rebuilds fields, and a field change is an edit the
+        // editor would write to the file — of a block that is not in it.
+        const enabled = Blockly.Events.isEnabled();
+        if (enabled) {
+          Blockly.Events.disable();
+        }
+        try {
+          row.removeField(DEFAULT_LABEL, true);
+          row.removeField(DEFAULT_FIELD, true);
+          const field = defaultFieldFor(block.getFieldValue(TYPE_FIELD) ?? '');
+          if (field) {
+            row.appendField('default', DEFAULT_LABEL);
+            row.appendField(field, DEFAULT_FIELD);
+            if (had !== undefined && had !== null) {
+              // A number box will not take `TRUE`, and a dropdown will not
+              // take a word it does not offer. Keeping what fits is worth a
+              // try; what does not fit leaves the new field's own default.
+              try {
+                block.setFieldValue(had, DEFAULT_FIELD);
+              } catch {
+                // The old value meant nothing to the new widget.
+              }
+            }
+          }
+        } finally {
+          if (enabled) {
+            Blockly.Events.enable();
+          }
+        }
+        block.render?.();
+      };
+      sync();
+      block.setOnChange(event => {
+        if (
+          event.type === Blockly.Events.BLOCK_CHANGE &&
+          (event as Blockly.Events.BlockChange).blockId === block.id &&
+          (event as Blockly.Events.BlockChange).name === TYPE_FIELD
+        ) {
+          sync();
+        }
+      });
+    },
+  },
+);
 
 export const BLOCK_DESIGNER_INIT_EXTENSION = 'block_designer_init';
 

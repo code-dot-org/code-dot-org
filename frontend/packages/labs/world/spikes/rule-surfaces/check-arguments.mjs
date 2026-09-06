@@ -90,14 +90,61 @@ out.renamed = await p.evaluate(async () => {
 await p.waitForTimeout(3500);
 out.headParts = (await shapeOf('body-owner')).parts;
 
+// A default is offered only where one means something, and follows the type.
+out.defaultByType = await p.evaluate(async () => {
+  const {Blockly} = await import('/spikes/rule-surfaces/harness.ts');
+  const head = Blockly.getMainWorkspace().getBlockById('body-owner');
+  let item = head.getInput('ARGUMENTS').connection.targetBlock();
+  while (item && item.type !== 'world_signature_argument') {
+    item = item.getNextBlock();
+  }
+  const seen = {};
+  for (const t of ['number', 'string', 'boolean', 'actor', 'vector', 'kind']) {
+    item.setFieldValue(t, 'TYPE');
+    await new Promise(done => setTimeout(done, 250));
+    seen[t] = Boolean(item.getField('DEFAULT'));
+  }
+  // …and back, with a value, which is what the call site should end up with.
+  item.setFieldValue('number', 'TYPE');
+  await new Promise(done => setTimeout(done, 250));
+  item.setFieldValue(5, 'DEFAULT');
+  return seen;
+});
+await p.waitForTimeout(3500);
+
 await p.getByText('← Back').first().click();
-await p.waitForTimeout(3000);
+await p.waitForTimeout(4000);
 out.interfaceParts = (await shapeOf(null)).parts;
+
+// THE POINT OF A DEFAULT: the shadow block the call site comes up holding.
+// Read off the toolbox, which is where a learner meets the block.
+out.callSiteShadow = await p.evaluate(async () => {
+  const {Blockly} = await import('/spikes/rule-surfaces/harness.ts');
+  const toolbox = Blockly.getMainWorkspace().getToolbox();
+  const drawer = toolbox
+    .getToolboxItems()
+    .find(i => (i.getName ? i.getName() : i.name_) === 'Solid Bodies');
+  toolbox.setSelectedItem(drawer);
+  await new Promise(done => setTimeout(done, 1500));
+  return toolbox
+    .getFlyout()
+    .getWorkspace()
+    .getTopBlocks(false)
+    .filter(x => x.type.includes('KeptBetween'))
+    .flatMap(x =>
+      x.inputList.flatMap(i => {
+        const t = i.connection?.targetBlock();
+        return t?.isShadow() ? [`${i.name}=${t.getFieldValue('NUM')}`] : [];
+      }),
+    );
+});
 out.errors = errors.slice(0, 4);
 
 // Expected: no icons on either; RETURNS_ROW and ARGUMENTS hidden on the
-// interface and visible on the head; the Block drawer only inside a body; and
-// the rename landing as `number:amount` on BOTH — exactly, with no `amount2`,
-// which is what a parameter rebound to a second variable looks like.
+// interface and visible on the head; the Block drawer only inside a body; the
+// rename landing as `number:amount` on BOTH — exactly, with no `amount2`,
+// which is what a parameter rebound to a second variable looks like; a default
+// field for number/string/boolean and none for actor/vector/kind; and
+// callSiteShadow `["N=5"]`, which is the whole reason a default exists.
 console.log(JSON.stringify(out, null, 1));
 await b.close();

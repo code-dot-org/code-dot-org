@@ -86,6 +86,7 @@ import {
 } from './extensions/appearanceImportField';
 import {
   ARGUMENTS_INPUT,
+  argumentDefaultExtension,
   blockDesignerInitExtension,
   RETURNS_ROW,
   blockDesignerMutator,
@@ -6750,6 +6751,8 @@ const signatureArgument = defineBlock({
     // Live, for the same reason the choice item's is: a `define choices`
     // written a minute ago should be offered without a reload.
     liveDropdown('world_signature_argument_types', 'TYPE', argumentTypeOptions),
+    // …and the default's widget follows the type it is a default for.
+    argumentDefaultExtension,
   ],
   style: 'variable_blocks',
   tooltip:

@@ -124,7 +124,13 @@ export interface PropertyMeta {
  */
 export type MemberPart =
   | {readonly kind: 'label'; readonly text: string}
-  | {readonly kind: 'param'; readonly name: string; readonly type: ParamType};
+  | {
+      readonly kind: 'param';
+      readonly name: string;
+      readonly type: ParamType;
+      /** What a call site starts with — seeded into the socket's shadow. */
+      readonly default?: unknown;
+    };
 
 /**
  * An action or query parameter as the EDITOR sees it.
@@ -541,6 +547,8 @@ interface RuleBlock {
       text?: string;
       type?: string;
       var?: string;
+      /** What a call site starts with, when the author gave one. */
+      default?: unknown;
     }>;
   };
   next?: {block?: RuleBlock};
@@ -705,6 +713,7 @@ export function parseRuleMeta(
             kind: 'param',
             name: (part.var && variableNames.get(part.var)) || 'value',
             type: (part.type ?? 'number') as ParamType,
+            ...(part.default === undefined ? {} : {default: part.default}),
           },
         ];
       }
@@ -716,10 +725,23 @@ export function parseRuleMeta(
     }
     const params = parts
       .filter(
-        (part): part is {kind: 'param'; name: string; type: ParamType} =>
-          part.kind === 'param',
+        (
+          part,
+        ): part is {
+          kind: 'param';
+          name: string;
+          type: ParamType;
+          default?: unknown;
+        } => part.kind === 'param',
       )
-      .map(part => ({name: part.name, type: part.type}));
+      // …and what each starts with. `EditorParam.default` is what
+      // `typedValueInputs` seeds the socket's shadow from, so a default
+      // written on a `define block` arrives at every call site of it.
+      .map(part => ({
+        name: part.name,
+        type: part.type,
+        ...(part.default === undefined ? {} : {default: part.default}),
+      }));
     const returns = field(block, 'RETURNS');
     const common = {
       id: slug(name),

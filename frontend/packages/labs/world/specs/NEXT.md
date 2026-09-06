@@ -916,6 +916,41 @@ Still to do: the `default` half. `argument` names a type and a name; the value
 a call site falls back to is not asked for yet, and `TypedValue.default` with
 its shadow seeding is already waiting for it.
 
+_Defaults, 2026-09-05._ An `argument` now says what a call site starts with:
+`argument ⟨number⟩ ⟨amount⟩ default ⟨0⟩`. Almost all of it was already there —
+`EditorParam.default` is what `typedValueInputs` seeds the shadow block on a
+socket from, and the designed-member call site already passes the parameter
+straight to it. What was missing was a way to say one.
+
+THE WIDGET FOLLOWS THE TYPE, and is absent where there is nothing to say. A
+number box for a number, `true`/`false` for a boolean, the enum's own words
+for an enum — the same control the call site will show, because it is the same
+question. Nothing for `actor`, `vector` or `kind`: there is no default actor, a
+kind is chosen from the project's kinds at the call site, and a vector is two
+numbers rather than one value. An empty box for those would be offering to
+answer a question nobody asked. The type is a dropdown, so the field is
+rebuilt when it changes and the value carried over when the new widget will
+take it.
+
+`readArguments_`'s idempotence check had to learn about it too. It compares
+what it read against what it holds and returns when they agree — so a
+signature that differed only in a default was a signature that had not
+changed, and picking one did nothing at all.
+
+Verified end to end in `check-arguments.mjs`: a default of 5 typed on the head
+arrives as `N=5` on the shadow of the block the toolbox offers, which is the
+whole reason a default exists. And the field is there for number, string and
+boolean and absent for actor, vector and kind.
+
+One test written for this was worthless and was rewritten. `not.toHaveProperty`
+cannot tell an absent key from one holding `undefined`, and neither can the
+call site — both fall through to `default ?? (the type's own fallback)`. What
+would actually matter is the metadata INVENTING a value, because then every
+socket of every call site would come up holding it; that is what it asks now,
+and it fails when the code does.
+
+§8 is finished.
+
 **Not only rules.** An `.actor` file holds the same two shapes — its own
 `each frame` and its own `define block` (`ActorBuilder.defineStep`,
 `defineAction`) — and a world holds them inside `define actor`. Actor files
