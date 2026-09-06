@@ -431,6 +431,23 @@ describe('opening one member’s body', () => {
     expect(head).toMatchObject({x: 20, y: 20});
   });
 
+  it('carries the file’s variables onto the surface', () => {
+    // A parameter IS a variable, and the body reads it with an ordinary
+    // getter. Load a surface without them and the head binds its parameters
+    // against a workspace where the body's variables are strangers — which
+    // shows up as a rename to `amount2`, the name taken by the same variable
+    // under another identity.
+    const seam = createBodySeam();
+    const shown = seam.show({
+      variables: [{name: 'amount', id: 'v1', type: 'number'}],
+      blocks: {languageVersion: 0, blocks: [ruleStep('s1', statement('work'))]},
+    } as never);
+
+    expect(
+      (seam.bodyOf('s1', shown) as {variables?: unknown}).variables,
+    ).toEqual([{name: 'amount', id: 'v1', type: 'number'}]);
+  });
+
   it('is empty for a block that has no body, rather than throwing', () => {
     const seam = createBodySeam();
     const shown = seam.show(doc(ruleStep('s1', statement('work'))));

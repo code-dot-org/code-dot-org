@@ -17,6 +17,7 @@ import {defineExtension, type Extension} from '@code-dot-org/blockly';
 
 import {HIDE_BODIES} from '../bodySurfaces';
 
+import {ARGUMENTS_INPUT, RETURNS_ROW} from './blockDesigner';
 import {removeBodyButton} from './bodyButton';
 
 export const BODY_SURFACE_EXTENSION = 'world_body_surface';
@@ -25,19 +26,22 @@ export const BODY_SURFACE_EXTENSION = 'world_body_surface';
 const SOCKET = 'DO';
 
 /**
- * Fields that belong to a member's own surface, not to the interface.
+ * Rows that belong to a member's own surface, not to the interface.
  *
- * `RETURNS` says whether a `define block` does something or reports something.
- * That is a fact about the implementation — a query has a `return` in it and
- * an action does not — so it is asked where the implementation is written, and
- * the interface shows the signature it produces instead.
+ * `returns` says whether a `define block` does something or reports something,
+ * and `arguments` is the signature it takes. Both are facts about the
+ * implementation — the one that has a `return` in it, and the one whose
+ * parameters the body reads — so they are asked where it is written. The
+ * interface shows the signature they produce instead.
  *
- * HIDDEN, NOT REMOVED. A field taken off a block is a field Blockly does not
- * save, and the interface is what the file is written from: removing `RETURNS`
- * there would drop it from every rule on the next save.
+ * HIDDEN, NOT REMOVED, and by ROW rather than by field. A field taken off a
+ * block is a field Blockly does not save, and the interface is what the file
+ * is written from: removing `RETURNS` there would drop it from every rule on
+ * the next save. Hiding the whole row takes its label with it, which hiding
+ * the field alone did not — a bare `returns` with nothing after it.
  */
-const BODY_SURFACE_FIELDS: Readonly<Record<string, readonly string[]>> = {
-  world_rule_block: ['RETURNS'],
+const BODY_SURFACE_ROWS: Readonly<Record<string, readonly string[]>> = {
+  world_rule_block: [RETURNS_ROW, ARGUMENTS_INPUT],
 };
 
 /**
@@ -68,8 +72,8 @@ export const bodySurfaceExtension: Extension = defineExtension(
       // Quiet: `world_trait_step` in an actor file has been through here
       // already on a previous render, and a missing input is not an error.
       block.removeInput(SOCKET, true);
-      for (const name of BODY_SURFACE_FIELDS[block.type] ?? []) {
-        block.getField(name)?.setVisible(false);
+      for (const name of BODY_SURFACE_ROWS[block.type] ?? []) {
+        block.getInput(name)?.setVisible(false);
       }
     },
   },
@@ -98,16 +102,15 @@ export function anchorBodyOwner(block: Block): void {
   if (block.previousConnection) {
     block.setPreviousStatement(false);
   }
-  // The fields the interface stopped drawing are drawn HERE, and this is the
+  // The rows the interface stopped drawing are drawn HERE, and this is the
   // only place they can be changed. `bodySurfaces` carries what they say back
   // into the file.
-  for (const name of BODY_SURFACE_FIELDS[block.type] ?? []) {
-    block.getField(name)?.setVisible(true);
+  for (const name of BODY_SURFACE_ROWS[block.type] ?? []) {
+    block.getInput(name)?.setVisible(true);
   }
-  // …but not the signature, which is the one edit this surface cannot carry.
-  // Redesigning a `define block` renames it, and a rename rewrites the block
-  // TYPES its uses are written in, all over the file (`renameMemberReferences`)
-  // — work the interface does on its own edits and this branch does not. The
-  // gear stays on the interface until it does.
-  (block as BlockSvg).setMutator?.(null);
+  // …and the signature is written into the `arguments` row as blocks. It
+  // lives in `extraState.parts`, which is still what the file holds; these are
+  // the editor for it, and there is no gear any more to open one elsewhere.
+  (block as unknown as {buildArguments_?: () => void}).buildArguments_?.();
+  (block as BlockSvg).render?.();
 }

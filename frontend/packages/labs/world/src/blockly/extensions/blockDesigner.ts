@@ -74,7 +74,30 @@ const SIGNATURE_CONTAINER = 'world_signature';
 const PARTS_INPUT = 'PARTS';
 const TEXT_FIELD = 'TEXT';
 
-/** The item block that edits a part. */
+/**
+ * The one block a `define block` argument is written as.
+ *
+ * `argument ⟨number⟩ ⟨amount⟩`: the TYPE is a field, not the block's identity,
+ * so retyping an argument is a dropdown rather than deleting one block and
+ * finding another. The dropdown carries the enums too, which is what let the
+ * separate `choice` item go — an enum-typed argument is an argument whose type
+ * happens to be a named set of words.
+ *
+ * `define event` keeps the older per-type items: its bubble offers CHOICES
+ * only (an event's argument is a filter), so a type dropdown there would be a
+ * dropdown of one.
+ */
+export const SIGNATURE_ARGUMENT = 'world_signature_argument';
+/** The field on it naming the type — a param type or an enum ref. */
+export const TYPE_FIELD = 'TYPE';
+
+/** The statement input on `define block` holding its signature. */
+export const ARGUMENTS_INPUT = 'ARGUMENTS';
+
+/** The row `RETURNS` sits on, so the row can be hidden with the field. */
+export const RETURNS_ROW = 'RETURNS_ROW';
+
+/** The item block that edits a part, in `define event`'s bubble. */
 export const itemTypeFor = (part: BlockPart): string => {
   if (part.kind === 'label') {
     return 'world_signature_text';
@@ -96,6 +119,14 @@ export const paramTypeOf = (item: {
   type: string;
   getFieldValue: (name: string) => string | null;
 }): string | undefined => {
+  if (item.type === SIGNATURE_ARGUMENT) {
+    // The dropdown stores the PARAMETER TYPE, whichever kind it is — a plain
+    // `number`, or the `enum:Owner#Name` an enum stands for — so there is
+    // nothing to infer here. Inferring was the bug: `enumParamType` prefixes
+    // whatever it is given, so asking it about `number` answered
+    // `enum:number`, which rebound the variable and renamed it on every read.
+    return item.getFieldValue(TYPE_FIELD) || undefined;
+  }
   if (item.type === SIGNATURE_CHOICE) {
     const ref = item.getFieldValue(ENUM_FIELD);
     return ref ? enumParamType(ref) : undefined;
@@ -150,173 +181,191 @@ export const partsName = (parts: readonly BlockPart[]): string =>
     .join(' ');
 
 /**
- * The designer, as a mixin two mutators share.
+ * The designer itself: the signature, the preview, and the variable each
+ * parameter binds to.
  *
- * `define block` designs a block with any kind of input; `define event` designs
- * one whose inputs can only be CHOICES, because an event's argument is a filter
- * and a filter over "any number" is a comparison rather than a hat. Same
- * machinery, same preview, different flyout — which is all `defineMutator`'s
- * `blocks` is.
+ * Shared, because two things are designed this way and only one of them still
+ * uses a bubble. `define event` opens a mutator over it; `define block` edits
+ * the same signature as a stack of blocks on its own face (`ARGUMENTS_INPUT`),
+ * so it takes this and adds no `compose`/`decompose` — which is precisely what
+ * decides whether Blockly hangs a gear on the block.
+ */
+interface Designer {
+  parts_: BlockPart[];
+  saveExtraState(): BlockDesignState;
+  loadExtraState(state: BlockDesignState): void;
+  designWorkspace_(): Blockly.Workspace;
+  rebuildDesign_(): void;
+  bindParts_(): void;
+  buildDesignShape_(): void;
+}
+
+const designer: Designer & ThisType<Blockly.BlockSvg & Designer> = {
+  // Per-instance; NOT a mixin property, which would share one array across
+  // every block. The init extension and loadExtraState seed it.
+  parts_: [] as BlockPart[],
+
+  saveExtraState: function (): BlockDesignState {
+    return {
+      parts: (this.parts_ ?? []).map(part => ({...part})),
+    };
+  },
+
+  loadExtraState: function (state: BlockDesignState): void {
+    this.parts_ = (state.parts ?? []).map(part => ({...part}));
+    this.rebuildDesign_();
+  },
+
+  designWorkspace_: function (): Blockly.Workspace {
+    return this.workspace as unknown as Blockly.Workspace;
+  },
+
+  rebuildDesign_: function (): void {
+    this.parts_ ??= [];
+    if (this.parts_.length === 0) {
+      this.parts_ = defaultParts();
+    }
+    // The headless generator loads `.rule` files into an offscreen workspace
+    // whose renderer cannot draw a field. It needs the part DATA and the `DO`
+    // body, never this chrome — and rendering there corrupts codegen.
+    if ((this.workspace as {isRuleGenerator?: boolean}).isRuleGenerator) {
+      return;
+    }
+    // An insertion marker is a throwaway copy of this block, made and unmade
+    // on every drag frame — it is drawn as an outline, so the drawing would
+    // never be seen, and building one means standing up and tearing down a
+    // whole workspace per frame.
+    if (this.isInsertionMarker?.()) {
+      return;
+    }
+    // Variables first, and NOT silently: a rename has to reach the body's
+    // variable fields, which happens through the events it fires.
+    this.bindParts_();
+    // The shape, silently: mutating inputs fires change events the editor
+    // persists, which would re-init the block and loop. The one event a real
+    // edit fires is the mutation Blockly's own mutator machinery wraps
+    // `compose` in.
+    const enabled = Blockly.Events.isEnabled();
+    if (enabled) {
+      Blockly.Events.disable();
+    }
+    try {
+      this.buildDesignShape_();
+    } finally {
+      if (enabled) {
+        Blockly.Events.enable();
+      }
+    }
+  },
+
+  /**
+   * Bind every parameter to a variable, creating and renaming to match the
+   * names typed in the bubble.
+   *
+   * A parameter IS a variable — the body reads it with an ordinary getter — so
+   * naming one in the bubble has to be a variable rename, which is what makes
+   * the name change everywhere the body already uses it.
+   *
+   * A name is made free of both the workspace's other variables and this
+   * signature's earlier parameters: two inputs sharing a name would generate a
+   * function with a duplicated argument, which is a syntax error, and one
+   * shadowing a rule-level variable would silently cut the body off from it.
+   */
+  bindParts_: function (): void {
+    const map = this.designWorkspace_().getVariableMap();
+    const used = new Set<string>();
+    for (const part of this.parts_ ?? []) {
+      if (part.kind !== 'param') {
+        continue;
+      }
+      const tag = paramFlavour(part.type).type;
+      let variable = part.var ? map.getVariableById(part.var) : null;
+      // A variable's type is fixed, so a retyped part rebinds rather than
+      // carrying a variable of the wrong type into the body's getters.
+      if (variable && variable.getType() !== tag) {
+        variable = null;
+      }
+      // The bound variable's own name comes before the type, or a signature
+      // saved before names were cached would rename `amount` to `number` on
+      // the next rebuild — silently, and everywhere the body uses it.
+      const wanted =
+        (part.name ?? '').trim() || variable?.getName() || (tag as string);
+      const free = (candidate: string): boolean =>
+        !used.has(candidate.toLowerCase()) &&
+        !map
+          .getAllVariables()
+          .some(
+            other =>
+              other.getId() !== variable?.getId() &&
+              other.getName().toLowerCase() === candidate.toLowerCase(),
+          );
+      let name = wanted;
+      for (let suffix = 2; !free(name); suffix++) {
+        name = `${wanted}${suffix}`;
+      }
+      if (!variable) {
+        variable = map.createVariable(name, tag);
+      } else if (variable.getName() !== name) {
+        map.renameVariable(variable, name);
+      }
+      used.add(name.toLowerCase());
+      part.var = variable.getId();
+      part.name = name;
+    }
+  },
+
+  buildDesignShape_: function (): void {
+    // The preview: the call-site block itself, drawn. Not fields spelling out
+    // its wording — the block, with its outline, its color and a getter in
+    // each socket, so what is designed is what will turn up in the toolbox.
+    //
+    // The field is made once and re-signed after that. It owns a workspace,
+    // and rebuilding it on every edit would mean disposing and re-creating one
+    // for each keystroke in the bubble.
+    let drawing = this.getField(PREVIEW_FIELD) as FieldBlockPreview | null;
+    if (!drawing) {
+      drawing = new FieldBlockPreview();
+      this.appendDummyInput(PREVIEW_INPUT).appendField(drawing, PREVIEW_FIELD);
+      // Above the body, when there is one. `define event` has none: an
+      // event is a declaration, and the blocks that RUN for it live under the
+      // hat it makes, in whatever file cares about that event.
+      if (this.getInput('DO')) {
+        this.moveInputBefore(PREVIEW_INPUT, 'DO');
+      }
+    }
+    drawing.setSignature(
+      this.parts_.map(part =>
+        part.kind === 'label'
+          ? {kind: 'label' as const, text: part.text}
+          : {
+              kind: 'param' as const,
+              name: part.name,
+              type: part.type,
+              var: part.var,
+            },
+      ),
+      this.getFieldValue('RETURNS') ?? 'none',
+      isActorScoped(this),
+      // `define event` designs a HAT, and a hat is a different block: it
+      // opens with its subject and picks its choices rather than taking
+      // them through sockets.
+      this.type === 'world_rule_event' ? 'event' : 'block',
+    );
+  },
+};
+
+/**
+ * The designer with a bubble: `define event`'s gear.
+ *
+ * An event is a declaration and has no implementation, so there is no surface
+ * of its own to write a signature on — the bubble is still where its phrasing
+ * is edited, and `blocks` is that bubble's flyout.
  */
 const designerMutator = (name: string, blocks: string[]) =>
   defineMutator(
     name,
     {
-      // Per-instance; NOT a mixin property, which would share one array across
-      // every block. The init extension and loadExtraState seed it.
-      parts_: [] as BlockPart[],
-
-      saveExtraState: function (): BlockDesignState {
-        return {
-          parts: (this.parts_ ?? []).map(part => ({...part})),
-        };
-      },
-
-      loadExtraState: function (state: BlockDesignState): void {
-        this.parts_ = (state.parts ?? []).map(part => ({...part}));
-        this.rebuildDesign_();
-      },
-
-      designWorkspace_: function (): Blockly.Workspace {
-        return this.workspace as unknown as Blockly.Workspace;
-      },
-
-      rebuildDesign_: function (): void {
-        this.parts_ ??= [];
-        if (this.parts_.length === 0) {
-          this.parts_ = defaultParts();
-        }
-        // The headless generator loads `.rule` files into an offscreen workspace
-        // whose renderer cannot draw a field. It needs the part DATA and the `DO`
-        // body, never this chrome — and rendering there corrupts codegen.
-        if ((this.workspace as {isRuleGenerator?: boolean}).isRuleGenerator) {
-          return;
-        }
-        // An insertion marker is a throwaway copy of this block, made and unmade
-        // on every drag frame — it is drawn as an outline, so the drawing would
-        // never be seen, and building one means standing up and tearing down a
-        // whole workspace per frame.
-        if (this.isInsertionMarker?.()) {
-          return;
-        }
-        // Variables first, and NOT silently: a rename has to reach the body's
-        // variable fields, which happens through the events it fires.
-        this.bindParts_();
-        // The shape, silently: mutating inputs fires change events the editor
-        // persists, which would re-init the block and loop. The one event a real
-        // edit fires is the mutation Blockly's own mutator machinery wraps
-        // `compose` in.
-        const enabled = Blockly.Events.isEnabled();
-        if (enabled) {
-          Blockly.Events.disable();
-        }
-        try {
-          this.buildDesignShape_();
-        } finally {
-          if (enabled) {
-            Blockly.Events.enable();
-          }
-        }
-      },
-
-      /**
-       * Bind every parameter to a variable, creating and renaming to match the
-       * names typed in the bubble.
-       *
-       * A parameter IS a variable — the body reads it with an ordinary getter — so
-       * naming one in the bubble has to be a variable rename, which is what makes
-       * the name change everywhere the body already uses it.
-       *
-       * A name is made free of both the workspace's other variables and this
-       * signature's earlier parameters: two inputs sharing a name would generate a
-       * function with a duplicated argument, which is a syntax error, and one
-       * shadowing a rule-level variable would silently cut the body off from it.
-       */
-      bindParts_: function (): void {
-        const map = this.designWorkspace_().getVariableMap();
-        const used = new Set<string>();
-        for (const part of this.parts_ ?? []) {
-          if (part.kind !== 'param') {
-            continue;
-          }
-          const tag = paramFlavour(part.type).type;
-          let variable = part.var ? map.getVariableById(part.var) : null;
-          // A variable's type is fixed, so a retyped part rebinds rather than
-          // carrying a variable of the wrong type into the body's getters.
-          if (variable && variable.getType() !== tag) {
-            variable = null;
-          }
-          // The bound variable's own name comes before the type, or a signature
-          // saved before names were cached would rename `amount` to `number` on
-          // the next rebuild — silently, and everywhere the body uses it.
-          const wanted =
-            (part.name ?? '').trim() || variable?.getName() || (tag as string);
-          const free = (candidate: string): boolean =>
-            !used.has(candidate.toLowerCase()) &&
-            !map
-              .getAllVariables()
-              .some(
-                other =>
-                  other.getId() !== variable?.getId() &&
-                  other.getName().toLowerCase() === candidate.toLowerCase(),
-              );
-          let name = wanted;
-          for (let suffix = 2; !free(name); suffix++) {
-            name = `${wanted}${suffix}`;
-          }
-          if (!variable) {
-            variable = map.createVariable(name, tag);
-          } else if (variable.getName() !== name) {
-            map.renameVariable(variable, name);
-          }
-          used.add(name.toLowerCase());
-          part.var = variable.getId();
-          part.name = name;
-        }
-      },
-
-      buildDesignShape_: function (): void {
-        // The preview: the call-site block itself, drawn. Not fields spelling out
-        // its wording — the block, with its outline, its color and a getter in
-        // each socket, so what is designed is what will turn up in the toolbox.
-        //
-        // The field is made once and re-signed after that. It owns a workspace,
-        // and rebuilding it on every edit would mean disposing and re-creating one
-        // for each keystroke in the bubble.
-        let drawing = this.getField(PREVIEW_FIELD) as FieldBlockPreview | null;
-        if (!drawing) {
-          drawing = new FieldBlockPreview();
-          this.appendDummyInput(PREVIEW_INPUT).appendField(
-            drawing,
-            PREVIEW_FIELD,
-          );
-          // Above the body, when there is one. `define event` has none: an
-          // event is a declaration, and the blocks that RUN for it live under the
-          // hat it makes, in whatever file cares about that event.
-          if (this.getInput('DO')) {
-            this.moveInputBefore(PREVIEW_INPUT, 'DO');
-          }
-        }
-        drawing.setSignature(
-          this.parts_.map(part =>
-            part.kind === 'label'
-              ? {kind: 'label' as const, text: part.text}
-              : {
-                  kind: 'param' as const,
-                  name: part.name,
-                  type: part.type,
-                  var: part.var,
-                },
-          ),
-          this.getFieldValue('RETURNS') ?? 'none',
-          isActorScoped(this),
-          // `define event` designs a HAT, and a hat is a different block: it
-          // opens with its subject and picks its choices rather than taking
-          // them through sockets.
-          this.type === 'world_rule_event' ? 'event' : 'block',
-        );
-      },
-
+      ...designer,
       /**
        * Build the bubble's contents from the current signature.
        *
@@ -383,10 +432,110 @@ const designerMutator = (name: string, blocks: string[]) =>
     {blocks},
   );
 
-export const blockDesignerMutator = designerMutator(
-  BLOCK_DESIGNER_MUTATOR,
-  SIGNATURE_BLOCK_TYPES,
-);
+/**
+ * `define block`'s designer, with no bubble.
+ *
+ * The signature is a stack of blocks in `ARGUMENTS_INPUT` on the block's own
+ * face, so there is nothing for a gear to open — and leaving `compose` and
+ * `decompose` off is what stops Blockly drawing one. What the bubble used to
+ * do, `buildArguments_` and `readArguments_` do in the workspace itself.
+ *
+ * The stack is NOT the file. `extraState.parts` is still what a rule is saved
+ * with, so nothing downstream changed: these two only keep the blocks and the
+ * parts saying the same thing.
+ */
+export const blockDesignerMutator = defineMutator(BLOCK_DESIGNER_MUTATOR, {
+  ...designer,
+
+  /**
+   * Write the signature out as blocks, into the block's own `arguments` row.
+   *
+   * Called when a body surface opens, where that row is drawn. On a rule's
+   * interface there is no such input and this does nothing, which is what
+   * keeps the interface a signature and not an editor.
+   *
+   * The variable id rides on the item (`varId_`), exactly as the bubble
+   * carried it: a part written out and read back has to keep the variable the
+   * body already reads rather than becoming a new one.
+   */
+  buildArguments_: function (): void {
+    const connection = this.getInput(ARGUMENTS_INPUT)?.connection;
+    if (!connection) {
+      return;
+    }
+    // The whole chain: `dispose(false)` takes a block's children with it, and
+    // the stack is one block's worth of children.
+    connection.targetBlock()?.dispose(false);
+    let at: Blockly.Connection | null = connection;
+    for (const part of this.parts_ ?? []) {
+      const item = this.workspace.newBlock(
+        part.kind === 'label' ? 'world_signature_text' : SIGNATURE_ARGUMENT,
+      );
+      (item as Blockly.BlockSvg).initSvg?.();
+      if (part.kind === 'label') {
+        item.setFieldValue(part.text, TEXT_FIELD);
+      } else {
+        // The type as stored, plain or `enum:`-prefixed: the dropdown's
+        // values are parameter types, so this is the value.
+        item.setFieldValue(part.type, TYPE_FIELD);
+        item.setFieldValue(part.name ?? part.type, TEXT_FIELD);
+        (item as {varId_?: string}).varId_ = part.var;
+      }
+      at?.connect(item.previousConnection!);
+      at = item.nextConnection;
+    }
+    (this as Blockly.BlockSvg).render?.();
+  },
+
+  /** Read that stack back as the signature, and redraw what it describes. */
+  readArguments_: function (): void {
+    const connection = this.getInput(ARGUMENTS_INPUT)?.connection;
+    if (!connection) {
+      return;
+    }
+    const parts: BlockPart[] = [];
+    let item = connection.targetBlock();
+    while (item) {
+      const param = paramTypeOf(item);
+      if (param) {
+        parts.push({
+          kind: 'param',
+          type: param,
+          // Kept from `buildArguments_`; empty for one just dragged in, which
+          // the rebuild binds to a variable of its own.
+          var: (item as {varId_?: string}).varId_ ?? '',
+          name: item.getFieldValue(TEXT_FIELD) ?? '',
+        });
+      } else {
+        parts.push({kind: 'label', text: item.getFieldValue(TEXT_FIELD) ?? ''});
+      }
+      item = item.getNextBlock();
+    }
+    // Never nothing: a block with no parts has no name and no shape.
+    const next = parts.length > 0 ? parts : defaultParts();
+    // NOTHING CHANGED, NOTHING REBUILT. This is called on every edit made on a
+    // body surface, and rebuilding binds variables — which fires rename
+    // events, which arrive back here as edits. Comparing first is what stops
+    // that being a loop, and it is cheap: a signature is a handful of parts.
+    //
+    // The variable id is left out of the comparison deliberately: a part
+    // dragged in has none until the rebuild gives it one, so counting it would
+    // make the first read of a new argument look like no change at all.
+    const same = (list: readonly BlockPart[]): string =>
+      JSON.stringify(
+        list.map(part =>
+          part.kind === 'label'
+            ? ['label', part.text]
+            : ['param', part.type, part.name ?? ''],
+        ),
+      );
+    if (same(next) === same(this.parts_ ?? [])) {
+      return;
+    }
+    this.parts_ = next;
+    this.rebuildDesign_();
+  },
+});
 
 /** The name the event designer registers under (`define event`'s mutator). */
 export const EVENT_DESIGNER_MUTATOR = 'event_designer_mutator';

@@ -12,6 +12,7 @@ import {
   isActorScoped,
   itemTypeFor,
   paramTypeOf,
+  SIGNATURE_ARGUMENT,
   SIGNATURE_BLOCK_TYPES,
 } from '../extensions/blockDesigner';
 import {parseRuleMeta, ruleMetaToModule} from '../ruleMeta';
@@ -376,5 +377,31 @@ describe('a designed block', () => {
     expect(
       designed([{kind: 'param', type: 'number', var: 'a'}]).actions,
     ).toEqual([]);
+  });
+});
+
+describe('the argument block’s type', () => {
+  // `define block` writes its signature as `argument ⟨type⟩ ⟨name⟩` blocks, and
+  // the dropdown stores the PARAMETER TYPE itself — plain or `enum:`-prefixed.
+  // Nothing infers which kind it is, because inferring was the bug:
+  // `enumParamType` prefixes whatever it is handed, so asking it about
+  // `number` answered `enum:number`. A parameter whose type is wrong rebinds
+  // to a new variable, and the body's getters stop pointing at it.
+  const item = (type: string) => ({
+    type: SIGNATURE_ARGUMENT,
+    getFieldValue: (name: string) => (name === 'TYPE' ? type : null),
+  });
+
+  it('reads a plain type as itself', () => {
+    expect(paramTypeOf(item('number'))).toBe('number');
+    expect(paramTypeOf(item('actor'))).toBe('actor');
+  });
+
+  it('reads an enum type as itself, already prefixed', () => {
+    expect(paramTypeOf(item('enum:Engine#Key'))).toBe('enum:Engine#Key');
+  });
+
+  it('is not a parameter at all when nothing is chosen', () => {
+    expect(paramTypeOf(item(''))).toBeUndefined();
   });
 });

@@ -68,6 +68,27 @@ describe('a body surface', () => {
   });
 });
 
+describe('the Block drawer', () => {
+  // What a `define block`'s signature is made of. It goes in the `arguments`
+  // row on a body surface's head, and there is no such row anywhere else — so
+  // offering it on the interface would be offering blocks with nowhere to go.
+  it('is offered inside a body', () => {
+    expect(names(toolboxForSurface(palette(), 'body'))).toContain('Block');
+    expect(offered(toolboxForSurface(palette(), 'body'))).toContain(
+      'world_signature_argument',
+    );
+  });
+
+  it('is not offered on the interface, drawer and all', () => {
+    expect(names(toolboxForSurface(palette(), 'interface'))).not.toContain(
+      'Block',
+    );
+    expect(offered(toolboxForSurface(palette(), 'interface'))).not.toContain(
+      'world_signature_argument',
+    );
+  });
+});
+
 describe('the interface', () => {
   it('offers the declarations', () => {
     const shown = offered(toolboxForSurface(palette(), 'interface'));

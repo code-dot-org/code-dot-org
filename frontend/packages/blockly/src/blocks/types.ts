@@ -291,6 +291,10 @@ export interface BaseBlockDefinition {
   message3?: string;
   /** The fourth set of interactive arguments */
   args3?: BlockArgDefinition[];
+  /** The fifth caption */
+  message4?: string;
+  /** The fifth set of interactive arguments */
+  args4?: BlockArgDefinition[];
   /** Extensions to add to this particular block type. */
   extensions?: (string | Extension)[];
   /** Mixins to add properties and methods to the Block instance inside generators. */

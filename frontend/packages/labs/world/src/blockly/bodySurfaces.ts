@@ -71,13 +71,22 @@ export const hasBody = (type: string): boolean =>
 export const BODY_OWNER_ID = 'body-owner';
 
 /**
- * Fields a body surface owns, by the id of the block that owns each.
+ * What a body surface's head owns, by the id of the block it stands in for.
  *
- * The head of a body surface draws `RETURNS` — the interface does not any
- * more — so the value the learner picks there exists nowhere else until the
- * file is written. This is where it waits.
+ * The head draws `returns` and the `arguments` stack — the interface draws
+ * neither — so what the learner does there exists nowhere else until the file
+ * is written. This is where it waits.
+ *
+ * `extraState` is the signature: a `define block` is saved with its parts, not
+ * with the blocks that edit them, so the stack on the head is read back into
+ * parts and it is the parts that travel.
  */
-export type Heads = Record<string, Record<string, unknown>>;
+export interface HeadState {
+  fields?: Record<string, unknown>;
+  extraState?: unknown;
+}
+
+export type Heads = Record<string, HeadState>;
 
 /** The bodies a document was carrying, by the id of the block that owns each. */
 export type Bodies = Record<string, SavedBlock>;
@@ -156,8 +165,11 @@ const mergeBlock = (
   // the fields it draws are drawn nowhere else — the interface stopped
   // offering them, so it has nothing newer to say about them.
   const head = block.id ? heads[block.id] : undefined;
-  if (head) {
-    out.fields = {...(block.fields as object), ...head};
+  if (head?.fields) {
+    out.fields = {...(block.fields as object), ...head.fields};
+  }
+  if (head?.extraState !== undefined) {
+    out.extraState = head.extraState;
   }
 
   if (block.inputs) {
@@ -337,8 +349,20 @@ export function createBodySeam(): BodySeam {
       // wherever the file format holds it.
       const body = bodies[id];
       const owner = findById(shown, id);
+      // THE FILE'S VARIABLES COME TOO. A parameter is a variable, and the body
+      // reads it with an ordinary getter — so a surface loaded without them
+      // makes its own, and the head then binds its parameters against a
+      // workspace where the body's variables are strangers. What that looks
+      // like is a rename to `amount2`: the name was taken, by the same
+      // variable under a different identity.
+      const carried = (shown as {variables?: unknown}).variables;
+      const surface = (blocks: SavedBlock[]): BlocklySerialization =>
+        ({
+          ...(carried === undefined ? {} : {variables: carried}),
+          blocks: {languageVersion: 0, blocks},
+        }) as BlocklySerialization;
       if (!owner) {
-        return {blocks: {languageVersion: 0, blocks: body ? [body] : []}};
+        return surface(body ? [body] : []);
       }
       const held = heads[id];
       const head: SavedBlock = {
@@ -347,7 +371,12 @@ export function createBodySeam(): BodySeam {
         // What this surface last said about its own fields, over what the
         // interface remembers: the interface is a snapshot from when the body
         // was opened, and it does not draw these any more.
-        ...(held ? {fields: {...(owner.fields as object), ...held}} : {}),
+        ...(held?.fields
+          ? {fields: {...(owner.fields as object), ...held.fields}}
+          : {}),
+        ...(held?.extraState !== undefined
+          ? {extraState: held.extraState}
+          : {}),
       };
       delete head.next;
       // Where it sat on the interface means nothing here — it is the only
@@ -360,7 +389,7 @@ export function createBodySeam(): BodySeam {
       if (body) {
         head.next = {block: body};
       }
-      return {blocks: {languageVersion: 0, blocks: [head]}};
+      return surface([head]);
     },
     setBody(id, saved) {
       // Found by the head, not by taking the first root: a learner who
@@ -377,8 +406,15 @@ export function createBodySeam(): BodySeam {
       // The head's own fields come back with it: `RETURNS` is drawn here and
       // nowhere else, so if this did not carry it, picking one would change
       // the block on screen and nothing in the file.
-      if (head.fields) {
-        heads[id] = head.fields as Record<string, unknown>;
+      if (head.fields || head.extraState !== undefined) {
+        heads[id] = {
+          ...(head.fields
+            ? {fields: head.fields as Record<string, unknown>}
+            : {}),
+          ...(head.extraState !== undefined
+            ? {extraState: head.extraState}
+            : {}),
+        };
       }
       if (head.next?.block) {
         bodies[id] = head.next.block;

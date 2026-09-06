@@ -57,6 +57,11 @@ const DECLARATIONS: ReadonlySet<string> = new Set([
 const IMPLEMENTATION: ReadonlySet<string> = new Set([
   'world_return',
   'world_step_delta',
+  // The signature's own blocks. They go in the `arguments` row on a body
+  // surface's head — the interface has no such row, so offering them there
+  // would be offering blocks with nowhere to put them.
+  'world_signature_argument',
+  'world_signature_text',
 ]);
 
 /** The type a toolbox entry offers, however it is written. */

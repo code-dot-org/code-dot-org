@@ -58,12 +58,13 @@ import {
   BUTTON_ENUM,
   ENGINE_ENUMS,
   enumOptions,
+  enumParamType,
   enumRef,
   enumRefOfParamType,
   enumValueBlockType,
   KEY_ENUM,
-  type ParamType,
   type EnumMeta,
+  type ParamType,
 } from './enums';
 import {actorBlockReportsExtension} from './extensions/actorBlockReports';
 import {
@@ -84,9 +85,12 @@ import {
   spriteImportFieldExtension,
 } from './extensions/appearanceImportField';
 import {
+  ARGUMENTS_INPUT,
   blockDesignerInitExtension,
+  RETURNS_ROW,
   blockDesignerMutator,
   eventDesignerMutator,
+  SIGNATURE_ARGUMENT,
 } from './extensions/blockDesigner';
 import {bodyButtonExtension} from './extensions/bodyButton';
 import {bodySurfaceExtension} from './extensions/bodyOwner';
@@ -6706,6 +6710,54 @@ const signatureChoice = defineBlock({
   generator: noGenerator,
 });
 
+/**
+ * `argument ⟨number⟩ ⟨amount⟩` — one input a `define block` takes.
+ *
+ * The TYPE is a field rather than the block's identity, so changing an
+ * argument's type is a dropdown instead of deleting one block and hunting for
+ * another. The list carries the enums as well, which is what let `define
+ * block` stop needing a separate `choice` item: an enum-typed argument is one
+ * whose type happens to be a named set of words.
+ *
+ * Its name is the name of the VARIABLE the body reads, so typing here renames
+ * it everywhere the implementation already uses it.
+ */
+const argumentTypeOptions = (): Array<[string, string]> => [
+  ...PARAM_TYPE_OPTIONS,
+  // Stored as the PARAMETER TYPE an enum stands for, not as the bare ref, so
+  // the field's value is the part's type verbatim and nothing has to work out
+  // which kind it is.
+  ...allEnums().map(
+    meta =>
+      [`${meta.name} (${meta.owner})`, enumParamType(enumRef(meta))] as [
+        string,
+        string,
+      ],
+  ),
+];
+
+const signatureArgument = defineBlock({
+  type: SIGNATURE_ARGUMENT,
+  message0: 'argument %1 %2',
+  args0: [
+    {type: 'field_dropdown', name: 'TYPE', options: argumentTypeOptions()},
+    {type: 'field_input', name: 'TEXT', text: 'value'},
+  ],
+  inputsInline: true,
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [
+    // Live, for the same reason the choice item's is: a `define choices`
+    // written a minute ago should be offered without a reload.
+    liveDropdown('world_signature_argument_types', 'TYPE', argumentTypeOptions),
+  ],
+  style: 'variable_blocks',
+  tooltip:
+    'An input the block takes. Its name is the variable the implementation ' +
+    'reads; drag that name out of the block below to use it.',
+  generator: noGenerator,
+});
+
 const signatureItems = SIGNATURE_ITEMS.map(item =>
   defineBlock({
     type: item.type,
@@ -6768,10 +6820,11 @@ const BLOCK_RETURNS_OPTIONS: Array<[string, string]> = [
 
 const worldRuleBlock = defineBlock({
   type: 'world_rule_block',
-  message0: 'define block %1',
-  args0: [
-    {type: 'field_dropdown', name: 'RETURNS', options: BLOCK_RETURNS_OPTIONS},
-  ],
+  // The name of the thing, and nothing else: the pencil that opens the
+  // implementation goes on this row (`bodyButton`), and everything that
+  // describes the block is asked below it or on its own surface.
+  message0: 'define block',
+  args0: [],
   // The tooltip of the block being DEFINED — the sentence someone reads when
   // they hover it in the toolbox months later, having forgotten what "rest
   // height of" meant. On its own row because it is a sentence: sharing a line
@@ -6780,12 +6833,28 @@ const worldRuleBlock = defineBlock({
   args1: [
     {type: 'field_input', name: 'DESCRIPTION', text: '', spellcheck: true},
   ],
+  // Whether it does something or reports something, on a row of its own so
+  // that row can be hidden whole. Only a body surface draws it: the answer is
+  // a fact about the implementation, which either has a `return` in it or does
+  // not. HIDDEN there, never removed — a field taken off a block is a field
+  // Blockly does not save.
+  message2: 'returns %1 %2',
+  args2: [
+    {type: 'field_dropdown', name: 'RETURNS', options: BLOCK_RETURNS_OPTIONS},
+    {type: 'input_dummy', name: RETURNS_ROW},
+  ],
+  // The signature, as blocks. Drawn only on a body surface, where the stack
+  // in it IS what the block will look like — `blockDesignerMutator` writes it
+  // out of `extraState.parts` and reads it back. The FILE is still the parts;
+  // these blocks are never saved into it.
+  message3: 'arguments %1',
+  args3: [{type: 'input_statement', name: ARGUMENTS_INPUT}],
   // The body's socket. It is NOT drawn in the editor — `bodySurfaceExtension`
   // takes the row off, because with the split on it is always empty and the
   // pencil above is the way in. It stays in the definition because the file
   // still holds the body here, and the generator loads the file whole.
-  message2: 'do %1',
-  args2: [{type: 'input_statement', name: 'DO'}],
+  message4: 'do %1',
+  args4: [{type: 'input_statement', name: 'DO'}],
   previousStatement: true,
   nextStatement: true,
   mutator: blockDesignerMutator,
@@ -8239,6 +8308,7 @@ export const DOMAIN_BLOCKS = [
   signatureContainer,
   ...signatureItems,
   signatureChoice,
+  signatureArgument,
   worldReturn,
   worldRuleStepIn,
   worldTraitStep,
@@ -8549,6 +8619,13 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // rule's parameters are variables like any other, and a body wanting a
       // local is not a fact about rules.
     ],
+  },
+  {
+    // What a `define block` is made of, offered only where one is being
+    // written: these go in the `arguments` row on a body surface's head, and
+    // there is no such row anywhere else (`surfaceToolbox`).
+    name: 'Block',
+    blocks: [SIGNATURE_ARGUMENT, 'world_signature_text'],
   },
 ];
 const BUILTIN_RULE_CATEGORIES: ToolboxCategory[] = AUTHORING_RULES.map(

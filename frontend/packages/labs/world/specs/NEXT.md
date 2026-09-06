@@ -854,6 +854,68 @@ something it is not doing is worse than no call.
 `check-overlay.mjs` reports where the top block sits on each surface, and the
 two now agree: 20,20, and 148 pixels from the left edge.
 
+_The signature is blocks, 2026-09-05._ `define block` had a mutator, and the
+bubble it opened was the one place a rule's own blocks were designed — behind
+a gear, on a surface that showed none of it. The signature is now a stack in
+an `arguments` row on the head, in the workspace the implementation is written
+in:
+
+    define block
+    description ⟨…⟩
+    returns     ⟨reports a number⟩
+    arguments   argument ⟨number⟩ ⟨amount⟩
+                text     ⟨kept between 0 and 1⟩
+    ⟨the block, drawn⟩
+
+and the body chains below it. A `Block` drawer offers the two blocks it is
+made of, inside a body surface and nowhere else.
+
+THE FILE DID NOT CHANGE. A rule is still saved with `extraState.parts`; the
+stack is an editor for it, read out by `buildArguments_` and back by
+`readArguments_`. The signature blocks never touched a `.rule` file — they
+only ever existed inside the bubble — so there was nothing to migrate.
+
+`argument` replaces six per-type items and `choice`, because the type is a
+FIELD rather than the block's identity: retyping an argument is a dropdown
+instead of deleting one block and hunting for another, and an enum is just
+another entry in that dropdown. `define event` keeps the older items and its
+bubble — an event is a declaration with no implementation, so it has no
+surface of its own to write a signature on, and its arguments can only be
+choices anyway.
+
+The gear went by taking `compose` and `decompose` off, which is exactly what
+Blockly decides to draw one from. `define event` still has them; the shared
+designer was split so both can say what they mean.
+
+Three things this turned up, each of which renders and compiles perfectly
+while being wrong.
+
+`enumParamType` PREFIXES whatever it is handed — it does not answer "is this
+an enum". Asking it about `number` answered `enum:number`, which is a type no
+variable has, so every read rebound the parameter to a fresh variable and the
+body's getters stopped pointing at it. The dropdown now stores the parameter
+type itself, plain or already prefixed, and nothing infers anything.
+
+A body surface was loaded with no `variables` section. A parameter IS a
+variable and the body reads it with an ordinary getter, so the head bound its
+parameters in a workspace where the body's variables were strangers: renaming
+one to `amount` produced `amount2`, the name taken by the same variable under
+another identity. `bodyOf` carries the file's variables now.
+
+And `readArguments_` had to become idempotent. It runs on every edit made on a
+body surface, and rebuilding binds variables, which fires rename events, which
+arrive back as edits. It compares the signature it read against the one it
+holds and returns when they agree.
+
+Verified in `spikes/rule-surfaces/check-arguments.mjs`: no gear on either
+surface, the two rows hidden on the interface and drawn on the head, the
+`Block` drawer only inside a body, and a rename landing as `number:amount` on
+both — exactly, with no suffix.
+
+Still to do: the `default` half. `argument` names a type and a name; the value
+a call site falls back to is not asked for yet, and `TypedValue.default` with
+its shadow seeding is already waiting for it.
+
 **Not only rules.** An `.actor` file holds the same two shapes — its own
 `each frame` and its own `define block` (`ActorBuilder.defineStep`,
 `defineAction`) — and a world holds them inside `define actor`. Actor files

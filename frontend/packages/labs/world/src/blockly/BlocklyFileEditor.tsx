@@ -929,6 +929,15 @@ export const BlocklyFileEditor = ({
         if (event.isUiEvent) {
           return;
         }
+        // The signature is blocks on the head, and the FILE is the parts they
+        // stand for — so the stack is read back before anything is saved.
+        // Idempotent, and it has to be: this runs on every edit, and a rebuild
+        // binds variables, which fires events that arrive back here.
+        (
+          workspace.getBlockById(BODY_OWNER_ID) as unknown as {
+            readArguments_?: () => void;
+          } | null
+        )?.readArguments_?.();
         seam.setBody(
           editing.id,
           Blockly.serialization.workspaces.save(
