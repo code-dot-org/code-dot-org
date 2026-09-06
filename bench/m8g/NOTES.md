@@ -127,8 +127,13 @@ The same nine failures and six errors as t4g, and for the same reasons:
 `ImageLibTest` ×3 (ImageMagick 7 `compare -metric ae` output format),
 `RubricsControllerTest` ×3 (deterministic, undiagnosed),
 `lib/cdo/rack/test_optimize.rb` ×2 (no `image_optim` helper binaries), and
-`shared/test_aws_s3_integration.rb` ×1 failure and ×6 errors (no AWS
-credentials). See `../t4g/NOTES.md` for the detail.
+`shared/test_aws_s3_integration.rb` ×1 failure and ×6 errors. See
+`../t4g/NOTES.md` for the detail.
+
+The `test_aws_s3_integration.rb` failures are two causes, not one. The VCR
+cassette misses are the absent AWS credentials. The
+`uninitialized constant Cdo::LocalDevelopment` errors are a defect in the
+repository, described below.
 
 `ProgrammingExpressionAutocompleteTest`, which failed four times on the
 invalidated `seed:all` run, does not appear here. It was an artifact of the
@@ -148,3 +153,89 @@ Copy `bench-cdo-tests.sh` outside the working tree before starting. A
 coordinating push that rewrites the script while it is executing can misalign
 bash, which reads scripts by byte offset. It was harmless here only because
 the file is 5779 bytes and fits inside bash's 8 KB read-ahead.
+
+## Defects found
+
+Confirmed on this host. The first is reproducible in isolation; the rest cost
+setup time here and are recorded so the next person does not rediscover them.
+
+**`lib/cdo/aws/s3.rb` never requires `cdo/local_development`.** Line 96 calls
+`Cdo::LocalDevelopment.populate_local_s3_bucket` when `CDO.aws_s3_emulated` is
+set, but the requires at lines 1-6 do not load that file, so the constant is
+undefined:
+
+    $ ruby -e 'require "./deployment"; require "cdo/aws/s3"; Cdo::LocalDevelopment'
+    NameError: uninitialized constant Cdo::LocalDevelopment
+    # adding require "cdo/local_development" resolves it
+
+`aws_s3_emulated: true` is the configuration `docker/developers` recommends, so
+anyone using the MinIO setup hits this on any `download_from_bucket` that has
+to populate a bucket. It accounts for the non-VCR half of
+`shared/test_aws_s3_integration.rb`.
+
+**`docker-compose.dashboard.yml` prints endpoint keys the code cannot parse.**
+It tells you to write `db_endpoint_writer: 127.0.0.1:3306` into `locals.yml`,
+but `config/development.yml.erb:8-15` and `config.yml.erb:561-568` define the
+host and the port as separate keys. On t4g the combined form aborted
+`rake build` with `URI::InvalidComponentError: bad component(expected host
+component)`. Here it produced a silently wrong `bin/mysql-client-admin`, which
+reads `db_endpoint_writer` and `db_endpoint_writer_port` independently. Drop
+the port from the four `db_endpoint_*` values.
+
+**`RakeUtils.install_npm` will downgrade a developer's node.**
+`lib/cdo/rake_utils.rb:244` early-returns only if `which npm` succeeds; its own
+comment calls that "a temporary workaround to play nice with nvm". With nvm
+absent from `PATH` — a cron job, an IDE terminal, CI — `rake install` runs
+`sudo apt-get install -y nodejs npm`, force-symlinks `/usr/bin/node`, and then
+`npm install -g npm@2.9.1`. Caught here mid-apt; distro node never landed.
+Source nvm in the same shell as `rake install`, and check `which npm` prints a
+path before starting.
+
+**`rails test` over the whole tree does not finish.** TESTING.md's headline
+command wedged on both hosts: 64 tests in 63 minutes then no progress on t4g,
+and no output at all after 90 minutes here. Running the runner once per
+directory completes normally, which is what `bench-cdo-tests.sh` does. Cause
+unknown; loading all 698 test files into one process is the trigger but not an
+explanation. Bisecting the directory list is the cheap first experiment.
+
+**SETUP.md is stale for arm64 and for Ubuntu 26.04.** The version table says
+ruby 3.1.7 and node v20.18.3 where the repository pins 3.2.11 and 20;
+`libyaml-dev` is missing from the apt list and Ruby 3.2 will not build psych
+without it; `pdftk` has no arm64 candidate and its snap is amd64-only;
+`chromium-browser` is a snap shim, though Google publishes an arm64
+`.deb`. See `../t4g/NOTES.md` for the rest.
+
+## Checked and found not to be defects
+
+Recorded because an earlier revision of these notes, and a defect list derived
+from them, claimed all five. They are wrong. Each was withdrawn after running
+the command that settles it.
+
+**`all-services` exists.** `docker-compose.yml:19`, repository root, which
+`include:`s the four `docker/developers` fragments and defines `all-services`,
+`dashboard-services` and `s3-services` on top of them. A search scoped to
+`docker/` does not reach it.
+
+**`docker/developers` needs no `-f`.** Compose v2 walks up to find the project
+file. `docker compose config --services` from that directory resolves against
+the root file and exits 0. The README not saying which directory to run from is
+a missing line, not a broken stack.
+
+**Colon-style `.env` parses.** Compose 2.40.3 reads `FOO: 1234` as `1234`, and
+`docker compose run --rm --no-deps dashboard-services` prints
+`redis_url: redis://localhost:6379/0` with the port present. The format is
+non-standard and worth tidying; it changes nothing on this version.
+
+**The S3 populator exists.** `lib/cdo/local_development/s3_emulation/`, reached
+through `populate_local_s3_bucket`. Only the path in
+`docker/developers/README.md` and the comment at `install-s3.sh:30`, both of
+which point at `docker/developers/utils/s3`, are wrong.
+
+**`pdftk` does not fail a pegasus test.** `pegasus/test` contains only
+`test_helper.rb`; `rake test` there runs 0 tests in 4 seconds. TESTING.md's
+"~20 seconds" for the pegasus suite and its warning about `PDFMergerTest` are
+both stale, but nothing fails for want of `pdftk`.
+
+All five came from the same error: a search or an inference recorded as a fact
+about the repository without running the command that would have contradicted
+it. Where this file states a defect above, it states the command that shows it.
