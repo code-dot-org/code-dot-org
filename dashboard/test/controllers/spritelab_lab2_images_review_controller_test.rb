@@ -30,6 +30,41 @@ class SpritelabLab2ImagesReviewControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test 'a channel that never saved sources is skipped' do
+    level = create(:spritelab, name: 'lab2 husk level')
+    level.properties['uses_lab2'] = 'true'
+    level.save!
+    husk = create(:project)
+    ChannelToken.create!(
+      level: level,
+      storage_app_id: husk.id,
+      storage_id: husk.storage_id
+    )
+    SourceBucket.any_instance.stubs(:get).returns({status: 'NOT_FOUND'})
+
+    sign_in @project_validator
+    get :index
+    assert_response :success
+    refute_includes response.body, husk.channel_id
+  end
+
+  test 'a level whose Lab2 box was unchecked is excluded' do
+    level = create(:spritelab, name: 'lab2 unchecked level')
+    level.properties['uses_lab2'] = 'false'
+    level.save!
+    project = create(:project)
+    ChannelToken.create!(
+      level: level,
+      storage_app_id: project.id,
+      storage_id: project.storage_id
+    )
+
+    sign_in @project_validator
+    get :index
+    assert_response :success
+    refute_includes response.body, project.channel_id
+  end
+
   test 'a lab2 project is listed with its generated images' do
     level = create(:spritelab, name: 'lab2 images test level')
     level.properties['uses_lab2'] = 'true'

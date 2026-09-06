@@ -12,20 +12,13 @@ class SpritelabLab2ImagesReviewController < ApplicationController
   # How many recent projects the page shows.
   PROJECT_COUNT = 20
 
-  # Merely opening a level mints a channel, so recent channels are mostly
-  # empty husks that never saved. The page walks candidates newest-first and
-  # keeps the first PROJECT_COUNT that have saved sources, giving up after
-  # this many.
+  # Opening a level mints an empty channel, so the walk skips channels that
+  # never saved sources; give up after this many candidates.
   CANDIDATE_LIMIT = 200
 
-  # Prompts live on the animation entries of the project's main.json, so a
-  # discarded image's prompt is gone from the current manifest. It is
-  # recovered by fetching this many old manifest versions, sampled evenly
-  # across the full version history: autosaves cluster, so adjacent versions
-  # are near-duplicates and an even stride catches far more animations per
-  # fetch than newest-first. An image regenerated over before any save
-  # captured its animation appears in no version, so some discarded prompts
-  # are unrecoverable at any depth.
+  # Old manifests fetched per project to recover discarded images' prompts,
+  # sampled evenly across the history — autosaves cluster, so a stride finds
+  # far more animations per fetch than newest-first.
   MANIFEST_VERSIONS_SCANNED = 60
 
   def index
@@ -38,32 +31,36 @@ class SpritelabLab2ImagesReviewController < ApplicationController
     end
   end
 
-  # project_validator is the permission for staff vetted to review
-  # student-made content (featured projects, flagged-content review) —
-  # levelbuilder is held more broadly and doesn't imply that.
+  # The permission for staff vetted to review student-made content (featured
+  # projects, flagged-content review); levelbuilder doesn't imply that.
   private def require_project_validator
     head :forbidden unless current_user.permission?(UserPermission::PROJECT_VALIDATOR)
   end
 
   # The last CANDIDATE_LIMIT distinct projects attached to any Lab2 Sprite
-  # Lab level, most recently used first, with the level names seen for each.
+  # Lab level, most recently saved first, with the level names seen for each.
   # A project shared across levels via a template appears once.
   private def candidate_projects
-    lab2_tokens = ChannelToken.joins(:level).
-      where(levels: {type: 'GamelabJr'}).
-      where("levels.properties LIKE '%uses_lab2%'")
-    recent_ids = lab2_tokens.group(:storage_app_id).
+    # LIKE is only a prefilter: a level whose Lab2 box was later unchecked
+    # stores "false" and must not surface its projects here.
+    level_names_by_id = Level.where(type: 'GamelabJr').
+      where("properties LIKE '%uses_lab2%'").
+      pluck(:id, :name, :properties).
+      filter_map {|id, name, props| [id, name] if props['uses_lab2'].to_s == 'true'}.
+      to_h
+    tokens = ChannelToken.where(level_id: level_names_by_id.keys)
+    recent_ids = tokens.group(:storage_app_id).
       order(Arel.sql('MAX(channel_tokens.updated_at) DESC')).
       limit(CANDIDATE_LIMIT).
       pluck(:storage_app_id)
-    level_names = lab2_tokens.where(storage_app_id: recent_ids).
-      pluck(:storage_app_id, Arel.sql('levels.name')).
+    level_names = tokens.where(storage_app_id: recent_ids).
+      pluck(:storage_app_id, :level_id).
       group_by(&:first).
-      transform_values {|rows| rows.map(&:last).uniq.sort}
+      transform_values {|rows| rows.map {|_, level_id| level_names_by_id[level_id]}.uniq.sort}
     projects = Project.where(id: recent_ids).index_by(&:id)
-    recent_ids.filter_map do |id|
-      projects[id] && [projects[id], level_names[id] || []]
-    end
+    recent_ids.filter_map {|id| projects[id] && [projects[id], level_names[id] || []]}.
+      sort_by {|project, _| project.updated_at || Time.at(0)}.
+      reverse
   end
 
   # Returns the report hash for one project, or nil for a channel that never
@@ -100,7 +97,10 @@ class SpritelabLab2ImagesReviewController < ApplicationController
       nil
     end
     (manifest&.dig('animations', 'propsByKey') || {}).values.
-      index_by {|props| props['sourceUrl'].to_s[%r{/([^/?]+)(?:\?|\z)}, 1]}
+      # A sourceUrl can also be a library reference or a whole data URI,
+      # neither of which names an uploaded file in this channel.
+      select {|props| props['sourceUrl'].to_s.start_with?('/v3/assets/')}.
+      index_by {|props| props['sourceUrl'][%r{/([^/?]+)(?:\?|\z)}, 1]}
   end
 
   # Maps asset filenames to the generation metadata recorded on the animation
