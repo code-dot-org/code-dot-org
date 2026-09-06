@@ -100,13 +100,7 @@ const stage = (falls: boolean) => {
 };
 
 describe('a traveller that comes to rest', () => {
-  // KNOWN BROKEN, and `it.fails` rather than a skip so the day it starts
-  // working this says so instead of rotting. The obvious fix — having the pad
-  // correct the record on arrival — is wrong: Turning reads the same record to
-  // know whether a body moved, so a corrected record makes a teleported roller
-  // read as stopped and turn round every trip. See the message on this test's
-  // commit for the two shapes a real fix could take.
-  it.fails('lands on the far pad instead of falling through its floor', () => {
+  it('lands on the far pad instead of falling through its floor', () => {
     const {world, traveller, far} = stage(true);
     run(world, 2);
 
@@ -116,7 +110,8 @@ describe('a traveller that comes to rest', () => {
     // Where it was sent, not somewhere along the line from where it left.
     expect(Math.abs(at.x - there.x)).toBeLessThan(4);
     // Resting on the far floor: at the pad or a little above it, never below.
-    // As it stands this is 1256 and still falling.
+    // Before `forget how … got here`, this was 1256 and still falling:
+    // Solid pushed it out along the line from the pad it had left.
     expect(at.y).toBeLessThanOrEqual(there.y + 4);
     expect(at.y).toBeGreaterThan(there.y - 40);
   });

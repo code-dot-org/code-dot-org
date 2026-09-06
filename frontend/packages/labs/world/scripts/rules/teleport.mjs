@@ -30,7 +30,7 @@ import {
   yes,
 } from './dsl.mjs';
 import {HasHealth, staySafe} from './health.mjs';
-import {CanMove, held, velocity} from './motion.mjs';
+import {CanMove, held, placed, velocity} from './motion.mjs';
 
 const rule = defineRule({
   name: 'Teleport',
@@ -150,6 +150,21 @@ const goingTo = travels.actor('going to', {readonly: true});
  * the same way it was standing.
  */
 const cameInAt = travels.point('came in at', {x: 0, y: 0}, {readonly: true});
+/**
+ * Whether the traveller landed THIS frame, and is therefore still held.
+ *
+ * A trip ends in `push`, and two rules ask in `react` whether a body got
+ * anywhere — Turning, to know whether it hit a wall, and Prowling, to know
+ * whether to think again. Both read the distance travelled, and a body that
+ * has just been placed has travelled nothing: without this the roller turns
+ * round on the frame it arrives.
+ *
+ * `held still` is the flag that answers both, and Teleport already sets it for
+ * the wait. This is what carries it one frame further, to cover the landing —
+ * cleared at the top of the next frame's step, so a hold is exactly as long as
+ * it needs to be and no rule has to time it.
+ */
+const landed = travels.boolean('landed', 'false', {readonly: true});
 /**
  * Whether it has stepped off a pad since it last arrived on one.
  *
@@ -304,6 +319,15 @@ export const usePad = travels.block({
 // through, and `Climbing` reads them a frame late for the same reason.
 travels.step('travel', 'push', [
   doc(
+    'The frame after a landing, which is when the hold ends. Held through the landing itself so that nothing reads a placed body as a stopped one; released here, before anything this frame asks.',
+  ),
+  when([
+    [
+      landed.of(thisActor()),
+      [landed.set(thisActor(), no()), held.set(thisActor(), no())],
+    ],
+  ]),
+  doc(
     'Standing on nothing? Then whatever pad it last arrived at is behind it, and the next one may take it. See the header: this is what stops an enemy leaving, landing and leaving again for ever.',
   ),
   when([[equals(countOf(padsUnder()), n(0)), [clear.set(thisActor(), yes())]]]),
@@ -329,7 +353,14 @@ travels.step('travel', 'push', [
                   ),
                 ),
                 travelling.set(thisActor(), no()),
-                held.set(thisActor(), no()),
+                doc(
+                  'THE RECORD OF WHERE IT STARTED THE FRAME WOULD OTHERWISE BE A LIE. Physics writes `position before` in `sense`, before anything moves, and Solid reads it to work out which face a body came in through so it can push it back out that way. A traveller set down here started the frame at the other pad, so Solid pushed it out along the line between them: for a pad above a floor, straight down through it, and only ever for a body that comes to rest — a rocket flies on and that pass never bites. Told the truth, Solid asks which side of the floor this body is on instead, which is the question a placement leaves.',
+                ),
+                placed({who: thisActor()}),
+                doc(
+                  'STILL HELD, for this frame. `held still` is cleared at the top of the next one (see `landed`): a body that has just been placed has travelled nothing, and the two rules that read distance in `react` would take that for having been stopped.',
+                ),
+                landed.set(thisActor(), yes()),
                 doc(
                   'It is standing on the pad it arrived at, and that does not count as touching one.',
                 ),

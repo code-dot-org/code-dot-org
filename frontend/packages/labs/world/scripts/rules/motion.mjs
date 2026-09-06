@@ -156,6 +156,42 @@ export const applyForce = canMove.block({
   ],
 });
 
+/**
+ * `forget how ⟨who⟩ got here` — the record, told the truth about a placement.
+ *
+ * THE OTHER HALF OF `position before` BEING A RECORD. The record is written in
+ * `sense` and is the truth about where a body started the frame. A rule that
+ * moves a body BY HAND — a pad setting a traveller down, a ladder snapping a
+ * climber to its rungs — makes that truth useless to anything asking which way
+ * the body came, because the answer is "from across the room" and there is no
+ * line between the two ends to resolve against.
+ *
+ * Solid is the rule that asks. It pushes a body out of a solid one along the
+ * face it came in through and works that face out from this record, so a
+ * traveller landing on a floor was pushed out along the line from the pad it
+ * left — for a pad above a floor, straight down through it.
+ *
+ * So a placement says so, and everything downstream reads a body that has
+ * always been where it now is. Which is what a discontinuity means: there was
+ * no journey, so there is no direction to take from it. Solid's question then
+ * becomes "which side of this solid am I on", which is the right one.
+ *
+ * IT IS NOT ENOUGH ON ITS OWN. Turning asks a different question of the same
+ * record — how far did I get along my heading — and reads no movement as
+ * having been stopped. A caller that places a body must also hold it still for
+ * that frame (`held still`), which is the flag that already exists for exactly
+ * this and which `Teleport` already sets for the wait.
+ */
+export const placed = canMove.block({
+  returns: 'none',
+  description:
+    'Treat this actor as having always been where it is now. For a rule that moves a body by hand: nothing that asks which way it came will answer with the place it left.',
+  say: ['forget how', param('who', 'actor'), 'got here'],
+  body: ({who}) => [
+    positionBefore.set(who.get(), position.x(who.get()), position.y(who.get())),
+  ],
+});
+
 const each = rule.local('each', 'Actor');
 const travel = rule.local('travel', 'Vector');
 

@@ -4487,8 +4487,75 @@ describe('where a body was', () => {
     }
     expect(arrived).toBe(true);
 
-    // The frame it arrived: it IS at the far pad, and it WAS at the near one.
+    // The frame it arrived: it IS at the far pad, and so is the record.
+    //
+    // THIS IS THE ONE PLACE THE RECORD IS WRITTEN OVER, and it is written over
+    // by the rule that made it meaningless. A trip is a discontinuity: there
+    // is no line between the two pads for anything to resolve against, and
+    // Solid resolves an overlap by asking which face a body came in through.
+    // Left saying "the near pad", it pushed a landed traveller out along the
+    // line between the two — through the floor it had arrived on, for ever,
+    // and only ever for a body that comes to rest. Saying "here" turns that
+    // question into "which side of this floor am I on", which is the one a
+    // placement leaves answerable. `forget how ⟨who⟩ got here` in Physics is
+    // what says it; see `teleportRule.test.tsx`.
     expect(spotOf(walker).x).toBeCloseTo(200, 5);
-    expect(beforeOf(walker).x).toBeCloseTo(100, 5);
+    expect(beforeOf(walker).x).toBeCloseTo(200, 5);
+  });
+
+  it('is still a record and not a guess, where nothing overwrote it', () => {
+    // What the case above used to pin, kept: the record and an extrapolation
+    // differ whenever something moves a body without its velocity accounting
+    // for it, and Solid stopping a body is that. On the frame it is stopped,
+    // `position − velocity × dt` says "you have always been against this
+    // wall"; the record says where it started.
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([
+        rule('rules/motion'),
+        rule('rules/collisions'),
+        rule('rules/solid'),
+      ])
+      .instantiate();
+    const wall = new ActorBuilder({id: 'wall', name: 'wall'})
+      .useTraits([
+        of('rules/collisions', 'CanCollideTrait'),
+        of('rules/solid', 'SolidTrait'),
+      ])
+      .set(PositionProperty, at(200, 200))
+      .set(of('rules/collisions', 'SizeProperty'), new Vector(32, 32))
+      .instantiate('wall');
+    world.addActor(wall);
+    const runner = new ActorBuilder({id: 'runner', name: 'runner'})
+      .useTraits([
+        of('rules/motion', 'CanMoveTrait'),
+        of('rules/collisions', 'CanCollideTrait'),
+      ])
+      .set(PositionProperty, at(150, 200))
+      .set(of('rules/collisions', 'SizeProperty'), new Vector(16, 16))
+      .instantiate('runner');
+    runner.set(of('rules/motion', 'VelocityProperty'), new Vector(10, 0));
+    world.addActor(runner);
+
+    // Far enough to reach the wall and be stopped by it.
+    for (let tick = 0; tick < 30; tick++) {
+      run(world, 1 / 60);
+      if (spotOf(runner).x > 170) {
+        break;
+      }
+    }
+
+    // Stopped against the wall, and the record still says it came from behind
+    // — which is exactly what the extrapolation could not say.
+    // Stopped: its sideways speed is gone, which is what makes this the case
+    // that tells the two apart. `position − velocity × dt` with no velocity is
+    // the position itself, so an extrapolation could only answer "it has
+    // always been here". The record answers where it set off from.
+    expect(
+      (runner as {get(p: unknown): Vector}).get(
+        of('rules/motion', 'VelocityProperty'),
+      ).x,
+    ).toBeCloseTo(0, 5);
+    expect(spotOf(runner).x).toBeLessThan(spotOf(wall).x);
+    expect(beforeOf(runner).x).toBeLessThan(spotOf(runner).x - 1);
   });
 });
