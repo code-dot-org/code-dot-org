@@ -17,7 +17,7 @@ import {defineExtension, type Extension} from '@code-dot-org/blockly';
 
 import {HIDE_BODIES} from '../bodySurfaces';
 
-import {ARGUMENTS_INPUT, RETURNS_ROW} from './blockDesigner';
+import {ARGUMENTS_INPUT, DESCRIPTION_ROW, RETURNS_ROW} from './blockDesigner';
 import {removeBodyButton} from './bodyButton';
 
 export const BODY_SURFACE_EXTENSION = 'world_body_surface';
@@ -29,10 +29,11 @@ const SOCKET = 'DO';
  * Rows that belong to a member's own surface, not to the interface.
  *
  * `returns` says whether a `define block` does something or reports something,
- * and `arguments` is the signature it takes. Both are facts about the
- * implementation — the one that has a `return` in it, and the one whose
- * parameters the body reads — so they are asked where it is written. The
- * interface shows the signature they produce instead.
+ * `arguments` is the signature it takes, and `description` is what the block
+ * is for. All three are facts about the implementation — the one that has a
+ * `return` in it, the one whose parameters the body reads, the one whose
+ * purpose its author is explaining — so they are asked where it is written.
+ * The interface shows the block they produce instead.
  *
  * HIDDEN, NOT REMOVED, and by ROW rather than by field. A field taken off a
  * block is a field Blockly does not save, and the interface is what the file
@@ -41,7 +42,7 @@ const SOCKET = 'DO';
  * the field alone did not — a bare `returns` with nothing after it.
  */
 const BODY_SURFACE_ROWS: Readonly<Record<string, readonly string[]>> = {
-  world_rule_block: [RETURNS_ROW, ARGUMENTS_INPUT],
+  world_rule_block: [DESCRIPTION_ROW, RETURNS_ROW, ARGUMENTS_INPUT],
 };
 
 /**

@@ -209,8 +209,10 @@ out.actorOnReopen = await p.evaluate(async () => {
 
 out.errors = errors.slice(0, 4);
 
-// Expected: no icons on either; RETURNS_ROW and ARGUMENTS hidden on the
-// interface and visible on the head; the Block drawer only inside a body; the
+// Expected: no icons on either; DESCRIPTION_ROW, RETURNS_ROW and ARGUMENTS
+// hidden on the interface — with DESCRIPTION_ROW, which is drawn where the block is
+// explained rather than where it is used — and visible on the head; the Block
+// drawer only inside a body; the
 // rename landing as `number:amount` on BOTH — exactly, with no `amount2`,
 // which is what a parameter rebound to a second variable looks like; a default
 // field for number/string/boolean and none for actor/vector/kind; and

@@ -87,6 +87,7 @@ import {
 import {
   ARGUMENTS_INPUT,
   argumentDefaultExtension,
+  DESCRIPTION_ROW,
   blockDesignerInitExtension,
   RETURNS_ROW,
   blockDesignerMutator,
@@ -6832,9 +6833,15 @@ const worldRuleBlock = defineBlock({
   // they hover it in the toolbox months later, having forgotten what "rest
   // height of" meant. On its own row because it is a sentence: sharing a line
   // with the returns dropdown made both hard to read.
-  message1: 'description %1',
+  //
+  // Drawn only on a body surface, like `returns` and `arguments`: what a block
+  // is FOR is written where it is written, and the interface shows the block
+  // itself. Hidden there rather than removed — a field taken off a block is a
+  // field Blockly does not save, and the interface is what writes the file.
+  message1: 'description %1 %2',
   args1: [
     {type: 'field_input', name: 'DESCRIPTION', text: '', spellcheck: true},
+    {type: 'input_dummy', name: DESCRIPTION_ROW},
   ],
   // Whether it does something or reports something, on a row of its own so
   // that row can be hidden whole. Only a body surface draws it: the answer is

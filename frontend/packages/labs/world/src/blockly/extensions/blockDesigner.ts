@@ -114,6 +114,9 @@ export const ARGUMENTS_INPUT = 'ARGUMENTS';
 /** The row `RETURNS` sits on, so the row can be hidden with the field. */
 export const RETURNS_ROW = 'RETURNS_ROW';
 
+/** …and the row `DESCRIPTION` sits on, for the same reason. */
+export const DESCRIPTION_ROW = 'DESCRIPTION_ROW';
+
 /** The item block that edits a part, in `define event`'s bubble. */
 export const itemTypeFor = (part: BlockPart): string => {
   if (part.kind === 'label') {

@@ -252,9 +252,13 @@ const designed = (
     name?: string;
     default?: unknown;
   }> = [],
+  description = '',
 ): object => ({
   type: 'world_rule_block',
-  fields: {RETURNS: returns},
+  fields: {
+    RETURNS: returns,
+    ...(description ? {DESCRIPTION: description} : {}),
+  },
   extraState: {
     parts: [
       {kind: 'label', text: name},
@@ -1053,5 +1057,35 @@ describe('an argument’s default value', () => {
       'hello',
       'TRUE',
     ]);
+  });
+});
+
+describe('a block’s description', () => {
+  // It is the tooltip of the block being DEFINED — the sentence someone reads
+  // when they hover it in the toolbox months later. It is written on the body
+  // surface now and drawn nowhere else, which is the reason to guard it here:
+  // the field is HIDDEN on the interface rather than removed, because a field
+  // taken off a block is a field Blockly does not save, and the interface is
+  // what writes the file. Remove it instead of hiding it and every tooltip in
+  // every rule goes quiet, with nothing else to show for it.
+  it('survives into the metadata a call site is built from', () => {
+    const meta = parseRuleMeta(
+      'rules/described',
+      ruleFile(
+        'Described',
+        designed('nudge', 'none', [], 'pushes it along a bit'),
+      ),
+    );
+
+    expect(meta?.actions[0]?.description).toBe('pushes it along a bit');
+  });
+
+  it('is absent rather than empty when nobody wrote one', () => {
+    const meta = parseRuleMeta(
+      'rules/described',
+      ruleFile('Described', designed('nudge')),
+    );
+
+    expect(meta?.actions[0]?.description).toBeUndefined();
   });
 });

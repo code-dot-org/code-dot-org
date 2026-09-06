@@ -998,6 +998,30 @@ any second run against a warm dev server — so a run where the two agree is
 proof of no harm, not proof of the fix. The claim rests on the two
 measurements above rather than on catching the fault again.
 
+_The description moves too, 2026-09-05._ `define block` on a rule's interface
+is now its name and the block it makes, and nothing else:
+
+    define block ✎
+    ⟨the block, drawn⟩
+
+`description` has followed `returns` and `arguments` onto the body surface. It
+is the tooltip of the block being DEFINED — the sentence someone reads when
+they hover it in the toolbox months later — and what a block is FOR is written
+where it is written. Four members now fit in the space two took.
+
+The mechanism was already in place: name the row, list it in
+`BODY_SURFACE_ROWS`, and the head draws it while the interface hides it. Edits
+made there reach the file with no new machinery either, because the seam has
+carried the head's FIELDS since `RETURNS` moved.
+
+HIDDEN, NOT REMOVED, and this is the one that would have been expensive to get
+wrong. A field taken off a block is a field Blockly does not save, and the
+interface is what writes the file — so removing `DESCRIPTION` there rather
+than hiding it would empty the tooltip of every designed block in every rule,
+with nothing on screen to say so. `ruleMeta.test.ts` guards it at the only
+place the loss would show: the description arriving in the metadata a call
+site is built from.
+
 **Not only rules.** An `.actor` file holds the same two shapes — its own
 `each frame` and its own `define block` (`ActorBuilder.defineStep`,
 `defineAction`) — and a world holds them inside `define actor`. Actor files
