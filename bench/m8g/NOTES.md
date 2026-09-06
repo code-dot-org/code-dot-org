@@ -200,7 +200,15 @@ filename matched neither that pattern nor the `*_test.rb` convention, so the
 file had never run under `rake test`, in CI or locally. Its five tests pass and
 cover `cached_exists_in_bucket?` and the cache invalidation in
 `upload_to_bucket` and `delete_from_bucket` — behaviour with no other coverage
-in the repository. Worth checking whether other directories have the same gap.
+in the repository.
+
+It was the only one. `lib`, `shared` and `dashboard` were scanned for files
+under `test/` defining test cases that match neither glob: the five other
+non-matching files in `lib` and `shared` are helpers, and the two in
+`dashboard` are Cucumber runner code with methods merely named `test_*`. The
+gap is closed and bounded to this file. Note that the benchmark harness globs
+the same two patterns, so `lib` read 792 on both hosts — the missing file was
+invisible to the measurement as well as to CI.
 
 **`docker-compose.dashboard.yml` prints endpoint keys the code cannot parse.**
 It tells you to write `db_endpoint_writer: 127.0.0.1:3306` into `locals.yml`,
