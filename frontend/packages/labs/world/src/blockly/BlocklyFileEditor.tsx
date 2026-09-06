@@ -68,7 +68,7 @@ import {FieldMarkdown, setMarkdownOpener} from './fields/FieldMarkdown';
 import {NoteEditorDialog} from './fields/NoteEditorDialog';
 import {fileKindOf} from './fileKind';
 import {registerLessonButtons} from './lessonFlyoutButton';
-import {localizeBlocks} from './localizeBlocks';
+import {localizeBlocks, localizeText, localizeToolbox} from './localizeBlocks';
 import {redrawLiveDropdowns} from './moduleOptions';
 import {
   OPENABLE_EXTENSIONS,
@@ -768,6 +768,17 @@ export const BlocklyFileEditor = ({
     [blocks, locale],
   );
 
+  // …and the drawers they sit in. The toolbox is inside the `notranslate`
+  // container with the workspace, so nothing else would translate it.
+  //
+  // LAST, after `toolboxForSurface` and the two filters above it: all three
+  // select categories by name, and would stop matching a name in another
+  // language. See `localizeToolbox`.
+  const localizedToolbox = useMemo(
+    () => localizeToolbox(surfaceToolbox),
+    [surfaceToolbox, locale],
+  );
+
   const options = useMemo(
     () => ({
       readOnly: isReadOnly,
@@ -872,7 +883,10 @@ export const BlocklyFileEditor = ({
       const [rule] = workspaceRef.current?.getBlocksByType('world_rule') ?? [];
       rule?.setWarningText(
         duplicated.length
-          ? `Two of this rule's members are both called \u201c${duplicated[0]}\u201d.`
+          ? localizeText(
+              'Two of this rule\u2019s members are both called \u201c%1\u201d.',
+              [duplicated[0]],
+            )
           : null,
       );
       if (duplicated.length) {
@@ -1478,7 +1492,7 @@ export const BlocklyFileEditor = ({
             // finds its callbacks.
             onInject={registerLessonButtons}
             startBlocks={startBlocks}
-            toolbox={surfaceToolbox}
+            toolbox={localizedToolbox}
             options={options}
             theme={theme}
             workspaceRef={workspaceRef}

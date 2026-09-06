@@ -7,6 +7,7 @@
 // and BlocklyFileEditor) before the editor loads a block or the generator runs.
 
 import {Blockly, defineExtension, type Extension} from '@code-dot-org/blockly';
+import {localization} from '@code-dot-org/core/plugins/localization';
 
 import {IMPORT_ACTOR_VALUE} from '../actors/actorImport';
 import {IMPORT_BACKGROUND_VALUE} from '../appearance/appearanceImport';
@@ -18,6 +19,7 @@ import {actorIcon, actorThumbnail} from './actorThumbnails';
 import {IMPORT_EFFECT_VALUE} from './effectImport';
 import {label} from './label';
 import {actorIdFromName, localActorOptions} from './localActors';
+import {localizeLabel, localizeText} from './localizeBlocks';
 import {projectImage} from './projectImages';
 
 // `[label, path]` dropdown options, refreshed from the project (projectModules).
@@ -138,7 +140,11 @@ export const orNone = (
   options: Array<[string, string]>,
   empty = '(none)',
 ): Array<[string, string]> =>
-  options.length ? options : [[empty, NONE_VALUE]];
+  // The words are the lab's, not the project's — there is nothing in the
+  // project to name, which is what the line says — so they are read in the
+  // reader's language. Here rather than at each call for the same reason the
+  // sentence above gives: fifteen call sites, one decision.
+  options.length ? options : [[localizeText(empty), NONE_VALUE]];
 
 /** Current ACTOR dropdown options (the project's actor templates). */
 export function actorOptions(): Array<[string, string]> {
@@ -401,7 +407,25 @@ export function bindLiveOptions(
   };
 }
 
-/** An extension that points `fieldName`'s dropdown at a live options function. */
+/**
+ * An extension that points `fieldName`'s dropdown at a live options function.
+ *
+ * `words` says whether the LABELS are the lab's own vocabulary or the names of
+ * things in the project, and it decides whether they are translated. Most of
+ * these lists are names — actors, traits, rules, files, the enums a learner
+ * wrote — and a name is not translated in any language: it is what the learner
+ * called the thing. A few are the lab talking about itself, and those read as
+ * English to a reader who has none.
+ *
+ * Off by default because that is the safe way round. A vocabulary list left
+ * untranslated reads as English, which is a gap somebody notices; a name list
+ * translated by accident renames what a learner made — an actor called `Math`
+ * would come back as whatever the Math drawer is called in their language.
+ *
+ * Extensions, not definitions, is why this exists at all: a live dropdown
+ * REPLACES the options `localizeBlocks` translated on the definition, so the
+ * seam that handles every other label never sees these.
+ */
 export function liveDropdown(
   extensionName: string,
   fieldName: string,
@@ -409,21 +433,32 @@ export function liveDropdown(
   // `use rule` leaves out the rule whose own workspace it is in (editingRule).
   // Most lists are the same everywhere and ignore it.
   options: (field?: Blockly.FieldDropdown) => DropdownOptions,
+  {words = false}: {words?: boolean} = {},
 ): Extension {
   liveDropdownFields.set(extensionName, fieldName);
+  const listed = words
+    ? (field?: Blockly.FieldDropdown): DropdownOptions =>
+        options(field).map(
+          ([label, value]) =>
+            [
+              localizeLabel(label, text => localization.translate(text)),
+              value,
+            ] as DropdownOptions[number],
+        )
+    : options;
   return defineExtension(extensionName, {
     extension() {
       const field = this.getField(fieldName) as Blockly.FieldDropdown | null;
       if (!field) {
         return;
       }
-      bindLiveOptions(field, options);
+      bindLiveOptions(field, listed);
 
       // A fresh block still holds the static "(none)" fallback; if that isn't
       // one the live registry offers, default to the first real option so the
       // block is usable without opening the menu. Only that fallback: anything
       // else was chosen or loaded, and is not this code's to replace.
-      const values = options(field).map(([, value]) => value);
+      const values = listed(field).map(([, value]) => value);
       const current = field.getValue();
       if (
         values.length > 0 &&

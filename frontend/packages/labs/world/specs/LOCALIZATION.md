@@ -49,6 +49,24 @@ markdown package uses. With no LocalizeJS loaded, `translate` is identity —
 which is every test and every host today, so the seam costs nothing until a
 locale arrives.
 
+`localizeToolbox` does the same for the drawers — a category's name, and the
+buttons and labels inside it. It is separate because a toolbox is not a block,
+and it is necessary because the toolbox sits INSIDE the `notranslate` container
+with the workspace, so nothing else would ever translate it. It runs last, after
+every filter: three things select categories by name — the level's hidden
+categories, the progression's shelf, and the `Block` drawer an event surface
+keeps — and each would stop matching a name in another language.
+
+`localizeText` is for the words the editor composes itself: a warning, a
+message with a name in it. `translate` takes a string and gives a string, so
+the interpolation is done here, with Blockly's own `%n`, which lets a
+translation put the name where the language wants it:
+
+```
+Two of this rule’s members are both called “%1”.
+“%1” heißen zwei Mitglieder dieser Regel.
+```
+
 Two more pieces make it real in the editor:
 
 - The workspace sits in a **`data-notranslate`** container. LocalizeJS sweeps
@@ -146,6 +164,53 @@ translation ever reached `extraState.parts` — a well-meaning pass that
 project would break in exactly this way: silently, with stand-ins papering over
 it, and only noticed when a game stopped working.
 
+## A translation is not trusted with the arguments
+
+A label and its `args0` are one thing, and Blockly checks that when the block
+is DEFINED:
+
+```
+Block "…": Message index %3 out of range.
+Block "…": Message index %1 duplicated.
+Block "…": Message does not reference all 2 arg(s).
+```
+
+A definition that throws is not one bad block. It is the editor failing to
+load — in that language and no other, so nobody testing in English would ever
+see it. `safeMessage` compares the multiset of `%n` in the translation against
+the English and keeps the English when they differ.
+
+It refuses rather than repairs, deliberately. Reordering is the whole point of
+translating a label, so anything clever enough to put a missing `%2` back would
+have to know where it belongs in a language it cannot read. English a learner
+can use beats grammar nobody can.
+
+`%%` is an escaped per-cent and is stepped over. Read as an argument index, a
+label saying `%%100` would look mismatched against a translation saying `%%50`,
+and every label mentioning a percentage would silently stay English in every
+language. No stock block says `%%` yet; the first one would have found this out
+quietly.
+
+## Names are not translated, and telling them apart takes a decision
+
+A dropdown that lists the project — actors, traits, rules, files, the enums a
+learner wrote, the tweens they defined — is listing NAMES, and a name is the
+same in every language. A dropdown that lists the lab's own vocabulary — the
+phases of a frame, the parameter types, `(no actors yet)` — is words.
+
+These arrive by the same road and look identical in the code, so `liveDropdown`
+takes a `words` flag and defaults it OFF. That is the safe way round: a
+vocabulary list left untranslated reads as English, which somebody notices; a
+name list translated by accident renames what a learner made, and an actor
+called `Math` would come back as whatever the Math drawer is called in their
+language.
+
+Of the twenty-one live dropdowns, one is vocabulary (the phases). `orNone`
+holds the fifteen `(no … yet)` placeholders, so those are one decision rather
+than fifteen. `argumentTypeOptions` is the awkward one — `number`, `text`,
+`actor` followed by the learner's enums — so it translates its own half and the
+flag stays off.
+
 ## Slugs: measured, and not re-keyed
 
 The first draft of this plan asked for block types to be keyed on a rule's id
@@ -166,11 +231,35 @@ So this is a discipline with a test behind it rather than a migration. The
 discipline: **no translated string is ever stored, and no stored string is ever
 translated in place.**
 
+## Looking at it
+
+`?pseudo=1` in the demo stands a marking locale in for LocalizeJS
+(`src/demoPseudoLocale.ts`), so every translated string comes back
+«áççéñtéd» — which turns "did this go through the seam?" into something a
+person can see and a script can count.
+
+It is loaded by its own script tag ahead of the bundle, and that is not a
+detail: the localization singleton binds to `window.LocalizeLoader` when its
+MODULE is evaluated, and an `import` is hoisted above every statement, so
+installing it from inside `main.tsx` installed it after the thing that reads
+it. The page came up in English and said nothing. A real LocalizeJS arrives the
+same way — a script in the page, ahead of the app.
+
+The stub also has to ANNOUNCE its dictionary. The plugin hands LocalizeJS its
+callbacks and waits: nothing is translated until `dictionaryAdded` fires, which
+is what makes it emit `change`, which is what `useLocalization` watches. A stub
+with an inert `on` is a page of untranslated English, which was the first draft.
+
+`spikes/rule-surfaces/check-locale.mjs` reads the result. As it stands, all 27
+drawers translate, 47 of the 62 labels on `solid.rule` translate, and what does
+not is a rule's name, an ability's, a property's, a step's, and the
+descriptions the `.rule` file carries. Those are stored strings, and a stored
+string is never translated in place. **Anything else that appears in that list
+is a gap** — it is how `settle` was found, drawn by an extension that replaces
+the options `localizeBlocks` had translated.
+
 ## What is left
 
-- **The acceptance.** A stock rule loaded under a pseudo-locale, in a browser,
-  with the block's `message0` changed and its type unchanged. The unit tests
-  make the claim; only a browser proves the definitions reach Blockly.
 - **Lessons and the catalogue.** 77 instruction blocks and 30 tile names, which
   go through the host's own lookup rather than this seam.
 - **The 147 `doc` blocks.** Those are markdown, not labels: paragraphs with

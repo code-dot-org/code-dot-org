@@ -31,6 +31,8 @@ import type {Block} from 'blockly';
 
 import {Blockly, defineExtension, type Extension} from '@code-dot-org/blockly';
 
+import {localizeText} from '../localizeBlocks';
+
 import {addOnChange} from './onChange';
 
 /**
@@ -72,7 +74,7 @@ function builderContextExtension(
         }
         // Namespaced so it coexists with any other warning on the block.
         this.setWarningText(
-          inBuilderContext(this, roots) ? null : warning,
+          inBuilderContext(this, roots) ? null : localizeText(warning),
           name,
         );
       });
@@ -100,7 +102,7 @@ function runtimeContextExtension(
           return;
         }
         this.setWarningText(
-          inBuilderContext(this, roots) ? warning : null,
+          inBuilderContext(this, roots) ? localizeText(warning) : null,
           name,
         );
       });

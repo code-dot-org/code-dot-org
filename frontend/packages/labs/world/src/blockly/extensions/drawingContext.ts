@@ -13,6 +13,8 @@ import type {Block} from 'blockly';
 
 import {Blockly, defineExtension, type Extension} from '@code-dot-org/blockly';
 
+import {localizeText} from '../localizeBlocks';
+
 import {addOnChange} from './onChange';
 
 export const DRAWING_CONTEXT_EXTENSION = 'world_needs_drawing_context';
@@ -45,7 +47,7 @@ export const drawingContextExtension: Extension = defineExtension(
           return;
         }
         this.setWarningText(
-          inDrawingContext(this) ? null : WARNING_TEXT,
+          inDrawingContext(this) ? null : localizeText(WARNING_TEXT),
           WARNING_ID,
         );
       });

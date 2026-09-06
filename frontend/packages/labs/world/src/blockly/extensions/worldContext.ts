@@ -13,6 +13,8 @@ import type {Block} from 'blockly';
 
 import {Blockly, defineExtension, type Extension} from '@code-dot-org/blockly';
 
+import {localizeText} from '../localizeBlocks';
+
 import {addOnChange} from './onChange';
 
 export const WORLD_CONTEXT_EXTENSION = 'world_needs_world_context';
@@ -66,7 +68,7 @@ export const worldContextExtension: Extension = defineExtension(
           return;
         }
         this.setWarningText(
-          inWorldContext(this) ? null : WARNING_TEXT,
+          inWorldContext(this) ? null : localizeText(WARNING_TEXT),
           WARNING_ID,
         );
       });

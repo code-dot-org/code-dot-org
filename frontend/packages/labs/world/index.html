@@ -19,6 +19,15 @@
       id="root"
       style="margin: 0; padding: 0; width: 100%; height: 100%"
     ></div>
+    <!--
+      `?pseudo=1` stands a marking locale in for LocalizeJS, so that what this
+      lab does and does not translate can be looked at (src/demoPseudoLocale).
+      BEFORE the bundle: the localization singleton binds to
+      window.LocalizeLoader when its module is evaluated, which an import from
+      inside main.tsx is already too late for. A real LocalizeJS is loaded the
+      same way, by a tag in the page ahead of the app.
+    -->
+    <script type="module" src="/src/demoPseudoLocale.ts"></script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

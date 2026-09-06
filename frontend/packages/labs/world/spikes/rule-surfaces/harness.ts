@@ -6,6 +6,8 @@
 
 import * as Blockly from 'blockly/core';
 
+import {localization} from '@code-dot-org/core/plugins/localization';
+
 import {buildDomainPalette} from '../../src/blockly/domainBlocks';
 import {parseRuleMeta} from '../../src/blockly/ruleMeta';
 import {STOCK_RULES} from '../../src/rules/stock';
@@ -14,6 +16,7 @@ import {countBlocks, interfaceOnly} from './interfaceOnly.mjs';
 
 export {
   Blockly,
+  localization,
   STOCK_RULES,
   buildDomainPalette,
   countBlocks,

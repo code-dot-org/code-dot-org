@@ -8,8 +8,10 @@ import {describe, expect, it} from 'vitest';
 
 import {STOCK_RULES} from '../../rules/stock';
 import {buildDomainPalette} from '../domainBlocks';
-import {localizeBlocks} from '../localizeBlocks';
+import {localizeBlocks, localizeText, localizeToolbox} from '../localizeBlocks';
 import {parseRuleMeta} from '../ruleMeta';
+
+import {isPseudo, pseudo, spanish, SPANISH_BAD} from './fixtures/locales';
 
 /** A stand-in translator: every string comes back marked and reversed in order. */
 const shout = (text: string): string => `«${text}»`;
@@ -192,5 +194,232 @@ describe('what a translation must never change', () => {
     const after = localizeBlocks(before, text => text) as Definition[];
 
     expect(after.map(b => b.message0)).toEqual(before.map(b => b.message0));
+  });
+});
+
+describe('a translation Blockly would refuse', () => {
+  // A LABEL AND ITS ARGUMENTS ARE ONE THING, and Blockly checks that when the
+  // block is DEFINED: `Message index %3 out of range`, `Message index %1
+  // duplicated`, `Message does not reference all 2 arg(s)`. A definition that
+  // throws is not one bad block — it is the editor failing to load, in that
+  // language and no other. So the English stands instead.
+  const args = (n: number) =>
+    Array.from({length: n}, (_, i) => ({name: `A${i}`}));
+
+  it.each([
+    ['drops an argument', 'set %1 to %2', 2],
+    ['repeats an argument', 'give %1 to %2', 2],
+    ['invents an argument', 'count %1', 1],
+  ])('keeps the English when a translation %s', (_what, message0, count) => {
+    const [out] = localizeBlocks(
+      [{type: 'x', message0, args0: args(count)}],
+      spanish,
+    ) as Definition[];
+
+    expect(SPANISH_BAD).toContain(message0);
+    expect(out.message0).toBe(message0);
+  });
+
+  it('takes a translation that only moves the arguments', () => {
+    // The refusal must not be so broad that it refuses the point. Spanish puts
+    // the manner first here, and that is a translation, not a mistake.
+    const [out] = localizeBlocks(
+      [
+        {
+          type: 'world_do_SolidBodies_PushOutOfSidewaysAction',
+          message0: 'push %1 out of %2 sideways',
+          args0: [{name: 'BODY'}, {name: 'SOLID'}],
+        },
+      ],
+      spanish,
+    ) as Definition[];
+
+    expect(out.message0).toBe('empujar lateralmente %2 fuera de %1');
+  });
+
+  it('counts an escaped per-cent as words, not as an argument', () => {
+    // `%%` is how a label says `%`, and the digits after one are prose. Read
+    // as `%` + `100` they are an argument index, and then a translation that
+    // says a different NUMBER looks like a translation that moved an argument
+    // — so it is refused, and a label mentioning a percentage silently never
+    // translates in any language. No stock block says `%%` yet; the first one
+    // that does would find this out quietly.
+    const [out] = localizeBlocks(
+      [
+        {
+          type: 'x',
+          message0: 'slow %1 to %%100 of normal',
+          args0: [{name: 'WHO'}],
+        },
+      ],
+      text => text.replace('to %%100 of normal', 'al %%50 de lo normal'),
+    ) as Definition[];
+
+    expect(out.message0).toBe('slow %1 al %%50 de lo normal');
+  });
+
+  it('lets no translation reach Blockly with the wrong arguments', () => {
+    // Over the REAL palette, under a translator that mangles every label the
+    // three ways at once. Whatever comes out, each message references its own
+    // arguments exactly once — which is the whole of what Blockly asks.
+    const mangle = (text: string) => text.replace(/%(\d+)/, '%9 %9');
+    const after = localizeBlocks(palette(), mangle) as Definition[];
+
+    for (const block of after) {
+      const message = block.message0;
+      const count = block.args0?.length ?? 0;
+      if (typeof message !== 'string') {
+        continue;
+      }
+      const used = [...message.matchAll(/%(%|\d+)/g)]
+        .map(([, digits]) => digits)
+        .filter(digits => digits !== '%')
+        .map(Number);
+      expect(new Set(used).size).toBe(used.length);
+      expect(used.length).toBe(count);
+      expect(used.every(n => n >= 1 && n <= count)).toBe(true);
+    }
+  });
+});
+
+describe('what the seam reaches, over the whole palette', () => {
+  // The pseudo-locale exists for this: every string it returns is marked, so
+  // "was this translated?" becomes something a test can sweep for rather than
+  // something a person has to notice missing.
+  it('translates every message and every tooltip', () => {
+    const after = localizeBlocks(palette(), pseudo) as Definition[];
+    const missed = after.filter(
+      block =>
+        (typeof block.message0 === 'string' && !isPseudo(block.message0)) ||
+        (typeof block.tooltip === 'string' && !isPseudo(block.tooltip)),
+    );
+
+    expect(missed.map(block => block.type)).toEqual([]);
+  });
+
+  it('translates every dropdown label a block is defined with', () => {
+    const after = localizeBlocks(palette(), pseudo) as Definition[];
+    const labels = after.flatMap(block =>
+      (block.args0 ?? []).flatMap(arg =>
+        Array.isArray(arg.options)
+          ? (arg.options as Array<[unknown, string]>).map(option => option[0])
+          : [],
+      ),
+    );
+
+    expect(labels.length).toBeGreaterThan(0);
+    expect(
+      labels.filter(label => typeof label === 'string' && !isPseudo(label)),
+    ).toEqual([]);
+  });
+
+  it('leaves the interpolations alone while it marks the words', () => {
+    // The pseudo-locale has to be a translation the lab could actually draw,
+    // or a sweep run under it proves nothing about the real one.
+    expect(pseudo('push %1 out of %2 sideways')).toBe(
+      '«púšh %1 óút óf %2 šídéwáýš»',
+    );
+  });
+});
+
+describe('the drawers, which nothing else would translate', () => {
+  // The toolbox is inside the `notranslate` container with the workspace, so
+  // if this seam does not take it, "Actor" and "Drawing" and "Rule" stay
+  // English in every language.
+  const toolbox = () => {
+    const metas = STOCK_RULES.map(rule =>
+      parseRuleMeta(`rules/${rule.id}`, rule.contents),
+    ).filter(Boolean);
+    return buildDomainPalette(metas as never, {fileKind: 'rule'} as never)
+      .toolbox;
+  };
+
+  it('translates every drawer name', () => {
+    const after = localizeToolbox(toolbox(), pseudo) as Array<{name?: string}>;
+
+    expect(after.length).toBeGreaterThan(10);
+    expect(
+      after.filter(cat => typeof cat.name === 'string' && !isPseudo(cat.name)),
+    ).toEqual([]);
+  });
+
+  it('leaves the block types in a drawer alone', () => {
+    // `blocks` holds identifiers. Translating one would offer a block that
+    // does not exist, and the drawer would come up empty.
+    const before = toolbox() as Array<{blocks?: unknown[]}>;
+    const after = localizeToolbox(before, pseudo) as Array<{
+      blocks?: unknown[];
+    }>;
+
+    const types = (cats: Array<{blocks?: unknown[]}>) =>
+      cats.flatMap(cat =>
+        (cat.blocks ?? []).filter(entry => typeof entry === 'string'),
+      );
+
+    expect(types(after)).toEqual(types(before));
+    expect(types(before).length).toBeGreaterThan(50);
+  });
+
+  it('translates a button’s words and keeps what it calls', () => {
+    // The "How this works" link at the top of a rule's drawer is a flyout
+    // button — `{kind, text, callbackkey}` — and only the `text` is words.
+    const [out] = localizeToolbox(
+      [
+        {
+          name: 'Gravity',
+          blocks: [
+            {
+              kind: 'button',
+              text: 'How this works: Falling',
+              callbackkey: 'world_lesson_fall',
+            },
+            'world_do_Gravity_FallAction',
+          ],
+        },
+      ],
+      pseudo,
+    ) as Array<{name: string; blocks: Array<Record<string, string>>}>;
+
+    expect(out.name).toBe('«Grávítý»');
+    expect(out.blocks[0].text).toBe('«Hów thíš wórkš: Fállíñg»');
+    expect(out.blocks[0].callbackkey).toBe('world_lesson_fall');
+    expect(out.blocks[1]).toBe('world_do_Gravity_FallAction');
+  });
+
+  it('does not touch the toolbox it was given', () => {
+    const original = [{name: 'Actor', blocks: ['world_actor']}];
+
+    localizeToolbox(original, pseudo);
+
+    expect(original[0].name).toBe('Actor');
+  });
+});
+
+describe('the words the editor composes itself', () => {
+  it('puts the name where the translation wants it', () => {
+    // `translate` takes a string and gives a string, so a warning with a
+    // member's name in it is interpolated here — with Blockly's own `%n`, so
+    // that a language may put the name somewhere English does not.
+    const german = (text: string) =>
+      text === 'Two of this rule’s members are both called “%1”.'
+        ? '“%1” heißen zwei Mitglieder dieser Regel.'
+        : text;
+
+    expect(
+      localizeText(
+        'Two of this rule’s members are both called “%1”.',
+        ['slowed by'],
+        german,
+      ),
+    ).toBe('“slowed by” heißen zwei Mitglieder dieser Regel.');
+  });
+
+  it('keeps the English when a translation loses the name', () => {
+    // Otherwise the warning names nothing, which is worse than English.
+    const lossy = () => 'Zwei Mitglieder heißen gleich.';
+
+    expect(
+      localizeText('Two members are called “%1”.', ['slowed by'], lossy),
+    ).toBe('Two members are called “slowed by”.');
   });
 });

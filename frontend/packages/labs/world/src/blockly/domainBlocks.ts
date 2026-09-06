@@ -141,6 +141,7 @@ import {
   localActorVar,
   workspaceOfBlock,
 } from './localActors';
+import {localizeText} from './localizeBlocks';
 import {registerManyActorBlock, yieldsMany} from './manyActors';
 import {instanceId, type MapPlacement} from './mapPlacements';
 import {
@@ -6730,7 +6731,14 @@ const signatureChoice = defineBlock({
  * it everywhere the implementation already uses it.
  */
 const argumentTypeOptions = (): Array<[string, string]> => [
-  ...PARAM_TYPE_OPTIONS,
+  // A MIXED LIST, and the halves are translated differently. `number`, `text`,
+  // `actor` are the lab's words for its own types; the enums after them are
+  // whatever the learner called them, and a name is not translated in any
+  // language. So this cannot be `{words: true}` on the extension — that would
+  // take both halves.
+  ...PARAM_TYPE_OPTIONS.map(
+    ([label, value]) => [localizeText(label), value] as [string, string],
+  ),
   // Stored as the PARAMETER TYPE an enum stands for, not as the bare ref, so
   // the field's value is the part's type verbatim and nothing has to work out
   // which kind it is.

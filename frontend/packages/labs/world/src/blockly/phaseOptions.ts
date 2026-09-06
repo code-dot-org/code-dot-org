@@ -57,4 +57,8 @@ export const phaseOptionsExtension: Extension = liveDropdown(
   'world_phase_options',
   'PHASE',
   phaseOptions,
+  // The lab's own vocabulary — `settle`, `react`, `choose the camera` — and
+  // not the name of anything in the project, so it is read in the reader's
+  // language like every other word on a block.
+  {words: true},
 );
