@@ -1099,6 +1099,39 @@ type whose body lives elsewhere, wherever the file it sits in came from.
 **What it does not solve.** The file is still 500KB on disk — §2's
 copy-on-edit is a separate decision and this does not make it smaller.
 
+## A corner that caught a walk
+
+_Fixed, 2026-09-05._ The Pilot in the jetpack level could not walk LEFT. It
+stood in the ladder's bottom rung and, held left, did not move a pixel:
+velocity a steady −1.5 the whole time, and the position put back every frame.
+Out in the open it walked left exactly as far as the tile it was standing on
+and stopped dead at the edge, while walking right crossed the room.
+
+NOT A REGRESSION. The same reproduction fails identically at `00bd2af7461`,
+before steps became members, which was the first thing worth knowing.
+
+It is corner-slipping, in `solid`. A body going PAST a block and catching its
+edge is nudged clear rather than stopped — that is what `Slips Round Corners`
+buys, and the test for it was a small overlap plus any vertical speed at all.
+But a body walking a flat floor picks up a fraction of downward speed every
+frame, so it meets the next tile along with a sliver of overlap: a sliver
+reads as a corner, and the nudge back out is exactly the walk, cancelled. It
+pinned the body at the tile edge — `240 + reach`, which is the 272 the Pilot
+stopped at to the pixel.
+
+Slipping round a corner means going by it, so the guard now asks whether the
+vertical speed is the LARGER one. A body falling past a ledge still slips; a
+body walking along the ground no longer does.
+
+Found by measuring rather than by reading, and the measurements are what
+settled it: it walks in mid-air, it walks with `ignores walls` set, and it
+walks with `corner reach` set to nought. The last of those named the culprit
+outright.
+
+Two tests in `jetpackPlays` hold it, and both fail with the old guard. There
+was no test that walked left at all, which is how four thousand green tests
+missed a level you cannot walk across.
+
 ## Not on the list, and why
 
 - **Live reload of actor properties** (`QUALITY_OF_LIFE.md` §1 and §3). Real,

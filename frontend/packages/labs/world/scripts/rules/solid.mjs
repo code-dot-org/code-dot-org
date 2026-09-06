@@ -296,9 +296,17 @@ const pushOutUpOrDown = rule.block({
                   moreThan(cornerReach.of(body.get()), n(0)),
                   both(
                     atMost(into.get(), cornerReach.of(body.get())),
+                    // GOING PAST IT, not along it. A body walking a flat
+                    // floor picks up a fraction of downward speed every
+                    // frame, and arrives at the next tile with a sliver of
+                    // overlap — which read as a corner, so it was nudged back
+                    // out and the walk was cancelled exactly at the tile
+                    // edge. Slipping round a corner is for a body going by
+                    // vertically and catching an edge, so that is what it
+                    // asks: is the vertical speed the larger one.
                     moreThan(
                       absolute(axisOf('y', velocity.of(body.get()))),
-                      n(0),
+                      absolute(axisOf('x', velocity.of(body.get()))),
                     ),
                   ),
                 ),

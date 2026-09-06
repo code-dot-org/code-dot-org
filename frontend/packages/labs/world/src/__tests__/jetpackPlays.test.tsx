@@ -82,6 +82,43 @@ describe('the jetpack level', () => {
     expect(fuelOf(world, 'FuelProperty')).toBe(50);
   });
 
+  it('walks left off the ladder it starts on', () => {
+    // It could not. The Pilot starts standing in the ladder's bottom rung, and
+    // held left it did not move a pixel — velocity a steady -1.5 the whole
+    // time, and the position put back every frame.
+    //
+    // Corner-slipping did it. A body walking a flat floor picks up a fraction
+    // of downward speed every frame, so it meets the next tile along with a
+    // sliver of overlap — and a sliver read as a CORNER, which is nudged back
+    // out so a body falling PAST a block is not caught by its edge. Walking,
+    // that nudge is exactly the walk, cancelled.
+    const {world} = project;
+    play(world, 0.5);
+    expect(pilot(world).get(PositionProperty).x).toBe(80);
+
+    play(world, 1, ['left arrow']);
+
+    // The wall's inside face is at 32 and the Pilot is a tile wide, so this is
+    // as far left as the room goes.
+    expect(pilot(world).get(PositionProperty).x).toBe(48);
+  });
+
+  it('crosses tile edges going left, not only going right', () => {
+    // The general case, and the reason this looked like one broken direction:
+    // the nudge cancelled the walk going left and left it alone going right,
+    // so the Pilot crossed the room one way and stopped dead at the first tile
+    // edge the other. Out in the open, away from the ladder and the wall.
+    const {world} = project;
+    play(world, 0.5);
+    play(world, 1.2, ['right arrow']);
+    const from = pilot(world).get(PositionProperty).x;
+
+    play(world, 1, ['left arrow']);
+
+    // A second of walking, which is a good few tiles; it used to be nought.
+    expect(from - pilot(world).get(PositionProperty).x).toBeGreaterThan(100);
+  });
+
   it('cannot be jumped', () => {
     // The claim the whole level rests on. A press is a jump AND a switch, so
     // this holds the key exactly one frame — long enough for the press, short
