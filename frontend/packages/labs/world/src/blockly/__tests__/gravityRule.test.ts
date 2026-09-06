@@ -38,8 +38,12 @@ describe('rules/gravity.rule', () => {
   it('parses to the rule the built-in declares', () => {
     expect(meta.name).toBe('Gravity');
     expect(meta.ability).toBe('Has Gravity');
-    // Collision is a project rule now, named by module path.
-    expect(meta.requires).toEqual(['Physics', 'Solid Bodies']);
+    // `Collisions` is named because Gravity uses it — `contacts` and `Can
+    // Collide` — and used to arrive only transitively, through Solid Bodies
+    // requiring it. `Solid Bodies` is named although Gravity calls nothing of
+    // it: that edge is a promise about what importing gravity hands a learner,
+    // not a call, and `importStockRule` states the promise in four tests.
+    expect(meta.requires).toEqual(['Physics', 'Collisions', 'Solid Bodies']);
     expect(meta.traits.map(trait => trait.ref.exportName)).toEqual([
       'AffectedByGravityTrait',
       'ActsAsGroundTrait',

@@ -64,6 +64,29 @@ scale of its own — so a feather can fall slower than a rock in the same room.`
 // which is what the \`sign\` in these blocks is doing: 1 normally, -1 inverted.`,
 });
 rule.uses('Physics');
+// COLLISIONS, WHICH IS THE ONE IT ACTUALLY USES: `contacts` and `Can Collide`
+// come from there, and landing is a walk over what this actor is touching.
+//
+// It used to say `Solid Bodies` instead, and got Collisions transitively
+// because Solid requires it — so the declared dependency was a rule Gravity
+// calls nothing of, and the real one was not declared at all. Removing the
+// wrong name without adding the right one fails as `CanCollideTrait is not
+// defined`, which is how this was found.
+//
+rule.uses('Collisions');
+// AND SOLID BODIES, WHICH IT CALLS NOTHING OF — kept deliberately, and the
+// distinction is worth the words.
+//
+// Gravity does not need Solid to work: landing stops the faller itself, by
+// putting the body on the ground's surface and taking the downward speed off.
+// What this edge carries is not a call but a PROMISE — that importing "things
+// fall" hands you a floor you also cannot walk through, which is what a
+// learner reaching for gravity is nearly always after. `importStockRule`
+// states that promise in four tests, and dropping the edge quietly changes
+// what a learner gets rather than fixing anything.
+//
+// So it stays until somebody decides otherwise on purpose. The bug here was
+// the missing `Collisions` above, not this.
 rule.uses('Solid Bodies');
 
 export const directionOfGravity = rule.vector('direction of gravity', {
