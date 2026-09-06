@@ -5,6 +5,7 @@ import {
   axisOf,
   both,
   defineRule,
+  doc,
   filter,
   forEach,
   hasTrait,
@@ -100,9 +101,9 @@ const wasAt = carries.point('was at', {x: 0, y: 0}, {readonly: true});
 const measured = carries.boolean('measured', 'false', {readonly: true});
 
 carries.step('measure the carry', 'decide', [
-  note('How far did I move last frame? Wherever I am now, less where I was.'),
-  note('On the very first frame there is no "where I was", so start from here'),
-  note('and report no movement — see the header.'),
+  doc(
+    'How far did I move last frame? Wherever I am now, less where I was. On the very first frame there is no "where I was", so start from here and report no movement — see the header.',
+  ),
   when([
     [
       not(measured.of(thisActor())),
@@ -138,9 +139,9 @@ rides.uses(CanCollide);
 const floor = rule.local('floor', 'Actor');
 
 rides.step('ride along', 'adjust', [
-  note('What am I standing on? Something I am touching, that carries,'),
-  note('and whose middle is below mine. Collisions already worked out'),
-  note('what I am touching, so this looks at those and not at everything.'),
+  doc(
+    'What am I standing on? Something I am touching, that carries, and whose middle is below mine. Collisions already worked out what I am touching, so this looks at those and not at everything.',
+  ),
   forEach(floor, {
     from: filter(floor, {
       from: contacts.of(thisActor()),

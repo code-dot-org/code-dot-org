@@ -1,6 +1,7 @@
 import {
   anyOf,
   defineRule,
+  doc,
   equals,
   filter,
   firstActor,
@@ -8,7 +9,6 @@ import {
   hasTrait,
   kindOf,
   moduleFor,
-  note,
   param,
   thisActor,
   when,
@@ -121,9 +121,9 @@ export const takes = carries.block({
     'Put a thing in this actor’s bag. Usually said in a "collects" handler — collecting is picking it up off the floor, and this is having it.',
   say: ['takes', param('item', 'actor')],
   body: ({item}) => [
-    note('Only a thing that can be carried. The trait is the whole of what'),
-    note('makes something bag-able, and a project that put anything at all in'),
-    note('one would be keeping the world in a pocket.'),
+    doc(
+      'Only a thing that can be carried. The trait is the whole of what makes something bag-able, and a project that put anything at all in one would be keeping the world in a pocket.',
+    ),
     when([
       [
         hasTrait(item.get(), CanBeCarried),
@@ -152,17 +152,18 @@ export const spends = carries.block({
     'Take one thing of a kind out of the bag and raise "uses a thing". Does nothing if there is none — ask first if that matters.',
   say: ['spends a', param('what', 'kind')],
   body: ({what}) => [
-    note('The oldest one of that kind, which is what "a key" means when the'),
-    note('bag holds three.'),
+    doc(
+      'The oldest one of that kind, which is what "a key" means when the bag holds three.',
+    ),
     found.set(firstActor(ofKind(what.get()))),
     when([
       [
         anyOf(found.get()),
         [
           things.drop(thisActor(), found.get()),
-          note('Said after it is gone, so a handler that asks what is left'),
-          note('sees what is left — and carrying the thing itself, which is'),
-          note('what a handler showing the key just used needs.'),
+          doc(
+            'Said after it is gone, so a handler that asks what is left sees what is left — and carrying the thing itself, which is what a handler showing the key just used needs.',
+          ),
           uses({item: found.get()}, thisActor()),
         ],
       ],

@@ -1,6 +1,7 @@
 import {
   allWithTrait,
   defineRule,
+  doc,
   either,
   forEach,
   give,
@@ -121,8 +122,9 @@ export const winTheGame = rule.block({
     'End the game as a win, unless it has already ended. Raises "the game is won" — handle that to say what winning looks like.',
   say: ['win the game'],
   body: () => [
-    note('Only if nothing has ended yet: the first ending is the one that'),
-    note('counts, so winning after losing does nothing at all.'),
+    doc(
+      'Only if nothing has ended yet: the first ending is the one that counts, so winning after losing does nothing at all.',
+    ),
     when([[not(isOver()), [won.set(yes()), ...announce(gameWon, seesWon)]]]),
   ],
 });
@@ -133,8 +135,9 @@ export const loseTheGame = rule.block({
     'End the game as a loss, unless it has already ended. Raises "the game is lost".',
   say: ['lose the game'],
   body: () => [
-    note('The same guard, and it is the same reason: a player who reaches the'),
-    note('flag as the last spike touches them sees one ending, not two.'),
+    doc(
+      'The same guard, and it is the same reason: a player who reaches the flag as the last spike touches them sees one ending, not two.',
+    ),
     when([[not(isOver()), [lost.set(yes()), ...announce(gameLost, seesLost)]]]),
   ],
 });
@@ -145,12 +148,14 @@ export const startAgain = rule.block({
     'Put the game back to neither won nor lost. Raises "the game starts again" — handle that to build the level again.',
   say: ['start again'],
   body: () => [
-    note('Both flags, and not one: a game that forgot it had lost but'),
-    note('remembered it had won could never be played again.'),
+    doc(
+      'Both flags, and not one: a game that forgot it had lost but remembered it had won could never be played again.',
+    ),
     won.set(no()),
     lost.set(no()),
-    note('The state is back. What a new game LOOKS like is the project’s,'),
-    note('and this event is where it puts the level back.'),
+    doc(
+      'The state is back. What a new game LOOKS like is the project’s, and this event is where it puts the level back.',
+    ),
     ...announce(gameRestarted, seesRestart),
   ],
 });

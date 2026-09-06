@@ -7,6 +7,7 @@ import {
   both,
   either,
   defineRule,
+  doc,
   frameTime,
   lessThan,
   minus,
@@ -176,11 +177,9 @@ const alongNow = rule.local('alongNow', 'Number');
 const facing = () => vectorFromAngle(n(1), heading.of(thisActor()));
 
 turns.step('go the way it is facing', 'decide', [
-  note('ALONG the heading only, leaving the speed across it alone — see the'),
-  note('header. Whatever gravity has built up downwards is not this rule’s'),
-  note('to throw away, and throwing it away is a fall of a quarter of a'),
-  note('pixel a frame that reads as a slow leak rather than as a bug.'),
-  note('The part of the current speed that is along the heading…'),
+  doc(
+    'ALONG the heading only, leaving the speed across it alone — see the header. Whatever gravity has built up downwards is not this rule’s to throw away, and throwing it away is a fall of a quarter of a pixel a frame that reads as a slow leak rather than as a bug. The part of the current speed that is along the heading…',
+  ),
   alongNow.set(
     add(
       times(axisOf('x', velocity.of(thisActor())), axisOf('x', facing())),
@@ -198,10 +197,9 @@ turns.step('go the way it is facing', 'decide', [
       vectorTimes(facing(), speed.of(thisActor())),
     ),
   ),
-  note('The drawing, if it was asked for. Here rather than after the turn'),
-  note('so that the picture and the movement are the same frame’s: a nose'),
-  note('that points where the actor went LAST frame is a nose that lags'),
-  note('visibly at every corner.'),
+  doc(
+    'The drawing, if it was asked for. Here rather than after the turn so that the picture and the movement are the same frame’s: a nose that points where the actor went LAST frame is a nose that lags visibly at every corner.',
+  ),
   when([
     [
       points.of(thisActor()),
@@ -220,10 +218,9 @@ const stuckY = rule.local('stuckY', 'Boolean');
 const turnedTo = rule.local('turnedTo', 'Number');
 
 turns.step('turn if it got nowhere', 'react', [
-  note('How far along its heading did it actually travel? The movement,'),
-  note('projected on to the direction it meant to go — so a ball dragged'),
-  note('sideways by a belt, or dropped by gravity, is not credited with'),
-  note('progress it did not make and not blamed for it either.'),
+  doc(
+    'How far along its heading did it actually travel? The movement, projected on to the direction it meant to go — so a ball dragged sideways by a belt, or dropped by gravity, is not credited with progress it did not make and not blamed for it either.',
+  ),
   got.set(
     add(
       times(
@@ -237,23 +234,16 @@ turns.step('turn if it got nowhere', 'react', [
     ),
   ),
   asked.set(times(times(speed.of(thisActor()), pixelsPerUnit()), frameTime())),
-  note('HALF, not all of it. A body Solid has pushed part of the way out of'),
-  note('a wall has travelled a little, and a body sliding along a slope'),
-  note('travels less than it asked for without being stopped by anything.'),
-  note('Nothing turns on the first frame: `measured` is false until the'),
-  note('other step has run once, and the distance from the origin is not a'),
-  note('distance anything travelled.'),
-  note('A body somebody is holding is not a body that was stopped — see'),
-  note('`held still` in Physics. Without this a ball waiting out a teleport'),
-  note('turns round every frame it waits.'),
+  doc(
+    'HALF, not all of it. A body Solid has pushed part of the way out of a wall has travelled a little, and a body sliding along a slope travels less than it asked for without being stopped by anything. Nothing turns on the first frame: `measured` is false until the other step has run once, and the distance from the origin is not a distance anything travelled. A body somebody is holding is not a body that was stopped — see `held still` in Physics. Without this a ball waiting out a teleport turns round every frame it waits.',
+  ),
   when([
     [
       both(measured.of(thisActor()), not(held.of(thisActor()))),
       [
-        note('WHICH WAY IT WOULD HAVE GONE, per axis, so that a mirror knows'),
-        note('which wall it met — see `bounces off what stops it`. Worked out'),
-        note('from the movement rather than from the wall, which is the same'),
-        note('trick that notices a wall at all.'),
+        doc(
+          'WHICH WAY IT WOULD HAVE GONE, per axis, so that a mirror knows which wall it met — see `bounces off what stops it`. Worked out from the movement rather than from the wall, which is the same trick that notices a wall at all.',
+        ),
         askedX.set(times(axisOf('x', facing()), asked.get())),
         askedY.set(times(axisOf('y', facing()), asked.get())),
         stuckX.set(
@@ -278,12 +268,9 @@ turns.step('turn if it got nowhere', 'react', [
             ),
           ),
         ),
-        note('A MIRROR ASKS PER AXIS AND A TURN ASKS ALONG THE HEADING, and'),
-        note('they are different questions. Something crossing a floor at'),
-        note('forty-five degrees still makes seven tenths of the progress it'),
-        note('asked for, so the along-heading test never fires and the'),
-        note('shuriken slides along the floor for ever instead of coming off'),
-        note('it. What stopped it is exactly the axis that failed.'),
+        doc(
+          'A MIRROR ASKS PER AXIS AND A TURN ASKS ALONG THE HEADING, and they are different questions. Something crossing a floor at forty-five degrees still makes seven tenths of the progress it asked for, so the along-heading test never fires and the shuriken slides along the floor for ever instead of coming off it. What stopped it is exactly the axis that failed.',
+        ),
         when([
           [
             pick(
@@ -292,10 +279,9 @@ turns.step('turn if it got nowhere', 'react', [
               lessThan(got.get(), times(asked.get(), n(0.5))),
             ),
             [
-              note('A fixed turn, or a reflection: across the vertical when'),
-              note('something upright stopped it, across the horizontal when'),
-              note('a floor did, and a reversal in a corner — which is what'),
-              note('the fixed turn would have said there anyway.'),
+              doc(
+                'A fixed turn, or a reflection: across the vertical when something upright stopped it, across the horizontal when a floor did, and a reversal in a corner — which is what the fixed turn would have said there anyway.',
+              ),
               turnedTo.set(
                 pick(
                   not(mirrors.of(thisActor())),
@@ -315,9 +301,9 @@ turns.step('turn if it got nowhere', 'react', [
                   ),
                 ),
               ),
-              note('Modulo 360 so a heading stays a number a person can'),
-              note('read in the inspector rather than growing for ever — and'),
-              note('plus 360 first, because a mirror can make it negative.'),
+              doc(
+                'Modulo 360 so a heading stays a number a person can read in the inspector rather than growing for ever — and plus 360 first, because a mirror can make it negative.',
+              ),
               heading.set(
                 thisActor(),
                 remainder(add(turnedTo.get(), n(360)), n(360)),

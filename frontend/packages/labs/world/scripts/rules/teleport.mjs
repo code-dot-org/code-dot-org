@@ -9,6 +9,7 @@ import {
   both,
   countOf,
   defineRule,
+  doc,
   equals,
   filter,
   firstActor,
@@ -20,7 +21,6 @@ import {
   n,
   no,
   not,
-  note,
   over,
   sameActor,
   thisActor,
@@ -215,8 +215,9 @@ export const usePad = travels.block({
     'Step through the pad this actor is standing on, if it is standing on one. Does nothing otherwise.',
   say: ['use the pad'],
   body: () => [
-    note('One pad is a pad with nowhere to go, which is the right answer'),
-    note('rather than a special case — see the header.'),
+    doc(
+      'One pad is a pad with nowhere to go, which is the right answer rather than a special case — see the header.',
+    ),
     here.set(firstActor(padsUnder())),
     when([
       [
@@ -225,10 +226,9 @@ export const usePad = travels.block({
           moreThan(countOf(here.get()), n(0)),
         ),
         [
-          note('Any OTHER pad of the same colour, picked afresh — which is'),
-          note('what `any actor in` is for, and what `first actor in` could'),
-          note('not say: three red pads read with `first` are two pads and a'),
-          note('decoration.'),
+          doc(
+            'Any OTHER pad of the same colour, picked afresh — which is what `any actor in` is for, and what `first actor in` could not say: three red pads read with `first` are two pads and a decoration.',
+          ),
           there.set(
             anyActor(
               filter(other, {
@@ -246,8 +246,9 @@ export const usePad = travels.block({
               [
                 travelling.set(thisActor(), yes()),
                 goingTo.set(thisActor(), there.get()),
-                note('…and how it was standing on the one it is leaving, so'),
-                note('that it arrives standing the same way. See the header.'),
+                doc(
+                  '…and how it was standing on the one it is leaving, so that it arrives standing the same way. See the header.',
+                ),
                 cameInAt.set(
                   thisActor(),
                   minus(position.x(thisActor()), position.x(here.get())),
@@ -257,19 +258,14 @@ export const usePad = travels.block({
                   thisActor(),
                   add(time(), travelSeconds.of(thisActor())),
                 ),
-                note('HELD, and said so rather than merely being still: see'),
-                note('`held still` in Physics. A body that is not moving and'),
-                note('a body that has been stopped look identical from'),
-                note('outside, and `Turning` and `Prowling` both act on the'),
-                note('difference — a ball waiting here would otherwise turn'),
-                note('round every frame of the wait, and a robot would'),
-                note('reconsider every frame of it.'),
+                doc(
+                  'HELD, and said so rather than merely being still: see `held still` in Physics. A body that is not moving and a body that has been stopped look identical from outside, and `Turning` and `Prowling` both act on the difference — a ball waiting here would otherwise turn round every frame of the wait, and a robot would reconsider every frame of it.',
+                ),
                 held.set(thisActor(), yes()),
                 holdStill(),
-                note('And not a target while it is in transit. Health’s own'),
-                note('mercy window, asked for by name — a second idea of'),
-                note('invulnerability living here would be one nothing else'),
-                note('could see (`rules/health`).'),
+                doc(
+                  'And not a target while it is in transit. Health’s own mercy window, asked for by name — a second idea of invulnerability living here would be one nothing else could see (`rules/health`).',
+                ),
                 when([
                   [
                     hasTrait(thisActor(), HasHealth),
@@ -300,9 +296,9 @@ export const usePad = travels.block({
 // nothing — a pad is somewhere you are standing rather than something you pass
 // through, and `Climbing` reads them a frame late for the same reason.
 travels.step('travel', 'push', [
-  note('Standing on nothing? Then whatever pad it last arrived at is behind'),
-  note('it, and the next one may take it. See the header: this is what stops'),
-  note('an enemy leaving, landing and leaving again for ever.'),
+  doc(
+    'Standing on nothing? Then whatever pad it last arrived at is behind it, and the next one may take it. See the header: this is what stops an enemy leaving, landing and leaving again for ever.',
+  ),
   when([[equals(countOf(padsUnder()), n(0)), [clear.set(thisActor(), yes())]]]),
   when(
     [
@@ -327,8 +323,9 @@ travels.step('travel', 'push', [
                 ),
                 travelling.set(thisActor(), no()),
                 held.set(thisActor(), no()),
-                note('It is standing on the pad it arrived at, and that does'),
-                note('not count as touching one.'),
+                doc(
+                  'It is standing on the pad it arrived at, and that does not count as touching one.',
+                ),
                 clear.set(thisActor(), no()),
                 arrives({}, thisActor()),
               ],
@@ -338,14 +335,9 @@ travels.step('travel', 'push', [
       ],
     ],
     [
-      note('An enemy has no choice, which is what makes a room with pads in'),
-      note('it one you cannot plan a route through — but it waits until it is'),
-      note('OVER THE MIDDLE of one. Touching starts at the edge, half a body'),
-      note('before that, and a thing that vanishes on the touch has vanished'),
-      note('while it still looks beside the pad rather than on it.'),
-      note('The pad is read out first: asking where nothing is is asking an'),
-      note('actor that is not there for its position (`rules/prowling` makes'),
-      note('the same guard for the same reason).'),
+      doc(
+        'An enemy has no choice, which is what makes a room with pads in it one you cannot plan a route through — but it waits until it is OVER THE MIDDLE of one. Touching starts at the edge, half a body before that, and a thing that vanishes on the touch has vanished while it still looks beside the pad rather than on it. The pad is read out first: asking where nothing is is asking an actor that is not there for its position (`rules/prowling` makes the same guard for the same reason).',
+      ),
       here.set(firstActor(padsUnder())),
       when([
         [

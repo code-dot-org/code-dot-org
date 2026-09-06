@@ -1150,10 +1150,31 @@ bundle and is not reachable from here — so it costs a dependency, and the
 block was the part worth being sure of first. Markdown in a box beside a live
 preview needs nothing new and is usable now.
 
-Still open: where these belong. §8 gave a rule two surfaces, and a body
-surface is where documentation was wanted — "add documentation to that
-implementation and show it when revealed". And prose is exactly what §4
-(localization) has to carry, so the two meet.
+_Put to work, 2026-09-06._ The stock rules use it. A `note` is one line and is
+shown as typed, so a sentence longer than one was written as several notes and
+read as several — and 410 of the 497 notes in the rule scripts sat in a run of
+two or more. They were not separate remarks; they were wrapped prose:
+
+    note('Only push sideways if it was ALREADY overlapping vertically before it'),
+    note('moved: otherwise it arrived from above or below, and that is the'),
+    note('other pass to make.'),
+
+126 runs, 400 notes, are now 126 paragraphs. The merge is a join on a space,
+because the lines were a wrapped sentence to begin with.
+
+They are drawn where §8 said documentation belonged: inside the member's own
+body surface, revealed with the implementation rather than crowding the rule.
+A rule's interface has none on it.
+
+WHAT IS LEFT is authoring rather than moving. Of a hundred members and steps
+in the stock rules, 54 now carry a paragraph, 25 have a single note that was
+never part of a run, and 21 say nothing at all. The 21 are the ones worth
+writing, and the material for them exists — every rule script opens with a
+`header` of prose that goes into the generated module and has never been
+visible in the workspace at all (47 of them, 34 lines apiece at the median).
+
+Still open: prose is exactly what §4 (localization) has to carry, so the two
+meet.
 
 ## A corner that caught a walk
 

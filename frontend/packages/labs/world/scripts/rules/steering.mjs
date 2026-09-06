@@ -4,6 +4,7 @@ import {
   axisOf,
   both,
   defineRule,
+  doc,
   give,
   lessThan,
   minus,
@@ -233,8 +234,9 @@ chases.step('chase', 'push', [
                     chaseSpeed.of(thisActor()),
                   ),
                 ),
-                note('Sideways always; up and down only if it is that kind of'),
-                note('chaser — otherwise the vertical is gravity’s.'),
+                doc(
+                  'Sideways always; up and down only if it is that kind of chaser — otherwise the vertical is gravity’s.',
+                ),
                 velocity.set(
                   thisActor(),
                   vector(
@@ -264,8 +266,9 @@ flees.step('flee', 'push', [
       anyOf(threat.of(thisActor())),
       [
         gap.set(distance({a: thisActor(), b: threat.of(thisActor())})),
-        note('Only when it is too near, and never when it is exactly here:'),
-        note('there is no direction to run in from a distance of nothing.'),
+        doc(
+          'Only when it is too near, and never when it is exactly here: there is no direction to run in from a distance of nothing.',
+        ),
         when([
           [
             both(

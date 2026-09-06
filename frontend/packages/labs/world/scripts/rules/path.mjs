@@ -10,6 +10,7 @@ import {
   countIn,
   countOf,
   defineRule,
+  doc,
   emptyOut,
   equals,
   firstActor,
@@ -211,8 +212,9 @@ rule.step('think', 'decide', [
                 [
                   quarry.set(firstActor(goal.of(each.get()))),
                   mine.set(snapped(posOf(each.get()), step.of(each.get()))),
-                  note('Already standing on it? Then the way is no way at'),
-                  note('all, which is not the same as not finding one.'),
+                  doc(
+                    'Already standing on it? Then the way is no way at all, which is not the same as not finding one.',
+                  ),
                   when([
                     [
                       atMost(
@@ -235,8 +237,9 @@ rule.step('think', 'decide', [
                   here.set(snapped(posOf(quarry.get()), step.of(each.get()))),
                   addToList(here.get(), seen),
                   addToList(here.get(), queue),
-                  note('Flood out from the GOAL until it reaches me. The'),
-                  note('square it arrived from is the way to walk.'),
+                  doc(
+                    'Flood out from the GOAL until it reaches me. The square it arrived from is the way to walk.',
+                  ),
                   repeatTimes(
                     times(
                       times(reach.of(each.get()), reach.of(each.get())),
@@ -244,9 +247,9 @@ rule.step('think', 'decide', [
                     ),
                     [
                       when([[found.of(each.get()), [stopLoop()]]]),
-                      note('An empty queue is a way that does not exist —'),
-                      note('asked BEFORE taking, since what comes off an'),
-                      note('empty list is not a place to ask about.'),
+                      doc(
+                        'An empty queue is a way that does not exist — asked BEFORE taking, since what comes off an empty list is not a place to ask about.',
+                      ),
                       when([
                         [atMost(countIn(queue.get()), n(0)), [stopLoop()]],
                       ]),
@@ -330,8 +333,9 @@ rule.step('walk', 'move', [
                 [
                   atMost(vectorLength(side.get()), n(1)),
                   [
-                    note('Standing on it already: the next search will pick'),
-                    note('the one after, so stop rather than jitter.'),
+                    doc(
+                      'Standing on it already: the next search will pick the one after, so stop rather than jitter.',
+                    ),
                     velocity.set(each.get(), vector(n(0), n(0))),
                   ],
                 ],

@@ -4,6 +4,7 @@ import {
   axisOf,
   add,
   defineRule,
+  doc,
   equals,
   filter,
   forEach,
@@ -202,9 +203,9 @@ stands.step('read the floor', 'push', [
   note('Nothing said yet: no drag, no ice.'),
   drag.set(n(1)),
   onIce.set(no()),
-  note('What am I standing on? Something I am touching whose middle is below'),
-  note('mine — the same test Carrying makes, and for the same reason. This'),
-  note('only GATHERS: see the header on why acting here would double a floor.'),
+  doc(
+    'What am I standing on? Something I am touching whose middle is below mine — the same test Carrying makes, and for the same reason. This only GATHERS: see the header on why acting here would double a floor.',
+  ),
   forEach(floor, {
     from: standingOn(),
     body: [
@@ -214,27 +215,26 @@ stands.step('read the floor', 'push', [
       when([[hasTrait(floor.get(), Slippery), [onIce.set(yes())]]]),
     ],
   }),
-  note('Sludge MULTIPLIES, so it drags what you were doing rather than'),
-  note('deciding for you — and is a no-op when no floor said anything.'),
+  doc(
+    'Sludge MULTIPLIES, so it drags what you were doing rather than deciding for you — and is a no-op when no floor said anything.',
+  ),
   setAcross(times(axisOf('x', velocity.of(thisActor())), drag.get())),
   when(
     [
       [
         onIce.get(),
         [
-          note('Ice REPLACES, so it goes last. Arriving is when the speed is'),
-          note('taken; after that the walker is no longer choosing it, which'),
-          note('is the whole of what ice means.'),
+          doc(
+            'Ice REPLACES, so it goes last. Arriving is when the speed is taken; after that the walker is no longer choosing it, which is the whole of what ice means.',
+          ),
           when([
             [
               not(sliding.of(thisActor())),
               [
                 sliding.set(thisActor(), yes()),
-                note('The speed it came on with, taken HERE — on the frame'),
-                note('it arrived — rather than inferred later from there'),
-                note('being none recorded. See the header: those two are'),
-                note('the same sentence only on the first patch of ice a'),
-                note('walker ever touches.'),
+                doc(
+                  'The speed it came on with, taken HERE — on the frame it arrived — rather than inferred later from there being none recorded. See the header: those two are the same sentence only on the first patch of ice a walker ever touches.',
+                ),
                 slideSpeed.set(
                   thisActor(),
                   axisOf('x', velocity.of(thisActor())),
@@ -243,9 +243,9 @@ stands.step('read the floor', 'push', [
               ],
             ],
           ]),
-          note('…and a standstill is not a direction, so a walker that'),
-          note('arrived at rest is still listening. See the header: locking'),
-          note('a zero would glue a player to the ice for good.'),
+          doc(
+            '…and a standstill is not a direction, so a walker that arrived at rest is still listening. See the header: locking a zero would glue a player to the ice for good.',
+          ),
           when([
             [
               equals(slideSpeed.of(thisActor()), n(0)),
@@ -262,9 +262,9 @@ stands.step('read the floor', 'push', [
       ],
     ],
     [
-      note('Off the ice, and the walker has its own speed back — and the'),
-      note('ice forgets, so the next patch reads the walker rather than'),
-      note('this one.'),
+      doc(
+        'Off the ice, and the walker has its own speed back — and the ice forgets, so the next patch reads the walker rather than this one.',
+      ),
       when([
         [
           sliding.of(thisActor()),
@@ -280,10 +280,9 @@ stands.step('read the floor', 'push', [
 ]);
 
 stands.step('ride the belt', 'adjust', [
-  note('A POSITION, not a speed — see the header. In `adjust`, one moment'),
-  note('before anything works out what is touching what, so a walker a belt'),
-  note('pushed into a wall is pushed back out in the same frame rather than'),
-  note('spending one inside it. Carrying makes the same two choices.'),
+  doc(
+    'A POSITION, not a speed — see the header. In `adjust`, one moment before anything works out what is touching what, so a walker a belt pushed into a wall is pushed back out in the same frame rather than spending one inside it. Carrying makes the same two choices.',
+  ),
   belt.set(n(0)),
   forEach(floor, {
     from: standingOn(),
@@ -293,8 +292,9 @@ stands.step('ride the belt', 'adjust', [
       ]),
     ],
   }),
-  note('Units a second against a position in pixels, which is the one place'),
-  note('the two meet.'),
+  doc(
+    'Units a second against a position in pixels, which is the one place the two meet.',
+  ),
   setPosition(
     thisActor(),
     add(

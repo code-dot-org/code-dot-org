@@ -4,6 +4,7 @@ import {
   allWithTrait,
   axisOf,
   defineRule,
+  doc,
   forEach,
   frameTime,
   moduleFor,
@@ -159,8 +160,9 @@ rule.step('note where each body starts', 'sense', [
   forEach(each, {
     from: allWithTrait(CanMove),
     body: [
-      note('Before anything moves: where is everybody? Written down so that'),
-      note('the rest of the frame can ask, whatever moves them meanwhile.'),
+      doc(
+        'Before anything moves: where is everybody? Written down so that the rest of the frame can ask, whatever moves them meanwhile.',
+      ),
       positionBefore.set(
         each.get(),
         position.x(each.get()),

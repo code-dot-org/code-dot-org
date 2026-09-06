@@ -2,13 +2,13 @@ import {
   add,
   allWithTrait,
   defineRule,
+  doc,
   equals,
   filter,
   forEach,
   give,
   moduleFor,
   n,
-  note,
   param,
   remainder,
 } from './dsl.mjs';
@@ -103,11 +103,13 @@ export const endTheTurn = rule.block({
     'Say that a turn has happened: everything that takes turns is told to act, and the count goes up. Call it on the move that happened — Grid’s "finishes a step" — rather than on the key that asked for one.',
   say: ['end the turn'],
   body: () => [
-    note('Counted first, so a handler that asks how many turns have gone by'),
-    note('sees this one. A turn that is happening has happened.'),
+    doc(
+      'Counted first, so a handler that asks how many turns have gone by sees this one. A turn that is happening has happened.',
+    ),
     taken.set(add(taken.of(), n(1))),
-    note('Everything that takes turns, except the ones this turn is not'),
-    note('theirs: a snail with 2 turns per move acts on the even ones.'),
+    doc(
+      'Everything that takes turns, except the ones this turn is not theirs: a snail with 2 turns per move acts on the even ones.',
+    ),
     forEach(each, {
       from: filter(each, {
         from: allWithTrait(TakesATurn),
@@ -115,8 +117,9 @@ export const endTheTurn = rule.block({
       }),
       body: [takesItsTurn({}, each.get())],
     }),
-    note('Said last, when everybody has been told: a world handler that keeps'),
-    note('its own books should see the turn already dealt out.'),
+    doc(
+      'Said last, when everybody has been told: a world handler that keeps its own books should see the turn already dealt out.',
+    ),
     turnPasses({}),
   ],
 });
@@ -135,8 +138,9 @@ export const everyNTurns = rule.block({
     'Whether the turn just taken is one of every so many — for a project that spawns something on every fifth turn. Ask it while a turn is passing.',
   say: ['every', param('how many', 'number'), 'turns?'],
   body: refs => [
-    note('Turn zero divides by everything, so this is true before the game'),
-    note('has begun — ask it in "a turn passes", where turn zero never is.'),
+    doc(
+      'Turn zero divides by everything, so this is true before the game has begun — ask it in "a turn passes", where turn zero never is.',
+    ),
     give(equals(remainder(taken.of(), refs['how many'].get()), n(0))),
   ],
 });

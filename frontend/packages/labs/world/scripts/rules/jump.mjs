@@ -4,6 +4,7 @@ import {
   axisOf,
   both,
   defineRule,
+  doc,
   equals,
   give,
   lessThan,
@@ -124,9 +125,9 @@ jumps.step('watch the ground', 'sense', [
       ],
     ],
     [
-      note('In the air, and the grace has run out with the ground jump'),
-      note('unspent: spend it. Walking off a ledge costs the ground jump,'),
-      note('so a double jumper gets ONE air jump rather than two.'),
+      doc(
+        'In the air, and the grace has run out with the ground jump unspent: spend it. Walking off a ledge costs the ground jump, so a double jumper gets ONE air jump rather than two.',
+      ),
       when([
         [
           both(
@@ -164,8 +165,9 @@ export const makeJump = rule.block({
       [
         lessThan(used.of(who.get()), allowed.of(who.get())),
         [
-          note('Write it down BEFORE telling anyone: the handler may jump'),
-          note('again, and a tally written afterwards would miss it.'),
+          doc(
+            'Write it down BEFORE telling anyone: the handler may jump again, and a tally written afterwards would miss it.',
+          ),
           used.set(who.get(), add(used.of(who.get()), n(1))),
           note('Which way is up? The opposite of wherever gravity pulls.'),
           sign.set(n(1)),
@@ -175,8 +177,9 @@ export const makeJump = rule.block({
               [sign.set(n(-1))],
             ],
           ]),
-          note('REPLACE the vertical speed rather than adding to it: a second'),
-          note('jump out of a long fall has to go as high as the first.'),
+          doc(
+            'REPLACE the vertical speed rather than adding to it: a second jump out of a long fall has to go as high as the first.',
+          ),
           velocity.set(
             who.get(),
             vector(

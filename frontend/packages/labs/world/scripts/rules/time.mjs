@@ -4,6 +4,7 @@ import {
   both,
   allWithTrait,
   defineRule,
+  doc,
   forEach,
   give,
   moduleFor,
@@ -125,8 +126,9 @@ rule.step('tick', 'sense', [
         [
           both(runs.of(each.get()), atLeast(time(), nextAt.of(each.get()))),
           [
-            note('Schedule the next one BEFORE saying anything, so a handler'),
-            note('that restarts or stops it has the last word, not this.'),
+            doc(
+              'Schedule the next one BEFORE saying anything, so a handler that restarts or stops it has the last word, not this.',
+            ),
             nextAt.set(each.get(), add(time(), period.of(each.get()))),
             when([[not(repeats.of(each.get())), [runs.set(each.get(), no())]]]),
             fires({}, each.get()),

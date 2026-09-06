@@ -157,6 +157,21 @@ export const firstCharacters = (words, count) => ({
 
 export const note = text => ({type: 'world_comment', fields: {TEXT: text}});
 
+/**
+ * `doc` — a paragraph of documentation, drawn as markdown.
+ *
+ * A `note` is one line and is shown as typed, so a sentence longer than one
+ * became three notes and read as three. This is the paragraph itself: headings,
+ * lists and emphasis, laid out as prose on the block (`FieldMarkdown`).
+ *
+ * It changes nothing about what runs — the generator writes it out as `//`
+ * lines, exactly as a note is written out.
+ */
+export const doc = markdown => ({
+  type: 'world_doc',
+  fields: {DOC: markdown},
+});
+
 /** `last of <list>` — the end a stack is read from. */
 export const lastOf = list => ({
   type: 'world_list_last',

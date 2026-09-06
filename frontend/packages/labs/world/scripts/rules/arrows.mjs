@@ -3,10 +3,10 @@ import {
   add,
   axisOf,
   defineRule,
+  doc,
   keyDown,
   moduleFor,
   n,
-  note,
   pick,
   thisActor,
   times,
@@ -74,10 +74,9 @@ const pushed = (forward, back, speed) =>
   );
 
 across.step('walk across', 'decide', [
-  note('While an arrow is held, walk that way; while it is not, stand still.'),
-  note('Holding both at once cancels out, because we add the two amounts.'),
-  note('Across only: the down speed is read and written back unchanged, which'),
-  note('is what lets this and "Moves Down" share a moment.'),
+  doc(
+    'While an arrow is held, walk that way; while it is not, stand still. Holding both at once cancels out, because we add the two amounts. Across only: the down speed is read and written back unchanged, which is what lets this and "Moves Down" share a moment.',
+  ),
   velocity.set(
     thisActor(),
     vector(
@@ -88,9 +87,9 @@ across.step('walk across', 'decide', [
 ]);
 
 down.step('walk down', 'decide', [
-  note('Down only, and the across speed passes through untouched.'),
-  note('An actor with this and gravity both will fight its own falling, which'),
-  note('is why a platformer elects "Moves Across" and leaves this alone.'),
+  doc(
+    'Down only, and the across speed passes through untouched. An actor with this and gravity both will fight its own falling, which is why a platformer elects "Moves Across" and leaves this alone.',
+  ),
   velocity.set(
     thisActor(),
     vector(

@@ -6,6 +6,7 @@ import {
   axisOf,
   both,
   defineRule,
+  doc,
   filter,
   forEach,
   forEachButton,
@@ -15,7 +16,6 @@ import {
   moreThan,
   mousePosition,
   n,
-  note,
   over,
   param,
   pick,
@@ -148,8 +148,9 @@ const clickTargets = () => [
 ];
 
 rule.step('buttonEvents', 'sense', [
-  note('The world knows which buttons are held. What it also knows, and'),
-  note('nothing else can work out, is which ones CHANGED this frame.'),
+  doc(
+    'The world knows which buttons are held. What it also knows, and nothing else can work out, is which ones CHANGED this frame.',
+  ),
   forEachButton('PRESSED', button, [
     ...announce(pressed, presses, 'pressed button'),
     ...clickTargets(),

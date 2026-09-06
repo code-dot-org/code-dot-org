@@ -3,8 +3,8 @@ import {
   add,
   anyOf,
   defineRule,
+  doc,
   moduleFor,
-  note,
   thisActor,
   when,
 } from './dsl.mjs';
@@ -68,8 +68,9 @@ const offset = attached.point('offset', {x: 0, y: -24});
 export const Attached = rule.traitRef('Attached');
 
 attached.step('ride along', 'react', [
-  note('Attached to nobody is the ordinary state of a rider nothing has'),
-  note('pointed yet, so it stays where it was put rather than at the origin.'),
+  doc(
+    'Attached to nobody is the ordinary state of a rider nothing has pointed yet, so it stays where it was put rather than at the origin.',
+  ),
   when([
     [
       anyOf(attachedTo.of(thisActor())),

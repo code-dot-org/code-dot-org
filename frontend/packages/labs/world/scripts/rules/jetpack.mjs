@@ -5,6 +5,7 @@ import {
   axisOf,
   both,
   defineRule,
+  doc,
   frameTime,
   give,
   lessThan,
@@ -233,15 +234,16 @@ export const giveFuel = rule.block({
 });
 
 flies.step('thrust', 'push', [
-  note('A FORCE, in the moment forces are added — beside gravity’s own, and'),
-  note('the only moment that knows how long a frame is. Every frame the'),
-  note('jetpack is on, which is why nothing outside has to count them.'),
+  doc(
+    'A FORCE, in the moment forces are added — beside gravity’s own, and the only moment that knows how long a frame is. Every frame the jetpack is on, which is why nothing outside has to count them.',
+  ),
   when([
     [
       flying.of(thisActor()),
       [
-        note('Burn. Per SECOND rather than per frame, so a fast screen does'),
-        note('not empty the tank quicker than a slow one.'),
+        doc(
+          'Burn. Per SECOND rather than per frame, so a fast screen does not empty the tank quicker than a slow one.',
+        ),
         fuel.set(
           thisActor(),
           minus(
@@ -251,8 +253,9 @@ flies.step('thrust', 'push', [
         ),
         note('Which way is up? The opposite of wherever gravity pulls.'),
         ...decideSign,
-        note('ACCELERATION, not speed: the actor has to out-push gravity'),
-        note('before it rises, and keeps rising after the switch goes off.'),
+        doc(
+          'ACCELERATION, not speed: the actor has to out-push gravity before it rises, and keeps rising after the switch goes off.',
+        ),
         velocity.set(
           thisActor(),
           vector(
@@ -263,8 +266,9 @@ flies.step('thrust', 'push', [
             ),
           ),
         ),
-        note('Capped AGAINST gravity only. Falling is Gravity’s business,'),
-        note('and a jetpack that slowed the fall would be a parachute.'),
+        doc(
+          'Capped AGAINST gravity only. Falling is Gravity’s business, and a jetpack that slowed the fall would be a parachute.',
+        ),
         when([
           [
             lessThan(
@@ -282,10 +286,9 @@ flies.step('thrust', 'push', [
             ],
           ],
         ]),
-        note('An empty tank switches itself off, and says both things: the'),
-        note('tank is a moment of its own, and the flying stopping is the'),
-        note('same moment a released key would have made. A project that'),
-        note('handles one and not the other is not caught out either way.'),
+        doc(
+          'An empty tank switches itself off, and says both things: the tank is a moment of its own, and the flying stopping is the same moment a released key would have made. A project that handles one and not the other is not caught out either way.',
+        ),
         when([
           [
             atMost(fuel.of(thisActor()), n(0)),

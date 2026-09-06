@@ -4,6 +4,7 @@ import {
   both,
   countOf,
   defineRule,
+  doc,
   equals,
   filter,
   forEach,
@@ -13,7 +14,6 @@ import {
   n,
   no,
   not,
-  note,
   thisActor,
   when,
   yes,
@@ -112,10 +112,9 @@ const wall = rule.local('wall', 'Actor');
 const pressed = rule.local('pressed', 'Boolean');
 
 switches.step('flip when walked over', 'react', [
-  note('Anything ON it that has a way of moving. Not "the player": a room'),
-  note('where an enemy can shut a wall behind you is worth walking through'),
-  note('carefully, and a wall or a coin cannot press one because neither'),
-  note('has any way of arriving.'),
+  doc(
+    'Anything ON it that has a way of moving. Not "the player": a room where an enemy can shut a wall behind you is worth walking through carefully, and a wall or a coin cannot press one because neither has any way of arriving.',
+  ),
   pressed.set(
     moreThan(
       countOf(
@@ -127,15 +126,16 @@ switches.step('flip when walked over', 'react', [
       n(0),
     ),
   ),
-  note('THE MOMENT IT ARRIVES, not every frame it stays — see the header on'),
-  note('the difference between a switch and a strobe.'),
+  doc(
+    'THE MOMENT IT ARRIVES, not every frame it stays — see the header on the difference between a switch and a strobe.',
+  ),
   when([
     [
       both(pressed.get(), not(wasPressed.of(thisActor()))),
       [
-        note('EVERY WALL OF MY COLOUR, each flipped from wherever it was —'),
-        note('see the header: two red walls, one open and one shut, are a'),
-        note('corridor a red switch swaps rather than a pair it opens.'),
+        doc(
+          'EVERY WALL OF MY COLOUR, each flipped from wherever it was — see the header: two red walls, one open and one shut, are a corridor a red switch swaps rather than a pair it opens.',
+        ),
         forEach(wall, {
           from: filter(wall, {
             from: allWithTrait(IsASwitchedWall),

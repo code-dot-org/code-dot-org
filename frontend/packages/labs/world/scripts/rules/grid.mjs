@@ -7,6 +7,7 @@ import {
   axisOf,
   both,
   defineRule,
+  doc,
   filter,
   firstActor,
   frameTime,
@@ -265,9 +266,9 @@ const stepBy = mover.block({
                   not(stepping.of(into.get())),
                 ),
                 [
-                  note('A crate. It goes only if the square past it is free —'),
-                  note('the test a project writes wrong by hand, and the'),
-                  note('difference between Sokoban and crates eating crates.'),
+                  doc(
+                    'A crate. It goes only if the square past it is free — the test a project writes wrong by hand, and the difference between Sokoban and crates eating crates.',
+                  ),
                   beyond.set(fillerAt(oneOver(posOf(into.get()), by()))),
                   when([
                     [
@@ -321,8 +322,9 @@ mover.step('cross the square', 'move', [
           [
             atMost(remaining.get(), n(0)),
             [
-              note('Due, or overdue. Land exactly on the square — an actor a'),
-              note('pixel off its tile is a board that stops adding up.'),
+              doc(
+                'Due, or overdue. Land exactly on the square — an actor a pixel off its tile is a board that stops adding up.',
+              ),
               moveTo(thisActor(), target.of(thisActor())),
               stepping.set(thisActor(), no()),
               arrives({}, thisActor()),
@@ -331,9 +333,9 @@ mover.step('cross the square', 'move', [
           [
             yes(),
             [
-              note('Cover the fraction of what is left that this frame is of'),
-              note('the time left. Arrives on the deadline at any frame rate,'),
-              note('and needs no memory of where the step began.'),
+              doc(
+                'Cover the fraction of what is left that this frame is of the time left. Arrives on the deadline at any frame rate, and needs no memory of where the step began.',
+              ),
               moveTo(
                 thisActor(),
                 vectorPlus(

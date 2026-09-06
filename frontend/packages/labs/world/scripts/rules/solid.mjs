@@ -8,6 +8,7 @@ import {
   both,
   not,
   defineRule,
+  doc,
   filter,
   forEach,
   frameTime,
@@ -77,8 +78,9 @@ const kept = rule.block({
     'A number the way these properties are meant: never below 0, never above 1.',
   say: [param('n', 'number'), 'kept between 0 and 1'],
   body: ({n: amount}) => [
-    note('Below zero would push the body the wrong way; above one would'),
-    note('give it more speed than it arrived with, every single bounce.'),
+    doc(
+      'Below zero would push the body the wrong way; above one would give it more speed than it arrived with, every single bounce.',
+    ),
     when([[lessThan(amount.get(), n(0)), [give(n(0))]]]),
     when([[moreThan(amount.get(), n(1)), [give(n(1))]]]),
     give(amount.get()),
@@ -94,8 +96,9 @@ const slowedBy = rule.block({
   body: ({v, drop}) => [
     note('A surface with no grip takes nothing away.'),
     when([[atMost(drop.get(), n(0)), [give(v.get())]]]),
-    note('If the grip is stronger than the speed, the speed is gone —'),
-    note('not reversed, which is what makes a grippy wall HOLD a body.'),
+    doc(
+      'If the grip is stronger than the speed, the speed is gone — not reversed, which is what makes a grippy wall HOLD a body.',
+    ),
     when([[atMost(absolute(v.get()), drop.get()), [give(n(0))]]]),
     when([[moreThan(v.get(), n(0)), [give(minus(v.get(), drop.get()))]]]),
     give(add(v.get(), drop.get())),
@@ -189,8 +192,9 @@ const measure = (body, solid) => [
       n(2),
     ),
   ),
-  note('Where this actor was at the top of the frame, before anything'),
-  note('moved it — Physics writes it down, so this is a record, not a guess.'),
+  doc(
+    'Where this actor was at the top of the frame, before anything moved it — Physics writes it down, so this is a record, not a guess.',
+  ),
   was.set(vector(positionBefore.x(body.get()), positionBefore.y(body.get()))),
 ];
 
@@ -213,8 +217,9 @@ const pushOutSideways = rule.block({
     note(
       'Only push sideways if it was ALREADY overlapping vertically before it',
     ),
-    note('moved: otherwise it arrived from above or below, and that is the'),
-    note('other pass to make.'),
+    doc(
+      'moved: otherwise it arrived from above or below, and that is the other pass to make.',
+    ),
     when([
       [
         both(overlapsNow('x', body, solid), overlappedBefore('y', solid)),
@@ -274,11 +279,9 @@ const pushOutUpOrDown = rule.block({
     note(
       'Only push up or down if it overlaps sideways NOW — the sideways pass',
     ),
-    note('has already run, so a body it pushed clear of a wall is clear here'),
-    note('and keeps the speed it was climbing with.'),
-    note('How far into it this body is, across. A small number here is a'),
-    note('CORNER — the body is mostly past the block and is being caught by'),
-    note('an edge — which is the one case worth treating differently.'),
+    doc(
+      'has already run, so a body it pushed clear of a wall is clear here and keeps the speed it was climbing with. How far into it this body is, across. A small number here is a CORNER — the body is mostly past the block and is being caught by an edge — which is the one case worth treating differently.',
+    ),
     into.set(
       minus(
         axisOf('x', reach.get()),
@@ -311,10 +314,9 @@ const pushOutUpOrDown = rule.block({
                   ),
                 ),
                 [
-                  note('SLIP ROUND IT. Nudged clear across and left going the'),
-                  note('way it was going — see `Slips Round Corners`. The'),
-                  note('velocity is not touched at all: being stopped is the'),
-                  note('thing this exists to avoid.'),
+                  doc(
+                    'SLIP ROUND IT. Nudged clear across and left going the way it was going — see `Slips Round Corners`. The velocity is not touched at all: being stopped is the thing this exists to avoid.',
+                  ),
                   setPosition(
                     body.get(),
                     add(
@@ -386,9 +388,9 @@ const mover = rule.local('mover', 'Actor');
 const solid = rule.local('solid', 'Actor');
 
 rule.step('resolve', 'settle', [
-  note('Everything this actor is touching was worked out by Contacts.'),
-  note('Push out sideways FIRST, then up and down — one axis at a time.'),
-  note('Doing both at once is what used to make a jump stick to a wall.'),
+  doc(
+    'Everything this actor is touching was worked out by Contacts. Push out sideways FIRST, then up and down — one axis at a time. Doing both at once is what used to make a jump stick to a wall.',
+  ),
   forEach(mover, {
     from: filter(mover, {
       where: both(

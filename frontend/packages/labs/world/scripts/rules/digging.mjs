@@ -8,6 +8,7 @@ import {
   both,
   countOf,
   defineRule,
+  doc,
   extremeActor,
   forEach,
   lessThan,
@@ -20,7 +21,6 @@ import {
   n,
   no,
   not,
-  note,
   param,
   thisActor,
   time,
@@ -175,8 +175,9 @@ export const digTowards = digger.block({
     'Open a hole in the nearest diggable block in this direction. Does nothing if there is none.',
   say: ['dig towards', param('direction', 'vector')],
   body: ({direction}) => [
-    note('Where the digger is pointing, one reach away — the place a block'),
-    note('has to be near to count as the one that was aimed at.'),
+    doc(
+      'Where the digger is pointing, one reach away — the place a block has to be near to count as the one that was aimed at.',
+    ),
     target.set(
       vector(
         add(
@@ -189,9 +190,9 @@ export const digTowards = digger.block({
         ),
       ),
     ),
-    note('THE NEAREST ONE, asked of the index rather than of every actor —'),
-    note('and one block, not a radius, because a radius is a bomb rather'),
-    note('than a shovel.'),
+    doc(
+      'THE NEAREST ONE, asked of the index rather than of every actor — and one block, not a radius, because a radius is a bomb rather than a shovel.',
+    ),
     found.set(
       extremeActor(block, {
         from: withTraitNear(CanBeDug, reach.of(thisActor()), target.get()),
@@ -206,15 +207,15 @@ export const digTowards = digger.block({
       [
         both(moreThan(countOf(found.get()), n(0)), not(open.of(found.get()))),
         [
-          note('A hole is `passes through things` — the same lever a switched'),
-          note('wall uses, because "it is not there" is one sentence and not'),
-          note('four (`rules/collisions`).'),
+          doc(
+            'A hole is `passes through things` — the same lever a switched wall uses, because "it is not there" is one sentence and not four (`rules/collisions`).',
+          ),
           passable.set(found.get(), yes()),
           open.set(found.get(), yes()),
           closesAt.set(found.get(), add(time(), closesAfter.of(found.get()))),
-          note('…and line up with it — see `centers on what it digs`. A hole'),
-          note('is exactly as wide as the body that made it, so being a few'),
-          note('pixels across from your own hole is standing on its lip.'),
+          doc(
+            '…and line up with it — see `centers on what it digs`. A hole is exactly as wide as the body that made it, so being a few pixels across from your own hole is standing on its lip.',
+          ),
           liningUpWith.set(thisActor(), found.get()),
           linedUp.set(thisActor(), no()),
           dug({}, found.get()),
@@ -241,8 +242,9 @@ digger.step('line up with what it dug', 'adjust', [
         ),
       ),
       [
-        note('How far off centre, and how far this frame may close it —'),
-        note('never past the middle, or a glide becomes a wobble.'),
+        doc(
+          'How far off centre, and how far this frame may close it — never past the middle, or a glide becomes a wobble.',
+        ),
         across.set(
           minus(
             position.x(liningUpWith.of(thisActor())),
@@ -260,8 +262,9 @@ digger.step('line up with what it dug', 'adjust', [
             [
               lessThan(absolute(across.get()), n(0.5)),
               [
-                note('Arrived, and let go: a digger still pulled towards its'),
-                note('own hole could not walk away from it.'),
+                doc(
+                  'Arrived, and let go: a digger still pulled towards its own hole could not walk away from it.',
+                ),
                 linedUp.set(thisActor(), yes()),
               ],
             ],
@@ -290,9 +293,9 @@ digger.step('line up with what it dug', 'adjust', [
 ]);
 
 rule.step('fill the holes back in', 'sense', [
-  note('The block owns its own clock, so this asks every hole rather than'),
-  note('every digger: a hole outlives whoever made it, and closes on time'),
-  note('whether or not that actor is still in the world.'),
+  doc(
+    'The block owns its own clock, so this asks every hole rather than every digger: a hole outlives whoever made it, and closes on time whether or not that actor is still in the world.',
+  ),
   forEach(closing, {
     from: allWithTrait(CanBeDug),
     body: [
@@ -305,8 +308,9 @@ rule.step('fill the holes back in', 'sense', [
           [
             passable.set(closing.get(), no()),
             open.set(closing.get(), no()),
-            note('And whoever is standing in it is told about — see the'),
-            note('header on why this rule does not decide what that costs.'),
+            doc(
+              'And whoever is standing in it is told about — see the header on why this rule does not decide what that costs.',
+            ),
             filled({}, closing.get()),
           ],
         ],

@@ -6,6 +6,7 @@ import {
   both,
   countOf,
   defineRule,
+  doc,
   extremeActor,
   filter,
   frameTime,
@@ -217,8 +218,9 @@ export const onLadder = climbs.block({
     'Whether this actor is touching a ladder — something that elects "Can Be Climbed".',
   say: ['is on a ladder?'],
   body: () => [
-    note('`how many ACTORS` rather than `how many in`: a list of actors is'),
-    note('its own type here, and the general list block cannot read one.'),
+    doc(
+      '`how many ACTORS` rather than `how many in`: a list of actors is its own type here, and the general list block cannot read one.',
+    ),
     give(moreThan(countOf(ladderUnder()), n(0))),
   ],
 });
@@ -230,9 +232,9 @@ const begin = who => [
     [
       onLadder({}, who),
       [
-        note('Gravity stops holding this actor up — see the header. Without'),
-        note('this, climbing DOWN off the top of a ladder is re-landed every'),
-        note('frame and goes nowhere.'),
+        doc(
+          'Gravity stops holding this actor up — see the header. Without this, climbing DOWN off the top of a ladder is re-landed every frame and goes nowhere.',
+        ),
         ignoresGround.set(who, yes()),
         when([
           [
@@ -269,12 +271,13 @@ const end = who => [
       [
         climbing.set(who, no()),
         climbMeasured.set(who, no()),
-        note('Gravity holds this actor up again — a climber that kept this'),
-        note('would walk off the next ledge and through the floor under it.'),
+        doc(
+          'Gravity holds this actor up again — a climber that kept this would walk off the next ledge and through the floor under it.',
+        ),
         ignoresGround.set(who, no()),
-        note('…and at rest, so letting go of a ladder drops this actor from'),
-        note('a standstill rather than carrying the climb on as a fall — or,'),
-        note('going up, flicking it off the top like a hop.'),
+        doc(
+          '…and at rest, so letting go of a ladder drops this actor from a standstill rather than carrying the climb on as a fall — or, going up, flicking it off the top like a hop.',
+        ),
         velocity.set(who, vector(axisOf('x', velocity.of(who)), n(0))),
         stoppedClimbing({}, who),
       ],
@@ -295,29 +298,24 @@ climbs.step('climb', 'adjust', [
     [
       climbing.of(thisActor()),
       [
-        note('The ladder running out is what stepping off the top IS, so'),
-        note('there is no separate block for it.'),
+        doc(
+          'The ladder running out is what stepping off the top IS, so there is no separate block for it.',
+        ),
         when(
           [
             [
               not(onLadder({}, thisActor())),
               [
-                note('The ladder has run out. Going UP that means the top,'),
-                note('and the climber is put down on the rung it last held'),
-                note('rather than left in the air above it — see the header'),
-                note('on the hop that came of leaving it there. Going DOWN'),
-                note('it means the bottom, and falling off the bottom of a'),
-                note('ladder is just falling.'),
+                doc(
+                  'The ladder has run out. Going UP that means the top, and the climber is put down on the rung it last held rather than left in the air above it — see the header on the hop that came of leaving it there. Going DOWN it means the bottom, and falling off the bottom of a ladder is just falling.',
+                ),
                 when([
                   [
                     goingUp.of(thisActor()),
                     [
-                      note('A QUARTER PIXEL below the top, not exactly on'),
-                      note('it. Contacts are worked out from boxes that'),
-                      note('overlap, and boxes that merely share an edge do'),
-                      note('not — so a climber put down exactly on the'),
-                      note('surface is touching nothing, and there is'),
-                      note('nothing for Gravity to land it on.'),
+                      doc(
+                        'A QUARTER PIXEL below the top, not exactly on it. Contacts are worked out from boxes that overlap, and boxes that merely share an edge do not — so a climber put down exactly on the surface is touching nothing, and there is nothing for Gravity to land it on.',
+                      ),
                       setPosition(
                         thisActor(),
                         position.x(thisActor()),
@@ -336,15 +334,9 @@ climbs.step('climb', 'adjust', [
                   ],
                 ]),
                 ...end(thisActor()),
-                note('…and a whisper of downward speed, which is the other'),
-                note('half of the same problem. Gravity lands a body by'),
-                note('asking whether it CROSSED a surface this frame, and'),
-                note('crossing is a question about where it WAS — which at'),
-                note('a dead stop is where it is. So the two together: a'),
-                note('quarter pixel below, moving slowly down, which reads'),
-                note('as a crossing and lands. The landing snaps it back to'),
-                note('the surface, so nothing on screen moves and neither'),
-                note('event is raised.'),
+                doc(
+                  '…and a whisper of downward speed, which is the other half of the same problem. Gravity lands a body by asking whether it CROSSED a surface this frame, and crossing is a question about where it WAS — which at a dead stop is where it is. So the two together: a quarter pixel below, moving slowly down, which reads as a crossing and lands. The landing snaps it back to the surface, so nothing on screen moves and neither event is raised.',
+                ),
                 when([
                   [
                     goingUp.of(thisActor()),
@@ -360,8 +352,9 @@ climbs.step('climb', 'adjust', [
             ],
           ],
           [
-            note('Which rung is highest, kept for the frame the ladder runs'),
-            note('out — by then the contact set no longer has it.'),
+            doc(
+              'Which rung is highest, kept for the frame the ladder runs out — by then the contact set no longer has it.',
+            ),
             topRung.set(
               thisActor(),
               extremeActor(rung, {
@@ -370,16 +363,13 @@ climbs.step('climb', 'adjust', [
                 key: position.y(rung.get()),
               }),
             ),
-            note('A climb has happened this frame, so the step in `react`'),
-            note('may judge whether it got anywhere — see `climb measured`.'),
+            doc(
+              'A climb has happened this frame, so the step in `react` may judge whether it got anywhere — see `climb measured`.',
+            ),
             climbMeasured.set(thisActor(), yes()),
-            note('Where this actor was at the top of the frame, plus a'),
-            note('frame of climbing. Whatever gravity did to y since then is'),
-            note('not consulted — see the header. Up is negative y, and the'),
-            note('speed is units a second against a position in pixels, so'),
-            note('this is the one place the two meet.'),
-            note('On to the middle of the ladder, unless the project says'),
-            note('otherwise — see `centers on the ladder`.'),
+            doc(
+              'Where this actor was at the top of the frame, plus a frame of climbing. Whatever gravity did to y since then is not consulted — see the header. Up is negative y, and the speed is units a second against a position in pixels, so this is the one place the two meet. On to the middle of the ladder, unless the project says otherwise — see `centers on the ladder`.',
+            ),
             setPosition(
               thisActor(),
               pick(
@@ -398,10 +388,9 @@ climbs.step('climb', 'adjust', [
                 ),
               ),
             ),
-            note('…and the speed it just moved at, so that anything reading'),
-            note('the velocity — a bounce, a slide, an animation choosing'),
-            note('between climbing and hanging — sees a climb and not a'),
-            note('standstill.'),
+            doc(
+              '…and the speed it just moved at, so that anything reading the velocity — a bounce, a slide, an animation choosing between climbing and hanging — sees a climb and not a standstill.',
+            ),
             velocity.set(
               thisActor(),
               vector(
@@ -452,10 +441,9 @@ climbs.step('stop if the climb got nowhere', 'react', [
     [
       both(climbing.of(thisActor()), climbMeasured.of(thisActor())),
       [
-        note('Against where Physics saw this body at the top of the frame,'),
-        note('which is where the climb below started from. Up is negative'),
-        note('y, so the distance is signed by the direction, and a climb'),
-        note('that was pushed BACKWARDS is stopped too.'),
+        doc(
+          'Against where Physics saw this body at the top of the frame, which is where the climb below started from. Up is negative y, so the distance is signed by the direction, and a climb that was pushed BACKWARDS is stopped too.',
+        ),
         got.set(
           times(
             minus(position.y(thisActor()), positionBefore.y(thisActor())),

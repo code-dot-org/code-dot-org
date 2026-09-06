@@ -13,6 +13,7 @@ import {
   both,
   countOf,
   defineRule,
+  doc,
   either,
   equals,
   lessThan,
@@ -186,17 +187,13 @@ const dy = rule.local('dy', 'Number');
 const dx = rule.local('dx', 'Number');
 
 prowls.step('choose at a junction', 'decide', [
-  note('Nothing to hunt, nothing to do. A robot with no quarry keeps'),
-  note('whatever heading it had, which is a robot on patrol.'),
+  doc(
+    'Nothing to hunt, nothing to do. A robot with no quarry keeps whatever heading it had, which is a robot on patrol.',
+  ),
   ladder.set(onLadder({}, thisActor())),
-  note('Stopped? A robot that asked to go somewhere and did not has run out'),
-  note('of the direction it chose — a quarter of a pixel of tolerance in'),
-  note('each axis, so that a body Solid has nudged is not read as one that'),
-  note('got somewhere. Both axes, because a climber pinned against a floor'),
-  note('gets nowhere in either and a falling robot gets somewhere in one.'),
-  note('…and nothing at all counts while something is holding it: a robot'),
-  note('waiting out a teleport has not run out of anywhere to go, it is'),
-  note('being carried (`held still` in Physics).'),
+  doc(
+    'Stopped? A robot that asked to go somewhere and did not has run out of the direction it chose — a quarter of a pixel of tolerance in each axis, so that a body Solid has nudged is not read as one that got somewhere. Both axes, because a climber pinned against a floor gets nowhere in either and a falling robot gets somewhere in one. …and nothing at all counts while something is holding it: a robot waiting out a teleport has not run out of anywhere to go, it is being carried (`held still` in Physics).',
+  ),
   stuck.set(
     both(
       not(held.of(thisActor())),
@@ -212,8 +209,9 @@ prowls.step('choose at a junction', 'decide', [
       ),
     ),
   ),
-  note('The four moments, and each is a CHANGE rather than a state:'),
-  note('landing, arriving at a ladder, a climb ending, and getting nowhere.'),
+  doc(
+    'The four moments, and each is a CHANGE rather than a state: landing, arriving at a ladder, a climb ending, and getting nowhere.',
+  ),
   junction.set(
     either(
       either(
@@ -226,8 +224,9 @@ prowls.step('choose at a junction', 'decide', [
       ),
     ),
   ),
-  note('…and nothing at all to decide with no quarry to decide about. See'),
-  note('the header: a choice made on no information uses up the junction.'),
+  doc(
+    '…and nothing at all to decide with no quarry to decide about. See the header: a choice made on no information uses up the junction.',
+  ),
   when([
     [
       both(junction.get(), moreThan(countOf(quarry.of(thisActor())), n(0))),
@@ -239,14 +238,9 @@ prowls.step('choose at a junction', 'decide', [
         dx.set(
           minus(position.x(quarry.of(thisActor())), position.x(thisActor())),
         ),
-        note('A CLIMB THAT GOT NOWHERE RULES ITSELF OUT, which is the same'),
-        note('sentence as the wall below and cost the same bug. A robot on'),
-        note('the bottom rung with its quarry beneath it asks to climb'),
-        note('down, the floor refuses, the climb ends having moved nothing'),
-        note('— and that ending is a junction, at which the robot asks to'),
-        note('climb down. It stood there for the rest of the level. So the'),
-        note('direction a failed climb was going is the one direction now'),
-        note('known not to work, and this junction may not choose it.'),
+        doc(
+          'A CLIMB THAT GOT NOWHERE RULES ITSELF OUT, which is the same sentence as the wall below and cost the same bug. A robot on the bottom rung with its quarry beneath it asks to climb down, the floor refuses, the climb ends having moved nothing — and that ending is a junction, at which the robot asks to climb down. It stood there for the rest of the level. So the direction a failed climb was going is the one direction now known not to work, and this junction may not choose it.',
+        ),
         noUp.set(
           both(
             stuck.get(),
@@ -259,9 +253,9 @@ prowls.step('choose at a junction', 'decide', [
             both(wasClimbing.of(thisActor()), not(goingUp.of(thisActor()))),
           ),
         ),
-        note('UP OR DOWN FIRST — see the header. A ladder is the only way to'),
-        note('change which floor you are on, so an enemy that preferred'),
-        note('sideways would never take one.'),
+        doc(
+          'UP OR DOWN FIRST — see the header. A ladder is the only way to change which floor you are on, so an enemy that preferred sideways would never take one.',
+        ),
         here.set(no()),
         when([
           [
@@ -279,9 +273,9 @@ prowls.step('choose at a junction', 'decide', [
             [climbDown({who: thisActor()}), here.set(yes())],
           ],
         ]),
-        note('…then left or right, and only if the quarry is STRICTLY one'),
-        note('side or the other. Otherwise keep going: a robot that has lost'),
-        note('you carries on rather than stopping.'),
+        doc(
+          '…then left or right, and only if the quarry is STRICTLY one side or the other. Otherwise keep going: a robot that has lost you carries on rather than stopping.',
+        ),
         when([
           [
             not(here.get()),
@@ -299,9 +293,9 @@ prowls.step('choose at a junction', 'decide', [
             ],
           ],
         ]),
-        note('A wall rules out the way it was going — see the header. This'),
-        note('is the one place a robot moves AWAY from its quarry, and it is'),
-        note('what gets it round a wall rather than pressed against one.'),
+        doc(
+          'A wall rules out the way it was going — see the header. This is the one place a robot moves AWAY from its quarry, and it is what gets it round a wall rather than pressed against one.',
+        ),
         when([
           [
             both(stuck.get(), equals(going.of(thisActor()), was.get())),
@@ -312,9 +306,9 @@ prowls.step('choose at a junction', 'decide', [
       ],
     ],
   ]),
-  note('Where it is going, whether or not it just decided. Not while it is'),
-  note('climbing: a ladder is the climb’s to steer, and writing a sideways'),
-  note('speed over one would pull the robot off it.'),
+  doc(
+    'Where it is going, whether or not it just decided. Not while it is climbing: a ladder is the climb’s to steer, and writing a sideways speed over one would pull the robot off it.',
+  ),
   when([
     [
       not(climbing.of(thisActor())),

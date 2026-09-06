@@ -6,6 +6,7 @@ import {
   both,
   countOf,
   defineRule,
+  doc,
   lessThan,
   minus,
   moduleFor,
@@ -143,10 +144,9 @@ const aimed = rule.local('aimed', 'Vector');
 const scale = rule.local('scale', 'Number');
 
 flaps.step('flap or glide', 'decide', [
-  note('Nothing to hunt, nothing to do — and the phase does not advance'),
-  note('either, so a bat whose quarry is named a frame late begins its first'),
-  note('flutter then rather than having spent it on nothing (`rules/prowling`'),
-  note('makes the same argument about a junction).'),
+  doc(
+    'Nothing to hunt, nothing to do — and the phase does not advance either, so a bat whose quarry is named a frame late begins its first flutter then rather than having spent it on nothing (`rules/prowling` makes the same argument about a junction).',
+  ),
   when([
     [
       both(
@@ -154,8 +154,9 @@ flaps.step('flap or glide', 'decide', [
         not(lessThan(time(), until.of(thisActor()))),
       ),
       [
-        note('The vector to the quarry, in pixels, which both phases want:'),
-        note('the flutter for its sign and the glide for its whole direction.'),
+        doc(
+          'The vector to the quarry, in pixels, which both phases want: the flutter for its sign and the glide for its whole direction.',
+        ),
         toward.set(
           vector(
             minus(position.x(quarry.of(thisActor())), position.x(thisActor())),
@@ -167,12 +168,9 @@ flaps.step('flap or glide', 'decide', [
             [
               lessThan(flapsDone.of(thisActor()), flapsBetween.of(thisActor())),
               [
-                note('A FLUTTER. Upward always — see the header: this is the'),
-                note('only way it climbs, and a flap that could point down'),
-                note('would leave the glide with nothing to be different'),
-                note('from. Sideways is a drift towards the quarry rather'),
-                note('than a chase, so the flapping phase is when a player'),
-                note('has time to move.'),
+                doc(
+                  'A FLUTTER. Upward always — see the header: this is the only way it climbs, and a flap that could point down would leave the glide with nothing to be different from. Sideways is a drift towards the quarry rather than a chase, so the flapping phase is when a player has time to move.',
+                ),
                 velocity.set(
                   thisActor(),
                   vector(
@@ -195,14 +193,13 @@ flaps.step('flap or glide', 'decide', [
             ],
           ],
           [
-            note('A GLIDE: aimed once, at where the quarry is NOW, and then'),
-            note('not looked at again for two seconds. See the header — that'),
-            note('commitment is the whole of what makes this dodgeable.'),
+            doc(
+              'A GLIDE: aimed once, at where the quarry is NOW, and then not looked at again for two seconds. See the header — that commitment is the whole of what makes this dodgeable.',
+            ),
             span.set(vectorLength(toward.get())),
-            note('The direction, as a unit vector. A span of zero means the'),
-            note('two are exactly on top of each other, which is a division'),
-            note('nobody wants the answer to; one stands in for it and the'),
-            note('dive below then decides the whole direction.'),
+            doc(
+              'The direction, as a unit vector. A span of zero means the two are exactly on top of each other, which is a division nobody wants the answer to; one stands in for it and the dive below then decides the whole direction.',
+            ),
             scale.set(pick(moreThan(span.get(), n(0)), span.get(), n(1))),
             aimX.set(over(axisOf('x', toward.get()), scale.get())),
             aimY.set(over(axisOf('y', toward.get()), scale.get())),
@@ -217,10 +214,9 @@ flaps.step('flap or glide', 'decide', [
                 ),
               ),
             ),
-            note('Clamping the dive lengthened the direction, so it is made'),
-            note('a unit again before the speed is applied — otherwise a bat'),
-            note('aiming at something level with it would glide faster than'),
-            note('one aiming down, which is a speed nobody set.'),
+            doc(
+              'Clamping the dive lengthened the direction, so it is made a unit again before the speed is applied — otherwise a bat aiming at something level with it would glide faster than one aiming down, which is a speed nobody set.',
+            ),
             scale.set(
               over(
                 glideSpeed.of(thisActor()),

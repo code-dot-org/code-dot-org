@@ -4,6 +4,7 @@ import {
   allWithTrait,
   axisOf,
   defineRule,
+  doc,
   emptyList,
   forEach,
   give,
@@ -137,8 +138,9 @@ export const rememberThisMove = rule.block({
         ),
       ],
     }),
-    note('One more remembered, and no ceiling to stop at: a move is a place,'),
-    note('and a hundred places is nothing to keep.'),
+    doc(
+      'One more remembered, and no ceiling to stop at: a move is a place, and a hundred places is nothing to keep.',
+    ),
     remembered.set(add(remembered.of(), n(1))),
   ],
 });
@@ -149,8 +151,9 @@ export const takeBackAMove = rule.block({
     'Put everything back where it was before the last remembered move. Does nothing if there is nothing to take back.',
   say: ['take back a move'],
   body: () => [
-    note('Nothing to take back is not a mistake: a player pressing undo on'),
-    note('the first move of a level should see nothing happen, not an error.'),
+    doc(
+      'Nothing to take back is not a mistake: a player pressing undo on the first move of a level should see nothing happen, not an error.',
+    ),
     when([
       [
         moreThan(remembered.of(), n(0)),
@@ -169,8 +172,9 @@ export const takeBackAMove = rule.block({
             ],
           }),
           remembered.set(minus(remembered.of(), n(1))),
-          note('Said last, when everything is already back: a handler that'),
-          note('puts a tally right should see the board it belongs to.'),
+          doc(
+            'Said last, when everything is already back: a handler that puts a tally right should see the board it belongs to.',
+          ),
           takenBack({}),
         ],
       ],
@@ -184,9 +188,9 @@ export const forgetEverything = rule.block({
     'Throw the tape away — for a level that has just been built, where there is nothing before the start.',
   say: ['forget everything'],
   body: () => [
-    note('Every tape as well as the count, which the eight slots never had'),
-    note('to do: a slot nobody reads is harmless, and a list nobody empties'),
-    note('is a level’s worth of places kept for a level that is gone.'),
+    doc(
+      'Every tape as well as the count, which the eight slots never had to do: a slot nobody reads is harmless, and a list nobody empties is a level’s worth of places kept for a level that is gone.',
+    ),
     forEach(each, {
       from: remembering(),
       body: [tape.set(each.get(), emptyList())],

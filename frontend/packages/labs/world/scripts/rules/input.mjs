@@ -1,10 +1,10 @@
 import {
   allWithTrait,
   defineRule,
+  doc,
   forEach,
   forEachKey,
   moduleFor,
-  note,
   param,
 } from './dsl.mjs';
 
@@ -49,8 +49,9 @@ const announce = (worldEvent, actorEvent, paramName) => [
 ];
 
 rule.step('keyEvents', 'sense', [
-  note('The world knows which keys are held. What it also knows, and'),
-  note('nothing else can work out, is which ones CHANGED this frame.'),
+  doc(
+    'The world knows which keys are held. What it also knows, and nothing else can work out, is which ones CHANGED this frame.',
+  ),
   forEachKey('PRESSED', key, announce(pressed, presses, 'pressed key')),
   forEachKey('RELEASED', key, announce(released, releases, 'released key')),
 ]);

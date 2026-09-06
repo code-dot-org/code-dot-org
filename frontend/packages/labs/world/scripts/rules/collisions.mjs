@@ -8,6 +8,7 @@ import {
   axisOf,
   clearActors,
   defineRule,
+  doc,
   equals,
   filter,
   forEach,
@@ -100,8 +101,9 @@ export const collisionSizeOf = rule.block({
       moreThan(axisOf('y', working.get()), n(0)),
     );
     return [
-      note('How big is this actor for bumping into things?'),
-      note('First choice: the size you set on the actor yourself.'),
+      doc(
+        'How big is this actor for bumping into things? First choice: the size you set on the actor yourself.',
+      ),
       working.set(vector(box.x(sizeActor.get()), box.y(sizeActor.get()))),
       note('If you left it at 0, use the size of the picture instead.'),
       when([
@@ -195,12 +197,9 @@ const halfDiagonal = who =>
   over(vectorLength(collisionSizeOf({sizeActor: who})), n(2));
 
 rule.step('find', 'touch', [
-  note('Who is touching whom, worked out once and written down.'),
-  note('What to DO about it belongs to whoever reads this.'),
-  note('First: how far the biggest collider reaches, which is what makes'),
-  note('the neighbourhood below wide enough to be safe.'),
-  note('Nothing to collide with is a reach of nothing — asked first,'),
-  note('because the biggest of no actors is not an actor to measure.'),
+  doc(
+    'Who is touching whom, worked out once and written down. What to DO about it belongs to whoever reads this. First: how far the biggest collider reaches, which is what makes the neighbourhood below wide enough to be safe. Nothing to collide with is a reach of nothing — asked first, because the biggest of no actors is not an actor to measure.',
+  ),
   reach.set(n(0)),
   when([
     [
@@ -222,11 +221,9 @@ rule.step('find', 'touch', [
     from: allWithTrait(CanCollide),
     body: [
       clearActors(found),
-      note('ASKED OF THE WORLD, not walked. Pairing every collider with'),
-      note('every other one is n² a frame, and a thousand actors is a'),
-      note('million questions; this asks the index for the few whose'),
-      note('middles are near enough to be able to overlap, and the test'),
-      note('below is the same test it always was.'),
+      doc(
+        'ASKED OF THE WORLD, not walked. Pairing every collider with every other one is n² a frame, and a thousand actors is a million questions; this asks the index for the few whose middles are near enough to be able to overlap, and the test below is the same test it always was.',
+      ),
       forEach(other, {
         from: filter(other, {
           from: withTraitNear(
@@ -248,9 +245,9 @@ rule.step('find', 'touch', [
           ]),
         ],
       }),
-      note('…and it touches nothing either, which is the other half: the'),
-      note('one-sided version of this is a wall a player walks through'),
-      note('while the wall goes on insisting it is being stood on.'),
+      doc(
+        '…and it touches nothing either, which is the other half: the one-sided version of this is a wall a player walks through while the wall goes on insisting it is being stood on.',
+      ),
       when([[passable.of(body.get()), [clearActors(found)]]]),
       contacts.set(body.get(), found.get()),
     ],

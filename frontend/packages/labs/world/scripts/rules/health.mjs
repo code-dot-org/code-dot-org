@@ -5,6 +5,7 @@ import {
   atMost,
   both,
   defineRule,
+  doc,
   filter,
   forEach,
   give,
@@ -176,8 +177,9 @@ const takeDamage = hurtable.block({
       [
         moreThan(health.of(thisActor()), n(0)),
         [
-          note('Never below zero: health remaining is not a debt, and a game'),
-          note('that showed “-4 health” would show a number nobody meant.'),
+          doc(
+            'Never below zero: health remaining is not a debt, and a game that showed “-4 health” would show a number nobody meant.',
+          ),
           left.set(minus(health.of(thisActor()), amount.get())),
           health.set(
             thisActor(),
@@ -202,8 +204,9 @@ export const heal = hurtable.block({
     'Get some health back, up to full. Does nothing once health has run out — coming back is a bigger decision than a potion.',
   say: ['heal', param('amount', 'number')],
   body: ({amount}) => [
-    note('Already empty? A heal does not bring anything back: the event has'),
-    note('been said, and a game that wants a comeback says so itself.'),
+    doc(
+      'Already empty? A heal does not bring anything back: the event has been said, and a game that wants a comeback says so itself.',
+    ),
     when([
       [
         moreThan(health.of(thisActor()), n(0)),
@@ -272,8 +275,9 @@ hurtable.step('take contact damage', 'react', [
             atLeast(time(), safeUntil.of(thisActor())),
           ),
           [
-            note('Start the mercy window before the damage, so a second one'),
-            note('in the same frame cannot land as well.'),
+            doc(
+              'Start the mercy window before the damage, so a second one in the same frame cannot land as well.',
+            ),
             safeUntil.set(thisActor(), add(time(), mercyTime.of(thisActor()))),
             takeDamage({amount: damage.of(source.get())}, thisActor()),
             note('And what dealt it is told what it touched.'),

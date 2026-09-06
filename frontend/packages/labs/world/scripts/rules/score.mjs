@@ -4,13 +4,13 @@ import {
   atLeast,
   both,
   defineRule,
+  doc,
   forEach,
   moduleFor,
   moreThan,
   n,
   no,
   not,
-  note,
   param,
   when,
   yes,
@@ -115,8 +115,9 @@ export const addToScore = rule.block({
   body: ({points}) => [
     score.set(add(score.of(), points.get())),
     ...announce(scoreChanged, seesChange),
-    note('Enough, and not already won? Then this is the moment.'),
-    note('A target of zero is a game that cannot be won, only played.'),
+    doc(
+      'Enough, and not already won? Then this is the moment. A target of zero is a game that cannot be won, only played.',
+    ),
     when([
       [
         both(
@@ -135,8 +136,9 @@ export const resetScore = rule.block({
     'Put the score back to nothing and allow the target to be reached again.',
   say: ['reset the score'],
   body: () => [
-    note('Both halves: a score that forgot it had won would win twice, and'),
-    note('one that remembered could never win again.'),
+    doc(
+      'Both halves: a score that forgot it had won would win twice, and one that remembered could never win again.',
+    ),
     score.set(n(0)),
     won.set(no()),
     ...announce(scoreChanged, seesChange),

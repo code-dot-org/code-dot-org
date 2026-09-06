@@ -9,6 +9,7 @@ import {
   axisOf,
   both,
   defineRule,
+  doc,
   filter,
   forEach,
   frameTime,
@@ -89,11 +90,9 @@ const restHeightOf = rule.block({
   description: 'The height this actor rests at when it lands on that ground.',
   say: [param('faller', 'actor'), 'rest height of', param('ground', 'actor')],
   body: ({faller, ground}) => [
-    note('Where does this faller stop when it lands on this ground?'),
-    note('Boxes are measured from the middle, so the top of the ground is'),
-    note('its middle minus half its height — and the faller sits half its own'),
-    note('height above that. Upside-down gravity flips which side that is,'),
-    note('so we multiply by sign: 1 for normal gravity, -1 for upside-down.'),
+    doc(
+      'Where does this faller stop when it lands on this ground? Boxes are measured from the middle, so the top of the ground is its middle minus half its height — and the faller sits half its own height above that. Upside-down gravity flips which side that is, so we multiply by sign: 1 for normal gravity, -1 for upside-down.',
+    ),
     ...decideSign,
     give(
       minus(
@@ -110,10 +109,9 @@ const isRestingOn = rule.block({
     'Whether this actor is standing on that ground right now, this frame.',
   say: [param('faller', 'actor'), 'is resting on', param('ground', 'actor')],
   body: ({faller, ground}) => [
-    note('Standing on this ground means three things are all true:'),
-    note('1. we are over it, not off to one side,'),
-    note('2. we are moving toward it (falling, not rising away),'),
-    note('3. we were above its surface last frame and are at or past it now.'),
+    doc(
+      'Standing on this ground means three things are all true: 1. we are over it, not off to one side, 2. we are moving toward it (falling, not rising away), 3. we were above its surface last frame and are at or past it now.',
+    ),
     restY.set(restHeightOf({faller: faller.get(), ground: ground.get()})),
     ...decideSign,
     give(
@@ -159,10 +157,9 @@ const landOnGround = rule.block({
     'Lands this actor on any ground it has reached, and says whether it did.',
   say: [param('faller', 'actor'), 'land on ground?'],
   body: ({faller}) => [
-    note('Collisions already worked out what this actor is touching,'),
-    note('so this only looks at those — not at every actor in the world.'),
-    note('Look at every ground in the world and ask: am I resting on it?'),
-    note('If I am, put me exactly on its surface and stop falling.'),
+    doc(
+      'Collisions already worked out what this actor is touching, so this only looks at those — not at every actor in the world. Look at every ground in the world and ask: am I resting on it? If I am, put me exactly on its surface and stop falling.',
+    ),
     landed.set(no()),
     forEach(ground, {
       from: filter(ground, {
@@ -278,8 +275,9 @@ rule.step('applyVelocity', 'push', [
   forEach(each, {
     from: allWithTrait(rule.traitRef('Affected by Gravity')),
     body: [
-      note('Falling is not one speed: every frame you fall a little faster.'),
-      note('So add a bit of speed, in the direction gravity pulls.'),
+      doc(
+        'Falling is not one speed: every frame you fall a little faster. So add a bit of speed, in the direction gravity pulls.',
+      ),
       velocity.set(
         each.get(),
         vectorPlus(
@@ -307,12 +305,9 @@ rule.step('handleCollisions', 'react', [
       note(
         'Landing (or not) is also when we announce it: started falling, landed.',
       ),
-      note('Unless this actor is on its way THROUGH the floor, in which'),
-      note('case there is nothing to land on and nothing to say about it —'),
-      note('see `ignores ground`. The ANNOUNCEMENT is inside the guard too,'),
-      note('and that is the half it is easy to leave out: a climber whose'),
-      note('landing was skipped but whose "not resting" was not is a climber'),
-      note('told it has started falling, once, at the foot of every ladder.'),
+      doc(
+        'Unless this actor is on its way THROUGH the floor, in which case there is nothing to land on and nothing to say about it — see `ignores ground`. The ANNOUNCEMENT is inside the guard too, and that is the half it is easy to leave out: a climber whose landing was skipped but whose "not resting" was not is a climber told it has started falling, once, at the foot of every ladder.',
+      ),
       when([
         [
           not(ignoresGround.of(each.get())),

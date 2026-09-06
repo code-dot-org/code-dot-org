@@ -3,6 +3,7 @@ import {
   add,
   axisOf,
   defineRule,
+  doc,
   frameTime,
   give,
   keyDown,
@@ -163,8 +164,9 @@ driven.step('steer', 'decide', [
       ),
     ),
   ),
-  note('Up pushes the way the actor is facing, and ADDS to how it was moving.'),
-  note('That is what makes it drift: nothing here ever slows it down.'),
+  doc(
+    'Up pushes the way the actor is facing, and ADDS to how it was moving. That is what makes it drift: nothing here ever slows it down.',
+  ),
   velocity.set(
     thisActor(),
     vectorPlus(
