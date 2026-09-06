@@ -1068,21 +1068,24 @@ there is one shape for a body again.
 
 THE FILE CHANGED, which nothing else in §8 did. The stock rules are generated,
 so `dsl.mjs` emits the new shape and `yarn build:rules` wrote all forty-seven;
-the starter projects hold no rule-level step at all. What is left is a
-learner's own saves, and for those the shape is corrected on the way in
-(`ruleUpgrade`), at all three places a rule file is read — the editor, the
-metadata, and the compiler.
+the starter projects hold no rule-level step at all.
 
-It is not politeness. `world_rule_step_in` has a previous connection now, and
-`DisableOrphansPlugin` reads a top-level block with one as an orphan: an
-un-upgraded step and everything under it would draw greyed out and generate
-nothing, with no message saying why. The upgrade is a rewrite of the DOCUMENT
-rather than the file — nothing is saved until the learner edits something, and
-then it is saved in the shape the editor now writes.
+NOTHING WAS MIGRATED, and that is a fact about the moment rather than about
+the change: no rules are published and no student work exists, so the old
+shape has no readers. An upgrade was written and then deleted — it was real
+work for a file nobody has, and a reader kept for that reason is a reader that
+has to be kept right forever.
 
-Reading it in two shapes was the alternative and was not taken: two shapes to
-read is two shapes to keep right forever, and the split would have had to
-decide where a body lives by the block's POSITION rather than its type.
+The next format change may not be so lucky. What it would cost is on record:
+`world_rule_step_in` has a previous connection now, and
+`DisableOrphansPlugin` reads a top-level block with one as an orphan — so a
+file in the old shape draws its steps greyed out and generates nothing, with
+no message saying why. Silent, not loud, which is the kind that needs the
+upgrade written before the shape moves rather than after.
+
+Reading it in two shapes was the other alternative and was not taken either:
+the split would have had to decide where a body lives by the block's POSITION
+rather than its type, which is a harder question asked in more places.
 
 **Not only rules.** An `.actor` file holds the same two shapes — its own
 `each frame` and its own `define block` (`ActorBuilder.defineStep`,

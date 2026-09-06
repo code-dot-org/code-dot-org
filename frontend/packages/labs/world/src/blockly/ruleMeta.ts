@@ -27,7 +27,6 @@ import {
   ruleByName,
   ruleLocation,
 } from './ruleRegistry';
-import {upgradeRuleDocument} from './ruleUpgrade';
 
 export type RuleSource = 'builtin' | 'project';
 
@@ -581,10 +580,7 @@ export function parseRuleMeta(
         variableNames.set(variable.id, variable.name ?? variable.id);
       }
     }
-    // A file written before steps were members keeps them beside the rule.
-    // Corrected here rather than tolerated: two shapes to read is two shapes
-    // to keep right forever, and one of them is already gone from the editor.
-    const tops = upgradeRuleDocument(parsed).blocks?.blocks ?? [];
+    const tops = parsed.blocks?.blocks ?? [];
     root = tops.find(b => b?.type === 'world_rule');
     // Traits are top blocks beside the rule, not chained inside it — one `.rule`
     // declares one rule, so every trait in the file belongs to it.
