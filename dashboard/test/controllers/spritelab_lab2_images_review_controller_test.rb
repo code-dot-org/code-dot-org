@@ -2,6 +2,7 @@ require 'test_helper'
 
 class SpritelabLab2ImagesReviewControllerTest < ActionController::TestCase
   setup_all do
+    @project_validator = create(:project_validator)
     @levelbuilder = create(:levelbuilder)
     @student = create(:student)
   end
@@ -11,14 +12,20 @@ class SpritelabLab2ImagesReviewControllerTest < ActionController::TestCase
     assert_response :redirect
   end
 
-  test 'non-levelbuilder is forbidden' do
+  test 'student is forbidden' do
     sign_in @student
     get :index
     assert_response :forbidden
   end
 
-  test 'levelbuilder gets the page' do
+  test 'levelbuilder without project_validator is forbidden' do
     sign_in @levelbuilder
+    get :index
+    assert_response :forbidden
+  end
+
+  test 'project validator gets the page' do
+    sign_in @project_validator
     get :index
     assert_response :success
   end
@@ -54,7 +61,7 @@ class SpritelabLab2ImagesReviewControllerTest < ActionController::TestCase
     SourceBucket.any_instance.stubs(:get).returns({status: 'FOUND', body: StringIO.new(manifest)})
     SourceBucket.any_instance.stubs(:list_versions).returns([])
 
-    sign_in @levelbuilder
+    sign_in @project_validator
     get :index
     assert_response :success
     assert_includes response.body, 'a friendly wizard'

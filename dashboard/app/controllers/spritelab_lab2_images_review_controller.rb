@@ -1,12 +1,13 @@
-# Internal playtest-review page: the most recently used Sprite Lab in Lab2
-# projects, each with every AI-generated image and the prompt that made it.
+# Internal playtest-review page (project validators only): the most recently
+# used Sprite Lab in Lab2 projects, each with every AI-generated image and
+# the prompt that made it.
 # The assets bucket is versioned, so images no longer in the project — the
 # editor's cleanup soft-deletes superseded generations, and deleting an
 # animation orphans its asset outright — are still listable and shown as
 # discarded.
 class SpritelabLab2ImagesReviewController < ApplicationController
   before_action :authenticate_user!
-  before_action :require_levelbuilder
+  before_action :require_project_validator
 
   # How many recent projects the page shows.
   PROJECT_COUNT = 20
@@ -37,8 +38,11 @@ class SpritelabLab2ImagesReviewController < ApplicationController
     end
   end
 
-  private def require_levelbuilder
-    head :forbidden unless current_user.levelbuilder?
+  # project_validator is the permission for staff vetted to review
+  # student-made content (featured projects, flagged-content review) —
+  # levelbuilder is held more broadly and doesn't imply that.
+  private def require_project_validator
+    head :forbidden unless current_user.permission?(UserPermission::PROJECT_VALIDATOR)
   end
 
   # The last CANDIDATE_LIMIT distinct projects attached to any Lab2 Sprite
