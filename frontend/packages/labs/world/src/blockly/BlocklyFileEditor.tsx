@@ -96,6 +96,7 @@ import {setRulesConfigHandler} from './rulesConfig';
 import {parseSpriteRef} from './spriteCells';
 import {setSpritePickHandler} from './spritePick';
 import {standInBlocks} from './standInBlocks';
+import {toolboxForSurface} from './surfaceToolbox';
 import {withoutCategories} from './toolboxFilter';
 import {useWorldBlocklyTheme} from './worldBlocklyTheme';
 
@@ -708,6 +709,15 @@ export const BlocklyFileEditor = ({
     [seam],
   );
 
+  // The toolbox the surface in front of the learner can actually use. Kept
+  // apart from the `blocks` memo above on purpose: `blocks` re-registers every
+  // definition and is watched by the effect that swaps surfaces, so folding
+  // this into it would rebuild the palette every time a body opened.
+  const surfaceToolbox = useMemo(
+    () => toolboxForSurface(toolbox, editing ? 'body' : 'interface'),
+    [toolbox, editing],
+  );
+
   const options = useMemo(
     () => ({
       readOnly: isReadOnly,
@@ -1214,7 +1224,7 @@ export const BlocklyFileEditor = ({
           // finds its callbacks.
           onInject={registerLessonButtons}
           startBlocks={startBlocks}
-          toolbox={toolbox}
+          toolbox={surfaceToolbox}
           options={options}
           theme={theme}
           workspaceRef={workspaceRef}

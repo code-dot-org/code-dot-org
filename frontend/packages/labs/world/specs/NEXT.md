@@ -770,6 +770,30 @@ Making the head authoritative is what moving `RETURNS` off the interface and
 down into the body surface needs, and that is the next piece of §8 along with
 the two toolboxes.
 
+_Two toolboxes, 2026-09-05._ The overlay made its own wart: a body surface
+went on offering `define property`, `define block` and `use rule`, none of
+which can go in an implementation, while `return` and `delta` — which mean
+nothing anywhere else — sat on the interface where there is no body to run
+them. `surfaceToolbox` splits the menu the way `bodySurfaces` splits the
+document.
+
+BY BLOCK TYPE, NOT BY DRAWER. `define property` is offered under Actor, World
+AND Rule, and `define block` under Actor and Rule, so filtering the Rule
+category would have left the copies behind — the same mistake the first draft
+of the split made in the serializer, and the reason the test asks what the
+whole toolbox offers rather than what one drawer does.
+
+Nothing is undefined, only unoffered: a block that is no longer in the menu
+still renders and still compiles, which is what `toolboxFilter` already
+promises for the categories a level leaves out.
+
+Measured in the editor (`spikes/rule-surfaces/check-toolbox.mjs`): the Rule
+drawer holds twelve declarations on the interface and exactly `return` and
+`delta` inside a body. That check also asks the question a unit test cannot —
+the toolbox prop changes when a body opens, and a re-injection there would
+throw away the surface the learner is standing on. The body is thirty-six
+blocks before and after.
+
 **Not only rules.** An `.actor` file holds the same two shapes — its own
 `each frame` and its own `define block` (`ActorBuilder.defineStep`,
 `defineAction`) — and a world holds them inside `define actor`. Actor files
