@@ -16,6 +16,15 @@ import {
 const rule = defineRule({
   name: 'Arrow Keys',
   ability: 'Moves with Arrow Keys',
+  purpose: `**Arrow Keys** is the first mechanic most games need: hold a key and the actor
+goes that way, let go and it stops.
+
+Give an actor **Moves Across** for left and right, **Moves Down** for up and
+down, or both to move in any direction. Each has a speed you can set.
+
+It sets the actor's *velocity* rather than moving it itself, so everything else
+— gravity, walls, being carried — still gets its say before the actor lands
+anywhere.`,
   header: `// "Moves with Arrow Keys" — the first mechanic a learner meets.
 //
 // It turns a held key into velocity, which is what \`decide\` is: intent becomes

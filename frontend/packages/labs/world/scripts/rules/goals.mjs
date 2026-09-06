@@ -16,6 +16,14 @@ import {
 const rule = defineRule({
   name: 'Goals',
   ability: 'Has an Ending',
+  purpose: `**Goals** is the moment a game is over — won or lost.
+
+Everything else here runs forever. Scoring can say the target was reached and
+Health can say an actor died, but neither of those is a *game* ending. This
+gives you the two moments, once, so every project says it the same way.
+
+Give a world **Watches the Ending** and raise the win or lose from wherever it
+happens.`,
   header: `// "Has an Ending" — the two moments every game has and no rule owned.
 //
 // Everything in this library runs forever. Scoring can say the target has been

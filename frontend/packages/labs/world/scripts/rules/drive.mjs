@@ -25,6 +25,15 @@ import {
 const rule = defineRule({
   name: 'Arrow Drive',
   ability: 'Drives with Arrow Keys',
+  purpose: `**Arrow Drive** is the other way to read the arrow keys: turn where you point,
+thrust where you face.
+
+Where **Moves with Arrow Keys** says right *is* moving right, this says right
+is *turning* — and letting go of everything leaves you coasting exactly as you
+were. A spaceship, a car, an asteroid ship.
+
+Give an actor **Driven by Arrow Keys**. Pair it with Drag if you want it to
+slow down.`,
   header: `// "Drives with Arrow Keys" — turn where you point, thrust where you face.
 //
 // The other way to read the arrow keys, and the reason it is a second rule

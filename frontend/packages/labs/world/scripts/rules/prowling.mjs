@@ -36,6 +36,16 @@ import {held, velocity} from './motion.mjs';
 const rule = defineRule({
   name: 'Prowling',
   ability: 'Prowls',
+  purpose: `**Prowling** is an enemy that thinks rarely, and commits.
+
+Steering re-aims every frame, which in a platformer is useless: the thing it is
+chasing is usually up a ladder or across a gap, and an enemy that turns toward
+it constantly walks into the wall below. This one decides now and then, then
+sticks to it.
+
+Give an enemy **Prowls** and set how fast it moves. It re-decides at junctions —
+when it lands, or reaches a ladder — and commits in between, which is what makes
+it readable.`,
   header: `// "Prowls" — an enemy that thinks rarely.
 //
 // Steering already chases: it reads where you are, every frame, and points

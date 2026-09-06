@@ -15,10 +15,26 @@ wrong move, because the next regeneration reverts it without saying so.
 Seven steps, all of them required:
 
 1. Write `scripts/rules/<name>.mjs`. Import the vocabulary from `./dsl.mjs`,
-   build with `defineRule({name, ability, header})`, and
+   build with `defineRule({name, ability, header, purpose})`, and
    `export default () => moduleFor(rule, '<name>')`. The DSL is documented in
    its own source — `defineRule` and the object it returns carry the reference
-   comments, and the ~30 rules beside yours are the examples.
+   comments, and the ~45 rules beside yours are the examples.
+
+   **`header` and `purpose` are two different paragraphs for two different
+   readers, and every rule has both.** `header` is a comment on the generated
+   `.ts`, written for whoever maintains the mechanic; nobody who opens the
+   workspace ever sees it. `purpose` is the first thing IN the rule — a
+   markdown page at the top of the workspace, telling a learner what the rule
+   is for, which traits to elect and what they get. Write it to somebody who
+   has just opened the file and has not read anything else.
+
+   Then document the WORK, the way the rules beside yours do: a `doc(...)` at
+   the head of each step and each block body, explaining the mechanism and any
+   arithmetic. A rule that only declares things (Progress, Writing) has no body
+   to put one in, so `rule.doc(...)` and `trait.doc(...)` put prose beside the
+   properties instead. `note(...)` is still the one-line aside; `doc(...)` is
+   the page.
+
 2. Add `'<name>'` to the `RULES` list in `scripts/build-stock-rules.mjs`.
 3. Run `yarn build:rules`. It writes `src/rules/stock/<name>.ts`.
 4. Add the import and a shelf entry to `src/rules/stock/index.ts`: `id`,

@@ -28,6 +28,14 @@ import {CanMove, velocity} from './motion.mjs';
 const rule = defineRule({
   name: 'Surfaces',
   ability: 'Has Special Floors',
+  purpose: `**Surfaces** is floors that do something to you.
+
+A floor in this library holds you up and nothing else, and a platformer is
+built out of several: a belt that carries you along, ice you cannot stop on,
+sludge that drags.
+
+Give a tile **Conveys**, **Slippery** or **Slows**, and anything that should
+notice them **Stands on Surfaces**.`,
   header: `// "Has Special Floors" — three kinds of floor that do something to you.
 //
 // A floor in this library holds you up and nothing else. That is one floor,

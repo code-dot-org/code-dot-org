@@ -4,6 +4,7 @@ import {
   atLeast,
   both,
   defineRule,
+  doc,
   either,
   forEach,
   lessThan,
@@ -21,6 +22,13 @@ import {
 const rule = defineRule({
   name: 'Spawner',
   ability: 'Sends Things',
+  purpose: `**Spawner** is a source of enemies — waves that keep coming.
+
+It owns the *when* and not the *what*: it raises an event on a schedule, and
+your handler places whatever a wave means in your game. That is what lets a
+stock rule send actors it has never heard of.
+
+Give an actor **Sends Things**, and set the gap between waves.`,
   header: `// "Sends Things" — a source of enemies, and the two facts that make it a game.
 //
 // NOT WHAT IT SENDS. A property holds a number, a vector or a set of actors,
@@ -131,6 +139,9 @@ const each = rule.local('each', 'Actor');
 // gives at length: `sense` is the world moment where clocks are read, and
 // `phasesFor` never offers a trait step a world phase.
 rule.step('tick', 'sense', [
+  doc(
+    '**One clock, walked over every spawner in the world.**\n\nThree questions have to be yes: it is switched on, its `next` time has arrived, and it has some left to send. A total of 0 means "keep going", so a limit only bites once it is set.\n\nLike Patrol\'s beat, the next time is booked from when this one was DUE rather than from now, so a slow frame does not push the whole wave later. And what is raised is an EVENT: the rule owns the *when* and your handler owns the *what*, which is what lets a stock rule send an actor it has never heard of.\n\nA rule step rather than a trait\'s, and in `sense` — the world moment where clocks are read, before anything has decided or moved.',
+  ),
   note('Sending, due, and with some left to send?'),
   forEach(each, {
     from: allWithTrait(rule.traitRef('Sends Things')),

@@ -17,6 +17,15 @@ import {
 const rule = defineRule({
   name: 'Camera Deadzone',
   ability: 'Ignores Small Moves',
+  purpose: `**Camera Deadzone** lets the subject move about a little without the camera
+answering every step.
+
+This is the single biggest difference in how a platformer *feels*. Without it
+the view twitches at every hop; with it the player moves freely in the middle
+of the screen and the camera only travels when they really go somewhere.
+
+Give a camera **Has a Deadzone** and set how big the still box in the middle
+is.`,
   header: `// "Ignores Small Moves" — the camera holds still while the subject moves
 // about inside a box, and only follows once it leaves.
 //

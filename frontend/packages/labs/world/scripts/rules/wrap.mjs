@@ -3,6 +3,7 @@ import {
   add,
   axisOf,
   defineRule,
+  doc,
   give,
   lessThan,
   mapSize,
@@ -19,6 +20,13 @@ import {
 const rule = defineRule({
   name: 'Screen Wrap',
   ability: 'Wraps at the Edges',
+  purpose: `**Screen Wrap** is walking off one side and coming back on the other.
+
+Two traits, because wanting one is not wanting the other. A side-scroller wraps
+**Wraps Across** and would be broken by wrapping down — step off a ledge and
+you would reappear in the sky. Asteroids wants both.
+
+Give an actor whichever directions it should wrap in.`,
   header: `// "Wraps at the Edges" — walk off one side, come back on the other.
 //
 // TWO traits, one per direction, because wanting one is not wanting the other.
@@ -76,6 +84,9 @@ export const wrapped = rule.block({
     'Where this ends up after coming back on the other side: below 0 it gains the size, past the size it loses it.',
   say: ['wrap', param('value'), 'within', param('size')],
   body: ({value, size}) => [
+    doc(
+      '**One axis, wrapped.** A position that has gone off one end comes back on the other, a whole map along.\n\nThe arithmetic is deliberately not a remainder. `value mod size` would also bring a stray number back inside, but it would teleport an actor that had wandered several maps away, and it answers oddly for negatives in most languages. Adding or subtracting the map ONCE moves an actor exactly as far as the map is wide — the same distance every time, which is what makes the far side line up with the near one.\n\nIt is on the rule rather than on either trait because it is the same sum both ways round, and because it is the block to reach for to wrap anything else: a score, an angle, a frame number.',
+    ),
     note('Off the near side? Come back on the far side, a whole map along.'),
     when([[lessThan(value.get(), n(0)), [give(add(value.get(), size.get()))]]]),
     note('Off the far side? The same the other way.'),
@@ -91,6 +102,9 @@ export const wrapped = rule.block({
 });
 
 across.step('come back across', 'adjust', [
+  doc(
+    '**Across only.** The down position is read and written straight back, untouched.\n\nThat is what lets this and *Wraps Down* run in the same moment on the same actor without one undoing the other: each writes the whole position, but each changes only its own half.',
+  ),
   note(
     'Across only: the down position is read and written back unchanged, which is what lets this and "Wraps Down" share a moment.',
   ),

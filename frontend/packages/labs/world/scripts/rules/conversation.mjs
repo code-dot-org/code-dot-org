@@ -19,6 +19,14 @@ import {
 const rule = defineRule({
   name: 'Conversation',
   ability: 'Has a Conversation',
+  purpose: `**Conversation** is a place in a script and a way to move through it.
+
+Nothing in this engine waits, so "say this, pause, say that" cannot be written
+as a row of blocks. What a conversation is instead is a *cursor* — a number
+saying which line you are on — and an event each time it moves.
+
+Give an actor **Has a Conversation**, then handle the event to say what each
+line is.`,
   header: `// "Has a Conversation" — a place in a script, and a way to move through it.
 //
 // A visual novel is a sequence with pauses, and NOTHING IN THIS ENGINE

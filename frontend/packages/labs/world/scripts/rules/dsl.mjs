@@ -774,9 +774,22 @@ function declareEvent(rule, ruleSlug, into, say, scope, variables) {
 
 // ── The rule ─────────────────────────────────────────────────────────────────
 
-export function defineRule({name, ability, header}) {
+export function defineRule({name, ability, header, purpose}) {
   const ruleSlug = RULE_SLUG(name);
   const chainMembers = [];
+  // WHAT THIS RULE IS FOR, at the top of the rule, where a learner opening it
+  // arrives. `header` is the other paragraph and it is not this one: that is a
+  // comment on the generated `.ts`, written for whoever maintains the mechanic,
+  // and it reaches nobody who opens the workspace (specs/NEXT.md §3). This is
+  // the first thing on the surface, before the traits and the properties —
+  // markdown in a `world_doc`, drawn on the page rather than on a block.
+  //
+  // First because a rule's members are a chain and this is a member: pushed
+  // here, at construction, so nothing an author writes afterwards can get in
+  // front of it.
+  if (purpose) {
+    chainMembers.push(doc(purpose));
+  }
   const traits = [];
   const variables = [];
 
@@ -801,6 +814,19 @@ export function defineRule({name, ability, header}) {
         variables.push({id, name: varName, type});
       }
       return makeLocal(id, varName, type);
+    },
+
+    /**
+     * A page of prose among the rule's members.
+     *
+     * `purpose` is the one at the top and is written into every rule; this is
+     * for a second, further down — beside the properties it is about. A rule
+     * that DECLARES rather than does (Progress, Writing) has no step to put an
+     * explanation in, and would otherwise carry none at all.
+     */
+    doc(markdown) {
+      chainMembers.push(doc(markdown));
+      return rule;
     },
 
     /** `use rule <other>` — by NAME, which is how every reference works. */
@@ -884,6 +910,11 @@ export function defineRule({name, ability, header}) {
       const traitId = SLUG(traitName);
       const members = [];
       const self = {
+        /** A page of prose among this trait's members — see `rule.doc`. */
+        doc(markdown) {
+          members.push(doc(markdown));
+          return self;
+        },
         /** What this trait needs, as `<Rule>#<Export>Trait`. */
         uses(dep) {
           members.push({type: 'world_use_trait', fields: {TRAIT: dep}});
@@ -1022,7 +1053,54 @@ export function defineRule({name, ability, header}) {
 
 /** A row is about this tall once Blockly has drawn it. Generous on purpose. */
 const ROW = 34;
-const GAP = 60;
+/**
+ * And the clear space between one root and the next.
+ *
+ * Was 60, which was not quite enough: `mouse`'s first trait draws thirteen
+ * pixels into its second, because a row is an estimate and some rows are
+ * taller than the estimate. Nobody had noticed, because nothing measured it
+ * until `spikes/rule-surfaces/check-layout.mjs`.
+ *
+ * Raised rather than made exact. A gap costs a little scrolling; an overlap
+ * covers whatever was at the bottom of the block above, which since rules
+ * carry prose is usually a sentence.
+ */
+const GAP = 84;
+
+/**
+ * How tall a page of prose draws, in rows.
+ *
+ * A `world_doc` is not a row. It is markdown rendered at 320px wide
+ * (`FieldMarkdown`), so its height is however far the words wrap — Patrol's
+ * three paragraphs come to 346px, which is ten rows where `rows` counted one.
+ * Counted as one, the trait roots below were placed on top of it: the layout
+ * puts each root under the last, and the last was three hundred pixels shorter
+ * than it drew.
+ *
+ * Estimated rather than measured, because this runs in node with no browser to
+ * ask. About 46 characters fit a line at 13px, a line is 19px, a paragraph
+ * carries 6px under it, and the field pads 8px each side. Over-counting costs
+ * a gap and under-counting costs an overlap, so it rounds up everywhere.
+ */
+const CHARS_PER_LINE = 46;
+const LINE = 19;
+const PARAGRAPH_GAP = 6;
+
+function docRows(markdown) {
+  const paragraphs = String(markdown)
+    .split(/\n\s*\n/)
+    .filter(text => text.trim().length > 0);
+  let height = PAD_BOTH;
+  for (const paragraph of paragraphs) {
+    const text = paragraph.replace(/\s+/g, ' ').trim();
+    height += Math.max(1, Math.ceil(text.length / CHARS_PER_LINE)) * LINE;
+    height += PARAGRAPH_GAP;
+  }
+  return Math.ceil(height / ROW);
+}
+
+/** What `FieldMarkdown` leaves around the prose, top and bottom. */
+const PAD_BOTH = 16;
 
 /**
  * How many rows a stack occupies: itself, its statement inputs, and whatever is
@@ -1031,6 +1109,10 @@ const GAP = 60;
 function rows(block) {
   if (!block || typeof block !== 'object') {
     return 0;
+  }
+  if (block.type === 'world_doc') {
+    // Plus one for the chrome the block draws around the page.
+    return docRows(block.fields?.DOC ?? '') + 1 + rows(block.next?.block);
   }
   let total = 1;
   for (const [key, held] of Object.entries(block)) {

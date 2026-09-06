@@ -44,6 +44,15 @@ import {
 const rule = defineRule({
   name: 'Path',
   ability: 'Finds a Way',
+  purpose: `**Path** works out the next step toward something, around whatever is in
+between.
+
+Steering walks *into* things: it points at what it wants and goes, which is
+right in the open and wrong the moment there is a wall. This looks at the room
+and finds a way through it.
+
+Give a chaser **Finds a Way**. It searches a lattice of squares whose spacing
+you set, so it suits a tiled level and a room of scattered crates alike.`,
   header: `// "Finds a Way" — the next step toward something, around what is in between.
 //
 // Steering walks INTO things. It works out a direction from two positions and

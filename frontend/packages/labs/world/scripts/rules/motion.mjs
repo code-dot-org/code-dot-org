@@ -20,6 +20,14 @@ import {
 const rule = defineRule({
   name: 'Physics',
   ability: 'Has Physics',
+  purpose: `**Physics** is what turns a speed into movement.
+
+Almost every other rule here works by setting an actor's *velocity* — arrow
+keys, gravity, patrol, steering, drive — and this is the one that then moves
+the actor by it, once, in the right moment.
+
+Give anything that moves at all **Can Move**. Most rules in this library need
+it.`,
   header: `// "Has Physics" — velocity becomes position, which is the \`move\` moment.
 //
 // The one every other mechanic is arranged around: gravity and the arrow keys

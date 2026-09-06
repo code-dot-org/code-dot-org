@@ -23,6 +23,14 @@ import {CanMove} from './motion.mjs';
 const rule = defineRule({
   name: 'Switches',
   ability: 'Has Switches',
+  purpose: `**Switches** is a room whose shape you can change.
+
+Every other wall here is a fact about the level. This one is a fact about what
+you have *done* in it: stand on a plate and walls elsewhere appear or vanish.
+The room remembers, and what it remembers is written on the floor in a colour.
+
+Give plates **Is a Switch** and the walls they control **Is a Switched Wall**,
+matched by colour.`,
   header: `// "Has Switches" — a room whose shape you can change.
 //
 // Every other wall in this library is a fact about the level. This one is a

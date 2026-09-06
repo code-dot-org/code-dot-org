@@ -27,6 +27,14 @@ const BUTTON = 'enum:Engine#MouseButton';
 const rule = defineRule({
   name: 'Mouse',
   ability: 'Reads the Mouse',
+  purpose: `**Mouse** turns the pointer into events.
+
+The keyboard's rule with one word changed: a button going down is the same kind
+of thing a key going down is. Clicks on a particular actor are their own event,
+so a button in your game is just an actor that hears it.
+
+Give an actor **Takes Mouse Input**, or **Can Be Clicked** to hear clicks on
+itself.`,
   header: `// "Reads the Mouse" — what turns a pointer into events.
 //
 // The keyboard's rule (rules/input) with one word changed, and deliberately so:

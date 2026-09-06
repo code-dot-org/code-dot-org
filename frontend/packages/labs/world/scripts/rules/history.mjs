@@ -21,6 +21,14 @@ import {
 const rule = defineRule({
   name: 'History',
   ability: 'Undoes Moves',
+  purpose: `**History** lets a world remember where things were, so a move can be taken
+back.
+
+A puzzle is a game you are meant to get wrong. Killing the player and starting
+again is right for an arcade game and hopeless for a sokoban, where the wrong
+move was six moves ago. Undo is what makes a puzzle one somebody keeps playing.
+
+Give anything that should be rewindable **Remembers Where It Was**.`,
   header: `// "Undoes Moves" — a world that remembers where things were.
 //
 // A puzzle is a game you are meant to get wrong. Every other genre here

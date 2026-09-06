@@ -3,6 +3,12 @@ import {defineRule, moduleFor} from './dsl.mjs';
 const rule = defineRule({
   name: 'Writing',
   ability: 'Shows Text',
+  purpose: `**Writing** is the words an actor has to say.
+
+It owns the *text* and draws none of it — a Label actor does the drawing, which
+is why the same words can be a speech bubble, a score line or a sign.
+
+Give anything with words **Shows Text**.`,
   header: `// "Shows Text" — the state a drawn word is drawn from.
 //
 // NAMED "Writing" AND NOT "Text". A rule's name is its toolbox category, and
@@ -51,5 +57,9 @@ shows.color('text color', '#ffffff');
 // absence reads as a bug: a score anchored left grows to the right and off the
 // screen, and the same score anchored right stays where it was put.
 shows.string('text anchor', 'centre');
+
+shows.doc(
+  '**The words, and how they look.** The rule owns the text and draws none of it.\n\nA Label actor reads these four properties and paints them, which is why the same words can be a speech bubble, a score line or a sign — the drawing is the actor\'s business and the words are yours.\n\n`text` starts EMPTY, because an actor nobody has given words to has none: a Label placed and left alone draws nothing rather than the word "text". The size is in pixels, like every other size in the lab; only rates are in units per second.\n\nReveals Text writes `text` a few letters at a time, and every drawing already reading it keeps working without knowing anything changed.',
+);
 
 export default () => moduleFor(rule, 'writing');

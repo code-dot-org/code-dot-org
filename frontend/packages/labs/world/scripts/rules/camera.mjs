@@ -4,6 +4,15 @@ import {defineRule, doc, moduleFor, thisCamera} from './dsl.mjs';
 const rule = defineRule({
   name: 'Camera',
   ability: 'Has a Camera',
+  purpose: `**Camera** is the base every other camera rule is built on. On its own it does
+almost nothing, and that is the point.
+
+It owns one idea: the *goal*, where the camera wants to look. Every rule that
+decides where to look writes the goal, and this one moves the camera there. So
+following, easing, deadzones and limits can all be switched on together without
+any of them knowing about the others.
+
+Give a camera **Aimed** and then add whichever of those you want.`,
   header: `// "Has a Camera", the base every camera rule builds on.
 //
 // It owns two things and nothing else: a GOAL — where the camera wants to look

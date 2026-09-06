@@ -1,6 +1,7 @@
 import {
   age,
   defineRule,
+  doc,
   moduleFor,
   moreThan,
   note,
@@ -12,6 +13,13 @@ import {
 const rule = defineRule({
   name: 'Expiry',
   ability: 'Expires',
+  purpose: `**Expiry** takes an actor out of the world after a while.
+
+The other half of spawning. Something has to put bullets in; this is what takes
+them out. A game that fires six shots a second and never removes one gets
+slower the longer it is played.
+
+Give anything short-lived **Expires** and say how many seconds it gets.`,
   header: `// "Expires" — a thing that takes itself out of the world after a while.
 //
 // The other half of spawning. \`add actor\` puts something in, and without this
@@ -55,6 +63,9 @@ const lifetime = expires.number('lifetime', 2);
 export const Expires = rule.traitRef('Expires');
 
 expires.step('run out', 'react', [
+  doc(
+    "**Old enough, and it is gone.**\n\nAn actor's *age* is how long it has been in the world, so this is one comparison and a removal — no timer to keep and nothing to reset.\n\nMORE than, rather than at least: a lifetime of 0 would otherwise delete the actor on the very frame it appeared, before anything had drawn it.\n\nIn `react`, after everything has moved and been noticed — so a bullet that reached something on its last frame still counts as having hit it.",
+  ),
   note('Older than it was meant to last? Then it is done.'),
   note(
     'MORE than, not at least: a lifetime of 0 would delete it on the frame it appeared.',

@@ -2,6 +2,7 @@ import {CanCollide, contacts} from './collisions.mjs';
 import {
   both,
   defineRule,
+  doc,
   filter,
   forEach,
   hasTrait,
@@ -17,6 +18,14 @@ import {
 const rule = defineRule({
   name: 'Collection',
   ability: 'Collects Things',
+  purpose: `**Collection** is walking into a coin and having it.
+
+Two abilities, because collecting has two sides. The actor that picks things up
+elects **Collects**; anything that can be picked up elects **Can Be
+Collected** — so a coin is collectible and a brick is not, and neither has to
+know about the player.
+
+What a collector has taken is a list you can count, test and empty.`,
   header: `// "Collects Things" — walk into a coin and have it.
 //
 // TWO abilities, because collecting has two sides and a game names them
@@ -97,6 +106,9 @@ export const isCollected = collectible.event([
 const item = rule.local('item', 'Actor');
 
 collects.step('pick things up', 'react', [
+  doc(
+    '**Take everything touchable that has not already been taken.**\n\nThe list of things being touched comes from Collisions; this narrows it to the ones that can be collected and are not yet claimed, and takes those.\n\nTHE ORDER INSIDE THE LOOP IS THE WHOLE OF IT. The item is marked taken *first*, so that two collectors reaching the same coin on the same frame cannot both have it — the second finds it already claimed and passes over. Then the thing taken is told, while it is still in the world and can still say something. The collector is told next. Only then is it removed, at the end of the tick, so both handlers found something real to talk about.\n\nIn `react`, after everything has moved: you collect what you ended the frame touching.',
+  ),
   note('Anything it is touching that can be taken and has not been.'),
   forEach(item, {
     from: filter(item, {

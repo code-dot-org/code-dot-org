@@ -36,6 +36,14 @@ import {
 const rule = defineRule({
   name: 'Collisions',
   ability: 'Notices Collisions',
+  purpose: `**Collisions** works out who is touching whom, once, for everybody.
+
+It only *notices*. What to do about a touch — push apart, land on it, take
+damage, collect it — belongs to whichever rule reads the list, which is why
+this is its own rule rather than part of any of them.
+
+Give anything that should be noticed **Can Collide**. Most other rules here
+need it.`,
   header: `// "Notices Collisions" — who is touching whom, worked out once.
 //
 // It only NOTICES. What to do about a contact — push apart, land, take damage,

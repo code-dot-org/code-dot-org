@@ -8,6 +8,7 @@ import * as Blockly from 'blockly/core';
 
 import {localization} from '@code-dot-org/core/plugins/localization';
 
+import {split} from '../../src/blockly/bodySurfaces';
 import {buildDomainPalette} from '../../src/blockly/domainBlocks';
 import {parseRuleMeta} from '../../src/blockly/ruleMeta';
 import {STOCK_RULES} from '../../src/rules/stock';
@@ -22,4 +23,5 @@ export {
   countBlocks,
   interfaceOnly,
   parseRuleMeta,
+  split,
 };

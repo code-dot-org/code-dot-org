@@ -1,6 +1,7 @@
 import {
   atLeast,
   defineRule,
+  doc,
   minus,
   moduleFor,
   note,
@@ -12,6 +13,13 @@ import {
 const rule = defineRule({
   name: 'Zapping',
   ability: 'Zaps',
+  purpose: `**Zapping** is how often a thing may fire, and nothing about what it fires.
+
+The rule owns the *rate* and your project owns the energy ball. It raises an
+event when a shot is allowed, and your handler puts the shot in the world —
+which is what lets a stock rule fire something it has never heard of.
+
+Give a shooter **Zaps**, and set how often.`,
   header: `// "Zaps" — how often a thing may zap, and nothing about what it sends.
 //
 // The rule owns the RATE and the project owns the ENERGY BALL, and that split
@@ -84,6 +92,9 @@ export const makeZap = rule.block({
     'Zap, if enough time has passed since the last one. Does nothing if the actor is still recharging — handle "zaps" to say what a zap actually sends.',
   say: ['make', param('who', 'actor'), 'zap'],
   body: ({who}) => [
+    doc(
+      '**A cooldown, which is one subtraction.**\n\n`time - last zapped` is how long it has been. If that is at least the recharge time, the zap happens; otherwise nothing does, and asking again next frame costs nothing.\n\nTHE ORDER MATTERS. The time is written down BEFORE the event is raised, because the handler a project writes for `zaps` may itself ask this actor to zap — and if it did so before the clock was written, the cooldown would never have started and a single press would fire forever.\n\n`time` counts ticks rather than reading a wall clock, so a paused game does not recharge and a cooldown means the same on a 30Hz screen as on a 120Hz one.',
+    ),
     note('Long enough since the last zap? Then this one happens.'),
     when([
       [

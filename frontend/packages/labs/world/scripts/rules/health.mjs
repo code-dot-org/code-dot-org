@@ -26,6 +26,14 @@ import {
 const rule = defineRule({
   name: 'Health',
   ability: 'Has Health',
+  purpose: `**Health** is things being damaged, and running out.
+
+Two abilities, like Collection's. A player, a crate or a boss elects **Has
+Health**; a spike, an energy ball or a patrolling crawler elects **Deals
+Damage**. Neither has to know about the other.
+
+Being hurt and running out are both events, so what happens next — a flash, a
+sound, a game over — is yours.`,
   header: `// "Has Health" — things can be damaged, and can run out.
 //
 // TWO abilities, like Collection's, and for the same reason: being damaged has

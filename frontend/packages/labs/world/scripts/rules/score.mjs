@@ -19,6 +19,13 @@ import {
 const rule = defineRule({
   name: 'Scoring',
   ability: 'Keeps Score',
+  purpose: `**Scoring** is a number the whole world shares, and the moment it is enough.
+
+You can already count things. What this adds is a score every rule and every
+actor can see, and a target — so "you win at 100" is a fact about the world
+rather than a check somebody remembered to write.
+
+Give a world **Watches the Score**. Reaching the target raises an event.`,
   header: `// "Keeps Score" — a number the whole world shares, and the moment it is
 // enough.
 //

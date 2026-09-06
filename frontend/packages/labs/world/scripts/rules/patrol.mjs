@@ -4,6 +4,7 @@ import {
   atLeast,
   axisOf,
   defineRule,
+  doc,
   moduleFor,
   n,
   note,
@@ -17,6 +18,16 @@ import {
 const rule = defineRule({
   name: 'Patrol',
   ability: 'Patrols',
+  purpose: `**Patrol** makes an actor walk a beat on its own — a guard pacing a
+corridor, a lift going up and down, a platform sliding back and forth.
+
+It is what an actor does when you are *not* there. Chasing is about the
+player; this is not. Give an actor **Patrols across** and it walks left and
+right forever, turning around at the end of each leg. **Patrols down** does the
+same thing vertically. An actor can take both and walk a rectangle.
+
+The beat is a speed and how long it walks before turning round, and both are
+yours to set.`,
   header: `// "Patrols" — the second thing a level needs after a player.
 //
 // Steering chases and flees, which is a thing an enemy does about YOU. This is
@@ -96,6 +107,9 @@ const beat = (traitName, which, other) => {
   const goes = () => times(heading.of(thisActor()), speed.of(thisActor()));
 
   trait.step(`turn ${which}`, 'decide', [
+    doc(
+      '**A beat is a clock, not a distance.**\n\nThe heading is 1 or -1 and the speed is multiplied by it, so turning round is one multiplication by -1. What decides when is a booked time: `next turn` says when the next turn is due, and each turn books the following one a period later.\n\nBOOKED FROM WHEN IT WAS DUE, not from now. Adding the period to the due time rather than to the current time is what stops the beat drifting: a frame that arrives a little late does not push every later turn a little later still, so two guards started together stay together for the whole level.\n\nIt starts at 0, which is in the past, so the first frame is always due a turn and the actor sets off without needing a separate has-it-started flag.\n\nIn `decide`, before anything moves: this sets the intention and Physics carries it out.',
+    ),
     note('Due a turn? Then turn, and book the next one a period from now.'),
     when([
       [

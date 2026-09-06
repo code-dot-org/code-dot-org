@@ -27,6 +27,13 @@ import {
 const rule = defineRule({
   name: 'Steering',
   ability: 'Chases and Flees',
+  purpose: `**Steering** is an actor that goes after another one — or runs away.
+
+The smallest rule that makes an actor *behave*. Everything else here is about
+what happens *to* a thing; this is a thing with an intention.
+
+Give a hunter **Chases** and a coward **Flees**, say who, and set how fast. In
+a room with walls, Path is the smarter cousin.`,
   header: `// "Chases and Flees" — an actor that goes after another one.
 //
 // Nothing in the library made an actor BEHAVE. Every other rule is about what

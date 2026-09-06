@@ -39,6 +39,14 @@ import {CanMove, positionBefore, velocity} from './motion.mjs';
 const rule = defineRule({
   name: 'Gravity',
   ability: 'Has Gravity',
+  purpose: `**Gravity** is things falling, and landing on what is under them.
+
+Give an actor **Affected by Gravity** and it accelerates downward; give a tile
+**Acts as Ground** and things come to rest on top of it. Landing raises an
+event, so you can play a sound or bend the knees.
+
+The strength and direction of gravity belong to the world, and each actor has a
+scale of its own — so a feather can fall slower than a rock in the same room.`,
   header: `// "Has Gravity" — things fall, and land on what is under them.
 //
 // Two steps in two moments, which is why a phase belongs to a step and not to a

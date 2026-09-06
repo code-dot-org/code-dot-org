@@ -9,6 +9,7 @@ import {
   absolute,
   axisOf,
   defineRule,
+  doc,
   give,
   lessThan,
   mapSize,
@@ -28,6 +29,15 @@ import {
 const rule = defineRule({
   name: 'Boundaries',
   ability: 'Stays in the Map',
+  purpose: `**Boundaries** stops an actor at the edge of the map instead of letting it
+wander off.
+
+Give an actor **Stays Across** to stop at the left and right edges, **Stays
+Down** for the top and bottom, or both to keep it on the map entirely. A paddle
+wants this; so does a player in a room.
+
+It is Screen Wrap's opposite. Wrapping puts you out the other side; this puts
+you back where you were.`,
   header: `// "Stays in the Map" — walk into an edge and stop there.
 //
 // Screen Wrap's opposite, and deliberately its mirror: the same two edges, the
@@ -98,6 +108,9 @@ export const kept = rule.block({
     'This number, held between a low and a high — the low if it is under, the high if it is over, and itself if it is already between them.',
   say: ['keep', param('value'), 'between', param('low'), 'and', param('high')],
   body: ({value, low, high}) => [
+    doc(
+      "**A number pinned between two others** — the low end if it is under, the high end if it is over, and itself if it is already between them.\n\nThree cases and no arithmetic, which is worth noticing: clamping is usually written as `min(max(value, low), high)`, and that is the same thing said in a way that has to be unpicked to be read.\n\nIt is on the rule rather than on either trait for the same reason Screen Wrap's is: one sum, both directions, and nowhere for two copies to disagree. It is also the block to reach for to pin anything else down — a score, a volume, a health bar.",
+    ),
     note('Under the low end? Then the low end is as far as it goes.'),
     when([[lessThan(value.get(), low.get()), [give(low.get())]]]),
     note('Over the high end? Likewise.'),
@@ -143,6 +156,9 @@ const stayOn = which =>
   });
 
 across.step('stop at the sides', 'adjust', [
+  doc(
+    "**Hold the middle back by half a body.**\n\nA position is an actor's MIDDLE, so stopping at the edge of the map means stopping half the actor's width short of it — otherwise half the sprite hangs over the side.\n\nThe half-width is taken from the drawn picture, falling back to a 32 by 32 square when nothing has measured it yet, and its absolute value is used: a scale of -1 is how a sprite is flipped to face the other way, and a negative half-width would hold the actor half a body OUTSIDE the map instead.\n\nAcross only — the down position passes through untouched, which is what lets this and *Stays Down* share a moment.",
+  ),
   note(
     'Across only: the down position is read and written back unchanged, which is what lets this and "Stays Down" share a moment.',
   ),

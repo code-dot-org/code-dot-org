@@ -34,6 +34,14 @@ import {
 const rule = defineRule({
   name: 'Digging',
   ability: 'Digs Holes',
+  purpose: `**Digging** lets the player make a hole in the floor that fills itself back in.
+
+You choose where the hole goes, you get a few seconds of it, and then the floor
+returns whether or not you are standing in it — which is what makes it a
+mechanic rather than a tool.
+
+Give the player **Digs** and the diggable tiles **Can Be Dug**. How long a hole
+lasts is yours to set.`,
   header: `// "Digs Holes" — a hole you make, and one that fills itself in.
 //
 // The other way of changing a room in this library is a switch: you walk over

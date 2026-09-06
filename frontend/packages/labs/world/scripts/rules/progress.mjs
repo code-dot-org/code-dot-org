@@ -3,6 +3,13 @@ import {defineRule, moduleFor} from './dsl.mjs';
 const rule = defineRule({
   name: 'Progress',
   ability: 'Shows Progress',
+  purpose: `**Progress** is how far along something is, as a number between 0 and 1.
+
+Health left, a bar filling, a level part-finished. It owns the *fraction* and
+paints none of it — a Progress Bar actor draws it, the way a Label draws
+Writing's words.
+
+Give anything with a fraction **Shows Progress**.`,
   header: `// "Shows Progress" — how far along something is, as a number between 0 and 1.
 //
 // WRITING'S SIBLING, and written to be read beside it. That rule owns the words
@@ -48,5 +55,9 @@ shows.color('bar color', '#e04040');
 // …and the part it fills up. Dark, so an empty bar still reads as a bar with
 // nothing in it rather than as nothing at all.
 shows.color('track color', '#301820');
+
+shows.doc(
+  "**A fraction, and two colours.** That is the whole rule — it owns how far along something is and draws none of it.\n\n`fraction` runs from 0 to 1: empty to full. A Progress Bar actor reads it and paints that much of itself in the bar colour and the rest in the track colour, the way a Label reads Writing's words.\n\nAnything that is a proportion belongs here — health left, a level part-finished, a charge building. Work out the fraction with a division (`health / max health`) and set it; keeping it between 0 and 1 is Boundaries' `keep between` block.\n\nIt starts FULL, so a bar nobody has told anything to reads as a bar rather than as an empty frame that looks deliberate.",
+);
 
 export default () => moduleFor(rule, 'progress');

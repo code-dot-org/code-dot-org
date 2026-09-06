@@ -13,6 +13,13 @@ import {
 const rule = defineRule({
   name: 'Camera Follow',
   ability: 'Follows an Actor',
+  purpose: `**Camera Follow** points the camera at an actor and keeps it there.
+
+The one you almost always want: give a camera **Follows**, say which actor to
+watch, and the view goes where that actor goes. An offset lets you sit the
+player low on the screen so there is more room to see ahead.
+
+It needs **Has a Camera**, which is what actually moves the view.`,
   header: `// "Follows an Actor" — the worked example of a camera rule.
 //
 // One step, in the \`aim\` moment: put the goal where the followed actor is.

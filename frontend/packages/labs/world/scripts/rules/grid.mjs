@@ -35,6 +35,14 @@ import {
 const rule = defineRule({
   name: 'Grid',
   ability: 'Moves on a Grid',
+  purpose: `**Grid** moves things a whole tile at a time instead of by pixels.
+
+Every other kind of movement here is continuous — a speed, applied every frame.
+That is right for a platformer and wrong for Sokoban, Pac-Man, Snake or
+anything on a board, where a thing is *on* a square rather than between two.
+
+Give the mover **Steps on the Grid**, anything occupying a square **Fills a
+Tile**, and anything shovable **Can Be Pushed**.`,
   header: `// "Moves on a Grid" — a world of whole tiles instead of pixels.
 //
 // Every other way of moving in this library is CONTINUOUS: Physics gives an

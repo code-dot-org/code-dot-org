@@ -29,6 +29,15 @@ import {AffectedByGravity, directionOfGravity} from './gravity.mjs';
 const rule = defineRule({
   name: 'Jetpack',
   ability: 'Flies with a Jetpack',
+  purpose: `**Jetpack** is flight you hold down: thrust while the key is pressed, fall when
+it is not.
+
+Different from jumping, which is one push and then physics. Here the player is
+always trading height against fuel, and letting go is part of flying rather
+than the end of it.
+
+Give an actor **Flies with a Jetpack**, and set the thrust and how much fuel it
+carries.`,
   header: `// "Flies with a Jetpack" — held down rather than pressed, and it runs out.
 //
 // Jumping is the other half of this and answers a different question. A jump is

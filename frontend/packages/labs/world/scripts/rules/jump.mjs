@@ -26,6 +26,15 @@ import {AffectedByGravity, directionOfGravity, falling} from './gravity.mjs';
 const rule = defineRule({
   name: 'Jumping',
   ability: 'Jumps',
+  purpose: `**Jumping** is one push upward, and everything that makes it feel right.
+
+A jump is easy; a jump that feels good is not. This carries the details games get
+wrong: how many jumps an actor has, and getting them back on landing.
+
+Give an actor **Jumps**. It carries the grace period that makes a jump feel fair:
+step off a ledge and you may still jump for a moment afterwards.
+
+It needs Gravity, which is what brings it back down.`,
   header: `// "Jumps" — the verb a platformer is missing without it.
 //
 // Gravity already knows whether an actor is standing on something: its landing

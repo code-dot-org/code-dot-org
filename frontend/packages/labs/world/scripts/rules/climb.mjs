@@ -37,6 +37,13 @@ import {positionBefore, velocity} from './motion.mjs';
 const rule = defineRule({
   name: 'Climbing',
   ability: 'Climbs Ladders',
+  purpose: `**Climbing** gives an actor the other way up — and the only way down.
+
+A ladder is a floor you can also travel through, which is two facts that fight
+each other. This settles them: give a tile **Can Be Climbed**, give the player
+**Climbs**, and add **Climbs with Arrow Keys** to steer it with up and down.
+
+On a ladder, gravity lets go and the actor moves at a climbing speed you set.`,
   header: `// "Climbs Ladders" — the other way up, and the only way DOWN.
 //
 // A ladder is a one-way platform you can also travel through, which is two

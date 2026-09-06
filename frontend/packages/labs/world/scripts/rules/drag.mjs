@@ -1,11 +1,12 @@
 import {CanMove, velocity} from './builtins.mjs';
 import {
   defineRule,
+  doc,
   frameTime,
   give,
+  minus,
   moduleFor,
   moreThan,
-  minus,
   n,
   note,
   param,
@@ -18,6 +19,13 @@ import {
 const rule = defineRule({
   name: 'Drag',
   ability: 'Slows Down',
+  purpose: `**Drag** is what slows an actor down when nothing is pushing it.
+
+Its own rule rather than a setting on Arrow Drive, because slowing down is not
+something only a driven actor does: a thrown ball, a knocked-back enemy, a puck
+sliding on ice all want it.
+
+Give anything **Slows Down** and set how strongly.`,
   header: `// "Slows Down" — the thing that stops an actor when nothing is pushing it.
 //
 // Its own rule rather than a knob on "Drives with Arrow Keys", because slowing
@@ -82,6 +90,9 @@ export const kept = rule.block({
     param('seconds'),
   ],
   body: ({drag, seconds}) => [
+    doc(
+      '**What is left after losing a fraction of it every second.**\n\nDrag is the fraction taken away per second, so `1 - drag` is the fraction KEPT. Keeping that much each second for `seconds` seconds means multiplying it by itself that many times: `(1 - drag)^seconds`.\n\nWhy a power and not `1 - drag x seconds`: taking a fixed slice off a shrinking thing takes a smaller amount each time. Multiplying would eventually reach zero and go past it — a puck that stopped and then slid backwards. A power never does; it only ever gets nearer to nothing.\n\nRaising a NEGATIVE number to a fractional power is not a number at all, which is why losing more than all of it per second is answered as a dead stop first.',
+    ),
     note(
       'Losing MORE than all of it per second is a dead stop, not a reversal — and a negative raised to part of a power is not a number at all.',
     ),
@@ -94,6 +105,9 @@ export const kept = rule.block({
 });
 
 slowed.step('slow down', 'push', [
+  doc(
+    "**Shrink the speed a little, every frame.**\n\nThe fraction left is worked out for one frame's worth of time and both axes are multiplied by it, so the direction is untouched and only the length changes. An actor slowing down keeps going exactly the way it was going.\n\nIn `push`, beside the other forces — so whatever is driving the actor this frame has already had its say, and what is left is what drag acts on.",
+  ),
   note(
     'Whatever it is doing, it is doing a little less of it than last frame.',
   ),

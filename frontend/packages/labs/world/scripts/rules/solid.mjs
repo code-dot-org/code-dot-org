@@ -41,6 +41,14 @@ import {
 const rule = defineRule({
   name: 'Solid Bodies',
   ability: 'Has Solid Bodies',
+  purpose: `**Solid Bodies** stops a moving actor ending up inside a solid one.
+
+Collisions notices a touch; this does something about it. A body that has moved
+into a wall is pushed back out along whichever way it came, so a player walks
+along a floor instead of through it.
+
+Give walls, floors and anything else impassable **Solid**. Movers need **Can
+Move** and **Can Collide**.`,
   header: `// "Has Solid Bodies" — a moving body cannot end up inside a solid one.
 //
 // It runs in \`settle\`, after Collisions has worked out who is touching whom

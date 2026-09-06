@@ -31,6 +31,13 @@ import {CanMove, velocity} from './motion.mjs';
 const rule = defineRule({
   name: 'Flapping',
   ability: 'Flaps and Glides',
+  purpose: `**Flapping** is the enemy that comes at you across the room.
+
+A rolling ball and a climbing robot are things you learn and then avoid. This
+one flies: it beats upward, glides down, and is never quite where you last saw
+it — a different *shape* of enemy rather than a faster one.
+
+Give an actor **Flaps and Glides**, and set how hard and how often it beats.`,
   header: `// "Flaps and Glides" — the enemy that is never where you last saw it.
 //
 // The other two enemies in the platformer are things you learn and then avoid:

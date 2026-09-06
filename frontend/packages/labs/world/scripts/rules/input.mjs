@@ -13,6 +13,14 @@ const KEY = 'enum:Engine#Key';
 const rule = defineRule({
   name: 'Input',
   ability: 'Reads the Keyboard',
+  purpose: `**Input** turns the keyboard into events.
+
+Nothing else here reads keys directly. A key going down and a key coming up
+each raise an event, once, for whoever cares — so two rules can both answer the
+space bar without fighting over it.
+
+Give an actor **Takes Keyboard Input**, or handle the world-level event when no
+one actor owns the key.`,
   header: `// "Reads the Keyboard" — what turns a keyboard into events.
 //
 // It runs in \`sense\`, the first moment of the frame, so everything that reads

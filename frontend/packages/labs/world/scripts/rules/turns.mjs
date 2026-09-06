@@ -16,6 +16,14 @@ import {
 const rule = defineRule({
   name: 'Turns',
   ability: 'Takes Turns',
+  purpose: `**Turns** is a game where time is a sequence rather than a rate.
+
+Everything else here happens continuously, whether or not anybody did anything.
+A board game is not like that: nothing happens until somebody moves, and then
+everything does.
+
+Give the players **Takes a Turn**. Whose turn it is, and moving it on, are
+events.`,
   header: `// "Takes Turns" — a game where time is a sequence rather than a rate.
 //
 // Everything else in this library happens at a RATE. Physics moves an actor so

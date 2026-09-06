@@ -23,6 +23,11 @@ import {ShowsText, text} from './writing.mjs';
 const rule = defineRule({
   name: 'Reveals Text',
   ability: 'Reveals Text',
+  purpose: `**Reveals Text** is words arriving a few letters at a time — the typewriter
+every game with dialogue has.
+
+Give an actor **Reveals Text** and set how fast the letters come. What is
+actually drawn is Writing's job; this decides how much of it is showing.`,
   header: `// "Reveals Text" — words arriving a few letters at a time.
 //
 // The typewriter every game with dialogue has, and the reason it is a rule

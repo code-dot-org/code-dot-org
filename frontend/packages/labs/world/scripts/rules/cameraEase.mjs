@@ -18,6 +18,13 @@ import {
 const rule = defineRule({
   name: 'Camera Ease',
   ability: 'Catches Up Smoothly',
+  purpose: `**Camera Ease** makes the camera catch up smoothly instead of snapping.
+
+Whatever the camera is aiming at, this drifts it there over a few frames — so a
+player who stops running is centred a moment later rather than instantly.
+
+Give a camera **Eases** and set the smoothness. Smaller is lazier; 1 is no
+easing at all.`,
   header: `// "Catches Up Smoothly" — the camera catches up instead of snapping.
 //
 // It reads the goal something else proposed and hands back a nearer one, so the

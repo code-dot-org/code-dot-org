@@ -17,6 +17,14 @@ import {
 const rule = defineRule({
   name: 'Inventory',
   ability: 'Holds Things',
+  purpose: `**Inventory** is a bag: what an actor is carrying *now*, as opposed to what it
+has ever picked up.
+
+Collection keeps a record, and a record only grows — nothing can take a coin
+back out of a total. A bag is different: you put a key in, you use it, it is
+gone.
+
+Give the carrier **Carries** and anything pocketable **Can Be Carried**.`,
   header: `// "Holds Things" — a bag, and the difference between having and having had.
 //
 // Collection already answers "how many coins did I pick up": it keeps every

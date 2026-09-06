@@ -20,6 +20,14 @@ import {
 const rule = defineRule({
   name: 'Time',
   ability: 'Keeps Time',
+  purpose: `**Time** is things happening every so often, and things you may only do every
+so often.
+
+Two ideas that look alike and are not. A **Has a Timer** fires again and again
+— a wave every three seconds. A **Has a Cooldown** is a thing you spend and
+wait for — a shot you cannot take twice at once.
+
+Both raise events, so what happens on the beat is yours.`,
   header: `// "Keeps Time" — things that happen every so often, and things you can
 // only do every so often.
 //

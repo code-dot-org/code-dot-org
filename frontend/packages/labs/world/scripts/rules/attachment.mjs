@@ -12,6 +12,14 @@ import {
 const rule = defineRule({
   name: 'Attachment',
   ability: 'Rides on an Actor',
+  purpose: `**Attachment** makes one actor ride another, so the two move as one.
+
+Give the rider **Attached**, say which actor it rides and how far from it to
+sit, and it follows wherever that actor goes — a hat on a head, a turret on a
+tank, a health bar over a player.
+
+It is Camera Follow one level down: that rule points the *view* at an actor,
+this points an *actor* at one.`,
   header: `// "Rides on an Actor" — two things that move as one.
 //
 // CAMERA FOLLOW, ONE LEVEL DOWN. That rule points the VIEW at an actor and
