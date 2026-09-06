@@ -16,6 +16,7 @@ import ToolboxTrashcanPlugin from '@code-dot-org/blockly/plugins/toolboxTrashcan
 import {activateFile} from '@code-dot-org/codebridge';
 import type {CustomEditorProps} from '@code-dot-org/codebridge';
 import type {MultiFileSource} from '@code-dot-org/core/api';
+import {useLocalization} from '@code-dot-org/core/plugins/localization';
 import {useMaybeLevelProperties, useSources} from '@code-dot-org/lab/contexts';
 
 import {
@@ -67,6 +68,7 @@ import {FieldMarkdown, setMarkdownOpener} from './fields/FieldMarkdown';
 import {NoteEditorDialog} from './fields/NoteEditorDialog';
 import {fileKindOf} from './fileKind';
 import {registerLessonButtons} from './lessonFlyoutButton';
+import {localizeBlocks} from './localizeBlocks';
 import {redrawLiveDropdowns} from './moduleOptions';
 import {
   OPENABLE_EXTENSIONS,
@@ -732,10 +734,11 @@ export const BlocklyFileEditor = ({
   /** Show a whole document: keep its bodies, render its interface. */
   const showFile = useCallback(
     (document: BlocklySerialization, workspace: Blockly.WorkspaceSvg) => {
-      Blockly.serialization.workspaces.load(
-        HIDE_BODIES ? seam.show(document) : document,
-        workspace,
-      );
+      const shown = HIDE_BODIES ? seam.show(document) : document;
+      Blockly.serialization.workspaces.load(shown, workspace);
+      // Handed back because the caller may be reloading UNDER an open body,
+      // and the body is built from the interface, not from the workspace.
+      return shown;
     },
     [seam],
   );
@@ -747,6 +750,22 @@ export const BlocklyFileEditor = ({
   const surfaceToolbox = useMemo(
     () => toolboxForSurface(toolbox, editing?.kind ?? 'interface'),
     [toolbox, editing],
+  );
+
+  // The words on the blocks, in the reader's language.
+  //
+  // Done to the DEFINITIONS rather than to the workspace: Blockly has no
+  // notion of localization, and a translation that reached the SVG would be
+  // text rewritten under its layout. `localizeBlocks` translates what is read
+  // and leaves every identifier — block types, argument names, what a dropdown
+  // STORES — exactly as it was.
+  const locale = useLocalization();
+  const localizedBlocks = useMemo(
+    // `locale` is not read; it is the signal. The plugin fires `change` when
+    // LocalizeJS arrives and on every switch after, and the translation is
+    // synchronous, so re-running it is the whole of following a locale.
+    () => localizeBlocks(blocks),
+    [blocks, locale],
   );
 
   const options = useMemo(
@@ -953,6 +972,24 @@ export const BlocklyFileEditor = ({
         if (event.isUiEvent) {
           return;
         }
+        // A KEYSTROKE IS NOT AN EDIT, and on this surface that is not a
+        // nicety. Blockly writes a text field on every keypress as an
+        // intermediate change, so that the block resizes as you type. Down
+        // this path the member's name is its signature: persisting those
+        // would rename it to "c", then "cl", then "cla" — and a rename
+        // rewrites the project, which reloads this workspace, which throws
+        // away the very block whose field is open. Typing `clamped between 0
+        // and 1` over `kept between 0 and 1` lost the field editor within the
+        // first few letters and left the member called `cla`.
+        //
+        // So the keystrokes are shown and not saved; the commit — the
+        // BLOCK_CHANGE Blockly fires when the editor closes, from the value
+        // it opened with — is what the project hears about. Same discipline
+        // as `isTypingDeclaration` on the file surface, which this branch
+        // returns before reaching.
+        if (event.type === Blockly.Events.BLOCK_FIELD_INTERMEDIATE_CHANGE) {
+          return;
+        }
         // The signature is blocks on the head, and the FILE is the parts they
         // stand for — so the stack is read back before anything is saved.
         // Idempotent, and it has to be: this runs on every edit, and a rebuild
@@ -971,15 +1008,28 @@ export const BlocklyFileEditor = ({
         const held = interfaceRef.current;
         if (held && !isReadOnly) {
           const contents = JSON.stringify(seam.read(held), null, 2);
-          // A field on the HEAD is not a change to this member's body — it is
-          // a change to what the rule offers, and `reconcileMembers` keeps the
-          // snapshot it compares against in step. Switching a `define block`
-          // between doing and reporting is deliberately not treated as a
-          // rename (`renamedMember`), so this only updates that snapshot; it
-          // is here so the next edit on the interface is compared against what
-          // the file actually says.
-          if ((event as {blockId?: string}).blockId === BODY_OWNER_ID) {
-            reconcileMembers(contents);
+          // EVERY change on this surface, not only ones to the head.
+          //
+          // A member's name is its signature, and the signature is edited as
+          // blocks in the `arguments` row — so retyping a word changes what
+          // the rule OFFERS, and the change event carries the id of the little
+          // `text` block that was typed into, not the head's. Gated on the
+          // head, this never ran for the one edit that most needs it: the
+          // member was renamed, its callers were left pointing at the old
+          // name, and `standInBlocks` minted a definition for the dangling
+          // type so that everything still drew and quietly did nothing.
+          //
+          // `reconcileMembers` is its own guard — it compares the member keys
+          // against the snapshot and returns unless one was renamed — so
+          // calling it on every edit costs a parse and changes nothing else.
+          reconcileMembers(contents);
+          // …and when it carried one, the project has already been written —
+          // by `carry`, from the sources of this moment. `saveFile` closes
+          // over the sources of the render that made it, so saving again here
+          // would put the other files back, references and all. The file
+          // surface skips the save for the same reason.
+          if (pendingReload.current) {
+            return;
           }
           onChangeRef.current(contents);
         }
@@ -1109,7 +1159,14 @@ export const BlocklyFileEditor = ({
     const {scrollX, scrollY} = workspace;
     Blockly.Events.disable();
     try {
-      showFile(state, workspace);
+      // THE HELD INTERFACE IS PART OF THE RELOAD, and forgetting that is how
+      // a rename made from a body surface undid itself. The body is rebuilt
+      // from this snapshot (`seam.bodyOf`), which was taken when the pencil
+      // was clicked — so a snapshot left alone still says the old signature,
+      // and `seam.show` above has just dropped the head state that was the
+      // only other record of the new one. The surface came back saying what
+      // the learner had typed OVER, one keystroke's work silently undone.
+      interfaceRef.current = showFile(state, workspace);
     } finally {
       Blockly.Events.enable();
     }
@@ -1205,6 +1262,48 @@ export const BlocklyFileEditor = ({
     refreshBlockDesigns(workspace);
     workspace.scroll(scrollX, scrollY);
   }, [sourcesEpoch, initialContents, showFile]);
+
+  // Blocks already on screen were built with the words of the old locale.
+  //
+  // Re-registering the definitions changes what the NEXT block made of a type
+  // will say, and nothing about the ones already made — a block keeps the
+  // fields it was created with. So the workspace is loaded back into itself,
+  // which is the same thing a file switch does and the same thing the font
+  // re-measure below does.
+  //
+  // Not on the first render: `useLocalization` reports a locale immediately,
+  // and reloading a workspace that was just built in that locale is a reload
+  // for nothing.
+  const localeShown = useRef<string | null>(null);
+  useEffect(() => {
+    const workspace = workspaceRef.current;
+    if (!workspace) {
+      return;
+    }
+    if (localeShown.current === null) {
+      localeShown.current = locale;
+      return;
+    }
+    if (localeShown.current === locale) {
+      return;
+    }
+    localeShown.current = locale;
+    const {scrollX, scrollY} = workspace;
+    const state = Blockly.serialization.workspaces.save(workspace);
+    Blockly.Events.disable();
+    try {
+      Blockly.serialization.workspaces.load(state, workspace);
+      const head = workspace.getBlockById(BODY_OWNER_ID);
+      if (head) {
+        anchorBodyOwner(head);
+      }
+    } finally {
+      Blockly.Events.enable();
+    }
+    workspace.scroll(scrollX, scrollY);
+    refreshActorPictures(workspace);
+    refreshBlockDesigns(workspace);
+  }, [locale, localizedBlocks]);
 
   // Re-measure when the web fonts land.
   //
@@ -1350,31 +1449,43 @@ export const BlocklyFileEditor = ({
           }}
         />
       )}
-      <BlocklyProvider blocks={blocks} plugins={plugins} theme={theme}>
-        <BlocklyWorkspace
-          // Blockly reads `readOnly` when the workspace is INJECTED and never
-          // again: a read-only injection has no toolbox, no dragging and no
-          // edits, for the life of that workspace. The lab is read-only for a
-          // moment while the project loads, and the file open at that moment
-          // got a workspace that stayed dead — no categories, nothing
-          // clickable — until you opened another file and came back, which
-          // remounted it. Keying on the answer re-injects once, when it
-          // changes.
-          key={isReadOnly ? 'read-only' : 'editable'}
-          className={styles.workspace}
-          // What the "How this works" button at the top of a rule's drawer
-          // does (blockly/lessonFlyoutButton). Registered at injection, so a
-          // toolbox rebuilt for any of the several reasons it is rebuilt still
-          // finds its callbacks.
-          onInject={registerLessonButtons}
-          startBlocks={startBlocks}
-          toolbox={surfaceToolbox}
-          options={options}
+      {/* LocalizeJS sweeps the DOM and rewrites text nodes. Inside a
+          workspace that is Blockly's own SVG, laid out from measurements it
+          took itself, so the sweep is kept out and the words are translated
+          in the definitions instead. Blockly's widget and dropdown divs mount
+          on `document.body` and are outside this, which is the same caveat
+          the effect editor's theme records. */}
+      <div className={styles.blocks} data-notranslate>
+        <BlocklyProvider
+          blocks={localizedBlocks}
+          plugins={plugins}
           theme={theme}
-          workspaceRef={workspaceRef}
-          onChange={handleChange}
-        />
-      </BlocklyProvider>
+        >
+          <BlocklyWorkspace
+            // Blockly reads `readOnly` when the workspace is INJECTED and never
+            // again: a read-only injection has no toolbox, no dragging and no
+            // edits, for the life of that workspace. The lab is read-only for a
+            // moment while the project loads, and the file open at that moment
+            // got a workspace that stayed dead — no categories, nothing
+            // clickable — until you opened another file and came back, which
+            // remounted it. Keying on the answer re-injects once, when it
+            // changes.
+            key={isReadOnly ? 'read-only' : 'editable'}
+            className={styles.workspace}
+            // What the "How this works" button at the top of a rule's drawer
+            // does (blockly/lessonFlyoutButton). Registered at injection, so a
+            // toolbox rebuilt for any of the several reasons it is rebuilt still
+            // finds its callbacks.
+            onInject={registerLessonButtons}
+            startBlocks={startBlocks}
+            toolbox={surfaceToolbox}
+            options={options}
+            theme={theme}
+            workspaceRef={workspaceRef}
+            onChange={handleChange}
+          />
+        </BlocklyProvider>
+      </div>
     </div>
   );
 };

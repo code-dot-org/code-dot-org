@@ -36,3 +36,9 @@
 .bodyTitle {
   font-weight: 600;
 }
+
+/* The workspace's own box. It exists to carry `data-notranslate`, so it must
+ * not change the layout the editor already had. */
+.blocks {
+  display: contents;
+}

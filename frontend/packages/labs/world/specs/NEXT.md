@@ -230,35 +230,22 @@ same thing twice.
 
 ## 4. Make the words localizable while there are forty-seven rules
 
-**The problem.** No file in `src/` uses i18n. The words on a stock rule's
-blocks are baked into generated JSON at build time (`say: ['make',
-param('who'), 'jump']` becomes the block's `message0`); the seventy-three
-lessons' instructions are English strings in `progression/lessons/index.ts`.
-For this host every learner-facing word has to be translatable, and the
-generation step makes it harder than usual: a `say` label has to become a
-message key BEFORE `yarn build:rules`, or every language is a rebuild of the
-shelf.
+**Moved to `specs/LOCALIZATION.md`**, which is where this now lives: the
+problem, the seam that is built, the invariant about what must never be
+translated, why translating `message0` is enough for a designed block, and
+what is left.
 
-**What to do.** Two seams, in this order:
+The short of it. `localizeBlocks` puts every word a learner reads through the
+core localization plugin; the workspace is `data-notranslate` so LocalizeJS
+stays out of Blockly's SVG; and a locale change reloads the workspace, because
+a block keeps the words it was built with. Translating `message0` alone lets a
+translation reorder a block's arguments and add words between them while every
+argument keeps its identity — which is what makes `define block` translatable
+at all.
 
-- The DSL's `say` and `description` values become keys into a message table
-  the build script emits beside the rule, and the block reads its label through
-  Blockly's own message lookup at definition time (a `%{BKY_…}` reference in
-  `message0` is resolved when the block is defined). A generated `.rule` then holds keys,
-  and the workspace draws words. English is the first table and the only one
-  until the files are handed to translation.
-- Lessons' instructions and the catalogue's tile names go through the same
-  lookup the rest of the host uses.
-
-Ability names (`Has Gravity`, `Jumps`) are a third case: they are shown to the
-learner AND used as identifiers (`ruleSlug`). Slug from the id, never from the
-name, before any of this — otherwise the first translation renames every block
-type.
-
-**Done when.** A test loads a stock rule under a second message table (a
-pseudo-locale is enough) and the block's `message0` changes while its type
-does not; the lesson instructions for one tile render in that locale; and no
-`say` string literal remains in `src/rules/stock/`.
+Re-keying block types on rule ids was measured and NOT done: 466 types, 1,634
+occurrences, 132 files, and it buys nothing the invariant does not. Nothing is
+actually translated yet; with no LocalizeJS loaded the plugin is identity.
 
 ## 5. Make the map editor testable, then test it
 
