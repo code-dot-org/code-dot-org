@@ -18,14 +18,19 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
 
 1. Install OS-specific prerequisites
     - See the appropriate section below: [macOS](#macos), [Ubuntu](#ubuntu-2004), [Windows](#windows)
+    - On arm64, or on Ubuntu newer than 22.04, also read [Ubuntu on arm64](#ubuntu-on-arm64-and-on-releases-newer-than-2204)
     - *Important*: When done, check for correct versions of these dependencies:
 
      ```sh
-     ruby --version     # --> ruby 3.1.7
-     node --version     # --> v20.18.3
+     ruby --version     # must match .ruby-version
+     node --version     # must match .nvmrc
      git-lfs --version  #  >= git-lfs/3.0
      uv --version       #  >= 0.5.8
      ```
+
+     The versions are pinned in [.ruby-version](.ruby-version) and
+     [.nvmrc](.nvmrc); read them from there rather than from this page, which
+     has been wrong about both before.
 
 1. `git lfs pull`
 
@@ -217,13 +222,13 @@ These steps are for Apple devices running **macOS 14.x**, including those runnin
 Note: Virtual Machine Users should check the [Alternative note](#alternative-use-an-ubuntu-vm) below before starting
 
 1. `sudo apt-get update`
-1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-11-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript build-essential redis-server rbenv chromium-browser parallel python3-pip`
+1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-11-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript build-essential redis-server rbenv chromium-browser parallel python3-pip libyaml-dev`
     * **Hit enter and select default options for any configuration popups, leaving mysql passwords blank**
     <details> 
       <summary>Troubleshoot: <code>E: Package 'pdftk' has no installation candidate</code>.</summary>
       - If you run into this error, remove `pdftk` from the previous command and run it again. Then try installing `pdftk` another way:
           - Ubuntu 18.04: `sudo snap install pdftk`.
-          - If you can't get `pdftk` installed, it is ok to skip installing this package, and keep in mind that the `PDFMergerTest` test may fail when you try to run the pegasus tests locally.
+          - If you can't get `pdftk` installed, it is ok to skip installing this package. (An earlier version of this page warned that `PDFMergerTest` would fail in the pegasus suite; `pegasus/test` contains no tests, so nothing fails.)
     </details>
 1. *(If working from an EC2 instance)* `sudo apt-get install -y libreadline-dev libffi-dev`
 1. configure your system so that `~/.bashrc` (or another startup file of your choice) will be run whenever you open a shell
@@ -270,6 +275,64 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
 1. Finally, configure your mysql to allow for a proper installation. You may run into errors if you did not leave mysql passwords blank
     1. `echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | sudo mysql`
 1. Return to the [overview](#overview) and continue setup.
+
+### Ubuntu on arm64, and on releases newer than 22.04
+
+The Ubuntu instructions above are written for 20.04 on x86. They mostly work
+elsewhere, but six things differ. All of these were hit setting up on
+`t4g.2xlarge` and `m8g.2xlarge` EC2 instances running Ubuntu 26.04; the first
+four apply to any arm64 host, and the compiler item applies to any host with
+GCC 14 or newer regardless of architecture.
+
+1. **Use `ports.ubuntu.com`, not the EC2 mirror.** On EC2 arm64 instances the
+   default `<region>.ec2.archive.ubuntu.com` serves the arm64 archive very
+   slowly — measured at 2 KB/s on one host, stalling outright on packages over
+   a few megabytes, with a single `apt-get install` making no progress in
+   twelve minutes. `ports.ubuntu.com` is where arm64 packages live and ran at
+   8.5 MB/s, taking the same install to 59 seconds. Rewrite both the archive
+   and security URIs in `/etc/apt/sources.list.d/ubuntu.sources`.
+
+1. **`libyaml-dev` is required.** Ruby 3.2 will not build psych without it. It
+   is in the apt list above; older copies of this page omitted it.
+
+1. **Build Ruby under gcc-13 where the default compiler is GCC 14 or newer**
+   (Ubuntu 26.04 ships GCC 15). GCC 15 defaults to
+   C23, which breaks autoconf's `stdbool.h` probe. ruby-build then produces a
+   `config.h` defining `HAVE__BOOL` but not `HAVE_STDBOOL_H`, and
+   `ruby/internal/stdbool.h` consequently neither includes `<stdbool.h>` nor
+   defines `bool` itself. Any gem forcing an older `-std` — `bootsnap` uses
+   `-std=c99` — then fails to compile inside Ruby's own headers. `xxhash`
+   fails separately on `-Wincompatible-pointer-types`, which GCC 14 promoted
+   to an error.
+
+   ```sh
+   sudo apt-get install -y gcc-13 g++-13
+   CC=gcc-13 CXX=g++-13 rbenv install
+   CONFIGURE_ARGS="--with-cflags=-Wno-incompatible-pointer-types" bundle install
+   ```
+
+   Setting `CFLAGS` in the environment does not help, because gem extconfs
+   overwrite it.
+
+1. **Chrome for `CHROME_BIN`.** `chromium-browser` on recent Ubuntu is a snap
+   shim. Google publishes an arm64 build:
+
+   ```sh
+   curl -O https://dl.google.com/linux/direct/google-chrome-stable_current_arm64.deb
+   sudo apt-get install -y ./google-chrome-stable_current_arm64.deb
+   echo 'export CHROME_BIN=$(which google-chrome)' >> ~/.bashrc
+   ```
+
+1. **`pdftk` has no arm64 candidate.** Skip it; see the note in the apt step
+   above.
+
+1. **Add swap if the image has none.** EC2 Ubuntu images ship without it, and
+   the webpack build in `rake build` is liable to be killed part-way through on
+   a 30 GB host. 16 GB of swapfile was enough.
+
+ImageMagick 7 works. Note that Ubuntu 26.04 offers no ImageMagick 6 packages
+at all, so `rmagick`, which is pinned at a version predating IM7 support,
+builds and runs against 7 — verified, including PANGO for certificate text.
 
 ### Windows
 
