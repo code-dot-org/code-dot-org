@@ -45,6 +45,13 @@ Ruby built under gcc-13.
 
 Both hosts reported the same 9 failures and the same 6 errors, suite by suite.
 
+These figures are from `faf0f7ad3b9` and predate the fixes made on this branch.
+A later run reports `lib` at 799 tests and 2527 assertions, because
+`lib/test/cdo/aws/s3.rb` matched neither test glob and had never run until it
+was renamed; and `dashboard/lib` at 2 failures rather than 3, because two of
+the three `ImageLibTest` cases were an ImageMagick 7 output-format problem that
+is now fixed. Wall times and the ratio are unaffected.
+
 ## The core is 2.00×; the suite is 1.78×
 
 Single-core, from the calibration workload on the same Ruby build:
