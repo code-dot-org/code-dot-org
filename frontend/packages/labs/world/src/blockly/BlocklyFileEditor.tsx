@@ -982,11 +982,54 @@ export const BlocklyFileEditor = ({
     [carry, ownRuleModule],
   );
 
+  /**
+   * The toolbox's blocks, at the height the workspace draws them.
+   *
+   * THE FLYOUT IS ITS OWN WORKSPACE with its own renderer and its own copy of
+   * the font metrics, and the effect below refreshes the main workspace's and
+   * not those. So a page whose font arrived after injection ends up with two
+   * answers — measured, 20/16 in the workspace against 17/14 in the flyout —
+   * and every block in the toolbox is drawn to a different height than the one
+   * you get when you drag it out. Which way it is wrong depends on which face
+   * stood in, so it reads as "too tall" or "too short" depending on the
+   * machine.
+   *
+   * The main workspace is the authority here because it is the one that gets
+   * reloaded; the flyout only has to agree with it. Unlike a workspace, a
+   * flyout redraws its blocks from the refreshed constants straight away —
+   * nothing has to be reloaded — so this is the whole of the fix.
+   */
+  const syncFlyoutMetrics = useCallback(
+    (workspace: Blockly.WorkspaceSvg): void => {
+      const flyout = workspace.getFlyout()?.getWorkspace();
+      if (!flyout) {
+        return;
+      }
+      const metric = (one: Blockly.WorkspaceSvg): number =>
+        (
+          one.getRenderer().getConstants() as unknown as {
+            FIELD_TEXT_HEIGHT?: number;
+          }
+        ).FIELD_TEXT_HEIGHT ?? 0;
+      if (metric(flyout) !== metric(workspace)) {
+        flyout.refreshTheme();
+      }
+    },
+    [],
+  );
+
   const handleChange = useCallback(
     (event: Blockly.Events.Abstract) => {
       const workspace = workspaceRef.current;
       if (!workspace) {
         return;
+      }
+      // Before anything else, and before the UI events are dropped: opening a
+      // category is exactly when the flyout's metrics have to be right, and
+      // asking here needs no guess about when the font arrived. A no-op once
+      // the two workspaces agree, which is every time after the first.
+      if (event.type === Blockly.Events.TOOLBOX_ITEM_SELECT) {
+        syncFlyoutMetrics(workspace);
       }
       // Opening a file is not editing it.
       if (loadedWorkspace.current !== workspace) {
@@ -1118,7 +1161,15 @@ export const BlocklyFileEditor = ({
     // keeps the value it had when the editor mounted — null — and a body's
     // edits fall through to the path that writes the whole file, which for a
     // workspace holding one implementation is not the file at all.
-    [handleRename, reconcileMembers, editing, seam, isReadOnly, readFile],
+    [
+      handleRename,
+      reconcileMembers,
+      editing,
+      seam,
+      isReadOnly,
+      readFile,
+      syncFlyoutMetrics,
+    ],
   );
 
   // The eye on a `use rule` / `use trait` block, and what it does. The handler
