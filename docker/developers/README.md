@@ -44,6 +44,12 @@ docker compose run minio-install
 
 ### Initialization
 
+Run `docker compose` from the repository root. The services below are defined
+in the root `docker-compose.yml`, which `include:`s the fragments in this
+directory; there is no compose file here to run against. Compose v2 will also
+find the root file if you run from a subdirectory, but the root is the
+unambiguous place to be.
+
 Once you have a working Ruby and Node environment, you can then use this command
 to spin up the database and redis servers:
 
