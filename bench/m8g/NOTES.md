@@ -97,6 +97,12 @@ Test and assertion counts agree with the t4g run across every suite —
 exactly, `models` differs by one assertion — and both hosts report the same
 nine failures and six errors. The comparison is like-for-like.
 
+These figures are from tree `faf0f7ad3b9` and predate the fixes on this branch.
+The `lib` row will read 799 tests and 2527 assertions on any later run: the
+regression test added with the `cdo/local_development` fix accounts for 2 tests
+and 11 assertions, and renaming `test/cdo/aws/s3.rb` so that it runs accounts
+for 5 and 12. Failure counts are unchanged by both.
+
 ### The run was clean
 
     calib start 0.96s   mid 0.96s   mid2 0.96s   end 0.96s
@@ -159,19 +165,42 @@ the file is 5779 bytes and fits inside bash's 8 KB read-ahead.
 Confirmed on this host. The first is reproducible in isolation; the rest cost
 setup time here and are recorded so the next person does not rediscover them.
 
-**`lib/cdo/aws/s3.rb` never requires `cdo/local_development`.** Line 96 calls
-`Cdo::LocalDevelopment.populate_local_s3_bucket` when `CDO.aws_s3_emulated` is
-set, but the requires at lines 1-6 do not load that file, so the constant is
-undefined:
+**`lib/cdo/aws/s3.rb` never requires `cdo/local_development`.** *Fixed.* Line 96
+called `Cdo::LocalDevelopment.populate_local_s3_bucket` when
+`CDO.aws_s3_emulated` was set, but the requires at lines 1-6 did not load that
+file, so the constant was undefined:
 
     $ ruby -e 'require "./deployment"; require "cdo/aws/s3"; Cdo::LocalDevelopment'
     NameError: uninitialized constant Cdo::LocalDevelopment
-    # adding require "cdo/local_development" resolves it
 
 `aws_s3_emulated: true` is the configuration `docker/developers` recommends, so
-anyone using the MinIO setup hits this on any `download_from_bucket` that has
-to populate a bucket. It accounts for the non-VCR half of
-`shared/test_aws_s3_integration.rb`.
+any non-Rails caller using the MinIO setup hit this on a `download_from_bucket`
+that had to populate a bucket. Rails autoloads the constant, which is why
+`dashboard/legacy/middleware/sound_library_api.rb:34` makes the same call
+without a require and is *not* affected.
+
+The require went inside the `aws_s3_emulated` guard rather than at the top of
+the file. `cdo/local_development` requires `cdo/aws/s3` back by way of
+`s3_emulation/populator`, so a top-level require introduces a load cycle — it
+resolves today only because every cross-reference sits in a method body — and
+`populator` pulls in `httparty`, which no production process touching S3 needs.
+`lib/cdo/app_server_hooks.rb` already requires `cdo/aws/metrics` and
+`cdo/aws/ec2` this way.
+
+This accounts for the non-VCR portion of
+`shared/test/test_aws_s3_integration.rb`, but does not change that file's pass
+count: the affected test now proceeds far enough to hit a request VCR has no
+cassette for. After the fix its errors are uniformly
+`VCR::Errors::UnhandledHTTPRequestError`, so the "no AWS credentials"
+explanation is now true of all of them, which it was not before.
+
+**`lib/test/cdo/aws/s3.rb` never ran.** *Fixed by renaming to `test_s3.rb`.*
+`lib/Rakefile:8` builds its list from `FileList["test/**/test_*.rb"]`, and that
+filename matched neither that pattern nor the `*_test.rb` convention, so the
+file had never run under `rake test`, in CI or locally. Its five tests pass and
+cover `cached_exists_in_bucket?` and the cache invalidation in
+`upload_to_bucket` and `delete_from_bucket` — behaviour with no other coverage
+in the repository. Worth checking whether other directories have the same gap.
 
 **`docker-compose.dashboard.yml` prints endpoint keys the code cannot parse.**
 It tells you to write `db_endpoint_writer: 127.0.0.1:3306` into `locals.yml`,
