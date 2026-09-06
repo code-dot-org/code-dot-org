@@ -152,16 +152,35 @@ figure is a lower bound and nothing more.
 These are environmental, not defects in the code under test. Expect them on
 any host set up this way, and do not read them as regressions.
 
-**`ImageLibTest`, 3 failures** — `test/lib/image_lib_test.rb:98` compares
-images by shelling out to `compare -metric ae` and testing the output for
-string equality with `'0'`. ImageMagick 7 prints `0 (0)` where ImageMagick 6
-printed `0`, so identical images compare as different. Reproduce directly:
+**`ImageLibTest`, 3 failures — two causes, not one.**
+
+Two of the three are the output format. `test/lib/image_lib_test.rb:98`
+compared `compare -metric ae` output against the string `'0'`; ImageMagick 7
+prints `0 (0)` where 6 printed `0`. Reproduce with
 
     compare -metric ae a.png a.png null:
 
-Ubuntu dropped ImageMagick 6 after 24.04, so 26.04 hosts hit this. rmagick
-itself is fine on ImageMagick 7 — it builds, writes PNGs, and has PANGO —
-despite 4.2.5 predating IM7 support.
+Fixed by comparing the first field instead. `test_images_match` and
+`test_to_png_for_jpg` now pass.
+
+The third, `test_overlay_image`, is a real rendering difference and is not
+fixed. The fixture `test/fixtures/expected_overlaid_image.png` was generated
+under ImageMagick 6; IM7 composites fractionally differently:
+
+    compare -metric ae  /tmp/framed_image.png expected_overlaid_image.png
+    => 1147 (0.00878927)          # 1147 of 130,500 pixels, 0.88%
+    compare -metric rmse ...
+    => 562.137 (0.00857767)       # 0.86%
+
+Same geometry, visually identical, not bit-exact. The test asserts an exact
+match, so closing it means either regenerating the fixture under IM7 — which
+then fails for anyone still on 6 — or allowing a tolerance, which changes what
+the test asserts. That is a maintainer's call, not a cleanup, so it is left
+open.
+
+An earlier revision of this file said all three failures traced to the `== '0'`
+line. That was wrong: the mechanism was verified on one test and generalised to
+the other two without running them.
 
 **`lib/cdo/rack/test_optimize.rb`, 2 failures** — asserts exact optimized
 byte sizes. Every `image_optim` helper binary is absent (`optipng`,

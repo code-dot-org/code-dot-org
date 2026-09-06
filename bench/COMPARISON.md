@@ -120,7 +120,7 @@ hosts unless noted.
 | defect | status |
 |---|---|
 | Whole-tree `RAILS_ENV=test rails test` never finishes — 64 tests in 63 min on t4g, then no progress; over 90 min on m8g | reproduced on both hosts and both instance families. **Cause unknown.** Per-directory invocation is the workaround the harness uses. |
-| `ImageLibTest` ×3 | root-caused. ImageMagick 7's `compare -metric ae` prints `0 (0)` where 6 printed `0`; `image_lib_test.rb:98` tests `result == '0'`. Ubuntu dropped IM6 after 24.04, so every current host hits this. |
+| `ImageLibTest` ×3 | two causes. Two are the output format — IM7's `compare -metric ae` prints `0 (0)` where 6 printed `0`, and `image_lib_test.rb:98` tested `result == '0'`; **fixed**. The third, `test_overlay_image`, is an IM6-to-IM7 rendering difference against a fixture generated under 6 — 1147 of 130,500 pixels, 0.88%, visually identical but not bit-exact. Left open: closing it needs either a regenerated fixture or a tolerance, both maintainer calls. |
 | `lib/cdo/rack/test_optimize.rb` ×2 | root-caused. Asserts exact optimized byte sizes; every `image_optim` binary (`optipng`, `pngcrush`, `gifsicle`, `jpegoptim`, `advpng`, `svgo`) is missing and none are in SETUP.md's apt list. |
 | `shared/test_aws_s3_integration.rb` 1F/6E | expected without AWS credentials. |
 | `RubricsControllerTest` ×3 | **undiagnosed and real.** Reproduces on both hosts, across four runs and two Ruby builds. The tests expect an AI-config validation to reject a create; mocha reports the S3 stubs never invoked, so the validation path is skipped and the record is written. |

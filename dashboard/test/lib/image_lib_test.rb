@@ -95,8 +95,8 @@ class ImageLibTest < ActiveSupport::TestCase
         c << image1.path << image2.path << 'null:'
       end
     end
-    result.strip!
-    result == '0'
+    # ImageMagick 7 reports the metric as "0 (0)"; 6 reported "0".
+    result.split.first == '0'
   end
 
   # Helper function to evaluate and return output to stderr.
