@@ -1099,6 +1099,62 @@ type whose body lives elsewhere, wherever the file it sits in came from.
 **What it does not solve.** The file is still 500KB on disk — §2's
 copy-on-edit is a separate decision and this does not make it smaller.
 
+## 9. Prose in the workspace
+
+_Stage one built, 2026-09-05._ A rule's `note` says one line and says it as
+typed. `world_doc` says a paragraph, a list, a heading — the documentation
+that lives beside a rule in the codebase and never reached the person reading
+the rule. It changes nothing about what runs, and it is drawn as markdown on
+the block itself; a press anywhere on the prose opens an editor with the
+source on one side and the block's own rendering on the other.
+
+MOST OF IT ALREADY EXISTED, which is why this was worth doing now.
+`BlocklyMarkdown` renders markdown in a Blockly context and is already
+exported by the package the lab depends on — so no new dependency, and
+embedded block XML renders as a draggable flyout, which documentation will
+want. The field→React bridge is the one `bodyButton` and `lessonButton`
+already use. `world_comment` is the block shape, and `FieldBlockPreview` is
+the precedent for a field with a drawing of its own.
+
+WHAT WAS NEW is HTML inside SVG. A block is SVG and markdown is HTML, so the
+prose lives in a `foreignObject` — the one place a browser lays out HTML
+inside an SVG tree — and the height of wrapped prose is not knowable until it
+has done so. The field renders SYNCHRONOUSLY (`flushSync`), measures what the
+browser made, and only then reports a size.
+
+That was not enough, and the way it failed is worth keeping: the markdown
+rendered perfectly and the block came out THIRTY-FOUR PIXELS tall. Blockly's
+base field measures its own text in `updateSize_` and writes the answer over
+`size_`, so a size set anywhere else is gone by the time the block is laid
+out. Overriding `updateSize_` is what makes a field own its own size.
+
+The typography needed scoping too. The renderer is the app's, so an `#`
+heading arrived at page size — forty-odd pixels, a shout on a block. A CSS
+module scales it to a block's proportions, and the editor's preview wears the
+same class so it is the thing itself rather than a page-sized impression.
+
+And the prose sits on the THEME's background, framed by the block rather than
+painted on it: a note is a page of reading, not a piece of the program, so it
+reads like the instructions panel. Two things got in the way of seeing that,
+and both were mistakes about where to look. The variable names are the lab's
+own — `--text-neutral-primary`, not `--text-primary` — and a name nothing
+defines falls through to whatever is written beside it, which the first draft
+did, onto the block's own grey. Then it still looked grey when it was not:
+the note under test was a floating top-level block, and a top-level block with
+a previous connection is an ORPHAN, which `DisableOrphansPlugin` draws greyed.
+The computed style said white on near-black the whole time.
+
+Stage two is the WYSIWYG surface, and it is deliberately not started. There is
+no rich-text editor in `frontend/` — `slate` lives in the legacy `apps/`
+bundle and is not reachable from here — so it costs a dependency, and the
+block was the part worth being sure of first. Markdown in a box beside a live
+preview needs nothing new and is usable now.
+
+Still open: where these belong. §8 gave a rule two surfaces, and a body
+surface is where documentation was wanted — "add documentation to that
+implementation and show it when revealed". And prose is exactly what §4
+(localization) has to carry, so the two meet.
+
 ## A corner that caught a walk
 
 _Fixed, 2026-09-05._ The Pilot in the jetpack level could not walk LEFT. It

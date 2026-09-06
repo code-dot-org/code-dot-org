@@ -1,0 +1,94 @@
+/*
+ * Prose drawn inside a block.
+ *
+ * ON THE THEME'S OWN BACKGROUND, not the block's. A note is a page of reading
+ * rather than a piece of the program, so it reads like the instructions panel
+ * and everywhere else prose appears — and the block's colour is left to be the
+ * frame around it, which is what the padding the field leaves is for.
+ *
+ * The markdown renderer is the app's own, so its headings come out at PAGE
+ * sizes — an `#` heading arrived forty-odd pixels tall, which on a block reads
+ * as a shout. Everything here scales that down to something a block can hold,
+ * and nothing else about the rendering is touched.
+ *
+ * The variable NAMES matter and are the lab's own: `--text-neutral-primary`,
+ * not `--text-primary`. A name nothing defines falls through to whatever is
+ * written beside it, and the first draft of this fell through to a grey that
+ * sat on the block's own grey.
+ */
+.body {
+  padding: 8px 10px;
+  border-radius: var(--border-radius, 4px);
+  background: var(--background-neutral-primary, #fff);
+  color: var(--text-neutral-primary, #2a2a2a);
+  font-family: var(--font-family-main, inherit);
+  font-size: 13px;
+  line-height: 1.45;
+
+  /* The block sizes itself from what this measures, so a margin that collapsed
+   * out of the container would be a margin the block did not allow for. */
+  overflow: hidden;
+}
+
+.body :is(h1, h2, h3, h4, h5, h6) {
+  margin: 0 0 4px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.body h1 {
+  font-size: 17px;
+}
+
+.body h2 {
+  font-size: 15px;
+}
+
+.body :is(h3, h4, h5, h6) {
+  font-size: 13px;
+}
+
+.body p {
+  margin: 0 0 6px;
+  font-size: 13px;
+}
+
+.body :is(ul, ol) {
+  margin: 0 0 6px;
+  padding-left: 18px;
+}
+
+.body li {
+  margin: 0;
+  font-size: 13px;
+}
+
+.body :last-child {
+  margin-bottom: 0;
+}
+
+.body code {
+  padding: 0 3px;
+  border-radius: 3px;
+  background: var(--background-neutral-secondary, rgb(0 0 0 / 8%));
+  font-size: 12px;
+}
+
+.body pre {
+  margin: 0 0 6px;
+  padding: 6px 8px;
+  overflow-x: auto;
+  border-radius: 4px;
+  background: var(--background-neutral-secondary, rgb(0 0 0 / 8%));
+}
+
+/* A link is documentation, not navigation: the press belongs to the block. */
+.body a {
+  color: inherit;
+  text-decoration: underline;
+  pointer-events: none;
+}
+
+.body img {
+  max-width: 100%;
+}

@@ -63,6 +63,8 @@ import {refreshBlockDesigns} from './extensions/blockDesigner';
 import {setBodyOpener} from './extensions/bodyButton';
 import {anchorBodyOwner} from './extensions/bodyOwner';
 import {refreshMissingRuleWarnings} from './extensions/missingRule';
+import {FieldMarkdown, setMarkdownOpener} from './fields/FieldMarkdown';
+import {NoteEditorDialog} from './fields/NoteEditorDialog';
 import {fileKindOf} from './fileKind';
 import {registerLessonButtons} from './lessonFlyoutButton';
 import {redrawLiveDropdowns} from './moduleOptions';
@@ -690,6 +692,21 @@ export const BlocklyFileEditor = ({
       // is its phrasing and nothing else (`surfaceToolbox`).
       kind: block?.type === 'world_rule_event' ? 'event' : 'body',
     });
+  }, []);
+
+  /** The note being written, if one is. */
+  const [note, setNote] = useState<{
+    field: FieldMarkdown;
+    value: string;
+  } | null>(null);
+
+  // The same arrangement the pencil uses: a Blockly field has no route to
+  // React state, so the editor installs itself while it is mounted.
+  useEffect(() => {
+    setMarkdownOpener(field =>
+      setNote({field, value: (field.getValue() as string) ?? ''}),
+    );
+    return () => setMarkdownOpener(null);
   }, []);
 
   const closeBody = useCallback(() => {
@@ -1320,6 +1337,18 @@ export const BlocklyFileEditor = ({
           </button>
           <span className={styles.bodyTitle}>{editing.label}</span>
         </div>
+      )}
+      {note && (
+        <NoteEditorDialog
+          value={note.value}
+          onCancel={() => setNote(null)}
+          onSave={markdown => {
+            // Through the FIELD, so Blockly raises the change event the file is
+            // written from — the same path typing in any other field takes.
+            note.field.setValue(markdown);
+            setNote(null);
+          }}
+        />
       )}
       <BlocklyProvider blocks={blocks} plugins={plugins} theme={theme}>
         <BlocklyWorkspace

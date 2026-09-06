@@ -118,6 +118,7 @@ import {spritePickExtension} from './extensions/spritePickField';
 import {textNeedsDrawingExtension} from './extensions/textNeedsDrawing';
 import {worldContextExtension} from './extensions/worldContext';
 import {fieldMapPlacementsArg} from './fields/FieldMapPlacements';
+import {FieldMarkdown} from './fields/FieldMarkdown';
 import {fieldSliderArg} from './fields/FieldSlider';
 import {fieldVectorArg, type VectorValue} from './fields/FieldVector';
 import {ROOT_HOMES, type FileKind} from './fileKind';
@@ -7818,6 +7819,62 @@ const worldForEachButton = defineBlock({
 // It generates a `//` comment, so the note survives into the code the project
 // runs — the same sentence in both places, rather than a note that exists only
 // in the editor.
+/**
+ * `world_doc` — a page of prose in the workspace.
+ *
+ * A `note` says one line and says it as typed. This says a paragraph, a list,
+ * a heading: the documentation that lives beside a rule in the codebase and
+ * never reached the person reading the rule. It changes nothing about what
+ * runs, and it is drawn as markdown — `FieldMarkdown` puts the HTML inside the
+ * block's SVG and measures what the browser made of it.
+ *
+ * No label on it. The prose IS the block, the way a page is its words, and a
+ * word in front of it would be a caption on every paragraph in the project.
+ */
+export const MARKDOWN_FIELD = 'DOC';
+
+const docFieldExtension = defineExtension('world_doc_field', {
+  extension() {
+    const block = this as unknown as Block;
+    // Appended rather than declared: a field class of our own is not one of
+    // the `args0` kinds, and this is how `blockDesigner` attaches its preview
+    // too.
+    if (!block.getField(MARKDOWN_FIELD)) {
+      block.inputList[0]?.appendField(
+        new FieldMarkdown('') as unknown as Parameters<
+          NonNullable<Block['inputList'][number]>['appendField']
+        >[0],
+        MARKDOWN_FIELD,
+      );
+    }
+  },
+});
+
+const worldDoc = defineBlock({
+  type: 'world_doc',
+  message0: '%1',
+  args0: [{type: 'input_dummy', name: 'PROSE'}],
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [docFieldExtension],
+  style: 'comment_blocks',
+  tooltip:
+    'Documentation for whoever reads this next — headings, lists and all. ' +
+    'Click it to write. It changes nothing about what runs.',
+  generator: {
+    javascript(block) {
+      // One `//` per line. A block comment would end at the first `*/` in the
+      // prose, and prose is exactly where one turns up.
+      const text = String(block.getFieldValue(MARKDOWN_FIELD) ?? '');
+      return text
+        .split('\n')
+        .map(line => `// ${line}`.trimEnd())
+        .join('\n')
+        .concat('\n');
+    },
+  },
+});
+
 const worldComment = defineBlock({
   type: 'world_comment',
   message0: 'note %1',
@@ -8331,6 +8388,7 @@ export const DOMAIN_BLOCKS = [
   ...signatureItems,
   signatureChoice,
   signatureArgument,
+  worldDoc,
   worldReturn,
   worldRuleStepIn,
   worldTraitStep,
@@ -8857,6 +8915,9 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
       // surgery with no reading in a world yet. Each is one line to add the day
       // something wants it.
       'world_comment',
+      // …and the long form of the same idea: a page of prose rather than a
+      // line, drawn as markdown.
+      'world_doc',
     ],
   },
   // Variables last, as Blockly's own toolboxes have them. A rule's parameters
