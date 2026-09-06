@@ -30,16 +30,20 @@ services:
         echo &&
         echo '# MySQL connections' &&
         echo 'db_writer: mysql://root:password@127.0.0.1:${MYSQL_NATIVE_PORT:-3306}/' &&
-        echo 'db_endpoint_writer: 127.0.0.1:${MYSQL_NATIVE_PORT:-3306}' &&
+        echo 'db_endpoint_writer: 127.0.0.1' &&
+        echo 'db_endpoint_writer_port: ${MYSQL_NATIVE_PORT:-3306}' &&
         echo 'db_credential_admin:' &&
         echo '  username: root' &&
         echo '  password: password' &&
-        echo 'db_endpoint_proxy_reporting: 127.0.0.1:${MYSQL_NATIVE_PORT:-3306}' &&
-        echo 'db_endpoint_proxy_reader: 127.0.0.1:${MYSQL_NATIVE_PORT:-3306}' &&
+        echo 'db_endpoint_proxy_reporting: 127.0.0.1' &&
+        echo 'db_endpoint_proxy_reporting_port: ${MYSQL_NATIVE_PORT:-3306}' &&
+        echo 'db_endpoint_proxy_reader: 127.0.0.1' &&
+        echo 'db_endpoint_proxy_reader_port: ${MYSQL_NATIVE_PORT:-3306}' &&
         echo 'db_credential_reader:' &&
         echo '  username: root' &&
         echo '  password: password' &&
-        echo 'db_endpoint_proxy_writer: 127.0.0.1:${MYSQL_NATIVE_PORT:-3306}' &&
+        echo 'db_endpoint_proxy_writer: 127.0.0.1' &&
+        echo 'db_endpoint_proxy_writer_port: ${MYSQL_NATIVE_PORT:-3306}' &&
         echo 'db_credential_writer:' &&
         echo '  username: root' &&
         echo '  password: password' &&
