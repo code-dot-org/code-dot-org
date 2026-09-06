@@ -10,7 +10,7 @@ class SpritelabLab2ImagesReviewController < ApplicationController
   before_action :require_project_validator
 
   # How many recent projects the page shows.
-  PROJECT_COUNT = 20
+  PROJECT_COUNT = 60
 
   # Opening a level mints an empty channel, so the walk skips channels that
   # never saved sources; give up after this many candidates.
