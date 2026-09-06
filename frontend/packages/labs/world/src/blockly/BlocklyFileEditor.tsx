@@ -106,6 +106,7 @@ import {setSpritePickHandler} from './spritePick';
 import {standInBlocks} from './standInBlocks';
 import {toolboxForSurface, type Surface} from './surfaceToolbox';
 import {withoutCategories} from './toolboxFilter';
+import {DesignSystemToolboxPlugin} from './toolboxStyle';
 import {useWorldBlocklyTheme} from './worldBlocklyTheme';
 
 // Distinct connector nubs for the lab's own value types, so they read apart from
@@ -118,6 +119,8 @@ const plugins = [
   DisableOrphansPlugin,
   TriangleInputPlugin('Actor'),
   RectangleInputPlugin('Vector'),
+  // The category list, drawn like the lab's other navigation (toolboxStyle).
+  DesignSystemToolboxPlugin,
 ];
 
 // A `.rule` / `.actor` file is a Blockly workspace stored as serialized JSON
