@@ -3140,6 +3140,13 @@ export const TILES: readonly Tile[] = [
         probes: {guard: {kind: 'positions', of: 'Guard'}},
         trace: Array.from({length: 24}, () => ({seconds: 0.25})),
       },
+      // Byte-for-byte against the library's copy, which is what makes this a
+      // question about the FILE rather than about the world around it. It
+      // survives a rule being stored as a reference (rules/ruleReference)
+      // because `projectFiles` resolves one to the shelf's exact bytes — an
+      // unedited rule compares equal, an edited one does not. There is a test
+      // on that identity in `projectWeight.test.ts`, because a resolution that
+      // re-serialized would quietly pass this lesson for doing nothing.
       inspect: files =>
         (files['rules/patrol.rule'] ?? '') !== stockRule('patrol')?.contents,
       passes: ({samples}) => {

@@ -34,15 +34,8 @@
 // stays readable, not because it cannot be said.
 
 import {stack, starterSprites, useTrait, type ProjectSpec} from '../constants';
-import {
-  collisionsRule,
-  driveRule,
-  expiresRule,
-  inputRule,
-  motionRule,
-  zapsRule,
-  wrapRule,
-} from '../rules/stock';
+import {} from '../rules/stock';
+import {referenceToStock} from '../rules/ruleReference';
 import {TILE_SIZE} from '../runtime/viewport';
 
 import {setNumber} from './breakout';
@@ -364,43 +357,43 @@ export const METEORS_SUPPORT_FILES: ProjectSpec['files'] = {
   inputRuleFile: {
     name: 'input.rule',
     language: 'rule',
-    contents: inputRule,
+    contents: referenceToStock('input'),
     folderId: 'rules',
   },
   driveRuleFile: {
     name: 'drive.rule',
     language: 'rule',
-    contents: driveRule,
+    contents: referenceToStock('drive'),
     folderId: 'rules',
   },
   motionRuleFile: {
     name: 'motion.rule',
     language: 'rule',
-    contents: motionRule,
+    contents: referenceToStock('motion'),
     folderId: 'rules',
   },
   collisionsRuleFile: {
     name: 'collisions.rule',
     language: 'rule',
-    contents: collisionsRule,
+    contents: referenceToStock('collisions'),
     folderId: 'rules',
   },
   wrapRuleFile: {
     name: 'wrap.rule',
     language: 'rule',
-    contents: wrapRule,
+    contents: referenceToStock('wrap'),
     folderId: 'rules',
   },
   zapsRuleFile: {
     name: 'zaps.rule',
     language: 'rule',
-    contents: zapsRule,
+    contents: referenceToStock('zaps'),
     folderId: 'rules',
   },
   expiresRuleFile: {
     name: 'expires.rule',
     language: 'rule',
-    contents: expiresRule,
+    contents: referenceToStock('expires'),
     folderId: 'rules',
   },
   ...starterSprites(['ship', 'asteroid', 'energyBall']),

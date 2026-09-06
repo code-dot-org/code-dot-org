@@ -107,33 +107,8 @@ import {
   useTrait,
   type ProjectSpec,
 } from '../constants';
-import {
-  arrowsRule,
-  boundsRule,
-  climbRule,
-  collectRule,
-  collisionsRule,
-  diggingRule,
-  flappingRule,
-  goalsRule,
-  gravityRule,
-  healthRule,
-  inputRule,
-  jetpackRule,
-  jumpRule,
-  motionRule,
-  progressRule,
-  prowlingRule,
-  scoreRule,
-  solidRule,
-  steeringRule,
-  surfacesRule,
-  switchesRule,
-  timeRule,
-  teleportRule,
-  turningRule,
-  writingRule,
-} from '../rules/stock';
+import {} from '../rules/stock';
+import {referenceToStock} from '../rules/ruleReference';
 import {TILE_SIZE} from '../runtime/viewport';
 
 /** The middle of tile `index`, the same grid every other scenario uses. */
@@ -2325,67 +2300,67 @@ export const JETPACK_SPEC: ProjectSpec = {
     motionRuleFile: {
       name: 'motion.rule',
       language: 'rule',
-      contents: motionRule,
+      contents: referenceToStock('motion'),
       folderId: 'rules',
     },
     collisionsRuleFile: {
       name: 'collisions.rule',
       language: 'rule',
-      contents: collisionsRule,
+      contents: referenceToStock('collisions'),
       folderId: 'rules',
     },
     solidRuleFile: {
       name: 'solid.rule',
       language: 'rule',
-      contents: solidRule,
+      contents: referenceToStock('solid'),
       folderId: 'rules',
     },
     gravityRuleFile: {
       name: 'gravity.rule',
       language: 'rule',
-      contents: gravityRule,
+      contents: referenceToStock('gravity'),
       folderId: 'rules',
     },
     jumpRuleFile: {
       name: 'jump.rule',
       language: 'rule',
-      contents: jumpRule,
+      contents: referenceToStock('jump'),
       folderId: 'rules',
     },
     jetpackRuleFile: {
       name: 'jetpack.rule',
       language: 'rule',
-      contents: jetpackRule,
+      contents: referenceToStock('jetpack'),
       folderId: 'rules',
     },
     inputRuleFile: {
       name: 'input.rule',
       language: 'rule',
-      contents: inputRule,
+      contents: referenceToStock('input'),
       folderId: 'rules',
     },
     arrowsRuleFile: {
       name: 'arrows.rule',
       language: 'rule',
-      contents: arrowsRule,
+      contents: referenceToStock('arrows'),
       folderId: 'rules',
     },
     boundsRuleFile: {
       name: 'bounds.rule',
       language: 'rule',
-      contents: boundsRule,
+      contents: referenceToStock('bounds'),
       folderId: 'rules',
     },
     prowlingRuleFile: {
       name: 'prowling.rule',
       language: 'rule',
-      contents: prowlingRule,
+      contents: referenceToStock('prowling'),
       folderId: 'rules',
     },
     turningRuleFile: {
       name: 'turning.rule',
       language: 'rule',
-      contents: turningRule,
+      contents: referenceToStock('turning'),
       folderId: 'rules',
     },
     // The Blob's beat (`rules/time`) and the Eyeball's chase
@@ -2394,13 +2369,13 @@ export const JETPACK_SPEC: ProjectSpec = {
     timeRuleFile: {
       name: 'time.rule',
       language: 'rule',
-      contents: timeRule,
+      contents: referenceToStock('time'),
       folderId: 'rules',
     },
     steeringRuleFile: {
       name: 'steering.rule',
       language: 'rule',
-      contents: steeringRule,
+      contents: referenceToStock('steering'),
       folderId: 'rules',
     },
     // The Bat's two phases (`rules/flapping`), which is the third enemy and
@@ -2409,7 +2384,7 @@ export const JETPACK_SPEC: ProjectSpec = {
     flappingRuleFile: {
       name: 'flapping.rule',
       language: 'rule',
-      contents: flappingRule,
+      contents: referenceToStock('flapping'),
       folderId: 'rules',
     },
     // …and the pads, which are the one thing in the room that is not a way
@@ -2417,7 +2392,7 @@ export const JETPACK_SPEC: ProjectSpec = {
     teleportRuleFile: {
       name: 'teleport.rule',
       language: 'rule',
-      contents: teleportRule,
+      contents: referenceToStock('teleport'),
       folderId: 'rules',
     },
     // The bar across the way out, and the plate that moves it
@@ -2425,7 +2400,7 @@ export const JETPACK_SPEC: ProjectSpec = {
     switchesRuleFile: {
       name: 'switches.rule',
       language: 'rule',
-      contents: switchesRule,
+      contents: referenceToStock('switches'),
       folderId: 'rules',
     },
     // A way down through a ledge, and a floor that comes back on you
@@ -2433,55 +2408,55 @@ export const JETPACK_SPEC: ProjectSpec = {
     diggingRuleFile: {
       name: 'digging.rule',
       language: 'rule',
-      contents: diggingRule,
+      contents: referenceToStock('digging'),
       folderId: 'rules',
     },
     healthRuleFile: {
       name: 'health.rule',
       language: 'rule',
-      contents: healthRule,
+      contents: referenceToStock('health'),
       folderId: 'rules',
     },
     scoreRuleFile: {
       name: 'score.rule',
       language: 'rule',
-      contents: scoreRule,
+      contents: referenceToStock('score'),
       folderId: 'rules',
     },
     goalsRuleFile: {
       name: 'goals.rule',
       language: 'rule',
-      contents: goalsRule,
+      contents: referenceToStock('goals'),
       folderId: 'rules',
     },
     writingRuleFile: {
       name: 'writing.rule',
       language: 'rule',
-      contents: writingRule,
+      contents: referenceToStock('writing'),
       folderId: 'rules',
     },
     surfacesRuleFile: {
       name: 'surfaces.rule',
       language: 'rule',
-      contents: surfacesRule,
+      contents: referenceToStock('surfaces'),
       folderId: 'rules',
     },
     climbRuleFile: {
       name: 'climb.rule',
       language: 'rule',
-      contents: climbRule,
+      contents: referenceToStock('climb'),
       folderId: 'rules',
     },
     collectRuleFile: {
       name: 'collect.rule',
       language: 'rule',
-      contents: collectRule,
+      contents: referenceToStock('collect'),
       folderId: 'rules',
     },
     progressRuleFile: {
       name: 'progress.rule',
       language: 'rule',
-      contents: progressRule,
+      contents: referenceToStock('progress'),
       folderId: 'rules',
     },
     ...starterSprites([

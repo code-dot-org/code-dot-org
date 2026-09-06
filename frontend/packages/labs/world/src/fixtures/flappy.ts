@@ -48,17 +48,8 @@
 // frame, and there is no block for a step a project defines.
 
 import {stack, starterSprites, useTrait, type ProjectSpec} from '../constants';
-import {
-  cameraConfinedRule,
-  cameraFollowRule,
-  cameraRule,
-  collectRule,
-  collisionsRule,
-  gravityRule,
-  inputRule,
-  motionRule,
-  solidRule,
-} from '../rules/stock';
+import {} from '../rules/stock';
+import {referenceToStock} from '../rules/ruleReference';
 import {TILE_SIZE} from '../runtime/viewport';
 
 /** The middle of tile `index`, the same grid every other scenario uses. */
@@ -435,13 +426,13 @@ export const FLAPPY_SUPPORT_FILES: ProjectSpec['files'] = {
   motionRuleFile: {
     name: 'motion.rule',
     language: 'rule',
-    contents: motionRule,
+    contents: referenceToStock('motion'),
     folderId: 'rules',
   },
   collisionsRuleFile: {
     name: 'collisions.rule',
     language: 'rule',
-    contents: collisionsRule,
+    contents: referenceToStock('collisions'),
     folderId: 'rules',
   },
   // Gravity requires it — landing is worked out against solid ground, and a
@@ -451,43 +442,43 @@ export const FLAPPY_SUPPORT_FILES: ProjectSpec['files'] = {
   solidRuleFile: {
     name: 'solid.rule',
     language: 'rule',
-    contents: solidRule,
+    contents: referenceToStock('solid'),
     folderId: 'rules',
   },
   gravityRuleFile: {
     name: 'gravity.rule',
     language: 'rule',
-    contents: gravityRule,
+    contents: referenceToStock('gravity'),
     folderId: 'rules',
   },
   inputRuleFile: {
     name: 'input.rule',
     language: 'rule',
-    contents: inputRule,
+    contents: referenceToStock('input'),
     folderId: 'rules',
   },
   collectRuleFile: {
     name: 'collect.rule',
     language: 'rule',
-    contents: collectRule,
+    contents: referenceToStock('collect'),
     folderId: 'rules',
   },
   cameraRuleFile: {
     name: 'camera.rule',
     language: 'rule',
-    contents: cameraRule,
+    contents: referenceToStock('camera'),
     folderId: 'rules',
   },
   cameraFollowRuleFile: {
     name: 'cameraFollow.rule',
     language: 'rule',
-    contents: cameraFollowRule,
+    contents: referenceToStock('cameraFollow'),
     folderId: 'rules',
   },
   cameraConfinedRuleFile: {
     name: 'cameraConfined.rule',
     language: 'rule',
-    contents: cameraConfinedRule,
+    contents: referenceToStock('cameraConfined'),
     folderId: 'rules',
   },
   ...starterSprites(['ship', 'ground', 'pipe', 'coin']),

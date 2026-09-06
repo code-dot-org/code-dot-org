@@ -17,9 +17,10 @@ and editable. There is one implementation of jumping, not a TypeScript one and
 a block-shaped description of it. Nothing else in the block-based space does
 this.
 
-As a product it is pre-launch, and the gaps are structural: nothing is
-localized, the custom editors are mouse-first, the rule weight problem is
-measured and deferred, and no curriculum level points at the lab. The items
+As a product it is pre-launch, and the gaps are structural: the custom editors
+are mouse-first, the words a learner reads are translatable but the lessons are
+not yet, and no curriculum level points at the lab. The rule weight problem is
+solved (§2) and the blocks are localizable (§4, `specs/LOCALIZATION.md`). The items
 below are those gaps, ordered by what leaving each alone would cost.
 
 Two of them are the same fact seen from two sides. The rules being real is what
@@ -126,6 +127,59 @@ test asserts; the assertion holds at a number under a tenth of today's; a rule
 the learner has not edited is a reference; editing it makes it a copy, at the
 pinned version, and a test does exactly that and checks the blocks match the
 version pinned rather than the shelf's current one.
+
+_Status, 2026-09-06: done, and one part of the plan above was not
+implementable._ A rule the learner has not edited is a reference —
+`{"stock":"gravity","version":"beeed239"}` — resolved in `projectFiles`, which
+is the one place everything reads a project through. A new project went from
+1,191,452 bytes to 51,081: twenty-three times lighter, with nothing removed
+from it. Twelve rule files now weigh 470 bytes and resolve to 1,028,513.
+
+**There is no promotion step, and that is the part worth keeping.** Every
+project-wide rewrite already went through `mapWorkspaces`; resolving there
+means a rewrite that CHANGES something writes the rule where the reference was,
+and a rewrite that changes nothing leaves the reference alone. Renaming a rule
+materializes it and the rules that named it, and nothing else. The editor
+needs no rule of its own either: it saves a workspace whole, so the ordinary
+act of editing is the copy.
+
+**The pinned version does not do what this section asked of it.** "The copy
+that appears on first edit is the shelf as it was, not as it is" needs the old
+bytes, and the bundle carries one shelf — keeping every historical version of
+47 rules is the weight this section exists to remove. So a reference resolves
+to the CURRENT rule and an unedited rule follows the library. For a rule nobody
+has touched that is arguably right, since a fix to `solid` reaches the projects
+that never changed it, but it is a behaviour change the learner did not ask
+for. The version is recorded, is not yet read, and is what a later migration
+would key on.
+
+**Four places read a file's contents without going through `projectFiles`,
+and all four passed 4,293 unit tests.** They are worth listing, because the
+seam was chosen precisely so that there would be one place to change and the
+count of exceptions is the honest measure of how well that worked:
+
+- the EDITOR, which is handed a file's own contents by the host — so it parsed
+  a reference as a workspace and opened every unedited rule EMPTY;
+- the Rules menu, which read `Jump`, `Solid`, `Arrows` where the rest of the
+  lab reads `Jumping`, `Solid Bodies`, `Arrow Keys`;
+- the file tab, doing the same;
+- the tutor, which builds its own path→contents map and would have lost the
+  project's entire rule vocabulary and the block catalogue built from it.
+
+Renaming and cloning a rule file were two more, both of which read the
+declaration to carry it. None of them were found by the suite;
+`spikes/rule-surfaces/check-reference.mjs` was written to find them and now
+holds them, along with the thing no unit test can say: that the saved project
+is 51,090 bytes with twelve rules and twelve references, and is still twelve
+references after somebody has opened one and looked at it.
+
+**What is left.** §2 also said the editor should open an unedited rule
+read-only until the learner asks for it. It does not: today the first block
+that moves materializes the rule silently, which is the behaviour this section
+describes and is honest, but it means a stray drag inflates a project by half a
+megabyte with nothing said. The read-only viewer and an explicit "make this
+mine" is the follow-on, and `0ccb8def041` already made a locked workspace a
+viewer.
 
 _Status, 2026-09-03: measured, not yet decided._ The first step is done —
 `src/__tests__/projectWeight.test.ts` weighs a new project and fails when the
@@ -629,7 +683,8 @@ prose and Gravity's is visible where that member is; and generation is
 untouched, which a test asserts by compiling a rule whose bodies were never
 opened.
 
-_Status, 2026-09-05: the split is built, the surface is not._
+_Status, 2026-09-05, and see the entries below for the rest of it: the split
+is built, the surface is not._
 `src/blockly/bodySurfaces.ts` is the pure half — `split`, `merge`, `reap`, and
 `hasBody` — with sixty tests, of which forty-seven are every stock rule taken
 apart and put back. That round trip is the one that matters: a merge which
@@ -1083,8 +1138,11 @@ different ways of opening an implementation. So the split is written against
 BLOCK TYPES rather than against rules: a type whose body lives elsewhere is a
 type whose body lives elsewhere, wherever the file it sits in came from.
 
-**What it does not solve.** The file is still 500KB on disk — §2's
-copy-on-edit is a separate decision and this does not make it smaller.
+**What it does not solve.** The file is still 500KB on disk. §2's
+copy-on-edit was the separate decision and has since been taken: an unedited
+rule is a reference, so `solid` costs a project 38 bytes until somebody opens
+it and moves something. The 500KB is what it costs the BUNDLE, which both
+sections leave alone.
 
 ## 9. Prose in the workspace
 

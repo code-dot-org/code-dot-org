@@ -46,14 +46,8 @@
 // smaller lesson: some of what is missing is missing because nobody wrote it.
 
 import {stack, starterSprites, useTrait, type ProjectSpec} from '../constants';
-import {
-  arrowsRule,
-  collectRule,
-  collisionsRule,
-  inputRule,
-  motionRule,
-  solidRule,
-} from '../rules/stock';
+import {} from '../rules/stock';
+import {referenceToStock} from '../rules/ruleReference';
 import {TILE_SIZE} from '../runtime/viewport';
 
 /** The middle of tile `index` — where a placed actor's position points. */
@@ -412,37 +406,37 @@ export const BREAKOUT_SUPPORT_FILES: ProjectSpec['files'] = {
   inputRuleFile: {
     name: 'input.rule',
     language: 'rule',
-    contents: inputRule,
+    contents: referenceToStock('input'),
     folderId: 'rules',
   },
   arrowsRuleFile: {
     name: 'arrows.rule',
     language: 'rule',
-    contents: arrowsRule,
+    contents: referenceToStock('arrows'),
     folderId: 'rules',
   },
   motionRuleFile: {
     name: 'motion.rule',
     language: 'rule',
-    contents: motionRule,
+    contents: referenceToStock('motion'),
     folderId: 'rules',
   },
   collisionsRuleFile: {
     name: 'collisions.rule',
     language: 'rule',
-    contents: collisionsRule,
+    contents: referenceToStock('collisions'),
     folderId: 'rules',
   },
   solidRuleFile: {
     name: 'solid.rule',
     language: 'rule',
-    contents: solidRule,
+    contents: referenceToStock('solid'),
     folderId: 'rules',
   },
   collectRuleFile: {
     name: 'collect.rule',
     language: 'rule',
-    contents: collectRule,
+    contents: referenceToStock('collect'),
     folderId: 'rules',
   },
   ...starterSprites(['ground', 'wall', 'ball', 'box']),

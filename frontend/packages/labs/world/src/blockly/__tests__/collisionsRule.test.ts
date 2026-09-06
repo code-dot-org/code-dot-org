@@ -10,13 +10,18 @@
 import {describe, expect, it} from 'vitest';
 
 import {starterFile} from '../../constants';
+import {resolveRuleContents} from '../../rules/ruleReference';
 import {parseRuleMeta, ruleMetaToModule} from '../ruleMeta';
 
 import {registerDefaultProjectRules} from './defaultProjectRules';
 
 registerDefaultProjectRules();
 
-const source = starterFile('collisionsRule').contents;
+// Through the same resolution production uses: the starter holds a
+// REFERENCE to the library's rule, not a copy of it (rules/ruleReference,
+// specs/NEXT.md §2), and `projectFiles` is what resolves one everywhere
+// else. What is asserted below is the rule, either way.
+const source = resolveRuleContents(starterFile('collisionsRule').contents);
 const meta = parseRuleMeta('rules/collisions', source)!;
 const module_ = ruleMetaToModule(meta);
 

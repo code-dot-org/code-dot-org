@@ -9,6 +9,8 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
+import {resolveRuleContents} from '../rules/ruleReference';
+
 /**
  * File kinds that are Blockly workspaces, and so can hold a reference.
  */
@@ -73,6 +75,19 @@ export function rewriteWorkspace(
  *
  * Returns the same source object when nothing changed, so a caller can skip the
  * write.
+ *
+ * AND THIS IS WHERE A REFERENCE BECOMES A COPY. A rule the learner has not
+ * edited is stored as a reference to the library's (rules/ruleReference), and
+ * a reference holds none of the names a rewrite is looking for — so it is
+ * resolved on the way in. What comes back out is the rewritten rule, written
+ * where the reference was.
+ *
+ * Which is right, and is the whole of copy-on-edit: a rewrite that changes
+ * something is an EDIT — the learner renamed this rule, or renamed one it
+ * refers to, and either way this file no longer says what the library's does.
+ * A rewrite that changes nothing returns undefined, the file is not touched,
+ * and the reference stays a reference. Nothing else has to decide when to
+ * promote one.
  */
 export function mapWorkspaces(
   source: MultiFileSource,
@@ -84,7 +99,7 @@ export function mapWorkspaces(
     if (!WORKSPACE_FILE.test(file.name)) {
       continue;
     }
-    const renamed = rewrite(file.contents);
+    const renamed = rewrite(resolveRuleContents(file.contents));
     if (renamed !== undefined) {
       files[id] = {...file, contents: renamed};
       changed = true;

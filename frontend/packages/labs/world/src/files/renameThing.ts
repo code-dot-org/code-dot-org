@@ -30,6 +30,7 @@ import {pathSlug} from '../blockly/domainBlocks';
 import {renameRuleInSource} from '../blockly/renameRule';
 import {mapWorkspaces, rewriteWorkspace} from '../blockly/rewriteWorkspaces';
 import {ENTRY_FILE} from '../constants';
+import {resolveRuleContents} from '../rules/ruleReference';
 
 import {fileStem, renamed} from './newThing';
 
@@ -192,7 +193,13 @@ export function renameThing(
   // A rule's NAME is itself a reference — to its traits, its members and the
   // worlds that use it — and carrying that is a transform of its own.
   const wasRule = file.name.endsWith('.rule');
-  const wasCalled = declaredName(file.contents ?? '');
+  // Resolved, because a rule the learner has not edited holds a REFERENCE to
+  // the library's and declares nothing of its own (rules/ruleReference).
+  // Unresolved, `wasCalled` came back undefined for exactly those rules, the
+  // rename below was skipped, and renaming an unedited rule left every
+  // reference to it in the project pointing at the old name.
+  const own = resolveRuleContents(file.contents ?? '');
+  const wasCalled = declaredName(own);
   let next =
     wasRule && wasCalled && wasCalled !== name
       ? renameRuleInSource(source, wasCalled, name)
@@ -202,7 +209,10 @@ export function renameThing(
   // rewrites a `define rule`'s NAME as it goes; this is what covers everything
   // else, a `define behavior` included.
   const current = next.files[file.id] ?? file;
-  const contents = renamed(current.contents ?? '', name);
+  // …and resolved again: `renameRuleInSource` materializes the reference on
+  // its way through, but it does not run when the declared name is already
+  // the new one, and there would be nothing here to rewrite.
+  const contents = renamed(resolveRuleContents(current.contents ?? ''), name);
 
   next = {
     ...next,

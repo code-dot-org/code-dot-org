@@ -36,6 +36,7 @@ import {refreshFor} from '../library/refreshRegistries';
 import {useMaybeProgression} from '../progression/progressionContext';
 import {shelvedToolbox} from '../progression/toolboxShelf';
 import {removeRule, type HeldRule} from '../rules/removeRule';
+import {resolveRuleContents} from '../rules/ruleReference';
 import {RulesInPlayDialog} from '../rules/RulesInPlayDialog';
 import {projectImageSizes} from '../runtime/imageSize';
 import {
@@ -256,10 +257,25 @@ function parseWorkspace(contents: string): BlocklySerialization {
 
 export const BlocklyFileEditor = ({
   fileId,
-  initialContents,
+  initialContents: storedContents,
   isReadOnly,
   onChange,
 }: CustomEditorProps) => {
+  // What this file SAYS, which is not always what it holds.
+  //
+  // A rule the learner has not edited is stored as a reference to the
+  // library's (rules/ruleReference) — everything else in the lab reads a
+  // project through `projectFiles`, which resolves one, but the editor is
+  // handed a file's own contents by the host. Unresolved, opening any unedited
+  // rule parsed a reference as a workspace and drew an EMPTY one.
+  //
+  // Identity for every other file, and for a rule already edited. What is
+  // saved back is the whole workspace, which is how a reference becomes a copy
+  // the first time somebody moves a block.
+  const initialContents = useMemo(
+    () => resolveRuleContents(storedContents),
+    [storedContents],
+  );
   const workspaceRef = useRef<Blockly.WorkspaceSvg | null>(null);
   // The sandbox, for the map popup: what the actors look like, and what they
   // can be given.

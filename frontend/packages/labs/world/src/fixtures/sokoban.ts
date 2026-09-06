@@ -40,8 +40,7 @@ import {
   type ProjectSpec,
 } from '../constants';
 import {TILE_SIZE} from '../engine/core/viewport';
-import {gridRule} from '../rules/stock/grid';
-import {inputRule} from '../rules/stock/input';
+import {referenceToStock} from '../rules/ruleReference';
 
 import {me, number} from './meteors';
 
@@ -467,13 +466,13 @@ const SPEC: ProjectSpec = {
     'rule-grid': {
       name: 'grid.rule',
       language: 'rule',
-      contents: gridRule,
+      contents: referenceToStock('grid'),
       folderId: 'rules',
     },
     'rule-input': {
       name: 'input.rule',
       language: 'rule',
-      contents: inputRule,
+      contents: referenceToStock('input'),
       folderId: 'rules',
     },
     ...starterSprites(['player', 'wall', 'box']),

@@ -8,6 +8,11 @@ import {describe, expect, it} from 'vitest';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {importStockRule, stockRequirements} from '../importStockRule';
+import {
+  parseRuleReference,
+  resolveRuleContents,
+  stockVersion,
+} from '../ruleReference';
 import {STOCK_RULES, stockRule} from '../stock';
 
 const gravity = stockRule('gravity')!;
@@ -41,12 +46,32 @@ describe('importStockRule', () => {
     expect(path).toBe('rules/gravity');
   });
 
-  it('writes a workspace that parses back', () => {
-    // It goes to disk as text and is read back by the editor, the metadata
-    // parser, and the generator.
+  it('writes a reference, not half a megabyte of blocks', () => {
+    // specs/NEXT.md §2. A rule the learner has not touched is the library's
+    // rule, named rather than copied — which is what took a starter project
+    // from 1.19MB to 51KB. It becomes a workspace of its own the first time it
+    // is edited, because the editor saves a workspace whole.
     const {source} = importStockRule(project(), gravity);
 
     const contents = fileNamed(source, 'gravity.rule').contents;
+
+    expect(parseRuleReference(contents)).toEqual({
+      stock: 'gravity',
+      version: stockVersion(gravity),
+    });
+    expect(contents.length).toBeLessThan(60);
+  });
+
+  it('writes a reference that resolves to a workspace that parses back', () => {
+    // What everything downstream sees. It goes to disk as a reference and is
+    // read back — by the editor, the metadata parser and the generator —
+    // through `projectFiles`, which resolves it.
+    const {source} = importStockRule(project(), gravity);
+
+    const contents = resolveRuleContents(
+      fileNamed(source, 'gravity.rule').contents,
+    );
+
     expect(JSON.parse(contents).blocks.blocks[0].type).toBe('world_rule');
   });
 
@@ -150,7 +175,9 @@ describe('importing what a rule needs', () => {
     const collision = Object.values(source.files).find(
       f => f.name === 'solid.rule',
     )!;
-    expect(collision.contents).toContain('"RULE": "Physics"');
+    expect(resolveRuleContents(collision.contents)).toContain(
+      '"RULE": "Physics"',
+    );
   });
 
   it('gives a dependency its own name, never a renamed one', () => {

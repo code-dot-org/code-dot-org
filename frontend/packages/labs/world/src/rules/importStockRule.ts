@@ -14,6 +14,7 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {parseRuleMeta} from '../blockly/ruleMeta';
 
+import {resolveRuleContents, ruleReferenceFor} from './ruleReference';
 import {stockRuleByName, type StockRule} from './stock';
 
 /** Where rules live, by the lab's directory convention (GLOSSARY.md). */
@@ -126,7 +127,9 @@ function importedName(
 ): string | undefined {
   const stem = modulePath.slice(`${RULES_FOLDER}/`.length);
   const file = Object.values(source.files).find(f => f.name === `${stem}.rule`);
-  return file ? parseRuleMeta(modulePath, file.contents)?.name : undefined;
+  return file
+    ? parseRuleMeta(modulePath, resolveRuleContents(file.contents))?.name
+    : undefined;
 }
 
 /** Write one rule's file into `rules/`, under `stem`. */
@@ -145,7 +148,10 @@ function writeRule(
         id: fileId,
         name: `${stem}.rule`,
         language: 'rule',
-        contents: rule.contents,
+        // A REFERENCE, not the rule. It becomes the rule the first time the
+        // learner edits it, because the editor saves a workspace whole
+        // (rules/ruleReference, specs/NEXT.md §2).
+        contents: ruleReferenceFor(rule),
         folderId,
       },
     },

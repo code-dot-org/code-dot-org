@@ -66,6 +66,7 @@ import {requestActorEnhance} from '../actors/enhance/actorEnhance';
 import {label} from '../blockly/label';
 import {authoredName} from '../blockly/projectModules';
 import {folderIn} from '../projectWrite';
+import {resolveRuleContents} from '../rules/ruleReference';
 import {filePath} from '../runtime/projectFiles';
 
 import styles from './fileMenus.module.css';
@@ -154,8 +155,16 @@ export const FileMenus = () => {
             )
             .map(file => ({
               file,
+              // Resolved, because a rule the learner has not edited is stored
+              // as a REFERENCE to the library's (rules/ruleReference) and a
+              // reference declares nothing. Unresolved, every unedited rule
+              // fell back to its stem and the menu read `Jump`, `Solid`,
+              // `Arrows` where it had read `Jumping`, `Solid Bodies`, `Arrow
+              // Keys` — the one place in the lab that reads a file's contents
+              // without going through `projectFiles`.
               name:
-                authoredName(file.contents ?? '') ?? label(stemOf(file.name)),
+                authoredName(resolveRuleContents(file.contents ?? '')) ??
+                label(stemOf(file.name)),
             }))
             .sort((a, b) => a.name.localeCompare(b.name));
     },
@@ -303,7 +312,11 @@ export const FileMenus = () => {
         fileName,
         language,
         folderId: file.folderId,
-        contents: renamed(file.contents ?? '', name),
+        // Resolved, so a clone is a COPY. Cloning a reference would write a
+        // second reference to the same stock rule, and `renamed` would find no
+        // declaration in it to change — two files declaring one rule name,
+        // which is the ambiguity every other path here works to prevent.
+        contents: renamed(resolveRuleContents(file.contents ?? ''), name),
       });
     },
     [ops, config, promptForName, thenAsk],

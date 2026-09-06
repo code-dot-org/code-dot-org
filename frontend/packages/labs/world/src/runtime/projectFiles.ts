@@ -5,6 +5,7 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
+import {resolveRuleContents} from '../rules/ruleReference';
 import {isSoundFile} from '../sound/soundFiles';
 
 /** The `folder/sub/` prefix a file sits under; '' at the project root. */
@@ -66,7 +67,15 @@ export function projectFiles(
     if (file.url) {
       continue;
     }
-    files[`${folderPath(source, file.folderId)}${file.name}`] = file.contents;
+    // A rule nobody has edited is a REFERENCE — the library's rule, named
+    // rather than copied (rules/ruleReference). Resolved here and nowhere
+    // else: everything that reads a project reads this map, so the palette,
+    // the dropdowns, the generator, the compiler and the tutor all see the
+    // rule itself and none of them has to know a second shape for one.
+    //
+    // Identity for every other file, at the cost of a `startsWith`.
+    files[`${folderPath(source, file.folderId)}${file.name}`] =
+      resolveRuleContents(file.contents);
   }
   return files;
 }

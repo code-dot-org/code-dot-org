@@ -13,6 +13,7 @@ import {EffectFileEditor} from './effect/EffectFileEditor';
 import {ImageFileEditor} from './imageEditor/ImageFileEditor';
 import {MapEditor} from './mapEditor/MapEditor';
 import {whyKeepFile} from './rules/deleteGuard';
+import {resolveRuleContents} from './rules/ruleReference';
 
 /**
  * World Lab's Codebridge configuration. A World project is the game defined by
@@ -133,7 +134,12 @@ export const worldConfig: Partial<CodebridgeConfig> = {
    * The file BROWSER still shows file names, and should: it is a view of files.
    */
   fileLabel: file =>
-    authoredName(file.contents ?? '') ??
+    // Resolved: a rule nobody has edited holds a reference to the library's
+    // and declares nothing of its own (rules/ruleReference), so without this
+    // the tab for every unedited rule reads its stem — the one place in the
+    // lab saying something else, which is the thing this whole option exists
+    // to stop.
+    authoredName(resolveRuleContents(file.contents ?? '')) ??
     label((file.name ?? '').replace(/\.[^.]+$/, '')),
   // File-browser icons for World's own extensions (all FontAwesome solid). The
   // built-in types (js/json/png/…) keep their defaults; these give each World

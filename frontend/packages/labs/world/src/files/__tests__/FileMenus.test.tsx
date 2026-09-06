@@ -10,6 +10,8 @@ import {beforeEach, describe, expect, it, vi} from 'vitest';
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
+import {referenceToStock} from '../../rules/ruleReference';
+
 const newFile = vi.fn();
 const newExternalFile = vi.fn();
 const activateFile = vi.fn();
@@ -53,6 +55,16 @@ const SOURCE: MultiFileSource = {
       name: 'coinSpin.sheet',
       language: 'json',
       contents: '{}',
+      folderId: 'f1',
+    },
+    d: {
+      id: 'd',
+      // …and one the learner has not edited, which is stored as a REFERENCE
+      // to the library's rule rather than a copy of it (rules/ruleReference).
+      // Its name is in the rule, not in the file.
+      name: 'solid.rule',
+      language: 'rule',
+      contents: referenceToStock('solid'),
       folderId: 'f1',
     },
   },
@@ -165,6 +177,18 @@ describe('the file menus', () => {
     fireEvent.click(screen.getByText('Has Gravity'));
 
     expect(activateFile).toHaveBeenCalledWith('a');
+  });
+
+  it('titles an unedited rule by what the LIBRARY’S rule declares', () => {
+    // These rows are the one place in the lab that reads a file's contents
+    // without going through `projectFiles`, which is where a reference is
+    // resolved everywhere else. Unresolved, every rule nobody had edited fell
+    // back to its stem and the menu read `Solid` where the rest of the lab
+    // reads `Solid Bodies`.
+    openMenu('Rules');
+
+    expect(screen.getByText('Solid Bodies')).toBeTruthy();
+    expect(screen.queryByText('Solid')).toBeNull();
   });
 
   it('titles a file that declares no name, from its own stem', () => {

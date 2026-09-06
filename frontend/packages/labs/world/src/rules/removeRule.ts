@@ -15,6 +15,8 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {parseRuleMeta, type RuleMeta} from '../blockly/ruleMeta';
 
+import {resolveRuleContents} from './ruleReference';
+
 /** Where rules live, by the lab's directory convention (GLOSSARY.md). */
 const RULES_FOLDER = 'rules';
 
@@ -67,7 +69,7 @@ export function heldRules(source: MultiFileSource): HeldRule[] {
     const stem = file.name.replace(RULE_FILE, '');
     const path = `${RULES_FOLDER}/${stem}`;
     const meta = file.name.endsWith('.rule')
-      ? parseRuleMeta(path, file.contents)
+      ? parseRuleMeta(path, resolveRuleContents(file.contents))
       : undefined;
     held.push({
       path,
@@ -103,7 +105,10 @@ export function rulesRequiring(
       continue;
     }
     const stem = file.name.replace(RULE_FILE, '');
-    const meta = parseRuleMeta(`${RULES_FOLDER}/${stem}`, file.contents);
+    const meta = parseRuleMeta(
+      `${RULES_FOLDER}/${stem}`,
+      resolveRuleContents(file.contents),
+    );
     if (meta && meta.modulePath !== rule.path) {
       metas.push(meta);
     }
@@ -137,7 +142,7 @@ export function filesUsing(source: MultiFileSource, rule: HeldRule): string[] {
       file =>
         file.name !== rule.fileName &&
         BLOCKLY_FILE.test(file.name) &&
-        file.contents.includes(marker),
+        resolveRuleContents(file.contents).includes(marker),
     )
     .map(file => file.name)
     .sort((a, b) => a.localeCompare(b));

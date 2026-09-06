@@ -36,6 +36,7 @@ import {useMaybeLevelProperties, useSources} from '@code-dot-org/lab/contexts';
 import {useAppSelector} from '@code-dot-org/lab/redux';
 
 import {projectRuleMetas} from '../blockly/projectModules';
+import {resolveRuleContents} from '../rules/ruleReference';
 import {useWorldRuntime} from '../runtime/WorldRuntimeContext';
 
 import {WORLD_SYSTEM_PROMPT, worldContext} from './context';
@@ -138,10 +139,16 @@ export const useWorldTutor = (): TutorConfig | undefined => {
       systemPrompt: WORLD_SYSTEM_PROMPT,
       context: () => {
         const source = sources.current?.source as MultiFileSource | undefined;
+        // Resolved, the way `projectFiles` resolves for everything else: the
+        // rules below are parsed out of this map, and a reference parses to
+        // nothing — the tutor would lose the project's entire rule vocabulary
+        // and the block catalogue built from it. It costs the prompt nothing,
+        // because a rule is never sent whole (`SENT_WHOLE`); what is sent is
+        // the summary and the catalogue, both of which need the rule read.
         const files = Object.fromEntries(
           Object.values(source?.files ?? {}).map(file => [
             file.name,
-            file.contents,
+            resolveRuleContents(file.contents),
           ]),
         );
         return worldContext({

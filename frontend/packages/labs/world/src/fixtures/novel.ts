@@ -24,10 +24,7 @@ import {
   starterSprites,
   type ProjectSpec,
 } from '../constants';
-import {conversationRule} from '../rules/stock/conversation';
-import {inputRule} from '../rules/stock/input';
-import {revealsRule} from '../rules/stock/reveals';
-import {writingRule} from '../rules/stock/writing';
+import {referenceToStock} from '../rules/ruleReference';
 
 import {me, number} from './meteors';
 
@@ -335,25 +332,25 @@ const SPEC: ProjectSpec = {
     'rule-writing': {
       name: 'writing.rule',
       language: 'rule',
-      contents: writingRule,
+      contents: referenceToStock('writing'),
       folderId: 'rules',
     },
     'rule-reveals': {
       name: 'reveals.rule',
       language: 'rule',
-      contents: revealsRule,
+      contents: referenceToStock('reveals'),
       folderId: 'rules',
     },
     'rule-conversation': {
       name: 'conversation.rule',
       language: 'rule',
-      contents: conversationRule,
+      contents: referenceToStock('conversation'),
       folderId: 'rules',
     },
     'rule-input': {
       name: 'input.rule',
       language: 'rule',
-      contents: inputRule,
+      contents: referenceToStock('input'),
       folderId: 'rules',
     },
     ...starterSprites(['player']),

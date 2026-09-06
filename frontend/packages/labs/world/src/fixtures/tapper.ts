@@ -44,8 +44,7 @@ import {
   useTrait,
   type ProjectSpec,
 } from '../constants';
-import {mouseRule} from '../rules/stock/mouse';
-import {writingRule} from '../rules/stock/writing';
+import {referenceToStock} from '../rules/ruleReference';
 
 import {me, number} from './meteors';
 
@@ -654,7 +653,7 @@ export const TAPPER_SPEC: ProjectSpec = {
     writingRuleFile: {
       name: 'writing.rule',
       language: 'rule',
-      contents: writingRule,
+      contents: referenceToStock('writing'),
       folderId: 'rules',
     },
     labelActorFile: {
@@ -666,7 +665,7 @@ export const TAPPER_SPEC: ProjectSpec = {
     mouseRuleFile: {
       name: 'mouse.rule',
       language: 'rule',
-      contents: mouseRule,
+      contents: referenceToStock('mouse'),
       folderId: 'rules',
     },
     ...starterSprites(['coin', 'switch']),

@@ -9,6 +9,7 @@
 import {describe, expect, it} from 'vitest';
 
 import {DEFAULT_PROJECT, starterFile} from '../../constants';
+import {resolveRuleContents} from '../../rules/ruleReference';
 import {projectFiles} from '../../runtime/projectFiles';
 import {projectRuleMetas} from '../projectModules';
 import {
@@ -185,9 +186,13 @@ describe('renameRuleInSource', () => {
       next.files[starterFile('gravityRule').id].contents,
     )!;
     expect(gravity.modulePath).toBe('rules/gravity');
+    // Resolved, because `arrows.rule` never named Gravity and so was never
+    // rewritten — it is still the REFERENCE the starter ships (§2), which is
+    // the point: a rename touches the files that mention the rule and leaves
+    // the rest of the library alone.
     const arrows = parseRuleMeta(
       'rules/arrows',
-      next.files[starterFile('arrowsRule').id].contents,
+      resolveRuleContents(next.files[starterFile('arrowsRule').id].contents),
     )!;
     expect(arrows.requires).not.toContain('Gravity');
   });
@@ -317,7 +322,7 @@ describe('what changed between two states of a rule', () => {
   it('reads a rule’s members as the keys they are referred to by', () => {
     const meta = parseRuleMeta(
       'rules/gravity',
-      starterFile('gravityRule').contents,
+      resolveRuleContents(starterFile('gravityRule').contents),
     )!;
     const keys = memberKeys(meta);
     expect(keys).toContainEqual(key('AffectedByGravityTrait', 'trait'));

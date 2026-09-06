@@ -17,20 +17,7 @@ import {
 } from './appearance/stock';
 import {serializeEffectDocument} from './effect/model';
 import {rippleEffect} from './effect/stock';
-import {
-  arrowsRule,
-  collectRule,
-  solidRule,
-  collisionsRule,
-  gravityRule,
-  healthRule,
-  inputRule,
-  jumpRule,
-  patrolRule,
-  motionRule,
-  scoreRule,
-  writingRule,
-} from './rules/stock';
+import {referenceToStock} from './rules/ruleReference';
 import {TILE_SIZE, VIEWPORT_TILES} from './runtime/viewport';
 
 /**
@@ -945,73 +932,73 @@ export const STARTER_SPEC: ProjectSpec = {
     jumpRule: {
       name: 'jump.rule',
       language: 'rule',
-      contents: jumpRule,
+      contents: referenceToStock('jump'),
       folderId: 'rules',
     },
     gravityRule: {
       name: 'gravity.rule',
       language: 'rule',
-      contents: gravityRule,
+      contents: referenceToStock('gravity'),
       folderId: 'rules',
     },
     arrowsRule: {
       name: 'arrows.rule',
       language: 'rule',
-      contents: arrowsRule,
+      contents: referenceToStock('arrows'),
       folderId: 'rules',
     },
     inputRule: {
       name: 'input.rule',
       language: 'rule',
-      contents: inputRule,
+      contents: referenceToStock('input'),
       folderId: 'rules',
     },
     motionRule: {
       name: 'motion.rule',
       language: 'rule',
-      contents: motionRule,
+      contents: referenceToStock('motion'),
       folderId: 'rules',
     },
     collisionsRule: {
       name: 'collisions.rule',
       language: 'rule',
-      contents: collisionsRule,
+      contents: referenceToStock('collisions'),
       folderId: 'rules',
     },
     solidRule: {
       name: 'solid.rule',
       language: 'rule',
-      contents: solidRule,
+      contents: referenceToStock('solid'),
       folderId: 'rules',
     },
     healthRule: {
       name: 'health.rule',
       language: 'rule',
-      contents: healthRule,
+      contents: referenceToStock('health'),
       folderId: 'rules',
     },
     patrolRule: {
       name: 'patrol.rule',
       language: 'rule',
-      contents: patrolRule,
+      contents: referenceToStock('patrol'),
       folderId: 'rules',
     },
     scoreRule: {
       name: 'score.rule',
       language: 'rule',
-      contents: scoreRule,
+      contents: referenceToStock('score'),
       folderId: 'rules',
     },
     writingRule: {
       name: 'writing.rule',
       language: 'rule',
-      contents: writingRule,
+      contents: referenceToStock('writing'),
       folderId: 'rules',
     },
     collectRule: {
       name: 'collect.rule',
       language: 'rule',
-      contents: collectRule,
+      contents: referenceToStock('collect'),
       folderId: 'rules',
     },
     // A starter shader graph, so `effects/` is not an empty folder and the

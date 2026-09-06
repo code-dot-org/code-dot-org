@@ -26,6 +26,7 @@ import {stockAnimation, stockSprite} from '../../appearance/stock';
 import {importStockEffect} from '../../effect/importStockEffect';
 import {stockEffect} from '../../effect/stock';
 import {importStockRule} from '../../rules/importStockRule';
+import {resolveRuleContents} from '../../rules/ruleReference';
 import {stockRule} from '../../rules/stock';
 import {playCheck} from '../../runtime/playCheck';
 import {projectFiles} from '../../runtime/projectFiles';
@@ -72,9 +73,18 @@ const editing = (
     throw new Error(`no file called ${name}`);
   }
   const [id, file] = entry;
+  // Resolved first, the way the editor resolves one to put it on screen: a
+  // rule the learner has not touched is stored as a reference to the library's
+  // (rules/ruleReference, specs/NEXT.md §2), and there is nothing in a
+  // reference to edit. What is written back is the whole workspace, which is
+  // what a save does — so this stands in for a learner exactly as it did
+  // before, including the part where editing a rule makes it theirs.
   return {
     ...source,
-    files: {...source.files, [id]: {...file, contents: change(file.contents)}},
+    files: {
+      ...source.files,
+      [id]: {...file, contents: change(resolveRuleContents(file.contents))},
+    },
   };
 };
 
