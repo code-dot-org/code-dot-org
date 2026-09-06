@@ -100,9 +100,6 @@ import {toolboxForSurface} from './surfaceToolbox';
 import {withoutCategories} from './toolboxFilter';
 import {useWorldBlocklyTheme} from './worldBlocklyTheme';
 
-/** Where the head of a body surface sits from the top left, in pixels. */
-const BODY_MARGIN = 24;
-
 // Distinct connector nubs for the lab's own value types, so they read apart from
 // the puzzle-tab of numbers/strings: a triangle for `Actor` (`this actor`, every
 // `of …` socket) and a square for `Vector` (directional values — velocity, a
@@ -1132,7 +1129,12 @@ export const BlocklyFileEditor = ({
       Blockly.Events.enable();
     }
     if (editing) {
-      workspace.scroll(BODY_MARGIN, BODY_MARGIN);
+      // To the ORIGIN, which is where the head is: `bodyOf` places it at the
+      // same offset every other workspace in the lab puts its root, and the
+      // viewport is otherwise still wherever the interface was left. Opening a
+      // body from a rule scrolled to the right put the head behind the
+      // toolbox, off the side of the screen.
+      workspace.scroll(0, 0);
     }
     refreshActorPictures(workspace);
   }, [editing, blocks, seam, startBlocks]);

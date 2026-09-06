@@ -52,6 +52,21 @@ await p
 await p.waitForTimeout(4500);
 
 out.onInterface = await blocks();
+// Where the top block sits, which the body surface has to match: a head in
+// the corner, or behind the toolbox, is the one workspace that looks wrong.
+const rootAt = () =>
+  p.evaluate(async () => {
+    const {Blockly} = await import('/spikes/rule-surfaces/harness.ts');
+    const w = Blockly.getMainWorkspace();
+    const xy = w.getTopBlocks(true)[0].getRelativeToSurfaceXY();
+    const r = w.getTopBlocks(true)[0].getSvgRoot().getBoundingClientRect();
+    const svg = w.getParentSvg().getBoundingClientRect();
+    return {
+      at: {x: Math.round(xy.x), y: Math.round(xy.y)},
+      fromLeft: Math.round(r.x - svg.x),
+    };
+  });
+out.interfaceRoot = await rootAt();
 const pencil = await pencilAt();
 out.pencil = pencil;
 
@@ -60,6 +75,7 @@ if (pencil) {
   await p.waitForTimeout(2500);
 }
 out.inBody = await blocks();
+out.bodyHead = await rootAt();
 out.header = await p.getByText('← Back').count();
 
 if (out.header) {

@@ -836,6 +836,24 @@ by the same path. Two surfaces cannot be edited at once, so there is no
 conflict to resolve; it is on the head because a body surface is where §8
 wanted the documentation to be.
 
+_Padding, 2026-09-05._ The head sat in the corner. `bodyOf` had been dropping
+the member's `x`/`y` — carrying them over put the head wherever that member
+happened to be in a long rule, which on `solid` is off the side of the screen
+— and a block with no position lands at the origin, hard against the toolbox.
+It is now placed at 20,20, which is where every starter file in `constants.ts`
+puts its root and where a rule's own `define rule` sits.
+
+The viewport still has to be reset, and for a reason worth keeping: the
+workspace is loaded in place, so it opens wherever the interface was left. Cut
+the reset and a body opened from a rule scrolled to the right renders at
+screen x=164 with the toolbox starting at 321 — the head behind it, off the
+side. The reset now says `scroll(0, 0)`, which is what it always did: the
+margin it was passed was clamped away, and a call whose comment describes
+something it is not doing is worse than no call.
+
+`check-overlay.mjs` reports where the top block sits on each surface, and the
+two now agree: 20,20, and 148 pixels from the left edge.
+
 **Not only rules.** An `.actor` file holds the same two shapes — its own
 `each frame` and its own `define block` (`ActorBuilder.defineStep`,
 `defineAction`) — and a world holds them inside `define actor`. Actor files

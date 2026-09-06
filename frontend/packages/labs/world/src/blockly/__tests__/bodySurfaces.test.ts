@@ -417,6 +417,20 @@ describe('opening one member’s body', () => {
     expect(head.next).toBeUndefined();
   });
 
+  it('places the head where every workspace puts its root', () => {
+    // Not where the member sat on the interface, which for a rule as long as
+    // `solid` is somewhere off the side, and not at the origin either — the
+    // lab's own starter files all put a root at 20,20 (`constants.ts`), and a
+    // head in the corner is the one workspace that looks wrong.
+    const seam = createBodySeam();
+    const shown = seam.show(
+      doc({...ruleStep('s1', statement('work')), x: 900, y: 640}),
+    );
+    const [head] = rootsOf(seam.bodyOf('s1', shown));
+
+    expect(head).toMatchObject({x: 20, y: 20});
+  });
+
   it('is empty for a block that has no body, rather than throwing', () => {
     const seam = createBodySeam();
     const shown = seam.show(doc(ruleStep('s1', statement('work'))));

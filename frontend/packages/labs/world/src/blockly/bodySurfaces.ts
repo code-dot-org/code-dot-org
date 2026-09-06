@@ -88,6 +88,16 @@ export interface Split {
   bodies: Bodies;
 }
 
+/**
+ * Where a root block sits in a workspace, by this lab's own convention.
+ *
+ * Every starter file puts its root here (`constants.ts`), so a body surface
+ * that put its head anywhere else would be the one workspace in the lab whose
+ * top block is jammed into the corner.
+ */
+const ROOT_X = 20;
+const ROOT_Y = 20;
+
 /** Ids the split had to invent, so a caller can tell a mint from a reload. */
 const mintId = (): string => `body-${Math.random().toString(36).slice(2, 10)}`;
 
@@ -343,9 +353,10 @@ export function createBodySeam(): BodySeam {
       // Where it sat on the interface means nothing here — it is the only
       // root on this surface. Carried over, it put the head wherever that
       // member happened to be in a long rule, which on `solid` is off the
-      // side of the screen.
-      delete head.x;
-      delete head.y;
+      // side of the screen. Dropped outright it landed in the corner, so it
+      // is placed where every other workspace in the lab puts its root.
+      head.x = ROOT_X;
+      head.y = ROOT_Y;
       if (body) {
         head.next = {block: body};
       }
