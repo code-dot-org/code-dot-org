@@ -27,18 +27,22 @@
 //             .blocklyToolboxCategoryIcon    16x16, empty in this lab
 //             .blocklyToolboxCategoryLabel   the words
 //
-// THREE RULES CARRY `!important`, and the list is exact because it is the
-// list of things Blockly writes as an INLINE style — which specificity, the
-// ordinary way to win, cannot beat:
+// THREE RULES CARRY `!important`, and each one beats a style Blockly writes as
+// an ATTRIBUTE, which specificity — the ordinary way to win — cannot touch:
 //
 //   • the strip's background, from the theme's `componentStyles`;
 //   • the selected row's background, written when the row is chosen;
 //   • the empty icon's `display: inline-block`.
 //
-// Hover is NOT one of them and is not marked: an unselected row carries only
-// `padding-left` and `pointer-events` inline, so an ordinary rule wins. A
-// fourth mark appearing here means somebody is fighting a stylesheet rather
-// than an attribute, and should check which before reaching for it.
+// Blockly writes a FOURTH inline style and this deliberately does not fight
+// it: the row's start padding is the nesting indent, and overriding it would
+// flatten a sub-category into its parent. The horizontal inset is put on the
+// row's content container instead, which nothing writes to. That distinction
+// is the rule to follow here — a mark is for a value Blockly owns and we are
+// replacing, not for one we are only trying to sit beside.
+//
+// Hover is not marked either: an unselected row carries no background of its
+// own, so an ordinary rule already wins.
 
 import {Blockly} from '@code-dot-org/blockly';
 import {PluginType, type Plugin} from '@code-dot-org/blockly/plugins';
@@ -71,10 +75,33 @@ const TOOLBOX_CSS = `
   margin-inline: 0.375rem;
   margin-bottom: 2px;
   padding-block: 0.125rem;
-  padding-inline: 4px;
   border-radius: var(--border-radius, 4px);
   color: var(--text-neutral-primary, #1a1a1a);
   transition: all 0.2s ease-in-out;
+}
+
+/* THE HORIZONTAL INSET GOES INSIDE THE ROW, not on it.
+ *
+ * Blockly writes the row's start padding inline — 'nestedPadding * level', on
+ * 'padding-left' or, in RTL, 'padding-right' — which is the indent that shows
+ * a sub-category. It is 0px for every category in this lab because they are
+ * all top level, and a 'padding-inline' on the row therefore lost its start
+ * side to it: the words sat flush against the pill's edge with 4px on the
+ * other side only.
+ *
+ * Padding the CONTENT container instead leaves that indent alone, so nesting
+ * still works if a category ever grows children, and needs no '!important'
+ * because nothing writes this element's style. The fill is still drawn on the
+ * row, so the pill spans the strip and only the words move. */
+.blocklyToolbox .blocklyTreeRowContentContainer {
+  padding-inline: 10px;
+}
+
+/* …and the inset is said in ONE place. Blockly gives the label 3px of its
+ * own, which would make the real number 13 and the next person's arithmetic
+ * wrong. */
+.blocklyToolbox .blocklyToolboxCategoryLabel {
+  padding-inline: 0;
 }
 
 /* The family is set HERE and not only on the strip. Blockly styles the label

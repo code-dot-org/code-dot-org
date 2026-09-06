@@ -58,6 +58,15 @@ const read = () =>
             selected.querySelector('.blocklyToolboxCategoryLabel'),
           ).color
         : null,
+      // Where the words actually start, measured from the pill's edge rather
+      // than read off a rule. This was 0: Blockly writes the row's start
+      // padding inline as the nesting indent, so a padding-inline on the row
+      // lost that side and the names sat flush against the fill. The inset
+      // lives on the content container now, and a 0 here means it has stopped
+      // reaching it.
+      textInset: Math.round(
+        label.getBoundingClientRect().left - row.getBoundingClientRect().left,
+      ),
     };
   });
 
@@ -91,7 +100,7 @@ out.errors = errors.slice(0, 3);
 // Expected, and the numbers are the point:
 //   light  strip rgb(240,242,245)   dark  strip rgb(66,77,89)
 //   both   selected rgb(0,129,143), its label white, icon `none`,
-//          radius 4px, rows 24px, 14px Geist.
+//          radius 4px, rows 24px, 14px Geist, text inset 10px.
 // A strip of rgb(221,221,221) or rgb(57,68,80) means the stylesheet stopped
 // matching and Blockly's own theme is showing through.
 console.log(JSON.stringify(out, null, 1));
