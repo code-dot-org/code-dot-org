@@ -94,7 +94,11 @@ await p.evaluate(async () => {
   item.setFieldValue('goes down', 'TEXT');
 });
 await p.waitForTimeout(3500);
-await p.getByText('← Back').first().click();
+await p
+  .getByRole('button')
+  .filter({hasText: /^Back$/})
+  .first()
+  .click();
 await p.waitForTimeout(3500);
 out.afterEdit = (await eventBlock()).parts;
 out.errors = errors.slice(0, 4);

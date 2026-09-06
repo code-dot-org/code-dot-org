@@ -51,7 +51,7 @@ const clickPencil = async id => {
 };
 
 const back = async () => {
-  const bar = p.getByText('← Back');
+  const bar = p.getByRole('button').filter({hasText: /^Back$/});
   if ((await bar.count()) === 0) {
     return false;
   }

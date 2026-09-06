@@ -28,7 +28,7 @@ await p.goto('http://localhost:5139/', {waitUntil: 'networkidle'});
 await p.waitForTimeout(9000);
 
 const back = async () => {
-  const b2 = p.getByText('← Back');
+  const b2 = p.getByRole('button').filter({hasText: /^Back$/});
   if (await b2.count()) {
     await b2.first().click();
     await p.waitForTimeout(1500);

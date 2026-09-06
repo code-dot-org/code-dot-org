@@ -1,3 +1,4 @@
+import {Button, Typography} from '@mui/material';
 import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {
@@ -15,6 +16,7 @@ import ScrollOptionsPlugin from '@code-dot-org/blockly/plugins/scrollOptions';
 import ToolboxTrashcanPlugin from '@code-dot-org/blockly/plugins/toolboxTrashcan';
 import {activateFile} from '@code-dot-org/codebridge';
 import type {CustomEditorProps} from '@code-dot-org/codebridge';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useLocalization} from '@code-dot-org/core/plugins/localization';
 import {useMaybeLevelProperties, useSources} from '@code-dot-org/lab/contexts';
@@ -1461,10 +1463,28 @@ export const BlocklyFileEditor = ({
         // to get back. A header rather than a modal's chrome, because the
         // pane is the same pane and what changed is what is in it.
         <div className={styles.bodyHeader}>
-          <button type="button" className={styles.bodyBack} onClick={closeBody}>
-            ← Back
-          </button>
-          <span className={styles.bodyTitle}>{editing.label}</span>
+          {/* The same button the Preview's "Restart" and the Console's
+              "Clear" are — a text button at `extraSmall` with an icon in
+              front. This bar sits directly under the panel header those live
+              in, so anything else would read as a different kind of control. */}
+          <Button
+            variant="text"
+            size="extraSmall"
+            startIcon={
+              <FontAwesomeV6Icon iconName="arrow-left" iconStyle="solid" />
+            }
+            onClick={closeBody}
+          >
+            Back
+          </Button>
+          {/* `label2` is the type scale's name-of-a-thing: 14px, semibold.
+              Not an overline, which is what the panel header above uses —
+              that is a LABEL and is uppercased, and this is the member's own
+              name, which a learner wrote and should read back as they typed
+              it. */}
+          <Typography component="span" variant="label2">
+            {editing.label}
+          </Typography>
         </div>
       )}
       {note && (

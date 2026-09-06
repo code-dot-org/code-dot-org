@@ -76,10 +76,17 @@ if (pencil) {
 }
 out.inBody = await blocks();
 out.bodyHead = await rootAt();
-out.header = await p.getByText('← Back').count();
+out.header = await p
+  .getByRole('button')
+  .filter({hasText: /^Back$/})
+  .count();
 
 if (out.header) {
-  await p.getByText('← Back').first().click();
+  await p
+    .getByRole('button')
+    .filter({hasText: /^Back$/})
+    .first()
+    .click();
   await p.waitForTimeout(2500);
 }
 out.backOnInterface = await blocks();

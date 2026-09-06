@@ -128,7 +128,11 @@ out.defaultByType = await p.evaluate(async () => {
 });
 await p.waitForTimeout(3500);
 
-await p.getByText('← Back').first().click();
+await p
+  .getByRole('button')
+  .filter({hasText: /^Back$/})
+  .first()
+  .click();
 await p.waitForTimeout(4000);
 out.interfaceParts = (await shapeOf(null)).parts;
 
@@ -180,7 +184,11 @@ await p.evaluate(async () => {
   item.setFieldValue('actor', 'TYPE');
 });
 await p.waitForTimeout(3000);
-await p.getByText('← Back').first().click();
+await p
+  .getByRole('button')
+  .filter({hasText: /^Back$/})
+  .first()
+  .click();
 await p.waitForTimeout(3000);
 await p.evaluate(async () => {
   const {Blockly} = await import('/spikes/rule-surfaces/harness.ts');

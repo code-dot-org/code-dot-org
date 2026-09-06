@@ -81,7 +81,11 @@ out.picked = await ws(B => {
 });
 await p.waitForTimeout(3000);
 
-await p.getByText('← Back').first().click();
+await p
+  .getByRole('button')
+  .filter({hasText: /^Back$/})
+  .first()
+  .click();
 await p.waitForTimeout(3000);
 
 // The interface is rebuilt from the file on the way back, so this is the file
