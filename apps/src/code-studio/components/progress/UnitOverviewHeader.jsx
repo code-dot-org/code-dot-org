@@ -152,7 +152,7 @@ class UnitOverviewHeader extends Component {
     }
 
     return (
-      <div>
+      <div className={styles.main}>
         {plcHeaderProps && (
           <PlcHeader
             unit_name={plcHeaderProps.unitName}
