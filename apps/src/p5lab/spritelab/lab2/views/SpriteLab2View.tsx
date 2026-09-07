@@ -25,6 +25,7 @@ import StartOverDialog from '@cdo/apps/lab2/views/dialogs/dsco/StartOverDialog';
 import * as p5labReducersModule from '@cdo/apps/p5lab/reducers';
 import {
   isNameUnique,
+  revokeObjectUrlImages,
   SET_INITIAL_ANIMATION_LIST,
   setAnimationName,
   setInitialAnimationList,
@@ -478,6 +479,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       // migration rewrites; the next save persists the result.
       const seeded = cloneDeep(animations || EMPTY_ANIMATION_LIST);
       migrateAnimationList(seeded);
+      // Replacing the list frees the outgoing images' Blobs (the seed
+      // carries no pixel data; images reload from their sources).
+      revokeObjectUrlImages(getStore().getState().animationList);
       dispatch(
         setInitialAnimationList(
           seeded,

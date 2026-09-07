@@ -491,24 +491,30 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   );
 
   // Current pixels as a data URI (generation's "use previous image" sends
-  // them in a JSON request body).
+  // them in a JSON request body, so an object-URL image is read back to
+  // base64 here).
   const getTargetDataURI = useCallback(async (): Promise<string | null> => {
     if (!targetProps) {
       return null;
     }
+    const readAsDataURL = (blob: Blob) =>
+      new Promise<string>((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result as string);
+        reader.onerror = reject;
+        reader.readAsDataURL(blob);
+      });
     let dataURI = targetProps.dataURI ?? null;
-    if (!dataURI && targetProps.sourceUrl) {
-      try {
-        const blob = await (await HttpClient.get(targetProps.sourceUrl)).blob();
-        dataURI = await new Promise<string>((resolve, reject) => {
-          const reader = new FileReader();
-          reader.onload = () => resolve(reader.result as string);
-          reader.onerror = reject;
-          reader.readAsDataURL(blob);
-        });
-      } catch {
-        return null;
+    try {
+      if (dataURI?.startsWith('blob:')) {
+        dataURI = await readAsDataURL(await (await fetch(dataURI)).blob());
+      } else if (!dataURI && targetProps.sourceUrl) {
+        dataURI = await readAsDataURL(
+          await (await HttpClient.get(targetProps.sourceUrl)).blob()
+        );
       }
+    } catch {
+      return null;
     }
     // "Start from current image" on a character set references one frame,
     // not the five-frame strip.

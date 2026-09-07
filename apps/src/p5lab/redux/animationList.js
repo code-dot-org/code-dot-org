@@ -663,6 +663,11 @@ export function deleteAnimation(
 ) {
   return (dispatch, getState) => {
     const animationList = getState().animationList;
+    // A deleted image's object URL frees its Blob (no-op for dataURIs).
+    const removed = animationList.propsByKey[key];
+    if (removed?.dataURI?.startsWith('blob:')) {
+      URL.revokeObjectURL(removed.dataURI);
+    }
     let orderedKeys = animationList.orderedKeys;
     // If we're in spritelab, we need to make sure we don't set the selected animation to a background
     if (isSpriteLab) {
@@ -700,6 +705,27 @@ export function deleteAnimation(
       }
     );
   };
+}
+
+// Lab2 stores each loaded image as an object URL — a ~30-byte handle onto
+// the fetched Blob — instead of a base64 dataURI string, which put roughly
+// 1.3 bytes on the JS heap per image byte. Legacy labs keep dataURIs
+// (Piskel and the classic tab read them). See SpriteLab2Engine.
+let storeLoadedImagesAsObjectUrls = false;
+export function setStoreLoadedImagesAsObjectUrls(enable) {
+  storeLoadedImagesAsObjectUrls = enable;
+}
+
+/**
+ * Revoke a list's object-URL images, freeing their Blobs. Call when the
+ * whole list is being replaced (level switch, Start Over re-seed).
+ */
+export function revokeObjectUrlImages(animationList) {
+  Object.values(animationList?.propsByKey || {}).forEach(props => {
+    if (props?.dataURI?.startsWith('blob:')) {
+      URL.revokeObjectURL(props.dataURI);
+    }
+  });
 }
 
 /**
@@ -741,6 +767,25 @@ function loadAnimationFromSource(key, callback) {
         return;
       }
 
+      if (storeLoadedImagesAsObjectUrls) {
+        // Reloading over a previous object URL frees the old Blob.
+        const previous = getState().animationList.propsByKey[key]?.dataURI;
+        if (previous?.startsWith('blob:')) {
+          URL.revokeObjectURL(previous);
+        }
+        const objectUrl = URL.createObjectURL(blob);
+        dataURIToSourceSize(objectUrl).then(sourceSize => {
+          dispatch({
+            type: DONE_LOADING_FROM_SOURCE,
+            key,
+            blob,
+            dataURI: objectUrl,
+            sourceSize,
+          });
+          callback();
+        });
+        return;
+      }
       blobToDataURI(blob, dataURI => {
         dataURIToSourceSize(dataURI).then(sourceSize => {
           dispatch({
