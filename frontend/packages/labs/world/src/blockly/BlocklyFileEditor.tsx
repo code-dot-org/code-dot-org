@@ -101,6 +101,7 @@ import {requestRuleImport} from './ruleImport';
 import {designedName, parseRuleMeta} from './ruleMeta';
 import {ruleByName} from './ruleRegistry';
 import {setRulesConfigHandler} from './rulesConfig';
+import {blockOwners, rulesOutOfScope} from './rulesInScope';
 import {parseSpriteRef} from './spriteCells';
 import {setSpritePickHandler} from './spritePick';
 import {standInBlocks} from './standInBlocks';
@@ -601,8 +602,19 @@ export const BlocklyFileEditor = ({
     () => (progression?.gated ? {holds: progression.holds} : undefined),
     [progression?.gated, progression?.holds],
   );
+  // The file's own contents, for the one question the palette asks OF it: which
+  // rules it says it depends on. Read from the saved sources like
+  // `ownActorProperties` beside it, and for the same reason — the palette is
+  // rebuilt when the sources change, which is exactly when a `use trait` or a
+  // `use rule` was added.
+  const ownContents = useMemo(() => {
+    const path = filePath(currentSources.source, fileId);
+    return path ? files[path] : undefined;
+  }, [currentSources.source, fileId, files]);
+
   const {blocks, toolbox} = useMemo(() => {
-    const palette = buildDomainPalette(projectRuleMetas(files), {
+    const rules = projectRuleMetas(files);
+    const palette = buildDomainPalette(rules, {
       ownRuleModule,
       fileKind,
       ownProperties: ownActorProperties,
@@ -612,20 +624,30 @@ export const BlocklyFileEditor = ({
     // and without one Blockly refuses to deserialize the file at all — the
     // editor throws and nothing renders (blockly/standInBlocks).
     const known = new Set(palette.blocks.map(block => block.type));
+    // A `.rule` and an `.actor` are offered only the rules they say they
+    // depend on, and what those depend on in turn (`rulesInScope`). A world
+    // still gets every one, because it runs every one. Hidden the same way a
+    // level's excluded categories are, and with the same bargain: the blocks
+    // stay defined, so a file already holding one renders and compiles.
+    const narrowed = rulesOutOfScope(
+      {kind: fileKind, module: ownRuleModule, contents: ownContents},
+      rules,
+      blockOwners(palette.toolbox, rules),
+    );
+    const offered = withoutCategories(palette.toolbox, [
+      ...hiddenCategories,
+      ...narrowed,
+    ]);
     return {
       blocks: [
         ...palette.blocks,
         ...standInBlocks(Object.values(files), known),
       ],
-      toolbox: shelf
-        ? shelvedToolbox(
-            withoutCategories(palette.toolbox, hiddenCategories),
-            shelf,
-          )
-        : withoutCategories(palette.toolbox, hiddenCategories),
+      toolbox: shelf ? shelvedToolbox(offered, shelf) : offered,
     };
   }, [
     files,
+    ownContents,
     ownRuleModule,
     fileKind,
     hiddenCategories,
