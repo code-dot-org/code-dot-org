@@ -35,6 +35,7 @@ import {editingActorModule} from './editingRule';
 import {NAME_FIELD, NAMED} from './extensions/addActorName';
 import {addOnChange, isStructuralChange} from './extensions/onChange';
 import {localActorFor, localActorValue} from './localActors';
+import {DEFINE_TWEEN, PLAY_TWEEN_HERE} from './tweens';
 
 /** How big the picture is drawn on a block, square. */
 const PICTURE = 20;
@@ -201,6 +202,18 @@ export function actorAbout(
     // A rule says nothing about who elects it, and never can: `this actor` in a
     // trait step is whatever holds the trait, in this project and the next.
     if (type.startsWith('world_rule') || type === 'world_trait_step') {
+      return undefined;
+    }
+    // A TWEEN IS A FUNCTION OF THE ACTOR IT IS PLAYED ON, not of the actor
+    // whose file it sits in — the generator says so in as many words, and
+    // `play tween ⟨…⟩ on ⟨who⟩` is what supplies the argument. So `this actor`
+    // in here is the tween's subject and nobody knowable at edit time.
+    //
+    // Drawing the containing actor's picture on it was an outright lie, and
+    // the Pad is where it read as one: its tweens fade whatever steps on it,
+    // played on `event actor` from the pad's own handlers, and every `this
+    // actor` inside them wore a picture of the pad.
+    if (type === DEFINE_TWEEN || type === PLAY_TWEEN_HERE) {
       return undefined;
     }
   }

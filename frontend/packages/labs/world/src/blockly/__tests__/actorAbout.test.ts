@@ -158,6 +158,48 @@ describe('what `this actor` is about', () => {
     expect(actorAbout(asBlock({parent: step}), 'this')).toBeUndefined();
   });
 
+  it('is nobody inside a tween, whose actor is whoever plays it', () => {
+    // THE PAD IS WHY. Its tweens fade whatever steps on it — they are played
+    // on `event actor` from the pad's own handlers — and every `this actor`
+    // inside them wore a picture of the pad, which is a picture of the wrong
+    // actor. A tween is a function of the actor it is played on
+    // (`domainBlocks`, the `define tween` generator says so outright), so at
+    // edit time there is nobody to draw.
+    //
+    // THE DEFINITION IS PUT ABOVE IT ON PURPOSE. Without it the walk would run
+    // out of ancestors and answer "nobody" for having found nothing, which is
+    // the right answer for the wrong reason and would go on passing with this
+    // rule deleted.
+    const workspace = worldWith('pad1', 'Pad');
+    const definition = {type: 'world_actor', id: 'pad1', workspace};
+    const tween = {type: 'world_define_tween', parent: definition, workspace};
+
+    // The control: the same chain without the tween in it IS the pad.
+    expect(
+      actorAbout(asBlock({parent: definition, workspace}), 'this'),
+    ).toEqual({type: 'Pad', name: 'Pad'});
+    expect(
+      actorAbout(asBlock({parent: tween, workspace}), 'this'),
+    ).toBeUndefined();
+  });
+
+  it('is nobody inside an unnamed tween either', () => {
+    // `play tween here` rebinds the actor around its destinations exactly as a
+    // named tween's definition does, and says so in its generator — so the two
+    // blocks cannot disagree about what `this actor` means inside them.
+    const workspace = worldWith('pad1', 'Pad');
+    const definition = {type: 'world_actor', id: 'pad1', workspace};
+    const here = {
+      type: 'world_play_tween_here',
+      parent: definition,
+      workspace,
+    };
+
+    expect(
+      actorAbout(asBlock({parent: here, workspace}), 'this'),
+    ).toBeUndefined();
+  });
+
   it('is nobody with nothing above it, which is the toolbox', () => {
     expect(actorAbout(asBlock({}), 'this')).toBeUndefined();
   });
