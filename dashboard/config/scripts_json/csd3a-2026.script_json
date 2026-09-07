@@ -33,7 +33,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-23 20:10:46 UTC",
+    "serialized_at": "2026-09-04 20:17:51 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -106,18 +106,6 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "announcements": [
-          {
-            "key": "05827675-5685-4018-9b5e-5dc0e7267f56",
-            "notice": "NEW! Self-Paced Professional Learning is here!",
-            "details": "Get started with our new Self-Paced Professional Learning to explore the curriculum and Music Lab! Feel confident and prepared as you start teaching the unit!",
-            "link": "https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/1/levels/1",
-            "type": "information",
-            "visibility": "Teacher-only",
-            "dismissible": true,
-            "buttonText": "Start Learning!"
-          }
-        ],
         "overview": "To kick off a unit focused on creative coding and designing interactive music experiences, students will take on the role of music experience designers. Their challenge: help clients bring their ideas for unique songs to life using Music Lab.\n\nStudents begin by reviewing a variety of early songs, each showcasing different musical genres, sounds, and techniques. Then, they read through short client stories—each with a specific goal or mood in mind—and match each client with the song that best fits their vision.\n\nTo wrap up, students reflect on how understanding a user’s goals can shape creative decisions and consider how they might adapt or remix prototypes in Music Lab to better serve different needs.",
         "preparation": "* Print a copy of the activity guide for each student\n- Preview the examples in Code Studio to get familiar with the student experience\n- Get familiar with the musical terms in the Music Lab Glossary begin highlighting the connections between coding and music.",
         "student_overview": "Today, you’ll be a music experience designer! Your job is to help different “clients” bring their song ideas to life. First, you’ll check out some song prototypes in Music Lab. Then, you’ll read each client’s story and decide which prototype fits their idea best.\n\nYou’ll explain your choice and think about how to make the music even better for them."
