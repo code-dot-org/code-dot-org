@@ -9,7 +9,7 @@ import CdoFieldAnimationDropdown from '@cdo/apps/blockly/addons/cdoFieldAnimatio
 import {animationSourceUrl} from '@cdo/apps/p5lab/redux/animationList';
 import {getStore} from '@cdo/apps/redux';
 
-import {getTrimmedThumbnail} from '../imageTrim';
+import {getImageThumbnail} from '../imageTrim';
 import {setActiveTab} from '../redux/spriteLab2Redux';
 import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
 
@@ -80,9 +80,7 @@ function animationOptions(kind: AnimationKind): [string, string][] {
       return;
     }
     const url =
-      (kind === 'background'
-        ? undefined
-        : getTrimmedThumbnail(animation.name)) ||
+      getImageThumbnail(animation.name) ||
       animation.sourceUrl ||
       animationSourceUrl(key, animation, state.pageConstants?.channelId);
     results.push([url, `"${animation.name}"`]);

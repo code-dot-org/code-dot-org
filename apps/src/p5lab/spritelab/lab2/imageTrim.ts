@@ -50,14 +50,72 @@ export function findOpaqueBounds(
 // Trimming is deterministic; cache by source so re-runs don't redo the work.
 const trimCache = new Map<string, Promise<string>>();
 const frameThumbCache = new Map<string, Promise<string>>();
+const thumbSourceCache = new Map<string, Promise<string>>();
 
-// Trimmed image per costume name, for the block image fields (dropdown
-// thumbnails). Populated as animation lists get trimmed for preload.
-const trimmedByName = new Map<string, string>();
+// Thumbnail edge (px): 2x the ~104 css px gallery tile, so it stays crisp
+// on retina. Everything that shows images in a list — the gallery, the
+// world palette, the block dropdowns — reads these instead of decoding the
+// stored image (a 512-1024px bitmap) into a hundred-pixel tile.
+const THUMB_PX = 224;
+
+// Small display thumbnail per image name (border-trimmed for costumes,
+// first frame for sheets, whole image for backgrounds). Populated as
+// animation lists get trimmed for preload.
+const thumbByName = new Map<string, string>();
 const trimListeners = new Set<() => void>();
 
-export function getTrimmedThumbnail(name: string): string | undefined {
-  return trimmedByName.get(name);
+export function getImageThumbnail(name: string): string | undefined {
+  return thumbByName.get(name);
+}
+
+/**
+ * Downscale a dataURI to fit THUMB_PX, cached by source. Pixel art scales
+ * with hard edges; anything else gets high-quality smoothing. Returns the
+ * input on any failure.
+ */
+// Bounded like the trim caches: keys are whole source dataURIs and every
+// edit mints a new one, while module state outlives levels.
+const THUMB_CACHE_LIMIT = 60;
+
+function thumbnailFromDataURI(
+  source: string,
+  pixelated: boolean
+): Promise<string> {
+  let cached = thumbSourceCache.get(source);
+  if (!cached) {
+    cached = new Promise<string>(resolve => {
+      const img = new Image();
+      img.onload = () => {
+        try {
+          const scale =
+            THUMB_PX / Math.max(img.naturalWidth, img.naturalHeight);
+          if (scale >= 1) {
+            return resolve(source);
+          }
+          const canvas = document.createElement('canvas');
+          canvas.width = Math.max(1, Math.round(img.naturalWidth * scale));
+          canvas.height = Math.max(1, Math.round(img.naturalHeight * scale));
+          const ctx = canvas.getContext('2d');
+          if (!ctx) {
+            return resolve(source);
+          }
+          ctx.imageSmoothingEnabled = !pixelated;
+          ctx.imageSmoothingQuality = 'high';
+          ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+          resolve(canvas.toDataURL('image/png'));
+        } catch (e) {
+          resolve(source);
+        }
+      };
+      img.onerror = () => resolve(source);
+      img.src = source;
+    });
+    while (thumbSourceCache.size >= THUMB_CACHE_LIMIT) {
+      thumbSourceCache.delete(thumbSourceCache.keys().next().value as string);
+    }
+    thumbSourceCache.set(source, cached);
+  }
+  return cached;
 }
 
 // Notifies when new trims land, so already-rendered block thumbnails can
@@ -68,12 +126,12 @@ export function onTrimsUpdated(listener: () => void): () => void {
 }
 
 /**
- * Drop an image's cached trimmed thumbnail — its pixels changed to data
- * that has not arrived yet, so the cache would keep showing the old
- * pixels. The next trim pass repopulates it.
+ * Drop an image's cached thumbnail — its pixels changed to data that has
+ * not arrived yet, so the cache would keep showing the old pixels. The
+ * next trim pass repopulates it.
  */
-export function forgetTrimmedThumbnail(name?: string): void {
-  if (name && trimmedByName.delete(name)) {
+export function forgetImageThumbnail(name?: string): void {
+  if (name && thumbByName.delete(name)) {
     trimListeners.forEach(listener => listener());
   }
 }
@@ -205,22 +263,35 @@ export async function trimAnimationListImages(
   const currentNames = new Set(
     (list.orderedKeys || []).map(key => list.propsByKey[key]?.name)
   );
-  for (const name of trimmedByName.keys()) {
+  for (const name of thumbByName.keys()) {
     if (!currentNames.has(name)) {
-      trimmedByName.delete(name);
+      thumbByName.delete(name);
       newTrims = true;
     }
   }
+  const noteThumb = (name: string | undefined, thumb: string) => {
+    if (name && thumbByName.get(name) !== thumb) {
+      thumbByName.set(name, thumb);
+      newTrims = true;
+    }
+  };
   await Promise.all(
     (list.orderedKeys || []).map(async key => {
       const props = list.propsByKey[key];
       if (!props) {
         return;
       }
+      const pixelated = !!props.pixelGridSize;
       const isBackground = (props.categories || []).includes(
         BACKGROUNDS_CATEGORY
       );
       if (isBackground || !props.dataURI) {
+        if (isBackground && props.dataURI) {
+          noteThumb(
+            props.name,
+            await thumbnailFromDataURI(props.dataURI, pixelated)
+          );
+        }
         propsByKey[key] = props;
         return;
       }
@@ -228,10 +299,7 @@ export async function trimAnimationListImages(
       const trimmed = isSheet
         ? await firstFrameThumbnail(props.dataURI, props.frameSize)
         : await trimTransparentBorder(props.dataURI);
-      if (props.name && trimmedByName.get(props.name) !== trimmed) {
-        trimmedByName.set(props.name, trimmed);
-        newTrims = true;
-      }
+      noteThumb(props.name, await thumbnailFromDataURI(trimmed, pixelated));
       propsByKey[key] = isSheet ? props : {...props, dataURI: trimmed};
     })
   );
