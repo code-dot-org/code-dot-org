@@ -26,6 +26,12 @@ export function withoutCategories(
   }
   const unwanted = new Set(hidden);
   return (toolbox as ToolboxCategory[]).filter(
-    category => !unwanted.has(category.name),
+    category =>
+      // A row that says what it is — the heading over the rules
+      // (`blockly/toolboxStyle`) — is not a category and cannot be hidden by
+      // naming one. Its words are a heading's, and a level that happened to
+      // hide a category sharing them would take the divider with it.
+      typeof (category as {kind?: string}).kind === 'string' ||
+      !unwanted.has(category.name),
   );
 }

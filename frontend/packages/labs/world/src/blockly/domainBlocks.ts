@@ -199,6 +199,7 @@ import {
   ruleSlug,
 } from './ruleRegistry';
 import {measuredImages, parseSpriteRef, spriteCell} from './spriteCells';
+import {TOOLBOX_HEADING, toolboxHeading} from './toolboxStyle';
 import {
   projectRuleIdentities,
   actorTraitOptions,
@@ -8930,10 +8931,22 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
 ];
 
 /** The toolbox as a `.rule` sees it: everything, plus the Engine category. */
-const withEngine = (categories: ToolboxCategory[]): ToolboxCategory[] => [
-  ...categories,
-  ENGINE_CATEGORY,
-];
+/**
+ * `Engine` goes with the fixed categories, not after the rules.
+ *
+ * It is one of the language's own — the primitives a rule needs to do what the
+ * engine used to do for it — so it belongs above the heading with the rest of
+ * them. Placed after `Variables`, which is where it already sat before the
+ * rules moved down.
+ */
+const withEngine = (categories: ToolboxCategory[]): ToolboxCategory[] => {
+  const at = categories.findIndex(
+    category => (category as {kind?: string}).kind === TOOLBOX_HEADING,
+  );
+  return at < 0
+    ? [...categories, ENGINE_CATEGORY]
+    : [...categories.slice(0, at), ENGINE_CATEGORY, ...categories.slice(at)];
+};
 
 /**
  * The structural categories as one kind of file sees them.
@@ -8984,11 +8997,39 @@ const structuralCategories = (fileKind?: FileKind): ToolboxCategory[] => {
   return kept;
 };
 
-const DOMAIN_CATEGORIES: ToolboxCategory[] = [
+/**
+ * The toolbox in two halves, with a heading between them.
+ *
+ * ALWAYS THERE FIRST, THIS PROJECT'S AFTER. Above the heading is everything a
+ * learner has in every project whatever they have imported: the definition
+ * roots, the loop, the list, the arithmetic — and `Space` and `Appearance`,
+ * which are rule categories by construction and always-available ones by
+ * nature. A position is not something a rule can invent (`builtinMeta`), so
+ * they are no more optional than `Math` is. Below the heading is what THIS
+ * project imported, which is a different list per project and grows as one is
+ * built.
+ *
+ * Interleaving them, as this did, meant the general blocks moved down the
+ * strip every time a rule was imported: `Math` sat somewhere different in each
+ * of two lessons, and somewhere different again after a learner added a
+ * mechanic. A menu you have to re-find is a menu you stop reading.
+ *
+ * The heading is a toolbox item rather than a separator, so the break says
+ * what it is dividing (`blockly/toolboxStyle`).
+ */
+const RULES_HEADING = toolboxHeading('Rules') as unknown as ToolboxCategory;
+
+/** Everything above the heading: the same rows, in the same order, always. */
+const FIXED_CATEGORIES: ToolboxCategory[] = [
   ...TOOLBOX_HEAD,
   ...BUILTIN_RULE_CATEGORIES,
   ...TOOLBOX_TAIL,
 ];
+
+// NO HEADING WITH NOTHING UNDER IT. A project holding no rules of its own has
+// no second half, and a heading over an empty one is a label for a list that
+// is not there.
+const DOMAIN_CATEGORIES: ToolboxCategory[] = FIXED_CATEGORIES;
 
 export const DOMAIN_TOOLBOX: Toolbox = DOMAIN_CATEGORIES;
 
@@ -9391,8 +9432,9 @@ export function buildDomainPalette(
   const toolbox: ToolboxCategory[] = withOwnProperties([
     ...structural,
     ...BUILTIN_RULE_CATEGORIES,
-    ...palette.categories,
     ...TOOLBOX_TAIL,
+    RULES_HEADING,
+    ...palette.categories,
   ]);
   return {
     blocks: [...shaped, ...palette.blocks, ...ownBlocks],

@@ -1170,7 +1170,7 @@ describe('domain block generators', () => {
     const toolboxTypes = (
       DOMAIN_TOOLBOX as Array<{blocks: Array<string | {type?: string}>}>
     )
-      .flatMap(c => c.blocks)
+      .flatMap(c => c.blocks ?? [])
       // A spelled-out flyout item names its type in a field, not as the entry.
       .map(item => (typeof item === 'string' ? item : (item.type ?? '')));
     for (const t of ['controls_if', 'logic_compare', 'math_number', 'text']) {
@@ -1363,7 +1363,7 @@ describe('domain block generators', () => {
     const toolboxTypes = (
       DOMAIN_TOOLBOX as Array<{blocks: Array<string | {type?: string}>}>
     )
-      .flatMap(c => c.blocks)
+      .flatMap(c => c.blocks ?? [])
       // A spelled-out flyout item names its type in a field, not as the entry.
       .map(item => (typeof item === 'string' ? item : (item.type ?? '')));
     for (const t of toolboxTypes.filter(t => t.startsWith('world_'))) {
@@ -1472,7 +1472,7 @@ describe('domain block generators', () => {
     void category;
     expect(
       (DOMAIN_TOOLBOX as Array<{blocks: Array<string | {type?: string}>}>)
-        .flatMap(c => c.blocks)
+        .flatMap(c => c.blocks ?? [])
         // An entry may be a whole flyout item rather than a bare type — the
         // random block spells out the shadows in its sockets — so read the
         // type off either shape.

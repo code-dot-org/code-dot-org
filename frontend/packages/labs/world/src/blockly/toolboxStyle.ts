@@ -43,6 +43,15 @@
 //
 // Hover is not marked either: an unselected row carries no background of its
 // own, so an ordinary rule already wins.
+//
+// AND ONE THING HERE IS NOT CSS: the heading that divides the fixed categories
+// from the rules. Blockly's toolbox has categories and separators and nothing
+// else — a `label` is a FLYOUT item, and there is no toolbox-level equivalent
+// — so a heading has to be a toolbox item of its own, registered under
+// `registry.Type.TOOLBOX_ITEM`. That is a documented extension point and the
+// class is small; the alternative was a separator wearing a word through a
+// `::before`, which puts a piece of the interface's text in a stylesheet where
+// nothing can translate it.
 
 import {Blockly} from '@code-dot-org/blockly';
 import {PluginType, type Plugin} from '@code-dot-org/blockly/plugins';
@@ -146,7 +155,104 @@ const TOOLBOX_CSS = `
 .blocklyToolbox .blocklyToolboxCategoryIcon:empty {
   display: none !important;
 }
+
+/* The heading over the rules. Quieter than a category and not clickable:
+ * smaller, upper-case, in the secondary text colour, with a rule above it
+ * standing in for the space a group break would otherwise need. */
+.worldToolboxHeading {
+  padding: 14px 10px 4px;
+  margin-top: 6px;
+  border-top: 1px solid var(--borders-neutral-secondary, #ccc);
+  font-family: var(--font-family-main, inherit);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-neutral-secondary, #676767);
+  user-select: none;
+  /* NOT INTERACTIVE, and this line is what makes that true rather than
+   * intended. The toolbox is a focusable tree: a click anywhere inside it that
+   * is not handled focuses the tree, and the tree falls through to its first
+   * focusable node — so clicking the word "Rules" selected Actor and opened
+   * its drawer. Refusing pointer events lets the click land on the strip
+   * behind, which does nothing, which is what a heading should do. */
+  pointer-events: none;
+}
+
+/* …and nothing above the first one, which happens when everything before it
+ * has been filtered out (see toolboxFilter). A rule with nothing over it
+ * reads as a stray line. */
+.blocklyToolboxCategoryGroup > .worldToolboxHeading:first-child {
+  border-top: none;
+  margin-top: 0;
+}
 `;
+
+/** The `kind` a heading row declares, and what the item is registered as. */
+export const TOOLBOX_HEADING = 'world_heading';
+
+/** One heading, as the toolbox array carries it. */
+export const toolboxHeading = (text: string) => ({
+  kind: TOOLBOX_HEADING,
+  name: text,
+});
+
+/**
+ * A row of words in the toolbox that is not a category.
+ *
+ * EXTENDS `ToolboxItem`, which is Blockly's base for an item that is NOT
+ * selectable — `ToolboxSeparator` is the other one, and this is that class with
+ * words in it. The first attempt implemented `IToolboxItem` by hand and left
+ * out `getClickTarget`, which the toolbox calls on every item it builds: the
+ * whole workspace failed to render with `getClickTarget is not a function`, and
+ * nothing in the type check said so.
+ *
+ * `canBeFocused` is false for the same reason the separator's is. A heading is
+ * not a stop on the way through the list, and a focus ring on one is a promise
+ * that pressing Enter will do something.
+ */
+class ToolboxHeading extends Blockly.ToolboxItem {
+  private element: HTMLDivElement | null = null;
+
+  override init(): void {
+    const element = document.createElement('div');
+    element.className = 'worldToolboxHeading';
+    element.textContent =
+      (this.toolboxItemDef_ as {name?: string} | null)?.name ?? '';
+    // Announced as decoration rather than as one more item in the tree. The
+    // group is `role=tree`, and a div inside one with no role at all is a node
+    // a screen reader has to name and cannot.
+    element.setAttribute('role', 'presentation');
+    this.element = element;
+  }
+
+  override getDiv(): HTMLDivElement | null {
+    return this.element;
+  }
+
+  /** Nothing to click. The toolbox asks every item, and null is a real answer. */
+  override getClickTarget(): Element | null {
+    return null;
+  }
+
+  override isSelectable(): boolean {
+    return false;
+  }
+
+  override isCollapsible(): boolean {
+    return false;
+  }
+
+  /** Not a stop on the way through the list. */
+  canBeFocused(): boolean {
+    return false;
+  }
+
+  override dispose(): void {
+    this.element?.remove();
+    this.element = null;
+  }
+}
 
 /**
  * Draw the toolbox with the design system's tokens.
@@ -162,5 +268,14 @@ export const DesignSystemToolboxPlugin: Plugin = {
     }
     registered = true;
     Blockly.Css.register(TOOLBOX_CSS);
+    // `true` to overwrite: a second lab electing this plugin in the same page
+    // would otherwise throw on the duplicate name, and the class is the same
+    // class.
+    Blockly.registry.register(
+      Blockly.registry.Type.TOOLBOX_ITEM,
+      TOOLBOX_HEADING,
+      ToolboxHeading,
+      true,
+    );
   },
 };

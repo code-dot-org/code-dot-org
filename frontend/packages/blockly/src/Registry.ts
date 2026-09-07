@@ -22,7 +22,7 @@ import type {
 } from './plugins';
 import ThrasosRenderer from './renderers/thrasos';
 import DefaultTheme from './themes/default';
-import type {Toolbox} from './toolbox';
+import type {Toolbox, ToolboxCategory} from './toolbox';
 import type {
   Environment,
   BlockSvg,
@@ -205,7 +205,13 @@ class Registry<T extends Environment = Environment> {
     // Only dynamic categories exist in Category list toolboxes
     // That is, ones that are defined as an array
     if (Array.isArray(toolbox)) {
-      toolbox.forEach(({blocks, onLoad, key}) => {
+      toolbox.forEach(item => {
+        // A row that says what it is — a separator, or any other registered
+        // toolbox item — is not a category and cannot be a dynamic one.
+        if (typeof (item as {kind?: string}).kind === 'string') {
+          return;
+        }
+        const {blocks, onLoad, key} = item as ToolboxCategory;
         if (onLoad && key) {
           const staticBlocks = (blocks || []).map(
             (type: string | Blockly.utils.toolbox.FlyoutItemInfo) => ({

@@ -100,28 +100,38 @@ export const buildToolbox: (
     // Categories (set of categories given)
     return {
       kind: 'categoryToolbox',
-      contents: toolbox.map(({name, cssconfig, blocks, onLoad, key}) => ({
-        kind: 'category',
-        name,
-        cssconfig,
-        ...(onLoad ? {custom: key} : {}),
-        contents:
-          blocks?.map(
-            (type: string | Blockly.utils.toolbox.FlyoutItemInfo) => ({
-              // `id: type` gives each palette block a stable, type-based
-              // `data-id`, which UI targeting (e.g. instruction callouts)
-              // relies on. Dragging into the workspace assigns a fresh id, so
-              // this only affects the palette copy.
-              ...(typeof type === 'string'
-                ? {
-                    kind: 'block',
-                    type,
-                    id: type,
-                  }
-                : type),
-            }),
-          ) || [],
-      })),
+      contents: toolbox.map(item => {
+        // An item that already says what it is IS that — a separator, or any
+        // other registered toolbox item. Only a category is assembled here,
+        // and forcing `kind: 'category'` on to the rest produced a category
+        // with no name and no contents, which draws as a blank row.
+        if (typeof (item as {kind?: string}).kind === 'string') {
+          return item as Blockly.utils.toolbox.ToolboxItemInfo;
+        }
+        const {name, cssconfig, blocks, onLoad, key} = item as ToolboxCategory;
+        return {
+          kind: 'category',
+          name,
+          cssconfig,
+          ...(onLoad ? {custom: key} : {}),
+          contents:
+            blocks?.map(
+              (type: string | Blockly.utils.toolbox.FlyoutItemInfo) => ({
+                // `id: type` gives each palette block a stable, type-based
+                // `data-id`, which UI targeting (e.g. instruction callouts)
+                // relies on. Dragging into the workspace assigns a fresh id, so
+                // this only affects the palette copy.
+                ...(typeof type === 'string'
+                  ? {
+                      kind: 'block',
+                      type,
+                      id: type,
+                    }
+                  : type),
+              }),
+            ) || [],
+        };
+      }),
     } as Blockly.utils.toolbox.ToolboxInfo;
   } else {
     // Flyout (just one category directly supplied)

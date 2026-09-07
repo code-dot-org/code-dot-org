@@ -38,6 +38,23 @@ export interface ToolboxStaticCategory extends ToolboxBaseCategory {
   onLoad?: never;
 }
 
+/**
+ * A row in the toolbox that is not a category — a separator, or anything else
+ * Blockly's toolbox-item registry knows how to draw.
+ *
+ * Passed through to Blockly untouched, `kind` and all, where a category is
+ * assembled from its parts. That is the distinction: a category is described
+ * here and built there, and this is already a Blockly item and only needs to
+ * be let through. Anything registered under `registry.Type.TOOLBOX_ITEM` is
+ * therefore usable without this file being taught about it.
+ */
+export interface ToolboxItem {
+  kind: string;
+  name?: never;
+  blocks?: never;
+  [key: string]: unknown;
+}
+
 export type ToolboxCategory = ToolboxDynamicCategory | ToolboxStaticCategory;
 
 export type ToolboxFlyout = ToolboxStaticCategory & {
@@ -47,8 +64,8 @@ export type ToolboxFlyout = ToolboxStaticCategory & {
 export type Toolbox =
   // Classic Blockly toolbox definition
   | Blockly.utils.toolbox.ToolboxInfo
-  // Our simplified categories
-  | ToolboxCategory[]
+  // Our simplified categories, and whatever else divides them
+  | (ToolboxCategory | ToolboxItem)[]
   // Flyout is just a single category
   | ToolboxFlyout;
 

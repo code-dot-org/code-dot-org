@@ -138,6 +138,12 @@ export function toolboxForSurface(toolbox: Toolbox, surface: Surface): Toolbox {
       };
     })
     .filter(category => {
+      // A row that is not a category — the heading over the rules
+      // (`blockly/toolboxStyle`) — has no blocks to count and is not an empty
+      // drawer. It divides whatever survives this.
+      if (typeof (category as {kind?: string}).kind === 'string') {
+        return true;
+      }
       // A category with nothing left is a heading onto an empty drawer. One
       // that fills itself when opened keeps its place: `blocks` is only the
       // fixed part of it, and what `onLoad` will offer is not knowable here.
