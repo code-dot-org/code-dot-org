@@ -20,7 +20,7 @@ import {
   flattenOntoGround,
   removeBackground,
 } from './removeBackground';
-import {ImageGenerationMetadata, ImageStyle} from './types';
+import {ImageGenerationMetadata, ImageStyle, ImageType} from './types';
 
 // The logical canvas the prompt asks for: model output size over block size.
 const PROMPT_LOGICAL_GRID = MODEL_OUTPUT_PX / ASSUMED_BLOCK;
@@ -109,6 +109,8 @@ export interface GeneratedImageResult {
   mediaType: string;
   /** Set when pixel-style output was normalized: physical px per art pixel. */
   pixelGridSize?: number;
+  /** The image is already cropped to content: load-time trimming skips it. */
+  trimmed?: boolean;
   /** How this image was made, to record on its animation. */
   generation: ImageGenerationMetadata;
   /**
@@ -197,6 +199,53 @@ export function bytesToDataURI(bytes: Uint8Array, mediaType: string): string {
   return `data:${mediaType};base64,${btoa(binary)}`;
 }
 
+// Stored ceilings for smooth-style images: the playspace never shows a
+// sprite above ~400 device px or a block above ~200 (400-logical canvas,
+// 2x density factor, 3x max zoom), so the model's 1K output is downscaled
+// once at save. Pixel style keeps its grid-normalized sizing; backgrounds
+// keep full resolution (zoom magnifies them).
+const STORED_MAX_PX: {[type in ImageType]?: number} = {
+  sprite: 512,
+  block: 256,
+};
+
+/**
+ * Downscale so the longest side fits maxPx; returns the input unchanged when
+ * it already does. High-quality filter: downscaling the model's 1K render is
+ * what anti-aliases the stored image.
+ */
+async function downscaleToFit(blob: Blob, maxPx: number): Promise<Blob> {
+  try {
+    const probe = await createImageBitmap(blob);
+    const scale = maxPx / Math.max(probe.width, probe.height);
+    if (scale >= 1) {
+      probe.close();
+      return blob;
+    }
+    const width = Math.max(1, Math.round(probe.width * scale));
+    const height = Math.max(1, Math.round(probe.height * scale));
+    probe.close();
+    const resized = await createImageBitmap(blob, {
+      resizeWidth: width,
+      resizeHeight: height,
+      resizeQuality: 'high',
+    });
+    const canvas = document.createElement('canvas');
+    canvas.width = width;
+    canvas.height = height;
+    canvas.getContext('2d')?.drawImage(resized, 0, 0);
+    resized.close();
+    const out = await new Promise<Blob | null>(resolve =>
+      canvas.toBlob(resolve, 'image/png')
+    );
+    return out || blob;
+  } catch {
+    // e.g. a browser without createImageBitmap resize options: store the
+    // full-size image, exactly the pre-downscale behavior.
+    return blob;
+  }
+}
+
 /**
  * Generate an image from a text prompt. Sprites and blocks get a flat key
  * color the model picks to contrast with the subject, flood-filled to
@@ -263,8 +312,13 @@ export async function generateImage(
   if (imageType === 'sprite' || imageType === 'block') {
     blob = await removeBackground(blob, {soft: style === 'smooth'});
   }
-  if (imageType === 'block') {
+  // Smooth sprites are cropped like blocks always were, so the stored image
+  // is what the runtime trim pass would have made anyway (pixel sprites
+  // keep their edge-aligned grid; cropping would shift it).
+  let trimmed = false;
+  if (imageType === 'block' || (imageType === 'sprite' && style !== 'pixel')) {
     blob = await cropToContent(blob);
+    trimmed = true;
   }
   if (imageType === 'background') {
     blob = await flattenOntoGround(blob);
@@ -276,12 +330,18 @@ export async function generateImage(
     });
     blob = normalized.blob;
     pixelGridSize = normalized.pixelGridSize;
+  } else {
+    const maxPx = STORED_MAX_PX[imageType];
+    if (maxPx) {
+      blob = await downscaleToFit(blob, maxPx);
+    }
   }
   return {
     filename: `generated-${createUuid()}.png`,
     uint8Array: new Uint8Array(await blob.arrayBuffer()),
     mediaType: 'image/png',
     pixelGridSize,
+    trimmed,
     generation,
   };
 }

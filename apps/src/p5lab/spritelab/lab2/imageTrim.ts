@@ -225,8 +225,12 @@ export async function trimAnimationListImages(
         return;
       }
       const isSheet = props.frameCount > 1 && !!props.frameSize;
+      // An image cropped at save time (props.trimmed) skips the pixel scan
+      // and re-encode; its stored dataURI is already what trimming makes.
       const trimmed = isSheet
         ? await firstFrameThumbnail(props.dataURI, props.frameSize)
+        : props.trimmed
+        ? props.dataURI
         : await trimTransparentBorder(props.dataURI);
       if (props.name && trimmedByName.get(props.name) !== trimmed) {
         trimmedByName.set(props.name, trimmed);
