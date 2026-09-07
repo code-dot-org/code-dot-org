@@ -237,33 +237,48 @@ describe('an actor that declares its own event', () => {
     });
   });
 
-  it('puts the hat and the emit in that actor’s drawer', async () => {
-    // Both, where a rule's `emit` is offered only while writing that rule. A
-    // kind of actor raises its own events from its own file and nothing else
-    // would do it instead, so withholding the raiser leaves a declaration
-    // nobody can use.
-    const metas = projectOwnMetas({
-      'actors/beacon.actor': project['actors/beacon.actor'],
-    });
+  /** The Beacon's drawer, as the palette of some file builds it. */
+  const beaconDrawer = (editing?: string) => {
     const {toolbox, rootTypes} = buildDomainPalette([], {
-      fileKind: 'actor',
-      ownProperties: metas,
+      fileKind: editing ? 'actor' : 'world',
+      ownProperties: projectOwnMetas({
+        'actors/beacon.actor': project['actors/beacon.actor'],
+      }),
+      ownActorModule: editing,
     });
-    const drawer = (toolbox as Array<{name?: string; blocks?: string[]}>).find(
-      category => category.name === 'Beacon',
-    )?.blocks;
+    const categories = toolbox as Array<{name?: string; blocks?: string[]}>;
+    return {
+      categories,
+      rootTypes,
+      blocks: categories.find(category => category.name === 'Beacon')?.blocks,
+    };
+  };
 
-    expect(drawer).toContain('world_on_ActorsBeacon_FlashesEvent');
-    expect(drawer).toContain('world_emit_ActorsBeacon_FlashesEvent');
+  it('puts the hat and the emit in its own file\u2019s drawer', () => {
+    const {blocks, rootTypes, categories} = beaconDrawer('actors/beacon');
+
+    expect(blocks).toContain('world_on_ActorsBeacon_FlashesEvent');
+    expect(blocks).toContain('world_emit_ActorsBeacon_FlashesEvent');
     // …and `define event` itself is offered in an `.actor`, which is what
     // makes any of the above reachable — a declaration nobody can drag in
     // declares nothing (`ROOT_HOMES`).
-    const actorDrawer = (
-      toolbox as Array<{name?: string; blocks?: string[]}>
-    ).find(category => category.name === 'Actor')?.blocks;
-    expect(actorDrawer).toContain('world_rule_event');
+    expect(
+      categories.find(category => category.name === 'Actor')?.blocks,
+    ).toContain('world_rule_event');
     // …and the hat is a ROOT, so the generator does not chain the block after
     // it into the handler's body.
     expect(rootTypes.has('world_on_ActorsBeacon_FlashesEvent')).toBe(true);
+  });
+
+  it('offers only the hat everywhere else', () => {
+    // The drawer is in every file's toolbox, because an event exists to be
+    // HEARD somewhere else — a world that wants to know the beacon flashed is
+    // the whole point of declaring one. Raising it is the opposite: only the
+    // kind that declared the event knows when it happened, so an `emit` in a
+    // world would be that world forging the actor's own notifications.
+    const {blocks} = beaconDrawer(undefined);
+
+    expect(blocks).toContain('world_on_ActorsBeacon_FlashesEvent');
+    expect(blocks).not.toContain('world_emit_ActorsBeacon_FlashesEvent');
   });
 });

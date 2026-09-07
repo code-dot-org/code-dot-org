@@ -9422,6 +9422,15 @@ export function buildDomainPalette(
      * definition for type: world_get_…" and the whole project stops compiling.
      */
     ownProperties?: readonly OwnMeta[];
+    /**
+     * The `.actor` module being edited, when one is — `actors/beacon`.
+     *
+     * Only one thing asks: whether to LIST an actor's `emit` blocks. Every
+     * actor's drawer is offered in every file, because an event declared in an
+     * `.actor` exists to be heard somewhere else; raising one is the opposite,
+     * and belongs to the file that declared it. See the loop below.
+     */
+    ownActorModule?: string;
   } = {},
 ): {
   blocks: DomainBlock[];
@@ -9507,12 +9516,19 @@ export function buildDomainPalette(
     // …and the things that HAPPEN to it: the hat that hears one and the block
     // that raises it, from the same two factories a rule's events go through.
     //
-    // BOTH ARE OFFERED, where a rule's `emit` is offered only while writing
-    // that rule. The reason a rule's is narrow does not apply: a rule's event
-    // is raised by the mechanic that owns it and handled by everyone else, so
-    // an `emit` in a world is somebody forging the rule's own notifications.
-    // A kind of actor is not a mechanic — it raises its own events from its
-    // own file, and there is no other file that would do it instead.
+    // THE HAT EVERYWHERE, THE `emit` ONLY AT HOME, which is the same division
+    // a rule's events already make and for the same reason. An event exists to
+    // be HEARD somewhere else — a world that wants to know the speech box has
+    // finished is the whole point of declaring one — so the hat belongs in
+    // every file's copy of this drawer. Raising it is the opposite: the kind
+    // that declared the event is the only thing that knows when it happened,
+    // and an `emit` in somebody else's file is that file forging the actor's
+    // own notifications.
+    //
+    // Defined either way, listed or not: a file that already holds one still
+    // has to load and generate, and a block type nothing defines fails the
+    // whole project rather than the one block (`standInBlocks`).
+    const home = actor.modulePath === options.ownActorModule;
     for (const event of actor.events) {
       const hat = defineEventBlock(event);
       ownBlocks.push(hat);
@@ -9520,7 +9536,9 @@ export function buildDomainPalette(
       ownEventTypes.push(hat.type);
       const emit = defineEmitBlock(event);
       ownBlocks.push(emit);
-      types.push(emit.type);
+      if (home) {
+        types.push(emit.type);
+      }
     }
     // …and the state it keeps, as the pair every property gets.
     for (const property of actor.properties) {

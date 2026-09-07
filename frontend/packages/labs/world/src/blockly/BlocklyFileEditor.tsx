@@ -618,6 +618,10 @@ export const BlocklyFileEditor = ({
       ownRuleModule,
       fileKind,
       ownProperties: ownActorProperties,
+      // …and which of those actors is the one being edited, which decides
+      // whose `emit` blocks are listed: an actor's events are heard anywhere
+      // and raised only at home (`domainBlocks`).
+      ownActorModule,
     });
     // …and a definition for every block type the project's files hold that
     // this palette does not mint. That is what a deleted rule leaves behind,
@@ -649,6 +653,7 @@ export const BlocklyFileEditor = ({
     files,
     ownContents,
     ownRuleModule,
+    ownActorModule,
     fileKind,
     hiddenCategories,
     ownActorProperties,
