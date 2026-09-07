@@ -50,6 +50,7 @@
   h3 {
     padding: 5px;
     font-size: 18px;
+
     @include main-font-bold;
     color: $white;
     background: $cyan;
