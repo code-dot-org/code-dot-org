@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React, {useState} from 'react';
 
-import {useTwoPanelLayout} from '@cdo/apps/lab2/hooks/useTwoPanelLayout';
+import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import {getAppOptionsIsBuildingQuizQuestions} from '@cdo/apps/lab2/projects/utils';
 import {LabProps} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
@@ -29,22 +29,32 @@ const QuizView: React.FunctionComponent<LabProps> = props => {
     : attemptView;
 
   const [hasResourcePanelTabs, setHasResourcePanelTabs] = useState(false);
-  const isStandaloneCollapsed = useAppSelector(
+  const isResourcePanelCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
   );
   const isResourcePanelExpanded =
-    hasResourcePanelTabs && !isStandaloneCollapsed;
+    hasResourcePanelTabs && !isResourcePanelCollapsed;
 
-  const {containerRef, sidebarWidth, sidebarSeparatorProps, isSidebarResizing} =
-    useTwoPanelLayout({
-      sidebarMinWidth: RESOURCE_PANEL_MIN_WIDTH,
-      contentMinWidth: CONTENT_MIN_WIDTH,
-      isSidebarExpanded: isResourcePanelExpanded,
-      appName: 'quiz',
-    });
+  const {
+    leftPanelWidth: sidebarWidth,
+    leftPanelSeparatorProps: sidebarSeparatorProps,
+    leftPanelDragging: isSidebarResizing,
+  } = useVerticalLayout({
+    leftPanel: {
+      minWidth: RESOURCE_PANEL_MIN_WIDTH,
+      initialWidth: RESOURCE_PANEL_MIN_WIDTH,
+      name: 'resourcePanel',
+    },
+    rightPanel: {
+      minWidth: CONTENT_MIN_WIDTH,
+      initialWidth: CONTENT_MIN_WIDTH,
+      name: 'content',
+    },
+    appName: 'quiz',
+  });
 
   return (
-    <div className={styles.quiz} ref={containerRef}>
+    <div className={styles.quiz}>
       <div
         className={classNames(
           styles.resourcePanel,
