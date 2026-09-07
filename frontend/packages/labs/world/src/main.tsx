@@ -11,6 +11,14 @@ import '@code-dot-org/fonts/brands/code.org/index.css';
 import '@code-dot-org/component-library-styles/fontVariables.css';
 import '@code-dot-org/component-library-styles/primitiveColors.css';
 import '@code-dot-org/component-library-styles/colors.css';
+// …and the brand's own tokens over the top of them. "Import once, immediately
+// after colors.css" is that file's own instruction, and the layering is the
+// whole of why: `colors.css` declares the legacy tokens at `:root`, and this
+// re-declares them under `[data-brand=…]`, which wins by specificity for the
+// brand actually on the page. Without it every `var(--…)` falls through to the
+// legacy value and the harness renders in the old palette whatever `data-brand`
+// says (`component-library-styles/brandOverrides.css`).
+import '@code-dot-org/component-library-styles/brandOverrides.css';
 
 // Lab CSS variables (borders, z-indices) used by base components like PanelContainer.
 import '@code-dot-org/lab/styles/variables.scss';
@@ -18,7 +26,7 @@ import '@code-dot-org/lab/styles/variables.scss';
 import {GlobalStyles, StyledEngineProvider, ThemeProvider} from '@mui/material';
 import {createRoot} from 'react-dom/client';
 
-import {CdoTheme} from '@code-dot-org/component-library/themes';
+import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 import {initializeCore} from '@code-dot-org/core';
 import {
   ApiClientProvider,
@@ -173,6 +181,34 @@ const channelId = isFixtureTag(scenarioFromQuery)
   : isFixtureTag(scenarioFromPath ?? null)
     ? (scenarioFromPath as string)
     : DEFAULT_SCENARIO_TAG;
+
+/**
+ * Which brand's tokens the page wears.
+ *
+ * IN STUDIO THIS COMES FROM RAILS, which puts `data-brand` on `<html>` from
+ * `Cdo::Brand` (`dashboard/app/views/layouts/application.html.haml`). Nothing
+ * does that here — this harness is a Vite page with no Rails behind it — so it
+ * says so itself, defaulting to what production defaults to. Without the
+ * attribute the brand's token rules match nothing and every colour falls
+ * through to the legacy `:root` values, which is the old theme wearing the new
+ * name.
+ *
+ * `?brand=` overrides it, which is how the two are compared side by side:
+ * `?brand=codeai-audit` paints every DSCO token pink, so a surface that bypassed
+ * the token system stands out (`lib/cdo/brand.rb`). Anything unrecognised falls
+ * back to the legacy palette, the same as `getMuiThemeForBrand` does.
+ *
+ * ON `<html>`, because the token rules are descendant selectors —
+ * `[data-brand='codeai-next'] [data-theme='Dark']` — and the `data-theme` div
+ * they need to contain is the one the component library renders inside `#root`
+ * (`ThemeContext`). Put on any element below that div and it matches nothing.
+ *
+ * The same value goes to MUI, whose palette is a second copy of the brand that
+ * has to agree (`getMuiThemeForBrand`).
+ */
+const brand =
+  new URLSearchParams(window.location.search).get('brand') ?? 'codeai-next';
+document.documentElement.dataset.brand = brand;
 
 // Where a lesson opens, in this host. The default is the studio's project route
 // (`progression/lessonRoute`); the demo has no router and answers the query
@@ -354,7 +390,7 @@ if (rootElement && showTree) {
   // error). The lab's own tests still run under React's strict behavior.
   createRoot(rootElement).render(
     <StyledEngineProvider injectFirst>
-      <ThemeProvider theme={CdoTheme}>
+      <ThemeProvider theme={getMuiThemeForBrand(brand)}>
         {fullHeight}
         <RootStateProvider>
           <QueryClientProvider>
