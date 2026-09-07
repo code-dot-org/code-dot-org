@@ -259,6 +259,29 @@ export class ActorBuilder {
     return this.drawing;
   }
 
+  /**
+   * Declare an event this KIND of actor raises — `define event`.
+   *
+   * The fourth of the bargain `defineProperty`, `defineStep` and `defineAction`
+   * make: state a kind carries, work it does every frame, a named thing it
+   * does, and now something that HAPPENS to it. A rule is still the answer when
+   * the event is shared between kinds or elected; this is for the case where
+   * one kind of actor has a moment worth telling the rest of the project about
+   * — a speech box finishing, a door reaching the top of its travel.
+   *
+   * NOTHING IS REGISTERED, as with `defineAction`, and for the same reason: an
+   * event is an identity and no more. `World.emit` enqueues against the object
+   * and `Actor.on` matches against it, so nothing has to have been told the
+   * event exists — which is what lets a world handle an event declared in an
+   * `.actor` file it merely imports.
+   *
+   * `ownerId` is this kind, which is what an event says about where it came
+   * from when something has to name it.
+   */
+  defineEvent(id: string, opts: {name?: string} = {}): GameEvent {
+    return {id, name: opts.name, ownerId: this.id};
+  }
+
   /** Respond to an event raised for this actor. */
   on(event: GameEvent, handler: EventHandler): this {
     this.handlers.push([event, handler]);

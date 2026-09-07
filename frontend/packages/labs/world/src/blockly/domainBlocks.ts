@@ -6654,10 +6654,42 @@ const worldRuleEvent = defineBlock({
   // makes, which the preview row below draws.
   style: 'setup_blocks',
   tooltip:
-    'Define an event a rule can raise. The row below is the "when …" block it ' +
+    'Define an event a rule can raise, or — in an actor file — something that ' +
+    'happens to that kind of actor. The row below is the "when …" block it ' +
     'makes; the pencil opens what it is made of. A choice in it is what a ' +
     'handler filters on.',
-  generator: noGenerator,
+  generator: {
+    javascript(block) {
+      // WHERE IT SITS DECIDES WHO WRITES IT, the same bargain `define block`
+      // beside it makes (`worldRuleBlock`). In a `.rule` the module is
+      // assembled from the file's metadata, so writing anything here would
+      // declare the event twice; in an `.actor` file there is no metadata pass
+      // and this is the whole declaration.
+      if (!definesActorFile(block)) {
+        return '';
+      }
+      const parts = (
+        block as unknown as {
+          saveExtraState?: () => {
+            parts?: Array<{kind?: string; text?: string; var?: string}>;
+          };
+        }
+      ).saveExtraState?.()?.parts;
+      const name = designedName(parts);
+      if (!name) {
+        return ''; // an event with no words on it names nothing
+      }
+      // NO PARAMETERS IN THE CALL. What an event carries is a fact about the
+      // `emit` that raises it and the hat that hears it, both of which read
+      // the designed parts from the palette (`ownProperties.designedEvent`);
+      // the engine's event is an identity and a name and nothing else
+      // (`ActorBuilder.defineEvent`).
+      return (
+        `export const ${pascal(name)}Event = actor.defineEvent(` +
+        `${str(slug(name))}, {name: ${str(name)}});\n`
+      );
+    },
+  },
 });
 
 /**
@@ -8652,6 +8684,12 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // The same block a rule designs its own with — where it sits decides
       // whose it is (`ActorBuilder.defineAction`).
       'world_rule_block',
+      // …and the fourth: something that HAPPENS to this kind, which is how it
+      // tells the rest of the project about a moment without a rule in
+      // between. It raises the event with `emit` and anything may hear it with
+      // the hat — the same block a rule declares its events with
+      // (`ActorBuilder.defineEvent`).
+      'world_rule_event',
       // …and the fourth: what this kind LOOKS like. A declaration like the
       // three above it and reached the same way — the pencil opens the pen and
       // the shapes on a surface of its own, which is why the Drawing drawer is
@@ -9454,6 +9492,8 @@ export function buildDomainPalette(
    * nothing at all.
    */
   const actorCategories: ToolboxCategory[] = [];
+  /** Hats of the actors' own events — roots, exactly as a rule's hats are. */
+  const ownEventTypes: string[] = [];
   for (const actor of options.ownProperties ?? []) {
     const types: string[] = [];
     // …the things this kind DOES, by name. The same call site a rule's action
@@ -9463,6 +9503,24 @@ export function buildDomainPalette(
       const block = defineActionBlock(action);
       ownBlocks.push(block);
       types.push(block.type);
+    }
+    // …and the things that HAPPEN to it: the hat that hears one and the block
+    // that raises it, from the same two factories a rule's events go through.
+    //
+    // BOTH ARE OFFERED, where a rule's `emit` is offered only while writing
+    // that rule. The reason a rule's is narrow does not apply: a rule's event
+    // is raised by the mechanic that owns it and handled by everyone else, so
+    // an `emit` in a world is somebody forging the rule's own notifications.
+    // A kind of actor is not a mechanic — it raises its own events from its
+    // own file, and there is no other file that would do it instead.
+    for (const event of actor.events) {
+      const hat = defineEventBlock(event);
+      ownBlocks.push(hat);
+      types.push(hat.type);
+      ownEventTypes.push(hat.type);
+      const emit = defineEmitBlock(event);
+      ownBlocks.push(emit);
+      types.push(emit.type);
     }
     // …and the state it keeps, as the pair every property gets.
     for (const property of actor.properties) {
@@ -9508,7 +9566,13 @@ export function buildDomainPalette(
       // than a fresh copy per rebuild.
       blocks: ownBlocks.length === 0 ? shaped : [...shaped, ...ownBlocks],
       toolbox: editingRule ? withEngine(shown) : shown,
-      rootTypes: ROOT_BLOCK_TYPES,
+      // The actors' own hats are roots like any other event's — a hat is
+      // top-level wherever it was declared, and the generator has to know not
+      // to chain the block after it into the handler.
+      rootTypes:
+        ownEventTypes.length === 0
+          ? ROOT_BLOCK_TYPES
+          : new Set([...ROOT_BLOCK_TYPES, ...ownEventTypes]),
       // The built-in rules declare no events, so there are none to order.
       worldEventTypes: new Set<string>(),
     };
@@ -9535,7 +9599,11 @@ export function buildDomainPalette(
   return {
     blocks: [...shaped, ...palette.blocks, ...ownBlocks],
     toolbox: editingRule ? withEngine(toolbox) : toolbox,
-    rootTypes: new Set([...ROOT_BLOCK_TYPES, ...palette.eventTypes]),
+    rootTypes: new Set([
+      ...ROOT_BLOCK_TYPES,
+      ...palette.eventTypes,
+      ...ownEventTypes,
+    ]),
     worldEventTypes: new Set(palette.worldEventTypes),
   };
 }
