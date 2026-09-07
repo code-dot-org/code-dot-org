@@ -195,9 +195,10 @@ import {
   refFromValue,
   refModule,
   registerMemberBlockType,
+  memberLocalName,
+  pathSlug,
   refResolves,
   ruleLocation,
-  ruleSlug,
 } from './ruleRegistry';
 import {measuredImages, parseSpriteRef, spriteCell} from './spriteCells';
 import {TOOLBOX_HEADING, toolboxHeading} from './toolboxStyle';
@@ -328,29 +329,20 @@ const refCode = (ref: MemberRef, generator?: JavascriptGenerator): string => {
     // origin — `ActorsFoo_GoAction` — which is what a learner opening the
     // generated code should see anyway.
     //
-    // AN OWN MEMBER ONLY, and that is a scope rather than a principle. A
-    // rule's module is written by TWO hands — the declarations in `ruleMeta`
-    // and the bodies here — which key their imports identically and dedupe
-    // against each other (`alreadyImported`). Aliasing on one side only makes
-    // them disagree about the local name while still deduping, and the loser's
-    // references are undefined. An actor's own members have one emitter and no
-    // such pair.
-    //
-    // SO THE RULE CASE IS STILL LATENT: thirteen pairs of the stock rules share
-    // an export name — `Scoring` and `Goals` both have a `won`, `Input` and
-    // `Mouse` both have `is pressed` — and one file reading both of a pair
-    // would hit the same error. Fixing it means teaching both hands the same
-    // local name, which is a change to `ruleMeta` and not to this line.
-    const local = memberKey(ref);
+    // EVERY named import, not only an actor's own. A rule's module is written
+    // by two hands — the declarations in `ruleMeta` and the bodies here —
+    // which key their imports identically and dedupe against each other
+    // (`alreadyImported`), so both have to spell the local name the same way
+    // or whichever import loses the dedupe leaves the other's references
+    // undefined. `memberLocalName` is where they agree.
+    const local = memberLocalName(ref);
     if (generator && owning !== selfModule) {
       addImport(
         generator,
         `named:${modulePath}:${ref.exportName}`,
-        ref.own
-          ? `import {${ref.exportName} as ${local}} from ${str(modulePath)};`
-          : `import {${ref.exportName}} from ${str(modulePath)};`,
+        `import {${ref.exportName} as ${local}} from ${str(modulePath)};`,
       );
-      return ref.own ? local : ref.exportName;
+      return local;
     }
     return ref.exportName;
   }
@@ -441,12 +433,7 @@ const deadValue = (
 // This is the treatment layers and a world's own actors already get, for the
 // reason `layers.ts` states in one line: a name is a label, and renaming it
 // should break nothing.
-const memberKey = (ref: MemberRef): string =>
-  ref.own && ref.modulePath
-    ? `${pathSlug(ref.modulePath)}_${ref.exportName}`
-    : ref.ruleName
-      ? `${ruleSlug(ref.ruleName)}_${ref.exportName}`
-      : ref.exportName;
+const memberKey = memberLocalName;
 
 /**
  * A module path as a block-type segment: `actors/player` → `ActorsPlayer`.
@@ -526,12 +513,7 @@ const ownDeclarationsIn = (
  * minted for that actor's own properties and blocks carries it
  * (`files/renameThing`).
  */
-export const pathSlug = (modulePath: string): string =>
-  modulePath
-    .split(/[^A-Za-z0-9]+/)
-    .filter(Boolean)
-    .map(part => part[0].toUpperCase() + part.slice(1))
-    .join('');
+export {pathSlug};
 
 // The keyboard's keys, from the enum that declares them (`Engine#Key`). Both
 // key dropdowns read it rather than carrying a list: the World owns the

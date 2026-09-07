@@ -180,7 +180,7 @@ describe('an event with a designed phrasing', () => {
     // per actor per frame purely to have a subject to raise them for.
     const code = codeFor(hatFor(ruleWithEvent(PRESSED, KEY_VAR)), '');
 
-    expect(code).toContain('world.on(IsPressedEvent, (world, eventValue)');
+    expect(code).toContain('world.on(Keys_IsPressedEvent, (world, eventValue)');
     expect(code).not.toContain('actor');
   });
 });
@@ -220,7 +220,7 @@ describe('raising an event that carries a choice', () => {
     ) as string;
 
     // Once, however many actors are in the world.
-    expect(code).toBe('world.emitToWorld(IsPressedEvent, key);\n');
+    expect(code).toBe('world.emitToWorld(Keys_IsPressedEvent, key);\n');
   });
 });
 

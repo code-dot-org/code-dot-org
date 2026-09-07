@@ -564,11 +564,75 @@ describe('rule + trait dependencies (use rule / use trait)', () => {
       `import {RuleBuilder, SpatialRule, PositionalTrait} from 'world-lab';`,
     );
     expect(code).toContain(`import Motion from "rules/motion";`); // rule (default)
-    expect(code).toContain(`import {SomeTrait} from "rules/other";`); // trait (named)
-    expect(code).toContain('rule.requires([SpatialRule, Motion]);');
+    // Named UNDER THE RULE THAT DECLARED IT, because two rules may each export
+    // a `SomeTrait` and two bare imports of one name is a SyntaxError, not a
+    // shadowing (`ruleRegistry.memberLocalName`). The declarations and the
+    // bodies both spell it this way or neither can find it.
     expect(code).toContain(
-      'WindblownTrait.requires([PositionalTrait, SomeTrait]);',
+      `import {SomeTrait as Other_SomeTrait} from "rules/other";`,
     );
+    expect(code).toContain('rule.requires([SpatialRule, Motion]);');
+    // …and spelled the same way where it is used. A local name in the import
+    // that the body does not use is an import of nothing, and the reference is
+    // then unresolved.
+    expect(code).toContain(
+      'WindblownTrait.requires([PositionalTrait, Other_SomeTrait]);',
+    );
+  });
+
+  it('keeps two rules\u2019 same-named traits apart in one module', () => {
+    // TWO RULES MAY SPELL A TRAIT THE SAME WAY. Nothing stops a project from
+    // holding an `Other` and an `Another` that each declare a `Some`, and a
+    // rule is free to require both. Imported bare, that module opens with
+    //
+    //   import {SomeTrait} from "rules/other";
+    //   import {SomeTrait} from "rules/another";
+    //
+    // which is not a shadowing but a SyntaxError — the whole file fails to
+    // load, and what the learner sees is a rule that stopped working after
+    // adding a `use trait` somewhere else. So every named member is imported
+    // under the rule that declared it (`ruleRegistry.memberLocalName`).
+    const another = parseRuleMeta(
+      'rules/another',
+      ruleFile('Another', trait('Some')),
+    )!;
+    registerProjectRules([other, motion, another]);
+    const both = parseRuleMeta(
+      'rules/both',
+      ruleFile(
+        'Both',
+        trait(
+          'Mixed',
+          useTrait('Other#SomeTrait'),
+          useTrait('Another#SomeTrait'),
+        ),
+      ),
+    )!;
+    const code = ruleMetaToModule(both);
+
+    expect(code).toContain(
+      `import {SomeTrait as Other_SomeTrait} from "rules/other";`,
+    );
+    expect(code).toContain(
+      `import {SomeTrait as Another_SomeTrait} from "rules/another";`,
+    );
+    expect(code).toContain(
+      'MixedTrait.requires([Other_SomeTrait, Another_SomeTrait]);',
+    );
+    // …and said generally, because the pair above is one instance of the rule:
+    // no two imports in the module may bind the same name.
+    const bound = [...code.matchAll(/import \{([^}]*)\}/g)].flatMap(match =>
+      match[1].split(',').map(
+        one =>
+          one
+            .trim()
+            .split(/\s+as\s+/)
+            .pop()!,
+      ),
+    );
+    expect(new Set(bound).size).toBe(bound.length);
+
+    registerProjectRules([other, motion]); // leave the shelf as it was found
   });
 
   it('follows a rule that has moved, without touching what refers to it', () => {

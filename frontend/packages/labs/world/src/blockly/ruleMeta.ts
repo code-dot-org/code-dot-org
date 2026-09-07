@@ -22,6 +22,7 @@ import type {
 
 import type {ParamType, EnumMeta} from './enums';
 import {
+  memberLocalName,
   refFromValue,
   refModule,
   ruleByName,
@@ -1235,10 +1236,16 @@ export function ruleMetaToModule(
     }
     const modulePath = refModule(ref);
     if (modulePath) {
+      // UNDER THE NAME THE BODIES USE. Both hands key this import identically
+      // and dedupe against each other, so they have to agree about what it is
+      // called — and an export name alone does not: two rules may each declare
+      // a `won` (`memberLocalName`).
+      const local = memberLocalName(ref);
       addProjectImport(
         `named:${modulePath}:${ref.exportName}`,
-        `import {${ref.exportName}} from ${q(modulePath)};`,
+        `import {${ref.exportName} as ${local}} from ${q(modulePath)};`,
       );
+      return local;
     } else if (ref.source === 'builtin') {
       addWorldLab(ref.exportName);
     }

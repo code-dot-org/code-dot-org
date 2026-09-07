@@ -228,3 +228,48 @@ export function missingRuleOfBlockType(blockType: string): string | undefined {
 export function ruleSlug(name: string): string {
   return name.replace(/[^A-Za-z0-9]/g, '');
 }
+
+/**
+ * A module path as a block-type segment: `actors/player` → `ActorsPlayer`.
+ *
+ * Pascal-cased per segment rather than merely stripped, so the two things that
+ * read a block type back still work: `standInBlocks` splits the segment on case
+ * to put words on a dead block's face, and "Actors Player" is what it reads as.
+ */
+export const pathSlug = (modulePath: string): string =>
+  modulePath
+    .split(/[^A-Za-z0-9]+/)
+    .filter(Boolean)
+    .map(part => part[0].toUpperCase() + part.slice(1))
+    .join('');
+
+/**
+ * What a member is called where it is USED — in a block type, and as the local
+ * name it is imported under.
+ *
+ * AN EXPORT NAME IS NOT UNIQUE. It says what a member is called and nothing
+ * about who declared it, so two files may export the same one: a `define
+ * block` named `go` on two actors, and — already, in the shipped library —
+ * thirteen pairs of rules, `Scoring` and `Goals` both having a `won`, `Input`
+ * and `Mouse` both an `is pressed`. Two of those imported into one module is
+ * not a shadowing but `SyntaxError: Identifier 'WonProperty' has already been
+ * declared`, and the project does not compile at all.
+ *
+ * So everything that names a member from outside its own file names it this
+ * way: prefixed by the rule that declared it, or by the file for an actor's
+ * own. It reads as its origin — `Goals_WonProperty`, `ActorsFoo_GoAction` —
+ * which is what somebody opening the generated code should see anyway.
+ *
+ * HERE, IN THE REGISTRY, because a rule's module is written by two hands that
+ * have to agree: the declarations (`ruleMeta.ruleModuleCode`) and the bodies
+ * (`domainBlocks.refCode`). They key their imports identically and dedupe
+ * against each other, so one aliasing and the other not leaves them agreeing
+ * about which import to keep and disagreeing about what it is called —
+ * whichever loses, its references are undefined.
+ */
+export const memberLocalName = (ref: MemberRef): string =>
+  ref.own && ref.modulePath
+    ? `${pathSlug(ref.modulePath)}_${ref.exportName}`
+    : ref.ruleName
+      ? `${ruleSlug(ref.ruleName)}_${ref.exportName}`
+      : ref.exportName;

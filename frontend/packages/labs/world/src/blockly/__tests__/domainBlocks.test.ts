@@ -301,9 +301,9 @@ describe('domain block generators', () => {
       {definitions_: defs} as never,
       {} as never,
     );
-    expect(code).toBe('actor.useTraits([WindblownTrait]);\n');
+    expect(code).toBe('actor.useTraits([HasWind_WindblownTrait]);\n');
     expect(defs['named:rules/wind:WindblownTrait']).toBe(
-      'import {WindblownTrait} from "rules/wind";',
+      'import {WindblownTrait as HasWind_WindblownTrait} from "rules/wind";',
     );
   });
 
@@ -1223,10 +1223,10 @@ describe('domain block generators', () => {
         {},
         {VALUE: '500'},
       ),
-    ).toBe('world.set(StrengthProperty, 500);\n');
+    ).toBe('world.set(HasWind_StrengthProperty, 500);\n');
     // Empty socket → the property default (900).
     expect(emitProject(`world_set_${'HasWind_'}StrengthProperty`)).toBe(
-      'world.set(StrengthProperty, 900);\n',
+      'world.set(HasWind_StrengthProperty, 900);\n',
     );
     // A vector world property is a single Vector socket — a world_vector
     // literal, or another Vector block, slots straight in.
@@ -1238,10 +1238,12 @@ describe('domain block generators', () => {
           VALUE: 'new WorldLab.Vector(0, -1)',
         },
       ),
-    ).toBe('world.set(DirectionProperty, new WorldLab.Vector(0, -1));\n');
+    ).toBe(
+      'world.set(HasWind_DirectionProperty, new WorldLab.Vector(0, -1));\n',
+    );
     // Empty socket → the property default (0, 1).
     expect(emitProject(`world_set_${'HasWind_'}DirectionProperty`)).toBe(
-      'world.set(DirectionProperty, new WorldLab.Vector(0, 1));\n',
+      'world.set(HasWind_DirectionProperty, new WorldLab.Vector(0, 1));\n',
     );
   });
 
@@ -1262,12 +1264,12 @@ describe('domain block generators', () => {
 
   it('generated world-property get blocks read the property off the world', () => {
     expect(emitProjectValue(`world_get_${'HasWind_'}StrengthProperty`)[0]).toBe(
-      'world.get(StrengthProperty)',
+      'world.get(HasWind_StrengthProperty)',
     );
     // A vector property reads the whole Vector (no axis dropdown).
     expect(
       emitProjectValue(`world_get_${'HasWind_'}DirectionProperty`)[0],
-    ).toBe('world.get(DirectionProperty)');
+    ).toBe('world.get(HasWind_DirectionProperty)');
   });
 
   it('world_vector builds a Vector literal from its field', () => {
@@ -1304,7 +1306,7 @@ describe('domain block generators', () => {
   it('generated world-action blocks run the action on the world', () => {
     // A no-argument world action (gravity Invert) → `world.act(Action)`.
     expect(emitProject(`world_do_${'HasWind_'}InvertAction`)).toBe(
-      'world.act(InvertAction);\n',
+      'world.act(HasWind_InvertAction);\n',
     );
   });
 
@@ -1337,7 +1339,7 @@ describe('domain block generators', () => {
   it('generated query blocks read the query as a boolean reporter', () => {
     // Gravity's "is on the ground?" — reads the ACTOR value (default `this actor`).
     expect(emitProjectValue(`world_query_${'HasWind_'}IsGustingQuery`)[0]).toBe(
-      'actor.query(IsGustingQuery)',
+      'actor.query(HasWind_IsGustingQuery)',
     );
     expect(
       emitProjectValue(
@@ -1347,7 +1349,7 @@ describe('domain block generators', () => {
           ACTOR: 'touched',
         },
       )[0],
-    ).toBe('touched.query(IsGustingQuery)');
+    ).toBe('touched.query(HasWind_IsGustingQuery)');
     // It is a Boolean reporter styled as logic, so it plugs into `if`/comparisons.
     const block = PROJECT_BLOCKS.blocks.find(
       b => b.type === `world_query_${'HasWind_'}IsGustingQuery`,
@@ -1895,9 +1897,9 @@ describe('the block that raises an event', () => {
       {} as never,
     ) as string;
 
-    expect(code).toBe('world.emit(GustedEvent, other);\n');
+    expect(code).toBe('world.emit(HasWind_GustedEvent, other);\n');
     expect(defs['named:rules/wind:GustedEvent']).toBe(
-      'import {GustedEvent} from "rules/wind";',
+      'import {GustedEvent as HasWind_GustedEvent} from "rules/wind";',
     );
   });
 
@@ -2861,9 +2863,9 @@ describe('buildDomainPalette (project rule blocks)', () => {
       {valueToCode: () => '5', definitions_: defs} as never,
       {} as never,
     );
-    expect(code).toBe('world.set(StrengthProperty, 5);\n');
+    expect(code).toBe('world.set(HasWind_StrengthProperty, 5);\n');
     expect(defs['named:rules/wind:StrengthProperty']).toBe(
-      'import {StrengthProperty} from "rules/wind";',
+      'import {StrengthProperty as HasWind_StrengthProperty} from "rules/wind";',
     );
   });
 
@@ -2941,7 +2943,7 @@ describe('buildDomainPalette (project rule blocks)', () => {
       {} as never,
     );
     expect(code).toBe(
-      'world.act(NudgeAction, 5, new WorldLab.Vector(1, 0));\n',
+      'world.act(Pushes_NudgeAction, 5, new WorldLab.Vector(1, 0));\n',
     );
   });
 
@@ -2958,7 +2960,7 @@ describe('buildDomainPalette (project rule blocks)', () => {
       } as never,
       {} as never,
     ) as [string, number];
-    expect(code).toBe('actor.query(NearQuery, other)');
+    expect(code).toBe('actor.query(Pushes_NearQuery, other)');
   });
 });
 

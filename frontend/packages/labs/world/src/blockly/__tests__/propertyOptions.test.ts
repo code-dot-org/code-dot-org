@@ -143,7 +143,7 @@ describe('what the general property blocks generate', () => {
       ACTOR: 'actor',
     }) as [string, number];
 
-    expect(code).toBe('actor.get(HealthProperty)');
+    expect(code).toBe('actor.get(Health_HealthProperty)');
   });
 
   it('broadcasts a write over an actor value that holds several', () => {
@@ -170,7 +170,7 @@ describe('what the general property blocks generate', () => {
     ) as string;
 
     expect(code).toContain('WorldLab.each(');
-    expect(code).toContain('subject.set(HealthProperty, 3)');
+    expect(code).toContain('subject.set(Health_HealthProperty, 3)');
   });
 
   it('reports an empty value for a property the project has dropped', () => {
