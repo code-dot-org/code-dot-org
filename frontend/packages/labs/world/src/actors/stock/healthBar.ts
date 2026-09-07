@@ -24,23 +24,24 @@
 // which made the commonest health bar there is — the one in the HUD —
 // impossible to write.
 //
-// IT DOES NOT ELECT `Shows Progress` either. An earlier one did, plus a step
-// writing `health ÷ most health` into `fraction` every frame so the Progress
-// Bar's drawing could be shared. That bought one drawing across two actors and
-// cost a trait, a step and a paragraph explaining why any of it was there. A
-// drawing may ASK the world now (specs/DRAWING.md), so this one asks — and
-// what is duplicated is ten blocks of rectangle that neither actor will ever
-// need to change together. If a third kind of bar arrives, that is when a seam
-// is worth building. Two is not.
+// IT ELECTS `Shows Progress`, and this is the second time round. An early
+// version did; it was taken out because sharing one drawing across two actors
+// cost a trait, a step and a paragraph, and a drawing may ASK the world
+// (specs/DRAWING.md) so this one asked instead. That note ended: "If a third
+// kind of bar arrives, that is when a seam is worth building. Two is not."
+//
+// A THIRD ARRIVED. The jetpack's Fuel Bar elects `Shows Progress`, sets
+// `fraction` from the tank every frame, and draws with `progressBarDrawing` —
+// so the seam exists and is load-bearing, and this actor was the only bar not
+// using it. Two bars filled the same rectangle from two different expressions,
+// and a change to how a bar looks had to be made in both.
+//
+// So the fraction is worked out where a fraction belongs — in a step, once a
+// frame — and the picture is the one every bar draws. What is left here is
+// the only thing that is this bar's own: which actor it is about.
 
-import {actorFile, fill, me, num, rectangle, showAs} from './workspace';
-
-/** The canvas, and so also the actor's size for clicks and collisions. */
-const WIDTH = 64;
-const HEIGHT = 8;
-/** The colors a health bar is, since nothing here carries them per instance. */
-const TRACK = '#301820';
-const BAR = '#e04040';
+import {progressBarDrawing} from './progressBar';
+import {actorFile, me, showAs, useTrait} from './workspace';
 
 /**
  * The `define property` this bar keeps: the actor it is about.
@@ -60,39 +61,44 @@ export const HEALTH_BAR_SUBJECT = {
 };
 
 /**
- * The picture, given the block type that reads `subject` off this actor.
+ * The step that fills the bar, given the block type that reads `subject`.
  *
  * PARAMETERISED, because an own property's block type carries the path of the
  * file that declared it (`blockly/ownProperties`) — `ActorsHealthBar_…` for the
- * imported file, and `WorldsMain…_…` for a world that defines the bar itself.
- * Everything else about the picture is the same, and a second copy of the
- * track, the fill and the expression between them would be somewhere for the
- * two to disagree.
+ * imported file, and `WorldsMain…_…` for a world that defines the bar itself
+ * (fixtures/platformerSingle). The two tellings cannot share the literal block
+ * and do share the shape.
+ *
+ * IN `react`, after everything has moved and been hurt, so the bar shows what
+ * just happened rather than what was true at the top of the frame. The same
+ * moment the Fuel Bar reads its tank in.
+ *
+ * ATTACHED TO NOBODY IS AN EMPTY BAR, not a crash. `subject` starts unset and a
+ * learner can leave it that way; `health of ⟨nothing⟩` would throw once a
+ * frame, forever, from a step nobody would think to look at. The guard was in
+ * the drawing before and is the same guard.
  */
-/** The two rectangles, given the two readers the drawing was built with. */
-const HEALTH_BAR_COMMANDS = (
-  subject: () => object,
-  healthOf: (exportName: string) => object,
-): object[] => [
-  // The track first and whole, so what is left of it IS the empty part.
-  fill({shadow: {type: 'colour_picker', fields: {COLOUR: TRACK}}}),
-  rectangle(0, 0, WIDTH, HEIGHT),
-  fill({shadow: {type: 'colour_picker', fields: {COLOUR: BAR}}}),
-  {
-    type: 'world_draw_rectangle',
+export const healthBarStep = (subjectGetType: string) => {
+  const subject = () => ({
+    block: {type: subjectGetType, inputs: {ACTOR: me()}},
+  });
+  /** `⟨name⟩ of ⟨the subject⟩`, for a property the Health rule declares. */
+  const healthOf = (exportName: string) => ({
+    block: {
+      type: `world_get_Health_${exportName}`,
+      inputs: {ACTOR: subject()},
+    },
+  });
+  return {
+    type: 'world_trait_step',
+    fields: {PHASE: 'react', NAME: 'show the subject’s health'},
     inputs: {
-      X: num(0),
-      Y: num(0),
-      // Attached to nobody, or to something whose full is nothing: an
-      // empty bar. Both are states a learner can reach, and `health of
-      // ⟨nothing⟩` would throw inside a routine that runs on every paint.
-      WIDTH: {
+      DO: {
         block: {
-          type: 'math_arithmetic',
-          fields: {OP: 'MULTIPLY'},
+          type: 'world_set_Progress_FractionProperty',
           inputs: {
-            A: num(WIDTH),
-            B: {
+            ACTOR: me(),
+            VALUE: {
               block: {
                 type: 'logic_ternary',
                 inputs: {
@@ -119,31 +125,20 @@ const HEALTH_BAR_COMMANDS = (
           },
         },
       },
-      HEIGHT: num(HEIGHT),
     },
-  },
-];
-
-export const healthBarDrawing = (subjectGetType: string) => {
-  const subject = () => ({
-    block: {type: subjectGetType, inputs: {ACTOR: me()}},
-  });
-  /** `⟨name⟩ of ⟨the subject⟩`, for a property the Health rule declares. */
-  const healthOf = (exportName: string) => ({
-    block: {
-      type: `world_get_Health_${exportName}`,
-      inputs: {ACTOR: subject()},
-    },
-  });
-  return {
-    width: WIDTH,
-    height: HEIGHT,
-    commands: HEALTH_BAR_COMMANDS(subject, healthOf),
   };
 };
 
 export const healthBarActor = actorFile(
   'Health Bar',
-  [HEALTH_BAR_SUBJECT, showAs('health')],
-  {drawing: healthBarDrawing('world_get_ActorsHealthBar_SubjectProperty')},
+  [
+    HEALTH_BAR_SUBJECT,
+    useTrait('Progress#ShowsProgressTrait'),
+    showAs('health'),
+    healthBarStep('world_get_ActorsHealthBar_SubjectProperty'),
+  ],
+  // The bar every bar draws. Its colors are Progress's own defaults, which are
+  // the two this actor used to name for itself — so nothing is set here and
+  // a project that recolors one bar recolors it the same way.
+  {drawing: progressBarDrawing()},
 );

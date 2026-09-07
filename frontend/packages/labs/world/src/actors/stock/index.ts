@@ -81,15 +81,18 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     name: 'Health Bar',
     description:
       'A bar that fills itself in. Point it at an actor with “subject” and it shows how much health that actor has left. Put it in the corner for a HUD, or add “Attached” to have it ride above the actor it is about.',
-    // HEALTH, and nothing else. It elects no trait at all: the actor it is
-    // about is a property of its own, and the health it reads belongs to that
-    // actor. Health still has to arrive with it — a `world_get_Health_…` block
-    // in a project without Health is one the palette never mints, and the file
-    // fails to generate with nothing on screen saying why.
+    // HEALTH for what it reads, PROGRESS for what it is. The health belongs to
+    // the actor this bar is pointed at; `Shows Progress` is the bar's own, and
+    // carries the fraction it fills to and the two colors it fills with.
+    //
+    // BOTH HAVE TO ARRIVE WITH IT. A `world_get_Health_…` or
+    // `world_set_Progress_…` block in a project holding neither rule is one
+    // the palette never mints, and the file fails to generate with nothing on
+    // screen saying why.
     //
     // NOT Attachment: where a bar sits is the project's business. One over an
     // enemy's head elects it too; one in the corner of the screen does not.
-    requires: ['Health'],
+    requires: ['Health', 'Progress'],
     contents: healthBarActor,
   },
   {

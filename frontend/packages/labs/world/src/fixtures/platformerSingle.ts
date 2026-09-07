@@ -66,7 +66,8 @@
 // the honest state of this telling rather than a bug to hide, and the reason
 // the map editor exists for the other one.
 
-import {healthBarDrawing, HEALTH_BAR_SUBJECT} from '../actors/stock/healthBar';
+import {healthBarStep, HEALTH_BAR_SUBJECT} from '../actors/stock/healthBar';
+import {progressBarDrawing} from '../actors/stock/progressBar';
 import {drawText, fill, showAs, textOf} from '../actors/stock/workspace';
 import {
   SCOREBOARD_HEIGHT,
@@ -278,11 +279,11 @@ const SINGLE_WORLD = JSON.stringify({
       // blocks and do share the shape.
       defineActor(HEALTH_BAR, 'Health Bar', 1900, [
         HEALTH_BAR_SUBJECT,
-        drawingBlock(
-          healthBarDrawing(
-            `world_get_WorldsMain${pascalId(HEALTH_BAR)}_SubjectProperty`,
-          ),
+        useTrait('Progress#ShowsProgressTrait'),
+        healthBarStep(
+          `world_get_WorldsMain${pascalId(HEALTH_BAR)}_SubjectProperty`,
         ),
+        drawingBlock(progressBarDrawing()),
       ]),
       defineActor(SCOREBOARD, 'Scoreboard', 2280, [
         useTrait('Writing#ShowsTextTrait'),

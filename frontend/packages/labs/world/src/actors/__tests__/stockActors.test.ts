@@ -189,18 +189,28 @@ describe('Progress Bar', () => {
 });
 
 describe('Health Bar', () => {
-  it('asks for the health rather than being told it', () => {
-    // The design, and the reason it is not a Progress Bar with a trait bolted
-    // on. An earlier one elected `Shows Progress` and came with a rule whose
-    // only job was a step writing `health ÷ most health` into `fraction` every
-    // frame — one shared drawing bought with a rule, a trait, a step and a
-    // paragraph. A drawing may ask the world now, so this one asks.
-    const drawn = types(healthBarActor);
+  it('asks for the health, and fills a progress bar with it', () => {
+    // IT IS A PROGRESS BAR THAT WORKS OUT ITS OWN FRACTION. An earlier version
+    // was this; then it was a bar that asked the world from inside its
+    // drawing, on the grounds that one shared picture across two actors was
+    // not worth a trait and a step. A third bar arrived — the jetpack's Fuel
+    // Bar, which elects `Shows Progress` and sets `fraction` from the tank —
+    // so the seam is there and being used, and this was the one bar not using
+    // it.
+    //
+    // The reads are the same reads; where they happen is the difference. A
+    // fraction worked out once a frame in a step is a fraction, and a drawing
+    // that only draws is a drawing.
+    const held = types(healthBarActor);
 
-    expect(drawn).toContain('world_get_ActorsHealthBar_SubjectProperty');
-    expect(drawn).toContain('world_get_Health_HealthProperty');
-    expect(drawn).toContain('world_get_Health_MostHealthProperty');
-    expect(healthBarActor).not.toContain('Progress#');
+    expect(held).toContain('world_get_ActorsHealthBar_SubjectProperty');
+    expect(held).toContain('world_get_Health_HealthProperty');
+    expect(held).toContain('world_get_Health_MostHealthProperty');
+    expect(held).toContain('world_set_Progress_FractionProperty');
+    // …and the picture is the one every bar draws, so it reads Progress's
+    // colors rather than naming two of its own.
+    expect(held).toContain('world_get_Progress_BarColorProperty');
+    expect(held).toContain('world_get_Progress_TrackColorProperty');
   });
 
   it('says whose health it is about, and nothing about where it sits', () => {
@@ -216,9 +226,11 @@ describe('Health Bar', () => {
       match => match[1],
     );
 
-    // None at all: `subject` is its own property, and the health belongs to
-    // whatever that property names.
-    expect(elected).toEqual([]);
+    // `Shows Progress` and nothing else: that one says what this actor IS —
+    // a bar with a fraction and two colors. Whose health it shows is
+    // `subject`, its own property, because the health belongs to whatever
+    // that names. Electing Health here would give the BAR three hit points.
+    expect(elected).toEqual(['Progress#ShowsProgressTrait']);
     // Attachment is a project's to add, and composes: set both and it is a
     // bar that rides above the actor it is about.
     expect(healthBarActor).not.toContain('Attachment#');

@@ -201,22 +201,28 @@ describe('the project a learner opens', () => {
     // and GAME OVER, with no warning in between. A number a player cannot see
     // is a number they cannot play against.
     //
-    // The bar reads the player rather than the player writing the bar, because
-    // `define property` mints its getter and setter into its own file's
-    // palette and NOWHERE ELSE — which is also why this test cannot read the
-    // fraction. It is not exported, on purpose.
+    // The bar reads the player rather than the player writing the bar. Which
+    // actor it is about is `subject`, its own property — and `define property`
+    // mints its getter into its own file's palette and NOWHERE ELSE, so that
+    // half stays unreadable from here, on purpose.
     //
-    // So it asks what a player would see instead: the drawing's key, which is
-    // the identity of the commands it was painted from. A bar whose red
-    // rectangle got narrower is a different picture, and the driver
-    // rasterizes on a key it has not seen (World.renderSnapshot).
+    // WHAT IT FILLS TO IS NOT ITS OWN. `fraction` belongs to `Shows Progress`,
+    // the trait every bar in the lab elects, so a rule export reads it and
+    // this can ask the question a player is really asking: is the bar
+    // shorter? It used to ask whether the PICTURE had changed — the drawing's
+    // key, which is the identity of the commands it was painted from — and
+    // that answers yes to any change at all, a recolor included.
     //
-    // Asking for the key RUNS the routine, which is also how the guard gets
-    // tested: on a world nobody has ticked, the bar is watching nobody yet,
-    // and `health of ⟨nothing⟩` would throw rather than draw an empty bar.
-    const {world} = await opened();
+    // The key is still worth taking, because ASKING FOR IT RUNS THE ROUTINE,
+    // which is how the empty-subject guard gets tested: on a world nobody has
+    // ticked, the bar is watching nobody yet, and `health of ⟨nothing⟩` would
+    // throw rather than draw an empty bar.
+    const {world, modules} = await opened();
     expect(() => world.renderSnapshot()).not.toThrow();
-    const bar = () =>
+    const fraction = modules['rules/progress'].FractionProperty;
+    const filled = () =>
+      actor(world, 'HealthBar')!.get(fraction as never) as unknown as number;
+    const picture = () =>
       world
         .renderSnapshot()
         .find(
@@ -224,11 +230,17 @@ describe('the project a learner opens', () => {
         )?.drawing?.key;
 
     play(world, 0.5);
-    const full = bar();
+    const full = filled();
+    const drawn = picture();
     play(world, 2.5, ['right arrow']);
 
-    expect(full).toBeDefined();
-    expect(bar()).not.toBe(full);
+    // Full to begin with, and shorter after the crawler has had a go.
+    expect(full).toBe(1);
+    expect(filled()).toBeLessThan(full);
+    expect(filled()).toBeGreaterThan(0);
+    // …and the picture followed it, which is the half a player sees.
+    expect(drawn).toBeDefined();
+    expect(picture()).not.toBe(drawn);
   });
 
   it('says so on the board when the player runs out', async () => {

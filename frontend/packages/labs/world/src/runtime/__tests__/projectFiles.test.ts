@@ -29,6 +29,7 @@ describe('projectFiles', () => {
       'rules/jump.rule',
       'rules/motion.rule',
       'rules/patrol.rule',
+      'rules/progress.rule',
       'rules/score.rule',
       'rules/solid.rule',
       'rules/writing.rule',
