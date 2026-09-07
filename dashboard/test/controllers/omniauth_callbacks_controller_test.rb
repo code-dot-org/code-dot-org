@@ -1938,7 +1938,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       @controller.stubs(:account_linking_lock_reason).with(admin).returns(user_account_linking_lock_reason)
     end
 
-    [AuthenticationOption::GOOGLE, AuthenticationOption::FACEBOOK, AuthenticationOption::MICROSOFT].each do |provider|
+    [AuthenticationOption::GOOGLE, AuthenticationOption::FACEBOOK, AuthenticationOption::MICROSOFT, AuthenticationOption::CLASSLINK].each do |provider|
       context "when #{provider} SSO" do
         let(:partial_lti_teacher) {create(:teacher)}
         let(:lti_integration) {create(:lti_integration)}
@@ -2068,6 +2068,52 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
           assert_equal I18n.t('lti.account_linking.admin_not_allowed'), flash[:alert]
           assert_redirected_to user_session_path
         end
+      end
+    end
+
+    context 'when ClassLink SSO finds the account by the rewritten v2 id' do
+      let(:partial_lti_teacher) {create(:teacher)}
+      let(:lti_integration) {create(:lti_integration)}
+      # The v2 id AuthIdGenerator builds from generate_classlink_auth_hash's
+      # default district_id and external_id.
+      let!(:provider_auth_option) do
+        create(
+          :authentication_option,
+          user: user,
+          email: user.email,
+          hashed_email: user.hashed_email,
+          credential_type: AuthenticationOption::CLASSLINK,
+          authentication_id: '0001|1234_5678-0000'
+        )
+      end
+      let(:lti_auth_option) do
+        AuthenticationOption.new(
+          authentication_id: Services::Lti::AuthIdGenerator.new(
+            {iss: lti_integration.issuer, aud: lti_integration.client_id, sub: 'foo'}
+          ).call,
+          credential_type: AuthenticationOption::LTI_V1,
+          email: user.email,
+        )
+      end
+
+      before do
+        # The payload carries the v1 UserId plus the TenantId and SourcedId
+        # from which the callback rebuilds the v2 id before any user lookup.
+        @request.env['omniauth.auth'] = generate_classlink_auth_hash
+        @request.env['omniauth.params'] = {}
+
+        partial_lti_teacher.authentication_options = [lti_auth_option]
+        PartialRegistration.persist_attributes session, partial_lti_teacher
+      end
+
+      it 'links an LTI auth option to the existing account' do
+        get :classlink
+
+        user.reload
+        _(user.authentication_options).must_include lti_auth_option
+        # email + ClassLink v2 + the v1 sibling backfilled during the rewrite + LTI
+        _(user.authentication_options.count).must_equal 4
+        assert_equal I18n.t('lti.account_linking.successfully_linked'), flash[:notice]
       end
     end
   end
