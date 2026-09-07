@@ -18,7 +18,7 @@
 // What is written is milestone 4 of specs/PROGRESSION_UI.md and then some: all
 // six FOUNDATIONS, and Arcade, Story and Making whole after them.
 
-import {climbArrowsStep} from '../../actors/enhance/climbArrows';
+import {climbArrowsHandlers} from '../../actors/enhance/climbArrows';
 import {
   actorFile,
   chain as chainRows,
@@ -1688,9 +1688,9 @@ next frame puts it back. That is what **Climbs Ladders** is for.
 
 1. Give the Ladder **use trait ⟨Can Be Climbed⟩**. That is the whole of a
    ladder — it has no speed and no opinion about who climbs it.
-2. Give the Hero **use trait ⟨Climbs⟩**, then wave the wand at it and choose
-   **Climbs ladders with the arrow keys**. Up and down now climb, and only
-   while it is touching a ladder: walk off the ladder and press up, and
+2. Give the Hero **use trait ⟨Climbs⟩**, then click the sparkles on it and
+   choose **Climbs ladders with the arrow keys**. Up and down now climb, and
+   only while it is touching a ladder: walk off the ladder and press up, and
    nothing happens.
 3. Hold up. Past the top rung the climb ends by itself and the Hero drops on
    to the ledge — stepping off the top is not a separate block.
@@ -1700,11 +1700,13 @@ next frame puts it back. That is what **Climbs Ladders** is for.
 5. The switch doing the work is **ignores ground**, and it belongs to *Gravity*
    rather than to this rule. On its own it is what "hold down to drop through
    the platform" would be built from.
-6. Now open the Hero and read what the wand wrote: an **each frame** step
-   that asks whether the up arrow is down, and starts a climb if it is.
-   Change **up arrow** to **w** and climb with that instead. The keys are
-   yours — they were never part of the rule.
-7. Then delete that step and leave **Climbs** in place. Nothing happens on any
+6. Now read what the sparkles wrote: four handlers, not a loop. **presses up
+   arrow** starts a climb and **releases up arrow** ends it, and the same
+   pair for down. Nothing asks a question sixty times a second — the frames
+   between the press and the release belong to the rule.
+7. Change **up arrow** to **w** on both of its handlers and climb with that
+   instead. The keys are yours; they were never part of the rule.
+8. Then delete all four and leave **Climbs** in place. Nothing happens on any
    key, and the Hero can still climb — it just has nothing telling it to.
    That is the split: a robot that takes ladders has no keyboard, so the
    mechanic is the rule's and the controls are the actor's.
@@ -2442,6 +2444,16 @@ const hunter: WorldScenario = {
         addActor(local('robot'), [placeAt(256, 240)]),
         addActor(local('hero'), [placeAt(256, 112)]),
       ],
+      // The keys that steer the climb — four moments, not a poll. The same
+      // blocks the sparkles write (`actors/enhance/climbArrows`): the rule
+      // owns climbing, the actor owns the controls. HATS, so they are roots of
+      // the world beside the definitions rather than rows inside one.
+      handlers: climbArrowsHandlers({
+        kind: 'actor',
+        path: 'worlds/main',
+        name: 'Hero',
+        block: 'hero',
+      }),
       actors: [
         {
           id: 'hero',
@@ -2451,10 +2463,6 @@ const hunter: WorldScenario = {
             useTrait('Input#TakesKeyboardInputTrait'),
             useTrait('Arrow Keys#MovesAcrossTrait'),
             useTrait('Climbing#ClimbsTrait'),
-            // …and the keys that steer it, which are the actor's own rows.
-            // The same ones the wand writes (`actors/enhance/climbArrows`):
-            // the rule owns climbing, the actor owns the controls.
-            climbArrowsStep(),
             setSprite('player.png'),
           ],
         },

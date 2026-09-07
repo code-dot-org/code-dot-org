@@ -92,7 +92,7 @@
 // WHAT IT IS NOT: there is no second level for the door to lead to (JETPACK.md,
 // phases 4 to 7). It is the smallest thing that plays.
 
-import {climbArrowsStep} from '../actors/enhance/climbArrows';
+import {climbArrowsHandlers} from '../actors/enhance/climbArrows';
 import {progressBarDrawing} from '../actors/stock/progressBar';
 import {
   drawText,
@@ -772,11 +772,15 @@ const PILOT_ACTOR = JSON.stringify({
       // A STEP RATHER THAN A HAT, because holding a key is a state and not a
       // moment; and polling costs nothing, since digging a block that is
       // already a hole does nothing (`rules/digging`).
-      // The keys that steer a climb: a ROOT, like every other per-frame step
-      // in an actor file, and the same rows `actors/enhance/climbArrows`
-      // writes for a learner. Shared rather than copied, so the Pilot and a
-      // learner's actor cannot drift apart.
-      {...climbArrowsStep(), x: 20, y: 900},
+      // THE LADDER, as four moments rather than a poll: up and down each
+      // start a climb, and letting either go ends it. The same blocks
+      // `actors/enhance/climbArrows` writes for a learner — shared rather than
+      // copied, so the Pilot and a learner's actor cannot drift apart.
+      ...climbArrowsHandlers().map((hat, index) => ({
+        ...hat,
+        x: 20,
+        y: 900 + index * 120,
+      })),
       {
         type: 'world_trait_step',
         x: 20,

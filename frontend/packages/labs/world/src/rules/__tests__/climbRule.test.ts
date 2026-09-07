@@ -59,11 +59,22 @@ describe('rules/climb.rule', () => {
     expect(climb?.order).toEqual({kind: 'phase', phase: 'adjust'});
   });
 
-  it('is switched rather than pumped, in two directions and one stop', () => {
+  it('is switched rather than pumped: two starts, and three ways to stop', () => {
+    // A press each way, the release that ends each of them, and the
+    // unconditional one the rule itself uses when the ladder runs out.
+    //
+    // THE DIRECTED STOPS ARE NOT REDUNDANT with the plain one, and the reason
+    // is a keyboard: swapping from up to down is a release and a press on the
+    // SAME FRAME, and a release that ended any climb undid the press whenever
+    // it happened to run second — a ladder that would not let a player back
+    // down (`actors/enhance/climbArrows`, `jetpackPlays`). Naming the
+    // direction makes the two events commute.
     expect(meta.actions.map(action => action.name).sort()).toEqual([
       'start climbing down',
       'start climbing up',
       'stop climbing',
+      'stop climbing down',
+      'stop climbing up',
     ]);
   });
 

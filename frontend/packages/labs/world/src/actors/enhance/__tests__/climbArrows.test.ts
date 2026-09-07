@@ -31,18 +31,48 @@ const at = (source: ReturnType<typeof withPlayer>, path: string) => {
 };
 
 describe('the climb-arrows enhancement, as edits', () => {
-  it('gives the actor both traits and the step that reads the keys', () => {
+  it('gives the actor both traits and the four handlers', () => {
     const after = climbArrowsEnhancement.apply(withPlayer(), HERO);
     const actor = at(after, 'actors/player.actor')!;
 
     expect(actor).toContain('Climbing#ClimbsTrait');
     expect(actor).toContain('Input#TakesKeyboardInputTrait');
-    expect(actor).toContain('world_is_key_down');
+    // HATS, not a poll: two presses and the two releases that end them.
+    expect(actor).toContain('world_on_Input_PressesEvent');
+    expect(actor).toContain('world_on_Input_ReleasesEvent');
+    expect(actor).not.toContain('world_is_key_down');
     expect(actor).toContain('world_do_Climbing_StartClimbingUpAction');
-    expect(actor).toContain('world_do_Climbing_StopClimbingAction');
+    expect(actor).toContain('world_do_Climbing_StartClimbingDownAction');
+    // …and a release that names its DIRECTION, so letting go of one arrow
+    // cannot cancel a climb the other arrow started on the same frame
+    // (`rules/climb`, and the ladder in `jetpackPlays`).
+    expect(actor).toContain('world_do_Climbing_StopClimbingUpAction');
+    expect(actor).toContain('world_do_Climbing_StopClimbingDownAction');
     // Both rules, because the mechanic and the keyboard are separate imports.
     expect(at(after, 'rules/climb.rule')).toBeTruthy();
     expect(at(after, 'rules/input.rule')).toBeTruthy();
+  });
+
+  it('binds each key to the edge that means it', () => {
+    // The pairing is the whole control scheme, and getting it crossed is
+    // silent: a climb that starts on the release reads as a ladder that only
+    // works when you let go.
+    const actor = at(
+      climbArrowsEnhancement.apply(withPlayer(), HERO),
+      'actors/player.actor',
+    )!;
+    const bound = [
+      ...actor.matchAll(
+        /world_on_Input_(Presses|Releases)Event[\s\S]{0,200}?"FILTER0":\s*"([a-z ]+)"[\s\S]{0,200}?world_do_Climbing_(\w+)Action/g,
+      ),
+    ].map(one => `${one[1]} ${one[2]} -> ${one[3]}`);
+
+    expect(bound).toEqual([
+      'Presses up arrow -> StartClimbingUp',
+      'Releases up arrow -> StopClimbingUp',
+      'Presses down arrow -> StartClimbingDown',
+      'Releases down arrow -> StopClimbingDown',
+    ]);
   });
 
   it('asks the actor to climb, not nobody', () => {
@@ -59,7 +89,7 @@ describe('the climb-arrows enhancement, as edits', () => {
       ),
     ].map(one => one[2]);
 
-    expect(sockets).toHaveLength(3);
+    expect(sockets).toHaveLength(4);
     expect(new Set(sockets)).toEqual(new Set(['VALUE']));
   });
 

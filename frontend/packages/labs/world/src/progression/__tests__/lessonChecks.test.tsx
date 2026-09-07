@@ -16,7 +16,7 @@ import {describe, expect, it} from 'vitest';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {compileProject} from '../../__tests__/support/compileProject';
-import {climbArrowsStep} from '../../actors/enhance/climbArrows';
+import {climbArrowsHandlers} from '../../actors/enhance/climbArrows';
 import {importStockActor} from '../../actors/importStockActor';
 import {stockActorById} from '../../actors/stock';
 import {
@@ -2140,11 +2140,14 @@ describe('the ladder lesson’s check', () => {
 
   /** The two `use trait` rows the lesson asks for. */
   /**
-   * `arrows` writes the rows the wand writes, which is now where the control
+   * `arrows` writes the blocks the sparkles write, which is where the control
    * scheme lives: `Climbs` is the mechanic and the keys are the actor's own
-   * `each frame` step (`actors/enhance/climbArrows`). A hero given the trait
-   * and nothing else can climb and is never told to, which is step 7 of the
-   * lesson and is not a pass.
+   * `presses`/`releases` handlers (`actors/enhance/climbArrows`). A hero given
+   * the trait and nothing else can climb and is never told to, which is step 7
+   * of the lesson and is not a pass.
+   *
+   * ROOTS OF THE WORLD, not rows under the Hero: a hat takes no previous
+   * connection, and one written in a world names the kind it is about.
    */
   const climbing = (
     heroTraits: readonly string[],
@@ -2160,7 +2163,14 @@ describe('the ladder lesson’s check', () => {
         });
       }
       if (arrows) {
-        under(actorIn(workspace, 'Hero'), climbArrowsStep() as Row);
+        workspace.blocks.blocks.push(
+          ...(climbArrowsHandlers({
+            kind: 'actor',
+            path: 'worlds/main',
+            name: 'Hero',
+            block: 'hero',
+          }) as Row[]),
+        );
       }
       for (const trait of ladderTraits) {
         under(actorIn(workspace, 'Ladder'), {

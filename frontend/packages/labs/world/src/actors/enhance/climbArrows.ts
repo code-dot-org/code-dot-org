@@ -15,21 +15,45 @@
 //
 // WHAT IT WRITES, all of it in the actor:
 //
-//   actors/<target>.actor    use trait ⟨Climbing#Climbs⟩
-//                            use trait ⟨Input#TakesKeyboardInput⟩
+//   actors/<target>.actor    define actor named ⟨…⟩
+//                              use trait ⟨Climbing#Climbs⟩
+//                              use trait ⟨Input#TakesKeyboardInput⟩
 //
-//                            each frame during ⟨decide⟩ do
-//                              if   ⟨up arrow is down⟩    start ⟨me⟩ climbing up
-//                              else if ⟨down arrow is down⟩ start ⟨me⟩ climbing down
-//                              else                        stop ⟨me⟩ climbing
+//                            when ⟨me⟩ presses  ⟨up arrow⟩   start ⟨me⟩ climbing up
+//                            when ⟨me⟩ releases ⟨up arrow⟩   stop  ⟨me⟩ climbing up
+//                            when ⟨me⟩ presses  ⟨down arrow⟩ start ⟨me⟩ climbing down
+//                            when ⟨me⟩ releases ⟨down arrow⟩ stop  ⟨me⟩ climbing down
 //
-// POLLED, NOT HANDLED, and that is the shape the rule had for a reason worth
-// keeping: reading the keys every frame is what makes LETTING GO end the climb
-// without a handler saying so. A pair of `presses`/`releases` handlers would
-// need a third to cover the frame a learner presses both.
+// HANDLED, NOT POLLED — four moments rather than a question asked sixty times
+// a second, and the shape `rules/climb` writes out in its own header. It was
+// an `each frame` first, reading both keys and choosing between them with an
+// if/else, and that was the actor doing the rule's job: every frame between
+// the press and the release was spent re-deciding something that had not
+// changed.
 //
-// IN `decide`, before anything moves, so a climb begun this frame is already in
-// force when the climb step runs.
+// WHAT MADE THE SWAP FREE is that the rule already refuses the cases the
+// polling loop was there to cover. `start climbing` does nothing off a ladder,
+// so a press in mid-air is not a flight key; `stop climbing` does nothing when
+// no climb is running, so a stray release is silent; and the climb ends by
+// itself when the ladder does, so arriving at the top needs no key at all.
+// There was never any state here to keep — only the question.
+//
+// A RELEASE SAYS WHICH DIRECTION IT IS RELEASING, and that is not decoration.
+// Two keys steer one mechanic, so swapping from up to down is a release and a
+// press to be served — and on a keyboard those land on the SAME FRAME. Against
+// a plain `stop climbing` whichever ran second won: pressing down while
+// letting go of up started a descent and ended it again, in silence, and the
+// jetpack level's ladder simply would not let a player back down
+// (`jetpackPlays`). `stop climbing up` is a no-op on a climb that is going
+// down, so the two events commute and the rule stops caring when they arrive.
+// The reasoning is in `rules/climb`, which is where it belongs: this file
+// binds keys, and what a release MEANS is the mechanic's business.
+//
+// ROOTS, NOT ROWS. A hat takes no previous connection, so it sits beside the
+// `define actor` rather than under it (`patch.addRoot`) — unlike `each frame`,
+// which is a row. In a WORLD's own `define actor` the hats are roots of the
+// world and name their subject as `any ⟨kind⟩`, exactly as `enhance/health`
+// does for the same reason.
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
@@ -38,19 +62,10 @@ import {STOCK_RULES} from '../../rules/stock';
 import {fileIdAt} from '../../runtime/projectFiles';
 
 import type {Enhancement, EnhanceTarget} from './enhancements';
-import {
-  addRoot,
-  append,
-  hasRoot,
-  holds,
-  rowsUnder,
-  type BlockJson,
-} from './patch';
+import {addRoot, append, hasRoot, holds, type BlockJson} from './patch';
 
 const CLIMBS = 'Climbing#ClimbsTrait';
 const KEYBOARD = 'Input#TakesKeyboardInputTrait';
-/** The step's name, which is also how `applied` recognises its own work. */
-const STEP = 'climb with the arrow keys';
 
 /** Which file holds this actor, and which of its roots defines it. */
 const fileOf = (target: EnhanceTarget) =>
@@ -87,60 +102,90 @@ const climbing = (action: string): BlockJson => ({
   inputs: {VALUE: {block: {type: 'world_this_actor'}}},
 });
 
-const keyIsDown = (key: string): BlockJson => ({
-  type: 'world_is_key_down',
-  fields: {KEY: key},
-});
+/** Who the hat is about: this actor's file, or one kind among a world's. */
+const subjectOf = (target: EnhanceTarget) =>
+  target.block
+    ? {
+        block: {
+          type: 'world_actor_kind',
+          fields: {ACTOR: `local:${target.block}`},
+        },
+      }
+    : undefined;
 
 /**
- * The one step, with the three cases in it.
+ * One handler: a key, an edge, and the climbing block it calls.
  *
- * EXPORTED, because the shipped projects need the same rows a learner gets
- * from the sparkles — the jetpack Pilot and two lessons steer a climb this way.
- * Written twice they would drift, and the one that drifted would be the one
- * nobody was looking at.
+ * `FILTER0` is the key the hat is narrowed to, which is how every other
+ * keyboard handler in the lab is written — the alternative is one hat for all
+ * keys and an `if` under it, which is the polling this replaced with the
+ * question moved one line down.
+ *
+ * `ACTOR` is left OFF for an actor file, where a hat is already about the kind
+ * whose file it is in, and named for a world, where it is not.
  */
-export const climbArrowsStep = (): BlockJson => ({
-  type: 'world_trait_step',
-  fields: {PHASE: 'decide', NAME: STEP},
-  inputs: {
-    DO: {
-      block: {
-        type: 'controls_if',
-        extraState: {elseIfCount: 1, hasElse: true},
-        inputs: {
-          IF0: {block: keyIsDown('up arrow')},
-          DO0: {block: climbing('StartClimbingUp')},
-          IF1: {block: keyIsDown('down arrow')},
-          DO1: {block: climbing('StartClimbingDown')},
-          ELSE: {block: climbing('StopClimbing')},
-        },
-      },
-    },
-  },
-});
+const handler = (
+  target: EnhanceTarget,
+  edge: 'Presses' | 'Releases',
+  key: string,
+  action: string,
+): BlockJson => {
+  const subject = subjectOf(target);
+  return {
+    type: `world_on_Input_${edge}Event`,
+    fields: {FILTER0: key},
+    ...(subject ? {inputs: {ACTOR: subject}} : {}),
+    next: {block: climbing(action)},
+  };
+};
+
+/**
+ * The four of them, in the order a reader meets them: up, then down, each
+ * with the release that ends it.
+ *
+ * EXPORTED, because the shipped projects need the same blocks a learner gets
+ * from the sparkles — the jetpack Pilot and two lessons steer a climb this
+ * way. Written twice they would drift, and the one that drifted would be the
+ * one nobody was looking at.
+ */
+export const climbArrowsHandlers = (
+  target: EnhanceTarget = {kind: 'actor', path: '', name: ''},
+): BlockJson[] => [
+  handler(target, 'Presses', 'up arrow', 'StartClimbingUp'),
+  handler(target, 'Releases', 'up arrow', 'StopClimbingUp'),
+  handler(target, 'Presses', 'down arrow', 'StartClimbingDown'),
+  handler(target, 'Releases', 'down arrow', 'StopClimbingDown'),
+];
 
 /**
  * Whether this actor already reads the arrows for its climbing.
  *
- * WHERE THE STEP GOES DEPENDS ON WHERE THE ACTOR IS, and getting it wrong is
- * silent. `each frame` is a ROOT in an `.actor` file — it stands on its own
- * the way a handler does — and a ROW inside a world's own `define actor`,
- * where the definition is a chain. Chained into an actor file it is
- * structurally accepted and never runs: the first version of this gave the
- * Pilot the trait and the blocks, and it would not climb.
+ * ONE HANDLER IS ENOUGH TO ASK ABOUT — the press that starts a climb up — and
+ * that is deliberate. Asking for all four would call a learner who deleted the
+ * one they did not want "not enhanced" and offer to write the set again; this
+ * is idempotent against exactly the edit the enhancement exists to invite.
+ *
+ * SUBJECT AND ALL. In a world the same file holds every actor's handlers, so
+ * "somebody presses up" is not the question — "does THIS kind" is.
  */
-const isStep = (block: {type: string; fields?: Record<string, unknown>}) =>
-  block.type === 'world_trait_step' && block.fields?.NAME === STEP;
+const startsAClimb =
+  (target: EnhanceTarget) =>
+  (block: BlockJson): boolean => {
+    if (
+      block.type !== 'world_on_Input_PressesEvent' ||
+      block.fields?.FILTER0 !== 'up arrow'
+    ) {
+      return false;
+    }
+    const named = (block.inputs?.ACTOR as {block?: BlockJson} | undefined)
+      ?.block?.fields?.ACTOR;
+    return target.block
+      ? named === `local:${target.block}`
+      : named === undefined;
+  };
 
-const reads = (
-  contents: string,
-  target: EnhanceTarget,
-  root: {type: string; id?: string},
-): boolean =>
-  target.block
-    ? rowsUnder(contents, root).some(isStep)
-    : hasRoot(contents, isStep);
+const reads = (contents: string, target: EnhanceTarget): boolean =>
+  hasRoot(contents, startsAClimb(target));
 
 /** Rewrite one file's contents, leaving the rest of the project alone. */
 const edit = (
@@ -169,7 +214,7 @@ export const climbArrowsEnhancement: Enhancement = {
     return (
       wears(contents, CLIMBS, root) &&
       wears(contents, KEYBOARD, root) &&
-      reads(contents, target, root)
+      reads(contents, target)
     );
   },
   apply(source: MultiFileSource, target: EnhanceTarget) {
@@ -195,10 +240,13 @@ export const climbArrowsEnhancement: Enhancement = {
           ]);
         }
       }
-      if (!reads(next, target, root)) {
-        next = target.block
-          ? append(next, root, [climbArrowsStep()])
-          : addRoot(next, climbArrowsStep());
+      if (!reads(next, target)) {
+        // Beside the definition rather than under it: a hat takes no previous
+        // connection, and `DisableOrphansPlugin` greys out a top-level block
+        // that has one along with everything below it.
+        for (const hat of climbArrowsHandlers(target)) {
+          next = addRoot(next, hat);
+        }
       }
       return next;
     });

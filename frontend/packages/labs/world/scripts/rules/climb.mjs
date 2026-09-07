@@ -40,7 +40,8 @@ const rule = defineRule({
 
 A ladder is a floor you can also travel through, which is two facts that fight
 each other. This settles them: give a tile **Can Be Climbed**, give the player
-**Climbs**, and add **Climbs with Arrow Keys** to steer it with up and down.
+**Climbs**, and steer it with the four blocks below — a press to start a climb
+each way, and a release to end the one it started.
 
 On a ladder, gravity lets go and the actor moves at a climbing speed you set.`,
   header: `// "Climbs Ladders" — the other way up, and the only way DOWN.
@@ -83,7 +84,7 @@ On a ladder, gravity lets go and the actor moves at a climbing speed you set.`,
 // the frames between them belong to the rule.
 //
 //     when ⟨player⟩ presses ⟨up arrow⟩    →   start ⟨player⟩ climbing up
-//     when ⟨player⟩ releases ⟨up arrow⟩   →   stop ⟨player⟩ climbing
+//     when ⟨player⟩ releases ⟨up arrow⟩   →   stop ⟨player⟩ climbing up
 //
 // …and THOSE HANDLERS ARE NOT IN THIS RULE. A climber need not have a
 // keyboard — a robot that takes ladders when the player is above it elects
@@ -314,11 +315,52 @@ export const stopClimbing = rule.block({
   say: ['stop', param('who', 'actor'), 'climbing'],
   body: ({who}) => [
     doc(
-      'Let go. The one way off a ladder, however the climb ended — arriving at the top, stepping off the side, or releasing the key — so that giving gravity back is written once and cannot be forgotten in one of the three.',
+      'Let go, whatever the climb was doing. The one way off a ladder, however the climb ended — arriving at the top, stepping off the side, or releasing the key — so that giving gravity back is written once and cannot be forgotten in one of the three.',
     ),
     ...end(who.get()),
   ],
 });
+
+/**
+ * "I no longer want to go THAT way" — the release of one direction key.
+ *
+ * TWO KEYS, ONE MECHANIC, and this is where that costs something. A control
+ * scheme binds up and down to the same climb, so the moment a player swaps
+ * from one to the other there is a release and a press to serve — and on a
+ * keyboard those can and do land on the SAME FRAME. With a release that
+ * simply ends the climb, whichever ran second won: pressing down while
+ * letting go of up started a descent and stopped it again, in silence, and
+ * what a player saw was a ladder that would not let them back down.
+ *
+ * So the release says which direction it is releasing, and a release of the
+ * direction that is no longer being climbed does nothing. Both orders then
+ * give the same answer, which is the property worth having — the rule stops
+ * caring when the two events arrive.
+ *
+ * THE CALLER DOES NOT HAVE TO KNOW ANY OF THIS. `stop climbing` is still
+ * there, still unconditional, and is what everything that means "off, now"
+ * uses. These two are for the case where a release belongs to one direction.
+ */
+const stopIfGoing = (up, way) =>
+  rule.block({
+    returns: 'none',
+    description:
+      `Stop this actor climbing, if it is climbing ${way}. Does nothing if it ` +
+      'is going the other way — so releasing one arrow cannot cancel a climb ' +
+      'the other arrow just started.',
+    say: ['stop', param('who', 'actor'), `climbing ${way}`],
+    body: ({who}) => [
+      when([
+        [
+          up ? goingUp.of(who.get()) : not(goingUp.of(who.get())),
+          [...end(who.get())],
+        ],
+      ]),
+    ],
+  });
+
+export const stopClimbingUp = stopIfGoing(true, 'up');
+export const stopClimbingDown = stopIfGoing(false, 'down');
 
 climbs.step('climb', 'adjust', [
   when([
