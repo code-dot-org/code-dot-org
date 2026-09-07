@@ -36,7 +36,7 @@
 // the screen the moment anything moves the camera; `this layer fixed` is what
 // makes something part of the SCREEN rather than part of the room. Written
 // here even in a project with no camera, because the day one arrives — the
-// camera enhancement is one wand away — nothing about the scoreboard should
+// camera enhancement is one click away — nothing about the scoreboard should
 // need revisiting.
 //
 // LAST IN THE WORLD's chain, so it is defined after the map and drawn over it.

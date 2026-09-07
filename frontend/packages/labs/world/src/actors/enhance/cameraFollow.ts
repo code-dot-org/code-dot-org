@@ -12,7 +12,7 @@
 //                            look through camera ⟨Follow Camera⟩
 //
 // IT IS THE WORLD'S, and that took a wrong turn to see. It was offered from an
-// actor's wand — "the camera follows THIS one" — and answering wrote nothing
+// actor's sparkles — "the camera follows THIS one" — and answering wrote nothing
 // at all into the actor's file: the camera is defined in the world, looked
 // through by the world, and the actor appears in it as a VALUE. Which camera a
 // world looks through, and what it is aimed at, are facts about the world's

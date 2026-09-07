@@ -34,6 +34,7 @@ import {
 import {LabHost} from '@code-dot-org/lab/host';
 
 import App from './App';
+import {useFreeIcons} from './blockly/extensions/glyphIcon';
 import {mountBootBadge} from './demoBootBadge';
 import {
   DEFAULT_SCENARIO_TAG,
@@ -82,6 +83,9 @@ if (import.meta.env.VITE_WORLD_ICONS === 'free') {
   const shims = document.createElement('style');
   shims.textContent = freeIconShimCss();
   document.head.appendChild(shims);
+  // And what no CSS can reach: a Pro-only codepoint drawn straight into a
+  // block (`blockly/extensions/glyphIcon`).
+  useFreeIcons();
 }
 injectFontAwesome();
 

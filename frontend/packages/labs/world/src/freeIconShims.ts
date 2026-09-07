@@ -53,6 +53,17 @@ export const FREE_ICON_SHIMS: Shim[] = [
     substitute: 'angles-right',
   },
   {
+    // `Enhance…` — the file menus' row, and the sparkles on `define actor`
+    // (`blockly/extensions/enhanceButton`, which carries the same pair for the
+    // glyph it draws in a block). Free has no bare sparkles at all: every
+    // sparkle it ships is attached to a wand, a hand, or a spray can, and the
+    // wand is the one picture this icon exists to avoid. `burst` is an
+    // eight-pointed star with drawn-out points — a twinkle, near enough.
+    name: 'sparkles',
+    glyph: '\\e4dc',
+    substitute: 'burst',
+  },
+  {
     // The `.world` file's icon, in the browser, on its tab, and on a
     // progression tile that unlocks a world. Pro draws a planet with a ring
     // around it; Free has no planet at all, so this falls back to the globe

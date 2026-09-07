@@ -587,7 +587,7 @@ export const FileMenus = () => {
           // anything to be given (`actors/enhance`).
           <MenuItem onClick={() => enhance(row.file, row.name)}>
             <ListItemIcon className={styles.menuIcon}>
-              <FontAwesomeV6Icon iconName="wand-magic" iconStyle="solid" />
+              <FontAwesomeV6Icon iconName="sparkles" iconStyle="solid" />
             </ListItemIcon>
             <ListItemText disableTypography>
               <Typography variant="body4">Enhance…</Typography>

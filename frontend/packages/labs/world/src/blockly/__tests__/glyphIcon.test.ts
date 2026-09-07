@@ -7,7 +7,7 @@
 // everywhere else.
 
 import {version as freeVersion} from '@fortawesome/fontawesome-free/package.json';
-import {describe, expect, it} from 'vitest';
+import {describe, expect, it, vi} from 'vitest';
 
 import {glyphIcon} from '../extensions/glyphIcon';
 
@@ -50,5 +50,42 @@ describe('a FontAwesome glyph in a block', () => {
     // Not the icon component's `<i>`, which would not render here.
     expect(glyphIcon('').tagName).toBe('tspan');
     expect(glyphIcon('').textContent).toBe('');
+  });
+});
+
+describe('a Pro-only glyph in a build that has only Free', () => {
+  // `freeIconShims` cannot reach this one: a codepoint in a `<tspan>` asks the
+  // font directly, so there is no `--fa` property to rename and no class for
+  // `reportMissingIcons` to walk. The substitution is the caller's, and this is
+  // what says it happens — and only when the harness has declared the font.
+  //
+  // Fresh module each time, because the flag is set once for the life of a
+  // build and there is no way back from it. A shared one would leak into every
+  // other test here, in whichever order they happened to run.
+  const load = async () => {
+    vi.resetModules();
+    return import('../extensions/glyphIcon');
+  };
+
+  it('draws the Pro glyph until somebody says otherwise', async () => {
+    const {glyphIcon} = await load();
+
+    expect(glyphIcon('\uf890', '\ue4dc').textContent).toBe('\uf890');
+  });
+
+  it('draws the free stand-in once the harness has said so', async () => {
+    const {glyphIcon, useFreeIcons} = await load();
+    useFreeIcons();
+
+    expect(glyphIcon('\uf890', '\ue4dc').textContent).toBe('\ue4dc');
+  });
+
+  it('leaves a glyph both sets have alone', async () => {
+    // The default is the glyph itself, so a caller with nothing to substitute
+    // says nothing. Without it, declaring Free would blank every other button.
+    const {glyphIcon, useFreeIcons} = await load();
+    useFreeIcons();
+
+    expect(glyphIcon('\uf06e').textContent).toBe('\uf06e');
   });
 });

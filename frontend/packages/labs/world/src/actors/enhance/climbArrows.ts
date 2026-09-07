@@ -96,7 +96,7 @@ const keyIsDown = (key: string): BlockJson => ({
  * The one step, with the three cases in it.
  *
  * EXPORTED, because the shipped projects need the same rows a learner gets
- * from the wand — the jetpack Pilot and two lessons steer a climb this way.
+ * from the sparkles — the jetpack Pilot and two lessons steer a climb this way.
  * Written twice they would drift, and the one that drifted would be the one
  * nobody was looking at.
  */

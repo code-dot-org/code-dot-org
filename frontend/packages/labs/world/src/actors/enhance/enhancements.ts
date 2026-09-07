@@ -26,7 +26,7 @@
 // the thing being patched.
 //
 // Reading that as an actor enhancement was wrong in the way that matters: it
-// was asked for from the actor's own wand, and answering it wrote nothing into
+// was asked for from the actor's own sparkles, and answering it wrote nothing into
 // the file the learner was looking at. So an enhancement says whose it is
 // (`subject`), and one that needs to name something else ASKS for it — which
 // is a question the shelf puts under the row, rather than a fact it guesses
@@ -46,7 +46,7 @@ export interface Enhancement {
   id: string;
   /**
    * WHOSE it is: the thing whose files this edits, and so where it is asked
-   * for. An actor's wand offers the actor ones; a world's offers the world
+   * for. An actor's sparkles offer the actor ones; a world's offers the world
    * ones.
    */
   subject: 'actor' | 'world';

@@ -67,19 +67,45 @@ export const ICON_FAMILY = [
 export const ICON_WEIGHT = '900';
 
 /**
+ * Whether this build carries FontAwesome FREE rather than the design system's
+ * Pro (`main.tsx`, `WORLD_DEMO_ICONS=free`).
+ *
+ * DECLARED RATHER THAN SNIFFED, for the reason `aiTutor/transport` gives at
+ * length: reading `import.meta.env` here would inline one build's answer into
+ * every consumer of this library. The harness knows which font it just asked
+ * for, so the harness is what says so.
+ */
+let free = false;
+
+/** Say that Free is the font. Called before anything renders, or not at all. */
+export function useFreeIcons(): void {
+  free = true;
+}
+
+/**
  * One glyph, as the `<tspan>` a `FieldButton` draws inside itself.
  *
  * `glyph` is the codepoint rather than the name — a font has no idea what
- * `wand-magic` is — so every caller should say the name in a comment beside
+ * `sparkles` is — so every caller should say the name in a comment beside
  * the escape, because nobody can read ``.
+ *
+ * `freeGlyph` is THE SAME PICTURE OUT OF THE FREE SET, for the callers whose
+ * icon is Pro-only. `src/freeIconShims.ts` does this for every icon drawn as
+ * an element, by renaming the `--fa` property a class sets; it cannot do it
+ * for these, because a codepoint in a `<tspan>` asks the font directly and a
+ * font without that codepoint draws a box. Same silent failure, no CSS in the
+ * way to intercept it, and `reportMissingIcons` will not find it either — that
+ * walks `[class*="fa-"]`, and this is not one. So the substitution is made
+ * here, by the caller, in the open. A caller whose glyph is in both sets
+ * passes one argument and means it.
  */
-export function glyphIcon(glyph: string): SVGElement {
+export function glyphIcon(glyph: string, freeGlyph = glyph): SVGElement {
   const icon = document.createElementNS(
     'http://www.w3.org/2000/svg',
     'tspan',
   ) as SVGElement;
   icon.style.fontFamily = ICON_FAMILY;
   icon.style.fontWeight = ICON_WEIGHT;
-  icon.textContent = glyph;
+  icon.textContent = free ? freeGlyph : glyph;
   return icon;
 }

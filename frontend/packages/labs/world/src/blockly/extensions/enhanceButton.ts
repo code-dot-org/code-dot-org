@@ -1,5 +1,5 @@
-// The wand on `define actor` and on `define world`: give this thing something
-// it does not have yet.
+// The sparkles on `define actor` and on `define world`: give this thing
+// something it does not have yet.
 //
 // The third of the buttons that ride on a block — the eye opens the file a
 // block comes from, the mortarboard opens the lesson it was met in, and this
@@ -53,16 +53,24 @@ export const ENHANCE_BUTTON_EXTENSION = 'world_enhance_button';
 const FIELD_NAME = 'ENHANCE';
 
 /**
- * FontAwesome's wand, drawn as an SVG glyph like the eye beside it.
+ * FontAwesome's sparkles, drawn as an SVG glyph like the eye beside it.
  *
- * `wand-magic` (f0d0), which is the icon the file menus already put on
- * `Enhance…` — one act, one picture, wherever it is offered from. In the FREE
- * package as well as the pro one, which is what makes it safe here; see
- * `glyphIcon` on why naming the family is not enough by itself.
+ * `sparkles` (f890): three four-pointed twinkles and no wand. The wand was the
+ * first thing tried and it is the wrong picture twice over — `wand-sparkles`
+ * is already the EFFECT file's icon (`config.ts`), and two wands a glyph apart
+ * meaning two different things is worse than one plain one. What is being said
+ * here is "something appears", not "something is cast".
+ *
+ * PRO ONLY, which is why there are two of them. A free build has no f890 and
+ * would draw an empty box; `burst` (e4dc) is Free's nearest twinkle, an
+ * eight-pointed star with drawn-out points, and `freeIconShims` stands the
+ * same pair in for the menu icon so both places agree. See `glyphIcon` on why
+ * the substitution has to be made by the caller here.
  */
-const WAND = '';
+const SPARKLES = '';
+const SPARKLES_FREE = '';
 
-/** What a block would have to be for the wand to mean anything. */
+/** What a block would have to be for the button to mean anything. */
 export interface EnhanceContext {
   /** The `.actor` this workspace is editing, if it is editing one. */
   actorModule?: string;
@@ -72,7 +80,7 @@ export interface EnhanceContext {
   world: boolean;
   /** This `define actor` block's own id, which names a world-local actor. */
   blockId: string;
-  /** Which definition this block IS — the wand rides on both. */
+  /** Which definition this block IS — the button rides on both. */
   defines: 'actor' | 'world';
   /** What the block calls the actor, which is what the dialog's title says. */
   name: string;
@@ -83,7 +91,7 @@ export interface EnhanceContext {
 }
 
 /**
- * Which actor this `define actor` is about, or none — in which case no wand.
+ * Which actor this `define actor` is about, or none — in which case no button.
  *
  * Exported for its test, as `rulesButton`'s wording is: the rest of this
  * module needs a workspace with the whole palette registered to say anything,
@@ -174,7 +182,7 @@ function syncButton(block: Block): void {
           0,
         );
       },
-      icon: glyphIcon(WAND),
+      icon: glyphIcon(SPARKLES, SPARKLES_FREE),
     }),
     FIELD_NAME,
   );
@@ -190,7 +198,7 @@ function syncButton(block: Block): void {
 }
 
 /**
- * Keep the wand in step with what the workspace is editing.
+ * Keep the button in step with what the workspace is editing.
  *
  * Per block instance, like the eye: whether there is anything to enhance is a
  * fact about the workspace this block was loaded into, and a `define actor`
