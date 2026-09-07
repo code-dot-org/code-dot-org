@@ -35,6 +35,7 @@
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {cameraFollowEnhancement} from './cameraFollow';
+import {climbArrowsEnhancement} from './climbArrows';
 import {collectsEnhancement} from './collects';
 import {healthEnhancement} from './health';
 import {scoreboardEnhancement} from './scoreboard';
@@ -137,6 +138,7 @@ export const ENHANCEMENTS: readonly Enhancement[] = [
   // actor can do, then what the screen says about it.
   healthEnhancement,
   collectsEnhancement,
+  climbArrowsEnhancement,
   cameraFollowEnhancement,
   scoreboardEnhancement,
 ];

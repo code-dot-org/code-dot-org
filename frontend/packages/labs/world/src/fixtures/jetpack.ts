@@ -92,6 +92,7 @@
 // WHAT IT IS NOT: there is no second level for the door to lead to (JETPACK.md,
 // phases 4 to 7). It is the smallest thing that plays.
 
+import {climbArrowsStep} from '../actors/enhance/climbArrows';
 import {progressBarDrawing} from '../actors/stock/progressBar';
 import {
   drawText,
@@ -671,9 +672,11 @@ const PILOT_ACTOR = JSON.stringify({
             useTrait('Arrow Keys#MovesAcrossTrait'),
             useTrait('Jumping#JumpsTrait'),
             useTrait('Jetpack#FliesWithAJetpackTrait'),
-            // Up and down climb, and only on a ladder — the control scheme is
-            // a trait, so this is the whole of it (`rules/climb`).
-            useTrait('Climbing#ClimbsWithArrowKeysTrait'),
+            // Up and down climb, and only on a ladder. `Climbs` is the
+            // mechanic; the keys that steer it are the step below, which is
+            // what `actors/enhance/climbArrows` writes for a learner — the
+            // control scheme belongs to the actor, not to the rule.
+            useTrait('Climbing#ClimbsTrait'),
             // …and the pads, which it uses when it asks to rather than
             // whenever it stands on one — see the handler below and
             // `rules/teleport` on why that is not the same choice an enemy
@@ -769,6 +772,11 @@ const PILOT_ACTOR = JSON.stringify({
       // A STEP RATHER THAN A HAT, because holding a key is a state and not a
       // moment; and polling costs nothing, since digging a block that is
       // already a hole does nothing (`rules/digging`).
+      // The keys that steer a climb: a ROOT, like every other per-frame step
+      // in an actor file, and the same rows `actors/enhance/climbArrows`
+      // writes for a learner. Shared rather than copied, so the Pilot and a
+      // learner's actor cannot drift apart.
+      {...climbArrowsStep(), x: 20, y: 900},
       {
         type: 'world_trait_step',
         x: 20,

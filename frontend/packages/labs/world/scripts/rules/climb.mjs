@@ -12,7 +12,6 @@ import {
   frameTime,
   give,
   hasTrait,
-  keyDown,
   lessThan,
   minus,
   moduleFor,
@@ -86,11 +85,22 @@ On a ladder, gravity lets go and the actor moves at a climbing speed you set.`,
 //     when ⟨player⟩ presses ⟨up arrow⟩    →   start ⟨player⟩ climbing up
 //     when ⟨player⟩ releases ⟨up arrow⟩   →   stop ⟨player⟩ climbing
 //
-// …and "Climbs with Arrow Keys" is those four handlers, written once. It is a
-// SECOND trait rather than part of the first because a climber need not have a
-// keyboard: a robot that takes ladders when the player is above it elects
-// "Climbs" and decides for itself, and a rule that read the keys would have
-// shut that out. The same split Physics and Arrow Keys already make.
+// …and THOSE HANDLERS ARE NOT IN THIS RULE. A climber need not have a
+// keyboard — a robot that takes ladders when the player is above it elects
+// "Climbs" and decides for itself — so a rule that read the keys would shut
+// that out. This rule used to carry them as a second trait, "Climbs with
+// Arrow Keys", and that was the wrong home for two reasons.
+//
+// It made this rule depend on Input, so importing a ladder imported keyboard
+// reading whether or not anything was steered by hand. And it left the control
+// scheme as a thing a learner could only elect or not: the keys were the
+// rule's, unreadable and unchangeable, when they are exactly the part a game
+// wants to change.
+//
+// They are an ACTOR ENHANCEMENT now (\`actors/enhance/climbArrows\`), which
+// writes the handlers into the actor's own file as blocks a learner can read,
+// rebind or delete. What was a trait to elect is work done for you and left
+// where you can edit it, which is what an enhancement is for.
 //
 // STARTING IS REFUSED OFF A LADDER, so the up arrow is not a flight key. The
 // climb also ends by itself the moment the ladder does, which is what stepping
@@ -121,7 +131,6 @@ On a ladder, gravity lets go and the actor moves at a climbing speed you set.`,
 });
 rule.uses('Gravity');
 rule.uses('Physics');
-rule.uses('Input');
 
 /**
  * What a ladder is.
@@ -480,31 +489,6 @@ climbs.step('stop if the climb got nowhere', 'react', [
       ],
     ],
   ]),
-]);
-
-/**
- * The four handlers, written once.
- *
- * A trait of its own rather than part of `Climbs`, because a climber need not
- * have a keyboard — see the header. This is the same shape `Arrow Keys` has
- * beside `Physics`: one trait is the mechanic, the other is a control scheme
- * for it, and an actor may take the first without the second.
- */
-const arrows = rule.trait('Climbs with Arrow Keys');
-arrows.uses(Climbs);
-arrows.uses('Input#TakesKeyboardInputTrait');
-
-arrows.step('read the arrows', 'decide', [
-  doc(
-    'Up climbs up, down climbs down, and **anything else lets go**.\n\nRead every frame rather than on a key press, which is what makes releasing the key end the climb without a handler for it. It runs in `decide`, before anything moves, so a climb begun this frame is already in force when the climb step runs.',
-  ),
-  when(
-    [
-      [keyDown('up arrow'), [climbUp({who: thisActor()})]],
-      [keyDown('down arrow'), [climbDown({who: thisActor()})]],
-    ],
-    [stopClimbing({who: thisActor()})],
-  ),
 ]);
 
 export default () => moduleFor(rule, 'climb');

@@ -16,6 +16,7 @@ import {describe, expect, it} from 'vitest';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {compileProject} from '../../__tests__/support/compileProject';
+import {climbArrowsStep} from '../../actors/enhance/climbArrows';
 import {importStockActor} from '../../actors/importStockActor';
 import {stockActorById} from '../../actors/stock';
 import {
@@ -2138,7 +2139,18 @@ describe('the ladder lesson’s check', () => {
   const lesson = LESSONS['platformer/ladders'];
 
   /** The two `use trait` rows the lesson asks for. */
-  const climbing = (heroTraits: readonly string[], ladderTraits: string[]) =>
+  /**
+   * `arrows` writes the rows the wand writes, which is now where the control
+   * scheme lives: `Climbs` is the mechanic and the keys are the actor's own
+   * `each frame` step (`actors/enhance/climbArrows`). A hero given the trait
+   * and nothing else can climb and is never told to, which is step 7 of the
+   * lesson and is not a pass.
+   */
+  const climbing = (
+    heroTraits: readonly string[],
+    ladderTraits: string[],
+    arrows = false,
+  ) =>
     editing(lesson.source, 'main.world', contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       for (const trait of heroTraits) {
@@ -2146,6 +2158,9 @@ describe('the ladder lesson’s check', () => {
           type: 'world_use_trait',
           fields: {TRAIT: trait},
         });
+      }
+      if (arrows) {
+        under(actorIn(workspace, 'Hero'), climbArrowsStep() as Row);
       }
       for (const trait of ladderTraits) {
         under(actorIn(workspace, 'Ladder'), {
@@ -2167,7 +2182,7 @@ describe('the ladder lesson’s check', () => {
     // so `start climbing up` is refused every frame and nothing moves.
     const {passes} = await check(
       'platformer/ladders',
-      climbing(['Climbing#ClimbsWithArrowKeysTrait'], []),
+      climbing(['Climbing#ClimbsTrait'], [], true),
     );
     expect(passes).toBe(false);
   });
@@ -2175,10 +2190,7 @@ describe('the ladder lesson’s check', () => {
   it('accepts a ladder and somebody to climb it', async () => {
     const {passes, result} = await check(
       'platformer/ladders',
-      climbing(
-        ['Climbing#ClimbsWithArrowKeysTrait'],
-        ['Climbing#CanBeClimbedTrait'],
-      ),
+      climbing(['Climbing#ClimbsTrait'], ['Climbing#CanBeClimbedTrait'], true),
     );
     expect(result.error).toBeUndefined();
     expect(passes).toBe(true);

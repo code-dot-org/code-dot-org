@@ -362,7 +362,7 @@ export const STOCK_RULES: readonly StockRule[] = [
     ability: 'Climbs Ladders',
     description:
       'A ladder to go up, and — the part a one-way platform cannot do on its own — to go back down through. Says what a ladder is, what climbs one, and offers a control scheme for the arrow keys that a climber need not take.',
-    provides: ['Can Be Climbed', 'Climbs', 'Climbs with Arrow Keys'],
+    provides: ['Can Be Climbed', 'Climbs'],
     contents: climbRule,
   },
   {

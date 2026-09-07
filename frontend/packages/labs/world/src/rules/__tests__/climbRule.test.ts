@@ -14,11 +14,13 @@ import {climbRule} from '../stock/climb';
 const meta = parseRuleMeta('rules/climb', climbRule)!;
 
 describe('rules/climb.rule', () => {
-  it('splits the ladder, the climber and the controls', () => {
+  it('splits the ladder from the climber, and stops there', () => {
+    // What a ladder is, and what climbing one is. There is no third trait for
+    // the controls: steering a climb is an actor enhancement, so this rule
+    // never reads a key and never depends on Input.
     expect(meta.traits.map(trait => trait.id)).toEqual([
       'Can_Be_Climbed',
       'Climbs',
-      'Climbs_with_Arrow_Keys',
     ]);
   });
 
@@ -33,16 +35,18 @@ describe('rules/climb.rule', () => {
     expect(ladder).toEqual([]);
   });
 
-  it('keeps the keyboard out of the mechanic', () => {
+  it('keeps the keyboard out of the mechanic entirely', () => {
     // The split that matters most. An enemy takes ladders (JETPACK.md, phase
-    // three) and has no keys, so a `Climbs` that read the arrows would have
-    // shut that out — and the control scheme has to live somewhere, so it
-    // lives in a trait of its own that an enemy simply does not elect.
-    const keyed = meta.steps.find(step => step.id === 'read_the_arrows');
+    // three) and has no keys, so a `Climbs` that read the arrows would shut
+    // that out. It used to live in a trait of its own here; it lives in the
+    // ACTOR now (`actors/enhance/climbArrows`), which is a stronger form of
+    // the same split — the rule cannot read a key even if somebody tries, and
+    // a learner can see and rebind the ones it does read.
     const climb = meta.steps.find(step => step.id === 'climb');
 
-    expect(keyed?.ownerTraitId).toBe('Climbs_with_Arrow_Keys');
+    expect(meta.steps.map(step => step.id)).not.toContain('read_the_arrows');
     expect(climb?.ownerTraitId).toBe('Climbs');
+    expect(meta.requires).not.toContain('Input');
   });
 
   it('climbs after everything has moved', () => {
@@ -109,10 +113,13 @@ describe('rules/climb.rule', () => {
   });
 
   it('is offered in the library', () => {
+    // Two traits: what a ladder is, and what climbing one is. The control
+    // scheme is not among them — steering a climb with the arrow keys is an
+    // actor enhancement (`actors/enhance/climbArrows`), so that this rule need
+    // not depend on Input and the key bindings are blocks a learner can read.
     expect(STOCK_RULES.find(stock => stock.id === 'climb')?.provides).toEqual([
       'Can Be Climbed',
       'Climbs',
-      'Climbs with Arrow Keys',
     ]);
   });
 });
