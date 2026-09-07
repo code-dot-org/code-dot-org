@@ -90,12 +90,13 @@ describe('which definition roots a file may hold', () => {
     expect(offeredTypes('world')).toContain('world_trait_step');
   });
 
-  it('gives `each frame` no previous connection in an actor file', () => {
-    // The bug this pins, and it was invisible until somebody touched the
-    // workspace: `DisableOrphansPlugin` reads a TOP-LEVEL block with a previous
-    // connection as an orphan and disables it — and everything chained after
-    // it — so a standalone `each frame` sat greyed out and generated nothing.
-    // A root has no previous, which is why every event hat has none either.
+  it('gives `each frame` one shape, in every kind of file', () => {
+    // It used to have two. A definition root must not have a previous
+    // connection — `DisableOrphansPlugin` reads a top-level block with one as
+    // an orphan and greys it out along with everything under it — so an
+    // `.actor` file got a rootless `each frame` and every other file got the
+    // chaining one. It is a ROW under `define actor` now, in an `.actor` file
+    // as in a world, so there is nothing left to vary.
     const shapeIn = (fileKind: FileKind) => {
       const matches = buildDomainPalette([], {fileKind}).blocks.filter(
         block => block.type === 'world_trait_step',
@@ -106,8 +107,25 @@ describe('which definition roots a file may hold', () => {
       return matches[0].previousStatement;
     };
 
+    expect(shapeIn('actor')).toBe(true);
+    expect(shapeIn('rule')).toBe(true);
+    expect(shapeIn('world')).toBe(true);
+  });
+
+  it('still gives `define drawing` no previous connection in an actor file', () => {
+    // The one block that still has both shapes, and the reason either shape
+    // exists: a drawing IS a root in an `.actor` file, and a root with a
+    // previous connection is an orphan to `DisableOrphansPlugin` — greyed out,
+    // generating nothing, and invisible until somebody touched the workspace.
+    const shapeIn = (fileKind: FileKind) => {
+      const matches = buildDomainPalette([], {fileKind}).blocks.filter(
+        block => block.type === 'world_define_drawing',
+      ) as Array<{previousStatement?: boolean}>;
+      expect(matches).toHaveLength(1);
+      return matches[0].previousStatement;
+    };
+
     expect(shapeIn('actor')).toBeUndefined();
-    // …and it still chains where it is one of a trait's members.
     expect(shapeIn('rule')).toBe(true);
   });
 

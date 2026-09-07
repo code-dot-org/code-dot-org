@@ -120,8 +120,12 @@ export interface ActorExtras {
  * SEPARATE ROOTS, not one. A drawing and a handler hat both take no previous
  * connection, and `DisableOrphansPlugin` disables a top-level block that has
  * one along with everything below it (specs/DRAWING.md). So they sit beside the
- * `define actor` rather than inside it, exactly as `each frame` does in an
- * actor file.
+ * `define actor` rather than inside it.
+ *
+ * NOT `each frame`, which used to be here for the same reason and is a ROW
+ * under the definition now (`domainBlocks.worldTraitStep`) — the reason a
+ * drawing and a hat cannot be does not apply to a block that takes a previous
+ * connection quite happily.
  *
  * An actor with neither is a `define actor` alone, which is the same one root
  * the starter project's own actors are — and byte-for-byte the same JSON, so

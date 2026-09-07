@@ -1372,11 +1372,6 @@ export const ROOT_BLOCK_TYPES: ReadonlySet<string> = new Set([
   'world_rule_trait',
   'world_rule_step_tick',
   'world_rule_step_in',
-  // …and `each frame` standing on its own in an `.actor` file, where it is a
-  // kind's own per-frame work rather than a trait's member
-  // (`traitStepDefinition`). Harmless in the other kinds: there it always has a
-  // parent, and a root set is only ever asked about a TOP block.
-  'world_trait_step',
   // …and a set of choices, whose options chain below it.
   'world_rule_enum',
 ]);
@@ -6898,7 +6893,7 @@ const worldRuleBlock = defineBlock({
   generator: {
     javascript(block, generator) {
       // WHERE IT SITS DECIDES WHO WRITES IT, the same bargain `each frame`
-      // makes in its three homes (`traitStepDefinition`).
+      // makes in its three homes (`worldTraitStep`).
       //
       // In a `.rule` this is a DECLARATION and nothing more:
       // the module is assembled from the file's metadata and the body is
@@ -7081,90 +7076,89 @@ const worldRuleStepIn = stepBlock(
 // through `next`, so the body needs somewhere else to be. `define block` has
 // the same shape for the same reason.
 /**
- * `each frame` — and it needs TWO SHAPES, which is the whole of this note.
+ * `each frame` — a ROW, in all three of its homes.
  *
- * Chained under a `define trait` it is one of that trait's members, so it has a
- * previous and a next like every other member. Standing on its own in an
- * `.actor` file it is a definition root, and a root MUST NOT have a previous
- * connection: `DisableOrphansPlugin` reads a top-level block with one as an
- * orphan and disables it — and everything chained after it — so the block a
- * learner had just dragged out sat there greyed and generating nothing.
+ * Under a `define trait` it is one of that trait's members; inside a world's
+ * own `define actor` it is one of that actor's; and in an `.actor` file it is
+ * one of THAT actor's, chained under the `define actor` at the top of the file
+ * beside its `use trait`s. Same block, same shape, same reading everywhere:
+ * work this thing does every frame, written where the thing is written.
  *
- * It looked fine while the only ones were written into fixtures, because the
- * plugin runs on move/drag/change and a freshly loaded workspace has had none.
- *
- * So the shape is decided where the palette is built, which already varies
- * definitions by file kind, and not by a second near-identical block: it is one
- * block with one name, one generator and one meaning, wearing the connections
- * its file makes sense of.
+ * IT USED TO STAND ALONE in an `.actor`, and that cost more than it was worth.
+ * A definition root must not have a previous connection —
+ * `DisableOrphansPlugin` reads a top-level block with one as an orphan and
+ * greys it out — so the block was minted in two shapes and swapped by file
+ * kind. Blockly holds ONE definition per type for the whole process, so an
+ * open `.actor` left every other file believing `each frame` could not chain
+ * (`generatorRegistration.test`); a body surface could not hang a body off a
+ * head with no `next` (`extensions/bodyOwner`); and an enhancement adding a
+ * step had to know which file it was writing into or the step would be
+ * accepted and never run (`actors/enhance/climbArrows`). Three separate
+ * silences, all of them the one difference.
  */
-const traitStepDefinition = (asRoot: boolean) =>
-  defineBlock({
-    type: 'world_trait_step',
-    message0: 'each frame during %1 do %2',
-    args0: [
-      {type: 'field_dropdown', name: 'PHASE', options: phaseOptions},
-      {type: 'field_input', name: 'NAME', text: 'do something'},
-    ],
-    message1: '%1',
-    args1: [{type: 'input_statement', name: 'DO'}],
-    ...(asRoot ? {} : {previousStatement: true, nextStatement: true}),
-    extensions: [
-      phaseOptionsExtension,
-      bodyButtonExtension,
-      bodySurfaceExtension,
-    ],
-    style: 'event_blocks',
-    tooltip:
-      'Run this every tick for each thing that has this trait — or, on its own ' +
-      'in an actor file, for each actor of that kind. The thing itself is what ' +
-      'the blocks inside act on.',
-    generator: {
-      javascript(block, generator) {
-        // WHERE IT SITS DECIDES WHAT IT IS, which is the same bargain
-        // `world_rule_property` makes in its three homes.
-        //
-        // Chained under a `define trait`, this is a DECLARATION: the rule's
-        // module is assembled from its metadata and the body is pulled out by a
-        // pass of its own (ruleMeta), so generating anything here would be
-        // writing it twice.
-        //
-        // Standing on its own in an `.actor` file, there is no metadata pass and
-        // nothing else to write it — so it is the whole declaration, and this is
-        // it. `defineStep` is the behaviour half of `defineProperty`: work a KIND
-        // of actor does every frame without a rule to do it in (ActorBuilder).
-        //
-        // And chained inside a WORLD's own `define actor`, it is that same
-        // declaration for a kind the world defines rather than a file — so it
-        // has a parent AND has to generate. "Has a parent" was the test for
-        // "somebody else writes this", and it stopped being the same question
-        // the moment an actor could be defined in a world.
-        const inWorldActor = definesWorld(block.workspace);
-        if (block.getParent() && !inWorldActor) {
-          return '';
-        }
-        if (inWorldActor && !hasActorInScope(block)) {
-          return '';
-        }
-        const name = block.getFieldValue('NAME') || 'do something';
-        const phase = block.getFieldValue('PHASE') || 'decide';
-        const body = generator.statementToCode(block, 'DO');
-        // The closure's `actor` SHADOWS the module's builder, deliberately: a
-        // body written in an actor file says `this actor` and means this one, and
-        // `this actor` compiles to `actor` wherever it is written.
-        return (
-          `actor.defineStep(${str(slug(name))}, ${str(phase)}, ` +
-          `(actor, world, delta) => {\n${body}});\n`
-        );
-      },
+const worldTraitStep = defineBlock({
+  type: 'world_trait_step',
+  message0: 'each frame during %1 do %2',
+  args0: [
+    {type: 'field_dropdown', name: 'PHASE', options: phaseOptions},
+    {type: 'field_input', name: 'NAME', text: 'do something'},
+  ],
+  message1: '%1',
+  args1: [{type: 'input_statement', name: 'DO'}],
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [
+    phaseOptionsExtension,
+    bodyButtonExtension,
+    bodySurfaceExtension,
+  ],
+  style: 'event_blocks',
+  tooltip:
+    'Run this every tick for each thing that has this trait — or, under a ' +
+    '`define actor`, for each actor of that kind. The thing itself is what ' +
+    'the blocks inside act on.',
+  generator: {
+    javascript(block, generator) {
+      // WHAT IT IS CHAINED UNDER DECIDES WHAT IT IS, which is the same
+      // bargain `world_rule_property` makes in its three homes.
+      //
+      // Under a `define trait`, this is a DECLARATION and nothing more: the
+      // rule's module is assembled from its metadata and the body is pulled
+      // out by a pass of its own (ruleMeta), so generating anything here
+      // would be writing it twice.
+      //
+      // Under a `define actor`, there is no metadata pass and nothing else to
+      // write it — so it is the whole declaration, and this is it.
+      // `defineStep` is the behaviour half of `defineProperty`: work a KIND of
+      // actor does every frame without a rule to do it in (ActorBuilder).
+      //
+      // WHICH `define actor` still matters, and that is the two tests. An
+      // `.actor` file's is the module being written, so the step goes straight
+      // on `actor`. A world's is a block scope with its own `actor` bound
+      // inside it, and a step written outside every such scope has no `actor`
+      // to be about — `hasActorInScope` is what keeps that from compiling to a
+      // reference to nothing.
+      //
+      // NOT "does it have a parent", which is what this asked until `each
+      // frame` became a row in an `.actor` too. That question had the right
+      // answer in two files out of three by coincidence.
+      const inWorldActor = definesWorld(block.workspace);
+      if (inWorldActor ? !hasActorInScope(block) : !definesActorFile(block)) {
+        return '';
+      }
+      const name = block.getFieldValue('NAME') || 'do something';
+      const phase = block.getFieldValue('PHASE') || 'decide';
+      const body = generator.statementToCode(block, 'DO');
+      // The closure's `actor` SHADOWS the module's builder, deliberately: a
+      // body written in an actor file says `this actor` and means this one, and
+      // `this actor` compiles to `actor` wherever it is written.
+      return (
+        `actor.defineStep(${str(slug(name))}, ${str(phase)}, ` +
+        `(actor, world, delta) => {\n${body}});\n`
+      );
     },
-  });
-
-/** The chaining one — a trait's member, and what `DOMAIN_BLOCKS` carries. */
-const worldTraitStep = traitStepDefinition(false);
-
-/** The root-shaped one, for an `.actor` file (see `traitStepDefinition`). */
-const worldActorStep = traitStepDefinition(true);
+  },
+});
 
 /**
  * `show as ⟨text⟩` — the symbol a picker draws this actor with.
@@ -9313,9 +9307,13 @@ export function buildDomainPalette(
         property,
       })),
   );
-  // `each frame` and `define drawing` wear the connections their file makes
-  // sense of: a root in an `.actor`, a chained row everywhere else
-  // (`traitStepDefinition`, `drawingDefinition`).
+  // `define drawing` wears the connections its file makes sense of: a root in
+  // an `.actor`, a chained row everywhere else (`drawingDefinition`).
+  //
+  // `each frame` was the same until it became a row under `define actor` in an
+  // `.actor` too, which is where the two shapes were costing the most — see
+  // the note on `worldTraitStep`. `define drawing` still has them, and every
+  // reason they are a liability there still holds.
   //
   // SUBSTITUTED, not appended. Two definitions of one type in the list would
   // leave which one lands on the workspace up to registration order, and a
@@ -9323,11 +9321,7 @@ export function buildDomainPalette(
   const shaped =
     options.fileKind === 'actor'
       ? DOMAIN_BLOCKS.map(block =>
-          block.type === 'world_trait_step'
-            ? worldActorStep
-            : block.type === 'world_define_drawing'
-              ? actorDefineDrawing
-              : block,
+          block.type === 'world_define_drawing' ? actorDefineDrawing : block,
         )
       : DOMAIN_BLOCKS;
   const ownBlocks: DomainBlock[] = [];

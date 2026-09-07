@@ -58,18 +58,20 @@ export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
   ['world_rule_step_in', new Set<FileKind>(['rule'])],
   // `each frame` reads three ways, and all three are the same sentence about
   // whoever owns it: chained under a `define trait` it is one of that trait's
-  // members; standing on its own in an `.actor` file it is work that kind of
-  // actor does; and chained inside a world's own `define actor` it is that
-  // same work for a kind the world defines rather than a file.
+  // members; chained under an `.actor` file's `define actor` it is work that
+  // kind of actor does; and chained inside a world's own `define actor` it is
+  // that same work for a kind the world defines rather than a file.
   //
   // The third was missing, and it read as a health bar that never moved: a
   // world-defined actor could do no per-frame work at all, so an actor that
   // had to look at something each frame had to be a file.
   //
-  // In a world it must be INSIDE a `define actor`, and its generator writes
-  // nothing when it is not — `actor` is bound by the block that opens that
-  // actor's body, and a step chained under `define world` would emit a call on
-  // a name that is not there, which stops the whole project compiling.
+  // IT MUST BE INSIDE A `define actor` in either of the last two, and its
+  // generator writes nothing when it is not (`worldTraitStep`). In a world
+  // that is what keeps a step from emitting a call on an `actor` that is not
+  // bound, which would stop the whole project compiling; in an `.actor` file
+  // it is what makes an unattached step say so — greyed by
+  // `DisableOrphansPlugin` rather than quietly compiled from nowhere.
   ['world_trait_step', new Set<FileKind>(['actor', 'rule', 'world'])],
   // A drawing belongs to a KIND of actor, and a kind is what an `.actor` file
   // is. Not a rule: a rule is a shared mechanic, and how a particular actor

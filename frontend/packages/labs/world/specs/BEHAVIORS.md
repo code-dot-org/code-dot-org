@@ -141,8 +141,9 @@ lesser cost; revisit once it has been seen.
 
 **A root has no previous connection.** `DisableOrphansPlugin` disables a
 top-level block that has one, and everything chained after it — which is what
-made `each frame` in an actor file arrive greyed out and generating nothing.
-`world_behavior` is a root, so it takes a `next` and no `previous`.
+made `each frame` in an actor file arrive greyed out and generating nothing,
+and is why that block is a ROW under `define actor` today rather than a root at
+all. `world_behavior` is a root, so it takes a `next` and no `previous`.
 
 **One phase, and it is not on the block.** A behavior runs in `decide` — where
 something works out what it is about to do, which is what a behavior IS. The

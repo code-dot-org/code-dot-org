@@ -742,9 +742,63 @@ const PILOT_ACTOR = JSON.stringify({
               type: 'world_set_Jetpack_FuelProperty',
               inputs: {ACTOR: me(), VALUE: number(50)},
             },
+            // THE SHOVEL: `z` held, and whichever arrow is held with it — which is
+            // what JETPACK.md asks for ("in the direction they are also holding").
+            // With no arrow at all the direction is nothing, the aimed-at point is
+            // where the Pilot is standing, and the nearest diggable block to that is
+            // the one under its feet. Which is the right answer for a shovel.
+            //
+            // A STEP RATHER THAN A HAT, because holding a key is a state and not a
+            // moment; and polling costs nothing, since digging a block that is
+            // already a hole does nothing (`rules/digging`).
+            {
+              type: 'world_trait_step',
+              fields: {PHASE: 'touch', NAME: 'dig where it is pointing'},
+              inputs: {
+                DO: {
+                  block: onlyIf(
+                    {block: {type: 'world_is_key_down', fields: {KEY: 'z'}}},
+                    {
+                      type: 'world_do_Digging_DigTowardsAction',
+                      inputs: {
+                        ACTOR: me(),
+                        VALUE: {
+                          block: {
+                            type: 'world_vector_of',
+                            inputs: {
+                              X: {
+                                block: {
+                                  type: 'math_arithmetic',
+                                  fields: {OP: 'MINUS'},
+                                  inputs: {
+                                    A: keyAsNumber('right arrow'),
+                                    B: keyAsNumber('left arrow'),
+                                  },
+                                },
+                              },
+                              Y: keyAsNumber('down arrow'),
+                            },
+                          },
+                        },
+                      },
+                    },
+                  ),
+                },
+              },
+            },
           ]),
         },
       },
+      // THE LADDER, as four moments rather than a poll: up and down each
+      // start a climb, and letting either go ends it. The same blocks
+      // `actors/enhance/climbArrows` writes for a learner — shared rather than
+      // copied, so the Pilot and a learner's actor cannot drift apart — laid
+      // out here where the Pilot's other handlers are.
+      ...climbArrowsHandlers().map((hat, index) => ({
+        ...hat,
+        x: 20,
+        y: 900 + index * 120,
+      })),
       // The press does BOTH, in this order and with no question round it —
       // see the header. With fuel, the hop is lost inside the thrust; with an
       // empty tank, `start flying` does nothing and the hop is all there is.
@@ -761,61 +815,6 @@ const PILOT_ACTOR = JSON.stringify({
               inputs: {VALUE: me()},
             },
           ]),
-        },
-      },
-      // THE SHOVEL: `z` held, and whichever arrow is held with it — which is
-      // what JETPACK.md asks for ("in the direction they are also holding").
-      // With no arrow at all the direction is nothing, the aimed-at point is
-      // where the Pilot is standing, and the nearest diggable block to that is
-      // the one under its feet. Which is the right answer for a shovel.
-      //
-      // A STEP RATHER THAN A HAT, because holding a key is a state and not a
-      // moment; and polling costs nothing, since digging a block that is
-      // already a hole does nothing (`rules/digging`).
-      // THE LADDER, as four moments rather than a poll: up and down each
-      // start a climb, and letting either go ends it. The same blocks
-      // `actors/enhance/climbArrows` writes for a learner — shared rather than
-      // copied, so the Pilot and a learner's actor cannot drift apart.
-      ...climbArrowsHandlers().map((hat, index) => ({
-        ...hat,
-        x: 20,
-        y: 900 + index * 120,
-      })),
-      {
-        type: 'world_trait_step',
-        x: 20,
-        y: 660,
-        fields: {PHASE: 'touch', NAME: 'dig where it is pointing'},
-        inputs: {
-          DO: {
-            block: onlyIf(
-              {block: {type: 'world_is_key_down', fields: {KEY: 'z'}}},
-              {
-                type: 'world_do_Digging_DigTowardsAction',
-                inputs: {
-                  ACTOR: me(),
-                  VALUE: {
-                    block: {
-                      type: 'world_vector_of',
-                      inputs: {
-                        X: {
-                          block: {
-                            type: 'math_arithmetic',
-                            fields: {OP: 'MINUS'},
-                            inputs: {
-                              A: keyAsNumber('right arrow'),
-                              B: keyAsNumber('left arrow'),
-                            },
-                          },
-                        },
-                        Y: keyAsNumber('down arrow'),
-                      },
-                    },
-                  },
-                },
-              },
-            ),
-          },
         },
       },
       // DOWN, which is free everywhere a pad can be. The Pilot's other use
@@ -1286,38 +1285,36 @@ const switchedWallActor = (name: string, colour: string) =>
                 type: 'world_set_Switches_WallColourProperty',
                 inputs: {ACTOR: me(), VALUE: swatch(colour)},
               },
-            ]),
-          },
-        },
-        {
-          type: 'world_trait_step',
-          x: 20,
-          y: 220,
-          fields: {PHASE: 'react', NAME: 'look like what it is'},
-          inputs: {
-            DO: {
-              block: {
-                type: 'world_set_Appearance_OpacityProperty',
+              {
+                type: 'world_trait_step',
+                fields: {PHASE: 'react', NAME: 'look like what it is'},
                 inputs: {
-                  ACTOR: me(),
-                  VALUE: {
+                  DO: {
                     block: {
-                      type: 'logic_ternary',
+                      type: 'world_set_Appearance_OpacityProperty',
                       inputs: {
-                        IF: {
+                        ACTOR: me(),
+                        VALUE: {
                           block: {
-                            type: 'world_get_Collisions_PassesThroughThingsProperty',
-                            inputs: {ACTOR: me()},
+                            type: 'logic_ternary',
+                            inputs: {
+                              IF: {
+                                block: {
+                                  type: 'world_get_Collisions_PassesThroughThingsProperty',
+                                  inputs: {ACTOR: me()},
+                                },
+                              },
+                              THEN: number(0.25),
+                              ELSE: number(1),
+                            },
                           },
                         },
-                        THEN: number(0.25),
-                        ELSE: number(1),
                       },
                     },
                   },
                 },
               },
-            },
+            ]),
           },
         },
         {
@@ -1615,41 +1612,39 @@ const shurikenActor = () =>
                 type: 'world_set_Turning_TravelSpeedProperty',
                 inputs: {ACTOR: me(), VALUE: number(2)},
               },
-            ]),
-          },
-        },
-        // THE SPIN, which is the level's and not the rule's: `points where it
-        // goes` would aim it, and a shuriken does not point anywhere. Turning
-        // the drawing a little every frame is all a spin is.
-        {
-          type: 'world_trait_step',
-          x: 20,
-          y: 220,
-          fields: {PHASE: 'react', NAME: 'spin'},
-          inputs: {
-            DO: {
-              block: {
-                type: 'world_set_Space_RotationProperty',
+              // THE SPIN, which is the level's and not the rule's: `points where it
+              // goes` would aim it, and a shuriken does not point anywhere. Turning
+              // the drawing a little every frame is all a spin is.
+              {
+                type: 'world_trait_step',
+                fields: {PHASE: 'react', NAME: 'spin'},
                 inputs: {
-                  ACTOR: me(),
-                  VALUE: {
+                  DO: {
                     block: {
-                      type: 'math_arithmetic',
-                      fields: {OP: 'ADD'},
+                      type: 'world_set_Space_RotationProperty',
                       inputs: {
-                        A: {
+                        ACTOR: me(),
+                        VALUE: {
                           block: {
-                            type: 'world_get_Space_RotationProperty',
-                            inputs: {ACTOR: me()},
+                            type: 'math_arithmetic',
+                            fields: {OP: 'ADD'},
+                            inputs: {
+                              A: {
+                                block: {
+                                  type: 'world_get_Space_RotationProperty',
+                                  inputs: {ACTOR: me()},
+                                },
+                              },
+                              B: number(9),
+                            },
                           },
                         },
-                        B: number(9),
                       },
                     },
                   },
                 },
               },
-            },
+            ]),
           },
         },
       ],
@@ -1906,22 +1901,20 @@ const DOOR_ACTOR = JSON.stringify({
           block: stack([
             useTrait('Collisions#CanCollideTrait'),
             {type: 'world_set_sprite', fields: {SPRITE: 'door.png'}},
+            {
+              type: 'world_trait_step',
+              fields: {PHASE: 'react', NAME: 'open when the gems are gone'},
+              inputs: {
+                DO: {
+                  block: onlyIf(noneLeft('actors/gem'), {
+                    type: 'world_set_sprite',
+                    fields: {SPRITE: 'doorOpen.png'},
+                    inputs: {ACTOR: me()},
+                  }),
+                },
+              },
+            },
           ]),
-        },
-      },
-      {
-        type: 'world_trait_step',
-        x: 20,
-        y: 180,
-        fields: {PHASE: 'react', NAME: 'open when the gems are gone'},
-        inputs: {
-          DO: {
-            block: onlyIf(noneLeft('actors/gem'), {
-              type: 'world_set_sprite',
-              fields: {SPRITE: 'doorOpen.png'},
-              inputs: {ACTOR: me()},
-            }),
-          },
         },
       },
     ],
@@ -2076,28 +2069,26 @@ const FUEL_BAR_ACTOR = JSON.stringify({
               type: 'world_set_Space_ScaleProperty',
               inputs: {ACTOR: me(), X: number(1.5), Y: number(2)},
             },
-          ]),
-        },
-      },
-      {
-        type: 'world_trait_step',
-        x: 20,
-        y: 200,
-        fields: {PHASE: 'react', NAME: 'follow the tank'},
-        inputs: {
-          DO: {
-            block: {
-              type: 'world_set_Progress_FractionProperty',
+            {
+              type: 'world_trait_step',
+              fields: {PHASE: 'react', NAME: 'follow the tank'},
               inputs: {
-                ACTOR: me(),
-                VALUE: {
+                DO: {
                   block: {
-                    type: 'world_query_Jetpack_FuelFractionQuery',
+                    type: 'world_set_Progress_FractionProperty',
                     inputs: {
-                      ACTOR: {
+                      ACTOR: me(),
+                      VALUE: {
                         block: {
-                          type: 'world_first_actor',
-                          inputs: {SOURCE: kind('actors/pilot')},
+                          type: 'world_query_Jetpack_FuelFractionQuery',
+                          inputs: {
+                            ACTOR: {
+                              block: {
+                                type: 'world_first_actor',
+                                inputs: {SOURCE: kind('actors/pilot')},
+                              },
+                            },
+                          },
                         },
                       },
                     },
@@ -2105,7 +2096,7 @@ const FUEL_BAR_ACTOR = JSON.stringify({
                 },
               },
             },
-          },
+          ]),
         },
       },
       {

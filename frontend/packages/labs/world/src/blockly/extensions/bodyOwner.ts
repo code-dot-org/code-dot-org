@@ -15,7 +15,7 @@ import type {Block, BlockSvg} from 'blockly';
 
 import {defineExtension, type Extension} from '@code-dot-org/blockly';
 
-import {HIDE_BODIES} from '../bodySurfaces';
+import {BODY_OWNER_ID, HIDE_BODIES} from '../bodySurfaces';
 
 import {ARGUMENTS_INPUT, DESCRIPTION_ROW, RETURNS_ROW} from './blockDesigner';
 import {removeBodyButton} from './bodyButton';
@@ -73,6 +73,31 @@ export const bodySurfaceExtension: Extension = defineExtension(
       const block = this as unknown as Block;
       if (!HIDE_BODIES || isForGenerator(block)) {
         return;
+      }
+      // THE HEAD OF A SURFACE WEARS A `next`, WHATEVER IT WEARS ELSEWHERE.
+      //
+      // A body hangs off the head's `next` on the surface, wherever the FILE
+      // holds it (`bodySurfaces.bodyOf`) — and `each frame` in an `.actor`
+      // file is built as a definition ROOT, with neither connection, because a
+      // top-level block with a previous is an orphan to `DisableOrphansPlugin`
+      // (`domainBlocks.traitStepDefinition`). So the one block whose body is
+      // the whole point of the surface was the one block that could not hold
+      // it, and opening it threw out of Blockly's deserializer before anything
+      // rendered:
+      //
+      //   The block "world_trait_step" (id="body-owner") is missing a(n) next
+      //
+      // Only the copy, and only the NEXT: `anchorBodyOwner` takes the previous
+      // off again on the way in, so the head is still a root and still cannot
+      // be chained to anything above it. The block on the interface — the real
+      // one, with its own id — keeps the shape its file gave it.
+      //
+      // HERE rather than in `anchorBodyOwner`, which is the other half of this
+      // and would be the obvious home for it. That runs after the document is
+      // on the workspace; this has to be true BEFORE, because the connection
+      // is what the loader is looking for while it is attaching the body.
+      if (block.id === BODY_OWNER_ID && !block.nextConnection) {
+        block.setNextStatement(true);
       }
       // Quiet: `world_trait_step` in an actor file has been through here
       // already on a previous render, and a missing input is not an error.

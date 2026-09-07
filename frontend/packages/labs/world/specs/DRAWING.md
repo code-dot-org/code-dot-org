@@ -36,14 +36,19 @@ define drawing ⟨64⟩ by ⟨8⟩
   draw rectangle at ⟨0, 0⟩ size ⟨64 × ⟨fraction of this actor⟩, 8⟩
 ```
 
-It is the sibling of `each frame` in shape as well as in job: TWO SHAPES, one
-block. Standing on its own in an `.actor` file it is a definition root, since
-`DisableOrphansPlugin` greys out a top-level block that has a previous
-connection along with everything chained after it. Chained inside a world's own
-`define actor` it is one of that actor's rows, which is what lets a
-world-defined actor have a picture — and it needed no field to say WHOSE, since
-a local actor's body already generates inside a block where `actor` is that
-builder.
+It has TWO SHAPES, one block. Standing on its own in an `.actor` file it is a
+definition root, since `DisableOrphansPlugin` greys out a top-level block that
+has a previous connection along with everything chained after it. Chained
+inside a world's own `define actor` it is one of that actor's rows, which is
+what lets a world-defined actor have a picture — and it needed no field to say
+WHOSE, since a local actor's body already generates inside a block where
+`actor` is that builder.
+
+`each frame` was its sibling in this and is not any more: it is a ROW under
+`define actor` in an `.actor` file too, so it has one shape everywhere
+(`domainBlocks.worldTraitStep`). A drawing is still a root because a drawing is
+a root — everything that made two shapes a liability there applies here, and
+this is the block that still pays it.
 
 It was root-only at first, and that made a whole class of actor unsayable in a
 world: one with a picture. It presented as a scoreboard drawn as a plain green

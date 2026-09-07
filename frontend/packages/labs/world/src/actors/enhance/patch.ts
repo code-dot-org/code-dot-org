@@ -83,11 +83,14 @@ export function hasRoot(
 /**
  * Add a top-level block, below everything already in the file.
  *
- * A hat is a ROOT, not a row: `define actor` has no mouth to put one in, and
- * `DisableOrphansPlugin` disables a top-level block that has a previous
- * connection along with everything under it (`actors/stock/workspace` says the
- * same thing about a drawing). So an event handler sits beside the definition,
- * which is where an actor file's handlers already are.
+ * A hat is a ROOT, not a row: it takes no previous connection, and
+ * `DisableOrphansPlugin` disables a top-level block that HAS one along with
+ * everything under it (`actors/stock/workspace` says the same thing about a
+ * drawing). So an event handler sits beside the definition, which is where an
+ * actor file's handlers already are.
+ *
+ * FOR HATS AND DRAWINGS, and no longer for steps: `each frame` chains under
+ * `define actor` now, so an enhancement adding one uses `append` instead.
  *
  * Below, because a file is read downwards and what was there was written
  * first.

@@ -299,30 +299,29 @@ const CROSSHAIR_ACTOR = JSON.stringify({
             {type: 'world_set_sprite', fields: {SPRITE: 'switch.png#1'}},
             // The same trait the coins carry, which is the whole of what a
             // shared one is FOR: the crosshair's own `each frame` below
-            // belongs to the crosshair, and this belongs to anything that asks.
+            // belongs to the crosshair alone, and this belongs to anything
+            // that asks for it.
             useTrait('Spin#SpinTrait'),
-          ]),
-        },
-      },
-      {
-        // In `sense`, the first moment of the frame: the crosshair is reading
-        // the world rather than deciding anything, and everything that runs
-        // afterwards sees it where the pointer is.
-        type: 'world_trait_step',
-        x: 20,
-        y: 200,
-        fields: {PHASE: 'sense', NAME: 'follow the pointer'},
-        inputs: {
-          DO: {
-            block: {
-              type: 'world_set_position',
+            {
+              // In `sense`, the first moment of the frame: the crosshair is reading
+              // the world rather than deciding anything, and everything that runs
+              // afterwards sees it where the pointer is.
+              type: 'world_trait_step',
+              fields: {PHASE: 'sense', NAME: 'follow the pointer'},
               inputs: {
-                ACTOR: me(),
-                X: mouseAxis('x'),
-                Y: mouseAxis('y'),
+                DO: {
+                  block: {
+                    type: 'world_set_position',
+                    inputs: {
+                      ACTOR: me(),
+                      X: mouseAxis('x'),
+                      Y: mouseAxis('y'),
+                    },
+                  },
+                },
               },
             },
-          },
+          ]),
         },
       },
     ],

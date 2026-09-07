@@ -249,9 +249,14 @@ describe('domain block generators', () => {
   it('an actor’s own `each frame` declares a step on the kind', () => {
     // The behaviour half of an actor's own properties: work a KIND does every
     // frame, with no rule to do it in (ActorBuilder.defineStep).
+    //
+    // CHAINED UNDER THE `define actor`, which is where an `.actor` file's
+    // steps live — the top of the chain is what says who writes this, and a
+    // step whose chain tops out anywhere else writes nothing.
     const code = generatorFor('world_trait_step')(
       {
-        getParent: () => null,
+        getParent: () => ({type: 'world_actor', getParent: () => null}),
+        workspace: {getTopBlocks: () => []},
         getFieldValue: (name: string) =>
           name === 'NAME' ? 'follow the mouse' : 'decide',
       } as never,
@@ -271,7 +276,8 @@ describe('domain block generators', () => {
     // generating here would write it twice.
     const code = generatorFor('world_trait_step')(
       {
-        getParent: () => ({type: 'world_rule_trait'}),
+        getParent: () => ({type: 'world_rule_trait', getParent: () => null}),
+        workspace: {getTopBlocks: () => []},
         getFieldValue: () => 'x',
       } as never,
       {statementToCode: () => '  body;\n'} as never,
