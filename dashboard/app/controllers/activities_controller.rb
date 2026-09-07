@@ -159,8 +159,6 @@ class ActivitiesController < ApplicationController
     if current_user
       authorize! :create, Activity
       authorize! :create, UserLevel
-    else
-      return unless DCDO.get('anonymous_level_tracking_enabled', false)
     end
 
     test_result = params[:testResult].to_i

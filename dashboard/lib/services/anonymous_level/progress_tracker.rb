@@ -32,6 +32,8 @@ module Services
       end
 
       def call
+        return unless DCDO.get('anonymous_level_tracking_enabled', false)
+
         Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
           anonymous_level_progress = ::AnonymousLevel::Progress.find_or_initialize_by(
             anon_user_id:,
