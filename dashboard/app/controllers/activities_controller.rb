@@ -159,12 +159,13 @@ class ActivitiesController < ApplicationController
     if current_user
       authorize! :create, Activity
       authorize! :create, UserLevel
+    else
+      return unless DCDO.get('anonymous_level_tracking_enabled', false)
     end
 
     test_result = params[:testResult].to_i
 
     if @script_level && @level
-      submitted = params[:submitted] == 'true'
       # convert milliseconds to seconds
       time_since_last_milestone = [(params[:timeSinceLastMilestone].to_f / 1000).ceil.to_i, MAX_INT_TIME_SPENT].min
 
@@ -174,7 +175,7 @@ class ActivitiesController < ApplicationController
           level_id: @level.id,
           script_id: @script_level.script_id,
           new_result: test_result,
-          submitted:,
+          submitted: params[:submitted] == 'true',
           level_source_id: @level_source.try(:id),
           pairing_user_ids: pairing_user_ids,
           locale: I18n.locale,
@@ -190,7 +191,7 @@ class ActivitiesController < ApplicationController
           level_id: @level.id,
           unit_group_id: @unit_group&.id,
           level_source_id: @level_source&.id,
-          submitted:,
+          submitted: params[:submitted] == 'true',
           new_result: test_result,
           time_spent: time_since_last_milestone,
           locale: I18n.locale,

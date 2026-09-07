@@ -14,7 +14,6 @@ class Services::AnonymousLevel::ProgressTrackerTest < ActiveSupport::TestCase
   let(:submitted) {false}
   let(:time_spent) {10}
   let(:locale) {'uk-UA'}
-  let(:tracking_enabled) {true}
 
   let(:tracker_params) do
     {
@@ -31,11 +30,6 @@ class Services::AnonymousLevel::ProgressTrackerTest < ActiveSupport::TestCase
 
   let(:progress_scope) {::AnonymousLevel::Progress.where(anon_user_id:, script:, level:)}
 
-  before do
-    allow(DCDO).to receive(:get).and_call_original
-    allow(DCDO).to receive(:get).with('anonymous_level_tracking_enabled', false).and_return(tracking_enabled)
-  end
-
   it 'inherits from Services::Base' do
     _(described_class.superclass).must_equal Services::Base
   end
@@ -45,6 +39,10 @@ class Services::AnonymousLevel::ProgressTrackerTest < ActiveSupport::TestCase
 
     it 'creates anonymous level progress' do
       _ {track_progress}.must_change -> {progress_scope.count}, from: 0, to: 1
+    end
+
+    it 'returns anonymous level progress' do
+      _(track_progress).must_equal progress_scope.first!
     end
 
     it 'records progress attributes' do
@@ -109,30 +107,6 @@ class Services::AnonymousLevel::ProgressTrackerTest < ActiveSupport::TestCase
 
         expect(::AnonymousLevel::Progress).to have_received(:find_or_initialize_by).twice
         expect(existing_progress).to have_received(:update_progress!).with(progress_attributes).once
-      end
-    end
-
-    context 'when tracking is disabled' do
-      let(:tracking_enabled) {false}
-
-      it 'does not persist progress' do
-        _ {track_progress}.wont_change -> {progress_scope.count}
-      end
-
-      it 'logs progress payload' do
-        CDO.log.expects(:info).once.with do |message|
-          payload = JSON.parse(message)
-          _(payload['namespace']).must_equal 'anonymous_level'
-          _(payload['event']).must_equal 'progress_tracking'
-          _(payload['anon_user_id']).must_equal anon_user_id
-          _(payload['script_id']).must_equal script.id
-          _(payload['level_id']).must_equal level.id
-          _(payload['unit_group_id']).must_equal unit_group.id
-          _(payload['submitted']).must_equal submitted
-          _(payload['new_result']).must_equal new_result
-        end
-
-        track_progress
       end
     end
   end

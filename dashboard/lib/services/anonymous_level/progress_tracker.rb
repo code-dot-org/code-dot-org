@@ -32,39 +32,24 @@ module Services
       end
 
       def call
-        if DCDO.get('anonymous_level_tracking_enabled', false)
-          Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-            anonymous_level_progress = ::AnonymousLevel::Progress.find_or_initialize_by(
-              anon_user_id:,
-              script_id:,
-              level_id:,
-            )
-
-            anonymous_level_progress.update_progress!(
-              new_result:,
-              submitted:,
-              unit_group_id:,
-              level_source_id:,
-              is_navigator:,
-              time_spent:,
-              locale:
-            )
-          end
-        else
-          CDO.log.info JSON.dump(
-            namespace: 'anonymous_level',
-            event: 'progress_tracking',
+        Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+          anonymous_level_progress = ::AnonymousLevel::Progress.find_or_initialize_by(
             anon_user_id:,
             script_id:,
             level_id:,
+          )
+
+          anonymous_level_progress.update_progress!(
+            new_result:,
+            submitted:,
             unit_group_id:,
             level_source_id:,
-            submitted:,
-            new_result:,
             is_navigator:,
             time_spent:,
-            locale:,
+            locale:
           )
+
+          anonymous_level_progress
         end
       end
     end
