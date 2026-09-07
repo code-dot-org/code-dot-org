@@ -48,8 +48,35 @@ export function findOpaqueBounds(
 }
 
 // Trimming is deterministic; cache by source so re-runs don't redo the work.
+// Bounded: keys are whole source dataURIs and every edit mints a new one, so
+// an unbounded map grows for the tab's life (module state outlives levels).
+// A miss just re-trims, tens of milliseconds per image.
+export const TRIM_CACHE_LIMIT = 60;
 const trimCache = new Map<string, Promise<string>>();
 const frameThumbCache = new Map<string, Promise<string>>();
+
+/** Bounded-cache read; refreshes the entry's recency. */
+export function boundedGet<V>(map: Map<string, V>, key: string): V | undefined {
+  const value = map.get(key);
+  if (value !== undefined) {
+    map.delete(key);
+    map.set(key, value);
+  }
+  return value;
+}
+
+/** Bounded-cache write; evicts oldest entries to stay under the limit. */
+export function boundedSet<V>(
+  map: Map<string, V>,
+  key: string,
+  value: V,
+  limit: number = TRIM_CACHE_LIMIT
+): void {
+  while (!map.has(key) && map.size >= limit) {
+    map.delete(map.keys().next().value as string);
+  }
+  map.set(key, value);
+}
 
 // Trimmed image per costume name, for the block image fields (dropdown
 // thumbnails). Populated as animation lists get trimmed for preload.
@@ -84,7 +111,7 @@ export function forgetTrimmedThumbnail(name?: string): void {
  * nothing to trim (full-bleed content, fully transparent, or load failure).
  */
 function trimTransparentBorder(source: string): Promise<string> {
-  let cached = trimCache.get(source);
+  let cached = boundedGet(trimCache, source);
   if (!cached) {
     cached = new Promise<string>(resolve => {
       const img = new Image();
@@ -126,7 +153,7 @@ function trimTransparentBorder(source: string): Promise<string> {
       img.onerror = () => resolve(source);
       img.src = source;
     });
-    trimCache.set(source, cached);
+    boundedSet(trimCache, source, cached);
   }
   return cached;
 }
@@ -153,7 +180,7 @@ function firstFrameThumbnail(
   source: string,
   frameSize: {x: number; y: number}
 ): Promise<string> {
-  let cached = frameThumbCache.get(source);
+  let cached = boundedGet(frameThumbCache, source);
   if (!cached) {
     cached = new Promise<string>(resolve => {
       const img = new Image();
@@ -183,7 +210,7 @@ function firstFrameThumbnail(
       img.onerror = () => resolve(source);
       img.src = source;
     });
-    frameThumbCache.set(source, cached);
+    boundedSet(frameThumbCache, source, cached);
   }
   return cached;
 }
