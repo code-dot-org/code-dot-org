@@ -1,5 +1,6 @@
 .header {
   background-color: var(--background-brand-purple-primary-fixed);
+  padding: var(--spacing-p-xxs) var(--spacing-p-xs);
   margin-bottom: var(--spacing-p-m);
   // Keeps the band when printing; Chromium and WebKit still need the prefix.
   -webkit-print-color-adjust: exact;
@@ -8,8 +9,7 @@
 
 .logo {
   display: block;
-  height: 2.625rem;
-  margin: 0.25rem 1rem;
+  height: 2rem;
 }
 
 // The letter opens with the logo band, so the document title is for
