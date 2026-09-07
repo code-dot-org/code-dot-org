@@ -82,15 +82,22 @@ export const TILES: readonly Tile[] = [
       {kind: 'block', type: 'world_add_actor'},
       {kind: 'block', type: 'world_set_position'},
       {kind: 'block', type: 'world_set_sprite'},
-      // The Console whole: printing is how anything invisible is seen, and both
-      // the Input and the Motion branches ask for a print within two lessons.
-      // Origin is the only tile every path goes through, so it is the only
-      // place a thing both branches need can be granted (specs/PROGRESSION.md).
+      // Writing to the console: seeing something invisible is how both the
+      // Input and the Motion branches start, within two lessons of here, and
+      // Origin is the only tile every path goes through — so it is the only
+      // place a thing both branches need can be granted
+      // (specs/PROGRESSION.md). What an event CARRIED is granted by the tile
+      // where events start carrying anything, and stays there.
       //
-      // NOT a bare number. Every socket in this lesson arrives with a shadow
-      // already in it, so a Math drawer here would hold one block nothing
-      // needed — a drawer that exists to be empty-handed.
-      {kind: 'category', name: 'Console'},
+      // TWO BLOCKS, NOT A DRAWER. This granted the whole Console category when
+      // there was one; that drawer held these two and `log`, and it is gone —
+      // `write to console` lives in Text now, whose other blocks a first lesson
+      // has no use for. Granting the drawer here would open all of them.
+      //
+      // NOT a bare number either. Every socket in this lesson arrives with a
+      // shadow already in it, so a Math drawer here would hold one block
+      // nothing needed — a drawer that exists to be empty-handed.
+      {kind: 'block', type: 'world_print'},
       {kind: 'template', id: 'empty'},
     ],
     check: {

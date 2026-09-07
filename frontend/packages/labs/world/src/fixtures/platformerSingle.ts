@@ -168,7 +168,12 @@ const says = (event: string, y: number, message: string) => ({
   x: 20,
   y,
   inputs: {ACTOR: kind(PLAYER)},
-  next: {block: {type: 'world_log', fields: {TEXT: message}}},
+  next: {
+    block: {
+      type: 'world_print',
+      inputs: {VALUE: {shadow: {type: 'text', fields: {TEXT: message}}}},
+    },
+  },
 });
 
 const SINGLE_WORLD = JSON.stringify({

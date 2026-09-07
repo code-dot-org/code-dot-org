@@ -123,7 +123,12 @@ const onEvent = (event: string, x: number, y: number, message: string) => ({
   type: `world_on_${event}`,
   x,
   y,
-  next: {block: {type: 'world_log', fields: {TEXT: message}}},
+  next: {
+    block: {
+      type: 'world_print',
+      inputs: {VALUE: {shadow: {type: 'text', fields: {TEXT: message}}}},
+    },
+  },
 });
 
 // A Map is the raw world-population document (WorldBuilder.loadMap): each

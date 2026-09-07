@@ -817,7 +817,12 @@ const PILOT_ACTOR = JSON.stringify({
         y: 520,
         inputs: {ACTOR: me()},
         next: {
-          block: {type: 'world_log', fields: {TEXT: 'Out of fuel!'}},
+          block: {
+            type: 'world_print',
+            inputs: {
+              VALUE: {shadow: {type: 'text', fields: {TEXT: 'Out of fuel!'}}},
+            },
+          },
         },
       },
       refuel('actors/fuelCan', FULL_CAN, 640),

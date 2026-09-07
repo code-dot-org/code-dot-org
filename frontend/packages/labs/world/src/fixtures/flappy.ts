@@ -251,7 +251,12 @@ const BIRD_ACTOR = JSON.stringify({
         y: 460,
         next: {
           block: stack([
-            {type: 'world_log', fields: {TEXT: 'Crashed!'}},
+            {
+              type: 'world_print',
+              inputs: {
+                VALUE: {shadow: {type: 'text', fields: {TEXT: 'Crashed!'}}},
+              },
+            },
             {type: 'world_remove_actor', inputs: {ACTOR: me()}},
           ]),
         },
@@ -264,7 +269,14 @@ const BIRD_ACTOR = JSON.stringify({
         y: 580,
         next: {
           block: stack([
-            {type: 'world_log', fields: {TEXT: 'Out of the world!'}},
+            {
+              type: 'world_print',
+              inputs: {
+                VALUE: {
+                  shadow: {type: 'text', fields: {TEXT: 'Out of the world!'}},
+                },
+              },
+            },
             {type: 'world_remove_actor', inputs: {ACTOR: me()}},
           ]),
         },

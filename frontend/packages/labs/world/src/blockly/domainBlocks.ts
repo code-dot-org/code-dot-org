@@ -2859,6 +2859,19 @@ for (const rule of AUTHORING_RULES) {
   QUERY_BLOCK_TYPES_BY_RULE.set(rule, types);
 }
 
+/**
+ * `log ⟨Hello⟩` — SUPERSEDED, and kept only so saved files keep loading.
+ *
+ * It took its text in a FIELD, so the one thing it could say was a literal;
+ * `write to console` takes a socket and wears a text shadow, which types the
+ * same and also holds a score, a position, or anything else a learner has
+ * worked out. Two blocks that both compiled to `console.log` and differed in
+ * what they would accept is one block and a shadow.
+ *
+ * Off the toolbox, still registered — the bargain `use rule` makes for the
+ * same reason (`ROOT_HOMES`). A project saved with one goes on loading and
+ * goes on printing; nothing offers a second one.
+ */
 const worldLog = defineBlock({
   type: 'world_log',
   message0: 'log %1',
@@ -2874,16 +2887,26 @@ const worldLog = defineBlock({
   },
 });
 
-// Prints any value — pairs with the standard expression blocks (and
-// `world_event_value`) so a learner can log a computed value, not just a literal.
+/**
+ * `write to console ⟨…⟩` — the one way to say something to the console.
+ *
+ * A SOCKET WITH A TEXT SHADOW, which is what lets it replace the two blocks
+ * that were here. Dragged out it reads `write to console ⟨" "⟩` and can be
+ * typed into like a field, so the literal case costs nothing; drop a `score`
+ * or a `⟨x⟩ of ⟨this actor⟩` in and it prints that instead. The old pair made
+ * a learner choose between those before knowing there was a choice.
+ */
 const worldPrint = defineBlock({
   type: 'world_print',
-  message0: 'print %1',
+  message0: 'write to console %1',
   args0: [{type: 'input_value', name: 'VALUE'}],
   previousStatement: true,
   nextStatement: true,
+  extensions: [valueShadowExtension],
   style: 'text_blocks',
-  tooltip: 'Print a value to the console.',
+  tooltip:
+    'Write a message to the console. Type into it, or drop in anything that ' +
+    'works out a value — a score, a position, whatever the event carried.',
   generator: {
     javascript(block, generator) {
       const value = generator.valueToCode(block, 'VALUE', Order.NONE) || "''";
@@ -2891,6 +2914,13 @@ const worldPrint = defineBlock({
     },
   },
 });
+
+// Empty text, not a word. A shadow a learner types over should not first have
+// to be cleared, and `Hello` in every fresh one is a word the program appears
+// to have meant.
+registerValueShadows('world_print', [
+  {name: 'VALUE', shadow: {type: 'text', fields: {TEXT: ''}}},
+]);
 
 // The current event's value as an expression — the animation frame in a "when
 // animation frame changes" handler, the key in a "when a key is pressed" one.
@@ -8580,6 +8610,13 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_actor_age',
       // The actor an event was about, inside a handler for one that carries it.
       'world_event_actor',
+      // …and the other half of what a hat hands over: what the event CARRIED —
+      // the key that was pressed, the frame an animation reached. It was in
+      // Console, which it had nothing to do with: it landed there because
+      // printing it was the only way anybody had seen one, and a learner
+      // looking for it had no reason to open that drawer. It belongs beside the
+      // block that answers the other question a handler asks.
+      'world_event_value',
       // Declaring state this KIND of actor carries. The same block a rule and a
       // trait declare with: it already takes its meaning from where it sits, so
       // a third site is what it was built for, and a separate near-identical
@@ -8838,7 +8875,6 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
       ListVariable.setterType,
     ],
   },
-  {name: 'Console', blocks: ['world_log', 'world_print', 'world_event_value']},
   {
     name: 'Logic',
     blocks: [
@@ -8936,6 +8972,11 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
       // …and the long form of the same idea: a page of prose rather than a
       // line, drawn as markdown.
       'world_doc',
+      // …and saying one out loud. THE CONSOLE CATEGORY WAS THIS BLOCK, and a
+      // drawer holding one thing is a drawer to look in once and never again.
+      // What it writes is a value — usually a word, and the shadow it wears is
+      // a word — so it sits with the words.
+      'world_print',
     ],
   },
   // Variables last, as Blockly's own toolboxes have them. A rule's parameters

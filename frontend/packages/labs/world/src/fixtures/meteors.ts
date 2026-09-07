@@ -169,7 +169,12 @@ const SHIP_ACTOR = JSON.stringify({
         y: 300,
         inputs: {ACTOR: me()},
         next: {
-          block: {type: 'world_log', fields: {TEXT: 'Ship lost!'}},
+          block: {
+            type: 'world_print',
+            inputs: {
+              VALUE: {shadow: {type: 'text', fields: {TEXT: 'Ship lost!'}}},
+            },
+          },
         },
       },
     ],
@@ -230,7 +235,14 @@ const METEOR_ACTOR = JSON.stringify({
         inputs: {ACTOR: me()},
         next: {
           block: stack([
-            {type: 'world_log', fields: {TEXT: 'Rock broken up!'}},
+            {
+              type: 'world_print',
+              inputs: {
+                VALUE: {
+                  shadow: {type: 'text', fields: {TEXT: 'Rock broken up!'}},
+                },
+              },
+            },
             {
               type: 'world_remove_actor',
               inputs: {ACTOR: {block: {type: 'world_event_actor'}}},

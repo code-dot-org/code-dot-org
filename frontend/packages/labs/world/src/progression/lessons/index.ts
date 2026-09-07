@@ -571,7 +571,7 @@ you lean on the button.
 
 1. Give the Hero **use trait ⟨Takes Keyboard Input⟩**. On its own it does
    nothing: it is the Hero electing to be told about keys at all.
-2. Add a **when ⟨Hero⟩ hears ⟨space⟩ pressed** handler, and put a **print**
+2. Add a **when ⟨Hero⟩ hears ⟨space⟩ pressed** handler, and put a **write to console**
    inside it.
 3. Run it and hold space down for a few seconds. One line, not two hundred.
 4. Let go and press again. Now there are two.
@@ -609,7 +609,7 @@ so an actor can be told about its own clicks and nobody else's.
 ### What you do
 
 1. Give the Target **use trait ⟨Can Be Clicked⟩**.
-2. Add a **when ⟨Target⟩ is clicked** handler and **print** something in it.
+2. Add a **when ⟨Target⟩ is clicked** handler and **write to console** something in it.
 3. Click the Target, then click the empty space beside it. Only one of those
    says anything.
 
@@ -695,6 +695,19 @@ const setVelocity = (x: number, y: number) => ({
  * which actor it is about (`anyKind`). Inside it, `this actor` is still the
  * actor the key was pressed for.
  */
+/**
+ * `write to console ⟨"…"⟩`.
+ *
+ * A SOCKET, not a field. `log` took its text in a field and is off the toolbox
+ * (`domainBlocks.worldLog`); the block a learner is offered takes a value and
+ * wears a text shadow, so a literal is a `text` block dropped into it. Written
+ * here once because three lessons say something out loud.
+ */
+const consoleLine = (text: string) => ({
+  type: 'world_print',
+  inputs: {VALUE: {shadow: {type: 'text', fields: {TEXT: text}}}},
+});
+
 const onPressed = (actor: string, key: string, body: object) => ({
   type: 'world_on_Input_PressesEvent',
   fields: {FILTER0: key},
@@ -721,12 +734,7 @@ const force: WorldScenario = {
           ],
         },
       ],
-      handlers: [
-        onPressed('ball', 'space', {
-          type: 'world_log',
-          fields: {TEXT: 'bang'},
-        }),
-      ],
+      handlers: [onPressed('ball', 'space', consoleLine('bang'))],
     }),
     sprites: ['ball'],
     rules: ['motion', 'input'],
@@ -742,7 +750,7 @@ after you have let go.
 
 ### What you do
 
-1. In the **when ⟨any Ball⟩ hears space** handler, swap the **print** for
+1. In the **when ⟨any Ball⟩ hears space** handler, swap the **write to console** for
    **apply force**, and give it
    a shove to the right.
 2. Press space once. It moves, and it goes on moving: nothing is stopping it.
@@ -1107,12 +1115,7 @@ const kinds: WorldScenario = {
           ],
         },
       ],
-      handlers: [
-        onTouching('ball', {
-          type: 'world_log',
-          fields: {TEXT: 'I touched something'},
-        }),
-      ],
+      handlers: [onTouching('ball', consoleLine('I touched something'))],
     }),
     sprites: ['ball', 'coin', 'spike'],
     rules: ['motion', 'collisions'],
@@ -3487,7 +3490,7 @@ const script: WorldScenario = {
               },
             },
           },
-          next: {block: {type: 'world_log', fields: {TEXT: 'click'}}},
+          next: {block: consoleLine('click')},
         },
       ],
     }),

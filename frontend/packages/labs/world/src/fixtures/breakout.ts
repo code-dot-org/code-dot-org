@@ -199,7 +199,10 @@ export const velocity = (who: object, x: number, y: number) => ({
  */
 export const lostBall = () =>
   stack([
-    {type: 'world_log', fields: {TEXT: 'Ball lost!'}},
+    {
+      type: 'world_print',
+      inputs: {VALUE: {shadow: {type: 'text', fields: {TEXT: 'Ball lost!'}}}},
+    },
     {
       type: 'world_set_position',
       inputs: {

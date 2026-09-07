@@ -237,7 +237,14 @@ const SINGLE_WORLD = JSON.stringify({
         inputs: {ACTOR: kind(METEOR)},
         next: {
           block: stack([
-            {type: 'world_log', fields: {TEXT: 'Rock broken up!'}},
+            {
+              type: 'world_print',
+              inputs: {
+                VALUE: {
+                  shadow: {type: 'text', fields: {TEXT: 'Rock broken up!'}},
+                },
+              },
+            },
             {
               type: 'world_remove_actor',
               inputs: {ACTOR: {block: {type: 'world_event_actor'}}},
@@ -253,7 +260,14 @@ const SINGLE_WORLD = JSON.stringify({
         x: 900,
         y: 1060,
         inputs: {ACTOR: kind(SHIP)},
-        next: {block: {type: 'world_log', fields: {TEXT: 'Ship lost!'}}},
+        next: {
+          block: {
+            type: 'world_print',
+            inputs: {
+              VALUE: {shadow: {type: 'text', fields: {TEXT: 'Ship lost!'}}},
+            },
+          },
+        },
       },
     ],
   },

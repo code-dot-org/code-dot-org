@@ -355,7 +355,14 @@ const CRATE_ACTOR = JSON.stringify({
             // is dropped without complaint.
             inputs: {
               IF0: everyCrateIsHome(),
-              DO0: {block: {type: 'world_log', fields: {TEXT: 'Solved!'}}},
+              DO0: {
+                block: {
+                  type: 'world_print',
+                  inputs: {
+                    VALUE: {shadow: {type: 'text', fields: {TEXT: 'Solved!'}}},
+                  },
+                },
+              },
             },
           },
         },

@@ -96,7 +96,10 @@ const onBird = (type: string, y: number, fields: object, body: object[]) => ({
   next: {block: stack(body)},
 });
 
-const log = (text: string) => ({type: 'world_log', fields: {TEXT: text}});
+const log = (text: string) => ({
+  type: 'world_print',
+  inputs: {VALUE: {shadow: {type: 'text', fields: {TEXT: text}}}},
+});
 const removeMe = () => ({type: 'world_remove_actor', inputs: {ACTOR: me()}});
 
 const SINGLE_WORLD = JSON.stringify({

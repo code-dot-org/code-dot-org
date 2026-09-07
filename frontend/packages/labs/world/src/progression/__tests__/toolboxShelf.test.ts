@@ -35,18 +35,14 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
     'world_set_position',
   ],
   'input/arrows': ['world_use_trait'],
-  // …and step five, which prints what the event carried rather than a word of
-  // the learner's: `print` takes a value where `log` takes a typed-in string.
-  'input/press': [
-    'world_use_trait',
-    'world_log',
-    'world_print',
-    'world_event_value',
-  ],
-  'input/mouse': ['world_use_trait', 'world_log'],
+  // …and step five, which writes what the event carried rather than a word of
+  // the learner's — the same block either way, since it takes a value and
+  // wears a text shadow (`domainBlocks.worldPrint`).
+  'input/press': ['world_use_trait', 'world_print', 'world_event_value'],
+  'input/mouse': ['world_use_trait', 'world_print'],
   'input/two-hands': ['world_use_trait'],
   'motion/speed': ['world_use_trait'],
-  'motion/gravity': ['world_use_trait', 'world_log'],
+  'motion/gravity': ['world_use_trait', 'world_print'],
   'motion/force': [],
   'motion/units': [],
   'motion/drag': ['world_use_trait'],
@@ -62,7 +58,7 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
     'logic_compare',
     'world_get_Space_PositionProperty',
   ],
-  'logic/collision': ['world_use_trait', 'world_log'],
+  'logic/collision': ['world_use_trait', 'world_print'],
   'logic/and-or': ['logic_operation', 'world_get_Space_PositionProperty'],
   'look/sprite': ['world_set_sprite'],
   'place/position': ['world_set_position', 'world_random_place', 'math_number'],
@@ -70,7 +66,7 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
     'controls_if',
     'world_is_a',
     'world_event_actor',
-    'world_log',
+    'world_print',
   ],
   // The two Memory lessons need numbers and arithmetic, which are Place's
   // lesson on a branch they never touch — so those tiles OFFER them, and these
