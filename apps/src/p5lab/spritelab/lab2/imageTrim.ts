@@ -188,23 +188,65 @@ function firstFrameThumbnail(
   return cached;
 }
 
+/** Every animation name in a list. */
+export function animationNames(list: RuntimeAnimationList): Set<string> {
+  return new Set(
+    (list.orderedKeys || [])
+      .map(key => list.propsByKey[key]?.name)
+      .filter((name): name is string => !!name)
+  );
+}
+
+/**
+ * The list restricted to animations a program can put on stage: those whose
+ * name appears as a quoted literal in the compiled code (block fields
+ * compile to literals — costumes, backgrounds and world spawns alike), plus
+ * every background (scene code sets backgrounds the prelude may not name).
+ * A dynamically-built name misses here and decodes on demand instead.
+ */
+export function filterAnimationsToCode(
+  list: RuntimeAnimationList,
+  code: string
+): RuntimeAnimationList {
+  const orderedKeys = (list.orderedKeys || []).filter(key => {
+    const props = list.propsByKey[key];
+    const name = props?.name;
+    if (!name) {
+      return false;
+    }
+    return (
+      (props.categories || []).includes(BACKGROUNDS_CATEGORY) ||
+      code.includes(`"${name}"`) ||
+      code.includes(`'${name}'`)
+    );
+  });
+  const propsByKey: RuntimeAnimationList['propsByKey'] = {};
+  orderedKeys.forEach(key => {
+    propsByKey[key] = list.propsByKey[key];
+  });
+  return {orderedKeys, propsByKey};
+}
+
 /**
  * Return a copy of a serialized animation list whose costume dataURIs are
  * border-trimmed. Backgrounds are left alone (they should fill the canvas).
  * So are sprite sheets: their frame grid is their geometry, and trimming
  * the sheet's border would shift every frame off it — their thumbnail is
  * their first frame instead.
+ *
+ * keepNames widens the thumbnail-pruning universe when the list given is a
+ * scene-scoped subset: a thumbnail may only be dropped for a name absent
+ * from the whole project.
  */
 export async function trimAnimationListImages(
-  list: RuntimeAnimationList
+  list: RuntimeAnimationList,
+  keepNames?: Set<string>
 ): Promise<RuntimeAnimationList> {
   const propsByKey: RuntimeAnimationList['propsByKey'] = {};
   let newTrims = false;
   // Drop cached trims for names absent from the list: a deleted image's
   // thumbnail must not resurface when a new image takes the same name.
-  const currentNames = new Set(
-    (list.orderedKeys || []).map(key => list.propsByKey[key]?.name)
-  );
+  const currentNames = keepNames || animationNames(list);
   for (const name of trimmedByName.keys()) {
     if (!currentNames.has(name)) {
       trimmedByName.delete(name);

@@ -1,4 +1,6 @@
 import {
+  animationNames,
+  filterAnimationsToCode,
   findOpaqueBounds,
   loadedAnimations,
 } from '@cdo/apps/p5lab/spritelab/lab2/imageTrim';
@@ -97,5 +99,46 @@ describe('SpriteLab2 loadedAnimations', () => {
       orderedKeys: [],
       propsByKey: {},
     });
+  });
+});
+
+describe('SpriteLab2 filterAnimationsToCode', () => {
+  const list = {
+    orderedKeys: ['a', 'b', 'c', 'd'],
+    propsByKey: {
+      a: {name: 'wizard', dataURI: 'x'},
+      b: {name: 'unused', dataURI: 'x'},
+      c: {name: 'forest', dataURI: 'x', categories: ['backgrounds']},
+      d: {name: 'stone', dataURI: 'x'},
+    },
+  };
+
+  it('keeps names the code quotes, either quote style', () => {
+    const out = filterAnimationsToCode(
+      list,
+      `setAnimation(sprite, "wizard"); makePlatformBlocks('stone');`
+    );
+    expect(out.orderedKeys).toEqual(['a', 'c', 'd']);
+  });
+
+  it('always keeps backgrounds', () => {
+    const out = filterAnimationsToCode(list, '');
+    expect(out.orderedKeys).toEqual(['c']);
+  });
+
+  it('leaves the given list untouched', () => {
+    filterAnimationsToCode(list, '"wizard"');
+    expect(list.orderedKeys).toEqual(['a', 'b', 'c', 'd']);
+  });
+});
+
+describe('SpriteLab2 animationNames', () => {
+  it('collects every named animation', () => {
+    expect([
+      ...animationNames({
+        orderedKeys: ['a', 'b'],
+        propsByKey: {a: {name: 'x'}, b: {}},
+      }),
+    ]).toEqual(['x']);
   });
 });

@@ -25,7 +25,12 @@ import {
   posesByImageName,
   teeterTicks,
 } from './characterAnimations';
-import {loadedAnimations, trimAnimationListImages} from './imageTrim';
+import {
+  animationNames,
+  filterAnimationsToCode,
+  loadedAnimations,
+  trimAnimationListImages,
+} from './imageTrim';
 import {
   CONTACT_EPSILON,
   hasSupportAhead,
@@ -188,10 +193,33 @@ export default class SpriteLab2Engine extends SpriteLab {
         return;
       }
       const size = APP_WIDTH * (this.p5._pixelDensity || 1);
-      if (this.background.width !== size || this.background.height !== size) {
-        this.background.resize(size, size);
+      let buffer = this.background._displayBuffer;
+      if (!buffer || buffer.width !== size || buffer.height !== size) {
+        // A copy sized to the canvas backing: the shared preloaded image is
+        // never mutated (a resize in place changed it for every other
+        // consumer), and the unzoomed blit stays size-matched, which old
+        // software-rasterized canvases need to stay cheap.
+        buffer = this.background.get();
+        buffer.resize(size, size);
+        this.background._displayBuffer = buffer;
       }
-      this.p5.image(this.background, 0, 0, APP_WIDTH, APP_HEIGHT);
+      this.p5.image(buffer, 0, 0, APP_WIDTH, APP_HEIGHT);
+    };
+    // A costume name the scene-scoped preload never saw (one built
+    // dynamically at runtime) decodes on demand: the sprite changes costume
+    // when the decode lands, instead of p5.play throwing on the missing
+    // label.
+    const engine = this;
+    const baseSetAnimation = library.commands.setAnimation;
+    library.commands.setAnimation = function (spriteArg, animation) {
+      if (engine.p5Wrapper.preloadedSprites?.[animation]) {
+        return baseSetAnimation.call(this, spriteArg, animation);
+      }
+      engine.decodeAnimationOnDemand_(animation).then(found => {
+        if (found) {
+          baseSetAnimation.call(this, spriteArg, animation);
+        }
+      });
     };
     if (this.usesPlatformPhysics_) {
       // Sized per SCENE, not per level: one project holds both a platformer
@@ -690,18 +718,66 @@ export default class SpriteLab2Engine extends SpriteLab {
     return this.preloadTrimmedImages_(getStore().getState().animationList);
   }
 
-  // Trim the full list (the trimmer prunes its own caches from it), then
-  // preload only the images whose data has arrived; one without would just
-  // make p5 log an error.
+  // Decode only what this scene's program can put on stage, then preload
+  // the images whose data has arrived; one without would just make p5 log
+  // an error. A jump to another scene re-preloads behind its fade, and a
+  // name the code never mentions as a literal decodes on demand
+  // (installOnDemandAnimation_).
   async preloadTrimmedImages_(animationList) {
-    // This preload sees every image; the watch has nothing to recover.
+    // This preload sees every image the scene can use; the watch has
+    // nothing to recover.
     if (this.areAnimationsReady_()) {
       this.clearLateImagesWatch_();
     }
-    return this.p5Wrapper.preloadSpriteImages(
-      loadedAnimations(await trimAnimationListImages(animationList)),
+    const scoped = filterAnimationsToCode(animationList, this.userCode || '');
+    const preloaded = await this.p5Wrapper.preloadSpriteImages(
+      loadedAnimations(
+        await trimAnimationListImages(scoped, animationNames(animationList))
+      ),
       {multiFrame: true}
     );
+    this.pruneUnusedPreloads_(scoped);
+    return preloaded;
+  }
+
+  // Frees decoded images the current scene can't reference; a later scene
+  // that needs one re-decodes behind its jump fade. On-demand decodes made
+  // after this survive until the next scene's preload.
+  pruneUnusedPreloads_(list) {
+    const sprites = this.p5Wrapper.preloadedSprites;
+    if (!sprites) {
+      return;
+    }
+    const keep = animationNames(list);
+    Object.keys(sprites).forEach(name => {
+      if (!keep.has(name)) {
+        delete sprites[name];
+      }
+    });
+  }
+
+  // Decode one animation by name, mid-run: the escape hatch for a costume
+  // name built dynamically, which the scene-scoped preload cannot see.
+  async decodeAnimationOnDemand_(name) {
+    const list =
+      this.preloadAnimationsOverride || getStore().getState().animationList;
+    const key = (list.orderedKeys || []).find(
+      k => list.propsByKey[k]?.name === name
+    );
+    if (!key) {
+      return false;
+    }
+    const single = {
+      orderedKeys: [key],
+      propsByKey: {[key]: list.propsByKey[key]},
+    };
+    await this.p5Wrapper.preloadSpriteImages(
+      loadedAnimations(
+        await trimAnimationListImages(single, animationNames(list))
+      ),
+      {multiFrame: true}
+    );
+    return true;
   }
 
   /**
