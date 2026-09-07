@@ -26,7 +26,7 @@
     ],
     "locked_image_type": "sprite",
     "guide_mode": "instructions",
-    "long_instructions": "# Create the player for your game\r\n\r\n- Press New Image\r\n- Describe what your character looks like and press **Generate**.\r\n  ",
+    "long_instructions": "# Create the player for your game\r\n\r\n1. Press New Image\r\n\r\n- To use AI, write a prompt that describes your character, then press **Generate**.\r\n- You can always make adjustments and draw your own!",
     "embed": "false",
     "instructions_important": "false",
     "thumbnail_url": "https://images.code.org/a81b7dca3b4f41fc143e3e559f213a21-Gemini_Generated_Image_cgry71cgry71cgry.jpeg",
@@ -55,7 +55,7 @@
 
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2026-09-02T21:54:37.897+00:00\",\"changed\":[\"cloned from \\\"hoai2026-dev-spritelab-lab2-character\\\"\"],\"cloned_from\":\"hoai2026-dev-spritelab-lab2-character\"},{\"changed_at\":\"2026-09-02 22:11:54 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-02 22:23:40 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 01:37:36 +0000\",\"changed\":[\"project_template_level_name\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 01:56:51 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-09-02T21:54:37.897+00:00\",\"changed\":[\"cloned from \\\"hoai2026-dev-spritelab-lab2-character\\\"\"],\"cloned_from\":\"hoai2026-dev-spritelab-lab2-character\"},{\"changed_at\":\"2026-09-02 22:11:54 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-02 22:23:40 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 01:37:36 +0000\",\"changed\":[\"project_template_level_name\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 01:56:51 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-04 19:55:23 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
