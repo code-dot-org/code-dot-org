@@ -36,19 +36,21 @@ define drawing ⟨64⟩ by ⟨8⟩
   draw rectangle at ⟨0, 0⟩ size ⟨64 × ⟨fraction of this actor⟩, 8⟩
 ```
 
-It has TWO SHAPES, one block. Standing on its own in an `.actor` file it is a
-definition root, since `DisableOrphansPlugin` grays out a top-level block that
-has a previous connection along with everything chained after it. Chained
-inside a world's own `define actor` it is one of that actor's rows, which is
-what lets a world-defined actor have a picture — and it needed no field to say
-WHOSE, since a local actor's body already generates inside a block where
-`actor` is that builder.
+It is a ROW under `define actor`, in an `.actor` file and in a world alike, and
+its body is on a surface of its own behind the pencil — the same shape `define
+block` and `each frame` have, reached the same way. It needs no field to say
+WHOSE picture it is: it is chained under the actor that owns it, and a local
+actor's body already generates inside a block where `actor` is that builder.
 
-`each frame` was its sibling in this and is not any more: it is a ROW under
-`define actor` in an `.actor` file too, so it has one shape everywhere
-(`domainBlocks.worldTraitStep`). A drawing is still a root because a drawing is
-a root — everything that made two shapes a liability there applies here, and
-this is the block that still pays it.
+It had TWO SHAPES until then — a definition root in an `.actor` file, because
+`DisableOrphansPlugin` grays out a top-level block with a previous connection,
+and a chained row in a world — and that cost the two things two shapes always
+cost here. `Blockly.Blocks` holds one definition per type for the whole
+process, so an open `.actor` left every other file believing a drawing could
+not chain (`generatorRegistration.test`, which now pins that NO type is minted
+in two shapes). And the pen blocks had to be in the file's own toolbox, because
+that is where the drawing was: twelve blocks that mean nothing outside one, in
+the drawer of every actor whether it drew anything or not.
 
 It was root-only at first, and that made a whole class of actor unsayable in a
 world: one with a picture. It presented as a scoreboard drawn as a plain green
@@ -262,10 +264,11 @@ UI_ACTORS.md listed and could not solve for a Label.
 5. **The driver** — a texture cache keyed by hash: `Phaser.GameObjects.Graphics`
    plus `generateTexture` on a miss, an Image pointing at it, and a release when
    the last actor using a hash stops using it.
-6. **The blocks** — `world_define_drawing` as a root with a `do` mouth, the two
-   paint setters and their two absences, five draw commands, a toolbox category,
-   `ROOT_HOMES` marking it `.actor`-only, and a palette inside it that offers no
-   clock and nothing that mutates.
+6. **The blocks** — `world_define_drawing` as a row with its body on its own
+   surface, the two paint setters and their two absences, five draw commands, a
+   `Drawing` category offered on that surface and in no file's toolbox
+   (`surfaceToolbox`), and a palette inside it that offers no clock and nothing
+   that mutates.
 7. **`sendThumbnails`** runs the routine when there is no frame.
 
 Found while building, and not in the list above: `colour_picker` and its

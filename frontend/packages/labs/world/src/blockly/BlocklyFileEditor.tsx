@@ -734,8 +734,14 @@ export const BlocklyFileEditor = ({
       id: blockId,
       label: block?.getFieldValue('NAME') || designed || 'this',
       // `define event` has a surface but no implementation, so what it offers
-      // is its phrasing and nothing else (`surfaceToolbox`).
-      kind: block?.type === 'world_rule_event' ? 'event' : 'body',
+      // is its phrasing and nothing else; a drawing's is a body plus the one
+      // drawer that can only be used there (`surfaceToolbox`).
+      kind:
+        block?.type === 'world_rule_event'
+          ? 'event'
+          : block?.type === 'world_define_drawing'
+            ? 'drawing'
+            : 'body',
     });
   }, []);
 

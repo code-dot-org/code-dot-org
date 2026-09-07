@@ -1277,26 +1277,24 @@ const switchedWallActor = (name: string, color: string) =>
                   },
                 },
               },
-            ]),
-          },
-        },
-        {
-          type: 'world_define_drawing',
-          x: 20,
-          y: 380,
-          fields: {WIDTH: 32, HEIGHT: 32},
-          inputs: {
-            DO: {
-              block: stack([
-                fill({
-                  block: {
-                    type: 'world_get_Switches_WallColorProperty',
-                    inputs: {ACTOR: me()},
+              {
+                type: 'world_define_drawing',
+                fields: {WIDTH: 32, HEIGHT: 32},
+                inputs: {
+                  DO: {
+                    block: stack([
+                      fill({
+                        block: {
+                          type: 'world_get_Switches_WallColorProperty',
+                          inputs: {ACTOR: me()},
+                        },
+                      }),
+                      rectangle(0, 0, 32, 32),
+                    ]),
                   },
-                }),
-                rectangle(0, 0, 32, 32),
-              ]),
-            },
+                },
+              },
+            ]),
           },
         },
       ],
@@ -1319,26 +1317,24 @@ const switchActor = (name: string, color: string) =>
                 type: 'world_set_Switches_SwitchColorProperty',
                 inputs: {ACTOR: me(), VALUE: swatch(color)},
               },
-            ]),
-          },
-        },
-        {
-          type: 'world_define_drawing',
-          x: 20,
-          y: 200,
-          fields: {WIDTH: 32, HEIGHT: 32},
-          inputs: {
-            DO: {
-              block: stack([
-                fill({
-                  block: {
-                    type: 'world_get_Switches_SwitchColorProperty',
-                    inputs: {ACTOR: me()},
+              {
+                type: 'world_define_drawing',
+                fields: {WIDTH: 32, HEIGHT: 32},
+                inputs: {
+                  DO: {
+                    block: stack([
+                      fill({
+                        block: {
+                          type: 'world_get_Switches_SwitchColorProperty',
+                          inputs: {ACTOR: me()},
+                        },
+                      }),
+                      rectangle(4, 20, 24, 12),
+                    ]),
                   },
-                }),
-                rectangle(4, 20, 24, 12),
-              ]),
-            },
+                },
+              },
+            ]),
           },
         },
       ],
@@ -1380,26 +1376,26 @@ const padActor = (seconds: number) =>
           y: 20,
           fields: {NAME: 'Pad'},
           next: {
-            block: stack([useTrait('Teleport#IsATeleportPadTrait')]),
-          },
-        },
-        {
-          type: 'world_define_drawing',
-          x: 20,
-          y: 200,
-          fields: {WIDTH: 32, HEIGHT: 32},
-          inputs: {
-            DO: {
-              block: stack([
-                fill({
-                  block: {
-                    type: 'world_get_Teleport_PadColorProperty',
-                    inputs: {ACTOR: me()},
+            block: stack([
+              useTrait('Teleport#IsATeleportPadTrait'),
+              {
+                type: 'world_define_drawing',
+                fields: {WIDTH: 32, HEIGHT: 32},
+                inputs: {
+                  DO: {
+                    block: stack([
+                      fill({
+                        block: {
+                          type: 'world_get_Teleport_PadColorProperty',
+                          inputs: {ACTOR: me()},
+                        },
+                      }),
+                      rectangle(0, 22, 32, 10),
+                    ]),
                   },
-                }),
-                rectangle(0, 22, 32, 10),
-              ]),
-            },
+                },
+              },
+            ]),
           },
         },
         {
@@ -1988,26 +1984,24 @@ const SCOREBOARD_ACTOR = JSON.stringify({
             setText('TextProperty', {
               block: {type: 'text', fields: {TEXT: 'COINS 0'}},
             }),
-          ]),
-        },
-      },
-      {
-        type: 'world_define_drawing',
-        x: 20,
-        y: 180,
-        fields: {WIDTH: 96, HEIGHT: 24},
-        inputs: {
-          DO: {
-            block: stack([
-              fill({
-                block: {
-                  type: 'world_get_Writing_TextColorProperty',
-                  inputs: {ACTOR: me()},
+            {
+              type: 'world_define_drawing',
+              fields: {WIDTH: 96, HEIGHT: 24},
+              inputs: {
+                DO: {
+                  block: stack([
+                    fill({
+                      block: {
+                        type: 'world_get_Writing_TextColorProperty',
+                        inputs: {ACTOR: me()},
+                      },
+                    }),
+                    drawText(48, 12),
+                  ]),
                 },
-              }),
-              drawText(48, 12),
-            ]),
-          },
+              },
+            },
+          ]),
         },
       },
       {
@@ -2134,18 +2128,16 @@ const FUEL_BAR_ACTOR = JSON.stringify({
                 },
               },
             },
+            {
+              type: 'world_define_drawing',
+              fields: {
+                WIDTH: progressBarDrawing().width,
+                HEIGHT: progressBarDrawing().height,
+              },
+              inputs: {DO: {block: stack(progressBarDrawing().commands)}},
+            },
           ]),
         },
-      },
-      {
-        type: 'world_define_drawing',
-        x: 20,
-        y: 360,
-        fields: {
-          WIDTH: progressBarDrawing().width,
-          HEIGHT: progressBarDrawing().height,
-        },
-        inputs: {DO: {block: stack(progressBarDrawing().commands)}},
       },
     ],
   },

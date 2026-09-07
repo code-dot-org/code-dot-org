@@ -78,8 +78,9 @@ export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
   // looks is the one thing that is not shared — an actor that
   // wants somebody else's picture already has `set sprite` (specs/DRAWING.md).
   // A world may describe its OWN actors' pictures too, chained inside the
-  // `define actor` that owns them (`drawingDefinition`). Root-shaped in an
-  // `.actor` file, a row in a world; one block either way.
+  // `define actor` that owns them. A ROW under that definition in both homes
+  // now, so this entry says which files may hold one rather than which give it
+  // a root's shape (`domainBlocks.worldDefineDrawing`).
   ['world_define_drawing', new Set<FileKind>(['actor', 'world'])],
   // A tween is defined where it is used — an actor's in its own file, a
   // world's in the world — and referenced by the defining block's id. A file

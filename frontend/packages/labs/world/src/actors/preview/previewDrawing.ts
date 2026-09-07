@@ -159,7 +159,12 @@ export function previewDrawing(actor: StockActor): PreviewDrawing | undefined {
     return undefined;
   }
   const definition = roots.find(root => root.type === 'world_actor');
-  const drawing = roots.find(root => root.type === 'world_define_drawing');
+  // IN THE DEFINITION'S OWN CHAIN, not among the roots. A drawing is a row
+  // under `define actor` now (specs/DRAWING.md); looking at the top level
+  // found nothing, and every actor previewed as its fallback picture.
+  const drawing = chain(definition?.next?.block).find(
+    row => row.type === 'world_define_drawing',
+  );
   if (!definition || !drawing) {
     return undefined;
   }

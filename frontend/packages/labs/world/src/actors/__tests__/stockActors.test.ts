@@ -28,21 +28,23 @@ const types = (contents: string): string[] =>
 
 describe('every stock actor', () => {
   it('has one `define actor`, and paints itself only if it has no picture', () => {
-    // SEPARATE ROOTS. A drawing and a handler hat both take no previous
-    // connection — `DisableOrphansPlugin` grays out a top-level block that has
-    // one, and everything below it — so they sit beside the definition rather
-    // than inside it (specs/DRAWING.md).
+    // A HANDLER HAT IS A SEPARATE ROOT; THE DRAWING IS NOT. A hat takes no
+    // previous connection — `DisableOrphansPlugin` grays out a top-level block
+    // that has one, and everything below it — so it sits beside the definition.
+    // A drawing chains as one of the actor's own rows, which is why this looks
+    // for it in the whole file rather than among the roots (specs/DRAWING.md).
     for (const actor of STOCK_ACTORS) {
       const found = roots(actor.contents);
       expect(found.filter(type => type === 'world_actor')).toHaveLength(1);
       expect(found[0]).toBe('world_actor');
+      expect(found).not.toContain('world_define_drawing');
 
       // An actor either has a picture or draws one, and never both: an
       // interface actor looks like whatever it says and must paint itself; a
       // Coin looks like a coin, and a drawing over the top of its animation
       // would hide it.
       const blocks = types(actor.contents);
-      const paints = found.includes('world_define_drawing');
+      const paints = blocks.includes('world_define_drawing');
       const pictured =
         blocks.includes('world_play_animation') ||
         blocks.includes('world_set_sprite');

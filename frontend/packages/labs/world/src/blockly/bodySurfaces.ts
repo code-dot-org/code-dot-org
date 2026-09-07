@@ -48,6 +48,10 @@ interface SavedBlock {
 const BODY_IN_DO = new Set([
   'world_rule_block',
   'world_trait_step',
+  // …and what a kind LOOKS like. The pen and the shapes are an implementation
+  // like any other: a drawing's block says how big the picture is, and the
+  // twelve blocks that paint it are behind the pencil (specs/DRAWING.md).
+  'world_define_drawing',
   // The rule-level steps. They were roots with the body chained below, which
   // is why the split had a second shape to know about; now they are members
   // everything else, and a member's `next` is the member after it.

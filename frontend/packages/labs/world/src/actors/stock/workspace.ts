@@ -117,15 +117,15 @@ export interface ActorExtras {
 /**
  * A stock actor's file: the definition, and whatever sits beside it.
  *
- * SEPARATE ROOTS, not one. A drawing and a handler hat both take no previous
+ * A HANDLER IS A SEPARATE ROOT; THE DRAWING IS NOT. A hat takes no previous
  * connection, and `DisableOrphansPlugin` disables a top-level block that has
- * one along with everything below it (specs/DRAWING.md). So they sit beside the
- * `define actor` rather than inside it.
+ * one along with everything below it — so a handler sits beside the `define
+ * actor` rather than in it.
  *
- * NOT `each frame`, which used to be here for the same reason and is a ROW
- * under the definition now (`domainBlocks.worldTraitStep`) — the reason a
- * drawing and a hat cannot be does not apply to a block that takes a previous
- * connection quite happily.
+ * `each frame` and `define drawing` were both roots here for that reason and
+ * are both rows now (`domainBlocks`): the reason a hat cannot chain does not
+ * apply to a block that takes a previous connection quite happily, and one
+ * shape per block is worth more than the layout was.
  *
  * An actor with neither is a `define actor` alone, which is the same one root
  * the starter project's own actors are — and byte-for-byte the same JSON, so
@@ -145,29 +145,41 @@ export const actorFile = (
             x: 20,
             y: 20,
             fields: {NAME: name},
-            ...(rows.length ? {next: {block: chain(rows)}} : {}),
+            // The drawing is the LAST ROW of the definition, after whatever the
+            // actor declares. It used to be a root beside it; it is a row like
+            // `each frame` and `define block` now, with the pen behind its own
+            // pencil (specs/DRAWING.md).
+            ...(rows.length || extras.drawing
+              ? {
+                  next: {
+                    block: chain([
+                      ...rows,
+                      ...(extras.drawing
+                        ? [
+                            {
+                              type: 'world_define_drawing',
+                              fields: {
+                                WIDTH: extras.drawing.width,
+                                HEIGHT: extras.drawing.height,
+                              },
+                              inputs: {
+                                DO: {block: chain(extras.drawing.commands)},
+                              },
+                            },
+                          ]
+                        : []),
+                    ]),
+                  },
+                }
+              : {}),
           },
-          // Handlers before the drawing, and laid out down the left: the
-          // reading order of a file is what a learner opening it meets first.
+          // The handlers, laid out down the left: the reading order of a file
+          // is what a learner opening it meets first.
           ...(extras.handlers ?? []).map((handler, index) => ({
             ...handler,
             x: 20,
             y: 180 + index * 120,
           })),
-          ...(extras.drawing
-            ? [
-                {
-                  type: 'world_define_drawing',
-                  x: 20,
-                  y: 180 + (extras.handlers?.length ?? 0) * 120,
-                  fields: {
-                    WIDTH: extras.drawing.width,
-                    HEIGHT: extras.drawing.height,
-                  },
-                  inputs: {DO: {block: chain(extras.drawing.commands)}},
-                },
-              ]
-            : []),
         ],
       },
     },

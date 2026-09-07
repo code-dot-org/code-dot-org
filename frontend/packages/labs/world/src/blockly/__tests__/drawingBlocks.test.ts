@@ -13,6 +13,7 @@ import {Blockly} from '@code-dot-org/blockly';
 import {buildDomainPalette, ROOT_BLOCK_TYPES} from '../domainBlocks';
 import {ROOT_HOMES, type FileKind} from '../fileKind';
 import {standInBlocks} from '../standInBlocks';
+import {toolboxForSurface} from '../surfaceToolbox';
 
 type Generated = {
   type: string;
@@ -40,7 +41,10 @@ const codeFor = (
     blockNamed(type).generator!.javascript(
       {
         getFieldValue: (name: string) => fields[name] ?? null,
-        getParent: () => null,
+        // CHAINED UNDER A `define actor`, which is what decides whether a
+        // drawing is anything at all (`domainBlocks.worldDefineDrawing`).
+        getParent: () => ({type: 'world_actor', getParent: () => null}),
+        workspace: {getTopBlocks: () => []},
         getNextBlock: () => null,
       },
       {
@@ -73,37 +77,31 @@ describe('define drawing', () => {
     );
   });
 
-  it('wears the connections its file makes sense of', () => {
-    // TWO SHAPES, like `each frame` and for its reason. On its own in an
-    // `.actor` file it is a root, and a root must have no previous connection:
-    // `DisableOrphansPlugin` reads a top-level block with one as an orphan and
-    // disables it, along with everything chained after it.
+  it('has one shape, and is not a definition root', () => {
+    // IT USED TO HAVE TWO, like `each frame` before it: a root in an `.actor`
+    // file, because `DisableOrphansPlugin` greys out a top-level block with a
+    // previous connection, and a chained row in a world's own `define actor`.
+    // `Blockly.Blocks` holds one definition per type for the whole process, so
+    // whoever registered last spoke for all of it — the hazard
+    // `generatorRegistration.test` exists for.
     //
-    // Inside a world's own `define actor` it is one of that actor's rows, and
-    // chains like the `use trait` above it. Which is also how it says WHOSE
-    // picture it is — a local actor's body generates inside a block where
-    // `actor` is that builder, so no field was needed to name one.
-    //
-    // WHAT THAT COSTS is a definition that differs by file, and
-    // `Blockly.Blocks` holds one per type — so whoever registered last speaks
-    // for the whole process. The generator states its own before it reads a
-    // file (`BlocklyGenerator`), which is the price of keeping both shapes.
+    // It is a ROW under `define actor` in both now, with the pen behind its
+    // own pencil, so there is nothing left to vary.
     const shapeIn = (fileKind: FileKind) => {
       const matches = buildDomainPalette([], {fileKind}).blocks.filter(
         block => block.type === 'world_define_drawing',
-      ) as Array<{previousStatement?: boolean}>;
+      ) as Array<{previousStatement?: boolean; nextStatement?: boolean}>;
       // Exactly one definition per type: two would leave which one lands on
       // the workspace up to registration order.
       expect(matches).toHaveLength(1);
-      return matches[0].previousStatement;
+      return matches[0];
     };
 
-    expect(shapeIn('actor')).toBeUndefined();
-    expect(shapeIn('world')).toBe(true);
-    // Still in the root set, which is only ever asked about a TOP block — so
-    // it is the right answer in an `.actor` file and harmless in a world,
-    // where the block always has a parent.
-    expect(ROOT_BLOCK_TYPES.has('world_define_drawing')).toBe(true);
+    for (const kind of ['actor', 'world'] as const) {
+      expect(shapeIn(kind).previousStatement).toBe(true);
+      expect(shapeIn(kind).nextStatement).toBe(true);
+    }
+    expect(ROOT_BLOCK_TYPES.has('world_define_drawing')).toBe(false);
   });
 
   it('lives where an actor is described, and nowhere else', () => {
@@ -206,12 +204,32 @@ describe('the five things there are to draw', () => {
 });
 
 describe('the Drawing category', () => {
-  it('is shown in an `.actor` file', () => {
-    const names = (palette('actor').toolbox as Array<{name?: string}>).map(
+  it('is shown on a drawing’s own surface and in no file', () => {
+    // The pen and the shapes can be used in exactly one place — `pen` is bound
+    // by the closure a drawing generates — so that is the only place they are
+    // offered. In the `.actor` toolbox they were twelve blocks with nowhere to
+    // go, in the drawer of every actor whether it drew anything or not.
+    const inFile = (palette('actor').toolbox as Array<{name?: string}>).map(
       category => category.name,
     );
 
-    expect(names).toContain('Drawing');
+    expect(inFile).not.toContain('Drawing');
+
+    const onSurface = (
+      toolboxForSurface(palette('actor').toolbox, 'drawing') as Array<{
+        name?: string;
+      }>
+    ).map(category => category.name);
+
+    expect(onSurface).toContain('Drawing');
+    // …and a body surface that is not a drawing's still does not get it.
+    expect(
+      (
+        toolboxForSurface(palette('actor').toolbox, 'body') as Array<{
+          name?: string;
+        }>
+      ).map(category => category.name),
+    ).not.toContain('Drawing');
   });
 
   it('is not shown anywhere else, pen and all', () => {

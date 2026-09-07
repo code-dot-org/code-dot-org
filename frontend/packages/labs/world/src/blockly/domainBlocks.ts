@@ -1358,11 +1358,6 @@ const EMIT_BLOCKS = AUTHORING_RULES.flatMap(rule =>
 export const ROOT_BLOCK_TYPES: ReadonlySet<string> = new Set([
   ...EVENT_BLOCKS.map(block => block.type),
   'world_actor',
-  // A kind's picture, described rather than referenced (specs/DRAWING.md). A
-  // root for the same reason `each frame` needed a root shape in an `.actor`
-  // file: a top-level block with a previous connection is disabled as an
-  // orphan, along with everything chained after it.
-  'world_define_drawing',
   // A tween's definition, for both of the reasons above: it declares rather
   // than does, and a chained one would be an orphan at the top level.
   'world_define_tween',
@@ -7231,54 +7226,68 @@ const paintArg = (name: string) => ({
  * single-world platformer scenario shipped a scoreboard drawn as a plain box
  * because of it.
  */
-const drawingDefinition = (asRoot: boolean) =>
-  defineBlock({
-    type: 'world_define_drawing',
-    message0: 'define drawing %1 by %2',
-    args0: [
-      {type: 'field_number', name: 'WIDTH', value: 32, min: 1, max: 512},
-      {type: 'field_number', name: 'HEIGHT', value: 32, min: 1, max: 512},
-    ],
-    message1: '%1',
-    args1: [{type: 'input_statement', name: 'DO'}],
-    ...(asRoot ? {} : {previousStatement: true, nextStatement: true}),
-    style: 'sprite_blocks',
-    tooltip:
-      'Describe what this kind of actor looks like. The size is the picture, ' +
-      'and it is also how big the actor is for clicks and collisions.',
-    generator: {
-      javascript(block, generator) {
-        // Nothing at all when `actor` is not bound — a drawing chained under
-        // `define world` rather than inside a `define actor` would emit a call
-        // on a name that is not there, and the module would throw as it loaded.
-        if (!hasActorInScope(block)) {
-          return '';
-        }
-        const width = Number(block.getFieldValue('WIDTH')) || 1;
-        const height = Number(block.getFieldValue('HEIGHT')) || 1;
-        const body = generator.statementToCode(block, 'DO');
-        // `actor` SHADOWS the module's builder inside the closure, exactly as a
-        // step's body does, so `this actor` written here means this one. `pen` is
-        // bound only here — the one place `drawingContext` knows about.
-        //
-        // `world` is bound too, so a drawing may ASK. `first actor with trait
-        // ⟨Has Health⟩` inside one is what makes a health bar a drawing and
-        // nothing else: without it a bar had to be HANDED the actor it watches,
-        // which meant a property to hold it and a step to fill it, for a
-        // picture that only ever wanted to read.
-        return (
-          `actor.defineDrawing(${width}, ${height}, ` +
-          `(actor, pen, world) => {\n${body}});\n`
-        );
-      },
+/**
+ * `define drawing 32 by 32` — what this kind of actor looks like.
+ *
+ * A ROW under `define actor`, and its body on a surface of its own: the same
+ * shape `define block` and `each frame` have, reached the same way, by the
+ * pencil. It was a definition ROOT with the pen blocks chained inside it,
+ * which cost the two things two shapes always cost here.
+ *
+ * Blockly holds one definition per type for the whole process, so an open
+ * `.actor` file left every other file believing a drawing could not chain —
+ * the hazard `generatorRegistration.test` was written for. And the pen blocks
+ * had to be offered in the file's own toolbox, because that is where the
+ * drawing was: twelve blocks that mean nothing outside one, in the drawer of
+ * every actor whether it drew anything or not. They live on the drawing's
+ * surface now (`surfaceToolbox`), which is the only place they can be used.
+ */
+const worldDefineDrawing = defineBlock({
+  type: 'world_define_drawing',
+  message0: 'define drawing %1 by %2',
+  args0: [
+    {type: 'field_number', name: 'WIDTH', value: 32, min: 1, max: 512},
+    {type: 'field_number', name: 'HEIGHT', value: 32, min: 1, max: 512},
+  ],
+  message1: '%1',
+  args1: [{type: 'input_statement', name: 'DO'}],
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [bodyButtonExtension, bodySurfaceExtension],
+  style: 'sprite_blocks',
+  tooltip:
+    'Describe what this kind of actor looks like. The size is the picture, ' +
+    'and it is also how big the actor is for clicks and collisions.',
+  generator: {
+    javascript(block, generator) {
+      // WHAT IT IS CHAINED UNDER DECIDES WHETHER IT IS ANYTHING, the same
+      // test `each frame` makes (`worldTraitStep`). A drawing belongs to a
+      // `define actor`; one chained under `define world`, or left unattached
+      // at the top of a file, would emit a call on an `actor` that is not
+      // bound and the module would throw as it loaded.
+      const inWorldActor = definesWorld(block.workspace);
+      if (inWorldActor ? !hasActorInScope(block) : !definesActorFile(block)) {
+        return '';
+      }
+      const width = Number(block.getFieldValue('WIDTH')) || 1;
+      const height = Number(block.getFieldValue('HEIGHT')) || 1;
+      const body = generator.statementToCode(block, 'DO');
+      // `actor` SHADOWS the module's builder inside the closure, exactly as a
+      // step's body does, so `this actor` written here means this one. `pen` is
+      // bound only here — the one place `drawingContext` knows about.
+      //
+      // `world` is bound too, so a drawing may ASK. `first actor with trait
+      // ⟨Has Health⟩` inside one is what makes a health bar a drawing and
+      // nothing else: without it a bar had to be HANDED the actor it watches,
+      // which meant a property to hold it and a step to fill it, for a
+      // picture that only ever wanted to read.
+      return (
+        `actor.defineDrawing(${width}, ${height}, ` +
+        `(actor, pen, world) => {\n${body}});\n`
+      );
     },
-  });
-
-/** Chained inside a world's `define actor` (see `drawingDefinition`). */
-const worldDefineDrawing = drawingDefinition(false);
-
-/** The root-shaped one, for an `.actor` file. */
-const actorDefineDrawing = drawingDefinition(true);
+  },
+});
 
 const worldPenFill = defineBlock({
   type: 'world_pen_fill',
@@ -8476,6 +8485,32 @@ const ruleCategory = (rule: RuleMeta) => ({
  */
 // The toolbox in three segments so the per-project builder can splice project
 // rule categories between the built-in rule categories and the general blocks.
+// WHAT A DRAWING IS MADE OF, and nothing that makes one. `define drawing`
+// is a declaration and sits with the others in Actor; these are the pen and
+// the shapes, which mean nothing outside a drawing's body and are offered
+// only on a drawing's own surface (`surfaceToolbox`). In the file's toolbox
+// they were twelve blocks with nowhere to go, in the drawer of every actor
+// whether it drew anything or not.
+export const DRAWING_CATEGORY: ToolboxCategory = {
+  name: 'Drawing',
+  blocks: [
+    // The pen, which every shape after it is painted with.
+    'world_pen_fill',
+    'world_pen_outline',
+    'world_pen_no_fill',
+    'world_pen_no_outline',
+    // …and the five things there are to draw.
+    'world_draw_rectangle',
+    'world_draw_circle',
+    'world_draw_line',
+    'world_draw_text',
+    // …and several lines of it, broken to fit a column.
+    'world_draw_paragraph',
+    'world_text_anchor',
+    'world_draw_image',
+  ],
+};
+
 const TOOLBOX_HEAD: ToolboxCategory[] = [
   {
     name: 'Actor',
@@ -8560,31 +8595,11 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // The same block a rule designs its own with — where it sits decides
       // whose it is (`ActorBuilder.defineAction`).
       'world_rule_block',
-    ],
-  },
-  // What this kind LOOKS LIKE, described rather than referenced
-  // (specs/DRAWING.md). `each frame`'s sibling and its opposite: that one is
-  // handed the world and may change it, this one is handed a pen and may not.
-  // Shown only in an `.actor` file — see `structuralCategories` — because a
-  // drawing belongs to a kind of actor and nothing else is one.
-  {
-    name: 'Drawing',
-    blocks: [
+      // …and the fourth: what this kind LOOKS like. A declaration like the
+      // three above it and reached the same way — the pencil opens the pen and
+      // the shapes on a surface of its own, which is why the Drawing drawer is
+      // not in this toolbox (specs/DRAWING.md).
       'world_define_drawing',
-      // The pen, which every shape after it is painted with.
-      'world_pen_fill',
-      'world_pen_outline',
-      'world_pen_no_fill',
-      'world_pen_no_outline',
-      // …and the five things there are to draw.
-      'world_draw_rectangle',
-      'world_draw_circle',
-      'world_draw_line',
-      'world_draw_text',
-      // …and several lines of it, broken to fit a column.
-      'world_draw_paragraph',
-      'world_text_anchor',
-      'world_draw_image',
     ],
   },
   {
@@ -8970,11 +8985,12 @@ const structuralCategories = (fileKind?: FileKind): ToolboxCategory[] => {
     if (category.name === 'Rule' && fileKind !== 'rule') {
       continue;
     }
-    // Drawing is an `.actor`'s alone. Filtering by `ROOT_HOMES` would drop
-    // `define drawing` and leave the pen behind — ten blocks in a `.world`
-    // file that can only ever wear a warning saying there is nothing to draw
-    // on (specs/DRAWING.md, `extensions/drawingContext`).
-    if (category.name === 'Drawing' && fileKind !== 'actor') {
+    // Drawing belongs to a DRAWING's own surface and to no file
+    // (`surfaceToolbox`). The pen and the shapes can only be used inside one,
+    // so anywhere else they are blocks that can only ever wear a warning
+    // saying there is nothing to draw on (specs/DRAWING.md,
+    // `extensions/drawingContext`).
+    if (category.name === 'Drawing') {
       continue;
     }
     // An entry is usually a block type, but the type allows a whole flyout item
@@ -9348,23 +9364,13 @@ export function buildDomainPalette(
         property,
       })),
   );
-  // `define drawing` wears the connections its file makes sense of: a root in
-  // an `.actor`, a chained row everywhere else (`drawingDefinition`).
-  //
-  // `each frame` was the same until it became a row under `define actor` in an
-  // `.actor` too, which is where the two shapes were costing the most — see
-  // the note on `worldTraitStep`. `define drawing` still has them, and every
-  // reason they are a liability there still holds.
-  //
-  // SUBSTITUTED, not appended. Two definitions of one type in the list would
-  // leave which one lands on the workspace up to registration order, and a
-  // block whose shape depends on that is a block nobody can reason about.
-  const shaped =
-    options.fileKind === 'actor'
-      ? DOMAIN_BLOCKS.map(block =>
-          block.type === 'world_define_drawing' ? actorDefineDrawing : block,
-        )
-      : DOMAIN_BLOCKS;
+  // NOTHING VARIES BY FILE KIND ANY MORE. `each frame` and `define drawing`
+  // were each minted in two shapes and swapped here — a definition root in an
+  // `.actor` file, a chained row everywhere else — and both are rows now.
+  // Blockly holds one definition per type for the whole process, so a shape
+  // that varied by file was never local to the file that wanted it
+  // (`generatorRegistration.test`).
+  const shaped = DOMAIN_BLOCKS;
   const ownBlocks: DomainBlock[] = [];
   const ownTypes: string[] = [];
   // …and the things those actors DO, by name. The same call site a rule's

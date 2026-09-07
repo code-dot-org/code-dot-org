@@ -304,6 +304,38 @@ const CRATE_ACTOR = JSON.stringify({
             useTrait('Grid#FillsATileTrait'),
             useTrait('Grid#CanBePushedTrait'),
             {type: 'world_set_sprite', fields: {SPRITE: 'box.png'}},
+            {
+              type: 'world_define_drawing',
+              fields: {WIDTH: TILE_SIZE, HEIGHT: TILE_SIZE},
+              inputs: {
+                DO: {
+                  block: stack([
+                    {
+                      type: 'world_pen_fill',
+                      inputs: {
+                        COLOR: {
+                          block: {
+                            type: 'colour_picker',
+                            fields: {COLOUR: '#d8a032'},
+                          },
+                        },
+                      },
+                    },
+                    // Centred in the tile and small enough that a crate standing on
+                    // one plainly covers it, which is how the board says "done".
+                    {
+                      type: 'world_draw_rectangle',
+                      inputs: {
+                        X: number(TILE_SIZE / 2 - 6),
+                        Y: number(TILE_SIZE / 2 - 6),
+                        WIDTH: number(12),
+                        HEIGHT: number(12),
+                      },
+                    },
+                  ]),
+                },
+              },
+            },
           ]),
         },
       },
@@ -355,40 +387,6 @@ const TARGET_ACTOR = JSON.stringify({
         x: 20,
         y: 20,
         fields: {NAME: 'Target'},
-      },
-      {
-        type: 'world_define_drawing',
-        x: 20,
-        y: 140,
-        fields: {WIDTH: TILE_SIZE, HEIGHT: TILE_SIZE},
-        inputs: {
-          DO: {
-            block: stack([
-              {
-                type: 'world_pen_fill',
-                inputs: {
-                  COLOR: {
-                    block: {
-                      type: 'colour_picker',
-                      fields: {COLOUR: '#d8a032'},
-                    },
-                  },
-                },
-              },
-              // Centred in the tile and small enough that a crate standing on
-              // one plainly covers it, which is how the board says "done".
-              {
-                type: 'world_draw_rectangle',
-                inputs: {
-                  X: number(TILE_SIZE / 2 - 6),
-                  Y: number(TILE_SIZE / 2 - 6),
-                  WIDTH: number(12),
-                  HEIGHT: number(12),
-                },
-              },
-            ]),
-          },
-        },
       },
     ],
   },

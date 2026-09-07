@@ -112,11 +112,12 @@ describe('which definition roots a file may hold', () => {
     expect(shapeIn('world')).toBe(true);
   });
 
-  it('still gives `define drawing` no previous connection in an actor file', () => {
-    // The one block that still has both shapes, and the reason either shape
-    // exists: a drawing IS a root in an `.actor` file, and a root with a
-    // previous connection is an orphan to `DisableOrphansPlugin` — grayed out,
-    // generating nothing, and invisible until somebody touched the workspace.
+  it('gives `define drawing` one shape too, in every kind of file', () => {
+    // The last block that had two, and it lost them for the same reasons
+    // `each frame` did: `Blockly.Blocks` holds one definition per type for the
+    // whole process, so a shape that varied by file was never local to the
+    // file that wanted it. It is a ROW under `define actor` in both homes now,
+    // with the pen and the shapes on a surface of its own.
     const shapeIn = (fileKind: FileKind) => {
       const matches = buildDomainPalette([], {fileKind}).blocks.filter(
         block => block.type === 'world_define_drawing',
@@ -125,8 +126,9 @@ describe('which definition roots a file may hold', () => {
       return matches[0].previousStatement;
     };
 
-    expect(shapeIn('actor')).toBeUndefined();
+    expect(shapeIn('actor')).toBe(true);
     expect(shapeIn('rule')).toBe(true);
+    expect(shapeIn('world')).toBe(true);
   });
 
   it('does not offer `use rule` to a world', () => {

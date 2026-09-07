@@ -20,6 +20,7 @@
 import type {Toolbox, ToolboxCategory} from '@code-dot-org/blockly';
 
 import {HIDE_BODIES} from './bodySurfaces';
+import {DRAWING_CATEGORY} from './domainBlocks';
 
 /**
  * Which surface a toolbox is being built for.
@@ -29,8 +30,14 @@ import {HIDE_BODIES} from './bodySurfaces';
  * event is a declaration, and the blocks that run for it live under the hat it
  * makes, in whatever file cares — so there is nowhere on it to put a
  * statement, and offering any would be offering blocks with no socket.
+ *
+ * `drawing` is a body with ONE MORE DRAWER. The pen and the shapes are the
+ * only blocks in the lab that can be used in exactly one place — `pen` is
+ * bound by the closure a drawing generates and nowhere else — so this is the
+ * only surface that offers them, and every file's toolbox is one drawer
+ * shorter for it.
  */
-export type Surface = 'interface' | 'body' | 'event';
+export type Surface = 'interface' | 'body' | 'event' | 'drawing';
 
 /** The drawer holding what a definition's own block is made of. */
 const SIGNATURE_DRAWER = 'Block';
@@ -123,10 +130,18 @@ export function toolboxForSurface(toolbox: Toolbox, surface: Surface): Toolbox {
   const categories = toolbox as ToolboxCategory[];
   // An event surface offers ONE drawer. There is no socket on it for anything
   // else, so a full toolbox there is a wall of blocks that cannot be used.
+  //
+  // A DRAWING'S SURFACE GETS ONE MORE, and it is the only place that does. The
+  // pen and the shapes are added here rather than filtered in, because no
+  // file's toolbox carries them any more (`structuralCategories`) — there is
+  // nowhere else they could be used, so nowhere else offers them. First, since
+  // it is what this surface is FOR.
   const chosen =
     surface === 'event'
       ? categories.filter(category => category.name === SIGNATURE_DRAWER)
-      : categories;
+      : surface === 'drawing'
+        ? [DRAWING_CATEGORY, ...categories]
+        : categories;
   return chosen
     .map(category => {
       if (!category.blocks) {

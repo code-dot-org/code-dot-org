@@ -533,33 +533,31 @@ const SCOREBOARD_ACTOR = JSON.stringify(
               // is blank until the score moves, which looks like a broken
               // scoreboard rather than a score of nothing.
               setText({type: 'text', fields: {TEXT: 'SCORE 0'}}),
+              // THE DRAWING, and without it this actor is a plain rectangle.
+              //
+              // `Shows Text` has no steps and draws nothing: it declares what an
+              // actor's words ARE and leaves the drawing to the actor that elects it
+              // (specs/DRAWING.md). An actor with the trait, the text and no drawing
+              // is an actor nothing knows how to paint, so the driver paints the
+              // fallback box — which is exactly what this shipped as at first.
+              //
+              // Two commands, the same two `actors/stock/label` uses: ink of
+              // whatever color the actor carries, then the words at the middle of
+              // the canvas. Every part of the text is READ off the actor rather than
+              // typed here, which is what makes the trait worth having.
+              {
+                type: 'world_define_drawing',
+                fields: {WIDTH: SCOREBOARD_WIDTH, HEIGHT: SCOREBOARD_HEIGHT},
+                inputs: {
+                  DO: {
+                    block: stack([
+                      fill(textOf('TextColorProperty')),
+                      drawText(SCOREBOARD_WIDTH / 2, SCOREBOARD_HEIGHT / 2),
+                    ]),
+                  },
+                },
+              },
             ]),
-          },
-        },
-        // THE DRAWING, and without it this actor is a plain rectangle.
-        //
-        // `Shows Text` has no steps and draws nothing: it declares what an
-        // actor's words ARE and leaves the drawing to the actor that elects it
-        // (specs/DRAWING.md). An actor with the trait, the text and no drawing
-        // is an actor nothing knows how to paint, so the driver paints the
-        // fallback box — which is exactly what this shipped as at first.
-        //
-        // Two commands, the same two `actors/stock/label` uses: ink of
-        // whatever color the actor carries, then the words at the middle of
-        // the canvas. Every part of the text is READ off the actor rather than
-        // typed here, which is what makes the trait worth having.
-        {
-          type: 'world_define_drawing',
-          x: 20,
-          y: 140,
-          fields: {WIDTH: SCOREBOARD_WIDTH, HEIGHT: SCOREBOARD_HEIGHT},
-          inputs: {
-            DO: {
-              block: stack([
-                fill(textOf('TextColorProperty')),
-                drawText(SCOREBOARD_WIDTH / 2, SCOREBOARD_HEIGHT / 2),
-              ]),
-            },
           },
         },
         {
