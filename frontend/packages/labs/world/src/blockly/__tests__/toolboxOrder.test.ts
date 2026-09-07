@@ -18,8 +18,11 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
 import {mouseRule} from '../../rules/stock';
+import {projectFiles} from '../../runtime/projectFiles';
 import {buildDomainPalette, DOMAIN_TOOLBOX} from '../domainBlocks';
+import {projectOwnMetas, projectRuleMetas} from '../projectModules';
 import {parseRuleMeta} from '../ruleMeta';
 import {registerProjectRules} from '../ruleRegistry';
 import {TOOLBOX_HEADING} from '../toolboxStyle';
@@ -116,5 +119,79 @@ describe('the toolbox', () => {
 
     expect(heading.kind).toBe(TOOLBOX_HEADING);
     expect(heading.blocks).toBeUndefined();
+  });
+});
+
+describe('an actor’s own blocks', () => {
+  /** The starter, whose Health Bar declares `subject` and nothing else does. */
+  const starter = () => {
+    const files = projectFiles(WORLD_SCENARIOS.simple.source);
+    return buildDomainPalette(projectRuleMetas(files), {
+      fileKind: 'actor',
+      ownProperties: projectOwnMetas(files),
+    }).toolbox as Array<{name?: string; kind?: string; blocks?: unknown[]}>;
+  };
+
+  it('get a drawer named after the actor, under an Actors heading', () => {
+    // A block is found in the drawer named after the thing that declared it,
+    // which is why every rule has one. An actor's own get and set used to be
+    // spliced into the general Actor drawer, among forty blocks about actors
+    // in general, with nothing saying which actor they came from.
+    const rows = shape(starter());
+    const at = rows.indexOf('— Actors —');
+
+    expect(at).toBeGreaterThan(0);
+    expect(rows.slice(at + 1)).toContain('Health Bar');
+    // …below the rules, which are below the language.
+    expect(rows.indexOf('— Rules —')).toBeLessThan(at);
+  });
+
+  it('holds the pair that actor declared, and Actor holds neither', () => {
+    const cats = starter();
+    const drawer = cats.find(category => category.name === 'Health Bar');
+    const general = cats.find(category => category.name === 'Actor');
+
+    expect(drawer?.blocks).toEqual([
+      'world_set_ActorsHealthBar_SubjectProperty',
+      'world_get_ActorsHealthBar_SubjectProperty',
+    ]);
+    // THE GENERAL PAIR STAYS in Actor — `set ⟨property⟩ of ⟨actor⟩`, whose
+    // dropdown is every actor-scoped property in play (`propertyOptions`).
+    // That is how a property is reached when you know what you want; the
+    // drawer is how it is found when you do not.
+    expect(
+      (general?.blocks ?? []).filter(type =>
+        String(type).includes('ActorsHealthBar'),
+      ),
+    ).toEqual([]);
+    expect(general?.blocks).toContain('world_use_trait');
+  });
+
+  it('gives no drawer, and no heading, to a project whose actors declare nothing', () => {
+    // Most do not. A drawer each regardless is a list of empty rooms, and a
+    // heading over no drawers is a label for something that is not there.
+    const files = projectFiles(WORLD_SCENARIOS.jetpack.source);
+    const rows = shape(
+      buildDomainPalette(projectRuleMetas(files), {
+        fileKind: 'actor',
+        ownProperties: projectOwnMetas(files),
+      }).toolbox,
+    );
+
+    expect(rows).not.toContain('— Actors —');
+  });
+
+  it('puts each heading’s own file icon beside it', () => {
+    // One picture per kind of thing: the scroll over the rules is the scroll
+    // on a `.rule` tab, and the masks over the actors are an `.actor`'s
+    // (`worldConfig.fileIcons`). Read off the config so the two cannot drift.
+    const headings = (
+      starter() as Array<{kind?: string; name?: string; icon?: string}>
+    ).filter(row => row.kind === TOOLBOX_HEADING);
+
+    expect(headings.map(row => [row.name, row.icon])).toEqual([
+      ['Rules', 'scroll'],
+      ['Actors', 'masks-theater'],
+    ]);
   });
 });

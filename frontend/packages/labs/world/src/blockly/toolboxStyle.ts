@@ -170,6 +170,9 @@ const TOOLBOX_CSS = `
   text-transform: uppercase;
   color: var(--text-neutral-secondary, #676767);
   user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
   /* NOT INTERACTIVE, and this line is what makes that true rather than
    * intended. The toolbox is a focusable tree: a click anywhere inside it that
    * is not handled focuses the tree, and the tree falls through to its first
@@ -191,10 +194,19 @@ const TOOLBOX_CSS = `
 /** The `kind` a heading row declares, and what the item is registered as. */
 export const TOOLBOX_HEADING = 'world_heading';
 
-/** One heading, as the toolbox array carries it. */
-export const toolboxHeading = (text: string) => ({
+/**
+ * One heading, as the toolbox array carries it.
+ *
+ * `icon` is a FontAwesome name, and the point of it is that a learner should
+ * only ever have to learn one picture per kind of thing. The scroll over the
+ * rules is the scroll on a `.rule` file's tab and in the Rules menu; the masks
+ * over the actors are an `.actor`'s. Taken from `worldConfig.fileIcons` at the
+ * call site rather than written here, so the two cannot drift apart.
+ */
+export const toolboxHeading = (text: string, icon?: string) => ({
   kind: TOOLBOX_HEADING,
   name: text,
+  icon,
 });
 
 /**
@@ -215,10 +227,23 @@ class ToolboxHeading extends Blockly.ToolboxItem {
   private element: HTMLDivElement | null = null;
 
   override init(): void {
+    const definition = this.toolboxItemDef_ as {
+      name?: string;
+      icon?: string;
+    } | null;
     const element = document.createElement('div');
     element.className = 'worldToolboxHeading';
-    element.textContent =
-      (this.toolboxItemDef_ as {name?: string} | null)?.name ?? '';
+    // The icon first, as an `<i>` — the same element and the same class the
+    // design system's icon component renders, so the FREE shims reach it
+    // (`freeIconShims`). `aria-hidden`, because the word beside it says the
+    // same thing and a screen reader should not hear it twice.
+    if (definition?.icon) {
+      const glyph = document.createElement('i');
+      glyph.className = `fa-solid fa-${definition.icon}`;
+      glyph.setAttribute('aria-hidden', 'true');
+      element.appendChild(glyph);
+    }
+    element.appendChild(document.createTextNode(definition?.name ?? ''));
     // Announced as decoration rather than as one more item in the tree. The
     // group is `role=tree`, and a div inside one with no role at all is a node
     // a screen reader has to name and cannot.

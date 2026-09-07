@@ -10,6 +10,7 @@ import {BlocklyFileEditor} from './blockly/BlocklyFileEditor';
 import {label} from './blockly/label';
 import {authoredName} from './blockly/projectModules';
 import {EffectFileEditor} from './effect/EffectFileEditor';
+import {FILE_ICONS} from './fileIcons';
 import {ImageFileEditor} from './imageEditor/ImageFileEditor';
 import {MapEditor} from './mapEditor/MapEditor';
 import {whyKeepFile} from './rules/deleteGuard';
@@ -144,13 +145,5 @@ export const worldConfig: Partial<CodebridgeConfig> = {
   // File-browser icons for World's own extensions (all FontAwesome solid). The
   // built-in types (js/json/png/…) keep their defaults; these give each World
   // file type a distinct, meaningful glyph.
-  fileIcons: {
-    world: {iconName: 'planet-ringed', iconStyle: 'solid', isBrand: false},
-    actor: {iconName: 'masks-theater', iconStyle: 'solid', isBrand: false},
-    effect: {iconName: 'wand-sparkles', iconStyle: 'solid', isBrand: false},
-    rule: {iconName: 'scroll', iconStyle: 'solid', isBrand: false},
-    map: {iconName: 'map', iconStyle: 'solid', isBrand: false},
-    anim: {iconName: 'film', iconStyle: 'solid', isBrand: false},
-    sheet: {iconName: 'table-cells', iconStyle: 'solid', isBrand: false},
-  },
+  fileIcons: FILE_ICONS,
 };

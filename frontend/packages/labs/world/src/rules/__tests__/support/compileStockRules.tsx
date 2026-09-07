@@ -107,9 +107,20 @@ export function evaluate(
       'const {$1} = WorldLab;',
     )
     // Siblings, read out of what was compiled before this.
+    //
+    // `A as B` BECOMES `A: B`, which is the same rename one line down in
+    // destructuring. Every named import carries one now: an export name says
+    // what a member is called and not who declared it, so two files exporting
+    // `GoAction` collide, and the generator imports each under the name its
+    // block type carries instead (`domainBlocks.refCode`). Without this the
+    // harness turns that into `const {GoAction as ActorsFoo_GoAction} = …` and
+    // fails with `Unexpected identifier 'as'` — which is a fault in the
+    // harness reading like a fault in the generated code.
     .replace(
       /^import \{([^}]*)\} from ['"]([^'"]*)['"];$/gm,
-      'const {$1} = __modules["$2"];',
+      (_, names: string, from: string) =>
+        `const {${names.replace(/\b(\w+) as (\w+)\b/g, '$1: $2')}} = ` +
+        `__modules["${from}"];`,
     )
     .replace(
       /^import (\w+) from ['"]([^'"]*)['"];$/gm,

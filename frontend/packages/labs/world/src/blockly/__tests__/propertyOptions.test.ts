@@ -2,13 +2,16 @@
 //
 // The library mints a get and a set for every property every rule declares —
 // 168 blocks for two verbs, which is most of the palette. Each is discoverable
-// in its rule's category, and that is the good half. The bad half is that an
-// actor's OWN property has no category to be discoverable in, and giving it
-// one would mean a category per actor.
+// in its rule's category, and each is reachable only from there.
 //
 // So there is a general pair per KIND, whose dropdown is every actor-scoped
-// property in play. Six kinds, twelve blocks, and an actor's own property is
-// reachable from anywhere without a new category anywhere.
+// property in play. Six kinds, twelve blocks, and any property is reachable
+// from anywhere without hunting for the drawer that declared it.
+//
+// AN ACTOR'S OWN NOW HAS A DRAWER TOO (`domainBlocks`, the Actors heading),
+// which is a different job and not a replacement: the drawer is where a
+// property is FOUND by somebody who does not know it exists, and this pair is
+// where it is REACHED by somebody who does. Rules have had both all along.
 
 import {describe, expect, it} from 'vitest';
 
@@ -46,10 +49,12 @@ describe('what the general property blocks offer', () => {
     expect(labels('number')).toContain('Health ▸ health');
   });
 
-  it('reaches one an actor declares for itself, which nothing else could', () => {
-    // THE REASON THESE EXIST. An own property's block is minted from the
-    // actor's module path, so it belongs to no rule and no rule's category —
-    // and a category per actor is the thing this avoids.
+  it('reaches one an actor declares for itself, from anywhere', () => {
+    // An own property's block is minted from the actor's module path, so it
+    // belongs to no rule and appears in no rule's category. It has a drawer of
+    // its own now, under the Actors heading — but that drawer is in the file's
+    // toolbox, and this is how the property is named from a block in any other
+    // file without going to look for it.
     build();
 
     expect(labels('actor')).toContain('Health Bar ▸ subject');

@@ -31,6 +31,7 @@ import {
   type PropertyType,
 } from '../engine';
 import {DEFAULT_LAYER_ID, type SlotName} from '../engine/core/Layer';
+import {FILE_ICONS} from '../fileIcons';
 import {VIEWPORT_TILES} from '../runtime/viewport';
 import {IMPORT_SOUND_VALUE} from '../sound/soundImport';
 
@@ -307,12 +308,49 @@ const refCode = (ref: MemberRef, generator?: JavascriptGenerator): string => {
         blockId: definingBlock,
       });
     }
+    // IMPORTED UNDER THE NAME ITS BLOCK TYPE CARRIES, not under its own.
+    //
+    // An export name says what a member is called and nothing about who
+    // declared it, so two files may export the same one — and two of those
+    // imported into one module is not a shadowing, it is a `SyntaxError:
+    // Identifier 'GoAction' has already been declared`, and the project does
+    // not compile at all.
+    //
+    // TWO ACTORS ARE THE EASY WAY THERE: a `define block` called `go` on one
+    // kind and another on a second are two different things spelled alike, and
+    // nothing warns. Thirteen pairs of the STOCK RULES already share an export
+    // name too — `Scoring` and `Goals` both have a `won`, `Input` and `Mouse`
+    // both have `is pressed` — so a file reading both was one step from the
+    // same error.
+    //
+    // `memberKey` is the name already minted for exactly this: it is what
+    // makes a block TYPE unique across the project, and it reads as its
+    // origin — `ActorsFoo_GoAction` — which is what a learner opening the
+    // generated code should see anyway.
+    //
+    // AN OWN MEMBER ONLY, and that is a scope rather than a principle. A
+    // rule's module is written by TWO hands — the declarations in `ruleMeta`
+    // and the bodies here — which key their imports identically and dedupe
+    // against each other (`alreadyImported`). Aliasing on one side only makes
+    // them disagree about the local name while still deduping, and the loser's
+    // references are undefined. An actor's own members have one emitter and no
+    // such pair.
+    //
+    // SO THE RULE CASE IS STILL LATENT: thirteen pairs of the stock rules share
+    // an export name — `Scoring` and `Goals` both have a `won`, `Input` and
+    // `Mouse` both have `is pressed` — and one file reading both of a pair
+    // would hit the same error. Fixing it means teaching both hands the same
+    // local name, which is a change to `ruleMeta` and not to this line.
+    const local = memberKey(ref);
     if (generator && owning !== selfModule) {
       addImport(
         generator,
         `named:${modulePath}:${ref.exportName}`,
-        `import {${ref.exportName}} from ${str(modulePath)};`,
+        ref.own
+          ? `import {${ref.exportName} as ${local}} from ${str(modulePath)};`
+          : `import {${ref.exportName}} from ${str(modulePath)};`,
       );
+      return ref.own ? local : ref.exportName;
     }
     return ref.exportName;
   }
@@ -9074,7 +9112,16 @@ const structuralCategories = (fileKind?: FileKind): ToolboxCategory[] => {
  * The heading is a toolbox item rather than a separator, so the break says
  * what it is dividing (`blockly/toolboxStyle`).
  */
-const RULES_HEADING = toolboxHeading('Rules') as unknown as ToolboxCategory;
+const RULES_HEADING = toolboxHeading(
+  'Rules',
+  FILE_ICONS.rule.iconName,
+) as unknown as ToolboxCategory;
+
+/** …and the actors', under the rules, for the drawers a project's actors mint. */
+const ACTORS_HEADING = toolboxHeading(
+  'Actors',
+  FILE_ICONS.actor.iconName,
+) as unknown as ToolboxCategory;
 
 /** Everything above the heading: the same rows, in the same order, always. */
 const FIXED_CATEGORIES: ToolboxCategory[] = [
@@ -9372,14 +9419,6 @@ export function buildDomainPalette(
   const editingRule = options.ownRuleModule !== undefined;
   const structural = structuralCategories(options.fileKind);
 
-  // An actor's own properties: a getter always, and a setter unless it was
-  // declared read-only. Read-only means something here that it cannot mean for
-  // a rule's property — an actor's declaring scope is a DECLARATION, with no
-  // body to run a `set` in — so it is a per-kind constant and gets no setter
-  // anywhere, rather than one confined to its own file.
-  const ownProperties = (options.ownProperties ?? []).flatMap(
-    actor => actor.properties,
-  );
   // What the general get/set blocks offer: every ACTOR-scoped property in the
   // project, a rule's and an actor's own alike, keyed by the same member key
   // the per-property block types are minted from.
@@ -9413,38 +9452,66 @@ export function buildDomainPalette(
   // (`generatorRegistration.test`).
   const shaped = DOMAIN_BLOCKS;
   const ownBlocks: DomainBlock[] = [];
-  const ownTypes: string[] = [];
-  // …and the things those actors DO, by name. The same call site a rule's
-  // action gets, from the same factory: what differs is the ref, which names
-  // the file that declared it rather than a rule (`ownProperties`).
-  for (const action of (options.ownProperties ?? []).flatMap(
-    actor => actor.actions,
-  )) {
-    const block = defineActionBlock(action);
-    ownBlocks.push(block);
-    ownTypes.push(block.type);
-  }
-  for (const property of ownProperties) {
-    if (!property.readonly) {
-      const setBlock = defineSetPropertyBlock(property);
-      ownBlocks.push(setBlock);
-      ownTypes.push(setBlock.type);
+  /**
+   * A drawer per actor, holding what that actor declared.
+   *
+   * ONE CATEGORY EACH, and the reason is the same one every rule has a
+   * category: a block is discovered in the drawer named after the thing that
+   * declared it. An actor's own get, set and `define block` used to be spliced
+   * into the general Actor drawer, where they sat among forty blocks about
+   * actors in general with nothing saying which actor they came from — and
+   * where a second actor's `subject` was a second block of the same name.
+   *
+   * WHAT STAYS IN ACTOR is the general pair per kind, whose dropdown lists
+   * every actor-scoped property in play (`propertyOptions`). That is how a
+   * property is reached when you already know what you want; this is how it is
+   * found when you do not, which is the same division a rule's category makes.
+   *
+   * An actor that declares nothing gets no drawer. Every actor having one
+   * regardless is a list of empty rooms, and a project's actors mostly declare
+   * nothing at all.
+   */
+  const actorCategories: ToolboxCategory[] = [];
+  for (const actor of options.ownProperties ?? []) {
+    const types: string[] = [];
+    // …the things this kind DOES, by name. The same call site a rule's action
+    // gets, from the same factory: what differs is the ref, which names the
+    // file that declared it rather than a rule (`ownProperties`).
+    for (const action of actor.actions) {
+      const block = defineActionBlock(action);
+      ownBlocks.push(block);
+      types.push(block.type);
     }
-    const getBlock = defineGetPropertyBlock(property);
-    ownBlocks.push(getBlock);
-    ownTypes.push(getBlock.type);
+    // …and the state it keeps, as the pair every property gets.
+    for (const property of actor.properties) {
+      if (!property.readonly) {
+        const setBlock = defineSetPropertyBlock(property);
+        ownBlocks.push(setBlock);
+        types.push(setBlock.type);
+      }
+      const getBlock = defineGetPropertyBlock(property);
+      ownBlocks.push(getBlock);
+      types.push(getBlock.type);
+    }
+    if (types.length > 0) {
+      actorCategories.push({name: actor.name, blocks: types});
+    }
   }
-  /** File them under Actor, beside the questions about an actor they are. */
-  const withOwnProperties = (
-    categories: ToolboxCategory[],
-  ): ToolboxCategory[] =>
-    ownTypes.length === 0
+
+  /**
+   * The actors' drawers, under a heading of their own.
+   *
+   * BELOW THE RULES, and the same shape: what a project has is under a word
+   * saying what kind of thing it is, and what the language has is above both
+   * (`toolboxStyle`, `RULES_HEADING`). Nothing at all when no actor declared
+   * anything, because a heading over an empty list is a label for something
+   * that is not there.
+   */
+  const withActors = (categories: ToolboxCategory[]): ToolboxCategory[] =>
+    actorCategories.length === 0
       ? categories
-      : categories.map(category =>
-          category.name === 'Actor'
-            ? {...category, blocks: [...(category.blocks ?? []), ...ownTypes]}
-            : category,
-        );
+      : [...categories, ACTORS_HEADING, ...actorCategories];
+
   if (projectRules.length === 0) {
     // `DOMAIN_CATEGORIES` when nothing was filtered, so the no-file-kind case
     // keeps handing back the one shared constant rather than a copy of it.
@@ -9452,7 +9519,7 @@ export function buildDomainPalette(
       structural === TOOLBOX_HEAD
         ? DOMAIN_CATEGORIES
         : [...structural, ...BUILTIN_RULE_CATEGORIES, ...TOOLBOX_TAIL];
-    const shown = withOwnProperties(categories);
+    const shown = withActors(categories);
     return {
       // The shared constant itself when this actor declares nothing, keeping
       // the identity the no-project-rules path has always handed back rather
@@ -9476,7 +9543,7 @@ export function buildDomainPalette(
         ? 'none'
         : 'all',
   );
-  const toolbox: ToolboxCategory[] = withOwnProperties([
+  const toolbox: ToolboxCategory[] = withActors([
     ...structural,
     ...BUILTIN_RULE_CATEGORIES,
     ...TOOLBOX_TAIL,
