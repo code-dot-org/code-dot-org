@@ -1345,7 +1345,7 @@ export const BlocklyFileEditor = ({
           anchorBodyOwner(head);
           // The viewport is wherever the interface left it, which for a rule
           // wider than the screen is not where this is. To the ORIGIN rather
-          // than centred on the head: the head is as wide as the signature it
+          // than centered on the head: the head is as wide as the signature it
           // draws, and centring a wide block puts its left edge behind the
           // toolbox.
         }

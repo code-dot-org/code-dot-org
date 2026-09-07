@@ -11,7 +11,7 @@
 // fill, which is why the number is a rule's and not a `define property`.
 //
 // IT ASKS THE ACTOR, not the world. Everything it draws — the fraction and
-// both colours — is read off whoever is running the routine, so two bars of
+// both colors — is read off whoever is running the routine, so two bars of
 // this one kind show two different things and neither knows the other exists.
 //
 // TURN IT for a vertical one. A bar along x rotated ninety degrees is a bar

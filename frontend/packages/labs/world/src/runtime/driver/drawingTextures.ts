@@ -101,7 +101,7 @@ function rasterize(
     return canvas;
   }
   // Transparent until something is drawn on it — the canvas is where the
-  // picture goes, not a sheet of paper with a colour.
+  // picture goes, not a sheet of paper with a color.
   paintDrawing(context, state.commands, sprite =>
     scene.textures.exists(sprite)
       ? (scene.textures.get(sprite).getSourceImage() as CanvasImageSource)

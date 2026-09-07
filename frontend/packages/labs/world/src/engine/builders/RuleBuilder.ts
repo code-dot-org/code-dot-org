@@ -156,7 +156,7 @@ export class RuleBuilder {
    * Add a per-tick step that runs in a named moment of the frame
    * (core/phases).
    *
-   * What a rule says instead of naming a neighbour: gravity is a force, so it
+   * What a rule says instead of naming a neighbor: gravity is a force, so it
    * runs in `push`, and it need not know that Physics exists to say so.
    */
   addStepIn(id: string, phase: string, run: StepFn): Step {

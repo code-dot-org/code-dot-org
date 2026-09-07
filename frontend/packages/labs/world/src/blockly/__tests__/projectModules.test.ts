@@ -53,7 +53,7 @@ describe('projectModules', () => {
     ]);
   });
 
-  it('lists rule modules under rules/, labelled by their RuleBuilder name', () => {
+  it('lists rule modules under rules/, labeled by their RuleBuilder name', () => {
     const files = {
       ...FILES,
       'rules/gravity.js': `const rule = new RuleBuilder({id: 'gravity', name: 'Has Gravity'});\nexport default rule.build();`,

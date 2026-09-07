@@ -114,16 +114,16 @@ export const inventoryDemo: RuleDemo = {
       return {
         width: 0,
         height: 0,
-        colour: '#abb2bf',
+        color: '#abb2bf',
         text: `KEYS ${held}`,
         textScale: 2,
       };
     }
     if (id === 'key') {
-      return {width: 12, height: 12, colour: '#f6c453'};
+      return {width: 12, height: 12, color: '#f6c453'};
     }
     return id === 'door'
-      ? {width: 16, height: 32, colour: '#5c6370'}
-      : {width: 16, height: 16, colour: '#61afef'};
+      ? {width: 16, height: 32, color: '#5c6370'}
+      : {width: 16, height: 16, color: '#61afef'};
   },
 };

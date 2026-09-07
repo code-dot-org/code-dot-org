@@ -49,7 +49,7 @@ export const clamp = (n: number, lo: number, hi: number): number =>
   Math.max(lo, Math.min(hi, n));
 
 /**
- * The camera that fits a map of `extent` into a `w`×`h` pane, centred.
+ * The camera that fits a map of `extent` into a `w`×`h` pane, centered.
  *
  * Takes the extent rather than reading the viewport constant: a map is
  * whatever size it says it is now, so "fit the map" is a question about the
@@ -105,11 +105,11 @@ export function zoomToward(
 }
 
 /**
- * Where a dropped actor lands: the centre of the tile cell under `pos`, or
+ * Where a dropped actor lands: the center of the tile cell under `pos`, or
  * — free — the nearest whole pixel.
  *
- * The centre rather than the corner, because an actor's position IS its
- * centre (the engine draws it centred, the hit test measures from it), so
+ * The center rather than the corner, because an actor's position IS its
+ * center (the engine draws it centered, the hit test measures from it), so
  * a snapped actor sits in its cell rather than straddling four.
  */
 export function snapToTile(pos: Vec, tile: Tile, free: boolean): Vec {
@@ -124,7 +124,7 @@ export function snapToTile(pos: Vec, tile: Tile, free: boolean): Vec {
 
 /**
  * One keyboard step from `pos`: a whole tile in the direction given, landing
- * on that cell's centre, or — free — a single pixel.
+ * on that cell's center, or — free — a single pixel.
  *
  * Snapped AFTER the move rather than before, so an actor placed off-grid is
  * brought onto it by its first nudge, which is what a nudge means; the free
@@ -228,7 +228,7 @@ export function hitTest(
  *
  * Comfortably is inside a margin of the pane's edge: a point on the last
  * pixel is technically on screen and practically lost. When it has to move
- * the camera centres the point and keeps the zoom — a keyboard cycling the
+ * the camera centers the point and keeps the zoom — a keyboard cycling the
  * selection should not also change how big everything is.
  */
 export function panIntoView(

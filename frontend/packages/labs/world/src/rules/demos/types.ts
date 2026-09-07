@@ -6,7 +6,7 @@
 // safely, and building one with the engine directly is a great deal less to
 // carry than authoring a project in block JSON.
 //
-// ONE DEFINITION, TWO READERS (specs/RULE_DEMOS.md). The behaviour test builds
+// ONE DEFINITION, TWO READERS (specs/RULE_DEMOS.md). The behavior test builds
 // it and asserts what the rule did; the recorder builds it and films it. That
 // sharing is what keeps a recording honest: a rule that stops doing what its
 // demo shows fails a test on the commit that caused it, rather than going on
@@ -38,7 +38,7 @@ export const DEMO_SIZE = {width: 192, height: 128} as const;
  */
 export const DEMO_TILES = {columns: 6, rows: 4} as const;
 
-/** What a demo is drawn on — the engine's own default backdrop colour. */
+/** What a demo is drawn on — the engine's own default backdrop color. */
 export const DEMO_BACKGROUND = '#101020';
 
 /**
@@ -56,13 +56,13 @@ export const DEMO_BACKGROUND = '#101020';
  */
 export const DEMO_FPS = 12;
 
-/** How one actor is drawn, in pixels and a CSS colour. */
+/** How one actor is drawn, in pixels and a CSS color. */
 export interface Look {
   width: number;
   height: number;
-  colour: string;
+  color: string;
   /**
-   * A string drawn in place of the rectangle, centred where it would have been.
+   * A string drawn in place of the rectangle, centered where it would have been.
    *
    * The one thing a box cannot stand in for, and the reason Writing had no
    * demo until the strip writer learned a font (`record/font`). Upper case,
@@ -199,7 +199,7 @@ export function viewOrigin(world: World): {x: number; y: number} {
  * alike. A frame drawn before the input was applied shows a key lighting up
  * one frame after the actor it moved, which reads as the rule acting on its
  * own — the exact opposite of what an input demo is for. The recorder and the
- * behaviour tests both step through here, so neither can drift.
+ * behavior tests both step through here, so neither can drift.
  */
 export function stepDemo(
   world: World,

@@ -119,7 +119,7 @@ a name has to be: something, and not something already there.
 The buttons are `IconButtonWithTooltip` (`@code-dot-org/lab/components`) and not
 a bare MUI `IconButton` with a `Tooltip`: the bubble portals to `<body>`, which
 is OUTSIDE the `[data-theme]` element the lab renders inside, so a tooltip that
-does not carry the theme itself resolves its colour variables against nothing
+does not carry the theme itself resolves its color variables against nothing
 and draws black text on its own dark bubble. That component stamps the theme it
 is handed.
 

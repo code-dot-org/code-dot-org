@@ -78,7 +78,7 @@ export const worldMeasurements = (
     '',
     'Positions are in PIXELS, not tiles, and an actor’s position is its ' +
       `CENTRE. The middle of tile *n* is \`n * ${TILE_SIZE} + ${TILE_SIZE / 2}\`, ` +
-      `so the first tile’s centre is ${TILE_SIZE / 2} and the fourth’s is ` +
+      `so the first tile’s center is ${TILE_SIZE / 2} and the fourth’s is ` +
       `${3 * TILE_SIZE + TILE_SIZE / 2}.`,
     '',
     'X grows to the RIGHT and Y grows DOWNWARD, so the top row is y = ' +

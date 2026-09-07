@@ -23,7 +23,7 @@
  * bare `<button>` with its own padding and a hand-set weight, which drew a
  * control that looked like nothing else in the lab.
  *
- * The rule under it is a SEMANTIC colour, not a black at 12%: a fixed
+ * The rule under it is a SEMANTIC color, not a black at 12%: a fixed
  * transparency is a light-theme value that survives into the dark one, where
  * it disappears into the panel it is meant to divide.
  *
@@ -34,7 +34,7 @@
  * A themed button is white in the dark theme, so the first version of this
  * change drew white on white: the bar was in the DOM, the right height, with
  * the right text, and invisible. Its own ground is what makes the theme's
- * text colour mean anything. */
+ * text color mean anything. */
 .bodyHeader {
   display: flex;
   align-items: center;

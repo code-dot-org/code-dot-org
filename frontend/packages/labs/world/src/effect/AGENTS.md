@@ -230,7 +230,7 @@ functionId, op)` — never edit `document.nodes` directly in a handler, or the
   so each `<Handle>` contains a child span with `inset: -12px` that receives
   the pointerdown and bubbles it up. Drop detection is unaffected (it uses
   `connectionRadius` around the handle's own bounds), and pads must not grow
-  past the tightest port spacing (33.6px on a five-input node) or neighbours
+  past the tightest port spacing (33.6px on a five-input node) or neighbors
   overlap. Touch behavior is tested by driving CDP `Input.dispatchTouchEvent`
   from Playwright — its `touchscreen` API only taps, and synthetic pointer
   events skip the browser's real touch pipeline.

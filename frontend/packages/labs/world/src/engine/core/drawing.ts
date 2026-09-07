@@ -29,7 +29,7 @@ interface Paint {
 /** Which part of the text sits at the point it is drawn at. */
 export type TextAnchor =
   | 'left'
-  | 'centre'
+  | 'center'
   | 'right'
   | 'top left'
   | 'top'
@@ -43,7 +43,7 @@ export const TEXT_ANCHORS: readonly TextAnchor[] = [
   'top',
   'top right',
   'left',
-  'centre',
+  'center',
   'right',
   'bottom left',
   'bottom',
@@ -193,9 +193,9 @@ export class CommandPen implements Pen {
   }
 
   /**
-   * A line is drawn in the outline colour, FALLING BACK TO THE FILL.
+   * A line is drawn in the outline color, FALLING BACK TO THE FILL.
    *
-   * A line has no interior, so "the colour" is the only paint it can mean. The
+   * A line has no interior, so "the color" is the only paint it can mean. The
    * fallback is the whole of what stops the commonest first drawing anybody
    * writes — `draw line`, with the pen untouched — from producing nothing at
    * all and no way to find out why.

@@ -433,7 +433,7 @@ export class WorldBuilder {
     return this.defer('setForeground', sprite, layer);
   }
 
-  /** Set the colour behind the backdrop. See {@link World.setBackgroundColor}. */
+  /** Set the color behind the backdrop. See {@link World.setBackgroundColor}. */
   setBackgroundColor(color: ColorValue): this {
     return this.defer('setBackgroundColor', color);
   }
@@ -653,7 +653,7 @@ export class WorldBuilder {
     layer?: string,
   ): Actor {
     // Straight through: the live World does the whole job, so one block gets
-    // the same behaviour whichever it lands on (see `World.addActor`).
+    // the same behavior whichever it lands on (see `World.addActor`).
     return this.getWorld().addActor(builder, id, type, layer);
   }
 
@@ -729,7 +729,7 @@ export class WorldBuilder {
    * throwaway (the thumbnail renderer builds one per picker refresh, and tests
    * build many). Two worlds made this way are independent — the log holds the
    * arguments a call was given, and the World copies what it stores (a Vector,
-   * a colour), so replaying it twice shares nothing.
+   * a color), so replaying it twice shares nothing.
    */
   /**
    * Declare state this WORLD carries — a score, a level number, a flag.

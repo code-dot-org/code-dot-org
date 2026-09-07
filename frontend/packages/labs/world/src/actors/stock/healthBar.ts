@@ -38,7 +38,7 @@ import {actorFile, fill, me, num, rectangle, showAs} from './workspace';
 /** The canvas, and so also the actor's size for clicks and collisions. */
 const WIDTH = 64;
 const HEIGHT = 8;
-/** The colours a health bar is, since nothing here carries them per instance. */
+/** The colors a health bar is, since nothing here carries them per instance. */
 const TRACK = '#301820';
 const BAR = '#e04040';
 

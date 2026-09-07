@@ -28,6 +28,6 @@ export const expiresDemo: RuleDemo = {
     return {world, cast};
   },
   look() {
-    return {width: 16, height: 16, colour: '#d19a66'};
+    return {width: 16, height: 16, color: '#d19a66'};
   },
 };

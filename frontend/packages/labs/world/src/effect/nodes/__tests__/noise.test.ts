@@ -30,7 +30,7 @@ const at = (x = 0, y = 0) => ({x, y});
  *
  * The last node's `out` is what gets drawn, through `combine3` so a float
  * reaches a color port — which is also the ordinary way either of these is
- * used: a number turned into grey.
+ * used: a number turned into gray.
  */
 function noiseDocument(nodes: EffectGraphNode[]): EffectDocument {
   const last = nodes[nodes.length - 1].id;

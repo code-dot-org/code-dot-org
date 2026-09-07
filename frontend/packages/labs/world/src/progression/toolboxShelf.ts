@@ -132,7 +132,7 @@ export function shelvedToolbox(toolbox: Toolbox, view: ShelfView): Toolbox {
     const blocks = (category.blocks ?? []).filter(item => {
       const type = typeOf(item);
       if (type === undefined) {
-        // A labelled button or a preset flyout item names no type; it belongs
+        // A labeled button or a preset flyout item names no type; it belongs
         // to the drawer rather than to any lesson.
         return true;
       }

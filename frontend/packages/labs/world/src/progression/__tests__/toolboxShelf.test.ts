@@ -190,7 +190,7 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   'puzzle/turns': ['world_use_trait'],
   // Not `any ⟨Dot⟩`: the new block's source socket wears one already, so the
   // one trip to the toolbox is for the block itself.
-  'simulation/neighbours': ['world_actors_within'],
+  'simulation/neighbors': ['world_actors_within'],
   'adventure/rooms': ['world_clear_world', 'world_load_map'],
   'adventure/keys': [
     'controls_if',

@@ -1190,7 +1190,7 @@ describe('Gravity’s "ignores ground"', () => {
     faller.set(of('rules/gravity', 'IgnoresGroundProperty'), false as never);
     run(world, 1);
 
-    // The lower platform is 16 tall centred at 320, so its surface is 312 and
+    // The lower platform is 16 tall centered at 320, so its surface is 312 and
     // a 16-tall body rests at 304.
     expect(height(faller)).toBeCloseTo(304, 0);
   });
@@ -1400,7 +1400,7 @@ describe('every demo world', () => {
           const look = demo.look(actor.id, actor, world);
           return (
             `${actor.id}@${Math.round(at.x)},${Math.round(at.y)}` +
-            `:${look.width}x${look.height}:${look.colour}:${look.text ?? ''}`
+            `:${look.width}x${look.height}:${look.color}:${look.text ?? ''}`
           );
         })
         .join(' ');
@@ -1808,14 +1808,14 @@ describe('what the newer demos show', () => {
 
     // The camera left where it started — a twelve-tile map through six tiles.
     expect(view.x).toBeGreaterThan(180);
-    // …and the walker is still centred, which is what following MEANS.
+    // …and the walker is still centered, which is what following MEANS.
     expect(walker.get(PositionProperty).x - view.x).toBeCloseTo(middle, 0);
   });
 
   it('cameraEase: the walker runs ahead of the view and settles there', () => {
     // The lag IS the demonstration, and it is a steady one: at a twentieth of
     // the gap a frame, a walker moving a hundred pixels a second ends up about
-    // thirty ahead of centre and stays there.
+    // thirty ahead of center and stays there.
     const ahead = onScreen(RULE_DEMOS.cameraEase) - middle;
 
     expect(ahead).toBeGreaterThan(15);
@@ -1823,8 +1823,8 @@ describe('what the newer demos show', () => {
   });
 
   it('cameraDeadzone: the walker rests on the edge of the box it left', () => {
-    // Neither centred nor carried along: exactly `slack` off centre, which is
-    // the default forty-eight, and travelling with the view from then on.
+    // Neither centered nor carried along: exactly `slack` off center, which is
+    // the default forty-eight, and traveling with the view from then on.
     const ahead = onScreen(RULE_DEMOS.cameraDeadzone) - middle;
 
     expect(ahead).toBeCloseTo(48, 0);
@@ -1833,7 +1833,7 @@ describe('what the newer demos show', () => {
   it('cameraConfined: the view stops and the walker walks on', () => {
     // The one demo whose walker is meant to leave the middle for good. The
     // camera runs out of map, so from then on every pixel the walker moves is
-    // a pixel further from centre — but still inside the picture, or the strip
+    // a pixel further from center — but still inside the picture, or the strip
     // ends with its subject missing.
     const {world, cast} = play(RULE_DEMOS.cameraConfined);
     const walker = cast.walker as {get(p: unknown): Vector};
@@ -2676,7 +2676,7 @@ describe('Climbing', () => {
     up(world, climber);
     run(world, 3);
 
-    // The top rung is 32 tall centred at 80, so its surface is 64 and a
+    // The top rung is 32 tall centered at 80, so its surface is 64 and a
     // 16-tall climber rests at 56.
     expect(height(rungs[3])).toBe(80);
     expect(height(climber)).toBeCloseTo(56, 0);
@@ -2712,7 +2712,7 @@ describe('Climbing', () => {
     ).toBeCloseTo(100, 1);
   });
 
-  it('leaves the climber where it is when told not to centre it', () => {
+  it('leaves the climber where it is when told not to center it', () => {
     // A wide ladder — a rope net, a shaft you can move about inside — is this
     // switched off, and it has to actually be switchable.
     const {world, climber} = ladder();
@@ -3269,7 +3269,7 @@ describe('Turning', () => {
 
     run(world, 1);
 
-    // On the floor, which is 32 tall centred at 300, so its surface is 284
+    // On the floor, which is 32 tall centered at 300, so its surface is 284
     // and a 16-tall body rests at 276.
     expect(where(mover).y).toBeCloseTo(276, 0);
   });
@@ -3679,10 +3679,10 @@ describe('Teleport', () => {
   /**
    * A row of pads and something standing on the first of them.
    *
-   * `colours` is one entry per pad, so `['#f00', '#f00', '#00f']` is two red
+   * `colors` is one entry per pad, so `['#f00', '#f00', '#00f']` is two red
    * pads and a blue one — which is the shape every question here asks about.
    */
-  const pads = (colours: readonly string[], takesAny = false) => {
+  const pads = (colors: readonly string[], takesAny = false) => {
     const world = new WorldBuilder({id: 'w', name: 'W'})
       .useRules([
         rule('rules/motion'),
@@ -3691,13 +3691,13 @@ describe('Teleport', () => {
         rule('rules/teleport'),
       ])
       .instantiate();
-    const made = colours.map((colour, index) => {
+    const made = colors.map((color, index) => {
       const one = new ActorBuilder({id: `pad${index}`, name: `pad${index}`})
         .useTraits([of('rules/teleport', 'IsATeleportPadTrait')])
         .set(PositionProperty, at(100 + index * 100, 200))
         .set(of('rules/collisions', 'SizeProperty'), new Vector(32, 32))
         .instantiate(`pad${index}`);
-      one.set(of('rules/teleport', 'PadColourProperty'), colour as never);
+      one.set(of('rules/teleport', 'PadColorProperty'), color as never);
       world.addActor(one);
       return one;
     });
@@ -3726,7 +3726,7 @@ describe('Teleport', () => {
     );
 
   it('stands still on the way, on a floor it is standing in', () => {
-    // THE BUG A PLAYER SAW: a traveller whipped across the room and then
+    // THE BUG A PLAYER SAW: a traveler whipped across the room and then
     // popped up where it was meant to go. Holding it still was written as
     // `velocity = 0`, and `position before` was then worked out from the
     // velocity — so both components at zero said "it has always been exactly
@@ -3766,7 +3766,7 @@ describe('Teleport', () => {
         .set(PositionProperty, at(x, 288))
         .set(of('rules/collisions', 'SizeProperty'), new Vector(32, 32))
         .instantiate(`p${index}`);
-      one.set(of('rules/teleport', 'PadColourProperty'), '#ff0000' as never);
+      one.set(of('rules/teleport', 'PadColorProperty'), '#ff0000' as never);
       world.addActor(one);
     }
     const walker = new ActorBuilder({id: 'w1', name: 'walker'})
@@ -3790,7 +3790,7 @@ describe('Teleport', () => {
       seen.push(spotOf(walker).x);
     }
 
-    // Not a pixel of it, in either direction. The old behaviour moved sixteen
+    // Not a pixel of it, in either direction. The old behavior moved sixteen
     // a frame.
     for (const x of seen) {
       expect(x).toBeCloseTo(from, 1);
@@ -3799,7 +3799,7 @@ describe('Teleport', () => {
     expect(spotOf(walker).x).toBeCloseTo(304, 0);
   });
 
-  it('takes a traveller to another pad of the same colour', () => {
+  it('takes a traveler to another pad of the same color', () => {
     const {world, walker} = pads(['#ff0000', '#ff0000']);
 
     step(walker);
@@ -3808,7 +3808,7 @@ describe('Teleport', () => {
     expect(spotOf(walker).x).toBeCloseTo(200, 0);
   });
 
-  it('does not go anywhere from the only pad of its colour', () => {
+  it('does not go anywhere from the only pad of its color', () => {
     // The right answer rather than a special case: one pad is a pad with
     // nowhere to go.
     const {world, walker} = pads(['#ff0000', '#0000ff']);
@@ -3838,7 +3838,7 @@ describe('Teleport', () => {
     expect(spotOf(walker).x).toBeCloseTo(200, 0);
   });
 
-  it('reaches every pad of the colour, not just the first', () => {
+  it('reaches every pad of the color, not just the first', () => {
     // What `any actor in` is for, and what `first actor in` could not say:
     // three red pads read with `first` are two pads and a decoration, because
     // the answer never changes.
@@ -3853,10 +3853,10 @@ describe('Teleport', () => {
     expect([...seen].sort((a, b) => a - b)).toEqual([200, 300]);
   });
 
-  it('puts a traveller down standing the way it was standing', () => {
+  it('puts a traveler down standing the way it was standing', () => {
     // THE BUG A LESSON FOUND, and the commonest pad there is finds it: one
     // set into the floor. Arriving at the destination pad's own position
-    // sounds right and puts the traveller INSIDE the ground, and Solid —
+    // sounds right and puts the traveler INSIDE the ground, and Solid —
     // which cannot know why — pushes it out sideways, a tile a frame, until
     // it is somewhere nobody aimed at.
     const {world, walker, made} = pads(['#ff0000', '#ff0000']);
@@ -3876,8 +3876,8 @@ describe('Teleport', () => {
     expect(spotOf(walker).y).toBeCloseTo(far.y - 12, 0);
   });
 
-  it('does not let a waiting traveller read as a stopped one', () => {
-    // WHY `held still` IS IN PHYSICS. A trip has a duration and the traveller
+  it('does not let a waiting traveler read as a stopped one', () => {
+    // WHY `held still` IS IN PHYSICS. A trip has a duration and the traveler
     // is held for it, and a body that is not moving is exactly what `Turning`
     // reads as one that was stopped — so without the flag a ball waiting out
     // a teleport turns round on every frame of the wait. Both rules are right
@@ -3897,7 +3897,7 @@ describe('Teleport', () => {
         .set(PositionProperty, at(x, 200))
         .set(of('rules/collisions', 'SizeProperty'), new Vector(32, 32))
         .instantiate(`p${index}`);
-      one.set(of('rules/teleport', 'PadColourProperty'), '#ff0000' as never);
+      one.set(of('rules/teleport', 'PadColorProperty'), '#ff0000' as never);
       world.addActor(one);
     }
     const roller = new ActorBuilder({id: 'r', name: 'roller'})
@@ -3943,12 +3943,12 @@ describe('Teleport', () => {
 
 describe('Switches', () => {
   /**
-   * A switch on the floor and two walls of the same colour, one of each state.
+   * A switch on the floor and two walls of the same color, one of each state.
    *
-   * The pair is the point: a colour with one state could only open or close
+   * The pair is the point: a color with one state could only open or close
    * both, and what a room wants is a corridor that swaps.
    */
-  const room = (colour = '#e0484a') => {
+  const room = (color = '#e0484a') => {
     const world = new WorldBuilder({id: 'w', name: 'W'})
       .useRules([
         rule('rules/motion'),
@@ -3966,7 +3966,7 @@ describe('Switches', () => {
         .set(PositionProperty, at(300 + index * 100, 200))
         .set(of('rules/collisions', 'SizeProperty'), new Vector(32, 32))
         .instantiate(`wall${index}`);
-      one.set(of('rules/switches', 'WallColourProperty'), colour as never);
+      one.set(of('rules/switches', 'WallColorProperty'), color as never);
       one.set(
         of('rules/collisions', 'PassesThroughThingsProperty'),
         open as never,
@@ -3979,7 +3979,7 @@ describe('Switches', () => {
       .set(PositionProperty, at(100, 200))
       .set(of('rules/collisions', 'SizeProperty'), new Vector(32, 32))
       .instantiate('pad');
-    pad.set(of('rules/switches', 'SwitchColourProperty'), colour as never);
+    pad.set(of('rules/switches', 'SwitchColorProperty'), color as never);
     world.addActor(pad);
     return {world, made, pad};
   };
@@ -4003,9 +4003,9 @@ describe('Switches', () => {
       of('rules/collisions', 'PassesThroughThingsProperty'),
     );
 
-  it('swaps every wall of its colour, each from where it was', () => {
+  it('swaps every wall of its color, each from where it was', () => {
     // Not "opens them" — two walls, one open and one shut, come out the other
-    // way round. A colour with a single state could not say that.
+    // way round. A color with a single state could not say that.
     const {world, made} = room();
     walker(world, 100);
 
@@ -4015,10 +4015,10 @@ describe('Switches', () => {
     expect(isOpen(made[1])).toBe(false);
   });
 
-  it('leaves a wall of another colour alone', () => {
+  it('leaves a wall of another color alone', () => {
     const {world, made} = room();
     (made[0] as {set(p: unknown, v: unknown): void}).set(
-      of('rules/switches', 'WallColourProperty'),
+      of('rules/switches', 'WallColorProperty'),
       '#3f7fe0',
     );
     walker(world, 100);
@@ -4346,7 +4346,7 @@ describe('slipping round a corner', () => {
         .instantiate(`w${index}`);
       world.addActor(block);
     }
-    // The gap is the 32 pixels between them, centred on 200.
+    // The gap is the 32 pixels between them, centered on 200.
     const body = new ActorBuilder({id: 'body', name: 'body'})
       .useTraits([
         of('rules/collisions', 'CanCollideTrait'),
@@ -4444,7 +4444,7 @@ describe('where a body was', () => {
   });
 
   it('is a record, not a guess from the speed', () => {
-    // A teleport pad sets a traveller down at the far pad by hand, in `push`,
+    // A teleport pad sets a traveler down at the far pad by hand, in `push`,
     // with its speed at zero. Worked out from the speed, "where was it" on the
     // arrival frame answers "at the far pad, always" — which is the sideways
     // whip Solid made of it. Recorded, it answers where the trip began.
@@ -4462,7 +4462,7 @@ describe('where a body was', () => {
         .set(PositionProperty, at(x, 200))
         .set(of('rules/collisions', 'SizeProperty'), new Vector(32, 32))
         .instantiate(`pad${index}`);
-      pad.set(of('rules/teleport', 'PadColourProperty'), '#ff0000' as never);
+      pad.set(of('rules/teleport', 'PadColorProperty'), '#ff0000' as never);
       world.addActor(pad);
     }
     const walker = new ActorBuilder({id: 'walker', name: 'walker'})
@@ -4493,7 +4493,7 @@ describe('where a body was', () => {
     // by the rule that made it meaningless. A trip is a discontinuity: there
     // is no line between the two pads for anything to resolve against, and
     // Solid resolves an overlap by asking which face a body came in through.
-    // Left saying "the near pad", it pushed a landed traveller out along the
+    // Left saying "the near pad", it pushed a landed traveler out along the
     // line between the two — through the floor it had arrived on, for ever,
     // and only ever for a body that comes to rest. Saying "here" turns that
     // question into "which side of this floor am I on", which is the one a

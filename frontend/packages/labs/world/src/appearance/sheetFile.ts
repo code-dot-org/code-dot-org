@@ -20,7 +20,7 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
  *
  * A grid of cells, read left to right and top down, with two allowances that
  * real spritesheets need: `padding` around the outside and a `gap` between
- * neighbours. Both exist to keep a cell's pixels away from its neighbour's —
+ * neighbors. Both exist to keep a cell's pixels away from its neighbor's —
  * a renderer sampling a texture at a scaled or rotated size reaches slightly
  * past the rectangle it was given, and without a moat it fetches the sprite
  * next door (the "bleeding" that plagues tile maps). Absent means zero, which

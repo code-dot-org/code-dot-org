@@ -39,7 +39,7 @@ describe('rules/writing.rule', () => {
     // Labels of one kind can say different things, and the map editor's
     // inspector shows a field for each with no editor work (`describeActor`).
     //
-    // The colour is its own TYPE rather than a string holding one, which is
+    // The color is its own TYPE rather than a string holding one, which is
     // what makes its getter report `Colour` and its inspector field a swatch.
     expect(meta.traits.map(trait => trait.name)).toEqual(['Shows Text']);
     expect(
@@ -67,7 +67,7 @@ describe('rules/writing.rule', () => {
     expect(module_).toContain('export default rule.build()');
   });
 
-  it('starts empty, at a readable size, in white, centred', () => {
+  it('starts empty, at a readable size, in white, centered', () => {
     // An actor that has not been given words has none — a Label placed and left
     // alone draws nothing rather than the word "text". The rest are defaults a
     // learner overrides per placement.
@@ -78,7 +78,7 @@ describe('rules/writing.rule', () => {
       text: '',
       'text size': 12,
       'text color': '#ffffff',
-      'text anchor': 'centre',
+      'text anchor': 'center',
     });
   });
 
@@ -104,13 +104,13 @@ describe('the color property type', () => {
   });
 
   it('is offered when a learner declares one', () => {
-    // A `define property` in any rule can be a colour, which is what makes this
+    // A `define property` in any rule can be a color, which is what makes this
     // a type in the language rather than a special case for one stock rule.
     expect(PROPERTY_TYPES.has('color')).toBe(true);
   });
 
   it('reads and writes it as the string it is', () => {
-    // The engine is never told about colours: `#rrggbb` is what every colour
+    // The engine is never told about colors: `#rrggbb` is what every color
     // block produces and what `core/color` converts (engine/core/types).
     expect(parseDefault('#ff8800', 'color')).toBe('#ff8800');
     expect(ruleMetaToModule(meta)).toContain('"#ffffff"');

@@ -12,7 +12,7 @@
 // them while it is mounted, so `import a sound` from the Sound menu did
 // nothing at all with a PNG in the editor: the seam has no handler registered,
 // and a request with nobody listening resolves undefined, which is the right
-// behaviour for a headless generator and a silent failure here.
+// behavior for a headless generator and a silent failure here.
 //
 // So the dialogs are the LAB's, mounted beside the workspace rather than
 // inside one editor, and both callers ask the same way. Nothing about the seam

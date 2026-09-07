@@ -38,21 +38,21 @@ const rule = defineRule({
   purpose: `**Teleport** is a way across a room that is not a way through it.
 
 Every other way of getting somewhere here is continuous — you walk, you fall,
-you climb. A pad breaks that: two pads of the same colour are one place,
+you climb. A pad breaks that: two pads of the same color are one place,
 however far apart they are.
 
-Give pads **Is a Teleport Pad** and travellers **Uses Teleport Pads**.`,
+Give pads **Is a Teleport Pad** and travelers **Uses Teleport Pads**.`,
   header: `// "Has Teleport Pads" — a way across a room that is not a way through it.
 //
 // Every other way of getting somewhere in this library is CONTINUOUS: you walk,
 // you fall, you climb, you fly. A room built out of those is a room whose shape
 // is its difficulty, and a level designer's only lever is the distance between
-// things. A pad breaks that. Two pads of the same colour are one place, however
+// things. A pad breaks that. Two pads of the same color are one place, however
 // far apart they are drawn, and a room can be folded.
 //
-// THE COLOUR IS THE LINK, and it is a colour rather than a number or a name
+// THE COLOR IS THE LINK, and it is a color rather than a number or a name
 // because it is a thing the PLAYER has to read at a glance from across the
-// room. \`pad colour\` is a real colour: its socket takes a swatch and the map
+// room. \`pad color\` is a real color: its socket takes a swatch and the map
 // editor draws a picker, so a level author paints the network rather than
 // remembering that channel two is the blue one.
 //
@@ -60,17 +60,17 @@ Give pads **Is a Teleport Pad** and travellers **Uses Teleport Pads**.`,
 // \`any actor in ⟨…⟩\` is for, and writing this rule is what found that gap.
 // The language could say "the first actor in" and could not say "one of them":
 // three red pads with \`first\` in them are two pads and a decoration, because
-// the answer never changes. With one pad of a colour there is nowhere to go and
+// the answer never changes. With one pad of a color there is nowhere to go and
 // nothing happens, which is the right answer rather than a special case.
 //
 // IT TAKES TIME, and the time is the point. An instant swap reads as a glitch —
 // the eye does not accept that the thing on the left and the thing on the right
-// are the same thing — so a traveller stops where it is, waits, and arrives.
-// That gap is somewhere for an animation to go (\`starts travelling\` says when),
+// are the same thing — so a traveler stops where it is, waits, and arrives.
+// That gap is somewhere for an animation to go (\`starts traveling\` says when),
 // and it is also where a project decides what a trip costs. A body held still
 // on a pad with an enemy walking towards it is a punishment for using the
-// mechanic, so a game will usually want the traveller safe for the duration —
-// and that is a HANDLER on \`starts travelling\`, calling Health's own \`be safe
+// mechanic, so a game will usually want the traveler safe for the duration —
+// and that is a HANDLER on \`starts traveling\`, calling Health's own \`be safe
 // for ⟨n⟩ seconds\`, not something this rule does.
 //
 // THIS RULE DOES NOT KNOW ABOUT HEALTH, and did until it was pointed out that
@@ -87,11 +87,11 @@ Give pads **Is a Teleport Pad** and travellers **Uses Teleport Pads**.`,
 // what makes a room with pads in it unpredictable to move through — JETPACK.md
 // asks for exactly that, and it is one boolean.
 //
-// AND IT DOES NOT LOOP. A traveller that arrived somewhere is standing on the
+// AND IT DOES NOT LOOP. A traveler that arrived somewhere is standing on the
 // pad it arrived at, so a robot that takes any pad it touches would leave, land
 // and leave again for ever. \`came from\` is not enough on its own to stop that:
 // what stops it is that arriving does not count as touching, which is what the
-// wait after landing is — a traveller must step OFF a pad before that pad, or
+// wait after landing is — a traveler must step OFF a pad before that pad, or
 // any other, can take it again.`,
 });
 rule.uses('Physics');
@@ -105,29 +105,29 @@ pad.uses(CanCollide);
 /**
  * Which network this pad belongs to.
  *
- * A colour rather than a number, because it is the thing a player reads from
+ * A color rather than a number, because it is the thing a player reads from
  * across the room — and because a level author should paint the network rather
  * than remember which channel is which. Pads match on this exactly.
  */
-const padColour = pad.color('pad colour', '#4da3ff');
+const padColor = pad.color('pad color', '#4da3ff');
 
 /**
- * `when ⟨pad⟩ sends ⟨traveller⟩` — the PAD's side of a trip.
+ * `when ⟨pad⟩ sends ⟨traveler⟩` — the PAD's side of a trip.
  *
  * The same two-sidedness `Collection` has, and for the same reason. `starts
- * travelling` says a body is on its way and is about the BODY, so a handler
- * for it lives with the body: to fade five travellers out you write the fade
+ * traveling` says a body is on its way and is about the BODY, so a handler
+ * for it lives with the body: to fade five travelers out you write the fade
  * five times, once per kind, and a sixth kind that teleports arrives with no
  * fade and nothing saying why.
  *
- * What a trip LOOKS like is not a fact about the traveller, though. It is the
+ * What a trip LOOKS like is not a fact about the traveler, though. It is the
  * pad's — the pad is the thing doing something to whatever steps on it — so
  * the pad needs an event of its own, and this is it. One handler on one pad
- * covers every traveller there will ever be, and reaches the traveller as
+ * covers every traveler there will ever be, and reaches the traveler as
  * `event actor`.
  *
  * BOTH SIDES ARE RAISED, always, because which one a project wants is the
- * project's business. A game where only the player fades wants the traveller's
+ * project's business. A game where only the player fades wants the traveler's
  * side; a game where every pad flashes wants this one.
  */
 const sends = pad.event(['sends', param('who', 'actor')]);
@@ -136,7 +136,7 @@ const receives = pad.event(['receives', param('who', 'actor')]);
 
 export const IsATeleportPad = rule.traitRef('Is a Teleport Pad');
 
-// ── The traveller ────────────────────────────────────────────────────────────
+// ── The traveler ────────────────────────────────────────────────────────────
 
 const travels = rule.trait('Uses Teleport Pads');
 travels.uses(CanMove);
@@ -149,7 +149,7 @@ export const UsesTeleportPads = rule.traitRef('Uses Teleport Pads');
  *
  * Not nothing, and not much: long enough that a player sees a departure and an
  * arrival rather than a jump, and short enough that it is not a punishment.
- * The traveller is safe for exactly this long — see the header.
+ * The traveler is safe for exactly this long — see the header.
  */
 const travelSeconds = travels.number('travel seconds', 0.4);
 /**
@@ -162,7 +162,7 @@ const travelSeconds = travels.number('travel seconds', 0.4);
 const takesAny = travels.boolean('takes any pad it touches', 'false');
 
 /** Whether it is mid-trip. */
-const travelling = travels.boolean('travelling', 'false', {readonly: true});
+const traveling = travels.boolean('traveling', 'false', {readonly: true});
 /** The world time it arrives at. */
 const arrivesAt = travels.number('arrives at', 0, {readonly: true});
 /** Where it is going — held from the moment it steps on. */
@@ -173,20 +173,20 @@ const goingTo = travels.actor('going to', {readonly: true});
  * Carried across, and it has to be. Arriving at the destination pad's own
  * position sounds right and is wrong for the commonest pad there is: one set
  * into the floor. A pad drawn as a plate on the ground has its middle IN the
- * ground, so a traveller put there is inside the floor — and Solid, which
+ * ground, so a traveler put there is inside the floor — and Solid, which
  * cannot know why, does the only thing it can and pushes it out sideways, a
  * tile a frame, until it is somewhere nobody aimed at. Keeping the offset
- * means a traveller that walked on to a pad walks off the other one, standing
+ * means a traveler that walked on to a pad walks off the other one, standing
  * the same way it was standing.
  */
 const cameInAt = travels.point('came in at', {x: 0, y: 0}, {readonly: true});
 /**
- * Whether the traveller landed THIS frame, and is therefore still held.
+ * Whether the traveler landed THIS frame, and is therefore still held.
  *
  * A trip ends in `push`, and two rules ask in `react` whether a body got
  * anywhere — Turning, to know whether it hit a wall, and Prowling, to know
- * whether to think again. Both read the distance travelled, and a body that
- * has just been placed has travelled nothing: without this the roller turns
+ * whether to think again. Both read the distance traveled, and a body that
+ * has just been placed has traveled nothing: without this the roller turns
  * round on the frame it arrives.
  *
  * `held still` is the flag that answers both, and Teleport already sets it for
@@ -198,21 +198,21 @@ const landed = travels.boolean('landed', 'false', {readonly: true});
 /**
  * Whether it has stepped off a pad since it last arrived on one.
  *
- * The whole of what stops the loop — see the header. Arriving puts a traveller
+ * The whole of what stops the loop — see the header. Arriving puts a traveler
  * ON a pad, so without this an enemy that takes any pad it touches leaves,
  * lands and leaves again for ever, and a player holding the key never stops.
  */
 const clear = travels.boolean('clear of pads', 'true', {readonly: true});
 
 /** Raised when it steps on — which is when an animation should start. */
-const startsTravelling = travels.event(['starts travelling']);
+const startsTraveling = travels.event(['starts traveling']);
 /** …and when it gets there. */
 const arrives = travels.event(['arrives']);
 
 /**
  * Stop going sideways, and leave the vertical alone.
  *
- * The vertical is gravity's: a traveller standing on a pad on a floor is a
+ * The vertical is gravity's: a traveler standing on a pad on a floor is a
  * standing body, and a standing body's downward speed is what Gravity and
  * Solid use between them to keep it standing. Zeroing it would be a second
  * opinion about how a body rests, taken once a frame for the whole of the
@@ -221,7 +221,7 @@ const arrives = travels.event(['arrives']);
  * This used to be load-bearing for another reason — `position before` was
  * worked out from the velocity, so a body with both components at zero read as
  * one that had always stood exactly here, and Solid pushed it sideways out of
- * the floor it stood in, a tile a frame. That was the traveller whipping
+ * the floor it stood in, a tile a frame. That was the traveler whipping
  * across the room. Physics records the position now, and the whip is not a
  * thing this shape prevents any more; the shape stays for the reason above.
  */
@@ -274,19 +274,19 @@ export const usePad = travels.block({
     when([
       [
         both(
-          both(not(travelling.of(thisActor())), clear.of(thisActor())),
+          both(not(traveling.of(thisActor())), clear.of(thisActor())),
           moreThan(countOf(here.get()), n(0)),
         ),
         [
           doc(
-            'Any OTHER pad of the same colour, picked afresh — which is what `any actor in` is for, and what `first actor in` could not say: three red pads read with `first` are two pads and a decoration.',
+            'Any OTHER pad of the same color, picked afresh — which is what `any actor in` is for, and what `first actor in` could not say: three red pads read with `first` are two pads and a decoration.',
           ),
           there.set(
             anyActor(
               filter(other, {
                 from: allWithTrait(IsATeleportPad),
                 where: both(
-                  equals(padColour.of(other.get()), padColour.of(here.get())),
+                  equals(padColor.of(other.get()), padColor.of(here.get())),
                   not(sameActor(other.get(), here.get())),
                 ),
               }),
@@ -296,7 +296,7 @@ export const usePad = travels.block({
             [
               moreThan(countOf(there.get()), n(0)),
               [
-                travelling.set(thisActor(), yes()),
+                traveling.set(thisActor(), yes()),
                 goingTo.set(thisActor(), there.get()),
                 doc(
                   '…and how it was standing on the one it is leaving, so that it arrives standing the same way. See the header.',
@@ -315,9 +315,9 @@ export const usePad = travels.block({
                 ),
                 held.set(thisActor(), yes()),
                 holdStill(),
-                startsTravelling({}, thisActor()),
+                startsTraveling({}, thisActor()),
                 doc(
-                  'The pad it is leaving hears about it too, so that what a departure looks like can be written once on the pad rather than once per kind of traveller.',
+                  'The pad it is leaving hears about it too, so that what a departure looks like can be written once on the pad rather than once per kind of traveler.',
                 ),
                 sends({who: thisActor()}, here.get()),
               ],
@@ -331,7 +331,7 @@ export const usePad = travels.block({
 
 // PUSH, one moment before `move`, and the phase is the fix rather than a
 // preference. `move` is where velocity becomes position, so a hold written
-// there is a hold written after the body has already been moved: the traveller
+// there is a hold written after the body has already been moved: the traveler
 // slid one frame's worth on the frame it stepped on, every time, which at a
 // rolling speed is a visible nudge. Written here the speed is zero before
 // anything reads it. Contacts are a frame old at this moment, which costs
@@ -354,7 +354,7 @@ travels.step('travel', 'push', [
   when(
     [
       [
-        travelling.of(thisActor()),
+        traveling.of(thisActor()),
         [
           holdStill(),
           when([
@@ -372,13 +372,13 @@ travels.step('travel', 'push', [
                     cameInAt.y(thisActor()),
                   ),
                 ),
-                travelling.set(thisActor(), no()),
+                traveling.set(thisActor(), no()),
                 doc(
-                  'THE RECORD OF WHERE IT STARTED THE FRAME WOULD OTHERWISE BE A LIE. Physics writes `position before` in `sense`, before anything moves, and Solid reads it to work out which face a body came in through so it can push it back out that way. A traveller set down here started the frame at the other pad, so Solid pushed it out along the line between them: for a pad above a floor, straight down through it, and only ever for a body that comes to rest — a rocket flies on and that pass never bites. Told the truth, Solid asks which side of the floor this body is on instead, which is the question a placement leaves.',
+                  'THE RECORD OF WHERE IT STARTED THE FRAME WOULD OTHERWISE BE A LIE. Physics writes `position before` in `sense`, before anything moves, and Solid reads it to work out which face a body came in through so it can push it back out that way. A traveler set down here started the frame at the other pad, so Solid pushed it out along the line between them: for a pad above a floor, straight down through it, and only ever for a body that comes to rest — a rocket flies on and that pass never bites. Told the truth, Solid asks which side of the floor this body is on instead, which is the question a placement leaves.',
                 ),
                 placed({who: thisActor()}),
                 doc(
-                  'STILL HELD, for this frame. `held still` is cleared at the top of the next one (see `landed`): a body that has just been placed has travelled nothing, and the two rules that read distance in `react` would take that for having been stopped.',
+                  'STILL HELD, for this frame. `held still` is cleared at the top of the next one (see `landed`): a body that has just been placed has traveled nothing, and the two rules that read distance in `react` would take that for having been stopped.',
                 ),
                 landed.set(thisActor(), yes()),
                 doc(

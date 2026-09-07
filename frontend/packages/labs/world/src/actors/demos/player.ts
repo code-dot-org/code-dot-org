@@ -18,7 +18,7 @@
 
 import {ACTOR_DEMO_WORLD, type ActorDemo, type ActorPlacement} from './types';
 
-/** A row of Ground, left to right, on tile centres. */
+/** A row of Ground, left to right, on tile centers. */
 const floor = (from: number, count: number, y: number): ActorPlacement[] =>
   Array.from({length: count}, (_, index) => ({
     actor: 'ground',

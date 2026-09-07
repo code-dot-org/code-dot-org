@@ -72,7 +72,7 @@ export const ActorPreview = ({actor}: {actor: StockActor}) => {
     context.clearRect(0, 0, PREVIEW_SIZE.width, PREVIEW_SIZE.height);
 
     /**
-     * Fit `size` inside the box, centred, and never LARGER than life.
+     * Fit `size` inside the box, centered, and never LARGER than life.
      *
      * Life size because the demos are: a Health Bar's still beside a Progress
      * Bar's scene are two rows about the same 64-pixel bar, and one of them
@@ -111,9 +111,9 @@ export const ActorPreview = ({actor}: {actor: StockActor}) => {
       return;
     }
     const image = new Image();
-    let cancelled = false;
+    let canceled = false;
     image.onload = () => {
-      if (cancelled) {
+      if (canceled) {
         return;
       }
       const width = picture.cell?.width ?? image.width;
@@ -134,7 +134,7 @@ export const ActorPreview = ({actor}: {actor: StockActor}) => {
     };
     image.src = picture.src;
     return () => {
-      cancelled = true;
+      canceled = true;
     };
   }, [actor]);
 

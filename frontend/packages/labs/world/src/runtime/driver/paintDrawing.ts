@@ -19,7 +19,7 @@ import type {DrawCommand, TextAnchor} from 'world-lab';
  * ONE LINE, deliberately. specs/DRAWING.md records that a bitmap font cut from
  * a sheet the project holds is the right long answer and that it needs an asset
  * pipeline this does not have yet; the blocks name what they want (`size`,
- * a colour) rather than how a browser is asked for it, so replacing this
+ * a color) rather than how a browser is asked for it, so replacing this
  * changes this file and no project file.
  */
 const FONT_STACK = '"Trebuchet MS", "Segoe UI", system-ui, sans-serif';
@@ -72,7 +72,7 @@ const ALIGNMENT: Record<
   top: {align: 'center', baseline: 'top'},
   'top right': {align: 'right', baseline: 'top'},
   left: {align: 'left', baseline: 'middle'},
-  centre: {align: 'center', baseline: 'middle'},
+  center: {align: 'center', baseline: 'middle'},
   right: {align: 'right', baseline: 'middle'},
   'bottom left': {align: 'left', baseline: 'bottom'},
   bottom: {align: 'center', baseline: 'bottom'},
@@ -144,7 +144,7 @@ function draw(
       }
       return;
     case 'line':
-      // A line has no interior, so it is drawn only when there is a colour to
+      // A line has no interior, so it is drawn only when there is a color to
       // draw it in — which the pen guarantees by falling back to the fill.
       if (command.stroke === undefined) {
         return;
@@ -155,7 +155,7 @@ function draw(
       context.stroke();
       return;
     case 'text': {
-      const {align, baseline} = ALIGNMENT[command.anchor] ?? ALIGNMENT.centre;
+      const {align, baseline} = ALIGNMENT[command.anchor] ?? ALIGNMENT.center;
       context.font = `${command.size}px ${FONT_STACK}`;
       context.textAlign = align;
       context.textBaseline = baseline;
@@ -166,7 +166,7 @@ function draw(
       const lines = wrapped(context, command.text, command.wrapWidth);
       // Under one another from the point given, which is what "one line under
       // another" means for every anchor: a box anchored at its top grows down,
-      // and one anchored in the middle is centred as a block.
+      // and one anchored in the middle is centered as a block.
       const step = command.size * LINE_SPACING;
       const first =
         command.y -

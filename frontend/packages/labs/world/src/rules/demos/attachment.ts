@@ -62,10 +62,10 @@ export const attachmentDemo: RuleDemo = {
   },
   look(id: string) {
     if (id === 'tag') {
-      return {width: 30, height: 8, colour: '#e5c07b'};
+      return {width: 30, height: 8, color: '#e5c07b'};
     }
     return id === 'shadow'
-      ? {width: 22, height: 5, colour: '#3b4048'}
-      : {width: 18, height: 18, colour: '#61afef'};
+      ? {width: 22, height: 5, color: '#3b4048'}
+      : {width: 18, height: 18, color: '#61afef'};
   },
 };

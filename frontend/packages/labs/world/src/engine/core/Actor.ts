@@ -253,7 +253,7 @@ export class Actor {
    *
    * WHOLE RUNS, on any overlap at all. A tween moves a SET of properties, so
    * two of them can half-collide — one fading, one moving-and-fading. Splitting
-   * the older run and keeping the half that does not clash is not behaviour
+   * the older run and keeping the half that does not clash is not behavior
    * anybody could predict; "two tweens cannot fight over a property, so the
    * newer replaces the older" is one sentence.
    *

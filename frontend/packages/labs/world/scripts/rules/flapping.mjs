@@ -81,7 +81,7 @@ Give an actor **Flaps and Glides**, and set how hard and how often it beats.`,
 //
 // WALLS ARE NOT THIS RULE'S BUSINESS. Something that can move and can collide
 // is already pushed out of anything solid (\`rules/solid\`), and a body pushed
-// out of a wall while still travelling along it slides — which is what
+// out of a wall while still traveling along it slides — which is what
 // JETPACK.md asks a bat to do at a wall, and it is had by electing nothing.`,
 });
 rule.uses('Physics');

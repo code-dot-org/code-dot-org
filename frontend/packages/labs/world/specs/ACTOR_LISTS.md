@@ -19,7 +19,7 @@ set of actors.
 
 There is no new type. An ACTOR VALUE is one or more actors — `this actor` is one
 of them, `any ⟨Coin⟩` is all of them, and a variable holds whichever it was
-given. One colour of variable, one getter, one socket check, and no question
+given. One color of variable, one getter, one socket check, and no question
 about what may plug into what.
 
 The alternative was an `ActorList` type beside `Actor`, and it was rejected:

@@ -173,12 +173,12 @@ function outsideMapAt(actor: Actor, at: Vector): boolean {
 }
 
 /**
- * The actors within `distance` of any of `of` — the neighbourhood query.
+ * The actors within `distance` of any of `of` — the neighborhood query.
  *
  * `the actors in ⟨…⟩ within ⟨60⟩ of ⟨this actor⟩`, and the block that makes a
  * flock, a swarm or a crowd sayable. Written with `filter actors` instead it is
  * a distance formula spelled out in arithmetic in front of a lesson that is
- * about none of it; written over `all actors` it is not a neighbourhood at all.
+ * about none of it; written over `all actors` it is not a neighborhood at all.
  *
  * IT LIVES HERE because a distance is a question about POSITIONS, which is what
  * this rule owns. The other list operations are in `core/actorValue` and know
@@ -187,14 +187,14 @@ function outsideMapAt(actor: Actor, at: Vector): boolean {
  *
  * FROM MIDDLE TO MIDDLE, not edge to edge. Two things a hundred pixels apart
  * are a hundred apart whatever size they are drawn, which is what a learner
- * measuring a neighbourhood means; overlapping is Collisions' question and it
+ * measuring a neighborhood means; overlapping is Collisions' question and it
  * answers that one properly.
  *
  * NEAR ANY OF THEM, when several are given: `within ⟨80⟩ of ⟨any Guard⟩` is
  * every actor near a guard, which is what those words say.
  *
  * IT LEAVES OUT WHAT IT MEASURES FROM. A thing is not near itself, and a boid
- * asking how many neighbours it has should not count one for being present. A
+ * asking how many neighbors it has should not count one for being present. A
  * game that wants the whole group has the group already.
  *
  * Lazy, like every other list operation, so `take ⟨3⟩ of` stops at three.
@@ -204,12 +204,12 @@ export function within(
   of: ActorValue,
   distance: number,
 ): LazyActors {
-  const centres = all(of);
-  // A negative or unfinished distance is a neighbourhood nothing is in, rather
+  const centers = all(of);
+  // A negative or unfinished distance is a neighborhood nothing is in, rather
   // than an error a learner has to guard: an empty socket reads as 0 and a
   // radius of nothing should find nothing.
   const reach = Number.isFinite(distance) ? distance : -1;
-  const world = centres[0]?.world;
+  const world = centers[0]?.world;
   // ASKED OF THE WORLD when the source IS the world, which is the shape every
   // flock is written in: `the actors in ⟨all actors⟩ within ⟨80⟩ of ⟨this
   // actor⟩`, once per actor per frame. Measured over one frame, one query per
@@ -226,19 +226,19 @@ export function within(
   // knows about every actor and would hand back ones the source left out.
   if (world && reach >= 0 && (value as unknown) === world.actors) {
     return new LazyActors(function* () {
-      // ORDER IS THE INDEX'S HERE, and the walk's below. What a neighbourhood
+      // ORDER IS THE INDEX'S HERE, and the walk's below. What a neighborhood
       // IS is a set — `is anything near me`, `how many`, `steer toward each` —
       // and nothing in the language asks for the first of one in a way that
       // could mean something. `the actor with the least ⟨distance⟩` is how you
       // ask for the nearest, and it reads them all whatever order they arrive.
       const seen = new Set<Actor>();
-      for (const centre of centres) {
+      for (const center of centers) {
         for (const near of world.actorsNear(
-          centre.get(PositionProperty),
+          center.get(PositionProperty),
           reach,
         )) {
           // A thing is not near itself, and near any of several is still once.
-          if (!centres.includes(near) && !seen.has(near)) {
+          if (!centers.includes(near) && !seen.has(near)) {
             seen.add(near);
             yield near;
           }
@@ -249,8 +249,8 @@ export function within(
   return filtered(
     value,
     actor =>
-      !centres.includes(actor) &&
-      centres.some(centre => gap(actor, centre) <= reach),
+      !centers.includes(actor) &&
+      centers.some(center => gap(actor, center) <= reach),
   );
 }
 
@@ -382,7 +382,7 @@ export const TweenFinishedEvent = rule.addEvent('tweenFinished', {
  *
  * The list is copied before walking it: a handler for `a tween finishes` may
  * start another tween, or remove the actor, and a step that mutates the array
- * it is iterating skips its neighbour.
+ * it is iterating skips its neighbor.
  */
 export const AdvanceTweensStep = rule.addStepIn(
   'advanceTweens',

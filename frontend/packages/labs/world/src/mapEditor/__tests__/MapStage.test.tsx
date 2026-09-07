@@ -34,11 +34,11 @@ import {fitView, worldToScreen} from '../stageGeometry';
 
 const PANE = {w: 800, h: 600};
 
-/** The stage's own colours, for reading an outline's purpose back. */
+/** The stage's own colors, for reading an outline's purpose back. */
 const SELECT = '#4d9fff';
 const REFERENCE = '#ffb454';
 
-/** One recorded canvas call, with the stroke colour in force at the time. */
+/** One recorded canvas call, with the stroke color in force at the time. */
 interface Call {
   method: string;
   args: unknown[];
@@ -333,10 +333,10 @@ describe('removing and placing', () => {
     expect(selectedId()).toBeNull();
   });
 
-  it('places the chosen kind at the clicked cell’s centre', () => {
+  it('places the chosen kind at the clicked cell’s center', () => {
     const map = doc();
     const {canvas, written} = mount(map, {placing: 'actors/coin'});
-    // Somewhere inside cell (6, 7): the actor lands on its centre.
+    // Somewhere inside cell (6, 7): the actor lands on its center.
     const at = screenPoint(map, {x: 6 * 32 + 5, y: 7 * 32 + 20});
     fireEvent.click(canvas, {clientX: at.x, clientY: at.y});
 
@@ -419,7 +419,7 @@ describe('what it draws', () => {
     expect(
       outlines.filter(call => call.strokeStyle === REFERENCE),
     ).toHaveLength(2);
-    // …and a labelled line to each, saying which property names it.
+    // …and a labeled line to each, saying which property names it.
     const labels = frame
       .filter(call => call.method === 'fillText')
       .map(call => call.args[0]);

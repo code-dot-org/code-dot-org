@@ -2,7 +2,7 @@
 //
 // A stock actor's row says what it is called, what it does in a sentence, and
 // which rules and pictures come with it. What it cannot say is what the thing
-// DOES, and for the actors whose worth is a behaviour rather than a picture
+// DOES, and for the actors whose worth is a behavior rather than a picture
 // that is the whole of what a learner is choosing (specs/RULE_DEMOS.md makes
 // the same argument for rules, and this is that argument one noun over).
 //

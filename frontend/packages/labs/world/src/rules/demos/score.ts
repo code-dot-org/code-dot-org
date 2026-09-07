@@ -90,7 +90,7 @@ export const scoreDemo: RuleDemo = {
       return {
         width: 0,
         height: 0,
-        colour: '#abb2bf',
+        color: '#abb2bf',
         text: `SCORE ${points}`,
         textScale: 2,
       };
@@ -103,13 +103,13 @@ export const scoreDemo: RuleDemo = {
       return {
         width: 0,
         height: 0,
-        colour: '#98c379',
+        color: '#98c379',
         text: won ? 'YOU WIN' : '',
         textScale: 3,
       };
     }
     return id === 'walker'
-      ? {width: 16, height: 16, colour: '#61afef'}
-      : {width: 12, height: 12, colour: '#f6c453'};
+      ? {width: 16, height: 16, color: '#61afef'}
+      : {width: 12, height: 12, color: '#f6c453'};
   },
 };

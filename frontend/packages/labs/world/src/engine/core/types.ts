@@ -50,12 +50,12 @@ export type PropertyType =
   | 'boolean'
   | 'string'
   /**
-   * A colour, held as `#rrggbb`.
+   * A color, held as `#rrggbb`.
    *
    * A string as far as the engine is concerned — `core/color` converts, and
-   * every colour block a learner meets produces exactly this spelling. It is
+   * every color block a learner meets produces exactly this spelling. It is
    * its own type anyway, because the two places that ask what a property IS
-   * both want a different answer for a colour than for words: a block's socket
+   * both want a different answer for a color than for words: a block's socket
    * takes a swatch rather than a text box, and the map editor's inspector shows
    * a picker rather than six characters to type by hand.
    */
@@ -309,7 +309,7 @@ export type StepOrder =
    *
    * What a rule says when it knows what KIND of work it does — "this is a
    * force" — rather than who it runs next to. `before`/`after` name a
-   * neighbour, which a rule can only do if it knows one; every stock rule but
+   * neighbor, which a rule can only do if it knows one; every stock rule but
    * two had to, and naming Physics to say you are gravity is the wrong
    * dependency for a learner to have to discover.
    */

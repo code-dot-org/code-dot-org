@@ -11,7 +11,7 @@ export const IMPORT_EFFECT_VALUE = '__import_effect__';
 
 /**
  * Opens the import dialog and resolves with the module path of whatever was
- * imported, or undefined if the learner cancelled.
+ * imported, or undefined if the learner canceled.
  */
 export type EffectImportHandler = ImportHandler;
 

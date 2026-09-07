@@ -274,7 +274,7 @@ explanation rather than only as code:
 
 ```glsl
     float add_1 = (multiply_1 + uTime);
-    // Bends the travelling value into a smooth wave, so the ripple rolls.
+    // Bends the traveling value into a smooth wave, so the ripple rolls.
     float sine_1 = sin(add_1);
 ```
 
@@ -319,13 +319,13 @@ colored pin at the canvas seam beneath it — the pin _is_ the connection point,
 so there is no second dot to mistake for one. The compiler supplies the real
 types: a generic math node passing a color along draws a vec4 wire, not a gray
 one. Color is never the only cue — every pin and label names its type on
-hover, and ports are labelled on the node.
+hover, and ports are labeled on the node.
 
 A wire can narrow the value it carries. Drop a color on a port that takes a
 single number and the drop is accepted, then a menu opens **at the connection
 point** asking which component was meant — R, G, B, A off a vec4, X/Y/Z/W off
 anything narrower. Nothing reaches the document until the answer is complete,
-so cancelling (Escape, the backdrop, or the Cancel button) leaves the graph
+so canceling (Escape, the backdrop, or the Cancel button) leaves the graph
 exactly as it was; typing the letter works too. The choice is stored on the
 wire's source end, which means the same output can feed a color to one node
 and a single channel to another without a helper node in between.
@@ -508,7 +508,7 @@ via `parameters[].used`.
 Ghost pinning is the part most likely to look broken, so it was measured
 directly rather than eyeballed: with the viewport panned by (−400, −120) and
 zoomed from 0.75 to 0.33, every ghost held its exact screen position on its
-knob's centre. `toFlowNodes` is unit-tested for the mapping that makes that
+knob's center. `toFlowNodes` is unit-tested for the mapping that makes that
 possible.
 
 The Phaser integration is written against Phaser 4.2.1's `BaseFilterShader` and

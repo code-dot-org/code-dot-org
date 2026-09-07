@@ -3,7 +3,7 @@
 // A category list is a thing you navigate: you click a name and the pane
 // beside it changes. The lab already has two of those — the file browser and
 // the file tabs (`labs/codebridge`) — and the toolbox looked like neither.
-// Blockly's own styling is a grey strip, a browser-default font at 16px, no
+// Blockly's own styling is a gray strip, a browser-default font at 16px, no
 // hover, and a selected row painted the renderer's blue.
 //
 // SO THIS IS CSS AND NOT A CUSTOM TOOLBOX CLASS. Blockly renders the toolbox
@@ -157,7 +157,7 @@ const TOOLBOX_CSS = `
 }
 
 /* The heading over the rules. Quieter than a category and not clickable:
- * smaller, upper-case, in the secondary text colour, with a rule above it
+ * smaller, upper-case, in the secondary text color, with a rule above it
  * standing in for the space a group break would otherwise need. */
 .worldToolboxHeading {
   padding: 14px 10px 4px;

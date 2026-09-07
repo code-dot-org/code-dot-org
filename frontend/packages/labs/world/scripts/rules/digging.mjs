@@ -135,10 +135,10 @@ const reach = digger.number('dig reach', 48);
  * ON THE BLOCK IT IS DIGGING, and no other. Pulling a body towards any hole it
  * happens to be near is a floor that grabs at you: a player walking past a gap
  * they made earlier has not asked to go down it. Digging is the asking, so
- * that is where the line-up belongs — and once it is centred there, falling in
+ * that is where the line-up belongs — and once it is centered there, falling in
  * needs no help at all.
  *
- * (Being TOLERANT of a hole you walk or jump into off-centre is a different
+ * (Being TOLERANT of a hole you walk or jump into off-center is a different
  * mechanic and a real one; it belongs to whatever notices the edge, not here.)
  *
  * EASED RATHER THAN SNAPPED, unlike the ladder, and the difference is what
@@ -251,7 +251,7 @@ digger.step('line up with what it dug', 'adjust', [
       ),
       [
         doc(
-          'How far off centre, and how far this frame may close it — never past the middle, or a glide becomes a wobble.',
+          'How far off center, and how far this frame may close it — never past the middle, or a glide becomes a wobble.',
         ),
         across.set(
           minus(

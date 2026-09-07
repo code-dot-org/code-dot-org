@@ -1,6 +1,6 @@
 // "Shows Progress" — a fraction, and the bar that is drawn from it.
 //
-// A bar filling in five steps, in the rule's own two colours. The step is the
+// A bar filling in five steps, in the rule's own two colors. The step is the
 // demonstration: a bar that slid up smoothly would be a bar with a speed, and
 // this rule has no speed and no step of its own — what moves a fraction is a
 // project's handler, a coin taken or a hit landed, and each beat here stands
@@ -20,8 +20,8 @@ import {demoWorld, type RuleDemo, type RuleModules} from './types';
 
 /** Set by `build`, read by `look`. */
 let fractionOf: unknown;
-let barColourOf: unknown;
-let trackColourOf: unknown;
+let barColorOf: unknown;
+let trackColorOf: unknown;
 
 /** The track: where it starts, and how long a full bar is. */
 const LEFT = 36;
@@ -35,12 +35,12 @@ export const progressDemo: RuleDemo = {
   build(modules: RuleModules) {
     const of = (path: string, name: string) => modules[path][name] as never;
     fractionOf = of('rules/progress', 'FractionProperty');
-    barColourOf = of('rules/progress', 'BarColorProperty');
-    trackColourOf = of('rules/progress', 'TrackColorProperty');
+    barColorOf = of('rules/progress', 'BarColorProperty');
+    trackColorOf = of('rules/progress', 'TrackColorProperty');
     const world = demoWorld('progress', modules, progressDemo.rules);
 
     // The empty track is a bar of its own, showing nothing: the rule ships the
-    // colour for exactly this, so that an empty bar reads as a bar rather than
+    // color for exactly this, so that an empty bar reads as a bar rather than
     // as nothing at all.
     const track = new ActorBuilder({id: 'track', name: 'track'})
       .useTraits([of('rules/progress', 'ShowsProgressTrait')])
@@ -78,7 +78,7 @@ export const progressDemo: RuleDemo = {
   },
   look(id: string, actor: unknown) {
     if (id === 'clock') {
-      return {width: 12, height: 12, colour: '#c678dd'};
+      return {width: 12, height: 12, color: '#c678dd'};
     }
     const read = (property: unknown) =>
       (actor as {get(p: unknown): unknown}).get(property as never);
@@ -86,14 +86,14 @@ export const progressDemo: RuleDemo = {
       return {
         width: FULL,
         height: 22,
-        colour: read(trackColourOf) as string,
+        color: read(trackColorOf) as string,
       };
     }
     const filled = read(fractionOf) as number;
     return {
       width: Math.max(0, filled * FULL),
       height: 22,
-      colour: read(barColourOf) as string,
+      color: read(barColorOf) as string,
     };
   },
 };

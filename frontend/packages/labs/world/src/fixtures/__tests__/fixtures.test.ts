@@ -785,7 +785,7 @@ describe('every actor file a scenario ships', () => {
 
   it('chains every `each frame` under the `define actor`', () => {
     // A step left standing on its own is TWO failures at once, and the second
-    // is the quiet one: `DisableOrphansPlugin` greys it out, and its generator
+    // is the quiet one: `DisableOrphansPlugin` grays it out, and its generator
     // writes nothing because the top of its chain is not a `define actor`
     // (`domainBlocks.worldTraitStep`). So the actor simply stops doing that
     // work, and the file still loads and still compiles.

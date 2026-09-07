@@ -71,7 +71,7 @@ const place = (type: string, id: string, column: number, row: number) => ({
 //
 // The gaps walk up and down rather than wandering, for two reasons. A level
 // whose difficulty is random is a level that cannot be looked at twice and
-// compared; and no two neighbours differ by more than TWO rows, so the climb
+// compared; and no two neighbors differ by more than TWO rows, so the climb
 // between them is always inside what a flap and a half buys. The first cut of
 // this level had a four-row step in it and was unflyable in the middle.
 //

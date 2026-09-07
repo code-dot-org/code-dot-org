@@ -49,8 +49,8 @@ interface Backdrop {
 ```
 
 The world holds `backdrops: Backdrop[]`, and every block written today addresses
-index 0. The colour is the world's, not a layer's: there is one sky behind
-everything, and a per-layer colour would only ever be visible on the bottom one.
+index 0. The color is the world's, not a layer's: there is one sky behind
+everything, and a per-layer color would only ever be visible on the bottom one.
 
 ## 3. Blocks
 
@@ -78,7 +78,7 @@ remove effect [ripple ▾] from the background
   existed a sky, once set, could not be taken down. Both slots get one — they
   come from the same factory (`defineSlotBlocks`), which is what stops
   `foreground` drifting from `background`.
-- **The colour socket** takes a value rather than owning a field, so it goes
+- **The color socket** takes a value rather than owning a field, so it goes
   through `engine/core/color.ts` exactly as effect parameters do — and
   `colour_picker`, `colour_random`, `colour_blend` and the `r g b a` block all
   feed it without another line of code. This is the reason `color.ts` exists;
@@ -111,7 +111,7 @@ actors still draw at Phaser's default 0 in snapshot order, and nothing has to
 choose a depth for them.
 
 Each frame, `sync()` reconciles it from a `backdropSnapshot()` beside
-`renderSnapshot()`: texture, colour, and `effectRegistry.reconcile(scene,
+`renderSnapshot()`: texture, color, and `effectRegistry.reconcile(scene,
 backdropImage, backdrop.effects)` — the same call the actors use, pointed at a
 different object. A backdrop changed mid-game therefore behaves like everything
 else that changes mid-game.
@@ -325,7 +325,7 @@ The shape of each extension, so today's decisions do not have to be revisited:
 
 1. Engine: `Backdrop`, the three methods on `World` + `WorldBuilder`, snapshot,
    reconcile. (`yarn setup:world` after — the sandbox runs a prebuilt bundle.)
-2. Driver: create, stretch, per-frame reconcile, camera colour.
+2. Driver: create, stretch, per-frame reconcile, camera color.
 3. Blocks: the three, plus the `remove` counterpart.
 4. Library: import flow and the `backgrounds/` folder in `DEFAULT_PROJECT`
    (done — §6, §7).

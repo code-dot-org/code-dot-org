@@ -6,7 +6,7 @@
 //
 // The generator's half is to write nothing for such a row, so the project still
 // compiles and runs without that trait (domainBlocks, `world_use_trait`). That
-// is the right behaviour and, on its own, a silent one — the actor quietly
+// is the right behavior and, on its own, a silent one — the actor quietly
 // stops falling and there is nothing anywhere saying why. This is the other
 // half: the block that has stopped meaning anything says so, on its own face,
 // where the learner is already looking.

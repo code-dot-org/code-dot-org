@@ -178,8 +178,8 @@ describe('a layer’s background', () => {
     );
   });
 
-  it('leaves the colour to the world — there is one sky', () => {
-    // A colour on any layer but the bottom is behind the layer under it and can
+  it('leaves the color to the world — there is one sky', () => {
+    // A color on any layer but the bottom is behind the layer under it and can
     // never be seen, so it is not a per-layer thing at all (BACKGROUNDS.md).
     const world = built();
     world.setBackgroundColor('#88ccff');

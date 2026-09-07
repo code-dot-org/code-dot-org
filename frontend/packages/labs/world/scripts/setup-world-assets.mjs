@@ -187,7 +187,7 @@ if (process.env.WORLD_DEMO_ICONS !== 'free') {
   for (const name of fonts) {
     copyFileSync(join(from, 'webfonts', name), join(faDir, 'webfonts', name));
   }
-  // Attribution travels with the files, which is what the licence asks.
+  // Attribution travels with the files, which is what the license asks.
   copyFileSync(join(from, 'LICENSE.txt'), join(faDir, 'LICENSE.txt'));
   console.log(
     `world assets: self-hosted FontAwesome Free ` +

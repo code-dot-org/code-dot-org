@@ -62,7 +62,7 @@ export const spawnerDemo: RuleDemo = {
   },
   look(id: string) {
     return id === 'source'
-      ? {width: 20, height: 20, colour: '#c678dd'}
-      : {width: 14, height: 14, colour: '#e06c75'};
+      ? {width: 20, height: 20, color: '#c678dd'}
+      : {width: 14, height: 14, color: '#e06c75'};
   },
 };

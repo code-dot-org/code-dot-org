@@ -46,7 +46,7 @@ export const speechBoxActor = actorFile(
     useTrait('Writing#ShowsTextTrait'),
     showAs('speech'),
     // Anchored at the top left, because a box fills downward as it is read. A
-    // centred one would jump about as each line arrived.
+    // centered one would jump about as each line arrived.
     setText('TextAnchorProperty', words('top left')),
     // A default, so a box dragged onto a map says something before anybody has
     // typed anything into it — and so the picker has a picture to show.

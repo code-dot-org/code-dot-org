@@ -92,9 +92,9 @@ export const mouseDemo: RuleDemo = {
       // Fatter and brighter while the button is down: that is the click, and
       // there is nothing else in a rectangle to say it with.
       return world.isButtonDown('left')
-        ? {width: 14, height: 14, colour: '#ffffff'}
-        : {width: 8, height: 8, colour: '#abb2bf'};
+        ? {width: 14, height: 14, color: '#ffffff'}
+        : {width: 8, height: 8, color: '#abb2bf'};
     }
-    return {width: 28, height: 28, colour: '#c678dd'};
+    return {width: 28, height: 28, color: '#c678dd'};
   },
 };

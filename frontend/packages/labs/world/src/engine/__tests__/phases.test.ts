@@ -1,4 +1,4 @@
-// Saying WHEN a step runs by naming the moment rather than a neighbour.
+// Saying WHEN a step runs by naming the moment rather than a neighbor.
 //
 // The stock rules ship seven steps and five of them carried a cross-rule
 // anchor: gravity said `before Physics ▸ reposition` to mean "this is a force",
@@ -9,7 +9,7 @@
 //
 // Phases become ordinary edges (core/Scheduler), so they compose with the
 // anchors rather than replacing them: `before`/`after` still say what they
-// always said, for the rules that genuinely know a neighbour.
+// always said, for the rules that genuinely know a neighbor.
 
 import {describe, expect, it} from 'vitest';
 
@@ -61,7 +61,7 @@ describe('the frame’s named moments', () => {
   });
 
   it('reproduces the order the stock rules hand-wire today', () => {
-    // Not new behaviour — the same sequence those five anchors already
+    // Not new behavior — the same sequence those five anchors already
     // produce, with the anchors gone.
     const run = new Scheduler([
       inPhase('handleCollisions', 'react'),

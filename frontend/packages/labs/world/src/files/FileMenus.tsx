@@ -7,7 +7,7 @@
 // EVERY ACT HERE IS THE TREE'S ACT. Opening and deleting go through the same
 // `useFileOperations` and the same prompts the file browser uses, including the
 // lab's veto on deleting a rule another rule requires
-// (`config.blockFileDeletion`). Two routes to one behaviour; nothing new is
+// (`config.blockFileDeletion`). Two routes to one behavior; nothing new is
 // possible from here, which is what makes this an alternative reading rather
 // than a second file system.
 //

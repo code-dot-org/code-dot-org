@@ -21,7 +21,7 @@ const rule = defineRule({
   purpose: `**Camera Ease** makes the camera catch up smoothly instead of snapping.
 
 Whatever the camera is aiming at, this drifts it there over a few frames — so a
-player who stops running is centred a moment later rather than instantly.
+player who stops running is centered a moment later rather than instantly.
 
 Give a camera **Eases** and set the smoothness. Smaller is lazier; 1 is no
 easing at all.`,
@@ -29,7 +29,7 @@ easing at all.`,
 //
 // It reads the goal something else proposed and hands back a nearer one, so the
 // camera drifts toward what it is aiming at over a few frames and a player who
-// stops moving is centred a moment later rather than instantly. Smaller
+// stops moving is centered a moment later rather than instantly. Smaller
 // smoothness, lazier camera; 1 is no easing at all.
 //
 // It runs in \`smooth\`, between whatever aimed and whatever confines, and names

@@ -22,7 +22,7 @@ export function useProjectImages(
   const requested = useRef<Record<string, string>>({});
 
   useEffect(() => {
-    let cancelled = false;
+    let canceled = false;
     for (const file of Object.values(source?.files ?? {})) {
       if (!file.url) {
         continue;
@@ -34,14 +34,14 @@ export function useProjectImages(
       requested.current[name] = url;
       const image = new Image();
       image.onload = () => {
-        if (!cancelled) {
+        if (!canceled) {
           setImages(previous => ({...previous, [name]: image}));
         }
       };
       image.src = url;
     }
     return () => {
-      cancelled = true;
+      canceled = true;
     };
   }, [source]);
 

@@ -35,7 +35,7 @@ describe('angle', () => {
 
   it('answers zero for a vector pointing nowhere', () => {
     // A question with no answer gets as good a one as any, rather than NaN
-    // travelling into a rotation and drawing nothing.
+    // traveling into a rotation and drawing nothing.
     expect(new Vector(0, 0).angle()).toBe(0);
   });
 });

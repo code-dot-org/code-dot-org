@@ -33,7 +33,7 @@ export interface Progression {
   /**
    * Whether the shelf holds a thing — which is only a question worth asking
    * when `gated`. Answers true for everything otherwise, so a caller can ask
-   * unconditionally and get the ungated lab's behaviour for free.
+   * unconditionally and get the ungated lab's behavior for free.
    */
   holds: (unlock: UnlockTarget) => boolean;
 }

@@ -24,7 +24,7 @@ rather than a `.map` of their own.
 
 This is a constraint, not a preference, and it follows from what the actors are.
 An actor defined in a world exists only in that world (BACKGROUNDS.md's
-neighbour: `specs/INTERFACE.md` on files as the unit of sharing). A file
+neighbor: `specs/INTERFACE.md` on files as the unit of sharing). A file
 describing where those actors sit would be a file that only one world can read,
 sitting in a folder whose whole promise is that anything in it can be used
 anywhere. The arrangement of a world's own actors is part of that world in
@@ -148,7 +148,7 @@ holding one keeps running with no console errors.
 ## 4. The popup: a field dropdown, and one act
 
 Clicking the field opens a grid of the world's tiles in Blockly's dropdown —
-ten by ten, 22 pixels a cell, about the size of a colour picker. Click an empty
+ten by ten, 22 pixels a cell, about the size of a color picker. Click an empty
 cell and this block places one there; click a cell it placed in and that one
 goes. That is the whole interaction.
 
@@ -253,7 +253,7 @@ so an affordance that was the only way to set a reference would put the feature
 out of reach — the dropdown is what keeps it available.
 
 While a pick is armed the cursor is a crosshair and the hovered actor wears the
-REFERENCE colour rather than the hover one, because the click will point at it
+REFERENCE color rather than the hover one, because the click will point at it
 rather than select it. The click never changes the selection: doing so would
 take away the very actor whose property is being set. Escape disarms, a click
 on empty space disarms without clearing the value — undoing a reference is what
@@ -427,7 +427,7 @@ Start Over, and a level switch (Lab2 does not reload the page between levels).
 1. **The manifest gap** (§5): `localActors` export, manifest reads it, schemas
    arrive for world-local actors. Useful on its own — `add actor` benefits too.
 2. **Extract** the map editor's canvas + inspector from `MapEditor.tsx`, with
-   the file editor as its first caller and no behaviour change. (Done — §4.)
+   the file editor as its first caller and no behavior change. (Done — §4.)
 3. **The block**: `world_create_in_map`, its map field, its generator.
    (Done — §3.)
 4. **The popup**: a field dropdown that places and unplaces. (Done — §4.)

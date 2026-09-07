@@ -2,7 +2,7 @@
 //
 // `ImportRuleDialog` with one noun changed, and the rows carry the same two
 // kinds of picture: a still for an actor that IS a picture, and a strip for one
-// whose worth is a behaviour (specs/UI_ACTORS.md, specs/RULE_DEMOS.md).
+// whose worth is a behavior (specs/UI_ACTORS.md, specs/RULE_DEMOS.md).
 
 import {render, screen} from '@testing-library/react';
 import {describe, expect, it, vi} from 'vitest';

@@ -237,7 +237,7 @@ describe('the ground demo', () => {
   }, 60000);
 
   /** Where each actor was, by id, over the whole recording. */
-  const travelled = (moments: Moment[]) => {
+  const traveled = (moments: Moment[]) => {
     const paths = new Map<string, {x: number; y: number}[]>();
     for (const moment of moments) {
       for (const cell of moment.drawn) {
@@ -251,7 +251,7 @@ describe('the ground demo', () => {
   };
 
   it('catches what falls, and holds it up', () => {
-    const paths = travelled(moments);
+    const paths = traveled(moments);
     const moving = [...paths].filter(([, path]) =>
       path.some(one => one.y !== path[0].y),
     );
@@ -388,10 +388,10 @@ describe('the button demo', () => {
     // of a button that changed its mind.
     const sizes = new Set(moments.map(moment => cursorIn(moment).width));
     expect(sizes.size).toBe(2);
-    const travelled = new Set(
+    const traveled = new Set(
       moments.map(moment => `${cursorIn(moment).x},${cursorIn(moment).y}`),
     );
-    expect(travelled.size).toBeGreaterThan(5);
+    expect(traveled.size).toBeGreaterThan(5);
   });
 
   it('answers the press, and not before it', () => {

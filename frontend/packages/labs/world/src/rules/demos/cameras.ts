@@ -5,7 +5,7 @@
 // picture moves. Read side by side: Follow pins the walker to the middle of
 // the frame, Ease lets it run ahead and drift back, Deadzone holds the view
 // still until the walker has actually gone somewhere, and Confined stops at
-// the map's edge and lets the walker walk away from centre.
+// the map's edge and lets the walker walk away from center.
 //
 // THE MAP IS TWICE THE FRAME in all of them, because a camera panning across a
 // world no larger than the picture pans across nothing — which is why the
@@ -114,9 +114,9 @@ const cameraDemo = (id: string, module: string, stage: Stage): RuleDemo => ({
   },
   look(id: string) {
     return id === 'walker'
-      ? {width: 16, height: 16, colour: '#61afef'}
+      ? {width: 16, height: 16, color: '#61afef'}
       : // The scenery green the other demos use for what does not move.
-        {width: 12, height: 36, colour: '#5a7d5a'};
+        {width: 12, height: 36, color: '#5a7d5a'};
   },
 });
 
@@ -148,7 +148,7 @@ export const cameraEaseDemo = cameraDemo('cameraEase', 'rules/cameraEase', {
  *
  * The slack is the default forty-eight pixels, so the first half-second is a
  * walker crossing a motionless picture and everything after it is the picture
- * travelling with the walker held that far off centre.
+ * traveling with the walker held that far off center.
  */
 export const cameraDeadzoneDemo = cameraDemo(
   'cameraDeadzone',
@@ -162,7 +162,7 @@ export const cameraDeadzoneDemo = cameraDemo(
  * Started to the right of the map and walking slowly, so the recording is
  * about two parts pan to three parts stopped: long enough at the start to
  * establish that the view does move, and long enough at the end to show the
- * posts frozen while the walker keeps travelling through them, which is the
+ * posts frozen while the walker keeps traveling through them, which is the
  * whole promise of the rule.
  */
 export const cameraConfinedDemo = cameraDemo(

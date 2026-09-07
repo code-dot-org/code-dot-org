@@ -1,4 +1,4 @@
-// The map's colours, solved rather than chosen.
+// The map's colors, solved rather than chosen.
 //
 // The first version picked one HSL lightness per role and used it for every
 // region: `hsl(var(--hue) 52% 62%)` for a finished tile, white text on top.
@@ -8,12 +8,12 @@
 // actually are. Measured across the fourteen region hues, white on the finished
 // tile ran from 1.79:1 to 4.6:1, against a floor of 4.5.
 //
-// So a colour here is asked for by LUMINANCE, and the lightness that produces it
+// So a color here is asked for by LUMINANCE, and the lightness that produces it
 // is found by bisection. Every region then gets the same contrast whatever its
 // hue, and the ratios below hold by construction rather than by inspection —
 // which is what `__tests__/palette.test.ts` checks, hue by hue, both themes.
 
-/** Relative luminance of an sRGB colour, per WCAG. */
+/** Relative luminance of an sRGB color, per WCAG. */
 export const luminance = ([r, g, b]: readonly [
   number,
   number,
@@ -26,7 +26,7 @@ export const luminance = ([r, g, b]: readonly [
   return 0.2126 * channel(r) + 0.7152 * channel(g) + 0.0722 * channel(b);
 };
 
-/** The WCAG contrast ratio between two sRGB colours. */
+/** The WCAG contrast ratio between two sRGB colors. */
 export const contrast = (
   a: readonly [number, number, number],
   b: readonly [number, number, number],
@@ -76,7 +76,7 @@ const toHex = ([r, g, b]: readonly [number, number, number]): string =>
   `#${[r, g, b].map(v => v.toString(16).padStart(2, '0')).join('')}`;
 
 /**
- * The colour of this hue, at this saturation, that has the luminance asked for.
+ * The color of this hue, at this saturation, that has the luminance asked for.
  *
  * Luminance rises monotonically with HSL lightness at a fixed hue and
  * saturation, so thirty steps of bisection land within a rounding error of the
@@ -101,7 +101,7 @@ export const atLuminance = (
 };
 
 /**
- * The luminances every colour on the map is built from, and what each one is
+ * The luminances every color on the map is built from, and what each one is
  * for. Changing a number here changes a contrast ratio, and the palette test
  * says which.
  */
@@ -136,8 +136,8 @@ export interface RegionColours {
   name: string;
 }
 
-/** The four colours a region is drawn in, for one theme. */
-export const regionColours = (hue: number, theme: Theme): RegionColours => {
+/** The four colors a region is drawn in, for one theme. */
+export const regionColors = (hue: number, theme: Theme): RegionColours => {
   const targets = TARGETS[theme];
   return {
     field: atLuminance(hue, SATURATION.field, targets.field),
@@ -148,11 +148,11 @@ export const regionColours = (hue: number, theme: Theme): RegionColours => {
 };
 
 /**
- * Everything that is not a region's own colour: the surfaces the map is drawn
- * on, the ink, and the greys a locked tile uses.
+ * Everything that is not a region's own color: the surfaces the map is drawn
+ * on, the ink, and the grays a locked tile uses.
  *
  * Here rather than in the stylesheet because the palette test measures them
- * against the region colours, and a value the test cannot see is a value that
+ * against the region colors, and a value the test cannot see is a value that
  * can drift out of contrast without anybody noticing.
  */
 export const SURFACES = {

@@ -147,9 +147,10 @@ describe('socketShadow, for a color socket', () => {
   });
 
   it('uses the picker’s own field name, not our spelling of it', () => {
-    // `COLOUR` is Blockly's field name. Writing `COLOR` is SILENT — the shadow
-    // still appears, holding the picker's default red, and nothing anywhere
-    // says the declared default was dropped. Exactly what a spelling sweep did.
+    // `COLOUR` is Blockly's field name. Writing `COLOR` is SILENT — the
+    // shadow still appears, holding the picker's default red, and nothing
+    // anywhere says the declared default was dropped. Exactly what a spelling
+    // sweep does, twice now.
     expect(Object.keys(colorShadow([0, 0, 1]).fields ?? {})).toEqual([
       'COLOUR',
     ]);

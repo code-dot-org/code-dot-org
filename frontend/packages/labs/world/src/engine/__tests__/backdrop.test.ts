@@ -24,7 +24,7 @@ const doc = (nodeId: string): EffectDocument => ({
 const world = () => new World({id: 'w', name: 'W', rules: []});
 
 describe('a world backdrop', () => {
-  it('has one, in the default colour, before anyone says anything', () => {
+  it('has one, in the default color, before anyone says anything', () => {
     // One per layer now, and a world that names no layers has one layer.
     const w = world();
     const [backdrop, ...rest] = w.backdropSnapshot();
@@ -32,7 +32,7 @@ describe('a world backdrop', () => {
     expect(backdrop.sprite).toBeUndefined();
     expect(backdrop.effects).toEqual([]);
     expect(rest).toEqual([]);
-    // The colour is the WORLD's, not the layer's: a colour on any layer but the
+    // The color is the WORLD's, not the layer's: a color on any layer but the
     // bottom is behind the layer under it and can never be seen.
     expect(w.backdropColor()).toEqual(rgba(DEFAULT_BACKDROP_COLOR));
   });
@@ -45,11 +45,11 @@ describe('a world backdrop', () => {
 
     w.setBackground(undefined);
     expect(w.backdropSnapshot()[0].sprite).toBeUndefined();
-    // Clearing the image leaves the colour: there is always something behind.
+    // Clearing the image leaves the color: there is always something behind.
     expect(w.backdropColor()).toEqual(rgba(DEFAULT_BACKDROP_COLOR));
   });
 
-  it('takes a colour from anything a colour block produces', () => {
+  it('takes a color from anything a color block produces', () => {
     const w = world();
 
     w.setBackgroundColor('#88ccff');
@@ -122,7 +122,7 @@ describe('a world backdrop', () => {
         repeat: false,
       },
     ]);
-    // The colour is the world's, so it travels on its own.
+    // The color is the world's, so it travels on its own.
     expect(snapshot.clearColor).toEqual(rgba('#88ccff'));
     // The effect is structural, so it travels with everyone else's — as a slot
     // saying what carries it, which for a backdrop is its layer.

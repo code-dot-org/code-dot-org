@@ -498,7 +498,7 @@ const MAIN_WORLD = JSON.stringify({
                         DO: {
                           block: stack([
                             // y=16 and not 32: the top row of coins is
-                            // centred at 48 and is 32 tall, so a Label centred
+                            // centered at 48 and is 32 tall, so a Label centered
                             // at 32 has its lower half behind the first coin.
                             {
                               type: 'world_set_position',

@@ -18,7 +18,7 @@ export type GhostAnchors = ReadonlyMap<string, HTMLElement | null>;
 export const GHOST_SIZE = 14;
 
 /**
- * How far inside the canvas a ghost's centre is held.
+ * How far inside the canvas a ghost's center is held.
  *
  * The knobs live in the fixed rows, which are *outside* the canvas element, so
  * their raw screen positions fall beyond it — and the canvas clips its
@@ -120,7 +120,7 @@ export function usePinnedGhosts(
           ),
         });
 
-        // Node positions are top-left corners; offset so the ghost's centre —
+        // Node positions are top-left corners; offset so the ghost's center —
         // where its handle sits — lands on the anchor point.
         next.set(nodeId, {
           x: point.x - GHOST_SIZE / 2,

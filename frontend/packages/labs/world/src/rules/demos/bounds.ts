@@ -39,7 +39,7 @@ export const boundsDemo: RuleDemo = {
       world,
       cast: {
         // Both reach their edges around a second and a half in, so the strip
-        // is two parts travelling to one part unmistakably stopped.
+        // is two parts traveling to one part unmistakably stopped.
         falling: box('falling', new Vector(60, 40), new Vector(1, 0.5)),
         rising: box('rising', new Vector(140, 100), new Vector(-1, -0.6)),
       },
@@ -47,7 +47,7 @@ export const boundsDemo: RuleDemo = {
   },
   look(id: string) {
     return id === 'falling'
-      ? {width: 32, height: 32, colour: '#61afef'}
-      : {width: 32, height: 32, colour: '#e5c07b'};
+      ? {width: 32, height: 32, color: '#61afef'}
+      : {width: 32, height: 32, color: '#e5c07b'};
   },
 };

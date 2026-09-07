@@ -53,7 +53,7 @@ export const chooseHarnessTutor = async (): Promise<HarnessTutor> => {
   }
   // The recording is written against the demo project
   // (`constants.DEFAULT_PROJECT`), so the accept/reject flow still works on
-  // real files: ask it to colour the heading and it rewrites `styles.css`.
+  // real files: ask it to color the heading and it rewrites `styles.css`.
   override = new FixtureTransport(parseTranscript(demoTranscript));
   return {kind: 'recorded', reason: proxy.reason};
 };

@@ -16,7 +16,7 @@
 // action block, whose type is `world_get_<Rule>_…` with the rule's name
 // SLUGGED rather than spelled, and un-slugging is not a thing to do by
 // guesswork. What that costs is an offer refused for a rule this did not spot,
-// which is the behaviour without any of this — a downgrade to prose, never a
+// which is the behavior without any of this — a downgrade to prose, never a
 // broken file.
 
 import type {MultiFileSource} from '@code-dot-org/core/api';

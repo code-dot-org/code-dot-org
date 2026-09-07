@@ -49,7 +49,7 @@ export const inputDemo: RuleDemo = {
       capLook(id, world, SPACE_CAP) ?? {
         width: 18,
         height: 18,
-        colour: '#98c379',
+        color: '#98c379',
       }
     );
   },

@@ -114,7 +114,7 @@ const FEEDERS: Partial<
 const NO_OUTPUT = ['comment'];
 
 /** A document holding `type`, with its required inputs fed and its first
- *  output wired to the shader's colour. */
+ *  output wired to the shader's color. */
 function graphWith(type: string): EffectDocument {
   const definition = defaultNodeRegistry.require(type);
   const base = emptyEffectDocument();
@@ -201,7 +201,7 @@ describe('every node compiles into a shader', () => {
       const {fragmentSource} = compileEffect(graphWith(type));
 
       expect(fragmentSource).toContain(EMITS[type]);
-      // …and it reaches the colour, so the node was compiled rather than
+      // …and it reaches the color, so the node was compiled rather than
       // merely tolerated in the document.
       expect(fragmentSource).toContain('gl_FragColor =');
     },

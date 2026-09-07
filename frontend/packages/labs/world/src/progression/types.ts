@@ -45,11 +45,11 @@ export interface Region {
   /** One line, for the list view and the region's header. */
   summary: string;
   /**
-   * The region's colour, as a hue in degrees. The renderer decides saturation
+   * The region's color, as a hue in degrees. The renderer decides saturation
    * and lightness, which are a theme's business and not the catalogue's.
    *
    * A genre has no hue of its own: it takes the blend of the two foundations it
-   * sits between, so the colour says where the region came from (`regionHue`).
+   * sits between, so the color says where the region came from (`regionHue`).
    */
   hue?: number;
   /** For a genre: the two foundations it is entered from, clockwise. */
@@ -162,7 +162,7 @@ export interface Tile {
   task: string;
   /**
    * The tiles that must be done first. ALL of them — see specs/PROGRESSION.md
-   * — and every one must be a neighbour on the map.
+   * — and every one must be a neighbor on the map.
    */
   requires: readonly TileId[];
   /** What completing it adds to the shelf. */

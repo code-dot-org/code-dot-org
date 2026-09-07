@@ -35,11 +35,11 @@ const placement = (order: StepOrder): string =>
  * Sorted by id at each level so two builds of an unchanged file produce the
  * same text. Ids and step order ride along with the sources because they are
  * part of what the code DOES — renaming a step or moving it before another one
- * changes the world's behaviour as surely as editing its body.
+ * changes the world's behavior as surely as editing its body.
  *
  * Property DEFAULTS are deliberately absent. They reach the snapshot as values,
  * in `world` and `actors`, where a change to one patches into the running game
- * — which is the good behaviour, and folding them in here would replace it with
+ * — which is the good behavior, and folding them in here would replace it with
  * a restart.
  */
 function codeOf(rule: Rule): string {

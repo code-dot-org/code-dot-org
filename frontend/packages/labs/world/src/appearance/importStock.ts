@@ -76,7 +76,7 @@ export function importStockSprite(
  * Bytes as an argument, unlike a sprite's, because a backdrop's are not in the
  * bundle: the stock backdrops are served (BACKGROUNDS.md §7) and the caller
  * fetches one before it can be copied. Keeping the fetch outside leaves this a
- * pure transform like its neighbours, which is the half worth testing.
+ * pure transform like its neighbors, which is the half worth testing.
  *
  * No `.sheet`, ever. A backdrop is stretched over the viewport, so a grid of one
  * means nothing, and a file saying otherwise beside it would be a lie the

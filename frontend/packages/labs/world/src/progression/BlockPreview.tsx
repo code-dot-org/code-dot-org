@@ -2,7 +2,7 @@
 //
 // The Unlocks list said "the Jumping rule" and "the world_do_Jumping_MakeJump
 // block", and neither of those is a thing a learner has ever seen. What they
-// will see is a shape with words on it, in a colour, and that is the only
+// will see is a shape with words on it, in a color, and that is the only
 // description of a block anybody reads — so this shows one.
 //
 // THROUGH `BlocklyMarkdown`, which is the platform's own way of putting a

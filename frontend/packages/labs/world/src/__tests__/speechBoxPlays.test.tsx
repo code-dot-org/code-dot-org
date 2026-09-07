@@ -116,7 +116,7 @@ describe('a Speech Box being read', () => {
   });
 
   it('is anchored at its top left, so it fills downward as it is read', async () => {
-    // A centred box would jump about as each line arrived.
+    // A centered box would jump about as each line arrived.
     const box = stockActorById('speechBox')!;
 
     expect(box.contents).toContain('top left');

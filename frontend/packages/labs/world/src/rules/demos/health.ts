@@ -42,12 +42,12 @@ export const healthDemo: RuleDemo = {
   },
   look(id: string, actor: unknown) {
     if (id === 'spike') {
-      return {width: 24, height: 24, colour: '#e06c75'};
+      return {width: 24, height: 24, color: '#e06c75'};
     }
     // Three health is a full box; nothing left is a sliver. The size IS the
     // health bar, because a demo of a number needs the number to be visible.
     const left = (actor as {get(p: unknown): number}).get(healthOf as never);
     const side = 8 + Math.max(0, left) * 4;
-    return {width: side, height: side, colour: '#98c379'};
+    return {width: side, height: side, color: '#98c379'};
   },
 };

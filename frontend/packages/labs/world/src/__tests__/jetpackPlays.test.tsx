@@ -2,7 +2,7 @@
 //
 // Everything else about this fixture is checked standing still: the suite
 // builds it, places it and ticks it (`scenariosPlay`), and the rule's own
-// behaviour is played in `rules/__tests__/stockRulesRun`. What neither can say
+// behavior is played in `rules/__tests__/stockRulesRun`. What neither can say
 // is whether the two fit together into something you can get through — and
 // every way of getting THAT wrong looks fine on the first frame.
 //
@@ -91,7 +91,7 @@ describe('the jetpack level', () => {
     // of downward speed every frame, so it meets the next tile along with a
     // sliver of overlap — and a sliver read as a CORNER, which is nudged back
     // out so a body falling PAST a block is not caught by its edge. Walking,
-    // that nudge is exactly the walk, cancelled.
+    // that nudge is exactly the walk, canceled.
     const {world} = project;
     play(world, 0.5);
     expect(pilot(world).get(PositionProperty).x).toBe(80);
@@ -105,7 +105,7 @@ describe('the jetpack level', () => {
 
   it('crosses tile edges going left, not only going right', () => {
     // The general case, and the reason this looked like one broken direction:
-    // the nudge cancelled the walk going left and left it alone going right,
+    // the nudge canceled the walk going left and left it alone going right,
     // so the Pilot crossed the room one way and stopped dead at the first tile
     // edge the other. Out in the open, away from the ladder and the wall.
     const {world} = project;
@@ -375,21 +375,21 @@ describe('the jetpack level', () => {
     const {world} = project;
     play(world, 0.5);
     const ball = named(world, 'Enemy0');
-    const travelling = (
+    const traveling = (
       project.modules['rules/teleport'] as Record<string, unknown>
-    ).TravellingProperty as never;
+    ).TravelingProperty as never;
 
     // Roll on until a pad takes it.
     let waited = 0;
-    while (!ball.get(travelling) && waited < 600) {
+    while (!ball.get(traveling) && waited < 600) {
       play(world, 1 / 60);
       waited += 1;
     }
-    expect(ball.get(travelling)).toBe(true);
+    expect(ball.get(traveling)).toBe(true);
 
     const from = ball.get(PositionProperty);
     const dimmest: number[] = [];
-    for (let tick = 0; tick < 6 && ball.get(travelling); tick++) {
+    for (let tick = 0; tick < 6 && ball.get(traveling); tick++) {
       play(world, 1 / 60);
       dimmest.push(ball.get(OpacityProperty));
       const now = ball.get(PositionProperty);
@@ -401,15 +401,15 @@ describe('the jetpack level', () => {
     expect(Math.min(...dimmest)).toBeLessThan(1);
   });
 
-  it('paints six pads three colours from one kind', () => {
+  it('paints six pads three colors from one kind', () => {
     // THE PADS ARE ONE ACTOR FILE. They were three that differed in a single
-    // `set pad colour` row, and the colour is a fact about a particular pad
+    // `set pad color` row, and the color is a fact about a particular pad
     // rather than about the kind — so it is a per-instance override on the
     // placement instead (`blockly/mapPlacements`, `PADS`).
     //
     // A WRONG OVERRIDE KEY IS SILENT, which is the whole reason this is here.
     // The keys are the declaring trait's id and the property's, both slugged
-    // (`Is_a_Teleport_Pad`, `pad_colour`); miss either and the override lands
+    // (`Is_a_Teleport_Pad`, `pad_color`); miss either and the override lands
     // on nothing, every pad is the default blue, and what a player sees is a
     // room whose six pads are all one network — still teleporting, just to the
     // wrong places.
@@ -418,14 +418,14 @@ describe('the jetpack level', () => {
       string,
       unknown
     >;
-    const colour = teleport.PadColourProperty as never;
+    const color = teleport.PadColorProperty as never;
     const isPad = teleport.IsATeleportPadTrait as never;
     const pads = [...world.actors].filter(one =>
       (one as {has(trait: unknown): boolean}).has(isPad),
     );
 
     expect(pads).toHaveLength(6);
-    const painted = pads.map(pad => pad.get(colour));
+    const painted = pads.map(pad => pad.get(color));
     // Three networks of two, which is what the room is built around: a pair is
     // a journey and a single pad is a dead end.
     expect(new Set(painted).size).toBe(3);
@@ -444,7 +444,7 @@ describe('the jetpack level', () => {
     // falls back to the floor. It never reaches a wall any more: a pad gets
     // to it first.
     //
-    // That is not a loss of the turning behaviour, only of this room's view
+    // That is not a loss of the turning behavior, only of this room's view
     // of it — `Turning` is pinned by its own tests and by the enemies lesson,
     // both of which put a ball in a corridor with nothing else in it.
     const {world} = project;
@@ -653,7 +653,7 @@ describe('the jetpack level', () => {
     expect(under.get(OpacityProperty)).toBe(1);
   });
 
-  it('gives the last four their four different behaviours', () => {
+  it('gives the last four their four different behaviors', () => {
     // JETPACK.md's phase seven, and the claim worth pinning is that all four
     // came out of two dials and no new rule. Each assertion is the thing that
     // tells that enemy from the others — "it moved" would pass for any of

@@ -60,7 +60,7 @@ describe('the value between two ends', () => {
   });
 
   it('knows what has a path between two values and what does not', () => {
-    // A colour or a sprite name has no midpoint worth guessing at.
+    // A color or a sprite name has no midpoint worth guessing at.
     expect(isTweenable(1)).toBe(true);
     expect(isTweenable(new Vector(0, 0))).toBe(true);
     expect(isTweenable('sprite.png')).toBe(false);
@@ -278,7 +278,7 @@ describe('a tween of several properties', () => {
 
   it('is displaced whole by anything that touches one of its properties', () => {
     // Splitting the older run and keeping the half that does not clash is not
-    // behaviour anybody could predict. "Two tweens cannot fight over a
+    // behavior anybody could predict. "Two tweens cannot fight over a
     // property, so the newer replaces the older" is one sentence.
     const {actor} = world();
     const displaced: string[] = [];

@@ -31,7 +31,7 @@ import {PositionalTrait} from '../rules/spatial';
  * "Has Appearance" is what `set sprite` and `play animation` write to, which
  * are the first two blocks a learner reaches for.
  *
- * The visible behaviour does not change: an actor with no picture was already
+ * The visible behavior does not change: an actor with no picture was already
  * drawn as a plain rectangle, and still is, because a frame comes from a sprite
  * or an animation and neither is set by default. What changes is that the two
  * blocks work on any actor rather than failing on one that forgot a `use trait`
@@ -157,9 +157,9 @@ export class ActorBuilder {
   /**
    * Declare something this KIND of actor does every frame.
    *
-   * The behaviour half of `defineProperty`, and the same bargain: state a kind
+   * The behavior half of `defineProperty`, and the same bargain: state a kind
    * carries without a rule, and now work a kind does without one. A rule is
-   * still the answer when the behaviour is SHARED between kinds, elected, or
+   * still the answer when the behavior is SHARED between kinds, elected, or
    * answerable by `has trait` — this is for the case where it is none of those
    * and a `.rule` file is more ceremony than the thing deserves.
    *
@@ -191,7 +191,7 @@ export class ActorBuilder {
    *
    * The third of the same bargain `defineProperty` and `defineStep` make: state
    * a kind carries, work it does every frame, and now a NAMED thing it does.
-   * A rule is still the answer when the behaviour is shared between kinds,
+   * A rule is still the answer when the behavior is shared between kinds,
    * elected, or answerable by `has trait`; this is for the case where the
    * honest motivation is that the same six blocks were written twice.
    *

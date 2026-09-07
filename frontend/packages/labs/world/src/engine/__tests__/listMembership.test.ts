@@ -2,7 +2,7 @@
 //
 // The answer has not changed; what changed is that asking a long list stopped
 // being a walk of it. A flood fill asks "have I been here" once per cell per
-// neighbour, so a search over four hundred cells asks it sixteen hundred times
+// neighbor, so a search over four hundred cells asks it sixteen hundred times
 // against a list that ends four hundred long — a quarter of a million
 // comparisons for a question that is a lookup.
 //

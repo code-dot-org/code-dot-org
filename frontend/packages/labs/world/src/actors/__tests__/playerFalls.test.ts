@@ -1,6 +1,6 @@
 // The imported Player and Ground, PLAYED.
 //
-// The pair is the first stock actors whose worth is a behaviour rather than a
+// The pair is the first stock actors whose worth is a behavior rather than a
 // picture, and every way of getting the shelf entry wrong looks fine standing
 // still. A Player missing Jumping still compiles and still walks; a Ground
 // missing Gravity still draws and still sits there. What separates a working

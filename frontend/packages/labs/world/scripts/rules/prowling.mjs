@@ -129,7 +129,7 @@ const quarry = prowls.actor('actor to hunt');
 /** Units a second along the floor. */
 const speed = prowls.number('prowl speed', 1);
 /**
- * How far off centre counts as "over there", in pixels.
+ * How far off center counts as "over there", in pixels.
  *
  * Half a tile. Without it a robot standing under its quarry flips direction
  * every frame and vibrates on the spot — "exactly the same x" is a thing that

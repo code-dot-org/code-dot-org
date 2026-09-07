@@ -28,6 +28,6 @@ export const wrapDemo: RuleDemo = {
     return {world, cast: {rover}};
   },
   look() {
-    return {width: 16, height: 16, colour: '#e5c07b'};
+    return {width: 16, height: 16, color: '#e5c07b'};
   },
 };

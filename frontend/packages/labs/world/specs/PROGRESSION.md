@@ -48,7 +48,7 @@ trait dropdown — can therefore link back to its lesson.
 | Term       | Meaning                                                               |
 | ---------- | --------------------------------------------------------------------- |
 | **tile**   | one lesson: instructions, a starting project, an unlock, and a check  |
-| **region** | a named, coloured group of tiles that share a theme                   |
+| **region** | a named, colored group of tiles that share a theme                    |
 | **edge**   | a prerequisite, drawn on the side two neighbouring tiles share        |
 | **shelf**  | everything a learner has unlocked; what New Project is assembled from |
 | **check**  | the evidence that a tile was learned, not merely visited              |
@@ -57,7 +57,7 @@ trait dropdown — can therefore link back to its lesson.
 
 ### Geometry
 
-Pointy-top hexagons on axial coordinates `(q, r)`, six neighbours each:
+Pointy-top hexagons on axial coordinates `(q, r)`, six neighbors each:
 `(+1,0) (+1,-1) (0,-1) (-1,0) (-1,+1) (0,+1)`. Screen position is the standard
 conversion, `x = s·√3·(q + r/2)`, `y = s·(3/2)·r`, for tile size `s`.
 
@@ -67,15 +67,15 @@ are what makes a region read as a shape rather than as a slice of a pie.
 ### Edges are the design; coordinates are a rendering of it
 
 A tile's `requires` list names other tiles, and **every tile it names must be
-one of its six neighbours**. That constraint is what makes the picture
+one of its six neighbors**. That constraint is what makes the picture
 trustworthy: a learner reading the map can see what stands between them and a
 tile they want, without a legend.
 
-Two neighbours with no prerequisite between them are drawn adjacent with no
+Two neighbors with no prerequisite between them are drawn adjacent with no
 edge. Adjacency is therefore cheap and an edge is deliberate, which is what
 lets a region be a contiguous blob without every tile in it being a gate.
 
-A test validates the authored layout: every `requires` entry is a neighbour,
+A test validates the authored layout: every `requires` entry is a neighbor,
 every tile is reachable from Origin, every region is contiguous, and no two
 tiles share a coordinate. Coordinates are authored data like everything else,
 but they cannot contradict the edges. See
@@ -107,28 +107,28 @@ each, it is three lessons from Origin. The layout test enforces the depth.
 
 | State    | Meaning                       | Shown as                                   |
 | -------- | ----------------------------- | ------------------------------------------ |
-| **done** | the check passed              | filled in the region colour, with a stamp  |
-| **open** | every inbound edge is done    | outlined in the region colour, title shown |
-| **shut** | some inbound edge is not done | greyed, title shown, padlock, edges dashed |
+| **done** | the check passed              | filled in the region color, with a stamp   |
+| **open** | every inbound edge is done    | outlined in the region color, title shown  |
+| **shut** | some inbound edge is not done | grayed, title shown, padlock, edges dashed |
 
 There is no fog of war. The map is a menu of ambitions — a learner who wants to
 make a platformer should be able to see the Platformer region on their first
 day and read the path to it. Hiding what has not been earned would remove the
 only reason to walk any particular way.
 
-### Regions and colour
+### Regions and color
 
 Fourteen regions is more than a palette can carry as fourteen unrelated hues,
 and it does not have to. The six foundations take six hues fifty degrees apart,
 in the order they sit on the map, and **a genre takes the blend of the two it
 lies between** — the short way round the wheel, which is the way the map goes.
-So a wedge's colour says which two concepts it was made from, and twelve of the
+So a wedge's color says which two concepts it was made from, and twelve of the
 fourteen regions are decided by six numbers (`regionHue`, `src/progression/regions.ts`).
 
 Making is the exception and is left neutral: it is about authoring, and it
 belongs to no theme.
 
-Colour is never the only carrier of state. Done is a stamp, shut is a padlock,
+Color is never the only carrier of state. Done is a stamp, shut is a padlock,
 and region membership is also stated in the tile's own label in the list view.
 
 ### Layout
@@ -154,7 +154,7 @@ Clockwise, by angle:
   11  Place        foundation   (north-west)
   12  Simulation   genre — Place + Input
 
-By radius: Origin at the centre; each foundation a spike running out to ring 3
+By radius: Origin at the center; each foundation a spike running out to ring 3
 or 4 with two shoulders leaning into the wedge beside it; each genre five cells
 in the middle of a wedge, from ring 3 to ring 5; and one Making tile past each
 genre's capstone, at ring 6. Sixty-seven tiles.
@@ -224,7 +224,7 @@ interface Tile {
   at: [q: number, r: number];
   title: string;
   teaches: string; // one line: the concept, not the feature
-  requires: TileId[]; // all must be done; all must be neighbours
+  requires: TileId[]; // all must be done; all must be neighbors
   project: ProjectSpec; // the starting project, as `fixtures/` writes one
   instructions: string; // markdown
   unlocks: Unlock[];
@@ -265,8 +265,8 @@ sides that are not shared with another tile of the same region. Drawing an
 outline per tile gives a honeycomb; drawing a convex hull gives a shape the
 tiles do not fill.
 
-**An edge is a bar across the shared side**, not a line between centres. Lines
-between centres are invisible under the tiles at any tile size that fits a
+**An edge is a bar across the shared side**, not a line between centers. Lines
+between centers are invisible under the tiles at any tile size that fits a
 title.
 
 **The map is also a list.** An SVG of hexagons is unusable by keyboard and
@@ -276,7 +276,7 @@ not a progression. So:
 - a parallel list view (region → tiles → state → what it unlocks) that is not a
   fallback but a first-class way to use the page;
 - in the map view, each tile is a tab stop in reading order, with the six
-  neighbours on the arrow keys and an announcement of what moving landed on;
+  neighbors on the arrow keys and an announcement of what moving landed on;
 - state announced in text: "Gravity, Motion, done", "Jumping, Platformer,
   locked, needs Gravity".
 
@@ -319,7 +319,7 @@ which is the whole reason to have a lab and not a worksheet. Prefer it.
 ### 2. Trace — something happened
 
 "`Collection#collected` fired at least three times." "The handler for
-`key goes down` ran." Cheaper to author than an outcome, still behavioural, and
+`key goes down` ran." Cheaper to author than an outcome, still behavioral, and
 the right answer when the lesson's point is that an event exists.
 
 ### 3. Shape — the workspace contains something
@@ -328,7 +328,7 @@ the right answer when the lesson's point is that an event exists.
 `Jumps` trait."
 
 The weakest, because it passes for a program that has never run. It is the only
-thing available when the lesson's product is a FILE rather than a behaviour —
+thing available when the lesson's product is a FILE rather than a behavior —
 most of the Making rim is like this — and it should not be used anywhere else.
 
 ### Rules for authoring a check
@@ -396,7 +396,7 @@ The first thing anybody wants is for something to move when they press a key.
 
 | Tile              | The lesson                                                                                                            | Unlocks                            | Check                                                               |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------- | ---------------------------------- | ------------------------------------------------------------------- |
-| `logic/if`        | A question with two answers. Make an actor change colour only when it is past the middle of the screen.               | `if`, `compare`                    | `[o]` two scripted runs, two different outcomes                     |
+| `logic/if`        | A question with two answers. Make an actor change color only when it is past the middle of the screen.                | `if`, `compare`                    | `[o]` two scripted runs, two different outcomes                     |
 | `logic/and-or`    | Two questions at once, and the difference between "and" and "or". A door that opens only when both switches are down. | `and`, `or`, `not`                 | `[o]` the door opens on both and stays shut on either               |
 | `logic/collision` | Touching is a question the world answers for you. React when the player touches a spike.                              | Collisions rule; Solid Bodies rule | `[t]` the collision handler ran; `[o]` the player stops at the wall |
 | `logic/kinds`     | What a thing IS, asked at runtime: `is a`, `has trait`. One handler that treats a coin and a spike differently.       | `is a`, `has trait`                | `[o]` a coin and a spike produce different results from one handler |
@@ -405,7 +405,7 @@ The first thing anybody wants is for something to move when they press a key.
 
 | Tile                 | The lesson                                                                                                           | Unlocks                                             | Check                                                                       |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------------------------------- |
-| `memory/variable`    | A box that holds a number while a handler runs. Work out a distance once and use it twice.                           | Variables                                           | `[s]` a variable is read at least twice; `[o]` the behaviour is right       |
+| `memory/variable`    | A box that holds a number while a handler runs. Work out a distance once and use it twice.                           | Variables                                           | `[s]` a variable is read at least twice; `[o]` the behavior is right        |
 | `memory/world-state` | State the whole world shares: two Labels that disagree about how many lives are left, and one number they both read. | a world property; Writing rule; Label actor; `join` | `[o]` both Labels say the same thing; `[s]` a declaration, and a read of it |
 | `memory/actor-state` | State that belongs to an actor and not to the world: two Lamps reading the world's one number, each given its own.   | `define property` in an `.actor`                    | `[o]` the two Lamps say different things; `[s]` the Lamp declares it        |
 | `memory/score`       | Somebody already wrote the counter. Swap the hand-rolled one for Scoring and get "the target is reached" free.       | Scoring rule                                        | `[t]` one console line, saying 5, after six clicks                          |
@@ -416,8 +416,8 @@ The first thing anybody wants is for something to move when they press a key.
 | Tile              | The lesson                                                                                      | Unlocks                                   | Check                                                            |
 | ----------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------- | ---------------------------------------------------------------- |
 | `look/sprite`     | A picture is a file. Import one from the library, then paint your own and use that.             | image editor; the sprite library          | `[o]` the actor draws a sprite the project holds                 |
-| `look/drawing`    | An actor with no picture paints itself: two bars, both full, and one that should not be.        | Drawing drawer; Progress Bar; a colour    | `[o]` the two Bars draw different pictures                       |
-| `look/background` | The backdrop is not an actor. Add one, tile it, slide it, and watch the actors stay put.        | `set background`, repeat, offset, colour  | `[o]` the world's backdrop is set, tiles, and has been slid      |
+| `look/drawing`    | An actor with no picture paints itself: two bars, both full, and one that should not be.        | Drawing drawer; Progress Bar; a color     | `[o]` the two Bars draw different pictures                       |
+| `look/background` | The backdrop is not an actor. Add one, tile it, slide it, and watch the actors stay put.        | `set background`, repeat, offset, color   | `[o]` the world's backdrop is set, tiles, and has been slid      |
 | `look/animation`  | An animation is a file of rectangles cut out of one image. Give a sliding Hero a walk cycle.    | animation editor; `play animation`        | `[o]` the frame changes across half a second                     |
 | `look/effect`     | A shader is a description of how to paint. One file, on one actor and then over the whole view. | effect editor; `add effect` (actor/world) | `[o]` the Coin carries one, the Hero does not, and the view does |
 
@@ -484,13 +484,13 @@ The first thing anybody wants is for something to move when they press a key.
 
 ### Genre: Simulation — entered from Place and Input
 
-| Tile             | The lesson                                                                        | Unlocks                                | Check                                                                        |
-| ---------------- | --------------------------------------------------------------------------------- | -------------------------------------- | ---------------------------------------------------------------------------- |
-| `sim/many`       | A hundred of something. Spawn them, walk them, and find out what a hundred costs. | `add actor` at runtime; `random place` | `[o]` the world holds 100 and the frame time stays under budget              |
-| `sim/steering`   | Chase, and flee, and the distance question both are asked with.                   | Steering rule                          | `[o]` the chaser closes the distance; the fleer opens it                     |
-| `sim/neighbours` | Twenty-five Dots, all of them lit, and a question that lights a few.              | `actors within ⟨d⟩ of ⟨a⟩`             | `[o]` four lit at the start, a count that changes, and never all of them     |
-| `sim/emergent`   | Twelve Boids going twelve ways, and two of the three rules that make a flock.     | `count of ⟨…⟩ with ⟨…⟩`                | `[o]` twelve headings at the start, one at the end, and nothing saying which |
-| `sim/dials`      | A flock that works, and five numbers typed where nobody can turn them.            | the simulation template                | `[o]` the dial is turned mid-flight and the flock comes apart                |
+| Tile            | The lesson                                                                        | Unlocks                                | Check                                                                        |
+| --------------- | --------------------------------------------------------------------------------- | -------------------------------------- | ---------------------------------------------------------------------------- |
+| `sim/many`      | A hundred of something. Spawn them, walk them, and find out what a hundred costs. | `add actor` at runtime; `random place` | `[o]` the world holds 100 and the frame time stays under budget              |
+| `sim/steering`  | Chase, and flee, and the distance question both are asked with.                   | Steering rule                          | `[o]` the chaser closes the distance; the fleer opens it                     |
+| `sim/neighbors` | Twenty-five Dots, all of them lit, and a question that lights a few.              | `actors within ⟨d⟩ of ⟨a⟩`             | `[o]` four lit at the start, a count that changes, and never all of them     |
+| `sim/emergent`  | Twelve Boids going twelve ways, and two of the three rules that make a flock.     | `count of ⟨…⟩ with ⟨…⟩`                | `[o]` twelve headings at the start, one at the end, and nothing saying which |
+| `sim/dials`     | A flock that works, and five numbers typed where nobody can turn them.            | the simulation template                | `[o]` the dial is turned mid-flight and the flock comes apart                |
 
 ### The rim: Making
 
@@ -499,14 +499,14 @@ motivates ([above](#the-rim-making-six-outposts)). This is where a learner stops
 using rules and starts writing them, and it is the reason the lab has a rule
 language at all.
 
-| Tile              | Past                                                                                      | The lesson                                                                                           | Unlocks                     | Check                                                               |
-| ----------------- | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | --------------------------- | ------------------------------------------------------------------- |
-| `making/read`     | A rule you have used half a dozen times and never looked inside.                          | Open the file behind a trait you have used twenty times. Find the line that makes you fall.          | the Rule category           | `[s]` the rule file was opened                                      |
-| `making/change`   | A guard on a long slow beat, and the number that says how long — not in your world.       | Change a number in it, and meet the fact that catches everybody: your project has its OWN copy.      | `each frame` in a `.rule`   | `[o]` the behaviour differs from stock in the way the edit predicts |
-| `making/property` | A wind that blows everything at the same speed, because the speed is typed into the rule. | Add a property to a rule and watch two blocks appear in its category.                                | `define event`              | `[o]` the property is on the built actor and its blocks are used    |
-| `making/block`    | The same sum in two steps with one number different. Give it a name.                      | Your own vocabulary: the thing your script said three times, with the parts that vary as parameters. | `define block`, `return`    | `[o]` called from two places with different arguments               |
-| `making/rule`     | A Fish and a Bird, both bobbing, and the bob written out twice.                           | A rule of your own: work several kinds share, written once and elected by each.                      | `define rule`               | `[o]` two kinds of actor run one rule, and neither holds a copy     |
-| `making/trait`    | One weather and two kinds of thing, drifting the same way from one ability.               | One rule, two traits, and the actors that elect one each.                                            | `define trait`, `use trait` | `[o]` two kinds carry different traits from one rule                |
+| Tile              | Past                                                                                      | The lesson                                                                                           | Unlocks                     | Check                                                              |
+| ----------------- | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | --------------------------- | ------------------------------------------------------------------ |
+| `making/read`     | A rule you have used half a dozen times and never looked inside.                          | Open the file behind a trait you have used twenty times. Find the line that makes you fall.          | the Rule category           | `[s]` the rule file was opened                                     |
+| `making/change`   | A guard on a long slow beat, and the number that says how long — not in your world.       | Change a number in it, and meet the fact that catches everybody: your project has its OWN copy.      | `each frame` in a `.rule`   | `[o]` the behavior differs from stock in the way the edit predicts |
+| `making/property` | A wind that blows everything at the same speed, because the speed is typed into the rule. | Add a property to a rule and watch two blocks appear in its category.                                | `define event`              | `[o]` the property is on the built actor and its blocks are used   |
+| `making/block`    | The same sum in two steps with one number different. Give it a name.                      | Your own vocabulary: the thing your script said three times, with the parts that vary as parameters. | `define block`, `return`    | `[o]` called from two places with different arguments              |
+| `making/rule`     | A Fish and a Bird, both bobbing, and the bob written out twice.                           | A rule of your own: work several kinds share, written once and elected by each.                      | `define rule`               | `[o]` two kinds of actor run one rule, and neither holds a copy    |
+| `making/trait`    | One weather and two kinds of thing, drifting the same way from one ability.               | One rule, two traits, and the actors that elect one each.                                            | `define trait`, `use trait` | `[o]` two kinds carry different traits from one rule               |
 
 `making/shelf` — putting a rule you wrote on your own shelf, so your next New
 Project offers it — was the seventh of these and is not a tile. It is not a
@@ -529,7 +529,7 @@ point of the exercise. Here is what it asks for and the lab has not got.
    as well as categories.
 3. **Locked rows, not absent rows.** The rule import dialog, the actor shelf,
    the sprite/animation/effect libraries should show what is not yet unlocked,
-   greyed, naming the tile that grants it. An absent row teaches nothing.
+   grayed, naming the tile that grants it. An absent row teaches nothing.
 4. **Lesson back-links** on those rows, on toolbox category headers, and beside
    the `use trait` eye.
 5. **The tree page** and its progress store.
@@ -615,9 +615,9 @@ addressed `at ⟨x⟩ ⟨y⟩` has no index in it, and the index is the part bei
 back. See specs/LISTS.md — the two are separate questions, and the grid is the
 one that can be answered first.
 
-**A neighbourhood query.** WRITTEN: `the actors in ⟨…⟩ within ⟨80⟩ of ⟨this
+**A neighborhood query.** WRITTEN: `the actors in ⟨…⟩ within ⟨80⟩ of ⟨this
 actor⟩` (`world_actors_within`, `WorldLab.within`), which is what
-`simulation/neighbours` proposed and what `simulation/emergent` cannot be
+`simulation/neighbors` proposed and what `simulation/emergent` cannot be
 written without. Middles rather than edges, near any of several, and never the
 actor measured from — the three decisions are in `engine/rules/spatial`.
 
@@ -644,14 +644,14 @@ arithmetic written in the test rather than against the loop it replaced.
 every flock is written in, `the actors in ⟨all actors⟩ within ⟨80⟩ of ⟨this
 actor⟩`, once per actor per frame. Measured over one frame: 5.0ms → 0.54ms at a
 hundred and fifty actors, 17.0ms → 0.89ms at three hundred. A frame is 16.7ms,
-so three hundred used to spend the whole of one on the neighbourhood before
+so three hundred used to spend the whole of one on the neighborhood before
 anything was drawn, at the size `simulation/many` walks a learner up to on
 purpose. A NARROWER source still measures for itself, and must: the index knows
 about every actor and would hand back ones the source left out.
 
 ~~**Own blocks outside a rule.**~~ BUILT for the statement form
 (`ActorBuilder.defineAction`, `blockly/ownProperties`). `define block` lived in
-the Rule category alone, so naming a piece of behaviour meant authoring a rule —
+the Rule category alone, so naming a piece of behavior meant authoring a rule —
 a trait, an election and a file — when the honest motivation was that the same
 six blocks had been written twice. It is offered in an `.actor` file now, where
 it declares a thing that KIND of actor does: the same block, the same designer,
@@ -692,7 +692,7 @@ piece (the assertion channel) is not on the path to finding out whether the
 idea works.
 
 1. **The catalogue as data.** Tile schema, region list, the tiles above as a
-   TypeScript module, and the layout validator test (neighbours, reachability,
+   TypeScript module, and the layout validator test (neighbors, reachability,
    contiguity, no collisions). No UI. This is where the design either survives
    contact with real coordinates or does not.
 2. **The map, read-only.** The page, the SVG, the region outlines, the list
@@ -757,7 +757,7 @@ idea works.
 
    That is what lets the general vocabulary stay branch-local without stranding
    anybody: Console is Origin's (both early branches print within two lessons),
-   and Math, Text, Colour and Sound belong to the region that teaches each.
+   and Math, Text, Color and Sound belong to the region that teaches each.
 
    **A locked row is shown, not removed**, with the lesson that grants it named
    beside it: "Unlocked by: Down". A row that has been taken away teaches
@@ -781,7 +781,7 @@ idea works.
    — the workspace is already in the lab. Ten tiles, chosen from the Making rim
    and the authoring lessons where shape is the right answer anyway.
 5. **The assertion channel.** Scripted input, fixed clock, probes back. Convert
-   the ten tiles' neighbours to outcome checks, starting with the ones whose
+   the ten tiles' neighbors to outcome checks, starting with the ones whose
    false pass is worst.
 6. **The rest of the catalogue**, region by region, each shipped with its
    starting project as a scenario so it is playable and testable before it is a

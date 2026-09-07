@@ -2,7 +2,7 @@
 // `.actor`.
 //
 // The third declaration a kind may make, after state (`define property`) and
-// per-frame work (`each frame`). Until this, naming a piece of behaviour meant
+// per-frame work (`each frame`). Until this, naming a piece of behavior meant
 // authoring a rule — a trait, an election and a file — when the honest
 // motivation was that the same six blocks had been written twice.
 //

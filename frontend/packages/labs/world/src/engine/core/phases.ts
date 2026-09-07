@@ -2,14 +2,14 @@
 //
 // A step used to say when it ran by naming a NEIGHBOUR — `before Physics ▸
 // reposition`. That is the right thing to say when a rule genuinely knows its
-// neighbour, and the wrong thing for a pipeline: five of the seven steps the
+// neighbor, and the wrong thing for a pipeline: five of the seven steps the
 // stock rules ship carried a cross-rule anchor, so a learner writing a new
 // force had to discover that Physics existed and pick the right one of its
 // steps before their rule could work. What they wanted to say was "this is a
 // force", and there was no way to say it.
 //
 // So the anchors the stock rules already hand-wired are given names, and that
-// list is this file. Nothing here is new behaviour — `applyVelocity` before
+// list is this file. Nothing here is new behavior — `applyVelocity` before
 // `reposition` before `find` before `resolve` before `handleCollisions` is the
 // order those rules already produce. It is the same pipeline, sayable.
 //

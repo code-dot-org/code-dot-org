@@ -12,7 +12,7 @@
 // where the map says it in a padlock and a dashed edge.
 
 import {TILES} from './catalogue';
-import {regionColours} from './palette';
+import {regionColors} from './palette';
 import styles from './progressionList.module.css';
 import {REGIONS, regionHue} from './regions';
 import type {TileId, TileState} from './types';
@@ -49,8 +49,8 @@ export const ProgressionList = ({
             className={styles.region}
             style={
               {
-                '--swatch-light': regionColours(hue, 'light').tone,
-                '--swatch-dark': regionColours(hue, 'dark').tone,
+                '--swatch-light': regionColors(hue, 'light').tone,
+                '--swatch-dark': regionColors(hue, 'dark').tone,
               } as React.CSSProperties
             }
             aria-labelledby={`progression-region-${region.id}`}
@@ -82,7 +82,7 @@ export const ProgressionList = ({
                       onClick={() => onSelect(tile.id)}
                     >
                       <span className={styles.title}>{tile.title}</span>
-                      {/* The state in words, beside the colour that says it in
+                      {/* The state in words, beside the color that says it in
                         the map — this is the copy a screen reader reads, and
                         the one a person scanning the list reads too. */}
                       <span className={styles.state}>

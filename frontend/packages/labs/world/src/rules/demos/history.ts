@@ -67,13 +67,13 @@ export const historyDemo: RuleDemo = {
   },
   look(id: string) {
     if (id === 'clock') {
-      return {width: 14, height: 14, colour: '#c678dd'};
+      return {width: 14, height: 14, color: '#c678dd'};
     }
     // The footprints are what the return is measured against, so they have to
     // be visible: a dim mark on a dark ground is a mark nobody can see the box
     // land on.
     return id === 'box'
-      ? {width: 18, height: 18, colour: '#61afef'}
-      : {width: 8, height: 8, colour: '#abb2bf'};
+      ? {width: 18, height: 18, color: '#61afef'}
+      : {width: 8, height: 8, color: '#abb2bf'};
   },
 };

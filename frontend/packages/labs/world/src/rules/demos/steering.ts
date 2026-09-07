@@ -34,7 +34,7 @@ export const steeringDemo: RuleDemo = {
     // The hunter warm and the prey cool, so which is chasing which is legible
     // in a single frame even though the chase is not.
     return id === 'hunter'
-      ? {width: 16, height: 16, colour: '#e06c75'}
-      : {width: 16, height: 16, colour: '#7fd1b9'};
+      ? {width: 16, height: 16, color: '#e06c75'}
+      : {width: 16, height: 16, color: '#7fd1b9'};
   },
 };

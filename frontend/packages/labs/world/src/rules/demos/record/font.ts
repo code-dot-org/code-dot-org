@@ -85,7 +85,7 @@ export function textWidth(text: string, scale: number): number {
  * Which pixels a string lights, as `[x, y]` offsets from its top-left.
  *
  * A generator of points rather than a blit, so the caller owns the clipping
- * and the colour — the strip writer already does both for boxes, and text
+ * and the color — the strip writer already does both for boxes, and text
  * that clipped differently from a box would be a second set of edge cases.
  */
 export function* textPixels(

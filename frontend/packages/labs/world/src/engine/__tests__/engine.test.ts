@@ -100,8 +100,8 @@ describe('gravity simulation', () => {
   const DELTA = 0.1; // strength 9 → +0.9 units/s of velocity per tick
 
   it('accelerates a faller and rests its box on the ground surface', () => {
-    // Ground centre 120, half-height 10 → surface top at 110. Player half-height
-    // 10 → its box bottom meets the surface when its centre reaches 100.
+    // Ground center 120, half-height 10 → surface top at 110. Player half-height
+    // 10 → its box bottom meets the surface when its center reaches 100.
     const {world, player} = makeWorld(new Vector(0, 0), 120);
     let starts = 0;
     let stops = 0;
@@ -124,8 +124,8 @@ describe('gravity simulation', () => {
     expect(player.get(FallingProperty)).toBe(true);
     expect(starts).toBe(1); // only the one transition
 
-    // Tick 5: would reach 135 → its box bottom meets the surface; centre rests
-    // at 100 (not buried at the ground centre, 120), velocity zeroed.
+    // Tick 5: would reach 135 → its box bottom meets the surface; center rests
+    // at 100 (not buried at the ground center, 120), velocity zeroed.
     world.tick(DELTA);
     expect(player.get(PositionProperty).y).toBeCloseTo(100);
     expect(player.get(VelocityProperty).y).toBe(0);
@@ -134,9 +134,9 @@ describe('gravity simulation', () => {
     expect(stops).toBe(1);
   });
 
-  it('rests a taller actor higher — the box half-height sets the resting centre', () => {
+  it('rests a taller actor higher — the box half-height sets the resting center', () => {
     // Same ground (surface top 110), but a 40px-tall player (half-height 20)
-    // rests with its centre 20 above the surface, at 90.
+    // rests with its center 20 above the surface, at 90.
     const {world, player} = makeWorld(
       new Vector(0, 0),
       120,
@@ -160,14 +160,14 @@ describe('gravity simulation', () => {
   });
 
   it('falls again after walking off the edge of the ground', () => {
-    // Ground and player are both 20px wide, centred at x=0 (span [-10, 10]).
+    // Ground and player are both 20px wide, centered at x=0 (span [-10, 10]).
     const {world, player} = makeWorld(new Vector(0, 0), 120);
     for (let i = 0; i < 20; i++) {
       world.tick(DELTA);
     }
     expect(player.get(FallingProperty)).toBe(false); // resting on the block
 
-    // Slide fully past the block's right edge — centres 40 apart, more than the
+    // Slide fully past the block's right edge — centers 40 apart, more than the
     // summed half-widths (20), so no horizontal overlap: support is gone.
     const {y} = player.get(PositionProperty);
     player.set(PositionProperty, new Vector(40, y));
@@ -261,7 +261,7 @@ describe('gravity simulation', () => {
     for (let i = 0; i < 60; i++) {
       world.tick(0.05);
     }
-    // Rests on the platform's top: centre a half-height (10) above the top (-10).
+    // Rests on the platform's top: center a half-height (10) above the top (-10).
     expect(player.get(PositionProperty).y).toBeCloseTo(-20);
     expect(player.get(FallingProperty)).toBe(false);
   });

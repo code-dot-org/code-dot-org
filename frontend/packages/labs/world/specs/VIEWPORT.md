@@ -288,7 +288,7 @@ now a moment.
 
 A step used to say when it ran by naming another rule's STEP — `before Physics >
 reposition`. That is the right thing to say when a rule genuinely knows its
-neighbour, and the wrong thing for a pipeline: gravity said it to mean "this is
+neighbor, and the wrong thing for a pipeline: gravity said it to mean "this is
 a force", so a learner writing a second force had to discover Physics existed
 and pick the right one of its steps. Five of the seven steps the stock rules
 shipped carried such an anchor. They name a moment now and no rule names
@@ -432,10 +432,10 @@ image position = (camera position - camera rest) (*) layer parallax + slot offse
 `(*)` is component-wise, since the factor is per-axis.
 
 A camera's position is the point it shows at the MIDDLE of the view, which is
-the same thing an actor's position means — an actor is drawn centred on its own,
+the same thing an actor's position means — an actor is drawn centered on its own,
 and the two are literally the same `PositionProperty`, so they cannot mean
 different things without that property meaning two things by whoever holds it.
-`set position of ⟨camera⟩ to ⟨get position of ⟨player⟩⟩` therefore centres the
+`set position of ⟨camera⟩ to ⟨get position of ⟨player⟩⟩` therefore centers the
 player, with no arithmetic to write.
 
 That is why the term is measured from the camera's REST position — the middle of

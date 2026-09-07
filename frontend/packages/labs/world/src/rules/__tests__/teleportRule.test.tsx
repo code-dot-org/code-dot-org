@@ -1,11 +1,11 @@
-// Where a traveller stands after a pad has moved it.
+// Where a traveler stands after a pad has moved it.
 //
 // A TELEPORT IS A DISCONTINUITY, and one rule in the library resolves overlaps
 // by asking where a body came from. Physics writes `position before` down in
-// `sense`, before anything moves; the pad sets the traveller down in `push`;
+// `sense`, before anything moves; the pad sets the traveler down in `push`;
 // Solid reads that record in `settle` to decide which face to push a body out
-// through. So on the frame it lands, a traveller looks to Solid like something
-// that has just travelled in a straight line from the pad it left — and gets
+// through. So on the frame it lands, a traveler looks to Solid like something
+// that has just traveled in a straight line from the pad it left — and gets
 // pushed out along that line, which for the pair in the jetpack level means
 // down through the floor it was supposed to arrive on.
 //
@@ -41,7 +41,7 @@ beforeAll(async () => {
 
 /**
  * A floor with a pad standing on it, a second pad far away with its own floor,
- * and a traveller. The two pads are the same colour, so they are one place.
+ * and a traveler. The two pads are the same color, so they are one place.
  */
 const stage = (falls: boolean) => {
   const world = new WorldBuilder({id: 'w', name: 'W'})
@@ -83,7 +83,7 @@ const stage = (falls: boolean) => {
   floor('floorFar', new Vector(100, 132));
   const far = pad('padFar', new Vector(100, 100));
 
-  const traveller = world.addActor(
+  const traveler = world.addActor(
     new ActorBuilder({id: 'walker', name: 'walker'})
       .useTraits([
         of('rules/motion', 'CanMoveTrait'),
@@ -97,21 +97,21 @@ const stage = (falls: boolean) => {
       .set(of('rules/teleport', 'TakesAnyPadItTouchesProperty'), true)
       .instantiate('walker'),
   );
-  return {world, traveller, near, far};
+  return {world, traveler, near, far};
 };
 
-describe('a traveller that comes to rest', () => {
-  it('tells both the traveller and the pads about a trip', () => {
+describe('a traveler that comes to rest', () => {
+  it('tells both the traveler and the pads about a trip', () => {
     // TWO SIDES, DELIBERATELY, and the same pair `Collection` declares. A
-    // traveller's `starts travelling` is about the BODY, so a handler for it
+    // traveler's `starts traveling` is about the BODY, so a handler for it
     // lives with the body — and what a trip LOOKS like is not the body's
     // business, it is the pad's, which is the thing doing something to
-    // whatever steps on it. Hung on the traveller, the jetpack's fade was
-    // written into five actor files and a sixth traveller would have arrived
+    // whatever steps on it. Hung on the traveler, the jetpack's fade was
+    // written into five actor files and a sixth traveler would have arrived
     // with no fade and nothing saying why.
     //
-    // The pad's side reaches the traveller as `event actor`, so one handler on
-    // one pad covers every traveller there will ever be.
+    // The pad's side reaches the traveler as `event actor`, so one handler on
+    // one pad covers every traveler there will ever be.
     const meta = parseRuleMeta(
       'rules/teleport',
       ALL_STOCK_SOURCES['rules/teleport'],
@@ -124,16 +124,16 @@ describe('a traveller that comes to rest', () => {
 
     expect(named('Uses_Teleport_Pads')).toEqual([
       'arrives',
-      'starts travelling',
+      'starts traveling',
     ]);
     expect(named('Is_a_Teleport_Pad')).toEqual(['receives', 'sends']);
   });
 
   it('lands on the far pad instead of falling through its floor', () => {
-    const {world, traveller, far} = stage(true);
+    const {world, traveler, far} = stage(true);
     run(world, 2);
 
-    const at = traveller.get(PositionProperty) as Vector;
+    const at = traveler.get(PositionProperty) as Vector;
     const there = (far as {get(p: unknown): Vector}).get(PositionProperty);
 
     // Where it was sent, not somewhere along the line from where it left.
@@ -147,14 +147,14 @@ describe('a traveller that comes to rest', () => {
 
   it('is the same trip a rocket always made correctly', () => {
     // THE CONTRAST THAT NAMES THE BUG. Solid only pushes a body out of
-    // something it is inside, so a traveller that never comes to rest never
+    // something it is inside, so a traveler that never comes to rest never
     // met the broken pass — the same journey looked right for one actor and
     // wrong for another, which is what pointed at Solid rather than at the
     // arithmetic of the arrival.
-    const {world, traveller, far} = stage(false);
+    const {world, traveler, far} = stage(false);
     run(world, 2);
 
-    const at = traveller.get(PositionProperty) as Vector;
+    const at = traveler.get(PositionProperty) as Vector;
     const there = (far as {get(p: unknown): Vector}).get(PositionProperty);
 
     expect(Math.abs(at.x - there.x)).toBeLessThan(4);

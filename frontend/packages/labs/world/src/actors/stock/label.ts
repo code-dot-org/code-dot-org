@@ -5,7 +5,7 @@
 // commands, and a learner can read all of it (specs/UI_ACTORS.md).
 //
 // THE ANCHOR IS READ, NOT CHOSEN HERE. The text is drawn at the middle of the
-// canvas with whatever anchor the actor carries, so `centre` centres it on the
+// canvas with whatever anchor the actor carries, so `center` centers it on the
 // actor and `right` ends it there — which is what a score counting up wants,
 // since it then grows leftwards instead of walking off the screen. Nothing
 // measures the text to work that out; the anchor is resolved where it is drawn.

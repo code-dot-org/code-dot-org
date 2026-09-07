@@ -51,7 +51,7 @@ describe('rules/drag.rule', () => {
 
   it('multiplies the speed rather than subtracting from it', () => {
     // Subtracting overshoots through zero on a slow frame and leaves the actor
-    // travelling backwards. Multiplying by a fraction cannot reach zero from
+    // traveling backwards. Multiplying by a fraction cannot reach zero from
     // above, let alone cross it.
     expect(dragRule).toContain('"OP": "MULTIPLY"');
     expect(dragRule).toContain('"OP": "POWER"');

@@ -206,7 +206,7 @@ const halfDiagonal = who =>
 
 rule.step('find', 'touch', [
   doc(
-    'Who is touching whom, worked out once and written down. What to DO about it belongs to whoever reads this. First: how far the biggest collider reaches, which is what makes the neighbourhood below wide enough to be safe. Nothing to collide with is a reach of nothing — asked first, because the biggest of no actors is not an actor to measure.',
+    'Who is touching whom, worked out once and written down. What to DO about it belongs to whoever reads this. First: how far the biggest collider reaches, which is what makes the neighborhood below wide enough to be safe. Nothing to collide with is a reach of nothing — asked first, because the biggest of no actors is not an actor to measure.',
   ),
   reach.set(n(0)),
   when([

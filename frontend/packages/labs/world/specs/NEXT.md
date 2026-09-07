@@ -35,7 +35,7 @@ rule on one surface, and supersedes §3.
 extrapolation — `position − velocity·dt` — not a recorded value. The two agree
 whenever velocity is what moved the actor, and disagree whenever something set
 the position by hand: a ladder snapping a climber to its rungs, a pad
-teleporting a traveller, Solid ejecting a body from a wall. In each of those the
+teleporting a traveler, Solid ejecting a body from a wall. In each of those the
 query says "you have always been here", and a rule that was reading it to find
 out which way the actor came from gets the wrong answer.
 
@@ -52,7 +52,7 @@ tick, in `sense`, before anything moves anything, and `position before` is
 that record — a read-only point on Can Move rather than a query with a
 `seconds` socket, since there is nothing left to compute. The extrapolation
 goes. The three private records are then retired one at a time, each with its
-test still passing — the tests are the point, since they pin the behaviours
+test still passing — the tests are the point, since they pin the behaviors
 the records were bought for (the ladder-bottom stall, the sideways whip, the
 junction that chooses twice).
 
@@ -75,7 +75,7 @@ asks in `decide`, before the frame's moving, where the other two ask in
 `react` after it. At `decide` the record and the position are the same place
 and the distance between them is zero; what a chooser needs is the frame that
 just finished, which only a note taken last time can give. Moving that test to
-`react` would change when a robot re-decides, which is a behaviour change
+`react` would change when a robot re-decides, which is a behavior change
 rather than a cleanup.
 
 Both flags stay, and neither was ever about the position: Climbing's `climb
@@ -117,7 +117,7 @@ a file now, since the stock shelf is already in the bundle.
 The half that is not free is the moment the reference becomes a copy: the
 stock rule's blocks land in the workspace at that instant with the version the
 project pinned, not the current one, so a project saved last month does not
-change behaviour because the shelf did.
+change behavior because the shelf did.
 
 The alternative — keep the copies and compress them — solves the save and the
 diff and nothing else.
@@ -149,7 +149,7 @@ bytes, and the bundle carries one shelf — keeping every historical version of
 47 rules is the weight this section exists to remove. So a reference resolves
 to the CURRENT rule and an unedited rule follows the library. For a rule nobody
 has touched that is arguably right, since a fix to `solid` reaches the projects
-that never changed it, but it is a behaviour change the learner did not ask
+that never changed it, but it is a behavior change the learner did not ask
 for. The version is recorded, is not yet read, and is what a later migration
 would key on.
 
@@ -178,7 +178,7 @@ decision rather than an omission.** §2 said the editor should open an unedited
 rule read-only until the learner asks for it. It does not, and it should not:
 a stock rule is meant to be opened and changed, and putting a gate in front of
 that teaches the opposite of what the rule being real is for. The silent
-materialize is the behaviour — you open Gravity, you change something, it is
+materialize is the behavior — you open Gravity, you change something, it is
 yours, and nothing asked you to confirm that you meant it.
 
 What that costs is a stray drag turning into half a megabyte, and that is the
@@ -348,10 +348,10 @@ and a recording `getContext`, so what is DRAWN can be read back. Pointer
 events are `MouseEvent`s wearing pointer names — jsdom has no `PointerEvent`
 and React routes by the name. Fourteen tests drive it as a person would:
 select by a click at a computed point, cycle with the arrows, drag two tiles
-and drop on the cell centre, drop to the pixel with Alt, delete, place, and
+and drop on the cell center, drop to the pixel with Alt, delete, place, and
 refuse all of it read-only. The outlining assertion reads the last frame's
-`strokeRect` calls by colour: one selection outline, one reference outline
-per actor a set names, and a labelled line to each.
+`strokeRect` calls by color: one selection outline, one reference outline
+per actor a set names, and a labeled line to each.
 
 Two things came out of it. **Shift+arrow nudges the selection** a tile (a
 pixel with Alt), which is the keyboard's half of dragging and was missing — a
@@ -378,8 +378,8 @@ first says at the top is "canvas-free and unit-testable".
 Forty-two tests now. The two worth naming are the flood fill's, because both
 of its claims are invisible when they break: a fill that measured tolerance
 from a pixel's NEIGHBOUR would creep along a gradient and flood the picture,
-and one that recorded visited pixels by their colour would never terminate
-when the fill colour is itself inside the tolerance — that one hangs rather
+and one that recorded visited pixels by their color would never terminate
+when the fill color is itself inside the tolerance — that one hangs rather
 than fails, which is the honest signal. And `pixelArt`'s round trip is the
 module's whole purpose in one assertion: eight-by-eight art, drawn at eleven
 pixels a block, detected, downsampled, and identical.
@@ -410,7 +410,7 @@ them on the way out without being told. Refusing at the save is the wrong end:
 nothing was written either way, and what was missing was saying so at the
 moment it mattered. A locked workspace is a viewer now — the pointer declines
 to start a gesture, undo and redo refuse in the callbacks (so Ctrl+Z goes with
-the buttons), and no tool, brush or colour is offered that cannot do anything.
+the buttons), and no tool, brush or color is offered that cannot do anything.
 
 Writing the tests for that was the useful part. The first two asserted the
 undo button was disabled and the file unwritten, and BOTH passed with the
@@ -422,7 +422,7 @@ actually happens — the lock arriving after the drawing, which is what a
 project finishing its load does.
 
 `AnimationEditor` followed, and needed no canvas harness at all — its two
-hardest behaviours are about the PROJECT rather than the picture, so mocking
+hardest behaviors are about the PROJECT rather than the picture, so mocking
 `useSources` is the whole setup. Both are the same fact: a `play animation`
 block holds an id and nothing else, and no block records which file it came
 from, so an id is a reference the editor is responsible for.
@@ -1025,7 +1025,7 @@ reachable from outside now and the build calls it by hand.
 
 Both are covered by `check-arguments.mjs`, and both were confirmed by breaking
 them again: without the refresh the head draws as an action in the action
-colour; without the sync an `actor` argument comes back with a default box.
+color; without the sync an `actor` argument comes back with a default box.
 
 THE THIRD IS A RENDERER CONSTANT, not the per-block drawing. A renderer
 measures the font ONCE, when the workspace is injected, and keeps the answer:
@@ -1130,7 +1130,7 @@ has to be kept right forever.
 The next format change may not be so lucky. What it would cost is on record:
 `world_rule_step_in` has a previous connection now, and
 `DisableOrphansPlugin` reads a top-level block with one as an orphan — so a
-file in the old shape draws its steps greyed out and generates nothing, with
+file in the old shape draws its steps grayed out and generates nothing, with
 no message saying why. Silent, not loud, which is the kind that needs the
 upgrade written before the shape moves rather than after.
 
@@ -1193,9 +1193,9 @@ reads like the instructions panel. Two things got in the way of seeing that,
 and both were mistakes about where to look. The variable names are the lab's
 own — `--text-neutral-primary`, not `--text-primary` — and a name nothing
 defines falls through to whatever is written beside it, which the first draft
-did, onto the block's own grey. Then it still looked grey when it was not:
+did, onto the block's own gray. Then it still looked gray when it was not:
 the note under test was a floating top-level block, and a top-level block with
-a previous connection is an ORPHAN, which `DisableOrphansPlugin` draws greyed.
+a previous connection is an ORPHAN, which `DisableOrphansPlugin` draws grayed.
 The computed style said white on near-black the whole time.
 
 Stage two is the WYSIWYG surface, and it is deliberately not started. There is
@@ -1260,7 +1260,7 @@ edge is nudged clear rather than stopped — that is what `Slips Round Corners`
 buys, and the test for it was a small overlap plus any vertical speed at all.
 But a body walking a flat floor picks up a fraction of downward speed every
 frame, so it meets the next tile along with a sliver of overlap: a sliver
-reads as a corner, and the nudge back out is exactly the walk, cancelled. It
+reads as a corner, and the nudge back out is exactly the walk, canceled. It
 pinned the body at the tile edge — `240 + reach`, which is the 272 the Pilot
 stopped at to the pixel.
 

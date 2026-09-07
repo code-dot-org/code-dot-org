@@ -43,7 +43,7 @@ describe('the map', () => {
 
   // The load-bearing one. An edge that is not a shared side is an edge the map
   // cannot draw, and a prerequisite a learner cannot see.
-  it('requires only its neighbours', () => {
+  it('requires only its neighbors', () => {
     for (const t of TILES) {
       for (const need of t.requires) {
         const other = at(need)!;
@@ -70,7 +70,7 @@ describe('the map', () => {
     expect([...TILES].filter(t => !done.has(t.id)).map(t => t.id)).toEqual([]);
   });
 
-  it('starts at the centre', () => {
+  it('starts at the center', () => {
     const roots = TILES.filter(t => t.requires.length === 0);
     expect(roots.map(t => t.id)).toEqual(['origin/first-world']);
     expect(roots[0].at).toEqual([0, 0]);
@@ -98,7 +98,7 @@ describe('the map', () => {
     }
   });
 
-  it('stays within six rings of the centre', () => {
+  it('stays within six rings of the center', () => {
     // Not a law, a budget: the whole map has to fit on a screen at a size that
     // fits a title. If this fails, the layout grew rather than the catalogue.
     for (const t of TILES) {

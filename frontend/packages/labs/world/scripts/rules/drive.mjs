@@ -125,7 +125,7 @@ export const pushedForward = rule.block({
 });
 
 /**
- * How fast the actor is travelling along its own nose — negative backing up.
+ * How fast the actor is traveling along its own nose — negative backing up.
  *
  * The projection of the velocity onto the facing direction, which is what makes
  * grip work in both directions. Measuring the plain SPEED instead would make a

@@ -69,7 +69,7 @@ const CHECKER_COLOR = 'rgb(128 128 128 / 16%)';
 const DEFAULT_COLOR: RGBA = [31, 41, 71, 255];
 
 // The spritesheet grid, drawn over the image. Bright enough to read against
-// pixel art of any colour, thin enough not to be mistaken for drawn pixels.
+// pixel art of any color, thin enough not to be mistaken for drawn pixels.
 const GRID_COLOR = 'rgb(0 200 255 / 70%)';
 
 // How long drawing must settle before the file is written. Long enough that a
@@ -424,13 +424,13 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
   // back to an Image element. Canvases we read back get willReadFrequently
   // to stay CPU-side — GPU readback stalls.
   useEffect(() => {
-    let cancelled = false;
+    let canceled = false;
     const finish = (
       source: CanvasImageSource,
       width: number,
       height: number,
     ) => {
-      if (cancelled) {
+      if (canceled) {
         return;
       }
       let backing = document.createElement('canvas');
@@ -494,7 +494,7 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
       img.crossOrigin = 'anonymous';
       img.onload = () => finish(img, img.naturalWidth, img.naturalHeight);
       img.onerror = () => {
-        if (!cancelled) {
+        if (!canceled) {
           setLoadError(true);
         }
       };
@@ -512,7 +512,7 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
     // resolved, and needs no credentials to read what it was already shown.
     loadViaImage();
     return () => {
-      cancelled = true;
+      canceled = true;
     };
   }, [imageUrl, knownPixelGrid]);
 

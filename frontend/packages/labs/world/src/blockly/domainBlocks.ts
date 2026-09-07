@@ -1809,7 +1809,7 @@ const typedValueInputs = (
       };
     case 'color':
       // A SWATCH, not a text box. The value is the same `#rrggbb` a string
-      // property would hold, and the socket takes every colour block — the
+      // property would hold, and the socket takes every color block — the
       // picker, `world_rgba`, a blend — because they all report `Colour`.
       return {
         message: `%${slot}`,
@@ -1940,7 +1940,7 @@ const memberRule = (ref: MemberRef): string | undefined =>
 const outputForType = (type: PropertyType): string =>
   type === 'boolean'
     ? 'Boolean'
-    : // A colour reports what every colour block reports, so `get text color`
+    : // A color reports what every color block reports, so `get text color`
       // plugs into `set fill` and into an effect's parameter with nothing
       // widened to let it (`colorCheck`).
       type === 'color'
@@ -1964,13 +1964,13 @@ const outputForType = (type: PropertyType): string =>
 // vector is a location, everything else (numbers, point axes) is math.
 const valueStyle = (type: PropertyType): string =>
   type === 'color'
-    ? 'text_blocks' // where the colour blocks themselves sit
+    ? 'text_blocks' // where the color blocks themselves sit
     : type === 'boolean'
       ? 'logic_blocks'
       : type === 'vector'
         ? 'location_blocks'
         : type === 'actors' || type === 'actor'
-          ? 'sprite_blocks' // the colour that groups the actors
+          ? 'sprite_blocks' // the color that groups the actors
           : 'math_blocks';
 
 /**
@@ -2571,19 +2571,19 @@ const paramValueNames = (name: string): ValueNames => {
  * A world action runs on `world`; an actor action takes an `on …` ACTOR socket
  * (default `this actor`) and runs on it. Each of the action's params is a typed
  * value socket (a getter/math slots in), passed positionally to `act`. A single
- * param trails the name bare ("apply force %1"); two or more are each labelled
+ * param trails the name bare ("apply force %1"); two or more are each labeled
  * by name ("nudge amount %1 direction %2") to keep them apart.
  */
 const defineActionBlock = (action: ActionMeta) => {
   const subjectScoped = action.scope !== 'world';
   const name = action.name;
   const params = action.params;
-  const labelled = params.length > 1;
+  const labeled = params.length > 1;
   // A lone argument keeps the default `VALUE`/`X`/`Y` sockets (so built-in
   // single-arg action blocks are unchanged); several need per-name sockets to
   // stay distinct.
   const paramNames = params.map(param =>
-    labelled ? paramValueNames(param.name) : DEFAULT_VALUE_NAMES,
+    labeled ? paramValueNames(param.name) : DEFAULT_VALUE_NAMES,
   );
 
   const args0: BlockArgDefinition[] = [];
@@ -2620,7 +2620,7 @@ const defineActionBlock = (action: ActionMeta) => {
       slotExtensions.push(...(built.extensions ?? []));
       // Label each socket by param name only when there are several; a lone
       // param trails the verb bare, preserving the built-in blocks' look.
-      message0 += labelled
+      message0 += labeled
         ? ` ${param.name} ${built.message}`
         : ` ${built.message}`;
     });
@@ -2762,7 +2762,7 @@ const defineQueryBlock = (query: QueryMeta) => {
     message0 = designed;
   } else if (subjectScoped) {
     // The name reads as a predicate ("is on the ground?"), so the subject leads:
-    // "this actor is on the ground?"; any params trail, each labelled by name.
+    // "this actor is on the ground?"; any params trail, each labeled by name.
     message0 = `%1 ${name}`;
     args0.push({type: 'input_value', name: 'ACTOR', check: 'Actor'});
     params.forEach((param, i) => {
@@ -3279,7 +3279,7 @@ const worldSlider = defineBlock({
  * excess-property check when written as a literal at the call site.
  */
 const swatchArg = (name: string) =>
-  ({type: fieldColourPlugin, name, colour: '#000000'}) as const;
+  ({type: fieldColourPlugin, name, color: '#000000'}) as const;
 
 /** Whether `colour_picker` and friends have been registered yet. */
 let colorBlocksInstalled = false;
@@ -3655,7 +3655,7 @@ const worldThisCamera = defineBlock({
   type: 'world_this_camera',
   message0: 'this camera',
   output: 'Actor',
-  // Camera values read as actor values — the colour that groups the actors.
+  // Camera values read as actor values — the color that groups the actors.
   style: 'sprite_blocks',
   tooltip: 'This camera — the one these blocks are running for.',
   generator: {
@@ -3872,7 +3872,7 @@ const worldMapSize = defineBlock({
  * is AUTHORED in tiles — it is what the map editor's Width and Height are, and
  * what a `.map` file's `size` holds — while everything that READS a size is
  * doing arithmetic against positions, which are pixels. Each end speaks the
- * unit its own side works in, and the block is labelled rather than leaving a
+ * unit its own side works in, and the block is labeled rather than leaving a
  * reader to find out which.
  *
  * The placement grid reads it, so widening the map widens the editor the
@@ -3999,7 +3999,7 @@ const worldRandomPlace = defineBlock({
   message0: 'a random place in the map',
   output: 'Vector',
   extensions: [worldContextExtension],
-  // Location-coloured, like `map size` and `vector of`. It is listed under
+  // Location-colored, like `map size` and `vector of`. It is listed under
   // Math beside the random number so the two are found together, but it is a
   // place, and looking like one matters more than matching its category.
   style: 'location_blocks',
@@ -4639,8 +4639,8 @@ const worldFilterActors = defineBlock({
   output: 'Actor',
   // The default source is the world's own actors, so `world` has to be bound.
   extensions: [worldContextExtension, valueShadowExtension],
-  // Actor values share the sprite colour — what a block hands over is what its
-  // colour says, and this one hands over actors.
+  // Actor values share the sprite color — what a block hands over is what its
+  // color says, and this one hands over actors.
   style: 'sprite_blocks',
   tooltip:
     'The actors the “where” test accepts. Bind the variable to read the actor ' +
@@ -4662,7 +4662,7 @@ registerValueShadows('world_filter_actors', [
 ]);
 
 /**
- * `the actors in ⟨…⟩ within ⟨100⟩ of ⟨this actor⟩` — the neighbourhood.
+ * `the actors in ⟨…⟩ within ⟨100⟩ of ⟨this actor⟩` — the neighborhood.
  *
  * The filter every flock, swarm and crowd is written with, and the one shape of
  * `filter actors` worth a block of its own: said with the general filter it is
@@ -4863,7 +4863,7 @@ registerValueShadows('world_first_actor', [
  * `⟨a⟩ is ⟨b⟩` — whether two actor values are the same actor.
  *
  * The language could compare two numbers, two words, two places and two
- * colours, and could not compare two ACTORS. Nothing noticed until something
+ * colors, and could not compare two ACTORS. Nothing noticed until something
  * had to say "another one" — a pad choosing a different pad, an enemy picking
  * a target that is not itself — and until this block those were all written as
  * "not at the same x", which is true right up until two of them are stacked.
@@ -5876,7 +5876,7 @@ const worldUseRule = defineBlock({
 
 // ── Backgrounds (BACKGROUNDS.md) ─────────────────────────────────────────────
 // A backdrop is the appearance half of an actor with none of the body: something
-// to draw behind everything, a colour behind that, and effects of its own. It is
+// to draw behind everything, a color behind that, and effects of its own. It is
 // not an actor, so these are world blocks with no subject socket — the world is
 // the subject, as it is for `add effect … to the world`.
 //
@@ -6060,7 +6060,7 @@ const defineSlotBlocks = (slot: {
     extensions: [worldContextExtension],
     style: 'sprite_blocks',
     tooltip:
-      `Take the ${slot.label} image away, leaving the backdrop colour. The ` +
+      `Take the ${slot.label} image away, leaving the backdrop color. The ` +
       'offset and the tiling stay as they were, for the next image.',
     generator: {
       javascript(block) {
@@ -6429,7 +6429,7 @@ const worldSetBackgroundColor = defineBlock({
 registerValueShadows('world_set_background_color', [
   {
     name: 'COLOR',
-    // The colour a world starts with, so the swatch opens on what is on screen
+    // The color a world starts with, so the swatch opens on what is on screen
     // rather than on Blockly's red.
     shadow: {type: 'colour_picker', fields: {COLOUR: DEFAULT_BACKDROP_COLOR}},
   },
@@ -6604,8 +6604,8 @@ const worldRuleEvent = defineBlock({
     bodyButtonExtension,
     bodySurfaceExtension,
   ],
-  // A DEFINITION, coloured like the other definitions — `define rule`,
-  // `define trait`, `define block`. The event colour belongs to the hat this
+  // A DEFINITION, colored like the other definitions — `define rule`,
+  // `define trait`, `define block`. The event color belongs to the hat this
   // makes, which the preview row below draws.
   style: 'setup_blocks',
   tooltip:
@@ -7010,7 +7010,7 @@ const worldReturn = defineBlock({
 // Three blocks rather than one with an order dropdown. The ordering is not a
 // setting on a step, it is what KIND of step it is — "run before Motion moves
 // things" and "run every tick, whenever" are different statements about when
-// behaviour happens, and a dropdown that changes whether a second dropdown is
+// behavior happens, and a dropdown that changes whether a second dropdown is
 // even meaningful (which is what the old block needed `stepOrder` for, to hide
 // the anchor when unordered) is a shape hiding two blocks in one.
 //
@@ -7051,7 +7051,7 @@ const nameArg: BlockArgDefinition = {
   name: 'NAME',
   text: 'each tick',
 };
-// Naming the MOMENT rather than a neighbour. What the other three cannot say:
+// Naming the MOMENT rather than a neighbor. What the other three cannot say:
 // gravity is a force, and saying so should not require knowing that Physics
 // exists (engine/core/phases). Rule-level, so it is offered every moment —
 // the work that fits no single actor lives here.
@@ -7088,7 +7088,7 @@ const worldRuleStepIn = stepBlock(
  * IT USED TO STAND ALONE in an `.actor`, and that cost more than it was worth.
  * A definition root must not have a previous connection —
  * `DisableOrphansPlugin` reads a top-level block with one as an orphan and
- * greys it out — so the block was minted in two shapes and swapped by file
+ * grays it out — so the block was minted in two shapes and swapped by file
  * kind. Blockly holds ONE definition per type for the whole process, so an
  * open `.actor` left every other file believing `each frame` could not chain
  * (`generatorRegistration.test`); a body surface could not hang a body off a
@@ -7130,7 +7130,7 @@ const worldTraitStep = defineBlock({
       //
       // Under a `define actor`, there is no metadata pass and nothing else to
       // write it — so it is the whole declaration, and this is it.
-      // `defineStep` is the behaviour half of `defineProperty`: work a KIND of
+      // `defineStep` is the behavior half of `defineProperty`: work a KIND of
       // actor does every frame without a rule to do it in (ActorBuilder).
       //
       // WHICH `define actor` still matters, and that is the two tests. An
@@ -7198,14 +7198,14 @@ const worldShowAs = defineBlock({
 // pen and may not. That purity is what lets a picture be identified by what it
 // describes, which is what makes nine actors cost one texture.
 
-/** The colour a shape is painted, as a socket that takes any colour block. */
+/** The color a shape is painted, as a socket that takes any color block. */
 const paintArg = (name: string) => ({
   type: 'input_value' as const,
   name,
-  // Every colour block reports `Colour` — the picker, `world_rgba`, a blend —
+  // Every color block reports `Colour` — the picker, `world_rgba`, a blend —
   // and so now does a `color` property's getter, which is what a Label's
-  // per-instance colour is. This was briefly widened to admit a plain string,
-  // when a colour could only BE one; the type says it instead.
+  // per-instance color is. This was briefly widened to admit a plain string,
+  // when a color could only BE one; the type says it instead.
   check: COLOUR_CHECK,
 });
 
@@ -7283,7 +7283,7 @@ const actorDefineDrawing = drawingDefinition(true);
 const worldPenFill = defineBlock({
   type: 'world_pen_fill',
   message0: 'set fill %1',
-  args0: [paintArg('COLOUR')],
+  args0: [paintArg('COLOR')],
   inputsInline: true,
   previousStatement: true,
   nextStatement: true,
@@ -7292,14 +7292,14 @@ const worldPenFill = defineBlock({
   tooltip: 'Paint the inside of every shape drawn after this.',
   generator: {
     javascript(block, generator) {
-      const colour = generator.valueToCode(block, 'COLOUR', Order.NONE);
-      return colour ? `pen.fill(${colour});\n` : '';
+      const color = generator.valueToCode(block, 'COLOR', Order.NONE);
+      return color ? `pen.fill(${color});\n` : '';
     },
   },
 });
 registerValueShadows('world_pen_fill', [
   {
-    name: 'COLOUR',
+    name: 'COLOR',
     shadow: {type: 'colour_picker', fields: {COLOUR: '#ffffff'}},
   },
 ]);
@@ -7308,7 +7308,7 @@ const worldPenOutline = defineBlock({
   type: 'world_pen_outline',
   message0: 'set outline %1 width %2',
   args0: [
-    paintArg('COLOUR'),
+    paintArg('COLOR'),
     {type: 'input_value', name: 'WIDTH', check: 'Number'},
   ],
   inputsInline: true,
@@ -7319,15 +7319,15 @@ const worldPenOutline = defineBlock({
   tooltip: 'Draw an edge around every shape drawn after this.',
   generator: {
     javascript(block, generator) {
-      const colour = generator.valueToCode(block, 'COLOUR', Order.NONE);
+      const color = generator.valueToCode(block, 'COLOR', Order.NONE);
       const width = generator.valueToCode(block, 'WIDTH', Order.NONE) || '1';
-      return colour ? `pen.outline(${colour}, ${width});\n` : '';
+      return color ? `pen.outline(${color}, ${width});\n` : '';
     },
   },
 });
 registerValueShadows('world_pen_outline', [
   {
-    name: 'COLOUR',
+    name: 'COLOR',
     shadow: {type: 'colour_picker', fields: {COLOUR: '#000000'}},
   },
   {name: 'WIDTH', shadow: {type: 'math_number', fields: {NUM: 1}}},
@@ -7435,7 +7435,7 @@ const worldDrawLine = drawBlock(
   'world_draw_line',
   'draw line from x %1 y %2 to x %3 y %4',
   [numberArg('X1'), numberArg('Y1'), numberArg('X2'), numberArg('Y2')],
-  'Draw a line. It is drawn in the outline colour, or the fill colour when ' +
+  'Draw a line. It is drawn in the outline color, or the fill color when ' +
     'there is no outline.',
   read =>
     `pen.line(${read('X1')}, ${read('Y1')}, ${read('X2')}, ${read('Y2')});\n`,
@@ -7476,7 +7476,7 @@ const worldDrawText = defineBlock({
       const y = generator.valueToCode(block, 'Y', Order.NONE) || '0';
       const size = generator.valueToCode(block, 'SIZE', Order.NONE) || '12';
       const anchor =
-        generator.valueToCode(block, 'ANCHOR', Order.NONE) || str('centre');
+        generator.valueToCode(block, 'ANCHOR', Order.NONE) || str('center');
       // `String(…)` because the commonest thing to draw is a NUMBER — a score,
       // a countdown — and the socket takes any value. Coercing here means the
       // learner never meets the difference, and the command list stays a list
@@ -7526,7 +7526,7 @@ const worldDrawParagraph = defineBlock({
       const y = generator.valueToCode(block, 'Y', Order.NONE) || '0';
       const size = generator.valueToCode(block, 'SIZE', Order.NONE) || '12';
       const anchor =
-        generator.valueToCode(block, 'ANCHOR', Order.NONE) || str('centre');
+        generator.valueToCode(block, 'ANCHOR', Order.NONE) || str('center');
       // `String(…)` for the reason `draw text` gives: the socket takes any
       // value and the commonest thing drawn is a number.
       return `pen.text(String(${text}), ${x}, ${y}, ${size}, ${anchor}, ${width});\n`;
@@ -7549,7 +7549,7 @@ registerValueShadows('world_draw_text', [
   {name: 'ANCHOR', shadow: {type: 'world_text_anchor'}},
 ]);
 
-// `anchor ⟨centre⟩` — an anchor's name as a value, the same shape `key` and
+// `anchor ⟨center⟩` — an anchor's name as a value, the same shape `key` and
 // `mouse button` have. A FIELD would have read the same in the common case and
 // made a per-instance anchor unsayable: a Label's anchor is state the map
 // editor sets, and state arrives through a socket (specs/UI_ACTORS.md).
@@ -8510,7 +8510,7 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // ways of taking one actor out of one.
       'world_filter_actors',
       // …and the one shape of it worth its own block: what is near something
-      // (specs/PROGRESSION.md, `simulation/neighbours`).
+      // (specs/PROGRESSION.md, `simulation/neighbors`).
       'world_actors_within',
       // …and the same question asked of a PLACE, out of the whole world rather
       // than out of a list — which is the form a search takes, and the one
@@ -8550,7 +8550,7 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // a third site is what it was built for, and a separate near-identical
       // block would invite trying the familiar one here and finding it inert.
       'world_rule_property',
-      // …and the behaviour half of the same idea: work this KIND of actor does
+      // …and the behavior half of the same idea: work this KIND of actor does
       // every frame. A rule is still the answer when the work is shared between
       // kinds, elected, or answerable by `has trait`; this is for when it is
       // none of those (ActorBuilder.defineStep).
@@ -8659,7 +8659,7 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_create_in_map',
       'world_add_world_effect',
       'world_remove_world_effect',
-      // What is behind everything: an image, a colour, and effects on that
+      // What is behind everything: an image, a color, and effects on that
       // image alone (BACKGROUNDS.md).
       'world_set_background',
       'world_clear_background',
@@ -8693,7 +8693,7 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_rule_enum_option',
       'world_rule_block', // the generalized member: design the block it adds
       'world_return', // ends a query's body
-      // Per-tick behaviour, one block per kind of ordering.
+      // Per-tick behavior, one block per kind of ordering.
       'world_rule_step_tick',
       'world_rule_step_in',
       'world_trait_step',
@@ -8978,7 +8978,7 @@ const structuralCategories = (fileKind?: FileKind): ToolboxCategory[] => {
       continue;
     }
     // An entry is usually a block type, but the type allows a whole flyout item
-    // (a labelled button, a preset block with fields); those name no type and
+    // (a labeled button, a preset block with fields); those name no type and
     // are never a definition root, so they pass through.
     const blocks = category.blocks ?? [];
     const filtered = blocks.filter(

@@ -48,7 +48,7 @@ export const text = shows.string('text', '');
 // Pixels, like every other size in the lab (engine/core/units): positions and
 // sizes are pixels and only RATES are in units.
 shows.number('text size', 12);
-// A COLOUR, not a string that happens to hold one. What the type buys is the
+// A COLOR, not a string that happens to hold one. What the type buys is the
 // two places that ask what a property is: `get text color` reports `Colour`, so
 // it plugs into `set fill` and into an effect's parameter; and the map editor's
 // inspector draws a swatch rather than six characters to type by hand.
@@ -56,7 +56,7 @@ shows.color('text color', '#ffffff');
 // Which part of the word sits where it is drawn. The one property here whose
 // absence reads as a bug: a score anchored left grows to the right and off the
 // screen, and the same score anchored right stays where it was put.
-shows.string('text anchor', 'centre');
+shows.string('text anchor', 'center');
 
 shows.doc(
   '**The words, and how they look.** The rule owns the text and draws none of it.\n\nA Label actor reads these four properties and paints them, which is why the same words can be a speech bubble, a score line or a sign — the drawing is the actor\'s business and the words are yours.\n\n`text` starts EMPTY, because an actor nobody has given words to has none: a Label placed and left alone draws nothing rather than the word "text". The size is in pixels, like every other size in the lab; only rates are in units per second.\n\nReveals Text writes `text` a few letters at a time, and every drawing already reading it keeps working without knowing anything changed.',

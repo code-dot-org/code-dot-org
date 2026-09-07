@@ -54,7 +54,7 @@ export const pixelateEffect: EffectDocument = {
       id: 'floor-1',
       type: 'floor',
       position: {x: -60, y: 200},
-      note: 'Rounds down to a whole number. 8.7 becomes 8, and so does 8.1 — which is how neighbours end up agreeing on one answer.',
+      note: 'Rounds down to a whole number. 8.7 becomes 8, and so does 8.1 — which is how neighbors end up agreeing on one answer.',
     },
     {
       id: 'divide-1',

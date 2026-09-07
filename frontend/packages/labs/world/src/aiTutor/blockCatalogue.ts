@@ -4,7 +4,7 @@
 // a constrained task: pick a type from the list, fill the fields and inputs
 // `args0` names, chain statements with `next`.
 //
-// TRIMMED HARD. The full definitions are 73,000 characters — colours, tooltips,
+// TRIMMED HARD. The full definitions are 73,000 characters — colors, tooltips,
 // help urls, style names, extension lists, none of which a caller needs. What
 // is left is 32,000: the type, the sentence the block says, its sockets, and
 // whether it stacks or plugs in. `message0` is the same string the student

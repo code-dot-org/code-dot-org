@@ -503,7 +503,7 @@ const asked = rule.local('asked', 'Number');
  * all of them have had their say.
  *
  * HALF THE DISTANCE, like `Turning`, because a body Solid has pushed part of
- * the way out of a wall has travelled a little without having got anywhere.
+ * the way out of a wall has traveled a little without having got anywhere.
  */
 climbs.step('stop if the climb got nowhere', 'react', [
   when([

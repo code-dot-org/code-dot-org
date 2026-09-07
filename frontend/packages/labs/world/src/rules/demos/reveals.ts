@@ -70,7 +70,7 @@ export const revealsDemo: RuleDemo = {
     return {
       width: 0,
       height: 0,
-      colour: id === 'patient' ? '#abb2bf' : '#98c379',
+      color: id === 'patient' ? '#abb2bf' : '#98c379',
       text: words,
       textScale: 2,
     };

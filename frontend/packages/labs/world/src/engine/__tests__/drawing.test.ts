@@ -149,7 +149,7 @@ describe('the pen', () => {
     expect(circle).toMatchObject({stroke: '#333333'});
   });
 
-  it('draws a line in the fill colour when there is no outline', () => {
+  it('draws a line in the fill color when there is no outline', () => {
     // The trap this exists to remove: `draw line` with the pen untouched is the
     // first drawing anybody writes, and a line has no interior — so without the
     // fallback it produces nothing at all and no way to find out why.

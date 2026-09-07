@@ -96,7 +96,7 @@ Player.on(AKeyIsPressedEvent, (world, actor, eventValue) => {
 
 No engine change: `Actor.on` and the EventQueue are untouched, and the emitted
 JavaScript is the code the block replaces, which is the bargain the rest of the
-language makes. `(any)` emits no guard, which is today's behaviour exactly, so
+language makes. `(any)` emits no guard, which is today's behavior exactly, so
 nothing that exists now breaks. `event value` keeps working for a handler that
 means to switch on many.
 

@@ -78,10 +78,10 @@ export const patrolDemo: RuleDemo = {
   },
   look(id: string) {
     if (id === 'lift') {
-      return {width: 34, height: 10, colour: '#5a7d5a'};
+      return {width: 34, height: 10, color: '#5a7d5a'};
     }
     return id === 'guard'
-      ? {width: 16, height: 16, colour: '#e06c75'}
-      : {width: 14, height: 14, colour: '#61afef'};
+      ? {width: 16, height: 16, color: '#e06c75'}
+      : {width: 14, height: 14, color: '#61afef'};
   },
 };

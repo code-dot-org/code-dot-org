@@ -77,7 +77,7 @@ const SELECT = '#4d9fff'; // highlights the selected placed actor
 const HOVER = 'rgba(77, 159, 255, 0.45)'; // lighter outline for the hovered actor
 // …and a third, for an actor the selected one POINTS AT. Amber rather than a
 // paler blue: it is not a weaker selection, it is a different relationship, and
-// two shades of one colour would read as two strengths of the same thing.
+// two shades of one color would read as two strengths of the same thing.
 const REFERENCE = '#ffb454';
 const DEG2RAD = Math.PI / 180;
 
@@ -285,7 +285,7 @@ export const MapStage = ({
     return toWorld(view!, clientX - rect.left, clientY - rect.top);
   };
 
-  // Snap the actor's centre to a tile cell centre unless Alt frees it.
+  // Snap the actor's center to a tile cell center unless Alt frees it.
   const snap = (pos: Vec, free: boolean): Vec =>
     snapToTile(pos, map.tile, free);
 
@@ -657,10 +657,10 @@ export const MapStage = ({
     }
     if (prop.type === 'color') {
       // NOT A DESIGN-SYSTEM COMPONENT, because there is not one: the library
-      // has no colour input, and `TextField`'s `inputType` does not admit
+      // has no color input, and `TextField`'s `inputType` does not admit
       // `color`. So this is the browser's swatch beside an ordinary field —
       // the swatch for picking, the field for pasting a hex somebody was
-      // given, and both writing the same `#rrggbb` the engine and every colour
+      // given, and both writing the same `#rrggbb` the engine and every color
       // block already speak (engine/core/color).
       const typed = draft[fieldKey(prop)] ?? '';
       return (
@@ -1073,7 +1073,7 @@ export const MapStage = ({
     }
 
     // Draw a sprite through its transform (translate → skew → rotate → scale),
-    // centred on its position, so the editor shows the actor as the game will.
+    // centered on its position, so the editor shows the actor as the game will.
     // The skew is a vertical shear about the center (y' = y + tan(skew)·x),
     // inserted after the translate so it matches the Phaser driver's
     // T(pos)·shear·R·S ordering.
@@ -1139,7 +1139,7 @@ export const MapStage = ({
       ctx.restore();
     };
     /**
-     * Draw a line from the selected actor to one it names, labelled.
+     * Draw a line from the selected actor to one it names, labeled.
      *
      * DASHED, because it is a relationship and not a wall — the only other
      * lines on this canvas are the grid and the outlines, both of which are
@@ -1199,8 +1199,8 @@ export const MapStage = ({
     // skipped when the hovered actor is already the selected one.
     if (hoveredTransform && hoveredId !== selectedId) {
       // While POINTING a reference, the hover says what the click will choose
-      // rather than what it will select — so it wears the reference colour,
-      // which is the colour the line to it will be.
+      // rather than what it will select — so it wears the reference color,
+      // which is the color the line to it will be.
       strokeActorBox(
         hoveredTransform,
         picking ? REFERENCE : HOVER,
@@ -1251,7 +1251,7 @@ export const MapStage = ({
     // sandbox after the first paint has to repaint.
     selectedActor,
     selectedSchema,
-    // …and the hover changes colour while a reference is being pointed.
+    // …and the hover changes color while a reference is being pointed.
     picking,
     // The world may say how much of itself is on screen while this is open.
     visible,

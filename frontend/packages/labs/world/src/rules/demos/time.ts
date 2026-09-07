@@ -45,7 +45,7 @@ export const timeDemo: RuleDemo = {
   },
   look(id: string) {
     return id === 'metronome'
-      ? {width: 20, height: 20, colour: '#c678dd'}
-      : {width: 14, height: 14, colour: '#e5c07b'};
+      ? {width: 20, height: 20, color: '#c678dd'}
+      : {width: 14, height: 14, color: '#e5c07b'};
   },
 };

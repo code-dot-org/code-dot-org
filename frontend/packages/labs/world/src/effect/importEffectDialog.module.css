@@ -29,7 +29,7 @@
   gap: 12px;
   align-items: center;
 
-  /* A button centres its content; the old column layout never showed it,
+  /* A button centers its content; the old column layout never showed it,
      because the column was already stretched. In a row it leaves a gutter and,
      worse, the squares stop lining up with the reference one above them —
      which is the comparison the whole arrangement exists to make. */
@@ -94,7 +94,7 @@
    the border is wrong twice — it sits outside the declared size, so promoting
    a row on hover grew the picture by two pixels and nudged the words. Dropping
    the backdrop matters as much: `fade` is transparency, and it would have read
-   against dark grey while hovered and against the dialog everywhere else.
+   against dark gray while hovered and against the dialog everywhere else.
 
    Written as a descendant so it BEATS the wrapper's own rule. One class against
    one class is a tie, and a tie is settled by which stylesheet the bundler put

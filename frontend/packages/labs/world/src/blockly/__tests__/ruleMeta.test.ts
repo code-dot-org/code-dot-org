@@ -335,7 +335,7 @@ describe('a trait for a camera', () => {
         'rules/follow',
         ruleFile(
           'Camera Follow',
-          subjectTrait('Follows', 'camera', designed('recentre')),
+          subjectTrait('Follows', 'camera', designed('recenter')),
         ),
       )!,
     );
@@ -401,7 +401,7 @@ describe('parseRuleMeta', () => {
         },
         requires: [],
         // Absent on a workspace saved before the field existed, which reads as
-        // `actor` — the behaviour those files already had.
+        // `actor` — the behavior those files already had.
         subject: 'actor',
       },
     ]);

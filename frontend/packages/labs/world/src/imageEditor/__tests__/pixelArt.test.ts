@@ -37,7 +37,7 @@ const raster = (
   return {width: w, height: h, data};
 };
 
-/** A colour that is very different from its neighbours in both directions. */
+/** A color that is very different from its neighbors in both directions. */
 const checker =
   (block: number) =>
   (x: number, y: number): RGBA => {
@@ -148,7 +148,7 @@ describe('upscaleNearest', () => {
 
     expect(big.width).toBe(6);
     expect(big.height).toBe(6);
-    // The whole 3×3 block carries its source pixel's colour, corner to corner.
+    // The whole 3×3 block carries its source pixel's color, corner to corner.
     expect(colorAt(big, 0, 0)).toEqual([0, 0, 0, 255]);
     expect(colorAt(big, 2, 2)).toEqual([0, 0, 0, 255]);
     expect(colorAt(big, 3, 0)).toEqual([100, 0, 0, 255]);
@@ -162,10 +162,10 @@ describe('upscaleNearest', () => {
 });
 
 describe('downsampleToGrid', () => {
-  it('samples the centre of each cell, not its border', () => {
-    // Borders smudge in generated output, so the centre is the one point
-    // that is reliably the block's own colour. Here the border is painted a
-    // colour that appears nowhere else: if it were sampled, it would show.
+  it('samples the center of each cell, not its border', () => {
+    // Borders smudge in generated output, so the center is the one point
+    // that is reliably the block's own color. Here the border is painted a
+    // color that appears nowhere else: if it were sampled, it would show.
     const block = 10;
     const art = raster(30, 30, (x, y) => {
       const onEdge = x % block === 0 || y % block === 0;

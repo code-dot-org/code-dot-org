@@ -70,7 +70,7 @@ export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
   // generator writes nothing when it is not (`worldTraitStep`). In a world
   // that is what keeps a step from emitting a call on an `actor` that is not
   // bound, which would stop the whole project compiling; in an `.actor` file
-  // it is what makes an unattached step say so — greyed by
+  // it is what makes an unattached step say so — grayed by
   // `DisableOrphansPlugin` rather than quietly compiled from nowhere.
   ['world_trait_step', new Set<FileKind>(['actor', 'rule', 'world'])],
   // A drawing belongs to a KIND of actor, and a kind is what an `.actor` file

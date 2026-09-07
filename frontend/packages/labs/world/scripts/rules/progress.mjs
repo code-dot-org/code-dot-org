@@ -49,7 +49,7 @@ export const ShowsProgress = rule.traitRef('Shows Progress');
 // was given — and a game that forgets to set one has an obvious bug rather
 // than an empty bar that looks deliberate.
 export const fraction = shows.number('fraction', 1);
-// The part that fills. Red is the health bar's colour because health is what
+// The part that fills. Red is the health bar's color because health is what
 // most learners put in the first one they make.
 shows.color('bar color', '#e04040');
 // …and the part it fills up. Dark, so an empty bar still reads as a bar with
@@ -57,7 +57,7 @@ shows.color('bar color', '#e04040');
 shows.color('track color', '#301820');
 
 shows.doc(
-  "**A fraction, and two colours.** That is the whole rule — it owns how far along something is and draws none of it.\n\n`fraction` runs from 0 to 1: empty to full. A Progress Bar actor reads it and paints that much of itself in the bar colour and the rest in the track colour, the way a Label reads Writing's words.\n\nAnything that is a proportion belongs here — health left, a level part-finished, a charge building. Work out the fraction with a division (`health / max health`) and set it; keeping it between 0 and 1 is Boundaries' `keep between` block.\n\nIt starts FULL, so a bar nobody has told anything to reads as a bar rather than as an empty frame that looks deliberate.",
+  "**A fraction, and two colors.** That is the whole rule — it owns how far along something is and draws none of it.\n\n`fraction` runs from 0 to 1: empty to full. A Progress Bar actor reads it and paints that much of itself in the bar color and the rest in the track color, the way a Label reads Writing's words.\n\nAnything that is a proportion belongs here — health left, a level part-finished, a charge building. Work out the fraction with a division (`health / max health`) and set it; keeping it between 0 and 1 is Boundaries' `keep between` block.\n\nIt starts FULL, so a bar nobody has told anything to reads as a bar rather than as an empty frame that looks deliberate.",
 );
 
 export default () => moduleFor(rule, 'progress');

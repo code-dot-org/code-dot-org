@@ -144,7 +144,7 @@ export interface TweenPlan {
  * rather than from whatever you were when the file loaded.
  *
  * A destination whose value has no path between two of its kind is dropped and
- * said out loud: a sprite name or a colour has no midpoint, and easing to one
+ * said out loud: a sprite name or a color has no midpoint, and easing to one
  * over half a second would either do nothing or snap at the end. Dropping the
  * row rather than the tween keeps the rest of it working.
  */

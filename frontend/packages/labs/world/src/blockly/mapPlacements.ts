@@ -85,7 +85,7 @@ export interface Cell {
   row: number;
 }
 
-/** The world position a cell's centre is at, in world pixels. */
+/** The world position a cell's center is at, in world pixels. */
 export const cellCentre = (cell: Cell, tile: number) => ({
   x: cell.column * tile + tile / 2,
   y: cell.row * tile + tile / 2,

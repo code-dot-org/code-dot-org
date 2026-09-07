@@ -612,7 +612,7 @@ fixed at definition time; these come from the project, so
 rebuilds from the block's own serialized list on load. Types map onto the
 lab's existing conventions: `float`/`int` a Number socket with a `math_number`
 shadow, `bool` a Boolean socket with `logic_boolean`, and `vec2`/`vec3`/`vec4`
-one labelled Number socket per component (x/y, or red/green/blue/alpha — the
+one labeled Number socket per component (x/y, or red/green/blue/alpha — the
 effect editor calls a `vec3` "color (RGB)", so the labels follow it).
 
 Emitted as a third argument, omitted entirely when the effect has no
@@ -975,7 +975,7 @@ somebody else's afternoon.
 ## 13. The `sameActors` defect — FIXED
 
 Flagged while building the live shader swap (§11d), then chased down. It was
-real, and it had broken §9's headline hot-reload behaviour: **"change gravity
+real, and it had broken §9's headline hot-reload behavior: **"change gravity
 strength and see it live" restarted the game instead.**
 
 **The chain.** A build URL is a SHA-256 of every project file plus the entry

@@ -3,7 +3,7 @@
  *
  * ON THE THEME'S OWN BACKGROUND, not the block's. A note is a page of reading
  * rather than a piece of the program, so it reads like the instructions panel
- * and everywhere else prose appears — and the block's colour is left to be the
+ * and everywhere else prose appears — and the block's color is left to be the
  * frame around it, which is what the padding the field leaves is for.
  *
  * The markdown renderer is the app's own, so its headings come out at PAGE
@@ -13,8 +13,8 @@
  *
  * The variable NAMES matter and are the lab's own: `--text-neutral-primary`,
  * not `--text-primary`. A name nothing defines falls through to whatever is
- * written beside it, and the first draft of this fell through to a grey that
- * sat on the block's own grey.
+ * written beside it, and the first draft of this fell through to a gray that
+ * sat on the block's own gray.
  */
 .body {
   padding: 8px 10px;

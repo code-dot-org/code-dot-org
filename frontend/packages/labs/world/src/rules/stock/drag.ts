@@ -19,7 +19,7 @@
 //
 // A FRACTION KEPT PER SECOND, raised to the frame time, and not the more
 // obvious `speed − drag × time`. Two reasons. Subtracting overshoots through
-// zero on a slow frame and leaves the actor travelling backwards, and it is
+// zero on a slow frame and leaves the actor traveling backwards, and it is
 // only frame-rate independent by accident: halve the frame time and you halve
 // each bite but take twice as many, which is the same only because subtraction
 // is linear. Multiplying is exactly frame-rate independent instead — the

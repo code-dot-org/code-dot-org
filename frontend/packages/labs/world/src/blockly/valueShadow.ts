@@ -1,4 +1,4 @@
-// Seed a block's value inputs with default "shadow" blocks — the greyed-out
+// Seed a block's value inputs with default "shadow" blocks — the grayed-out
 // placeholder a learner can type over or replace by dropping in another block
 // (a getter, a math expression). Set-property blocks use this so their value is
 // a real socket, not a bare field: `set amount of gravity to (9)` where the 9

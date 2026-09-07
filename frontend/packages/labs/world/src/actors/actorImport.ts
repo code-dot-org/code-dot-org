@@ -10,7 +10,7 @@ export const IMPORT_ACTOR_VALUE = '__import_actor__';
 
 /**
  * Opens the picker and resolves with the module path of whatever was imported,
- * or undefined if the learner cancelled.
+ * or undefined if the learner canceled.
  */
 export type ActorImportHandler = ImportHandler;
 

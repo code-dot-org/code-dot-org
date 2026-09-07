@@ -1,4 +1,4 @@
-/* Stretch rather than centre, so the knob strip can push itself against the
+/* Stretch rather than center, so the knob strip can push itself against the
    edge the canvas is on and its dots sit right next to the ghost handles the
    wires actually run to. */
 .row {

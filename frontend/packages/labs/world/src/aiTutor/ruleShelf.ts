@@ -50,7 +50,7 @@ export const importableRules = (
     'spelled `<rule name>#<trait name with the spaces removed>Trait`. The rule',
     'is brought into the project for you when the student accepts.',
     '',
-    'Prefer this to building the same behaviour by hand. An actor that elects',
+    'Prefer this to building the same behavior by hand. An actor that elects',
     '“Stays Across” cannot leave the map; a wall of tiles around the edge does',
     'the same thing with thirty-seven actors and is harder to change later.',
     '',

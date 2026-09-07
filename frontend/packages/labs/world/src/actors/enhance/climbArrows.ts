@@ -242,7 +242,7 @@ export const climbArrowsEnhancement: Enhancement = {
       }
       if (!reads(next, target)) {
         // Beside the definition rather than under it: a hat takes no previous
-        // connection, and `DisableOrphansPlugin` greys out a top-level block
+        // connection, and `DisableOrphansPlugin` grays out a top-level block
         // that has one along with everything below it.
         for (const hat of climbArrowsHandlers(target)) {
           next = addRoot(next, hat);

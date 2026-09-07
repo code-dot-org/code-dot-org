@@ -97,7 +97,7 @@ export interface TraitMeta {
    * What elects this trait — an actor, or a camera.
    *
    * Absent on a trait saved before the field existed, which reads as `actor`:
-   * the behaviour those files already had.
+   * the behavior those files already had.
    */
   readonly subject: 'actor' | 'camera';
 }
@@ -218,7 +218,7 @@ export interface StepOrderMeta {
   /**
    * The named moment of the frame this runs in — `phase` only (core/phases).
    *
-   * What a rule says instead of naming a neighbour. Held as a plain id rather
+   * What a rule says instead of naming a neighbor. Held as a plain id rather
    * than a `PhaseId` so a `.rule` written against a phase list that has since
    * changed still parses; the Scheduler leaves an unknown one unordered.
    */
@@ -468,7 +468,7 @@ export const PROPERTY_TYPES: ReadonlySet<string> = new Set([
   'number',
   'boolean',
   'string',
-  // Held as a string (`#rrggbb`) and asked about as its own kind: a colour
+  // Held as a string (`#rrggbb`) and asked about as its own kind: a color
   // socket takes a swatch, and the map editor's inspector shows a picker
   // (engine/core/types).
   'color',
@@ -643,7 +643,7 @@ export function parseRuleMeta(
       type,
       default: parseDefault(field(block, 'DEFAULT'), type),
       // Absent on a workspace saved before the field existed, which reads as
-      // writable — the behaviour those files already had.
+      // writable — the behavior those files already had.
       readonly: field(block, 'ACCESS') === 'readonly',
       scope: ownerTraitId ? ownerSubject : 'world',
       ownerTraitId,
@@ -830,7 +830,7 @@ export function parseRuleMeta(
    *
    * Always phased. A trait's step is saying what KIND of work it does — a
    * camera trait that clamps the view runs in `confine` — and the phases it is
-   * offered are the ones its subject takes part in, so there is no neighbour
+   * offered are the ones its subject takes part in, so there is no neighbor
    * for it to name and no dropdown of every step in the project to pick from.
    */
   const addTraitStep = (
@@ -920,7 +920,7 @@ export function parseRuleMeta(
     }
     const traitId = slug(name);
     // What elects it. Absent on a trait saved before the field existed, which
-    // reads as `actor` — the behaviour those files already had.
+    // reads as `actor` — the behavior those files already had.
     const subject: 'actor' | 'camera' =
       field(traitBlock, 'SUBJECT') === 'camera' ? 'camera' : 'actor';
     const traitRequires: string[] = [];

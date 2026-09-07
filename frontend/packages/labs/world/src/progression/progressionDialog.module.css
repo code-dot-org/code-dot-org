@@ -1,5 +1,5 @@
 /* The modal around the map: a header, the map, and a reading pane beside it.
-   The map's own colours are `progressionMap.module.css`; this file is the
+   The map's own colors are `progressionMap.module.css`; this file is the
    furniture.
  *
  * TYPE COMES FROM THE THEME, not from here. Every heading and paragraph in the
@@ -11,7 +11,7 @@
 
 .dialog {
   /* The design system's dialog paints its own surface and leaves the text
-     colour alone, so in the dark theme the content inherits the page's black
+     color alone, so in the dark theme the content inherits the page's black
      and lands on a dark panel at 1.55:1. Axe found it; this is the fix. */
   color: var(--text-neutral-primary);
   display: flex;
@@ -185,7 +185,7 @@
    button theme's to decide, and every one of them written here was a second,
    worse answer to a question the design system had already answered. What is
    left is the one thing the theme cannot know: a row that reads as a row wants
-   its label at the left edge, not centred the way a button's caption is. */
+   its label at the left edge, not centered the way a button's caption is. */
 .need {
   justify-content: flex-start;
 
@@ -206,7 +206,7 @@
   font-size: 14px;
 }
 
-/* The state, said in words as well as in the icon and its colour — colour on
+/* The state, said in words as well as in the icon and its color — color on
    its own is not something everybody can read. */
 .needState {
   flex: none;
@@ -234,8 +234,8 @@
   font: inherit;
   text-align: start;
 
-  /* Underlined and in the body colour rather than a link blue: the underline is
-     the non-colour signal (WCAG 1.4.1), and body-on-body is the one pair that
+  /* Underlined and in the body color rather than a link blue: the underline is
+     the non-color signal (WCAG 1.4.1), and body-on-body is the one pair that
      cannot fail contrast in either theme. */
   text-decoration: underline;
 }
@@ -250,7 +250,7 @@
 
 /* The buttons in this pane carry NO styling of their own. They are MUI
    Buttons — `contained` for the action a lesson leads with, `outlined` for the
-   one beside it — and the colour, the border, the padding, the type, the
+   one beside it — and the color, the border, the padding, the type, the
    hover, the focus ring and the disabled state all come from the theme. There
    was a hand-rolled blue here, and it was the one thing in the dialog that did
    not change with the theme. */

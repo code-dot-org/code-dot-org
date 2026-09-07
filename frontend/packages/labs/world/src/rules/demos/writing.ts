@@ -64,7 +64,7 @@ export const writingDemo: RuleDemo = {
     // cannot show a number the rule does not hold.
     const shown = (actor as {get(p: unknown): string}).get(textOf as never);
     return id === 'label'
-      ? {width: 0, height: 0, colour: '#5c6370', text: shown, textScale: 2}
-      : {width: 0, height: 0, colour: '#e5c07b', text: shown, textScale: 3};
+      ? {width: 0, height: 0, color: '#5c6370', text: shown, textScale: 2}
+      : {width: 0, height: 0, color: '#e5c07b', text: shown, textScale: 3};
   },
 };

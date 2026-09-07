@@ -10,7 +10,7 @@
 // a plain rectangle — so a box paints what Phaser would paint, without Phaser,
 // a canvas, or a browser in the build path. An ACTOR demo is the opposite
 // case: what it is demonstrating is a thing you can see, and drawing the stock
-// Player as a grey rectangle would demonstrate a rectangle.
+// Player as a gray rectangle would demonstrate a rectangle.
 //
 // The day that came, this grew a blitter and not a decoder. The pictures are
 // OURS — `scripts/generate-sprites` draws every one of them — so the recorder
@@ -22,7 +22,7 @@
 // AND TEXT, which is the one exception and had to be. Writing puts a string on
 // an actor, and no arrangement of rectangles says "SCORE" — so a box may carry
 // text instead, drawn from a bitmap table (`./font`) in the same clip and the
-// same colour a box would have had.
+// same color a box would have had.
 
 import type {DrawCommand} from 'world-lab';
 
@@ -35,9 +35,9 @@ export interface Box {
   y: number;
   width: number;
   height: number;
-  colour: [number, number, number];
+  color: [number, number, number];
   /**
-   * A string to draw INSTEAD of the rectangle, centred where the box was.
+   * A string to draw INSTEAD of the rectangle, centered where the box was.
    *
    * Instead rather than over: a label is what the actor is, not a decoration
    * on it, and a rectangle behind the letters would be a box with text on it
@@ -104,14 +104,14 @@ const isPicture = (cell: Cell): cell is Picture => 'pixels' in cell;
 const isDrawing = (cell: Cell): cell is Drawing => 'commands' in cell;
 
 /**
- * A CSS colour as bytes, for the colours a drawing carries.
+ * A CSS color as bytes, for the colors a drawing carries.
  *
  * `#rgb` and `#rrggbb`, which is what every stock drawing writes and what the
- * colour field a learner edits produces. Anything else THROWS rather than
- * guessing: a demo drawn in the wrong colour is a demo that lies quietly, and
+ * color field a learner edits produces. Anything else THROWS rather than
+ * guessing: a demo drawn in the wrong color is a demo that lies quietly, and
  * the day a drawing says `rgba(…)` is the day this should learn it on purpose.
  */
-const colourOf = (css: string): [number, number, number] => {
+const colorOf = (css: string): [number, number, number] => {
   const short = /^#([0-9a-f])([0-9a-f])([0-9a-f])$/i.exec(css);
   if (short) {
     return [
@@ -123,7 +123,7 @@ const colourOf = (css: string): [number, number, number] => {
   if (/^#[0-9a-f]{6}$/i.test(css)) {
     return rgb(css);
   }
-  throw new Error(`the strip writer cannot read the colour "${css}"`);
+  throw new Error(`the strip writer cannot read the color "${css}"`);
 };
 
 export interface StripSize {
@@ -186,7 +186,7 @@ export function drawStrip(
 ): Uint8Array {
   const stripWidth = size.width * frames.length;
   const pixels = new Uint8Array(stripWidth * size.height * 4);
-  // The ground colour, everywhere, before anything is drawn on it.
+  // The ground color, everywhere, before anything is drawn on it.
   for (let at = 0; at < pixels.length; at += 4) {
     pixels[at] = background[0];
     pixels[at + 1] = background[1];
@@ -199,15 +199,15 @@ export function drawStrip(
     x: number,
     y: number,
     offset: number,
-    colour: readonly [number, number, number],
+    color: readonly [number, number, number],
   ) => {
     if (x < 0 || x >= size.width || y < 0 || y >= size.height) {
       return;
     }
     const at = (y * stripWidth + offset + x) * 4;
-    pixels[at] = colour[0];
-    pixels[at + 1] = colour[1];
-    pixels[at + 2] = colour[2];
+    pixels[at] = color[0];
+    pixels[at + 1] = color[1];
+    pixels[at + 2] = color[2];
     pixels[at + 3] = 255;
   };
 
@@ -223,20 +223,20 @@ export function drawStrip(
     x: number,
     y: number,
     offset: number,
-    colour: readonly [number, number, number],
+    color: readonly [number, number, number],
     alpha: number,
   ) => {
     if (alpha <= 0 || x < 0 || x >= size.width || y < 0 || y >= size.height) {
       return;
     }
     if (alpha >= 1) {
-      put(x, y, offset, colour);
+      put(x, y, offset, color);
       return;
     }
     const at = (y * stripWidth + offset + x) * 4;
     for (let channel = 0; channel < 3; channel++) {
       pixels[at + channel] = Math.round(
-        colour[channel] * alpha + pixels[at + channel] * (1 - alpha),
+        color[channel] * alpha + pixels[at + channel] * (1 - alpha),
       );
     }
   };
@@ -296,7 +296,7 @@ export function drawStrip(
     const spot = (
       x: number,
       y: number,
-      colour: readonly [number, number, number],
+      color: readonly [number, number, number],
       weight: number,
     ) => {
       // A stroke is drawn as a square brush, which is what a whole-pixel
@@ -304,7 +304,7 @@ export function drawStrip(
       const arm = Math.max(0, Math.round((weight * scale) / 2) - 1);
       for (let dy = -arm; dy <= arm; dy++) {
         for (let dx = -arm; dx <= arm; dx++) {
-          blend(x + dx, y + dy, offset, colour, opacity);
+          blend(x + dx, y + dy, offset, color, opacity);
         }
       }
     };
@@ -322,22 +322,22 @@ export function drawStrip(
           command.y + command.height,
         );
         if (fill) {
-          const colour = colourOf(fill);
+          const color = colorOf(fill);
           for (let y = y0; y < y1; y++) {
             for (let x = x0; x < x1; x++) {
-              blend(x, y, offset, colour, opacity);
+              blend(x, y, offset, color, opacity);
             }
           }
         }
         if (stroke) {
-          const colour = colourOf(stroke);
+          const color = colorOf(stroke);
           for (let x = x0; x < x1; x++) {
-            spot(x, y0, colour, weight);
-            spot(x, y1 - 1, colour, weight);
+            spot(x, y0, color, weight);
+            spot(x, y1 - 1, color, weight);
           }
           for (let y = y0; y < y1; y++) {
-            spot(x0, y, colour, weight);
-            spot(x1 - 1, y, colour, weight);
+            spot(x0, y, color, weight);
+            spot(x1 - 1, y, color, weight);
           }
         }
         continue;
@@ -346,17 +346,17 @@ export function drawStrip(
       if (command.op === 'circle') {
         const [cx, cy] = at(command.x, command.y);
         const radius = command.radius * scale;
-        const fillColour = fill ? colourOf(fill) : undefined;
-        const strokeColour = stroke ? colourOf(stroke) : undefined;
+        const fillColor = fill ? colorOf(fill) : undefined;
+        const strokeColor = stroke ? colorOf(stroke) : undefined;
         const arm = Math.ceil(radius) + 1;
         for (let y = -arm; y <= arm; y++) {
           for (let x = -arm; x <= arm; x++) {
             const distance = Math.sqrt(x * x + y * y);
-            if (fillColour && distance <= radius) {
-              blend(cx + x, cy + y, offset, fillColour, opacity);
+            if (fillColor && distance <= radius) {
+              blend(cx + x, cy + y, offset, fillColor, opacity);
             }
-            if (strokeColour && Math.abs(distance - radius) <= weight / 2) {
-              blend(cx + x, cy + y, offset, strokeColour, opacity);
+            if (strokeColor && Math.abs(distance - radius) <= weight / 2) {
+              blend(cx + x, cy + y, offset, strokeColor, opacity);
             }
           }
         }
@@ -367,7 +367,7 @@ export function drawStrip(
         if (!stroke) {
           continue;
         }
-        const colour = colourOf(stroke);
+        const color = colorOf(stroke);
         const [x0, y0] = at(command.x1, command.y1);
         const [x1, y1] = at(command.x2, command.y2);
         const steps = Math.max(Math.abs(x1 - x0), Math.abs(y1 - y0), 1);
@@ -375,7 +375,7 @@ export function drawStrip(
           spot(
             Math.round(x0 + ((x1 - x0) * step) / steps),
             Math.round(y0 + ((y1 - y0) * step) / steps),
-            colour,
+            color,
             weight,
           );
         }
@@ -386,7 +386,7 @@ export function drawStrip(
         if (!fill) {
           continue;
         }
-        const colour = colourOf(fill);
+        const color = colorOf(fill);
         // Whole pixels, and at least one: a glyph scaled by a fraction is a
         // smudge, and one scaled to nothing is a gap.
         const glyphScale = Math.max(
@@ -408,8 +408,8 @@ export function drawStrip(
             : (command.wrapWidth * scale) / (GLYPH_ADVANCE * glyphScale),
         );
         const step = Math.round(height * LINE_SPACING);
-        // Under one another from the point given, and centred as a BLOCK for
-        // the anchors that centre — the same arithmetic the driver does.
+        // Under one another from the point given, and centered as a BLOCK for
+        // the anchors that center — the same arithmetic the driver does.
         const middle = !anchor.includes('top') && !anchor.includes('bottom');
         const first = middle ? y - ((lines.length - 1) * step) / 2 : y;
         lines.forEach((line, index) => {
@@ -430,7 +430,7 @@ export function drawStrip(
               Math.round(originX) + dx,
               Math.round(originY) + dy,
               offset,
-              colour,
+              color,
               opacity,
             );
           }
@@ -466,7 +466,7 @@ export function drawStrip(
         const left = Math.round(box.x - textWidth(box.text, scale) / 2);
         const top = Math.round(box.y - (GLYPH_HEIGHT * scale) / 2);
         for (const [x, y] of textPixels(box.text, scale)) {
-          put(left + x, top + y, offset, box.colour);
+          put(left + x, top + y, offset, box.color);
         }
         continue;
       }
@@ -475,7 +475,7 @@ export function drawStrip(
       const top = Math.round(box.y - box.height / 2);
       for (let y = top; y < top + box.height; y++) {
         for (let x = left; x < left + box.width; x++) {
-          put(x, y, offset, box.colour);
+          put(x, y, offset, box.color);
         }
       }
     }

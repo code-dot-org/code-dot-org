@@ -83,7 +83,7 @@ export const goalsDemo: RuleDemo = {
       return {
         width: 0,
         height: 0,
-        colour: won ? '#98c379' : '#e06c75',
+        color: won ? '#98c379' : '#e06c75',
         // Empty until an ending happens, and an empty string draws nothing —
         // so the banner is in every frame and visible in none until then.
         text: won ? 'YOU WIN' : lost ? 'YOU LOSE' : '',
@@ -91,10 +91,10 @@ export const goalsDemo: RuleDemo = {
       };
     }
     if (id === 'flag') {
-      return {width: 16, height: 16, colour: '#98c379'};
+      return {width: 16, height: 16, color: '#98c379'};
     }
     return id === 'spike'
-      ? {width: 16, height: 16, colour: '#e06c75'}
-      : {width: 16, height: 16, colour: '#61afef'};
+      ? {width: 16, height: 16, color: '#e06c75'}
+      : {width: 16, height: 16, color: '#61afef'};
   },
 };

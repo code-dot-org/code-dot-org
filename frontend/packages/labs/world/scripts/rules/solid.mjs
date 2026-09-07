@@ -311,7 +311,7 @@ const pushOutUpOrDown = rule.block({
                     // floor picks up a fraction of downward speed every
                     // frame, and arrives at the next tile with a sliver of
                     // overlap — which read as a corner, so it was nudged back
-                    // out and the walk was cancelled exactly at the tile
+                    // out and the walk was canceled exactly at the tile
                     // edge. Slipping round a corner is for a body going by
                     // vertically and catching an edge, so that is what it
                     // asks: is the vertical speed the larger one.

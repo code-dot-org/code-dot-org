@@ -48,7 +48,7 @@ export type SlotName = 'background' | 'foreground';
  * the thing with a depth and (later) a parallax factor, and a slot that is part
  * of one inherits both for free. There is nothing to name and nothing to order.
  *
- * No colour here. There is ONE sky, and it is the world's: a colour on any
+ * No color here. There is ONE sky, and it is the world's: a color on any
  * layer but the bottom is behind the layer under it and can never be seen
  * (BACKGROUNDS.md).
  */

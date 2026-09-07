@@ -501,13 +501,13 @@ function EffectEditorContent({
         const offset = (nodeCountRef.current % 5) * NEW_NODE_STAGGER;
         const bounds = canvasRef.current?.getBoundingClientRect();
         if (bounds && bounds.width > 0) {
-          const centre = screenToFlowPosition({
+          const center = screenToFlowPosition({
             x: bounds.left + bounds.width / 2,
             y: bounds.top + bounds.height / 2,
           });
           target = {
-            x: centre.x - NODE_HALF_WIDTH + offset,
-            y: centre.y - 40 + offset,
+            x: center.x - NODE_HALF_WIDTH + offset,
+            y: center.y - 40 + offset,
           };
         } else {
           target = {

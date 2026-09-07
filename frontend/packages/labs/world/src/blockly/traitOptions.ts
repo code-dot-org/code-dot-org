@@ -24,7 +24,7 @@ let projectByModule = new Map<string, RuleMeta>();
 /**
  * What each parsed project rule IS and GIVES, by module path.
  *
- * `use rule` is a sentence about the world, so it is labelled by the ability
+ * `use rule` is a sentence about the world, so it is labeled by the ability
  * ("Has Gravity") and stores the rule's name ("Gravity"). A module the editor
  * has not parsed — a `.js` rule, or a `.rule` mid-edit — is absent, and the
  * caller falls back to naming it by its file, which is all it can be named by.
@@ -88,7 +88,7 @@ function rulesInPlay(refs: string[]): Set<RuleMeta> {
 
 /**
  * Current `[label, exportName]` options: every trait provided by a rule in play,
- * labelled by its display name, valued by its `world-lab` export (what the
+ * labeled by its display name, valued by its `world-lab` export (what the
  * generator writes). Deduped by export, sorted by label for a stable dropdown.
  */
 /**

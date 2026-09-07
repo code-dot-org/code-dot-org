@@ -1,4 +1,4 @@
-// The map's regions: what they are called, where they sit, what colour they are.
+// The map's regions: what they are called, where they sit, what color they are.
 //
 // Order matters twice over. The six FOUNDATIONS are listed in the order they
 // sit clockwise on the map, starting north-east, and `catalogue.ts` places each
@@ -128,7 +128,7 @@ export const REGIONS: readonly Region[] = [
   genre(
     'simulation',
     'Simulation',
-    'A hundred of something, each chasing or fleeing, watching its neighbours — and dials to turn while it runs.',
+    'A hundred of something, each chasing or fleeing, watching its neighbors — and dials to turn while it runs.',
   ),
 
   {
@@ -159,7 +159,7 @@ export const region = (id: RegionId): Region => {
  *
  * A foundation carries its own. A genre has none, and takes the midpoint of the
  * two foundations it lies between — going the short way round the wheel, which
- * is the way the map goes — so the colour of the wedge says which two concepts
+ * is the way the map goes — so the color of the wedge says which two concepts
  * it was made from.
  */
 export const regionHue = (id: RegionId): number => {

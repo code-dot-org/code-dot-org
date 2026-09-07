@@ -17,7 +17,7 @@ import styles from './consolePanel.module.css';
  * It uses the shared `PanelContainer` header (as the workspace does) so its
  * title bar matches the rest of the lab and themes in light/dark. The output is
  * a scrollable, keyboard-focusable region (WCAG 2.2 SC 2.1.1: a scrollable
- * container must be reachable), labelled, with no focusable rows — one tab stop
+ * container must be reachable), labeled, with no focusable rows — one tab stop
  * regardless of line count. Mirrors web-lab's console reasoning.
  */
 export const ConsolePanel = () => {

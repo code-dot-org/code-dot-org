@@ -97,7 +97,7 @@ const written = (root: Node): Map<string, unknown> => {
   return out;
 };
 
-/** A value socket, as a number, string or colour — or undefined. */
+/** A value socket, as a number, string or color — or undefined. */
 function literal(node: Node | undefined, set: Map<string, unknown>): unknown {
   if (!node) {
     return undefined;
@@ -166,7 +166,7 @@ export function previewDrawing(actor: StockActor): PreviewDrawing | undefined {
   const set = written(definition);
   const number = (node: Node, name: string, fallback = 0) =>
     Number(literal(socket(node, name), set) ?? fallback);
-  const colour = (node: Node, name: string) => {
+  const color = (node: Node, name: string) => {
     const value = literal(socket(node, name), set);
     return typeof value === 'string' ? value : undefined;
   };
@@ -188,10 +188,10 @@ export function previewDrawing(actor: StockActor): PreviewDrawing | undefined {
   for (const row of chain(socket(drawing, 'DO'))) {
     switch (row.type) {
       case 'world_pen_fill':
-        fill = colour(row, 'COLOUR');
+        fill = color(row, 'COLOR');
         break;
       case 'world_pen_outline':
-        stroke = colour(row, 'COLOUR');
+        stroke = color(row, 'COLOR');
         strokeWidth = number(row, 'WIDTH', 1);
         break;
       case 'world_pen_no_outline':
@@ -216,7 +216,7 @@ export function previewDrawing(actor: StockActor): PreviewDrawing | undefined {
           y: number(row, 'Y'),
           size: number(row, 'SIZE', 12),
           anchor: (literal(socket(row, 'ANCHOR'), set) ??
-            'centre') as TextAnchor,
+            'center') as TextAnchor,
           ...(row.type === 'world_draw_paragraph'
             ? {wrapWidth: number(row, 'WIDTH', 0) || undefined}
             : {}),

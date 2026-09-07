@@ -27,18 +27,18 @@ const rule = defineRule({
 
 Every other wall here is a fact about the level. This one is a fact about what
 you have *done* in it: stand on a plate and walls elsewhere appear or vanish.
-The room remembers, and what it remembers is written on the floor in a colour.
+The room remembers, and what it remembers is written on the floor in a color.
 
 Give plates **Is a Switch** and the walls they control **Is a Switched Wall**,
-matched by colour.`,
+matched by color.`,
   header: `// "Has Switches" — a room whose shape you can change.
 //
 // Every other wall in this library is a fact about the level. This one is a
 // fact about what you have DONE in it, and that is a different kind of puzzle:
 // a door needs a key you carry, and this needs a place you have been. The room
-// remembers, and the thing it remembers is written on the floor in a colour.
+// remembers, and the thing it remembers is written on the floor in a color.
 //
-// THE COLOUR IS THE LINK, and it is the same colour a teleport pad uses and for
+// THE COLOR IS THE LINK, and it is the same color a teleport pad uses and for
 // the same reason — it is the thing a player reads at a glance from across the
 // room. A switch flips every wall painted like it, and no wall and no switch
 // knows how many of either there are.
@@ -52,10 +52,10 @@ matched by colour.`,
 // stops hurting, because every one of those was written as "for each thing I
 // am touching".
 //
-// TOGGLING IS PER WALL, not per colour, and it took saying it out loud to see
+// TOGGLING IS PER WALL, not per color, and it took saying it out loud to see
 // that this is the good answer rather than the lazy one. Two red walls, one
 // open and one shut, are a corridor that a red switch SWAPS — walk over it and
-// the way you came closes as the way on opens. A colour with a single state
+// the way you came closes as the way on opens. A color with a single state
 // could not say that, and a level made of them is a level of doors rather than
 // a level of rooms.
 //
@@ -79,7 +79,7 @@ const switches = rule.trait('Is a Switch');
 switches.uses(CanCollide);
 
 /** Which walls it flips. Matched exactly, like a teleport pad's. */
-const switchColour = switches.color('switch colour', '#e0484a');
+const switchColor = switches.color('switch color', '#e0484a');
 /**
  * Whether something was standing on it at the top of the last frame.
  *
@@ -107,7 +107,7 @@ walls.uses(CanCollide);
  * switch this rule throws. A second way of saying it would be a second thing
  * to keep in step with the first.
  */
-const wallColour = walls.color('wall colour', '#e0484a');
+const wallColor = walls.color('wall color', '#e0484a');
 
 export const IsASwitchedWall = rule.traitRef('Is a Switched Wall');
 
@@ -142,14 +142,14 @@ switches.step('flip when walked over', 'react', [
       both(pressed.get(), not(wasPressed.of(thisActor()))),
       [
         doc(
-          'EVERY WALL OF MY COLOUR, each flipped from wherever it was — see the header: two red walls, one open and one shut, are a corridor a red switch swaps rather than a pair it opens.',
+          'EVERY WALL OF MY COLOR, each flipped from wherever it was — see the header: two red walls, one open and one shut, are a corridor a red switch swaps rather than a pair it opens.',
         ),
         forEach(wall, {
           from: filter(wall, {
             from: allWithTrait(IsASwitchedWall),
             where: equals(
-              wallColour.of(wall.get()),
-              switchColour.of(thisActor()),
+              wallColor.of(wall.get()),
+              switchColor.of(thisActor()),
             ),
           }),
           body: [

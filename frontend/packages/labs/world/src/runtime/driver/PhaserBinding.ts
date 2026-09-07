@@ -62,9 +62,9 @@ const ACTOR_SIZE = 24;
 // says nothing keeps this, which is the ten-tile square every existing project
 // was authored against.
 //
-// Native, not on-screen: the Scale Manager's FIT mode letterboxes and centres
+// Native, not on-screen: the Scale Manager's FIT mode letterboxes and centers
 // the canvas within the preview pane, scaling it up or down. With `pixelArt`
-// that upscale is nearest-neighbour, so a 32-pixel sprite stays a grid of hard
+// that upscale is nearest-neighbor, so a 32-pixel sprite stays a grid of hard
 // squares instead of a smear.
 const GAME_WIDTH = VIEWPORT_WIDTH;
 const GAME_HEIGHT = VIEWPORT_HEIGHT;
@@ -78,9 +78,9 @@ const GAME_HEIGHT = VIEWPORT_HEIGHT;
  * world draws where it always did.
  *
  * Subtracting here rather than after the parallax factor is deliberate: a layer
- * at factor 0 must not move AT ALL, and `(centre - camera) * 0` is zero where
- * `centre - camera * 0` is half a screen. It also leaves every slot image where
- * it is placed, centred in the viewport, with nothing to compensate for.
+ * at factor 0 must not move AT ALL, and `(center - camera) * 0` is zero where
+ * `center - camera * 0` is half a screen. It also leaves every slot image where
+ * it is placed, centered in the viewport, with nothing to compensate for.
  */
 const cameraOffset = (
   view: {position: {x: number; y: number}} | undefined,
@@ -518,10 +518,10 @@ export class PhaserBinding {
           // than one: the slot is a child of its layer's container, and the
           // camera slides that container (see `layerShift`). Left alone, a
           // finite rectangle of one view rides along with it and runs out — a
-          // quarter-view pan puts a quarter-view band of bare clear-colour on
+          // quarter-view pan puts a quarter-view band of bare clear-color on
           // screen.
           //
-          // So the shift is cancelled on the way in and re-applied to the
+          // So the shift is canceled on the way in and re-applied to the
           // TEXTURE. The picture ends up exactly where riding along would have
           // put it, out of a surface with no edge to reach.
           const {position, tile} = tiledPlacement(
@@ -558,7 +558,7 @@ export class PhaserBinding {
     };
 
     const syncBackdrops = (scene: Phaser.Scene) => {
-      // One sky, the world's: a colour on any layer but the bottom is behind
+      // One sky, the world's: a color on any layer but the bottom is behind
       // the layer under it and can never be seen (BACKGROUNDS.md).
       const [r, g, b, a] = world.backdropColor();
       const byte = (channel: number) => Math.round(channel * 255);
@@ -626,10 +626,10 @@ export class PhaserBinding {
         //
         // Measured from the camera's RESTING position, not from the world
         // origin, because a camera's position is the point it shows at the
-        // middle of the view (core/Camera). Folding the centre in HERE, before
+        // middle of the view (core/Camera). Folding the center in HERE, before
         // the parallax factor, is what keeps the rest of the driver unchanged:
         // a layer at factor 0 gets a translation of exactly 0 whatever the
-        // camera does, so the slot images stay centred in the viewport where
+        // camera does, so the slot images stay centered in the viewport where
         // they are placed, and a resting camera moves nothing at all.
         const shift = shiftOfLayer(index);
         container.setPosition(-shift.x, -shift.y);
@@ -867,7 +867,7 @@ export class PhaserBinding {
         height: GAME_HEIGHT,
       },
       // Only ever visible for the instant before the scene's first `create`,
-      // which sets the camera's colour from the world (`syncBackdrops`). Kept in
+      // which sets the camera's color from the world (`syncBackdrops`). Kept in
       // step with the engine's DEFAULT_BACKDROP_COLOR by hand: this module
       // imports `world-lab` for types only.
       backgroundColor: '#101020',

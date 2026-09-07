@@ -173,7 +173,7 @@ const isLessThan = (a: object, b: object) => ({
 
 /**
  * Whether `crate` is standing on a mark. Half a tile of slack: a crate that
- * finished its step is exactly on centre, so this only has to survive
+ * finished its step is exactly on center, so this only has to survive
  * floating-point, but the slack also covers a crate still easing in.
  */
 const isOnAMark = (crate: object) =>
@@ -343,7 +343,7 @@ const CRATE_ACTOR = JSON.stringify({
  * one whole is drawing all six frames at once.
  *
  * Nothing in the stock sprites is a goal mark, and a mark is four numbers and
- * a colour, so the actor draws its own — which is what `define drawing` is
+ * a color, so the actor draws its own — which is what `define drawing` is
  * for. A second root, beside the definition rather than chained under it: a
  * drawing takes no previous connection (specs/DRAWING.md).
  */
@@ -367,7 +367,7 @@ const TARGET_ACTOR = JSON.stringify({
               {
                 type: 'world_pen_fill',
                 inputs: {
-                  COLOUR: {
+                  COLOR: {
                     block: {
                       type: 'colour_picker',
                       fields: {COLOUR: '#d8a032'},

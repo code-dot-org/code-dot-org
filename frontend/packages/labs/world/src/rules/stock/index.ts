@@ -253,7 +253,7 @@ export const STOCK_RULES: readonly StockRule[] = [
     name: 'Progress',
     ability: 'Shows Progress',
     description:
-      'A fraction between 0 and 1 that an actor carries, and the two colours a bar of it is drawn in. Writing\u2019s sibling: it holds the number and paints none of it, and the stock Progress Bar is what draws one.',
+      'A fraction between 0 and 1 that an actor carries, and the two colors a bar of it is drawn in. Writing\u2019s sibling: it holds the number and paints none of it, and the stock Progress Bar is what draws one.',
     provides: ['Shows Progress'],
     contents: progressRule,
   },
@@ -406,7 +406,7 @@ export const STOCK_RULES: readonly StockRule[] = [
     name: 'Teleport',
     ability: 'Has Teleport Pads',
     description:
-      'Pads that are two ends of one place. Step on one and come out of another of the same colour, chosen afresh each time — a player when it asks to, an enemy whether it wants to or not.',
+      'Pads that are two ends of one place. Step on one and come out of another of the same color, chosen afresh each time — a player when it asks to, an enemy whether it wants to or not.',
     provides: ['Is a Teleport Pad', 'Uses Teleport Pads'],
     contents: teleportRule,
   },
@@ -415,7 +415,7 @@ export const STOCK_RULES: readonly StockRule[] = [
     name: 'Switches',
     ability: 'Has Switches',
     description:
-      'Pads on the floor that flip every wall painted the same colour — each wall from wherever it was, so a switch swaps a corridor rather than opening one. Anything that moves can press one.',
+      'Pads on the floor that flip every wall painted the same color — each wall from wherever it was, so a switch swaps a corridor rather than opening one. Anything that moves can press one.',
     provides: ['Is a Switch', 'Is a Switched Wall'],
     contents: switchesRule,
   },

@@ -13,7 +13,7 @@ export const IMPORT_RULE_VALUE = '__import_rule__';
 
 /**
  * Opens the import dialog and resolves with the module path of whatever was
- * imported, or undefined if the learner cancelled.
+ * imported, or undefined if the learner canceled.
  */
 export type RuleImportHandler = ImportHandler;
 

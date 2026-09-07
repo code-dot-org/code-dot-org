@@ -32,7 +32,7 @@ export const physicsDemo: RuleDemo = {
   },
   look(id: string) {
     return id === 'fast'
-      ? {width: 16, height: 16, colour: '#61afef'}
-      : {width: 16, height: 16, colour: '#4b6b8a'};
+      ? {width: 16, height: 16, color: '#61afef'}
+      : {width: 16, height: 16, color: '#4b6b8a'};
   },
 };

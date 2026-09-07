@@ -19,7 +19,7 @@ import {ActorBuilder, PositionProperty, Vector} from '../../engine';
 
 import {demoWorld, type RuleDemo, type RuleModules} from './types';
 
-/** Tile centres on the engine's own 32-pixel grid. */
+/** Tile centers on the engine's own 32-pixel grid. */
 const at = (column: number) => column * 32 + 16;
 const ROW = 80;
 /** A step takes 0.12s; a beat of 0.4 leaves the eye time to see it land. */
@@ -66,10 +66,10 @@ export const gridDemo: RuleDemo = {
   },
   look(id: string) {
     if (id === 'wall') {
-      return {width: 30, height: 30, colour: '#5c6370'};
+      return {width: 30, height: 30, color: '#5c6370'};
     }
     return id === 'crate'
-      ? {width: 26, height: 26, colour: '#e5c07b'}
-      : {width: 22, height: 22, colour: '#61afef'};
+      ? {width: 26, height: 26, color: '#e5c07b'}
+      : {width: 22, height: 22, color: '#61afef'};
   },
 };

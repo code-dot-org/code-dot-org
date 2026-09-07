@@ -67,9 +67,9 @@ export const zapsDemo: RuleDemo = {
   },
   look(id: string) {
     return id === 'zapper'
-      ? {width: 24, height: 24, colour: '#98c379'}
+      ? {width: 24, height: 24, color: '#98c379'}
       : // A ball rather than a bolt: round is what an energy ball is, and a
         // box is all this recorder draws (specs/RULE_DEMOS.md).
-        {width: 8, height: 8, colour: '#61d8ff'};
+        {width: 8, height: 8, color: '#61d8ff'};
   },
 };

@@ -1,4 +1,4 @@
-// `the actors in ⟨…⟩ within ⟨60⟩ of ⟨this actor⟩` — the neighbourhood query.
+// `the actors in ⟨…⟩ within ⟨60⟩ of ⟨this actor⟩` — the neighborhood query.
 //
 // The list operations in `core/actorValue` know nothing about where an actor
 // is; this one is about nothing else, which is why it lives with the rule that
@@ -50,7 +50,7 @@ describe('within', () => {
   });
 
   it('never answers with what it measured from', () => {
-    // A thing is not near itself. A boid counting its neighbours would
+    // A thing is not near itself. A boid counting its neighbors would
     // otherwise always have one.
     expect(names(within(world.actors, middle, 1000))).not.toContain('middle');
   });

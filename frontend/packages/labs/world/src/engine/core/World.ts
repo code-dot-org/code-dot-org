@@ -227,7 +227,7 @@ export interface WorldSnapshot {
    * is deliberately not here (specs/SOUND.md).
    */
   music?: string;
-  /** The one colour behind everything — a value, patched like the sky above. */
+  /** The one color behind everything — a value, patched like the sky above. */
   clearColor: Rgba;
   /** World-scoped property values, by `${ruleId}.${propId}`. */
   world: Record<string, unknown>;
@@ -313,8 +313,8 @@ export interface DrawingState {
  * The appearance half of an actor with none of the body: something to draw,
  * effects to draw it through, and nothing the simulation can reach — no
  * position, no traits, no place in the rules (BACKGROUNDS.md §1). One per
- * layer, drawn behind that layer's actors; the COLOUR is the world's, since a
- * colour on any layer but the bottom can never be seen.
+ * layer, drawn behind that layer's actors; the COLOR is the world's, since a
+ * color on any layer but the bottom can never be seen.
  */
 export interface BackdropState {
   /** An image file name, as a frame names one; absent means nothing drawn. */
@@ -330,7 +330,7 @@ export interface BackdropState {
 /**
  * What a world draws behind everything until told otherwise.
  *
- * The colour the preview has always cleared to, moved here so the driver reads
+ * The color the preview has always cleared to, moved here so the driver reads
  * it off the world rather than carrying its own copy.
  */
 export const DEFAULT_BACKDROP_COLOR = '#101020';
@@ -574,7 +574,7 @@ export class World {
   // Effects played across the whole viewport, not on any one actor. Mutable for
   // the same reason an actor's list is: the driver re-reads it every frame.
   private readonly appliedEffects: AppliedEffectSpec[];
-  // The one colour behind everything. World-scoped, not per layer: a colour on
+  // The one color behind everything. World-scoped, not per layer: a color on
   // any layer but the bottom is behind the layer under it and can never be
   // seen, so there is one sky (BACKGROUNDS.md).
   private clearColor: Rgba;
@@ -831,8 +831,8 @@ export class World {
    *
    * The `each frame` an `.actor` file may declare (blockly/actorMeta), and the
    * counterpart to `defineProperty`: state a kind carries without a rule, and
-   * now behaviour a kind runs without one. A rule is still what you write when
-   * the behaviour is shared, elected or answerable — this is for the case where
+   * now behavior a kind runs without one. A rule is still what you write when
+   * the behavior is shared, elected or answerable — this is for the case where
    * it is none of those and a whole `.rule` file is more ceremony than the thing
    * deserves.
    *
@@ -1333,7 +1333,7 @@ export class World {
    * of game, not two seconds of sitting in a paused tab.
    *
    * It agrees exactly with anything integrated from `delta`. A bullet that has
-   * travelled `speed × 2` has an age of exactly 2, because the same numbers
+   * traveled `speed × 2` has an age of exactly 2, because the same numbers
    * added up both times. Sampling a clock here would let the two disagree by
    * however long the frame took to draw.
    *
@@ -1797,7 +1797,7 @@ export class World {
     return this.layerList.map(layer => layer.foreground);
   }
 
-  /** The one colour behind everything, as the driver clears to it. */
+  /** The one color behind everything, as the driver clears to it. */
   backdropColor(): Rgba {
     return this.clearColor;
   }
@@ -1822,7 +1822,7 @@ export class World {
   /**
    * Draw `sprite` behind everything — an image file name, as a frame names one.
    *
-   * `undefined` clears it, leaving the backdrop colour. The image is stretched
+   * `undefined` clears it, leaving the backdrop color. The image is stretched
    * to the viewport by the driver (BACKGROUNDS.md §4); nothing here knows how
    * big it is, and a backdrop is never a spritesheet, so this takes a file name
    * and never a cell reference.
@@ -1942,8 +1942,8 @@ export class World {
    * Draw `sprite` in FRONT of this layer's actors — fog, snow, a vignette.
    *
    * The background's twin in every respect but depth. `undefined` clears it,
-   * leaving nothing drawn: unlike the background there is no colour behind a
-   * foreground, because a colour in front of everything would be a wall.
+   * leaving nothing drawn: unlike the background there is no color behind a
+   * foreground, because a color in front of everything would be a wall.
    */
   setForeground(sprite: string | undefined, layer = DEFAULT_LAYER_ID): this {
     this.slotAt(layer, 'foreground').sprite = sprite;
@@ -1951,13 +1951,13 @@ export class World {
   }
 
   /**
-   * Set the colour behind the backdrop image, and behind everything without one.
+   * Set the color behind the backdrop image, and behind everything without one.
    *
-   * Takes whatever a colour block produced — hex from a picker, floats from
-   * `r g b a` — because `rgba` accepts both and every colour block can then
+   * Takes whatever a color block produced — hex from a picker, floats from
+   * `r g b a` — because `rgba` accepts both and every color block can then
    * feed this one (see color.ts).
    *
-   * One sky, not one per layer: a colour on any layer but the bottom would be
+   * One sky, not one per layer: a color on any layer but the bottom would be
    * hidden by the layer under it.
    */
   setBackgroundColor(color: ColorValue): this {
@@ -2564,7 +2564,7 @@ export class World {
           effectContentHash(effect),
         ]),
       ),
-      // Per layer, in stack order, plus the world's one colour. Values, not
+      // Per layer, in stack order, plus the world's one color. Values, not
       // structure: changing the sky patches the running game.
       backdrops: this.layerList.map(layer =>
         slotValues(layer.id, layer.background),

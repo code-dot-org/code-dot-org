@@ -54,7 +54,7 @@ export const driveDemo: RuleDemo = {
       capLook(id, world, ARROW_CAPS) ?? {
         width: 16,
         height: 16,
-        colour: '#e06c75',
+        color: '#e06c75',
       }
     );
   },

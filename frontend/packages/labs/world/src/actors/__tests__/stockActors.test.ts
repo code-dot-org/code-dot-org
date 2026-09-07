@@ -29,7 +29,7 @@ const types = (contents: string): string[] =>
 describe('every stock actor', () => {
   it('has one `define actor`, and paints itself only if it has no picture', () => {
     // SEPARATE ROOTS. A drawing and a handler hat both take no previous
-    // connection — `DisableOrphansPlugin` greys out a top-level block that has
+    // connection — `DisableOrphansPlugin` grays out a top-level block that has
     // one, and everything below it — so they sit beside the definition rather
     // than inside it (specs/DRAWING.md).
     for (const actor of STOCK_ACTORS) {
@@ -129,7 +129,7 @@ describe('every stock actor', () => {
 
 describe('Label', () => {
   it('draws one thing, and reads all of it off the actor', () => {
-    // Text, size, colour and anchor are per-instance state, which is what lets
+    // Text, size, color and anchor are per-instance state, which is what lets
     // two Labels of one kind say different things — set from the map editor's
     // inspector with no editor work, because `describeActor` reports every
     // writable actor-scoped property a trait declares.

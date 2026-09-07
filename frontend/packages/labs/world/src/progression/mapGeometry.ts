@@ -2,7 +2,7 @@
 // a region, the bar that draws a prerequisite, and the box that holds all of it.
 //
 // Everything here is pure and unit-free until a `size` is passed in. `size` is
-// the hexagon's CIRCUMRADIUS — centre to corner — which is what the axial
+// the hexagon's CIRCUMRADIUS — center to corner — which is what the axial
 // conversion in ./hex is already expressed in, so one number scales the map.
 //
 // See specs/PROGRESSION_UI.md for what these are for.
@@ -22,7 +22,7 @@ export interface Point {
 }
 
 /**
- * The six corners of a pointy-top hexagon of circumradius 1, centred on the
+ * The six corners of a pointy-top hexagon of circumradius 1, centered on the
  * origin, in the order a polygon walks them.
  *
  * Corner `i` is at `60i - 30` degrees, which puts corners at 12 and 6 o'clock
@@ -38,7 +38,7 @@ export const UNIT_CORNERS: readonly Point[] = Array.from(
 );
 
 /**
- * Which neighbour each SIDE faces. Side `s` runs from corner `s` to corner
+ * Which neighbor each SIDE faces. Side `s` runs from corner `s` to corner
  * `s + 1`, and its outward normal is at `60s` degrees: east, then round
  * clockwise. Written out rather than derived so the correspondence can be read.
  */
@@ -51,14 +51,14 @@ export const SIDE_DIRECTIONS: readonly DirectionName[] = [
   'NE',
 ];
 
-/** Where a cell's centre is drawn. */
-export const centre = (cell: Axial, size: number): Point => {
+/** Where a cell's center is drawn. */
+export const center = (cell: Axial, size: number): Point => {
   const unit = toPoint(cell);
   return {x: unit.x * size, y: unit.y * size};
 };
 
 /**
- * A cell's corners, optionally shrunk toward its centre.
+ * A cell's corners, optionally shrunk toward its center.
  *
  * `inset` below 1 is what puts a hairline between neighbouring tiles: at 1 they
  * share a side exactly, which reads as one continuous surface rather than as
@@ -66,7 +66,7 @@ export const centre = (cell: Axial, size: number): Point => {
  * top of it are not.
  */
 export const cellCorners = (cell: Axial, size: number, inset = 1): Point[] => {
-  const at = centre(cell, size);
+  const at = center(cell, size);
   return UNIT_CORNERS.map(corner => ({
     x: at.x + corner.x * size * inset,
     y: at.y + corner.y * size * inset,
@@ -110,12 +110,12 @@ export const boundaryPath = (cells: readonly Axial[], size: number): string => {
 
 /**
  * The bar that draws a prerequisite: a segment lying ALONG the side the two
- * cells share, centred on it, `fraction` of its length.
+ * cells share, centered on it, `fraction` of its length.
  *
- * Not a line between the two centres, which is the obvious thing and is
+ * Not a line between the two centers, which is the obvious thing and is
  * entirely hidden under the two tiles at any size that fits a title in one.
  *
- * Returns nothing if the cells do not touch — an edge between non-neighbours is
+ * Returns nothing if the cells do not touch — an edge between non-neighbors is
  * a catalogue bug (the layout test refuses one), and the renderer should draw
  * nothing rather than guess.
  */
@@ -153,7 +153,7 @@ export const extent = (
   size: number,
   margin = 0.5,
 ): {x: number; y: number; width: number; height: number} => {
-  const points = cells.map(cell => centre(cell, size));
+  const points = cells.map(cell => center(cell, size));
   const pad = size * (1 + margin);
   const xs = points.map(point => point.x);
   const ys = points.map(point => point.y);

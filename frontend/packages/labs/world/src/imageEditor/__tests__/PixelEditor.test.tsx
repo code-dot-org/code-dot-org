@@ -11,7 +11,7 @@
 // canvas (`getBoundingClientRect` is all zeros, and a zero-width canvas maps
 // every pointer to NaN), and pointer capture.
 //
-// What that buys is the three behaviours nothing was checking, all of which
+// What that buys is the three behaviors nothing was checking, all of which
 // are about WHEN a file is written: opening one must not write it, a burst of
 // strokes must write once, and an undo is an edit like any other.
 
@@ -105,7 +105,7 @@ const digest = (pixels: Uint8ClampedArray): string => {
   return `data:image/png;base64,${hash.toString(16)}`;
 };
 
-/** What the loaded image is made of: a field one colour, 16×16. */
+/** What the loaded image is made of: a field one color, 16×16. */
 const LOADED: RGBA = [10, 20, 30, 255];
 const IMAGE_SIDE = 16;
 

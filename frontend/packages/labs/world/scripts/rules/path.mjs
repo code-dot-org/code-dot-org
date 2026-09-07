@@ -193,7 +193,7 @@ const seen = rule.local('seen', 'List');
 const queue = rule.local('queue', 'List');
 
 /** The four squares next to `place`, a step apart. */
-const neighbours = place => [
+const neighbors = place => [
   vectorPlus(place, vector(step.of(each.get()), n(0))),
   vectorPlus(place, vector(times(step.of(each.get()), n(-1)), n(0))),
   vectorPlus(place, vector(n(0), step.of(each.get()))),
@@ -264,7 +264,7 @@ rule.step('think', 'decide', [
                       ]),
                       here.set(takeFirstOf(queue)),
                       forEachPlace(square, {
-                        from: makeList(neighbours(here.get())),
+                        from: makeList(neighbors(here.get())),
                         body: [
                           when([
                             [

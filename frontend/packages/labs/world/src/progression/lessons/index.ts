@@ -251,7 +251,7 @@ const sprite: WorldScenario = {
   // the way there is on `use trait`, and no other way in.
   levelData: {showFileBrowser: true},
   name: 'A picture is a file',
-  description: 'An actor drawing a grey box, and the picture it could have.',
+  description: 'An actor drawing a gray box, and the picture it could have.',
   source: lessonSource({
     world: worldFile({
       name: 'My World',
@@ -273,7 +273,7 @@ const sprite: WorldScenario = {
   instructions: `
 ## A picture is a file
 
-The Hero is a grey box because that is what \`define actor ⟨Hero⟩\` says to
+The Hero is a gray box because that is what \`define actor ⟨Hero⟩\` says to
 draw. Nothing in this lab is built in: a picture is a **file** the project
 holds, and until it holds one there is nothing to draw but shapes.
 
@@ -357,7 +357,7 @@ actor's own.
    \`define actor ⟨Bar⟩\`.
 2. Put **96 × ⟨fraction of ⟨this actor⟩⟩** in its **size** where the 96 is.
 3. Run it. One Bar is full and one is a third full, from one drawing.
-4. Change the track colour, or add an outline. It is your picture.
+4. Change the track color, or add an outline. It is your picture.
 `.trim(),
 };
 
@@ -366,7 +366,7 @@ actor's own.
 const background: WorldScenario = {
   name: 'Behind everything',
   description:
-    'A world on a flat colour, and the picture that belongs behind it.',
+    'A world on a flat color, and the picture that belongs behind it.',
   source: lessonSource({
     world: worldFile({
       name: 'My World',
@@ -385,7 +385,7 @@ const background: WorldScenario = {
 ## Behind everything
 
 A flat blue sky, and a Hero standing on nothing. The blue is the world's
-**background colour** — one colour behind everything, which is what a world
+**background color** — one color behind everything, which is what a world
 draws when nobody has given it a picture.
 
 A **backdrop** is that picture. It is not an actor: it has no position, nothing
@@ -756,7 +756,7 @@ after you have let go.
 const units: WorldScenario = {
   name: 'Units per second',
   description:
-    'A ball travelling far too fast, and the arithmetic that fixes it.',
+    'A ball traveling far too fast, and the arithmetic that fixes it.',
   source: lessonSource({
     world: worldFile({
       name: 'My World',
@@ -1362,7 +1362,7 @@ const layers: WorldScenario = {
       rows: [
         createInMap(local('ground'), floorAcross(30)),
         // Three hills, far apart, so the eye can see whether they keep up —
-        // and standing ON the floor rather than above it: the tiles are centred
+        // and standing ON the floor rather than above it: the tiles are centered
         // at 304 and are 32 tall, so 272 puts a hill's foot on the grass.
         addActor(local('hill'), [placeAt(80, 272)]),
         addActor(local('hill'), [placeAt(400, 272)]),
@@ -1395,7 +1395,7 @@ const layers: WorldScenario = {
             height: 24,
             // The MIDDLE of the canvas, as the stock Label and Button draw
             // theirs: the text is placed with whatever anchor the actor
-            // carries, and the default centres it — so drawn at x=0 half of
+            // carries, and the default centers it — so drawn at x=0 half of
             // "SCORE 0" fell off the left of its own 96-pixel canvas and the
             // world showed "RE 0".
             commands: [fill(swatch('#f2f2f7')), drawText(48, 12)],
@@ -1819,7 +1819,7 @@ const surfaces: WorldScenario = {
 
 Walk right. You cross a belt, some sludge and some ice, and all three feel
 exactly like the brown floor either side of them — because they *are* it. Three
-pictures, three actors, one behaviour.
+pictures, three actors, one behavior.
 
 **Surfaces** is what makes a floor do something to whoever stands on it. Three
 things a tile can be, and one thing a walker is.
@@ -1846,11 +1846,11 @@ things a tile can be, and one thing a walker is.
 
 // ── platformer/pads ──────────────────────────────────────────────────────────
 
-/** `set fill ⟨this pad's own colour⟩` — the picture reading the behaviour. */
+/** `set fill ⟨this pad's own color⟩` — the picture reading the behavior. */
 const padFill = () =>
   fill({
     block: {
-      type: 'world_get_Teleport_PadColourProperty',
+      type: 'world_get_Teleport_PadColorProperty',
       inputs: {ACTOR: me()},
     },
   });
@@ -1927,7 +1927,7 @@ const pads: WorldScenario = {
             setSprite('ground.png'),
           ],
         },
-        // TWO PADS, BOTH REAL, AND NO TWO OF A COLOUR. Everything about them
+        // TWO PADS, BOTH REAL, AND NO TWO OF A COLOR. Everything about them
         // works: they are pads, the Hero uses pads, the key is wired. What is
         // missing is the one thing that makes two pads one place.
         {
@@ -1936,7 +1936,7 @@ const pads: WorldScenario = {
           rows: [
             useTrait('Teleport#IsATeleportPadTrait'),
             {
-              type: 'world_set_Teleport_PadColourProperty',
+              type: 'world_set_Teleport_PadColorProperty',
               inputs: {ACTOR: me(), VALUE: swatch('#e0484a')},
             },
           ],
@@ -1952,7 +1952,7 @@ const pads: WorldScenario = {
           rows: [
             useTrait('Teleport#IsATeleportPadTrait'),
             {
-              type: 'world_set_Teleport_PadColourProperty',
+              type: 'world_set_Teleport_PadColorProperty',
               inputs: {ACTOR: me(), VALUE: swatch('#3f7fe0')},
             },
           ],
@@ -1984,12 +1984,12 @@ pads, one on each side, and the Hero already knows what to do with one: stand
 on it and press **down**.
 
 Try it. Nothing happens — and nothing is wrong. A pad sends you to another pad
-**of the same colour**, and these two are not.
+**of the same color**, and these two are not.
 
 ### What you do
 
-1. Set the Far Pad's **pad colour** to the same red as the Near Pad. That is
-   the whole link: two pads of a colour are one place, however far apart they
+1. Set the Far Pad's **pad color** to the same red as the Near Pad. That is
+   the whole link: two pads of a color are one place, however far apart they
    are drawn, and a room can be folded.
 2. Stand on the near one and press down. There is a moment before you arrive,
    and it is not lost time — it is where an animation goes, and you cannot be
@@ -1998,23 +1998,23 @@ Try it. Nothing happens — and nothing is wrong. A pad sends you to another pad
    others **afresh every time**, so three pads is three places rather than two
    and a decoration.
 4. Set that third one back to blue. Now it is a pad with nowhere to go: press
-   down on it all you like. One pad of a colour is not half a mechanic, it is
+   down on it all you like. One pad of a color is not half a mechanic, it is
    a decoration, and the rule says so by doing nothing.
 `.trim(),
 };
 
 // ── platformer/walls ─────────────────────────────────────────────────────────
 
-/** A block that shows whether it is in the way, drawn from its own colour. */
-const switchedWall = (colour: string) => ({
+/** A block that shows whether it is in the way, drawn from its own color. */
+const switchedWall = (color: string) => ({
   id: 'wall',
   name: 'Wall',
   rows: [
     useTrait('Switches#IsASwitchedWallTrait'),
     useTrait('Solid Bodies#SolidTrait'),
     {
-      type: 'world_set_Switches_WallColourProperty',
-      inputs: {ACTOR: me(), VALUE: swatch(colour)},
+      type: 'world_set_Switches_WallColorProperty',
+      inputs: {ACTOR: me(), VALUE: swatch(color)},
     },
     // FAINT WHEN IT IS NOT THERE. A wall that goes on looking like a wall
     // while you walk through it teaches the wrong thing twice: that it is
@@ -2055,7 +2055,7 @@ const switchedWall = (colour: string) => ({
     commands: [
       fill({
         block: {
-          type: 'world_get_Switches_WallColourProperty',
+          type: 'world_get_Switches_WallColorProperty',
           inputs: {ACTOR: me()},
         },
       }),
@@ -2100,14 +2100,14 @@ const walls: WorldScenario = {
           ],
         },
         // A REAL SWITCH, already wired, already pressed every time you walk
-        // over it. What it is not is the same colour as the wall.
+        // over it. What it is not is the same color as the wall.
         {
           id: 'plate',
           name: 'Plate',
           rows: [
             useTrait('Switches#IsASwitchTrait'),
             {
-              type: 'world_set_Switches_SwitchColourProperty',
+              type: 'world_set_Switches_SwitchColorProperty',
               inputs: {ACTOR: me(), VALUE: swatch('#3fbf6a')},
             },
           ],
@@ -2117,7 +2117,7 @@ const walls: WorldScenario = {
             commands: [
               fill({
                 block: {
-                  type: 'world_get_Switches_SwitchColourProperty',
+                  type: 'world_get_Switches_SwitchColorProperty',
                   inputs: {ACTOR: me()},
                 },
               }),
@@ -2144,12 +2144,12 @@ const walls: WorldScenario = {
 
 There is a block across the corridor and a green plate on the floor before it.
 Walk over the plate. It is a real switch and it fires every time — and the wall
-does not move, because a switch flips every wall painted **its own colour**,
+does not move, because a switch flips every wall painted **its own color**,
 and the wall is red.
 
 ### What you do
 
-1. Set the Wall's **wall colour** to the same green as the Plate. Walk over it
+1. Set the Wall's **wall color** to the same green as the Plate. Walk over it
    again: the wall goes faint and you walk through where it was.
 2. Walk back over the plate. It comes back. A switch does not open walls, it
    SWAPS them — each one from wherever it was.
@@ -3413,7 +3413,7 @@ const reveal: WorldScenario = {
       name: 'My World',
       rows: [
         addActor('actors/speechBox', [
-          // The MIDDLE of the world, because a drawing is centred on the actor
+          // The MIDDLE of the world, because a drawing is centered on the actor
           // that carries it, exactly as a sprite is. A box 280 wide put at 20
           // read as "20 in from the left" and hung 120 pixels off it, so every
           // line of dialogue lost its first half.
@@ -3462,7 +3462,7 @@ const script: WorldScenario = {
       name: 'My World',
       rows: [
         addActor('actors/speechBox', [
-          // The MIDDLE of the world, because a drawing is centred on the actor
+          // The MIDDLE of the world, because a drawing is centered on the actor
           // that carries it, exactly as a sprite is. A box 280 wide put at 20
           // read as "20 in from the left" and hung 120 pixels off it, so every
           // line of dialogue lost its first half.
@@ -3555,7 +3555,7 @@ const choice: WorldScenario = {
       rows: [
         declareProperty('boolean', 'opened the door', 'false'),
         addActor('actors/speechBox', [
-          // The MIDDLE of the world, because a drawing is centred on the actor
+          // The MIDDLE of the world, because a drawing is centered on the actor
           // that carries it, exactly as a sprite is. A box 280 wide put at 20
           // read as "20 in from the left" and hung 120 pixels off it, so every
           // line of dialogue lost its first half.
@@ -3670,7 +3670,7 @@ branching — no new machinery, just a jump.
 const scene: WorldScenario = {
   name: 'Staged',
   description:
-    'Two people talking in an empty grey room, with nobody to look at.',
+    'Two people talking in an empty gray room, with nobody to look at.',
   source: lessonSource({
     world: worldFile({
       name: 'My World',
@@ -3681,7 +3681,7 @@ const scene: WorldScenario = {
         },
         addActor('actors/portrait', [placeAt(80, 120)]),
         addActor('actors/speechBox', [
-          // The MIDDLE of the world, because a drawing is centred on the actor
+          // The MIDDLE of the world, because a drawing is centered on the actor
           // that carries it, exactly as a sprite is. A box 280 wide put at 20
           // read as "20 in from the left" and hung 120 pixels off it, so every
           // line of dialogue lost its first half.
@@ -3752,7 +3752,7 @@ const scene: WorldScenario = {
 Three lines, two speakers, and no way to tell which of them is talking. There
 is a Portrait on the stage and it is invisible — that is what a Portrait starts
 as, so that its entrance is something you can see happen — and behind
-everything there is a flat grey.
+everything there is a flat gray.
 
 A scene is those three things moving with the script: **who is speaking**,
 **where it is happening**, and **what it sounds like**. All of them hang off
@@ -5336,7 +5336,7 @@ const flock = () =>
   });
 
 const emergent: WorldScenario = {
-  name: 'Three rules, and behaviour nobody wrote',
+  name: 'Three rules, and behavior nobody wrote',
   description:
     'Twelve Boids going twelve ways, and two of the three rules that make a flock.',
   source: lessonSource({
@@ -5408,7 +5408,7 @@ const emergent: WorldScenario = {
     rules: ['motion', 'wrap', 'steering'],
   }),
   instructions: `
-## Three rules, and behaviour nobody wrote
+## Three rules, and behavior nobody wrote
 
 Twelve Boids, each flying off in its own direction and nothing anywhere saying
 "flock". The first of the three rules is written: **keep apart** — for every
@@ -5434,7 +5434,7 @@ there.
 3. Run it. Nothing in what you wrote mentions a flock, a leader or a direction
    for everybody to go in, and one turns up anyway.
 4. Take the first one out and run it again. **Local rules make global
-   behaviour, and neither one explains the other** — which is why nobody can
+   behavior, and neither one explains the other** — which is why nobody can
    look at three lines like these and say what they will do.
 `.trim(),
 };
@@ -5547,7 +5547,7 @@ restarts, the Boids stay where they are, and what changes is what happens next.
 `.trim(),
 };
 
-// ── simulation/neighbours ────────────────────────────────────────────────────
+// ── simulation/neighbors ────────────────────────────────────────────────────
 
 /** Twenty-five Dots on a grid, sixty apart, in a world three hundred wide. */
 const dotGrid = () => {
@@ -5585,7 +5585,7 @@ const paint = (name: string, source: object, sprite: string) => {
   };
 };
 
-const neighbours: WorldScenario = {
+const neighbors: WorldScenario = {
   name: 'Everything near me',
   description:
     'Twenty-five Dots, all of them lit, and a question that lights a few.',
@@ -5621,7 +5621,7 @@ const neighbours: WorldScenario = {
                   block: chainRows([
                     // Every frame, all of them dim and then some light up.
                     // Without the first loop a Dot walked past stays lit, and
-                    // the picture is a trail rather than a neighbourhood.
+                    // the picture is a trail rather than a neighborhood.
                     paint('dot', anyKind('dot').block, 'box.png'),
                     paint('near', anyKind('dot').block, 'coin.png'),
                   ]),
@@ -5643,7 +5643,7 @@ the second loop asks for **every Dot**. What it should ask for is the ones near
 it — and "near" is a question about distance, which nothing you have met can
 ask.
 
-**A neighbourhood is a filter over a list.** Every flock, swarm and crowd in
+**A neighborhood is a filter over a list.** Every flock, swarm and crowd in
 every simulation ever written is that shape: not "what is everything doing" but
 "what are the ones near me doing".
 
@@ -6297,7 +6297,7 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'making/property': ruleProperty,
   'puzzle/grid': grid,
   'puzzle/push': push,
-  'simulation/neighbours': neighbours,
+  'simulation/neighbors': neighbors,
   'adventure/rooms': rooms,
   'adventure/keys': keys,
   'simulation/emergent': emergent,

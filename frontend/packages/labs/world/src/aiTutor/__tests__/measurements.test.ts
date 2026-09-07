@@ -86,7 +86,7 @@ describe('worldMeasurements', () => {
     expect(said).toContain('960 x 640 pixels');
   });
 
-  it('explains that a position is a centre, in pixels', () => {
+  it('explains that a position is a center, in pixels', () => {
     const said = worldMeasurements({'main.world': bare})!;
 
     // The conversion the model has to do to place anything on the grid.

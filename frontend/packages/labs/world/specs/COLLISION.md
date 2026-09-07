@@ -26,7 +26,7 @@ ordered after `resolve`.
   so. Pushes nothing, changes no velocity. Noticing a collision is what this
   rule is FOR, so it is what the name says.
 - **`Solid Bodies`** — the default response. Requires Collisions; applies the
-  push-out and stops the velocity. Today's behaviour, in a file that can be
+  push-out and stops the velocity. Today's behavior, in a file that can be
   opened, replaced, or left out. It does not notice collisions; it decides what
   a solid body does about one.
 
@@ -121,7 +121,7 @@ both floor tiles equally and the X pass finds nothing to do.
 
 Bouncing and friction then become properties of `Solid Bodies` rather than new
 mechanisms — `bounciness` scaling and reflecting the normal component,
-`friction` scaling the tangential one, both defaulting to today's behaviour.
+`friction` scaling the tangential one, both defaulting to today's behavior.
 
 ## Plan
 

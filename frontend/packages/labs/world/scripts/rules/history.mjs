@@ -210,7 +210,7 @@ export const forgetEverything = rule.block({
 export const canTakeBack = rule.block({
   returns: 'boolean',
   description:
-    'Whether there is a move on the tape. Ask it to grey out an undo button, or to say "nothing to undo".',
+    'Whether there is a move on the tape. Ask it to gray out an undo button, or to say "nothing to undo".',
   say: ['is there a move to take back?'],
   body: () => [
     doc(

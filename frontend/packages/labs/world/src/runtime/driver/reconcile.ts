@@ -63,7 +63,7 @@ interface ReconcilableWorld {
     backdrops: SlotValues[];
     /** And what each draws in front of its actors. */
     foregrounds: SlotValues[];
-    /** The one colour behind everything (engine color.ts). */
+    /** The one color behind everything (engine color.ts). */
     clearColor: [number, number, number, number];
     /** The track playing, or undefined for silence (specs/SOUND.md). */
     music?: string;

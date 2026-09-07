@@ -543,7 +543,7 @@ project runs on — moving, bumping, falling, walking, the keyboard's events —
 ## Steps are per-tick events
 
 `define step` became three event hats, styled like the `when …` blocks in an
-actor file, because that is what a step is — behaviour the rule runs when
+actor file, because that is what a step is — behavior the rule runs when
 something happens, and the something is a tick:
 
 ```
@@ -557,7 +557,7 @@ Each is a top block with its body chained below, like the rule and its traits.
 **Three blocks rather than one with an order dropdown.** Ordering is not a
 setting on a step, it is what KIND of step it is: "run before Motion moves
 things" and "run every tick, whenever" are different statements about when
-behaviour happens. The old single block needed a `stepOrder` extension purely to
+behavior happens. The old single block needed a `stepOrder` extension purely to
 HIDE the anchor dropdown when the order dropdown made it meaningless — a shape
 that was two blocks wearing one coat. That extension is deleted.
 

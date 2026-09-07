@@ -43,7 +43,7 @@
 //   (2,3)  the capstone — needs both branches, and Making lies past it
 //
 // The layout test (./__tests__/layout.test.ts) checks all of this: that every
-// `requires` names a neighbour, that no two tiles share a cell, that every tile
+// `requires` names a neighbor, that no two tiles share a cell, that every tile
 // is reachable from Origin, and that a region's tiles touch each other.
 
 import {stockRule} from '../rules/stock';
@@ -394,8 +394,8 @@ export const TILES: readonly Tile[] = [
         if (!start?.[0]) {
           return false;
         }
-        const travelled = arrived[0].x - start[0].x;
-        return travelled > 280 && travelled < 360;
+        const traveled = arrived[0].x - start[0].x;
+        return traveled > 280 && traveled < 360;
       },
     },
   },
@@ -472,8 +472,8 @@ export const TILES: readonly Tile[] = [
         // Barely moved yet, and well on its way afterwards. A tween is a
         // journey, and a journey is the thing that has a middle.
         const jumped = Math.abs(early[0].x - start[0].x) > 60;
-        const travelled = Math.abs(arrived[0].x - start[0].x) > 150;
-        return !jumped && travelled;
+        const traveled = Math.abs(arrived[0].x - start[0].x) > 150;
+        return !jumped && traveled;
       },
     },
   },
@@ -486,7 +486,7 @@ export const TILES: readonly Tile[] = [
     title: 'Asking a question',
     teaches:
       'A question with two answers, and a program that takes one of them.',
-    task: 'Make an actor change colour only once it is past the middle of the screen.',
+    task: 'Make an actor change color only once it is past the middle of the screen.',
     requires: ['origin/first-world'],
     unlocks: [
       {kind: 'block', type: 'controls_if'},
@@ -889,7 +889,7 @@ export const TILES: readonly Tile[] = [
     unlocks: [
       {kind: 'category', name: 'Drawing'},
       {kind: 'actor', id: 'progressBar'},
-      // A pen needs a colour, and this is the first lesson that holds one.
+      // A pen needs a color, and this is the first lesson that holds one.
       {kind: 'block', type: 'colour_picker'},
     ],
     // The width wants arithmetic, which is Memory's lesson on a branch this one
@@ -1281,9 +1281,9 @@ export const TILES: readonly Tile[] = [
           Math.abs(view[1] - view[0]) < 1 && hero[1] > hero[0] + 1;
         // …and the long walk moved it, and it was STILL moving afterwards,
         // which is the whole of what easing looks like from outside.
-        const travelled = view[3] > view[1] + 1;
+        const traveled = view[3] > view[1] + 1;
         const catchingUp = view[4] > view[3] + 0.5;
-        return stillThere && travelled && catchingUp;
+        return stillThere && traveled && catchingUp;
       },
     },
   },
@@ -1488,7 +1488,7 @@ export const TILES: readonly Tile[] = [
       kind: 'outcome',
       says: 'The Hero gets to the far side of a wall it cannot walk round, climb or jump.',
       falsePass:
-        'Anything that moved the Hero at all, which is why the wall runs floor to ceiling and the check reads the far SIDE of it rather than a distance travelled. Walking, jumping and falling are all still available and none of them crosses x = 176; the only thing in the room that does is a pad with somewhere to send you.',
+        'Anything that moved the Hero at all, which is why the wall runs floor to ceiling and the check reads the far SIDE of it rather than a distance traveled. Walking, jumping and falling are all still available and none of them crosses x = 176; the only thing in the room that does is a pad with somewhere to send you.',
       run: {
         probes: {hero: {kind: 'positions', of: 'Hero'}},
         trace: [
@@ -2511,7 +2511,7 @@ export const TILES: readonly Tile[] = [
     title: 'Staged',
     teaches:
       'Who is speaking, where it is happening and what it sounds like all hang off the line that moved.',
-    task: 'Three lines in an empty grey room. Bring somebody on, and move the story indoors.',
+    task: 'Three lines in an empty gray room. Bring somebody on, and move the story indoors.',
     requires: ['story/reveal', 'story/choice'],
     unlocks: [
       {kind: 'actor', id: 'portrait'},
@@ -2959,7 +2959,7 @@ export const TILES: readonly Tile[] = [
     },
   },
   {
-    id: 'simulation/neighbours',
+    id: 'simulation/neighbors',
     region: 'simulation',
     at: at('simulation', 1, 3),
     title: 'Everything near me',
@@ -3008,9 +3008,9 @@ export const TILES: readonly Tile[] = [
     id: 'simulation/emergent',
     region: 'simulation',
     at: at('simulation', 3, 2),
-    title: 'Three rules, and behaviour nobody wrote',
+    title: 'Three rules, and behavior nobody wrote',
     teaches:
-      'Local rules make global behaviour, and neither one explains the other.',
+      'Local rules make global behavior, and neither one explains the other.',
     task: 'Twelve Boids going twelve ways, and two of the three rules that make a flock.',
     requires: ['simulation/steering'],
     unlocks: [{kind: 'block', type: 'world_count_with'}],
@@ -3046,7 +3046,7 @@ export const TILES: readonly Tile[] = [
     teaches:
       'A parameter you can turn while it runs, and a question you can answer by turning it.',
     task: 'A flock that works, and five numbers typed where nobody can turn them.',
-    requires: ['simulation/neighbours', 'simulation/emergent'],
+    requires: ['simulation/neighbors', 'simulation/emergent'],
     unlocks: [{kind: 'template', id: 'simulation'}],
     // `define property` is `memory/world-state`'s to grant, and the Simulation
     // side of the map does not pass through Memory. Lent for the one lesson
@@ -3204,9 +3204,9 @@ export const TILES: readonly Tile[] = [
         }
         // Forward only, and less than a lap: the wind blows one way, so a
         // position that went backwards went round the edge.
-        const travelled = (which: number) =>
+        const traveled = (which: number) =>
           (after[which].x - before[which].x + 320) % 320;
-        return Math.abs(travelled(0) - travelled(1)) > 40;
+        return Math.abs(traveled(0) - traveled(1)) > 40;
       },
     },
   },
@@ -3346,7 +3346,7 @@ export const TILES: readonly Tile[] = [
       // seconds and the lesson stops being watchable). The weather only ever
       // adds — the Leaf drifts right, the Stone sinks — so a coordinate that
       // went backwards went round, and `% 320` is the distance it actually
-      // travelled. It also makes the "and not the other way" halves stricter
+      // traveled. It also makes the "and not the other way" halves stricter
       // rather than weaker: a small drift backwards reads as a large one
       // forwards, and is refused.
       passes: ({samples}) => {

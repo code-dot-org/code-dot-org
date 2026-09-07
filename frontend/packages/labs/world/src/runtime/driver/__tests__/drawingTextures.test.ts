@@ -96,10 +96,10 @@ describe('painting a command list', () => {
     expect(calls.some(call => call.startsWith('fill:'))).toBe(false);
   });
 
-  it('draws nothing for a line with no colour at all', () => {
+  it('draws nothing for a line with no color at all', () => {
     // The pen never produces one — it falls back to the fill — so this is the
     // belt to that braces: a command list built by hand cannot make the driver
-    // stroke with whatever colour happened to be set last.
+    // stroke with whatever color happened to be set last.
     expect(
       paint([{op: 'line', x1: 0, y1: 0, x2: 1, y2: 1, strokeWidth: 1}]),
     ).toEqual(['save', 'restore']);

@@ -87,7 +87,7 @@ describe('ActorBuilder.addEffect', () => {
     // And they did differ. The builder kept the FIRST spec at a path where the
     // live actor replaces it, so a retune was dropped under `define actor` and
     // honoured in a handler — under a comment on both sides claiming they
-    // agreed. The live actor's behaviour is the right one: see "retunes an
+    // agreed. The live actor's behavior is the right one: see "retunes an
     // effect it already has" below for why keeping the first is wrong.
     const actor = positional('fish')
       .addEffect('effects/ripple', doc('Ripple'))

@@ -71,7 +71,7 @@ export function portTypeLabel(type: EffectValueType | 'generic'): string {
 /**
  * Where a port's dot sits along its node edge, as a CSS percentage.
  *
- * Ports take the centre of equal slices of the edge, so two ports land at 25%
+ * Ports take the center of equal slices of the edge, so two ports land at 25%
  * and 75% rather than jammed into the corners. The same value positions the
  * dot and its label, which is the only thing tying a name to a wire — on a
  * Split node, four unlabelled dots give a learner no way to tell which one

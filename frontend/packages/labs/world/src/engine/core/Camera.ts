@@ -1,7 +1,7 @@
 // A camera: where the view is taken from (specs/VIEWPORT.md).
 //
 // A POSE, and nothing else. Its position is the point it shows at the MIDDLE of
-// the view — the same meaning an actor's position has (an actor is drawn centred
+// the view — the same meaning an actor's position has (an actor is drawn centered
 // on its own), which it must have, because the two are literally the same
 // `PositionProperty`. A camera whose position meant the top-left corner would be
 // one property meaning two things by whoever held it, and `set position of

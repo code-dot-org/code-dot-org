@@ -35,7 +35,7 @@ export const gravityDemo: RuleDemo = {
 
   look(id: string) {
     return id === 'ground'
-      ? {width: 160, height: 16, colour: '#5a7d5a'}
-      : {width: 16, height: 16, colour: '#f6c453'};
+      ? {width: 160, height: 16, color: '#5a7d5a'}
+      : {width: 16, height: 16, color: '#f6c453'};
   },
 };

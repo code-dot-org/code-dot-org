@@ -34,7 +34,7 @@ export const solidDemo: RuleDemo = {
   },
   look(id: string) {
     return id === 'wall'
-      ? {width: 16, height: 90, colour: '#5a7d5a'}
-      : {width: 16, height: 16, colour: '#61afef'};
+      ? {width: 16, height: 90, color: '#5a7d5a'}
+      : {width: 16, height: 16, color: '#61afef'};
   },
 };

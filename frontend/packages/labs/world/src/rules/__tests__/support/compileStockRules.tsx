@@ -168,7 +168,7 @@ export async function compileStockRules(
 /**
  * Every stock rule, by the path a demo names it with, in DEPENDENCY ORDER.
  *
- * One list, shared by everything that compiles rules — the behaviour tests and
+ * One list, shared by everything that compiles rules — the behavior tests and
  * the demo recorder. Each kept its own until each in turn compiled a subset and
  * met "Cannot read properties of undefined" the moment a demo asked for a rule
  * that list had not heard of. Compiling one nobody wants costs milliseconds;

@@ -8,7 +8,7 @@
 // So the cells are buttons. One radio group, one tab stop, arrows to move
 // through it — the grid pattern rather than six stops in a row, because a sheet
 // is laid out in two dimensions and Down should mean the row below. Selection
-// follows focus, which for a radio group is the expected behaviour and here is
+// follows focus, which for a radio group is the expected behavior and here is
 // also the useful one: arrowing along a strip plays the frames past you.
 
 import {useRef} from 'react';

@@ -66,7 +66,7 @@ the one being taken by default today.
 
 **Take B.** The cost is a second type in a language that has been proud of
 having one, and the honest reading of that pride is that it was about ACTORS —
-one colour of actor variable, one socket check, no `ActorList` beside `Actor`.
+one color of actor variable, one socket check, no `ActorList` beside `Actor`.
 A list of values is not a second way to say the same thing; it is a thing the
 language cannot say at all.
 
@@ -173,7 +173,7 @@ of` gave it a reason.
   puzzle does not: an actor per cell is idiomatic here and brings drawing,
   collisions and the map editor with it, which is why Sokoban is written that
   way and is better for it. A distance field for a search, a heat map,
-  minesweeper's neighbour counts, a cellular automaton — those are numbers in a
+  minesweeper's neighbor counts, a cellular automaton — those are numbers in a
   rectangle, and there is nowhere to keep them.
 
   So the thing that forces it is a lesson whose cells are numbers, the way the

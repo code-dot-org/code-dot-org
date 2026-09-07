@@ -45,7 +45,7 @@ const MAP_SIZE = 30;
  * count beside it; the marks are the count, and a number that repeats what is
  * already drawn is a number in the way.
  *
- * Light box, dark marks, whatever colour the block is: the map is not part of
+ * Light box, dark marks, whatever color the block is: the map is not part of
  * the block, it is a thing shown on it.
  */
 const renderPreview = ({
@@ -92,7 +92,7 @@ const renderPreview = ({
     const mark = document.createElementNS(SVG_NS, 'rect');
     mark.setAttribute('x', String(left + cell.column * cellSize));
     mark.setAttribute('y', String(top + cell.row * cellSize));
-    // A hair over one cell, so neighbours read as a run rather than a dotted
+    // A hair over one cell, so neighbors read as a run rather than a dotted
     // line: at this size the gap between two marks is most of the mark.
     mark.setAttribute('width', String(cellSize + 0.3));
     mark.setAttribute('height', String(cellSize + 0.3));

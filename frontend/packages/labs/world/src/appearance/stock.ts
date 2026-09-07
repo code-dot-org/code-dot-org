@@ -178,7 +178,7 @@ export const STOCK_SPRITES: readonly StockSprite[] = [
   {
     id: 'asteroid',
     name: 'Asteroid',
-    description: 'A chunky grey rock, for something to dodge or break apart.',
+    description: 'A chunky gray rock, for something to dodge or break apart.',
     dataUrl: image('asteroid'),
   },
   {
@@ -293,7 +293,7 @@ export const STOCK_SPRITES: readonly StockSprite[] = [
     id: 'gem',
     name: 'Gem',
     description:
-      'A green cut stone with a bright table, for the thing a level is about having all of. Told from a Coin by shape and colour both.',
+      'A green cut stone with a bright table, for the thing a level is about having all of. Told from a Coin by shape and color both.',
     dataUrl: image('gem'),
   },
   {

@@ -1,4 +1,4 @@
-/* The list view. Colour is decoration here and nothing else: every state is
+/* The list view. Color is decoration here and nothing else: every state is
    said in words inside the button (see the component), so the swatch and the
    left border can be as quiet as they like. */
 
@@ -104,5 +104,5 @@
   opacity: 0.75;
 }
 
-/* Hover as a translucent wash rather than a colour, so it darkens a light
+/* Hover as a translucent wash rather than a color, so it darkens a light
    surface and lightens a dark one without knowing which it is on. */

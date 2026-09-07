@@ -2,7 +2,7 @@
 //
 // The arithmetic between a `.sheet` and an image. Worth its own tests because
 // every wrong answer here is a rectangle that runs off the edge of a picture —
-// a frame that draws part of its neighbour, or nothing at all.
+// a frame that draws part of its neighbor, or nothing at all.
 
 import {describe, expect, it} from 'vitest';
 
@@ -82,7 +82,7 @@ describe('sheetCells', () => {
 });
 
 describe('a sheet with padding and a gap', () => {
-  // Blank pixels around the grid and between neighbours, so a scaled or rotated
+  // Blank pixels around the grid and between neighbors, so a scaled or rotated
   // sample cannot reach into the sprite next door.
   const spaced = (padding: number, gap: number): SheetFile => ({
     type: 'sheet',

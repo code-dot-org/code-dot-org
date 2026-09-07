@@ -86,13 +86,13 @@ export const jumpDemo: RuleDemo = {
   },
   look(id, _actor, world) {
     if (id === 'player') {
-      return {width: 16, height: 16, colour: '#61afef'};
+      return {width: 16, height: 16, color: '#61afef'};
     }
     return (
       capLook(id, world, SPACE_CAP) ?? {
         width: id === 'left' ? 96 : 64,
         height: 16,
-        colour: '#5a7d5a',
+        color: '#5a7d5a',
       }
     );
   },

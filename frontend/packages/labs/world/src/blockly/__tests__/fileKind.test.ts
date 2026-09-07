@@ -93,7 +93,7 @@ describe('which definition roots a file may hold', () => {
   it('gives `each frame` one shape, in every kind of file', () => {
     // It used to have two. A definition root must not have a previous
     // connection — `DisableOrphansPlugin` reads a top-level block with one as
-    // an orphan and greys it out along with everything under it — so an
+    // an orphan and grays it out along with everything under it — so an
     // `.actor` file got a rootless `each frame` and every other file got the
     // chaining one. It is a ROW under `define actor` now, in an `.actor` file
     // as in a world, so there is nothing left to vary.
@@ -115,7 +115,7 @@ describe('which definition roots a file may hold', () => {
   it('still gives `define drawing` no previous connection in an actor file', () => {
     // The one block that still has both shapes, and the reason either shape
     // exists: a drawing IS a root in an `.actor` file, and a root with a
-    // previous connection is an orphan to `DisableOrphansPlugin` — greyed out,
+    // previous connection is an orphan to `DisableOrphansPlugin` — grayed out,
     // generating nothing, and invisible until somebody touched the workspace.
     const shapeIn = (fileKind: FileKind) => {
       const matches = buildDomainPalette([], {fileKind}).blocks.filter(

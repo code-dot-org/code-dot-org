@@ -110,7 +110,7 @@ export type Probe =
    * fractions have different keys, and that is the only way to say from outside
    * that a bar's width follows anything.
    *
-   * The commands themselves are NOT here. They are a tree with colours and
+   * The commands themselves are NOT here. They are a tree with colors and
    * numbers in it, and a check that read one would be reading the workspace
    * back out of the running world — which is what `inspect` is for.
    */

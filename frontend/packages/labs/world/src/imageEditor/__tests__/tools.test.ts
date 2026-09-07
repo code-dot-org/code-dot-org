@@ -8,7 +8,7 @@
 // the space are the two the flood fill makes, because both are invisible
 // when they break: a fill that compares against its NEIGHBOUR creeps across
 // a gradient and floods the picture, and a fill that marks pixels visited by
-// looking at their colour never terminates when the fill colour is inside
+// looking at their color never terminates when the fill color is inside
 // the tolerance.
 
 import {describe, expect, it} from 'vitest';
@@ -34,7 +34,7 @@ const blank = (w: number, h: number): Raster => ({
   data: new Uint8ClampedArray(w * h * 4),
 });
 
-/** A raster filled with one colour. */
+/** A raster filled with one color. */
 const filled = (w: number, h: number, color: RGBA): Raster => {
   const raster = blank(w, h);
   for (let i = 0; i < w * h; i++) {
@@ -43,7 +43,7 @@ const filled = (w: number, h: number, color: RGBA): Raster => {
   return raster;
 };
 
-/** The colour at a point, as a plain array. */
+/** The color at a point, as a plain array. */
 const at = (raster: Raster, x: number, y: number): number[] => {
   const i = (y * raster.width + x) * 4;
   return [...raster.data.slice(i, i + 4)];
@@ -69,7 +69,7 @@ describe('stamp', () => {
     expect(painted(raster)).toEqual(['2,2']);
   });
 
-  it('is as centred as an even size allows', () => {
+  it('is as centered as an even size allows', () => {
     // `start` is `floor((size − 1) / 2)`, so an even brush cannot straddle
     // the point evenly and leans down and to the right instead.
     const raster = blank(6, 6);
@@ -77,7 +77,7 @@ describe('stamp', () => {
     expect(painted(raster)).toEqual(['2,2', '3,2', '2,3', '3,3']);
   });
 
-  it('centres an odd size on the point', () => {
+  it('centers an odd size on the point', () => {
     const raster = blank(6, 6);
     stamp(raster, 2, 2, 3, RED);
     expect(painted(raster)).toContain('1,1');
@@ -106,15 +106,15 @@ describe('stamp', () => {
     ]);
   });
 
-  it('erases to transparent when given no colour', () => {
+  it('erases to transparent when given no color', () => {
     const raster = filled(3, 3, RED);
     stamp(raster, 1, 1, 1, null);
     expect(at(raster, 1, 1)).toEqual([0, 0, 0, 0]);
     expect(at(raster, 0, 0)).toEqual([255, 0, 0, 255]);
   });
 
-  it('draws transparent as a colour, which is not the same thing', () => {
-    // `TRANSPARENT` is a pickable colour, so it goes through the ordinary
+  it('draws transparent as a color, which is not the same thing', () => {
+    // `TRANSPARENT` is a pickable color, so it goes through the ordinary
     // path and composes with every tool. The result is the same pixels; what
     // differs is that a tool need not know about erasing.
     const raster = filled(3, 3, RED);
@@ -199,11 +199,11 @@ describe('floodFill', () => {
     expect(at(raster, 4, 4)).toEqual([255, 0, 0, 255]);
   });
 
-  it('measures tolerance from the CLICKED colour, so it cannot creep', () => {
+  it('measures tolerance from the CLICKED color, so it cannot creep', () => {
     // THE ONE THAT MATTERS. A gradient where each step is within tolerance of
-    // its neighbour but the far end is nothing like the start. Comparing
-    // against the neighbour would walk the whole gradient and flood the
-    // picture; comparing against the clicked colour stops where the
+    // its neighbor but the far end is nothing like the start. Comparing
+    // against the neighbor would walk the whole gradient and flood the
+    // picture; comparing against the clicked color stops where the
     // difference from THAT exceeds the tolerance.
     const raster = blank(10, 1);
     for (let x = 0; x < 10; x++) {
@@ -217,10 +217,10 @@ describe('floodFill', () => {
     expect(at(raster, 9, 0)).toEqual([180, 0, 0, 255]);
   });
 
-  it('terminates when the fill colour is itself within the tolerance', () => {
+  it('terminates when the fill color is itself within the tolerance', () => {
     // THE OTHER ONE. Painted-ness cannot mark a pixel visited, because with a
-    // tolerance the new colour may still match the region — so a fill that
-    // used the colour as its record would revisit for ever. The visited
+    // tolerance the new color may still match the region — so a fill that
+    // used the color as its record would revisit for ever. The visited
     // bitmap is what bounds the walk; without it this test hangs rather than
     // fails, which is the honest signal.
     const raster = filled(16, 16, [100, 100, 100, 255]);

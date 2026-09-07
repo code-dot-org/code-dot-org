@@ -3,7 +3,7 @@
 // The bug this exists to stop: a tiled slot is a child of its layer's
 // container, and the camera slides that container. A finite rectangle of one
 // viewport rode along with it and ran out — pan a quarter of a viewport and a
-// quarter-viewport band of bare clear-colour appeared at the trailing edge,
+// quarter-viewport band of bare clear-color appeared at the trailing edge,
 // which is the exact opposite of what "tiled" promises.
 //
 // So the interesting tests are not the formulas, which would only restate
@@ -74,7 +74,7 @@ describe('layerShift', () => {
 
 describe('a tiled slot', () => {
   it('lands over the viewport however far the camera moved', () => {
-    // THE regression. Before the fix the sprite sat at the viewport centre in
+    // THE regression. Before the fix the sprite sat at the viewport center in
     // LOCAL coordinates, so the container's translation moved it bodily off
     // the screen and its far edge came into view.
     for (const camera of [
@@ -163,9 +163,9 @@ describe('a stretched slot', () => {
     return uncovered;
   };
 
-  it('stretches over the MAP, centred on it, at the usual factor', () => {
+  it('stretches over the MAP, centered on it, at the usual factor', () => {
     // What a learner means by a background: it belongs to the level, not to the
-    // window onto the level. One viewport at the viewport's centre covered
+    // window onto the level. One viewport at the viewport's center covered
     // exactly one camera position and rode away from every other.
     const {position, size} = stretchedPlacement(
       NO_OFFSET,
@@ -241,7 +241,7 @@ describe('a world with a window of its own size', () => {
   // number that only comes out right when the world's own view is used.
   const ROOM = {x: 26 * 32, y: 16 * 32};
 
-  it('centres a tiled slot in ITS window, not the standard one', () => {
+  it('centers a tiled slot in ITS window, not the standard one', () => {
     const {position} = tiledPlacement({x: 0, y: 0}, NO_OFFSET, ROOM);
 
     expect(position).toEqual({x: ROOM.x / 2, y: ROOM.y / 2});
@@ -249,7 +249,7 @@ describe('a world with a window of its own size', () => {
 
   it('draws a pinned stretched slot the size of that window', () => {
     // The old size would have left the right-hand two thirds of a wide room
-    // showing bare clear-colour, which is the bug this parameter exists for.
+    // showing bare clear-color, which is the bug this parameter exists for.
     const {size} = stretchedPlacement(NO_OFFSET, ROOM, {x: 0, y: 0}, ROOM);
 
     expect(size).toEqual(ROOM);

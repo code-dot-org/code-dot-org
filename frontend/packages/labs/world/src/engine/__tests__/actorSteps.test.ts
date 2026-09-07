@@ -1,6 +1,6 @@
 // What a KIND of actor does every frame, without a rule to do it in.
 //
-// The behaviour half of `ActorBuilder.defineProperty`, and the same bargain it
+// The behavior half of `ActorBuilder.defineProperty`, and the same bargain it
 // struck: a rule is what you write when the thing is shared between kinds,
 // elected, or answerable by `has trait`, and a `.rule` file is more ceremony
 // than a thing that is none of those deserves. An actor could already remember
@@ -85,7 +85,7 @@ describe('an actor kind’s own steps', () => {
   });
 
   it('runs in the phase it named, among the rules’ own steps', () => {
-    // The whole reason a step names a phase rather than a neighbour. A kind
+    // The whole reason a step names a phase rather than a neighbor. A kind
     // that moves itself has to run before the movement is drawn, and saying
     // "during decide" is how it says so without knowing Physics exists.
     const template = new ActorBuilder({id: 'walker', name: 'Walker'});

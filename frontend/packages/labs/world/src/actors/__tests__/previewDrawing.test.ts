@@ -31,14 +31,14 @@ describe('a stock actor’s preview', () => {
     const text = label.commands.find(command => command.op === 'text');
 
     expect(text).toMatchObject({text: 'Label'});
-    // …and in the colour and size the Writing rule declares, since the Label
+    // …and in the color and size the Writing rule declares, since the Label
     // does not set those.
     expect(text).toMatchObject({fill: '#ffffff', size: 12});
   });
 
   it('reads an anchor the actor overrides', () => {
     // A Speech Box fills downward as it is read, so it anchors top left where
-    // everything else is centred.
+    // everything else is centered.
     const box = previewDrawing(of('speechBox'))!;
 
     expect(box.commands.find(command => command.op === 'text')).toMatchObject({

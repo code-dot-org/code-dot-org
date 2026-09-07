@@ -12,7 +12,7 @@ import {DIRECTIONS, plus, type Axial} from '../hex';
 import {
   boundaryPath,
   cellCorners,
-  centre,
+  center,
   edgeBar,
   extent,
   SIDE_DIRECTIONS,
@@ -39,10 +39,10 @@ describe('a hexagon', () => {
     expect(east).toHaveLength(2);
   });
 
-  it('scales and insets about its own centre', () => {
+  it('scales and insets about its own center', () => {
     const full = cellCorners([1, -1], 10);
     const small = cellCorners([1, -1], 10, 0.5);
-    const at = centre([1, -1], 10);
+    const at = center([1, -1], 10);
     for (let i = 0; i < 6; i++) {
       expect(small[i].x - at.x).toBeCloseTo((full[i].x - at.x) / 2);
       expect(small[i].y - at.y).toBeCloseTo((full[i].y - at.y) / 2);
@@ -54,16 +54,16 @@ describe('a side', () => {
   // The one relation the whole renderer rests on: side `s` is the side facing
   // `SIDE_DIRECTIONS[s]`. Get it wrong and outlines keep the wrong edges and
   // every prerequisite bar lands on the wrong face.
-  it('faces the neighbour it says it does', () => {
+  it('faces the neighbor it says it does', () => {
     const corners = cellCorners(ORIGIN, 10);
     SIDE_DIRECTIONS.forEach((direction, side) => {
       const a = corners[side];
       const b = corners[(side + 1) % 6];
       const mid = {x: (a.x + b.x) / 2, y: (a.y + b.y) / 2};
-      const neighbour = centre(plus(ORIGIN, DIRECTIONS[direction]), 10);
-      // The midpoint of a shared side is exactly halfway between the centres.
-      expect(mid.x).toBeCloseTo(neighbour.x / 2);
-      expect(mid.y).toBeCloseTo(neighbour.y / 2);
+      const neighbor = center(plus(ORIGIN, DIRECTIONS[direction]), 10);
+      // The midpoint of a shared side is exactly halfway between the centers.
+      expect(mid.x).toBeCloseTo(neighbor.x / 2);
+      expect(mid.y).toBeCloseTo(neighbor.y / 2);
     });
   });
 });
@@ -79,7 +79,7 @@ describe('a region outline', () => {
   });
 
   it('draws a ring around a hole rather than filling it in', () => {
-    // The six cells around the centre, without the centre. Each keeps four
+    // The six cells around the center, without the center. Each keeps four
     // sides — two are shared with the cells beside it — so eighteen face out
     // and six face the hole. The six are the point: a region with a hole in it
     // has two boundaries, and both have to be drawn.
@@ -95,9 +95,9 @@ describe('an edge bar', () => {
       x: (bar[0].x + bar[1].x) / 2,
       y: (bar[0].y + bar[1].y) / 2,
     };
-    const neighbour = centre(DIRECTIONS.SE as Axial, 10);
-    expect(mid.x).toBeCloseTo(neighbour.x / 2);
-    expect(mid.y).toBeCloseTo(neighbour.y / 2);
+    const neighbor = center(DIRECTIONS.SE as Axial, 10);
+    expect(mid.x).toBeCloseTo(neighbor.x / 2);
+    expect(mid.y).toBeCloseTo(neighbor.y / 2);
   });
 
   it('is shorter than the side, by the fraction asked for', () => {
@@ -118,7 +118,7 @@ describe('the extent', () => {
     const cells: Axial[] = [ORIGIN, [2, -1], [-1, 2]];
     const box = extent(cells, 10);
     for (const cell of cells) {
-      const at = centre(cell, 10);
+      const at = center(cell, 10);
       expect(at.x - 10).toBeGreaterThanOrEqual(box.x);
       expect(at.y - 10).toBeGreaterThanOrEqual(box.y);
       expect(at.x + 10).toBeLessThanOrEqual(box.x + box.width);
@@ -145,7 +145,7 @@ describe('a title', () => {
   });
 
   it('ends in an ellipsis when there is more than will fit', () => {
-    const lines = wrapTitle('Three rules, and behaviour nobody wrote at all', {
+    const lines = wrapTitle('Three rules, and behavior nobody wrote at all', {
       width: 50,
       charWidth: 5,
       lines: 2,

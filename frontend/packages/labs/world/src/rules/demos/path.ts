@@ -59,10 +59,10 @@ export const pathDemo: RuleDemo = {
   },
   look(id: string) {
     if (id.startsWith('wall')) {
-      return {width: 30, height: 30, colour: '#5c6370'};
+      return {width: 30, height: 30, color: '#5c6370'};
     }
     return id === 'mark'
-      ? {width: 16, height: 16, colour: '#98c379'}
-      : {width: 18, height: 18, colour: '#c678dd'};
+      ? {width: 16, height: 16, color: '#98c379'}
+      : {width: 18, height: 18, color: '#c678dd'};
   },
 };

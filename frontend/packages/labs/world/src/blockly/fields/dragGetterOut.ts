@@ -54,7 +54,7 @@ export function beginGetterDrag(request: GetterDragRequest): void {
     // of on its left edge — near enough to look right while dragging, and far
     // enough that the drop finds nothing to connect to.
     Blockly.renderManagement.triggerQueuedRenders(workspace);
-    // Under the pointer, not centred on it: a block held by its top-left corner
+    // Under the pointer, not centered on it: a block held by its top-left corner
     // is what dragging one out of a flyout feels like.
     const at = Blockly.utils.svgMath.screenToWsCoordinates(
       workspace,

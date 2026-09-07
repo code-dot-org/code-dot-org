@@ -3,10 +3,10 @@
 // specs/PROGRESSION_UI.md calls milestone 5 a gate rather than a nicety, and
 // this is the gate: axe over the whole dialog in both views, plus the claims
 // axe cannot make — that the list says in words everything the map says in
-// colour, and that a completion is announced to somebody who cannot see the
+// color, and that a completion is announced to somebody who cannot see the
 // tile it opened.
 //
-// Colour contrast is disabled here and checked in `palette.test.ts` instead:
+// Color contrast is disabled here and checked in `palette.test.ts` instead:
 // jsdom paints nothing, so axe cannot compute a ratio, and the palette test
 // measures every pair at every region hue, which is stronger than what axe
 // would have done on one rendered screen.
@@ -94,11 +94,11 @@ describe('the list', () => {
     expect(screen.getAllByRole('listitem')).toHaveLength(TILES.length);
   });
 
-  // The map says "locked" with a padlock, a grey fill and a dashed edge. None
+  // The map says "locked" with a padlock, a gray fill and a dashed edge. None
   // of that is available to a screen reader or to somebody who cannot separate
-  // the greys, so the list says it in words — including WHAT it is waiting for,
+  // the grays, so the list says it in words — including WHAT it is waiting for,
   // which the map only shows as the shape of the path to it.
-  it('says in words what the map says in colour', async () => {
+  it('says in words what the map says in color', async () => {
     await open();
     await show('List');
     const jump = screen.getByRole('button', {name: /^Up/});
@@ -155,7 +155,7 @@ describe('finishing a lesson', () => {
   });
 
   it('says nothing when nothing opened', async () => {
-    // Marking a tile whose neighbours are still waiting on something else
+    // Marking a tile whose neighbors are still waiting on something else
     // should not claim to have unlocked anything.
     await open('input/press', ['origin/first-world', 'input/arrows']);
     const detail = within(screen.getByRole('dialog')).getByRole(

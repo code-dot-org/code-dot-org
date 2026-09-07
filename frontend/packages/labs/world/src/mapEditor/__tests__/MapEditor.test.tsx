@@ -3,7 +3,7 @@
 // The model is pinned in mapModel.test; what this adds is the half a person
 // touches — two number fields — and the two things about them that are easy to
 // get wrong and invisible when they are: a field being cleared to type into is
-// not a size, and shrinking a map is not a licence to delete what is now
+// not a size, and shrinking a map is not a license to delete what is now
 // outside it.
 
 import {fireEvent, render, screen} from '@testing-library/react';

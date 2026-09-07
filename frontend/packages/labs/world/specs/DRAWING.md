@@ -37,7 +37,7 @@ define drawing ⟨64⟩ by ⟨8⟩
 ```
 
 It has TWO SHAPES, one block. Standing on its own in an `.actor` file it is a
-definition root, since `DisableOrphansPlugin` greys out a top-level block that
+definition root, since `DisableOrphansPlugin` grays out a top-level block that
 has a previous connection along with everything chained after it. Chained
 inside a world's own `define actor` it is one of that actor's rows, which is
 what lets a world-defined actor have a picture — and it needed no field to say
@@ -56,7 +56,7 @@ box, which is what the driver paints for an actor nothing knows how to draw.
 
 **An actor with words and no drawing is warned about, not fixed.** `Shows Text`
 paints nothing on its own, so electing it and stopping there is a file in which
-everything a learner can see is correct and the screen shows a coloured
+everything a learner can see is correct and the screen shows a colored
 rectangle. The engine cannot guess a picture and should not, so the `use trait`
 row says so on its own face instead (`extensions/textNeedsDrawing`) — the
 answer `missingRule` gives to its own silent case. What counts as drawing them
@@ -103,7 +103,7 @@ no outline
 draw rectangle at ⟨0, 0⟩ size ⟨64, 8⟩
 draw circle at ⟨16, 16⟩ radius ⟨12⟩
 draw line from ⟨0, 0⟩ to ⟨32, 32⟩
-draw text ⟨"Score"⟩ at ⟨32, 8⟩ size ⟨12⟩ anchored ⟨centre⟩
+draw text ⟨"Score"⟩ at ⟨32, 8⟩ size ⟨12⟩ anchored ⟨center⟩
 draw image ⟨button.png⟩ at ⟨0, 0⟩
 ```
 
@@ -133,7 +133,7 @@ rather than a socket you empty.
 A LINE IS STROKED WITH THE OUTLINE, FALLING BACK TO THE FILL. Found while
 building: a line has no interior, so with the pen untouched the first drawing
 anybody writes — `draw line` — produced nothing at all and no way to find out
-why. "The colour" is the only paint a line can mean, so it takes whichever one
+why. "The color" is the only paint a line can mean, so it takes whichever one
 is set.
 
 The alternative was paint on every shape block: `draw rectangle at ⟨⟩ size ⟨⟩
@@ -214,7 +214,7 @@ that wants to be an image file.
 
 ## Text measurement, which is not in this
 
-`draw text … anchored ⟨centre⟩` covers what anchoring covers: text that grows
+`draw text … anchored ⟨center⟩` covers what anchoring covers: text that grows
 from its middle, or its right edge, without anybody working out how wide it is.
 That is most of what measurement is wanted for and it is resolved where the text
 is drawn, so the routine never asks.

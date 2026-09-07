@@ -35,7 +35,7 @@ export const dragDemo: RuleDemo = {
   },
   look(id: string) {
     return id === 'sticky'
-      ? {width: 16, height: 16, colour: '#e06c75'}
-      : {width: 16, height: 16, colour: '#61afef'};
+      ? {width: 16, height: 16, color: '#e06c75'}
+      : {width: 16, height: 16, color: '#61afef'};
   },
 };

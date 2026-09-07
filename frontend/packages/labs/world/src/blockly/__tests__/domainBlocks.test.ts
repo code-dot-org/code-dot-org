@@ -247,7 +247,7 @@ describe('domain block generators', () => {
   });
 
   it('an actor’s own `each frame` declares a step on the kind', () => {
-    // The behaviour half of an actor's own properties: work a KIND does every
+    // The behavior half of an actor's own properties: work a KIND does every
     // frame, with no rule to do it in (ActorBuilder.defineStep).
     //
     // CHAINED UNDER THE `define actor`, which is where an `.actor` file's
@@ -2044,7 +2044,7 @@ describe('world_rgba block shape', () => {
     // failed to catch it when a spelling sweep changed our side and the test
     // together, leaving the picker unable to plug into its own socket:
     //
-    //   Output Connection of "colour_picker" expected Colour, found Color
+    //   Output Connection of "colour_picker" expected Color, found Color
     //
     // Reading it off the block we have to connect to cannot drift that way.
     installAllBlocks({});
@@ -2926,7 +2926,7 @@ describe('buildDomainPalette (project rule blocks)', () => {
     registerProjectRules([pushRule]);
     const {blocks} = buildDomainPalette([pushRule]);
     const nudge = blocks.find(b => b.type === 'world_do_Pushes_NudgeAction')!;
-    // Two params → two labelled sockets (AMOUNT, PUSH); both passed to `act`.
+    // Two params → two labeled sockets (AMOUNT, PUSH); both passed to `act`.
     const code = nudge.generator.javascript(
       {getFieldValue: () => ''} as never,
       {

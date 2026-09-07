@@ -546,7 +546,7 @@ export function EffectGraphCanvas({
       ref={containerRef}
       className={styles.canvas}
       // A drop target, not an interactive element: it has no keyboard or
-      // focus behaviour of its own. The accessible route to the same outcome
+      // focus behavior of its own. The accessible route to the same outcome
       // is activating a palette button, which places the node mid-view.
       role="presentation"
       onDragOver={handleDragOver}

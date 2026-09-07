@@ -63,7 +63,7 @@ export const ListVariable: TypedVariable = createTypedVariable({
   // thing (specs/LISTS.md). The check is a string two sockets agree on and
   // nothing a learner reads; the blocks all say "list".
   check: 'Array',
-  // The colour of the blocks that make and read one, which are the list blocks
+  // The color of the blocks that make and read one, which are the list blocks
   // rather than any existing family.
   style: 'sprite_blocks',
   defaultName: 'items',

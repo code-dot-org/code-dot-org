@@ -49,7 +49,7 @@ export interface RuleReference {
    * So a reference always resolves to the current rule, and an unedited rule
    * follows the library. For a rule nobody has touched that is arguably what
    * should happen — a fix to `solid` reaches the projects that never changed
-   * it — but it IS a behaviour change a learner did not ask for, and this
+   * it — but it IS a behavior change a learner did not ask for, and this
    * field is what a later migration would key on. It is in the format now
    * because widening a format is cheap and narrowing one is not.
    */

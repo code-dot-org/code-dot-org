@@ -130,7 +130,7 @@ describe('the icons themselves', () => {
       const uri = actorIconImage(name)!;
       expect(uri.startsWith('data:image/svg+xml,')).toBe(true);
       const svg = decodeURIComponent(uri.slice('data:image/svg+xml,'.length));
-      // A plate and a glyph: a bare glyph in one colour is a bet on the menu's
+      // A plate and a glyph: a bare glyph in one color is a bet on the menu's
       // background, and this lab has themes.
       expect(svg).toContain('<rect');
       expect(svg).toMatch(/<path fill="#ffffff" d="[^"]+"/);

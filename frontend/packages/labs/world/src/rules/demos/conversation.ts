@@ -95,7 +95,7 @@ export const conversationDemo: RuleDemo = {
     return {
       width: 0,
       height: 0,
-      colour: '#abb2bf',
+      color: '#abb2bf',
       text: (actor as {get(p: unknown): string}).get(textOf as never),
       textScale: 2,
     };

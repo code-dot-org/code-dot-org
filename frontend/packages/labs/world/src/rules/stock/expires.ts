@@ -28,7 +28,7 @@
 //
 // Removal is not immediate — `World.tick` sweeps what is leaving after the
 // handlers have run — so a handler responding to the same frame's collision
-// still finds the actor there. That is the engine's behaviour, not this rule's,
+// still finds the actor there. That is the engine's behavior, not this rule's,
 // and it is what makes "hit something and expire on the same frame" safe.
 
 /** The `rules/expires.rule` workspace. GENERATED — edit scripts/rules/expires.mjs. */

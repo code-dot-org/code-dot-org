@@ -65,10 +65,10 @@ export const turnsDemo: RuleDemo = {
   },
   look(id: string) {
     if (id === 'player') {
-      return {width: 18, height: 18, colour: '#61afef'};
+      return {width: 18, height: 18, color: '#61afef'};
     }
     return id === 'quick'
-      ? {width: 18, height: 18, colour: '#e5c07b'}
-      : {width: 18, height: 18, colour: '#c678dd'};
+      ? {width: 18, height: 18, color: '#e5c07b'}
+      : {width: 18, height: 18, color: '#c678dd'};
   },
 };

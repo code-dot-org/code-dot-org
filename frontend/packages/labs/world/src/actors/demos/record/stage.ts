@@ -1,6 +1,6 @@
 // Standing an actor demo up: import, place, compile, play, and film.
 //
-// The half of a demo that is not data. Both readers share it — the behaviour
+// The half of a demo that is not data. Both readers share it — the behavior
 // test that asserts what the actor did and the recorder that films it — which
 // is what keeps a recording honest: an actor that stops doing what its strip
 // shows fails a test on the commit that caused it, rather than going on
@@ -216,7 +216,7 @@ const cursorCell = (pointer: PointerAt, shrink: number): Cell => {
     y: pointer.y / shrink,
     width: Math.max(2, Math.round(size)),
     height: Math.max(2, Math.round(size)),
-    colour: rgb(pointer.down ? '#ffffff' : '#abb2bf'),
+    color: rgb(pointer.down ? '#ffffff' : '#abb2bf'),
   };
 };
 

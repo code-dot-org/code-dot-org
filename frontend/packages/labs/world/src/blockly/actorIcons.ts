@@ -12,7 +12,7 @@
 // design system's icons, and this reads five of its drawings.
 //
 // DRAWN ON A PLATE, which is the whole of how it stays legible. A glyph in one
-// fixed colour is a bet on the menu's background, and this lab has themes; a
+// fixed color is a bet on the menu's background, and this lab has themes; a
 // dark rounded tile with a light glyph on it reads on any of them, and it
 // matches how a picture already appears in the map editor's palette.
 

@@ -128,7 +128,7 @@ under every tile of that region, and an edge sit over the two tiles it joins,
 without any z-index games.
 
 **A region outline is the union boundary of its tiles.** Emit only the hex sides
-not shared with a same-region neighbour. An outline drawn per tile gives a
+not shared with a same-region neighbor. An outline drawn per tile gives a
 honeycomb; a convex hull gives a shape the tiles do not fill. The survivors are
 NOT walked into a joined path: one `<path>` of unjoined segments draws the same
 picture at these stroke widths, and joining would only begin to matter for a
@@ -136,8 +136,8 @@ dash pattern or a gradient running along the outline.
 
 **An edge is a bar across the shared side**, drawn only where a `requires`
 exists — solid when the prerequisite is done, dashed when it is not — and drawn
-ON TOP of the two tiles it joins. Not a line between centres: at any tile size
-that fits a title, a centre-to-centre line is entirely hidden under the two
+ON TOP of the two tiles it joins. Not a line between centers: at any tile size
+that fits a title, a center-to-center line is entirely hidden under the two
 tiles. Under them, even the BAR shows only the sliver in the gap between two
 tiles — four or five pixels carrying a whole relation. Over them, it reads as
 the staple it is.
@@ -148,7 +148,7 @@ them; drawn above them instead, it lies across two titles. Pushing it out along
 its own bearing until it clears its own region is not enough either — whatever
 lies further out on the same line is what it collides with next, which for a
 genre is its Making tile and for a foundation is the genre beside it. Push it
-clear of the WHOLE map, and let the words run outward rather than centred, and
+clear of the WHOLE map, and let the words run outward rather than centered, and
 the twelve names sit in a ring around the picture, which is where a legend
 belongs anyway.
 
@@ -158,8 +158,8 @@ and `+`/`-`/`0` on the keyboard. Labels are hidden below a zoom where they stop
 fitting — the detail pane and the list view carry the names, so nothing is lost.
 
 **Three states**, as [PROGRESSION.md](./PROGRESSION.md#three-states-none-of-them-hidden)
-specifies: done is filled with a stamp, open is outlined in the region colour,
-shut is grey with a padlock. A fourth mark, not a state: the tile whose lesson
+specifies: done is filled with a stamp, open is outlined in the region color,
+shut is gray with a padlock. A fourth mark, not a state: the tile whose lesson
 is currently loaded gets a ring, so somebody who opened the map mid-lesson can
 see where they are.
 
@@ -210,23 +210,23 @@ The map is a **grid of tiles with roving tabindex**: one tab stop for the whole
 map, arrows to move within it, `Enter`/`Space` to select.
 
 **Arrow keys move to the nearest tile in that screen direction**, not to a
-named neighbour. Six neighbours do not map onto four arrow keys, and every
+named neighbor. Six neighbors do not map onto four arrow keys, and every
 scheme that tries (modifier keys, `Q`/`E` for the diagonals) is a scheme
 nobody discovers. Nearest-in-direction works with four keys, never gets stuck
-at a region boundary, and crosses gaps in the map — which a strict-neighbour
+at a region boundary, and crosses gaps in the map — which a strict-neighbor
 walk cannot do at all.
 
-- Each tile's accessible name says everything colour says: **"Jumping.
+- Each tile's accessible name says everything color says: **"Jumping.
   Platformer. Locked — needs Gravity."**
 - Selection moves focus to nothing; the detail pane is `role="region"`,
-  labelled by the selected tile, and updates in place. Movement announces the
+  labeled by the selected tile, and updates in place. Movement announces the
   tile through its own accessible name, which is what a roving-tabindex grid
   gives for free — no `aria-live` on the map.
-- Colour is never the only carrier: stamp, padlock, and the words in the name.
+- Color is never the only carrier: stamp, padlock, and the words in the name.
 - The dialog traps focus, `Esc` closes, and focus returns to the button that
   opened it — `CustomDialog` does all three.
 - Contrast: region fills are backgrounds for text and must clear 4.5:1 against
-  the label, in both themes. A shut tile is grey and low-contrast BY INTENT,
+  the label, in both themes. A shut tile is gray and low-contrast BY INTENT,
   which means its label must not be the only place its name appears — it is in
   the list view and in the detail pane.
 
@@ -409,19 +409,19 @@ anything depends on it.
    tab stop, the arrows move between tiles announcing each one in full, the
    detail follows, Escape closes and focus returns to the trigger.
 
-   **The colour system had a real defect, and it was invisible by construction.**
+   **The color system had a real defect, and it was invisible by construction.**
    Every role was one fixed HSL lightness reused at all fourteen hues — and HSL
    lightness is not luminance, so `hsl(90 52% 62%)` and `hsl(245 52% 62%)` are
    the same "lightness" and differ fourfold in brightness. White on a finished
    tile ran from **1.79:1 to 4.6:1** against a floor of 4.5, and eight of ten
-   measured pairs failed. Colours are now asked for by target LUMINANCE and the
+   measured pairs failed. Colors are now asked for by target LUMINANCE and the
    lightness found by bisection, so the ratios hold at every hue by construction
    rather than by inspection.
 
-   **Which theme a colour is for is decided on `[data-theme]`**, the attribute
+   **Which theme a color is for is decided on `[data-theme]`**, the attribute
    the design system's own tokens are scoped by. Two earlier answers could put
    the map in a different theme from the panel around it: `prefers-color-scheme`
-   painted dark colours on a white dialog whenever the OS and the lab disagreed,
+   painted dark colors on a white dialog whenever the OS and the lab disagreed,
    and the React theme context put a light map inside a dark dialog whenever the
    context and the attribute did. Axe caught the first as a 1.83:1 link; a
    screenshot caught the second. Related: the design system's dialog paints its
@@ -573,7 +573,7 @@ anything depends on it.
    studio level until somebody writes the model and a generator that emits one
    per tile from the catalogue.
 
-   And one behaviour that wants a decision rather than a default: a tile that is
+   And one behavior that wants a decision rather than a default: a tile that is
    SHUT can still be checked and completed, because a lesson's URL opens
    directly and refusing to check a learner who is plainly doing the lesson
    would be perverse. It leaves the tree able to hold a tile that is done whose

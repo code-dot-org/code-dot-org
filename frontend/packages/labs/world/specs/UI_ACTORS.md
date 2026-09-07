@@ -70,7 +70,7 @@ define rule ⟨Writing⟩  ability ⟨Shows Text⟩
     define property ⟨string⟩ ⟨text⟩      = ⟨⟩
     define property ⟨number⟩ ⟨text size⟩ = ⟨12⟩
     define property ⟨color⟩  ⟨text color⟩ = ⟨#ffffff⟩
-    define property ⟨string⟩ ⟨text anchor⟩ = ⟨centre⟩
+    define property ⟨string⟩ ⟨text anchor⟩ = ⟨center⟩
 ```
 
 NAMED FOR THE MECHANIC, not for the state. A rule's name is its toolbox
@@ -274,7 +274,7 @@ belongs with world-scoped state rather than here.
    language.
 4. **The stock-actor import** — a dialog shaped like `ImportRuleDialog`, writing
    an `.actor` into `actors/` and pulling the rules it elects.
-5. **A colour type**, which turned out to be a type rather than an inspector
+5. **A color type**, which turned out to be a type rather than an inspector
    tweak. `color` is a `PropertyType` of its own — held as `#rrggbb`, as a
    string always was — and the two places that ask what a property IS both give
    it a different answer: a block's socket takes a swatch and the getter reports
@@ -361,7 +361,7 @@ a rule demo does, because the thing under demonstration is a FILE: the scene
 imports the stock actor with `importStockActor`, compiles the project with the
 generator, and presses keys with `setInput`. Nothing in between is a stand-in,
 so an actor that stops jumping stops jumping in its demo — and fails the
-behaviour test that plays the same scene (`actors/demos`).
+behavior test that plays the same scene (`actors/demos`).
 
 The frame is 256 by 192 world pixels shown at half size, and the Player's own
 jump is what fixed it: it rises 134 pixels from a standing start, so a scene
@@ -392,7 +392,7 @@ on the override values — the same content-keyed cache the texture cache is
 (specs/DRAWING.md). A placement with no overrides shares the kind's picture,
 which is most of them.
 
-This is the piece that turns the map from a grid of grey strips into the HUD.
+This is the piece that turns the map from a grid of gray strips into the HUD.
 
 ### The palette cell wants the picture, and has it
 
@@ -414,7 +414,7 @@ So this is the surface that forces the icon, and it is the only one.
 **Elective, and the third of three tiers.** The picture where there is room; the
 icon where there is not; the name when there is no picture at all, which is the
 fallback `pictured` already has for a thumbnail that has not arrived. An actor
-that declares nothing keeps exactly today's behaviour, so a learner never has to
+that declares nothing keeps exactly today's behavior, so a learner never has to
 meet the idea.
 
 ```

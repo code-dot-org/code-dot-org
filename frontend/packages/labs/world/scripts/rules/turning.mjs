@@ -165,7 +165,7 @@ const mirrors = turns.boolean('bounces off what stops it', 'false');
  * bit that does mean it.
  *
  * Without it such a body measures its distance from the origin, which is not a
- * distance it travelled, and turns on the frame it appears.
+ * distance it traveled, and turns on the frame it appears.
  *
  * This rule kept its own copy of the starting place until Physics recorded
  * one. The copy is gone; the bit is what was never about the position.
@@ -243,7 +243,7 @@ turns.step('turn if it got nowhere', 'react', [
   ),
   asked.set(times(times(speed.of(thisActor()), pixelsPerUnit()), frameTime())),
   doc(
-    'HALF, not all of it. A body Solid has pushed part of the way out of a wall has travelled a little, and a body sliding along a slope travels less than it asked for without being stopped by anything. Nothing turns on the first frame: `measured` is false until the other step has run once, and the distance from the origin is not a distance anything travelled. A body somebody is holding is not a body that was stopped — see `held still` in Physics. Without this a ball waiting out a teleport turns round every frame it waits.',
+    'HALF, not all of it. A body Solid has pushed part of the way out of a wall has traveled a little, and a body sliding along a slope travels less than it asked for without being stopped by anything. Nothing turns on the first frame: `measured` is false until the other step has run once, and the distance from the origin is not a distance anything traveled. A body somebody is holding is not a body that was stopped — see `held still` in Physics. Without this a ball waiting out a teleport turns round every frame it waits.',
   ),
   when([
     [

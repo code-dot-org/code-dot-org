@@ -291,7 +291,7 @@ describe('drawing the backdrop', () => {
     })) as never;
   });
 
-  it('stretches the image over the whole viewport, centred', () => {
+  it('stretches the image over the whole viewport, centered', () => {
     new PhaserBinding(world([{sprite: 'cave.png'}]), pane());
 
     expect(images).toHaveLength(1);
@@ -360,7 +360,7 @@ describe('drawing the backdrop', () => {
     // THE regression, and the reason a tiled slot is placed in two steps. It is
     // a child of its layer's container, and the camera slides that container —
     // so a finite rectangle of one viewport used to ride along and run out. A
-    // quarter-viewport pan put a quarter-viewport band of bare clear-colour on
+    // quarter-viewport pan put a quarter-viewport band of bare clear-color on
     // screen, which is the exact opposite of what "tiled" promises.
     //
     // Asserted as the container and the sprite TOGETHER, because either alone
@@ -381,7 +381,7 @@ describe('drawing the backdrop', () => {
   it('stretches a slot over the MAP, not over the window onto it', () => {
     // A background belongs to the level. Sized to the viewport it covered
     // exactly one camera position, and a world three screens wide showed bare
-    // clear-colour for the other two.
+    // clear-color for the other two.
     const map = {x: VIEWPORT_WIDTH * 3, y: VIEWPORT_HEIGHT};
     new PhaserBinding(
       world([{sprite: 'cave.png'}], [0, 0, 0, 1], undefined, [], [], map),
@@ -462,10 +462,10 @@ describe('drawing the backdrop', () => {
   });
 
   it('moves nothing at all while the camera rests', () => {
-    // The reason the centre is folded in BEFORE the parallax factor. A world
+    // The reason the center is folded in BEFORE the parallax factor. A world
     // that never mentions a camera has one, sitting in the middle of the view,
     // and it must draw exactly where it drew before cameras existed — including
-    // a layer at factor 0, which `centre - camera * 0` would have shoved half a
+    // a layer at factor 0, which `center - camera * 0` would have shoved half a
     // screen sideways.
     new PhaserBinding(
       world([{}, {}], [0, 0, 0, 1], undefined, [
@@ -497,7 +497,7 @@ describe('drawing the backdrop', () => {
     expect(images).toHaveLength(0);
   });
 
-  it('sets the camera colour from the world, not from a layer', () => {
+  it('sets the camera color from the world, not from a layer', () => {
     new PhaserBinding(world([{}], [1, 0, 0.5, 1]), pane());
 
     // 255,0,128 at full alpha, through the fake's GetColor32.

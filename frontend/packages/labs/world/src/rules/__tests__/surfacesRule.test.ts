@@ -35,7 +35,7 @@ describe('rules/surfaces.rule', () => {
 
   it('gives ice nothing to carry', () => {
     // How fast you go on ice is a fact about YOU — it is the speed you arrived
-    // with. A `slipperiness` on the tile would be a dial with no behaviour
+    // with. A `slipperiness` on the tile would be a dial with no behavior
     // behind it.
     const ice = meta.properties.filter(
       property => property.ownerTraitId === 'Slippery',

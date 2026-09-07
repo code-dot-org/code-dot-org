@@ -10,7 +10,7 @@
 //
 // "The view" is a world's own, passed in rather than read from a constant: how
 // much of the world is on screen is a fact about that world (`World.viewSize`),
-// and a backdrop sized to somebody else's window is a band of bare clear-colour
+// and a backdrop sized to somebody else's window is a band of bare clear-color
 // down one side.
 
 /** A screen-space displacement, in pixels. */
@@ -52,7 +52,7 @@ export const layerShift = (
  * A tiled slot is a finite rectangle — one viewport of it — and its whole
  * promise is to cover the surface at every offset. Riding along with its
  * layer's container breaks that: pan a quarter of a viewport and a
- * quarter-viewport band of bare clear-colour appears at the trailing edge.
+ * quarter-viewport band of bare clear-color appears at the trailing edge.
  *
  * So the sprite is placed to CANCEL the container's translation, leaving it
  * over the viewport, and the same displacement is applied to the texture
@@ -92,9 +92,9 @@ const panRange = (mapSize: Shift, view: Shift): Shift => ({
  * question of being BIG enough and in the right place — there is no third
  * option, the way tiling is for the repeating kind.
  *
- * It was drawn one viewport big at the viewport's centre, which covers exactly
+ * It was drawn one viewport big at the viewport's center, which covers exactly
  * one camera position: its own layer's container slides under the camera, so
- * the picture rode away and bare clear-colour followed it in. Sizing it to the
+ * the picture rode away and bare clear-color followed it in. Sizing it to the
  * MAP is the fix for the ordinary case, and it is what a learner means — the
  * sky belongs to the level, not to the window onto it.
  *
@@ -109,11 +109,11 @@ const panRange = (mapSize: Shift, view: Shift): Shift => ({
  * which is the smallest picture that always covers. Every case falls out of it
  * rather than being special-cased:
  *
- *   - `1` is map-sized and centred on the map — glued to the level, as asked.
+ *   - `1` is map-sized and centered on the map — glued to the level, as asked.
  *   - `0.2` is a sky stretched a fifth as far, drifting slowly across. Less
  *     distortion than a map-sized one, which is what a parallax sky wants.
  *   - `0`, and `fit` (which is parallax 0 here, since its container never
- *     moves), is one viewport at the viewport's centre — exactly what this drew
+ *     moves), is one viewport at the viewport's center — exactly what this drew
  *     before, so screen furniture is untouched.
  *   - above `1`, which the block offers as "runs ahead of it", grows PAST the
  *     map, because a layer that outruns the world needs more picture than the

@@ -545,7 +545,7 @@ const SCOREBOARD_ACTOR = JSON.stringify(
         // fallback box — which is exactly what this shipped as at first.
         //
         // Two commands, the same two `actors/stock/label` uses: ink of
-        // whatever colour the actor carries, then the words at the middle of
+        // whatever color the actor carries, then the words at the middle of
         // the canvas. Every part of the text is READ off the actor rather than
         // typed here, which is what makes the trait worth having.
         {

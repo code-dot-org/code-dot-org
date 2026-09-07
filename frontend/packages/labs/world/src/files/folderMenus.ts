@@ -75,7 +75,7 @@ export interface FolderMenu {
  * The buttons, left to right, in the order a project is built up in.
  *
  * Worlds and actors first because that is what a game IS; then the rules that
- * give them behaviour; then what they look and sound like; then the two
+ * give them behavior; then what they look and sound like; then the two
  * documents — a map is a world's arrangement and an effect is a picture's.
  */
 export const FOLDER_MENUS: readonly FolderMenu[] = [

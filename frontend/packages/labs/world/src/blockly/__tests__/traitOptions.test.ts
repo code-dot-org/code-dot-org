@@ -27,7 +27,7 @@ const project = (...metas: Array<ReturnType<typeof parseRuleMeta>>): void => {
 describe('traitOptions (traits from the rules in play)', () => {
   it('lists a rule’s traits plus those of every rule it requires', () => {
     // Animation requires Space, so attaching just Animation puts both their
-    // traits in play — labelled by name, valued by the rule and export the
+    // traits in play — labeled by name, valued by the rule and export the
     // generator resolves. (Gravity, collision and motion used to be the examples
     // here; all three are stock `.rule` files now, not built-ins.)
     //

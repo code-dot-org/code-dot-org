@@ -42,7 +42,7 @@ const at = (
 });
 
 describe('fitView', () => {
-  it('centres the map with a rim of outside round it', () => {
+  it('centers the map with a rim of outside round it', () => {
     // 320 wide into 800 by 600: the height is the tighter fit, 600/320, and
     // the padding takes 8% off that. What is left over is split evenly.
     const view = fitView(800, 600, {w: 320, h: 320});
@@ -85,8 +85,8 @@ describe('the camera', () => {
 });
 
 describe('snapToTile', () => {
-  it('lands on the centre of the cell, not its corner', () => {
-    // An actor's position IS its centre, so a snapped actor sits in one cell
+  it('lands on the center of the cell, not its corner', () => {
+    // An actor's position IS its center, so a snapped actor sits in one cell
     // rather than straddling four.
     expect(snapToTile({x: 33, y: 63}, TILE, false)).toEqual({x: 48, y: 48});
     expect(snapToTile({x: 0, y: 0}, TILE, false)).toEqual({x: 16, y: 16});
@@ -252,7 +252,7 @@ describe('panIntoView', () => {
     expect(panIntoView(view, size, {x: 121, y: 91})).toBeUndefined();
   });
 
-  it('centres a point in the margin or off the pane, keeping the zoom', () => {
+  it('centers a point in the margin or off the pane, keeping the zoom', () => {
     // On the last pixel is technically on screen and practically lost.
     const moved = panIntoView({...view, scale: 2}, size, {x: 1000, y: 10});
     expect(moved?.scale).toBe(2);

@@ -58,7 +58,7 @@
 // left", which the world can be asked at any moment. So the Door watches the
 // count and changes its own picture, and the Pilot asks the same question
 // again when it walks in. Nothing has to remember anything, and there is no
-// way for the picture and the behaviour to disagree.
+// way for the picture and the behavior to disagree.
 //
 // The counting is safe, and that is the one ordering worth knowing: Collection
 // raises `collects` BEFORE it removes what was taken, but an event is queued
@@ -137,16 +137,16 @@ const place = (type: string, id: string, column: number, row: number) => ({
  *
  * The keys are the declaring TRAIT's id and then the property's, both of them
  * the member's own name with everything but letters, digits and underscores
- * replaced (`ruleMeta.slug`) — so "Is a Teleport Pad" and "pad colour" are
+ * replaced (`ruleMeta.slug`) — so "Is a Teleport Pad" and "pad color" are
  * these. Written out rather than derived because a wrong key here is silent:
  * the override lands on nothing and every pad is the default blue.
  */
-const padAt = (id: string, column: number, row: number, colour: string) => ({
+const padAt = (id: string, column: number, row: number, color: string) => ({
   type: 'actors/pad',
   id,
   properties: {
     positional: {position: {x: at(column), y: at(row)}},
-    Is_a_Teleport_Pad: {pad_colour: colour},
+    Is_a_Teleport_Pad: {pad_color: color},
   },
 });
 
@@ -264,7 +264,7 @@ const GEMS: ReadonlyArray<readonly [number, number]> = [
  * skip the level: the red pair joins the two gem ledges, and reaching either
  * of them at all still costs a tank of fuel.
  */
-/** The three networks, as the colour each pad of one is painted. */
+/** The three networks, as the color each pad of one is painted. */
 const BLUE = '#3f7fe0';
 const GREEN = '#3fbf6a';
 const RED = '#e0484a';
@@ -273,14 +273,14 @@ const RED = '#e0484a';
  * ONE KIND, SIX INSTANCES, THREE COLOURS.
  *
  * The pads used to be three `.actor` files that differed in one row — the
- * `set pad colour` on each. Nothing else about them was different, because the
+ * `set pad color` on each. Nothing else about them was different, because the
  * pad's picture is drawn FROM that property (`padActor`), and the rule matches
  * pads on it (`rules/teleport`). Three files to hold three values.
  *
  * A placement carries per-instance overrides, keyed by the declaring trait and
  * then the property (`blockly/mapPlacements`), and `placementKey` gives each
  * distinct set its own drawing — so six placements of one kind draw as three
- * colours with nothing written twice. The colour is a fact about THIS PAD,
+ * colors with nothing written twice. The color is a fact about THIS PAD,
  * which is what an override is for, and a seventh network is a seventh entry
  * here rather than a fourth file.
  */
@@ -415,8 +415,8 @@ export const JETPACK_ACTORS = [
   ...GEMS.map(([column, row], index) =>
     place('actors/gem', `Gem${index}`, column, row),
   ),
-  ...PADS.map(([colour, column, row], index) =>
-    padAt(`Pad${index}`, column, row, colour),
+  ...PADS.map(([color, column, row], index) =>
+    padAt(`Pad${index}`, column, row, color),
   ),
   ...BARS.map(([column, row], index) =>
     place('actors/bar', `Bar${index}`, column, row),
@@ -577,7 +577,7 @@ const PILOT_TRIP = 0.4;
  *
  * The fade is not here any more. It was — four roots, copied into all five
  * kinds that teleport — and what a trip LOOKS like turned out not to be a fact
- * about the traveller at all. The pad is the thing doing something to whatever
+ * about the traveler at all. The pad is the thing doing something to whatever
  * steps on it, so the pad performs it, once, on `event actor` (`padActor`).
  *
  * WHAT IS LEFT IS THE ONE THING THAT REALLY IS THE PILOT'S. Only an actor with
@@ -589,12 +589,12 @@ const PILOT_TRIP = 0.4;
  * does, so this stays a handler in the Pilot's own file.
  *
  * IT FITS IN THE HOLD, which is the reason a trip has a duration at all: the
- * traveller is held still for `travel seconds`, and this asks for exactly the
+ * traveler is held still for `travel seconds`, and this asks for exactly the
  * trip it is on rather than repeating the number.
  */
 const teleportSafely = () => [
   {
-    type: 'world_on_Teleport_StartsTravellingEvent',
+    type: 'world_on_Teleport_StartsTravelingEvent',
     x: 320,
     y: 380,
     inputs: {ACTOR: me()},
@@ -1201,15 +1201,15 @@ const enemyActor = (
 /**
  * A teleport pad, which is a floor that is somewhere else.
  *
- * ONE ACTOR PER COLOUR rather than one actor and six colours, because a pad's
- * colour is set where the actor is defined and a map placement cannot say a
- * property. Three kinds is also the truer reading of what a colour IS here: it
+ * ONE ACTOR PER COLOR rather than one actor and six colors, because a pad's
+ * color is set where the actor is defined and a map placement cannot say a
+ * property. Three kinds is also the truer reading of what a color IS here: it
  * is not a setting on a pad, it is which network the pad belongs to, and a
  * level with two networks has two kinds of thing in it.
  *
- * IT DRAWS ITSELF FROM ITS OWN COLOUR rather than from a sprite, and that is
+ * IT DRAWS ITSELF FROM ITS OWN COLOR rather than from a sprite, and that is
  * worth the four lines: three sprites that had to be repainted whenever a
- * colour changed would be three chances for the picture and the behaviour to
+ * color changed would be three chances for the picture and the behavior to
  * disagree, and the whole mechanic is invisible unless a player can read the
  * link at a glance.
  *
@@ -1220,7 +1220,7 @@ const enemyActor = (
 /**
  * A wall a switch moves, and a plate that moves it.
  *
- * ONE ACTOR EACH, for the same reason the pads are one per colour: the colour
+ * ONE ACTOR EACH, for the same reason the pads are one per color: the color
  * is set where the actor is defined, and it is which NETWORK a thing belongs
  * to rather than a setting on it.
  *
@@ -1228,9 +1228,9 @@ const enemyActor = (
  * because a wall that goes on looking like a wall while you walk through it is
  * a wall a player will keep not walking through. It reads its own `passes
  * through things` every frame rather than being told twice — the picture
- * cannot disagree with the behaviour if there is only one fact.
+ * cannot disagree with the behavior if there is only one fact.
  */
-const switchedWallActor = (name: string, colour: string) =>
+const switchedWallActor = (name: string, color: string) =>
   JSON.stringify({
     blocks: {
       blocks: [
@@ -1245,8 +1245,8 @@ const switchedWallActor = (name: string, colour: string) =>
               useTrait('Gravity#ActsAsGroundTrait'),
               useTrait('Solid Bodies#SolidTrait'),
               {
-                type: 'world_set_Switches_WallColourProperty',
-                inputs: {ACTOR: me(), VALUE: swatch(colour)},
+                type: 'world_set_Switches_WallColorProperty',
+                inputs: {ACTOR: me(), VALUE: swatch(color)},
               },
               {
                 type: 'world_trait_step',
@@ -1290,7 +1290,7 @@ const switchedWallActor = (name: string, colour: string) =>
               block: stack([
                 fill({
                   block: {
-                    type: 'world_get_Switches_WallColourProperty',
+                    type: 'world_get_Switches_WallColorProperty',
                     inputs: {ACTOR: me()},
                   },
                 }),
@@ -1303,7 +1303,7 @@ const switchedWallActor = (name: string, colour: string) =>
     },
   });
 
-const switchActor = (name: string, colour: string) =>
+const switchActor = (name: string, color: string) =>
   JSON.stringify({
     blocks: {
       blocks: [
@@ -1316,8 +1316,8 @@ const switchActor = (name: string, colour: string) =>
             block: stack([
               useTrait('Switches#IsASwitchTrait'),
               {
-                type: 'world_set_Switches_SwitchColourProperty',
-                inputs: {ACTOR: me(), VALUE: swatch(colour)},
+                type: 'world_set_Switches_SwitchColorProperty',
+                inputs: {ACTOR: me(), VALUE: swatch(color)},
               },
             ]),
           },
@@ -1332,7 +1332,7 @@ const switchActor = (name: string, colour: string) =>
               block: stack([
                 fill({
                   block: {
-                    type: 'world_get_Switches_SwitchColourProperty',
+                    type: 'world_get_Switches_SwitchColorProperty',
                     inputs: {ACTOR: me()},
                   },
                 }),
@@ -1348,27 +1348,27 @@ const switchActor = (name: string, colour: string) =>
 /**
  * The pad — ONE kind, however many networks a room has.
  *
- * Its colour is a property rather than a fact about the file, so the three
+ * Its color is a property rather than a fact about the file, so the three
  * networks are three values on six placements (`PADS`) and not three files.
- * The picture follows: the drawing below fills with `pad colour`, so a pad
+ * The picture follows: the drawing below fills with `pad color`, so a pad
  * painted at placement time draws itself painted, and `placementKey` caches
- * one picture per distinct colour.
+ * one picture per distinct color.
  *
  * AND IT PERFORMS THE FADE, on whatever steps on it. What a trip looks like is
- * the pad's business — it is the thing doing something to the traveller — and
+ * the pad's business — it is the thing doing something to the traveler — and
  * writing it here is what stops the same two tweens and two handlers being
  * copied into every kind that teleports. They were in five actor files before
  * this: the Pilot, the Robot, the Ball, the Rocket and the Bat, five copies of
- * one idea, and a sixth traveller would have arrived with no fade and nothing
+ * one idea, and a sixth traveler would have arrived with no fade and nothing
  * saying why.
  *
  * `sends` and `receives` are the pad's own events (`rules/teleport`), raised
- * beside the traveller's `starts travelling` and `arrives`. The traveller
+ * beside the traveler's `starts traveling` and `arrives`. The traveler
  * reaches this handler as `event actor`.
  *
  * A TWEEN IS A FUNCTION OF ONE ACTOR, defined in the file that holds it and
  * called with whoever it is played on — so the pad's `fade out` runs on the
- * traveller without the traveller defining anything.
+ * traveler without the traveler defining anything.
  */
 const padActor = (seconds: number) =>
   JSON.stringify({
@@ -1393,7 +1393,7 @@ const padActor = (seconds: number) =>
               block: stack([
                 fill({
                   block: {
-                    type: 'world_get_Teleport_PadColourProperty',
+                    type: 'world_get_Teleport_PadColorProperty',
                     inputs: {ACTOR: me()},
                   },
                 }),
@@ -1921,7 +1921,7 @@ const ROBOT_ACTOR = JSON.stringify({
  * flag somebody has to set and clear; it is really "there are no gems left",
  * which the world can be asked at any moment. So this asks, every frame, and
  * changes its own picture — and the Pilot asks the same question again when it
- * walks in. There is no way for the picture and the behaviour to disagree
+ * walks in. There is no way for the picture and the behavior to disagree
  * because there is only one fact.
  *
  * NOT SOLID. A door you cannot walk into is a wall, and touching it is how the
@@ -2282,7 +2282,7 @@ export const JETPACK_SPEC: ProjectSpec = {
     padActor: {
       name: 'pad.actor',
       language: 'actor',
-      // Half the shortest trip in the room, so a traveller is invisible for
+      // Half the shortest trip in the room, so a traveler is invisible for
       // the middle of it rather than fading the whole way across.
       contents: padActor(ENEMY_TRIP / 2),
       folderId: 'actors',

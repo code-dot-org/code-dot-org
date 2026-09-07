@@ -1,6 +1,6 @@
 // Every contrast the map depends on, hue by hue, in both themes.
 //
-// This is the test the first palette needed and did not have. Colours picked by
+// This is the test the first palette needed and did not have. Colors picked by
 // eye at one hue and reused at thirteen others looked fine and failed by more
 // than a factor of two at the far end of the wheel — white on a finished tile
 // ran from 1.79:1 to 4.6:1 against a floor of 4.5, and nothing said so.
@@ -11,7 +11,7 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {contrast, regionColours, rgb, SURFACES, type Theme} from '../palette';
+import {contrast, regionColors, rgb, SURFACES, type Theme} from '../palette';
 import {REGIONS, regionHue} from '../regions';
 
 const THEMES: Theme[] = ['light', 'dark'];
@@ -27,14 +27,14 @@ describe.each(THEMES)('in the %s theme', theme => {
   const surface = SURFACES[theme];
 
   it.each(hues)('reads the label on a finished %s tile', (name, hue) => {
-    const {tone} = regionColours(hue, theme);
+    const {tone} = regionColors(hue, theme);
     expect(ratio(surface.ink, tone), name).toBeGreaterThanOrEqual(4.5);
   });
 
   it.each(hues)(
     'shows the %s outline against the wash behind it',
     (name, hue) => {
-      const {line, field} = regionColours(hue, theme);
+      const {line, field} = regionColors(hue, theme);
       expect(ratio(line, field), name).toBeGreaterThanOrEqual(3);
     },
   );
@@ -42,14 +42,14 @@ describe.each(THEMES)('in the %s theme', theme => {
   it.each(hues)(
     'shows the %s outline against an unfinished tile',
     (name, hue) => {
-      const {line} = regionColours(hue, theme);
+      const {line} = regionColors(hue, theme);
       expect(ratio(line, surface.surface), name).toBeGreaterThanOrEqual(3);
     },
   );
 
   it.each(hues)('reads the %s region name on the page', (name, hue) => {
-    const colours = regionColours(hue, theme);
-    expect(ratio(colours.name, surface.page), name).toBeGreaterThanOrEqual(4.5);
+    const colors = regionColors(hue, theme);
+    expect(ratio(colors.name, surface.page), name).toBeGreaterThanOrEqual(4.5);
   });
 
   it('reads the label on a tile that is ready to start', () => {
@@ -70,10 +70,10 @@ describe.each(THEMES)('in the %s theme', theme => {
 
   it('shows the ring around the selected tile', () => {
     // The ring's job is to be visible over any tile, so the worst case is what
-    // is asserted: whichever region colour it contrasts with least.
+    // is asserted: whichever region color it contrasts with least.
     const worst = Math.min(
       ...hues.map(([, hue]) =>
-        ratio(surface.ring, regionColours(hue, theme).tone),
+        ratio(surface.ring, regionColors(hue, theme).tone),
       ),
       ratio(surface.ring, surface.surface),
       ratio(surface.ring, surface.shutFill),
@@ -84,7 +84,7 @@ describe.each(THEMES)('in the %s theme', theme => {
   it('shows the focus ring wherever it lands', () => {
     const worst = Math.min(
       ...hues.map(([, hue]) =>
-        ratio(surface.focus, regionColours(hue, theme).tone),
+        ratio(surface.focus, regionColors(hue, theme).tone),
       ),
       ratio(surface.focus, surface.surface),
       ratio(surface.focus, surface.shutFill),

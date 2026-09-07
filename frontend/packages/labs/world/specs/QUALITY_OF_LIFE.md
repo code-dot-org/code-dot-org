@@ -58,7 +58,7 @@ These are a set of ideas that improve the basic building of projects geared towa
    carries — steps (with their placement), its actions and queries, and its
    traits' — so editing a `.rule`, renaming a step, or moving one before
    another restarts. Property DEFAULTS are excluded on purpose: they reach the
-   snapshot as values, where changing one patches live, which is the behaviour
+   snapshot as values, where changing one patches live, which is the behavior
    worth keeping.
 
    Both hashes rest on the bundler emitting an untouched module identically

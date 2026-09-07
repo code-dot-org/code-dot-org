@@ -6,7 +6,7 @@
 //
 // Axial means two numbers where three would do: a cube coordinate always
 // satisfies `x + y + z = 0`, so the third is never stored. `q` runs east, `r`
-// runs south-east, and the six neighbours are the six sums below.
+// runs south-east, and the six neighbors are the six sums below.
 
 /** A tile's place on the map. `[q, r]`. */
 export type Axial = readonly [q: number, r: number];
@@ -51,15 +51,15 @@ export const same = (a: Axial, b: Axial): boolean =>
   a[0] === b[0] && a[1] === b[1];
 
 /** The six cells touching this one, in {@link CLOCKWISE} order. */
-export const neighbours = (cell: Axial): Axial[] =>
+export const neighbors = (cell: Axial): Axial[] =>
   CLOCKWISE.map(name => plus(cell, DIRECTIONS[name]));
 
 /** Whether two cells share a side. */
 export const adjacent = (a: Axial, b: Axial): boolean =>
-  neighbours(a).some(n => same(n, b));
+  neighbors(a).some(n => same(n, b));
 
 /**
- * How many steps from the centre — the ring a cell sits on.
+ * How many steps from the center — the ring a cell sits on.
  *
  * The cube form of the distance, written out: `(|x| + |y| + |z|) / 2` with
  * `z = -x - y` substituted.

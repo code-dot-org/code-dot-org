@@ -230,7 +230,10 @@ text anyone sees, and each is load-bearing:
   asks for and what every color block offers. A connection check is a string
   equality, so both halves have to say the same word — `COLOUR_CHECK` is that
   word, in one place, precisely because a spelling sweep once changed it and
-  left the picker unable to plug into the socket it was the shadow for.
+  left the picker unable to plug into the socket it was the shadow for. A
+  second sweep hit the field name instead, which fails the same way and says
+  so only in a console line: "Ignoring non-existant field COLOR in block
+  colour_picker".
 
 Values snap to a step derived from the range (about a hundred positions across
 it, rounded to 1, 2 or 5 times a power of ten), which is finer than the track

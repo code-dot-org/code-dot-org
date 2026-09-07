@@ -40,7 +40,7 @@ export const num = (value: number) => ({
   shadow: {type: 'math_number', fields: {NUM: value}},
 });
 
-/** A colour socket's default — a swatch, which is what a colour block is. */
+/** A color socket's default — a swatch, which is what a color block is. */
 export const swatch = (color: string) => ({
   shadow: {type: 'colour_picker', fields: {COLOUR: color}},
 });
@@ -175,16 +175,16 @@ export const actorFile = (
     2,
   );
 
-/** `set fill ⟨colour⟩`. */
+/** `set fill ⟨color⟩`. */
 export const fill = (color: object) => ({
   type: 'world_pen_fill',
-  inputs: {COLOUR: color},
+  inputs: {COLOR: color},
 });
 
-/** `set outline ⟨colour⟩ width ⟨n⟩`. */
+/** `set outline ⟨color⟩ width ⟨n⟩`. */
 export const outline = (color: object, width: number) => ({
   type: 'world_pen_outline',
-  inputs: {COLOUR: color, WIDTH: num(width)},
+  inputs: {COLOR: color, WIDTH: num(width)},
 });
 
 /** `no outline`. */

@@ -2,7 +2,7 @@
 //
 // The row is not a value: choosing it means "go and fetch me one", and the
 // field must end up holding whatever was fetched — or its previous value if the
-// learner cancelled. So the validator REJECTS the sentinel (returning null
+// learner canceled. So the validator REJECTS the sentinel (returning null
 // leaves the field as it was) and kicks off the import, then writes the result
 // back when the dialog resolves.
 //

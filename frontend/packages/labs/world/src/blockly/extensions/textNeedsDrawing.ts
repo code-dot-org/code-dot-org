@@ -8,7 +8,7 @@
 //
 // THAT IS A SILENT FAILURE OF THE WORST KIND: everything a learner can see is
 // correct. The trait is elected, the text is set, the handler runs, and the
-// screen shows a coloured box. There is nothing to search for and no error
+// screen shows a colored box. There is nothing to search for and no error
 // anywhere. The starter's own scoreboard shipped like that.
 //
 // The engine cannot fix it — an actor with words and no drawing is a legal

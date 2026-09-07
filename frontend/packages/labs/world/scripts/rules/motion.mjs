@@ -111,7 +111,7 @@ const cornerReach = canMove.number('corner reach', 0);
  * query that answered `position − velocity × time`, which is where the body
  * was IF velocity is what moved it — and disagreed with the truth whenever
  * something set the position by hand. A ladder snapping a climber to its
- * rungs, a pad teleporting a traveller, a step parking a speed at zero: each
+ * rungs, a pad teleporting a traveler, a step parking a speed at zero: each
  * made the query say "it has always been exactly here", and Solid, asked to
  * push such a body out of the floor it stood in, could not tell which way it
  * came from and took the shortest way out. Sideways, a tile a frame. Three
@@ -161,14 +161,14 @@ export const applyForce = canMove.block({
  *
  * THE OTHER HALF OF `position before` BEING A RECORD. The record is written in
  * `sense` and is the truth about where a body started the frame. A rule that
- * moves a body BY HAND — a pad setting a traveller down, a ladder snapping a
+ * moves a body BY HAND — a pad setting a traveler down, a ladder snapping a
  * climber to its rungs — makes that truth useless to anything asking which way
  * the body came, because the answer is "from across the room" and there is no
  * line between the two ends to resolve against.
  *
  * Solid is the rule that asks. It pushes a body out of a solid one along the
  * face it came in through and works that face out from this record, so a
- * traveller landing on a floor was pushed out along the line from the pad it
+ * traveler landing on a floor was pushed out along the line from the pad it
  * left — for a pad above a floor, straight down through it.
  *
  * So a placement says so, and everything downstream reads a body that has
@@ -198,8 +198,8 @@ const travel = rule.local('travel', 'Vector');
 // The rule's own step rather than the trait's, because `sense` is a moment of
 // the WORLD and a trait's step may only name the moments its subject takes
 // part in (engine/core/phases). It has to be this early: `push` is where a
-// teleport pad sets a traveller down, and a record taken after that would say
-// the traveller had always stood at the far pad.
+// teleport pad sets a traveler down, and a record taken after that would say
+// the traveler had always stood at the far pad.
 rule.step('note where each body starts', 'sense', [
   forEach(each, {
     from: allWithTrait(CanMove),

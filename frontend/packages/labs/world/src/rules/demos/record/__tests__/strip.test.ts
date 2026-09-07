@@ -14,7 +14,7 @@ const SIZE = {width: 4, height: 4};
 const BLACK: [number, number, number] = [0, 0, 0];
 const RED = rgb('#ff0000');
 
-/** The colour at a pixel, as `[r,g,b]`. */
+/** The color at a pixel, as `[r,g,b]`. */
 const pixel = (
   pixels: Uint8Array,
   stripWidth: number,
@@ -31,7 +31,7 @@ const box = (x: number, y: number): Box => ({
   y,
   width: 2,
   height: 2,
-  colour: RED,
+  color: RED,
 });
 
 describe('drawStrip', () => {
@@ -89,7 +89,7 @@ describe('drawStrip', () => {
 });
 
 describe('rgb', () => {
-  it('reads a CSS colour', () => {
+  it('reads a CSS color', () => {
     expect(rgb('#c678dd')).toEqual([198, 120, 221]);
   });
 });

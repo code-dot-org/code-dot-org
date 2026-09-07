@@ -443,7 +443,7 @@ describe('the pads lesson’s check', () => {
     expect(passes).toBe(false);
   });
 
-  it('accepts two pads of a colour', async () => {
+  it('accepts two pads of a color', async () => {
     const {passes, result} = await check('platformer/pads', linked);
     expect(result.error).toBeUndefined();
     expect(passes).toBe(true);
@@ -460,12 +460,12 @@ describe('the walls lesson’s check', () => {
 
   it('refuses a switch and a wall that have nothing to do with each other', async () => {
     // The plate is real and fires every time. What it is not is the wall's
-    // colour, and the check must not read "it is all wired up" as done.
+    // color, and the check must not read "it is all wired up" as done.
     const {passes} = await check('platformer/walls', lesson.source);
     expect(passes).toBe(false);
   });
 
-  it('accepts a wall painted the switch’s colour', async () => {
+  it('accepts a wall painted the switch’s color', async () => {
     const {passes, result} = await check('platformer/walls', matched);
     expect(result.error).toBeUndefined();
     expect(passes).toBe(true);
@@ -1519,7 +1519,7 @@ describe('the drawing lesson’s check', () => {
 describe('the backdrop lesson’s check', () => {
   const lesson = LESSONS['look/background'];
 
-  it('refuses a world with a colour and no picture', async () => {
+  it('refuses a world with a color and no picture', async () => {
     const {passes} = await check('look/background', lesson.source);
     expect(passes).toBe(false);
   });
@@ -3138,7 +3138,7 @@ describe('the scene lesson’s check', () => {
       return JSON.stringify(workspace);
     });
 
-  it('refuses two people talking in a grey room', async () => {
+  it('refuses two people talking in a gray room', async () => {
     const {passes} = await check('story/scene', lesson.source);
     expect(passes).toBe(false);
   });
@@ -4381,8 +4381,8 @@ describe('the turns lesson’s check', () => {
   });
 });
 
-describe('the neighbourhood lesson’s check', () => {
-  const lesson = LESSONS['simulation/neighbours'];
+describe('the neighborhood lesson’s check', () => {
+  const lesson = LESSONS['simulation/neighbors'];
 
   /** The lesson done: the second loop asks for the Dots near the Walker. */
   const looking = (reach: number) =>
@@ -4409,25 +4409,25 @@ describe('the neighbourhood lesson’s check', () => {
     });
 
   it('refuses a world where every Dot is lit', async () => {
-    const {passes} = await check('simulation/neighbours', lesson.source);
+    const {passes} = await check('simulation/neighbors', lesson.source);
     expect(passes).toBe(false);
   });
 
   it('accepts the ones within eighty', async () => {
-    const {passes, result} = await check('simulation/neighbours', looking(80));
+    const {passes, result} = await check('simulation/neighbors', looking(80));
     expect(result.error).toBeUndefined();
     expect(passes).toBe(true);
   });
 
-  it('refuses a neighbourhood the size of the world', async () => {
+  it('refuses a neighborhood the size of the world', async () => {
     // The block, used, and still wrong: a radius that reaches the far corner
     // lights all twenty-five. The radius is what the check reads.
-    const {passes} = await check('simulation/neighbours', looking(400));
+    const {passes} = await check('simulation/neighbors', looking(400));
     expect(passes).toBe(false);
   });
 
-  it('refuses a neighbourhood too small to hold anything', async () => {
-    const {passes} = await check('simulation/neighbours', looking(5));
+  it('refuses a neighborhood too small to hold anything', async () => {
+    const {passes} = await check('simulation/neighbors', looking(5));
     expect(passes).toBe(false);
   });
 });

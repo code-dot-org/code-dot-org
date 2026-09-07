@@ -2,7 +2,7 @@
 //
 // An SVG rather than a canvas. Sixty-seven polygons is not a rendering problem,
 // and what an SVG buys is everything else: each tile is an element that can be
-// focused, labelled, styled by a stylesheet and printed. See
+// focused, labeled, styled by a stylesheet and printed. See
 // specs/PROGRESSION_UI.md.
 //
 // Layers, back to front: region fills, region outlines, region names, edges,
@@ -27,13 +27,13 @@ import {TILES} from './catalogue';
 import {
   boundaryPath,
   cellPoints,
-  centre,
+  center,
   edgeBar,
   extent,
   wrapTitle,
   type Point,
 } from './mapGeometry';
-import {regionColours, SURFACES} from './palette';
+import {regionColors, SURFACES} from './palette';
 import styles from './progressionMap.module.css';
 import {REGIONS, regionHue} from './regions';
 import type {Tile, TileId, TileState} from './types';
@@ -90,20 +90,20 @@ export const ProgressionMap = ({
   // Region shapes are a function of which cells a region holds, so they are
   // recomputed only when the catalogue is (which is never, in practice).
   const regions = useMemo(() => {
-    const everywhere = tiles.map(tile => centre(tile.at, SIZE));
+    const everywhere = tiles.map(tile => center(tile.at, SIZE));
     return REGIONS.map(region => {
       const cells = tiles
         .filter(tile => tile.region === region.id)
         .map(tile => tile.at);
-      const points = cells.map(cell => centre(cell, SIZE));
+      const points = cells.map(cell => center(cell, SIZE));
       return {
         ...region,
         hue: regionHue(region.id),
-        colours: regionVariables(regionHue(region.id)),
+        colors: regionVariables(regionHue(region.id)),
         cells,
         outline: boundaryPath(cells, SIZE),
         // Where the region's name goes: OUTSIDE the region, on the line
-        // from the centre of the map through the region's own centre.
+        // from the center of the map through the region's own center.
         //
         // Written at the centroid it was unreadable, and the reason is worth
         // recording — a region's centroid is by definition covered in that
@@ -277,7 +277,7 @@ export const ProgressionMap = ({
    * Zoom about a point, keeping whatever is under it under it.
    *
    * The alternative — zooming about the middle — walks the thing you were
-   * looking at off the edge, which is the behaviour every map gets wrong.
+   * looking at off the edge, which is the behavior every map gets wrong.
    *
    * The arithmetic is in USER UNITS, which is the part that has to be said.
    * The pan is applied inside the viewBox (`translate(pan) scale(zoom)`), so a
@@ -412,7 +412,7 @@ export const ProgressionMap = ({
         <g transform={`translate(${pan.x} ${pan.y}) scale(${zoom})`}>
           <g aria-hidden="true">
             {regions.map(region => (
-              <g key={region.id} style={region.colours}>
+              <g key={region.id} style={region.colors}>
                 {region.cells.map(cell => (
                   <polygon
                     key={cell.join(',')}
@@ -430,7 +430,7 @@ export const ProgressionMap = ({
               there is no z-index. A ring drawn inside a tile's own group is
               painted over by every tile that comes after it in the catalogue,
               so a selection ring appeared and disappeared along its own edges
-              depending on which neighbours happened to be listed later.
+              depending on which neighbors happened to be listed later.
               Reordering rather than lifting the ring out into a layer of its
               own, because the ring belongs to the tile — it moves with it, it
               is described by the same `aria-selected`, and a layer would be a
@@ -441,7 +441,7 @@ export const ProgressionMap = ({
                 key={tile.id}
                 tile={tile}
                 state={state(tile.id)}
-                colours={regionVariables(regionHue(tile.region))}
+                colors={regionVariables(regionHue(tile.region))}
                 selected={tile.id === selected}
                 focusable={tile.id === focused}
                 onSelect={() => choose(tile.id)}
@@ -463,7 +463,7 @@ export const ProgressionMap = ({
                   return null;
                 }
                 const met = completed.has(need);
-                // A halo of the page colour under the bar, and the bar over
+                // A halo of the page color under the bar, and the bar over
                 // it. A bar lies across whatever the two tiles are filled with
                 // — a finished tile, a locked one, the wash between them — and
                 // cannot be asked to contrast with all of them at once. The
@@ -503,7 +503,7 @@ export const ProgressionMap = ({
                 <text
                   key={region.id}
                   className={`${styles.regionName} ${styles.region}`}
-                  style={region.colours}
+                  style={region.colors}
                   x={region.label.x}
                   y={region.label.y}
                   textAnchor={region.label.anchor}
@@ -547,8 +547,8 @@ export const ProgressionMap = ({
 interface TileShapeProps {
   tile: Tile;
   state: TileState;
-  /** Its region's four colours, both themes, as custom properties. */
-  colours: React.CSSProperties;
+  /** Its region's four colors, both themes, as custom properties. */
+  colors: React.CSSProperties;
   selected: boolean;
   focusable: boolean;
   onSelect: () => void;
@@ -558,26 +558,26 @@ interface TileShapeProps {
 const TileShape = ({
   tile,
   state,
-  colours,
+  colors,
   selected,
   focusable,
   onSelect,
   onKeyDown,
 }: TileShapeProps) => {
-  const at = centre(tile.at, SIZE);
+  const at = center(tile.at, SIZE);
   const lines = wrapTitle(tile.title, {
     width: SIZE * 1.42,
     charWidth: SIZE * 0.115,
   });
   const lineHeight = SIZE * 0.24;
-  // Titles are centred on the hexagon and the glyph hangs below them, so the
+  // Titles are centered on the hexagon and the glyph hangs below them, so the
   // block rises as it grows rather than pushing the glyph off the bottom.
   const top = at.y - ((lines.length - 1) * lineHeight) / 2 - SIZE * 0.1;
 
   return (
     <g
       className={`${styles.tile} ${styles[state]} ${styles.region}`}
-      style={colours}
+      style={colors}
       data-tile={tile.id}
       role="option"
       tabIndex={focusable ? 0 : -1}
@@ -592,7 +592,7 @@ const TileShape = ({
       />
       {selected && (
         <>
-          {/* A halo under the ring, in the page colour: the ring lies across
+          {/* A halo under the ring, in the page color: the ring lies across
               whatever region fill and edge bars happen to be beneath it and
               cannot be asked to contrast with all of them at once. The edges
               solve the same problem the same way. */}
@@ -634,8 +634,8 @@ const TileShape = ({
 };
 
 /**
- * The mark that says what state a tile is in, beside the colour that says the
- * same thing — because colour on its own is not something everybody can read.
+ * The mark that says what state a tile is in, beside the color that says the
+ * same thing — because color on its own is not something everybody can read.
  * A tick for done, a padlock for shut, and nothing for open, which is the
  * ordinary case and needs no mark.
  *
@@ -693,12 +693,12 @@ const accessibleName = (tile: Tile, state: TileState): string => {
 };
 
 /**
- * A region's four colours, for both themes, as custom properties. The
+ * A region's four colors, for both themes, as custom properties. The
  * stylesheet aliases one set or the other; nothing here knows which.
  */
 const regionVariables = (hue: number): React.CSSProperties => {
-  const light = regionColours(hue, 'light');
-  const dark = regionColours(hue, 'dark');
+  const light = regionColors(hue, 'light');
+  const dark = regionColors(hue, 'dark');
   return {
     '--field-light': light.field,
     '--tone-light': light.tone,
@@ -712,7 +712,7 @@ const regionVariables = (hue: number): React.CSSProperties => {
 };
 
 /**
- * Everything that is not a region's own colour, on the map's root.
+ * Everything that is not a region's own color, on the map's root.
  *
  * BOTH themes, chosen in the stylesheet on `[data-theme]` — the same signal the
  * design system's own tokens are scoped by. Choosing in React instead looked
@@ -750,9 +750,9 @@ const ARROWS: Record<string, Point | undefined> = {
 };
 
 /**
- * The nearest tile in a screen direction — not the neighbour in that direction.
+ * The nearest tile in a screen direction — not the neighbor in that direction.
  *
- * Six neighbours do not fit on four arrow keys, and every scheme that tries to
+ * Six neighbors do not fit on four arrow keys, and every scheme that tries to
  * make them (modifiers, letter keys for the diagonals) is a scheme nobody
  * discovers. Nearest-in-direction works with four keys, crosses the holes in
  * the map, and cannot get stuck at a region boundary.
@@ -765,13 +765,13 @@ export const nearestInDirection = (
   from: Tile,
   direction: Point,
 ): Tile | undefined => {
-  const here = centre(from.at, SIZE);
+  const here = center(from.at, SIZE);
   let best: {tile: Tile; distance: number} | undefined;
   for (const tile of tiles) {
     if (tile === from) {
       continue;
     }
-    const there = centre(tile.at, SIZE);
+    const there = center(tile.at, SIZE);
     const dx = there.x - here.x;
     const dy = there.y - here.y;
     const distance = Math.hypot(dx, dy);
@@ -790,8 +790,8 @@ export const nearestInDirection = (
 };
 
 /**
- * A point past the far edge of a cluster, on the line from the map's centre
- * through the cluster's own centre — where a region's name goes.
+ * A point past the far edge of a cluster, on the line from the map's center
+ * through the cluster's own center — where a region's name goes.
  *
  * The direction is the centroid's, so the name sits at the angle the region
  * occupies; the distance is the region's outermost cell plus a margin, so it

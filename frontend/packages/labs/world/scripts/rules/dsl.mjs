@@ -30,7 +30,7 @@ const RULE_SLUG = name => name.replace(/[^A-Za-z0-9]/g, '');
 /**
  * A socket's contents.
  *
- * A SHADOW is the greyed-in default a block is seeded with — deleting whatever
+ * A SHADOW is the grayed-in default a block is seeded with — deleting whatever
  * is plugged in reveals it again — where a plain block is something an author
  * put there. The two serialize differently and Blockly treats them differently,
  * so `shadow()` marks one rather than leaving it to guesswork.
@@ -690,7 +690,7 @@ function declareBlock(ruleSlug, into, variables, spec, scoped) {
    * Calling it: sockets are named from the parameters, uppercased — EXCEPT a
    * lone argument to an action, which keeps the default `VALUE`.
    *
-   * That exception is `defineActionBlock`'s (`labelled = params.length > 1`),
+   * That exception is `defineActionBlock`'s (`labeled = params.length > 1`),
    * made so the built-in single-argument actions kept the sockets they always
    * had. Two places therefore have to agree about one name, and they did not:
    * Health's `take ⟨amount⟩ damage` was emitted with an `AMOUNT` socket the
@@ -961,7 +961,7 @@ export function defineRule({name, ability, header, purpose}) {
             value: initial,
             ...opts,
           }),
-        /** A colour, `#rrggbb`. Held as a string and asked about as its own
+        /** A color, `#rrggbb`. Held as a string and asked about as its own
          *  kind: its socket takes a swatch and the map editor's inspector
          *  shows a picker (engine/core/types). */
         color: (propName, initial, opts) =>

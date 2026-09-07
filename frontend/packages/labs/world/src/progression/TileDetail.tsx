@@ -126,7 +126,7 @@ export const TileDetail = ({
                     onClick={() => onGoTo(id)}
                     startIcon={
                       // The BUTTON is the same neutral outlined button in
-                      // every row; the state is on the icon, and its colour
+                      // every row; the state is on the icon, and its color
                       // comes from the theme's palette by name rather than
                       // from a green and a red typed in here.
                       <Box component="span" sx={{color: NEED_TONES[need]}}>
@@ -175,7 +175,7 @@ export const TileDetail = ({
             .map(unlock => {
               // The block itself, where there is one to draw — see
               // `./BlockPreview`. "The Jumping rule" is not a thing anybody has
-              // seen; a shape with words on it in a colour is the only
+              // seen; a shape with words on it in a color is the only
               // description of a block that anybody reads.
               const preview = previewBlock(unlock);
               // A DRAWN one says everything the words did and more, so the
@@ -292,7 +292,7 @@ const NEED_ICONS: Record<TileState, string> = {
 };
 
 /**
- * Which of the theme's colours the mark on a needed lesson wears.
+ * Which of the theme's colors the mark on a needed lesson wears.
  *
  * Named out of the palette rather than written as a green and a red: the theme
  * has an opinion about both, it is the same opinion every other icon in the

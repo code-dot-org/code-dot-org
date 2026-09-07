@@ -38,7 +38,7 @@ describe('the demo font', () => {
   });
 
   it('measures what it draws', () => {
-    // `textWidth` centres the string, so a width that disagreed with the
+    // `textWidth` centers the string, so a width that disagreed with the
     // drawing would put every label a few pixels off its actor.
     //
     // W is the letter to ask with: its rightmost column is lit, so the last

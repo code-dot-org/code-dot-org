@@ -133,7 +133,7 @@ const beltSpeed = conveys.number('belt speed', 2);
  * No properties at all. Everything about how fast you go on ice is a fact
  * about YOU — it is the speed you arrived with — so there is nothing for the
  * tile to carry, and a `slipperiness` number would be a dial with no
- * behaviour behind it.
+ * behavior behind it.
  */
 const slippery = rule.trait('Slippery');
 slippery.uses(CanCollide);

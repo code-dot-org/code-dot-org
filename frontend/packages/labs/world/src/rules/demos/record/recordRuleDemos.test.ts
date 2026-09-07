@@ -83,7 +83,7 @@ function play(
             y: state.y - view.y,
             width: look.width,
             height: look.height,
-            colour: rgb(look.colour),
+            color: rgb(look.color),
             text: look.text,
             textScale: look.textScale,
           };

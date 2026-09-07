@@ -121,19 +121,19 @@ describe('define drawing', () => {
 
 describe('the pen', () => {
   it('sets and unsets each half of the paint', () => {
-    expect(codeFor('world_pen_fill', {values: {COLOUR: "'#ff0000'"}})).toBe(
+    expect(codeFor('world_pen_fill', {values: {COLOR: "'#ff0000'"}})).toBe(
       "pen.fill('#ff0000');\n",
     );
     expect(
       codeFor('world_pen_outline', {
-        values: {COLOUR: "'#00ff00'", WIDTH: '2'},
+        values: {COLOR: "'#00ff00'", WIDTH: '2'},
       }),
     ).toBe("pen.outline('#00ff00', 2);\n");
     expect(codeFor('world_pen_no_fill')).toBe('pen.noFill();\n');
     expect(codeFor('world_pen_no_outline')).toBe('pen.noOutline();\n');
   });
 
-  it('says nothing at all when its colour socket is empty', () => {
+  it('says nothing at all when its color socket is empty', () => {
     // Rather than `pen.fill(undefined)`, which would paint with whatever the
     // driver made of that.
     expect(codeFor('world_pen_fill')).toBe('');
@@ -181,10 +181,10 @@ describe('the five things there are to draw', () => {
     expect(
       codeFor('world_text_anchor', {fields: {ANCHOR: 'right'}}).split(',')[0],
     ).toBe('"right"');
-    // …and an empty socket still draws, centred, rather than `undefined`.
+    // …and an empty socket still draws, centered, rather than `undefined`.
     expect(
       codeFor('world_draw_text', {values: {TEXT: "'hi'", X: '0', Y: '0'}}),
-    ).toBe('pen.text(String(\'hi\'), 0, 0, 12, "centre");\n');
+    ).toBe('pen.text(String(\'hi\'), 0, 0, 12, "center");\n');
   });
 
   it('resolves a spritesheet cell where the `.sheet` files are known', () => {
@@ -233,7 +233,7 @@ describe('the Drawing category', () => {
   });
 });
 
-describe('a colour socket', () => {
+describe('a color socket', () => {
   it('is not stood in for, so a swatch does not generate `null`', () => {
     // A REGRESSION, and one nothing caught for a long time because no fixture
     // held a swatch. `colour_picker` comes from `@blockly/field-colour` and
@@ -253,7 +253,7 @@ describe('a colour socket', () => {
           {
             type: 'world_pen_fill',
             inputs: {
-              COLOUR: {
+              COLOR: {
                 shadow: {type: 'colour_picker', fields: {COLOUR: '#3050a0'}},
               },
             },

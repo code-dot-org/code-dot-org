@@ -101,7 +101,7 @@ them working, and gone on showing it.
 reasons that are not the rule's, and teaches people to regenerate goldens
 without looking.
 
-**The answer is that a demo world and a behaviour test are the same world.**
+**The answer is that a demo world and a behavior test are the same world.**
 `src/rules/__tests__/stockRulesRun.test.tsx` already runs the real compiled
 rules and asserts what each one does. A demo is that world with a camera on it:
 one definition, exported once, used by the test to assert and by the recorder to
@@ -128,7 +128,7 @@ recording — to demonstrate rules that are OUR code and need none of the
 machinery that exists to run a learner's safely.
 
 **The anti-rot argument is answered better by sharing than by adjacency.** The
-demo world and the behaviour test are the same world: `stockRulesRun.test.tsx`
+demo world and the behavior test are the same world: `stockRulesRun.test.tsx`
 builds each demo and asserts what the rule did with it. A renamed trait breaks
 the test, in the test's own words, on the commit that renamed it — which is a
 stronger guarantee than living in the same file, and it is the guarantee the
@@ -161,7 +161,7 @@ cannot stand in for. So the strip writer was taught a font (`record/font`) —
 five by seven, upper case, digits and a little punctuation, scaled by whole
 pixels because half a pixel of a letter is a smudge and there is no
 anti-aliasing here to hide it in. A `Look` may now carry `text` INSTEAD of a
-rectangle, drawn in the same clip and the same colour the box would have had.
+rectangle, drawn in the same clip and the same color the box would have had.
 
 A character with no glyph draws as a GAP rather than as a box, since a demo
 asking for one is missing a letter and a box would look like a rule drawing a
@@ -200,12 +200,12 @@ past the actor to move it — it presses arrow keys, and the file does the rest.
 **A demo is DATA.** Which stock actors the scene needs, where they stand, how
 long to run, and what is held when (`demos/types`). The staging that turns that
 into a running world is `demos/record/stage`, shared by the recorder and by the
-behaviour test — which is the same arrangement, and the same guarantee, as the
+behavior test — which is the same arrangement, and the same guarantee, as the
 rule demos' shared demo world.
 
 **The strip writer had to learn pictures.** A rule demo's actor wears none, and
 a plain rectangle is what the driver draws for one; an actor demo's subject is a
-thing you can see, and a grey box would demonstrate a grey box. The blitter
+thing you can see, and a gray box would demonstrate a gray box. The blitter
 composites the RGBA that `scripts/generate-sprites` DREW, asked for by a new
 `stockPixels()` export — not decoded from the PNGs that script encodes, which
 would have been a second copy of the format kept in step by hand to arrive back
@@ -400,7 +400,7 @@ this.
    where the driver calls `setInput` and `setPointer`. So an input demo is
    DRIVEN rather than faked: what the strip shows is the rule reacting to a
    keyboard, not a demo reaching past the rule to move an actor. The recorder
-   and the behaviour tests both step through one `stepDemo`, which fixes the
+   and the behavior tests both step through one `stepDemo`, which fixes the
    order as hands, then shutter, then tick — a frame drawn before the input
    was applied lights the cap one frame after the actor it moved, which reads
    as the rule acting on its own.

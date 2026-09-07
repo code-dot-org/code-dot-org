@@ -14,7 +14,7 @@
 //
 // There is no untouched reference beside them, and there was: it made sense
 // only while every row was forced onto one shared sample, where grayscale on a
-// grey-ish checkerboard was indistinguishable from nothing happening. Shown on
+// gray-ish checkerboard was indistinguishable from nothing happening. Shown on
 // the sample it was written for, each effect is legible on its own.
 //
 // The rows are PICTURES, and only the one under the pointer or the keyboard

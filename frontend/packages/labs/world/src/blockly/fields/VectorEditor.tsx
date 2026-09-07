@@ -14,7 +14,7 @@ export interface VectorValue {
 
 export const DEFAULT_VECTOR: VectorValue = {x: 0, y: 0};
 
-// The grid is a square of `SIZE` px with the origin at its centre and `DIV`
+// The grid is a square of `SIZE` px with the origin at its center and `DIV`
 // divisions each way; it spans [-range, range] per axis, where `range` zooms.
 // `+y` is down, matching the engine (gravity's direction is `(0, 1)` = down)
 // and SVG.
@@ -44,7 +44,7 @@ const fitRange = (value: VectorValue): number => {
 };
 
 /**
- * The `vector` field's popup editor: a two-axis grid centred at (0, 0). Clicking
+ * The `vector` field's popup editor: a two-axis grid centered at (0, 0). Clicking
  * or dragging points an arrow from the origin to the chosen grid point and sets
  * the field's x/y. Zoom buttons reach larger values; the x/y text fields set
  * exact ones.

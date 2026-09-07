@@ -105,7 +105,7 @@ describe('an actor’s own properties', () => {
   });
 
   it('reads a workspace saved before the access field existed as writable', () => {
-    // The behaviour those files already had; a missing field must not silently
+    // The behavior those files already had; a missing field must not silently
     // turn an existing property into a constant.
     const meta = parseActorOwnMeta(
       'actors/player',

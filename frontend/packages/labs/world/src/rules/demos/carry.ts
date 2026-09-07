@@ -76,14 +76,14 @@ export const carryDemo: RuleDemo = {
   },
   look(id: string) {
     if (id === 'platform') {
-      return {width: 96, height: 20, colour: '#5c6370'};
+      return {width: 96, height: 20, color: '#5c6370'};
     }
     // The rider is the one the rule is about; the bystander is drawn in the
-    // colour of a thing that is merely there.
+    // color of a thing that is merely there.
     // Both boxes bright against the deck, or the demonstration is a box beside
-    // something the same colour as the thing it is standing on.
+    // something the same color as the thing it is standing on.
     return id === 'rider'
-      ? {width: 16, height: 16, colour: '#61afef'}
-      : {width: 16, height: 16, colour: '#dcdfe4'};
+      ? {width: 16, height: 16, color: '#61afef'}
+      : {width: 16, height: 16, color: '#dcdfe4'};
   },
 };

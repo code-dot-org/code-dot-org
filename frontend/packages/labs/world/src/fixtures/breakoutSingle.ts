@@ -1,6 +1,6 @@
 // Breakout again, said entirely in `main.world`.
 //
-// The same game as ./breakout — same board, same rules, same behaviour — with
+// The same game as ./breakout — same board, same rules, same behavior — with
 // nothing outside the one file: the four actors are `define actor` blocks at
 // the world's top level, the board is `create ⟨kind⟩ in map` rather than a
 // `.map` file, and the handlers are hats in the world.

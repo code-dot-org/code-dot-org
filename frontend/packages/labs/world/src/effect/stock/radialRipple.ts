@@ -129,7 +129,7 @@ export const radialRippleEffect: EffectDocument = {
     },
   ],
   edges: [
-    // How far from the middle, turned into a travelling wave.
+    // How far from the middle, turned into a traveling wave.
     edge(
       {node: INPUT_UV_NODE_ID, port: GHOST_PORT},
       {node: 'distance-1', port: 'a'},

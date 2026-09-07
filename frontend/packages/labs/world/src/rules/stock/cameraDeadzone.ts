@@ -14,7 +14,7 @@
 //
 // Once it does move, it sits exactly `slack` behind the target rather than
 // jumping to it — so the subject rests on the edge of the box it left, and the
-// next frame's decision starts from there instead of snapping back to centre.
+// next frame's decision starts from there instead of snapping back to center.
 
 /** The `rules/cameraDeadzone.rule` workspace. GENERATED — edit scripts/rules/cameraDeadzone.mjs. */
 export const cameraDeadzoneRule =

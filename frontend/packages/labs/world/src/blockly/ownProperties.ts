@@ -84,7 +84,7 @@ function chain(from: ActorBlock | undefined): ActorBlock[] {
 export interface OwnMeta {
   /** The module the actor is written in — `actors/player`. */
   readonly modulePath: string;
-  /** Its `define actor` NAME, which is what its properties are labelled by. */
+  /** Its `define actor` NAME, which is what its properties are labeled by. */
   readonly name: string;
   readonly properties: readonly PropertyMeta[];
   /**
@@ -92,7 +92,7 @@ export interface OwnMeta {
    *
    * The third declaration a kind may make, after state (`define property`) and
    * per-frame work (`each frame`): a NAMED thing it does. A rule is still the
-   * answer when behaviour is shared between kinds, elected, or answerable by
+   * answer when behavior is shared between kinds, elected, or answerable by
    * `has trait`; this is for when the same six blocks were written twice.
    *
    * `ActionMeta` and not a shape of its own, because everything downstream is

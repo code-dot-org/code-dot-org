@@ -7,7 +7,7 @@ import {EffectEditor} from '../EffectEditor';
 
 // LocalizeJS stands in as a plain dictionary: registered phrases translate,
 // unregistered ones fall back to the source string, which is exactly the
-// mainline singleton's behaviour before the engine has loaded.
+// mainline singleton's behavior before the engine has loaded.
 const dictionary: Record<string, string> = {};
 const setTranslations = (entries: Record<string, string>) =>
   Object.assign(dictionary, entries);

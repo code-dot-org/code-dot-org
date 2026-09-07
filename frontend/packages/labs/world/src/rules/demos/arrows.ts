@@ -52,7 +52,7 @@ export const arrowsDemo: RuleDemo = {
       capLook(id, world, ARROW_CAPS) ?? {
         width: 18,
         height: 18,
-        colour: '#61afef',
+        color: '#61afef',
       }
     );
   },

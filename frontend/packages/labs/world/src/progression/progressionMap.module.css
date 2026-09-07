@@ -1,15 +1,15 @@
 /* The map.
  *
- * NO COLOUR LITERALS. Every colour comes in as a custom property set by
+ * NO COLOR LITERALS. Every color comes in as a custom property set by
  * `ProgressionMap` from `./palette`, which solves each one for a target
  * LUMINANCE so the contrast ratios hold at every region hue rather than only at
  * the one they were eyeballed against. `__tests__/palette.test.ts` measures all
- * of them; a literal written here would be a colour that test cannot see.
+ * of them; a literal written here would be a color that test cannot see.
  *
  * LIGHT AND DARK ARE CHOSEN ON `[data-theme]`, which is the attribute the
  * design system's own tokens are scoped by — so the map and the dialog it sits
  * in cannot end up in different themes. Two earlier answers could: keying off
- * `prefers-color-scheme` painted dark colours on a white dialog whenever the OS
+ * `prefers-color-scheme` painted dark colors on a white dialog whenever the OS
  * and the lab disagreed, and reading the React theme context put a light map
  * inside a dark panel whenever the context and the attribute did.
  *
@@ -92,11 +92,11 @@
 
 /* ── Edges ───────────────────────────────────────────────────────────────── */
 
-/* Coloured by the region the edge leads INTO, not out of: the two edges into a
-   genre's gate then both wear the genre's colour, which is what makes them read
+/* Colored by the region the edge leads INTO, not out of: the two edges into a
+   genre's gate then both wear the genre's color, which is what makes them read
    as the ways in rather than as two unrelated marks.
  *
- * Drawn over a halo of the page colour (see the component), because a bar lies
+ * Drawn over a halo of the page color (see the component), because a bar lies
  * across whatever the two tiles are filled with and cannot be asked to contrast
  * with all of them at once. */
 .edgeHalo {
@@ -141,7 +141,7 @@
   stroke: var(--line);
 }
 
-/* A locked tile is grey INSIDE and its region's colour AROUND, which is the
+/* A locked tile is gray INSIDE and its region's color AROUND, which is the
    one thing the map could not say before: a learner looking at a region they
    have not opened could see the tiles and not which region they were in. The
    fill still says "shut" — that is what a state is for — and the dashes say it
@@ -201,7 +201,7 @@
 /* The selection ring sits outside the tile rather than on it, so it does not
    argue with the state stroke it would otherwise replace.
  *
- * HEAVY, and drawn over a halo of the page colour. Two and a half pixels of
+ * HEAVY, and drawn over a halo of the page color. Two and a half pixels of
  * ink was findable when you had just clicked the tile and invisible when you
  * had not — and the case that matters is the second one: following a link in
  * the detail pane moves the selection to a tile somewhere else on the map, and
@@ -235,7 +235,7 @@
   animation: ring-arrives 700ms ease-in-out 2;
 }
 
-/* Focus is the same ring in the accent colour, and is drawn as well as the
+/* Focus is the same ring in the accent color, and is drawn as well as the
    selection ring rather than instead of it — they mean different things, and a
    keyboard user moving focus over the map needs to see both. */
 .focusRing {

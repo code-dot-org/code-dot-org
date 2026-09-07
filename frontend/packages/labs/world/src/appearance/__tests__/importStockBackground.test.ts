@@ -68,7 +68,7 @@ describe('importStockBackground', () => {
   });
 
   it('leaves the project it was given alone', () => {
-    // A pure transform, like its neighbours: the caller decides when the new
+    // A pure transform, like its neighbors: the caller decides when the new
     // project becomes the current one.
     const before = empty();
     importStockBackground(before, {id: 'cave'}, BYTES);

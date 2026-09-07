@@ -89,7 +89,7 @@ export const ImportActorDialog = ({
                 onDoubleClick={() => onImport(actor)}
               >
                 {actorDemoUrl(actor.id) ? (
-                  // What it DOES, for an actor whose worth is a behaviour: a
+                  // What it DOES, for an actor whose worth is a behavior: a
                   // Platformer Player standing still is a sprite, and the
                   // walking, falling and jumping it brings with it is the
                   // whole of what a learner is choosing (specs/RULE_DEMOS.md).

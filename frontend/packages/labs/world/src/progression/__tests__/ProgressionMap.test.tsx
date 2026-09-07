@@ -1,7 +1,7 @@
 // The map as a thing a person uses, rather than as geometry.
 //
 // What is asserted here is what the picture CLAIMS: that a tile says which
-// state it is in and why in words, not only in colour, and that the keyboard
+// state it is in and why in words, not only in color, and that the keyboard
 // can reach every tile. Both are things a screen reader depends on entirely and
 // a sighted mouse user never notices are missing.
 
@@ -37,7 +37,7 @@ describe('the map', () => {
     ).toBeInTheDocument();
   });
 
-  it('says a tile’s state in words, not only in colour', async () => {
+  it('says a tile’s state in words, not only in color', async () => {
     render(<ProgressionMap completed={done('origin/first-world')} />);
     expect(
       screen.getByRole('option', {name: /First light\. Origin\. Done\./}),
@@ -148,12 +148,12 @@ describe('panning', () => {
 });
 
 describe('moving in a direction', () => {
-  // Not "the neighbour in that direction": six neighbours do not fit on four
+  // Not "the neighbor in that direction": six neighbors do not fit on four
   // keys. Nearest-in-direction has to cross the holes in the map, which is the
-  // case a strict neighbour walk cannot do at all.
+  // case a strict neighbor walk cannot do at all.
   it('crosses a hole rather than stopping at it', () => {
     // Nothing sits between the tip of Place's spike and the tiles east of it,
-    // so a walk that only ever stepped to a neighbour would stop here.
+    // so a walk that only ever stepped to a neighbor would stop here.
     const from = tile('place/camera-feel');
     const east = nearestInDirection(TILES, from, {x: 1, y: 0});
     expect(east).toBeDefined();

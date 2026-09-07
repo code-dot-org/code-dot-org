@@ -5,14 +5,14 @@
    Deliberately the same metrics as `importRuleDialog.module.css`: the two are
    seen one after the other, and a list that changed shape between them would
    read as a different place. That one's rows ARE design-system buttons, so it
-   gets its border and colours for free; these rows are not — nothing is being
+   gets its border and colors for free; these rows are not — nothing is being
    chosen here, and a row that was a button would be a button with a button
-   inside it. So the frame is drawn here, from the same semantic colours the
+   inside it. So the frame is drawn here, from the same semantic colors the
    system would have used (component-library-styles/colors.css), which is what
    keeps it following the lab's Light/Dark setting.
 
    Everything a learner READS is still a design-system `Typography`. Layout and
-   frame here; type and colour there. */
+   frame here; type and color there. */
 
 .list {
   display: flex;

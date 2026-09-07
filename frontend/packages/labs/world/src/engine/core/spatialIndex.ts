@@ -82,7 +82,7 @@ export class SpatialIndex {
   ): Actor[] {
     const found: Actor[] = [];
     if (!(radius >= 0)) {
-      return found; // NaN, or a negative reach: a neighbourhood nothing is in
+      return found; // NaN, or a negative reach: a neighborhood nothing is in
     }
     const reach = radius * radius;
     const from = Math.floor((x - radius) / CELL);

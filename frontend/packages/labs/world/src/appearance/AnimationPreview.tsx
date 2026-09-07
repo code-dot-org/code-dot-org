@@ -96,7 +96,7 @@ export const AnimationPreview = ({animation}: AnimationPreviewProps) => {
           top: '50%',
           width: `${cell.width}px`,
           height: `${cell.height}px`,
-          // Scaled about its middle, so a `pulse` frame grows from the centre
+          // Scaled about its middle, so a `pulse` frame grows from the center
           // the way it will in the game rather than from a corner.
           transform: `translate(-50%, -50%) scale(${zoom})`,
           backgroundImage: source ? `url(${source.dataUrl})` : undefined,

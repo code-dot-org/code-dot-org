@@ -89,7 +89,7 @@ Tile**, and anything shovable **Can Be Pushed**.`,
 //
 // TILE SIZE IS THE ACTOR'S, not the world's. The engine has a tile size and the
 // map editor draws that grid, but an actor is the thing that has to agree with
-// its own neighbours, and a project with two grids in it (a board and a
+// its own neighbors, and a project with two grids in it (a board and a
 // sidebar) is a project this does not have to argue with. The default is the
 // map editor's, so an actor placed on the grid steps along it.`,
 });

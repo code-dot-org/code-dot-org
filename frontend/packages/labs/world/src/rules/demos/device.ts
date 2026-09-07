@@ -9,7 +9,7 @@
 // its key is held, and the key being held is a fact about the WORLD, which is
 // why `look` is handed one: the cap does not remember anything, it just asks.
 // The same box unlit is the same box, so the cluster is always there and only
-// its colour moves.
+// its color moves.
 //
 // The input itself is scripted in the demo's `input`, which the recorder calls
 // where a driver calls `setInput` — so what the strip shows is the rule
@@ -65,7 +65,7 @@ export const SPACE_CAP: readonly Cap[] = [
 const DARK = '#3b4048';
 const LIT = '#e5c07b';
 
-/** Put the controls in the world. They never move; only their colour does. */
+/** Put the controls in the world. They never move; only their color does. */
 export function addCaps(world: World, caps: readonly Cap[]): void {
   for (const control of caps) {
     world.addActor(
@@ -92,7 +92,7 @@ export function capLook(
     ? {
         width: control.width,
         height: control.height,
-        colour: world.isKeyDown(control.key) ? LIT : DARK,
+        color: world.isKeyDown(control.key) ? LIT : DARK,
       }
     : undefined;
 }

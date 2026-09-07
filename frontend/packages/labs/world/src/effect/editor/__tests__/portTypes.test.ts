@@ -3,7 +3,7 @@ import {describe, expect, it} from 'vitest';
 import {portOffset} from '../portTypes';
 
 describe('portOffset', () => {
-  it('centres a lone port on the edge', () => {
+  it('centers a lone port on the edge', () => {
     expect(portOffset(0, 1)).toBe('50%');
   });
 

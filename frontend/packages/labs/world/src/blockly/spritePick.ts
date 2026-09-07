@@ -9,7 +9,7 @@
 // registers and waits on the promise (the same seam as the stock imports:
 // appearance/appearanceImport).
 
-/** Ask for a picture, given what the field holds now. Undefined = cancelled. */
+/** Ask for a picture, given what the field holds now. Undefined = canceled. */
 export type SpritePickHandler = (
   current: string,
 ) => Promise<string | undefined>;

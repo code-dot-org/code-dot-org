@@ -79,12 +79,12 @@ export const SPRITE_NAMES = [
   // says which — the alternative is a drawing with a condition in it.
   'doorOpen',
   // What a level is FOR: the thing you have to have all of. Told apart from a
-  // coin by shape and colour both, because "collect these and not those" only
+  // coin by shape and color both, because "collect these and not those" only
   // works if the two cannot be confused at a glance.
   'gem',
   // Three floors that do something to you (rules/surfaces). Each fills the
   // cell the way `ground` does, so a row of them lies flat and what you can
-  // see is what acts on you — and each is told apart by COLOUR before shape,
+  // see is what acts on you — and each is told apart by COLOR before shape,
   // because a player reads a floor at a glance and from across the room.
   'conveyor',
   'ice',
@@ -220,7 +220,7 @@ function playerBody(c) {
  *
  * Either side rather than on the back, because this actor faces the viewer —
  * a pack drawn behind it would be a pack nobody ever sees. The red band is
- * what makes two grey rectangles read as fuel rather than as arms.
+ * what makes two gray rectangles read as fuel rather than as arms.
  */
 function pilotPack(c) {
   for (const x of [1, 27]) {
@@ -276,7 +276,7 @@ const HULL = [
 const HULL_EDGE = [64, 74, 96];
 const HULL_FILL = [214, 222, 235];
 
-/** Shrink a ring of points toward a centre — an outline is the shape, twice. */
+/** Shrink a ring of points toward a center — an outline is the shape, twice. */
 const shrink = (points, cx, cy, by) =>
   points.map(([x, y]) => [cx + (x - cx) * by, cy + (y - cy) * by]);
 
@@ -289,7 +289,7 @@ function shipHull(c) {
 /**
  * The flame, pointing back out of the notch.
  *
- * Drawn from the tail rather than from the centre so it reads as coming OUT of
+ * Drawn from the tail rather than from the center so it reads as coming OUT of
  * the ship; `length` is what flickers.
  */
 function shipFlame(c, length) {
@@ -414,8 +414,8 @@ const STATIC = {
     // bottom edge, so a crawler placed on a tile is walking on it rather than
     // hovering over it.
     //
-    // PURPLE because every other colour in the library already means something
-    // — blue is the player, gold is a coin, green is grass, grey is stone, red
+    // PURPLE because every other color in the library already means something
+    // — blue is the player, gold is a coin, green is grass, gray is stone, red
     // is the ball — and a thing that damages you should not have to be read
     // twice. The eyes are the player's eyes at the player's size, which is
     // what makes the two read as the same kind of creature.
@@ -448,7 +448,7 @@ const STATIC = {
     // IT HAS TO TILE, in both directions — a room is a line of these — so the
     // stones are 16 wide into a 32-wide cell and the offset is 8: whatever is
     // cut off one edge is what the next tile starts with. Nothing is drawn on
-    // the outer boundary except mortar, so two neighbours share a joint rather
+    // the outer boundary except mortar, so two neighbors share a joint rather
     // than showing a seam.
     c.rect(0, 0, 32, 32, [66, 70, 82]); // mortar, and the joints between stones
     for (let row = 0; row < 4; row++) {
@@ -513,7 +513,7 @@ const STATIC = {
     c.rect(8, 9, 16, 4, [188, 196, 212]); // lit along the top
     c.disc(16, 16, 4.5, [40, 44, 54]); // the eye's socket
     c.disc(16, 16, 3, [232, 92, 72]); // …and the eye, which is the one warm
-    c.disc(15, 15, 1.2, [255, 200, 180]); // colour on it
+    c.disc(15, 15, 1.2, [255, 200, 180]); // color on it
     c.rect(15, 2, 2, 5, [78, 84, 96]); // an aerial, so it has a top
     c.disc(16, 2, 1.6, [232, 92, 72]);
   },
@@ -661,7 +661,7 @@ const STATIC = {
     // that what a player sees is a thing looking at them.
     c.disc(16, 16, 10, [226, 232, 244]);
     c.disc(16, 16, 9, [246, 250, 255]);
-    c.disc(15, 15, 5, [92, 148, 220]); // the iris, off centre: it is looking
+    c.disc(15, 15, 5, [92, 148, 220]); // the iris, off center: it is looking
     c.disc(15, 15, 2.5, [24, 28, 40]);
     c.disc(13, 13, 1.2, [255, 255, 255]); // the catchlight
     // Veins, which is what stops a white disc reading as a ball.
@@ -778,8 +778,8 @@ const STATIC = {
   },
   flag(c) {
     // A chequered flag: the one picture that says FINISH without a word, and
-    // the reason it is chequered rather than a coloured pennant is that every
-    // colour in this library already means something else.
+    // the reason it is chequered rather than a colored pennant is that every
+    // color in this library already means something else.
     c.rect(8, 2, 3, 30, [150, 154, 166]); // the pole
     c.rect(8, 2, 1, 30, [96, 100, 112]); // its shaded edge
     for (let row = 0; row < 3; row++) {
@@ -798,7 +798,7 @@ const STATIC = {
   hill(c) {
     // A mound whose foot is below the cell, so the visible part is the top of
     // something bigger — and dimmer and bluer than `ground`, because at this
-    // size what says FAR AWAY is colour rather than detail. Wide enough to
+    // size what says FAR AWAY is color rather than detail. Wide enough to
     // touch both edges, so a row of them reads as a ridge.
     c.ellipse(16, 46, 20, 36, [46, 78, 62]);
     c.ellipse(12, 50, 13, 34, [64, 100, 74]); // the lit side, up and to the left
@@ -865,7 +865,7 @@ const STATIC = {
     // NOT a green strip on brown, which is what `ground` already is — the two
     // were told apart only by squinting, and a floor a player has to squint at
     // is a floor they walk on to by accident. So: no lit top edge, no crisp
-    // line, and a colour nothing else in the library uses. A thick ochre ooze
+    // line, and a color nothing else in the library uses. A thick ochre ooze
     // with a lumpy underside, sitting in the tile rather than growing out of
     // it.
     c.rect(0, 0, 32, 32, [58, 46, 30]); // the dark bed it sits in
@@ -935,7 +935,7 @@ const STATIC = {
 // Each animation draws frame `t` (0..frames-1) into a SPRITE_SIZE canvas.
 const ANIMATION_FRAME = {
   // A coin spinning about its vertical axis: the disc squashes horizontally to
-  // an edge and back. Colour shifts toward the darker rim at the thin frames.
+  // an edge and back. Color shifts toward the darker rim at the thin frames.
   coinSpin(c, t, frames) {
     const wf = Math.max(0.12, Math.abs(Math.cos((Math.PI * t) / frames)));
     const gold = wf > 0.4 ? [244, 196, 48] : [196, 150, 30];
@@ -1048,7 +1048,7 @@ export function encodePng(rgba, width, height) {
   ihdr.writeUInt32BE(width, 0);
   ihdr.writeUInt32BE(height, 4);
   ihdr[8] = 8; // bit depth
-  ihdr[9] = 6; // colour type RGBA
+  ihdr[9] = 6; // color type RGBA
   const raw = Buffer.alloc(height * (width * 4 + 1));
   for (let y = 0; y < height; y++) {
     raw[y * (width * 4 + 1)] = 0; // filter: none

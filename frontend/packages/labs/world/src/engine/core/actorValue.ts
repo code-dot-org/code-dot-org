@@ -2,7 +2,7 @@
 //
 // The language has ONE actor type: `this actor` is one, `any ⟨Coin⟩` is every
 // coin, and a variable holds whichever it was given. A second type would be a
-// second colour of variable, a second getter to find, and a wall of sockets
+// second color of variable, a second getter to find, and a wall of sockets
 // rejecting each other for reasons a learner has to learn before building
 // anything — so instead there is one type and a rule about what an operation
 // means when the value holds several:
@@ -326,7 +326,7 @@ export function firstOf(value: ActorSource): readonly Actor[] {
  * Whether two actor values are the same actor — `⟨a⟩ is ⟨b⟩`.
  *
  * The language could compare two numbers, two words, two places and two
- * colours, and could not compare two ACTORS, which is a gap nothing noticed
+ * colors, and could not compare two ACTORS, which is a gap nothing noticed
  * until something had to say "another one". A teleport pad choosing a
  * different pad, an enemy picking a target that is not itself, a puzzle asking
  * whether the thing you are carrying is the thing on the pedestal: all three

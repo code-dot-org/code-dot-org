@@ -20,16 +20,16 @@ The answer added first (see `ActorBuilder.defineStep`, and the `each frame`
 block standing alone in a `.actor` file) is an actor's **own step**: work a KIND
 of actor does every frame, declared in that actor's own file, shared with
 nobody. That is the crosshair, exactly. It is also where it stops — a second
-kind of actor that wants the same behaviour has to write it again.
+kind of actor that wants the same behavior has to write it again.
 
 So the space looks like this:
 
-|                | state                               | behaviour                                    | shared |
+|                | state                               | behavior                                     | shared |
 | -------------- | ----------------------------------- | -------------------------------------------- | ------ |
 | an actor's own | `world_rule_property` in a `.actor` | `each frame` / `define block` in a `.actor`  | no     |
 | a rule's trait | a trait's property                  | a trait's `each frame` / its designed blocks | yes    |
 
-The behaviour column holds two things, and they answer different questions.
+The behavior column holds two things, and they answer different questions.
 `each frame` is work that REPEATS — the crosshair following the pointer. A
 `define block` in an `.actor` is a NAMED thing the kind does, run when something
 says so: the serve a ball knows how to do, called from the key that serves it
@@ -78,8 +78,8 @@ files' worth of ceremony, not the mechanism.
 follows the hat is what runs, every frame, for each actor carrying it. That is
 the same reading a rule's own step roots have (`extractRuleBodies` calls it
 `chainBody` — "a step's body is the chain BELOW it… it is an event hat, so what
-follows it is what runs"), and it is the reading Sprite Lab's behaviours had,
-where a behaviour was a function and nothing else. A row between the definition
+follows it is what runs"), and it is the reading Sprite Lab's behaviors had,
+where a behavior was a function and nothing else. A row between the definition
 and the implementation would be a step inside a step, which nothing else in the
 lab has.
 
@@ -141,14 +141,14 @@ lesser cost; revisit once it has been seen.
 
 **A root has no previous connection.** `DisableOrphansPlugin` disables a
 top-level block that has one, and everything chained after it — which is what
-made `each frame` in an actor file arrive greyed out and generating nothing,
+made `each frame` in an actor file arrive grayed out and generating nothing,
 and is why that block is a ROW under `define actor` today rather than a root at
 all. `world_behavior` is a root, so it takes a `next` and no `previous`.
 
 **One phase, and it is not on the block.** A behavior runs in `decide` — where
 something works out what it is about to do, which is what a behavior IS. The
 phase model stays (this lab's steps within a phase are deliberately unordered
-and must commute, where Sprite Lab ordered behaviours by when they were added),
+and must commute, where Sprite Lab ordered behaviors by when they were added),
 but a behavior does not expose it: a body that wants `sense` or `push` is a body
 that wants to be a rule.
 
@@ -186,7 +186,7 @@ it was being written into, and esbuild refused the duplicate symbol.
 - Removing the behavior from the rules panel warns about the actors using it,
   the way removing a rule does.
 - A `.behavior` file's blocks survive a drag — the root has no previous
-  connection, or `DisableOrphansPlugin` greys it and everything below it.
+  connection, or `DisableOrphansPlugin` grays it and everything below it.
 - `yarn setup:world` if anything in `src/engine` moves — the sandbox runs a
   prebuilt bundle, and it has caught this twice.
 
