@@ -13,8 +13,10 @@
 // this is not. What is shared is the tokens and the type scale, which is the
 // same bargain `FieldMarkdown` struck for prose on a block.
 //
-// Elected rather than applied: it is a plugin, so a lab that wants Blockly's
-// own toolbox keeps it by not listing this one (`BlocklyFileEditor`).
+// The stylesheet is registered when this module is LOADED rather than when the
+// plugin below is elected, because Blockly's CSS buffer closes at the first
+// injection and this lab injects an offscreen workspace at startup. The reason
+// is written out where the call is.
 //
 // The DOM it styles, which is Blockly's and worth writing down because the
 // names are the whole contract:
@@ -60,9 +62,8 @@ import {PluginType, type Plugin} from '@code-dot-org/blockly/plugins';
  * Registered once, and it has to be.
  *
  * A global plugin's `initialize` is called every time the registry is handed
- * the plugin list, which is once per workspace — and `Blockly.Css.register`
- * appends to a stylesheet that is injected on first use, so calling it twice
- * either duplicates the text or arrives after the injection and does nothing.
+ * the plugin list, which is once per workspace, and registering the same
+ * toolbox item twice under one name throws.
  */
 let registered = false;
 
@@ -279,11 +280,33 @@ class ToolboxHeading extends Blockly.ToolboxItem {
   }
 }
 
+// AT IMPORT, AND NOT FROM THE PLUGIN BELOW.
+//
+// `Blockly.Css.register` appends to a buffer that Blockly turns into a single
+// `<style id="blockly-common-style">` the FIRST time it injects a workspace
+// into a given document, and never looks at again. Anything registered after
+// that first injection is text nobody reads.
+//
+// The plugin's `initialize` runs when a workspace that lists it is built, which
+// is when a `.rule` / `.actor` / `.world` file is opened — and by then the
+// lab has already injected a workspace: `BlocklyGenerator` mounts an offscreen
+// one for code generation as soon as the lab loads, whatever file the learner
+// happens to be looking at. Open the lab on a Blockly file and the two arrive
+// close enough together that the styling landed; open it on the map editor,
+// then click through to a rule, and the toolbox came up in Blockly's own gray.
+//
+// So the registration happens when this module is loaded, which `config.ts`
+// does at app load through `BlocklyFileEditor` — before anything can inject.
+// The plugin still elects the HEADING, which is a registry entry and has no
+// such deadline.
+Blockly.Css.register(TOOLBOX_CSS);
+
 /**
  * Draw the toolbox with the design system's tokens.
  *
- * A global plugin: it registers a stylesheet before Blockly is injected and
- * owns nothing per workspace, so there is nothing to tear down.
+ * A global plugin: it registers the heading item and owns nothing per
+ * workspace, so there is nothing to tear down. The stylesheet is not its to
+ * register — see above.
  */
 export const DesignSystemToolboxPlugin: Plugin = {
   type: PluginType.Global,
@@ -292,7 +315,6 @@ export const DesignSystemToolboxPlugin: Plugin = {
       return;
     }
     registered = true;
-    Blockly.Css.register(TOOLBOX_CSS);
     // `true` to overwrite: a second lab electing this plugin in the same page
     // would otherwise throw on the duplicate name, and the class is the same
     // class.
