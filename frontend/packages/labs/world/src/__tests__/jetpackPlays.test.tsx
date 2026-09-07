@@ -401,6 +401,39 @@ describe('the jetpack level', () => {
     expect(Math.min(...dimmest)).toBeLessThan(1);
   });
 
+  it('paints six pads three colours from one kind', () => {
+    // THE PADS ARE ONE ACTOR FILE. They were three that differed in a single
+    // `set pad colour` row, and the colour is a fact about a particular pad
+    // rather than about the kind — so it is a per-instance override on the
+    // placement instead (`blockly/mapPlacements`, `PADS`).
+    //
+    // A WRONG OVERRIDE KEY IS SILENT, which is the whole reason this is here.
+    // The keys are the declaring trait's id and the property's, both slugged
+    // (`Is_a_Teleport_Pad`, `pad_colour`); miss either and the override lands
+    // on nothing, every pad is the default blue, and what a player sees is a
+    // room whose six pads are all one network — still teleporting, just to the
+    // wrong places.
+    const {world} = project;
+    const teleport = project.modules['rules/teleport'] as Record<
+      string,
+      unknown
+    >;
+    const colour = teleport.PadColourProperty as never;
+    const isPad = teleport.IsATeleportPadTrait as never;
+    const pads = [...world.actors].filter(one =>
+      (one as {has(trait: unknown): boolean}).has(isPad),
+    );
+
+    expect(pads).toHaveLength(6);
+    const painted = pads.map(pad => pad.get(colour));
+    // Three networks of two, which is what the room is built around: a pair is
+    // a journey and a single pad is a dead end.
+    expect(new Set(painted).size).toBe(3);
+    for (const one of new Set(painted)) {
+      expect(painted.filter(each => each === one)).toHaveLength(2);
+    }
+  });
+
   it('carries the ball round the room through the pads', () => {
     // What the pads did to the level's simplest hazard, and it is worth
     // stating because it REPLACED a test. The Steel Ball used to roll the

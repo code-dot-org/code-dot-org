@@ -132,6 +132,24 @@ const place = (type: string, id: string, column: number, row: number) => ({
   properties: {positional: {position: {x: at(column), y: at(row)}}},
 });
 
+/**
+ * One pad, painted.
+ *
+ * The keys are the declaring TRAIT's id and then the property's, both of them
+ * the member's own name with everything but letters, digits and underscores
+ * replaced (`ruleMeta.slug`) — so "Is a Teleport Pad" and "pad colour" are
+ * these. Written out rather than derived because a wrong key here is silent:
+ * the override lands on nothing and every pad is the default blue.
+ */
+const padAt = (id: string, column: number, row: number, colour: string) => ({
+  type: 'actors/pad',
+  id,
+  properties: {
+    positional: {position: {x: at(column), y: at(row)}},
+    Is_a_Teleport_Pad: {pad_colour: colour},
+  },
+});
+
 /** A run of tiles along one row, as `[startColumn, endColumn]` inclusive. */
 type Run = readonly [number, number, number];
 
@@ -246,6 +264,26 @@ const GEMS: ReadonlyArray<readonly [number, number]> = [
  * skip the level: the red pair joins the two gem ledges, and reaching either
  * of them at all still costs a tank of fuel.
  */
+/** The three networks, as the colour each pad of one is painted. */
+const BLUE = '#3f7fe0';
+const GREEN = '#3fbf6a';
+const RED = '#e0484a';
+
+/**
+ * ONE KIND, SIX INSTANCES, THREE COLOURS.
+ *
+ * The pads used to be three `.actor` files that differed in one row — the
+ * `set pad colour` on each. Nothing else about them was different, because the
+ * pad's picture is drawn FROM that property (`padActor`), and the rule matches
+ * pads on it (`rules/teleport`). Three files to hold three values.
+ *
+ * A placement carries per-instance overrides, keyed by the declaring trait and
+ * then the property (`blockly/mapPlacements`), and `placementKey` gives each
+ * distinct set its own drawing — so six placements of one kind draw as three
+ * colours with nothing written twice. The colour is a fact about THIS PAD,
+ * which is what an override is for, and a seventh network is a seventh entry
+ * here rather than a fourth file.
+ */
 const PADS: ReadonlyArray<readonly [string, number, number]> = [
   // Blue: the far end of the floor, and the belt six rows above it. ONE END
   // ON THE FLOOR AND ONE OFF IT, which is not a detail — a pair with both
@@ -254,15 +292,15 @@ const PADS: ReadonlyArray<readonly [string, number, number]> = [
   // and never reach a wall to turn at, and turning at walls is the whole of
   // what that enemy is. With one end up here it is flung on to the belt,
   // carried along it, and falls back down, which is a thing to watch.
-  ['actors/padBlue', 22, 14],
-  ['actors/padBlue', 14, 7],
+  [BLUE, 22, 14],
+  [BLUE, 14, 7],
   // Green: the low ledge and the sludge, which are the two middle floors.
-  ['actors/padGreen', 7, 10],
-  ['actors/padGreen', 19, 11],
+  [GREEN, 7, 10],
+  [GREEN, 19, 11],
   // Red: the two gem ledges, at opposite top corners of the room. Not a way
   // to skip anything — reaching either of them at all still costs a tank.
-  ['actors/padRed', 2, 3],
-  ['actors/padRed', 23, 4],
+  [RED, 2, 3],
+  [RED, 23, 4],
 ];
 
 /**
@@ -377,8 +415,8 @@ export const JETPACK_ACTORS = [
   ...GEMS.map(([column, row], index) =>
     place('actors/gem', `Gem${index}`, column, row),
   ),
-  ...PADS.map(([kind, column, row], index) =>
-    place(kind, `Pad${index}`, column, row),
+  ...PADS.map(([colour, column, row], index) =>
+    padAt(`Pad${index}`, column, row, colour),
   ),
   ...BARS.map(([column, row], index) =>
     place('actors/bar', `Bar${index}`, column, row),
@@ -514,24 +552,6 @@ const onlyIf = (test: object, body: object) => ({
 });
 
 /**
- * What a traveller does while a pad is carrying it: fade out, then in.
- *
- * FOUR ROOTS AND NO RULE, which is the seam the teleport rule is built on.
- * `Teleport` moves bodies and says when — `starts travelling` at the pad it is
- * leaving, `arrives` at the one it comes out of — and has no opinion about what
- * that should look like. A rule that faded actors itself would be a rule every
- * project had to agree with about fading.
- *
- * IT FITS IN THE HOLD, which is the reason a trip has a duration at all. The
- * traveller is held still for `travel seconds` and cannot be hurt for the same
- * span, so a fade of half that plays out and back inside the window with no
- * arithmetic tying the two together — and the actor is not moving while it
- * plays, which is what makes it read as a departure rather than a smear.
- *
- * The ids are what `play tween` names, so they have to be unique per actor
- * file and are not shown to anybody.
- */
-/**
  * How long an enemy's trip takes, in seconds.
  *
  * Short — long enough for a fade out and back and no longer. An enemy is held
@@ -548,50 +568,31 @@ const ENEMY_TRIP = 0.2;
  * they asked for happen, and an enemy is given just enough for the fade to
  * read. It is also how long the Pilot cannot be hurt for, which is the same
  * number by construction — the Pilot's handler asks for exactly the trip it is
- * on (see `teleportFade`).
+ * on (see `teleportSafely`).
  */
 const PILOT_TRIP = 0.4;
 
 /**
- * `safe` is the Pilot's alone, and the reason is the reason Teleport stopped
- * granting it: only an actor with `Has Health` can be made safe, and asking
- * one without it throws — "Enemy0 has no property 'safe_until'". The rule used
- * to guard the call with `has trait ⟨Has Health⟩`; here the guard is knowing
- * which actor this is, which is a thing a project knows and a rule does not.
+ * What the PILOT does while a pad is carrying it: nothing anybody can see.
+ *
+ * The fade is not here any more. It was — four roots, copied into all five
+ * kinds that teleport — and what a trip LOOKS like turned out not to be a fact
+ * about the traveller at all. The pad is the thing doing something to whatever
+ * steps on it, so the pad performs it, once, on `event actor` (`padActor`).
+ *
+ * WHAT IS LEFT IS THE ONE THING THAT REALLY IS THE PILOT'S. Only an actor with
+ * `Has Health` can be made safe, and asking one without it throws — "Enemy0 has
+ * no property 'safe_until'". The rule used to guard the call with `has trait
+ * ⟨Has Health⟩` and had no business to; the pad cannot guard it either, because
+ * a pad does not know which of the things that step on it can be hurt. Knowing
+ * that this one is the Pilot is a thing a project knows and neither of them
+ * does, so this stays a handler in the Pilot's own file.
+ *
+ * IT FITS IN THE HOLD, which is the reason a trip has a duration at all: the
+ * traveller is held still for `travel seconds`, and this asks for exactly the
+ * trip it is on rather than repeating the number.
  */
-const teleportFade = (seconds: number, {safe = false} = {}) => [
-  {
-    type: 'world_define_tween',
-    id: 'padFadeOut',
-    x: 320,
-    y: 20,
-    fields: {NAME: 'fade out', CURVE: 'linear'},
-    inputs: {
-      SECONDS: number(seconds),
-      DO: {
-        block: {
-          type: 'world_set_Appearance_OpacityProperty',
-          inputs: {ACTOR: me(), VALUE: number(0)},
-        },
-      },
-    },
-  },
-  {
-    type: 'world_define_tween',
-    id: 'padFadeIn',
-    x: 320,
-    y: 200,
-    fields: {NAME: 'fade in', CURVE: 'linear'},
-    inputs: {
-      SECONDS: number(seconds),
-      DO: {
-        block: {
-          type: 'world_set_Appearance_OpacityProperty',
-          inputs: {ACTOR: me(), VALUE: number(1)},
-        },
-      },
-    },
-  },
+const teleportSafely = () => [
   {
     type: 'world_on_Teleport_StartsTravellingEvent',
     x: 320,
@@ -599,56 +600,19 @@ const teleportFade = (seconds: number, {safe = false} = {}) => [
     inputs: {ACTOR: me()},
     next: {
       block: {
-        type: 'world_play_tween',
-        fields: {TWEEN: 'padFadeOut'},
-        inputs: {ACTOR: me()},
-        // …AND, FOR THE PILOT, SAFE FOR THE TRIP. This project's decision and
-        // not the pad's: a traveller is held still for the duration, so an
-        // enemy walking towards a pad would otherwise make using one a
-        // punishment. Teleport used to grant this itself and had no business
-        // to — whether a body can be hurt is not a fact about moving it, and
-        // reaching for Health made every project that wanted a pad take on a
-        // rule about damage. The event is the seam: it says when a trip
-        // starts, and this says what that means here.
-        //
-        // The trip's own length, read off the traveller rather than written
-        // twice, so a slower pad is a safer one without anybody remembering
-        // both numbers.
-        ...(safe
-          ? {
-              next: {
-                block: {
-                  type: 'world_do_Health_BeSafeForSecondsAction',
-                  inputs: {
-                    ACTOR: me(),
-                    // `VALUE`, which is what a designed block calls its one
-                    // parameter's socket — read off how Teleport itself called
-                    // this before the call moved, not guessed from the
-                    // parameter's name.
-                    VALUE: {
-                      block: {
-                        type: 'world_get_Teleport_TravelSecondsProperty',
-                        inputs: {ACTOR: me()},
-                      },
-                    },
-                  },
-                },
-              },
-            }
-          : {}),
-      },
-    },
-  },
-  {
-    type: 'world_on_Teleport_ArrivesEvent',
-    x: 320,
-    y: 480,
-    inputs: {ACTOR: me()},
-    next: {
-      block: {
-        type: 'world_play_tween',
-        fields: {TWEEN: 'padFadeIn'},
-        inputs: {ACTOR: me()},
+        type: 'world_do_Health_BeSafeForSecondsAction',
+        inputs: {
+          ACTOR: me(),
+          // `VALUE`, which is what a designed block calls its one parameter's
+          // socket — read off how Teleport itself called this before the call
+          // moved, not guessed from the parameter's name.
+          VALUE: {
+            block: {
+              type: 'world_get_Teleport_TravelSecondsProperty',
+              inputs: {ACTOR: me()},
+            },
+          },
+        },
       },
     },
   },
@@ -906,7 +870,7 @@ const PILOT_ACTOR = JSON.stringify({
           }),
         },
       },
-      ...teleportFade(PILOT_TRIP / 2, {safe: true}),
+      ...teleportSafely(),
     ],
   },
 });
@@ -1230,7 +1194,6 @@ const enemyActor = (
             ]),
           },
         },
-        ...teleportFade(ENEMY_TRIP / 2),
       ],
     },
   });
@@ -1382,7 +1345,32 @@ const switchActor = (name: string, colour: string) =>
     },
   });
 
-const padActor = (name: string, colour: string) =>
+/**
+ * The pad — ONE kind, however many networks a room has.
+ *
+ * Its colour is a property rather than a fact about the file, so the three
+ * networks are three values on six placements (`PADS`) and not three files.
+ * The picture follows: the drawing below fills with `pad colour`, so a pad
+ * painted at placement time draws itself painted, and `placementKey` caches
+ * one picture per distinct colour.
+ *
+ * AND IT PERFORMS THE FADE, on whatever steps on it. What a trip looks like is
+ * the pad's business — it is the thing doing something to the traveller — and
+ * writing it here is what stops the same two tweens and two handlers being
+ * copied into every kind that teleports. They were in five actor files before
+ * this: the Pilot, the Robot, the Ball, the Rocket and the Bat, five copies of
+ * one idea, and a sixth traveller would have arrived with no fade and nothing
+ * saying why.
+ *
+ * `sends` and `receives` are the pad's own events (`rules/teleport`), raised
+ * beside the traveller's `starts travelling` and `arrives`. The traveller
+ * reaches this handler as `event actor`.
+ *
+ * A TWEEN IS A FUNCTION OF ONE ACTOR, defined in the file that holds it and
+ * called with whoever it is played on — so the pad's `fade out` runs on the
+ * traveller without the traveller defining anything.
+ */
+const padActor = (seconds: number) =>
   JSON.stringify({
     blocks: {
       blocks: [
@@ -1390,15 +1378,9 @@ const padActor = (name: string, colour: string) =>
           type: 'world_actor',
           x: 20,
           y: 20,
-          fields: {NAME: name},
+          fields: {NAME: 'Pad'},
           next: {
-            block: stack([
-              useTrait('Teleport#IsATeleportPadTrait'),
-              {
-                type: 'world_set_Teleport_PadColourProperty',
-                inputs: {ACTOR: me(), VALUE: swatch(colour)},
-              },
-            ]),
+            block: stack([useTrait('Teleport#IsATeleportPadTrait')]),
           },
         },
         {
@@ -1417,6 +1399,64 @@ const padActor = (name: string, colour: string) =>
                 }),
                 rectangle(0, 22, 32, 10),
               ]),
+            },
+          },
+        },
+        {
+          type: 'world_define_tween',
+          id: 'padFadeOut',
+          x: 320,
+          y: 20,
+          fields: {NAME: 'fade out', CURVE: 'linear'},
+          inputs: {
+            SECONDS: number(seconds),
+            DO: {
+              block: {
+                type: 'world_set_Appearance_OpacityProperty',
+                inputs: {ACTOR: me(), VALUE: number(0)},
+              },
+            },
+          },
+        },
+        {
+          type: 'world_define_tween',
+          id: 'padFadeIn',
+          x: 320,
+          y: 200,
+          fields: {NAME: 'fade in', CURVE: 'linear'},
+          inputs: {
+            SECONDS: number(seconds),
+            DO: {
+              block: {
+                type: 'world_set_Appearance_OpacityProperty',
+                inputs: {ACTOR: me(), VALUE: number(1)},
+              },
+            },
+          },
+        },
+        {
+          type: 'world_on_Teleport_SendsEvent',
+          x: 320,
+          y: 380,
+          inputs: {ACTOR: me()},
+          next: {
+            block: {
+              type: 'world_play_tween',
+              fields: {TWEEN: 'padFadeOut'},
+              inputs: {ACTOR: {block: {type: 'world_event_actor'}}},
+            },
+          },
+        },
+        {
+          type: 'world_on_Teleport_ReceivesEvent',
+          x: 320,
+          y: 500,
+          inputs: {ACTOR: me()},
+          next: {
+            block: {
+              type: 'world_play_tween',
+              fields: {TWEEN: 'padFadeIn'},
+              inputs: {ACTOR: {block: {type: 'world_event_actor'}}},
             },
           },
         },
@@ -1518,7 +1558,6 @@ const BAT_ACTOR = JSON.stringify({
           },
         },
       },
-      ...teleportFade(ENEMY_TRIP / 2),
     ],
   },
 });
@@ -1871,7 +1910,6 @@ const ROBOT_ACTOR = JSON.stringify({
           },
         },
       },
-      ...teleportFade(ENEMY_TRIP / 2),
     ],
   },
 });
@@ -2241,22 +2279,12 @@ export const JETPACK_SPEC: ProjectSpec = {
       contents: blobActor(),
       folderId: 'actors',
     },
-    padBlueActor: {
-      name: 'padBlue.actor',
+    padActor: {
+      name: 'pad.actor',
       language: 'actor',
-      contents: padActor('Blue Pad', '#3f7fe0'),
-      folderId: 'actors',
-    },
-    padGreenActor: {
-      name: 'padGreen.actor',
-      language: 'actor',
-      contents: padActor('Green Pad', '#3fbf6a'),
-      folderId: 'actors',
-    },
-    padRedActor: {
-      name: 'padRed.actor',
-      language: 'actor',
-      contents: padActor('Red Pad', '#e0484a'),
+      // Half the shortest trip in the room, so a traveller is invisible for
+      // the middle of it rather than fading the whole way across.
+      contents: padActor(ENEMY_TRIP / 2),
       folderId: 'actors',
     },
     barActor: {

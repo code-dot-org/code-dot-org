@@ -15,6 +15,7 @@
 
 import {beforeAll, describe, expect, it} from 'vitest';
 
+import {parseRuleMeta} from '../../blockly/ruleMeta';
 import {ActorBuilder, WorldBuilder, Vector, type World} from '../../engine';
 import {PositionProperty} from '../../engine/rules/spatial';
 
@@ -100,6 +101,34 @@ const stage = (falls: boolean) => {
 };
 
 describe('a traveller that comes to rest', () => {
+  it('tells both the traveller and the pads about a trip', () => {
+    // TWO SIDES, DELIBERATELY, and the same pair `Collection` declares. A
+    // traveller's `starts travelling` is about the BODY, so a handler for it
+    // lives with the body — and what a trip LOOKS like is not the body's
+    // business, it is the pad's, which is the thing doing something to
+    // whatever steps on it. Hung on the traveller, the jetpack's fade was
+    // written into five actor files and a sixth traveller would have arrived
+    // with no fade and nothing saying why.
+    //
+    // The pad's side reaches the traveller as `event actor`, so one handler on
+    // one pad covers every traveller there will ever be.
+    const meta = parseRuleMeta(
+      'rules/teleport',
+      ALL_STOCK_SOURCES['rules/teleport'],
+    )!;
+    const named = (trait: string) =>
+      meta.events
+        .filter(event => event.ownerTraitId === trait)
+        .map(event => event.name)
+        .sort();
+
+    expect(named('Uses_Teleport_Pads')).toEqual([
+      'arrives',
+      'starts travelling',
+    ]);
+    expect(named('Is_a_Teleport_Pad')).toEqual(['receives', 'sends']);
+  });
+
   it('lands on the far pad instead of falling through its floor', () => {
     const {world, traveller, far} = stage(true);
     run(world, 2);

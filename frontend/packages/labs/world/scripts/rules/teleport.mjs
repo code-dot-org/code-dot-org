@@ -22,6 +22,7 @@ import {
   no,
   not,
   over,
+  param,
   sameActor,
   thisActor,
   time,
@@ -109,6 +110,29 @@ pad.uses(CanCollide);
  * than remember which channel is which. Pads match on this exactly.
  */
 const padColour = pad.color('pad colour', '#4da3ff');
+
+/**
+ * `when ⟨pad⟩ sends ⟨traveller⟩` — the PAD's side of a trip.
+ *
+ * The same two-sidedness `Collection` has, and for the same reason. `starts
+ * travelling` says a body is on its way and is about the BODY, so a handler
+ * for it lives with the body: to fade five travellers out you write the fade
+ * five times, once per kind, and a sixth kind that teleports arrives with no
+ * fade and nothing saying why.
+ *
+ * What a trip LOOKS like is not a fact about the traveller, though. It is the
+ * pad's — the pad is the thing doing something to whatever steps on it — so
+ * the pad needs an event of its own, and this is it. One handler on one pad
+ * covers every traveller there will ever be, and reaches the traveller as
+ * `event actor`.
+ *
+ * BOTH SIDES ARE RAISED, always, because which one a project wants is the
+ * project's business. A game where only the player fades wants the traveller's
+ * side; a game where every pad flashes wants this one.
+ */
+const sends = pad.event(['sends', param('who', 'actor')]);
+/** …and the far pad, which is a different pad and a different moment. */
+const receives = pad.event(['receives', param('who', 'actor')]);
 
 export const IsATeleportPad = rule.traitRef('Is a Teleport Pad');
 
@@ -292,6 +316,10 @@ export const usePad = travels.block({
                 held.set(thisActor(), yes()),
                 holdStill(),
                 startsTravelling({}, thisActor()),
+                doc(
+                  'The pad it is leaving hears about it too, so that what a departure looks like can be written once on the pad rather than once per kind of traveller.',
+                ),
+                sends({who: thisActor()}, here.get()),
               ],
             ],
           ]),
@@ -358,6 +386,10 @@ travels.step('travel', 'push', [
                 ),
                 clear.set(thisActor(), no()),
                 arrives({}, thisActor()),
+                doc(
+                  'And the pad it arrived at, which is a different pad from the one that sent it.',
+                ),
+                receives({who: thisActor()}, goingTo.of(thisActor())),
               ],
             ],
           ]),
