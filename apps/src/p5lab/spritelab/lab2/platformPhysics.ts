@@ -97,6 +97,78 @@ function flipWallsY(walls: PhysicsBox[], view: View): PhysicsBox[] {
   }));
 }
 
+// Broadphase slack (px) past a mover's frame journey: covers the
+// thin-contact allowance, the contact slack, and the push-out (at most one
+// wall half, already inside the query's wall-half expansion).
+const BROADPHASE_PAD = MIN_SOLID_OVERLAP + 1;
+
+interface WallIndex {
+  cell: number;
+  maxHalf: number;
+  buckets: Map<string, number[]>;
+}
+
+/**
+ * Bucket wall boxes into a coarse grid, one entry per covered cell. Walls
+ * are static within a frame and a painted world holds hundreds, so each
+ * mover reads its neighborhood instead of testing every wall (formerly
+ * movers x walls, ~330k box tests per frame on a full default grid).
+ */
+export function buildWallIndex(
+  boxes: {x: number; y: number; halfW: number; halfH: number}[]
+): WallIndex {
+  let maxHalf = 1;
+  boxes.forEach(box => {
+    maxHalf = Math.max(maxHalf, box.halfW, box.halfH);
+  });
+  const cell = 2 * maxHalf;
+  const buckets = new Map<string, number[]>();
+  boxes.forEach((box, i) => {
+    const x0 = Math.floor((box.x - box.halfW) / cell);
+    const x1 = Math.floor((box.x + box.halfW) / cell);
+    const y0 = Math.floor((box.y - box.halfH) / cell);
+    const y1 = Math.floor((box.y + box.halfH) / cell);
+    for (let cx = x0; cx <= x1; cx++) {
+      for (let cy = y0; cy <= y1; cy++) {
+        const key = `${cx},${cy}`;
+        let list = buckets.get(key);
+        if (!list) {
+          list = [];
+          buckets.set(key, list);
+        }
+        list.push(i);
+      }
+    }
+  });
+  return {cell, maxHalf, buckets};
+}
+
+/**
+ * The wall indices whose boxes can matter to a body moving within the given
+ * rectangle, in the wall array's order — so resolving against them is
+ * identical to resolving against all walls.
+ */
+export function wallsNear(
+  index: WallIndex,
+  x0: number,
+  y0: number,
+  x1: number,
+  y1: number
+): number[] {
+  const {cell, buckets} = index;
+  const cx0 = Math.floor(x0 / cell);
+  const cx1 = Math.floor(x1 / cell);
+  const cy0 = Math.floor(y0 / cell);
+  const cy1 = Math.floor(y1 / cell);
+  const found = new Set<number>();
+  for (let cx = cx0; cx <= cx1; cx++) {
+    for (let cy = cy0; cy <= cy1; cy++) {
+      buckets.get(`${cx},${cy}`)?.forEach(i => found.add(i));
+    }
+  }
+  return [...found].sort((a, b) => a - b);
+}
+
 // Flip a sprite's vertical state across the view's horizontal midline (see
 // the negative-gravity branch below).
 function flipSpriteY(sprite: PhysicsSprite, view: View): void {
@@ -139,6 +211,7 @@ export function resolvePlatformPhysics(
     halfW: wallHalf(wall),
     halfH: wallHalf(wall),
   }));
+  const index = buildWallIndex(boxes);
   moved.forEach(({sprite, x: curX, y: curY}) => {
     // Resolution runs on the feet-anchored body box: y below is the BODY
     // center, `drop` below the sprite's image center.
@@ -149,7 +222,22 @@ export function resolvePlatformPhysics(
     const dy = curY + drop - prev.y;
     let x = prev.x + dx;
     let y = prev.y;
-    boxes.forEach(wall => {
+    // The body-center y that puts the art top at 0 (the weightless clamp
+    // below snaps a body wholly above the view down to it).
+    const artBoxTopY = halfH + 2 * drop;
+    // Everything this body's frame journey can touch: the prev->cur box,
+    // expanded by the body, the largest wall, and the resolution slack —
+    // plus, weightless, the closed top's landing spot.
+    const padX = halfW + index.maxHalf + BROADPHASE_PAD;
+    const padY = halfH + index.maxHalf + BROADPHASE_PAD;
+    const nearby = wallsNear(
+      index,
+      Math.min(prev.x, curX) - padX,
+      Math.min(prev.y, curY + drop) - padY,
+      Math.max(prev.x, curX) + padX,
+      Math.max(prev.y, curY + drop, weightless ? artBoxTopY : -Infinity) + padY
+    ).map(i => boxes[i]);
+    nearby.forEach(wall => {
       // A wall side only blocks a body that was on its clear side last
       // frame (a two-row-tall player whose head brushes a head-height
       // block must not snap on top of it), and only when the vertical
@@ -180,7 +268,7 @@ export function resolvePlatformPhysics(
     // below only arbitrate corners reached with horizontal movement.
     const vertical = Math.abs(dx) <= CONTACT_EPSILON;
     let landed = false;
-    boxes.forEach(wall => {
+    nearby.forEach(wall => {
       if (
         Math.abs(x - wall.x) >= halfW + wall.halfW ||
         Math.abs(y - wall.y) >= halfH + wall.halfH
@@ -224,8 +312,6 @@ export function resolvePlatformPhysics(
     }
     // Weightless, nothing brings a player back from above the view, so the
     // top is closed too — at the art box, like the sides, so no head is cut.
-    // This is the body-center y that puts the art top at 0.
-    const artBoxTopY = halfH + 2 * drop;
     if (weightless && y < artBoxTopY) {
       y = artBoxTopY;
     }
@@ -235,7 +321,7 @@ export function resolvePlatformPhysics(
     // way. Per-frame sideways movement is smaller than the allowance, so
     // overlap entered from a clear side always resolves; deeper overlap
     // (a sprite spawned inside a wall) is left alone.
-    boxes.forEach(wall => {
+    nearby.forEach(wall => {
       const penX = halfW + wall.halfW - Math.abs(x - wall.x);
       const penY = halfH + wall.halfH - Math.abs(y - wall.y);
       // Contact-slack tolerance, not zero: resting feet recompute the

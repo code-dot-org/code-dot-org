@@ -1,4 +1,6 @@
 import {
+  buildWallIndex,
+  wallsNear,
   hasSupportAhead,
   hasSupportAt,
   isAtEdge,
@@ -455,5 +457,69 @@ describe('platformPhysics with trimmed-art dimensions', () => {
     const xs = new Set<number>();
     run(player, walls, 40, 0, s => xs.add(s.position.x));
     expect([...xs]).toEqual([175]);
+  });
+});
+
+describe('wall broadphase', () => {
+  const box = (x: number, y: number, half = 8) => ({
+    x,
+    y,
+    halfW: half,
+    halfH: half,
+  });
+
+  it('finds every wall overlapping the queried rectangle', () => {
+    const boxes = [];
+    for (let x = 0; x < 400; x += 16) {
+      for (let y = 0; y < 400; y += 16) {
+        boxes.push(box(x + 8, y + 8));
+      }
+    }
+    const index = buildWallIndex(boxes);
+    const hits = wallsNear(index, 100, 100, 140, 140);
+    const brute = boxes
+      .map((b, i) => ({b, i}))
+      .filter(
+        ({b}) =>
+          b.x + b.halfW >= 100 - index.cell &&
+          b.x - b.halfW <= 140 + index.cell &&
+          b.y + b.halfH >= 100 - index.cell &&
+          b.y - b.halfH <= 140 + index.cell
+      );
+    const bruteOverlapping = boxes
+      .map((b, i) => ({b, i}))
+      .filter(
+        ({b}) =>
+          b.x + b.halfW >= 100 &&
+          b.x - b.halfW <= 140 &&
+          b.y + b.halfH >= 100 &&
+          b.y - b.halfH <= 140
+      )
+      .map(({i}) => i);
+    bruteOverlapping.forEach(i => expect(hits).toContain(i));
+    expect(hits.length).toBeLessThanOrEqual(brute.length);
+  });
+
+  it('returns candidates in wall order', () => {
+    const boxes = [box(50, 50), box(10, 10), box(60, 60)];
+    const index = buildWallIndex(boxes);
+    const hits = wallsNear(index, 0, 0, 80, 80);
+    expect(hits).toEqual([...hits].sort((a, b) => a - b));
+    expect(hits).toContain(0);
+    expect(hits).toContain(1);
+    expect(hits).toContain(2);
+  });
+
+  it('a neighborhood query returns far fewer walls than the world holds', () => {
+    const boxes = [];
+    for (let x = 0; x < 400; x += 16) {
+      for (let y = 0; y < 400; y += 16) {
+        boxes.push(box(x + 8, y + 8));
+      }
+    }
+    const index = buildWallIndex(boxes);
+    const hits = wallsNear(index, 190, 190, 230, 230);
+    expect(boxes.length).toBeGreaterThan(600);
+    expect(hits.length).toBeLessThan(30);
   });
 });
