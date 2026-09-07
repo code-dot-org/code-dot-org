@@ -18,6 +18,17 @@
   overflow: hidden;
 }
 
+/* Fullscreen. The panel is normally a flex child sized by the layout around
+   it; with none of that around it, it has to say its own size. `:fullscreen`
+   would do as a selector, but the class is set from the same event the button
+   reads (`fullscreenchange`), so the styling and the icon cannot disagree
+   about which state the panel is in. */
+.fullscreen {
+  width: 100vw;
+  height: 100vh;
+  background: var(--background-neutral-primary, #fff);
+}
+
 /* Shown when no sandbox origin is configured. */
 .notConfigured {
   flex: 1;

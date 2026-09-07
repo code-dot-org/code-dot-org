@@ -215,6 +215,12 @@ export async function start(): Promise<void> {
       binding = null;
       runningWorld = null;
       baseline = null;
+    } else if (data?.type === ToPreviewMessage.FOCUS) {
+      // The `#game` div, which is focusable because `PhaserBinding` gives it a
+      // tabindex, and which is where the keyboard listeners are. `preventScroll`
+      // because focusing an element the page can scroll to would scroll to it,
+      // and the one thing this must not do is move the game.
+      document.getElementById('game')?.focus({preventScroll: true});
     } else if (data?.type === ToPreviewMessage.COLORS) {
       // Paint the letterbox (page background) and outline the game box with a 1px
       // border. The border is a box-shadow on the game container, which the

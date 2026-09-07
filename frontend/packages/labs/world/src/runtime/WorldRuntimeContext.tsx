@@ -81,6 +81,14 @@ interface WorldRuntimeValue {
   /** Hand the preview sandbox the lab's resolved letterbox / border colors. */
   setPreviewColors: (background: string, border: string) => void;
   /**
+   * Put the keyboard on the game.
+   *
+   * The sandbox has to do it: what must end up focused is the `#game` div
+   * inside the frame, and focusing the frame from outside leaves `body` active
+   * where no keyboard listener is (`sandbox/worldPreviewManager`).
+   */
+  focusPreview: () => void;
+  /**
    * Introspect the actor templates (map editor): picker thumbnails and inspector
    * property schemas, both keyed by actor type (module path).
    */
@@ -561,6 +569,7 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
     restart,
     setPreviewColors: (background, border) =>
       void managers.current?.preview.setColors(background, border),
+    focusPreview: () => managers.current?.preview.focusGame(),
     runCheck,
     getActorInfo,
     generatedProject: generateBlocklyFiles,

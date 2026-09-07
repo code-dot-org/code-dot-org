@@ -203,6 +203,27 @@ export class WorldPreviewManager {
     );
   }
 
+  /**
+   * Put the keyboard on the game.
+   *
+   * Asked of the sandbox rather than done from here, because what has to end
+   * up focused is the `#game` div INSIDE the frame — the keyboard listeners
+   * are on it, so that keys reach a game somebody is looking at and not one
+   * scrolled off the page (`PhaserBinding`). `iframe.focus()` from this side
+   * gives the frame's document focus with `body` active, and a keydown on
+   * `body` never reaches a listener on `#game`.
+   *
+   * Not awaited on `ready`, unlike the rest: this is answering something a
+   * person just did, and a focus that arrives after they have started typing
+   * is worse than one that does not arrive at all.
+   */
+  focusGame(): void {
+    this.iframe.contentWindow?.postMessage(
+      {type: ToPreviewMessage.FOCUS},
+      this.sandboxOrigin,
+    );
+  }
+
   destroy(): void {
     window.removeEventListener('message', this.onMessage);
     this.iframe.remove();

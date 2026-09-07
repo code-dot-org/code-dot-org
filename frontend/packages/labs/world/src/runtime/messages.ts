@@ -99,7 +99,24 @@ export const ToPreviewMessage = {
   STOP: 'stop',
   COLORS: 'colors',
   THUMBNAILS: 'thumbnails',
+  /**
+   * Put the keyboard on the game.
+   *
+   * IT HAS TO BE ASKED FOR, because the thing that must end up focused is
+   * inside the sandbox and the lab is on the other side of an origin. The
+   * keyboard listeners sit on the `#game` div rather than on the window, so
+   * that keys only reach a game somebody is looking at (`PhaserBinding`) —
+   * and focusing the IFRAME from outside is not the same thing: the frame's
+   * document gets focus with `body` active, a keydown targets `body`, and a
+   * listener on `#game` never sees it because events go up and `body` is not
+   * inside it.
+   */
+  FOCUS: 'focus',
 } as const;
+
+export interface FocusRequest {
+  type: typeof ToPreviewMessage.FOCUS;
+}
 
 /** Import and run the module at `moduleUrl` (served same-origin by the SW). */
 export interface LoadMessage {
@@ -179,7 +196,8 @@ export type ToPreview =
   | LoadMessage
   | StopMessage
   | ColorsMessage
-  | ThumbnailsMessage;
+  | ThumbnailsMessage
+  | FocusRequest;
 
 // ── Preview surface → lab ────────────────────────────────────────────────────
 
