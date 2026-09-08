@@ -523,7 +523,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   }, [visibleExtraTabs]);
 
   const getTabInfo = (tab: string): {title: string; icon: string} => {
-    if (tab in builtInTabInfo) {
+    if (Object.hasOwn(builtInTabInfo, tab)) {
       return builtInTabInfo[tab as Tabs];
     }
     return extraTabInfo[tab];
@@ -532,6 +532,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const hasTabs = useMemo(() => {
     return Object.keys(availableTabs).length > 0;
   }, [availableTabs]);
+
+  const displayedTab =
+    currentTab !== undefined && Object.hasOwn(availableTabs, currentTab)
+      ? currentTab
+      : getTypedKeys(availableTabs)[0];
 
   // useLayoutEffect, not useEffect, so a caller sizing its own layout
   // around this panel (see onHasTabsChange) sees the right value on the
@@ -564,7 +569,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   useEffect(() => {
     if (currentTab === undefined && Object.keys(availableTabs).length > 0) {
       setCurrentTab(getTypedKeys(availableTabs)[0]);
-    } else if (currentTab && !(currentTab in availableTabs)) {
+    } else if (currentTab && !Object.hasOwn(availableTabs, currentTab)) {
       setCurrentTab(getTypedKeys(availableTabs)[0]);
     }
   }, [currentTab, availableTabs]);
@@ -781,7 +786,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                       size="medium"
                       className={classNames(
                         styles.tabButton,
-                        tab === currentTab && styles.selected,
+                        tab === displayedTab && styles.selected,
                         tab === Tabs.TeachersOnly && styles.teachersOnlyTab
                       )}
                       id={`resource-panel-tab-button-${tab}`}
@@ -853,13 +858,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         {!isStandaloneCollapsed && hasTabs && (
           <div className={styles.panels}>
             <PanelContainer
-              id={currentTab || 'resource-panel'}
-              headerContent={currentTab && getTabInfo(currentTab).title}
+              id={displayedTab || 'resource-panel'}
+              headerContent={displayedTab && getTabInfo(displayedTab).title}
               headerClassName={headerClassName}
               rightHeaderContent={
-                currentTab === Tabs.AiTutor ? (
+                displayedTab === Tabs.AiTutor ? (
                   <AiChatHeaderButtons />
-                ) : currentTab === Tabs.Backpack ? (
+                ) : displayedTab === Tabs.Backpack ? (
                   <BackpackHeaderButtons
                     incrementBackpackRefreshKey={() =>
                       setBackpackRefreshKey(prev => prev + 1)
@@ -878,8 +883,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                   renderTabContentPane(
                     'instructions-aitutor-shared',
                     availableTabs[Tabs.AiTutor],
-                    currentTab !== Tabs.Instructions &&
-                      currentTab !== Tabs.AiTutor,
+                    displayedTab !== Tabs.Instructions &&
+                      displayedTab !== Tabs.AiTutor,
                     Tabs.AiTutor
                   )}
                 {getTypedKeys(availableTabs).map(tab => {
@@ -896,14 +901,14 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                   return renderTabContentPane(
                     tab,
                     availableTabs[tab],
-                    tab !== currentTab,
+                    tab !== displayedTab,
                     refTab
                   );
                 })}
               </div>
               {!hideAllNavigation &&
                 (hideInstructionsNavigation ||
-                  currentTab !== Tabs.Instructions) &&
+                  displayedTab !== Tabs.Instructions) &&
                 !isProjectLevel && (
                   <NavigationArea
                     {...instructionsProps}
