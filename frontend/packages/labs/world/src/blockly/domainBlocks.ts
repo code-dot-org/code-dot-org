@@ -7926,11 +7926,17 @@ const worldText = defineBlock({
 const worldAsText = defineBlock({
   type: 'world_as_text',
   message0: '\u201c %1 \u201d %2',
-  // INLINE, alone among the three: the value belongs BETWEEN the quotes,
-  // which is what makes this read as a string rather than as a block with two
-  // sockets. What it costs is that a chain continuing past one of these nests
-  // by a level — an adapter is the end of a run more often than the middle.
   args0: [{type: 'input_value', name: 'VALUE'}, CHAIN_INPUT],
+  // INLINE, alone among the three, and Blockly is why it cannot be both.
+  // `inputsInline` is a fact about a BLOCK rather than about an input, so this
+  // one cannot have its value sitting between the quotes AND its chain hanging
+  // off the right edge; `EndRowInput` — a `\n` in a message — breaks the row
+  // without making an inline input external, so it buys nothing here.
+  //
+  // Of the two shapes available, this is the one where the value reads as what
+  // it is: quoted words. What it costs is that a chain continuing PAST an
+  // adapter nests by a level, which is only paid when one is in the middle of
+  // a line rather than at the end of it.
   inputsInline: true,
   output: 'String',
   style: 'text_blocks',

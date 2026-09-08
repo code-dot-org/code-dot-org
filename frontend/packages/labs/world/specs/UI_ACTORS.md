@@ -373,12 +373,18 @@ anything and stringified it would make `"n = " + 1 + 2` say "n = 12" and
 are read, meaning two different things. A chain of strings cannot do that, and
 the one place a value becomes words is a block somebody put there.
 
-**The socket is an OUTER PIP**, not an inline one, which is what keeps a chain
-flat: an inline input draws the next block inside this one, so three links are
-three nested boxes. `as text` is the exception and keeps its value inline,
-because the value belongs between the quotes — the cost is that a chain
-continuing past one nests by a level, and an adapter is the end of a run more
-often than the middle.
+**The chain socket is an OUTER PIP**, not an inline one, which is what keeps a
+line flat: an inline input draws the next block INSIDE this one, so three links
+would be three nested boxes.
+
+`as text` is the exception, and not by preference. `inputsInline` is a fact
+about a BLOCK rather than about an input, so this one cannot have its value
+sitting between the quotes AND its chain hanging off the right edge — Blockly
+offers no per-input control, and `EndRowInput` breaks a row without making an
+inline input external. Of the two shapes available it takes the one where the
+value reads as quoted words; the cost is that a chain continuing past an
+adapter nests by a level, which is only paid when one is in the middle of a
+line rather than at the end of it.
 
 `text_join` is still offered, and should not be for long: two ways to join two
 words is one more than a drawer should hold. Taking it out means converting the
