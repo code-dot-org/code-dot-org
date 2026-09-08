@@ -1479,19 +1479,6 @@ describe('what the newer demos show', () => {
     expect([...world.actors].length).toBeLessThan(5);
   });
 
-  it('writing: one label holds still while the other counts', () => {
-    // Half of what the rule does is NOT change, and a strip with only the
-    // counter in it would read as a rule about numbers.
-    const {cast} = play(RULE_DEMOS.writing);
-    const shown = (who: unknown) =>
-      (who as {get(p: unknown): string}).get(cast.text as never);
-
-    expect(shown(cast.label)).toBe('SCORE');
-    // Six beats at 0.4s, the first on the first frame: 0.017, 0.417 … 2.017,
-    // and the seventh would fall at 2.417, just inside a 2.5 second run.
-    expect(Number(shown(cast.counter))).toBeGreaterThan(100);
-  });
-
   it('carry: the rider goes with the platform and the bystander does not', () => {
     // Two identical boxes and one trait between them — which is what makes the
     // strip a demonstration rather than a box with a velocity.
@@ -1575,7 +1562,10 @@ describe('what the newer demos show', () => {
     const speaker = cast.speaker as {get(p: unknown): unknown};
 
     expect(speaker.get(of('rules/conversation', 'LineProperty'))).toBe(0);
-    expect(speaker.get(of('rules/writing', 'TextProperty'))).toBe('');
+    // The speaker's OWN words. `text` was the Writing rule's, and is the
+    // stock Label's own property now — which a rule demo cannot reach, so its
+    // speaker declares one the way a Label does (`rules/demos/conversation`).
+    expect(speaker.get(cast.text)).toBe('');
   });
 
   it('every demo asks only for letters the font can draw', () => {

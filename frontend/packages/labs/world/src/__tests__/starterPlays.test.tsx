@@ -138,7 +138,7 @@ describe('the project a learner opens', () => {
     // scoreboard's handler writes it into the text Writing draws. Five files
     // have to agree, and a break anywhere shows as a board that never changes.
     const {world, modules} = await opened();
-    const text = modules['rules/writing'].TextProperty;
+    const text = modules['actors/label'].TextProperty;
     const board = () =>
       actor(world, 'Scoreboard')!.get(text as never) as unknown as string;
 
@@ -249,7 +249,7 @@ describe('the project a learner opens', () => {
     // board says so. Held right the whole way: the crawler walks its beat back
     // over the player, and the mercy time paces the hits.
     const {world, modules} = await opened();
-    const text = modules['rules/writing'].TextProperty;
+    const text = modules['actors/label'].TextProperty;
     const board = () =>
       actor(world, 'Scoreboard')!.get(text as never) as unknown as string;
 
@@ -300,12 +300,18 @@ describe('the same project, said in one file', () => {
   // So this plays it and asks for the same answers. Not the same blocks —
   // the point of the pair is that the blocks differ — but the same game.
   it('plays the same as the starter it was made from', async () => {
-    const {world, modules} = await compileProject(
+    const {world} = await compileProject(
       projectFiles(WORLD_SCENARIOS['platformer-single'].source),
     );
-    const text = modules['rules/writing'].TextProperty;
-    const board = () =>
-      actor(world, 'Scoreboard')!.get(text as never) as unknown as string;
+    // ASKED OF THE ACTOR, not of a module. This telling's Scoreboard is the
+    // WORLD's own, so its `text` is a `const` inside the block that defines it
+    // and no module exports it — the same reason the bar below is read this
+    // way. `ownProperties` is what the map editor's inspector reads, too.
+    const board = () => {
+      const one = actor(world, 'Scoreboard')!;
+      const text = one.ownProperties().find(property => property.id === 'text');
+      return one.get(text as never) as unknown as string;
+    };
 
     expect(board()).toBe('SCORE 0');
 

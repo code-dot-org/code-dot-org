@@ -67,6 +67,7 @@
 // the map editor exists for the other one.
 
 import {healthBarStep, HEALTH_BAR_SUBJECT} from '../actors/stock/healthBar';
+import {LABEL_PROPERTIES} from '../actors/stock/label';
 import {
   PROGRESS_BAR_PROPERTIES,
   progressBarDrawing,
@@ -124,9 +125,16 @@ const pascalId = (blockId: string) =>
 /** `⟨this actor⟩`, which inside a hat means the actor the event fired for. */
 const me = () => ({block: {type: 'world_this_actor'}});
 
-/** `set text of ⟨who⟩ to …` — the scoreboard's only verb. */
+/**
+ * `set text of ⟨who⟩ to …` — the scoreboard's only verb.
+ *
+ * Its OWN property, keyed by this world plus the block that defines it: a
+ * world-local actor cannot act like the Label file, so it declares the four a
+ * Label declares and everything here names them that way.
+ */
+const boardOwner = () => `WorldsMain${pascalId(SCOREBOARD)}`;
 const setText = (who: object, value: object) => ({
-  type: 'world_set_Writing_TextProperty',
+  type: `world_set_${boardOwner()}_TextProperty`,
   inputs: {ACTOR: who, VALUE: {block: value}},
 });
 
@@ -300,8 +308,11 @@ const SINGLE_WORLD = JSON.stringify({
         ),
         drawingBlock(progressBarDrawing(`WorldsMain${pascalId(HEALTH_BAR)}`)),
       ]),
+      // ITS OWN FOUR TEXT PROPERTIES, for the reason the Health Bar above
+      // declares a bar's three: `acts like ⟨Label⟩` names an actor FILE, and
+      // this scenario's whole point is that it has none.
       defineActor(SCOREBOARD, 'Scoreboard', 2280, [
-        useTrait('Writing#ShowsTextTrait'),
+        ...LABEL_PROPERTIES,
         useTrait('Scoring#WatchesTheScoreTrait'),
         showAs('text'),
         // `this actor`, not `any ⟨Scoreboard⟩`. A definition body runs while
@@ -323,8 +334,12 @@ const SINGLE_WORLD = JSON.stringify({
             },
             DO: {
               block: stack([
-                fill(textOf('TextColorProperty')),
-                drawText(SCOREBOARD_WIDTH / 2, SCOREBOARD_HEIGHT / 2),
+                fill(textOf('TextColorProperty', boardOwner())),
+                drawText(
+                  SCOREBOARD_WIDTH / 2,
+                  SCOREBOARD_HEIGHT / 2,
+                  boardOwner(),
+                ),
               ]),
             },
           },
@@ -460,6 +475,7 @@ const MOVED_IN = [
   'coin',
   'ball',
   'crawler',
+  'label',
   'progressBar',
   'healthBar',
   'scoreboard',

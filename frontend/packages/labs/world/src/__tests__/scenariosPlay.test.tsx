@@ -90,7 +90,7 @@ describe.each(WORLD_SCENARIO_TAGS)('the %s scenario', tag => {
     // it. Nothing structural can tell the two apart, and the render snapshot
     // can.
     const {world, modules} = await built(tag);
-    const text = modules['rules/writing']?.TextProperty;
+    const text = modules['actors/label']?.TextProperty;
     if (!text) {
       return; // The scenario does not hold the Writing rule at all.
     }

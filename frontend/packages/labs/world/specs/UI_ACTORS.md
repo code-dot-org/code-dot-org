@@ -268,7 +268,7 @@ rule is for what is shared — but a chain shares it too, and more exactly: they
 mean the same thing by `text` BECAUSE they are all Labels. The trait was
 standing in for a base class the language could not express.
 
-Two things have to be answered as it goes, and both have answers already:
+Two things had to be answered as it went, and both had answers already:
 
 - **Two projects have no file to act like.** A world-local actor CAN act like
   one — `acts like` emits a call, not the `export const` that gets `define
@@ -297,12 +297,23 @@ block` refused inside a world, and a block scope takes a call quite happily
   learner should have to think about, which is the same reason local actors
   are hoisted above the world block at all.
 
-- **`text needs a drawing` loses its subject.** `blockly/extensions/
-textNeedsDrawing` warns on a `use trait ⟨Shows Text⟩` row in an actor that
-  paints nothing — words nobody will see. With the trait gone the row is `acts
-like ⟨Label⟩`, which BRINGS a drawing, so the warning has nothing left to
-  warn about and goes with it. That is a guard disappearing because the
-  mistake it caught became unmakeable, which is the good way for one to go.
+- **`text needs a drawing` lost its subject.** `blockly/extensions/
+textNeedsDrawing` warned on a `use trait ⟨Shows Text⟩` row in an actor that
+  paints nothing — words nobody will see. There is no such row any more: the
+  common path is `acts like ⟨Label⟩`, which BRINGS a drawing, so that way the
+  mistake is unmakeable. It is still makeable by declaring the four properties
+  and painting nothing, which is what a world-local actor does — so what went
+  is a guard on a row that no longer exists, and the narrower case has none.
+
+One thing was NOT foreseen, and it is the one worth remembering. An actor may
+SET its own property in its own definition chain — the Label declares `text`
+and sets it to "Label" three rows later, which is an ordinary thing to write.
+The declarations were emitted after the whole of that chain, so the row read a
+`const` in its temporal dead zone and the module would not load: "Cannot access
+'TextProperty' before initialization". It was unreachable while the four were a
+rule's, because an imported name is hoisted and one declared here is not. The
+assembler puts them straight after `const actor = …` now, which is the order a
+world's own actor already had (`assembleActorModule`).
 
 What is genuinely lost is `for each actor where ⟨has trait ⟨Shows Text⟩⟩` —
 "every label in this game". Nothing in the library asks it, and a kind is not

@@ -9,8 +9,7 @@
 //
 // WHAT IT WRITES, all of it in the actor:
 //
-//   actors/<target>.actor    use trait ⟨Writing#Shows Text⟩
-//                            use trait ⟨Time#Has a Timer⟩
+//   actors/<target>.actor    use trait ⟨Time#Has a Timer⟩
 //
 //                            define read-only string ⟨the whole line⟩
 //                            define number ⟨letters a second⟩ = 20
@@ -46,7 +45,7 @@ import type {Enhancement, EnhanceTarget} from './enhancements';
 import {addRoot, append, holds, type BlockJson} from './patch';
 
 /** The rules the two traits come from, in the order they are elected in. */
-const RULES = ['Writing', 'Time'];
+const RULES = ['Time'];
 
 /** The `define actor` this patch lands under — a file's only one. */
 const ROOT = {type: 'world_actor'};

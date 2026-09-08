@@ -333,12 +333,6 @@ const SPEC: ProjectSpec = {
       contents: portraitActor,
       folderId: 'actors',
     },
-    'rule-writing': {
-      name: 'writing.rule',
-      language: 'rule',
-      contents: referenceToStock('writing'),
-      folderId: 'rules',
-    },
     'rule-time': {
       name: 'time.rule',
       language: 'rule',

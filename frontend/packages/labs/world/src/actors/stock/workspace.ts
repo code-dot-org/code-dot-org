@@ -63,14 +63,34 @@ export const words = (text: string) => ({
   shadow: {type: 'text', fields: {TEXT: text}},
 });
 
-/** `⟨name⟩ of this actor`, for a property the Writing rule declares. */
-export const textOf = (exportName: string) => ({
-  block: {type: `world_get_Writing_${exportName}`, inputs: {ACTOR: me()}},
+/**
+ * Who owns the four text properties, as a block-type segment.
+ *
+ * They were the Writing rule's — a rule with four properties and no behavior,
+ * which is a file and a shelf row standing between a learner and four
+ * declarations they can read in the actor that draws them. They are the
+ * LABEL's now, and everything that shows words either acts like a Label or
+ * declares its own (specs/UI_ACTORS.md).
+ *
+ * A world-local actor is the one that has to declare its own: `acts like`
+ * names an actor FILE, and a single-world project has none. Its properties are
+ * keyed by the world plus the block that defines it, which is what the `own`
+ * argument carries (`blockly/ownProperties`).
+ */
+export const LABEL_OWNER = 'ActorsLabel';
+
+/** `⟨name⟩ of this actor`, for one of the four a Label declares. */
+export const textOf = (exportName: string, own: string = LABEL_OWNER) => ({
+  block: {type: `world_get_${own}_${exportName}`, inputs: {ACTOR: me()}},
 });
 
-/** `set ⟨name⟩ of this actor to ⟨value⟩`, for one the Writing rule declares. */
-export const setText = (exportName: string, value: object) => ({
-  type: `world_set_Writing_${exportName}`,
+/** `set ⟨name⟩ of this actor to ⟨value⟩`, for one of the same four. */
+export const setText = (
+  exportName: string,
+  value: object,
+  own: string = LABEL_OWNER,
+) => ({
+  type: `world_set_${own}_${exportName}`,
   inputs: {ACTOR: me(), VALUE: value},
 });
 
@@ -347,14 +367,14 @@ export const rectangle = (
  * kind can say different things at different sizes, set from the map editor's
  * inspector with no editor work (specs/UI_ACTORS.md).
  */
-export const drawText = (x: number, y: number) => ({
+export const drawText = (x: number, y: number, own: string = LABEL_OWNER) => ({
   type: 'world_draw_text',
   inputs: {
-    TEXT: textOf('TextProperty'),
+    TEXT: textOf('TextProperty', own),
     X: num(x),
     Y: num(y),
-    SIZE: textOf('TextSizeProperty'),
-    ANCHOR: textOf('TextAnchorProperty'),
+    SIZE: textOf('TextSizeProperty', own),
+    ANCHOR: textOf('TextAnchorProperty', own),
   },
 });
 
@@ -369,17 +389,18 @@ export const drawParagraph = (
   x: number | object,
   y: number | object,
   width: number | object,
+  own: string = LABEL_OWNER,
 ) => ({
   type: 'world_draw_paragraph',
   inputs: {
-    TEXT: textOf('TextProperty'),
+    TEXT: textOf('TextProperty', own),
     // A NUMBER OR AN EXPRESSION, because a box that is as big as it says it is
     // draws into a column it has to ask for (`actors/stock/label`). A literal
     // is the shadow it always was.
     WIDTH: typeof width === 'number' ? num(width) : width,
     X: typeof x === 'number' ? num(x) : x,
     Y: typeof y === 'number' ? num(y) : y,
-    SIZE: textOf('TextSizeProperty'),
-    ANCHOR: textOf('TextAnchorProperty'),
+    SIZE: textOf('TextSizeProperty', own),
+    ANCHOR: textOf('TextAnchorProperty', own),
   },
 });

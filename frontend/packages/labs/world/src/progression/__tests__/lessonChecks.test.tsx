@@ -1282,7 +1282,7 @@ describe('the world-state lesson’s check', () => {
       });
       for (const row of rowsOf(workspace)) {
         const text = bodyOf(row).find(
-          block => block.type === 'world_set_Writing_TextProperty',
+          block => block.type === 'world_set_ActorsLabel_TextProperty',
         );
         if (text) {
           text.inputs!.VALUE = joined('Lives: ', lives());
@@ -2799,7 +2799,7 @@ describe('the words lesson’s check', () => {
                 },
                 next: {
                   block: {
-                    type: 'world_set_Writing_TextProperty',
+                    type: 'world_set_ActorsLabel_TextProperty',
                     inputs: {
                       ACTOR: {block: {type: 'world_this_actor'}},
                       VALUE: {shadow: said},
@@ -2831,7 +2831,7 @@ describe('the reveal lesson’s check', () => {
       // `set text ⟨…⟩` becomes `say ⟨…⟩ on ⟨this actor⟩`: showing a line and
       // saying one are different things, and only the second types it out.
       for (let at: Row | undefined = body; at; at = at.next?.block) {
-        if (at.type === 'world_set_Writing_TextProperty') {
+        if (at.type === 'world_set_ActorsLabel_TextProperty') {
           at.type = 'world_do_ActorsSpeechBox_SayAction';
           break;
         }
@@ -2952,7 +2952,7 @@ describe('the script lesson’s check', () => {
           },
           DO0: {
             block: {
-              type: 'world_set_Writing_TextProperty',
+              type: 'world_set_ActorsLabel_TextProperty',
               inputs: {
                 ACTOR: {block: {type: 'world_this_actor'}},
                 VALUE: {shadow: {type: 'text', fields: {TEXT: LINES[n - 1]}}},
@@ -3036,7 +3036,7 @@ describe('the choice lesson’s check', () => {
                   inputs: {
                     A: {
                       block: {
-                        type: 'world_get_Writing_TextProperty',
+                        type: 'world_get_ActorsLabel_TextProperty',
                         inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
                       },
                     },

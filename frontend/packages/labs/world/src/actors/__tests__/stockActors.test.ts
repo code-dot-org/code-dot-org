@@ -96,10 +96,18 @@ describe('every stock actor', () => {
       // behavior; the bars that are not this one act like it and get them
       // (`ActorBuilder.actsLike`).
       progressBar: ['fraction', 'bar_color', 'track_color'],
-      // …and how big a Label is, which is the box its words are laid into. The
-      // base of the interface set, so everything that acts like a Label is
-      // sized the same way (specs/UI_ACTORS.md).
-      label: ['width', 'height'],
+      // …and everything a Label IS: the words, how they look, and the box they
+      // are laid into. The first four were the Writing rule — four properties
+      // and no behavior — and the base of the interface set holds them now, so
+      // everything that acts like a Label has them (specs/UI_ACTORS.md).
+      label: [
+        'text',
+        'text_size',
+        'text_color',
+        'text_anchor',
+        'width',
+        'height',
+      ],
       // The typewriter. `the whole line` is what is being said, where `text`
       // is however much of it has arrived — Writing's, because every actor
       // with words means the same thing by it. A rule for these two would be
@@ -185,10 +193,10 @@ describe('Label', () => {
     // writable actor-scoped property a trait declares.
     const drawn = types(labelActor);
 
-    expect(drawn).toContain('world_get_Writing_TextProperty');
-    expect(drawn).toContain('world_get_Writing_TextSizeProperty');
-    expect(drawn).toContain('world_get_Writing_TextColorProperty');
-    expect(drawn).toContain('world_get_Writing_TextAnchorProperty');
+    expect(drawn).toContain('world_get_ActorsLabel_TextProperty');
+    expect(drawn).toContain('world_get_ActorsLabel_TextSizeProperty');
+    expect(drawn).toContain('world_get_ActorsLabel_TextColorProperty');
+    expect(drawn).toContain('world_get_ActorsLabel_TextAnchorProperty');
     // A PARAGRAPH, not a word: the words wrap to the box and break where the
     // text says to, which is what makes a Label hold a sentence and what
     // `⟨new line⟩` is for (specs/UI_ACTORS.md).
@@ -212,7 +220,7 @@ describe('Label', () => {
   it('arrives with something to show', () => {
     // A Label dragged onto a map is visible before anybody types into it — and
     // the picker has a picture rather than a blank.
-    expect(labelActor).toContain('world_set_Writing_TextProperty');
+    expect(labelActor).toContain('world_set_ActorsLabel_TextProperty');
     expect(labelActor).toContain('"TEXT": "Label"');
   });
 });
@@ -329,7 +337,7 @@ describe('Button', () => {
     // words, their size and color and the box they fill all come across
     // (`ActorBuilder.actsLike`).
     expect(buttonActor).toContain('actors/label');
-    expect(buttonActor).not.toContain('Writing#ShowsTextTrait');
+    expect(buttonActor).not.toContain('"NAME": "text"');
     expect(buttonActor).toContain('Mouse#CanBeClickedTrait');
     expect(types(buttonActor)).toContain('world_draw_paragraph');
   });

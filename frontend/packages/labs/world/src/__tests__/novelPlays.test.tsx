@@ -39,24 +39,24 @@ const scene = async () => {
   const {world, modules} = await compileProject(
     projectFiles(WORLD_SCENARIOS.novel.source),
   );
-  const writing = modules['rules/writing'] as unknown as {
-    TextProperty: never;
-    ShowsTextTrait: never;
-  };
+  const label = modules['actors/label'] as unknown as {TextProperty: never};
   const conversation = modules['rules/conversation'] as unknown as {
     LineProperty: never;
   };
   const actors = [...world.actors];
-  // By TRAIT, not by reading a property off it. Asking a portrait for its
-  // `text` throws — a property it has no trait for is an error and not an
-  // absence, which is the engine being strict rather than being unhelpful.
-  const box = actors.find(actor => actor.has(writing.ShowsTextTrait))!;
+  // By KIND, and it used to be by trait. `text` was `Shows Text`'s and is the
+  // stock Label's own property now, so there is no trait to ask about — and a
+  // kind is not inherited, so the box is `actors/speechBox` rather than
+  // anything that acts like a Label (specs/UI_ACTORS.md).
+  const box = actors.find(
+    actor => (actor as unknown as {type?: string}).type === 'actors/speechBox',
+  )!;
   const portrait = actors.find(actor => actor !== box)!;
   return {
     world,
     box,
     portrait,
-    said: () => box.get(writing.TextProperty) as string,
+    said: () => box.get(label.TextProperty) as string,
     at: () => box.get(conversation.LineProperty) as number,
   };
 };

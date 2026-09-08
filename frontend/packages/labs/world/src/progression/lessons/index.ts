@@ -19,8 +19,10 @@
 // six FOUNDATIONS, and Arcade, Story and Making whole after them.
 
 import {climbArrowsHandlers} from '../../actors/enhance/climbArrows';
+import {LABEL_PROPERTIES} from '../../actors/stock/label';
 import {
   actorFile,
+  actsLike,
   chain as chainRows,
   drawText,
   fill,
@@ -1364,6 +1366,13 @@ Two traits change how it FEELS, and neither changes where it ends up.
 
 // ── place/layers ─────────────────────────────────────────────────────────────
 
+/**
+ * Who owns the Score's four text properties: this world, plus the block that
+ * defines it. A world's own actor cannot act like the Label FILE — this
+ * project has none — so it declares them itself (`actors/stock/label`).
+ */
+const SCORE_OWNER = 'WorldsMainScore';
+
 const layers: WorldScenario = {
   name: 'What is in front',
   description:
@@ -1382,7 +1391,7 @@ const layers: WorldScenario = {
         addActor(local('hill'), [placeAt(720, 272)]),
         addActor(local('score'), [
           placeAt(60, 30),
-          setText('TextProperty', words('SCORE 0')),
+          setText('TextProperty', words('SCORE 0'), SCORE_OWNER),
         ]),
         addActor(local('hero'), [placeAt(160, 272)]),
         chaseCamera('hero'),
@@ -1402,7 +1411,10 @@ const layers: WorldScenario = {
         {
           id: 'score',
           name: 'Score',
-          rows: [useTrait('Writing#ShowsTextTrait'), showAs('text')],
+          // ITS OWN four text properties. A world's own actor cannot act like
+          // the Label FILE — this project has none — so it declares what a
+          // Label declares (`actors/stock/label`).
+          rows: [...LABEL_PROPERTIES, showAs('text')],
           drawing: {
             width: 96,
             height: 24,
@@ -1411,13 +1423,13 @@ const layers: WorldScenario = {
             // carries, and the default centers it — so drawn at x=0 half of
             // "SCORE 0" fell off the left of its own 96-pixel canvas and the
             // world showed "RE 0".
-            commands: [fill(swatch('#f2f2f7')), drawText(48, 12)],
+            commands: [fill(swatch('#f2f2f7')), drawText(48, 12, SCORE_OWNER)],
           },
         },
       ],
     }),
     sprites: ['player', 'ground', 'hill'],
-    rules: ['arrows', 'writing', 'camera', 'cameraFollow', 'cameraConfined'],
+    rules: ['arrows', 'camera', 'cameraFollow', 'cameraConfined'],
   }),
   instructions: `
 ## What is in front
@@ -6045,19 +6057,16 @@ const actorState: WorldScenario = {
       ],
     }),
     actors: {
-      lamp: actorFile(
-        'Lamp',
-        [useTrait('Writing#ShowsTextTrait'), showAs('text')],
-        {
-          drawing: {
-            width: 96,
-            height: 24,
-            commands: [fill(swatch('#ffcc66')), drawText(48, 12)],
-          },
+      lamp: actorFile('Lamp', [actsLike('actors/label'), showAs('text')], {
+        drawing: {
+          width: 96,
+          height: 24,
+          commands: [fill(swatch('#ffcc66')), drawText(48, 12)],
         },
-      ),
+      }),
     },
-    rules: ['writing'],
+    // The Label the Lamp ACTS LIKE, which is where its words come from.
+    stockActors: ['label'],
   }),
   instructions: `
 ## State an actor carries

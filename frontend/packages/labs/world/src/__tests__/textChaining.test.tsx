@@ -66,7 +66,7 @@ const worldSaying = (value: object) =>
               inputs: {
                 DO: {
                   block: {
-                    type: 'world_set_Writing_TextProperty',
+                    type: 'world_set_ActorsLabel_TextProperty',
                     inputs: {ACTOR: me(), VALUE: value},
                   },
                 },
@@ -97,7 +97,7 @@ const said = async (value: object) => {
     }),
   );
   return [...world.actors][0].get(
-    modules['rules/writing'].TextProperty as never,
+    modules['actors/label'].TextProperty as never,
   ) as unknown as string;
 };
 

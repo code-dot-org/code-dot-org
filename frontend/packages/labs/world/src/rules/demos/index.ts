@@ -41,7 +41,6 @@ import {timeDemo} from './time';
 import {turnsDemo} from './turns';
 import {DEMO_FPS, type RuleDemo} from './types';
 import {wrapDemo} from './wrap';
-import {writingDemo} from './writing';
 import {zapsDemo} from './zaps';
 
 export const RULE_DEMOS: Readonly<Record<string, RuleDemo>> = {
@@ -60,7 +59,6 @@ export const RULE_DEMOS: Readonly<Record<string, RuleDemo>> = {
   attachment: attachmentDemo,
   time: timeDemo,
   spawner: spawnerDemo,
-  writing: writingDemo,
   conversation: conversationDemo,
   score: scoreDemo,
   goals: goalsDemo,

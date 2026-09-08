@@ -38,7 +38,6 @@ import {
   setText,
   showAs,
   textOf,
-  useTrait,
   words,
 } from './workspace';
 
@@ -78,6 +77,22 @@ export const labelHalf = (of: object) => ({
  * Labels. The same bargain `PROGRESS_BAR_PROPERTIES` strikes one file over.
  */
 export const LABEL_PROPERTIES = [
+  // THE WORDS AND HOW THEY LOOK. These were the Writing rule's — four
+  // properties and no behavior of any kind, which is a file and a shelf row
+  // standing between a learner and four declarations they can read in the
+  // actor that draws them. Every actor that shows words either acts like this
+  // one or declares these itself (specs/UI_ACTORS.md).
+  //
+  // `text` starts EMPTY, because an actor nobody has given words to has none:
+  // a Label placed and left alone draws nothing rather than the word "text".
+  // The size is in pixels, like every other size in the lab; only rates are in
+  // units per second. The anchor is the one whose absence reads as a bug — a
+  // score anchored left grows to the right and off the screen.
+  defineProperty('string', 'text', ''),
+  defineProperty('number', 'text size', '12'),
+  defineProperty('color', 'text color', '#ffffff'),
+  defineProperty('string', 'text anchor', 'center'),
+  // …and the box they are laid into.
   defineProperty('number', 'width', String(WIDTH)),
   defineProperty('number', 'height', String(HEIGHT)),
 ];
@@ -85,7 +100,6 @@ export const LABEL_PROPERTIES = [
 export const labelActor = actorFile(
   'Label',
   [
-    useTrait('Writing#ShowsTextTrait'),
     ...LABEL_PROPERTIES,
     showAs('text'),
     // A default, so a Label dragged onto a map is visible before anybody has

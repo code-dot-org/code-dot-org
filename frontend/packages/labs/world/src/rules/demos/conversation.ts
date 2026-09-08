@@ -29,22 +29,25 @@ const LINES = ['HELLO', 'NICE DAY', 'GOODBYE'];
 const BEAT = 0.6;
 
 export const conversationDemo: RuleDemo = {
-  rules: ['rules/writing', 'rules/conversation'],
+  rules: ['rules/conversation'],
   // Three lines at 0.6s and then the box goes empty, with the empty box on
   // screen long enough to read as an ending rather than as a dropped frame.
   seconds: 2.4,
   build(modules: RuleModules) {
     const of = (path: string, name: string) => modules[path][name] as never;
-    textOf = of('rules/writing', 'TextProperty');
     nextThing = of('rules/conversation', 'MakeSayTheNextThingAction');
     said = 0;
     const world = demoWorld('conversation', modules, conversationDemo.rules);
 
-    const speaker = new ActorBuilder({id: 'speaker', name: 'speaker'})
-      .useTraits([
-        of('rules/conversation', 'HasAConversationTrait'),
-        of('rules/writing', 'ShowsTextTrait'),
-      ])
+    // ITS OWN WORDS. `text` was the Writing rule's, and is the stock Label's
+    // own `define property` now — which a RULE demo cannot reach, since it
+    // builds its cast from rules and the engine rather than from actor files.
+    // So the speaker declares one, which is exactly what a Label does
+    // (`ActorBuilder.defineProperty`, specs/UI_ACTORS.md).
+    const builder = new ActorBuilder({id: 'speaker', name: 'speaker'});
+    textOf = builder.defineProperty('text', 'string', '');
+    const speaker = builder
+      .useTraits([of('rules/conversation', 'HasAConversationTrait')])
       // The rule cannot count what it cannot see, so the project says how many
       // lines its script has.
       .set(of('rules/conversation', 'HowManyLinesProperty'), LINES.length)
@@ -75,7 +78,7 @@ export const conversationDemo: RuleDemo = {
     // no picture (specs/RULE_DEMOS.md).
     speaker.set(textOf as never, LINES[0] as never);
 
-    return {world, cast: {speaker}};
+    return {world, cast: {speaker, text: textOf}};
   },
   /**
    * The next line, on a beat.

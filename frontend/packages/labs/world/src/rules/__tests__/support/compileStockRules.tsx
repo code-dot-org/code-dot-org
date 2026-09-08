@@ -79,7 +79,6 @@ import {
   timeRule,
   turnsRule,
   wrapRule,
-  writingRule,
 } from '../../stock';
 
 export type RuleModule = Record<string, unknown>;
@@ -220,7 +219,6 @@ export const ALL_STOCK_SOURCES: Record<string, string> = {
   'rules/digging': diggingRule,
   'rules/drive': driveRule,
   'rules/mouse': mouseRule,
-  'rules/writing': writingRule,
   'rules/conversation': conversationRule,
   'rules/score': scoreRule,
   'rules/goals': goalsRule,

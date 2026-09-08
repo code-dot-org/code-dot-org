@@ -147,6 +147,10 @@ describe('the scenario catalogue', () => {
         'ball.actor',
         'crawler.actor',
         'healthBar.actor',
+        // …and the Label the starter's Scoreboard acts like, dropped for the
+        // same reason as the Progress Bar: this scenario's own Scoreboard is
+        // the world's, and declares the four text properties itself.
+        'label.actor',
         // …and the bar the Health Bar acts like, which is dropped rather than
         // moved: this scenario's Health Bar is the world's OWN, and a world
         // may say `acts like` but only against an actor FILE — which is the
@@ -264,7 +268,6 @@ describe('the scenario catalogue', () => {
     expect(main).toContain('world_get_WorldsMain_ScoreProperty');
     // Shown, not logged: a Label is an ordinary actor that draws its text.
     expect(named('label.actor')).toBe(true);
-    expect(named('writing.rule')).toBe(true);
     // Words and a number, chained: `⟨SCORE ⟩ + ⟨“ the score ”⟩`.
     expect(main).toContain('world_as_text');
     // …and the thing no keyboard can say: WHERE.

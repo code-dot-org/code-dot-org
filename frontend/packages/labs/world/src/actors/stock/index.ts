@@ -75,7 +75,10 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     name: 'Label',
     description:
       'A word on the screen. Give it text, a size, a color and an anchor, and it draws them — the smallest way for a game to say anything to the player.',
-    requires: ['Writing'],
+    // NOTHING. The words, their size, their color and their anchor are the
+    // Label's own `define property` rows — they were the Writing rule, which
+    // had four properties and no behavior at all (specs/UI_ACTORS.md).
+    requires: [],
     contents: labelActor,
   },
   {
@@ -120,10 +123,9 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     name: 'Button',
     description:
       'A label you can press. It raises “is clicked with” on itself, so a handler needs no hit test of its own.',
-    // Mouse for the click, and Writing because this file READS the text and
-    // its color to paint its own face — a `use trait` row is not the only way
-    // to need a rule (see the test that keeps this list honest).
-    requires: ['Writing', 'Mouse'],
+    // Mouse for the click, and nothing else: the words it paints are the
+    // Label's own properties, which arrive with the Label it acts like.
+    requires: ['Mouse'],
     // …and the Label it IS, which is where the words, their size and the box
     // they are laid into come from.
     actors: ['label'],
@@ -134,10 +136,9 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     name: 'Speech Box',
     description:
       'A panel with room for a sentence — what a line of dialogue is read from. It types itself out: say a line and the letters arrive at reading pace.',
-    // Writing for the text it reads as it paints, Time for the clock its
-    // letters arrive on — and the Label it IS, which is where the words, the
-    // colors and the box come from.
-    requires: ['Writing', 'Time'],
+    // Time for the clock its letters arrive on, and the Label it IS, which is
+    // where the words, the colors and the box come from.
+    requires: ['Time'],
     actors: ['label'],
     contents: speechBoxActor,
   },

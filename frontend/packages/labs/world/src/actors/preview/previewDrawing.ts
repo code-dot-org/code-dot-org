@@ -45,7 +45,7 @@ export interface PreviewDrawing {
   commands: DrawCommand[];
 }
 
-/** `world_get_Writing_TextProperty` → `['Writing', 'TextProperty']`. */
+/** `world_get_ActorsLabel_TextProperty` → `['Writing', 'TextProperty']`. */
 const READ = /^world_get_([A-Za-z0-9]+)_(.+)$/;
 const WRITE = /^world_set_([A-Za-z0-9]+)_(.+)$/;
 

@@ -47,10 +47,27 @@ export function assembleActorModule(
   const events = blocks.filter(
     block => block !== actor && !tweens.includes(block),
   );
-  const actorCode = actor ? actor.code : '';
+  // THE DECLARATIONS GO INSIDE the actor block's code, straight after
+  // `const actor = …`, and not after the whole of it.
+  //
+  // They are `const`s, and a row in the definition's own chain may READ one:
+  // the stock Label declares `text` and then sets it to "Label" three rows
+  // later, which is an ordinary thing to write and was a use before
+  // declaration — "Cannot access 'TextProperty' before initialization", from a
+  // module that would not load at all. It only became reachable when the four
+  // text properties stopped being a rule's, because an imported name is
+  // hoisted and one declared here is not.
+  //
+  // A world's own actor already had this right (`domainBlocks`, `world_actor`
+  // emits `ownDeclarationsIn` before opening the block its body runs in); this
+  // is the same order for a file.
+  const opened = actor ? actor.code.indexOf('\n') + 1 : 0;
+  const actorCode = actor
+    ? actor.code.slice(0, opened) + declarations + actor.code.slice(opened)
+    : declarations;
   const tweensCode = tweens.map(block => block.code).join('');
   const eventsCode = events.map(block => block.code).join('');
-  return `${actorCode}${declarations}${tweensCode}${eventsCode}export default actor;\n`;
+  return `${actorCode}${tweensCode}${eventsCode}export default actor;\n`;
 }
 
 /**

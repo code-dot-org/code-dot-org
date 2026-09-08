@@ -45,7 +45,11 @@ describe('the scoreboard enhancement, as edits', () => {
     // A KIND of its own: a hat names a kind, and one on `any ⟨Label⟩` would
     // rewrite every label the learner has.
     expect(board).toContain('"NAME": "Scoreboard"');
-    expect(board).toContain('Writing#ShowsTextTrait');
+    // …that ACTS LIKE the Label rather than copying it. It used to be that
+    // file renamed, which worked while `text` belonged to a rule; an own
+    // property's block carries the file that declared it, so a copy at a new
+    // path declared a different `text` and the handler wrote one nothing read.
+    expect(board).toContain('actors/label');
     // …and the trait that makes the hat fire at all: an actor hears about the
     // score because it elected to watch it.
     expect(board).toContain('Scoring#WatchesTheScoreTrait');

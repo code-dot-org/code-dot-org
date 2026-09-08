@@ -85,7 +85,7 @@ const score = () => ({block: {type: 'world_get_WorldsMain_ScoreProperty'}});
 
 /** `set text of ⟨who⟩ to ⟨join "Score: " ⟨score⟩⟩`. */
 const scoreText = (who: object) => ({
-  type: 'world_set_Writing_TextProperty',
+  type: 'world_set_ActorsLabel_TextProperty',
   inputs: {
     ACTOR: who,
     VALUE: {
@@ -148,7 +148,7 @@ const HUD: Array<[string, number, string, number]> = [
 
 /** `set ⟨what⟩ of this actor to ⟨value⟩`, for a property the Writing rule has. */
 const dress = (exportName: string, value: object) => ({
-  type: `world_set_Writing_${exportName}`,
+  type: `world_set_ActorsLabel_${exportName}`,
   inputs: {ACTOR: me(), VALUE: value},
 });
 
@@ -509,7 +509,7 @@ const MAIN_WORLD = JSON.stringify({
                               },
                             },
                             {
-                              type: 'world_set_Writing_TextColorProperty',
+                              type: 'world_set_ActorsLabel_TextColorProperty',
                               inputs: {
                                 ACTOR: scoreLabel(),
                                 VALUE: {
@@ -649,12 +649,6 @@ export const TAPPER_SPEC: ProjectSpec = {
     },
     // The mouse rule is the point of the scenario, so it is a file to open and
     // read rather than something that merely happens.
-    writingRuleFile: {
-      name: 'writing.rule',
-      language: 'rule',
-      contents: referenceToStock('writing'),
-      folderId: 'rules',
-    },
     labelActorFile: {
       name: 'label.actor',
       language: 'actor',

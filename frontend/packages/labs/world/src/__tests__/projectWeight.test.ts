@@ -48,12 +48,17 @@ const total = (weighed: readonly Weighed[]): number =>
 
 describe('what a new project weighs', () => {
   it('is fifty kilobytes, and was a megabyte', () => {
-    // The whole thing as it goes to storage. 51,081 bytes on 2026-09-06,
-    // against 1,191,452 on 2026-09-03 — the same project, twenty-three times
-    // lighter, with nothing removed from it.
+    // The whole thing as it goes to storage, against 1,191,452 on 2026-09-03
+    // — the same project, an order of magnitude lighter, with nothing removed
+    // from it.
+    //
+    // It has GROWN since, and the growth is the point of the last few weeks:
+    // rules that held nothing but properties have become declarations in the
+    // actors that draw them, so a project carries a little more of itself and
+    // a great deal less of the library (specs/UI_ACTORS.md).
     const whole = bytes(JSON.stringify(DEFAULT_PROJECT.source));
 
-    expect(whole).toBeLessThan(65_000);
+    expect(whole).toBeLessThan(90_000);
   });
 
   it('is dominated by the game, which is the inversion', () => {
@@ -62,7 +67,7 @@ describe('what a new project weighs', () => {
     // starter level IS — a world, six actors, a map, an animation, six
     // sprites, an effect. Those 40KB have not moved. The megabyte beside them
     // has become 470 bytes.
-    expect(rules).toHaveLength(12);
+    expect(rules).toHaveLength(11);
     expect(total(rules)).toBeLessThan(1_000);
     expect(total(files) - total(rules)).toBeGreaterThan(35_000);
     expect(total(rules) / total(files)).toBeLessThan(0.02);
@@ -104,7 +109,7 @@ describe('what the references stand for', () => {
       .filter(([path]) => path.endsWith('.rule'))
       .map(([, contents]) => bytes(contents));
 
-    expect(resolved).toHaveLength(12);
+    expect(resolved).toHaveLength(11);
     expect(resolved.reduce((sum, one) => sum + one, 0)).toBeGreaterThan(
       900_000,
     );
@@ -129,7 +134,7 @@ describe('what the references stand for', () => {
     // still what the BUNDLE carries.
     const shelf = STOCK_RULES.map(rule => bytes(rule.contents));
 
-    expect(shelf).toHaveLength(45);
+    expect(shelf).toHaveLength(44);
     expect(shelf.reduce((sum, one) => sum + one, 0)).toBeLessThan(4_600_000);
   });
 });

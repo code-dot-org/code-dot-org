@@ -712,7 +712,9 @@ export const TILES: readonly Tile[] = [
     requires: ['memory/variable'],
     unlocks: [
       {kind: 'block', type: 'world_rule_property'},
-      {kind: 'rule', id: 'writing'},
+      // The Label, which is where the words are now: `text`, its size, its
+      // color and its anchor were the Writing rule's, and are this actor's own
+      // declarations (specs/UI_ACTORS.md).
       {kind: 'actor', id: 'label'},
       {kind: 'block', type: 'text'},
       // …and the door into a chain for a value that is not words. Joining two

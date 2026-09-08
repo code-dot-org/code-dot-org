@@ -8,8 +8,15 @@ import type {
 import {coinActor} from './actors/stock/coin';
 import {groundActor} from './actors/stock/ground';
 import {healthBarActor} from './actors/stock/healthBar';
+import {labelActor} from './actors/stock/label';
 import {progressBarActor} from './actors/stock/progressBar';
-import {drawText, fill, showAs, textOf} from './actors/stock/workspace';
+import {
+  actsLike,
+  drawText,
+  fill,
+  showAs,
+  textOf,
+} from './actors/stock/workspace';
 import {serializeSheetFile, sheetFileName} from './appearance/sheetFile';
 import {
   spriteFileName,
@@ -92,7 +99,7 @@ export const useTrait = (trait: string) => ({
  */
 /** `set text of ⟨this actor⟩ to …` — the scoreboard's only verb. */
 const setText = (value: object) => ({
-  type: 'world_set_Writing_TextProperty',
+  type: 'world_set_ActorsLabel_TextProperty',
   inputs: {
     ACTOR: {block: {type: 'world_this_actor'}},
     VALUE: {block: value},
@@ -401,7 +408,7 @@ const PLAYER_ACTOR = JSON.stringify(
           y: 560,
           next: {
             block: {
-              type: 'world_set_Writing_TextProperty',
+              type: 'world_set_ActorsLabel_TextProperty',
               inputs: {
                 ACTOR: {
                   block: {
@@ -530,7 +537,10 @@ const SCOREBOARD_ACTOR = JSON.stringify(
           fields: {NAME: 'Scoreboard'},
           next: {
             block: stack([
-              useTrait('Writing#ShowsTextTrait'),
+              // A Label that watches the score. The words, their size and
+              // color, and the box they fill all come across
+              // (`ActorBuilder.actsLike`); what this adds is the watching.
+              actsLike('actors/label'),
               useTrait('Scoring#WatchesTheScoreTrait'),
               // The picker's symbol, which is not the picture — that is the
               // drawing below (blockly/actorIconMeta).
@@ -938,6 +948,15 @@ export const STARTER_SPEC: ProjectSpec = {
       contents: CRAWLER_ACTOR,
       folderId: 'actors',
     },
+    // The Label the Scoreboard ACTS LIKE. `acts like` names a module path, and
+    // a path naming a file the project does not hold inherits nothing at all —
+    // no words, no box, no picture (`actors/stock/label`).
+    label: {
+      name: 'label.actor',
+      language: 'actor',
+      contents: labelActor,
+      folderId: 'actors',
+    },
     scoreboard: {
       name: 'scoreboard.actor',
       language: 'actor',
@@ -1020,12 +1039,6 @@ export const STARTER_SPEC: ProjectSpec = {
       name: 'score.rule',
       language: 'rule',
       contents: referenceToStock('score'),
-      folderId: 'rules',
-    },
-    writingRule: {
-      name: 'writing.rule',
-      language: 'rule',
-      contents: referenceToStock('writing'),
       folderId: 'rules',
     },
     collectRule: {

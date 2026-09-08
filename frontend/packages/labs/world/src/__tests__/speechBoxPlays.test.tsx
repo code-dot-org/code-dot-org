@@ -144,13 +144,13 @@ describe('a Speech Box saying a line', () => {
     // nothing on screen saying why — so the shelf entry asks for both.
     const {modules} = await compileProject(project(WORLD));
 
-    expect(modules['rules/writing']).toBeDefined();
+    expect(modules['actors/label']).toBeDefined();
     expect(modules['rules/time']).toBeDefined();
   });
 
   it('arrives a few letters at a time, and stops at the end', async () => {
     const {world, modules} = await compileProject(project(WORLD));
-    const text = modules['rules/writing'].TextProperty;
+    const text = modules['actors/label'].TextProperty;
     const cues = modules['worlds/main'].CuesProperty;
 
     // Nothing showing before the clock has run: `say` empties `text`, and the
@@ -187,7 +187,7 @@ describe('a Speech Box saying a line', () => {
     // running, so a box that had already finished does not raise the cue a
     // second time — which a scene would show as a line advancing twice.
     const {world, modules} = await compileProject(project(WORLD));
-    const text = modules['rules/writing'].TextProperty;
+    const text = modules['actors/label'].TextProperty;
     const cues = modules['worlds/main'].CuesProperty;
     const showAll = modules['actors/speechBox'].ShowAllOfItAction;
     const box = [...world.actors][0];
@@ -215,7 +215,7 @@ describe('a Speech Box saying a line', () => {
     // the first tick would type the default line out of an empty
     // `the whole line` and leave the panel blank.
     const {world, modules} = await compileProject(project(QUIET));
-    const text = modules['rules/writing'].TextProperty;
+    const text = modules['actors/label'].TextProperty;
 
     for (let frame = 0; frame < 30; frame++) {
       world.tick(1 / 60);

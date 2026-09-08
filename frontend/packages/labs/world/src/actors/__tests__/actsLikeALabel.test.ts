@@ -85,7 +85,7 @@ describe('the actors that act like a Label', () => {
       expect([size.x, size.y], id).toEqual(expected);
       // The inherited words, still readable through the rule that owns them.
       expect(
-        typeof actor.get(modules['rules/writing'].TextProperty as never),
+        typeof actor.get(modules['actors/label'].TextProperty as never),
         id,
       ).toBe('string');
     }

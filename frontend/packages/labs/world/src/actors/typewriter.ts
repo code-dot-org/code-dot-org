@@ -69,17 +69,16 @@ export const TYPEWRITER_WORDS: BlockParam = {
 /** Reading pace, in letters a second. */
 const PACE = 20;
 
-/** The traits a typewriter needs elected, in the order they are read in. */
-export const TYPEWRITER_TRAITS: readonly string[] = [
-  // The words themselves, which is what is actually being revealed. What DRAWS
-  // them is the actor's own business — a Label, a Button and a Speech Box all
-  // draw `text` and none of them knows about this.
-  'Writing#ShowsTextTrait',
-  // …and the clock the letters arrive on. A timer belongs to an actor rather
-  // than to the world, because a game has several and they start and stop
-  // apart (`rules/time`).
-  'Time#HasATimerTrait',
-];
+/**
+ * The traits a typewriter needs elected.
+ *
+ * ONE, now that the words are the Label's own `define property` rows rather
+ * than a rule's trait: a typewriter needs a clock, and whatever it is given to
+ * already has words or there was nothing to reveal. A timer belongs to an
+ * actor rather than to the world, because a game has several and they start
+ * and stop apart (`rules/time`).
+ */
+export const TYPEWRITER_TRAITS: readonly string[] = ['Time#HasATimerTrait'];
 
 /** `set ⟨timer runs⟩ of this actor to ⟨yes/no⟩`. */
 const setTyping = (running: boolean) => ({

@@ -31,7 +31,7 @@ export const labelDemo: ActorDemo = {
   ],
   seconds: 2,
   drive({subject, modules, seconds}: DemoStage) {
-    const text = modules['rules/writing'].TextProperty;
+    const text = modules['actors/label'].TextProperty;
     const score = Math.floor(seconds / EVERY) * WORTH;
     subject.set(text as never, `SCORE ${score}` as never);
   },

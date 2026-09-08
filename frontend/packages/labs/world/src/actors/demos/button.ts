@@ -67,7 +67,7 @@ export const buttonDemo: ActorDemo = {
     return {x: 108, y: 80, down};
   },
   wire({subject, modules}: DemoStage) {
-    const text = modules['rules/writing'].TextProperty;
+    const text = modules['actors/label'].TextProperty;
     subject.set(text as never, ASKS as never);
     // `when ⟨this button⟩ is clicked with ⟨any⟩`, which is the block a project
     // writes and the only reason the actor elects the mouse trait at all.

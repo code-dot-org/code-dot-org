@@ -64,21 +64,18 @@ describe('the types-out-text enhancement, as edits', () => {
       name: 'words',
       type: 'String',
     });
-    // Both rules, because neither half works alone: Writing owns `text` and
-    // Time owns the clock the letters arrive on.
-    expect(at(after, 'rules/writing.rule')).toBeTruthy();
+    // Time, for the clock the letters arrive on. The words themselves are
+    // whatever the target already has — a Label's own properties — so there
+    // is no second rule to bring (`actors/typewriter`).
     expect(at(after, 'rules/time.rule')).toBeTruthy();
   });
 
-  it('elects only the trait the actor is missing', () => {
-    // A Label already shows text — that is what a Label IS — so the patch adds
-    // the clock and leaves the words alone. Two `use trait` rows for one trait
-    // is a duplicate a learner has to read past.
+  it('elects the one trait a typewriter needs, once', () => {
+    // The clock, and nothing else: the words are the target's own already.
+    // Two `use trait` rows for one trait is a duplicate a learner reads past.
     const label = at(typesOut.apply(withLabel(), LABEL), 'actors/label.actor')!;
-    const rows = label.split('Writing#ShowsTextTrait').length - 1;
 
-    expect(rows).toBe(1);
-    expect(label).toContain('Time#HasATimerTrait');
+    expect(label.split('Time#HasATimerTrait').length - 1).toBe(1);
   });
 
   it('does nothing the second time', () => {
@@ -166,7 +163,7 @@ describe('the types-out-text enhancement, played', () => {
 
   it('types the line out on the Label, and stops at the end', async () => {
     const {world, modules} = await compileProject(project());
-    const text = modules['rules/writing'].TextProperty;
+    const text = modules['actors/label'].TextProperty;
     const label = [...world.actors][0];
     const showing = () => label.get(text as never) as string;
 

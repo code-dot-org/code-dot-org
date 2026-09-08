@@ -28,8 +28,8 @@
 // handler has to name what it is about, and a hat names a KIND: on `any
 // ⟨Label⟩` it would rewrite every label in the project, including the ones the
 // learner put there to say something else. So the scoreboard is a Label whose
-// name is Scoreboard — the same file, renamed, which is what the starter's own
-// `scoreboard.actor` is.
+// name is Scoreboard — a kind that ACTS LIKE a Label, which is what the
+// starter's own `scoreboard.actor` is.
 //
 // AND IT GOES ON A FIXED LAYER, which is the piece a learner discovers last
 // and by accident. A world-space score sits where it was placed and slides off
@@ -44,15 +44,15 @@
 import {getNextFileId} from '@code-dot-org/codebridge';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import {renamed} from '../../files/newThing';
 import {folderIn} from '../../projectWrite';
 import {importStockRule} from '../../rules/importStockRule';
 import {STOCK_RULES} from '../../rules/stock';
 import {fileIdAt} from '../../runtime/projectFiles';
+import {importStockActor} from '../importStockActor';
 import {stockActorById} from '../stock';
 
 import type {Enhancement, EnhanceTarget} from './enhancements';
-import {addRoot, append, down, rowsUnder, type BlockJson} from './patch';
+import {addRoot, append, rowsUnder, type BlockJson} from './patch';
 
 /** What makes an actor hear that the score changed. */
 const WATCHES = 'Scoring#WatchesTheScoreTrait';
@@ -75,32 +75,12 @@ const AT = {x: 48, y: 16};
 /** What it says before anything has been scored, as the starter's does. */
 const SEED = 'SCORE 0';
 
-/**
- * Rewrite the Label's seeded text, rather than adding a second row that says
- * something else. Two `set text` rows in a row is a file that reads like a
- * mistake, and the seed is exactly what this actor is for.
- */
-const seeded = (contents: string): string => {
-  const workspace = JSON.parse(contents) as {blocks?: {blocks?: BlockJson[]}};
-  for (const root of workspace.blocks?.blocks ?? []) {
-    for (const row of down(root)) {
-      if (row.type !== 'world_set_Writing_TextProperty') {
-        continue;
-      }
-      const value = row.inputs?.VALUE as
-        | {shadow?: {fields?: Record<string, unknown>}}
-        | undefined;
-      if (value?.shadow?.fields) {
-        value.shadow.fields.TEXT = SEED;
-      }
-    }
-  }
-  return JSON.stringify(workspace, null, 2);
-};
-
 /** `set text of ⟨who⟩ to ⟨value⟩`. */
 const setText = (who: object, value: object): BlockJson => ({
-  type: 'world_set_Writing_TextProperty',
+  // The LABEL's property, which the board has by acting like one: the four
+  // text properties were a rule's and are the Label's own now
+  // (specs/UI_ACTORS.md).
+  type: 'world_set_ActorsLabel_TextProperty',
   inputs: {ACTOR: who, VALUE: value},
 });
 
@@ -179,19 +159,52 @@ const writeBoard = (source: MultiFileSource): MultiFileSource => {
   if (fileIdAt(source, `${BOARD_PATH}.actor`)) {
     return source;
   }
-  const label = stockActorById('label');
-  if (!label) {
-    return source;
-  }
   const placedIn = folderIn(source, 'actors');
   const fileId = getNextFileId(Object.values(placedIn.source.files));
-  // The stock Label, renamed — which is what a scoreboard IS — plus the trait
-  // that makes it hear about the score, and the handler that answers.
+  // A LABEL THAT WATCHES THE SCORE, said in a row rather than copied out.
+  //
+  // It used to be the stock Label's file RENAMED, which worked while `text`
+  // belonged to a rule: the same block type meant the same property wherever
+  // the file lived. It is the Label's OWN property now, and an own property's
+  // block carries the file that declared it — so a copy at a new path declared
+  // a different `text`, and the handler below wrote one nothing read.
+  //
+  // Acting like it is both smaller and correct: the words, their size and
+  // color, the box and the picture all come across, and they stay the LABEL's
+  // (`ActorBuilder.actsLike`).
   const contents = addRoot(
-    seeded(
-      append(renamed(label.contents, BOARD_NAME), {type: 'world_actor'}, [
-        {type: 'world_use_trait', fields: {TRAIT: WATCHES}},
-      ]),
+    JSON.stringify(
+      {
+        blocks: {
+          blocks: [
+            {
+              type: 'world_actor',
+              x: 20,
+              y: 20,
+              fields: {NAME: BOARD_NAME},
+              next: {
+                block: {
+                  type: 'world_acts_like',
+                  fields: {ACTOR: 'actors/label'},
+                  next: {
+                    block: {
+                      type: 'world_use_trait',
+                      fields: {TRAIT: WATCHES},
+                      next: {
+                        block: setText(me(), {
+                          shadow: {type: 'text', fields: {TEXT: SEED}},
+                        }),
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          ],
+        },
+      },
+      null,
+      2,
     ),
     watcher(),
   );
@@ -232,18 +245,25 @@ export const scoreboardEnhancement: Enhancement = {
   name: 'A scoreboard',
   description:
     'Puts the score on the screen and keeps it there: a Scoreboard actor in the corner, on a layer that stays put when the view moves, saying what the score is whenever it changes.',
-  brings: ['Keeps Score', 'Shows Text', 'a Scoreboard actor'],
+  brings: ['Keeps Score', 'a Scoreboard actor'],
   applied(source: MultiFileSource, target: EnhanceTarget) {
     const id = fileIdAt(source, `${target.path}.world`);
     return Boolean(id && placed(source.files[id].contents));
   },
   apply(source: MultiFileSource, target: EnhanceTarget) {
     let current = source;
-    for (const name of ['Scoring', 'Writing']) {
+    for (const name of ['Scoring']) {
       const rule = STOCK_RULES.find(one => one.name === name);
       if (rule) {
         current = importStockRule(current, rule).source;
       }
+    }
+    // …and the Label the board ACTS LIKE. `acts like` names a module path, and
+    // a path naming a file the project does not hold inherits nothing at all —
+    // no words, no box, no picture.
+    const label = stockActorById('label');
+    if (label) {
+      current = importStockActor(current, label).source;
     }
     current = writeBoard(current);
 

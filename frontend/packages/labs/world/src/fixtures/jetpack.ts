@@ -93,6 +93,7 @@
 // phases 4 to 7). It is the smallest thing that plays.
 
 import {climbArrowsHandlers} from '../actors/enhance/climbArrows';
+import {labelActor} from '../actors/stock/label';
 import {progressBarActor} from '../actors/stock/progressBar';
 import {
   actsLike,
@@ -1981,7 +1982,8 @@ const SCOREBOARD_ACTOR = JSON.stringify({
         fields: {NAME: 'Scoreboard'},
         next: {
           block: stack([
-            useTrait('Writing#ShowsTextTrait'),
+            // A Label that watches the score, as the starter's is.
+            actsLike('actors/label'),
             useTrait('Scoring#WatchesTheScoreTrait'),
             // …and the ending, for the same reason: an `.actor` file has no
             // binding for a WORLD event, so hearing about one at all means
@@ -2002,7 +2004,7 @@ const SCOREBOARD_ACTOR = JSON.stringify({
                   block: stack([
                     fill({
                       block: {
-                        type: 'world_get_Writing_TextColorProperty',
+                        type: 'world_get_ActorsLabel_TextColorProperty',
                         inputs: {ACTOR: me()},
                       },
                     }),
@@ -2367,6 +2369,14 @@ export const JETPACK_SPEC: ProjectSpec = {
     // The bar the Fuel Bar acts LIKE. `acts like` names a module path, and a
     // path naming a file the project does not hold inherits nothing at all —
     // no trait, no picture — so the parent has to be here.
+    // The Label the Scoreboard ACTS LIKE. `acts like` names a module path, and
+    // a path naming a file the project does not hold inherits nothing at all.
+    labelActorFile: {
+      name: 'label.actor',
+      language: 'actor',
+      contents: labelActor,
+      folderId: 'actors',
+    },
     progressBarActor: {
       name: 'progressBar.actor',
       language: 'actor',
@@ -2515,12 +2525,6 @@ export const JETPACK_SPEC: ProjectSpec = {
       name: 'goals.rule',
       language: 'rule',
       contents: referenceToStock('goals'),
-      folderId: 'rules',
-    },
-    writingRuleFile: {
-      name: 'writing.rule',
-      language: 'rule',
-      contents: referenceToStock('writing'),
       folderId: 'rules',
     },
     surfacesRuleFile: {

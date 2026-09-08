@@ -61,9 +61,8 @@ describe('importStockActor', () => {
   it('brings the rules whose traits it elects', () => {
     const {source} = importStockActor(project(), button);
 
-    expect(named(source, 'writing.rule')).toBeDefined();
     expect(named(source, 'mouse.rule')).toBeDefined();
-    expect(named(source, 'writing.rule')?.folderId).toBe('rules');
+    expect(named(source, 'mouse.rule')?.folderId).toBe('rules');
   });
 
   it('brings those rules’ own dependencies too', () => {
@@ -79,7 +78,10 @@ describe('importStockActor', () => {
 
   it('creates the folders a bare project has not got', () => {
     const bare: MultiFileSource = {files: {}, folders: {}, openFiles: []};
-    const {source} = importStockActor(bare, label);
+    // A COIN, which asks for rules. The Label asks for none any more — its
+    // words are its own `define property` rows rather than a rule's trait —
+    // so it would only ever make one of the two folders.
+    const {source} = importStockActor(bare, coin);
 
     const folders = Object.values(source.folders).map(folder => folder.name);
     expect(folders).toContain('actors');
@@ -101,10 +103,10 @@ describe('importStockActor', () => {
   });
 
   it('leaves an already-imported rule alone as well', () => {
-    const mine = project({f1: {name: 'writing.rule', folderId: 'rules'}});
-    const {source} = importStockActor(mine, label);
+    const mine = project({f1: {name: 'collisions.rule', folderId: 'rules'}});
+    const {source} = importStockActor(mine, coin);
 
-    expect(named(source, 'writing.rule')?.contents).toBe('{}');
+    expect(named(source, 'collisions.rule')?.contents).toBe('{}');
   });
 });
 

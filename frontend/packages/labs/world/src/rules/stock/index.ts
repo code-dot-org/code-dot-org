@@ -53,7 +53,6 @@ import {timeRule} from './time';
 import {turningRule} from './turning';
 import {turnsRule} from './turns';
 import {wrapRule} from './wrap';
-import {writingRule} from './writing';
 import {zapsRule} from './zaps';
 
 /** One entry in the library. */
@@ -218,15 +217,6 @@ export const STOCK_RULES: readonly StockRule[] = [
       'Sends something on a beat that closes as the game goes on \u2014 which is what makes a wave a wave rather than a metronome. It says WHEN and how many, and never what: the handler for "sends something" places whatever the wave is made of. Set how many to send to stop after a number of them, and closer each time to under one to make each gap shorter than the last.',
     provides: ['Sends Things'],
     contents: spawnerRule,
-  },
-  {
-    id: 'writing',
-    name: 'Writing',
-    ability: 'Shows Text',
-    description:
-      'Gives an actor words, a size, a color and an anchor — the state a drawn word is drawn from. It runs nothing: what an actor does with its words is its own “define drawing”, which is why the stock Label and Button are ordinary actors.',
-    provides: ['Shows Text'],
-    contents: writingRule,
   },
   {
     id: 'conversation',
@@ -536,7 +526,6 @@ export {
   flappingRule,
   prowlingRule,
   mouseRule,
-  writingRule,
   boundsRule,
   collectRule,
   healthRule,
