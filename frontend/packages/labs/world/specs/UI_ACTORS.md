@@ -348,14 +348,24 @@ lab is emitted from TypeScript, so one shared `drawingRow`
 
 ## What a Label is, once it is the base of the chain
 
-**Words in a SPACE**, rather than a line of text at a point. That is the whole
-difference between a Label and `draw text`, and it is what the width and height
-buy: the words are laid into the box, wrapped to it, and anchored within it.
+**Words in a SPACE**, rather than a line of text at a point — DONE. That is the
+whole difference between a Label and `draw text`, and it is what the width and
+height buy: `width` and `height` are the Label's own properties, the drawing is
+sized from them, and the words are laid into that box with `draw paragraph`,
+wrapped to its column. Two Labels of one kind are two boxes. Everything that
+ACTS LIKE a Label is sized the same way, which is most of this page.
 
-**A `new line` node.** Text is built by joining, and there is no way to say
-"and then a line break" — so a Label can hold a paragraph only if something
-else put the newlines in. One block, reporting the character, and `draw
-paragraph` already breaks on it.
+The anchor still decides how the words sit about the box's MIDDLE rather than
+within its edges — `center` centres them, `right` ends them there, which is
+what a score counting up wants. A block of several lines is centred as a block,
+which the painter already did for any vertically-middled anchor.
+
+**Saying a paragraph in blocks**, which the box can now hold and the language
+cannot yet write. Concatenation is `text_join` and a mutator, and there is no
+way to say "and then a line break" at all. Both are answered by one idea: a
+string block takes an optional value, stringifies it and appends it, so text is
+CHAINED rather than assembled in a bubble — and `new line` is that same block
+with a break in it, so it chains with the rest.
 
 **A list of words joins with a space.** `words` is already a property type, and
 a `text` socket handed one should read it as a sentence rather than refusing

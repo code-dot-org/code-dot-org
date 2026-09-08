@@ -96,6 +96,10 @@ describe('every stock actor', () => {
       // behavior; the bars that are not this one act like it and get them
       // (`ActorBuilder.actsLike`).
       progressBar: ['fraction', 'bar_color', 'track_color'],
+      // …and how big a Label is, which is the box its words are laid into. The
+      // base of the interface set, so everything that acts like a Label is
+      // sized the same way (specs/UI_ACTORS.md).
+      label: ['width', 'height'],
       // The typewriter. `the whole line` is what is being said, where `text`
       // is however much of it has arrived — Writing's, because every actor
       // with words means the same thing by it. A rule for these two would be
@@ -185,7 +189,24 @@ describe('Label', () => {
     expect(drawn).toContain('world_get_Writing_TextSizeProperty');
     expect(drawn).toContain('world_get_Writing_TextColorProperty');
     expect(drawn).toContain('world_get_Writing_TextAnchorProperty');
-    expect(drawn.filter(type => type === 'world_draw_text')).toHaveLength(1);
+    // A PARAGRAPH, not a word: the words wrap to the box and break where the
+    // text says to, which is what makes a Label hold a sentence and what
+    // `⟨new line⟩` is for (specs/UI_ACTORS.md).
+    expect(drawn.filter(type => type === 'world_draw_paragraph')).toHaveLength(
+      1,
+    );
+    expect(drawn).not.toContain('world_draw_text');
+  });
+
+  it('is as big as it says it is', () => {
+    // Its own `width` and `height`, and a drawing sized from them — so two
+    // Labels of one kind are two boxes. It was two numbers typed into
+    // `define drawing`, one pair per KIND, and resizing one was not a thing
+    // that could be said.
+    const drawn = types(labelActor);
+
+    expect(drawn).toContain('world_get_ActorsLabel_WidthProperty');
+    expect(drawn).toContain('world_get_ActorsLabel_HeightProperty');
   });
 
   it('arrives with something to show', () => {

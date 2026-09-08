@@ -220,7 +220,11 @@ export interface ActorExtras {
    * Only an interface actor needs one. A Label has no picture and must paint
    * itself; a Coin has a picture and must not, since a drawing would cover it.
    */
-  drawing?: {width: number; height: number; commands: object[]};
+  drawing?: {
+    width: number | object;
+    height: number | object;
+    commands: object[];
+  };
   /**
    * Event handlers — `when this actor presses ⟨space⟩` and the like.
    *
@@ -353,13 +357,20 @@ export const drawText = (x: number, y: number) => ({
  * a number the caller gives, because it is a fact about the BOX and not about
  * the words: a speech box is as wide as it is drawn, whatever is said in it.
  */
-export const drawParagraph = (x: number, y: number, width: number) => ({
+export const drawParagraph = (
+  x: number | object,
+  y: number | object,
+  width: number | object,
+) => ({
   type: 'world_draw_paragraph',
   inputs: {
     TEXT: textOf('TextProperty'),
-    WIDTH: num(width),
-    X: num(x),
-    Y: num(y),
+    // A NUMBER OR AN EXPRESSION, because a box that is as big as it says it is
+    // draws into a column it has to ask for (`actors/stock/label`). A literal
+    // is the shadow it always was.
+    WIDTH: typeof width === 'number' ? num(width) : width,
+    X: typeof x === 'number' ? num(x) : x,
+    Y: typeof y === 'number' ? num(y) : y,
     SIZE: textOf('TextSizeProperty'),
     ANCHOR: textOf('TextAnchorProperty'),
   },
