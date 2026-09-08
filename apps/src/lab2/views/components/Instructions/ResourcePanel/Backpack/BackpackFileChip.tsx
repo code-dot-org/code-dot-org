@@ -233,7 +233,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
               title={`Saved from ${sourceDisplayName}`}
               placement="top"
               describeChild={false}
-              // Portal is document.body, outside the themed subtree.
+              // We need to apply the theme because the tooltip is in a portal.
               slotProps={{tooltip: {'data-theme': theme}}}
             >
               <button

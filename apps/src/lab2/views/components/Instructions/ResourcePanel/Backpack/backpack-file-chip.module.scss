@@ -60,12 +60,8 @@ $icon-height: $chip-height - 2px;
   text-overflow: ellipsis;
   white-space: nowrap;
   display: block;
-  width: 100%;
-  min-width: 0; 
-}
-
-.fileNameRow .infoText.infoText {
   width: auto;
+  min-width: 0;
 }
 
 .sourceInfoButton {
