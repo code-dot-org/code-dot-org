@@ -1,8 +1,9 @@
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tags from '@code-dot-org/component-library/tags';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {Typography, IconButton as MuiIconButton} from '@mui/material';
+import {Typography, IconButton as MuiIconButton, Tooltip} from '@mui/material';
 import React, {useMemo} from 'react';
 
 import {getFileIconNameAndStyle} from '@cdo/apps/codebridge';
@@ -71,6 +72,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   );
   const channelId =
     useAppSelector(state => state.lab.channel && state.lab.channel.id) || '';
+  const {theme} = useTheme();
   const dialogControl = useDialogControl();
   const inReadOnly = useAppSelector(isReadOnlyWorkspace);
   const isFileSupported = isFileTypeSupported(fileName, supportedFileTypes);
@@ -218,13 +220,36 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
         </div>
       )}
       <div className={moduleStyles.fileInfo} title={fileName}>
-        <Typography
-          className={moduleStyles.infoText}
-          variant="body3"
-          gutterBottom
-        >
-          <Typography variant="strong">{fileName}</Typography>
-        </Typography>
+        <div className={moduleStyles.fileNameRow}>
+          <Typography
+            className={moduleStyles.infoText}
+            variant="body3"
+            gutterBottom
+          >
+            <Typography variant="strong">{fileName}</Typography>
+          </Typography>
+          {sourceDisplayName && (
+            <Tooltip
+              title={`Saved from ${sourceDisplayName}`}
+              placement="top"
+              describeChild={false}
+              // Portal is document.body, outside the themed subtree.
+              slotProps={{tooltip: {'data-theme': theme}}}
+            >
+              <button
+                type="button"
+                className={moduleStyles.sourceInfoButton}
+                aria-label={`Saved from ${sourceDisplayName}`}
+              >
+                <FontAwesomeV6Icon
+                  iconName="circle-info"
+                  iconStyle="solid"
+                  className={moduleStyles.sourceInfoIcon}
+                />
+              </button>
+            </Tooltip>
+          )}
+        </div>
       </div>
       <div className={moduleStyles.fileActions}>
         {isRecentlyAdded ? (
