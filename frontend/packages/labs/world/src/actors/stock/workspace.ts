@@ -322,13 +322,21 @@ export const noOutline = () => ({type: 'world_pen_no_outline'});
 
 /** `draw rectangle at x ⟨⟩ y ⟨⟩ size ⟨⟩ by ⟨⟩`. */
 export const rectangle = (
-  x: number,
-  y: number,
-  width: number,
-  height: number,
+  x: number | object,
+  y: number | object,
+  width: number | object,
+  height: number | object,
 ) => ({
   type: 'world_draw_rectangle',
-  inputs: {X: num(x), Y: num(y), WIDTH: num(width), HEIGHT: num(height)},
+  // A NUMBER OR AN EXPRESSION in each, because an actor that is as big as it
+  // says it is paints a panel the same size (`actors/stock/button`). A literal
+  // is the shadow it always was.
+  inputs: {
+    X: typeof x === 'number' ? num(x) : x,
+    Y: typeof y === 'number' ? num(y) : y,
+    WIDTH: typeof width === 'number' ? num(width) : width,
+    HEIGHT: typeof height === 'number' ? num(height) : height,
+  },
 });
 
 /**

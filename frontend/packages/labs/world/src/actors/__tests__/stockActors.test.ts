@@ -321,13 +321,17 @@ describe('Health Bar', () => {
 });
 
 describe('Button', () => {
-  it('is a Label that elects one more trait', () => {
+  it('IS a Label, said in a row, and elects one more trait', () => {
     // The demonstration that an interface actor is an actor: the click, the
-    // words and the picture are three things that already existed, and a button
-    // is what happens when they are in one file.
-    expect(buttonActor).toContain('Writing#ShowsTextTrait');
+    // words and the picture are three things that already existed, and a
+    // button is what happens when they are in one file. What it has in common
+    // with a Label is now a row rather than a repeated `use trait` — the
+    // words, their size and color and the box they fill all come across
+    // (`ActorBuilder.actsLike`).
+    expect(buttonActor).toContain('actors/label');
+    expect(buttonActor).not.toContain('Writing#ShowsTextTrait');
     expect(buttonActor).toContain('Mouse#CanBeClickedTrait');
-    expect(types(buttonActor)).toContain('world_draw_text');
+    expect(types(buttonActor)).toContain('world_draw_paragraph');
   });
 
   it('paints its face in the routine rather than carrying it as state', () => {
@@ -340,7 +344,7 @@ describe('Button', () => {
   it('turns its outline off before the word', () => {
     // A stroked letter at 12px is a smudge; the edge belongs to the face.
     expect(buttonActor.indexOf('world_pen_no_outline')).toBeLessThan(
-      buttonActor.indexOf('world_draw_text'),
+      buttonActor.indexOf('world_draw_paragraph'),
     );
   });
 });

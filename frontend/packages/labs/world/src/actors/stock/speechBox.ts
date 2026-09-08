@@ -21,10 +21,13 @@
 
 import {typewriterFor} from '../typewriter';
 
+import {labelSizeOf} from './label';
 import {
   actorFile,
+  actsLike,
   drawParagraph,
   fill,
+  me,
   noOutline,
   outline,
   rectangle,
@@ -39,8 +42,33 @@ import {
 /** Most of the width of a 320-pixel screen, and a third of its height. */
 const WIDTH = 280;
 const HEIGHT = 96;
+
+/** `⟨width⟩ of this actor`, the Label's, inherited by acting like one. */
+const width = () => labelSizeOf('Width');
+const height = () => labelSizeOf('Height');
+
+/** `set ⟨width⟩ of this actor to ⟨n⟩` — a box bigger than a Label's. */
+const setSize = (name: 'Width' | 'Height', value: number) => ({
+  type: `world_set_ActorsLabel_${name}Property`,
+  inputs: {
+    ACTOR: me(),
+    VALUE: {shadow: {type: 'math_number', fields: {NUM: value}}},
+  },
+});
 /** Room either side of the words, so nothing is read off the edge of the panel. */
 const MARGIN = 12;
+
+/** `⟨width⟩ - 24` — the column, once both margins are taken off it. */
+const inset = (of: object) => ({
+  block: {
+    type: 'math_arithmetic',
+    fields: {OP: 'MINUS'},
+    inputs: {
+      A: of,
+      B: {shadow: {type: 'math_number', fields: {NUM: MARGIN * 2}}},
+    },
+  },
+});
 
 /** Its own file, which is what its blocks are named after. */
 const typewriter = typewriterFor('actors/speechBox');
@@ -48,9 +76,16 @@ const typewriter = typewriterFor('actors/speechBox');
 export const speechBoxActor = actorFile(
   'Speech Box',
   [
-    useTrait('Writing#ShowsTextTrait'),
+    // A LABEL WITH A PANEL BEHIND IT, said in a row: the words, their size and
+    // color, and the box they are laid into all come across
+    // (`ActorBuilder.actsLike`). It is not one of `any ⟨Label⟩` afterwards —
+    // a kind is never inherited — which is right, since a scene addressing its
+    // labels should not be addressing its dialogue.
+    actsLike('actors/label'),
     useTrait('Time#HasATimerTrait'),
     showAs('speech'),
+    setSize('Width', WIDTH),
+    setSize('Height', HEIGHT),
     ...typewriter.rows,
     // Anchored at the top left, because a box fills downward as it is read. A
     // centered one would jump about as each line arrived.
@@ -65,19 +100,21 @@ export const speechBoxActor = actorFile(
     variables: typewriter.variables,
     handlers: [typewriter.handler],
     drawing: {
-      width: WIDTH,
-      height: HEIGHT,
+      width: width(),
+      height: height(),
       commands: [
         // The panel: dark, with a light edge, which is what makes the words on
         // it legible over whatever the scene happens to be.
         fill(swatch('#101828')),
         outline(swatch('#ffffff'), 2),
-        rectangle(0, 0, WIDTH, HEIGHT),
+        rectangle(0, 0, width(), height()),
         // The edge belongs to the panel and not to the letters: a stroked
         // sentence at this size is a smudge.
         noOutline(),
         fill(textOf('TextColorProperty')),
-        drawParagraph(MARGIN, MARGIN, WIDTH - MARGIN * 2),
+        // Inset from the box it is given, rather than from the size this file
+        // happens to name: a wider box is a wider column.
+        drawParagraph(MARGIN, MARGIN, inset(width())),
       ],
     },
   },

@@ -15,6 +15,7 @@
 // Six lines and it is already the fiddliest block in the file; that is the
 // argument for a `.dialogue` file, made by writing one without.
 
+import {labelActor} from '../actors/stock/label';
 import {portraitActor} from '../actors/stock/portrait';
 import {speechBoxActor} from '../actors/stock/speechBox';
 import {
@@ -310,6 +311,15 @@ const SPEC: ProjectSpec = {
       folderId: 'worlds',
       active: true,
       open: true,
+    },
+    // The Label the Speech Box ACTS LIKE. `acts like` names a module path, and
+    // a path naming a file the project does not hold inherits nothing at all —
+    // no words, no box, no picture (`actors/stock/speechBox`).
+    label: {
+      name: 'label.actor',
+      language: 'actor',
+      contents: labelActor,
+      folderId: 'actors',
     },
     speechBox: {
       name: 'speechBox.actor',

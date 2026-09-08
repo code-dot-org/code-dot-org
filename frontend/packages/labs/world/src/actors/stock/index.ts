@@ -120,7 +120,13 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     name: 'Button',
     description:
       'A label you can press. It raises “is clicked with” on itself, so a handler needs no hit test of its own.',
+    // Mouse for the click, and Writing because this file READS the text and
+    // its color to paint its own face — a `use trait` row is not the only way
+    // to need a rule (see the test that keeps this list honest).
     requires: ['Writing', 'Mouse'],
+    // …and the Label it IS, which is where the words, their size and the box
+    // they are laid into come from.
+    actors: ['label'],
     contents: buttonActor,
   },
   {
@@ -128,7 +134,11 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     name: 'Speech Box',
     description:
       'A panel with room for a sentence — what a line of dialogue is read from. It types itself out: say a line and the letters arrive at reading pace.',
+    // Writing for the text it reads as it paints, Time for the clock its
+    // letters arrive on — and the Label it IS, which is where the words, the
+    // colors and the box come from.
     requires: ['Writing', 'Time'],
+    actors: ['label'],
     contents: speechBoxActor,
   },
   {

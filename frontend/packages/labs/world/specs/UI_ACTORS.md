@@ -161,7 +161,7 @@ a rule pulls its dependencies.
 | actor        | what it is                                        | state                                      |
 | ------------ | ------------------------------------------------- | ------------------------------------------ |
 | Label        | words in a space                                  | DONE; wants `new line` and a list of words |
-| Button       | a Label with an edge that answers a press         | DONE; should ACT LIKE a Label              |
+| Button       | a Label with an edge that answers a press         | DONE, and acts like a Label                |
 | Progress Bar | a bar whose length is a number                    | DONE                                       |
 | Health Bar   | a Progress Bar filled from somebody's health      | DONE (acts like)                           |
 | Speech Box   | a Label that lets its line out a letter at a time | DONE                                       |
@@ -254,6 +254,13 @@ So the shape of the set is a chain, not a list. A Label is the base; a Button is
 a Label that answers a press; a Speech Box is a Label that lets its line out
 slowly; a Text Input is a Label you can type into. Each says `acts like` and
 adds one idea.
+
+The first two are built that way now. What a Button adds to a Label is an edge
+and `Can Be Clicked`; what a Speech Box adds is a panel and the typewriter.
+Each overrides the size it inherits in a row BELOW the `acts like`, which is
+what reading a file downwards should mean — and each brings the Label with it,
+since `acts like` names a module path and a path naming a file the project does
+not hold inherits nothing at all.
 
 **Which is what finally takes the Writing rule out.** It was a rule because a
 Label and a Button and a Scoreboard all mean the same thing by `text`, and a

@@ -46,16 +46,22 @@ import {
 const WIDTH = 96;
 const HEIGHT = 24;
 
-/** `⟨width⟩ of this actor`, and its sibling — what the box is drawn from. */
-const sizeOf = (name: 'Width' | 'Height') => ({
+/**
+ * `⟨width⟩ of this actor`, and its sibling — what the box is drawn from.
+ *
+ * EXPORTED, because everything that ACTS LIKE a Label inherits these two and
+ * paints its own face out of them: a Button's panel and a Speech Box's panel
+ * are both "as big as this actor says it is" (`ActorBuilder.actsLike`).
+ */
+export const labelSizeOf = (name: 'Width' | 'Height') => ({
   block: {
     type: `world_get_ActorsLabel_${name}Property`,
     inputs: {ACTOR: me()},
   },
 });
 
-/** `⟨n⟩ ÷ 2` — the middle of the box, whatever the box is. */
-const half = (of: object) => ({
+/** `⟨n⟩ ÷ 2` — the middle of the box, whatever the box is. Exported with it. */
+export const labelHalf = (of: object) => ({
   block: {
     type: 'math_arithmetic',
     fields: {OP: 'DIVIDE'},
@@ -88,15 +94,15 @@ export const labelActor = actorFile(
   ],
   {
     drawing: {
-      width: sizeOf('Width'),
-      height: sizeOf('Height'),
+      width: labelSizeOf('Width'),
+      height: labelSizeOf('Height'),
       commands: [
         fill(textOf('TextColorProperty')),
         // The column is the whole box, so the words wrap where the box ends.
         drawParagraph(
-          half(sizeOf('Width')),
-          half(sizeOf('Height')),
-          sizeOf('Width'),
+          labelHalf(labelSizeOf('Width')),
+          labelHalf(labelSizeOf('Height')),
+          labelSizeOf('Width'),
         ),
       ],
     },
