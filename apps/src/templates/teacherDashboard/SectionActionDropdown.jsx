@@ -117,7 +117,14 @@ class SectionActionDropdown extends Component {
         break;
     }
     const courseId = courseIdFromSectionCode(this.props.sectionCode);
-    this.props.updateRoster(courseId, this.props.sectionName);
+    // A rejected sync used to surface nowhere and became an unhandled
+    // rejection; this menu has no failure UI of its own, so report it and
+    // leave the roster unchanged.
+    Promise.resolve(
+      this.props.updateRoster(courseId, this.props.sectionName)
+    ).catch(syncError => {
+      console.error('Roster sync failed', syncError);
+    });
   };
 
   onRequestDelete = () => {

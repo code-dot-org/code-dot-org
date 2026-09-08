@@ -288,8 +288,8 @@ CleverCard.propTypes = PictureLoginCard.propTypes;
 
 const ClasslinkCard = props => (
   <LoginTypeCard
-    title={i18n.loginTypeClasslink()}
-    description={i18n.loginTypeClasslinkDescription()}
+    title="ClassLink"
+    description="Import a roster from ClassLink to create student accounts."
     onClick={() => props.onClick(OAuthSectionTypes.classlink)}
   />
 );

@@ -201,6 +201,28 @@ describe('SectionActionDropdown', () => {
     );
   });
 
+  it('handles a rejected sync instead of leaving an unhandled rejection', async () => {
+    const consoleError = jest
+      .spyOn(console, 'error')
+      .mockImplementation(() => {});
+    const wrapper = shallow(
+      <SectionActionDropdown
+        {...DEFAULT_PROPS}
+        sectionData={sections[1]}
+        sectionCode="G-123"
+        sectionName="Sync me"
+        updateRoster={() => Promise.reject(new Error('sync failed'))}
+      />
+    );
+
+    wrapper.instance().onClickSync();
+    // A rejection that escaped would surface here rather than in the catch.
+    await new Promise(resolve => setTimeout(resolve, 0));
+
+    expect(consoleError.mock.calls.length).to.equal(1);
+    consoleError.mockRestore();
+  });
+
   it('sends only the class sourcedId when syncing a ClassLink section', () => {
     // The section code is CL-<TenantId>|<classSourcedId>; the tenant is never
     // sent — the server derives it from the signed-in user.

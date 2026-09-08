@@ -151,13 +151,11 @@ const LoadError = ({rosterProvider, loginType, loadError}) => {
         </p>
       );
     case OAuthSectionTypes.classlink:
-      // The server distinguishes the ClassLink failure states (district not
-      // enabled, no v2 credential, empty class) and sends the user-facing
-      // copy; anything without a message gets the generic fallback so no
-      // failure renders an empty dialog.
+      // Fall back to generic copy when the server returns no ClassLink error message.
       return (
         <p>
-          {(loadError && loadError.message) || locale.classlinkRosterError()}{' '}
+          {(loadError && loadError.message) ||
+            "We're having trouble getting roster information from ClassLink. Please try again later."}{' '}
           <a
             href={ROSTERED_SECTIONS_SUPPORT_URL}
             target="_blank"
@@ -302,8 +300,8 @@ class RosterDialog extends React.Component {
         loginType = locale.loginTypeClever();
         break;
       case OAuthSectionTypes.classlink:
-        title = locale.selectClasslinkSection();
-        loginType = locale.loginTypeClasslink();
+        title = 'Select a ClassLink section';
+        loginType = 'ClassLink';
         break;
     }
 

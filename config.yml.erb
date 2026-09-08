@@ -30,7 +30,10 @@ dashboard_clever_key:           !Secret
 dashboard_clever_secret:        !Secret
 dashboard_classlink_key:        !Secret
 dashboard_classlink_secret:     !Secret
-classlink_roster_api_key:       !Secret
+# ClassLink Partner Portal API key for One Roster rostering. Only production
+# holds the real key (see config/production.yml.erb); everywhere else it is
+# blank, which resolves to the rostering-unavailable path rather than raising.
+classlink_roster_api_key:       ''
 
 # Recaptcha
 recaptcha_site_key: !Secret

@@ -773,19 +773,19 @@ class ApiController < ApplicationController
   end
 
   private def classlink_no_v2_error
-    render status: :forbidden, json: {error: I18n.t('classlink_rostering.no_v2_account')}
+    render status: :forbidden, json: {error: 'Please sign in again from ClassLink to proceed with roster sync.'}
   end
 
   # Also rendered for a non-expiry 401: indistinguishable from a district that
   # never enabled sharing from the teacher's position, so the two states share
   # one string and the distinction stays in the logs.
   private def classlink_district_not_enabled_error
-    render status: :forbidden, json: {error: I18n.t('classlink_rostering.district_not_enabled')}
+    render status: :forbidden, json: {error: "Your district hasn't enabled roster sync for CodeAI."}
   end
 
   private def classlink_request_failed(exception)
     Observability::Errors.report(exception, error_message: 'ClassLink rostering request failed')
-    render status: :bad_gateway, json: {error: I18n.t('classlink_rostering.request_failed')}
+    render status: :bad_gateway, json: {error: "We're having trouble getting roster information from ClassLink. Please try again later."}
   end
 
   private def clever_teacher_for_course?(course_id)

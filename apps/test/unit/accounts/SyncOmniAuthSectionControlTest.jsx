@@ -210,6 +210,57 @@ describe('SyncOmniAuthSectionControl', () => {
     });
   });
 
+  describe('ClassLink sync failures', () => {
+    // The endpoints name their own failure states, so the dialog shows that
+    // copy rather than the raw technical log other providers get.
+    const classlinkProps = () => ({
+      ...defaultProps,
+      sectionProvider: OAuthSectionTypes.classlink,
+      sectionCode: 'CL-2222|33333',
+    });
+
+    it('shows the server-supplied message instead of the raw error log', () => {
+      const wrapper = shallow(
+        <SyncOmniAuthSectionControl {...classlinkProps()} />
+      );
+      wrapper.find(SyncOmniAuthSectionButton).simulate('click');
+      const serverError = new Error('status: 403');
+      serverError.serverMessage =
+        "Your district hasn't enabled roster sync for CodeAI.";
+
+      return expect(testSyncFails(serverError)).to.be.rejected.then(() => {
+        // Substring avoids the apostrophe, which html() HTML-escapes.
+        expect(wrapper.find(BaseDialog).html()).contains(
+          'enabled roster sync for CodeAI'
+        );
+        expect(wrapper.find(BaseDialog).find('pre')).to.have.lengthOf(0);
+      });
+    });
+
+    it('falls back to generic copy when the failure carries no server message', () => {
+      const wrapper = shallow(
+        <SyncOmniAuthSectionControl {...classlinkProps()} />
+      );
+      wrapper.find(SyncOmniAuthSectionButton).simulate('click');
+
+      return expect(testSyncFails()).to.be.rejected.then(() => {
+        expect(wrapper.find(BaseDialog).html()).contains(
+          'getting roster information from ClassLink'
+        );
+        expect(wrapper.find(BaseDialog).find('pre')).to.have.lengthOf(0);
+      });
+    });
+
+    it('leaves the raw error log in place for other providers', () => {
+      const wrapper = shallow(<SyncOmniAuthSectionControl {...defaultProps} />);
+      wrapper.find(SyncOmniAuthSectionButton).simulate('click');
+
+      return expect(testSyncFails()).to.be.rejected.then(() => {
+        expect(wrapper.find(BaseDialog).find('pre')).to.have.lengthOf(1);
+      });
+    });
+  });
+
   it('When clicked Close on the Error Dialog, closes Error Dialog and \
     Sync Button returns to ready state ', () => {
     const wrapper = shallow(<SyncOmniAuthSectionControl {...defaultProps} />);

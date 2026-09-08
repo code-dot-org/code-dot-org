@@ -72,6 +72,7 @@ class SyncOmniAuthSectionControl extends React.Component {
     needsGoogleReauth: false,
     needsCleverReauth: false,
     cleverSectionNotFound: false,
+    classlinkErrorMessage: '',
   };
 
   onClick = () => {
@@ -107,15 +108,25 @@ class SyncOmniAuthSectionControl extends React.Component {
           this.props.sectionProvider === OAuthSectionTypes.google_classroom;
         const isClever =
           this.props.sectionProvider === OAuthSectionTypes.clever;
+        const isClasslink =
+          this.props.sectionProvider === OAuthSectionTypes.classlink;
         const needsGoogleReauth = isGoogle && /status:\s*403\b/.test(errorText);
         const needsCleverReauth = isClever && /status:\s*401\b/.test(errorText);
         const cleverSectionNotFound =
           isClever && /status:\s*404\b/.test(errorText);
+        // The ClassLink endpoints name their own failure states (district not
+        // enabled, no v2 credential); show that copy rather than the raw log,
+        // which is the only thing this dialog offers other providers.
+        const classlinkErrorMessage = isClasslink
+          ? sync_error.serverMessage ||
+            "We're having trouble getting roster information from ClassLink. Please try again later."
+          : '';
         this.setState({
           syncFailErrorLog: errorText,
           needsGoogleReauth,
           needsCleverReauth,
           cleverSectionNotFound,
+          classlinkErrorMessage,
         });
         this.openDialog();
       });
@@ -190,18 +201,22 @@ class SyncOmniAuthSectionControl extends React.Component {
               <ReauthorizeClever />
             </div>
           )}
-          {!this.state.needsGoogleReauth && !this.state.needsCleverReauth && (
-            <>
-              {this.state.cleverSectionNotFound && (
-                <p>{i18n.cleverSectionNotFound()}</p>
-              )}
-              <div style={styles.scroll}>
-                <pre>
-                  <code>{this.state.syncFailErrorLog}</code>
-                </pre>
-              </div>
-            </>
-          )}
+          {!this.state.needsGoogleReauth &&
+            !this.state.needsCleverReauth &&
+            (this.state.classlinkErrorMessage ? (
+              <p>{this.state.classlinkErrorMessage}</p>
+            ) : (
+              <>
+                {this.state.cleverSectionNotFound && (
+                  <p>{i18n.cleverSectionNotFound()}</p>
+                )}
+                <div style={styles.scroll}>
+                  <pre>
+                    <code>{this.state.syncFailErrorLog}</code>
+                  </pre>
+                </div>
+              </>
+            ))}
           <div style={styles.needHelpMessage}>
             <SafeMarkdown
               markdown={i18n.loginTypeSyncButtonDialogTroubleshooting({

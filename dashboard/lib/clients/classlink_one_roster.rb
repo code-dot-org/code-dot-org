@@ -98,7 +98,8 @@ class Clients::ClasslinkOneRoster
   # Students enrolled in a class, reduced to USER_FIELDS. The response can
   # include teacher records, so filter to role == "student" — an exact string
   # compare, since ClassLink booleans and roles are strings and "false" is
-  # truthy in Ruby.
+  # truthy in Ruby. Deliberately no filtering on enabledUser or status:
+  # roster membership is the one departure signal we trust (design, Settled).
   def self.class_students(oneroster_application_id, bearer, class_sourced_id)
     users = one_roster_collection(
       oneroster_application_id, bearer,

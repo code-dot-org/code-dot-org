@@ -1882,7 +1882,7 @@ class ApiControllerTest < ActionController::TestCase
     get :classlink_classrooms
 
     assert_response :forbidden
-    assert_equal I18n.t('classlink_rostering.no_v2_account'), JSON.parse(response.body)['error']
+    assert_equal 'Please sign in again from ClassLink to proceed with roster sync.', JSON.parse(response.body)['error']
   end
 
   test 'classlink_classrooms rejects a requester with no ClassLink credential at all' do
@@ -1893,7 +1893,7 @@ class ApiControllerTest < ActionController::TestCase
     get :classlink_classrooms
 
     assert_response :forbidden
-    assert_equal I18n.t('classlink_rostering.no_v2_account'), JSON.parse(response.body)['error']
+    assert_equal 'Please sign in again from ClassLink to proceed with roster sync.', JSON.parse(response.body)['error']
   end
 
   test 'classlink_classrooms reports district not enabled when no application matches' do
@@ -1903,7 +1903,7 @@ class ApiControllerTest < ActionController::TestCase
     get :classlink_classrooms
 
     assert_response :forbidden
-    assert_equal I18n.t('classlink_rostering.district_not_enabled'), JSON.parse(response.body)['error']
+    assert_equal "Your district hasn't enabled roster sync for CodeAI.", JSON.parse(response.body)['error']
   end
 
   test 'classlink_classrooms returns the teacher classes keyed by sourcedId and title' do
@@ -1928,7 +1928,7 @@ class ApiControllerTest < ActionController::TestCase
     get :classlink_classrooms
 
     assert_response :forbidden
-    assert_equal I18n.t('classlink_rostering.district_not_enabled'), JSON.parse(response.body)['error']
+    assert_equal "Your district hasn't enabled roster sync for CodeAI.", JSON.parse(response.body)['error']
   end
 
   test 'classlink_classrooms falls back to the generic message on an unexpected failure' do
@@ -1940,7 +1940,7 @@ class ApiControllerTest < ActionController::TestCase
     get :classlink_classrooms
 
     assert_response :bad_gateway
-    assert_equal I18n.t('classlink_rostering.request_failed'), JSON.parse(response.body)['error']
+    assert_equal "We're having trouble getting roster information from ClassLink. Please try again later.", JSON.parse(response.body)['error']
   end
 
   test 'import_classlink_classroom is Forbidden when not signed in' do
@@ -1957,7 +1957,7 @@ class ApiControllerTest < ActionController::TestCase
     post :import_classlink_classroom, params: {courseId: '33333', courseName: 'Sci5'}
 
     assert_response :forbidden
-    assert_equal I18n.t('classlink_rostering.no_v2_account'), JSON.parse(response.body)['error']
+    assert_equal 'Please sign in again from ClassLink to proceed with roster sync.', JSON.parse(response.body)['error']
   end
 
   test 'import_classlink_classroom refuses first import of a class the requester does not teach' do
@@ -2025,25 +2025,29 @@ class ApiControllerTest < ActionController::TestCase
     section_owner = create(:teacher)
     teacher = create_classlink_v2_teacher
     sign_in teacher
-    create(
+    section = create(
       :section,
       user: section_owner,
       login_type: Section::LOGIN_TYPE_CLASSLINK,
       code: ClasslinkSection.code_for(CLASSLINK_TENANT, '33333')
     )
-    imported_section = mock('ClasslinkSection')
-    imported_section.stubs(:summarize).returns({section_id: 1})
 
+    # Only the HTTP client is stubbed: the instructor row is created inside
+    # ClasslinkSection.from_service, so the model must actually run for this
+    # test to catch a co-teacher regression.
     Clients::ClasslinkOneRoster.stubs(:application_for_tenant).returns(CLASSLINK_APPLICATION)
     Clients::ClasslinkOneRoster.expects(:class_teachers).
       returns([{'sourcedId' => CLASSLINK_TEACHER_SOURCED_ID, 'role' => 'teacher'}])
     Clients::ClasslinkOneRoster.expects(:class_students).
       returns([{'sourcedId' => '12345', 'givenName' => 'E', 'familyName' => 'D', 'role' => 'student'}])
-    ClasslinkSection.expects(:from_service).returns(imported_section)
 
     post :import_classlink_classroom, params: {courseId: '33333', courseName: 'Sci5'}
 
     assert_response :ok
+    section.reload
+    assert section.instructors.exists?(id: teacher.id), 'verified co-teacher was not added as a section instructor'
+    assert_equal section_owner.id, section.user_id
+    assert_equal 1, section.students.size
   end
 
   test 'import_classlink_classroom refuses an unverified non-instructor sync and leaves the section unchanged' do
@@ -2110,7 +2114,7 @@ class ApiControllerTest < ActionController::TestCase
     end
 
     assert_response :bad_gateway
-    assert_equal I18n.t('classlink_rostering.request_failed'), JSON.parse(response.body)['error']
+    assert_equal "We're having trouble getting roster information from ClassLink. Please try again later.", JSON.parse(response.body)['error']
   end
 
   test 'import_classlink_classroom applies an empty roster like any other' do

@@ -59,7 +59,7 @@ describe('RosterDialog', () => {
       />
     );
     const html = wrapper.html();
-    expect(html).contains(locale.selectClasslinkSection());
+    expect(html).contains('Select a ClassLink section');
     expect(html).contains('district message from server');
   });
 

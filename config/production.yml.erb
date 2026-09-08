@@ -1,3 +1,8 @@
+# ClassLink Partner Portal API key for One Roster rostering; blank ('') in
+# every other environment. The secret must be provisioned before this deploys:
+# declared secrets are eager-loaded at boot outside development, so an
+# unprovisioned one fails production boot.
+classlink_roster_api_key: !Secret
 discourse_sso_secret: !Secret
 pardot_password: !Secret
 pardot_user_key: !Secret
