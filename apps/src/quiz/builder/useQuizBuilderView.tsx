@@ -11,29 +11,16 @@ import QuizConfigurationPanel, {
 export default function useQuizBuilderView({
   levelProperties,
 }: LabProps): QuizViewContent {
-  const {
-    id: levelId,
-    displayName: initialDisplayName,
-    customIntroText: initialCustomIntroText,
-    timeLimitMinutes: initialTimeLimitMinutes,
-    showCorrectness: initialShowCorrectness,
-    revealAnswerExplanation: initialRevealAnswerExplanation,
-    showIntroScreen: initialShowIntroScreen,
-    purpose: initialPurpose,
-    allowMultipleAttempts: initialAllowMultipleAttempts,
-  } = levelProperties as QuizLevelProperties;
+  const {id: levelId, ...props} = levelProperties as QuizLevelProperties;
 
   // Lifted so a Configuration save is reflected immediately elsewhere on
   // this page, without a page reload - see QuizConfigurationPanel's onSaved.
   const [quizConfig, setQuizConfig] = useState<QuizConfigurationData>({
-    displayName: initialDisplayName,
-    customIntroText: initialCustomIntroText,
-    timeLimitMinutes: initialTimeLimitMinutes,
-    showCorrectness: toBool(initialShowCorrectness),
-    revealAnswerExplanation: toBool(initialRevealAnswerExplanation),
-    showIntroScreen: toBool(initialShowIntroScreen),
-    purpose: initialPurpose,
-    allowMultipleAttempts: toBool(initialAllowMultipleAttempts),
+    ...props,
+    showCorrectness: toBool(props.showCorrectness),
+    revealAnswerExplanation: toBool(props.revealAnswerExplanation),
+    showIntroScreen: toBool(props.showIntroScreen),
+    allowMultipleAttempts: toBool(props.allowMultipleAttempts),
   });
 
   return {
