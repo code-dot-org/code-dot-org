@@ -1501,7 +1501,7 @@ describe('the drawing lesson’s check', () => {
             A: {shadow: {type: 'math_number', fields: {NUM: 96}}},
             B: {
               block: {
-                type: 'world_get_Progress_FractionProperty',
+                type: 'world_get_WorldsMainBar_FractionProperty',
                 inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
               },
             },
@@ -3606,7 +3606,7 @@ describe('the errand lesson’s check', () => {
         },
         next: {
           block: {
-            type: 'world_set_Progress_FractionProperty',
+            type: 'world_set_ActorsProgressBar_FractionProperty',
             inputs: {
               ACTOR: {
                 block: {

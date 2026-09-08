@@ -991,16 +991,6 @@ export const STARTER_SPEC: ProjectSpec = {
       contents: referenceToStock('health'),
       folderId: 'rules',
     },
-    // The Health Bar's other half. It reads the health of whatever it is
-    // pointed at, and it IS a progress bar — the fraction it fills to and the
-    // two colors it fills with are `Shows Progress`, the same trait the stock
-    // Progress Bar and the jetpack's Fuel Bar elect.
-    progressRule: {
-      name: 'progress.rule',
-      language: 'rule',
-      contents: referenceToStock('progress'),
-      folderId: 'rules',
-    },
     patrolRule: {
       name: 'patrol.rule',
       language: 'rule',

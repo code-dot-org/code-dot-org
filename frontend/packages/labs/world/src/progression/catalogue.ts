@@ -2809,7 +2809,15 @@ export const TILES: readonly Tile[] = [
       'A task the game keeps track of, and a way to see how far along it is.',
     task: 'Four things to find, and a bar that has no idea how it is going.',
     requires: ['adventure/people', 'adventure/keys'],
-    unlocks: [{kind: 'rule', id: 'progress'}],
+    // The bar's own number, which is the thing this lesson is about setting.
+    // A GRANT that gates nothing, like `arcade/bounce`'s bounciness: an
+    // actor's own blocks arrive with the actor and are never hidden
+    // (`toolboxShelf.generatedElsewhere`), so this reads well in a detail pane
+    // and takes nothing away. It used to be the Progress rule, which was three
+    // properties and no behavior at all.
+    unlocks: [
+      {kind: 'block', type: 'world_set_ActorsProgressBar_FractionProperty'},
+    ],
     // The arithmetic is Memory's and the counting is `memory/many`'s; Adventure
     // is entered from Look and Place.
     offers: [

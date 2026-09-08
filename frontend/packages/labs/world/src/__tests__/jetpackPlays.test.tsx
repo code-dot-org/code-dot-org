@@ -186,21 +186,22 @@ describe('the jetpack level', () => {
     // kind. Nothing else in the level would notice if this stopped working —
     // the game plays exactly the same with a bar stuck at whatever it was.
     const {world} = project;
-    const progress = project.modules['rules/progress'] as Record<
+    // The bar's OWN number, read from the actor it belongs to. `fraction` was
+    // the Progress rule's; a Progress Bar declares it for itself now, and the
+    // Fuel Bar has it because it acts like one (`ActorBuilder.actsLike`).
+    const bar = project.modules['actors/progressBar'] as Record<
       string,
       unknown
     >;
     const gauge = named(world, 'Gauge');
     play(world, 0.5);
 
-    const full = (gauge as {get(p: unknown): number}).get(
-      progress.FractionProperty,
-    );
+    const full = (gauge as {get(p: unknown): number}).get(bar.FractionProperty);
     play(world, 1, ['space']);
 
     expect(full).toBeCloseTo(0.5, 2);
     expect(
-      (gauge as {get(p: unknown): number}).get(progress.FractionProperty),
+      (gauge as {get(p: unknown): number}).get(bar.FractionProperty),
     ).toBeLessThan(full);
   });
 

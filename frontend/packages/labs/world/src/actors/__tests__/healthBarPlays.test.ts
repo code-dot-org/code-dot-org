@@ -78,23 +78,25 @@ const unwired = () => {
 };
 
 describe('a Health Bar pointed at nobody', () => {
-  it('brings the rules it reads and the rule it IS', async () => {
-    // Health for what it reads off its subject, Progress for the fraction it
-    // fills to and the colors it fills with. A block from a rule the project
-    // does not hold is one the palette never mints, and the file fails to
-    // generate with nothing on screen saying why — so the shelf entry has to
-    // ask for both (`actors/stock/index`).
+  it('brings the rule it reads and the bar it IS', async () => {
+    // Health for what it reads off its subject, and the Progress Bar for what
+    // it is: the fraction it fills to and the two colors it fills with are
+    // that ACTOR's own `define property` rows now, and they come across
+    // because this bar acts like one. A block from a file the project does not
+    // hold is one the palette never mints, and the file fails to generate with
+    // nothing on screen saying why — so the shelf entry asks for both
+    // (`actors/stock/index`).
     const {modules} = await compileProject(projectFiles(unwired()));
 
     expect(modules['rules/health']).toBeDefined();
-    expect(modules['rules/progress']).toBeDefined();
+    expect(modules['actors/progressBar']).toBeDefined();
   });
 
   it('runs, and draws an empty bar rather than throwing', async () => {
     // Ticked, not merely built: the step is where the division is, so a bar
     // that is going to throw does it on the first frame and not before.
     const {world, modules} = await compileProject(projectFiles(unwired()));
-    const fraction = modules['rules/progress'].FractionProperty;
+    const fraction = modules['actors/progressBar'].FractionProperty;
 
     expect(() => {
       for (let frame = 0; frame < 30; frame++) {

@@ -91,6 +91,11 @@ describe('every stock actor', () => {
       subject: [],
       // Whose health this bar is about — nobody else's idea.
       healthBar: ['subject'],
+      // …and what a bar IS: how far along it is, and the two colors it is
+      // drawn in. These were `Progress`, a rule with three properties and no
+      // behavior; the bars that are not this one act like it and get them
+      // (`ActorBuilder.actsLike`).
+      progressBar: ['fraction', 'bar_color', 'track_color'],
       // The typewriter. `the whole line` is what is being said, where `text`
       // is however much of it has arrived — Writing's, because every actor
       // with words means the same thing by it. A rule for these two would be
@@ -124,11 +129,12 @@ describe('every stock actor', () => {
       const elected = [...actor.contents.matchAll(/"TRAIT": "([^#]+)#/g)].map(
         match => slug(match[1]),
       );
-      // An OWN property's block is keyed by the actor's module path rather
-      // than by a rule, so it names no dependency — `actors/healthBar` is not
-      // a rule the import has to bring.
+      // An OWN property's block is keyed by the declaring actor's module path
+      // rather than by a rule, so `ActorsProgressBar_…` names an ACTOR
+      // dependency and not a rule one — brought by `actors` rather than by
+      // `requires`, and its own file's blocks name nothing at all.
       const mine = slug(`Actors ${actor.id}`);
-      const read = [
+      const owners = [
         ...actor.contents.matchAll(
           /"type": "world_(?:get|set|do|query)_([A-Za-z0-9]+)_/g,
         ),
@@ -138,9 +144,31 @@ describe('every stock actor', () => {
           name =>
             name.toLowerCase() !== mine.toLowerCase() && !foundation.has(name),
         );
+      // Case-insensitively, as `mine` is compared above: `slug` only strips
+      // punctuation, where a block type's segment is Pascal-cased per path
+      // part (`ruleRegistry.pathSlug`) — so `Actorsprogressbar` and
+      // `ActorsProgressBar` are one actor spelled two ways.
+      const fromActor = (name: string) =>
+        STOCK_ACTORS.some(
+          one => slug(`Actors ${one.id}`).toLowerCase() === name.toLowerCase(),
+        );
+      const read = owners.filter(name => !fromActor(name));
       const named = [...new Set([...elected, ...read])].sort();
 
-      expect(named).toEqual([...actor.requires].map(slug).sort());
+      expect(named, actor.id).toEqual([...actor.requires].map(slug).sort());
+      // …and every actor whose declarations this one reads is one the import
+      // brings. It reads them because it ACTS LIKE that actor, and a bar whose
+      // parent never arrived inherits nothing at all.
+      expect(
+        [...new Set(owners.filter(fromActor))]
+          .map(name => name.toLowerCase())
+          .sort(),
+        actor.id,
+      ).toEqual(
+        [...(actor.actors ?? [])]
+          .map(id => slug(`Actors ${id}`).toLowerCase())
+          .sort(),
+      );
     }
   });
 });
@@ -187,32 +215,37 @@ describe('Progress Bar', () => {
     // from the map editor's inspector with no editor work.
     const drawn = types(progressBarActor);
 
-    expect(drawn).toContain('world_get_Progress_FractionProperty');
-    expect(drawn).toContain('world_get_Progress_BarColorProperty');
-    expect(drawn).toContain('world_get_Progress_TrackColorProperty');
+    expect(drawn).toContain('world_get_ActorsProgressBar_FractionProperty');
+    expect(drawn).toContain('world_get_ActorsProgressBar_BarColorProperty');
+    expect(drawn).toContain('world_get_ActorsProgressBar_TrackColorProperty');
   });
 
-  it('keeps its number in a rule, not in itself', () => {
-    // THE WHOLE REASON `Progress` EXISTS. A `define property` mints its getter
-    // and setter into its own file's palette and nowhere else, so a bar that
-    // kept its own fraction would be a bar nothing in the project could fill —
-    // and being filled by something else is what a progress bar is.
-    expect(progressBarActor).toContain('Progress#ShowsProgressTrait');
-    expect(parseActorOwnMeta('actors/progressBar', progressBarActor)).toEqual(
-      expect.objectContaining({properties: []}),
-    );
+  it('keeps its number in itself, and nothing else needs to hold it', () => {
+    // THREE `define property` ROWS AND NO RULE. They were `Progress`, a rule
+    // with three properties and no behavior of any kind — no steps, no blocks
+    // — which is a file, a shelf row and an import standing between a learner
+    // and three declarations they can read in the actor that uses them.
+    //
+    // Being filled by something ELSE is what a progress bar is, and that still
+    // works: an actor's own properties are exported and every actor's are in
+    // every file's palette, so a world may say `set fraction of ⟨any ⟨Progress
+    // Bar⟩⟩` (blockly/ownProperties). It could not when this was written,
+    // which is why it was a rule.
+    expect(progressBarActor).not.toContain('world_use_trait');
+    expect(
+      parseActorOwnMeta('actors/progressBar', progressBarActor)?.properties.map(
+        property => property.id,
+      ),
+    ).toEqual(['fraction', 'bar_color', 'track_color']);
   });
 });
 
 describe('Health Bar', () => {
   it('asks for the health, and fills a progress bar with it', () => {
-    // IT IS A PROGRESS BAR THAT WORKS OUT ITS OWN FRACTION. An earlier version
-    // was this; then it was a bar that asked the world from inside its
-    // drawing, on the grounds that one shared picture across two actors was
-    // not worth a trait and a step. A third bar arrived — the jetpack's Fuel
-    // Bar, which elects `Shows Progress` and sets `fraction` from the tank —
-    // so the seam is there and being used, and this was the one bar not using
-    // it.
+    // IT IS A PROGRESS BAR THAT WORKS OUT ITS OWN FRACTION — literally, since
+    // it acts like one. `fraction` is that actor's own property, so the block
+    // this writes carries THAT file and this one has the slot because the
+    // description came across (`ActorBuilder.actsLike`).
     //
     // The reads are the same reads; where they happen is the difference. A
     // fraction worked out once a frame in a step is a fraction, and a drawing
@@ -222,7 +255,7 @@ describe('Health Bar', () => {
     expect(held).toContain('world_get_ActorsHealthBar_SubjectProperty');
     expect(held).toContain('world_get_Health_HealthProperty');
     expect(held).toContain('world_get_Health_MostHealthProperty');
-    expect(held).toContain('world_set_Progress_FractionProperty');
+    expect(held).toContain('world_set_ActorsProgressBar_FractionProperty');
     // …and NOT the picture, which is the Progress Bar's along with the colors
     // it reads. A second copy of the track, the fill and the expression
     // between them would be somewhere for the two to disagree — this file

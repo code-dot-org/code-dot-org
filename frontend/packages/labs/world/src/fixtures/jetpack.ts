@@ -2119,7 +2119,7 @@ const FUEL_BAR_ACTOR = JSON.stringify({
               inputs: {
                 DO: {
                   block: {
-                    type: 'world_set_Progress_FractionProperty',
+                    type: 'world_set_ActorsProgressBar_FractionProperty',
                     inputs: {
                       ACTOR: me(),
                       VALUE: {
@@ -2529,12 +2529,6 @@ export const JETPACK_SPEC: ProjectSpec = {
       name: 'collect.rule',
       language: 'rule',
       contents: referenceToStock('collect'),
-      folderId: 'rules',
-    },
-    progressRuleFile: {
-      name: 'progress.rule',
-      language: 'rule',
-      contents: referenceToStock('progress'),
       folderId: 'rules',
     },
     ...starterSprites([

@@ -67,7 +67,10 @@
 // the map editor exists for the other one.
 
 import {healthBarStep, HEALTH_BAR_SUBJECT} from '../actors/stock/healthBar';
-import {progressBarDrawing} from '../actors/stock/progressBar';
+import {
+  PROGRESS_BAR_PROPERTIES,
+  progressBarDrawing,
+} from '../actors/stock/progressBar';
 import {drawText, fill, showAs, textOf} from '../actors/stock/workspace';
 import {
   SCOREBOARD_HEIGHT,
@@ -277,13 +280,20 @@ const SINGLE_WORLD = JSON.stringify({
       // actor's path is the WORLD's plus the block that defines it
       // (blockly/ownProperties), so the two tellings cannot share the literal
       // blocks and do share the shape.
+      // THE ONE BAR THAT CANNOT ACT LIKE THE PROGRESS BAR, and so the one
+      // that declares a bar's three properties for itself. `acts like` names
+      // an actor FILE, and this scenario's whole point is that it has none —
+      // so the fraction and the two colors are declared here and the picture
+      // is drawn out of them, which is what the stock Progress Bar does one
+      // file over (`actors/stock/progressBar`).
       defineActor(HEALTH_BAR, 'Health Bar', 1900, [
         HEALTH_BAR_SUBJECT,
-        useTrait('Progress#ShowsProgressTrait'),
+        ...PROGRESS_BAR_PROPERTIES,
         healthBarStep(
           `world_get_WorldsMain${pascalId(HEALTH_BAR)}_SubjectProperty`,
+          `world_set_WorldsMain${pascalId(HEALTH_BAR)}_FractionProperty`,
         ),
-        drawingBlock(progressBarDrawing()),
+        drawingBlock(progressBarDrawing(`WorldsMain${pascalId(HEALTH_BAR)}`)),
       ]),
       defineActor(SCOREBOARD, 'Scoreboard', 2280, [
         useTrait('Writing#ShowsTextTrait'),

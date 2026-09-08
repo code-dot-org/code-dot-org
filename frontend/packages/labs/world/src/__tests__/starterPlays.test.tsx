@@ -206,10 +206,10 @@ describe('the project a learner opens', () => {
     // mints its getter into its own file's palette and NOWHERE ELSE, so that
     // half stays unreadable from here, on purpose.
     //
-    // WHAT IT FILLS TO IS NOT ITS OWN. `fraction` belongs to `Shows Progress`,
-    // the trait every bar in the lab elects, so a rule export reads it and
-    // this can ask the question a player is really asking: is the bar
-    // shorter? It used to ask whether the PICTURE had changed — the drawing's
+    // WHAT IT FILLS TO IS THE PROGRESS BAR'S. `fraction` is that actor's own
+    // `define property`, and this bar has it because it ACTS LIKE one — so an
+    // actor module's export reads it and this can ask the question a player is
+    // really asking: is the bar shorter? It used to ask whether the PICTURE had changed — the drawing's
     // key, which is the identity of the commands it was painted from — and
     // that answers yes to any change at all, a recolor included.
     //
@@ -219,7 +219,7 @@ describe('the project a learner opens', () => {
     // throw rather than draw an empty bar.
     const {world, modules} = await opened();
     expect(() => world.renderSnapshot()).not.toThrow();
-    const fraction = modules['rules/progress'].FractionProperty;
+    const fraction = modules['actors/progressBar'].FractionProperty;
     const filled = () =>
       actor(world, 'HealthBar')!.get(fraction as never) as unknown as number;
     const picture = () =>

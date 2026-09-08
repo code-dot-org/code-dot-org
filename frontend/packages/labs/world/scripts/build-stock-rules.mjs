@@ -50,7 +50,6 @@ const RULES = [
   'attachment',
   'writing',
   'conversation',
-  'progress',
   'camera',
   'cameraFollow',
   'cameraEase',

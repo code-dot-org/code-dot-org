@@ -33,7 +33,6 @@ import {mouseDemo} from './mouse';
 import {pathDemo} from './path';
 import {patrolDemo} from './patrol';
 import {physicsDemo} from './physics';
-import {progressDemo} from './progress';
 import {scoreDemo} from './score';
 import {solidDemo} from './solid';
 import {spawnerDemo} from './spawner';
@@ -63,7 +62,6 @@ export const RULE_DEMOS: Readonly<Record<string, RuleDemo>> = {
   spawner: spawnerDemo,
   writing: writingDemo,
   conversation: conversationDemo,
-  progress: progressDemo,
   score: scoreDemo,
   goals: goalsDemo,
   history: historyDemo,

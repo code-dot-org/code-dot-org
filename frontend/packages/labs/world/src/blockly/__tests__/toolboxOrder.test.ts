@@ -146,14 +146,24 @@ describe('an actor’s own blocks', () => {
     expect(rows.indexOf('— Rules —')).toBeLessThan(at);
   });
 
-  it('holds the pair that actor declared, and Actor holds neither', () => {
+  it('holds what that actor declared and what it acts like, and Actor holds neither', () => {
     const cats = starter();
     const drawer = cats.find(category => category.name === 'Health Bar');
     const general = cats.find(category => category.name === 'Actor');
 
+    // Its own first, then the Progress Bar's — a Health Bar ACTS LIKE one, and
+    // a learner looking in its drawer for the thing that fills a bar should
+    // find it there rather than having to know where it came from. The same
+    // blocks, not a second minting: a type carries the file that declared it.
     expect(drawer?.blocks).toEqual([
       'world_set_ActorsHealthBar_SubjectProperty',
       'world_get_ActorsHealthBar_SubjectProperty',
+      'world_set_ActorsProgressBar_FractionProperty',
+      'world_get_ActorsProgressBar_FractionProperty',
+      'world_set_ActorsProgressBar_BarColorProperty',
+      'world_get_ActorsProgressBar_BarColorProperty',
+      'world_set_ActorsProgressBar_TrackColorProperty',
+      'world_get_ActorsProgressBar_TrackColorProperty',
     ]);
     // THE GENERAL PAIR STAYS in Actor — `set ⟨property⟩ of ⟨actor⟩`, whose
     // dropdown is every actor-scoped property in play (`propertyOptions`).
@@ -170,7 +180,11 @@ describe('an actor’s own blocks', () => {
   it('gives no drawer, and no heading, to a project whose actors declare nothing', () => {
     // Most do not. A drawer each regardless is a list of empty rooms, and a
     // heading over no drawers is a label for something that is not there.
-    const files = projectFiles(WORLD_SCENARIOS.jetpack.source);
+    //
+    // SOKOBAN, and it used to be the jetpack — which now holds a Progress Bar,
+    // and a Progress Bar declares the fraction and the two colors it is drawn
+    // from. Those were a rule with no behavior in it.
+    const files = projectFiles(WORLD_SCENARIOS.sokoban.source);
     const rows = shape(
       buildDomainPalette(projectRuleMetas(files), {
         fileKind: 'actor',

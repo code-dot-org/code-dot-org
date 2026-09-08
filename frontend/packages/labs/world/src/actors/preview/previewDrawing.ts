@@ -23,10 +23,12 @@
 // Health rule's own defaults, which is the bar a learner will see the moment
 // they point it at something.
 
+import {parseActorOwnMeta} from '../../blockly/ownProperties';
 import {parseRuleMeta, type PropertyMeta} from '../../blockly/ruleMeta';
+import {pathSlug} from '../../blockly/ruleRegistry';
 import type {DrawCommand, TextAnchor} from '../../engine/core/drawing';
 import {STOCK_RULES} from '../../rules/stock';
-import {stockActorById, type StockActor} from '../stock';
+import {STOCK_ACTORS, stockActorById, type StockActor} from '../stock';
 
 /** A block as it sits in a saved workspace. */
 interface Node {
@@ -47,9 +49,24 @@ export interface PreviewDrawing {
 const READ = /^world_get_([A-Za-z0-9]+)_(.+)$/;
 const WRITE = /^world_set_([A-Za-z0-9]+)_(.+)$/;
 
-/** Every stock rule's declared properties, by the key a block type carries. */
-const ruleDefaults = (): Map<string, PropertyMeta> => {
+/**
+ * Every declared property's default, by the key a block type carries.
+ *
+ * BOTH KINDS OF DECLARER. A rule's key is its name without spaces; an ACTOR's
+ * is the module path as a block-type segment (`ruleRegistry.pathSlug`), which
+ * is what a `world_get_ActorsProgressBar_FractionProperty` says. The Progress
+ * Bar keeps its fraction and its two colors for itself, so a preview reading
+ * only the rules found nothing to draw them with and drew a bar of width zero.
+ */
+const declaredDefaults = (): Map<string, PropertyMeta> => {
   const out = new Map<string, PropertyMeta>();
+  for (const actor of STOCK_ACTORS) {
+    const path = `actors/${actor.id}`;
+    for (const property of parseActorOwnMeta(path, actor.contents)
+      ?.properties ?? []) {
+      out.set(`${pathSlug(path)}_${property.ref.exportName}`, property);
+    }
+  }
   for (const rule of STOCK_RULES) {
     const meta = parseRuleMeta(`rules/${rule.id}`, rule.contents);
     for (const property of meta?.properties ?? []) {
@@ -64,7 +81,7 @@ const ruleDefaults = (): Map<string, PropertyMeta> => {
   return out;
 };
 
-/** Built once: nine actors ask the same question of the same twenty rules. */
+/** Built once: nine actors ask the same question of the same declarations. */
 let defaults: Map<string, PropertyMeta> | undefined;
 
 const chain = (from: Node | undefined): Node[] => {
@@ -182,7 +199,7 @@ function literal(node: Node | undefined, set: Map<string, unknown>): unknown {
   if (set.has(key)) {
     return set.get(key);
   }
-  defaults ??= ruleDefaults();
+  defaults ??= declaredDefaults();
   return defaults.get(key)?.default;
 }
 

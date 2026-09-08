@@ -41,7 +41,6 @@ import {motionRule} from './motion';
 import {mouseRule} from './mouse';
 import {pathRule} from './path';
 import {patrolRule} from './patrol';
-import {progressRule} from './progress';
 import {prowlingRule} from './prowling';
 import {scoreRule} from './score';
 import {solidRule} from './solid';
@@ -237,15 +236,6 @@ export const STOCK_RULES: readonly StockRule[] = [
       'Keeps a place in a script and moves through it. It raises an event each time it moves, so the project decides what each line is — a portrait, a sound, a question — and `go to line` is how a choice sends the talk somewhere else.',
     provides: ['Has a Conversation'],
     contents: conversationRule,
-  },
-  {
-    id: 'progress',
-    name: 'Progress',
-    ability: 'Shows Progress',
-    description:
-      'A fraction between 0 and 1 that an actor carries, and the two colors a bar of it is drawn in. Writing\u2019s sibling: it holds the number and paints none of it, and the stock Progress Bar is what draws one.',
-    provides: ['Shows Progress'],
-    contents: progressRule,
   },
   {
     id: 'score',
@@ -581,5 +571,4 @@ export {
   conversationRule,
   inventoryRule,
   attachmentRule,
-  progressRule,
 };

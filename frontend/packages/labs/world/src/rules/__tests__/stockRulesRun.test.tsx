@@ -1578,13 +1578,6 @@ describe('what the newer demos show', () => {
     expect(speaker.get(of('rules/writing', 'TextProperty'))).toBe('');
   });
 
-  it('progress: the bar fills in steps and stops full', () => {
-    const {cast} = play(RULE_DEMOS.progress);
-    const bar = cast.bar as {get(p: unknown): number};
-
-    expect(bar.get(cast.fraction as never)).toBe(1);
-  });
-
   it('every demo asks only for letters the font can draw', () => {
     // A character with no glyph draws as a GAP, silently — the strip is still
     // a strip, and the word is missing a letter. This is the only place that

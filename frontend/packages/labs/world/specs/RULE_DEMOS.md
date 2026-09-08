@@ -415,8 +415,10 @@ this.
 
 7. ✅ **The last nine**: Carrying, Goals, History, Turns, Inventory, Grid,
    Reveals, Conversation and Progress — which was every rule on the shelf but
-   the two bases. (Reveals has since stopped being a rule: the typewriter is
-   the Speech Box's own, and the strip that showed it is that ACTOR's demo.) Five of them were written the same week as the rules they
+   the two bases. (Two of them have since stopped being rules. The typewriter
+   is the Speech Box's own and Progress is the Progress Bar's, and in both
+   cases the strip that showed the rule is now that ACTOR's demo.) Five of
+   them were written the same week as the rules they
    show, which is the arrangement this document argued for and had not yet had:
    a rule and its demonstration authored together, so the claim and the code
    are the same person's.

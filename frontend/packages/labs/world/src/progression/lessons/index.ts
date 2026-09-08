@@ -295,9 +295,15 @@ like everything else.
 
 // ── look/drawing ─────────────────────────────────────────────────────────────
 
-/** `set fraction of ⟨this actor⟩ to ⟨n⟩` — the Progress rule's one number. */
+/**
+ * `set fraction of ⟨this actor⟩ to ⟨n⟩` — the Bar's own number.
+ *
+ * The world's own `Bar` declares it with `define property`, so the block
+ * carries the world and the block that defines the actor
+ * (`blockly/ownProperties`) rather than a rule's name.
+ */
 const setFraction = (value: number) => ({
-  type: 'world_set_Progress_FractionProperty',
+  type: 'world_set_WorldsMainBar_FractionProperty',
   inputs: {ACTOR: me(), VALUE: num(value)},
 });
 
@@ -322,7 +328,12 @@ const drawing: WorldScenario = {
         {
           id: 'bar',
           name: 'Bar',
-          rows: [useTrait('Progress#ShowsProgressTrait')],
+          // ITS OWN NUMBER, declared here. A bar's fraction used to be a rule's
+          // property — a rule with three properties and no behavior at all —
+          // and this lesson is the clearest argument against that: what makes
+          // two Bars draw differently is something each Bar HOLDS, and holding
+          // a number is what `define property` is.
+          rows: [declareProperty('number', 'fraction', '1')],
           drawing: {
             width: 96,
             height: 12,
@@ -338,7 +349,6 @@ const drawing: WorldScenario = {
         },
       ],
     }),
-    rules: ['progress'],
   }),
   instructions: `
 ## Draw it yourself
@@ -4273,7 +4283,7 @@ const errand: WorldScenario = {
           placeAt(160, 30),
           // Empty to begin with, which is what "nothing done yet" looks like.
           {
-            type: 'world_set_Progress_FractionProperty',
+            type: 'world_set_ActorsProgressBar_FractionProperty',
             inputs: {ACTOR: me(), VALUE: num(0)},
           },
         ]),

@@ -7,24 +7,34 @@
 // from a rule's export name by rules nobody remembers (AGENTS.md), and a hand
 // guess is right about half the time.
 //
-// So: build the palette a project holding every stock rule would have, and
-// require each promised type to be in it. Separate from the layout test because
-// this parses thirty rule workspaces, one of which is 390KB, and the layout
-// test should stay instant.
+// So: build the palette a project holding every stock rule AND every stock
+// actor would have, and require each promised type to be in it. The actors
+// matter now that a kind may declare properties and blocks of its own — the
+// Progress Bar's `fraction` was a rule's and is the bar's, and a tile granting
+// it names `world_set_ActorsProgressBar_…`. Separate from the layout test
+// because this parses thirty rule workspaces, one of which is 390KB, and the
+// layout test should stay instant.
 
 import {describe, expect, it} from 'vitest';
 
+import {STOCK_ACTORS} from '../../actors/stock';
 import {buildDomainPalette} from '../../blockly/domainBlocks';
-import {projectRuleMetas} from '../../blockly/projectModules';
+import {projectOwnMetas, projectRuleMetas} from '../../blockly/projectModules';
 import {STOCK_RULES} from '../../rules/stock';
 import {TILES} from '../catalogue';
 
-const metas = projectRuleMetas(
-  Object.fromEntries(
+const files = {
+  ...Object.fromEntries(
     STOCK_RULES.map(rule => [`rules/${rule.id}.rule`, rule.contents]),
   ),
-);
-const palette = buildDomainPalette(metas, {allRuleModules: true});
+  ...Object.fromEntries(
+    STOCK_ACTORS.map(actor => [`actors/${actor.id}.actor`, actor.contents]),
+  ),
+};
+const palette = buildDomainPalette(projectRuleMetas(files), {
+  allRuleModules: true,
+  ownProperties: projectOwnMetas(files),
+});
 
 // Two sources, because there are two kinds of block here. The ones this lab
 // DEFINES are in `blocks`; the ones it merely offers — Blockly's own `if`,

@@ -66,8 +66,9 @@ export interface ActorPlacement {
  * What a demo is handed to play the GAME around its actor.
  *
  * `modules` is every compiled module by path, which is how a demo reaches a
- * rule's properties: `modules['rules/progress'].FractionProperty` is the block
- * `set fraction of ⟨actor⟩`, and nothing else.
+ * property somebody declared: `modules['actors/progressBar'].FractionProperty`
+ * is the block `set fraction of ⟨actor⟩`, and nothing else. A rule's are
+ * reached the same way, under `rules/…`.
  *
  * `engine` is the same door for the properties no rule owns — opacity, scale,
  * position — which are blocks too and belong to every actor. Handed over

@@ -64,13 +64,16 @@ export const HEALTH_BAR_SUBJECT = {
 };
 
 /**
- * The step that fills the bar, given the block type that reads `subject`.
+ * The step that fills the bar, given the blocks that read `subject` and write
+ * `fraction`.
  *
- * PARAMETERISED, because an own property's block type carries the path of the
- * file that declared it (`blockly/ownProperties`) — `ActorsHealthBar_…` for the
- * imported file, and `WorldsMain…_…` for a world that defines the bar itself
- * (fixtures/platformerSingle). The two tellings cannot share the literal block
- * and do share the shape.
+ * PARAMETERISED TWICE, because an own property's block type carries the path
+ * of the file that declared it (`blockly/ownProperties`). `subject` is this
+ * bar's own — `ActorsHealthBar_…` for the imported file, `WorldsMain…_…` for a
+ * world that defines the bar itself (fixtures/platformerSingle). `fraction` is
+ * the PROGRESS BAR's, which this actor acts like, so its default is that
+ * file's; a world-defined bar that cannot act like a file declares its own and
+ * passes it here.
  *
  * IN `react`, after everything has moved and been hurt, so the bar shows what
  * just happened rather than what was true at the top of the frame. The same
@@ -81,7 +84,10 @@ export const HEALTH_BAR_SUBJECT = {
  * frame, forever, from a step nobody would think to look at. The guard was in
  * the drawing before and is the same guard.
  */
-export const healthBarStep = (subjectGetType: string) => {
+export const healthBarStep = (
+  subjectGetType: string,
+  fractionSetType = 'world_set_ActorsProgressBar_FractionProperty',
+) => {
   const subject = () => ({
     block: {type: subjectGetType, inputs: {ACTOR: me()}},
   });
@@ -98,7 +104,7 @@ export const healthBarStep = (subjectGetType: string) => {
     inputs: {
       DO: {
         block: {
-          type: 'world_set_Progress_FractionProperty',
+          type: fractionSetType,
           inputs: {
             ACTOR: me(),
             VALUE: {

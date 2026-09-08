@@ -40,7 +40,7 @@ export const progressBarDemo: ActorDemo = {
   ],
   seconds: 2,
   drive({subject, modules, seconds}: DemoStage) {
-    const fraction = modules['rules/progress'].FractionProperty;
+    const fraction = modules['actors/progressBar'].FractionProperty;
     subject.set(
       fraction as never,
       Math.min(1, FROM + (1 - FROM) * (seconds / FILL_SECONDS)) as never,

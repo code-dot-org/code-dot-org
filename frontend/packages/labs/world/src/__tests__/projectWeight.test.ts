@@ -62,7 +62,7 @@ describe('what a new project weighs', () => {
     // starter level IS — a world, six actors, a map, an animation, six
     // sprites, an effect. Those 40KB have not moved. The megabyte beside them
     // has become 470 bytes.
-    expect(rules).toHaveLength(13);
+    expect(rules).toHaveLength(12);
     expect(total(rules)).toBeLessThan(1_000);
     expect(total(files) - total(rules)).toBeGreaterThan(35_000);
     expect(total(rules) / total(files)).toBeLessThan(0.02);
@@ -104,7 +104,7 @@ describe('what the references stand for', () => {
       .filter(([path]) => path.endsWith('.rule'))
       .map(([, contents]) => bytes(contents));
 
-    expect(resolved).toHaveLength(13);
+    expect(resolved).toHaveLength(12);
     expect(resolved.reduce((sum, one) => sum + one, 0)).toBeGreaterThan(
       900_000,
     );
@@ -129,7 +129,7 @@ describe('what the references stand for', () => {
     // still what the BUNDLE carries.
     const shelf = STOCK_RULES.map(rule => bytes(rule.contents));
 
-    expect(shelf).toHaveLength(46);
+    expect(shelf).toHaveLength(45);
     expect(shelf.reduce((sum, one) => sum + one, 0)).toBeLessThan(4_600_000);
   });
 });

@@ -162,13 +162,20 @@ The other five interface elements wait on nameable things:
 Three of the five arrived together, because they are the same feature seen from
 three angles.
 
-**"Meter" became "Progress Bar"**, which is what everybody calls one, and its
-number lives in a rule of its own (`rules/progress`) for the reason a Label's
-text does. `define property` in an `.actor` file mints its getter and setter
-into that file's palette and nowhere else — so a bar keeping its own fraction
-would be a bar nothing in the project could fill, and being filled by something
-else is the whole of what a progress bar is. Writing is the precedent and
-Progress is written to be read beside it.
+**"Meter" became "Progress Bar"**, which is what everybody calls one. Its
+number and the two colors it is drawn in were a rule of its own
+(`rules/progress`), because `define property` in an `.actor` file used to mint
+its blocks into that file's palette and nowhere else — so a bar keeping its own
+fraction would have been a bar nothing in the project could fill, and being
+filled by something else is the whole of what a progress bar is.
+
+**They are the bar's own now.** An actor's properties are exported and every
+actor's are in every file's palette, so `set fraction of ⟨any ⟨Progress Bar⟩⟩`
+is a sentence a world can say — the change `subject` needed first, below. What
+was left was a rule with three properties and no behavior at all: no steps, no
+blocks, a file and a shelf row standing between a learner and three
+declarations they can read in the actor that uses them. The bars that are not
+this one ACT LIKE it, and the slots come across with the picture.
 
 It is not a HEALTH bar. What fills it is a project's own handler, and health is
 one of the things that might — which is what the fourth stock actor is.
@@ -200,8 +207,13 @@ a rule, and a rule is for what is SHARED. `text` is Writing's because a Label
 and a Button and a Score all mean the same thing by it; `subject` is the bar's
 because whose health it shows is nobody else's idea.
 
-What is duplicated is ten blocks of rectangle. If a third kind of bar arrives,
-that is when a seam is worth building; two is not.
+What is duplicated is nothing, in the end. A Health Bar and the jetpack's Fuel
+Bar both say `acts like ⟨Progress Bar⟩` and inherit the picture, the fraction
+and the colors — which is what finally made the rule redundant rather than
+merely small. The one telling that cannot is a bar a WORLD defines for itself:
+`acts like` names an actor file, and a single-world project has none, so
+`fixtures/platformerSingle` declares the three properties and draws the shared
+picture out of them (`progressBarDrawing`).
 
 ## The interface layer, restated rather than re-derived
 

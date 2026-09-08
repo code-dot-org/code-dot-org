@@ -83,7 +83,11 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     name: 'Progress Bar',
     description:
       'A bar that fills up. Set its fraction between 0 and 1 and it draws that much of itself — health, a loading bar, how close a boss is to waking. Attach it to an actor to have it ride above one.',
-    requires: ['Progress'],
+    // NOTHING. The fraction and the two colors are the bar's own `define
+    // property` rows — it was a rule with three properties and no behavior,
+    // which is a file and a shelf row standing between a learner and three
+    // declarations they can read in the actor that uses them.
+    requires: [],
     contents: progressBarActor,
   },
   {
@@ -91,18 +95,19 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     name: 'Health Bar',
     description:
       'A bar that fills itself in. Point it at an actor with “subject” and it shows how much health that actor has left. Put it in the corner for a HUD, or add “Attached” to have it ride above the actor it is about.',
-    // HEALTH for what it reads, PROGRESS for what it is. The health belongs to
-    // the actor this bar is pointed at; `Shows Progress` is the bar's own, and
-    // carries the fraction it fills to and the two colors it fills with.
+    // HEALTH ALONE, for what it READS. The health belongs to the actor this
+    // bar is pointed at, and a `world_get_Health_…` block in a project without
+    // that rule is one the palette never mints — the file then fails to
+    // generate with nothing on screen saying why.
     //
-    // BOTH HAVE TO ARRIVE WITH IT. A `world_get_Health_…` or
-    // `world_set_Progress_…` block in a project holding neither rule is one
-    // the palette never mints, and the file fails to generate with nothing on
-    // screen saying why.
+    // Everything a bar IS arrives with the bar it acts like: the fraction it
+    // fills to and the two colors it fills with are the Progress Bar's own
+    // `define property` rows now, where they used to be a rule this had to
+    // ask for as well.
     //
     // NOT Attachment: where a bar sits is the project's business. One over an
     // enemy's head elects it too; one in the corner of the screen does not.
-    requires: ['Health', 'Progress'],
+    requires: ['Health'],
     // …and the bar it IS. `acts like ⟨actors/progressBar⟩` names a module
     // path, and a path naming a file the project lacks inherits nothing at all
     // — no trait, no picture — which is a Health Bar that draws as a plain box
