@@ -61,3 +61,49 @@ describe('the World’s keyboard', () => {
     expect(world.isKeyDown('ArrowUp')).toBe(true);
   });
 });
+
+// WHICH KEYS THE GAME MAY TAKE FROM THE BROWSER.
+//
+// The browser has its own use for some of them — space and the arrows scroll,
+// Tab moves to the next thing on the page — and which ones a game needs is a
+// fact about the game rather than a constant in the driver. Tab is the case
+// that could not be a constant: an interface actor holding the focus wants it,
+// and a game with nothing focused must not have it (specs/UI_ACTORS.md).
+describe('the keys a world claims', () => {
+  it('holds what it asked for, and gives it back', () => {
+    const world = makeWorld();
+
+    world.captureKey('tab');
+    expect([...world.capturedKeys()]).toEqual(['tab']);
+
+    world.releaseKey('tab');
+    expect([...world.capturedKeys()]).toEqual([]);
+  });
+
+  it('refuses Escape, however it is asked', () => {
+    // THE DOOR, and it is not the game's to shut. Escape is what drops the
+    // focus and hands Tab back to the page, so a game that could capture it
+    // could make the canvas a place a keyboard user cannot leave. Refused
+    // here rather than trusted to every rule that will ever be written
+    // (`core/keys`, RESERVED_KEYS).
+    const world = makeWorld();
+
+    world.captureKey('escape');
+
+    expect([...world.capturedKeys()]).toEqual([]);
+  });
+
+  it('reports taking the keyboard for exactly the frame it happened', () => {
+    // A moment, not a state. Arriving at the game and pressing a key in it are
+    // told apart by this and by nothing else — the Tab that carried the player
+    // here was pressed while the page still had the keyboard.
+    const world = makeWorld();
+    expect(world.keyboardJustArrived()).toBe(false);
+
+    world.gainedKeyboard();
+    expect(world.keyboardJustArrived()).toBe(true);
+
+    world.tick(1 / 60);
+    expect(world.keyboardJustArrived()).toBe(false);
+  });
+});

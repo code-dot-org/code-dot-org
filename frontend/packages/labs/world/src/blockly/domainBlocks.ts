@@ -8393,6 +8393,91 @@ const worldIsKeyDown = defineBlock({
   },
 });
 
+/**
+ * `capture the ⟨tab⟩ key` — ask the browser to leave one key to the game.
+ *
+ * THE BROWSER HAS ITS OWN USE FOR SOME KEYS. Space scrolls the page, the
+ * arrows scroll it, and Tab moves to the next thing on it — so a game that
+ * wants one has to say so, and until now it could not: the driver carried a
+ * hard-coded list of the keys it suppressed (`PhaserBinding`, `SCROLL_KEYS`)
+ * and nothing in a project could add to it.
+ *
+ * TAB IS WHY IT IS A BLOCK RATHER THAN A LONGER LIST. Whether the game should
+ * have Tab is not a fact about the game, it is a fact about the MOMENT: while
+ * an interface actor holds the focus the game wants it, and while nothing does
+ * the page must have it back, or the canvas is somewhere a keyboard user can
+ * tab into and never out of (`rules/tabNavigation`, specs/UI_ACTORS.md).
+ *
+ * ESCAPE CANNOT BE CAPTURED, whatever this says. It is the way out, and the
+ * World refuses it rather than trusting every rule that will ever be written
+ * (`World.captureKey`, `core/keys` RESERVED_KEYS).
+ */
+const worldCaptureKey = defineBlock({
+  type: 'world_capture_key',
+  message0: 'capture the %1 key',
+  args0: [{type: 'field_dropdown', name: 'KEY', options: keyOptions()}],
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [worldContextExtension],
+  style: 'logic_blocks',
+  tooltip:
+    'Stop the browser doing its own thing with this key while the game is ' +
+    'playing. Escape is never captured — it is how a player leaves the game.',
+  generator: {
+    javascript(block) {
+      return `world.captureKey(${str(block.getFieldValue('KEY'))});\n`;
+    },
+  },
+});
+
+/** `release the ⟨tab⟩ key` — hand it back, which is half the bargain above. */
+const worldReleaseKey = defineBlock({
+  type: 'world_release_key',
+  message0: 'release the %1 key',
+  args0: [{type: 'field_dropdown', name: 'KEY', options: keyOptions()}],
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [worldContextExtension],
+  style: 'logic_blocks',
+  tooltip:
+    'Let the browser have this key again. A game that captures a key and ' +
+    'never releases it is a game a keyboard cannot leave.',
+  generator: {
+    javascript(block) {
+      return `world.releaseKey(${str(block.getFieldValue('KEY'))});\n`;
+    },
+  },
+});
+
+/**
+ * `the game just got the keyboard` — true for the one frame it arrived.
+ *
+ * A MOMENT, not a state, and it exists because two things that look identical
+ * mean opposite things. Tabbing ONTO the game and pressing Tab INSIDE it are
+ * both a Tab edge; the first should bring the focus in and the second should
+ * move it on, or take it out. Nothing in the pressed keys can tell them apart,
+ * because the Tab that brought the player here was pressed while something
+ * else on the page still had the keyboard (`World.gainedKeyboard`).
+ */
+const worldKeyboardArrived = defineBlock({
+  type: 'world_keyboard_arrived',
+  message0: 'the game just got the keyboard',
+  output: 'Boolean',
+  extensions: [worldContextExtension],
+  style: 'logic_blocks',
+  tooltip:
+    'True for the one frame the player moved into the game — by clicking it ' +
+    'or by tabbing onto it from the page around it.',
+  generator: {
+    javascript() {
+      return ['world.keyboardJustArrived()', Order.FUNCTION_CALL] as [
+        string,
+        number,
+      ];
+    },
+  },
+});
+
 // `<actor> has trait <trait>` — a boolean predicate, so a step's `for each actor
 // where …` can select actors by trait (mirroring the engine's
 // `world.actors.with(Trait)`). The TRAIT dropdown reuses the traits in play.
@@ -8741,6 +8826,9 @@ export const DOMAIN_BLOCKS = [
   worldAsText,
   worldNewLine,
   worldTextWidth,
+  worldCaptureKey,
+  worldReleaseKey,
+  worldKeyboardArrived,
   worldDefineTween,
   worldPlayTween,
   worldPlayTweenHere,
@@ -9199,6 +9287,13 @@ const ENGINE_CATEGORY: ToolboxCategory = {
   name: 'Engine',
   blocks: [
     'world_is_key_down', // the polling side: "while held"
+    // …and what the game asks of the BROWSER, which is not the same question:
+    // whether a key reaches the game at all, rather than whether it is down.
+    // Tab is the one that cannot be a constant in the driver, and the arrival
+    // is how a rule tells coming IN from moving ON (`world_capture_key`).
+    'world_capture_key',
+    'world_release_key',
+    'world_keyboard_arrived',
     'world_for_each_key', // the edges: what went down or came up this frame
     // …and what was TYPED, which is a different question: shift, a dead key,
     // an IME and a paste all make characters and no key edge.

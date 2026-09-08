@@ -10,6 +10,12 @@
 // gives the keyboard back, and the two events say what actually happened. Read
 // rather than run, every one of those would have passed on a rule that
 // declared the right members and moved the focus nowhere.
+//
+// AND ONE CLAIM IS ABOUT NOT ACTING. The browser has a Tab key too, and it is
+// how a keyboard user gets past the canvas — so while nothing in the world
+// holds the focus, a Tab press must do NOTHING here. A rule that always moved
+// the focus on would pass every test above and make the game a place a
+// keyboard can enter and not leave (specs/UI_ACTORS.md).
 
 import {beforeAll, describe, expect, it} from 'vitest';
 
@@ -49,6 +55,19 @@ const form = (count = 3) => {
 };
 
 /**
+ * The player arrives at the game — tabs onto the canvas, or clicks it.
+ *
+ * NOT A TAB PRESS, and that is the distinction the rule is built around: the
+ * Tab that carried them here was pressed while the page still had the
+ * keyboard, so nothing in the pressed keys can tell arriving from moving on
+ * (`World.gainedKeyboard`).
+ */
+const enter = (world: World) => {
+  world.gainedKeyboard();
+  world.tick(1 / 60);
+};
+
+/**
  * Press a key and let the frame it landed in finish.
  *
  * Through `keyName`, as the driver does: the browser says `Tab` and the rule
@@ -71,20 +90,48 @@ const holder = (fields: readonly Actor[]) =>
   fields.findIndex(field => field.get(of('FocusedProperty')) === true);
 
 describe('Tab Navigation', () => {
-  it('gives the focus to the first one when nothing has it', () => {
-    // Arriving from outside the world is the same move as wrapping round the
-    // end of it, which is why one branch does both.
+  it('does nothing on Tab while nothing holds the focus', () => {
+    // THE KEYBOARD TRAP, and the one claim here that is about not acting. That
+    // Tab is the page's: it is how a player gets past the canvas, and a rule
+    // that answered it would pull them straight back in the moment they
+    // pressed Escape to leave.
     const {world, fields} = form();
 
     press(world, 'Tab');
+
+    expect(holder(fields)).toBe(-1);
+    expect([...world.capturedKeys()]).toEqual([]);
+  });
+
+  it('gives the focus to the first one when the player arrives', () => {
+    // Arriving at the game is its own moment, reported by the driver when the
+    // canvas takes the keyboard — from a Tab pressed out on the page, or a
+    // click.
+    const {world, fields} = form();
+
+    enter(world);
 
     expect(holder(fields)).toBe(0);
   });
 
+  it('takes Tab from the browser only while it is being used', () => {
+    // The other half of the same bargain. While an actor holds the focus the
+    // game wants Tab; the moment it does not, the key goes back — and Escape
+    // is what does it, which is why Escape can never be captured
+    // (`core/keys`, RESERVED_KEYS).
+    const {world} = form();
+
+    enter(world);
+    expect([...world.capturedKeys()]).toEqual(['tab']);
+
+    press(world, 'Escape');
+    expect([...world.capturedKeys()]).toEqual([]);
+  });
+
   it('moves it on, one at a time, and wraps', () => {
     const {world, fields} = form();
+    enter(world);
 
-    press(world, 'Tab');
     press(world, 'Tab');
     expect(holder(fields)).toBe(1);
 
@@ -100,8 +147,8 @@ describe('Tab Navigation', () => {
     // The whole reason this is a rule. Two fields that each decided for
     // themselves would both take the next keystroke.
     const {world, fields} = form();
+    enter(world);
 
-    press(world, 'Tab');
     press(world, 'Tab');
 
     expect(
@@ -116,7 +163,7 @@ describe('Tab Navigation', () => {
     const {world, fields} = form();
     fields[2].set(of('TabOrderProperty'), -1 as never);
 
-    press(world, 'Tab');
+    enter(world);
     expect(holder(fields)).toBe(2);
 
     press(world, 'Tab');
@@ -124,15 +171,42 @@ describe('Tab Navigation', () => {
   });
 
   it('drops the focus on Escape, so the keyboard goes back to the page', () => {
-    // The way out, and the reason the game may claim Tab at all: while nothing
-    // in the world holds the focus, Tab is the browser's again
-    // (specs/UI_ACTORS.md).
+    // The way out, and the reason the game may claim Tab at all: with nothing
+    // holding the focus, the next Tab is neither captured nor answered, so the
+    // browser moves the player past the canvas.
     const {world, fields} = form();
-    press(world, 'Tab');
+    enter(world);
 
     press(world, 'Escape');
-
     expect(holder(fields)).toBe(-1);
+
+    press(world, 'Tab');
+    expect(holder(fields)).toBe(-1);
+  });
+
+  it('lets the player back in after they left', () => {
+    // Escape then Tab takes them out; tabbing back on brings them to the front
+    // of the route again rather than to wherever they had got to.
+    const {world, fields} = form();
+    enter(world);
+    press(world, 'Tab');
+    press(world, 'Escape');
+
+    enter(world);
+
+    expect(holder(fields)).toBe(0);
+  });
+
+  it('leaves the focus where it is when the player returns to it', () => {
+    // Clicking away and back is not arriving: the canvas takes the keyboard
+    // again, and the field that was being typed into is still the one.
+    const {world, fields} = form();
+    enter(world);
+    press(world, 'Tab');
+
+    enter(world);
+
+    expect(holder(fields)).toBe(1);
   });
 
   it('says who gained it and who lost it, in that order', () => {
@@ -145,22 +219,22 @@ describe('Tab Navigation', () => {
       field.on(of('LosesFocusEvent'), () => said.push(`lose ${index}`));
     });
 
-    press(world, 'Tab');
+    enter(world);
     press(world, 'Tab');
 
     expect(said).toEqual(['gain 0', 'lose 0', 'gain 1']);
   });
 
   it('says nothing when the focus does not actually move', () => {
-    // One focusable actor, tabbed twice: the route wraps onto the actor that
-    // already has it, and `take the focus` declines rather than raising a loss
-    // and a gain for an actor that never let go.
+    // One focusable actor, tabbed: the route wraps onto the actor that already
+    // has it, and `take the focus` declines rather than raising a loss and a
+    // gain for an actor that never let go.
     const {world, fields} = form(1);
     const said: string[] = [];
     fields[0].on(of('GainsFocusEvent'), () => said.push('gain'));
     fields[0].on(of('LosesFocusEvent'), () => said.push('lose'));
 
-    press(world, 'Tab');
+    enter(world);
     press(world, 'Tab');
 
     expect(said).toEqual(['gain']);
@@ -172,7 +246,9 @@ describe('Tab Navigation', () => {
     // then built a platformer.
     const {world} = form(0);
 
+    expect(() => enter(world)).not.toThrow();
     expect(() => press(world, 'Tab')).not.toThrow();
+    expect([...world.capturedKeys()]).toEqual([]);
   });
 
   it('skips an actor that did not elect the trait', () => {
@@ -180,7 +256,7 @@ describe('Tab Navigation', () => {
     const scenery = new ActorBuilder({id: 's', name: 's'}).instantiate('s');
     world.addActor(scenery);
 
-    press(world, 'Tab');
+    enter(world);
     press(world, 'Tab');
 
     expect(holder(fields)).toBe(0);

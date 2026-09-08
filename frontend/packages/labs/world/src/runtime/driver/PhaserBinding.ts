@@ -212,6 +212,8 @@ export class PhaserBinding {
   private readonly onKeyDown: (event: KeyboardEvent) => void;
   private readonly onKeyUp: (event: KeyboardEvent) => void;
   private readonly onBlur: () => void;
+  /** Fires when the game's element takes the keyboard — see the constructor. */
+  private readonly onFocus: () => void;
 
   constructor(
     world: World,
@@ -238,6 +240,9 @@ export class PhaserBinding {
     if (metrics) {
       world.useTextMetrics(metrics);
     }
+    // Whether the game's element was focused by a click rather than by a Tab
+    // from the page. Read and cleared by the focus handler below.
+    let viaPointer = false;
     const objects = new Map<Actor, GameObject>();
     // The backdrop layers' images, by layer index — created on demand, because
     // a world may be told about its background mid-game.
@@ -828,8 +833,46 @@ export class PhaserBinding {
     // (preview.html) then signals it. Removed in stop() so a hot restart doesn't
     // stack listeners.
     this.parent = parent;
-    this.focusOnPointerDown = () => parent.focus();
+    //
+    // …AND REMEMBER THAT IT WAS A CLICK. Arriving at the game by TABBING onto
+    // it brings the focus to its first control; arriving by clicking should
+    // not, because a click says where it landed. The DOM focus event cannot
+    // tell them apart, so the pointer says so on its way past — `focus` fires
+    // from inside this handler, so the flag is always set before it is read.
+    this.focusOnPointerDown = () => {
+      viaPointer = true;
+      parent.focus();
+    };
     parent.addEventListener('pointerdown', this.focusOnPointerDown);
+    // WHAT ARRIVING MEANS TO THE WORLD. A rule that moves focus between the
+    // game's own controls has to tell coming IN from moving ON, and nothing in
+    // the pressed keys can: the Tab that carried the player here was pressed
+    // while the page still had the keyboard (`World.gainedKeyboard`,
+    // `rules/tabNavigation`). A world with no such rule ignores it.
+    this.onFocus = () => {
+      if (!viaPointer) {
+        world.gainedKeyboard();
+      }
+      viaPointer = false;
+    };
+    parent.addEventListener('focus', this.onFocus);
+    // WHAT THE GAME SAYS ABOUT ITSELF to a reader who arrives by keyboard and
+    // is told nothing by a canvas. `application` is honest here — the thing
+    // takes the arrows and space, and a screen reader treating it as a
+    // document would eat them.
+    //
+    // The label states the contract in both directions, and the half that
+    // matters is the way OUT: a player who cannot find it is in a trap, which
+    // is worse than a game that is hard to reach. Left alone if the page
+    // already labelled the element, since the page knows what game it is.
+    parent.setAttribute('role', 'application');
+    if (!parent.hasAttribute('aria-label')) {
+      parent.setAttribute(
+        'aria-label',
+        'Game. Press Tab to move between the controls in the game, and ' +
+          'Escape to leave the game.',
+      );
+    }
     // Read the keyboard ourselves (Phaser's keyboard is disabled below): capture
     // every key by DOM name into `downKeys` while `#game` is focused.
     // Translated at the door (`engine/core/keys`): the DOM's names are the
@@ -848,7 +891,18 @@ export class PhaserBinding {
       if (event.key.length === 1 && !event.ctrlKey && !event.metaKey) {
         typed.push(event.key);
       }
-      if (SCROLL_KEYS.has(event.key)) {
+      // WHAT THE BROWSER MAY STILL DO WITH THIS KEY. `SCROLL_KEYS` is the
+      // floor — the keys a game always wants, so a platformer does not scroll
+      // the page out from under itself. Everything else the world asks for
+      // (`World.captureKey`) is a fact about the MOMENT rather than a
+      // constant: Tab belongs to the game only while one of its own controls
+      // holds the focus, and belongs to the page the rest of the time, or the
+      // canvas is somewhere a keyboard user can enter and not leave
+      // (specs/UI_ACTORS.md). Escape is never in that set.
+      if (
+        SCROLL_KEYS.has(event.key) ||
+        world.capturedKeys().has(keyName(event.key))
+      ) {
         event.preventDefault();
       }
     };
@@ -988,6 +1042,7 @@ export class PhaserBinding {
     forgive(() =>
       this.parent.removeEventListener('pointerdown', this.focusOnPointerDown),
     );
+    forgive(() => this.parent.removeEventListener('focus', this.onFocus));
     forgive(() => this.parent.removeEventListener('keydown', this.onKeyDown));
     forgive(() => this.parent.removeEventListener('keyup', this.onKeyUp));
     forgive(() => this.parent.removeEventListener('blur', this.onBlur));

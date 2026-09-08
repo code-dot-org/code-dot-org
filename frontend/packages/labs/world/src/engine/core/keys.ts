@@ -35,6 +35,22 @@ const NAMED_KEYS: ReadonlyArray<readonly [string, string]> = [
   ['escape', 'Escape'],
 ];
 
+/**
+ * Keys the game may never take from the browser, whatever it asks.
+ *
+ * ESCAPE, and only Escape. It is the way OUT: while an interface actor holds
+ * the keyboard the game keeps Tab to itself, and Escape is what drops that
+ * focus and hands Tab back to the page (specs/UI_ACTORS.md). A game that could
+ * capture Escape could shut that door behind itself, and a canvas a keyboard
+ * user cannot leave is a trap — so `World.captureKey` refuses this one rather
+ * than trusting every rule that will ever be written not to ask.
+ *
+ * A game may still HEAR it. Reserving it is about the browser's default
+ * action, not about the event: `when ⟨escape⟩ is pressed` opening a menu is
+ * ordinary, and it cannot stop the focus being dropped in the same frame.
+ */
+export const RESERVED_KEYS: ReadonlySet<string> = new Set(['escape']);
+
 const BY_DOM_KEY = new Map(
   NAMED_KEYS.map(([name, domKey]) => [domKey, name] as const),
 );

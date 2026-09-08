@@ -285,6 +285,21 @@ export const keyDown = key => ({
   fields: {KEY: key},
 });
 
+/** `capture the <key> key` — ask the browser to leave it to the game. */
+export const captureKey = key => ({
+  type: 'world_capture_key',
+  fields: {KEY: key},
+});
+
+/** `release the <key> key` — hand it back. */
+export const releaseKey = key => ({
+  type: 'world_release_key',
+  fields: {KEY: key},
+});
+
+/** `the game just got the keyboard` — true for the frame it arrived. */
+export const keyboardArrived = () => ({type: 'world_keyboard_arrived'});
+
 export const pixelsPerUnit = () => ({type: 'world_pixels_per_unit'});
 
 /** Where the pointer is, as a place in the world (`World.mousePosition`). */

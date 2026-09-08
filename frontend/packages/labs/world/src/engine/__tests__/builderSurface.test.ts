@@ -69,6 +69,11 @@ const RUNTIME_ONLY: Record<string, string> = {
   textWidth:
     'a world still being described has no canvas behind it — the driver lends ' +
     'the measuring tape once it is built (`World.useTextMetrics`)',
+  captureKey:
+    'there is no browser yet to take a key from, and nothing has been pressed',
+  releaseKey: 'the same, at the other end',
+  keyboardJustArrived:
+    'a world being described is not on a screen anybody could have tabbed onto',
 };
 
 /**

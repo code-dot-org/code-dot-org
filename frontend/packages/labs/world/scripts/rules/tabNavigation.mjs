@@ -1,18 +1,23 @@
 import {
   allWithTrait,
   anyOf,
+  both,
+  captureKey,
   choice,
   defineRule,
   doc,
   equals,
+  filter,
   firstActor,
   forEach,
   forEachKey,
+  keyboardArrived,
   moduleFor,
   no,
   not,
   note,
   orderedActors,
+  releaseKey,
   stopLoop,
   thisActor,
   when,
@@ -60,10 +65,19 @@ order you placed them in.`,
 // key\` is, and going through another rule's events would make this depend on
 // a rule a project may not have imported for a fact the World already holds.
 //
-// WHAT IS NOT HERE YET: the browser also has a Tab key, and it moves focus out
-// of the game. Deciding when the game may claim it — and announcing to a screen
-// reader that Escape is the way back out — is the driver's half and is not
-// written yet (specs/UI_ACTORS.md).`,
+// TAB IS ONLY THE GAME'S WHILE THE GAME IS USING IT. The browser has a Tab key
+// too, and it is how a keyboard user moves past the canvas. So this CAPTURES
+// tab when an actor takes the focus and RELEASES it when the focus is dropped
+// — and its tab branch does nothing at all while nothing is focused, so a Tab
+// pressed in a game with an idle interface goes to the page and takes the
+// player out of the canvas. Escape drops the focus, which is the door: it
+// cannot be captured by anybody (\`core/keys\`, RESERVED_KEYS).
+//
+// COMING IN IS NOT MOVING ON, and nothing in the keys can tell them apart: the
+// Tab that carried the player onto the game was pressed while the page still
+// had the keyboard. \`the game just got the keyboard\` is the moment itself,
+// reported by the driver, and it is what focuses the first actor
+// (specs/UI_ACTORS.md).`,
 });
 
 const focusable = rule.trait('Can Be Focused');
@@ -152,6 +166,8 @@ const takeFocus = focusable.block({
           release(),
           focused.set(thisActor(), yes()),
           gainsFocus({}, thisActor()),
+          note('While somebody is holding it, Tab is the game\u2019s.'),
+          captureKey('tab'),
         ],
       ],
     ]),
@@ -175,11 +191,41 @@ const dropFocus = rule.block({
       'Everyone that can hold the focus is asked, rather than one remembered actor: the rule keeps no second copy of who has it, so there is nothing that can disagree with the property itself.',
     ),
     release(),
+    doc(
+      'And Tab goes back to the page. This is the whole of how a keyboard user leaves the game: nothing here is holding the key any more, so the next press moves them past the canvas.',
+    ),
+    releaseKey('tab'),
   ],
 });
 
+/** Whether anybody in the world is holding the focus right now. */
+const somethingFocused = () =>
+  anyOf(
+    filter(other, {
+      from: allWithTrait(rule.traitRef('Can Be Focused')),
+      where: focused.of(other.get()),
+    }),
+  );
+
+/** The front of the route takes it — which is what arriving at the game is. */
+const focusFirst = () => [
+  when([
+    [
+      anyOf(allWithTrait(rule.traitRef('Can Be Focused'))),
+      [chosen.set(firstActor(inOrder())), takeFocus({}, chosen.get())],
+    ],
+  ]),
+];
+
 /**
- * Tab, and Escape.
+ * Tab, Escape, and arriving.
+ *
+ * WHY THE TAB BRANCH IS GUARDED. While nothing here holds the focus, Tab is
+ * the PAGE's: the game does not capture it and must not act on it either, or a
+ * player who pressed Escape to leave would be pulled straight back in. The two
+ * halves have to agree, and this is the half that is easy to forget, because a
+ * rule that grabbed Tab always would look right in every test that never tried
+ * to leave.
  *
  * WHY THE WALK RATHER THAN A SORT KEY. "The next one" is a question about
  * position in a list, and the list is only in order once — so it is ordered
@@ -190,13 +236,15 @@ const dropFocus = rule.block({
  */
 rule.step('focusKeys', 'sense', [
   doc(
-    'The World knows which keys went down this frame, and nothing else can work that out. Tab moves the focus on; Escape drops it, which is how a player gets the keyboard back from the game.',
+    'Three moments, and they are easy to confuse. Arriving at the game brings the focus to the first control. Tab moves it on, but only while something already has it — otherwise the key belongs to the page and carries the player out. Escape drops it, which is what hands the key back.',
   ),
+  note('Coming in. Already holding it? Then this is a return, not an arrival.'),
+  when([[both(keyboardArrived(), not(somethingFocused())), focusFirst()]]),
   forEachKey('PRESSED', key, [
     when([
       [equals(key.get(), choice(KEY, 'escape')), [dropFocus()]],
       [
-        equals(key.get(), choice(KEY, 'tab')),
+        both(equals(key.get(), choice(KEY, 'tab')), somethingFocused()),
         [
           passed.set(no()),
           found.set(no()),
@@ -215,23 +263,8 @@ rule.step('focusKeys', 'sense', [
               ]),
             ],
           }),
-          doc(
-            'Nothing after it — or nothing had the focus at all — so the answer is the first one. That is the wrap at the end of the route and the arrival from outside it, which are the same move.',
-          ),
-          when([
-            [
-              not(found.get()),
-              [
-                when([
-                  [
-                    anyOf(allWithTrait(rule.traitRef('Can Be Focused'))),
-                    [chosen.set(firstActor(inOrder())), found.set(yes())],
-                  ],
-                ]),
-              ],
-            ],
-          ]),
-          note('A world with nothing focusable in it leaves the key alone.'),
+          note('Nothing after the last one, so the route wraps to the front.'),
+          when([[not(found.get()), focusFirst()]]),
           when([[found.get(), [takeFocus({}, chosen.get())]]]),
         ],
       ],

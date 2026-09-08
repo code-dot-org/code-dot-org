@@ -486,66 +486,52 @@ wraps. Arriving from nothing is the same branch as wrapping, because it is the
 same move. It reads the keyboard's edges straight off the World rather than
 through the Input rule's events, so it requires no other rule.
 
-### Tab is only the game's while the game has focus — NOT BUILT
+### Tab is only the game's while the game is using it
 
-The rule half is done; the driver half is not, and it is the half with the
-accessibility argument in it. **Escape is reserved and no game may bind it.**
-The policy:
+The policy, and it is an accessibility contract rather than a convenience:
 
 - The game claims Tab (preventDefault) only while some focusable actor holds
   the focus. While nothing does, Tab is the page's and moves the reader on past
   the canvas, so the game is never a keyboard trap.
-- Escape drops all focus, which is what releases Tab again. That is the way
-  out, and it is the reason Escape cannot also be a game's pause key.
+- **Escape is reserved and no game may bind it.** It drops all focus, which is
+  what releases Tab again. That is the way out, and it is why Escape cannot
+  also be a game's pause key.
 - Tabbing ONTO the game from elsewhere on the page focuses the first focusable
-  actor in it.
-- The screen-reader announcement made on arrival has to say this: that Tab now
-  moves between the controls inside the game, and that Escape leaves.
+  actor in it. Clicking onto it does not — a click says where it landed.
+- The element announces this to a screen reader on arrival.
 
-`SCROLL_KEYS` in `runtime/driver/PhaserBinding` is the set that is
-preventDefaulted today, and it is a constant rather than a question about the
-world; this needs the driver to be able to ask whether the focus is held in
-there.
+How it is built, in three pieces:
 
-**There is a caret, and what it cost was a measuring seam.** A caret belongs
-after the last letter, and where that is depends on how wide the letters are —
-which only the painter knew: the engine had no canvas and did not measure text
-at all (`draw paragraph` hands its column DOWN for exactly this reason). A bar
-at a guessed offset would sit inside the word at one text size and past its end
-at another, so for a while focus was shown by the edge alone.
+**The world says which keys it wants.** `capture the ⟨tab⟩ key` and `release
+the ⟨tab⟩ key` (`World.captureKey`), read by the driver alongside its own
+`SCROLL_KEYS` floor. That floor was the whole mechanism before — arrows and
+space, hard-coded — and it could never have expressed Tab, because whether the
+game should have Tab is a fact about the MOMENT rather than about the game.
+`World.captureKey` refuses `escape` outright (`core/keys`, `RESERVED_KEYS`)
+rather than trusting every rule that will ever be written.
 
-The tape is lent the other way now. A driver that has a canvas builds one from
-the same font string the painter sets and hands it to the World at set-up;
-`width of ⟨text⟩ at size ⟨n⟩` is the block that borrows it, and it works
-wherever `world` is bound — a handler, a step, a drawing, and a drawing's size
-sockets (specs/DRAWING.md, "Text measurement"). A world lent nothing measures
-zero, which parks the caret at the left margin: visibly nothing rather than
-invisibly wrong.
+**Arriving is its own moment.** `the game just got the keyboard`
+(`World.gainedKeyboard`), true for one frame and drained by the tick like the
+typed characters. Nothing in the pressed keys can stand for it: the Tab that
+carried the player onto the canvas was pressed while the page still had the
+keyboard, so a Tab edge inside the game means "move on" and an arrival means
+"come in", and they are indistinguishable to `for each newly pressed key`. The
+driver reports it from the element's `focus` event, and suppresses it when the
+focus came from a `pointerdown`.
 
-The field draws the bar after the words for half of every second, on the
-world's own clock so every field on a screen blinks together. A `scroll`
-property, kept by one `each frame` out of the same measurement, slides the
-words left once what is typed no longer fits — without it a field is a box that
-fills up and then types into thin air.
+**The rule does not answer Tab unless something is focused.** This is the half
+that is easy to forget and invisible when it is wrong: a rule that always moved
+the focus on would pass every ordinary test and pull a player straight back in
+the moment they pressed Escape to leave.
 
-**The insertion point is the end**, always: typing appends and backspace takes
-from the end, so there is one place the caret can be. Clicking INTO a word to
-put it elsewhere is what the seam was really built for and is the next piece of
-work: it needs pixel-to-letter, which is a question about where the painter put
-each letter and is not answerable from a width alone.
-
-**And it is not on the shelf.** Every stock actor has to be granted by a
-progression tile (`progression/__tests__/layout`), a tile needs a lesson, and a
-lesson that teaches typing needs a check that can TYPE — which the trace format
-has no step for. That is three pieces of curriculum and one of machinery, so
-the actor waits rather than arriving somewhere a learner cannot be sent.
-
-The rest is ordinary: a selection is two numbers, and `when changed` is a
-`define event` on the actor.
-
-A Dropdown needs one more thing — a `words` property holding the options, and a
-menu drawn from it. Both halves are the actor's own; what it emits when one is
-chosen is a `define event` carrying the word.
+The game's element carries `role="application"` — honest, since it takes the
+arrows and space, and a screen reader treating it as a document would eat them
+— and an `aria-label` naming both halves of the contract. The label is
+unconditional rather than derived from whether the world has any focusable
+actors: it is read at the moment of arrival, which is before anything has
+captured anything, and a game with no controls simply tabs straight back out,
+which is what the sentence already implies. A page that labelled the element
+itself keeps its own label.
 
 ## Interface actors are a category of their own
 

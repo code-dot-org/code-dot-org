@@ -21,6 +21,7 @@ import {
 } from './drawing';
 import {effectContentHash, effectSlotId} from './effectIds';
 import {EventQueue} from './EventQueue';
+import {RESERVED_KEYS} from './keys';
 import {
   DEFAULT_LAYER_ID,
   makeLayer,
@@ -614,6 +615,31 @@ export class World {
    * Drained by `tick`, so a frame sees exactly what was typed into it.
    */
   private typed: string[] = [];
+  /**
+   * Keys the game has asked the browser to leave alone.
+   *
+   * THE BROWSER HAS ITS OWN USE FOR SOME KEYS, and which ones a game needs is
+   * a fact about the game rather than a constant in the driver — where it has
+   * been living (`PhaserBinding`'s `SCROLL_KEYS`, arrows and space, hard-coded
+   * so a platformer does not scroll the page). Tab is the case that could not
+   * be a constant: an interface actor holding the focus wants it, and a game
+   * with nothing focused must NOT have it, or the canvas is somewhere a
+   * keyboard user can enter and not leave (specs/UI_ACTORS.md).
+   *
+   * So the world says, and the driver reads. Escape is never in here — see
+   * `RESERVED_KEYS`.
+   */
+  private captured = new Set<string>();
+  /**
+   * Whether the game window took the keyboard since the last tick.
+   *
+   * ONE FRAME, drained by `tick` like the typed characters, because it is the
+   * same kind of thing: a moment rather than a state. It is how a rule tells
+   * an arrival from an ordinary keypress — tabbing ONTO the game and pressing
+   * Tab INSIDE it both look like a Tab edge, and they mean opposite things
+   * (one comes in, the other goes on or leaves).
+   */
+  private keyboardArrived = false;
   /**
    * How wide a line of text is, or nothing when nobody has said.
    *
@@ -1654,6 +1680,41 @@ export class World {
   }
 
   /**
+   * Ask the browser to leave `key` to the game — `capture the ⟨tab⟩ key`.
+   *
+   * Refused for `escape`, which is the way out of the game and is not the
+   * game's to take (`core/keys`, RESERVED_KEYS). Refused silently rather than
+   * thrown: a rule asking is asking, and a game that stopped dead because it
+   * wanted one key too many would be worse than one that simply does not get
+   * it.
+   */
+  captureKey(key: string): void {
+    if (!RESERVED_KEYS.has(key)) {
+      this.captured.add(key);
+    }
+  }
+
+  /** Give `key` back to the browser — `release the ⟨tab⟩ key`. */
+  releaseKey(key: string): void {
+    this.captured.delete(key);
+  }
+
+  /** The keys the game has claimed; the driver suppresses their default. */
+  capturedKeys(): ReadonlySet<string> {
+    return this.captured;
+  }
+
+  /** The game window took the keyboard (the driver calls this on focus). */
+  gainedKeyboard(): void {
+    this.keyboardArrived = true;
+  }
+
+  /** Whether it took the keyboard since the last tick. */
+  keyboardJustArrived(): boolean {
+    return this.keyboardArrived;
+  }
+
+  /**
    * Lend the world a way to measure text (the driver calls this once).
    *
    * Once, at set-up, and not per frame: a measurer is a canvas and a font, and
@@ -1813,6 +1874,10 @@ export class World {
     // it simply happened — so a frame that did not read it is a frame it was
     // meant for and missed, and carrying it forward would type it twice.
     this.typed = [];
+    // …and so is the arrival, for the same reason: taking the keyboard is a
+    // moment, not a state. A rule that missed the frame it happened in has
+    // missed it, which is better than acting on it twice.
+    this.keyboardArrived = false;
   }
 
   /** The resolved step order — for inspection and tests. */
