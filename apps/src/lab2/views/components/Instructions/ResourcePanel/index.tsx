@@ -75,7 +75,7 @@ import ResourcePanelExtraLinks from './Footer/ResourcePanelExtraLinks';
 import setFooterVisibility from './Footer/setFooterVisibility';
 import SettingsPanel from './Footer/SettingsPanel';
 import StudentResourcesPanel from './StudentResources/StudentResourcesPanel';
-import {Tabs} from './types';
+import {ExtraTab, Tabs} from './types';
 import ValidationPanel, {
   ValidationSettings,
 } from './Validation/ValidationPanel';
@@ -123,7 +123,7 @@ export interface BackpackProps {
   addFileHandler?: AddFileHandler;
 }
 
-const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
+const builtInTabInfo: {[key in Tabs]: {title: string; icon: string}} = {
   [Tabs.Instructions]: {title: commonI18n.instructions(), icon: 'info-circle'},
   [Tabs.AiTutor]: {title: commonI18n.aiTutor(), icon: 'ai-head-solid'},
   [Tabs.StudentRubric]: {
@@ -147,9 +147,13 @@ const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
     icon: 'backpack',
   },
   [Tabs.StudentResources]: {title: 'Resources', icon: 'compass'},
-  [Tabs.QuestionBank]: {title: 'Question Bank', icon: 'clipboard-question'},
-  [Tabs.Configuration]: {title: 'Configuration', icon: 'wrench'},
 };
+
+function filterExtraTabs(extraTabs: ExtraTab[] | undefined): ExtraTab[] {
+  return (extraTabs ?? []).filter(
+    tab => !!tab.content && !(Object.values(Tabs) as string[]).includes(tab.id)
+  );
+}
 
 type ResourcePanelProps = InstructionsProps & {
   className?: string;
@@ -181,9 +185,7 @@ type ResourcePanelProps = InstructionsProps & {
   // Hide navigation entirely, in both the Instructions tab and the footer.
   // hideNavigation alone only controls the Instructions tab navigation.
   hideAllNavigation?: boolean;
-  /** Used by the Quiz building UI. */
-  questionBankContent?: React.ReactNode;
-  configurationContent?: React.ReactNode;
+  extraTabs?: ExtraTab[];
   // Callback that reports whether any tab ended up available.
   onHasTabsChange?: (hasTabs: boolean) => void;
 };
@@ -217,15 +219,14 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   onAssetUploaded,
   onAssetRemoved,
   initialWelcomeMessage,
-  questionBankContent,
-  configurationContent,
+  extraTabs,
   hideAllNavigation = false,
   onHasTabsChange,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
   const {showRubric} = useRubric();
-  const [currentTab, setCurrentTab] = useState<Tabs | undefined>(undefined);
+  const [currentTab, setCurrentTab] = useState<string | undefined>(undefined);
   const userId = useAppSelector(state => state.currentUser.userId);
   const aiTutorDotSeenKey = userId
     ? `${AI_TUTOR_DOT_SEEN_KEY_PREFIX}_${userId}`
@@ -338,12 +339,17 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     !!hiddenContextCallback &&
     hasInstructions;
 
+  const visibleExtraTabs = useMemo(
+    () => filterExtraTabs(extraTabs),
+    [extraTabs]
+  );
+
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
     if (sidebarOnly) {
       return {};
     }
-    const tabMap: {[key in Tabs]?: React.ReactNode} = {};
+    const tabMap: Record<string, React.ReactNode> = {};
 
     const instructionsContent = hasInstructions ? (
       <Instructions
@@ -356,13 +362,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       tabMap[Tabs.Instructions] = instructionsContent;
     }
 
-    if (questionBankContent) {
-      tabMap[Tabs.QuestionBank] = questionBankContent;
-    }
-
-    if (configurationContent) {
-      tabMap[Tabs.Configuration] = configurationContent;
-    }
+    visibleExtraTabs.forEach(tab => {
+      tabMap[tab.id] = tab.content;
+    });
 
     if (validationSettings && hasValidationConditions) {
       tabMap[Tabs.Validation] = <ValidationPanel {...validationSettings} />;
@@ -472,8 +474,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     instructionsProps,
     hideInstructionsNavigation,
     hideAllNavigation,
-    questionBankContent,
-    configurationContent,
+    visibleExtraTabs,
     validationSettings,
     hasValidationConditions,
     hiddenContextCallback,
@@ -512,6 +513,21 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     unifiedBackpackEnabled,
     hasInstructions,
   ]);
+
+  const extraTabInfo = useMemo(() => {
+    const info: {[id: string]: {title: string; icon: string}} = {};
+    visibleExtraTabs.forEach(tab => {
+      info[tab.id] = {title: tab.title, icon: tab.icon};
+    });
+    return info;
+  }, [visibleExtraTabs]);
+
+  const getTabInfo = (tab: string): {title: string; icon: string} => {
+    if (tab in builtInTabInfo) {
+      return builtInTabInfo[tab as Tabs];
+    }
+    return extraTabInfo[tab];
+  };
 
   const hasTabs = useMemo(() => {
     return Object.keys(availableTabs).length > 0;
@@ -599,7 +615,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   }, [setShowExtraLinksButton]);
 
   const onClickTab = useCallback(
-    (tab: Tabs) => {
+    (tab: string) => {
       if (currentTab && currentTab !== tab) {
         sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_TAB_CLICKED, {
           resourcePanelTabClickedTo: tab,
@@ -741,7 +757,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               {getTypedKeys(availableTabs).map(tab => (
                 <WithTooltip
                   tooltipProps={{
-                    text: tabInfo[tab].title,
+                    text: getTabInfo(tab).title,
                     tooltipId: `tooltip-${tab}`,
                     direction: 'onRight',
                     size: 'xs',
@@ -770,14 +786,14 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                       )}
                       id={`resource-panel-tab-button-${tab}`}
                       onClick={() => onClickTab(tab)}
-                      aria-label={tabInfo[tab].title}
+                      aria-label={getTabInfo(tab).title}
                       type="button"
                       key={tab}
                     >
                       <FontAwesomeV6Icon
-                        iconName={tabInfo[tab].icon}
+                        iconName={getTabInfo(tab).icon}
                         iconFamily={
-                          kitIcons.has(tabInfo[tab].icon) ? 'kit' : undefined
+                          kitIcons.has(getTabInfo(tab).icon) ? 'kit' : undefined
                         }
                       />
                     </MuiIconButton>
@@ -838,7 +854,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           <div className={styles.panels}>
             <PanelContainer
               id={currentTab || 'resource-panel'}
-              headerContent={currentTab && tabInfo[currentTab].title}
+              headerContent={currentTab && getTabInfo(currentTab).title}
               headerClassName={headerClassName}
               rightHeaderContent={
                 currentTab === Tabs.AiTutor ? (
@@ -928,4 +944,5 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   );
 };
 
+export type {ExtraTab};
 export default ResourcePanel;
