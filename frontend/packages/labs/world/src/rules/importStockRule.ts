@@ -14,7 +14,7 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {parseRuleMeta} from '../blockly/ruleMeta';
 
-import {resolveRuleContents, ruleReferenceFor} from './ruleReference';
+import {resolveRuleContents, ruleFileContents} from './ruleReference';
 import {stockRuleByName, type StockRule} from './stock';
 
 /** Where rules live, by the lab's directory convention (GLOSSARY.md). */
@@ -148,10 +148,11 @@ function writeRule(
         id: fileId,
         name: `${stem}.rule`,
         language: 'rule',
-        // A REFERENCE, not the rule. It becomes the rule the first time the
-        // learner edits it, because the editor saves a workspace whole
-        // (rules/ruleReference, specs/NEXT.md §2).
-        contents: ruleReferenceFor(rule),
+        // A REFERENCE where one would resolve, and the rule whole where it
+        // would not. It becomes the rule the first time the learner edits it,
+        // because the editor saves a workspace whole (rules/ruleReference,
+        // specs/NEXT.md §2).
+        contents: ruleFileContents(rule),
         folderId,
       },
     },

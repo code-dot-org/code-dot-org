@@ -99,6 +99,27 @@ export function ruleReferenceFor(rule: StockRule): string {
   return JSON.stringify({stock: rule.id, version: stockVersion(rule)});
 }
 
+/**
+ * What a `.rule` file should hold for `rule` — a reference, or the rule whole.
+ *
+ * A REFERENCE ONLY IF THE SHELF CAN RESOLVE ONE. `resolveRuleContents` looks a
+ * reference up in `STOCK_RULES` and answers the empty string when it is not
+ * there, so a rule imported by anything OTHER than the shelf — a fixture
+ * placing one that is finished but has no lesson yet, a test standing one up —
+ * would land as a file with nothing in it. Nothing downstream notices: an empty
+ * workspace parses to no metadata, the generator emits `export {}`, and the
+ * world builds with an undefined rule in its list. The failure that reaches a
+ * reader is `Cannot read properties of undefined (reading 'id')`, three layers
+ * away from the import that caused it.
+ *
+ * So the saving is taken where it is available and the rule is written whole
+ * where it is not. Both are ordinary `.rule` files to everything downstream,
+ * which is the property this format exists to keep.
+ */
+export function ruleFileContents(rule: StockRule): string {
+  return stockRule(rule.id) ? ruleReferenceFor(rule) : rule.contents;
+}
+
 /** Whether these are the contents of a reference rather than of a workspace. */
 export function isRuleReference(contents: string): boolean {
   return contents.startsWith(PREFIX);

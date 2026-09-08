@@ -16,6 +16,8 @@ import {compileProject} from '../../__tests__/support/compileProject';
 import type {Actor} from '../../engine';
 import {keyName} from '../../engine/core/keys';
 import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
+import {importStockRule} from '../../rules/importStockRule';
+import {TAB_NAVIGATION} from '../../rules/stock';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
 import type {StockActor} from '../stock';
@@ -83,8 +85,11 @@ const sixPerCharacter = (words: string, size: number) =>
   words.length * (size / 2);
 
 const play = async (measure?: (words: string, size: number) => number) => {
+  // The rule the field elects a trait from, imported by hand: it is not on the
+  // shelf, so naming it in `requires` would resolve to nothing and the field
+  // would compile perfectly and hear no keyboard (`fixtures/interfaceKit`).
   const source = importStockActor(
-    WORLD_SCENARIOS.empty.source,
+    importStockRule(WORLD_SCENARIOS.empty.source, TAB_NAVIGATION).source,
     TEXT_INPUT,
   ).source;
   const main = Object.values(source.files).find(
@@ -119,6 +124,17 @@ const play = async (measure?: (words: string, size: number) => number) => {
     },
     type: (characters: string[]) => {
       world.addTyped(characters);
+      world.tick(1 / 60);
+    },
+    /**
+     * The player tabs onto the game, which is not a Tab press.
+     *
+     * The Tab that carried them here was pressed while the page still had the
+     * keyboard, so the driver reports the arrival itself and the rule brings
+     * the focus to the first control (`World.gainedKeyboard`).
+     */
+    arrive: () => {
+      world.gainedKeyboard();
       world.tick(1 / 60);
     },
     /** Let `seconds` pass at sixty frames to the second. */
@@ -209,13 +225,51 @@ describe('a Text Input', () => {
     expect(it_.says(it_.bottom)).toBe('b');
   });
 
-  it('lets go when the click lands on neither', async () => {
+  it('keeps the typing when the click lands on neither', async () => {
+    // IT USED TO LET GO, and it deliberately does not now. Clicking the
+    // background blurred because the field heard every press and cleared
+    // itself; the focus is the rule's now, and one block moves it. Escape is
+    // the release, everywhere — it is what hands Tab back to the page as well
+    // (`rules/tabNavigation`, specs/UI_ACTORS.md).
+    //
+    // A field that also blurred on any press would raise a loss and a gain
+    // every time the FOCUSED field was clicked, which is the churn the rule's
+    // idempotence guard exists to prevent.
     const it_ = await play();
     it_.clickAt(80, 60);
     it_.clickAt(300, 300);
     it_.type(['x']);
 
-    expect(it_.says(it_.top)).toBe('');
+    expect(it_.says(it_.top)).toBe('x');
+  });
+
+  it('lets go on Escape, which is the one way out', async () => {
+    const it_ = await play();
+    it_.clickAt(80, 60);
+    it_.type(['a']);
+
+    it_.press('Escape');
+    it_.type(['b']);
+
+    expect(it_.says(it_.top)).toBe('a');
+  });
+
+  it('is reachable by the keyboard alone', async () => {
+    // THE WHOLE POINT OF THE MIGRATION. A field nobody can click is a field a
+    // keyboard user cannot fill in, and no arrangement of mouse handlers was
+    // ever going to fix that — tabbing between two fields is not a thing
+    // either field can work out.
+    const it_ = await play();
+
+    it_.arrive();
+    it_.type(['h', 'i']);
+    expect(it_.says(it_.top)).toBe('hi');
+
+    it_.press('Tab');
+    it_.type(['t', 'w', 'o']);
+    expect(it_.says(it_.bottom)).toBe('two');
+    // …and the first one kept what was put in it.
+    expect(it_.says(it_.top)).toBe('hi');
   });
 
   it('backspaces, which is a key and not a character', async () => {

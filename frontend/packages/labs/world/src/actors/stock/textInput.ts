@@ -11,13 +11,25 @@
 // the box they are laid into all come across, and what it adds is a focus, a
 // panel and two handlers (`ActorBuilder.actsLike`).
 //
-// FOCUS IS A CLEAR AND THEN A SET, and it works because the Mouse rule emits
-// in that order within one step: `presses mouse button` reaches every actor
-// that takes mouse input, wherever the pointer is, and `is clicked with`
-// reaches only the ones under it — announced afterwards (`rules/mouse`,
-// `buttonEvents`). So every field unfocuses on any click and the one clicked
-// on focuses again, in that order, and two fields on a screen cannot both be
-// taking the typing.
+// FOCUS IS NOT ITS OWN. It used to be: a `focused` property this file
+// declared, cleared by `presses mouse button` and set by `is clicked with`,
+// leaning on the Mouse rule announcing those in that order within one step. It
+// worked, and it could only ever have worked for the mouse — tabbing between
+// two fields is not a thing either field can work out, and neither is "which
+// one has it". Those are facts about the SCREEN.
+//
+// So this elects `Tab Navigation#Can Be Focused` and reads the rule's
+// `focused`, which is READ-ONLY. One block moves it — `take the focus` — and
+// this calls it on a click; Tab and Escape call it from the rule. That is what
+// makes the clear and the set unnecessary: `take the focus` releases whoever
+// had it, so a click is one statement rather than a race between two
+// (`rules/tabNavigation`, specs/UI_ACTORS.md).
+//
+// CLICKING THE BACKGROUND NO LONGER BLURS, and that is deliberate rather than
+// lost. Escape is the release now, everywhere — it is what hands Tab back to
+// the page as well. A field that also blurred on any press would raise a loss
+// and a gain every time the FOCUSED field was clicked, which is exactly the
+// churn the rule's idempotence guard exists to prevent.
 //
 // THERE IS A CARET, and what it cost is worth writing down. A caret belongs
 // after the last letter, and where that is depends on how wide the letters are
@@ -74,23 +86,24 @@ const HEIGHT = 28;
 const width = () => labelSizeOf('Width');
 const height = () => labelSizeOf('Height');
 
-/** `⟨focused⟩ of this actor` — whether the typing is coming here. */
+/**
+ * `⟨focused⟩ of this actor` — whether the typing is coming here.
+ *
+ * THE RULE'S, and read-only. There is no setter to pair with this and that is
+ * the point: an actor that could set it could set it while another actor also
+ * had it, and then two fields would take the same keystroke.
+ */
 const focused = () => ({
   block: {
-    type: 'world_get_ActorsTextInput_FocusedProperty',
+    type: 'world_get_TabNavigation_FocusedProperty',
     inputs: {ACTOR: me()},
   },
 });
 
-/** `set ⟨focused⟩ of this actor to ⟨yes/no⟩`. */
-const setFocused = (on: boolean) => ({
-  type: 'world_set_ActorsTextInput_FocusedProperty',
-  inputs: {
-    ACTOR: me(),
-    VALUE: {
-      block: {type: 'logic_boolean', fields: {BOOL: on ? 'TRUE' : 'FALSE'}},
-    },
-  },
+/** `⟨this actor⟩ take the focus` — the one way it comes to hold it. */
+const takeFocus = () => ({
+  type: 'world_do_TabNavigation_TakeTheFocusAction',
+  inputs: {ACTOR: me()},
 });
 
 /** `emit changed for this actor` — the cue a project waits on. */
@@ -235,12 +248,13 @@ export const textInputActor = actorFile(
     actsLike('actors/label'),
     // What was typed, rather than which keys are down.
     useTrait('Input#TakesKeyboardInputTrait'),
-    // Any click, so a field knows to let go…
-    useTrait('Mouse#TakesMouseInputTrait'),
-    // …and a click on THIS one, so it knows to take over.
+    // A click on THIS one, so it knows to take over. It no longer needs to
+    // hear every OTHER click: `take the focus` releases whoever had it.
     useTrait('Mouse#CanBeClickedTrait'),
+    // …and the keyboard's way around the interface, which is where `focused`
+    // comes from and how Tab reaches this field at all.
+    useTrait('Tab Navigation#CanBeFocusedTrait'),
     showAs('input'),
-    defineProperty('boolean', 'focused', 'false'),
     // How far left the words are pushed so the caret stays in the box. Kept by
     // the step below, read twice by the drawing.
     defineProperty('number', 'scroll', '0'),
@@ -263,21 +277,14 @@ export const textInputActor = actorFile(
   ],
   {
     handlers: [
-      // Any click anywhere: let go. Announced BEFORE the click on a particular
-      // actor, which is what makes this and the next one a clear and a set
-      // rather than a race (`rules/mouse`).
-      {
-        type: 'world_on_Mouse_PressesMouseButtonEvent',
-        fields: {FILTER0: ''},
-        inputs: {ACTOR: me()},
-        next: {block: setFocused(false)},
-      },
-      // …and a click on this one: take the typing.
+      // A click on this one: take the typing. ONE statement, where it used to
+      // be a clear on every field and a set on this one, ordered against each
+      // other — `take the focus` releases whoever had it as part of taking it.
       {
         type: 'world_on_Mouse_IsClickedWithEvent',
         fields: {FILTER0: ''},
         inputs: {ACTOR: me()},
-        next: {block: setFocused(true)},
+        next: {block: takeFocus()},
       },
       // A character, appended — but only if this is the field being typed at.
       {

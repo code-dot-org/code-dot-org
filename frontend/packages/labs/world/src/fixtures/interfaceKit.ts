@@ -5,11 +5,17 @@
 // Button beside a Text Input beside a bar and makes them answer one another —
 // which is the only way to find out whether they compose (specs/UI_ACTORS.md).
 //
-// IT ALSO CARRIES THE TEXT INPUT, which is finished and not on the shelf: a
-// stock actor has to be granted by a progression tile, a tile needs a lesson,
-// and a lesson that teaches typing needs a check that can TYPE. A fixture
-// holds files rather than shelf entries, so it can place one anyway — which is
-// what makes this the honest home for an actor waiting on curriculum.
+// IT ALSO CARRIES THE TEXT INPUT AND THE TAB NAVIGATION RULE, both of which
+// are finished and neither of which is on the shelf: a stock actor or rule has
+// to be granted by a progression tile, a tile needs a lesson, and the lessons
+// that would teach typing and tabbing are curriculum nobody has written. A
+// fixture holds FILES rather than shelf entries, so it can place them anyway —
+// which is what makes this the honest home for work waiting on curriculum.
+//
+// The rule is imported by hand below rather than named in the Text Input's
+// `requires`, because `actorRequirements` resolves a name against the shelf
+// and silently drops what it cannot find (`actors/importStockActor`) — so a
+// `requires` naming it would read as a dependency and be nothing at all.
 //
 // WHAT IT DEMONSTRATES, and each is a seam that could have failed quietly:
 //
@@ -30,6 +36,8 @@ import {importStockActor} from '../actors/importStockActor';
 import type {StockActor} from '../actors/stock';
 import {stockActorById} from '../actors/stock';
 import {textInputActor} from '../actors/stock/textInput';
+import {importStockRule} from '../rules/importStockRule';
+import {TAB_NAVIGATION} from '../rules/stock';
 
 /** `any ⟨kind⟩` — how a world names the actor a handler is about. */
 const kind = (path: string) => ({
@@ -202,7 +210,10 @@ const TEXT_INPUT: StockActor = {
 
 /** The kit, built by importing each actor into an empty project. */
 export const interfaceKit = (empty: MultiFileSource): MultiFileSource => {
-  let source = empty;
+  // FIRST, because the Text Input elects one of its traits: an actor naming a
+  // trait the project does not hold elects nothing, compiles perfectly, and
+  // does nothing — which is the failure this fixture exists to catch.
+  let source = importStockRule(empty, TAB_NAVIGATION).source;
   for (const actor of ['label', 'button', 'progressBar', 'speechBox']) {
     source = importStockActor(source, stockActorById(actor)!).source;
   }

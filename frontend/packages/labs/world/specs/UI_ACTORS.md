@@ -486,6 +486,22 @@ wraps. Arriving from nothing is the same branch as wrapping, because it is the
 same move. It reads the keyboard's edges straight off the World rather than
 through the Input rule's events, so it requires no other rule.
 
+The Text Input is on it: it elects `Can Be Focused`, reads the rule's
+`focused`, and its click handler is one `take the focus` where it used to be a
+clear on every field and a set on this one, ordered against each other.
+Clicking the background no longer blurs — Escape is the release, everywhere,
+and a field that also blurred on any press would raise a loss and a gain every
+time the focused field was clicked.
+
+**A rule that is not on the shelf cannot be imported by reference.**
+`importStockRule` writes a `.rule` file holding a REFERENCE, and
+`resolveRuleContents` looks a reference up in `STOCK_RULES` — so a rule the
+shelf does not list resolved to the empty string, and the project got a file
+with nothing in it. Nothing downstream noticed: an empty workspace parses to no
+metadata, the generator emitted `export {}`, and the world built with an
+undefined rule in its list. `ruleFileContents` now writes a reference where one
+would resolve and the rule whole where it would not.
+
 ### Tab is only the game's while the game is using it
 
 The policy, and it is an accessibility contract rather than a convenience:

@@ -516,12 +516,27 @@ export function stockRuleByName(name: string): StockRule | undefined {
   return STOCK_RULES.find(rule => rule.name === name);
 }
 
-// EXPORTED BUT NOT SHELVED, in the case of Tab Navigation. The rule is
-// finished and is not something a learner can import yet, for the same reason
-// the Text Input is not (`actors/stock/textInput`): a shelf entry needs a
-// progression tile, a tile needs a lesson, and a lesson that teaches tabbing
-// between fields cannot be written while the browser takes the Tab key before
-// the game sees it (specs/UI_ACTORS.md). Tests reach it through here.
+/**
+ * The shelf entry Tab Navigation WILL have, written but not listed.
+ *
+ * `STOCK_RULES` is what a learner can import, and everything in it has to be
+ * granted by a progression tile (`progression/__tests__/layout`). The rule and
+ * its driver half are finished; the tile, its lesson and its check are
+ * curriculum and are not. Written here rather than in the two places that need
+ * it meanwhile — the Interface Kit fixture and the Text Input's test — so that
+ * shelving it later is one line moving this into the list below, rather than
+ * three descriptions of one rule drifting apart.
+ */
+export const TAB_NAVIGATION: StockRule = {
+  id: 'tabNavigation',
+  name: 'Tab Navigation',
+  ability: 'Moves Focus with Tab',
+  description:
+    'One actor at a time holds the keyboard. Tab moves the focus to the next control, Escape drops it, and an actor can take it when it is clicked.',
+  provides: ['Can Be Focused'],
+  contents: tabNavigationRule,
+};
+
 export {
   arrowsRule,
   climbRule,
