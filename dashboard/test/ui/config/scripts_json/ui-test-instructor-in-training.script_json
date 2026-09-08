@@ -1,6 +1,6 @@
 {
   "script": {
-    "name": "alltheselfpacedplthings",
+    "name": "ui-test-instructor-in-training",
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
@@ -12,14 +12,14 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-06-25 09:53:48 UTC",
+    "serialized_at": "2026-09-03 16:24:52 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
     "seeding_key": {
-      "script.name": "alltheselfpacedplthings"
+      "script.name": "ui-test-instructor-in-training"
     }
   },
   "lesson_groups": [
@@ -31,7 +31,7 @@
       },
       "seeding_key": {
         "lesson_group.key": "",
-        "script.name": "alltheselfpacedplthings"
+        "script.name": "ui-test-instructor-in-training"
       }
     }
   ],
@@ -48,7 +48,7 @@
       "seeding_key": {
         "lesson.key": "Instructor In Training Levels",
         "lesson_group.key": "",
-        "script.name": "alltheselfpacedplthings"
+        "script.name": "ui-test-instructor-in-training"
       }
     },
     {
@@ -64,55 +64,55 @@
       "seeding_key": {
         "lesson.key": "Dani Test Lesson 2",
         "lesson_group.key": "",
-        "script.name": "alltheselfpacedplthings"
+        "script.name": "ui-test-instructor-in-training"
       }
     }
   ],
   "lesson_activities": [
     {
-      "key": "9afac8ea-c7ff-4565-b89b-eaeead6f0140",
+      "key": "24a6ed5f-bcf9-4736-a4de-9f9b497775c7",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "lesson_activity.key": "9afac8ea-c7ff-4565-b89b-eaeead6f0140",
+        "lesson_activity.key": "24a6ed5f-bcf9-4736-a4de-9f9b497775c7",
         "lesson.key": "Instructor In Training Levels",
         "lesson_group.key": "",
-        "script.name": "alltheselfpacedplthings"
+        "script.name": "ui-test-instructor-in-training"
       }
     },
     {
-      "key": "51b4ea64-1abf-4a6f-81e8-2d06a2600cb9",
+      "key": "3d3ee17d-16f3-4061-9115-00b2db913071",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "lesson_activity.key": "51b4ea64-1abf-4a6f-81e8-2d06a2600cb9",
+        "lesson_activity.key": "3d3ee17d-16f3-4061-9115-00b2db913071",
         "lesson.key": "Dani Test Lesson 2",
         "lesson_group.key": "",
-        "script.name": "alltheselfpacedplthings"
+        "script.name": "ui-test-instructor-in-training"
       }
     }
   ],
   "activity_sections": [
     {
-      "key": "bafb409e-3612-4d8c-8401-18c91a36bfa0",
+      "key": "dd009660-4dac-4151-ac3e-79284a07dce2",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "activity_section.key": "bafb409e-3612-4d8c-8401-18c91a36bfa0",
-        "lesson_activity.key": "9afac8ea-c7ff-4565-b89b-eaeead6f0140"
+        "activity_section.key": "dd009660-4dac-4151-ac3e-79284a07dce2",
+        "lesson_activity.key": "24a6ed5f-bcf9-4736-a4de-9f9b497775c7"
       }
     },
     {
-      "key": "bb3ab1cf-08a2-4560-b6c1-388e636bdb42",
+      "key": "0bd80bd1-71d1-41e9-aaf3-d51e3dbb0fd1",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "activity_section.key": "bb3ab1cf-08a2-4560-b6c1-388e636bdb42",
-        "lesson_activity.key": "51b4ea64-1abf-4a6f-81e8-2d06a2600cb9"
+        "activity_section.key": "0bd80bd1-71d1-41e9-aaf3-d51e3dbb0fd1",
+        "lesson_activity.key": "3d3ee17d-16f3-4061-9115-00b2db913071"
       }
     }
   ],
@@ -125,21 +125,21 @@
       "properties": {
         "instructor_in_training": true,
         "level_keys": [
-          "self-paced-example-level-applab"
+          "UI Test self-paced-example-level-applab"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "self-paced-example-level-applab"
+          "UI Test self-paced-example-level-applab"
         ],
         "lesson.key": "Instructor In Training Levels",
         "lesson_group.key": "",
-        "script.name": "alltheselfpacedplthings",
-        "activity_section.key": "bafb409e-3612-4d8c-8401-18c91a36bfa0"
+        "script.name": "ui-test-instructor-in-training",
+        "activity_section.key": "dd009660-4dac-4151-ac3e-79284a07dce2"
       },
       "level_keys": [
-        "self-paced-example-level-applab"
+        "UI Test self-paced-example-level-applab"
       ]
     },
     {
@@ -150,21 +150,21 @@
       "properties": {
         "instructor_in_training": true,
         "level_keys": [
-          "self-paced-example-level-dance"
+          "UI Test self-paced-example-level-dance"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "self-paced-example-level-dance"
+          "UI Test self-paced-example-level-dance"
         ],
         "lesson.key": "Instructor In Training Levels",
         "lesson_group.key": "",
-        "script.name": "alltheselfpacedplthings",
-        "activity_section.key": "bafb409e-3612-4d8c-8401-18c91a36bfa0"
+        "script.name": "ui-test-instructor-in-training",
+        "activity_section.key": "dd009660-4dac-4151-ac3e-79284a07dce2"
       },
       "level_keys": [
-        "self-paced-example-level-dance"
+        "UI Test self-paced-example-level-dance"
       ]
     },
     {
@@ -175,21 +175,21 @@
       "properties": {
         "instructor_in_training": true,
         "level_keys": [
-          "self-paced-example-level-free-response"
+          "UI Test self-paced-example-level-free-response"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "self-paced-example-level-free-response"
+          "UI Test self-paced-example-level-free-response"
         ],
         "lesson.key": "Instructor In Training Levels",
         "lesson_group.key": "",
-        "script.name": "alltheselfpacedplthings",
-        "activity_section.key": "bafb409e-3612-4d8c-8401-18c91a36bfa0"
+        "script.name": "ui-test-instructor-in-training",
+        "activity_section.key": "dd009660-4dac-4151-ac3e-79284a07dce2"
       },
       "level_keys": [
-        "self-paced-example-level-free-response"
+        "UI Test self-paced-example-level-free-response"
       ]
     },
     {
@@ -200,21 +200,21 @@
       "properties": {
         "instructor_in_training": true,
         "level_keys": [
-          "self-paced-example-level-match"
+          "UI Test self-paced-example-level-match"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "self-paced-example-level-match"
+          "UI Test self-paced-example-level-match"
         ],
         "lesson.key": "Instructor In Training Levels",
         "lesson_group.key": "",
-        "script.name": "alltheselfpacedplthings",
-        "activity_section.key": "bafb409e-3612-4d8c-8401-18c91a36bfa0"
+        "script.name": "ui-test-instructor-in-training",
+        "activity_section.key": "dd009660-4dac-4151-ac3e-79284a07dce2"
       },
       "level_keys": [
-        "self-paced-example-level-match"
+        "UI Test self-paced-example-level-match"
       ]
     },
     {
@@ -225,21 +225,21 @@
       "properties": {
         "instructor_in_training": true,
         "level_keys": [
-          "self-paced-example-level-multi"
+          "UI Test self-paced-example-level-multi"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "self-paced-example-level-multi"
+          "UI Test self-paced-example-level-multi"
         ],
         "lesson.key": "Instructor In Training Levels",
         "lesson_group.key": "",
-        "script.name": "alltheselfpacedplthings",
-        "activity_section.key": "bafb409e-3612-4d8c-8401-18c91a36bfa0"
+        "script.name": "ui-test-instructor-in-training",
+        "activity_section.key": "dd009660-4dac-4151-ac3e-79284a07dce2"
       },
       "level_keys": [
-        "self-paced-example-level-multi"
+        "UI Test self-paced-example-level-multi"
       ]
     },
     {
@@ -250,21 +250,21 @@
       "properties": {
         "instructor_in_training": true,
         "level_keys": [
-          "self-paced-example-level-external"
+          "UI Test self-paced-example-level-external"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "self-paced-example-level-external"
+          "UI Test self-paced-example-level-external"
         ],
         "lesson.key": "Instructor In Training Levels",
         "lesson_group.key": "",
-        "script.name": "alltheselfpacedplthings",
-        "activity_section.key": "bafb409e-3612-4d8c-8401-18c91a36bfa0"
+        "script.name": "ui-test-instructor-in-training",
+        "activity_section.key": "dd009660-4dac-4151-ac3e-79284a07dce2"
       },
       "level_keys": [
-        "self-paced-example-level-external"
+        "UI Test self-paced-example-level-external"
       ]
     },
     {
@@ -275,21 +275,21 @@
       "properties": {
         "instructor_in_training": true,
         "level_keys": [
-          "self-paced-example-level-bubble-choice"
+          "UI Test self-paced-example-level-bubble-choice"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "self-paced-example-level-bubble-choice"
+          "UI Test self-paced-example-level-bubble-choice"
         ],
         "lesson.key": "Instructor In Training Levels",
         "lesson_group.key": "",
-        "script.name": "alltheselfpacedplthings",
-        "activity_section.key": "bafb409e-3612-4d8c-8401-18c91a36bfa0"
+        "script.name": "ui-test-instructor-in-training",
+        "activity_section.key": "dd009660-4dac-4151-ac3e-79284a07dce2"
       },
       "level_keys": [
-        "self-paced-example-level-bubble-choice"
+        "UI Test self-paced-example-level-bubble-choice"
       ]
     },
     {
@@ -300,119 +300,119 @@
       "properties": {
         "instructor_in_training": true,
         "level_keys": [
-          "self-paced-pl-example-levelgroup-1"
+          "UI Test self-paced-pl-example-levelgroup-1"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "self-paced-pl-example-levelgroup-1"
+          "UI Test self-paced-pl-example-levelgroup-1"
         ],
         "lesson.key": "Dani Test Lesson 2",
         "lesson_group.key": "",
-        "script.name": "alltheselfpacedplthings",
-        "activity_section.key": "bb3ab1cf-08a2-4560-b6c1-388e636bdb42"
+        "script.name": "ui-test-instructor-in-training",
+        "activity_section.key": "0bd80bd1-71d1-41e9-aaf3-d51e3dbb0fd1"
       },
       "level_keys": [
-        "self-paced-pl-example-levelgroup-1"
+        "UI Test self-paced-pl-example-levelgroup-1"
       ]
     }
   ],
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "self-paced-example-level-applab",
+        "level.key": "UI Test self-paced-example-level-applab",
         "script_level.level_keys": [
-          "self-paced-example-level-applab"
+          "UI Test self-paced-example-level-applab"
         ],
         "lesson.key": "Instructor In Training Levels",
         "lesson_group.key": "",
-        "script.name": "alltheselfpacedplthings",
-        "activity_section.key": "bafb409e-3612-4d8c-8401-18c91a36bfa0"
+        "script.name": "ui-test-instructor-in-training",
+        "activity_section.key": "dd009660-4dac-4151-ac3e-79284a07dce2"
       }
     },
     {
       "seeding_key": {
-        "level.key": "self-paced-example-level-dance",
+        "level.key": "UI Test self-paced-example-level-dance",
         "script_level.level_keys": [
-          "self-paced-example-level-dance"
+          "UI Test self-paced-example-level-dance"
         ],
         "lesson.key": "Instructor In Training Levels",
         "lesson_group.key": "",
-        "script.name": "alltheselfpacedplthings",
-        "activity_section.key": "bafb409e-3612-4d8c-8401-18c91a36bfa0"
+        "script.name": "ui-test-instructor-in-training",
+        "activity_section.key": "dd009660-4dac-4151-ac3e-79284a07dce2"
       }
     },
     {
       "seeding_key": {
-        "level.key": "self-paced-example-level-free-response",
+        "level.key": "UI Test self-paced-example-level-free-response",
         "script_level.level_keys": [
-          "self-paced-example-level-free-response"
+          "UI Test self-paced-example-level-free-response"
         ],
         "lesson.key": "Instructor In Training Levels",
         "lesson_group.key": "",
-        "script.name": "alltheselfpacedplthings",
-        "activity_section.key": "bafb409e-3612-4d8c-8401-18c91a36bfa0"
+        "script.name": "ui-test-instructor-in-training",
+        "activity_section.key": "dd009660-4dac-4151-ac3e-79284a07dce2"
       }
     },
     {
       "seeding_key": {
-        "level.key": "self-paced-example-level-match",
+        "level.key": "UI Test self-paced-example-level-match",
         "script_level.level_keys": [
-          "self-paced-example-level-match"
+          "UI Test self-paced-example-level-match"
         ],
         "lesson.key": "Instructor In Training Levels",
         "lesson_group.key": "",
-        "script.name": "alltheselfpacedplthings",
-        "activity_section.key": "bafb409e-3612-4d8c-8401-18c91a36bfa0"
+        "script.name": "ui-test-instructor-in-training",
+        "activity_section.key": "dd009660-4dac-4151-ac3e-79284a07dce2"
       }
     },
     {
       "seeding_key": {
-        "level.key": "self-paced-example-level-multi",
+        "level.key": "UI Test self-paced-example-level-multi",
         "script_level.level_keys": [
-          "self-paced-example-level-multi"
+          "UI Test self-paced-example-level-multi"
         ],
         "lesson.key": "Instructor In Training Levels",
         "lesson_group.key": "",
-        "script.name": "alltheselfpacedplthings",
-        "activity_section.key": "bafb409e-3612-4d8c-8401-18c91a36bfa0"
+        "script.name": "ui-test-instructor-in-training",
+        "activity_section.key": "dd009660-4dac-4151-ac3e-79284a07dce2"
       }
     },
     {
       "seeding_key": {
-        "level.key": "self-paced-example-level-external",
+        "level.key": "UI Test self-paced-example-level-external",
         "script_level.level_keys": [
-          "self-paced-example-level-external"
+          "UI Test self-paced-example-level-external"
         ],
         "lesson.key": "Instructor In Training Levels",
         "lesson_group.key": "",
-        "script.name": "alltheselfpacedplthings",
-        "activity_section.key": "bafb409e-3612-4d8c-8401-18c91a36bfa0"
+        "script.name": "ui-test-instructor-in-training",
+        "activity_section.key": "dd009660-4dac-4151-ac3e-79284a07dce2"
       }
     },
     {
       "seeding_key": {
-        "level.key": "self-paced-example-level-bubble-choice",
+        "level.key": "UI Test self-paced-example-level-bubble-choice",
         "script_level.level_keys": [
-          "self-paced-example-level-bubble-choice"
+          "UI Test self-paced-example-level-bubble-choice"
         ],
         "lesson.key": "Instructor In Training Levels",
         "lesson_group.key": "",
-        "script.name": "alltheselfpacedplthings",
-        "activity_section.key": "bafb409e-3612-4d8c-8401-18c91a36bfa0"
+        "script.name": "ui-test-instructor-in-training",
+        "activity_section.key": "dd009660-4dac-4151-ac3e-79284a07dce2"
       }
     },
     {
       "seeding_key": {
-        "level.key": "self-paced-pl-example-levelgroup-1",
+        "level.key": "UI Test self-paced-pl-example-levelgroup-1",
         "script_level.level_keys": [
-          "self-paced-pl-example-levelgroup-1"
+          "UI Test self-paced-pl-example-levelgroup-1"
         ],
         "lesson.key": "Dani Test Lesson 2",
         "lesson_group.key": "",
-        "script.name": "alltheselfpacedplthings",
-        "activity_section.key": "bb3ab1cf-08a2-4560-b6c1-388e636bdb42"
+        "script.name": "ui-test-instructor-in-training",
+        "activity_section.key": "0bd80bd1-71d1-41e9-aaf3-d51e3dbb0fd1"
       }
     }
   ],
@@ -444,6 +444,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

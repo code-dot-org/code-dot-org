@@ -7084,10 +7084,10 @@ en:
           description_short: ''
           description: ''
           student_description: ''
-        alltheselfpacedplthings:
+        ui-test-instructor-in-training:
           lesson_groups: {}
-          name: alltheselfpacedplthings
-          title: All the Self Paced PL Things
+          name: ui-test-instructor-in-training
+          title: UI Test Instructor in Training
           description_audience: ''
           description_short: ''
           description: ''

@@ -1,7 +1,7 @@
 {
-  "name": "alltheselfpacedplthings",
+  "name": "ui-test-instructor-in-training",
   "script_names": [
-    "alltheselfpacedplthings"
+    "ui-test-instructor-in-training"
   ],
   "original_script_names": [
 
@@ -11,7 +11,7 @@
   "participant_audience": "teacher",
   "instructor_audience": "universal_instructor",
   "properties": {
-    "family_name": "alltheselfpacedplthings",
+    "family_name": "ui-test-instructor-in-training",
     "version_year": "unversioned"
   },
   "resources": [
