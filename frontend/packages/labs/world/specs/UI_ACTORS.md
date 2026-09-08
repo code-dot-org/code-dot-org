@@ -158,17 +158,17 @@ a rule pulls its dependencies.
 
 ## The base set, and what each one still waits on
 
-| actor        | what it is                                        | state                                      |
-| ------------ | ------------------------------------------------- | ------------------------------------------ |
-| Label        | words in a space                                  | DONE; wants `new line` and a list of words |
-| Button       | a Label with an edge that answers a press         | DONE, and acts like a Label                |
-| Progress Bar | a bar whose length is a number                    | DONE                                       |
-| Health Bar   | a Progress Bar filled from somebody's health      | DONE (acts like)                           |
-| Speech Box   | a Label that lets its line out a letter at a time | DONE                                       |
-| Text Input   | one line you can type in                          | the actor; the typed event is built        |
-| Text Area    | several lines you can type in                     | the actor, plus a caret                    |
-| Dropdown     | a list of words, one of them chosen               | a list property and a menu to draw         |
-| Panel        | a background behind a group                       | grouping, which is layout                  |
+| actor        | what it is                                        | state                                          |
+| ------------ | ------------------------------------------------- | ---------------------------------------------- |
+| Label        | words in a space                                  | DONE; wants `new line` and a list of words     |
+| Button       | a Label with an edge that answers a press         | DONE, and acts like a Label                    |
+| Progress Bar | a bar whose length is a number                    | DONE                                           |
+| Health Bar   | a Progress Bar filled from somebody's health      | DONE (acts like)                               |
+| Speech Box   | a Label that lets its line out a letter at a time | DONE                                           |
+| Text Input   | one line you can type in                          | BUILT, and off the shelf until it has a lesson |
+| Text Area    | several lines you can type in                     | the actor, plus a caret                        |
+| Dropdown     | a list of words, one of them chosen               | a list property and a menu to draw             |
+| Panel        | a background behind a group                       | grouping, which is layout                      |
 
 Five of the nine are built, and the three that arrived after this document was
 first written are the ones that changed what the rest should be.
@@ -445,8 +445,34 @@ sequence — "aa" is two characters and "ab" is not "ba" — and a character has
 state to compare against, it simply happened. Carried forward it would be typed
 again on every frame after the one it was meant for.
 
-Everything above it is ordinary: a caret is a property and a rectangle, a
-selection is two numbers, and `when changed` is a `define event` on the actor.
+**The Text Input is built on it** (`actors/stock/textInput`), and two things
+about it were not obvious.
+
+**Focus is a CLEAR and then a SET, in one frame.** `presses mouse button`
+reaches every actor that takes mouse input, wherever the pointer is; `is
+clicked with` reaches only the ones under it, and the Mouse rule announces it
+AFTERWARDS in the same step (`rules/mouse`, `buttonEvents`). So every field
+lets go on any click and the one clicked on takes over, in that order, and two
+fields on a screen cannot both be taking the typing. It is an ordering the rule
+already guaranteed rather than one anything new had to arrange.
+
+**There is no caret, and there cannot be one yet.** A caret belongs after the
+last letter, and where that is depends on how wide the letters are — which only
+the painter knows: the engine has no canvas and deliberately never measures
+text (specs/DRAWING.md, and `draw paragraph` hands its column DOWN for exactly
+this reason). A bar at a guessed offset would sit inside the word at one text
+size and past its end at another. Focus is shown by the edge, which is a thing
+a drawing can say exactly. A real caret wants a measuring seam, which is its
+own piece of work.
+
+**And it is not on the shelf.** Every stock actor has to be granted by a
+progression tile (`progression/__tests__/layout`), a tile needs a lesson, and a
+lesson that teaches typing needs a check that can TYPE — which the trace format
+has no step for. That is three pieces of curriculum and one of machinery, so
+the actor waits rather than arriving somewhere a learner cannot be sent.
+
+The rest is ordinary: a selection is two numbers, and `when changed` is a
+`define event` on the actor.
 
 A Dropdown needs one more thing — a `words` property holding the options, and a
 menu drawn from it. Both halves are the actor's own; what it emits when one is
