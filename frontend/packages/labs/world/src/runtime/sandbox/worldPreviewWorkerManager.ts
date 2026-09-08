@@ -19,6 +19,7 @@ import type {CheckResult} from '../checks';
 import {drawingThumbnail, frameThumbnail} from '../driver/frameThumbnail';
 import {PhaserBinding} from '../driver/PhaserBinding';
 import {reconcile} from '../driver/reconcile';
+import {browserTextMetrics} from '../driver/textMetrics';
 import {
   ASSET_BASE_PARAM,
   FromPreviewMessage,
@@ -339,6 +340,15 @@ export async function start(): Promise<void> {
       const manifest = mod.default;
       if (manifest) {
         const world = manifest.world.instantiate();
+        // The same measuring tape the game gets, because these thumbnails are
+        // painted by the same painter with the same font: a kind whose size or
+        // whose picture asks how wide its words are (`World.textWidth`) must
+        // answer the picker what it will answer the game, or the palette shows
+        // a box the map will not draw.
+        const metrics = browserTextMetrics();
+        if (metrics) {
+          world.useTextMetrics(metrics);
+        }
         const animationIds = world.animationIds();
         // Uploaded sprites: the same asset map the thumbnails render from — its
         // keys are the sprite names a placement may reference.

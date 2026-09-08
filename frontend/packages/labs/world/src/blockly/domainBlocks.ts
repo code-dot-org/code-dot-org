@@ -7444,9 +7444,14 @@ const worldDefineDrawing = defineBlock({
       // nothing is a function returning a literal, which is what an actor with
       // a fixed size compiles to and costs nothing to call
       // (`ActorBuilder.defineDrawing`).
+      //
+      // `world` IS BOUND HERE TOO, so a size may ask one: `⟨width of ⟨what it
+      // says⟩ at size ⟨12⟩⟩` is a box that fits its own words, and how wide
+      // words are is the world's to answer (`World.textWidth`). Unused by a
+      // size that is a literal, which is nearly all of them.
       const measure = (name: string): string => {
         const code = generator.valueToCode(block, name, Order.NONE);
-        return `actor => ${code || '1'}`;
+        return `(actor, world) => ${code || '1'}`;
       };
       const width = measure('WIDTH');
       const height = measure('HEIGHT');
@@ -7987,6 +7992,61 @@ const worldNewLine = defineBlock({
     },
   },
 });
+
+/**
+ * `width of ⟨text⟩ at size ⟨12⟩` — how wide those words are drawn, in pixels.
+ *
+ * THE ONE QUESTION THE ENGINE CANNOT ANSWER ALONE, and the reason it is asked
+ * at all is the caret. A caret sits after the last letter typed; where that is
+ * depends on the letters, and only the half holding the font knows. The engine
+ * has neither font nor canvas on purpose (specs/DRAWING.md) — `draw paragraph`
+ * hands its column DOWN and lets the painter decide where the lines break,
+ * precisely so this question never had to be asked.
+ *
+ * A CLICK IS WHAT FORCED IT. Placing a caret by clicking into a word is a
+ * mouse handler, not a paint, and it needs its answer in the frame it is asked
+ * in — so publishing a measurement from the last drawing, which is how
+ * `intrinsic size` already flows, arrives a frame too late. The World is lent
+ * a measuring tape instead (`World.useTextMetrics`), built from the same font
+ * string the painter sets, and this is the block that borrows it.
+ *
+ * USABLE ANYWHERE `world` IS, which is a drawing, a handler, a step, and a
+ * drawing's own size sockets — the last being a box that fits what it says.
+ *
+ * ZERO WHEN NOTHING CAN MEASURE. A world with no canvas behind it — the
+ * headless check runner is one — answers zero rather than estimating from a
+ * character count, which would be off by a little at one text size and by a
+ * word at another.
+ */
+const worldTextWidth = defineBlock({
+  type: 'world_text_width',
+  message0: 'width of %1 at size %2',
+  args0: [{type: 'input_value', name: 'TEXT'}, numberArg('SIZE')],
+  inputsInline: true,
+  output: 'Number',
+  style: 'text_blocks',
+  tooltip:
+    'How wide these words are when they are drawn at this size, in pixels. ' +
+    'Use it to put something after the text — a caret, or the next word.',
+  // It asks the WORLD, so it warns where there is no world to ask — which
+  // includes an actor's setup body, where a size that measured its own words
+  // would be tempting and would throw (`extensions/worldContext`).
+  extensions: [valueShadowExtension, worldContextExtension],
+  generator: {
+    javascript(block, generator) {
+      const words = generator.valueToCode(block, 'TEXT', Order.NONE) || "''";
+      const size = generator.valueToCode(block, 'SIZE', Order.NONE) || '12';
+      return [`world.textWidth(${words}, ${size})`, Order.FUNCTION_CALL] as [
+        string,
+        number,
+      ];
+    },
+  },
+});
+registerValueShadows('world_text_width', [
+  {name: 'TEXT', shadow: {type: 'text', fields: {TEXT: 'hello'}}},
+  {name: 'SIZE', shadow: {type: 'math_number', fields: {NUM: 12}}},
+]);
 
 // `key <key>` — a key's name as a value, so a comparison against `event value`
 // reads as a key rather than as the string ' ' (which is what space is).
@@ -8680,6 +8740,7 @@ export const DOMAIN_BLOCKS = [
   worldText,
   worldAsText,
   worldNewLine,
+  worldTextWidth,
   worldDefineTween,
   worldPlayTween,
   worldPlayTweenHere,
@@ -9315,6 +9376,10 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
       // exactly as another `text` block does.
       'world_as_text',
       'world_new_line',
+      // …and how wide a line of them comes out, which is the one fact about
+      // text that is not arithmetic: it is a fact about the FONT, and only the
+      // half that paints has one. A caret is why it is asked (`world.textWidth`).
+      'world_text_width',
       // …and how long a word is, the one question about a string a world made
       // of actors has a use for: a name that has to fit the box it is drawn in.
       'text_length',

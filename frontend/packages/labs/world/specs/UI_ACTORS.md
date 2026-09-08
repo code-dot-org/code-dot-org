@@ -456,14 +456,32 @@ lets go on any click and the one clicked on takes over, in that order, and two
 fields on a screen cannot both be taking the typing. It is an ordering the rule
 already guaranteed rather than one anything new had to arrange.
 
-**There is no caret, and there cannot be one yet.** A caret belongs after the
-last letter, and where that is depends on how wide the letters are — which only
-the painter knows: the engine has no canvas and deliberately never measures
-text (specs/DRAWING.md, and `draw paragraph` hands its column DOWN for exactly
-this reason). A bar at a guessed offset would sit inside the word at one text
-size and past its end at another. Focus is shown by the edge, which is a thing
-a drawing can say exactly. A real caret wants a measuring seam, which is its
-own piece of work.
+**There is a caret, and what it cost was a measuring seam.** A caret belongs
+after the last letter, and where that is depends on how wide the letters are —
+which only the painter knew: the engine had no canvas and did not measure text
+at all (`draw paragraph` hands its column DOWN for exactly this reason). A bar
+at a guessed offset would sit inside the word at one text size and past its end
+at another, so for a while focus was shown by the edge alone.
+
+The tape is lent the other way now. A driver that has a canvas builds one from
+the same font string the painter sets and hands it to the World at set-up;
+`width of ⟨text⟩ at size ⟨n⟩` is the block that borrows it, and it works
+wherever `world` is bound — a handler, a step, a drawing, and a drawing's size
+sockets (specs/DRAWING.md, "Text measurement"). A world lent nothing measures
+zero, which parks the caret at the left margin: visibly nothing rather than
+invisibly wrong.
+
+The field draws the bar after the words for half of every second, on the
+world's own clock so every field on a screen blinks together. A `scroll`
+property, kept by one `each frame` out of the same measurement, slides the
+words left once what is typed no longer fits — without it a field is a box that
+fills up and then types into thin air.
+
+**The insertion point is the end**, always: typing appends and backspace takes
+from the end, so there is one place the caret can be. Clicking INTO a word to
+put it elsewhere is what the seam was really built for and is the next piece of
+work: it needs pixel-to-letter, which is a question about where the painter put
+each letter and is not answerable from a width alone.
 
 **And it is not on the shelf.** Every stock actor has to be granted by a
 progression tile (`progression/__tests__/layout`), a tile needs a lesson, and a

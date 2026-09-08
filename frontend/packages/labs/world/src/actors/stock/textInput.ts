@@ -19,14 +19,32 @@
 // on focuses again, in that order, and two fields on a screen cannot both be
 // taking the typing.
 //
-// THERE IS NO CARET, and the reason is worth writing down rather than
-// discovering twice. A caret belongs after the last letter, and where that is
-// depends on how wide the letters are — which only the painter knows: the
-// engine has no canvas and deliberately never measures text (specs/DRAWING.md,
-// and `draw paragraph` hands its column DOWN for the same reason). A bar at a
-// guessed offset would sit in the middle of the word at one text size and off
-// the end at another. So focus is shown by the edge instead, which is a thing
-// the drawing can say exactly.
+// THERE IS A CARET, and what it cost is worth writing down. A caret belongs
+// after the last letter, and where that is depends on how wide the letters are
+// — which only the painter knew: the engine has no canvas and did not measure
+// text at all (specs/DRAWING.md, and `draw paragraph` hands its column DOWN
+// for the same reason). A bar at a guessed offset would have sat in the middle
+// of the word at one text size and off the end at another, so for a while
+// focus was shown by the edge alone.
+//
+// The tape is lent the other way now: a driver that has a canvas hands the
+// World one, built from the same font string the painter sets, and `width of
+// ⟨text⟩ at size ⟨n⟩` is what borrows it (`World.textWidth`,
+// `runtime/driver/textMetrics`). A world with no canvas behind it measures
+// zero, and a zero puts the caret at the left margin — visibly nothing rather
+// than invisibly wrong.
+//
+// THE INSERTION POINT IS THE END, always: typing appends and backspace takes
+// from the end, so there is one place the caret can be. Clicking INTO a word
+// to put it somewhere else is the next thing this wants, and it is what the
+// measuring seam was really built for — pixel-to-letter is a mouse handler's
+// question, asked in the frame it is asked in, which no drawing could ever
+// have answered.
+//
+// AND THE WORDS SLIDE so the caret stays in the box. `scroll` is how far left
+// they are pushed, worked out once a frame from the same measurement: zero
+// while what is typed fits, and exactly the overflow after that. Without it a
+// field is a box that fills up and then types into thin air.
 
 import {labelHalf, labelSizeOf} from './label';
 import {
@@ -90,6 +108,127 @@ const onlyIf = (test: object, body: object[]) => ({
 /** `⟨text⟩ of this actor`, which is what a field holds. */
 const held = () => textOf('TextProperty');
 
+/** How far the words are inset from the left edge, and the caret's bar. */
+const PAD = 8;
+const CARET_WIDTH = 2;
+/** How far the bar stops short of the panel, top and bottom. */
+const CARET_INSET = 5;
+/** A full blink, in seconds: half of it lit. */
+const BLINK = 1;
+
+/** `⟨a⟩ ⟨op⟩ ⟨b⟩`, for the four sums this file does. */
+const sum = (op: 'ADD' | 'MINUS', a: object, b: object) => ({
+  block: {type: 'math_arithmetic', fields: {OP: op}, inputs: {A: a, B: b}},
+});
+
+/** `⟨width⟩ − 16` — the room the words actually have between the insets. */
+const column = () => sum('MINUS', width(), num(2 * PAD));
+
+/**
+ * `width of ⟨what it holds⟩ at size ⟨its text size⟩`, in pixels.
+ *
+ * The one question this actor cannot answer out of its own properties, and the
+ * reason the World is lent a measuring tape at all (`World.textWidth`).
+ */
+const shown = () => ({
+  block: {
+    type: 'world_text_width',
+    inputs: {TEXT: held(), SIZE: textOf('TextSizeProperty')},
+  },
+});
+
+/** `⟨scroll⟩ of this actor` — how far left the words are pushed. */
+const scrolled = () => ({
+  block: {
+    type: 'world_get_ActorsTextInput_ScrollProperty',
+    inputs: {ACTOR: me()},
+  },
+});
+
+/** Where the words start, which is the inset less however far they slid. */
+const textLeft = () => sum('MINUS', num(PAD), scrolled());
+
+/** …and where the caret goes: straight after them. */
+const caretLeft = () => sum('ADD', textLeft(), shown());
+
+/**
+ * `⟨focused⟩ and ⟨the first half of each second⟩` — when the bar is drawn.
+ *
+ * A caret that does not blink reads as a picture of a caret. The clock is the
+ * world's, so every field on a screen blinks together, which is what a reader
+ * expects and what a per-actor timer would not give.
+ */
+const blinking = () => ({
+  block: {
+    type: 'logic_operation',
+    fields: {OP: 'AND'},
+    inputs: {
+      A: focused(),
+      B: {
+        block: {
+          type: 'logic_compare',
+          fields: {OP: 'LT'},
+          inputs: {
+            A: {
+              block: {
+                type: 'math_modulo',
+                inputs: {
+                  DIVIDEND: {block: {type: 'world_time'}},
+                  DIVISOR: num(BLINK),
+                },
+              },
+            },
+            B: num(BLINK / 2),
+          },
+        },
+      },
+    },
+  },
+});
+
+/**
+ * `each frame`: slide the words so the caret is inside the box.
+ *
+ * Zero while what is typed fits, and exactly the overflow once it does not —
+ * so a field fills up and then scrolls, rather than typing into thin air past
+ * its own edge.
+ *
+ * A STEP AND A PROPERTY rather than the same sum written twice in the drawing.
+ * The drawing needs it in two places (where the words start, and where the
+ * caret goes), the sum is four blocks, and a value the actor CARRIES is one an
+ * inspector can show and a project can read.
+ */
+const slidesToShowTheCaret = () => ({
+  type: 'world_trait_step',
+  fields: {PHASE: 'react', NAME: 'keep the caret in the box'},
+  inputs: {
+    DO: {
+      block: {
+        type: 'world_set_ActorsTextInput_ScrollProperty',
+        inputs: {
+          ACTOR: me(),
+          VALUE: {
+            block: {
+              type: 'logic_ternary',
+              inputs: {
+                IF: {
+                  block: {
+                    type: 'logic_compare',
+                    fields: {OP: 'GT'},
+                    inputs: {A: shown(), B: column()},
+                  },
+                },
+                THEN: sum('MINUS', shown(), column()),
+                ELSE: {block: {type: 'math_number', fields: {NUM: 0}}},
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+});
+
 export const textInputActor = actorFile(
   'Text Input',
   [
@@ -102,6 +241,9 @@ export const textInputActor = actorFile(
     useTrait('Mouse#CanBeClickedTrait'),
     showAs('input'),
     defineProperty('boolean', 'focused', 'false'),
+    // How far left the words are pushed so the caret stays in the box. Kept by
+    // the step below, read twice by the drawing.
+    defineProperty('number', 'scroll', '0'),
     defineEvent('changed'),
     {
       type: 'world_set_ActorsLabel_HeightProperty',
@@ -117,6 +259,7 @@ export const textInputActor = actorFile(
     // EMPTY, where a Label ships saying "Label": a field with words in it that
     // nobody typed is a field whose first keystroke has to delete them.
     setText('TextProperty', words('')),
+    slidesToShowTheCaret(),
   ],
   {
     handlers: [
@@ -208,8 +351,24 @@ export const textInputActor = actorFile(
         rectangle(0, 0, width(), height()),
         noOutline(),
         fill(textOf('TextColorProperty')),
-        // Inset from the left edge, since the words are anchored there.
-        drawParagraph(num(8), labelHalf(height()), width()),
+        // Inset from the left edge, since the words are anchored there — less
+        // however far they have slid to keep the caret in view.
+        //
+        // IN A COLUMN OF ZERO, which is `draw paragraph`'s way of saying "do
+        // not wrap": a field is one line however much is typed into it, and a
+        // second line in a 28-pixel box is half of a word hanging out of the
+        // bottom. What runs past the right edge is clipped by the actor's own
+        // canvas, which is what a field looks like everywhere.
+        drawParagraph(textLeft(), labelHalf(height()), 0),
+        // …and the caret, straight after the words, for half of every second.
+        onlyIf(blinking(), [
+          rectangle(
+            caretLeft(),
+            num(CARET_INSET),
+            num(CARET_WIDTH),
+            sum('MINUS', height(), num(2 * CARET_INSET)),
+          ),
+        ]),
       ],
     },
   },

@@ -53,6 +53,7 @@ import {DrawingTextures} from './drawingTextures';
 import {EffectRegistry, type EffectErrorReporter} from './effects';
 import {installSkewHook, type RenderStepInternals} from './skew';
 import {SoundChannel} from './sound';
+import {browserTextMetrics} from './textMetrics';
 
 const ACTOR_SIZE = 24;
 // The game's native resolution AT STARTUP — the size the canvas is made at,
@@ -228,6 +229,15 @@ export class PhaserBinding {
     // has no caller left to catch it.
     onRuntimeError: RuntimeErrorReporter = () => {},
   ) {
+    // LEND THE WORLD THE MEASURING TAPE, once, before anything runs. The
+    // engine has no font and no canvas; a caret has to sit after the last
+    // letter, and only this half knows where that is (`textMetrics`). A
+    // browser with no 2D context hands back nothing and the world measures
+    // zero, which is a caret at the left margin rather than a throw.
+    const metrics = browserTextMetrics();
+    if (metrics) {
+      world.useTextMetrics(metrics);
+    }
     const objects = new Map<Actor, GameObject>();
     // The backdrop layers' images, by layer index — created on demand, because
     // a world may be told about its background mid-game.

@@ -34,6 +34,7 @@ import {ruleContentHash} from './ruleIds';
 import {Scheduler} from './Scheduler';
 import {SpatialIndex} from './spatialIndex';
 import {APPEARANCE, SPATIAL} from './spatialKeys';
+import {text} from './textValue';
 import type {Trait} from './Trait';
 import {DependencySet} from './traits';
 import type {
@@ -613,6 +614,25 @@ export class World {
    * Drained by `tick`, so a frame sees exactly what was typed into it.
    */
   private typed: string[] = [];
+  /**
+   * How wide a line of text is, or nothing when nobody has said.
+   *
+   * THE ONE MEASUREMENT THE ENGINE CANNOT MAKE. Everything else about a
+   * picture is arithmetic on numbers the project stated; a letter's width is a
+   * fact about a font, and this half has no font and no canvas by design
+   * (specs/DRAWING.md). `draw paragraph` avoids the question by handing its
+   * column down and letting the painter break the lines.
+   *
+   * A CARET IS THE CASE THAT COULD NOT BE AVOIDED. It belongs after the last
+   * letter, and it MOVES on a click — which is a handler, not a paint, so an
+   * answer published by the last frame's drawing arrives too late to place it.
+   * So the tape is lent the other way: a driver that has a canvas hands one
+   * over (`runtime/driver/textMetrics`), built from the same font string the
+   * painter sets, and `textWidth` is what blocks ask through.
+   *
+   * Undefined is the headless case and answers zero rather than guessing.
+   */
+  private measure: ((words: string, size: number) => number) | undefined;
   /** Actor templates by the module path a map names them with (`define`). */
   private readonly types = new Map<string, ActorTemplate>();
   // The previous tick's pressed set, so a rule step can detect rising/falling
@@ -929,7 +949,7 @@ export class World {
         // of one kind may be two widths (`ActorDrawing.size`). It is asked
         // again wherever the drawing runs, so a size that CHANGES is followed
         // rather than frozen here — see `renderSnapshot`.
-        const {width, height} = drawing.size(actor);
+        const {width, height} = drawing.size(actor, this);
         actor.set(property, new Vector(width, height));
       }
     }
@@ -1631,6 +1651,41 @@ export class World {
   /** What was typed since the last tick, in order. */
   typedCharacters(): readonly string[] {
     return this.typed;
+  }
+
+  /**
+   * Lend the world a way to measure text (the driver calls this once).
+   *
+   * Once, at set-up, and not per frame: a measurer is a canvas and a font, and
+   * neither changes while a game runs.
+   */
+  useTextMetrics(measure: (words: string, size: number) => number): void {
+    this.measure = measure;
+  }
+
+  /**
+   * How wide `value` would be drawn at `size` pixels, in pixels.
+   *
+   * ZERO WHEN NOTHING CAN MEASURE, which is the honest answer and not a
+   * failure: a world with no canvas behind it — the headless check runner is
+   * one — puts a caret at the left margin, and that is visibly nothing rather
+   * than invisibly wrong.
+   *
+   * The value is said as words the way everything else is (`core/textValue`),
+   * so a list measures as the sentence it draws as rather than as its
+   * brackets. A size that is not a positive number measures nothing: there is
+   * no text at zero pixels, and a negative one is a typo.
+   */
+  textWidth(value: unknown, size: number): number {
+    if (!this.measure) {
+      return 0;
+    }
+    const words = text(value);
+    const at = Number(size);
+    if (!words || !Number.isFinite(at) || at <= 0) {
+      return 0;
+    }
+    return this.measure(words, at) || 0;
   }
 
   /** Whether `key` (a name from `core/keys`) is currently pressed. */
@@ -2396,7 +2451,7 @@ export class World {
       // ASKED HERE TOO, and this is where a size that changes is honoured: an
       // actor made wider draws wider on the next frame, because the canvas is
       // read with the commands rather than remembered from when it was placed.
-      const {width, height} = drawing.size(actor);
+      const {width, height} = drawing.size(actor, this);
       // …AND `intrinsic size` FOLLOWS IT. The two must not drift: a Button
       // drawn wider whose click box stayed narrow is a button that misses, and
       // everything that asks how big an actor is reads the property rather

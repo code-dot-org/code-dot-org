@@ -10,7 +10,7 @@ import {describe, expect, it, vi} from 'vitest';
 import type {DrawCommand, DrawingState} from 'world-lab';
 
 import {DrawingTextures} from '../drawingTextures';
-import {paintDrawing} from '../paintDrawing';
+import {fontAt, paintDrawing} from '../paintDrawing';
 
 /** A 2D context that records what was asked of it rather than drawing it. */
 function recordingContext() {
@@ -311,5 +311,39 @@ describe('a paragraph', () => {
       );
 
     expect(ys[1]).toBeGreaterThan(ys[0]);
+  });
+});
+
+// ONE FONT STRING, shared with whatever measures.
+//
+// The engine can now ask how wide a line is, because a caret has to sit after
+// the last letter and nothing else knew where that was (`World.textWidth`).
+// What it is handed is a canvas of its own set to `fontAt` — so if the painter
+// ever set a different font, every caret in the lab would land beside its word
+// and no test of either half alone would notice.
+describe('the font text is set in', () => {
+  it('is the one `fontAt` names, at the size the command asked for', () => {
+    const calls = paint([
+      {
+        op: 'text',
+        text: 'hi',
+        x: 0,
+        y: 0,
+        size: 18,
+        anchor: 'top left',
+        fill: '#fff',
+        strokeWidth: 1,
+      },
+    ]);
+
+    expect(calls.some(call => call.includes(`:${fontAt(18)}:`))).toBe(true);
+  });
+
+  it('names a real family, not a bare size', () => {
+    // A font string with no family is a browser default, which is a different
+    // typeface per platform and a picture that measures differently on each.
+    expect(fontAt(12)).toBe(
+      '12px "Trebuchet MS", "Segoe UI", system-ui, sans-serif',
+    );
   });
 });

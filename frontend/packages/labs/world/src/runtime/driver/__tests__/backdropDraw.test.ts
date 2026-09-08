@@ -233,6 +233,10 @@ const world = (
   map: {x: number; y: number} = {x: VIEWPORT_WIDTH, y: VIEWPORT_HEIGHT},
 ) =>
   ({
+    // A real World is lent one of these at set-up so a caret can be placed
+    // after the last letter (`World.useTextMetrics`); a stub takes it and
+    // ignores it, as it does the keyboard.
+    useTextMetrics: () => {},
     setInput: () => {},
     setPointer: () => {},
     tick: () => {},

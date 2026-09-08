@@ -282,8 +282,8 @@ export class ActorBuilder {
    * arbitrary one, which is at least the one the author saw last.
    */
   defineDrawing(
-    width: number | ((actor: Actor) => number),
-    height: number | ((actor: Actor) => number),
+    width: number | ((actor: Actor, world: World) => number),
+    height: number | ((actor: Actor, world: World) => number),
     run: (actor: Actor, pen: Pen, world: World) => void,
   ): this {
     // EITHER A NUMBER OR A QUESTION ABOUT THE ACTOR, which is the whole of
@@ -291,16 +291,24 @@ export class ActorBuilder {
     // wide as it was made, and two of one kind are two widths. A literal is
     // the same function answering the same way, so nothing that had a size
     // pays for the ones that ask.
+    //
+    // THE WORLD IS PASSED IN TOO, because a size may have to ask one: a box
+    // that fits its own words needs to know how wide words are, and that is
+    // the world's answer rather than the actor's (`World.textWidth`).
     const measure = (
-      given: number | ((actor: Actor) => number),
-    ): ((actor: unknown) => number) =>
+      given: number | ((actor: Actor, world: World) => number),
+    ): ((actor: unknown, world: unknown) => number) =>
       typeof given === 'function'
-        ? (actor: unknown) => Number(given(actor as Actor)) || 0
+        ? (actor: unknown, world: unknown) =>
+            Number(given(actor as Actor, world as World)) || 0
         : () => given;
     const across = measure(width);
     const down = measure(height);
     this.drawing = {
-      size: actor => ({width: across(actor), height: down(actor)}),
+      size: (actor, world) => ({
+        width: across(actor, world),
+        height: down(actor, world),
+      }),
       run: (actor, pen, world) => run(actor as Actor, pen, world as World),
     };
     return this;

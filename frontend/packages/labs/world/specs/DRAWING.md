@@ -214,23 +214,40 @@ is a thousand pushes and a few KB hashed per actor per frame. That is the
 budget, it is a real number, and a routine large enough to matter is a routine
 that wants to be an image file.
 
-## Text measurement, which is not in this
+## Text measurement, which is now in this
 
 `draw text … anchored ⟨center⟩` covers what anchoring covers: text that grows
 from its middle, or its right edge, without anybody working out how wide it is.
 That is most of what measurement is wanted for and it is resolved where the text
-is drawn, so the routine never asks.
+is drawn, so the routine never asks. `draw paragraph` is the same bargain: it
+says how wide the column may be and the painter decides where the lines fall.
 
-What it does not cover is sizing a box to the word inside it. That genuinely
-needs a number, and the number lives in the rasterizer — which is in the driver,
-behind a postMessage boundary the engine does not cross synchronously. The
-answer, when it is wanted, is a metrics oracle the driver pushes into the engine
-at boot, and it is the one place this design gives the renderer-agnostic engine
-a renderer-shaped dependency. That is a decision worth making deliberately and
-on its own.
+What neither covers is a caret. A caret belongs after the last letter, so its
+place depends on the letters — and, unlike a wrap, it MOVES in response to
+input: clicking into a word to put the caret there is a mouse handler's
+question, asked and answered in one frame. Publishing a measurement from the
+last drawing, which is how `intrinsic size` already flows, arrives a frame too
+late for that. Sizing a box to the word inside it wants the same number.
+
+So the tape is lent the other way, and this is the one place the design gives
+the renderer-agnostic engine a renderer-shaped dependency:
+
+- The driver builds a measurer from the same `fontAt` the painter sets
+  (`runtime/driver/textMetrics`) and hands it over once at set-up
+  (`World.useTextMetrics`). One font string, so the measurement and the drawing
+  cannot be of different text.
+- Blocks ask through `World.textWidth`, reached as `width of ⟨text⟩ at size
+⟨n⟩`. It works anywhere `world` is bound — a handler, a step, a drawing's
+  body, and a drawing's SIZE sockets, which now compile to `(actor, world) =>`
+  for exactly this.
+- A world that was lent nothing measures ZERO. That is the headless case
+  (`runtime/playCheck` runs one, and so does any test that does not ask for a
+  tape), and zero is a caret parked at the left margin: visibly nothing.
 
 An estimate is worse than nothing. A button sized to a wrong measurement is
-visibly wrong in a way a missing feature never is.
+visibly wrong in a way a missing feature never is — which is why the absent
+case answers zero rather than guessing from a character count, an estimate that
+would be off by a little at one text size and by a word at another.
 
 ## What comes free
 
@@ -298,8 +315,11 @@ along with `set fill`. Registering them at the top of `buildDomainPalette`, wher
 
 ## What this does not solve
 
-Text measurement, above. Layout — nothing here arranges anything relative to
+Layout — nothing here arranges anything relative to
 anything, and a routine that wants to is doing arithmetic on numbers it declared
-itself. And a drawing that genuinely wants the clock, which is the case this
+itself. Text measurement is now solved, above, but only for a WIDTH: how tall a
+wrapped block comes out, and which letter a pixel falls on, are both still the
+painter's alone, and both are wanted the day a caret can be placed by clicking
+into a word. And a drawing that genuinely wants the clock, which is the case this
 deliberately refuses; if one turns up that is not better served by an animation,
 it is evidence to reopen the cache decision rather than to add a block.

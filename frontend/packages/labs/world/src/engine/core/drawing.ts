@@ -147,8 +147,16 @@ export interface ActorDrawing {
    * declares its own `width` and `height` and hands them here; a drawing whose
    * size is two literals is the same function returning the same pair, and
    * costs nothing to call.
+   *
+   * AND THE WORLD, for the same reason `run` is given one: a size may ask a
+   * question the actor alone cannot answer. `⟨width of ⟨what it says⟩ at size
+   * ⟨12⟩⟩` is a box that fits its own words, and how wide words are is the
+   * world's to say (`World.textWidth`).
    */
-  readonly size: (actor: unknown) => {width: number; height: number};
+  readonly size: (
+    actor: unknown,
+    world: unknown,
+  ) => {width: number; height: number};
   /**
    * The routine, given the actor it is drawing, a pen, and the WORLD.
    *

@@ -24,6 +24,19 @@ import type {DrawCommand, TextAnchor} from 'world-lab';
  */
 const FONT_STACK = '"Trebuchet MS", "Segoe UI", system-ui, sans-serif';
 
+/**
+ * The `font` a canvas is set to for text at `size`.
+ *
+ * EXPORTED so that whatever MEASURES text and whatever draws it cannot
+ * disagree about what they are talking about. The engine can now ask how wide
+ * a line is (`World.textWidth`) — a caret has to sit after the last letter,
+ * and only the half holding the font knows where that is — and the measurer it
+ * is handed sets this same string on a canvas of its own
+ * (`runtime/driver/textMetrics`). Two font strings would be two fonts, in the
+ * one place nobody would look.
+ */
+export const fontAt = (size: number): string => `${size}px ${FONT_STACK}`;
+
 /** How far apart the lines of a wrapped block sit, as a multiple of the size. */
 const LINE_SPACING = 1.25;
 
@@ -156,7 +169,7 @@ function draw(
       return;
     case 'text': {
       const {align, baseline} = ALIGNMENT[command.anchor] ?? ALIGNMENT.center;
-      context.font = `${command.size}px ${FONT_STACK}`;
+      context.font = fontAt(command.size);
       context.textAlign = align;
       context.textBaseline = baseline;
       // WHERE THE LINES BREAK IS DECIDED HERE, because this is the half

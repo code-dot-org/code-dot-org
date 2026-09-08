@@ -77,8 +77,12 @@ describe('define drawing', () => {
     });
 
     expect(code).toBe(
-      'actor.defineDrawing(actor => 64, ' +
-        'actor => actor.get(HeightProperty), ' +
+      // A CLOSURE TAKING BOTH, because a size may ask the world as readily as
+      // the actor: `⟨width of ⟨what it says⟩ at size ⟨12⟩⟩` is a box that fits
+      // its own words, and how wide words are is the world's to answer
+      // (`World.textWidth`). A literal ignores both and costs nothing.
+      'actor.defineDrawing((actor, world) => 64, ' +
+        '(actor, world) => actor.get(HeightProperty), ' +
         '(actor, pen, world) => {\npen.rectangle(0, 0, 8, 8);\n});\n',
     );
   });

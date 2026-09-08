@@ -66,6 +66,9 @@ const RUNTIME_ONLY: Record<string, string> = {
   isButtonDown: 'the same, for the mouse',
   mousePosition: 'the pointer is somewhere on a screen there is not one of yet',
   query: 'a query reads a running world',
+  textWidth:
+    'a world still being described has no canvas behind it — the driver lends ' +
+    'the measuring tape once it is built (`World.useTextMetrics`)',
 };
 
 /**
