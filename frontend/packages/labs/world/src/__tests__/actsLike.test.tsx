@@ -14,6 +14,7 @@ import {describe, expect, it} from 'vitest';
 
 import {buildDomainPalette} from '../blockly/domainBlocks';
 import {projectOwnMetas} from '../blockly/projectModules';
+import {PositionProperty} from '../engine';
 import {IntrinsicSizeProperty} from '../engine/rules/spatial';
 
 import {compileProject} from './support/compileProject';
@@ -266,6 +267,108 @@ describe('an actor that acts like another', () => {
     // …and it is still its own kind: a world-defined actor's type is the id
     // its definition was stamped with, not the file it acts like.
     expect(gauge.type).not.toBe('actors/bar');
+  });
+
+  /**
+   * A world whose Gauge acts like its own Bar — with the definitions in the
+   * order the caller asks for.
+   *
+   * The ORDER IS THE POINT. Each local actor is a `const`, and a child READS
+   * its parent's as it is described, so a child written above its parent on
+   * the canvas would reach a name in its temporal dead zone. Where a block
+   * sits on a canvas is not something a learner should have to think about.
+   */
+  const coLocated = (childFirst: boolean) => {
+    const bar = {
+      type: 'world_actor',
+      id: 'barDef',
+      fields: {NAME: 'Bar'},
+      next: {
+        block: {
+          // Per-frame work, which is the half a picture cannot show: a step is
+          // folded into the tick order by KIND, so a child running it is the
+          // child having its own copy rather than watching the parent's.
+          type: 'world_trait_step',
+          fields: {PHASE: 'act', NAME: 'sit still'},
+          inputs: {
+            DO: {
+              block: {
+                type: 'world_set_position',
+                inputs: {
+                  ACTOR: me(),
+                  X: {block: {type: 'math_number', fields: {NUM: 111}}},
+                  Y: {block: {type: 'math_number', fields: {NUM: 22}}},
+                },
+              },
+            },
+          },
+          next: {
+            block: {
+              type: 'world_define_drawing',
+              fields: {WIDTH: 40, HEIGHT: 6},
+              inputs: {
+                DO: {
+                  block: {
+                    type: 'world_draw_rectangle',
+                    inputs: {
+                      X: {block: {type: 'math_number', fields: {NUM: 0}}},
+                      Y: {block: {type: 'math_number', fields: {NUM: 0}}},
+                      WIDTH: {block: {type: 'math_number', fields: {NUM: 40}}},
+                      HEIGHT: {block: {type: 'math_number', fields: {NUM: 6}}},
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    };
+    const gauge = {
+      type: 'world_actor',
+      id: 'gaugeDef',
+      fields: {NAME: 'Gauge'},
+      next: {
+        block: {type: 'world_acts_like', fields: {ACTOR: 'local:barDef'}},
+      },
+    };
+    const world = {
+      type: 'world_world',
+      fields: {NAME: 'My World'},
+      next: {
+        block: {
+          type: 'world_add_actor',
+          fields: {ACTOR: 'local:gaugeDef'},
+        },
+      },
+    };
+    return {
+      'worlds/main.world': JSON.stringify({
+        blocks: {
+          blocks: childFirst ? [gauge, bar, world] : [bar, gauge, world],
+        },
+      }),
+    };
+  };
+
+  it('works between two actors one world defines, in either order', async () => {
+    for (const childFirst of [false, true]) {
+      const {world} = await compileProject(coLocated(childFirst));
+      const gauge = [...world.actors][0];
+      const where = `child first: ${childFirst}`;
+
+      // The picture first, because it is what the `const` binding buys: a
+      // child emitted above its parent would have thrown as the module loaded,
+      // so reaching this line at all is half the claim.
+      expect(gauge.get(IntrinsicSizeProperty), where).toEqual(
+        expect.objectContaining({x: 40, y: 6}),
+      );
+      // …and the parent's per-frame work, running on the child.
+      world.tick(1 / 60);
+      expect(gauge.get(PositionProperty), where).toEqual(
+        expect.objectContaining({x: 111, y: 22}),
+      );
+    }
   });
 
   it('puts the parent’s blocks in the child’s drawer as well', async () => {

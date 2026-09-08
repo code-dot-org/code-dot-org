@@ -331,11 +331,15 @@ function declarationsFrom(
 
   for (const block of chain(root)) {
     if (block.type === 'world_acts_like') {
-      // A world's own actor is a `const` in its world's module and not
-      // something another file can be, so a `local:` value names nothing here.
       const named = field(block, 'ACTOR');
-      if (named && !named.startsWith('local:') && named !== modulePath) {
-        actsLike = named;
+      // A CO-LOCATED actor is named by the block that defines it, and its meta
+      // is keyed `<world>#<block>` — which is how `parseWorldActorOwnMetas`
+      // files one, and so what the palette's walk up the chain looks for.
+      const resolved = named.startsWith('local:')
+        ? `${modulePath.replace(/#.*$/, '')}#${named.slice('local:'.length)}`
+        : named;
+      if (resolved && resolved !== modulePath) {
+        actsLike = resolved;
       }
       continue;
     }

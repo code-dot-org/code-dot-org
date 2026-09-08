@@ -274,18 +274,21 @@ block` refused inside a world, and a block scope takes a call quite happily
   (`PROGRESS_BAR_PROPERTIES`). The same shape wants the same name: a
   `LABEL_PROPERTIES` beside it.
 
-  **Which is the argument for letting a local actor act like a CO-LOCATED
-  one.** A single-world project's Scoreboard and its Health Bar are both
-  Labels, and there is no way for them to say so — so each declares the four
-  properties and the duplication this page keeps removing comes straight back
-  in the one project that cannot import. Four things stand in the way, all
-  small: the generator refuses a `local:` target, the dropdown does not offer
-  one, the palette's parent map is keyed by module path where a local value is
-  `local:<block>`, and — the only one with any depth — `assembleWorldModule`
-  emits local actors in canvas order, so a child defined above its parent would
-  read a `const` in its temporal dead zone. That wants a topological sort by
-  `acts like` edges, which is the same fix the assembler already applies to
-  tweens and to the world block, and a cycle refused rather than followed.
+  **A local actor may also act like a CO-LOCATED one**, which is what a
+  single-world project needs: its Scoreboard and its Health Bar are both
+  Labels, and without this there is no way for them to say so — each declares
+  the four properties, and the duplication this page keeps removing comes
+  straight back in the one project that cannot import.
+
+  The row emits a call on the other actor's `const` rather than an import, so
+  the ORDER of the definitions becomes load-bearing: a child written above its
+  parent on the canvas would read a name in its temporal dead zone.
+  `assembleWorldModule` sorts a world's own actors by their `acts like` edges
+  — parents first, stable for everything with no parent, and a cycle left in
+  its original order so the module throws naming the actor rather than the
+  generator never returning. Where a block sits on a canvas is not something a
+  learner should have to think about, which is the same reason local actors
+  are hoisted above the world block at all.
 
 - **`text needs a drawing` loses its subject.** `blockly/extensions/
 textNeedsDrawing` warns on a `use trait ⟨Shows Text⟩` row in an actor that

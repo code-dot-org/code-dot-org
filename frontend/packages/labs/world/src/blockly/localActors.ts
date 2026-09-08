@@ -129,6 +129,47 @@ export const localActorsIn = (
       name: String(block.getFieldValue('NAME') ?? ''),
     }));
 
+/** The `acts like` row's block type, read here and generated in domainBlocks. */
+const ACTS_LIKE = 'world_acts_like';
+
+/**
+ * Which CO-LOCATED actor this `define actor` acts like, by defining block id.
+ *
+ * `undefined` for a root that acts like nothing, or like a FILE — a file is
+ * imported and a module import is ordered by the bundler, where a local one is
+ * a `const` in this same module and has to be declared first. Only the second
+ * is anybody's problem here.
+ */
+export const localActorParentId = (
+  root: Blockly.Block | undefined,
+): string | undefined => {
+  for (let at = root?.getNextBlock(); at; at = at.getNextBlock()) {
+    if (at.type === ACTS_LIKE) {
+      return localActorBlockId(String(at.getFieldValue('ACTOR') ?? ''));
+    }
+  }
+  return undefined;
+};
+
+/**
+ * The `define actor` root a block sits under, if it is in one.
+ *
+ * What asks is `acts like`, for the two questions it has about itself: which
+ * actor am I, so I can refuse to be my own parent, and which co-located ones
+ * would close a ring if I named them.
+ */
+export const definingActorRoot = (
+  block: Blockly.Block | undefined,
+): Blockly.Block | undefined => {
+  let at: Blockly.Block | null | undefined = block;
+  for (; at; at = at.getParent()) {
+    if (at.type === DEFINE_ACTOR) {
+      return at;
+    }
+  }
+  return undefined;
+};
+
 /**
  * The `[label, value]` rows an ACTOR dropdown offers for this workspace's own
  * actors. Empty for a file that defines none, which is every `.actor` file.

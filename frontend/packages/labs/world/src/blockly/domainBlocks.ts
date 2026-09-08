@@ -137,6 +137,7 @@ import {
   actorIdFromName,
   definesRule,
   definesWorld,
+  definingActorRoot,
   localActorBlockId,
   localActorFor,
   localActorVar,
@@ -756,12 +757,24 @@ const worldActsLike = defineBlock({
   generator: {
     javascript(block, generator) {
       const actor = block.getFieldValue('ACTOR');
-      // Nothing chosen, or a world's own actor pasted into the field: a local
-      // actor is a `const` in a world module and not something another file
-      // can be, so there is no module to import. Same silence every other
-      // unfinished dropdown here keeps.
-      if (!actor || localActorBlockId(actor)) {
+      // Nothing chosen. The silence every other unfinished dropdown keeps.
+      if (!actor) {
         return '';
+      }
+      // A CO-LOCATED ACTOR, which is a `const` in this same module rather than
+      // a file to import. Its declaration has to come first, which is the
+      // assembler's business: `assembleWorldModule` orders a world's own
+      // actors so a parent is bound before a child reads it.
+      const localId = localActorBlockId(actor);
+      if (localId) {
+        const local = localActorFor(block, actor);
+        // A definition since deleted, or this actor naming itself — which is
+        // not a shadowing but a `const` reading itself as it is declared. The
+        // dropdown offers neither; a saved file may hold either.
+        if (!local || localId === definingActorRoot(block)?.id) {
+          return '';
+        }
+        return `actor.actsLike(${local.variable});\n`;
       }
       // ITSELF, which the dropdown does not offer and a saved file may hold —
       // an actor renamed into the place of the one it acted like, say. The

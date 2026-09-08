@@ -19,7 +19,13 @@ import {actorIcon, actorThumbnail} from './actorThumbnails';
 import {editingActorModule} from './editingRule';
 import {IMPORT_EFFECT_VALUE} from './effectImport';
 import {label} from './label';
-import {actorIdFromName, localActorOptions} from './localActors';
+import {
+  actorIdFromName,
+  definingActorRoot,
+  localActorBlockId,
+  localActorOptions,
+  localActorParentId,
+} from './localActors';
 import {localizeLabel, localizeText} from './localizeBlocks';
 import {projectImage} from './projectImages';
 
@@ -79,7 +85,8 @@ export function setActorParents(edges: Record<string, string>): void {
 export function actorParentOptions(
   field?: Blockly.FieldDropdown,
 ): DropdownOptions {
-  const self = editingActorModule(field?.getSourceBlock() ?? undefined);
+  const block = field?.getSourceBlock() ?? undefined;
+  const self = editingActorModule(block);
   /** Whether `path` already reaches `self` by acting like it, however far. */
   const reaches = (path: string): boolean => {
     const seen = new Set<string>();
@@ -94,11 +101,42 @@ export function actorParentOptions(
     }
     return false;
   };
-  const offered = projectActors.filter(
-    ([, value]) => value !== self && !reaches(value),
-  );
+  // …AND THE ACTORS BESIDE IT, for a world that defines its own. A local one
+  // is a `const` in the same module rather than a file to import, which the
+  // generator emits and the assembler orders (`assembleWorldModule`); the
+  // rules here are the same two, asked of block ids instead of paths. Empty
+  // for an `.actor` file, which defines exactly one actor and it is itself.
+  const mine = definingActorRoot(block)?.id;
+  const parentOf = (blockId: string): string | undefined =>
+    localActorParentId(block?.workspace?.getBlockById(blockId) ?? undefined);
+  const localReaches = (blockId: string): boolean => {
+    const seen = new Set<string>();
+    for (let at: string | undefined = blockId; at; at = parentOf(at)) {
+      if (at === mine) {
+        return true;
+      }
+      if (seen.has(at)) {
+        return false;
+      }
+      seen.add(at);
+    }
+    return false;
+  };
+  const locals = localActorOptions(field).filter(([, value]) => {
+    const blockId = localActorBlockId(value);
+    return blockId !== undefined && blockId !== mine && !localReaches(blockId);
+  });
+  const offered = [
+    ...locals,
+    ...projectActors.filter(([, value]) => value !== self && !reaches(value)),
+  ];
   return orNone(offered, '(no other actors)').map(([label, value]) =>
-    pictured(label, value),
+    // A world's own are looked up by the TYPE a placed one carries, not by the
+    // `local:<block id>` the dropdown stores — the same distinction
+    // `actorFieldOptions` draws just above.
+    localActorBlockId(value)
+      ? pictured(label, value, actorIdFromName(label))
+      : pictured(label, value),
   );
 }
 
