@@ -111,8 +111,9 @@ const NOOP_MOBILE_CONTROLS = {init: NOOP, update: NOOP, reset: NOOP};
 export default class SpriteLab2Engine extends SpriteLab {
   constructor(defaultAnimations) {
     super(defaultAnimations);
-    // Lab2 saves images through its own asset uploads, so loaded animations
-    // don't keep their Blobs (legacy needs them for cloneAnimation).
+    // This lab saves images through its own asset uploads, so loaded
+    // animations don't keep their Blobs (legacy needs them for
+    // cloneAnimation).
     setRetainBlobsOnLoad(false);
     this.isBlockly = true;
     this.studioApp_ = makeStudioAppStub(this);
