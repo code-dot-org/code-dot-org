@@ -90,10 +90,10 @@ const scoreText = (who: object) => ({
     ACTOR: who,
     VALUE: {
       block: {
-        type: 'text_join',
+        type: 'text',
+        fields: {TEXT: 'Score: '},
         inputs: {
-          ADD0: {shadow: {type: 'text', fields: {TEXT: 'Score: '}}},
-          ADD1: score(),
+          ADD: {block: {type: 'world_as_text', inputs: {VALUE: score()}}},
         },
       },
     },

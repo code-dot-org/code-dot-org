@@ -413,11 +413,17 @@ const SINGLE_WORLD = JSON.stringify({
         inputs: {ACTOR: kind(SCOREBOARD)},
         next: {
           block: setText(me(), {
-            type: 'text_join',
-            extraState: {itemCount: 2},
+            type: 'text',
+            fields: {TEXT: 'SCORE '},
             inputs: {
-              ADD0: {block: {type: 'text', fields: {TEXT: 'SCORE '}}},
-              ADD1: {block: {type: 'world_get_Scoring_ScoreProperty'}},
+              ADD: {
+                block: {
+                  type: 'world_as_text',
+                  inputs: {
+                    VALUE: {block: {type: 'world_get_Scoring_ScoreProperty'}},
+                  },
+                },
+              },
             },
           }),
         },

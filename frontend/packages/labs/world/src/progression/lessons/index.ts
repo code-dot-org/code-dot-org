@@ -6008,11 +6008,12 @@ thing that can happen.
 
 // ── memory/actor-state ───────────────────────────────────────────────────────
 
-/** `join ⟨"lamp "⟩ ⟨…⟩` — the Lamp's name, built from a number. */
+/** `⟨lamp ⟩ + ⟨“ … ”⟩` — the Lamp's name, built from a number. */
 const lampName = (number: object) => ({
   block: {
-    type: 'text_join',
-    inputs: {ADD0: words('lamp '), ADD1: number},
+    type: 'text',
+    fields: {TEXT: 'lamp '},
+    inputs: {ADD: {block: {type: 'world_as_text', inputs: {VALUE: number}}}},
   },
 });
 

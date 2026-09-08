@@ -9261,7 +9261,6 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
       // JOINING, which is what a score needs: a Label draws one value, and
       // "Score: 5" is a word and a number until something puts them together.
       // Without this the first scoreboard anybody writes is a bare numeral.
-      'text_join',
       // …the door into a chain for anything that is not already words, and
       // the break between two lines of them. Both chain onto a `text` block
       // exactly as another `text` block does.

@@ -113,12 +113,22 @@ const watcher = (): BlockJson => ({
   inputs: {ACTOR: me()},
   next: {
     block: setText(me(), {
+      // `⟨SCORE ⟩ + ⟨“ the score ”⟩` — a chain, read left to right. It was
+      // `text_join` and a mutator; the score joins as WORDS through `as text`,
+      // because a chain of strings is the one shape that cannot quietly do
+      // arithmetic instead (`domainBlocks.worldAsText`).
       block: {
-        type: 'text_join',
-        extraState: {itemCount: 2},
+        type: 'text',
+        fields: {TEXT: 'SCORE '},
         inputs: {
-          ADD0: {block: {type: 'text', fields: {TEXT: 'SCORE '}}},
-          ADD1: {block: {type: 'world_get_Scoring_ScoreProperty'}},
+          ADD: {
+            block: {
+              type: 'world_as_text',
+              inputs: {
+                VALUE: {block: {type: 'world_get_Scoring_ScoreProperty'}},
+              },
+            },
+          },
         },
       },
     }),

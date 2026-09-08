@@ -386,11 +386,11 @@ value reads as quoted words; the cost is that a chain continuing past an
 adapter nests by a level, which is only paid when one is in the middle of a
 line rather than at the end of it.
 
-`text_join` is still offered, and should not be for long: two ways to join two
-words is one more than a drawer should hold. Taking it out means converting the
-eleven places that hold one — fixtures, lessons, a tile's unlock and the
-toolbox-shelf list that says what each lesson asks for — which is a sweep of
-its own rather than part of building the block.
+`text_join` is gone from the drawer. Two ways to join two words is one more
+than a drawer should hold, and every place that held one — the starter, three
+fixtures, a lesson, an enhancement, a tile's unlock and the list of what each
+lesson asks for — says the same thing as a chain now. It is Blockly's own
+block and stays registered, so a file that somehow holds one still loads.
 
 **A list of words joins with a space.** `words` is already a property type, and
 a `text` socket handed one should read it as a sentence rather than refusing

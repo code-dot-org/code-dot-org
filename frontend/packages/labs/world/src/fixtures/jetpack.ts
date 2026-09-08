@@ -2022,11 +2022,17 @@ const SCOREBOARD_ACTOR = JSON.stringify({
         next: {
           block: setText('TextProperty', {
             block: {
-              type: 'text_join',
-              extraState: {itemCount: 2},
+              type: 'text',
+              fields: {TEXT: 'COINS '},
               inputs: {
-                ADD0: {block: {type: 'text', fields: {TEXT: 'COINS '}}},
-                ADD1: {block: {type: 'world_get_Scoring_ScoreProperty'}},
+                ADD: {
+                  block: {
+                    type: 'world_as_text',
+                    inputs: {
+                      VALUE: {block: {type: 'world_get_Scoring_ScoreProperty'}},
+                    },
+                  },
+                },
               },
             },
           }),

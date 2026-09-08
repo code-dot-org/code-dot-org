@@ -265,7 +265,8 @@ describe('the scenario catalogue', () => {
     // Shown, not logged: a Label is an ordinary actor that draws its text.
     expect(named('label.actor')).toBe(true);
     expect(named('writing.rule')).toBe(true);
-    expect(main).toContain('text_join');
+    // Words and a number, chained: `⟨SCORE ⟩ + ⟨“ the score ”⟩`.
+    expect(main).toContain('world_as_text');
     // …and the thing no keyboard can say: WHERE.
     expect(main).toContain('world_mouse_position');
     // The crosshair is a FILE, and has to be: `each frame` compiles to

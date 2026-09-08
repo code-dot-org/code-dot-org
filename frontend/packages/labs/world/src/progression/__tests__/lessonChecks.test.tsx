@@ -1230,14 +1230,12 @@ const bodyOf = (row: Row): Row[] => {
   return body;
 };
 
-/** `join ⟨"…"⟩ ⟨value⟩`, which is what both these lessons draw. */
+/** `⟨"…"⟩ + ⟨“ value ”⟩`, which is what both these lessons draw. */
 const joined = (first: string, second: object) => ({
   block: {
-    type: 'text_join',
-    inputs: {
-      ADD0: {shadow: {type: 'text', fields: {TEXT: first}}},
-      ADD1: second,
-    },
+    type: 'text',
+    fields: {TEXT: first},
+    inputs: {ADD: {block: {type: 'world_as_text', inputs: {VALUE: second}}}},
   },
 });
 

@@ -715,7 +715,11 @@ export const TILES: readonly Tile[] = [
       {kind: 'rule', id: 'writing'},
       {kind: 'actor', id: 'label'},
       {kind: 'block', type: 'text'},
-      {kind: 'block', type: 'text_join'},
+      // …and the door into a chain for a value that is not words. Joining two
+      // things was `text_join` and a mutator; a string block carries a socket
+      // for whatever comes next now, so this lesson's "SCORE ⟨the score⟩" is a
+      // chain rather than a bubble to open (`domainBlocks.worldAsText`).
+      {kind: 'block', type: 'world_as_text'},
     ],
     check: {
       kind: 'outcome',

@@ -87,7 +87,7 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
     'variables_get_List',
     'text',
   ],
-  'memory/world-state': ['world_rule_property', 'text_join', 'text'],
+  'memory/world-state': ['world_rule_property', 'world_as_text', 'text'],
   'memory/actor-state': ['world_rule_property'],
   'memory/score': ['world_print', 'math_number'],
   'look/drawing': ['math_arithmetic'],
