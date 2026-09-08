@@ -35,6 +35,43 @@ export interface ImageModelSpec {
   nativeTransparency: boolean;
 }
 
+/**
+ * The OpenAI image models we offer, oldest first, as [id, label]. They differ
+ * in output quality and price, not in anything this file has to describe: all
+ * reach the same endpoints with the same parameters, so one spec covers them.
+ * Keep in step with OPENAI_IMAGE_MODELS in the gateway worker's
+ * generateImageHandler, which is the allowlist that actually admits them.
+ */
+const OPENAI_IMAGE_MODELS: [string, string][] = [
+  [AiChatModelIds.GPT_IMAGE_1, 'GPT Image 1'],
+  [AiChatModelIds.GPT_IMAGE_2, 'GPT Image 2'],
+  [AiChatModelIds.GPT_IMAGE_2_5_FLARE, 'GPT Image 2.5 Flare'],
+  [AiChatModelIds.GPT_IMAGE_2_5_SUNBURST, 'GPT Image 2.5 Sunburst'],
+];
+
+/**
+ * Every OpenAI image model behaves the same way from here: reached through
+ * generateImage, no seed and no temperature (the provider warns and ignores
+ * a seed; the images endpoint has no temperature at all), edits supported,
+ * and transparency requested as a parameter rather than prompted for.
+ *
+ * outputPx stays 1024 across all of them even where the model can do more —
+ * a playtest comparing models wants one variable, and raising it would also
+ * have to answer to the pixel-grid normalization in imageGeneration.
+ */
+function openAiImageSpec(id: string, label: string): ImageModelSpec {
+  return {
+    id,
+    label,
+    transport: 'generateImage',
+    outputPx: 1024,
+    supportsSeed: false,
+    supportsTemperature: false,
+    supportsEdit: true,
+    nativeTransparency: true,
+  };
+}
+
 export const IMAGE_MODEL_SPECS: Record<string, ImageModelSpec> = {
   // Gemini 3.1 Flash Image ("Nano Banana 2"). Its predecessor,
   // gemini-2.5-flash-image, is deprecated by Google and is not offered.
@@ -48,17 +85,9 @@ export const IMAGE_MODEL_SPECS: Record<string, ImageModelSpec> = {
     supportsEdit: true,
     nativeTransparency: false,
   },
-  [AiChatModelIds.GPT_IMAGE_1]: {
-    id: AiChatModelIds.GPT_IMAGE_1,
-    label: 'OpenAI GPT Image 1',
-    transport: 'generateImage',
-    outputPx: 1024,
-    // The provider warns and ignores; see ImageModelV3's unsupported warning.
-    supportsSeed: false,
-    supportsTemperature: false,
-    supportsEdit: true,
-    nativeTransparency: true,
-  },
+  ...Object.fromEntries(
+    OPENAI_IMAGE_MODELS.map(([id, label]) => [id, openAiImageSpec(id, label)])
+  ),
 };
 
 export const DEFAULT_IMAGE_MODEL_ID: string =
@@ -67,7 +96,7 @@ export const DEFAULT_IMAGE_MODEL_ID: string =
 /** Every model the dialog may offer, in the order it offers them. */
 export const IMAGE_MODEL_IDS: string[] = [
   AiChatModelIds.GEMINI_3_1_FLASH_IMAGE,
-  AiChatModelIds.GPT_IMAGE_1,
+  ...OPENAI_IMAGE_MODELS.map(([id]) => id),
 ];
 
 /** Falls back to the default for an id no longer offered (an old project). */

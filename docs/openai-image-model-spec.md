@@ -645,11 +645,13 @@ Questions 1 and 2 of the original draft are settled: we own
 endpoint — versions cover the whole API, but a route no existing client
 calls ships at V1 with the version header where it is. What remains:
 
-1. Which OpenAI model — `gpt-image-1`, `gpt-image-1-mini`, or
-   `gpt-image-1.5`? All three are in the worker's allowlist; only
-   `gpt-image-1` is wired into Sprite Lab 2's registry so far. The mini
-   is the obvious candidate if per-image cost at classroom scale is the
-   binding constraint.
+1. Which OpenAI model earns its place once the playtest has data? Four
+   are offered: `gpt-image-1`, `gpt-image-2`, and the 2.5 line, which is
+   not a single model but `gpt-image-2.5-flare` (fast everyday) and
+   `gpt-image-2.5-sunburst` (most capable). There is no bare
+   `gpt-image-2.5`. Per-image cost differs across them and is the
+   binding constraint at classroom scale, so the comparison has to weigh
+   price alongside output.
 2. Should the playtest expose the picker to students, or only to
    levelbuilders and teachers? The experiment flag can be set from a
    level URL, which reaches students.
@@ -675,13 +677,14 @@ their unit tests pass.
 | 2 | `apps/src/aiGateway/contract/gatewaySchemas.ts` | `GatewayGenerateImage{Request,Response}V1Schema`, registered in the versioned maps and in `ALL_GATEWAY_SCHEMA_GROUPS` |
 | 2 | `apps/src/aiGateway/contract/schemaSnapshots/generateImage*.json` | generated |
 | 2 | `apps/src/aiGateway/generateImage.ts` | new client, `index.ts` exports it; `base64ToUint8Array` hoisted to `shared.ts` so `generateText.ts` and it share one copy |
-| 4 | `ai/images/modelHelpers.ts` | `ImageModelSpec` registry; `getImageModel(id)` returns an SDK model for the generateText transport, a bare id for the generateImage one |
+| 4 | `ai/images/modelHelpers.ts` | `ImageModelSpec` registry; `getImageModel(id)` returns an SDK model for the generateText transport, a bare id for the generateImage one. Four OpenAI models share one spec — they differ in price and output, not in how they are reached |
 | 5 | `ai/images/imageGeneration.ts` | dispatches on transport; `compositionClause()` asks for native transparency or a flat key color per model; keying skipped when the model returns alpha |
 | 6 | `ai/images/types.ts` | `model?` recorded, `seed?` now optional |
 | 7 | `views/GenerateImageView.tsx` | Model fieldset behind `experiments.SPRITELAB_IMAGE_MODEL`; temperature and seed disable themselves with the reason in the label |
 | 8 | `views/GenerateImageView.tsx`, `image-details-dialog.module.scss` | a11y pass — see below |
 | 9 | `test/unit/p5lab/spritelab/lab2/imageGenerationTest.ts` | 12 tests, 7 new |
 | 9 | `test/unit/aiGateway/generateImageTest.ts` | 6 tests, new — including one that parses the client's outbound body against the contract's request schema |
+| 9 | `test/unit/p5lab/spritelab/lab2/modelHelpersTest.ts` | 5 tests, new — the registry cannot drift from `AI_IMAGE_MODEL_IDS`, and the image route still takes a bare id so the OpenAI provider stays out of the bundle |
 
 **`ai-gateway` (branch `openai-image-model`)**
 
@@ -693,6 +696,7 @@ their unit tests pass.
 | `test/generateImageHandler.test.ts` | 6 tests |
 | `test/contract/outboundSchema.test.ts` | 3 more |
 | `README.md` | a Routes table and an "Adding a new endpoint" section |
+| `package.json` | `@ai-sdk/openai` 3.0.41 → 3.0.109. Required, not cosmetic: 3.0.41 carries an exhaustive per-model table and appends `response_format: "b64_json"` to any id outside it, which GPT Image rejects. 3.0.109 broadens the table to the `gpt-image-` prefix and stays on `ImageModelV3`, so `ai` stays at v6 — the 4.x provider is `ImageModelV4` and would force `ai` v7 across every handler |
 
 **What the accessibility pass changed**
 

@@ -868,6 +868,11 @@ module SharedConstants
     GEMINI_2_5_FLASH_IMAGE: "gemini-2.5-flash-image",
     GEMINI_3_1_FLASH_IMAGE: "gemini-3.1-flash-image",
     GPT_IMAGE_1: "gpt-image-1",
+    GPT_IMAGE_2: "gpt-image-2",
+    # OpenAI ships no bare "gpt-image-2.5"; the 2.5 line is these two named
+    # variants, sunburst the most capable and flare the fast everyday one.
+    GPT_IMAGE_2_5_SUNBURST: "gpt-image-2.5-sunburst",
+    GPT_IMAGE_2_5_FLARE: "gpt-image-2.5-flare",
   }
 
   # Image generation models. These are not language models: they are reached
@@ -877,6 +882,9 @@ module SharedConstants
   # goes through generateText like any other chat model.
   AI_IMAGE_MODEL_IDS = [
     AI_CHAT_MODEL_IDS[:GPT_IMAGE_1],
+    AI_CHAT_MODEL_IDS[:GPT_IMAGE_2],
+    AI_CHAT_MODEL_IDS[:GPT_IMAGE_2_5_FLARE],
+    AI_CHAT_MODEL_IDS[:GPT_IMAGE_2_5_SUNBURST],
   ].freeze
 
   # Models served via the Google Gemini API. This is about routing — which
