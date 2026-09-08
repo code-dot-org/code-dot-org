@@ -113,6 +113,13 @@ describe('every stock actor', () => {
       // with words means the same thing by it. A rule for these two would be
       // a rule for one kind of actor (`actors/stock/speechBox`).
       speechBox: ['the_whole_line', 'letters_a_second'],
+      // How far the words have slid left so the caret stays in the box. It is
+      // a fact about ONE line of text in ONE box — a paragraph has no such
+      // number, and neither does a Label — so a rule for it would be a rule
+      // for one kind of actor (`actors/stock/textInput`). `focused` is NOT
+      // here, and used to be: which control is listening is the screen's
+      // business and belongs to Tab Navigation (specs/UI_ACTORS.md).
+      textInput: ['scroll'],
     };
 
     for (const actor of STOCK_ACTORS) {

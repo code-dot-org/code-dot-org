@@ -158,17 +158,17 @@ a rule pulls its dependencies.
 
 ## The base set, and what each one still waits on
 
-| actor        | what it is                                        | state                                          |
-| ------------ | ------------------------------------------------- | ---------------------------------------------- |
-| Label        | words in a space                                  | DONE; wants `new line` and a list of words     |
-| Button       | a Label with an edge that answers a press         | DONE, and acts like a Label                    |
-| Progress Bar | a bar whose length is a number                    | DONE                                           |
-| Health Bar   | a Progress Bar filled from somebody's health      | DONE (acts like)                               |
-| Speech Box   | a Label that lets its line out a letter at a time | DONE                                           |
-| Text Input   | one line you can type in                          | BUILT, and off the shelf until it has a lesson |
-| Text Area    | several lines you can type in                     | the actor, plus a caret                        |
-| Dropdown     | a list of words, one of them chosen               | a list property and a menu to draw             |
-| Panel        | a background behind a group                       | grouping, which is layout                      |
+| actor        | what it is                                        | state                                      |
+| ------------ | ------------------------------------------------- | ------------------------------------------ |
+| Label        | words in a space                                  | DONE; wants `new line` and a list of words |
+| Button       | a Label with an edge that answers a press         | DONE, and acts like a Label                |
+| Progress Bar | a bar whose length is a number                    | DONE                                       |
+| Health Bar   | a Progress Bar filled from somebody's health      | DONE (acts like)                           |
+| Speech Box   | a Label that lets its line out a letter at a time | DONE                                       |
+| Text Input   | one line you can type in                          | BUILT, on the shelf (`story/form`)         |
+| Text Area    | several lines you can type in                     | the actor, plus a caret                    |
+| Dropdown     | a list of words, one of them chosen               | a list property and a menu to draw         |
+| Panel        | a background behind a group                       | grouping, which is layout                  |
 
 Five of the nine are built, and the three that arrived after this document was
 first written are the ones that changed what the rest should be.
@@ -504,6 +504,14 @@ clear on every field and a set on this one, ordered against each other.
 Clicking the background no longer blurs — Escape is the release, everywhere,
 and a field that also blurred on any press would raise a loss and a gain every
 time the focused field was clicked.
+
+**Both are on the shelf now**, granted together by `story/form` — past the tile
+that put a Button on the screen, because the question a game asks after "which
+answer did you click" is "what did you type". Shelving them needed one piece of
+machinery: a check that can TYPE. `TraceStep.type` delivers characters once at
+the start of a stretch and lets its first frame drain them, which is what a
+pair of hands typing and then waiting looks like; scripting a field with `hold`
+would have been scripting something the browser never does.
 
 **A rule that is not on the shelf cannot be imported by reference.**
 `importStockRule` writes a `.rule` file holding a REFERENCE, and

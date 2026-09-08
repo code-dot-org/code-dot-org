@@ -4929,3 +4929,81 @@ describe('the list lesson’s check', () => {
     expect(passes).toBe(false);
   });
 });
+
+describe('the form lesson’s check', () => {
+  const lesson = LESSONS['story/form'];
+
+  /**
+   * The lesson done: a `tab order` on each field, reading DOWN THE SCREEN.
+   *
+   * The fields were added top, bottom, middle — the order somebody thought of
+   * them — so the numbers do not run down the file. That mismatch is the whole
+   * of what the lesson is about, and writing it out here is the only way to be
+   * sure the check can tell the two apart.
+   */
+  const ordered = (numbers: readonly number[]) =>
+    editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const world = workspace.blocks.blocks.find(
+        block => block.type === 'world_world',
+      )!;
+      let row: Row | undefined = world.next?.block;
+      let at = 0;
+      while (row) {
+        // The FIELDS only. The three prompts beside them are Labels: they hold
+        // no keyboard, the tab order does not know they exist, and a number on
+        // one would be a property nothing reads.
+        if (row.fields?.ACTOR !== 'actors/textInput') {
+          row = row.next?.block;
+          continue;
+        }
+        // Onto the end of the `add actor` body, after the position — which is
+        // where a learner dragging one would put it.
+        let last = row.inputs!.DO!.block!;
+        while (last.next?.block) {
+          last = last.next.block;
+        }
+        last.next = {
+          block: {
+            type: 'world_set_TabNavigation_TabOrderProperty',
+            inputs: {
+              ACTOR: {block: {type: 'world_this_actor'}},
+              VALUE: {
+                block: {type: 'math_number', fields: {NUM: numbers[at]}},
+              },
+            },
+          },
+        } as never;
+        at += 1;
+        row = row.next?.block;
+      }
+      return JSON.stringify(workspace);
+    });
+
+  it('refuses a form nobody has put in order', async () => {
+    // The starter tabs from the name straight to the bottom field, because
+    // that is the order the world adds them in.
+    const {passes, result} = await check('story/form', lesson.source);
+    expect(passes).toBe(false);
+
+    // …and it got that far: the click and the typing worked, so what the check
+    // is refusing is the ORDER and not a form that never heard anything.
+    const said = result.samples.said as string[][];
+    expect(said[said.length - 1]).toEqual(['one', 'two', '']);
+  });
+
+  it('accepts the fields numbered down the screen', async () => {
+    // Added top, bottom, middle; numbered 1, 3, 2 to read down the screen.
+    const {passes} = await check('story/form', ordered([1, 3, 2]));
+
+    expect(passes).toBe(true);
+  });
+
+  it('refuses numbers that follow the file rather than the screen', async () => {
+    // The mistake the lesson is written against: numbering the rows 1, 2, 3 in
+    // the order they appear, which changes nothing at all.
+    const {passes} = await check('story/form', ordered([1, 2, 3]));
+
+    expect(passes).toBe(false);
+  });
+});

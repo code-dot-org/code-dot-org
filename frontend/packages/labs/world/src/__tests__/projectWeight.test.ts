@@ -134,7 +134,7 @@ describe('what the references stand for', () => {
     // still what the BUNDLE carries.
     const shelf = STOCK_RULES.map(rule => bytes(rule.contents));
 
-    expect(shelf).toHaveLength(44);
+    expect(shelf).toHaveLength(45);
     expect(shelf.reduce((sum, one) => sum + one, 0)).toBeLessThan(4_600_000);
   });
 });

@@ -163,6 +163,14 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
     'world_set_background',
     'world_set_music',
   ],
+  // The three rows a form's order is set with, and nothing else: the fields
+  // and the rule arrive placed and elected, so what the lesson asks for is the
+  // property, the actor to hang it on, and a number to put in it.
+  'story/form': [
+    'world_set_TabNavigation_TabOrderProperty',
+    'world_this_actor',
+    'math_number',
+  ],
   'simulation/many': [
     'controls_repeat_ext',
     'world_print',

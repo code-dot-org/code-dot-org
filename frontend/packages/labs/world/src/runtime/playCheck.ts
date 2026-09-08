@@ -168,6 +168,12 @@ export function playCheck(world: World, run: CheckRun): CheckResult {
         world.setWorldProperty(step.set.path, step.set.value);
       }
       world.setInput((step.hold ?? []).map(keyName));
+      // …and what was TYPED, which is not a key. Handed over once and drained
+      // by the first tick below, as the driver hands over what arrived between
+      // two frames (`World.addTyped`).
+      if (step.type?.length) {
+        world.addTyped(step.type);
+      }
       if (step.pointer) {
         world.setPointer(step.pointer, step.pointer.buttons ?? []);
       }

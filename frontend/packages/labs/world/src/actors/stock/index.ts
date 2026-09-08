@@ -20,6 +20,7 @@ import {PLAYER_ANIMATION, playerActor} from './player';
 import {PORTRAIT_SPRITE, portraitActor} from './portrait';
 import {progressBarActor} from './progressBar';
 import {speechBoxActor} from './speechBox';
+import {textInputActor} from './textInput';
 
 /** One entry in the library. */
 export interface StockActor {
@@ -130,6 +131,18 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     // they are laid into come from.
     actors: ['label'],
     contents: buttonActor,
+  },
+  {
+    id: 'textInput',
+    name: 'Text Input',
+    description:
+      'A line the player types into. Click it or tab to it, and what is typed goes in — with a caret after the last letter, and the words sliding left once they no longer fit.',
+    // Input for what was TYPED, which is not a list of keys; Mouse so a click
+    // can choose it; and Tab Navigation for the focus itself, which is a fact
+    // about the screen rather than about any one field (specs/UI_ACTORS.md).
+    requires: ['Input', 'Mouse', 'Tab Navigation'],
+    actors: ['label'],
+    contents: textInputActor,
   },
   {
     id: 'speechBox',

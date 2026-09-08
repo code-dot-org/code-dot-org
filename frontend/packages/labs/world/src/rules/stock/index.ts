@@ -265,6 +265,15 @@ export const STOCK_RULES: readonly StockRule[] = [
     contents: mouseRule,
   },
   {
+    id: 'tabNavigation',
+    name: 'Tab Navigation',
+    ability: 'Moves Focus with Tab',
+    description:
+      'One actor at a time holds the keyboard. Tab moves the focus to the next control and Escape drops it, which is also what hands Tab back to the page. An actor can take the focus when it is clicked.',
+    provides: ['Can Be Focused'],
+    contents: tabNavigationRule,
+  },
+  {
     id: 'arrows',
     name: 'Arrow Keys',
     ability: 'Moves with Arrow Keys',
@@ -515,27 +524,6 @@ export function stockRule(id: string): StockRule | undefined {
 export function stockRuleByName(name: string): StockRule | undefined {
   return STOCK_RULES.find(rule => rule.name === name);
 }
-
-/**
- * The shelf entry Tab Navigation WILL have, written but not listed.
- *
- * `STOCK_RULES` is what a learner can import, and everything in it has to be
- * granted by a progression tile (`progression/__tests__/layout`). The rule and
- * its driver half are finished; the tile, its lesson and its check are
- * curriculum and are not. Written here rather than in the two places that need
- * it meanwhile — the Interface Kit fixture and the Text Input's test — so that
- * shelving it later is one line moving this into the list below, rather than
- * three descriptions of one rule drifting apart.
- */
-export const TAB_NAVIGATION: StockRule = {
-  id: 'tabNavigation',
-  name: 'Tab Navigation',
-  ability: 'Moves Focus with Tab',
-  description:
-    'One actor at a time holds the keyboard. Tab moves the focus to the next control, Escape drops it, and an actor can take it when it is clicked.',
-  provides: ['Can Be Focused'],
-  contents: tabNavigationRule,
-};
 
 export {
   arrowsRule,

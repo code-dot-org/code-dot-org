@@ -53,6 +53,20 @@ export interface TraceStep {
    * error.
    */
   set?: {path: string; value: unknown};
+  /**
+   * Characters TYPED at the start of this stretch — `['h', 'i']`.
+   *
+   * A different question from `hold`, and the reason it is a different field:
+   * a key is held or it is not, and typing is a sequence. Shift, a dead key,
+   * an IME and a paste all make a character and no key edge anybody could name
+   * (specs/UI_ACTORS.md), so a check that scripted a field being filled in
+   * with `hold` would be scripting something the browser never does.
+   *
+   * Delivered ONCE, before the stretch's frames run, and drained by the first
+   * of them — which is what a pair of hands typing and then waiting looks
+   * like. A stretch that wants two words apart is two stretches.
+   */
+  type?: readonly string[];
   /** How long to hold them, in seconds, at a fixed sixty frames a second. */
   seconds: number;
 }

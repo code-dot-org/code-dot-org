@@ -252,13 +252,13 @@ describe('the detail pane', () => {
   it('completes an open tile, and the header counts it', async () => {
     await openOn('origin/first-world');
     expect(
-      within(dialog()).getByText(/^0 of 77 lessons done/),
+      within(dialog()).getByText(/^0 of 78 lessons done/),
     ).toBeInTheDocument();
     await userEvent.click(
       within(detail()).getByRole('button', {name: 'Mark as done'}),
     );
     expect(
-      within(dialog()).getByText(/^1 of 77 lessons done/),
+      within(dialog()).getByText(/^1 of 78 lessons done/),
     ).toBeInTheDocument();
   });
 

@@ -2522,6 +2522,62 @@ export const TILES: readonly Tile[] = [
     },
   },
   {
+    id: 'story/form',
+    // STORY's, and it sits past the tile that put a Button on the screen. The
+    // question a game asks after "which answer did you click" is "what did you
+    // type", and the answer needs something no single control can know: which
+    // one of them is listening (specs/UI_ACTORS.md).
+    region: 'story',
+    at: at('memory', 4, 1),
+    title: 'Tell it your name',
+    teaches:
+      'Which control is listening is a fact about the SCREEN, so it is a rule — and the keyboard can move it.',
+    task: 'A form of three fields that tabs through them in the order somebody happened to add them. Put them in the order they are read in.',
+    requires: ['story/choice'],
+    unlocks: [
+      {kind: 'rule', id: 'tabNavigation'},
+      // …and the first actor that takes something other than a press. It
+      // brings the Label it acts like, and the two rules it reads.
+      {kind: 'actor', id: 'textInput'},
+    ],
+    offers: [
+      {kind: 'block', type: 'world_this_actor'},
+      {kind: 'block', type: 'math_number'},
+    ],
+    check: {
+      kind: 'outcome',
+      says: 'Typing, tabbing, and typing again fills the top field and then the middle one.',
+      falsePass:
+        'Leaving the order alone, which also fills two fields — so the check reads all three: the untouched project puts the second word in the BOTTOM field, because that is the order the world added them in.',
+      run: {
+        probes: {said: {kind: 'property', of: 'Text Input', name: 'text'}},
+        // A click is a press and a release at one place (`runtime/checks`).
+        // Then a word, a Tab, and another word.
+        trace: [
+          {pointer: {x: 160, y: 100, buttons: ['left']}, seconds: 0.1},
+          {pointer: {x: 160, y: 100}, seconds: 0.1},
+          {type: ['o', 'n', 'e'], seconds: 0.1},
+          {hold: ['Tab'], seconds: 0.1},
+          {hold: [], seconds: 0.1},
+          {type: ['t', 'w', 'o'], seconds: 0.1},
+        ],
+      },
+      passes: ({samples}) => {
+        // In the order the WORLD holds them, which is the order they were
+        // added: top, bottom, middle. A form in reading order puts the second
+        // word in the middle field and leaves the bottom one empty.
+        const words = samples.said as string[][];
+        const last = words[words.length - 1];
+        return (
+          last?.length === 3 &&
+          last[0] === 'one' &&
+          last[1] === '' &&
+          last[2] === 'two'
+        );
+      },
+    },
+  },
+  {
     id: 'story/scene',
     region: 'story',
     at: at('story', 2, 3),

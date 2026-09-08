@@ -3691,6 +3691,84 @@ branching — no new machinery, just a jump.
 `.trim(),
 };
 
+// ── story/form ───────────────────────────────────────────────────────────────
+
+/**
+ * A field, placed. EMPTY, because a field with words in it that nobody typed
+ * is a field whose first keystroke has to delete them — so what each one is
+ * for is written beside it instead.
+ */
+const field = (y: number) => addActor('actors/textInput', [placeAt(160, y)]);
+
+/** …and the word beside it, which is an ordinary Label and holds no focus. */
+const prompt = (y: number, asking: string) =>
+  addActor('actors/label', [
+    placeAt(70, y),
+    setText('TextProperty', words(asking)),
+  ]);
+
+const form: WorldScenario = {
+  name: 'Tell it your name',
+  description:
+    'Three fields that tab through themselves in the order somebody happened to add them.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      // The prompts first — they are Labels, they hold no keyboard, and the
+      // tab order does not know they exist.
+      //
+      // Then the fields, ADDED IN THE ORDER SOMEBODY THOUGHT OF THEM, which is
+      // the lesson: the name, then the favourite colour at the bottom of the
+      // form, then the town that turned out to belong in the middle. Nobody
+      // has said what order they should be VISITED in, and the default is this
+      // one.
+      rows: [
+        prompt(100, 'name'),
+        prompt(150, 'town'),
+        prompt(200, 'colour'),
+        field(100),
+        field(200),
+        field(150),
+      ],
+    }),
+    stockActors: ['textInput'],
+  }),
+  instructions: `
+## Tell it your name
+
+Three fields. Click the top one and type — the letters go there and nowhere
+else, and the other two ignore you.
+
+That is not something a field can work out for itself. **Which control is
+listening** is a fact about the whole screen: two fields that each decided on
+their own would both take the same keystroke. So it is a rule — **Tab
+Navigation** — and every control that can hold the keyboard elects
+**⟨Can Be Focused⟩**.
+
+Press **Tab**. The focus moves to the next field, and it goes to the wrong one:
+from the name it jumps to the *bottom* of the form. The order is the order the
+fields were ADDED in, and somebody added them as they thought of them.
+
+### What you do
+
+1. Open the world and read the three **add actor** rows. That is the tab order.
+2. In each one, add **set ⟨tab order⟩ of ⟨this actor⟩** and give them **1**, **2**
+   and **3** — reading down the screen, not down the file.
+3. Run it again. Type in the top field, press Tab, and the middle one takes
+   over.
+
+### Getting out again
+
+4. Press **Escape**. Nothing in the game is listening now — and press **Tab**:
+   it leaves the game entirely, because while no control here holds the
+   keyboard, Tab belongs to the page.
+
+That is the bargain the rule makes. The game keeps Tab only while it is using
+it, so a player who reached your game with the keyboard can always leave the
+same way.
+`.trim(),
+};
+
 // ── story/scene ──────────────────────────────────────────────────────────────
 
 const scene: WorldScenario = {
@@ -6315,6 +6393,7 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'story/reveal': reveal,
   'story/script': script,
   'story/choice': choice,
+  'story/form': form,
   'story/scene': scene,
   'simulation/many': crowd,
   'simulation/steering': steering,

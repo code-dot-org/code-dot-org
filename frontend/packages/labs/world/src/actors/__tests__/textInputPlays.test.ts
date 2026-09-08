@@ -16,12 +16,10 @@ import {compileProject} from '../../__tests__/support/compileProject';
 import type {Actor} from '../../engine';
 import {keyName} from '../../engine/core/keys';
 import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
-import {importStockRule} from '../../rules/importStockRule';
-import {TAB_NAVIGATION} from '../../rules/stock';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
 import type {StockActor} from '../stock';
-import {textInputActor} from '../stock/textInput';
+import {stockActorById} from '../stock';
 
 const me = () => ({block: {type: 'world_this_actor'}});
 const number = (value: number) => ({
@@ -56,23 +54,14 @@ const WORLD = JSON.stringify({
 });
 
 /**
- * The shelf entry this actor WOULD have, written here because it has none yet.
+ * The shelf entry, read off the shelf rather than written here.
  *
- * It is finished and it is not shipped: every stock actor has to be granted by
- * a progression tile (`progression/__tests__/layout`, "covers every stock
- * actor"), a tile needs a lesson, and a lesson that teaches typing needs a
- * check that can TYPE — which the trace format has no step for. All of that is
- * curriculum rather than code, so the actor waits for it here rather than
- * arriving on a shelf a learner cannot be sent to (specs/UI_ACTORS.md).
+ * It used to be written out: the actor was finished and not shipped, because a
+ * lesson that teaches typing needs a check that can TYPE and the trace format
+ * had no step for it. It has one now (`runtime/checks`, `type`), so the actor
+ * is on the shelf and this reads what a learner would get.
  */
-const TEXT_INPUT: StockActor = {
-  id: 'textInput',
-  name: 'Text Input',
-  description: 'A line you can type into.',
-  requires: ['Input', 'Mouse'],
-  actors: ['label'],
-  contents: textInputActor,
-};
+const TEXT_INPUT: StockActor = stockActorById('textInput')!;
 
 /**
  * Six pixels a character at twelve, which is a font nobody has.
@@ -85,11 +74,8 @@ const sixPerCharacter = (words: string, size: number) =>
   words.length * (size / 2);
 
 const play = async (measure?: (words: string, size: number) => number) => {
-  // The rule the field elects a trait from, imported by hand: it is not on the
-  // shelf, so naming it in `requires` would resolve to nothing and the field
-  // would compile perfectly and hear no keyboard (`fixtures/interfaceKit`).
   const source = importStockActor(
-    importStockRule(WORLD_SCENARIOS.empty.source, TAB_NAVIGATION).source,
+    WORLD_SCENARIOS.empty.source,
     TEXT_INPUT,
   ).source;
   const main = Object.values(source.files).find(
