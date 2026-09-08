@@ -1,8 +1,8 @@
 # Enumerates a channel's AI-generated image assets across S3 versions.
-# BucketHelper#list sees only current objects and its list_versions drops
-# object keys, so this walks list_object_versions itself: a generation the
-# editor's cleanup deleted survives only as a noncurrent version behind a
-# delete marker.
+# BucketHelper#list sees only current objects and its list_versions doesn't
+# say which file each version belongs to, so this walks list_object_versions
+# itself: a deleted generation survives only as a noncurrent version behind
+# a delete marker.
 class SpritelabLab2GeneratedAssets < AssetBucket
   # Generated uploads are named generated-<uuid>.<ext>; see
   # apps/src/p5lab/spritelab/lab2/ai/images/imageGeneration.ts.

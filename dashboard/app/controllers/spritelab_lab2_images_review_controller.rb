@@ -1,10 +1,7 @@
 # Internal playtest-review page (project validators only): the most recently
 # used Sprite Lab in Lab2 projects, each with every AI-generated image and
-# the prompt that made it.
-# The assets bucket is versioned, so images no longer in the project — the
-# editor's cleanup soft-deletes superseded generations, and deleting an
-# animation orphans its asset outright — are still listable and shown as
-# discarded.
+# the prompt that made it. The assets bucket is versioned, so deleted and
+# superseded images are still listable; the page shows them as discarded.
 class SpritelabLab2ImagesReviewController < ApplicationController
   before_action :authenticate_user!
   before_action :require_project_validator
@@ -16,9 +13,8 @@ class SpritelabLab2ImagesReviewController < ApplicationController
   # never saved sources; give up after this many candidates.
   CANDIDATE_LIMIT = 200
 
-  # Old manifests fetched per project to recover discarded images' prompts,
-  # sampled evenly across the history — autosaves cluster, so a stride finds
-  # far more animations per fetch than newest-first.
+  # Old manifests fetched per project to recover discarded images' prompts.
+  # Autosaves cluster, so an even stride across history beats newest-first.
   MANIFEST_VERSIONS_SCANNED = 60
 
   def index
@@ -103,9 +99,9 @@ class SpritelabLab2ImagesReviewController < ApplicationController
       index_by {|props| props['sourceUrl'][%r{/([^/?]+)(?:\?|\z)}, 1]}
   end
 
-  # Maps asset filenames to the generation metadata recorded on the animation
-  # that referenced them, searching the current manifest first and then recent
-  # manifest versions for filenames only a discarded animation ever named.
+  # Maps asset filenames to the generation metadata on the animation that
+  # used them: the current manifest first, then recent manifest versions for
+  # files only a discarded animation ever named.
   private def generations_by_filename(bucket, channel, current_manifest, filenames)
     remaining = filenames.to_set
     found = {}
