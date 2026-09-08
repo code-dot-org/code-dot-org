@@ -18,6 +18,7 @@ const out = join(here, '..', 'src', 'rules', 'stock');
 const RULES = [
   'input',
   'mouse',
+  'tabNavigation',
   'arrows',
   'drive',
   'drag',

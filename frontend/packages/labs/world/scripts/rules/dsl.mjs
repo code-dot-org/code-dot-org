@@ -267,6 +267,19 @@ export const vector = (x, y) => ({
   inputs: {X: value(x), Y: value(y)},
 });
 
+/**
+ * One choice of an enum, as a VALUE — `⟨tab ▾⟩` (specs/ENUMS.md).
+ *
+ * The block an enum-typed socket carries as its shadow, written out so a rule
+ * can compare against one. `keyDown` below takes a key as a FIELD, which is
+ * how a rule asks whether one is held; this is how a rule asks whether the key
+ * it was just handed is that one.
+ */
+export const choice = (ref, option) => ({
+  type: `world_choice_${ref.replace(/[^A-Za-z0-9]+/g, '_')}`,
+  fields: {VALUE: option},
+});
+
 export const keyDown = key => ({
   type: 'world_is_key_down',
   fields: {KEY: key},
@@ -417,6 +430,23 @@ export const allWithTrait = traitRef => ({
 /** `the actor <var> in <list> with the <least|most> <key>`. */
 export const extremeActor = (variable, {from, end = 'least', key}) => ({
   type: 'world_extreme_actor',
+  fields: {VAR: variable.field, END: end},
+  inputs: {
+    ...(from ? {SOURCE: value(from)} : {}),
+    KEY: value(key),
+  },
+});
+
+/**
+ * `the actors <var> in <list> ordered by <key>` — a sorted list, as a value.
+ *
+ * STABLE, which is the whole reason to reach for it here: actors the key
+ * cannot tell apart keep the order they were added in. A `tab order` everybody
+ * leaves at zero therefore reads as placement order rather than as a tie
+ * nothing breaks (`core/actorValue.ordered`).
+ */
+export const orderedActors = (variable, {from, key, end = 'least'}) => ({
+  type: 'world_ordered_actors',
   fields: {VAR: variable.field, END: end},
   inputs: {
     ...(from ? {SOURCE: value(from)} : {}),

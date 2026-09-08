@@ -75,6 +75,7 @@ import {
   prowlingRule,
   diggingRule,
   switchesRule,
+  tabNavigationRule,
   teleportRule,
   timeRule,
   turnsRule,
@@ -219,6 +220,9 @@ export const ALL_STOCK_SOURCES: Record<string, string> = {
   'rules/digging': diggingRule,
   'rules/drive': driveRule,
   'rules/mouse': mouseRule,
+  // Needs nothing: it reads the keyboard's edges straight off the World, the
+  // way Input does, rather than through another rule's events.
+  'rules/tabNavigation': tabNavigationRule,
   'rules/conversation': conversationRule,
   'rules/score': scoreRule,
   'rules/goals': goalsRule,

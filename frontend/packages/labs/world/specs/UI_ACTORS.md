@@ -448,13 +448,64 @@ again on every frame after the one it was meant for.
 **The Text Input is built on it** (`actors/stock/textInput`), and two things
 about it were not obvious.
 
-**Focus is a CLEAR and then a SET, in one frame.** `presses mouse button`
-reaches every actor that takes mouse input, wherever the pointer is; `is
-clicked with` reaches only the ones under it, and the Mouse rule announces it
-AFTERWARDS in the same step (`rules/mouse`, `buttonEvents`). So every field
-lets go on any click and the one clicked on takes over, in that order, and two
-fields on a screen cannot both be taking the typing. It is an ordering the rule
-already guaranteed rather than one anything new had to arrange.
+**Focus was a CLEAR and then a SET, in one frame** — and that was the Text
+Input deciding for itself whether it was being typed at. It worked, by leaning
+on an ordering the Mouse rule already guaranteed: `presses mouse button`
+reaches every actor that takes mouse input wherever the pointer is, and `is
+clicked with` reaches only the ones under it, announced afterwards in the same
+step (`rules/mouse`, `buttonEvents`). So every field let go on any click and
+the one clicked on took over.
+
+It does not survive a keyboard. Tabbing between fields is not a thing any one
+field can work out, and neither is "which field has it" — those are facts about
+the SCREEN. So focus is a rule now.
+
+## `Tab Navigation` — one actor at a time holds the keyboard
+
+`rules/tabNavigation` (`scripts/rules/tabNavigation.mjs`). An actor elects
+**Can Be Focused** and gets:
+
+- **`focused`**, a boolean, READ-ONLY. Nothing outside the rule writes it.
+- **`tab order`**, a number, everybody's zero. `ordered by` is a stable sort,
+  so leaving it alone is not a tie nobody breaks — it is placement order, which
+  is the order somebody laying out a form worked in.
+- **`gains focus`** and **`loses focus`**, so an actor can react rather than
+  poll.
+
+Two blocks move it, and they are the only two: **`⟨actor⟩ take the focus`**,
+which a field calls when it is clicked and a game calls to open a form on its
+first field, and **`drop the focus`**, which is Escape. The property being
+read-only is what makes the pair worth having: the events are raised in one
+place, in one order, and cannot get out of step with the property that
+describes the same fact. `take the focus` on an actor that already has it does
+nothing at all, so a click handler firing every frame does not raise a loss and
+a gain per frame.
+
+Tab walks the ordered list to the first actor AFTER the one holding it, and
+wraps. Arriving from nothing is the same branch as wrapping, because it is the
+same move. It reads the keyboard's edges straight off the World rather than
+through the Input rule's events, so it requires no other rule.
+
+### Tab is only the game's while the game has focus — NOT BUILT
+
+The rule half is done; the driver half is not, and it is the half with the
+accessibility argument in it. **Escape is reserved and no game may bind it.**
+The policy:
+
+- The game claims Tab (preventDefault) only while some focusable actor holds
+  the focus. While nothing does, Tab is the page's and moves the reader on past
+  the canvas, so the game is never a keyboard trap.
+- Escape drops all focus, which is what releases Tab again. That is the way
+  out, and it is the reason Escape cannot also be a game's pause key.
+- Tabbing ONTO the game from elsewhere on the page focuses the first focusable
+  actor in it.
+- The screen-reader announcement made on arrival has to say this: that Tab now
+  moves between the controls inside the game, and that Escape leaves.
+
+`SCROLL_KEYS` in `runtime/driver/PhaserBinding` is the set that is
+preventDefaulted today, and it is a constant rather than a question about the
+world; this needs the driver to be able to ask whether the focus is held in
+there.
 
 **There is a caret, and what it cost was a measuring seam.** A caret belongs
 after the last letter, and where that is depends on how wide the letters are —

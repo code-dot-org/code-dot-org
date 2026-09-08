@@ -48,6 +48,7 @@ import {spawnerRule} from './spawner';
 import {steeringRule} from './steering';
 import {surfacesRule} from './surfaces';
 import {switchesRule} from './switches';
+import {tabNavigationRule} from './tabNavigation';
 import {teleportRule} from './teleport';
 import {timeRule} from './time';
 import {turningRule} from './turning';
@@ -515,6 +516,12 @@ export function stockRuleByName(name: string): StockRule | undefined {
   return STOCK_RULES.find(rule => rule.name === name);
 }
 
+// EXPORTED BUT NOT SHELVED, in the case of Tab Navigation. The rule is
+// finished and is not something a learner can import yet, for the same reason
+// the Text Input is not (`actors/stock/textInput`): a shelf entry needs a
+// progression tile, a tile needs a lesson, and a lesson that teaches tabbing
+// between fields cannot be written while the browser takes the Tab key before
+// the game sees it (specs/UI_ACTORS.md). Tests reach it through here.
 export {
   arrowsRule,
   climbRule,
@@ -522,6 +529,7 @@ export {
   turningRule,
   diggingRule,
   switchesRule,
+  tabNavigationRule,
   teleportRule,
   flappingRule,
   prowlingRule,

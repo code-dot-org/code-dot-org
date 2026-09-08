@@ -1,0 +1,242 @@
+import {
+  allWithTrait,
+  anyOf,
+  choice,
+  defineRule,
+  doc,
+  equals,
+  firstActor,
+  forEach,
+  forEachKey,
+  moduleFor,
+  no,
+  not,
+  note,
+  orderedActors,
+  stopLoop,
+  thisActor,
+  when,
+  yes,
+} from './dsl.mjs';
+
+/** The keyboard's enum, so a comparison names the same key a dropdown offers. */
+const KEY = 'Engine#Key';
+
+const rule = defineRule({
+  name: 'Tab Navigation',
+  ability: 'Moves Focus with Tab',
+  purpose: `**Tab Navigation** is the keyboard's way around your interface.
+
+One actor at a time holds the **focus**, and the actors that can hold it are the
+ones you gave **Can Be Focused**. Tab moves it to the next one; Escape drops it
+altogether. An actor can also take it for itself — a text field does that when
+it is clicked.
+
+An actor hears \`gains focus\` and \`loses focus\`, and can read \`focused\` to
+draw itself differently while the typing is coming to it. Set **tab order** if
+you want a particular route through a form; leave it alone and the order is the
+order you placed them in.`,
+  header: `// "Moves Focus with Tab" — one actor at a time holds the keyboard.
+//
+// The rule interface actors were missing. A Text Input decided for itself
+// whether it was being typed at, which works for exactly one field and falls
+// apart at two: focus is not a fact about a field, it is a fact about the
+// SCREEN, and a thing no single actor can know is a rule.
+//
+// FOCUS IS READ-ONLY AND MOVED BY ONE BLOCK. \`focused\` is the trait's and
+// nothing outside this rule sets it; \`take the focus\` and \`drop the focus\`
+// are the only ways it moves. That is what makes \`loses focus\` and
+// \`gains focus\` trustworthy — they are raised in one place, in that order,
+// and cannot get out of step with the property they describe.
+//
+// THE ORDER IS THE ORDER THEY WERE PLACED IN, unless somebody says otherwise.
+// \`tab order\` is a number, everybody's is zero, and \`ordered by\` is a
+// STABLE sort — so an untouched project tabs through its controls in the order
+// the world adds them, and a project that cares says so on the actors it cares
+// about (\`core/actorValue.ordered\`).
+//
+// IT READS THE KEYBOARD DIRECTLY rather than through the Input rule's events.
+// It needs an EDGE — the frame Tab went down — which \`for each newly pressed
+// key\` is, and going through another rule's events would make this depend on
+// a rule a project may not have imported for a fact the World already holds.
+//
+// WHAT IS NOT HERE YET: the browser also has a Tab key, and it moves focus out
+// of the game. Deciding when the game may claim it — and announcing to a screen
+// reader that Escape is the way back out — is the driver's half and is not
+// written yet (specs/UI_ACTORS.md).`,
+});
+
+const focusable = rule.trait('Can Be Focused');
+
+focusable.doc(
+  'Whatever elects this can hold the keyboard. Only one actor in a world holds it at a time, and this rule is the only thing that moves it.',
+);
+
+/**
+ * Whether the keyboard is coming here.
+ *
+ * READ-ONLY, and it is the reason the two blocks below exist. An actor that
+ * could set this itself could set it while another actor also had it, and then
+ * two fields would take the same keystroke — which is exactly what the Text
+ * Input's own `focused` did before there was a rule to arbitrate.
+ */
+const focused = focusable.boolean('focused', 'false', {readonly: true});
+
+/**
+ * Where this actor comes in the route, lowest first.
+ *
+ * Zero for everybody unless a project says otherwise, and the ordering is
+ * stable — so leaving it alone is not a tie nobody breaks, it is placement
+ * order, which is the order somebody laying out a form worked in.
+ */
+const tabOrder = focusable.number('tab order', 0);
+
+const gainsFocus = focusable.event(['gains focus']);
+const losesFocus = focusable.event(['loses focus']);
+
+const other = rule.local('other', 'Actor');
+const ranked = rule.local('ranked', 'Actor');
+const candidate = rule.local('candidate', 'Actor');
+const chosen = rule.local('chosen', 'Actor');
+const passed = rule.local('passed', 'Boolean');
+const found = rule.local('found', 'Boolean');
+const key = rule.local('key', 'String');
+
+/** Everyone who can hold the focus, in the order Tab visits them. */
+const inOrder = () =>
+  orderedActors(ranked, {
+    from: allWithTrait(rule.traitRef('Can Be Focused')),
+    key: tabOrder.of(ranked.get()),
+  });
+
+/** Let go of whoever is holding it, telling them so. */
+const release = () =>
+  forEach(other, {
+    from: allWithTrait(rule.traitRef('Can Be Focused')),
+    body: [
+      when([
+        [
+          focused.of(other.get()),
+          [focused.set(other.get(), no()), losesFocus({}, other.get())],
+        ],
+      ]),
+    ],
+  });
+
+/**
+ * `⟨this actor⟩ take the focus` — the one way an actor comes to hold it.
+ *
+ * Called by Tab below, and by anything else that decides where the keyboard
+ * should be: a field focuses itself when it is clicked, and a game focuses its
+ * first field when a form opens.
+ *
+ * IT DOES NOTHING IF THIS ACTOR ALREADY HAS IT, which is what makes it safe to
+ * call from a click handler that fires every frame the button is held. Without
+ * the guard, re-focusing would raise `loses focus` and `gains focus` on one
+ * actor, over and over, and a handler counting either would count nonsense.
+ */
+const takeFocus = focusable.block({
+  returns: 'none',
+  description:
+    'Bring the keyboard to this actor. Whoever had the focus loses it. Does nothing if this actor already has it.',
+  say: ['take the focus'],
+  body: () => [
+    doc(
+      'Already holding it? Then nothing has changed, and neither event is worth raising: a `gains focus` for an actor that never lost it is an event about nothing.',
+    ),
+    when([
+      [
+        not(focused.of(thisActor())),
+        [
+          note('Whoever had it lets go first, so the two never overlap.'),
+          release(),
+          focused.set(thisActor(), yes()),
+          gainsFocus({}, thisActor()),
+        ],
+      ],
+    ]),
+  ],
+});
+
+/**
+ * `drop the focus` — nobody holds it.
+ *
+ * What Escape does, and what a click on the background should do. It is also
+ * how a game hands the keyboard BACK to the page: while nothing here holds the
+ * focus, Tab is the browser's again (specs/UI_ACTORS.md).
+ */
+const dropFocus = rule.block({
+  returns: 'none',
+  description:
+    'Take the focus away from whatever has it, so nothing in the world is listening.',
+  say: ['drop the focus'],
+  body: () => [
+    doc(
+      'Everyone that can hold the focus is asked, rather than one remembered actor: the rule keeps no second copy of who has it, so there is nothing that can disagree with the property itself.',
+    ),
+    release(),
+  ],
+});
+
+/**
+ * Tab, and Escape.
+ *
+ * WHY THE WALK RATHER THAN A SORT KEY. "The next one" is a question about
+ * position in a list, and the list is only in order once — so it is ordered
+ * once and walked once, taking the first actor after the one that has the
+ * focus. A sort key that encoded "after" would have to fold `tab order` and
+ * placement into one number, and would be wrong the first time two actors
+ * shared both.
+ */
+rule.step('focusKeys', 'sense', [
+  doc(
+    'The World knows which keys went down this frame, and nothing else can work that out. Tab moves the focus on; Escape drops it, which is how a player gets the keyboard back from the game.',
+  ),
+  forEachKey('PRESSED', key, [
+    when([
+      [equals(key.get(), choice(KEY, 'escape')), [dropFocus()]],
+      [
+        equals(key.get(), choice(KEY, 'tab')),
+        [
+          passed.set(no()),
+          found.set(no()),
+          doc(
+            'Walk the route in order. `passed` goes true at the actor that has the focus, so the very next one is the answer — and the loop stops there rather than walking the rest of a form to no purpose.',
+          ),
+          forEach(candidate, {
+            from: inOrder(),
+            body: [
+              when([
+                [
+                  passed.get(),
+                  [chosen.set(candidate.get()), found.set(yes()), stopLoop()],
+                ],
+                [focused.of(candidate.get()), [passed.set(yes())]],
+              ]),
+            ],
+          }),
+          doc(
+            'Nothing after it — or nothing had the focus at all — so the answer is the first one. That is the wrap at the end of the route and the arrival from outside it, which are the same move.',
+          ),
+          when([
+            [
+              not(found.get()),
+              [
+                when([
+                  [
+                    anyOf(allWithTrait(rule.traitRef('Can Be Focused'))),
+                    [chosen.set(firstActor(inOrder())), found.set(yes())],
+                  ],
+                ]),
+              ],
+            ],
+          ]),
+          note('A world with nothing focusable in it leaves the key alone.'),
+          when([[found.get(), [takeFocus({}, chosen.get())]]]),
+        ],
+      ],
+    ]),
+  ]),
+]);
+
+export default () => moduleFor(rule, 'tabNavigation');
