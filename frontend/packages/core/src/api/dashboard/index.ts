@@ -1,4 +1,5 @@
 export * from './activities';
+export * from './aichat';
 export * from './auth';
 export * from './channels';
 export * from './courses';
