@@ -1,0 +1,150 @@
+#!/usr/bin/env ruby
+#
+# Measures how often a forked child process inherits a locked glibc mutex that
+# permanently breaks hostname lookups in that child. This is the failure behind
+# the puma backlog alarms of 2026-09-01 and 2026-09-08, where one worker stopped
+# serving, grew an unbounded request backlog, and burned about five CPU cores.
+#
+# The short version: getaddrinfo() takes a process-wide mutex while it asks the
+# kernel about local interface addresses, fork() copies a locked mutex without
+# the thread that would unlock it, and glibc does not repair this particular one
+# in the child. Every multi-address lookup in that child then blocks forever, and
+# Timeout cannot break it because Ruby cannot interrupt a blocked C call. The
+# full root-cause writeup, including the gdb and perf evidence, is in the pull
+# request that added this script.
+#
+# Linux/glibc only: macOS and musl have no equivalent of glibc's __check_pf().
+#
+# Usage. A name served out of /etc/hosts gives the highest signal, because the
+# looping thread then does no DNS I/O and spends nearly all of its time holding
+# the mutex under test:
+#
+#   printf '192.0.2.1 dns-deadlock.invalid\n2001:db8::1 dns-deadlock.invalid\n' | sudo tee -a /etc/hosts
+#   HOST=dns-deadlock.invalid bin/ops/dns-deadlock-after-fork
+#   sudo sed -i '/dns-deadlock.invalid/d' /etc/hosts
+#
+# Without HOST it uses s3.amazonaws.com, which works but does a DNS round trip
+# per iteration and so reports a lower rate; raise FORKS to compensate.
+#
+# Env: HOST, FORKS, TIMEOUT, DUMP=1 (gdb backtrace of the first stuck child,
+# needs passwordless sudo), DUMP_TO.
+#
+# Design notes:
+#
+#   - The name must resolve to more than one address. glibc only takes the mutex
+#     when it has several addresses to sort, so a single-address name -- or a
+#     numeric literal, which is why MySQL through ProxySQL on 127.0.0.1 was
+#     unaffected in production -- never reaches it. The preflight enforces this
+#     rather than silently reporting 0%.
+#   - Timing lives in the parent rather than in a watchdog thread inside each
+#     child, so a poisoned child is killed instead of left blocked forever.
+#     Timeout.timeout could not do this job in any case: its failure to fire is
+#     the bug under test.
+#   - The reported percentage is this script's duty cycle, not a production
+#     probability. The looping thread resolves continuously; the puma parent
+#     resolves every second or two.
+#   - The rate will not change on Ruby 3.3+. The stuck mutex is a glibc problem;
+#     Ruby 3.3 changes only whether a lookup carrying a deadline can be
+#     abandoned.
+
+require 'socket'
+
+HOST    = ENV.fetch('HOST', 's3.amazonaws.com')
+FORKS   = Integer(ENV.fetch('FORKS', '200'))
+TIMEOUT = Float(ENV.fetch('TIMEOUT', '1.0'))
+DUMP    = ENV['DUMP'] == '1'
+DUMP_TO = ENV.fetch('DUMP_TO', '/tmp/dns_deadlock_after_fork.txt')
+
+def mono
+  Process.clock_gettime(Process::CLOCK_MONOTONIC)
+end
+
+def unique_addrs(host)
+  Socket.getaddrinfo(host, 80, nil, Socket::SOCK_STREAM).map {|a| a[3]}.uniq
+end
+
+# Kernel wait state per thread: "futex_wait_queue" is a thread blocked on a
+# mutex, an empty value means it is on-CPU.
+def wchans(pid)
+  Dir["/proc/#{pid}/task/*"].map do |t|
+    "#{File.read("#{t}/comm").strip}=#{File.read("#{t}/wchan").strip}"
+  end.join(' ')
+rescue StandardError
+  '(unreadable)'
+end
+
+# nil means the child was still running at the deadline. Timing lives in the
+# parent so a poisoned child gets killed rather than left behind.
+def wait_until(pid, deadline)
+  loop do
+    got, status = Process.waitpid2(pid, Process::WNOHANG)
+    return status if got
+    return nil if mono > deadline
+    sleep 0.01
+  end
+end
+
+puts "glibc:   #{`ldd --version 2>/dev/null`.lines.first.to_s.strip}"
+puts "nscd:    #{`systemctl is-active nscd 2>/dev/null`.strip.then {|s| s.empty? ? 'absent' : s}}"
+puts "resolv:  #{begin; File.realpath('/etc/resolv.conf'); rescue StandardError; '?'; end}"
+
+addrs = begin
+  unique_addrs(HOST)
+rescue SocketError => exception
+  abort "cannot resolve #{HOST}: #{exception.message}"
+end
+puts "target:  #{HOST} -> #{addrs.size} unique address(es)"
+
+if addrs.size < 2
+  abort <<~MSG
+
+    #{HOST} yields one address, so glibc skips the address-sorting path and never
+    calls __check_pf. Use a multi-address name, or add a local one:
+
+      printf '192.0.2.1 dns-deadlock.invalid\\n2001:db8::1 dns-deadlock.invalid\\n' | sudo tee -a /etc/hosts
+      HOST=dns-deadlock.invalid #{$PROGRAM_NAME}
+      sudo sed -i '/dns-deadlock.invalid/d' /etc/hosts
+  MSG
+end
+
+can_sudo = system('sudo -n true', out: File::NULL, err: File::NULL)
+warn 'DUMP=1 needs passwordless sudo for gdb; skipping dump' if DUMP && !can_sudo
+
+hammer = Thread.new do
+  loop do
+    Socket.getaddrinfo(HOST, 80)
+  rescue SocketError
+    nil
+  end
+end
+
+stuck = 0
+dumped = false
+started = mono
+
+FORKS.times do |i|
+  pid = fork do
+    Socket.getaddrinfo(HOST, 80)
+    exit! 0
+  end
+
+  if wait_until(pid, mono + TIMEOUT).nil?
+    stuck += 1
+    puts "\rfork ##{i}: child #{pid} blocked >#{TIMEOUT}s  [#{wchans(pid)}]"
+
+    if DUMP && can_sudo && !dumped
+      system("sudo gdb -p #{pid} -batch -ex 'thread apply all bt' > #{DUMP_TO} 2>&1")
+      dumped = true
+      puts "  gdb backtrace written to #{DUMP_TO}"
+    end
+
+    Process.kill('KILL', pid)
+    Process.waitpid(pid)
+  end
+
+  print "\rforks #{i + 1}/#{FORKS}  deadlocked #{stuck}" if (i % 20).zero?
+end
+
+hammer.kill
+puts
+puts format('%d/%d children deadlocked (%.2f%%) in %.1fs', stuck, FORKS, 100.0 * stuck / FORKS, mono - started)
