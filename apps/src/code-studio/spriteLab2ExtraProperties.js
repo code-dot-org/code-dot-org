@@ -1,22 +1,17 @@
-// A raw JSON editor for the Sprite Lab in Lab2 level flags that shipped
-// before their editor UI, injected onto the level edit page. Everything it
-// needs from the server already exists — values come from the level's
-// level_properties endpoint and saves go through the levelbuilder's
-// update_properties endpoint — so this feature is entirely client-side.
-// Loaded as part of the levelbuilder bundle; on pages that aren't a saved
-// Lab2 Sprite Lab level's edit form, init finds nothing to do.
+// A raw JSON editor on the level edit page, for the Sprite Lab in Lab2
+// level flags that have no editor UI yet. Values load from the
+// level_properties endpoint and saves go through update_properties, so no
+// server changes are involved. On any page that isn't a saved Lab2 Sprite
+// Lab level's edit form, this does nothing.
 
 import HttpClient, {isNetworkError} from '@cdo/apps/util/HttpClient';
 
 import initializeCodeMirror6 from './initializeCodeMirror6';
 
-// The flags this box may show and write. Explicit on purpose: it is the
-// list of properties still lacking real UI — remove an entry when its
-// editor lands, and the section retires with the last one. Left out on
-// purpose: ai_code_generate_adlib/_text (declared in the lab's types but
-// consumed only by Music Lab so far) and the classic-era flags
-// (mini_toolbox, instructions_icon, ...) — this section is for the newer
-// Lab2 flags.
+// The flags this editor can show and write: the Lab2 properties with no
+// editor UI yet. Remove an entry when its editor lands; when the list is
+// empty, delete this file. Classic-era flags and ai_code_generate_*
+// (Music Lab only so far) are left out on purpose.
 export const RAW_EDITABLE_PROPERTIES = [
   'guide_mode',
   'guide_steps',
@@ -43,9 +38,9 @@ let loadEpoch = 0;
 document.addEventListener('DOMContentLoaded', init);
 
 function init() {
-  // A saved level's edit form (a new level's form is #new_level), for a
-  // Sprite Lab level (the exact type: Dancelab and Poetry subclass it and
-  // must not get the section) with Lab2 enabled.
+  // Only a saved Sprite Lab level's edit form gets the section (a new
+  // level's form is #new_level; Dancelab and Poetry subclass GamelabJr and
+  // must not match).
   const form = document.querySelector('form.edit_level');
   const levelId = form?.getAttribute('action')?.match(/\/levels\/(\d+)/)?.[1];
   if (
@@ -69,10 +64,9 @@ function init() {
   // section still saves — the user just types into a plain textarea.
   try {
     initializeCodeMirror6('extra_properties_json', 'json', {
-      // Fires after document changes (debounced); also what turns the lint
-      // gutter on. A stale "Saved." next to edited text would claim the
-      // edit is saved. Lint passes for pre-save typing can land mid-save,
-      // so the edited-during-save signal is a text comparison, not this.
+      // Fires (debounced) after edits; a stale "Saved." next to edited
+      // text would claim the edit is saved. Lint passes can land mid-save,
+      // so the edited-during-save check compares text instead of this.
       onUpdateLinting: () => {
         if (status.textContent !== 'Saving…') {
           status.textContent = '';
@@ -118,17 +112,14 @@ function buildSection() {
         <span id="extra_properties_status" role="status"></span>
       </div>
     </div>`;
-  // The bottom margin on the area keeps the Save button clear of the
-  // page's fixed save-and-publish bar; text-shadow off because Bootstrap's
-  // .btn white shadow reads as doubled text.
+  // The bottom margin keeps Save clear of the page's fixed
+  // save-and-publish bar; text-shadow off because Bootstrap's .btn white
+  // shadow reads as doubled text.
   return section;
 }
 
-// The dump enumerates every editable key, set or not, so it reads like a
-// form of the available knobs — and it always shows what the server
-// stored, never what was submitted, since it is the documented copy-source
-// for nested edits. level_properties returns the properties the lab itself
-// consumes, keyed by level id, names camelized.
+// The dump lists every editable key, set or not, and always shows what
+// the server stored — it is the copy-source for editing nested values.
 async function loadCurrentValues(levelId) {
   const epoch = ++loadEpoch;
   const pre = document.getElementById('extra_properties_current');
@@ -188,9 +179,8 @@ async function save(levelId, status) {
       }
     );
     await loadCurrentValues(levelId);
-    // An unpublished level's save reaches the database but not its .level
-    // file (only published levels are written to disk); the next publish
-    // writes the file with these properties included.
+    // Saves reach the database, but only published levels are written to
+    // their .level file; the next publish includes these properties.
     const published =
       document.getElementById('level_published')?.value === 'true';
     const suffixes = [];
