@@ -7945,8 +7945,21 @@ const worldAsText = defineBlock({
     'line of text.',
   generator: {
     javascript(block, generator) {
+      addImport(
+        generator,
+        'world_lab',
+        `import * as WorldLab from 'world-lab';`,
+      );
       const value = generator.valueToCode(block, 'VALUE', Order.NONE);
-      return chained(value ? `String(${value})` : str(''), block, generator);
+      // `WorldLab.text`, not `String`: a LIST of words is a sentence in this
+      // language — `the words in ⟨…⟩` hands one back — and `String` would
+      // write it with the commas of an array, which nobody asked for and
+      // nothing can remove (`engine/core/textValue`).
+      return chained(
+        value ? `WorldLab.text(${value})` : str(''),
+        block,
+        generator,
+      );
     },
   },
 });

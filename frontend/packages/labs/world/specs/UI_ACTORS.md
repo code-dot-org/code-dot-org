@@ -392,10 +392,18 @@ fixtures, a lesson, an enhancement, a tile's unlock and the list of what each
 lesson asks for — says the same thing as a chain now. It is Blockly's own
 block and stays registered, so a file that somehow holds one still loads.
 
-**A list of words joins with a space.** `words` is already a property type, and
-a `text` socket handed one should read it as a sentence rather than refusing
-it. That is the rule everywhere, not a Label special case: one space between
-items, no trailing one.
+**A list of words joins with a space** — DONE, in the one place a value becomes
+words. `“ ⟨a list⟩ ”` reads `["to","the","left"]` as "to the left", where
+`String` would write it with the commas of an array — a comma nobody asked for
+and nothing can remove. A list of words IS a sentence here; `the words in ⟨…⟩`
+hands one back.
+
+It is a function rather than a line in the block (`engine/core/textValue`), so
+that "how is this written down" has one answer: anything that later has to say
+a value out loud says it the same way. Lists nest into one sentence, and
+nothing else is special — a number is its digits, and an actor is whatever
+`String` makes of it, which is the honest answer to a question nobody should be
+asking a picture.
 
 ## The three that need a keyboard
 

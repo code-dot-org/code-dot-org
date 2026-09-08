@@ -45,6 +45,8 @@ export {
   type ActorSource,
   type ActorValue,
 } from './core/actorValue';
+// A value said as words — a list joins with one space (`core/textValue`).
+export {text} from './core/textValue';
 export {
   World,
   DEFAULT_BACKDROP_COLOR,

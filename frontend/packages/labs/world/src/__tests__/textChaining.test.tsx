@@ -127,6 +127,26 @@ describe('chaining text', () => {
     expect(await said(asText(number(1), asText(number(2))))).toBe('12');
   });
 
+  it('says a list of words as a sentence', async () => {
+    // ONE SPACE BETWEEN THEM, and no brackets. A list of words IS a sentence
+    // in this language — `the words in ⟨…⟩` hands one back — where `String`
+    // would write it with the commas of an array, which nobody asked for and
+    // nothing can remove (`engine/core/textValue`).
+    const list = {
+      block: {
+        type: 'lists_create_with',
+        extraState: {itemCount: 3},
+        inputs: {
+          ADD0: {block: {type: 'text', fields: {TEXT: 'to'}}},
+          ADD1: {block: {type: 'text', fields: {TEXT: 'the'}}},
+          ADD2: {block: {type: 'text', fields: {TEXT: 'left'}}},
+        },
+      },
+    };
+
+    expect(await said(text('Go ', asText(list)))).toBe('Go to the left');
+  });
+
   it('breaks a line, and goes on chaining after it', async () => {
     // Which is the whole of what a paragraph needs: `draw paragraph` splits on
     // this, so a Label given it draws two lines.
