@@ -158,8 +158,9 @@ export default class SpriteLab2Engine extends SpriteLab {
 
   /**
    * Freeze or resume the engine while nobody can see the playspace: the
-   * draw loop stops (frame-based timing freezes with it) and the wall
-   * clock CoreLibrary's timers and at-time events read stops accruing.
+   * draw loop stops (frame-based timing freezes with it), and the wall
+   * clock that CoreLibrary's timers and at-time events read stops
+   * accruing.
    * Without this the engine kept painting a hidden canvas at full rate,
    * and a game left on another tab ran its events unseen.
    */
