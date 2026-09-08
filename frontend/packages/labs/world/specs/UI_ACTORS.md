@@ -360,12 +360,31 @@ within its edges — `center` centres them, `right` ends them there, which is
 what a score counting up wants. A block of several lines is centred as a block,
 which the painter already did for any vertically-middled anchor.
 
-**Saying a paragraph in blocks**, which the box can now hold and the language
-cannot yet write. Concatenation is `text_join` and a mutator, and there is no
-way to say "and then a line break" at all. Both are answered by one idea: a
-string block takes an optional value, stringifies it and appends it, so text is
-CHAINED rather than assembled in a bubble — and `new line` is that same block
-with a break in it, so it chains with the rest.
+**Saying a paragraph in blocks** — DONE. Concatenation was `text_join` and a
+mutator: a bubble to open, two sockets to count, and a block whose shape is
+edited rather than read. Every string block now carries a socket for whatever
+comes next, so text is CHAINED in the order it is read; `new line` is that same
+block with a break in it, and `“ ⟨any value⟩ ”` is the door into a chain for
+everything that is not already words.
+
+**The chain takes strings only, and that is the point.** A socket that took
+anything and stringified it would make `"n = " + 1 + 2` say "n = 12" and
+`1 + 2 + " left"` say "3 left" — the same three links, joined in the order they
+are read, meaning two different things. A chain of strings cannot do that, and
+the one place a value becomes words is a block somebody put there.
+
+**The socket is an OUTER PIP**, not an inline one, which is what keeps a chain
+flat: an inline input draws the next block inside this one, so three links are
+three nested boxes. `as text` is the exception and keeps its value inline,
+because the value belongs between the quotes — the cost is that a chain
+continuing past one nests by a level, and an adapter is the end of a run more
+often than the middle.
+
+`text_join` is still offered, and should not be for long: two ways to join two
+words is one more than a drawer should hold. Taking it out means converting the
+eleven places that hold one — fixtures, lessons, a tile's unlock and the
+toolbox-shelf list that says what each lesson asks for — which is a sweep of
+its own rather than part of building the block.
 
 **A list of words joins with a space.** `words` is already a property type, and
 a `text` socket handed one should read it as a sentence rather than refusing

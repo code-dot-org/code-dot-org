@@ -7846,6 +7846,133 @@ const worldStepDelta = defineBlock({
   },
 });
 
+/**
+ * The socket every string block carries: whatever comes next, appended.
+ *
+ * `String` ONLY, and that is the whole of why `as text` exists below. A socket
+ * that took anything and stringified it would be a chain whose links each
+ * decide, quietly, whether they are words or arithmetic; a socket that takes
+ * words says what a chain IS, and anything else joins it by being made into
+ * words first, visibly, in a block somebody wrote.
+ */
+const CHAIN_INPUT = {
+  type: 'input_value' as const,
+  name: 'ADD',
+  check: 'String',
+};
+
+/** `⟨this block's words⟩ + ⟨whatever is chained onto it⟩`. */
+const chained = (
+  own: string,
+  block: Block,
+  generator: JavascriptGenerator,
+): [string, number] => {
+  const add = generator.valueToCode(block, 'ADD', Order.ADDITION);
+  return add ? [`${own} + ${add}`, Order.ADDITION] : [own, Order.ATOMIC];
+};
+
+/**
+ * Blockly's own `text` block, WITH SOMEWHERE FOR THE NEXT THING TO GO.
+ *
+ * Concatenation was `text_join` and a mutator: a bubble to open, two sockets
+ * to count, and a block whose shape is edited rather than read. Chaining says
+ * the same thing in the order it is read — `⟨Score: ⟩ + ⟨as text ⟨the score⟩⟩`
+ * — and needs no bubble at all.
+ *
+ * OVERRIDING THE STOCK BLOCK rather than adding a second one, which the Driver
+ * supports outright (it drops `Blockly.Blocks[type]` and keeps the original
+ * generator aside). A second block would mean two string blocks in the Text
+ * drawer differing by a socket, and every string SHADOW in the lab — which is
+ * `{type: "text"}` in a hundred places — would be the one that cannot chain.
+ *
+ * The field keeps its name, so every one of those shadows and every saved file
+ * loads exactly as before; what they gain is an empty socket on the end.
+ */
+const worldText = defineBlock({
+  type: 'text',
+  message0: '\u201c %1 \u201d %2',
+  args0: [{type: 'field_input', name: 'TEXT', text: ''}, CHAIN_INPUT],
+  // AN OUTER PIP, not an inline socket, which is what keeps a chain flat. An
+  // inline input draws the next block INSIDE this one, so three links are
+  // three nested boxes and the words march rightwards down a staircase. An
+  // external input puts the connection on the block's right edge, so a chain
+  // reads as a row — and because every field in the message belongs to this
+  // one input, it is still a single line.
+  inputsInline: false,
+  output: 'String',
+  style: 'text_blocks',
+  tooltip:
+    'Some words. Plug another string onto the end to say it after these.',
+  generator: {
+    javascript(block, generator) {
+      return chained(str(block.getFieldValue('TEXT') ?? ''), block, generator);
+    },
+  },
+});
+
+/**
+ * `“ ⟨any value⟩ ”` — a value, said as words, and chainable like any other.
+ *
+ * The door into a chain for everything that is not already words: a score, a
+ * choice, how many are left. Drawn as a `text` block with a socket where the
+ * field would be, because that is what it is.
+ *
+ * WHY THIS RATHER THAN LETTING THE CHAIN TAKE ANYTHING. `"n = " + 1 + 2` is
+ * `"n = 12"` and `1 + 2 + " left"` is `"3 left"` — the same three links,
+ * joined in the order they are read, meaning two different things. A chain of
+ * strings cannot do that, and the one place a value becomes words is a block
+ * somebody put there.
+ */
+const worldAsText = defineBlock({
+  type: 'world_as_text',
+  message0: '\u201c %1 \u201d %2',
+  // INLINE, alone among the three: the value belongs BETWEEN the quotes,
+  // which is what makes this read as a string rather than as a block with two
+  // sockets. What it costs is that a chain continuing past one of these nests
+  // by a level — an adapter is the end of a run more often than the middle.
+  args0: [{type: 'input_value', name: 'VALUE'}, CHAIN_INPUT],
+  inputsInline: true,
+  output: 'String',
+  style: 'text_blocks',
+  tooltip:
+    'Say a value as words — a number, a choice, anything — so it can join a ' +
+    'line of text.',
+  generator: {
+    javascript(block, generator) {
+      const value = generator.valueToCode(block, 'VALUE', Order.NONE);
+      return chained(value ? `String(${value})` : str(''), block, generator);
+    },
+  },
+});
+
+/**
+ * `new line` — the same block with a break in it.
+ *
+ * Text is made by joining, and there was no way to say "and then a line
+ * break": a Label could hold a paragraph only if something outside the
+ * language had put the newlines in. This chains as the words do, so a two-line
+ * sign is `⟨Press⟩ + ⟨new line⟩ + ⟨SPACE⟩` and reads as one.
+ *
+ * `draw paragraph` already breaks on it (`runtime/driver/paintDrawing`), and a
+ * Text Area will want it for the same reason.
+ */
+const worldNewLine = defineBlock({
+  type: 'world_new_line',
+  message0: 'new line %1',
+  args0: [CHAIN_INPUT],
+  // The outer pip, as `text` has it and for the same reason.
+  inputsInline: false,
+  output: 'String',
+  style: 'text_blocks',
+  tooltip:
+    'A line break. Whatever is chained onto it is drawn on the next line.',
+  generator: {
+    javascript(block, generator) {
+      return chained(str('\n'), block, generator);
+    },
+  },
+});
+
 // `key <key>` — a key's name as a value, so a comparison against `event value`
 // reads as a key rather than as the string ' ' (which is what space is).
 const worldKey = defineBlock({
@@ -8498,6 +8625,9 @@ export const DOMAIN_BLOCKS = [
   worldActor,
   worldUseTrait,
   worldActsLike,
+  worldText,
+  worldAsText,
+  worldNewLine,
   worldDefineTween,
   worldPlayTween,
   worldPlayTweenHere,
@@ -9126,6 +9256,11 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
       // "Score: 5" is a word and a number until something puts them together.
       // Without this the first scoreboard anybody writes is a bare numeral.
       'text_join',
+      // …the door into a chain for anything that is not already words, and
+      // the break between two lines of them. Both chain onto a `text` block
+      // exactly as another `text` block does.
+      'world_as_text',
+      'world_new_line',
       // …and how long a word is, the one question about a string a world made
       // of actors has a use for: a name that has to fit the box it is drawn in.
       'text_length',
