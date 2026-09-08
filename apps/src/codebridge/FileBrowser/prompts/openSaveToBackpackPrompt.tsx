@@ -12,16 +12,27 @@ import {
 } from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import type UnifiedBackpackClientApi from '@cdo/apps/sharedComponents/backpack/UnifiedBackpackClientApi';
+import {UniversalAppType} from '@cdo/generated-scripts/sharedConstants';
+
+type SaveToBackpackApi = BackpackClientApi | UnifiedBackpackClientApi;
 
 type OpenSaveToBackpackPromptArgsType = {
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
-  backpackApi: BackpackClientApi;
+  backpackApi: SaveToBackpackApi;
   file: ProjectFile;
   sendLab2AnalyticsEvent: (
     eventName: string,
     payload?: Record<string, string>
   ) => void;
 };
+
+// The unified client is the only one that can list across backpacks. Duck-typed
+// rather than `instanceof` so the plain-object test mocks are recognized.
+const isUnifiedApi = (
+  api: SaveToBackpackApi
+): api is UnifiedBackpackClientApi =>
+  typeof (api as UnifiedBackpackClientApi).getFileLists === 'function';
 
 export const openSaveToBackpackPrompt = async ({
   dialogControl,
@@ -42,82 +53,131 @@ export const openSaveToBackpackPrompt = async ({
         .getMetricsReporter()
         .logError(errorMessage, error);
     };
-  backpackApi.getFileList(
+
+  const unifiedApi = isUnifiedApi(backpackApi) ? backpackApi : undefined;
+
+  // Keyed by app type so a duplicate can be traced back to the backpack holding
+  // it. The per-lab client only ever knows about its own backpack.
+  let filenamesByAppType: {[appType: string]: string[]};
+  try {
+    filenamesByAppType = isUnifiedApi(backpackApi)
+      ? await backpackApi.getFileLists()
+      : {[backpackApi.appType]: await backpackApi.getFileList()};
+  } catch (error) {
     handleError(
-      codebridgeI18n.importFromBackpackTitle(),
+      codebridgeI18n.saveToBackpackTitle(),
       `${codebridgeI18n.getBackpackFileListError()} ${codebridgeI18n.closeWindowTryAgain()}`,
       'Backpack file list fetch error'
-    ),
-    async (filenames: string[]) => {
-      // Check if filename is a duplicate of a saved file in backpack.
-      const isDuplicateFileName = filenames.includes(file.name);
+    )(error as Error);
+    return;
+  }
 
-      const fileNameCopy = uniqueFileName(file.name, filenames);
+  const existingFilenames = Object.values(filenamesByAppType).flat();
+  const isDuplicateFileName = existingFilenames.includes(file.name);
+  const fileNameCopy = uniqueFileName(file.name, existingFilenames);
 
-      const dialog = isDuplicateFileName
-        ? {
-            type: DialogType.GenericConfirmation,
-            title: codebridgeI18n.saveToBackpackTitle(),
-            message: codebridgeI18n.saveToBackpackDuplicateMessage({
-              newFileName: fileNameCopy,
-            }),
-            confirmText: codebridgeI18n.replace(),
-            neutralText: codebridgeI18n.renameFile(),
-          }
-        : {
-            type: DialogType.GenericConfirmation,
-            title: codebridgeI18n.saveToBackpackTitle(),
-            message: codebridgeI18n.saveToBackpackMessage({
-              fileName: file.name,
-            }),
-            confirmText: codebridgeI18n.saveToBackpackTitle(),
-          };
-      const results = await dialogControl?.showDialog(
-        dialog as TypedDialogProps
-      );
-
-      if (results.type === 'cancel') {
-        return;
+  const dialog = isDuplicateFileName
+    ? {
+        type: DialogType.GenericConfirmation,
+        title: codebridgeI18n.saveToBackpackTitle(),
+        message: codebridgeI18n.saveToBackpackDuplicateMessage({
+          newFileName: fileNameCopy,
+        }),
+        confirmText: codebridgeI18n.replace(),
+        neutralText: codebridgeI18n.renameFile(),
       }
+    : {
+        type: DialogType.GenericConfirmation,
+        title: codebridgeI18n.saveToBackpackTitle(),
+        message: codebridgeI18n.saveToBackpackMessage({
+          fileName: file.name,
+        }),
+        confirmText: codebridgeI18n.saveToBackpackTitle(),
+      };
+  const results = await dialogControl?.showDialog(dialog as TypedDialogProps);
 
-      const selectedFileName =
-        results.type === 'confirm' ? file.name : fileNameCopy;
+  if (results.type === 'cancel') {
+    return;
+  }
 
-      let successMetric = EVENTS.SAVE_TO_BACKPACK_NEW;
-      if (isDuplicateFileName) {
-        successMetric =
-          selectedFileName === file.name
-            ? EVENTS.SAVE_TO_BACKPACK_REPLACE
-            : EVENTS.SAVE_TO_BACKPACK_RENAME;
-      }
-      const successCallback = () =>
-        sendLab2AnalyticsEvent(successMetric, {
-          fileType: selectedFileName.split('.').pop()?.toLowerCase() || '',
-        });
+  const selectedFileName =
+    results.type === 'confirm' ? file.name : fileNameCopy;
 
-      const errorCallback = handleError(
+  let successMetric = EVENTS.SAVE_TO_BACKPACK_NEW;
+  if (isDuplicateFileName) {
+    successMetric =
+      selectedFileName === file.name
+        ? EVENTS.SAVE_TO_BACKPACK_REPLACE
+        : EVENTS.SAVE_TO_BACKPACK_RENAME;
+  }
+
+  // Writes always land in the universal backpack, so a same-named file in any
+  // other backpack has to go or the user ends up with two. The universal copy
+  // needs no delete - the write overwrites it.
+  if (unifiedApi && isDuplicateFileName && selectedFileName === file.name) {
+    const staleAppTypes = Object.entries(filenamesByAppType)
+      .filter(
+        ([appType, filenames]) =>
+          appType !== UniversalAppType && filenames.includes(file.name)
+      )
+      .map(([appType]) => appType);
+
+    const deletions = await Promise.allSettled(
+      staleAppTypes.map(
+        appType =>
+          new Promise<void>((resolve, reject) =>
+            unifiedApi.deleteFiles(
+              appType,
+              [file.name],
+              // A delete already in progress reports failure with no error.
+              error =>
+                reject(error ?? new Error(`Could not delete ${file.name}`)),
+              resolve
+            )
+          )
+      )
+    );
+    const failed = deletions.find(result => result.status === 'rejected');
+    if (failed) {
+      // Saving now would leave the duplicate we just failed to remove, which is
+      // the outcome replacing exists to avoid.
+      handleError(
         codebridgeI18n.saveToBackpackTitle(),
-        codebridgeI18n.saveToBackpackError({selectedFileName}) +
-          ' ' +
-          codebridgeI18n.closeWindowTryAgain(),
-        'Save to backpack error'
-      );
-
-      if (file.url) {
-        backpackApi.saveFileFromUrl(
+        `${codebridgeI18n.saveToBackpackError({
           selectedFileName,
-          file.url,
-          errorCallback,
-          successCallback
-        );
-      } else {
-        backpackApi.saveFile(
-          selectedFileName,
-          file.contents,
-          errorCallback,
-          successCallback
-        );
-      }
+        })} ${codebridgeI18n.closeWindowTryAgain()}`,
+        'Backpack duplicate delete error'
+      )(failed.reason as Error);
+      return;
     }
+  }
+
+  const successCallback = () =>
+    sendLab2AnalyticsEvent(successMetric, {
+      fileType: selectedFileName.split('.').pop()?.toLowerCase() || '',
+    });
+
+  const errorCallback = handleError(
+    codebridgeI18n.saveToBackpackTitle(),
+    codebridgeI18n.saveToBackpackError({selectedFileName}) +
+      ' ' +
+      codebridgeI18n.closeWindowTryAgain(),
+    'Save to backpack error'
   );
+
+  if (file.url) {
+    await backpackApi.saveFileFromUrl(
+      selectedFileName,
+      file.url,
+      errorCallback,
+      successCallback
+    );
+  } else {
+    await backpackApi.saveFile(
+      selectedFileName,
+      file.contents,
+      errorCallback,
+      successCallback
+    );
+  }
 };
