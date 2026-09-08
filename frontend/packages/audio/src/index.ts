@@ -1,0 +1,16 @@
+import type {MusicTrack, MusicTrackDefinition} from './MusicController';
+import MusicController from './MusicController';
+export {MusicController};
+export type {MusicTrack, MusicTrackDefinition};
+import Sound from './Sound';
+import type {SoundConfig, PlaybackOptions} from './Sound';
+export {Sound};
+export type {SoundConfig};
+export type {PlaybackOptions};
+import SoundBoard from './SoundBoard';
+export {SoundBoard};
+import type {ThreeSliceAudioDefinition} from './ThreeSliceAudio';
+import ThreeSliceAudio from './ThreeSliceAudio';
+export {ThreeSliceAudio};
+export type {ThreeSliceAudioDefinition};
+export default SoundBoard;
