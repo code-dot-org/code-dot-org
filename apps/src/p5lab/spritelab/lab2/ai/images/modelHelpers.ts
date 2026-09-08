@@ -20,6 +20,8 @@ export interface ImageModelSpec {
   id: string;
   /** Shown in the dialog's Model choice. */
   label: string;
+  /** Who serves it. The dialog groups the choice by this. */
+  provider: string;
   transport: 'generateText' | 'generateImage';
   /** Roughly the square edge the model emits, in physical pixels. */
   outputPx: number;
@@ -63,6 +65,7 @@ function openAiImageSpec(id: string, label: string): ImageModelSpec {
   return {
     id,
     label,
+    provider: 'OpenAI',
     transport: 'generateImage',
     outputPx: 1024,
     supportsSeed: false,
@@ -78,6 +81,7 @@ export const IMAGE_MODEL_SPECS: Record<string, ImageModelSpec> = {
   [AiChatModelIds.GEMINI_3_1_FLASH_IMAGE]: {
     id: AiChatModelIds.GEMINI_3_1_FLASH_IMAGE,
     label: 'Gemini 3.1 Flash Image',
+    provider: 'Google',
     transport: 'generateText',
     outputPx: 1024,
     supportsSeed: true,

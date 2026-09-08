@@ -680,10 +680,11 @@ their unit tests pass.
 | 4 | `ai/images/modelHelpers.ts` | `ImageModelSpec` registry; `getImageModel(id)` returns an SDK model for the generateText transport, a bare id for the generateImage one. Four OpenAI models share one spec — they differ in price and output, not in how they are reached |
 | 5 | `ai/images/imageGeneration.ts` | dispatches on transport; `compositionClause()` asks for native transparency or a flat key color per model; keying skipped when the model returns alpha |
 | 6 | `ai/images/types.ts` | `model?` recorded, `seed?` now optional |
-| 7 | `views/GenerateImageView.tsx` | Model fieldset behind `experiments.SPRITELAB_IMAGE_MODEL`; temperature and seed disable themselves with the reason in the label |
+| 7 | `views/GenerateImageView.tsx` | Model choice behind `experiments.SPRITELAB_IMAGE_MODEL` — a `SimpleDropdown` grouped by provider, since five models do not fit a radio group; temperature and seed disable themselves with the reason in the label |
 | 8 | `views/GenerateImageView.tsx`, `image-details-dialog.module.scss` | a11y pass — see below |
 | 9 | `test/unit/p5lab/spritelab/lab2/imageGenerationTest.ts` | 12 tests, 7 new |
 | 9 | `test/unit/aiGateway/generateImageTest.ts` | 6 tests, new — including one that parses the client's outbound body against the contract's request schema |
+| 9 | `test/unit/p5lab/spritelab/lab2/GenerateImageViewTest.tsx` | 2 tests, new — the dropdown offers every declared model under a provider `optgroup`, and stays hidden with the experiment off |
 | 9 | `test/unit/p5lab/spritelab/lab2/modelHelpersTest.ts` | 5 tests, new — the registry cannot drift from `AI_IMAGE_MODEL_IDS`, and the image route still takes a bare id so the OpenAI provider stays out of the bundle |
 
 **`ai-gateway` (branch `openai-image-model`)**

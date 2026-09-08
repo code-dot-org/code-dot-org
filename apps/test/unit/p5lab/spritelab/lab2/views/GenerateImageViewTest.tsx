@@ -1,7 +1,10 @@
 import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
+import {DEFAULT_IMAGE_MODEL_ID} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/modelHelpers';
 import GenerateImageView from '@cdo/apps/p5lab/spritelab/lab2/views/GenerateImageView';
+import experiments from '@cdo/apps/util/experiments';
+import {AiImageModelIds} from '@cdo/generated-scripts/sharedConstants';
 
 // The character-set offer has rules a refactor could silently break: it
 // exists only for sprites drawn from a fresh base, and regenerating an
@@ -61,5 +64,40 @@ describe('GenerateImageView character-set offer', () => {
     expect(
       screen.queryByLabelText(SET_CHECKBOX_ADVANCED)
     ).not.toBeInTheDocument();
+  });
+});
+
+describe('GenerateImageView model choice', () => {
+  afterEach(() => jest.restoreAllMocks());
+
+  function withExperiment(on: boolean) {
+    jest.spyOn(experiments, 'isEnabledAllowingQueryString').mockReturnValue(on);
+  }
+
+  it('offers every model, grouped by provider', () => {
+    withExperiment(true);
+    renderView({create: {isNameTaken: () => false}});
+    const select = screen.getByRole('combobox', {name: /model/i});
+
+    const values = Array.from(select.querySelectorAll('option')).map(
+      option => (option as HTMLOptionElement).value
+    );
+    // Every OpenAI image model the constants declare, plus the default the
+    // registry falls back to.
+    for (const id of AiImageModelIds) {
+      expect(values).toContain(id);
+    }
+    expect(values).toContain(DEFAULT_IMAGE_MODEL_ID);
+
+    const groups = Array.from(select.querySelectorAll('optgroup')).map(
+      group => (group as HTMLOptGroupElement).label
+    );
+    expect(groups).toEqual(['Google', 'OpenAI']);
+  });
+
+  it('is hidden unless the experiment is on', () => {
+    withExperiment(false);
+    renderView({create: {isNameTaken: () => false}});
+    expect(screen.queryByRole('combobox', {name: /model/i})).toBeNull();
   });
 });

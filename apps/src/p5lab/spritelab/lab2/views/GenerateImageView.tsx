@@ -1,4 +1,5 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import RadioButton from '@code-dot-org/component-library/radioButton';
 import Slider from '@code-dot-org/component-library/slider';
@@ -212,6 +213,19 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
     []
   );
   const modelSpec = getImageModelSpec(modelId);
+
+  // Grouped by who serves the model: five flat options read as a list of
+  // names, where two groups read as a choice between providers.
+  const modelGroups = useMemo(() => {
+    const byProvider = new Map<string, {value: string; text: string}[]>();
+    for (const id of IMAGE_MODEL_IDS) {
+      const {provider, label} = IMAGE_MODEL_SPECS[id];
+      const group = byProvider.get(provider) ?? [];
+      group.push({value: id, text: label});
+      byProvider.set(provider, group);
+    }
+    return [...byProvider].map(([label, groupItems]) => ({label, groupItems}));
+  }, []);
 
   // Flag a duplicate as it's typed and hold the buttons until it's unique.
   // The student form has no name field, so the name never holds it back.
@@ -509,23 +523,16 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                 ))}
               </fieldset>
               {showModelChoice && (
-                <fieldset
-                  className={moduleStyles.radioGroup}
+                <SimpleDropdown
+                  name="generation-model"
+                  labelText="Model"
+                  size="s"
+                  className={moduleStyles.modelField}
+                  itemGroups={modelGroups}
+                  selectedValue={modelId}
                   disabled={generating}
-                >
-                  <legend>Model</legend>
-                  {IMAGE_MODEL_IDS.map(id => (
-                    <RadioButton
-                      key={id}
-                      name="generation-model"
-                      value={id}
-                      label={IMAGE_MODEL_SPECS[id].label}
-                      size="s"
-                      checked={modelId === id}
-                      onChange={() => setModelId(id)}
-                    />
-                  ))}
-                </fieldset>
+                  onChange={e => setModelId(e.target.value)}
+                />
               )}
               {showModelChoice && (
                 // Always rendered, even when empty: a live region added to

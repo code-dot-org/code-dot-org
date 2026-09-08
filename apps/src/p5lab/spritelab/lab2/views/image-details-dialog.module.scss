@@ -291,6 +291,13 @@
   line-height: inherit;
 }
 
+// The Model dropdown sits in the stack beside the Type and Style groups; it
+// carries its own label, so it wears no bordered box of its own.
+.modelField {
+  width: 100%;
+  min-width: 0;
+}
+
 // Says what the chosen image model cannot do. Empty most of the time; it
 // keeps its place in the DOM so the live region is there before the text is.
 .modelNote {
