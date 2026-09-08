@@ -199,11 +199,12 @@ export function bytesToDataURI(bytes: Uint8Array, mediaType: string): string {
   return `data:${mediaType};base64,${btoa(binary)}`;
 }
 
-// Stored ceilings for smooth-style images: the playspace never shows a
-// sprite above ~400 device px or a block above ~200 (400-logical canvas,
-// 2x density factor, 3x max zoom), so the model's 1K output is downscaled
-// once at save. Pixel style keeps its grid-normalized sizing; backgrounds
-// keep full resolution (zoom magnifies them).
+// Stored ceilings for smooth-style images; the model's 1K output is
+// downscaled once at save. 512/256 cover typical on-screen sizes 1:1; a
+// large story-scene sprite on a high-density screen can exceed 512 and
+// render softer — the accepted tradeoff. Pixel style keeps its
+// grid-normalized sizing; backgrounds keep full resolution (zoom
+// magnifies them).
 const STORED_MAX_PX: {[type in ImageType]?: number} = {
   sprite: 512,
   block: 256,

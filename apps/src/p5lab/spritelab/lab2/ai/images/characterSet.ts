@@ -127,10 +127,10 @@ export function posePrompt(
   );
 }
 
-// The strip's square cell. The playspace never shows a sprite above ~400
-// device px (400-logical canvas, 2x density factor, story-size 300), so 512
-// is full quality on-screen and the decoded strip is a third the memory of
-// the previous 768 cells.
+// The strip's square cell. 512 covers typical on-screen sprite sizes 1:1
+// (a large story-scene sprite on a high-density screen can exceed it and
+// render softer — the accepted tradeoff), and the decoded strip is a third
+// the memory of the previous 768 cells.
 const STRIP_CELL_PX = 512;
 
 // If an unusually detailed strip still encodes too large, redraw it smaller

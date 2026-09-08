@@ -63,7 +63,8 @@ interface AnimationPatch {
   poses?: AnimationPoses;
   categories?: string[];
   pixelGridSize?: number;
-  /** Explicit on every repoint: a stale true would skip a needed trim. */
+  /** Set wherever an animation's pixels are replaced — a stale true would
+   * skip a needed trim. */
   trimmed?: boolean;
   generation?: ImageGenerationMetadata;
   recentColors?: PixelEditorSaveMeta['recentColors'];
