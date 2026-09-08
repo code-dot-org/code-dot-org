@@ -33,12 +33,12 @@
     "guide_mode": "instructions",
     "guide_steps": [
       {
-        "text": "**Make some treasure.** Describe a jewel for your player to find - try a color and a shape, like \"a glowing purple gem\"."
+        "text": "**Make some treasure.** Describe a jewel for your player to find - try a color and a shape, like \"a shiny purple gem\"."
       },
       {
         "text": "**Put it in your world.** Switch to the **World** tab, pick your jewel from the palette, and place it somewhere your player can reach.",
         "after": {
-          "images": 4
+          "spriteImages": 1
         }
       },
       {
@@ -51,6 +51,13 @@
         "text": "**When they touch it, say something!** Add **when [ ] touches [ ]**, picking your character and your jewel from the dropdowns, and put a **say** block inside it. Then press **Play** and go get the treasure.",
         "after": {
           "tab": "Code"
+        }
+      },
+      {
+        "text": "**Treasure hunt!** Go find your jewel, then continue when you're ready.",
+        "showContinue": true,
+        "after": {
+          "tab": "Play"
         }
       }
     ],

@@ -27,7 +27,7 @@ class ChallengeResponsesController < ApplicationController
   def index
     responses = gallery_scope.
       order(created_at: params[:sort] == 'oldest' ? :asc : :desc).
-      includes(:user, :challenge_response_assets, challenge: :lesson)
+      includes(:user, :challenge_response_assets, :challenge_response_reactions, challenge: :lesson)
     if params[:unit_id].present?
       # Lesson's table is legacy-named "stages", so address the column
       # through arel rather than a symbol key.
@@ -39,7 +39,7 @@ class ChallengeResponsesController < ApplicationController
     if params[:challenge_id].present?
       responses = responses.where(challenge_id: params[:challenge_id])
     end
-    render json: responses.map {|response| response.summarize(include_feedback: response.user_id == current_user.id)}
+    render json: responses.map {|response| response.summarize(viewer: current_user, include_feedback: response.user_id == current_user.id)}
   end
 
   # GET /challenge_responses/unit_counts?section_id=:section_id
@@ -79,6 +79,7 @@ class ChallengeResponsesController < ApplicationController
   def show
     role = viewer_role
     summary = @challenge_response.summarize(
+      viewer: current_user,
       include_evaluation: role == 'teacher',
       include_feedback: role != 'peer'
     )

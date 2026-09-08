@@ -91,6 +91,7 @@ const fakeChallengeResponse = (
   is_final: true,
   created_at: '2024-01-01T12:00:00Z',
   assets: [{id: 9, asset_type: 'whiteboard_image', download_url: null}],
+  reactions: [],
   ...overrides,
 });
 

@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-09-07T14:39:12.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "title": "School Bus Data",
+    "display_name": "School Bus Data",
+    "long_instructions": "[This spreadsheet](https://docs.google.com/spreadsheets/d/1nG0AllhbooKilRVyj0_UVDh4WwD_eUYqL2wjPTQ7BnU/edit?gid=0#gid=0) contains tabular data describing a week’s worth of information about a school’s bus system. Explore the dataset and answer the following questions:\r\n\r\n1. How far did Bus 2 drive on Monday?\r\n2. On what day did Bus 3 pick up the most riders?\r\n3. Which bus uses the most fuel?\r\n4. Come up with your own question that someone might want to answer about the bus system. What is your question, and what is the answer?\r\n5. What’s a question about the bus system that can’t be answered by the data in the sheet? Why can’t it be answered by the data?",
+    "bubble_choice_description": "Explore data about a school bus system.",
+    "thumbnail_url": "https://images.code.org/4ca5d4d5c3e9b4b22ace62b2aa92f167-bus.png",
+    "stay_on_level_after_submit": "false",
+    "submittable": "false",
+    "allow_multiple_attempts": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

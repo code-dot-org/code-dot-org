@@ -3,6 +3,7 @@ import {BlocklyLevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import {RGBA} from '@cdo/apps/pixelEditor/tools';
 
 import {ImageGenerationMetadata, ImageType} from './ai/images/types';
+import {AnimationPoses} from './characterAnimations';
 import {Tab} from './redux/spriteLab2Redux';
 import {World} from './world';
 
@@ -32,6 +33,9 @@ export interface SerializedAnimationProps {
   recentColors?: RGBA[];
   // Present on AI-generated images.
   generation?: ImageGenerationMetadata;
+  // Present on a character set: where each pose lives in the sheet
+  // (characterAnimations.ts).
+  poses?: AnimationPoses;
 }
 
 // Mirrors the JSDoc `SerializedAnimationList` typedef in p5lab/shapes.js.
@@ -79,6 +83,8 @@ export interface Sources extends ProjectSources {
  */
 export interface GuideStep {
   text: string;
+  /** Offer the Continue button to the next level while on this step. */
+  showContinue?: boolean;
   after?: {
     /** At least this many block-kind cells placed in the World. */
     worldBlocks?: number;
@@ -89,6 +95,12 @@ export interface GuideStep {
      * carries every image from the levels before this one.
      */
     images?: number;
+    /** At least this many sprite-type images in the project. */
+    spriteImages?: number;
+    /** At least this many background-type images in the project. */
+    backgroundImages?: number;
+    /** At least this many block-type images in the project. */
+    blockImages?: number;
     /** This tab is active. */
     tab?: Tab;
   };
@@ -111,6 +123,10 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   guideSteps?: GuideStep[];
   // Locks the new-image dialog's Type choice.
   lockedImageType?: ImageType;
+  // Show the full internal image dialog — name field, Start from,
+  // temperature — instead of the student one (equivalent to the
+  // images-advanced=true URL parameter).
+  imagesAdvanced?: boolean;
   // The one scene this level edits, created on first load if the project
   // lacks it. Must not be 'scene-1' (the id synthesized for sources saved
   // before scenes existed).
