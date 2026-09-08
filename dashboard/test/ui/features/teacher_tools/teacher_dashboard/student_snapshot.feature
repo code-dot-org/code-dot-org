@@ -32,6 +32,9 @@ Feature: Student Snapshot page
     Then I wait until element "#ui-test-teacher-sidebar" is visible
 
     Given I click selector "#ui-test-teacher-sidebar a:contains('Student Snapshot')" once I see it
+    And I wait until element "#unit-selector-v2" is visible
+    And I wait until element "#ui-test-lessons-in-assigned-unit-dropdown" is visible
+    And I wait until element "select[name='student']" is visible
     And I select the "Lesson 50 — Python Lab" option in dropdown "ui-test-lessons-in-assigned-unit-dropdown"
     And I select the "PySnapshotContentStudent" option in dropdown named "student"
     And I wait until element "#uitest-spinner" is not visible
