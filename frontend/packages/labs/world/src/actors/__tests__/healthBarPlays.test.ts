@@ -18,6 +18,7 @@
 import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../__tests__/support/compileProject';
+import {IntrinsicSizeProperty} from '../../engine/rules/spatial';
 import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
@@ -107,6 +108,20 @@ describe('a Health Bar pointed at nobody', () => {
     // step would read as a full bar over an actor that does not exist — which
     // is the wrong picture and the one this used to draw.
     expect(bar.get(fraction as never) as unknown as number).toBe(0);
+  });
+
+  it('is a Progress Bar’s size, having inherited its picture', async () => {
+    // A declared picture IS the actor's size — the click box, the collision
+    // box and "Stays in the Map" all read `intrinsic size` (`World.place`,
+    // specs/DRAWING.md) — so this is the observable end of an inherited
+    // drawing. 64 by 8 is the Progress Bar's canvas, and a Health Bar that
+    // inherited nothing would have no size at all.
+    const {world} = await compileProject(projectFiles(unwired()));
+    const bar = [...world.actors][0];
+
+    expect(bar.get(IntrinsicSizeProperty)).toEqual(
+      expect.objectContaining({x: 64, y: 8}),
+    );
   });
 
   it('draws without throwing before anything has ticked', async () => {

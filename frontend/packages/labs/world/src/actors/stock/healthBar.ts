@@ -24,24 +24,27 @@
 // which made the commonest health bar there is — the one in the HUD —
 // impossible to write.
 //
-// IT ELECTS `Shows Progress`, and this is the second time round. An early
-// version did; it was taken out because sharing one drawing across two actors
-// cost a trait, a step and a paragraph, and a drawing may ASK the world
-// (specs/DRAWING.md) so this one asked instead. That note ended: "If a third
-// kind of bar arrives, that is when a seam is worth building. Two is not."
+// IT ACTS LIKE A PROGRESS BAR, which is the whole of what it has in common
+// with one: the `Shows Progress` trait, the `fraction` it draws, the two
+// colors it draws in, and the picture. That used to be a `use trait` row and a
+// call to `progressBarDrawing()` — a share written in TypeScript, so a learner
+// opening `healthBar.actor` saw a bar that happened to look like the other one
+// and nothing saying it WAS one.
 //
-// A THIRD ARRIVED. The jetpack's Fuel Bar elects `Shows Progress`, sets
-// `fraction` from the tank every frame, and draws with `progressBarDrawing` —
-// so the seam exists and is load-bearing, and this actor was the only bar not
-// using it. Two bars filled the same rectangle from two different expressions,
-// and a change to how a bar looks had to be made in both.
+// It says so now, in a row they can read and delete (`ActorBuilder.actsLike`).
+// The bar's own header already claimed "the whole claim of a Health Bar is
+// that it IS a Progress Bar"; this is that claim in the file.
+//
+// AND IT IS STILL NOT ONE. `any ⟨Progress Bar⟩` asks what an instance was
+// placed from, so a Health Bar is never among them — a world's `set fraction
+// of ⟨any ⟨Progress Bar⟩⟩` does not reach into the health bars. What carries
+// is the trait, which is the relationship that asks what a thing can do.
 //
 // So the fraction is worked out where a fraction belongs — in a step, once a
-// frame — and the picture is the one every bar draws. What is left here is
-// the only thing that is this bar's own: which actor it is about.
+// frame. What is left here is the only thing that is this bar's own: which
+// actor it is about.
 
-import {progressBarDrawing} from './progressBar';
-import {actorFile, me, showAs, useTrait} from './workspace';
+import {actorFile, actsLike, me, showAs} from './workspace';
 
 /**
  * The `define property` this bar keeps: the actor it is about.
@@ -129,16 +132,12 @@ export const healthBarStep = (subjectGetType: string) => {
   };
 };
 
-export const healthBarActor = actorFile(
-  'Health Bar',
-  [
-    HEALTH_BAR_SUBJECT,
-    useTrait('Progress#ShowsProgressTrait'),
-    showAs('health'),
-    healthBarStep('world_get_ActorsHealthBar_SubjectProperty'),
-  ],
-  // The bar every bar draws. Its colors are Progress's own defaults, which are
-  // the two this actor used to name for itself — so nothing is set here and
-  // a project that recolors one bar recolors it the same way.
-  {drawing: progressBarDrawing()},
-);
+export const healthBarActor = actorFile('Health Bar', [
+  // FIRST, so everything below overrides it rather than the other way about —
+  // that is what reading a file downwards means, and what lets a bar that
+  // wanted its own picture simply say so underneath.
+  actsLike('actors/progressBar'),
+  HEALTH_BAR_SUBJECT,
+  showAs('health'),
+  healthBarStep('world_get_ActorsHealthBar_SubjectProperty'),
+]);

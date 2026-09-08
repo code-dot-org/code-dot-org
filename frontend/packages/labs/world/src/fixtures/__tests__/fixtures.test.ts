@@ -147,6 +147,13 @@ describe('the scenario catalogue', () => {
         'ball.actor',
         'crawler.actor',
         'healthBar.actor',
+        // …and the bar the Health Bar acts like, which is dropped rather than
+        // moved: this scenario's Health Bar is the world's OWN, and a world
+        // may say `acts like` but only against an actor FILE — which is the
+        // one thing a single-world project is for not having. So the local bar
+        // spells out the trait and the picture, and the Progress Bar has
+        // nothing to be here for (`fixtures/platformerSingle`).
+        'progressBar.actor',
         'scoreboard.actor',
         'level1.map',
       ]),

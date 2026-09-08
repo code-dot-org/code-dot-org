@@ -26,7 +26,7 @@
 import {parseRuleMeta, type PropertyMeta} from '../../blockly/ruleMeta';
 import type {DrawCommand, TextAnchor} from '../../engine/core/drawing';
 import {STOCK_RULES} from '../../rules/stock';
-import type {StockActor} from '../stock';
+import {stockActorById, type StockActor} from '../stock';
 
 /** A block as it sits in a saved workspace. */
 interface Node {
@@ -77,6 +77,47 @@ const chain = (from: Node | undefined): Node[] => {
 
 const socket = (node: Node, name: string): Node | undefined =>
   node.inputs?.[name]?.block ?? node.inputs?.[name]?.shadow;
+
+/** The `define actor` root of a stock actor's file, if it parses. */
+const defineActorIn = (actor: StockActor): Node | undefined => {
+  try {
+    return (
+      (JSON.parse(actor.contents) as {blocks?: {blocks?: Node[]}}).blocks
+        ?.blocks ?? []
+    ).find(root => root.type === 'world_actor');
+  } catch {
+    return undefined; // mid-edit / not JSON, as everywhere else
+  }
+};
+
+/**
+ * This actor and everything it acts like, nearest first.
+ *
+ * Read off the FILE rather than off the shelf entry's `actors`, because the
+ * row is what the generated module obeys and the entry is only what an import
+ * brings. `seen` because a cycle is a project that will not load rather than a
+ * picture to draw forever.
+ */
+const ancestry = (actor: StockActor): StockActor[] => {
+  const line: StockActor[] = [];
+  const seen = new Set<string>();
+  for (let at: StockActor | undefined = actor; at; ) {
+    if (seen.has(at.id)) {
+      break;
+    }
+    seen.add(at.id);
+    line.push(at);
+    const row: Node | undefined = chain(defineActorIn(at)?.next?.block).find(
+      one => one.type === 'world_acts_like',
+    );
+    const named: unknown = row?.fields?.ACTOR;
+    at =
+      typeof named === 'string'
+        ? stockActorById(named.replace(/^actors\//, ''))
+        : undefined;
+  }
+  return line;
+};
 
 /**
  * What this actor's own rows SET, by the same key the reads use.
@@ -150,25 +191,42 @@ function literal(node: Node | undefined, set: Map<string, unknown>): unknown {
  * that wears a picture instead (`ActorPreview` shows that picture).
  */
 export function previewDrawing(actor: StockActor): PreviewDrawing | undefined {
-  let roots: Node[];
-  try {
-    roots =
-      (JSON.parse(actor.contents) as {blocks?: {blocks?: Node[]}}).blocks
-        ?.blocks ?? [];
-  } catch {
-    return undefined;
-  }
-  const definition = roots.find(root => root.type === 'world_actor');
+  // …AND WHAT IT ACTS LIKE, nearest first. A Health Bar says nothing about a
+  // picture: it acts like a Progress Bar and inherits one, so a preview that
+  // read only this file's own rows drew nothing at all
+  // (`ActorBuilder.actsLike`).
+  const lineage = ancestry(actor);
+  const definition = lineage
+    .map(one => defineActorIn(one))
+    .find(node => node !== undefined);
   // IN THE DEFINITION'S OWN CHAIN, not among the roots. A drawing is a row
-  // under `define actor` now (specs/DRAWING.md); looking at the top level
-  // found nothing, and every actor previewed as its fallback picture.
-  const drawing = chain(definition?.next?.block).find(
-    row => row.type === 'world_define_drawing',
-  );
+  // under `define actor` (specs/DRAWING.md); looking at the top level found
+  // nothing, and every actor previewed as its fallback picture.
+  //
+  // The NEAREST one wins, which is what the builder does: a child's own
+  // `define drawing` replaces an inherited picture, and one that says nothing
+  // keeps it.
+  const drawing = lineage
+    .map(one =>
+      chain(defineActorIn(one)?.next?.block).find(
+        row => row.type === 'world_define_drawing',
+      ),
+    )
+    .find(row => row !== undefined);
   if (!definition || !drawing) {
     return undefined;
   }
-  const set = written(definition);
+  // Merged from the far end inward, so a child's `set` overrides an inherited
+  // one — the order overrides are applied in when the actor is really built.
+  const set = new Map<string, unknown>();
+  for (const one of [...lineage].reverse()) {
+    const node = defineActorIn(one);
+    if (node) {
+      for (const [key, value] of written(node)) {
+        set.set(key, value);
+      }
+    }
+  }
   const number = (node: Node, name: string, fallback = 0) =>
     Number(literal(socket(node, name), set) ?? fallback);
   const color = (node: Node, name: string) => {

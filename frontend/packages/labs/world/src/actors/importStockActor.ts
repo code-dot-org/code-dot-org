@@ -36,7 +36,7 @@ import {
 import {importStockRule} from '../rules/importStockRule';
 import {stockRuleByName, type StockRule} from '../rules/stock';
 
-import type {StockActor} from './stock';
+import {stockActorById, type StockActor} from './stock';
 
 /** Where actors live, by the lab's directory convention (GLOSSARY.md). */
 const ACTORS_FOLDER = 'actors';
@@ -77,6 +77,18 @@ export function actorRequirements(actor: StockActor): StockRule[] {
   return actor.requires
     .map(name => stockRuleByName(name))
     .filter((rule): rule is StockRule => rule !== undefined);
+}
+
+/**
+ * The stock actors this one acts LIKE, in the order they are named.
+ *
+ * Exported beside `actorRequirements` and for the same reason: the dialog says
+ * what an import will write before it writes it.
+ */
+export function actorParents(actor: StockActor): StockActor[] {
+  return (actor.actors ?? [])
+    .map(id => stockActorById(id))
+    .filter((one): one is StockActor => one !== undefined);
 }
 
 /** The stock animations an actor brings with it. For the dialog, as above. */
@@ -132,7 +144,36 @@ export function importStockActor(
   source: MultiFileSource,
   actor: StockActor,
 ): ImportedActor {
+  return writeActor(source, actor, new Set());
+}
+
+/**
+ * …and the walk itself, which an actor's parents make recursive.
+ *
+ * `seen` is by id and guards the walk rather than the writing:
+ * `alreadyImported` stops a file being written twice, but it is asked AFTER
+ * the dependencies are, so a ring of actors acting like each other would
+ * recurse forever before either of them noticed. The editor will not let one
+ * be built (`moduleOptions.actorParentOptions`) and the shelf is ours, so this
+ * is the belt: a walk that ends is worth more than a walk that is provably
+ * unnecessary.
+ */
+function writeActor(
+  source: MultiFileSource,
+  actor: StockActor,
+  seen: Set<string>,
+): ImportedActor {
   let current = source;
+  if (seen.has(actor.id)) {
+    return {source: current, path: `${ACTORS_FOLDER}/${actor.id}`};
+  }
+  seen.add(actor.id);
+  // The kind it acts LIKE, first: `acts like` names a module path, and a path
+  // naming a file the project lacks inherits nothing at all — no traits, no
+  // picture, no per-frame work — and says so nowhere.
+  for (const parent of actorParents(actor)) {
+    current = writeActor(current, parent, seen).source;
+  }
   for (const rule of actorRequirements(actor)) {
     current = importStockRule(current, rule).source;
   }

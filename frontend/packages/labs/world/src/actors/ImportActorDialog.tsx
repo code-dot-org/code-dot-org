@@ -21,6 +21,7 @@ import {actorDemoFrames, actorDemoUrl, ACTOR_DEMO_SIZE} from './demos';
 import styles from './importActorDialog.module.css';
 import {
   actorAnimations,
+  actorParents,
   actorRequirements,
   actorSprites,
 } from './importStockActor';
@@ -38,10 +39,12 @@ export interface ImportActorDialogProps {
  * Everything an import writes besides the actor, in words a learner reads.
  *
  * A rule is named by its ABILITY ("Collects Things") because that is how the
- * rule library names one; a picture by its own name. Rules first: they are what
- * the actor can do, and a picture is what it looks like doing it.
+ * rule library names one; an actor and a picture by their own names. The kind
+ * it ACTS LIKE first, because that is the biggest thing arriving — a whole
+ * second actor, and one the learner will see in their files.
  */
 const brings = (actor: StockActor): string[] => [
+  ...actorParents(actor).map(parent => parent.name),
   ...actorRequirements(actor).map(rule => rule.ability),
   ...actorAnimations(actor).map(animation => animation.name),
   ...actorSprites(actor).map(sprite => sprite.name),

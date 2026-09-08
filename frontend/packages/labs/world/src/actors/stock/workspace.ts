@@ -27,6 +27,19 @@ export const useTrait = (trait: string) => ({
  * a Button are the same smudge, and there is no name beside it
  * (specs/UI_ACTORS.md).
  */
+/**
+ * `acts like ⟨actors/progressBar⟩` — be everything another kind is.
+ *
+ * The traits, the property slots, the per-frame work and the picture come
+ * across; the KIND does not, so `any ⟨Progress Bar⟩` still means the Progress
+ * Bars (`ActorBuilder.actsLike`). The actor named has to be a file the project
+ * holds, which is what a shelf entry's `actors` brings.
+ */
+export const actsLike = (path: string) => ({
+  type: 'world_acts_like',
+  fields: {ACTOR: path},
+});
+
 export const showAs = (icon: string) => ({
   type: 'world_show_as',
   fields: {ICON: icon},

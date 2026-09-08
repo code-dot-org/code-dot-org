@@ -8,6 +8,7 @@ import type {
 import {coinActor} from './actors/stock/coin';
 import {groundActor} from './actors/stock/ground';
 import {healthBarActor} from './actors/stock/healthBar';
+import {progressBarActor} from './actors/stock/progressBar';
 import {drawText, fill, showAs, textOf} from './actors/stock/workspace';
 import {serializeSheetFile, sheetFileName} from './appearance/sheetFile';
 import {
@@ -894,6 +895,16 @@ export const STARTER_SPEC: ProjectSpec = {
       name: 'coin.actor',
       language: 'actor',
       contents: COIN_ACTOR,
+      folderId: 'actors',
+    },
+    // The bar the Health Bar ACTS LIKE. `acts like` names a module path, and a
+    // path naming a file the project does not hold inherits nothing at all —
+    // no trait, no picture — so the parent is here beside the child
+    // (`actors/stock/healthBar`).
+    progressBar: {
+      name: 'progressBar.actor',
+      language: 'actor',
+      contents: progressBarActor,
       folderId: 'actors',
     },
     healthBar: {

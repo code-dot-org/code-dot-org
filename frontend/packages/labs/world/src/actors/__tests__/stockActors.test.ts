@@ -43,12 +43,19 @@ describe('every stock actor', () => {
       // interface actor looks like whatever it says and must paint itself; a
       // Coin looks like a coin, and a drawing over the top of its animation
       // would hide it.
+      //
+      // …OR IT INHERITS ONE. A Health Bar acts like a Progress Bar and says
+      // nothing about a picture, because a bar's picture is the Progress Bar's
+      // and saying it twice is somewhere for the two to disagree
+      // (`ActorBuilder.actsLike`).
       const blocks = types(actor.contents);
       const paints = blocks.includes('world_define_drawing');
       const pictured =
         blocks.includes('world_play_animation') ||
         blocks.includes('world_set_sprite');
-      expect(paints).toBe(!pictured);
+      const inherits = blocks.includes('world_acts_like');
+      expect(paints || pictured || inherits, actor.id).toBe(true);
+      expect(paints && pictured, actor.id).toBe(false);
     }
   });
 
@@ -216,10 +223,13 @@ describe('Health Bar', () => {
     expect(held).toContain('world_get_Health_HealthProperty');
     expect(held).toContain('world_get_Health_MostHealthProperty');
     expect(held).toContain('world_set_Progress_FractionProperty');
-    // …and the picture is the one every bar draws, so it reads Progress's
-    // colors rather than naming two of its own.
-    expect(held).toContain('world_get_Progress_BarColorProperty');
-    expect(held).toContain('world_get_Progress_TrackColorProperty');
+    // …and NOT the picture, which is the Progress Bar's along with the colors
+    // it reads. A second copy of the track, the fill and the expression
+    // between them would be somewhere for the two to disagree — this file
+    // says `acts like` instead, in a row a learner can read.
+    expect(held).toContain('world_acts_like');
+    expect(held).not.toContain('world_define_drawing');
+    expect(held).not.toContain('world_get_Progress_BarColorProperty');
   });
 
   it('says whose health it is about, and nothing about where it sits', () => {
@@ -235,11 +245,13 @@ describe('Health Bar', () => {
       match => match[1],
     );
 
-    // `Shows Progress` and nothing else: that one says what this actor IS —
-    // a bar with a fraction and two colors. Whose health it shows is
-    // `subject`, its own property, because the health belongs to whatever
-    // that names. Electing Health here would give the BAR three hit points.
-    expect(elected).toEqual(['Progress#ShowsProgressTrait']);
+    // NONE, and that is the change: `Shows Progress` says what this actor IS,
+    // and what it is is a Progress Bar — so it acts like one and the trait
+    // comes with it (`ActorBuilder.actsLike`). Whose health it shows is
+    // `subject`, its own property, because the health belongs to whatever that
+    // names. Electing Health here would give the BAR three hit points.
+    expect(elected).toEqual([]);
+    expect(healthBarActor).toContain('actors/progressBar');
     // Attachment is a project's to add, and composes: set both and it is a
     // bar that rides above the actor it is about.
     expect(healthBarActor).not.toContain('Attachment#');

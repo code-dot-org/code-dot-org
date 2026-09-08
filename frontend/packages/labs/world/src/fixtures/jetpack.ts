@@ -93,8 +93,9 @@
 // phases 4 to 7). It is the smallest thing that plays.
 
 import {climbArrowsHandlers} from '../actors/enhance/climbArrows';
-import {progressBarDrawing} from '../actors/stock/progressBar';
+import {progressBarActor} from '../actors/stock/progressBar';
 import {
+  actsLike,
   drawText,
   fill,
   rectangle,
@@ -2096,7 +2097,13 @@ const FUEL_BAR_ACTOR = JSON.stringify({
         fields: {NAME: 'Fuel Bar'},
         next: {
           block: stack([
-            useTrait('Progress#ShowsProgressTrait'),
+            // IT IS A PROGRESS BAR, said in a row rather than assembled out of
+            // one. `acts like` brings the `Shows Progress` trait, the fraction
+            // it fills to, the two colors it fills in and the picture — which
+            // used to be a `use trait` here and a copy of `progressBarDrawing`
+            // at the bottom, a share written in TypeScript that a learner
+            // opening this file could not see (`ActorBuilder.actsLike`).
+            actsLike('actors/progressBar'),
             {type: 'world_show_as', fields: {ICON: 'bar'}},
             // The bar is 64 by 8, which is a readable widget in a ten-tile
             // room and a smear in an 832-pixel one. Scaled rather than
@@ -2132,14 +2139,6 @@ const FUEL_BAR_ACTOR = JSON.stringify({
                   },
                 },
               },
-            },
-            {
-              type: 'world_define_drawing',
-              fields: {
-                WIDTH: progressBarDrawing().width,
-                HEIGHT: progressBarDrawing().height,
-              },
-              inputs: {DO: {block: stack(progressBarDrawing().commands)}},
             },
           ]),
         },
@@ -2353,6 +2352,15 @@ export const JETPACK_SPEC: ProjectSpec = {
       name: 'fuelSmall.actor',
       language: 'actor',
       contents: canActor('Small Can', 'fuelCanSmall.png'),
+      folderId: 'actors',
+    },
+    // The bar the Fuel Bar acts LIKE. `acts like` names a module path, and a
+    // path naming a file the project does not hold inherits nothing at all —
+    // no trait, no picture — so the parent has to be here.
+    progressBarActor: {
+      name: 'progressBar.actor',
+      language: 'actor',
+      contents: progressBarActor,
       folderId: 'actors',
     },
     fuelBarActor: {

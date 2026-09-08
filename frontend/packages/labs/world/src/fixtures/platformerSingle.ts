@@ -415,10 +415,18 @@ const SINGLE_WORLD = JSON.stringify({
   },
 });
 
-// Everything the starter holds except the four actors and the map, which have
-// moved into the world above. Written as a subtraction so that a rule or a
-// picture added to the starter arrives here too — the alternative is a second
-// list, and a second list is a thing to forget.
+// Everything the starter holds except the actors and the map, which have moved
+// into the world above. Written as a subtraction so that a rule or a picture
+// added to the starter arrives here too — the alternative is a second list,
+// and a second list is a thing to forget.
+//
+// `progressBar` is on the list without having moved anywhere, and it is the
+// one entry that needs saying. The starter's Health Bar is a FILE and acts
+// like the Progress Bar, so the starter holds both; this one's Health Bar is
+// the world's own, and a world's `define actor` may say `acts like` but the
+// project would then need an actor file — which is the one thing this scenario
+// is for not having. So the local bar spells out the trait and the drawing
+// instead, and the Progress Bar has nothing to be here for.
 const MOVED_IN = [
   'main',
   'player',
@@ -426,6 +434,7 @@ const MOVED_IN = [
   'coin',
   'ball',
   'crawler',
+  'progressBar',
   'healthBar',
   'scoreboard',
   'level1',

@@ -55,6 +55,16 @@ export interface StockActor {
    * nothing here — the animation carries its own strip.
    */
   sprites?: readonly string[];
+  /**
+   * The stock ACTORS this one acts LIKE, by id.
+   *
+   * `acts like ⟨actors/progressBar⟩` stores a module path, and a path naming a
+   * file the project does not hold is a row that imports nothing: the actor
+   * loses the traits, the picture and the per-frame work it was supposed to
+   * inherit, silently. So the parent comes with the child — the same bargain
+   * `requires` makes for a rule, one level up.
+   */
+  actors?: readonly string[];
   /** The `.actor` workspace JSON, copied verbatim on import. */
   contents: string;
 }
@@ -93,6 +103,11 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     // NOT Attachment: where a bar sits is the project's business. One over an
     // enemy's head elects it too; one in the corner of the screen does not.
     requires: ['Health', 'Progress'],
+    // …and the bar it IS. `acts like ⟨actors/progressBar⟩` names a module
+    // path, and a path naming a file the project lacks inherits nothing at all
+    // — no trait, no picture — which is a Health Bar that draws as a plain box
+    // and says so nowhere.
+    actors: ['progressBar'],
     contents: healthBarActor,
   },
   {
