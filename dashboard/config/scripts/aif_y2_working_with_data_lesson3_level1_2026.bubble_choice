@@ -1,0 +1,10 @@
+name 'aif-y2-working-with-data-lesson3-level1-2026'
+display_name 'Reading and Printing Data'
+description 'Choose a dataset to work with'
+
+sublevels
+level 'aif-y2-working-with-data-lesson3-level1-choice1-2026'
+level 'aif-y2-working-with-data-lesson3-level1-choice2-2026'
+level 'aif-y2-working-with-data-lesson3-level1-choice3-2026'
+
+uses_lab2

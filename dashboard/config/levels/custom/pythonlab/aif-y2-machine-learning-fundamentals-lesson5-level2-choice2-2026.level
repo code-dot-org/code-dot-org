@@ -25,7 +25,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "def predict_cost(feet):\n    return 40 - 0.5 * feet\n\n# TODO 1: Prompt the user for a number of feet, save the result in a variable\n\n# TODO 2: Calculate a predicted cost to sit that number of feet away\n\n# TODO 3: Print a message letting the user know the distance and predicted cost",
+          "contents": "def predict_cost(feet):\n  return 40 - 0.5 * feet\n\n# TODO 1: Prompt the user for a number of feet, save the result in a variable\n\n# TODO 2: Calculate a predicted cost to sit that number of feet away\n\n# TODO 3: Print a message letting the user know the distance and predicted cost",
           "folderId": "0",
           "active": true
         }
@@ -36,9 +36,9 @@
         "0"
       ]
     },
-    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqKtMko4Ar2cZox\nhkzvBCOiR7TkxKQRrH6QXRw4f2OgFfdCqdODRnmAMyvQ7P4ufy8nKyrAQnjz\n7HZ29dYAaRgLEaXSdr0ZwWZK4dGJgOA5A60E243jQhT1uJydQdseiElRmY8V\neHuLhz9KplgGqghkYlMpC74Y6Wt1Dg46BoZcn9XYhP6zH/XGXRyfMN7arCl1\nETulyTq2zcUI5VZtG5LcIUtVNVzxU5nFZpO7aTVZFZM8vov+RDcFdoECEyWD\nVXljv/EWnvUUc44PpFsRhdVG0dx8U/WFHeFPQ5CjzL5xM/moq3VX/PPGfOpF\nJ26WDt9ajHP6qzJ9ONkPhdTO4O432lQNg2zaPmyTlQUjuz2LM4Our2BHXQly\nM6Ba4hNAQWYI885bCNRnWBlIYVBt2V8sSyhxZE/N237gEXJxJSFlC7fhHb2N\nMU3pRUdznfS8xGk=\n"
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMpt45l6cXlCz+Di\ncQ/Px2S68ffRDF4/YOvDcfbpwfpKq8V9h0xdmheX41PyUdsA+h5f7fN/B60Z\nVV5B4Iui9Lo/InBOcyDj25Yi5sb7Ra4kQLe7aPY0b9jGTd0p+konESCAjJpS\nJNiQD6Q7CGxxrNdqCOG5+4xjJqsD5XXI3yPLRH8bNvQOrmFyJ32IL4tCt2eb\nKtR5JU5TCcaAv/yVR6JxEgR8AwLf1cjZWpVGo1589hbt9wJUusQ+LuqEjZhh\nIC1KqEF3JjuZllDjwGMzw6jYwa2l9345/fBAEb8NF387PjY/g3Nkz3WgiGGR\nVOj4gkvjIr272Ypy1yykzhBX7gS41LSv7pNWtI8wZqD6VaEm3KH9RNiJrp7m\nS+nfUob2ojVacGhKEij8QwOzlIEAH6Ft8PksR30uOuQVHfbOJxG5k5INplU2\nsBQ/5/O7rwAMiXQ=\n"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-08-21 20:58:41 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-21 20:58:55 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-08-21 20:58:41 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-21 20:58:55 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 20:15:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 20:15:17 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2026-07-28T02:48:58.000Z",
   "level_num": "custom",
@@ -26,7 +25,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "def get_average_temperature(day1, day2):\n    # TODO 1: Return the average temperature\n    return\n\nsaturday = 60\nsunday = 70\n\nprint(f\"Saturday's temperature will be {saturday} degrees.\")\nprint(f\"Sunday's temperature will be {sunday} degrees.\")\n\n# TODO 2: Call get_average_temperature and save the result in a variable\n\n# TODO 3: Print a message that tells the user the average temperature",
+          "contents": "def get_average_temperature(day1, day2):\n  # TODO 1: Return the average temperature\n  return\n\nsaturday = 60\nsunday = 70\n\nprint(f\"Saturday's temperature will be {saturday} degrees.\")\nprint(f\"Sunday's temperature will be {sunday} degrees.\")\n\n# TODO 2: Call get_average_temperature and save the result in a variable\n\n# TODO 3: Print a message that tells the user the average temperature",
           "folderId": "0",
           "active": true
         }
@@ -37,7 +36,7 @@
         "0"
       ]
     },
-    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMonwzvz4mXq2G9t\nPtogLrUNq7+D6tecxSLav1u95yp0r/0R1Nzc/zleF5b8+6vXSMmJA3HA1Esf\nS2X6/ZT7GVTM1kb/R1YiqgrKyOk4x0MhO6CguzRcGHwa54qEylefafE5TGKu\nEPc8YkeujF5fWVmpm0iM2sPI2xcv+lXY2r5kwO55SXDOJcFFlzXXIOoddhFe\nvdSb4qCQxKpZ8NDuBd/QYeQY8S6qFC6kG4vb1wlXqEDpDp1vtpLlhn4f4pL/\nzaf5BzQfBrwXYbpBqbJFgpFQ11cWhVLCd11KywWeDmIMvAmxZx+IgqfQxT68\nSYITp5fI2XsTNEdWtVV0BAVZ9wjPWXrQI2zHJ7qpFDJ38k1pw8PHKK0h+1s5\nNiRVkST14C3x65Ur6LDvJBbKkxFXoNY5aGP7qbX4HewUTlUE8+r5PF+UXO3u\nbmDBNrMnfALAp4J83O9gh9GFTg/ThXF0l2DG4oXcgP1F11bUV8XYdnFUzOOf\nvL5VMeKf4iBzabPtPvB7kekU+xuNTBR2wXd2QgtRxfjSvqshuI4ymvDZyQ+I\nObI3sTLmE3H+8uAgo4n8u3Q=\n",
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMpJc3GKCccrM6z+\nRU7KcMDiFPV+OWRN0d8iR/nD3mWcCCh66FBx9IQYQW1O4JI022KbGYyGZtXX\n/VvM4aV/IaG2+WUgld/3o+oC20PxNlgGXmqeitzBitwwi2isnj8nUIc/6brd\nWnOiWn3Q7+21pfzM7EBI97YKpEic852822TFb9ZccOJbyG3zo0CWZdyKmX5O\nB3U0kPJDL59AWBl+GtRhNEwm/vrLcfQZBmQXhHYB2GQnNbKwyqQrdg9ou1xp\nbad1ZNnz2ECIxzrgwnVY6qg6NL112yKBH+4pAVmX/mi80CbeSBS+/aLU0cL8\n+u7n6Bp2Gm+FvDCH+SrK0cZx+sB1h02RTSeJ0MOIISLsFCYCN4lWHITvXB08\nRByt1oE4g/8vAkeHtOBbAqNSQ9OGhrvxtdc3KVB2rqc5KvQ/dJ0DtFxZQVlf\nyhxAEUo0eydvg1JoYNwtxr61p22PpLsll5fmLqUqckH5yI0Pjb4Qkz1MRuoR\nJ35fTDlpZR/Ji20XoB4ymrTuhkb5G+YM8+5PRnIu8pBUkKg1yE+fQswuMHCe\nI5K3FzGVyqg1qUQulqjRw6U=\n",
     "ai_tutor_prompt_settings": {
       "answerTypes": [
 
@@ -46,6 +45,7 @@
       }
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-07-28 02:49:03 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 14:59:32 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 15:40:29 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-28 02:49:03 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 14:59:32 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 15:40:29 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:10:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:10:33 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

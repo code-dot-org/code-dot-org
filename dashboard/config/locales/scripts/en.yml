@@ -29527,10 +29527,25 @@ en:
             lessonGroup-2:
               display_name: Content
           name: aif-year2-semester1-unit3
-          title: AIF Year 2 Semester 1 Unit 3
+          title: Working with Data
           description_audience: ''
           description_short: ''
-          description: ''
+          description: |-
+            This unit  introduces students to data analysis practices by focusing on practical skills for reading and interpreting data, writing programs to answer questions about data, visualizing results of data analysis, and preparing data for use in AI systems.
+
+            Students explore different forms that data can take and how those forms can be represented on a computer. Students read and navigate datasets as they develop comfort with interpreting data in different forms, proposing questions that data might be used to answer, and visualizing data. Through building data analysis programs in Python, students develop fundamental skills related to process and interpreting data that are core to the process of building AI systems.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Identify ways that different types of data can be represented in a computer.
+            - Propose questions about a dataset that data analysis could answer.
+            - Write Python programs to process and analyze data.
+            - Compute the mean and standard deviation of a dataset.
+            - Describe the relationship between two variables.
+            - Combine data from multiple sources and analyze the result.
+            - Use data science libraries to analyze and manipulate data.
+            - Build visualizations based on data.
+            - Communicate findings based on the results of data analysis.
+            :::
           student_description: ''
         aif-year2-semester1-unit4:
           lessons: {}

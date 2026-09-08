@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2026-07-28T20:56:58.000Z",
   "level_num": "custom",
@@ -33,7 +32,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "def decide(want_it, can_afford_it):\n    if want_it:\n        return \"Buy it\"\n    else:\n        return \"Skip it\"\n\n\ndef main():\n    want_it = True\n    can_afford_it = False\n    decision = decide(want_it, can_afford_it)\n    print(f\"You should: {decision}\")\n\n\nmain()\n",
+          "contents": "def decide(want_it, can_afford_it):\n  if want_it:\n    return \"Buy it\"\n  else:\n    return \"Skip it\"\n\n\ndef main():\n  want_it = True\n  can_afford_it = False\n  decision = decide(want_it, can_afford_it)\n  print(f\"You should: {decision}\")\n\n\nmain()\n",
           "folderId": "0",
           "active": true
         }
@@ -44,8 +43,9 @@
         "0"
       ]
     },
-    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqNpIEuIqc8ekeN\nOOAxi+dYtY2M0bNQ74IPQ9aPo2sY2XlgcM1ZbSgAZb5ubjOAF6LJyNv4afQO\nYPaz8dPv9LrHopFTs5hwbfqeXgShfBMlazKgp1ZYCE9BYy0LL8FgqpwuH2Vd\nJgEt2gQaf4w2UN5dbOy8aKEixGPWQZUesll7apXXjlY2cfDezFV9BQMtxPDZ\nFv+ML+iSV4k4CsHEQVCE++E3cte0TQu7KL4ylulJ2V0SKRdkHLiOSUBUPI7B\nwS8IsS1XvYXb9MZvhRO0MJ9BnqEbCZbkaui42r4EQIq6+7IspCfx4c1kLd5R\nHQc0PwVNC7WHXtjBnZf3+xcYiZOpECg7U/biEUEoic+cquanGpXkiLVbr7bB\ng+yZMLpbPgIri1+351ZQgcfZ1WfzLnnRxPdtdUYl9/meNg7aromRd+AhaB44\n0Xoe1NgV4ZlM89zQEb4Qa6hhSDmv2U3iLj17n7Iz7Un+zqyn3FppUNNl9/dG\ngzW4K7v7FoleMJSW38axHWPKV4aRp48v6jW9WRDRfkPvhhdMAloSAmLhQNRO\nkA5ZthG7/w12Xzdf+A+X0MauPXD+c71GCIAV8rm9xQDcD3Gy4anWTUy1FcrC\njUt47PuLwQ1Q1LLbbGOTj4Iu3/BIjf1i++IU2RDiW0ThxgXXiEYjpegadrBu\nrzTYjLJ0Wg==\n"
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMrvCbYzT/Rsuqj3\nlhSTzD9Pu1uYkokUuFntKLRtGshOOkfjFxR1rzwINsExHoWjibB6jBDaJfFz\nF70sSV1aJ8qhQDLGwAu1saLfIKO6C8LG7AmOVR4bwLob78xAwg0ZgvJb0kFn\nYKCgW2jmVIpMndDr1x56LN5OnR/qimyEtGHP1fgM/zOitTjRjn2PR96BINVs\nkjmha6kkdUZwXf3Qmx+vqulK1gGFJo7w8tJUCpaHHWIJOv0y9DwOExYujyqw\nIqW6ySiL6F3NVzi5khfMHJE97RVEINQsxceyZFXyDYahiwaM6ZYlL18WpuhL\nqFQx+fsQckF9GNyfk/888gYIz0OdCovhn2U66JVrRXkhfnnmFm9y5DLF3z5J\ntXEbqogJtolQpTb6EqTXgN9GyxRdecye1/MdH4WYNuT5+ZEstI17694XsrKZ\n/FRmqlulBlI9CExg9cEHmglkgUVP9nr7ZKDZobAhvsdsSBJ1nTGCYGyxlSSY\n98b/nq+96MisGJXU4nu5khd4/y3ocO2Fuu0dVkt/VQzUbZ+IUG7bFJazPNmV\njvwU0BhDX97euNFU4p2u86ucCgUL9iJYq6Sneh+I8BaXS4pW4QFmkeARC73h\nL9BbmA==\n"
   },
-  "audit_log": "[{\"changed_at\":\"2026-07-28 20:58:42 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 20:58:52 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-23 15:27:50 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 16:44:55 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-28 20:58:42 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 20:58:52 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-23 15:27:50 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 16:44:55 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:20:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:20:35 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

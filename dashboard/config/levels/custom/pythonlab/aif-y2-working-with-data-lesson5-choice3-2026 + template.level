@@ -1,0 +1,62 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-07T18:15:37.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import csv\n\nfile_1 = open(\"app_1.csv\")\nreader_1 = csv.DictReader(file_1)\napp_1_times = []\nfor row in reader_1:\n    time = row[\"delivery_time\"]\n    app_1_times.append(time)\nfile_1.close()\n\nfile_2 = open(\"app_2.csv\")\nreader_2 = csv.DictReader(file_2)\napp_2_times = []\nfor row in reader_2:\n    time = row[\"delivery_time\"]\n    app_2_times.append(time)\nfile_2.close()\n\nprint(app_1_times)\nprint(app_2_times)",
+          "folderId": "0",
+          "active": true
+        },
+        "1": {
+          "id": "1",
+          "name": "app_1.csv",
+          "contents": "order,delivery_time\n1,12.4\n2,58.3\n3,18.7\n4,62.1\n5,15.2\n6,52.6\n7,22.9\n8,10.8\n9,60.4\n10,17.5\n11,55.1\n12,14.3\n13,49.8\n14,20.6\n15,13.7",
+          "folderId": "0",
+          "active": false
+        },
+        "2": {
+          "id": "2",
+          "name": "app_2.csv",
+          "contents": "order,delivery_time\n1,39.4\n2,40.8\n3,39.1\n4,41.2\n5,40.5\n6,38.9\n7,40.2\n8,39.7\n9,40.9\n10,38.6\n11,41.1\n12,39.3\n13,40.6\n14,39.8\n15,40.4",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1",
+        "2"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-07 18:20:18 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 18:20:47 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

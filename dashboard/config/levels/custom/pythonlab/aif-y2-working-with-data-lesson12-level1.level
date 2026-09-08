@@ -1,0 +1,33 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-08T00:58:45.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "aif-y2-working-with-data-lesson12 + template",
+    "long_instructions": "To visualize your data, you first need to store it.\r\n\r\n**☑️ Do This:**\r\n- Store your data to `data.csv`.\r\n- If you didn’t collect data, or have data that isn’t usable, consider using one of the other available datasets: `games.csv` or `sleep.csv`.\r\n  - `games.csv` contains data about how much people like video games and board games on a 1 (least) to 5 (most) scale.\r\n  - `sleep.csv` contains data on how many hours of sleep, and how many hours of homework, students reported.\r\n\r\n**💻 Coding Tip**\r\n\r\nRefer to the CSV documentation in your Project Planning Guide.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFWiKRlEU3AhzJ03hqjb+XzLCCXZv1+siyYp+7GIM\nB0Eph5734nRztfGxOzeSh74puCsy4Vs6bxgOrtrqdpV9kfYnatLRLz3EJMm7\nGu6hVG2tLsZgA5/ZNP+Lu3MbnjnI9TCmXqMVeYd5Pf8I4uZV7racPo0nlLgI\n+VAiEej1Mnt9E3Y2I0FYUR63ka6PWYKHdL8bAlFa0JHiWON7JAIAPRqH5/to\nozY8rFCiHHlXOc6FlJbWIMtlXLFgZkQDtIHx0PWhKBujBbUG/kMurs2i5E5O\neth6GtCuTS6B8f0tzhPb/TaqgNoO4lq3S/7d8YkmWxspMdnvp5Bt2UdB9rDk\nJEFQ8Km2AEBWTZv6rPa7cnC5354SeO9T5DgCVI8Qltm//aFqUXXVoV/vC5wh\nEEvXJtBZRd3Al1MnbKZ+O5DxQucfp0jDF7PB6scM6ZZ66ofXG7PXqijAp2AM\ni7s8XOZa/c3+2Eyx2/5erHPcUp37Qg/A3iFDHdHiZKOrs9onZY/tBD5WHlPo\nfTGymqRgCh59cJroIIJ3Azl+sfXkhgD5CDf2Q0FbBo7hQbLqPe+6lqXEEeo7\nVUC853x+fXruiTQQvFfb7Wi2h/iwGEBukZIi2ntf1xhqCyHWuYw/HsWsVXCH\n0jAHXby5KEFfC0kUJF1JwW+k6M2FmgN+hCSSkt+hVdvWkgaTzhRHBSSseHQd\n7lS4+0TJxf/RB2U1Nr4DKvcXF6fKO2lqNwai0HA5IWC8yG2/G2XyK5+lcDpe\n2QXQxpZE7ZMNnL+lDpXYOO31CMgtdfpH7zAXJwDh0qvGKiQo+YlKLg9JG78e\nLcpxyE9YdX6fvcsrjbTRD+sIMc3EB1QmjSpAcL2UEa6vBtikLmYYNIS3cBU4\nrw04rKQivHsLhtV7JV/nZeld861gc7YgTwQaMgyOFUDnkwBiMYKhznAYGh8F\n+YRaxAj/hx1bIV3VT5ARxDWSJ22YyMBUOvJRbk1RocKRgYcudKLez7dNXTwN\ntIEX9iIz+fsY8HohteJXnoOngqncwJ/YhoDMb9TvobzcFwLRwJv071TUjmSH\n6e7msiGd2+icVJk904PWNvhhsyQ7ZU7e+FaSoMsdttIdP+UIZrNW++lmR/G8\nHmpw11rdgyI8kgsUlKYcr2YOrhsQUDaqAnigv0DpcCHaxZNqpUQ1GPRjASWC\nB8z1XWYL6bl5HQK5rHbWHRdJYn++xNVNcA0x2aa2LQGF1ULRpz2GHdeHNkpM\nDj4MM0ghsZQuCTLehfjGoo3OwuJ3f+7moieFcczsxR5I+zYqrAZvBw3d6HU+\nPpvgdqu6fxI2qyP9lOhbrH+Udi2QzCJ/94/cEX3iHS+5pCd1IwOCEs5AYI9Q\nWgTMsh17Lk4A3sdYO9mAhWp6vzftEj40Bq5xkZkAuZUYUvhW7bp/U+k2Qsj0\nzrgwqbGcdm9mMhAah/pljiH2IsyiUwfQhpyAHnBkf9WaaF1XyVO1uMRO8hnq\nbHCWi2hx+oCSvPF61/g6whIjGdimU+7KYuOJbltgjoM8Kn7YiW0vpQ8bCgIW\nxVQF61++UxclP4r0AJPq67XJ34So+P6nqa6brRgmZu9BEw2WyashEGHfYs/b\nXQAQW8guNNZ3/cy0uvKmGldetybAagXeeoU1nlSErHzxIIAPLBYwwdm5DfMG\n7nR5i7C+tQSRZui6gjvMmq9Yg+U=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-08 01:00:50 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-08 01:04:19 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-08 01:04:34 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>
