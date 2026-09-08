@@ -6,7 +6,7 @@
 
 ## Background and Intent
 <!--
-  Background, motivation, and context for this update.
+  Background, motivation, and context for this update. What was the impetus behind this change? How was the decision made to move forward? Who was involved in the process? What is the intended outcome of this update?
 -->
 
 ## Links
