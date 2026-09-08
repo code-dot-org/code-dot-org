@@ -118,12 +118,15 @@ describe('SpriteLab2 filterAnimationsToCode', () => {
       list,
       `setAnimation(sprite, "wizard"); makePlatformBlocks('stone');`
     );
-    expect(out.orderedKeys).toEqual(['a', 'c', 'd']);
+    expect(out.orderedKeys).toEqual(['a', 'd']);
   });
 
-  it('always keeps backgrounds', () => {
-    const out = filterAnimationsToCode(list, '');
-    expect(out.orderedKeys).toEqual(['c']);
+  it('scopes backgrounds like any other image', () => {
+    expect(filterAnimationsToCode(list, '').orderedKeys).toEqual([]);
+    expect(
+      filterAnimationsToCode(list, `setBackgroundImageAs("forest");`)
+        .orderedKeys
+    ).toEqual(['c']);
   });
 
   it('leaves the given list untouched', () => {

@@ -221,6 +221,19 @@ export default class SpriteLab2Engine extends SpriteLab {
         }
       });
     };
+    // Backgrounds are scene-scoped like costumes, so the same escape hatch:
+    // a cold name applies when its decode lands instead of silently no-oping.
+    const baseSetBackgroundImageAs = library.commands.setBackgroundImageAs;
+    library.commands.setBackgroundImageAs = function (imageName) {
+      if (engine.p5Wrapper.preloadedSprites?.[imageName]) {
+        return baseSetBackgroundImageAs.call(this, imageName);
+      }
+      engine.decodeAnimationOnDemand_(imageName).then(found => {
+        if (found) {
+          baseSetBackgroundImageAs.call(this, imageName);
+        }
+      });
+    };
     if (this.usesPlatformPhysics_) {
       // Sized per SCENE, not per level: one project holds both a platformer
       // scene (one-cell sprites) and a story scene (large characters).

@@ -200,25 +200,24 @@ export function animationNames(list: RuntimeAnimationList): Set<string> {
 /**
  * The list restricted to animations a program can put on stage: those whose
  * name appears as a quoted literal in the compiled code (block fields
- * compile to literals — costumes, backgrounds and world spawns alike), plus
- * every background (scene code sets backgrounds the prelude may not name).
- * A dynamically-built name misses here and decodes on demand instead.
+ * compile to literals — costumes, backgrounds and world spawns alike).
+ *
+ * This scan is complete only because the lab's block set keeps image-name
+ * parameters as literal fields; a block that computes an image name at
+ * runtime breaks scene-scoping for every image it can reach. The on-demand
+ * decode wrappers in SpriteLab2Engine are the safety net for such a name,
+ * not a license to add one.
  */
 export function filterAnimationsToCode(
   list: RuntimeAnimationList,
   code: string
 ): RuntimeAnimationList {
   const orderedKeys = (list.orderedKeys || []).filter(key => {
-    const props = list.propsByKey[key];
-    const name = props?.name;
+    const name = list.propsByKey[key]?.name;
     if (!name) {
       return false;
     }
-    return (
-      (props.categories || []).includes(BACKGROUNDS_CATEGORY) ||
-      code.includes(`"${name}"`) ||
-      code.includes(`'${name}'`)
-    );
+    return code.includes(`"${name}"`) || code.includes(`'${name}'`);
   });
   const propsByKey: RuntimeAnimationList['propsByKey'] = {};
   orderedKeys.forEach(key => {
