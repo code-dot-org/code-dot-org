@@ -1,0 +1,39 @@
+{
+  "name": "a straight-line conversation, ending in a code proposal",
+  "turns": [
+    {
+      "delayMs": 400,
+      "reply": {
+        "text": "A loop repeats a set of instructions. What is the part of your program you find yourself writing over and over?"
+      }
+    },
+    {
+      "delayMs": 600,
+      "reply": {
+        "text": "Good — the three lines that draw a circle. Those can go in a loop.\n\nWant me to make that change?"
+      }
+    },
+    {
+      "when": {"contains": "yes"},
+      "delayMs": 900,
+      "reply": {
+        "text": "I moved the drawing into a loop that runs five times.",
+        "structured": {
+          "answer": {
+            "answerType": "buildJavaScript",
+            "explanation": "The three drawing lines now run inside a loop, so changing how many circles you get is a matter of changing one number.",
+            "code": [
+              {
+                "filename": "main.js",
+                "sourceCode": "for (let i = 0; i < 5; i++) {\n  circle(x, y, 10);\n  x = x + 20;\n}\n"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "fallback": {
+    "text": "I can help with the code in this project — try asking about the part you are stuck on."
+  }
+}

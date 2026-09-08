@@ -1,0 +1,31 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  gap: 0.5rem;
+  background: var(--background-neutral-primary);
+}
+
+.conversation {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 0.75rem;
+}
+
+.waiting {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.foot {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 0 0 auto;
+  padding: 0 0.75rem 0.75rem;
+}

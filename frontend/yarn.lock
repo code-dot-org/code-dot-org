@@ -1728,6 +1728,53 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@code-dot-org/aitutor@workspace:packages/aitutor":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/aitutor@workspace:packages/aitutor"
+  dependencies:
+    "@code-dot-org/component-library": "workspace:*"
+    "@code-dot-org/component-library-styles": "workspace:*"
+    "@code-dot-org/core": "workspace:*"
+    "@code-dot-org/lint-config": "workspace:*"
+    "@code-dot-org/markdown": "workspace:*"
+    "@emotion/react": "catalog:"
+    "@emotion/styled": "catalog:"
+    "@mui/material": "catalog:"
+    "@reduxjs/toolkit": "catalog:"
+    "@testing-library/dom": "catalog:"
+    "@testing-library/jest-dom": "catalog:"
+    "@testing-library/react": "catalog:"
+    "@types/node": "catalog:"
+    "@vitejs/plugin-react": "catalog:"
+    classnames: "catalog:"
+    eslint: "catalog:"
+    eslint-plugin-react-hooks: "catalog:"
+    eslint-plugin-react-refresh: "catalog:"
+    jsdom: "catalog:"
+    prettier: "catalog:"
+    react: "catalog:"
+    react-dom: "catalog:"
+    react-redux: "catalog:"
+    sass: "npm:^1.85.0"
+    stylelint: "catalog:"
+    typescript: "catalog:"
+    vite: "catalog:"
+    vite-plugin-dts: "catalog:"
+    vite-plugin-externalize-deps: "catalog:"
+    vite-plugin-lib-inject-css: "npm:^2.2.2"
+    vitest: "catalog:"
+  peerDependencies:
+    "@code-dot-org/core": "workspace:*"
+    "@emotion/react": ^11.0.0
+    "@emotion/styled": ^11.0.0
+    "@mui/material": ^7.0.0
+    "@reduxjs/toolkit": ^2.0.0
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+    react-redux: ^9.0.0
+  languageName: unknown
+  linkType: soft
+
 "@code-dot-org/changelogs@workspace:*, @code-dot-org/changelogs@workspace:packages/changelogs":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/changelogs@workspace:packages/changelogs"
@@ -2075,7 +2122,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@code-dot-org/markdown@workspace:packages/markdown":
+"@code-dot-org/markdown@workspace:*, @code-dot-org/markdown@workspace:packages/markdown":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/markdown@workspace:packages/markdown"
   dependencies:
