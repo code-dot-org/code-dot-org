@@ -707,10 +707,11 @@ export function deleteAnimation(
   };
 }
 
-// Lab2 stores each loaded image as an object URL — a ~30-byte handle onto
-// the fetched Blob — instead of a base64 dataURI string, which put roughly
-// 1.3 bytes on the JS heap per image byte. Legacy labs keep dataURIs
-// (Piskel and the classic tab read them). See SpriteLab2Engine.
+// Sprite Lab in Lab2 stores each loaded image as an object URL — a
+// ~30-byte handle onto the fetched Blob — instead of a base64 dataURI
+// string, which put roughly 1.3 bytes on the JS heap per image byte.
+// Legacy labs keep dataURIs (Piskel and the classic tab read them). See
+// SpriteLab2Engine.
 let storeLoadedImagesAsObjectUrls = false;
 export function setStoreLoadedImagesAsObjectUrls(enable) {
   storeLoadedImagesAsObjectUrls = enable;
