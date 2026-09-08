@@ -1,6 +1,10 @@
+$chip-height: 41px;
+// Accounts for 1px border on each side.
+$icon-height: $chip-height - 2px;
+
 .backpackFileChip {
   display: flex;
-  height: 52px;
+  height: $chip-height;
   align-items: flex-start;
   border-radius: var(--border-radius-br-s, 4px);
   border: 1px solid var(--borders-neutral-primary);
@@ -11,8 +15,8 @@
 
 .fileIconContainer {
   display: flex;
-  width: 50px;
-  height: 50px;
+  width: $icon-height;
+  height: $icon-height;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -61,8 +65,8 @@
 }
 
 .filePreview {
-  width: 50px;
-  height: 50px;
+  width: $icon-height;
+  height: $icon-height;
   border-radius: var(--border-radius-br-s, 4px) 0 0 var(--border-radius-br-s, 4px);
   background: var(--background-neutral-primary);
 }

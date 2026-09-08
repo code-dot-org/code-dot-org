@@ -59,12 +59,6 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
 }) => {
   const fileExtension = fileName.split('.').pop()?.toLowerCase();
   const idSuffix = appType ? `-${appType}` : '';
-  const fileDetailText = [
-    fileExtension?.toUpperCase(),
-    sourceDisplayName && `(Saved from ${sourceDisplayName})`,
-  ]
-    .filter(Boolean)
-    .join(' ');
   const fileIcon = useMemo(
     () =>
       getFileIconNameAndStyle({
@@ -230,13 +224,6 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
           gutterBottom
         >
           <Typography variant="strong">{fileName}</Typography>
-        </Typography>
-        <Typography
-          className={moduleStyles.infoText}
-          variant="body4"
-          gutterBottom
-        >
-          {fileDetailText}
         </Typography>
       </div>
       <div className={moduleStyles.fileActions}>
