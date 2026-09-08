@@ -1,0 +1,36 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-07T23:13:55.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Everyday vs. Celebratory Foods",
+    "project_template_level_name": "aif-y2-working-with-data-lesson8-choice3-2026 + template",
+    "long_instructions": "**☑️ Do This:**\r\n- Read the documentation given to you.\r\n- Improve your plot’s accessibility. Update your plot’s…\r\n  - Color\r\n  - Markers\r\n",
+    "bubble_choice_description": "Some dishes are made every day. Others are special—made for holidays, birthdays, and other celebrations. How else do they differ?",
+    "thumbnail_url": "https://images.code.org/1bf600a8a19106107d02f9c5b8cae6c5-meal.jpg",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMoXwe0JjAp8h7M6\npLWXN95/pKN4XMqoHEvnBEnna6O6DYBauhfHULZnKEm9IdVtV0DLMwvK9TJG\nEfbvTIEBBt5zRn7iXcQYNPgabADHop0R/FvKMqKKT1UKSmd/cjCuMgW6n3cV\n92YPzcjpYc2Q9HVKUIIQ8RLcdi5RBFmCGOAcnF11D3cEiK8DhMFbnvbEiSpc\nC+hsjSl7/gtgSOIz1kM4/10R303r+xE/Kk7hq27FmtyYEfiD9uTWb0Os/u3Y\nD4MpNOy2LzOWdwfWMd17j3qc/CKSqp3y8dk7hYA/ZaON0mUwEMEPNu/LTvFv\ns0/5HGIcqMlFLh71Vpl0Dwm/1xnQ7Q+DkLRkXWzg9lRZfQJNlzznG+qY7V6a\nrOojBc5AX1Sg1STT0/M6mSiP/+OJUdicJ291UoYzTtu520BX0INESyjBPLST\nxSwXM+W6cLbpZ+9k8menTDIa1/fErkrysiRr8Q1foORYo2xGABDx9EcgjWTe\ny7uaeO6t3chdmKMWK2b1Cn2UhOCHqNKrYMJXVr5vpr88qQPck0LEYAAVAwaY\nwTDznWG5Zh/2DOHW0wzBd8TBVjZ0BNJbPsTDF9SYX4pbW++Fa3nV8kRKFxZx\nJmeXFLIyyaI3Kgagd92r2ZcLiTGJgId8VTKR46L2Xsb51/ldz59leJ1ZZWqv\nVUf6Khn6Vnz/ULO6QXy74fKb3Hh5KVGDhNBaFBX3580UYMh3lfA8FsGQLglV\nnPGqBI27Hb048sfISXbG+s5UvmsBgjCtARad+vSanUQuIrCpQYZlaZ879Cdy\nSsNlIu1Jm30HfGxF6UijQaUpbz4X6UuFGC9Z9GAwTbl7E/AguHWfRkQgp7B2\neF3nAryFBnJxAIaAgM8CycArs2Md09XSKBnKcbevagJeVT3tz1lVGbNvFKeF\nMbjIWXpoNiIIOI3KFZjNaw2Wd0Be3KpJaobecF2xRCel6jXTqsDxQqEjrz7Q\nLWJkJWO7mg1Ynm4kqfj1/F4QOA+81fNq6VkshQ5myWvJvyu3g77UCVZ7XKr7\nkaMYXgGelyJ6d0VJO5dOxkHOauCux4Os/XSPUNo6U51KVOwaDM0QcRmw4sxs\noIOCGDo151L1OGQVStMQhI5ceCaZNRwMsCNO0fPUoUQbU83k/pYyUgwG9+nA\narkklROEa1u6hX4OWXnb+/EC/s6w5ErYRJXL0dQRPkmFfh/5/HKohidkoflb\nFk8=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-07 23:18:49 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 23:19:02 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 23:21:11 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

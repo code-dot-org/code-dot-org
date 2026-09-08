@@ -1,0 +1,59 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-07T16:26:04.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**Has someone guessed your password?**\r\n\r\nOnly rarely does someone forget their password. One sign of a hacker is a large number of incorrect password attempts. Use Python to analyze an account’s login history.\r\n\r\n**☑️ Do This:**\r\n- Count the number of \"Correct\" and \"Incorrect\" password attempts in the \"status\" column of `data.csv`.\r\n- Interpret the data: Is this account safe? Be ready to share your thoughts on the next level.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import csv\n\nfile = open(\"data.csv\")\nreader = csv.DictReader(file)\n\ncorrect = 0\nincorrect = 0\n\n# TODO: Count the number of correct and incorrect password attempts\n\nprint(f\"Correct: {correct}\")\nprint(f\"Incorrect: {incorrect}\")\n\nfile.close()",
+          "folderId": "0",
+          "active": true
+        },
+        "1": {
+          "id": "1",
+          "name": "data.csv",
+          "contents": "time,status\n7:12 AM,Correct\n11:48 AM,Correct\n1:22 PM,Incorrect\n1:22 PM,Incorrect\n1:22 PM,Incorrect\n1:22 PM,Incorrect\n1:22 PM,Incorrect\n1:23 PM,Incorrect\n1:23 PM,Incorrect\n1:23 PM,Incorrect\n1:23 PM,Incorrect\n1:23 PM,Incorrect\n1:23 PM,Incorrect\n1:24 PM,Incorrect\n1:24 PM,Incorrect\n1:24 PM,Incorrect\n1:24 PM,Incorrect\n1:24 PM,Incorrect\n1:25 PM,Incorrect\n1:25 PM,Incorrect\n1:25 PM,Incorrect\n1:25 PM,Incorrect\n1:25 PM,Incorrect\n1:25 PM,Incorrect\n1:26 PM,Incorrect\n1:26 PM,Incorrect\n1:26 PM,Incorrect\n1:26 PM,Incorrect\n1:26 PM,Incorrect\n1:27 PM,Incorrect\n1:27 PM,Incorrect\n1:27 PM,Incorrect\n1:27 PM,Incorrect\n1:27 PM,Incorrect\n1:27 PM,Incorrect\n1:28 PM,Incorrect\n1:28 PM,Incorrect\n1:28 PM,Incorrect\n1:28 PM,Incorrect\n1:28 PM,Incorrect\n1:29 PM,Incorrect\n1:29 PM,Incorrect\n1:29 PM,Incorrect\n1:29 PM,Incorrect\n1:30 PM,Incorrect\n1:30 PM,Incorrect\n1:30 PM,Incorrect\n1:30 PM,Incorrect\n1:31 PM,Correct\n1:47 PM,Correct",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFX9JcY0EP21afMHISj6uVQg4g+59OIzUb4pa2W4J\nrpgF4fJi2rLr0nr8WnSVq0386eA0D+Fr2XW/3W5uJDibTY7xdHbliOmmO+EN\nfFPB+far3ZX0Lcz5zvw12v6kyTgm4SRSX403ybZHSEMP++t3zaRR+P8IejXc\nXc/XGD9o7bNzIDKLnuf/Zm+iPQ5KSikPIT4V0HpKsjyybncpo2b/4wQU1H4j\no+hjYaLvPTnnIQh6BZftp6lT6xLCIKCozQW6yRMonJJydv2O0O4tu5wJL4Fr\nWvR+SRvgXBWefBUAoAsZ/nM62rEdoWoemiBJN6vXtrUmxM8ofYM9P/ajs9VV\nLkRSA2M2MsmKszXBemqF+BwsuXaoTHd85YNhA2yWfZA3N8oLnsZKLX3vivvQ\n8wCY8tQQMnCoivWyQl2nD/kYFPra4HYJDaWtUdGQUT53Vo6T7TwIrREn5kFK\nTNG/BKApaZzlJ1Z6i8coyjOivqF465mpSLX+YESa/Gpkyhe0FFVe61zSV6iA\nbSEX30jZz8CTkEyNOrY6OLbosjneDvpDkCiW+RNkxA95odVHI4W0ENJSorcb\nsPTY9X3m40cpzvOu4HRmF3JtnEmiWkwDJaXEGz8oUk1Ei9KF6Jj+jXfyePef\nDgS/YxVXmw5JRX8ubjKJs4xvaQvWJI0J738Ujh1O7kzWMF4xnwx5Q4DQH/0l\n8X9nZTLcibw7UxDUzkzBlZJYU8UYksdlVpeXDjKwBL/mftXX+iorh7pd46RA\n3fp6m/ZIv8YhosCVE+UtzqsskKTUj8JGFX3pq49+QoEzrxQVQtXf9ctseq4Q\nrAqVHm38aRnej13KGj2CnykM3TpNbgyK63RtOkkD9AZwV5bv+E1opWNPUP97\nWeK2MfEaKBdX5sPuvWvy2o0bYBQuLvhGdYDftLCTg5m4wqHQQct7yjgXmV8R\nWrS2h0Bcp0NW1muJUOu8Ir4DfyrXKef164ehUz191o09O3hZAZlZsxnWp6mw\nIBl4vooSrSgVOaQODEKxMwyoRHSDZ3j3c7PXgaYiEc0XQAlhMS7oy1sSxjP9\negUbI1XvxDTYH5/G7WvhgpPIh6jioPqGRlyqk1KUdiJyXD0jNXCqZTztkvfT\nF4wOGRGdPjCtu+fe4SMAWrljSseWK8y6yiODOsuY0oMsoBZkFASP7MNjQ8GT\nI3Mw6kN6Q6HgBpNoOxKNazpEXfrLU96+B/kWbiqmnfOVFo9A7ezLJEP4BQSr\nn2v0I+7cAsGJKjPGcU+/wkTUVDJ+uf9CkzOa567wKA/dkfJGfA+UZUpN0pZD\nT3JHCJZNkChp1iDeVEet2CFqfWhsP+xGrzOsMmm6W/DNbFcpap85PgGQSYeF\n8F2wkuAjO5I88itGcg1dPna23cyyl73MlTZ6taKuuIgjzBoIG7ruKjNFcXhW\nAefsSlq8exDojXilLC2+fbsmWODJH698IO6faLxWbvjINGZIxGsqW7yzxjMx\nBrDc40y1OtU2Wye4qDE+ydks4VXuy+6AJXOO9nbLw1nL+EJfg6Z3QOwOyle7\nOvg9W3NEoTDUGc5JnosR5z0x1hEt2ofCg1c5dD1RvwmlqxqM/aULmJTD1t5U\nmJ2DRYAD/kIqLuut46XI28yDS/29jPERy3BrdHlAiF5QdQUo6w9pW6cSS3rT\nVeNchS74Stz95tFgTBm3nKI92wP4gYJ8RfTy7OigdxYWzUpSS0kWxFEpilqJ\nS3VfRc9pTZqv7oP5Bf9c14YVocuu5jjKzs13w3FX6UDRLPiTs5E7wX4F7j8S\n08qgrJbnIeNMz3MLvYXYzmIRe8mOOadcx8jstvhPO4D7zGqLbk36jx/7zY+R\nYlulpEl46YifGe9HW8UzaH8pmNghcMtzSUp1799ZxV8fHmE70gX0KGBHS9Hl\n23pR4y5L7YHO+88GheGEPg==\n",
+    "display_name": "Finding Hackers",
+    "thumbnail_url": "https://images.code.org/2c942eb6172054c84004b96823e43451-hacker.jpg",
+    "bubble_choice_description": "Analyze account password logs."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-07 16:35:38 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:36:37 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:36:45 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:39:18 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:46:18 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:47:35 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

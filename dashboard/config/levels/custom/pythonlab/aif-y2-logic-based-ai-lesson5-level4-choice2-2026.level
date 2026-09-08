@@ -25,7 +25,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "def print_recommendation(movie):\n    # TODO 1: Fill in the message to recommend the movie\n    print(f\"\")\n\nprint_recommendation(\"Wonder Woman\")\nprint_recommendation(\"Interstellar\")\n\n# TODO 2: Print a recommendation for one more movie",
+          "contents": "def print_recommendation(movie):\n  # TODO 1: Fill in the message to recommend the movie\n  print(f\"\")\n\nprint_recommendation(\"Wonder Woman\")\nprint_recommendation(\"Interstellar\")\n\n# TODO 2: Print a recommendation for one more movie",
           "folderId": "0",
           "active": true
         }
@@ -36,9 +36,9 @@
         "0"
       ]
     },
-    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMo9WWA4pmkVPbNE\nnqI6qjg/QByOdAk6McmErLtcyfruE+jlgtKZ6cOdGQue58sHSIMyzY7cjTEb\n0V8O8bwiDObkhU6nOFG4/XfuILanjajfdk8gSHh4a2yMqkvtPBziPj7ReVcC\no082rqwy38si6nWLDl5LDqBsRt0xJHEj7YaCmTF5VD2ozlLr4/f0PcGYKShT\nt9TUv1RFoDxdWFyLlbS+kX6PVyNPWT7BOCM6YmZhCdmlDmyLMr2piKsAxD2n\nuPbea25EUjqbYEokvqqxF220hudAmJTx0syx4QtJCpnOxh0CVXheNN1Sp34H\nKaDGy7zmFeL4bCSTY2QZzgzyynNu1R+Z4N5Qlej4aEUuNNAIVYK85V+VGiZ1\nxaIH/dLsoWQ=\n"
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMo2FovOJAwFYJpT\nMk8AAOAhtrgdIrZb6eKb8UlD6tEcR0OR26D1vQVaEybLRhoIBof2u3k/TMos\ntRDwuP9NLJFnvTxktruBqY1brps0CEZ0AWu5L0fuwB4ET3BKvo5KSmqhhp6i\nKDCdMFUpA2qKfQ9gj74oFbjusOgZdFMePIWZg5OMTczrkN7vU94P6Sr/hXJa\nXlV7s3kw25dTvosREi0zKfIjfA032hHtQDZWD1Kunt8aFU1Ntwr9pXBPYS9/\nfJi7P77MwqGe2jXd+2mPhTO7eCL1ftvQK25lYwF8AXBdcAQ6gvN9ncAJlz8J\nv331hVeC76Q5thWOqk62whQ0DIOgNv3rJhxlVjfuSiTPCv5+Ig==\n"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-28 02:39:09 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 14:57:51 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-28 02:39:09 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 14:57:51 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:07:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:07:49 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

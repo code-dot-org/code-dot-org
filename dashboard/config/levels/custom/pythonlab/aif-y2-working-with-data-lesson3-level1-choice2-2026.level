@@ -1,0 +1,52 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-07T15:00:56.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Astronomy",
+    "long_instructions": "For a science class, you’ve been asked to find out how long it takes for planets to orbit the Sun based on how far away they are. You have a file with each planet's average distance from the sun (in millions of kilometers) and the length of its year in days. \r\n\r\n**☑️ Do This:**\r\n\r\n1. Import the `csv` module.\r\n2. Call the `open` function to open the `planets.csv` file.\r\n3. Read the file with `csv.DictReader`.\r\n4. Loop through the data. The `distance` value is already printed for you. Add a line to print the `days` value too. Compare your printed output to the CSV file. Do the numbers match?\r\n5. Close the file.\r\n",
+    "bubble_choice_description": "Read a dataset about planets in the solar system.",
+    "thumbnail_url": "https://images.code.org/0c1e6f6f9fd85fc8ab345f5a022e5148-planet.png",
+    "offer_browser_tts": "false",
+    "submittable": "true",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# TODO 1: Import the csv module\n\n# TODO 2: Open planets.csv\n\n# TODO 3: Read the file with csv.DictReader\n\nfor row in reader:\n  distance = row[\"distance\"] \n  print(f\"Planet is {distance} million km from the sun.\")\n  # TODO 4: Print the days value too \n\n#TODO 5: Close the file",
+          "folderId": "0",
+          "active": true
+        },
+        "1": {
+          "id": "1",
+          "name": "planets.csv",
+          "contents": "distance,days\n57,88\n108,225\n149,365\n228,687\n778,4333\n1432,10759\n2867,30687\n4515,60190",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFX9JcY0EP21afMHISj6uVQg4g+59OIzUb4pa2W4J\nrpgF4fJi2rLr0nr8WnSVq0386eA0D+Fr2XW/3W5uJDibTY4K/tKtyYdAcjTD\nfzCTbA9QGW1W6zVbaYhqvmCeOuLC5A3cAJ6HE0szKFDgwr1aDjYEcYWV26OK\n2qcsu1+BVZg4qBkTt7Y7mV7GNXbCYWkuOFHuaN9tjkpdB6ogXYTbC8Ev0ng8\n9qIDiyrs5wVRBy4OHRxrsNs23wHOV/oXOYQ9Y/SFX02cvXjAJZf4su2sMKfZ\nv1ZrOIL5XiUq54uvZnQsfiPlOrYvgNnK+5lFG/tbVb2EXudDdhNvsP1pum68\nkkq2BxyZegys0rZ5abFww4VYIEDpH+ziuf5F4lu1/BmGXPJij9+oWtxF+UV7\nZg05S4S3ILoEcFoRQJ1cl4hu6mbebR6T9b6xH+eOP/X1RLu7XX2kVavR00g0\nbsiS9MqkkhAg+3FKeuiBnc84uKsBv3Wb+L7ycJtFaYlOhYehq7nMpjUcJ2Zp\naIEW+YGMt2/93VIKN6mnk1iqBHeLH/YXgs217fYy+ZgwzP6BIfOv9nV5HuKO\nCL/6T8soAzmmgen5uwaqu8YNwe7MECwHu4vy1sg3JN7x5Y+Kx8SSKaxdShuF\nuKoKhs170zVrMBcCK5BaQfT/xFmOADOJQPM2O6WsLZ2+Fwe3+Pr8ZU6r4yWK\nUpahsdO8wcG0aI6TSGDEYkNHDmZscOpIqlPBs49P9eMtucqpr9pVedraKtMs\n6PTbF0lHB5YrcE4oiUMP99lnMct2lFotcpSF0jt9CB9iTDJonnvC\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-07 15:01:59 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 15:09:44 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>
