@@ -15,13 +15,11 @@ export interface QuizLevelProperties extends LevelProperties {
   displayName?: string;
   customIntroText?: string;
   timeLimitMinutes?: number;
-  // boolean setting arrives as the literal string "true"/"false", see toBool below.
-  showCorrectness?: boolean | string;
-  revealAnswerExplanation?: boolean | string;
-  showIntroScreen?: boolean | string;
+  showCorrectness?: boolean;
+  revealAnswerExplanation?: boolean;
+  showIntroScreen?: boolean;
   purpose?: string;
-  allowMultipleAttempts?: boolean | string;
+  allowMultipleAttempts?: boolean;
 }
 
-export const toBool = (value: boolean | string | undefined) =>
-  value === true || value === 'true';
+export const toBool = (value: boolean | undefined) => value ?? false;
