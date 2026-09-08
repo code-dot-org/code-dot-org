@@ -4,6 +4,7 @@ import {
   SUPPORTED_AUDIO_EXTENSIONS,
   SUPPORTED_IMAGE_EXTENSIONS,
 } from '@cdo/apps/lab2/constants';
+import {getFileExtension} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 
 const BRAND_ICON_CLASS = 'fa-brands';
 
@@ -91,11 +92,6 @@ const FILE_CATEGORIES: FileCategory[] = [
 ];
 
 const OTHER_CATEGORY = FILE_CATEGORIES[FILE_CATEGORIES.length - 1];
-
-function getFileExtension(fileName: string) {
-  const lastDot = fileName.lastIndexOf('.');
-  return lastDot === -1 ? '' : fileName.slice(lastDot + 1).toLowerCase();
-}
 
 export function getFileCategory(fileName: string): FileCategory {
   const fileExtension = getFileExtension(fileName);
