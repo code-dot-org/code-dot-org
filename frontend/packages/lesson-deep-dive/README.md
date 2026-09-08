@@ -118,6 +118,51 @@ reading `script[data-lessondeepdivedata]`. Rebuilding it from
 `LessonsController#tutor` in `rails runner` is easy to get subtly wrong —
 `unitLabel` comes from the unit-group context, not the lesson.
 
+### Teacher gallery
+
+`gallery.html` is a second dev entry, alongside the student flow at
+`index.html`. It renders the Tutor+ project gallery — the teacher-facing
+view of submitted challenge work — out of
+`apps/src/aiTutor/views/gallery/ChallengeGallery`, the same way `main.tsx`
+renders the student flow. Both modes work the same way as above:
+
+```bash
+yarn dev                        # http://localhost-studio.code.org:5173/gallery.html
+VITE_API_MODE=msw yarn dev      # http://localhost:5173/gallery.html
+```
+
+`?viewerRole=teacher|owner|peer` (default `teacher`) picks the project
+page's layout when msw mode serves `GET /challenge_responses/:id`: teacher
+gets the AI assessment panel, owner gets just their feedback, peer gets
+neither. In dashboard mode this is decided server-side from who is signed
+in, not by the query string.
+
+Unlike the student flow's page payload, the gallery's bootstrap comes from a
+real JSON endpoint: `gallery.tsx` fetches
+`GET /api/v1/scripts/:script/lessons/:position/tutor_gallery_data` before
+mounting `ChallengeGallery`, in both modes. `?script=` (default `aif1-2025`)
+and `?lessonPosition=` (default `1`) pick which lesson dashboard mode
+bootstraps from; msw mode ignores both and always serves `TUTOR_GALLERY_DATA`.
+
+Dashboard mode has one prerequisite beyond the student flow's: sign in as a
+**teacher** whose section has students with final challenge submissions. If
+the endpoint fails — the local Rails predates it, the script/lesson doesn't
+resolve, or the session is signed out — the shell prints the failure in
+place of the gallery rather than rendering a fixture that would lie about
+the data. The msw fixture's unit and section ids are invented, not
+harvested, and almost certainly do not match a real teacher's —
+`GET /challenge_responses?section_id=` authorizes against
+`Section.find(params[:section_id])`, so a mismatched id 403s in dashboard
+mode. Regenerate it by loading `/s/:script/lessons/:position/tutor/gallery`
+as that teacher and reading `script[data-tutorgallerydata]`.
+
+`evaluation_result` only exists on a response once the async AI evaluation
+job has run (`EvaluateChallengeResponseJob`), which nothing in the dev shell
+or a fresh dashboard seed triggers on its own. The msw teacher fixture is
+the reliable way to see the scored AI Assessment panel; hitting it in
+dashboard mode means finding or waiting on a response the job has already
+evaluated.
+
 ### Styling, and what it is not
 
 The shell uses the same foundation as every other package dev host: MUI's
