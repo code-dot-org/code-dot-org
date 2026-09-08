@@ -12,6 +12,7 @@ import {
   forEach,
   forEachKey,
   keyboardArrived,
+  keyDown,
   moduleFor,
   no,
   not,
@@ -112,6 +113,7 @@ const other = rule.local('other', 'Actor');
 const ranked = rule.local('ranked', 'Actor');
 const candidate = rule.local('candidate', 'Actor');
 const chosen = rule.local('chosen', 'Actor');
+const previous = rule.local('previous', 'Actor');
 const passed = rule.local('passed', 'Boolean');
 const found = rule.local('found', 'Boolean');
 const key = rule.local('key', 'String');
@@ -207,25 +209,29 @@ const somethingFocused = () =>
     }),
   );
 
-/** The front of the route takes it — which is what arriving at the game is. */
-const focusFirst = () => [
-  when([
-    [
-      anyOf(allWithTrait(rule.traitRef('Can Be Focused'))),
-      [chosen.set(firstActor(inOrder())), takeFocus({}, chosen.get())],
-    ],
-  ]),
-];
+/**
+ * `focus the first control` — the front of the route takes it.
+ *
+ * What arriving at the game is, and what a game says when it opens a form.
+ * Does nothing in a world with nothing focusable in it, which is most worlds.
+ */
+const focusFirst = rule.block({
+  returns: 'none',
+  description:
+    'Bring the keyboard to the first control in the tab order. Does nothing if there is nothing that can hold it.',
+  say: ['focus the first control'],
+  body: () => [
+    when([
+      [
+        anyOf(allWithTrait(rule.traitRef('Can Be Focused'))),
+        [chosen.set(firstActor(inOrder())), takeFocus({}, chosen.get())],
+      ],
+    ]),
+  ],
+});
 
 /**
- * Tab, Escape, and arriving.
- *
- * WHY THE TAB BRANCH IS GUARDED. While nothing here holds the focus, Tab is
- * the PAGE's: the game does not capture it and must not act on it either, or a
- * player who pressed Escape to leave would be pulled straight back in. The two
- * halves have to agree, and this is the half that is easy to forget, because a
- * rule that grabbed Tab always would look right in every test that never tried
- * to leave.
+ * `focus the next control` — what Tab does, said as a block.
  *
  * WHY THE WALK RATHER THAN A SORT KEY. "The next one" is a question about
  * position in a list, and the list is only in order once — so it is ordered
@@ -234,39 +240,104 @@ const focusFirst = () => [
  * placement into one number, and would be wrong the first time two actors
  * shared both.
  */
+const focusNext = rule.block({
+  returns: 'none',
+  description:
+    'Move the keyboard to the next control in the tab order, wrapping round to the first.',
+  say: ['focus the next control'],
+  body: () => [
+    doc(
+      'Walk the route in order. `passed` goes true at the actor that has the focus, so the very next one is the answer — and the loop stops there rather than walking the rest of a form to no purpose.',
+    ),
+    passed.set(no()),
+    found.set(no()),
+    forEach(candidate, {
+      from: inOrder(),
+      body: [
+        when([
+          [
+            passed.get(),
+            [chosen.set(candidate.get()), found.set(yes()), stopLoop()],
+          ],
+          [focused.of(candidate.get()), [passed.set(yes())]],
+        ]),
+      ],
+    }),
+    note('Nothing after the last one, so the route wraps to the front.'),
+    when([[not(found.get()), [focusFirst()]]], [takeFocus({}, chosen.get())]),
+  ],
+});
+
+/**
+ * `focus the previous control` — Shift+Tab, and a Back button.
+ *
+ * IT WALKS FORWARDS TOO, remembering the one before. Ordering the list the
+ * other way round would not do it: the sort is stable, so reversing the KEY
+ * leaves actors that share one in the order they were added, and a form where
+ * nobody set `tab order` would run backwards exactly as it runs forwards.
+ *
+ * AND IT DOES NOT STOP EARLY, which is the difference from the walk above. The
+ * wrap here is to the LAST control, and the only way to know which that is is
+ * to reach the end — so `previous` is left holding it, and the case where the
+ * focus is on the very first control falls out of the same line.
+ */
+const focusPrevious = rule.block({
+  returns: 'none',
+  description:
+    'Move the keyboard to the previous control in the tab order, wrapping round to the last.',
+  say: ['focus the previous control'],
+  body: () => [
+    doc(
+      'Walk the route in order, one behind. When the walk reaches the actor holding the focus, the one before it is the answer; when it reaches the end without having found one, `previous` is holding the last control, which is where the route wraps to.',
+    ),
+    found.set(no()),
+    passed.set(no()),
+    forEach(candidate, {
+      from: inOrder(),
+      body: [
+        when([
+          [
+            both(
+              focused.of(candidate.get()),
+              both(passed.get(), not(found.get())),
+            ),
+            [chosen.set(previous.get()), found.set(yes())],
+          ],
+        ]),
+        previous.set(candidate.get()),
+        note('`passed` here means only that there IS one behind us.'),
+        passed.set(yes()),
+      ],
+    }),
+    when([
+      [found.get(), [takeFocus({}, chosen.get())]],
+      [passed.get(), [takeFocus({}, previous.get())]],
+    ]),
+  ],
+});
+
+/**
+ * Tab, Shift+Tab, Escape, and arriving.
+ *
+ * WHY THE TAB BRANCH IS GUARDED. While nothing here holds the focus, Tab is
+ * the PAGE's: the game does not capture it and must not act on it either, or a
+ * player who pressed Escape to leave would be pulled straight back in. The two
+ * halves have to agree, and this is the half that is easy to forget, because a
+ * rule that grabbed Tab always would look right in every test that never tried
+ * to leave.
+ */
 rule.step('focusKeys', 'sense', [
   doc(
-    'Three moments, and they are easy to confuse. Arriving at the game brings the focus to the first control. Tab moves it on, but only while something already has it — otherwise the key belongs to the page and carries the player out. Escape drops it, which is what hands the key back.',
+    'Three moments, and they are easy to confuse. Arriving at the game brings the focus to the first control. Tab moves it on — backwards with shift held — but only while something already has it, since otherwise the key belongs to the page and carries the player out. Escape drops it, which is what hands the key back.',
   ),
   note('Coming in. Already holding it? Then this is a return, not an arrival.'),
-  when([[both(keyboardArrived(), not(somethingFocused())), focusFirst()]]),
+  when([[both(keyboardArrived(), not(somethingFocused())), [focusFirst()]]]),
   forEachKey('PRESSED', key, [
     when([
       [equals(key.get(), choice(KEY, 'escape')), [dropFocus()]],
       [
         both(equals(key.get(), choice(KEY, 'tab')), somethingFocused()),
-        [
-          passed.set(no()),
-          found.set(no()),
-          doc(
-            'Walk the route in order. `passed` goes true at the actor that has the focus, so the very next one is the answer — and the loop stops there rather than walking the rest of a form to no purpose.',
-          ),
-          forEach(candidate, {
-            from: inOrder(),
-            body: [
-              when([
-                [
-                  passed.get(),
-                  [chosen.set(candidate.get()), found.set(yes()), stopLoop()],
-                ],
-                [focused.of(candidate.get()), [passed.set(yes())]],
-              ]),
-            ],
-          }),
-          note('Nothing after the last one, so the route wraps to the front.'),
-          when([[not(found.get()), focusFirst()]]),
-          when([[found.get(), [takeFocus({}, chosen.get())]]]),
-        ],
+        [when([[keyDown('shift'), [focusPrevious()]]], [focusNext()])],
       ],
     ]),
   ]),

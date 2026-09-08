@@ -472,9 +472,21 @@ the SCREEN. So focus is a rule now.
 - **`gains focus`** and **`loses focus`**, so an actor can react rather than
   poll.
 
-Two blocks move it, and they are the only two: **`⟨actor⟩ take the focus`**,
-which a field calls when it is clicked and a game calls to open a form on its
-first field, and **`drop the focus`**, which is Escape. The property being
+Five blocks move it, and they are the only five. **`⟨actor⟩ take the focus`**
+is the one everything else is built on — a field calls it when it is clicked.
+**`drop the focus`** is Escape. And three name the route: **`focus the first
+control`** (what arriving at the game is, and what a game says when it opens a
+form), **`focus the next control`** (Tab), and **`focus the previous
+control`** (Shift+Tab). The last three are worth being blocks rather than
+steps because a project says them too — a Next button on a wizard is the same
+statement Tab makes.
+
+`focus the previous control` walks FORWARDS remembering the one behind, which
+looks like the long way round and is the only way that works: the ordering is
+stable, so reversing the key leaves actors sharing one in the order they were
+added, and a form where nobody set `tab order` would run backwards exactly as
+it runs forwards. It also does not stop early, because the wrap is to the LAST
+control and the only way to know which that is is to reach the end. The property being
 read-only is what makes the pair worth having: the events are raised in one
 place, in one order, and cannot get out of step with the property that
 describes the same fact. `take the focus` on an actor that already has it does

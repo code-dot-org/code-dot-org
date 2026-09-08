@@ -78,12 +78,15 @@ const enter = (world: World) => {
  * would move the focus once and then never again, which is right, and would
  * make the next press in a test do nothing at all.
  */
-const press = (world: World, domKey: string) => {
-  world.setInput([keyName(domKey)]);
+const press = (world: World, domKey: string, ...held: string[]) => {
+  world.setInput([keyName(domKey), ...held.map(keyName)]);
   world.tick(1 / 60);
   world.setInput([]);
   world.tick(1 / 60);
 };
+
+/** Shift+Tab, with the modifier held as the browser reports it. */
+const shiftTab = (world: World) => press(world, 'Tab', 'Shift');
 
 /** Which of them holds the focus, by index — or -1. */
 const holder = (fields: readonly Actor[]) =>
@@ -141,6 +144,49 @@ describe('Tab Navigation', () => {
     // Round the end and back to the front.
     press(world, 'Tab');
     expect(holder(fields)).toBe(0);
+  });
+
+  it('walks backwards with shift held, and wraps to the last', () => {
+    // NOT THE SAME LIST REVERSED. The sort is stable, so ordering by the
+    // negated key leaves actors sharing one in the order they were added — a
+    // form where nobody set `tab order` would then run backwards exactly as it
+    // runs forwards. This walks forwards remembering the one behind.
+    const {world, fields} = form();
+    enter(world);
+
+    // From the first, backwards is round the end to the last.
+    shiftTab(world);
+    expect(holder(fields)).toBe(2);
+
+    shiftTab(world);
+    expect(holder(fields)).toBe(1);
+
+    shiftTab(world);
+    expect(holder(fields)).toBe(0);
+  });
+
+  it('undoes a Tab exactly', () => {
+    const {world, fields} = form();
+    enter(world);
+    press(world, 'Tab');
+    press(world, 'Tab');
+    expect(holder(fields)).toBe(2);
+
+    shiftTab(world);
+
+    expect(holder(fields)).toBe(1);
+  });
+
+  it('goes backwards through tab order too', () => {
+    const {world, fields} = form();
+    fields[2].set(of('TabOrderProperty'), -1 as never);
+    enter(world);
+    expect(holder(fields)).toBe(2);
+
+    // The route is 2, 0, 1 — so backwards from the front wraps to 1.
+    shiftTab(world);
+
+    expect(holder(fields)).toBe(1);
   });
 
   it('leaves exactly one holding it, never two', () => {

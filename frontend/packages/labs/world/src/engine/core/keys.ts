@@ -33,6 +33,17 @@ const NAMED_KEYS: ReadonlyArray<readonly [string, string]> = [
   ['delete', 'Delete'],
   ['tab', 'Tab'],
   ['escape', 'Escape'],
+  // …AND THE MODIFIER, which is here for a different reason from the four
+  // above. Shift already reached the pressed set under the browser's own name,
+  // because anything the table does not hold keeps it — so `Shift` worked and
+  // `shift` did not, and no author could pick either from a dropdown built
+  // from this table. Naming it makes it choosable, which is what Shift+Tab
+  // walking the focus backwards needs (`rules/tabNavigation`).
+  //
+  // It is NOT how a shifted letter is heard: `a` with shift held is the key
+  // `a` and the character `A`, and the two arrive by different doors
+  // (specs/UI_ACTORS.md).
+  ['shift', 'Shift'],
 ];
 
 /**
