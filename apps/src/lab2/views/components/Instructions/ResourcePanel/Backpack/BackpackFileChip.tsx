@@ -219,12 +219,13 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
           />
         </div>
       )}
-      <div className={moduleStyles.fileInfo} title={fileName}>
+      <div className={moduleStyles.fileInfo}>
         <div className={moduleStyles.fileNameRow}>
           <Typography
             className={moduleStyles.infoText}
             variant="body3"
             gutterBottom
+            title={fileName}
           >
             <Typography variant="strong">{fileName}</Typography>
           </Typography>
