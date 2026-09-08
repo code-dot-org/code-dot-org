@@ -2313,6 +2313,7 @@ __metadata:
     "@mui/material": "catalog:"
     "@mui/utils": "catalog:"
     "@playwright/test": "catalog:"
+    "@reduxjs/toolkit": "catalog:"
     "@tanstack/react-query": "catalog:"
     "@testing-library/dom": "catalog:"
     "@testing-library/jest-dom": "catalog:"
