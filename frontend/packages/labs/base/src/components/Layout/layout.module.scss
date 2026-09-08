@@ -1,0 +1,19 @@
+.layout {
+  background-color: var(--neutral-gray-99);
+  box-sizing: border-box;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  line-height: 1rem;
+  overflow: hidden;
+  position: relative;
+
+  &.full {
+    height: 100%;
+    width: 100%;
+  }
+
+  &.reverse {
+    flex-direction: column-reverse;
+  }
+}
