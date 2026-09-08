@@ -16,6 +16,7 @@ import {IMPORT_SOUND_VALUE} from '../sound/soundImport';
 
 import {actorIconImage} from './actorIcons';
 import {actorIcon, actorThumbnail} from './actorThumbnails';
+import {editingActorModule} from './editingRule';
 import {IMPORT_EFFECT_VALUE} from './effectImport';
 import {label} from './label';
 import {actorIdFromName, localActorOptions} from './localActors';
@@ -48,6 +49,57 @@ let projectEffectParams: Record<string, EffectParameter[]> = {};
 /** Replace the actor options the ACTOR dropdown offers. */
 export function setProjectActors(options: Array<[string, string]>): void {
   projectActors = options;
+}
+
+// Who each `.actor` file says it acts like — `actors/healthBar` →
+// `actors/progressBar`. Refreshed with the actor options beside it, and read
+// by the `acts like` dropdown to work out what would make a cycle.
+let actsLikeEdges: Record<string, string> = {};
+
+/** Replace the `acts like` edges the dropdown reads (`projectModules`). */
+export function setActorParents(edges: Record<string, string>): void {
+  actsLikeEdges = edges;
+}
+
+/**
+ * Actors this one may act LIKE: the project's `.actor` files, less itself and
+ * less anything that already acts like it.
+ *
+ * BECAUSE A CYCLE IS NOT A LOOP HERE, it is a project that will not load. Each
+ * `acts like` compiles to an import of the other actor's module, so `A` acting
+ * like `B` acting like `A` is two modules importing each other — resolved to
+ * `undefined` at whichever end is evaluated first, and the game dies reading a
+ * builder that is not there before anything is on screen. `use rule` leaves
+ * the rule being edited out of its own dropdown for the same reason; this has
+ * to look further, because the chain can be longer than one.
+ *
+ * The field is what says which file is asking — a dropdown definition is
+ * global and serves every workspace at once (`editingRule`).
+ */
+export function actorParentOptions(
+  field?: Blockly.FieldDropdown,
+): DropdownOptions {
+  const self = editingActorModule(field?.getSourceBlock() ?? undefined);
+  /** Whether `path` already reaches `self` by acting like it, however far. */
+  const reaches = (path: string): boolean => {
+    const seen = new Set<string>();
+    for (let at: string | undefined = path; at; at = actsLikeEdges[at]) {
+      if (at === self) {
+        return true;
+      }
+      if (seen.has(at)) {
+        return false; // a cycle that does not pass through us; not ours to fix
+      }
+      seen.add(at);
+    }
+    return false;
+  };
+  const offered = projectActors.filter(
+    ([, value]) => value !== self && !reaches(value),
+  );
+  return orNone(offered, '(no other actors)').map(([label, value]) =>
+    pictured(label, value),
+  );
 }
 
 /** Replace the sprite options — the project's own image files. */
@@ -554,6 +606,13 @@ export const actorOptionsExtension = liveDropdown(
   'world_actor_options',
   'ACTOR',
   actorFieldOptions,
+);
+
+/** …and the narrower list `acts like` offers (`actorParentOptions`). */
+export const actorParentOptionsExtension = liveDropdown(
+  'world_actor_parent_options',
+  'ACTOR',
+  actorParentOptions,
 );
 
 /**

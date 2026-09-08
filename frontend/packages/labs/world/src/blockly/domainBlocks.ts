@@ -53,7 +53,7 @@ import {
 } from './cameras';
 import {COLOUR_CHECK} from './colorCheck';
 import {installColorMessages} from './colorMessages';
-import {editingRuleFor} from './editingRule';
+import {editingActorModule, editingRuleFor} from './editingRule';
 import {
   allEnums,
   BUTTON_ENUM,
@@ -147,6 +147,8 @@ import {registerManyActorBlock, yieldsMany} from './manyActors';
 import {instanceId, type MapPlacement} from './mapPlacements';
 import {
   actorFieldOptions,
+  actorParentOptions,
+  actorParentOptionsExtension,
   type DropdownOptions,
   actorImportOptionsExtension,
   actorOptionsExtension,
@@ -707,6 +709,72 @@ const worldUseTrait = defineBlock({
         return '';
       }
       return `actor.useTraits([${refCode(ref, generator)}]);\n`;
+    },
+  },
+});
+
+/**
+ * `acts like ⟨Progress Bar⟩` — this kind of actor, and everything another one
+ * is.
+ *
+ * The subclassing row, and the smallest thing it could be: one dropdown, one
+ * builder call. What comes across is the other kind's DESCRIPTION — its traits,
+ * its properties' slots, its per-frame work, its picture, its handlers
+ * (`ActorBuilder.actsLike`). What does not is its identity: `is a ⟨Progress
+ * Bar⟩` asks what an instance was placed FROM, so a Health Bar that acts like
+ * one is not among `any ⟨Progress Bar⟩`. It qualifies under every trait
+ * relationship instead.
+ *
+ * WHERE IT SITS DECIDES NOTHING, unusually for a row here — it means the same
+ * in an `.actor` file and inside a world's own `define actor`, because both
+ * bind `actor` to a builder and neither declaration is an `export const`. That
+ * is what separates it from `define block`, which is refused in a world.
+ *
+ * ROWS BELOW IT HAVE THE LAST WORD. A `set` after it overrides an inherited
+ * default and a `define drawing` after it replaces the inherited picture,
+ * because that is what reading a file downwards should mean. The builder says
+ * how; this only has to be a row.
+ */
+const worldActsLike = defineBlock({
+  type: 'world_acts_like',
+  message0: 'acts like %1',
+  args0: [{type: 'field_dropdown', name: 'ACTOR', options: actorParentOptions}],
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [
+    actorParentOptionsExtension,
+    // `actsLike` is a builder method, so this belongs under `define actor` —
+    // the same home, and the same warning, `use trait` has.
+    traitContextExtension,
+    openSourceButtonExtension,
+  ],
+  style: 'behavior_blocks',
+  tooltip:
+    'Be everything another kind of actor is — its traits, its properties, ' +
+    'what it does each frame and what it looks like — and go on being this ' +
+    'kind. Rows below this one override what they name.',
+  generator: {
+    javascript(block, generator) {
+      const actor = block.getFieldValue('ACTOR');
+      // Nothing chosen, or a world's own actor pasted into the field: a local
+      // actor is a `const` in a world module and not something another file
+      // can be, so there is no module to import. Same silence every other
+      // unfinished dropdown here keeps.
+      if (!actor || localActorBlockId(actor)) {
+        return '';
+      }
+      // ITSELF, which the dropdown does not offer and a saved file may hold —
+      // an actor renamed into the place of the one it acted like, say. The
+      // import would be a module importing its own default export.
+      if (actor === editingActorModule(block)) {
+        return '';
+      }
+      addImport(
+        generator,
+        `mod:${actor}`,
+        `import ${importVar(actor)} from ${str(actor)};`,
+      );
+      return `actor.actsLike(${importVar(actor)});\n`;
     },
   },
 });
@@ -8390,6 +8458,7 @@ export const DOMAIN_BLOCKS = [
   ...GENERAL_PROPERTY_BLOCKS,
   worldActor,
   worldUseTrait,
+  worldActsLike,
   worldDefineTween,
   worldPlayTween,
   worldPlayTweenHere,
@@ -8669,6 +8738,11 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // looking for it had no reason to open that drawer. It belongs beside the
       // block that answers the other question a handler asks.
       'world_event_value',
+      // Being everything another kind of actor is, and going on being this
+      // one. The traits, the slots, the per-frame work and the picture come
+      // across; the KIND does not, so `any ⟨that one⟩` still means that one
+      // (`ActorBuilder.actsLike`).
+      'world_acts_like',
       // Declaring state this KIND of actor carries. The same block a rule and a
       // trait declare with: it already takes its meaning from where it sits, so
       // a third site is what it was built for, and a separate near-identical
@@ -9503,8 +9577,23 @@ export function buildDomainPalette(
   const actorCategories: ToolboxCategory[] = [];
   /** Hats of the actors' own events — roots, exactly as a rule's hats are. */
   const ownEventTypes: string[] = [];
+  /**
+   * What each kind declares, in two readings: what its OWN file may do with
+   * those declarations, and what everybody else may.
+   *
+   * Two lists rather than one because two of the entries are narrower than the
+   * rest — a read-only property's setter and an event's `emit` belong to the
+   * file that declared them. Which list a drawer gets is decided a pass later,
+   * once `acts like` is known, because a SUBCLASS is at home in what it
+   * inherits: a Health Bar that acts like a Progress Bar is the Progress Bar's
+   * code extended, not a bystander to it, so it may fill the bar and raise its
+   * events (`ActorBuilder.actsLike`).
+   */
+  const declared = new Map<string, {atHome: string[]; away: string[]}>();
   for (const actor of options.ownProperties ?? []) {
     const types: string[] = [];
+    /** …and the same list as somebody else's file may use it. */
+    const away: string[] = [];
     // …the things this kind DOES, by name. The same call site a rule's action
     // gets, from the same factory: what differs is the ref, which names the
     // file that declared it rather than a rule (`ownProperties`).
@@ -9512,6 +9601,7 @@ export function buildDomainPalette(
       const block = defineActionBlock(action);
       ownBlocks.push(block);
       types.push(block.type);
+      away.push(block.type);
     }
     // …and the things that HAPPEN to it: the hat that hears one and the block
     // that raises it, from the same two factories a rule's events go through.
@@ -9528,17 +9618,15 @@ export function buildDomainPalette(
     // Defined either way, listed or not: a file that already holds one still
     // has to load and generate, and a block type nothing defines fails the
     // whole project rather than the one block (`standInBlocks`).
-    const home = actor.modulePath === options.ownActorModule;
     for (const event of actor.events) {
       const hat = defineEventBlock(event);
       ownBlocks.push(hat);
       types.push(hat.type);
       ownEventTypes.push(hat.type);
+      away.push(hat.type);
       const emit = defineEmitBlock(event);
       ownBlocks.push(emit);
-      if (home) {
-        types.push(emit.type);
-      }
+      types.push(emit.type);
     }
     // …and the state it keeps, as the pair every property gets.
     for (const property of actor.properties) {
@@ -9564,15 +9652,60 @@ export function buildDomainPalette(
       // happen.
       const setBlock = defineSetPropertyBlock(property);
       ownBlocks.push(setBlock);
-      if (!property.readonly || home) {
-        types.push(setBlock.type);
+      types.push(setBlock.type);
+      if (!property.readonly) {
+        away.push(setBlock.type);
       }
       const getBlock = defineGetPropertyBlock(property);
       ownBlocks.push(getBlock);
       types.push(getBlock.type);
+      away.push(getBlock.type);
     }
-    if (types.length > 0) {
-      actorCategories.push({name: actor.name, blocks: types});
+    declared.set(actor.modulePath, {atHome: types, away});
+  }
+
+  /**
+   * A drawer per actor: what it declared, and then what it ACTS LIKE declared.
+   *
+   * The blocks are the same blocks — a type carries the file that minted it,
+   * so nothing is minted twice and this is a second reference to one drawer's
+   * worth of them. What it buys is that a learner looking in the Health Bar's
+   * drawer for the thing that fills a bar finds it there, rather than having
+   * to know it came from the Progress Bar.
+   *
+   * `seen` because a cycle is a project that will not load rather than a thing
+   * to render forever: the dropdown will not offer one and the generator will
+   * not write one, but a file saved before either could still hold it, and a
+   * palette that hangs is a worse way to find out.
+   */
+  const parents = new Map(
+    (options.ownProperties ?? []).flatMap(actor =>
+      actor.actsLike ? [[actor.modulePath, actor.actsLike] as const] : [],
+    ),
+  );
+  for (const actor of options.ownProperties ?? []) {
+    // AT HOME IN WHAT IT INHERITS as well as in what it declared, which is
+    // what makes a subclass an extension of its parent rather than a reader of
+    // it (see `declared`).
+    const home = actor.modulePath === options.ownActorModule;
+    const blocks: string[] = [];
+    const seen = new Set<string>();
+    for (
+      let at: string | undefined = actor.modulePath;
+      at;
+      at = parents.get(at)
+    ) {
+      if (seen.has(at)) {
+        break;
+      }
+      seen.add(at);
+      const rows = declared.get(at);
+      if (rows) {
+        blocks.push(...(home ? rows.atHome : rows.away));
+      }
+    }
+    if (blocks.length > 0) {
+      actorCategories.push({name: actor.name, blocks});
     }
   }
 

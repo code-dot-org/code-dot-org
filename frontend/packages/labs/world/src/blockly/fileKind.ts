@@ -57,6 +57,11 @@ export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
   // Not a `.world`: a world's own `define actor` generates into a block scope,
   // and the declaration this emits is an `export const`.
   ['world_rule_block', new Set<FileKind>(['rule', 'actor'])],
+  // `acts like` names another ACTOR's module, so it belongs in the two homes
+  // that define one and not in a `.rule`. Unlike `define block` beside it, a
+  // world's own `define actor` may hold one: it emits a builder call rather
+  // than an `export const`, and a block scope takes that quite happily.
+  ['world_acts_like', new Set<FileKind>(['actor', 'world'])],
   ['world_rule_enum', new Set<FileKind>(['rule'])],
   ['world_rule_enum_option', new Set<FileKind>(['rule'])],
   ['world_rule_step_tick', new Set<FileKind>(['rule'])],

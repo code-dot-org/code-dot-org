@@ -105,6 +105,46 @@ export class ActorBuilder {
     return this;
   }
 
+  /**
+   * Take everything another KIND of actor is, and go on being this one.
+   *
+   * `acts like ⟨Progress Bar⟩` — the whole of subclassing here. What comes
+   * across is the DESCRIPTION: the traits it elects, the slots its properties
+   * sit in, the work it does each frame, the picture it paints, the handlers it
+   * registers and the effects it wears. What does not is its identity.
+   *
+   * SO A KIND IS NOT INHERITED, and that is the interesting half. `is a
+   * ⟨Progress Bar⟩` compiles to `each.type === "actors/progressBar"`, and an
+   * instance carries the module it was placed from — so a Health Bar that acts
+   * like a Progress Bar is not one of `any ⟨Progress Bar⟩`. It qualifies under
+   * every TRAIT relationship instead, which is the one that asks what a thing
+   * can do rather than what it is called.
+   *
+   * AT THE MOMENT THE ROW IS READ, not at instantiate: this copies what the
+   * other builder holds NOW. Rows below it therefore have the last word — a
+   * `set` after it overrides an inherited default, because overrides are
+   * applied in order and the later one wins (`Traited`), and a `define drawing`
+   * after it replaces the inherited picture. That is what reading a file
+   * downwards should mean.
+   *
+   * The drawing is the one thing taken CONDITIONALLY, so that a child which
+   * describes its own picture first and says `acts like` afterwards keeps it.
+   */
+  actsLike(other: ActorBuilder): this {
+    this.traits = [...this.traits, ...other.traits];
+    this.overrides.push(...other.overrides);
+    this.handlers.push(...other.handlers);
+    this.steps.push(...other.steps);
+    // Through `addEffect` rather than pushed, so one path is worn once: the
+    // parent RETUNES an effect the child already wears rather than adding a
+    // second copy of it, which is the rule that method already states.
+    for (const effect of other.effects) {
+      this.addEffect(effect.path, effect.document, effect.values);
+    }
+    this.drawing ??= other.drawing;
+    return this;
+  }
+
   /** Override a trait property's initial value for this actor. */
   set<T>(property: Property<T>, value: T): this {
     this.overrides.push([property, value]);

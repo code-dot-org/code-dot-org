@@ -129,6 +129,22 @@ export interface OwnMeta {
    * events go through, and the only difference is a ref that names the FILE.
    */
   readonly events: readonly EventMeta[];
+  /**
+   * The kind this one acts LIKE, by module path — `actors/progressBar`.
+   *
+   * Read for the palette and for nothing else. What subclassing DOES is the
+   * builder's (`ActorBuilder.actsLike`), written by the block's own generator;
+   * what it needs from here is that a child's drawer offers the parent's
+   * blocks as well as its own, because a learner looking in the Health Bar's
+   * drawer for the thing that fills it should find it there
+   * (`domainBlocks`, the actors' drawers).
+   *
+   * The LAST one wins if a file somehow holds two. Nothing offers a second —
+   * the block is a row and a chain may hold any number — and two would be two
+   * answers to "what is this", where the builder simply takes both in order.
+   * One is what the palette can say something about.
+   */
+  readonly actsLike?: string;
 }
 
 /**
@@ -311,7 +327,18 @@ function declarationsFrom(
   const namedBlocks = new Set<string>();
   const namedEvents = new Set<string>();
 
+  let actsLike: string | undefined;
+
   for (const block of chain(root)) {
+    if (block.type === 'world_acts_like') {
+      // A world's own actor is a `const` in its world's module and not
+      // something another file can be, so a `local:` value names nothing here.
+      const named = field(block, 'ACTOR');
+      if (named && !named.startsWith('local:') && named !== modulePath) {
+        actsLike = named;
+      }
+      continue;
+    }
     if (block.type === 'world_rule_event') {
       if (actorFile) {
         const declared = designedEvent(block, modulePath, name, variables);
@@ -384,7 +411,14 @@ function declarationsFrom(
     });
   }
 
-  return {modulePath, name, properties, actions, events};
+  return {
+    modulePath,
+    name,
+    properties,
+    actions,
+    events,
+    ...(actsLike ? {actsLike} : {}),
+  };
 }
 
 /**

@@ -18,6 +18,7 @@ import type {ImageSize} from '../runtime/imageSize';
 import {setProjectAnimations} from './animationOptions';
 import {duplicateEnumNames, registerProjectEnums} from './enums';
 import {
+  setActorParents,
   setProjectActors,
   setProjectAnimationFiles,
   setProjectEffectFiles,
@@ -36,6 +37,7 @@ import {
   projectEffectFileOptions,
   projectEffectParameters,
   projectMapActorTypes,
+  projectOwnMetas,
   projectRuleMetas,
   projectRuleOptions,
   projectBackgroundOptions,
@@ -116,6 +118,15 @@ export function refreshProjectDropdowns(
   );
   const actors = projectActorOptions(files);
   setProjectActors(actors);
+  // …and which of them acts like which, so the `acts like` dropdown can leave
+  // out the choices that would make a cycle (`moduleOptions.actorParentOptions`).
+  setActorParents(
+    Object.fromEntries(
+      projectOwnMetas(files).flatMap(meta =>
+        meta.actsLike ? [[meta.modulePath, meta.actsLike] as const] : [],
+      ),
+    ),
+  );
   const animationFiles = projectAnimationFileOptions(files);
   setProjectAnimationFiles(animationFiles);
   const effectFiles = projectEffectFileOptions(files);
