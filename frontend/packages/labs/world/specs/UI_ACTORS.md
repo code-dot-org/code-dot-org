@@ -505,6 +505,23 @@ Clicking the background no longer blurs — Escape is the release, everywhere,
 and a field that also blurred on any press would raise a loss and a gain every
 time the focused field was clicked.
 
+**The Button is a control too.** It elects `Can Be Focused` and
+`Takes Keyboard Input`, takes the focus when it is clicked, draws a ring while
+it holds it, and answers Enter — and what Enter does is RAISE THE CLICK
+(`emit is clicked with ⟨left⟩ for ⟨this actor⟩`). That is what keeps a
+project's one handler enough: `when ⟨Start⟩ is clicked` fires for the mouse and
+for the keyboard, and nobody writes it twice. The click says the LEFT button,
+which is not true and is the least wrong answer available — the event carries
+which mouse button was used, a keyboard press used none, and every browser
+reports the primary one for exactly this case. A handler filtering on `right`
+therefore does not fire from the keyboard, which is right.
+
+The ring is drawn INSIDE the face, with the fill cleared first. Outside is
+where a focus ring usually goes and is not available: the canvas is exactly the
+actor's size, so anything beyond it is clipped away. Leaving the fill on would
+paint a rectangle over the word, which reads as the button going blank rather
+than as it being chosen.
+
 **Both are on the shelf now**, granted together by `story/form` — past the tile
 that put a Button on the screen, because the question a game asks after "which
 answer did you click" is "what did you type". Shelving them needed one piece of

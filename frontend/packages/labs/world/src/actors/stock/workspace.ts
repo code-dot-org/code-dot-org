@@ -340,6 +340,9 @@ export const outline = (color: object, width: number) => ({
 /** `no outline`. */
 export const noOutline = () => ({type: 'world_pen_no_outline'});
 
+/** `no fill` — for a shape that is an outline and nothing else, like a ring. */
+export const noFill = () => ({type: 'world_pen_no_fill'});
+
 /** `draw rectangle at x ⟨⟩ y ⟨⟩ size ⟨⟩ by ⟨⟩`. */
 export const rectangle = (
   x: number | object,

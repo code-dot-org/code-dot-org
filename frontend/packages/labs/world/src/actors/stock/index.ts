@@ -123,10 +123,12 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     id: 'button',
     name: 'Button',
     description:
-      'A label you can press. It raises “is clicked with” on itself, so a handler needs no hit test of its own.',
-    // Mouse for the click, and nothing else: the words it paints are the
-    // Label's own properties, which arrive with the Label it acts like.
-    requires: ['Mouse'],
+      'A label you can press — with the mouse, or with Enter once the keyboard is on it. It raises “is clicked with” on itself either way, so one handler answers both and needs no hit test of its own.',
+    // Mouse for the click, Input for the Enter that stands in for one, and Tab
+    // Navigation for the focus that decides WHICH button Enter presses. The
+    // words it paints are the Label's own properties, which arrive with the
+    // Label it acts like.
+    requires: ['Mouse', 'Input', 'Tab Navigation'],
     // …and the Label it IS, which is where the words, their size and the box
     // they are laid into come from.
     actors: ['label'],
