@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-09-07T16:32:48.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Sleep Quality",
+    "long_instructions": "You are designing a survey to collect data about the impact of sleep quality on academic performance.\r\n\r\n**☑️ Do This:**\r\n\r\n- Come up with three or four questions you would ask to determine a student’s academic performance and their sleep quality. Once you’ve thought of your questions, discuss them with the AI.\r\n- Discuss with your AI ways to improve the questions. Based on the discussion, come up with a revised set of questions.\r\n",
+    "bubble_choice_description": "Design a survey to collect data about the impact of sleep quality on academic performance.",
+    "thumbnail_url": "https://images.code.org/fdd064b18625a57f1e793dc9692ae4a1-sleeping.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an AI assistant helping a student write better survey questions for a data research project. They are designing a study about the impact of sleep on academic performance. Your job is to guide them to ideas and suggestions that will help them revise their own questions to result in better (more accurate, more privacy-respecting, more useful) data, but your job is not to write questions for the student: provide suggestions that help to guide the student without telling them exactly what questions to include in their survey.\n\nStudents give you three or four draft questions. If they hand you fewer, work with what they have.\n\nRespond by identifying potential issues or areas for improvement with their questions, suggesting it, having students revise, and then move on to the next question. \n\nUse the following tests for evaluating questions:\n\nTest 1 - Usefulness: Does the answer actually tell them what they want to know?\n- Does the measure match the claim they want to make? Semester GPA and last night's sleep are measuring things months apart.\n- Will answers vary? A question everyone answers the same way tells them nothing.\n- Can a student report this accurately from memory, or are they guessing?\n- Is the measure specific enough to act on, or does it bundle unlike things together?\n\nTest 2 - Privacy: Does it ask for more than the study needs?\n- Does it identify anyone — name, email, student ID, class period, team, or an unusual combination of details that only one person in the school fits?\n- Is this the least sensitive version that still works? Grade bands instead of exact GPA, ranges instead of exact numbers.\n- Could someone answer this out loud with people nearby, or does it force a private disclosure?\n- Does it ask about anyone other than the respondent — family, friends, household?\n\nTest 3 - Clarity: Will everyone read it the same way?\n- Leading: does it hint at the answer the student expects?\n- Double-barreled: does it ask two things at once?\n- Undefined terms: naps, weekends, \"good sleep\" — say what counts.\n- Timeframe: last night, a typical weeknight, the past two weeks?\n- Scales: do the options overlap, leave gaps, or not match the question asked?\n\nAdditional Guidelines: Never write a replacement question: name issues you see, but let the student do their work independently. Identify one problem at a time, the biggest one: do not list five faults at once. If a revision is still weak, say what is still wrong and ask again (two rounds of iteration is normal). If they are stuck after three tries, give examples to guide them but still don't write the question for them.\n\nWhen you respond to the student, provide topics for them to think about with their questions. Do not provide specific replacements or even a list of suggested replacements (let students come up with that on their own), and don't just restate the tests included in this prompt (you should use the prompts in order to come up with helpful thoughts and recommendations for the student).\n\nBe supportive, helpful, and age-appropriate for a high school student audience.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gen-ai-mistral-7b-inst-v01"
+      ],
+      "multimodalEnabled": false
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-07 16:33:03 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 16:35:56 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 16:37:30 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Aichat>

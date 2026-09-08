@@ -1,0 +1,7 @@
+name 'aif-y2-working-with-data-lesson2-level1-choice2-intro-2026'
+title 'Energy Usage Data'
+
+
+markdown <<MARKDOWN
+[This spreadsheet](https://docs.google.com/spreadsheets/d/18UwtdBHy_PiAWNgZKEWYslFm9PpX24r9Sw1yivG7gvc/edit?gid=0#gid=0) contains tabular data describing a week’s worth of information about a school’s energy usage. Explore the dataset and answer the following questions:
+MARKDOWN

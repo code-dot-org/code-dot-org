@@ -1,6 +1,7 @@
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {
   IMAGE_NAME_MAX_LENGTH,
+  nextImageName,
   removeImageReferences,
   renameImageReferences,
   sanitizeImageName,
@@ -133,6 +134,18 @@ describe('sanitizeImageName', () => {
     expect(sanitizeImageName('x'.repeat(99))).toHaveLength(
       IMAGE_NAME_MAX_LENGTH
     );
+  });
+});
+
+describe('nextImageName', () => {
+  it('numbers from 1 by the type label', () => {
+    expect(nextImageName('sprite', () => false)).toBe('Sprite 1');
+    expect(nextImageName('background', () => false)).toBe('Background 1');
+  });
+
+  it('skips taken numbers, including gaps left by deletions', () => {
+    const taken = new Set(['Sprite 1', 'Sprite 3']);
+    expect(nextImageName('sprite', name => taken.has(name))).toBe('Sprite 2');
   });
 });
 

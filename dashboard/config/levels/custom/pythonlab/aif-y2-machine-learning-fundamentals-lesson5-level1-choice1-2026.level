@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2026-08-21T20:19:40.000Z",
   "level_num": "custom",
@@ -26,7 +25,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "def predict_cost(miles):\n    # TODO 1: Return the predicted cost to travel the given number of miles\n    return\n\nmiles = 5\ncost = predict_cost(miles)\n\n# TODO 2: Print a message letting the user know the distance and predicted cost",
+          "contents": "def predict_cost(miles):\n  # TODO 1: Return the predicted cost to travel the given number of miles\n  return\n\nmiles = 5\ncost = predict_cost(miles)\n\n# TODO 2: Print a message letting the user know the distance and predicted cost",
           "folderId": "0",
           "active": true
         }
@@ -37,7 +36,7 @@
         "0"
       ]
     },
-    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqUYV1JFPuoSv9O\n0ncrgAir3NHcYFThkffMNgWc/nG+BN6sw8XbFubw0SPXbltAj6WO0sQN/0tI\nb58R0B+18XrEANKx2VBF7vkU9AMpzuFm99xy3zyeTN9eYGuLVJEK1kNZHpz0\niKwGmppQIoGCNTWCxLAJttX5NIGwLr/rgUqd0+nWrMEWFpW7mbhhT2y6hdeX\nCbLP7q7Z5NlQH6b4a+exqJCe642LwZrUxgzXgVqOINOrJs4qYQiPepGUfmn+\naZvxjVXhzyPeOHgscRIVFQSPyrSgCc7L8p7hSCfJ5sJwnm4vFEYqlknnzBgx\n+wTyDYXYCvvVSuWLBGc6ac+Piaee\n",
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMrWfXlzd3ynYSlK\n5BHFIxWjivxjZXqjkOJbMpVYHJsWQoz/S8VkLpAXgGXbplF32QjpEeBkq+lY\nyY8IqCt8qXu0e8dfSsf8gMCMMKXjKBSKqZ5INdKyhHFgOAWrr5x5P2nStMbM\nO2fJlinI1REG6Dbb/IEI7hwuz/B1CUTcVvqyN1UlogLjh5SrFEWjwSIWyOcF\nIda/XLEKAr1svmqThPejgImPLLNSCM9Mxt/2MWMI9DmgTzO2wbliZ6kYejVV\nQICujqxxP/IHTzmdSyk5qclDukoB1qK4FSmu6M6msU5zS4TNcLPOoZixZ4Jk\nhR8bB/Xpern91D4s2uACBM0Y3CHu\n",
     "ai_tutor_prompt_settings": {
       "answerTypes": [
 
@@ -46,6 +45,7 @@
       }
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-08-21 20:20:01 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-21 20:20:17 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-21 21:10:05 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-21 20:20:01 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-21 20:20:17 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-21 21:10:05 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 20:14:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 20:14:38 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

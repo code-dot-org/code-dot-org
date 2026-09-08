@@ -44,6 +44,7 @@ class GamelabJr < Gamelab
     world_grid_size
     visible_tabs
     locked_image_type
+    images_advanced
     pinned_scene_id
     pinned_scene_name
     guide_steps
