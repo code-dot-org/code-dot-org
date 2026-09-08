@@ -169,6 +169,8 @@ type ResourcePanelProps = InstructionsProps & {
   documentationUrl?: string;
   /** Only display the sidebar and hide all tabs. */
   sidebarOnly?: boolean;
+  /** Show the collapse/expand control. Defaults to standalone project levels. */
+  collapsible?: boolean;
   hideCollapsedTabBorder?: boolean;
   backpackProps?: BackpackProps;
   onImageFlagged?: (
@@ -212,6 +214,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   tutorVideos,
   documentationUrl,
   sidebarOnly = false,
+  collapsible,
   hideCollapsedTabBorder = false,
   backpackProps,
   onImageFlagged,
@@ -266,6 +269,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const appName = instructionsProps.levelProperties.appName;
   const isProjectLevel = instructionsProps.levelProperties.isProjectLevel;
+  const isCollapsible = collapsible ?? isProjectLevel;
   const isWidgetView = instructionsProps.levelProperties.widgetView;
   const isPredictLevel =
     instructionsProps.levelProperties.predictSettings?.isPredictLevel;
@@ -699,12 +703,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           <div className={styles.topSection}>
             <div className={styles.collapseButtonContainer}>
               {/*
-              For standalone projects with at least one tab, we display the collapse/expand.
-              We hide this button for standalone projects with no tabs, but the bottom buttons
-              will still be available for users to access the settings panel, etc.
-              Quiz also gets the toggle whenever it has a tab.
+              Hidden when there are no tabs; footer buttons still reach settings.
             */}
-              {(isProjectLevel || appName === 'quiz') && hasTabs && (
+              {isCollapsible && hasTabs && (
                 <WithTooltip
                   tooltipProps={{
                     text: isStandaloneCollapsed

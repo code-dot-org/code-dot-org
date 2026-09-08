@@ -68,6 +68,7 @@ const QuizView: React.FunctionComponent<LabProps> = props => {
           hasRun={false}
           hasEdited={false}
           hideAllNavigation
+          collapsible
           onHasTabsChange={setHasResourcePanelTabs}
           {...resourcePanelProps}
         />
