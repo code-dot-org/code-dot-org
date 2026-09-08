@@ -27,7 +27,19 @@ describe('keyName', () => {
   it('leaves a key it does not name alone', () => {
     // The keyboard is not reduced to the list: a rule that wants F7 may say F7.
     expect(keyName('F7')).toBe('F7');
-    expect(keyName('Escape')).toBe('Escape');
+    expect(keyName('PageDown')).toBe('PageDown');
+  });
+
+  it('names the editing keys, which make no character', () => {
+    // A key that produces a character arrives as one (`rules/input`), and
+    // these do not — so a Text Input has to hear them as KEYS. It could not:
+    // the table had no entry, `Backspace` passed through with its capital, and
+    // a field listening for `backspace` heard nothing. The dropdown could not
+    // offer the value either, since it is built from this same table.
+    expect(keyName('Backspace')).toBe('backspace');
+    expect(keyName('Delete')).toBe('delete');
+    expect(keyName('Tab')).toBe('tab');
+    expect(keyName('Escape')).toBe('escape');
   });
 });
 

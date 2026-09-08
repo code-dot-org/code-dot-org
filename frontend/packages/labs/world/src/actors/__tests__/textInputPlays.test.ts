@@ -13,6 +13,7 @@
 import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../__tests__/support/compileProject';
+import {keyName} from '../../engine/core/keys';
 import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
@@ -103,8 +104,17 @@ const play = async () => {
       world.addTyped(characters);
       world.tick(1 / 60);
     },
-    press: (key: string) => {
-      world.setInput([key]);
+    /**
+     * A key, named as the BROWSER names it and translated at the door.
+     *
+     * `keyName` is what the driver calls on the way in, and going round it is
+     * how this test came to pass while backspace did not work at all: the
+     * table had no `Backspace`, so the real driver produced `Backspace` where
+     * the field listened for `backspace`, and a test that handed the engine
+     * the engine's own name never met the gap (`engine/core/keys`).
+     */
+    press: (domKey: string) => {
+      world.setInput([keyName(domKey)]);
       world.tick(1 / 60);
       world.setInput([]);
       world.tick(1 / 60);
@@ -166,14 +176,14 @@ describe('a Text Input', () => {
     const it_ = await play();
     it_.clickAt(80, 60);
     it_.type(['a', 'b', 'c']);
-    it_.press('backspace');
+    it_.press('Backspace');
 
     expect(it_.says(it_.top)).toBe('ab');
 
     // …and an empty field backspaced is still an empty field.
-    it_.press('backspace');
-    it_.press('backspace');
-    it_.press('backspace');
+    it_.press('Backspace');
+    it_.press('Backspace');
+    it_.press('Backspace');
     expect(it_.says(it_.top)).toBe('');
   });
 });

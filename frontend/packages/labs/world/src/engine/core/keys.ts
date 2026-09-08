@@ -24,6 +24,15 @@ const NAMED_KEYS: ReadonlyArray<readonly [string, string]> = [
   ['left arrow', 'ArrowLeft'],
   ['right arrow', 'ArrowRight'],
   ['enter', 'Enter'],
+  // THE EDITING KEYS, which are only in this table because of their capitals —
+  // and which were missing, so a Text Input listening for `backspace` heard
+  // `Backspace` and never fired. They make no CHARACTER, so they never arrive
+  // as one (`rules/input`): a field that wants to delete has to hear them as
+  // keys, and could not until they were named.
+  ['backspace', 'Backspace'],
+  ['delete', 'Delete'],
+  ['tab', 'Tab'],
+  ['escape', 'Escape'],
 ];
 
 const BY_DOM_KEY = new Map(
