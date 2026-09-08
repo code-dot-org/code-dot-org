@@ -223,7 +223,10 @@ class Sound {
         this.audioElement.currentTime = 0;
       }
     } catch (err) {
-      if (err instanceof Error && err.name === 'InvalidStateError') {
+      // Matched by name alone, as the legacy code did. Whether a DOMException
+      // is an `instanceof Error` depends on the host -- browsers say yes,
+      // jsdom says no -- and this guard must not depend on the answer.
+      if ((err as {name?: string} | null)?.name === 'InvalidStateError') {
         // Stopping a sound that hasn't been played. Just ignore.
       } else {
         throw err;
