@@ -1,20 +1,30 @@
 import IconButton from '@mui/material/IconButton';
 import classNames from 'classnames';
 import type {FunctionComponent, MutableRefObject} from 'react';
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {useLocalization} from '@code-dot-org/core/plugins/localization';
 
 import {useBrowserTextToSpeech} from './BrowserTextToSpeechWrapper';
 
-import moduleStyles from './textToSpeech.module.scss';
+import moduleStyles from './textToSpeech.module.css';
 
 export interface TextToSpeechProps {
   /** The specific text to speak */
   text?: string;
   /** A Ref capturing the live content to read aloud. */
   contentRef?: MutableRefObject<HTMLElement | null>;
+  /**
+   * Locales the button is offered in, or `true` for every locale.
+   *
+   * Browser speech synthesis varies in quality by language, so the set is
+   * deliberately narrow. It is a prop rather than a constant because which
+   * locales are worth offering is the host's call, not this package's: in
+   * dashboard it comes from the `browser-tts-button-enabled-locales` DCDO
+   * flag, which lets it be changed without a deploy.
+   */
+  enabledLocales?: string[] | true;
 }
 
 // When false, a second press stops playback (cancel) and resets to the play
@@ -22,7 +32,7 @@ export interface TextToSpeechProps {
 // `pause()` is unreliable (e.g. Chrome delays/ignores it).
 const usePause: boolean = false;
 
-const enabledLocales = ['en', 'es', 'fr'];
+const DEFAULT_ENABLED_LOCALES = ['en', 'es', 'fr'];
 
 /**
  * TextToSpeech play button.
@@ -30,21 +40,20 @@ const enabledLocales = ['en', 'es', 'fr'];
 const TextToSpeech: FunctionComponent<TextToSpeechProps> = ({
   text,
   contentRef,
+  enabledLocales = DEFAULT_ENABLED_LOCALES,
 }) => {
   const {isTtsAvailable, speak, cancel, pause, resume} =
     useBrowserTextToSpeech();
   const [isPlaying, setIsPlaying] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
 
-  const [ttsButtonEnabled, setTtsButtonEnabled] = useState(false);
-
   const locale = useLocalization();
 
-  // Determine, whenever the locale is set on the first time or updated, if the
-  // text-to-speech engine is available for that locale.
-  useEffect(() => {
-    setTtsButtonEnabled(enabledLocales.includes(locale));
-  }, [locale]);
+  // Derived from the locale, not stored: holding it in state and syncing it in
+  // an effect costs a second render on every locale change and tells React the
+  // value can disagree with `locale`, which it cannot.
+  const ttsButtonEnabled =
+    enabledLocales === true || enabledLocales.includes(locale);
 
   const playText = () => {
     if (!isTtsAvailable) {
@@ -107,6 +116,7 @@ const TextToSpeech: FunctionComponent<TextToSpeechProps> = ({
       onClick={playText}
       onKeyDown={handleKeyDown}
       aria-label="Play text-to-speech"
+      aria-pressed={isPlaying}
       // No padding — this is an inline affordance, not a standalone control.
       sx={{padding: 0}}
     >

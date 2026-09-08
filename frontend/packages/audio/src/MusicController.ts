@@ -72,8 +72,7 @@ class MusicController {
    * registered in the SoundBoard, that sound will be used for this music track.
    */
   register(track: MusicTrackDefinition, id?: string): MusicTrack {
-    const parts = track.name.split('/');
-    id ||= parts[parts.length - 1];
+    id ||= track.name;
     const soundConfig: SoundConfig = {
       id: id,
       mp3: track.name + '.mp3',
@@ -127,6 +126,10 @@ class MusicController {
         },
       });
       this.nowPlaying = track.name;
+    } else if (track) {
+      // Not loaded yet. `register`'s onLoad handler replays this name once the
+      // sound arrives.
+      this.playOnLoad = track.name;
     }
   }
 
