@@ -263,13 +263,30 @@ standing in for a base class the language could not express.
 
 Two things have to be answered as it goes, and both have answers already:
 
-- **A world-local actor cannot act like a file.** The Scoreboard in the
-  single-world starter, and the Label in the drawing lesson, are `define actor`
-  blocks inside a `.world`; `acts like` names an actor file and those projects
-  have none. They declare the four properties themselves and draw from them,
-  which is exactly what `fixtures/platformerSingle`'s Health Bar does since
-  `Progress` went (`PROGRESS_BAR_PROPERTIES`). The same shape wants the same
-  name: a `LABEL_PROPERTIES` beside it.
+- **Two projects have no file to act like.** A world-local actor CAN act like
+  one — `acts like` emits a call, not the `export const` that gets `define
+block` refused inside a world, and a block scope takes a call quite happily
+  (`__tests__/actsLike`). What the Scoreboard in the single-world starter and
+  the Label in the drawing lesson lack is the FILE: both projects are defined
+  as having no actor files at all, and `fixtures.test` pins it. So they declare
+  the four properties themselves and draw from them, which is what
+  `fixtures/platformerSingle`'s Health Bar does since `Progress` went
+  (`PROGRESS_BAR_PROPERTIES`). The same shape wants the same name: a
+  `LABEL_PROPERTIES` beside it.
+
+  **Which is the argument for letting a local actor act like a CO-LOCATED
+  one.** A single-world project's Scoreboard and its Health Bar are both
+  Labels, and there is no way for them to say so — so each declares the four
+  properties and the duplication this page keeps removing comes straight back
+  in the one project that cannot import. Four things stand in the way, all
+  small: the generator refuses a `local:` target, the dropdown does not offer
+  one, the palette's parent map is keyed by module path where a local value is
+  `local:<block>`, and — the only one with any depth — `assembleWorldModule`
+  emits local actors in canvas order, so a child defined above its parent would
+  read a `const` in its temporal dead zone. That wants a topological sort by
+  `acts like` edges, which is the same fix the assembler already applies to
+  tweens and to the world block, and a cycle refused rather than followed.
+
 - **`text needs a drawing` loses its subject.** `blockly/extensions/
 textNeedsDrawing` warns on a `use trait ⟨Shows Text⟩` row in an actor that
   paints nothing — words nobody will see. With the trait gone the row is `acts

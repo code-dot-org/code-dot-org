@@ -218,6 +218,56 @@ describe('an actor that acts like another', () => {
     ).toHaveLength(1);
   });
 
+  it('works for an actor a world defines for itself', async () => {
+    // WHICH IS NOT OBVIOUS, and I had it written down wrong. `define block`
+    // and `define event` are refused inside a world's own `define actor`,
+    // because each emits an `export const` and that body generates into a
+    // block scope — so it is easy to assume `acts like` is refused there too.
+    // It is not: it emits a CALL, and a block scope takes one quite happily.
+    //
+    // What a world-defined actor cannot do is name a file the project does not
+    // hold, which is a fact about the project rather than about where the row
+    // sits.
+    const bar = JSON.stringify({
+      blocks: {
+        blocks: [
+          {
+            type: 'world_actor',
+            id: 'gaugeDef',
+            fields: {NAME: 'Gauge'},
+            next: {
+              block: {type: 'world_acts_like', fields: {ACTOR: 'actors/bar'}},
+            },
+          },
+          {
+            type: 'world_world',
+            fields: {NAME: 'My World'},
+            next: {
+              block: {
+                type: 'world_add_actor',
+                fields: {ACTOR: 'local:gaugeDef'},
+              },
+            },
+          },
+        ],
+      },
+    });
+    const {world, modules} = await compileProject({
+      'actors/bar.actor': BAR,
+      'worlds/main.world': bar,
+    });
+    const gauge = [...world.actors][0];
+
+    // The slot and the picture both, which is the whole of what came across.
+    expect(gauge.get(modules['actors/bar'].TicksProperty as never)).toBe(0);
+    expect(gauge.get(IntrinsicSizeProperty)).toEqual(
+      expect.objectContaining({x: 40, y: 6}),
+    );
+    // …and it is still its own kind: a world-defined actor's type is the id
+    // its definition was stamped with, not the file it acts like.
+    expect(gauge.type).not.toBe('actors/bar');
+  });
+
   it('puts the parent’s blocks in the child’s drawer as well', async () => {
     // A learner looking in the Fuel Bar's drawer for the thing that fills a
     // bar should find it there, rather than having to know it came from the
