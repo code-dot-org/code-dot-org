@@ -3,9 +3,15 @@
 ### Requirement: ClassLink rostering UI is surfaced only to holders of a v2 auth option
 The teacher-dashboard roster-provider payload SHALL include `classlink` only when the current user holds a ClassLink auth option with `version = 'v2'`. A user without one — whether they hold only a legacy v1 record (unmigrated, or in a district without OneRoster enabled) or no ClassLink credential at all — SHALL see no ClassLink rostering entry point in section setup. This gate is a visibility decision, not an authorization boundary: the rostering endpoints enforce their own checks independently.
 
+The entry point SHALL additionally sit behind a DCDO flag (`classlink-rostering-enabled`, default off): while it is off, the payload omits `classlink` for every user, so the feature can ship dark and be enabled per environment without a deploy. The flag governs reachability, not authorization — the rostering endpoints are unaffected by it and enforce their own checks.
+
 #### Scenario: Teacher with a v2 auth option sees the entry point
-- **WHEN** a teacher holding a v2 ClassLink auth option loads the teacher dashboard
+- **WHEN** a teacher holding a v2 ClassLink auth option loads the teacher dashboard and the DCDO flag is on
 - **THEN** `classlink` is included in the roster-provider payload and the ClassLink import entry appears in section setup, gated by the same providers check that gates Clever
+
+#### Scenario: DCDO flag off hides the entry point
+- **WHEN** the `classlink-rostering-enabled` DCDO flag is off (its default)
+- **THEN** the roster-provider payload omits `classlink` even for a v2 auth option holder, so no ClassLink rostering UI is reachable
 
 #### Scenario: Teacher with only a v1 auth option sees no entry point
 - **WHEN** a teacher whose only ClassLink auth option is legacy v1 format loads the teacher dashboard
