@@ -31,6 +31,7 @@ import {BREAKOUT_SPEC} from './breakout';
 import {BREAKOUT_SINGLE_SPEC} from './breakoutSingle';
 import {FLAPPY_SPEC} from './flappy';
 import {FLAPPY_SINGLE_SPEC} from './flappySingle';
+import {interfaceKit} from './interfaceKit';
 import {JETPACK_SPEC} from './jetpack';
 import {METEORS_SPEC} from './meteors';
 import {METEORS_SINGLE_SPEC} from './meteorsSingle';
@@ -62,6 +63,7 @@ export const WORLD_SCENARIO_TAGS = [
   'tapper',
   'sokoban',
   'novel',
+  'interface',
   'empty',
 ] as const;
 
@@ -392,6 +394,27 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       'the one thing this project does write — the win, counted as the ' +
       'crates that are NOT on a mark\n' +
       '- Watch the console for `Solved!`',
+  },
+  interface: {
+    name: 'Interface Kit',
+    description:
+      'Every interface actor on one screen, answering each other — a Label, ' +
+      'a field you can type into, a Button, a bar and a Speech Box.',
+    source: interfaceKit(buildProject(EMPTY_SPEC).source),
+    instructions:
+      '## The interface kit\n\nType your name and press the button.\n\n' +
+      '- Click the FIELD before you type. Any click lets every field go and ' +
+      'the one clicked on takes over, which is how two of them on a screen ' +
+      'stay apart — and it is the Mouse rule doing it, not the field\n' +
+      '- The bar follows what you type, because the field raises `changed` ' +
+      'and the world answers it. That event is the FIELD\u2019s own, ' +
+      'declared in `textInput.actor` — an actor may say something happened ' +
+      'without a rule in between\n' +
+      '- The box says its line a letter at a time, on a timer it holds. Open ' +
+      '`speechBox.actor` and the whole typewriter is six rows\n' +
+      '- Every one of these ACTS LIKE the Label: open one and the first row ' +
+      'says so. What each adds is one idea — an edge and a click, a panel ' +
+      'and a clock, a focus and two handlers',
   },
   empty: {
     name: 'Empty',
