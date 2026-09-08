@@ -147,7 +147,11 @@ class Sound {
           : Math.max(0, Math.min(1, options?.volume));
       this.audioElement.volume = volume;
       this.audioElement.loop = !!options?.loop;
-      const events = ['abort', 'ended', 'pause'];
+      // Every event that ends playback for an `<audio>` element. `error` is
+      // included because a source that fails mid-playback ends it just as
+      // surely as `ended` does, and would otherwise leave the sound marked
+      // playing forever.
+      const events = ['abort', 'ended', 'error', 'pause'];
       const unregisterAndCallback = () => {
         for (const eventName of events) {
           this.audioElement?.removeEventListener?.(
@@ -155,6 +159,9 @@ class Sound {
             unregisterAndCallback,
           );
         }
+        this.playingCount = Math.max(this.playingCount - 1, 0);
+        this.playing = false;
+        options?.onEnded?.();
       };
 
       for (const eventName of events) {
@@ -216,7 +223,7 @@ class Sound {
         this.audioElement.currentTime = 0;
       }
     } catch (err) {
-      if (err instanceof Error && err.toString() === 'already registered') {
+      if (err instanceof Error && err.name === 'InvalidStateError') {
         // Stopping a sound that hasn't been played. Just ignore.
       } else {
         throw err;

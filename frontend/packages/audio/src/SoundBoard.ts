@@ -176,8 +176,8 @@ class SoundBoard {
    * they can be restarted later.
    */
   pauseSounds() {
-    this.pausedSounds = Object.keys(this.soundsById).filter(
-      soundUrl => this.soundsById[soundUrl].isPlaying,
+    this.pausedSounds = Object.keys(this.soundsById).filter(soundUrl =>
+      this.isPlaying(soundUrl),
     );
     this.pausedSounds.forEach(soundUrl => this.stopPlayingUrl(soundUrl));
   }

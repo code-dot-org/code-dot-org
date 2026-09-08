@@ -19,7 +19,6 @@
   "sideEffects": [
     "**/*.css"
   ],
-  "type": "module",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -64,6 +63,7 @@
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:",
     "vite-plugin-externalize-deps": "catalog:",
+    "vite-plugin-lib-inject-css": "catalog:",
     "vitest": "catalog:"
   },
   "peerDependencies": {

@@ -3,6 +3,7 @@ import type {OutputOptions} from 'rollup';
 import {defineConfig} from 'vite';
 import dts from 'vite-plugin-dts';
 import {externalizeDeps} from 'vite-plugin-externalize-deps';
+import {libInjectCss} from 'vite-plugin-lib-inject-css';
 
 /**
  * Get Rollup output configuration.
@@ -34,6 +35,10 @@ export default defineConfig({
     // Libraries such as react, react-dom, lodash, etc. should not be bundled by the library.
     // Instead, they are expected to be provided by the host application.
     externalizeDeps(),
+    // Emit a CSS import in each chunk that needs one, so a consumer gets the
+    // styles by importing the module -- no separate stylesheet import to
+    // remember. Matches component-library and markdown.
+    libInjectCss(),
   ],
   resolve: {
     dedupe: [
