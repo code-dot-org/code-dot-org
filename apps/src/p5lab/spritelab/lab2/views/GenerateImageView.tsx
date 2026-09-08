@@ -220,8 +220,8 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   const canUsePrevious = !!existing;
 
   const generate = useCallback(async () => {
-    // The third argument attaches the project context (level path, app),
-    // for per-level breakdowns.
+    // true attaches the project context (level path, app) for per-level
+    // breakdowns.
     analyticsReporter.sendEvent(
       EVENTS.HOAI2026_IMAGE_PROMPT,
       {
