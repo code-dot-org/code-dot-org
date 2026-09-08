@@ -1,0 +1,33 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-07T23:58:11.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "aif-y2-working-with-data-lesson11-2026 + template",
+    "long_instructions": "Some of the data is lost and can’t be counted. Currently, this lost data breaks your program: when `row[\"artifacts_found\"]` is an empty string, calling `int(row[\"artifacts_found\"])` raises a `ValueError`.\r\n\r\n**☑️ Do This:**\r\n- Skip counting rows if the value for `row[\"artifacts_found\"]` is lost—that is, an empty string (`\"\"`).\r\n\r\n**💻 Coding Tip**\r\n\r\nRecall you can use `continue` to skip an iteration of a loop.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFaV5rtVKBAXDR1EIrjNkYfDOUWi4QT9Niox4yi5T\nnnIAqZDT/d2DP/lrQ4cBl5fwcQ4Gv4N0FWJ/ZxTVpm8q7c4fNBhw/+VFsoT6\nq+tekUNQT9iDCindRL7ZxrWuP7Jsi2M5mR0L8Oy1LLEXyfB2sAGKjnmSwMEK\nVeYWlkB2L7opy11zy5t+CcYaqY6rTOCm/EdQSEJ5MfCNqQenCCN9HxcE9Ozs\nqbbl+Y4gIZETbc9SpsOqxk6kPM4vKx6sGvY6SHJn+hGMZxsRjxHPR5ONo/yk\nWiQx5zW8F97z66Il5+txjnwpfejbzlL//E2WoKB6GblVeyhXG4ztZo1v0Ndr\nx8REnfjsv9mkh+23Z2UYk8JftsSuneKXiH+USDXH/7cXxPJKJi0vFe4Yicv4\n+gTs0G1UeezMjbZwygBTqgXChTUtMORZkC5K3anD2vtA7fjY0pHUmYv7iqef\nZW8+3VE3VSlw6BXJtEO8zeDF9fERrCYsvFpOOCyZp8s+J4Vci9zj6kjyFWWf\nU0Pc+mcfhZvO2mbhs7z7XdWYetvQLYb/M+Pyvy2Wur6E7VL/S7PO+aVGwrTs\ng0clHOBrRsPor5fhT0n8YJMXUpUZu/9jYpkNnd0BHppS89jljXX3mJkBQHPF\ntNfSLunSNIMiKqLvfDMI6iWjlptK5n764KZgYoMT5v4qJ7pHYRBivZXCQtGf\nKvIxece3PpWvEK9cYIrShBOhPglulnXXQLIemciSaCXC6savpK2dlie877nQ\nXVJpO4OaPbb7eeMQWFcAYQeUzKf5j1eOlK60qvwy5xTHMvKJH5XJPhdr522d\n1aWlWRfOsprTj9eo7hf1gbY4SJ0yPDc/VveMgjuFU0YcKudWf0gFwEKFuJye\nNNeAfC48xyXVZB6eGDa7CZ/XI3QsQT3ST9gmnQ8MSEpnRFIDje20IiptkX6D\niAPZFPBVoV80MqW6ISSHcqZWUzCIKrny89DwJLyBJRLLWBiwMwOainwfkveD\nufgIaKeE1j4ah0+7ifQTHn4CND2jwFSWj9Jz68OYmnNgd9Ulk+szpJ3aLX1C\nm2lIVIzN5FIvgLKlXGInetH0B5RMfxOKf8OGLX+H8CVwFzNgL2UOILsittdh\n0NiVwo4sY3gYR4q0WNHMwjCoTt7YbZ6Bq3b3pXki5wL2oV8d9s6u9zvlrG4D\nfyJeV1YXMBFr1FdNVf2lqU2FJxpFPICBFptKF/dxmfLgfbBnXPk6VX03pQ12\nt1zM5MaqYcBLYoXuLwkop+0WFbI1abELA6ykI9nJgobTMCBLGwz81JI9GMod\nm5Ffh0rT59/egnCGLr6Yu9y3VLQMtKDbY7jbk52DSKuoq9WziYAvHsSIvFlq\n5uzMJVuEG/wIt2v4sO+DgRxMZqVgrM2+Jd/GyB9KIVTZCz3FkEs7iorw1pIX\nZgqIzJ/nlYVXxXg5Fu3EtiA32yd0sjsniAqu4XdHpW2DdcoPWXXV4Tcetww8\n+oX+zSQW8Un1YrEZrPuEbNLyZCn6cJlqP2axSz4bgCBQdZpmdB/Bz6QmbnW7\nfTJFY4xixoplXZT/1D4mi62HFU6j8cut5TlHUmv2qZQVWZdm2PKGaGR6fYwd\nHID+wCcIrP6aqoymAr4qcj7g5t9Q4PNMv9sVDe3kuO9CQa5bAQLapL0Pqpt3\n+kZFH1cg2UMqGp5H1QDTf78nDKsRulfHutgsoKpq1pzmv8GPQ3GVg0dSq4Dl\njGzXHOV+DtmMZlNNZujiLzF4zuos9NEcH0ZzaqF8mB44Tp5TImzU7/lSyIlL\nl74Vki9b4rrFNVjWvMEZkNCHZzbdA676FAkRWBxNvwoD038o6GudasDZJ9zc\nToKvH+2Lsug7mjtUMvp9zBUEMCmj8SKalDh05S6z5oVtXSDOIKI/jj3mG9/1\ndKZ5TxGgi9KqmizqzPFduMZWMcrqFjMFB6n6+EBt33vUbaZOM2Qgpa2EP3Sz\n7JTTc8ZoJdIVy8SgHJGf+SMxLZGNfCwkO1681erhNVIoTS4UVuFdhm4wNgpY\n0gp2qODkRxS9rACz0mn9yPLe/OXeMZt8LSWbAcmNTUJIELX9ZvKyQBJ90z9b\nJF645OFVNd0Ho3MJAmXUvBDOy5uyP7fkG1QdP+qTHr3AZk43A1HIwg7tMSmA\ntsNBlq+jiGzH+ZUCPd07VVKmaX+3cTy7v7lJrpwwiouY49nlFgqpb4r6ZgV3\nsavI8d7SDk0sZ455lTFG3xFkOp8WS9XtU0oik3VvMzjj+rs1oLL3npcif7Q3\nznOaN0IuMq4KPEXeDkQ+VpdU6U2/CrbbvA1ldxim7KPYMlWBCWt0znAn5uyj\n4a1/pFfGiHLjdT2YQ/LWs5toF3a3ljet+mZlk2QDY8b/ufqh76lDznEhR8bj\nSUKzY0MS0DUL1zokpRf+FxN0SsDozSM+d5J2gzC3ipW2CvZq7W5IRWxFyDU7\nCu1nGxIjotC7DLOty25vsAUYGVCjRLkRvXDHn1uKyi1eVvvr+uNnlC9ocVbF\nclsBKKr+1MwJ0gi7z7q1jm+QwzvjXEvAV2RKnup2hw9UW3TQgVLIao7vK8lx\nfFF5jHksVZkes/tnFZ1l0Bm0kO53RY/SIkALPKtNViJsglJvZlj/25UY1vPJ\nql3rf9ZKcViayuxSzqwICUVS6e1KX6AoAw+FWnp5ve+a2qOtTXusiqW9AU2y\n2GFxcjyJjY178Xce1FCzKoTwpnygAfP0A7P4W+zWMQPbrkzChVF3M91m6+0D\nIajAEQVkzbHVAGJKoJNh06SXHLsPnKskVjLp65e9DvNHX/RPj6t6KvkqeUhQ\n7duAhEOBb+hgkJm1h8lXS75Sam4TAXVBk6cXZWwhgXbMtrVW9eLWSfLB/LOB\nWmUTjjmKu7Ttefj0k1UAQivTJsDG0PS5+HvwmWf0qCY=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-07 23:58:56 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 23:59:15 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>
