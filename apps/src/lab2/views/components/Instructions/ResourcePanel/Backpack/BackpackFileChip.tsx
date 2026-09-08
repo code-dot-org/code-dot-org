@@ -6,6 +6,7 @@ import {Typography, IconButton as MuiIconButton} from '@mui/material';
 import React, {useMemo} from 'react';
 
 import {getFileIconNameAndStyle} from '@cdo/apps/codebridge';
+import {SUPPORTED_IMAGE_EXTENSIONS} from '@cdo/apps/lab2/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
@@ -37,8 +38,6 @@ interface BackpackFileChipProps extends BackpackProps {
   // Display name for the Lab this file was saved from, shown when another backpack holds the same name.
   sourceDisplayName?: string;
 }
-
-const EXTENSIONS_WITH_PREVIEWS = ['png', 'jpg', 'jpeg', 'gif'];
 
 // TODO: add statsig logging
 const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
@@ -96,7 +95,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   }, [disableActions, inReadOnly, isFileSupported, addFileTooltipText]);
 
   const filePreviewUrl = useMemo(() => {
-    if (fileExtension && EXTENSIONS_WITH_PREVIEWS.includes(fileExtension)) {
+    if (fileExtension && SUPPORTED_IMAGE_EXTENSIONS.includes(fileExtension)) {
       const url = backpackApi.getFileFetchUrl(fileName);
       if (url) {
         return `${url}?cacheBust=${Date.now()}`;
