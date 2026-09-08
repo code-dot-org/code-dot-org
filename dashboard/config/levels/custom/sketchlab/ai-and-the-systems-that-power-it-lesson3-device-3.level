@@ -1,13 +1,12 @@
 <Sketchlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 75,
   "created_at": "2026-09-02T21:26:26.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "#Device Three\r\n\r\n###Denise Carter — Farmer\r\n\r\nDenise flies a camera drone over her sweet potato and soybean fields to spot trouble early. The drone runs on a battery and transfers its images to her laptop over Wi-Fi once it lands. Images are kept on the laptop's drive and backed up to the cloud\r\n\r\n* The laptop freezes when she opens a whole field's images at once.\r\n* It now says there isn't enough space to save this week's flight.\r\n* Transferring one flight takes the entire evening.\r\n* The drone stays up about 18 minutes, not the 25 printed on the box.",
+    "long_instructions": "#Denise Carter — Farmer\r\n\r\nDenise flies a camera drone over her sweet potato and soybean fields to spot trouble early. The drone transfers its images to her laptop over Wi-Fi once it lands. Images are kept on the laptop's drive and backed up to the cloud.\r\n\r\n### What's Going Wrong?\r\n* The laptop freezes when she opens a whole field's images at once.\r\n* It now says there isn't enough space to save this week's flight.\r\n* Transferring a single flight takes the entire evening.\r\n* The first year was completely fine. It only became a problem this season.",
     "hide_share_and_remix": "false",
     "require_edit_to_continue": "true",
     "start_sources": {
@@ -17,8 +16,8 @@
             "id": "eea2fa1d-88a6-4785-a843-6e1ebdea732e",
             "type": "group",
             "position": {
-              "x": 1923.8418266839053,
-              "y": 1621.8067360158057
+              "x": 1933.8418266839053,
+              "y": 1807.8067360158057
             },
             "width": 882.1716367230324,
             "height": 1112.1435277237897,
@@ -32,115 +31,21 @@
             "dragging": false
           },
           {
-            "id": "9756081e-d486-41d5-902e-b745da36d6c8",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/613eb7b6-956b-4f37-9f7f-b6d01479e112.png",
-              "altText": "comms_5G"
-            },
-            "position": {
-              "x": 2635.7697545575725,
-              "y": 250.7491209398329
-            },
-            "width": 96.82159047516325,
-            "height": 120,
-            "measured": {
-              "width": 97,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
-            "id": "c092e9a4-22f9-4ec4-85b0-ed994bf0e1f6",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/089b50d7-96b9-4d55-8150-567887313dc9.png",
-              "altText": "comms_bluetooth"
-            },
-            "position": {
-              "x": 714.4799398042453,
-              "y": 72.55632931556121
-            },
-            "width": 160,
-            "height": 120,
-            "measured": {
-              "width": 160,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
-            "id": "89ebd6e8-6c79-4258-b5fa-87f34d549999",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/85636f5f-01c5-4120-ba14-fd06230d31c2.png",
-              "altText": "comms_ethernet"
-            },
-            "position": {
-              "x": 603.6431658781726,
-              "y": 72.55632931556119
-            },
-            "width": 160,
-            "height": 120,
-            "measured": {
-              "width": 160,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
-            "id": "56a8d547-96a4-486c-9d17-bd476ca2a276",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/d4b7a33f-6a29-487f-8b3b-3d75f12c9f7f.png",
-              "altText": "comms_RFID"
-            },
-            "position": {
-              "x": 491.8590690980309,
-              "y": 73.50365216963021
-            },
-            "width": 160,
-            "height": 120,
-            "measured": {
-              "width": 160,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
-            "id": "808207d2-7f57-455c-a572-5033ca569916",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/0c649343-a77d-4a42-98fd-52f015273d70.png",
-              "altText": "comms_satellite"
-            },
-            "position": {
-              "x": 381.9696180260272,
-              "y": 73.50365216963024
-            },
-            "width": 160,
-            "height": 120,
-            "measured": {
-              "width": 160,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
             "id": "82353e0b-8b59-4afe-9ec0-f65819cac382",
             "type": "image",
             "data": {
               "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/05dc98bf-67f5-48c3-8627-72b5b34f5bb6.png",
-              "altText": "comms_WIFI"
+              "altText": "comms_WIFI",
+              "locked": true
             },
             "position": {
-              "x": 273.97481266216147,
-              "y": 74.45097502369921
+              "x": 2230.764900027084,
+              "y": 162.36253588130228
             },
-            "width": 160,
+            "width": 97.85562077307395,
             "height": 120,
             "measured": {
-              "width": 160,
+              "width": 98,
               "height": 120
             },
             "dragging": false
@@ -150,11 +55,12 @@
             "type": "image",
             "data": {
               "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/bd8aa061-c6aa-458b-91af-4640148a367c.png",
-              "altText": "hardware_battery"
+              "altText": "hardware_battery",
+              "locked": true
             },
             "position": {
-              "x": 2198.526629666549,
-              "y": 518.2061450516924
+              "x": 2040.8921067494675,
+              "y": 331.7730073709135
             },
             "width": 98.25746341890954,
             "height": 122.87174588749258,
@@ -169,11 +75,12 @@
             "type": "image",
             "data": {
               "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/435081e6-5b01-44c0-83a2-5e392180cf58.png",
-              "altText": "hardware_desktop"
+              "altText": "hardware_desktop",
+              "locked": true
             },
             "position": {
-              "x": 2834.1883414282015,
-              "y": 444.7387402956829
+              "x": 2653.818070013465,
+              "y": 196.1612233879777
             },
             "width": 98.25746341890954,
             "height": 120,
@@ -184,343 +91,21 @@
             "dragging": false
           },
           {
-            "id": "737e2fe5-d633-47b3-9e8e-5f1c8802aa2e",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/871503b8-ec41-4004-8dc5-59de658f347a.png",
-              "altText": "hardware_power"
-            },
-            "position": {
-              "x": 2443.766362627542,
-              "y": 520.0321888569257
-            },
-            "width": 106.87270108138728,
-            "height": 120,
-            "measured": {
-              "width": 107,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
-            "id": "a22e86f9-222b-410b-b5c2-aa991f1583b3",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/c61b821c-15dd-452e-9a0c-a7f1fbb4a6d4.png",
-              "altText": "hardware_power-outlet"
-            },
-            "position": {
-              "x": 165.98000729829573,
-              "y": 212.76011171777287
-            },
-            "width": 160,
-            "height": 120,
-            "measured": {
-              "width": 160,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
             "id": "4f38ea6f-4e84-4e4a-b139-fb697007db71",
             "type": "image",
             "data": {
               "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/b5cfd768-b83b-4cf1-a476-040235f757e4.png",
-              "altText": "input_camera"
+              "altText": "input_camera",
+              "locked": true
             },
             "position": {
-              "x": 1488.385385673582,
-              "y": 354.9756217675424
+              "x": 2228.055070130655,
+              "y": 330.724156703376
             },
-            "width": 160,
+            "width": 102.40277047260452,
             "height": 120,
             "measured": {
-              "width": 160,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
-            "id": "e87ed30d-661a-4800-904d-05386866ce1f",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/75e32680-5cd9-4ea5-a070-3ea02e03da8d.png",
-              "altText": "input_chemical"
-            },
-            "position": {
-              "x": 1380.4479062147507,
-              "y": 354.85853982812233
-            },
-            "width": 160,
-            "height": 120,
-            "measured": {
-              "width": 160,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
-            "id": "c6cfe9bd-42d3-4b97-9b0b-fbfb6d8e391f",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/6e83b933-f330-481b-94ac-8568cc4efc02.png",
-              "altText": "input_custom"
-            },
-            "position": {
-              "x": 1269.6111322886777,
-              "y": 353.9112169740535
-            },
-            "width": 160,
-            "height": 120,
-            "measured": {
-              "width": 160,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
-            "id": "2ffc0e0e-b860-4d74-ae40-990aa089e5fe",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/8ab5e653-43c4-4b9c-9591-fb5318a0ae05.png",
-              "altText": "input_gas"
-            },
-            "position": {
-              "x": 1157.8270355085363,
-              "y": 354.8585398281225
-            },
-            "width": 160,
-            "height": 120,
-            "measured": {
-              "width": 160,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
-            "id": "0f9f24de-7c44-4e6b-83c6-0e9060092b76",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/15cd6676-c261-41b1-9e2e-2c81fd3b79ad.png",
-              "altText": "input_GPS"
-            },
-            "position": {
-              "x": 1047.9375844365325,
-              "y": 354.8585398281225
-            },
-            "width": 160,
-            "height": 120,
-            "measured": {
-              "width": 160,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
-            "id": "2b95cc27-bf3e-48a6-a20c-5fb7093ca201",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/0c564d0a-112e-49ee-a29c-099b2cd101fb.png",
-              "altText": "input_key-and-mouse"
-            },
-            "position": {
-              "x": 936.1534876563908,
-              "y": 355.8058626821914
-            },
-            "width": 160,
-            "height": 120,
-            "measured": {
-              "width": 160,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
-            "id": "190b64c0-7b83-43b1-a5dd-8edb596cd764",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/91970ad8-44e4-4f9c-b830-269c59769cde.png",
-              "altText": "input_radar"
-            },
-            "position": {
-              "x": 824.369390876249,
-              "y": 356.75318553626045
-            },
-            "width": 160,
-            "height": 120,
-            "measured": {
-              "width": 160,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
-            "id": "49c1ef4a-dcde-4fe6-89de-ceae46f88b74",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/5928080e-2f97-4ebf-bbe1-4bb78c0bb86b.png",
-              "altText": "input_sound"
-            },
-            "position": {
-              "x": 711.6379712420382,
-              "y": 357.7005083903295
-            },
-            "width": 160,
-            "height": 120,
-            "measured": {
-              "width": 160,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
-            "id": "1f009ac5-79d8-4ad0-9133-12270ec6a0b1",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/1aad1a6b-d6e4-49f2-bdef-81614ef41431.png",
-              "altText": "input_temp"
-            },
-            "position": {
-              "x": 601.7485201700347,
-              "y": 358.6478312443984
-            },
-            "width": 160,
-            "height": 120,
-            "measured": {
-              "width": 160,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
-            "id": "e07ea166-9a5c-4afc-bd91-17a905393584",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/ab8642ec-c34c-4f83-b274-1834d769a2d2.png",
-              "altText": "input_temp"
-            },
-            "position": {
-              "x": 492.80639195209983,
-              "y": 359.5951540984675
-            },
-            "width": 160,
-            "height": 120,
-            "measured": {
-              "width": 160,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
-            "id": "56cbd103-3efa-42fb-9944-63c00f4e111a",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/ee1ade46-543a-4026-aebf-664fcbd25e40.png",
-              "altText": "input_thermal"
-            },
-            "position": {
-              "x": 384.8115865882342,
-              "y": 359.59515409846745
-            },
-            "width": 160,
-            "height": 120,
-            "measured": {
-              "width": 160,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
-            "id": "2bd35ca0-203d-40c4-a33c-1523b13f8bbe",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/112c4791-4117-43f3-baf7-38e79fbfe524.png",
-              "altText": "input_touch"
-            },
-            "position": {
-              "x": 1958.487305425408,
-              "y": 734.0055237802756
-            },
-            "width": 160,
-            "height": 120,
-            "measured": {
-              "width": 160,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
-            "id": "3e632c87-7c5c-499d-a1ab-ecc2b6164a85",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/9bf000b1-2882-4c16-9361-9104bf84fa0c.png",
-              "altText": "input_weight"
-            },
-            "position": {
-              "x": 167.87465300643376,
-              "y": 358.6478312443984
-            },
-            "width": 160,
-            "height": 120,
-            "measured": {
-              "width": 160,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
-            "id": "66ab4850-f935-4c24-bde2-c00867c0eb7b",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/6e20b27d-7404-4b65-9ea2-62cc4ed00edf.png",
-              "altText": "output_action"
-            },
-            "position": {
-              "x": 168.91786916639742,
-              "y": 497.8104170365824
-            },
-            "width": 160,
-            "height": 120,
-            "measured": {
-              "width": 160,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
-            "id": "20f37b4b-a66e-42b0-9d18-f4486af03f05",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/309c2dbc-155f-4d36-8752-3101b1be00ae.png",
-              "altText": "output_audio"
-            },
-            "position": {
-              "x": 276.7515856196974,
-              "y": 497.3029563911898
-            },
-            "width": 160,
-            "height": 120,
-            "measured": {
-              "width": 160,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
-            "id": "9d2dce59-1c3d-4b99-995f-23cfde5636e4",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/2eaa9a2b-1703-448c-bd05-3b2d4f1b3546.png",
-              "altText": "output_cellphone"
-            },
-            "position": {
-              "x": 504.450282166589,
-              "y": 491.5143306309627
-            },
-            "width": 160,
-            "height": 120,
-            "measured": {
-              "width": 160,
+              "width": 102,
               "height": 120
             },
             "dragging": false
@@ -530,92 +115,17 @@
             "type": "image",
             "data": {
               "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/4b7e4c9a-35c2-4cae-bb28-77cc10889268.png",
-              "altText": "output_controller"
+              "altText": "output_controller",
+              "locked": true
             },
             "position": {
-              "x": 385.8779293444156,
-              "y": 495.8670834474435
+              "x": 2033.461837141217,
+              "y": 697.4573867933264
             },
-            "width": 160,
+            "width": 106.94992017213599,
             "height": 120,
             "measured": {
-              "width": 160,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
-            "id": "d51058dd-516c-4dce-b6c6-0751ef716cab",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/409e8ba9-0386-4d44-ac21-072ddea1847e.png",
-              "altText": "output_monitor"
-            },
-            "position": {
-              "x": 602.6947438501055,
-              "y": 494.43121050369723
-            },
-            "width": 160,
-            "height": 120,
-            "measured": {
-              "width": 160,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
-            "id": "7434442d-c1bd-4b5a-b238-0423e2a6c066",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/d234144a-9cc4-4186-840f-3e00f64ff7ab.png",
-              "altText": "output_printer"
-            },
-            "position": {
-              "x": 713.25696051857,
-              "y": 495.14914697557026
-            },
-            "width": 160,
-            "height": 120,
-            "measured": {
-              "width": 160,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
-            "id": "9ed267a7-43f5-4288-8ef4-fe006f1dc46d",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/83b08e10-c9f7-484b-82ee-d2fc067cbf1e.png",
-              "altText": "output_VR"
-            },
-            "position": {
-              "x": 824.5371136589076,
-              "y": 493.7132740318241
-            },
-            "width": 160,
-            "height": 120,
-            "measured": {
-              "width": 160,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
-            "id": "5f1924e4-15fd-45f8-8774-7961d25c414d",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/fd380103-af09-4a37-bf12-5371b70feecd.png",
-              "altText": "output_wearable"
-            },
-            "position": {
-              "x": 937.9710762148648,
-              "y": 494.43121050369723
-            },
-            "width": 160,
-            "height": 120,
-            "measured": {
-              "width": 160,
+              "width": 107,
               "height": 120
             },
             "dragging": false
@@ -625,130 +135,17 @@
             "type": "image",
             "data": {
               "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/a467e4ec-cd00-4713-b802-92a6e3396fb6.png",
-              "altText": "processing_CPU"
+              "altText": "processing_CPU",
+              "locked": true
             },
             "position": {
-              "x": 2167.138112090545,
-              "y": 348.44470098016336
+              "x": 2818.8962356900156,
+              "y": 377.2433157438608
             },
-            "width": 160,
+            "width": 99.37133733958444,
             "height": 120,
             "measured": {
-              "width": 160,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
-            "id": "1e4860f1-f7e5-496e-b2fb-5fb76b9a5723",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/8c9e7b67-927f-45e7-8088-35eb0e81411d.png",
-              "altText": "processing_GPU"
-            },
-            "position": {
-              "x": 279.2643632712534,
-              "y": 636.58263193458
-            },
-            "width": 160,
-            "height": 120,
-            "measured": {
-              "width": 160,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
-            "id": "9a1cab45-6360-4265-b20a-850d50918df1",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/41b32b75-5807-41af-92c2-d931b185fba8.png",
-              "altText": "software_AI"
-            },
-            "position": {
-              "x": 167.98421013091576,
-              "y": 777.2981804217167
-            },
-            "width": 160,
-            "height": 120,
-            "measured": {
-              "width": 160,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
-            "id": "faa0d427-5690-4c88-82e3-9db2faa60a80",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/1962cdf5-4d99-4201-b4a9-f902c7377596.png",
-              "altText": "software_app"
-            },
-            "position": {
-              "x": 277.8284903275071,
-              "y": 778.734053365463
-            },
-            "width": 160,
-            "height": 120,
-            "measured": {
-              "width": 160,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
-            "id": "5f0e63dc-562f-434c-837a-616855f8598c",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/2a28bfcc-bf90-4e2a-ab66-3f14282bb6ab.png",
-              "altText": "software_OS"
-            },
-            "position": {
-              "x": 389.10864346784473,
-              "y": 778.7340533654627
-            },
-            "width": 160,
-            "height": 120,
-            "measured": {
-              "width": 160,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
-            "id": "ce2d3999-0258-4ac3-b8c5-f4caf7f27169",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/be9261ef-887a-4194-bc57-174a1da32151.png",
-              "altText": "storage_cloud"
-            },
-            "position": {
-              "x": 2830.7199702011435,
-              "y": 251.6622339685428
-            },
-            "width": 102.56508225014841,
-            "height": 120,
-            "measured": {
-              "width": 103,
-              "height": 120
-            },
-            "dragging": false
-          },
-          {
-            "id": "27a1dee9-66db-471e-9364-5d59ae3dbadb",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/98d6e3d7-a5ea-41ed-bf7c-8c59a0f35628.png",
-              "altText": "storage_physical"
-            },
-            "position": {
-              "x": 1987.6681394862112,
-              "y": 524.3151650926053
-            },
-            "width": 160,
-            "height": 120,
-            "measured": {
-              "width": 160,
+              "width": 99,
               "height": 120
             },
             "dragging": false
@@ -758,16 +155,17 @@
             "type": "image",
             "data": {
               "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/862d604b-7bd4-47d2-b1a5-72f9fb445087.png",
-              "altText": "storage_RAM"
+              "altText": "storage_RAM",
+              "locked": true
             },
             "position": {
-              "x": 1985.0342291604989,
-              "y": 350.7312560104444
+              "x": 2676.2009834892397,
+              "y": 378.01415420763163
             },
-            "width": 160,
+            "width": 108.46563673864648,
             "height": 120,
             "measured": {
-              "width": 160,
+              "width": 108,
               "height": 120
             },
             "dragging": false
@@ -779,7 +177,8 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "#e7f2e3",
-              "strokeColor": "#9dc88d"
+              "strokeColor": "#9dc88d",
+              "locked": true
             },
             "position": {
               "x": 10,
@@ -797,82 +196,42 @@
             "expandParent": true
           },
           {
-            "id": "1953d6e8-edd7-46b3-beb1-02ac31b43159",
-            "type": "text",
-            "data": {
-              "text": "Communication",
-              "strokeColor": "transparent",
-              "fontFamily": "sans",
-              "fontSize": "large"
-            },
-            "position": {
-              "x": 253.39404529617798,
-              "y": 1179.3129149749354
-            },
-            "width": 249.0483482824858,
-            "height": 41.89464570813789,
-            "measured": {
-              "width": 249,
-              "height": 42
-            },
-            "dragging": false
-          },
-          {
             "id": "ad8eed9e-3a02-4a3f-b2c6-3970909a7fe3",
             "type": "shape",
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#dfe9fb",
-              "strokeColor": "#6f9dec"
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "#6f9dec",
+              "locked": true
             },
             "position": {
-              "x": 1964.7796870446812,
-              "y": 238.41987427839524
+              "x": 1978.4211361432751,
+              "y": 136.86686432219858
             },
-            "width": 388.63426433590087,
-            "height": 474.63339296922493,
+            "width": 384.0871146363694,
+            "height": 351.575839129187,
             "measured": {
-              "width": 389,
-              "height": 475
+              "width": 384,
+              "height": 352
             },
             "dragging": false,
             "zIndex": -5
-          },
-          {
-            "id": "0fa4b87f-fc45-4d59-84c4-9f6fdbbed35e",
-            "type": "text",
-            "data": {
-              "text": "Power / Systems",
-              "strokeColor": "transparent",
-              "fontFamily": "sans",
-              "fontSize": "large"
-            },
-            "position": {
-              "x": 631.2783017320475,
-              "y": 1181.2075606830736
-            },
-            "width": 249.0483482824858,
-            "height": 41.89464570813789,
-            "measured": {
-              "width": 249,
-              "height": 42
-            },
-            "dragging": false
           },
           {
             "id": "5b090fff-86c5-44b0-ae3d-553473b334a6",
             "type": "shape",
             "data": {
               "shapeType": "rectangle",
-              "label": "Amara types each animal's treatment into the tablet at every farm she visits",
+              "label": "Denise uses a controller to fly the drone from the ground.",
               "backgroundColor": "#f9dcbe",
               "strokeColor": "#f7b56e",
-              "fontFamily": "draw"
+              "fontFamily": "draw",
+              "locked": true
             },
             "position": {
-              "x": 2116.006598513682,
-              "y": 745.7353299693519
+              "x": 2162.9146516781125,
+              "y": 719.0705548508723
             },
             "width": 253.37716649265815,
             "height": 84.76808346426208,
@@ -889,7 +248,8 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "#fff9e5",
-              "strokeColor": "#ffd966"
+              "strokeColor": "#ffd966",
+              "locked": true
             },
             "position": {
               "x": 1910.0909839507196,
@@ -905,27 +265,6 @@
             "zIndex": -6
           },
           {
-            "id": "064b9238-bf96-42ca-9065-4d6ed324f041",
-            "type": "shape",
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "#dfe9fb",
-              "strokeColor": "#6f9dec"
-            },
-            "position": {
-              "x": 200.99860130940158,
-              "y": 1474.6652053153605
-            },
-            "width": 358.9377993544896,
-            "height": 281.04488519172946,
-            "measured": {
-              "width": 359,
-              "height": 281
-            },
-            "dragging": false
-          },
-          {
             "id": "02330def-dc44-4846-a089-efccc5c3ac99",
             "type": "shape",
             "data": {
@@ -933,7 +272,7 @@
               "label": "",
               "backgroundColor": "#f9e2e2",
               "strokeColor": "#e27878",
-              "locked": false
+              "locked": true
             },
             "position": {
               "x": 441.79604976907876,
@@ -950,27 +289,6 @@
             "expandParent": true
           },
           {
-            "id": "69b42a27-4be5-4a76-85fa-6ce32e032141",
-            "type": "shape",
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "#f2e3ea",
-              "strokeColor": "#ca8ca7"
-            },
-            "position": {
-              "x": 968.1349884299688,
-              "y": 1474.6652053153603
-            },
-            "width": 358.9377993544896,
-            "height": 281.04488519172946,
-            "measured": {
-              "width": 359,
-              "height": 281
-            },
-            "dragging": false
-          },
-          {
             "id": "87b59a8f-b913-4f4a-9294-874ea7ad2541",
             "type": "text",
             "data": {
@@ -978,7 +296,8 @@
               "strokeColor": "transparent",
               "fontFamily": "sans",
               "fontSize": "large",
-              "textAlign": "left"
+              "textAlign": "left",
+              "locked": true
             },
             "position": {
               "x": 1921.6190091615254,
@@ -999,17 +318,18 @@
               "text": "Possible Causes",
               "strokeColor": "transparent",
               "fontFamily": "sans",
-              "fontSize": "large"
+              "fontSize": "large",
+              "locked": true
             },
             "position": {
               "x": 74.39517238594453,
               "y": 24.678230027986274
             },
             "width": 249.0483482824858,
-            "height": 41.89464570813789,
+            "height": 43.89464570813789,
             "measured": {
               "width": 249,
-              "height": 42
+              "height": 44
             },
             "dragging": false,
             "zIndex": 2,
@@ -1017,31 +337,10 @@
             "expandParent": true
           },
           {
-            "id": "7df74274-475b-4b3e-93ff-8aa0e9bc651e",
-            "type": "text",
-            "data": {
-              "text": "Processing",
-              "strokeColor": "transparent",
-              "fontFamily": "sans",
-              "fontSize": "large"
-            },
-            "position": {
-              "x": 259.50286267879596,
-              "y": 1484.4570940497038
-            },
-            "width": 249.0483482824858,
-            "height": 41.89464570813789,
-            "measured": {
-              "width": 249,
-              "height": 42
-            },
-            "dragging": false
-          },
-          {
             "id": "23fbd26d-2b7e-435e-abe0-00d3d258cd06",
             "type": "text",
             "data": {
-              "text": "Solution",
+              "text": "The drone's camera is faulty",
               "strokeColor": "#8c8c8c",
               "fontFamily": "sans",
               "fontSize": "large"
@@ -1056,67 +355,29 @@
               "width": 249,
               "height": 121
             },
-            "dragging": false
-          },
-          {
-            "id": "3b9d3f9c-0c89-4441-9a5d-18250a9f2cee",
-            "type": "text",
-            "data": {
-              "text": "Storage / Memory",
-              "strokeColor": "transparent",
-              "fontFamily": "sans",
-              "fontSize": "large"
-            },
-            "position": {
-              "x": 1013.5718545177181,
-              "y": 1488.2463854659793
-            },
-            "width": 249.0483482824858,
-            "height": 41.89464570813789,
-            "measured": {
-              "width": 249,
-              "height": 42
-            },
-            "dragging": false
-          },
-          {
-            "id": "dec1fccf-8c70-4587-b4f1-463c85cdc10a",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/d8a05d45-d66f-4265-9d20-d1407ad774d2.png",
-              "altText": "output_tablet"
-            },
-            "position": {
-              "x": 2107.982986683616,
-              "y": 183.756570389733
-            },
-            "width": 99.69333636265583,
-            "height": 120,
-            "measured": {
-              "width": 100,
-              "height": 120
-            },
-            "dragging": false
+            "dragging": false,
+            "zIndex": 12
           },
           {
             "id": "e8e22ea8-ab1d-4d50-b81f-c2828e77c26d",
             "type": "shape",
             "data": {
               "shapeType": "rectangle",
-              "label": "Records save to the tablet's own drive first. RAM holds the records that she has open on the tablet",
+              "label": "RAM holds the images that she has open on her computer. The SSD drive stores the data.",
               "backgroundColor": "#f9dcbe",
               "strokeColor": "#f7b56e",
-              "fontFamily": "draw"
+              "fontFamily": "draw",
+              "locked": true
             },
             "position": {
-              "x": 1971.8820068860068,
-              "y": 61.240601255914655
+              "x": 2921.956447603877,
+              "y": 182.7586366591883
             },
-            "width": 372.1328784622184,
-            "height": 76.52115902193145,
+            "width": 216.4309449910171,
+            "height": 117.42590425589106,
             "measured": {
-              "width": 372,
-              "height": 77
+              "width": 216,
+              "height": 117
             },
             "dragging": false
           },
@@ -1127,17 +388,18 @@
               "shapeType": "circle",
               "label": "",
               "backgroundColor": "#fff2cc",
-              "strokeColor": "var(--sketchlab-stroke-default)"
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "locked": true
             },
             "position": {
-              "x": 2072.537258542978,
-              "y": 163.89406792406237
+              "x": 2610.6166396541685,
+              "y": 168.44121762359356
             },
-            "width": 168.24692444233096,
-            "height": 161.2346222116529,
+            "width": 186.4355232404555,
+            "height": 179.42322100977765,
             "measured": {
-              "width": 168,
-              "height": 161
+              "width": 186,
+              "height": 179
             },
             "dragging": false,
             "zIndex": -4
@@ -1147,19 +409,20 @@
             "type": "shape",
             "data": {
               "shapeType": "rectangle",
-              "label": "When she picks up a cell phone signal, the records upload over the network",
+              "label": "Once the drone lands, the high definition images are transferred over Wi-Fi to Denise's laptop.",
               "backgroundColor": "#f9dcbe",
               "strokeColor": "#f7b56e",
-              "fontFamily": "draw"
+              "fontFamily": "draw",
+              "locked": true
             },
             "position": {
-              "x": 2573.279384845015,
-              "y": 117.31968746376256
+              "x": 2557.356610543729,
+              "y": 65.58911554667154
             },
-            "width": 372.1328784622184,
+            "width": 283.7258484404348,
             "height": 76.52115902193145,
             "measured": {
-              "width": 372,
+              "width": 284,
               "height": 77
             },
             "dragging": false
@@ -1169,20 +432,21 @@
             "type": "shape",
             "data": {
               "shapeType": "rectangle",
-              "label": "The clinic's records are stored in the cloud and are accessible from the clinics desktop computer",
+              "label": "A single battery powers the drone while in flight.",
               "backgroundColor": "#f9dcbe",
               "strokeColor": "#f7b56e",
-              "fontFamily": "draw"
+              "fontFamily": "draw",
+              "locked": true
             },
             "position": {
-              "x": 2973.451806411158,
-              "y": 341.63603229515405
+              "x": 1957.3127266700506,
+              "y": 520.0737142640111
             },
-            "width": 174.20669184628434,
-            "height": 155.69163366830492,
+            "width": 149.1360415415994,
+            "height": 81.79919066502293,
             "measured": {
-              "width": 174,
-              "height": 156
+              "width": 149,
+              "height": 82
             },
             "dragging": false
           },
@@ -1191,40 +455,21 @@
             "type": "shape",
             "data": {
               "shapeType": "rectangle",
-              "label": "Charges at the clinic overnight",
+              "label": "High definition camera photographs the fields from above.",
               "backgroundColor": "#f9dcbe",
               "strokeColor": "#f7b56e",
-              "fontFamily": "draw"
+              "fontFamily": "draw",
+              "locked": true
             },
             "position": {
-              "x": 2417.2159267718566,
-              "y": 424.1052767184597
+              "x": 2286.883340001203,
+              "y": 524.4860762838316
             },
-            "width": 159.36222785008943,
-            "height": 79.81992879886366,
+            "width": 249.0887657826462,
+            "height": 82.4589446204094,
             "measured": {
-              "width": 159,
-              "height": 80
-            },
-            "dragging": false
-          },
-          {
-            "id": "e86273a4-5451-4a3d-addc-aafd303a79ce",
-            "type": "lineAnchor",
-            "position": {
-              "x": 2348.144695473493,
-              "y": 305.08807988485677
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
+              "width": 249,
+              "height": 82
             },
             "dragging": false
           },
@@ -1237,7 +482,8 @@
               "fontColor": "#ec8e22",
               "fontSize": 60,
               "fontFamily": "draw",
-              "textAlign": "left"
+              "textAlign": "left",
+              "locked": true
             },
             "position": {
               "x": 1910.7516439606893,
@@ -1260,7 +506,8 @@
               "fontColor": "#ec8e22",
               "fontSize": 60,
               "fontFamily": "draw",
-              "textAlign": "left"
+              "textAlign": "left",
+              "locked": true
             },
             "position": {
               "x": 1935.2804071851624,
@@ -1281,7 +528,8 @@
               "text": "Eliminated Possibilities",
               "strokeColor": "transparent",
               "fontFamily": "sans",
-              "fontSize": "large"
+              "fontSize": "large",
+              "locked": true
             },
             "position": {
               "x": 527.4435206684302,
@@ -1302,7 +550,7 @@
             "id": "11b2ef87-4cae-4068-89b9-df531320967e",
             "type": "text",
             "data": {
-              "text": "Solution",
+              "text": "The cloud backup isn't running",
               "strokeColor": "#8c8c8c",
               "fontFamily": "sans",
               "fontSize": "large"
@@ -1317,13 +565,14 @@
               "width": 249,
               "height": 121
             },
-            "dragging": false
+            "dragging": false,
+            "zIndex": 11
           },
           {
             "id": "e86e1723-5b08-4660-b3f8-e748ab0fc3fc",
             "type": "text",
             "data": {
-              "text": "Solution",
+              "text": "The Wi-Fi has got slower",
               "strokeColor": "#8c8c8c",
               "fontFamily": "sans",
               "fontSize": "large"
@@ -1338,13 +587,14 @@
               "width": 249,
               "height": 121
             },
-            "dragging": false
+            "dragging": false,
+            "zIndex": 10
           },
           {
             "id": "d294f65e-15fe-4a10-bd80-af2175751bd0",
             "type": "text",
             "data": {
-              "text": "Solution",
+              "text": "The drone's battery is failing",
               "strokeColor": "#8c8c8c",
               "fontFamily": "sans",
               "fontSize": "large"
@@ -1359,13 +609,14 @@
               "width": 249,
               "height": 121
             },
-            "dragging": false
+            "dragging": false,
+            "zIndex": 9
           },
           {
             "id": "9067410f-63ff-4c42-92af-416beca67c4e",
             "type": "text",
             "data": {
-              "text": "Solution",
+              "text": "The laptop has a virus",
               "strokeColor": "#8c8c8c",
               "fontFamily": "sans",
               "fontSize": "large"
@@ -1380,20 +631,21 @@
               "width": 249,
               "height": 121
             },
-            "dragging": false
+            "dragging": false,
+            "zIndex": 8
           },
           {
             "id": "037ea9a6-da83-442d-8010-f7fbfcd823ab",
             "type": "text",
             "data": {
-              "text": "Solution",
+              "text": "The laptop is failing with age",
               "strokeColor": "#8c8c8c",
               "fontFamily": "sans",
               "fontSize": "large"
             },
             "position": {
-              "x": 3173.099832565578,
-              "y": 1417.41428180539
+              "x": 1929.0998325655796,
+              "y": 1585.4142818053897
             },
             "width": 249.0483482824858,
             "height": 121.06512035451146,
@@ -1401,20 +653,21 @@
               "width": 249,
               "height": 121
             },
-            "dragging": false
+            "dragging": false,
+            "zIndex": 7
           },
           {
             "id": "48560197-8187-4bd6-a8e4-a4e1073b13de",
             "type": "text",
             "data": {
-              "text": "Solution",
+              "text": "The laptop doesn't have enough memory for these images",
               "strokeColor": "#8c8c8c",
               "fontFamily": "sans",
               "fontSize": "large"
             },
             "position": {
-              "x": 3422.1481808480635,
-              "y": 1417.41428180539
+              "x": 2178.1481808480653,
+              "y": 1585.4142818053897
             },
             "width": 249.0483482824858,
             "height": 121.06512035451146,
@@ -1422,20 +675,21 @@
               "width": 249,
               "height": 121
             },
-            "dragging": false
+            "dragging": false,
+            "zIndex": 6
           },
           {
             "id": "6fde26d8-f0a3-49d0-9818-37a7f9d09de5",
             "type": "text",
             "data": {
-              "text": "Solution",
+              "text": "The drive is full",
               "strokeColor": "#8c8c8c",
               "fontFamily": "sans",
               "fontSize": "large"
             },
             "position": {
-              "x": 3671.196529130549,
-              "y": 1417.41428180539
+              "x": 2427.196529130551,
+              "y": 1585.4142818053897
             },
             "width": 249.0483482824858,
             "height": 121.06512035451146,
@@ -1443,20 +697,21 @@
               "width": 249,
               "height": 121
             },
-            "dragging": false
+            "dragging": false,
+            "zIndex": 5
           },
           {
             "id": "d8ab76e4-07e2-4c18-840b-82318e5d1f5d",
             "type": "text",
             "data": {
-              "text": "Solution",
+              "text": "The image files are very large",
               "strokeColor": "#8c8c8c",
               "fontFamily": "sans",
               "fontSize": "large"
             },
             "position": {
-              "x": 3920.244877413035,
-              "y": 1417.41428180539
+              "x": 2676.2448774130366,
+              "y": 1585.4142818053897
             },
             "width": 249.0483482824858,
             "height": 121.06512035451146,
@@ -1464,7 +719,8 @@
               "width": 249,
               "height": 121
             },
-            "dragging": false
+            "dragging": false,
+            "zIndex": 4
           },
           {
             "id": "bc29cd24-d29d-4008-9166-a5443850f8a4",
@@ -1474,7 +730,8 @@
               "strokeColor": "transparent",
               "fontFamily": "sans",
               "fontSize": "large",
-              "textAlign": "left"
+              "textAlign": "left",
+              "locked": true
             },
             "position": {
               "x": 1919.6407160285253,
@@ -1487,33 +744,230 @@
               "height": 40
             },
             "dragging": false
+          },
+          {
+            "id": "aaac0ba4-bb10-47c5-8a65-f3e51e041287",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson3-device-3/uuid/8654813d-ce5c-448b-8e72-e86382932cbb.png",
+              "altText": "storage_cloud",
+              "locked": true
+            },
+            "position": {
+              "x": 2722.391583261732,
+              "y": 735.2126658694162
+            },
+            "width": 108.46563673864648,
+            "height": 120,
+            "measured": {
+              "width": 108,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "c60754d4-0aae-4251-987d-eff2730f6819",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson3-device-3/uuid/311e2d00-bbe9-4811-8727-87fb14bdb22a.png",
+              "altText": "storage_physical",
+              "locked": true
+            },
+            "position": {
+              "x": 2957.3276510708442,
+              "y": 377.5035561729624
+            },
+            "width": 100.88705390609448,
+            "height": 120,
+            "measured": {
+              "width": 101,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "d08cae5d-5a9d-41cf-afa9-b9a64a715d2d",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "#6f9dec",
+              "locked": true
+            },
+            "position": {
+              "x": 2665.651564081724,
+              "y": 227.80985831282243
+            },
+            "width": 406.82286313402585,
+            "height": 335.1874688502684,
+            "measured": {
+              "width": 407,
+              "height": 335
+            },
+            "dragging": false,
+            "zIndex": -5
+          },
+          {
+            "id": "634fbbdb-ea45-4b6d-897b-b92a1ff608b7",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson3-device-3/uuid/8bb958eb-26f9-4dfe-aedf-166d05af6e07.png",
+              "altText": "",
+              "locked": true
+            },
+            "position": {
+              "x": 1964.2003219814833,
+              "y": 113.14021093973724
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "35eeb5ce-5cb1-486a-8db8-7d6ae6e7db2c",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "#fff2cc",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "locked": true
+            },
+            "position": {
+              "x": 1949.7666022153126,
+              "y": 83.56108989901128
+            },
+            "width": 194.0141060730075,
+            "height": 183.97037070930884,
+            "measured": {
+              "width": 194,
+              "height": 184
+            },
+            "dragging": false,
+            "zIndex": -4
+          },
+          {
+            "id": "b15a492a-5d17-4e2d-b817-fca3ba78bf00",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson3-device-3/uuid/7db5b2be-598b-42a8-9d68-e5e65eff91d0.png",
+              "altText": "",
+              "locked": true
+            },
+            "position": {
+              "x": 1706.2760491058289,
+              "y": -239.79831060078104
+            },
+            "width": 194.3072056800952,
+            "height": 162.22425314473256,
+            "measured": {
+              "width": 194,
+              "height": 162
+            },
+            "dragging": false
+          },
+          {
+            "id": "40e0b619-9a41-4ed5-9fc9-7a422a156b9e",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson3-device-3/uuid/7db5b2be-598b-42a8-9d68-e5e65eff91d0.png",
+              "altText": "",
+              "rotation": 49,
+              "locked": true
+            },
+            "position": {
+              "x": 1850.4419541765542,
+              "y": 1003.178141347284
+            },
+            "width": 194.3072056800952,
+            "height": 162.22425314473256,
+            "measured": {
+              "width": 194,
+              "height": 162
+            },
+            "dragging": false
+          },
+          {
+            "id": "134ef57a-6b11-46ca-b655-f97bc4c7a346",
+            "type": "text",
+            "data": {
+              "text": "Start\nHere",
+              "strokeColor": "transparent",
+              "fontColor": "#ec8e22",
+              "fontSize": "extra-large",
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1686.6928901449692,
+              "y": -339.08128533625427
+            },
+            "width": 117.74793579137622,
+            "height": 82.75812608733992,
+            "measured": {
+              "width": 118,
+              "height": 83
+            },
+            "dragging": false
+          },
+          {
+            "id": "94e6239e-4270-44bd-843c-f5fd2fbff329",
+            "type": "text",
+            "data": {
+              "text": "The photo software doesn't release memory when she closes an image",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2925.2932256955223,
+              "y": 1585.4142818053897
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 3
+          },
+          {
+            "id": "aceec647-91ad-4afb-90b8-234ccaa84db3",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "She uploads all of her data to cloud storage for the long-term.",
+              "backgroundColor": "#f9dcbe",
+              "strokeColor": "#f7b56e",
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": 2861.290731332587,
+              "y": 736.951959183803
+            },
+            "width": 203.23586588328828,
+            "height": 100.27230141584346,
+            "measured": {
+              "width": 203,
+              "height": 100
+            },
+            "dragging": false
           }
         ],
         "edges": [
           {
-            "id": "0d08f595-48f8-4bd8-96e1-9a96db6cfb19",
-            "source": "737e2fe5-d633-47b3-9e8e-5f1c8802aa2e",
-            "target": "cce2e085-271d-4a9a-b8a9-d14af5e9463f",
-            "type": "straight",
-            "style": {
-              "stroke": "var(--sketchlab-stroke-default)",
-              "strokeWidth": 3
-            },
-            "markerEnd": {
-              "type": "arrowclosed",
-              "color": "var(--sketchlab-stroke-default)",
-              "width": 14,
-              "height": 14,
-              "strokeWidth": 3
-            },
-            "targetHandle": "right-target",
-            "sourceHandle": "left-source"
-          },
-          {
-            "id": "68e43c7e-ad95-475d-a40b-c89da0c9cbac",
-            "source": "e86273a4-5451-4a3d-addc-aafd303a79ce",
-            "target": "9756081e-d486-41d5-902e-b745da36d6c8",
-            "type": "straight",
+            "id": "36b19fa2-a1c7-4d5c-bf57-e62b1439d9de",
+            "source": "82353e0b-8b59-4afe-9ec0-f65819cac382",
+            "target": "fe1b579b-5789-4c40-8c71-8491785ac705",
+            "type": "default",
             "style": {
               "stroke": "var(--sketchlab-stroke-default)",
               "strokeWidth": 3,
@@ -1526,14 +980,17 @@
               "height": 14,
               "strokeWidth": 3
             },
+            "sourceHandle": "right-source",
             "targetHandle": "left-target",
-            "sourceHandle": "line-anchor-source"
+            "data": {
+              "locked": true
+            }
           },
           {
-            "id": "c4f379eb-5144-4200-925f-4aeec586faa2",
-            "source": "9756081e-d486-41d5-902e-b745da36d6c8",
-            "target": "ce2d3999-0258-4ac3-b8c5-f4caf7f27169",
-            "type": "straight",
+            "id": "5a0fd56d-b7b2-43a9-9d0a-2c6a355ccba4",
+            "source": "d08cae5d-5a9d-41cf-afa9-b9a64a715d2d",
+            "target": "aaac0ba4-bb10-47c5-8a65-f3e51e041287",
+            "type": "default",
             "style": {
               "stroke": "var(--sketchlab-stroke-default)",
               "strokeWidth": 3,
@@ -1546,40 +1003,47 @@
               "height": 14,
               "strokeWidth": 3
             },
-            "targetHandle": "left-target",
-            "sourceHandle": "right-source"
-          },
-          {
-            "id": "de51608d-462b-4bfa-9bb3-0bfeb1433d4c",
-            "source": "ce2d3999-0258-4ac3-b8c5-f4caf7f27169",
-            "target": "fd108d71-fbdc-44da-9a90-57f6b2d5b0b1",
-            "type": "straight",
-            "style": {
-              "stroke": "var(--sketchlab-stroke-default)",
-              "strokeWidth": 3,
-              "strokeDasharray": "8 4"
-            },
-            "markerEnd": {
-              "type": "arrowclosed",
-              "color": "var(--sketchlab-stroke-default)",
-              "width": 14,
-              "height": 14,
-              "strokeWidth": 3
-            },
+            "sourceHandle": "bottom-source",
             "targetHandle": "top-target",
-            "sourceHandle": "bottom-source"
+            "data": {
+              "locked": true
+            }
+          },
+          {
+            "id": "41d7aab0-141a-4a44-9b81-de2dde3d2bfa",
+            "source": "4e4a6775-d6a7-4d1b-a8d3-e07c7548d3d8",
+            "target": "ad8eed9e-3a02-4a3f-b2c6-3970909a7fe3",
+            "type": "default",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 3,
+              "strokeDasharray": "8 4"
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "sourceHandle": "top-source",
+            "targetHandle": "bottom-target",
+            "data": {
+              "locked": true
+            }
           }
         ],
         "viewport": {
-          "x": -1137.888931598617,
-          "y": 182.35529831925135,
-          "zoom": 0.6597539553864474
+          "x": -1079.0562370133568,
+          "y": 249.4765880318854,
+          "zoom": 0.6597539553864481
         }
       }
     },
     "display_name": "Denise Carter",
     "bubble_choice_description": "My Drone Photos Are Breaking My Laptop!"
   },
-  "audit_log": "[{\"changed_at\":\"2026-09-02T21:26:26.520+00:00\",\"changed\":[\"cloned from \\\"ai-and-the-systems-that-power-it-lesson3-device-2\\\"\"],\"cloned_from\":\"ai-and-the-systems-that-power-it-lesson3-device-2\"},{\"changed_at\":\"2026-09-02 21:27:14 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-02T21:26:26.520+00:00\",\"changed\":[\"cloned from \\\"ai-and-the-systems-that-power-it-lesson3-device-2\\\"\"],\"cloned_from\":\"ai-and-the-systems-that-power-it-lesson3-device-2\"},{\"changed_at\":\"2026-09-02 21:27:14 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:18:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:40:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:40:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:51:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:55:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:02:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:02:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:05:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:33:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:49:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:50:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

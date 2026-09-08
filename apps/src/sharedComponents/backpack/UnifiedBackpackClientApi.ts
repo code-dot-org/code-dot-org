@@ -186,6 +186,12 @@ export default class UnifiedBackpackClientApi {
     client?.deleteFiles(filenames, onError, onSuccess);
   }
 
+  // Client for one of the user's backpacks. Like getFileFetchUrl, this does not fetch
+  // channels first, so it is only useful once they are loaded.
+  getClientForAppType(appType: string) {
+    return this.clientsByAppType[appType];
+  }
+
   addEventListener(listener: BackpackEventListener) {
     const id = createUuid();
     this.eventListeners[id] = listener;

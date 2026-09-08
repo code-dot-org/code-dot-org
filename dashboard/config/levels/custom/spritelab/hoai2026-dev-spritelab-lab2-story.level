@@ -28,7 +28,19 @@
     "pinned_scene_id": "story-scene",
     "pinned_scene_name": "Story",
     "guide_mode": "instructions",
-    "long_instructions": "# Code your story scene\nUse the blocks to set your background, add your character, and make them speak or move. Your changes run live in the preview.",
+    "guide_steps": [
+      {
+        "text": "**Code your story scene.** Use the blocks to set your background, add your character, and make them speak. Your changes run live in the preview. When it feels right, click **Play**."
+      },
+      {
+        "text": "**That's your story!** Watch it play, then continue when you're ready.",
+        "showContinue": true,
+        "after": {
+          "tab": "Play"
+        }
+      }
+    ],
+    "long_instructions": "# Code your story scene\nUse the blocks to set your background, add your character, and make them speak. Your changes run live in the preview.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
