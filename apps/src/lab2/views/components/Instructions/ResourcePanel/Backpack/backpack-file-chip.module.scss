@@ -80,7 +80,7 @@ $icon-height: $chip-height - 2px;
 }
 
 .sourceInfoIcon {
-  color: var(--text-neutral-secondary);
+  color: var(--text-neutral-quaternary);
   font-size: 12px;
 }
 
@@ -95,6 +95,7 @@ $icon-height: $chip-height - 2px;
 .filePreview {
   width: $icon-height;
   height: $icon-height;
+  object-fit: cover;
   border-radius: var(--border-radius-br-s, 4px) 0 0 var(--border-radius-br-s, 4px);
   background: var(--background-neutral-primary);
 }
