@@ -11,3 +11,32 @@ export {default as VideoRecorder} from './ChallengeActivities/VideoRecorder';
 export {default as VocabularyFlashcards} from './ReviewModalities/VocabularyFlashcards';
 export type {VocabularyItem} from './ReviewModalities/VocabularyFlashcards';
 export {default as WelcomeBox} from './WelcomeBox';
+export {
+  challengeResponseListValidator,
+  challengeResponseValidator,
+  challengeValidator,
+  EvaluationStatus,
+  ExplanationTypes,
+  parseReactions,
+} from './types';
+export type {
+  Challenge,
+  ChallengeResponse,
+  ChallengeResponseAsset,
+  Reaction,
+} from './types';
+export {assetWithUrl} from './gallery/assetUtils';
+export {
+  challengeResponseDetailValidator,
+  unitCountsValidator,
+} from './gallery/types';
+export type {
+  ChallengeResponseDetail,
+  EvaluationResult,
+  GallerySection,
+  GallerySort,
+  GalleryUnit,
+  RubricEntry,
+  TutorGalleryData,
+  ViewerRole,
+} from './gallery/types';

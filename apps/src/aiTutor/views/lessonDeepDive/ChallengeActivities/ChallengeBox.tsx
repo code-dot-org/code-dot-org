@@ -1,4 +1,12 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {
+  Challenge,
+  ChallengeResponse,
+  ChallengeResponseDetail,
+  challengeResponseValidator,
+  EvaluationStatus,
+  ExplanationTypes,
+} from '@code-dot-org/lesson-deep-dive';
 import {Button as MuiButton, Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {FC, useCallback, useEffect, useRef, useState} from 'react';
@@ -8,14 +16,6 @@ import {ChallengeTypes} from '@cdo/generated-scripts/sharedConstants';
 import aiTutorAvatar from '@cdo/static/tutor/ai-tutor-avatar.png';
 
 import ProjectDetailsCard from '../../gallery/ProjectDetailsCard';
-import {ChallengeResponseDetail} from '../../gallery/types';
-import {
-  Challenge,
-  ChallengeResponse,
-  challengeResponseValidator,
-  EvaluationStatus,
-  ExplanationTypes,
-} from '../types';
 
 import VideoChallenge from './VideoChallenge';
 import WhiteboardChallenge from './WhiteboardChallenge';
