@@ -1,9 +1,8 @@
 // A conversation, with a portrait and a choice — the visual novel.
 //
 // The scenario the dialogue pieces were built for, and the one that says
-// whether they meet: `Conversation` keeps the place, `Reveals Text` writes the
-// words a few letters at a time, the Speech Box draws whatever `text` currently
-// says, and none of the three knows about the others.
+// whether they meet: `Conversation` keeps the place, the Speech Box types its
+// own line out a few letters at a time, and neither knows about the other.
 //
 // THE SCRIPT IS BLOCKS, which is the whole bargain. A line is not a string in a
 // table: line one brings a portrait on, line three waits for an answer, line
@@ -66,12 +65,13 @@ const isLine = (which: number) => ({
 /**
  * `say ⟨words⟩ on ⟨the box⟩` — a new line, from the beginning.
  *
- * The ACTION and not a write to `the whole line`, because the counter is the
- * rule's: a line set without it reset is a line that never appears, and the
- * scene that first read two lines in a row is what found that out.
+ * The ACTION and not a write to `text`, because saying a line and showing one
+ * are different things: `say` puts the line away whole and starts the clock
+ * that lets it out. Writing `text` is what the box is DRAWING right now, which
+ * the typewriter overwrites on its next letter.
  */
 const say = (words: string, who: object = box()) => ({
-  type: 'world_do_RevealsText_SayAction',
+  type: 'world_do_ActorsSpeechBox_SayAction',
   inputs: {
     ACTOR: who,
     VALUE: {block: {type: 'text', fields: {TEXT: words}}},
@@ -81,11 +81,9 @@ const say = (words: string, who: object = box()) => ({
 /**
  * What the box says before anybody has pressed anything.
  *
- * SAID, and not left to the Speech Box's own default. The box ships with
- * "Once upon a time…" written into it, and this one never showed it: `Reveals
- * Text` writes `text` every frame from `the whole line`, which is empty until
- * something is said — so the first frame wiped the default and the panel
- * opened blank.
+ * SAID, and not left to the Speech Box's own default: the box ships with
+ * "Once upon a time…" written into it, and a hall nobody has entered yet is
+ * not that.
  */
 const TITLE = 'The Hall. Press SPACE to begin.';
 
@@ -206,17 +204,13 @@ const MAIN_WORLD = JSON.stringify({
                       type: 'world_set_position',
                       inputs: {ACTOR: me(), X: number(160), Y: number(250)},
                     },
-                    // The two abilities that make it a talking box. Neither
-                    // rule knows about the other: one keeps the place, one
-                    // writes the letters, and the box draws `text`.
+                    // The ability that makes it a talking box rather than a
+                    // panel with words on it: `Conversation` keeps the place
+                    // in the script. Typing the line out is the box's own
+                    // (`actors/stock/speechBox`).
                     {
                       type: 'world_add_trait',
                       fields: {TRAIT: 'Conversation#HasAConversationTrait'},
-                      inputs: {ACTOR: me()},
-                    },
-                    {
-                      type: 'world_add_trait',
-                      fields: {TRAIT: 'Reveals Text#RevealsTextTrait'},
                       inputs: {ACTOR: me()},
                     },
                     {
@@ -335,10 +329,10 @@ const SPEC: ProjectSpec = {
       contents: referenceToStock('writing'),
       folderId: 'rules',
     },
-    'rule-reveals': {
-      name: 'reveals.rule',
+    'rule-time': {
+      name: 'time.rule',
       language: 'rule',
-      contents: referenceToStock('reveals'),
+      contents: referenceToStock('time'),
       folderId: 'rules',
     },
     'rule-conversation': {

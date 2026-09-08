@@ -43,7 +43,6 @@ import {pathRule} from './path';
 import {patrolRule} from './patrol';
 import {progressRule} from './progress';
 import {prowlingRule} from './prowling';
-import {revealsRule} from './reveals';
 import {scoreRule} from './score';
 import {solidRule} from './solid';
 import {spawnerRule} from './spawner';
@@ -238,15 +237,6 @@ export const STOCK_RULES: readonly StockRule[] = [
       'Keeps a place in a script and moves through it. It raises an event each time it moves, so the project decides what each line is — a portrait, a sound, a question — and `go to line` is how a choice sends the talk somewhere else.',
     provides: ['Has a Conversation'],
     contents: conversationRule,
-  },
-  {
-    id: 'reveals',
-    name: 'Reveals Text',
-    ability: 'Reveals Text',
-    description:
-      'Shows a line of words a few letters at a time, the way a game with dialogue does. Set the whole line and it arrives at reading pace; ask it to show all of it when somebody clicks, and hear about it when the line has finished.',
-    provides: ['Reveals Text'],
-    contents: revealsRule,
   },
   {
     id: 'progress',
@@ -588,7 +578,6 @@ export {
   historyRule,
   turnsRule,
   gridRule,
-  revealsRule,
   conversationRule,
   inventoryRule,
   attachmentRule,

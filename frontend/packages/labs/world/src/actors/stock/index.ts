@@ -107,8 +107,8 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     id: 'speechBox',
     name: 'Speech Box',
     description:
-      'A panel with room for a sentence — what a line of dialogue is read from. Give it the “Reveals Text” ability and it types itself out.',
-    requires: ['Writing'],
+      'A panel with room for a sentence — what a line of dialogue is read from. It types itself out: say a line and the letters arrive at reading pace.',
+    requires: ['Writing', 'Time'],
     contents: speechBoxActor,
   },
   {

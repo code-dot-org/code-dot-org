@@ -414,8 +414,9 @@ this.
    Boundaries (specs/RULES.md).
 
 7. ✅ **The last nine**: Carrying, Goals, History, Turns, Inventory, Grid,
-   Reveals, Conversation and Progress — which is every rule on the shelf but
-   the two bases. Five of them were written the same week as the rules they
+   Reveals, Conversation and Progress — which was every rule on the shelf but
+   the two bases. (Reveals has since stopped being a rule: the typewriter is
+   the Speech Box's own, and the strip that showed it is that ACTOR's demo.) Five of them were written the same week as the rules they
    show, which is the arrangement this document argued for and had not yet had:
    a rule and its demonstration authored together, so the claim and the code
    are the same person's.
@@ -441,7 +442,7 @@ this.
    demo as well as by the handler that writes it a tick later — an event is
    delivered by a tick, and the first cell is drawn before any tick has run.
 
-   **Two demos are scripted through `input` with no keyboard in them**
-   (Reveals' skip, Conversation's next line). Both stand for a player who has
-   read enough and wants the rest, which is a hand rather than a rule, so they
-   go where the hands go.
+   **Conversation's next line is scripted through `input` with no keyboard in
+   it.** It stands for a player who has read enough and wants the rest, which
+   is a hand rather than a rule, so it goes where the hands go. Reveals' skip
+   was the other one, and moved to the Speech Box with the rest of it.

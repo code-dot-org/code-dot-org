@@ -278,6 +278,57 @@ screen the moment anything moves the camera. Written even in a project with no
 camera, because the camera is one wand away and nothing about the scoreboard
 should need revisiting when it arrives.
 
+## The one that was a rule: typing out what it says
+
+    actors/<target>.actor    use trait ⟨Writing#Shows Text⟩
+                             use trait ⟨Time#Has a Timer⟩
+
+                             define read-only string ⟨the whole line⟩
+                             define number ⟨letters a second⟩ = 20
+                             define event ⟨finishes revealing⟩
+                             define block ⟨say ⟨words⟩⟩
+                             define block ⟨show all of it⟩
+                             set ⟨timer runs⟩ of ⟨this actor⟩ to ⟨no⟩
+
+                             when ⟨this actor⟩'s timer fires:
+                               …one more letter, and the cue on the last
+
+**It used to be `Reveals Text`, a rule**, and the only thing that ever elected
+it was the Speech Box. What a rule buys is a mechanic several kinds share, that
+a world can ask about, that other rules depend on; this was one kind's, and the
+price of pretending otherwise was 40KB of generated workspace and a paragraph
+of wiring in every scene that wanted one.
+
+**So the same blocks are written twice from one place** — `actors/typewriter`.
+The Speech Box is BUILT with them, so a box a learner drags in types its lines
+without being told to; this hands them to anything else with words. Two
+tellings of six declarations would be two things to keep in step, which is the
+argument the Health Bar's shared drawing already makes.
+
+**It is built for a module path, not written out.** Every own member's block
+type and exported name carry the file that declared it
+(`ruleRegistry.memberLocalName`), so a Label's `say` is a different block from
+a Speech Box's — and a patch that hard-coded either would write a file naming
+blocks nothing defines. That file still compiles and still generates nothing,
+which is exactly the failure the running half of its test is for.
+
+**It elects only what is missing.** A Label already shows text — that is what a
+Label IS — so the patch adds the clock and leaves the words alone.
+
+**It does not draw the words**, which is the division `Shows Text` already
+makes: this decides how much of the line is showing and the actor decides what
+showing looks like. A Label, a Button and a Speech Box all draw `text` already,
+so any of them types itself out with nothing else done.
+
+**And it refuses an actor a world defines for itself.** That body generates
+into a block scope, where the `export const` a `define block` and a
+`define event` each emit is not legal — so the palette offers neither inside a
+world's own `define actor` (`blockly/fileKind`). Writing the rows anyway would
+leave a file that silently generates nothing, which is the one outcome an
+enhancement must never produce. Lifting that limit means hoisting an own
+action's declaration out of the block scope the way a property's already is
+(`ownProperties.ownPropertyDeclarationFor`), and it is not done.
+
 ## Testing one
 
 Two halves, and the second is the one that matters. The patch's arithmetic —
@@ -307,7 +358,9 @@ health` is
   already an event), and the flicker that makes Health's existing mercy time
   visible.
 - **A voice** — a Speech Box that rides above an actor, a name plate, a
-  floating "+10". Composition of Writing and Attachment, no new rules.
+  floating "+10". Composition of Writing and Attachment, no new rules. Typing
+  what it says is built (above), and is the first one whose blocks used to be a
+  rule.
 - **A verb it did not have** — zaps, chases, is pushable, damages on touch.
   Collecting is built (above), which also unblocks the Coin's demo: nothing on
   the shelf could collect one until now.

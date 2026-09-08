@@ -147,10 +147,18 @@ describe('a `.world` file’s own properties', () => {
     ).toBe(true);
   });
 
-  it('gets no setter at all when it is read-only', () => {
-    // As in an `.actor` file, and for the same reason: a world's declaring
-    // scope is a DECLARATION with no body to run a `set` in, so read-only means
-    // a per-world constant rather than a setter confined to one place.
+  it('is not offered a setter when it is read-only', () => {
+    // Where an `.actor`'s read-only property IS offered one, inside the file
+    // that declared it (`domainBlocks`, the actors' drawers). The difference
+    // is that an `.actor` has bodies to run a `set` in — `each frame`, a
+    // `define block`, a handler for its own event — and a `.world` file's
+    // declaring scope is a declaration with none. So read-only here is a
+    // per-world constant.
+    //
+    // The block is DEFINED, and only unlisted. Every own property's pair is
+    // minted whatever the palette shows, because the headless generator
+    // compiles every file with one palette and a type it did not mint is a
+    // file that will not compile.
     const meta = parseWorldOwnMeta(
       'worlds/main',
       worldFile([{...COUNT, fields: {...COUNT.fields, ACCESS: 'readonly'}}]),
@@ -163,9 +171,16 @@ describe('a `.world` file’s own properties', () => {
     expect(
       blocks.some(block => block.type === 'world_get_WorldsMain_ScoreProperty'),
     ).toBe(true);
-    expect(
-      blocks.some(block => block.type === 'world_set_WorldsMain_ScoreProperty'),
-    ).toBe(false);
+    const {toolbox} = buildDomainPalette([], {
+      fileKind: 'world',
+      ownProperties: [meta],
+    });
+    const offered = (toolbox as Array<{blocks?: string[]}>).flatMap(
+      category => category.blocks ?? [],
+    );
+
+    expect(offered).toContain('world_get_WorldsMain_ScoreProperty');
+    expect(offered).not.toContain('world_set_WorldsMain_ScoreProperty');
   });
 });
 

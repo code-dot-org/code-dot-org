@@ -1,4 +1,4 @@
-// "Speech Box" — the panel a line of dialogue is read from.
+// "Speech Box" — the panel a line of dialogue is read from, typing itself out.
 //
 // NOT a "text box", which everywhere else means a thing you type INTO — and
 // `specs/UI_ACTORS.md` already reserves "Text field" for that one, still
@@ -10,14 +10,16 @@
 // something this lab could draw at all. The column is the box's width less a
 // margin either side.
 //
-// IT SHOWS `text`, WHICH IS WHAT MAKES IT A TYPEWRITER FOR FREE. Give it the
-// `Reveals Text` trait and set `the whole line`; that rule writes `text` a few
-// letters at a time and this draws whatever `text` says right now. Neither
-// knows about the other.
+// THE TYPEWRITER IS ORDINARY BLOCKS, and they are the same blocks any actor
+// with words can be given (`actors/typewriter`, `enhance/typesOutText`). What
+// is the Speech Box's own is that it ships with them: a box a learner drags in
+// says its lines a letter at a time without being told to.
 //
 // The anchor is READ, not chosen here — as a Label's is — so a box anchored at
 // its top-left grows downward as the words arrive, which is what reading looks
 // like.
+
+import {typewriterFor} from '../typewriter';
 
 import {
   actorFile,
@@ -40,19 +42,28 @@ const HEIGHT = 96;
 /** Room either side of the words, so nothing is read off the edge of the panel. */
 const MARGIN = 12;
 
+/** Its own file, which is what its blocks are named after. */
+const typewriter = typewriterFor('actors/speechBox');
+
 export const speechBoxActor = actorFile(
   'Speech Box',
   [
     useTrait('Writing#ShowsTextTrait'),
+    useTrait('Time#HasATimerTrait'),
     showAs('speech'),
+    ...typewriter.rows,
     // Anchored at the top left, because a box fills downward as it is read. A
     // centered one would jump about as each line arrived.
     setText('TextAnchorProperty', words('top left')),
     // A default, so a box dragged onto a map says something before anybody has
-    // typed anything into it — and so the picker has a picture to show.
+    // typed anything into it — and so the picker has a picture to show. It
+    // survives the first frame because the typewriter's timer is stopped until
+    // something is said.
     setText('TextProperty', words('Once upon a time…')),
   ],
   {
+    variables: typewriter.variables,
+    handlers: [typewriter.handler],
     drawing: {
       width: WIDTH,
       height: HEIGHT,

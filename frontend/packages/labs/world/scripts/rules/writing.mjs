@@ -40,8 +40,8 @@ export const ShowsText = rule.traitRef('Shows Text');
 // Empty, because every actor that has not been given words has none. A Label
 // placed and left alone draws nothing rather than the word "text".
 //
-// EXPORTED, so a rule that reveals words a few at a time can write it —
-// `rules/reveals` does, the way `cameraFollow` writes the Camera's goal. What
+// EXPORTED, so anything that reveals words a few at a time can write it — the
+// Speech Box does, the way `cameraFollow` writes the Camera's goal. What
 // it buys is that every drawing already reading `text` keeps working: a Label
 // and a Button reveal themselves without knowing anything has changed.
 export const text = shows.string('text', '');
@@ -59,7 +59,7 @@ shows.color('text color', '#ffffff');
 shows.string('text anchor', 'center');
 
 shows.doc(
-  '**The words, and how they look.** The rule owns the text and draws none of it.\n\nA Label actor reads these four properties and paints them, which is why the same words can be a speech bubble, a score line or a sign — the drawing is the actor\'s business and the words are yours.\n\n`text` starts EMPTY, because an actor nobody has given words to has none: a Label placed and left alone draws nothing rather than the word "text". The size is in pixels, like every other size in the lab; only rates are in units per second.\n\nReveals Text writes `text` a few letters at a time, and every drawing already reading it keeps working without knowing anything changed.',
+  '**The words, and how they look.** The rule owns the text and draws none of it.\n\nA Label actor reads these four properties and paints them, which is why the same words can be a speech bubble, a score line or a sign — the drawing is the actor\'s business and the words are yours.\n\n`text` starts EMPTY, because an actor nobody has given words to has none: a Label placed and left alone draws nothing rather than the word "text". The size is in pixels, like every other size in the lab; only rates are in units per second.\n\nSomething writing `text` a few letters at a time — the Speech Box does — types itself out for free, because every drawing already reading it keeps working without knowing anything changed.',
 );
 
 export default () => moduleFor(rule, 'writing');

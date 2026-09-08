@@ -3426,7 +3426,7 @@ const reveal: WorldScenario = {
       ],
     }),
     stockActors: ['speechBox'],
-    rules: ['reveals', 'mouse'],
+    rules: ['mouse'],
   }),
   instructions: `
 ## At reading pace
@@ -3435,17 +3435,18 @@ The whole line is on screen before the player has looked at it. That is what
 setting **text** does: it is the words the box is showing, and it shows them
 the moment they are set.
 
-**Reveals Text** writes that property for you, a few letters a second. The box
-draws whatever \`text\` says right now — it knows nothing about revealing — and
-the rule knows nothing about boxes. Between them you get a typewriter.
+**Saying** a line is the other thing. The Speech Box puts the sentence away
+whole and lets it out a few letters at a time — open \`speechBox.actor\` and
+the typewriter is all there: **the whole line** is what is being said, a timer
+brings one letter per firing, and \`text\` is however much has arrived.
 
 ### What you do
 
-1. Give the Speech Box **use trait ⟨Reveals Text⟩**.
-2. Set **the whole line** to the sentence instead of setting \`text\`, and run
-   it. The words arrive at reading pace.
-3. Change **letters a second** and run it again.
-4. A reader who has read it faster than you are typing it wants to skip. Give
+1. Say the sentence instead of setting \`text\`: **say ⟨…⟩ on ⟨this actor⟩**,
+   from the Speech Box's own drawer. Run it, and the words arrive at reading
+   pace.
+2. Change **letters a second** and run it again.
+3. A reader who has read it faster than you are typing it wants to skip. Give
    the Box **use trait ⟨Can Be Clicked⟩**, and in a
    **when ⟨any Speech Box⟩ is clicked** handler put
    **show all of it on ⟨this actor⟩**.

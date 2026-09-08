@@ -366,9 +366,9 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       '- Open `main.world` and look at `moves to a line`: one branch per ' +
       'line, and each line is BLOCKS, so line one brings the portrait on and ' +
       'the last one takes her away\n' +
-      '- The box types itself out because it has two abilities that know ' +
-      'nothing about each other: `Has a Conversation` keeps the place and ' +
-      '`Reveals Text` writes the letters. The box just draws its `text`\n' +
+      '- The box types itself out on a timer of its own — open ' +
+      '`speechBox.actor` and read it. `Has a Conversation` is the only ' +
+      'ability it is given here, and all it does is keep the place\n' +
       '- Notice what the branches cost: the space bar needs a guard, because ' +
       'the line after the yes-answer is the no-answer',
   },

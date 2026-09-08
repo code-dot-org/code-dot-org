@@ -94,6 +94,87 @@ export const playAnimation = (id: string) => ({
   fields: {ANIMATION: id},
 });
 
+/**
+ * `define ⟨type⟩ ⟨property⟩ ⟨name⟩ with default ⟨value⟩` — state this KIND keeps.
+ *
+ * The same block a rule and a trait declare with; where it sits decides whose
+ * it is (`blockly/ownProperties`). READ-ONLY means the declaring file owns the
+ * value: the setter is offered inside this `.actor` and nowhere else, which is
+ * what a count some handler of the actor's own advances wants.
+ */
+export const defineProperty = (
+  type: string,
+  name: string,
+  value: string,
+  opts: {readonly?: boolean} = {},
+) => ({
+  type: 'world_rule_property',
+  fields: {
+    TYPE: type,
+    ACCESS: opts.readonly ? 'readonly' : 'writable',
+    NAME: name,
+    DEFAULT: value,
+  },
+});
+
+/**
+ * `define event` — something that HAPPENS to this kind.
+ *
+ * The words are the hat it makes: `finishes revealing` becomes
+ * `when ⟨…⟩ finishes revealing`. Labels only, which is every event a stock
+ * actor has wanted; a designed parameter is a filter and belongs to a rule
+ * with choices to filter on (specs/ENUMS.md).
+ */
+export const defineEvent = (...labels: string[]) => ({
+  type: 'world_rule_event',
+  extraState: {parts: labels.map(text => ({kind: 'label', text}))},
+});
+
+/** A `define block` parameter: a workspace variable the body reads. */
+export interface BlockParam {
+  /** The variable's id, unique within the file. */
+  id: string;
+  /** What it is called on the block's face and in the body. */
+  name: string;
+  /** The parameter's type — `string`, `number`, `actor`, … */
+  type: string;
+  /** The variable type that carries it, which is Blockly's own name for it. */
+  binds: 'String' | 'Number' | 'Boolean' | 'Actor' | 'Vector';
+}
+
+/** `⟨name⟩`, as the body reads a parameter. */
+export const paramValue = (param: BlockParam) => ({
+  block: {
+    type: `variables_get_${param.binds}`,
+    fields: {VAR: {id: param.id, name: param.name}},
+  },
+});
+
+/**
+ * `define block` — a named thing this kind does, and the blocks it runs.
+ *
+ * Statements only: the form that REPORTS a value wants a `defineQuery` beside
+ * `defineAction`, which does not exist yet (`ownProperties.designedBlock`).
+ */
+export const defineBlock = (spec: {
+  /** The block's face, in order: words, and the parameters between them. */
+  say: ReadonlyArray<string | BlockParam>;
+  /** The sentence somebody reads on hovering it months later. */
+  description: string;
+  body: object[];
+}) => ({
+  type: 'world_rule_block',
+  fields: {RETURNS: 'none', DESCRIPTION: spec.description},
+  extraState: {
+    parts: spec.say.map(part =>
+      typeof part === 'string'
+        ? {kind: 'label', text: part}
+        : {kind: 'param', type: part.type, var: part.id, name: part.name},
+    ),
+  },
+  inputs: {DO: {block: chain(spec.body)}},
+});
+
 /** What an actor file may hold beside its `define actor`. */
 export interface ActorExtras {
   /**
@@ -112,6 +193,14 @@ export interface ActorExtras {
    * project's, and belongs in the world.
    */
   handlers?: object[];
+  /**
+   * The workspace's variables, which a `define block`'s parameters are.
+   *
+   * Blockly resolves a variable by ID and treats the name on a block as a
+   * hint, so a file using one that is not declared here loads with an empty
+   * field — the same bargain `scripts/rules/dsl` states for a rule.
+   */
+  variables?: ReadonlyArray<{id: string; name: string; type: string}>;
 }
 
 /**
@@ -182,6 +271,7 @@ export const actorFile = (
           })),
         ],
       },
+      ...(extras.variables?.length ? {variables: extras.variables} : {}),
     },
     null,
     2,

@@ -360,13 +360,31 @@ describe('the speech box demo', () => {
     moments = await play('speechBox');
   }, 60000);
 
-  it('says one line, and then the next', () => {
+  it('types one line out, and then the next', () => {
     // A panel that keeps its words is a picture of a panel. What makes this a
-    // Speech Box is that the sentence is replaced and the box is not.
-    const lines = [...new Set(moments.flatMap(wordsIn))];
-    expect(lines.length).toBe(2);
+    // Speech Box is that the sentence arrives, and is then replaced while the
+    // box is not.
+    //
+    // EVERY MOMENT IS A PREFIX of the line being said, which is the typewriter
+    // itself: the box lets the line out a letter at a time, so the strip is
+    // partial sentences and only the last frame of a beat is whole. A box that
+    // set its text instead would draw each line whole from its first frame,
+    // and every moment would be one of two.
+    const said = moments.map(moment => wordsIn(moment).join(''));
+    const lines = ['IT IS DARK IN HERE.', 'SOMETHING MOVES.'];
+    for (const words of said) {
+      expect(
+        lines.some(line => line.startsWith(words)),
+        words,
+      ).toBe(true);
+    }
+    // Both lines were reached, and each was typed rather than appearing whole.
     for (const line of lines) {
-      for (const character of line.toUpperCase()) {
+      expect(said).toContain(line);
+      expect(
+        said.filter(words => line.startsWith(words)).length,
+      ).toBeGreaterThan(1);
+      for (const character of line) {
         expect(KNOWN.has(character), `${line}: ${character}`).toBe(true);
       }
     }

@@ -90,18 +90,45 @@ describe('an actor’s own properties', () => {
     expect(meta?.properties[0].default).toBe(100);
   });
 
-  it('honours read-only as a per-kind constant', () => {
-    // Not the no-op it would be if these were visible elsewhere. An actor's
-    // declaring scope is a declaration, not a body, so there is nowhere to set
-    // it — read-only means no setter is offered at all.
+  it('honours read-only, and offers its setter only at home', () => {
+    // The same reading a rule's read-only property gets inside its own
+    // `.rule`: the DECLARER owns the value, and everybody else may read it.
+    // The Speech Box's `the whole line` is the case — its own `say` block puts
+    // a line there and nothing outside the file may.
+    //
+    // It used to be a setter nobody got, under a note saying an actor's
+    // declaring scope is a declaration with nowhere to run a `set`. That was
+    // true of a file holding properties and a picture, and stopped being true
+    // when `each frame`, `define block` and `define event` arrived.
     const meta = parseActorOwnMeta(
       'actors/player',
       actorFile('Player', [
         property({NAME: 'max health', ACCESS: 'readonly', DEFAULT: '100'}),
       ]),
-    );
+    )!;
+    expect(meta.properties[0].readonly).toBe(true);
 
-    expect(meta?.properties[0].readonly).toBe(true);
+    const drawer = (editing?: string) => {
+      const {toolbox} = buildDomainPalette([], {
+        fileKind: editing ? 'actor' : 'world',
+        ownProperties: [meta],
+        ownActorModule: editing,
+      });
+      return (toolbox as Array<{name?: string; blocks?: string[]}>).find(
+        category => category.name === 'Player',
+      )?.blocks;
+    };
+
+    expect(drawer('actors/player')).toContain(
+      'world_set_ActorsPlayer_MaxHealthProperty',
+    );
+    expect(drawer(undefined)).not.toContain(
+      'world_set_ActorsPlayer_MaxHealthProperty',
+    );
+    // …and READ from anywhere, which is the whole point of a read-only one.
+    expect(drawer(undefined)).toContain(
+      'world_get_ActorsPlayer_MaxHealthProperty',
+    );
   });
 
   it('reads a workspace saved before the access field existed as writable', () => {

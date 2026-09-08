@@ -2426,15 +2426,19 @@ export const TILES: readonly Tile[] = [
     at: at('story', 1, 3),
     title: 'At reading pace',
     teaches:
-      'One rule writes a property a few letters at a time; another draws whatever it says.',
+      'Saying a line is not showing one: the box puts it away whole and lets it out a letter at a time.',
     task: 'A line that is simply there before anybody has read it. Type it out, and let a reader skip.',
     requires: ['story/text'],
     unlocks: [
-      {kind: 'rule', id: 'reveals'},
       // Electing a trait on ONE placed actor rather than on a kind: `add trait`
       // is the runtime half of `use trait`, and this is where it is met. A
       // GRANT rather than an offer, because an offer cannot reach a block no
       // tile grants — inside an earned drawer, unassigned means hidden.
+      //
+      // NOTHING ELSE, and it used to grant the `Reveals Text` rule. The
+      // typewriter is the Speech Box's own now, so `say` and `show all of it`
+      // arrive with the actor — a kind's own blocks are never gated, the way a
+      // rule's are not (`toolboxShelf.generatedElsewhere`).
       {kind: 'block', type: 'world_add_trait'},
     ],
     check: {

@@ -1568,30 +1568,6 @@ describe('what the newer demos show', () => {
     expect(spot('player')).toBe(3 * 32 + 16);
   });
 
-  it('reveals: one line waits its turn and the other is hurried', () => {
-    // Both halves in one strip: the letters arriving, and the way past them.
-    const {cast} = play(RULE_DEMOS.reveals);
-    const shown = (who: unknown) =>
-      (who as {get(p: unknown): string}).get(
-        of('rules/writing', 'TextProperty'),
-      );
-
-    expect(shown(cast.patient)).toBe('HELLO WORLD');
-    expect(shown(cast.impatient)).toBe('HELLO WORLD');
-    // …and the impatient one got there first, which is the only thing that
-    // makes the two rows different. Ten letters at five a second is two
-    // seconds; the skip is at one.
-    expect(
-      (cast.impatient as {get(p: unknown): number}).get(
-        of('rules/reveals', 'LettersShownProperty'),
-      ),
-    ).toBeGreaterThan(
-      (cast.patient as {get(p: unknown): number}).get(
-        of('rules/reveals', 'LettersShownProperty'),
-      ),
-    );
-  });
-
   it('conversation: it says three things and then stops', () => {
     // The ending is what makes it a conversation rather than a sign: the
     // cursor is back at nobody talking, and the box is empty.

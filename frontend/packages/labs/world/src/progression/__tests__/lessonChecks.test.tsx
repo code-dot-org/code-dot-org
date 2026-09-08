@@ -2830,11 +2830,11 @@ describe('the reveal lesson’s check', () => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const add = workspace.blocks.blocks[0].next!.block!;
       const body = inSocket(add, 'DO')!;
-      // `set text` becomes `set the whole line`: the rule writes `text` from
-      // it, and the Box draws whatever `text` says at the time.
+      // `set text ⟨…⟩` becomes `say ⟨…⟩ on ⟨this actor⟩`: showing a line and
+      // saying one are different things, and only the second types it out.
       for (let at: Row | undefined = body; at; at = at.next?.block) {
         if (at.type === 'world_set_Writing_TextProperty') {
-          at.type = 'world_set_RevealsText_TheWholeLineProperty';
+          at.type = 'world_do_ActorsSpeechBox_SayAction';
           break;
         }
       }
@@ -2844,7 +2844,7 @@ describe('the reveal lesson’s check', () => {
         inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
         next: {block: rest},
       });
-      let placed: Row = electing2('Reveals Text#RevealsTextTrait', body);
+      let placed: Row = body;
       if (skip) {
         placed = electing2('Mouse#CanBeClickedTrait', placed);
         workspace.blocks.blocks.push({
@@ -2862,7 +2862,7 @@ describe('the reveal lesson’s check', () => {
           },
           next: {
             block: {
-              type: 'world_do_RevealsText_ShowAllOfItAction',
+              type: 'world_do_ActorsSpeechBox_ShowAllOfItAction',
               inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
             },
           },

@@ -1,10 +1,9 @@
 // The visual novel, READ.
 //
-// Four pieces meeting for the first time: `Conversation` keeps the place,
-// `Reveals Text` writes the letters, the Speech Box draws whatever `text`
-// currently says, and an inline tween brings the portrait on. None of them
-// knows about the others, which is the property this exercises — a scene is
-// composed rather than built into anything.
+// Three pieces meeting for the first time: `Conversation` keeps the place, the
+// Speech Box types its own line out, and an inline tween brings the portrait
+// on. None of them knows about the others, which is the property this
+// exercises — a scene is composed rather than built into anything.
 //
 // Every way of getting a dialogue system wrong looks fine for the first line.
 // So this plays the whole thing, both branches, to the end.
@@ -80,7 +79,7 @@ describe('reading the novel', () => {
 
     expect(it_.at()).toBe(1);
     // Part way through, which is the typewriter working — the whole line at
-    // once would mean `Reveals Text` never ran.
+    // once would mean the box's own timer never fired.
     const shown = it_.said();
     expect(shown.length).toBeGreaterThan(0);
     expect(NOVEL_LINES[0].startsWith(shown)).toBe(true);

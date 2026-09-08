@@ -39,6 +39,7 @@ import {climbArrowsEnhancement} from './climbArrows';
 import {collectsEnhancement} from './collects';
 import {healthEnhancement} from './health';
 import {scoreboardEnhancement} from './scoreboard';
+import {typesOutTextEnhancement} from './typesOutText';
 
 /** What one enhancement is. */
 export interface Enhancement {
@@ -139,6 +140,7 @@ export const ENHANCEMENTS: readonly Enhancement[] = [
   healthEnhancement,
   collectsEnhancement,
   climbArrowsEnhancement,
+  typesOutTextEnhancement,
   cameraFollowEnhancement,
   scoreboardEnhancement,
 ];

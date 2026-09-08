@@ -79,11 +79,20 @@ describe('every stock actor', () => {
       (parseActorOwnMeta(`actors/${id}`, contents)?.properties ?? []).map(
         property => property.id,
       );
+    /** What each kind keeps for itself, and nothing keeps by accident. */
+    const KEEPS: Record<string, readonly string[]> = {
+      subject: [],
+      // Whose health this bar is about — nobody else's idea.
+      healthBar: ['subject'],
+      // The typewriter. `the whole line` is what is being said, where `text`
+      // is however much of it has arrived — Writing's, because every actor
+      // with words means the same thing by it. A rule for these two would be
+      // a rule for one kind of actor (`actors/stock/speechBox`).
+      speechBox: ['the_whole_line', 'letters_a_second'],
+    };
 
     for (const actor of STOCK_ACTORS) {
-      expect(own(actor.id, actor.contents)).toEqual(
-        actor.id === 'healthBar' ? ['subject'] : [],
-      );
+      expect(own(actor.id, actor.contents)).toEqual(KEEPS[actor.id] ?? []);
     }
   });
 

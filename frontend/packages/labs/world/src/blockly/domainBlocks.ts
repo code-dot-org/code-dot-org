@@ -9017,8 +9017,8 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
       // of actors has a use for: a name that has to fit the box it is drawn in.
       'text_length',
       // …and a piece of one, which is the day the comment below anticipated:
-      // revealing a line a few letters at a time is a substring per frame, and
-      // `rules/reveals` is written in terms of it.
+      // revealing a line a few letters at a time is a substring per letter,
+      // and the Speech Box is written in terms of it.
       'text_getSubstring',
       // DELIBERATELY NOT the rest of Blockly's text category. `text_append`
       // writes to a variable that outlives nothing here; `text_prompt` asks the
@@ -9542,9 +9542,29 @@ export function buildDomainPalette(
     }
     // …and the state it keeps, as the pair every property gets.
     for (const property of actor.properties) {
-      if (!property.readonly) {
-        const setBlock = defineSetPropertyBlock(property);
-        ownBlocks.push(setBlock);
+      // A READ-ONLY OWN PROPERTY IS SETTABLE AT HOME, exactly as a rule's is
+      // inside its own `.rule` (`generateRulePalette`). Read-only means the
+      // declarer owns the value, not that nothing writes it: the Speech Box's
+      // `letters shown` is the box's own count and its own timer handler is
+      // what advances it. Outside the declaring file the setter stays absent,
+      // which is the guarantee the flag is for.
+      //
+      // It used to be absent everywhere, under a note saying an actor's
+      // declaring scope is "a DECLARATION, not a body — there is nowhere in it
+      // to run a `set`". That was true of a file holding properties and a
+      // picture, and stopped being true when `each frame`, `define block` and
+      // `define event` arrived: an `.actor` has bodies now, and a read-only
+      // own property was a value nothing in the language could write.
+      //
+      // DEFINED EITHER WAY, which is the half that bites. The headless
+      // generator compiles every file with one palette and is at home in none
+      // of them, so a setter it had not minted would leave the declaring
+      // `.actor` holding a block nothing defines — `standInBlocks` mints a
+      // placeholder that generates NOTHING, and the write silently does not
+      // happen.
+      const setBlock = defineSetPropertyBlock(property);
+      ownBlocks.push(setBlock);
+      if (!property.readonly || home) {
         types.push(setBlock.type);
       }
       const getBlock = defineGetPropertyBlock(property);
