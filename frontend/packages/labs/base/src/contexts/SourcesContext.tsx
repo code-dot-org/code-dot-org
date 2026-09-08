@@ -1,0 +1,382 @@
+import {isEqual} from 'lodash';
+import type {PropsWithChildren} from 'react';
+import {
+  useCallback,
+  useRef,
+  useMemo,
+  useState,
+  useEffect,
+  createContext,
+  useContext,
+} from 'react';
+
+import type {
+  Channel,
+  ProjectSources,
+  LevelProperties,
+} from '@code-dot-org/core/api';
+
+import StartOverDialog from '../dialogs/components/StartOverDialog';
+import useLifecycleNotifier from '../hooks/useLifecycleNotifier';
+import LabRegistry from '../LabRegistry';
+import {LifecycleEvent} from '../LifecycleNotifier';
+import type {ProjectManager} from '../projects';
+import {labActions} from '../redux';
+import {useAppSelector} from '../redux/store';
+import type {LabProps} from '../types';
+import {getInitialSources as defaultGetInitialSources} from '../utils';
+
+export type MessageType = 'text' | 'blocks' | 'custom';
+
+// TODO: get this from app_options
+//const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+const isStartMode = false;
+
+/**
+ * Describes the state of the sources available in the current lab.
+ */
+export interface SourcesContent<T = string> {
+  currentSources: ProjectSources<T>;
+  updateSources: (newSources: ProjectSources<T>, forceSave?: boolean) => void;
+  /**
+   * Put a different document in front of the lab, from outside its editors.
+   *
+   * `updateSources` is for an edit the student made: the editor that made it is
+   * already showing it, and re-seeding from its own typing would fight them. A
+   * document REPLACED — a version restored, an AI tutor's change applied or
+   * taken back — is the other case, and an open editor has no way to know it
+   * happened. Bumping the epoch is how it finds out.
+   *
+   * Without this, an editor goes on showing the file as it was, and the next
+   * keystroke in that stale workspace writes the old contents back over the
+   * change.
+   */
+  replaceSources: (newSources: ProjectSources<T>, forceSave?: boolean) => void;
+  /**
+   * Save what is showing as a NAMED version the student can come back to.
+   *
+   * An ordinary save folds into whichever version is current; this makes one of
+   * its own and records `description` against it, then stops later saves
+   * writing into it. For a change the student agreed to — accepting an AI
+   * tutor's edit is the case it was built for — that is the difference between
+   * a thing they can undo tomorrow and a thing they cannot.
+   *
+   * Rejects if there is no project manager, or if the save produced no version
+   * to name. A caller that cannot show the failure should still not swallow it.
+   */
+  createCommit: (description: string) => Promise<void>;
+  /**
+   * Show sources that already exist on the server without saving them back —
+   * previewing or restoring a version from the version history. Unlike
+   * {@link updateSources} this never enqueues a save, so it cannot overwrite the
+   * project with the content being viewed. (Read-only state alone is not enough
+   * to make `updateSources` safe here: it reads a ref refreshed on render, but
+   * the version thunks call back synchronously with the dispatch that marks the
+   * workspace read-only, so that ref is still stale.)
+   */
+  previewSources: (newSources: ProjectSources<T>) => void;
+  /**
+   * Bumped whenever the sources are REPLACED rather than edited.
+   *
+   * Loading the project, restoring a version, starting over: each hands the lab
+   * a different document, and an editor showing the old one has to re-seed. An
+   * editor's own `updateSources` does NOT bump it — which is the point. Without
+   * it an editor has to guess, by comparing the contents coming back against
+   * what it wrote, and that guess is wrong exactly when the writes are fast
+   * (a slider drag): an echo arriving out of order looks like somebody else's
+   * edit, and the editor re-seeds to a value the learner has already moved past.
+   */
+  sourcesEpoch: number;
+  showStartOverDialog: (type: MessageType, message?: string) => void;
+  setReinitializationHandler: (handler: () => void) => void;
+  startOver: () => void;
+}
+
+/**
+ * The current lab sources metadata.
+ */
+const SourcesContext = createContext<SourcesContent>({
+  currentSources: {
+    source: '',
+  },
+  updateSources: (_, __) => {},
+  replaceSources: (_, __) => {},
+  createCommit: () => Promise.resolve(),
+  previewSources: _ => {},
+  sourcesEpoch: 0,
+  showStartOverDialog: (_, __) => {},
+  setReinitializationHandler: _ => {},
+  startOver: () => {},
+});
+
+/**
+ * This hook returns the current lab sources.
+ */
+export const useSources = <T = string,>() => {
+  return useContext(SourcesContext) as unknown as SourcesContent<T>;
+};
+
+export interface SourcesProviderProps<
+  T extends LevelProperties = LevelProperties,
+  U = string,
+> extends LabProps<T, U> {
+  defaultSources: ProjectSources<U>;
+  /**
+   * Optionally supply a custom ProjectManager to use in place of the LabRegistry's ProjectManager.
+   * Currently only used in very specific multi-project scenarios.
+   */
+  projectManager?: ProjectManager;
+  /** How to determine the initial sources */
+  getInitialSources?: (
+    levelProperties: T,
+    projectSources?: ProjectSources<U>,
+  ) => ProjectSources<U> | undefined;
+  /** The callback to determine initial sources to use when starting over */
+  startOverSources?: (levelProperties: T) => ProjectSources<U>;
+  /** The message to display when potentially starting over. */
+  defaultStartOverMessage?: string;
+  /** A transformer to parse the sources into the typed ProjectSources form expected */
+  transform?: (projectSources: ProjectSources<U>) => ProjectSources<U>;
+}
+
+export const STARTOVER_WORKSPACE_TEXT_MESSAGE =
+  "This will reset the workspace to its start state and remove all the code you've added or changed.";
+
+/**
+ * Holds the sources for a lab.
+ */
+export const SourcesProvider = <
+  T extends LevelProperties = LevelProperties,
+  U = string,
+>({
+  levelProperties,
+  initialSources,
+  defaultSources,
+  projectManager,
+  getInitialSources,
+  startOverSources,
+  defaultStartOverMessage,
+  transform,
+  children,
+}: SourcesProviderProps<T, U> & PropsWithChildren) => {
+  const [currentSources, setCurrentSources] = useState<ProjectSources<U>>(
+    () =>
+      (getInitialSources || defaultGetInitialSources<T, U>)(
+        levelProperties,
+        initialSources,
+      ) || defaultSources,
+  );
+
+  getInitialSources ||= defaultGetInitialSources;
+
+  // When we use this value to decide whether to save sources or not,
+  // we want to make sure that we have the most up-to-date version of the readonly state of the workspace.
+  // In order to achieve this, we re-fetch the current value and save it to a ref on each render.
+  const readonlyWorkspace = useAppSelector(labActions.isReadOnlyWorkspace);
+  const readonlyWorkspaceRef = useRef(readonlyWorkspace);
+  readonlyWorkspaceRef.current = readonlyWorkspace;
+
+  const [startOverMessage, setStartOverMessage] = useState<string | undefined>(
+    undefined,
+  );
+
+  // How many times the sources have been replaced wholesale; see the field's
+  // note in SourcesContent.
+  const [sourcesEpoch, setSourcesEpoch] = useState(0);
+
+  /**
+   * Put a different document in front of the lab.
+   *
+   * Both replacement paths go through here, so both bump the epoch — and
+   * neither bumps it for a document identical to the one already showing,
+   * because that is not something any editor needs to react to.
+   */
+  const replaceSources = useCallback(
+    (next: ProjectSources<U>) => {
+      setCurrentSources(prev => {
+        if (isEqual(prev, next)) {
+          return prev;
+        }
+        setSourcesEpoch(epoch => epoch + 1);
+        return next;
+      });
+    },
+    [setCurrentSources],
+  );
+
+  /**
+   * `replaceSources` with the saving half of `updateSources`.
+   *
+   * The two halves are separate inside this file — one puts the document in
+   * front of the lab, the other persists it — and a caller outside it wants
+   * both, exactly as an ordinary edit does.
+   */
+  const replaceAndSave = useCallback(
+    (next: ProjectSources<U>, forceSave = false) => {
+      replaceSources(transform?.(next) || next);
+      if (!readonlyWorkspaceRef.current) {
+        (projectManager || LabRegistry.projectManager)?.save(
+          next as ProjectSources,
+          forceSave,
+        );
+      }
+    },
+    [replaceSources, transform, projectManager],
+  );
+
+  const createCommit = useCallback(
+    async (description: string) => {
+      const manager = projectManager || LabRegistry.projectManager;
+      if (!manager) {
+        throw new Error('Cannot name a version: there is no project manager');
+      }
+      await manager.createCommit(description);
+    },
+    [projectManager],
+  );
+
+  const reinitializationHandler = useRef<(() => void) | null>(null);
+  const setReinitializationHandler = useCallback((handler: () => void) => {
+    reinitializationHandler.current = handler;
+  }, []);
+
+  const reinitializeSources = useCallback(
+    (sources: ProjectSources<U>, save: boolean = false) => {
+      replaceSources(transform?.(sources) || sources);
+      if (save && !readonlyWorkspaceRef.current) {
+        (projectManager || LabRegistry.projectManager)?.save(
+          sources as ProjectSources,
+          true,
+        );
+      }
+
+      if (reinitializationHandler.current) {
+        reinitializationHandler.current();
+      }
+    },
+    [projectManager, transform, replaceSources, reinitializationHandler],
+  );
+
+  useEffect(() => {
+    reinitializeSources(
+      (getInitialSources || defaultGetInitialSources<T, U>)(
+        levelProperties,
+        initialSources,
+      ) || defaultSources,
+    );
+  }, [
+    getInitialSources,
+    reinitializeSources,
+    levelProperties,
+    initialSources,
+    defaultSources,
+  ]);
+
+  // Sources to reset to when starting over. Depends on the level edit mode.
+  const memoizedStartOverSources: ProjectSources<U> = useMemo(() => {
+    if (startOverSources) {
+      return startOverSources(levelProperties);
+    }
+
+    const {templateSources, startSources} = levelProperties;
+    return isStartMode
+      ? defaultSources
+      : ((templateSources ||
+          startSources ||
+          defaultSources) as ProjectSources<U>);
+  }, [startOverSources, defaultSources, levelProperties]);
+
+  const updateSources = useCallback(
+    (newSources: ProjectSources<U>, forceSave = false) => {
+      setCurrentSources(prev => {
+        const transformed = transform?.(newSources) || newSources;
+
+        // Perform a deep equality check to prevent unnecessary re-renders
+        if (isEqual(prev, transformed)) {
+          return prev;
+        }
+
+        return transformed;
+      });
+
+      if (!readonlyWorkspaceRef.current) {
+        (projectManager || LabRegistry.projectManager)?.save(
+          newSources as ProjectSources,
+          forceSave,
+        );
+      }
+    },
+    [setCurrentSources, transform, projectManager],
+  );
+
+  // Reflect sources that already exist on the server, without saving them back.
+  // See `previewSources` in SourcesContent for why read-only state alone can't
+  // be relied on to make `updateSources` safe in this path.
+  const previewSources = useCallback(
+    (newSources: ProjectSources<U>) => {
+      replaceSources(transform?.(newSources) || newSources);
+    },
+    [replaceSources, transform],
+  );
+
+  const onLevelLoad = useCallback(
+    (
+      _levelProperties?: LevelProperties,
+      _channel?: Channel,
+      initialSources?: ProjectSources,
+    ) => {
+      updateSources(initialSources as ProjectSources<U>);
+    },
+    [updateSources],
+  );
+
+  // When the level changes, reflect the loaded initialSources
+  useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, onLevelLoad);
+
+  const onStartOver = useCallback(() => {
+    reinitializeSources(memoizedStartOverSources as ProjectSources<U>, true);
+    setStartOverMessage(undefined);
+  }, [reinitializeSources, memoizedStartOverSources]);
+
+  const showStartOverDialog = useCallback(
+    (message?: string) => {
+      setStartOverMessage(message || defaultStartOverMessage);
+    },
+    [defaultStartOverMessage, setStartOverMessage],
+  );
+
+  const TypedContext = SourcesContext as unknown as ReturnType<
+    typeof createContext<SourcesContent<U>>
+  >;
+
+  return (
+    <TypedContext.Provider
+      value={{
+        currentSources,
+        updateSources,
+        replaceSources: replaceAndSave,
+        createCommit,
+        previewSources,
+        sourcesEpoch,
+        showStartOverDialog,
+        setReinitializationHandler,
+        startOver: onStartOver,
+      }}
+    >
+      {children}
+      {startOverMessage !== undefined && (
+        <StartOverDialog
+          onConfirm={onStartOver}
+          onCancel={() => setStartOverMessage(undefined)}
+          message={
+            startOverMessage ||
+            defaultStartOverMessage ||
+            STARTOVER_WORKSPACE_TEXT_MESSAGE
+          }
+        />
+      )}
+    </TypedContext.Provider>
+  );
+};
+
+export default SourcesContext;

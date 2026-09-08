@@ -1,0 +1,55 @@
+.validationBubble {
+  background-color: var(--background-neutral-secondary);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  margin: 4px;
+  overflow: hidden;
+  padding: 12px;
+}
+
+.validationPanel {
+  background-color: var(--background-neutral-primary);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.validationResults {
+  flex: 1;
+  margin-bottom: 12px;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.validationResultsTable {
+  border: 1px solid var(--borders-neutral-strong);
+  border-collapse: collapse;
+  table-layout: auto;
+  width: 100%;
+
+  thead td {
+    background-color: var(--background-neutral-tertiary);
+  }
+
+  td {
+    background-color: var(--background-neutral-primary);
+    border: 1px solid var(--borders-neutral-strong);
+    padding: 4px 6px;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.resultsText {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 4px;
+  text-align: center;
+}

@@ -1,0 +1,10 @@
+.panel {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  overflow: hidden;
+
+  &.reverse {
+    flex-direction: column-reverse;
+  }
+}

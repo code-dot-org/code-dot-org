@@ -39,12 +39,20 @@ Run from `frontend/`.
 ```bash
 yarn build           # build all packages
 yarn test            # run all tests
+yarn typecheck       # types only — see the warning below
 yarn lint:fix        # auto-fix lint across changed packages
 yarn lint            # verify after fix
 yarn dev             # start Studio in watch mode (Vite + Turborepo)
 yarn release:dryrun  # validate before reporting success — runs build, lint
                      # (includes typecheck), and test
 ```
+
+**Typecheck with `yarn typecheck`, never a hand-rolled `tsc -p`.** A package's
+root `tsconfig.json` is a SOLUTION file — `"files": []` plus `references` — so
+`tsc --noEmit -p tsconfig.json` compiles zero files and exits 0 on anything. It
+looks like it worked; it checked nothing. Every package's `typecheck` script is
+`tsc -b --noEmit`, which follows the references. Lint does not check types, so
+this is the only thing that does.
 
 ## Dev loop
 
