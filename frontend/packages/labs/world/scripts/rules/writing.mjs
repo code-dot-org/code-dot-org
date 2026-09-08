@@ -23,15 +23,26 @@ Give anything with words **Shows Text**.`,
 // the actor that elects it (specs/DRAWING.md). It exists to be elected and to
 // be set.
 //
-// WHY THESE ARE A TRAIT'S AND NOT THE ACTOR'S OWN. \`define property\` in an
-// \`.actor\` file would say the same thing in one file instead of two, and the
-// getter and setter it mints would be in that file's palette and NOWHERE ELSE
-// (\`BlocklyFileEditor\` hands the palette only the actor being edited). A
-// world's handler could never say \`set text of ⟨any ⟨Score⟩⟩\`, which is the
-// entire point of having a score. A rule's property has no such limit.
+// WHY THESE ARE A TRAIT'S AND NOT THE ACTOR'S OWN — and the reason is SHARING,
+// which is not the reason this used to give.
+//
+// It used to say that the getter and setter a \`define property\` mints would
+// be in the declaring file's palette and NOWHERE ELSE, so a world's handler
+// could never say \`set text of ⟨any ⟨Score⟩⟩\`. That stopped being true when
+// an actor's own properties became exported and every actor's landed in every
+// file's palette — \`BlocklyFileEditor\` hands the palette \`projectOwnMetas\`,
+// which is all of them, and the stock Health Bar's \`subject\` was the first
+// thing to need it.
+//
+// What is left is the argument that was always the real one. A Label, a
+// Button, a Speech Box and a Scoreboard all mean the same thing by \`text\`,
+// and a rule is for what is SHARED (specs/UI_ACTORS.md).
 //
 // Electing it is also what makes labels findable: \`for each actor where ⟨has
-// trait ⟨Shows Text⟩⟩\` is a sentence, with nothing new behind it.`,
+// trait ⟨Shows Text⟩⟩\` is a sentence, with nothing new behind it — and it is
+// the only way to say it, since a kind is not inherited: an actor that ACTS
+// LIKE a Label is not one of \`any ⟨Label⟩\`, and its trait is what it has in
+// common with one.`,
 });
 
 const shows = rule.trait('Shows Text');

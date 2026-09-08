@@ -6,12 +6,29 @@
 // other, and both are actors in the library rather than anything the engine
 // knows about (specs/UI_ACTORS.md).
 //
-// WHY IT IS A RULE AND NOT THE BAR'S OWN NUMBER. A `define property` in an
-// `.actor` file mints its getter and setter into that file's palette and
-// NOWHERE ELSE, so a bar that kept its own fraction would be a bar nothing
-// could fill. The whole point of a progress bar is that something else moves
-// it. Writing's header makes the same argument about a score's text, and this
-// is that argument again with a number in it.
+// WHY IT IS A RULE AND NOT THE BAR'S OWN NUMBER — and the reason is SHARING,
+// which is not the reason this used to give.
+//
+// It used to say that a `define property` in an `.actor` file mints its
+// getter and setter into that file's palette and NOWHERE ELSE, so a bar
+// keeping its own fraction would be a bar nothing could fill. That stopped
+// being true when an actor's own properties became exported and every actor's
+// landed in every file's palette — which is how the stock Health Bar keeps
+// `subject`, a name for something no rule has any business owning.
+//
+// What is left is the argument that was always the real one. A Progress Bar, a
+// Health Bar and a Fuel Bar all mean the same thing by `fraction`, and a rule
+// is for what is SHARED — the test `specs/UI_ACTORS.md` states while working
+// out that same Health Bar: `text` is Writing's because a Label and a Button
+// and a Score all mean the same thing by it, and `subject` is the bar's own
+// because nobody else means anything by it at all.
+//
+// AND THE TRAIT IS THE ONLY THING THAT NAMES THE FAMILY. A Health Bar ACTS
+// LIKE a Progress Bar, and kinds are not inherited — an instance carries the
+// module it was placed from, so a Health Bar is never one of
+// `any ⟨Progress Bar⟩` (`ActorBuilder.actsLike`). What carries across is the
+// trait, so `⟨has trait ⟨Shows Progress⟩⟩` is the only way to say "every bar
+// in this game", and there would be no way to say it without this rule.
 //
 // A RULE WITH NO STEPS. Nothing about a fraction happens over time: what moves
 // it is a project's own handler — a coin taken, a hit landed, a file loaded —
