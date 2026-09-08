@@ -7407,20 +7407,30 @@ const paintArg = (name: string) => ({
  */
 const worldDefineDrawing = defineBlock({
   type: 'world_define_drawing',
+  // SOCKETS, NOT FIELDS. The size was two numbers typed into the block, one
+  // pair per KIND — so five Labels of one kind were five boxes of one size,
+  // and "make this button wider" was not a thing that could be said. A socket
+  // takes `⟨width⟩ of ⟨this actor⟩` as readily as a number, which is what an
+  // interface actor needs and what specs/UI_ACTORS.md is written around.
+  //
+  // A number shadow in each, so the block a learner drags out is the block it
+  // always was and nothing has to be plugged in to use it.
   message0: 'define drawing %1 by %2',
   args0: [
-    {type: 'field_number', name: 'WIDTH', value: 32, min: 1, max: 512},
-    {type: 'field_number', name: 'HEIGHT', value: 32, min: 1, max: 512},
+    {type: 'input_value', name: 'WIDTH', check: 'Number'},
+    {type: 'input_value', name: 'HEIGHT', check: 'Number'},
   ],
+  inputsInline: true,
   message1: '%1',
   args1: [{type: 'input_statement', name: 'DO'}],
   previousStatement: true,
   nextStatement: true,
-  extensions: [bodyButtonExtension, bodySurfaceExtension],
+  extensions: [bodyButtonExtension, bodySurfaceExtension, valueShadowExtension],
   style: 'sprite_blocks',
   tooltip:
     'Describe what this kind of actor looks like. The size is the picture, ' +
-    'and it is also how big the actor is for clicks and collisions.',
+    'and it is also how big the actor is for clicks and collisions — read off ' +
+    'the actor, so two of one kind may be two sizes.',
   generator: {
     javascript(block, generator) {
       // WHAT IT IS CHAINED UNDER DECIDES WHETHER IT IS ANYTHING, the same
@@ -7432,8 +7442,18 @@ const worldDefineDrawing = defineBlock({
       if (inWorldActor ? !hasActorInScope(block) : !definesActorFile(block)) {
         return '';
       }
-      const width = Number(block.getFieldValue('WIDTH')) || 1;
-      const height = Number(block.getFieldValue('HEIGHT')) || 1;
+      // A CLOSURE EACH, because the size may ask the actor. `this actor`
+      // inside one compiles to `actor`, which is the parameter — the same
+      // shadowing every other body here does. An expression that reads
+      // nothing is a function returning a literal, which is what an actor with
+      // a fixed size compiles to and costs nothing to call
+      // (`ActorBuilder.defineDrawing`).
+      const measure = (name: string): string => {
+        const code = generator.valueToCode(block, name, Order.NONE);
+        return `actor => ${code || '1'}`;
+      };
+      const width = measure('WIDTH');
+      const height = measure('HEIGHT');
       const body = generator.statementToCode(block, 'DO');
       // `actor` SHADOWS the module's builder inside the closure, exactly as a
       // step's body does, so `this actor` written here means this one. `pen` is
@@ -7451,6 +7471,12 @@ const worldDefineDrawing = defineBlock({
     },
   },
 });
+
+/** Thirty-two by thirty-two, which is what the block always was. */
+registerValueShadows('world_define_drawing', [
+  {name: 'WIDTH', shadow: {type: 'math_number', fields: {NUM: 32}}},
+  {name: 'HEIGHT', shadow: {type: 'math_number', fields: {NUM: 32}}},
+]);
 
 const worldPenFill = defineBlock({
   type: 'world_pen_fill',

@@ -282,13 +282,25 @@ export class ActorBuilder {
    * arbitrary one, which is at least the one the author saw last.
    */
   defineDrawing(
-    width: number,
-    height: number,
+    width: number | ((actor: Actor) => number),
+    height: number | ((actor: Actor) => number),
     run: (actor: Actor, pen: Pen, world: World) => void,
   ): this {
+    // EITHER A NUMBER OR A QUESTION ABOUT THE ACTOR, which is the whole of
+    // what changed here. A Coin is 16 by 16 and always will be; a Button is as
+    // wide as it was made, and two of one kind are two widths. A literal is
+    // the same function answering the same way, so nothing that had a size
+    // pays for the ones that ask.
+    const measure = (
+      given: number | ((actor: Actor) => number),
+    ): ((actor: unknown) => number) =>
+      typeof given === 'function'
+        ? (actor: unknown) => Number(given(actor as Actor)) || 0
+        : () => given;
+    const across = measure(width);
+    const down = measure(height);
     this.drawing = {
-      width,
-      height,
+      size: actor => ({width: across(actor), height: down(actor)}),
       run: (actor, pen, world) => run(actor as Actor, pen, world as World),
     };
     return this;

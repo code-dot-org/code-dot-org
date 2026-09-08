@@ -66,14 +66,20 @@ describe('define drawing', () => {
     // drawing. It reads and never writes, which is what a drawing IS; a health
     // bar that could only see itself had to be handed the actor it watches, by
     // a property and a step that existed for no other reason.
+    // …AND THE SIZE IS A CLOSURE EACH, because it is read off the actor. It
+    // was two numbers on the block; an interface actor's is `⟨width⟩ of ⟨this
+    // actor⟩`, so two Buttons of one kind may be two widths
+    // (`ActorDrawing.size`, specs/UI_ACTORS.md). A literal is that same
+    // function answering the same way.
     const code = codeFor('world_define_drawing', {
-      fields: {WIDTH: '64', HEIGHT: '16'},
+      values: {WIDTH: '64', HEIGHT: 'actor.get(HeightProperty)'},
       body: 'pen.rectangle(0, 0, 8, 8);\n',
     });
 
     expect(code).toBe(
-      'actor.defineDrawing(64, 16, (actor, pen, world) => {\n' +
-        'pen.rectangle(0, 0, 8, 8);\n});\n',
+      'actor.defineDrawing(actor => 64, ' +
+        'actor => actor.get(HeightProperty), ' +
+        '(actor, pen, world) => {\npen.rectangle(0, 0, 8, 8);\n});\n',
     );
   });
 

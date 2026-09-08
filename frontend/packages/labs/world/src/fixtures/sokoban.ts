@@ -306,8 +306,13 @@ const CRATE_ACTOR = JSON.stringify({
             {type: 'world_set_sprite', fields: {SPRITE: 'box.png'}},
             {
               type: 'world_define_drawing',
-              fields: {WIDTH: TILE_SIZE, HEIGHT: TILE_SIZE},
               inputs: {
+                WIDTH: {
+                  shadow: {type: 'math_number', fields: {NUM: TILE_SIZE}},
+                },
+                HEIGHT: {
+                  shadow: {type: 'math_number', fields: {NUM: TILE_SIZE}},
+                },
                 DO: {
                   block: stack([
                     {

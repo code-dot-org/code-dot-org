@@ -108,8 +108,13 @@ const drawingBlock = (drawing: {
   commands: object[];
 }) => ({
   type: 'world_define_drawing',
-  fields: {WIDTH: drawing.width, HEIGHT: drawing.height},
-  inputs: {DO: {block: stack(drawing.commands)}},
+  // Sockets rather than fields: the size is read off the actor now, so a fixed
+  // one is a number shadow in each (`actors/stock/workspace.drawingRow`).
+  inputs: {
+    WIDTH: {shadow: {type: 'math_number', fields: {NUM: drawing.width}}},
+    HEIGHT: {shadow: {type: 'math_number', fields: {NUM: drawing.height}}},
+    DO: {block: stack(drawing.commands)},
+  },
 });
 
 /** A defining block's id as `pathSlug` spells it, for an own property's block. */
@@ -309,8 +314,13 @@ const SINGLE_WORLD = JSON.stringify({
         // else for it to say whose it is.
         {
           type: 'world_define_drawing',
-          fields: {WIDTH: SCOREBOARD_WIDTH, HEIGHT: SCOREBOARD_HEIGHT},
           inputs: {
+            WIDTH: {
+              shadow: {type: 'math_number', fields: {NUM: SCOREBOARD_WIDTH}},
+            },
+            HEIGHT: {
+              shadow: {type: 'math_number', fields: {NUM: SCOREBOARD_HEIGHT}},
+            },
             DO: {
               block: stack([
                 fill(textOf('TextColorProperty')),

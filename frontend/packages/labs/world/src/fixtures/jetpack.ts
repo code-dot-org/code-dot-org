@@ -1285,8 +1285,9 @@ const switchedWallActor = (name: string, color: string) =>
               },
               {
                 type: 'world_define_drawing',
-                fields: {WIDTH: 32, HEIGHT: 32},
                 inputs: {
+                  WIDTH: {shadow: {type: 'math_number', fields: {NUM: 32}}},
+                  HEIGHT: {shadow: {type: 'math_number', fields: {NUM: 32}}},
                   DO: {
                     block: stack([
                       fill({
@@ -1325,8 +1326,9 @@ const switchActor = (name: string, color: string) =>
               },
               {
                 type: 'world_define_drawing',
-                fields: {WIDTH: 32, HEIGHT: 32},
                 inputs: {
+                  WIDTH: {shadow: {type: 'math_number', fields: {NUM: 32}}},
+                  HEIGHT: {shadow: {type: 'math_number', fields: {NUM: 32}}},
                   DO: {
                     block: stack([
                       fill({
@@ -1386,8 +1388,9 @@ const padActor = (seconds: number) =>
               useTrait('Teleport#IsATeleportPadTrait'),
               {
                 type: 'world_define_drawing',
-                fields: {WIDTH: 32, HEIGHT: 32},
                 inputs: {
+                  WIDTH: {shadow: {type: 'math_number', fields: {NUM: 32}}},
+                  HEIGHT: {shadow: {type: 'math_number', fields: {NUM: 32}}},
                   DO: {
                     block: stack([
                       fill({
@@ -1992,8 +1995,9 @@ const SCOREBOARD_ACTOR = JSON.stringify({
             }),
             {
               type: 'world_define_drawing',
-              fields: {WIDTH: 96, HEIGHT: 24},
               inputs: {
+                WIDTH: {shadow: {type: 'math_number', fields: {NUM: 96}}},
+                HEIGHT: {shadow: {type: 'math_number', fields: {NUM: 24}}},
                 DO: {
                   block: stack([
                     fill({

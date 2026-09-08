@@ -912,7 +912,12 @@ export class World {
     if (drawing) {
       const property = this.intrinsicSizeProperty();
       if (property) {
-        actor.set(property, new Vector(drawing.width, drawing.height));
+        // ASKED OF THIS ACTOR, because the size is per-instance: two Buttons
+        // of one kind may be two widths (`ActorDrawing.size`). It is asked
+        // again wherever the drawing runs, so a size that CHANGES is followed
+        // rather than frozen here — see `renderSnapshot`.
+        const {width, height} = drawing.size(actor);
+        actor.set(property, new Vector(width, height));
       }
     }
     this.actorList.push(actor);
@@ -2354,10 +2359,26 @@ export class World {
       }
       const pen = new CommandPen();
       drawing.run(actor, pen, this);
+      // ASKED HERE TOO, and this is where a size that changes is honoured: an
+      // actor made wider draws wider on the next frame, because the canvas is
+      // read with the commands rather than remembered from when it was placed.
+      const {width, height} = drawing.size(actor);
+      // …AND `intrinsic size` FOLLOWS IT. The two must not drift: a Button
+      // drawn wider whose click box stayed narrow is a button that misses, and
+      // everything that asks how big an actor is reads the property rather
+      // than the picture (`place`, above). Written only when it has actually
+      // moved, so an ordinary actor's is set once and never again.
+      const sizeProperty = this.intrinsicSizeProperty();
+      if (sizeProperty) {
+        const known = actor.get(sizeProperty);
+        if (known?.x !== width || known?.y !== height) {
+          actor.set(sizeProperty, new Vector(width, height));
+        }
+      }
       return {
-        key: drawingKey(drawing.width, drawing.height, pen.commands),
-        width: drawing.width,
-        height: drawing.height,
+        key: drawingKey(width, height, pen.commands),
+        width,
+        height,
         commands: pen.commands,
       };
     };

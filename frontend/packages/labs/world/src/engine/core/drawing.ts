@@ -134,11 +134,21 @@ const DEFAULT_FILL = '#ffffff';
 
 /** How a KIND of actor draws itself — see `ActorBuilder.defineDrawing`. */
 export interface ActorDrawing {
-  /** The canvas, in pixels. Declared rather than measured: it is also the
-   *  actor's `intrinsic size`, which is what its click box and its collision
-   *  box are worked out from. */
-  readonly width: number;
-  readonly height: number;
+  /**
+   * The canvas, in pixels, GIVEN THE ACTOR.
+   *
+   * Declared rather than measured: it is also the actor's `intrinsic size`,
+   * which is what its click box and its collision box are worked out from.
+   *
+   * A FUNCTION, because the size is per-INSTANCE. It was two numbers on the
+   * kind, so five Labels of one kind were five boxes of one size and resizing
+   * one was not a thing that could be said — which is the first thing somebody
+   * arranging a dialog reaches for (specs/UI_ACTORS.md). An interface actor
+   * declares its own `width` and `height` and hands them here; a drawing whose
+   * size is two literals is the same function returning the same pair, and
+   * costs nothing to call.
+   */
+  readonly size: (actor: unknown) => {width: number; height: number};
   /**
    * The routine, given the actor it is drawing, a pen, and the WORLD.
    *

@@ -311,9 +311,13 @@ export function previewDrawing(actor: StockActor): PreviewDrawing | undefined {
     }
   }
 
+  // THE SIZE IS A SOCKET, like everything else this reads. It was two fields
+  // on the block; an interface actor's is `⟨width⟩ of ⟨this actor⟩`, and
+  // `literal` resolves that against the declared defaults the same way the
+  // colors and the words are resolved (`declaredDefaults`).
   return {
-    width: Number(drawing.fields?.WIDTH ?? 32),
-    height: Number(drawing.fields?.HEIGHT ?? 32),
+    width: number(drawing, 'WIDTH', 32),
+    height: number(drawing, 'HEIGHT', 32),
     commands,
   };
 }

@@ -188,6 +188,30 @@ export const defineBlock = (spec: {
   inputs: {DO: {block: chain(spec.body)}},
 });
 
+/**
+ * `define drawing ⟨w⟩ by ⟨h⟩` — the row that says what a kind looks like.
+ *
+ * The size is SOCKETS rather than fields (`domainBlocks.worldDefineDrawing`),
+ * so a fixed one is a number shadow in each and an interface actor may plug in
+ * `⟨width⟩ of ⟨this actor⟩` instead. Written once here because every stock
+ * actor, fixture and lesson that draws emits the same row, and a shape spelled
+ * out in eight places is eight places to fix.
+ */
+export const drawingRow = (drawing: {
+  width: number | object;
+  height: number | object;
+  commands: object[];
+}) => ({
+  type: 'world_define_drawing',
+  inputs: {
+    WIDTH:
+      typeof drawing.width === 'number' ? num(drawing.width) : drawing.width,
+    HEIGHT:
+      typeof drawing.height === 'number' ? num(drawing.height) : drawing.height,
+    DO: {block: chain(drawing.commands)},
+  },
+});
+
 /** What an actor file may hold beside its `define actor`. */
 export interface ActorExtras {
   /**
@@ -256,20 +280,7 @@ export const actorFile = (
                   next: {
                     block: chain([
                       ...rows,
-                      ...(extras.drawing
-                        ? [
-                            {
-                              type: 'world_define_drawing',
-                              fields: {
-                                WIDTH: extras.drawing.width,
-                                HEIGHT: extras.drawing.height,
-                              },
-                              inputs: {
-                                DO: {block: chain(extras.drawing.commands)},
-                              },
-                            },
-                          ]
-                        : []),
+                      ...(extras.drawing ? [drawingRow(extras.drawing)] : []),
                     ]),
                   },
                 }

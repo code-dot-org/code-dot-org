@@ -79,8 +79,9 @@ const BAR = JSON.stringify({
                 next: {
                   block: {
                     type: 'world_define_drawing',
-                    fields: {WIDTH: 40, HEIGHT: 6},
                     inputs: {
+                      WIDTH: {shadow: {type: 'math_number', fields: {NUM: 40}}},
+                      HEIGHT: {shadow: {type: 'math_number', fields: {NUM: 6}}},
                       DO: {
                         block: {
                           type: 'world_draw_rectangle',
@@ -305,8 +306,9 @@ describe('an actor that acts like another', () => {
           next: {
             block: {
               type: 'world_define_drawing',
-              fields: {WIDTH: 40, HEIGHT: 6},
               inputs: {
+                WIDTH: {shadow: {type: 'math_number', fields: {NUM: 40}}},
+                HEIGHT: {shadow: {type: 'math_number', fields: {NUM: 6}}},
                 DO: {
                   block: {
                     type: 'world_draw_rectangle',

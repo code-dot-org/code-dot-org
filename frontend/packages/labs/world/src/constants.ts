@@ -553,8 +553,19 @@ const SCOREBOARD_ACTOR = JSON.stringify(
               // typed here, which is what makes the trait worth having.
               {
                 type: 'world_define_drawing',
-                fields: {WIDTH: SCOREBOARD_WIDTH, HEIGHT: SCOREBOARD_HEIGHT},
                 inputs: {
+                  WIDTH: {
+                    shadow: {
+                      type: 'math_number',
+                      fields: {NUM: SCOREBOARD_WIDTH},
+                    },
+                  },
+                  HEIGHT: {
+                    shadow: {
+                      type: 'math_number',
+                      fields: {NUM: SCOREBOARD_HEIGHT},
+                    },
+                  },
                   DO: {
                     block: stack([
                       fill(textOf('TextColorProperty')),

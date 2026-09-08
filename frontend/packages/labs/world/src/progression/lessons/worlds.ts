@@ -50,8 +50,13 @@ const drawingBlock = (drawing: {
   commands: object[];
 }) => ({
   type: 'world_define_drawing',
-  fields: {WIDTH: drawing.width, HEIGHT: drawing.height},
-  inputs: {DO: {block: chain(drawing.commands)}},
+  // Sockets rather than fields: the size is read off the actor now, so a fixed
+  // one is a number shadow in each (`actors/stock/workspace.drawingRow`).
+  inputs: {
+    WIDTH: {shadow: {type: 'math_number', fields: {NUM: drawing.width}}},
+    HEIGHT: {shadow: {type: 'math_number', fields: {NUM: drawing.height}}},
+    DO: {block: chain(drawing.commands)},
+  },
 });
 
 /**

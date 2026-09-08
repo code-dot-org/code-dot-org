@@ -302,35 +302,49 @@ What is genuinely lost is `for each actor where ⟨has trait ⟨Shows Text⟩⟩
 inherited, so there is no expression for that set afterwards. It is the same
 cost `Progress` paid and it is worth naming twice.
 
-## A size is a property, not a field
+## A size is a property, not a field — DONE
 
 Every interface actor has a WIDTH and a HEIGHT, and they are the first thing
-somebody arranging a dialog reaches for. Today they are two `field_number`s on
+somebody arranging a dialog reaches for. They were two `field_number`s on
 `define drawing` — typed into the block, one pair per KIND — so five Labels of
-one kind are five boxes of one size, and resizing one in the map editor is not
-a thing that can be expressed.
+one kind were five boxes of one size, and resizing one was not a thing that
+could be said.
 
-They have to be properties, and the consequences are worth writing down before
-anything is built:
+They are SOCKETS now, with a number shadow in each, so a fixed size is the
+block a learner always dragged out and an interface actor plugs in `⟨width⟩ of
+⟨this actor⟩` instead. What that took:
 
-- **The drawing's canvas becomes per-instance.** `ActorBuilder.defineDrawing`
-  takes a width and a height today and keeps them beside the routine; it would
-  take the actor instead and ask it, the way the routine already asks it for
-  everything it paints.
-- **`intrinsic size` follows.** `World.place` sets it from the kind's drawing,
-  and everything that asks how big an actor is reads it — the click box, the
-  collision box, "Stays in the Map" (specs/DRAWING.md). Per-instance sizes make
-  that per-instance, which is what a Button drawn wider actually needs.
-- **The texture cache already copes.** A drawing is identified by what it
-  DESCRIBES, so two sizes are two textures and nothing has to be invalidated.
-  This is the piece that would have been hard and is not.
-- **The preview has to read the declared defaults** rather than two numbers off
-  the block (`actors/preview/previewDrawing`), which it now does for every
-  other property.
+- **The drawing's canvas is asked of the actor.** `ActorDrawing` carried a
+  width and a height beside the routine and now carries `size(actor)`;
+  `defineDrawing` takes a number or a question for each and normalises. A
+  literal is that same function answering the same way, so a Coin pays nothing
+  for the Buttons.
+- **`intrinsic size` follows it, wherever the drawing runs.** It is set at
+  `place` and refreshed in `renderSnapshot` when it has actually moved, because
+  the two must not drift: everything that asks how big an actor is reads the
+  property — the click box, the collision box, "Stays in the Map"
+  (specs/DRAWING.md) — and a Button drawn wider whose click box stayed narrow
+  is a button that misses.
+- **One frame's lag, in one case.** `add actor ⟨Plate⟩ do set width …` places
+  the actor and then runs the body, so at the instant of placement the width is
+  still the declared default and that is what `place` reads. It is right from
+  the first frame. A MAP placement's overrides are applied before the actor is
+  placed at all and never lag even that far, which is the case the map editor
+  actually uses.
+- **The texture cache already coped.** A drawing is identified by what it
+  DESCRIBES, so two sizes are two textures and nothing had to be invalidated.
+  This was the piece that would have been hard and was not.
+- **The preview reads the sockets**, resolving a property read against the
+  declared defaults exactly as it already does for the colors and the words
+  (`actors/preview/previewDrawing`).
 - **Positions stay centres.** An interface library usually anchors at the
   top-left; every actor in this lab is placed by its middle, and one kind of
   actor measuring itself differently from the others is a worse surprise than
   the convention is. A box grows about its centre.
+
+There was nothing to migrate: no student work exists, and every drawing in the
+lab is emitted from TypeScript, so one shared `drawingRow`
+(`actors/stock/workspace`) moved all of them at once.
 
 ## What a Label is, once it is the base of the chain
 
