@@ -19,11 +19,6 @@ $(document).ready(() => {
   ) {
     return;
   }
-  // Both URL grammars this page is routed at end in /tutor/gallery.
-  const lessonPath = window.location.pathname.replace(
-    /\/tutor\/gallery\/?$/,
-    ''
-  );
   // The gallery's requests are root-relative to the page's own origin, so
   // they ride the same cookie and the same dev proxies as the page. The
   // singleton DashboardApiClient is not used here: its base URL is absolute,
@@ -36,10 +31,14 @@ $(document).ready(() => {
       kyOptions: {timeout: false},
     })
   );
+  const container = document.getElementById('tutor-gallery-container');
   createReactRoot(
     <ApiClientProvider client={apiClient}>
-      <TutorGalleryPage lessonPath={lessonPath} />
+      <TutorGalleryPage
+        script={container.dataset.script}
+        lessonPosition={Number(container.dataset.lessonPosition)}
+      />
     </ApiClientProvider>,
-    document.getElementById('tutor-gallery-container')
+    container
   );
 });

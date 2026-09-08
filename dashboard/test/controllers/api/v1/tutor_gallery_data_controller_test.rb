@@ -2,9 +2,7 @@ require 'test_helper'
 
 class Api::V1::TutorGalleryDataControllerTest < ActionController::TestCase
   setup do
-    # The lesson tutor deep dive is scoped to AIF/AID student courses, so
-    # tutor gallery tests need a course whose offering carries that marketing
-    # initiative (see Script#lesson_tutor_available?).
+    # Script#lesson_tutor_available? requires an AIF/AID marketing initiative.
     @ai_script = create(:script, name: 'ai-unit-1')
     @ai_course = create(:single_unit_course, :with_course_offering, unit: @ai_script)
     @ai_course.course_version.course_offering.update!(marketing_initiative: 'AIF')

@@ -48,15 +48,14 @@ async function boot(): Promise<void> {
   // bootstraps from; msw mode ignores both, since its response is the
   // fixture regardless.
   const query = new URLSearchParams(window.location.search);
-  const lessonPath = `/s/${query.get('script') ?? 'aif1-2025'}/lessons/${
-    query.get('lessonPosition') ?? '1'
-  }`;
+  const script = query.get('script') ?? 'aif1-2025';
+  const lessonPosition = Number(query.get('lessonPosition') ?? '1');
 
   createReactRoot(
     <StrictMode>
       <ApiClientProvider client={apiClient}>
         <DevPageChrome>
-          <TutorGalleryPage lessonPath={lessonPath} />
+          <TutorGalleryPage script={script} lessonPosition={lessonPosition} />
         </DevPageChrome>
       </ApiClientProvider>
     </StrictMode>,

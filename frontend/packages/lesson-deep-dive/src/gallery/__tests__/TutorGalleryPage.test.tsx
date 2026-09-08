@@ -18,10 +18,10 @@ const transport: Transport = {
 };
 const client = createApiClient(transport);
 
-const renderPage = (lessonPath: string) =>
+const renderPage = (script = 'ai-1', lessonPosition = 1) =>
   render(
     <ApiClientProvider client={client}>
-      <TutorGalleryPage lessonPath={lessonPath} />
+      <TutorGalleryPage script={script} lessonPosition={lessonPosition} />
     </ApiClientProvider>,
   );
 
@@ -55,12 +55,12 @@ describe('TutorGalleryPage', () => {
   it('fetches the bootstrap and renders the gallery', async () => {
     stubBootstrap();
 
-    renderPage('/s/ai-1/lessons/1');
+    renderPage();
 
     await waitFor(() =>
       expect(request).toHaveBeenCalledWith({
         method: 'GET',
-        url: '/s/ai-1/lessons/1/tutor/gallery_data',
+        url: '/api/v1/scripts/ai-1/lessons/1/tutor_gallery_data',
       }),
     );
     await waitFor(() =>
@@ -71,7 +71,7 @@ describe('TutorGalleryPage', () => {
   it('shows a loading message before the bootstrap resolves', () => {
     request.mockImplementation(() => new Promise(() => {}));
 
-    renderPage('/s/ai-1/lessons/1');
+    renderPage();
 
     expect(screen.getByText('Loading projects…')).toBeInTheDocument();
   });
@@ -79,7 +79,7 @@ describe('TutorGalleryPage', () => {
   it('shows an error message when the bootstrap request fails', async () => {
     request.mockRejectedValue(new Error('network'));
 
-    renderPage('/s/ai-1/lessons/1');
+    renderPage();
 
     await waitFor(() =>
       expect(

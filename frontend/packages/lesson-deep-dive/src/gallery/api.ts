@@ -48,16 +48,14 @@ export async function getChallengeResponse(
   return challengeResponseDetailValidator(raw as Record<string, unknown>);
 }
 
-// tutor/gallery_data is a sibling route of the tutor/gallery page; lessonPath
-// is the page path with the trailing /tutor/gallery removed, so both URL
-// grammars work.
 export async function getTutorGalleryData(
   transport: Transport,
-  lessonPath: string,
+  script: string,
+  lessonPosition: number,
 ): Promise<TutorGalleryData> {
   const raw = await transport.request<unknown>({
     method: 'GET',
-    url: `${lessonPath}/tutor/gallery_data`,
+    url: `/api/v1/scripts/${script}/lessons/${lessonPosition}/tutor_gallery_data`,
   });
   return tutorGalleryDataValidator(raw as Record<string, unknown>);
 }

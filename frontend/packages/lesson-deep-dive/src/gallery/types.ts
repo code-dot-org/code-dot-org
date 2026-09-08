@@ -1,28 +1,34 @@
+import {z} from 'zod';
+
 import {
   ChallengeResponse,
   challengeResponseValidator,
   ResponseValidator,
 } from '../types';
 
-// Bootstrap data embedded by LessonsController#tutor_gallery.
-export type GalleryUnit = {
-  id: number;
-  name: string;
-  position: number;
+// Bootstrap data from api/v1/tutor_gallery_data.
+const GalleryUnitSchema = z.object({
+  id: z.number(),
+  name: z.string(),
+  position: z.number(),
   // Path to the unit on studio (e.g. "/s/ai-1"), for building lesson URLs.
-  link: string;
-};
+  link: z.string(),
+});
 
-export type GallerySection = {
-  id: number;
-  name: string;
-};
+const GallerySectionSchema = z.object({
+  id: z.number(),
+  name: z.string(),
+});
 
-export type TutorGalleryData = {
-  currentUnitId: number;
-  units: GalleryUnit[];
-  sections: GallerySection[];
-};
+const TutorGalleryDataSchema = z.object({
+  currentUnitId: z.number(),
+  units: z.array(GalleryUnitSchema),
+  sections: z.array(GallerySectionSchema),
+});
+
+export type GalleryUnit = z.infer<typeof GalleryUnitSchema>;
+export type GallerySection = z.infer<typeof GallerySectionSchema>;
+export type TutorGalleryData = z.infer<typeof TutorGalleryDataSchema>;
 
 export type GallerySort = 'recent' | 'oldest';
 
@@ -107,35 +113,7 @@ export const unitCountsValidator: ResponseValidator<
   return bodyJson as Record<string, number>;
 };
 
-// GET <lesson path>/tutor/gallery_data — the gallery page's bootstrap
-// payload.
+// GET /api/v1/scripts/:script/lessons/:position/tutor_gallery_data
 export const tutorGalleryDataValidator: ResponseValidator<
   TutorGalleryData
-> = bodyJson => {
-  const data = bodyJson as Partial<TutorGalleryData>;
-  if (typeof data.currentUnitId !== 'number') {
-    throw new Error('TutorGalleryData missing currentUnitId');
-  }
-  if (!Array.isArray(data.units)) {
-    throw new Error('TutorGalleryData missing units');
-  }
-  for (const unit of data.units as Partial<GalleryUnit>[]) {
-    if (
-      typeof unit.id !== 'number' ||
-      typeof unit.name !== 'string' ||
-      typeof unit.position !== 'number' ||
-      typeof unit.link !== 'string'
-    ) {
-      throw new Error('TutorGalleryData unit missing a required field');
-    }
-  }
-  if (!Array.isArray(data.sections)) {
-    throw new Error('TutorGalleryData missing sections');
-  }
-  for (const section of data.sections as Partial<GallerySection>[]) {
-    if (typeof section.id !== 'number' || typeof section.name !== 'string') {
-      throw new Error('TutorGalleryData section missing a required field');
-    }
-  }
-  return data as TutorGalleryData;
-};
+> = bodyJson => TutorGalleryDataSchema.parse(bodyJson);

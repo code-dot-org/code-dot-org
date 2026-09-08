@@ -126,10 +126,7 @@ class LessonsController < ApplicationController
   # GET /courses/:course_course_name/units/:unit_position/lessons/:lesson_position/tutor/gallery
   #
   # The Tutor+ project gallery: the class section's submitted challenge work,
-  # browsable by section and unit. This action only authorizes and renders
-  # the mount point; the bootstrap payload comes from
-  # Lessons::TutorGalleryDataController, and the submissions themselves from
-  # GET /challenge_responses.
+  # browsable by section and unit. This action renders only the mount point.
   def tutor_gallery
     view_options(full_width: true, no_padding_container: true, no_footer: true)
     unit_context = get_unit_context(params)

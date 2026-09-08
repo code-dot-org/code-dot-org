@@ -58,9 +58,8 @@ const dashboardProxyPrefixes = [
   '/aichat_request',
   '/ai_gateway',
   '/get_token',
-  // A regex, not a prefix: a '/s/' prefix would proxy the entire Rails app
-  // under that path, not just the gallery bootstrap.
-  '^/s/.*/tutor/gallery_data$',
+  // A regex, not a prefix: '/api/v1' alone would proxy every JSON API.
+  '^/api/v1/scripts/[^/]+/lessons/[^/]+/tutor_gallery_data$',
 ];
 
 const dashboardTarget = 'http://localhost-studio.code.org:3000';

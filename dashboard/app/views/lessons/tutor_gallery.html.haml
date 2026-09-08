@@ -1,3 +1,4 @@
 %script{src: webpack_asset_path('js/lessons/tutor_gallery.js')}
 
-#tutor-gallery-container
+-# The /courses/ page grammar has no unit name in its URL, so name it here.
+#tutor-gallery-container{data: {script: @lesson.script.name, lesson_position: @lesson.relative_position}}
