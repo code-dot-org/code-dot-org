@@ -52,10 +52,10 @@ const trimCache = new Map<string, Promise<string>>();
 const frameThumbCache = new Map<string, Promise<string>>();
 const thumbSourceCache = new Map<string, Promise<string>>();
 
-// Thumbnail edge (px): 2x the ~104 css px gallery tile, so it stays crisp
-// on retina. Everything that shows images in a list — the gallery, the
-// world palette, the block dropdowns — reads these instead of decoding the
-// stored image (a 512-1024px bitmap) into a hundred-pixel tile.
+// Thumbnail edge (px): about twice a list tile, so tiles stay crisp on
+// retina. Everything that shows images in a list — the gallery, the world
+// palette, the block dropdowns — reads these instead of decoding the full
+// stored image into a small tile.
 const THUMB_PX = 224;
 
 // Small display thumbnail per image name (border-trimmed for costumes,
