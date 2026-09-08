@@ -203,10 +203,9 @@ export function animationNames(list: RuntimeAnimationList): Set<string> {
  * compile to literals — costumes, backgrounds and world spawns alike).
  *
  * This scan is complete only because the lab's block set keeps image-name
- * parameters as literal fields; a block that computes an image name at
- * runtime breaks scene-scoping for every image it can reach. The on-demand
- * decode wrappers in SpriteLab2Engine are the safety net for such a name,
- * not a license to add one.
+ * parameters as literal fields; no block computes an image name today. If
+ * one ever does, the on-demand decode wrappers in SpriteLab2Engine are the
+ * fallback — the image decodes late instead of never.
  */
 export function filterAnimationsToCode(
   list: RuntimeAnimationList,
@@ -233,9 +232,9 @@ export function filterAnimationsToCode(
  * the sheet's border would shift every frame off it — their thumbnail is
  * their first frame instead.
  *
- * keepNames widens the thumbnail-pruning universe when the list given is a
- * scene-scoped subset: a thumbnail may only be dropped for a name absent
- * from the whole project.
+ * keepNames lists every name in the project, so that a scene-scoped
+ * subset doesn't prune thumbnails of images other scenes still use — a
+ * thumbnail is only dropped for a name absent from the whole project.
  */
 export async function trimAnimationListImages(
   list: RuntimeAnimationList,

@@ -197,8 +197,8 @@ export default class SpriteLab2Engine extends SpriteLab {
       if (!buffer || buffer.width !== size || buffer.height !== size) {
         // A copy sized to the canvas backing: the shared preloaded image is
         // never mutated (a resize in place changed it for every other
-        // consumer), and the unzoomed blit stays size-matched, which old
-        // software-rasterized canvases need to stay cheap.
+        // consumer), and the unzoomed draw stays a same-size copy, which
+        // machines without GPU acceleration need to stay cheap.
         buffer = this.background.get();
         buffer.resize(size, size);
         this.background._displayBuffer = buffer;
@@ -734,8 +734,8 @@ export default class SpriteLab2Engine extends SpriteLab {
   // Decode only what this scene's program can put on stage, then preload
   // the images whose data has arrived; one without would just make p5 log
   // an error. A jump to another scene re-preloads behind its fade, and a
-  // name the code never mentions as a literal decodes on demand
-  // (installOnDemandAnimation_).
+  // name the code never mentions as a literal decodes on demand (the
+  // setAnimation wrapper in createLibrary).
   async preloadTrimmedImages_(animationList) {
     // This preload sees every image the scene can use; the watch has
     // nothing to recover.
