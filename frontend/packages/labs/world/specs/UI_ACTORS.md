@@ -64,6 +64,13 @@ Three ordinary things, none of them privileged.
 
 ### `rules/writing.rule` — a stock rule with one trait and no steps
 
+> **Going, and the reason is the whole of the section below.** `text`, `text
+size`, `text color` and `text anchor` are the LABEL's, declared in the actor
+> that draws them, and everything else that shows words ACTS LIKE a Label. The
+> rest of this section is the record of why it was a rule, which is worth
+> keeping because the argument was right when it was made and stopped being
+> right for a reason nothing about text.
+
 ```
 define rule ⟨Writing⟩  ability ⟨Shows Text⟩
   trait ⟨Shows Text⟩
@@ -149,18 +156,22 @@ actors are ordinary `.actor` files, so what is needed is the dialog, shaped like
 and what may it still take. Importing `Label` pulls `Writing` the way importing
 a rule pulls its dependencies.
 
-The other five interface elements wait on nameable things:
+## The base set, and what each one still waits on
 
-| actor        | what it is                     | waits on                          |
-| ------------ | ------------------------------ | --------------------------------- |
-| Label        | text, no picture               | DONE                              |
-| Button       | a box, text, `Can Be Clicked`  | DONE                              |
-| Progress Bar | a bar whose length is a number | DONE                              |
-| Panel        | a background behind a group    | grouping, which is layout         |
-| Text field   | typed input                    | a keyboard the world does not own |
+| actor        | what it is                                        | state                                      |
+| ------------ | ------------------------------------------------- | ------------------------------------------ |
+| Label        | words in a space                                  | DONE; wants `new line` and a list of words |
+| Button       | a Label with an edge that answers a press         | DONE; should ACT LIKE a Label              |
+| Progress Bar | a bar whose length is a number                    | DONE                                       |
+| Health Bar   | a Progress Bar filled from somebody's health      | DONE (acts like)                           |
+| Speech Box   | a Label that lets its line out a letter at a time | DONE                                       |
+| Text Input   | one line you can type in                          | a keyboard the world does not own          |
+| Text Area    | several lines you can type in                     | the same keyboard, plus a caret            |
+| Dropdown     | a list of words, one of them chosen               | a list property and a menu to draw         |
+| Panel        | a background behind a group                       | grouping, which is layout                  |
 
-Three of the five arrived together, because they are the same feature seen from
-three angles.
+Five of the nine are built, and the three that arrived after this document was
+first written are the ones that changed what the rest should be.
 
 **"Meter" became "Progress Bar"**, which is what everybody calls one. Its
 number and the two colors it is drawn in were a rule of its own
@@ -214,6 +225,152 @@ merely small. The one telling that cannot is a bar a WORLD defines for itself:
 `acts like` names an actor file, and a single-world project has none, so
 `fixtures/platformerSingle` declares the three properties and draws the shared
 picture out of them (`progressBarDrawing`).
+
+## What changed underneath, and what it makes possible
+
+Three things arrived after the first four actors, and none of them was built
+for interfaces. Together they are why the rest of the set is now writable.
+
+**An actor may declare state, work and events of its own.** `define property`,
+`each frame`, `define block` and `define event` all sit under `define actor`,
+and what they mint is exported and offered in every file's palette
+(`blockly/ownProperties`). The section above still argues that `text` had to be
+a rule because a `define property` was reachable from nowhere else; that
+stopped being true, and rules have been becoming declarations in the actors
+that use them ever since — the Speech Box's typewriter (`Reveals Text`), the
+Progress Bar's fraction and colors (`Progress`), and now Writing itself.
+
+**A kind may ACT LIKE another kind** (`ActorBuilder.actsLike`). Traits,
+property slots, per-frame work, handlers and the picture all come across; the
+KIND does not, so a Button that acts like a Label is not one of `any ⟨Label⟩`.
+That is the right way round for an interface: what a Button and a Label have in
+common is what they can DO, and `any ⟨Label⟩` should not sweep up the buttons.
+
+**An enhancement is a patch a project can be given** (specs/ENHANCEMENTS.md).
+"Types out what it says" is the interface one: it hands the Speech Box's
+typewriter to any actor with words.
+
+So the shape of the set is a chain, not a list. A Label is the base; a Button is
+a Label that answers a press; a Speech Box is a Label that lets its line out
+slowly; a Text Input is a Label you can type into. Each says `acts like` and
+adds one idea.
+
+**Which is what finally takes the Writing rule out.** It was a rule because a
+Label and a Button and a Scoreboard all mean the same thing by `text`, and a
+rule is for what is shared — but a chain shares it too, and more exactly: they
+mean the same thing by `text` BECAUSE they are all Labels. The trait was
+standing in for a base class the language could not express.
+
+Two things have to be answered as it goes, and both have answers already:
+
+- **A world-local actor cannot act like a file.** The Scoreboard in the
+  single-world starter, and the Label in the drawing lesson, are `define actor`
+  blocks inside a `.world`; `acts like` names an actor file and those projects
+  have none. They declare the four properties themselves and draw from them,
+  which is exactly what `fixtures/platformerSingle`'s Health Bar does since
+  `Progress` went (`PROGRESS_BAR_PROPERTIES`). The same shape wants the same
+  name: a `LABEL_PROPERTIES` beside it.
+- **`text needs a drawing` loses its subject.** `blockly/extensions/
+textNeedsDrawing` warns on a `use trait ⟨Shows Text⟩` row in an actor that
+  paints nothing — words nobody will see. With the trait gone the row is `acts
+like ⟨Label⟩`, which BRINGS a drawing, so the warning has nothing left to
+  warn about and goes with it. That is a guard disappearing because the
+  mistake it caught became unmakeable, which is the good way for one to go.
+
+What is genuinely lost is `for each actor where ⟨has trait ⟨Shows Text⟩⟩` —
+"every label in this game". Nothing in the library asks it, and a kind is not
+inherited, so there is no expression for that set afterwards. It is the same
+cost `Progress` paid and it is worth naming twice.
+
+## A size is a property, not a field
+
+Every interface actor has a WIDTH and a HEIGHT, and they are the first thing
+somebody arranging a dialog reaches for. Today they are two `field_number`s on
+`define drawing` — typed into the block, one pair per KIND — so five Labels of
+one kind are five boxes of one size, and resizing one in the map editor is not
+a thing that can be expressed.
+
+They have to be properties, and the consequences are worth writing down before
+anything is built:
+
+- **The drawing's canvas becomes per-instance.** `ActorBuilder.defineDrawing`
+  takes a width and a height today and keeps them beside the routine; it would
+  take the actor instead and ask it, the way the routine already asks it for
+  everything it paints.
+- **`intrinsic size` follows.** `World.place` sets it from the kind's drawing,
+  and everything that asks how big an actor is reads it — the click box, the
+  collision box, "Stays in the Map" (specs/DRAWING.md). Per-instance sizes make
+  that per-instance, which is what a Button drawn wider actually needs.
+- **The texture cache already copes.** A drawing is identified by what it
+  DESCRIBES, so two sizes are two textures and nothing has to be invalidated.
+  This is the piece that would have been hard and is not.
+- **The preview has to read the declared defaults** rather than two numbers off
+  the block (`actors/preview/previewDrawing`), which it now does for every
+  other property.
+- **Positions stay centres.** An interface library usually anchors at the
+  top-left; every actor in this lab is placed by its middle, and one kind of
+  actor measuring itself differently from the others is a worse surprise than
+  the convention is. A box grows about its centre.
+
+## What a Label is, once it is the base of the chain
+
+**Words in a SPACE**, rather than a line of text at a point. That is the whole
+difference between a Label and `draw text`, and it is what the width and height
+buy: the words are laid into the box, wrapped to it, and anchored within it.
+
+**A `new line` node.** Text is built by joining, and there is no way to say
+"and then a line break" — so a Label can hold a paragraph only if something
+else put the newlines in. One block, reporting the character, and `draw
+paragraph` already breaks on it.
+
+**A list of words joins with a space.** `words` is already a property type, and
+a `text` socket handed one should read it as a sentence rather than refusing
+it. That is the rule everywhere, not a Label special case: one space between
+items, no trailing one.
+
+## The three that need a keyboard
+
+A Text Input, a Text Area and a Dropdown are the first actors that take input
+the world does not have. What exists is `presses ⟨key⟩` and `releases ⟨key⟩`
+(`rules/input`) — a KEY, named as the browser names it, which is not a
+character: shift, dead keys, an IME and a paste are all invisible to it.
+
+So the gap is one event carrying a typed character, raised by whatever owns the
+real keyboard, and it belongs on the Input rule beside the two that are there.
+Everything above it is ordinary: a caret is a property and a rectangle, a
+selection is two numbers, and `when changed` is a `define event` on the actor.
+
+A Dropdown needs one more thing — a `words` property holding the options, and a
+menu drawn from it. Both halves are the actor's own; what it emits when one is
+chosen is a `define event` carrying the word.
+
+## Interface actors are a category of their own
+
+They are used in a different context from the actors a game is made of: placed
+on a fixed layer, arranged by eye, given text rather than physics, and reached
+by `any ⟨kind⟩` rather than by collision. The shelf should say so — a section
+in the import dialog, and a heading in the actor drawer — because a learner
+looking for a Button is not looking through the same list as one looking for a
+Coin.
+
+They are the same MECHANISM, and that is the claim this document opens with.
+Being a separate category is a fact about how they are found, not about what
+they are.
+
+**They wear Font Awesome glyphs**, which is already built: `show as ⟨icon⟩` is
+a row in the file and `blockly/actorIcons` inlines the glyph as an SVG data URI
+(see "The icon", below). The vocabulary is `text`, `speech`, `button`, `bar`,
+`health`, `panel` and `input` — the last two reserved before there was anything
+wearing them, which is the set this page is about finishing.
+
+## The map editor as an interface editor
+
+Arranging a HUD is arranging actors on a fixed layer, which the map editor does
+today. What a dialog additionally needs is a way to say that a group of them
+belongs together — which is the Panel row in the table, and which is layout,
+and which is deliberately not being answered yet. Until it is, a dialog is a
+Panel placed behind a handful of interface actors, and moving it does not move
+them.
 
 ## The interface layer, restated rather than re-derived
 
@@ -280,8 +437,8 @@ belongs with world-scoped state rather than here.
 ## What it takes
 
 1. **`specs/DRAWING.md`**, in full. Everything below assumes it.
-2. **`rules/writing.rule`** — a stock rule authored in `scripts/rules/writing.mjs`
-   like every other, with one trait, four properties and no steps.
+2. **The four text properties.** Authored as `rules/writing.rule` and being
+   moved onto the Label itself — see "What changed underneath".
 3. **`Label.actor` and `Button.actor`** as stock content, written in the drawing
    language.
 4. **The stock-actor import** — a dialog shaped like `ImportRuleDialog`, writing
