@@ -165,8 +165,8 @@ a rule pulls its dependencies.
 | Progress Bar | a bar whose length is a number                    | DONE                                       |
 | Health Bar   | a Progress Bar filled from somebody's health      | DONE (acts like)                           |
 | Speech Box   | a Label that lets its line out a letter at a time | DONE                                       |
-| Text Input   | one line you can type in                          | a keyboard the world does not own          |
-| Text Area    | several lines you can type in                     | the same keyboard, plus a caret            |
+| Text Input   | one line you can type in                          | the actor; the typed event is built        |
+| Text Area    | several lines you can type in                     | the actor, plus a caret                    |
 | Dropdown     | a list of words, one of them chosen               | a list property and a menu to draw         |
 | Panel        | a background behind a group                       | grouping, which is layout                  |
 
@@ -426,12 +426,25 @@ asking a picture.
 ## The three that need a keyboard
 
 A Text Input, a Text Area and a Dropdown are the first actors that take input
-the world does not have. What exists is `presses ⟨key⟩` and `releases ⟨key⟩`
+the world did not have. What existed was `presses ⟨key⟩` and `releases ⟨key⟩`
 (`rules/input`) — a KEY, named as the browser names it, which is not a
 character: shift, dead keys, an IME and a paste are all invisible to it.
 
-So the gap is one event carrying a typed character, raised by whatever owns the
-real keyboard, and it belongs on the Input rule beside the two that are there.
+**The event is built.** `⟨a⟩ is typed` on the Input rule, `types ⟨a⟩` under its
+trait, and `for each character typed ⟨c⟩` for a step that wants the lot — the
+same three shapes the key events already have. The DOM says plainly which
+keystrokes made a character (`key` is one character exactly then, and a word
+like "Shift" or "Backspace" otherwise), so the driver forwards those and leaves
+the rest to the key events. Neither pretends to be the other: a control scheme
+wants the key, a text field wants the character, and `a` with shift held is the
+key `a` and the character `A`.
+
+What the world keeps is a QUEUE, not a set, and it is DRAINED each tick. A key
+is held or it is not, so a set answers everything about one; typing is a
+sequence — "aa" is two characters and "ab" is not "ba" — and a character has no
+state to compare against, it simply happened. Carried forward it would be typed
+again on every frame after the one it was meant for.
+
 Everything above it is ordinary: a caret is a property and a rectangle, a
 selection is two numbers, and `when changed` is a `define event` on the actor.
 

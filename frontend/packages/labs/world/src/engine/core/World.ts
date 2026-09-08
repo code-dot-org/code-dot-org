@@ -600,6 +600,19 @@ export class World {
   // Rule steps read it through `isKeyDown`; keys carry OUR names — 'left arrow',
   // 'a', 'space' — which the driver translates the DOM's into (core/keys).
   private keys: ReadonlySet<string> = new Set();
+  /**
+   * The characters TYPED since the last tick, in the order they were typed.
+   *
+   * A QUEUE, where the keys are a set, and the difference is the whole reason
+   * this is separate. A key is held or it is not, so a set answers everything
+   * anybody asks about one; typing is a sequence — "aa" is two characters and
+   * "ab" is not "ba" — and a set loses both facts. It is also not the same
+   * question: shift, a dead key, an IME and a paste all produce characters and
+   * no key edge anybody could name (specs/UI_ACTORS.md).
+   *
+   * Drained by `tick`, so a frame sees exactly what was typed into it.
+   */
+  private typed: string[] = [];
   /** Actor templates by the module path a map names them with (`define`). */
   private readonly types = new Map<string, ActorTemplate>();
   // The previous tick's pressed set, so a rule step can detect rising/falling
@@ -1604,6 +1617,22 @@ export class World {
     this.keys = new Set(keys);
   }
 
+  /**
+   * Add to what was typed this frame — the driver calls this per keystroke.
+   *
+   * APPENDED rather than replaced, unlike `setInput`: several characters may
+   * arrive between two frames, and a call per character is what the DOM hands
+   * over.
+   */
+  addTyped(characters: Iterable<string>): void {
+    this.typed.push(...characters);
+  }
+
+  /** What was typed since the last tick, in order. */
+  typedCharacters(): readonly string[] {
+    return this.typed;
+  }
+
   /** Whether `key` (a name from `core/keys`) is currently pressed. */
   isKeyDown(key: string): boolean {
     return this.keys.has(key);
@@ -1724,6 +1753,11 @@ export class World {
     // mouse's buttons are the same mechanism and advance in the same breath.
     this.previousKeys = this.keys;
     this.previousButtons = this.buttons;
+    // …and what was typed is DRAINED rather than remembered. A key's edge is
+    // worked out by comparing two frames; a character has no state to compare,
+    // it simply happened — so a frame that did not read it is a frame it was
+    // meant for and missed, and carrying it forward would type it twice.
+    this.typed = [];
   }
 
   /** The resolved step order — for inspection and tests. */

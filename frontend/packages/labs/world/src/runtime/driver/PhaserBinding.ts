@@ -282,6 +282,10 @@ export class PhaserBinding {
     // Every key currently held (by our name, `engine/core/keys`); fed to the
     // engine each frame. `update` reads it; the listeners below keep it current.
     const downKeys = new Set<string>();
+    // …and what was TYPED since the last frame, in order. A QUEUE and not a
+    // set: "aa" is two characters and "ab" is not "ba", both of which a set
+    // loses (`World.addTyped`).
+    const typed: string[] = [];
 
     /**
      * Run a frame's worth of simulation, and stop simulating if it throws.
@@ -825,6 +829,15 @@ export class PhaserBinding {
     // the browser is about to act on.
     this.onKeyDown = (event: KeyboardEvent) => {
       downKeys.add(keyName(event.key));
+      // …AND WHAT WAS TYPED, which is a different list from what is held. The
+      // DOM says it plainly: `key` is one character exactly when a character
+      // was produced, and is a word — "Shift", "Backspace", "ArrowLeft" — when
+      // it was not. So shift, a dead key and an IME all arrive here as the
+      // letter they made, and the keys that make no letter stay the key
+      // events' business (`rules/input`, specs/UI_ACTORS.md).
+      if (event.key.length === 1 && !event.ctrlKey && !event.metaKey) {
+        typed.push(event.key);
+      }
       if (SCROLL_KEYS.has(event.key)) {
         event.preventDefault();
       }
@@ -913,6 +926,12 @@ export class PhaserBinding {
           guard(() => {
             // Feed this frame's held keys in before advancing the simulation.
             world.setInput(downKeys);
+            // Handed over and cleared together: the world drains what it was
+            // given each tick, so anything left here would be typed twice.
+            if (typed.length > 0) {
+              world.addTyped(typed);
+              typed.length = 0;
+            }
             // And the mouse, which — unlike the keyboard — is read from Phaser
             // rather than from listeners of our own. `pointer.x/y` are already
             // in the game's coordinates: the canvas is FIT-scaled to whatever

@@ -45,6 +45,11 @@ describe('rules/input.rule', () => {
     expect(worldEvents.map(event => event.ref.exportName)).toEqual([
       'IsPressedEvent',
       'IsReleasedEvent',
+      // …and what was TYPED, which is not a key at all: shift, a dead key, an
+      // IME and a paste all make a character and no key edge, and `a` with
+      // shift held is the key `a` and the character `A`
+      // (specs/UI_ACTORS.md).
+      'IsTypedEvent',
     ]);
     expect(module_).toContain('export const IsPressedEvent = rule.addEvent(');
   });
@@ -60,12 +65,17 @@ describe('rules/input.rule', () => {
     const own = meta.events.filter(event => event.scope === 'actor');
     // The name is the LABELS of its designed phrasing; the key is a parameter,
     // so the hat reads `when ⟨actor⟩ presses ⟨space⟩`.
-    expect(own.map(event => event.name)).toEqual(['presses', 'releases']);
+    expect(own.map(event => event.name)).toEqual([
+      'presses',
+      'releases',
+      'types',
+    ]);
     expect(own[0].parts).toEqual([
       {kind: 'label', text: 'presses'},
       {kind: 'param', name: 'pressed key', type: 'enum:Engine#Key'},
     ]);
     expect(own.map(event => event.ownerTraitId)).toEqual([
+      'Takes_Keyboard_Input',
       'Takes_Keyboard_Input',
       'Takes_Keyboard_Input',
     ]);

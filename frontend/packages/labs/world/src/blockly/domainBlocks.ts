@@ -8114,6 +8114,42 @@ const worldForEachKey = defineBlock({
   },
 });
 
+/**
+ * `for each character typed ⟨c⟩ do …` — what was TYPED since the last frame.
+ *
+ * A block of its own rather than a third edge on the key loop, because it is a
+ * different question. A key is held or it is not; typing is a SEQUENCE, and
+ * shift, a dead key, an IME and a paste all produce characters with no key
+ * edge anybody could name. `⟨a⟩ is pressed` with shift held is still `a`; what
+ * was typed is `A`.
+ *
+ * It is what a Text Input, a Text Area and a Dropdown are waiting on
+ * (specs/UI_ACTORS.md). The keys that are NOT characters — backspace, enter,
+ * the arrows — stay the key events' business, which is the division that keeps
+ * either from having to pretend about the other.
+ */
+const worldForEachTyped = defineBlock({
+  type: 'world_for_each_typed',
+  message0: 'for each character typed %1',
+  args0: [paramFlavour('string').field('VAR')],
+  message1: 'do %1',
+  args1: [{type: 'input_statement', name: 'DO'}],
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [worldContextExtension],
+  style: 'loop_blocks',
+  tooltip:
+    'Run the blocks once for each character typed since the last frame, in ' +
+    'the order they were typed. Bind the loop variable to read which it was.',
+  generator: {
+    javascript(block, generator) {
+      const variable = generator.getVariableName(block.getFieldValue('VAR'));
+      const body = generator.statementToCode(block, 'DO');
+      return `for (const ${variable} of world.typedCharacters()) {\n${body}}\n`;
+    },
+  },
+});
+
 // The same loop for the mouse's buttons. A block of its own rather than a
 // source dropdown on the key one: the two read as different sentences, the
 // variable each binds is a different KIND of name (a key against a button), and
@@ -8640,6 +8676,7 @@ export const DOMAIN_BLOCKS = [
   worldActor,
   worldUseTrait,
   worldActsLike,
+  worldForEachTyped,
   worldText,
   worldAsText,
   worldNewLine,
@@ -9102,6 +9139,9 @@ const ENGINE_CATEGORY: ToolboxCategory = {
   blocks: [
     'world_is_key_down', // the polling side: "while held"
     'world_for_each_key', // the edges: what went down or came up this frame
+    // …and what was TYPED, which is a different question: shift, a dead key,
+    // an IME and a paste all make characters and no key edge.
+    'world_for_each_typed',
     'world_key', // a key's name, for comparing against an event's value
     // The mouse, on the same three terms, plus the one the keyboard has no
     // counterpart for: a pointer is somewhere, and a key is not.

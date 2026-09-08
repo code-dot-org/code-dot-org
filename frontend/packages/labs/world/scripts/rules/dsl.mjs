@@ -543,6 +543,13 @@ export const forEachKey = (edge, variable, body) => ({
   inputs: {DO: value(chain(body))},
 });
 
+/** `for each character typed <var> do <…>` — what was typed this frame. */
+export const forEachTyped = (variable, body) => ({
+  type: 'world_for_each_typed',
+  fields: {VAR: variable.field},
+  inputs: {DO: value(chain(body))},
+});
+
 /** `for each newly <pressed|released> mouse button <var> do <…>`. */
 export const forEachButton = (edge, variable, body) => ({
   type: 'world_for_each_button',
