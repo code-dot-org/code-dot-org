@@ -97,10 +97,11 @@ function flipWallsY(walls: PhysicsBox[], view: View): PhysicsBox[] {
   }));
 }
 
-// Broadphase slack (px) past a mover's frame journey: covers the
-// thin-contact allowance, the contact slack, and the push-out (at most one
-// wall half, already inside the query's wall-half expansion).
-const BROADPHASE_PAD = MIN_SOLID_OVERLAP + 1;
+// Extra padding (px) on the nearby-walls query past a mover's frame
+// journey: covers the thin-contact allowance, the contact slack, and the
+// push-out (at most one wall half, already inside the query's wall-half
+// expansion).
+const WALL_QUERY_PAD = MIN_SOLID_OVERLAP + 1;
 
 interface WallIndex {
   cell: number;
@@ -228,8 +229,8 @@ export function resolvePlatformPhysics(
     // Everything this body's frame journey can touch: the prev->cur box,
     // expanded by the body, the largest wall, and the resolution slack —
     // plus, weightless, the closed top's landing spot.
-    const padX = halfW + index.maxHalf + BROADPHASE_PAD;
-    const padY = halfH + index.maxHalf + BROADPHASE_PAD;
+    const padX = halfW + index.maxHalf + WALL_QUERY_PAD;
+    const padY = halfH + index.maxHalf + WALL_QUERY_PAD;
     const nearby = wallsNear(
       index,
       Math.min(prev.x, curX) - padX,

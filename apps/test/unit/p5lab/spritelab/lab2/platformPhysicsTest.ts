@@ -460,7 +460,7 @@ describe('platformPhysics with trimmed-art dimensions', () => {
   });
 });
 
-describe('wall broadphase', () => {
+describe('nearby-walls query', () => {
   const box = (x: number, y: number, half = 8) => ({
     x,
     y,
