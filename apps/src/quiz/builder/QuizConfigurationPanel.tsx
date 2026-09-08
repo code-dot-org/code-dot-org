@@ -27,7 +27,7 @@ const PURPOSE_OPTIONS = [
   {value: 'check_for_understanding', text: 'Check for understanding'},
 ];
 
-interface QuizConfigurationFormProps {
+interface QuizConfigurationPanelProps {
   quizId: number;
   initialValues: QuizConfigurationData;
   // Called with the server's saved values on success, so a caller can sync
@@ -35,8 +35,8 @@ interface QuizConfigurationFormProps {
   onSaved: (updated: QuizConfigurationData) => void;
 }
 
-const QuizConfigurationForm: React.FunctionComponent<
-  QuizConfigurationFormProps
+const QuizConfigurationPanel: React.FunctionComponent<
+  QuizConfigurationPanelProps
 > = ({quizId, initialValues, onSaved}) => {
   const [displayName, setDisplayName] = useState(
     initialValues.displayName || ''
@@ -243,4 +243,4 @@ const QuizConfigurationForm: React.FunctionComponent<
   );
 };
 
-export default QuizConfigurationForm;
+export default QuizConfigurationPanel;
