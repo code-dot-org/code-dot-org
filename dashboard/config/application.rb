@@ -17,8 +17,6 @@ require 'cdo/hash'
 require 'cdo/i18n'
 require 'cdo/i18n_backend'
 require 'cdo/shared_constants'
-require 'cdo/rack/request'
-require 'cdo/rack/response'
 
 # load and configure pycall before numpy and any other python-related gems
 # can be automatically loaded just below.
@@ -103,10 +101,8 @@ module Dashboard
 
     config.middleware.insert_after Rails::Rack::Logger, Middleware::I18n
     config.middleware.insert_after Middleware::I18n, Middleware::GlobalEdition
+    config.middleware.insert_after Middleware::I18n, FilesApi
 
-    # Ensure legacy endpoints are loaded last so they have access to middleware-provided
-    # functionality such as I18n, GlobalEdition, Redis-backed sessions, and cookies.
-    config.middleware.use FilesApi
     config.middleware.insert_after FilesApi, ChannelsApi
     config.middleware.insert_after ChannelsApi, SharedResources
     config.middleware.insert_after SharedResources, NetSimApi
