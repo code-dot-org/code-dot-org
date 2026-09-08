@@ -372,10 +372,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // Start Over (the reinit count in the deps). On a scene-less project the
   // pin becomes the only scene — materializing the synthesized default too
   // would leave a stray "Scene 1" in every level sharing the project.
-  // Scenes are a program concept; a toolbox has none to pin. Neutralized
-  // here, at the one read of the property, so everything below — scene
-  // init, the fallback when the active scene no longer exists, play-start
-  // — sees no pin.
+  // A toolbox has no scenes to pin. Cleared at the one read of the
+  // property, so every downstream consumer sees no pin.
   const pinnedSceneId = isToolboxMode
     ? undefined
     : levelProperties.pinnedSceneId;
@@ -1264,9 +1262,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
 
   // A user edit: the workspace already displays this content; persist it
-  // and refresh the preview. In toolbox mode there is nothing to do: the
-  // workspace IS the document (the levelbuilder Save serializes it
-  // directly), there are no scenes to write into, and no preview runs.
+  // and refresh the preview. In toolbox mode the workspace IS the document
+  // (levelbuilder Save serializes it directly), so there is nothing to do.
   const handleWorkspaceChange = useCallback(
     (source: WorkspaceSerialization) => {
       if (isToolboxMode) {
@@ -1286,16 +1283,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [subscribeToChanges, handleWorkspaceChange, scheduleRun]
   );
 
-  // Update the workspace when its content source changes. The mode decides
-  // everything up front: editing a toolbox, the workspace holds the toolbox
-  // itself — loaded once per sources generation, after which the workspace
-  // alone is the document — so no path through the scene machinery below
-  // can put the student default program (and its undeletable when-run hat)
-  // onto the canvas. In program mode, the workspace follows the active
-  // scene and re-runs the preview.
-  // Which sources generation the toolbox was loaded from: load once per
-  // generation, so Start Over (which reinitializes sources back to the
-  // saved toolbox) reloads the workspace.
+  // Update the workspace when its content source changes. In toolbox mode
+  // the workspace holds the toolbox itself, loaded once per sources
+  // generation (so Start Over reloads it); after that the workspace alone
+  // is the document, and the scene machinery below — which would seed the
+  // student default program — never touches it. In program mode the
+  // workspace follows the active scene and re-runs the preview.
+  // Sources generation the toolbox was last loaded from.
   const toolboxLoadedForRef = useRef(-1);
   useEffect(() => {
     if (!animationsSeeded) {
