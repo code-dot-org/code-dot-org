@@ -1,0 +1,83 @@
+/* A resize divider styled like the legacy lab2 `ResizeBar`: a 1px hairline that
+   stays 1px in the layout, a transparent grab area that overhangs both panels so
+   the pointer target is generous, and a 3px teal accent shown only on
+   hover / keyboard focus / drag — drawn as an overlay so it never shifts the
+   layout. */
+
+.handleX,
+.handleY {
+  position: relative;
+  flex-shrink: 0;
+
+  /* The visible hairline. */
+  background-color: var(--background-neutral-quaternary, #d5d5d5);
+
+  /* Raise the handle (and its overhanging grab pseudo) above the adjacent
+     panels so the whole grab area is draggable, not just the 1px line.
+     Must beat the base PanelContainer's own `z-index: 1` header, which is a
+     later sibling and would otherwise cover the overhang that reaches into it —
+     leaving half the grab area dead. */
+  z-index: 2;
+}
+
+/* Grab area — transparent, overhangs 3px into each panel (7px total target). */
+.handleX::before,
+.handleY::before {
+  content: '';
+  position: absolute;
+}
+
+/* Accent — a 3px teal bar, hidden until hover/focus/drag; an overlay, so
+   thickening it costs no layout space. */
+.handleX::after,
+.handleY::after {
+  content: '';
+  position: absolute;
+  background-color: var(--borders-brand-teal-primary, #0090a0);
+  opacity: 0;
+  transition: opacity 0.15s ease-in-out;
+}
+
+.handleX:hover::after,
+.handleX:focus-visible::after,
+.handleX.dragging::after,
+.handleY:hover::after,
+.handleY:focus-visible::after,
+.handleY.dragging::after {
+  opacity: 1;
+}
+
+.handleX:focus-visible,
+.handleY:focus-visible {
+  outline: none;
+}
+
+.handleX {
+  width: 1px;
+  cursor: col-resize;
+}
+
+.handleX::before {
+  inset-block: 0;
+  inset-inline: -3px;
+}
+
+.handleX::after {
+  inset-block: 0;
+  inset-inline: -1px; /* 1px line + 1px each side = 3px, centered */
+}
+
+.handleY {
+  height: 1px;
+  cursor: row-resize;
+}
+
+.handleY::before {
+  inset-inline: 0;
+  inset-block: -3px;
+}
+
+.handleY::after {
+  inset-inline: 0;
+  inset-block: -1px;
+}

@@ -1,0 +1,13 @@
+.centerHeaderContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  overflow: hidden;
+
+  &Text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
