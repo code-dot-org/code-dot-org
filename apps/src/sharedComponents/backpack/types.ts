@@ -25,4 +25,7 @@ export interface FilesObject {
   };
 }
 
+// Filenames held by each of the user's backpacks, keyed by app type.
+export type FilenamesByAppType = {[appType: string]: string[]};
+
 export type ErrorCallback = (error?: Error, failedFiles?: string[]) => void;
