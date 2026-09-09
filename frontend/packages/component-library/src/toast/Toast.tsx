@@ -259,7 +259,7 @@ export function ToastProvider({
       setToast(previous => ({
         message,
         type: options?.type ?? 'success',
-        // Ensure we keep an explicit null, as that means 
+        // Ensure we keep an explicit null, as that means
         // the toast will stay visible until manually closed.
         autoHideDuration:
           options?.autoHideDuration !== undefined
