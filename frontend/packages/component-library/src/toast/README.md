@@ -38,6 +38,23 @@ function Profile() {
 Auto-dismiss defaults to 6 seconds; pass `autoHideDuration={null}` (on the
 provider or a single `show` call) to keep a toast until it is closed.
 
+Auto-dismiss holds even while the window is unfocused, and each toast raised
+through `ToastProvider` gets its own full duration rather than inheriting what
+is left of the one it replaces. On the controlled `Toast`, pass a changing
+`restartKey` to get the same restart.
+
+`anchorOrigin` picks a corner of the viewport. To land anywhere else, pass a
+`className` (on `Toast` or `ToastProvider`) — it goes on the Snackbar, the
+positioned surface. To sit below a page header, make the class
+`position: absolute` and give the header's sibling container a position:
+
+```scss
+.belowHeader {
+  position: absolute;
+  top: 8px;
+}
+```
+
 The announcer is `assertive` by default (`role="alert"`). This is deliberate:
 Orca, the Linux/AT-SPI screen reader, routinely drops a polite `role="status"`
 region for this pattern, and an announcement that never happens is worse than

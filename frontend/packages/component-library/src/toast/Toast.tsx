@@ -99,8 +99,23 @@ export interface ToastProps {
   onClose?: () => void;
   /** Override the anchor position; defaults to top-center. */
   anchorOrigin?: SnackbarProps['anchorOrigin'];
+  /**
+   * Class on the Snackbar itself. `anchorOrigin` picks a corner of the
+   * viewport; this is how you land somewhere else — e.g. `position: absolute`
+   * inside a positioned ancestor, to sit below a page header.
+   */
+  className?: string;
   /** Live-region politeness; defaults to `assertive` (see {@link ToastPoliteness}). */
   politeness?: ToastPoliteness;
+  /**
+   * Change this to restart the auto-hide timer and replay the enter
+   * transition. MUI restarts the timer only when `open` or `autoHideDuration`
+   * changes, so a toast replacing one of the same duration would otherwise
+   * inherit its remaining time. It keys the Snackbar alone: the live region
+   * stays mounted, which is what makes announcements reliable (see
+   * {@link ToastAnnouncer}).
+   */
+  restartKey?: number | string;
   /** Accessible name for the dismiss button; defaults to Alert's own default. */
   closeLabel?: string;
   /**
@@ -135,7 +150,9 @@ export default function Toast({
   autoHideDuration = DEFAULT_TOAST_DURATION,
   onClose,
   anchorOrigin = DEFAULT_ANCHOR_ORIGIN,
+  className,
   politeness = DEFAULT_TOAST_POLITENESS,
+  restartKey,
   closeLabel,
   alertProps,
 }: ToastProps) {
@@ -155,10 +172,18 @@ export default function Toast({
           (announcing from both would double it). */}
       <ToastAnnouncer message={open ? message : null} politeness={politeness} />
       <Snackbar
+        key={restartKey}
         open={open}
         autoHideDuration={autoHideDuration}
         onClose={handleClose}
         anchorOrigin={anchorOrigin}
+        className={className}
+        // MUI otherwise pauses auto-hide while the window is unfocused and
+        // only resumes on refocus, which strands a toast for as long as the
+        // user is elsewhere — including when focus merely moves into an
+        // iframe on the same page. The announcer has already spoken the
+        // message, so hold to the caller's duration instead.
+        disableWindowBlurListener
       >
         <Alert
           {...alertProps}
@@ -202,6 +227,12 @@ interface ToastState {
   message: string;
   type: ToastType;
   autoHideDuration: number | null;
+  /**
+   * Distinguishes consecutive toasts. MUI restarts its auto-hide timer only
+   * when `open` or `autoHideDuration` changes, so without this a toast
+   * replacing one of the same duration would inherit its remaining time.
+   */
+  sequence: number;
 }
 
 export interface ToastProviderProps {
@@ -210,6 +241,8 @@ export interface ToastProviderProps {
   autoHideDuration?: number | null;
   /** Default anchor position for the provider's toast; defaults to top-center. */
   anchorOrigin?: SnackbarProps['anchorOrigin'];
+  /** Class on the Snackbar itself; see {@link ToastProps.className}. */
+  className?: string;
   /** Live-region politeness; defaults to `assertive` (see {@link ToastPoliteness}). */
   politeness?: ToastPoliteness;
 }
@@ -223,17 +256,24 @@ export function ToastProvider({
   children,
   autoHideDuration = DEFAULT_TOAST_DURATION,
   anchorOrigin,
+  className,
   politeness = DEFAULT_TOAST_POLITENESS,
 }: ToastProviderProps) {
   const [toast, setToast] = useState<ToastState | null>(null);
 
   const show = useCallback<ShowToast>(
     (message, options) =>
-      setToast({
+      setToast(previous => ({
         message,
         type: options?.type ?? 'success',
-        autoHideDuration: options?.autoHideDuration ?? autoHideDuration,
-      }),
+        // Not `??`: an explicit null means "stay until closed", and must not
+        // fall back to the default duration.
+        autoHideDuration:
+          options?.autoHideDuration !== undefined
+            ? options.autoHideDuration
+            : autoHideDuration,
+        sequence: (previous?.sequence ?? 0) + 1,
+      })),
     [autoHideDuration],
   );
 
@@ -244,11 +284,13 @@ export function ToastProvider({
     <ToastContext.Provider value={show}>
       {children}
       <Toast
+        restartKey={toast?.sequence}
         open={toast !== null}
         message={toast?.message ?? ''}
         type={toast?.type}
         autoHideDuration={toast?.autoHideDuration}
         anchorOrigin={anchorOrigin}
+        className={className}
         politeness={politeness}
         onClose={close}
       />
