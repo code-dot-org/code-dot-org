@@ -155,20 +155,19 @@ const MAIN_WORLD = JSON.stringify(
               type: 'world_do_ActorsSpeechBox_SayAction',
               inputs: {
                 ACTOR: kind('actors/speechBox'),
-                // `⟨HELLO ⟩ + ⟨“ what was typed ”⟩` — a chain, read left to
-                // right, with the field's words joined as words.
+                // `⟨HELLO ⟩ + ⟨what was typed⟩` — a chain, read left to right.
+                //
+                // NO ADAPTER, because there is nothing to adapt. A chain's
+                // socket takes `String` and `text of ⟨…⟩` reports one, so it
+                // plugs straight in; `as text` is the door for everything that
+                // is NOT already words — a score, a choice — and putting one
+                // here would say the field's words needed turning into words
+                // (`domainBlocks.worldAsText`).
                 VALUE: {
                   block: {
                     type: 'text',
                     fields: {TEXT: 'HELLO '},
-                    inputs: {
-                      ADD: {
-                        block: {
-                          type: 'world_as_text',
-                          inputs: {VALUE: typedIn()},
-                        },
-                      },
-                    },
+                    inputs: {ADD: typedIn()},
                   },
                 },
               },

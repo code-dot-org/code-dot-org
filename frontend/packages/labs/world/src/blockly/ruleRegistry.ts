@@ -187,13 +187,27 @@ export function refResolves(ref: MemberRef): boolean {
 // has generates nothing, and a block that generates nothing has to say so.
 const ruleByBlockType = new Map<string, string>();
 
-/** Record that `blockType` is a member of `ruleName` (called at definition). */
+/**
+ * Record which rule `blockType` is a member of (called at definition).
+ *
+ * IT TAKES THE REF RATHER THAN A NAME, because there is one way to get this
+ * wrong and taking a string made it available to every caller. An OWN member —
+ * one an `.actor` or a `.world` declares for itself — carries a `ruleName` too,
+ * and it is the ACTOR's name, kept so the palette can label the drawer it goes
+ * in. Registered as a rule, it is a rule the project will never have: the
+ * warning below then fires on every own event and never stops, saying the
+ * project no longer has "Text Input".
+ *
+ * Three of the eight callers passed `ref.ruleName` straight through and three
+ * passed it through a helper that knew better, which is the shape of a rule
+ * nobody can keep. The ref knows; nothing else has to.
+ */
 export function registerMemberBlockType(
   blockType: string,
-  ruleName: string | undefined,
+  ref: MemberRef,
 ): void {
-  if (ruleName) {
-    ruleByBlockType.set(blockType, ruleName);
+  if (!ref.own && ref.ruleName) {
+    ruleByBlockType.set(blockType, ref.ruleName);
   }
 }
 

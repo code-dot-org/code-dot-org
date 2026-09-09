@@ -1253,7 +1253,7 @@ const defineEventBlock = (event: EventMeta) => {
     filters.push({field, ref: choice});
     message0 += ` %${args0.length}`;
   }
-  registerMemberBlockType(eventBlockType(event), event.ref.ruleName);
+  registerMemberBlockType(eventBlockType(event), event.ref);
   return defineBlock({
     type: eventBlockType(event),
     message0,
@@ -1366,7 +1366,7 @@ const defineEmitBlock = (event: EventMeta) => {
   if (shadows.length) {
     registerValueShadows(type, shadows);
   }
-  registerMemberBlockType(type, event.ref.ruleName);
+  registerMemberBlockType(type, event.ref);
   return defineBlock({
     type,
     message0,
@@ -2026,9 +2026,6 @@ const dropPropertyBlockType = (exportName: string): string =>
  * Deleting the declaration still says so: the block type stops being minted,
  * and a stand-in takes its place (`blockly/standInBlocks`).
  */
-const memberRule = (ref: MemberRef): string | undefined =>
-  ref.own ? undefined : ref.ruleName;
-
 const outputForType = (type: PropertyType): string =>
   type === 'boolean'
     ? 'Boolean'
@@ -2096,7 +2093,7 @@ const defineSetPropertyBlock = (property: PropertyMeta) => {
   const type = setPropertyBlockType(memberKey(property.ref));
   // Seed the value sockets with their default shadow blocks (attached on init).
   registerValueShadows(type, value.shadows);
-  registerMemberBlockType(type, memberRule(property.ref));
+  registerMemberBlockType(type, property.ref);
   return defineBlock({
     type,
     message0,
@@ -2190,7 +2187,7 @@ const defineListPropertyBlocks = (property: PropertyMeta) => {
       verb === 'push'
         ? pushPropertyBlockType(memberKey(property.ref))
         : dropPropertyBlockType(memberKey(property.ref));
-    registerMemberBlockType(type, memberRule(property.ref));
+    registerMemberBlockType(type, property.ref);
     return defineBlock({
       type,
       message0,
@@ -2270,7 +2267,7 @@ const defineValueListPropertyBlocks = (property: PropertyMeta) => {
       verb === 'push'
         ? pushPropertyBlockType(memberKey(property.ref))
         : dropPropertyBlockType(memberKey(property.ref));
-    registerMemberBlockType(type, memberRule(property.ref));
+    registerMemberBlockType(type, property.ref);
     return defineBlock({
       type,
       message0,
@@ -2391,7 +2388,7 @@ const defineGetPropertyBlock = (property: PropertyMeta) => {
     // not go through the store.
     registerManyActorBlock(type);
   }
-  registerMemberBlockType(type, memberRule(property.ref));
+  registerMemberBlockType(type, property.ref);
 
   return defineBlock({
     type,
@@ -2727,11 +2724,12 @@ const defineActionBlock = (action: ActionMeta) => {
   if (shadows.length) {
     registerValueShadows(type, shadows);
   }
-  // `memberRule`, not the ref's name: an actor's OWN action carries the
+  // THE REF, not a name pulled off it. An actor's OWN action carries the
   // declaring actor in `ruleName`, and registering that as its rule made the
-  // call site warn that the project no longer had a rule called "Ball" — the
-  // same trap the property blocks describe.
-  registerMemberBlockType(type, memberRule(action.ref));
+  // call site warn for ever that the project no longer had a rule called
+  // "Ball". This site guarded against it and the event and query sites did
+  // not, which is why the registry decides now (`registerMemberBlockType`).
+  registerMemberBlockType(type, action.ref);
   return defineBlock({
     type,
     message0,
@@ -2886,7 +2884,7 @@ const defineQueryBlock = (query: QueryMeta) => {
   if (shadows.length) {
     registerValueShadows(type, shadows);
   }
-  registerMemberBlockType(type, query.ref.ruleName);
+  registerMemberBlockType(type, query.ref);
 
   return defineBlock({
     type,
