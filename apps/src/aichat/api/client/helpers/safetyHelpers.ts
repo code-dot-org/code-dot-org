@@ -149,7 +149,9 @@ export async function getImageModerationStatus(
 /**
  * The output-image safety stack shared by every image-generating lab: Azure
  * moderation always, plus the LLM judge when the caller's flag says so, run
- * concurrently. The caller maps the outcomes to its own statuses. Interim
+ * concurrently. The caller maps the outcomes to its own statuses. Either
+ * layer may become optional as we learn which earns its keep — that choice
+ * belongs in this options object, never in per-lab copies. Interim
  * arrangement — moderation is intended to move into the gateway worker, at
  * which point this helper and its call sites retire.
  */
