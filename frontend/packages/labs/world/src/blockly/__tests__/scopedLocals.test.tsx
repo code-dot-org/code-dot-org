@@ -24,6 +24,7 @@
 // an assignment rather than a second declaration.
 
 import {render} from '@testing-library/react';
+import * as Blockly from 'blockly/core';
 import {createRef} from 'react';
 import {describe, expect, it} from 'vitest';
 
@@ -150,5 +151,65 @@ describe('let ⟨number n⟩ be ⟨…⟩', () => {
     expect(body.match(/let count = /g)).toHaveLength(1);
     expect(body).toContain('let count = 1;');
     expect(body).toContain('count = 3;');
+  });
+});
+
+// THE NAME IS TYPED, NOT PICKED.
+//
+// A declaration is where a name comes from, so the block that declares one
+// should be the block you write it in. Blockly's `field_variable` is a
+// dropdown of names that already exist — right for a getter, backwards for a
+// `let`, where making a second name meant opening a menu whose only entries
+// were the names you were trying not to reuse.
+//
+// So the field is a text box over a REAL variable: what it stores is the id,
+// so the getters list it and the generator maps it to one identifier; what it
+// shows and edits is the name (`fields/variableName`).
+describe('naming a local', () => {
+  it('makes the variable, so the getters can find it', async () => {
+    const workspace = new Blockly.Workspace();
+    const block = workspace.newBlock('world_let_number');
+
+    block.setFieldValue('tally', 'VAR');
+
+    const made = workspace.getVariableMap().getVariable('tally', 'Number');
+    expect(made).not.toBeNull();
+    // The field holds the ID, which is what every getter and the generator
+    // read — the name is only what it draws.
+    expect(block.getFieldValue('VAR')).toBe(made!.getId());
+  });
+
+  it('points at the name that is already there, rather than a second one', async () => {
+    // Two `let`s of one name are one variable, which is what a reader means by
+    // typing it twice — and is what lets the second generate an assignment
+    // rather than a second declaration.
+    const workspace = new Blockly.Workspace();
+    const first = workspace.newBlock('world_let_number');
+    const second = workspace.newBlock('world_let_number');
+
+    first.setFieldValue('tally', 'VAR');
+    second.setFieldValue('tally', 'VAR');
+
+    expect(second.getFieldValue('VAR')).toBe(first.getFieldValue('VAR'));
+    expect(
+      workspace
+        .getVariableMap()
+        .getAllVariables()
+        .filter(one => one.getName() === 'tally'),
+    ).toHaveLength(1);
+  });
+
+  it('draws the variable’s name, so renaming from a getter reaches it', async () => {
+    // The other end of the same fact. A getter's menu renames the VARIABLE,
+    // and this field draws whatever the variable is called — so the `let`
+    // follows without being told.
+    const workspace = new Blockly.Workspace();
+    const block = workspace.newBlock('world_let_number');
+    block.setFieldValue('tally', 'VAR');
+    const made = workspace.getVariableMap().getVariable('tally', 'Number')!;
+
+    workspace.getVariableMap().renameVariable(made, 'total');
+
+    expect(block.getField('VAR')!.getText()).toBe('total');
   });
 });

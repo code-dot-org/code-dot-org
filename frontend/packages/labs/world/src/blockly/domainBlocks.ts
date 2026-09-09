@@ -121,6 +121,7 @@ import {fieldMapPlacementsArg} from './fields/FieldMapPlacements';
 import {FieldMarkdown} from './fields/FieldMarkdown';
 import {fieldSliderArg} from './fields/FieldSlider';
 import {fieldVectorArg, type VectorValue} from './fields/FieldVector';
+import {VARIABLE_NAME_FIELD} from './fields/variableName';
 import {ROOT_HOMES, type FileKind} from './fileKind';
 import {
   DEFAULT_PARALLAX,
@@ -3253,6 +3254,22 @@ const listLoop = (
   });
 
 /**
+ * A flavour's variable field, drawn as a name you type.
+ *
+ * The flavour still decides everything — which variables the name may be,
+ * which getters read it, what the socket checks — so this takes the field the
+ * flavour would have made and swaps only how it is edited
+ * (`fields/variableName`).
+ */
+const nameField = (variable: {
+  field: (name: string) => BlockArgDefinition;
+}): BlockArgDefinition =>
+  ({
+    ...(variable.field('VAR') as unknown as Record<string, unknown>),
+    type: VARIABLE_NAME_FIELD,
+  }) as unknown as BlockArgDefinition;
+
+/**
  * `let ⟨number n⟩ be ⟨0⟩` — a name for the rows below it.
  *
  * THE LAB HAD NO LOCALS, and until now nothing had noticed. A variable a body
@@ -3289,7 +3306,7 @@ const listLoop = (
  * reading it could not agree on.
  */
 const localDeclaration = (
-  kind: 'number' | 'word' | 'place' | 'actor' | 'yes or no',
+  kind: 'number' | 'word' | 'vector' | 'actor' | 'boolean',
   variable: {field: (name: string) => BlockArgDefinition},
   check: string | undefined,
   shadow: ShadowSpec | undefined,
@@ -3302,7 +3319,10 @@ const localDeclaration = (
     type,
     message0: `let ${kind} %1 be %2`,
     args0: [
-      variable.field('VAR'),
+      // TYPED, not picked. A declaration is where a name comes from, so the
+      // block that declares one is the block you write it in — the getters
+      // below it then offer what this made (`fields/variableName`).
+      nameField(variable),
       {type: 'input_value', name: 'VALUE', ...(check ? {check} : {})},
     ],
     inputsInline: true,
@@ -3336,12 +3356,12 @@ const worldLetWord = localDeclaration('word', StringVariable, 'String', {
   type: 'text',
   fields: {TEXT: ''},
 });
-const worldLetPlace = localDeclaration(
-  'place',
-  VectorVariable,
-  'Vector',
-  undefined,
-);
+const worldLetVector = localDeclaration('vector', VectorVariable, 'Vector', {
+  type: 'world_vector',
+  fields: {VECTOR: {x: 0, y: 0}},
+});
+// An actor socket takes no shadow: there is no literal actor to seed one with,
+// and an empty socket reads as "nobody yet" rather than as a hole.
 const worldLetActor = localDeclaration(
   'actor',
   ActorVariable,
@@ -3349,7 +3369,7 @@ const worldLetActor = localDeclaration(
   undefined,
 );
 const worldLetBoolean = localDeclaration(
-  'yes or no',
+  'boolean',
   BooleanVariable,
   'Boolean',
   {
@@ -3357,6 +3377,50 @@ const worldLetBoolean = localDeclaration(
     fields: {BOOL: 'FALSE'},
   },
 );
+
+/**
+ * `let position ⟨p⟩ x ⟨0⟩ y ⟨0⟩` — the same declaration, said in two numbers.
+ *
+ * A VECTOR EITHER WAY. The lab has one two-number type and calls it different
+ * things depending on what it is being used for: a velocity is a direction and
+ * a length, a place is an x and a y. The LITERAL follows — `⟨0, 0⟩` is one
+ * field a learner edits as a pair, and `x ⟨⟩ y ⟨⟩` is two sockets they can put
+ * arithmetic in — and a declaration could only take the first.
+ *
+ * So this is an alias and not a type: what it makes is a Vector, read by the
+ * same getter and accepted by the same sockets. The only difference is which
+ * shape of literal is easier to write where it stands.
+ */
+const worldLetPosition = defineBlock({
+  type: 'world_let_position',
+  message0: 'let position %1 x %2 y %3',
+  args0: [
+    nameField(VectorVariable),
+    {type: 'input_value', name: 'X', check: 'Number'},
+    {type: 'input_value', name: 'Y', check: 'Number'},
+  ],
+  inputsInline: true,
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [valueShadowExtension],
+  style: 'variable_blocks',
+  tooltip:
+    'A place the blocks BELOW this one can use, written as two numbers. It ' +
+    'is a vector like any other — the same getter reads it.',
+  generator: {
+    javascript(block, generator) {
+      const name = generator.getVariableName(block.getFieldValue('VAR'));
+      const x = generator.valueToCode(block, 'X', Order.NONE) || '0';
+      const y = generator.valueToCode(block, 'Y', Order.NONE) || '0';
+      const keyword = isRedeclaration(block) ? '' : 'let ';
+      return `${keyword}${name} = new WorldLab.Vector(${x}, ${y});\n`;
+    },
+  },
+});
+registerValueShadows('world_let_position', [
+  {name: 'X', shadow: {type: 'math_number', fields: {NUM: 0}}},
+  {name: 'Y', shadow: {type: 'math_number', fields: {NUM: 0}}},
+]);
 
 const worldForEachNumber = listLoop('number', NumberVariable, 'number');
 const worldForEachWord = listLoop('word', StringVariable, 'word');
@@ -8969,7 +9033,8 @@ export const DOMAIN_BLOCKS = [
   worldForEachNumber,
   worldLetNumber,
   worldLetWord,
-  worldLetPlace,
+  worldLetVector,
+  worldLetPosition,
   worldLetActor,
   worldLetBoolean,
   worldForEachWord,
@@ -9626,8 +9691,11 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
       // (`scopedLocal`).
       'world_let_number',
       'world_let_word',
-      'world_let_yes_or_no',
-      'world_let_place',
+      'world_let_boolean',
+      'world_let_vector',
+      // …and the same vector said as two numbers, which is what a PLACE is
+      // easier to write (`world_let_position`).
+      'world_let_position',
       'world_let_actor',
       ...PARAM_VARIABLE_TYPES,
     ],

@@ -58,8 +58,11 @@ export const BINDERS: Readonly<Record<string, Binder>> = {
   // itself.
   world_let_number: DECLARATION,
   world_let_word: DECLARATION,
-  world_let_yes_or_no: DECLARATION,
-  world_let_place: DECLARATION,
+  world_let_boolean: DECLARATION,
+  world_let_vector: DECLARATION,
+  // …and the same vector said as two numbers, which binds exactly as its
+  // sibling does (`domainBlocks.worldLetPosition`).
+  world_let_position: DECLARATION,
   world_let_actor: DECLARATION,
   // The loops, which have always bound a name and never said where it reached.
   world_for_each: LOOP,

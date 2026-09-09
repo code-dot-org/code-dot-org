@@ -15,11 +15,13 @@ import {
   registerScopedVariableField,
   SCOPED_VARIABLE_FIELD,
 } from './fields/scopedVariable';
+import {registerVariableNameField} from './fields/variableName';
 
 // BEFORE ANY FLAVOUR IS MADE, because each names this field in the JSON of the
 // blocks it defines, and a block naming a field Blockly has not been told
 // about fails to build at all.
 registerScopedVariableField();
+registerVariableNameField();
 
 /**
  * What every flavour here has in common: a dropdown that offers the names the

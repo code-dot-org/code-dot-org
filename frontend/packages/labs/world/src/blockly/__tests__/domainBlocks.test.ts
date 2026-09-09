@@ -3045,8 +3045,11 @@ describe('builder-context warnings', () => {
     expect(variables).toEqual([
       'world_let_number',
       'world_let_word',
-      'world_let_yes_or_no',
-      'world_let_place',
+      'world_let_boolean',
+      'world_let_vector',
+      // …and the same vector said as two numbers, which is what a PLACE is
+      // easier to write (`world_let_position`).
+      'world_let_position',
       'world_let_actor',
       'variables_get_Number',
       'variables_set_Number',
