@@ -19,7 +19,7 @@
     "hide_custom_blocks": true,
     "hide_share_and_remix": "true",
     "encrypted": "false",
-    "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
+    "project_template_level_name": "HoAI26-Playtest1-Story-Template",
     "visible_tabs": [
       "Code",
       "Play"
@@ -27,48 +27,87 @@
     "pinned_scene_id": "story-scene",
     "pinned_scene_name": "Story",
     "guide_mode": "instructions",
-    "long_instructions": "# Code your story scene\nUse the blocks to set your background, add your character, and make them speak or move. Your changes run live in the preview.",
+    "long_instructions": "# Code your main character\r\nUse the blocks to add your character, and make them speak.",
     "toolbox_definition": {
-      "kind": "flyoutToolbox",
       "contents": [
         {
           "kind": "block",
-          "type": "gamelab_setBackgroundImageAs"
+          "type": "spritelab2_whenRun",
+          "id": "/w%8T|Sw+#pvV++9AQbH",
+          "deletable": false,
+          "movable": false,
+          "enabled": true
         },
         {
           "kind": "block",
           "type": "gamelab_makeNewSpriteAnon",
+          "id": ")7U1(Lp5lU5PH#*sjtX,",
+          "fields": {
+            "ANIMATION_NAME": "<field name=\"ANIMATION_NAME\">null</field>"
+          },
           "inputs": {
             "LOCATION": {
               "block": {
                 "type": "gamelab_location_picker",
                 "fields": {
-                  "LOCATION": "{\"x\":200,\"y\":200}"
+                  "LOCATION": null
                 }
               }
             }
-          }
+          },
+          "enabled": true
         },
         {
           "kind": "block",
           "type": "gamelab_spriteSay",
+          "id": "0rTf@*sUH$jZ2WY[o##$",
           "fields": {
             "SPEECH": "Hello!"
           },
           "inputs": {
             "SPRITE": {
-              "shadow": {
-                "type": "gamelab_allSpritesWithAnimation"
+              "block": {
+                "type": "gamelab_allSpritesWithAnimation",
+                "fields": {
+                  "ANIMATION": "<field name=\"ANIMATION\">null</field>"
+                }
               }
             }
-          }
+          },
+          "enabled": true
         }
-      ]
+      ],
+      "kind": "flyoutToolbox"
     },
+    "display_name": "Code Your Main Character",
+    "bubble_choice_description": "Code your main character into your story",
+    "thumbnail_url": "https://images.code.org/9469c1a6de384715c00f28943189ecb2-Gemini_Generated_Image_zh9ivazh9ivazh9i.jpeg",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "use_modal_function_editor": "false",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "use_default_sprites": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "enable_big_playspace": "false",
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-09-03T01:47:47.884+00:00\",\"changed\":[\"cloned from \\\"hoai2026-dev-spritelab-lab2-story\\\"\"],\"cloned_from\":\"hoai2026-dev-spritelab-lab2-story\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-09-03T01:47:47.884+00:00\",\"changed\":[\"cloned from \\\"hoai2026-dev-spritelab-lab2-story\\\"\"],\"cloned_from\":\"hoai2026-dev-spritelab-lab2-story\"},{\"changed_at\":\"2026-09-08 16:05:42 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-08 23:44:18 +0000\",\"changed\":[\"project_template_level_name\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-08 23:47:16 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-08 23:50:39 +0000\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 00:24:35 +0000\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 00:37:38 +0000\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 00:42:30 +0000\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </GamelabJr>

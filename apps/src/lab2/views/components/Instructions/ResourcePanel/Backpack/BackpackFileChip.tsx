@@ -1,3 +1,4 @@
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tags from '@code-dot-org/component-library/tags';
@@ -5,6 +6,7 @@ import {Typography, IconButton as MuiIconButton, Tooltip} from '@mui/material';
 import React, {useMemo} from 'react';
 
 import {getFileIconNameAndStyle} from '@cdo/apps/codebridge';
+import {SUPPORTED_IMAGE_EXTENSIONS} from '@cdo/apps/lab2/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
@@ -37,8 +39,6 @@ interface BackpackFileChipProps extends BackpackProps {
   sourceDisplayName?: string;
 }
 
-const EXTENSIONS_WITH_PREVIEWS = ['png', 'jpg', 'jpeg', 'gif'];
-
 // TODO: add statsig logging
 const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   fileName,
@@ -59,12 +59,6 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
 }) => {
   const fileExtension = fileName.split('.').pop()?.toLowerCase();
   const idSuffix = appType ? `-${appType}` : '';
-  const fileDetailText = [
-    fileExtension?.toUpperCase(),
-    sourceDisplayName && `(Saved from ${sourceDisplayName})`,
-  ]
-    .filter(Boolean)
-    .join(' ');
   const fileIcon = useMemo(
     () =>
       getFileIconNameAndStyle({
@@ -77,6 +71,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   );
   const channelId =
     useAppSelector(state => state.lab.channel && state.lab.channel.id) || '';
+  const {theme} = useTheme();
   const dialogControl = useDialogControl();
   const inReadOnly = useAppSelector(isReadOnlyWorkspace);
   const isFileSupported = isFileTypeSupported(fileName, supportedFileTypes);
@@ -95,7 +90,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   }, [disableActions, inReadOnly, isFileSupported, addFileTooltipText]);
 
   const filePreviewUrl = useMemo(() => {
-    if (fileExtension && EXTENSIONS_WITH_PREVIEWS.includes(fileExtension)) {
+    if (fileExtension && SUPPORTED_IMAGE_EXTENSIONS.includes(fileExtension)) {
       const url = backpackApi.getFileFetchUrl(fileName);
       if (url) {
         return `${url}?cacheBust=${Date.now()}`;
@@ -223,21 +218,38 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
           />
         </div>
       )}
-      <div className={moduleStyles.fileInfo} title={fileName}>
-        <Typography
-          className={moduleStyles.infoText}
-          variant="body3"
-          gutterBottom
-        >
-          <Typography variant="strong">{fileName}</Typography>
-        </Typography>
-        <Typography
-          className={moduleStyles.infoText}
-          variant="body4"
-          gutterBottom
-        >
-          {fileDetailText}
-        </Typography>
+      <div className={moduleStyles.fileInfo}>
+        <div className={moduleStyles.fileNameRow}>
+          <Typography
+            className={moduleStyles.infoText}
+            variant="body3"
+            gutterBottom
+            title={fileName}
+          >
+            <Typography variant="strong">{fileName}</Typography>
+          </Typography>
+          {sourceDisplayName && (
+            <Tooltip
+              title={`Saved from ${sourceDisplayName}`}
+              placement="top"
+              describeChild={false}
+              // We need to apply the theme because the tooltip is in a portal.
+              slotProps={{tooltip: {'data-theme': theme}}}
+            >
+              <button
+                type="button"
+                className={moduleStyles.sourceInfoButton}
+                aria-label={`Saved from ${sourceDisplayName}`}
+              >
+                <FontAwesomeV6Icon
+                  iconName="circle-info"
+                  iconStyle="solid"
+                  className={moduleStyles.sourceInfoIcon}
+                />
+              </button>
+            </Tooltip>
+          )}
+        </div>
       </div>
       <div className={moduleStyles.fileActions}>
         {isRecentlyAdded ? (

@@ -32,7 +32,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "def simulate(cfu, growth, target):\n    hours = 0\n    print(f\"Hour {hours}: {cfu} CFU\")\n\n    cfu += cfu * growth\n    hours += 1\n    print(f\"Hour {hours}: {cfu} CFU\")\n\n    cfu += cfu * growth\n    hours += 1\n    print(f\"Hour {hours}: {cfu} CFU\")\n\n\nsimulate(100, 7, 100000)\n",
+          "contents": "def simulate(cfu, growth, target):\n  hours = 0\n  print(f\"Hour {hours}: {cfu} CFU\")\n\n  cfu += cfu * growth\n  hours += 1\n  print(f\"Hour {hours}: {cfu} CFU\")\n\n  cfu += cfu * growth\n  hours += 1\n  print(f\"Hour {hours}: {cfu} CFU\")\n\n\nsimulate(100, 7, 100000)\n",
           "folderId": "0",
           "active": true
         }
@@ -43,9 +43,9 @@
         "0"
       ]
     },
-    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMr2QmNv5SbL3M89\nHA1hb7vdU10b3qDUcUBGog1921zj7FD2wrc6a+cW4Cb6SC32QazMPs5sZUrF\nK+Vt1eGUk5yY6op+acSra12p6qXwXDYJkoBWdqqYxCpjqrbBvUk87O9ZHQAz\nqhB7bv9H0qu55JpBA88JXJ5ag/eJ75MIMi3haupburRGiNwd73nzBVzXtQyC\n/K0jzY3IzjUxOwEEKBDHqQRU36cuubpE4FBv6cSFQybwLssfl0PGortSuSBo\npTnJOYOWcWWTMgoPlRP9b+05IrOrB1qmUhG/SsryNZlag9jKOKWM4ktD/uli\nix0sFFr6w4wVGRuDAfp9swe4oC8welV/ik7q4ySpKcFDU9KLDUoFmD0fe/Kh\n8uxzpOFwa35LjT2okIh0vzQRoT8YoYlXP4RGqKhmQL8Dliwy79ZXLQ==\n"
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMo4+q++h8gvXDBe\n38UdeukGC72UcCQ736Zgn3b8ehOWqK5VkSXVCgyQMlENMyYMCxrGU1voF0pw\nFG+xK2rMbkfMJGh5qOnFpmufDMPsnREWB+bQkp+9eg4pACr/wIhx5Fejm8lF\nCtE3g8wqzGs1kwsxMaOsjos/Nfl6APtXZeDcPKTa2uow0tjIzH44ACuDr5WS\nI3WeHbEKMKWYRbyY23jlUcKHI4Clg6m/w8Ui3pJrSaN/L6ayXInC7GJL6iiB\nVt7Xk+kzc3uLq6ErVkrHI42cUxDPcnSQIjXe4Fe2HuYV8/CFVnE2VqkCna0c\n91Y/9Xyw0WuHVrrMXd5f2Y8FgebTpt5C/Kf4qIBgyrOE8Ban93QeEVdfgCtf\nX6e+W6A3zuLVi/VXhfFssODGBImfKi2i\n"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-28 16:51:04 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 16:52:08 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 17:01:37 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-23 15:14:27 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-28 16:51:04 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 16:52:08 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 17:01:37 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-23 15:14:27 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:16:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:16:26 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>
