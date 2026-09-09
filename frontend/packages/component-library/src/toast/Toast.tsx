@@ -254,8 +254,6 @@ export function ToastProvider({
 }: ToastProviderProps) {
   const [toast, setToast] = useState<ToastState | null>(null);
   const [open, setOpen] = useState(false);
-  // Monotonic across closes, so a toast raised after a dismissal still gets an
-  // id its predecessor never used.
   const nextId = useRef(0);
 
   const show = useCallback<ShowToast>(
