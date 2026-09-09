@@ -104,8 +104,16 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
 }) => {
   const [overflowTooltip, setOverflowTooltip] = useState<TooltipProps>();
   const tabTextRef = useRef<HTMLSpanElement | null>(null);
-  const handleClick = useCallback(() => onClick(value), [onClick, value]);
-  const handleClose = useCallback(() => onClose(value), [onClose, value]);
+  const handleClick = useCallback(() => {
+    if (!disabled) {
+      onClick(value);
+    }
+  }, [disabled, onClick, value]);
+  const handleClose = useCallback(() => {
+    if (!disabled) {
+      onClose(value);
+    }
+  }, [disabled, onClose, value]);
 
   checkTabForErrors(isIconOnly, icon, text);
 
@@ -138,6 +146,7 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
           onClick={handleClose}
           size={size}
           aria-label={`Close ${text}`}
+          aria-disabled={disabled || undefined}
         />
       )}
     </button>
