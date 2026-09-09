@@ -44,9 +44,13 @@ class QuizzesControllerTest < ActionController::TestCase
 
   test "show returns placed questions in placement order with correct answers, explanation, standards, and page" do
     standard = create(:standard)
+    # Created last-to-first, then placed first-to-last, so the response
+    # order matches neither insertion nor id order - only (page, position).
+    third = create(:multiple_choice_question, name: 'Page 2')
+    second = create(:multiple_choice_question, name: 'Page 1, position 2')
     first = create(
       :multiple_choice_question,
-      name: 'Second by name, first by position',
+      name: 'Page 1, position 1',
       content: {
         stem: 'Pick B',
         choices: [{id: 'a', text: 'A'}, {id: 'b', text: 'B'}],
@@ -55,18 +59,16 @@ class QuizzesControllerTest < ActionController::TestCase
       explanation: 'Because B.'
     )
     first.standards = [standard]
-    second = create(:multiple_choice_question, name: 'Later question')
 
-    # Created out of order to prove the response sorts by (page, position),
-    # not by insertion or id.
-    create(:quiz_question_placement, level: @quiz, quiz_question: second, page: 2, position: 1)
-    create(:quiz_question_placement, level: @quiz, quiz_question: first, page: 1, position: 5)
+    create(:quiz_question_placement, level: @quiz, quiz_question: third, page: 2, position: 1)
+    create(:quiz_question_placement, level: @quiz, quiz_question: second, page: 1, position: 2)
+    create(:quiz_question_placement, level: @quiz, quiz_question: first, page: 1, position: 1)
 
     get :show, params: {level_id: @quiz.id}
 
     assert_response :success
     questions = JSON.parse(response.body)['questions']
-    assert_equal [first.id, second.id], (questions.map {|q| q['id']})
+    assert_equal [first.id, second.id, third.id], (questions.map {|q| q['id']})
 
     first_json = questions.first
     assert_equal 'b', first_json['correctChoiceId']

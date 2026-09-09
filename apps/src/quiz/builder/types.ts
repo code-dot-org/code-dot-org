@@ -1,4 +1,4 @@
-export interface QuizChoice {
+export interface QuizQuestionChoice {
   id: string;
   text: string;
 }
@@ -18,7 +18,7 @@ export interface QuizQuestion {
   type: string;
   questionName: string;
   stem: string;
-  choices: QuizChoice[];
+  choices: QuizQuestionChoice[];
   correctChoiceId: string | null;
   explanation: string | null;
   standards: StandardSummary[];
