@@ -114,9 +114,6 @@ class SyncOmniAuthSectionControl extends React.Component {
         const needsCleverReauth = isClever && /status:\s*401\b/.test(errorText);
         const cleverSectionNotFound =
           isClever && /status:\s*404\b/.test(errorText);
-        // The ClassLink endpoints name their own failure states (district not
-        // enabled, no v2 credential); show that copy rather than the raw log,
-        // which is the only thing this dialog offers other providers.
         const classlinkErrorMessage = isClasslink
           ? sync_error.serverMessage ||
             "We're having trouble getting roster information from ClassLink. Please try again later."
@@ -142,6 +139,46 @@ class SyncOmniAuthSectionControl extends React.Component {
 
   onLtiDialogClose = () => {
     utils.reload();
+  };
+
+  renderSyncErrorDetails = () => {
+    const {
+      needsGoogleReauth,
+      needsCleverReauth,
+      cleverSectionNotFound,
+      classlinkErrorMessage,
+      syncFailErrorLog,
+    } = this.state;
+
+    if (needsGoogleReauth) {
+      return (
+        <div style={styles.reauth}>
+          <p>{i18n.authorizeGoogleClassroomsText()}</p>
+          <ReauthorizeGoogleClassroom />
+        </div>
+      );
+    }
+    if (needsCleverReauth) {
+      return (
+        <div style={styles.reauth}>
+          <p>{i18n.authorizeCleverText()}</p>
+          <ReauthorizeClever />
+        </div>
+      );
+    }
+    if (classlinkErrorMessage) {
+      return <p>{classlinkErrorMessage}</p>;
+    }
+    return (
+      <>
+        {cleverSectionNotFound && <p>{i18n.cleverSectionNotFound()}</p>}
+        <div style={styles.scroll}>
+          <pre>
+            <code>{syncFailErrorLog}</code>
+          </pre>
+        </div>
+      </>
+    );
   };
 
   getButtonState = () => {
@@ -189,34 +226,7 @@ class SyncOmniAuthSectionControl extends React.Component {
             {i18n.loginTypeSyncButtonDialogHeader()}
           </Typography>
           <p>{i18n.loginTypeSyncButtonDialogHeaderSub()}</p>
-          {this.state.needsGoogleReauth && (
-            <div style={{margin: '12px 0'}}>
-              <p>{i18n.authorizeGoogleClassroomsText()}</p>
-              <ReauthorizeGoogleClassroom />
-            </div>
-          )}
-          {this.state.needsCleverReauth && (
-            <div style={{margin: '12px 0'}}>
-              <p>{i18n.authorizeCleverText()}</p>
-              <ReauthorizeClever />
-            </div>
-          )}
-          {!this.state.needsGoogleReauth &&
-            !this.state.needsCleverReauth &&
-            (this.state.classlinkErrorMessage ? (
-              <p>{this.state.classlinkErrorMessage}</p>
-            ) : (
-              <>
-                {this.state.cleverSectionNotFound && (
-                  <p>{i18n.cleverSectionNotFound()}</p>
-                )}
-                <div style={styles.scroll}>
-                  <pre>
-                    <code>{this.state.syncFailErrorLog}</code>
-                  </pre>
-                </div>
-              </>
-            ))}
+          {this.renderSyncErrorDetails()}
           <div style={styles.needHelpMessage}>
             <SafeMarkdown
               markdown={i18n.loginTypeSyncButtonDialogTroubleshooting({
@@ -326,6 +336,9 @@ const styles = {
   dialog: {
     padding: '10px 20px 20px 20px',
     maxHeight: '500px',
+  },
+  reauth: {
+    margin: '12px 0',
   },
   scroll: {
     overflowX: 'hidden',

@@ -174,10 +174,10 @@ class ApiController < ApplicationController
 
   # Imports or re-syncs a ClassLink class as a section. Unlike Clever and
   # Google Classroom, ClassLink's partner credential can read any class in the
-  # requester's district, so authorization is enforced entirely here: identity
-  # is server-derived (I1), non-instructors must appear in the class's One
-  # Roster teacher list even on first import (I2), and existing instructors
-  # sync on local standing (I3).
+  # requester's district, so authorization is enforced entirely here: the
+  # requester's identity comes from their own ClassLink credential, never from
+  # params, and they must either already be an instructor of the local section
+  # or appear in the class's OneRoster teacher list.
   def import_classlink_classroom
     return head :forbidden unless current_user
 
@@ -749,11 +749,12 @@ class ApiController < ApplicationController
     false
   end
 
-  # I1: rostering identity is derived only from the requester's own v2
+  # Rostering identity is derived only from the requester's own v2
   # ClassLink auth option, never from params. Because class sourcedIds are
   # unique per district, deriving the tenant here also confines every lookup
-  # to the requester's own district. Returns [tenant_id, sourced_id], or nil
-  # when the user holds no v2 option.
+  # to the requester's own district.
+  # @return [Array(String, String)] [tenant_id, sourced_id]
+  # @return [nil] when the user holds no v2 ClassLink auth option
   private def classlink_v2_identity
     auth_id = current_user.uid_for_provider(
       AuthenticationOption::CLASSLINK,
@@ -776,9 +777,6 @@ class ApiController < ApplicationController
     render status: :forbidden, json: {error: 'Please sign in again from ClassLink to proceed with roster sync.'}
   end
 
-  # Also rendered for a non-expiry 401: indistinguishable from a district that
-  # never enabled sharing from the teacher's position, so the two states share
-  # one string and the distinction stays in the logs.
   private def classlink_district_not_enabled_error
     render status: :forbidden, json: {error: "Your district hasn't enabled roster sync for CodeAI."}
   end
