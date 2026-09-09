@@ -1,4 +1,4 @@
-import {Button as MuiButton, Typography} from '@mui/material';
+import {Button as MuiButton} from '@mui/material';
 import {uniq, map, filter} from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useRef, useCallback} from 'react';
@@ -88,10 +88,7 @@ function TextResponses({sectionId, scriptId, courseVersionName, unitPosition}) {
 
   return (
     <div>
-      <div style={styles.unitSelection}>
-        <Typography variant="h3">{i18n.selectACourse()}</Typography>
-        <UnitSelectorV2 v1Styles />
-      </div>
+      <UnitSelectorV2 v1Styles isLabelVisible labelText={i18n.selectACourse()} />
       {filteredResponses.length > 0 && (
         <div id="uitest-response-actions" style={styles.actionRow}>
           <TextResponsesLessonSelector
@@ -138,9 +135,6 @@ TextResponses.propTypes = {
 };
 
 const styles = {
-  unitSelection: {
-    marginTop: 0,
-  },
   actionRow: {
     height: 47,
     padding: PADDING,
