@@ -124,6 +124,38 @@ export function boundIds(workspace: Workspace): Set<string> {
 }
 
 /**
+ * Every id some block on the workspace WRITES — a setter, or a binder.
+ *
+ * NOT every id a block names, and not the variable map. Both of those hold
+ * more than the file does, and in the same way: every block in the TOOLBOX
+ * carries a default name — `amount`, `flag`, `text`, `other` — and Blockly
+ * makes the variable so the flyout can draw it, so a getter dragged out of the
+ * drawer arrives carrying one of them. Counting a READ as making a name is
+ * what let that dragged getter turn `flag` into a name of the file's, offered
+ * everywhere, for a variable nothing ever assigns.
+ *
+ * A name is made by being written to. That is what a rule's free locals are —
+ * set in a step body and declared by nothing — and it is exactly what a
+ * dangling read is not.
+ */
+export function writtenIds(workspace: Workspace): Set<string> {
+  const written = new Set<string>();
+  for (const block of workspace.getAllBlocks(false)) {
+    const binds = bindingsOf(block).ids;
+    // A setter is the other way a name comes to exist. Recognised by the
+    // shape of its type rather than by a list, so a new flavour needs no
+    // entry here (`createTypedVariable`).
+    const assigns = /^variables_set_/.test(block.type)
+      ? block.getVarModels().map(one => one.getId())
+      : [];
+    for (const id of [...binds, ...assigns]) {
+      written.add(id);
+    }
+  }
+  return written;
+}
+
+/**
  * Where `child` sits on `parent` — an input's name, or {@link REST}.
  *
  * {@link REST} when it is simply the next row down, which is what a stacked
@@ -161,12 +193,14 @@ function inputHolding(parent: Block, child: Block): string | undefined {
 export function idsInScope(block: Block): Set<string> {
   const workspace = block.workspace;
   const seen = new Set<string>();
-  // Everything no binder declares. These are the file's own — a rule's free
-  // locals, and anything a project made before `with` existed.
+  // Everything the file USES that no binder declares. These are its own — a
+  // rule's free locals, which nothing has migrated — and the two halves are
+  // both needed: without `used` the toolbox's default names are offered
+  // everywhere, and without `bound` a local would be.
   const bound = boundIds(workspace);
-  for (const variable of workspace.getVariableMap().getAllVariables()) {
-    if (!bound.has(variable.getId())) {
-      seen.add(variable.getId());
+  for (const id of writtenIds(workspace)) {
+    if (!bound.has(id)) {
+      seen.add(id);
     }
   }
   let child: Block = block;

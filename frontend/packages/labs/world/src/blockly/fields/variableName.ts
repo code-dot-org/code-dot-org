@@ -71,8 +71,14 @@ export class VariableNameField extends Blockly.FieldTextInput {
    * below it agree without anybody choosing from a menu.
    */
   private resolve(name: string): string {
-    const workspace = this.getSourceBlock()?.workspace;
-    if (!workspace) {
+    const block = this.getSourceBlock();
+    const workspace = block?.workspace;
+    // NOT FROM THE FLYOUT. A block in the toolbox carries a default name, and
+    // making the variable for it would put that name on the workspace before
+    // anybody had dragged anything out — where every getter's dropdown would
+    // then offer it (`variableScope`). The flyout draws the name it was given
+    // and makes nothing.
+    if (!workspace || block?.isInFlyout) {
       return '';
     }
     const map = workspace.getVariableMap();

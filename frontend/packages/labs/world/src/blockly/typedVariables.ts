@@ -33,7 +33,7 @@ registerVariableNameField();
  * ones a rule took as parameters; `with ⟨number n⟩ as ⟨0⟩ do` makes it false
  * (`blockly/variableScope`).
  */
-const scoped = {fieldType: SCOPED_VARIABLE_FIELD} as const;
+const scoped = {readerFieldType: SCOPED_VARIABLE_FIELD} as const;
 
 /** The actor variable — a `for each` loop's binding, or an `actor` parameter. */
 export const ActorVariable: TypedVariable = createTypedVariable({

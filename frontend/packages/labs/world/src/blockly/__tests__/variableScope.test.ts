@@ -62,6 +62,24 @@ const define = () => {
       nextStatement: true,
       output: null,
     },
+    {
+      // A block that WRITES a variable, which is what makes one the file's.
+      // The map holds every default the toolbox ever drew, and a getter
+      // dragged out of the drawer carries one — so a READ cannot be what makes
+      // a name, or that getter would turn `flag` into one.
+      type: 'variables_set_Number',
+      message0: 'set %1 to something',
+      args0: [
+        {
+          type: 'field_variable',
+          name: 'VAR',
+          variableTypes: ['Number'],
+          defaultType: 'Number',
+        },
+      ],
+      previousStatement: true,
+      nextStatement: true,
+    },
   ]);
 };
 
@@ -134,12 +152,33 @@ describe('what a block can see', () => {
     expect(idsInScope(first.block).has(second.id)).toBe(false);
   });
 
+  it('does not see a name nothing in the file writes', () => {
+    // THE TOOLBOX PUTS NAMES IN THE MAP. Every `let` and every getter in the
+    // flyout carries a default name, and Blockly makes the variable so the
+    // flyout can draw it — so the workspace's map holds `amount`, `flag`,
+    // `text` and the rest before a learner has dragged anything out.
+    //
+    // The additive rule offered them all, because a name no binder declares is
+    // one this treats as the file's own. A name NOTHING WRITES is not the
+    // file's own — and reading one cannot be what makes it, or a getter
+    // dragged out of the drawer would make `flag` a name by carrying it.
+    const ghost = workspace.getVariableMap().createVariable('amount', 'Number');
+    const block = workspace.newBlock('reader');
+
+    expect(idsInScope(block).has(ghost.getId())).toBe(false);
+  });
+
   it('sees a name nothing declares, from anywhere', () => {
     // The additive half, and the reason this could ship without migrating
     // anything: every stock rule sets and reads free locals in its step
     // bodies, and a strict scope would have taken them out of the dropdown of
     // the rule that owns them.
     const free = workspace.getVariableMap().createVariable('total', 'Number');
+    // …WRITTEN by a block, which is what a rule's free local is: set in a step
+    // body, and declared by nothing.
+    workspace
+      .newBlock('variables_set_Number')
+      .setFieldValue(free.getId(), 'VAR');
     const {block} = withLocal('n');
     const below = workspace.newBlock('reader');
     block.nextConnection!.connect(below.previousConnection!);

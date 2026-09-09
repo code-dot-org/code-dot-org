@@ -22,11 +22,9 @@ import * as Blockly from 'blockly/core';
 
 import {idsInScope} from '../variableScope';
 
-/** The two entries Blockly appends, which are commands rather than names. */
-const COMMANDS: ReadonlySet<string> = new Set([
-  Blockly.RENAME_VARIABLE_ID,
-  Blockly.DELETE_VARIABLE_ID,
-]);
+/** What a field with no name in it draws, and the value that means it. */
+export const UNNAMED = '???';
+export const NO_VARIABLE = '';
 
 export class ScopedFieldVariable extends Blockly.FieldVariable {
   constructor(...args: ConstructorParameters<typeof Blockly.FieldVariable>) {
@@ -55,24 +53,60 @@ export class ScopedFieldVariable extends Blockly.FieldVariable {
   }
 
   /**
-   * The base menu, less the names this block cannot see.
+   * …and what it SAVES, which is the other place holding no variable shows.
    *
-   * Built from the base list rather than from the variable map, so whatever
-   * Blockly decides belongs in the menu — the flavour filtering, the ordering,
-   * the two commands at the end — keeps deciding it.
+   * Blockly serialises a block the moment it is created, and the base class
+   * reaches straight through to `this.variable.getId()`. One override, not the
+   * whole chain: validation and the id-to-variable lookup are still the base
+   * class's, and taking those over as well is what broke every rule that reads
+   * a parameter.
+   */
+  override saveState(): unknown {
+    return this.getValue() ? super.saveState() : NO_VARIABLE;
+  }
+
+  override loadState(state: unknown): void {
+    if (state === NO_VARIABLE || state === null || state === undefined) {
+      return;
+    }
+    super.loadState(state);
+  }
+
+  /** What it draws when it names nothing, which is now a state it can be in. */
+  override getText(): string {
+    return super.getText() || UNNAMED;
+  }
+
+  /**
+   * The names this block can see, and nothing else.
+   *
+   * BUILT FROM SCOPE rather than filtered out of the base list, because the
+   * base list is every variable of this flavour on the workspace and the point
+   * is that most of them are not this block's to read.
+   *
+   * `???` WHERE THERE ARE NONE — in the flyout, above every `let` in the file,
+   * or in a body that has no names at all. A dropdown must offer something,
+   * and what there is to offer is the absence itself: a block that says `???`
+   * is a block a reader can see is unfinished, which is the honest end of the
+   * same argument that took the default name away.
    */
   static dropdownCreate(this: Blockly.FieldVariable): Blockly.MenuOption[] {
-    const all = Blockly.FieldVariable.dropdownCreate.call(this);
     const block = this.getSourceBlock();
-    if (!block || block.isInFlyout) {
-      return all;
+    const workspace = block?.workspace;
+    const flavours = this.variableTypes;
+    const visible: ReadonlySet<string> =
+      block && workspace && !block.isInFlyout
+        ? idsInScope(block)
+        : new Set<string>();
+    const named: Blockly.MenuOption[] = [];
+    for (const id of visible) {
+      const variable = workspace?.getVariableMap().getVariableById(id);
+      if (variable && (!flavours || flavours.includes(variable.getType()))) {
+        named.push([variable.getName(), id]);
+      }
     }
-    const visible = idsInScope(block);
-    const held = this.getValue();
-    return all.filter(([, id]) => {
-      const value = String(id);
-      return COMMANDS.has(value) || value === held || visible.has(value);
-    });
+    named.sort(([one], [other]) => String(one).localeCompare(String(other)));
+    return named.length ? named : [[UNNAMED, NO_VARIABLE]];
   }
 }
 

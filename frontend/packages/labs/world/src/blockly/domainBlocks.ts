@@ -9688,7 +9688,7 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
       // rule's parameters were the rest, so a body that wanted a working value
       // had nowhere to put it but on the ACTOR — scratch space in the
       // inspector for a number that means nothing between two frames
-      // (`scopedLocal`).
+      // (`localDeclaration`).
       'world_let_number',
       'world_let_word',
       'world_let_boolean',
@@ -9697,6 +9697,10 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
       // easier to write (`world_let_position`).
       'world_let_position',
       'world_let_actor',
+      // …and the pair that READS and WRITES one. A getter dragged from here
+      // names nothing yet and says so — `???` — because there is no place in
+      // the flyout for it to have a scope, and the names it will be able to
+      // see are the ones where it lands (`fields/scopedVariable`).
       ...PARAM_VARIABLE_TYPES,
     ],
   },
