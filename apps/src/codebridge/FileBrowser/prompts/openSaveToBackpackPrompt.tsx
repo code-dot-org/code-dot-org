@@ -157,7 +157,7 @@ export const openSaveToBackpackPrompt = async ({
   } catch (error) {
     handleError(
       codebridgeI18n.saveToBackpackTitle(),
-      "We saved your new file, but couldn't delete your old one. You can retry the delete in the backpack panel.",
+      "We saved your new file, but couldn't delete your old one. You can retry the delete in the Backpack.",
       'Backpack duplicate delete error'
     )(error as Error);
   }
