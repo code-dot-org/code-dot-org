@@ -20,6 +20,7 @@ import {
   modelDescriptions,
   RESET_CONVERSATION_CUSTOMIZATION_UPDATES,
 } from '../constants';
+import {applySchemaDisplayTransform} from '../helpers/applySchemaDisplayTransform';
 import {
   addChatEvent,
   clearChatMessages,
@@ -81,9 +82,14 @@ interface ChatWorkspaceProps {
   onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
   onAssetRemoved?: (asset: ChatAsset) => void;
 
-  // Formats a jsonSchema-configured session's parsed response before it's
-  // recorded in chat history. Only ever set alongside modelParameters.responseJsonSchema.
-  jsonSchemaResponseCallback?: (response: unknown) => string;
+  // Renders a schema lab's parsed response as display text. Pure -- it runs over
+  // the whole transcript on every render. Only ever set alongside
+  // modelParameters.responseJsonSchema.
+  formatSchemaResponseForDisplay?: (response: unknown) => string;
+
+  // Acts on a schema response that just arrived (e.g. loading the model's code
+  // into the project). Fires once per response, never for stored history.
+  onSchemaResponse?: (response: unknown) => void;
 
   hasInstructionsDrawer?: boolean;
   lessonId?: number;
@@ -119,7 +125,8 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
       onAssetUploaded,
       onAssetRemoved,
       hideModelChangeMessage = false,
-      jsonSchemaResponseCallback,
+      formatSchemaResponseForDisplay,
+      onSchemaResponse,
       hasInstructionsDrawer,
       lessonId,
       disabledState,
@@ -297,7 +304,19 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
     }, [dispatch, previousParameters, modelParameters]);
 
     const [liveAnnouncement, setLiveAnnouncement] = useState('');
-    const chatEvents = selectedStudent ? studentChatHistory : visibleItems;
+    const storedChatEvents = selectedStudent
+      ? studentChatHistory
+      : visibleItems;
+    // Covers a teacher viewing a student's history too: both paths feed this
+    // same list.
+    const chatEvents = useMemo(
+      () =>
+        applySchemaDisplayTransform(
+          storedChatEvents,
+          formatSchemaResponseForDisplay
+        ),
+      [storedChatEvents, formatSchemaResponseForDisplay]
+    );
     const hasChatHistory = chatEvents.length > 0;
     useEffect(() => {
       if (hasChatHistory) {
@@ -430,7 +449,6 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
               chatButtons={chatButtons}
               hiddenContextCallback={hiddenContextCallback}
               multimodalAvailable={canUploadAssets}
-              jsonSchemaResponseCallback={jsonSchemaResponseCallback}
               levelName={levelName}
               hasStarterAssets={hasStarterAssets}
               buildAssetUrl={buildAssetUrlValue}
@@ -441,6 +459,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
               chatDisabled={disabled || disableSendingMessages}
               sendDisabled={sendDisabled}
               onMessageSent={onMessageSent}
+              onSchemaResponse={onSchemaResponse}
             />
           )}
         </div>

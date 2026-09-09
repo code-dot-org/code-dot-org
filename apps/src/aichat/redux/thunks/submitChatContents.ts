@@ -31,6 +31,7 @@ import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConsta
 import {postAichatCompletionMessage} from '../../aichatApi';
 import {performClientApiChatCompletion} from '../../api/performClientApiChatCompletion';
 import shouldUseAiGateway from '../../api/shouldUseAiGateway';
+import {parseJsonObject} from '../../helpers/applySchemaDisplayTransform';
 import {logChatEvent} from '../../helpers/logChatEvent';
 import {formatUserAddedSelectionContextForPrompt} from '../../helpers/userAddedSelectionContextFormatter';
 import {
@@ -63,8 +64,8 @@ export const submitChatContents = createAsyncThunk(
       assets?: ChatAsset[];
       analyticsProperties?: AnalyticsProperties;
       userAddedSelectionContext?: UserAddedSelectionContextItem[];
-      jsonSchemaResponseCallback?: (response: unknown) => string;
       lessonId?: number;
+      onSchemaResponse?: (response: unknown) => void;
     },
     thunkAPI
   ) => {
@@ -79,8 +80,8 @@ export const submitChatContents = createAsyncThunk(
       clientType,
       analyticsProperties,
       userAddedSelectionContext,
-      jsonSchemaResponseCallback,
       lessonId,
+      onSchemaResponse,
     } = newUserMessageInput;
 
     // Clear any staged files if present (used with multimodal models)
@@ -233,25 +234,8 @@ export const submitChatContents = createAsyncThunk(
     dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
     messages.forEach(message => {
       if (message.role === Role.ASSISTANT) {
-        // jsonSchemaResponseCallback only applies to successful model
-        // responses, and is only ever set for a jsonSchema-configured
-        // session -- so it always gets parsed JSON, never a bare string.
-        // structuredOutput is already parsed (gateway path); the legacy
-        // Rails-job path never has a parsed form, so parse chatMessageText
-        // here once, rather than pushing that split onto every callback.
-        if (message.status === Status.OK && jsonSchemaResponseCallback) {
-          try {
-            const parsedResponse =
-              message.structuredOutput ?? JSON.parse(message.chatMessageText);
-            message.chatMessageText =
-              jsonSchemaResponseCallback(parsedResponse);
-          } catch (err) {
-            // Model didn't return valid JSON despite the schema -- keep the
-            // raw text rather than losing the response to a crashed thunk.
-            console.error('Failed to parse structured chat response', err);
-          }
-        }
         dispatch(addChatEvent(message));
+        notifySchemaResponse(message, onSchemaResponse);
       }
       if (message.role === Role.USER) {
         dispatch(
@@ -271,6 +255,35 @@ export const submitChatContents = createAsyncThunk(
     });
   }
 );
+
+/**
+ * Hands a freshly arrived structured response to the lab, which may load the
+ * model's code into the project or switch the workspace into a review state.
+ *
+ * Runs after the event is logged and cannot change it: the lab acts on the
+ * response, it does not get to decide what history records. A throwing lab must
+ * not take the send with it -- the response is already saved and displayed by
+ * this point.
+ */
+function notifySchemaResponse(
+  message: CompletedChatMessage,
+  onSchemaResponse?: (response: unknown) => void
+) {
+  if (!onSchemaResponse || message.status !== Status.OK) {
+    return;
+  }
+  const parsed = parseJsonObject(message.chatMessageText || '');
+  if (parsed === undefined) {
+    return;
+  }
+  try {
+    onSchemaResponse(parsed);
+  } catch (error) {
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logError('Error handling structured aichat response', error as Error);
+  }
+}
 
 async function handleChatCompletionError(
   error: Error,
