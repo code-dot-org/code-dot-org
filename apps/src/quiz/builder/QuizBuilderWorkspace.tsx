@@ -1,10 +1,7 @@
 import {Button, Typography} from '@mui/material';
 import React from 'react';
 
-import {
-  QuizBuilderQuestion,
-  QuizBuilderQuestionsState,
-} from './useQuizBuilderQuestions';
+import {QuizBuilderQuestionsState, QuizQuestion} from './types';
 
 import styles from './quiz-builder-workspace.module.scss';
 
@@ -87,7 +84,7 @@ function questionCountLabel(count: number): string {
 }
 
 // STI class name -> label. Multiple choice is the only type today.
-function questionTypeLabel(type: QuizBuilderQuestion['type']): string {
+function questionTypeLabel(type: QuizQuestion['type']): string {
   switch (type) {
     case 'MultipleChoiceQuestion':
       return 'Multiple choice';

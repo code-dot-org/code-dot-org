@@ -3,7 +3,7 @@ import '@testing-library/jest-dom';
 import React from 'react';
 
 import QuizBuilderWorkspace from '@cdo/apps/quiz/builder/QuizBuilderWorkspace';
-import {QuizBuilderQuestion} from '@cdo/apps/quiz/builder/useQuizBuilderQuestions';
+import {QuizBuilderQuestion} from '@cdo/apps/quiz/builder/types';
 
 const question = (
   overrides: Partial<QuizBuilderQuestion> = {}

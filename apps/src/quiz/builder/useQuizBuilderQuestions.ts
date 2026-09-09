@@ -3,44 +3,7 @@ import {useCallback, useEffect, useState} from 'react';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {networkErrorMessage} from './networkError';
-
-export interface QuizChoice {
-  id: string;
-  text: string;
-}
-
-// A subset of Standard#summarize_for_lesson_edit - the fields the builder
-// reads today. The rest ride along untyped.
-export interface StandardSummary {
-  frameworkShortcode: string;
-  shortcode: string;
-  description: string;
-}
-
-// Mirrors the Ruby QuizQuestionSerialization#quiz_question_json wire shape,
-// as returned by GET /levels/:id/quiz_configuration and by a create.
-export interface QuizBuilderQuestion {
-  id: number;
-  type: string;
-  questionName: string;
-  stem: string;
-  choices: QuizChoice[];
-  correctChoiceId: string | null;
-  explanation: string | null;
-  standards: StandardSummary[];
-  attachedToOtherQuizzes: boolean;
-  usedInPublishedUnit: boolean;
-  page: number | null;
-}
-
-export interface QuizBuilderQuestionsState {
-  questions: QuizBuilderQuestion[];
-  isLoading: boolean;
-  isCreating: boolean;
-  error: string | null;
-  createQuestion: () => Promise<void>;
-  reload: () => Promise<void>;
-}
+import {QuizBuilderQuestion, QuizBuilderQuestionsState} from './types';
 
 // A newly created question needs placeholder-but-valid content:
 // MultipleChoiceQuestion rejects a blank stem, fewer than two choices, or
