@@ -20,6 +20,10 @@ import type {RawImage} from './imageGeneration';
 // judge misbehaves, without dropping the deterministic moderation floor.
 const IMAGE_SAFETY_DCDO_KEY = 'spritelab-lab2-image-safety-enabled';
 
+// Sentry metric names; the tests pin the strings independently.
+const PROMPT_SAFETY_METRIC = 'spritelab-lab2.prompt_safety';
+const IMAGE_SAFETY_METRIC = 'spritelab-lab2.image_safety';
+
 export function isImageSafetyEnabled(): boolean {
   return DCDO.get(IMAGE_SAFETY_DCDO_KEY, true) !== false;
 }
@@ -53,7 +57,7 @@ export function markHandled<T>(promise: Promise<T>): Promise<T> {
  */
 export async function checkPromptSafety(text: string): Promise<void> {
   if (!isImageSafetyEnabled()) {
-    Observability.metrics.count('spritelab-lab2.prompt_safety', 1, {
+    Observability.metrics.count(PROMPT_SAFETY_METRIC, 1, {
       result: 'skipped',
     });
     return;
@@ -62,12 +66,12 @@ export async function checkPromptSafety(text: string): Promise<void> {
   try {
     safe = await isTextSafe(text, 'input_filter');
   } catch (error) {
-    Observability.metrics.count('spritelab-lab2.prompt_safety', 1, {
+    Observability.metrics.count(PROMPT_SAFETY_METRIC, 1, {
       result: 'error',
     });
     throw error;
   }
-  Observability.metrics.count('spritelab-lab2.prompt_safety', 1, {
+  Observability.metrics.count(PROMPT_SAFETY_METRIC, 1, {
     result: safe ? 'ok' : 'flagged',
   });
   if (!safe) {
@@ -91,7 +95,7 @@ export async function checkImageSafety(raw: RawImage): Promise<void> {
   );
   // Both verdicts on one count: the (moderation x judge) disagreement matrix
   // is the evidence for whether each layer earns its keep.
-  Observability.metrics.count('spritelab-lab2.image_safety', 1, {
+  Observability.metrics.count(IMAGE_SAFETY_METRIC, 1, {
     moderation,
     judge,
     mediaType: raw.mediaType,
