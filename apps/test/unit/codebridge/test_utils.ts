@@ -147,8 +147,12 @@ export const getBackpackAPIMock = (
       return fileList;
     }),
     saveFiles: jest.fn(),
-    saveFile: jest.fn(),
-    saveFileFromUrl: jest.fn(),
+    saveFile: jest.fn((filename, contents, onError, onSuccess) =>
+      onSuccess?.()
+    ),
+    saveFileFromUrl: jest.fn(async (filename, url, onError, onSuccess) =>
+      onSuccess?.()
+    ),
     deleteFiles: jest.fn(),
     updateFilesHelper: jest.fn(),
     saveFilesHelper: jest.fn(),

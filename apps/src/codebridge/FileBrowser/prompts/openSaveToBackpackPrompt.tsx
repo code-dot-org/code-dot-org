@@ -110,22 +110,6 @@ export const openSaveToBackpackPrompt = async ({
         : EVENTS.SAVE_TO_BACKPACK_RENAME;
   }
 
-  if (unifiedApi && isDuplicateFileName && selectedFileName === file.name) {
-    try {
-      await unifiedApi.deleteFromLegacyBackpacks(file.name, filenamesByAppType);
-    } catch (error) {
-      // Show error if we failed to delete, as it would leave a duplicate in the backpack.
-      handleError(
-        codebridgeI18n.saveToBackpackTitle(),
-        `${codebridgeI18n.saveToBackpackError({
-          selectedFileName,
-        })} ${codebridgeI18n.closeWindowTryAgain()}`,
-        'Backpack duplicate delete error'
-      )(error as Error);
-      return;
-    }
-  }
-
   const successCallback = () =>
     sendLab2AnalyticsEvent(successMetric, {
       fileType: selectedFileName.split('.').pop()?.toLowerCase() || '',
@@ -139,19 +123,42 @@ export const openSaveToBackpackPrompt = async ({
     'Save to backpack error'
   );
 
-  if (file.url) {
-    await backpackApi.saveFileFromUrl(
-      selectedFileName,
-      file.url,
-      errorCallback,
-      successCallback
-    );
-  } else {
-    await backpackApi.saveFile(
-      selectedFileName,
-      file.contents,
-      errorCallback,
-      successCallback
-    );
+  const saved = await new Promise<boolean>(resolve => {
+    const onSuccess = () => {
+      successCallback();
+      resolve(true);
+    };
+    const onError = (error?: Error) => {
+      errorCallback(error);
+      resolve(false);
+    };
+    if (file.url) {
+      backpackApi.saveFileFromUrl(
+        selectedFileName,
+        file.url,
+        onError,
+        onSuccess
+      );
+    } else {
+      backpackApi.saveFile(selectedFileName, file.contents, onError, onSuccess);
+    }
+  });
+
+  const replacedLegacyCopy =
+    saved && isDuplicateFileName && selectedFileName === file.name;
+  if (!unifiedApi || !replacedLegacyCopy) {
+    return;
+  }
+
+  // Writes go to the universal backpack, so a name replaced in a legacy backpack is
+  // still there. Deleting it after the save keeps a failed save non-destructive.
+  try {
+    await unifiedApi.deleteFromLegacyBackpacks(file.name, filenamesByAppType);
+  } catch (error) {
+    handleError(
+      codebridgeI18n.saveToBackpackTitle(),
+      "We saved your new file, but couldn't delete your old one. You can retry the delete in the backpack panel.",
+      'Backpack duplicate delete error'
+    )(error as Error);
   }
 };

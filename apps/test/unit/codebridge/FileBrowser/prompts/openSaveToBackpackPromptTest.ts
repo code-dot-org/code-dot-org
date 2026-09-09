@@ -123,7 +123,7 @@ describe('openSaveToBackpackPrompt', () => {
       });
     });
 
-    it('should clear the legacy backpacks of the name before saving', async () => {
+    it('should clear the legacy backpacks of the name after saving', async () => {
       const fileLists = {
         universal: [],
         javalab: ['project_file.py'],
@@ -142,11 +142,11 @@ describe('openSaveToBackpackPrompt', () => {
         expect.any(Function),
         expect.any(Function)
       );
-      const deleteOrder = (mockApi.deleteFromLegacyBackpacks as jest.Mock).mock
-        .invocationCallOrder[0];
       const saveOrder = (mockApi.saveFile as jest.Mock).mock
         .invocationCallOrder[0];
-      expect(deleteOrder).toBeLessThan(saveOrder);
+      const deleteOrder = (mockApi.deleteFromLegacyBackpacks as jest.Mock).mock
+        .invocationCallOrder[0];
+      expect(saveOrder).toBeLessThan(deleteOrder);
     });
 
     it('should treat a name taken only in another backpack as a duplicate', async () => {
@@ -185,7 +185,7 @@ describe('openSaveToBackpackPrompt', () => {
       );
     });
 
-    it('should not save when clearing the legacy backpacks fails', async () => {
+    it('should keep the save and alert when clearing the legacy backpacks fails', async () => {
       const mockApi = getUnifiedBackpackAPIMock({
         universal: [],
         javalab: ['project_file.py'],
@@ -196,9 +196,37 @@ describe('openSaveToBackpackPrompt', () => {
 
       await runSaveToBackpackPrompt(mockApi);
 
-      expect(mockApi.saveFile).not.toHaveBeenCalled();
-      expect(mockApi.saveFileFromUrl).not.toHaveBeenCalled();
+      expect(mockApi.saveFile).toHaveBeenCalledWith(
+        'project_file.py',
+        'This is project_file.py.',
+        expect.any(Function),
+        expect.any(Function)
+      );
+      expect(analyticsMock).toHaveBeenCalledWith(
+        EVENTS.SAVE_TO_BACKPACK_REPLACE,
+        {fileType: 'py'}
+      );
+      expect(dialogMock.showDialog).toHaveBeenCalledWith(
+        expect.objectContaining({type: DialogType.GenericAlert})
+      );
+    });
+
+    it('should not clear the legacy backpacks when the save fails', async () => {
+      const mockApi = getUnifiedBackpackAPIMock({
+        universal: [],
+        javalab: ['project_file.py'],
+      });
+      (mockApi.saveFile as jest.Mock).mockImplementation(
+        async (filename, contents, onError) => onError(new Error('save boom'))
+      );
+
+      await runSaveToBackpackPrompt(mockApi);
+
+      expect(mockApi.deleteFromLegacyBackpacks).not.toHaveBeenCalled();
       expect(analyticsMock).not.toHaveBeenCalled();
+      expect(dialogMock.showDialog).toHaveBeenCalledWith(
+        expect.objectContaining({type: DialogType.GenericAlert})
+      );
     });
 
     it('should alert and not save when the file lists cannot be fetched', async () => {
@@ -228,7 +256,7 @@ describe('openSaveToBackpackPrompt', () => {
       expect(mockApi.saveFile).not.toHaveBeenCalled();
     });
 
-    it('should save a file with a url from its url, after clearing the legacy backpacks', async () => {
+    it('should save a file with a url from its url, then clear the legacy backpacks', async () => {
       projectFile = {
         name: 'project_file.py',
         contents: '',
