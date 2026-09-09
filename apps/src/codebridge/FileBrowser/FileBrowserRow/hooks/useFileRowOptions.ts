@@ -92,9 +92,6 @@ export const useFileRowOptions = (
   const legacyBackpackApi = useBackpackAPIContext()?.primaryApi;
   const currentUserId = useAppSelector(state => state.currentUser.userId);
 
-  // The unified backpack spans every lab, so it comes from the registry
-  // singleton rather than the per-lab context. The backpack endpoints redirect
-  // signed-out users to sign-in, so there is nothing to offer them.
   const backpackApi = useMemo(() => {
     if (
       experiments.isEnabledAllowingQueryString(experiments.UNIFIED_BACKPACK)

@@ -12,10 +12,8 @@ import {
 } from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
-import type {
-  default as UnifiedBackpackClientApi,
-  FilenamesByAppType,
-} from '@cdo/apps/sharedComponents/backpack/UnifiedBackpackClientApi';
+import {FilenamesByAppType} from '@cdo/apps/sharedComponents/backpack/types';
+import type UnifiedBackpackClientApi from '@cdo/apps/sharedComponents/backpack/UnifiedBackpackClientApi';
 
 type SaveToBackpackApi = BackpackClientApi | UnifiedBackpackClientApi;
 
@@ -58,8 +56,6 @@ export const openSaveToBackpackPrompt = async ({
 
   const unifiedApi = isUnifiedApi(backpackApi) ? backpackApi : undefined;
 
-  // Keyed by app type so a duplicate can be traced back to the backpack holding
-  // it. The per-lab client only ever knows about its own backpack.
   let filenamesByAppType: FilenamesByAppType;
   try {
     filenamesByAppType = isUnifiedApi(backpackApi)
@@ -76,14 +72,14 @@ export const openSaveToBackpackPrompt = async ({
 
   const existingFilenames = Object.values(filenamesByAppType).flat();
   const isDuplicateFileName = existingFilenames.includes(file.name);
-  const fileNameCopy = uniqueFileName(file.name, existingFilenames);
+  const newFileName = uniqueFileName(file.name, existingFilenames);
 
   const dialog = isDuplicateFileName
     ? {
         type: DialogType.GenericConfirmation,
         title: codebridgeI18n.saveToBackpackTitle(),
         message: codebridgeI18n.saveToBackpackDuplicateMessage({
-          newFileName: fileNameCopy,
+          newFileName: newFileName,
         }),
         confirmText: codebridgeI18n.replace(),
         neutralText: codebridgeI18n.renameFile(),
@@ -102,8 +98,9 @@ export const openSaveToBackpackPrompt = async ({
     return;
   }
 
-  const selectedFileName =
-    results.type === 'confirm' ? file.name : fileNameCopy;
+  // Confirm means the user is replacing the existing file; neutral means they are using
+  // the suggested rename.
+  const selectedFileName = results.type === 'confirm' ? file.name : newFileName;
 
   let successMetric = EVENTS.SAVE_TO_BACKPACK_NEW;
   if (isDuplicateFileName) {
@@ -117,8 +114,7 @@ export const openSaveToBackpackPrompt = async ({
     try {
       await unifiedApi.deleteFromLegacyBackpacks(file.name, filenamesByAppType);
     } catch (error) {
-      // Saving now would leave the duplicate we just failed to remove, which is
-      // the outcome replacing exists to avoid.
+      // Show error if we failed to delete, as it would leave a duplicate in the backpack.
       handleError(
         codebridgeI18n.saveToBackpackTitle(),
         `${codebridgeI18n.saveToBackpackError({

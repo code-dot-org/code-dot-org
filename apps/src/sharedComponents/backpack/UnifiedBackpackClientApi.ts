@@ -8,6 +8,7 @@ import {
   BackpackEventListener,
   ErrorCallback,
   FileMetadata,
+  FilenamesByAppType,
 } from './types';
 
 const UNIVERSAL_CHANNEL_URL = '/backpacks/channel';
@@ -18,8 +19,6 @@ const listFilesUrl = (channelIds: string[]) =>
 type ChannelIdsByAppType = {[appType: string]: string};
 // A channel the server could not read comes back as null rather than a file list.
 type FileListsByChannelId = {[channelId: string]: FileMetadata[] | null};
-
-export type FilenamesByAppType = {[appType: string]: string[]};
 
 /**
  * Client for the unified backpack: a view over all the user's backpacks, including their
