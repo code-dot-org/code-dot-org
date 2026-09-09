@@ -72,7 +72,7 @@ export default function IconKey({sectionId}) {
           aria-expanded={isOpen}
           tabIndex="0"
         >
-          <Typography variant="h6" gutterBottom>
+          <Typography variant="label1" component="h6" gutterBottom>
             <FontAwesomeV6Icon
               className={styles.iconKeyCaret}
               iconName={caret(isOpen)}
