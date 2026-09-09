@@ -5,7 +5,9 @@ import TextField from '@code-dot-org/component-library/textField';
 import {Button as MuiButton, Typography} from '@mui/material';
 import React, {useState} from 'react';
 
-import HttpClient, {isNetworkError} from '@cdo/apps/util/HttpClient';
+import HttpClient from '@cdo/apps/util/HttpClient';
+
+import {networkErrorMessage} from './networkError';
 
 import styles from './quiz-configuration-panel.module.scss';
 
@@ -110,7 +112,7 @@ const QuizConfigurationPanel: React.FunctionComponent<
       const saved: QuizConfigurationData = await response.json();
       onSaved(saved);
     } catch (error) {
-      setError(await saveErrorMessage(error));
+      setError(await networkErrorMessage(error));
     } finally {
       setIsSaving(false);
     }
@@ -239,19 +241,5 @@ const QuizConfigurationPanel: React.FunctionComponent<
     </div>
   );
 };
-
-async function saveErrorMessage(error: unknown): Promise<string> {
-  if (isNetworkError(error)) {
-    try {
-      const data = await error.response.json();
-      if (typeof data.error === 'string' && data.error) {
-        return data.error;
-      }
-    } catch {
-      // Response body was not JSON.
-    }
-  }
-  return 'Something went wrong.';
-}
 
 export default QuizConfigurationPanel;
