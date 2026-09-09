@@ -22,20 +22,26 @@ const QuizBuilderWorkspace: React.FunctionComponent<
     outline = <Typography variant="body2">Loading questions…</Typography>;
   } else if (questions.length === 0) {
     outline = (
-      <Typography variant="body2" className={styles.empty}>
-        This quiz has no questions yet.
-      </Typography>
+      <Typography variant="body2">This quiz has no questions yet.</Typography>
     );
   } else {
     outline = (
       <ol className={styles.list}>
         {questions.map(question => (
           <li key={question.id} className={styles.row}>
-            <span className={styles.rowType}>
+            <Typography variant="overline3" component="span">
               {questionTypeLabel(question.type)}
-            </span>
-            <span className={styles.rowName}>{question.questionName}</span>
-            <span className={styles.rowStem}>{question.stem}</span>
+            </Typography>
+            <Typography variant="strong" component="span">
+              {question.questionName}
+            </Typography>
+            <Typography
+              variant="body3"
+              component="span"
+              className={styles.stem}
+            >
+              {question.stem}
+            </Typography>
           </li>
         ))}
       </ol>
@@ -48,7 +54,7 @@ const QuizBuilderWorkspace: React.FunctionComponent<
         <Typography variant="h5" component="h1">
           {quizTitle || 'Untitled quiz'}
         </Typography>
-        <Typography variant="body2" className={styles.count}>
+        <Typography variant="body3">
           {questionCountLabel(questions.length)}
         </Typography>
       </header>
