@@ -448,6 +448,31 @@ again on every frame after the one it was meant for.
 **The Text Input is built on it** (`actors/stock/textInput`), and two things
 about it were not obvious.
 
+**The caret is an index, and everything else about editing is arithmetic on
+it.** `caret` counts the characters BEFORE the insertion point, so typing
+inserts there, backspace takes the one before it, delete takes the one after
+it, and the arrows walk it. It was the end of the text and nothing else, which
+reads as a text field right up until somebody wants to fix a typo in the middle
+of what they typed.
+
+**Clicking into a word is what the measuring seam was built for.** Where a
+click landed, in LETTERS, is a mouse handler's question asked in the frame it
+is asked in — no drawing could answer it, and a proportional font has no
+character width to divide by. The scan walks the prefixes, asking for the width
+of the first one character, the first two, and stops at the boundary NEAREST
+the click; the midpoint is said without a division, as `w(n) + w(n+1) ≤ 2x`.
+Clicking the right half of a letter puts the bar after it, which is what every
+text field does. One measurement per character, of a line short enough to fit a
+field, once per click.
+
+**And the words slide to keep the CARET in the box**, which is not the same as
+keeping the end in it: a caret walked back to the start of a long line has to
+bring the line with it. Three cases, each one comparison — the bar is off the
+left, the bar is off the right, or there is slack at the right and the words
+should come back. The third is what stops a field staying scrolled after its
+text is deleted, which the two-case version did, because it only ever pushed
+left.
+
 **Focus was a CLEAR and then a SET, in one frame** — and that was the Text
 Input deciding for itself whether it was being typed at. It worked, by leaning
 on an ordering the Mouse rule already guaranteed: `presses mouse button`
@@ -486,10 +511,11 @@ looks like the long way round and is the only way that works: the ordering is
 stable, so reversing the key leaves actors sharing one in the order they were
 added, and a form where nobody set `tab order` would run backwards exactly as
 it runs forwards. It also does not stop early, because the wrap is to the LAST
-control and the only way to know which that is is to reach the end. The property being
-read-only is what makes the pair worth having: the events are raised in one
-place, in one order, and cannot get out of step with the property that
-describes the same fact. `take the focus` on an actor that already has it does
+control and the only way to know which that is is to reach the end.
+
+The property being read-only is what makes the set worth having: the events are
+raised in one place, in one order, and cannot get out of step with the property
+that describes the same fact. `take the focus` on an actor that already has it does
 nothing at all, so a click handler firing every frame does not raise a loss and
 a gain per frame.
 

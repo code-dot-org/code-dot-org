@@ -359,3 +359,156 @@ describe('its caret', () => {
     expect(it_.wordsOf(it_.top)).toBe(8);
   });
 });
+
+describe('its insertion point', () => {
+  // WHERE THE TYPING GOES is a number now, and everything else about editing
+  // is arithmetic on it. It used to be the end of the text and nothing else,
+  // which reads as a text field right up until somebody wants to fix a typo in
+  // the middle of what they typed (specs/UI_ACTORS.md).
+  //
+  // The field is 96 wide at (80, 60), so its left edge is at 32 and its words
+  // start at 40. Six pixels a character, so a click at 40 + n is n pixels into
+  // the line.
+  const WORDS = 40;
+
+  const typed = async (letters: string) => {
+    const it_ = await play(sixPerCharacter);
+    it_.clickAt(80, 60);
+    it_.type(letters.split(''));
+    return it_;
+  };
+
+  it('lands where the click did, at the nearest boundary', async () => {
+    // Six characters, 36 pixels. A click 15 pixels in is between the second
+    // and the third — nearer the third, since 15 is past the midpoint of the
+    // character that starts at 12. A field that put the caret at the end
+    // would pass every test written before this one.
+    const it_ = await typed('abcdef');
+
+    it_.clickAt(WORDS + 15, 60);
+    it_.type(['X']);
+
+    expect(it_.says(it_.top)).toBe('abcXdef');
+  });
+
+  it('rounds to the nearer side of a letter, not to the left of it', async () => {
+    // Nine pixels in is past the midpoint of the second character, so the bar
+    // goes after it. Rounding down would put it after the first and this would
+    // read `aXbcdef`.
+    const it_ = await typed('abcdef');
+
+    it_.clickAt(WORDS + 9, 60);
+    it_.type(['X']);
+
+    expect(it_.says(it_.top)).toBe('abXcdef');
+  });
+
+  it('goes to the start when the click is left of the words', async () => {
+    // Left of the WORDS but still on the field — its box starts at 32 and its
+    // words at 40, so the inset is clickable and belongs to the first letter.
+    const it_ = await typed('abcdef');
+
+    it_.clickAt(WORDS - 4, 60);
+    it_.type(['X']);
+
+    expect(it_.says(it_.top)).toBe('Xabcdef');
+  });
+
+  it('goes to the end when the click is past them', async () => {
+    const it_ = await typed('abc');
+
+    it_.clickAt(WORDS + 90, 60);
+    it_.type(['X']);
+
+    expect(it_.says(it_.top)).toBe('abcX');
+  });
+
+  it('is walked by the arrow keys', async () => {
+    const it_ = await typed('abcd');
+
+    it_.press('ArrowLeft');
+    it_.press('ArrowLeft');
+    it_.type(['X']);
+    expect(it_.says(it_.top)).toBe('abXcd');
+
+    it_.press('ArrowRight');
+    it_.type(['Y']);
+    expect(it_.says(it_.top)).toBe('abXcYd');
+  });
+
+  it('stops at both ends rather than running past them', async () => {
+    // A caret that went negative would put every later sum out by one, and say
+    // nothing about it.
+    const it_ = await typed('ab');
+
+    for (let at = 0; at < 5; at += 1) {
+      it_.press('ArrowLeft');
+    }
+    it_.type(['X']);
+    expect(it_.says(it_.top)).toBe('Xab');
+
+    for (let at = 0; at < 9; at += 1) {
+      it_.press('ArrowRight');
+    }
+    it_.type(['Y']);
+    expect(it_.says(it_.top)).toBe('XabY');
+  });
+
+  it('backspaces the character before it, not the last one', async () => {
+    const it_ = await typed('abcd');
+
+    it_.press('ArrowLeft');
+    it_.press('Backspace');
+
+    expect(it_.says(it_.top)).toBe('abd');
+  });
+
+  it('deletes the character after it, and stays where it is', async () => {
+    // The same edit read the other way. Two keys because they are two
+    // intentions, and the bar moves for one of them and not the other.
+    const it_ = await typed('abcd');
+
+    it_.press('ArrowLeft');
+    it_.press('ArrowLeft');
+    it_.press('Delete');
+    it_.type(['X']);
+
+    expect(it_.says(it_.top)).toBe('abXd');
+  });
+
+  it('brings the words back when the line no longer fills the box', async () => {
+    // The case the two-branch slide could not do: it only ever pushed LEFT, so
+    // a field scrolled to the end of a long line stayed scrolled after the
+    // line was deleted, showing an empty box with its words off to the left.
+    const it_ = await typed('abcdefghijklmnopqrst');
+    it_.wait(1 / 60);
+    expect(it_.wordsOf(it_.top)).toBe(8 - 40);
+
+    for (let at = 0; at < 20; at += 1) {
+      it_.press('Backspace');
+    }
+    it_.wait(1 / 60);
+
+    expect(it_.says(it_.top)).toBe('');
+    expect(it_.wordsOf(it_.top)).toBe(8);
+  });
+
+  it('carries the words along when the bar walks off the left', async () => {
+    // A caret walked back into a line that is scrolled has to bring the line
+    // with it, which is what makes the slide about the CARET rather than about
+    // the end of the text.
+    const it_ = await typed('abcdefghijklmnopqrst');
+    it_.wait(1 / 60);
+
+    for (let at = 0; at < 20; at += 1) {
+      it_.press('ArrowLeft');
+    }
+    it_.wait(1 / 60);
+
+    // The words, not the bar: forty ticks of arrow presses land in the dark
+    // half of the blink, and where the WORDS are is the claim anyway — they
+    // came back because the bar walked, which is the whole difference from a
+    // slide that watched the end of the text.
+    expect(it_.wordsOf(it_.top)).toBe(8);
+  });
+});

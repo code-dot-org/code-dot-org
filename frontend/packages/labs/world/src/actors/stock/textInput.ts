@@ -46,17 +46,25 @@
 // zero, and a zero puts the caret at the left margin — visibly nothing rather
 // than invisibly wrong.
 //
-// THE INSERTION POINT IS THE END, always: typing appends and backspace takes
-// from the end, so there is one place the caret can be. Clicking INTO a word
-// to put it somewhere else is the next thing this wants, and it is what the
-// measuring seam was really built for — pixel-to-letter is a mouse handler's
-// question, asked in the frame it is asked in, which no drawing could ever
-// have answered.
+// THE INSERTION POINT IS A NUMBER, and everything else follows from it.
+// `caret` counts the characters BEFORE it, so typing inserts there, backspace
+// takes the character before it, and the arrows move it. It used to be the end
+// of the text and nothing else — which reads as a text field until the moment
+// somebody wants to fix a typo in the middle of what they typed.
 //
-// AND THE WORDS SLIDE so the caret stays in the box. `scroll` is how far left
-// they are pushed, worked out once a frame from the same measurement: zero
-// while what is typed fits, and exactly the overflow after that. Without it a
-// field is a box that fills up and then types into thin air.
+// CLICKING INTO A WORD is what the measuring seam was really built for, and it
+// is the case a drawing could never have answered: where a click landed, in
+// LETTERS, is asked by a mouse handler in the frame it is asked in. The scan
+// walks the prefixes — the width of the first one character, the first two —
+// and stops at the boundary nearest the click. That is one measurement per
+// character, of a line short enough to fit a field, once per click.
+//
+// AND THE WORDS SLIDE so the CARET stays in the box, which is not the same as
+// keeping the END in the box: a caret walked back to the start of a long line
+// has to bring the line with it. `scroll` is how far left the words are
+// pushed, worked out once a frame in three cases — the caret is off the left,
+// the caret is off the right, or there is slack at the right and the words
+// should come back.
 
 import {labelHalf, labelSizeOf} from './label';
 import {
@@ -100,12 +108,6 @@ const focused = () => ({
   },
 });
 
-/** `⟨this actor⟩ take the focus` — the one way it comes to hold it. */
-const takeFocus = () => ({
-  type: 'world_do_TabNavigation_TakeTheFocusAction',
-  inputs: {ACTOR: me()},
-});
-
 /** `emit changed for this actor` — the cue a project waits on. */
 const emitChanged = () => ({
   type: 'world_emit_ActorsTextInput_ChangedEvent',
@@ -118,8 +120,40 @@ const onlyIf = (test: object, body: object[]) => ({
   inputs: {IF0: test, DO0: {block: chain(body)}},
 });
 
+/** `⟨a⟩ and ⟨b⟩`. */
+const both = (a: object, b: object) => ({
+  block: {type: 'logic_operation', fields: {OP: 'AND'}, inputs: {A: a, B: b}},
+});
+
+/**
+ * Several strings, joined left to right.
+ *
+ * `as text` on the FIRST link, and it is not the redundant kind: a chain's
+ * first block has to carry a socket, and `“ ⟨…⟩ ”` is the only string block
+ * that does — `text` has a field where its words go. Every link after it plugs
+ * into the one before (`domainBlocks.worldAsText`).
+ */
+const joined = (parts: object[]): object => {
+  let chained: object | undefined;
+  for (let at = parts.length - 1; at >= 0; at -= 1) {
+    chained = {
+      block: {
+        type: 'world_as_text',
+        inputs: {VALUE: parts[at], ...(chained ? {ADD: chained} : {})},
+      },
+    };
+  }
+  return chained as object;
+};
+
 /** `⟨text⟩ of this actor`, which is what a field holds. */
 const held = () => textOf('TextProperty');
+
+/** …and the size it is drawn at, which every measurement needs. */
+const atSize = () => textOf('TextSizeProperty');
+
+/** `length of ⟨what it holds⟩`. */
+const length = () => ({block: {type: 'text_length', inputs: {VALUE: held()}}});
 
 /** How far the words are inset from the left edge, and the caret's bar. */
 const PAD = 8;
@@ -130,8 +164,13 @@ const CARET_INSET = 5;
 const BLINK = 1;
 
 /** `⟨a⟩ ⟨op⟩ ⟨b⟩`, for the four sums this file does. */
-const sum = (op: 'ADD' | 'MINUS', a: object, b: object) => ({
+const sum = (op: 'ADD' | 'MINUS' | 'MULTIPLY', a: object, b: object) => ({
   block: {type: 'math_arithmetic', fields: {OP: op}, inputs: {A: a, B: b}},
+});
+
+/** `⟨a⟩ ⟨op⟩ ⟨b⟩` as a test — the comparisons the editing rows ask. */
+const compare = (op: 'LT' | 'LTE' | 'GT', a: object, b: object) => ({
+  block: {type: 'logic_compare', fields: {OP: op}, inputs: {A: a, B: b}},
 });
 
 /** `⟨width⟩ − 16` — the room the words actually have between the insets. */
@@ -146,8 +185,148 @@ const column = () => sum('MINUS', width(), num(2 * PAD));
 const shown = () => ({
   block: {
     type: 'world_text_width',
-    inputs: {TEXT: held(), SIZE: textOf('TextSizeProperty')},
+    inputs: {TEXT: held(), SIZE: atSize()},
   },
+});
+
+/** `⟨caret⟩ of this actor` — how many characters are before the bar. */
+const caretAt = () => ({
+  block: {
+    type: 'world_get_ActorsTextInput_CaretProperty',
+    inputs: {ACTOR: me()},
+  },
+});
+
+/** `set ⟨caret⟩ of this actor to ⟨n⟩`. */
+const setCaret = (to: object) => ({
+  type: 'world_set_ActorsTextInput_CaretProperty',
+  inputs: {ACTOR: me(), VALUE: to},
+});
+
+/** `the first ⟨n⟩ characters of ⟨what it holds⟩` — everything before a point. */
+const upTo = (n: object) => ({
+  block: {
+    type: 'text_getSubstring',
+    fields: {WHERE1: 'FROM_START', WHERE2: 'FROM_START'},
+    inputs: {STRING: held(), AT1: num(1), AT2: n},
+  },
+});
+
+/** …and everything from character ⟨n⟩ onwards, which is the rest of it. */
+const from = (n: object) => ({
+  block: {
+    type: 'text_getSubstring',
+    fields: {WHERE1: 'FROM_START', WHERE2: 'LAST'},
+    inputs: {STRING: held(), AT1: n},
+  },
+});
+
+/** How wide the first `n` characters are drawn — where the bar goes. */
+const widthTo = (n: object) => ({
+  block: {
+    type: 'world_text_width',
+    inputs: {TEXT: upTo(n), SIZE: atSize()},
+  },
+});
+
+/** `⟨this actor⟩ take the focus` — the one way it comes to hold it. */
+const takeFocus = () => ({
+  type: 'world_do_TabNavigation_TakeTheFocusAction',
+  inputs: {ACTOR: me()},
+});
+
+/** `x of ⟨where the pointer is⟩`, in the world's own coordinates. */
+const pointerX = () => ({
+  block: {
+    type: 'world_vector_component',
+    fields: {COMPONENT: 'x'},
+    inputs: {VEC: {block: {type: 'world_mouse_position'}}},
+  },
+});
+
+/** …and `x of ⟨where this actor is⟩`, which is its MIDDLE. */
+const middleX = () => ({
+  block: {
+    type: 'world_get_Space_PositionProperty',
+    fields: {COMPONENT: 'x'},
+    inputs: {ACTOR: me()},
+  },
+});
+
+/**
+ * How far into the WORDS the click landed, in pixels.
+ *
+ * From the pointer to the actor's middle, out to its left edge, past the
+ * inset, and then back by however far the words have slid — which is the
+ * whole of turning a place on the screen into a place in the line.
+ */
+const clickedAt = () =>
+  sum(
+    'ADD',
+    sum(
+      'MINUS',
+      sum('ADD', sum('MINUS', pointerX(), middleX()), labelHalf(width())),
+      num(PAD),
+    ),
+    scrolled(),
+  );
+
+/**
+ * Put the bar where the click was — the scan the measuring seam exists for.
+ *
+ * WALKING THE PREFIXES is the only honest way: a proportional font has no
+ * character width to divide by, so which letter a pixel falls on is a question
+ * only measurement answers. It asks for the width of the first one character,
+ * the first two, and so on, and stops at the boundary NEAREST the click —
+ * which is why the test compares the midpoint of the next character rather
+ * than its far edge. Clicking the right half of a letter puts the bar after
+ * it, which is what every text field does and what a hand expects.
+ *
+ * Doubling both sides is how the midpoint is said without a division:
+ * `(w(n) + w(n+1)) / 2 ≤ x` is `w(n) + w(n+1) ≤ 2x`.
+ *
+ * One measurement per character, of a line short enough to fit a field, once
+ * per click. The loop stops at the first boundary past the click rather than
+ * walking the rest of the line to no purpose.
+ */
+const placesTheCaret = () => [
+  setCaret(num(0)),
+  {
+    type: 'controls_repeat_ext',
+    inputs: {
+      TIMES: length(),
+      DO: {
+        block: {
+          type: 'controls_if',
+          extraState: {hasElse: true},
+          inputs: {
+            IF0: compare(
+              'LTE',
+              sum(
+                'ADD',
+                widthTo(caretAt()),
+                widthTo(sum('ADD', caretAt(), num(1))),
+              ),
+              sum('MULTIPLY', num(2), clickedAt()),
+            ),
+            DO0: {block: setCaret(sum('ADD', caretAt(), num(1)))},
+            ELSE: {
+              block: {
+                type: 'controls_flow_statements',
+                fields: {FLOW: 'BREAK'},
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+];
+
+/** `set ⟨scroll⟩ of this actor to ⟨n⟩`. */
+const setScroll = (to: object) => ({
+  type: 'world_set_ActorsTextInput_ScrollProperty',
+  inputs: {ACTOR: me(), VALUE: to},
 });
 
 /** `⟨scroll⟩ of this actor` — how far left the words are pushed. */
@@ -161,8 +340,8 @@ const scrolled = () => ({
 /** Where the words start, which is the inset less however far they slid. */
 const textLeft = () => sum('MINUS', num(PAD), scrolled());
 
-/** …and where the caret goes: straight after them. */
-const caretLeft = () => sum('ADD', textLeft(), shown());
+/** …and where the bar goes: after the characters BEFORE it, not after all. */
+const caretLeft = () => sum('ADD', textLeft(), widthTo(caretAt()));
 
 /**
  * `⟨focused⟩ and ⟨the first half of each second⟩` — when the bar is drawn.
@@ -199,17 +378,27 @@ const blinking = () => ({
   },
 });
 
+/** Where the bar is, measured from the left edge of the words. */
+const caretWidth = () => widthTo(caretAt());
+
 /**
- * `each frame`: slide the words so the caret is inside the box.
+ * `each frame`: slide the words so the CARET is inside the box.
  *
- * Zero while what is typed fits, and exactly the overflow once it does not —
- * so a field fills up and then scrolls, rather than typing into thin air past
- * its own edge.
+ * Not the end of the text — that was enough while the caret could only be at
+ * the end, and stops being enough the moment an arrow key walks it back. Three
+ * cases, and each is one comparison:
  *
- * A STEP AND A PROPERTY rather than the same sum written twice in the drawing.
- * The drawing needs it in two places (where the words start, and where the
- * caret goes), the sum is four blocks, and a value the actor CARRIES is one an
- * inspector can show and a project can read.
+ *   the bar is off the LEFT   → bring the words to it;
+ *   the bar is off the RIGHT  → bring the words back by the overflow;
+ *   there is SLACK at the right → pull the words right until there is none,
+ *                                 or to nothing at all if the line now fits.
+ *
+ * The third is what stops a field staying scrolled after its text is deleted,
+ * which the two-case version did: it only ever pushed left.
+ *
+ * A STEP AND A PROPERTY rather than the same sums written into the drawing.
+ * The drawing needs the answer in two places (where the words start, and where
+ * the bar goes), and a value the actor CARRIES is one an inspector can show.
  */
 const slidesToShowTheCaret = () => ({
   type: 'world_trait_step',
@@ -217,24 +406,30 @@ const slidesToShowTheCaret = () => ({
   inputs: {
     DO: {
       block: {
-        type: 'world_set_ActorsTextInput_ScrollProperty',
+        type: 'controls_if',
+        extraState: {elseIfCount: 2},
         inputs: {
-          ACTOR: me(),
-          VALUE: {
-            block: {
-              type: 'logic_ternary',
-              inputs: {
-                IF: {
-                  block: {
-                    type: 'logic_compare',
-                    fields: {OP: 'GT'},
-                    inputs: {A: shown(), B: column()},
-                  },
+          // Off the left: the words have been pushed further than the bar.
+          IF0: compare('LT', caretWidth(), scrolled()),
+          DO0: {block: setScroll(caretWidth())},
+          // Off the right: past the far edge of the room the words have.
+          IF1: compare('GT', sum('MINUS', caretWidth(), scrolled()), column()),
+          DO1: {block: setScroll(sum('MINUS', caretWidth(), column()))},
+          // …and slack, which is the case that lets a shortened line come
+          // back. Nothing to come back to when the whole line fits, so the
+          // answer is zero rather than a negative push.
+          IF2: compare('LT', sum('MINUS', shown(), scrolled()), column()),
+          DO2: {
+            block: setScroll({
+              block: {
+                type: 'logic_ternary',
+                inputs: {
+                  IF: compare('GT', shown(), column()),
+                  THEN: sum('MINUS', shown(), column()),
+                  ELSE: {block: {type: 'math_number', fields: {NUM: 0}}},
                 },
-                THEN: sum('MINUS', shown(), column()),
-                ELSE: {block: {type: 'math_number', fields: {NUM: 0}}},
               },
-            },
+            }),
           },
         },
       },
@@ -255,7 +450,11 @@ export const textInputActor = actorFile(
     // comes from and how Tab reaches this field at all.
     useTrait('Tab Navigation#CanBeFocusedTrait'),
     showAs('input'),
-    // How far left the words are pushed so the caret stays in the box. Kept by
+    // WHERE THE TYPING GOES, counted in characters before it. Everything else
+    // about editing is arithmetic on this: typing inserts here, backspace
+    // takes the character before it, and the arrows move it.
+    defineProperty('number', 'caret', '0'),
+    // …and how far left the words are pushed so it stays in the box. Kept by
     // the step below, read twice by the drawing.
     defineProperty('number', 'scroll', '0'),
     defineEvent('changed'),
@@ -277,73 +476,94 @@ export const textInputActor = actorFile(
   ],
   {
     handlers: [
-      // A click on this one: take the typing. ONE statement, where it used to
-      // be a clear on every field and a set on this one, ordered against each
-      // other — `take the focus` releases whoever had it as part of taking it.
+      // A click chooses this field AND says where in it. Two statements for
+      // two questions: which control the keyboard goes to, and where in this
+      // one the next letter lands.
       {
         type: 'world_on_Mouse_IsClickedWithEvent',
         fields: {FILTER0: ''},
         inputs: {ACTOR: me()},
-        next: {block: takeFocus()},
+        next: {
+          block: chain([takeFocus(), ...placesTheCaret()]),
+        },
       },
-      // A character, appended — but only if this is the field being typed at.
+      // A character, inserted where the bar is — not appended. Appending is
+      // what a field does until somebody clicks into the middle of what they
+      // typed, which is the first thing anybody does after a typo.
       {
         type: 'world_on_Input_TypesEvent',
         inputs: {ACTOR: me()},
         next: {
           block: onlyIf(focused(), [
-            setText('TextProperty', {
-              block: {
-                type: 'world_as_text',
-                inputs: {
-                  VALUE: held(),
-                  ADD: {
-                    block: {
-                      type: 'world_as_text',
-                      inputs: {VALUE: {block: {type: 'world_event_value'}}},
-                    },
-                  },
-                },
-              },
-            }),
+            setText(
+              'TextProperty',
+              joined([
+                upTo(caretAt()),
+                {block: {type: 'world_event_value'}},
+                from(sum('ADD', caretAt(), num(1))),
+              ]),
+            ),
+            setCaret(sum('ADD', caretAt(), num(1))),
             emitChanged(),
           ]),
         },
       },
-      // …and backspace, which makes no character and so is a KEY.
+      // …and backspace, which makes no character and so is a KEY. It takes the
+      // one BEFORE the bar and moves the bar back over the gap.
       {
         type: 'world_on_Input_PressesEvent',
         fields: {FILTER0: 'backspace'},
         inputs: {ACTOR: me()},
         next: {
-          block: onlyIf(focused(), [
-            setText('TextProperty', {
-              block: {
-                type: 'text_getSubstring',
-                fields: {WHERE1: 'FROM_START', WHERE2: 'FROM_START'},
-                inputs: {
-                  STRING: held(),
-                  AT1: {block: {type: 'math_number', fields: {NUM: 1}}},
-                  // One shorter. At zero this is the empty string, so an empty
-                  // field backspaced is still an empty field rather than an
-                  // error — which is what a reader expects and what
-                  // `firstCharacters` already does at the other end.
-                  AT2: {
-                    block: {
-                      type: 'math_arithmetic',
-                      fields: {OP: 'MINUS'},
-                      inputs: {
-                        A: {
-                          block: {type: 'text_length', inputs: {VALUE: held()}},
-                        },
-                        B: {shadow: {type: 'math_number', fields: {NUM: 1}}},
-                      },
-                    },
-                  },
-                },
-              },
-            }),
+          block: onlyIf(both(focused(), compare('GT', caretAt(), num(0))), [
+            setText(
+              'TextProperty',
+              joined([
+                upTo(sum('MINUS', caretAt(), num(1))),
+                from(sum('ADD', caretAt(), num(1))),
+              ]),
+            ),
+            setCaret(sum('MINUS', caretAt(), num(1))),
             emitChanged(),
+          ]),
+        },
+      },
+      // …and delete, which is the same edit read the other way: it takes the
+      // character AFTER the bar and leaves the bar where it is.
+      {
+        type: 'world_on_Input_PressesEvent',
+        fields: {FILTER0: 'delete'},
+        inputs: {ACTOR: me()},
+        next: {
+          block: onlyIf(both(focused(), compare('LT', caretAt(), length())), [
+            setText(
+              'TextProperty',
+              joined([upTo(caretAt()), from(sum('ADD', caretAt(), num(2)))]),
+            ),
+            emitChanged(),
+          ]),
+        },
+      },
+      // The arrows walk the bar. They do not wrap and they do not run off
+      // either end: a caret at the start that answered a left arrow by going
+      // negative would put every later sum out by one, silently.
+      {
+        type: 'world_on_Input_PressesEvent',
+        fields: {FILTER0: 'left arrow'},
+        inputs: {ACTOR: me()},
+        next: {
+          block: onlyIf(both(focused(), compare('GT', caretAt(), num(0))), [
+            setCaret(sum('MINUS', caretAt(), num(1))),
+          ]),
+        },
+      },
+      {
+        type: 'world_on_Input_PressesEvent',
+        fields: {FILTER0: 'right arrow'},
+        inputs: {ACTOR: me()},
+        next: {
+          block: onlyIf(both(focused(), compare('LT', caretAt(), length())), [
+            setCaret(sum('ADD', caretAt(), num(1))),
           ]),
         },
       },
