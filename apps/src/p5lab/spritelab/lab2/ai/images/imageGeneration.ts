@@ -7,7 +7,7 @@ import {
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
 
-import {checkImageSafety, checkPromptSafety} from './imageSafety';
+import {checkImageSafety, checkPromptSafety, markHandled} from './imageSafety';
 import {
   ASSUMED_BLOCK,
   ImageSize,
@@ -129,6 +129,8 @@ export interface GeneratedImageResult {
 export interface RawImage {
   uint8Array: Uint8Array;
   mediaType: string;
+  /** The same bytes as the gateway sent them, for the safety judges. */
+  base64: string;
 }
 
 export interface ImageRequest {
@@ -153,34 +155,41 @@ export async function requestImage(
   request: ImageRequest
 ): Promise<RawImage> {
   const references = request.references || [];
-  const {files} = await generateText({
-    model: request.model || getImageModel(),
-    messages: [
-      {
-        role: 'user',
-        content: references.length
-          ? [
-              ...references.map(image => ({type: 'image' as const, image})),
-              {type: 'text' as const, text},
-            ]
-          : text,
-      },
-    ],
-    seed: request.seed,
-    ...(request.temperature !== undefined && {
-      temperature: request.temperature,
-    }),
-    providerOptions: imageProviderOptions(
-      request.imageSize || SINGLE_IMAGE_SIZE
-    ),
-  });
+  const {files} = await generateText(
+    {
+      model: request.model || getImageModel(),
+      messages: [
+        {
+          role: 'user',
+          content: references.length
+            ? [
+                ...references.map(image => ({type: 'image' as const, image})),
+                {type: 'text' as const, text},
+              ]
+            : text,
+        },
+      ],
+      seed: request.seed,
+      ...(request.temperature !== undefined && {
+        temperature: request.temperature,
+      }),
+      providerOptions: imageProviderOptions(
+        request.imageSize || SINGLE_IMAGE_SIZE
+      ),
+    },
+    {phase: 'generation'}
+  );
 
   const images = files.filter(f => f.mediaType.startsWith('image/'));
   const imageFile = images[images.length - 1];
   if (!imageFile) {
     throw new Error('No image was generated');
   }
-  return {uint8Array: imageFile.uint8Array, mediaType: imageFile.mediaType};
+  return {
+    uint8Array: imageFile.uint8Array,
+    mediaType: imageFile.mediaType,
+    base64: imageFile.base64,
+  };
 }
 
 export function rawImageToBlob(raw: RawImage): Blob {
@@ -234,10 +243,8 @@ export async function generateImage(
     throw rawResult.reason;
   }
   const raw = rawResult.value;
-  // Judge the pixels while the local pipeline crops and downscales them; the
-  // catch only marks the rejection handled — the awaits below still throw.
-  const imageVerdict = checkImageSafety(raw);
-  imageVerdict.catch(() => {});
+  // Judge the pixels while the local pipeline crops and downscales them.
+  const imageVerdict = markHandled(checkImageSafety(raw));
 
   const generation: ImageGenerationMetadata = {
     prompt,

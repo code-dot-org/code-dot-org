@@ -24,7 +24,7 @@ import {
   requestImage,
   styleClause,
 } from './imageGeneration';
-import {checkImageSafety, checkPromptSafety} from './imageSafety';
+import {checkImageSafety, checkPromptSafety, markHandled} from './imageSafety';
 import {chooseKeyColor, KeyColor} from './keyColor';
 import {
   CHARACTER_SET_IMAGE_SIZE,
@@ -288,18 +288,12 @@ export async function generateCharacterSet(
     bytesToDataURI(new Uint8Array(await blob.arrayBuffer()), 'image/png');
 
   // The prompt judge runs while the base picture draws; its verdict gates
-  // everything after (the posed frames embed the same student text). The
-  // catch only marks a rejection handled — the await below still throws.
-  const promptVerdict = checkPromptSafety(prompt);
-  promptVerdict.catch(() => {});
+  // everything after (the posed frames embed the same student text).
+  const promptVerdict = markHandled(checkPromptSafety(prompt));
   // Judge every generated frame. Each verdict is awaited before that
-  // frame's preview shows, so flagged pixels never reach the progress UI;
-  // the catch marks a rejection handled while keying overlaps the judge.
-  const judgeFrame = (raw: RawImage): Promise<void> => {
-    const verdict = checkImageSafety(raw);
-    verdict.catch(() => {});
-    return verdict;
-  };
+  // frame's preview shows, so flagged pixels never reach the progress UI.
+  const judgeFrame = (raw: RawImage): Promise<void> =>
+    markHandled(checkImageSafety(raw));
 
   onProgress?.({done: 0, total, label: 'the character'});
   const base = await requestFrameWithRetry(

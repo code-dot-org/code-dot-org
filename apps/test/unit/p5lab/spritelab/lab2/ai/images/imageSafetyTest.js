@@ -1,5 +1,5 @@
 import {
-  isImageSafe,
+  checkGeneratedImageSafety,
   isTextSafe,
 } from '@cdo/apps/aichat/api/client/helpers/safetyHelpers';
 import DCDO from '@cdo/apps/dcdo';
@@ -7,20 +7,29 @@ import {
   checkImageSafety,
   checkPromptSafety,
   ImageSafetyError,
+  markHandled,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageSafety';
 
 jest.mock('@cdo/apps/aichat/api/client/helpers/safetyHelpers', () => ({
   isTextSafe: jest.fn(),
-  isImageSafe: jest.fn(),
+  checkGeneratedImageSafety: jest.fn(),
 }));
 jest.mock('@cdo/apps/dcdo', () => ({get: jest.fn()}));
 
-const raw = {uint8Array: new Uint8Array([1, 2, 3]), mediaType: 'image/png'};
+const raw = {
+  uint8Array: new Uint8Array([1, 2, 3]),
+  mediaType: 'image/png',
+  base64: btoa('\x01\x02\x03'),
+};
 
 describe('SpriteLab2 image safety checks', () => {
   beforeEach(() => {
     jest.clearAllMocks();
     DCDO.get.mockReturnValue(true);
+    checkGeneratedImageSafety.mockResolvedValue({
+      moderation: 'safe',
+      judge: 'ok',
+    });
   });
 
   it('a safe prompt passes', async () => {
@@ -36,34 +45,62 @@ describe('SpriteLab2 image safety checks', () => {
     expect(error.phase).toBe('prompt');
   });
 
-  it('a safe image passes, judged from its bytes', async () => {
-    isImageSafe.mockResolvedValue(true);
+  it('a prompt-judge failure propagates — the check fails closed', async () => {
+    isTextSafe.mockRejectedValue(new Error('judge down'));
+    await expect(checkPromptSafety('anything')).rejects.toThrow('judge down');
+  });
+
+  it('a safe image passes, sent with the bytes the gateway returned', async () => {
     await expect(checkImageSafety(raw)).resolves.toBeUndefined();
-    expect(isImageSafe).toHaveBeenCalledWith(
-      expect.objectContaining({
-        base64: btoa('\x01\x02\x03'),
-        mediaType: 'image/png',
-      })
+    expect(checkGeneratedImageSafety).toHaveBeenCalledWith(
+      expect.objectContaining({base64: raw.base64, mediaType: 'image/png'}),
+      {appName: 'spritelab', runLlmJudge: true}
     );
   });
 
-  it('a flagged image throws with the image phase', async () => {
-    isImageSafe.mockResolvedValue(false);
+  it('a moderation-flagged image throws with the image phase', async () => {
+    checkGeneratedImageSafety.mockResolvedValue({
+      moderation: 'flagged',
+      judge: 'ok',
+    });
     const error = await checkImageSafety(raw).catch(e => e);
     expect(error).toBeInstanceOf(ImageSafetyError);
     expect(error.phase).toBe('image');
   });
 
-  it('a judge failure propagates — the check fails closed', async () => {
-    isTextSafe.mockRejectedValue(new Error('judge down'));
-    await expect(checkPromptSafety('anything')).rejects.toThrow('judge down');
+  it('a judge-flagged image throws with the image phase', async () => {
+    checkGeneratedImageSafety.mockResolvedValue({
+      moderation: 'safe',
+      judge: 'flagged',
+    });
+    await expect(checkImageSafety(raw)).rejects.toBeInstanceOf(
+      ImageSafetyError
+    );
   });
 
-  it('the kill switch skips both judges', async () => {
+  it('a moderation error fails closed without flagging the student', async () => {
+    checkGeneratedImageSafety.mockResolvedValue({
+      moderation: 'error',
+      judge: 'ok',
+    });
+    const error = await checkImageSafety(raw).catch(e => e);
+    expect(error).not.toBeInstanceOf(ImageSafetyError);
+    expect(error.message).toMatch(/safety check failed/);
+  });
+
+  it('the kill switch skips the LLM judges but never Azure', async () => {
     DCDO.get.mockReturnValue(false);
     await checkPromptSafety('anything');
-    await checkImageSafety(raw);
     expect(isTextSafe).not.toHaveBeenCalled();
-    expect(isImageSafe).not.toHaveBeenCalled();
+    await checkImageSafety(raw);
+    expect(checkGeneratedImageSafety).toHaveBeenCalledWith(
+      expect.anything(),
+      expect.objectContaining({runLlmJudge: false})
+    );
+  });
+
+  it('markHandled returns the promise still rejecting when awaited', async () => {
+    const failure = markHandled(Promise.reject(new Error('boom')));
+    await expect(failure).rejects.toThrow('boom');
   });
 });

@@ -13,6 +13,7 @@ jest.mock('@cdo/apps/aiGateway', () => ({
 jest.mock('@cdo/apps/p5lab/spritelab/lab2/ai/images/imageSafety', () => ({
   checkPromptSafety: jest.fn().mockResolvedValue(undefined),
   checkImageSafety: jest.fn().mockResolvedValue(undefined),
+  markHandled: jest.fn(promise => promise),
 }));
 
 const mockGenerateText = generateText as jest.Mock;

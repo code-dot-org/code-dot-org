@@ -81,11 +81,9 @@ export async function isTextSafe(
 }
 
 /**
- * Invokes an LLM to determine if the given image is safe.
+ * Invokes an LLM to determine if the given image is safe. Always judges;
+ * gating is the caller's concern.
  */
-// Callers decide whether the judge runs (aichat gates on
-// isOutputImageLlmSafetyJudgeEnabled; Sprite Lab in Lab2 has its own flag),
-// so an unconditional call here always judges.
 export async function isImageSafe(
   file: GeneratedFile,
   customSafetyConfig?: Partial<SafetyConfig>
@@ -126,7 +124,8 @@ export async function isImageSafe(
 
 export async function getImageModerationStatus(
   file: GeneratedFile,
-  assetUrl: string
+  assetUrl?: string,
+  appName = 'aichat'
 ): Promise<'safe' | 'flagged' | 'error'> {
   const {filename, fileBuffer, mediaType} = prepareGeneratedFile(
     file,
@@ -135,7 +134,7 @@ export async function getImageModerationStatus(
   const image = new File([fileBuffer], filename, {type: mediaType});
   const moderationStatus = await moderateImage(
     image,
-    'aichat',
+    appName,
     {
       moderateEvent: EVENTS.MODERATE_MODEL_OUTPUT_IMAGE_AZURE,
       flaggedEvent: EVENTS.FLAGGED_MODEL_OUTPUT_IMAGE_AZURE,
@@ -145,4 +144,40 @@ export async function getImageModerationStatus(
     {Violence: 2}
   );
   return moderationStatus;
+}
+
+/**
+ * The output-image safety stack shared by every image-generating lab: Azure
+ * moderation always, plus the LLM judge when the caller's flag says so, run
+ * concurrently. The caller maps the outcomes to its own statuses. Interim
+ * arrangement — moderation is intended to move into the gateway worker, at
+ * which point this helper and its call sites retire.
+ */
+export async function checkGeneratedImageSafety(
+  file: GeneratedFile,
+  options: {appName?: string; assetUrl?: string; runLlmJudge: boolean}
+): Promise<{
+  moderation: 'safe' | 'flagged' | 'error';
+  judge: 'ok' | 'flagged' | 'error' | 'skipped';
+}> {
+  const checks: [
+    ReturnType<typeof getImageModerationStatus>,
+    ReturnType<typeof isImageSafe>?
+  ] = [getImageModerationStatus(file, options.assetUrl, options.appName)];
+  if (options.runLlmJudge) {
+    checks.push(isImageSafe(file));
+  }
+  const [moderationResult, judgeResult] = await Promise.allSettled(checks);
+  const moderation =
+    moderationResult.status === 'fulfilled' ? moderationResult.value : 'error';
+  let judge: 'ok' | 'flagged' | 'error' | 'skipped' = 'skipped';
+  if (judgeResult !== undefined) {
+    judge =
+      judgeResult.status === 'fulfilled'
+        ? judgeResult.value
+          ? 'ok'
+          : 'flagged'
+        : 'error';
+  }
+  return {moderation, judge};
 }
