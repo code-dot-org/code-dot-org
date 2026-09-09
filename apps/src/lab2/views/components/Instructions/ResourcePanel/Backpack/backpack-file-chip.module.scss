@@ -1,6 +1,10 @@
+$chip-height: 41px;
+// Accounts for 1px border on each side.
+$icon-height: $chip-height - 2px;
+
 .backpackFileChip {
   display: flex;
-  height: 52px;
+  height: $chip-height;
   align-items: flex-start;
   border-radius: var(--border-radius-br-s, 4px);
   border: 1px solid var(--borders-neutral-primary);
@@ -11,8 +15,8 @@
 
 .fileIconContainer {
   display: flex;
-  width: 50px;
-  height: 50px;
+  width: $icon-height;
+  height: $icon-height;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -40,6 +44,14 @@
   min-width: 0;
 }
 
+.fileNameRow {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  min-width: 0;
+}
+
 // Duplicate class name to increase specificity, otherwise the typography component
 // may apply an unnecessary bottom margin.
 .infoText.infoText {
@@ -48,8 +60,29 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   display: block;
-  width: 100%;
-  min-width: 0; 
+  width: auto;
+  min-width: 0;
+}
+
+.sourceInfoButton {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  background: none;
+
+  &:focus-visible {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: 2px;
+    border-radius: 50%;
+  }
+}
+
+.sourceInfoIcon {
+  color: var(--text-neutral-quaternary);
+  font-size: 12px;
 }
 
 .fileActions {
@@ -61,7 +94,9 @@
 }
 
 .filePreview {
-  width: 50px;
-  height: 50px;
+  width: $icon-height;
+  height: $icon-height;
+  object-fit: cover;
   border-radius: var(--border-radius-br-s, 4px) 0 0 var(--border-radius-br-s, 4px);
+  background: var(--background-neutral-primary);
 }

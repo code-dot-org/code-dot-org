@@ -1,0 +1,59 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-07T16:26:01.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**Is this car safe?**\r\n\r\nThousands of parts go into a car. Factories have quality inspections, which either pass or fail these parts. A pass rate that’s too low might indicate a factory isn’t doing a good job. Use Python to analyze a factory’s inspections.\r\n\r\n☑️ Do This:\r\n- Count the number of \"Passed\" and \"Failed\" inspections in the \"status\" column of `data.csv`.\r\n- Interpret the data: Should this factory be trusted? Be ready to share your thoughts on the next level.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import csv\n\nfile = open(\"data.csv\")\nreader = csv.DictReader(file)\n\npassed = 0\nfailed = 0\n\n# TODO: Count the number of passed and failed inspections\n\nprint(f\"Passed: {passed}\")\nprint(f\"Failed: {failed}\")\n\nfile.close()",
+          "folderId": "0",
+          "active": true
+        },
+        "1": {
+          "id": "1",
+          "name": "data.csv",
+          "contents": "part,status\nP-1001,Passed\nP-1002,Passed\nP-1003,Passed\nP-1004,Failed\nP-1005,Passed\nP-1006,Passed\nP-1007,Passed\nP-1008,Passed\nP-1009,Failed\nP-1010,Passed\nP-1011,Failed\nP-1012,Failed\nP-1013,Failed\nP-1014,Passed\nP-1015,Failed\nP-1016,Failed\nP-1017,Failed\nP-1018,Failed\nP-1019,Failed\nP-1020,Passed\nP-1021,Failed\nP-1022,Failed\nP-1023,Failed\nP-1024,Failed\nP-1025,Passed\nP-1026,Failed\nP-1027,Failed\nP-1028,Failed\nP-1029,Failed\nP-1030,Failed\nP-1031,Passed\nP-1032,Failed\nP-1033,Failed\nP-1034,Failed\nP-1035,Failed\nP-1036,Passed\nP-1037,Failed\nP-1038,Failed\nP-1039,Failed\nP-1040,Failed\nP-1041,Failed\nP-1042,Passed\nP-1043,Failed\nP-1044,Failed\nP-1045,Passed\nP-1046,Failed\nP-1047,Failed\nP-1048,Failed\nP-1049,Passed\nP-1050,Failed",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFX9JcY0EP21afMHISj6uVQg4g+59OIzUb4pa2W4J\nrpgF4fJi2rLr0nr8WnSVq0386eA0D+Fr2XW/3W5uJDibTY5jGjLv7tFyR9YF\nne8KKaV0+5ayzDtAudRrXk3UZoMKZH7uVs193mvTr+gIctWnSWf+J0ufdEnt\nx6sQ/JlpuchuHV71VeubT7seEZqDm3ZMWEFNrWYOUKjOcdXeR0WOy4SETL2I\nL//ZT2Rr9Se85Pr7tyoc09rMkBORhb9xIwMQr93Yue17mHSENF0aVhpo9GeX\n3hOfkBwzmHUgsxIRdfRW+2UdEUfWreVWH6iizKI7//Tq+sA6/qn85GMlXvxy\nXquSFV6xtWOKD/QgENUvt9sxsu9ovPVYGxNYhpeadiQSeIEr9XdCfzXTRgfA\noMyLgssX9Zn2Ef1P/9y0LLBCgLkaPVwSQZ8oiEnUF0wWwvBRstrN3MZ4IeTT\nyMjJOvn5QEExz7uvBQgAUUWoEtg+P8yWOhS6UsEOF4NnHG8Y+fnBJZz7+Njz\n94XxA8kwLt69i/l1KWIbFcFrNNjdWZiwGzzlespXDLiAP/S8PmVz5gZ6aN+j\nKoY7NVFR9GWzhVs0Up+LmXEiAQAky33kbiwTgwGlpfcT/PCgEv+va5VpZR0l\nNv6SB83/OXjb7msHS2wstwpm8IltQJXx+7RbZdnTBnYboM5bzd2sTfOn6wn8\nmmWVQiWw1Uz35SoQmSJ4dT8Bk/fdUhNHxN/Dj/rrhCVFukiA4k80v6GHOCwz\nfRbX+I2XLwhRcMqTnN0S5dcfSgHA7L1K0JIxATO7h4j1R3RCxlloq8RbAu5l\nNuiGIRwTRV4+6Q4dXkYwqjIdN/JSrLc5WhAuf8hmQIo0/QYc1thOMZRt7fw2\niAkydGEEsutCqFsuQX7YnVayMMK+s0K3c1abJaKSF9ByjTNSKyY0AM0FF6MF\nyPvpb/Za2r8uOj5xbbzFRUL8PuB+vCRL+7mqLo/DIGckj/pxmbFihLg9ZR9G\nzzCiNV+KlyYuJUiVEb4QMZMa8mSSuAghOeSrfLEZyhNi2l5nMySHZVkJ9UNY\nB7plHyWszcPXJSX63rDmtoyzJT/KCCyHY+qYMRBtbqL3BCjT5e4ru55DRkFh\nyQORxcaMWFf1yXWsS5DR6W+LWfFTnzFIqDyaA++F00YDJ8UXIb7CyBD0GJmf\n7R3jRsr7VH5EmAgTb+2GxNigE+SrX5M9xqCyGcjQD52kmGHc0FvGsTPtIHIN\nvaAqNlliIJDeNNki+6x3KCoHkq1g/E5Cy7bwIY2gN6pUrGuk6lcBCY4kVewE\nvGEC/BEtZMNlbXv4Ds5fHy4t99wYsdxg64JEWcdllYzWQkJmE0fsDYR0aNTV\nWQJQfb4GaHSv3Nv4R9juRWu7D0SlhaYt6zrPDesz+jbodDGaJvHbejseQ6iR\nzdJ1uN3FeLyYYNzu6L33mH0ISMdPLVU83DIFIqlCD3y0BwEL7on2pP+bshCs\nC4NQsK8IcfuWdWr3oDSg1rv/5F9L7T2QwWj37CO+k+sBipmbuJWm9Fc6Z68G\n/uhCtA+oP4/FGpj8U0eK86vZrPU0/q3nXZSEtIXu+iI29foDpldsKbZXbmvM\nRrnX6hOVTxSRur19+WHokK8HCvYwm3miplP8unk4BzLY\n",
+    "display_name": "Making Cars",
+    "thumbnail_url": "https://images.code.org/2600bd6a33a3e90fb0e59ebcaf021a64-cars.jpg",
+    "bubble_choice_description": "Analyze a factory's production of car parts."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-07 16:29:24 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:34:06 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:34:32 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:35:13 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:39:06 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:39:09 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:39:11 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:46:20 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:46:23 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:47:34 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

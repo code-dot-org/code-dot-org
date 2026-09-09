@@ -1,9 +1,8 @@
 require 'base64'
-require 'cdo/rack/request'
 
 # Create a storage id without an associated user id and track it using a cookie.
 def create_storage_id_cookie
-  storage_id = create_storage_id_for_user(anon_user_id: request.anon_user_id)
+  storage_id = create_storage_id_for_user(nil)
 
   response.set_cookie(
     storage_id_cookie_name,
@@ -214,9 +213,9 @@ def update_annoymous_user_storage_id(storage_id, user_id)
   user_storage_ids_table.where(id: storage_id, user_id: nil).update(user_id: user_id)
 end
 
-def create_storage_id_for_user(user_id = nil, anon_user_id: nil)
+def create_storage_id_for_user(user_id)
   # We don't have any existing storage id we can associate with this user, so create a new one
-  user_storage_ids_table.insert(user_id:, anon_user_id:)
+  user_storage_ids_table.insert(user_id: user_id)
 rescue Sequel::UniqueConstraintViolation
   # We lost a race against someone performing the same operation. The row
   # we're looking for should now be in the database.
