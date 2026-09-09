@@ -1,0 +1,144 @@
+name: Check for warnings and deploy requirements
+
+on:
+  # Run on any pull request into the trunk branch
+  pull_request:
+    types: [opened, synchronize]
+    branches:
+      - staging
+
+jobs:
+  check-files:
+    runs-on: ubuntu-latest
+
+    # Reading the PR's files and posting a comment. Nothing else.
+    permissions:
+      pull-requests: write
+      issues: write
+
+    steps:
+    - name: Check for file changes that must be deployed manually
+      id: check_manual_deploy
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const prFiles = await github.paginate(github.rest.pulls.listFiles, {
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            pull_number: context.issue.number
+          });
+          const changed = prFiles.map(file => file.filename);
+
+          // Post a comment unless one carrying the same prefix is already on the PR,
+          // so that pushing more commits doesn't repeat a warning.
+          const postOnce = async (prefix, body) => {
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number
+            });
+            if (comments.some(comment => comment.body.includes(prefix))) return;
+            await github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: prefix + " " + body
+            });
+          };
+
+          if (changed.includes('aws/dms/tasks.yml')) {
+            await postOnce(
+              "[WARN: DMS Config Modified]",
+              "This PR modifies the `aws/dms/tasks.yml` file. These changes must be deployed manually by @code-dot-org/infrastructure before merging."
+            );
+          }
+
+          // Stacks that the regular deploy never touches. They are applied by hand
+          // with `rake stack:<name>`, so merging one of these without scheduling the
+          // deploy leaves the template and the live stack out of step.
+          const handDeployedStacks = [
+            'aws/cloudformation/data.yml.erb',
+            'aws/cloudformation/vpc.yml.erb',
+            'aws/cloudformation/iam.yml.erb',
+          ];
+          const stacksModified = changed.filter(name => handDeployedStacks.includes(name)).sort();
+
+          if (stacksModified.length > 0) {
+            await postOnce(
+              "[WARN: Manually Deployed Stack Modified]",
+              "This PR modifies CloudFormation stacks that are deployed by hand:\n\n" +
+                stacksModified.map(name => "- `" + name + "`").join("\n") +
+                "\n\nThese stacks own databases, networking and instance roles. " +
+                "@code-dot-org/infrastructure must apply them with `rake stack:<name>`; the regular deploy will not."
+            );
+          }
+
+    - name: Check for file changes that may reboot or recreate cloud resources
+      id: check_disruptive_infra
+      uses: actions/github-script@v7
+      with:
+        script: |
+          // Files rendered into the application stack, where an update can
+          // interrupt service rather than roll through it.
+          //
+          // bootstrap_chef_stack.sh.erb becomes the UserData of the daemon and
+          // console instances. Both are EBS-backed, so CloudFormation stops and
+          // restarts them to apply a UserData change.
+          //
+          // The stack and its components also carry properties that CloudFormation
+          // treats as immutable (BlockDeviceMappings, for one), where an update
+          // deletes and recreates the resource instead.
+          //
+          // Frontend replacement is deliberately not warned about: every code
+          // deploy replaces the frontends, and the auto scaling group rolls them
+          // without an outage.
+          const watched = [
+            'aws/cloudformation/bootstrap_chef_stack.sh.erb',
+            'aws/cloudformation/cloud_formation_stack.yml.erb',
+          ];
+          const watchedPrefixes = [
+            'aws/cloudformation/components/',
+          ];
+
+          const prFiles = await github.paginate(github.rest.pulls.listFiles, {
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            pull_number: context.issue.number
+          });
+
+          const matched = prFiles
+            .map(file => file.filename)
+            // Documentation is never rendered into a template.
+            .filter(name => !name.endsWith('.md'))
+            .filter(name =>
+              watched.includes(name) ||
+              watchedPrefixes.some(prefix => name.startsWith(prefix))
+            )
+            .sort();
+
+          // Post a comment unless one carrying the same prefix is already on the PR,
+          // so that pushing more commits doesn't repeat a warning.
+          const postOnce = async (prefix, body) => {
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number
+            });
+            if (comments.some(comment => comment.body.includes(prefix))) return;
+            await github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: prefix + " " + body
+            });
+          };
+
+          if (matched.length > 0) {
+            await postOnce(
+              "[WARN: Disruptive Infrastructure Change]",
+              "This PR modifies CloudFormation stack inputs:\n\n" +
+                matched.map(name => "- `" + name + "`").join("\n") +
+                "\n\nApplying these changes may reboot servers or recreate cloud resources. " +
+                "Review the changeset with @code-dot-org/infrastructure and plan the deploy before merging."
+            );
+          }
