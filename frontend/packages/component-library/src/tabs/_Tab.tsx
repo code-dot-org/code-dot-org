@@ -130,7 +130,7 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
         isIconOnly && moduleStyles.iconOnlyTab,
       )}
       onClick={handleClick}
-      disabled={disabled}
+      aria-disabled={disabled || undefined}
     >
       {buttonContent}
       {isClosable && (
