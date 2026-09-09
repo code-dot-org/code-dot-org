@@ -447,8 +447,12 @@ class ApplicationController < ActionController::Base
     redirect_to lti_v1_account_linking_landing_path
   end
 
+  # Creates a statsig stable id for use of signed-out user tracking.
+  # This cookie is used by the Statsig SDK for both JS and Ruby.
   protected def initialize_statsig_stable_id
-    request.statsig_stable_id
+    existing_stable_id = cookies[:statsig_stable_id]
+    session[:statsig_stable_id] = existing_stable_id if existing_stable_id.present?
+    session[:statsig_stable_id] ||= AnonUserId.generate
   end
 
   private def pairing_still_enabled
