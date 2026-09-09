@@ -198,25 +198,19 @@ export function animationNames(list: RuntimeAnimationList): Set<string> {
 }
 
 /**
- * The list restricted to animations a program can put on stage: those whose
- * name appears as a quoted literal in the compiled code (block fields
- * compile to literals — costumes, backgrounds and world spawns alike).
- *
- * This scan is complete only because the lab's block set keeps image-name
- * parameters as literal fields; no block computes an image name today. If
- * one ever does, the on-demand decode wrappers in SpriteLab2Engine are the
- * fallback — the image decodes late instead of never.
+ * The list restricted to the given animation names: the ones the program's
+ * generators registered while it compiled (imageReferences.ts), so the
+ * scene preload decodes exactly what the scene can put on stage. A name a
+ * program builds at runtime (no block does today) decodes on demand instead
+ * — the setAnimation wrapper in SpriteLab2Engine.
  */
-export function filterAnimationsToCode(
+export function filterAnimationsToNames(
   list: RuntimeAnimationList,
-  code: string
+  names: Set<string>
 ): RuntimeAnimationList {
   const orderedKeys = (list.orderedKeys || []).filter(key => {
     const name = list.propsByKey[key]?.name;
-    if (!name) {
-      return false;
-    }
-    return code.includes(`"${name}"`) || code.includes(`'${name}'`);
+    return !!name && names.has(name);
   });
   const propsByKey: RuntimeAnimationList['propsByKey'] = {};
   orderedKeys.forEach(key => {

@@ -27,7 +27,7 @@ import {
 } from './characterAnimations';
 import {
   animationNames,
-  filterAnimationsToCode,
+  filterAnimationsToNames,
   loadedAnimations,
   trimAnimationListImages,
 } from './imageTrim';
@@ -121,6 +121,10 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.showMobileControls = NOOP;
     this.debuggerEnabled = false;
     this.userCode = '';
+    // Image names the current program's compile registered
+    // (imageReferences.ts): the preload's scope. Null — a program set
+    // without a collected compile — preloads everything rather than guess.
+    this.referencedImages = null;
     // Scene-jump handlers, set by the view (it compiles the target and
     // re-runs).
     this.onGoToScene = null;
@@ -493,8 +497,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     );
   }
 
-  setCode(code) {
+  setCode(code, referencedImages) {
     this.userCode = code || '';
+    this.referencedImages = referencedImages || null;
   }
 
   sceneLooksLikePlatformer_() {
@@ -503,9 +508,9 @@ export default class SpriteLab2Engine extends SpriteLab {
   }
 
   /** Run the given compiled JS program from scratch (creates/recreates p5). */
-  run(code) {
+  run(code, referencedImages) {
     if (code !== undefined) {
-      this.setCode(code);
+      this.setCode(code, referencedImages);
     }
     this.execute();
   }
@@ -515,9 +520,9 @@ export default class SpriteLab2Engine extends SpriteLab {
    * via execute(); after that it re-runs inside the existing p5 — recreating
    * p5 per edit flickers and races its own async preload callbacks.
    */
-  runProgram(code) {
+  runProgram(code, referencedImages) {
     if (code !== undefined) {
-      this.setCode(code);
+      this.setCode(code, referencedImages);
     }
     // A second execute() while the first's preload is pending crashes the
     // interpreter (getScope); defer and re-run with the latest code after.
@@ -731,18 +736,21 @@ export default class SpriteLab2Engine extends SpriteLab {
     return this.preloadTrimmedImages_(getStore().getState().animationList);
   }
 
-  // Decode only what this scene's program can put on stage, then preload
-  // the images whose data has arrived; one without would just make p5 log
-  // an error. A jump to another scene re-preloads behind its fade, and a
-  // name the code never mentions as a literal decodes on demand (the
-  // setAnimation wrapper in createLibrary).
+  // Decode only what this scene's program references — the names its
+  // compile registered (imageReferences.ts) — then preload the images whose
+  // data has arrived; one without would just make p5 log an error. A jump
+  // to another scene re-preloads behind its fade, and a name the compile
+  // never saw (one built at runtime) decodes on demand (the setAnimation
+  // wrapper in createLibrary). An uncollected program preloads everything.
   async preloadTrimmedImages_(animationList) {
     // This preload sees every image the scene can use; the watch has
     // nothing to recover.
     if (this.areAnimationsReady_()) {
       this.clearLateImagesWatch_();
     }
-    const scoped = filterAnimationsToCode(animationList, this.userCode || '');
+    const scoped = this.referencedImages
+      ? filterAnimationsToNames(animationList, this.referencedImages)
+      : animationList;
     const preloaded = await this.p5Wrapper.preloadSpriteImages(
       loadedAnimations(
         await trimAnimationListImages(scoped, animationNames(animationList))
