@@ -107,6 +107,7 @@ import {
 } from './extensions/effectParamsMutator';
 import {enhanceButtonExtension} from './extensions/enhanceButton';
 import {eventActorToolboxExtension} from './extensions/eventActorToolbox';
+import {installIfPlusMinus} from './extensions/ifPlusMinus';
 import {lessonButtonExtension} from './extensions/lessonButton';
 import {missingRuleExtension} from './extensions/missingRule';
 import {openSourceButtonExtension} from './extensions/openSourceButton';
@@ -10124,6 +10125,12 @@ export function buildDomainPalette(
   // runs once per editor mount, before the palette reaches a workspace.
   installColorMessages();
   installColorBlocks();
+  // …and `if` grows by button rather than by mutator bubble
+  // (`extensions/ifPlusMinus`). Here for the same reason as the two
+  // above: every path to a workspace builds a palette first, and an
+  // extension is applied per block instance, so this only has to beat the
+  // first `if` into existence.
+  installIfPlusMinus();
   const editingRule = options.ownRuleModule !== undefined;
   const structural = structuralCategories(options.fileKind);
 

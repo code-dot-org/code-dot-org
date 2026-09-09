@@ -172,6 +172,52 @@ export class FieldButton extends Blockly.Field {
   }
 
   /**
+   * Wear the field classes, which a button was accidentally dropped out of.
+   *
+   * Blockly stamps every field's group with `blocklyEditableField` or
+   * `blocklyNonEditableField`, and the renderer's stylesheet hangs the field
+   * background on those two selectors — including `fill-opacity: .6`, which is
+   * what makes a white rect read as a lighter shade of the block it sits on
+   * rather than as a white chip.
+   *
+   * Blockly's own `updateEditable` does nothing at all when `EDITABLE` is
+   * false, and every caller here clears that flag to stop the button being
+   * serialized (see `applyColour` below, and the note on the eye in World Lab's
+   * `openSourceButton`). So whether a button got a class came down to WHEN the
+   * flag was cleared relative to the field being initialized:
+   *
+   *   • appended to a block that is already on screen — the field initializes
+   *     during `appendField`, while `EDITABLE` is still true, and gets a class;
+   *   • built as part of the block, which is every button in a toolbox flyout
+   *     and every block dragged out of one — the field initializes after the
+   *     flag is cleared, gets no class, and the rect paints at full opacity.
+   *
+   * The same button was therefore a pale tint of the block in one place and
+   * bright white in another, on the same block. This is Blockly's own logic
+   * with that one guard removed: the flag says whether the field holds a value
+   * to serialize, which has nothing to do with how it is painted.
+   */
+  override updateEditable(): void {
+    const group = this.fieldGroup_;
+    const sourceBlock = this.getSourceBlock();
+    if (!group || !sourceBlock) {
+      return;
+    }
+    // Editable is the ordinary state; a flyout preview and a read-only
+    // workspace are not, and lose the hover highlight along with it — which is
+    // right, because there the button does nothing.
+    const live = this.isEnabled() && sourceBlock.isEditable();
+    Blockly.utils.dom.addClass(
+      group,
+      live ? 'blocklyEditableField' : 'blocklyNonEditableField',
+    );
+    Blockly.utils.dom.removeClass(
+      group,
+      live ? 'blocklyNonEditableField' : 'blocklyEditableField',
+    );
+  }
+
+  /**
    * Contrast background for button with source block
    * @override
    *
