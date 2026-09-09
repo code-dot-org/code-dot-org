@@ -32,7 +32,7 @@ describe('openSaveToBackpackPrompt', () => {
     await runSaveToBackpackPrompt();
 
     expect(mockBackpackApi.getFileList).toHaveBeenCalled();
-    expect(mockBackpackApi.saveCodebridgeFile).toHaveBeenCalledWith(
+    expect(mockBackpackApi.saveFile).toHaveBeenCalledWith(
       'project_file.py',
       'This is project_file.py.',
       expect.any(Function),
@@ -46,7 +46,7 @@ describe('openSaveToBackpackPrompt', () => {
     await runSaveToBackpackPrompt();
 
     expect(mockBackpackApi.getFileList).toHaveBeenCalled();
-    expect(mockBackpackApi.saveCodebridgeFile).not.toHaveBeenCalled();
+    expect(mockBackpackApi.saveFile).not.toHaveBeenCalled();
   });
 
   it('should rename file when duplicate exists and rename (neutral) is selected', async () => {
@@ -56,7 +56,7 @@ describe('openSaveToBackpackPrompt', () => {
     await runSaveToBackpackPrompt();
 
     expect(mockBackpackApi.getFileList).toHaveBeenCalled();
-    expect(mockBackpackApi.saveCodebridgeFile).toHaveBeenCalledWith(
+    expect(mockBackpackApi.saveFile).toHaveBeenCalledWith(
       'project_file_1.py',
       'This is project_file.py.',
       expect.any(Function),
@@ -70,7 +70,7 @@ describe('openSaveToBackpackPrompt', () => {
     await runSaveToBackpackPrompt();
 
     expect(mockBackpackApi.getFileList).toHaveBeenCalled();
-    expect(mockBackpackApi.saveCodebridgeFile).toHaveBeenCalledWith(
+    expect(mockBackpackApi.saveFile).toHaveBeenCalledWith(
       'project_file.py',
       'This is project_file.py.',
       expect.any(Function),

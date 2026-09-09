@@ -377,10 +377,16 @@ function canvasFromRaster(raster: Raster): HTMLCanvasElement {
  * crisp, uniform, edge-aligned image. Imperfect model output (e.g. rows
  * drifting off-grid) normalizes with minor smearing along the drifted rows
  * rather than being left un-normalized.
+ *
+ * squareGrid pins one cell size to the frame on both axes, so a square
+ * input yields a square logical output (an offset grid would add a partial
+ * edge cell). For imagery that must stay square and full-frame, slight
+ * sampling misalignment beats losing the grid.
  */
 export async function normalizePixelArtBlob(
   blob: Blob,
-  fallbackBlockSize: number
+  fallbackBlockSize: number,
+  {squareGrid = false} = {}
 ): Promise<{blob: Blob; logicalWidth: number; logicalHeight: number} | null> {
   const bitmap = await createImageBitmap(blob);
   const canvas = document.createElement('canvas');
@@ -391,7 +397,22 @@ export async function normalizePixelArtBlob(
   canvas.getContext('2d', {willReadFrequently: true})?.drawImage(bitmap, 0, 0);
   bitmap.close();
   const raster = rasterFromCanvas(canvas);
-  const grid = assumePixelGrid(raster, fallbackBlockSize);
+  let grid = assumePixelGrid(raster, fallbackBlockSize);
+  if (squareGrid) {
+    // Pin only when the axes roughly agree: a size matching neither axis
+    // samples blocks out of phase, worse than not normalizing.
+    if (Math.abs(grid.sizeX - grid.sizeY) > 1) {
+      return null;
+    }
+    const size = Math.round((grid.sizeX + grid.sizeY) / 2);
+    grid = {
+      sizeX: size,
+      sizeY: size,
+      offsetX: 0,
+      offsetY: 0,
+      confidence: grid.confidence,
+    };
+  }
   const logical = downsampleToGrid(raster, grid);
   const crisp = upscaleNearest(
     logical,

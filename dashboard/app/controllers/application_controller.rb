@@ -414,7 +414,7 @@ class ApplicationController < ActionController::Base
 
     redirect_to lockout_path
   rescue StandardError => exception
-    Honeybadger.notify(
+    Observability::Errors.report(
       exception,
       error_message: 'Failed to apply the Child Account Policy to the user',
       context: {
@@ -452,7 +452,7 @@ class ApplicationController < ActionController::Base
   protected def initialize_statsig_stable_id
     existing_stable_id = cookies[:statsig_stable_id]
     session[:statsig_stable_id] = existing_stable_id if existing_stable_id.present?
-    session[:statsig_stable_id] ||= SecureRandom.uuid
+    session[:statsig_stable_id] ||= AnonUserId.generate
   end
 
   private def pairing_still_enabled

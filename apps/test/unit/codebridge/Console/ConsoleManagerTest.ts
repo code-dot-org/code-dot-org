@@ -70,8 +70,9 @@ const stalledTerminal = () => {
   };
 };
 
-// What xterm builds for screen readers once the terminal is opened.
-const openedTerminal = () => {
+// What xterm builds for screen readers, plus a write we can hold back so a
+// redraw can be inspected while it is still in flight.
+const openedStalledTerminal = () => {
   const element = document.createElement('div');
   const container = document.createElement('div');
   container.className = 'xterm-accessibility';
@@ -80,12 +81,25 @@ const openedTerminal = () => {
   liveRegion.setAttribute('aria-live', 'assertive');
   container.appendChild(liveRegion);
   element.appendChild(container);
+
+  const acknowledgements: (() => void)[] = [];
+  const terminal = {
+    element,
+    write: jest.fn((data: string, done?: () => void) => {
+      if (done) {
+        acknowledgements.push(done);
+      }
+    }),
+    scrollToBottom: jest.fn(),
+    focus: jest.fn(),
+  };
   return {
     liveRegion,
     consoleManager: new ConsoleManager(
-      {element} as unknown as Terminal,
+      terminal as unknown as Terminal,
       new FitAddon()
     ),
+    acknowledgeWrites: () => acknowledgements.splice(0).forEach(done => done()),
   };
 };
 
@@ -350,7 +364,7 @@ describe('ConsoleManager', () => {
   });
 
   it('makes console announcements polite', () => {
-    const {liveRegion, consoleManager} = openedTerminal();
+    const {liveRegion, consoleManager} = openedStalledTerminal();
 
     consoleManager.setPoliteScreenReaderAnnouncements();
 
@@ -368,6 +382,77 @@ describe('ConsoleManager', () => {
     consoleManager.setFocusOnWrite(false);
     consoleManager.writeConsoleMessage('during a validation run');
     consoleManager.writePartialLine('a prompt with no newline');
+
+    expect(terminal.focus).not.toHaveBeenCalled();
+  });
+
+  // A remount hands the terminal every line it already had. Announcing that
+  // reads the entire log back instead of the newest output.
+  it('does not announce a replay of the previous console', () => {
+    jest.useFakeTimers();
+    const {liveRegion, consoleManager, acknowledgeWrites} =
+      openedStalledTerminal();
+
+    consoleManager.replayTerminalLines(['old line 1', 'old line 2']);
+    expect(liveRegion.getAttribute('aria-live')).toBe('off');
+
+    // Once drawn, the console speaks again, so later output is still announced.
+    acknowledgeWrites();
+    jest.advanceTimersByTime(1000);
+    expect(liveRegion.getAttribute('aria-live')).toBe('polite');
+    jest.useRealTimers();
+  });
+
+  it('leaves announcements off after a redraw while a lab is narrating', () => {
+    jest.useFakeTimers();
+    const {liveRegion, consoleManager, acknowledgeWrites} =
+      openedStalledTerminal();
+    consoleManager.setNarrating(true);
+
+    consoleManager.replayTerminalLines(['old line']);
+    acknowledgeWrites();
+    jest.advanceTimersByTime(1000);
+
+    expect(liveRegion.getAttribute('aria-live')).toBe('off');
+    jest.useRealTimers();
+  });
+
+  // Narration belongs to the level that started it, and a level change clears
+  // the console. Otherwise the next level's console would never speak.
+  it('lets the console speak again once it is cleared for a new level', () => {
+    const {liveRegion, consoleManager} = openedStalledTerminal();
+    consoleManager.setNarrating(true);
+
+    consoleManager.clearTerminalLines();
+
+    expect(liveRegion.getAttribute('aria-live')).toBe('polite');
+  });
+
+  it('does not take focus while a lab is narrating', () => {
+    const {terminal, consoleManager, acknowledgeWrites} = stalledTerminal();
+    consoleManager.setNarrating(true);
+
+    consoleManager.writeConsoleMessage('program output');
+    acknowledgeWrites();
+
+    expect(terminal.focus).not.toHaveBeenCalled();
+  });
+
+  // An input() prompt is the one thing that must still reach the student.
+  it('takes focus for an input prompt even while narrating', () => {
+    const {terminal, consoleManager} = stalledTerminal();
+    consoleManager.setNarrating(true);
+
+    consoleManager.writePartialLine('What is your name? ');
+
+    expect(terminal.focus).toHaveBeenCalled();
+  });
+
+  // Redrawn history is not new output, so it must not move the user.
+  it('does not pull focus when replaying the previous console', () => {
+    const {terminal, consoleManager} = stalledTerminal();
+
+    consoleManager.replayTerminalLines(['an earlier line']);
 
     expect(terminal.focus).not.toHaveBeenCalled();
   });

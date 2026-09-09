@@ -45,7 +45,7 @@ class ApiController < ApplicationController
       }
       render json: response
     rescue RestClient::Exception => exception
-      Honeybadger.notify(
+      Observability::Errors.report(
         exception,
         error_message: "Failed to retrieve OAuth token from Azure for use with the Immersive Reader API.",
         context: {
@@ -56,7 +56,7 @@ class ApiController < ApplicationController
       )
       render status: :failed_dependency, json: {error: 'Unable to get token from Azure.'}
     rescue JSON::JSONError => exception
-      Honeybadger.notify(
+      Observability::Errors.report(
         exception,
         error_message: "Failed to parse response from Azure when trying to get OAuth token for use with the Immersive Reader API.",
         context: {

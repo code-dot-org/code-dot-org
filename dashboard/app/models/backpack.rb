@@ -22,19 +22,29 @@ class Backpack < ApplicationRecord
   # to reflect the new table name, so an alias is used to clarify which table this ID maps to.
   alias_attribute :project_id, :storage_app_id
 
+  # A backpack with no game_id belongs to no lab.
   def self.find_or_create(user_id, game_id, ip)
     backpack = find_by(user_id: user_id, game_id: game_id)
-    unless backpack
-      # Create a project for this user's backpack in the app determined by game_id
-      project = Projects.new(storage_id_for_user_id(user_id))
-      encrypted_id = project.create({hidden: true}, ip: ip, type: 'backpack')
-      _, project_id = get_storage_id_and_project_id(encrypted_id)
-      backpack = create!(user_id: user_id, game_id: game_id, project_id: project_id)
+    return backpack if backpack
+    return create_with_project(user_id, game_id, ip) if game_id
+
+    # The unique index on (user_id, game_id) does not constrain rows whose game_id
+    # is NULL, because MySQL permits any number of them. Serialize creation of the
+    # lab-independent backpack on the user row instead, and look again once we hold
+    # the lock in case another request created it first.
+    User.find(user_id).with_lock do
+      find_by(user_id: user_id, game_id: nil) || create_with_project(user_id, nil, ip)
     end
-    backpack
   end
 
   def channel
     get_project_channel_id(storage_id_for_user_id(user_id), project_id)
+  end
+
+  private_class_method def self.create_with_project(user_id, game_id, ip)
+    project = Projects.new(storage_id_for_user_id(user_id))
+    encrypted_id = project.create({hidden: true}, ip: ip, type: 'backpack')
+    _, project_id = get_storage_id_and_project_id(encrypted_id)
+    create!(user_id: user_id, game_id: game_id, project_id: project_id)
   end
 end

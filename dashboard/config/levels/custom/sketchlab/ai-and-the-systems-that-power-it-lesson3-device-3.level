@@ -1,0 +1,1049 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "game_id": 75,
+  "created_at": "2026-09-02T21:26:26.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#Denise Carter — Farmer\r\n\r\nDenise flies a camera drone over her sweet potato and soybean fields to spot trouble early. The drone transfers its images to her laptop over Wi-Fi once it lands. Images are kept on the laptop's drive and backed up to the cloud.\r\n\r\n### What's Going Wrong?\r\n* The laptop freezes when she opens a whole field's images at once.\r\n* It now says there isn't enough space to save this week's flight.\r\n* Transferring a single flight takes the entire evening.\r\n* The first year was completely fine. It only became a problem this season.",
+    "hide_share_and_remix": "false",
+    "require_edit_to_continue": "true",
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "eea2fa1d-88a6-4785-a843-6e1ebdea732e",
+            "type": "group",
+            "position": {
+              "x": 1933.8418266839053,
+              "y": 1807.8067360158057
+            },
+            "width": 882.1716367230324,
+            "height": 1112.1435277237897,
+            "zIndex": -1,
+            "data": {
+            },
+            "measured": {
+              "width": 882,
+              "height": 1112
+            },
+            "dragging": false
+          },
+          {
+            "id": "82353e0b-8b59-4afe-9ec0-f65819cac382",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/05dc98bf-67f5-48c3-8627-72b5b34f5bb6.png",
+              "altText": "comms_WIFI",
+              "locked": true
+            },
+            "position": {
+              "x": 2230.764900027084,
+              "y": 162.36253588130228
+            },
+            "width": 97.85562077307395,
+            "height": 120,
+            "measured": {
+              "width": 98,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "cce2e085-271d-4a9a-b8a9-d14af5e9463f",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/bd8aa061-c6aa-458b-91af-4640148a367c.png",
+              "altText": "hardware_battery",
+              "locked": true
+            },
+            "position": {
+              "x": 2040.8921067494675,
+              "y": 331.7730073709135
+            },
+            "width": 98.25746341890954,
+            "height": 122.87174588749258,
+            "measured": {
+              "width": 98,
+              "height": 123
+            },
+            "dragging": false
+          },
+          {
+            "id": "fd108d71-fbdc-44da-9a90-57f6b2d5b0b1",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/435081e6-5b01-44c0-83a2-5e392180cf58.png",
+              "altText": "hardware_desktop",
+              "locked": true
+            },
+            "position": {
+              "x": 2653.818070013465,
+              "y": 196.1612233879777
+            },
+            "width": 98.25746341890954,
+            "height": 120,
+            "measured": {
+              "width": 98,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "4f38ea6f-4e84-4e4a-b139-fb697007db71",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/b5cfd768-b83b-4cf1-a476-040235f757e4.png",
+              "altText": "input_camera",
+              "locked": true
+            },
+            "position": {
+              "x": 2228.055070130655,
+              "y": 330.724156703376
+            },
+            "width": 102.40277047260452,
+            "height": 120,
+            "measured": {
+              "width": 102,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "4e4a6775-d6a7-4d1b-a8d3-e07c7548d3d8",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/4b7e4c9a-35c2-4cae-bb28-77cc10889268.png",
+              "altText": "output_controller",
+              "locked": true
+            },
+            "position": {
+              "x": 2033.461837141217,
+              "y": 697.4573867933264
+            },
+            "width": 106.94992017213599,
+            "height": 120,
+            "measured": {
+              "width": 107,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "82183550-ca7f-4adb-8b0e-fcb461804b16",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/a467e4ec-cd00-4713-b802-92a6e3396fb6.png",
+              "altText": "processing_CPU",
+              "locked": true
+            },
+            "position": {
+              "x": 2818.8962356900156,
+              "y": 377.2433157438608
+            },
+            "width": 99.37133733958444,
+            "height": 120,
+            "measured": {
+              "width": 99,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "cc74b2f9-725a-4b1c-bacc-056fa32ed056",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/862d604b-7bd4-47d2-b1a5-72f9fb445087.png",
+              "altText": "storage_RAM",
+              "locked": true
+            },
+            "position": {
+              "x": 2676.2009834892397,
+              "y": 378.01415420763163
+            },
+            "width": 108.46563673864648,
+            "height": 120,
+            "measured": {
+              "width": 108,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "568756d3-378c-4c28-9cb2-ae546a789a56",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#e7f2e3",
+              "strokeColor": "#9dc88d",
+              "locked": true
+            },
+            "position": {
+              "x": 10,
+              "y": 10
+            },
+            "width": 430.7910011923752,
+            "height": 1091.7947709934203,
+            "measured": {
+              "width": 431,
+              "height": 1092
+            },
+            "dragging": false,
+            "zIndex": 1,
+            "parentId": "eea2fa1d-88a6-4785-a843-6e1ebdea732e",
+            "expandParent": true
+          },
+          {
+            "id": "ad8eed9e-3a02-4a3f-b2c6-3970909a7fe3",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "#6f9dec",
+              "locked": true
+            },
+            "position": {
+              "x": 1978.4211361432751,
+              "y": 136.86686432219858
+            },
+            "width": 384.0871146363694,
+            "height": 351.575839129187,
+            "measured": {
+              "width": 384,
+              "height": 352
+            },
+            "dragging": false,
+            "zIndex": -5
+          },
+          {
+            "id": "5b090fff-86c5-44b0-ae3d-553473b334a6",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Denise uses a controller to fly the drone from the ground.",
+              "backgroundColor": "#f9dcbe",
+              "strokeColor": "#f7b56e",
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": 2162.9146516781125,
+              "y": 719.0705548508723
+            },
+            "width": 253.37716649265815,
+            "height": 84.76808346426208,
+            "measured": {
+              "width": 253,
+              "height": 85
+            },
+            "dragging": false
+          },
+          {
+            "id": "7a53196b-12dd-4c85-a949-fae0d25b272d",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#fff9e5",
+              "strokeColor": "#ffd966",
+              "locked": true
+            },
+            "position": {
+              "x": 1910.0909839507196,
+              "y": -4.5058225057759955
+            },
+            "width": 1289.646560358366,
+            "height": 925.1838917017166,
+            "measured": {
+              "width": 1290,
+              "height": 925
+            },
+            "dragging": false,
+            "zIndex": -6
+          },
+          {
+            "id": "02330def-dc44-4846-a089-efccc5c3ac99",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#f9e2e2",
+              "strokeColor": "#e27878",
+              "locked": true
+            },
+            "position": {
+              "x": 441.79604976907876,
+              "y": 10.00482552486119
+            },
+            "width": 430.37558695395364,
+            "height": 1092.1387021989287,
+            "measured": {
+              "width": 430,
+              "height": 1092
+            },
+            "dragging": false,
+            "parentId": "eea2fa1d-88a6-4785-a843-6e1ebdea732e",
+            "expandParent": true
+          },
+          {
+            "id": "87b59a8f-b913-4f4a-9294-874ea7ad2541",
+            "type": "text",
+            "data": {
+              "text": "Talk through the scenario with your partner. Examine the possible troubleshooting steps below and choose which ones are worth pursuing and which are not. Sort them into the proper category.",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "fontSize": "large",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1921.6190091615254,
+              "y": 1331.6224870836493
+            },
+            "width": 1045.0483482824857,
+            "height": 40,
+            "measured": {
+              "width": 1045,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "c1389887-f2fb-41fd-bacb-0696a3b640f4",
+            "type": "text",
+            "data": {
+              "text": "Possible Causes",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "fontSize": "large",
+              "locked": true
+            },
+            "position": {
+              "x": 74.39517238594453,
+              "y": 24.678230027986274
+            },
+            "width": 249.0483482824858,
+            "height": 43.89464570813789,
+            "measured": {
+              "width": 249,
+              "height": 44
+            },
+            "dragging": false,
+            "zIndex": 2,
+            "parentId": "eea2fa1d-88a6-4785-a843-6e1ebdea732e",
+            "expandParent": true
+          },
+          {
+            "id": "23fbd26d-2b7e-435e-abe0-00d3d258cd06",
+            "type": "text",
+            "data": {
+              "text": "The drone's camera is faulty",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 1927.8580911531494,
+              "y": 1417.41428180539
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 12
+          },
+          {
+            "id": "e8e22ea8-ab1d-4d50-b81f-c2828e77c26d",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "RAM holds the images that she has open on her computer. The SSD drive stores the data.",
+              "backgroundColor": "#f9dcbe",
+              "strokeColor": "#f7b56e",
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": 2921.956447603877,
+              "y": 182.7586366591883
+            },
+            "width": 216.4309449910171,
+            "height": 117.42590425589106,
+            "measured": {
+              "width": 216,
+              "height": 117
+            },
+            "dragging": false
+          },
+          {
+            "id": "fe1b579b-5789-4c40-8c71-8491785ac705",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "#fff2cc",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "locked": true
+            },
+            "position": {
+              "x": 2610.6166396541685,
+              "y": 168.44121762359356
+            },
+            "width": 186.4355232404555,
+            "height": 179.42322100977765,
+            "measured": {
+              "width": 186,
+              "height": 179
+            },
+            "dragging": false,
+            "zIndex": -4
+          },
+          {
+            "id": "a42b5600-bd47-4a02-8295-663b81e1a65f",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Once the drone lands, the high definition images are transferred over Wi-Fi to Denise's laptop.",
+              "backgroundColor": "#f9dcbe",
+              "strokeColor": "#f7b56e",
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": 2557.356610543729,
+              "y": 65.58911554667154
+            },
+            "width": 283.7258484404348,
+            "height": 76.52115902193145,
+            "measured": {
+              "width": 284,
+              "height": 77
+            },
+            "dragging": false
+          },
+          {
+            "id": "e8953d27-8048-47e6-9717-5b0d2792c6ab",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "A single battery powers the drone while in flight.",
+              "backgroundColor": "#f9dcbe",
+              "strokeColor": "#f7b56e",
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": 1957.3127266700506,
+              "y": 520.0737142640111
+            },
+            "width": 149.1360415415994,
+            "height": 81.79919066502293,
+            "measured": {
+              "width": 149,
+              "height": 82
+            },
+            "dragging": false
+          },
+          {
+            "id": "01a28c31-2c9a-4e2e-a63c-2bf3e898438b",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "High definition camera photographs the fields from above.",
+              "backgroundColor": "#f9dcbe",
+              "strokeColor": "#f7b56e",
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": 2286.883340001203,
+              "y": 524.4860762838316
+            },
+            "width": 249.0887657826462,
+            "height": 82.4589446204094,
+            "measured": {
+              "width": 249,
+              "height": 82
+            },
+            "dragging": false
+          },
+          {
+            "id": "d00fc775-98a5-428a-a38d-4131e5048ca3",
+            "type": "text",
+            "data": {
+              "text": "SELF",
+              "strokeColor": "transparent",
+              "fontColor": "#ec8e22",
+              "fontSize": 60,
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1910.7516439606893,
+              "y": -189.88858812195917
+            },
+            "width": 492.1299277194439,
+            "height": 61.538094156194354,
+            "measured": {
+              "width": 492,
+              "height": 62
+            },
+            "dragging": false
+          },
+          {
+            "id": "3653adb3-cb3c-4f46-b608-8a6fda228319",
+            "type": "text",
+            "data": {
+              "text": "NEIGHBOR",
+              "strokeColor": "transparent",
+              "fontColor": "#ec8e22",
+              "fontSize": 60,
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1935.2804071851624,
+              "y": 1242.0691282611922
+            },
+            "width": 492.1299277194439,
+            "height": 61.538094156194354,
+            "measured": {
+              "width": 492,
+              "height": 62
+            },
+            "dragging": false
+          },
+          {
+            "id": "67bcd666-996e-43bf-b9bc-2d1f5f92fd46",
+            "type": "text",
+            "data": {
+              "text": "Eliminated Possibilities",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "fontSize": "large",
+              "locked": true
+            },
+            "position": {
+              "x": 527.4435206684302,
+              "y": 24.678230027986274
+            },
+            "width": 249.0483482824858,
+            "height": 41.89464570813789,
+            "measured": {
+              "width": 249,
+              "height": 42
+            },
+            "dragging": false,
+            "zIndex": 2,
+            "parentId": "eea2fa1d-88a6-4785-a843-6e1ebdea732e",
+            "expandParent": true
+          },
+          {
+            "id": "11b2ef87-4cae-4068-89b9-df531320967e",
+            "type": "text",
+            "data": {
+              "text": "The cloud backup isn't running",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2176.906439435635,
+              "y": 1417.41428180539
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 11
+          },
+          {
+            "id": "e86e1723-5b08-4660-b3f8-e748ab0fc3fc",
+            "type": "text",
+            "data": {
+              "text": "The Wi-Fi has got slower",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2425.9547877181208,
+              "y": 1417.41428180539
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 10
+          },
+          {
+            "id": "d294f65e-15fe-4a10-bd80-af2175751bd0",
+            "type": "text",
+            "data": {
+              "text": "The drone's battery is failing",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2675.0031360006064,
+              "y": 1417.41428180539
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 9
+          },
+          {
+            "id": "9067410f-63ff-4c42-92af-416beca67c4e",
+            "type": "text",
+            "data": {
+              "text": "The laptop has a virus",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2924.051484283092,
+              "y": 1417.41428180539
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 8
+          },
+          {
+            "id": "037ea9a6-da83-442d-8010-f7fbfcd823ab",
+            "type": "text",
+            "data": {
+              "text": "The laptop is failing with age",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 1929.0998325655796,
+              "y": 1585.4142818053897
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 7
+          },
+          {
+            "id": "48560197-8187-4bd6-a8e4-a4e1073b13de",
+            "type": "text",
+            "data": {
+              "text": "The laptop doesn't have enough memory for these images",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2178.1481808480653,
+              "y": 1585.4142818053897
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 6
+          },
+          {
+            "id": "6fde26d8-f0a3-49d0-9818-37a7f9d09de5",
+            "type": "text",
+            "data": {
+              "text": "The drive is full",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2427.196529130551,
+              "y": 1585.4142818053897
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 5
+          },
+          {
+            "id": "d8ab76e4-07e2-4c18-840b-82318e5d1f5d",
+            "type": "text",
+            "data": {
+              "text": "The image files are very large",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2676.2448774130366,
+              "y": 1585.4142818053897
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 4
+          },
+          {
+            "id": "bc29cd24-d29d-4008-9166-a5443850f8a4",
+            "type": "text",
+            "data": {
+              "text": "Restate the problem and make your best guesses about possible solutions",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "fontSize": "large",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1919.6407160285253,
+              "y": -101.99828374479044
+            },
+            "width": 1045.0483482824857,
+            "height": 40,
+            "measured": {
+              "width": 1045,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "aaac0ba4-bb10-47c5-8a65-f3e51e041287",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson3-device-3/uuid/8654813d-ce5c-448b-8e72-e86382932cbb.png",
+              "altText": "storage_cloud",
+              "locked": true
+            },
+            "position": {
+              "x": 2722.391583261732,
+              "y": 735.2126658694162
+            },
+            "width": 108.46563673864648,
+            "height": 120,
+            "measured": {
+              "width": 108,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "c60754d4-0aae-4251-987d-eff2730f6819",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson3-device-3/uuid/311e2d00-bbe9-4811-8727-87fb14bdb22a.png",
+              "altText": "storage_physical",
+              "locked": true
+            },
+            "position": {
+              "x": 2957.3276510708442,
+              "y": 377.5035561729624
+            },
+            "width": 100.88705390609448,
+            "height": 120,
+            "measured": {
+              "width": 101,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "d08cae5d-5a9d-41cf-afa9-b9a64a715d2d",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "#6f9dec",
+              "locked": true
+            },
+            "position": {
+              "x": 2665.651564081724,
+              "y": 227.80985831282243
+            },
+            "width": 406.82286313402585,
+            "height": 335.1874688502684,
+            "measured": {
+              "width": 407,
+              "height": 335
+            },
+            "dragging": false,
+            "zIndex": -5
+          },
+          {
+            "id": "634fbbdb-ea45-4b6d-897b-b92a1ff608b7",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson3-device-3/uuid/8bb958eb-26f9-4dfe-aedf-166d05af6e07.png",
+              "altText": "",
+              "locked": true
+            },
+            "position": {
+              "x": 1964.2003219814833,
+              "y": 113.14021093973724
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "35eeb5ce-5cb1-486a-8db8-7d6ae6e7db2c",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "#fff2cc",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "locked": true
+            },
+            "position": {
+              "x": 1949.7666022153126,
+              "y": 83.56108989901128
+            },
+            "width": 194.0141060730075,
+            "height": 183.97037070930884,
+            "measured": {
+              "width": 194,
+              "height": 184
+            },
+            "dragging": false,
+            "zIndex": -4
+          },
+          {
+            "id": "b15a492a-5d17-4e2d-b817-fca3ba78bf00",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson3-device-3/uuid/7db5b2be-598b-42a8-9d68-e5e65eff91d0.png",
+              "altText": "",
+              "locked": true
+            },
+            "position": {
+              "x": 1706.2760491058289,
+              "y": -239.79831060078104
+            },
+            "width": 194.3072056800952,
+            "height": 162.22425314473256,
+            "measured": {
+              "width": 194,
+              "height": 162
+            },
+            "dragging": false
+          },
+          {
+            "id": "40e0b619-9a41-4ed5-9fc9-7a422a156b9e",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson3-device-3/uuid/7db5b2be-598b-42a8-9d68-e5e65eff91d0.png",
+              "altText": "",
+              "rotation": 49,
+              "locked": true
+            },
+            "position": {
+              "x": 1850.4419541765542,
+              "y": 1003.178141347284
+            },
+            "width": 194.3072056800952,
+            "height": 162.22425314473256,
+            "measured": {
+              "width": 194,
+              "height": 162
+            },
+            "dragging": false
+          },
+          {
+            "id": "134ef57a-6b11-46ca-b655-f97bc4c7a346",
+            "type": "text",
+            "data": {
+              "text": "Start\nHere",
+              "strokeColor": "transparent",
+              "fontColor": "#ec8e22",
+              "fontSize": "extra-large",
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1686.6928901449692,
+              "y": -339.08128533625427
+            },
+            "width": 117.74793579137622,
+            "height": 82.75812608733992,
+            "measured": {
+              "width": 118,
+              "height": 83
+            },
+            "dragging": false
+          },
+          {
+            "id": "94e6239e-4270-44bd-843c-f5fd2fbff329",
+            "type": "text",
+            "data": {
+              "text": "The photo software doesn't release memory when she closes an image",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2925.2932256955223,
+              "y": 1585.4142818053897
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 3
+          },
+          {
+            "id": "aceec647-91ad-4afb-90b8-234ccaa84db3",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "She uploads all of her data to cloud storage for the long-term.",
+              "backgroundColor": "#f9dcbe",
+              "strokeColor": "#f7b56e",
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": 2861.290731332587,
+              "y": 736.951959183803
+            },
+            "width": 203.23586588328828,
+            "height": 100.27230141584346,
+            "measured": {
+              "width": 203,
+              "height": 100
+            },
+            "dragging": false
+          }
+        ],
+        "edges": [
+          {
+            "id": "36b19fa2-a1c7-4d5c-bf57-e62b1439d9de",
+            "source": "82353e0b-8b59-4afe-9ec0-f65819cac382",
+            "target": "fe1b579b-5789-4c40-8c71-8491785ac705",
+            "type": "default",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 3,
+              "strokeDasharray": "8 4"
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "sourceHandle": "right-source",
+            "targetHandle": "left-target",
+            "data": {
+              "locked": true
+            }
+          },
+          {
+            "id": "5a0fd56d-b7b2-43a9-9d0a-2c6a355ccba4",
+            "source": "d08cae5d-5a9d-41cf-afa9-b9a64a715d2d",
+            "target": "aaac0ba4-bb10-47c5-8a65-f3e51e041287",
+            "type": "default",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 3,
+              "strokeDasharray": "8 4"
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "data": {
+              "locked": true
+            }
+          },
+          {
+            "id": "41d7aab0-141a-4a44-9b81-de2dde3d2bfa",
+            "source": "4e4a6775-d6a7-4d1b-a8d3-e07c7548d3d8",
+            "target": "ad8eed9e-3a02-4a3f-b2c6-3970909a7fe3",
+            "type": "default",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 3,
+              "strokeDasharray": "8 4"
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "sourceHandle": "top-source",
+            "targetHandle": "bottom-target",
+            "data": {
+              "locked": true
+            }
+          }
+        ],
+        "viewport": {
+          "x": -1079.0562370133568,
+          "y": 249.4765880318854,
+          "zoom": 0.6597539553864481
+        }
+      }
+    },
+    "display_name": "Denise Carter",
+    "bubble_choice_description": "My Drone Photos Are Breaking My Laptop!"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-02T21:26:26.520+00:00\",\"changed\":[\"cloned from \\\"ai-and-the-systems-that-power-it-lesson3-device-2\\\"\"],\"cloned_from\":\"ai-and-the-systems-that-power-it-lesson3-device-2\"},{\"changed_at\":\"2026-09-02 21:27:14 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:18:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:40:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:40:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:51:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:55:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:02:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:02:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:05:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:33:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:49:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:50:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

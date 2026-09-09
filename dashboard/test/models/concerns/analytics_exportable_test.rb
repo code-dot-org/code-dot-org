@@ -31,6 +31,25 @@ class AnalyticsExportableTest < ActiveSupport::TestCase
     end
   end
 
+  describe '.exported_table_names' do
+    it 'strips the database qualifier a cross-database model carries' do
+      model = create_base_model('QualifiedTableModel', table_name: 'pegasus_development.hoc_activity')
+      model.export_to_analytics
+      _(described_class.exported_table_names).must_equal ['hoc_activity']
+    end
+
+    it 'leaves an unqualified table name alone' do
+      model = create_base_model('UnqualifiedTableModel', table_name: 'users')
+      model.export_to_analytics
+      _(described_class.exported_table_names).must_equal ['users']
+    end
+
+    it 'omits models that fail exportability checks' do
+      create_base_model('NoPkModel', table_name: 'no_pk', db_primary_key: nil).export_to_analytics
+      _(described_class.exported_table_names).must_be_empty
+    end
+  end
+
   describe '.exported_models' do
     it 'is empty when nothing is registered' do
       _(described_class.exported_models).must_be_empty

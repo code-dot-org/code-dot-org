@@ -1,4 +1,5 @@
 @eyes
+@playwright
 Feature: Looking at a few things with Applitools Eyes
 
 Background:

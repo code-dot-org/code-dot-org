@@ -1,35 +1,16 @@
 <Sketchlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 75,
   "created_at": "2026-08-26T18:19:54.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "teacher_markdown": "##Input-Storage-Processing-Output",
     "hide_share_and_remix": "false",
     "require_edit_to_continue": "true",
     "start_sources": {
       "source": {
         "nodes": [
-          {
-            "id": "6a248b92-1c5c-4857-aead-63238afc41d5",
-            "type": "group",
-            "position": {
-              "x": -100.4340816310351,
-              "y": -173.05487774034034
-            },
-            "width": 1256.8527528164798,
-            "height": 857.4961524233403,
-            "zIndex": -1,
-            "data": {
-            },
-            "measured": {
-              "width": 1257,
-              "height": 857
-            }
-          },
           {
             "id": "dbceeb71-156f-4280-a5c3-c9d1a204ea90",
             "type": "image",
@@ -38,8 +19,8 @@
               "altText": "Input"
             },
             "position": {
-              "x": -57.16061710533418,
-              "y": 208.3866727253114
+              "x": 100.33938289466562,
+              "y": 1520.8866727253098
             },
             "width": 133.8968235936573,
             "height": 115.65333181867214,
@@ -57,8 +38,8 @@
               "altText": "Output"
             },
             "position": {
-              "x": 970.9784253088237,
-              "y": 217.4839201089112
+              "x": 100.97842530882488,
+              "y": 1672.4839201089094
             },
             "width": 142.76952467504452,
             "height": 101.33365173129823,
@@ -76,8 +57,8 @@
               "altText": "Processing"
             },
             "position": {
-              "x": 470.00411501373,
-              "y": -300.45847618367725
+              "x": 112.50411501373043,
+              "y": 1809.54152381632
             },
             "width": 125.53904935008896,
             "height": 102.76952467504447,
@@ -95,8 +76,8 @@
               "altText": "Storage"
             },
             "position": {
-              "x": 464.8657247475135,
-              "y": 736.0949115961362
+              "x": 107.36572474751395,
+              "y": 1393.5949115961353
             },
             "width": 129.84666818132786,
             "height": 97.02603290005925,
@@ -116,8 +97,8 @@
               "fontSize": "large"
             },
             "position": {
-              "x": -41.71667536684035,
-              "y": 177.1201692443605
+              "x": 1168.2833246331581,
+              "y": 1452.1201692443587
             },
             "width": 119.79555757510381,
             "height": 40,
@@ -137,8 +118,8 @@
               "fontSize": "large"
             },
             "position": {
-              "x": 469.791446822914,
-              "y": 827.7863375710028
+              "x": 1179.791446822913,
+              "y": 1395.2863375710022
             },
             "width": 119.79555757510381,
             "height": 40,
@@ -155,11 +136,12 @@
               "text": "Processing",
               "strokeColor": "transparent",
               "fontFamily": "sans",
-              "fontSize": "large"
+              "fontSize": "large",
+              "locked": false
             },
             "position": {
-              "x": 454.0098461770976,
-              "y": -342.3032339772159
+              "x": 1179.0098461770967,
+              "y": 1566.1342660227817
             },
             "width": 157.12825411250742,
             "height": 40,
@@ -179,8 +161,8 @@
               "fontSize": "large"
             },
             "position": {
-              "x": 980.0120997600397,
-              "y": 181.38265409035768
+              "x": 1177.5120997600395,
+              "y": 1511.382654090356
             },
             "width": 119.79555757510381,
             "height": 40,
@@ -191,104 +173,959 @@
             "dragging": false
           },
           {
-            "id": "58f64545-0132-4bb9-b126-f410aa6dc93d",
+            "id": "a6e28699-9282-4ccf-9fee-a32873f24c26",
             "type": "shape",
             "data": {
-              "shapeType": "circle",
-              "label": ""
-            },
-            "position": {
-              "x": 10,
-              "y": 262.4596633558757
-            },
-            "width": 788.1837362509839,
-            "height": 328.2240728951082,
-            "measured": {
-              "width": 788,
-              "height": 328
-            },
-            "dragging": false,
-            "parentId": "6a248b92-1c5c-4857-aead-63238afc41d5",
-            "expandParent": true
-          },
-          {
-            "id": "54346477-19b8-41e2-852d-e562f2db3cb2",
-            "type": "shape",
-            "data": {
-              "shapeType": "circle",
-              "label": ""
-            },
-            "position": {
-              "x": 458.66901656549595,
-              "y": 264.63603976411605
-            },
-            "width": 788.1837362509839,
-            "height": 328.2240728951082,
-            "measured": {
-              "width": 788,
-              "height": 328
-            },
-            "dragging": false,
-            "parentId": "6a248b92-1c5c-4857-aead-63238afc41d5",
-            "expandParent": true
-          },
-          {
-            "id": "46bdcb30-7455-4b3e-b0e4-3e1d64830b9f",
-            "type": "shape",
-            "data": {
-              "shapeType": "circle",
+              "shapeType": "rectangle",
               "label": "",
-              "rotation": 90
+              "backgroundColor": "#ffffff",
+              "locked": true
             },
             "position": {
-              "x": 234.83772298473644,
-              "y": 519.2720795282321
+              "x": 42.84126414530118,
+              "y": 1340.2682333999364
             },
-            "width": 788.1837362509839,
-            "height": 328.2240728951082,
+            "width": 814.3833231691304,
+            "height": 727.9688321831948,
             "measured": {
-              "width": 788,
-              "height": 328
+              "width": 814,
+              "height": 728
             },
             "dragging": false,
-            "parentId": "6a248b92-1c5c-4857-aead-63238afc41d5",
-            "expandParent": true
+            "zIndex": -2
           },
           {
-            "id": "fb731980-641a-4548-a13a-d8d2f73468b8",
+            "id": "fd22e81e-e78c-4c83-b976-ed152efd1150",
             "type": "shape",
             "data": {
-              "shapeType": "circle",
+              "shapeType": "rectangle",
               "label": "",
-              "rotation": 90
+              "backgroundColor": "#ffffff",
+              "locked": true
             },
             "position": {
-              "x": 232.9968230444885,
-              "y": 10
+              "x": 1132.2245873144311,
+              "y": 1340.2682333999364
             },
-            "width": 788.1837362509839,
-            "height": 328.2240728951082,
+            "width": 619.3833231691307,
+            "height": 807.9688321831948,
             "measured": {
-              "width": 788,
-              "height": 328
+              "width": 619,
+              "height": 808
             },
             "dragging": false,
-            "parentId": "6a248b92-1c5c-4857-aead-63238afc41d5",
-            "expandParent": true
+            "zIndex": -1
+          },
+          {
+            "id": "2234f6bc-84e8-4d04-af58-6f13c1e6dcbd",
+            "type": "text",
+            "data": {
+              "text": "Word Bank",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "fontSize": "extra-large",
+              "locked": true
+            },
+            "position": {
+              "x": 1308.638100289604,
+              "y": 1286.134266022782
+            },
+            "width": 294.6282541125072,
+            "height": 40,
+            "measured": {
+              "width": 295,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "41157b57-87f5-46e9-9d25-7c163ce08ac8",
+            "type": "text",
+            "data": {
+              "text": "Image Bank",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "fontSize": "extra-large",
+              "locked": true
+            },
+            "position": {
+              "x": 295.766354402113,
+              "y": 1286.134266022782
+            },
+            "width": 294.6282541125072,
+            "height": 40,
+            "measured": {
+              "width": 295,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "e452f1f0-8bc1-471e-a3c7-9917527196cd",
+            "type": "text",
+            "data": {
+              "text": "Computer Hardware is like ________________________",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "fontSize": 60
+            },
+            "position": {
+              "x": 353.2480032004037,
+              "y": 101.75283755698602
+            },
+            "width": 1293.455389970351,
+            "height": 170.58258449441846,
+            "measured": {
+              "width": 1293,
+              "height": 171
+            },
+            "dragging": false
+          },
+          {
+            "id": "7690fe8b-fa46-4bc1-9c3b-b16cca10ea29",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson2-sketchlab-1/uuid/24000d9e-8fb0-4022-b1b7-e75e5df76359.png",
+              "altText": "Camera"
+            },
+            "position": {
+              "x": 607.5402510506976,
+              "y": 1396.0166016393873
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "f517e327-d939-419e-a8bd-c67d96aaa20c",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson2-sketchlab-1/uuid/da709722-ad4e-4ab3-ad88-3037be48a2af.png",
+              "altText": "CPU"
+            },
+            "position": {
+              "x": 457.54025105069786,
+              "y": 1856.0166016393869
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "df182e6d-a701-4033-85f7-e2dc9a32860a",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson2-sketchlab-1/uuid/29ea9744-8df4-4059-9f6c-77a575d837b0.png",
+              "altText": "GPU"
+            },
+            "position": {
+              "x": 455.04025105069786,
+              "y": 1703.5166016393869
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "88bffbdf-ef50-4653-9383-014d7c573d17",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson2-sketchlab-1/uuid/f07dc1f7-3b44-4094-a765-9e0d3247e457.png",
+              "altText": "HDD"
+            },
+            "position": {
+              "x": 455.04025105069786,
+              "y": 1551.0166016393873
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "735f32cd-2323-4a64-888a-d4fbe2811a50",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson2-sketchlab-1/uuid/c82e8694-680b-4158-bcb9-a4918b0e91d2.png",
+              "altText": "Keyboard"
+            },
+            "position": {
+              "x": 452.54025105069786,
+              "y": 1396.0166016393873
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "0ad44f69-27d0-49ab-9151-d9a873c410b1",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson2-sketchlab-1/uuid/a887dcc6-94e9-4311-8716-8e8f56c67be0.png",
+              "altText": "Monitor"
+            },
+            "position": {
+              "x": 292.5402510506981,
+              "y": 1856.0166016393869
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "cb1c9454-171f-48ac-8b52-baf723a068e9",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson2-sketchlab-1/uuid/9493eed4-1d85-4b51-9c7b-5fb004268e26.png",
+              "altText": "RAM"
+            },
+            "position": {
+              "x": 290.0402510506981,
+              "y": 1703.516601639387
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "9775cb8a-acc7-4a0b-9670-b91658e23a09",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson2-sketchlab-1/uuid/f10c91f9-761d-4ecf-9eda-eafee5ea4f48.png",
+              "altText": "Speakers"
+            },
+            "position": {
+              "x": 287.5402510506981,
+              "y": 1553.5166016393873
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "dfd978e0-8024-4970-9475-f2245263041a",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson2-sketchlab-1/uuid/801b8804-5bcc-4a9d-8f2f-c74bcf0764d0.png",
+              "altText": "SSD"
+            },
+            "position": {
+              "x": 290.0402510506981,
+              "y": 1396.0166016393873
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "6a2799ea-f327-4859-ac79-c07acae0eb35",
+            "type": "text",
+            "data": {
+              "text": "A _____ is like a ______ because ____________",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "fontSize": "large",
+              "locked": false,
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 1196.138100289604,
+              "y": 1618.634266022781
+            },
+            "width": 557.1282541125067,
+            "height": 82.49999999999977,
+            "measured": {
+              "width": 557,
+              "height": 83
+            },
+            "dragging": false
+          },
+          {
+            "id": "fa8e9875-1791-40fe-a075-46deaf2d2a59",
+            "type": "text",
+            "data": {
+              "text": "When _____ happens, the _____",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "fontSize": "large",
+              "locked": false,
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 1195.7663544021116,
+              "y": 1698.634266022781
+            },
+            "width": 557.1282541125067,
+            "height": 82.49999999999977,
+            "measured": {
+              "width": 557,
+              "height": 83
+            },
+            "dragging": false
+          },
+          {
+            "id": "514abbfd-81d7-4be7-9cb2-b44c9eeaf405",
+            "type": "text",
+            "data": {
+              "text": "The _____ has to wait for the _____",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "fontSize": "large",
+              "locked": false,
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 1200.394608514619,
+              "y": 1778.6342660227808
+            },
+            "width": 557.1282541125067,
+            "height": 82.49999999999977,
+            "measured": {
+              "width": 557,
+              "height": 83
+            },
+            "dragging": false
+          },
+          {
+            "id": "1f992a84-2c72-44b7-b8bd-1132ea2cb538",
+            "type": "text",
+            "data": {
+              "text": "_____ moves from the _____ to the _____\n",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "fontSize": "large",
+              "locked": false,
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 1202.5228626271266,
+              "y": 1868.6342660227808
+            },
+            "width": 557.1282541125067,
+            "height": 82.49999999999977,
+            "measured": {
+              "width": 557,
+              "height": 83
+            },
+            "dragging": false
+          },
+          {
+            "id": "bc721030-ff61-40fd-ae76-03499afa37f7",
+            "type": "text",
+            "data": {
+              "text": "Without _____, the _____ cannot _____\n\n",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "fontSize": "large",
+              "locked": false,
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 1199.651116739634,
+              "y": 1953.6342660227806
+            },
+            "width": 557.1282541125067,
+            "height": 82.49999999999977,
+            "measured": {
+              "width": 557,
+              "height": 83
+            },
+            "dragging": false
+          },
+          {
+            "id": "f98d71f6-b9dd-4414-aba0-a4dd7e326be4",
+            "type": "text",
+            "data": {
+              "text": "My metaphor breaks down when _____\n",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "fontSize": "large",
+              "locked": false,
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 1204.2793708521415,
+              "y": 2016.1342660227804
+            },
+            "width": 557.1282541125067,
+            "height": 82.49999999999977,
+            "measured": {
+              "width": 557,
+              "height": 83
+            },
+            "dragging": false
           }
         ],
         "edges": [
 
         ],
         "viewport": {
-          "x": 295.56509002467135,
-          "y": 312.38715141256455,
-          "zoom": 0.4594793419988145
+          "x": 192.20598949284613,
+          "y": -17.119366599358614,
+          "zoom": 0.4594793419988149
         }
       }
     },
-    "long_instructions": "##Input-Storage-Processing-Output"
+    "long_instructions": "#Computer Hardware Metaphor\r\n\r\n1. Build your hardware metaphor on the Sketch Lab canvas. Label each part with the name of the **hardware** component and how it is represented in your metaphor.\r\n\r\n2. Use the Image Generation level to create custom images for your canvas.\r\n\r\n3. Make it clear whether the component is **Input**, **Storage**, **Processing**, or **Output**.\r\n\r\n4. Use the image / word bank as necessary to assist.",
+    "display_name": "Sketch Lab",
+    "bubble_choice_description": "Use the canvas to bring your computer hardware metaphor to life",
+    "thumbnail_url": "https://images.code.org/2cac7eb6a840bde9841a6153c2f5a6b1-sketch-lab-icon.png",
+    "exemplar_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "a77da3fc-6e6d-4bd0-a837-0dee887370b3",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson2-sketchlab-1/uuid/7ff9013b-1577-4f98-ad10-3d5c7c8c6b6c.png",
+              "altText": ""
+            },
+            "position": {
+              "x": 678.0432694894533,
+              "y": 690.0499698958535
+            },
+            "width": 136,
+            "height": 95,
+            "measured": {
+              "width": 136,
+              "height": 95
+            },
+            "dragging": false
+          },
+          {
+            "id": "95027f1b-659c-438a-8ca3-dc7531c9e292",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson2-sketchlab-1/uuid/aecf18af-cc56-46f5-88c9-7a3a68b389c6.png",
+              "altText": ""
+            },
+            "position": {
+              "x": 902.1893709753117,
+              "y": 563.9118428105055
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "2215d84b-1111-4862-b44f-796205fd37ed",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson2-sketchlab-1/uuid/ccdfdb76-582c-4d79-bbe7-835ca377ec6a.png",
+              "altText": ""
+            },
+            "position": {
+              "x": 1093.0664498367692,
+              "y": 562.5331008598822
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "3410a0f7-5a5d-44e1-b0f3-f45528eabf90",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson2-sketchlab-1/uuid/02a6ab99-49e3-4561-869f-0326635576ac.png",
+              "altText": ""
+            },
+            "position": {
+              "x": 1336.7136970202882,
+              "y": 681.6610112659224
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "4e20ce90-ecd9-48a3-95c5-526e3bd16ace",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson2-sketchlab-1/uuid/bc4a92bc-f9c3-43af-90aa-ff1581405533.png",
+              "altText": ""
+            },
+            "position": {
+              "x": 1102.870550563296,
+              "y": 827.2242589828619
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "4ac2da4c-393c-4c23-8ef2-0793c4b42819",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson2-sketchlab-1/uuid/9e55c6e2-cccf-406d-a8dd-7b86a738f526.png",
+              "altText": ""
+            },
+            "position": {
+              "x": 926.0080673288246,
+              "y": 825.1109442038079
+            },
+            "width": 127,
+            "height": 92.5,
+            "measured": {
+              "width": 127,
+              "height": 93
+            },
+            "dragging": false
+          },
+          {
+            "id": "c7b07bf7-4b12-45bb-bdec-bf146624e44b",
+            "type": "text",
+            "data": {
+              "text": "Input",
+              "strokeColor": "transparent",
+              "fontColor": "#de755f"
+            },
+            "position": {
+              "x": 708.2440265663467,
+              "y": 810.3775948424218
+            },
+            "width": 82.8087872197857,
+            "height": 40,
+            "measured": {
+              "width": 83,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "8b79dbf8-dedb-4797-b04f-22f1061018ca",
+            "type": "text",
+            "data": {
+              "text": "Order tickets coming in from the dining room",
+              "strokeColor": "transparent",
+              "fontColor": "#de755f",
+              "fontSize": "small"
+            },
+            "position": {
+              "x": 676.8880153726199,
+              "y": 756.9699902375181
+            },
+            "width": 147.46467484765742,
+            "height": 40,
+            "measured": {
+              "width": 147,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "b9384966-8fcf-46df-86f8-b82e70eea814",
+            "type": "text",
+            "data": {
+              "text": "Computer Hardware is like a Restaurant Kitchen",
+              "strokeColor": "transparent",
+              "fontColor": "#de755f",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 946.1608947818531,
+              "y": 439.0780402678805
+            },
+            "width": 286.6727594341977,
+            "height": 56.49384888466119,
+            "measured": {
+              "width": 287,
+              "height": 56
+            },
+            "dragging": false
+          },
+          {
+            "id": "369cc2c5-3b5f-4039-8a82-5e84ec973ee5",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "#de755f"
+            },
+            "position": {
+              "x": 654.1534775826651,
+              "y": 696.6057396067274
+            },
+            "width": 190.46926971536425,
+            "height": 160.04532591162172,
+            "measured": {
+              "width": 190,
+              "height": 160
+            },
+            "dragging": false,
+            "zIndex": -1
+          },
+          {
+            "id": "a2a610ec-9e75-4078-827c-335129ea93c4",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "#de755f"
+            },
+            "position": {
+              "x": 1320.0340066809563,
+              "y": 682.6089417265572
+            },
+            "width": 190.46926971536425,
+            "height": 195.73789900676286,
+            "measured": {
+              "width": 190,
+              "height": 196
+            },
+            "dragging": false,
+            "zIndex": -2
+          },
+          {
+            "id": "8fa3a58b-18af-4b7b-8f68-e4469346af75",
+            "type": "text",
+            "data": {
+              "text": "Output",
+              "strokeColor": "transparent",
+              "fontColor": "#de755f"
+            },
+            "position": {
+              "x": 1374.008141605316,
+              "y": 829.7319869236021
+            },
+            "width": 82.8087872197857,
+            "height": 40,
+            "measured": {
+              "width": 83,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "b2460b2a-a08b-4e0c-96ef-271d6c63135a",
+            "type": "text",
+            "data": {
+              "text": "Finished meal brought out to customer",
+              "strokeColor": "transparent",
+              "fontColor": "#de755f",
+              "fontSize": "small"
+            },
+            "position": {
+              "x": 1344.0713765080632,
+              "y": 776.1221026300329
+            },
+            "width": 147.46467484765742,
+            "height": 40,
+            "measured": {
+              "width": 147,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "a3443516-94fe-4778-8e75-64869b6f5fc5",
+            "type": "text",
+            "data": {
+              "text": "The head cook, working on one complicated recipe",
+              "strokeColor": "transparent",
+              "fontColor": "#de755f",
+              "fontSize": "small"
+            },
+            "position": {
+              "x": 920.7147581592357,
+              "y": 909.7678657514965
+            },
+            "width": 147.46467484765742,
+            "height": 40,
+            "measured": {
+              "width": 147,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "695c5ebf-befa-4dfc-9709-a90bd93b061e",
+            "type": "text",
+            "data": {
+              "text": "A huge team of prep cooks, all slicing and dicing ingredients together",
+              "strokeColor": "transparent",
+              "fontColor": "#de755f",
+              "fontSize": "small"
+            },
+            "position": {
+              "x": 1106.1420281413102,
+              "y": 946.3309894099335
+            },
+            "width": 147.46467484765742,
+            "height": 40,
+            "measured": {
+              "width": 147,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "dc503591-ec30-44f6-9585-d0a94097ce76",
+            "type": "text",
+            "data": {
+              "text": "The walk-in freezer and food pantry",
+              "strokeColor": "transparent",
+              "fontColor": "#de755f",
+              "fontSize": "small"
+            },
+            "position": {
+              "x": 909.397600836386,
+              "y": 666.8842585918775
+            },
+            "width": 147.46467484765742,
+            "height": 40,
+            "measured": {
+              "width": 147,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "f929534a-7cff-4f09-8d18-1123fd0fd7d5",
+            "type": "text",
+            "data": {
+              "text": "The ingredients for recipes laid out, ready for use, in the kitchen",
+              "strokeColor": "transparent",
+              "fontColor": "#de755f",
+              "fontSize": "small"
+            },
+            "position": {
+              "x": 1098.307073071645,
+              "y": 669.495910281766
+            },
+            "width": 147.46467484765742,
+            "height": 40,
+            "measured": {
+              "width": 147,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "81bba2ef-17b8-4055-b51d-11b60ba4ee9c",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "#de755f"
+            },
+            "position": {
+              "x": 885.0221850640946,
+              "y": 534.5605729708668
+            },
+            "width": 391.56644983676904,
+            "height": 243.61817998804952,
+            "measured": {
+              "width": 392,
+              "height": 244
+            },
+            "dragging": false,
+            "zIndex": -3
+          },
+          {
+            "id": "b0f6bfb8-241e-483c-9a79-7f907db6b25a",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "#de755f"
+            },
+            "position": {
+              "x": 885.8927356273908,
+              "y": 795.725741959704
+            },
+            "width": 391.56644983676904,
+            "height": 243.61817998804952,
+            "measured": {
+              "width": 392,
+              "height": 244
+            },
+            "dragging": false,
+            "zIndex": -4
+          },
+          {
+            "id": "a161b321-9978-4940-8739-25ee95297808",
+            "type": "text",
+            "data": {
+              "text": "GPU",
+              "strokeColor": "transparent",
+              "fontColor": "#de755f"
+            },
+            "position": {
+              "x": 1137.4818484199704,
+              "y": 808.7840004091457
+            },
+            "width": 82.8087872197857,
+            "height": 40,
+            "measured": {
+              "width": 83,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "f4a076ea-b06e-4bad-9010-ba9bf8737423",
+            "type": "text",
+            "data": {
+              "text": "Storage",
+              "strokeColor": "transparent",
+              "fontColor": "#de755f"
+            },
+            "position": {
+              "x": 1033.0157808244358,
+              "y": 733.9166519656791
+            },
+            "width": 101.96089961230041,
+            "height": 40,
+            "measured": {
+              "width": 102,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "c5569640-126f-4613-8fbe-a5a5065dec56",
+            "type": "text",
+            "data": {
+              "text": "Processing",
+              "strokeColor": "transparent",
+              "fontColor": "#de755f"
+            },
+            "position": {
+              "x": 1033.0157808244358,
+              "y": 996.8229220811089
+            },
+            "width": 108.05475355537328,
+            "height": 40,
+            "measured": {
+              "width": 108,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "a923eb00-9fbc-4060-9788-e2d29baa0a9e",
+            "type": "text",
+            "data": {
+              "text": "CPU",
+              "strokeColor": "transparent",
+              "fontColor": "#de755f"
+            },
+            "position": {
+              "x": 939.8668705517506,
+              "y": 810.5251015357381
+            },
+            "width": 101.96089961230041,
+            "height": 40,
+            "measured": {
+              "width": 102,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "c2a64889-0dd7-4e03-bb5d-2bd57e1c67ce",
+            "type": "text",
+            "data": {
+              "text": "SSD / HDD",
+              "strokeColor": "transparent",
+              "fontColor": "#de755f"
+            },
+            "position": {
+              "x": 925.1739946823702,
+              "y": 548.4893819836049
+            },
+            "width": 110.66640524526179,
+            "height": 41.741101126592184,
+            "measured": {
+              "width": 111,
+              "height": 42
+            },
+            "dragging": false
+          },
+          {
+            "id": "2bee5720-e0d2-49a4-853b-96343147c257",
+            "type": "text",
+            "data": {
+              "text": "RAM",
+              "strokeColor": "transparent",
+              "fontColor": "#de755f"
+            },
+            "position": {
+              "x": 1117.6721528774674,
+              "y": 545.8777302937165
+            },
+            "width": 110.66640524526179,
+            "height": 41.741101126592184,
+            "measured": {
+              "width": 111,
+              "height": 42
+            },
+            "dragging": false
+          }
+        ],
+        "edges": [
+
+        ],
+        "viewport": {
+          "x": -538.4780430667543,
+          "y": -355.18820573813537,
+          "zoom": 1.1486983549970349
+        }
+      }
+    }
   },
-  "audit_log": "[{\"changed_at\":\"2026-08-26 18:19:59 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-26 19:01:28 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-26 19:04:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-26 19:09:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-26 19:09:22 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-26 18:19:59 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-26 19:01:28 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-26 19:04:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-26 19:09:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-26 19:09:22 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-27 15:18:04 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-28 15:18:06 +0000\",\"changed\":[\"teacher_markdown\",\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-28 15:19:39 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-28 15:27:21 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-28 15:28:25 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-28 15:37:22 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-28 15:38:08 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-28 15:39:29 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-28 15:40:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-28 15:43:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-28 15:52:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-01 14:46:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-01 15:16:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-01 15:17:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-01 15:37:26 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

@@ -2,6 +2,7 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
+import NavigationArea from '@cdo/apps/lab2/views/components/Instructions/NavigationArea';
 import {getStore} from '@cdo/apps/redux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -10,6 +11,7 @@ import askSpriteLabAi from '../ai/askSpriteLabAi';
 import {generateBlocklyJson} from '../blockly/generateBlocklyJson';
 import {selectAvailableImageNames, selectSceneNames} from '../redux/selectors';
 import {setAiGenerateState} from '../redux/spriteLab2Redux';
+import {SpriteLab2LevelProperties} from '../types';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
@@ -29,6 +31,11 @@ function getSceneIdByName(): {[lowerCaseName: string]: string} {
 interface GenerateSpriteLabProps {
   guideMode: 'instructions' | 'aiCodeGenerate';
   instructions?: string;
+  /** Offer the Continue button: the guide reached a step that marks the
+      level's task complete. */
+  showContinue?: boolean;
+  /** For the Continue button's progression handling. */
+  levelProperties: SpriteLab2LevelProperties;
   /** Load AI-generated blocks into the Code workspace. */
   onCodeGenerated: (source: WorkspaceSerialization) => void;
 }
@@ -42,6 +49,8 @@ interface GenerateSpriteLabProps {
 const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
   guideMode,
   instructions,
+  showContinue,
+  levelProperties,
   onCodeGenerated,
 }) => {
   const dispatch = useAppDispatch();
@@ -172,6 +181,18 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
                 <div className={moduleStyles.generateError}>{error}</div>
               )}
             </>
+          )}
+          {showContinue && (
+            <div className={moduleStyles.guideContinue}>
+              <NavigationArea
+                levelProperties={levelProperties}
+                // No Run/Submit gating here: reaching this step is the gate.
+                hasRun={true}
+                hasEdited={true}
+                isRunning={false}
+                textVariant="simple"
+              />
+            </div>
           )}
         </div>
       </div>

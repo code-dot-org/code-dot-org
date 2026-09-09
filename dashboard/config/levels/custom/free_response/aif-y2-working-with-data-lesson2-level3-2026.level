@@ -1,0 +1,22 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-09-07T14:28:50.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check Your Understanding",
+    "long_instructions": "When a computer is reading a CSV file, how does it know what data belongs in separate rows? How does it know what data belongs in separate columns?",
+    "stay_on_level_after_submit": "false",
+    "submittable": "true",
+    "allow_multiple_attempts": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

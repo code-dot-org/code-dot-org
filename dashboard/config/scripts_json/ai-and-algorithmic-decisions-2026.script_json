@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-23 17:37:19 UTC",
+    "serialized_at": "2026-08-30 18:03:09 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -301,6 +301,21 @@
       },
       "seeding_key": {
         "lesson.key": "End of Unit Assessment",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "ai-and-algorithmic-decisions-2026"
+      }
+    },
+    {
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "End of Unit Survey",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "ai-and-algorithmic-decisions-2026"
       }
@@ -817,6 +832,18 @@
       "seeding_key": {
         "lesson_activity.key": "5d6aee7a-1a7a-4be9-98fe-08347e301657",
         "lesson.key": "End of Unit Assessment",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "ai-and-algorithmic-decisions-2026"
+      }
+    },
+    {
+      "key": "16678af5-5437-466e-9949-b2060cd1f179",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "16678af5-5437-466e-9949-b2060cd1f179",
+        "lesson.key": "End of Unit Survey",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "ai-and-algorithmic-decisions-2026"
       }
@@ -3322,6 +3349,17 @@
         "activity_section.key": "5e3ecb35-db6d-4a65-ae41-e03690cd3598",
         "lesson_activity.key": "5d6aee7a-1a7a-4be9-98fe-08347e301657"
       }
+    },
+    {
+      "key": "7e7098c4-7fd5-4e73-8931-caced1402615",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "7e7098c4-7fd5-4e73-8931-caced1402615",
+        "lesson_activity.key": "16678af5-5437-466e-9949-b2060cd1f179"
+      }
     }
   ],
   "script_levels": [
@@ -4556,6 +4594,28 @@
       "level_keys": [
         "ai-and-algorithmic-decisions-postassessment_2026"
       ]
+    },
+    {
+      "chapter": 57,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_-programming_v2_algorithmic_decisions_2026"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "7e7098c4-7fd5-4e73-8931-caced1402615"
+      },
+      "level_keys": [
+        "student-eou-survey_-programming_v2_algorithmic_decisions_2026"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -5229,6 +5289,18 @@
         "lesson_group.key": "lessonGroup-5",
         "script.name": "ai-and-algorithmic-decisions-2026",
         "activity_section.key": "5e3ecb35-db6d-4a65-ae41-e03690cd3598"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_-programming_v2_algorithmic_decisions_2026",
+        "script_level.level_keys": [
+          "student-eou-survey_-programming_v2_algorithmic_decisions_2026"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "7e7098c4-7fd5-4e73-8931-caced1402615"
       }
     }
   ],

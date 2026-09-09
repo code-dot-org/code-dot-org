@@ -789,14 +789,9 @@ Then /^element "([^"]*)" has html "([^"]*)"$/ do |selector, expected_html|
 end
 
 Then /^I wait to see a dialog titled "((?:[^"\\]|\\.)*)"$/ do |expected_text|
-  # Legacy BaseDialog titles live in `.dialog-title`; the design system's dialogs
-  # put theirs in a heading inside `[role="dialog"]` -- Modal uses h3, Dialog h2.
-  #
-  # Gather every visible dialog's title rather than the first one found. A page
-  # can hold more than one dialog at a time -- Dance Party's share dialog opens
-  # on top of its age gate -- and the dialog being waited on is not necessarily
-  # first in the DOM.
-  titles = %q($('.dialog-title:visible').add('[role="dialog"]:visible h2, [role="dialog"]:visible h3').map(function () {return $(this).text();}).get().join('\n'))
+  # DSCO's Dialog is an `alertdialog`, Modal a `dialog`; BaseDialog is neither.
+  # Gather every visible title: two can be open, and ours need not be first.
+  titles = %q($('.dialog-title:visible').add('[role="dialog"]:visible :header, [role="alertdialog"]:visible :header').map(function () {return $(this).text();}).get().join('\n'))
   wait_short_until {@browser.execute_script("return #{titles};")&.include?(expected_text)}
 end
 

@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-<h2 >What Is a Web App?</h2>
+<h1 >What Is a Web App?</h1>
 
 A web app is a program that runs inside a browser like Chrome, Safari, or Edge, rather than being installed on a device. 
 

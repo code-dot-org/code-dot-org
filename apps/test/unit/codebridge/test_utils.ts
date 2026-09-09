@@ -143,7 +143,7 @@ export const getBackpackAPIMock = (
       onSuccess(fileList);
     }),
     saveFiles: jest.fn(),
-    saveCodebridgeFile: jest.fn(),
+    saveFile: jest.fn(),
     deleteFiles: jest.fn(),
     updateFilesHelper: jest.fn(),
     saveFilesHelper: jest.fn(),

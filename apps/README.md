@@ -66,6 +66,42 @@ yarn build
 
 See also: [Full build with blockly changes](#full-build-with-blockly-changes)
 
+### Building with rspack (opt-in)
+
+Appending `--rspack` to `yarn start`, `yarn build`, or `yarn build:dist`
+routes the JS bundling step through [rspack](https://rspack.rs), a Rust
+implementation of webpack that is much faster on developer machines
+(seconds instead of minutes for dev-server startup). It is opt-in while
+we evaluate it: swc and babel can transpile edge cases differently, so
+check your change under the default webpack build before shipping — the
+command prints a reminder. Switching between bundlers cleans
+`build/package/js` automatically, and `yarn start --rspack` cleans it on
+every start (serving over a populated directory costs rspack about 18
+seconds), so the first compile after starting re-copies ace, piskel and
+the pyodide wheels. Source maps default to covering `src/` only; see
+[Source maps under rspack](#source-maps-under-rspack).
+
+Two other levers:
+
+- `RSPACK_NO_WRITE=1 yarn start --rspack` skips the dev server's copy of
+  its output to disk. Rebuilds are bounded by writing, not compiling, so
+  this is the big one for iterating on a widely-imported file — a shared
+  edit reaches the browser in about 9 seconds instead of 24 — at the cost
+  of roughly 1.8GB more resident memory, since the output stays in the
+  server's in-memory filesystem. Anything reading `build/package`
+  directly (a page served straight from Rails, say) needs the files, so
+  it is off by default.
+- `RSPACK_SWC=off yarn start --rspack` (also `0` or `babel`) puts
+  babel-loader and ts-loader back, keeping rspack as the bundler. That
+  isolates the transpiler when you suspect swc is behind a difference,
+  which is faster than rebuilding under webpack to find out.
+- `RSPACK_NO_LAZY=1 yarn start --rspack` compiles dynamic imports up
+  front instead of when a page first requests them. The lazy default is
+  a small startup win, but the deferred chunks exist only inside
+  the dev server: a page loaded straight from Rails on :3000 while the
+  rspack server owns `build/package/js` hits stubs whose requests
+  nothing answers. Set this if that is your workflow.
+
 ## Dev server source maps and memory usage
 
 `yarn start` defaults to `devtool: 'eval-cheap-module-source-map'`. The `module`
@@ -89,6 +125,31 @@ Two shortcuts combine these levers:
 - `yarn start:cheap` — `APPS_DEVTOOL=eval` with type checking left on.
 - `yarn start:cheapest` — `APPS_DEVTOOL=eval` plus `SKIP_TYPECHECK=1`, for the
   lowest-memory dev server.
+
+Both shortcuts describe webpack economics; under `--rspack` the src/-scoped
+default already uses less memory than `eval` (see below), so only
+`SKIP_TYPECHECK` retains its meaning there.
+
+### Source maps under rspack
+
+Under `--rspack`, the default is source maps for everything in `src/` and
+nothing else: you step through your own TS/JSX in DevTools, and node_modules
+stays unmapped. That boundary is what keeps it affordable — node_modules
+holds over half the module graph, and mapping it is what makes rspack's
+whole-app `-module` modes unusable here (the dev server exceeds 25GB during
+rebuilds; a one-shot `yarn build --rspack` forced to full maps was OOM-killed
+on a 30GB machine, since a build compiles every dynamic import up front where
+the dev server defers them). Measured against no maps at all, the default
+costs about 2 seconds per shared-file rebuild, and *less* memory, because
+unmapped modules skip eval wrapping entirely. A
+one-shot `yarn build --rspack` pays about 4 seconds and 0.7GB for the same
+maps in its output.
+
+One lever adjusts it, and the active mode is printed at startup:
+`APPS_DEVTOOL=eval yarn start --rspack` turns maps off everywhere, trading
+symbols for the ~2 seconds per shared-file rebuild they cost. Known
+rough edge either way: unmapped modules (node_modules, or everything under
+`eval`) show numeric internal names in DevTools.
 
 ## Testing
 

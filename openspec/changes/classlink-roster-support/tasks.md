@@ -1,68 +1,89 @@
 # Implementation tasks
 
-Delivered as **four stacked PRs**. Task numbers are stable and referenced from `design.md`, so they are unchanged by this grouping.
+Delivered as **two stacked PRs**. Task and section numbers are stable and referenced from
+`design.md`, so they survive regrouping: sections 2 (bulk migration script) and 8 (migration
+cleanup) are **retired rather than renumbered** — their headings remain below with a note on
+why, so stale references resolve to an explanation instead of dangling.
 
 Two axes are in play and they are not the same thing. **PRs** are units of review. **Phases**
-are units of deployment, defined in the design's Migration Plan. Phase 1 spans two PRs
-because the bulk script is separable review work that ships within the same deployment phase.
+are units of deployment, defined in the design's Migration Plan.
 
-| PR  | Scope                                                            | Sections | Deployment phase | Depends on                       |
-| --- | ---------------------------------------------------------------- | -------- | ---------------- | -------------------------------- |
-| 1   | Sign-in and sign-up handle the v2 `authentication_id` format     | 1        | Phase 1          | —                                |
-| 2   | One-time bulk migration script                                   | 2        | Phase 1          | PR 1                             |
-| 3   | Rostering: client, model, endpoints, frontend, integration tests | 3–7      | Phase 2          | PR 1                             |
-| 4   | Migration cleanup                                                | 8        | Phase 3          | PR 3, plus an observation window |
+| PR  | Scope                                                                  | Sections | Deployment phase | Depends on |
+| --- | ---------------------------------------------------------------------- | -------- | ---------------- | ---------- |
+| 1   | Sign-in and sign-up handle both v1 and v2 `authentication_id` formats  | 1        | Phase 1          | —          |
+| 2   | Rostering: client, model, endpoints, frontend, integration tests       | 3–7      | Phase 2          | PR 1       |
 
-PR 3 depends on PR 1, not on PR 2 — the script is an accelerator, not a prerequisite, since
-login-time migration converges every user on next sign-in (task 1.8). PR 2 is sequenced second
-anyway for an operational reason rather than a technical one: it should be **run** before
-rostering reaches teachers, because any teacher without a v2 auth option meets the "sign out
-and sign back in" message instead of their class list. Merging it second leaves time to
-dry-run, run, and let the tail converge while PR 3 is still in review.
+The gap between the two deployments is load-bearing: it is the window in which routine SSO
+logins converge active users in OneRoster-enabled districts to v2, and that convergence is
+the only duplicate-student mitigation left now that the bulk script is dropped (design Risks).
 
-## PR 1 — Sign-in handles the v2 `authentication_id` format
+## PR 1 — Sign-in and sign-up handle both v1 and v2 formats
 
-No user-visible change. Establishes the identifier every later PR depends on, and begins
-login-time migration of the ~14,392 existing ClassLink users the moment it deploys.
+No user-visible change. Establishes the identifier rostering depends on, and begins
+login-time migration of existing users the moment it deploys — but only for users whose SSO
+payload carries a `SourcedId`. ClassLink documents that field as **empty for districts
+without OneRoster enabled** (design Context), so those users sign up and sign in on the
+legacy v1 format permanently; a blank `SourcedId` is the routing branch to that path, not an
+anomaly.
 
 Rollback is non-lossy for users who still hold a v1 record, and **not** for users who sign up
-or connect ClassLink from Manage Linked Accounts after this deploys — their v2 record is their
-only auth option. See the design's Rollback note.
+or connect ClassLink from Manage Linked Accounts after this deploys with a `SourcedId`
+present — their v2 record is their only auth option. See the design's Rollback note.
 
 ### 1. Phase 1 — ID Migration: Versioned Auth Options and Callback Updates
 
 - [x] 1.1 ~~Confirm the live `v2/my/info` payload shape~~ — done. Two live responses captured, plus a logged production auth hash confirming the gem exposes `info[:external_id]` and `info[:district_id]`
 - [x] 1.2 Add `AuthenticationOption::Classlink::VERSION = {v2: 'v2'}.freeze` constant (mirrors `AuthenticationOption::Clever::VERSION`)
 - [x] 1.3 Create `Services::Classlink::V2AuthOptionBuilder` (mirrors `Services::Clever::V3AuthOptionBuilder`): finds the v1 auth option, dups it, sets `authentication_id = <TenantId>|<SourcedId>` and `version = 'v2'`; returns nil if the v1 option is missing or a v2 option already exists
-- [x] 1.3a Validate the components asymmetrically before constructing `authentication_id` (design Decision 1): both must be non-blank after `to_s`, and `TenantId` must additionally contain no pipe. Do **not** reject a pipe in `SourcedId` — it is a legal SIS value and first-pipe splitting handles it. On failure build nothing, log the `UserId`, and let login fall back to the v1 path. A blank `SourcedId` would otherwise produce `"<TenantId>|"` for every user in that tenant and collide them onto one auth option
+- [x] 1.3a Validate the components asymmetrically before constructing `authentication_id` (design Decision 1): both must be non-blank after `to_s`, and `TenantId` must additionally contain no pipe. Do **not** reject a pipe in `SourcedId` — it is a legal SIS value and first-pipe splitting handles it. On failure build nothing, log the `UserId`, and let login fall back to the v1 path. A blank `SourcedId` would otherwise produce `"<TenantId>|"` for every user in that tenant and collide them onto one auth option. _Logging semantics narrowed by 1.11: a blank `SourcedId` is the documented non-OneRoster state and must no longer report_
 - [x] 1.3c Parse `authentication_id` with `split('|', 2)` everywhere it is decomposed — never a bare `split('|')`, which truncates a `SourcedId` containing a pipe. The limit is what makes the format unambiguous, given `TenantId` cannot contain one (design Decision 1)
 - [x] 1.3b Normalize `TenantId` with `to_s` wherever it is compared or joined — `v2/my/info` returns it as an integer while `/applications` returns `tenant_id`; an unnormalized cache key or comparison misses across the two
 - [x] 1.4 Write unit tests for the builder (created, idempotent-nil, missing-v1-nil cases) plus the 1.3a/1.3c behavior: blank `SourcedId` builds nothing, blank `TenantId` builds nothing, pipe-containing `TenantId` builds nothing, and — the case that pins the design — a pipe-containing `SourcedId` **does** build and round-trips through `split('|', 2)` to the original value. Also: integer `TenantId` normalizes to the same id as its string form
 - [x] 1.5 Extract `TenantId` and `SourcedId` in the callback from the gem's `info[:district_id]` and `info[:external_id]` rather than digging `raw_info` (see design Context)
-- [x] 1.6 Update the ClassLink sign-up path: new accounts get `authentication_id = <TenantId>|<SourcedId>` and `version = 'v2'`
+- [x] 1.6 Update the ClassLink sign-up path: new accounts get `authentication_id = <TenantId>|<SourcedId>` and `version = 'v2'`. _Now conditional: only when the payload carries a `SourcedId`. With it blank, the uid rewrite never happens and `version_for` stamps nil, so the signup lands on the v1 format mechanically — 1.13 pins that branch with tests_
 - [x] 1.7 Add dual-match login logic: try lookup by v2-format `authentication_id` first, fall back to legacy `UserId` lookup
 - [x] 1.8 When a user is found via the legacy fallback, create their v2 auth option via the builder (login-time migration; v1 record untouched)
 - [x] 1.9 Write unit tests for the updated callback and dual-match logic (v2 login, v1 fallback + v2 creation, both-records login creates nothing)
 - [x] 1.9a Extend the v2 handling to `connect_provider` (Manage Linked Accounts → Connect): run the uid rewrite before the connect branch so the holder lookup, takeover checks, and new-auth-option creation all operate on v2 ids, and stamp `version` via `version_for` so a legacy-format fallback isn't mislabeled v2. Without this the v1-format holder lookup misses v2-only accounts (any post-deploy signup) and a second account could link the same credential. Tests: fresh connect creates a v2 option, invalid components fall back to v1 with nil version, connecting a credential the current user holds as v1 migrates it and no-ops, a v2-only holder with activity is refused
 - [x] 1.9b Use byte-exact id matching (merged separately: `classlink` is in `AuthenticationOption::CASE_SENSITIVE_CREDENTIAL_TYPES`, so `User.find_by_credential` confirms ClassLink matches byte-for-byte by default — the column collation ignores case, SIS-authored `SourcedId`s don't). Every lookup in this PR inherits that automatically; the one manual piece is the builder, whose direct `AuthenticationOption` queries use `find_by_exact_credential`, most critically the v2 idempotency check — under the collation, a case-twin's record would block a user's v2 option from ever being built. Test: a v2 option differing only by case does not block building
+- [x] 1.11 Reclassify a blank `SourcedId` in `Services::Classlink::AuthIdGenerator` as the documented non-OneRoster state: return nil **without** reporting to Sentry when `sourced_id` is blank after `to_s`. Keep the `Observability::Errors.report` for the shapes that have no documented meaning — `SourcedId` present but `TenantId` blank, or `TenantId` containing a pipe. As written, the generator reports every nil, which would page on routine traffic from every non-OneRoster district at every sign-in. Update the generator's comment, which currently promises a report on every failure. _Done: the blank-`sourced_id` check now precedes and short-circuits the tenant checks, so a blank `SourcedId` suppresses reporting even when `TenantId` is also malformed (spec scopes the anomaly requirement to "When `SourcedId` is present"). The now-always-false `sourced_id_blank` context key was dropped_
+- [x] 1.12 Sweep the transition-era comments now that v1 is permanent: `apply_classlink_v2_authentication_id` in `omniauth_callbacks_controller.rb` justifies its error report by "the Phase 3 cleanup gate needs to know why" — there is no Phase 3; the report survives on its own merits (a population silently failing v2 creation should be visible). Reword any "migration window" phrasing in callback, builder, and model comments to say the fallback is a permanent path for non-OneRoster districts. _Done, and wider than the callback/builder/model: also the `legacy_user` local (renamed `v1_user`), the `VERSION` constant's missing-`:v1` rationale, the ClassLink factory comment, and stale test names/comments in `classlink_test.rb`, `omniauth_callbacks_controller_test.rb`, `authentication_option_test.rb`, and the builder test_
+- [x] 1.13 Write unit tests for the permanent-v1 paths: sign-up with blank `external_id` creates a v1-format record (`authentication_id = <UserId>`, `version` nil) exactly as before this change; sign-in of an existing v1 user with blank `external_id` succeeds via the `UserId` lookup, creates no v2 option, and reports nothing to Sentry; blank `TenantId` with `SourcedId` present, and pipe-bearing `TenantId`, still report. _Done. Verified non-vacuous: the five new reporting assertions in `auth_id_generator_test.rb` fail against the pre-1.11 generator. Also pinned the precedence case (blank `SourcedId` + malformed `TenantId` reports nothing) and added the `connect_provider` no-`SourcedId` path_
+### 1b. Phase 1 — Give every account a UserId record (ships before 1.10)
+
+Follows PR 1, which is already merged. Closes the reverse-direction gap: a signup from an
+OneRoster-enabled district gets a v2 auth option as its *only* credential, and a v2-only account is
+unrecoverable if its `SourcedId` ever stops arriving or changes — we would know exactly who the user is at
+sign-in and have nothing keyed to look them up by (design Decision 7a). Must merge before 1.10, which is
+what creates the first exposed accounts.
+
+- [x] 1b.1 Add the v1-record write to `apply_classlink_v2_authentication_id`, mirroring the existing login-time v2 creation at the same seam: when the v2-format lookup finds a user and that user holds no v1 ClassLink auth option, create one with `authentication_id = <UserId>` (the pre-rewrite `auth.uid`) and `version` nil. Leave the v2 record untouched
+- [x] 1b.1a Skip the v1-record write on the connect path (`unless should_connect_provider?`). The account found at this seam during a connect is the credential holder, not `current_user`, and that request may go on to refuse the connect or to destroy the holder in a takeover; a refused connect must not mutate a third party's records. Caught by the existing `connect_provider: refuses classlink credential held by a v2-only account with activity` test
+- [x] 1b.2 Put the record-building in a service object beside `V2AuthOptionBuilder` rather than inline in the controller (`Services::Classlink::V1AuthOptionBuilder`, or extend the existing one), so both directions of the pair are built the same way and are unit-testable without the callback. Use `find_by_exact_credential` for its idempotency check, per 1.9b — the column collation is case-insensitive and `UserId` is not
+- [x] 1b.3 Writing the v1 record must never break a sign-in that would otherwise succeed. `UserId` is globally unique so a collision should be impossible, but if the insert fails (another account already holds that `UserId`, or a concurrent sign-in raced it) report it and continue signing the user in against the record that matched. A failure here costs a safety net; raising would cost the session
+- [x] 1b.4 Unit-test the builder: creates the v1 option for a v2-only user; returns nil (no duplicate) when a v1 option already exists; a v1 option differing only by case does not count as existing
+- [x] 1b.5 Integration-test the durability property end to end, which is the point of the whole task: sign in a v2-only user (payload carries `SourcedId`) and assert a v1 option is created; then sign in **again with an empty `SourcedId`** and assert the same user is found, no new `User` or `AuthenticationOption` is created, and nothing is reported. Add the negative control too — that second sign-in against a v2-only account (the write removed) must create a duplicate `User`, or the test is not proving anything. _Both live in `classlink_test.rb`: "a v2-only account given its v1 record at sign-in survives losing its SourcedId" runs the two-login sequence on one account, so the second login is served by the record the first login's builder actually wrote rather than a factory-inserted stand-in; "without the v1 record a v2-only account is lost when SourcedId stops arriving" stubs the builder to nil and asserts the second login is routed to sign-up instead. Verified: suppressing the write fails the first and leaves the second passing, which is the correct signature for a negative control_
+- [x] 1b.6 Test the changed-`SourcedId` path: a user holding v1 + v2 signs in with a *different* `SourcedId`; the `UserId` lookup finds them, and login-time migration adds a v2 option for the new id
+- [x] 1b.7 Confirm the rostering gate is unaffected: Decision 6a keys on *presence* of a v2 option, so it must keep working now that every such user also holds a v1 option. Verify the gate is not written as "the user's only option is v2". _Confirmed against the spec and task 6.4a: both say "holds a ClassLink auth option with `version = 'v2'`", which is presence. Nothing to change, but re-check when 6.4a is implemented_
+- [ ] 1b.8 Add monitoring for the count of ClassLink users holding a v2 option and no v1 option. It should trend to zero; a rising number means sign-ins are not converging as Decision 7a assumes, and the signup-window fix below becomes worth doing
+- [ ] 1b.9 _Deferred, not required:_ close the remaining window by giving the ClassLink signup both auth options up front via `authentication_options_attributes` (which `Policies::User.user_attributes` already round-trips). Deferred because it means threading the `UserId` through `migrate_to_multi_auth`, a shared signup path with a DCDO-gated alternate implementation, to remove an exposure of one login cycle
+
 - [ ] 1.10 Deploy Phase 1 to production
 
-## PR 2 — One-time bulk migration script
+## Retired: PR for the one-time bulk migration script
 
-Depends on PR 1's `V2AuthOptionBuilder` and nothing else. An operational accelerator, not a
-prerequisite for rostering — but running it before PR 3 reaches teachers is what keeps the
-"sign out and sign back in" message rare rather than routine.
+### 2. Bulk Migration Script — RETIRED, do not implement
 
-### 2. Phase 1 — Bulk Migration Script (optional operational tool)
+Dropped when ClassLink's docs established that `SourcedId` is empty for districts without
+OneRoster enabled (design Decision 7 and the Settled section). The script's purpose was to
+converge v1-only records so the dual-match fallback could be removed; with v1 permanent that
+end state does not exist, and the script cannot distinguish "unmigratable by design" from
+"stored token no longer honored" without calling `v2/my/info` per user. Login-time migration
+is the only migration mechanism. The script written on the feature branch is dropped, not
+merged. Section number retired so design references stay resolvable; former tasks 2.1–2.6
+deleted.
 
-- [ ] 2.1 Write `bin/oneoff/classlink/classlink_v2_migration.rb` modeled on `bin/oneoff/clever/clever_v3_migration.rb`, with dry-run (default) and commit modes
-- [ ] 2.2 Iterate ClassLink users lacking a v2 auth option; for each, call ClassLink `v2/my/info` with the stored `oauth_token`, extract `SourcedId` and `TenantId`, and create the v2 option via `Services::Classlink::V2AuthOptionBuilder`. **Do not attempt to pre-filter on token validity** — every stored ClassLink credential has `expires: false`, a null expiration, and no refresh token, so there is no detectable expiry condition to filter on. Attempt the call and treat failure as a skip
-- [ ] 2.3 Log skipped records (call failed, already-migrated) and report counts. A high failure rate is informational, not a blocker: login-time migration (task 1.8) converges every remaining user on their next sign-in, which is why this script is an accelerator rather than a requirement
-- [ ] 2.4 Operational (recommended before Phase 2 ships): dry-run in production, review output, then run in commit mode; verify v2 record counts
-- [ ] 2.5 Monitor count of users lacking v2 records over subsequent weeks (login-time migration converges the remainder)
-- [ ] 2.6 Document the rollback procedure: delete ClassLink v2 auth options for users who also retain a v1 record (never for v2-only users)
-
-## PR 3 — Rostering: One Roster client, section model, endpoints, and frontend
+## PR 2 — Rostering: One Roster client, section model, endpoints, and frontend
 
 The bulk of the change: sections 3 through 7. Backend and frontend ship together, which means
 the endpoints and the UI that calls them arrive in the same commit — there is no window in
@@ -124,7 +145,7 @@ their own terms rather than as part of a sweep:
   - Extract `TenantId` and `SourcedId` from the teacher's v2 ClassLink auth option
   - Call `Clients::ClasslinkOneRoster.application_for_tenant(tenant_id)`
   - Call `teacher_classes` and return `{courses: [...]}`
-  - Return appropriate error if the teacher has no v2 ClassLink auth option (not yet migrated)
+  - Return appropriate error if the teacher has no v2 ClassLink auth option — whether unmigrated, in a non-OneRoster district, or holding no ClassLink credential at all (an email-invited co-teacher); the UI gate (6.4a) hides the entry point but this endpoint must not rely on it
 - [ ] 5.2 Add `import_classlink_classroom` action to `api_controller.rb`, enforcing the authorization matrix (design Decision 5b):
   - Accept `courseId` (class `sourcedId`) and `courseName` params; derive `TenantId` and teacher `SourcedId` ONLY from `current_user`'s v2 auth option (never from params)
   - Whenever the requester is not already an instructor of the target section — including first import, where no section exists — verify teacher membership via a `classlink_teacher_for_course?` helper (checks requester's `SourcedId` against `class_teachers`); return 403 if not verified (generalizes `clever_teacher_for_course?` to first imports, since the partner credential provides no upstream scoping)
@@ -152,10 +173,11 @@ their own terms rather than as part of a sweep:
     Send **only the portion after the `|`** (the class `sourcedId`). Do not send the tenant: the server derives it from `current_user` per invariant I1. Add a unit test per call site asserting a ClassLink code yields just the `sourcedId`
 - [ ] 6.3b Update the now-inaccurate comment above both derivations ("Section code is the course ID, without the G- or C- prefix") — it states an invariant ClassLink breaks, and leaving it is how the next provider inherits the same bug
 - [ ] 6.4 Add a "Import via ClassLink" trigger in the teacher section creation UI (matching Clever's entry point)
+- [ ] 6.4a Gate that entry point on a v2 auth option (design Decision 6a): in `dashboard/app/views/teacher_dashboard/show.html.haml:35`, include `classlink` in `teacher_dashboard_data[:providers]` only when `@current_user` holds a ClassLink auth option with `version = 'v2'`. Leave `User#providers` itself unchanged — the redux `providers` list this payload feeds has exactly one consumer (`LoginTypePicker.jsx`), so this one filter is the whole gate, and the ClassLink entry then appears/disappears through the same `providers.includes` check that gates Clever. Tests: v2 holder gets `classlink` in the payload; v1-only holder does not; the backend endpoints still error independently for a no-v2 requester (task 5.1) — the gate is visibility, not authorization
 - [ ] 6.5 Add a `case OAuthSectionTypes.classlink` branch to the title and login-type switch in `apps/src/templates/teacherDashboard/RosterDialog.jsx:263-272`. The switch has **no default branch**, so without this the dialog renders an empty `<h2>` — a silent failure that looks like a styling bug
 - [ ] 6.6 Add the i18n strings for the failure states (see the spec requirement "Each rostering failure state has specific user-facing copy"):
   - district not enabled / non-expiry 401 — "Your district hasn't enabled roster sync for CodeAI." **One key serves both states**; they are indistinguishable to the teacher and the distinction stays in the logs
-  - teacher not yet migrated — "Please sign in again from ClassLink to proceed with roster sync."
+  - requester has no v2 auth option — "Please sign in again from ClassLink to proceed with roster sync." The UI gate (6.4a) makes this unreachable from the section-setup entry point, but the state still arrives at the endpoints: direct API calls, a page loaded before the user's v2 option existed, and a co-teacher added to a ClassLink section by email invitation who triggers the section-row sync action (rendered per-section by login type, not per-user by credential)
   - any unexpected failure without its own copy, including a transient 500 or a 429 — "We're having trouble getting roster information from ClassLink. Please try again later." Wire this as the fallback too, so no failure path renders an empty dialog
   - class with no students — "This section (%{section_name}) has no students." (needs an interpolation placeholder)
 - [ ] 6.7 Verify `RosterDialog` and `SectionActionDropdown` work correctly with the new provider (no structural changes expected)
@@ -166,26 +188,19 @@ their own terms rather than as part of a sweep:
 - [ ] 7.1 Test full import flow end-to-end against ClassLink sandbox: authenticate as teacher → list classes → import a class → verify section and students created correctly
 - [ ] 7.2 Test re-sync: add a student in the sandbox → sync → verify student added to section
 - [ ] 7.3 Test re-sync: remove a student in the sandbox → sync → verify student removed from section
-- [ ] 7.4 Test error case: teacher without a v2 auth option sees appropriate re-login prompt
+- [ ] 7.4 Test the no-v2 gate from both sides: a teacher without a v2 auth option sees no ClassLink entry in section setup (providers payload omits it), and a direct request to the rostering endpoints as that teacher returns the no-v2 error rather than data
 - [ ] 7.5 Test error case: teacher's district not in `/applications` response sees appropriate error message
 - [ ] 7.6 Test co-teacher flow: second teacher listed on the class in the sandbox imports the already-imported class → added as co-teacher; a teacher not listed on the class gets 403
 - [ ] 7.7 Test authorization end-to-end against the sandbox: authenticated teacher attempts first import of a valid `courseId` they do not teach → 403 and no section created
 
-## PR 4 — Migration cleanup
+## Retired: PR for migration cleanup
 
-Separated from PR 3 by an **observation window**, not by review scope. Task 8.1 is the gate:
-until the count of v1-only users is effectively zero, removing the dual-match fallback locks
-those users out of their accounts. Do not merge this on a schedule; merge it on that number.
+### 8. Migration Cleanup — RETIRED, do not implement
 
-Note the ordering constraint inside this PR — 8.2 and 8.3 remove the login path that produces
-v2 records, so anyone still holding only a v1 record after that point has no route back. That
-is why 8.4 (deleting v1 records) is last and follows its own observation window.
-
-### 8. Phase 3 — Migration Cleanup
-
-- [ ] 8.1 Confirm all active ClassLink users have v2 auth options (query count of v1-only users). **This is PR 4's merge gate** — not a checklist item to tick off in passing. Removing the dual-match fallback while v1-only users remain locks them out
-- [ ] 8.2 Remove dual-match login fallback from `omniauth_callbacks_controller.rb`
-- [ ] 8.3 Remove login-time v2-creation logic from the callback (builder service remains for the record)
-- [ ] 8.4 Retire v1 ClassLink auth options (delete after an observation window)
-- [ ] 8.5 Update and run tests to confirm no regressions
-- [ ] 8.6 Deploy Phase 3
+There is no cleanup phase. The dual-match fallback and the v1 records it serves are permanent:
+the legacy `UserId` path is the only login path for districts without OneRoster enabled, and
+new v1-format signups continue there indefinitely (design Decision 7). The old merge gate —
+"count of v1-only users is effectively zero" — is not merely unmet but unmeasurable: a v1
+record stores only `UserId`, so it cannot say whether its holder is unmigrated or unmigratable.
+Removing the fallback would lock every non-OneRoster district out of their accounts. Section
+number retired so design references stay resolvable; former tasks 8.1–8.6 deleted.

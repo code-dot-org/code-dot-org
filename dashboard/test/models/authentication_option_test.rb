@@ -313,7 +313,7 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
     )
 
     # The collation-backed lookup would match this id; the byte-exact confirm must not.
-    Observability::Errors.expects(:capture_message).once
+    Observability::Errors.expects(:report).once
     assert_nil AuthenticationOption.find_by_exact_credential(
       credential_type: AuthenticationOption::CLASSLINK,
       authentication_id: '2222|ABC-01'
@@ -364,7 +364,7 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
       AuthenticationOption::Classlink.version_for('2222|5678_T5678-0005')
   end
 
-  test 'Classlink.version_for returns nil for a legacy UserId' do
+  test 'Classlink.version_for returns nil for a v1 UserId' do
     assert_nil AuthenticationOption::Classlink.version_for('59777133')
     assert_nil AuthenticationOption::Classlink.version_for(59_777_133)
   end

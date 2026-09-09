@@ -96,13 +96,13 @@ module Honeybadger
     [error_message, error_lines]
   end
 
-  # Returns all issues (across cronjobs, dashboard, and pegasus) that have occured since midnight.
+  # Returns all issues (across cronjobs and dashboard) that have occured since midnight.
   # @return [Array[Hash]] An array of hashes summarizing the recent issues.
   def self.get_recent_issues
     raise 'CDO.honeybadger_api_token undefined' unless CDO.honeybadger_api_token
     issues = []
 
-    {cronjobs: 45435, dashboard: 3240, pegasus: 34365}.each do |project, project_id|
+    {cronjobs: 45435, dashboard: 3240}.each do |project, project_id|
       next_url = "/v2/projects/#{project_id}/faults" \
         "?occurred_after=#{1.day.ago.to_i}&q=-is:resolved%20-is:paused%20-is:ignored"
       while next_url

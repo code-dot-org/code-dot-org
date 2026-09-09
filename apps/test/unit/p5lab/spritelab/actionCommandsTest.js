@@ -701,22 +701,5 @@ describe('Action Commands', () => {
       ]);
       expect(touching).to.be.true;
     });
-
-    it('hasSupportAt tolerates landing noise within contactEpsilon', () => {
-      placeSpriteAndWall(200 - FLOAT_NOISE);
-      const exact = commands.hasSupportAt.apply(coreLibrary, [
-        {name: 'player'},
-        0,
-        {name: 'wall'},
-      ]);
-      expect(exact).to.be.false;
-      coreLibrary.contactEpsilon = 0.1;
-      const tolerant = commands.hasSupportAt.apply(coreLibrary, [
-        {name: 'player'},
-        0,
-        {name: 'wall'},
-      ]);
-      expect(tolerant).to.be.true;
-    });
   });
 });

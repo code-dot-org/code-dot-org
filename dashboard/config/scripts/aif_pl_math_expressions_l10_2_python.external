@@ -3,45 +3,47 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Expressions
+<h1>Expressions and Operators</h1>
+<p>Now that you can create variables, let's look at how they combine with operators to actually do something.</p>
 
-## Expressions
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px;">
+<p><b>📖 Expression:</b> A combination of data and operators that evaluates to a single value.</p>
+</div>
 
-An **expression** is a combination of data and operators that evaluates a to a single value.
+<img src="https://images.code.org/57475ec41c652afa5db079b72fc99945-image-1727211392306.png" alt="Example of a Python expression combining a value and an operator to evaluate to a single result" width="100%">
 
-![](https://images.code.org/57475ec41c652afa5db079b72fc99945-image-1727211392306.png)
+<h2>Python Operators</h2>
+<p>A <b>Python operator</b> is a special symbol or keyword that performs a specific operation on one or more operands (values or variables).</p>
+<p><b>Operands</b> are the inputs (such as numbers, strings, or variables) that the operator acts upon to produce a result.</p>
+<p><b>Common operators:</b></p>
 
-## Python Operators 
-A **Python operator** is a special symbol or keyword that performs a specific operation on one or more operands (values or variables).
+<table border="1" width="100%" cellpadding="10" style="table-layout: fixed;">
+    <tr>
+        <th style="font-size: 16px; text-align: center; width: 20%;">Operator</th>
+        <th style="font-size: 16px; width: 80%; padding-left: 20px;">Description</th>
+    </tr>
+    <tr style="height: 50px;">
+        <td style="font-size: 22px; font-weight: bold; text-align: center;">+</td>
+        <td style="font-size: 16px; padding-left: 20px;">Addition (for numbers) / String concatenation (for strings)</td>
+    </tr>
+    <tr style="height: 50px;">
+        <td style="font-size: 22px; font-weight: bold; text-align: center;">-</td>
+        <td style="font-size: 16px; padding-left: 20px;">Subtraction</td>
+    </tr>
+    <tr style="height: 50px;">
+        <td style="font-size: 22px; font-weight: bold; text-align: center;">*</td>
+        <td style="font-size: 16px; padding-left: 20px;">Multiplication</td>
+    </tr>
+    <tr style="height: 50px;">
+        <td style="font-size: 22px; font-weight: bold; text-align: center;">/</td>
+        <td style="font-size: 16px; padding-left: 20px;">Division</td>
+    </tr>
+</table>
+<div style="clear:both;"></div>
 
-**Operands** are the inputs (such as numbers, strings, or variables) that the operator acts upon to produce a result.
+<div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+<p><b>💡 Teacher tip:</b> The <b>+</b> operator does two different jobs depending on the data type. With numbers, <code style="font-size:14px;">5 + 3</code> adds to get <code style="font-size:14px;">8</code>. With strings, <code style="font-size:14px;">"cat" + "fish"</code> concatenates, or joins, to get <code style="font-size:14px;">"catfish"</code>, it doesn't add anything numerically.</p><p> Students often expect <code style="font-size:14px;">+</code> to always mean addition, so when they try to combine a number and a string, like <code style="font-size:14px;">"age: " + 12</code>, Python throws an error.</p><p> Watch for this moment, it's a natural spot to explain that <code style="font-size:14px;">+</code> behaves differently based on what it's operating on.</p>
+</div>
 
-**Common operators:** 
-
-
-   <table border="1" width="100%" cellpadding="10" style="table-layout: fixed;">
-        <tr>
-            <th style="font-size: 14pt; text-align: center; width: 20%;">Operator</th>
-            <th style="font-size: 14pt; width: 80%;">Description</th>
-        </tr>
-        <tr style="height: 50px;">
-            <td style="font-size: 14pt; font-weight: bold; text-align: center;">+</td>
-            <td style="font-size: 14pt;">Addition (for numbers) / String concatenation (for strings)</td>
-        </tr>
-        <tr style="height: 50px;">
-            <td style="font-size: 14pt; font-weight: bold; text-align: center;">-</td>
-            <td style="font-size: 14pt;">Subtraction</td>
-        </tr>
-        <tr style="height: 50px;">
-            <td style="font-size: 14pt; font-weight: bold; text-align: center;">*</td>
-            <td style="font-size: 14pt;">Multiplication</td>
-        </tr>
-        <tr style="height: 50px;">
-            <td style="font-size: 14pt; font-weight: bold; text-align: center;">/</td>
-            <td style="font-size: 14pt;">Division</td>
-        </tr>
-    </table>
-    <div style="clear:both;"></div>
-
-## Let's practice!
+<h2>Let's practice!</h2>
 MARKDOWN

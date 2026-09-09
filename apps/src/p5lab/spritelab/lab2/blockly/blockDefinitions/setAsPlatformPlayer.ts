@@ -10,7 +10,7 @@ import {FIELD_COSTUME_TYPE} from '../imagePickerFields';
  */
 const definition: BlockJson = {
   type: 'spritelab2_setAsPlatformPlayer',
-  message0: 'set %1 as platform player',
+  message0: 'set %1 as player',
   args0: [{type: FIELD_COSTUME_TYPE, name: 'ANIMATION_NAME'}],
   previousStatement: null,
   nextStatement: null,

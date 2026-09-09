@@ -6,8 +6,6 @@
 /.dashboard-up-to-date
 deploy-*.log
 /.level_builder-built
-/.pegasus-built
-/.pegasus-up-to-date
 /.website-ci-built
 /.websites-built
 /.websites-test-built

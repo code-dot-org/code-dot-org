@@ -1,6 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
+  flex: 1;
   gap: 12px;
   width: 100%;
   min-height: 0;
@@ -9,13 +10,18 @@
   justify-self: center;
 }
 
+// Sized from the available height, not the content: aspect-ratio derives the
+// width from that height (rather than the other way around) because height
+// is the only explicit dimension here.
 .previewWrapper {
   position: relative;
   border-radius: 8px;
   overflow: hidden;
   background-color: #000;
   line-height: 0;
-  width: max-content;
+  height: 100%;
+  max-width: 100%;
+  aspect-ratio: 9 / 16;
 }
 
 .video {
@@ -24,7 +30,6 @@
   border-radius: 8px;
   display: block;
   object-fit: cover;
-  aspect-ratio: 9 / 16;
 }
 
 .countdownRing {
@@ -51,54 +56,6 @@
   font-size: 1.05rem;
   font-weight: 700;
   line-height: 1;
-}
-
-.recordButton {
-  padding: 10px 20px;
-  background-color: #2e7d32;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: opacity 0.15s ease;
-
-  &:hover {
-    opacity: 0.85;
-  }
-}
-
-.stopButton {
-  padding: 10px 20px;
-  background-color: #c62828;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: opacity 0.15s ease;
-
-  &:hover {
-    opacity: 0.85;
-  }
-}
-
-.reRecordButton {
-  padding: 8px 16px;
-  background-color: transparent;
-  color: var(--text-neutral-primary);
-  border: 1px solid var(--borders-neutral-primary);
-  border-radius: 8px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: filter 0.15s ease;
-
-  &:hover {
-    filter: brightness(0.9);
-  }
 }
 
 .error {

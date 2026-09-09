@@ -47,7 +47,7 @@ module Metrics
         if CDO.rack_env?(:development)
           puts "Error logging event: #{exception}"
         end
-        Honeybadger.notify(
+        Observability::Errors.report(
           exception,
           error_message: 'Error logging event',
         )

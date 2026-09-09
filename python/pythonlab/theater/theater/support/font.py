@@ -16,6 +16,29 @@ class FontStyle(Enum):
   BOLD_ITALIC = "BOLD_ITALIC"
 
 
+def _as_member(enum_class, value, label):
+  """Accept an enum member or its name (case-insensitive)."""
+  if isinstance(value, enum_class):
+    return value
+  if isinstance(value, str):
+    try:
+      return enum_class(value.upper())
+    except ValueError:
+      pass
+  names = ", ".join(member.value for member in enum_class)
+  raise ValueError(f"Unknown {label} {value!r}, expected one of {names}")
+
+
+def as_font(font):
+  """Accept a Font or a font name (case-insensitive)."""
+  return _as_member(Font, font, "font")
+
+
+def as_font_style(font_style):
+  """Accept a FontStyle or a style name (case-insensitive)."""
+  return _as_member(FontStyle, font_style, "text style")
+
+
 # Maps (Font, FontStyle) -> bundled TTF filename.
 _FAMILY_PREFIX = {
   Font.MONO: "LiberationMono",

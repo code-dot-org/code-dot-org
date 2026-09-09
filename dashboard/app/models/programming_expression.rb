@@ -295,7 +295,7 @@ class ProgrammingExpression < ApplicationRecord
   end
 
   def report_error_get_localized_examples_no_name(example)
-    Honeybadger.notify(
+    Observability::Errors.report(
       "example needs a unique 'name', otherwise a translation cannot be shown",
       context: {
         example: example

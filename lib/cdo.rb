@@ -233,6 +233,8 @@ module Cdo
       end
     end
 
+    # The demo stack is still deployed but nothing routes to it: Java Lab now
+    # requires a verified instructor, so these two helpers have no caller.
     def javabuilder_demo_url(path = '', scheme = '')
       DCDO.get("javabuilder_demo_websocket_url", 'wss://javabuilder-demo.code.org')
     end

@@ -1,0 +1,17 @@
+name 'csaif_pl_reflection-padlet'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Reflecting on the Project</h1>
+<p>As students work on their projects, balancing structure with creative freedom is key. Thoughtful planning, guided problem-solving, and opportunities for peer collaboration will help them turn their ideas into meaningful, well-executed code.</p>
+
+<p><b>Head to the Padlet below and share your thinking:</b></p>
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+<p>How will you support students in breaking down their ideas into manageable coding tasks while still allowing for creative freedom in their projects?</p>
+</div>
+
+---
+
+<div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4"><p style="padding:0;margin:0"><iframe src="https://padlet.com/embed/s0238nvd570s032kwi9u" frameborder="0" allow="camera;microphone;geolocation;display-capture;clipboard-write" style="width:100%;height:608px;display:block;padding:0;margin:0"></iframe></p></div>
+MARKDOWN

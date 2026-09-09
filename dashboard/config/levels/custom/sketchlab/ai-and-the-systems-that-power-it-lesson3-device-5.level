@@ -1,0 +1,1023 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "game_id": 75,
+  "created_at": "2026-09-02T21:28:15.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#Layla Haddad — Pharmacist\r\n\r\nLayla enters each prescription at her workstation, which reaches the pharmacy system over a wired connection. The dispensing unit's processor runs the mechanism that releases the pills, and a label printer prints the label. Everything sits behind the counter.\r\n\r\n### What's Going Wrong?\r\n* Prescriptions stall halfway with the bottle only part-filled, and no error message appears.\r\n* Labels come out blank, or shifted so the dose line is cut off.\r\n* The screen flickers.\r\n* All three only happen when the unit and the printer are running at the same time. All three started the same week.",
+    "hide_share_and_remix": "false",
+    "require_edit_to_continue": "true",
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "eea2fa1d-88a6-4785-a843-6e1ebdea732e",
+            "type": "group",
+            "position": {
+              "x": 1923.1077902608781,
+              "y": 1761.7856235479003
+            },
+            "width": 882.1716367230324,
+            "height": 1112.1435277237897,
+            "zIndex": -1,
+            "data": {
+            },
+            "measured": {
+              "width": 882,
+              "height": 1112
+            },
+            "dragging": false
+          },
+          {
+            "id": "89ebd6e8-6c79-4258-b5fa-87f34d549999",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/85636f5f-01c5-4120-ba14-fd06230d31c2.png",
+              "altText": "comms_ethernet",
+              "locked": true
+            },
+            "position": {
+              "x": 2307.3085866358597,
+              "y": 402.98254081482787
+            },
+            "width": 106.94992017213599,
+            "height": 120,
+            "measured": {
+              "width": 107,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "fd108d71-fbdc-44da-9a90-57f6b2d5b0b1",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/435081e6-5b01-44c0-83a2-5e392180cf58.png",
+              "altText": "hardware_desktop",
+              "locked": true
+            },
+            "position": {
+              "x": 2059.6571759413887,
+              "y": 445.324826551255
+            },
+            "width": 98.25746341890954,
+            "height": 120,
+            "measured": {
+              "width": 98,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "a22e86f9-222b-410b-b5c2-aa991f1583b3",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/c61b821c-15dd-452e-9a0c-a7f1fbb4a6d4.png",
+              "altText": "hardware_power-outlet",
+              "locked": true
+            },
+            "position": {
+              "x": 2591.126513714931,
+              "y": 646.2550497397466
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "66ab4850-f935-4c24-bde2-c00867c0eb7b",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/6e20b27d-7404-4b65-9ea2-62cc4ed00edf.png",
+              "altText": "output_action",
+              "locked": true
+            },
+            "position": {
+              "x": 2728.9631500024584,
+              "y": 220.43428536517968
+            },
+            "width": 103.918487039115,
+            "height": 120,
+            "measured": {
+              "width": 104,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "d51058dd-516c-4dce-b6c6-0751ef716cab",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/409e8ba9-0386-4d44-ac21-072ddea1847e.png",
+              "altText": "output_monitor",
+              "locked": true
+            },
+            "position": {
+              "x": 2053.2354980005553,
+              "y": 185.22503093557611
+            },
+            "width": 109.98135330515652,
+            "height": 120,
+            "measured": {
+              "width": 110,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "7434442d-c1bd-4b5a-b238-0423e2a6c066",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/d234144a-9cc4-4186-840f-3e00f64ff7ab.png",
+              "altText": "output_printer",
+              "locked": true
+            },
+            "position": {
+              "x": 2897.972926572494,
+              "y": 589.1235740992148
+            },
+            "width": 108.46563673864648,
+            "height": 120,
+            "measured": {
+              "width": 108,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "82183550-ca7f-4adb-8b0e-fcb461804b16",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/level%20'ai-and-the-systems-that-power-it-hardware-components-to-clone/uuid/a467e4ec-cd00-4713-b802-92a6e3396fb6.png",
+              "altText": "processing_CPU",
+              "locked": true
+            },
+            "position": {
+              "x": 2874.9777486509006,
+              "y": 218.09307626026907
+            },
+            "width": 106.94992017213599,
+            "height": 120,
+            "measured": {
+              "width": 107,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "568756d3-378c-4c28-9cb2-ae546a789a56",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#e7f2e3",
+              "strokeColor": "#9dc88d",
+              "locked": true
+            },
+            "position": {
+              "x": 10,
+              "y": 10
+            },
+            "width": 430.7910011923752,
+            "height": 1091.7947709934203,
+            "measured": {
+              "width": 431,
+              "height": 1092
+            },
+            "dragging": false,
+            "zIndex": 1,
+            "parentId": "eea2fa1d-88a6-4785-a843-6e1ebdea732e",
+            "expandParent": true
+          },
+          {
+            "id": "ad8eed9e-3a02-4a3f-b2c6-3970909a7fe3",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#dfe9fb",
+              "strokeColor": "#6f9dec",
+              "locked": true
+            },
+            "position": {
+              "x": 2563.4877308162877,
+              "y": 161.11832938636488
+            },
+            "width": 468.9672423609519,
+            "height": 223.0244429284989,
+            "measured": {
+              "width": 469,
+              "height": 223
+            },
+            "dragging": false,
+            "zIndex": -5
+          },
+          {
+            "id": "5b090fff-86c5-44b0-ae3d-553473b334a6",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Data is transferred over a network to the pill dispensing machine",
+              "backgroundColor": "#f9dcbe",
+              "strokeColor": "#f7b56e",
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": 2279.703987696806,
+              "y": 547.1764597564896
+            },
+            "width": 189.7170706992216,
+            "height": 90.83094973030364,
+            "measured": {
+              "width": 190,
+              "height": 91
+            },
+            "dragging": false
+          },
+          {
+            "id": "7a53196b-12dd-4c85-a949-fae0d25b272d",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#fff9e5",
+              "strokeColor": "#ffd966",
+              "locked": true
+            },
+            "position": {
+              "x": 1910.0909839507196,
+              "y": -4.5058225057759955
+            },
+            "width": 1289.646560358366,
+            "height": 925.1838917017166,
+            "measured": {
+              "width": 1290,
+              "height": 925
+            },
+            "dragging": false,
+            "zIndex": -6
+          },
+          {
+            "id": "02330def-dc44-4846-a089-efccc5c3ac99",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#f9e2e2",
+              "strokeColor": "#e27878",
+              "locked": true
+            },
+            "position": {
+              "x": 441.79604976907876,
+              "y": 10.00482552486119
+            },
+            "width": 430.37558695395364,
+            "height": 1092.1387021989287,
+            "measured": {
+              "width": 430,
+              "height": 1092
+            },
+            "dragging": false,
+            "parentId": "eea2fa1d-88a6-4785-a843-6e1ebdea732e",
+            "expandParent": true
+          },
+          {
+            "id": "87b59a8f-b913-4f4a-9294-874ea7ad2541",
+            "type": "text",
+            "data": {
+              "text": "Talk through the scenario with your partner. Examine the possible troubleshooting steps below and choose which ones are worth pursuing and which are not. Sort them into the proper category.",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "fontSize": "large",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1921.6190091615254,
+              "y": 1331.6224870836493
+            },
+            "width": 1045.0483482824857,
+            "height": 40,
+            "measured": {
+              "width": 1045,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "c1389887-f2fb-41fd-bacb-0696a3b640f4",
+            "type": "text",
+            "data": {
+              "text": "Possible Causes",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "fontSize": "large",
+              "locked": true
+            },
+            "position": {
+              "x": 74.39517238594453,
+              "y": 24.678230027986274
+            },
+            "width": 249.0483482824858,
+            "height": 41.89464570813789,
+            "measured": {
+              "width": 249,
+              "height": 42
+            },
+            "dragging": false,
+            "zIndex": 2,
+            "parentId": "eea2fa1d-88a6-4785-a843-6e1ebdea732e",
+            "expandParent": true
+          },
+          {
+            "id": "23fbd26d-2b7e-435e-abe0-00d3d258cd06",
+            "type": "text",
+            "data": {
+              "text": "The dispensing mechanism is jammed",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 1927.8580911531494,
+              "y": 1417.41428180539
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 3
+          },
+          {
+            "id": "e8e22ea8-ab1d-4d50-b81f-c2828e77c26d",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Layla uses a scanner to get prescription information into her computer",
+              "backgroundColor": "#f9dcbe",
+              "strokeColor": "#f7b56e",
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": 1996.1334719501745,
+              "y": 776.6588206488218
+            },
+            "width": 231.17123777675135,
+            "height": 100.77262408609795,
+            "measured": {
+              "width": 231,
+              "height": 101
+            },
+            "dragging": false
+          },
+          {
+            "id": "fe1b579b-5789-4c40-8c71-8491785ac705",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "#fff2cc",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "locked": true
+            },
+            "position": {
+              "x": 2512.095062830993,
+              "y": 112.35970466270882
+            },
+            "width": 201.59268890555995,
+            "height": 190.03323697535046,
+            "measured": {
+              "width": 202,
+              "height": 190
+            },
+            "dragging": false,
+            "zIndex": -4
+          },
+          {
+            "id": "a42b5600-bd47-4a02-8295-663b81e1a65f",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "A pill dispensing machine, powered by a CPU, counts the pills and dispenses them into a bottle",
+              "backgroundColor": "#f9dcbe",
+              "strokeColor": "#f7b56e",
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": 2709.693875830951,
+              "y": 50.62815853730502
+            },
+            "width": 379.71146129477086,
+            "height": 88.6468915540146,
+            "measured": {
+              "width": 380,
+              "height": 89
+            },
+            "dragging": false
+          },
+          {
+            "id": "e8953d27-8048-47e6-9717-5b0d2792c6ab",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "The screen shows the pill type and count to verify",
+              "backgroundColor": "#f9dcbe",
+              "strokeColor": "#f7b56e",
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": 2006.424636977525,
+              "y": 82.44849942187605
+            },
+            "width": 209.06817287602337,
+            "height": 75.35865564325387,
+            "measured": {
+              "width": 209,
+              "height": 75
+            },
+            "dragging": false
+          },
+          {
+            "id": "01a28c31-2c9a-4e2e-a63c-2bf3e898438b",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "The label printer prints the prescription label for the bottle",
+              "backgroundColor": "#f9dcbe",
+              "strokeColor": "#f7b56e",
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": 2902.2452280551843,
+              "y": 740.8900391191326
+            },
+            "width": 171.48796038217245,
+            "height": 119.22855952813393,
+            "measured": {
+              "width": 171,
+              "height": 119
+            },
+            "dragging": false
+          },
+          {
+            "id": "d00fc775-98a5-428a-a38d-4131e5048ca3",
+            "type": "text",
+            "data": {
+              "text": "SELF",
+              "strokeColor": "transparent",
+              "fontColor": "#ec8e22",
+              "fontSize": 60,
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1910.7516439606893,
+              "y": -189.88858812195917
+            },
+            "width": 492.1299277194439,
+            "height": 61.538094156194354,
+            "measured": {
+              "width": 492,
+              "height": 62
+            },
+            "dragging": false
+          },
+          {
+            "id": "3653adb3-cb3c-4f46-b608-8a6fda228319",
+            "type": "text",
+            "data": {
+              "text": "NEIGHBOR",
+              "strokeColor": "transparent",
+              "fontColor": "#ec8e22",
+              "fontSize": 60,
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1935.2804071851624,
+              "y": 1242.0691282611922
+            },
+            "width": 492.1299277194439,
+            "height": 61.538094156194354,
+            "measured": {
+              "width": 492,
+              "height": 62
+            },
+            "dragging": false
+          },
+          {
+            "id": "67bcd666-996e-43bf-b9bc-2d1f5f92fd46",
+            "type": "text",
+            "data": {
+              "text": "Eliminated Possibilities",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "fontSize": "large",
+              "locked": true
+            },
+            "position": {
+              "x": 527.4435206684302,
+              "y": 24.678230027986274
+            },
+            "width": 249.0483482824858,
+            "height": 41.89464570813789,
+            "measured": {
+              "width": 249,
+              "height": 42
+            },
+            "dragging": false,
+            "zIndex": 2,
+            "parentId": "eea2fa1d-88a6-4785-a843-6e1ebdea732e",
+            "expandParent": true
+          },
+          {
+            "id": "11b2ef87-4cae-4068-89b9-df531320967e",
+            "type": "text",
+            "data": {
+              "text": "The prescription scanner is broken",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2176.906439435635,
+              "y": 1417.41428180539
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 4
+          },
+          {
+            "id": "e86e1723-5b08-4660-b3f8-e748ab0fc3fc",
+            "type": "text",
+            "data": {
+              "text": "The wired network connection is dropping",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2425.9547877181208,
+              "y": 1417.41428180539
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 5
+          },
+          {
+            "id": "d294f65e-15fe-4a10-bd80-af2175751bd0",
+            "type": "text",
+            "data": {
+              "text": "The pharmacy system has the wrong quantity on file",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2675.0031360006064,
+              "y": 1417.41428180539
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 6
+          },
+          {
+            "id": "9067410f-63ff-4c42-92af-416beca67c4e",
+            "type": "text",
+            "data": {
+              "text": "The label printer is faulty",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2924.051484283092,
+              "y": 1417.41428180539
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 7
+          },
+          {
+            "id": "037ea9a6-da83-442d-8010-f7fbfcd823ab",
+            "type": "text",
+            "data": {
+              "text": "The workstation is failing",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 1927.910815748793,
+              "y": 1564.4476712450103
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 8
+          },
+          {
+            "id": "48560197-8187-4bd6-a8e4-a4e1073b13de",
+            "type": "text",
+            "data": {
+              "text": "Three separate faults happened to arrive together",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2176.9591640312788,
+              "y": 1564.4476712450103
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 9
+          },
+          {
+            "id": "6fde26d8-f0a3-49d0-9818-37a7f9d09de5",
+            "type": "text",
+            "data": {
+              "text": "The unit and printer draw too much power together",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2426.0075123137644,
+              "y": 1564.4476712450103
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 10
+          },
+          {
+            "id": "d8ab76e4-07e2-4c18-840b-82318e5d1f5d",
+            "type": "text",
+            "data": {
+              "text": "Something changed the same week this started",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2675.05586059625,
+              "y": 1564.4476712450103
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 11
+          },
+          {
+            "id": "bc29cd24-d29d-4008-9166-a5443850f8a4",
+            "type": "text",
+            "data": {
+              "text": "Restate the problem and make your best guesses about possible solutions",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "fontSize": "large",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1919.6407160285253,
+              "y": -101.99828374479044
+            },
+            "width": 1045.0483482824857,
+            "height": 40,
+            "measured": {
+              "width": 1045,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "2eb5f7e1-8a47-4542-9592-3377c1b3b371",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson3-device-5/uuid/484bcbb9-5e8e-40a9-b830-3991e28adae2.png",
+              "altText": "",
+              "locked": true
+            },
+            "position": {
+              "x": 2546.2354835214755,
+              "y": 120.7187937722893
+            },
+            "width": 131.2013852363027,
+            "height": 170.0186466948432,
+            "measured": {
+              "width": 131,
+              "height": 170
+            },
+            "dragging": false
+          },
+          {
+            "id": "2592e2f2-8f24-45f5-bb18-89f88c9ed090",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson3-device-5/uuid/b280818d-b690-4c0b-b4a9-b53a30b844f1.png",
+              "altText": "",
+              "locked": true
+            },
+            "position": {
+              "x": 1702.5939692588236,
+              "y": -231.01109446870112
+            },
+            "width": 198,
+            "height": 170,
+            "measured": {
+              "width": 198,
+              "height": 170
+            },
+            "dragging": false
+          },
+          {
+            "id": "6624265b-23af-4a69-b6ad-90087dac1369",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson3-device-5/uuid/b280818d-b690-4c0b-b4a9-b53a30b844f1.png",
+              "altText": "",
+              "rotation": 49,
+              "locked": true
+            },
+            "position": {
+              "x": 1822.5939692588238,
+              "y": 1000.9889055312983
+            },
+            "width": 198,
+            "height": 170,
+            "measured": {
+              "width": 198,
+              "height": 170
+            },
+            "dragging": false
+          },
+          {
+            "id": "c6c9eeb3-13a7-420c-88b0-db0772bf1e96",
+            "type": "text",
+            "data": {
+              "text": "Start\nHere",
+              "strokeColor": "transparent",
+              "fontColor": "#ec8e22",
+              "fontSize": "extra-large",
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1674.8815716801341,
+              "y": -328.13858812195906
+            },
+            "width": 128.12992771944437,
+            "height": 61.538094156194354,
+            "measured": {
+              "width": 128,
+              "height": 62
+            },
+            "dragging": false
+          },
+          {
+            "id": "c3e204e7-625e-49f1-9a99-7e4ec27e758f",
+            "type": "text",
+            "data": {
+              "text": "The system lets her seal a bottle without confirming the count",
+              "strokeColor": "#8c8c8c",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 2924.104208878736,
+              "y": 1564.4476712450103
+            },
+            "width": 249.0483482824858,
+            "height": 121.06512035451146,
+            "measured": {
+              "width": 249,
+              "height": 121
+            },
+            "dragging": false,
+            "zIndex": 11
+          },
+          {
+            "id": "f0356ac6-49c3-4a75-95b3-11bd2cc12a02",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson3-device-5/uuid/8393276c-0863-4b4a-be92-272a008a1615.png",
+              "altText": "input_camera",
+              "locked": true
+            },
+            "position": {
+              "x": 2056.6402231226093,
+              "y": 629.5154112435423
+            },
+            "width": 104.28476394904828,
+            "height": 120,
+            "measured": {
+              "width": 104,
+              "height": 120
+            },
+            "dragging": false
+          }
+        ],
+        "edges": [
+          {
+            "id": "0d08f595-48f8-4bd8-96e1-9a96db6cfb19",
+            "source": "fd108d71-fbdc-44da-9a90-57f6b2d5b0b1",
+            "target": "d51058dd-516c-4dce-b6c6-0751ef716cab",
+            "type": "default",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 3
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "targetHandle": "bottom-target",
+            "sourceHandle": "top-source",
+            "data": {
+              "locked": true
+            }
+          },
+          {
+            "id": "b06cea98-f300-4728-ad6e-4b97962bd5f5",
+            "source": "fd108d71-fbdc-44da-9a90-57f6b2d5b0b1",
+            "target": "89ebd6e8-6c79-4258-b5fa-87f34d549999",
+            "type": "default",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 3
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "targetHandle": "left-target",
+            "sourceHandle": "right-source",
+            "data": {
+              "locked": true
+            }
+          },
+          {
+            "id": "4aaed79e-428e-4a3b-ba51-58897a191b11",
+            "source": "89ebd6e8-6c79-4258-b5fa-87f34d549999",
+            "target": "fe1b579b-5789-4c40-8c71-8491785ac705",
+            "type": "default",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 3
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "targetHandle": "left-target",
+            "sourceHandle": "top-source",
+            "data": {
+              "locked": true
+            }
+          },
+          {
+            "id": "8e51f51c-fe7e-47dc-b2a1-ff31f7a39c5c",
+            "source": "a22e86f9-222b-410b-b5c2-aa991f1583b3",
+            "target": "fe1b579b-5789-4c40-8c71-8491785ac705",
+            "type": "default",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 3
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "targetHandle": "bottom-target",
+            "sourceHandle": "top-source",
+            "data": {
+              "locked": true
+            }
+          },
+          {
+            "id": "fcd850c4-64cf-4d5a-977c-7579f504ed57",
+            "source": "ad8eed9e-3a02-4a3f-b2c6-3970909a7fe3",
+            "target": "7434442d-c1bd-4b5a-b238-0423e2a6c066",
+            "type": "default",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 3
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "targetHandle": "top-target",
+            "sourceHandle": "bottom-source",
+            "data": {
+              "locked": true
+            }
+          },
+          {
+            "id": "719b7fca-e62a-45f8-b1df-2345db6e91af",
+            "source": "f0356ac6-49c3-4a75-95b3-11bd2cc12a02",
+            "target": "fd108d71-fbdc-44da-9a90-57f6b2d5b0b1",
+            "type": "default",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 3
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "targetHandle": "bottom-target",
+            "sourceHandle": "top-source",
+            "data": {
+              "locked": true
+            }
+          }
+        ],
+        "viewport": {
+          "x": -1074.6238954609898,
+          "y": 251.43789028329078,
+          "zoom": 0.6597539553864479
+        }
+      }
+    },
+    "display_name": "Layla Haddad",
+    "bubble_choice_description": "The Dispensing Unit Won't Finish a Prescription!"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-02T21:28:15.743+00:00\",\"changed\":[\"cloned from \\\"ai-and-the-systems-that-power-it-lesson3-device-3\\\"\"],\"cloned_from\":\"ai-and-the-systems-that-power-it-lesson3-device-3\"},{\"changed_at\":\"2026-09-02 21:28:50 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:41:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:48:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:56:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:05:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:47:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:50:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>
