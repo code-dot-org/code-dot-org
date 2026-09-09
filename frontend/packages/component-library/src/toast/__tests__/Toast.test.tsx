@@ -102,6 +102,22 @@ describe('Design System - Toast', () => {
       }
     });
 
+    it('re-announces an identical message when toastId changes', async () => {
+      // Two identical messages leave the region's text unchanged, and a screen
+      // reader says nothing about a node that did not change.
+      const {rerender} = render(<Toast open toastId={1} message="Saved!" />);
+      const liveRegion = screen.getByRole('alert');
+      await waitFor(() => expect(liveRegion).toHaveTextContent('Saved!'));
+
+      rerender(<Toast open toastId={2} message="Saved!" />);
+
+      // Cleared on the spot, refilled on the next frame - the same two-step a
+      // changing message gets.
+      expect(liveRegion.textContent).toBe('');
+      await waitFor(() => expect(liveRegion).toHaveTextContent('Saved!'));
+      expect(screen.getByRole('alert')).toBe(liveRegion);
+    });
+
     it('restarts the timer when toastId changes for the same message', () => {
       // Two identical messages in a row are distinguishable only by the id, so
       // it has to reach the Snackbar's key alongside the text.

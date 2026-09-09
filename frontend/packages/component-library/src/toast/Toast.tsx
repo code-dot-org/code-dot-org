@@ -48,16 +48,23 @@ export const DEFAULT_TOAST_POLITENESS: ToastPoliteness = 'assertive';
  * change a text mutation inside a region already in the accessibility tree —
  * which screen readers announce reliably — rather than inserting a text node
  * into a previously-empty region (a transition many SR/browser pairs, notably
- * Orca, miss). The two-step also re-announces an identical repeat message.
+ * Orca, miss). A repeat of the same text needs `announcementId` to be heard
+ * again; the region is otherwise unchanged and screen readers say nothing.
  * Render this standalone if you drive the visual toast yourself and only need
  * the announcement.
  */
 export function ToastAnnouncer({
   message,
   politeness = DEFAULT_TOAST_POLITENESS,
+  announcementId,
 }: {
   message: string | null;
   politeness?: ToastPoliteness;
+  /**
+   * Change this alongside an unchanged `message` to announce it again. Without
+   * it the same text raised twice in a row mutates nothing, so nothing is said.
+   */
+  announcementId?: number | string;
 }) {
   const [announced, setAnnounced] = useState('');
 
@@ -70,7 +77,7 @@ export function ToastAnnouncer({
     setAnnounced('');
     const id = requestAnimationFrame(() => setAnnounced(message));
     return () => cancelAnimationFrame(id);
-  }, [message]);
+  }, [message, announcementId]);
 
   return (
     <div
@@ -108,8 +115,9 @@ export interface ToastProps {
   politeness?: ToastPoliteness;
   /**
    * Identifies this toast among consecutive ones; change it to restart the
-   * auto-hide timer for a message identical to the one before it. Not a DOM
-   * id - it only joins the message in the Snackbar's React key.
+   * auto-hide timer and re-announce a message identical to the one before it.
+   * Not a DOM id - it reaches the Snackbar's key and the announcer, nothing
+   * else.
    */
   toastId?: number | string;
   /** Accessible name for the dismiss button; defaults to Alert's own default. */
@@ -166,7 +174,11 @@ export default function Toast({
       {/* The Snackbar is the visual surface only — its Alert role drops to
           'presentation' so the announcer, not the Alert, speaks the message
           (announcing from both would double it). */}
-      <ToastAnnouncer message={open ? message : null} politeness={politeness} />
+      <ToastAnnouncer
+        message={open ? message : null}
+        politeness={politeness}
+        announcementId={toastId}
+      />
       <Snackbar
         // MUI restarts its auto-hide timer only when `open` or
         // `autoHideDuration` changes, so a replacing toast of the same
