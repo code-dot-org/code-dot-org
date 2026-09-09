@@ -1,0 +1,8 @@
+name 'UI Test self-paced-pl-example-levelgroup-1'
+title 'Instructor in training level group'
+submittable 'true'
+anonymous 'false'
+
+page
+text 'UI Test self-paced-example-levelgroup-text'
+level 'UI Test self-paced-example-levelgroup-multi'
