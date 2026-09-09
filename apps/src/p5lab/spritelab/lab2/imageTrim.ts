@@ -80,8 +80,9 @@ export function forgetTrimmedThumbnail(name?: string): void {
  * Load an image (dataURI or URL), crop transparent borders, and return the
  * cropped image as a dataURI. Returns the input unchanged when there's
  * nothing to trim (full-bleed content, fully transparent, or load failure).
- * Uncached: deterministic work, tens of milliseconds per image, and keying a
- * cache by whole source dataURIs holds every image twice.
+ * Uncached: deterministic work, tens of milliseconds per image, while a
+ * cache keyed by whole source dataURIs — module state that outlives the
+ * level — keeps old sources and their trimmed results alive indefinitely.
  */
 function trimTransparentBorder(source: string): Promise<string> {
   return new Promise<string>(resolve => {
