@@ -15,6 +15,9 @@ jest.mock('@cdo/apps/aichat/api/client/helpers/safetyHelpers', () => ({
   checkGeneratedImageSafety: jest.fn(),
 }));
 jest.mock('@cdo/apps/dcdo', () => ({get: jest.fn()}));
+jest.mock('@code-dot-org/core/plugins/observability', () => ({
+  metrics: {count: jest.fn()},
+}));
 
 const raw = {
   uint8Array: new Uint8Array([1, 2, 3]),
@@ -96,6 +99,20 @@ describe('SpriteLab2 image safety checks', () => {
     expect(checkGeneratedImageSafety).toHaveBeenCalledWith(
       expect.anything(),
       expect.objectContaining({runLlmJudge: false})
+    );
+  });
+
+  it('reports both verdicts on one count, for the disagreement matrix', async () => {
+    const {metrics} = require('@code-dot-org/core/plugins/observability');
+    checkGeneratedImageSafety.mockResolvedValue({
+      moderation: 'safe',
+      judge: 'flagged',
+    });
+    await checkImageSafety(raw).catch(() => {});
+    expect(metrics.count).toHaveBeenCalledWith(
+      'spritelab-lab2.image_safety',
+      1,
+      expect.objectContaining({moderation: 'safe', judge: 'flagged'})
     );
   });
 

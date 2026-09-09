@@ -4,6 +4,7 @@
 // and gateway) sit behind one kill switch. Callers run the checks
 // concurrently with generation, so a safe request pays almost nothing.
 
+import * as Observability from '@code-dot-org/core/plugins/observability';
 import {type GeneratedFile} from 'ai';
 
 import {
@@ -53,9 +54,24 @@ export function markHandled<T>(promise: Promise<T>): Promise<T> {
  */
 export async function checkPromptSafety(text: string): Promise<void> {
   if (!isImageSafetyEnabled()) {
+    Observability.metrics.count('spritelab-lab2.prompt_safety', 1, {
+      result: 'skipped',
+    });
     return;
   }
-  if (!(await isTextSafe(text, 'input_filter'))) {
+  let safe: boolean;
+  try {
+    safe = await isTextSafe(text, 'input_filter');
+  } catch (error) {
+    Observability.metrics.count('spritelab-lab2.prompt_safety', 1, {
+      result: 'error',
+    });
+    throw error;
+  }
+  Observability.metrics.count('spritelab-lab2.prompt_safety', 1, {
+    result: safe ? 'ok' : 'flagged',
+  });
+  if (!safe) {
     throw new ImageSafetyError('prompt');
   }
 }
@@ -74,6 +90,13 @@ export async function checkImageSafety(raw: RawImage): Promise<void> {
     } as GeneratedFile,
     {appName: 'spritelab', runLlmJudge: isImageSafetyEnabled()}
   );
+  // Both verdicts on one count: the (moderation x judge) disagreement matrix
+  // is the evidence for whether each layer earns its keep.
+  Observability.metrics.count('spritelab-lab2.image_safety', 1, {
+    moderation,
+    judge,
+    mediaType: raw.mediaType,
+  });
   if (moderation === 'flagged' || judge === 'flagged') {
     throw new ImageSafetyError('image');
   }
