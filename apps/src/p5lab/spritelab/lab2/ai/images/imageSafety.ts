@@ -1,7 +1,8 @@
 // Safety checks for image generation: the student's prompt and every
 // generated picture must pass before a result reaches the student. Azure
-// moderation always runs on pictures; the LLM judges (aichat's, same rubric
-// and gateway) sit behind one kill switch. Callers run the checks
+// moderation always runs on pictures; this lab's two LLM judge calls
+// (aichat's judges, same rubric and gateway — aichat gates its own use with
+// its own flag) sit behind one kill switch here. Callers run the checks
 // concurrently with generation, so a safe request pays almost nothing.
 
 import * as Observability from '@code-dot-org/core/plugins/observability';

@@ -1,3 +1,5 @@
+import {type GeneratedFile} from 'ai';
+
 import {generateText} from '@cdo/apps/aiGateway';
 import {AnimationPoses} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 import {
@@ -125,13 +127,10 @@ export interface GeneratedImageResult {
   };
 }
 
-/** The model's own output for one request, before any processing. */
-export interface RawImage {
-  uint8Array: Uint8Array;
-  mediaType: string;
-  /** The same bytes as the gateway sent them, for the safety judges. */
-  base64: string;
-}
+// The model's own output for one request, before any processing. The SDK
+// file carries the gateway's bytes and base64 as lazy views of each other,
+// so consumers pay only for the form they read.
+export type RawImage = GeneratedFile;
 
 export interface ImageRequest {
   seed: number;
@@ -185,11 +184,7 @@ export async function requestImage(
   if (!imageFile) {
     throw new Error('No image was generated');
   }
-  return {
-    uint8Array: imageFile.uint8Array,
-    mediaType: imageFile.mediaType,
-    base64: imageFile.base64,
-  };
+  return imageFile;
 }
 
 export function rawImageToBlob(raw: RawImage): Blob {
