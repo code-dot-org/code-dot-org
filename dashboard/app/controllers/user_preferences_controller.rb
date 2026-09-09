@@ -17,11 +17,16 @@ class UserPreferencesController < ApplicationController
       preference.theme.to_h.merge(update_params[:theme]) :
       preference.theme
 
+    merged_editor_settings = update_params[:editor_settings] ?
+      preference.editor_settings.to_h.merge(update_params[:editor_settings]) :
+      preference.editor_settings
+
     preference.update!(
       section_order: update_params[:section_order] || preference.section_order,
       editor_font_size: merged_editor_font_size,
       console_font_size: merged_console_font_size,
       theme: merged_theme,
+      editor_settings: merged_editor_settings,
     )
   end
 
@@ -55,12 +60,24 @@ class UserPreferencesController < ApplicationController
     end
   end
 
+  # Editor behavior the user can turn on and off, e.g. {"autocomplete" => false}.
+  def editor_settings
+    preference = UserPreference.find_by(user_id: current_user.id)
+
+    if preference && preference.editor_settings.present?
+      render json: {editor_settings: preference.editor_settings}
+    else
+      render json: {}, status: :not_found
+    end
+  end
+
   private def update_params
     params.transform_keys(&:underscore).permit(
       section_order: [],
       console_font_size: {},
       editor_font_size: {},
       theme: {},
+      editor_settings: {},
     )
   end
 end

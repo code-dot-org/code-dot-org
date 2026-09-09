@@ -49,6 +49,7 @@
         = render partial: 'levels/editors/poetry', locals: {f: f} if @level.is_a? Poetry
         = render partial: 'levels/editors/music', locals: {f: f} if @level.is_a? Music
         = render partial: 'levels/editors/pythonlab', locals: {f: f} if @level.is_a? Pythonlab
+        = render partial: 'levels/editors/quiz', locals: {f: f} if @level.is_a? Quiz
         = render partial: 'levels/editors/panels', locals: {f: f} if @level.is_a? Panels
         = render partial: 'levels/editors/weblab2', locals: {f: f} if @level.is_a? Weblab2
         = render partial: 'levels/editors/sketchlab', locals: {f: f} if @level.is_a? Sketchlab

@@ -742,6 +742,272 @@ class AdminUsersControllerTest < ActionController::TestCase
     assert_select "table:nth-of-type(2) tbody tr td", text: 'Hidden Section', count: 0
   end
 
+  generate_admin_only_tests_for :cap_actions_form
+
+  [:update_cap_state, :grant_cap_permission, :force_cap_permission].each do |action|
+    test_user_gets_response_for(
+      action,
+      name: "non-admin cannot submit #{action}",
+      method: :post,
+      user: :user,
+      params: {user_id: -1, us_state: 'CO'},
+      response: :forbidden
+    )
+    test_user_gets_response_for(
+      action,
+      name: "signed-out user cannot submit #{action}",
+      method: :post,
+      params: {user_id: -1, us_state: 'CO'},
+      response: :redirect
+    )
+  end
+
+  test 'cap_actions finds a student by id' do
+    student = create(:student)
+    sign_in @admin
+
+    get :cap_actions_form, params: {user_identifier: student.id.to_s}
+
+    assert_equal student, assigns(:target_user)
+    assert_select 'h2', 'Student information'
+  end
+
+  test 'cap_actions finds a student by email' do
+    email = 'cap_lookup_student@email.xx'
+    student = create(:student, email: email)
+    sign_in @admin
+
+    get :cap_actions_form, params: {user_identifier: email}
+
+    assert_equal student, assigns(:target_user)
+  end
+
+  test 'cap_actions finds a student by username' do
+    student = create(:student)
+    sign_in @admin
+
+    get :cap_actions_form, params: {user_identifier: student.username}
+
+    assert_equal student, assigns(:target_user)
+  end
+
+  test 'cap_actions does not find a missing user' do
+    sign_in @admin
+
+    get :cap_actions_form, params: {user_identifier: 'missing-student'}
+
+    assert_nil assigns(:target_user)
+    assert_select '.alert-danger', 'Student not found'
+    assert_select 'h2', text: 'Student information', count: 0
+  end
+
+  test 'cap_actions does not find a teacher' do
+    sign_in @admin
+
+    get :cap_actions_form, params: {user_identifier: @not_admin.id.to_s}
+
+    assert_nil assigns(:target_user)
+    assert_select '.alert-danger', 'Student not found'
+    assert_select 'h2', text: 'Student information', count: 0
+  end
+
+  test 'cap_actions shows student CAP context and admin navigation' do
+    student = create(
+      :locked_out_child,
+      email: 'cap_student@email.xx',
+      username: 'cap_student'
+    )
+    permission_request = create(:parental_permission_request, user: student)
+    sign_in @admin
+
+    get :cap_actions_form, params: {user_identifier: student.id.to_s}
+
+    assert_equal permission_request, assigns(:permission_request)
+    assert_equal Policies::ChildAccount::StatePolicies.state_policies['CO'], assigns(:cap_state_policy)
+    assert_select 'th', text: 'Email'
+    assert_select 'td', text: student.id.to_s
+    assert_select 'td', text: student.username
+    assert_select 'td', text: student.us_state
+    assert_select 'td', text: student.cap_status
+    assert_select 'td', text: 'Yes'
+    assert_select "a[href='#{cap_actions_form_path}']", text: 'CAP Actions'
+  end
+
+  test 'update_cap_state changes state and removes compliance' do
+    student = create(:locked_out_child)
+    sign_in @admin
+    log_payload = {
+      event: 'update_cap_us_state',
+      namespace: 'admin',
+      request_id: request.request_id,
+      authenticated_user_id: @admin.id,
+      affected_user_id: student.id,
+      previous_us_state: 'CO',
+      new_us_state: 'WA'
+    }
+    CDO.log.expects(:warn).with(log_payload.to_json)
+
+    post :update_cap_state, params: {user_id: student.id, us_state: 'WA'}
+
+    assert_redirected_to cap_actions_form_path(user_identifier: student.id)
+    assert_equal 'WA', student.reload.us_state
+    assert_nil student.cap_status
+    assert_equal 'US state updated and CAP compliance removed', flash[:notice]
+  end
+
+  test 'update_cap_state bypasses user validation' do
+    student = create(:student, us_state: 'WA', country_code: 'US')
+    sign_in @admin
+    User.any_instance.expects(:save!).with(validate: false).once
+    Services::ChildAccount.expects(:remove_compliance).once
+    CDO.log.expects(:warn).once
+
+    post :update_cap_state, params: {user_id: student.id, us_state: 'OR'}
+
+    assert_redirected_to cap_actions_form_path(user_identifier: student.id)
+  end
+
+  test 'update_cap_state rejects an invalid state' do
+    student = create(:locked_out_child)
+    sign_in @admin
+    CDO.log.expects(:warn).never
+
+    post :update_cap_state, params: {user_id: student.id, us_state: 'invalid'}
+
+    assert_redirected_to cap_actions_form_path(user_identifier: student.id)
+    assert_equal 'CO', student.reload.us_state
+    assert_equal Policies::ChildAccount::ComplianceState::LOCKED_OUT, student.cap_status
+    assert_equal 'Invalid US state', flash[:alert]
+  end
+
+  test 'update_cap_state rejects a teacher' do
+    sign_in @admin
+    CDO.log.expects(:warn).never
+
+    post :update_cap_state, params: {user_id: @not_admin.id, us_state: 'CO'}
+
+    assert_redirected_to cap_actions_form_path(user_identifier: @not_admin.id)
+    assert_nil @not_admin.reload.us_state
+    assert_equal 'Student not found', flash[:alert]
+  end
+
+  test 'grant_cap_permission grants the latest request' do
+    student = create(:cpa_non_compliant_student)
+    older_request = create(
+      :parental_permission_request,
+      user: student,
+      parent_email: 'older_parent@email.xx'
+    )
+    older_request.update_column(:updated_at, 1.day.ago)
+    latest_request = create(
+      :parental_permission_request,
+      user: student,
+      parent_email: 'latest_parent@email.xx'
+    )
+    sign_in @admin
+    Services::ChildAccount.expects(:grant_permission_request!).with(latest_request).once
+    log_payload = {
+      event: 'grant_cap_permission',
+      namespace: 'admin',
+      request_id: request.request_id,
+      authenticated_user_id: @admin.id,
+      affected_user_id: student.id,
+      permission_request_id: latest_request.id
+    }
+    CDO.log.expects(:warn).with(log_payload.to_json)
+
+    post :grant_cap_permission, params: {user_id: student.id}
+
+    assert_redirected_to cap_actions_form_path(user_identifier: student.id)
+    assert_equal 'Parental permission request granted', flash[:notice]
+  end
+
+  test 'grant_cap_permission rejects a missing request' do
+    student = create(:locked_out_child)
+    sign_in @admin
+    Services::ChildAccount.expects(:grant_permission_request!).never
+    CDO.log.expects(:warn).never
+
+    post :grant_cap_permission, params: {user_id: student.id}
+
+    assert_redirected_to cap_actions_form_path(user_identifier: student.id)
+    assert_equal Policies::ChildAccount::ComplianceState::LOCKED_OUT, student.reload.cap_status
+    assert_equal 'No parental permission request exists', flash[:alert]
+  end
+
+  test 'grant_cap_permission rejects a stale request submission' do
+    student = create(:locked_out_child)
+    permission_request = create(:parental_permission_request, user: student)
+    permission_request.destroy!
+    sign_in @admin
+    Services::ChildAccount.expects(:grant_permission_request!).never
+    CDO.log.expects(:warn).never
+
+    post :grant_cap_permission, params: {user_id: student.id}
+
+    assert_redirected_to cap_actions_form_path(user_identifier: student.id)
+    assert_equal Policies::ChildAccount::ComplianceState::LOCKED_OUT, student.reload.cap_status
+    assert_equal 'No parental permission request exists', flash[:alert]
+  end
+
+  test 'force_cap_permission grants permission for an eligible student' do
+    student = create(:cpa_non_compliant_student)
+    sign_in @admin
+    log_payload = {
+      event: 'force_cap_permission',
+      namespace: 'admin',
+      request_id: request.request_id,
+      authenticated_user_id: @admin.id,
+      affected_user_id: student.id
+    }
+    CDO.log.expects(:warn).with(log_payload.to_json)
+
+    post :force_cap_permission, params: {user_id: student.id}
+
+    assert_redirected_to cap_actions_form_path(user_identifier: student.id)
+    assert_equal Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED, student.reload.cap_status
+    assert_equal 'CAP permission granted', flash[:notice]
+  end
+
+  test 'force_cap_permission rejects a student outside a CAP state' do
+    student = create(:student, us_state: 'WA', country_code: 'US')
+    sign_in @admin
+    Services::ChildAccount.expects(:update_compliance).never
+    CDO.log.expects(:warn).never
+
+    post :force_cap_permission, params: {user_id: student.id}
+
+    assert_redirected_to cap_actions_form_path(user_identifier: student.id)
+    assert_nil student.reload.cap_status
+    assert_equal 'No CAP policy applies to this student', flash[:alert]
+  end
+
+  test 'force_cap_permission rejects a student with a permission request' do
+    student = create(:locked_out_child)
+    create(:parental_permission_request, user: student)
+    sign_in @admin
+    Services::ChildAccount.expects(:update_compliance).never
+    CDO.log.expects(:warn).never
+
+    post :force_cap_permission, params: {user_id: student.id}
+
+    assert_redirected_to cap_actions_form_path(user_identifier: student.id)
+    assert_equal Policies::ChildAccount::ComplianceState::LOCKED_OUT, student.reload.cap_status
+    assert_equal 'Grant the existing parental permission request instead', flash[:alert]
+  end
+
+  test 'force_cap_permission rejects a teacher' do
+    sign_in @admin
+    Services::ChildAccount.expects(:update_compliance).never
+    CDO.log.expects(:warn).never
+
+    post :force_cap_permission, params: {user_id: @not_admin.id}
+
+    assert_redirected_to cap_actions_form_path(user_identifier: @not_admin.id)
+    assert_nil @not_admin.reload.cap_status
+    assert_equal 'Student not found', flash[:alert]
+  end
+
   generate_admin_only_tests_for :permissions_form
 
   test 'find user for non-existent email displays no user error' do

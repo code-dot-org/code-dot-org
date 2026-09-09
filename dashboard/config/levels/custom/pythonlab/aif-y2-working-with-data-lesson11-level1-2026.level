@@ -1,0 +1,33 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-09-07T23:53:53.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "aif-y2-working-with-data-lesson11-2026 + template",
+    "long_instructions": "You’re given a Python program to restore the logbooks and count how many artifacts were found at each site. In the next few levels, you’ll finish this program. Archaeologists are counting on you!\r\n\r\nFirst, combine each logbook into a single dataset. Your program will raise an error when you run it—you’ll fix that next.\r\n\r\n**☑️ Do This:**\r\n- Read `logbook_3.csv` and add its rows to `rows`.\r\n\r\n**💻 Coding Tip**\r\n\r\n- You can follow the pattern established for `logbook_1.csv` and `logbook_2.csv`.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "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\nkVuhLAjFDcbhdxnunGVEoC4wSVxOKcAK72UEyvc=\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-07 23:56:10 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 23:57:02 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 23:57:24 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

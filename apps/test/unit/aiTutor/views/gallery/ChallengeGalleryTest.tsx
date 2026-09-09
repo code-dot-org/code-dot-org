@@ -3,7 +3,11 @@ import '@testing-library/jest-dom';
 import React from 'react';
 
 import ChallengeGallery from '@cdo/apps/aiTutor/views/gallery/ChallengeGallery';
-import {TutorGalleryData} from '@cdo/apps/aiTutor/views/gallery/types';
+import {addReaction} from '@cdo/apps/aiTutor/views/gallery/reactionsApi';
+import {
+  ChallengeResponseDetail,
+  TutorGalleryData,
+} from '@cdo/apps/aiTutor/views/gallery/types';
 import {ChallengeResponse} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
@@ -12,7 +16,14 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
   default: {fetchJson: jest.fn()},
 }));
 
+jest.mock('@cdo/apps/aiTutor/views/gallery/reactionsApi', () => ({
+  __esModule: true,
+  addReaction: jest.fn(),
+  removeReaction: jest.fn(),
+}));
+
 const fetchJson = HttpClient.fetchJson as jest.Mock;
+const mockAddReaction = addReaction as jest.Mock;
 
 const galleryData: TutorGalleryData = {
   currentUnitId: 100,
@@ -42,6 +53,7 @@ const baseResponse: Omit<ChallengeResponse, 'id' | 'user_name' | 'assets'> = {
   evaluation_status: null,
   is_final: true,
   created_at: '2026-08-10T12:00:00Z',
+  reactions: [],
 };
 
 const videoResponse: ChallengeResponse = {
@@ -79,9 +91,19 @@ const stubFetches = (
   );
 };
 
+const whiteboardDetail: ChallengeResponseDetail = {
+  ...whiteboardResponse,
+  viewer_role: 'peer',
+  question: 'Draw a network.',
+  evaluated_at: null,
+  evaluation_result: null,
+  rubric: [],
+};
+
 describe('ChallengeGallery', () => {
   beforeEach(() => {
     fetchJson.mockReset();
+    mockAddReaction.mockReset();
     // Project navigation pushes ?project=<id>; start each test off a
     // clean URL.
     window.history.replaceState(null, '', '/');
@@ -265,6 +287,47 @@ describe('ChallengeGallery', () => {
     expect(window.location.search).toBe('');
     await waitFor(() =>
       expect(screen.getByText('Extension Activities')).toBeInTheDocument()
+    );
+  });
+
+  it('keeps a reaction made on the project page when returning to the gallery', async () => {
+    fetchJson.mockImplementation((url: string) => {
+      if (url.startsWith('/challenge_responses/')) {
+        return Promise.resolve({value: whiteboardDetail});
+      }
+      if (url.includes('unit_counts')) {
+        return Promise.resolve({value: {}});
+      }
+      return Promise.resolve({value: [whiteboardResponse]});
+    });
+    mockAddReaction.mockResolvedValue([
+      {emoji: 'heart', count: 1, reacted: true},
+    ]);
+
+    render(<ChallengeGallery tutorGalleryData={galleryData} />);
+    await waitFor(() =>
+      expect(screen.getByText('Grace Hopper')).toBeInTheDocument()
+    );
+
+    // Open the project page and add a reaction there.
+    fireEvent.click(screen.getByRole('link', {name: 'Grace Hopper'}));
+    await waitFor(() =>
+      expect(
+        screen.getByText('Project Prompt: Draw a network.')
+      ).toBeInTheDocument()
+    );
+    fireEvent.click(screen.getByRole('button', {name: 'Add reaction'}));
+    fireEvent.click(screen.getByRole('menuitem', {name: 'Heart'}));
+    expect(mockAddReaction).toHaveBeenCalledWith(8, 'heart');
+
+    // Back on the gallery, the card carries the reaction made on the project
+    // page rather than the stale empty list from the initial fetch. The card
+    // shows reactions read-only, so the chip is a static label, not a button.
+    fireEvent.click(screen.getByRole('button', {name: /project gallery/}));
+    await waitFor(() =>
+      expect(
+        screen.getByRole('img', {name: /Heart, 1 reaction/})
+      ).toBeInTheDocument()
     );
   });
 });

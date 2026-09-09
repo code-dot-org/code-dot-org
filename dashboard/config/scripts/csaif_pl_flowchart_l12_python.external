@@ -11,7 +11,84 @@ markdown <<MARKDOWN
 A **nested conditional** is an if/else statement ***inside*** another if/else statement, creating multiple paths of decision-making in a program. (Ex: Is there free food?)
 
 
-<img src="https://images.code.org/7bcd2cf4bb475c5601feda02d3d4b493-image-1741708282166.png" alt="A flowchart depecting is someone should go to a party." width="300px" style="display: block; margin-left: auto; margin-right: auto;">
+<h2>Should I Stay at This Birthday Party?</h2>
+
+<div style="width:100%; overflow-x:auto; margin:20px 0;">
+
+  <div role="group" aria-label="Decision flowchart. Is the party awkward? If no, stay. If yes, ask whether there is free food. If there is free food, stay. If there is no free food, leave." style="position:relative; width:600px; height:405px; margin:0 auto; background-color:#FFFFFF; border:1px solid #E4E2F8; border-radius:12px; box-shadow:0 2px 7px rgba(0,0,0,0.10); font-family:Arial, Helvetica, sans-serif;">
+
+   <!-- Connectors -->
+
+  <!-- No path from first decision to Stay -->
+  <div aria-hidden="true" style="position:absolute; left:220px; top:90px; width:4px; height:240px; background-color:#4C42CF; z-index:1;"></div>
+
+   <!-- Yes path from first decision to second decision -->
+   <div aria-hidden="true" style="position:absolute; left:375px; top:88px; width:57px; height:4px; background-color:#4C42CF; z-index:1;"></div>
+
+  <div aria-hidden="true" style="position:absolute; left:428px; top:88px; width:4px; height:72px; background-color:#4C42CF; z-index:1;"></div>
+
+  <div aria-hidden="true" style="position:absolute; left:421px; top:144px; color:#4C42CF; font-size:18px; z-index:1;">▼</div>
+
+  <!-- Yes path from second decision to Stay -->
+  <div aria-hidden="true" style="position:absolute; left:220px; top:218px; width:150px; height:4px; background-color:#4C42CF; z-index:1;"></div>
+
+   <div aria-hidden="true" style="position:absolute; left:218px; top:210px; color:#4C42CF; font-size:18px; z-index:1;">◀</div>
+
+  <!-- No path from second decision to Leave -->
+  <div aria-hidden="true" style="position:absolute; left:490px; top:218px; width:27px; height:4px; background-color:#4C42CF; z-index:1;"></div>
+
+   <div aria-hidden="true" style="position:absolute; left:513px; top:218px; width:4px; height:112px; background-color:#4C42CF; z-index:1;"></div>
+    <!-- Arrows into outcomes -->
+    <div aria-hidden="true" style="position:absolute; left:213px; top:315px; color:#4C42CF; font-size:18px; z-index:1;">▼</div>
+
+   <div aria-hidden="true" style="position:absolute; left:506px; top:315px; color:#4C42CF; font-size:18px; z-index:1;">▼</div>
+    <!-- First decision -->
+    <div style="position:absolute; left:245px; top:35px; width:110px; height:110px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; background-color:#D5EFFF; border:4px solid #0099F3; transform:rotate(45deg); z-index:2;">
+    <div style="width:90px; color:#000000; text-align:center; font-size:16px; font-weight:bold; line-height:1.25; transform:rotate(-45deg);">
+        Is it<br>awkward?
+      </div>
+
+  </div>
+
+   <!-- First decision labels -->
+   <span style="position:absolute; left:183px; top:120px; background-color:#E4E2F8; color:#000000; border-radius:12px; padding:2px 8px; font-size:15px; font-weight:bold; z-index:3;">
+      No
+    </span>
+
+  <span style="position:absolute; left:387px; top:100px; background-color:#E4E2F8; color:#000000; border-radius:12px; padding:2px 8px; font-size:15px; font-weight:bold; z-index:3;">
+      Yes
+    </span>
+
+   <!-- Second decision -->
+   <div style="position:absolute; left:385px; top:175px; width:90px; height:90px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; background-color:#D5EFFF; border:4px solid #0099F3; transform:rotate(45deg); z-index:2;">
+      <div style="width:78px; color:#000000; text-align:center; font-size:16px; font-weight:bold; line-height:1.2; transform:rotate(-45deg);">
+        Is there<br>free food?
+      </div>
+
+  </div>
+
+  <!-- Second decision labels -->
+   <span style="position:absolute; left:315px; top:230px; background-color:#E4E2F8; color:#000000; border-radius:12px; padding:2px 8px; font-size:15px; font-weight:bold; z-index:3;">
+      Yes
+    </span>
+
+   <span style="position:absolute; left:500px; top:230px; background-color:#E4E2F8; color:#000000; border-radius:12px; padding:2px 8px; font-size:15px; font-weight:bold; z-index:3;">
+      No
+    </span>
+
+   <!-- Stay outcome -->
+   <div style="position:absolute; left:150px; top:330px; width:145px; height:54px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; background-color:#E4E2F8; color:#000000; border:3px solid #4C42CF; border-radius:5px; font-size:18px; font-weight:bold; z-index:2;">
+      Stay
+    </div>
+
+   <!-- Leave outcome -->
+   <div style="position:absolute; left:443px; top:330px; width:145px; height:54px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; background-color:#FFE3CE; color:#000000; border:3px solid #F46B00; border-radius:5px; font-size:18px; font-weight:bold; z-index:2;">
+      Leave
+    </div>
+
+  </div>
+
+</div>
 
 
 ---

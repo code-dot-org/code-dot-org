@@ -14,19 +14,19 @@ The previous level showed you the rules for user testing. Let's take a look at w
     <p><img src="https://images.code.org/60084109187f504a66a6591bab8ec629-image-1648826166820.15.40 AM.png" alt="Screenshot of an app prototype" style="float:right; margin-left:20px;">
 
 
-1. #### The Computer places the home screen (the one titled "Txt Ur Grndkds") in front of the User.
+1. The Computer places the home screen (the one titled "Txt Ur Grndkds") in front of the User.
 
-2. #### The User selects a task from the table on their activity guide.
-	#### **Example tasks:**
+2. The User selects a task from the table on their activity guide.
+	**Example tasks:**
     * *View Suzette's information*
     * *Get help on how to use the app*
     * *Find out when Suzette’s birthday is*
 
-3.  #### The User attempts to complete the task by "clicking" on the paper prototype screen in front of them.
-4. #### Every time the User clicks on the screen, the Computer consults the Navigation Diagram on their activity guide.
+3.  The User attempts to complete the task by "clicking" on the paper prototype screen in front of them.
+4. Every time the User clicks on the screen, the Computer consults the Navigation Diagram on their activity guide.
 	* If the Navigation Diagram shows a line connected to the element that was clicked, find the screen at the other end of the line and place it in front of the user.
 	* If the Navigation Diagram doesn't show a line connected to the element that was clicked, do nothing.
-5. #### When the User completes a task (or decides it is impossible in the current prototype), they fill out the "What I Tried" and "My Reaction" columns and the computer resets the app back to the home screen.
+5. When the User completes a task (or decides it is impossible in the current prototype), they fill out the "What I Tried" and "My Reaction" columns and the computer resets the app back to the home screen.
 <br><br>
 
 | Task                           	| What I Tried                                                                     	| My Reaction                                                                                                             	|
@@ -65,5 +65,5 @@ Students should leave this activity with an **understanding of the importance of
 </details>
 <br>
 
-<a href="https://studio.code.org/s/csd4-2025/lessons/5" target="blank" rel="noopener noreferrer">Click here</a> if you would like to read the full lesson plan and explore the lesson resources. 
+<a href="https://studio.code.org/courses/csd-2026/units/5/lessons/5" target="blank" rel="noopener noreferrer">Click here</a> if you would like to read the full lesson plan and explore the lesson resources. 
 MARKDOWN

@@ -50,8 +50,10 @@ class Quiz < Level
   validate :max_attempts_requires_allow_multiple_attempts
   validate :show_intro_screen_required_when_time_limit
 
-  has_many :placements, -> {order(:page, :position)}, class_name: 'QuizQuestionPlacement', foreign_key: :level_id, inverse_of: :level, dependent: nil
+  # The dependent: :destroy clause ensures associated join models are deleted but note that bank questions are shared and stay.
+  has_many :placements, -> {order(:page, :position)}, class_name: 'QuizQuestionPlacement', foreign_key: :level_id, inverse_of: :level, dependent: :destroy
   has_many :questions, through: :placements, source: :quiz_question
+  # The dependent: nil clause ensures student attempts are kept when this quiz is deleted.
   has_many :attempts, class_name: 'QuizAttempt', foreign_key: :level_id, inverse_of: :level, dependent: nil
 
   def self.create_from_level_builder(params, level_params)
@@ -66,6 +68,21 @@ class Quiz < Level
 
   def uses_lab2?
     true
+  end
+
+  # Placements are quiz-owned join rows; questions stay shared bank content.
+  def clone_with_suffix(new_suffix, editor_experiment: nil, allow_existing: true)
+    suffix = new_suffix[0] == '_' ? new_suffix : "_#{new_suffix}"
+    max_index = 70 - suffix.length - 1
+    new_name = "#{base_name[0..max_index]}#{suffix}"
+    existing = Level.find_by_name(new_name)
+    return existing if existing && allow_existing
+
+    level = super(suffix, editor_experiment: editor_experiment, allow_existing: allow_existing)
+    placements.each do |placement|
+      level.placements.create!(quiz_question: placement.quiz_question, page: placement.page, position: placement.position)
+    end
+    level
   end
 
   # Adds quiz_questions into levelProperties so the frontend can render and

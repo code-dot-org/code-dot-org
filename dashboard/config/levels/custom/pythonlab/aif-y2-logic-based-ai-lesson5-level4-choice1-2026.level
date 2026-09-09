@@ -25,7 +25,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "def play_song(song):\n    # TODO 1: Fill in the message to let the user know what song is playing\n    print(f\"\")\n\nplay_song(\"Blinding Lights\")\nplay_song(\"Rolling in the Deep\")\n\n# TODO 2: Play one more song",
+          "contents": "def play_song(song):\n  # TODO 1: Fill in the message to let the user know what song is playing\n  print(f\"\")\n\nplay_song(\"Blinding Lights\")\nplay_song(\"Rolling in the Deep\")\n\n# TODO 2: Play one more song",
           "folderId": "0",
           "active": true
         }
@@ -36,9 +36,9 @@
         "0"
       ]
     },
-    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMra//V44xtZCA1E\nXmCYIIFyi2iCY/n+zDjmp/sy/SyJ31/96y6EBekeiRVNmR5qTdDjE/Wmd8up\n40lPxYmlI9axPOElQVpcYWSTHyNG4NA46A4Z3tNMX5AamfaPrmYy1lqIccFC\nZ+VuDqItN0BctsAZY3OBpTUoJrifM/JpRYS1M9csqQQetctoN918viUxGjFz\nculvyjN0js6NpbwSJO8ayvRykBEAOCGX2SBUXBw9W5TepW4xwuE+uYU1CmP7\nn1o/hJIzzUR6lQEbwXfhZ+tlJ1+Gb7b29sfPVPMgkuwl+Jo9fRr9hhUSgqLu\nuP3PtOo=\n"
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMrMTuUhIYXlJUhF\nGXrIoNNCVBpjNEkuTXQ/1tuGJtyTCEpMxXd8prNxnKRkxUKvsLHhSnXVodR3\np7u1693NJuXAA5OTahE1XBDHfyxbMUZz6YuMfkkaLz7tso5dbwbxMInnK4MN\nIq7hXY8orI8fnA1uURHTISvSMdBgJz5WMxc0IPh74iefNMQ4ZvKFzkPjCYRt\nQmbftDSa1TyipMKbwGAnkp651vwDZcITA4Yev8MGQS0itwPqPlHnY2IMecBE\nxGZ1x5Qkx75tlGcBIMAn31Ths9J13DoIHEmtqKrA7EHlr66WZsqmjSFBDeSu\nul6//ms=\n"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-28 02:38:06 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 14:55:48 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-28 02:38:06 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 14:55:48 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:06:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:07:05 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

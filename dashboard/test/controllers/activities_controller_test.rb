@@ -612,7 +612,6 @@ class ActivitiesControllerTest < ActionController::TestCase
       before do
         sign_out @user
         session[:statsig_stable_id] = anon_user_id
-        DCDO.set('anonymous_level_tracking_enabled', true)
       end
 
       def expect_anonymous_level_progress_tracking(new_result:)
@@ -646,22 +645,6 @@ class ActivitiesControllerTest < ActionController::TestCase
           {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
         )
         assert_equal_expected_keys expected_response, JSON.parse(@response.body)
-      end
-
-      context 'when anonymous level tracking is disabled' do
-        before do
-          DCDO.set('anonymous_level_tracking_enabled', false)
-        end
-
-        it 'does not track progress' do
-          Services::AnonymousLevel::ProgressTracker.expects(:call).never
-          client_state.set_level_progress(@script_level, 50)
-
-          post :milestone, params: @milestone_params.merge(user_id: 0)
-
-          _(@response).must_be :successful?
-          _(client_state.level_progress(@script_level)).must_equal 50
-        end
       end
 
       it 'adds progress to an existing session' do
@@ -952,7 +935,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal true, new_level
     assert_equal false, new_level
 
-    DCDO.set('anonymous_level_tracking_enabled', true)
     sign_out @user
     assert_equal true, new_level
   end

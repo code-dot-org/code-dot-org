@@ -1,6 +1,5 @@
 <Panels>
   <config><![CDATA[{
-  "published": true,
   "game_id": 73,
   "created_at": "2026-09-03T01:49:26.000Z",
   "level_num": "custom",
@@ -10,12 +9,12 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "Have you noticed simple prompts get predictable results? Prompt AI for a dragon, unicorn, or superhero, and you'll likely get something like these examples.\nIf you prompt AI to generate a dragon, unicorn or a superhero they will likely look like these examples.",
+        "text": "Have you noticed that AI often creates the most common version of images? \n\nIt's not always the version YOU had in mind?",
         "imageUrl": "https://images.code.org/3736a365548adba05a21e8f0b333ec1f-three characters.png",
         "key": "HoAI26-How-AI-a478b96e-eaef-446f-86ca-7020790e476c",
         "links": [
           {
-            "text": "Why does AI generate generic images?",
+            "text": "Let's find out why!",
             "x": 53,
             "y": 90,
             "targetKey": "HoAI26-How-043dd68d-7f75-4d8b-9f31-4a4bb5cf31be"
@@ -107,7 +106,7 @@
         "layout": "text-bottom-center"
       },
       {
-        "text": "Some details always show up together in what the AI learned, so it treats them like a matched set or bundle. \n\nAsk for just one piece of the bundle, and you get all of the details. Explore the examples.",
+        "text": "AI learns which details tend to appear together, so it treats them as a bundle. Ask for one piece, and you will likely get the whole set. ",
         "imageUrl": "https://images.code.org/6d82a005d8fbf8cfa0a2381b63cfd47c-detail bundles.png",
         "key": "HoAI26-How-a575c100-cf83-4bab-8b5c-226a11e20471",
         "links": [
@@ -136,7 +135,7 @@
             "text": "Next",
             "x": 91,
             "y": 95,
-            "targetKey": "HoAI26-How-b6bea56e-bd3b-4157-a16a-0029263ad917"
+            "targetKey": "HoAI26-How-4c1ab7ee-66a0-47e5-aac7-38003a653060"
           }
         ],
         "typing": true
@@ -185,93 +184,18 @@
         ]
       },
       {
-        "text": "Behind the scenes, each AI tool/model is set up to add extra detail and polish. Like a photo filter that is already switched on. If you want different details, you just have to say so.",
-        "imageUrl": "https://images.code.org/3792d32419805a5cf59d0b5a7f9d4b54-polish.png",
-        "key": "HoAI26-How-b6bea56e-bd3b-4157-a16a-0029263ad917",
-        "links": [
-          {
-            "text": "Dragon Polish",
-            "x": 17,
-            "y": 94,
-            "targetKey": "HoAI26-How-9e23ec7b-7d36-4525-95b4-d4aeda2783db",
-            "width": 16
-          },
-          {
-            "text": "Unicorn Polish",
-            "x": 38,
-            "y": 94,
-            "targetKey": "HoAI26-How-642a0a2b-08ec-439b-8a69-a5c1c6186624",
-            "width": 16
-          },
-          {
-            "text": "Superhero Polish",
-            "x": 60,
-            "y": 94,
-            "targetKey": "HoAI26-How-fca34322-509e-4dea-a0fe-f170c0e6190a",
-            "width": 20
-          },
-          {
-            "text": "Next",
-            "x": 93,
-            "y": 93,
-            "targetKey": "HoAI26-How-4c1ab7ee-66a0-47e5-aac7-38003a653060",
-            "width": 16
-          }
-        ],
-        "showContinueButton": false,
-        "layout": "text-top-left"
-      },
-      {
-        "text": "The tool often adds dramatic lighting and a glowing fire-lit haze by default, even if you just typed \"dragon.\" That polish is a setting the tool/model was programmed to do, not something the AI figured out on its own.",
-        "imageUrl": "https://images.code.org/cd48c34d9dac20a62a36e2bb11f1cc79-dragon polish.png",
-        "key": "HoAI26-How-9e23ec7b-7d36-4525-95b4-d4aeda2783db",
-        "links": [
-          {
-            "text": "Back",
-            "x": 10,
-            "y": 85,
-            "targetKey": "HoAI26-How-b6bea56e-bd3b-4157-a16a-0029263ad917",
-            "width": 1
-          }
-        ],
-        "layout": "text-bottom-center"
-      },
-      {
-        "text": "The tool often adds sparkles and a glowing, dreamy light by default, even if you just typed \"unicorn.\" That polish is a setting the tool/model was programmed to do, not something the AI figured out on its own.",
-        "imageUrl": "https://images.code.org/b777d1e032cc71da1fa5ceef643cbeb2-unicorn polish.png",
-        "key": "HoAI26-How-642a0a2b-08ec-439b-8a69-a5c1c6186624",
-        "links": [
-          {
-            "text": "Back",
-            "x": 14,
-            "y": 88,
-            "targetKey": "HoAI26-How-b6bea56e-bd3b-4157-a16a-0029263ad917"
-          }
-        ]
-      },
-      {
-        "text": "The tool often adds dramatic lighting and a heroic pose by default, even if you just typed \"superhero.\" That polish is a setting the tool/model was programmed to do, not something the AI figured out on its own.",
-        "imageUrl": "https://images.code.org/ebd4b7c39bb2c670b80ca1cc87e89255-hero polish.png",
-        "key": "HoAI26-How-fca34322-509e-4dea-a0fe-f170c0e6190a",
-        "links": [
-          {
-            "text": "Back",
-            "x": 11,
-            "y": 86,
-            "targetKey": "HoAI26-How-b6bea56e-bd3b-4157-a16a-0029263ad917",
-            "width": 13
-          }
-        ]
-      },
-      {
         "text": "**You** decide if it's good enough!\n\nThe AI is not creative, nor is it confused. It did exactly what it was built to do: guess the most typical answer. That first image is just a starting point. If it's not what you pictured, add more detail and try again.",
         "imageUrl": "https://images.code.org/5e7ccf54702e916496c24aa1b4bd99fa-end.png",
         "key": "HoAI26-How-4c1ab7ee-66a0-47e5-aac7-38003a653060",
         "showContinueButton": true
       }
     ],
-    "use_links": "true"
+    "use_links": "true",
+    "display_name": "Learn",
+    "bubble_choice_description": "Learn how AI makes images",
+    "thumbnail_url": "https://images.code.org/fe496d3fc64dba9cc0bb77948825849e-Gemini_Generated_Image_cgry71cgry71cgry.jpeg"
   },
-  "audit_log": "[{\"changed_at\":\"2026-09-03T01:49:26.385+00:00\",\"changed\":[\"cloned from \\\"HoAI26-How-AI\\\"\"],\"cloned_from\":\"HoAI26-How-AI\"},{\"changed_at\":\"2026-09-03 02:20:20 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 02:21:10 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-03T01:49:26.385+00:00\",\"changed\":[\"cloned from \\\"HoAI26-How-AI\\\"\"],\"cloned_from\":\"HoAI26-How-AI\"},{\"changed_at\":\"2026-09-03 02:20:20 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 02:21:10 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 18:36:44 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-04 20:01:12 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-04 20:03:53 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-04 20:47:54 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-04 21:26:08 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-08 16:25:35 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-08 16:25:56 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Panels>

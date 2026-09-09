@@ -1,0 +1,137 @@
+$file-list-gap: 8px;
+
+.unifiedBackpackPanel {
+  position: relative;
+  display: flex;
+  padding: var(--padding-p-xxs, 8px);
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 0 0;
+  align-self: stretch;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+
+  // Collapsed, the heading ends the list and its own padding already holds it off the
+  // panel edge, so the panel's bottom padding is only dead space under a full list.
+  &:has(.unsupportedSection:not([open])) {
+    padding-bottom: 0;
+  }
+}
+
+.alertContainer {
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  position: absolute;
+}
+
+.alertList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  > * {
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 0.07), 0 4px 7px 0 rgb(0 0 0 / 0.07);
+  }
+}
+
+.fileListContainer {
+  display: flex;
+  flex-direction: column;
+  gap: $file-list-gap;
+  width: 100%;
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.unsupportedSection {
+  width: 100%;
+  // Drop the file list's gap above the heading, so the summary's own padding alone
+  // sets the space there and it matches the space below.
+  margin-top: -$file-list-gap;
+}
+
+.unsupportedSummary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 0;
+  // Hide the native disclosure triangle; the chevron icon stands in for it.
+  list-style: none;
+  // Confine the hit area to the label, so the lines are neither hoverable nor
+  // clickable. Clicks on the label still bubble here and toggle the section.
+  pointer-events: none;
+
+  // Horizontal line on either side of the heading.
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid var(--borders-neutral-primary);
+  }
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  // Cancel the global `details summary:hover` background in
+  // apps/style/code-studio/legacy.scss, since we have hover on the text label itself.
+  &:hover {
+    background: none;
+  }
+}
+
+// This makes the toggle (just text) match the rest, hover and active 
+// states of the design system's text button in secondary,
+.unsupportedToggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+  pointer-events: auto;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: var(--background-neutral-quaternary);
+  }
+
+  &:active {
+    background-color: var(--background-neutral-quaternary);
+    color: var(--text-neutral-tertiary);
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.unsupportedSummary:focus-visible {
+  outline: none;
+
+  .unsupportedToggle {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: 2px;
+    border-radius: 0.375rem;
+  }
+}
+
+.unsupportedSection[open] .unsupportedToggle i {
+  transform: scaleY(-1);
+}
+
+.unsupportedFileList {
+  display: flex;
+  flex-direction: column;
+  gap: $file-list-gap;
+}
+
+.unsupportedText {
+  font-size: 0.75rem;
+}

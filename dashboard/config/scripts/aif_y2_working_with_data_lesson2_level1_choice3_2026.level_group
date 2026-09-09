@@ -1,0 +1,13 @@
+name 'aif-y2-working-with-data-lesson2-level1-choice3-2026'
+title 'Cafeteria Meal Data'
+submittable 'true'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+text 'aif-y2-working-with-data-lesson2-level1-choice3-intro-2026'
+level 'aif-y2-working-with-data-lesson2-level1-choice3-q1-2026'
+level 'aif-y2-working-with-data-lesson2-level1-choice3-q2-2026'
+level 'aif-y2-working-with-data-lesson2-level1-choice3-q3-2026'
+level 'aif-y2-working-with-data-lesson2-level1-choice3-q4-2026'
+level 'aif-y2-working-with-data-lesson2-level1-choice3-q5-2026'

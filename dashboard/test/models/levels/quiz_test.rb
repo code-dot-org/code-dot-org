@@ -78,4 +78,86 @@ class QuizTest < ActiveSupport::TestCase
     quiz.max_attempts = 2
     assert quiz.valid?
   end
+
+  test "destroying a quiz removes its placements and leaves bank questions" do
+    quiz = create(:quiz)
+    other_quiz = create(:quiz)
+    question = create(:quiz_question)
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
+    create(:quiz_question_placement, level: other_quiz, quiz_question: question)
+
+    quiz.destroy!
+
+    refute QuizQuestionPlacement.exists?(level: quiz, quiz_question: question)
+    assert QuizQuestionPlacement.exists?(level: other_quiz, quiz_question: question)
+    assert QuizQuestion.exists?(question.id)
+  end
+
+  test "destroying a quiz disconnects attempts rather than deleting them" do
+    quiz = create(:quiz)
+    attempt = create(:quiz_attempt, level: quiz)
+    response = create(:quiz_question_response, quiz_attempt: attempt)
+
+    quiz.destroy!
+
+    attempt.reload
+    assert_equal quiz.id, attempt.level_id
+    assert_nil attempt.level
+    assert QuizQuestionResponse.exists?(response.id)
+  end
+
+  test "clone_with_suffix copies placements and shares questions" do
+    quiz = create(:quiz)
+    first_question = create(:quiz_question)
+    second_question = create(:quiz_question)
+    create(:quiz_question_placement, level: quiz, quiz_question: first_question, page: 1, position: 1)
+    create(:quiz_question_placement, level: quiz, quiz_question: second_question, page: 2, position: 1)
+
+    copy = quiz.clone_with_suffix('_copy')
+
+    refute_equal quiz, copy
+    assert_equal [first_question, second_question], copy.questions
+    assert_equal [[1, 1], [2, 1]], (copy.placements.map {|p| [p.page, p.position]})
+    assert_equal 1, QuizQuestionPlacement.where(level: quiz, quiz_question: first_question).count
+    assert_equal 1, QuizQuestionPlacement.where(level: copy, quiz_question: first_question).count
+  end
+
+  test "clone_with_suffix returns an existing clone without duplicating placements" do
+    quiz = create(:quiz)
+    question = create(:quiz_question)
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
+
+    first = quiz.clone_with_suffix('_copy')
+    second = quiz.clone_with_suffix('_copy')
+
+    assert_equal first, second
+    assert_equal 1, first.placements.count
+  end
+
+  test "clone_with_suffix with allow_existing false creates a new quiz with placements" do
+    quiz = create(:quiz)
+    question = create(:quiz_question)
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
+
+    first = quiz.clone_with_suffix('_copy')
+    second = quiz.clone_with_suffix('_copy', allow_existing: false)
+
+    refute_equal first, second
+    assert_equal [question], second.questions
+  end
+
+  test "clone_with_suffix truncates long names before checking for an existing clone" do
+    old_name = 'x' * 67
+    suffix = '_long_suffix'
+    quiz = create(:quiz, name: old_name)
+    question = create(:quiz_question)
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
+
+    first = quiz.clone_with_suffix(suffix)
+    second = quiz.clone_with_suffix(suffix)
+
+    assert_equal 70, first.name.length
+    assert_equal first, second
+    assert_equal 1, first.placements.count
+  end
 end

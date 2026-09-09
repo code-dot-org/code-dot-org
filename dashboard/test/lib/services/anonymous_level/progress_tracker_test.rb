@@ -30,6 +30,10 @@ class Services::AnonymousLevel::ProgressTrackerTest < ActiveSupport::TestCase
 
   let(:progress_scope) {::AnonymousLevel::Progress.where(anon_user_id:, script:, level:)}
 
+  before do
+    DCDO.set('anonymous_level_tracking_enabled', true)
+  end
+
   it 'inherits from Services::Base' do
     _(described_class.superclass).must_equal Services::Base
   end
@@ -107,6 +111,16 @@ class Services::AnonymousLevel::ProgressTrackerTest < ActiveSupport::TestCase
 
         expect(::AnonymousLevel::Progress).to have_received(:find_or_initialize_by).twice
         expect(existing_progress).to have_received(:update_progress!).with(progress_attributes).once
+      end
+    end
+
+    context 'when anonymous level tracking is disabled' do
+      before do
+        DCDO.set('anonymous_level_tracking_enabled', false)
+      end
+
+      it 'does not persist progress' do
+        _ {_track_progress.must_be_nil}.wont_change -> {progress_scope.count}
       end
     end
   end
