@@ -84,6 +84,11 @@ export function getImageThumbnail(name: string): string | undefined {
 // worst case holds ~12MB.
 const THUMB_CACHE_LIMIT = 240;
 
+// The sheet first-frame cache holds frame-sized images, a few hundred KB
+// each, so its bound is tighter; projects hold a handful of sheets, so the
+// working set still fits with room.
+const FRAME_CACHE_LIMIT = 60;
+
 function thumbnailFromDataURI(
   source: string,
   pixelated: boolean
@@ -248,7 +253,7 @@ function firstFrameThumbnail(
       img.onerror = () => resolve(source);
       img.src = source;
     });
-    while (frameThumbCache.size >= THUMB_CACHE_LIMIT) {
+    while (frameThumbCache.size >= FRAME_CACHE_LIMIT) {
       frameThumbCache.delete(frameThumbCache.keys().next().value as string);
     }
     frameThumbCache.set(source, cached);
