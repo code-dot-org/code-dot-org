@@ -80,21 +80,17 @@ describe('BackpackFileChip', () => {
     );
   };
 
-  it('toasts progress then success when a delete succeeds', async () => {
+  it('toasts only the outcome when a delete succeeds', async () => {
     renderChip();
 
     await clickDelete();
 
-    await waitFor(() =>
-      expect(showToast).toHaveBeenCalledWith(
-        `${FILE_NAME} deleted from your Backpack.`,
-        expect.objectContaining({type: 'success', autoHideDuration: 4000})
-      )
-    );
-    expect(showToast).toHaveBeenNthCalledWith(
-      1,
-      `Deleting ${FILE_NAME} from your Backpack...`,
-      expect.objectContaining({type: 'info', autoHideDuration: null})
+    await waitFor(() => expect(showToast).toHaveBeenCalledTimes(1));
+    // The disabled row buttons already show a delete is running, so the only
+    // toast is the result.
+    expect(showToast).toHaveBeenCalledWith(
+      `${FILE_NAME} deleted from your Backpack.`,
+      expect.objectContaining({type: 'success', autoHideDuration: 4000})
     );
     // The panel's alert stack is gone; nothing should route back to it.
     expect(addAlert).not.toHaveBeenCalled();

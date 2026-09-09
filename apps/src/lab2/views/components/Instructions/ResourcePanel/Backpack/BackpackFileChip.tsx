@@ -187,10 +187,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
       icon: {iconName: 'trash', iconStyle: 'solid'},
     });
     if (results.type === 'confirm') {
-      showToast?.(
-        `Deleting ${fileName} from your Backpack...`,
-        toastOptionsFor('info')
-      );
+      // No in-progress toast: the row's buttons disable while the delete runs.
       backpackApi.deleteFiles(
         [fileName],
         error => {
