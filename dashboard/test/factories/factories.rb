@@ -1509,6 +1509,12 @@ FactoryBot.define do
     asset_type {'whiteboard_image'}
   end
 
+  factory :challenge_response_reaction do
+    association :challenge_response
+    association :user, factory: :student
+    emoji {'heart'}
+  end
+
   factory :user_lesson_objective_reflection do
     association(:student, factory: :student)
     objective
