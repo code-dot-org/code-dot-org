@@ -1,6 +1,4 @@
 import {
-  boundedGet,
-  boundedSet,
   findOpaqueBounds,
   loadedAnimations,
 } from '@cdo/apps/p5lab/spritelab/lab2/imageTrim';
@@ -99,44 +97,5 @@ describe('SpriteLab2 loadedAnimations', () => {
       orderedKeys: [],
       propsByKey: {},
     });
-  });
-});
-
-describe('SpriteLab2 bounded trim caches', () => {
-  it('evicts the oldest entry past the limit', () => {
-    const map = new Map();
-    boundedSet(map, 'a', 1, 2);
-    boundedSet(map, 'b', 2, 2);
-    boundedSet(map, 'c', 3, 2);
-    expect([...map.keys()]).toEqual(['b', 'c']);
-  });
-
-  it('a read refreshes recency, protecting the entry from eviction', () => {
-    const map = new Map();
-    boundedSet(map, 'a', 1, 2);
-    boundedSet(map, 'b', 2, 2);
-    expect(boundedGet(map, 'a')).toBe(1);
-    boundedSet(map, 'c', 3, 2);
-    expect([...map.keys()]).toEqual(['a', 'c']);
-  });
-
-  it('misses return undefined without disturbing the map', () => {
-    const map = new Map();
-    boundedSet(map, 'a', 1, 2);
-    expect(boundedGet(map, 'missing')).toBeUndefined();
-    expect([...map.keys()]).toEqual(['a']);
-  });
-});
-
-describe('SpriteLab2 boundedSet overwrite', () => {
-  it('overwriting an existing key at the limit evicts nothing', () => {
-    const map = new Map();
-    boundedSet(map, 'a', 1, 2);
-    boundedSet(map, 'b', 2, 2);
-    boundedSet(map, 'a', 9, 2);
-    expect([...map.entries()]).toEqual([
-      ['a', 9],
-      ['b', 2],
-    ]);
   });
 });

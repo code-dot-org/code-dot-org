@@ -47,36 +47,7 @@ export function findOpaqueBounds(
   return right < 0 ? null : {left, top, right, bottom};
 }
 
-// Trimming is deterministic; cache by source so re-runs don't redo the work.
-// Bounded: keys are whole source dataURIs and every edit mints a new one, so
-// an unbounded map grows for the tab's life (module state outlives levels).
-// A miss just re-trims, tens of milliseconds per image.
-export const TRIM_CACHE_LIMIT = 60;
-const trimCache = new Map<string, Promise<string>>();
 const frameThumbCache = new Map<string, Promise<string>>();
-
-/** Bounded-cache read; refreshes the entry's recency. */
-export function boundedGet<V>(map: Map<string, V>, key: string): V | undefined {
-  const value = map.get(key);
-  if (value !== undefined) {
-    map.delete(key);
-    map.set(key, value);
-  }
-  return value;
-}
-
-/** Bounded-cache write; evicts oldest entries to stay under the limit. */
-export function boundedSet<V>(
-  map: Map<string, V>,
-  key: string,
-  value: V,
-  limit: number = TRIM_CACHE_LIMIT
-): void {
-  while (!map.has(key) && map.size >= limit) {
-    map.delete(map.keys().next().value as string);
-  }
-  map.set(key, value);
-}
 
 // Trimmed image per costume name, for the block image fields (dropdown
 // thumbnails). Populated as animation lists get trimmed for preload.
@@ -109,53 +80,50 @@ export function forgetTrimmedThumbnail(name?: string): void {
  * Load an image (dataURI or URL), crop transparent borders, and return the
  * cropped image as a dataURI. Returns the input unchanged when there's
  * nothing to trim (full-bleed content, fully transparent, or load failure).
+ * Uncached: deterministic work, tens of milliseconds per image, and keying a
+ * cache by whole source dataURIs holds every image twice.
  */
 function trimTransparentBorder(source: string): Promise<string> {
-  let cached = boundedGet(trimCache, source);
-  if (!cached) {
-    cached = new Promise<string>(resolve => {
-      const img = new Image();
-      img.onload = () => {
-        try {
-          const canvas = document.createElement('canvas');
-          canvas.width = img.naturalWidth;
-          canvas.height = img.naturalHeight;
-          const ctx = canvas.getContext('2d');
-          if (!ctx) {
-            return resolve(source);
-          }
-          ctx.drawImage(img, 0, 0);
-          const {data} = ctx.getImageData(0, 0, canvas.width, canvas.height);
-          const bounds = findOpaqueBounds(data, canvas.width, canvas.height);
-          if (
-            !bounds ||
-            (bounds.left === 0 &&
-              bounds.top === 0 &&
-              bounds.right === canvas.width - 1 &&
-              bounds.bottom === canvas.height - 1)
-          ) {
-            return resolve(source);
-          }
-          const w = bounds.right - bounds.left + 1;
-          const h = bounds.bottom - bounds.top + 1;
-          const cropped = document.createElement('canvas');
-          cropped.width = w;
-          cropped.height = h;
-          cropped
-            .getContext('2d')
-            ?.drawImage(canvas, bounds.left, bounds.top, w, h, 0, 0, w, h);
-          resolve(cropped.toDataURL('image/png'));
-        } catch (e) {
-          // e.g. a tainted canvas from a cross-origin image: use it as-is.
-          resolve(source);
+  return new Promise<string>(resolve => {
+    const img = new Image();
+    img.onload = () => {
+      try {
+        const canvas = document.createElement('canvas');
+        canvas.width = img.naturalWidth;
+        canvas.height = img.naturalHeight;
+        const ctx = canvas.getContext('2d');
+        if (!ctx) {
+          return resolve(source);
         }
-      };
-      img.onerror = () => resolve(source);
-      img.src = source;
-    });
-    boundedSet(trimCache, source, cached);
-  }
-  return cached;
+        ctx.drawImage(img, 0, 0);
+        const {data} = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        const bounds = findOpaqueBounds(data, canvas.width, canvas.height);
+        if (
+          !bounds ||
+          (bounds.left === 0 &&
+            bounds.top === 0 &&
+            bounds.right === canvas.width - 1 &&
+            bounds.bottom === canvas.height - 1)
+        ) {
+          return resolve(source);
+        }
+        const w = bounds.right - bounds.left + 1;
+        const h = bounds.bottom - bounds.top + 1;
+        const cropped = document.createElement('canvas');
+        cropped.width = w;
+        cropped.height = h;
+        cropped
+          .getContext('2d')
+          ?.drawImage(canvas, bounds.left, bounds.top, w, h, 0, 0, w, h);
+        resolve(cropped.toDataURL('image/png'));
+      } catch (e) {
+        // e.g. a tainted canvas from a cross-origin image: use it as-is.
+        resolve(source);
+      }
+    };
+    img.onerror = () => resolve(source);
+    img.src = source;
+  });
 }
 
 /** The animation list restricted to images whose data has arrived. */
@@ -174,13 +142,13 @@ export function loadedAnimations(
 
 /**
  * The first frame of a sprite sheet as a dataURI, for thumbnails. Cached by
- * source like the trims.
+ * source.
  */
 function firstFrameThumbnail(
   source: string,
   frameSize: {x: number; y: number}
 ): Promise<string> {
-  let cached = boundedGet(frameThumbCache, source);
+  let cached = frameThumbCache.get(source);
   if (!cached) {
     cached = new Promise<string>(resolve => {
       const img = new Image();
@@ -210,7 +178,7 @@ function firstFrameThumbnail(
       img.onerror = () => resolve(source);
       img.src = source;
     });
-    boundedSet(frameThumbCache, source, cached);
+    frameThumbCache.set(source, cached);
   }
   return cached;
 }
