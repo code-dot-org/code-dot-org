@@ -171,8 +171,7 @@ export default function Toast({
         // MUI restarts its auto-hide timer only when `open` or
         // `autoHideDuration` changes, so a replacing toast of the same
         // duration would inherit the remaining time. A changing key is MUI's
-        // documented remedy; the id covers the case a message cannot, the same
-        // text raised twice in a row.
+        // documented remedy; include an id so duplicate messages get a new timer.
         key={`${toastId ?? ''}:${message}`}
         open={open}
         autoHideDuration={autoHideDuration}
