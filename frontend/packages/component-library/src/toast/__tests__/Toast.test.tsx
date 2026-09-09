@@ -197,7 +197,6 @@ describe('Design System - Toast', () => {
     });
 
     it('treats an explicit null duration as "until closed"', () => {
-      // `null` is nullish, so a `??` default would swallow it and auto-dismiss.
       vi.useFakeTimers();
       try {
         render(
@@ -270,9 +269,8 @@ describe('Design System - Toast', () => {
     });
 
     it('reuses one live region across consecutive toasts', async () => {
-      // Restarting the timer must key the Snackbar alone. Remounting the
-      // region would put announcements back on the path screen readers miss:
-      // a node inserted already containing its text.
+      // Ensure the live region is reused across consecutive toasts, so 
+      // keyboard users don't lose focus.
       render(
         <ToastProvider>
           <Trigger message="first" />
