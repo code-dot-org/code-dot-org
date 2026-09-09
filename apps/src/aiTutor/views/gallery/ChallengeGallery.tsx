@@ -1,14 +1,13 @@
+import {useApiClient} from '@code-dot-org/core/api';
 import {
   ChallengeResponse,
-  challengeResponseListValidator,
   GallerySort,
+  getUnitCounts,
+  listChallengeResponses,
   Reaction,
   TutorGalleryData,
-  unitCountsValidator,
 } from '@code-dot-org/lesson-deep-dive';
 import React, {FC, useEffect, useState} from 'react';
-
-import HttpClient from '@cdo/apps/util/HttpClient';
 
 import GallerySidebar from './GallerySidebar';
 import ProjectCard, {ProjectVariant} from './ProjectCard';
@@ -51,6 +50,8 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
     projectIdFromLocation
   );
 
+  const api = useApiClient();
+
   useEffect(() => {
     const onPopState = () => setProjectId(projectIdFromLocation());
     window.addEventListener('popstate', onPopState);
@@ -86,12 +87,8 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
     if (sort === 'oldest') {
       params.append('sort', 'oldest');
     }
-    HttpClient.fetchJson<ChallengeResponse[]>(
-      `/challenge_responses?${params.toString()}`,
-      {},
-      challengeResponseListValidator
-    )
-      .then(({value}) => {
+    listChallengeResponses(api.transport, params)
+      .then(value => {
         if (!cancelled) {
           setResponses(value || []);
         }
@@ -104,7 +101,7 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
     return () => {
       cancelled = true;
     };
-  }, [sectionId, unitId, sort]);
+  }, [sectionId, unitId, sort, api]);
 
   useEffect(() => {
     let cancelled = false;
@@ -112,12 +109,8 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
     if (sectionId !== null) {
       params.append('section_id', sectionId.toString());
     }
-    HttpClient.fetchJson<Record<string, number>>(
-      `/challenge_responses/unit_counts?${params.toString()}`,
-      {},
-      unitCountsValidator
-    )
-      .then(({value}) => {
+    getUnitCounts(api.transport, params)
+      .then(value => {
         if (!cancelled) {
           setUnitCounts(value || {});
         }
@@ -128,7 +121,7 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
     return () => {
       cancelled = true;
     };
-  }, [sectionId]);
+  }, [sectionId, api]);
 
   // Folds a response's new reaction tallies into the listing held from the
   // initial fetch, so a reaction made on the project page shows on that
