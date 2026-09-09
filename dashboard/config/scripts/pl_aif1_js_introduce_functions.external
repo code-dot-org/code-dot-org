@@ -102,25 +102,18 @@ markdown <<MARKDOWN
 
 <div style="display:block; clear:both; width:100%; box-sizing:border-box; margin-top:36px;">
 
-  <h2 style="margin:0 0 16px 0;">Quick Check</h2>
-
- <div style="background-color:#F7F7FB; border-left:4px solid #4C42CF; border-radius:8px; padding:12px 16px;">
-  <p style="margin:0;"><b>Question:</b> When the user clicks <code>addTenBtn</code>, how does the program know to add 10 points and update the score on the page?</p>
+<div style="background-color:#D5EFFF; color:#06338D; border-radius:10px; padding:16px 20px;">
+  <p style="margin:0;"><b>❓ Quick Check:</b> Both buttons call the same function, <code style="font-size: 16px;">addPoints</code>, but one adds 5 points and the other adds 10. How does one function produce two different results?</p>
 </div>
-
 <details style="display:block; width:100%; box-sizing:border-box; margin-top:12px;">
   <summary style="cursor:pointer; background-color:#F7F7FB; border:1px solid #E4E2F8; padding:10px 14px; border-radius:8px; font-weight:bold;">
     🔎 Check Your Answer
   </summary>
-
-  <div style="background-color:#D5EFFF; color:#06338D; border-radius:8px; padding:14px 16px; margin-top:8px;">
-    <p style="margin:0;"><b>Answer:</b> The event listener calls <code>addPoints(10)</code>, which sends the value <code>10</code> into the function as <code>points</code>. The function adds that value to <code>score</code>, then uses <code>scoreDisplay.textContent</code> to show the updated score on the page.</p>
+  <div style="background-color:#E4E2F8; color:#1F1976; border-radius:8px; padding:14px 16px; margin-top:8px;">
+    <p style="margin:0;"><b>Answer:</b> The value in the parentheses, <code style="font-size: 16px;">points</code>, changes each time the function is called. <code style="font-size: 16px;">addPoints(5)</code> sends in 5, <code style="font-size: 16px;">addPoints(10)</code> sends in 10. The function's instructions stay exactly the same, only the input changes, which is why the same shared code can produce different results depending on how it's called.</p>
   </div>
 </details>
-
-  <p style="display:block; clear:both; width:100%; margin:24px 0 0 0;">
-    Next up: let’s create our own functions.
-  </p>
-
-</div>
+<p style="display:block; clear:both; width:100%; margin:24px 0 0 0;">
+    Next up: let's create our own functions.
+</p>
 MARKDOWN

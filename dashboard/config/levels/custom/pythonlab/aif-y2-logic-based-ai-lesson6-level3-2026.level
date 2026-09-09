@@ -29,9 +29,9 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "from helpers_static import run\n\n\ndef turn(up, current, down):\n    print(f\"Up: {up}\")\n    print(f\"Current: {current}\")\n    print(f\"Down: {down}\")\n    \n\nrun(turn)\n",
+          "contents": "from helpers_static import run\n\n\ndef turn(up, current, down):\n  print(f\"Up: {up}\")\n  print(f\"Current: {current}\")\n  print(f\"Down: {down}\")\n  \n\nrun(turn)\n",
           "folderId": "0",
-          "active": false
+          "active": true
         },
         "1": {
           "id": "1",
@@ -46,7 +46,7 @@
           "name": "helpers_static.py",
           "contents": "from typing import Callable\n\nfrom helpers import render, get_neighbors\n\n\ndef run(f: Callable) -> None:\n    \"\"\"Show the visualization once in its initial state, then call the\n    student's turn function without redirecting stdout, so whatever they\n    print appears directly below the thermostat.\"\"\"\n\n    # Draw the visualization a single time\n    render()\n\n    # Look up the current temperature's preference and its neighbors'\n    here, down, up = get_neighbors()\n\n    # Call the student's function normally (no stdout redirection and no\n    # movement), so their print() output shows up below the thermostat\n    print()\n    f(up, here, down)\n",
           "folderId": "0",
-          "active": true,
+          "active": false,
           "type": "support"
         }
       },
@@ -61,6 +61,6 @@
     "display_name": "Investigate Parameters"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-27 16:07:57 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-27 16:22:01 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-27 16:22:19 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-27 17:58:15 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-27 18:13:22 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-29 19:24:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-27 16:07:57 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-27 16:22:01 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-27 16:22:19 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-27 17:58:15 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-27 18:13:22 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-29 19:24:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:12:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

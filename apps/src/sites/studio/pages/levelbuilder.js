@@ -10,6 +10,8 @@ import {
 } from '@cdo/apps/blockly/addons/cdoXml';
 import {loadBlocksToWorkspace} from '@cdo/apps/blockly/utils';
 import initializeCodeMirror6 from '@cdo/apps/code-studio/initializeCodeMirror6';
+// Injects the raw properties editor onto Lab2 Sprite Lab level edit pages.
+import '@cdo/apps/code-studio/spriteLab2ExtraProperties';
 import {convertXmlToBlockly} from '@cdo/apps/templates/instructions/utils';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 

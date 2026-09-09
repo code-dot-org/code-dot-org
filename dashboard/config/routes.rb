@@ -369,6 +369,9 @@ Dashboard::Application.routes.draw do
 
     get 'projects/:channel_id/extra_links', to: 'projects#extra_links'
 
+    # Internal playtest review of AI-generated images (project validators only).
+    get 'spritelab_lab2_images_review', to: 'spritelab_lab2_images_review#index'
+
     resources :projects, path: '/projects/', only: [:index] do
       collection do
         ProjectsController::STANDALONE_PROJECTS.each do |key, _|

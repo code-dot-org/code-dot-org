@@ -2,13 +2,15 @@
   width: 100%;
 }
 
+.main:has(:global(.announcement-notification)) .titleWrapper {
+  // Wider than the gap between two banners, so the header reads as a new block.
+  margin-top: var(--spacing-p-m);
+}
+
 .titleWrapper {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-
-  // Wider than the gap between two banners, so the header reads as a new block.
-  margin-top: var(--spacing-p-m);
 }
 
 .title {
