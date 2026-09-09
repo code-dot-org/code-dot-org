@@ -9,7 +9,7 @@ Scenario: Game lab level where student has not started
   When I sign in as "Teacher_Sally" and go home
   And I wait until element "#ui-test-section-list" is visible
 
-  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/38/levels/3"
+  And I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/38/levels/3"
   And I wait for the lab page to fully load
   And I wait until element "#teacher-panel-container" is visible
   And I wait until element ".uitest-sectionselect:contains(Untitled Section)" is visible
@@ -27,7 +27,7 @@ Scenario: Maze level where student has not started
   When I sign in as "Teacher_Sally" and go home
   And I wait until element "#ui-test-section-list" is visible
 
-  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/4/levels/2"
+  And I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/4/levels/2"
   And I wait for the lab page to fully load
   And I wait until element "#teacher-panel-container" is visible
   And I wait until element ".uitest-sectionselect:contains(Untitled Section)" is visible
@@ -44,7 +44,7 @@ Scenario: Contained level
   When I sign in as "Teacher_Sally" and go home
   And I wait until element "#ui-test-section-list" is visible
 
-  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/41/levels/1"
+  And I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/41/levels/1"
   And I wait for the lab page to fully load
   And I wait until element "#teacher-panel-container" is visible
   And I wait until element ".uitest-sectionselect:contains(Untitled Section)" is visible

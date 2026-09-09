@@ -1,12 +1,12 @@
 # Public Key Cryptography Widget-specific cucumber step definitions
 
-# Which lesson of allthethings.script contains the PKC levels; this way we
+# Which lesson of ui-test-student-labs contains the PKC levels; this way we
 # only have to update in one place if this changes.
-PUBLIC_KEY_CRYPTOGRAPHY_ALLTHETHINGS_LESSON = 31
+PUBLIC_KEY_CRYPTOGRAPHY_STUDENT_LABS_LESSON = 31
 
 Given /^I am on the (\d+)(?:st|nd|rd|th)? Public Key Cryptography test level$/ do |level_index|
   steps <<-STEPS
-    And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/#{PUBLIC_KEY_CRYPTOGRAPHY_ALLTHETHINGS_LESSON}/levels/#{level_index}"
+    And I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/#{PUBLIC_KEY_CRYPTOGRAPHY_STUDENT_LABS_LESSON}/levels/#{level_index}"
   STEPS
 end
 

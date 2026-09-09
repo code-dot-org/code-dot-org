@@ -1,6 +1,6 @@
-# Which lesson of allthethings.script contains the App Lab levels; this way we
+# Which lesson of ui-test-student-labs contains the App Lab levels; this way we
 # only have to update in one place if this changes.
-APPLAB_ALLTHETHINGS_LESSON = 18
+APPLAB_STUDENT_LABS_LESSON = 18
 
 When /^I add code for a canvas and a button$/ do
   code =
@@ -32,7 +32,7 @@ end
 
 Given /^I am on the (\d+)(?:st|nd|rd|th)? App ?Lab test level$/ do |level_index|
   steps <<-GHERKIN
-    And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/#{APPLAB_ALLTHETHINGS_LESSON}/levels/#{level_index}"
+    And I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/#{APPLAB_STUDENT_LABS_LESSON}/levels/#{level_index}"
     And I wait for the lab page to fully load
   GHERKIN
 end

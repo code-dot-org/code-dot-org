@@ -2,7 +2,7 @@ Feature: Complete a simple maze level
 
   Background:
     Given I am on "http://studio.code.org/reset_session"
-    Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/4?noautoplay=true"
+    Given I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/2/levels/4?noautoplay=true"
     And I wait for the lab page to fully load
     And I dismiss the login reminder
     Then element ".csf-top-instructions p" has text "Use the \"repeat\" block to solve the puzzle quickly..."

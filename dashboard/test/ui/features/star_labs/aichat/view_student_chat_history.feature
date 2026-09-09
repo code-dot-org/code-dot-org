@@ -7,13 +7,13 @@ Feature: Teacher viewing student chat history in AI Chat Lab
 Background:
   Given I create a teacher named "Simone"
   And I give user "Simone" authorized teacher permission
-  And I create a new student section assigned to course "allthethingscourse" unit 1 with AI chat enabled and save the section
+  And I create a new student section assigned to course "ui-test-student-labs" unit 1 with AI chat enabled and save the section
 
   Given I create a student named "Hermione"
   And I join the section
 
   # Student interacts with model to create chat history for teacher to view.
-  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/47/levels/1"
+  Given I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/47/levels/1"
   And I click selector "button[aria-label='Close']" once I see it
   And I wait until element "button[aria-label='Close']" is not visible
   When I press keys "Hello" for element "#uitest-chat-textarea"
@@ -35,7 +35,7 @@ Background:
 Scenario: Teacher views student chat history and interacts with student model
   # Teacher can view chat history and provide feedback on messages flagged as inappropriate.
   Given I sign in as "Simone"
-  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/47/levels/1"
+  And I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/47/levels/1"
   When I click selector "button[aria-label='Close']" once I see it
   And I wait until element "button[aria-label='Close']" is not visible
   And I wait to see ".show-handle"

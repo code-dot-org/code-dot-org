@@ -344,11 +344,11 @@ class SectionsControllerTest < ActionController::TestCase
   end
 
   test 'retrieve_lessons_for_dropdown returns demo preset lesson links for a demo type' do
-    # In the test environment, demo presets resolve to the allthethings unit
-    # and unit group (see Policies::DemoSections.curriculum_names).
-    allthethings_unit = create(:unit, :with_levels, name: Policies::DemoSections::ALLTHETHINGS_UNIT_NAME)
-    allthethings_unit.lessons.first.update!(has_lesson_plan: true)
-    create(:unit_group_unit, position: 1, script: allthethings_unit, unit_group: create(:unit_group, name: Policies::DemoSections::ALLTHETHINGS_UNIT_GROUP_NAME))
+    # In the test environment, demo presets resolve to the ui test unit and
+    # unit group (see Policies::DemoSections.curriculum_names).
+    demo_unit = create(:unit, :with_levels, name: Policies::DemoSections::UI_TEST_UNIT_NAME)
+    demo_unit.lessons.first.update!(has_lesson_plan: true)
+    create(:unit_group_unit, position: 1, script: demo_unit, unit_group: create(:unit_group, name: Policies::DemoSections::UI_TEST_UNIT_GROUP_NAME))
 
     sign_in @teacher
 
@@ -356,8 +356,8 @@ class SectionsControllerTest < ActionController::TestCase
 
     assert_response :success
     response_json = JSON.parse(@response.body)
-    assert_equal "/teacher_dashboard/sections/:sectionId/courses/original-allthethings-course/units/1", response_json.first['value']
-    assert_match %r{\A/courses/original-allthethings-course/units/1/lessons/\d+/levels/1\z}, response_json.second['value']
+    assert_equal "/teacher_dashboard/sections/:sectionId/courses/ui-test-original-student-labs/units/1", response_json.first['value']
+    assert_match %r{\A/courses/ui-test-original-student-labs/units/1/lessons/\d+/levels/1\z}, response_json.second['value']
   end
 
   describe 'POST /sections/:id/log_in' do

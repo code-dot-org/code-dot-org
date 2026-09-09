@@ -7,9 +7,9 @@ Feature: Using the V2 teacher dashboard local navigation - Eyes
   Scenario: Local navigation on Progress v2
     When I open my eyes to test "teacher local nav v2 - progress"
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to course "allthethingscourse" unit 1
+    Given I am assigned to course "ui-test-student-labs" unit 1
 
-    And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/10/levels/1?noautoplay=true"
+    And I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/10/levels/1?noautoplay=true"
     Then I wait for 3 seconds
     And I wait until element ".submitButton" is visible
     And I press ".answerbutton[index=1]" using jQuery

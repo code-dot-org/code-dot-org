@@ -7,7 +7,7 @@ import {LessonLevelPage} from './lesson-level-page';
 /**
  * Page object for the 'external' level type: server-rendered markdown with no
  * code editor/console (no #runButton, unlike the Blockly labs). Used e.g. by
- * allthethingscourse/unit 1/lesson 21/level 1 to test markdown rendering.
+ * ui-test-student-labs/unit 1/lesson 21/level 1 to test markdown rendering.
  */
 export class ExternalLevel extends LessonLevelPage {
   /** Marker element appended at the end of the authored markdown body. */

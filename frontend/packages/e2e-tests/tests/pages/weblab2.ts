@@ -10,11 +10,11 @@ import {labLevelUrl, type LabLevelUrlParams} from '../shared/routes';
 import {LessonLevelPage} from './lesson-level-page';
 
 /**
- * The allthethings level backing these tests: lesson "Web Lab 2" position 51,
- * level 11 — a fixed level seeded with an index.html containing a
- * #hello-world-message div (see dashboard/config/levels/custom/weblab2/
- * "Allthethings Weblab2 11.level"). hideProductTours suppresses the onboarding
- * overlays that would otherwise cover the workspace on first load.
+ * The ui-test-student-labs level backing these tests: lesson "Web Lab 2"
+ * position 51, level 11 — a fixed level seeded with an index.html containing a
+ * #hello-world-message div (see dashboard/test/ui/config/levels/custom/weblab2/
+ * "UI Test Allthethings Weblab2 11.level"). hideProductTours suppresses the
+ * onboarding overlays that would otherwise cover the workspace on first load.
  */
 const WEBLAB2_LEVEL: LabLevelUrlParams = {
   lesson: 51,

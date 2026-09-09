@@ -1,7 +1,7 @@
 Feature: Playing the Farmer Game
 
 Background:
-  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/6/levels/1?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/6/levels/1?noautoplay=true"
   And I wait for the lab page to fully load
   And I dismiss the login reminder
   And element ".instructions-markdown p" has escaped text "Wow, look at that!I don't know how many shovelfuls of dirt this hole needs.\nCan you write a program that keeps using the fill block until the ground is even?"
@@ -20,7 +20,7 @@ Scenario: Winning the first level
   And element ".congrats" has text "Congratulations! You completed Puzzle 1."
   And there's 0 dirt at (3, 3)
   And I press "continue-button"
-  Then I wait until I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/6/levels/2"
+  Then I wait until I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/6/levels/2"
 
 @no_mobile
 Scenario: Losing the first level
