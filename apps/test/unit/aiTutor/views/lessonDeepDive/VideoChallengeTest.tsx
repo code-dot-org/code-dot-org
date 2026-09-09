@@ -5,6 +5,11 @@ import React, {FC, useRef, useState} from 'react';
 import VideoChallenge from '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/VideoChallenge';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
+jest.mock('@code-dot-org/core/api', () => {
+  const client = {transport: {}};
+  return {useApiClient: () => client};
+});
+
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   __esModule: true,
   default: {post: jest.fn(), put: jest.fn()},

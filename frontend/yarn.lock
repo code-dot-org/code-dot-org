@@ -2029,6 +2029,7 @@ __metadata:
     "@types/react": "catalog:"
     "@types/react-dom": "catalog:"
     "@vitejs/plugin-react": "catalog:"
+    classnames: "catalog:"
     eslint: "catalog:"
     jsdom: "catalog:"
     msw: "catalog:"
@@ -2047,6 +2048,9 @@ __metadata:
     zod: "catalog:"
   peerDependencies:
     "@code-dot-org/component-library": "*"
+    "@code-dot-org/core": "*"
+    "@mui/material": ^7.0.0
+    classnames: ^2.5.1
     react: ^17.0.0 || ^18.0.0 || ^19.0.0
   languageName: unknown
   linkType: soft

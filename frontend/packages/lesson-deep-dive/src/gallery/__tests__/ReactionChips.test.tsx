@@ -1,28 +1,26 @@
-import {
-  addReaction as addReactionApi,
-  Reaction,
-  removeReaction as removeReactionApi,
-} from '@code-dot-org/lesson-deep-dive';
 import {render, screen, waitFor} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import '@testing-library/jest-dom';
-import React from 'react';
+import {type Mock, vi} from 'vitest';
 
-import ReactionChips from '@cdo/apps/aiTutor/views/gallery/ReactionChips';
+import {type Reaction} from '../../types';
+import {
+  addReaction as addReactionApi,
+  removeReaction as removeReactionApi,
+} from '../api';
+import ReactionChips from '../ReactionChips';
 
-jest.mock('@code-dot-org/core/api', () => {
+vi.mock('@code-dot-org/core/api', () => {
   const client = {transport: {}};
   return {useApiClient: () => client};
 });
 
-jest.mock('@code-dot-org/lesson-deep-dive', () => ({
-  ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
-  addReaction: jest.fn(),
-  removeReaction: jest.fn(),
+vi.mock('../api', () => ({
+  addReaction: vi.fn(),
+  removeReaction: vi.fn(),
 }));
 
-const addReaction = addReactionApi as jest.Mock;
-const removeReaction = removeReactionApi as jest.Mock;
+const addReaction = addReactionApi as Mock;
+const removeReaction = removeReactionApi as Mock;
 
 describe('ReactionChips', () => {
   beforeEach(() => {
@@ -31,7 +29,7 @@ describe('ReactionChips', () => {
   });
 
   afterEach(() => {
-    jest.restoreAllMocks();
+    vi.restoreAllMocks();
   });
 
   const heart = (overrides: Partial<Reaction> = {}): Reaction => ({
@@ -46,17 +44,17 @@ describe('ReactionChips', () => {
       <ReactionChips
         responseId={5}
         reactions={[heart(), {emoji: 'clap', count: 1, reacted: false}]}
-      />
+      />,
     );
 
     expect(
-      screen.getByRole('button', {name: /Heart, 3 reactions/})
+      screen.getByRole('button', {name: /Heart, 3 reactions/}),
     ).toBeInTheDocument();
     expect(
-      screen.getByRole('button', {name: /Clap, 1 reaction$/})
+      screen.getByRole('button', {name: /Clap, 1 reaction$/}),
     ).toBeInTheDocument();
     expect(
-      screen.getByRole('button', {name: 'Add reaction'})
+      screen.getByRole('button', {name: 'Add reaction'}),
     ).toBeInTheDocument();
   });
 
@@ -67,14 +65,14 @@ describe('ReactionChips', () => {
         responseId={5}
         reactions={[heart({reacted: true})]}
         readOnly
-      />
+      />,
     );
 
     // The chip shows as a static label, not a button, and there is no picker.
     const chip = screen.getByRole('img', {name: /Heart, 3 reactions/});
     expect(chip).toBeInTheDocument();
     expect(
-      screen.queryByRole('button', {name: 'Add reaction'})
+      screen.queryByRole('button', {name: 'Add reaction'}),
     ).not.toBeInTheDocument();
 
     await user.click(chip);
@@ -84,19 +82,19 @@ describe('ReactionChips', () => {
 
   it('renders nothing read-only when there are no reactions', () => {
     const {container} = render(
-      <ReactionChips responseId={5} reactions={[]} readOnly />
+      <ReactionChips responseId={5} reactions={[]} readOnly />,
     );
     expect(container).toBeEmptyDOMElement();
   });
 
   it('marks the viewer’s own reaction as pressed', () => {
     render(
-      <ReactionChips responseId={5} reactions={[heart({reacted: true})]} />
+      <ReactionChips responseId={5} reactions={[heart({reacted: true})]} />,
     );
 
     expect(screen.getByRole('button', {name: /Heart/})).toHaveAttribute(
       'aria-pressed',
-      'true'
+      'true',
     );
   });
 
@@ -111,11 +109,11 @@ describe('ReactionChips', () => {
     await waitFor(() =>
       expect(screen.getByRole('button', {name: /Heart/})).toHaveAttribute(
         'aria-pressed',
-        'true'
-      )
+        'true',
+      ),
     );
     expect(
-      screen.getByRole('button', {name: /Heart, 4 reactions/})
+      screen.getByRole('button', {name: /Heart, 4 reactions/}),
     ).toBeInTheDocument();
   });
 
@@ -126,7 +124,7 @@ describe('ReactionChips', () => {
       <ReactionChips
         responseId={5}
         reactions={[heart({count: 3, reacted: true})]}
-      />
+      />,
     );
 
     await user.click(screen.getByRole('button', {name: /Heart/}));
@@ -135,8 +133,8 @@ describe('ReactionChips', () => {
     await waitFor(() =>
       expect(screen.getByRole('button', {name: /Heart/})).toHaveAttribute(
         'aria-pressed',
-        'false'
-      )
+        'false',
+      ),
     );
   });
 
@@ -149,12 +147,12 @@ describe('ReactionChips', () => {
 
     await waitFor(() =>
       expect(
-        screen.getByRole('button', {name: /Heart, 3 reactions/})
-      ).toBeInTheDocument()
+        screen.getByRole('button', {name: /Heart, 3 reactions/}),
+      ).toBeInTheDocument(),
     );
     expect(screen.getByRole('button', {name: /Heart/})).toHaveAttribute(
       'aria-pressed',
-      'false'
+      'false',
     );
   });
 
@@ -169,13 +167,13 @@ describe('ReactionChips', () => {
     expect(addReaction).toHaveBeenCalledWith(expect.anything(), 5, 'fire');
     // The picker closes after a choice.
     await waitFor(() =>
-      expect(screen.queryByRole('menu')).not.toBeInTheDocument()
+      expect(screen.queryByRole('menu')).not.toBeInTheDocument(),
     );
   });
 
   it('reports reaction changes to onReactionsChange for the owning view', async () => {
     const user = userEvent.setup();
-    const onReactionsChange = jest.fn();
+    const onReactionsChange = vi.fn();
     const server = [heart({count: 4, reacted: true})];
     addReaction.mockResolvedValue(server);
     render(
@@ -183,7 +181,7 @@ describe('ReactionChips', () => {
         responseId={5}
         reactions={[heart()]}
         onReactionsChange={onReactionsChange}
-      />
+      />,
     );
 
     await user.click(screen.getByRole('button', {name: /Heart/}));
@@ -191,7 +189,7 @@ describe('ReactionChips', () => {
     // Fired optimistically at once, then again with the server's tallies.
     expect(onReactionsChange).toHaveBeenCalled();
     await waitFor(() =>
-      expect(onReactionsChange).toHaveBeenLastCalledWith(server)
+      expect(onReactionsChange).toHaveBeenLastCalledWith(server),
     );
   });
 });

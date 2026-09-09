@@ -1,6 +1,11 @@
 import {requestEvaluation} from '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/requestEvaluation';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
+jest.mock('@code-dot-org/core/api', () => {
+  const client = {transport: {}};
+  return {useApiClient: () => client};
+});
+
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   __esModule: true,
   default: {post: jest.fn()},

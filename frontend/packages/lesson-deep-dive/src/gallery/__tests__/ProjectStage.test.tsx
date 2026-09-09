@@ -1,9 +1,7 @@
-import {ChallengeResponseDetail} from '@code-dot-org/lesson-deep-dive';
 import {render, screen} from '@testing-library/react';
-import '@testing-library/jest-dom';
-import React from 'react';
 
-import ProjectStage from '@cdo/apps/aiTutor/views/gallery/ProjectStage';
+import ProjectStage from '../ProjectStage';
+import {type ChallengeResponseDetail} from '../types';
 
 const baseDetail: ChallengeResponseDetail = {
   id: 8,
@@ -47,15 +45,15 @@ describe('ProjectStage', () => {
             },
           ],
         }}
-      />
+      />,
     );
 
     expect(
-      screen.getByAltText("Grace Hopper's whiteboard project")
+      screen.getByAltText("Grace Hopper's whiteboard project"),
     ).toHaveAttribute('src', 'https://s3.example/board.png');
     expect(screen.getByLabelText('Audio narration')).toHaveAttribute(
       'src',
-      'https://s3.example/narration'
+      'https://s3.example/narration',
     );
     expect(screen.getByText('Text Explanation')).toBeInTheDocument();
     expect(screen.getByText('My drawing shows a network.')).toBeInTheDocument();
@@ -75,12 +73,12 @@ describe('ProjectStage', () => {
             },
           ],
         }}
-      />
+      />,
     );
 
     expect(screen.getByLabelText("Grace Hopper's video story")).toHaveAttribute(
       'src',
-      'https://s3.example/video'
+      'https://s3.example/video',
     );
     expect(screen.queryByText('Text Explanation')).not.toBeInTheDocument();
   });
@@ -92,11 +90,11 @@ describe('ProjectStage', () => {
           ...baseDetail,
           assets: [{id: 3, asset_type: 'whiteboard_image', download_url: null}],
         }}
-      />
+      />,
     );
 
     expect(
-      screen.queryByAltText("Grace Hopper's whiteboard project")
+      screen.queryByAltText("Grace Hopper's whiteboard project"),
     ).not.toBeInTheDocument();
   });
 });

@@ -1,28 +1,23 @@
-import {
-  ChallengeResponse,
-  ChallengeResponseDetail,
-  GalleryUnit,
-  getChallengeResponse,
-  listChallengeResponses,
-} from '@code-dot-org/lesson-deep-dive';
 import {fireEvent, render, screen, waitFor} from '@testing-library/react';
-import '@testing-library/jest-dom';
-import React from 'react';
+import {type ComponentProps} from 'react';
+import {type Mock, vi} from 'vitest';
 
-import ProjectView from '@cdo/apps/aiTutor/views/gallery/ProjectView';
-jest.mock('@code-dot-org/core/api', () => {
+import {type ChallengeResponse} from '../../types';
+import {getChallengeResponse, listChallengeResponses} from '../api';
+import ProjectView from '../ProjectView';
+import {type ChallengeResponseDetail, type GalleryUnit} from '../types';
+vi.mock('@code-dot-org/core/api', () => {
   const client = {transport: {}};
   return {useApiClient: () => client};
 });
 
-jest.mock('@code-dot-org/lesson-deep-dive', () => ({
-  ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
-  getChallengeResponse: jest.fn(),
-  listChallengeResponses: jest.fn(),
+vi.mock('../api', () => ({
+  getChallengeResponse: vi.fn(),
+  listChallengeResponses: vi.fn(),
 }));
 
-const mockDetail = getChallengeResponse as jest.Mock;
-const mockList = listChallengeResponses as jest.Mock;
+const mockDetail = getChallengeResponse as Mock;
+const mockList = listChallengeResponses as Mock;
 
 const units: GalleryUnit[] = [
   {id: 100, name: 'Problem Solving with AI', position: 1, link: '/s/ai-1'},
@@ -64,24 +59,22 @@ const versionOf = (id: number, created_at: string): ChallengeResponse => ({
 
 const stubFetches = (
   detailResponse: ChallengeResponseDetail,
-  versions: ChallengeResponse[] = [detailResponse]
+  versions: ChallengeResponse[] = [detailResponse],
 ) => {
   mockDetail.mockResolvedValue(detailResponse);
   mockList.mockResolvedValue(versions);
 };
 
-const renderView = (
-  props: Partial<React.ComponentProps<typeof ProjectView>> = {}
-) =>
+const renderView = (props: Partial<ComponentProps<typeof ProjectView>> = {}) =>
   render(
     <ProjectView
       responseId={8}
       units={units}
       galleryResponses={null}
-      onBack={jest.fn()}
-      onOpenProject={jest.fn()}
+      onBack={vi.fn()}
+      onOpenProject={vi.fn()}
       {...props}
-    />
+    />,
   );
 
 describe('ProjectView', () => {
@@ -96,23 +89,23 @@ describe('ProjectView', () => {
     renderView();
 
     await waitFor(() =>
-      expect(screen.getByText('Grace Hopper')).toBeInTheDocument()
+      expect(screen.getByText('Grace Hopper')).toBeInTheDocument(),
     );
     expect(mockDetail).toHaveBeenCalledWith(expect.anything(), 8);
 
     // The stage and details card render from the fetched detail; their
     // contents are covered by ProjectStageTest and ProjectDetailsCardTest.
     expect(
-      screen.getByAltText("Grace Hopper's whiteboard project")
+      screen.getByAltText("Grace Hopper's whiteboard project"),
     ).toBeInTheDocument();
     expect(
-      screen.getByText('Project Prompt: Draw a network.')
+      screen.getByText('Project Prompt: Draw a network.'),
     ).toBeInTheDocument();
     expect(screen.getByText('Unit 1, Lesson 3')).toBeInTheDocument();
   });
 
   it("pages through the student's responses with the version switcher", async () => {
-    const onOpenProject = jest.fn();
+    const onOpenProject = vi.fn();
     stubFetches(detail, [
       versionOf(4, '2026-08-01T12:00:00Z'),
       versionOf(8, '2026-08-10T12:00:00Z'),
@@ -122,13 +115,13 @@ describe('ProjectView', () => {
 
     // The detail fetch renders first; the version list arrives after it.
     await waitFor(() =>
-      expect(screen.getByText('Grace Hopper')).toBeInTheDocument()
+      expect(screen.getByText('Grace Hopper')).toBeInTheDocument(),
     );
     await waitFor(() =>
-      expect(screen.getByText('Response #2')).toBeInTheDocument()
+      expect(screen.getByText('Response #2')).toBeInTheDocument(),
     );
     expect(mockList.mock.calls[0][1].toString()).toBe(
-      'challenge_id=1&user_id=99&sort=oldest'
+      'challenge_id=1&user_id=99&sort=oldest',
     );
 
     expect(screen.getByRole('button', {name: 'Next response'})).toBeDisabled();
@@ -142,11 +135,11 @@ describe('ProjectView', () => {
     renderView();
 
     await waitFor(() =>
-      expect(screen.getByText('Respond again')).toBeInTheDocument()
+      expect(screen.getByText('Respond again')).toBeInTheDocument(),
     );
     expect(screen.getByText('Respond again')).toHaveAttribute(
       'href',
-      '/s/ai-1/lessons/3/tutor'
+      '/s/ai-1/lessons/3/tutor',
     );
     // Owners see the feedback panel, not the teacher assessment.
     expect(screen.getByText('Feedback')).toBeInTheDocument();
@@ -154,7 +147,7 @@ describe('ProjectView', () => {
   });
 
   it('lets a teacher page across the gallery projects', async () => {
-    const onOpenProject = jest.fn();
+    const onOpenProject = vi.fn();
     const teacherDetail = {...detail, viewer_role: 'teacher' as const};
     stubFetches(teacherDetail);
     const galleryResponses = [
@@ -184,7 +177,7 @@ describe('ProjectView', () => {
     renderView();
 
     await waitFor(() =>
-      expect(screen.getByText('Grace Hopper')).toBeInTheDocument()
+      expect(screen.getByText('Grace Hopper')).toBeInTheDocument(),
     );
     expect(screen.queryByText('Feedback')).not.toBeInTheDocument();
     expect(screen.queryByText('AI Assessment')).not.toBeInTheDocument();
@@ -192,10 +185,10 @@ describe('ProjectView', () => {
     // A peer cannot page through the owner's earlier submissions, so the
     // version switcher is absent and its list is never fetched.
     expect(
-      screen.queryByRole('button', {name: 'Previous response'})
+      screen.queryByRole('button', {name: 'Previous response'}),
     ).not.toBeInTheDocument();
     expect(
-      screen.queryByRole('button', {name: 'Next response'})
+      screen.queryByRole('button', {name: 'Next response'}),
     ).not.toBeInTheDocument();
     expect(mockList).not.toHaveBeenCalled();
   });
@@ -207,8 +200,8 @@ describe('ProjectView', () => {
 
     await waitFor(() =>
       expect(
-        screen.getByText(/We couldn't load this project/)
-      ).toBeInTheDocument()
+        screen.getByText(/We couldn't load this project/),
+      ).toBeInTheDocument(),
     );
   });
 });

@@ -13,6 +13,11 @@ import ChallengePicker from '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeAct
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {ChallengeTypes} from '@cdo/generated-scripts/sharedConstants';
 
+jest.mock('@code-dot-org/core/api', () => {
+  const client = {transport: {}};
+  return {useApiClient: () => client};
+});
+
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   __esModule: true,
   default: {fetchJson: jest.fn()},
