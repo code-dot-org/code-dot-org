@@ -43,6 +43,10 @@
 #     numeric literal, which is why MySQL through ProxySQL on 127.0.0.1 was
 #     unaffected in production -- never reaches it. The preflight enforces this
 #     rather than silently reporting 0%.
+#   - sudo is unavoidable, because /etc/hosts is root-owned. Every subprocess
+#     here is invoked as an argument array rather than a shell string, and the
+#     file content and line filtering are composed in Ruby, so nothing depends
+#     on shell or regex quoting.
 #   - Cleanup deletes only lines carrying this script's marker comment, so it
 #     cannot remove a real /etc/hosts entry even if the file changed underneath
 #     it. It refuses to start if the name is already present, which would
@@ -59,7 +63,10 @@
 #     abandoned.
 
 require 'socket'
-require 'tempfile'
+
+# Unbuffered so stdout and stderr interleave correctly when the run is piped to
+# a file, and so an interrupted run keeps its progress line.
+$stdout.sync = true
 
 SETUP_HOSTS = ENV['SETUP_HOSTS'] == '1'
 DUMMY_HOST  = 'dns-deadlock.invalid'
@@ -89,27 +96,47 @@ def unique_addrs(host)
   Socket.getaddrinfo(host, 80, nil, Socket::SOCK_STREAM).map {|a| a[3]}.uniq
 end
 
+def capture(*cmd)
+  IO.popen(cmd, err: File::NULL, &:read).to_s.strip
+rescue SystemCallError
+  ''
+end
+
 def hosts_entry_present?
   File.read(HOSTS_FILE).include?(DUMMY_HOST)
 rescue StandardError
   false
 end
 
-# Written through a temp file rather than an inline shell string so nothing in
-# the entry has to survive shell quoting.
+# sudo is the only reason a subprocess is involved at all: /etc/hosts is
+# root-owned, so an unprivileged process cannot write it.
+def write_as_root(path, content, append: false)
+  argv = ['sudo', 'tee']
+  argv << '-a' if append
+  argv << path
+  IO.popen(argv, 'w', out: File::NULL) {|io| io.write(content)}
+  $?.success?
+end
+
 def add_hosts_entry
-  Tempfile.create('dns-deadlock-hosts') do |f|
-    HOSTS_LINES.each {|line| f.puts line}
-    f.flush
-    unless system("sudo tee -a #{HOSTS_FILE} < #{f.path} > /dev/null")
-      abort "could not append to #{HOSTS_FILE}"
-    end
-  end
+  content = HOSTS_LINES.map {|line| "#{line}\n"}.join
+  abort "could not append to #{HOSTS_FILE}" unless write_as_root(HOSTS_FILE, content, append: true)
 end
 
 def remove_hosts_entry
   return unless Process.pid == PARENT_PID
-  system("sudo sed -i '/#{HOSTS_MARKER}/d' #{HOSTS_FILE}")
+
+  kept = File.readlines(HOSTS_FILE).reject {|line| line.include?(HOSTS_MARKER)}
+
+  # Removal rewrites the whole file, so bail out rather than risk leaving an
+  # instance with no localhost entry.
+  unless kept.any? {|line| line.include?('localhost')}
+    warn "refusing to rewrite #{HOSTS_FILE}: no localhost entry would remain"
+    warn "  remove the added lines by hand: sudo sed -i '/#{HOSTS_MARKER}/d' #{HOSTS_FILE}"
+    return
+  end
+
+  warn "could not rewrite #{HOSTS_FILE}" unless write_as_root(HOSTS_FILE, kept.join)
 end
 
 # Kernel wait state per thread: "futex_wait_queue" is a thread blocked on a
@@ -133,7 +160,7 @@ def wait_until(pid, deadline)
   end
 end
 
-can_sudo = system('sudo -n true', out: File::NULL, err: File::NULL)
+can_sudo = system('sudo', '-n', 'true', out: File::NULL, err: File::NULL)
 warn 'DUMP=1 needs passwordless sudo for gdb; skipping dump' if DUMP && !can_sudo
 
 if SETUP_HOSTS
@@ -149,15 +176,33 @@ if SETUP_HOSTS
   # in the trap list because closing an ssh session is the likely way a run on a
   # remote host dies.
   at_exit {remove_hosts_entry}
-  # exit! is deliberate -- it skips the at_exit above, so cleanup runs once --
-  # but it also discards buffered stdout, hence the flush.
+  # exit! rather than exit so cleanup runs once here instead of again in at_exit.
   %w[INT TERM HUP QUIT].each do |sig|
-    Signal.trap(sig) {remove_hosts_entry; $stdout.flush; exit!(128 + Signal.list.fetch(sig))}
+    Signal.trap(sig) {remove_hosts_entry; exit!(128 + Signal.list.fetch(sig))}
   end
 
   # SIGKILL runs none of the above.
   warn "added #{DUMMY_HOST} to #{HOSTS_FILE}; if this process is killed with -9, remove it with:"
   warn "  sudo sed -i '/#{HOSTS_MARKER}/d' #{HOSTS_FILE}"
+end
+
+puts "glibc:   #{capture('ldd', '--version').lines.first.to_s.strip}"
+puts "nscd:    #{capture('systemctl', 'is-active', 'nscd').then {|s| s.empty? ? 'absent' : s}}"
+puts "resolv:  #{begin; File.realpath('/etc/resolv.conf'); rescue StandardError; '?'; end}"
+
+addrs = begin
+  unique_addrs(HOST)
+rescue SocketError => exception
+  abort "cannot resolve #{HOST}: #{exception.message}"
+end
+puts "target:  #{HOST} -> #{addrs.size} unique address(es)"
+
+if addrs.size < 2
+  abort <<~MSG
+
+    #{HOST} yields one address, so glibc skips the address-sorting path and never
+    calls __check_pf. Rerun with SETUP_HOSTS=1, or name a multi-address target.
+  MSG
 end
 
 hammer = Thread.new do
@@ -183,7 +228,9 @@ FORKS.times do |i|
     puts "\rfork ##{i}: child #{pid} blocked >#{TIMEOUT}s  [#{wchans(pid)}]"
 
     if DUMP && can_sudo && !dumped
-      system("sudo gdb -p #{pid} -batch -ex 'thread apply all bt' > #{DUMP_TO} 2>&1")
+      system('sudo', 'gdb', '-p', pid.to_s, '-batch', '-ex', 'thread apply all bt',
+             out: DUMP_TO, err: [:child, :out]
+)
       dumped = true
       puts "  gdb backtrace written to #{DUMP_TO}"
     end
