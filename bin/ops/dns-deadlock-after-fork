@@ -15,19 +15,26 @@
 #
 # Linux/glibc only: macOS and musl have no equivalent of glibc's __check_pf().
 #
-# Usage. A name served out of /etc/hosts gives the highest signal, because the
-# looping thread then does no DNS I/O and spends nearly all of its time holding
-# the mutex under test:
+# Usage. On a production instance, run it with SETUP_HOSTS=1:
 #
-#   printf '192.0.2.1 dns-deadlock.invalid\n2001:db8::1 dns-deadlock.invalid\n' | sudo tee -a /etc/hosts
-#   HOST=dns-deadlock.invalid bin/ops/dns-deadlock-after-fork
-#   sudo sed -i '/dns-deadlock.invalid/d' /etc/hosts
+#   SETUP_HOSTS=1 bin/ops/dns-deadlock-after-fork
 #
-# Without HOST it uses s3.amazonaws.com, which works but does a DNS round trip
-# per iteration and so reports a lower rate; raise FORKS to compensate.
+# That adds a two-address name to /etc/hosts, runs, and removes it again. Needs
+# passwordless sudo, and it is opt-in because it mutates a shared system file.
+# It cleans up on normal exit and on Ctrl-C, but nothing survives SIGKILL, so it
+# prints the manual cleanup command when it starts.
 #
-# Env: HOST, FORKS, TIMEOUT, DUMP=1 (gdb backtrace of the first stuck child,
-# needs passwordless sudo), DUMP_TO.
+# A name out of /etc/hosts is both the highest-signal option -- the looping
+# thread does no DNS I/O, so it spends nearly all its time holding the mutex
+# under test -- and the network-safe one. Without SETUP_HOSTS the default target
+# is s3.amazonaws.com, which resolves for real on every iteration: that reports a
+# lower rate (raise FORKS to compensate) and, more importantly, aims a tight
+# resolution loop at the VPC resolver, whose per-ENI packet limit is shared with
+# everything else on the instance. Prefer SETUP_HOSTS=1 on any host serving
+# traffic.
+#
+# Env: SETUP_HOSTS, HOST, FORKS, TIMEOUT, DUMP=1 (gdb backtrace of the first
+# stuck child, needs passwordless sudo), DUMP_TO.
 #
 # Design notes:
 #
@@ -36,6 +43,10 @@
 #     numeric literal, which is why MySQL through ProxySQL on 127.0.0.1 was
 #     unaffected in production -- never reaches it. The preflight enforces this
 #     rather than silently reporting 0%.
+#   - Cleanup deletes only lines carrying this script's marker comment, so it
+#     cannot remove a real /etc/hosts entry even if the file changed underneath
+#     it. It refuses to start if the name is already present, which would
+#     otherwise let one run's cleanup strip another's entry.
 #   - Timing lives in the parent rather than in a watchdog thread inside each
 #     child, so a poisoned child is killed instead of left blocked forever.
 #     Timeout.timeout could not do this job in any case: its failure to fire is
@@ -48,12 +59,27 @@
 #     abandoned.
 
 require 'socket'
+require 'tempfile'
 
-HOST    = ENV.fetch('HOST', 's3.amazonaws.com')
+SETUP_HOSTS = ENV['SETUP_HOSTS'] == '1'
+DUMMY_HOST  = 'dns-deadlock.invalid'
+HOSTS_FILE  = '/etc/hosts'
+
+# Every line this script adds carries the marker, so cleanup deletes only its own
+# lines and can never match a real entry.
+HOSTS_MARKER = '# added by dns-deadlock-after-fork'
+HOSTS_LINES  = ["192.0.2.1 #{DUMMY_HOST} #{HOSTS_MARKER}", "2001:db8::1 #{DUMMY_HOST} #{HOSTS_MARKER}"]
+
+HOST    = ENV.fetch('HOST') {SETUP_HOSTS ? DUMMY_HOST : 's3.amazonaws.com'}
 FORKS   = Integer(ENV.fetch('FORKS', '200'))
 TIMEOUT = Float(ENV.fetch('TIMEOUT', '1.0'))
 DUMP    = ENV['DUMP'] == '1'
 DUMP_TO = ENV.fetch('DUMP_TO', '/tmp/dns_deadlock_after_fork.txt')
+
+# Children inherit at_exit handlers and signal traps, and a Ctrl-C reaches the
+# whole process group, so cleanup has to be confined to the process that added
+# the entry.
+PARENT_PID = Process.pid
 
 def mono
   Process.clock_gettime(Process::CLOCK_MONOTONIC)
@@ -61,6 +87,29 @@ end
 
 def unique_addrs(host)
   Socket.getaddrinfo(host, 80, nil, Socket::SOCK_STREAM).map {|a| a[3]}.uniq
+end
+
+def hosts_entry_present?
+  File.read(HOSTS_FILE).include?(DUMMY_HOST)
+rescue StandardError
+  false
+end
+
+# Written through a temp file rather than an inline shell string so nothing in
+# the entry has to survive shell quoting.
+def add_hosts_entry
+  Tempfile.create('dns-deadlock-hosts') do |f|
+    HOSTS_LINES.each {|line| f.puts line}
+    f.flush
+    unless system("sudo tee -a #{HOSTS_FILE} < #{f.path} > /dev/null")
+      abort "could not append to #{HOSTS_FILE}"
+    end
+  end
+end
+
+def remove_hosts_entry
+  return unless Process.pid == PARENT_PID
+  system("sudo sed -i '/#{HOSTS_MARKER}/d' #{HOSTS_FILE}")
 end
 
 # Kernel wait state per thread: "futex_wait_queue" is a thread blocked on a
@@ -84,31 +133,32 @@ def wait_until(pid, deadline)
   end
 end
 
-puts "glibc:   #{`ldd --version 2>/dev/null`.lines.first.to_s.strip}"
-puts "nscd:    #{`systemctl is-active nscd 2>/dev/null`.strip.then {|s| s.empty? ? 'absent' : s}}"
-puts "resolv:  #{begin; File.realpath('/etc/resolv.conf'); rescue StandardError; '?'; end}"
-
-addrs = begin
-  unique_addrs(HOST)
-rescue SocketError => exception
-  abort "cannot resolve #{HOST}: #{exception.message}"
-end
-puts "target:  #{HOST} -> #{addrs.size} unique address(es)"
-
-if addrs.size < 2
-  abort <<~MSG
-
-    #{HOST} yields one address, so glibc skips the address-sorting path and never
-    calls __check_pf. Use a multi-address name, or add a local one:
-
-      printf '192.0.2.1 dns-deadlock.invalid\\n2001:db8::1 dns-deadlock.invalid\\n' | sudo tee -a /etc/hosts
-      HOST=dns-deadlock.invalid #{$PROGRAM_NAME}
-      sudo sed -i '/dns-deadlock.invalid/d' /etc/hosts
-  MSG
-end
-
 can_sudo = system('sudo -n true', out: File::NULL, err: File::NULL)
 warn 'DUMP=1 needs passwordless sudo for gdb; skipping dump' if DUMP && !can_sudo
+
+if SETUP_HOSTS
+  abort "SETUP_HOSTS=1 edits #{HOSTS_FILE} and needs passwordless sudo" unless can_sudo
+
+  if hosts_entry_present?
+    abort "#{DUMMY_HOST} is already in #{HOSTS_FILE}; another run may be active"
+  end
+
+  add_hosts_entry
+
+  # at_exit covers normal exit, abort, and an exception propagating out. HUP is
+  # in the trap list because closing an ssh session is the likely way a run on a
+  # remote host dies.
+  at_exit {remove_hosts_entry}
+  # exit! is deliberate -- it skips the at_exit above, so cleanup runs once --
+  # but it also discards buffered stdout, hence the flush.
+  %w[INT TERM HUP QUIT].each do |sig|
+    Signal.trap(sig) {remove_hosts_entry; $stdout.flush; exit!(128 + Signal.list.fetch(sig))}
+  end
+
+  # SIGKILL runs none of the above.
+  warn "added #{DUMMY_HOST} to #{HOSTS_FILE}; if this process is killed with -9, remove it with:"
+  warn "  sudo sed -i '/#{HOSTS_MARKER}/d' #{HOSTS_FILE}"
+end
 
 hammer = Thread.new do
   loop do
