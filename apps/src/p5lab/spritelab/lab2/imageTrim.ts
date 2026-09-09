@@ -52,11 +52,15 @@ const trimCache = new Map<string, Promise<string>>();
 const frameThumbCache = new Map<string, Promise<string>>();
 const thumbSourceCache = new Map<string, Promise<string>>();
 
-// Thumbnail edge (px): about twice a list tile, so tiles stay crisp on
-// retina. Everything that shows images in a list — the gallery, the world
-// palette, the block dropdowns — reads these instead of decoding the full
-// stored image into a small tile.
-const THUMB_PX = 224;
+// Thumbnail edge (px): about twice a list tile on high-density screens,
+// half that where a device pixel is a CSS pixel — the memory-pressed
+// machines are the low-density ones (a 224px thumb decodes ~200KB, a 112px
+// one ~50KB). Everything that shows images in a list — the gallery, the
+// world palette, the block dropdowns — reads these instead of decoding the
+// full stored image into a small tile. Chosen once at load; a window moved
+// between screens keeps the choice.
+const THUMB_PX =
+  typeof window !== 'undefined' && window.devicePixelRatio > 1.5 ? 224 : 112;
 
 // Small display thumbnail per image name (border-trimmed for costumes,
 // first frame for sheets, whole image for backgrounds). Populated as
@@ -73,9 +77,12 @@ export function getImageThumbnail(name: string): string | undefined {
  * with hard edges; anything else gets high-quality smoothing. Returns the
  * input on any failure.
  */
-// Bounded like the trim caches: keys are whole source dataURIs and every
-// edit mints a new one, while module state outlives levels.
-const THUMB_CACHE_LIMIT = 60;
+// Bounded because keys are whole source dataURIs, every edit mints a new
+// one, and module state outlives levels. The limit sits far above any
+// realistic project (the memory budget contemplates ~60 images) so a full
+// gallery pass never evicts its own working set; entries are ~50KB, so the
+// worst case holds ~12MB.
+const THUMB_CACHE_LIMIT = 240;
 
 function thumbnailFromDataURI(
   source: string,
@@ -241,6 +248,9 @@ function firstFrameThumbnail(
       img.onerror = () => resolve(source);
       img.src = source;
     });
+    while (frameThumbCache.size >= THUMB_CACHE_LIMIT) {
+      frameThumbCache.delete(frameThumbCache.keys().next().value as string);
+    }
     frameThumbCache.set(source, cached);
   }
   return cached;
