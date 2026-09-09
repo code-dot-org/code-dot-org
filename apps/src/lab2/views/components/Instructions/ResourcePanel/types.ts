@@ -1,3 +1,5 @@
+import {ReactNode} from 'react';
+
 export enum Tabs {
   Instructions = 'instructions',
   AiTutor = 'aiTutor',
@@ -7,8 +9,14 @@ export enum Tabs {
   Validation = 'validation',
   Backpack = 'backpack',
   StudentResources = 'studentResources',
-  QuestionBank = 'questionBank',
-  Configuration = 'configuration',
+}
+
+/** Lab-defined tabs shown after Instructions. `id` must not match a built-in tab. */
+export interface ExtraTab {
+  id: string;
+  title: string;
+  icon: string;
+  content: ReactNode;
 }
 
 export interface Setting {

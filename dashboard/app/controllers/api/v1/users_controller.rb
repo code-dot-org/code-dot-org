@@ -20,7 +20,6 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     dismiss_donor_teacher_banner
     dismiss_parent_email_banner
     set_standards_report_info_to_seen
-    verify_captcha
   ]
   skip_before_action :verify_authenticity_token
   skip_before_action :clear_sign_up_session_vars, only: [:current]
@@ -396,20 +395,6 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     seen_ta_scores_map[params[:lesson_id].to_i.to_s] = true
     current_user.update!(seen_ta_scores_map: seen_ta_scores_map)
     head :no_content
-  end
-
-  # Expects a param with the key "g-recaptcha-response" that is used
-  # to validate whether a user isn't a bot
-  # POST /dashboardapi/v1/users/<user_id>/verify_captcha
-  def verify_captcha
-    if verify_recaptcha
-      @user.last_verified_captcha_at = Time.now.utc
-      @user.save
-
-      return head :ok
-    else
-      return head :bad_request
-    end
   end
 
   private def to_bool(val)
