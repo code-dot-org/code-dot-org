@@ -269,9 +269,12 @@
         "showContinueButton": true
       }
     ],
-    "use_links": "true"
+    "use_links": "true",
+    "display_name": "Learn",
+    "bubble_choice_description": "Learn how AI makes images",
+    "thumbnail_url": "https://images.code.org/5c645a7e28fbfe0f28387ba6557d16f9-Gemini_Generated_Image_zh9ivazh9ivazh9i.jpeg"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-09-03T01:49:32.634+00:00\",\"changed\":[\"cloned from \\\"HoAI26-How-AI\\\"\"],\"cloned_from\":\"HoAI26-How-AI\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-09-03T01:49:32.634+00:00\",\"changed\":[\"cloned from \\\"HoAI26-How-AI\\\"\"],\"cloned_from\":\"HoAI26-How-AI\"},{\"changed_at\":\"2026-09-08 16:25:46 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-08 16:26:10 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Panels>

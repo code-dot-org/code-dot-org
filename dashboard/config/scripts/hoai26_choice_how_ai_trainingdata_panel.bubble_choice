@@ -1,0 +1,10 @@
+name 'HoAI26-Choice-How-AI-TrainingData-Panel'
+display_name 'Learn'
+description "Learn how AI makes images"
+uses_lab2
+
+sublevels
+level 'HoAI26-How-AI-TrainingData-Platform'
+level 'HoAI26-How-AI-TrainingData-StoryFix'
+
+navigation_type 'next_sublevel'
