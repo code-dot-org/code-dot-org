@@ -150,9 +150,16 @@ const builtInTabInfo: {[key in Tabs]: {title: string; icon: string}} = {
 };
 
 function filterExtraTabs(extraTabs: ExtraTab[] | undefined): ExtraTab[] {
-  return (extraTabs ?? []).filter(
-    tab => !!tab.content && !(Object.values(Tabs) as string[]).includes(tab.id)
-  );
+  const builtInTabIds = Object.values(Tabs) as string[];
+  return (extraTabs ?? []).filter(tab => {
+    if (builtInTabIds.includes(tab.id)) {
+      console.warn(
+        `ResourcePanel: extra tab "${tab.id}" was filtered out because its id collides with a built-in tab.`
+      );
+      return false;
+    }
+    return true;
+  });
 }
 
 type ResourcePanelProps = InstructionsProps & {
@@ -339,10 +346,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     !!hiddenContextCallback &&
     hasInstructions;
 
-  const visibleExtraTabs = useMemo(
-    () => filterExtraTabs(extraTabs),
-    [extraTabs]
-  );
+  const validExtraTabs = useMemo(() => filterExtraTabs(extraTabs), [extraTabs]);
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
@@ -362,7 +366,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       tabMap[Tabs.Instructions] = instructionsContent;
     }
 
-    visibleExtraTabs.forEach(tab => {
+    validExtraTabs.forEach(tab => {
       tabMap[tab.id] = tab.content;
     });
 
@@ -474,7 +478,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     instructionsProps,
     hideInstructionsNavigation,
     hideAllNavigation,
-    visibleExtraTabs,
+    validExtraTabs,
     validationSettings,
     hasValidationConditions,
     hiddenContextCallback,
@@ -516,11 +520,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
 
   const extraTabInfo = useMemo(() => {
     const info: {[id: string]: {title: string; icon: string}} = {};
-    visibleExtraTabs.forEach(tab => {
+    validExtraTabs.forEach(tab => {
       info[tab.id] = {title: tab.title, icon: tab.icon};
     });
     return info;
-  }, [visibleExtraTabs]);
+  }, [validExtraTabs]);
 
   const getTabInfo = (tab: string): {title: string; icon: string} => {
     if (Object.hasOwn(builtInTabInfo, tab)) {
@@ -949,5 +953,4 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   );
 };
 
-export type {ExtraTab};
 export default ResourcePanel;
