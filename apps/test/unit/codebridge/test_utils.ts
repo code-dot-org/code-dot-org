@@ -188,6 +188,7 @@ export const getUnifiedBackpackAPIMock = (
     deleteFiles: jest.fn(async (appType, filenames, onError, onSuccess) =>
       onSuccess()
     ),
+    deleteFromLegacyBackpacks: jest.fn(async () => {}),
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
   } as unknown as UnifiedBackpackClientApi;

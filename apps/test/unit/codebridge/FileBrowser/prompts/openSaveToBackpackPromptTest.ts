@@ -111,7 +111,7 @@ describe('openSaveToBackpackPrompt', () => {
       await runSaveToBackpackPrompt(mockApi);
 
       expect(mockApi.getFileLists).toHaveBeenCalled();
-      expect(mockApi.deleteFiles).not.toHaveBeenCalled();
+      expect(mockApi.deleteFromLegacyBackpacks).not.toHaveBeenCalled();
       expect(mockApi.saveFile).toHaveBeenCalledWith(
         'project_file.py',
         'This is project_file.py.',
@@ -123,40 +123,18 @@ describe('openSaveToBackpackPrompt', () => {
       });
     });
 
-    it('should overwrite without deleting when the duplicate is in the universal backpack', async () => {
-      const mockApi = getUnifiedBackpackAPIMock({
-        universal: ['project_file.py'],
-      });
-
-      await runSaveToBackpackPrompt(mockApi);
-
-      expect(mockApi.deleteFiles).not.toHaveBeenCalled();
-      expect(mockApi.saveFile).toHaveBeenCalledWith(
-        'project_file.py',
-        'This is project_file.py.',
-        expect.any(Function),
-        expect.any(Function)
-      );
-      expect(analyticsMock).toHaveBeenCalledWith(
-        EVENTS.SAVE_TO_BACKPACK_REPLACE,
-        {fileType: 'py'}
-      );
-    });
-
-    it('should delete the duplicate from another backpack before saving', async () => {
-      const mockApi = getUnifiedBackpackAPIMock({
+    it('should clear the legacy backpacks of the name before saving', async () => {
+      const fileLists = {
         universal: [],
         javalab: ['project_file.py'],
-      });
+      };
+      const mockApi = getUnifiedBackpackAPIMock(fileLists);
 
       await runSaveToBackpackPrompt(mockApi);
 
-      expect(mockApi.deleteFiles).toHaveBeenCalledTimes(1);
-      expect(mockApi.deleteFiles).toHaveBeenCalledWith(
-        'javalab',
-        ['project_file.py'],
-        expect.any(Function),
-        expect.any(Function)
+      expect(mockApi.deleteFromLegacyBackpacks).toHaveBeenCalledWith(
+        'project_file.py',
+        fileLists
       );
       expect(mockApi.saveFile).toHaveBeenCalledWith(
         'project_file.py',
@@ -164,7 +142,7 @@ describe('openSaveToBackpackPrompt', () => {
         expect.any(Function),
         expect.any(Function)
       );
-      const deleteOrder = (mockApi.deleteFiles as jest.Mock).mock
+      const deleteOrder = (mockApi.deleteFromLegacyBackpacks as jest.Mock).mock
         .invocationCallOrder[0];
       const saveOrder = (mockApi.saveFile as jest.Mock).mock
         .invocationCallOrder[0];
@@ -185,29 +163,6 @@ describe('openSaveToBackpackPrompt', () => {
       );
     });
 
-    it('should delete every non-universal duplicate before saving', async () => {
-      const mockApi = getUnifiedBackpackAPIMock({
-        universal: ['project_file.py'],
-        javalab: ['project_file.py'],
-        weblab2: ['project_file.py'],
-      });
-
-      await runSaveToBackpackPrompt(mockApi);
-
-      expect(mockApi.deleteFiles).toHaveBeenCalledTimes(2);
-      const deletedAppTypes = (mockApi.deleteFiles as jest.Mock).mock.calls.map(
-        call => call[0]
-      );
-      expect(deletedAppTypes.sort()).toEqual(['javalab', 'weblab2']);
-      expect(mockApi.saveFile).toHaveBeenCalledTimes(1);
-      expect(mockApi.saveFile).toHaveBeenCalledWith(
-        'project_file.py',
-        'This is project_file.py.',
-        expect.any(Function),
-        expect.any(Function)
-      );
-    });
-
     it('should suggest a rename that is unique across every backpack', async () => {
       dialogMock = getDialogConfirmationMock('neutral');
       const mockApi = getUnifiedBackpackAPIMock({
@@ -217,7 +172,7 @@ describe('openSaveToBackpackPrompt', () => {
 
       await runSaveToBackpackPrompt(mockApi);
 
-      expect(mockApi.deleteFiles).not.toHaveBeenCalled();
+      expect(mockApi.deleteFromLegacyBackpacks).not.toHaveBeenCalled();
       expect(mockApi.saveFile).toHaveBeenCalledWith(
         'project_file_2.py',
         'This is project_file.py.',
@@ -230,13 +185,13 @@ describe('openSaveToBackpackPrompt', () => {
       );
     });
 
-    it('should not save when deleting a duplicate fails', async () => {
+    it('should not save when clearing the legacy backpacks fails', async () => {
       const mockApi = getUnifiedBackpackAPIMock({
         universal: [],
         javalab: ['project_file.py'],
       });
-      (mockApi.deleteFiles as jest.Mock).mockImplementation(
-        async (appType, filenames, onError) => onError(new Error('delete boom'))
+      (mockApi.deleteFromLegacyBackpacks as jest.Mock).mockRejectedValue(
+        new Error('delete boom')
       );
 
       await runSaveToBackpackPrompt(mockApi);
@@ -269,27 +224,24 @@ describe('openSaveToBackpackPrompt', () => {
 
       await runSaveToBackpackPrompt(mockApi);
 
-      expect(mockApi.deleteFiles).not.toHaveBeenCalled();
+      expect(mockApi.deleteFromLegacyBackpacks).not.toHaveBeenCalled();
       expect(mockApi.saveFile).not.toHaveBeenCalled();
     });
 
-    it('should save a file with a url from its url, after deleting the duplicate', async () => {
+    it('should save a file with a url from its url, after clearing the legacy backpacks', async () => {
       projectFile = {
         name: 'project_file.py',
         contents: '',
         url: '/v3/assets/channel/project_file.py',
       } as ProjectFile;
-      const mockApi = getUnifiedBackpackAPIMock({
-        javalab: ['project_file.py'],
-      });
+      const fileLists = {javalab: ['project_file.py']};
+      const mockApi = getUnifiedBackpackAPIMock(fileLists);
 
       await runSaveToBackpackPrompt(mockApi);
 
-      expect(mockApi.deleteFiles).toHaveBeenCalledWith(
-        'javalab',
-        ['project_file.py'],
-        expect.any(Function),
-        expect.any(Function)
+      expect(mockApi.deleteFromLegacyBackpacks).toHaveBeenCalledWith(
+        'project_file.py',
+        fileLists
       );
       expect(mockApi.saveFileFromUrl).toHaveBeenCalledWith(
         'project_file.py',

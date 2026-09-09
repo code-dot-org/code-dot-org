@@ -12,8 +12,10 @@ import {
 } from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
-import type UnifiedBackpackClientApi from '@cdo/apps/sharedComponents/backpack/UnifiedBackpackClientApi';
-import {UniversalAppType} from '@cdo/generated-scripts/sharedConstants';
+import type {
+  default as UnifiedBackpackClientApi,
+  FilenamesByAppType,
+} from '@cdo/apps/sharedComponents/backpack/UnifiedBackpackClientApi';
 
 type SaveToBackpackApi = BackpackClientApi | UnifiedBackpackClientApi;
 
@@ -58,7 +60,7 @@ export const openSaveToBackpackPrompt = async ({
 
   // Keyed by app type so a duplicate can be traced back to the backpack holding
   // it. The per-lab client only ever knows about its own backpack.
-  let filenamesByAppType: {[appType: string]: string[]};
+  let filenamesByAppType: FilenamesByAppType;
   try {
     filenamesByAppType = isUnifiedApi(backpackApi)
       ? await backpackApi.getFileLists()
@@ -111,34 +113,10 @@ export const openSaveToBackpackPrompt = async ({
         : EVENTS.SAVE_TO_BACKPACK_RENAME;
   }
 
-  // Writes always land in the universal backpack, so a same-named file in any
-  // other backpack has to go or the user ends up with two. The universal copy
-  // needs no delete - the write overwrites it.
   if (unifiedApi && isDuplicateFileName && selectedFileName === file.name) {
-    const staleAppTypes = Object.entries(filenamesByAppType)
-      .filter(
-        ([appType, filenames]) =>
-          appType !== UniversalAppType && filenames.includes(file.name)
-      )
-      .map(([appType]) => appType);
-
-    const deletions = await Promise.allSettled(
-      staleAppTypes.map(
-        appType =>
-          new Promise<void>((resolve, reject) =>
-            unifiedApi.deleteFiles(
-              appType,
-              [file.name],
-              // A delete already in progress reports failure with no error.
-              error =>
-                reject(error ?? new Error(`Could not delete ${file.name}`)),
-              resolve
-            )
-          )
-      )
-    );
-    const failed = deletions.find(result => result.status === 'rejected');
-    if (failed) {
+    try {
+      await unifiedApi.deleteFromLegacyBackpacks(file.name, filenamesByAppType);
+    } catch (error) {
       // Saving now would leave the duplicate we just failed to remove, which is
       // the outcome replacing exists to avoid.
       handleError(
@@ -147,7 +125,7 @@ export const openSaveToBackpackPrompt = async ({
           selectedFileName,
         })} ${codebridgeI18n.closeWindowTryAgain()}`,
         'Backpack duplicate delete error'
-      )(failed.reason as Error);
+      )(error as Error);
       return;
     }
   }
