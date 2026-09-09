@@ -34,6 +34,15 @@
   p {
     margin-bottom: 0;
   }
+
+  // align-items only centers the block; once the text wraps it fills the
+  // width and would read left-aligned. Design centers both by default.
+  // Scoped to the heading and the description so customContent keeps its
+  // own alignment.
+  > h2,
+  .dialogContent {
+    text-align: center;
+  }
 }
 
 .dialogActionsSection {
