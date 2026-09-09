@@ -238,14 +238,14 @@ chases.step('chase', 'push', [
     [
       anyOf(quarry.of(thisActor())),
       [
-        gap.set(distance({a: thisActor(), b: quarry.of(thisActor())})),
+        gap.let(distance({a: thisActor(), b: quarry.of(thisActor())})),
         when(
           [
             [
               moreThan(gap.get(), keepAway.of(thisActor())),
               [
                 note('Head for it at the chase speed.'),
-                heading.set(
+                heading.let(
                   vectorTimes(
                     towards({
                       here: thisActor(),
@@ -286,7 +286,7 @@ flees.step('flee', 'push', [
     [
       anyOf(threat.of(thisActor())),
       [
-        gap.set(distance({a: thisActor(), b: threat.of(thisActor())})),
+        gap.let(distance({a: thisActor(), b: threat.of(thisActor())})),
         doc(
           'Only when it is too near, and never when it is exactly here: there is no direction to run in from a distance of nothing.',
         ),
@@ -297,7 +297,7 @@ flees.step('flee', 'push', [
               moreThan(gap.get(), n(0)),
             ),
             [
-              heading.set(
+              heading.let(
                 vectorTimes(
                   towards({
                     here: thisActor(),

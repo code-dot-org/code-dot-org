@@ -163,7 +163,7 @@ export const spends = carries.block({
     doc(
       'The oldest one of that kind, which is what "a key" means when the bag holds three.',
     ),
-    found.set(firstActor(ofKind(what.get()))),
+    found.let(firstActor(ofKind(what.get()))),
     when([
       [
         anyOf(found.get()),

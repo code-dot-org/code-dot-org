@@ -513,13 +513,13 @@ climbs.step('stop if the climb got nowhere', 'react', [
         doc(
           'Against where Physics saw this body at the top of the frame, which is where the climb below started from. Up is negative y, so the distance is signed by the direction, and a climb that was pushed BACKWARDS is stopped too.',
         ),
-        got.set(
+        got.let(
           times(
             minus(position.y(thisActor()), positionBefore.y(thisActor())),
             pick(goingUp.of(thisActor()), n(-1), n(1)),
           ),
         ),
-        asked.set(
+        asked.let(
           times(times(speed.of(thisActor()), pixelsPerUnit()), frameTime()),
         ),
         when([

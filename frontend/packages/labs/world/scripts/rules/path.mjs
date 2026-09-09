@@ -219,8 +219,8 @@ rule.step('think', 'decide', [
               [
                 atLeast(countOf(goal.of(each.get())), n(1)),
                 [
-                  quarry.set(firstActor(goal.of(each.get()))),
-                  mine.set(snapped(posOf(each.get()), step.of(each.get()))),
+                  quarry.let(firstActor(goal.of(each.get()))),
+                  mine.let(snapped(posOf(each.get()), step.of(each.get()))),
                   doc(
                     'Already standing on it? Then the way is no way at all, which is not the same as not finding one.',
                   ),
@@ -243,7 +243,7 @@ rule.step('think', 'decide', [
                   ]),
                   emptyOut(seen),
                   emptyOut(queue),
-                  here.set(snapped(posOf(quarry.get()), step.of(each.get()))),
+                  here.let(snapped(posOf(quarry.get()), step.of(each.get()))),
                   addToList(here.get(), seen),
                   addToList(here.get(), queue),
                   doc(
@@ -336,7 +336,7 @@ rule.step('walk', 'move', [
         [
           found.of(each.get()),
           [
-            side.set(vectorMinus(next.of(each.get()), posOf(each.get()))),
+            side.let(vectorMinus(next.of(each.get()), posOf(each.get()))),
             when(
               [
                 [

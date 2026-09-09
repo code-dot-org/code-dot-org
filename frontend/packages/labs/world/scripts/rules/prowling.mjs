@@ -200,11 +200,11 @@ prowls.step('choose at a junction', 'decide', [
   doc(
     'Nothing to hunt, nothing to do. A robot with no quarry keeps whatever heading it had, which is a robot on patrol.',
   ),
-  ladder.set(onLadder({}, thisActor())),
+  ladder.let(onLadder({}, thisActor())),
   doc(
     'Stopped? A robot that asked to go somewhere and did not has run out of the direction it chose — a quarter of a pixel of tolerance in each axis, so that a body Solid has nudged is not read as one that got somewhere. Both axes, because a climber pinned against a floor gets nowhere in either and a falling robot gets somewhere in one. …and nothing at all counts while something is holding it: a robot waiting out a teleport has not run out of anywhere to go, it is being carried (`held still` in Physics).',
   ),
-  stuck.set(
+  stuck.let(
     both(
       not(held.of(thisActor())),
       both(
@@ -222,7 +222,7 @@ prowls.step('choose at a junction', 'decide', [
   doc(
     'The four moments, and each is a CHANGE rather than a state: landing, arriving at a ladder, a climb ending, and getting nowhere.',
   ),
-  junction.set(
+  junction.let(
     either(
       either(
         both(wasFalling.of(thisActor()), not(falling.of(thisActor()))),
@@ -241,23 +241,23 @@ prowls.step('choose at a junction', 'decide', [
     [
       both(junction.get(), moreThan(countOf(quarry.of(thisActor())), n(0))),
       [
-        was.set(going.of(thisActor())),
-        dy.set(
+        was.let(going.of(thisActor())),
+        dy.let(
           minus(position.y(quarry.of(thisActor())), position.y(thisActor())),
         ),
-        dx.set(
+        dx.let(
           minus(position.x(quarry.of(thisActor())), position.x(thisActor())),
         ),
         doc(
           'A CLIMB THAT GOT NOWHERE RULES ITSELF OUT, which is the same sentence as the wall below and cost the same bug. A robot on the bottom rung with its quarry beneath it asks to climb down, the floor refuses, the climb ends having moved nothing — and that ending is a junction, at which the robot asks to climb down. It stood there for the rest of the level. So the direction a failed climb was going is the one direction now known not to work, and this junction may not choose it.',
         ),
-        noUp.set(
+        noUp.let(
           both(
             stuck.get(),
             both(wasClimbing.of(thisActor()), goingUp.of(thisActor())),
           ),
         ),
-        noDown.set(
+        noDown.let(
           both(
             stuck.get(),
             both(wasClimbing.of(thisActor()), not(goingUp.of(thisActor()))),
@@ -266,7 +266,7 @@ prowls.step('choose at a junction', 'decide', [
         doc(
           'UP OR DOWN FIRST — see the header. A ladder is the only way to change which floor you are on, so an enemy that preferred sideways would never take one.',
         ),
-        here.set(no()),
+        here.let(no()),
         when([
           [
             both(

@@ -123,7 +123,7 @@ switches.step('flip when walked over', 'react', [
   doc(
     'Anything ON it that has a way of moving. Not "the player": a room where an enemy can shut a wall behind you is worth walking through carefully, and a wall or a coin cannot press one because neither has any way of arriving.',
   ),
-  pressed.set(
+  pressed.let(
     moreThan(
       countOf(
         filter(stander, {

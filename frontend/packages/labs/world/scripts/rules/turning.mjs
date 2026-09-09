@@ -188,7 +188,7 @@ turns.step('go the way it is facing', 'decide', [
   doc(
     'ALONG the heading only, leaving the speed across it alone — see the header. Whatever gravity has built up downwards is not this rule’s to throw away, and throwing it away is a fall of a quarter of a pixel a frame that reads as a slow leak rather than as a bug. The part of the current speed that is along the heading…',
   ),
-  alongNow.set(
+  alongNow.let(
     add(
       times(axisOf('x', velocity.of(thisActor())), axisOf('x', facing())),
       times(axisOf('y', velocity.of(thisActor())), axisOf('y', facing())),
@@ -229,7 +229,7 @@ turns.step('turn if it got nowhere', 'react', [
   doc(
     'How far along its heading did it actually travel? The movement, projected on to the direction it meant to go — so a ball dragged sideways by a belt, or dropped by gravity, is not credited with progress it did not make and not blamed for it either.',
   ),
-  got.set(
+  got.let(
     add(
       times(
         minus(position.x(thisActor()), positionBefore.x(thisActor())),
@@ -241,7 +241,7 @@ turns.step('turn if it got nowhere', 'react', [
       ),
     ),
   ),
-  asked.set(times(times(speed.of(thisActor()), pixelsPerUnit()), frameTime())),
+  asked.let(times(times(speed.of(thisActor()), pixelsPerUnit()), frameTime())),
   doc(
     'HALF, not all of it. A body Solid has pushed part of the way out of a wall has traveled a little, and a body sliding along a slope travels less than it asked for without being stopped by anything. Nothing turns on the first frame: `measured` is false until the other step has run once, and the distance from the origin is not a distance anything traveled. A body somebody is holding is not a body that was stopped — see `held still` in Physics. Without this a ball waiting out a teleport turns round every frame it waits.',
   ),
@@ -252,9 +252,9 @@ turns.step('turn if it got nowhere', 'react', [
         doc(
           'WHICH WAY IT WOULD HAVE GONE, per axis, so that a mirror knows which wall it met — see `bounces off what stops it`. Worked out from the movement rather than from the wall, which is the same trick that notices a wall at all.',
         ),
-        askedX.set(times(axisOf('x', facing()), asked.get())),
-        askedY.set(times(axisOf('y', facing()), asked.get())),
-        stuckX.set(
+        askedX.let(times(axisOf('x', facing()), asked.get())),
+        askedY.let(times(axisOf('y', facing()), asked.get())),
+        stuckX.let(
           both(
             moreThan(absolute(askedX.get()), n(0.01)),
             lessThan(
@@ -265,7 +265,7 @@ turns.step('turn if it got nowhere', 'react', [
             ),
           ),
         ),
-        stuckY.set(
+        stuckY.let(
           both(
             moreThan(absolute(askedY.get()), n(0.01)),
             lessThan(
@@ -290,7 +290,7 @@ turns.step('turn if it got nowhere', 'react', [
               doc(
                 'A fixed turn, or a reflection: across the vertical when something upright stopped it, across the horizontal when a floor did, and a reversal in a corner — which is what the fixed turn would have said there anyway.',
               ),
-              turnedTo.set(
+              turnedTo.let(
                 pick(
                   not(mirrors.of(thisActor())),
                   add(heading.of(thisActor()), turnBy.of(thisActor())),

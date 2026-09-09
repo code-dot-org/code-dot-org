@@ -79,6 +79,42 @@ describe('manyActorVariables', () => {
     expect([...manyActorVariables(space as never)].sort()).toEqual(['a', 'b']);
   });
 
+  it('counts a `let` as a write, like the setter it replaced', () => {
+    // A name gets its value from whichever block writes it, and `let actor
+    // ⟨into⟩ be ⟨…⟩` is that block just as much as a setter is. Left out, a
+    // `let` from a many-valued expression made the variable look like a single
+    // actor, and every read of it lost the `one` that turns several into one —
+    // which reads at runtime as `into.has(…) is not a function`, the value
+    // being a collection asked an actor's question. The stock rules declare
+    // their working values this way now, so this is not a hypothetical.
+    const space = workspace([
+      {
+        type: 'world_let_actor',
+        fields: {VAR: 'into'},
+        value: {type: 'world_all_actors'},
+      },
+    ]);
+
+    expect([...manyActorVariables(space as never)]).toEqual(['into']);
+  });
+
+  it('carries it from a `let` down a chain, as it does from a setter', () => {
+    const space = workspace([
+      {
+        type: 'world_let_actor',
+        fields: {VAR: 'a'},
+        value: {type: 'world_all_actors'},
+      },
+      {
+        type: 'variables_set_Actor',
+        fields: {VAR: 'b'},
+        value: {type: 'variables_get_Actor', fields: {VAR: 'a'}},
+      },
+    ]);
+
+    expect([...manyActorVariables(space as never)].sort()).toEqual(['a', 'b']);
+  });
+
   it('leaves an ordinary variable alone', () => {
     // A loop variable, a parameter, a local holding one actor: nothing here
     // builds a list, so nothing generates a broadcast.

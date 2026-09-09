@@ -100,7 +100,7 @@ const restY = rule.local('restY', 'Number');
 
 /** 1 when down is down, -1 when gravity has been turned over. */
 const decideSign = [
-  sign.set(n(1)),
+  sign.let(n(1)),
   when([
     [lessThan(axisOf('y', directionOfGravity.of()), n(0)), [sign.set(n(-1))]],
   ]),
@@ -143,7 +143,7 @@ const isRestingOn = rule.block({
     doc(
       'Standing on this ground means three things are all true: 1. we are over it, not off to one side, 2. we are moving toward it (falling, not rising away), 3. we were above its surface last frame and are at or past it now.',
     ),
-    restY.set(restHeightOf({faller: faller.get(), ground: ground.get()})),
+    restY.let(restHeightOf({faller: faller.get(), ground: ground.get()})),
     ...decideSign,
     give(
       both(
@@ -191,7 +191,7 @@ const landOnGround = rule.block({
     doc(
       'Collisions already worked out what this actor is touching, so this only looks at those — not at every actor in the world. Look at every ground in the world and ask: am I resting on it? If I am, put me exactly on its surface and stop falling.',
     ),
-    landed.set(no()),
+    landed.let(no()),
     forEach(ground, {
       from: filter(ground, {
         from: contacts.of(faller.get()),
@@ -205,7 +205,7 @@ const landOnGround = rule.block({
               ground: ground.get(),
             }),
             [
-              restY.set(
+              restY.let(
                 restHeightOf({faller: faller.get(), ground: ground.get()}),
               ),
               setPosition(faller.get(), position.x(faller.get()), restY.get()),
@@ -343,7 +343,7 @@ rule.step('handleCollisions', 'react', [
         [
           not(ignoresGround.of(each.get())),
           [
-            resting.set(landOnGround({faller: each.get()})),
+            resting.let(landOnGround({faller: each.get()})),
             when(
               [
                 [

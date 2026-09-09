@@ -112,7 +112,7 @@ export const collisionSizeOf = rule.block({
       doc(
         'How big is this actor for bumping into things? First choice: the size you set on the actor yourself.',
       ),
-      working.set(vector(box.x(sizeActor.get()), box.y(sizeActor.get()))),
+      working.let(vector(box.x(sizeActor.get()), box.y(sizeActor.get()))),
       note('If you left it at 0, use the size of the picture instead.'),
       when([
         [
@@ -168,8 +168,8 @@ export const isTouching = rule.block({
       note(
         'Close enough means: less than half of one box plus half of the other.',
       ),
-      boxA.set(collisionSizeOf({sizeActor: a.get()})),
-      boxB.set(collisionSizeOf({sizeActor: b.get()})),
+      boxA.let(collisionSizeOf({sizeActor: a.get()})),
+      boxB.let(collisionSizeOf({sizeActor: b.get()})),
       give(both(closeOn('x'), closeOn('y'))),
     ];
   },

@@ -224,7 +224,7 @@ const focusFirst = rule.block({
     when([
       [
         anyOf(allWithTrait(rule.traitRef('Can Be Focused'))),
-        [chosen.set(firstActor(inOrder())), takeFocus({}, chosen.get())],
+        [chosen.let(firstActor(inOrder())), takeFocus({}, chosen.get())],
       ],
     ]),
   ],
@@ -249,8 +249,9 @@ const focusNext = rule.block({
     doc(
       'Walk the route in order. `passed` goes true at the actor that has the focus, so the very next one is the answer — and the loop stops there rather than walking the rest of a form to no purpose.',
     ),
-    passed.set(no()),
-    found.set(no()),
+    chosen.let(),
+    passed.let(no()),
+    found.let(no()),
     forEach(candidate, {
       from: inOrder(),
       body: [
@@ -290,8 +291,10 @@ const focusPrevious = rule.block({
     doc(
       'Walk the route in order, one behind. When the walk reaches the actor holding the focus, the one before it is the answer; when it reaches the end without having found one, `previous` is holding the last control, which is where the route wraps to.',
     ),
-    found.set(no()),
-    passed.set(no()),
+    chosen.let(),
+    previous.let(),
+    found.let(no()),
+    passed.let(no()),
     forEach(candidate, {
       from: inOrder(),
       body: [

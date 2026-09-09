@@ -395,6 +395,20 @@ export const when = (branches, otherwise) => {
  * so both live here — the committed `cameraConfined` had the two disagreeing,
  * which showed up nowhere because the map won.
  */
+/**
+ * The `let` block that DECLARES each flavour, by the variable type it binds.
+ *
+ * `List` has none: the lab offers no `let list`, so a rule wanting one still
+ * writes it the old way and `let` is simply not available to it.
+ */
+const LET_BLOCK = {
+  Number: 'world_let_number',
+  String: 'world_let_word',
+  Boolean: 'world_let_boolean',
+  Vector: 'world_let_vector',
+  Actor: 'world_let_actor',
+};
+
 function makeLocal(id, name, type) {
   const field = {id, name};
   return {
@@ -408,6 +422,42 @@ function makeLocal(id, name, type) {
       fields: {VAR: field},
       inputs: {VALUE: value(v)},
     }),
+    /**
+     * `let <name> be <v>` — the row that MAKES the name, rather than one that
+     * writes a name from somewhere else.
+     *
+     * Every working value in this library used to be a `set`, and a `set` does
+     * not declare anything: Blockly hoists an undeclared name to module scope,
+     * so a rule's scratch value was a `var` shared by every body in the file.
+     * Nothing had gone wrong — a body runs to completion and nothing re-enters
+     * — but it was not a thing a learner could BUILD. A getter only offers the
+     * names in scope (`blockly/variableScope`), and nothing put one there, so
+     * a rule read a name its own dropdown would not have offered.
+     *
+     * The first write becomes this and the rest stay `set`. Where the first
+     * write is inside an `if` and the reads are outside it, the `let` is
+     * hoisted to the top of the body with a starting value instead — a scope
+     * has to cover its readers, and a declaration buried in a branch does not.
+     *
+     * The FIELD IS THE BARE ID, not the `{id, name}` a getter's field takes:
+     * `let`'s name field is a text box over a variable and stores what it
+     * points at (`blockly/fields/variableName`), where `field_variable`
+     * stores a whole model.
+     */
+    let: v => {
+      const block = LET_BLOCK[type];
+      if (!block) {
+        throw new Error(`no \`let\` block declares a ${type} (${name})`);
+      }
+      return {
+        type: block,
+        fields: {VAR: id},
+        // NOTHING TO START FROM is a real answer, and the only one an actor has:
+        // there is no literal actor to seed a socket with, so the name is made
+        // holding nobody and the rows below fill it in.
+        ...(v === undefined ? {} : {inputs: {VALUE: value(v)}}),
+      };
+    },
   };
 }
 

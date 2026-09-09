@@ -281,7 +281,7 @@ export const usePad = travels.block({
           doc(
             'Any OTHER pad of the same color, picked afresh — which is what `any actor in` is for, and what `first actor in` could not say: three red pads read with `first` are two pads and a decoration.',
           ),
-          there.set(
+          there.let(
             anyActor(
               filter(other, {
                 from: allWithTrait(IsATeleportPad),

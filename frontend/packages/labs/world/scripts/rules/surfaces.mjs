@@ -209,8 +209,8 @@ const setAcross = across =>
 
 stands.step('read the floor', 'push', [
   note('Nothing said yet: no drag, no ice.'),
-  drag.set(n(1)),
-  onIce.set(no()),
+  drag.let(n(1)),
+  onIce.let(no()),
   doc(
     'What am I standing on? Something I am touching whose middle is below mine — the same test Carrying makes, and for the same reason. This only GATHERS: see the header on why acting here would double a floor.',
   ),
@@ -291,7 +291,7 @@ stands.step('ride the belt', 'adjust', [
   doc(
     'A POSITION, not a speed — see the header. In `adjust`, one moment before anything works out what is touching what, so a walker a belt pushed into a wall is pushed back out in the same frame rather than spending one inside it. Carrying makes the same two choices.',
   ),
-  belt.set(n(0)),
+  belt.let(n(0)),
   forEach(floor, {
     from: standingOn(),
     body: [

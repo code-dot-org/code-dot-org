@@ -167,7 +167,7 @@ const sign = rule.local('sign', 'Number');
 
 /** 1 when down is down, -1 when gravity has been turned over. */
 const decideSign = [
-  sign.set(n(1)),
+  sign.let(n(1)),
   when([
     [lessThan(axisOf('y', directionOfGravity.of()), n(0)), [sign.set(n(-1))]],
   ]),

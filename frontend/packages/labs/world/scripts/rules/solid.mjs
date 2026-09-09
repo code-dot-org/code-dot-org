@@ -191,7 +191,7 @@ const overlappedBefore = (which, solid) =>
 /** The two lines every pass opens with. */
 const measure = (body, solid) => [
   note('How far apart the two middles must be for the boxes to just touch.'),
-  reach.set(
+  reach.let(
     vectorOver(
       vectorPlus(
         collisionSizeOf({sizeActor: body.get()}),
@@ -203,7 +203,7 @@ const measure = (body, solid) => [
   doc(
     'Where this actor was at the top of the frame, before anything moved it — Physics writes it down, so this is a record, not a guess.',
   ),
-  was.set(vector(positionBefore.x(body.get()), positionBefore.y(body.get()))),
+  was.let(vector(positionBefore.x(body.get()), positionBefore.y(body.get()))),
 ];
 
 // ── The two passes ──────────────────────────────────────────────────────────
@@ -290,7 +290,7 @@ const pushOutUpOrDown = rule.block({
     doc(
       'has already run, so a body it pushed clear of a wall is clear here and keeps the speed it was climbing with. How far into it this body is, across. A small number here is a CORNER — the body is mostly past the block and is being caught by an edge — which is the one case worth treating differently.',
     ),
-    into.set(
+    into.let(
       minus(
         axisOf('x', reach.get()),
         absolute(minus(position.x(body.get()), position.x(solid.get()))),

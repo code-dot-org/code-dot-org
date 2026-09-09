@@ -91,7 +91,7 @@ export const ended = talks.event(['ends']);
 const target = rule.local('line to go to', 'Number');
 
 const goTo = (who, where) => [
-  target.set(where),
+  target.let(where),
   when(
     [
       [

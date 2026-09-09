@@ -179,7 +179,7 @@ export const makeJump = rule.block({
           ),
           used.set(who.get(), add(used.of(who.get()), n(1))),
           note('Which way is up? The opposite of wherever gravity pulls.'),
-          sign.set(n(1)),
+          sign.let(n(1)),
           when([
             [
               lessThan(axisOf('y', directionOfGravity.of()), n(0)),

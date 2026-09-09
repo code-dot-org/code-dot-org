@@ -164,7 +164,7 @@ flaps.step('flap or glide', 'decide', [
         doc(
           'The vector to the quarry, in pixels, which both phases want: the flutter for its sign and the glide for its whole direction.',
         ),
-        toward.set(
+        toward.let(
           vector(
             minus(position.x(quarry.of(thisActor())), position.x(thisActor())),
             minus(position.y(quarry.of(thisActor())), position.y(thisActor())),
@@ -203,15 +203,15 @@ flaps.step('flap or glide', 'decide', [
             doc(
               'A GLIDE: aimed once, at where the quarry is NOW, and then not looked at again for two seconds. See the header — that commitment is the whole of what makes this dodgeable.',
             ),
-            span.set(vectorLength(toward.get())),
+            span.let(vectorLength(toward.get())),
             doc(
               'The direction, as a unit vector. A span of zero means the two are exactly on top of each other, which is a division nobody wants the answer to; one stands in for it and the dive below then decides the whole direction.',
             ),
-            scale.set(pick(moreThan(span.get(), n(0)), span.get(), n(1))),
-            aimX.set(over(axisOf('x', toward.get()), scale.get())),
-            aimY.set(over(axisOf('y', toward.get()), scale.get())),
+            scale.let(pick(moreThan(span.get(), n(0)), span.get(), n(1))),
+            aimX.let(over(axisOf('x', toward.get()), scale.get())),
+            aimY.let(over(axisOf('y', toward.get()), scale.get())),
             note('…and never above flat. Down is positive y.'),
-            aimed.set(
+            aimed.let(
               vector(
                 aimX.get(),
                 pick(

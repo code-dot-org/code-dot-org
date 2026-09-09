@@ -107,12 +107,23 @@ export function manyActorVariables(
   }
   // `set ⟨a⟩ to ⟨b⟩` where b is many makes a many as well — and then anything
   // set from a, and so on.
-  const setters = workspace
-    .getBlocksByType('variables_set_Actor', false)
-    .map(block => ({
-      id: block.getFieldValue(SET_FIELD),
-      from: block.getInputTargetBlock('VALUE'),
-    }));
+  //
+  // A `let` COUNTS AS ONE, and leaving it out was a silent wrong answer rather
+  // than a missing feature. A name gets its value from whichever block writes
+  // it, and `let actor ⟨into⟩ be ⟨the first filler at …⟩` is that block just as
+  // much as a setter is — so a `let` from a many-valued expression left the
+  // variable looking like a single actor, and every read of it lost the `one`
+  // that turns several into one. What that looks like is `into.has(…) is not a
+  // function`: the value is a collection and the code asks it an actor's
+  // question. It surfaced when the stock rules stopped declaring their
+  // working values with `set`.
+  const setters = [
+    ...workspace.getBlocksByType('variables_set_Actor', false),
+    ...workspace.getBlocksByType('world_let_actor', false),
+  ].map(block => ({
+    id: block.getFieldValue(SET_FIELD),
+    from: block.getInputTargetBlock('VALUE'),
+  }));
   let changed = true;
   while (changed) {
     changed = false;

@@ -186,7 +186,7 @@ export const digTowards = digger.block({
     doc(
       'Where the digger is pointing, one reach away — the place a block has to be near to count as the one that was aimed at.',
     ),
-    target.set(
+    target.let(
       vector(
         add(
           position.x(thisActor()),
@@ -201,7 +201,7 @@ export const digTowards = digger.block({
     doc(
       'THE NEAREST ONE, asked of the index rather than of every actor — and one block, not a radius, because a radius is a bomb rather than a shovel.',
     ),
-    found.set(
+    found.let(
       extremeActor(block, {
         from: withTraitNear(CanBeDug, reach.of(thisActor()), target.get()),
         end: 'least',
@@ -253,13 +253,13 @@ digger.step('line up with what it dug', 'adjust', [
         doc(
           'How far off center, and how far this frame may close it — never past the middle, or a glide becomes a wobble.',
         ),
-        across.set(
+        across.let(
           minus(
             position.x(liningUpWith.of(thisActor())),
             position.x(thisActor()),
           ),
         ),
-        step.set(
+        step.let(
           times(
             times(centeringSpeed.of(thisActor()), pixelsPerUnit()),
             frameTime(),

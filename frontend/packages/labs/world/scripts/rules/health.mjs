@@ -188,7 +188,7 @@ const takeDamage = hurtable.block({
           doc(
             'Never below zero: health remaining is not a debt, and a game that showed “-4 health” would show a number nobody meant.',
           ),
-          left.set(minus(health.of(thisActor()), amount.get())),
+          left.let(minus(health.of(thisActor()), amount.get())),
           health.set(
             thisActor(),
             pick(moreThan(left.get(), n(0)), left.get(), n(0)),
@@ -220,7 +220,7 @@ export const heal = hurtable.block({
         moreThan(health.of(thisActor()), n(0)),
         [
           note('Up to full and no further, which is what the ceiling is for.'),
-          gained.set(add(health.of(thisActor()), amount.get())),
+          gained.let(add(health.of(thisActor()), amount.get())),
           health.set(
             thisActor(),
             pick(
@@ -256,7 +256,7 @@ export const staySafe = hurtable.block({
     'Cannot be damaged for this many seconds. Extends any safety already running rather than replacing it.',
   say: ['be safe for', param('seconds', 'number'), 'seconds'],
   body: ({seconds}) => [
-    until.set(add(time(), seconds.get())),
+    until.let(add(time(), seconds.get())),
     when([
       [
         moreThan(until.get(), safeUntil.of(thisActor())),

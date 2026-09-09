@@ -262,7 +262,7 @@ const stepBy = mover.block({
         [
           not(stepping.of(thisActor())),
           [
-            into.set(fillerAt(oneOver(posOf(thisActor()), by()))),
+            into.let(fillerAt(oneOver(posOf(thisActor()), by()))),
             when([
               [
                 not(anyOf(into.get())),
@@ -277,7 +277,7 @@ const stepBy = mover.block({
                   doc(
                     'A crate. It goes only if the square past it is free — the test a project writes wrong by hand, and the difference between Sokoban and crates eating crates.',
                   ),
-                  beyond.set(fillerAt(oneOver(posOf(into.get()), by()))),
+                  beyond.let(fillerAt(oneOver(posOf(into.get()), by()))),
                   when([
                     [
                       not(anyOf(beyond.get())),
@@ -325,7 +325,7 @@ mover.step('cross the square', 'move', [
     [
       stepping.of(thisActor()),
       [
-        remaining.set(minus(arriveAt.of(thisActor()), time())),
+        remaining.let(minus(arriveAt.of(thisActor()), time())),
         when([
           [
             atMost(remaining.get(), n(0)),

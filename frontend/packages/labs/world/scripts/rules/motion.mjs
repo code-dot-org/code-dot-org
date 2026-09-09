@@ -221,7 +221,7 @@ rule.step('reposition', 'move', [
     from: allWithTrait(CanMove),
     body: [
       note('Moving is speed times time: how far do we get this frame?'),
-      travel.set(
+      travel.let(
         vectorTimes(
           velocity.of(each.get()),
           times(frameTime(), pixelsPerUnit()),
