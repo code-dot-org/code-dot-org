@@ -277,6 +277,16 @@ describe('a paragraph', () => {
     ]);
   });
 
+  it('still breaks where the author did, with no column at all', () => {
+    // "Do not WRAP this" is not "do not break this", and only the first was
+    // ever asked for. Without a column the whole string used to come back as
+    // one line, so a typed newline drew as nothing — canvas ignores it.
+    expect(drawn(paint(paragraph('Ada\nLovelace')))).toEqual([
+      'Ada',
+      'Lovelace',
+    ]);
+  });
+
   it('breaks between words to fit the column', () => {
     // 60px at six pixels a character is ten characters a line.
     expect(drawn(paint(paragraph('one two three four', 60)))).toEqual([

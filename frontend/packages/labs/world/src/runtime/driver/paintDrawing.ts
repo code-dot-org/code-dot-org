@@ -56,8 +56,14 @@ const wrapped = (
   text: string,
   width: number | undefined,
 ): string[] => {
+  // A NEWLINE IS A BREAK EITHER WAY. Without a column this used to hand back
+  // the whole string, so a line break the author typed was drawn as nothing at
+  // all — canvas ignores `\n` in `fillText`. That is the difference between
+  // "do not WRAP this" and "do not break this", and only the first was ever
+  // asked for: a Text Area says where its lines end and wants no column at all
+  // (specs/UI_ACTORS.md).
   if (width === undefined || width <= 0) {
-    return [text];
+    return text.split('\n');
   }
   const lines: string[] = [];
   for (const paragraph of text.split('\n')) {

@@ -19,6 +19,17 @@ export interface TypedVariableConfig {
   check?: string;
   /** The block style for the getter (e.g. `'variable_blocks'`). */
   style?: string;
+  /**
+   * The field type that draws the name. Defaults to Blockly's own
+   * `field_variable`, which lists every variable of this flavour on the
+   * workspace.
+   *
+   * A lab whose language has SCOPES registers a field of its own and names it
+   * here: a workspace is the only thing a Blockly variable can belong to, so a
+   * name that exists inside one block is a distinction only the field can
+   * make. Everything else about the flavour is unchanged.
+   */
+  fieldType?: string;
   /** The name a freshly-created variable of this type is given. Defaults to the
    * lower-cased {@link type}. */
   defaultName?: string;
@@ -99,6 +110,12 @@ export function createTypedVariable(
   const check = config.check ?? type;
   const style = config.style ?? 'variable_blocks';
   const defaultName = config.defaultName ?? type.toLowerCase();
+  // WHICH FIELD DRAWS THE NAME. `field_variable` is Blockly's own and lists
+  // every variable of this flavour on the workspace, which is right while a
+  // workspace is the only thing a name can belong to. A lab whose language has
+  // SCOPES registers a field of its own and names it here, and gets the rest of
+  // the flavour — the check, the style, the generator — unchanged.
+  const fieldType = config.fieldType ?? 'field_variable';
   const getterType = config.getterType ?? `variables_get_${type}`;
   const setterType = config.setterType ?? `variables_set_${type}`;
   const message0 = config.message0 ?? '%1';
@@ -111,7 +128,7 @@ export function createTypedVariable(
     name: string,
     options: {variable?: string} = {},
   ): BlockArgDefinition => ({
-    type: 'field_variable',
+    type: fieldType,
     name,
     variable: options.variable ?? defaultName,
     variableTypes: [type],

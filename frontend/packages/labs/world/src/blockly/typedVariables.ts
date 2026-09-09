@@ -11,9 +11,31 @@
 import {createTypedVariable, type TypedVariable} from '@code-dot-org/blockly';
 
 import {enumRefOfParamType} from './enums';
+import {
+  registerScopedVariableField,
+  SCOPED_VARIABLE_FIELD,
+} from './fields/scopedVariable';
+
+// BEFORE ANY FLAVOUR IS MADE, because each names this field in the JSON of the
+// blocks it defines, and a block naming a field Blockly has not been told
+// about fails to build at all.
+registerScopedVariableField();
+
+/**
+ * What every flavour here has in common: a dropdown that offers the names the
+ * block can actually see.
+ *
+ * A Blockly variable belongs to the workspace, so the stock field lists every
+ * one of its flavour whether or not the block could reach it. That was nearly
+ * true while the only variables in the lab were the ones a loop bound and the
+ * ones a rule took as parameters; `with ⟨number n⟩ as ⟨0⟩ do` makes it false
+ * (`blockly/variableScope`).
+ */
+const scoped = {fieldType: SCOPED_VARIABLE_FIELD} as const;
 
 /** The actor variable — a `for each` loop's binding, or an `actor` parameter. */
 export const ActorVariable: TypedVariable = createTypedVariable({
+  ...scoped,
   type: 'Actor',
   style: 'sprite_blocks',
   // Not `actor`: the principal actor generates as the bare identifier `actor`, so
@@ -30,18 +52,21 @@ export const ActorVariable: TypedVariable = createTypedVariable({
 // the authored value type (matches an {@link ArgType}); the flavour's tag is its
 // PascalCase form (`variables_get_Number`).
 export const NumberVariable: TypedVariable = createTypedVariable({
+  ...scoped,
   type: 'Number',
   style: 'math_blocks',
   defaultName: 'amount',
   tooltip: 'A number passed to this action or query.',
 });
 export const BooleanVariable: TypedVariable = createTypedVariable({
+  ...scoped,
   type: 'Boolean',
   style: 'logic_blocks',
   defaultName: 'flag',
   tooltip: 'A true/false value passed to this action or query.',
 });
 export const StringVariable: TypedVariable = createTypedVariable({
+  ...scoped,
   type: 'String',
   style: 'text_blocks',
   defaultName: 'text',
@@ -56,6 +81,7 @@ export const StringVariable: TypedVariable = createTypedVariable({
  * point of one (specs/LISTS.md).
  */
 export const ListVariable: TypedVariable = createTypedVariable({
+  ...scoped,
   type: 'List',
   // `Array` is Blockly's own name for this check, and the reason to take it is
   // `lists_create_with`: the literal with the mutator, which reports `Array`
@@ -71,6 +97,7 @@ export const ListVariable: TypedVariable = createTypedVariable({
 });
 
 export const VectorVariable: TypedVariable = createTypedVariable({
+  ...scoped,
   type: 'Vector',
   style: 'location_blocks',
   defaultName: 'vec',

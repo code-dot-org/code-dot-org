@@ -3034,10 +3034,20 @@ describe('builder-context warnings', () => {
     // Paired get/set per type rather than all-gets-then-all-sets: the question
     // a learner arrives with is "how do I keep a vector?", so both blocks for
     // a type should be together when they find it.
+    //
+    // …and the blocks that MAKE one first, which this drawer went without: a
+    // getter and a setter were here and nothing declared a name, so the only
+    // variables in the lab were the ones a loop bound and the ones a rule
+    // took as parameters (`localDeclaration`).
     const variables = (
       DOMAIN_TOOLBOX as Array<{name: string; blocks: string[]}>
     ).find(c => c.name === 'Variables')?.blocks;
     expect(variables).toEqual([
+      'world_let_number',
+      'world_let_word',
+      'world_let_yes_or_no',
+      'world_let_place',
+      'world_let_actor',
       'variables_get_Number',
       'variables_set_Number',
       'variables_get_Boolean',

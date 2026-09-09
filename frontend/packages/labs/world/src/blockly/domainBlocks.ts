@@ -228,6 +228,7 @@ import {
 } from './tweens';
 import {
   ActorVariable,
+  BooleanVariable,
   ListVariable,
   NumberVariable,
   paramFlavour,
@@ -243,6 +244,7 @@ import {
   valueShadowExtension,
   type ShadowSpec,
 } from './valueShadow';
+import {isRedeclaration} from './variableScope';
 
 /** JS string literal for a field value. */
 const str = (value: unknown): string => JSON.stringify(String(value));
@@ -3249,6 +3251,112 @@ const listLoop = (
       },
     },
   });
+
+/**
+ * `let ⟨number n⟩ be ⟨0⟩` — a name for the rows below it.
+ *
+ * THE LAB HAD NO LOCALS, and until now nothing had noticed. A variable a body
+ * sets and reads is declared by Blockly's generator at MODULE scope — one
+ * `var` line for the whole file — so two bodies that both use `n` are using
+ * the same `n`. Nothing has gone wrong yet because a body runs to completion
+ * and nothing re-enters, which is a property of the code that happens to hold
+ * rather than one anything enforces.
+ *
+ * It stops holding the moment a piece of work needs working values. A caret in
+ * a multi-line field walks the text counting lines and columns, and the
+ * alternative to a local is a PROPERTY on the actor — scratch space in the
+ * inspector, and in every dropdown that lists an actor's properties, for a
+ * number that means nothing between two frames (specs/UI_ACTORS.md).
+ *
+ * A ROW RATHER THAN A MOUTH. The first shape of this was `with ⟨n⟩ as ⟨0⟩ do`,
+ * which draws its scope — and costs a nesting per name, so three working
+ * values are three boxes inside each other before any work is written. This is
+ * flat: the name belongs to the rows below it, which is what a declaration
+ * means everywhere else and is what the rest of the language already looks
+ * like.
+ *
+ * What it gives up is the scope being VISIBLE. Nothing draws the end of it, so
+ * the dropdown is what keeps it honest: a getter offers only the names it can
+ * actually see from where it sits (`blockly/variableScope`).
+ *
+ * DECLARED ONCE. A second `let` for a name already in scope emits an
+ * assignment rather than a second declaration — two `let`s for one identifier
+ * is a SyntaxError that takes the module down, and writing it twice plainly
+ * means "and now it is this".
+ *
+ * One per flavour, as the loops are: a getter is typed, and a `let` that took
+ * its type from a dropdown would hand back a variable whose flavour the blocks
+ * reading it could not agree on.
+ */
+const localDeclaration = (
+  kind: 'number' | 'word' | 'place' | 'actor' | 'yes or no',
+  variable: {field: (name: string) => BlockArgDefinition},
+  check: string | undefined,
+  shadow: ShadowSpec | undefined,
+) => {
+  const type = `world_let_${kind.replace(/ /g, '_')}`;
+  if (shadow) {
+    registerValueShadows(type, [{name: 'VALUE', shadow}]);
+  }
+  return defineBlock({
+    type,
+    message0: `let ${kind} %1 be %2`,
+    args0: [
+      variable.field('VAR'),
+      {type: 'input_value', name: 'VALUE', ...(check ? {check} : {})},
+    ],
+    inputsInline: true,
+    previousStatement: true,
+    nextStatement: true,
+    ...(shadow ? {extensions: [valueShadowExtension]} : {}),
+    style: 'variable_blocks',
+    tooltip:
+      `A ${kind} the blocks BELOW this one can use — set it, read it, and ` +
+      'change it as often as you like. Nothing above it, and nothing outside ' +
+      'the stack it is in, knows the name at all.',
+    generator: {
+      javascript(block, generator) {
+        const name = generator.getVariableName(block.getFieldValue('VAR'));
+        const value = generator.valueToCode(block, 'VALUE', Order.NONE);
+        // `let`, so the name belongs to the block it stands in rather than to
+        // the module — unless one is already standing above it, in which case
+        // declaring it again is the error rather than the intent.
+        const keyword = isRedeclaration(block) ? '' : 'let ';
+        return `${keyword}${name} = ${value || 'undefined'};\n`;
+      },
+    },
+  });
+};
+
+const worldLetNumber = localDeclaration('number', NumberVariable, 'Number', {
+  type: 'math_number',
+  fields: {NUM: 0},
+});
+const worldLetWord = localDeclaration('word', StringVariable, 'String', {
+  type: 'text',
+  fields: {TEXT: ''},
+});
+const worldLetPlace = localDeclaration(
+  'place',
+  VectorVariable,
+  'Vector',
+  undefined,
+);
+const worldLetActor = localDeclaration(
+  'actor',
+  ActorVariable,
+  'Actor',
+  undefined,
+);
+const worldLetBoolean = localDeclaration(
+  'yes or no',
+  BooleanVariable,
+  'Boolean',
+  {
+    type: 'logic_boolean',
+    fields: {BOOL: 'FALSE'},
+  },
+);
 
 const worldForEachNumber = listLoop('number', NumberVariable, 'number');
 const worldForEachWord = listLoop('word', StringVariable, 'word');
@@ -8859,6 +8967,11 @@ export const DOMAIN_BLOCKS = [
   worldListLast,
   worldListHas,
   worldForEachNumber,
+  worldLetNumber,
+  worldLetWord,
+  worldLetPlace,
+  worldLetActor,
+  worldLetBoolean,
   worldForEachWord,
   worldForEachPlace,
   worldVector,
@@ -9385,6 +9498,7 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
       ListVariable.setterType,
     ],
   },
+
   {
     name: 'Logic',
     blocks: [
@@ -9501,7 +9615,23 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
   // are declared in `define block`'s signature, so there is no block for
   // declaring one — these read and write whatever is in scope, whether that is a
   // parameter, a `for each` loop's variable, or a local a body made for itself.
-  {name: 'Variables', blocks: [...PARAM_VARIABLE_TYPES]},
+  {
+    name: 'Variables',
+    blocks: [
+      // WHERE A NAME COMES FROM, which this drawer did not have: the getters
+      // and setters were here and nothing made one. A loop bound its own and a
+      // rule's parameters were the rest, so a body that wanted a working value
+      // had nowhere to put it but on the ACTOR — scratch space in the
+      // inspector for a number that means nothing between two frames
+      // (`scopedLocal`).
+      'world_let_number',
+      'world_let_word',
+      'world_let_yes_or_no',
+      'world_let_place',
+      'world_let_actor',
+      ...PARAM_VARIABLE_TYPES,
+    ],
+  },
 ];
 
 /** The toolbox as a `.rule` sees it: everything, plus the Engine category. */
