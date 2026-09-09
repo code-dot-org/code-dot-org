@@ -100,19 +100,14 @@ export interface ToastProps {
   /** Override the anchor position; defaults to top-center. */
   anchorOrigin?: SnackbarProps['anchorOrigin'];
   /**
-   * Class on the Snackbar itself. `anchorOrigin` picks a corner of the
-   * viewport; this is how you land somewhere else — e.g. `position: absolute`
-   * inside a positioned ancestor, to sit below a page header.
+   * Class on the Snackbar itself.
    */
   className?: string;
   /** Live-region politeness; defaults to `assertive` (see {@link ToastPoliteness}). */
   politeness?: ToastPoliteness;
   /**
    * Change this to restart the auto-hide timer and replay the enter
-   * transition. MUI restarts the timer only when `open` or `autoHideDuration`
-   * changes, so a toast replacing one of the same duration would otherwise
-   * inherit its remaining time. It keys the Snackbar alone: the live region
-   * stays mounted, which is what makes announcements reliable (see
+   * transition.
    * {@link ToastAnnouncer}).
    */
   restartKey?: number | string;
@@ -180,9 +175,7 @@ export default function Toast({
         className={className}
         // MUI otherwise pauses auto-hide while the window is unfocused and
         // only resumes on refocus, which strands a toast for as long as the
-        // user is elsewhere — including when focus merely moves into an
-        // iframe on the same page. The announcer has already spoken the
-        // message, so hold to the caller's duration instead.
+        // user is elsewhere.
         disableWindowBlurListener
       >
         <Alert
@@ -266,8 +259,8 @@ export function ToastProvider({
       setToast(previous => ({
         message,
         type: options?.type ?? 'success',
-        // Not `??`: an explicit null means "stay until closed", and must not
-        // fall back to the default duration.
+        // Ensure we keep an explicit null, as that means 
+        // the toast will stay visible until manually closed.
         autoHideDuration:
           options?.autoHideDuration !== undefined
             ? options.autoHideDuration

@@ -45,15 +45,7 @@ is left of the one it replaces. On the controlled `Toast`, pass a changing
 
 `anchorOrigin` picks a corner of the viewport. To land anywhere else, pass a
 `className` (on `Toast` or `ToastProvider`) — it goes on the Snackbar, the
-positioned surface. To sit below a page header, make the class
-`position: absolute` and give the header's sibling container a position:
-
-```scss
-.belowHeader {
-  position: absolute;
-  top: 8px;
-}
-```
+positioned surface.
 
 The announcer is `assertive` by default (`role="alert"`). This is deliberate:
 Orca, the Linux/AT-SPI screen reader, routinely drops a polite `role="status"`
