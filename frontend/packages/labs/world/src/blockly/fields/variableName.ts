@@ -83,7 +83,25 @@ export class VariableNameField extends Blockly.FieldTextInput {
     }
     const map = workspace.getVariableMap();
     const existing = map.getVariable(name, this.variableType);
-    return (existing ?? map.createVariable(name, this.variableType)).getId();
+    if (existing) {
+      return existing.getId();
+    }
+    // A NEW NAME FOR THE ONE IT ALREADY DECLARES, rather than a second
+    // variable. This field only ever sits on a block that DECLARES — a `let`,
+    // a loop — so editing it is renaming the thing declared, and the readers
+    // below go on reading it: Blockly tells every field showing that variable,
+    // and they redraw themselves.
+    //
+    // Making a fresh variable instead would leave those readers pointing at
+    // the old one, which nothing declares any more — so they would quietly
+    // become out-of-scope reads of a name that had merely been spelled
+    // differently.
+    const held = this.variable();
+    if (held) {
+      map.renameVariable(held, name);
+      return held.getId();
+    }
+    return map.createVariable(name, this.variableType).getId();
   }
 
   /** Shown and edited: the NAME, where the value is the id. */

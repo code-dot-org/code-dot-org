@@ -213,3 +213,45 @@ describe('naming a local', () => {
     expect(block.getField('VAR')!.getText()).toBe('total');
   });
 });
+
+// EDITING A DECLARATION RENAMES WHAT IT DECLARED.
+//
+// The readers below a `let` go on reading it: Blockly tells every field showing
+// that variable and they redraw themselves, so a name typed into the block that
+// made it reaches the blocks that use it without anybody arranging anything.
+//
+// Making a fresh variable instead would leave those readers pointing at the old
+// one, which nothing declares any more — so they would quietly become
+// out-of-scope reads of a name that had merely been spelled differently.
+describe('renaming a local', () => {
+  it('renames the variable, so its readers follow', () => {
+    const workspace = new Blockly.Workspace();
+    const block = workspace.newBlock('world_let_number');
+    block.setFieldValue('tally', 'VAR');
+    const made = workspace.getVariableMap().getVariable('tally', 'Number')!;
+
+    block.setFieldValue('total', 'VAR');
+
+    // The SAME variable, wearing a new name — not a second one.
+    expect(block.getFieldValue('VAR')).toBe(made.getId());
+    expect(made.getName()).toBe('total');
+    expect(
+      workspace
+        .getVariableMap()
+        .getAllVariables()
+        .filter(one => one.getType() === 'Number'),
+    ).toHaveLength(1);
+  });
+
+  it('points at a name that already exists rather than colliding', () => {
+    // Two variables cannot share a name, so typing one that is taken joins it.
+    const workspace = new Blockly.Workspace();
+    const taken = workspace.getVariableMap().createVariable('total', 'Number');
+    const block = workspace.newBlock('world_let_number');
+    block.setFieldValue('tally', 'VAR');
+
+    block.setFieldValue('total', 'VAR');
+
+    expect(block.getFieldValue('VAR')).toBe(taken.getId());
+  });
+});

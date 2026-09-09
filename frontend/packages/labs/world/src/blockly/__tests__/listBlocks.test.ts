@@ -101,11 +101,20 @@ describe('walking a list', () => {
     // Three rather than one with a dropdown: what a dropdown would choose is
     // the TYPE of the variable it binds, and a variable's type is fixed once it
     // is made.
+    //
+    // …and each reads as the DECLARATION it is. A loop makes a name and says
+    // where the name reaches, which is what `let` does — the only difference
+    // being that this one names a series rather than one value. Saying it as a
+    // traversal hid that the two are the same kind of thing
+    // (`domainBlocks.listLoop`, `variableScope`).
     for (const kind of ['number', 'word', 'place']) {
       expect(blockOf(`world_for_each_${kind}`).message0).toBe(
-        `for each ${kind} %1 in %2`,
+        `let %1 be each ${kind} in %2`,
       );
     }
+    expect(blockOf('world_for_each').message0).toBe(
+      'let %1 be each actor in %2',
+    );
   });
 
   it('walks nothing when the list is not one', () => {

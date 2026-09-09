@@ -3221,6 +3221,19 @@ const worldListHas = defineBlock({
  * else here does. Three blocks say it with none of that, and read as a family
  * with `for each actor` — which is the fourth of them and was here first.
  */
+/**
+ * `let ⟨n⟩ be each number in ⟨…⟩ do ⟨…⟩` — a loop that says what it declares.
+ *
+ * IT WAS `for each number ⟨n⟩ in ⟨…⟩`, which is the same thing said as a
+ * traversal rather than as a naming. A loop IS a declaration: it makes a name
+ * and says where the name reaches, which is exactly what `let` does — the only
+ * difference is that this one names a series of values rather than one
+ * (`variableScope`, where both are binders and have always been).
+ *
+ * So it reads like its sibling, and its name is TYPED like its sibling's. A
+ * dropdown of names that already exist is right for a block that reads one and
+ * backwards for the block a name comes from (`fields/variableName`).
+ */
 const listLoop = (
   kind: 'number' | 'word' | 'place',
   variable: {field: (name: string) => BlockArgDefinition},
@@ -3228,9 +3241,9 @@ const listLoop = (
 ) =>
   defineBlock({
     type: `world_for_each_${kind}`,
-    message0: `for each ${kind} %1 in %2`,
+    message0: `let %1 be each ${kind} in %2`,
     args0: [
-      variable.field('VAR'),
+      nameField(variable),
       {type: 'input_value', name: 'LIST', check: LIST_CHECK},
     ],
     message1: 'do %1',
@@ -3239,7 +3252,9 @@ const listLoop = (
     previousStatement: true,
     nextStatement: true,
     style: 'loop_blocks',
-    tooltip: `Run the blocks below once for each ${noun} in a list.`,
+    tooltip:
+      `A ${noun} from the list, one at a time. The blocks below run once ` +
+      `for each of them, with the name standing for the one it is on.`,
     generator: {
       javascript(block, generator) {
         const name = generator.getVariableName(block.getFieldValue('VAR'));
@@ -4672,9 +4687,11 @@ registerValueShadows('world_is_in_actors', [
  */
 const worldForEach = defineBlock({
   type: 'world_for_each',
-  message0: 'for each actor %1 in %2',
+  // A DECLARATION, like the typed loops beside it and like `let` itself: it
+  // makes a name and says where the name reaches (`listLoop`).
+  message0: 'let %1 be each actor in %2',
   args0: [
-    ActorVariable.field('VAR'),
+    nameField(ActorVariable),
     {type: 'input_value', name: 'SOURCE', check: 'Actor'},
   ],
   message1: 'do %1',

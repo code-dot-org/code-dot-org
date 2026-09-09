@@ -11,6 +11,7 @@
 import {createTypedVariable, type TypedVariable} from '@code-dot-org/blockly';
 
 import {enumRefOfParamType} from './enums';
+import {scopedVariableDefaultExtension} from './extensions/scopedVariableDefault';
 import {
   registerScopedVariableField,
   SCOPED_VARIABLE_FIELD,
@@ -33,7 +34,16 @@ registerVariableNameField();
  * ones a rule took as parameters; `with ⟨number n⟩ as ⟨0⟩ do` makes it false
  * (`blockly/variableScope`).
  */
-const scoped = {readerFieldType: SCOPED_VARIABLE_FIELD} as const;
+const scoped = {
+  readerFieldType: SCOPED_VARIABLE_FIELD,
+  // …and the rule that keeps `???` meaning ONE thing: a reader takes the first
+  // name it can see rather than none, so the empty answer is reserved for a
+  // scope that really is empty (`extensions/scopedVariableDefault`).
+  // THE OBJECT, not its name: an extension is registered by being handed to
+  // the driver with the block that carries it, so a block naming one by string
+  // alone fails to build with "Extension not found".
+  readerExtensions: [scopedVariableDefaultExtension],
+};
 
 /** The actor variable — a `for each` loop's binding, or an `actor` parameter. */
 export const ActorVariable: TypedVariable = createTypedVariable({
