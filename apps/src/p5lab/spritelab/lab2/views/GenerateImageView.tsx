@@ -278,6 +278,10 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
             : "The image didn't pass our safety check. Try a different prompt."
         );
       } else {
+        // The student message stays generic; the cause (judge failure,
+        // gateway error, no image returned, upload failure) goes to the
+        // console for whoever is debugging.
+        console.error('Image generation failed:', e);
         setError(
           makingSet
             ? "Couldn't finish the character. Try again."
