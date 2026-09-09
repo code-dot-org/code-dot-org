@@ -81,7 +81,7 @@ Scenario: Lock settings for students in survey
   When I am on "http://studio.code.org/courses/allthethingscourse/units/1/lockable/1/levels/1/page/4"
   And I click selector ".submitButton" once I see it
   And I wait to see a dialog titled "Submit your survey"
-  And I press "ok-button"
+  And I press "levelgroup-submit-ok-button"
   And I wait until current URL contains "/courses/allthethingscourse/units/1/lessons/31/levels/1"
 
   # now locked for student
