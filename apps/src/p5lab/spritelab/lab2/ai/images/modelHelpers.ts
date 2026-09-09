@@ -2,6 +2,8 @@ import {createGoogleGenerativeAI} from '@ai-sdk/google';
 
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
+import {ImageType} from './types';
+
 // The API key is injected server-side by the aiGateway proxy.
 const googleProvider = createGoogleGenerativeAI({
   apiKey: '',
@@ -55,6 +57,18 @@ export function imageProviderOptions(imageSize: ImageSize) {
 // assume can't drift apart.
 export const MODEL_OUTPUT_PX = 1024;
 export const ASSUMED_BLOCK = 16;
+
+// Stored ceilings for smooth-style images: generation downscales the model's
+// 1K output once at save, and the blank paint canvas opens at the same size
+// so painted images land at the ceilings by construction. 512/256 cover
+// typical on-screen sizes 1:1; a large story-scene sprite on a high-density
+// screen can exceed 512 and render softer — the accepted tradeoff. Pixel
+// style keeps its grid-normalized sizing; backgrounds keep full resolution
+// (zoom magnifies them).
+export const STORED_MAX_PX: {[type in ImageType]?: number} = {
+  sprite: 512,
+  block: 256,
+};
 
 export function getTextModel() {
   return googleProvider(AiChatModelIds.GEMINI_2_5_FLASH);
