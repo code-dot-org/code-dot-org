@@ -11,10 +11,7 @@ class QuizzesController < ApplicationController
 
   # GET /levels/:level_id/quiz_configuration
   #
-  # The builder's load payload: the flat configuration body #update
-  # returns, plus `questions` - placements in order (page, then position),
-  # each with the correct-answer and explanation fields
-  # Quiz#summarize_for_lab2_properties withholds from the taking view.
+  # Returns the quiz's configuration and its placed questions for the authoring view.
   def show
     placements = @level.placements.
       includes(quiz_question: {standards: [:framework, {category: :parent_category}]}).to_a
