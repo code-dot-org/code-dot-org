@@ -136,7 +136,18 @@ def remove_hosts_entry
     return
   end
 
-  warn "could not rewrite #{HOSTS_FILE}" unless write_as_root(HOSTS_FILE, kept.join)
+  unless write_as_root(HOSTS_FILE, kept.join)
+    warn "could not rewrite #{HOSTS_FILE}"
+    return
+  end
+
+  # Confirmed by re-reading rather than assumed, so the run itself reports
+  # whether it left the file clean.
+  if hosts_entry_present?
+    warn "FAILED to remove #{DUMMY_HOST} from #{HOSTS_FILE} -- remove it by hand"
+  else
+    warn "removed #{DUMMY_HOST} from #{HOSTS_FILE}"
+  end
 end
 
 # Kernel wait state per thread: "futex_wait_queue" is a thread blocked on a
