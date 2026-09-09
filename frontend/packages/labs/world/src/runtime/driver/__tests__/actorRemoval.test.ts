@@ -58,7 +58,13 @@ vi.mock('phaser', () => {
     }
   }
   const fakeScene = {
-    cameras: {main: {setBackgroundColor: () => {}}},
+    cameras: {
+      main: {
+        setBackgroundColor: () => {},
+        setZoom: () => {},
+        centerOn: () => {},
+      },
+    },
     textures: {exists: () => false},
     input: {mouse: {disableContextMenu() {}}, activePointer: pointer()},
     add: {
@@ -87,11 +93,15 @@ vi.mock('phaser', () => {
     },
   };
   class Game {
+    canvas: HTMLCanvasElement;
     constructor(config: {
       parent: HTMLElement;
       scene: {create(): void; update(time: number, delta: number): void};
     }) {
-      config.parent.appendChild(document.createElement('canvas'));
+      // A real Game exposes the canvas it made; the driver styles it
+      // (`imageRendering`), so this fake has to hand one over too.
+      this.canvas = document.createElement('canvas');
+      config.parent.appendChild(this.canvas);
       config.scene.create.call(fakeScene);
       scene = {
         update: (time, delta) =>

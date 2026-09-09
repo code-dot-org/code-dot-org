@@ -11,6 +11,7 @@ import type {DrawCommand, DrawingState} from 'world-lab';
 
 import {DrawingTextures} from '../drawingTextures';
 import {fontAt, paintDrawing} from '../paintDrawing';
+import {RENDER_SCALE} from '../renderScale';
 
 /** A 2D context that records what was asked of it rather than drawing it. */
 function recordingContext() {
@@ -185,6 +186,28 @@ const state = (key: string): DrawingState => ({
 });
 
 describe('the texture cache', () => {
+  it('rasterizes at the render scale, not at world-unit size', () => {
+    // The half of the render scale that is easy to leave out. The canvas is
+    // three times the world each way (`renderScale`), so a drawing rasterized
+    // at the size it DECLARES would be blown up three times to be shown — the
+    // same resampling the scale exists to remove, moved one layer down. It is
+    // scaled back where it is drawn (`PhaserBinding`, the `state.drawing`
+    // branch), so the picture still occupies the eight units it asked for.
+    const scene = fakeScene();
+    const canvases: HTMLCanvasElement[] = [];
+    scene.textures.addCanvas = (_key: string, canvas: unknown) => {
+      canvases.push(canvas as HTMLCanvasElement);
+    };
+
+    new DrawingTextures().acquire(scene as never, {}, state('abc'));
+
+    expect(canvases).toHaveLength(1);
+    expect([canvases[0].width, canvases[0].height]).toEqual([
+      8 * RENDER_SCALE,
+      8 * RENDER_SCALE,
+    ]);
+  });
+
   it('rasterizes a picture once, however many actors draw it', () => {
     // The whole economy of the design. Nine coins drawn by one routine hash
     // identically, so this is one canvas and eight map lookups.

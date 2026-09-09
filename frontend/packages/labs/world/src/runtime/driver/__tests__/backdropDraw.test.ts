@@ -44,6 +44,8 @@ let lastScene: {
 export const runFrame = () =>
   lastScene?.config.scene.update.call(lastScene.scene, 0, 16);
 let cameraColor = 0;
+/** How the camera was pointed at the world — see the stub below. */
+const cameraFit: {zoom?: number; center?: {x: number; y: number}} = {};
 /** Texture keys the fake scene claims to hold. */
 let textures = new Set<string>();
 
@@ -98,7 +100,21 @@ vi.mock('phaser', () => {
   }
   const scene = {
     cameras: {
-      main: {setBackgroundColor: (color: number) => (cameraColor = color)},
+      main: {
+        setBackgroundColor: (color: number) => (cameraColor = color),
+        // The camera is zoomed by the render scale and centered on the world's
+        // own rectangle (`PhaserBinding.fitCamera`), which is how a 960-pixel
+        // canvas shows a 320-pixel world. Recorded rather than ignored: it is
+        // the one thing standing between the coordinates below and the screen.
+        setZoom(zoom: number) {
+          cameraFit.zoom = zoom;
+          return this;
+        },
+        centerOn(x: number, y: number) {
+          cameraFit.center = {x, y};
+          return this;
+        },
+      },
     },
     textures: {exists: (key: string) => textures.has(key)},
     // The mouse: `create` claims the right button and `update` reads the
@@ -168,11 +184,15 @@ vi.mock('phaser', () => {
     },
   };
   class Game {
+    canvas: HTMLCanvasElement;
     constructor(config: {
       parent: HTMLElement;
       scene: {create(): void; update(time: number, delta: number): void};
     }) {
-      config.parent.appendChild(document.createElement('canvas'));
+      // A real Game exposes the canvas it made; the driver styles it
+      // (`imageRendering`), so this fake has to hand one over too.
+      this.canvas = document.createElement('canvas');
+      config.parent.appendChild(this.canvas);
       // Run the scene, which is the point of this fake — and keep `update`, so
       // a test can advance a frame.
       config.scene.create.call(scene);
@@ -210,6 +230,7 @@ vi.mock('../effects', () => ({
 // imported before `vi.mock` has replaced what it imports.
 import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from '../../viewport';
 import {PhaserBinding} from '../PhaserBinding';
+import {RENDER_SCALE} from '../renderScale';
 
 /** A World stub whose backdrop is whatever a test says it is. */
 const world = (
@@ -288,6 +309,8 @@ describe('drawing the backdrop', () => {
     images = [];
     layers = [];
     cameraColor = 0;
+    delete cameraFit.zoom;
+    delete cameraFit.center;
     textures = new Set(['cave.png', 'trees.png']);
     document.body.innerHTML = '';
     HTMLCanvasElement.prototype.getContext = (() => ({
@@ -499,6 +522,35 @@ describe('drawing the backdrop', () => {
     new PhaserBinding(world([{}, {sprite: 'gone.png'}]), pane());
 
     expect(images).toHaveLength(0);
+  });
+
+  it('points the camera at the world, at the render scale', () => {
+    // What lets every coordinate above stay a WORLD coordinate. The canvas is
+    // three times the world each way (`renderScale`), so a camera left where
+    // Phaser puts it would be looking at 320..640 of a 320-pixel world — the
+    // whole game off the right of the screen. Zoomed by the scale and centered
+    // on the middle of the view, the visible rectangle is the world's own.
+    new PhaserBinding(world([{sprite: 'cave.png'}]), pane());
+
+    expect(cameraFit.zoom).toBe(RENDER_SCALE);
+    expect(cameraFit.center).toEqual({
+      x: VIEWPORT_WIDTH / 2,
+      y: VIEWPORT_HEIGHT / 2,
+    });
+  });
+
+  it('lets the browser scale the finished buffer smoothly', () => {
+    // The two resamplings want opposite answers, and Phaser only knows about
+    // one of them. INSIDE the buffer, sampling is nearest, so a 32-pixel sprite
+    // drawn at 96 is nine hard squares per pixel. Getting the buffer onto the
+    // screen is a downscale of about a half — the pane is 460 and the buffer is
+    // 960 — and point-sampling that throws away half of what was just drawn.
+    // Phaser writes `pixelated` inline because `pixelArt` implies no
+    // antialiasing; this is the driver saying otherwise.
+    const parent = pane();
+    new PhaserBinding(world([{sprite: 'cave.png'}]), parent);
+
+    expect(parent.querySelector('canvas')?.style.imageRendering).toBe('auto');
   });
 
   it('sets the camera color from the world, not from a layer', () => {

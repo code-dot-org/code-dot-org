@@ -20,6 +20,7 @@ import Phaser from 'phaser';
 import type {DrawingState} from 'world-lab';
 
 import {paintDrawing} from './paintDrawing';
+import {RENDER_SCALE} from './renderScale';
 
 /** Texture names, kept in one namespace so nothing collides with a project's. */
 const KEY_PREFIX = 'drawing:';
@@ -85,7 +86,20 @@ export class DrawingTextures {
   }
 }
 
-/** Run a command list onto a fresh canvas of the declared size. */
+/**
+ * Run a command list onto a fresh canvas of the declared size.
+ *
+ * AT THE RENDER SCALE, not at world-unit size. A drawing is the only picture in
+ * the lab that is made rather than loaded — a label, a speech box, a health bar
+ * — so it can be made at whatever resolution it will be shown at, and a
+ * 200-unit label rasterized 200 pixels wide and then drawn 600 pixels wide is
+ * the same resampling this scale exists to remove (`renderScale`).
+ *
+ * The commands are still written in world units: the context is scaled once,
+ * here, so nothing that paints has to know. The image is scaled back down where
+ * it is drawn (`PhaserBinding`, the `state.drawing` branch), so a drawing still
+ * occupies the world units it declares.
+ */
 function rasterize(
   scene: Phaser.Scene,
   state: DrawingState,
@@ -94,12 +108,13 @@ function rasterize(
   // At least one pixel each way: a zero-sized canvas is a texture Phaser will
   // not accept, and a drawing declared `0 by 0` is an author mid-edit rather
   // than an error worth stopping the game for.
-  canvas.width = Math.max(1, Math.round(state.width));
-  canvas.height = Math.max(1, Math.round(state.height));
+  canvas.width = Math.max(1, Math.round(state.width * RENDER_SCALE));
+  canvas.height = Math.max(1, Math.round(state.height * RENDER_SCALE));
   const context = canvas.getContext('2d');
   if (!context) {
     return canvas;
   }
+  context.scale(RENDER_SCALE, RENDER_SCALE);
   // Transparent until something is drawn on it — the canvas is where the
   // picture goes, not a sheet of paper with a color.
   paintDrawing(context, state.commands, sprite =>

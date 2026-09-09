@@ -51,24 +51,31 @@ import {
 } from './backdropPlacement';
 import {DrawingTextures} from './drawingTextures';
 import {EffectRegistry, type EffectErrorReporter} from './effects';
+import {RENDER_SCALE} from './renderScale';
 import {installSkewHook, type RenderStepInternals} from './skew';
 import {SoundChannel} from './sound';
 import {browserTextMetrics} from './textMetrics';
 
 const ACTOR_SIZE = 24;
-// The game's native resolution AT STARTUP — the size the canvas is made at,
-// before the world has been built and can say how much of itself it wants on
-// screen. A world that says (`World.setViewSize`, `set size of view`) resizes
-// the canvas to match, which is what `syncViewSize` below is for; a world that
-// says nothing keeps this, which is the ten-tile square every existing project
-// was authored against.
+// How much WORLD is on screen at startup, before the world has been built and
+// can say how much of itself it wants (`World.setViewSize`, `set size of view`,
+// and `syncViewSize` below). A world that says nothing keeps this, which is the
+// ten-tile square every existing project was authored against.
+const VIEW_WIDTH = VIEWPORT_WIDTH;
+const VIEW_HEIGHT = VIEWPORT_HEIGHT;
+
+// …and how many pixels that is drawn with, which is a different question and
+// used to be answered with the same number (`renderScale`). The canvas is made
+// at the render scale and the camera is zoomed by it (`fitCamera`), so a world
+// coordinate means exactly what it meant before and every one of them is drawn
+// three times as finely.
 //
-// Native, not on-screen: the Scale Manager's FIT mode letterboxes and centers
-// the canvas within the preview pane, scaling it up or down. With `pixelArt`
-// that upscale is nearest-neighbor, so a 32-pixel sprite stays a grid of hard
-// squares instead of a smear.
-const GAME_WIDTH = VIEWPORT_WIDTH;
-const GAME_HEIGHT = VIEWPORT_HEIGHT;
+// Still native, not on-screen: the Scale Manager's FIT mode letterboxes and
+// centers the canvas within the preview pane, scaling it up or down. With
+// `pixelArt` that scaling is nearest-neighbor, which is right for 32-pixel art
+// and is why the factor wants to be whole.
+const GAME_WIDTH = VIEW_WIDTH * RENDER_SCALE;
+const GAME_HEIGHT = VIEW_HEIGHT * RENDER_SCALE;
 
 /**
  * How far the view has moved from where a camera rests.
@@ -686,8 +693,28 @@ export class PhaserBinding {
      * a page that does not use it is unaffected, since it is a custom property
      * and nothing inherits a meaning for it.
      */
-    let shown = {x: GAME_WIDTH, y: GAME_HEIGHT};
-    const syncViewSize = () => {
+    /**
+     * Point the camera at the world's own rectangle, at the render scale.
+     *
+     * The canvas is `RENDER_SCALE` times the world each way, so without this a
+     * camera resting at the middle of a 960-pixel canvas would be looking at
+     * world coordinates 320 to 640 — off the end of a 320-pixel world. Zoom by
+     * the scale and center on the middle of the VIEW, and the visible rectangle
+     * is exactly the world's own: Phaser's camera shows `width / zoom` about
+     * `scroll + width / 2` (`Camera.preRender`), which is `view` about
+     * `view / 2`.
+     *
+     * Re-done after every resize, because the camera is resized with the game
+     * and comes back centered on the canvas rather than on the world.
+     */
+    const fitCamera = (scene: Phaser.Scene, view: {x: number; y: number}) => {
+      const camera = scene.cameras.main;
+      camera.setZoom(RENDER_SCALE);
+      camera.centerOn(view.x / 2, view.y / 2);
+    };
+
+    let shown = {x: VIEW_WIDTH, y: VIEW_HEIGHT};
+    const syncViewSize = (scene: Phaser.Scene) => {
       const view = world.viewSize();
       if (view.x === shown.x && view.y === shown.y) {
         return;
@@ -712,12 +739,16 @@ export class PhaserBinding {
       // layout, and `getParentBounds` is what reads it back.
       parent.style.setProperty('--aspect', String(view.x / view.y));
       this.game.scale.displaySize.setAspectRatio(view.x / view.y);
-      this.game.scale.resize(view.x, view.y);
+      // The BUFFER, which is the view at the render scale. The aspect ratio
+      // above is the view's own, and is unaffected: a square world is a square
+      // canvas whatever it is drawn with.
+      this.game.scale.resize(view.x * RENDER_SCALE, view.y * RENDER_SCALE);
       this.game.scale.refresh();
+      fitCamera(scene, view);
     };
 
     const sync = (scene: Phaser.Scene) => {
-      syncViewSize();
+      syncViewSize(scene);
       syncBackdrops(scene);
 
       // Viewport-wide effects, applied to the camera rather than to any one
@@ -776,7 +807,15 @@ export class PhaserBinding {
             drawings.acquire(scene, state.actor, state.drawing),
           );
           object.setPosition(state.x, state.y);
-          object.setScale(state.scaleX, state.scaleY);
+          // DIVIDED BY THE RENDER SCALE, because a drawing's texture is made at
+          // it (`drawingTextures.rasterize`). The picture is three times as
+          // many pixels and the same number of world units, which is the whole
+          // point: a label is sharp instead of being three nearest-neighbor
+          // copies of a small one.
+          object.setScale(
+            state.scaleX / RENDER_SCALE,
+            state.scaleY / RENDER_SCALE,
+          );
           object.setRotation(state.rotation * DEGREES_TO_RADIANS);
           applySkew(object, state.x, state.y, state.skew);
         } else if (frame && object instanceof Phaser.GameObjects.Image) {
@@ -980,6 +1019,9 @@ export class PhaserBinding {
           // Phaser makes one — and passed as an argument, like `sync(this)`
           // below, rather than assigned from `this`.
           useScene(this);
+          // Before the first `sync`: `syncViewSize` only re-fits when the view
+          // has CHANGED, and a world that keeps the default never changes it.
+          fitCamera(this, world.viewSize());
           // A game may want the right button, and the browser's answer to one
           // is a context menu over the canvas. Turned off here rather than in
           // the page, because it is the GAME's claim on the button.
@@ -998,13 +1040,21 @@ export class PhaserBinding {
             }
             // And the mouse, which — unlike the keyboard — is read from Phaser
             // rather than from listeners of our own. `pointer.x/y` are already
-            // in the game's coordinates: the canvas is FIT-scaled to whatever
+            // in the CANVAS's coordinates: the canvas is FIT-scaled to whatever
             // the preview pane allows, and undoing that transform by hand here
-            // would be reimplementing the Scale Manager against itself. The
-            // engine converts from there to a place in the world, because that
-            // needs the camera (`World.mousePosition`).
+            // would be reimplementing the Scale Manager against itself.
+            //
+            // The canvas is the view at the render scale, though, and
+            // `setPointer` takes VIEW pixels — so the one transform that is
+            // ours to undo is ours. Without it every click landed three times
+            // too far right and three times too far down. The engine converts
+            // from there to a place in the world, because that needs the camera
+            // (`World.mousePosition`).
             const pointer = this.input.activePointer;
-            world.setPointer(pointer, buttonsDown(pointer));
+            world.setPointer(
+              {x: pointer.x / RENDER_SCALE, y: pointer.y / RENDER_SCALE},
+              buttonsDown(pointer),
+            );
             // Phaser's delta is milliseconds; the engine ticks in seconds.
             world.tick(delta / 1000);
             // After the tick, so a sound a step or a handler raised this frame
@@ -1017,6 +1067,27 @@ export class PhaserBinding {
         },
       },
     });
+
+    // THE LAST STEP TO THE SCREEN IS SMOOTH, and it has to be said here
+    // because Phaser writes the opposite inline: `pixelArt` above implies
+    // `antialias: false`, and a canvas made without antialiasing is given
+    // `image-rendering: pixelated`.
+    //
+    // That was right when the buffer was the world's own size and the browser
+    // was blowing it up 1.4 to 4.4 times — a hard-edged upscale beats a smeared
+    // one. It is wrong now. The buffer is three times the world (`renderScale`)
+    // and the pane is 460 pixels, so the browser's job is a DOWNSCALE of about
+    // a half, and point-sampling a downscale throws away half the pixels that
+    // were just drawn — arriving back at the ragged 1.44 it replaced, having
+    // rendered three times as many pixels to get there.
+    //
+    // The two settings are about different steps and want different answers.
+    // Inside the buffer, sampling stays nearest: a 32-pixel sprite drawn at 96
+    // is nine hard squares per pixel, which is what pixel art should be.
+    // Getting that buffer onto the screen is a resample of an image that is
+    // already at three times the detail it needs, which is supersampling, and
+    // supersampling is exactly what a smooth filter is for.
+    this.game.canvas.style.imageRendering = 'auto';
   }
 
   /**
