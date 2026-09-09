@@ -1710,6 +1710,16 @@ const typedValueCode = (
         read(names.y) || String(v.y)
       })`;
     }
+    case 'position': {
+      // ONE socket, like a vector's — the x and the y are inside whatever is
+      // plugged into it, which is a `world_vector_of` until somebody replaces
+      // it with something that reports a vector of its own.
+      const v = (d ?? {x: 0, y: 0}) as {x: number; y: number};
+      return (
+        read(names.value) ||
+        `new WorldLab.Vector(${Number(v.x)}, ${Number(v.y)})`
+      );
+    }
     case 'actor':
       // An Actor socket (default `this actor`), read as ONE actor.
       //
@@ -1876,6 +1886,40 @@ const typedValueInputs = (
         message: `x %${slot}  y %${slot + 1}`,
         args: [numberInput(names.x), numberInput(names.y)],
         shadows: [numberShadow(names.x, v.x), numberShadow(names.y, v.y)],
+      };
+    }
+    case 'position': {
+      // ONE Vector socket, edited as an x and a y.
+      //
+      // The third way to say a two-number value, and it exists because the
+      // other two each give up something a `let position` argument wants
+      // (`blockDesigner.LET_ARGUMENTS`). `vector` is one socket that accepts
+      // any vector, but its shadow is the arrow-grid field — a direction, not
+      // a place. `point` is an x and a y a learner can type, but they are two
+      // INDEPENDENT number sockets, so nothing that reports a whole vector can
+      // be dropped in: `move to x ⟨⟩ y ⟨⟩` cannot be handed `velocity of
+      // ⟨player⟩`.
+      //
+      // This is a vector socket wearing `world_vector_of` — the block that
+      // BUILDS a vector from two numbers — as its shadow. Left alone it is an
+      // x and a y to type into; dropped on, it takes any vector, because
+      // underneath it was a vector socket the whole time.
+      const v = (d ?? {x: 0, y: 0}) as {x: number; y: number};
+      return {
+        message: `%${slot}`,
+        args: [{type: 'input_value', name: names.value, check: 'Vector'}],
+        shadows: [
+          {
+            name: names.value,
+            shadow: {
+              type: 'world_vector_of',
+              inputs: {
+                X: {shadow: {type: 'math_number', fields: {NUM: Number(v.x)}}},
+                Y: {shadow: {type: 'math_number', fields: {NUM: Number(v.y)}}},
+              },
+            },
+          },
+        ],
       };
     }
     case 'boolean':
@@ -3407,6 +3451,34 @@ const worldLetBoolean = localDeclaration(
  * same getter and accepted by the same sockets. The only difference is which
  * shape of literal is easier to write where it stands.
  */
+/**
+ * The declarations, in the order a learner meets them.
+ *
+ * ONE LIST, because two drawers offer these now: `Variables`, where a body
+ * makes a working value, and the signature drawer a `define block`'s own
+ * surface opens with (`SIGNATURE_CATEGORY`), where the same block declares an
+ * ARGUMENT. Nothing about the block differs between the two — a parameter is a
+ * name the caller fills in and a local is a name the body fills in, and both
+ * are read by the same getter — so offering it twice is offering one block in
+ * the two places it is reached for, as `use trait` is offered under Actor and
+ * under Rule.
+ *
+ * `position` sits beside `vector` rather than replacing it: they declare the
+ * same type and differ only in which shape of literal is easier to write
+ * (`worldLetPosition`).
+ */
+/** The name of the drawer a definition's own block is built out of. */
+export const SIGNATURE_DRAWER = 'Block';
+
+const LET_BLOCKS: string[] = [
+  'world_let_number',
+  'world_let_word',
+  'world_let_boolean',
+  'world_let_vector',
+  'world_let_position',
+  'world_let_actor',
+];
+
 const worldLetPosition = defineBlock({
   type: 'world_let_position',
   message0: 'let position %1 x %2 y %3',
@@ -3737,15 +3809,28 @@ const worldVectorMath = defineBlock({
 // had no expression that could say it.
 const worldVectorOf = defineBlock({
   type: 'world_vector_of',
-  message0: 'vector x %1 y %2',
+  // NO NOUN IN FRONT of it. It said "vector x ⟨⟩ y ⟨⟩", and the word was wrong
+  // as often as it was right: the same two numbers are a place far more often
+  // than they are a direction, and this block is now the SHADOW a position
+  // argument wears (`typedValueInputs`, case 'position') — where a learner is
+  // filling in where something goes and the word names a type they did not ask
+  // about. The x and the y are what it is; what they add up to is decided by
+  // the socket it is plugged into, which is the one thing here that knows.
+  message0: 'x %1 y %2',
   args0: [
     {type: 'input_value', name: 'X', check: 'Number'},
     {type: 'input_value', name: 'Y', check: 'Number'},
   ],
   inputsInline: true,
   output: 'Vector',
+  // …which it did not, until a position argument started using it as one. The
+  // shadows below were registered and never applied, so this block came out of
+  // the toolbox with two EMPTY sockets rather than a zero in each.
+  extensions: [valueShadowExtension],
   style: 'location_blocks',
-  tooltip: 'A vector built from an x and a y value.',
+  tooltip:
+    'A place or a direction, built from an x and a y. Anywhere a vector is ' +
+    'wanted, this is one.',
   generator: {
     javascript(block, generator) {
       const x = generator.valueToCode(block, 'X', Order.NONE) || '0';
@@ -9457,10 +9542,42 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
     // there is no such row anywhere else. Which of them a given surface
     // offers is `surfaceToolbox`'s business — a `define block` takes
     // `argument`, a `define event` takes `choice`.
-    name: 'Block',
+    name: SIGNATURE_DRAWER,
     blocks: [SIGNATURE_ARGUMENT, SIGNATURE_CHOICE, 'world_signature_text'],
   },
 ];
+
+/**
+ * That drawer as a `define block`'s OWN surface offers it, at the top.
+ *
+ * Two things are wrong with the drawer above when the thing in front of you is
+ * a block definition. It is last of twelve, so the blocks that build the
+ * signature — the only blocks that surface exists for — are the hardest ones
+ * there to find. And it leads with `argument`, which asks a learner to pick a
+ * type out of a dropdown before they can name anything.
+ *
+ * So this one leads with the `let` blocks. A `let` in the arguments row
+ * declares an argument: `let number ⟨amount⟩ be ⟨5⟩` is an argument called
+ * `amount`, a number, five unless the caller says otherwise. That is the same
+ * block, the same field and the same name a body would use to make a working
+ * value, saying the same thing one scope out — which is the point, because an
+ * argument IS a variable the caller binds, and the body reads it with exactly
+ * the getter it would read a local with.
+ *
+ * `argument` stays, below them, and is not redundant: a `let` is one block per
+ * flavour and there is no flavour for a parameter typed by an ENUM or by a
+ * `kind`. Nine of the parameters in the rules this lab ships are enums and two
+ * are kinds, so the block that can say those is not one to withdraw — it is
+ * one to stop leading with.
+ *
+ * `choice` is left out. It belongs to `define event`, whose argument is a
+ * filter rather than an input, and whose surface offers this drawer and
+ * nothing else (`toolboxForSurface`).
+ */
+export const SIGNATURE_CATEGORY: ToolboxCategory = {
+  name: SIGNATURE_DRAWER,
+  blocks: [...LET_BLOCKS, 'world_signature_text', SIGNATURE_ARGUMENT],
+};
 const BUILTIN_RULE_CATEGORIES: ToolboxCategory[] = AUTHORING_RULES.map(
   ruleCategory,
 ).filter(category => category.blocks.length > 0);
@@ -9707,14 +9824,7 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
       // had nowhere to put it but on the ACTOR — scratch space in the
       // inspector for a number that means nothing between two frames
       // (`localDeclaration`).
-      'world_let_number',
-      'world_let_word',
-      'world_let_boolean',
-      'world_let_vector',
-      // …and the same vector said as two numbers, which is what a PLACE is
-      // easier to write (`world_let_position`).
-      'world_let_position',
-      'world_let_actor',
+      ...LET_BLOCKS,
       // …and the pair that READS and WRITES one. A getter dragged from here
       // names nothing yet and says so — `???` — because there is no place in
       // the flyout for it to have a scope, and the names it will be able to

@@ -13,7 +13,11 @@ import {
   SCOPED_DEFAULT_EXTENSION,
   scopedVariableDefaultExtension,
 } from '../extensions/scopedVariableDefault';
-import {SCOPED_VARIABLE_FIELD, UNNAMED} from '../fields/scopedVariable';
+import {
+  markPreviewWorkspace,
+  SCOPED_VARIABLE_FIELD,
+  UNNAMED,
+} from '../fields/scopedVariable';
 import {
   ActorVariable,
   ListVariable,
@@ -204,6 +208,24 @@ describe('a name the block cannot see', () => {
     getter.setFieldValue(seen.getId(), 'VAR');
 
     expect(getter.getField('VAR')!.getText()).toBe('tally');
+  });
+
+  it('draws what it holds in a `define block`’s preview', () => {
+    // A preview is a PICTURE of the block a definition will add, with a getter
+    // in each socket naming the argument that goes there
+    // (`FieldBlockPreview`). Those getters are a sample in exactly the sense a
+    // flyout's are — nobody runs them, and there is no program around them to
+    // be in the scope of — but they are not in a flyout, so the scope walk
+    // found nothing and every parameter in every preview drew `???` while the
+    // field underneath held the right variable all along.
+    markPreviewWorkspace(workspace);
+    const amount = workspace
+      .getVariableMap()
+      .createVariable('amount', 'Number');
+    const getter = workspace.newBlock(GETTER);
+    getter.setFieldValue(amount.getId(), 'VAR');
+
+    expect(getter.getField('VAR')!.getText()).toBe('amount');
   });
 
   it('can be cleared by choosing `???`', () => {

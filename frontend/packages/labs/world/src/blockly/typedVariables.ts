@@ -146,7 +146,16 @@ export const paramFlavour = (type: string): TypedVariable => {
   // A KIND parameter is a string parameter for the same reason an enum one is:
   // what the body is handed is the module path of the kind that was chosen, and
   // the dropdown is about what may be chosen rather than about what arrives.
-  const wanted = enumRefOfParamType(type) || type === 'kind' ? 'string' : type;
+  // …and a POSITION parameter is a vector parameter: the type says how the
+  // call site is drawn — an x and a y rather than an arrow grid
+  // (`typedValueInputs`) — and what arrives is a vector either way, read with
+  // the vector getter.
+  const wanted =
+    enumRefOfParamType(type) || type === 'kind'
+      ? 'string'
+      : type === 'position'
+        ? 'vector'
+        : type;
   return (PARAM_FLAVOURS.find(f => f.type === wanted) ?? PARAM_FLAVOURS[0])
     .variable;
 };

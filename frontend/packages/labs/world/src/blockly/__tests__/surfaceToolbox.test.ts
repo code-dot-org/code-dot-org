@@ -206,3 +206,63 @@ describe('an event surface', () => {
     expect(shown).not.toContain('world_signature_choice');
   });
 });
+
+describe('a `define block`’s own surface', () => {
+  const strip = () => toolboxForSurface(palette(), 'block');
+
+  it('opens with the drawer the signature is written from', () => {
+    // The complaint this answers: the blocks that build a signature are the
+    // only blocks that surface exists for, and they were last of twelve.
+    expect(names(strip())[0]).toBe('Block');
+  });
+
+  it('leads that drawer with the `let` blocks', () => {
+    // An argument IS a variable the caller binds, so the block that declares
+    // one is the block a body already declares a local with — no type dropdown
+    // to work through before anything can be named.
+    const drawer = (strip() as ToolboxCategory[])[0];
+
+    expect(drawer.blocks?.slice(0, 4)).toEqual([
+      'world_let_number',
+      'world_let_word',
+      'world_let_boolean',
+      'world_let_vector',
+    ]);
+  });
+
+  it('keeps `argument` for the types a `let` cannot say', () => {
+    // Nine of the parameters in the rules this lab ships are enums and two are
+    // kinds. There is no `let` for either, so the block that can say them is
+    // one to stop LEADING with rather than one to withdraw.
+    const drawer = (strip() as ToolboxCategory[])[0];
+
+    expect(drawer.blocks).toContain('world_signature_argument');
+    expect(drawer.blocks).toContain('world_signature_text');
+  });
+
+  it('moves that drawer rather than adding a second one', () => {
+    // It is already in the list. Prepending would offer the same blocks twice
+    // under one name, and a learner would find whichever Blockly drew first.
+    expect(names(strip()).filter(name => name === 'Block')).toHaveLength(1);
+  });
+
+  it('is a body in every other respect', () => {
+    // Same declarations refused, same implementation blocks offered — the only
+    // difference is which drawer comes first.
+    const offer = offered(strip());
+
+    expect(offer).not.toContain('world_rule_property');
+    expect(offer).not.toContain('world_rule_block');
+    expect(offer).toContain('world_return');
+    expect(offer).toContain('controls_if');
+  });
+
+  it('offers `position`, which is its own kind of argument', () => {
+    // Not a spelling of `vector`: its call site is a vector socket wearing
+    // `vector x ⟨⟩ y ⟨⟩` as a shadow, so it is typed as an x and a y and still
+    // takes any vector dropped on it (`typedValueInputs`, case 'position').
+    const drawer = (strip() as ToolboxCategory[])[0];
+
+    expect(drawer.blocks).toContain('world_let_position');
+  });
+});

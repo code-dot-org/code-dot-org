@@ -114,6 +114,52 @@ describe('a designed block', () => {
     expect(call?.message0).toMatch(/^push %\d toward %\d$/);
   });
 
+  it('gives a position parameter one socket, typed as an x and a y', () => {
+    // The third way to say a two-number value, and the only one that gives up
+    // nothing. `vector` is one socket that takes any vector, but its literal
+    // is an arrow grid — a direction, not a place. `point` is an x and a y a
+    // learner can type, but they are two INDEPENDENT number sockets, so
+    // nothing reporting a whole vector can be dropped in.
+    //
+    // A position is a VECTOR socket wearing `vector x ⟨⟩ y ⟨⟩` as its shadow:
+    // typed as two numbers, and still replaceable by anything that reports a
+    // vector. It is what `let position` in an arguments row declares.
+    const meta = designed(
+      [
+        {kind: 'label', text: 'go to'},
+        {kind: 'param', type: 'position', var: 'p', default: {x: 3, y: 4}},
+      ],
+      'none',
+      [{id: 'p', name: 'where', type: 'Vector'}],
+    );
+    const {blocks} = paletteFor(meta);
+    const type = 'world_do_Push_GoToAction';
+    const call = blocks.find(b => b.type === type) as
+      | {args0?: Array<{type: string; name?: string; check?: string}>}
+      | undefined;
+
+    // ONE socket, and it takes a vector — not two number sockets.
+    expect(call?.args0).toHaveLength(1);
+    expect(call?.args0?.[0]).toMatchObject({
+      type: 'input_value',
+      name: 'VALUE',
+      check: 'Vector',
+    });
+    // …wearing the x/y builder, with the author's default in each socket.
+    expect(shadowsFor(type)).toEqual([
+      {
+        name: 'VALUE',
+        shadow: {
+          type: 'world_vector_of',
+          inputs: {
+            X: {shadow: {type: 'math_number', fields: {NUM: 3}}},
+            Y: {shadow: {type: 'math_number', fields: {NUM: 4}}},
+          },
+        },
+      },
+    ]);
+  });
+
   it('gives an enum parameter the dropdown itself, not a socket', () => {
     // A parameter typed by an enum (specs/ENUMS.md) is a FIELD on the block:
     // the choices are the whole of what the argument can be, so there is

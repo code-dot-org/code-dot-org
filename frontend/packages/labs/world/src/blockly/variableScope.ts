@@ -22,6 +22,8 @@
 
 import type {Block, Workspace} from 'blockly';
 
+import {BODY_OWNER_ID} from './bodySurfaces';
+
 /**
  * A block that gives a name to something, and where that name reaches.
  *
@@ -83,6 +85,25 @@ export const BINDERS: Readonly<Record<string, Binder>> = {
 
 /** A `define block`'s parameters, which are variables its mutator manages. */
 const PARAMS_BLOCK = 'world_rule_block';
+
+/**
+ * Where a `define block`'s parameters reach, which is two places and was one.
+ *
+ * IN THE FILE the implementation sits in the head's `DO` mouth, so that is the
+ * input the names cover. ON A BODY SURFACE it does not: the surface hangs the
+ * implementation off the head's `next` (`bodySurfaces.bodyOf`), because a
+ * member's block is the heading of the page rather than a box drawn round it.
+ * The names have to follow it there, and until they did, every getter in every
+ * `define block` implementation offered `???` — the parameters were in scope
+ * of a mouth that surface leaves empty.
+ *
+ * ONLY THAT ONE HEAD gets the `next` chain, and the identity is what says so:
+ * `bodyOf` gives it {@link BODY_OWNER_ID}, and nothing else on any surface
+ * carries that id. On the INTERFACE the same `next` is the member list — what
+ * the rule declares after this one — so binding over it there would put one
+ * member's parameters in scope of the next member's body, which is a different
+ * bug and a quieter one.
+ */
 const PARAMS_OVER = 'DO';
 
 /** The variable ids a `define block` names as its parameters. */
@@ -100,7 +121,10 @@ function paramIds(block: Block): string[] {
 /** Every id `block` binds, and the inputs each binding reaches. */
 function bindingsOf(block: Block): {ids: string[]; over: readonly string[]} {
   if (block.type === PARAMS_BLOCK) {
-    return {ids: paramIds(block), over: [PARAMS_OVER]};
+    return {
+      ids: paramIds(block),
+      over: block.id === BODY_OWNER_ID ? [PARAMS_OVER, REST] : [PARAMS_OVER],
+    };
   }
   const binder = BINDERS[block.type];
   if (!binder) {

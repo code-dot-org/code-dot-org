@@ -63,6 +63,20 @@ export type PropertyType =
   | 'vector'
   | 'point'
   /**
+   * A vector a call site EDITS as an x and a y and accepts as a whole.
+   *
+   * Not a third two-number type — what arrives is a `Vector`, and every rule
+   * that reads one reads it the same way. It is the drawing that differs, and
+   * it is the only one of the three that gives up nothing: `vector`'s literal
+   * is an arrow grid, which says direction rather than place, and `point` is
+   * two independent number sockets that nothing reporting a vector can be
+   * plugged into (`blockly/domainBlocks.typedValueInputs`).
+   *
+   * Authored only, by `let position` in a `define block`'s arguments row. No
+   * engine rule declares one; they were written before there was a difference.
+   */
+  | 'position'
+  /**
    * Actors — one, several, or none (`ActorValue`).
    *
    * The kind that is not plain data, and the only one a rule may hold another

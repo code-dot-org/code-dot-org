@@ -755,13 +755,17 @@ export const BlocklyFileEditor = ({
       label: block?.getFieldValue('NAME') || designed || 'this',
       // `define event` has a surface but no implementation, so what it offers
       // is its phrasing and nothing else; a drawing's is a body plus the one
-      // drawer that can only be used there (`surfaceToolbox`).
+      // drawer that can only be used there; a `define block`'s is a body with
+      // the signature drawer moved to the front, because this is the only
+      // place a signature can be edited (`surfaceToolbox`).
       kind:
         block?.type === 'world_rule_event'
           ? 'event'
           : block?.type === 'world_define_drawing'
             ? 'drawing'
-            : 'body',
+            : block?.type === 'world_rule_block'
+              ? 'block'
+              : 'body',
     });
   }, []);
 

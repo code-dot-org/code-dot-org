@@ -127,6 +127,159 @@ export const itemTypeFor = (part: BlockPart): string => {
 };
 
 /**
+ * The `let` blocks that declare an argument, and what each one declares.
+ *
+ * A `let` in the arguments row IS a parameter: `let number ⟨amount⟩ be ⟨5⟩`
+ * says there is an input called `amount`, that it is a number, and that a call
+ * site left alone passes five. Which is the same sentence the block already
+ * said one scope in — a name, a type, a starting value — so the block a
+ * learner uses to make a working value in the body is the block they use to
+ * ask for one from the caller, and the body reads both with the same getter.
+ *
+ * WHY THE NAME IS BETTER HERE THAN ON `argument`. A `let`'s name field holds a
+ * real Blockly variable id (`fields/variableName`), so the argument is bound
+ * before the designer ever looks at it — where `argument` carries a name in a
+ * text field and a variable id smuggled alongside it (`varId_`), which only
+ * `buildArguments_` and `readArguments_` know how to keep together.
+ *
+ * `position` DECLARES ITS OWN TYPE, and that is worth saying because the
+ * first draft did not. It looked like a spelling of `vector` — the same value
+ * said as two numbers — which would have made it a spelling a signature had
+ * nowhere to record, so a `let position` would have come back as `let vector`
+ * the next time the surface opened. It is not a spelling. A `position`
+ * argument's call site is a vector socket wearing `vector x ⟨⟩ y ⟨⟩` as its
+ * shadow (`domainBlocks.typedValueInputs`): an x and a y to type into, and a
+ * socket that still takes any vector dropped on it. That is a different block
+ * from the one `vector` produces, so it is a different type, and the round
+ * trip is exact.
+ */
+const LET_ARGUMENTS: ReadonlyArray<{block: string; type: string}> = [
+  {block: 'world_let_number', type: 'number'},
+  {block: 'world_let_word', type: 'string'},
+  {block: 'world_let_boolean', type: 'boolean'},
+  {block: 'world_let_vector', type: 'vector'},
+  {block: 'world_let_position', type: 'position'},
+  {block: 'world_let_actor', type: 'actor'},
+];
+
+/** The field a `let` holds its variable in. */
+const LET_VAR_FIELD = 'VAR';
+
+/** The type a `let` block declares, or undefined if it is not one. */
+const letType = (type: string): string | undefined =>
+  LET_ARGUMENTS.find(entry => entry.block === type)?.type;
+
+/** …and the block that declares that type, for the types one can say. */
+const letBlockFor = (type: string): string | undefined =>
+  LET_ARGUMENTS.find(entry => entry.type === type)?.block;
+
+/** A literal a shadow holds, or undefined when the socket has something real in it. */
+const literalIn = (
+  item: Blockly.Block,
+  input: string,
+  read: (block: Blockly.Block) => unknown,
+): unknown => {
+  const value = item.getInputTargetBlock(input);
+  // ONLY A SHADOW. A default is what a call site starts with, so it has to be
+  // a value and not a calculation: a learner who plugs `⟨score⟩ + 1` into the
+  // row has written something the caller cannot be given, and the honest
+  // answer is that the argument has no default rather than a frozen number
+  // nobody typed.
+  return value?.isShadow() ? read(value) : undefined;
+};
+
+/**
+ * What a call site starts with, read off a `let`'s own value socket.
+ *
+ * Undefined where there is nothing to read: an actor has no literal to seed a
+ * socket with, and a socket somebody has plugged a real block into is not a
+ * default (see `literalIn`).
+ */
+const letDefault = (item: Blockly.Block, type: string): unknown => {
+  switch (type) {
+    case 'position': {
+      // Two sockets rather than one — this is the block that says a vector as
+      // an x and a y, which is the whole of why it has a type of its own.
+      const x = literalIn(item, 'X', block =>
+        Number(block.getFieldValue('NUM')),
+      );
+      const y = literalIn(item, 'Y', block =>
+        Number(block.getFieldValue('NUM')),
+      );
+      return x === undefined || y === undefined ? undefined : {x, y};
+    }
+    case 'number':
+      return literalIn(item, 'VALUE', block =>
+        Number(block.getFieldValue('NUM')),
+      );
+    case 'string':
+      return literalIn(item, 'VALUE', block =>
+        String(block.getFieldValue('TEXT') ?? ''),
+      );
+    case 'boolean':
+      // A REAL BOOLEAN, not the word. Everything downstream tests the default
+      // for truth (`domainBlocks.typedValueInputs`), and the string "FALSE" is
+      // as true as any other non-empty string.
+      return literalIn(
+        item,
+        'VALUE',
+        block => block.getFieldValue('BOOL') === 'TRUE',
+      );
+    case 'vector':
+      return literalIn(item, 'VALUE', block => {
+        const value = block.getFieldValue('VECTOR') as {
+          x?: number;
+          y?: number;
+        } | null;
+        return value ? {x: Number(value.x), y: Number(value.y)} : undefined;
+      });
+    default:
+      return undefined;
+  }
+};
+
+/** Put a part's default back into the shadow a fresh `let` arrives with. */
+const seedLetDefault = (
+  item: Blockly.Block,
+  type: string,
+  value: unknown,
+): void => {
+  if (value === undefined) {
+    return;
+  }
+  if (type === 'position') {
+    const point = value as {x?: number; y?: number};
+    for (const [input, at] of [
+      ['X', point.x],
+      ['Y', point.y],
+    ] as const) {
+      const socket = item.getInputTargetBlock(input);
+      if (socket?.isShadow()) {
+        socket.setFieldValue(String(Number(at ?? 0)), 'NUM');
+      }
+    }
+    return;
+  }
+  const shadow = item.getInputTargetBlock('VALUE');
+  if (!shadow?.isShadow()) {
+    return;
+  }
+  if (type === 'number') {
+    shadow.setFieldValue(String(Number(value)), 'NUM');
+  } else if (type === 'string') {
+    shadow.setFieldValue(String(value), 'TEXT');
+  } else if (type === 'boolean') {
+    shadow.setFieldValue(value ? 'TRUE' : 'FALSE', 'BOOL');
+  } else if (type === 'vector') {
+    const point = value as {x?: number; y?: number};
+    shadow.setFieldValue(
+      {x: Number(point.x ?? 0), y: Number(point.y ?? 0)},
+      'VECTOR',
+    );
+  }
+};
+
+/**
  * The parameter type an item block stands for, or undefined if it is a label.
  *
  * Reads the BLOCK, not just its type, because the choice item carries the enum
@@ -147,6 +300,13 @@ export const paramTypeOf = (item: {
   if (item.type === SIGNATURE_CHOICE) {
     const ref = item.getFieldValue(ENUM_FIELD);
     return ref ? enumParamType(ref) : undefined;
+  }
+  // A `let` in the arguments row declares one (`LET_ARGUMENTS`). Its type is
+  // the block's own — a `let` is one block per flavour, which is exactly why
+  // it needs no dropdown.
+  const declared = letType(item.type);
+  if (declared) {
+    return declared;
   }
   return PARAM_FLAVOURS.map(flavour => flavour.type).find(
     type => item.type === `world_signature_${type}`,
@@ -402,11 +562,22 @@ const designer: Designer & ThisType<Blockly.BlockSvg & Designer> = {
           ? itemTypeFor(part)
           : part.kind === 'label'
             ? 'world_signature_text'
-            : SIGNATURE_ARGUMENT,
+            : // A `let` for the types one can say, and `argument` for the rest
+              // — an enum-typed parameter and a `kind` have no `let`, and are
+              // what that block is still here for (`LET_ARGUMENTS`).
+              (letBlockFor(part.type) ?? SIGNATURE_ARGUMENT),
       );
       (item as Blockly.BlockSvg).initSvg?.();
       if (part.kind === 'label') {
         item.setFieldValue(part.text, TEXT_FIELD);
+      } else if (letType(item.type) !== undefined) {
+        // The variable this argument already is. `bindParts_` has run, so it
+        // exists; pointing the field at its id is the whole of the binding,
+        // and the field draws the name off the variable itself.
+        if (part.var) {
+          item.setFieldValue(part.var, LET_VAR_FIELD);
+        }
+        seedLetDefault(item, part.type, part.default);
       } else if (item.type === SIGNATURE_CHOICE) {
         // Which enum, before the name: the choice item's dropdown is what
         // makes it this parameter rather than a differently-typed one.
@@ -449,7 +620,25 @@ const designer: Designer & ThisType<Blockly.BlockSvg & Designer> = {
     let item = connection.targetBlock();
     while (item) {
       const param = paramTypeOf(item);
-      if (param) {
+      const declared = letType(item.type);
+      if (param && declared !== undefined) {
+        // A `let`: the variable IS the argument. Its id comes off the name
+        // field rather than off a property beside it, and its name off the
+        // variable, so a rename made anywhere — the field, a getter's menu —
+        // is the same rename.
+        const id = item.getFieldValue(LET_VAR_FIELD) ?? '';
+        const variable = id
+          ? item.workspace.getVariableMap().getVariableById(id)
+          : null;
+        const fallback = letDefault(item, param);
+        parts.push({
+          kind: 'param',
+          type: param,
+          var: id,
+          name: variable?.getName() ?? '',
+          ...(fallback === undefined ? {} : {default: fallback}),
+        });
+      } else if (param) {
         const fallback = item.getField(DEFAULT_FIELD)
           ? (item.getFieldValue(DEFAULT_FIELD) ?? undefined)
           : undefined;

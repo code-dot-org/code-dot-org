@@ -27,6 +27,7 @@ import {enumOptions, enumRefOfParamType} from '../enums';
 import {paramFlavour} from '../typedVariables';
 
 import {beginGetterDrag} from './dragGetterOut';
+import {markPreviewWorkspace} from './scopedVariable';
 
 /**
  * What the design makes: a block to call, or an event's hat.
@@ -212,6 +213,10 @@ export class FieldBlockPreview extends Blockly.Field<string> {
     // The host's own options, so the drawing gets the same renderer, theme and
     // constants — otherwise it is the right shape in the wrong colors.
     this.mini = new Blockly.WorkspaceSvg(host.options);
+    // A picture, not a program: the getters in its sockets name the arguments
+    // and are read by nobody, so they draw what they hold rather than what
+    // some surrounding scope offers (`markPreviewWorkspace`).
+    markPreviewWorkspace(this.mini);
     const canvas = this.mini.createDom() as SVGGElement;
     // The drawing is inert: every press belongs to the overlay below, which
     // knows what to do with it. See the stylesheet registered above — this class

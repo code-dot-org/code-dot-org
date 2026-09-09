@@ -18,6 +18,7 @@
 import * as Blockly from 'blockly/core';
 import {beforeEach, describe, expect, it} from 'vitest';
 
+import {BODY_OWNER_ID} from '../bodySurfaces';
 import {idsInScope} from '../variableScope';
 
 /**
@@ -186,5 +187,73 @@ describe('what a block can see', () => {
 
     expect(idsInScope(below).has(free.getId())).toBe(true);
     expect(idsInScope(elsewhere).has(free.getId())).toBe(true);
+  });
+});
+
+describe('a `define block`’s parameters', () => {
+  /** The real type, with only the parts the scope rule reads. */
+  const defineHost = () => {
+    if (!Blockly.Blocks['world_rule_block']) {
+      Blockly.defineBlocksWithJsonArray([
+        {
+          type: 'world_rule_block',
+          message0: 'define block %1 do %2',
+          args0: [
+            {type: 'input_statement', name: 'ARGUMENTS'},
+            {type: 'input_statement', name: 'DO'},
+          ],
+          previousStatement: true,
+          nextStatement: true,
+        },
+      ]);
+    }
+  };
+
+  /** A head carrying one parameter, and a reader wherever the caller says. */
+  const withHead = (id: string, place: 'DO' | 'next') => {
+    defineMessages();
+    define();
+    defineHost();
+    const workspace = new Blockly.Workspace();
+    const where = workspace.getVariableMap().createVariable('where', 'Number');
+    const head = workspace.newBlock('world_rule_block', id);
+    // The parts a `define block` carries; the scope rule reads them off
+    // `saveExtraState`, which the real mutator provides.
+    (head as unknown as {saveExtraState: () => unknown}).saveExtraState =
+      () => ({
+        parts: [
+          {kind: 'param', type: 'number', var: where.getId(), name: 'where'},
+        ],
+      });
+    const reader = workspace.newBlock('reader');
+    if (place === 'DO') {
+      head.getInput('DO')?.connection?.connect(reader.previousConnection!);
+    } else {
+      head.nextConnection?.connect(reader.previousConnection!);
+    }
+    return {reader, id: where.getId()};
+  };
+
+  it('reach the body in the mouth it sits in, in the file', () => {
+    const {reader, id} = withHead('someMember', 'DO');
+    expect(idsInScope(reader).has(id)).toBe(true);
+  });
+
+  it('reach the body a SURFACE hangs off the head, which is its `next`', () => {
+    // The bug this closes, and it made every getter in every `define block`
+    // implementation draw `???`. A body surface does not nest the
+    // implementation in the head's mouth — it chains it below
+    // (`bodySurfaces.bodyOf`) — so parameters bound only over `DO` were in
+    // scope of a mouth that surface leaves empty.
+    const {reader, id} = withHead(BODY_OWNER_ID, 'next');
+    expect(idsInScope(reader).has(id)).toBe(true);
+  });
+
+  it('do NOT reach what follows the head anywhere else', () => {
+    // On the interface that same `next` is the member list — what the rule
+    // declares AFTER this one — so one member's parameters must not be in
+    // scope of the next member's body. The identity is what tells them apart.
+    const {reader, id} = withHead('someMember', 'next');
+    expect(idsInScope(reader).has(id)).toBe(false);
   });
 });

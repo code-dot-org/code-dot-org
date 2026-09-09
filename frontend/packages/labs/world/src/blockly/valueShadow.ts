@@ -28,6 +28,18 @@ export interface ShadowSpec {
   // A field's serialized state — usually a scalar, but a custom field (e.g. the
   // vector field) saves a structured value like `{x, y}`.
   fields?: Record<string, unknown>;
+  /**
+   * Shadows on the shadow's OWN sockets, as Blockly's block state writes them:
+   * `{X: {shadow: {type: 'math_number', fields: {NUM: 3}}}}`.
+   *
+   * A shadow is seeded with `setShadowState`, which takes a whole serialized
+   * block and has always been able to nest; this is the spec catching up with
+   * it. What wanted it is a socket that should be EDITED one way and FILLED
+   * another — a position argument is edited as an x and a y and accepts any
+   * vector, which is one `world_vector_of` shadow with a number in each of its
+   * sockets, and was not sayable while a spec was one block deep.
+   */
+  inputs?: Blockly.serialization.blocks.State['inputs'];
 }
 
 /**

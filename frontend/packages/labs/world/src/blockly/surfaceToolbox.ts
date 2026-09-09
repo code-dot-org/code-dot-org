@@ -20,7 +20,11 @@
 import type {Toolbox, ToolboxCategory} from '@code-dot-org/blockly';
 
 import {HIDE_BODIES} from './bodySurfaces';
-import {DRAWING_CATEGORY} from './domainBlocks';
+import {
+  DRAWING_CATEGORY,
+  SIGNATURE_CATEGORY,
+  SIGNATURE_DRAWER,
+} from './domainBlocks';
 
 /**
  * Which surface a toolbox is being built for.
@@ -36,11 +40,14 @@ import {DRAWING_CATEGORY} from './domainBlocks';
  * bound by the closure a drawing generates and nowhere else — so this is the
  * only surface that offers them, and every file's toolbox is one drawer
  * shorter for it.
+ *
+ * `block` is a body with one drawer MOVED. A `define block`'s own surface is
+ * the only place its signature can be edited, and the blocks that edit one sat
+ * last of twelve; here they lead, and they lead with the `let` blocks
+ * (`domainBlocks.SIGNATURE_CATEGORY`). Everything else about it is a body:
+ * same declarations refused, same implementation blocks offered.
  */
-export type Surface = 'interface' | 'body' | 'event' | 'drawing';
-
-/** The drawer holding what a definition's own block is made of. */
-const SIGNATURE_DRAWER = 'Block';
+export type Surface = 'interface' | 'body' | 'event' | 'drawing' | 'block';
 
 /** What each surface writes its arguments in. */
 const ARGUMENT_BLOCK = 'world_signature_argument';
@@ -108,7 +115,7 @@ const wanted = (surface: Surface, entry: unknown): boolean => {
     // typed `argument` is not offered rather than offered and then refused.
     return type === CHOICE_BLOCK || type === 'world_signature_text';
   }
-  if (surface === 'body') {
+  if (surface === 'body' || surface === 'block') {
     // …and the choice item is the event's alone: a `define block` says the
     // same thing by picking an enum in `argument`'s type dropdown.
     return !DECLARATIONS.has(type) && type !== CHOICE_BLOCK;
@@ -141,7 +148,19 @@ export function toolboxForSurface(toolbox: Toolbox, surface: Surface): Toolbox {
       ? categories.filter(category => category.name === SIGNATURE_DRAWER)
       : surface === 'drawing'
         ? [DRAWING_CATEGORY, ...categories]
-        : categories;
+        : surface === 'block'
+          ? // MOVED, not added: the signature drawer is already in the list, so
+            // putting a second one at the front would offer the same blocks
+            // twice under one name. The one at the front is the `define
+            // block`'s version of it — the `let` blocks first — and the one
+            // taken out is the general one.
+            [
+              SIGNATURE_CATEGORY,
+              ...categories.filter(
+                category => category.name !== SIGNATURE_DRAWER,
+              ),
+            ]
+          : categories;
   return chosen
     .map(category => {
       if (!category.blocks) {
