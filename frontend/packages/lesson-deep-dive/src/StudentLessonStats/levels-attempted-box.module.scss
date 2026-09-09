@@ -1,5 +1,3 @@
-$purple: hsl(271deg 58% 65%);
-
 @property --levels-count {
   syntax: '<integer>';
   inherits: false;
@@ -10,59 +8,54 @@ $purple: hsl(271deg 58% 65%);
   from {
     --levels-count: 0;
   }
+
   to {
     --levels-count: var(--target-count);
   }
 }
 
-.container {
+.body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  color: #fff;
+  gap: 24px;
 }
 
-.label {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgba(255 255 255 / 0.5);
-  margin-bottom: 16px;
-}
-
-.statBlock {
+.metricRow {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
+  align-items: center;
+  gap: 16px;
 }
 
 .bigNumber {
   font-family: var(--font-family-main);
-  font-size: clamp(7rem, 20vw, 14rem);
-  font-weight: 800;
-  line-height: 0.9;
-  color: $purple;
+  font-size: clamp(5rem, 18vw, 7.5rem);
+  font-weight: 900;
+  line-height: 1;
+  color: #000;
   counter-reset: levels-count var(--levels-count);
   animation: count-up 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  flex-shrink: 0;
 
   &::after {
     content: counter(levels-count);
   }
 }
 
-.statHeading {
+.caption {
   font-family: var(--font-family-main);
-  font-size: clamp(2rem, 6vw, 3.5rem);
-  font-weight: 800;
-  color: #fff;
-  line-height: 1;
+  font-size: clamp(0.8rem, 2.5vw, 0.95rem);
+  font-weight: 500;
+  color: rgb(0 0 0 / 0.65);
+  line-height: 1.3;
   margin: 0;
 }
 
-.statSubtitle {
-  font-size: 1rem;
-  color: rgba(255 255 255 / 0.55);
-  margin-top: 8px;
+.headline {
+  font-family: var(--font-family-main);
+  font-size: clamp(2rem, 7vw, 3rem);
+  font-weight: 900;
+  line-height: 0.95;
+  color: #000;
+  text-transform: uppercase;
+  margin: 0;
 }

@@ -1,6 +1,6 @@
 import {
+  LessonSummaryCard,
   LevelsAttemptedBox,
-  PersonalizedWelcomeBox,
   PreReviewBox,
   PreSkillsCheck,
   TimeSpentBox,
@@ -12,7 +12,6 @@ import React, {FC, useCallback, useState} from 'react';
 
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
 
 import FizzyButton from './FizzyButton';
@@ -25,10 +24,10 @@ import styles from './lesson-deep-dive-container.module.scss';
 
 const BOX_IDS = [
   'welcome',
-  'personalized-welcome',
   'levels-attempted',
   'time-spent',
   'validated-levels',
+  'lesson-summary',
   'reflection',
   'pre-review',
   'intervention',
@@ -36,6 +35,26 @@ const BOX_IDS = [
   'skills-check',
   'tutor-summary',
 ] as const;
+
+// Screens that use the story card layout — they handle their own navigation
+// and progress indicator internally.
+const STORY_SCREENS = new Set([
+  'welcome',
+  'levels-attempted',
+  'time-spent',
+  'validated-levels',
+  'lesson-summary',
+]);
+
+const STORY_SCREEN_ORDER = [
+  'welcome',
+  'levels-attempted',
+  'time-spent',
+  'validated-levels',
+  'lesson-summary',
+] as const;
+
+const TOTAL_STORY_SLIDES = STORY_SCREEN_ORDER.length;
 
 interface LessonDeepDiveContainerProps {
   lessonDeepDiveData: LessonDeepDiveData;
@@ -48,10 +67,6 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
   const [reflectionData, setReflectionData] = useState<ReflectionData | null>(
     null
   );
-  const displayName = useAppSelector(
-    state => state.currentUser.displayName as string | undefined
-  );
-
   const goToNext = useCallback(() => {
     setCurrentIndex(i => Math.min(i + 1, BOX_IDS.length - 1));
   }, []);
@@ -114,19 +129,24 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
     return null;
   }
 
+  const currentScreenId = BOX_IDS[currentIndex];
+  const isStoryScreen = STORY_SCREENS.has(currentScreenId);
   const isFirst = currentIndex === 0;
   const isLast = currentIndex === BOX_IDS.length - 1;
 
+  // 1-indexed slide position within the story sequence.
+  const currentStorySlide =
+    (STORY_SCREEN_ORDER as readonly string[]).indexOf(currentScreenId) + 1;
+
   const renderBox = () => {
-    switch (BOX_IDS[currentIndex]) {
+    switch (currentScreenId) {
       case 'welcome':
-        return <WelcomeBox onNext={goToNext} />;
-      case 'personalized-welcome':
         return (
-          <PersonalizedWelcomeBox
+          <WelcomeBox
             lessonName={lessonDeepDiveData.lessonName}
-            unitLabel={lessonDeepDiveData.unitLabel}
-            displayName={displayName}
+            currentSlide={currentStorySlide}
+            totalSlides={TOTAL_STORY_SLIDES}
+            onNext={goToNext}
           />
         );
       case 'levels-attempted':
@@ -137,6 +157,9 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
               lessonDeepDiveData.progressCounts.levelsAttemptedCount
             }
             levelsTotal={lessonDeepDiveData.progressCounts.levelsTotalCount}
+            currentSlide={currentStorySlide}
+            totalSlides={TOTAL_STORY_SLIDES}
+            onNext={goToNext}
           />
         );
       case 'time-spent':
@@ -144,6 +167,9 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
           <TimeSpentBox
             lessonName={lessonDeepDiveData.lessonName}
             timeSpentSeconds={lessonDeepDiveData.timeSpentSeconds}
+            currentSlide={currentStorySlide}
+            totalSlides={TOTAL_STORY_SLIDES}
+            onNext={goToNext}
           />
         );
       case 'validated-levels':
@@ -159,6 +185,29 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
             validatedLevelsIncorrectCount={
               lessonDeepDiveData.progressCounts.validatedLevelsIncorrectCount
             }
+            currentSlide={currentStorySlide}
+            totalSlides={TOTAL_STORY_SLIDES}
+            onNext={goToNext}
+          />
+        );
+      case 'lesson-summary':
+        return (
+          <LessonSummaryCard
+            lessonName={lessonDeepDiveData.lessonName}
+            levelsAttempted={
+              lessonDeepDiveData.progressCounts.levelsAttemptedCount
+            }
+            levelsTotal={lessonDeepDiveData.progressCounts.levelsTotalCount}
+            timeSpentSeconds={lessonDeepDiveData.timeSpentSeconds}
+            validatedCorrect={
+              lessonDeepDiveData.progressCounts.validatedLevelsCorrectCount
+            }
+            validatedTotal={
+              lessonDeepDiveData.progressCounts.validatedLevelsTotalCount
+            }
+            currentSlide={currentStorySlide}
+            totalSlides={TOTAL_STORY_SLIDES}
+            onNext={goToNext}
           />
         );
       case 'reflection':
@@ -218,14 +267,16 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
 
   return (
     <div className={styles.container} data-theme={'Dark'}>
-      <div className={styles.progressBar} aria-hidden="true">
-        <div
-          className={styles.progressFill}
-          style={{
-            width: `${(currentIndex / (BOX_IDS.length - 1)) * 100}%`,
-          }}
-        />
-      </div>
+      {!isStoryScreen && (
+        <div className={styles.progressBar} aria-hidden="true">
+          <div
+            className={styles.progressFill}
+            style={{
+              width: `${(currentIndex / (BOX_IDS.length - 1)) * 100}%`,
+            }}
+          />
+        </div>
+      )}
       <div className={styles.topNav}>
         <span className={styles.tutorWordmark}>Tutor+</span>
         {!isFirst && (
@@ -256,22 +307,25 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
 
       <div className={styles.box}>
         {renderBox()}
-        <div className={styles.dotsNav} aria-hidden="true">
-          {BOX_IDS.map((_, i) => (
-            <div
-              key={i}
-              className={`${styles.dot} ${
-                i === currentIndex ? styles.dotActive : ''
-              }`}
-            />
-          ))}
-        </div>
+        {!isStoryScreen && (
+          <div className={styles.dotsNav} aria-hidden="true">
+            {BOX_IDS.map((_, i) => (
+              <div
+                key={i}
+                className={`${styles.dot} ${
+                  i === currentIndex ? styles.dotActive : ''
+                }`}
+              />
+            ))}
+          </div>
+        )}
       </div>
 
       {!isLast &&
-        BOX_IDS[currentIndex] !== 'intervention' &&
-        BOX_IDS[currentIndex] !== 'pre-skills-check' &&
-        BOX_IDS[currentIndex] !== 'skills-check' && (
+        !isStoryScreen &&
+        currentScreenId !== 'intervention' &&
+        currentScreenId !== 'pre-skills-check' &&
+        currentScreenId !== 'skills-check' && (
           <div className={styles.bottomNav}>
             <FizzyButton
               onClick={handleContinue}

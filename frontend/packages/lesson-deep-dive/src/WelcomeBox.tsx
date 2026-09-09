@@ -1,44 +1,40 @@
 import {type FC} from 'react';
 
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import RecapStoryCard from './RecapStoryCard';
 
 import styles from './welcome-box.module.scss';
 
 interface WelcomeBoxProps {
+  lessonName: string;
+  currentSlide: number;
+  totalSlides: number;
   onNext?: () => void;
 }
 
-const WelcomeBox: FC<WelcomeBoxProps> = ({onNext}) => (
-  <div className={styles.container}>
-    <div className={styles.headline}>
-      <span>{"Let's see how you"}</span>
-      <div className={styles.wordWindow}>
-        <div className={styles.wordTrack}>
-          <div className={`${styles.word} ${styles.wordCoded}`}>coded</div>
-          <div className={`${styles.word} ${styles.wordPrompted}`}>
-            prompted
-          </div>
-          <div className={`${styles.word} ${styles.wordDebugged}`}>
-            debugged
-          </div>
-          <div className={`${styles.word} ${styles.wordCreated}`}>created</div>
-          <div className={`${styles.word} ${styles.wordPersisted}`}>
-            persisted
-          </div>
-        </div>
-      </div>
-      <div className={styles.todayLine}>
-        <span>today</span>
-        <FontAwesomeV6Icon iconName={'sparkle'} />
-      </div>
+const WelcomeBox: FC<WelcomeBoxProps> = ({
+  lessonName,
+  currentSlide,
+  totalSlides,
+  onNext,
+}) => (
+  <RecapStoryCard
+    gradient="linear-gradient(to bottom, #38C8F8, #D0EFFC)"
+    lessonLabel={`${lessonName} Recap`}
+    currentSlide={currentSlide}
+    totalSlides={totalSlides}
+    onSkip={onNext}
+  >
+    <div className={styles.body}>
+      <h2 className={styles.headline}>
+        {"THAT'S"}
+        <br />
+        {'A WRAP'}
+      </h2>
+      <p className={styles.subtitle}>
+        {"Let's take a look at how the lesson went."}
+      </p>
     </div>
-    {onNext && (
-      <button type="button" className={styles.letsGoButton} onClick={onNext}>
-        {"Let's go"}
-        <FontAwesomeV6Icon iconName={'arrow-right'} />
-      </button>
-    )}
-  </div>
+  </RecapStoryCard>
 );
 
 export default WelcomeBox;
