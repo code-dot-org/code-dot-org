@@ -79,6 +79,9 @@ class DCDOBase < DynamicConfigBase
       # Controls whether the output image goes through the additional LLM-as-judge safety layer.
       # Azure image moderation still runs when this is false.
       'aichat-output-image-llm-safety-judge-enabled': DCDO.get('aichat-output-image-llm-safety-judge-enabled', true),
+      # Controls whether Sprite Lab in Lab2's image generation runs the prompt and
+      # picture LLM safety judges. Azure image moderation still runs when this is false.
+      'spritelab-lab2-image-safety-enabled': DCDO.get('spritelab-lab2-image-safety-enabled', true),
       'frontend-observability-enabled': DCDO.get('frontend-observability-enabled', false),
       'browser-events-enabled': DCDO.get('browser-events-enabled', true),
       'onboarding-enabled': DCDO.get('onboarding-enabled', false),

@@ -16,14 +16,15 @@ import {
 import {findOpaqueBounds} from '@cdo/apps/p5lab/spritelab/lab2/imageTrim';
 import {createUuid} from '@cdo/apps/utils';
 
+import {bytesToDataURI} from './encoding';
 import {
-  bytesToDataURI,
   GeneratedImageResult,
   RawImage,
   rawImageToBlob,
   requestImage,
   styleClause,
 } from './imageGeneration';
+import {checkImageSafety, checkPromptSafety, markHandled} from './imageSafety';
 import {chooseKeyColor, KeyColor} from './keyColor';
 import {
   CHARACTER_SET_IMAGE_SIZE,
@@ -286,6 +287,14 @@ export async function generateCharacterSet(
   const previewURI = async (blob: Blob) =>
     bytesToDataURI(new Uint8Array(await blob.arrayBuffer()), 'image/png');
 
+  // The prompt judge runs while the base picture draws; its verdict gates
+  // everything after (the posed frames embed the same student text).
+  const promptVerdict = markHandled(checkPromptSafety(prompt));
+  // Judge every generated frame. Each verdict is awaited before that
+  // frame's preview shows, so flagged pixels never reach the progress UI.
+  const judgeFrame = (raw: RawImage): Promise<void> =>
+    markHandled(checkImageSafety(raw));
+
   onProgress?.({done: 0, total, label: 'the character'});
   const base = await requestFrameWithRetry(
     basePrompt(prompt, options.style, key),
@@ -296,8 +305,13 @@ export async function generateCharacterSet(
       model: getCharacterSetImageModel(),
     }
   );
+  await promptVerdict;
+  const baseVerdict = judgeFrame(base);
   const baseURI = bytesToDataURI(base.uint8Array, base.mediaType);
   const baseKeyed = await keyFrame(base);
+  // Also gates the posed frames: a flagged base costs one generation, not
+  // five.
+  await baseVerdict;
   let done = 1;
   let preview = await previewURI(baseKeyed);
   onProgress?.({done, total, label: 'the character', preview});
@@ -316,7 +330,9 @@ export async function generateCharacterSet(
           model: getCharacterSetImageModel(),
         }
       );
+      const verdict = judgeFrame(raw);
       const keyed = await keyFrame(raw);
+      await verdict;
       done++;
       preview = await previewURI(keyed);
       // The posed frames finish in no particular order; the label names
@@ -327,6 +343,7 @@ export async function generateCharacterSet(
   );
 
   onProgress?.({done: total, total, label: 'assembling', preview});
+
   // Strip order: the second idle, the base between the ranges that share
   // it, then the walk and jump frames (CHARACTER_STRIP_POSES).
   const stripFrames = [posed[0], baseKeyed, ...posed.slice(1)];
