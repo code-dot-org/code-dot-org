@@ -27,8 +27,9 @@ type OpenSaveToBackpackPromptArgsType = {
   ) => void;
 };
 
-// The unified client is the only one that can list across backpacks. Duck-typed
-// rather than `instanceof` so the plain-object test mocks are recognized.
+// Check if the provided API is a UnifiedBackpackClientApi.
+// We check against the existence of getFileLists so we can use a
+// mocked UnifiedBackpackClientApi in tests.
 const isUnifiedApi = (
   api: SaveToBackpackApi
 ): api is UnifiedBackpackClientApi =>
