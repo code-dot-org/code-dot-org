@@ -255,7 +255,13 @@ module AichatAiHelper
     end
   end
 
-  def self.build_request_attributes(user_id, params)
+  # +store_messages+ is false when the row exists only to satisfy the
+  # aichat_events foreign key, as on the gateway path: nothing there reads the
+  # conversation back, since AichatRequestChatCompletionJob is what needs it and
+  # that job never runs. Leaving them empty is also what tells
+  # AichatEventsController the row was not executed here, so it must not compare
+  # a logged event against them.
+  def self.build_request_attributes(user_id, params, store_messages: true)
     context = params[:aichatContext] || {}
     model_customizations = params[:modelParameters] || {}
 
@@ -265,8 +271,8 @@ module AichatAiHelper
     {
       user_id:              user_id,
       model_customizations: model_customizations,
-      stored_messages:      successful_stored_chat_messages(params[:storedMessages]),
-      new_message:          params[:newMessage] || {},
+      stored_messages:      store_messages ? successful_stored_chat_messages(params[:storedMessages]) : [],
+      new_message:          store_messages ? (params[:newMessage] || {}) : {},
       level_id:             context[:currentLevelId],
       script_id:            context[:scriptId],
       project_id:           project_id_from_context(context),
