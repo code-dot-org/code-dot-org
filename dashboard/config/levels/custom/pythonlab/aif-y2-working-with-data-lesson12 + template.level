@@ -1,0 +1,87 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-08T00:58:37.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from helpers import read_column",
+          "folderId": "0",
+          "active": false
+        },
+        "1": {
+          "id": "1",
+          "name": "data.csv",
+          "contents": "",
+          "folderId": "0",
+          "active": false
+        },
+        "2": {
+          "id": "2",
+          "name": "games.csv",
+          "contents": "video_games,board_games\n2,4\n4,4\n3,3\n4,1\n5,2\n2,3\n2,5\n4,4",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "sleep.csv",
+          "contents": "sleep,homework\n5,3\n8,4\n8,3\n8,2\n6,5\n5,5\n10,1\n9,3\n4,6\n7,4\n7,3\n7,4",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "helpers.py",
+          "contents": "import csv\n\ndef read_column(csv_filename, column_name):\n    with open(csv_filename, newline='', encoding='utf-8') as f:\n        reader = csv.DictReader(f)\n        raw_values = [row[column_name] for row in reader]\n\n    def convert(value):\n        value = value.strip()\n        try:\n            return int(value)\n        except ValueError:\n            pass\n        try:\n            return float(value)\n        except ValueError:\n            pass\n        if value.lower() in ('true', 'false'):\n            return value.lower() == 'true'\n        return value\n\n    return [convert(v) for v in raw_values]",
+          "folderId": "0",
+          "active": false,
+          "type": "support"
+        },
+        "5": {
+          "id": "5",
+          "name": "summary.txt",
+          "contents": "",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-08 00:58:54 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-08 00:59:17 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-08 01:01:26 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-08 01:01:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-08 01:01:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-08 01:02:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-08 01:02:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-08 01:09:44 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-08 01:09:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

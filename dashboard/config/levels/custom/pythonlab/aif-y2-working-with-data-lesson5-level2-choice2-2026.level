@@ -1,0 +1,36 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-07T18:34:00.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "aif-y2-working-with-data-lesson5-choice2-2026 + template",
+    "long_instructions": "`csv.DictReader` reads data from a CSV as strings—not numbers. To analyze this data, you need to convert those strings to numbers.\r\n\r\n**☑️ Do This:**\r\n\r\n- Convert the strings from `csv.DictReader` into numbers.\r\n\r\n**💻 Coding Tip**\r\n\r\n- Remember the `float` function casts values to floats.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFQVtb/79n8xK5T0YDPwmG8LP5exwDow2ez7XFdLb\nOQTwpV+o0EA+1INedQHmDgitj6PfB8jVz41dxkAvnySQDi5cquZEZojOqmfR\nkW/nRP6xJEJ4WddPZ3H/htay4JNreRK2slVdvH9grT1MWDYyejN7k7KJpfjq\nJl75maiwdzuwYCLxZCTmjDqoKogDdiJMeMSgavNvaX8LBJRO4pCCvu5uo6/7\nEWrxw7+FQAvSEbsZvJhvOAVy/az3jVMIMPYFsJQO2eOxtCD7GyJLXNu6aEeM\n2UUoCcIblEqAqQdURz8NRif4ZTFlP56OOtKDm1dqPYYjzYVR8hFwneLMEBQW\n7eWkgQrjgtKYVVgjb+aRTDqL/WLoD4GetSDydGHKfoVeYXFCrEj73H5Bq+Iw\nUfuufoagFlSx2hqjCrMDF1TpE7PoyLRyz+h65Hx53kYnTwYSVyqqwheIFt26\nE1RSXjWq16w8/eu453a09LpZaYD8w19CEOqKU8mbYbEiU73ZFW2v06YtDGbl\nWlJxcTxRyhQkaUi541h8j+Dp14+KKXcLb2IBGN57wMIFX4opC9nqLRuh4ts+\nl2ecrLxWHO53OurkUJIaByl6s2w8Mh3lSxwhKRuSqwmKxQHVxYYhSIY18lfT\nf7If4Mgx2muYGtmPXOPz3AApGU5uthtYEPeX6od6Tb6vBtuYthmhhtGBEr1g\nBonVkVydqNv8LIU8LyRuDHk9PaPdImLsxbDMnQjrqgFP4ZyBbOm8flIKL7Vn\nDCqs/75eRfym4YOxStlTtfJWcc2dl38k2Q9NgZZCSkitELqaEAoY5bZCK+rM\nkDXjp6GGG6VpzHD/VLP39MWF7brFdwk4Tky3urXVq4CkpYZeyIGWgY50O6hQ\n8BrCzL1/v3DsPujUyFlYDJ1xQIapfBUHNQA4MXYtHMhSxEztO+xMFHlmrj++\nYOdUq2srQwHRge47/VF2lDNBg5WqmSeTJ8K3X8zz1vnfW1srxNabk8OPlwnB\nOXmPX5I9YouHi+ImaHP2GCQ60W6UYwoj4o2q2wesWiav8s0IdOSeAu/eeR8S\nSKZpj+7Q7I1e6XFhv5r6lYMJ0Ddls/0KFwDvC4JEiJwAMhyEqB9c7QmUeWXg\nkCOT/jqLWb3fOyowLZOQzzDNVgLX6MsWZVeSb4E/UQMaq+LVwgiV2TbQO2TJ\nsQKiAGfwXxcoGF1ZQ2HPF4QD/4J2wSpxAfWJiR/MwHpUWALhURbaJxHSnTXJ\nnI1JOT6bCbzEtw/NBYEd\n",
+    "display_name": "Bus Wait Times",
+    "bubble_choice_description": "Compare two buses to see which one has a shorter wait.",
+    "thumbnail_url": "https://images.code.org/ba8bfe42decf2eadc68ee219f613933f-school-bus.jpg"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-07 18:35:34 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 18:36:51 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 18:39:10 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

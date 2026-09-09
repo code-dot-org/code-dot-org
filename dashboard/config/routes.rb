@@ -369,6 +369,9 @@ Dashboard::Application.routes.draw do
 
     get 'projects/:channel_id/extra_links', to: 'projects#extra_links'
 
+    # Internal playtest review of AI-generated images (project validators only).
+    get 'spritelab_lab2_images_review', to: 'spritelab_lab2_images_review#index'
+
     resources :projects, path: '/projects/', only: [:index] do
       collection do
         ProjectsController::STANDALONE_PROJECTS.each do |key, _|
@@ -1344,7 +1347,6 @@ Dashboard::Application.routes.draw do
 
     get '/dashboardapi/v1/user_product_tours', to: 'api/v1/user_product_tours#index'
     post '/dashboardapi/v1/user_product_tours', to: 'api/v1/user_product_tours#create'
-    post '/dashboardapi/v1/users/:user_id/verify_captcha', to: 'api/v1/users#verify_captcha'
 
     # Routes used by census
     post '/dashboardapi/v1/census/:form_version', to: 'api/v1/census/census#create', defaults: {format: 'json'}
