@@ -147,16 +147,16 @@ describe('safetyHelpers', () => {
       await expect(isImageSafe(file)).resolves.toBe(false);
     });
 
-    it('returns true without calling the gateway when disabled by DCDO', async () => {
+    // The DCDO flag gates at the call sites (generateChatResponse for
+    // aichat, imageSafety for Sprite Lab in Lab2 with its own flag), so an
+    // unconditional call always judges.
+    it('judges even when the aichat DCDO flag is off — callers gate', async () => {
       mockDCDOGet.mockReturnValue(false);
+      mockClassification('INAPPROPRIATE');
 
-      await expect(isImageSafe(file)).resolves.toBe(true);
+      await expect(isImageSafe(file)).resolves.toBe(false);
 
-      expect(mockDCDOGet).toHaveBeenCalledWith(
-        'aichat-output-image-llm-safety-judge-enabled',
-        true
-      );
-      expect(mockGenerateText).not.toHaveBeenCalled();
+      expect(mockGenerateText).toHaveBeenCalled();
     });
   });
 

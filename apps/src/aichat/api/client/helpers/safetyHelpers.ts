@@ -83,14 +83,13 @@ export async function isTextSafe(
 /**
  * Invokes an LLM to determine if the given image is safe.
  */
+// Callers decide whether the judge runs (aichat gates on
+// isOutputImageLlmSafetyJudgeEnabled; Sprite Lab in Lab2 has its own flag),
+// so an unconditional call here always judges.
 export async function isImageSafe(
   file: GeneratedFile,
   customSafetyConfig?: Partial<SafetyConfig>
 ): Promise<boolean> {
-  if (!isOutputImageLlmSafetyJudgeEnabled()) {
-    return true;
-  }
-
   const safetyConfig = {
     ...DEFAULT_IMAGE_SAFETY_CONFIG,
     ...customSafetyConfig,

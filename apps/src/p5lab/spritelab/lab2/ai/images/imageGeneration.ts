@@ -7,6 +7,7 @@ import {
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
 
+import {checkImageSafety, checkPromptSafety} from './imageSafety';
 import {
   ASSUMED_BLOCK,
   ImageSize,
@@ -217,16 +218,36 @@ export async function generateImage(
     fullPrompt = `${fullPrompt} ${BLOCK_PROMPT_CLAUSE}`;
   }
 
-  const raw = await requestImage(
-    options.inputImageDataURI
-      ? `Modify the provided image: ${fullPrompt}`
-      : fullPrompt,
-    {
-      seed,
-      temperature: options.temperature,
-      references: options.inputImageDataURI ? [options.inputImageDataURI] : [],
-    }
-  );
+  // The safety judge and the image model run concurrently — generation is
+  // the slow leg, so a safe prompt pays nothing. Both must pass before a
+  // result leaves this function; a flagged prompt outranks a generation
+  // failure, and its image is discarded unseen.
+  const [promptVerdict, rawResult] = await Promise.allSettled([
+    checkPromptSafety(prompt),
+    requestImage(
+      options.inputImageDataURI
+        ? `Modify the provided image: ${fullPrompt}`
+        : fullPrompt,
+      {
+        seed,
+        temperature: options.temperature,
+        references: options.inputImageDataURI
+          ? [options.inputImageDataURI]
+          : [],
+      }
+    ),
+  ]);
+  if (promptVerdict.status === 'rejected') {
+    throw promptVerdict.reason;
+  }
+  if (rawResult.status === 'rejected') {
+    throw rawResult.reason;
+  }
+  const raw = rawResult.value;
+  // Judge the pixels while the local pipeline crops and downscales them; the
+  // catch only marks the rejection handled — the awaits below still throw.
+  const imageVerdict = checkImageSafety(raw);
+  imageVerdict.catch(() => {});
 
   const generation: ImageGenerationMetadata = {
     prompt,
@@ -247,6 +268,7 @@ export async function generateImage(
     style !== 'pixel' &&
     raw.mediaType === 'image/jpeg'
   ) {
+    await imageVerdict;
     return {
       filename: `generated-${createUuid()}.jpg`,
       uint8Array: raw.uint8Array,
@@ -277,6 +299,7 @@ export async function generateImage(
     blob = normalized.blob;
     pixelGridSize = normalized.pixelGridSize;
   }
+  await imageVerdict;
   return {
     filename: `generated-${createUuid()}.png`,
     uint8Array: new Uint8Array(await blob.arrayBuffer()),

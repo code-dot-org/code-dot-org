@@ -24,6 +24,7 @@ import {
   requestImage,
   styleClause,
 } from './imageGeneration';
+import {checkImageSafety, checkPromptSafety} from './imageSafety';
 import {chooseKeyColor, KeyColor} from './keyColor';
 import {
   CHARACTER_SET_IMAGE_SIZE,
@@ -286,6 +287,20 @@ export async function generateCharacterSet(
   const previewURI = async (blob: Blob) =>
     bytesToDataURI(new Uint8Array(await blob.arrayBuffer()), 'image/png');
 
+  // The prompt judge runs while the base picture draws; its verdict gates
+  // the posed frames, which all embed the same student text. Every frame is
+  // judged too — the verdicts collect below and all must pass before the
+  // set leaves this function. The catches only mark rejections handled; the
+  // awaits still throw.
+  const promptVerdict = checkPromptSafety(prompt);
+  promptVerdict.catch(() => {});
+  const frameVerdicts: Promise<void>[] = [];
+  const judgeFrame = (raw: RawImage) => {
+    const verdict = checkImageSafety(raw);
+    verdict.catch(() => {});
+    frameVerdicts.push(verdict);
+  };
+
   onProgress?.({done: 0, total, label: 'the character'});
   const base = await requestFrameWithRetry(
     basePrompt(prompt, options.style, key),
@@ -296,6 +311,8 @@ export async function generateCharacterSet(
       model: getCharacterSetImageModel(),
     }
   );
+  await promptVerdict;
+  judgeFrame(base);
   const baseURI = bytesToDataURI(base.uint8Array, base.mediaType);
   const baseKeyed = await keyFrame(base);
   let done = 1;
@@ -316,6 +333,7 @@ export async function generateCharacterSet(
           model: getCharacterSetImageModel(),
         }
       );
+      judgeFrame(raw);
       const keyed = await keyFrame(raw);
       done++;
       preview = await previewURI(keyed);
@@ -327,6 +345,8 @@ export async function generateCharacterSet(
   );
 
   onProgress?.({done: total, total, label: 'assembling', preview});
+  await Promise.all(frameVerdicts);
+
   // Strip order: the second idle, the base between the ranges that share
   // it, then the walk and jump frames (CHARACTER_STRIP_POSES).
   const stripFrames = [posed[0], baseKeyed, ...posed.slice(1)];

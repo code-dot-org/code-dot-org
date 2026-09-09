@@ -26,6 +26,7 @@ import {
   generateImage,
   GenerateImageOptions,
 } from '../ai/images/imageGeneration';
+import {ImageSafetyError} from '../ai/images/imageSafety';
 import {
   IMAGE_STYLE_LABELS,
   IMAGE_TYPE_LABELS,
@@ -269,12 +270,20 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
       const result = await generateImage(prompt.trim(), options);
       // Apply immediately; the caller flips back to the summary view.
       await onAccept(result, create ? newImageName() : undefined);
-    } catch {
-      setError(
-        makingSet
-          ? "Couldn't finish the character. Try again."
-          : "Couldn't generate the image. Try again."
-      );
+    } catch (e) {
+      if (e instanceof ImageSafetyError) {
+        setError(
+          e.phase === 'prompt'
+            ? "This prompt isn't appropriate for class. Try a different idea."
+            : "The image didn't pass our safety check. Try a different prompt."
+        );
+      } else {
+        setError(
+          makingSet
+            ? "Couldn't finish the character. Try again."
+            : "Couldn't generate the image. Try again."
+        );
+      }
       setMode('prompt');
       setProgress(null);
     }
