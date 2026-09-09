@@ -8,7 +8,7 @@ import {
   ValidatedLevelsBox,
   WelcomeBox,
 } from '@code-dot-org/lesson-deep-dive';
-import React, {FC, useCallback, useState} from 'react';
+import React, {FC, useCallback, useEffect, useState} from 'react';
 
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -74,6 +74,15 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
   const goToPrev = useCallback(() => {
     setCurrentIndex(i => Math.max(i - 1, 0));
   }, []);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowRight') goToNext();
+      if (e.key === 'ArrowLeft') goToPrev();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [goToNext, goToPrev]);
 
   // Continue advances to the next box. When the student is on the reflection
   // step and hasn't submitted, this is a bypass: kick off podcast generation
@@ -279,30 +288,30 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
       )}
       <div className={styles.topNav}>
         <span className={styles.tutorWordmark}>Tutor+</span>
-        {!isFirst && (
-          <button
-            type="button"
-            className={styles.arrowButton}
-            onClick={goToPrev}
-            aria-label="Previous"
+        <button
+          type="button"
+          className={styles.arrowButton}
+          onClick={goToPrev}
+          aria-label="Previous"
+          aria-hidden={isFirst}
+          style={{visibility: isFirst ? 'hidden' : undefined}}
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
           >
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              aria-hidden="true"
-            >
-              <path
-                d="M7 14l5-5 5 5"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </button>
-        )}
+            <path
+              d="M7 14l5-5 5 5"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </button>
       </div>
 
       <div className={styles.box}>
