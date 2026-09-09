@@ -36,9 +36,9 @@ export type ImageSize = '512' | '1K' | '2K' | '4K';
 // (MODEL_OUTPUT_PX below); larger costs more and would only be scaled down.
 export const SINGLE_IMAGE_SIZE: ImageSize = '1K';
 
-// Character-set frames are stored at a 768px cell; '512' would trade that
-// detail away and is not obviously enough. Revisit once the gateway
-// accepts it.
+// Character-set frames store at a 512px cell (characterSet.ts), but asking
+// the model for '512' would skip the downscale that anti-aliases the stored
+// frame — and the gateway's SDK copy rejects '512' anyway (above).
 export const CHARACTER_SET_IMAGE_SIZE: ImageSize = '1K';
 
 /** Provider options for one image request: the given size, square. */
