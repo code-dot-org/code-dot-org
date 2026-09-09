@@ -7,13 +7,122 @@ const googleProvider = createGoogleGenerativeAI({
   apiKey: '',
 });
 
-// Gemini 3.1 Flash Image ("Nano Banana 2") for single images. Its
-// predecessor, gemini-2.5-flash-image, is deprecated by Google. It takes up
-// to four character reference images per request and thinks before drawing,
-// returning its interim drafts as images ahead of the final one — see
-// requestImage for how the final is picked.
-export function getImageModel() {
-  return googleProvider(AiChatModelIds.GEMINI_3_1_FLASH_IMAGE);
+/**
+ * What an image model can do, and how to reach it. The models we offer are
+ * not interchangeable: Gemini 3.1 Flash Image is a language model that emits
+ * image parts, so it rides generateText and takes a seed and a temperature;
+ * gpt-image-1 is an image model reached through generateImage, and takes
+ * neither. Every difference the dialog or the pipeline has to respect is a
+ * field here, so a model swap forces them into view rather than failing
+ * silently at the provider.
+ */
+export interface ImageModelSpec {
+  id: string;
+  /** Shown in the dialog's Model choice. */
+  label: string;
+  /** Who serves it. The dialog groups the choice by this. */
+  provider: string;
+  transport: 'generateText' | 'generateImage';
+  /** Roughly the square edge the model emits, in physical pixels. */
+  outputPx: number;
+  /** Sending the same seed twice asks for the same image. */
+  supportsSeed: boolean;
+  supportsTemperature: boolean;
+  /** Can redraw a supplied image rather than starting from scratch. */
+  supportsEdit: boolean;
+  /**
+   * Emits a real alpha channel on request. Models without it get the flat
+   * key color prompt and the local flood fill instead (see removeBackground).
+   */
+  nativeTransparency: boolean;
+}
+
+/**
+ * The OpenAI image models we offer, oldest first, as [id, label]. They differ
+ * in output quality and price, not in anything this file has to describe: all
+ * reach the same endpoints with the same parameters, so one spec covers them.
+ * Keep in step with OPENAI_IMAGE_MODELS in the gateway worker's
+ * generateImageHandler, which is the allowlist that actually admits them.
+ */
+const OPENAI_IMAGE_MODELS: [string, string][] = [
+  [AiChatModelIds.GPT_IMAGE_1, 'GPT Image 1'],
+  [AiChatModelIds.GPT_IMAGE_2, 'GPT Image 2'],
+  [AiChatModelIds.GPT_IMAGE_2_5_FLARE, 'GPT Image 2.5 Flare'],
+  [AiChatModelIds.GPT_IMAGE_2_5_SUNBURST, 'GPT Image 2.5 Sunburst'],
+];
+
+/**
+ * Every OpenAI image model behaves the same way from here: reached through
+ * generateImage, no seed and no temperature (the provider warns and ignores
+ * a seed; the images endpoint has no temperature at all), edits supported,
+ * and transparency requested as a parameter rather than prompted for.
+ *
+ * outputPx stays 1024 across all of them even where the model can do more —
+ * a playtest comparing models wants one variable, and raising it would also
+ * have to answer to the pixel-grid normalization in imageGeneration.
+ */
+function openAiImageSpec(id: string, label: string): ImageModelSpec {
+  return {
+    id,
+    label,
+    provider: 'OpenAI',
+    transport: 'generateImage',
+    outputPx: 1024,
+    supportsSeed: false,
+    supportsTemperature: false,
+    supportsEdit: true,
+    nativeTransparency: true,
+  };
+}
+
+export const IMAGE_MODEL_SPECS: Record<string, ImageModelSpec> = {
+  // Gemini 3.1 Flash Image ("Nano Banana 2"). Its predecessor,
+  // gemini-2.5-flash-image, is deprecated by Google and is not offered.
+  [AiChatModelIds.GEMINI_3_1_FLASH_IMAGE]: {
+    id: AiChatModelIds.GEMINI_3_1_FLASH_IMAGE,
+    label: 'Gemini 3.1 Flash Image',
+    provider: 'Google',
+    transport: 'generateText',
+    outputPx: 1024,
+    supportsSeed: true,
+    supportsTemperature: true,
+    supportsEdit: true,
+    nativeTransparency: false,
+  },
+  ...Object.fromEntries(
+    OPENAI_IMAGE_MODELS.map(([id, label]) => [id, openAiImageSpec(id, label)])
+  ),
+};
+
+export const DEFAULT_IMAGE_MODEL_ID: string =
+  AiChatModelIds.GEMINI_3_1_FLASH_IMAGE;
+
+/** Every model the dialog may offer, in the order it offers them. */
+export const IMAGE_MODEL_IDS: string[] = [
+  AiChatModelIds.GEMINI_3_1_FLASH_IMAGE,
+  ...OPENAI_IMAGE_MODELS.map(([id]) => id),
+];
+
+/** Falls back to the default for an id no longer offered (an old project). */
+export function getImageModelSpec(id?: string): ImageModelSpec {
+  return (
+    IMAGE_MODEL_SPECS[id ?? ''] || IMAGE_MODEL_SPECS[DEFAULT_IMAGE_MODEL_ID]
+  );
+}
+
+/**
+ * What to hand the gateway as its `model`. The generateText path wants an AI
+ * SDK model object because that is what its callers pass everywhere else;
+ * the generateImage path takes the bare id, so the OpenAI provider package
+ * never has to enter this bundle.
+ *
+ * Called with no argument this is the default single-image model, which is
+ * what the character-set and single-image paths both assumed before there
+ * was a choice.
+ */
+export function getImageModel(id?: string) {
+  const spec = getImageModelSpec(id);
+  return spec.transport === 'generateText' ? googleProvider(spec.id) : spec.id;
 }
 
 // Character-set frames: Flash, like single images; one constant to flip.
@@ -48,11 +157,11 @@ export function imageProviderOptions(imageSize: ImageSize) {
   };
 }
 
-// Image-model output policy, kept beside the model id so a model swap forces
-// these into view. The image model emits roughly MODEL_OUTPUT_PX-square
-// images; the pixel-art prompt asks for ASSUMED_BLOCK-px blocks, and grid
-// detection falls back to the same value — what we ask for and what we
-// assume can't drift apart.
+// Image-model output policy. The image models emit roughly
+// MODEL_OUTPUT_PX-square images; the pixel-art prompt asks for
+// ASSUMED_BLOCK-px blocks, and grid detection falls back to the same value —
+// what we ask for and what we assume can't drift apart. ASSUMED_BLOCK is a
+// prompt-and-detection contract, shared by every model.
 export const MODEL_OUTPUT_PX = 1024;
 export const ASSUMED_BLOCK = 16;
 

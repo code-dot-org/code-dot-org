@@ -1,0 +1,59 @@
+{
+  "type": "object",
+  "properties": {
+    "model": {
+      "type": "string"
+    },
+    "token": {
+      "type": "string"
+    },
+    "prompt": {
+      "type": "string"
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "base64": {
+            "type": "string"
+          },
+          "mediaType": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "base64",
+          "mediaType"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "mask": {
+      "$ref": "#/properties/images/items"
+    },
+    "n": {
+      "type": "number"
+    },
+    "size": {
+      "type": "string"
+    },
+    "seed": {
+      "type": "number"
+    },
+    "providerOptions": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": {}
+      }
+    }
+  },
+  "required": [
+    "model",
+    "token",
+    "prompt"
+  ],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

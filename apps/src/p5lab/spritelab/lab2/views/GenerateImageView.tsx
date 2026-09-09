@@ -1,13 +1,15 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import RadioButton from '@code-dot-org/component-library/radioButton';
 import Slider from '@code-dot-org/component-library/slider';
 import TextField from '@code-dot-org/component-library/textField';
 import classNames from 'classnames';
-import React, {useCallback, useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import experiments from '@cdo/apps/util/experiments';
 import aiBot0 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-0.png';
 import aiBot1 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-1.png';
 import aiBot2 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-2.png';
@@ -26,6 +28,12 @@ import {
   generateImage,
   GenerateImageOptions,
 } from '../ai/images/imageGeneration';
+import {
+  DEFAULT_IMAGE_MODEL_ID,
+  getImageModelSpec,
+  IMAGE_MODEL_IDS,
+  IMAGE_MODEL_SPECS,
+} from '../ai/images/modelHelpers';
 import {
   IMAGE_STYLE_LABELS,
   IMAGE_TYPE_LABELS,
@@ -177,6 +185,11 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   const [temperatureLevel, setTemperatureLevel] = useState(
     sheet ? CHARACTER_SET_TEMPERATURE_LEVEL : TEMPERATURE_LEVEL_DEFAULT
   );
+  // Regenerating defaults to whatever drew the current image, so a "try it
+  // again" doesn't quietly switch models on the user.
+  const [modelId, setModelId] = useState<string>(
+    existing?.generation?.model || DEFAULT_IMAGE_MODEL_ID
+  );
   const [source, setSource] = useState<RandomnessSource>('new');
   const [error, setError] = useState<string | null>(null);
   // A whole character — idling, walking, jumping — instead of one picture.
@@ -189,6 +202,30 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   // Sets are drawn from a fresh base, so the offer follows the 'new' source.
   const canMakeSet = imageType === 'sprite' && source === 'new';
   const makingSet = canMakeSet && characterSet;
+
+  // The choice is a playtest affordance, not a student-facing feature yet.
+  // With the experiment off there is one model and no fieldset.
+  const showModelChoice = useMemo(
+    () =>
+      experiments.isEnabledAllowingQueryString(
+        experiments.SPRITELAB_IMAGE_MODEL
+      ),
+    []
+  );
+  const modelSpec = getImageModelSpec(modelId);
+
+  // Grouped by who serves the model: five flat options read as a list of
+  // names, where two groups read as a choice between providers.
+  const modelGroups = useMemo(() => {
+    const byProvider = new Map<string, {value: string; text: string}[]>();
+    for (const id of IMAGE_MODEL_IDS) {
+      const {provider, label} = IMAGE_MODEL_SPECS[id];
+      const group = byProvider.get(provider) ?? [];
+      group.push({value: id, text: label});
+      byProvider.set(provider, group);
+    }
+    return [...byProvider].map(([label, groupItems]) => ({label, groupItems}));
+  }, []);
 
   // Flag a duplicate as it's typed and hold the buttons until it's unique.
   // The student form has no name field, so the name never holds it back.
@@ -216,8 +253,51 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
     return () => clearInterval(timer);
   }, [advanced, mode]);
 
-  const canUseSeed = existing?.generation?.seed !== undefined;
-  const canUsePrevious = !!existing;
+  // A recorded seed can only be replayed by a model that takes one, and the
+  // recorded seed belongs to the model that rolled it.
+  const canUseSeed =
+    existing?.generation?.seed !== undefined &&
+    modelSpec.supportsSeed &&
+    (existing?.generation?.model || DEFAULT_IMAGE_MODEL_ID) === modelId;
+  const canUsePrevious = !!existing && modelSpec.supportsEdit;
+
+  // A disabled control has to say why, and there are three reasons this one
+  // can be disabled. Naming the wrong one is worse than naming none.
+  const seedLabel = (() => {
+    const base = 'Use same seed';
+    if (!modelSpec.supportsSeed) {
+      return `${base} (${modelSpec.label} does not use seeds)`;
+    }
+    if (existing?.generation?.seed === undefined) {
+      return `${base} (no seed was recorded for this image)`;
+    }
+    if (!canUseSeed) {
+      return `${base} (the recorded seed belongs to a different model)`;
+    }
+    return `${base} (small prompt changes keep the picture similar)`;
+  })();
+
+  // What the chosen model cannot do, in words. Rendered into a live region
+  // so choosing a model announces the controls it just took away — greying
+  // them out is invisible to a screen reader driving the radios.
+  const modelLimits = [
+    !modelSpec.supportsTemperature && 'temperature',
+    !modelSpec.supportsSeed && 'seeds',
+  ].filter(Boolean);
+  const modelNote = modelLimits.length
+    ? `${modelSpec.label} does not use ${modelLimits.join(' or ')}.`
+    : '';
+
+  // Switching models can invalidate the current choice; fall back rather
+  // than leave a checked radio the request would ignore.
+  useEffect(() => {
+    if (
+      (source === 'seed' && !canUseSeed) ||
+      (source === 'previous' && !canUsePrevious)
+    ) {
+      setSource('new');
+    }
+  }, [source, canUseSeed, canUsePrevious]);
 
   const generate = useCallback(async () => {
     // true attaches the project context (level path, app) for per-level
@@ -241,7 +321,10 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
       const options: GenerateImageOptions = {
         imageType,
         style,
-        temperature: levelToTemperature(temperatureLevel),
+        model: modelId,
+        ...(modelSpec.supportsTemperature && {
+          temperature: levelToTemperature(temperatureLevel),
+        }),
       };
       if (source === 'seed' && canUseSeed) {
         options.seed = existing?.generation?.seed;
@@ -282,6 +365,8 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
     prompt,
     imageType,
     style,
+    modelId,
+    modelSpec,
     temperatureLevel,
     source,
     existing,
@@ -437,6 +522,26 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                   />
                 ))}
               </fieldset>
+              {showModelChoice && (
+                <SimpleDropdown
+                  name="generation-model"
+                  labelText="Model"
+                  size="s"
+                  className={moduleStyles.modelField}
+                  itemGroups={modelGroups}
+                  selectedValue={modelId}
+                  disabled={generating}
+                  onChange={e => setModelId(e.target.value)}
+                />
+              )}
+              {showModelChoice && (
+                // Always rendered, even when empty: a live region added to
+                // the DOM at the same moment as its text usually goes
+                // unannounced.
+                <p role="status" className={moduleStyles.modelNote}>
+                  {modelNote}
+                </p>
+              )}
             </div>
           </div>
 
@@ -486,7 +591,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                 <RadioButton
                   name="generation-source"
                   value="seed"
-                  label="Use same seed (small prompt changes keep the picture similar)"
+                  label={seedLabel}
                   size="s"
                   checked={source === 'seed'}
                   disabled={!canUseSeed}
@@ -507,9 +612,13 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                   moduleStyles.radioGroup,
                   moduleStyles.temperatureGroup
                 )}
-                disabled={generating}
+                disabled={generating || !modelSpec.supportsTemperature}
               >
-                <legend id="temperature-label">Temperature</legend>
+                <legend id="temperature-label">
+                  {modelSpec.supportsTemperature
+                    ? 'Temperature'
+                    : `Temperature (not used by ${modelSpec.label})`}
+                </legend>
                 {/* A wink: choosing pixel-art style pixelates the bot too. */}
                 <TemperatureBot src={botImage} pixelated={style === 'pixel'} />
 

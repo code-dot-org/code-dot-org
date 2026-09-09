@@ -222,6 +222,76 @@ export const GatewayGenerateTextResponseV1Schema = z.object({
 });
 
 // ---------------------------------------------------------------------------
+// generateImage request — JSON body sent to AI_GATEWAY_URL/generateImage
+// ---------------------------------------------------------------------------
+
+// One image on the wire, in or out. Base64 rather than a data URI so the
+// media type is a field the schema can see rather than a prefix someone has
+// to parse.
+const ImageDataSchema = z.object({
+  base64: z.string(),
+  mediaType: z.string(),
+});
+
+// Unlike generateText, this endpoint speaks to an image model
+// (ImageModelV3), not a language model: no messages, no temperature, no
+// tools. `images` and `mask` turn the call into an edit of what is sent.
+const GatewayGenerateImageRequestV1Schema = z.object({
+  model: z.string(),
+  token: z.string(),
+  prompt: z.string(),
+  // Draw over these instead of from scratch. Absent for a fresh generation.
+  images: z.array(ImageDataSchema).optional(),
+  // Which region of `images` to redraw; meaningless without them.
+  mask: ImageDataSchema.optional(),
+  n: z.number().optional(),
+  // `{width}x{height}`, per the SDK. Providers accept their own sets.
+  size: z.string().optional(),
+  // Honored only by providers that support it; OpenAI's image models warn
+  // and ignore. See the AI SDK's ImageModelV3 warnings.
+  seed: z.number().optional(),
+  // Provider-specific body parameters, keyed by provider name, passed
+  // through untouched (e.g. OpenAI's background, output_format, quality).
+  providerOptions: z.record(z.record(z.unknown())).optional(),
+});
+
+// ---------------------------------------------------------------------------
+// generateImage response — JSON body returned from
+// AI_GATEWAY_URL/generateImage
+// ---------------------------------------------------------------------------
+
+// Per-call provider metadata. An image call can fan out into several
+// provider requests (n greater than the model's per-call maximum), so this
+// is an array where generateText has a single object, and it carries no
+// `id` — ImageModelV3 does not report one.
+const ImageResponseMetaSchema = z.object({
+  timestamp: z.string(), // Date serialised to ISO string over JSON
+  modelId: z.string(),
+  headers: z.record(z.string()).optional(),
+});
+
+export const GatewayGenerateImageResponseV1Schema = z.object({
+  // At least one image, or the call should have failed: the SDK throws
+  // NoImageGeneratedError rather than returning an empty list.
+  images: z.array(ImageDataSchema),
+  warnings: z.array(z.unknown()).optional(),
+  // Image models bill in tokens on some providers and per image on others;
+  // every field is optional because a provider may report none of them.
+  usage: z
+    .object({
+      inputTokens: z.number().optional(),
+      outputTokens: z.number().optional(),
+      totalTokens: z.number().optional(),
+    })
+    .optional(),
+  responses: z.array(ImageResponseMetaSchema).optional(),
+  // Provider-specific per-image details (OpenAI reports revisedPrompt,
+  // size, quality, background, outputFormat here). Shape is the provider's,
+  // so it stays unknown.
+  providerMetadata: z.record(z.unknown()).optional(),
+});
+
+// ---------------------------------------------------------------------------
 // transcribe request — logical shape of the FormData fields sent to
 // AI_GATEWAY_URL/transcribe (audio itself is not schema-validated here)
 // ---------------------------------------------------------------------------
@@ -255,6 +325,12 @@ export type GatewayGenerateTextRequestV1 = z.infer<
 export type GatewayGenerateTextResponseV1 = z.infer<
   typeof GatewayGenerateTextResponseV1Schema
 >;
+export type GatewayGenerateImageRequestV1 = z.infer<
+  typeof GatewayGenerateImageRequestV1Schema
+>;
+export type GatewayGenerateImageResponseV1 = z.infer<
+  typeof GatewayGenerateImageResponseV1Schema
+>;
 export type GatewayTranscribeRequestV1 = z.infer<
   typeof GatewayTranscribeRequestV1Schema
 >;
@@ -276,6 +352,14 @@ export const generateTextResponseSchemas: Record<number, z.ZodTypeAny> = {
   1: GatewayGenerateTextResponseV1Schema,
 };
 
+export const generateImageRequestSchemas: Record<number, z.ZodTypeAny> = {
+  1: GatewayGenerateImageRequestV1Schema,
+};
+
+export const generateImageResponseSchemas: Record<number, z.ZodTypeAny> = {
+  1: GatewayGenerateImageResponseV1Schema,
+};
+
 export const transcribeRequestSchemas: Record<number, z.ZodTypeAny> = {
   1: GatewayTranscribeRequestV1Schema,
 };
@@ -290,6 +374,8 @@ export const ALL_GATEWAY_SCHEMA_GROUPS: Record<
 > = {
   generateTextRequest: generateTextRequestSchemas,
   generateTextResponse: generateTextResponseSchemas,
+  generateImageRequest: generateImageRequestSchemas,
+  generateImageResponse: generateImageResponseSchemas,
   transcribeRequest: transcribeRequestSchemas,
   transcribeResponse: transcribeResponseSchemas,
 };

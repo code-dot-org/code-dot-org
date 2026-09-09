@@ -87,6 +87,11 @@ experiments.STUDENT_SCRAPBOOK = 'student-scrapbook';
 experiments.TA_TEACHER_PANEL = 'ta-teacher-panel';
 // Replace the Backpack tab's contents with the unified backpack panel.
 experiments.UNIFIED_BACKPACK = 'unified-backpack';
+// Show the image-model choice in Sprite Lab 2's image dialog, for playtesting
+// one model against another. Enable for a single page load with
+// ?spritelab-image-model=1, or for the session with
+// ?enableExperiments=spritelab-image-model.
+experiments.SPRITELAB_IMAGE_MODEL = 'spritelab-image-model';
 
 /**
  * Get our query string. Provided as a method so that tests can mock this.

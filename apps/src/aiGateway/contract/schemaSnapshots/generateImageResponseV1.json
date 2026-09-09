@@ -1,0 +1,77 @@
+{
+  "type": "object",
+  "properties": {
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "base64": {
+            "type": "string"
+          },
+          "mediaType": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "base64",
+          "mediaType"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": {}
+    },
+    "usage": {
+      "type": "object",
+      "properties": {
+        "inputTokens": {
+          "type": "number"
+        },
+        "outputTokens": {
+          "type": "number"
+        },
+        "totalTokens": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "responses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "timestamp": {
+            "type": "string"
+          },
+          "modelId": {
+            "type": "string"
+          },
+          "headers": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "timestamp",
+          "modelId"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "providerMetadata": {
+      "type": "object",
+      "additionalProperties": {}
+    }
+  },
+  "required": [
+    "images"
+  ],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
