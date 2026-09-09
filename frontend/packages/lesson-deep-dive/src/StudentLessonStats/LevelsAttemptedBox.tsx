@@ -5,30 +5,40 @@ import RecapStoryCard from '../RecapStoryCard';
 import styles from './levels-attempted-box.module.scss';
 
 interface LevelsAttemptedBoxProps {
+  gradient: string;
+  headline: string;
+  headlineFirst: boolean;
   lessonName: string;
   levelsAttempted: number;
   levelsTotal: number;
+  autoAdvanceDurationMs: number;
   currentSlide: number;
   totalSlides: number;
   onNext?: () => void;
 }
 
 const LevelsAttemptedBox: FC<LevelsAttemptedBoxProps> = ({
+  gradient,
+  headline,
+  headlineFirst,
   lessonName,
   levelsAttempted,
   levelsTotal,
+  autoAdvanceDurationMs,
   currentSlide,
   totalSlides,
   onNext,
 }) => (
   <RecapStoryCard
-    gradient="linear-gradient(to bottom, #22D45A, #BAFAD0)"
+    gradient={gradient}
     lessonLabel={`${lessonName} Recap`}
+    autoAdvanceDurationMs={autoAdvanceDurationMs}
     currentSlide={currentSlide}
     totalSlides={totalSlides}
     onSkip={onNext}
   >
     <div className={styles.body}>
+      {headlineFirst && <h2 className={styles.headline}>{headline}</h2>}
       <div
         className={styles.metricRow}
         style={{'--target-count': levelsAttempted} as CSSProperties}
@@ -40,11 +50,7 @@ const LevelsAttemptedBox: FC<LevelsAttemptedBoxProps> = ({
           completed
         </p>
       </div>
-      <h2 className={styles.headline}>
-        YOU GOT
-        <br />
-        IT DONE
-      </h2>
+      {!headlineFirst && <h2 className={styles.headline}>{headline}</h2>}
     </div>
   </RecapStoryCard>
 );

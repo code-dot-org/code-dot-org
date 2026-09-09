@@ -5,13 +5,18 @@
 }
 
 .headline {
-  font-family: var(--font-family-main);
-  font-size: clamp(1.75rem, 6vw, 2.5rem);
+  font-family: var(--font-family-heading);
+  font-size: clamp(1.8rem, 6vw, 2.375rem);
   font-weight: 900;
   line-height: 0.95;
   color: #000;
   text-transform: uppercase;
   margin: 0;
+  white-space: pre-line;
+}
+
+.headlineRight {
+  text-align: right;
 }
 
 .metricRow {

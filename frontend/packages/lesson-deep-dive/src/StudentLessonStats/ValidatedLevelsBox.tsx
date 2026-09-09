@@ -5,26 +5,35 @@ import RecapStoryCard from '../RecapStoryCard';
 import styles from './validated-levels-box.module.scss';
 
 interface ValidatedLevelsBoxProps {
+  gradient: string;
+  headline: string;
+  headlineAlign?: 'left' | 'right';
   lessonName: string;
   validatedLevelsTotalCount: number;
   validatedLevelsCorrectCount: number;
   validatedLevelsIncorrectCount: number;
+  autoAdvanceDurationMs: number;
   currentSlide: number;
   totalSlides: number;
   onNext?: () => void;
 }
 
 const ValidatedLevelsBox: FC<ValidatedLevelsBoxProps> = ({
+  gradient,
+  headline,
+  headlineAlign = 'left',
   lessonName,
   validatedLevelsTotalCount,
   validatedLevelsCorrectCount,
+  autoAdvanceDurationMs,
   currentSlide,
   totalSlides,
   onNext,
 }) => (
   <RecapStoryCard
-    gradient="linear-gradient(to bottom, #8060E0, #CAC0F4)"
+    gradient={gradient}
     lessonLabel={`${lessonName} Recap`}
+    autoAdvanceDurationMs={autoAdvanceDurationMs}
     currentSlide={currentSlide}
     totalSlides={totalSlides}
     onSkip={onNext}
@@ -41,10 +50,10 @@ const ValidatedLevelsBox: FC<ValidatedLevelsBoxProps> = ({
           levels passed
         </p>
       </div>
-      <h2 className={styles.headline}>
-        VALIDATED
-        <br />
-        AND PASSED
+      <h2
+        className={`${styles.headline} ${headlineAlign === 'right' ? styles.headlineRight : ''}`}
+      >
+        {headline}
       </h2>
     </div>
   </RecapStoryCard>

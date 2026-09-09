@@ -5,24 +5,30 @@ import RecapStoryCard from './RecapStoryCard';
 import styles from './lesson-summary-card.module.scss';
 
 interface LessonSummaryCardProps {
+  gradient: string;
+  headline: string;
   lessonName: string;
   levelsAttempted: number;
   levelsTotal: number;
   timeSpentSeconds: number;
   validatedCorrect: number;
   validatedTotal: number;
+  autoAdvanceDurationMs: number;
   currentSlide: number;
   totalSlides: number;
   onNext?: () => void;
 }
 
 const LessonSummaryCard: FC<LessonSummaryCardProps> = ({
+  gradient,
+  headline,
   lessonName,
   levelsAttempted,
   levelsTotal,
   timeSpentSeconds,
   validatedCorrect,
   validatedTotal,
+  autoAdvanceDurationMs,
   currentSlide,
   totalSlides,
   onNext,
@@ -31,19 +37,16 @@ const LessonSummaryCard: FC<LessonSummaryCardProps> = ({
 
   return (
     <RecapStoryCard
-      gradient="linear-gradient(to bottom, #29ABE2, #AADDF5)"
+      gradient={gradient}
       lessonLabel={`${lessonName} Recap`}
+      autoAdvanceDurationMs={autoAdvanceDurationMs}
       currentSlide={currentSlide}
       totalSlides={totalSlides}
       onSkip={onNext}
       ctaLabel="Continue"
     >
       <div className={styles.body}>
-        <h2 className={styles.headline}>
-          THE WHOLE
-          <br />
-          PICTURE
-        </h2>
+        <h2 className={styles.headline}>{headline}</h2>
         <div className={styles.statList}>
           <div className={styles.divider} />
           <div className={styles.statRow}>

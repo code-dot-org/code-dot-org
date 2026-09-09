@@ -8,7 +8,7 @@ import {
   ValidatedLevelsBox,
   WelcomeBox,
 } from '@code-dot-org/lesson-deep-dive';
-import React, {FC, useCallback, useEffect, useState} from 'react';
+import React, {FC, useCallback, useEffect, useMemo, useState} from 'react';
 
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -56,6 +56,75 @@ const STORY_SCREEN_ORDER = [
 
 const TOTAL_STORY_SLIDES = STORY_SCREEN_ORDER.length;
 
+const STORY_CARD_DURATION_MS = 5_000;
+
+// Five gradients that rotate in a fixed order. A random starting index is
+// picked on mount so the sequence begins on a different color each session.
+const GRADIENT_CYCLE = [
+  'linear-gradient(to bottom, #EC4899, #F9C8DF)', // pink
+  'linear-gradient(to bottom, #38C8F8, #D0EFFC)', // blue
+  'linear-gradient(to bottom, #22D45A, #BAFAD0)', // green
+  'linear-gradient(to bottom, #F97316, #FDDAB0)', // orange
+  'linear-gradient(to bottom, #8060E0, #CAC0F4)', // purple
+] as const;
+
+// Card positions in the original 6-card sequence. The streak card (position 4)
+// is omitted here, so the summary lands at position 5 — which wraps back to 0
+// mod 5, giving it the same color as the welcome card.
+const CARD_SLOT_OFFSETS = {
+  welcome: 0,
+  levels: 1,
+  time: 2,
+  validated: 3,
+  summary: 5,
+} as const;
+
+type RecapVariant = {
+  welcome: string;
+  levels: {headline: string; headlineFirst: boolean};
+  time: {headline: string; headlineFirst: boolean; headlineAlign?: 'left' | 'right'};
+  validated: {headline: string; headlineAlign: 'left' | 'right'};
+  summary: string;
+};
+
+const RECAP_VARIANTS: RecapVariant[] = [
+  {
+    welcome: "THAT'S\nA WRAP",
+    levels: {headline: 'YOU GOT\nIT DONE', headlineFirst: false},
+    time: {headline: 'MINUTES IN\nTHE ZONE', headlineFirst: true},
+    validated: {headline: 'VALIDATED\nAND PASSED', headlineAlign: 'left'},
+    summary: 'THE WHOLE\nPICTURE',
+  },
+  {
+    welcome: 'YOU CRUSHED IT',
+    levels: {headline: 'LEVEL UP,\nLEGEND', headlineFirst: true},
+    time: {headline: 'TIME WELL\nSPENT', headlineFirst: false},
+    validated: {headline: 'CHECKED AND\nCLEARED', headlineAlign: 'right'},
+    summary: 'EVERYTHING\nAT A GLANCE',
+  },
+  {
+    welcome: 'DONE AND DONE',
+    levels: {headline: 'YOU WENT\nAFTER IT', headlineFirst: false},
+    time: {headline: 'LOCKED IN', headlineFirst: false, headlineAlign: 'right'},
+    validated: {headline: 'RUNTIME:\nSUCCESS', headlineAlign: 'left'},
+    summary: 'THE RECEIPT',
+  },
+  {
+    welcome: 'LESSON HANDLED',
+    levels: {headline: 'MISSION\nACCOMPLISHED', headlineFirst: false},
+    time: {headline: 'FOCUS MODE\nON', headlineFirst: false},
+    validated: {headline: 'YOU MADE\nIT WORK', headlineAlign: 'left'},
+    summary: 'THAT WAS\nYOUR LESSON',
+  },
+  {
+    welcome: 'NICELY DONE',
+    levels: {headline: 'YOU LEVELED UP', headlineFirst: false},
+    time: {headline: 'DIALED IN', headlineFirst: true},
+    validated: {headline: 'PROBLEM SOLVED', headlineAlign: 'left'},
+    summary: 'ALL OF IT\nAT ONCE',
+  },
+];
+
 interface LessonDeepDiveContainerProps {
   lessonDeepDiveData: LessonDeepDiveData;
 }
@@ -66,6 +135,22 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
   const [currentIndex, setCurrentIndex] = useState(0);
   const [reflectionData, setReflectionData] = useState<ReflectionData | null>(
     null
+  );
+
+  // Both values are fixed for the lifetime of this component instance.
+  const colorOffset = useMemo(
+    () => Math.floor(Math.random() * GRADIENT_CYCLE.length),
+    []
+  );
+  const variant = useMemo(
+    () => RECAP_VARIANTS[Math.floor(Math.random() * RECAP_VARIANTS.length)],
+    []
+  );
+
+  const getGradient = useCallback(
+    (slotOffset: number) =>
+      GRADIENT_CYCLE[(colorOffset + slotOffset) % GRADIENT_CYCLE.length],
+    [colorOffset]
   );
   const goToNext = useCallback(() => {
     setCurrentIndex(i => Math.min(i + 1, BOX_IDS.length - 1));
@@ -83,6 +168,13 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [goToNext, goToPrev]);
+
+  useEffect(() => {
+    const screenId = BOX_IDS[currentIndex];
+    if (!STORY_SCREENS.has(screenId) || screenId === 'lesson-summary') return;
+    const id = setTimeout(goToNext, STORY_CARD_DURATION_MS);
+    return () => clearTimeout(id);
+  }, [currentIndex, goToNext]);
 
   // Continue advances to the next box. When the student is on the reflection
   // step and hasn't submitted, this is a bypass: kick off podcast generation
@@ -152,7 +244,10 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
       case 'welcome':
         return (
           <WelcomeBox
+            gradient={getGradient(CARD_SLOT_OFFSETS.welcome)}
+            headline={variant.welcome}
             lessonName={lessonDeepDiveData.lessonName}
+            autoAdvanceDurationMs={STORY_CARD_DURATION_MS}
             currentSlide={currentStorySlide}
             totalSlides={TOTAL_STORY_SLIDES}
             onNext={goToNext}
@@ -161,11 +256,15 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
       case 'levels-attempted':
         return (
           <LevelsAttemptedBox
+            gradient={getGradient(CARD_SLOT_OFFSETS.levels)}
+            headline={variant.levels.headline}
+            headlineFirst={variant.levels.headlineFirst}
             lessonName={lessonDeepDiveData.lessonName}
             levelsAttempted={
               lessonDeepDiveData.progressCounts.levelsAttemptedCount
             }
             levelsTotal={lessonDeepDiveData.progressCounts.levelsTotalCount}
+            autoAdvanceDurationMs={STORY_CARD_DURATION_MS}
             currentSlide={currentStorySlide}
             totalSlides={TOTAL_STORY_SLIDES}
             onNext={goToNext}
@@ -174,8 +273,13 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
       case 'time-spent':
         return (
           <TimeSpentBox
+            gradient={getGradient(CARD_SLOT_OFFSETS.time)}
+            headline={variant.time.headline}
+            headlineFirst={variant.time.headlineFirst}
+            headlineAlign={variant.time.headlineAlign}
             lessonName={lessonDeepDiveData.lessonName}
             timeSpentSeconds={lessonDeepDiveData.timeSpentSeconds}
+            autoAdvanceDurationMs={STORY_CARD_DURATION_MS}
             currentSlide={currentStorySlide}
             totalSlides={TOTAL_STORY_SLIDES}
             onNext={goToNext}
@@ -184,6 +288,9 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
       case 'validated-levels':
         return (
           <ValidatedLevelsBox
+            gradient={getGradient(CARD_SLOT_OFFSETS.validated)}
+            headline={variant.validated.headline}
+            headlineAlign={variant.validated.headlineAlign}
             lessonName={lessonDeepDiveData.lessonName}
             validatedLevelsTotalCount={
               lessonDeepDiveData.progressCounts.validatedLevelsTotalCount
@@ -194,6 +301,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
             validatedLevelsIncorrectCount={
               lessonDeepDiveData.progressCounts.validatedLevelsIncorrectCount
             }
+            autoAdvanceDurationMs={STORY_CARD_DURATION_MS}
             currentSlide={currentStorySlide}
             totalSlides={TOTAL_STORY_SLIDES}
             onNext={goToNext}
@@ -202,6 +310,8 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
       case 'lesson-summary':
         return (
           <LessonSummaryCard
+            gradient={getGradient(CARD_SLOT_OFFSETS.summary)}
+            headline={variant.summary}
             lessonName={lessonDeepDiveData.lessonName}
             levelsAttempted={
               lessonDeepDiveData.progressCounts.levelsAttemptedCount
@@ -214,6 +324,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
             validatedTotal={
               lessonDeepDiveData.progressCounts.validatedLevelsTotalCount
             }
+            autoAdvanceDurationMs={STORY_CARD_DURATION_MS}
             currentSlide={currentStorySlide}
             totalSlides={TOTAL_STORY_SLIDES}
             onNext={goToNext}

@@ -20,15 +20,39 @@
   flex-shrink: 0;
 }
 
+@keyframes story-fill {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
 .segment {
   flex: 1;
   height: 3px;
   background: rgb(0 0 0 / 0.18);
   border-radius: 2px;
+  position: relative;
+  overflow: hidden;
 }
 
 .segmentFilled {
   background: rgb(0 0 0 / 0.6);
+}
+
+.segmentFill {
+  position: absolute;
+  inset: 0;
+  background: rgb(0 0 0 / 0.6);
+  transform-origin: left center;
+  animation-name: story-fill;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+
+  /* duration set via inline style from RecapStoryCard */
 }
 
 .lessonLabel {

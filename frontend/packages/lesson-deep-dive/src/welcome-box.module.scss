@@ -5,13 +5,15 @@
 }
 
 .headline {
-  font-family: var(--font-family-main);
-  font-size: clamp(3.5rem, 14vw, 5.5rem);
+  font-family: var(--font-family-heading);
+  font-size: clamp(3rem, 12vw, 4.375rem);
   font-weight: 900;
   line-height: 0.95;
   color: #000;
   margin: 0;
   text-transform: uppercase;
+  white-space: pre-line;
+  overflow-wrap: break-word;
 }
 
 .subtitle {
