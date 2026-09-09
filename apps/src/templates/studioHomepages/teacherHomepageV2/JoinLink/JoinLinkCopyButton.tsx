@@ -43,10 +43,12 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
     setShouldShowDialog(true);
   };
 
-  const classroomType =
-    loginType === SectionLoginType.google_classroom
-      ? i18n.loginTypeGoogleClassroom()
-      : i18n.loginTypeClever();
+  let classroomType = i18n.loginTypeClever();
+  if (loginType === SectionLoginType.google_classroom) {
+    classroomType = i18n.loginTypeGoogleClassroom();
+  } else if (loginType === SectionLoginType.classlink) {
+    classroomType = 'ClassLink';
+  }
 
   const handleCopySectionCode = () => {
     const joinLink = `${studioUrlPrefix}/join/${sectionCode}`;

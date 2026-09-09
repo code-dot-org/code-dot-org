@@ -112,6 +112,8 @@ export const loginInfoFormatter = function (loginType, {rowData}) {
     sectionCode = i18n.loginTypeClever();
   } else if (rowData.loginType === OAuthSectionTypes.google_classroom) {
     sectionCode = i18n.loginTypeGoogleClassroom();
+  } else if (rowData.loginType === OAuthSectionTypes.classlink) {
+    sectionCode = 'ClassLink';
   } else if (rowData.loginType === SectionLoginType.lti_v1) {
     sectionCode = rowData.loginTypeName;
   } else {

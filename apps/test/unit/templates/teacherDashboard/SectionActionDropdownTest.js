@@ -104,6 +104,23 @@ describe('SectionActionDropdown', () => {
     expect(wrapper).to.contain('Sync students from Google Classroom');
   });
 
+  it('renders the sync option but no login cards for ClassLink sections', () => {
+    const classlinkSection = {
+      ...sections[1],
+      loginType: 'classlink',
+      code: 'CL-2222|33333',
+    };
+    const wrapper = shallow(
+      <SectionActionDropdown
+        {...DEFAULT_PROPS}
+        sectionData={classlinkSection}
+      />
+    );
+    expect(wrapper).to.contain('Sync students from ClassLink');
+    // Logins are managed by ClassLink SSO; there are no cards to print.
+    expect(wrapper.text()).to.not.include('Print login cards');
+  });
+
   it('renders the four standard options for a third party section (Google Classroom)', () => {
     const wrapper = shallow(
       <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[1]} />

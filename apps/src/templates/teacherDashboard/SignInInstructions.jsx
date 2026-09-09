@@ -90,6 +90,22 @@ export default class SignInInstructions extends React.Component {
             />
           </div>
         )}
+        {loginType === SectionLoginType.classlink && (
+          <div>
+            <h2 style={styles.heading}>Signing in with ClassLink</h2>
+            <p style={styles.listAlign}>
+              1. Go to studio.code.org and click the 'Sign In' button
+            </p>
+            <p style={styles.listAlign}>2. Choose 'Continue with ClassLink'</p>
+            <p style={styles.listAlign}>
+              3. Sign-in via the ClassLink sign-in dialog
+            </p>
+            <p>
+              Alternatively, students can sign into CodeAI by launching from
+              ClassLink
+            </p>
+          </div>
+        )}
         {loginType === SectionLoginType.lti_v1 && (
           <div>
             <h2 style={styles.heading}>

@@ -185,7 +185,8 @@ class SectionActionDropdown extends Component {
             {i18n.manageStudents()}
           </PopUpMenu.Item>
           {sectionData.loginType !== OAuthSectionTypes.google_classroom &&
-            sectionData.loginType !== OAuthSectionTypes.clever && (
+            sectionData.loginType !== OAuthSectionTypes.clever &&
+            sectionData.loginType !== OAuthSectionTypes.classlink && (
               <PopUpMenu.Item
                 href={teacherDashboardUrl(sectionData.id, '/login_info')}
                 className="print-login-link"
@@ -214,6 +215,11 @@ class SectionActionDropdown extends Component {
           {sectionData.loginType === OAuthSectionTypes.google_classroom && (
             <PopUpMenu.Item onClick={this.onClickSync}>
               {i18n.syncGoogleClassroom()}
+            </PopUpMenu.Item>
+          )}
+          {sectionData.loginType === OAuthSectionTypes.classlink && (
+            <PopUpMenu.Item onClick={this.onClickSync}>
+              Sync students from ClassLink
             </PopUpMenu.Item>
           )}
           <PopUpMenu.Item onClick={this.onClickHideShow}>

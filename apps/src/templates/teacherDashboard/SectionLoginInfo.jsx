@@ -88,9 +88,11 @@ class SectionLoginInfo extends React.Component {
               'cannot join a demo section.'}
           </p>
         )}
-        {[SectionLoginType.google_classroom, SectionLoginType.clever].includes(
-          section.loginType
-        ) && (
+        {[
+          SectionLoginType.google_classroom,
+          SectionLoginType.clever,
+          SectionLoginType.classlink,
+        ].includes(section.loginType) && (
           <OAuthLogins sectionId={section.id} loginType={section.loginType} />
         )}
         {section.loginType === SectionLoginType.lti_v1 && (
@@ -147,12 +149,15 @@ class OAuthLogins extends React.Component {
     loginType: PropTypes.oneOf([
       SectionLoginType.google_classroom,
       SectionLoginType.clever,
+      SectionLoginType.classlink,
     ]).isRequired,
   };
 
   render() {
     const {sectionId, loginType} = this.props;
     let loginTypeLabel = '';
+    // ClassLink has no sync screenshot yet (capture one from a local
+    // ClassLink section's Manage Students tab); the image is optional.
     let syncSectionImgSrc = '';
     if (loginType === SectionLoginType.google_classroom) {
       loginTypeLabel = i18n.loginTypeGoogleClassroom();
@@ -160,6 +165,8 @@ class OAuthLogins extends React.Component {
     } else if (loginType === SectionLoginType.clever) {
       loginTypeLabel = i18n.loginTypeClever();
       syncSectionImgSrc = syncClever;
+    } else if (loginType === SectionLoginType.classlink) {
+      loginTypeLabel = 'ClassLink';
     }
 
     return (
@@ -175,11 +182,13 @@ class OAuthLogins extends React.Component {
             })}
           />
           <br />
-          <img
-            src={syncSectionImgSrc}
-            style={{maxWidth: '50%'}}
-            alt={i18n.syncingYourStudents()}
-          />
+          {syncSectionImgSrc && (
+            <img
+              src={syncSectionImgSrc}
+              style={{maxWidth: '50%'}}
+              alt={i18n.syncingYourStudents()}
+            />
+          )}
         </div>
       </div>
     );
