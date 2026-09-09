@@ -28,7 +28,7 @@
     "pinned_scene_id": "story-scene",
     "pinned_scene_name": "Story",
     "guide_mode": "instructions",
-    "long_instructions": "# Add a treasure to your game\r\n- Add a `Make a new sprite using grid` block\r\n- Click on the costume, then click create a new image\r\n- Write a prompt that describes what your game player is trying to find.",
+    "long_instructions": "# Add a treasure to your game\r\n- Add a Make a new sprite using grid block\r\n- Click on the costume, then click create a new image\r\n- Write a prompt that describes what your game player is trying to find.",
     "toolbox_definition": {
       "contents": [
         {
@@ -320,7 +320,7 @@
 
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2026-09-04T21:18:25.130+00:00\",\"changed\":[\"cloned from \\\"HoAI26-Playtest1-Platform-SimpleCode2\\\"\"],\"cloned_from\":\"HoAI26-Playtest1-Platform-SimpleCode2\"},{\"changed_at\":\"2026-09-04 21:22:54 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-04 21:29:58 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-04 21:33:42 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-09-04T21:18:25.130+00:00\",\"changed\":[\"cloned from \\\"HoAI26-Playtest1-Platform-SimpleCode2\\\"\"],\"cloned_from\":\"HoAI26-Playtest1-Platform-SimpleCode2\"},{\"changed_at\":\"2026-09-04 21:22:54 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-04 21:29:58 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-04 21:33:42 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-08 15:34:51 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
