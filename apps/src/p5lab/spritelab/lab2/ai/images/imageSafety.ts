@@ -13,6 +13,7 @@ import {
 } from '@cdo/apps/aichat/api/client/helpers/safetyHelpers';
 import DCDO from '@cdo/apps/dcdo';
 
+import {bytesToBase64} from './encoding';
 import type {RawImage} from './imageGeneration';
 
 // Kill switch, default on: flip to false to stop both judges if they ever
@@ -47,17 +48,6 @@ export async function checkPromptSafety(text: string): Promise<void> {
   if (!(await isTextSafe(text, 'input_filter'))) {
     throw new ImageSafetyError('prompt');
   }
-}
-
-// btoa can't take a Uint8Array and String.fromCharCode overflows the argument
-// list on megabyte images, so build the binary string in chunks.
-function bytesToBase64(bytes: Uint8Array): string {
-  let binary = '';
-  const CHUNK = 0x8000;
-  for (let i = 0; i < bytes.length; i += CHUNK) {
-    binary += String.fromCharCode(...bytes.subarray(i, i + CHUNK));
-  }
-  return btoa(binary);
 }
 
 /** Judge a generated picture; throws ImageSafetyError when flagged. */

@@ -189,15 +189,6 @@ export function rawImageToBlob(raw: RawImage): Blob {
   });
 }
 
-export function bytesToDataURI(bytes: Uint8Array, mediaType: string): string {
-  let binary = '';
-  // Chunked: spreading a megabyte-scale array overflows the argument limit.
-  for (let i = 0; i < bytes.length; i += 32768) {
-    binary += String.fromCharCode(...bytes.subarray(i, i + 32768));
-  }
-  return `data:${mediaType};base64,${btoa(binary)}`;
-}
-
 /**
  * Generate an image from a text prompt. Sprites and blocks get a flat key
  * color the model picks to contrast with the subject, flood-filled to
@@ -218,10 +209,9 @@ export async function generateImage(
     fullPrompt = `${fullPrompt} ${BLOCK_PROMPT_CLAUSE}`;
   }
 
-  // The safety judge and the image model run concurrently — generation is
-  // the slow leg, so a safe prompt pays nothing. Both must pass before a
-  // result leaves this function; a flagged prompt outranks a generation
-  // failure, and its image is discarded unseen.
+  // The prompt judge and the image model run concurrently — generation is
+  // the slow leg, so a safe prompt pays nothing. A flagged prompt outranks
+  // a generation failure, and its image is discarded unseen.
   const [promptVerdict, rawResult] = await Promise.allSettled([
     checkPromptSafety(prompt),
     requestImage(

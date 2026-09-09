@@ -16,8 +16,8 @@ import {
 import {findOpaqueBounds} from '@cdo/apps/p5lab/spritelab/lab2/imageTrim';
 import {createUuid} from '@cdo/apps/utils';
 
+import {bytesToDataURI} from './encoding';
 import {
-  bytesToDataURI,
   GeneratedImageResult,
   RawImage,
   rawImageToBlob,
@@ -288,17 +288,17 @@ export async function generateCharacterSet(
     bytesToDataURI(new Uint8Array(await blob.arrayBuffer()), 'image/png');
 
   // The prompt judge runs while the base picture draws; its verdict gates
-  // the posed frames, which all embed the same student text. Every frame is
-  // judged too — the verdicts collect below and all must pass before the
-  // set leaves this function. The catches only mark rejections handled; the
-  // awaits still throw.
+  // everything after (the posed frames embed the same student text). The
+  // catch only marks a rejection handled — the await below still throws.
   const promptVerdict = checkPromptSafety(prompt);
   promptVerdict.catch(() => {});
-  const frameVerdicts: Promise<void>[] = [];
-  const judgeFrame = (raw: RawImage) => {
+  // Judge every generated frame. Each verdict is awaited before that
+  // frame's preview shows, so flagged pixels never reach the progress UI;
+  // the catch marks a rejection handled while keying overlaps the judge.
+  const judgeFrame = (raw: RawImage): Promise<void> => {
     const verdict = checkImageSafety(raw);
     verdict.catch(() => {});
-    frameVerdicts.push(verdict);
+    return verdict;
   };
 
   onProgress?.({done: 0, total, label: 'the character'});
@@ -312,9 +312,12 @@ export async function generateCharacterSet(
     }
   );
   await promptVerdict;
-  judgeFrame(base);
+  const baseVerdict = judgeFrame(base);
   const baseURI = bytesToDataURI(base.uint8Array, base.mediaType);
   const baseKeyed = await keyFrame(base);
+  // Also gates the posed frames: a flagged base costs one generation, not
+  // five.
+  await baseVerdict;
   let done = 1;
   let preview = await previewURI(baseKeyed);
   onProgress?.({done, total, label: 'the character', preview});
@@ -333,8 +336,9 @@ export async function generateCharacterSet(
           model: getCharacterSetImageModel(),
         }
       );
-      judgeFrame(raw);
+      const verdict = judgeFrame(raw);
       const keyed = await keyFrame(raw);
+      await verdict;
       done++;
       preview = await previewURI(keyed);
       // The posed frames finish in no particular order; the label names
@@ -345,7 +349,6 @@ export async function generateCharacterSet(
   );
 
   onProgress?.({done: total, total, label: 'assembling', preview});
-  await Promise.all(frameVerdicts);
 
   // Strip order: the second idle, the base between the ranges that share
   // it, then the walk and jump frames (CHARACTER_STRIP_POSES).
