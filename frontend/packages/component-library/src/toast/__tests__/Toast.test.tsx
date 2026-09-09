@@ -251,6 +251,24 @@ describe('Design System - Toast', () => {
       }
     });
 
+    it('keeps a dismissed toast mounted for its exit transition', async () => {
+      // The Snackbar is keyed on the message, so the provider has to hold that
+      // message while closing - dropping it would change the key mid-exit and
+      // unmount the toast instead of letting it animate out.
+      const user = userEvent.setup();
+      const {container} = render(
+        <ToastProvider>
+          <Trigger message="Saved!" />
+        </ToastProvider>,
+      );
+
+      await user.click(screen.getByRole('button', {name: 'fire'}));
+      await user.click(screen.getByRole('button', {name: 'Close alert'}));
+
+      expect(container.querySelector('.MuiSnackbar-root')).toBeInTheDocument();
+      expect(screen.queryAllByText('Saved!').length).toBeGreaterThan(0);
+    });
+
     it('reuses one live region across consecutive toasts', async () => {
       // Restarting the timer must key the Snackbar alone. Remounting the
       // region would put announcements back on the path screen readers miss:

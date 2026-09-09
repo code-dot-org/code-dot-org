@@ -38,10 +38,11 @@ function Profile() {
 Auto-dismiss defaults to 6 seconds; pass `autoHideDuration={null}` (on the
 provider or a single `show` call) to keep a toast until it is closed.
 
-Auto-dismiss holds even while the window is unfocused, and each toast raised
-through `ToastProvider` gets its own full duration rather than inheriting what
-is left of the one it replaces. On the controlled `Toast`, pass a changing
-`restartKey` to get the same restart.
+Auto-dismiss holds even while the window is unfocused, and a toast that
+replaces another gets its own full duration rather than inheriting what is left
+of the one it replaces. The Snackbar is keyed on `message` to get that restart,
+which is MUI's documented approach; showing the identical message again keeps
+the countdown already running.
 
 `anchorOrigin` picks a corner of the viewport. To land anywhere else, pass a
 `className` (on `Toast` or `ToastProvider`) — it goes on the Snackbar, the

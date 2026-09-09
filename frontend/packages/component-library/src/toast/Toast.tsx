@@ -105,12 +105,6 @@ export interface ToastProps {
   className?: string;
   /** Live-region politeness; defaults to `assertive` (see {@link ToastPoliteness}). */
   politeness?: ToastPoliteness;
-  /**
-   * Change this to restart the auto-hide timer and replay the enter
-   * transition.
-   * {@link ToastAnnouncer}).
-   */
-  restartKey?: number | string;
   /** Accessible name for the dismiss button; defaults to Alert's own default. */
   closeLabel?: string;
   /**
@@ -147,7 +141,6 @@ export default function Toast({
   anchorOrigin = DEFAULT_ANCHOR_ORIGIN,
   className,
   politeness = DEFAULT_TOAST_POLITENESS,
-  restartKey,
   closeLabel,
   alertProps,
 }: ToastProps) {
@@ -167,7 +160,11 @@ export default function Toast({
           (announcing from both would double it). */}
       <ToastAnnouncer message={open ? message : null} politeness={politeness} />
       <Snackbar
-        key={restartKey}
+        // MUI restarts its auto-hide timer only when `open` or
+        // `autoHideDuration` changes, so a replacing toast of the same
+        // duration would inherit the remaining time. Keying on the message is
+        // MUI's documented remedy; an identical repeat message keeps the running timer.
+        key={message}
         open={open}
         autoHideDuration={autoHideDuration}
         onClose={handleClose}
@@ -220,12 +217,6 @@ interface ToastState {
   message: string;
   type: ToastType;
   autoHideDuration: number | null;
-  /**
-   * Distinguishes consecutive toasts. MUI restarts its auto-hide timer only
-   * when `open` or `autoHideDuration` changes, so without this a toast
-   * replacing one of the same duration would inherit its remaining time.
-   */
-  sequence: number;
 }
 
 export interface ToastProviderProps {
@@ -253,10 +244,11 @@ export function ToastProvider({
   politeness = DEFAULT_TOAST_POLITENESS,
 }: ToastProviderProps) {
   const [toast, setToast] = useState<ToastState | null>(null);
+  const [open, setOpen] = useState(false);
 
   const show = useCallback<ShowToast>(
-    (message, options) =>
-      setToast(previous => ({
+    (message, options) => {
+      setToast({
         message,
         type: options?.type ?? 'success',
         // Ensure we keep an explicit null, as that means
@@ -265,20 +257,22 @@ export function ToastProvider({
           options?.autoHideDuration !== undefined
             ? options.autoHideDuration
             : autoHideDuration,
-        sequence: (previous?.sequence ?? 0) + 1,
-      })),
+      });
+      setOpen(true);
+    },
     [autoHideDuration],
   );
 
-  const close = useCallback(() => setToast(null), []);
+  // Hold the message through the exit transition: clearing it would change
+  // the Snackbar's key mid-exit, unmounting it instead of letting it animate.
+  const close = useCallback(() => setOpen(false), []);
 
   return (
     // `show` is a stable useCallback, so it is a stable context value.
     <ToastContext.Provider value={show}>
       {children}
       <Toast
-        restartKey={toast?.sequence}
-        open={toast !== null}
+        open={open}
         message={toast?.message ?? ''}
         type={toast?.type}
         autoHideDuration={toast?.autoHideDuration}
