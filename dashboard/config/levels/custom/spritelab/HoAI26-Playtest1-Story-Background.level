@@ -20,7 +20,7 @@
     "hide_custom_blocks": true,
     "hide_share_and_remix": "true",
     "encrypted": "false",
-    "project_template_level_name": " HoAI26-Playtest1-Story-Template",
+    "project_template_level_name": "HoAI26-Playtest1-Story-Template",
     "visible_tabs": [
       "Images"
     ],
@@ -29,8 +29,8 @@
     "long_instructions": "# Make a background\r\nUse AI to create the background for your story scene. Describe a place - a forest, a city, outer space - and press **Generate**.",
     "embed": "false",
     "instructions_important": "false",
-    "display_name": "Create a Background",
-    "bubble_choice_description": "Use your imagination and, if you choose, AI to create a background for your story.",
+    "display_name": "Create a background",
+    "bubble_choice_description": "Create a background for your story",
     "thumbnail_url": "https://images.code.org/44694524f57fda3a6b11e74f4edf1a07-Gemini_Generated_Image_zh9ivazh9ivazh9i.jpeg",
     "submittable": "false",
     "never_autoplay_video": "false",
@@ -55,7 +55,7 @@
 
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2026-09-02T21:53:27.403+00:00\",\"changed\":[\"cloned from \\\"HoAI26-Playtest1-Platform-Background\\\"\"],\"cloned_from\":\"HoAI26-Playtest1-Platform-Background\"},{\"changed_at\":\"2026-09-02 22:20:25 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-02 22:20:58 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\",\"thumbnail_url\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-02 22:46:16 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 01:38:38 +0000\",\"changed\":[\"project_template_level_name\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-09-02T21:53:27.403+00:00\",\"changed\":[\"cloned from \\\"HoAI26-Playtest1-Platform-Background\\\"\"],\"cloned_from\":\"HoAI26-Playtest1-Platform-Background\"},{\"changed_at\":\"2026-09-02 22:20:25 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-02 22:20:58 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\",\"thumbnail_url\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-02 22:46:16 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 01:38:38 +0000\",\"changed\":[\"project_template_level_name\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-08 16:31:13 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-08 22:51:53 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-08 23:55:07 +0000\",\"changed\":[\"project_template_level_name\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
