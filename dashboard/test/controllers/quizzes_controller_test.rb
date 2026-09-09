@@ -11,6 +11,82 @@ class QuizzesControllerTest < ActionController::TestCase
     sign_in @levelbuilder
   end
 
+  test "show redirects to sign in when not signed in" do
+    sign_out @levelbuilder
+    get :show, params: {level_id: @quiz.id}
+    assert_redirected_to_sign_in
+  end
+
+  test "show is forbidden for a non-levelbuilder" do
+    sign_in @teacher
+    get :show, params: {level_id: @quiz.id}
+    assert_response :forbidden
+  end
+
+  test "show 404s on a level that is not a Quiz" do
+    level = create(:level)
+    get :show, params: {level_id: level.id}
+    assert_response :not_found
+  end
+
+  test "show returns the quiz's configuration fields" do
+    @quiz.update!(display_name: 'Unit 3 Check', purpose: 'practice', time_limit_minutes: nil)
+
+    get :show, params: {level_id: @quiz.id}
+
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal 'Unit 3 Check', body['displayName']
+    assert_equal 'practice', body['purpose']
+    assert_nil body['timeLimitMinutes']
+    assert_equal [], body['questions']
+  end
+
+  test "show returns placed questions in placement order with correct answers, explanation, standards, and page" do
+    standard = create(:standard)
+    first = create(
+      :multiple_choice_question,
+      name: 'Second by name, first by position',
+      content: {
+        stem: 'Pick B',
+        choices: [{id: 'a', text: 'A'}, {id: 'b', text: 'B'}],
+        correct_choice_id: 'b'
+      },
+      explanation: 'Because B.'
+    )
+    first.standards = [standard]
+    second = create(:multiple_choice_question, name: 'Later question')
+
+    # Created out of order to prove the response sorts by (page, position),
+    # not by insertion or id.
+    create(:quiz_question_placement, level: @quiz, quiz_question: second, page: 2, position: 1)
+    create(:quiz_question_placement, level: @quiz, quiz_question: first, page: 1, position: 5)
+
+    get :show, params: {level_id: @quiz.id}
+
+    assert_response :success
+    questions = JSON.parse(response.body)['questions']
+    assert_equal [first.id, second.id], (questions.map {|q| q['id']})
+
+    first_json = questions.first
+    assert_equal 'b', first_json['correctChoiceId']
+    assert_equal 'Because B.', first_json['explanation']
+    assert_equal 1, first_json['page']
+    assert_equal [standard.shortcode], (first_json['standards'].map {|s| s['shortcode']})
+    assert_equal 2, questions.last['page']
+  end
+
+  test "show flags a question used in a published unit" do
+    question = create(:multiple_choice_question)
+    create(:quiz_question_placement, level: @quiz, quiz_question: question, page: 1, position: 1)
+    QuizQuestion.stubs(:published_unit_usage).returns(question.id => true)
+
+    get :show, params: {level_id: @quiz.id}
+
+    assert_response :success
+    assert_equal true, JSON.parse(response.body)['questions'].first['usedInPublishedUnit']
+  end
+
   test "update redirects to sign in when not signed in" do
     sign_out @levelbuilder
     put :update, params: {level_id: @quiz.id, displayName: 'x'}

@@ -1,10 +1,42 @@
-# Levelbuilder-only endpoint for a Quiz level's own configuration.
+# Levelbuilder-only endpoint for a Quiz level's own configuration and the
+# authoring view of its placed questions.
 class QuizzesController < ApplicationController
+  include QuizQuestionSerialization
+
   before_action :authenticate_user!
   before_action :require_levelbuilder_mode_or_test_env
   before_action {@level = Level.find(params[:level_id])}
   before_action {authorize! :manage, @level}
   before_action {head :not_found unless @level.is_a?(Quiz)}
+
+  # GET /levels/:level_id/quiz_configuration
+  #
+  # The builder's load payload: the flat configuration body #update
+  # returns, plus `questions` - placements in order (page, then position),
+  # each with the correct-answer and explanation fields
+  # Quiz#summarize_for_lab2_properties withholds from the taking view.
+  def show
+    placements = @level.placements.
+      includes(quiz_question: {standards: [:framework, {category: :parent_category}]}).to_a
+    question_ids = placements.map(&:quiz_question_id)
+
+    other_quiz_ids = QuizQuestionPlacement.where(quiz_question_id: question_ids).where.not(level_id: @level.id).
+      pluck(:quiz_question_id).to_set
+    published_usage = QuizQuestion.published_unit_usage(question_ids)
+
+    render json: quiz_configuration_json(@level).merge(
+      questions: placements.map do |placement|
+        question = placement.quiz_question
+        quiz_question_json(
+          question,
+          level: @level,
+          attached_to_other_quizzes: other_quiz_ids.include?(question.id),
+          used_in_published_unit: published_usage.fetch(question.id, false),
+          page: placement.page
+        )
+      end
+    )
+  end
 
   # PUT/PATCH /levels/:level_id/quiz_configuration
   #
