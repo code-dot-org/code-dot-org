@@ -29,7 +29,7 @@ const BASE_PROPS = {
   isCreating: false,
   error: null,
   createQuestion: jest.fn(),
-  reload: jest.fn(),
+  load: jest.fn(),
 };
 
 function renderWorkspace(

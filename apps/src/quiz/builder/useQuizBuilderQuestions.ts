@@ -31,7 +31,7 @@ export default function useQuizBuilderQuestions(
   const [isCreating, setIsCreating] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const reload = useCallback(async () => {
+  const load = useCallback(async () => {
     setIsLoading(true);
     setError(null);
     try {
@@ -48,8 +48,8 @@ export default function useQuizBuilderQuestions(
   }, [levelId]);
 
   useEffect(() => {
-    reload();
-  }, [reload]);
+    load();
+  }, [load]);
 
   const createQuestion = useCallback(async () => {
     setIsCreating(true);
@@ -70,5 +70,5 @@ export default function useQuizBuilderQuestions(
     }
   }, [levelId]);
 
-  return {questions, isLoading, isCreating, error, createQuestion, reload};
+  return {questions, isLoading, isCreating, error, createQuestion, load};
 }

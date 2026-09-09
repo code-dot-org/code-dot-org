@@ -42,5 +42,5 @@ export interface QuizBuilderQuestionsState {
   isCreating: boolean;
   error: string | null;
   createQuestion: () => Promise<void>;
-  reload: () => Promise<void>;
+  load: () => Promise<void>;
 }
