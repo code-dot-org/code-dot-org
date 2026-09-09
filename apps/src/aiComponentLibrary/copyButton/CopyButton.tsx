@@ -17,8 +17,7 @@ const CopyButton: React.FC<{copyText: string; usage: string}> = ({
 }) => {
   const [showCopyConfirmation, setShowCopyConfirmation] = useState(false);
 
-  // Theme, if any. Outside a ThemeProvider it's undefined and the tooltip's
-  // data-theme slot prop is simply omitted.
+  // Undefined outside a ThemeProvider; the slot prop is then omitted.
   const {theme} = useTheme(true);
 
   const dispatch = useAppDispatch();

@@ -15,9 +15,8 @@ interface DemoSectionTooltipProps {
   children: React.ReactNode;
 }
 
-// Wraps a control that is disabled for demo sections so hovering explains
-// why. The span anchor receives the hover/focus events Tooltip attaches,
-// because disabled buttons do not fire them.
+// The span anchor takes the hover and focus events, because a disabled
+// button does not fire them.
 const DemoSectionTooltip: React.FC<DemoSectionTooltipProps> = ({
   isDemoSection = false,
   tooltipId,
@@ -26,7 +25,7 @@ const DemoSectionTooltip: React.FC<DemoSectionTooltipProps> = ({
 }) =>
   isDemoSection ? (
     <Tooltip id={tooltipId} title={text} placement="top">
-      {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- the control inside is disabled, so this anchor is the only way to reach the tooltip */}
+      {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- the control inside is disabled, so this wrapper is the only way to reach the reason */}
       <span className={styles.anchor} tabIndex={0}>
         {children}
       </span>

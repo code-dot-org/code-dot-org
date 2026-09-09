@@ -1,4 +1,5 @@
 import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
+import {muiPlacementFor} from '@code-dot-org/component-library/common/helpers';
 import {ComponentPlacementDirection} from '@code-dot-org/component-library/common/types';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
@@ -10,17 +11,7 @@ import {
 } from '@mui/material';
 import React, {memo, useCallback, useState} from 'react';
 
-// Legacy direction → MUI placement ('none' and unset → top).
-const PLACEMENT: Record<
-  ComponentPlacementDirection,
-  'top' | 'right' | 'bottom' | 'left'
-> = {
-  onTop: 'top',
-  onRight: 'right',
-  onBottom: 'bottom',
-  onLeft: 'left',
-  none: 'top',
-};
+import moduleStyles from './icon-button-with-tooltip.module.scss';
 
 interface IconButtonWithTooltipProps {
   id: string;
@@ -59,8 +50,7 @@ const IconButtonWithTooltip: React.FunctionComponent<IconButtonWithTooltipProps>
       href,
       target = '_blank',
     }) => {
-      // The bubble portals to document.body, so data-theme has to be set on it
-      // directly rather than inherited.
+      // The bubble portals to <body>, so it cannot inherit data-theme.
       const {theme: contextTheme} = useTheme(true);
       const theme = themeOverride ?? contextTheme;
 
@@ -84,11 +74,40 @@ const IconButtonWithTooltip: React.FunctionComponent<IconButtonWithTooltipProps>
 
       const iconElement = <FontAwesomeV6Icon {...icon} />;
 
+      const button = href ? (
+        <MuiIconButton
+          id={`${id}-button`}
+          aria-label={label}
+          variant={variant}
+          color={color}
+          size={size}
+          disabled={disabled}
+          href={href}
+          target={target}
+          rel={target === '_blank' ? 'noopener noreferrer' : undefined}
+        >
+          {iconElement}
+        </MuiIconButton>
+      ) : (
+        <MuiIconButton
+          id={`${id}-button`}
+          aria-label={label}
+          variant={variant}
+          color={color}
+          size={size}
+          disabled={disabled}
+          onClick={handleClick}
+          type="button"
+        >
+          {iconElement}
+        </MuiIconButton>
+      );
+
       return (
         <Tooltip
           id={`${id}-tooltip`}
           title={label}
-          placement={tooltipDirection ? PLACEMENT[tooltipDirection] : 'top'}
+          placement={muiPlacementFor(tooltipDirection)}
           arrow={!hideTooltipTail}
           open={open}
           onOpen={() => setOpen(true)}
@@ -100,37 +119,12 @@ const IconButtonWithTooltip: React.FunctionComponent<IconButtonWithTooltipProps>
             },
           }}
         >
-          {/* Wrapper span so the tooltip still shows when the button is disabled. */}
-          <span>
-            {href ? (
-              <MuiIconButton
-                id={`${id}-button`}
-                aria-label={label}
-                variant={variant}
-                color={color}
-                size={size}
-                disabled={disabled}
-                href={href}
-                target={target}
-                rel={target === '_blank' ? 'noopener noreferrer' : undefined}
-              >
-                {iconElement}
-              </MuiIconButton>
-            ) : (
-              <MuiIconButton
-                id={`${id}-button`}
-                aria-label={label}
-                variant={variant}
-                color={color}
-                size={size}
-                disabled={disabled}
-                onClick={handleClick}
-                type="button"
-              >
-                {iconElement}
-              </MuiIconButton>
-            )}
-          </span>
+          {/* A disabled button fires no pointer events; the tooltip needs a live element to listen on. */}
+          {disabled ? (
+            <span className={moduleStyles.disabledWrapper}>{button}</span>
+          ) : (
+            button
+          )}
         </Tooltip>
       );
     }

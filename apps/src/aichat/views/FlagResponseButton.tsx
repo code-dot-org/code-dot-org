@@ -83,7 +83,7 @@ const FlagResponseButton: React.FC<{
           onClick={() => {
             setShowInput(!showInput);
           }}
-          aria-label="Is something notable about this AI response? Log to Langfuse for review."
+          aria-label="Flag response"
           type="button"
         >
           <FontAwesomeV6Icon

@@ -76,7 +76,7 @@ const CoteacherInviteNotification = ({
             <button
               type="button"
               className={styles.tooltipTrigger}
-              aria-label={i18n.coteacherTooltip()}
+              aria-label="More information"
             >
               <FontAwesomeV6Icon iconName="circle-info" />
             </button>

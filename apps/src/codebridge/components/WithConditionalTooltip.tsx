@@ -1,4 +1,4 @@
-import {ComponentPlacementDirection} from '@code-dot-org/component-library/common/types';
+import {muiPlacementFor} from '@code-dot-org/component-library/common/helpers';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {TooltipProps} from '@code-dot-org/component-library/tooltip';
 import {Tooltip} from '@mui/material';
@@ -11,20 +11,8 @@ interface WithConditionalTooltipProps {
   showTooltip: boolean;
 }
 
-// Legacy direction → MUI placement ('none' and unset → top).
-const DIRECTION_TO_PLACEMENT: Record<
-  ComponentPlacementDirection,
-  'top' | 'right' | 'bottom' | 'left'
-> = {
-  onTop: 'top',
-  onRight: 'right',
-  onBottom: 'bottom',
-  onLeft: 'left',
-  none: 'top',
-};
-
-// Wraps children in a tooltip when showTooltip is true. The wrapping div
-// carries the hover handlers, so the tooltip still shows for disabled children.
+// The wrapping div carries the hover handlers, so the tooltip still shows
+// for a disabled child.
 const WithConditionalTooltip: React.FunctionComponent<
   WithConditionalTooltipProps
 > = ({children, tooltipOverlayClassName, tooltipProps, showTooltip}) => {
@@ -51,11 +39,11 @@ const WithConditionalTooltip: React.FunctionComponent<
     <Tooltip
       id={tooltipId}
       title={title}
-      placement={direction ? DIRECTION_TO_PLACEMENT[direction] : 'top'}
+      placement={muiPlacementFor(direction)}
       arrow={hideTail ? false : undefined}
       slotProps={dataTheme ? {tooltip: {'data-theme': dataTheme}} : undefined}
     >
-      {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- callers show this tooltip only while the control inside is disabled, so the wrapper is the only way to reach the reason */}
+      {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- the control inside is disabled, so this wrapper is the only way to reach the reason */}
       <div className={tooltipOverlayClassName} tabIndex={0}>
         {children}
       </div>

@@ -1,13 +1,20 @@
 import {Tooltip} from '@mui/material';
-import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 
-import moduleStyles from './pixel-editor.module.scss';
+// Added to the theme's 8px caret gap for 25px total, so the tail reads
+// against the image rather than the dark toolbar gap.
+const GAP_PX = 17;
+// Left-column triggers sit a 34px column + 4px gap further out; the extra
+// distance lands every bubble on the same x.
+const LEFT_COLUMN_GAP_PX = GAP_PX + 38;
 
-// Tooltip preconfigured for the editor's toolbar: opens to the right, hides
-// quickly, and lifts above the modal overlay (see .pixelTooltip). fromLeftColumn
-// compensates for the trigger sitting one toolbar column further from the
-// canvas, so every bubble lands on the same x.
+// Popper re-initializes on a new modifiers identity, so build these once.
+const offsetBy = (gap: number) => [
+  {name: 'offset', options: {offset: [0, gap]}},
+];
+const MODIFIERS = offsetBy(GAP_PX);
+const LEFT_COLUMN_MODIFIERS = offsetBy(LEFT_COLUMN_GAP_PX);
+
 const PixelTooltip: React.FunctionComponent<{
   tooltipId: string;
   text: string;
@@ -16,9 +23,8 @@ const PixelTooltip: React.FunctionComponent<{
 }> = ({tooltipId, text, fromLeftColumn, children}) => {
   const [open, setOpen] = useState(false);
 
-  // Leaving the browser window mid-hover swallows the mouseleave, leaving the
-  // bubble up forever (and a second one appears on the next hover); close it
-  // on window blur.
+  // Leaving the window mid-hover swallows the mouseleave, so the bubble would
+  // stay up until the next hover.
   useEffect(() => {
     const hide = () => setOpen(false);
     window.addEventListener('blur', hide);
@@ -36,11 +42,8 @@ const PixelTooltip: React.FunctionComponent<{
       leaveDelay={10}
       disableInteractive
       slotProps={{
-        tooltip: {
-          className: classNames(
-            moduleStyles.pixelTooltip,
-            fromLeftColumn && moduleStyles.pixelTooltipLeftColumn
-          ),
+        popper: {
+          modifiers: fromLeftColumn ? LEFT_COLUMN_MODIFIERS : MODIFIERS,
         },
       }}
     >

@@ -62,26 +62,6 @@ $border-subtle: chrome.$border-subtle;
   justify-items: center;
 }
 
-// The design-system tooltip portals to <body> at z-index 10, which is under
-// CustomDialog's overlay ($zindex-modal-backdrop, 1040); lift ours above it.
-// The nudge right puts the bubble's left edge 4px past the canvas edge, so
-// the tail reads against the image being edited rather than the dark toolbar
-// gap.
-.pixelTooltip {
-  // Absolute from the first paint: WithTooltip measures the bubble BEFORE
-  // positioning it, and an unpositioned bubble measures at body width,
-  // which derails the first show's viewport-fit logic.
-  position: absolute;
-  z-index: 1200;
-  margin-left: 16px;
-}
-
-// Left-column triggers sit one column (34px + 4px gap) further from the
-// canvas; the extra nudge puts their bubbles on the same x as the rest.
-.pixelTooltipLeftColumn {
-  margin-left: 54px;
-}
-
 .toolButton {
   display: flex;
   align-items: center;
@@ -96,13 +76,6 @@ $border-subtle: chrome.$border-subtle;
   background: none;
   color: var(--dialog-text-secondary);
   cursor: pointer;
-
-  // WithTooltip anchors its bubble to the innermost element under the
-  // pointer at enter time; keep that anchor the button itself, or the
-  // bubble shifts by the icon/button difference depending on entry path.
-  > * {
-    pointer-events: none;
-  }
 
   i {
     font-size: 15px;
@@ -329,9 +302,8 @@ $border-subtle: chrome.$border-subtle;
 .spectrumPopover {
   position: absolute;
   bottom: 0;
-  // Same 4px-past-the-canvas-edge alignment as .pixelTooltip (the why lives
-  // there): the picker row spans the full toolbar width, so 100% + the 12px
-  // body gap + 4px lands just inside the image.
+  // The picker row spans the full toolbar width, so 100% + the 12px body gap
+  // + 4px lands just inside the image.
   left: calc(100% + 16px);
   z-index: 10;
   padding: 6px;

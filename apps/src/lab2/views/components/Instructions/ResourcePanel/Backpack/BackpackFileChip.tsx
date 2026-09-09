@@ -266,7 +266,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
           />
         ) : (
           <Tooltip title={addButtonTooltipText} placement="top">
-            {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- focusable only while the button is disabled, since the tooltip is the only place the reason appears */}
+            {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- the control inside is disabled, so this wrapper is the only way to reach the reason */}
             <div tabIndex={addButtonDisabled ? 0 : undefined}>
               <MuiIconButton
                 variant="outlined"

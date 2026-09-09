@@ -123,8 +123,8 @@ describe('CurriculumCatalogCard', () => {
     );
   });
 
-  // The tooltip itself opens on :focus-visible, which jsdom never reports for
-  // scripted focus, so only reachability is assertable here.
+  // jsdom never matches :focus-visible, for .focus() or user.tab(), so only a
+  // browser can cover the open. Same for the plus sign below.
   it('gives the first label a keyboard-reachable tooltip trigger', () => {
     renderCurriculumCard({...defaultProps, subjects: subjects, topics: topics});
     const firstLabelText =
