@@ -1,12 +1,12 @@
-## Summary
-<!--
-  Summary of what was changed or updated.
-  Include screenshots, videos, or before/after comparisons for UI changes.
--->
-
 ## Background and Intent
 <!--
   Background, motivation, and context for this update. What was the impetus behind this change? How was the decision made to move forward? Who was involved in the process? What is the intended outcome of this update?
+-->
+
+## Change Log
+<!--
+  Summary of what was changed or updated.
+  Include screenshots, videos, or before/after comparisons for UI changes.
 -->
 
 ## Links
