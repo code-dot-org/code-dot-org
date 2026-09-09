@@ -2,6 +2,7 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tags from '@code-dot-org/component-library/tags';
+import {ShowToast} from '@code-dot-org/component-library/toast';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {Typography, IconButton as MuiIconButton, Tooltip} from '@mui/material';
 import React, {useMemo} from 'react';
@@ -15,6 +16,7 @@ import {BackpackProps} from '@cdo/apps/lab2/views/components/Instructions/Resour
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import {toastOptionsFor} from '@cdo/apps/sharedComponents/backpack/backpackToasts';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import isFileTypeSupported from './isFileTypeSupported';
@@ -27,10 +29,18 @@ import {
 
 import moduleStyles from './backpack-file-chip.module.scss';
 
+/** How long the row shows its 'Added' confirmation. */
+export const SHOW_RECENTLY_ADDED_DURATION_MS = 3000;
+
 interface BackpackFileChipProps extends BackpackProps {
   fileName: string;
   backpackApi: BackpackClientApi;
   addAlert: (type: 'success' | 'danger', message: string) => void;
+  /**
+   * Unified panel only. Delete has no addAlert equivalent for its in-progress
+   * and success states, and the legacy panel reports neither.
+   */
+  showToast?: ShowToast;
   isRecentlyAdded?: boolean;
   disableActions: boolean;
   setActionInProgress: (inProgress: boolean) => void;
@@ -45,6 +55,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   fileName,
   backpackApi,
   addAlert,
+  showToast,
   validateFileName,
   saveFileToProject,
   createNewProjectFile,
@@ -176,13 +187,24 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
       icon: {iconName: 'trash', iconStyle: 'solid'},
     });
     if (results.type === 'confirm') {
+      showToast?.(
+        `Deleting ${fileName} from your Backpack...`,
+        toastOptionsFor('info')
+      );
       backpackApi.deleteFiles(
         [fileName],
         error => {
-          addAlert(
-            'danger',
-            `Failed to delete ${fileName} from your Backpack.`
-          );
+          if (showToast) {
+            showToast(
+              `Couldn't delete ${fileName} from your Backpack. Please try again.`,
+              toastOptionsFor('danger')
+            );
+          } else {
+            addAlert(
+              'danger',
+              `Failed to delete ${fileName} from your Backpack.`
+            );
+          }
           Lab2Registry.getInstance()
             .getMetricsReporter()
             .logError('Backpack file delete error', error);
@@ -190,6 +212,10 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
         },
         () => {
           // TODO: log to statsig
+          showToast?.(
+            `${fileName} deleted from your Backpack.`,
+            toastOptionsFor('success')
+          );
           setActionInProgress(false);
           sendLab2AnalyticsEvent(EVENTS.DELETE_FROM_BACKPACK, {
             fileType: fileExtension || '',

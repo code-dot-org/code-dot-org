@@ -1,17 +1,22 @@
-import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton, Snackbar, Fade, Typography} from '@mui/material';
+import {useToast} from '@code-dot-org/component-library/toast';
+import {Button as MuiButton, Typography} from '@mui/material';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
-import {TransitionGroup} from 'react-transition-group';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProjectType} from '@cdo/apps/lab2/types';
 import {convertProjectTypeToDisplayName} from '@cdo/apps/lab2/utils';
 import {BackpackProps} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
+import {
+  BackpackAlertType,
+  toastOptionsFor,
+} from '@cdo/apps/sharedComponents/backpack/backpackToasts';
 import {BackpackEvent} from '@cdo/apps/sharedComponents/backpack/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import BackpackFileChip from './BackpackFileChip';
+import BackpackFileChip, {
+  SHOW_RECENTLY_ADDED_DURATION_MS,
+} from './BackpackFileChip';
 import {
   ALL_FILES_CATEGORY_ID,
   BackpackSortOrder,
@@ -25,15 +30,6 @@ import isFileTypeSupported from './isFileTypeSupported';
 
 import moduleStyles from './unified-backpack-panel.module.scss';
 
-const ALERT_AUTO_HIDE_MS = 3000;
-let nextAlertId = 0;
-
-interface AlertConfig {
-  id: number;
-  type: 'success' | 'danger' | 'info';
-  message: string;
-}
-
 interface UnifiedBackpackFile {
   appType: string;
   fileName: string;
@@ -44,13 +40,6 @@ interface UnifiedBackpackPanelProps extends BackpackProps {
   backpackRefreshKey: number;
 }
 
-// No-op transition for the Snackbar's transition slot
-// since the transition is handled by the inner TransitionGroup and Fade
-const SnackbarPassthrough = React.forwardRef<
-  HTMLDivElement,
-  {children?: React.ReactNode}
->(({children}, ref) => <div ref={ref}>{children}</div>);
-
 /**
  * Backpack panel behind the 'unified-backpack' experiment. It shows every backpack file the
  * user has as one list.
@@ -60,7 +49,6 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
   saveFileToProject,
   createNewProjectFile,
   findIdForFileName,
-  openPanelCallback,
   supportedFileTypes,
   backpackRefreshKey,
   addFileTooltipText,
@@ -68,11 +56,15 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
 }) => {
   const backpackApi = Lab2Registry.getInstance().getUnifiedBackpackApi();
   const currentUserId = useAppSelector(state => state.currentUser.userId);
+  const showToast = useToast();
 
   const [files, setFiles] = useState<UnifiedBackpackFile[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [loadError, setLoadError] = useState<boolean>(false);
-  const [alertList, setAlertList] = useState<AlertConfig[]>([]);
+  // Keyed like the chips, by `${appType}/${fileName}`.
+  const [recentlyAddedKeys, setRecentlyAddedKeys] = useState<Set<string>>(
+    new Set()
+  );
   const [actionInProgress, setActionInProgress] = useState<boolean>(false);
   const [selectedCategoryId, setSelectedCategoryId] = useState<
     FileCategoryId | typeof ALL_FILES_CATEGORY_ID
@@ -146,21 +138,27 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
     }
   }, [files, selectedCategoryId]);
 
-  const removeAlert = useCallback((id: number) => {
-    setAlertList(prevAlerts => prevAlerts.filter(alert => alert.id !== id));
+  const markRecentlyAdded = useCallback((fileKey: string) => {
+    setRecentlyAddedKeys(prevKeys => new Set(prevKeys).add(fileKey));
+    setTimeout(() => {
+      setRecentlyAddedKeys(prevKeys => {
+        const nextKeys = new Set(prevKeys);
+        nextKeys.delete(fileKey);
+        return nextKeys;
+      });
+    }, SHOW_RECENTLY_ADDED_DURATION_MS);
   }, []);
 
-  const addAlert = useCallback(
-    (type: AlertConfig['type'], message: string, autoHide: boolean = true) => {
-      const id = nextAlertId++;
-      setAlertList(prevAlerts => [...prevAlerts, {id, type, message}]);
-      openPanelCallback();
-      if (autoHide) {
-        setTimeout(() => removeAlert(id), ALERT_AUTO_HIDE_MS);
+  // The notifier the shared add-to-project code expects. Every success reaching
+  // it is an add-to-project, so the row the user clicked also confirms in place.
+  const makeAddAlert = useCallback(
+    (fileKey: string) => (type: BackpackAlertType, message: string) => {
+      if (type === 'success') {
+        markRecentlyAdded(fileKey);
       }
-      return id;
+      showToast(message, toastOptionsFor(type));
     },
-    [openPanelCallback, removeAlert]
+    [markRecentlyAdded, showToast]
   );
 
   // Names held by more than one backpack. Those rows have to say which backpack they
@@ -183,16 +181,19 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
       if (!client) {
         return null;
       }
+      const fileKey = `${appType}/${fileName}`;
       // The universal backpack has no display name, so its rows stay unlabeled.
       const sourceDisplayName = duplicateFileNames.has(fileName)
         ? convertProjectTypeToDisplayName(appType as ProjectType) || undefined
         : undefined;
       return (
         <BackpackFileChip
-          key={`${appType}/${fileName}`}
+          key={fileKey}
           fileName={fileName}
           backpackApi={client}
-          addAlert={addAlert}
+          addAlert={makeAddAlert(fileKey)}
+          showToast={showToast}
+          isRecentlyAdded={recentlyAddedKeys.has(fileKey)}
           validateFileName={validateFileName}
           saveFileToProject={saveFileToProject}
           createNewProjectFile={createNewProjectFile}
@@ -210,7 +211,9 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
     [
       backpackApi,
       duplicateFileNames,
-      addAlert,
+      makeAddAlert,
+      showToast,
+      recentlyAddedKeys,
       validateFileName,
       saveFileToProject,
       createNewProjectFile,
@@ -295,26 +298,6 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
 
   return (
     <div className={moduleStyles.unifiedBackpackPanel}>
-      <Snackbar
-        open
-        slots={{transition: SnackbarPassthrough}}
-        className={moduleStyles.alertContainer}
-      >
-        <TransitionGroup className={moduleStyles.alertList}>
-          {alertList.map(({id, type, message}) => (
-            <Fade key={id} mountOnEnter unmountOnExit>
-              <div>
-                <Alert
-                  type={type}
-                  text={message}
-                  size="s"
-                  onClose={() => removeAlert(id)}
-                />
-              </div>
-            </Fade>
-          ))}
-        </TransitionGroup>
-      </Snackbar>
       {files.length > 0 && (
         <BackpackListControls
           fileNames={fileNames}
