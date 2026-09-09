@@ -106,7 +106,7 @@ import {parseSpriteRef} from './spriteCells';
 import {setSpritePickHandler} from './spritePick';
 import {standInBlocks} from './standInBlocks';
 import {toolboxForSurface, type Surface} from './surfaceToolbox';
-import {withoutCategories} from './toolboxFilter';
+import {withoutCategories, withoutEmptyHeadings} from './toolboxFilter';
 import {DesignSystemToolboxPlugin} from './toolboxStyle';
 import {useWorldBlocklyTheme} from './worldBlocklyTheme';
 
@@ -565,6 +565,15 @@ export const BlocklyFileEditor = ({
     return path?.endsWith('.actor') ? path.replace(/\.actor$/, '') : undefined;
   }, [currentSources.source, fileId]);
 
+  // …and which `.world`, for the one thing that asks: a world declaring state
+  // of its own gets a drawer for it exactly as an actor does, and while that
+  // world is open, that drawer is the one being worked in and belongs at the
+  // top of the strip (`domainBlocks`, `CURRENT_HEADING`).
+  const ownWorldModule = useMemo(() => {
+    const path = filePath(currentSources.source, fileId);
+    return path?.endsWith('.world') ? path.replace(/\.world$/, '') : undefined;
+  }, [currentSources.source, fileId]);
+
   // The properties this actor declares for itself, if it is one. Parsed from
   // the file as saved rather than from the live workspace: the palette is
   // rebuilt when the sources change, which is exactly when a declaration was
@@ -622,6 +631,7 @@ export const BlocklyFileEditor = ({
       // whose `emit` blocks are listed: an actor's events are heard anywhere
       // and raised only at home (`domainBlocks`).
       ownActorModule,
+      ownWorldModule,
     });
     // …and a definition for every block type the project's files hold that
     // this palette does not mint. That is what a deleted rule leaves behind,
@@ -642,18 +652,23 @@ export const BlocklyFileEditor = ({
       ...hiddenCategories,
       ...narrowed,
     ]);
+    const shelved = shelf ? shelvedToolbox(offered, shelf) : offered;
     return {
       blocks: [
         ...palette.blocks,
         ...standInBlocks(Object.values(files), known),
       ],
-      toolbox: shelf ? shelvedToolbox(offered, shelf) : offered,
+      // …and LAST, after everything that can empty a group: the headings were
+      // decided while the toolbox was built, and any of the three filters
+      // above can leave one standing over nothing (`toolboxFilter`).
+      toolbox: withoutEmptyHeadings(shelved),
     };
   }, [
     files,
     ownContents,
     ownRuleModule,
     ownActorModule,
+    ownWorldModule,
     fileKind,
     hiddenCategories,
     ownActorProperties,

@@ -8,7 +8,8 @@
 import {describe, expect, it} from 'vitest';
 
 import {buildDomainPalette} from '../domainBlocks';
-import {withoutCategories} from '../toolboxFilter';
+import {withoutCategories, withoutEmptyHeadings} from '../toolboxFilter';
+import {TOOLBOX_HEADING} from '../toolboxStyle';
 
 const names = (toolbox: unknown) =>
   (toolbox as Array<{name: string}>).map(category => category.name);
@@ -55,5 +56,48 @@ describe('withoutCategories', () => {
         String(type),
       ).toBe(true);
     }
+  });
+});
+
+describe('withoutEmptyHeadings', () => {
+  /** A toolbox row list, headings written as `— Name —`. */
+  const rows = (...names: string[]) =>
+    names.map(name =>
+      name.startsWith('—')
+        ? {kind: TOOLBOX_HEADING, name: name.replaceAll('—', '').trim()}
+        : {name, blocks: []},
+    ) as unknown as Parameters<typeof withoutEmptyHeadings>[0];
+
+  it('drops a heading whose group was filtered away', () => {
+    // The case that made this necessary. A `.rule` is offered only the rules
+    // it depends on (`rulesInScope`), and its own drawer is hoisted out of the
+    // group — so a project of two rules leaves the Rules heading over nothing.
+    expect(names(withoutEmptyHeadings(rows('Math', '— Rules —')))).toEqual([
+      'Math',
+    ]);
+  });
+
+  it('drops one whose group is empty because the next heading follows it', () => {
+    expect(
+      names(
+        withoutEmptyHeadings(
+          rows(
+            'Math',
+            '— Current —',
+            'Spin',
+            '— Rules —',
+            '— Actors —',
+            'Tapper',
+          ),
+        ),
+      ),
+    ).toEqual(['Math', 'Current', 'Spin', 'Actors', 'Tapper']);
+  });
+
+  it('keeps a heading that still has something under it', () => {
+    // Identity, for the same reason `withoutCategories` hands back what it was
+    // given: the toolbox is a prop.
+    const kept = rows('Math', '— Rules —', 'Spin');
+    expect(withoutEmptyHeadings(kept)).toBe(kept);
   });
 });

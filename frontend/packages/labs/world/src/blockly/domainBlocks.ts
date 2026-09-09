@@ -9823,6 +9823,30 @@ const ACTORS_HEADING = toolboxHeading(
   FILE_ICONS.actor.iconName,
 ) as unknown as ToolboxCategory;
 
+/**
+ * …and one over the drawer for the file that is OPEN, above both of them.
+ *
+ * A `.rule` and an `.actor` each have a drawer of their own among the
+ * project's, and the one being edited is the one a learner reaches for most:
+ * writing Gravity means reaching for Gravity's own properties over and over.
+ * Left in the alphabet with the rest, it was somewhere different in every file
+ * and had to be hunted for each time. Hoisted, it is in the same place in
+ * every file, which is the argument `RULES_HEADING` already makes for keeping
+ * the language's own categories above the project's.
+ *
+ * IT IS THE SAME DRAWER, not a copy: the category is lifted out of the list it
+ * belongs to rather than repeated, so nothing is offered twice and the list it
+ * came from does not have a hole where it used to be.
+ *
+ * The icon says THIS FILE rather than a kind of file — the scroll and the
+ * masks over the two lists below already say which kind — so it is a page with
+ * a pen on it and not one of those two.
+ */
+const CURRENT_HEADING = toolboxHeading(
+  'Current',
+  'file-pen',
+) as unknown as ToolboxCategory;
+
 /** Everything above the heading: the same rows, in the same order, always. */
 const FIXED_CATEGORIES: ToolboxCategory[] = [
   ...TOOLBOX_HEAD,
@@ -10105,12 +10129,23 @@ export function buildDomainPalette(
     /**
      * The `.actor` module being edited, when one is — `actors/beacon`.
      *
-     * Only one thing asks: whether to LIST an actor's `emit` blocks. Every
-     * actor's drawer is offered in every file, because an event declared in an
+     * Two things ask. Whether to LIST an actor's `emit` blocks: every actor's
+     * drawer is offered in every file, because an event declared in an
      * `.actor` exists to be heard somewhere else; raising one is the opposite,
-     * and belongs to the file that declared it. See the loop below.
+     * and belongs to the file that declared it (see the loop below). And which
+     * drawer is hoisted under `Current`.
      */
     ownActorModule?: string;
+    /**
+     * The `.world` module being edited, when one is — `worlds/main`.
+     *
+     * ONLY the hoist asks, which is why it is separate from the actor's above
+     * rather than folded into it: a world declaring state of its own gets a
+     * drawer for it exactly as an actor does (`parseWorldOwnMeta`, and both
+     * arrive in `ownProperties`), and while that world is open, that drawer is
+     * the one being worked in. Nothing else about the palette turns on it.
+     */
+    ownWorldModule?: string;
   } = {},
 ): {
   blocks: DomainBlock[];
@@ -10322,18 +10357,58 @@ export function buildDomainPalette(
   }
 
   /**
-   * The actors' drawers, under a heading of their own.
+   * The drawer for the file being edited, lifted out of the list it is in.
    *
-   * BELOW THE RULES, and the same shape: what a project has is under a word
-   * saying what kind of thing it is, and what the language has is above both
-   * (`toolboxStyle`, `RULES_HEADING`). Nothing at all when no actor declared
-   * anything, because a heading over an empty list is a label for something
-   * that is not there.
+   * By NAME, because that is what a category is keyed by here — the rule's or
+   * the actor's, matched to the module the editor said it has open. A file
+   * that declares nothing has no drawer to lift, and a `.world` (and the
+   * headless generator, which has no one file) names neither module, so both
+   * fall through with nothing hoisted.
    */
-  const withActors = (categories: ToolboxCategory[]): ToolboxCategory[] =>
-    actorCategories.length === 0
-      ? categories
-      : [...categories, ACTORS_HEADING, ...actorCategories];
+  const hoist = (
+    categories: ToolboxCategory[],
+    name: string | undefined,
+  ): {rest: ToolboxCategory[]; current: ToolboxCategory[]} => {
+    const at =
+      name === undefined
+        ? -1
+        : categories.findIndex(category => category.name === name);
+    return at < 0
+      ? {rest: categories, current: []}
+      : {
+          rest: [...categories.slice(0, at), ...categories.slice(at + 1)],
+          current: [categories[at]],
+        };
+  };
+
+  // An actor's drawer, or a world's own state — the two kinds of thing
+  // `ownProperties` holds, and a file is at most one of them.
+  const ownModule = options.ownActorModule ?? options.ownWorldModule;
+  const {rest: otherActors, current: currentActor} = hoist(
+    actorCategories,
+    ownModule === undefined
+      ? undefined
+      : (options.ownProperties ?? []).find(
+          meta => meta.modulePath === ownModule,
+        )?.name,
+  );
+
+  /**
+   * The project's half of the strip: what is open, then the rules, then the
+   * actors, each under a word saying what it is.
+   *
+   * BELOW THE LANGUAGE'S OWN, and every heading conditional on there being
+   * something under it — a heading over an empty list is a label for something
+   * that is not there (`toolboxStyle`, `RULES_HEADING`).
+   */
+  const projectHalf = (
+    ruleCategories: readonly ToolboxCategory[],
+    current: readonly ToolboxCategory[],
+  ): ToolboxCategory[] => [
+    ...(current.length > 0 ? [CURRENT_HEADING, ...current] : []),
+    ...(ruleCategories.length > 0 ? [RULES_HEADING, ...ruleCategories] : []),
+    ...(otherActors.length > 0 ? [ACTORS_HEADING, ...otherActors] : []),
+  ];
 
   if (projectRules.length === 0) {
     // `DOMAIN_CATEGORIES` when nothing was filtered, so the no-file-kind case
@@ -10342,7 +10417,10 @@ export function buildDomainPalette(
       structural === TOOLBOX_HEAD
         ? DOMAIN_CATEGORIES
         : [...structural, ...BUILTIN_RULE_CATEGORIES, ...TOOLBOX_TAIL];
-    const shown = withActors(categories);
+    // No project rules, so nothing but an actor can be the open file.
+    const project = projectHalf([], currentActor);
+    const shown =
+      project.length === 0 ? categories : [...categories, ...project];
     return {
       // The shared constant itself when this actor declares nothing, keeping
       // the identity the no-project-rules path has always handed back rather
@@ -10372,13 +10450,22 @@ export function buildDomainPalette(
         ? 'none'
         : 'all',
   );
-  const toolbox: ToolboxCategory[] = withActors([
+  // The rule this palette is FOR, if it is for one, out of the list and up top.
+  const {rest: otherRules, current: currentRule} = hoist(
+    palette.categories,
+    options.ownRuleModule === undefined
+      ? undefined
+      : projectRules.find(rule => rule.modulePath === options.ownRuleModule)
+          ?.name,
+  );
+  const toolbox: ToolboxCategory[] = [
     ...structural,
     ...BUILTIN_RULE_CATEGORIES,
     ...TOOLBOX_TAIL,
-    RULES_HEADING,
-    ...palette.categories,
-  ]);
+    // A file is a rule or an actor and never both, so at most one of these
+    // holds anything; concatenating says that without having to ask which.
+    ...projectHalf(otherRules, [...currentRule, ...currentActor]),
+  ];
   return {
     blocks: [...shaped, ...palette.blocks, ...ownBlocks],
     toolbox: editingRule ? withEngine(toolbox) : toolbox,

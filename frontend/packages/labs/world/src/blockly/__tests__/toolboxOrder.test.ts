@@ -22,6 +22,7 @@ import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
 import {mouseRule} from '../../rules/stock';
 import {projectFiles} from '../../runtime/projectFiles';
 import {buildDomainPalette, DOMAIN_TOOLBOX} from '../domainBlocks';
+import {parseWorldOwnMeta} from '../ownProperties';
 import {projectOwnMetas, projectRuleMetas} from '../projectModules';
 import {parseRuleMeta} from '../ruleMeta';
 import {registerProjectRules} from '../ruleRegistry';
@@ -119,6 +120,140 @@ describe('the toolbox', () => {
 
     expect(heading.kind).toBe(TOOLBOX_HEADING);
     expect(heading.blocks).toBeUndefined();
+  });
+});
+
+describe('the drawer for the file being edited', () => {
+  const files = projectFiles(WORLD_SCENARIOS.simple.source);
+  const rules = projectRuleMetas(files);
+  const own = projectOwnMetas(files);
+
+  /** A rule the starter holds as a file of its own, so it has a module. */
+  const aRule = () => rules.find(rule => rule.modulePath)!;
+
+  it('is hoisted out of the rules, under a Current heading', () => {
+    // Writing Gravity means reaching for Gravity's own properties over and
+    // over. Left among the imports it is somewhere different in every file;
+    // hoisted, it is in the same place in all of them — the argument the
+    // Rules heading already makes one level up.
+    const rule = aRule();
+    const rows = shape(
+      buildDomainPalette(rules, {
+        fileKind: 'rule',
+        ownRuleModule: rule.modulePath,
+        ownProperties: own,
+      }).toolbox,
+    );
+
+    expect(rows[rows.indexOf('— Current —') + 1]).toBe(rule.name);
+    expect(rows.indexOf('— Current —')).toBeLessThan(rows.indexOf('— Rules —'));
+    // …and still below the language's own half, which nothing moves.
+    expect(rows.indexOf('Math')).toBeLessThan(rows.indexOf('— Current —'));
+  });
+
+  it('is lifted rather than copied, so it is offered once', () => {
+    const rule = aRule();
+    const rows = shape(
+      buildDomainPalette(rules, {
+        fileKind: 'rule',
+        ownRuleModule: rule.modulePath,
+        ownProperties: own,
+      }).toolbox,
+    );
+
+    expect(rows.filter(row => row === rule.name)).toHaveLength(1);
+    expect(rows.slice(rows.indexOf('— Rules —'))).not.toContain(rule.name);
+  });
+
+  it('is an actor’s drawer when an actor is what is open', () => {
+    // The same lift, one heading down: the actor being edited comes out of the
+    // Actors list, and the actors it shares the project with stay in it.
+    const actor = own.find(meta => meta.name === 'Health Bar')!;
+    const rows = shape(
+      buildDomainPalette(rules, {
+        fileKind: 'actor',
+        ownProperties: own,
+        ownActorModule: actor.modulePath,
+      }).toolbox,
+    );
+
+    expect(rows[rows.indexOf('— Current —') + 1]).toBe('Health Bar');
+    expect(rows.slice(rows.indexOf('— Actors —'))).not.toContain('Health Bar');
+    expect(rows.filter(row => row === 'Health Bar')).toHaveLength(1);
+  });
+
+  it('is nothing at all for a world that declares no state of its own', () => {
+    // The starter's world remembers nothing, so it has no drawer to hoist —
+    // and neither has the headless generator, which has no one file.
+    const rows = shape(
+      buildDomainPalette(rules, {fileKind: 'world', ownProperties: own})
+        .toolbox,
+    );
+
+    expect(rows).not.toContain('— Current —');
+    expect(rows).toContain('— Rules —');
+  });
+
+  it('is the world’s own drawer when the world is what is open', () => {
+    // A world that remembers a number gets a drawer for it exactly as an actor
+    // does (specs/WORLD_STATE.md) — and both arrive in `ownProperties`, so it
+    // used to land under the Actors heading, which a world is not. Open, it is
+    // the drawer being worked in.
+    const world = parseWorldOwnMeta(
+      'worlds/main',
+      JSON.stringify({
+        blocks: {
+          blocks: [
+            {
+              type: 'world_world',
+              fields: {NAME: 'Tapper'},
+              next: {
+                block: {
+                  type: 'world_rule_property',
+                  fields: {
+                    TYPE: 'number',
+                    ACCESS: 'writable',
+                    NAME: 'score',
+                    DEFAULT: '0',
+                  },
+                },
+              },
+            },
+          ],
+        },
+      }),
+    )!;
+    const rows = shape(
+      buildDomainPalette(rules, {
+        fileKind: 'world',
+        // Replacing the starter's own entry for that module, not sitting
+        // beside it: two metas for one path are two drawers reading one
+        // declaration list, which is not a shape a project can be in.
+        ownProperties: [
+          ...own.filter(meta => meta.modulePath !== 'worlds/main'),
+          world,
+        ],
+        ownWorldModule: 'worlds/main',
+      }).toolbox,
+    );
+
+    expect(rows[rows.indexOf('— Current —') + 1]).toBe('Tapper');
+    expect(rows.slice(rows.indexOf('— Actors —'))).not.toContain('Tapper');
+  });
+
+  it('wears a picture of THIS file rather than of a kind of file', () => {
+    // The scroll and the masks below already say which kind; this one says
+    // which file, so it is a page with a pen on it and neither of those.
+    const rule = aRule();
+    const headings = (
+      buildDomainPalette(rules, {
+        fileKind: 'rule',
+        ownRuleModule: rule.modulePath,
+        ownProperties: own,
+      }).toolbox as Array<{kind?: string; name?: string; icon?: string}>
+    ).filter(row => row.kind === TOOLBOX_HEADING);
+
+    expect(headings[0]).toMatchObject({name: 'Current', icon: 'file-pen'});
   });
 });
 
