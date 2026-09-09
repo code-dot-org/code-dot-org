@@ -26,6 +26,7 @@ import {
   param,
   rotated,
   shadow,
+  signOf,
   thisActor,
   times,
   vector,
@@ -99,12 +100,7 @@ const sign = rule.local('sign', 'Number');
 const restY = rule.local('restY', 'Number');
 
 /** 1 when down is down, -1 when gravity has been turned over. */
-const decideSign = [
-  sign.let(n(1)),
-  when([
-    [lessThan(axisOf('y', directionOfGravity.of()), n(0)), [sign.set(n(-1))]],
-  ]),
-];
+const decideSign = [sign.let(signOf(axisOf('y', directionOfGravity.of())))];
 
 /** Half of each box added together — how far apart two middles rest. */
 const halfBoxes = (which, faller, ground) =>

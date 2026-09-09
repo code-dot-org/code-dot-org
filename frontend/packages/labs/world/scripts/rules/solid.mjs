@@ -6,7 +6,6 @@ import {
   atMost,
   axisOf,
   both,
-  not,
   defineRule,
   doc,
   filter,
@@ -14,12 +13,13 @@ import {
   frameTime,
   give,
   hasTrait,
-  lessThan,
+  keptBetween,
   minus,
   moduleFor,
   moreThan,
   n,
   negated,
+  not,
   note,
   param,
   pick,
@@ -89,9 +89,7 @@ const kept = rule.block({
     doc(
       'Below zero would push the body the wrong way; above one would give it more speed than it arrived with, every single bounce.',
     ),
-    when([[lessThan(amount.get(), n(0)), [give(n(0))]]]),
-    when([[moreThan(amount.get(), n(1)), [give(n(1))]]]),
-    give(amount.get()),
+    give(keptBetween(amount.get(), n(0), n(1))),
   ],
 });
 

@@ -1178,6 +1178,35 @@ describe('domain block generators', () => {
     }
   });
 
+  it('offers the two arithmetic routines the rules kept writing by hand', () => {
+    // `sign of` and `kept between` were each written out longhand in more than
+    // one stock rule — three for the sign, two for the clamp — which is the
+    // evidence that they belong in Math rather than in a rule.
+    const toolboxTypes = (
+      DOMAIN_TOOLBOX as Array<{blocks: Array<string | {type?: string}>}>
+    )
+      .flatMap(c => c.blocks ?? [])
+      .map(item => (typeof item === 'string' ? item : (item.type ?? '')));
+
+    expect(toolboxTypes).toContain('world_sign');
+    expect(toolboxTypes).toContain('math_constrain');
+  });
+
+  it('counts zero as positive, which is why `sign of` is not `Math.sign`', () => {
+    // `Math.sign(0)` is 0, and a factor of zero is a rule that stops working
+    // the moment a value settles exactly on the line: a body resting at zero
+    // velocity would be pushed neither way. Every caller means "which side of
+    // zero is this on, with the line itself counting as the positive side".
+    // A reporter, so `emit` hands back the expression and its precedence.
+    const of = (num: string): string =>
+      (emit('world_sign', {}, {}, {NUM: num}) as unknown as [string])[0];
+
+    expect(of('0')).toBe('(0 < 0 ? -1 : 1)');
+    expect(eval(of('0'))).toBe(1);
+    expect(eval(of('-3'))).toBe(-1);
+    expect(eval(of('4'))).toBe(1);
+  });
+
   it('generated actor-property set blocks set the property on the ACTOR value', () => {
     // The value comes from a socket (`valueToCode`) — a shadow number, or a
     // slotted getter/math block. A number actor property (spatial rotation):

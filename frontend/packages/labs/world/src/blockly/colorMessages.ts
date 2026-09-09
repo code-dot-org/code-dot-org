@@ -1,7 +1,8 @@
 // The words this lab puts on Blockly's own blocks.
 //
-// Two sets, and both are rewordings rather than new blocks: US spelling for the
-// stock color blocks, and this lab's voice for the one list block it reuses.
+// All of them are rewordings rather than new blocks: US spelling for the stock
+// color blocks, and this lab's voice for the list, loop and math blocks it
+// reuses.
 //
 // `colour_picker`, `colour_random` and `colour_blend` come from
 // `@blockly/field-colour` and read their text from `Blockly.Msg`, which ships
@@ -77,6 +78,24 @@ const LOOP_MESSAGES: Record<string, string> = {
   CONTROLS_FLOW_STATEMENTS_WARNING: 'This only means something inside a loop.',
 };
 
+/**
+ * `constrain`, said the way both rules that hand-rolled it said it.
+ *
+ * Blockly's own wording is `constrain ⟨⟩ low ⟨⟩ high ⟨⟩`, which is a word a
+ * learner meets here and nowhere else. Two stock rules had already written
+ * this routine out by hand — Solid Bodies as `⟨n⟩ kept between 0 and 1`,
+ * Camera Confined as `⟨value⟩ kept between ⟨low⟩ and ⟨high⟩` — and they
+ * independently arrived at the same words, which is the strongest evidence
+ * available about what to call it.
+ */
+const MATH_MESSAGES: Record<string, string> = {
+  MATH_CONSTRAIN_TITLE: '%1 kept between %2 and %3',
+  MATH_CONSTRAIN_TOOLTIP:
+    'A number pushed back inside a range: below the low end it becomes the ' +
+    'low end, above the high end it becomes the high end, and anywhere ' +
+    'between it is left alone.',
+};
+
 /** `Blockly.Msg` key -> the US-spelled text to use instead. */
 const COLOR_MESSAGES: Record<string, string> = {
   COLOUR_PICKER_TOOLTIP: 'Choose a color from the palette.',
@@ -109,5 +128,6 @@ export function installColorMessages(): void {
     ...COLOR_MESSAGES,
     ...LIST_MESSAGES,
     ...LOOP_MESSAGES,
+    ...MATH_MESSAGES,
   });
 }

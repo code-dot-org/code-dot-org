@@ -18,6 +18,7 @@ import {
   note,
   over,
   param,
+  signOf,
   thisActor,
   times,
   vector,
@@ -166,12 +167,7 @@ flies.block({
 const sign = rule.local('sign', 'Number');
 
 /** 1 when down is down, -1 when gravity has been turned over. */
-const decideSign = [
-  sign.let(n(1)),
-  when([
-    [lessThan(axisOf('y', directionOfGravity.of()), n(0)), [sign.set(n(-1))]],
-  ]),
-];
+const decideSign = [sign.let(signOf(axisOf('y', directionOfGravity.of())))];
 
 /**
  * Switch the jetpack on. Does nothing with an empty tank.

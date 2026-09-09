@@ -15,6 +15,7 @@ import {
   not,
   note,
   param,
+  signOf,
   thisActor,
   time,
   times,
@@ -179,13 +180,7 @@ export const makeJump = rule.block({
           ),
           used.set(who.get(), add(used.of(who.get()), n(1))),
           note('Which way is up? The opposite of wherever gravity pulls.'),
-          sign.let(n(1)),
-          when([
-            [
-              lessThan(axisOf('y', directionOfGravity.of()), n(0)),
-              [sign.set(n(-1))],
-            ],
-          ]),
+          sign.let(signOf(axisOf('y', directionOfGravity.of()))),
           doc(
             'REPLACE the vertical speed rather than adding to it: a second jump out of a long fall has to go as high as the first.',
           ),

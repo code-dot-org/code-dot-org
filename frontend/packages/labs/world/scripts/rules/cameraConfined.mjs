@@ -4,17 +4,15 @@ import {
   defineRule,
   doc,
   give,
-  lessThan,
+  keptBetween,
   mapSize,
   minus,
   moduleFor,
-  moreThan,
   n,
   over,
   param,
   thisCamera,
   viewSize,
-  when,
 } from './dsl.mjs';
 
 const rule = defineRule({
@@ -58,11 +56,7 @@ const kept = rule.block({
     doc(
       '**Clamping**: a number pushed back inside a range. Below the low end it becomes the low end, above the high end it becomes the high end, and anywhere between it is left alone.',
     ),
-    when([
-      [lessThan(value.get(), low.get()), [give(low.get())]],
-      [moreThan(value.get(), high.get()), [give(high.get())]],
-    ]),
-    give(value.get()),
+    give(keptBetween(value.get(), low.get(), high.get())),
   ],
 });
 

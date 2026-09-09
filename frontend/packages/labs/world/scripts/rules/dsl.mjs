@@ -87,6 +87,31 @@ export const over = (a, b) => arith('DIVIDE', a, b);
 export const power = (a, b) => arith('POWER', a, b);
 
 /**
+ * `sign of ⟨n⟩` — 1 when it is zero or more, -1 when it is less.
+ *
+ * Three rules wrote this out by hand: a local set to 1, an `if` below zero
+ * setting it to -1, and the local read a few times. It is one block now
+ * (`blockly/domainBlocks.worldSign`), and zero counts as positive there for
+ * the reason it has to: a factor of zero is a rule that stops working the
+ * moment a value settles exactly on the line.
+ */
+export const signOf = a => ({
+  type: 'world_sign',
+  inputs: {NUM: value(a)},
+});
+
+/**
+ * `⟨n⟩ kept between ⟨low⟩ and ⟨high⟩` — Blockly's clamp, in this lab's words.
+ *
+ * Two rules wrote this one out as well, and had independently agreed on the
+ * wording, which is why the block wears it (`blockly/colorMessages`).
+ */
+export const keptBetween = (a, low, high) => ({
+  type: 'math_constrain',
+  inputs: {VALUE: value(a), LOW: value(low), HIGH: value(high)},
+});
+
+/**
  * `remainder of <a> ÷ <b>` — Blockly's own modulo block.
  *
  * Not one of `math_arithmetic`'s operators, which is why it is separate: it is

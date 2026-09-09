@@ -4387,6 +4387,55 @@ registerValueShadows('world_set_view_size', [
  * uniformly random point (the axes are independent), just more arithmetic than
  * it looks like; nothing is subtly wrong with the result.
  */
+/**
+ * `sign of ⟨n⟩` — which way a number points, as 1 or -1.
+ *
+ * WRITTEN OUT BY HAND IN THREE RULES before this existed, identically each
+ * time: a local set to 1, an `if` below zero setting it to -1, and then the
+ * local read two or three times. Gravity, Jetpack and Jump all needed to know
+ * which way "down" was, and all three said it the long way because there was
+ * no short one.
+ *
+ * ZERO IS POSITIVE, which is where this parts company with `Math.sign` and is
+ * the whole reason it is not that. `Math.sign(0)` is 0, and a factor of zero
+ * is a rule that stops working the moment a value settles exactly on the line
+ * — a body resting at zero velocity would be pushed neither way. What every
+ * caller here means is "which side of zero is this on, and treat the line
+ * itself as the positive side".
+ *
+ * Its own block rather than an option on `math_single`, for the reason the
+ * trigonometry blocks are their own: a dropdown option added to a core block
+ * is not something this lab can add, and a saved block claiming one loads
+ * with whatever the dropdown's first entry happens to be.
+ */
+const worldSign = defineBlock({
+  type: 'world_sign',
+  message0: 'sign of %1',
+  args0: [{type: 'input_value', name: 'NUM', check: 'Number'}],
+  output: 'Number',
+  style: 'math_blocks',
+  extensions: [valueShadowExtension],
+  tooltip:
+    'Which way a number points: 1 when it is zero or more, -1 when it is ' +
+    'less than zero. Multiplying by it turns something around.',
+  generator: {
+    javascript(block, generator) {
+      const number =
+        generator.valueToCode(block, 'NUM', Order.RELATIONAL) || '0';
+      // `< 0` and not `Math.sign`: zero counts as positive here, and the
+      // conditional says which side of the line it is on in the one place a
+      // reader would look for it.
+      return [`(${number} < 0 ? -1 : 1)`, Order.CONDITIONAL] as [
+        string,
+        number,
+      ];
+    },
+  },
+});
+registerValueShadows('world_sign', [
+  {name: 'NUM', shadow: {type: 'math_number', fields: {NUM: 0}}},
+]);
+
 const worldRandomPlace = defineBlock({
   type: 'world_random_place',
   message0: 'a random place in the map',
@@ -9164,6 +9213,7 @@ export const DOMAIN_BLOCKS = [
   worldSetViewSize,
   worldActorAge,
   worldRandomPlace,
+  worldSign,
   worldTime,
   worldViewSize,
   worldPushActor,
@@ -9721,6 +9771,23 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
       'math_modulo',
       // Absolute value and friends — `abs` is what a distance test needs.
       'math_single',
+      // …and which WAY a number points, which `math_single` has no option for
+      // and three rules had written out by hand (`worldSign`).
+      'world_sign',
+      // Blockly's own clamp, in the words two of those rules had already
+      // chosen for it (`colorMessages.MATH_MESSAGES`). Spelled out rather than
+      // named, for the reason `math_random_int` below is: a core block carries
+      // no shadows of its own, and an empty `⟨⟩ kept between ⟨⟩ and ⟨⟩` reads
+      // as three holes.
+      {
+        kind: 'block',
+        type: 'math_constrain',
+        inputs: {
+          VALUE: {shadow: {type: 'math_number', fields: {NUM: 0}}},
+          LOW: {shadow: {type: 'math_number', fields: {NUM: 0}}},
+          HIGH: {shadow: {type: 'math_number', fields: {NUM: 1}}},
+        },
+      },
       // …and the trigonometric ones, which are a SEPARATE core block: SIN is
       // not an option on `math_single`, and a saved block that says it is
       // loads with whatever the dropdown's first option happens to be.
