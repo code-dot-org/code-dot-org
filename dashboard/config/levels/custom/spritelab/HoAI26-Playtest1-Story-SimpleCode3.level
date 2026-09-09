@@ -1,7 +1,7 @@
 <GamelabJr>
   <config><![CDATA[{
   "game_id": 64,
-  "created_at": "2026-09-03T01:47:43.000Z",
+  "created_at": "2026-09-08T15:57:06.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -19,7 +19,7 @@
     "hide_custom_blocks": true,
     "hide_share_and_remix": "true",
     "encrypted": "false",
-    "project_template_level_name": "HoAI26-Playtest1-Platform-Template",
+    "project_template_level_name": "HoAI26-Playtest1-Story-Template",
     "visible_tabs": [
       "Code",
       "Play"
@@ -27,13 +27,13 @@
     "pinned_scene_id": "story-scene",
     "pinned_scene_name": "Story",
     "guide_mode": "instructions",
-    "long_instructions": "# Code your player sprite\r\n\r\n1.  Use the blocks to set your sprite as the player.\r\n\r\n2. Make it speak with a say block.",
+    "long_instructions": "# Add more objects to your story\r\n- Add a Make a new sprite using grid block\r\n- Click on the costume, then click create a new image\r\n- Write a prompt that describes an object for your story",
     "toolbox_definition": {
       "contents": [
         {
           "kind": "block",
           "type": "spritelab2_whenRun",
-          "id": ")aK(Qu`ZP;pOpJH;,%/R",
+          "id": "EW.JbfJqHNVk$wB`^v(%",
           "deletable": false,
           "movable": false,
           "enabled": true
@@ -41,7 +41,7 @@
         {
           "kind": "block",
           "type": "gamelab_makeSpritesGrid",
-          "id": "OXDSXm{n!^@j6i|,64+Z",
+          "id": "kOCwX|gx-/oBDDn3DQ[)",
           "fields": {
             "ANIMATION_NAME": "<field name=\"ANIMATION_NAME\">null</field>",
             "GRID": [
@@ -131,17 +131,8 @@
         },
         {
           "kind": "block",
-          "type": "spritelab2_setAsPlatformPlayer",
-          "id": "#J@UPru`3qKQ:pm6MdbE",
-          "fields": {
-            "ANIMATION_NAME": "<field name=\"ANIMATION_NAME\">null</field>"
-          },
-          "enabled": true
-        },
-        {
-          "kind": "block",
           "type": "gamelab_spriteSay",
-          "id": "#xA_7|dQ:3rFA]a:V5iI",
+          "id": "T%BXP$5I{[[EahLK`9_e",
           "fields": {
             "SPEECH": ""
           },
@@ -154,6 +145,15 @@
                 }
               }
             }
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "gamelab_setBackgroundImageAs",
+          "id": "ijYAwha`AbqY{2UO^q#d",
+          "fields": {
+            "IMG": "<field name=\"IMG\">null</field>"
           },
           "enabled": true
         }
@@ -314,13 +314,13 @@
         }
       ]
     },
-    "display_name": "Code Your Player",
-    "bubble_choice_description": "Code your new player into your game",
-    "thumbnail_url": "https://images.code.org/c4bbb55daea8eaf080045412da87b71d-Gemini_Generated_Image_cgry71cgry71cgry.jpeg",
+    "display_name": "Create an object",
+    "bubble_choice_description": "Create an object for your story",
+    "thumbnail_url": "https://images.code.org/d87a1c81d9e637d47936bde88c20cca3-Gemini_Generated_Image_zh9ivazh9ivazh9i.jpeg",
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-09-03T01:47:43.424+00:00\",\"changed\":[\"cloned from \\\"hoai2026-dev-spritelab-lab2-story\\\"\"],\"cloned_from\":\"hoai2026-dev-spritelab-lab2-story\"},{\"changed_at\":\"2026-09-03 01:54:32 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 02:00:50 +0000\",\"changed\":[\"project_template_level_name\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 02:02:58 +0000\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 02:08:27 +0000\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 02:09:57 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 21:32:13 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 21:44:53 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-08 16:04:11 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-08 22:40:25 +0000\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-09-08T15:57:06.185+00:00\",\"changed\":[\"cloned from \\\"HoAI26-Playtest1-Platform-SimpleCode3\\\"\"],\"cloned_from\":\"HoAI26-Playtest1-Platform-SimpleCode3\"},{\"changed_at\":\"2026-09-09 00:00:30 +0000\",\"changed\":[\"project_template_level_name\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 00:03:15 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
