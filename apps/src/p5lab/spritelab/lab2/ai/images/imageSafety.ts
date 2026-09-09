@@ -15,10 +15,9 @@ import DCDO from '@cdo/apps/dcdo';
 
 import type {RawImage} from './imageGeneration';
 
-// Kill switch over both LLM judges (prompt and picture), default on. Azure
-// moderation is deliberately outside it: flipping this off restores
-// generation when a judge misbehaves or is down, without dropping the
-// deterministic moderation floor.
+// Kill switch over both LLM judges (prompt and picture). Azure moderation
+// is deliberately outside it: flipping this off restores generation when a
+// judge misbehaves, without dropping the deterministic moderation floor.
 const IMAGE_SAFETY_DCDO_KEY = 'spritelab-lab2-image-safety-enabled';
 
 export function isImageSafetyEnabled(): boolean {
