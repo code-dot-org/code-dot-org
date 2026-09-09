@@ -18,13 +18,14 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
 
 1. Install OS-specific prerequisites
     - See the appropriate section below: [macOS](#macos), [Ubuntu](#ubuntu-2004), [Windows](#windows)
-    - *Important*: When done, check for correct versions of these dependencies:
+    - *Note*: MySQL and Redis can run in containers instead of natively. If you prefer that, read [docker/developers/README.md](docker/developers/README.md) first and skip the MySQL and Redis steps in your platform's section below. Installing them both ways leaves two servers contending for ports 3306 and 6379, and the container will fail to start.
+    - *Important*: When done, check for correct versions of these dependencies. [.ruby-version](.ruby-version) and [.nvmrc](.nvmrc) are authoritative: compare against those files rather than against version numbers written in a doc, which go stale.
 
      ```sh
-     ruby --version     # --> ruby 3.1.7
-     node --version     # --> v20.18.3
-     git-lfs --version  #  >= git-lfs/3.0
-     uv --version       #  >= 0.5.8
+     ruby --version     # must match .ruby-version
+     node --version     # major version must match .nvmrc
+     git-lfs --version  # >= git-lfs/3.0
+     uv --version       # >= 0.5.8
      ```
 
 1. `git lfs pull`
@@ -152,8 +153,15 @@ These steps are for Apple devices running **macOS 14.x**, including those runnin
         ```
    2. Verify Link
         ```
-        mysql --version  # should show: mysql  Ver 8.0.[xx]
+        which mysql      # should resolve under $(brew --prefix)
+        mysql --version
         ```
+
+      `mysql --version` reports the *client* version, not the server's. A client newer
+      than the server is fine: a 9.x client talks to an 8.0 server without trouble. What
+      this step verifies is that `mysql` resolves to the brew keg you just linked, and
+      not to some other installation earlier in your `PATH`.
+
    3. Start mysql server:
         ```
         brew services start mysql@8.0 # Should notify you that MySQL server has been added to Login Items
