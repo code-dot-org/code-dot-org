@@ -9,6 +9,7 @@ import {
   useCallback,
   useContext,
   useEffect,
+  useRef,
   useState,
   type ReactNode,
 } from 'react';
@@ -105,6 +106,12 @@ export interface ToastProps {
   className?: string;
   /** Live-region politeness; defaults to `assertive` (see {@link ToastPoliteness}). */
   politeness?: ToastPoliteness;
+  /**
+   * Identifies this toast among consecutive ones; change it to restart the
+   * auto-hide timer for a message identical to the one before it. Not a DOM
+   * id - it only joins the message in the Snackbar's React key.
+   */
+  toastId?: number | string;
   /** Accessible name for the dismiss button; defaults to Alert's own default. */
   closeLabel?: string;
   /**
@@ -141,6 +148,7 @@ export default function Toast({
   anchorOrigin = DEFAULT_ANCHOR_ORIGIN,
   className,
   politeness = DEFAULT_TOAST_POLITENESS,
+  toastId,
   closeLabel,
   alertProps,
 }: ToastProps) {
@@ -162,9 +170,10 @@ export default function Toast({
       <Snackbar
         // MUI restarts its auto-hide timer only when `open` or
         // `autoHideDuration` changes, so a replacing toast of the same
-        // duration would inherit the remaining time. Keying on the message is
-        // MUI's documented remedy; an identical repeat message keeps the running timer.
-        key={message}
+        // duration would inherit the remaining time. A changing key is MUI's
+        // documented remedy; the id covers the case a message cannot, the same
+        // text raised twice in a row.
+        key={`${toastId ?? ''}:${message}`}
         open={open}
         autoHideDuration={autoHideDuration}
         onClose={handleClose}
@@ -214,6 +223,7 @@ export function useToast(): ShowToast {
 }
 
 interface ToastState {
+  id: number;
   message: string;
   type: ToastType;
   autoHideDuration: number | null;
@@ -245,10 +255,15 @@ export function ToastProvider({
 }: ToastProviderProps) {
   const [toast, setToast] = useState<ToastState | null>(null);
   const [open, setOpen] = useState(false);
+  // Monotonic across closes, so a toast raised after a dismissal still gets an
+  // id its predecessor never used.
+  const nextId = useRef(0);
 
   const show = useCallback<ShowToast>(
     (message, options) => {
+      nextId.current += 1;
       setToast({
+        id: nextId.current,
         message,
         type: options?.type ?? 'success',
         // Ensure we keep an explicit null, as that means
@@ -273,6 +288,7 @@ export function ToastProvider({
       {children}
       <Toast
         open={open}
+        toastId={toast?.id}
         message={toast?.message ?? ''}
         type={toast?.type}
         autoHideDuration={toast?.autoHideDuration}

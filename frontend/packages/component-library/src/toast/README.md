@@ -40,9 +40,10 @@ provider or a single `show` call) to keep a toast until it is closed.
 
 Auto-dismiss holds even while the window is unfocused, and a toast that
 replaces another gets its own full duration rather than inheriting what is left
-of the one it replaces. The Snackbar is keyed on `message` to get that restart,
-which is MUI's documented approach; showing the identical message again keeps
-the countdown already running.
+of the one it replaces. Keying the Snackbar is MUI's documented way to get that
+restart; `ToastProvider` keys on the message plus a per-toast id, so the same
+text raised twice in a row restarts too. On the controlled `Toast`, pass a
+changing `toastId` for the same effect.
 
 `anchorOrigin` picks a corner of the viewport. To land anywhere else, pass a
 `className` (on `Toast` or `ToastProvider`) — it goes on the Snackbar, the

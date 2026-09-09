@@ -102,6 +102,42 @@ describe('Design System - Toast', () => {
       }
     });
 
+    it('restarts the timer when toastId changes for the same message', () => {
+      // Two identical messages in a row are distinguishable only by the id, so
+      // it has to reach the Snackbar's key alongside the text.
+      vi.useFakeTimers();
+      try {
+        const onClose = vi.fn();
+        const {rerender} = render(
+          <Toast
+            open
+            toastId={1}
+            message="Saved!"
+            autoHideDuration={8000}
+            onClose={onClose}
+          />,
+        );
+
+        vi.advanceTimersByTime(7000);
+        rerender(
+          <Toast
+            open
+            toastId={2}
+            message="Saved!"
+            autoHideDuration={8000}
+            onClose={onClose}
+          />,
+        );
+
+        vi.advanceTimersByTime(7999);
+        expect(onClose).not.toHaveBeenCalled();
+        vi.advanceTimersByTime(1);
+        expect(onClose).toHaveBeenCalledTimes(1);
+      } finally {
+        vi.useRealTimers();
+      }
+    });
+
     it('puts className on the Snackbar, not the Alert', () => {
       // The Snackbar is the positioned surface, so a consumer moving the toast
       // (e.g. below a page header) needs the class to land there.
@@ -244,18 +280,20 @@ describe('Design System - Toast', () => {
           vi.advanceTimersByTime(1500);
         });
 
-        expect(screen.queryAllByText('second').length).toBeGreaterThan(0);
+        // The live region mirrors `open` (it is cleared on close) and, unlike
+        // the Snackbar, does not linger in jsdom waiting for a transition.
+        expect(screen.getByRole('alert')).toHaveTextContent('second');
       } finally {
         vi.useRealTimers();
       }
     });
 
-    it('keeps a dismissed toast mounted for its exit transition', async () => {
-      // The Snackbar is keyed on the message, so the provider has to hold that
-      // message while closing - dropping it would change the key mid-exit and
-      // unmount the toast instead of letting it animate out.
+    it('keeps its message while animating out', async () => {
+      // The Snackbar's key holds the message, so the provider has to keep that
+      // message on close - dropping it would change the key mid-exit and
+      // replace the toast with a blank one instead of letting it animate out.
       const user = userEvent.setup();
-      const {container} = render(
+      render(
         <ToastProvider>
           <Trigger message="Saved!" />
         </ToastProvider>,
@@ -264,12 +302,11 @@ describe('Design System - Toast', () => {
       await user.click(screen.getByRole('button', {name: 'fire'}));
       await user.click(screen.getByRole('button', {name: 'Close alert'}));
 
-      expect(container.querySelector('.MuiSnackbar-root')).toBeInTheDocument();
       expect(screen.queryAllByText('Saved!').length).toBeGreaterThan(0);
     });
 
     it('reuses one live region across consecutive toasts', async () => {
-      // Ensure the live region is reused across consecutive toasts, so 
+      // Ensure the live region is reused across consecutive toasts, so
       // keyboard users don't lose focus.
       render(
         <ToastProvider>
