@@ -2,8 +2,14 @@ import React from 'react';
 
 import ReorderableCard from '@cdo/apps/levelbuilder/curriculum-generator/components/ReorderableCard';
 
-import {AICHAT_PRESETS, AichatPresetId} from '../ai/aichat';
-import {LabType, LevelSpec} from '../types';
+import {
+  AICHAT_PRESETS,
+  AichatPresetId,
+  DEFAULT_AICHAT_PRESET,
+} from '../ai/aichat';
+import {LabType, LevelSpec, takesSuppliedCode} from '../types';
+
+import SuppliedCodeField from './SuppliedCodeField';
 
 import moduleStyles from '../lesson-generator.module.scss';
 import sharedStyles from '@cdo/apps/levelbuilder/curriculum-generator/curriculum-generator.module.scss';
@@ -125,7 +131,7 @@ const SublevelSection: React.FC<SublevelSectionProps> = ({
                           <label htmlFor={`subpreset-${sub.key}`}>Preset</label>
                           <select
                             id={`subpreset-${sub.key}`}
-                            value={sub.aichatPreset ?? 'explore'}
+                            value={sub.aichatPreset ?? DEFAULT_AICHAT_PRESET}
                             onChange={e =>
                               onPatch(sub.key, {
                                 aichatPreset: e.target.value as AichatPresetId,
@@ -177,6 +183,16 @@ const SublevelSection: React.FC<SublevelSectionProps> = ({
                             placeholder="What this sublevel activity teaches or does."
                             disabled={disabled}
                           />
+                          {takesSuppliedCode(sub.labType) && (
+                            <SuppliedCodeField
+                              id={`subsupplied-${sub.key}`}
+                              value={sub.suppliedCode ?? ''}
+                              disabled={disabled}
+                              onChange={suppliedCode =>
+                                onPatch(sub.key, {suppliedCode})
+                              }
+                            />
+                          )}
                         </>
                       )}
                     </div>

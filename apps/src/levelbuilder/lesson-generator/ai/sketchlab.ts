@@ -2,7 +2,10 @@ import {Output} from 'ai';
 import z from 'zod/v3';
 
 import {generateText} from '@cdo/apps/aiGateway';
-import {LevelContext} from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
+import {
+  authoringRulesLines,
+  LevelContext,
+} from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
 import {
   getTextModel,
   logPrompt,
@@ -48,6 +51,7 @@ export async function generateSketchlabLevel(
     '',
     'The sketch canvas is intentionally left blank; do not describe',
     'starter shapes or images.',
+    ...authoringRulesLines(ctx),
     ...(ctx.unitOutline
       ? [
           '',
