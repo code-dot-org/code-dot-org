@@ -1,8 +1,8 @@
 Feature: Flappy puzzles can be solved
 
 Scenario: Solving puzzle 1
-  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/7/levels/1?noautoplay=true"
-  Then I wait until I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/7/levels/1?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/7/levels/1?noautoplay=true"
+  Then I wait until I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/7/levels/1?noautoplay=true"
   And I wait for the lab page to fully load
   And I've initialized the workspace with level 1 flappy blocks
   And I press "runButton"
@@ -11,8 +11,8 @@ Scenario: Solving puzzle 1
   And element ".modal .congrats" contains text "You completed Puzzle 1"
 
 Scenario: Solving puzzle 2
-  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/7/levels/3?noautoplay=true"
-  Then I wait until I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/7/levels/3?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/7/levels/3?noautoplay=true"
+  Then I wait until I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/7/levels/3?noautoplay=true"
   And I wait for the lab page to fully load
   And I've initialized the workspace with level 2 flappy blocks
   And I press "runButton"
@@ -22,8 +22,8 @@ Scenario: Solving puzzle 2
 
 @no_mobile
 Scenario: Failing puzzle 2
-  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/7/levels/3?noautoplay=true"
-  Then I wait until I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/7/levels/3?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/7/levels/3?noautoplay=true"
+  Then I wait until I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/7/levels/3?noautoplay=true"
   And I wait for the lab page to fully load
   And I press "runButton"
   Then evaluate JavaScript expression "Flappy.onMouseDown(), true;"

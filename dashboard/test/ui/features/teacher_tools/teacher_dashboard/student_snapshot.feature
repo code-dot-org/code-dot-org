@@ -3,9 +3,9 @@ Feature: Student Snapshot page
 
   Scenario: Widget headers and real content render correctly
     Given I create an authorized teacher-associated student named "PySnapshotContentStudent"
-    And I am assigned to course "allthethingscourse" unit 1 with teacher "Teacher_PySnapshotContentStudent"
+    And I am assigned to course "ui-test-student-labs" unit 1 with teacher "Teacher_PySnapshotContentStudent"
 
-    Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/50/levels/1?hideProductTours=true"
+    Given I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/50/levels/1?hideProductTours=true"
     And I wait to see "#uitest-codebridge-run"
     And I wait until "#uitest-codebridge-run" is not disabled
     And I focus selector ".cm-content"
@@ -14,9 +14,9 @@ Feature: Student Snapshot page
     And I press "uitest-codebridge-run"
     And I wait until "#uitest-codebridge-console" contains text "more code"
     And I press "instructions-continue-button"
-    And I wait until current URL contains "http://studio.code.org/courses/allthethingscourse/units/1/lessons/50/levels/2"
+    And I wait until current URL contains "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/50/levels/2"
 
-    Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/50/levels/14?hideProductTours=true"
+    Given I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/50/levels/14?hideProductTours=true"
     And I wait to see "#uitest-codebridge-run"
     And I wait until "#uitest-codebridge-run" is not disabled
     And I focus selector ".cm-content"

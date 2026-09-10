@@ -14,8 +14,8 @@ Feature: Callouts
     And callout "<callout_id>" is hidden
   Examples:
     | url                                                                                                           | callout_id | text                                                                                                    | close_target      |
-    | http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/7?noautoplay=true&show_callouts=1  | 0          | After snapping all the blocks together, press "Run" to start your program.                              | #runButton        |
-    | http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/7?noautoplay=true&show_callouts=1  | 1          | Click here to see the code for the program you're making                                                | #show-code-header |
+    | http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/2/levels/7?noautoplay=true&show_callouts=1  | 0          | After snapping all the blocks together, press "Run" to start your program.                              | #runButton        |
+    | http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/2/levels/7?noautoplay=true&show_callouts=1  | 1          | Click here to see the code for the program you're making                                                | #show-code-header |
     | http://studio.code.org/courses/ui-test-maze/units/1/lessons/1/levels/1?noautoplay=true                       | 1          | Hit "Run" to try your program                                                                           | #runButton        |
     | http://studio.code.org/courses/ui-test-maze/units/1/lessons/1/levels/1?noautoplay=true                       | 0          | Drag a "move" block and snap it below the other block                                                   | [data-id='moveForward']    |
     | http://studio.code.org/courses/ui-test-maze/units/1/lessons/1/levels/4?noautoplay=true                       | 0          | Blocks that are grey can't be deleted. Can you solve the puzzle anyway?                                 | g                 |
@@ -33,15 +33,15 @@ Feature: Callouts
   Examples:
     | url                                                                                                           | callout_id | text                                                                             | close_target           |
     | http://studio.code.org/courses/ui-test-maze/units/1/lessons/1/levels/3?noautoplay=true                       | 0          | Click here to watch the video again                                              | #thumbnail_mgooqyWMTxk |
-    | http://studio.code.org/courses/allthethingscourse/units/1/lessons/3/levels/7?noautoplay=true&show_callouts=1  | 0          | You have all the same blocks but they've now been arranged in categories                                | .blocklyToolboxCategoryGroup |
+    | http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/3/levels/7?noautoplay=true&show_callouts=1  | 0          | You have all the same blocks but they've now been arranged in categories                                | .blocklyToolboxCategoryGroup |
 
   Scenario: Modal ordering
-    Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/7?noautoplay=true&show_callouts=1"
+    Given I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/2/levels/7?noautoplay=true&show_callouts=1"
     And I wait for the lab page to fully load
     And callout "0" is visible
 
   Scenario: Closing using "x" button
-    Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/7?noautoplay=true&show_callouts=1"
+    Given I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/2/levels/7?noautoplay=true&show_callouts=1"
     And I wait for the lab page to fully load
     And I dismiss the login reminder
     And element ".tooltip-x-close" is visible
@@ -54,17 +54,17 @@ Feature: Callouts
     And callout "0" is hidden
 
   Scenario: Only showing seen callouts once
-    Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/7?noautoplay=true"
+    Given I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/2/levels/7?noautoplay=true"
     And I wait for the lab page to fully load
     And callout "0" exists
-    Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/7?noautoplay=true"
+    Given I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/2/levels/7?noautoplay=true"
     And I wait for the lab page to fully load
     And callout "0" does not exist
 
   # Show Code button is hidden on small screens.
   @no_mobile
   Scenario: Opening the Show Code dialog
-    Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/7?noautoplay=true&show_callouts=1"
+    Given I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/2/levels/7?noautoplay=true&show_callouts=1"
     And I wait for the lab page to fully load
     And I dismiss the login reminder
     When I press "show-code-header"

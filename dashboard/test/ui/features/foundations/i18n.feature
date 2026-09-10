@@ -27,7 +27,7 @@ Scenario: Minecraft:Agent tutorial in Spanish
   And element ".csf-top-instructions p" has "es-MX" text from key "data.short_instructions.MC_HOC_2017_01_RETRY"
 
 Scenario: Toolbox Categories in Spanish
-  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/45/levels/4/lang/es-MX"
+  Given I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/45/levels/4/lang/es-MX"
   And I wait for the lab page to fully load
   Then toolbox category 1 has "es-MX" text from key "data.block_categories.Events"
   Then toolbox category 2 has "es-MX" text from key "data.block_categories.Text"
@@ -72,7 +72,7 @@ Scenario: Minecraft:Agent tutorial in Portuguese
   And element ".csf-top-instructions p" has "pt-BR" text from key "data.short_instructions.MC_HOC_2017_01_RETRY"
 
 Scenario: Toolbox Categories in Portuguese
-  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/45/levels/4/lang/pt-br"
+  Given I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/45/levels/4/lang/pt-br"
   And I wait for the lab page to fully load
   Then toolbox category 1 has "pt-BR" text from key "data.block_categories.Events"
   Then toolbox category 2 has "pt-BR" text from key "data.block_categories.Text"
@@ -127,7 +127,7 @@ Scenario: Translated function names in Arabic
   And element "[data-id='definitionBlock'] > .blocklyNonEditableField > .blocklyText" has "ar-SA" RTL text from key "data.function_definitions.2-3 Bee Functions 2.get 5.name"
 
 Scenario: Toolbox Categories in Arabic (RTL)
-  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/45/levels/4/lang/ar-sa"
+  Given I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/45/levels/4/lang/ar-sa"
   And I wait for the lab page to fully load
   Then toolbox category 1 has "ar-SA" text from key "data.block_categories.Events"
   Then toolbox category 2 has "ar-SA" text from key "data.block_categories.Text"

@@ -2,7 +2,7 @@
 Feature: Authored Hints
 
 Scenario: View Authored Hints
-  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/6/levels/2?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/6/levels/2?noautoplay=true"
   And I wait to see "#lightbulb"
 
   # This level has a total of three authored hints

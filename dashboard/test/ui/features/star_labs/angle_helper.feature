@@ -3,7 +3,7 @@
 Feature: Angle Helper
 
 Background:
-  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/3/levels/7"
+  Given I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/3/levels/7"
   And I wait to see "#runButton"
 
 @eyes

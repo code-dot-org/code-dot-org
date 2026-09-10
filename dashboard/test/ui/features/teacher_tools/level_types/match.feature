@@ -1,7 +1,7 @@
 Feature: Playing match levels
 
 Background:
-  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/11/levels/1?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/11/levels/1?noautoplay=true"
   And I dismiss the match instructions dialog
   Then I wait to see ".submitButton"
   And element ".submitButton" is visible
