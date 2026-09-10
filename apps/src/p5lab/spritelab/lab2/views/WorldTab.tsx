@@ -7,7 +7,7 @@ import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {getTrimmedThumbnail, onTrimsUpdated} from '../imageTrim';
+import {getImageThumbnail, onTrimsUpdated} from '../imageTrim';
 import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
 import {createEmptyWorld, World, WorldCell} from '../world';
 
@@ -210,7 +210,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
             ? ('block' as const)
             : ('sprite' as const),
           thumb:
-            getTrimmedThumbnail(props.name) || props.dataURI || props.sourceUrl,
+            getImageThumbnail(props.name) || props.dataURI || props.sourceUrl,
         })),
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [animationList, trimVersion]

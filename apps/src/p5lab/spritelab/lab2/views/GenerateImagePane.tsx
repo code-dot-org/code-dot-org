@@ -31,8 +31,8 @@ import {
   imageTypeFromCategories,
 } from '../imageGallery';
 import {
-  forgetTrimmedThumbnail,
-  getTrimmedThumbnail,
+  forgetImageThumbnail,
+  getImageThumbnail,
   onTrimsUpdated,
   trimAnimationListImages,
 } from '../imageTrim';
@@ -622,7 +622,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       // from its URL) can't be re-trimmed until the data arrives; drop the
       // superseded image's cached trim so thumbnails don't keep showing it.
       if (!alt.dataURI) {
-        forgetTrimmedThumbnail(
+        forgetImageThumbnail(
           getStore().getState().animationList.propsByKey[key]?.name
         );
       }
@@ -808,7 +808,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
             name={props?.name}
             caption={advanced ? props?.name : undefined}
             thumb={
-              getTrimmedThumbnail(props?.name) ||
+              getImageThumbnail(props?.name) ||
               props?.dataURI ||
               props?.sourceUrl ||
               undefined
@@ -826,10 +826,12 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           animKey={creating ? null : dialogTarget}
           name={targetProps?.name}
           thumb={
+            // The dialog is the full-resolution view; the small gallery
+            // thumbnail only stands in until the image's data arrives.
             creating
               ? undefined
-              : getTrimmedThumbnail(targetProps?.name || '') ||
-                targetProps?.dataURI ||
+              : targetProps?.dataURI ||
+                getImageThumbnail(targetProps?.name || '') ||
                 targetProps?.sourceUrl ||
                 undefined
           }
