@@ -1,3 +1,4 @@
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {Tooltip} from '@mui/material';
 import React, {useEffect, useState} from 'react';
 
@@ -21,6 +22,9 @@ const PixelTooltip: React.FunctionComponent<{
   fromLeftColumn?: boolean;
   children: React.ReactElement;
 }> = ({tooltipId, text, fromLeftColumn, children}) => {
+  // The bubble portals to <body>, outside the modal host that carries
+  // data-theme, so it has to be set on the bubble itself.
+  const {theme} = useTheme(true);
   const [open, setOpen] = useState(false);
 
   // Leaving the window mid-hover swallows the mouseleave, so the bubble would
@@ -45,6 +49,7 @@ const PixelTooltip: React.FunctionComponent<{
         popper: {
           modifiers: fromLeftColumn ? LEFT_COLUMN_MODIFIERS : MODIFIERS,
         },
+        ...(theme ? {tooltip: {'data-theme': theme}} : {}),
       }}
     >
       {children}
