@@ -27,6 +27,11 @@ const INITIAL_VALUES: QuizConfigurationData = {
   allowMultipleAttempts: true,
 };
 
+// The time-limit field's label wraps the helper-message text too, so its
+// whole label text is "Set time limitLeave unset for no time limit" - a
+// regex substring match avoids depending on that formatting.
+const TIME_LIMIT_LABEL = /Set time limit/;
+
 function jsonResponse(data: QuizConfigurationData): Response {
   return {ok: true, json: async () => data} as Response;
 }
@@ -153,13 +158,12 @@ describe('QuizConfigurationPanel', () => {
 
   it('saves the time limit on blur, not on every keystroke', () => {
     renderPanel();
+    const field = screen.getByLabelText(TIME_LIMIT_LABEL);
 
-    fireEvent.change(screen.getByLabelText('Set time limit'), {
-      target: {value: '2'},
-    });
+    fireEvent.change(field, {target: {value: '2'}});
     expect(put).not.toHaveBeenCalled();
 
-    fireEvent.blur(screen.getByLabelText('Set time limit'));
+    fireEvent.blur(field);
     expect(put).toHaveBeenCalledTimes(1);
   });
 
@@ -168,11 +172,10 @@ describe('QuizConfigurationPanel', () => {
     renderPanel({
       initialValues: {...INITIAL_VALUES, timeLimitMinutes: 10},
     });
+    const field = screen.getByLabelText(TIME_LIMIT_LABEL);
 
-    fireEvent.change(screen.getByLabelText('Set time limit'), {
-      target: {value: ''},
-    });
-    fireEvent.blur(screen.getByLabelText('Set time limit'));
+    fireEvent.change(field, {target: {value: ''}});
+    fireEvent.blur(field);
 
     await waitFor(() => expect(put).toHaveBeenCalled());
     expect(lastRequestBody().timeLimitMinutes).toBe(null);
@@ -180,11 +183,10 @@ describe('QuizConfigurationPanel', () => {
 
   it('does not save when the time limit is not a positive integer', async () => {
     renderPanel();
+    const field = screen.getByLabelText(TIME_LIMIT_LABEL);
 
-    fireEvent.change(screen.getByLabelText('Set time limit'), {
-      target: {value: '0'},
-    });
-    fireEvent.blur(screen.getByLabelText('Set time limit'));
+    fireEvent.change(field, {target: {value: '0'}});
+    fireEvent.blur(field);
 
     expect(
       await screen.findByText(
