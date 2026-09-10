@@ -18,6 +18,7 @@ import {DRAWER_WIDTH, DRAWER_WIDTH_WELCOME} from './constants';
 import HomeScreen from './HomeScreen';
 import NotificationList from './notifications/NotificationList';
 import PrepareList from './PrepareList';
+import RubricsScreen from './RubricsScreen';
 import TeacherPanelScreen from './TeacherPanelScreen';
 import {Context} from './types';
 import AiDiffWelcome from './welcome/AiDiffWelcome';
@@ -153,6 +154,8 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
       );
     } else if (activeNav === 'Teacher Panel') {
       content = <TeacherPanelScreen />;
+    } else if (activeNav === 'Rubrics') {
+      content = <RubricsScreen />;
     } else {
       content = (
         <AiDiffWorkSpace
