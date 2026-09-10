@@ -77,7 +77,7 @@ class AdminSearchController < ApplicationController
       return
     end
 
-    student_ids = @section.students.reorder(nil).distinct.pluck(:id)
+    student_ids = @section.students.where(user_type: User::TYPE_STUDENT).reorder(nil).distinct.pluck(:id)
     count = User.where(id: student_ids).update_all(secret_picture_id: picture.id, updated_at: Time.current)
     log_payload = {
       event: 'set_section_picture_passwords',
@@ -91,7 +91,7 @@ class AdminSearchController < ApplicationController
     CDO.log.warn(log_payload.to_json)
 
     redirect_to lookup_section_admin_search_index_path(section_code: @section.code),
-      notice: "Picture passwords set to #{picture.name} for #{count} users in #{@section.name}."
+      notice: "Picture passwords set to #{picture.name} for #{count} students in #{@section.name}."
   end
 
   def undelete_section

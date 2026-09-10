@@ -23,13 +23,14 @@
 
   - if !@section.deleted? && @section.login_type == Section::LOGIN_TYPE_PICTURE
     %h2 Set picture passwords
-    %p= "Section: #{@section.name}; Users: #{@section.students.count}"
+    %p= "Section: #{@section.name}; Students: #{@section.students.where(user_type: User::TYPE_STUDENT).count}"
     %p.alert.alert-warning
       %strong Warning:
       Use this tool only to simplify classroom playtests run by internal Code.org teams.
       Do not use it to set picture passwords for regular teacher sections.
     %p
-      This changes the picture password for every user currently enrolled in this section.
+      This changes the picture password for every student account currently enrolled in this section.
+      Teacher accounts are excluded.
       Picture passwords belong to user accounts, so the change also applies in their other sections.
 
     = form_tag set_section_picture_passwords_admin_search_index_path, method: :post do
@@ -42,7 +43,7 @@
               = radio_button_tag :secret_picture_id, picture.id, false, required: true
               = image_tag picture.path, alt: '', width: 66, height: 66
               = picture.name
-      = submit_tag 'Set picture password for all users in this section', data: {disable_with: 'Updating picture passwords…'}
+      = submit_tag 'Set picture password for all students in this section', data: {disable_with: 'Updating picture passwords…'}
 
   - if @section.user
     %h3 Section dump

@@ -15,10 +15,12 @@ class AdminSearchPicturePasswordsControllerTest < ActionController::TestCase
   end
 
   test 'section lookup displays picture choices without changing passwords' do
+    create(:follower, section: @section, student_user: create(:teacher))
     post :lookup_section, params: {section_code: @section.code}
 
     assert_response :success
     assert_select 'h2', 'Set picture passwords'
+    assert_select 'p', "Section: #{@section.name}; Students: 2"
     assert_select 'input[type=radio][name=secret_picture_id]', SecretPicture.count
     assert_select "label[for=secret_picture_id_#{@picture.id}]" do
       assert_select 'img[src=?]', @controller.view_context.image_path(@picture.path)
@@ -42,12 +44,14 @@ class AdminSearchPicturePasswordsControllerTest < ActionController::TestCase
     assert_select 'input[name=secret_picture_id]', 0
   end
 
-  test 'sets passwords only for active followers and leaves other credentials unchanged' do
+  test 'sets passwords only for active student followers and leaves other credentials unchanged' do
     outsider = create(:student, secret_picture: @original_picture)
     create(:follower, student_user: outsider)
     former_student = create(:student, secret_picture: @original_picture)
     create(:follower, section: @section, student_user: former_student).destroy!
     create(:follower, section: create(:section), student_user: @students.first)
+    enrolled_teacher = create(:teacher, secret_picture: @original_picture)
+    create(:follower, section: @section, student_user: enrolled_teacher)
     original_words = @students.map(&:secret_words)
     teacher_picture = @section.user.secret_picture_id
 
@@ -68,7 +72,9 @@ class AdminSearchPicturePasswordsControllerTest < ActionController::TestCase
     assert_equal @original_picture.id, outsider.reload.secret_picture_id
     assert_equal @original_picture.id, former_student.reload.secret_picture_id
     assert_equal teacher_picture, @section.user.reload.secret_picture_id
-    assert_match '2 users', flash[:notice]
+    assert_equal @original_picture.id, enrolled_teacher.reload.secret_picture_id
+    assert_nil User.authenticate_with_section(section: @section, params: {user_id: enrolled_teacher.id, secret_picture_id: @picture.id})
+    assert_match '2 students', flash[:notice]
     @students.each do |student|
       assert_equal student, User.authenticate_with_section(section: @section, params: {user_id: student.id, secret_picture_id: @picture.id})
       assert_nil User.authenticate_with_section(section: @section, params: {user_id: student.id, secret_picture_id: @original_picture.id})
@@ -97,12 +103,12 @@ class AdminSearchPicturePasswordsControllerTest < ActionController::TestCase
     end
   end
 
-  test 'empty section reports zero users' do
+  test 'empty section reports zero students' do
     empty_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
     post :set_section_picture_passwords, params: {section_code: empty_section.code, secret_picture_id: @picture.id}
 
     assert_response :redirect
-    assert_match '0 users', flash[:notice]
+    assert_match '0 students', flash[:notice]
   end
 
   [Section::LOGIN_TYPE_WORD, Section::LOGIN_TYPE_EMAIL].each do |login_type|
