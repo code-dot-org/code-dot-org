@@ -1,0 +1,9 @@
+name 'UI Test test-levelgroup-activityguide'
+title 'Activity Guide Levelgroup'
+submittable 'false'
+anonymous 'false'
+activity_guide_level 'true'
+
+page
+level 'UI Test test-single-multi-retriable-in-levelgroup'
+level 'UI Test test-free-response-retriable-in-levelgroup'

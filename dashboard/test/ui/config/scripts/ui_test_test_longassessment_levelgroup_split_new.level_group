@@ -1,0 +1,19 @@
+name 'UI Test Test longassessment levelgroup split new'
+submittable 'true'
+
+page
+level 'UI Test K-1 Happy Maps Multi 1'
+level 'UI Test Multi Horizontal Scroll Test'
+level 'UI Test Choose 2 Test'
+
+page
+level 'UI Test K-1 Plant a Seed Multi 1'
+level 'UI Test K-1 Plant a Seed Multi 2'
+level 'UI Test K-1 Artist 1 Multi 1'
+level 'UI Test ECSPD1 computational thinker'  # TextMatch (with no answers)
+text 'UI Test sample external 2'              # External
+level 'UI Test ECSPD your goals_test'         # FreeResponse
+
+page
+level 'UI Test K-1 Maze Loops Multi 1'
+level 'UI Test K-1 Maze Loops Multi 2'
