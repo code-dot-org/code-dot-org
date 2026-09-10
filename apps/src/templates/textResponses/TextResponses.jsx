@@ -88,7 +88,11 @@ function TextResponses({sectionId, scriptId, courseVersionName, unitPosition}) {
 
   return (
     <div>
-      <UnitSelectorV2 v1Styles isLabelVisible labelText={i18n.selectACourse()} />
+      <UnitSelectorV2
+        v1Styles
+        isLabelVisible
+        labelText={i18n.selectACourse()}
+      />
       {filteredResponses.length > 0 && (
         <div id="uitest-response-actions" style={styles.actionRow}>
           <TextResponsesLessonSelector
