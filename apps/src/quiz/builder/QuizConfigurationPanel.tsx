@@ -42,6 +42,47 @@ const PURPOSE_OPTIONS = [
   },
 ];
 
+// Applied once, only when a purpose is chosen for the first time.
+const PURPOSE_DEFAULTS: Record<
+  string,
+  {
+    showIntroScreen: boolean;
+    timeLimitMinutes: number | null;
+    allowMultipleAttempts: boolean;
+    showCorrectness: boolean;
+    revealAnswerExplanation: boolean;
+  }
+> = {
+  check_for_understanding: {
+    showIntroScreen: false,
+    timeLimitMinutes: null,
+    allowMultipleAttempts: true,
+    showCorrectness: true,
+    revealAnswerExplanation: true,
+  },
+  practice: {
+    showIntroScreen: false,
+    timeLimitMinutes: null,
+    allowMultipleAttempts: true,
+    showCorrectness: true,
+    revealAnswerExplanation: true,
+  },
+  exam: {
+    showIntroScreen: true,
+    timeLimitMinutes: null,
+    allowMultipleAttempts: false,
+    showCorrectness: false,
+    revealAnswerExplanation: false,
+  },
+  exam_simulation: {
+    showIntroScreen: true,
+    timeLimitMinutes: null,
+    allowMultipleAttempts: true,
+    showCorrectness: true,
+    revealAnswerExplanation: true,
+  },
+};
+
 const ConfigCard: React.FunctionComponent<{
   label: string;
   children: React.ReactNode;
@@ -87,7 +128,8 @@ const QuizConfigurationPanel: React.FunctionComponent<
 
   // Every field autosaves individually.
   const handleSave = async (
-    overrides: Partial<{
+    updatedConfigValues: Partial<{
+      timeLimitMinutes: number | null;
       showCorrectness: boolean;
       revealAnswerExplanation: boolean;
       showIntroScreen: boolean;
@@ -96,12 +138,13 @@ const QuizConfigurationPanel: React.FunctionComponent<
     }> = {}
   ): Promise<boolean> => {
     setError(null);
-    // Blank means "no time limit" - QuizConfigurationData needs a real
-    // positive integer otherwise. Checked here too, not just server-side
-    // (the Quiz model's time_limit_minutes validation), so a bad value
-    // shows up immediately instead of after a round trip.
+    // Blank means "no time limit" which will be set to null. Otherwise, we need a positive integer.
     const parsedTimeLimitMinutes =
-      timeLimitMinutes === '' ? null : Number(timeLimitMinutes);
+      'timeLimitMinutes' in updatedConfigValues
+        ? updatedConfigValues.timeLimitMinutes ?? null
+        : timeLimitMinutes === ''
+        ? null
+        : Number(timeLimitMinutes);
     if (
       parsedTimeLimitMinutes !== null &&
       (!Number.isInteger(parsedTimeLimitMinutes) || parsedTimeLimitMinutes <= 0)
@@ -112,7 +155,7 @@ const QuizConfigurationPanel: React.FunctionComponent<
       return false;
     }
     const effectiveShowIntroScreen =
-      overrides.showIntroScreen ?? showIntroScreen;
+      updatedConfigValues.showIntroScreen ?? showIntroScreen;
     // Mirrors show_intro_screen_required_when_time_limit - a time limit
     // with no intro screen means a student could start the timer without
     // ever being told there is one.
@@ -131,7 +174,7 @@ const QuizConfigurationPanel: React.FunctionComponent<
           showIntroScreen: effectiveShowIntroScreen,
           purpose: purpose || null,
           allowMultipleAttempts,
-          ...overrides,
+          ...updatedConfigValues,
         }),
         true,
         {'Content-Type': 'application/json'}
@@ -171,8 +214,21 @@ const QuizConfigurationPanel: React.FunctionComponent<
                 className={styles.optionCard}
                 disabled={isSaving}
                 onClick={() => {
+                  // Only reachable while purpose is unset (the chooser only
+                  // shows then) - assumed to only happen for a brand-new quiz level.
+                  const defaults = PURPOSE_DEFAULTS[option.value];
                   setPurpose(option.value);
-                  void handleSave({purpose: option.value}).then(ok => {
+                  setShowIntroScreen(defaults.showIntroScreen);
+                  setTimeLimitMinutes(
+                    defaults.timeLimitMinutes?.toString() ?? ''
+                  );
+                  setAllowMultipleAttempts(defaults.allowMultipleAttempts);
+                  setShowCorrectness(defaults.showCorrectness);
+                  setRevealAnswerExplanation(defaults.revealAnswerExplanation);
+                  void handleSave({
+                    purpose: option.value,
+                    ...defaults,
+                  }).then(ok => {
                     if (!ok) setPurpose('');
                   });
                 }}

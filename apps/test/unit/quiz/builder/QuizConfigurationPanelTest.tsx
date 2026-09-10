@@ -271,4 +271,58 @@ describe('QuizConfigurationPanel', () => {
     await waitFor(() => expect(put).toHaveBeenCalled());
     expect(lastRequestBody().revealAnswerExplanation).toBe(true);
   });
+
+  it("choosing a purpose for the first time applies that purpose's defaults to every field, in the same request", async () => {
+    put.mockResolvedValue(jsonResponse({...INITIAL_VALUES, purpose: 'exam'}));
+    renderPanel({initialValues: {...INITIAL_VALUES, purpose: undefined}});
+
+    fireEvent.click(screen.getByText('Exam', {exact: true}));
+
+    // Exam's defaults, per PURPOSE_DEFAULTS.
+    expect(
+      (screen.getByLabelText('Show intro screen') as HTMLInputElement).checked
+    ).toBe(true);
+    expect(
+      (screen.getByLabelText('Allow multiple attempts') as HTMLInputElement)
+        .checked
+    ).toBe(false);
+    expect(
+      (screen.getByLabelText('Show correctness') as HTMLInputElement).checked
+    ).toBe(false);
+    expect(
+      screen.queryByLabelText('Reveal answer and explanation')
+    ).not.toBeInTheDocument();
+
+    await waitFor(() => expect(put).toHaveBeenCalled());
+    expect(lastRequestBody()).toMatchObject({
+      purpose: 'exam',
+      showIntroScreen: true,
+      timeLimitMinutes: null,
+      allowMultipleAttempts: false,
+      showCorrectness: false,
+      revealAnswerExplanation: false,
+    });
+  });
+
+  it('changing an already-set purpose via the dropdown leaves every other field alone', async () => {
+    put.mockResolvedValue(jsonResponse({...INITIAL_VALUES, purpose: 'exam'}));
+    renderPanel();
+
+    fireEvent.change(screen.getByLabelText('Purpose'), {
+      target: {value: 'exam'},
+    });
+
+    await waitFor(() => expect(put).toHaveBeenCalled());
+    // Only purpose is in the request body's overrides - the other fields
+    // reflect INITIAL_VALUES untouched, not exam's defaults.
+    expect(lastRequestBody()).toMatchObject({
+      purpose: 'exam',
+      showIntroScreen: INITIAL_VALUES.showIntroScreen,
+      allowMultipleAttempts: INITIAL_VALUES.allowMultipleAttempts,
+      showCorrectness: INITIAL_VALUES.showCorrectness,
+    });
+    expect(
+      (screen.getByLabelText('Show intro screen') as HTMLInputElement).checked
+    ).toBe(INITIAL_VALUES.showIntroScreen);
+  });
 });
