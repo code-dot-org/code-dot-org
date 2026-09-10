@@ -175,6 +175,8 @@ const QuizConfigurationPanel: React.FunctionComponent<
             items={PURPOSE_OPTIONS}
             selectedValue={purpose}
             onChange={e => setPurpose(e.target.value)}
+            styleAsFormField
+            className={styles.fullWidthDropdown}
           />
         </div>
       )}
