@@ -1,6 +1,8 @@
 import {
+  animationNames,
+  filterAnimationsToNames,
   findOpaqueBounds,
-  getTrimmedThumbnail,
+  getImageThumbnail,
   loadedAnimations,
   trimAnimationListImages,
 } from '@cdo/apps/p5lab/spritelab/lab2/imageTrim';
@@ -103,6 +105,22 @@ describe('SpriteLab2 loadedAnimations', () => {
 });
 
 describe('SpriteLab2 trimAnimationListImages save-time flag', () => {
+  // jsdom's Image never fires load or error, hanging the thumbnail step;
+  // an immediate error takes its browser fallback (the source passes
+  // through).
+  let realImage;
+  beforeEach(() => {
+    realImage = global.Image;
+    global.Image = class {
+      set src(value) {
+        setTimeout(() => this.onerror && this.onerror(), 0);
+      }
+    };
+  });
+  afterEach(() => {
+    global.Image = realImage;
+  });
+
   it('a trimmed-at-save single passes through untouched', async () => {
     const dataURI = 'data:image/png;base64,already-cropped';
     const list = {
@@ -113,6 +131,46 @@ describe('SpriteLab2 trimAnimationListImages save-time flag', () => {
     };
     const out = await trimAnimationListImages(list);
     expect(out.propsByKey.a.dataURI).toBe(dataURI);
-    expect(getTrimmedThumbnail('wizard')).toBe(dataURI);
+    expect(getImageThumbnail('wizard')).toBe(dataURI);
+  });
+});
+
+describe('SpriteLab2 filterAnimationsToNames', () => {
+  const list = {
+    orderedKeys: ['a', 'b', 'c', 'd'],
+    propsByKey: {
+      a: {name: 'wizard', dataURI: 'x'},
+      b: {name: 'unused', dataURI: 'x'},
+      c: {name: 'forest', dataURI: 'x', categories: ['backgrounds']},
+      d: {name: 'stone', dataURI: 'x'},
+    },
+  };
+
+  it('keeps the named animations, in list order', () => {
+    const out = filterAnimationsToNames(list, new Set(['stone', 'wizard']));
+    expect(out.orderedKeys).toEqual(['a', 'd']);
+  });
+
+  it('scopes backgrounds like any other image', () => {
+    expect(filterAnimationsToNames(list, new Set()).orderedKeys).toEqual([]);
+    expect(
+      filterAnimationsToNames(list, new Set(['forest'])).orderedKeys
+    ).toEqual(['c']);
+  });
+
+  it('leaves the given list untouched', () => {
+    filterAnimationsToNames(list, new Set(['wizard']));
+    expect(list.orderedKeys).toEqual(['a', 'b', 'c', 'd']);
+  });
+});
+
+describe('SpriteLab2 animationNames', () => {
+  it('collects every named animation', () => {
+    expect([
+      ...animationNames({
+        orderedKeys: ['a', 'b'],
+        propsByKey: {a: {name: 'x'}, b: {}},
+      }),
+    ]).toEqual(['x']);
   });
 });
