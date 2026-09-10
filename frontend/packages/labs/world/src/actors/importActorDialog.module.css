@@ -1,56 +1,123 @@
-/* The stock-actor picker's CONTENT — the same shape as the rule picker's, and
-   deliberately so: the two answer the same kind of question and a learner who
-   has met one should recognise the other. The dialog itself is the design
-   system's, so this shapes only the list inside it. */
+/* The stock-actor picker's CONTENT — a grid of what each actor IS, the same
+   reading the project's own actors get (`actors/ActorPickerDialog`). The dialog
+   itself is the design system's, so this shapes only what is inside it. */
 
-.list {
+.body {
   display: flex;
   width: 100%;
   flex-direction: column;
   gap: 8px;
-  max-height: 55vh;
+  min-width: 0;
+}
+
+/* One wrapped run of tiles. An actor is a thing you can see, and a column of
+   sentences was asking a learner to read nine paragraphs to choose one. */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-height: 46vh;
   margin: 0;
-  padding: 0;
+  padding: 2px;
   overflow-y: auto;
   list-style: none;
 }
 
-/* One row per actor: a whole-row button, so the target is the size of the thing
-   being chosen. Layout only — colors, border, hover and focus ring are the
-   design system's. */
-.actor {
-  display: flex;
-
-  /* The picture beside the words rather than above them: a row is read left to
-     right, and a preview at the top of one would put the sentence about a
-     Label under a picture of a different actor's row every time the list
-     scrolled. */
-  flex-direction: row;
-  gap: 12px;
-  align-items: center;
-  padding: 10px 12px;
-  text-align: start;
-  text-transform: none;
+.holder {
+  position: relative;
 }
 
-/* What the row SAYS: name, sentence, and what else the import brings. */
-.words {
+/* Layout only — the border, hover and focus ring are the design system's
+   colors. The picture's width fixes the tile's, so every tile is one size
+   whatever its name is. */
+.tile {
   display: flex;
+  width: var(--demo-width);
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  background: none;
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+  text-align: center;
+}
+
+.tile:hover {
+  border-color: var(--borders-neutral-primary, #d4dae1);
+}
+
+.tile:focus-visible {
+  outline: 2px solid var(--borders-brand-primary, #0093a4);
+  outline-offset: 2px;
+}
+
+.tileChosen {
+  border-color: var(--borders-brand-primary, #0093a4);
+}
+
+/* Not yet earned. Dimmed rather than disabled, because it is still a control:
+   pressing it goes to the lesson that grants it, which is the one useful thing
+   a locked tile can do (specs/PROGRESSION_UI.md). */
+.tileLocked .demo,
+.tileLocked .still {
+  opacity: 0.45;
+  filter: grayscale(1);
+}
+
+.lock {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  width: 22px;
+  height: 22px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--background-neutral-primary, #fff);
+  color: var(--text-neutral-secondary, #5b6770);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 25%);
+  pointer-events: none;
+}
+
+/* Which lesson grants it, said on the tile rather than only on the way in: a
+   locked tile is a reason to go and do a lesson, and the only useful thing to
+   say on it is which one. */
+.unlockedBy {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  color: var(--text-neutral-secondary);
+}
+
+/* What the chosen one IS, under the grid: the sentence and what else the
+   import brings. On the tile there is no room for either, and in a grid of
+   nine there is no room for nine of them. */
+.detail {
+  display: flex;
+  min-height: 3.5rem;
   flex-direction: column;
   gap: 2px;
   align-items: flex-start;
-  min-width: 0;
+  border-top: 1px solid var(--borders-neutral-tertiary, #e5e7eb);
+  padding-top: 8px;
 }
 
-/* The way back to the lesson that granted this actor, under the chosen row. */
-.lesson {
-  margin-inline-start: 8px;
+.name {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* An actor's demonstration: the same strip, the same CSS and the same
    arguments as a rule's (`rules/importRuleDialog.module.css`, which explains
-   each of them). Copied rather than shared because the trigger is the ROW —
-   `.row:hover .demo` needs both classes in one stylesheet, and CSS modules
+   each of them). Copied rather than shared because the trigger is the TILE —
+   `.tile:hover .demo` needs both classes in one stylesheet, and CSS modules
    hash each file's names separately. */
 .demo {
   width: var(--demo-width);
@@ -63,10 +130,18 @@
   background-size: calc(var(--demo-width) * var(--frames)) var(--demo-height);
 }
 
-/* Play while the row is being LOOKED at — hovered, focused, or selected. */
+/* The still, for an actor that does nothing on its own — sized like the strip
+   so the grid keeps one shape. */
+.still {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Play while the tile is being LOOKED at — hovered, focused, or selected. */
 .playing,
-.row:hover .demo,
-.row:focus-within .demo {
+.tile:hover .demo,
+.tile:focus-within .demo {
   animation: actor-demo-strip calc(var(--frames) * 1s / 12) steps(var(--frames))
     infinite;
 }
@@ -81,8 +156,8 @@
    either way, so what they lose is the animation and not the picture. */
 @media (prefers-reduced-motion: reduce) {
   .playing,
-  .row:hover .demo,
-  .row:focus-within .demo {
+  .tile:hover .demo,
+  .tile:focus-within .demo {
     animation: none;
   }
 }

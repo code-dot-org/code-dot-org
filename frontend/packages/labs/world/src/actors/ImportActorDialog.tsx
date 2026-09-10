@@ -1,20 +1,30 @@
 // The stock-actor picker, opened by the `(import…)` row on an ACTOR dropdown.
 //
-// `ImportRuleDialog` with one noun changed, and that is the point: importing a
-// Label is the same act as importing a mechanic, because a Label IS an ordinary
-// actor (specs/UI_ACTORS.md). A learner who has met one dialog has met both.
+// A GRID of what each actor is, for the reason the project's own actors are one
+// (`actors/ActorPickerDialog`): an actor is a thing you can see, and a column of
+// nine paragraphs is asking a learner to read their way to a choice they could
+// have made by looking. Each tile is the actor doing what it does — a walk, a
+// spin, a still for the ones that do nothing on their own — with its name under
+// it, and the sentence about the chosen one under the grid, where one of them
+// fits and nine do not.
+//
+// A LOCKED TILE IS A CONTROL, not a hole. In a lab that gates its libraries,
+// some of these are earned; the tile shows which lesson earns it and pressing
+// it goes there. Refusing the press and saying nothing would be the one thing
+// worse than showing the actor at all (specs/PROGRESSION_UI.md).
 //
 // NOTHING IS MASKED. Every word here is the stock library's — product copy
 // written in this repository, which is what the page's translation is for. The
 // rules panel fences off its rows because those are the learner's own file
 // names; nothing on this dialog is theirs yet.
 
-import {Button, Typography} from '@mui/material';
+import {Typography} from '@mui/material';
 import {useState} from 'react';
 
 import {Dialog} from '@code-dot-org/component-library/dialog';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
-import {LessonLink} from '../progression/LessonLink';
+import {LessonLink, unlockLesson} from '../progression/LessonLink';
 import {useMaybeProgression} from '../progression/progressionContext';
 
 import {actorDemoFrames, actorDemoUrl, ACTOR_DEMO_SIZE} from './demos';
@@ -50,6 +60,12 @@ const brings = (actor: StockActor): string[] => [
   ...actorSprites(actor).map(sprite => sprite.name),
 ];
 
+/** The tile's size, which is the demo strip's — every actor has one shape. */
+const TILE_SIZE = {
+  '--demo-width': `${ACTOR_DEMO_SIZE.width}px`,
+  '--demo-height': `${ACTOR_DEMO_SIZE.height}px`,
+} as React.CSSProperties;
+
 export const ImportActorDialog = ({
   onImport,
   onCancel,
@@ -77,95 +93,143 @@ export const ImportActorDialog = ({
       }}
       secondaryButtonProps={{children: 'Cancel', onClick: onCancel}}
       customContent={
-        <ul className={styles.list}>
-          {STOCK_ACTORS.map(actor => (
-            <li key={actor.id} className={styles.row}>
-              <Button
-                className={styles.actor}
-                disabled={!held(actor)}
-                variant={chosen?.id === actor.id ? 'contained' : 'outlined'}
-                color="secondary"
-                size="small"
-                fullWidth
-                aria-pressed={chosen?.id === actor.id}
-                onClick={() => setChosen(actor)}
-                onDoubleClick={() => onImport(actor)}
-              >
-                {actorDemoUrl(actor.id) ? (
-                  // What it DOES, for an actor whose worth is a behavior: a
-                  // Platformer Player standing still is a sprite, and the
-                  // walking, falling and jumping it brings with it is the
-                  // whole of what a learner is choosing (specs/RULE_DEMOS.md).
-                  //
-                  // The same strip and the same CSS as a rule's demo, down to
-                  // the custom properties — one recording animated by
-                  // `steps()`, whose first cell is the still every row shows
-                  // until it is looked at.
-                  <span
-                    className={
-                      chosen?.id === actor.id
-                        ? `${styles.demo} ${styles.playing}`
-                        : styles.demo
+        <div className={styles.body}>
+          <ul className={styles.grid}>
+            {STOCK_ACTORS.map(actor => {
+              const locked = !held(actor);
+              const lesson = unlockLesson(progression, {
+                kind: 'actor',
+                id: actor.id,
+              });
+              const picked = chosen?.id === actor.id;
+              const demo = actorDemoUrl(actor.id);
+              return (
+                <li key={actor.id} className={styles.holder}>
+                  <button
+                    type="button"
+                    className={[
+                      styles.tile,
+                      picked ? styles.tileChosen : '',
+                      locked ? styles.tileLocked : '',
+                    ]
+                      .filter(Boolean)
+                      .join(' ')}
+                    style={TILE_SIZE}
+                    aria-pressed={picked}
+                    aria-label={
+                      locked && lesson
+                        ? `${actor.name} — unlocked by ${lesson.title}`
+                        : actor.name
                     }
-                    style={
-                      {
-                        '--demo': `url(${actorDemoUrl(actor.id)})`,
-                        '--frames': actorDemoFrames(actor.id),
-                        '--demo-width': `${ACTOR_DEMO_SIZE.width}px`,
-                        '--demo-height': `${ACTOR_DEMO_SIZE.height}px`,
-                      } as React.CSSProperties
-                    }
-                    // Decoration beside a row that says what it is in words.
-                    aria-hidden="true"
-                  />
-                ) : (
-                  /* What it LOOKS like, for the ones that do nothing on their
-                     own. A learner choosing between a Label, a Button and a
-                     Speech Box is choosing between three pictures, and three
-                     sentences about text is not that choice
-                     (`preview/ActorPreview`). */
-                  <ActorPreview actor={actor} />
-                )}
-                <span className={styles.words}>
-                  <Typography component="span" variant="label2" color="inherit">
-                    {actor.name}
-                  </Typography>
-                  <Typography component="span" variant="body4" color="inherit">
-                    {actor.description}
-                  </Typography>
-                  {brings(actor).length > 0 && (
-                    // What else lands in the project. An actor is written against
-                    // mechanics and pictures — a Label against Text, a Coin
-                    // against Collection and an animation — and they come with
-                    // it, so the dialog says so rather than leaving a learner to
-                    // wonder where the extra files came from.
-                    //
-                    // Abilities and picture names in one list, because from here
-                    // they are one thing: what this adds that is not the actor.
-                    // Which folder each lands in is not a question anybody is
-                    // asking before they have clicked Import.
+                    // A locked tile GOES SOMEWHERE. The lesson replaces this
+                    // dialog rather than opening over it: two modals at once is
+                    // the thing the accessibility checklist says to avoid
+                    // rather than manage (`progression/LessonLink`).
+                    onClick={() => {
+                      if (!locked) {
+                        setChosen(actor);
+                        return;
+                      }
+                      if (lesson) {
+                        onCancel();
+                        lesson.open();
+                      }
+                    }}
+                    onDoubleClick={() => !locked && onImport(actor)}
+                  >
+                    {demo ? (
+                      // What it DOES, for an actor whose worth is a behavior: a
+                      // Platformer Player standing still is a sprite, and the
+                      // walking, falling and jumping it brings with it is the
+                      // whole of what a learner is choosing (specs/RULE_DEMOS.md).
+                      //
+                      // The same strip and the same CSS as a rule's demo, down
+                      // to the custom properties — one recording animated by
+                      // `steps()`, whose first cell is the still every tile
+                      // shows until it is looked at.
+                      <span
+                        className={
+                          picked
+                            ? `${styles.demo} ${styles.playing}`
+                            : styles.demo
+                        }
+                        style={
+                          {
+                            '--demo': `url(${demo})`,
+                            '--frames': actorDemoFrames(actor.id),
+                          } as React.CSSProperties
+                        }
+                        // Decoration beside a name that says what it is.
+                        aria-hidden="true"
+                      />
+                    ) : (
+                      /* What it LOOKS like, for the ones that do nothing on
+                         their own. A learner choosing between a Label, a Button
+                         and a Speech Box is choosing between three pictures, and
+                         three sentences about text is not that choice
+                         (`preview/ActorPreview`). */
+                      <span className={styles.still}>
+                        <ActorPreview actor={actor} />
+                      </span>
+                    )}
                     <Typography
                       component="span"
-                      variant="body4"
+                      variant="label2"
                       color="inherit"
+                      className={styles.name}
                     >
-                      Also adds: {brings(actor).join(', ')}
+                      {actor.name}
                     </Typography>
+                    {locked && lesson && (
+                      <Typography
+                        component="span"
+                        variant="body4"
+                        className={styles.unlockedBy}
+                      >
+                        {`Unlocked by ${lesson.title}`}
+                      </Typography>
+                    )}
+                  </button>
+                  {locked && (
+                    <span className={styles.lock}>
+                      <FontAwesomeV6Icon iconName="lock" iconStyle="solid" />
+                    </span>
                   )}
-                </span>
-              </Button>
-              {/* Outside the Button — see the same note in ImportRuleDialog. */}
-              {(chosen?.id === actor.id || !held(actor)) && (
+                </li>
+              );
+            })}
+          </ul>
+          {/* The sentence about the chosen one, and what else its import
+              brings. An actor is written against mechanics and pictures — a
+              Label against Text, a Coin against Collection and an animation —
+              and they come with it, so the dialog says so rather than leaving a
+              learner to wonder where the extra files came from.
+
+              Abilities and picture names in one list, because from here they
+              are one thing: what this adds that is not the actor. Which folder
+              each lands in is not a question anybody is asking before they have
+              clicked Import. */}
+          <div className={styles.detail}>
+            {chosen ? (
+              <>
+                <Typography variant="body3">{chosen.description}</Typography>
+                {brings(chosen).length > 0 && (
+                  <Typography variant="body4">
+                    Also adds: {brings(chosen).join(', ')}
+                  </Typography>
+                )}
                 <LessonLink
-                  className={styles.lesson}
-                  unlock={{kind: 'actor', id: actor.id}}
-                  locked={!held(actor)}
+                  unlock={{kind: 'actor', id: chosen.id}}
                   onNavigate={onCancel}
                 />
-              )}
-            </li>
-          ))}
-        </ul>
+              </>
+            ) : (
+              <Typography variant="body4">
+                Pick one to see what it does.
+              </Typography>
+            )}
+          </div>
+        </div>
       }
     />
   );

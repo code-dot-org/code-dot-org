@@ -13,7 +13,7 @@
 
 import {Button} from '@mui/material';
 
-import {useMaybeProgression} from './progressionContext';
+import {useMaybeProgression, type Progression} from './progressionContext';
 import type {UnlockTarget} from './types';
 
 import {TILES_BY_ID} from './index';
@@ -41,18 +41,44 @@ export interface LessonLinkProps {
   className?: string;
 }
 
+/** The lesson a thing comes from: what it is called, and the way to it. */
+export interface UnlockLesson {
+  readonly title: string;
+  readonly open: () => void;
+}
+
+/**
+ * The lesson that grants `unlock`, or nothing when none does.
+ *
+ * NOT a hook, though it is only ever called with what one returned: a caller
+ * showing a GRID of these asks about each tile inside a `map`, which is the one
+ * place a hook may not be called. `LessonLink` below is this plus a button.
+ */
+export function unlockLesson(
+  progression: Progression | undefined,
+  unlock: UnlockTarget,
+): UnlockLesson | undefined {
+  const tile = progression?.grantedBy(unlock);
+  if (!progression || !tile) {
+    return undefined;
+  }
+  return {
+    title: TILES_BY_ID.get(tile)?.title ?? tile,
+    open: () => progression.openTree(tile),
+  };
+}
+
 export const LessonLink = ({
   unlock,
   onNavigate,
   locked = false,
   className,
 }: LessonLinkProps) => {
-  const progression = useMaybeProgression();
-  const tile = progression?.grantedBy(unlock);
-  if (!progression || !tile) {
+  const lesson = unlockLesson(useMaybeProgression(), unlock);
+  if (!lesson) {
     return null;
   }
-  const title = TILES_BY_ID.get(tile)?.title ?? tile;
+  const title = lesson.title;
 
   return (
     <Button
@@ -66,7 +92,7 @@ export const LessonLink = ({
         // Inside a row that is itself clickable, in both dialogs that use this.
         event.stopPropagation();
         onNavigate?.();
-        progression.openTree(tile);
+        lesson.open();
       }}
     >
       {locked ? `Unlocked by: ${title}` : `How this works: ${title}`}
