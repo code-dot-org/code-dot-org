@@ -112,7 +112,7 @@ describe('SpriteLab2 characterAnimations', () => {
       airborne: false,
       facing: 'right',
     })!;
-    const tick = poseStartTick(pick);
+    const tick = poseStartTick(poses, pick);
     // The first shown frame is the stride, not the shared standing frame.
     expect(poseFrame(pick.range, tick)).toBe(pick.range.start + 1);
     expect(poseFrame(pick.range, tick + pick.range.frameDelay)).toBe(
@@ -124,13 +124,22 @@ describe('SpriteLab2 characterAnimations', () => {
       airborne: false,
       facing: 'right',
     })!;
-    expect(poseStartTick(stand)).toBe(0);
+    expect(poseStartTick(poses, stand)).toBe(0);
     const jump = pickPose(poses, {
       moving: false,
       airborne: true,
       facing: 'right',
     })!;
-    expect(poseStartTick(jump)).toBe(0);
+    expect(poseStartTick(poses, jump)).toBe(0);
+    // A walk drawn with its own first frame (no shared standing frame)
+    // starts there, not one frame in.
+    const drawnWalk = {'walk-right': {start: 0, count: 4, frameDelay: 6}};
+    const drawnPick = pickPose(drawnWalk, {
+      moving: true,
+      airborne: false,
+      facing: 'right',
+    })!;
+    expect(poseStartTick(drawnWalk, drawnPick)).toBe(0);
   });
 
   it('turns with movement and keeps facing through float noise', () => {

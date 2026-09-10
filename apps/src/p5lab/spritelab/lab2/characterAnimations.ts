@@ -147,14 +147,21 @@ export function poseFrame(range: PoseRange, tick: number): number {
 }
 
 /**
- * The tick a sprite enters a pose at. Walking starts one frame in, on the
- * mid-stride frame: the walk range opens with the shared standing frame
- * (see CHARACTER_STRIP_POSES), so starting at zero shows no change for a
- * whole frameDelay — the character slides before it visibly steps. Every
- * other pose starts at its first frame.
+ * The tick a sprite enters a pose at. A walk whose range opens with the
+ * frame the standing pose ends on (the generated strip's layout — see
+ * CHARACTER_STRIP_POSES) starts one frame in, on the mid-stride frame:
+ * starting at zero would show no change for a whole frameDelay, and the
+ * character would slide before it visibly steps. Every other pose — and a
+ * walk drawn with its own first frame — starts at its first frame.
  */
-export function poseStartTick(pick: PickedPose): number {
-  return pick.pose === 'walk' ? pick.range.frameDelay : 0;
+export function poseStartTick(poses: AnimationPoses, pick: PickedPose): number {
+  if (pick.pose !== 'walk') {
+    return 0;
+  }
+  const stand = poses[poseKey('stand', pick.facing)];
+  const opensOnStandingFrame =
+    !!stand && pick.range.start === stand.start + stand.count - 1;
+  return opensOnStandingFrame ? pick.range.frameDelay : 0;
 }
 
 /**

@@ -973,9 +973,9 @@ export default class SpriteLab2Engine extends SpriteLab {
       }
       if (pick.key !== state.key) {
         state.key = pick.key;
-        // Walking starts on the mid-stride frame, so the first step is
-        // visible the moment movement starts (see poseStartTick).
-        state.tick = poseStartTick(pick);
+        // A strip's walk starts on the mid-stride frame, so the first
+        // step is visible the moment movement starts (see poseStartTick).
+        state.tick = poseStartTick(poses, pick);
       }
       // Frames drawn facing the other way are shown mirrored; a set drawn
       // facing right only turns left this way.
