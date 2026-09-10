@@ -124,17 +124,24 @@
 .configCardContent {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+// Each field in a card is its own padded row - padding lives here, not on
+// configCardContent, so a divider can sit between rows instead of the card
+// having one uniform padding.
+.cardRow {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   width: 100%;
   box-sizing: border-box;
   padding: 8px 10px;
-}
 
-.cardRow {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
+  & + & {
+    border-top: 1px solid var(--border-neutral-primary, #d3d6da);
+  }
 }
 
 .cardHelperText {

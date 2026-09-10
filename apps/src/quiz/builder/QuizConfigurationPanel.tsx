@@ -193,25 +193,39 @@ const QuizConfigurationPanel: React.FunctionComponent<
                 checked={showIntroScreen}
                 onChange={e => setShowIntroScreen(e.target.checked)}
               />
+              <p className={styles.cardHelperText}>
+                Edit intro screen contents in the workspace
+              </p>
             </div>
-            <p className={styles.cardHelperText}>
-              Edit intro screen contents in the workspace
-            </p>
           </ConfigCard>
 
-          <div className={styles.section}>
-            <TextField
-              label="Time limit (minutes, optional)"
-              name="timeLimitMinutes"
-              inputType="number"
-              min={1}
-              step={1}
-              size="s"
-              className={styles.fullWidthField}
-              value={timeLimitMinutes}
-              onChange={e => setTimeLimitMinutes(e.target.value)}
-            />
-          </div>
+          <ConfigCard label="rules">
+            <div className={styles.cardRow}>
+              <TextField
+                label="Set time limit"
+                name="timeLimitMinutes"
+                inputType="number"
+                min={1}
+                step={1}
+                size="s"
+                className={styles.fullWidthField}
+                placeholder="minutes"
+                helperMessage="Leave unset for no time limit"
+                value={timeLimitMinutes}
+                onChange={e => setTimeLimitMinutes(e.target.value)}
+              />
+            </div>
+            <div className={styles.cardRow}>
+              <Toggle
+                name="allowMultipleAttempts"
+                label="Allow multiple attempts"
+                size="s"
+                position="right"
+                checked={allowMultipleAttempts}
+                onChange={e => setAllowMultipleAttempts(e.target.checked)}
+              />
+            </div>
+          </ConfigCard>
 
           <div className={styles.section}>
             <Checkbox
@@ -239,16 +253,6 @@ const QuizConfigurationPanel: React.FunctionComponent<
               checked={revealAnswerExplanation}
               disabled={!showCorrectness}
               onChange={e => setRevealAnswerExplanation(e.target.checked)}
-            />
-          </div>
-
-          <div className={styles.section}>
-            <Checkbox
-              name="allowMultipleAttempts"
-              label="Allow multiple attempts"
-              size="s"
-              checked={allowMultipleAttempts}
-              onChange={e => setAllowMultipleAttempts(e.target.checked)}
             />
           </div>
 
