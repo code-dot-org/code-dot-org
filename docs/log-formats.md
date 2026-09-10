@@ -292,6 +292,10 @@ The threshold is the DCDO key `http_request_log_level` (`info`, `warn`, or `erro
 
 This threshold is independent of the Rails logger level (`config.log_level`, still `info`), so deliberate `CDO.log.info` / `CDO.log.warn` / `CDO.log.error` calls are unaffected by it. The per-render `Rendered ...` lines that otherwise accompany each request are also silenced in the managed environments: ActionView's `Rendered <template>`, and active_model_serializers' `Rendered <serializer> with <adapter>`.
 
+#### Legacy Sinatra API requests
+
+The Projects APIs (Files, Channels, NetSim, SharedResources, and the asset/sound/animation libraries) run as Rack middleware that short-circuit before the Rails router, so lograge never sees them. `Rack::RequestLogger` (`lib/cdo/rack/request_logger.rb`) logs one `@cee:` line per such request using the same severity and threshold rules. These lines carry `method`, `path`, `status`, `duration`, and `request_id` but not the controller-specific keys (`controller`, `action`, `view`, `db`), since those come from ActionController instrumentation that legacy requests do not trigger.
+
 #### Other syslog lines you will see
 
 The same `/var/log/syslog` stream also captures operating-system activity. Typical examples include cron jobs, SSH and SSM session notices, and sudo elevation events. These lack the `@cee:` prefix but are viewable in the same CloudWatch log group.
