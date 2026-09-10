@@ -1,0 +1,170 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton, Typography} from '@mui/material';
+import PropTypes from 'prop-types';
+import React, {useContext, useState} from 'react';
+
+import HttpClient from '@cdo/apps/util/HttpClient';
+import i18n from '@cdo/locale';
+
+import AiAssessmentFeedbackContext, {
+  NO_FEEDBACK,
+  THUMBS_DOWN,
+} from './AiAssessmentFeedbackContext';
+import {aiEvaluationShape} from './rubricShapes';
+
+import style from './rubrics.module.scss';
+
+async function updateAiFeedback(values, aiFeedbackId) {
+  const baseUrl = '/learning_goal_ai_evaluation_feedbacks';
+  await HttpClient.put(
+    `${baseUrl}/${aiFeedbackId}`,
+    JSON.stringify(values),
+    true,
+    {'Content-Type': 'application/json'}
+  );
+}
+
+export default function AiAssessmentFeedback({aiEvalInfo, aiFeedbackId}) {
+  const {aiFeedback, setAiFeedback} = useContext(AiAssessmentFeedbackContext);
+  const [aiSubmitted, setAISubmitted] = useState(false);
+  const [aiFalsePos, setAIFalsePos] = useState(false);
+  const [aiFalseNeg, setAIFalseNeg] = useState(false);
+  const [aiVague, setAIVague] = useState(false);
+  const [aiFeedbackOther, setAIFeedbackOther] = useState(false);
+  const [aiOtherContent, setAIOtherContent] = useState('');
+  const [aiFeedbackReceived, setAIFeedbackReceived] = useState(false);
+
+  const submitAiFeedbackCallback = async () => {
+    const bodyData = {
+      learningGoalAiEvaluationId: aiEvalInfo.id,
+      aiFeedbackApproval: aiFeedback,
+      falsePositive: aiFalsePos,
+      falseNegative: aiFalseNeg,
+      // 'Vague' is capitalized to avoid a ForbiddenAttributes error
+      // error cause is unknown
+      Vague: aiVague,
+      feedbackOther: aiFeedbackOther,
+      otherContent: aiOtherContent,
+    };
+
+    await updateAiFeedback(bodyData, aiFeedbackId);
+
+    setAISubmitted(true);
+    setAIFeedbackReceived(true);
+  };
+
+  const cancelAiFeedbackCallback = () => {
+    //reset all vars
+    setAISubmitted(false);
+    setAIFalsePos(false);
+    setAIFalseNeg(false);
+    setAIVague(false);
+    setAIFeedbackOther(false);
+    setAIOtherContent('');
+
+    // Clear feedback
+    setAiFeedback(NO_FEEDBACK);
+  };
+
+  return (
+    <div>
+      {aiFeedbackReceived && (
+        <Typography className={style.aiFeedbackReceived} variant="em">
+          <FontAwesomeV6Icon iconName="circle-check" />
+          {i18n.aiFeedbackReceived()}
+        </Typography>
+      )}
+      {!aiSubmitted && aiFeedback === THUMBS_DOWN && aiFeedbackId && (
+        <div className={style.aiAssessmentFeedback}>
+          <Typography variant="body4" gutterBottom>
+            <Typography variant="strong">
+              {i18n.aiFeedbackNegativeWhy()}
+            </Typography>
+          </Typography>
+          <Checkbox
+            label={i18n.aiFeedbackFalsePos()}
+            size="xs"
+            name="aiNegativeFeedbackGroup"
+            onChange={() => {
+              setAIFalsePos(!aiFalsePos);
+            }}
+            checked={aiFalsePos}
+          />
+          <Checkbox
+            label={i18n.aiFeedbackFalseNeg()}
+            size="xs"
+            name="aiNegativeFeedbackGroup"
+            onChange={() => {
+              setAIFalseNeg(!aiFalseNeg);
+            }}
+            checked={aiFalseNeg}
+          />
+          <Checkbox
+            label={i18n.aiFeedbackVague()}
+            size="xs"
+            name="aiNegativeFeedbackGroup"
+            onChange={() => {
+              setAIVague(!aiVague);
+            }}
+            checked={aiVague}
+          />
+          <Checkbox
+            label={i18n.other()}
+            size="xs"
+            name="aiNegativeFeedbackGroup"
+            onChange={() => {
+              setAIFeedbackOther(!aiFeedbackOther);
+            }}
+            checked={aiFeedbackOther}
+          />
+          {aiFeedbackOther && (
+            <div className={style.aiFeedbackOther}>
+              <Typography variant="strong">
+                {i18n.aiFeedbackOtherDetails()}{' '}
+              </Typography>
+              <textarea
+                className={style.aiFeedbackTextbox}
+                onChange={e => {
+                  setAIOtherContent(e.target.value);
+                }}
+                type="text"
+                // eslint-disable-next-line react/forbid-dom-props
+                data-testid="ai-assessment-feedback-textarea"
+              />
+            </div>
+          )}
+          <div className={style.submitFeedbackRow}>
+            <div className={style.submitFeedbackButtons}>
+              <MuiButton
+                variant="contained"
+                color="primary"
+                size="small"
+                type="button"
+                onClick={submitAiFeedbackCallback}
+                className={style.submitToStudentButton}
+              >
+                {i18n.aiFeedbackSubmit()}
+              </MuiButton>
+              <MuiButton
+                variant="outlined"
+                color="secondary"
+                size="small"
+                type="button"
+                onClick={cancelAiFeedbackCallback}
+                className={style.submitToStudentButton}
+              >
+                {i18n.cancel()}
+              </MuiButton>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+AiAssessmentFeedback.propTypes = {
+  aiEvalInfo: aiEvaluationShape,
+  aiFeedbackId: PropTypes.number,
+};
